@@ -1,10 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"af" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/folder,
-/obj/item/device/assembly/signaller,
-/turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "ah" = (
 /obj/structure/closet/toolcloset,
 /obj/structure/machinery/light{
@@ -13,12 +7,9 @@
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "al" = (
-/obj/item/weapon/gun/boltaction/colony{
-	pixel_x = -16;
-	pixel_y = 29
-	},
-/turf/open/floor{
-	icon_state = "cult"
+/obj/structure/curtain/red,
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "am" = (
@@ -29,7 +20,7 @@
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/landing_zone_1)
 "ao" = (
-/obj/item/clothing/under/colonist/ua_civvies,
+/obj/item/clothing/under/colonist/clf,
 /obj/structure/surface/rack,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -88,7 +79,9 @@
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "bl" = (
 /obj/structure/window/framed/colony,
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "bo" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
@@ -156,8 +149,9 @@
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "cF" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/trash/candle,
+/obj/structure/bed/chair{
+	dir = 8
+	},
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "cG" = (
@@ -187,6 +181,12 @@
 "cX" = (
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"dc" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "dg" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -199,6 +199,11 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"dj" = (
+/obj/structure/surface/rack,
+/obj/item/device/multitool,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "dm" = (
 /obj/structure/surface/rack,
 /turf/open/floor/interior/wood,
@@ -207,6 +212,10 @@
 /obj/structure/bed/stool,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"dR" = (
+/obj/structure/surface/table/almayer,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "dV" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -223,6 +232,14 @@
 /turf/open/floor{
 	dir = 8;
 	icon_state = "warning"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"eK" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/folder,
+/obj/item/device/assembly/signaller,
+/turf/open/floor{
+	icon_state = "dark"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "eV" = (
@@ -314,7 +331,9 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "gF" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -390,6 +409,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"id" = (
+/obj/structure/window/framed/wood,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "if" = (
 /obj/structure/window/framed/wood,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -422,7 +445,9 @@
 	name = "General Listening Channel";
 	pixel_y = 30
 	},
-/turf/open/floor/plating,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "iw" = (
 /obj/effect/decal/warning_stripes,
@@ -454,9 +479,14 @@
 	id = "garage_lv";
 	name = "\improper Garage"
 	},
-/turf/open/floor/plating{
-	dir = 1;
-	icon_state = "asteroidfloor"
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"ji" = (
+/obj/structure/bed/stool,
+/turf/open/floor{
+	icon_state = "dark"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "jl" = (
@@ -476,7 +506,10 @@
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "jw" = (
-/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "warning"
+	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "jC" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -487,12 +520,38 @@
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "jO" = (
-/obj/structure/barricade/wooden,
 /turf/open/floor{
-	dir = 9;
+	dir = 5;
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"jT" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "spades_two";
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "spades_six"
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "spades_three";
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "spades_queen";
+	pixel_x = -14;
+	pixel_y = 6
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "spades_seven";
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "kd" = (
 /obj/structure/machinery/power/geothermal{
 	fail_rate = 5
@@ -549,11 +608,8 @@
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "kt" = (
-/obj/item/stack/sheet/wood{
-	amount = 2
-	},
 /turf/open/floor{
-	dir = 5;
+	dir = 6;
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
@@ -569,6 +625,31 @@
 	dir = 4;
 	icon_state = "warning"
 	},
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
+"ly" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "clubs_ace";
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "clubs_eight"
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "clubs_four";
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "clubs_jack"
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "clubs_nine";
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "lC" = (
 /obj/structure/sink{
@@ -642,6 +723,11 @@
 /obj/structure/curtain/red,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"my" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "mz" = (
 /turf/open/floor{
 	dir = 8;
@@ -680,7 +766,7 @@
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "mZ" = (
 /turf/open/floor{
-	dir = 6;
+	dir = 9;
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
@@ -781,23 +867,11 @@
 	icon_state = "white"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"oM" = (
-/obj/structure/window/framed/colony/reinforced,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "oU" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"oZ" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "pd" = (
 /obj/structure/stairs/perspective{
@@ -828,6 +902,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"pT" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "qa" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -916,6 +994,11 @@
 	icon_state = "white"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"rt" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/mask/gas,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "rF" = (
 /turf/open/floor{
 	dir = 6;
@@ -1050,7 +1133,9 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "ut" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
@@ -1121,7 +1206,9 @@
 	name = "\improper LZ1 Access";
 	req_one_access = null
 	},
-/turf/open/floor,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "wc" = (
 /obj/structure/platform/kutjevo/rock,
@@ -1137,7 +1224,9 @@
 	layer = 3.3;
 	name = "\improper Science Wing Blast Door"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "wr" = (
 /obj/structure/bed/chair/office/light,
@@ -1155,8 +1244,8 @@
 	name = "\improper Research Dome";
 	req_access_txt = "100"
 	},
-/turf/open/floor{
-	icon_state = "white"
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "wy" = (
@@ -1188,9 +1277,28 @@
 "xm" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"xx" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/toy/deck{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/device/flashlight/lamp/green{
+	layer = 3.1;
+	pixel_x = 11;
+	pixel_y = -6
+	},
+/obj/item/coin/gold{
+	pixel_y = -7
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "xy" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/suit/storage/marine/veteran/ua_riot,
+/obj/item/weapon/gun/rifle/mar40/carbine,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -1413,6 +1521,19 @@
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Cp" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Cs" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Cy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/river,
@@ -1600,17 +1721,43 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"FU" = (
-/obj/structure/surface/rack,
-/obj/item/device/multitool,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"FV" = (
+"FS" = (
+/obj/structure/machinery/light/small,
 /turf/open/floor{
-	dir = 5;
-	icon_state = "warning"
+	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/landing_zone_2)
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
+"FU" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/clothing/under/colonist/clf,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
+"FV" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	density = 0;
+	pixel_y = 15
+	},
+/obj/item/clothing/under/colonist/clf,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ga" = (
 /obj/structure/machinery/photocopier,
 /obj/item/spacecash/c100{
@@ -1625,10 +1772,10 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Gd" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/mask/gas,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Gl" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	dir = 1;
@@ -1636,7 +1783,9 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor/interior/wood,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Gm" = (
 /obj/structure/machinery/medical_pod/sleeper,
@@ -1650,6 +1799,12 @@
 	frequency = 1469
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"GS" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/extinguisher,
+/obj/effect/spawner/random/powercell,
+/turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "GT" = (
 /obj/structure/machinery/sleep_console,
@@ -1682,6 +1837,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Hl" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Hx" = (
 /obj/structure/platform{
 	dir = 1
@@ -1706,7 +1867,9 @@
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Im" = (
 /obj/structure/window/framed/colony/reinforced,
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "Ip" = (
 /turf/open/space/basic,
@@ -1741,7 +1904,13 @@
 /area/LV624_Outpost_Furidamu/landing_zone_1)
 "IF" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/structure/safe/floor{
+	name = "safe";
+	spawnkey = 0
+	},
+/obj/item/stack/sheet/mineral/gold{
+	amount = 50
+	},
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -1751,7 +1920,7 @@
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "IK" = (
-/obj/structure/surface/table,
+/obj/structure/surface/table/reinforced/prison,
 /obj/item/device/multitool,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -1763,13 +1932,13 @@
 	layer = 3.3;
 	name = "\improper Science Wing Blast Door"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "IQ" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/storage/bible,
-/obj/structure/machinery/light/small{
-	dir = 1
+/obj/structure/bed/chair{
+	dir = 4
 	},
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -1780,7 +1949,9 @@
 	id = "";
 	name = "\improper Forced Blast Door"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "JF" = (
 /obj/item/trash/used_stasis_bag,
@@ -1819,7 +1990,9 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Kt" = (
 /obj/item/stack/sheet/wood{
@@ -1877,6 +2050,20 @@
 	tag = "icon-bcircuit"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Lh" = (
+/obj/structure/machinery/colony_floodlight_switch{
+	pixel_y = 30
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"Li" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "Ls" = (
 /obj/structure/curtain/red,
 /turf/open/floor/interior/wood,
@@ -1900,8 +2087,8 @@
 	layer = 3.3;
 	name = "\improper Science Wing Blast Door"
 	},
-/turf/open/floor{
-	icon_state = "white"
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "LD" = (
@@ -1916,7 +2103,11 @@
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "LJ" = (
-/obj/structure/closet/coffin,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/tool/soap{
+	pixel_x = -4;
+	pixel_y = 9
+	},
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "LS" = (
@@ -1933,6 +2124,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/landing_zone_1/lz1_console)
+"LV" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/plating,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "Mk" = (
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -1986,9 +2182,8 @@
 	id = "";
 	name = "\improper Forced Blast Door"
 	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "MS" = (
@@ -2039,6 +2234,36 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Nj" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "diamonds_nine";
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "diamonds_king"
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "diamonds_four";
+	pixel_x = 9
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "diamonds_five";
+	pixel_y = 10
+	},
+/obj/item/toy/handcard/aceofspades{
+	icon_state = "diamonds_eight";
+	pixel_x = 14;
+	pixel_y = 5
+	},
+/obj/item/spacecash/c200{
+	layer = 3.1;
+	pixel_x = 17;
+	pixel_y = 14
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Nl" = (
 /mob/living/simple_animal/corgi/puppy{
 	desc = "It's a corgi puppy. MISTER WIGGLES!! HE IS THE GREATEST!";
@@ -2073,10 +2298,12 @@
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "NI" = (
 /obj/structure/machinery/light,
-/obj/structure/machinery/power/monitor{
-	name = "Main Power Grid Monitoring"
+/obj/structure/surface/table/reinforced/prison,
+/obj/effect/spawner/random/powercell,
+/obj/item/device/assembly/infra,
+/turf/open/floor{
+	icon_state = "dark"
 	},
-/turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "NQ" = (
 /obj/structure/machinery/light/small{
@@ -2147,10 +2374,9 @@
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "OR" = (
-/obj/structure/safe/floor{
-	name = "safe";
-	spawnkey = 0
-	},
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "OU" = (
@@ -2188,9 +2414,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Pn" = (
-/obj/structure/curtain/red,
-/turf/open/floor{
-	icon_state = "cult"
+/obj/structure/machinery/door/airlock/almayer/secure{
+	locked = 1;
+	name = "\improper Secure Armory";
+	req_one_access_txt = "19;106"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ps" = (
@@ -2240,17 +2470,17 @@
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Qw" = (
-/obj/effect/spawner/random/toolbox,
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	icon_state = "warnplate"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Qx" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "QD" = (
-/obj/structure/machinery/colony_floodlight_switch{
-	pixel_y = 30
+/obj/structure/machinery/power/monitor{
+	name = "Main Power Grid Monitoring"
 	},
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -2300,17 +2530,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Rc" = (
-/obj/structure/machinery/power/monitor{
-	name = "Main Power Grid Monitoring"
-	},
+/obj/structure/machinery/power/monitor,
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Ry" = (
-/obj/structure/machinery/power/monitor,
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Rz" = (
 /turf/open/floor/plating,
@@ -2321,8 +2550,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
-/obj/structure/bed/stool,
-/turf/open/floor/plating,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "RJ" = (
 /obj/structure/machinery/power/port_gen/pacman/super,
@@ -2408,9 +2638,8 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor{
-	dir = 9;
-	icon_state = "brown"
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Tz" = (
@@ -2452,14 +2681,11 @@
 	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Uk" = (
-/obj/structure/barricade/wooden{
-	dir = 4
+/obj/structure/window/framed/wood,
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
-/turf/open/floor{
-	dir = 9;
-	icon_state = "warning"
-	},
-/area/LV624_Outpost_Furidamu/landing_zone_2)
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ul" = (
 /obj/structure/prop/invuln{
 	density = 0;
@@ -2546,7 +2772,9 @@
 	req_access_txt = "100";
 	req_one_access = null
 	},
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Va" = (
 /obj/structure/machinery/light{
@@ -2568,7 +2796,9 @@
 /obj/effect/spawner/random/toolbox,
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/radio,
-/turf/open/floor/plating,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Vr" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -2593,6 +2823,15 @@
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "VB" = (
 /obj/structure/surface/table/almayer,
+/obj/item/clothing/suit/storage/militia/vest{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/clothing/suit/storage/militia/vest{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/clothing/suit/storage/militia/vest,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -2640,9 +2879,9 @@
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "VY" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/storage/box/matches,
-/obj/item/tool/candle,
+/obj/structure/bed/chair/comfy/teal{
+	dir = 4
+	},
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Wd" = (
@@ -2702,19 +2941,18 @@
 "WA" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/boltaction/colony{
-	pixel_x = -16;
-	pixel_y = 29
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/boltaction/colony{
+	pixel_y = 1
+	},
+/obj/item/weapon/gun/boltaction/colony{
+	pixel_y = -7
 	},
 /turf/open/floor{
 	icon_state = "cult"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"WT" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/extinguisher,
-/obj/effect/spawner/random/powercell,
-/turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "WV" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2765,7 +3003,9 @@
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "Xt" = (
 /obj/structure/window/framed/colony/reinforced,
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Xu" = (
 /obj/structure/machinery/computer/telecomms/monitor{
@@ -2791,14 +3031,13 @@
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/landing_zone_1)
 "XN" = (
-/obj/structure/barricade/wooden{
-	dir = 4
-	},
-/turf/open/floor{
-	dir = 10;
-	icon_state = "warning"
-	},
-/area/LV624_Outpost_Furidamu/landing_zone_2)
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/clf,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "XR" = (
 /obj/item/reagent_container/food/snacks/grown/potato,
 /turf/open/floor/interior/wood,
@@ -2807,12 +3046,10 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"XY" = (
-/obj/item/device/assembly/infra,
-/obj/structure/surface/table/reinforced/prison,
-/obj/effect/spawner/random/powercell,
-/turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+"XZ" = (
+/obj/item/clothing/shoes/jackboots,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Yj" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -2822,8 +3059,8 @@
 "Yo" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/window/framed/colony/reinforced,
-/turf/open/floor{
-	icon_state = "white"
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ys" = (
@@ -2845,8 +3082,9 @@
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "YJ" = (
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
-/turf/open/floor/plating,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "YP" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
@@ -2854,7 +3092,9 @@
 	name = "\improper LZ1 Access";
 	req_one_access = null
 	},
-/turf/open/floor,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "YR" = (
 /obj/structure/platform_decoration{
@@ -2864,7 +3104,9 @@
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "YT" = (
 /obj/structure/window/framed/wood,
-/turf/open/floor/plating,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "YX" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -2917,15 +3159,17 @@
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "ZB" = (
-/obj/structure/closet/coffin{
-	density = 0;
-	icon_state = "coffin_open";
-	opened = 1
+/obj/structure/sign/poster{
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	icon_state = "poster16";
+	name = "'Miss July' Pinup";
+	pixel_y = 29;
+	serial_number = 16
 	},
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "ZL" = (
-/obj/structure/surface/table,
+/obj/structure/surface/table/reinforced/prison,
 /obj/item/ashtray/glass,
 /obj/item/tool/crowbar,
 /turf/open/floor/interior/wood,
@@ -2942,13 +3186,11 @@
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "ZU" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/candle,
+/obj/item/stool,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "ZV" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/reagent_container/food/drinks/bottle/whiskey,
+/obj/structure/bed/chair/comfy,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 
@@ -18767,7 +19009,7 @@ YB
 YB
 YB
 iu
-QX
+Li
 or
 or
 or
@@ -18782,7 +19024,7 @@ or
 or
 or
 or
-QX
+Li
 VT
 el
 el
@@ -18936,7 +19178,7 @@ YB
 YB
 YB
 iu
-QX
+Li
 or
 or
 or
@@ -18951,7 +19193,7 @@ or
 or
 or
 or
-QX
+Li
 VT
 el
 el
@@ -19105,7 +19347,7 @@ YB
 YB
 YB
 iu
-QX
+Li
 or
 or
 or
@@ -19120,7 +19362,7 @@ or
 or
 or
 or
-QX
+Li
 VT
 el
 el
@@ -19274,7 +19516,7 @@ YB
 YB
 YB
 iu
-QX
+Li
 or
 or
 or
@@ -19289,7 +19531,7 @@ or
 or
 or
 or
-QX
+Li
 VT
 el
 el
@@ -19443,7 +19685,7 @@ YB
 YB
 YB
 iu
-QX
+Li
 or
 or
 or
@@ -19458,7 +19700,7 @@ or
 or
 or
 or
-QX
+Li
 VT
 el
 el
@@ -20458,7 +20700,7 @@ YB
 Xm
 zA
 zA
-QX
+Li
 or
 or
 or
@@ -20627,7 +20869,7 @@ YB
 Xm
 zA
 zA
-QX
+Li
 or
 or
 or
@@ -20639,7 +20881,7 @@ or
 or
 or
 or
-QX
+Li
 il
 zA
 zA
@@ -20796,7 +21038,7 @@ YB
 Xm
 zA
 zA
-QX
+Li
 or
 or
 or
@@ -20808,7 +21050,7 @@ or
 or
 or
 or
-QX
+Li
 il
 il
 zA
@@ -20977,7 +21219,7 @@ or
 or
 or
 or
-QX
+Li
 il
 il
 il
@@ -21098,7 +21340,7 @@ nX
 nX
 Dy
 Dy
-oM
+Xt
 Yo
 Dy
 Dy
@@ -21116,8 +21358,8 @@ nX
 nX
 Dy
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Dy
 nX
@@ -21263,16 +21505,16 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Iw
 Iw
 Iw
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
@@ -21281,16 +21523,16 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Ti
 Ti
 Ti
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 VX
 sJ
@@ -21431,7 +21673,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -21442,14 +21684,14 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -21460,7 +21702,7 @@ Ti
 Ti
 Ti
 Ti
-oM
+Xt
 nX
 nX
 cG
@@ -21475,9 +21717,9 @@ zA
 zA
 zA
 zq
-QX
-QX
-QX
+Li
+Li
+Li
 zq
 iY
 iY
@@ -21492,10 +21734,10 @@ zA
 il
 FK
 FK
-YT
-YT
-YT
-YT
+id
+id
+id
+id
 FK
 FK
 zA
@@ -21600,7 +21842,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -21611,14 +21853,14 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -21629,7 +21871,7 @@ Iw
 Iw
 Ti
 Ti
-oM
+Xt
 nX
 nX
 nX
@@ -21783,8 +22025,8 @@ Iw
 Dy
 Dy
 Dy
-Iw
-Iw
+my
+my
 Dy
 Dy
 Dy
@@ -21937,7 +22179,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Ti
@@ -21968,7 +22210,7 @@ Iw
 Iw
 Ti
 Ti
-oM
+Xt
 nX
 ZN
 nX
@@ -22005,7 +22247,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -22343,7 +22585,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -22444,7 +22686,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -22475,9 +22717,9 @@ Iw
 Iw
 Ti
 Ti
-oM
+Xt
 nX
-ZN
+nX
 nX
 cy
 YB
@@ -22628,8 +22870,8 @@ Ti
 sJ
 sJ
 sJ
-Ti
-Ti
+my
+my
 sJ
 sJ
 sJ
@@ -22783,7 +23025,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -22794,14 +23036,14 @@ Iw
 Iw
 Ti
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Ti
@@ -22812,8 +23054,8 @@ Iw
 Iw
 Ti
 Ti
-oM
-nX
+Xt
+dR
 nX
 ZN
 nX
@@ -22827,9 +23069,9 @@ Xm
 zA
 zA
 FK
-YT
-YT
-YT
+id
+id
+id
 FK
 il
 il
@@ -22846,7 +23088,7 @@ FK
 FK
 FK
 cX
-YT
+id
 cX
 FK
 FK
@@ -22952,7 +23194,7 @@ Xc
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -22963,14 +23205,14 @@ Ti
 Ti
 Ti
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Ti
@@ -22981,8 +23223,8 @@ Iw
 Ti
 Ti
 Ti
-oM
-nX
+Xt
+dR
 nX
 ZN
 nX
@@ -23122,16 +23364,16 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Iw
 Ti
 Ti
 sJ
-qu
-qu
+Uk
+Uk
 sJ
 Mk
 Mk
@@ -23140,20 +23382,20 @@ Mk
 Mk
 Mk
 sJ
-qu
-qu
+Uk
+Uk
 sJ
 Ti
 Iw
 Iw
 Iw
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
-ZN
+nX
 nX
 cy
 YB
@@ -23164,7 +23406,7 @@ YB
 Xm
 zA
 zA
-YT
+id
 cX
 cX
 cX
@@ -23181,13 +23423,13 @@ zA
 zA
 zA
 il
-YT
+id
 cX
 cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -23519,13 +23761,13 @@ zA
 il
 zA
 zA
-YT
+id
 cX
 cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -23631,12 +23873,12 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
@@ -23649,12 +23891,12 @@ Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Iw
 Iw
-oM
+Xt
 nX
 ZN
 nX
@@ -23800,12 +24042,12 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
@@ -23818,18 +24060,18 @@ Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Iw
 Iw
-oM
+Xt
 nX
 ZN
 nX
 ZN
 nX
-ZN
+nX
 nX
 cG
 di
@@ -23993,7 +24235,7 @@ Ti
 Iw
 Iw
 Dy
-nX
+dR
 ZN
 nX
 ZN
@@ -24162,13 +24404,13 @@ Ti
 Iw
 sJ
 Dy
-nX
-nX
+dR
+dR
 nX
 nX
 nX
 ZN
-nX
+ZN
 nX
 cy
 YB
@@ -24180,7 +24422,7 @@ YB
 fI
 fA
 zA
-YT
+id
 cX
 cX
 cX
@@ -24305,16 +24547,16 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Iw
 Ti
 Ti
 sJ
-qu
-qu
+Uk
+Uk
 sJ
 Mk
 Mk
@@ -24323,21 +24565,21 @@ Mk
 Mk
 Mk
 sJ
-qu
-qu
+Uk
+Uk
 sJ
 Iw
 Iw
 Iw
 Iw
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
 ZN
-nX
+ZN
 nX
 cG
 di
@@ -24473,7 +24715,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -24484,14 +24726,14 @@ Ti
 Ti
 Ti
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Ti
@@ -24502,10 +24744,10 @@ Ti
 Ti
 Iw
 Iw
-oM
+Xt
+dR
 nX
 nX
-ZN
 nX
 nX
 nX
@@ -24518,7 +24760,7 @@ YB
 YB
 Xm
 zA
-YT
+id
 cX
 cX
 cX
@@ -24642,7 +24884,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -24653,14 +24895,14 @@ Iw
 Ti
 Ti
 Ti
-qu
+Uk
 Mk
 Mk
 Mk
 Mk
 Mk
 Mk
-qu
+Uk
 Ti
 Ti
 Ti
@@ -24671,8 +24913,8 @@ Ti
 Ti
 Ti
 Iw
-oM
-nX
+Xt
+dR
 nX
 ZN
 nX
@@ -24825,8 +25067,8 @@ Ti
 sJ
 sJ
 sJ
-Ti
-Ti
+my
+my
 sJ
 sJ
 sJ
@@ -24875,9 +25117,9 @@ zA
 zA
 FK
 FK
-YT
-YT
-YT
+id
+id
+id
 FK
 FK
 zA
@@ -24958,15 +25200,15 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 yv
 LE
 Nz
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
@@ -24979,7 +25221,7 @@ Xc
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25010,7 +25252,7 @@ Ti
 Iw
 Ti
 Ti
-oM
+Xt
 nX
 ZN
 nX
@@ -25025,7 +25267,7 @@ YB
 YB
 Xm
 zA
-YT
+id
 cX
 cX
 cX
@@ -25174,8 +25416,8 @@ Iw
 Iw
 Ti
 Ti
-Ti
-Ti
+Iw
+Iw
 Ti
 Iw
 Ti
@@ -25294,7 +25536,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25306,7 +25548,7 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
@@ -25344,7 +25586,7 @@ Iw
 Iw
 Ti
 Ti
-Ti
+Iw
 Ti
 Ti
 Ti
@@ -25363,7 +25605,7 @@ YB
 YB
 Xm
 zA
-YT
+id
 cX
 cX
 cX
@@ -25463,7 +25705,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25475,7 +25717,7 @@ sJ
 Iw
 Iw
 Iw
-oM
+Xt
 kD
 kD
 kD
@@ -25486,7 +25728,7 @@ kD
 kD
 kD
 kD
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25517,7 +25759,7 @@ Ti
 Ti
 Ti
 Ti
-oM
+Xt
 nX
 ZN
 nX
@@ -25538,7 +25780,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 il
@@ -25670,8 +25912,8 @@ Iw
 Dy
 Dy
 Dy
-Iw
-Iw
+my
+my
 Dy
 Dy
 Dy
@@ -25825,7 +26067,7 @@ mz
 mz
 mz
 mz
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25836,14 +26078,14 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -25854,14 +26096,14 @@ Iw
 Iw
 Iw
 Ti
-oM
+Xt
 nX
 nX
-ZN
 nX
-ZN
 nX
-ZN
+nX
+nX
+nX
 nX
 nX
 cy
@@ -25876,7 +26118,7 @@ cX
 cX
 cX
 cX
-YT
+id
 il
 zA
 il
@@ -25884,7 +26126,7 @@ il
 zA
 il
 zA
-YT
+id
 cX
 cX
 cX
@@ -25896,7 +26138,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -25994,7 +26236,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -26005,14 +26247,14 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 xm
 nX
 xm
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -26023,14 +26265,14 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
-ZN
 nX
-ZN
 nX
-ZN
+nX
+nX
+nX
 nX
 nX
 cy
@@ -26164,16 +26406,16 @@ MS
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Iw
 Iw
 Iw
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 xm
@@ -26182,16 +26424,16 @@ xm
 xm
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Iw
 Iw
 Iw
 Iw
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
@@ -26201,7 +26443,7 @@ ZN
 nX
 ZN
 nX
-nX
+dR
 cy
 YB
 YB
@@ -26211,8 +26453,8 @@ zA
 FK
 FK
 FK
-YT
-YT
+id
+id
 FK
 FK
 zA
@@ -26222,7 +26464,7 @@ il
 zA
 zA
 il
-YT
+id
 cX
 cX
 cX
@@ -26234,7 +26476,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -26337,8 +26579,8 @@ nX
 nX
 Dy
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Dy
 nX
@@ -26355,12 +26597,12 @@ nX
 qj
 Dy
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 Dy
-nX
-nX
+dR
+dR
 nX
 nX
 nX
@@ -26370,7 +26612,7 @@ ZN
 nX
 ZN
 nX
-nX
+dR
 cy
 YB
 YB
@@ -26477,7 +26719,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -26489,7 +26731,7 @@ sJ
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
@@ -26523,23 +26765,23 @@ nX
 nX
 qj
 lH
-wy
+Cs
+dR
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+dR
+dR
+ZN
+ZN
 ZN
 nX
 ZN
 nX
 ZN
 nX
+ZN
 nX
+dR
 cy
 YB
 YB
@@ -26646,7 +26888,7 @@ nX
 nX
 nX
 nX
-oM
+Xt
 Iw
 Iw
 Iw
@@ -26658,7 +26900,7 @@ Iw
 Iw
 Iw
 Iw
-oM
+Xt
 nX
 nX
 nX
@@ -26678,9 +26920,9 @@ jL
 oq
 sJ
 sJ
-qu
-qu
-qu
+UJ
+UJ
+UJ
 sJ
 sJ
 lQ
@@ -26692,7 +26934,7 @@ xm
 nX
 qj
 lH
-wy
+Cs
 nX
 nX
 nX
@@ -26863,13 +27105,13 @@ qj
 lH
 wy
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+ZN
+ZN
+ZN
+ZN
+ZN
+ZN
+ZN
 nX
 ZN
 nX
@@ -26898,7 +27140,7 @@ zA
 zA
 zA
 zA
-YT
+id
 cX
 cX
 cX
@@ -26910,7 +27152,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -26986,15 +27228,15 @@ nX
 nX
 nX
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 yR
 MB
 ND
 Dy
-oM
-oM
+Xt
+Xt
 Dy
 nX
 nX
@@ -27013,7 +27255,7 @@ nX
 nX
 VX
 Yx
-qu
+UJ
 Wd
 ux
 XR
@@ -27182,7 +27424,7 @@ MS
 nX
 VX
 Yx
-qu
+UJ
 za
 Mk
 Mk
@@ -27201,13 +27443,13 @@ qj
 lH
 wy
 nX
+ZN
 nX
 nX
 nX
 nX
-nX
-nX
-nX
+dR
+dR
 tw
 bl
 gx
@@ -27236,7 +27478,7 @@ il
 il
 il
 zA
-YT
+id
 cX
 cX
 cX
@@ -27248,7 +27490,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -27370,7 +27612,7 @@ qj
 lH
 wy
 nX
-nX
+ZN
 nX
 nX
 nX
@@ -27379,7 +27621,7 @@ tw
 tw
 tw
 Ry
-kw
+YJ
 YJ
 FK
 RN
@@ -27523,9 +27765,9 @@ YR
 Tp
 sJ
 sJ
-qu
-qu
-qu
+UJ
+UJ
+UJ
 sJ
 sJ
 Hx
@@ -27539,7 +27781,7 @@ qj
 lH
 wy
 nX
-nX
+ZN
 nX
 nX
 tw
@@ -27547,9 +27789,9 @@ tw
 lO
 lO
 tw
-kw
-kw
-WT
+Lh
+YJ
+YJ
 YT
 cX
 LD
@@ -27559,12 +27801,12 @@ cX
 cX
 cX
 cX
-fX
 cX
 cX
 cX
 cX
-fX
+cX
+cX
 cX
 cC
 cC
@@ -27710,15 +27952,15 @@ uZ
 nX
 nX
 nX
-nX
+ZN
 tw
 Rc
 jl
 jl
-kw
-kw
-kw
-kw
+Qw
+YJ
+YJ
+YJ
 us
 cX
 cX
@@ -27728,12 +27970,12 @@ cX
 cX
 cX
 cX
-fX
 cX
 cX
 cX
 cX
-fX
+cX
+cX
 cX
 cX
 rb
@@ -27879,15 +28121,15 @@ wy
 nX
 nX
 nX
-nX
+ZN
 bl
+GS
 kw
 kw
-kw
-kw
-kw
-kw
-kw
+Qw
+YJ
+YJ
+eK
 FK
 YX
 SU
@@ -28048,14 +28290,14 @@ wy
 nX
 nX
 nX
-nX
+ZN
 bl
+LV
 kw
 kw
-kw
-kw
-kw
-kw
+Qw
+YJ
+ji
 NI
 FK
 FK
@@ -28063,8 +28305,8 @@ FK
 FK
 FK
 FK
-fX
-fX
+cX
+cX
 FK
 FK
 Va
@@ -28073,8 +28315,8 @@ cX
 hZ
 FK
 FK
-fX
-fX
+cX
+cX
 tw
 tw
 zA
@@ -28215,30 +28457,30 @@ qj
 Lf
 wy
 nX
+ZN
 nX
-nX
-nX
+dR
 tw
 QD
 sw
 kw
-kw
-kw
-kw
+Qw
+YJ
+YJ
 Vo
 FK
 yL
 ah
 aW
 RX
-cX
+fX
 cX
 cX
 cX
 lY
 cX
-FU
-Gd
+cX
+cX
 cX
 cX
 cX
@@ -28255,9 +28497,9 @@ zA
 zA
 FK
 FK
-YT
-YT
-YT
+id
+id
+id
 FK
 FK
 zA
@@ -28384,23 +28626,23 @@ qj
 Lf
 wy
 nX
+ZN
 nX
-nX
-nX
+dR
 tw
 FK
 kw
 qS
 Qw
-kw
-kw
-kw
+YJ
+YJ
+YJ
 FK
 cX
 cX
 cX
 cX
-cX
+fX
 cX
 cX
 cX
@@ -28553,30 +28795,30 @@ qj
 lH
 wy
 nX
+ZN
 nX
-nX
-nX
+dR
 tw
 FK
 UZ
 FK
 FK
 RG
-kw
-kw
+YJ
+YJ
 Ki
 cX
 PI
 cX
-cX
 bU
+fX
 cX
 cX
 cX
 cX
 cX
-dm
-dm
+cX
+cX
 cX
 cX
 cX
@@ -28707,8 +28949,8 @@ Xc
 Xc
 Xc
 sJ
-qu
-qu
+UJ
+UJ
 sJ
 nX
 nX
@@ -28724,23 +28966,23 @@ wy
 nX
 nX
 nX
-nX
+ZN
 tw
 kd
 xU
 fv
 FK
-XY
-kw
-kw
+YJ
+YJ
+YJ
 Ki
 cX
 cX
 cX
 FK
 FK
-fX
-fX
+cX
+cX
 FK
 FK
 Va
@@ -28749,8 +28991,8 @@ cX
 hZ
 FK
 FK
-fX
-fX
+cX
+cX
 tw
 tw
 il
@@ -28893,15 +29135,15 @@ uZ
 nX
 nX
 nX
-nX
+ZN
 tw
 kd
 xU
 fv
 FK
 iv
-kw
-kw
+YJ
+YJ
 FK
 ZS
 dI
@@ -28917,7 +29159,7 @@ cX
 cX
 cX
 FK
-cX
+pT
 wr
 AQ
 bl
@@ -29060,17 +29302,17 @@ qj
 lH
 wy
 nX
+ZN
 nX
-nX
-nX
+ZN
 tw
 kd
 xU
 fv
 FK
-kw
-kw
-af
+YJ
+YJ
+YJ
 FK
 Oa
 II
@@ -29080,12 +29322,12 @@ IK
 cX
 cX
 cX
-fX
 cX
 cX
 cX
 cX
-fX
+cX
+cX
 cX
 cX
 gN
@@ -29227,9 +29469,9 @@ nX
 nX
 qj
 lH
-wy
+Cs
 nX
-nX
+ZN
 nX
 nX
 tw
@@ -29237,9 +29479,9 @@ tw
 FK
 FK
 FK
-oZ
-kw
-kw
+Ry
+YJ
+YJ
 FK
 Xu
 cX
@@ -29249,12 +29491,12 @@ hq
 cX
 cX
 cX
-fX
 cX
 cX
 cX
 cX
-fX
+cX
+cX
 cX
 cX
 QZ
@@ -29396,19 +29638,19 @@ nX
 nX
 qj
 lH
-wy
+Cs
 nX
+ZN
 nX
-nX
-nX
-nX
+ZN
+ZN
 tw
 tw
 FK
 FK
-kw
-kw
-kw
+YJ
+YJ
+YJ
 tw
 bl
 bl
@@ -29419,8 +29661,8 @@ iF
 rQ
 cX
 FK
-cX
-cX
+dj
+rt
 cX
 cX
 tw
@@ -29433,9 +29675,9 @@ zA
 il
 il
 FK
-YT
+id
 fX
-YT
+id
 FK
 Xc
 Xc
@@ -29570,8 +29812,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+ZN
+ZN
 tw
 tw
 tw
@@ -29579,9 +29821,9 @@ bl
 gx
 bl
 tw
-nX
-nX
-nX
+ZN
+ZN
+ZN
 tw
 tw
 tw
@@ -29736,7 +29978,7 @@ qj
 lH
 wy
 nX
-nX
+ZN
 nX
 nX
 nX
@@ -29905,20 +30147,20 @@ qj
 lH
 wy
 nX
+ZN
 nX
+ZN
 nX
+ZN
+ZN
+ZN
 nX
+ZN
+ZN
+ZN
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+ZN
+ZN
 nX
 nX
 fk
@@ -29939,15 +30181,15 @@ il
 il
 zA
 zA
-YT
+id
 cX
 cX
 cX
 cX
 FK
 FK
-YT
-YT
+id
+id
 FK
 FK
 Xc
@@ -30074,9 +30316,9 @@ qj
 lH
 wy
 nX
+ZN
 nX
-nX
-nX
+ZN
 nX
 nX
 nX
@@ -30245,19 +30487,19 @@ Dy
 nX
 nX
 nX
+ZN
 nX
+ZN
+ZN
+ZN
 nX
+ZN
+ZN
+ZN
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+ZN
+ZN
+ZN
 nX
 fk
 yQ
@@ -30414,7 +30656,7 @@ Xc
 Wp
 Xc
 nX
-nX
+ZN
 nX
 nX
 nX
@@ -30446,7 +30688,7 @@ zA
 Xc
 zA
 zA
-YT
+id
 cX
 cX
 cX
@@ -30457,7 +30699,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -30589,8 +30831,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dR
+dR
 Xc
 nX
 nX
@@ -30626,7 +30868,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -30752,13 +30994,13 @@ RT
 RT
 Xc
 Xc
-nX
+dR
 Xc
 Xc
 nX
 nX
 nX
-nX
+dR
 Xc
 Xc
 Xc
@@ -30958,7 +31200,7 @@ cX
 cX
 cX
 cX
-YT
+id
 cX
 cX
 cX
@@ -31302,7 +31544,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -31385,7 +31627,7 @@ Tz
 nX
 nX
 Xv
-qu
+UJ
 nX
 nX
 VX
@@ -31471,7 +31713,7 @@ cX
 cX
 cX
 cX
-YT
+id
 zA
 zA
 zA
@@ -31718,12 +31960,12 @@ lH
 wy
 nX
 nX
-qu
+UJ
 Xf
 nX
 Mk
 nX
-qu
+UJ
 nX
 nX
 VX
@@ -31973,9 +32215,9 @@ cX
 cX
 cX
 FK
-YT
-YT
-YT
+id
+id
+id
 FK
 FK
 Xc
@@ -32474,9 +32716,9 @@ zA
 zA
 FK
 FK
-YT
-YT
-YT
+id
+id
+id
 FK
 FK
 Xc
@@ -33110,7 +33352,7 @@ xm
 nX
 Dy
 Dy
-al
+TE
 TE
 Mr
 VB
@@ -33270,7 +33512,7 @@ Mk
 Mk
 Mk
 Mk
-Mk
+XN
 Xc
 nX
 xm
@@ -33282,9 +33524,9 @@ xy
 TE
 TE
 TE
-TE
+FS
 Dy
-OR
+Mk
 Xc
 Xc
 nX
@@ -33432,7 +33674,7 @@ sJ
 UJ
 UJ
 sJ
-Xv
+Gd
 sJ
 Mk
 Tz
@@ -33449,8 +33691,8 @@ nX
 Dy
 WA
 Zy
-Zy
-TE
+dc
+dc
 TE
 Dy
 Mk
@@ -33767,12 +34009,12 @@ nX
 VX
 nX
 UJ
+FV
 Mk
 Mk
 Mk
+Ls
 Mk
-sJ
-Tz
 Mk
 Mk
 Mk
@@ -33940,8 +34182,8 @@ Tz
 Mk
 Mk
 Mk
-Ls
-Mk
+sJ
+Tz
 Mk
 Tz
 Xc
@@ -34104,10 +34346,10 @@ nX
 nX
 UJ
 Tz
+IQ
 Mk
 Mk
-Mk
-Xv
+LJ
 Xv
 sJ
 sJ
@@ -34280,11 +34522,11 @@ sJ
 sJ
 sJ
 ZB
-Mk
+IQ
 VY
-ZU
-cF
-LJ
+Mk
+Xv
+Xv
 sJ
 xm
 YB
@@ -34301,7 +34543,7 @@ sJ
 Mk
 Mk
 Mk
-hj
+Xc
 Mk
 Mk
 Mk
@@ -34428,7 +34670,7 @@ Wz
 Iw
 Iw
 Iw
-sZ
+al
 xm
 xm
 nX
@@ -34446,14 +34688,14 @@ Xv
 Mk
 Tz
 Mk
-Tz
+FU
 sJ
 ZU
+xx
+Nj
+Cp
 Mk
-Mk
-Mk
-Mk
-Mk
+Xv
 UJ
 xm
 mT
@@ -34466,11 +34708,11 @@ Mk
 Mk
 Mk
 Mk
-sJ
+Ls
 Mk
 Mk
 Mk
-hj
+Xc
 Mk
 Mk
 Mk
@@ -34597,7 +34839,7 @@ Wz
 Iw
 Iw
 Iw
-sZ
+al
 xm
 nX
 nX
@@ -34610,17 +34852,17 @@ nX
 nX
 sJ
 Tz
+cF
+cF
 Mk
 Mk
 Mk
-Mk
-Mk
-Mk
+OR
 Xc
 ZV
-Mk
-Mk
-Mk
+jT
+ly
+Cp
 Mk
 Mk
 Ls
@@ -34639,8 +34881,8 @@ sJ
 Mk
 Mk
 Mk
-hj
-hj
+Xc
+Xc
 Mk
 Mk
 Mk
@@ -34786,9 +35028,9 @@ Xc
 Xc
 Xc
 Xc
-IQ
 Mk
-Mk
+cF
+cF
 Mk
 Mk
 Mk
@@ -34809,8 +35051,8 @@ Mk
 Mk
 Mk
 Mk
-hj
-hj
+Xc
+Xc
 Mk
 Mk
 Xc
@@ -34921,7 +35163,7 @@ Xc
 Xc
 Xc
 Dy
-sZ
+al
 Dy
 Dy
 UL
@@ -34948,18 +35190,18 @@ nX
 UJ
 Tz
 Mk
-Tz
+FU
 Mk
 Mk
 Tz
 Mk
 Tz
 sJ
+Hl
 Mk
 Mk
 Mk
-Mk
-Mk
+XZ
 Xc
 Xc
 xm
@@ -35122,12 +35364,12 @@ Mk
 Mk
 Mk
 Mk
-Tz
+FU
 sJ
-Mk
-Mk
-Mk
-Mk
+Xv
+Xv
+Xv
+XZ
 Xc
 Xc
 nX
@@ -35482,8 +35724,8 @@ xm
 xm
 xm
 xm
-xm
-xm
+nX
+nX
 xm
 xm
 xm
@@ -35641,7 +35883,7 @@ xm
 xm
 nX
 Xc
-nX
+YB
 nX
 nX
 nX
@@ -35811,7 +36053,7 @@ xm
 Xc
 Xc
 Xc
-nX
+YB
 nX
 nX
 xm
@@ -35820,8 +36062,8 @@ xm
 xm
 nX
 nX
-nX
-nX
+MS
+MS
 nX
 nX
 nX
@@ -35980,18 +36222,18 @@ nX
 Xc
 Xc
 Xc
-nX
+YB
 nX
 nX
 nX
 xm
+nX
 xm
 xm
-xm
 nX
-nX
-nX
-nX
+MS
+MS
+MS
 nX
 xm
 xm
@@ -36151,7 +36393,7 @@ Xc
 nX
 nX
 nX
-nX
+xm
 nX
 nX
 nX
@@ -36325,13 +36567,13 @@ xm
 xm
 xm
 xm
-xm
-xm
+nX
+nX
 xm
 sJ
-xm
-xm
-xm
+nX
+nX
+nX
 xm
 xm
 nX
@@ -36499,8 +36741,8 @@ xm
 xm
 xm
 xm
-xm
-xm
+nX
+nX
 nX
 nX
 nX
@@ -36657,8 +36899,8 @@ xm
 xm
 xm
 xm
-xm
-xm
+nX
+nX
 sJ
 UJ
 Ls
@@ -36804,7 +37046,7 @@ Xc
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -36826,8 +37068,8 @@ xm
 nX
 nX
 xm
-xm
-xm
+nX
+nX
 sJ
 Mk
 Mk
@@ -36973,7 +37215,7 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -36994,7 +37236,7 @@ xm
 nX
 nX
 nX
-xm
+nX
 sJ
 sJ
 sJ
@@ -37163,7 +37405,7 @@ xm
 nX
 nX
 nX
-xm
+nX
 UJ
 Mk
 Mk
@@ -37463,10 +37705,10 @@ Xc
 Xc
 nX
 nX
-nX
-nX
-nX
-nX
+xJ
+mz
+mz
+mz
 Xc
 Xc
 BY
@@ -37651,7 +37893,7 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -37801,11 +38043,11 @@ Xc
 Xc
 BY
 Xc
-BY
-FV
+jO
 He
-mZ
-BY
+He
+He
+kt
 BY
 BY
 BY
@@ -37820,7 +38062,7 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -39145,7 +39387,7 @@ nX
 nX
 jw
 se
-BY
+hB
 BY
 BY
 pk
@@ -39312,9 +39554,9 @@ nX
 nX
 nX
 nX
-jO
+kq
 YP
-vT
+hB
 BY
 BY
 pk
@@ -39685,13 +39927,13 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
 Mk
 Mk
-qu
+UJ
 nX
 nX
 nX
@@ -39806,7 +40048,7 @@ nX
 nX
 nX
 nX
-hj
+Xc
 Xc
 Xc
 Xc
@@ -39988,9 +40230,9 @@ nX
 nX
 nX
 nX
-kt
+kk
 YP
-mZ
+hB
 BY
 BY
 pk
@@ -40029,7 +40271,7 @@ Mk
 Mk
 Mk
 Mk
-qu
+UJ
 nX
 nX
 nX
@@ -40159,7 +40401,7 @@ nX
 nX
 jw
 se
-BY
+hB
 BY
 BY
 pk
@@ -40536,7 +40778,7 @@ Mk
 Mk
 Mk
 Mk
-qu
+UJ
 nX
 nX
 nX
@@ -40698,7 +40940,7 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -40874,7 +41116,7 @@ Mk
 Mk
 Mk
 Mk
-qu
+UJ
 nX
 nX
 nX
@@ -41205,7 +41447,7 @@ BY
 BY
 BY
 BY
-qu
+UJ
 Mk
 Mk
 Mk
@@ -41533,11 +41775,11 @@ BY
 Xc
 Xc
 Xc
-BY
-Uk
+mZ
 UA
-XN
-BY
+UA
+UA
+vT
 BY
 BY
 Xc
@@ -41871,11 +42113,11 @@ Xc
 Xc
 nX
 nX
-nX
 wA
 kD
+kD
+kD
 qq
-nX
 nX
 nX
 Xc
