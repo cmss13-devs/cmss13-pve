@@ -5,6 +5,15 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"ae" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/river,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "ag" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/prop{
@@ -17,20 +26,20 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ah" = (
 /obj/structure/closet/toolcloset,
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "al" = (
 /obj/structure/curtain/red,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "am" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4;
@@ -42,7 +51,13 @@
 /obj/item/clothing/under/colonist/clf,
 /obj/structure/surface/rack,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"aq" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/auto_turf/strata_grass/layer0/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "au" = (
 /obj/structure/prop/server_equipment{
 	icon_state = "rackframe_broken"
@@ -68,7 +83,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "aA" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/drinks/cans/beer{
@@ -76,11 +91,11 @@
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "aD" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "aF" = (
 /obj/structure/platform{
 	dir = 4
@@ -88,13 +103,9 @@
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "aL" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/river,
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/structure/flora/grass/tallgrass/jungle,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "aM" = (
 /obj/structure/platform/kutjevo/rock{
@@ -126,21 +137,27 @@
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "aX" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/loadedbakedpotato,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"aY" = (
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "bh" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "bl" = (
 /obj/structure/window/framed/colony,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "bn" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
@@ -159,6 +176,15 @@
 /obj/item/ammo_magazine/pistol/highpower,
 /obj/item/weapon/gun/pistol/highpower,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/indoors)
+"bw" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/floor{
+	dir = 1;
+	icon_state = "warning"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "by" = (
 /obj/structure/machinery/photocopier{
@@ -176,7 +202,7 @@
 	pixel_y = -8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "bz" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/river,
@@ -185,7 +211,7 @@
 /turf/open/floor{
 	icon_state = "whiteyellowcorner"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "bE" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -227,6 +253,13 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"bX" = (
+/obj/item/stack/sheet/wood,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "warning"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "bY" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -241,6 +274,10 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"cg" = (
+/obj/structure/surface/table/almayer,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "ch" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform{
@@ -258,7 +295,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/map/lazarus_landing_map,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -297,22 +334,22 @@
 	pixel_y = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cA" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"cB" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "cC" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"cF" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cG" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -327,7 +364,7 @@
 	dir = 8;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cI" = (
 /obj/structure/closet/crate/secure/ammo,
 /obj/item/ammo_magazine/smg/ppsh/extended,
@@ -339,7 +376,7 @@
 /obj/item/weapon/gun/smg/ppsh,
 /obj/item/weapon/gun/smg/ppsh,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cJ" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -359,7 +396,7 @@
 "cT" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "cW" = (
 /turf/open/floor{
 	dir = 4;
@@ -368,7 +405,7 @@
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "cX" = (
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "da" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -378,7 +415,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "dd" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -402,12 +439,12 @@
 /obj/structure/surface/rack,
 /obj/item/device/multitool,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "dm" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/power/port_gen/pacman/super,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "dn" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/paper_bin{
@@ -415,7 +452,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "do" = (
 /obj/structure/flora/jungle/vines,
 /turf/open/gm/river,
@@ -441,6 +478,15 @@
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"dE" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/flora/bush/ausbushes/var3/sunnybush{
+	pixel_y = 17
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "dR" = (
 /obj/structure/surface/table/almayer,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -464,7 +510,7 @@
 	pixel_y = -13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "eh" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/utensil/spoon{
@@ -472,7 +518,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ej" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer0/unweedable,
@@ -502,7 +548,7 @@
 	},
 /obj/item/tool/kitchen/utensil/spoon,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "eE" = (
 /turf/open/floor{
 	dir = 8;
@@ -520,7 +566,7 @@
 "eG" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "eI" = (
 /obj/structure/flora/jungle/planttop1,
 /obj/structure/flora/jungle/vines{
@@ -535,7 +581,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "eV" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -594,7 +640,7 @@
 	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "fu" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 3
@@ -608,7 +654,7 @@
 /turf/open/floor/plating{
 	icon_state = "warnplate"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "fy" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/ashtray/plastic{
@@ -616,7 +662,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "fA" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -636,7 +682,7 @@
 	pixel_y = 20
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "fI" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -648,7 +694,7 @@
 	dir = 1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "fP" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -662,11 +708,7 @@
 	pixel_y = -6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"fX" = (
-/obj/structure/curtain/red,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ga" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -698,13 +740,13 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "gs" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/flashlight,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "gv" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -730,7 +772,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "gx" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	name = "\improper Engineering Dome";
@@ -740,7 +782,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "gB" = (
 /obj/structure/surface/table,
 /obj/item/storage/pill_bottle/antitox{
@@ -749,7 +791,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "gF" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/river,
@@ -763,12 +805,12 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "gN" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/pamphlet/skill/engineer,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "gS" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
@@ -811,7 +853,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "gZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -825,7 +867,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "hi" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -843,7 +885,7 @@
 /obj/item/explosive/grenade/high_explosive/upp,
 /obj/item/explosive/grenade/high_explosive/upp,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "hl" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -880,7 +922,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "hr" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -897,7 +939,7 @@
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "hz" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/device/flashlight/lamp{
@@ -907,12 +949,22 @@
 	pixel_y = -2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "hB" = (
 /turf/open/floor{
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"hO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	tag = "icon-W"
+	},
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "hP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -928,24 +980,20 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (SOUTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "hZ" = (
 /obj/structure/machinery/light,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"id" = (
-/obj/structure/window/framed/wood,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ie" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/suit/chef/classic,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "if" = (
 /obj/structure/window/framed/wood,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ii" = (
 /obj/structure/flora/jungle/plantbot1{
 	desc = "Doesn't look like it'll do much cleaning any more.";
@@ -972,7 +1020,7 @@
 /obj/item/storage/box/packet/high_explosive,
 /obj/item/storage/box/packet/high_explosive,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "iu" = (
 /obj/structure/platform,
 /turf/open/gm/river,
@@ -987,7 +1035,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "iw" = (
 /obj/effect/decal/warning_stripes,
 /obj/structure/machinery/landinglight/ds1{
@@ -1004,25 +1052,19 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"iE" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "iF" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "iG" = (
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 16
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "iI" = (
 /obj/structure/flora/jungle/plantbot1{
 	icon_state = "alienplant1";
@@ -1042,7 +1084,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/weapon/gun/revolver/nagant,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "iQ" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -1058,7 +1100,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "je" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -1068,7 +1110,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "jl" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
@@ -1077,11 +1119,7 @@
 	icon_state = "platebot";
 	tag = "icon-platebot"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"jm" = (
-/obj/structure/machinery/power/port_gen/pacman,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "jo" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -1115,7 +1153,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "jC" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/river,
@@ -1123,34 +1161,7 @@
 "jE" = (
 /obj/structure/curtain/red,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"jF" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/clothing/mask/facehugger{
-	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
-	icon_state = "facehugger_impregnated";
-	name = "????";
-	stat = 2
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "jG" = (
 /obj/structure/closet/crate/secure/ammo,
 /obj/item/clothing/head/helmet/marine/veteran/UPP,
@@ -1159,13 +1170,13 @@
 /obj/item/clothing/head/helmet/marine/veteran/UPP,
 /obj/item/clothing/head/helmet/marine/veteran/UPP,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "jH" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/suit/chef/classic,
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "jL" = (
 /obj/structure/platform_decoration,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -1208,11 +1219,11 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "jX" = (
 /obj/structure/bed/chair,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ka" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/suit/storage/militia/vest{
@@ -1224,7 +1235,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "kc" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
@@ -1238,7 +1249,7 @@
 	dir = 1;
 	icon_state = "warnplate"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ke" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -1258,7 +1269,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "kf" = (
 /obj/structure/flora/bush/ausbushes/var3/ywflowers,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -1266,7 +1277,7 @@
 "kh" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "kj" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -1323,7 +1334,7 @@
 /area/LV624_Outpost_Furidamu/landing_zone_2)
 "kw" = (
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "kx" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -1341,6 +1352,18 @@
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"kG" = (
+/obj/structure/coatrack,
+/obj/item/clothing/head/welding{
+	pixel_x = -1;
+	pixel_y = 12
+	},
+/obj/item/tool/weldpack{
+	pixel_x = 11;
+	pixel_y = -6
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "kK" = (
 /obj/structure/flora/bush/ausbushes/palebush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -1352,7 +1375,7 @@
 	},
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "kU" = (
 /obj/structure/target,
 /obj/item/clothing/suit/storage/marine/light{
@@ -1381,14 +1404,14 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/shoes/marine/upp,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ln" = (
 /obj/structure/curtain/red,
 /turf/open/floor{
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "ls" = (
 /obj/item/paper_bin{
 	pixel_x = 9;
@@ -1396,7 +1419,7 @@
 	},
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "lt" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/auto_turf/strata_grass/layer0/unweedable,
@@ -1430,21 +1453,21 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "lC" = (
 /obj/structure/sink{
 	pixel_y = 26
 	},
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "lE" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph."
 	},
 /obj/item/reagent_container/hypospray/autoinjector/ultrazine,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "lH" = (
 /obj/structure/fence,
 /turf/open/floor{
@@ -1463,7 +1486,7 @@
 /turf/open/floor/plating{
 	icon_state = "platebotc"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "lQ" = (
 /obj/structure/platform{
 	dir = 1
@@ -1493,7 +1516,7 @@
 	pixel_x = -30
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ma" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -1518,11 +1541,6 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"mn" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/crowbar,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "mp" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer0/unweedable,
@@ -1535,7 +1553,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "mz" = (
 /turf/open/floor{
 	dir = 8;
@@ -1547,7 +1565,23 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"mG" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/clothing/suit/storage/militia/partial{
+	pixel_x = -3;
+	pixel_y = 12
+	},
+/obj/item/clothing/suit/storage/militia/partial{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/clothing/suit/storage/militia/vest{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "mH" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8;
@@ -1560,13 +1594,13 @@
 /obj/item/clothing/suit/chef/classic,
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "mM" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "mO" = (
 /obj/structure/flora/jungle/vines,
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
@@ -1623,8 +1657,15 @@
 	icon_state = "S";
 	tag = "icon-S"
 	},
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"nn" = (
+/turf/closed/wall/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "no" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/floor/interior/wood,
@@ -1637,7 +1678,7 @@
 	pixel_y = -33
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "nr" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -1659,13 +1700,13 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "nx" = (
 /turf/open/floor{
 	dir = 10;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "nJ" = (
 /obj/structure/machinery/computer/telecomms/server{
 	pixel_x = 6;
@@ -1684,7 +1725,7 @@
 	name = "\improper Malaria pill bottle"
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "nP" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/jungle/vines{
@@ -1738,7 +1779,7 @@
 "om" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "op" = (
 /obj/structure/surface/table,
 /obj/item/stack/medical/bruise_pack{
@@ -1754,7 +1795,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "oq" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -1770,7 +1811,7 @@
 	dir = 1;
 	icon_state = "asteroidfloor"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "oA" = (
 /obj/structure/surface/rack{
 	density = 0;
@@ -1801,7 +1842,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "oF" = (
 /obj/structure/surface/table,
 /obj/item/storage/box/masks{
@@ -1814,11 +1855,11 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "oL" = (
 /obj/structure/curtain/red,
 /turf/open/gm/river,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "oQ" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -1831,7 +1872,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "oW" = (
 /obj/structure/flora/jungle/vines,
 /obj/structure/flora/bush/ausbushes/ppflowers,
@@ -1865,7 +1906,7 @@
 	},
 /obj/item/clothing/under/color/black,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "pk" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -1898,7 +1939,7 @@
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "pu" = (
 /obj/structure/closet/crate/secure/ammo,
 /turf/open/floor/interior/wood,
@@ -1906,7 +1947,7 @@
 "px" = (
 /obj/structure/curtain/red,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "pH" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1;
@@ -1920,7 +1961,13 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"pL" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "pN" = (
 /obj/item/reagent_container/food/drinks/milk{
 	pixel_x = -3;
@@ -1929,16 +1976,22 @@
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"pQ" = (
+/obj/structure/barricade/wooden{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "pR" = (
 /obj/structure/flora/bush/ausbushes/var3/leafybush{
 	pixel_y = 5
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "pT" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "pU" = (
 /obj/structure/curtain/red,
 /obj/structure/flora/jungle/vines/heavy,
@@ -1964,7 +2017,7 @@
 "qd" = (
 /obj/item/clothing/shoes/swat,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "qf" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -1972,17 +2025,12 @@
 "qh" = (
 /obj/structure/largecrate/machine/bodyscanner,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "qj" = (
 /turf/open/floor{
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"qp" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/map/lazarus_landing_map,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "qq" = (
 /turf/open/floor{
 	dir = 6;
@@ -1992,7 +2040,7 @@
 "qu" = (
 /obj/structure/window/framed/wood,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "qw" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor{
@@ -2000,7 +2048,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (SOUTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "qx" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/platform{
@@ -2010,13 +2058,17 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "qA" = (
 /obj/structure/curtain/red,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
+"qD" = (
+/obj/structure/curtain/red,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/oob)
 "qK" = (
 /obj/structure/closet/crate/secure/ammo,
 /obj/item/storage/belt/marine/upp,
@@ -2024,14 +2076,14 @@
 /obj/item/storage/belt/marine/upp,
 /obj/item/storage/belt/marine/upp,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "qL" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/device/flashlight/lamp{
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "qM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2047,6 +2099,9 @@
 	pixel_x = 1;
 	pixel_y = 1;
 	tag = "icon-NE-out"
+	},
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -2066,7 +2121,10 @@
 	tag = "icon-tube1 (EAST)"
 	},
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"qT" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/oob)
 "qV" = (
 /turf/open/floor{
 	dir = 1;
@@ -2083,30 +2141,24 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "rb" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/weldingtool,
 /obj/item/tool/wrench,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "re" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"rf" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "rk" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/surgical_tray,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "rl" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8;
@@ -2130,15 +2182,28 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "rt" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/mask/gas,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "rw" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/gm/river,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"rx" = (
+/obj/structure/barricade/wooden{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"ry" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "rz" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -2153,7 +2218,7 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "rF" = (
 /turf/open/floor{
 	dir = 6;
@@ -2172,7 +2237,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "rP" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -2187,7 +2252,7 @@
 "rQ" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "rT" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/radio/off{
@@ -2199,7 +2264,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "rY" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -2214,14 +2279,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "sc" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/trash/USCMtray{
 	pixel_y = 9
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "se" = (
 /turf/closed/wall/r_wall,
 /area/LV624_Outpost_Furidamu/landing_zone_2)
@@ -2239,7 +2304,7 @@
 	pixel_y = -6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "si" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/storage/beer_pack{
@@ -2247,7 +2312,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "sj" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -2271,6 +2336,9 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"so" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/indoors)
 "sr" = (
 /obj/structure/machinery/landinglight/ds2{
 	tag = "icon-landingstripe"
@@ -2292,14 +2360,14 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "st" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_y = 5
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "sv" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -2313,14 +2381,18 @@
 "sw" = (
 /obj/item/clothing/head/hardhat/orange,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "sB" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1;
 	tag = "icon-comfychair (NORTH)"
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"sC" = (
+/obj/item/tool/weldingtool,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "sD" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
@@ -2331,7 +2403,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/utensil/spoon,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "sJ" = (
 /turf/closed/wall/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -2362,7 +2434,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "sX" = (
 /obj/structure/machinery/landinglight/ds2/delaythree,
 /obj/structure/barricade/handrail/strata,
@@ -2377,17 +2449,17 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ta" = (
 /obj/item/stack/sheet/wood,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "tb" = (
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "tc" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -2412,11 +2484,24 @@
 	pixel_x = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "tj" = (
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"tk" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/storage/box/guncase/m41a{
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/m41a{
+	pixel_y = 9
+	},
+/obj/item/storage/box/guncase/m41aMK1{
+	pixel_y = 15
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "tl" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/under/colonist/clf,
@@ -2425,7 +2510,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "tm" = (
 /obj/structure/surface/rack{
 	density = 0;
@@ -2455,16 +2540,25 @@
 	stat = 2
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "tw" = (
 /turf/closed/wall,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "tH" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
 /turf/open/gm/river,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"tK" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/floor{
+	dir = 4;
+	icon_state = "warning"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "tL" = (
 /obj/effect/decal/hefa_cult_decals/d32{
@@ -2473,7 +2567,7 @@
 	},
 /obj/item/xeno_egg/alpha,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "tN" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2490,14 +2584,27 @@
 	pixel_y = -8
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"tU" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3"
+	},
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"tV" = (
+/obj/structure/barricade/wooden{
+	dir = 1
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "tX" = (
 /mob/living/simple_animal/corgi/puppy{
 	desc = "It's a corgi puppy. MISTER WIGGLES!! HE IS THE GREATEST!";
 	name = "\improper Mister Wiggles"
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ua" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/scythe,
@@ -2511,7 +2618,7 @@
 	pixel_y = 29
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ue" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	tag = "icon-landingstripe"
@@ -2530,6 +2637,14 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"ui" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/floor{
+	icon_state = "warning"
+	},
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "uj" = (
 /obj/effect/landmark/crap_item,
 /obj/structure/flora/jungle/vines,
@@ -2556,7 +2671,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ut" = (
 /obj/effect/landmark/lv624/xeno_tunnel,
 /obj/structure/flora/jungle/vines{
@@ -2577,7 +2692,7 @@
 "ux" = (
 /obj/item/tool/pickaxe/silver,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "uy" = (
 /obj/structure/platform{
 	dir = 4
@@ -2594,7 +2709,7 @@
 	pixel_y = -7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "uC" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -2608,7 +2723,7 @@
 	},
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "uI" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -2624,6 +2739,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"uM" = (
+/obj/structure/flora/jungle/planttop1,
+/obj/structure/platform/kutjevo/rock,
+/turf/open/gm/river,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "uO" = (
 /obj/item/prop{
 	desc = "A jerry can. In space! Or maybe a colony.";
@@ -2635,6 +2755,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"uQ" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/closed/wall/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "uR" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river,
@@ -2658,7 +2784,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "uZ" = (
 /turf/closed/wall,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -2689,7 +2815,7 @@
 	},
 /obj/item/clothing/head/headset,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "vm" = (
 /obj/effect/decal/hefa_cult_decals/d96{
 	desc = "You think you can make out the iconography of a Xenomorph?";
@@ -2698,7 +2824,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "vo" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/emergency{
@@ -2771,7 +2897,7 @@
 	},
 /obj/item/clothing/head/headset,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "wc" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -2779,10 +2905,9 @@
 	},
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"wd" = (
-/obj/structure/platform_decoration,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+"wf" = (
+/turf/open/gm/river,
+/area/LV624_Outpost_Furidamu/oob)
 "wj" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 1
@@ -2800,7 +2925,7 @@
 "wr" = (
 /obj/structure/bed/chair/office/light,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ws" = (
 /obj/structure/flora/jungle/plantbot1{
 	icon_state = "alienplant1";
@@ -2809,10 +2934,6 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"wt" = (
-/obj/structure/platform,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "wx" = (
 /obj/structure/flora/jungle/vines,
 /obj/structure/flora/jungle/vines/heavy,
@@ -2851,7 +2972,7 @@
 "wJ" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "wO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/grown/ricestalk,
@@ -2870,7 +2991,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "wR" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/machinery/recharger,
@@ -2879,14 +3000,14 @@
 "wS" = (
 /obj/structure/largecrate/supply/medicine/blood,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "xa" = (
 /obj/structure/xenoautopsy/tank/broken,
 /turf/open/floor{
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "xc" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
@@ -2898,13 +3019,26 @@
 	name = "Shuttle Landing Lights"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_1)
+"xl" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "xm" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"xr" = (
+/obj/structure/window/framed/wood,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "xu" = (
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "xx" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/toy/deck{
@@ -2920,7 +3054,7 @@
 	pixel_y = -7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "xy" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/rifle/mar40/carbine,
@@ -2930,13 +3064,13 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "xC" = (
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whiteyellowcorner"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "xD" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -2953,22 +3087,13 @@
 	pixel_y = 3
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "xJ" = (
 /turf/open/floor{
 	dir = 9;
 	icon_state = "warning"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
-"xM" = (
-/obj/item/clothing/mask/facehugger{
-	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
-	icon_state = "facehugger_impregnated";
-	name = "????";
-	stat = 2
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
 "xO" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -2980,6 +3105,13 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"xQ" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	tag = "icon-comfychair (NORTH)"
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "xS" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -2990,7 +3122,7 @@
 /turf/open/floor/plating{
 	icon_state = "platebot"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "xV" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -3012,7 +3144,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "xY" = (
 /obj/item/stack/sheet/wood{
 	pixel_x = -22;
@@ -3036,7 +3168,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/crowbar,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ym" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 4;
@@ -3067,7 +3199,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "yu" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 8;
@@ -3083,7 +3215,7 @@
 	dir = 9;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "yx" = (
 /obj/item/reagent_container/food/snacks/upp,
 /obj/item/reagent_container/food/snacks/upp,
@@ -3097,7 +3229,7 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/structure/closet/crate/secure/ammo,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "yz" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8;
@@ -3115,12 +3247,16 @@
 "yG" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "yH" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/beetsoup,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"yI" = (
+/obj/structure/flora/jungle/planttop1,
+/turf/closed/wall/r_wall,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "yJ" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -3140,13 +3276,13 @@
 	pixel_x = -30
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "yM" = (
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "yO" = (
 /obj/structure/flora/jungle/planttop1,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -3162,7 +3298,11 @@
 	dir = 5;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"yW" = (
+/obj/item/stack/sheet/wood,
+/turf/open/auto_turf/strata_grass/layer0/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "yX" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 4
@@ -3176,7 +3316,7 @@
 	},
 /obj/item/tool/scythe,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "zd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3199,7 +3339,7 @@
 	pixel_y = -12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "zh" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -3220,7 +3360,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "zp" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8;
@@ -3236,7 +3376,10 @@
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
+"zw" = (
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/indoors)
 "zA" = (
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -3244,28 +3387,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/mre_pack/meal1,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"zD" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "zF" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -3292,23 +3414,30 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "zJ" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"zM" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "zP" = (
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"zQ" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/explosive/grenade/high_explosive/upp{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/explosive/grenade/high_explosive/upp{
+	pixel_x = 4;
+	pixel_y = 17
+	},
+/obj/item/explosive/grenade/high_explosive/stick,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "zT" = (
 /obj/structure/bookcase{
 	density = 0;
@@ -3316,13 +3445,17 @@
 	pixel_y = 16
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "zU" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"zX" = (
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "Ad" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -3345,13 +3478,13 @@
 "Ah" = (
 /obj/structure/machinery/gibber,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ai" = (
 /obj/structure/machinery/body_scanconsole,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Aq" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -3367,7 +3500,7 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Aw" = (
 /obj/structure/machinery/chem_dispenser/soda{
 	density = 0;
@@ -3377,7 +3510,7 @@
 	},
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Az" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/ammo_magazine/pistol/c99{
@@ -3389,27 +3522,26 @@
 	pixel_y = 11
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "AQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/weapon/melee/twohanded/fireaxe,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "AS" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/map/lazarus_landing_map,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "AW" = (
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "AX" = (
-/obj/structure/flora/jungle/vines/heavy,
-/turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/oob)
+/turf/closed/wall/r_wall,
+/area/LV624_Outpost_Furidamu/indoors)
 "AY" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/storage/box/lights/mixed{
@@ -3419,14 +3551,14 @@
 	pixel_y = -2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Bc" = (
 /obj/structure/sign/poster/clf{
 	pixel_x = -29;
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Be" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/platform{
@@ -3436,7 +3568,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Bj" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
@@ -3456,18 +3588,18 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"Bm" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Bq" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/knife,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"Bv" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Bw" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 1
@@ -3492,7 +3624,13 @@
 	pixel_y = 5
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"BC" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/indoors)
 "BE" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -3504,18 +3642,22 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "BK" = (
 /obj/structure/platform_decoration,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "BM" = (
 /obj/structure/surface/table,
 /obj/item/pamphlet/skill/medical,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"BV" = (
+/obj/structure/machinery/autolathe,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "BX" = (
 /obj/item/stack/sheet/wood{
 	pixel_x = 19
@@ -3535,7 +3677,7 @@
 "Cb" = (
 /obj/structure/largecrate/supply/medicine/iv,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Cf" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/radio/headset{
@@ -3550,13 +3692,13 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Cg" = (
 /obj/structure/prop/holidays/string_lights{
 	pixel_y = 27
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ch" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/circuitboard/machine/ghettosmes,
@@ -3575,7 +3717,7 @@
 	dir = 1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Cs" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor{
@@ -3593,6 +3735,12 @@
 	name = "Shuttle Landing Lights"
 	},
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"CC" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "CF" = (
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -3610,7 +3758,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "CK" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -3620,11 +3768,22 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"CM" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/weapon/gun/rifle/sniper/svd{
+	layer = 3.1;
+	pixel_x = 20;
+	pixel_y = 8
+	},
+/obj/item/tool/crowbar,
+/obj/item/explosive/grenade/high_explosive,
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "CP" = (
 /obj/structure/closet/crate/construction,
 /obj/item/stack/sheet/metal/large_stack,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "CU" = (
 /obj/item/xeno_egg/alpha,
 /obj/effect/decal/hefa_cult_decals/d32{
@@ -3632,7 +3791,7 @@
 	icon_state = "2"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "CZ" = (
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/landing_zone_2)
@@ -3661,7 +3820,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Do" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -3673,7 +3832,7 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Dr" = (
 /obj/structure/closet/crate/secure/ammo,
 /obj/item/clothing/under/colonist/clf,
@@ -3682,7 +3841,7 @@
 /obj/item/clothing/under/colonist/clf,
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ds" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
@@ -3701,7 +3860,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/rollingpin,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "DE" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -3712,13 +3871,13 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "DL" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "DM" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph.";
@@ -3726,7 +3885,7 @@
 	},
 /obj/item/weapon/gun/energy/yautja/plasmapistol,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "DP" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4;
@@ -3765,19 +3924,22 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/map/whiskey_outpost_map,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "DX" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/weapon/gun/rifle/type71/carbine/commando,
+/obj/item/weapon/gun/rifle/type71/carbine/commando{
+	current_mag = null
+	},
+/obj/item/ammo_magazine/rifle/type71,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "DZ" = (
 /obj/structure/largecrate/supply/supplies/mre,
 /obj/item/reagent_container/food/snacks/mre_pack/meal3{
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Eb" = (
 /obj/structure/machinery/landinglight/ds2{
 	dir = 8;
@@ -3804,7 +3966,7 @@
 	pixel_y = 12
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Eh" = (
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -3823,7 +3985,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/mysterysoup,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Et" = (
 /obj/structure/flora/jungle/plantbot1,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -3837,11 +3999,13 @@
 	worth = 50000
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
-"EK" = (
-/obj/structure/machinery/vending/dinnerware,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"EE" = (
+/obj/structure/flora/bush/ausbushes/grassybush{
+	icon_state = "leafybush_2"
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "EM" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -3851,14 +4015,24 @@
 	pixel_x = -11
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"EN" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/tool/wrench,
+/obj/item/tool/screwdriver,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -3;
+	pixel_y = 12
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "ET" = (
 /obj/structure/machinery/microwave{
 	pixel_y = 9
 	},
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Fa" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/machinery/light/small{
@@ -3873,7 +4047,7 @@
 	pixel_y = 8
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Fe" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/grown/potato{
@@ -3885,14 +4059,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ff" = (
 /obj/item/tool/warning_cone{
 	pixel_x = 8;
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Fg" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
@@ -3919,7 +4093,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Fr" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/lighter,
@@ -3927,13 +4101,13 @@
 /obj/item/device/multitool,
 /obj/item/device/assembly/prox_sensor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ft" = (
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_y = 12
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "FA" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -3948,7 +4122,7 @@
 	},
 /obj/item/stack/sandbags_empty,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "FK" = (
 /turf/closed/wall/wood,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -3965,13 +4139,13 @@
 	icon_state = "bee"
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "FS" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "FT" = (
 /obj/structure/target,
 /obj/item/clothing/suit/storage/marine/heavy{
@@ -4003,7 +4177,7 @@
 	},
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "FV" = (
 /obj/structure/machinery/washing_machine,
 /obj/structure/machinery/washing_machine{
@@ -4012,7 +4186,7 @@
 	},
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "FY" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/lighter/random,
@@ -4021,7 +4195,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ga" = (
 /obj/structure/machinery/photocopier,
 /obj/item/spacecash/c100{
@@ -4029,17 +4203,17 @@
 	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gb" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/spacecash/c1000,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gd" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gh" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/platform{
@@ -4050,6 +4224,14 @@
 	pixel_y = 13
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"Gj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	tag = "icon-S"
+	},
+/obj/structure/fence,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Gl" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
@@ -4061,23 +4243,23 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gm" = (
 /obj/structure/machinery/medical_pod/sleeper,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gr" = (
 /obj/item/stack/sheet/metal,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Gw" = (
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Gy" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -4088,7 +4270,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "GM" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
@@ -4101,14 +4283,14 @@
 	frequency = 1469
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "GP" = (
 /obj/structure/curtain/red,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "GQ" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -4118,19 +4300,19 @@
 	},
 /obj/item/map/lazarus_landing_map,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "GS" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/extinguisher,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "GT" = (
 /obj/structure/machinery/sleep_console,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "GZ" = (
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -4155,11 +4337,7 @@
 	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
-"Hj" = (
-/obj/item/stool,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Hk" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -4176,7 +4354,7 @@
 	pixel_y = 27
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Hm" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -4185,7 +4363,7 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Hp" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
@@ -4199,7 +4377,7 @@
 "Hw" = (
 /obj/item/stool,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Hx" = (
 /obj/structure/platform{
 	dir = 1
@@ -4227,7 +4405,7 @@
 "HG" = (
 /obj/structure/closet/secure_closet/freezer/fridge/groceries,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "HH" = (
 /obj/item/ammo_magazine/rifle/type71{
 	current_rounds = 0
@@ -4243,12 +4421,6 @@
 	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
-"HR" = (
-/obj/structure/platform_decoration{
-	dir = 1
-	},
-/turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "HX" = (
 /obj/structure/flora/jungle/plantbot1,
@@ -4267,13 +4439,13 @@
 	},
 /obj/item/tool/kitchen/utensil/spoon,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ig" = (
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Im" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/corsat{
@@ -4295,7 +4467,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (SOUTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Ir" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor{
@@ -4310,12 +4482,12 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/spacecash/c1000,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Iw" = (
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Iy" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -4331,7 +4503,7 @@
 	},
 /obj/item/stack/sandbags_empty,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "IC" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	tag = "icon-landingstripe"
@@ -4350,26 +4522,20 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "II" = (
 /obj/effect/landmark/static_comms/net_two,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "IK" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/multitool,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "IL" = (
 /obj/item/reagent_container/glass/bucket/janibucket,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"IM" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "IN" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -4379,13 +4545,13 @@
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "IQ" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "IT" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/tray{
@@ -4395,7 +4561,12 @@
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"IU" = (
+/obj/structure/flora/bush/ausbushes/genericbush,
+/obj/structure/flora/grass/tallgrass/jungle,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Jc" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /obj/structure/flora/jungle/plantbot1{
@@ -4407,7 +4578,7 @@
 "Je" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Jg" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/suit/storage/militia/vest{
@@ -4419,7 +4590,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Jh" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph."
@@ -4430,7 +4601,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (SOUTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Jj" = (
 /obj/structure/flora/jungle/vines,
 /obj/structure/flora/jungle/vines{
@@ -4448,6 +4619,9 @@
 /obj/item/toy/beach_ball/holoball{
 	pixel_y = -16
 	},
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Jr" = (
@@ -4462,7 +4636,7 @@
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Jz" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/window/reinforced{
@@ -4477,7 +4651,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "JA" = (
 /obj/structure/closet/crate/secure/ammo,
 /obj/item/reagent_container/food/snacks/upp,
@@ -4489,7 +4663,7 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "JD" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/pen{
@@ -4504,7 +4678,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "JF" = (
 /obj/item/trash/used_stasis_bag,
 /obj/item/spacecash/c500{
@@ -4515,7 +4689,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "JG" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform{
@@ -4534,6 +4708,9 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"JP" = (
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/oob)
 "JR" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
@@ -4548,7 +4725,7 @@
 /obj/item/storage/box/packet/hefa,
 /obj/item/storage/box/packet/hefa,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "JW" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -4558,6 +4735,9 @@
 	icon_state = "NW-out";
 	pixel_y = 1;
 	tag = "icon-NW-out"
+	},
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -4572,6 +4752,18 @@
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"Kd" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/river,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ke" = (
 /obj/structure/flora/jungle/vines{
@@ -4592,7 +4784,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Kt" = (
 /obj/item/stack/sheet/wood{
 	pixel_x = 4;
@@ -4611,7 +4803,7 @@
 	pixel_y = 15
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "KD" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
@@ -4627,7 +4819,7 @@
 	worth = 50000
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "KF" = (
 /obj/structure/barricade/wooden,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -4638,7 +4830,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "KK" = (
 /obj/item/prop{
 	desc = "Something about a research lab.";
@@ -4647,13 +4839,13 @@
 	name = "USCM classified intelligence folder"
 	},
 /turf/closed/wall/cult,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "KL" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "KM" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -4672,10 +4864,16 @@
 	pixel_y = 20
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "KN" = (
 /obj/structure/platform,
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"KT" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/closed/wall/r_wall,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "KU" = (
 /obj/structure/platform/kutjevo/rock{
@@ -4718,17 +4916,18 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"Li" = (
-/obj/structure/window/framed/colony/reinforced,
-/turf/open/floor/corsat{
-	icon_state = "marked"
-	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"Ls" = (
-/obj/structure/curtain/red,
+/area/LV624_Outpost_Furidamu/indoors)
+"Ln" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"Lr" = (
+/obj/item/ammo_box/magazine/type71{
+	pixel_y = -6
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "Lt" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4;
@@ -4741,24 +4940,30 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"LA" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "LB" = (
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whiteyellowcorner"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "LD" = (
 /obj/item/weapon/melee/baseballbat/metal,
 /obj/item/device/lightreplacer,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "LE" = (
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "LJ" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/soap{
@@ -4766,7 +4971,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "LS" = (
 /obj/structure{
 	desc = "A drop pod used to launch remote piloting equipment to USCM areas of operation";
@@ -4781,25 +4986,21 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/landing_zone_1/lz1_console)
+"LT" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "LV" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
-"LX" = (
-/obj/structure/surface/table/woodentable/poor,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "LZ" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/weapon/gun/pistol/c99/upp,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
-"Mb" = (
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/reagent_container/food/snacks/boiledrice,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Me" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
@@ -4808,13 +5009,13 @@
 "Mh" = (
 /obj/structure/largecrate,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Mi" = (
 /turf/open/floor{
 	dir = 6;
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Mk" = (
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -4831,7 +5032,7 @@
 "Mq" = (
 /obj/structure/largecrate/supply/explosives/mines,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Mr" = (
 /obj/structure/surface/table/almayer,
 /obj/item/explosive/grenade/custom/ied{
@@ -4844,7 +5045,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Mw" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/under/colonist/clf,
@@ -4853,7 +5054,7 @@
 	pixel_y = -13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Mz" = (
 /obj/structure/platform{
 	dir = 4
@@ -4872,7 +5073,7 @@
 	dir = 4;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ME" = (
 /obj/item/storage/box/m56d_hmg,
 /turf/open/floor/interior/wood,
@@ -4884,7 +5085,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "MJ" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -4898,7 +5099,7 @@
 	},
 /obj/structure/machinery/space_heater,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "MO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/wishsoup,
@@ -4909,7 +5110,7 @@
 	dir = 1;
 	icon_state = "whiteyellowcorner"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "MQ" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -4941,7 +5142,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Na" = (
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/ua_bunker)
@@ -4952,7 +5153,7 @@
 	pixel_y = 15
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Nc" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/mask/gas/swat{
@@ -4964,7 +5165,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Nd" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -4972,7 +5173,7 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ne" = (
 /turf/open/auto_turf/strata_grass/layer0/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
@@ -5031,10 +5232,17 @@
 	pixel_y = 14
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Nl" = (
 /turf/open/auto_turf/strata_grass/layer0/unweedable,
 /area/LV624_Outpost_Furidamu/landing_zone_2)
+"Nq" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "Nv" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -5057,13 +5265,13 @@
 	dir = 10;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ND" = (
 /turf/open/floor{
 	dir = 6;
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NH" = (
 /obj/structure/flora/jungle/vines,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -5076,7 +5284,13 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
+"NK" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/indoors)
 "NP" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fernybush_3"
@@ -5088,7 +5302,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NS" = (
 /obj/structure/platform{
 	dir = 1
@@ -5107,7 +5321,7 @@
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/clothing/head/helmet/marine/veteran/UPP,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NU" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph.";
@@ -5115,19 +5329,19 @@
 	},
 /obj/structure/curtain/red,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "NW" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/boiledrice,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NX" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NY" = (
 /obj/structure/machinery/washing_machine{
 	density = 0;
@@ -5144,13 +5358,13 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "NZ" = (
 /obj/structure/platform_decoration{
 	dir = 1
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Oa" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -5166,11 +5380,7 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
-"Oj" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Om" = (
 /obj/structure/platform{
 	dir = 1
@@ -5203,7 +5413,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Os" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -5240,17 +5450,17 @@
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "OR" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/under/colonist/clf,
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "OT" = (
 /obj/structure/machinery/floodlight,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "OU" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 4;
@@ -5314,7 +5524,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ps" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 8;
@@ -5326,7 +5536,7 @@
 /turf/open/floor{
 	icon_state = "whitepurple"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Pw" = (
 /obj/structure/machinery/computer/telecomms/server{
 	layer = 3.9;
@@ -5357,14 +5567,14 @@
 /turf/open/floor{
 	icon_state = "whiteyellow"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "PH" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "PI" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/item/clothing/mask/facehugger{
@@ -5374,7 +5584,7 @@
 	stat = 2
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "PJ" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -5401,6 +5611,12 @@
 	icon_state = "warnplate"
 	},
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"PV" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3"
+	},
+/turf/closed/wall/strata_ice/jungle,
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "PW" = (
 /obj/structure/girder,
 /turf/open/floor/plating{
@@ -5420,7 +5636,7 @@
 	pixel_y = 17
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "PZ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/bag/plants,
@@ -5441,11 +5657,11 @@
 	pixel_y = 17
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Qf" = (
 /obj/structure/curtain/red,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Qj" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river,
@@ -5457,16 +5673,20 @@
 "Qn" = (
 /obj/item/reagent_container/food/snacks/meat/human,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
+"Qs" = (
+/obj/structure/flora/bush/ausbushes/var3/leafybush,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/LV624_Outpost_Furidamu/indoors)
 "Qw" = (
 /turf/open/floor/plating{
 	icon_state = "warnplate"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Qx" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Qz" = (
 /obj/structure/surface/rack,
 /obj/item/circuitboard/computer{
@@ -5478,7 +5698,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "QB" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/ammo_box/magazine/type71{
@@ -5494,7 +5714,7 @@
 	name = "Main Power Grid Monitoring"
 	},
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "QG" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -5505,7 +5725,7 @@
 "QK" = (
 /obj/item/stack/sheet/metal,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "QL" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
@@ -5518,7 +5738,7 @@
 	pixel_y = 29
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "QO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -5530,7 +5750,7 @@
 "QT" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "QV" = (
 /obj/structure/prop/server_equipment,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -5564,15 +5784,15 @@
 	},
 /obj/item/tool/crowbar,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ra" = (
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Rc" = (
 /obj/structure/machinery/power/monitor,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Re" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -5597,10 +5817,20 @@
 	pixel_y = 3
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Rp" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
+"Rt" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_2"
+	},
+/turf/open/floor{
+	icon_state = "bcircuit";
+	tag = "icon-bcircuit"
+	},
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Rv" = (
 /obj/item/tool/minihoe,
@@ -5617,7 +5847,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Rz" = (
 /turf/open/floor/plating,
 /area/shuttle/drop2/LV624{
@@ -5638,14 +5868,14 @@
 	pixel_y = 11
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "RE" = (
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "RG" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -5653,7 +5883,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "RI" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -5666,7 +5896,7 @@
 	dir = 8;
 	icon_state = "warnplate"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "RL" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1;
@@ -5677,7 +5907,7 @@
 "RN" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "RP" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /obj/structure/flora/jungle/vines{
@@ -5704,7 +5934,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "RV" = (
 /turf/open/floor/plating,
 /area/shuttle/drop1/LV624{
@@ -5721,7 +5951,7 @@
 /obj/item/ammo_magazine/smg/nailgun,
 /obj/item/ammo_magazine/smg/nailgun,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Sb" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/storage/box/wy_mre{
@@ -5731,12 +5961,18 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Sj" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"Sl" = (
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Sq" = (
 /obj/structure/surface/table/woodentable/poor,
@@ -5747,7 +5983,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ss" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "leafybush_2"
@@ -5757,13 +5993,13 @@
 "Sv" = (
 /obj/structure/machinery/processor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Sx" = (
 /obj/structure/bed{
 	can_buckle = 0
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "SA" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/jungle/vines{
@@ -5795,11 +6031,11 @@
 	pixel_y = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "SI" = (
 /obj/structure/curtain/red,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/oob)
+/area/LV624_Outpost_Furidamu/indoors)
 "SJ" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/paper_bin{
@@ -5808,7 +6044,7 @@
 	},
 /obj/item/tool/pen,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "SM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -5819,19 +6055,19 @@
 "SP" = (
 /obj/structure/machinery/power/port_gen/pacman/super,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "SU" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/flashlight,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "SY" = (
 /obj/structure/surface/table,
 /obj/item/clothing/suit/storage/militia/brace,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Tb" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -5847,13 +6083,13 @@
 	pixel_y = 12
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Td" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Th" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph.";
@@ -5865,7 +6101,7 @@
 	icon_state = "whiteblue";
 	tag = "icon-whiteblue (NORTHWEST)"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Ti" = (
 /turf/open/floor/plating,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
@@ -5879,7 +6115,7 @@
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Tp" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -5901,7 +6137,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Tz" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -5922,13 +6158,13 @@
 	pixel_y = 13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "TA" = (
 /obj/structure/bed{
 	can_buckle = 0
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "TB" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/weapon/gun/smg/mp5{
@@ -5938,7 +6174,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "TD" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/structure/platform{
@@ -5946,12 +6182,12 @@
 	},
 /obj/item/reagent_container/food/snacks/boiledrice,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "TE" = (
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "TF" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/jungle/vines/heavy,
@@ -5959,7 +6195,7 @@
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "TG" = (
 /turf/open/floor,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "TJ" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/prop/helmetgarb/gunoil{
@@ -5967,7 +6203,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "TO" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
@@ -5994,7 +6230,7 @@
 "TZ" = (
 /obj/vehicle/powerloader,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Ua" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 1
@@ -6012,12 +6248,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
-"Uk" = (
-/obj/structure/window/framed/wood,
-/turf/open/floor/corsat{
-	icon_state = "marked"
-	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ul" = (
 /obj/structure/prop/invuln{
 	density = 0;
@@ -6034,7 +6264,7 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Uo" = (
 /obj/structure/machinery/computer/telecomms/monitor{
 	pixel_x = -4;
@@ -6049,7 +6279,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Uv" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/tool/kitchen/tray{
@@ -6061,7 +6291,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Uw" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -6127,7 +6357,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "UI" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/weapon/gun/boltaction/colony{
@@ -6139,7 +6369,7 @@
 "UJ" = (
 /obj/structure/window/framed/wood,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "UK" = (
 /obj/structure/largecrate/random/case/small,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
@@ -6149,14 +6379,18 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "UL" = (
 /obj/structure/machinery/optable,
 /obj/item/tank/anesthetic,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"UM" = (
+/obj/item/stack/sheet/wood,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "UQ" = (
 /obj/structure/largecrate,
 /obj/item/reagent_container/food/drinks/coffeecup{
@@ -6186,7 +6420,7 @@
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "UW" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -6198,7 +6432,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "UZ" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	locked = 1;
@@ -6209,12 +6443,19 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Va" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
+"Vb" = (
+/obj/structure/flora/jungle/planttop1,
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
 "Vd" = (
 /obj/structure/flora/jungle/vines/heavy,
@@ -6239,7 +6480,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Vm" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /turf/open/floor/interior/wood,
@@ -6251,7 +6492,7 @@
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Vq" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/wrench,
@@ -6296,7 +6537,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "VC" = (
 /obj/structure/machinery/landinglight/ds2{
 	dir = 1;
@@ -6323,7 +6564,7 @@
 	icon_state = "whitebluefull";
 	tag = "icon-whitebluefull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "VO" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 1;
@@ -6358,7 +6599,7 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "VX" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -6368,29 +6609,29 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Wc" = (
 /obj/effect/landmark/lv624/xeno_tunnel,
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_3"
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/oob)
+/area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Wd" = (
 /obj/structure/machinery/seed_extractor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "We" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -15;
 	pixel_y = -10
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Wg" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Wh" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 1
@@ -6436,7 +6677,7 @@
 	dir = 8
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Wv" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -6450,13 +6691,13 @@
 	},
 /obj/item/weapon/melee/yautja/combistick,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "Wz" = (
 /obj/structure/surface/table,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "WA" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/boltaction/colony{
@@ -6471,7 +6712,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "WC" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -6491,7 +6732,7 @@
 	dir = 4;
 	icon_state = "whiteyellowfull"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "WV" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -6524,7 +6765,7 @@
 	pixel_y = 11
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Xc" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/LV624_Outpost_Furidamu/oob)
@@ -6541,7 +6782,7 @@
 "Xf" = (
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Xh" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -6582,7 +6823,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Xu" = (
 /obj/structure/flora/jungle/vines{
 	icon_state = "light_2"
@@ -6592,13 +6833,13 @@
 "Xv" = (
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Xw" = (
 /obj/structure/bed,
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "XB" = (
 /obj/structure/machinery/door/airlock/almayer/research{
 	dir = 1;
@@ -6623,7 +6864,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/oob)
 "XF" = (
 /obj/effect/landmark/shuttle_loc/marine_trg/landing{
 	name = "1"
@@ -6643,11 +6884,17 @@
 /obj/item/clothing/under/colonist/clf,
 /obj/item/clothing/under/colonist/clf,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
+"XO" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "XR" = (
 /obj/item/reagent_container/food/snacks/grown/potato,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "XV" = (
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/river,
@@ -6662,7 +6909,7 @@
 /obj/item/explosive/grenade/high_explosive/stick,
 /obj/item/explosive/grenade/high_explosive/stick,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Yi" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -6671,7 +6918,7 @@
 	stat = 2
 	},
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Yj" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -6684,12 +6931,23 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Yp" = (
 /obj/structure/curtain/red,
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"Yq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1;
+	tag = "icon-N"
+	},
+/obj/structure/machinery/colony_floodlight{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "Ys" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -6706,11 +6964,11 @@
 	pixel_y = 7
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Yw" = (
 /obj/structure/bed/stool,
 /turf/open/floor/plating,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Yx" = (
 /obj/structure/platform,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -6739,7 +6997,7 @@
 	},
 /obj/item/reagent_container/food/snacks/meat/fish,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "YF" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/weapon/gun/rifle/mar40/carbine{
@@ -6755,12 +7013,12 @@
 	pixel_y = 13
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "YJ" = (
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "YL" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -6775,7 +7033,7 @@
 	},
 /obj/structure/surface/table/woodentable/poor,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "YN" = (
 /obj/structure/surface/table/woodentable/poor,
 /obj/item/reagent_container/food/snacks/tomatosoup{
@@ -6788,7 +7046,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "YP" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	dir = 1;
@@ -6810,16 +7068,24 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "YX" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/mmi/radio_enabled,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "Za" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"Zb" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/weapon/gun/rifle/type71,
+/obj/item/weapon/gun/rifle/type71{
+	pixel_y = 5
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "Zc" = (
 /obj/structure/bookcase{
 	density = 0;
@@ -6827,7 +7093,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Zd" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
@@ -6864,7 +7130,7 @@
 	pixel_y = 13
 	},
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Zp" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -6876,7 +7142,7 @@
 "Zs" = (
 /obj/structure/bed/alien,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "Zy" = (
 /obj/structure/barricade/wooden{
 	dir = 4
@@ -6884,7 +7150,7 @@
 /turf/open/floor{
 	icon_state = "cult"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ZB" = (
 /obj/structure/sign/poster{
 	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
@@ -6898,7 +7164,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ZC" = (
 /obj/structure/flora/jungle/vines,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -6920,6 +7186,17 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
+"ZH" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/ammo_magazine/sniper/svd{
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/sniper/svd{
+	pixel_x = 10;
+	pixel_y = 7
+	},
+/turf/open/floor/interior/wood,
+/area/LV624_Outpost_Furidamu/indoors)
 "ZI" = (
 /obj/structure/flora/bush/ausbushes/palebush,
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
@@ -6933,7 +7210,7 @@
 /obj/item/ashtray/glass,
 /obj/item/tool/crowbar,
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ZM" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -6956,6 +7233,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/outdoors/militia)
+"ZR" = (
+/obj/structure/barricade/wooden,
+/turf/open/auto_turf/strata_grass/layer1/unweedable,
+/area/LV624_Outpost_Furidamu/outdoors/militia)
 "ZS" = (
 /obj/structure/machinery/computer/telecomms/server{
 	pixel_y = 16
@@ -6964,21 +7245,21 @@
 	dir = 8;
 	icon_state = "warnplate"
 	},
-/area/LV624_Outpost_Furidamu/outdoors/militia)
+/area/LV624_Outpost_Furidamu/indoors)
 "ZU" = (
 /obj/item/stool,
 /obj/structure/prop/holidays/string_lights{
 	pixel_y = 27
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 "ZV" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/prop/holidays/string_lights{
 	pixel_y = 27
 	},
 /turf/open/floor/interior/wood,
-/area/LV624_Outpost_Furidamu/outdoors/civilian)
+/area/LV624_Outpost_Furidamu/indoors)
 
 (1,1,1) = {"
 Ip
@@ -21955,8 +22236,8 @@ rJ
 rJ
 rJ
 rJ
-zq
-zq
+AX
+AX
 rJ
 rJ
 rJ
@@ -22091,21 +22372,21 @@ rJ
 rJ
 rJ
 rJ
-Na
-Na
-Na
-Na
-Na
-Na
 rJ
 rJ
 rJ
+rJ
+rJ
+rJ
+rJ
+rJ
+rJ
+nX
+nX
+nX
+nX
+nX
 bJ
-gd
-gd
-gd
-gd
-gd
 gd
 gd
 gd
@@ -22124,13 +22405,13 @@ rJ
 rJ
 rJ
 rJ
-zq
-zq
+AX
+AX
 iY
 iY
 iY
-zq
-zq
+AX
+AX
 rJ
 rJ
 rJ
@@ -22260,21 +22541,21 @@ rJ
 rJ
 rJ
 rJ
-Na
-Na
-Na
-Na
-Na
-Na
 rJ
 rJ
-bJ
-dg
-YB
-Mn
-YB
-YB
-YB
+rJ
+rJ
+rJ
+rJ
+rJ
+rJ
+nX
+nX
+nX
+nX
+nX
+nX
+cy
 YB
 YB
 YB
@@ -22289,21 +22570,21 @@ rJ
 rJ
 rJ
 rJ
-zq
+AX
 iY
 iY
 iY
-zq
+AX
 or
 or
 or
 or
-zq
-zq
+AX
+AX
 iY
 iY
 iY
-zq
+AX
 rJ
 rJ
 rJ
@@ -22429,21 +22710,21 @@ rJ
 rJ
 rJ
 rJ
-Na
-Na
-Na
-Na
-Na
-Na
 rJ
+rJ
+rJ
+rJ
+rJ
+rJ
+rJ
+nX
+nX
+nX
+nX
+nX
+nX
 bJ
 dg
-YB
-YB
-YB
-Mn
-YB
-YB
 YB
 YB
 YB
@@ -22456,9 +22737,9 @@ hn
 rJ
 rJ
 rJ
-zq
-zq
-zq
+AX
+AX
+AX
 or
 or
 or
@@ -22472,8 +22753,8 @@ or
 or
 or
 or
-zq
-zq
+AX
+AX
 rJ
 Wm
 io
@@ -22596,22 +22877,22 @@ gd
 gd
 gd
 gd
-gd
-hp
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nh
-dg
-On
-YB
-YB
-YB
-YB
-YB
+fA
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+Xc
+Xc
+Xc
+nX
+cy
 YB
 YB
 YB
@@ -22626,7 +22907,7 @@ gd
 gd
 gd
 gf
-zq
+AX
 or
 or
 or
@@ -22641,7 +22922,7 @@ or
 or
 or
 or
-zq
+AX
 NS
 io
 Lb
@@ -22765,22 +23046,22 @@ YB
 YB
 YB
 On
-YB
-iu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nZ
-YB
-YB
-YB
-YB
-YB
-YB
-YB
+Xm
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+Xc
+Xc
+Xc
+Xc
+cy
 YB
 YB
 YB
@@ -22795,7 +23076,7 @@ YB
 YB
 On
 iu
-Li
+Xt
 or
 or
 or
@@ -22810,7 +23091,7 @@ or
 or
 or
 or
-Li
+Xt
 VT
 el
 el
@@ -22934,37 +23215,37 @@ YB
 YB
 YB
 YB
+Xm
+nX
+nX
+nX
+nX
+nX
+Xc
+nX
+nX
+nX
+nX
+nX
+Xc
+Xc
+Xc
+cy
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
 YB
 iu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nZ
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-iu
-Li
+Xt
 or
 or
 or
@@ -22979,7 +23260,7 @@ or
 or
 or
 or
-Li
+Xt
 VT
 el
 el
@@ -23103,37 +23384,37 @@ YB
 YB
 YB
 YB
+fI
+hn
+nX
+nX
+nX
+Xc
+Xc
+Xc
+nX
+nX
+nX
+nX
+nX
+Xc
+Kd
+ae
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
+YB
 YB
 iu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nZ
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-iu
-Li
+Xt
 or
 or
 or
@@ -23148,7 +23429,7 @@ or
 or
 or
 or
-Li
+Xt
 VT
 el
 el
@@ -23273,36 +23554,36 @@ YB
 YB
 YB
 YB
+Xm
+nX
+nX
+Xc
+Xc
+Xc
+Xc
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+cy
+YB
+YB
+YB
+YB
+YB
+Xc
+Xc
+Xc
+YB
+YB
+YB
+YB
+YB
 iu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nZ
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-iu
-Li
+Xt
 or
 or
 or
@@ -23317,7 +23598,7 @@ or
 or
 or
 or
-Li
+Xt
 VT
 el
 el
@@ -23442,36 +23723,36 @@ YB
 YB
 YB
 YB
+Xm
+nX
+nX
+Xc
+Xc
+Xc
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+cy
+YB
+YB
+YB
+YB
+YB
+Xc
+Xc
+Xc
+Xc
+YB
+YB
+YB
+YB
 iu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-nZ
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-YB
-iu
-Li
+Xt
 or
 or
 or
@@ -23486,7 +23767,7 @@ or
 or
 or
 or
-Li
+Xt
 VT
 el
 el
@@ -23611,36 +23892,36 @@ eV
 eV
 eV
 eV
-jo
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-aL
-eV
-eV
-eV
-eV
-di
-On
+gU
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+nX
+cy
 YB
 YB
 YB
 YB
 YB
 YB
-YB
-YB
-YB
-YB
+Xc
+Xc
+Xc
 YB
 YB
 YB
 YB
 iu
-zq
+AX
 or
 or
 or
@@ -23655,7 +23936,7 @@ or
 or
 or
 or
-zq
+AX
 Om
 FA
 FA
@@ -23740,7 +24021,7 @@ Ti
 Ti
 Ti
 nX
-nX
+rz
 nX
 nX
 nX
@@ -23776,17 +24057,19 @@ gF
 eV
 eV
 gU
+Dy
+Dy
+yI
+Et
 nX
 nX
 nX
 nX
 nX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+nX
+nX
+nX
+rz
 nX
 nX
 nX
@@ -23795,24 +24078,22 @@ nX
 cG
 eV
 eV
-eV
-eV
 di
 YB
 YB
 YB
 YB
+Xc
 YB
 YB
 YB
 YB
 YB
-YB
-zq
-zq
-zq
-zq
-FK
+AX
+AX
+AX
+AX
+nn
 or
 or
 or
@@ -23823,9 +24104,9 @@ or
 or
 or
 or
-zq
-zq
-zq
+AX
+AX
+AX
 zA
 zA
 zA
@@ -23858,14 +24139,14 @@ FA
 FA
 FA
 Os
-zA
+zh
 zA
 zA
 zA
 zA
 Xc
 Xc
-zA
+zh
 zA
 zA
 zA
@@ -23917,8 +24198,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 cG
 eV
 eV
@@ -23945,17 +24226,17 @@ gU
 nX
 nX
 nX
+qj
+lH
+wy
 nX
 nX
 nX
 nX
 nX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+nX
+nX
+nX
 nX
 nX
 nX
@@ -23978,10 +24259,10 @@ YB
 YB
 gF
 UD
-zA
-zA
-zq
-FK
+km
+WI
+AX
+nn
 or
 or
 or
@@ -23992,7 +24273,7 @@ or
 or
 or
 or
-zq
+AX
 zA
 zA
 zA
@@ -24018,7 +24299,7 @@ zA
 zA
 zA
 zA
-zA
+zh
 zA
 zA
 zA
@@ -24070,7 +24351,7 @@ YB
 YB
 gF
 gU
-nX
+rz
 nX
 nX
 Ti
@@ -24114,17 +24395,9 @@ nX
 nX
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+qj
+lH
+wy
 nX
 nX
 nX
@@ -24135,6 +24408,14 @@ nX
 nX
 nX
 nX
+nX
+nX
+dV
+Et
+nX
+nX
+nX
+rz
 nX
 cy
 YB
@@ -24146,10 +24427,10 @@ YB
 YB
 YB
 Xm
+yo
 zA
-zA
-zq
-zq
+AX
+AX
 or
 or
 or
@@ -24161,7 +24442,7 @@ or
 or
 or
 or
-zq
+AX
 zA
 zA
 zA
@@ -24223,8 +24504,8 @@ Ip
 Ot
 Xc
 Xc
-nX
-nX
+dV
+Et
 cG
 eV
 eV
@@ -24249,7 +24530,7 @@ nX
 nX
 nX
 nX
-nX
+rz
 Xc
 Xc
 nX
@@ -24258,7 +24539,7 @@ nX
 nX
 nX
 nX
-nX
+VE
 Xc
 Xc
 Xc
@@ -24272,6 +24553,8 @@ cG
 eV
 eV
 gU
+dV
+Et
 nX
 nX
 nX
@@ -24281,11 +24564,9 @@ nX
 nX
 nX
 nX
-nX
-nX
-nX
-nX
-nX
+qj
+lH
+wy
 nX
 nX
 nX
@@ -24316,8 +24597,8 @@ YB
 YB
 Xm
 zA
-zA
-zq
+zh
+AX
 or
 or
 or
@@ -24330,7 +24611,7 @@ or
 or
 or
 or
-zq
+AX
 zA
 zA
 zA
@@ -24341,6 +24622,15 @@ zA
 zA
 zA
 zA
+km
+WI
+zA
+zA
+zA
+zA
+zA
+zA
+zh
 zA
 zA
 zA
@@ -24349,16 +24639,7 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
+zh
 zA
 Xc
 zA
@@ -24397,7 +24678,7 @@ nX
 nX
 nX
 nX
-nX
+rz
 Xc
 Xc
 Xc
@@ -24421,7 +24702,7 @@ nX
 Xc
 xm
 Xc
-nX
+VE
 nX
 nX
 nX
@@ -24452,13 +24733,13 @@ nX
 nX
 nX
 nX
+qj
+lH
+wy
 nX
 nX
 nX
-nX
-nX
-nX
-nX
+xm
 nX
 nX
 nX
@@ -24484,9 +24765,9 @@ YB
 YB
 YB
 Xm
+Bm
 zA
-zA
-Li
+Xt
 or
 or
 or
@@ -24495,11 +24776,11 @@ or
 or
 or
 or
-FK
-FK
-FK
-zq
-zq
+nn
+nn
+nn
+AX
+AX
 HO
 HO
 HO
@@ -24571,16 +24852,16 @@ Xc
 Xc
 Xc
 Xc
+dV
+Et
 nX
 nX
 nX
+rz
 nX
 nX
-nX
-nX
-nX
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -24591,8 +24872,8 @@ Xc
 xm
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -24606,6 +24887,7 @@ Xc
 Xc
 Xc
 Xc
+VE
 nX
 nX
 nX
@@ -24620,15 +24902,14 @@ nX
 nX
 nX
 nX
+qj
+lH
+wy
 nX
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-nX
+xm
+xm
 nX
 nX
 nX
@@ -24655,7 +24936,7 @@ YB
 Xm
 zA
 zA
-Li
+Xt
 or
 or
 or
@@ -24667,13 +24948,13 @@ or
 or
 or
 or
-Li
+Xt
 il
 zA
 zA
 il
 zA
-zA
+yo
 HO
 ob
 zA
@@ -24757,7 +25038,7 @@ nX
 nX
 pZ
 pZ
-nX
+rz
 Xc
 Xc
 Xc
@@ -24771,7 +25052,7 @@ nX
 nX
 nX
 nX
-nX
+rz
 Xc
 Xc
 nX
@@ -24790,27 +25071,27 @@ nX
 nX
 nX
 nX
+qj
+lH
+wy
+nX
+nX
+nX
+nX
+xm
+nX
+xm
+nX
+nX
+dV
+Et
 nX
 nX
 nX
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -24821,10 +25102,10 @@ YB
 YB
 YB
 YB
-Xm
+uM
+WI
 zA
-zA
-Li
+Xt
 or
 or
 or
@@ -24836,12 +25117,12 @@ or
 or
 or
 or
-Li
+Xt
 il
 il
-FK
-FK
-FK
+nn
+nn
+nn
 zA
 HO
 zA
@@ -24850,7 +25131,7 @@ zA
 zA
 zA
 HO
-zA
+zh
 zA
 zA
 zA
@@ -24865,15 +25146,15 @@ ad
 zA
 Xc
 gS
-ad
+tU
 Hk
 Xc
 gS
 ad
 Hk
 zA
-zA
-zA
+km
+WI
 Ec
 Ec
 Ec
@@ -24927,8 +25208,8 @@ pZ
 je
 pZ
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
@@ -24955,30 +25236,30 @@ nX
 nX
 nX
 nX
+pL
+nX
+nX
+nX
+qj
+lH
+wy
 nX
 nX
 nX
 nX
 nX
 nX
+xm
+xm
+nX
+nX
+nX
+pL
 nX
 nX
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
-nX
+pL
 nX
 nX
 nX
@@ -24993,7 +25274,7 @@ YB
 Xm
 zA
 zA
-zq
+AX
 or
 or
 or
@@ -25005,12 +25286,12 @@ or
 or
 or
 or
-Li
+Xt
 il
 il
-FK
+nn
 EM
-FK
+nn
 il
 HO
 zA
@@ -25020,8 +25301,8 @@ ZM
 ob
 HO
 zA
-zA
-zA
+km
+WI
 zA
 Xc
 Xc
@@ -25043,14 +25324,14 @@ zA
 zA
 zA
 ad
-Ec
+LT
 Xc
 Ec
 Xc
 ad
 Ec
 wE
-zA
+zh
 zA
 zA
 zA
@@ -25103,7 +25384,7 @@ xm
 Xc
 Xc
 Xc
-nX
+rz
 nX
 nX
 nX
@@ -25122,37 +25403,37 @@ nX
 nX
 nX
 nX
-nX
-nX
-Dy
-Dy
+dV
+Et
+AX
+AX
 Xt
 Yo
-Dy
-Dy
+AX
+AX
+bw
 nX
 nX
 nX
+xm
 nX
 nX
+xm
+xm
 nX
 nX
-nX
-nX
-nX
-nX
-nX
-Dy
-Dy
+rz
+AX
+AX
 Xt
 Xt
-Dy
-Dy
+AX
+AX
 nX
 nX
 nX
 nX
-nX
+rz
 cy
 On
 YB
@@ -25162,8 +25443,8 @@ YB
 Xm
 zA
 zA
-zq
-zq
+AX
+AX
 or
 or
 or
@@ -25173,13 +25454,13 @@ or
 or
 or
 or
-zq
-zq
+AX
+AX
 il
 il
-FK
+nn
 jE
-FK
+nn
 il
 HO
 ob
@@ -25202,8 +25483,8 @@ Ec
 Xc
 zA
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Xc
@@ -25239,21 +25520,21 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
-Xc
-Xc
-Xc
-Xc
-nX
+rz
 nX
 nX
 nX
 Xc
 Xc
+Xc
+Xc
+rz
 nX
+nX
+nX
+Xc
+Xc
+rz
 nX
 nX
 nX
@@ -25290,36 +25571,36 @@ Xc
 nX
 nX
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 WL
 WL
 WL
 WL
-Dy
+AX
 Xt
 Xt
-Dy
+AX
+nX
+xm
+xm
 nX
 nX
-nX
-nX
-nX
-nX
-Dy
+xm
+AX
 Xt
 Xt
-Dy
+AX
 WL
-Ti
-Ti
-Ti
-Dy
+kw
+kw
+kw
+AX
 Xt
 Xt
-Dy
+AX
 VX
 sJ
 cy
@@ -25331,9 +25612,9 @@ YB
 Xm
 zA
 zA
-zA
-zq
-zq
+yo
+AX
+AX
 or
 or
 or
@@ -25341,8 +25622,8 @@ or
 or
 or
 or
-zq
-zq
+AX
+AX
 il
 il
 il
@@ -25371,7 +25652,7 @@ Xc
 Xc
 zA
 Xc
-zA
+zh
 zA
 Xc
 gS
@@ -25418,16 +25699,16 @@ Xc
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
@@ -25444,7 +25725,7 @@ Xc
 Xc
 Xc
 Xc
-nX
+VE
 nX
 nX
 nX
@@ -25455,8 +25736,8 @@ nX
 nX
 nX
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 Xt
@@ -25472,22 +25753,22 @@ WL
 WL
 Xt
 nX
+xm
+xm
 nX
 nX
-nX
-nX
-nX
+xm
 Xt
 WL
 WL
 WL
 zP
 cH
-Ti
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+kw
 Xt
 nX
 nX
@@ -25498,34 +25779,34 @@ YB
 YB
 YB
 Xm
+EE
 zA
-zA
-zA
-zA
-zq
-Li
-Li
-Li
-zq
+km
+WI
+AX
+Xt
+Xt
+Xt
+AX
 iY
 iY
 iY
-zq
-il
+AX
+cB
 il
 il
 zA
 zA
 zA
 il
-FK
-FK
-FK
-fX
-fX
-FK
-FK
-FK
+nn
+nn
+nn
+SI
+SI
+nn
+nn
+nn
 zA
 zA
 zA
@@ -25538,7 +25819,7 @@ Xc
 gS
 ad
 Hk
-wE
+ry
 Xc
 Xc
 zA
@@ -25547,7 +25828,7 @@ Xc
 Xc
 Xc
 Xc
-zA
+zh
 zA
 zA
 zA
@@ -25558,8 +25839,8 @@ gS
 ad
 Hk
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Xc
@@ -25580,8 +25861,8 @@ Xc
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 xm
 xm
@@ -25590,8 +25871,8 @@ nX
 nX
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -25632,9 +25913,9 @@ Xt
 WL
 zP
 cH
-Ti
+kw
 TG
-Ti
+kw
 xC
 cH
 nx
@@ -25642,7 +25923,7 @@ WL
 Xt
 nX
 nX
-nX
+xm
 nX
 nX
 nX
@@ -25655,8 +25936,8 @@ TG
 TG
 Iw
 Iw
-Ti
-Ti
+kw
+kw
 Xt
 nX
 nX
@@ -25678,25 +25959,25 @@ il
 HO
 zA
 zA
-zA
-zA
+km
+WI
 il
 il
 zA
 zA
 zA
-zA
-FK
-FK
+CF
+nn
+nn
 To
 cX
 cX
 cX
 cX
 cX
-FK
-FK
-zA
+nn
+nn
+zh
 zA
 zA
 Xc
@@ -25720,8 +26001,8 @@ Xc
 Xc
 Xc
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Ec
@@ -25796,41 +26077,41 @@ nX
 nX
 nX
 nX
-Dy
-Dy
+AX
+AX
 WL
-Ti
-sJ
-Ti
-Ti
-Ti
+kw
+nn
+kw
+kw
+kw
 TG
-sJ
+nn
 PD
 WL
-Dy
-Dy
-Dy
+AX
+AX
+AX
 my
 my
-Dy
-Dy
-Dy
+AX
+AX
+AX
 WL
 Ig
-sJ
-Ti
+nn
+kw
 TG
 TG
 TG
-sJ
+nn
 Iw
-Ti
-Dy
-Dy
+kw
+AX
+AX
 nX
 nX
-nX
+pL
 cy
 YB
 YB
@@ -25842,8 +26123,8 @@ zA
 zA
 HO
 il
-il
-zA
+cB
+CF
 HO
 il
 il
@@ -25851,11 +26132,11 @@ il
 zA
 zA
 il
-zA
+yo
 zA
 zA
 il
-FK
+nn
 To
 cX
 cX
@@ -25864,7 +26145,7 @@ cX
 cX
 cX
 To
-id
+UJ
 zA
 zA
 zA
@@ -25890,7 +26171,7 @@ Xc
 Xc
 Xc
 Xc
-zA
+zh
 Xc
 Xc
 Xc
@@ -25958,8 +26239,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -25968,34 +26249,34 @@ nX
 Xt
 WL
 zP
-Ti
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+kw
 TG
 TG
 xC
 nx
 WL
-sJ
+nn
 WL
 WL
 WL
 WL
-sJ
+nn
 WL
 zP
 MP
-Ti
-Ti
+kw
+kw
 WL
 WL
 TG
 TG
 Iw
-Ti
-Ti
+kw
+kw
 Xt
 nX
 ZN
@@ -26005,7 +26286,7 @@ YB
 YB
 YB
 Xm
-zA
+yo
 zA
 zA
 zA
@@ -26020,25 +26301,25 @@ il
 il
 zA
 zA
-zA
-zA
+km
+WI
 il
 il
-FK
+nn
 cX
 cX
 cX
-LX
+Xv
 ie
 cX
 cX
 To
-id
+UJ
 zA
 zA
 zA
 zA
-zA
+zh
 zA
 zA
 zA
@@ -26067,7 +26348,7 @@ Hk
 zA
 zA
 zA
-zA
+zh
 Xc
 Xc
 Xc
@@ -26107,7 +26388,7 @@ je
 nX
 nX
 Xc
-nX
+rz
 nX
 nX
 nX
@@ -26138,9 +26419,9 @@ Yo
 WL
 Ig
 TG
-Ti
-Ti
-Ti
+kw
+kw
+kw
 WL
 WL
 TG
@@ -26164,7 +26445,7 @@ WL
 TG
 TG
 Iw
-Ti
+kw
 Yo
 nX
 ZN
@@ -26179,8 +26460,8 @@ zA
 zA
 zA
 HO
-zA
-zA
+km
+WI
 il
 Uw
 il
@@ -26193,7 +26474,7 @@ zA
 zA
 il
 il
-fX
+SI
 cX
 cX
 cX
@@ -26202,7 +26483,7 @@ Rn
 cX
 cX
 cX
-FK
+nn
 zA
 zA
 zA
@@ -26308,21 +26589,21 @@ WL
 Ig
 TG
 TG
-Ti
+kw
 WL
 WL
 WL
 TG
 TG
 Iw
-Ti
-Ti
-Ti
+kw
+kw
+kw
 Iw
 Iw
-Ti
-Ti
-Ti
+kw
+kw
+kw
 LB
 TG
 TG
@@ -26332,8 +26613,8 @@ WL
 WL
 TG
 TG
-Ti
-Ti
+kw
+kw
 Yo
 nX
 ZN
@@ -26345,7 +26626,7 @@ YB
 YB
 fI
 fA
-zA
+zX
 zA
 HO
 zA
@@ -26362,16 +26643,16 @@ il
 zA
 zA
 il
-FK
+nn
 wQ
 cX
 cX
-LX
+Xv
 Bq
 cX
 cX
 eG
-id
+UJ
 zA
 zA
 zA
@@ -26448,8 +26729,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 ZF
 re
 re
@@ -26468,7 +26749,7 @@ TT
 lv
 tc
 JR
-nX
+VE
 nX
 nX
 nX
@@ -26483,16 +26764,16 @@ WL
 TG
 TG
 Iw
-Ti
-Ti
-sJ
-Ti
-Ti
-Ti
-Ti
-sJ
-Ti
-Ti
+kw
+kw
+nn
+kw
+kw
+kw
+kw
+nn
+kw
+kw
 LB
 TG
 TG
@@ -26501,8 +26782,8 @@ WL
 TG
 TG
 Iw
-Ti
-Ti
+kw
+kw
 Xt
 nX
 nX
@@ -26518,7 +26799,7 @@ zA
 zA
 HO
 zA
-zA
+Bm
 zA
 Uw
 il
@@ -26531,7 +26812,7 @@ il
 zA
 il
 il
-FK
+nn
 ag
 cX
 cX
@@ -26540,7 +26821,7 @@ cX
 cX
 cX
 YM
-id
+UJ
 zA
 zA
 Xc
@@ -26612,8 +26893,8 @@ Xc
 je
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -26641,38 +26922,38 @@ JR
 nX
 nX
 nX
-Dy
-Dy
+AX
+AX
 WL
 Ig
-sJ
+nn
 TG
 TG
 TG
 TG
-sJ
+nn
 Iw
-Ti
-sJ
-sJ
-sJ
+kw
+nn
+nn
+nn
 my
 my
-sJ
-sJ
-sJ
-Ti
-Ti
-sJ
+nn
+nn
+nn
+kw
+kw
+nn
 TG
 TG
 TG
 TG
-sJ
+nn
 Iw
-Ti
-Dy
-Dy
+kw
+AX
+AX
 nX
 ZN
 nX
@@ -26686,9 +26967,9 @@ Xm
 zA
 zA
 HO
-zA
-zA
-zA
+MQ
+km
+WI
 HO
 il
 il
@@ -26700,16 +26981,16 @@ il
 zA
 il
 il
-FK
-FK
+nn
+nn
 zJ
 cX
 cX
 cX
 cX
 cX
-FK
-FK
+nn
+nn
 zA
 zA
 Ec
@@ -26810,7 +27091,7 @@ je
 JR
 nX
 nX
-nX
+VE
 Xt
 WL
 AW
@@ -26820,26 +27101,26 @@ TG
 TG
 bD
 Gw
-Ti
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
-Ti
+kw
+kw
+YT
+cX
+cX
+cX
+cX
+cX
+cX
+YT
+kw
+kw
+kw
 Iw
 TG
 TG
 Iw
 Iw
-Ti
-Ti
+kw
+kw
 Xt
 lg
 nX
@@ -26853,7 +27134,7 @@ YB
 YB
 Xm
 zA
-zA
+MQ
 HO
 zA
 zA
@@ -26861,7 +27142,7 @@ zA
 HO
 il
 il
-zA
+CF
 zA
 zA
 zA
@@ -26869,17 +27150,17 @@ il
 zA
 zA
 il
-il
-FK
-FK
-FK
-fX
-id
-fX
-FK
-FK
-zA
-zA
+cB
+nn
+nn
+nn
+SI
+UJ
+SI
+nn
+nn
+km
+WI
 zA
 Xc
 wE
@@ -26905,7 +27186,7 @@ il
 il
 il
 il
-zA
+zh
 zA
 zA
 Xc
@@ -26987,28 +27268,28 @@ WL
 AW
 LB
 Iw
-Ti
-Ti
-Ti
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+YT
+cX
+cX
+cX
+cX
+cX
+cX
+YT
+kw
+kw
+kw
+kw
 Iw
 bD
 Gw
-Ti
-Ti
-Ti
+kw
+kw
+kw
 Xt
 dR
 nX
@@ -27021,14 +27302,14 @@ YB
 YB
 YB
 Xm
-zA
-zA
-FK
-id
-id
-id
-FK
-FK
+yo
+Bm
+nn
+UJ
+UJ
+UJ
+nn
+nn
 oA
 zA
 zA
@@ -27040,13 +27321,13 @@ zA
 zA
 il
 il
-id
+UJ
 uE
 cX
 cX
 cX
 aD
-id
+UJ
 zA
 zA
 zA
@@ -27149,37 +27430,37 @@ Xc
 nX
 nX
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 WL
 Ig
-Ti
-Ti
-sJ
-Uk
-Uk
-sJ
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-sJ
-Uk
-Uk
-sJ
-Ti
+kw
+kw
+nn
+YT
+YT
+nn
+cX
+cX
+cX
+cX
+cX
+cX
+nn
+YT
+YT
+nn
+kw
 Ig
 PD
 WL
-Dy
+AX
 Xt
 Xt
-Dy
-nX
+AX
+pL
 nX
 nX
 nX
@@ -27189,14 +27470,14 @@ YB
 YB
 YB
 YB
-Xm
+uM
+WI
 zA
-zA
-FK
-zD
+nn
+Tz
 rC
-LX
-FK
+Xv
+nn
 Fg
 zA
 zA
@@ -27209,13 +27490,13 @@ zA
 zA
 zA
 il
-id
+UJ
 mK
 cX
 cX
 cX
 DB
-id
+UJ
 zA
 zA
 Xc
@@ -27244,8 +27525,8 @@ il
 Xc
 Xc
 Xc
-zA
-zA
+km
+WI
 zA
 il
 il
@@ -27320,31 +27601,31 @@ nX
 nX
 nX
 nX
-nX
-Dy
-sJ
+rz
+AX
+nn
 Ig
-Ti
-sJ
-sJ
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-sJ
-sJ
+kw
+nn
+nn
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+nn
+nn
 Ig
 PD
-sJ
-Dy
+nn
+AX
 nX
 nX
 nX
@@ -27361,14 +27642,14 @@ YB
 fI
 fA
 zA
-id
-zD
-Hj
+UJ
+Tz
+Hw
 qY
-FK
+nn
 Fg
-zA
-zA
+km
+WI
 il
 il
 zA
@@ -27378,13 +27659,13 @@ il
 il
 zA
 il
-FK
+nn
 QT
 cX
 cX
 cX
 xW
-FK
+nn
 zA
 Xc
 zA
@@ -27487,33 +27768,33 @@ Xc
 Xc
 nX
 nX
+dV
+Et
 nX
-nX
-nX
-Dy
+AX
 WL
 Ig
-Ti
-Ti
-sJ
-Mk
-Mk
-Mk
-Mk
-wd
-IM
-IM
+kw
+kw
+nn
+cX
+cX
+cX
+cX
+BK
+VU
+VU
 Jy
-Mk
-Mk
-Mk
-Mk
-sJ
-Ti
+cX
+cX
+cX
+cX
+nn
+kw
 Ig
 PD
 WL
-Dy
+AX
 nX
 ZN
 nX
@@ -27529,14 +27810,14 @@ YB
 YB
 YB
 Xm
-zA
-id
-zD
+yo
+UJ
+Tz
 cX
 hz
-FK
+nn
 Fg
-zA
+yo
 zA
 il
 il
@@ -27545,15 +27826,15 @@ il
 Xc
 Xc
 il
-zA
-zA
-id
+wE
+wE
+UJ
 yt
 cX
 cX
 cX
 IT
-id
+UJ
 zA
 Ec
 Ec
@@ -27655,7 +27936,7 @@ Xc
 Xc
 nX
 nX
-nX
+VE
 nX
 nX
 nX
@@ -27663,23 +27944,23 @@ Xt
 WL
 Ig
 Iw
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-wt
-sJ
-sJ
+kw
+YT
+cX
+cX
+cX
+cX
+KN
+nn
+nn
 KL
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
+cX
+cX
+cX
+cX
+YT
+kw
+kw
 PD
 WL
 Xt
@@ -27697,13 +27978,13 @@ YB
 YB
 YB
 YB
-Xm
-zA
-FK
+uM
+WI
+nn
 zF
 cX
 cX
-FK
+nn
 Fg
 zA
 zA
@@ -27712,17 +27993,17 @@ il
 il
 il
 Xc
-Xc
+eC
+wE
 zA
-zA
-zA
-id
+wE
+UJ
 Aw
 cX
 cX
 cX
 HG
-id
+UJ
 zA
 Xc
 wE
@@ -27806,8 +28087,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
@@ -27825,30 +28106,30 @@ nX
 nX
 nX
 nX
-nX
+VE
 nX
 nX
 Xt
 WL
 Ig
 Iw
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-wt
-sJ
-sJ
+kw
+YT
+cX
+cX
+cX
+cX
+KN
+nn
+nn
 KL
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
+cX
+cX
+cX
+cX
+YT
+kw
+kw
 PD
 WL
 Xt
@@ -27868,14 +28149,14 @@ YB
 YB
 fI
 fA
-FK
-FK
-FK
-fX
-FK
-FK
-FK
-zA
+nn
+nn
+nn
+SI
+nn
+nn
+uQ
+wE
 zA
 zA
 il
@@ -27883,16 +28164,16 @@ il
 il
 il
 zA
-zA
-FK
-FK
-FK
+CF
+nn
+nn
+nn
 cX
 cX
 cX
-FK
-FK
-zA
+nn
+nn
+zh
 Xc
 Xc
 Xc
@@ -27928,8 +28209,8 @@ Jz
 gM
 Jh
 bh
-yQ
-yQ
+wf
+wf
 bh
 bh
 Xc
@@ -27977,7 +28258,7 @@ nX
 nX
 nX
 nX
-nX
+VE
 Xc
 Xc
 Xc
@@ -27989,38 +28270,38 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
+dV
+Et
 nX
 nX
 nX
 nX
-Dy
+nX
+nX
+AX
 WL
 Ig
-Ti
-Ti
-sJ
-Mk
-Mk
-Mk
-Mk
-HR
+kw
+kw
+nn
+cX
+cX
+cX
+cX
+NZ
 IP
 IP
 Lv
-Mk
-Mk
-Mk
-Mk
-sJ
+cX
+cX
+cX
+cX
+nn
 WL
-Ti
+kw
 PD
 WL
-Dy
+AX
 Vq
 ZN
 nX
@@ -28037,13 +28318,13 @@ YB
 YB
 YB
 Xm
-FK
-FK
+nn
+nn
 cX
 cX
 jA
 YH
-FK
+uQ
 il
 il
 zA
@@ -28053,13 +28334,13 @@ il
 il
 il
 zA
-FK
+nn
 EM
-FK
-FK
-fX
-FK
-FK
+nn
+nn
+SI
+nn
+nn
 zA
 zA
 zA
@@ -28097,9 +28378,9 @@ RE
 tb
 Iq
 ln
-yQ
-yQ
-yQ
+wf
+wf
+wf
 bh
 Xc
 Ot
@@ -28166,30 +28447,30 @@ nX
 nX
 nX
 nX
-Dy
-sJ
+AX
+nn
 Ig
-Ti
-sJ
-sJ
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-sJ
-sJ
-Ti
+kw
+nn
+nn
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+nn
+nn
+kw
 PD
-sJ
-Dy
+nn
+AX
 vo
 dR
 nX
@@ -28207,13 +28488,13 @@ YB
 YB
 fI
 fA
-FK
+nn
 cX
 cX
 cX
 TB
-FK
-FK
+nn
+nn
 il
 zA
 zA
@@ -28222,12 +28503,12 @@ il
 il
 il
 zA
-FK
+nn
 jE
-FK
+nn
 HO
 zA
-zA
+Gy
 HO
 zA
 zA
@@ -28266,9 +28547,9 @@ gv
 gM
 qw
 bh
-yQ
-yQ
-yQ
+wf
+wf
+wf
 bh
 Xc
 Ot
@@ -28316,8 +28597,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
@@ -28332,36 +28613,36 @@ nX
 nX
 nX
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 WL
 Ig
-Ti
-Ti
-sJ
-Uk
-Uk
-sJ
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-sJ
-Uk
-Uk
-sJ
+kw
+kw
+nn
+YT
+YT
+nn
+cX
+cX
+cX
+cX
+cX
+cX
+nn
+YT
+YT
+nn
 WL
 Ig
 PD
 WL
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 nX
 nX
 ZN
@@ -28376,27 +28657,27 @@ YB
 YB
 On
 Xm
-id
+UJ
 cX
 cX
 cX
 Nc
 ka
-FK
-il
-il
-zA
-il
-il
+nn
+cB
 il
 zA
+il
+il
+il
+yo
 zA
 zA
 zA
 zA
 HO
 zA
-zA
+Bm
 HO
 zA
 zA
@@ -28406,8 +28687,8 @@ wE
 Ec
 wE
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Xc
@@ -28475,8 +28756,8 @@ Xc
 Xc
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 nX
@@ -28491,7 +28772,7 @@ nX
 nX
 nX
 nX
-nX
+VE
 nX
 nX
 nX
@@ -28508,26 +28789,26 @@ WL
 zP
 MP
 Iw
-Ti
-Ti
-Ti
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+YT
+cX
+cX
+cX
+cX
+cX
+cX
+YT
+kw
+kw
+kw
 zP
 MP
 xC
-Ti
-Ti
+kw
+kw
 WL
 WL
 Xt
@@ -28545,14 +28826,14 @@ YB
 YB
 YB
 Xm
-id
+UJ
 cX
 cX
 cX
 cX
 pi
-FK
-FK
+nn
+nn
 il
 il
 il
@@ -28560,8 +28841,8 @@ il
 il
 il
 zA
-zA
-zA
+km
+WI
 zA
 HO
 zA
@@ -28576,7 +28857,7 @@ wE
 kr
 zA
 zA
-zA
+zh
 zA
 zA
 zA
@@ -28596,17 +28877,17 @@ il
 il
 ke
 BG
-zA
-zA
+JP
+JP
 Th
 bh
 nt
 vm
 nq
 bh
-zA
-il
-il
+JP
+qT
+qT
 Ww
 Xc
 Ot
@@ -28666,10 +28947,10 @@ nX
 nX
 nX
 Xc
+rz
 nX
-nX
-nX
-nX
+dV
+Et
 Xt
 WL
 zP
@@ -28678,26 +28959,26 @@ MP
 TG
 TG
 Iw
-Ti
-Ti
-Ti
-Uk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Uk
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+YT
+cX
+cX
+cX
+cX
+cX
+cX
+YT
+kw
+kw
+kw
+kw
 TG
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
 WL
 Xt
 dR
@@ -28714,14 +28995,14 @@ YB
 YB
 YB
 Xm
-FK
+nn
 cX
 cX
 cX
 cX
 cX
 UK
-FK
+nn
 il
 il
 il
@@ -28736,7 +29017,7 @@ HO
 zA
 zA
 HO
-zA
+zh
 zA
 zA
 zA
@@ -28764,18 +29045,18 @@ il
 il
 il
 XB
-zA
-zA
+JP
+JP
 kh
-zA
+JP
 px
-zA
+JP
 KK
 Qn
 NU
-zA
-il
-il
+JP
+qT
+qT
 Xc
 Xc
 Ot
@@ -28819,11 +29100,11 @@ nX
 nX
 nX
 nX
-Dy
+AX
 Xt
 my
 Xt
-Dy
+AX
 nX
 nX
 nX
@@ -28838,38 +29119,38 @@ Xc
 Xc
 nX
 nX
-Dy
-Dy
+AX
+AX
 WL
 Ig
-sJ
+nn
 TG
 TG
 TG
 TG
-sJ
-Ti
-Ti
-sJ
-sJ
-sJ
+nn
+kw
+kw
+nn
+nn
+nn
 my
 my
-sJ
-sJ
-sJ
-Ti
-Ti
-sJ
-Ti
-Ti
-Ti
+nn
+nn
+nn
+kw
+kw
+nn
+kw
+kw
+kw
 TG
-sJ
-Ti
-Ti
-Dy
-Dy
+nn
+kw
+kw
+AX
+AX
 nX
 ZN
 nX
@@ -28883,14 +29164,14 @@ YB
 YB
 YB
 Xm
-FK
+nn
 cX
 cX
 cX
 cX
 cX
 cX
-FK
+nn
 zA
 il
 il
@@ -28900,16 +29181,16 @@ il
 il
 zA
 zA
-zA
-FK
-fX
-FK
-FK
-FK
-FK
-FK
-zA
-zA
+CF
+nn
+SI
+nn
+nn
+nn
+nn
+nn
+km
+WI
 zA
 zA
 Xc
@@ -28933,18 +29214,18 @@ il
 il
 il
 ke
-zA
-il
-il
-zA
+JP
+qT
+qT
+JP
 bh
 nq
 Qn
 gX
 Xc
 FQ
-zA
-zA
+JP
+JP
 Xc
 Xc
 Ot
@@ -28985,19 +29266,19 @@ nX
 nX
 nX
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 yv
 LE
 Nz
-Dy
+AX
 Xt
 Xt
-Dy
-nX
-nX
+AX
+dV
+Et
 nX
 nX
 Xc
@@ -29017,27 +29298,27 @@ WL
 WL
 TG
 TG
-Ti
-Ti
-Ti
-sJ
-Ti
-Ti
-Ti
-Ti
-sJ
-Ti
-Ti
+kw
+kw
+kw
+nn
+kw
+kw
+kw
+kw
+nn
+kw
+kw
 Iw
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+kw
+kw
 Iw
-Ti
-Ti
+kw
+kw
 Xt
 nX
 ZN
@@ -29052,14 +29333,14 @@ YB
 YB
 YB
 Xm
-id
+UJ
 cX
 cX
-qp
+AS
 DV
 cX
 cX
-FK
+nn
 zA
 il
 il
@@ -29069,16 +29350,16 @@ il
 il
 zA
 zA
-FK
-FK
+nn
+nn
 cX
 cX
 cX
 cX
 cX
-FK
-FK
-zA
+nn
+nn
+zh
 zA
 zA
 zA
@@ -29104,7 +29385,7 @@ il
 bh
 bh
 bh
-jE
+qD
 bh
 bh
 bh
@@ -29150,22 +29431,22 @@ pZ
 je
 je
 pZ
+VE
 nX
 nX
-nX
-Dy
-Dy
+AX
+AX
 Iw
 Iw
-sJ
+nn
 yv
 LE
 Nz
-sJ
+nn
 Iw
 Iw
-Dy
-Dy
+AX
+AX
 nX
 nX
 nX
@@ -29188,25 +29469,25 @@ WL
 TG
 TG
 Iw
-Ti
-Ti
-Ti
+kw
+kw
+kw
 cH
 cH
-Ti
-Ti
-Ti
+kw
+kw
+kw
 Iw
 TG
 TG
 WL
-Ti
-Ti
+kw
+kw
 WL
 TG
-Ti
+kw
 Iw
-Ti
+kw
 Yo
 nX
 ZN
@@ -29221,14 +29502,14 @@ YB
 YB
 YB
 Xm
-id
+UJ
 cX
 cX
 GQ
-LX
+Xv
 cX
 cX
-fX
+SI
 zA
 zA
 il
@@ -29237,17 +29518,17 @@ il
 il
 il
 zA
-FK
-FK
+nn
+nn
 cX
 cX
-rf
-rf
-rf
+IQ
+IQ
+IQ
 cX
 cX
-FK
-FK
+nn
+nn
 zA
 zA
 zA
@@ -29272,16 +29553,16 @@ il
 il
 il
 Vj
-jE
+qD
 Gr
 VL
 bh
 Wg
-zA
+JP
 tL
 Xc
 Xc
-zA
+JP
 QK
 Xc
 Xc
@@ -29335,7 +29616,7 @@ Iw
 Iw
 Iw
 Xt
-nX
+rz
 nX
 nX
 nX
@@ -29364,18 +29645,18 @@ Gw
 Gw
 Gw
 Gw
-Ti
+kw
 LB
 TG
 TG
 WL
 WL
-Ti
-Ti
+kw
+kw
 TG
-Ti
-Ti
-Ti
+kw
+kw
+kw
 Yo
 nX
 ZN
@@ -29390,15 +29671,15 @@ YB
 YB
 YB
 Xm
-FK
+nn
 cX
 cX
 cX
 cX
 cX
 cX
-FK
-zA
+uQ
+zh
 zA
 zA
 il
@@ -29406,17 +29687,17 @@ il
 il
 il
 zA
-FK
+nn
 Qc
 cX
 cX
-Mb
+NW
 Uv
 YE
 cX
 cX
 Yt
-FK
+nn
 zA
 zA
 zA
@@ -29441,17 +29722,17 @@ il
 il
 il
 Vj
-jE
+qD
 lE
-il
-jE
-il
-il
-zA
+qT
+qD
+qT
+qT
+JP
 px
-zA
-zA
-zA
+JP
+JP
+JP
 Xc
 Xc
 Ot
@@ -29495,11 +29776,11 @@ Xt
 Iw
 Iw
 Iw
-sJ
+nn
 yv
 LE
 Nz
-sJ
+nn
 Iw
 Iw
 Iw
@@ -29527,12 +29808,12 @@ TG
 bD
 Mi
 WL
-sJ
+nn
 WL
 WL
 WL
 WL
-sJ
+nn
 WL
 AW
 LB
@@ -29540,11 +29821,11 @@ TG
 TG
 WL
 WL
-Ti
-Ti
-Ti
-Ti
-Ti
+kw
+kw
+kw
+kw
+kw
 Xt
 nX
 ZN
@@ -29559,23 +29840,23 @@ YB
 YB
 Cy
 Xm
-FK
+nn
 cX
 cX
 cX
 cX
 cX
 pi
-FK
-zA
-zA
+uQ
+wE
+wE
 il
 il
 il
 il
 il
-FK
-FK
+nn
+nn
 cX
 cX
 cX
@@ -29585,8 +29866,8 @@ ha
 cX
 cX
 Yt
-FK
-FK
+nn
+nn
 zA
 Xc
 Xc
@@ -29611,15 +29892,15 @@ il
 il
 bh
 bh
-jE
-jE
+qD
+qD
 bh
 CU
 Wg
-zA
+JP
 bh
 DM
-zA
+JP
 Xc
 Xc
 Xc
@@ -29659,21 +29940,21 @@ Xc
 Xc
 Xc
 aS
-Dy
-Dy
-sJ
+AX
+AX
+nn
 Iw
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Iw
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Iw
-sJ
-Dy
-Dy
+nn
+AX
+AX
 lH
 lH
 lH
@@ -29683,38 +29964,38 @@ lH
 lH
 lH
 lH
-Dy
-Dy
+AX
+AX
 WL
 Ig
-sJ
+nn
 TG
 TG
 TG
 TG
-sJ
+nn
 PD
 WL
-Dy
-Dy
-Dy
+AX
+AX
+AX
 my
 my
-Dy
-Dy
-Dy
+AX
+AX
+AX
 WL
 Ig
-sJ
+nn
 TG
 TG
 TG
 TG
-sJ
-Ti
-Ti
-Dy
-Dy
+nn
+kw
+kw
+AX
+AX
 nX
 ZN
 nX
@@ -29728,22 +30009,22 @@ YB
 Cy
 YB
 Xm
-FK
+nn
 by
 cX
 cX
 cX
 cX
 Jg
-id
+UJ
 il
-zA
+wE
+XL
+cB
 il
-il
-il
-il
-zA
-FK
+XL
+wE
+uQ
 Je
 cX
 cX
@@ -29755,7 +30036,7 @@ cX
 cX
 cX
 cX
-FK
+nn
 zA
 zA
 zA
@@ -29783,9 +30064,9 @@ bh
 Vj
 Vj
 bh
-jE
-jE
-jE
+qD
+qD
+qD
 bh
 bh
 Xc
@@ -29833,11 +30114,11 @@ yv
 yv
 yv
 yv
-sJ
+nn
 yv
 Iw
 Nz
-sJ
+nn
 Nz
 Nz
 Nz
@@ -29865,12 +30146,12 @@ Gw
 Mi
 WL
 Xt
+Cm
 nX
 nX
 nX
-nX
-nX
-nX
+dV
+Et
 Xt
 WL
 AW
@@ -29881,7 +30162,7 @@ TG
 bD
 Gw
 Mi
-Ti
+kw
 Xt
 nX
 nX
@@ -29897,22 +30178,22 @@ YB
 YB
 YB
 Xm
-FK
+nn
 zj
 cX
 cX
 cX
 cX
 TB
-id
+UJ
 il
 zA
-il
+XL
+eC
+wE
 il
 zA
-il
-zA
-id
+UJ
 xF
 cX
 cX
@@ -29924,7 +30205,7 @@ cX
 cX
 cX
 cX
-id
+UJ
 zA
 zA
 ad
@@ -30056,7 +30337,7 @@ nX
 nX
 nX
 nX
-nX
+pL
 nX
 nX
 nX
@@ -30066,22 +30347,22 @@ YB
 YB
 YB
 Xm
-FK
+nn
 zj
 cX
 cX
 cX
 cX
 YH
-FK
+uQ
 il
-zA
+wE
+XL
+eC
+wE
+XL
 il
-il
-zA
-il
-il
-id
+UJ
 RA
 cX
 cX
@@ -30093,7 +30374,7 @@ cX
 cX
 cX
 cX
-id
+UJ
 zA
 zA
 zA
@@ -30116,7 +30397,7 @@ Xc
 Xc
 Xc
 Xc
-zA
+zh
 il
 il
 il
@@ -30171,11 +30452,11 @@ yR
 yR
 yR
 yR
-sJ
+nn
 yR
 Iw
 ND
-sJ
+nn
 ND
 ND
 ND
@@ -30191,36 +30472,36 @@ MS
 MS
 nX
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 WL
 WL
 WL
 WL
-Dy
+AX
 Xt
 Xt
-Dy
-nX
+AX
+pL
 xm
 xm
 xm
 xm
 nX
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 WL
 WL
 WL
 WL
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 nX
 nX
 ZN
@@ -30235,22 +30516,22 @@ YB
 YB
 YB
 Xm
-FK
+nn
 dn
 JD
 sU
 cX
 cX
 jA
-FK
+uQ
+wE
+wE
+Xc
+Xc
 zA
-zA
-il
-il
-zA
-zA
-il
-FK
+wE
+XL
+uQ
 cX
 cX
 cX
@@ -30258,12 +30539,12 @@ BK
 Sq
 Sq
 qx
-zM
+Jy
 cX
-rf
-rf
-FK
-zA
+IQ
+IQ
+nn
+zh
 zA
 ad
 il
@@ -30287,9 +30568,9 @@ il
 il
 zA
 zA
-zA
-zA
-zA
+km
+WI
+zh
 il
 il
 Xc
@@ -30335,42 +30616,42 @@ da
 WJ
 ga
 lR
-Dy
-Dy
-sJ
+AX
+AX
+nn
 Iw
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Iw
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Iw
-sJ
-Dy
-Dy
+nn
+AX
+AX
 nX
 xm
 xm
 xm
 nX
-nX
-nX
+dV
+Et
 MS
 MS
 nX
 nX
 nX
 nX
-Dy
-Dy
+AX
+AX
 Xt
 Xt
-Dy
-Dy
-nX
-nX
+AX
+AX
+dV
+Et
 nX
 nX
 nX
@@ -30378,15 +30659,15 @@ xm
 xm
 nX
 nX
-nX
-nX
+dV
+Et
 qj
-Dy
-Dy
+AX
+AX
 Xt
 Xt
-Dy
-Dy
+AX
+AX
 fi
 dR
 nX
@@ -30404,14 +30685,14 @@ YB
 YB
 YB
 Xm
-FK
-FK
-FK
-FK
-id
-id
-FK
-FK
+nn
+nn
+nn
+nn
+UJ
+UJ
+nn
+uQ
 zA
 zA
 zA
@@ -30419,19 +30700,19 @@ il
 zA
 zA
 il
-FK
+nn
 cX
 cX
 cX
 KN
-FK
-FK
-FK
-iE
+nn
+nn
+nn
+KL
 jX
 yH
 GF
-FK
+nn
 zA
 zA
 zA
@@ -30509,11 +30790,11 @@ Xt
 Iw
 Iw
 Iw
-sJ
+nn
 yR
 MB
 ND
-sJ
+nn
 Iw
 Iw
 Iw
@@ -30574,37 +30855,37 @@ YB
 YB
 fI
 fA
-FK
+nn
 EM
-FK
+nn
+zX
+zA
+zA
+il
+il
+km
+WI
 zA
 zA
 zA
 il
-il
-zA
-zA
-zA
-zA
-zA
-il
-fX
+SI
 cX
 cX
 cX
 KN
-FK
-FK
-FK
-iE
+nn
+nn
+nn
+KL
 Av
 fV
-LX
-FK
+Xv
+nn
 zA
 zA
-zA
-zA
+km
+WI
 il
 il
 Xc
@@ -30704,13 +30985,13 @@ nX
 VX
 jL
 oq
-sJ
-sJ
+nn
+nn
 UJ
 UJ
 UJ
-sJ
-sJ
+nn
+nn
 lQ
 nX
 nX
@@ -30743,10 +31024,10 @@ YB
 YB
 YB
 Xm
-FK
+nn
 jE
-FK
-zA
+nn
+Bm
 il
 il
 il
@@ -30757,19 +31038,19 @@ zA
 zA
 zA
 zA
-FK
+nn
 ta
 cX
 cX
 KN
-FK
-FK
-FK
-iE
+nn
+nn
+nn
+KL
 jX
 sF
-Mb
-FK
+NW
+nn
 zA
 zA
 zA
@@ -30779,7 +31060,7 @@ Xc
 Xc
 Xc
 Xc
-zA
+zh
 zA
 zA
 zA
@@ -30843,19 +31124,19 @@ YB
 uR
 xm
 xm
-Dy
-Dy
+AX
+AX
 Iw
 Iw
-sJ
+nn
 yR
 MB
 ND
-sJ
+nn
 Iw
 Iw
-Dy
-Dy
+AX
+AX
 nX
 nX
 MS
@@ -30872,21 +31153,21 @@ MS
 nX
 VX
 Yx
-sJ
-sJ
-ZN
-ZN
-ZN
-ZN
-ZN
-sJ
+nn
+nn
+Qs
+Qs
+Qs
+Qs
+Qs
+nn
 xO
 nX
 nX
 xm
 xm
 nX
-nX
+Cm
 qj
 lH
 wy
@@ -30926,7 +31207,7 @@ zA
 zA
 zA
 zA
-FK
+nn
 xu
 cX
 cX
@@ -30934,11 +31215,11 @@ NZ
 TD
 Be
 Gh
-Bv
+Lv
 cX
 Td
 Td
-FK
+nn
 zA
 zA
 zA
@@ -31013,17 +31294,17 @@ YB
 YB
 xm
 xm
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 yR
 MB
 ND
-Dy
+AX
 Xt
 Xt
-Dy
+AX
 nX
 nX
 MS
@@ -31045,10 +31326,10 @@ UJ
 Wd
 ux
 XR
-Mk
-Mk
-Mk
-Ls
+cX
+cX
+cX
+SI
 Pk
 nX
 xm
@@ -31061,7 +31342,7 @@ uZ
 uZ
 nX
 nX
-nX
+pL
 nX
 nX
 nX
@@ -31095,7 +31376,7 @@ zA
 zA
 il
 zA
-id
+UJ
 nK
 cX
 cX
@@ -31107,11 +31388,11 @@ cX
 cX
 cX
 cX
-id
+UJ
 zA
 zA
 zA
-zA
+zh
 zA
 zA
 zA
@@ -31157,9 +31438,9 @@ re
 Ua
 nX
 nX
-nX
+BE
 Xc
-nX
+BE
 nX
 Wo
 re
@@ -31185,11 +31466,11 @@ xm
 xm
 nX
 qj
-Dy
+AX
 Xt
 my
 Xt
-Dy
+AX
 nX
 nX
 nX
@@ -31212,12 +31493,12 @@ VX
 Yx
 UJ
 za
-Mk
-Mk
-Mk
-Mk
-Mk
-Ls
+cX
+cX
+cX
+cX
+cX
+SI
 Pk
 nX
 nX
@@ -31255,7 +31536,7 @@ bl
 Tu
 bl
 tw
-zA
+Gy
 zA
 zA
 zA
@@ -31264,8 +31545,8 @@ il
 il
 il
 zA
-id
-mn
+UJ
+yl
 cX
 cX
 cX
@@ -31276,7 +31557,7 @@ cX
 cX
 cX
 cX
-id
+UJ
 il
 zA
 zA
@@ -31327,7 +31608,7 @@ GM
 nX
 nX
 nX
-nX
+BE
 nX
 nX
 KD
@@ -31379,14 +31660,14 @@ Xc
 nX
 VX
 Yx
-sJ
-sJ
+nn
+nn
 lC
-ZN
+Qs
 pR
-ZN
-ZN
-sJ
+Qs
+Qs
+nn
 rP
 nX
 nX
@@ -31409,7 +31690,7 @@ tw
 Ry
 YJ
 DE
-FK
+nn
 RN
 gs
 tw
@@ -31432,20 +31713,20 @@ zA
 zA
 il
 il
-zA
-FK
+CF
+nn
 Je
-xM
+Hm
 cX
 cX
-rf
-rf
-rf
+IQ
+IQ
+IQ
 cX
 cX
 cX
 cX
-FK
+nn
 il
 zA
 zA
@@ -31549,18 +31830,18 @@ Xc
 Xc
 YR
 Tp
-sJ
-sJ
+nn
+nn
 UJ
 UJ
 UJ
-sJ
-sJ
+nn
+nn
 Hx
 nX
 nX
 xm
-nX
+iy
 nX
 nX
 qj
@@ -31601,9 +31882,9 @@ zA
 zA
 il
 zA
-FK
-FK
-FK
+nn
+nn
+nn
 cX
 cX
 cX
@@ -31613,8 +31894,8 @@ pI
 cX
 cX
 Sb
-FK
-FK
+nn
+nn
 il
 zA
 zA
@@ -31669,7 +31950,7 @@ nX
 nX
 nX
 nX
-nX
+Rw
 Xc
 Xc
 Xc
@@ -31731,7 +32012,7 @@ xm
 xm
 nX
 nX
-xm
+Sl
 uZ
 uZ
 uZ
@@ -31766,13 +32047,13 @@ cX
 cX
 rb
 bl
+CF
 zA
 zA
 zA
-zA
-FK
+nn
 EM
-FK
+nn
 Bj
 cX
 cX
@@ -31781,11 +32062,11 @@ tQ
 eh
 cX
 cX
-Mb
-FK
+NW
+nn
 il
 il
-zA
+zh
 zA
 zA
 zA
@@ -31837,8 +32118,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
@@ -31886,14 +32167,14 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 xm
 xm
 xm
 nX
-nX
+rz
 xm
 nX
 nX
@@ -31916,7 +32197,7 @@ Qw
 YJ
 YJ
 eK
-FK
+nn
 YX
 SU
 Cf
@@ -31925,24 +32206,24 @@ cX
 cX
 cX
 Qx
-FK
+nn
 cX
 cX
 cX
 cX
-FK
+nn
 yG
 fK
 GO
 bl
-zA
+Bm
 zA
 zA
 il
-FK
+nn
 jE
-FK
-FK
+nn
+nn
 cX
 cX
 Td
@@ -31950,8 +32231,8 @@ Td
 Td
 cX
 cX
-FK
-FK
+nn
+nn
 il
 il
 il
@@ -32004,9 +32285,9 @@ Xc
 Xc
 nX
 nX
-nX
-nX
-nX
+lR
+Tl
+PR
 nX
 Xc
 Xc
@@ -32048,7 +32329,7 @@ xm
 xm
 nX
 xm
-xm
+Sl
 Xc
 Xc
 Xc
@@ -32065,8 +32346,8 @@ nX
 nX
 xm
 nX
-nX
-nX
+dV
+Et
 nX
 xm
 xm
@@ -32085,22 +32366,22 @@ Qw
 YJ
 ji
 NI
-FK
-FK
-FK
-FK
-FK
-FK
+nn
+nn
+nn
+nn
+nn
+nn
 cX
 cX
-FK
-FK
+nn
+nn
 Va
 cX
 cX
 hZ
-FK
-FK
+nn
+nn
 cX
 cX
 tw
@@ -32110,16 +32391,16 @@ il
 il
 zA
 zA
-zA
-FK
-FK
+Gy
+nn
+nn
 cX
 cX
 cX
 cX
 cX
-FK
-FK
+nn
+nn
 il
 il
 il
@@ -32172,11 +32453,11 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-dV
-Et
+Rw
+Wo
+re
+re
+PR
 Xc
 Xc
 Xc
@@ -32227,8 +32508,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -32254,12 +32535,12 @@ Qw
 YJ
 YJ
 Vo
-FK
+nn
 yL
 ah
 aW
 RX
-fX
+SI
 cX
 cX
 cX
@@ -32279,23 +32560,23 @@ il
 il
 il
 zA
-zA
-zA
-FK
-FK
-id
-id
-id
-FK
-FK
+km
+WI
+uQ
+nn
+UJ
+UJ
+UJ
+nn
+nn
 il
 il
 il
 il
 il
 il
-zA
-zA
+km
+WI
 zA
 Ec
 Ec
@@ -32304,11 +32585,11 @@ wE
 nP
 VS
 YD
+zh
 zA
 zA
 zA
-zA
-zA
+zh
 Xc
 Xc
 Xc
@@ -32342,10 +32623,10 @@ Xc
 Xc
 Xc
 nX
-nX
-nX
-nX
-nX
+Wo
+re
+re
+Ua
 Xc
 Xc
 Xc
@@ -32400,7 +32681,7 @@ Xc
 xm
 xm
 xm
-nX
+Cm
 nX
 nX
 xm
@@ -32416,26 +32697,26 @@ ZN
 nX
 vk
 tw
-FK
+nn
 kw
 qS
 Qw
 YJ
 YJ
 YJ
-FK
+nn
 cX
 cX
 cX
 cX
-fX
+SI
 cX
 cX
 cX
 cX
 cX
-FK
-FK
+nn
+nn
 cX
 cX
 cX
@@ -32450,12 +32731,12 @@ il
 il
 zA
 zA
-HO
+Nq
+km
+WI
 zA
 zA
-zA
-zA
-zA
+zh
 HO
 il
 il
@@ -32476,8 +32757,8 @@ XL
 il
 zA
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Xc
@@ -32511,11 +32792,11 @@ Xc
 Xc
 Xc
 nX
-nX
-nX
-nX
-nX
-nX
+Wo
+re
+re
+Ua
+BE
 Xc
 Xc
 Xc
@@ -32585,10 +32866,10 @@ ZN
 nX
 MO
 tw
-FK
+nn
 UZ
-FK
-FK
+nn
+nn
 RG
 YJ
 YJ
@@ -32597,7 +32878,7 @@ cX
 PI
 cX
 bU
-fX
+SI
 cX
 cX
 cX
@@ -32619,12 +32900,12 @@ il
 il
 il
 zA
-HO
+Nq
 zA
 zA
 zA
 zA
-zA
+Bm
 HO
 il
 il
@@ -32680,12 +32961,12 @@ Xc
 Xc
 nX
 nX
+KD
+re
+re
+GM
 nX
-nX
-nX
-nX
-nX
-nX
+BE
 Xc
 Xc
 Xc
@@ -32734,11 +33015,11 @@ Xc
 Xc
 Xc
 Xc
-sJ
+nn
 UJ
 UJ
-sJ
-nX
+nn
+pL
 nX
 xm
 xm
@@ -32757,7 +33038,7 @@ tw
 kd
 xU
 fv
-FK
+nn
 YJ
 YJ
 YJ
@@ -32765,18 +33046,18 @@ Ki
 cX
 cX
 cX
-FK
-FK
+nn
+nn
 cX
 cX
-FK
-FK
+nn
+nn
 Va
 cX
 cX
 hZ
-FK
-FK
+nn
+nn
 cX
 cX
 tw
@@ -32789,7 +33070,7 @@ il
 il
 il
 HO
-zA
+wE
 zA
 zA
 zA
@@ -32850,8 +33131,8 @@ Xc
 nX
 nX
 VE
-nX
-nX
+KD
+GM
 nX
 nX
 nX
@@ -32902,19 +33183,19 @@ xm
 xm
 Xc
 Xc
-sJ
-sJ
+nn
+nn
 Kc
-av
-sJ
-sJ
+BC
+nn
+nn
 nX
 xm
 nX
 nX
 xm
 nX
-nX
+Cm
 uZ
 uZ
 uZ
@@ -32926,11 +33207,11 @@ tw
 kd
 xU
 fv
-FK
+nn
 iv
 YJ
 YJ
-FK
+nn
 ZS
 RJ
 RJ
@@ -32939,28 +33220,28 @@ ZL
 cX
 cX
 Fr
-FK
+nn
 oU
 cX
 cX
 cX
-FK
+nn
 pT
 wr
 AQ
 bl
-zA
-zA
+Vb
+WI
 il
 il
 il
 il
 il
 il
-HO
-zA
+Nq
+wE
 Xc
-zA
+yo
 zA
 zA
 HO
@@ -33046,7 +33327,7 @@ Xc
 HC
 HC
 HC
-xm
+Sl
 nX
 nX
 nX
@@ -33071,14 +33352,14 @@ xm
 nX
 nX
 nX
-sJ
+nn
 Zs
-Mk
-Mk
-Mk
-Ls
+cX
+cX
+cX
+SI
 nX
-nX
+rz
 nX
 nX
 xm
@@ -33095,11 +33376,11 @@ tw
 kd
 xU
 fv
-FK
+nn
 YJ
 YJ
 YJ
-FK
+nn
 kw
 II
 Yw
@@ -33126,12 +33407,12 @@ il
 il
 il
 il
+eC
+eC
 Xc
-Xc
-Xc
-Xc
-zA
-zA
+eC
+km
+WI
 Xc
 Xc
 Xc
@@ -33189,7 +33470,7 @@ nX
 nX
 nX
 nX
-nX
+BE
 nX
 nX
 nX
@@ -33240,12 +33521,12 @@ xm
 nX
 xm
 xm
-sJ
+nn
 NT
-Mk
-Mk
+cX
+cX
 ao
-sJ
+nn
 nX
 nX
 nX
@@ -33262,17 +33543,17 @@ nX
 nX
 tw
 tw
-FK
-FK
-FK
+nn
+nn
+nn
 Ry
 YJ
 YJ
-FK
+nn
 kw
 kw
 dm
-FK
+nn
 hq
 cX
 cX
@@ -33298,9 +33579,9 @@ il
 Xc
 Xc
 Xc
-Xc
-il
-zA
+eC
+XL
+wE
 Xc
 Xc
 Xc
@@ -33315,12 +33596,12 @@ Xc
 Xc
 zq
 Xc
+tK
+bX
+tK
+tK
 cW
-cW
-cW
-cW
-cW
-cW
+tK
 zq
 Xc
 Xc
@@ -33357,8 +33638,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+BE
+BE
 nX
 nX
 nX
@@ -33399,7 +33680,7 @@ dV
 Et
 nX
 nX
-nX
+pL
 Xc
 Xc
 Xc
@@ -33408,14 +33689,14 @@ Xc
 xm
 xm
 xm
-sJ
-sJ
-sJ
+nn
+nn
+nn
 DX
 Ul
-sJ
-sJ
-nX
+nn
+nn
+Qm
 nX
 xm
 xm
@@ -33432,8 +33713,8 @@ ZN
 ZN
 tw
 tw
-FK
-FK
+nn
+nn
 YJ
 YJ
 YJ
@@ -33446,7 +33727,7 @@ tw
 iF
 rQ
 cX
-FK
+nn
 dj
 rt
 cX
@@ -33460,17 +33741,17 @@ zA
 zA
 il
 il
-FK
-id
-fX
-id
-FK
+nn
+UJ
+SI
+UJ
+nn
 Xc
-Xc
+eC
 il
-il
-zA
-Xc
+XL
+wE
+eC
 Xc
 Xc
 Xc
@@ -33522,11 +33803,11 @@ Xc
 Xc
 Xc
 Xc
+BE
 nX
 nX
 nX
-nX
-nX
+BE
 nX
 nX
 nX
@@ -33552,10 +33833,10 @@ Xc
 Xc
 Xc
 Xc
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 xm
 xm
 xm
@@ -33577,20 +33858,20 @@ Xc
 Xc
 xm
 xm
-sJ
-gV
-sJ
-sJ
-sJ
-sJ
+nn
+EM
+nn
+nn
+nn
+nn
 xm
 nX
 nX
 nX
 xm
 xm
-nX
-nX
+dV
+Et
 uZ
 uZ
 uZ
@@ -33621,33 +33902,34 @@ tw
 Tu
 bl
 tw
-zA
-zA
+km
+WI
 zA
 zA
 zA
 zA
 zA
 il
-FK
-rf
+uQ
+IQ
 cX
-rf
-FK
-FK
-Xc
+IQ
+nn
+nn
+eC
+XL
 il
 il
-il
 Xc
 Xc
 Xc
 Xc
 Xc
-Ne
-Ne
 Xc
-Ne
+ej
+Xc
+aq
+Xc
 Xc
 Xc
 Xc
@@ -33658,10 +33940,9 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
-zA
+Xc
+Xc
+JP
 zA
 zA
 zA
@@ -33697,7 +33978,7 @@ nX
 nX
 nX
 nX
-nX
+Rw
 xm
 Xc
 Xc
@@ -33717,41 +33998,41 @@ nX
 nX
 nX
 Xc
-sJ
+nn
 Xc
 Xc
 Xc
-sJ
-sJ
-sJ
-sJ
-sJ
-Xc
-xm
-nX
-nX
-nX
-nX
-nX
-Xc
-Xc
-Xc
-Xc
-Xc
-Xc
-Xc
-Xc
-Xc
-Xc
+nn
+nn
+nn
+nn
+nn
 Xc
 xm
+nX
+nX
+nX
+nX
+nX
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
+Xc
 xm
-sJ
-mt
-sJ
+xm
+nn
+jE
+nn
 nX
 xm
-xm
+Sl
 xm
 nX
 nX
@@ -33787,7 +34068,7 @@ Nw
 Nw
 JG
 tw
-zA
+zh
 zA
 zA
 zA
@@ -33798,36 +34079,36 @@ zA
 il
 zA
 il
-id
+xr
+Xv
 cX
 cX
-cX
-rf
-FK
-il
-il
-il
-il
-il
+IQ
+nn
+XL
+XL
+XL
+XL
+XL
 Xc
 Xc
 Xc
-Ne
-Ne
-Ne
-Ne
-Ne
+Is
+Xc
+ej
+ej
+aq
 Ne
 Xc
 Xc
+Xc
 zA
 zA
-zA
-zA
-zA
-zA
-zA
-zA
+LA
+UM
+LA
+LA
+LA
 zA
 zA
 zA
@@ -33886,14 +34167,14 @@ nX
 Xc
 Xc
 Xc
-sJ
+nn
 Fn
 Ga
 Hi
 JF
 Nb
-sJ
-sJ
+nn
+nn
 Xc
 Xc
 Xc
@@ -33955,36 +34236,36 @@ yQ
 yQ
 jC
 tH
-zA
-zA
-il
-il
-il
-zA
-il
+HO
 zA
 il
 il
+il
+zA
+il
+zA
+il
+il
 zA
 zA
-id
+xr
+Xv
 cX
 cX
-cX
-rf
-FK
-FK
-id
-id
-FK
-FK
+IQ
+nn
+uQ
+xr
+UJ
+uQ
+nn
 Xc
 Ne
 Ne
 Ne
-Ne
-Ne
-zA
+Xc
+eC
+wE
 zA
 zA
 zA
@@ -34054,17 +34335,17 @@ Xc
 Xc
 Xc
 Xc
-sJ
-sJ
+nn
+nn
 Ft
-nX
-nX
-nX
-xm
-xm
-xm
-PJ
-PJ
+zw
+zw
+zw
+so
+so
+so
+NK
+NK
 Qf
 nX
 nX
@@ -34085,12 +34366,12 @@ VX
 nX
 xm
 xm
-nX
-nX
+dV
+Et
 nX
 nX
 xm
-nX
+Cm
 nX
 nX
 nX
@@ -34111,7 +34392,7 @@ nX
 nX
 nX
 nX
-nX
+pL
 nX
 nX
 nX
@@ -34123,10 +34404,10 @@ yQ
 yQ
 yQ
 XV
-zA
-zA
-zA
-zA
+HO
+HO
+km
+WI
 il
 il
 il
@@ -34136,24 +34417,24 @@ il
 il
 il
 zA
-FK
-rf
-rf
+uQ
+IQ
+IQ
 cX
 cX
-FK
-cX
-cX
-cX
-cX
-FK
-FK
+nn
+tV
+ta
+Kc
+BV
+nn
+nn
+rx
 Ne
 Ne
-Ne
 zA
 zA
-zA
+UM
 zA
 zA
 zA
@@ -34218,22 +34499,22 @@ YB
 Cy
 nX
 nX
-nX
+rz
 Xc
 Xc
 Xc
 Xc
-sJ
+nn
 Eg
-xm
+so
 Gb
 It
 Kx
-nX
+zw
 NQ
-nX
-nX
-nX
+zw
+zw
+zw
 Xc
 nX
 nX
@@ -34247,7 +34528,7 @@ Xc
 Xc
 Xc
 Xc
-MS
+xl
 MS
 nX
 nX
@@ -34264,15 +34545,15 @@ xm
 xm
 nX
 nX
-nX
-nX
+dV
+Et
 MS
 qj
 Dy
 Dy
 nX
 nX
-nX
+pL
 ZN
 nX
 ZN
@@ -34292,7 +34573,7 @@ yQ
 yQ
 yQ
 XV
-zA
+HO
 zA
 zA
 zA
@@ -34305,24 +34586,24 @@ zA
 zA
 zA
 zA
-id
+xr
+Xv
+Xv
+cX
+cX
+SI
 cX
 cX
 cX
 cX
-fX
-cX
-cX
-cX
-cX
-cX
-FK
+tk
+nn
+yW
 Ne
-Ne
 zA
 zA
 zA
-zA
+UM
 zA
 zA
 zA
@@ -34394,13 +34675,13 @@ Xc
 Xc
 Xc
 Ey
-xm
-xm
-xm
-nX
-nX
-sJ
-sJ
+so
+so
+so
+zw
+zw
+nn
+nn
 PY
 Xc
 Xc
@@ -34411,7 +34692,7 @@ MS
 nX
 nX
 nX
-nX
+pL
 Xc
 Xc
 Xc
@@ -34439,8 +34720,8 @@ MS
 Dy
 Dy
 Xc
-mt
-sJ
+jE
+nn
 nX
 ZN
 nX
@@ -34461,7 +34742,7 @@ yQ
 yQ
 jC
 tH
-Xc
+eC
 QO
 QO
 QO
@@ -34472,26 +34753,26 @@ il
 zA
 zA
 Xc
-zA
-zA
-id
-rf
-rf
+wE
+CF
+xr
+IQ
+IQ
 cX
-rf
-FK
-cX
-cX
-cX
+IQ
+nn
+ta
 cX
 cX
-id
-Ne
+cX
+cX
+UJ
+rx
 zA
 zA
 zA
 zA
-zA
+pQ
 xg
 VQ
 VQ
@@ -34565,14 +34846,14 @@ Xc
 Fa
 FI
 Iz
-xm
-xm
-sJ
-sJ
+so
+so
+nn
+nn
 Xc
 Xc
 Xc
-nX
+pL
 nX
 nX
 nX
@@ -34597,19 +34878,19 @@ sJ
 sJ
 tm
 xm
-nX
+Rw
 nX
 xm
 nX
 nX
 MS
 MS
-nX
+pL
 Dy
 Xc
 Xc
-Mk
-sJ
+cX
+nn
 nX
 nX
 nX
@@ -34630,8 +34911,8 @@ yQ
 yQ
 XV
 Xc
-Xc
-zA
+eC
+wE
 zA
 zA
 zA
@@ -34639,22 +34920,22 @@ Xq
 zA
 zA
 zA
-zA
+Bm
 Xc
-Xc
-zA
-FK
+eC
+wE
+uQ
 cX
 cX
 cX
+Xv
+UJ
+tV
+Lr
+Zb
+Xv
 cX
-id
-cX
-cX
-cX
-cX
-cX
-id
+UJ
 zA
 zA
 zA
@@ -34725,18 +35006,18 @@ xm
 xm
 nX
 nX
-nX
-nX
+dV
+Et
 Xc
 Xc
 Xc
 Xc
-sJ
+nn
 Xc
 KE
-Mk
-xm
-sJ
+cX
+so
+nn
 Xc
 Xc
 Xc
@@ -34776,13 +35057,13 @@ xm
 Xc
 Xc
 Xc
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+nn
+nn
 wO
 fh
-sJ
+nn
 nX
 nX
 nX
@@ -34798,8 +35079,8 @@ sj
 yQ
 yQ
 XV
-Xc
-Xc
+eC
+eC
 Jn
 zA
 zA
@@ -34811,25 +35092,25 @@ Xc
 Xc
 Xc
 Xc
-Xc
-FK
-rf
+eC
+nn
+IQ
 cX
-rf
-rf
-id
+IQ
+IQ
+UJ
+tV
 cX
+Ln
+EN
 cX
-cX
-cX
-cX
-FK
+nn
+pQ
 zA
 zA
 zA
 zA
-zA
-zA
+pQ
 Da
 Vr
 Dc
@@ -34902,9 +35183,9 @@ Xc
 Xc
 Xc
 Xc
-sJ
-mt
-sJ
+nn
+jE
+nn
 Xc
 Xc
 Xc
@@ -34943,16 +35224,16 @@ xm
 xm
 Xc
 Xc
-PJ
+NK
 Kc
-Mk
+cX
 tu
-xm
-sJ
+so
+nn
 if
 if
-sJ
-sJ
+nn
+nn
 VX
 VX
 VX
@@ -34967,8 +35248,8 @@ fk
 yQ
 yQ
 XV
-Xc
-zA
+eC
+wE
 zA
 zA
 zA
@@ -34980,24 +35261,24 @@ Xc
 Xc
 Xc
 Xc
-FK
-FK
-rf
+nn
+nn
+IQ
 cX
-rf
-rf
-FK
-cX
-cX
-cX
+IQ
+IQ
+nn
+tV
 cX
 cX
-fX
+cX
+cX
+SI
+pQ
 zA
 zA
 zA
-zA
-zA
+Xc
 zA
 Da
 Pg
@@ -35057,23 +35338,23 @@ YB
 YB
 YB
 YB
+dV
+Et
 nX
 nX
 nX
 nX
-nX
-nX
-nX
+rz
 nX
 Dy
 Dy
 Dy
-nX
+pL
 Xc
-sJ
+nn
 Ra
-xm
-nX
+so
+zw
 Zk
 Xc
 Xc
@@ -35111,17 +35392,17 @@ xm
 xm
 Xc
 Xc
-nX
-Mk
-Mk
-Mk
-Mk
-xm
-mt
-av
+zw
+cX
+cX
+cX
+cX
+so
+jE
+BC
 Kc
 Tz
-sJ
+nn
 nX
 nX
 xm
@@ -35136,8 +35417,8 @@ fk
 yQ
 yQ
 XV
-Xc
-zA
+eC
+wE
 zA
 zA
 zA
@@ -35148,25 +35429,25 @@ il
 Xc
 Xc
 Xc
-FK
-FK
-rf
+nn
+nn
+IQ
 cX
 cX
 cX
-rf
-id
+IQ
+UJ
+ta
 cX
 cX
 cX
 cX
-cX
-FK
+nn
+pQ
 zA
 zA
-zA
-zA
-zA
+Xc
+Xc
 zA
 Da
 Kb
@@ -35229,8 +35510,8 @@ nX
 nX
 nX
 nX
-nX
-nX
+dV
+Et
 nX
 nX
 nX
@@ -35239,12 +35520,12 @@ lH
 wy
 nX
 Xc
-sJ
+nn
 Tz
-xm
-nX
-Mk
-sJ
+so
+zw
+cX
+nn
 Xc
 qj
 lH
@@ -35279,18 +35560,18 @@ xm
 xm
 xm
 Xc
-nX
-Mk
+zw
+cX
 FY
 fp
-Mk
-Mk
-xm
-mt
-Mk
+cX
+cX
+so
+jE
+cX
 Hm
 Tz
-sJ
+nn
 nX
 xm
 xm
@@ -35316,25 +35597,25 @@ il
 il
 Xc
 Xc
-FK
-FK
-rf
+uQ
+uQ
+Xv
 cX
 cX
 cX
-cX
-cX
-id
-cX
-cX
+Xv
+Xv
+UJ
 cX
 cX
 cX
-id
+CM
+mG
+UJ
+UM
 zA
 zA
-zA
-zA
+Xc
 zA
 zA
 Da
@@ -35382,7 +35663,7 @@ Xc
 Xc
 Xc
 Xc
-nX
+PR
 nX
 nX
 nX
@@ -35394,7 +35675,7 @@ YB
 xm
 Xc
 Xc
-nX
+rz
 nX
 nX
 nX
@@ -35408,12 +35689,12 @@ lH
 wy
 nX
 Xc
-sJ
+nn
 Tz
-nX
-nX
+zw
+zw
 Xv
-sJ
+nn
 MS
 qj
 lH
@@ -35447,19 +35728,19 @@ nX
 nX
 xm
 xm
-mt
-Mk
-Mk
+jE
+cX
+cX
 cz
-xm
-xm
-Mk
-xm
-mt
-Mk
+so
+so
+cX
+so
+jE
+cX
 Xv
 bs
-sJ
+nn
 xm
 xm
 nX
@@ -35474,7 +35755,7 @@ fk
 yQ
 yQ
 XV
-nm
+Gj
 zA
 zA
 zA
@@ -35485,26 +35766,26 @@ il
 il
 il
 Xc
-FK
-FK
+uQ
+uQ
+Xv
+cX
+IQ
+IQ
+IQ
+IQ
+nn
+ta
 cX
 cX
-rf
-rf
-rf
-rf
-FK
-cX
-cX
-cX
-cX
-cX
-id
+ZH
+zQ
+UJ
+pQ
 zA
 zA
 zA
-zA
-zA
+pQ
 zA
 Da
 Vr
@@ -35550,9 +35831,9 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
+re
+IU
+PR
 nX
 nX
 nX
@@ -35577,10 +35858,10 @@ lH
 wy
 nX
 nX
-sJ
+nn
 Ra
-nX
-Mk
+zw
+cX
 Xv
 UJ
 MS
@@ -35597,7 +35878,7 @@ MS
 MS
 MS
 nX
-nX
+pL
 Xc
 Xc
 Xc
@@ -35618,17 +35899,17 @@ xm
 xm
 Xc
 RT
-Mk
-xm
-Mk
+cX
+so
+cX
 Xc
 if
 if
-sJ
+nn
 Tz
 cn
-sJ
-sJ
+nn
+nn
 xm
 xm
 nX
@@ -35643,37 +35924,37 @@ fk
 yQ
 yQ
 XV
-nm
+Gj
 zd
 zd
 cx
 zd
 zd
-Xq
+Yq
 zA
 il
 il
 il
-fX
-rf
+SI
+IQ
 cX
 cX
 cX
 cX
 cX
 cX
-fX
+SI
 cX
 cX
 cX
-cX
-cX
-FK
+sC
+kG
+nn
+pQ
 zA
 zA
 zA
-zA
-zA
+pQ
 zA
 Da
 Pg
@@ -35718,10 +35999,10 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
+re
+re
+re
+Ua
 nX
 nX
 nX
@@ -35735,11 +36016,11 @@ Xc
 Xc
 Xc
 nX
+rz
 nX
 nX
-nX
-nX
-nX
+dV
+Et
 nX
 qj
 lH
@@ -35748,9 +36029,9 @@ nX
 nX
 UJ
 Xf
-nX
-Mk
-nX
+zw
+cX
+zw
 UJ
 MS
 qj
@@ -35793,10 +36074,10 @@ Oc
 Xc
 Mk
 Mk
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 Mk
 xm
 nX
@@ -35812,8 +36093,8 @@ fk
 yQ
 yQ
 XV
-nm
-zA
+Gj
+MQ
 il
 il
 il
@@ -35823,7 +36104,7 @@ zA
 il
 il
 il
-id
+UJ
 VU
 VU
 VU
@@ -35831,13 +36112,13 @@ VU
 VU
 VU
 VU
-FK
-cX
-cX
-cX
-cX
-FK
-FK
+nn
+Oc
+Oc
+Oc
+ta
+nn
+nn
 zA
 zA
 zA
@@ -35886,11 +36167,11 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
+aL
+re
+re
+re
+Ua
 nX
 nX
 nX
@@ -35917,10 +36198,10 @@ nX
 nX
 UJ
 Xv
-nX
-nX
+zw
+zw
 Zk
-sJ
+nn
 MS
 Dy
 Dy
@@ -35981,7 +36262,7 @@ fk
 yQ
 yQ
 XV
-nm
+Gj
 il
 il
 il
@@ -35992,26 +36273,26 @@ zA
 zA
 il
 il
-FK
+uQ
 cX
 cX
 qL
 qY
-LX
+Xv
 cX
-cX
-FK
-id
-id
-id
-FK
-FK
+Xv
+nn
+UJ
+UJ
+UJ
+nn
+nn
 Xc
+wE
+wE
 zA
 zA
-zA
-zA
-zA
+UM
 zA
 Da
 IC
@@ -36055,11 +36336,11 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
+re
+re
+re
+re
+Ua
 dV
 Et
 nX
@@ -36083,13 +36364,13 @@ qq
 Dy
 wA
 zi
-sJ
-sJ
-sJ
-Mk
-nX
-sJ
-sJ
+nn
+nn
+nn
+cX
+zw
+nn
+nn
 MS
 Dy
 Dy
@@ -36115,7 +36396,7 @@ nX
 VX
 xm
 xm
-nX
+Cm
 nX
 nX
 nX
@@ -36150,7 +36431,7 @@ fk
 yQ
 yQ
 XV
-nm
+Gj
 il
 il
 il
@@ -36159,17 +36440,17 @@ il
 Xq
 zA
 zA
-zA
+CF
 il
-FK
+uQ
 Td
 cX
 cX
 Td
 cX
 cX
-cX
-FK
+Xv
+nn
 yQ
 yQ
 yQ
@@ -36177,9 +36458,9 @@ Xc
 Xc
 Xc
 Xc
-zA
-zA
-zA
+wE
+wE
+Xc
 zA
 zA
 Da
@@ -36223,11 +36504,11 @@ Ot
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
+re
+re
+re
+re
+re
 Xc
 Xc
 Xc
@@ -36252,13 +36533,13 @@ Dy
 Dy
 Dy
 wy
-sJ
-gV
-sJ
-Ls
+nn
+EM
+nn
+SI
 Qf
-sJ
-MS
+nn
+xl
 MS
 qj
 lH
@@ -36285,7 +36566,7 @@ VX
 xm
 xm
 nX
-nX
+pL
 Ux
 nX
 nX
@@ -36319,8 +36600,8 @@ fk
 yQ
 yQ
 XV
-Xc
-il
+eC
+XL
 il
 il
 il
@@ -36328,17 +36609,17 @@ il
 Xq
 zA
 zA
-zA
-zA
-FK
-FK
+km
+WI
+nn
+nn
 Td
 cX
 cX
 cX
 Td
-FK
-FK
+nn
+nn
 yQ
 yQ
 yQ
@@ -36346,9 +36627,9 @@ Xc
 Xc
 Xc
 Xc
-zA
-zA
-zA
+wE
+Xc
+Xc
 zA
 zA
 Da
@@ -36392,10 +36673,10 @@ Ot
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
+re
+re
+re
+re
 Xc
 Xc
 Xc
@@ -36421,9 +36702,9 @@ qQ
 Dy
 xJ
 yg
-sJ
-mt
-sJ
+nn
+jE
+nn
 nX
 xm
 xm
@@ -36434,11 +36715,11 @@ lH
 wy
 MS
 nX
-sJ
-sJ
+nn
+nn
 Xc
-Mk
-Mk
+cX
+cX
 SI
 nX
 nX
@@ -36454,12 +36735,12 @@ VX
 xm
 nX
 nX
-sJ
+nn
 PJ
 PJ
 PJ
 xm
-xm
+Sl
 Xc
 je
 JR
@@ -36489,8 +36770,8 @@ yQ
 yQ
 XV
 Xc
-Xc
-il
+eC
+XL
 ZP
 il
 il
@@ -36500,13 +36781,13 @@ zA
 zA
 zA
 zA
-FK
-FK
-id
-id
-id
-FK
-FK
+nn
+nn
+UJ
+UJ
+UJ
+nn
+nn
 Xc
 il
 yQ
@@ -36516,8 +36797,8 @@ Xc
 Xc
 Xc
 Xc
-zA
-zA
+Xc
+Xc
 zA
 zA
 Da
@@ -36561,10 +36842,10 @@ Ot
 Xc
 Xc
 Xc
-nX
-dV
-Et
-nX
+re
+re
+re
+re
 Xc
 Xc
 Xc
@@ -36580,7 +36861,7 @@ Xc
 Xc
 Xc
 Xc
-nX
+pL
 nX
 nX
 nX
@@ -36602,14 +36883,14 @@ qj
 lH
 wy
 nX
-sJ
-sJ
-nX
-Ls
-Mk
-Mk
-sJ
-sJ
+nn
+nn
+zw
+SI
+cX
+cX
+nn
+nn
 nX
 nX
 MS
@@ -36622,8 +36903,8 @@ nX
 VX
 nX
 nX
-sJ
-sJ
+nn
+nn
 nX
 nX
 xm
@@ -36659,8 +36940,8 @@ yQ
 XV
 Xc
 Xc
-Xc
-il
+eC
+XL
 il
 il
 Xq
@@ -36670,10 +36951,10 @@ zA
 zA
 zA
 zA
-il
-il
-il
-il
+yQ
+yQ
+yQ
+yQ
 Xc
 Xc
 Xc
@@ -36686,7 +36967,7 @@ Xc
 Xc
 Xc
 Xc
-zA
+wE
 zA
 zA
 Da
@@ -36729,11 +37010,11 @@ Ip
 Ot
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
+re
+re
+re
+re
+re
 Xc
 Xc
 Xc
@@ -36770,14 +37051,14 @@ MS
 qj
 lH
 wy
-sJ
-sJ
-nX
-Mk
-Ls
-Mk
-xm
-xm
+nn
+nn
+zw
+cX
+SI
+cX
+so
+so
 UJ
 nX
 nX
@@ -36788,10 +37069,10 @@ nX
 nX
 nX
 nX
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 dV
 Et
 nX
@@ -36799,10 +37080,10 @@ xm
 xm
 Xc
 Xc
-Dy
-Dy
-Dy
-Dy
+AX
+AX
+AX
+AX
 Mk
 Mk
 Mk
@@ -36829,7 +37110,7 @@ sv
 wc
 Xc
 Xc
-dq
+hO
 dq
 gZ
 JZ
@@ -36837,11 +37118,11 @@ zA
 il
 il
 zA
-zA
-il
-il
-il
-il
+ZJ
+yQ
+yQ
+yQ
+yQ
 Xc
 Xc
 Xc
@@ -36898,12 +37179,12 @@ Ip
 Ot
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
-nX
+re
+re
+re
+re
+re
+re
 Xc
 Xc
 Xc
@@ -36925,7 +37206,7 @@ MS
 MS
 MS
 MS
-nX
+pL
 nX
 nX
 nX
@@ -36939,13 +37220,13 @@ nX
 qj
 lH
 wy
-sJ
-Mk
-Mk
+nn
+cX
+cX
 TA
 Xc
-sJ
-sJ
+nn
+nn
 Sx
 UJ
 nX
@@ -36957,9 +37238,9 @@ dV
 Et
 Xc
 Xc
-sJ
+nn
 Tz
-Mk
+cX
 Xc
 nX
 nX
@@ -36968,12 +37249,12 @@ xm
 xm
 rz
 Xc
-Dy
+AX
 oC
 IF
-Dy
-Dy
-Dy
+AX
+AX
+AX
 YF
 UI
 Mk
@@ -36997,8 +37278,8 @@ yQ
 yQ
 XV
 Xc
-Xc
-il
+eC
+XL
 zA
 zA
 zA
@@ -37006,10 +37287,10 @@ il
 il
 il
 il
-FK
-FK
-FK
-il
+nn
+nn
+nn
+yQ
 Xc
 Xc
 Xc
@@ -37024,7 +37305,7 @@ yQ
 Xc
 Xc
 Xc
-Xc
+eC
 il
 il
 zA
@@ -37068,11 +37349,11 @@ Ot
 Xc
 Xc
 Xc
-nX
-nX
-nX
-nX
-nX
+re
+re
+re
+re
+Ua
 dV
 Et
 xm
@@ -37110,25 +37391,25 @@ Dy
 Dy
 Xc
 Sx
-xm
+so
 Xc
 Xc
 MS
-sJ
-sJ
-sJ
+nn
+nn
+nn
 MS
 MS
 nX
 nX
 nX
-nX
+pL
 Xc
 Xc
 Tz
-Mk
-Mk
-Mk
+cX
+cX
+cX
 Xc
 Xc
 WW
@@ -37136,13 +37417,13 @@ SF
 xm
 xm
 nX
-Dy
-Dy
+AX
+AX
 TE
 TE
 Mr
 VB
-Dy
+AX
 Xc
 Xc
 Pz
@@ -37166,8 +37447,8 @@ yQ
 yQ
 XV
 Xc
-Xc
-zA
+eC
+CF
 zA
 zA
 zA
@@ -37175,10 +37456,10 @@ il
 il
 il
 il
-FK
+nn
 EM
-FK
-il
+nn
+yQ
 zq
 zq
 zq
@@ -37193,8 +37474,8 @@ yQ
 Xc
 Xc
 Xc
-Xc
-il
+eC
+XL
 il
 il
 zA
@@ -37206,15 +37487,15 @@ zA
 zA
 LS
 zA
+UM
 zA
+UM
+aY
+aY
 zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
+UM
+aY
+Xc
 zA
 zA
 zA
@@ -37237,11 +37518,11 @@ Ot
 Xc
 Xc
 Xc
-nX
-nX
-BE
-nX
-nX
+re
+re
+aL
+re
+GM
 nX
 nX
 xm
@@ -37279,7 +37560,7 @@ xm
 Xc
 Xc
 Xc
-xm
+so
 Xc
 MS
 MS
@@ -37290,14 +37571,14 @@ nX
 nX
 nX
 nX
-sJ
-sJ
+nn
+nn
 Xc
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
 XN
 Xc
 nX
@@ -37305,13 +37586,13 @@ xm
 xm
 sJ
 WW
-Dy
+AX
 xy
 TE
 TE
 TE
 FS
-Dy
+AX
 Zc
 Xc
 Xc
@@ -37335,18 +37616,18 @@ yQ
 yQ
 XV
 Xc
-Xc
-zA
-zA
-zA
+eC
+wE
+km
+WI
 il
 il
 il
 il
 il
-FK
+nn
 jE
-FK
+nn
 zA
 Ae
 DU
@@ -37363,11 +37644,18 @@ Xc
 Xc
 Xc
 Xc
+XL
 il
 il
 il
 il
-il
+zA
+zA
+zA
+zA
+zA
+Xc
+Xc
 zA
 zA
 zA
@@ -37376,15 +37664,8 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
+Xc
+Xc
 zA
 zA
 zA
@@ -37407,9 +37688,9 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
-nX
+re
+re
+GM
 nX
 nX
 xm
@@ -37436,19 +37717,19 @@ nX
 nX
 MS
 MS
-Dy
-Dy
+AX
+AX
 Xt
 Xt
-Dy
-Dy
+AX
+AX
 nX
 nX
 xm
-sJ
-sJ
-sJ
-Ls
+nn
+nn
+nn
+SI
 Xc
 nX
 nX
@@ -37456,31 +37737,31 @@ nX
 nX
 VX
 nX
-sJ
+nn
 UJ
 UJ
-sJ
+nn
 Gd
-sJ
-Mk
+nn
+cX
 Tz
-Mk
+cX
 Tz
-Mk
-Mk
+cX
+cX
 Xc
 xm
 xm
 xm
 xm
 nX
-Dy
+AX
 WA
 Zy
 dc
 dc
 TE
-Dy
+AX
 KH
 tX
 Xc
@@ -37504,16 +37785,16 @@ yQ
 yQ
 cj
 wc
-Xc
+eC
+wE
 zA
 zA
-zA
 il
 il
 il
 il
 il
-zA
+Bm
 zA
 zA
 zA
@@ -37531,13 +37812,19 @@ il
 Xc
 Xc
 Xc
+eC
+XL
+XL
+il
+il
+il
+il
+zA
+zA
+zA
+zA
+zA
 Xc
-il
-il
-il
-il
-il
-il
 zA
 zA
 zA
@@ -37547,14 +37834,8 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
+Xc
+Xc
 zA
 zA
 zA
@@ -37577,7 +37858,7 @@ Xc
 Xc
 Xc
 Xc
-nX
+GM
 nX
 nX
 nX
@@ -37604,19 +37885,19 @@ nX
 MS
 MS
 MS
-Dy
-Dy
+AX
+AX
 Gm
 Iw
 Iw
 Wz
-Dy
-Dy
+AX
+AX
 nX
 nX
-sJ
-gV
-sJ
+nn
+EM
+nn
 xm
 xm
 nX
@@ -37627,34 +37908,34 @@ VX
 nX
 UJ
 Tz
-Mk
+cX
 Bc
-Mk
-sJ
-Mk
+cX
+nn
+cX
 Xc
 Xc
 Xc
 Tz
-Mk
-Ls
+cX
+SI
 xm
 xm
 BX
 xm
 xm
-Dy
-Dy
-Dy
-Dy
-Dy
+AX
+AX
+AX
+AX
+AX
 Pn
-Dy
+AX
 zT
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
 UJ
 Ed
 yQ
@@ -37673,9 +37954,9 @@ yQ
 yQ
 yQ
 XV
-zA
-zA
-zA
+wE
+Ec
+Ec
 zA
 zA
 il
@@ -37701,30 +37982,30 @@ il
 Xc
 Xc
 Xc
+eC
+XL
+XL
+XL
+il
+il
+il
+zA
+zA
+zA
+ZR
+zA
+zA
+zA
+zA
+zA
+zA
+zA
+zA
+zA
 Xc
-il
-il
-il
-il
-il
-il
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
-zA
+Xc
+Xc
+Xc
 zA
 zA
 Xc
@@ -37747,8 +38028,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+dV
+Et
 nX
 xm
 xm
@@ -37771,21 +38052,21 @@ nX
 MS
 MS
 MS
-Dy
-Dy
-Dy
+AX
+AX
+AX
 Iw
 GT
 Iw
 Iw
 Wz
 Wz
-Dy
+AX
 nX
 nX
-sJ
-mt
-sJ
+nn
+jE
+nn
 nX
 nX
 nX
@@ -37796,34 +38077,34 @@ VX
 nX
 UJ
 FV
-Mk
-Mk
-Mk
-Ls
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+SI
+cX
+cX
+cX
+cX
+cX
+cX
 Xc
 xm
 YB
 uh
 YB
 xm
-sJ
+nn
 NY
 Kc
-Mk
-Ls
-Mk
-sJ
+cX
+SI
+cX
+nn
 UW
-Mk
+cX
 st
 Sj
-Mk
+cX
 UJ
 Ed
 Qj
@@ -37843,9 +38124,9 @@ yQ
 yQ
 XV
 zA
-zA
-zA
-zA
+wE
+Ec
+wE
 zA
 zA
 il
@@ -37853,8 +38134,8 @@ zA
 zA
 zA
 zA
-zA
-zA
+km
+WI
 Ae
 DU
 TQ
@@ -37873,13 +38154,14 @@ Xc
 Xc
 Xc
 Xc
-Xc
-Xc
+eC
+eC
 Xc
 il
 il
 Xc
 zA
+UM
 zA
 zA
 zA
@@ -37889,10 +38171,9 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
-zA
+Xc
+Xc
+Xc
 Xc
 Xc
 Xc
@@ -37937,10 +38218,10 @@ VX
 VX
 VX
 VX
-Dy
-Dy
-Dy
-Dy
+AX
+AX
+AX
+AX
 zU
 Iw
 Iw
@@ -37949,7 +38230,7 @@ Iw
 Iw
 Nd
 Wz
-Dy
+AX
 nX
 nX
 HD
@@ -37961,39 +38242,39 @@ nX
 nX
 nX
 MS
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Tz
-Mk
-Mk
-jm
-sJ
+cX
+cX
+zJ
+nn
 Tz
-Mk
+cX
 Tz
 Xc
 Tz
-Mk
+cX
 Xc
 YB
 YB
 ml
 YB
 YB
-sJ
+nn
 Mw
 eg
 tl
 UJ
-Mk
-sJ
+cX
+nn
 sf
-Mk
+cX
 iM
 UG
-Mk
-sJ
+cX
+nn
 Pd
 aF
 OI
@@ -38012,10 +38293,10 @@ yQ
 yQ
 XV
 zA
-zA
-zA
+wE
+wE
 Xc
-zA
+wE
 zA
 zA
 zA
@@ -38049,14 +38330,14 @@ Xc
 Xc
 Xc
 zA
+ZR
 zA
+aY
+UM
+aY
+aY
 zA
-zA
-zA
-zA
-zA
-zA
-zA
+UM
 zA
 zA
 Xc
@@ -38088,7 +38369,7 @@ Xc
 Xc
 nX
 nX
-nX
+Rw
 xm
 xm
 YB
@@ -38106,10 +38387,10 @@ nX
 nX
 nX
 rK
-Dy
+AX
 rk
 Iw
-sJ
+nn
 Ai
 Iw
 Iw
@@ -38118,7 +38399,7 @@ Iw
 Iw
 Iw
 Wz
-Dy
+AX
 nX
 nX
 nX
@@ -38133,13 +38414,13 @@ MS
 UJ
 Tz
 IQ
-Mk
-Mk
+cX
+cX
 LJ
 Op
-sJ
-sJ
-Ls
+nn
+nn
+SI
 Xc
 Xc
 Xc
@@ -38150,20 +38431,20 @@ YB
 Kt
 YB
 YB
-sJ
+nn
 UJ
 UJ
 UJ
-sJ
-Mk
-sJ
-sJ
-Mk
-sJ
-sJ
-sJ
-sJ
-sJ
+nn
+cX
+nn
+nn
+cX
+nn
+nn
+nn
+nn
+nn
 Xc
 Ed
 yQ
@@ -38180,9 +38461,9 @@ yQ
 yQ
 yQ
 XV
+xQ
 zA
-zA
-zA
+wE
 Xc
 Xc
 zA
@@ -38208,8 +38489,8 @@ kr
 Xc
 zA
 kK
-zA
-zA
+il
+il
 Xc
 Xc
 Xc
@@ -38275,7 +38556,7 @@ rK
 nX
 nX
 rK
-Dy
+AX
 UL
 Iw
 sZ
@@ -38287,8 +38568,8 @@ Iw
 Iw
 Iw
 Iw
-Dy
-nX
+AX
+pL
 nX
 nX
 nX
@@ -38302,37 +38583,37 @@ MS
 UJ
 Xv
 AS
-Mk
-sJ
-sJ
-sJ
-sJ
+cX
+nn
+nn
+nn
+nn
 ZB
 IQ
 VY
-Mk
+cX
 tj
 tj
-sJ
+nn
 bH
 YB
 Ni
 YB
 YB
-sJ
+nn
 LZ
 Xv
 uA
 qd
-Mk
-sJ
+cX
+nn
 MJ
-Mk
+cX
 Qz
 Xc
 KM
-Mk
-Mk
+cX
+cX
 Xc
 Pd
 OI
@@ -38349,10 +38630,10 @@ yQ
 yQ
 eW
 XV
+xQ
 zA
 zA
-zA
-zA
+wE
 Xc
 zA
 zA
@@ -38377,8 +38658,8 @@ UR
 kr
 zA
 zA
-zA
-zA
+il
+il
 yQ
 yQ
 Xc
@@ -38424,7 +38705,7 @@ Xc
 Xc
 Xc
 Xc
-nX
+Xc
 nX
 nX
 nX
@@ -38444,10 +38725,10 @@ rK
 nX
 nX
 rK
-Dy
+AX
 rs
 Iw
-sJ
+nn
 DL
 Iw
 Iw
@@ -38467,41 +38748,41 @@ nX
 nX
 nX
 MS
-sJ
-sJ
+nn
+nn
 AS
 MZ
-Mk
+cX
 Tz
-Mk
+cX
 FU
-sJ
+nn
 ZU
 xx
 Nj
 Cp
-Mk
-Mk
+cX
+cX
 UJ
 av
 mT
 VF
 YB
 xm
-sJ
+nn
 Az
-Mk
-Mk
-Mk
-Mk
-Ls
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+SI
+cX
+cX
+cX
 Xc
 fD
-Mk
-Mk
+cX
+cX
 Xc
 Xc
 Ed
@@ -38521,8 +38802,8 @@ XV
 zA
 zA
 zA
-zA
-zA
+Ec
+wE
 zA
 zA
 zA
@@ -38546,8 +38827,8 @@ wE
 wE
 ad
 Xc
-zA
-zA
+il
+il
 yQ
 yQ
 yQ
@@ -38593,8 +38874,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+Xc
+PR
 nX
 nX
 nX
@@ -38613,10 +38894,10 @@ Xc
 rK
 nX
 rK
-Dy
-sJ
-sJ
-sJ
+AX
+nn
+nn
+nn
 Iw
 Iw
 Iw
@@ -38636,21 +38917,21 @@ nX
 nX
 MS
 MS
-sJ
+nn
 Tz
-cF
-cF
-Mk
-Mk
-Mk
+Td
+Td
+cX
+cX
+cX
 OR
 Xc
 ZV
 jT
 ly
 Cp
-Mk
-Mk
+cX
+cX
 UJ
 xm
 xm
@@ -38659,18 +38940,18 @@ av
 av
 UJ
 Tz
-Mk
-Mk
-Mk
-Mk
-sJ
+cX
+cX
+cX
+cX
+nn
 ls
-Mk
-Mk
+cX
+cX
 Xc
 Xc
 iG
-Mk
+cX
 OT
 Xc
 Pd
@@ -38688,10 +38969,10 @@ yQ
 yQ
 XV
 zA
+XO
 zA
 zA
-zA
-zA
+wE
 zA
 zA
 il
@@ -38699,7 +38980,7 @@ il
 il
 il
 zA
-zA
+Bm
 Xc
 Xc
 Xc
@@ -38716,7 +38997,7 @@ ad
 PS
 zA
 zA
-zA
+il
 yQ
 yQ
 yQ
@@ -38762,8 +39043,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+re
+dE
 nX
 nX
 nX
@@ -38782,10 +39063,10 @@ Xc
 Xc
 nX
 rK
-Dy
+AX
 rs
 Iw
-sJ
+nn
 DL
 Iw
 Iw
@@ -38794,9 +39075,9 @@ SY
 Iw
 Iw
 Iw
+AX
 Dy
-nX
-nX
+tm
 xm
 xm
 nX
@@ -38804,43 +39085,43 @@ nX
 nX
 nX
 MS
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 QM
-Mk
+cX
 Xc
 Xc
 Xc
 Xc
 Cg
-cF
-cF
-Mk
-Mk
-Mk
-Ls
+Td
+Td
+cX
+cX
+cX
+SI
 xm
 xm
 xY
 xm
 xm
 UJ
-jF
-Mk
-Mk
-Mk
+zF
+cX
+cX
+cX
 Xv
 Xc
 ax
-Mk
-Mk
+cX
+cX
 SP
 Xc
 Xc
-Mk
-Mk
+cX
+cX
 Xc
 Xc
 Ed
@@ -38857,10 +39138,10 @@ yQ
 yQ
 XV
 zA
+XO
 zA
 zA
-zA
-zA
+Ec
 zA
 zA
 il
@@ -38868,7 +39149,7 @@ il
 il
 il
 zA
-Xc
+eC
 Xc
 Xc
 Xc
@@ -38885,8 +39166,8 @@ Xc
 wE
 zA
 zA
-zA
-zA
+il
+il
 yQ
 yQ
 yQ
@@ -38931,8 +39212,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+re
+Ua
 nX
 nX
 nX
@@ -38948,10 +39229,10 @@ Xc
 Xc
 Xc
 Xc
-Dy
+AX
 al
-Dy
-Dy
+AX
+AX
 UL
 Iw
 sZ
@@ -38963,8 +39244,8 @@ Iw
 Iw
 Iw
 Wz
-Dy
-nX
+AX
+sD
 nX
 nX
 xm
@@ -38975,19 +39256,19 @@ QL
 MS
 UJ
 Tz
-Mk
+cX
 FU
-Mk
-Mk
+cX
+cX
 Tz
-Mk
+cX
 Tz
-sJ
+nn
 Hl
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
 Xc
 Xc
 xm
@@ -38997,19 +39278,19 @@ xm
 xm
 Xc
 Xc
-Mk
-Mk
-Mk
+cX
+cX
+cX
 Xv
 Xc
 vX
 sB
-Mk
-Mk
+cX
+cX
 rT
-sJ
-Mk
-Mk
+nn
+cX
+cX
 Tz
 UJ
 Ed
@@ -39028,8 +39309,8 @@ tH
 zA
 zA
 zA
-il
-il
+Za
+Za
 zA
 zA
 zA
@@ -39037,8 +39318,8 @@ il
 il
 zA
 zA
-zA
-Xc
+wE
+eC
 Xc
 Xc
 Xc
@@ -39055,8 +39336,8 @@ Hk
 wE
 zA
 zA
-zA
-zA
+il
+il
 yQ
 yQ
 Xc
@@ -39100,12 +39381,12 @@ Xc
 Xc
 Xc
 Xc
+re
+Ua
 nX
 nX
 nX
 nX
-nX
-nX
 Xc
 Xc
 Xc
@@ -39117,13 +39398,13 @@ Xc
 Xc
 Xc
 Xc
-Dy
+AX
 Iw
 Iw
-sJ
+nn
 rk
 Iw
-sJ
+nn
 Iw
 Iw
 Iw
@@ -39132,8 +39413,8 @@ Iw
 Iw
 Iw
 Wz
-Dy
-MS
+AX
+sD
 nX
 nX
 nX
@@ -39144,18 +39425,18 @@ nX
 MS
 UJ
 Tz
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
+cX
 FU
-sJ
+nn
 si
 td
 aA
-Mk
+cX
 Xc
 Xc
 PJ
@@ -39167,17 +39448,17 @@ xm
 nX
 Xc
 Xc
-Mk
-Mk
+cX
+cX
 Xv
 Xc
 vl
 sB
-Mk
-Mk
-Mk
-Ls
-Mk
+cX
+cX
+cX
+SI
+cX
 Hm
 Tz
 UJ
@@ -39193,40 +39474,40 @@ yQ
 yQ
 yQ
 XV
-zA
-zA
-zA
-il
-il
-il
-il
-zA
-zA
+cg
+CC
 zA
 il
-zA
-zA
-zA
-zA
 Xc
 Xc
-Xc
-zA
-zA
-ad
-Ec
-Xc
-Xc
-Xc
-Ec
-Ec
-ad
-Ec
-zA
-zA
-zA
+il
 km
 WI
+zA
+il
+zA
+zA
+zA
+wE
+eC
+Xc
+Xc
+zA
+zA
+ad
+Ec
+Xc
+Xc
+Xc
+Ec
+Ec
+ad
+Ec
+zA
+zA
+zA
+Ad
+Lg
 yQ
 Xc
 Xc
@@ -39269,12 +39550,12 @@ Xc
 Xc
 Xc
 Xc
-wF
+re
+Ua
 nX
 nX
 nX
 nX
-nX
 Xc
 Xc
 Xc
@@ -39285,14 +39566,14 @@ Xc
 Xc
 Xc
 Xc
-Dy
-Dy
+AX
+AX
 Iw
 Iw
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 Iw
 Iw
 Xw
@@ -39301,8 +39582,8 @@ Xw
 Xw
 Iw
 SY
-Dy
-MS
+AX
+sD
 nX
 nX
 nX
@@ -39310,17 +39591,17 @@ xm
 nX
 nX
 nX
-sJ
-sJ
-sJ
-sJ
-sJ
-Ls
-Ls
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
+nn
+SI
+SI
+nn
+nn
+nn
+nn
 UJ
 UJ
 UJ
@@ -39336,21 +39617,21 @@ xm
 xm
 nX
 Xc
-Ls
-sJ
+SI
+nn
 Xc
 Xc
 Xc
 Xc
 UJ
-Ls
+SI
 UJ
-sJ
-sJ
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
+nn
+nn
 Pd
 aF
 aF
@@ -39362,13 +39643,13 @@ yQ
 yQ
 yQ
 XV
-zA
-zA
+cg
+cg
 il
 il
-il
-sJ
-il
+Xc
+nn
+Xc
 zA
 zA
 zA
@@ -39376,8 +39657,8 @@ zA
 zA
 zA
 zA
-zA
-zq
+Bm
+KT
 zq
 zq
 zA
@@ -39395,7 +39676,7 @@ zA
 zA
 zA
 zA
-zA
+il
 yQ
 Xc
 Xc
@@ -39438,8 +39719,8 @@ Xc
 Xc
 Xc
 Xc
-nX
-nX
+re
+GM
 nX
 nX
 dV
@@ -39454,11 +39735,11 @@ Xc
 Xc
 Xc
 Xc
-Dy
+AX
 mE
 Iw
 Iw
-sJ
+nn
 Iw
 Iw
 Iw
@@ -39469,9 +39750,9 @@ Iw
 Iw
 Iw
 Iw
+AX
+AX
 Dy
-Dy
-MS
 nX
 nX
 nX
@@ -39486,9 +39767,9 @@ PJ
 PJ
 nX
 nX
-sJ
-gV
-mt
+nn
+EM
+jE
 nX
 nX
 nX
@@ -39515,29 +39796,29 @@ nX
 xm
 xm
 xm
-sJ
-gV
-sJ
+nn
+EM
+nn
 nX
-sJ
-sJ
+nn
+nn
 qu
 qu
 qu
-sJ
+nn
 Pd
 aF
 aF
 aF
 aF
 gh
-sJ
+nn
 qu
 qu
 qu
-sJ
-sJ
-il
+nn
+nn
+cB
 zA
 zA
 zA
@@ -39546,8 +39827,8 @@ zA
 zA
 zA
 zA
-Ae
-DU
+ui
+Rt
 TQ
 zA
 zA
@@ -39564,7 +39845,7 @@ zA
 zA
 zA
 zA
-zA
+il
 yQ
 Xc
 Xc
@@ -39607,13 +39888,13 @@ Xc
 Xc
 Xc
 Xc
+GM
 nX
 nX
 nX
 nX
 nX
 nX
-nX
 Xc
 Xc
 Xc
@@ -39623,7 +39904,7 @@ Xc
 Xc
 Xc
 Xc
-Dy
+AX
 mM
 Iw
 Iw
@@ -39637,8 +39918,8 @@ Xw
 Xw
 Xw
 Xw
-Dy
-Dy
+AX
+AX
 MS
 MS
 nX
@@ -39655,9 +39936,9 @@ xm
 xm
 xm
 xm
-sJ
-sJ
-sJ
+nn
+nn
+nn
 xm
 xm
 nX
@@ -39684,27 +39965,27 @@ nX
 nX
 xm
 xm
-sJ
-mt
-sJ
+nn
+jE
+nn
 xm
 MH
-Mk
-Mk
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+cX
+cX
+nn
+nn
 qu
 qu
 qu
 qu
-sJ
-sJ
-Mk
-Mk
-Mk
-Mk
+nn
+nn
+cX
+cX
+cX
+cX
 PH
 zA
 zA
@@ -39715,8 +39996,8 @@ zA
 zA
 zA
 zA
-Ae
-DU
+ui
+Rt
 TQ
 zA
 zA
@@ -39733,8 +40014,8 @@ zA
 zA
 zA
 zA
-zA
-yQ
+il
+il
 Xc
 Xc
 Xc
@@ -39792,21 +40073,21 @@ Xc
 Xc
 Xc
 Xc
-Dy
-Dy
+AX
+AX
 Iw
 Iw
 sZ
 Iw
 Iw
 Iw
-Dy
-Dy
+AX
+AX
 Xt
 Xt
 Xt
-Dy
-Dy
+AX
+AX
 MS
 MS
 nX
@@ -39858,22 +40139,22 @@ xm
 xm
 xm
 MH
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 PH
 zA
 zA
@@ -39885,7 +40166,7 @@ zA
 zA
 zA
 Ae
-DU
+Rt
 TQ
 zA
 zA
@@ -39903,7 +40184,7 @@ zA
 zA
 zA
 zA
-zA
+il
 Xc
 Xc
 Ec
@@ -39962,14 +40243,14 @@ Xc
 Xc
 Xc
 Xc
-Dy
+AX
 op
 oF
-sJ
+nn
 rM
 uY
-Dy
-Dy
+AX
+AX
 nX
 nX
 nX
@@ -40027,22 +40308,22 @@ xm
 xm
 xm
 MH
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 PH
 zA
 zA
@@ -40131,13 +40412,13 @@ Xc
 Xc
 Xc
 Xc
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+AX
+AX
+AX
+AX
+AX
+AX
+AX
 xm
 nX
 nX
@@ -40196,22 +40477,22 @@ xm
 xm
 xm
 MH
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 PH
 zA
 zA
@@ -40321,7 +40602,7 @@ MS
 MS
 nX
 nX
-nX
+pL
 nX
 xm
 xm
@@ -40365,22 +40646,22 @@ xm
 nX
 xm
 MH
-Mk
-Mk
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+cX
+cX
+nn
+nn
 qu
 qu
 qu
 qu
-sJ
-sJ
-Mk
-Mk
-Mk
-Mk
+nn
+nn
+cX
+cX
+cX
+cX
 PH
 zA
 zA
@@ -40476,7 +40757,7 @@ Xc
 Xc
 nX
 xm
-nX
+pL
 nX
 nX
 nX
@@ -40533,25 +40814,25 @@ WW
 nX
 nX
 nX
-sJ
-sJ
+nn
+nn
 qu
 qu
 qu
-sJ
+nn
 uu
 Nw
 Nw
 Nw
 Nw
 JG
-sJ
+nn
 qu
 qu
 qu
-sJ
-sJ
-zA
+nn
+nn
+Bm
 zA
 zA
 zA
@@ -40662,22 +40943,22 @@ Xc
 Xc
 Xc
 Xc
-sJ
-sJ
-sJ
-sJ
-sJ
-Ls
-Ls
-sJ
-sJ
-sJ
-sJ
-sJ
-Ls
-Ls
-sJ
-sJ
+nn
+nn
+nn
+nn
+nn
+SI
+SI
+nn
+nn
+nn
+nn
+nn
+SI
+SI
+nn
+nn
 sY
 xm
 xm
@@ -40687,22 +40968,22 @@ xm
 xm
 nX
 nX
-sJ
-sJ
-Ls
+nn
+nn
+SI
 UJ
 UJ
 UJ
-Ls
-sJ
-sJ
-sJ
-sJ
-sJ
-Ls
-sJ
-sJ
-sJ
+SI
+nn
+nn
+nn
+nn
+nn
+SI
+nn
+nn
+nn
 Xc
 xc
 re
@@ -40714,12 +40995,12 @@ yQ
 yQ
 jC
 tH
+HO
 zA
 zA
-zA
-zA
-zA
-sJ
+km
+WI
+nn
 zA
 zA
 zA
@@ -40835,18 +41116,18 @@ Nl
 UJ
 hj
 Mh
-Ls
-Mk
-Mk
-Ls
+SI
+cX
+cX
+SI
 DZ
 JA
-sJ
+nn
 CP
-Mk
-Mk
+cX
+cX
 CP
-sJ
+nn
 UQ
 sY
 xm
@@ -40856,21 +41137,21 @@ nX
 xm
 WW
 WW
-sJ
+nn
 om
-Mk
+cX
 aX
 Xv
 CJ
-Mk
+cX
 Hw
 Xv
-sJ
+nn
 ET
-Mk
-Mk
-Mk
-sJ
+cX
+cX
+cX
+nn
 Xc
 Xc
 re
@@ -40883,6 +41164,7 @@ yQ
 yQ
 XV
 Xc
+HO
 zA
 zA
 zA
@@ -40895,9 +41177,8 @@ zA
 zA
 zA
 zA
-zA
-zA
-zA
+km
+WI
 Ae
 DU
 TQ
@@ -41004,42 +41285,42 @@ Nl
 UJ
 XZ
 Mh
-Ls
-Mk
-Mk
-Ls
+SI
+cX
+cX
+SI
 cI
 UV
-sJ
+nn
 CP
 cT
-Mk
+cX
 Mh
-sJ
-sJ
-sJ
+nn
+nn
+nn
 xm
 nX
 nX
 nX
 nX
-sJ
-sJ
-sJ
-Mk
-Mk
+nn
+nn
+nn
+cX
+cX
 Hw
 Hw
 Hw
-Mk
+cX
 Hw
 Xv
 UJ
 jH
-Mk
+cX
 Hm
 Ah
-sJ
+nn
 Xc
 xc
 re
@@ -41170,23 +41451,23 @@ ko
 ko
 Nl
 Nl
-sJ
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
 ud
-Mk
-sJ
-sJ
-sJ
-sJ
+cX
+nn
+nn
+nn
+nn
 Mh
-Mk
-Mk
+cX
+cX
 Mh
 wS
 wS
-sJ
+nn
 xm
 nX
 nX
@@ -41195,20 +41476,20 @@ nX
 UJ
 NW
 Hw
-Mk
+cX
 Hm
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
 Hw
 Xv
 UJ
 Sv
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+nn
+nn
 re
 re
 re
@@ -41229,8 +41510,8 @@ il
 il
 zA
 zA
-zA
-zA
+km
+WI
 Xc
 Xc
 Xc
@@ -41340,22 +41621,22 @@ ko
 ko
 Nl
 Nl
-sJ
+nn
 Dr
 TZ
-Mk
-Mk
-Ls
+cX
+cX
+SI
 li
 yx
-sJ
+nn
 Mh
-Mk
-Mk
+cX
+cX
 Mh
 wS
 cT
-sJ
+nn
 SF
 sJ
 SF
@@ -41364,19 +41645,19 @@ nX
 UJ
 Fe
 Hw
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
+cX
+cX
 Hw
 Xv
-sJ
-Mk
-Mk
+nn
+cX
+cX
 om
-sJ
+nn
 nX
 KD
 re
@@ -41391,14 +41672,14 @@ yQ
 XV
 Xc
 Xc
-il
+cB
 il
 il
 il
 il
 il
 zA
-zA
+Bm
 Xc
 Xc
 Xc
@@ -41509,43 +41790,43 @@ ko
 ko
 ko
 Nl
-sJ
-sJ
+nn
+nn
 Mh
-Mk
-Mk
-Ls
+cX
+cX
+SI
 jG
 qK
-sJ
+nn
 Mh
 Mh
-Mk
-Mk
+cX
+cX
 cT
 cT
-sJ
+nn
 xm
 nX
 xm
 xm
 nX
-Ls
-Mk
-Mk
-Mk
-Mk
+SI
+cX
+cX
+cX
+cX
 Hw
 Hw
 Hw
-sJ
-sJ
-sJ
-sJ
-Ls
-Ls
-sJ
-sJ
+nn
+nn
+nn
+nn
+SI
+SI
+nn
+nn
 nX
 nX
 Xc
@@ -41682,38 +41963,38 @@ ko
 UJ
 Mh
 Mh
-Mk
-sJ
-sJ
-sJ
-sJ
+cX
+nn
+nn
+nn
+nn
 Mh
 Mq
 Mq
-Mk
+cX
 cT
 Mh
-sJ
+nn
 xm
 nX
 xm
 xm
 nX
-Ls
+SI
 Hm
-Mk
-Mk
-Mk
+cX
+cX
+cX
 Xv
 aX
 Xv
-sJ
-sJ
+nn
+nn
 Xv
 Hw
-Mk
-Mk
-sJ
+cX
+cX
+nn
 nX
 nX
 nX
@@ -41851,38 +42132,38 @@ ko
 UJ
 Mh
 Mh
-Mk
-Ls
-Mk
-Mk
-Ls
+cX
+SI
+cX
+cX
+SI
 qh
 cT
-Mk
-Mk
+cX
+cX
 Mh
 Cb
-sJ
+nn
 xm
 nX
 xm
 xm
 nX
 UJ
-EK
-Mk
-Mk
-Mk
-sJ
-sJ
-sJ
-sJ
+Je
+cX
+cX
+cX
+nn
+nn
+nn
+nn
 Xv
 Hw
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+nn
+nn
 nX
 nX
 Xc
@@ -42017,21 +42298,21 @@ BY
 ko
 ko
 ko
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Mh
-Ls
-Mk
-Mk
-Ls
+SI
+cX
+cX
+SI
 cT
 cT
-Mk
-Mk
+cX
+cX
 Mh
-sJ
-sJ
+nn
+nn
 SF
 nX
 SF
@@ -42040,17 +42321,17 @@ xm
 UJ
 Xb
 Hw
-Mk
-Mk
+cX
+cX
 fy
 sc
 NW
-Mk
-Mk
-Mk
-Mk
-sJ
-sJ
+cX
+cX
+cX
+cX
+nn
+nn
 nX
 nX
 nX
@@ -42193,29 +42474,29 @@ Xc
 Xc
 JV
 ip
-sJ
+nn
 Mh
 Mh
-Mk
+cX
 cT
-sJ
-sJ
+nn
+nn
 xm
 xm
 nX
 xm
 sJ
 SF
-sJ
-sJ
-sJ
-Mk
-Mk
+nn
+nn
+nn
+cX
+cX
 Hw
 Hw
 Hw
-Mk
-Mk
+cX
+cX
 Hw
 Xv
 UJ
@@ -42361,13 +42642,13 @@ BY
 BY
 Xc
 Xc
-sJ
-sJ
-sJ
-sJ
-Ls
-sJ
-sJ
+nn
+nn
+nn
+nn
+SI
+nn
+nn
 nX
 xm
 xm
@@ -42377,14 +42658,14 @@ xm
 xm
 xm
 xm
-sJ
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
-Mk
+nn
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 Hw
 Xv
 UJ
@@ -42530,13 +42811,13 @@ BY
 BY
 BY
 BY
-sJ
-Oj
+nn
+Qx
 om
 Ur
-Mk
+cX
 Kc
-sJ
+nn
 xm
 xm
 nX
@@ -42547,16 +42828,16 @@ nX
 xm
 xm
 UJ
-Mk
-Mk
-Mk
+cX
+cX
+cX
 Hw
 Hw
-Mk
-sJ
-sJ
-sJ
-sJ
+cX
+nn
+nn
+nn
+nn
 nX
 nX
 nX
@@ -42699,13 +42980,13 @@ BY
 BY
 BY
 BY
-Ls
-Mk
-Mk
-Mk
-Mk
-Mk
-Ls
+SI
+cX
+cX
+cX
+cX
+cX
+SI
 xm
 xm
 nX
@@ -42715,14 +42996,14 @@ xm
 nX
 nX
 xm
-Ls
-Mk
-Mk
+SI
+cX
+cX
 Hm
 NW
 Xv
-sJ
-sJ
+nn
+nn
 Xc
 Xc
 Xc
@@ -42868,13 +43149,13 @@ BY
 BY
 BY
 BY
-Ls
+SI
 zg
 BA
-Mk
-Mk
-Mk
-Ls
+cX
+cX
+cX
+SI
 xm
 xm
 nX
@@ -42886,11 +43167,11 @@ nX
 nX
 UJ
 Hw
-Mk
-Mk
-sJ
-sJ
-sJ
+cX
+cX
+nn
+nn
+nn
 Xc
 Xc
 YB
@@ -43037,13 +43318,13 @@ BY
 BY
 BY
 Xc
-sJ
-sJ
-sJ
+nn
+nn
+nn
 Mh
-Mk
-Mk
-sJ
+cX
+cX
+nn
 xm
 xm
 nX
@@ -43053,11 +43334,11 @@ xm
 xm
 nX
 nX
-sJ
+nn
 NW
-sJ
-Ls
-sJ
+nn
+SI
+nn
 Xc
 Xc
 Xc
@@ -43208,11 +43489,11 @@ Xc
 Xc
 Xc
 Xc
-sJ
-sJ
-Mk
-Mk
-sJ
+nn
+nn
+cX
+cX
+nn
 sJ
 WW
 WW
@@ -43221,10 +43502,10 @@ Xc
 xm
 nX
 nX
-sJ
-sJ
+nn
+nn
 UJ
-sJ
+nn
 xm
 xm
 Xc
@@ -43376,12 +43657,12 @@ BY
 BY
 Xc
 Xc
-sJ
-sJ
-sJ
-Mk
-Mk
-sJ
+nn
+nn
+nn
+cX
+cX
+nn
 sJ
 nX
 nX
@@ -43389,8 +43670,8 @@ nX
 Xc
 WW
 WW
-sJ
-sJ
+nn
+nn
 Em
 xm
 xm
@@ -43544,13 +43825,13 @@ BY
 BY
 BY
 BY
-sJ
-sJ
-sJ
-sJ
-Mk
-Mk
-sJ
+nn
+nn
+nn
+nn
+cX
+cX
+nn
 nX
 nX
 nX
@@ -43558,7 +43839,7 @@ nX
 nX
 nX
 nX
-sJ
+nn
 da
 Em
 nX
@@ -43717,9 +43998,9 @@ UJ
 Mh
 Mh
 Mh
-Mk
-Mk
-sJ
+cX
+cX
+nn
 nX
 nX
 nX
@@ -43884,10 +44165,10 @@ ko
 Xc
 UJ
 SJ
-Mk
+cX
 Hw
 Hw
-Mk
+cX
 UJ
 nX
 nX
@@ -44051,12 +44332,12 @@ ko
 ko
 ko
 Xc
-sJ
+nn
 AY
-Mk
+cX
 Xv
 Xv
-Mk
+cX
 UJ
 nX
 nX
@@ -44145,9 +44426,9 @@ zA
 zA
 zA
 Xc
-el
-el
-el
+il
+il
+il
 il
 il
 il
@@ -44220,13 +44501,13 @@ ko
 ko
 ko
 Xc
-sJ
+nn
 Dm
-Mk
+cX
 Hw
 Hw
-Mk
-sJ
+cX
+nn
 nX
 nX
 nX
@@ -44314,9 +44595,9 @@ zA
 zA
 Xc
 Xc
-el
-el
-el
+il
+il
+il
 il
 zA
 zA
@@ -44389,13 +44670,13 @@ ko
 ko
 Xc
 Xc
-sJ
-sJ
+nn
+nn
 Oc
-Mk
+cX
 Oc
 Oc
-sJ
+nn
 xm
 nX
 nX
@@ -44557,14 +44838,14 @@ ko
 ko
 ko
 Xc
-sJ
-sJ
-sJ
-sJ
-Ls
-sJ
-sJ
-sJ
+nn
+nn
+nn
+nn
+SI
+nn
+nn
+nn
 xm
 xm
 nX
@@ -44726,12 +45007,12 @@ ko
 ko
 ko
 ko
-Ls
+SI
 Mh
 Mh
-Mk
-Mk
-Mk
+cX
+cX
+cX
 YN
 UJ
 xm
@@ -44895,12 +45176,12 @@ ko
 ko
 ko
 ko
-Ls
+SI
 We
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
 NX
 UJ
 xm
@@ -45064,14 +45345,14 @@ ko
 ko
 ko
 ko
-Ls
+SI
 Ff
-Mk
-Mk
-Mk
-Mk
+cX
+cX
+cX
+cX
 Tc
-sJ
+nn
 xm
 xm
 xm
@@ -45233,15 +45514,15 @@ ko
 ko
 ko
 ko
-Ls
+SI
 pt
 yl
 Xv
-Mk
+cX
 Mh
-sJ
-sJ
-sJ
+nn
+nn
+nn
 xm
 xm
 xm
@@ -45401,16 +45682,16 @@ ko
 ko
 ko
 Xc
-sJ
-sJ
-sJ
-sJ
-sJ
-sJ
-sJ
-sJ
-gV
-mt
+nn
+nn
+nn
+nn
+nn
+nn
+nn
+nn
+EM
+jE
 nX
 nX
 xm
@@ -45577,9 +45858,9 @@ Xc
 Xc
 Xc
 Xc
-sJ
-sJ
-sJ
+nn
+nn
+nn
 nX
 dV
 Et
@@ -47065,7 +47346,7 @@ nX
 JR
 Xc
 Xc
-aS
+PV
 JR
 nX
 ga
@@ -47231,8 +47512,8 @@ nX
 Xc
 Xc
 Xc
-AX
-AX
+je
+je
 Wc
 Xc
 Xc

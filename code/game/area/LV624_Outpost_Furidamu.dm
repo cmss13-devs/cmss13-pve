@@ -8,8 +8,8 @@
 //parent types
 
 /area/LV624_Outpost_Furidamu/indoors
-	name = "LV624_Outpost_Furidamu - Outdoors"
-	icon_state = "cliff_blocked" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
+	name = "LV624_Outpost_Furidamu - Indoors"
+	icon_state = "blue" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
 	ceiling = CEILING_METAL
 	//ambience = list('sound/ambience/jungle_amb1.ogg')
 
