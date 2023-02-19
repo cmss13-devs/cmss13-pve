@@ -648,7 +648,7 @@
 #include "code\game\area\kutjevo.dm"
 #include "code\game\area\LV522_Chances_Claim.dm"
 #include "code\game\area\LV624.dm"
-#include "code\game\area\lv624_outpost_furidamu.dm"
+#include "code\game\area\LV624_Outpost_Furidamu.dm"
 #include "code\game\area\prison.dm"
 #include "code\game\area\Prison_Station_FOP.dm"
 #include "code\game\area\prison_v3_fiorina.dm"
