@@ -1713,7 +1713,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/item/reagent_container/food/snacks/meat/human,
-/obj/item/weapon/melee/unathiknife,
+/obj/item/weapon/unathiknife,
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whiteblue";
@@ -3635,7 +3635,7 @@
 /area/LV624_Outpost_Furidamu/indoors)
 "AQ" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/weapon/melee/twohanded/fireaxe,
+/obj/item/weapon/twohanded/fireaxe,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/indoors)
 "AS" = (
@@ -4754,7 +4754,6 @@
 /obj/effect/decal/hefa_cult_decals/d32{
 	desc = "You think you can make out the iconography of a Xenomorph."
 	},
-/obj/item/weapon/melee/claymore/mercsword/machete/arnold,
 /turf/open/floor{
 	dir = 10;
 	icon_state = "whiteblue";
@@ -5128,8 +5127,8 @@
 	},
 /area/LV624_Outpost_Furidamu/indoors)
 "LD" = (
-/obj/item/weapon/melee/baseballbat/metal,
 /obj/item/device/lightreplacer,
+/obj/item/weapon/baseballbat/metal,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/indoors)
 "LE" = (
@@ -6555,10 +6554,10 @@
 /area/LV624_Outpost_Furidamu/indoors)
 "UI" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/weapon/gun/boltaction/colony{
+/obj/item/weapon/gun/boltaction,
+/obj/item/weapon/gun/boltaction{
 	pixel_y = 10
 	},
-/obj/item/weapon/gun/boltaction/colony,
 /turf/open/floor/interior/wood,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "UJ" = (
@@ -6660,7 +6659,7 @@
 /turf/open/auto_turf/strata_grass/layer1/unweedable,
 /area/LV624_Outpost_Furidamu/outdoors/civilian)
 "Ve" = (
-/obj/effect/landmark/shuttle_loc/marine_trg/landing{
+/obj/item/toy{
 	name = "2"
 	},
 /turf/open/floor/plating,
@@ -6884,7 +6883,7 @@
 	desc = "You think you can make out the iconography of a Xenomorph.";
 	icon_state = "bee"
 	},
-/obj/item/weapon/melee/yautja/combistick,
+/obj/item/weapon/yautja/combistick,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/LV624_Outpost_Furidamu/oob)
 "Wz" = (
@@ -6897,13 +6896,13 @@
 /area/LV624_Outpost_Furidamu/indoors)
 "WA" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/boltaction/colony{
+/obj/item/toy{
 	pixel_y = 9
 	},
-/obj/item/weapon/gun/boltaction/colony{
+/obj/item/toy{
 	pixel_y = 1
 	},
-/obj/item/weapon/gun/boltaction/colony{
+/obj/item/toy{
 	pixel_y = -7
 	},
 /turf/open/floor{
@@ -7070,7 +7069,7 @@
 	},
 /area/LV624_Outpost_Furidamu/oob)
 "XF" = (
-/obj/effect/landmark/shuttle_loc/marine_trg/landing{
+/obj/item/toy{
 	name = "1"
 	},
 /turf/open/floor/plating,
