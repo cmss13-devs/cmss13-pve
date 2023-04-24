@@ -12,15 +12,12 @@
 	name = "LV624_Outpost_Furidamu - Indoors"
 	icon_state = "blue" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
 	ceiling = CEILING_METAL
-	//ambience = list('sound/ambience/jungle_amb1.ogg')
 
 /area/LV624_Outpost_Furidamu/outdoors
 	name = "LV624_Outpost_Furidamu - Outdoors"
 	icon_state = "cliff_blocked" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
 	ceiling = CEILING_NONE
-	//ambience = list('sound/ambience/jungle_amb1.ogg')
 	minimap_color = MINIMAP_AREA_JUNGLE
-	requires_power = FALSE
 
 /area/LV624_Outpost_Furidamu/outdoors/ua_bunker
 	name = "LV624_Outpost_Furidamu - Colony Caves"
