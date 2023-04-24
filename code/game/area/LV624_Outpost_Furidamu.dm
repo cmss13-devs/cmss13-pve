@@ -21,6 +21,7 @@
 
 /area/LV624_Outpost_Furidamu/outdoors/ua_bunker
 	name = "LV624_Outpost_Furidamu - Colony Caves"
+	icon_state = "cliff_blocked"
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
 
 /area/LV624_Outpost_Furidamu/oob
@@ -240,6 +241,7 @@
 	name = "Outpost Furidamu - CLF Operation Centre"
 
 //bridges
+
 /area/LV624_Outpost_Furidamu/outdoors/bridge
 	name = "Outpost Furidamu - Northwest Bridge To CLF Bunker"
 	icon_state = "ass_line"
@@ -257,5 +259,5 @@
 	icon_state = "quartstorage"
 
 /area/LV624_Outpost_Furidamu/indoors/buildings/Bunker/noceiling
-	name = "Outpost Furiaamu - Northwest CLF Bunker"	
+	name = "Outpost Furiaamu - Northwest CLF Bunker"
 	ceiling = CEILING_NONE
