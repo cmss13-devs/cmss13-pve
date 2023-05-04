@@ -214,7 +214,7 @@
 	name = "Outpost Furidamu - Landing Zone One Admin"
 
 /area/LV624_Outpost_Furidamu/indoors/buildings/construction_site
-	name = "Outpost Furidamu - Ruined Construction Site"
+	name = "Outpost Furidamu - Greenhouse Megastructure"
 
 /area/LV624_Outpost_Furidamu/indoors/buildings/hospital
 	name = "Outpost Furidamu - Hospital"
