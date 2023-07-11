@@ -1,8 +1,8 @@
 {
 	"map_name": "LV624 Outpost Furidamu",
 	"map_path": "map_files/LV624_Outpost_Furidamu",
-	"map_file": "LV624_Outpost_Furidamu.dmm",
-    "weather_holder": "/datum/weather_ss_map_holder/LV624_Outpost_Furidamu",
+	"map_file": "lv624_outpost_furidamu.dmm",
+    "weather_holder": "/datum/weather_ss_map_holder/lv624_outpost_furidamu",
     "survivor_types": [
         "/datum/equipment_preset/survivor/clf"
     ],
