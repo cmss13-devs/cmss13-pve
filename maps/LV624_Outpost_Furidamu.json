@@ -1,0 +1,43 @@
+{
+	"map_name": "LV624 Outpost Furidamu",
+	"map_path": "map_files/LV624_Outpost_Furidamu",
+	"map_file": "LV624_Outpost_Furidamu.dmm",
+    "weather_holder": "/datum/weather_ss_map_holder/LV624_Outpost_Furidamu",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/clf"
+    ],
+	"synth_survivor_types": [
+        "/datum/equipment_preset/synth/survivor/forecon"
+    ],
+	"CO_survivor_types": [
+        "/datum/equipment_preset/survivor/forecon/major"
+    ],
+    "defcon_triggers": [
+        3300,
+        2100,
+        1450,
+        580,
+        0.0
+    ],
+    "survivor_message": "",
+    "announce_text": "",
+    "map_item_type": "/obj/item/map/lv522_map",
+	"monkey_types": [
+        "neaera",
+        "stok"
+    ],
+    "traits": [{ "Ground": true }],
+    "xvx_hives": {
+        "xeno_hive_alpha": 0,
+        "xeno_hive_bravo": 0,
+        "xeno_hive_charlie": 0,
+        "xeno_hive_delta": 0
+    },
+	"gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
