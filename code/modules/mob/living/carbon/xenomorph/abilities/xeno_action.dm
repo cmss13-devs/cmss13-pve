@@ -92,6 +92,18 @@
 	else
 		button.color = rgb(255,255,255,255)
 
+/datum/action/xeno_action/proc/process_ai(var/mob/living/carbon/Xenomorph/X, delta_time, game_evaluation)
+	SHOULD_NOT_SLEEP(TRUE)
+	return PROCESS_KILL
+
+/datum/action/xeno_action/proc/ai_registered(var/mob/living/carbon/Xenomorph/X)
+	SHOULD_CALL_PARENT(TRUE)
+	return
+
+/datum/action/xeno_action/proc/ai_unregistered(var/mob/living/carbon/Xenomorph/X)
+	SHOULD_CALL_PARENT(TRUE)
+	return
+
 // Helper proc that checks and uses plasma if possible, returning TRUE
 // if the use was successful
 /datum/action/xeno_action/proc/check_and_use_plasma_owner(plasma_to_use)
