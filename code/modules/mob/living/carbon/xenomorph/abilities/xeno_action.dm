@@ -92,15 +92,15 @@
 	else
 		button.color = rgb(255,255,255,255)
 
-/datum/action/xeno_action/proc/process_ai(var/mob/living/carbon/Xenomorph/X, delta_time, game_evaluation)
+/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/X, delta_time, game_evaluation)
 	SHOULD_NOT_SLEEP(TRUE)
 	return PROCESS_KILL
 
-/datum/action/xeno_action/proc/ai_registered(var/mob/living/carbon/Xenomorph/X)
+/datum/action/xeno_action/proc/ai_registered(mob/living/carbon/xenomorph/X)
 	SHOULD_CALL_PARENT(TRUE)
 	return
 
-/datum/action/xeno_action/proc/ai_unregistered(var/mob/living/carbon/Xenomorph/X)
+/datum/action/xeno_action/proc/ai_unregistered(mob/living/carbon/xenomorph/X)
 	SHOULD_CALL_PARENT(TRUE)
 	return
 

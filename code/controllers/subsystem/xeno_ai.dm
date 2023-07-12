@@ -101,13 +101,13 @@ SUBSYSTEM_DEF(xeno_ai)
 		var/obj/effect/landmark/eval/E = i
 		E.calculate_eval()
 
-/datum/controller/subsystem/xeno_ai/proc/add_ai(var/mob/living/carbon/xenomorph/X)
+/datum/controller/subsystem/xeno_ai/proc/add_ai(mob/living/carbon/xenomorph/X)
 	if(X.mob_flags & AI_CONTROLLED)
 		return
 	ai_mobs |= X
 	X.mob_flags |= AI_CONTROLLED
 
-/datum/controller/subsystem/xeno_ai/proc/remove_ai(var/mob/living/carbon/xenomorph/X)
+/datum/controller/subsystem/xeno_ai/proc/remove_ai(mob/living/carbon/xenomorph/X)
 	X.mob_flags &= ~AI_CONTROLLED
 	ai_mobs -= X
 
@@ -137,14 +137,14 @@ GLOBAL_LIST_EMPTY(evaluation_landmarks)
 /obj/effect/landmark/eval/proc/calculate_eval()
 	return 0
 
-/obj/effect/landmark/eval/proc/calculate_eval_for_mob(var/mob/M)
+/obj/effect/landmark/eval/proc/calculate_eval_for_mob(mob/M)
 
 /// A landmark that calculates evaluation depending on the marines in an area
 /obj/effect/landmark/eval/marine
 	name = "Marine Eval Landmark"
 	var/eval_per_marine = 0
 
-/obj/effect/landmark/eval/marine/calculate_eval_for_mob(var/mob/M)
+/obj/effect/landmark/eval/marine/calculate_eval_for_mob(mob/M)
 	if(ishuman(M) && M.client && !M.is_mob_incapacitated())
 		return eval_per_marine
 
@@ -170,7 +170,7 @@ GLOBAL_LIST_EMPTY(evaluation_landmarks)
 	name = "Xeno Eval Landmark"
 	var/eval_per_xeno
 
-/obj/effect/landmark/eval/xeno/calculate_eval_for_mob(var/mob/M)
+/obj/effect/landmark/eval/xeno/calculate_eval_for_mob(mob/M)
 	if(isxeno(M) && !M.stat)
 		return eval_per_xeno
 

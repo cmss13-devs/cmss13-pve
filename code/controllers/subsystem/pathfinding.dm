@@ -125,11 +125,11 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 		current_run.to_return.Invoke(path)
 		QDEL_NULL(current_run)
 
-/datum/controller/subsystem/xeno_pathfinding/proc/stop_calculating_path(var/mob/living/carbon/xenomorph/X)
+/datum/controller/subsystem/xeno_pathfinding/proc/stop_calculating_path(mob/living/carbon/xenomorph/X)
 	var/datum/xeno_pathinfo/data = hash_path[X]
 	qdel(data)
 
-/datum/controller/subsystem/xeno_pathfinding/proc/calculate_path(var/atom/start, var/atom/finish, var/path_range, var/mob/living/carbon/xenomorph/travelling_xeno, var/datum/callback/CB, var/list/ignore)
+/datum/controller/subsystem/xeno_pathfinding/proc/calculate_path(atom/start, atom/finish, path_range, mob/living/carbon/xenomorph/travelling_xeno, datum/callback/CB, list/ignore)
 	if(!get_turf(start) || !get_turf(finish))
 		return
 

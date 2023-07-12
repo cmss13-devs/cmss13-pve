@@ -1640,7 +1640,7 @@ var/list/WALLITEMS = list(
 	if(turfs.len)
 		return pick(turfs)
 
-/proc/get_random_turf_in_range_unblocked(var/atom/origin, var/outer_range, var/inner_range)
+/proc/get_random_turf_in_range_unblocked(atom/origin, outer_range, inner_range)
 	origin = get_turf(origin)
 	if(!origin)
 		return

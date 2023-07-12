@@ -40,13 +40,13 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, .proc/set_path), list(src, P.firer))
 
-/mob/living/carbon/xenomorph/proc/register_ai_action(var/datum/action/xeno_action/XA)
+/mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)
 		XA.give_to(src)
 	registered_ai_abilities |= XA
 	XA.ai_registered(src)
 
-/mob/living/carbon/xenomorph/proc/unregister_ai_action(var/datum/action/xeno_action/XA)
+/mob/living/carbon/xenomorph/proc/unregister_ai_action(datum/action/xeno_action/XA)
 	registered_ai_abilities -= XA
 	XA.ai_unregistered(src)
 
@@ -105,12 +105,12 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		CRASH("No valid movement handler for [src]!")
 	return ai_movement_handler.ai_move_target(delta_time, game_evaluation)
 
-/atom/proc/xeno_ai_obstacle(var/mob/living/carbon/xenomorph/X, direction)
+/atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
 	return INFINITY
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
-/atom/proc/xeno_ai_act(var/mob/living/carbon/xenomorph/X)
+/atom/proc/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	return
 
 /mob/living/carbon/xenomorph/proc/can_move_and_apply_move_delay()
@@ -127,12 +127,12 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	return TRUE
 
 
-/mob/living/carbon/xenomorph/proc/set_path(var/list/path)
+/mob/living/carbon/xenomorph/proc/set_path(list/path)
 	current_path = path
 	if(!path)
 		no_path_found = TRUE
 
-/mob/living/carbon/xenomorph/proc/move_to_next_turf(var/turf/T, var/max_range = ai_range)
+/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range)
 	if(!T)
 		return FALSE
 
@@ -185,7 +185,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	return TRUE
 
-/mob/living/carbon/xenomorph/proc/get_target(var/range)
+/mob/living/carbon/xenomorph/proc/get_target(range)
 	var/list/viable_humans = list()
 	var/list/viable_vehicles = list()
 	var/list/viable_defenses = list()
@@ -259,7 +259,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 			return
 		GLOB.xeno_mutator_list[chosen].apply_mutator(MS)
 
-/mob/living/carbon/xenomorph/proc/set_movement_handler(var/datum/xeno_ai_movement/XAM)
+/mob/living/carbon/xenomorph/proc/set_movement_handler(datum/xeno_ai_movement/XAM)
 	if(!XAM)
 		CRASH("Passed null value to set_movement_handler on [type].")
 
@@ -316,11 +316,11 @@ GLOBAL_LIST_EMPTY_TYPED(xeno_ai_spawns, /obj/effect/landmark/xeno_ai)
 
 		spawnable_turfs += T
 
-/obj/effect/landmark/xeno_ai/proc/reduce_remaining_spawns(var/mob/living/carbon/xenomorph/X)
+/obj/effect/landmark/xeno_ai/proc/reduce_remaining_spawns(mob/living/carbon/xenomorph/X)
 	SIGNAL_HANDLER
 	remaining_spawns--
 
-/obj/effect/landmark/xeno_ai/proc/handle_xeno_delete(var/mob/living/carbon/xenomorph/X)
+/obj/effect/landmark/xeno_ai/proc/handle_xeno_delete(mob/living/carbon/xenomorph/X)
 	SIGNAL_HANDLER
 	spawned_xenos -= X
 

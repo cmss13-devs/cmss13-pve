@@ -8,7 +8,7 @@
 	var/home_locate_range = 15
 	var/turf/home_turf
 
-/datum/xeno_ai_movement/New(var/mob/living/carbon/xenomorph/parent)
+/datum/xeno_ai_movement/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
 	if(!parent)
 		return INITIALIZE_HINT_QDEL
