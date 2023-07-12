@@ -91,7 +91,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 			unregister_ai_action(XA)
 
 	if(get_dist(src, current_target) <= 1 && DT_PROB(XENO_SLASH, delta_time))
-		INVOKE_ASYNC(src, /mob.proc/do_click, current_target, "", list())
+		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, do_click), current_target, "", list())
 
 /** Controls movement when idle. Called by process_ai */
 /mob/living/carbon/xenomorph/proc/ai_move_idle(delta_time, game_evaluation)
@@ -245,19 +245,6 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	if(!ai_movement_handler)
 		set_movement_handler(init_movement_handler())
-
-	if(flags_ai & XENO_AI_CHOOSE_RANDOM_STRAIN)
-		var/datum/mutator_set/MS = mutators
-		var/list/options = MS.available_mutators()
-		if(!length(options))
-			return
-
-		options += "None"
-
-		var/chosen = pick(options)
-		if(!chosen || chosen == "None")
-			return
-		GLOB.xeno_mutator_list[chosen].apply_mutator(MS)
 
 /mob/living/carbon/xenomorph/proc/set_movement_handler(datum/xeno_ai_movement/XAM)
 	if(!XAM)
