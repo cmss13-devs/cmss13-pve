@@ -38,7 +38,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		if(distance > max_travel_distance)
 			return
 
-		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, .proc/set_path), list(src, P.firer))
+		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)

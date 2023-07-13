@@ -139,7 +139,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 
 	if(!data)
 		data = new()
-		data.RegisterSignal(travelling_xeno, COMSIG_PARENT_QDELETING, /datum/xeno_pathinfo.proc/qdel_wrapper)
+		data.RegisterSignal(travelling_xeno, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/xeno_pathinfo, qdel_wrapper))
 
 		hash_path[travelling_xeno] = data
 		paths_to_calculate += data
