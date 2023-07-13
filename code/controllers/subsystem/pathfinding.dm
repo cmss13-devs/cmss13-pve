@@ -191,7 +191,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	SSxeno_pathfinding.current_processing -= src
 
 	#ifdef TESTING
-	addtimer(CALLBACK(src, .proc/clear_colors, distances), 0.5 SECONDS)
+	addtimer(CALLBACK(src, .proc/clear_colors, distances), 5 SECONDS)
 	#endif
 
 	start = null
@@ -205,7 +205,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	return ..()
 
 #ifdef TESTING
-/datum/xeno_pathinfo/proc/clear_colors(var/list/L)
+/datum/xeno_pathinfo/proc/clear_colors(list/L)
 	for(var/i in L)
 		var/turf/T = i
 		for(var/l in T)
