@@ -1,6 +1,6 @@
 /mob/living/carbon/xenomorph
 	// AI stuff
-	var/flags_ai = NO_FLAGS
+	var/flags_ai = XENO_AI_NO_DESPAWN
 	var/mob/current_target
 
 	var/next_path_generation = 0

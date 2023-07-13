@@ -54,8 +54,8 @@
 	SSmapping.LoadGroup(FailedZs, "The Hive", endgame_map_path, endgame_map_file, endgame_map_traits, ZTRAITS_HIVE, TRUE)*/
 
 /datum/game_mode/colonialmarines/ai/can_start()
-	if(readied_players <= 0)
-		return FALSE
+	//if(readied_players <= 0)
+	//	return FALSE
 	return ..()
 
 
@@ -207,10 +207,10 @@
 
 	RegisterSignal(X, COMSIG_MOB_DEATH, .proc/marine_win)*/
 
-/datum/game_mode/colonialmarines/ai/proc/marine_win()
-	for(var/i in GLOB.xeno_mob_list)
-		var/mob/M = i
-		M.gib("marine win")
+///datum/game_mode/colonialmarines/ai/proc/marine_win()
+	//for(var/i in GLOB.xeno_mob_list)
+	//	var/mob/M = i
+	//	M.gib("marine win")
 
 	//round_finished = MODE_PVE_WIN
 

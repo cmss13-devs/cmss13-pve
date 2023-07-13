@@ -74,3 +74,6 @@
 
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
+
+/mob/living/carbon/xenomorph/drone/init_movement_handler()
+	return new /datum/xeno_ai_movement/drone(src)
