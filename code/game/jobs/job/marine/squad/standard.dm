@@ -36,3 +36,7 @@
 /obj/effect/landmark/start/marine/delta
 	icon_state = "marine_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/standard/ai
+	total_positions = 4
+	spawn_positions = 4

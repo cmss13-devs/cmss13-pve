@@ -1,7 +1,7 @@
 /datum/game_mode/colonialmarines/ai
-	name = "Outpost Alpha"
+	name = "Distress Signal: Lowpop"
 	config_tag = "Distress Signal: Lowpop"
-	required_players = 1 //Need at least one player, but really we need 2.
+	required_players = 0
 
 	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN
 
@@ -49,6 +49,16 @@
 
 	var/group_distance = 12
 //	var/boss_health_scale_per_player = 4
+
+	role_mappings = list(
+		/datum/job/command/bridge/ai = JOB_SO,
+		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,
+		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
+	)
+
 
 /*/datum/game_mode/colonialmarines/ai/load_maps(var/list/FailedZs)
 	SSmapping.LoadGroup(FailedZs, "The Hive", endgame_map_path, endgame_map_file, endgame_map_traits, ZTRAITS_HIVE, TRUE)*/
@@ -477,3 +487,6 @@ GLOBAL_DATUM(boss_spawn, /obj/effect/landmark/boss_spawn)
 	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_YAUTJA
 	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC*/
+
+/datum/game_mode/colonialmarines/ai/get_roles_list()
+	return ROLES_AI

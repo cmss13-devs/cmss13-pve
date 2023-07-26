@@ -28,15 +28,15 @@
 	ammo = /datum/ammo/bullet/smartgun
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
-		/datum/action/item_action/smartgun/toggle_ammo_type,
+		///datum/action/item_action/smartgun/toggle_ammo_type,
 		/datum/action/item_action/smartgun/toggle_auto_fire,
-		/datum/action/item_action/smartgun/toggle_lethal_mode,
-		/datum/action/item_action/smartgun/toggle_motion_detector,
+		///datum/action/item_action/smartgun/toggle_lethal_mode,
+		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
 	)
 	var/datum/ammo/ammo_primary = /datum/ammo/bullet/smartgun //Toggled ammo type
 	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/smartgun/armor_piercing //Toggled ammo type
-	var/iff_enabled = TRUE //Begin with the safety on.
+	var/iff_enabled = FALSE //Begin with the safety on.
 	var/secondary_toggled = 0 //which ammo we use
 	var/recoil_compensation = 0
 	var/accuracy_improvement = 0
@@ -102,10 +102,10 @@
 		recoil = RECOIL_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
-/obj/item/weapon/gun/smartgun/set_bullet_traits()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
-	))
+///obj/item/weapon/gun/smartgun/set_bullet_traits()
+	//LAZYADD(traits_to_give, list(
+	//	BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
+	//))
 
 /obj/item/weapon/gun/smartgun/get_examine_text(mob/user)
 	. = ..()
@@ -114,7 +114,7 @@
 		rounds = current_mag.current_rounds
 	var/message = "[rounds ? "Ammo counter shows [rounds] round\s remaining." : "It's dry."]"
 	. += message
-	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
+	//. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
 
 	if(battery && get_dist(user, src) <= 1)
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
@@ -187,27 +187,27 @@
 /datum/action/item_action/smartgun/update_button_icon()
 	return
 
-/datum/action/item_action/smartgun/toggle_motion_detector/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle Motion Detector"
-	action_icon_state = "motion_detector"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+///datum/action/item_action/smartgun/toggle_motion_detector/New(Target, obj/item/holder)
+//	. = ..()
+//	name = "Toggle Motion Detector"
+//	action_icon_state = "motion_detector"
+//	button.name = name
+//	button.overlays.Cut()
+//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/smartgun/toggle_motion_detector/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/smartgun/G = holder_item
-	G.toggle_motion_detector(usr)
+///datum/action/item_action/smartgun/toggle_motion_detector/action_activate()
+//	. = ..()
+//	var/obj/item/weapon/gun/smartgun/G = holder_item
+//	G.toggle_motion_detector(usr)
 
-/datum/action/item_action/smartgun/toggle_motion_detector/proc/update_icon()
-	if(!holder_item)
-		return
-	var/obj/item/weapon/gun/smartgun/G = holder_item
-	if(G.motion_detector)
-		button.icon_state = "template_on"
-	else
-		button.icon_state = "template"
+///datum/action/item_action/smartgun/toggle_motion_detector/proc/update_icon()
+//	if(!holder_item)
+//		return
+//	var/obj/item/weapon/gun/smartgun/G = holder_item
+//	if(G.motion_detector)
+//		button.icon_state = "template_on"
+//	else
+//		button.icon_state = "template"
 
 /datum/action/item_action/smartgun/toggle_auto_fire/New(Target, obj/item/holder)
 	. = ..()
@@ -265,46 +265,46 @@
 	else
 		button.icon_state = "template"
 
-/datum/action/item_action/smartgun/toggle_lethal_mode/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle IFF"
-	action_icon_state = "iff_toggle_on"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+///datum/action/item_action/smartgun/toggle_lethal_mode/New(Target, obj/item/holder)
+//	. = ..()
+//	name = "Toggle IFF"
+//	action_icon_state = "iff_toggle_on"
+//	button.name = name
+//	button.overlays.Cut()
+//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/smartgun/toggle_lethal_mode/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/smartgun/G = holder_item
-	G.toggle_lethal_mode(usr)
-	if(G.iff_enabled)
-		action_icon_state = "iff_toggle_on"
-	else
-		action_icon_state = "iff_toggle_off"
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+///datum/action/item_action/smartgun/toggle_lethal_mode/action_activate()
+//	. = ..()
+//	var/obj/item/weapon/gun/smartgun/G = holder_item
+//	G.toggle_lethal_mode(usr)
+//	if(G.iff_enabled)
+//		action_icon_state = "iff_toggle_on"
+//	else
+//		action_icon_state = "iff_toggle_off"
+//	button.overlays.Cut()
+//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/smartgun/toggle_ammo_type/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle Ammo Type"
-	action_icon_state = "ammo_swap_normal"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+///datum/action/item_action/smartgun/toggle_ammo_type/New(Target, obj/item/holder)
+//	. = ..()
+//	name = "Toggle Ammo Type"
+//	action_icon_state = "ammo_swap_normal"
+//	button.name = name
+//	button.overlays.Cut()
+//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/smartgun/toggle_ammo_type/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/smartgun/G = holder_item
-	G.toggle_ammo_type(usr)
+///datum/action/item_action/smartgun/toggle_ammo_type/action_activate()
+//	. = ..()
+//	var/obj/item/weapon/gun/smartgun/G = holder_item
+//	G.toggle_ammo_type(usr)
 
-/datum/action/item_action/smartgun/toggle_ammo_type/proc/update_icon()
-	var/obj/item/weapon/gun/smartgun/G = holder_item
-	if(G.secondary_toggled)
-		action_icon_state = "ammo_swap_ap"
-	else
-		action_icon_state = "ammo_swap_normal"
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+///datum/action/item_action/smartgun/toggle_ammo_type/proc/update_icon()
+//	var/obj/item/weapon/gun/smartgun/G = holder_item
+//	if(G.secondary_toggled)
+//		action_icon_state = "ammo_swap_ap"
+//	else
+//		action_icon_state = "ammo_swap_normal"
+//	button.overlays.Cut()
+//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 //more general procs
 
@@ -325,40 +325,40 @@
 			to_chat(H, SPAN_WARNING("You can't fire \the [src] with the feed cover open! (alt-click to close)"))
 			return FALSE
 
-/obj/item/weapon/gun/smartgun/unique_action(mob/user)
-	if(isobserver(usr) || isxeno(usr))
-		return
-	toggle_ammo_type(usr)
+///obj/item/weapon/gun/smartgun/unique_action(mob/user)
+//	if(isobserver(usr) || isxeno(usr))
+//		return
+//	toggle_ammo_type(usr)
 
-/obj/item/weapon/gun/smartgun/proc/toggle_ammo_type(mob/user)
-	if(!iff_enabled)
-		to_chat(user, "[icon2html(src, usr)] Can't switch ammunition type when \the [src]'s fire restriction is disabled.")
-		return
-	secondary_toggled = !secondary_toggled
-	to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire [secondary_toggled ? "armor shredding rounds" : "highly precise rounds"].")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
-	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
-	TAT.update_icon()
+///obj/item/weapon/gun/smartgun/proc/toggle_ammo_type(mob/user)
+//	if(!iff_enabled)
+//		to_chat(user, "[icon2html(src, usr)] Can't switch ammunition type when \the [src]'s fire restriction is disabled.")
+//		return
+//	secondary_toggled = !secondary_toggled
+//	to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire [secondary_toggled ? "armor shredding rounds" : "highly precise rounds"].")
+//	playsound(loc,'sound/machines/click.ogg', 25, 1)
+//	ammo = secondary_toggled ? ammo_secondary : ammo_primary
+//	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
+//	TAT.update_icon()
 
 /obj/item/weapon/gun/smartgun/replace_ammo()
 	..()
 	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 
-/obj/item/weapon/gun/smartgun/proc/toggle_lethal_mode(mob/user)
-	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	iff_enabled = !iff_enabled
-	ammo = ammo_primary
-	secondary_toggled = FALSE
-	if(iff_enabled)
-		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
-		drain += 10
-		MD.iff_signal = initial(MD.iff_signal)
-	if(!iff_enabled)
-		remove_bullet_trait("iff")
-		drain -= 10
-		MD.iff_signal = null
+///obj/item/weapon/gun/smartgun/proc/toggle_lethal_mode(mob/user)
+//	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
+//	playsound(loc,'sound/machines/click.ogg', 25, 1)
+//	iff_enabled = !iff_enabled
+//	ammo = ammo_primary
+//	secondary_toggled = FALSE
+//	if(iff_enabled)
+//		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
+//		drain += 10
+//		MD.iff_signal = initial(MD.iff_signal)
+//	if(!iff_enabled)
+//		remove_bullet_trait("iff")
+//		drain -= 10
+//		MD.iff_signal = null
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if(!requires_battery)
@@ -546,23 +546,23 @@
 
 	target = null
 
-/obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
-	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	motion_detector = !motion_detector
-	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
-	TMD.update_icon()
-	motion_detector()
+///obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
+//	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
+//	playsound(loc,'sound/machines/click.ogg', 25, 1)
+//	motion_detector = !motion_detector
+//	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
+//	TMD.update_icon()
+//	motion_detector()
 
-/obj/item/weapon/gun/smartgun/proc/motion_detector()
-	if(motion_detector)
-		drain += 15
-		if(!auto_fire)
-			START_PROCESSING(SSobj, src)
-	if(!motion_detector)
-		drain -= 15
-		if(!auto_fire)
-			STOP_PROCESSING(SSobj, src)
+///obj/item/weapon/gun/smartgun/proc/motion_detector()
+//	if(motion_detector)
+//		drain += 15
+//		if(!auto_fire)
+//			START_PROCESSING(SSobj, src)
+//	if(!motion_detector)
+//		drain -= 15
+//		if(!auto_fire)
+//			STOP_PROCESSING(SSobj, src)
 
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
@@ -654,8 +654,8 @@
 			. += SPAN_NOTICE("It is registered to [linked_human] but has its fire restrictions unlocked.")
 	else
 		. += SPAN_NOTICE("It's unregistered. Pick it up to register yourself as its owner.")
-	if(!iff_enabled)
-		. += SPAN_WARNING("Its IFF restrictions are disabled.")
+//	if(!iff_enabled)
+//		. += SPAN_WARNING("Its IFF restrictions are disabled.")
 
 /obj/item/weapon/gun/smartgun/co/proc/remove_idlock()
 	SIGNAL_HANDLER

@@ -170,6 +170,7 @@
 	held_item.activate_rail_attachment_verb()
 	return TRUE
 
+/*
 /datum/keybinding/human/combat/toggle_iff
 	hotkey_keys = list("Unbound")
 	classic_keys = list("Unbound")
@@ -191,3 +192,4 @@
 		var/obj/item/weapon/gun/rifle/m46c/COgun = held_item
 		COgun.toggle_iff(human)
 		return TRUE
+*/
