@@ -38,8 +38,8 @@
 	return QDEL_HINT_IWILLGC // Shouldn't have to begin with
 
 /datum/coords/qtplayer
-	/// Relevant client the coords are associated to
-	var/client/player
+	/// Relevant mob the coords are associated to
+	var/mob/player
 	/// Truthy if player is an observer
 	var/is_observer = FALSE
 
@@ -132,13 +132,14 @@
 	if(!player_coords)
 		return
 	for(var/datum/coords/qtplayer/P as anything in player_coords)
-		if(!P.player) // Basically client is gone
+		if(!P.player)
 			continue
 		if((flags & QTREE_EXCLUDE_OBSERVER) && P.is_observer)
 			continue
 		if(range.contains(P))
 			if(flags & QTREE_SCAN_MOBS)
-				found_players.Add(P.player.mob)
-			else
 				found_players.Add(P.player)
+				return
 
+			if(P.player.client)
+				found_players.Add(P.player.client)
