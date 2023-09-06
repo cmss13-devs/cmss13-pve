@@ -610,21 +610,15 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\datums\weather\weather_events\faction_clash.dm"
 #include "code\datums\weather\weather_events\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_events\lv624.dm"
-<<<<<<< HEAD
 #include "code\datums\weather\weather_events\lv624_outpost_furidamu.dm"
-=======
 #include "code\datums\weather\weather_events\new_varadero.dm"
->>>>>>> master
 #include "code\datums\weather\weather_events\sorokyne.dm"
 #include "code\datums\weather\weather_map_holders\big_red.dm"
 #include "code\datums\weather\weather_map_holders\faction_clash.dm"
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_map_holders\lv624.dm"
-<<<<<<< HEAD
 #include "code\datums\weather\weather_map_holders\lv624_outpost_furidamu.dm"
-=======
 #include "code\datums\weather\weather_map_holders\new_varadero.dm"
->>>>>>> master
 #include "code\datums\weather\weather_map_holders\sorokyne.dm"
 #include "code\datums\xeno_shields\xeno_shield.dm"
 #include "code\datums\xeno_shields\shield_types\crusher_shield.dm"
