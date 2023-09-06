@@ -46,7 +46,6 @@
 	name = "LV624_Outpost_Furidamu - Dropship Alamo Landing Zone"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_shiva.dmi'
-	lighting_use_dynamic = TRUE
 
 /area/LV624_Outpost_Furidamu/landing_zone_1/lz1_console
 	name = "LV624_Outpost_Furidamu - Dropship Alamo Console"
@@ -68,7 +67,6 @@
 	name = "LV624_Outpost_Furidamu - Dropship Normandy Landing Zone"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_shiva.dmi'
-	lighting_use_dynamic = TRUE
 
 /area/LV624_Outpost_Furidamu/landing_zone_2/lz2_console
 	name = "LV624_Outpost_Furidamu - Dropship Normandy Console"
