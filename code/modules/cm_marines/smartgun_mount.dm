@@ -501,7 +501,6 @@
 /obj/structure/machinery/m56d_hmg/Destroy() //Make sure we pick up our trash.
 	if(operator)
 		operator.unset_interaction()
-	SetLuminosity(0)
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
@@ -818,9 +817,9 @@
 	if(isnull(angle))
 		return
 
-	SetLuminosity(muzzle_flash_lum)
+	set_light(muzzle_flash_lum)
 	spawn(10)
-		SetLuminosity(-muzzle_flash_lum)
+		set_light(-muzzle_flash_lum)
 
 	var/image_layer = layer + 0.1
 
@@ -906,7 +905,7 @@
 	user.visible_message(SPAN_NOTICE("[user] lets go of \the [src]."),SPAN_NOTICE("You let go of \the [src], letting the gun rest."))
 	user.unfreeze()
 	user.reset_view(null)
-	user.forceMove(get_step(src, reverse_direction(src.dir)))
+	user.Move(get_step(src, reverse_direction(src.dir)))
 	user.setDir(dir) //set the direction of the player to the direction the gun is facing
 	user_old_x = 0 //reset our x
 	user_old_y = 0 //reset our y

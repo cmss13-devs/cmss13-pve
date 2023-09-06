@@ -527,7 +527,7 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor)
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/medic
@@ -705,7 +705,7 @@
 	sensor_faction = FACTION_CLF
 
 /obj/item/clothing/under/colonist/ua_civvies
-	name = "gray utilities"
+	name = "\improper UA gray utility uniform"
 	desc = "A stylish gray jumpsuit - standard issue for UA civilian support personnel."
 	icon_state = "ua_civvies"
 	worn_state = "ua_civvies"
@@ -713,7 +713,7 @@
 	sensor_faction = FACTION_MARINE
 
 /obj/item/clothing/under/colonist/wy_davisone
-	name = "brown utilities"
+	name = "\improper UA brown utility uniform"
 	desc = "A stylish brown jumpsuit - standard issue for UA civilian support personnel."
 	icon_state = "wy_davisone"
 	worn_state = "wy_davisone"
@@ -737,14 +737,15 @@
 	desc = "A comfortable white T-shirt and brown jeans."
 	icon_state = "tshirt_w_br"
 	worn_state = "tshirt_w_br"
+	displays_id = FALSE
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
-
 /obj/item/clothing/under/tshirt/gray_blu
 	name = "gray T-shirt and jeans"
 	desc = "A comfortable gray T-shirt and blue jeans."
 	icon_state = "tshirt_gray_blu"
 	worn_state = "tshirt_gray_blu"
+	displays_id = FALSE
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
 
@@ -753,6 +754,7 @@
 	desc = "A comfortable red T-shirt and black jeans."
 	icon_state = "tshirt_r_bla"
 	worn_state = "tshirt_r_bla"
+	displays_id = FALSE
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
 
@@ -837,9 +839,9 @@
 	desc = "A formal white undersuit."
 	flags_jumpsuit = FALSE
 
-/obj/item/clothing/under/rank/ro_suit
-	name = "requisition officer suit"
-	desc = "A nicely-fitting military suit for a requisition officer. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+/obj/item/clothing/under/rank/qm_suit
+	name = "quartermaster suit"
+	desc = "A nicely-fitting military suit for a quartermaster. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
 	icon_state = "RO_jumpsuit"
 	worn_state = "RO_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
@@ -850,6 +852,38 @@
 	icon_state = "rdalt"
 	worn_state = "rdalt"
 	flags_jumpsuit = FALSE
+
+/obj/item/clothing/under/rank/synthetic/frontier
+	name = "\improper frontier jumpsuit"
+	desc = "A cargo jumpsuit dressed down for full range of motion and state-of-the-art frontier temperature control. It's the best thing an engineer can wear in the Outer Veil."
+	icon_state = "synth_cargo_light"
+	worn_state = "synth_cargo_light"
+	displays_id = FALSE
+
+/obj/item/clothing/under/rank/synthetic/utility
+	name = "\improper UA utility uniform"
+	desc = "A green-on-green utility uniform, popularly issued to UA contract workers on the frontier."
+	icon_state = "synth_green_utility"
+	worn_state = "synth_green_utility"
+	displays_id = FALSE
+
+/obj/item/clothing/under/rank/synthetic/utility/yellow
+	name = "\improper utility uniform"
+	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
+	icon_state = "synth_yellow_utility"
+	worn_state = "synth_yellow_utility"
+
+/obj/item/clothing/under/rank/synthetic/utility/red
+	name = "\improper utility uniform"
+	desc = "A grey utility uniform with red suspenders and blue jeans, the sign of a veteran laborer, or someone not paid by the hour."
+	icon_state = "synth_red_utility"
+	worn_state = "synth_red_utility"
+
+/obj/item/clothing/under/rank/synthetic/utility/blue
+	name = "\improper utility uniform"
+	desc = "A blue utility uniform with teal suspenders and rugged pants."
+	icon_state = "synth_blue_utility"
+	worn_state = "synth_blue_utility"
 
 /obj/item/clothing/under/rank/synthetic/councillor
 	name = "\improper USCM Pristine Support Uniform"

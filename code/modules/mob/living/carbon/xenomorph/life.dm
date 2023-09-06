@@ -42,7 +42,7 @@
 	var/progress_amount = 1
 	if(SSxevolution)
 		progress_amount = SSxevolution.get_evolution_boost_power(hive.hivenumber)
-	var/ovipositor_check = (hive.allow_no_queen_actions || hive.evolution_without_ovipositor || (hive.living_xeno_queen && hive.living_xeno_queen.ovipositor))
+	var/ovipositor_check = (hive.allow_no_queen_evo || hive.evolution_without_ovipositor || (hive.living_xeno_queen && hive.living_xeno_queen.ovipositor))
 	if(caste && caste.evolution_allowed && (ovipositor_check || caste?.evolve_without_queen))
 		if(evolution_stored >= evolution_threshold)
 			if(!got_evolution_message)
@@ -334,11 +334,6 @@ Make sure their actual health updates immediately.*/
 	if(!T || !istype(T))
 		return
 
-	var/is_runner_hiding
-
-	if(isrunner(src) && layer != initial(layer))
-		is_runner_hiding = 1
-
 	if(caste)
 		if(caste.innate_healing || check_weeds_for_healing())
 			if(!hive) return // can't heal if you have no hive, sorry bud
@@ -369,9 +364,8 @@ Make sure their actual health updates immediately.*/
 			if(armor_integrity > armor_integrity_max)
 				armor_integrity = armor_integrity_max
 
-		else //Xenos restore plasma VERY slowly off weeds, regardless of health, as long as they are not using special abilities
-			if(prob(50) && !is_runner_hiding && !current_aura)
-				plasma_stored += 0.1 * plasma_max / 100
+		else if(prob(50) && !current_aura) //Xenos restore plasma VERY slowly off weeds, regardless of health, as long as they are not using special abilities
+			plasma_stored += 0.1 * plasma_max / 100
 
 
 		for(var/datum/action/xeno_action/action in src.actions)
@@ -550,7 +544,11 @@ Make sure their actual health updates immediately.*/
 		new_luminosity += caste.caste_luminosity
 	if(on_fire)
 		new_luminosity += min(fire_stacks, 5)
-	SetLuminosity(new_luminosity) // light up xenos
+	set_light_range(new_luminosity) // light up xenos
+	if(new_luminosity)
+		set_light_on(TRUE)
+	else
+		set_light_on(FALSE)
 
 /mob/living/carbon/xenomorph/handle_stunned()
 	if(stunned)

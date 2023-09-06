@@ -48,6 +48,10 @@
 		if(HAS_TRAIT(src, TRAIT_HARDCORE) || MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA))
 			if(!(species.flags & IS_SYNTHETIC)) // Synths wont perma
 				status_flags |= PERMANENTLY_DEAD
+		if(HAS_TRAIT(src, TRAIT_INTENT_EYES)) //their eyes need to be 'offline'
+			r_eyes = 0
+			g_eyes = 0
+			b_eyes = 0
 		disable_special_flags()
 		disable_lights()
 		disable_special_items()
@@ -59,6 +63,7 @@
 	//Handle species-specific deaths.
 	if(species)
 		species.handle_death(src, gibbed)
+	update_body() //if species handle_death or other procs change body in some way after death, this is what will update the body.
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MARINE_DEATH, src, gibbed)
 
@@ -99,7 +104,7 @@
 				delayer_armour.can_camo = FALSE //fuck you
 				to_chat(delayer, SPAN_WARNING("Your [delayer_armour]'s camo system breaks!"))
 			//tell the ghosts
-			announce_dchat("There is only one person left: [last_living_human.real_name].", last_living_human)
+			notify_ghosts(header = "Last Human", message = "There is only one person left: [last_living_human.real_name]!", source = last_living_human, action = NOTIFY_ORBIT)
 
 	var/death_message = species.death_message
 	if(HAS_TRAIT(src, TRAIT_HARDCORE))

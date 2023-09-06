@@ -437,6 +437,10 @@
 	xeno_icon_state = "medicpack"
 	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
+/obj/item/storage/backpack/marine/medic/upp
+	name = "\improper UPP corpsman backpack"
+	desc = "Uncommon issue backpack worn by UPP medics from isolated sectors. You can swear you can see a faded USCM symbol."
+
 /obj/item/storage/backpack/marine/tech
 	name = "\improper USCM technician backpack"
 	desc = "A standard-issue backpack worn by USCM technicians."
@@ -493,7 +497,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/obj/structure/transmitter/internal/internal_transmitter
 
 	var/phone_category = PHONE_MARINE
-	var/network_receive = FACTION_MARINE
+	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 	var/base_icon
 
@@ -519,7 +523,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	internal_transmitter.relay_obj = src
 	internal_transmitter.phone_category = phone_category
 	internal_transmitter.enabled = FALSE
-	internal_transmitter.network_receive = network_receive
+	internal_transmitter.networks_receive = networks_receive
 	internal_transmitter.networks_transmit = networks_transmit
 	RegisterSignal(internal_transmitter, COMSIG_TRANSMITTER_UPDATE_ICON, PROC_REF(check_for_ringing))
 	GLOB.radio_packs += src
@@ -589,7 +593,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		. = ..()
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	network_receive = FACTION_UPP
+	name = "\improper UPP Radio Telephone Pack"
+	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 
 /obj/item/storage/backpack/marine/satchel/rto/small
@@ -598,7 +603,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 
 /obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	network_receive = FACTION_UPP
+	name = "\improper UPP Radio Telephone Pack"
+	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 	phone_category = PHONE_UPP_SOLDIER
 
@@ -909,6 +915,16 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A specialized satchel worn by USCM technicians and engineers. It carries two small fuel tanks for quick welder refueling and use."
 	icon_state = "satchel_marine_welder"
 	item_state = "satchel_marine_welder"
+	max_storage_space = 12
+	has_gamemode_skin = FALSE
+	max_fuel = 100
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/marine/engineerpack/welder_chestrig
+	name = "\improper Technician Welder Chestrig"
+	desc = "A specialized Chestrig worn by technicians and engineers. It carries one medium fuel tank for quick welder refueling and use."
+	icon_state = "welder_chestrig"
+	item_state = "welder_chestrig"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
 	max_fuel = 100

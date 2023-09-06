@@ -1,6 +1,7 @@
 /datum/equipment_preset/cmb
 	name = "Colonial Marshal"
-	faction = FACTION_USCM
+	faction = FACTION_MARSHAL
+	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 	rank = JOB_CMB
 	idtype = /obj/item/card/id/deputy
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
@@ -9,7 +10,7 @@
 
 /datum/equipment_preset/cmb/New()
 	. = ..()
-	access = get_friendly_ert_access()
+	access = get_access(ACCESS_LIST_UA)
 
 /datum/equipment_preset/cmb/load_name(mob/living/carbon/human/new_human)
 	new_human.gender = pick(80;MALE,20;FEMALE)
@@ -403,14 +404,15 @@
 
 /datum/equipment_preset/uscm/cmb/New()
 	. = ..()
-	access = get_friendly_ert_access()
+	access = get_access(ACCESS_LIST_UA)
 
 	assignment = "Anchorpoint Station Marine Rifleman"
 	rank = JOB_SQUAD_MARINE
 	paygrade = "ME2"
 	role_comm_title = "A-RFN"
 	skills = /datum/skills/pfc/crafty
-	faction = FACTION_USCM
+	faction = FACTION_MARSHAL
+	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 
 /datum/equipment_preset/uscm/cmb/load_status(mob/living/carbon/human/new_human)
 	. = ..()

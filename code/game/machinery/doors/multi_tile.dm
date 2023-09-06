@@ -39,7 +39,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/command/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/medical
 	name = "Medical Airlock"
@@ -69,7 +69,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/research/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/research/reinforced
 	name = "Reinforced Research Airlock"
@@ -77,7 +77,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/research/reinforced/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/secure
 	name = "Secure Airlock"
@@ -183,7 +183,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor
 	name = "\improper Command Airlock"
@@ -194,7 +194,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced
 	name = "\improper Reinforced Command Airlock"
@@ -202,7 +202,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid
 	icon = 'icons/obj/structures/doors/2x1comdoor_solid.dmi'
@@ -211,7 +211,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid/reinforced
 	name = "\improper Reinforced Command Airlock"
@@ -219,7 +219,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid/reinforced/colony
 	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_CORPORATE)
+	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/handle_multidoor()
 	if(!(width > 1)) return //Bubblewrap
@@ -235,11 +235,11 @@
 //We have to find these again since these doors are used on shuttles a lot so the turfs changes
 /obj/structure/machinery/door/airlock/multi_tile/almayer/proc/update_filler_turfs()
 	for(var/turf/T in multi_filler)
-		T.SetOpacity(null)
+		T.set_opacity(null)
 
 	multi_filler = list()
 	for(var/turf/T in get_filler_turfs())
-		T.SetOpacity(opacity)
+		T.set_opacity(opacity)
 		multi_filler += list(T)
 
 /obj/structure/machinery/door/airlock/multi_tile/proc/get_filler_turfs()
@@ -377,7 +377,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/blastdoor/proc/vacate_premises()
 	for(var/turf/self_turf as anything in locs)
 		var/turf/near_turf = get_step(self_turf, throw_dir)
-		var/turf/projected = get_ranged_target_turf(near_turf, throw_dir, 50)
+		var/turf/space_turf = get_step(near_turf, throw_dir)
+		var/turf/projected = get_ranged_target_turf(space_turf, EAST, 50)
 		for(var/atom/movable/atom_movable in near_turf)
 			if(ismob(atom_movable) && !isobserver(atom_movable))
 				var/mob/mob = atom_movable
@@ -389,7 +390,9 @@
 					continue
 			else
 				continue
-			INVOKE_ASYNC(atom_movable, TYPE_PROC_REF(/atom/movable, throw_atom), projected, 50, SPEED_FAST, null, TRUE)
+			atom_movable.forceMove(space_turf)
+			INVOKE_ASYNC(atom_movable, TYPE_PROC_REF(/atom/movable, throw_atom), projected, 50, SPEED_FAST, null, TRUE, HIGH_LAUNCH)
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), atom_movable), 3 SECONDS)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/blastdoor/proc/bolt_explosion()
 	var/turf/turf = get_step(src, throw_dir|dir)

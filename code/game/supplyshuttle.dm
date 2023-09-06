@@ -18,30 +18,26 @@ var/datum/controller/supply/supply_controller = new()
 /area/supply/station //DO NOT TURN THE lighting_use_dynamic STUFF ON FOR SHUTTLES. IT BREAKS THINGS.
 	name = "Supply Shuttle"
 	icon_state = "shuttle3"
-	luminosity = 1
-	lighting_use_dynamic = 0
+	base_lighting_alpha = 255
 	requires_power = 0
 	ambience_exterior = AMBIENCE_ALMAYER
 
 /area/supply/dock //DO NOT TURN THE lighting_use_dynamic STUFF ON FOR SHUTTLES. IT BREAKS THINGS.
 	name = "Supply Shuttle"
 	icon_state = "shuttle3"
-	luminosity = 1
-	lighting_use_dynamic = 0
+	base_lighting_alpha = 255
 	requires_power = 0
 
 /area/supply/station_vehicle //DO NOT TURN THE lighting_use_dynamic STUFF ON FOR SHUTTLES. IT BREAKS THINGS.
 	name = "Vehicle ASRS"
 	icon_state = "shuttle3"
-	luminosity = 1
-	lighting_use_dynamic = 0
+	base_lighting_alpha = 255
 	requires_power = 0
 
 /area/supply/dock_vehicle //DO NOT TURN THE lighting_use_dynamic STUFF ON FOR SHUTTLES. IT BREAKS THINGS.
 	name = "Vehicle ASRS"
 	icon_state = "shuttle3"
-	luminosity = 1
-	lighting_use_dynamic = 0
+	base_lighting_alpha = 255
 	requires_power = 0
 
 //SUPPLY PACKS MOVED TO /code/defines/obj/supplypacks.dm
@@ -191,11 +187,11 @@ var/datum/controller/supply/supply_controller = new()
 	var/list/data = list()
 
 	var/list/squad_list = list()
-	for(var/datum/squad/S in RoleAuthority.squads)
-		if(S.active && S.faction == faction && S.color)
+	for(var/datum/squad/current_squad in RoleAuthority.squads)
+		if(current_squad.active && current_squad.faction == faction && current_squad.equipment_color)
 			squad_list += list(list(
-				"squad_name" = S.name,
-				"squad_color" = squad_colors[S.color]
+				"squad_name" = current_squad.name,
+				"squad_color" = current_squad.equipment_color
 				))
 
 	data["can_pick_squad"] = can_pick_squad
