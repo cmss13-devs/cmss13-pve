@@ -155,7 +155,7 @@
 						return held_weapon.afterattack(target,src)
 
 			var/disarm_chance = rand(1, 100)
-			var/attacker_skill_level = attacking_mob.skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
+			var/attacker_skill_level = skills && attacking_mob.skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			disarm_chance -= 5 * attacker_skill_level
 			disarm_chance += 5 * defender_skill_level
@@ -227,9 +227,9 @@
 			playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 5)
 		return
 
-	adjust_effect(-3, PARALYZE)
-	adjust_effect(-3, STUN)
-	adjust_effect(-3, WEAKEN)
+	adjust_effect(-6, PARALYZE)
+	adjust_effect(-6, STUN)
+	adjust_effect(-6, WEAKEN)
 
 	playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 

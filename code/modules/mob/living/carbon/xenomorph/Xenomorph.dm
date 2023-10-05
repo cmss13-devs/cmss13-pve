@@ -52,6 +52,7 @@
 	icon_size = 48
 	black_market_value = KILL_MENDOZA
 	dead_black_market_value = 50
+	light_system = MOVABLE_LIGHT
 	var/obj/item/clothing/suit/wear_suit = null
 	var/obj/item/clothing/head/head = null
 	var/obj/item/r_store = null
@@ -498,11 +499,7 @@
 	// Only handle free slots if the xeno is not in tdome
 	if(!is_admin_level(z))
 		var/selected_caste = GLOB.xeno_datum_list[caste_type]?.type
-		var/free_slots = LAZYACCESS(hive.free_slots, selected_caste)
-		if(free_slots)
-			hive.free_slots[selected_caste]--
-			var/new_val = LAZYACCESS(hive.used_free_slots, selected_caste) + 1
-			LAZYSET(hive.used_free_slots, selected_caste, new_val)
+		hive.used_slots[selected_caste]++
 
 	if(round_statistics && !statistic_exempt)
 		round_statistics.track_new_participant(faction, 1)
@@ -705,16 +702,7 @@
 		hive.remove_hive_leader(src, light_mode = TRUE)
 	SStracking.stop_tracking("hive_[hivenumber]", src)
 
-	// Only handle free slots if the xeno is not in tdome
-	if(!is_admin_level(z))
-		var/selected_caste = GLOB.xeno_datum_list[caste_type]?.type
-		var/used_slots = LAZYACCESS(hive.used_free_slots, selected_caste)
-		if(used_slots)
-			hive.used_free_slots[selected_caste]--
-			var/new_val = LAZYACCESS(hive.free_slots, selected_caste) + 1
-			LAZYSET(hive.free_slots, selected_caste, new_val)
-
-	hive.remove_xeno(src)
+	hive?.remove_xeno(src)
 	remove_from_all_mob_huds()
 
 	observed_xeno = null
@@ -810,7 +798,7 @@
 	//and display them
 	add_to_all_mob_huds()
 	var/datum/mob_hud/MH = huds[MOB_HUD_XENO_INFECTION]
-	MH.add_hud_to(src)
+	MH.add_hud_to(src, src)
 
 
 /mob/living/carbon/xenomorph/check_improved_pointing()
@@ -1070,6 +1058,7 @@
 	. = ..()
 	if (.)
 		UnregisterSignal(src, COMSIG_XENO_PRE_HEAL)
+		handle_luminosity()
 
 /mob/living/carbon/xenomorph/proc/cancel_heal()
 	SIGNAL_HANDLER
@@ -1086,7 +1075,7 @@
 		handle_ghost_message()
 
 /mob/living/carbon/xenomorph/proc/handle_ghost_message()
-	announce_dchat("[src] ([mutation_type] [caste_type])</b> has ghosted and their body is up for grabs!", src)
+	notify_ghosts("[src] ([mutation_type] [caste_type]) has ghosted and their body is up for grabs!", source = src)
 
 /mob/living/carbon/xenomorph/larva/handle_ghost_message()
 	if(locate(/obj/effect/alien/resin/special/pylon/core) in range(2, get_turf(src)))
@@ -1125,3 +1114,8 @@
 	SPAN_WARNING("You squeeze and scuttle underneath [current_structure]."), max_distance = 5)
 	forceMove(current_structure.loc)
 	return TRUE
+
+/mob/living/carbon/xenomorph/knocked_down_callback()
+	. = ..()
+	if(!resting) // !resting because we dont wanna prematurely update wounds if they're just trying to rest
+		update_wounds()

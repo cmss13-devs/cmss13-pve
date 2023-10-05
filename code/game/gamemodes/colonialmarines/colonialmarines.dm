@@ -265,7 +265,7 @@
 			continue
 
 	if(groundside_humans > (groundside_xenos * GROUNDSIDE_XENO_MULTIPLIER))
-		SSticker.mode.get_specific_call("Xenomorphs Groundside (Forsaken)", FALSE, FALSE, announce_dispatch_message = FALSE)
+		SSticker.mode.get_specific_call("Xenomorphs Groundside (Forsaken)", TRUE, FALSE, FALSE, announce_dispatch_message = FALSE)
 
 	TIMER_COOLDOWN_START(src, COOLDOWN_HIJACK_GROUND_CHECK, 1 MINUTES)
 
@@ -372,11 +372,11 @@
 				var/headcount = count_per_faction()
 				var/living = headcount["total_headcount"]
 				if ((headcount["WY_headcount"] / living) > MAJORITY)
-					musical_track = pick('sound/theme/LastManStanding_WY.ogg')
+					musical_track = pick('sound/theme/lastmanstanding_wy.ogg')
 				else if ((headcount["UPP_headcount"] / living) > MAJORITY)
-					musical_track = pick('sound/theme/LastManStanding_UPP.ogg')
+					musical_track = pick('sound/theme/lastmanstanding_upp.ogg')
 				else if ((headcount["CLF_headcount"] / living) > MAJORITY)
-					musical_track = pick('sound/theme/LastManStanding_CLF.ogg')
+					musical_track = pick('sound/theme/lastmanstanding_clf.ogg')
 				else if ((headcount["marine_headcount"] / living) > MAJORITY)
 					musical_track = pick('sound/theme/neutral_melancholy2.ogg') //This is the theme song for Colonial Marines the game, fitting
 			else

@@ -185,7 +185,7 @@
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
 	var/shoes_success = new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/specialist/hefa(new_human), WEAR_HEAD)
+	var/helmet_success = new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/specialist/hefa(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_L_STORE)
 	var/jacket_success = new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/M3G/hefa(new_human), WEAR_JACKET)
 	var/satchel_success = new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -232,6 +232,12 @@
 	for(var/i in 1 to W.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/frag(new_human.back), WEAR_IN_ACCESSORY)
 
+	// Helmet
+	if(helmet_success)
+		var/obj/item/clothing/head/helmet/marine/hefa_helmet = new_human.head
+		for(var/i in 1 to hefa_helmet.pockets.storage_slots)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/frag(new_human.head), WEAR_IN_HELMET)
+
 /datum/equipment_preset/fun/santa
 	name = "Fun - Santa"
 	paygrade = "C"
@@ -246,7 +252,7 @@
 
 /datum/equipment_preset/fun/santa/New()
 	. = ..()
-	access = get_global_access()
+	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/fun/santa/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = MALE
@@ -342,7 +348,7 @@
 
 /datum/equipment_preset/fun/van_bandolier/New()
 	. = ..()
-	access = get_global_access()
+	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/fun/van_bandolier/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = MALE

@@ -287,11 +287,6 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	if(!(connection in list("seeker", "web"))) //Invalid connection type.
 		return null
 
-	if(IsGuestKey(key))
-		alert(src,"This server doesn't allow guest accounts to play. Please go to http://www.byond.com/ and register for a key.","Guest","OK")
-		qdel(src)
-		return
-
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
@@ -435,11 +430,14 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 
 	for(var/line in lines)
 		if(src.ckey == line)
-			src.donator = 1
+			src.donator = TRUE
 			add_verb(src, /client/proc/set_ooc_color_self)
 
 	//if(prefs.window_skin & TOGGLE_WINDOW_SKIN)
 	// set_night_skin()
+
+	if(!tooltips && prefs.tooltips)
+		tooltips = new(src)
 
 	load_player_data()
 
@@ -755,7 +753,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 		return FALSE
 
 	var/mob/dead/observer/observer = mob
-	observer.ManualFollow(target)
+	observer.do_observe(target)
 
 /client/proc/check_timelock(list/roles, hours)
 	var/timelock_name = "[islist(roles) ? jointext(roles, "") : roles][hours]"
@@ -785,7 +783,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 			if (!screen_object.clear_with_screen)
 				continue
 
-		screen -= object
+		remove_from_screen(object)
 
 ///opens the particle editor UI for the in_atom object for this client
 /client/proc/open_particle_editor(atom/movable/in_atom)

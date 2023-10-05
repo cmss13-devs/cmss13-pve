@@ -45,7 +45,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 
 /obj/item/weapon/gun/lever_action/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_1 + FIRE_DELAY_TIER_10)
+	set_fire_delay(FIRE_DELAY_TIER_1 + FIRE_DELAY_TIER_12)
 	lever_delay = FIRE_DELAY_TIER_3
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
@@ -116,7 +116,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	lever_sound = lever_super_sound
 	lever_message = "<b><i>You quickly work the [lever_name]!<i><b>"
 	last_fired = world.time - buff_fire_reduc //to shoot the next round faster
-	lever_delay = FIRE_DELAY_TIER_10
+	lever_delay = FIRE_DELAY_TIER_12
 	damage_mult = initial(damage_mult) + BULLET_DAMAGE_MULT_TIER_10
 	set_fire_delay(FIRE_DELAY_TIER_5)
 	for(var/slot in attachments)
@@ -392,7 +392,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 
 /obj/item/weapon/gun/lever_action/xm88/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_1)
+	set_fire_delay(FIRE_DELAY_TIER_2)
 	lever_delay = FIRE_DELAY_TIER_3
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
@@ -495,7 +495,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	if(!able_to_fire(user) || !target) //checks here since we don't want to fuck up applying the increase
 		return NONE
 	if(floating_penetration && in_chamber) //has to go before actual firing
-		var/obj/item/projectile/P = in_chamber
+		var/obj/projectile/P = in_chamber
 		switch(floating_penetration)
 			if(FLOATING_PENETRATION_TIER_1)
 				P.ammo = GLOB.ammo_list[/datum/ammo/bullet/lever_action/xm88/pen20]
@@ -525,11 +525,11 @@ their unique feature is that a direct hit will buff your damage and firerate
 	wield_delay = initial(wield_delay)
 	cur_onehand_chance = initial(cur_onehand_chance)
 	if(in_chamber)
-		var/obj/item/projectile/P = in_chamber
+		var/obj/projectile/P = in_chamber
 		P.ammo = GLOB.ammo_list[/datum/ammo/bullet/lever_action/xm88]
 	floating_penetration = FLOATING_PENETRATION_TIER_0
 	//these are init configs and so cannot be initial()
-	set_fire_delay(FIRE_DELAY_TIER_1 + FIRE_DELAY_TIER_10)
+	set_fire_delay(FIRE_DELAY_TIER_1 + FIRE_DELAY_TIER_12)
 	lever_delay = FIRE_DELAY_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recalculate_attachment_bonuses() //stock wield delay
