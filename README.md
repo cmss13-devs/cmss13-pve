@@ -3,11 +3,15 @@
 <a href="https://www.monkeyuser.com/assets/images/2019/131-bug-free.png"><img src="https://img.shields.io/badge/Built_with-Resentment-orange?style=for-the-badge&labelColor=%23D47439&color=%23C36436" width=260px></a> <a href="https://user-images.githubusercontent.com/8171642/50290880-ffef5500-043a-11e9-8270-a2e5b697c86c.png"><img src="https://img.shields.io/badge/Contains-Technical_Debt-blue?style=for-the-badge&color=5598D0&labelColor=62C1EE" width=280px></a> [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
 [![Build Status](https://github.com/cmss13-devs/cmss13/workflows/CI%20Suite/badge.svg)](https://github.com/cmss13-devs/cmss13/actions?query=workflow%3A%22CI+Suite%22)
-* **Website:** https://forum.cm-ss13.com/
-* **Code:** https://github.com/cmss13-devs/cmss13
-* **Wiki:** https://cm-ss13.com/wiki/Main_Page
+* **Code:** [https://github.com/cmss13-devs/cmss13](https://github.com/PvE-CMSS13/PvE-CMSS13)
+* **Discord:** [discord.gg/v6P6wns5dN](discord.gg/v6P6wns5dN)
 
-This is the codebase for the CM-SS13 flavoured fork of SpaceStation 13
+This is the codebase for the PvE CM-SS13 fork of CM-SS13 flavoured fork of SpaceStation 13
+
+Code from:
+https://github.com/Watermelon914/cw-ss13
+https://github.com/cmss13-devs/cmss13
+And contributors.
 
 Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive! CM-SS13 has wildly adapted this idea into a strategic roleplay-based team deathmatch game.
 
