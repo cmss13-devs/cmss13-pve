@@ -12,12 +12,19 @@
 	var/list/targets = list() // Lists of current potential targets
 	var/list/other_targets = list() //List of special target types to shoot at, if needed.
 	var/atom/movable/target = null
-	var/datum/shape/rectangle/range_bounds
+	var/list/turf/watching_turfs
 	var/datum/effect_system/spark_spread/spark_system //The spark system, used for generating... sparks?
 	var/last_fired = 0
-	var/fire_delay = 4
+	var/fire_delay = 1
+
+	var/burst_fire_delay = 0.1
+
 	var/immobile = FALSE //Used for prebuilt ones.
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
+
+	/// Sound used when firing
+	var/firing_sound = 'sound/weapons/sentry_shoot_loop_01.ogg'
+
 	var/sentry_type = "sentry" //Used for the icon
 	display_additional_stats = TRUE
 	/// Light strength when turned on
@@ -31,8 +38,8 @@
 	has_camera = TRUE
 
 	var/damage_mult = 1
-	var/accuracy_mult = 1
-	var/burst = 1
+	var/accuracy_mult = 0.5
+	var/burst = 2
 	handheld_type = /obj/item/defenses/handheld/sentry
 
 	/// timer triggered when sentry gun shoots at a target to not spam the laptop
@@ -60,17 +67,18 @@
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+
 	if(turned_on)
 		start_processing()
-		set_range()
+		setup_target_acquisition()
 	update_icon()
-	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(unset_range))
+	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(unsetup_target_acquisition))
 
 /obj/structure/machinery/defenses/sentry/Destroy() //Clear these for safety's sake.
 	targets = null
 	other_targets = null
 	target = null
-	QDEL_NULL(range_bounds)
+	watching_turfs = null
 	QDEL_NULL(spark_system)
 	QDEL_NULL(ammo)
 	stop_processing()
@@ -81,9 +89,9 @@
 		stop_processing()
 		return
 
-	if(!range_bounds)
-		set_range()
-	targets = SSquadtree.players_in_range(range_bounds, z, QTREE_SCAN_MOBS | QTREE_EXCLUDE_OBSERVER)
+	if(!watching_turfs)
+		setup_target_acquisition()
+
 	if(!targets)
 		return FALSE
 
@@ -93,24 +101,62 @@
 	get_target(target)
 	return TRUE
 
-/obj/structure/machinery/defenses/sentry/proc/set_range()
+/obj/structure/machinery/defenses/sentry/proc/setup_target_acquisition()
+	set_watched_turfs()
+
+	for(var/turf/watched_turf as anything in watching_turfs)
+		RegisterSignal(watched_turf, COMSIG_TURF_ENTERED, PROC_REF(add_entering_target))
+		for(var/mob/living/living_target in watched_turf)
+			add_to_targets(living_target)
+
+/obj/structure/machinery/defenses/sentry/proc/set_watched_turfs()
 	if(omni_directional)
-		range_bounds = RECT(x, y, 8, 8)
+		watching_turfs = block(locate(x - 5, y - 5, z), locate(x + 5, y + 5, z))
 		return
+
 	switch(dir)
 		if(EAST)
-			range_bounds = RECT(x + 4, y, 7, 7)
+			watching_turfs = block(locate(x + 1, y - 3, z), locate(x + 7, y + 3, z))
 		if(WEST)
-			range_bounds = RECT(x - 4, y, 7, 7)
+			watching_turfs = block(locate(x - 7, y - 3, z), locate(x - 1, y + 3, z))
 		if(NORTH)
-			range_bounds = RECT(x, y + 4, 7, 7)
+			watching_turfs = block(locate(x - 3, y + 1, z), locate(x + 3, y + 7, z))
 		if(SOUTH)
-			range_bounds = RECT(x, y - 4, 7, 7)
+			watching_turfs = block(locate(x - 3, y - 7, z), locate(x + 3, y - 1, z))
 
-/obj/structure/machinery/defenses/sentry/proc/unset_range()
+/obj/structure/machinery/defenses/sentry/proc/add_entering_target(turf/entered_turf, atom/movable/atom_moved)
 	SIGNAL_HANDLER
-	if(range_bounds)
-		QDEL_NULL(range_bounds)
+	if(!istype(atom_moved, /mob/living))
+		return
+
+	if(atom_moved in targets)
+		return
+
+	add_to_targets(atom_moved)
+
+/obj/structure/machinery/defenses/sentry/proc/target_moved(atom/movable/atom_moved, turf/entered_turf)
+	SIGNAL_HANDLER
+	if(entered_turf in watching_turfs)
+		return
+
+	targets -= atom_moved
+	UnregisterSignal(atom_moved, COMSIG_MOVABLE_TURF_ENTERED)
+
+/obj/structure/machinery/defenses/sentry/proc/add_to_targets(atom/movable/new_target)
+	LAZYOR(targets, new_target)
+	RegisterSignal(new_target, COMSIG_MOVABLE_TURF_ENTERED, PROC_REF(target_moved), override = TRUE)
+
+	if(!target)
+		get_target(new_target)
+
+/obj/structure/machinery/defenses/sentry/proc/unsetup_target_acquisition()
+	SIGNAL_HANDLER
+	for(var/turf/watched_turf as anything in watching_turfs)
+		UnregisterSignal(watched_turf, COMSIG_TURF_ENTERED)
+	watching_turfs = null
+	for(var/atom/temp_target in targets)
+		UnregisterSignal(temp_target, COMSIG_MOVABLE_TURF_ENTERED)
+	targets = null
 
 /obj/structure/machinery/defenses/sentry/update_icon()
 	..()
@@ -187,13 +233,13 @@
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] hums to life and emits several beeps.")]")
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: 'Default systems initiated'")]")
 	start_processing()
-	set_range()
+	setup_target_acquisition()
 
 /obj/structure/machinery/defenses/sentry/power_off_action()
 	set_light(0)
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] powers down and goes silent.")]")
 	stop_processing()
-	unset_range()
+	unsetup_target_acquisition()
 
 /obj/structure/machinery/defenses/sentry/attackby(obj/item/O, mob/user)
 	if(QDELETED(O) || QDELETED(user))
@@ -224,12 +270,7 @@
 		return
 
 	if(istype(O, ammo))
-		var/obj/item/ammo_magazine/M = O
 		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI) || user.action_busy)
-			return
-
-		if(ammo.current_rounds)
-			to_chat(user, SPAN_WARNING("You only know how to swap [M.name] when it's empty."))
 			return
 
 		user.visible_message(SPAN_NOTICE("[user] begins swapping a new [O.name] into [src]."),
@@ -241,9 +282,12 @@
 		user.visible_message(SPAN_NOTICE("[user] swaps a new [O.name] into [src]."),
 		SPAN_NOTICE("You swap a new [O.name] into [src]."))
 
+		ammo.forceMove(loc)
+
 		ammo = O
 		user.drop_held_item(O)
 		O.forceMove(src)
+
 		sent_empty_ammo = FALSE
 		update_icon()
 		return
@@ -275,7 +319,6 @@
 
 	if(world.time-last_fired >= 30 SECONDS) //if we haven't fired for a while, beep first
 		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
-		sleep(3)
 
 	if(ammo && ammo.current_rounds <= 0)
 		to_chat(usr, SPAN_WARNING("[name] does not have any ammo."))
@@ -288,9 +331,8 @@
 
 	if(omni_directional)
 		setDir(get_dir(src, A))
-	for(var/i in 1 to burst)
-		if(actual_fire(A))
-			break
+
+	actual_fire(A, burst, FALSE)
 
 	if(targets.len)
 		addtimer(CALLBACK(src, PROC_REF(get_target)), fire_delay)
@@ -309,20 +351,32 @@
 /obj/structure/machinery/defenses/sentry/proc/reset_low_ammo_timer()
 	low_ammo_timer = null
 
-/obj/structure/machinery/defenses/sentry/proc/actual_fire(atom/target)
+/obj/structure/machinery/defenses/sentry/proc/actual_fire(atom/firing_target, projectiles_to_fire = 1, recursive)
+	if(!firing_target || !(firing_target in targets))
+		return
+
 	var/obj/projectile/new_projectile = new(src, create_cause_data(initial(name), owner_mob, src))
 	new_projectile.generate_bullet(new ammo.default_ammo)
 	new_projectile.damage *= damage_mult
 	new_projectile.accuracy *= accuracy_mult
 	GIVE_BULLET_TRAIT(new_projectile, /datum/element/bullet_trait_iff, faction_group)
-	new_projectile.fire_at(target, src, owner_mob, new_projectile.ammo.max_range, new_projectile.ammo.shell_speed, null, FALSE)
-	muzzle_flash(Get_Angle(get_turf(src), target))
+
+	new_projectile.fire_at(firing_target, src, owner_mob, new_projectile.ammo.max_range, new_projectile.ammo.shell_speed, null, FALSE)
+
+	if(!recursive)
+		muzzle_flash(Get_Angle(get_turf(src), firing_target))
+		if(firing_sound)
+			playsound(loc, firing_sound, 75, 1)
+
 	ammo.current_rounds--
 	track_shot()
+
 	if(ammo.current_rounds == 0)
 		handle_empty()
-		return TRUE
-	return FALSE
+		return
+
+	if(projectiles_to_fire > 1)
+		addtimer(CALLBACK(src, PROC_REF(actual_fire), firing_target, (projectiles_to_fire - 1), TRUE), burst_fire_delay)
 
 /obj/structure/machinery/defenses/sentry/proc/handle_empty()
 	visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] beeps steadily and its ammo light blinks red.")]")
@@ -545,44 +599,6 @@
 	QDEL_NULL(linked_cam)
 	. = ..()
 
-#define SENTRY_SNIPER_RANGE 10
-/obj/structure/machinery/defenses/sentry/dmr
-	name = "UA 725-D Sniper Sentry"
-	desc = "A fully-automated defence turret with long-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed."
-	defense_type = "DMR"
-	health = 150
-	health_max = 150
-	fire_delay = 1.25 SECONDS
-	ammo = new /obj/item/ammo_magazine/sentry
-	sentry_range = SENTRY_SNIPER_RANGE
-	accuracy_mult = 4
-	damage_mult = 2
-	handheld_type = /obj/item/defenses/handheld/sentry/dmr
-
-	choice_categories = list(
-		SENTRY_CATEGORY_IFF = list(FACTION_USCM, FACTION_WEYLAND, FACTION_HUMAN),
-	)
-
-	selected_categories = list(
-		SENTRY_CATEGORY_IFF = FACTION_USCM,
-	)
-
-
-/obj/structure/machinery/defenses/sentry/dmr/handle_rof(level)
-	return
-
-/obj/structure/machinery/defenses/sentry/dmr/set_range()
-	switch(dir)
-		if(EAST)
-			range_bounds = RECT(x + (SENTRY_SNIPER_RANGE/2), y, SENTRY_SNIPER_RANGE, SENTRY_SNIPER_RANGE)
-		if(WEST)
-			range_bounds = RECT(x - (SENTRY_SNIPER_RANGE/2), y, SENTRY_SNIPER_RANGE, SENTRY_SNIPER_RANGE)
-		if(NORTH)
-			range_bounds = RECT(x, y + (SENTRY_SNIPER_RANGE/2), SENTRY_SNIPER_RANGE, SENTRY_SNIPER_RANGE)
-		if(SOUTH)
-			range_bounds = RECT(x, y - (SENTRY_SNIPER_RANGE/2), SENTRY_SNIPER_RANGE, SENTRY_SNIPER_RANGE)
-
-#undef SENTRY_SNIPER_RANGE
 /obj/structure/machinery/defenses/sentry/shotgun
 	name = "UA 12-G Shotgun Sentry"
 	defense_type = "Shotgun"
@@ -595,6 +611,8 @@
 	accuracy_mult = 2 // Misses a lot since shotgun ammo has low accuracy, this should ensure a lot of shots actually hit.
 	handheld_type = /obj/item/defenses/handheld/sentry/shotgun
 	disassemble_time = 1.5 SECONDS
+
+	firing_sound = null
 
 /obj/structure/machinery/defenses/sentry/shotgun/attack_alien(mob/living/carbon/xenomorph/M)
 	. = ..()
@@ -625,6 +643,8 @@
 	disassemble_time = 0.75 SECONDS
 	handheld_type = /obj/item/defenses/handheld/sentry/mini
 	composite_icon = FALSE
+
+	firing_sound = null
 
 /obj/structure/machinery/defenses/sentry/launchable
 	name = "\improper UA 571-O sentry post"
