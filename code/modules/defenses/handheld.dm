@@ -109,28 +109,17 @@
 	defense_type = /obj/structure/machinery/defenses/sentry
 
 /obj/item/defenses/handheld/sentry/get_upgrade_list()
-	. = list()
-	if(!MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_SNIPER_SENTRY))
-		. += list("DMR Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "DMR uac_sentry_handheld"))
-	. += list(
+	. = list(
 		"Shotgun Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "Shotgun uac_sentry_handheld"),
 		"Mini-Sentry Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "Mini uac_sentry_handheld")
 	)
 
 /obj/item/defenses/handheld/sentry/upgrade_string_to_type(upgrade_string)
 	switch(upgrade_string)
-		if("DMR Upgrade")
-			return /obj/item/defenses/handheld/sentry/dmr
 		if("Shotgun Upgrade")
 			return /obj/item/defenses/handheld/sentry/shotgun
 		if("Mini-Sentry Upgrade")
 			return /obj/item/defenses/handheld/sentry/mini
-
-/obj/item/defenses/handheld/sentry/dmr
-	name = "handheld UA 725-D sniper sentry"
-	icon_state = "DMR uac_sentry_handheld"
-	deployment_time = 2 SECONDS
-	defense_type = /obj/structure/machinery/defenses/sentry/dmr
 
 /obj/item/defenses/handheld/sentry/shotgun
 	name = "handheld UA 12-G shotgun sentry"
@@ -154,16 +143,12 @@
 
 /obj/item/defenses/handheld/sentry/flamer/get_upgrade_list()
 	. = list()
-	if(!MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_SNIPER_SENTRY))
-		. += list("Long-Range Plasma Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/flamer.dmi', icon_state = "Plasma uac_flamer_handheld"))
 	. += list(
 		"Mini-Flamer Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/flamer.dmi', icon_state = "Mini uac_flamer_handheld")
 	)
 
 /obj/item/defenses/handheld/sentry/flamer/upgrade_string_to_type(upgrade_string)
 	switch(upgrade_string)
-		if("Long-Range Plasma Upgrade")
-			return /obj/item/defenses/handheld/sentry/flamer/plasma
 		if("Mini-Flamer Upgrade")
 			return /obj/item/defenses/handheld/sentry/flamer/mini
 
@@ -194,14 +179,6 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/flamer/mini
 	deployment_time = 0.75 SECONDS
 	ammo_convert = /obj/item/ammo_magazine/sentry_flamer/mini
-
-/obj/item/defenses/handheld/sentry/flamer/plasma
-	name = "handheld UA 60-FP plasma sentry"
-	icon_state = "Plasma uac_flamer_handheld"
-	deployment_time = 2 SECONDS
-	defense_type = /obj/structure/machinery/defenses/sentry/flamer/plasma
-	ammo_convert = /obj/item/ammo_magazine/sentry_flamer/glob
-
 
 // TESLA BASE AND UPGRADES
 /obj/item/defenses/handheld/tesla_coil
