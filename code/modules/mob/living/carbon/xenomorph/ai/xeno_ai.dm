@@ -32,7 +32,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
-/mob/living/carbon/xenomorph/proc/handle_ai_shot(obj/item/projectile/P)
+/mob/living/carbon/xenomorph/proc/handle_ai_shot(obj/projectile/P)
 	if(!current_target && P.firer)
 		var/distance = get_dist(src, P.firer)
 		if(distance > max_travel_distance)
