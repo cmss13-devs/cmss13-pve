@@ -1,5 +1,5 @@
 #define SENTRY_FIREANGLE 135
-#define SENTRY_RANGE 5
+#define SENTRY_RANGE 8
 #define SENTRY_ENGAGED_TIMEOUT 60 SECONDS
 #define SENTRY_LOW_AMMO_TIMEOUT 20 SECONDS
 #define SENTRY_LOW_AMMO_ALERT_PERCENTAGE 0.25
@@ -52,6 +52,8 @@
 		// SENTRY_CATEGORY_ROF = ROF_SINGLE,
 		SENTRY_CATEGORY_IFF = FACTION_USCM,
 	)
+
+	can_be_near_defense = TRUE
 
 /obj/structure/machinery/defenses/sentry/Initialize()
 	. = ..()

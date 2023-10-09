@@ -101,10 +101,14 @@
 	power_on_action()
 	update_icon()
 
+	GLOB.all_defenses += src
+
 /obj/structure/machinery/defenses/proc/power_off()
 	turned_on = FALSE
 	power_off_action()
 	update_icon()
+
+	GLOB.all_defenses -= src
 
 /**
  * Update state category for this structure.
@@ -464,6 +468,8 @@
 	return
 
 /obj/structure/machinery/defenses/Destroy()
+	GLOB.all_defenses -= src
+
 	if(owner_mob)
 		owner_mob = null
 	HD = null // FIXME: Might also need to delete. Unsure.

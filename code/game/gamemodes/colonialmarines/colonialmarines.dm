@@ -180,9 +180,6 @@
 			if(!hive.living_xeno_queen && hive.xeno_queen_timer < world.time)
 				xeno_message("The Hive is ready for a new Queen to evolve.", 3, hive.hivenumber)
 
-		if(!active_lz && world.time > lz_selection_timer)
-			select_lz(locate(/obj/structure/machinery/computer/shuttle/dropship/flight/lz1))
-
 		// Automated bioscan / Queen Mother message
 		if(world.time > bioscan_current_interval) //If world time is greater than required bioscan time.
 			announce_bioscans() //Announce the results of the bioscan to both sides.

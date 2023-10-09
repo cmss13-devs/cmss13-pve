@@ -52,3 +52,7 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 /obj/effect/landmark/start/marine/smartgunner/delta
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/smartgunner/ai
+	total_positions = 2
+	spawn_positions = 2

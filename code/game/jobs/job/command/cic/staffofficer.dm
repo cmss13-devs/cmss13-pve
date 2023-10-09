@@ -35,3 +35,7 @@ AddTimelock(/datum/job/command/bridge, list(
 	name = JOB_SO
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge
+
+/datum/job/command/bridge/ai
+	total_positions = 1
+	spawn_positions = 1

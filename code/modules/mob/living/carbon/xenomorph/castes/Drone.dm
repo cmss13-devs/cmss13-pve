@@ -4,7 +4,7 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_1
 	melee_damage_upper = XENO_DAMAGE_TIER_2
 	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = XENO_HEALTH_TIER_6
+	max_health = 180
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	crystal_max = XENO_CRYSTAL_LOW
@@ -71,6 +71,10 @@
 		/mob/living/carbon/xenomorph/proc/set_hugger_reserve_for_morpher,
 	)
 	mutation_type = DRONE_NORMAL
+	gib_chance = 100
 
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
+
+/mob/living/carbon/xenomorph/drone/init_movement_handler()
+	return new /datum/xeno_ai_movement/drone(src)

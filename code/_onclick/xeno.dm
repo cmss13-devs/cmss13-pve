@@ -116,7 +116,7 @@ so that it doesn't double up on the delays) so that it applies the delay immedia
 				next_move = world.time + 3 // Some minimal delay so this isn't crazy spammy
 				return TRUE
 
-	var/middle_pref = client.prefs && (client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK) != 0 // client is already tested to be non-null by caller
+	var/middle_pref = client && client.prefs && (client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK) != 0 // client is already tested to be non-null by caller
 	if(selected_ability && shift_pressed == !middle_pref && middle_pressed == middle_pref)
 		if(istype(target, /atom/movable/screen))
 			// Click through the UI: Currently this won't attempt to sprite click any mob there, just the turf
