@@ -190,16 +190,15 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/list/viable_vehicles = list()
 	var/list/viable_defenses = list()
 	var/smallest_distance = INFINITY
-	for(var/l in GLOB.alive_human_list)
-		var/mob/living/carbon/human/H = l
-		if(H.species.flags & IS_SYNTHETIC)
+	for(var/mob/living/carbon/human/alive_human as anything in GLOB.alive_human_list)
+		if(alive_human.species.flags & IS_SYNTHETIC)
 			return pick(viable_humans)
-		if(z != H.z)
+		if(z != alive_human.z)
 			continue
-		var/distance = get_dist(src, H)
+		var/distance = get_dist(src, alive_human)
 
-		if(distance < ai_range)
-			viable_humans += H
+		if(distance < ai_range && alive_human.stat == CONSCIOUS)
+			viable_humans += alive_human
 		smallest_distance = min(distance, smallest_distance)
 
 	for(var/l in GLOB.all_multi_vehicles)
