@@ -78,12 +78,6 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-/datum/equipment_preset/uscm/pfc/load_rank(mob/living/carbon/human/new_human)
-	if(new_human.client)
-		if(get_job_playtime(new_human.client, rank) < JOB_PLAYTIME_TIER_1)
-			return "ME1"
-	return paygrade
-
 /datum/equipment_preset/uscm/pfc/cryo
 	name = "USCM Cryo Squad Rifleman"
 	auto_squad_name = SQUAD_MARINE_CRYO
@@ -101,7 +95,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	assignment = JOB_SQUAD_SMARTGUN
 	rank = JOB_SQUAD_SMARTGUN
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "SG"
 	skills = /datum/skills/smartgunner
 
@@ -297,7 +291,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
-	paygrade = "ME4"
+	paygrade = "ME5"
 	role_comm_title = "FTL"
 	skills = /datum/skills/tl
 
@@ -359,7 +353,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "ME5"
+	paygrade = "ME7"
 	role_comm_title = "SL"
 	minimum_age = 27
 	skills = /datum/skills/SL

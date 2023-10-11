@@ -61,3 +61,9 @@ AddTimelock(/datum/job/marine/medic, list(
 /datum/job/marine/medic/ai
 	total_positions = 1
 	spawn_positions = 1
+
+/datum/job/marine/medic/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/medic/ai/get_total_positions(latejoin=0)
+	return latejoin ? total_positions : spawn_positions

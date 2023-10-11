@@ -40,3 +40,6 @@
 /datum/job/marine/standard/ai
 	total_positions = 4
 	spawn_positions = 4
+
+/datum/job/marine/standard/ai/set_spawn_positions(count)
+	return spawn_positions

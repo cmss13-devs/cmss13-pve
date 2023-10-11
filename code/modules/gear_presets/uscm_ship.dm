@@ -543,7 +543,7 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SO
 	rank = JOB_SO
-	paygrade = "MO1"
+	paygrade = "MO2"
 	role_comm_title = "SO"
 	minimum_age = 25
 	skills = /datum/skills/SO
