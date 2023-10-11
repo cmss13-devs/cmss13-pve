@@ -72,7 +72,7 @@
 /datum/game_mode/colonialmarines/ai/pre_setup()
 //	game_shuttle = SSshuttle.getShuttle(game_shuttle_id)
 
-	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, .proc/handle_xeno_spawn)
+	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 /*	for(var/i in RoleAuthority.squads.Copy())
 		var/datum/squad/S = i
 		if(!(S.name in squad_limit))
@@ -405,21 +405,7 @@
 		return
 
 	//if(!length(GLOB.alive_client_human_list))
-	//	round_finished = MODE_PVE_LOSE
-
-GLOBAL_LIST_EMPTY_TYPED(objective_landmarks, /obj/effect/landmark/objective_landmark)
-
-/obj/effect/landmark/objective_landmark
-	name = "Objective Landmark"
-	icon_state = "landmark_node"
-
-/obj/effect/landmark/objective_landmark/Initialize(mapload, ...)
-	. = ..()
-	GLOB.objective_landmarks += src
-
-/obj/effect/landmark/objective_landmark/Destroy()
-	GLOB.objective_landmarks -= src
-	return ..()
+	//	round_finished = MODE_PVE_LOSEs
 
 /*GLOBAL_LIST_EMPTY_TYPED(boss_entrance_landmarks, /obj/effect/landmark/boss_entrance)
 

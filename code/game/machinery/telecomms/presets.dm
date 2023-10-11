@@ -66,10 +66,10 @@
 		playsound(src, 'sound/machines/tcomms_on.ogg', vol = 80, vary = FALSE, sound_range = 16, falloff = 0.5)
 		msg_admin_niche("Portable communication relay started for Z-Level [src.z] [ADMIN_JMP(src)]")
 
-		if(SSobjectives && SSobjectives.comms)
+		//if(SSobjectives && SSobjectives.comms)
 			// This is the first time colony comms have been established.
-			if (SSobjectives.comms.state != OBJECTIVE_COMPLETE && is_ground_level(loc.z) && operable())
-				SSobjectives.comms.complete()
+		//	if (SSobjectives.comms.state != OBJECTIVE_COMPLETE && is_ground_level(loc.z) && operable())
+		//		SSobjectives.comms.complete()
 
 /obj/structure/machinery/telecomms/relay/preset/tower/tcomms_shutdown()
 	. = ..()

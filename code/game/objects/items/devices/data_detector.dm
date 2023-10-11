@@ -4,19 +4,7 @@
 	icon_state = "datadetector"
 	item_state = "data_detector"
 	blip_type = "data"
-	var/objects_to_detect = list(
-		/obj/item/document_objective,
-		/obj/item/disk/objective,
-		/obj/item/device/mass_spectrometer/adv/objective,
-		/obj/item/device/reagent_scanner/adv/objective,
-		/obj/item/device/healthanalyzer/objective,
-		/obj/item/device/autopsy_scanner/objective,
-		/obj/item/paper/research_notes,
-		/obj/item/reagent_container/glass/beaker/vial/random,
-		/obj/item/storage/fancy/vials/random,
-		/obj/structure/machinery/computer/objective,
-		/obj/item/limb/head/synth,
-	)
+	var/objects_to_detect = list()
 	var/detect_empty_vial_boxes = FALSE
 
 /obj/item/device/motiondetector/intel/get_help_text()

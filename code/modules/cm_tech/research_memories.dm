@@ -42,6 +42,7 @@
 
 	return objective
 
+/*
 // Get our progression for each objective.
 /datum/research_objective_memory_interface/proc/get_objectives()
 	var/list/objectives = list()
@@ -56,6 +57,7 @@
 	))
 
 	return objectives
+*/
 
 /datum/research_objective_memory_interface/ui_data(mob/user)
 	. = list()
@@ -65,7 +67,6 @@
 	if(chemical_data.clearance_x_access)
 		clearance +="X"
 	.["clearance"] = clearance
-	.["objectives"] = get_objectives(user)
 	.["clue_categories"] = get_clues(user)
 
 /datum/research_objective_memory_interface/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)

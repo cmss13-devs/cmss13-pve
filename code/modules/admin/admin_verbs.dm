@@ -207,7 +207,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/debug_game_history,
 	/client/proc/enter_tree,
 	/client/proc/set_tree_points,
-	/client/proc/purge_data_tab,
 	/client/proc/getserverlog, /*allows us to fetch any server logs (diary) for other days*/
 	/client/proc/getruntimelog,  /*allows us to access any runtime logs (can be granted by giveruntimelog)*/
 	/datum/admins/proc/view_game_log, /*shows the server game log (diary) for this round*/

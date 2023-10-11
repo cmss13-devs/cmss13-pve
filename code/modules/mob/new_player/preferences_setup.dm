@@ -247,8 +247,6 @@
 			return /datum/equipment_preset/uscm_ship/xo
 		if(JOB_AUXILIARY_OFFICER)
 			return /datum/equipment_preset/uscm_ship/auxiliary_officer
-		if(JOB_INTEL)
-			return /datum/equipment_preset/uscm/intel/full
 		if(JOB_PILOT)
 			return /datum/equipment_preset/uscm_ship/po/full
 		if(JOB_DROPSHIP_CREW_CHIEF)

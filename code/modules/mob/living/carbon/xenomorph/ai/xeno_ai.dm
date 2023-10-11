@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	if(!current_path || (next_path_generation < world.time && current_target_turf != T))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
-			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, .proc/set_path), list(src, current_target))
+			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
 		next_path_generation = world.time + path_update_period
 
@@ -174,7 +174,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		var/atom/A = a
 		if(A.xeno_ai_obstacle(src, get_dir(loc, next_turf)) == INFINITY)
 			return FALSE
-		INVOKE_ASYNC(A, /atom.proc/xeno_ai_act, src)
+		INVOKE_ASYNC(A, TYPE_PROC_REF(/atom, xeno_ai_act), src)
 	var/successful_move = Move(next_turf, get_dir(src, next_turf))
 	if(successful_move)
 		ai_timeout_time = world.time

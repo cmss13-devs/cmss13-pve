@@ -454,7 +454,6 @@
 	new /obj/item/device/encryptionkey/intel(src)
 	new /obj/item/pamphlet/skill/intel(src)
 	new /obj/item/device/motiondetector/intel(src)
-	new /obj/item/storage/pouch/document/small(src)
 
 /obj/item/storage/box/kit/mini_grenadier
 	name = "\improper Frontline M40 Grenadier Kit"
