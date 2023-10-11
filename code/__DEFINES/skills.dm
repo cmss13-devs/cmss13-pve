@@ -39,7 +39,7 @@
 
 //spec_weapons skill
 //hidden. who can and can't use specialist weapons
-#define SKILL_SPEC_DEFAULT 0
+#define SKILL_SPEC_DEFAULT 7
 /// Is trained to use specialist gear, but hasn't picked a kit.
 #define SKILL_SPEC_TRAINED 1
 /// Can use RPG
@@ -60,14 +60,14 @@
 #define SKILL_SPEC_ALL 9
 
 //construction skill
-#define SKILL_CONSTRUCTION_DEFAULT 0
+#define SKILL_CONSTRUCTION_DEFAULT 2
 #define SKILL_CONSTRUCTION_TRAINED 1   //metal barricade construction (CT, mini-engis)
 #define SKILL_CONSTRUCTION_ENGI 2   //plasteel barricade, windows and girder construction, building machine&computer frames, (Combat Engi, OT, etc.)
 #define SKILL_CONSTRUCTION_MASTER 3   //Synths
 #define SKILL_CONSTRUCTION_MAX 3
 
 // engineer skill
-#define SKILL_ENGINEER_DEFAULT 0
+#define SKILL_ENGINEER_DEFAULT 2
 #define SKILL_ENGINEER_TRAINED 1   //barricade repair && c4 use (mini-engis, specs)
 #define SKILL_ENGINEER_ENGI 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing (Combat Engi, OT, etc.)
 #define SKILL_ENGINEER_MASTER 3   //Synths
@@ -166,7 +166,7 @@
 
 
 //pilot skill, hidden
-#define SKILL_PILOT_DEFAULT 0
+#define SKILL_PILOT_DEFAULT 1
 #define SKILL_PILOT_TRAINED 1 // DCC
 #define SKILL_PILOT_EXPERT 2 // Pilot, Synth
 #define SKILL_PILOT_MAX 2

@@ -6,7 +6,7 @@
 	desc = "Standard issue marine tactical gloves. It reads: 'knit by Marine Widows Association'."
 	icon_state = "black"
 	item_state = "black"
-	siemens_coefficient = 0.6
+	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	flags_cold_protection = BODY_FLAG_HANDS
 	flags_heat_protection = BODY_FLAG_HANDS
@@ -40,7 +40,6 @@
 	desc = "These gloves will protect the wearer from electric shock."
 	icon_state = "lightbrown"
 	item_state = "lightbrowngloves"
-	siemens_coefficient = 0
 
 /obj/item/clothing/gloves/marine/black
 	name = "marine black combat gloves"
