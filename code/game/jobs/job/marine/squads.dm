@@ -11,11 +11,11 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Squad"
-	lead_name = "Squad Leader"
+	name = "Platoon"
+	lead_name = "Platoon Sergeant"
 	lead_icon = "leader"
-	sub_squad = "Fireteam"
-	sub_leader = "Fireteam Leader"
+	sub_squad = "Squad"
+	sub_leader = "Squad Sergeant"
 
 /datum/squad_type/marsoc_team
 	name = "Team"
@@ -70,7 +70,7 @@
 	var/faction = FACTION_MARINE
 
 	/// What will the assistant squad leader be called
-	var/squad_type = "Squad" //Referenced for aSL details. Squad/Team/Cell etc.
+	var/squad_type = "Platoon" //Referenced for aSL details. Squad/Team/Cell etc.
 	/// Squad leaders icon
 	var/lead_icon //Referenced for SL's 'L' icon. If nulled, won't override icon for aSLs.
 
@@ -476,7 +476,7 @@
 				var/old_lead = squad_leader
 				demote_squad_leader() //replaced by the real one
 				SStracking.start_tracking(tracking_id, old_lead)
-			assignment = squad_type + " Leader"
+			assignment = squad_type + " Sergeant"
 			squad_leader = M
 			SStracking.set_leader(tracking_id, M)
 			SStracking.start_tracking("marine_sl", M)
