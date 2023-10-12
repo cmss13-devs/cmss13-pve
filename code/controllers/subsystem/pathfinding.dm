@@ -191,7 +191,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	SSxeno_pathfinding.current_processing -= src
 
 	#ifdef TESTING
-	addtimer(CALLBACK(src, .proc/clear_colors, distances), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(clear_colors), distances), 5 SECONDS)
 	#endif
 
 	start = null
