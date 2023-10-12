@@ -184,7 +184,6 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
@@ -436,12 +435,6 @@
 	icon_state = "platingdmg1"
 	},
 /area/lv624/lazarus/medbay)
-"LX" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/medbay)
 "MT" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -479,7 +472,6 @@
 	dir = 1
 	},
 /obj/item/storage/belt/medical/full,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -524,7 +516,6 @@
 "PE" = (
 /obj/structure/filingcabinet,
 /obj/structure/machinery/light,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "damaged5"
@@ -554,12 +545,6 @@
 /turf/open/floor{
 	dir = 8;
 	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/medbay)
-"Sz" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor{
-	icon_state = "white"
 	},
 /area/lv624/lazarus/medbay)
 "TC" = (
@@ -738,7 +723,7 @@ XA
 XJ
 XJ
 hW
-LX
+YV
 Gh
 UH
 Pk
@@ -833,7 +818,7 @@ XA
 XJ
 XJ
 ok
-Sz
+YV
 aO
 YV
 JY

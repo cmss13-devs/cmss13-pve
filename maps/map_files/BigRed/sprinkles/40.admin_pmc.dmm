@@ -214,7 +214,6 @@
 "aK" = (
 /obj/structure/surface/table,
 /obj/item/device/radio/marine,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/weapon/gun/pistol/m4a3/training{
 	name = "dented M4A3 service pistol"
 	},

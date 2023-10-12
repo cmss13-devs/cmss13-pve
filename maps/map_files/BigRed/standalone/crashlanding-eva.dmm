@@ -1183,12 +1183,6 @@
 	icon_state = "wood-broken6"
 	},
 /area/bigredv2/outside/general_offices)
-"oB" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/general_offices)
 "xT" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/mars_cave{
@@ -1202,12 +1196,6 @@
 /area/bigredv2/outside/general_offices)
 "IB" = (
 /obj/item/stack/rods,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/bigredv2/outside/general_offices)
-"Kf" = (
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -1573,7 +1561,7 @@ aB
 aO
 aO
 aX
-Kf
+aW
 aO
 aO
 aO
@@ -2041,7 +2029,7 @@ bb
 bb
 bR
 bb
-oB
+bb
 bb
 cx
 aI

@@ -21,12 +21,6 @@
 "e" = (
 /turf/closed/wall/prison,
 /area/template_noop)
-"g" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
 "i" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
 	dir = 1;
@@ -303,7 +297,7 @@ i
 y
 "}
 (8,1,1) = {"
-g
+y
 F
 V
 d

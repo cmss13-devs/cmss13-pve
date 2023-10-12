@@ -209,15 +209,9 @@
 	icon_state = "cult"
 	},
 /area/lv624/lazarus/armory)
-"Y" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
 
 (1,1,1) = {"
-Y
+a
 a
 a
 a

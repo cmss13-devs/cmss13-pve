@@ -51,7 +51,6 @@
 	dir = 1
 	},
 /obj/item/storage/belt/medical/full,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whiteblue"
@@ -93,7 +92,6 @@
 /area/lv624/lazarus/medbay)
 "at" = (
 /obj/structure/surface/table/reinforced,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor{
 	icon_state = "whitebluefull"
 	},
@@ -386,7 +384,6 @@
 "us" = (
 /obj/structure/filingcabinet,
 /obj/structure/machinery/light,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "whiteblue"
 	},
@@ -439,7 +436,6 @@
 /area/lv624/lazarus/medbay)
 "CZ" = (
 /obj/item/bedsheet/medical,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -557,7 +553,6 @@
 /area/lv624/lazarus/medbay)
 "Vq" = (
 /obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "whiteblue"
 	},
