@@ -325,6 +325,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /datum/admins/proc/imaginary_friend)
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/togglebuildmodeself)
+		add_verb(src, /client/proc/toggle_game_master)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -354,6 +355,7 @@ var/list/roundstart_mod_verbs = list(
 	remove_verb(src, list(
 		admin_verbs_default,
 		/client/proc/togglebuildmodeself,
+		/client/proc/toggle_game_master,
 		admin_verbs_admin,
 		admin_verbs_ban,
 		admin_verbs_minor_event,
