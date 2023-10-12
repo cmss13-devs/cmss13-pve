@@ -45,7 +45,6 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
@@ -173,7 +172,6 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/pamphlet/engineer,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
@@ -186,7 +184,6 @@
 	pixel_x = 10;
 	pixel_y = -3
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /obj/item/storage/backpack/marine/engineerpack/satchel,
 /turf/open/floor/prison{
 	dir = 4;

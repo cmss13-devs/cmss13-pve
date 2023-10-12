@@ -17779,9 +17779,6 @@
 /area/almayer/squads/alpha)
 "bti" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/intel{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	dir = 10;
 	icon_state = "silver"
@@ -30276,7 +30273,6 @@
 	},
 /area/almayer/hull/upper_hull/u_a_p)
 "dnm" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/intelligence_officer,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -37403,7 +37399,7 @@
 	name = "Brig Cells Telephone";
 	phone_category = "Almayer";
 	phone_id = "Brig Cells";
-	pixel_x = 15;
+	pixel_x = 15
 	},
 /turf/open/floor/almayer,
 /area/almayer/shipboard/brig/processing)
@@ -39569,7 +39565,6 @@
 /area/almayer/engineering/engine_core)
 "hgB" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/intel,
 /turf/open/floor/almayer{
 	dir = 8;
 	icon_state = "silvercorner"
@@ -43184,7 +43179,6 @@
 /area/almayer/lifeboat_pumps/south1)
 "iLf" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/almayer,
 /area/almayer/command/computerlab)
 "iLh" = (
@@ -55502,7 +55496,6 @@
 /turf/open/floor/wood/ship,
 /area/almayer/shipboard/brig/cells)
 "nYf" = (
-/obj/structure/machinery/cm_vending/clothing/intelligence_officer,
 /turf/open/floor/almayer{
 	icon_state = "silverfull"
 	},
@@ -61282,7 +61275,6 @@
 /area/almayer/squads/charlie_delta_shared)
 "qyZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/view_objectives,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -61859,7 +61851,6 @@
 /area/almayer/command/airoom)
 "qLV" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/almayer{
 	dir = 4;
 	icon_state = "silver"
@@ -63485,12 +63476,6 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/shipboard/navigation)
-"rxO" = (
-/obj/structure/machinery/cm_vending/clothing/intelligence_officer,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
-/area/almayer/command/computerlab)
 "rxV" = (
 /obj/structure/barricade/handrail,
 /obj/structure/largecrate/supply/generator,
@@ -63877,7 +63862,6 @@
 	},
 /area/almayer/squads/delta)
 "rEL" = (
-/obj/structure/machinery/cm_vending/gear/intelligence_officer,
 /turf/open/floor/almayer{
 	icon_state = "silverfull"
 	},
@@ -64530,7 +64514,7 @@
 	name = "Requisition Telephone";
 	phone_category = "Almayer";
 	phone_id = "Requisition";
-	pixel_y = 30;
+	pixel_y = 30
 	},
 /turf/open/floor/almayer{
 	dir = 5;
@@ -73513,9 +73497,6 @@
 /obj/structure/machinery/computer/ares_console{
 	pixel_x = 9
 	},
-/obj/structure/machinery/computer/view_objectives{
-	pixel_x = -9
-	},
 /turf/open/floor/almayer/no_build{
 	icon_state = "plating"
 	},
@@ -79099,9 +79080,6 @@
 	dir = 8
 	},
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/view_objectives{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	dir = 8;
 	icon_state = "silver"
@@ -119581,7 +119559,7 @@ nYf
 rEL
 dnm
 rEL
-rxO
+rEL
 aHq
 cnE
 liJ

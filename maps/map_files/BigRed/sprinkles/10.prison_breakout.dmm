@@ -61,7 +61,6 @@
 /area/bigredv2/outside/n)
 "ak" = (
 /obj/structure/pipes/vents/pump,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -632,7 +631,6 @@
 /area/bigredv2/outside/marshal_office)
 "bO" = (
 /obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor{
 	icon_state = "darkish"
 	},
@@ -669,7 +667,6 @@
 "bT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "dark"
 	},
@@ -1153,43 +1150,6 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/marshal_office)
-"fD" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/floor,
-/area/bigredv2/outside/marshal_office)
-"gJ" = (
-/obj/structure/closet/secure_closet/brig,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/marshal_office)
-"ix" = (
-/obj/structure/closet/secure_closet/brig,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/marshal_office)
-"qm" = (
-/obj/structure/bed,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/marshal_office)
-"zX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/marshal_office)
 
 (1,1,1) = {"
 aa
@@ -1236,7 +1196,7 @@ cA
 bi
 bG
 cZ
-gJ
+de
 dj
 "}
 (3,1,1) = {"
@@ -1332,7 +1292,7 @@ cA
 bk
 bG
 cZ
-ix
+de
 dj
 "}
 (7,1,1) = {"
@@ -1476,7 +1436,7 @@ cE
 cR
 bG
 da
-qm
+df
 dj
 "}
 (13,1,1) = {"
@@ -1520,7 +1480,7 @@ cZ
 cc
 bG
 aP
-fD
+bc
 bi
 bL
 cZ
@@ -1606,7 +1566,7 @@ aj
 aj
 ah
 aE
-zX
+aN
 aU
 be
 ah

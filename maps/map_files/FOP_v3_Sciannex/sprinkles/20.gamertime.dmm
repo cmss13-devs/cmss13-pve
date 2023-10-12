@@ -394,7 +394,6 @@
 "QF" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/newspaper,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},

@@ -85,7 +85,6 @@
 "ap" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/hypospray/autoinjector/yautja,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -98,7 +97,6 @@
 /obj/item/tool/surgery/hemostat/predatorhemostat,
 /obj/item/tool/surgery/retractor/predatorretractor,
 /obj/item/tool/surgery/scalpel/predatorscalpel,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -106,15 +104,6 @@
 /area/lv624/lazarus/research)
 "ar" = (
 /turf/closed/wall,
-/area/lv624/lazarus/research)
-"as" = (
-/obj/structure/surface/table,
-/obj/item/storage/fancy/vials/random,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
-	},
 /area/lv624/lazarus/research)
 "at" = (
 /obj/structure/surface/table,
@@ -250,7 +239,6 @@
 	},
 /obj/item/paper/research_notes,
 /obj/item/prop/alien/hugger,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -286,7 +274,6 @@
 /obj/structure/surface/table,
 /obj/structure/machinery/cell_charger,
 /obj/item/tool/crowbar,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -353,7 +340,6 @@
 /area/lv624/lazarus/research)
 "aW" = (
 /obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "freezerfloor"
 	},
@@ -393,7 +379,6 @@
 "bb" = (
 /obj/structure/surface/table,
 /obj/item/weapon/yautja/scythe,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -436,7 +421,6 @@
 "bi" = (
 /obj/structure/surface/table,
 /obj/item/weapon/yautja/knife,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -488,12 +472,6 @@
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
-	},
-/area/lv624/lazarus/research)
-"vn" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	icon_state = "freezerfloor"
 	},
 /area/lv624/lazarus/research)
 "zm" = (
@@ -583,7 +561,7 @@ ao
 ao
 ao
 ab
-as
+Zw
 ak
 ec
 ab
@@ -623,7 +601,7 @@ al
 aG
 aX
 aX
-vn
+aX
 ac
 aa
 "}
@@ -664,7 +642,7 @@ ab
 (7,1,1) = {"
 ac
 LE
-as
+Zw
 ec
 al
 ar
