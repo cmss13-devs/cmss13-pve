@@ -536,7 +536,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/so
-	name = "USCM Staff Officer (SO)"
+	name = "USCM Platoon Commander (PltCO)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/silver
@@ -544,7 +544,7 @@
 	assignment = JOB_SO
 	rank = JOB_SO
 	paygrade = "MO2"
-	role_comm_title = "SO"
+	role_comm_title = "PltCO"
 	minimum_age = 25
 	skills = /datum/skills/SO
 

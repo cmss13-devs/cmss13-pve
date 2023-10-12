@@ -14,11 +14,11 @@
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
-#define JOB_SQUAD_LEADER "Squad Leader"
+#define JOB_SQUAD_LEADER "Platoon Sergeant"
 #define JOB_SQUAD_ENGI "Combat Technician"
 #define JOB_SQUAD_MEDIC "Hospital Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
-#define JOB_SQUAD_TEAM_LEADER "Fireteam Leader"
+#define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
@@ -68,7 +68,7 @@ var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
 #define JOB_CO "Commanding Officer"
 #define JOB_XO "Executive Officer"
-#define JOB_SO "Staff Officer"
+#define JOB_SO "Platoon Commander"
 #define JOB_COMMAND_ROLES /datum/timelock/command
 #define JOB_COMMAND_ROLES_LIST   list(JOB_CO, JOB_XO, JOB_SO)
 var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST

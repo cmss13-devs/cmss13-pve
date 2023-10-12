@@ -259,7 +259,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SQUAD_MEDIC
 	rank = JOB_SQUAD_MEDIC
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
 
@@ -285,14 +285,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Fireteam Leader"
+	name = "USCM Squad Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrade = "ME5"
-	role_comm_title = "FTL"
+	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
@@ -305,7 +305,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/tl/cryo
-	name = "USCM Cryo Fireteam Leader"
+	name = "USCM Cryo Squad Sergeant"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/tl/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -347,7 +347,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
-	name = "USCM Squad Leader"
+	name = "USCM Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
@@ -368,7 +368,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/cryo
-	name = "USCM Cryo Squad Leader"
+	name = "USCM Cryo Platoon Sergeant"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/leader/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -425,14 +425,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader_equipped
-	name = "USCM Squad Leader (Equipped)"
+	name = "USCM Platoon Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "ME5"
-	role_comm_title = "SL"
+	paygrade = "ME7"
+	role_comm_title = "PltSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -458,7 +458,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/leader_equipped/cryo
-	name = "USCM Cryo Squad Leader (Equipped)"
+	name = "USCM Cryo Platoon Sergeant (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //*****************************************************************************************************/
@@ -547,7 +547,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SQUAD_MEDIC
 	rank = JOB_SQUAD_MEDIC
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
 
@@ -659,14 +659,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl_equipped
-	name = "USCM Fireteam Leader (Equipped)"
+	name = "USCM Squad Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
-	paygrade = "ME4"
-	role_comm_title = "TL"
+	paygrade = "ME5"
+	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
@@ -690,7 +690,7 @@
 	new_human.back.pickup()
 
 /datum/equipment_preset/uscm/tl_equipped/cryo
-	name = "USCM Cryo Fireteam Leader (Equipped)"
+	name = "USCM Cryo Squad Sergeant (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //############ Marine Raiders #############

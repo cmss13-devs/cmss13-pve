@@ -272,6 +272,9 @@
 /turf/open/floor/almayer/uscm/directional
 	icon_state = "logo_directional"
 
+/turf/open/floor/almayer/uscm/directional/up_down
+	icon_state = "logo_directional1"
+
 /turf/open/floor/almayer/no_build
 	allow_construction = FALSE
 	hull_floor = TRUE
