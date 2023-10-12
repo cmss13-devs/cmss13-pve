@@ -88,14 +88,6 @@
 	icon_state = "whitepurple"
 	},
 /area/lv624/lazarus/research)
-"aq" = (
-/obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
-	},
-/area/lv624/lazarus/research)
 "ar" = (
 /obj/structure/machinery/chem_master,
 /turf/open/floor{
@@ -201,7 +193,6 @@
 	pixel_y = 12
 	},
 /obj/structure/machinery/light,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitepurple"
@@ -294,7 +285,6 @@
 	pixel_y = 5
 	},
 /obj/item/storage/fancy/vials/random,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -359,7 +349,6 @@
 /area/lv624/lazarus/research)
 "bb" = (
 /obj/item/clothing/glasses/regular,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -368,15 +357,6 @@
 /obj/structure/surface/table,
 /turf/open/floor{
 	icon_state = "freezerfloor"
-	},
-/area/lv624/lazarus/research)
-"bn" = (
-/obj/structure/surface/table,
-/obj/item/paper/research_notes,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
 	},
 /area/lv624/lazarus/research)
 "bp" = (
@@ -428,12 +408,6 @@
 	icon_state = "white"
 	},
 /area/lv624/lazarus/research)
-"ky" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	icon_state = "freezerfloor"
-	},
-/area/lv624/lazarus/research)
 "oe" = (
 /obj/structure/transmitter/colony_net{
 	phone_category = "Lazarus Landing";
@@ -479,15 +453,6 @@
 	icon_state = "white"
 	},
 /area/lv624/lazarus/research)
-"Mu" = (
-/obj/structure/surface/table,
-/obj/item/storage/fancy/vials/random,
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
-	},
-/area/lv624/lazarus/research)
 "Tz" = (
 /obj/structure/surface/table,
 /obj/item/paper/research_notes,
@@ -521,7 +486,7 @@ ao
 ao
 ao
 ab
-Mu
+qs
 Jv
 ay
 ab
@@ -534,7 +499,7 @@ aa
 (3,1,1) = {"
 aa
 ai
-aq
+aj
 as
 aF
 au
@@ -561,7 +526,7 @@ ay
 aL
 wY
 wY
-ky
+wY
 ac
 aa
 "}
@@ -602,7 +567,7 @@ ab
 (7,1,1) = {"
 ac
 Tz
-aq
+aj
 ay
 ay
 au
@@ -670,7 +635,7 @@ ab
 (11,1,1) = {"
 ae
 ai
-Mu
+qs
 ay
 aJ
 ab
@@ -680,7 +645,7 @@ ay
 ab
 aP
 ay
-aq
+aj
 ac
 bE
 "}
@@ -712,7 +677,7 @@ aS
 bb
 ay
 ab
-bn
+Tz
 Tz
 aj
 ac

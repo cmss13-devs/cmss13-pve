@@ -19,17 +19,6 @@
 /obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
 
-/*
-// WALLS
-/turf/closed/wall/xeno_ai_obstacle(var/mob/living/carbon/xenomorph/X)
-	if(hull || claws_minimum > X.claw_type)
-		return ..()
-	return ((damage_cap - damage)/damage_cap)*WALL_PENALTY
-
-/turf/closed/wall/xeno_ai_act(var/mob/living/carbon/xenomorph/X)
-	X.do_click(src)
-*/
-
 // OBJECTS
 /obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
 	if(!density)

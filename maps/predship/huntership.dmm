@@ -1807,8 +1807,7 @@
 	name = "Armory Shutters";
 	needs_power = 0;
 	pixel_x = 24;
-	req_one_access_txt = "392";
-	needs_power = 0
+	req_one_access_txt = "392"
 	},
 /turf/open/floor/corsat{
 	dir = 1;

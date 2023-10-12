@@ -115,7 +115,6 @@
 /area/template_noop)
 "m" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full,
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/reagent_container/food/snacks/grown/tomato,
 /obj/item/reagent_container/food/snacks/grown/tomato,
 /obj/item/reagent_container/food/snacks/grown/tomato,

@@ -54,10 +54,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
-"x" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/south_central_caves)
 "y" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/barrens/west_barrens)
@@ -463,7 +459,7 @@ C
 C
 g
 C
-x
+C
 l
 l
 l
@@ -664,7 +660,7 @@ l
 l
 l
 l
-x
+C
 C
 C
 C

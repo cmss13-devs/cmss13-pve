@@ -247,12 +247,6 @@
 	icon_state = "cult"
 	},
 /area/lv624/lazarus/armory)
-"H" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/armory)
 
 (1,1,1) = {"
 a
@@ -298,7 +292,7 @@ i
 k
 p
 p
-H
+p
 A
 i
 "}

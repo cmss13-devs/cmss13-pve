@@ -142,7 +142,6 @@
 	health = 1;
 	on = 0
 	},
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "bot"

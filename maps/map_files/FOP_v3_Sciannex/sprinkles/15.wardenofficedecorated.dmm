@@ -28,7 +28,6 @@
 /area/template_noop)
 "s" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/wood,
 /area/template_noop)
 "t" = (
