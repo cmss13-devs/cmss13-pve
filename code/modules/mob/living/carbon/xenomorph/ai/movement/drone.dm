@@ -26,16 +26,19 @@
 				if(potential_home.weeds)
 					continue
 
-				if(/obj/effect/alien/weeds/node in range(3, potential_home))
+				if(!potential_home.is_weedable())
+					continue
+
+				if(locate(/obj/effect/alien/weeds/node) in range(3, potential_home))
 					continue
 
 				if(potential_home.density)
 					continue
 
-				if(shortest_distance && get_dist(X, potential_home) < shortest_distance)
+				if(shortest_distance && get_dist(X, potential_home) > shortest_distance)
 					continue
 
-				shortest_distance = get_dist(X, potential_home) < shortest_distance
+				shortest_distance = get_dist(X, potential_home)
 				home_turf = potential_home
 
 	if(!home_turf)
