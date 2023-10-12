@@ -548,6 +548,11 @@
 	icon_state = "livingspace"
 	fake_zlevel = 1 // upperdeck
 
+/area/almayer/living/platoon_commander_rooms
+	name = "\improper Platoon Commander's Rooms"
+	icon_state = "livingspace"
+	fake_zlevel = 1 // upperdeck
+
 /area/almayer/living/chapel
 	name = "\improper Almayer Chapel"
 	icon_state = "officerrnr"
