@@ -824,7 +824,6 @@
 "Fl" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/storage/pill_bottle/kelotane/skillless,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison,
 /area/template_noop)
 "Fo" = (
@@ -877,7 +876,6 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "Gp" = (
-/obj/effect/landmark/objective_landmark/medium,
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/trash/plate{
 	pixel_x = -7

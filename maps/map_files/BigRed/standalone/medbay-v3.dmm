@@ -267,7 +267,6 @@
 /area/bigredv2/outside/medical)
 "aO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
@@ -1335,7 +1334,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitebluefull"
@@ -2056,33 +2054,6 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/medical)
-"om" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/medical)
-"DL" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/outside/medical)
-"GP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "damaged3"
-	},
-/area/bigredv2/outside/medical)
-"MK" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "damaged5"
-	},
-/area/bigredv2/outside/medical)
 "Xh" = (
 /obj/structure/transmitter/colony_net{
 	phone_category = "Solaris Ridge";
@@ -2158,7 +2129,7 @@ Xh
 aM
 aU
 ai
-DL
+aT
 bR
 bn
 ai
@@ -2646,7 +2617,7 @@ dw
 dH
 bn
 aT
-MK
+aM
 bD
 aL
 aM
@@ -2714,7 +2685,7 @@ aa
 "}
 (23,1,1) = {"
 af
-om
+at
 at
 bh
 bh
@@ -2788,7 +2759,7 @@ dP
 dX
 bZ
 er
-GP
+aQ
 ed
 aL
 aD

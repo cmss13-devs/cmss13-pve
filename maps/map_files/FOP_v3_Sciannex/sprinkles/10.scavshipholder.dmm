@@ -133,7 +133,6 @@
 /area/template_noop)
 "kA" = (
 /obj/structure/bed/chair/dropship/pilot,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -214,10 +213,6 @@
 "nV" = (
 /obj/structure/machinery/power/apc,
 /turf/open/floor/almayer,
-/area/template_noop)
-"od" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
 "oh" = (
 /turf/open/floor/plating/prison,
@@ -788,7 +783,7 @@ nF
 nF
 Yj
 qI
-od
+oH
 bC
 xS
 UJ

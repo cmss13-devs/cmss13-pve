@@ -1381,7 +1381,6 @@
 "ej" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/syndi_cakes,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor{
 	icon_state = "dark"
 	},
@@ -1615,12 +1614,6 @@
 /obj/effect/landmark/survivor_spawner/bigred_crashed_cl,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
-	},
-/area/bigredv2/outside/office_complex)
-"Vg" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
 	},
 /area/bigredv2/outside/office_complex)
 "XH" = (
@@ -1992,7 +1985,7 @@ aC
 aO
 aV
 aV
-Vg
+bm
 yS
 Lk
 id

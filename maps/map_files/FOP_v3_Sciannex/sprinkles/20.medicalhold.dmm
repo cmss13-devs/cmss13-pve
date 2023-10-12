@@ -207,7 +207,6 @@
 	pixel_x = 7;
 	pixel_y = 14
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "nx" = (

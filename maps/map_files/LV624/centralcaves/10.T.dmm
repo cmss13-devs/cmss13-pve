@@ -68,10 +68,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/central_caves)
-"C" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/south_central_caves)
 "G" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/gm/dirt,
@@ -158,7 +154,7 @@ w
 f
 A
 V
-C
+V
 l
 l
 l
@@ -211,7 +207,7 @@ l
 l
 l
 l
-C
+V
 V
 V
 V
@@ -678,7 +674,7 @@ V
 V
 G
 V
-C
+V
 l
 l
 l
