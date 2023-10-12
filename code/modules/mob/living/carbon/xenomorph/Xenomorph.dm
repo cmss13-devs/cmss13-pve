@@ -359,7 +359,7 @@
 	var/atom/movable/vis_obj/xeno_wounds/wound_icon_carrier
 	var/atom/movable/vis_obj/xeno_pack/backpack_icon_carrier
 
-/mob/living/carbon/xenomorph/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number)
+/mob/living/carbon/xenomorph/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	var/area/A = get_area(src)
 	if(A && A.statistic_exempt)
 		statistic_exempt = TRUE
@@ -513,7 +513,7 @@
 	Decorate()
 
 	RegisterSignal(src, COMSIG_MOB_SCREECH_ACT, PROC_REF(handle_screech_act))
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_XENO_SPAWN, src)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_XENO_SPAWN, src, ai_hard_off)
 
 /mob/living/carbon/xenomorph/proc/handle_screech_act(mob/self, mob/living/carbon/xenomorph/queen/queen)
 	SIGNAL_HANDLER

@@ -46,9 +46,12 @@
 /datum/game_mode/colonialmarines/ai/end_round_message()
 	return ..()
 
-/datum/game_mode/colonialmarines/ai/proc/handle_xeno_spawn(datum/source, mob/living/carbon/xenomorph/X)
+/datum/game_mode/colonialmarines/ai/proc/handle_xeno_spawn(datum/source, mob/living/carbon/xenomorph/spawning_xeno, ai_hard_off = FALSE)
 	SIGNAL_HANDLER
-	X.make_ai()
+	if(ai_hard_off)
+		return
+
+	spawning_xeno.make_ai()
 
 /datum/game_mode/colonialmarines/ai/check_win()
 	if(!game_started || round_finished || SSticker.current_state != GAME_STATE_PLAYING)
