@@ -128,6 +128,7 @@
 	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = ALPHA_FREQ
 	minimap_color = MINIMAP_SQUAD_ALPHA
+	use_stripe_overlay = FALSE
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
