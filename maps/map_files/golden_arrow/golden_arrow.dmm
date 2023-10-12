@@ -197,6 +197,14 @@
 	dir = 6
 	},
 /area/almayer/living/briefing)
+"hZ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Briefing Room"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/living/briefing)
 "iA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp,
@@ -217,6 +225,12 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"jV" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/living/briefing)
 "kB" = (
 /turf/closed/wall/almayer/outer,
 /area/almayer/living/briefing)
@@ -354,15 +368,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
-"rI" = (
-/obj/structure/bed/chair/comfy/alpha{
-	dir = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/briefing)
 "rM" = (
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/almayer,
@@ -483,15 +488,6 @@
 /obj/structure/cargo_container/arious/right,
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
-"xr" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/almayer/living/briefing)
 "yn" = (
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -695,15 +691,10 @@
 	},
 /area/almayer/living/briefing)
 "HC" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Briefing Room"
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin/uscm,
+/obj/item/tool/pen,
+/turf/open/floor/almayer,
 /area/almayer/living/briefing)
 "HH" = (
 /obj/structure/machinery/status_display{
@@ -868,10 +859,13 @@
 	},
 /area/almayer/living/platoon_commander_rooms)
 "NO" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin/uscm,
-/obj/item/tool/pen,
-/turf/open/floor/almayer,
+/obj/structure/bed/chair/comfy/alpha{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/almayer/living/briefing)
 "OA" = (
 /obj/structure/bed/chair/comfy/alpha{
@@ -12782,7 +12776,7 @@ gs
 Ks
 Ks
 Ks
-HC
+hZ
 Cr
 Cr
 Cr
@@ -12934,7 +12928,7 @@ PY
 Pr
 Pr
 Pr
-xr
+jV
 Cr
 Cr
 Cr
@@ -13080,8 +13074,8 @@ Ds
 OA
 OA
 Gx
-rI
-rI
+NO
+NO
 Fl
 Ks
 Ks
@@ -13224,7 +13218,7 @@ qA
 qA
 qA
 FN
-NO
+HC
 HJ
 Ks
 ZR

@@ -21,12 +21,12 @@
 
 /datum/xeno_ai_movement/proc/ai_move_idle(delta_time, game_evaluation)
 	SHOULD_NOT_SLEEP(TRUE)
-	var/mob/living/carbon/xenomorph/X = parent
-	if(X.throwing)
+	var/mob/living/carbon/xenomorph/idle_xeno = parent
+	if(idle_xeno.throwing)
 		return
 
-	if(next_home_search < world.time && (!home_turf || !home_turf.weeds || get_dist(home_turf, X) > max_distance_from_home))
-		var/turf/T = get_turf(X.loc)
+	if(next_home_search < world.time && (!home_turf || !home_turf.weeds || get_dist(home_turf, idle_xeno) > max_distance_from_home))
+		var/turf/T = get_turf(idle_xeno.loc)
 		next_home_search = world.time + home_search_delay
 		if(T.weeds)
 			home_turf = T
@@ -34,15 +34,16 @@
 			var/shortest_distance = INFINITY
 			for(var/i in RANGE_TURFS(home_locate_range, T))
 				var/turf/potential_home = i
-				if(potential_home.weeds && !potential_home.density && get_dist(X, potential_home) < shortest_distance)
+				if(potential_home.weeds && !potential_home.density && get_dist(idle_xeno, potential_home) < shortest_distance)
 					home_turf = potential_home
+					shortest_distance = get_dist(idle_xeno, potential_home)
 
 	if(!home_turf)
 		return
 
-	if(X.move_to_next_turf(home_turf, home_locate_range))
-		if(get_dist(home_turf, X) <= 0 && !X.resting)
-			X.lay_down()
+	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range))
+		if(get_dist(home_turf, idle_xeno) <= 0 && !idle_xeno.resting)
+			idle_xeno.lay_down()
 	else
 		home_turf = null
 
