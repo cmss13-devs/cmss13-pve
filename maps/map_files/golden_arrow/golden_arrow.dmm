@@ -9,6 +9,9 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"ag" = (
+/turf/closed/wall/almayer,
+/area/almayer/living/cafeteria_port)
 "al" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -25,7 +28,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "ar" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
@@ -84,13 +87,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "aQ" = (
 /obj/structure/surface/rack,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "aT" = (
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
@@ -143,7 +146,7 @@
 /obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "bQ" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
@@ -157,7 +160,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "bS" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin{
@@ -167,7 +170,10 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"bZ" = (
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_one)
 "ca" = (
 /turf/closed/wall/almayer/outer,
 /area/almayer/hallways/hangar)
@@ -197,7 +203,7 @@
 "cB" = (
 /obj/structure/machinery/camera/autoname/almayer,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/hangar)
 "cJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -205,7 +211,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "cL" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/almayer{
@@ -217,7 +223,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "cO" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light{
@@ -226,7 +232,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "cU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -240,20 +246,23 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "cZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "dd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"dl" = (
+/turf/closed/wall/almayer,
+/area/almayer/squads/alpha/squad_two)
 "dv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
@@ -263,7 +272,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "dA" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1
@@ -285,7 +294,7 @@
 	dir = 5
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "dH" = (
 /obj/item/bedsheet/brown,
 /obj/structure/bed,
@@ -305,7 +314,7 @@
 	dir = 8;
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "dP" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/almayer{
@@ -329,11 +338,17 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"ed" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/living/cafeteria_port)
 "eo" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "eE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -345,7 +360,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "eH" = (
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/almayer{
@@ -365,7 +380,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "eU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -387,13 +402,17 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "ff" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
+"fg" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/living/grunt_rnr)
 "fl" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
@@ -427,7 +446,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "fL" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -435,11 +454,11 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "fO" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "gp" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/warning_stripes{
@@ -456,12 +475,25 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/briefing)
+"gt" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m41a{
+	pixel_y = 7
+	},
+/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41a{
+	pixel_y = -7
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_one)
 "gz" = (
 /obj/structure/ship_ammo/rocket/widowmaker,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "gD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -478,13 +510,13 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "gG" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "gI" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/alarm/almayer{
@@ -493,26 +525,41 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
+"gJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "gM" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
+"gO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "gQ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "gU" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "gV" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -537,6 +584,14 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"hq" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cafeteria_port)
 "hA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -549,6 +604,12 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
+"hQ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_one)
 "hS" = (
 /turf/closed/wall/almayer,
 /area/almayer/living/platoon_commander_rooms)
@@ -571,7 +632,7 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "io" = (
 /obj/structure/machinery/washing_machine,
 /obj/structure/machinery/washing_machine{
@@ -581,7 +642,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
+"it" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "iy" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -590,7 +657,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "iA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp,
@@ -611,12 +678,12 @@
 "iK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "iN" = (
 /turf/open/floor/almayer{
-	icon_state = "cargo"
+	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "iR" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -624,14 +691,20 @@
 /area/almayer/living/platoon_commander_rooms)
 "jc" = (
 /turf/closed/wall/almayer/outer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "je" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
+"jg" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "jl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -640,7 +713,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "jo" = (
 /turf/open/floor/almayer/uscm/directional/up_down{
 	dir = 8
@@ -658,13 +731,13 @@
 	pixel_y = -6
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "jM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "jO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -684,11 +757,8 @@
 	},
 /area/almayer/living/briefing)
 "kg" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 9
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/space)
+/turf/closed/wall/almayer,
+/area/almayer/living/grunt_rnr)
 "kl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/alarm/almayer{
@@ -697,7 +767,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "kB" = (
 /turf/closed/wall/almayer/outer,
 /area/almayer/living/briefing)
@@ -718,7 +788,11 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
+"kW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/almayer/living/grunt_rnr)
 "ld" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -730,13 +804,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "lm" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "lo" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -744,7 +818,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "lB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -775,10 +849,17 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "lI" = (
 /turf/open/floor/almayer/uscm/directional/up_down,
 /area/almayer/living/briefing)
+"lQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "mc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname/almayer{
@@ -788,7 +869,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "mg" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -813,13 +894,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "ml" = (
 /obj/structure/ship_ammo/minirocket,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "mm" = (
 /obj/structure/cargo_container/lockmart/mid{
 	layer = 3.1;
@@ -844,11 +925,11 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "mJ" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "mW" = (
 /obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/almayer{
@@ -884,13 +965,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "nC" = (
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "nN" = (
 /obj/structure/largecrate/random/secure,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -928,15 +1009,15 @@
 	health = 80
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "oa" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper NCO Preparation"
+	name = "\improper Sergeants Room"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "of" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -945,13 +1026,13 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/grunt_rnr)
 "og" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "ok" = (
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
@@ -959,13 +1040,19 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
+"ol" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/living/grunt_rnr)
 "ou" = (
 /turf/open/floor/almayer_hull{
 	dir = 1;
 	icon_state = "outerhull_dir"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "ov" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/megaphone,
@@ -981,6 +1068,12 @@
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/platoon_commander_rooms)
+"oH" = (
+/obj/structure/machinery/light,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cafeteria_port)
 "oK" = (
 /obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/almayer{
@@ -1003,7 +1096,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "oM" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -1012,11 +1105,25 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"oR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "pl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/hangar)
+"pt" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "pD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1026,6 +1133,12 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"pF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/almayer/hallways/port_hallway)
 "pG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1047,7 +1160,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "pZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -1059,17 +1172,17 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "qa" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "qh" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/hallways/hangar)
 "qi" = (
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -1082,7 +1195,13 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
+"qs" = (
+/obj/structure/largecrate/supply/ammo/m41a_box,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "qv" = (
 /obj/item/frame/camera{
 	desc = "The Staff Officer insisted he needed to monitor everyone at all times.";
@@ -1101,7 +1220,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "qw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -1110,14 +1229,14 @@
 /area/almayer/hallways/hangar)
 "qA" = (
 /turf/closed/wall/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "qH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "qK" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -1126,7 +1245,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "qT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1154,18 +1273,27 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"qX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/hallways/port_hallway)
 "rd" = (
 /obj/structure/closet,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "rh" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "rk" = (
 /obj/structure/cargo_container/arious/left,
 /turf/open/floor/almayer{
@@ -1180,7 +1308,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "ry" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/rifle/m41a{
@@ -1193,13 +1321,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "rA" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "rE" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -1207,7 +1335,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "rM" = (
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/almayer,
@@ -1216,12 +1344,16 @@
 /obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "rY" = (
 /turf/open/floor/almayer{
 	icon_state = "bluefull"
 	},
 /area/almayer/living/platoon_commander_rooms)
+"sg" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_one)
 "si" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -1229,7 +1361,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "sk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -1239,7 +1371,14 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
+"sv" = (
+/obj/structure/closet,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "sy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1253,11 +1392,16 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"sC" = (
+/turf/closed/wall/almayer/outer,
+/area/almayer/squads/alpha/platoon_sergeant)
 "sI" = (
-/turf/open/floor/almayer{
-	icon_state = "test_floor5"
-	},
-/area/space)
+/turf/closed/wall/almayer/outer,
+/area/almayer/living/cryo_cells)
+"sJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/almayer/living/grunt_rnr)
 "sN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1271,22 +1415,22 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "sR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Fireteam One Armoury"
+	name = "\improper Squad One Armoury"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "sS" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "sY" = (
 /obj/structure/closet/secure_closet/personal/cabinet{
 	req_access = null
@@ -1295,12 +1439,22 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/platoon_commander_rooms)
+"tr" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/hallways/port_hallway)
 "tv" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18"
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/platoon_commander_rooms)
+"tG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/almayer/hallways/hangar)
 "tT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -1309,7 +1463,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "tU" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -1326,7 +1480,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "tX" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -1335,7 +1489,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "ua" = (
 /obj/item/tool/warning_cone{
 	pixel_y = 16
@@ -1352,13 +1506,18 @@
 /obj/structure/machinery/faxmachine/uscm/command/capt,
 /turf/open/floor/almayer,
 /area/almayer/living/platoon_commander_rooms)
+"uw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/almayer/hallways/port_hallway)
 "uA" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "uF" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
@@ -1369,15 +1528,14 @@
 /obj/item/tool/warning_cone,
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
+"uH" = (
+/turf/closed/wall/almayer,
+/area/almayer/squads/alpha/squad_one)
 "uO" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "vb" = (
 /obj/structure/surface/table/reinforced/almayer_B{
 	layer = 2.0;
@@ -1418,7 +1576,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "vp" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/gunoil{
@@ -1429,7 +1587,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "vt" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -1444,7 +1602,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "vL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -1452,18 +1610,18 @@
 	pixel_y = 2
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "vN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "vP" = (
 /obj/structure/machinery/light,
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "vS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1491,7 +1649,13 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
+"wp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/hallways/port_hallway)
 "wu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -1506,7 +1670,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "wx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1516,7 +1680,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
+"wz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/hallways/hangar)
 "wK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -1525,7 +1695,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "wS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1533,26 +1703,37 @@
 	pixel_y = 2
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "wV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "wZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
+"xc" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Canteen"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/living/cafeteria_port)
 "xe" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "xh" = (
 /obj/structure/cargo_container/arious/right,
 /turf/open/floor/almayer,
@@ -1585,13 +1766,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "xq" = (
 /obj/structure/machinery/cryopod/right,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "xH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/firealarm{
@@ -1600,11 +1781,11 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "ya" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "yj" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -1613,12 +1794,18 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "yn" = (
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
 /area/almayer/living/briefing)
+"ys" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_one)
 "yu" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -1626,7 +1813,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "yv" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -1635,7 +1822,14 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"yx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cafeteria_port)
 "yD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1644,12 +1838,12 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "yF" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "yZ" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -1658,6 +1852,21 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"ze" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/almayer/living/cafeteria_port)
+"zs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "zv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1666,7 +1875,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "zy" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -1705,7 +1914,19 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
+"zJ" = (
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer,
+/area/almayer/hallways/hangar)
+"zK" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_two)
 "zM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -1721,19 +1942,19 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "zV" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Af" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Ao" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
@@ -1747,7 +1968,10 @@
 	health = 80
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
+"As" = (
+/turf/open/floor/almayer,
+/area/almayer/living/grunt_rnr)
 "Ax" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
@@ -1756,7 +1980,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "AF" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -1764,7 +1988,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "AG" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -1797,13 +2021,22 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Bf" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
 /area/almayer/hallways/hangar)
+"Bh" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "Bj" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer{
@@ -1832,7 +2065,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "BP" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1856,12 +2089,12 @@
 /area/almayer/hallways/hangar)
 "Cg" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Fireteam Two Armoury"
+	name = "\improper Squad Two Armoury"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Cl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1874,7 +2107,7 @@
 /area/space)
 "Cu" = (
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Cv" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -1904,6 +2137,15 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"CX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cafeteria_port)
 "CZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -1926,7 +2168,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Ds" = (
 /obj/structure/platform{
 	dir = 1
@@ -1939,7 +2181,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "DB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1958,7 +2200,7 @@
 	pixel_x = 28
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "DM" = (
 /obj/structure/machinery/power/apc/almayer,
 /turf/open/floor/almayer,
@@ -1981,10 +2223,10 @@
 	dir = 5
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Ea" = (
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/hallways/hangar)
 "Eb" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -1999,7 +2241,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Eo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/almayer{
@@ -2008,7 +2250,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "Ex" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/bed/chair/comfy/alpha{
@@ -2025,13 +2267,22 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
+"EF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/hallways/port_hallway)
 "EO" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "EQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -2044,7 +2295,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "ER" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -2060,13 +2311,13 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "EY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/ammo_box/magazine/heap/empty,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "EZ" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
@@ -2075,6 +2326,10 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"Fe" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer/outer,
+/area/almayer/squads/alpha/squad_one)
 "Fj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Dorms"
@@ -2083,7 +2338,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "Fl" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -2105,14 +2360,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "FI" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "FN" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -2130,36 +2385,56 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "FS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "FT" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/living/grunt_rnr)
+"FV" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/almayer/living/cafeteria_port)
+"FW" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
+"FX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "Gf" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Gi" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Gq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Gx" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
@@ -2171,7 +2446,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "GJ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/ashtray/bronze{
@@ -2197,7 +2472,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "GL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -2210,7 +2485,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "GN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2236,7 +2511,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "Hb" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light{
@@ -2246,13 +2521,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Hf" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Hj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/janitorialcart,
@@ -2263,7 +2538,11 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
+"Hm" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/platoon_sergeant)
 "HC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm,
@@ -2284,7 +2563,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "HH" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
@@ -2297,6 +2576,9 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/briefing)
+"HK" = (
+/turf/closed/wall/almayer,
+/area/almayer/living/cryo_cells)
 "HV" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
@@ -2313,12 +2595,16 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "IC" = (
 /obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
+"ID" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_two)
 "IT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2345,7 +2631,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "IW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2361,7 +2647,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "Jb" = (
 /obj/structure/stairs{
 	icon_state = "ramptop"
@@ -2389,13 +2675,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "Jn" = (
 /obj/structure/toilet{
 	pixel_y = 16
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "Jq" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
@@ -2413,7 +2699,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"JA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "JD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -2425,7 +2717,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "JJ" = (
 /obj/structure/machinery/camera/autoname/almayer{
 	dir = 1;
@@ -2442,7 +2734,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Ke" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2465,7 +2757,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Ks" = (
 /turf/open/floor/almayer,
 /area/almayer/living/briefing)
@@ -2476,7 +2768,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Kx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2486,7 +2778,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "KH" = (
 /obj/vehicle/powerloader,
 /turf/open/floor/almayer,
@@ -2496,7 +2788,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "KO" = (
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
@@ -2507,23 +2799,23 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "KQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "KU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "KY" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "Ld" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -2531,7 +2823,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Lg" = (
 /obj/docking_port/stationary/marine_dropship/almayer_hangar_1,
 /obj/effect/landmark/observer_start,
@@ -2542,13 +2834,13 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Ln" = (
 /obj/structure/ship_ammo/rocket/banshee,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Lo" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -2564,7 +2856,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Lx" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
@@ -2586,20 +2878,20 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "LJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/grunt_rnr)
 "LQ" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "LZ" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer,
@@ -2608,7 +2900,7 @@
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 "Mj" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
@@ -2633,7 +2925,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "MB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -2666,7 +2958,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "MK" = (
 /turf/closed/wall/almayer/outer,
 /area/almayer/living/platoon_commander_rooms)
@@ -2684,12 +2976,12 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "MZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "Nf" = (
 /turf/open/floor/almayer/uscm/directional/up_down{
 	dir = 4
@@ -2698,7 +2990,7 @@
 "Ng" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Nk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -2711,7 +3003,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "NE" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -2749,12 +3041,12 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/living/grunt_rnr)
 "NT" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "NV" = (
 /obj/structure/machinery/cryopod/right{
 	pixel_y = 6
@@ -2762,7 +3054,13 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
+"Ob" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cafeteria_port)
 "Oj" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2771,13 +3069,13 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "Os" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "OA" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 1
@@ -2798,13 +3096,25 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "OJ" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"OX" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/almayer/living/grunt_rnr)
+"Pc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/almayer/living/cafeteria_port)
 "Ph" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2824,7 +3134,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Pr" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -2835,7 +3145,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Pv" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -2844,13 +3154,19 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "PM" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
+"PW" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/almayer/living/cafeteria_port)
 "PY" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -2876,6 +3192,10 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/platoon_commander_rooms)
+"Qi" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/squad_two)
 "Qk" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -2896,7 +3216,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "Qq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -2908,19 +3228,19 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Qu" = (
 /obj/structure/machinery/camera/autoname/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "QM" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "QN" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer{
@@ -2955,6 +3275,12 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
+"QX" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/platoon_sergeant)
 "Rg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2963,20 +3289,29 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"Rh" = (
+/turf/open/floor/almayer,
+/area/almayer/hallways/port_hallway)
 "Rl" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"Rv" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/living/cryo_cells)
 "Rx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "RT" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /turf/open/floor/almayer{
@@ -3000,7 +3335,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"Sl" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "So" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3009,7 +3350,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Sy" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
@@ -3017,7 +3358,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "SG" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "\improper Canteen"
@@ -3028,7 +3369,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "SL" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -3036,6 +3377,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
+"SO" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/almayer/hallways/port_hallway)
 "SR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3069,14 +3414,14 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "SY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Tb" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3088,7 +3433,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "Td" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -3101,7 +3446,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Tx" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
@@ -3110,6 +3455,12 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"Tz" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/squads/alpha/squad_two)
 "TC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/pdt_kit{
@@ -3117,7 +3468,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "TD" = (
 /obj/item/tool/crowbar/red{
 	pixel_x = -13;
@@ -3149,7 +3500,7 @@
 	current_mag = null
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "TP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3162,12 +3513,20 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"Uh" = (
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/almayer/living/cafeteria_port)
+"Uj" = (
+/turf/open/floor/almayer,
+/area/almayer/squads/alpha/platoon_sergeant)
 "Uv" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "UK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -3178,7 +3537,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
+"UO" = (
+/obj/structure/machinery/light,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/hallways/port_hallway)
 "UX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3188,7 +3553,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/hangar)
 "Va" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -3202,7 +3567,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Vc" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/light{
@@ -3211,7 +3576,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Ve" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -3219,13 +3584,13 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Vp" = (
 /obj/structure/largecrate/supply/ammo/m41a_box,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "Vr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3233,7 +3598,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Vv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3247,6 +3612,11 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"VX" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "Wg" = (
 /obj/structure/sign/safety/cryo{
 	pixel_x = 8;
@@ -3271,7 +3641,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/platoon_sergeant)
 "Wr" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/open/floor/almayer,
@@ -3301,7 +3671,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
 "Xa" = (
 /obj/structure/machinery/cryopod/right{
 	layer = 3.1;
@@ -3310,7 +3680,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Xd" = (
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -3330,7 +3700,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "Xy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3348,6 +3718,20 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"Xz" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/platoon_sergeant)
+"XI" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_one)
 "XJ" = (
 /turf/closed/wall/almayer,
 /area/almayer/living/briefing)
@@ -3357,7 +3741,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "Yh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3390,7 +3774,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/space)
+/area/almayer/hallways/port_hallway)
 "YA" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -3420,7 +3804,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/living/grunt_rnr)
 "YG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3429,7 +3813,7 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
 "YK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3438,17 +3822,23 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cafeteria_port)
+"YP" = (
+/turf/closed/wall/almayer/outer,
+/area/almayer/living/cafeteria_port)
 "Zb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/outer,
-/area/space)
+/area/almayer/squads/alpha/squad_two)
 "Zf" = (
 /obj/structure/machinery/camera/autoname/almayer,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/almayer/living/cryo_cells)
+"Zk" = (
+/turf/closed/wall/almayer/outer,
+/area/almayer/squads/alpha/squad_one)
 "Zv" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -3467,7 +3857,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/hallways/port_hallway)
 "ZC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -3475,7 +3865,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/almayer/squads/alpha/squad_one)
 "ZL" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3491,7 +3881,7 @@
 /obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/almayer/living/cryo_cells)
 
 (1,1,1) = {"
 Cr
@@ -10278,8 +10668,8 @@ Cr
 Cr
 jc
 ry
-aQ
-aQ
+jg
+jg
 ry
 jc
 Cr
@@ -10392,47 +10782,47 @@ Cr
 Cr
 Cr
 Cr
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+sC
+sC
+sC
+sC
+sC
+sC
+sC
+sC
+sC
+sC
+sC
 rr
 rr
 rr
 jc
-pP
+pt
 Cu
 Cu
-pP
+pt
 jc
 Cr
 Cr
@@ -10544,30 +10934,30 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 Ln
-mG
+wz
 gz
 wK
 gz
 Pt
 tV
-jc
+ca
 ml
-mG
+wz
 Ll
 wK
 Ll
-mG
+wz
 ml
-jc
+ca
 qh
 qh
 qh
 qh
 qh
-jc
-jc
+sC
+sC
 Hb
 lm
 qA
@@ -10579,12 +10969,12 @@ mG
 qA
 zV
 DY
-pP
-qA
-yj
+iN
+dl
+Bh
 AY
-dE
-Vp
+zK
+qs
 jc
 Cr
 Cr
@@ -10696,47 +11086,47 @@ Cr
 Cr
 Cr
 Cr
-jc
-iN
-mG
-iN
-mG
-iN
-mG
-iN
-jc
+ca
+Xd
+wz
+Xd
+wz
+Xd
+wz
+Xd
+ca
 ml
-mG
+wz
 Ll
-mG
+wz
 Ll
-mG
+wz
 ml
-jc
+ca
 qh
 qh
 qh
 qh
 qh
-jc
-yj
+sC
+Xz
 cN
 KQ
 Ls
 KQ
 dE
-OG
-Cu
+QX
+Uj
 mG
 qA
-pP
-jM
-pP
-qA
-qA
-qA
+iN
+tr
+iN
+dl
+dl
+dl
 yD
-qA
+dl
 jc
 jc
 jc
@@ -10848,47 +11238,47 @@ Cr
 Cr
 Cr
 Cr
-jc
-mG
+ca
+wz
 jl
 JZ
 JZ
 JZ
 fe
-mG
-jc
+wz
+ca
 Pt
 jl
 JZ
-uO
-uO
+SR
+SR
 wx
 Pt
-jc
+ca
 qh
 qh
 qh
 qh
-jc
-jc
+ca
+sC
 pP
 PM
-Cu
+Uj
 Os
-Cu
+Uj
 Kl
 Tj
-eo
+Hm
 pP
 qA
 Kv
-jM
+tr
 Yd
-qA
+dl
 BO
 Va
 og
-pP
+pt
 IU
 wu
 jc
@@ -11003,47 +11393,47 @@ Yw
 ca
 Ln
 So
-Cu
-Cu
-ya
+KO
+KO
+tG
 Kx
 tV
-jc
+ca
 ml
 So
-Cu
-Cu
-Cu
+KO
+KO
+KO
 Kx
 ml
-jc
+ca
 qh
 qh
 qh
 qh
-jc
+ca
 pP
 pP
-eo
+Hm
 FE
 qA
 nC
-Cu
+Uj
 gQ
-eo
+Hm
 pP
 qA
 Qu
-og
-mG
-qA
+pF
+wp
+dl
 xH
 Cu
 og
 Cu
 Cu
-pP
-LF
+pt
+lQ
 jc
 Cr
 Cr
@@ -11153,41 +11543,41 @@ QN
 MN
 ZL
 ca
-iN
+Xd
 UX
-ya
+tG
 Ea
-Cu
+KO
 Kx
-iN
-jc
+Xd
+ca
 ml
 UX
-ya
+tG
 Ea
-Cu
+KO
 kV
 ml
-jc
+ca
 qh
 qh
 qh
 qh
-jc
+ca
 Wj
 rE
 AF
 Dl
 qA
 ok
-Cu
+Uj
 xe
-eo
-Cu
+Hm
+Uj
 oa
-Cu
-og
-Cu
+Rh
+pF
+Rh
 Cg
 Cu
 Cu
@@ -11195,7 +11585,7 @@ ED
 TC
 Cu
 Cu
-LF
+lQ
 jc
 Cr
 Cr
@@ -11337,17 +11727,17 @@ Kl
 KQ
 KK
 Gf
-MZ
+uw
 Ng
-KQ
-Gf
-KQ
-KQ
+SO
+Tz
+ID
+ID
 zM
 Gq
 KU
-dE
-LF
+zK
+lQ
 jc
 Cr
 Cr
@@ -11451,7 +11841,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -11484,18 +11874,18 @@ CN
 rk
 ca
 lm
-Cu
-Cu
-Cu
+Uj
+Uj
+Uj
 zv
 qA
-mG
-og
-pP
-qA
-pP
+wp
+pF
+iN
+dl
+pt
 Cu
-eo
+Qi
 EY
 Gi
 og
@@ -11603,7 +11993,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -11636,19 +12026,19 @@ mm
 ax
 ca
 Pv
-Cu
-Cu
+Uj
+Uj
 mG
 qH
 qA
 Hj
-jM
-mG
-qA
+tr
+wp
+dl
 gM
-pP
+pt
 rA
-mG
+it
 Cu
 wZ
 jc
@@ -11755,7 +12145,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -11794,15 +12184,15 @@ mG
 qA
 qA
 ZB
-jM
+tr
 UK
-qA
-qA
+dl
+dl
 Iw
 jc
-LF
-LF
-LF
+lQ
+lQ
+lQ
 jc
 Cr
 Cr
@@ -11946,10 +12336,10 @@ qA
 qA
 Hf
 Ns
-og
+pF
 Af
 gG
-qA
+dl
 jc
 jc
 jc
@@ -12091,14 +12481,14 @@ KO
 Dc
 KO
 oK
-pP
+iN
 MJ
-mG
-mG
+wp
+wp
 GL
 cJ
 vL
-jM
+tr
 je
 Yx
 cU
@@ -12243,16 +12633,16 @@ KO
 Qk
 zy
 iG
-MZ
+uw
 iK
 iK
-KQ
-KQ
-KQ
+SO
+SO
+SO
 iK
 fO
 iK
-KQ
+SO
 SY
 lo
 Cr
@@ -12363,7 +12753,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -12395,14 +12785,14 @@ KO
 Dc
 KO
 oK
-mG
-mG
-pP
-pP
+wp
+wp
+iN
+iN
 pZ
 wV
 wS
-jM
+tr
 Rx
 wV
 sN
@@ -12515,7 +12905,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 yZ
 Dc
@@ -12547,23 +12937,23 @@ KO
 Dc
 ZL
 Yj
-qA
-qA
-qA
-qA
-qA
+kg
+kg
+kg
+kg
+kg
 gG
 Ns
-og
+pF
 Af
 Hf
-qA
-jc
-jc
-jc
-jc
-jc
-jc
+uH
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
 Cr
 Cr
 Cr
@@ -12667,7 +13057,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -12700,22 +13090,22 @@ Dc
 ad
 Yj
 YA
-mG
+JA
 Sy
 mk
-qA
-qA
+kg
+kg
 EQ
-og
+pF
 sk
-qA
-qA
+uH
+uH
 Mv
-jc
+Zk
 qa
 LF
 LF
-jc
+Zk
 Cr
 Cr
 Cr
@@ -12852,22 +13242,22 @@ Dc
 eY
 Yj
 YA
-Cu
-Cu
-mG
+As
+As
+JA
 YA
-qA
-kl
-jM
-pP
-qA
+kg
+qX
+tr
+iN
+uH
 lD
-mG
+hQ
 OG
-Cu
-Cu
+bZ
+bZ
 ya
-jc
+Zk
 Cr
 Cr
 Cr
@@ -13004,23 +13394,23 @@ Dc
 eY
 Yj
 io
-Cu
-Cu
-Cu
+As
+As
+As
 YA
-qA
-xH
-jM
-mG
-qA
+kg
+EF
+tr
+wp
+uH
 eE
-Cu
-Cu
+bZ
+bZ
 Tb
 iy
 vP
-Zb
-jc
+Fe
+Zk
 Cr
 Cr
 Cr
@@ -13156,23 +13546,23 @@ Dc
 eY
 Yj
 xl
-Cu
+As
 LJ
-iK
-KQ
+fg
+sJ
 Fj
-KQ
+SO
 Ng
-MZ
+uw
 sR
 MZ
-KQ
+sg
 JH
 TO
 mJ
-Cu
+bZ
 LF
-jc
+Zk
 Cr
 Cr
 Cr
@@ -13275,7 +13665,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -13308,23 +13698,23 @@ Dc
 eY
 Yj
 xl
-Cu
-jM
-Cu
-ya
+As
+ol
+As
+kW
+uO
+Rh
+pF
+Rh
 wl
-Cu
-og
-Cu
-wl
-Cu
-Cu
+bZ
+bZ
 jM
 jG
 eo
-Cu
+bZ
 qa
-jc
+Zk
 Cr
 Cr
 Cr
@@ -13427,7 +13817,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 yZ
 Dc
@@ -13460,23 +13850,23 @@ Qk
 MC
 Yj
 dv
-Cu
-og
-ya
+As
+OX
+kW
 uA
-qA
-pP
-jM
-pP
-qA
+kg
+iN
+tr
+iN
+uH
 ld
-Cu
-og
-Cu
-Cu
-mG
+bZ
+ys
+bZ
+bZ
+hQ
 LF
-jc
+Zk
 Cr
 Cr
 Cr
@@ -13579,7 +13969,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -13612,23 +14002,23 @@ Dc
 eY
 Yj
 xl
-ya
-og
-ya
+kW
+OX
+kW
 YA
-qA
+kg
 Ld
-jM
-pP
-qA
+tr
+iN
+uH
 nj
 aq
-og
+ys
 vp
 Ql
 ZC
-jc
-jc
+Zk
+Zk
 Cr
 Cr
 Cr
@@ -13765,21 +14155,21 @@ eY
 Yj
 YA
 FT
-jM
-Cu
+ol
+As
 YA
-qA
+kg
 Qu
-jM
-pP
-qA
-qA
-qA
+tr
+iN
+uH
+uH
+uH
 Oj
-qA
-jc
-jc
-jc
+uH
+Zk
+Zk
+Zk
 Cr
 Cr
 Cr
@@ -13915,21 +14305,21 @@ KO
 Dc
 eY
 Yj
-xH
-ya
+zs
+kW
 of
-Cu
+As
 Jk
-qA
-pP
-og
-EO
-qA
+kg
+iN
+pF
+UO
+uH
 yj
 qK
 FS
 Vp
-jc
+Zk
 Cr
 Cr
 Cr
@@ -14068,20 +14458,20 @@ Dc
 eY
 Yj
 zH
-Cu
+As
 NQ
-Cu
+As
 xl
-qA
-pP
-jM
-mG
-qA
+kg
+iN
+tr
+wp
+uH
 MP
-Cu
-Cu
-pP
-jc
+bZ
+bZ
+XI
+Zk
 Cr
 Cr
 Cr
@@ -14187,7 +14577,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -14222,18 +14612,18 @@ Yj
 aI
 GJ
 vo
-pP
+VX
 xl
-qA
-pP
-jM
-mG
-qA
-ry
+kg
+iN
+tr
+wp
+uH
+gt
 aQ
 aQ
-ry
-jc
+gt
+Zk
 Cr
 Cr
 Cr
@@ -14339,7 +14729,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 yZ
 Dc
@@ -14371,31 +14761,31 @@ KO
 Dc
 eY
 Yj
-qA
-qA
-qA
-qA
-qA
-qA
-Os
-SG
-Os
-qA
-qA
-qA
-qA
-qA
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
+kg
+kg
+kg
+kg
+kg
+kg
+ed
+xc
+ed
+ag
+HK
+HK
+HK
+HK
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
 Cr
 Cr
 Cr
@@ -14491,7 +14881,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -14522,9 +14912,9 @@ Rg
 KO
 Dc
 eY
-Yj
-qA
-xH
+ag
+ag
+CX
 yu
 WP
 KY
@@ -14532,22 +14922,22 @@ KY
 oM
 YK
 Jv
-qA
-qA
-qA
+ag
+HK
+HK
 rd
 Xw
 rd
-qA
-lm
-lm
-qA
+HK
+Sl
+Sl
+HK
 gU
 Ax
 Vc
 Ax
 KP
-jc
+sI
 Cr
 Cr
 Cr
@@ -14674,10 +15064,10 @@ pG
 KO
 Dc
 eY
-Yj
+ag
 Eo
-mG
-NT
+Ob
+Uh
 sS
 oL
 FI
@@ -14685,7 +15075,7 @@ oM
 YK
 ik
 bR
-qA
+HK
 rd
 NT
 NT
@@ -14699,7 +15089,7 @@ yF
 LQ
 yF
 yF
-jc
+sI
 Cr
 Cr
 Cr
@@ -14823,13 +15213,13 @@ yn
 gV
 XJ
 XJ
-Cu
-jM
-sI
-qA
+KO
+Dc
+eY
+ag
 fy
 fL
-NT
+Uh
 sS
 bS
 Rl
@@ -14837,7 +15227,7 @@ oM
 YK
 dO
 bR
-qA
+HK
 rd
 NT
 NT
@@ -14851,7 +15241,7 @@ Mi
 LQ
 rh
 rh
-jc
+sI
 Cr
 Cr
 Cr
@@ -14975,35 +15365,35 @@ Ks
 Ks
 Ks
 XJ
-nC
-jM
-EO
-qA
+zJ
+Dc
+bf
+ag
 Sh
-QM
-NT
-NT
-NT
-NT
-vN
-Ve
+ze
+Uh
+Uh
+Uh
+Uh
+Pc
+FV
 dO
 bR
-qA
+HK
 rd
 NT
 QM
-qA
+HK
 gI
 NT
-pP
-qA
+FW
+HK
 gE
 Xa
 xq
 Xa
 NV
-jc
+sI
 Cr
 Cr
 Cr
@@ -15099,7 +15489,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -15127,35 +15517,35 @@ Ks
 Ks
 Ks
 hZ
-Cu
-jM
-pP
-qA
+KO
+Dc
+ZL
+ag
 GY
-QM
-NT
-NT
-NT
-NT
-NT
-Ve
+ze
+Uh
+Uh
+Uh
+Uh
+Uh
+FV
 dO
 bR
-qA
-qA
+HK
+HK
 Zf
 Dy
-qA
+HK
 cO
 NT
 EO
-qA
-qA
-qA
-qA
-qA
-qA
-jc
+HK
+HK
+HK
+HK
+HK
+HK
+sI
 Cr
 Cr
 Cr
@@ -15251,7 +15641,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -15279,35 +15669,35 @@ Pr
 Pr
 Pr
 jV
-KQ
-kg
-pP
-qA
+zy
+Td
+ZL
+ag
 yv
 si
-NT
+Uh
 sS
 IX
-QM
+ze
 Gz
-Ve
+FV
 dO
 bR
-qA
+HK
 rd
 NT
 QM
-qA
+HK
 QM
 NT
-pP
-qA
+FW
+HK
 Vc
 Ax
 gU
 Ax
 KP
-jc
+sI
 Cr
 Cr
 Cr
@@ -15403,7 +15793,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+ca
 ca
 ZL
 Dc
@@ -15433,11 +15823,11 @@ JJ
 XJ
 cB
 Ea
-pP
-qA
-qH
+ZL
+ag
+yx
 dd
-cZ
+PW
 vB
 ea
 FR
@@ -15445,7 +15835,7 @@ tX
 Uv
 dO
 bR
-qA
+HK
 rd
 NT
 NT
@@ -15459,7 +15849,7 @@ yF
 LQ
 yF
 yF
-jc
+sI
 Cr
 Cr
 Cr
@@ -15583,21 +15973,21 @@ Ks
 Ks
 FN
 XJ
-Cu
+KO
 Ea
-pP
-qA
-qA
+ZL
+ag
+ag
 kl
-rE
+hq
 WP
 qV
 KY
 Gz
-Ve
-EO
-qA
-qA
+FV
+oH
+ag
+HK
 rd
 NT
 NT
@@ -15611,7 +16001,7 @@ bI
 LQ
 yF
 yF
-jc
+sI
 Cr
 Cr
 Cr
@@ -15735,35 +16125,35 @@ kB
 kB
 kB
 kB
-rr
-rr
-rr
-jc
-jc
-qA
-qA
-qA
-qA
-qA
-Os
+Yw
+Yw
+Yw
+YP
+YP
+ag
+ag
+ag
+ag
+ag
+Rv
 SG
-Os
-qA
-qA
-qA
+Rv
+HK
+HK
+HK
 qp
 NT
 NT
 NT
 NT
-pP
-qA
+FW
+HK
 xq
 Xa
 gE
 Xa
 NV
-jc
+sI
 Cr
 Cr
 Cr
@@ -15891,31 +16281,31 @@ Cr
 Cr
 Cr
 Cr
-jc
+sI
 Ao
 Eb
 nY
-qA
-wK
+HK
+gO
 vN
 Ve
 NT
-mG
-qA
-pP
+gJ
+HK
+FW
 NT
 QM
-qA
+HK
 QM
 NT
 EO
-qA
-qA
-qA
-qA
-qA
-qA
-jc
+HK
+HK
+HK
+HK
+HK
+HK
+sI
 Cr
 Cr
 Cr
@@ -16043,12 +16433,12 @@ Cr
 Cr
 Cr
 Cr
-jc
+sI
 Ao
 qv
 nY
-qA
-Eo
+HK
+oR
 NT
 Ve
 vN
@@ -16057,17 +16447,17 @@ tT
 NT
 NT
 Dy
-qA
+HK
 cO
 NT
-pP
-qA
+FW
+HK
 Vc
 Ax
 gU
 Ax
 KP
-jc
+sI
 Cr
 Cr
 Cr
@@ -16195,7 +16585,7 @@ Cr
 Cr
 Cr
 Cr
-jc
+sI
 SV
 Qq
 Vr
@@ -16209,7 +16599,7 @@ vN
 vN
 NT
 QM
-qA
+HK
 QM
 NT
 NT
@@ -16219,7 +16609,7 @@ rO
 LQ
 yF
 yF
-jc
+sI
 Cr
 Cr
 Cr
@@ -16347,12 +16737,12 @@ Cr
 Cr
 Cr
 Cr
-jc
-qA
+sI
+HK
 ER
-qA
-qA
-qH
+HK
+HK
+FX
 cZ
 Pl
 NT
@@ -16371,7 +16761,7 @@ IC
 LQ
 yF
 yF
-jc
+sI
 Cr
 Cr
 Cr
@@ -16499,31 +16889,31 @@ Cr
 Cr
 Cr
 Cr
-jc
+sI
 Jn
 HG
 DF
-qA
-uA
-uA
-qA
+HK
+sv
+sv
+HK
 rd
 rd
-qA
-rd
-rd
-rd
-qA
+HK
 rd
 rd
 rd
-qA
+HK
+rd
+rd
+rd
+HK
 xq
 Xa
 gE
 Xa
 NV
-jc
+sI
 Cr
 Cr
 Cr
@@ -16651,31 +17041,31 @@ Cr
 Cr
 Cr
 Cr
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
-jc
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
+sI
 Cr
 Cr
 Cr

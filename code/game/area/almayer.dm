@@ -666,6 +666,17 @@
 	icon_state = "alpha"
 	fake_zlevel = 2 // lowerdeck
 
+/area/almayer/squads/alpha/platoon_sergeant
+	name = "\improper Alpha Platoon Sergeant Office"
+
+/area/almayer/squads/alpha/squad_one
+	name = "\improper Alpha Squad One Preparation"
+	icon_state = "charlie"
+
+/area/almayer/squads/alpha/squad_two
+	name = "\improper Alpha Squad Two Preparation"
+	icon_state = "delta"
+
 /area/almayer/squads/bravo
 	name = "\improper Squad Bravo Preparation"
 	icon_state = "bravo"
