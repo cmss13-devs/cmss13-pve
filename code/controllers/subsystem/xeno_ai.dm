@@ -40,8 +40,8 @@ SUBSYSTEM_DEF(xeno_ai)
 		current_run.len--
 		if(!QDELETED(M) && !M.client && M.stat != DEAD)
 			M.process_ai(wait * 0.1, game_evaluation)
-//		else
-//			remove_ai(M)
+		else
+			remove_ai(M)
 
 		if(MC_TICK_CHECK)
 			return

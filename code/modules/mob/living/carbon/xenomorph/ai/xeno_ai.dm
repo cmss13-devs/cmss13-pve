@@ -69,11 +69,11 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 			resting = FALSE
 			return TRUE
 
+	a_intent = INTENT_HARM
+
 	if(!current_target)
 		ai_move_idle(delta_time, game_evaluation)
 		return TRUE
-
-	a_intent = INTENT_HARM
 
 	if(ai_move_target(delta_time, game_evaluation))
 		return TRUE
