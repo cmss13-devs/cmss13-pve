@@ -156,7 +156,7 @@
 	watching_turfs = null
 	for(var/atom/temp_target in targets)
 		UnregisterSignal(temp_target, COMSIG_MOVABLE_TURF_ENTERED)
-	targets = null
+	targets = list()
 
 /obj/structure/machinery/defenses/sentry/update_icon()
 	..()
