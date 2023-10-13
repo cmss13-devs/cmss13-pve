@@ -12,8 +12,8 @@
 	)
 	possible_locs = EXTREMITY_LIMBS
 	invasiveness = list(SURGERY_DEPTH_SURFACE)
-	required_surgery_skill = SKILL_SURGERY_TRAINED
-	pain_reduction_required = NONE
+	required_surgery_skill = SKILL_SURGERY_NOVICE
+	pain_reduction_required = PAIN_REDUCTION_LIGHT
 	requires_bodypart = FALSE
 	requires_bodypart_type = LIMB_AMPUTATED
 
