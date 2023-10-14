@@ -1046,7 +1046,7 @@ United States Colonial Marines
 /datum/skills/tl
 	name = "Fireteam Leader"
 	skills = list(
-		SKILL_JTAC = SKILL_JTAC_EXPERT,
+		SKILL_JTAC = SKILL_JTAC_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 	)
 
