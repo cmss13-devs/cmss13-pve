@@ -1,6 +1,6 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
-#define MAIN_SHIP_DEFAULT_NAME "USS Almayer"
+#define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn
 //Admin Permissions
