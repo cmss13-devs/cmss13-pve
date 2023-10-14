@@ -86,6 +86,7 @@
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
+			xenos_to_spawn = DEFAULT_XENO_AMOUNT_TO_SPAWN
 			return
 
 		if("set_xeno_spawns")
@@ -129,3 +130,8 @@
 				new spawning_xeno_type(spawn_turf, null, XENO_HIVE_NORMAL, !spawn_ai)
 
 			return
+
+#undef DEFAULT_SPAWN_XENO_STRING
+#undef GAME_MASTER_AI_XENOS
+#undef DEFAULT_XENO_AMOUNT_TO_SPAWN
+#undef SPAWN_CLICK_INTERCEPT_ACTION
