@@ -17,8 +17,7 @@
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
-	var/fuel_pressure = 1 //Pressure setting of the attached fueltank, controls how much fuel is used per tile
-	var/max_range = 9 //9 tiles, 7 is screen range, controlled by the type of napalm in the canister. We max at 9 since diagonal bullshit.
+	start_automatic = TRUE
 
 	attachable_allowed = list( //give it some flexibility.
 		/obj/item/attachable/flashlight,
@@ -28,6 +27,12 @@
 	)
 	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_WIELDED_FIRING_ONLY|GUN_TRIGGER_SAFETY
 	gun_category = GUN_CATEGORY_HEAVY
+
+	//Pressure setting of the attached fueltank, controls how much fuel is used per tile
+	var/fuel_pressure = 1
+
+	//max range of flames that can fire, can change depending on fueling
+	var/max_range = 9
 
 
 /obj/item/weapon/gun/flamer/Initialize(mapload, spawn_empty)
@@ -51,7 +56,7 @@
 
 /obj/item/weapon/gun/flamer/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5 * 5)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 
 /obj/item/weapon/gun/flamer/unique_action(mob/user)
 	toggle_gun_safety()

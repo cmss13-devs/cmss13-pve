@@ -11,6 +11,9 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	var/list/hash_path = list()
 	var/current_position = 1
 
+	/// Any special blockers we want to account for that do not normally block movement
+	var/list/special_blockers = list(/obj/flamer_fire)
+
 /datum/controller/subsystem/xeno_pathfinding/stat_entry(msg)
 	msg = "P:[length(paths_to_calculate)]"
 	return ..()
@@ -62,6 +65,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 					distance_between += A.object_weight
 
 				var/list/L = LinkBlocked(X, current_run.current_node, neighbor, current_run.ignore, TRUE)
+				L += check_special_blockers(X, neighbor)
 				if(length(L))
 					for(var/i in L)
 						var/atom/A = i
@@ -124,6 +128,16 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 
 		current_run.to_return.Invoke(path)
 		QDEL_NULL(current_run)
+
+/datum/controller/subsystem/xeno_pathfinding/proc/check_special_blockers(mob/living/carbon/xenomorph/xeno, turf/checking_turf)
+	var/list/pass_back = list()
+
+	for(var/atom/checked_atom as anything in checking_turf)
+		for(var/special_block in special_blockers)
+			if(istype(checked_atom, special_block))
+				pass_back += checked_atom
+
+	return pass_back
 
 /datum/controller/subsystem/xeno_pathfinding/proc/stop_calculating_path(mob/living/carbon/xenomorph/X)
 	var/datum/xeno_pathinfo/data = hash_path[X]

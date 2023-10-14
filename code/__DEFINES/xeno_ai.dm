@@ -13,6 +13,7 @@
 #define WINDOW_FRAME_PENALTY 25
 #define BARRICADE_PENALTY 50
 #define WALL_PENALTY 50
+#define FIRE_PENALTY 25
 
 // Xeno AI flags
 #define XENO_AI_NO_DESPAWN (1<<0)

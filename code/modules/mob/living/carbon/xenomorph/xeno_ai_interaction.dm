@@ -75,3 +75,10 @@
 // Avoid barricades if possible.
 /obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
 	return BARRICADE_PENALTY
+
+// FIRE
+/obj/flamer_fire/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction)
+	if(xeno.caste?.fire_immunity & (FIRE_IMMUNITY_NO_IGNITE|FIRE_IMMUNITY_NO_DAMAGE))
+		return 0
+
+	return FIRE_PENALTY
