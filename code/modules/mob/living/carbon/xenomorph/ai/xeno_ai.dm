@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	registered_ai_abilities -= XA
 	XA.ai_unregistered(src)
 
-/mob/living/carbon/xenomorph/proc/process_ai(delta_time, game_evaluation)
+/mob/living/carbon/xenomorph/proc/process_ai(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	SHOULD_CALL_PARENT(TRUE)
 	if(!hive || !get_turf(src))
@@ -72,10 +72,10 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	a_intent = INTENT_HARM
 
 	if(!current_target)
-		ai_move_idle(delta_time, game_evaluation)
+		ai_move_idle(delta_time)
 		return TRUE
 
-	if(ai_move_target(delta_time, game_evaluation))
+	if(ai_move_target(delta_time))
 		return TRUE
 
 	for(var/x in registered_ai_abilities)
@@ -87,23 +87,23 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		if(XA.hidden)
 			continue
 
-		if(XA.process_ai(src, delta_time, game_evaluation) == PROCESS_KILL)
+		if(XA.process_ai(src, delta_time) == PROCESS_KILL)
 			unregister_ai_action(XA)
 
 	if(get_dist(src, current_target) <= 1 && DT_PROB(XENO_SLASH, delta_time))
-		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, do_click), current_target, "", list())
+		INVOKE_ASYNC(src, PROC_REF(do_click), current_target, "", list())
 
 /** Controls movement when idle. Called by process_ai */
-/mob/living/carbon/xenomorph/proc/ai_move_idle(delta_time, game_evaluation)
+/mob/living/carbon/xenomorph/proc/ai_move_idle(delta_time)
 	if(!ai_movement_handler)
 		CRASH("No valid movement handler for [src]!")
-	ai_movement_handler.ai_move_idle(delta_time, game_evaluation)
+	ai_movement_handler.ai_move_idle(delta_time)
 
 /** Controls movement towards target. Called by process_ai */
-/mob/living/carbon/xenomorph/proc/ai_move_target(delta_time, game_evaluation)
+/mob/living/carbon/xenomorph/proc/ai_move_target(delta_time)
 	if(!ai_movement_handler)
 		CRASH("No valid movement handler for [src]!")
-	return ai_movement_handler.ai_move_target(delta_time, game_evaluation)
+	return ai_movement_handler.ai_move_target(delta_time)
 
 /atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
 	return INFINITY
@@ -125,7 +125,6 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		ai_move_delay += next_move_slowdown
 		next_move_slowdown = 0
 	return TRUE
-
 
 /mob/living/carbon/xenomorph/proc/set_path(list/path)
 	current_path = path

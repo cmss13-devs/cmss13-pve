@@ -9,7 +9,7 @@
 	blacklisted_turfs = null
 
 //drones expand the hive
-/datum/xeno_ai_movement/drone/ai_move_idle(delta_time, game_evaluation)
+/datum/xeno_ai_movement/drone/ai_move_idle(delta_time)
 	var/mob/living/carbon/xenomorph/idle_xeno = parent
 
 	if(idle_xeno.throwing)

@@ -7,6 +7,9 @@
 	var/action_type = XENO_ACTION_CLICK // Determines how macros interact with this action. Defines are in xeno.dm in the defines folder.
 	var/ability_primacy = XENO_NOT_PRIMARY_ACTION // Determines how the default ability macros handle this.
 
+	/// Whether this action gets added to AI xenos
+	var/default_ai_action = FALSE
+
 	// Cooldown
 	/// Cooldown of the ability (do not use the cooldown var)
 	/// Probably should only have the cooldown var, but that is for another rework
@@ -58,6 +61,11 @@
 		action.update_button_icon()
 	return TRUE
 
+/// Used for AI xenos to prevent them from sleeping
+/datum/action/xeno_action/proc/use_ability_async(atom/A)
+	set waitfor = FALSE
+	use_ability(A)
+
 // Track statistics for this ability
 /datum/action/xeno_action/proc/track_xeno_ability_stats()
 	if(!owner)
@@ -74,10 +82,19 @@
 	if(X && !X.is_mob_incapacitated() && !X.dazed && !X.lying && !X.buckled && X.plasma_stored >= plasma_cost)
 		return TRUE
 
-/datum/action/xeno_action/give_to(mob/living/L)
+/datum/action/xeno_action/give_to(mob/living/living_mob)
 	..()
+
 	if(macro_path)
-		add_verb(L, macro_path)
+		add_verb(living_mob, macro_path)
+
+	if(!istype(living_mob, /mob/living/carbon/xenomorph))
+		return
+
+	var/mob/living/carbon/xenomorph/xeno_mob = living_mob
+
+	if(default_ai_action)
+		xeno_mob.register_ai_action(src)
 
 /datum/action/xeno_action/update_button_icon()
 	if(!button)
@@ -92,7 +109,7 @@
 	else
 		button.color = rgb(255,255,255,255)
 
-/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/X, delta_time, game_evaluation)
+/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/X, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	return PROCESS_KILL
 

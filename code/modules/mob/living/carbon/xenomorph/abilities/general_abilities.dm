@@ -219,6 +219,31 @@
 	var/list/pounce_callbacks = null // Specific callbacks to invoke when a pounce lands on an atom of a specific type
 										// (note that if a collided atom does not match any of the key types, defaults to the appropriate X_launch_collision proc)
 
+	default_ai_action = TRUE
+	var/prob_chance = 80
+
+/datum/action/xeno_action/activable/pounce/process_ai(mob/living/carbon/xenomorph/pouncing_xeno, delta_time)
+	if(get_dist(pouncing_xeno, pouncing_xeno.current_target) > distance || !DT_PROB(prob_chance, delta_time))
+		return
+
+	var/turf/last_turf = pouncing_xeno.loc
+	var/clear = TRUE
+
+	pouncing_xeno.add_temp_pass_flags(PASS_OVER_THROW_MOB)
+
+	for(var/i in getline2(pouncing_xeno, pouncing_xeno.current_target, FALSE))
+		var/turf/new_turf = i
+		if(LinkBlocked(pouncing_xeno, last_turf, new_turf, list(pouncing_xeno.current_target, pouncing_xeno)))
+			clear = FALSE
+			break
+
+	pouncing_xeno.remove_temp_pass_flags(PASS_OVER_THROW_MOB)
+
+	if(!clear)
+		return
+
+	use_ability_async(pouncing_xeno.current_target)
+
 /datum/action/xeno_action/activable/pounce/New()
 	. = ..()
 	initialize_pounce_pass_flags()

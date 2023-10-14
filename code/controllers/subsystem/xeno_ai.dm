@@ -9,12 +9,10 @@ SUBSYSTEM_DEF(xeno_ai)
 	/// A list of AI mobs
 	var/list/ai_mobs = list()
 
-	var/game_evaluation = 0
-
 	var/ai_kill = FALSE
 
 /datum/controller/subsystem/xeno_ai/stat_entry(msg)
-	msg = "P:[length(ai_mobs)]|Eval:[game_evaluation]"
+	msg = "P:[length(ai_mobs)]"
 	return ..()
 
 /datum/admins/proc/toggle_ai()
@@ -39,7 +37,7 @@ SUBSYSTEM_DEF(xeno_ai)
 		var/mob/living/carbon/xenomorph/M = current_run[current_run.len]
 		current_run.len--
 		if(!QDELETED(M) && !M.client && M.stat != DEAD)
-			M.process_ai(wait * 0.1, game_evaluation)
+			M.process_ai(wait * 0.1)
 		else
 			remove_ai(M)
 

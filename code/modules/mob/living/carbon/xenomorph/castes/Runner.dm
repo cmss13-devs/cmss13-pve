@@ -67,11 +67,67 @@
 	icon_xeno = 'icons/mob/xenos/runner.dmi'
 	icon_xenonid = 'icons/mob/xenonids/runner.dmi'
 
+	var/linger_range = 5
+	var/linger_deviation = 1
+	var/pull_direction
 
 /mob/living/carbon/xenomorph/runner/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
 		PF.flags_pass |= PASS_FLAGS_CRAWLER
+
+/mob/living/carbon/xenomorph/runner/launch_towards(datum/launch_metadata/LM)
+	if(!current_target)
+		return ..()
+
+	pull_direction = turn(get_dir(src, current_target), 180)
+
+	if(!(pull_direction in GLOB.cardinals))
+		if(abs(x - current_target.x) < abs(y - current_target.y))
+			pull_direction &= (NORTH|SOUTH)
+		else
+			pull_direction &= (EAST|WEST)
+	return ..()
+
+/mob/living/carbon/xenomorph/runner/init_movement_handler()
+	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
+	linger_movement.linger_range = linger_range
+	linger_movement.linger_deviation = linger_deviation
+	return linger_movement
+
+/mob/living/carbon/xenomorph/runner/ai_move_target(delta_time)
+	if(throwing)
+		return
+
+	if(pulling)
+		if(can_move_and_apply_move_delay())
+			if(!Move(get_step(loc, pull_direction), pull_direction))
+				pull_direction = turn(pull_direction, pick(45, -45))
+		current_path = null
+		return
+
+	..()
+
+	if(get_dist(current_target, src) > 1)
+		return
+
+	if(!current_target.is_mob_incapacitated())
+		return
+
+	if(isxeno(current_target.pulledby))
+		return
+
+	if(!DT_PROB(RUNNER_GRAB, delta_time))
+		return
+
+	INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
+	swap_hand()
+
+/mob/living/carbon/xenomorph/runner/process_ai(delta_time)
+	if(get_active_hand())
+		swap_hand()
+	zone_selected = pick(GLOB.ai_target_limbs)
+	return ..()
 
 /datum/behavior_delegate/runner_base
 	name = "Base Runner Behavior Delegate"
