@@ -19,7 +19,7 @@
 	parent = null
 	return ..()
 
-/datum/xeno_ai_movement/proc/ai_move_idle(delta_time, game_evaluation)
+/datum/xeno_ai_movement/proc/ai_move_idle(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/idle_xeno = parent
 	if(idle_xeno.throwing)
@@ -47,7 +47,7 @@
 	else
 		home_turf = null
 
-/datum/xeno_ai_movement/proc/ai_move_target(delta_time, game_evaluation)
+/datum/xeno_ai_movement/proc/ai_move_target(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/X = parent
 	if(X.throwing)
