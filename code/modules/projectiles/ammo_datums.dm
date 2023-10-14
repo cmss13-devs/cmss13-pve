@@ -105,6 +105,7 @@
 /datum/ammo/proc/knockback(mob/living/living_mob, obj/projectile/fired_projectile, max_range = 2)
 	if(!living_mob || living_mob == fired_projectile.firer)
 		return
+
 	if(fired_projectile.distance_travelled > max_range || living_mob.lying)
 		return //Two tiles away or more, basically.
 
@@ -131,9 +132,9 @@
 /datum/ammo/proc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
-		target.apply_effect(0.7, WEAKEN) // 0.9 seconds of stun, per agreement from Balance Team when switched from MC stuns to exact stuns
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(2, SLOW)
+		target.apply_effect(1, WEAKEN)
+		target.apply_effect(2, SUPERSLOW)
+		target.apply_effect(4, SLOW)
 		to_chat(target, SPAN_XENODANGER("You are shaken by the sudden impact!"))
 	else
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
@@ -1218,13 +1219,13 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 4
-	max_range = 4
-	damage = 65
+	accurate_range = 5
+	max_range = 8
+	damage = 140
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_1
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+	penetration = ARMOR_PENETRATION_TIER_4
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
@@ -1257,12 +1258,12 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
-	accurate_range = 4
-	max_range = 6
-	damage = 65
+	accurate_range = 5
+	max_range = 8
+	damage = 140
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_1
+	penetration = ARMOR_PENETRATION_TIER_4
 	shell_speed = AMMO_SPEED_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_1
 	damage_armor_punch = 0
