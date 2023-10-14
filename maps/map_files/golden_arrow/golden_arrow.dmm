@@ -90,6 +90,7 @@
 /area/almayer/living/grunt_rnr)
 "aQ" = (
 /obj/structure/surface/rack,
+/obj/item/weapon/gun/shotgun/pump/special,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -352,11 +353,6 @@
 "eE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/prop/helmetgarb/riot_shield{
-	pixel_x = 3;
-	pixel_y = 7
-	},
-/obj/item/prop/helmetgarb/riot_shield,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -652,10 +648,6 @@
 "iy" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/item/storage/pouch/flamertank{
-	pixel_x = 5;
-	pixel_y = 9
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/squads/alpha/squad_one)
 "iA" = (
@@ -701,6 +693,23 @@
 /area/almayer/hallways/port_hallway)
 "jg" = (
 /obj/structure/surface/rack,
+/obj/item/ammo_magazine/flamer_tank{
+	current_rounds = 0;
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/ammo_magazine/flamer_tank{
+	current_rounds = 0;
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/weapon/gun/flamer{
+	current_mag = null
+	},
+/obj/item/storage/pouch/flamertank{
+	pixel_x = 5;
+	pixel_y = 9
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -720,18 +729,12 @@
 	},
 /area/almayer/living/briefing)
 "jG" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = 6
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/shotgun/pump/special,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/almayer/squads/alpha/squad_one)
+/area/almayer/squads/alpha/squad_two)
 "jM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -796,10 +799,6 @@
 "ld" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/ammo_magazine/rifle/m4ra{
-	pixel_x = -7;
-	pixel_y = 10
-	},
 /obj/item/tool/screwdriver,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -830,32 +829,12 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
-"lD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/packet/baton_slug{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/storage/box/packet/baton_slug{
-	pixel_x = 6;
-	pixel_y = 10
-	},
-/obj/item/storage/box/packet/baton_slug{
-	layer = 3.01;
-	pixel_x = 15;
-	pixel_y = 5
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/squads/alpha/squad_one)
 "lI" = (
 /turf/open/floor/almayer/uscm/directional/up_down,
 /area/almayer/living/briefing)
 "lQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -953,10 +932,6 @@
 /obj/structure/surface/table/almayer,
 /obj/item/tool/wrench{
 	pixel_y = 7
-	},
-/obj/item/weapon/gun/rifle/m4ra{
-	pixel_x = -15;
-	pixel_y = 3
 	},
 /obj/structure/machinery/camera/autoname/almayer{
 	dir = 8;
@@ -1174,7 +1149,7 @@
 	},
 /area/almayer/hallways/port_hallway)
 "qa" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1196,12 +1171,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/almayer/living/cryo_cells)
-"qs" = (
-/obj/structure/largecrate/supply/ammo/m41a_box,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/squads/alpha/squad_two)
 "qv" = (
 /obj/item/frame/camera{
 	desc = "The Staff Officer insisted he needed to monitor everyone at all times.";
@@ -1578,12 +1547,12 @@
 	},
 /area/almayer/living/grunt_rnr)
 "vp" = (
-/obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = 7;
 	pixel_y = 6
 	},
 /obj/item/prop/helmetgarb/gunoil,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2874,7 +2843,7 @@
 /area/almayer/living/platoon_commander_rooms)
 "LF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3496,9 +3465,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/item/weapon/gun/flamer{
-	current_mag = null
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/squads/alpha/squad_one)
 "TP" = (
@@ -3586,7 +3552,23 @@
 	},
 /area/almayer/living/cryo_cells)
 "Vp" = (
-/obj/structure/largecrate/supply/ammo/m41a_box,
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/flamer{
+	current_mag = null
+	},
+/obj/item/ammo_magazine/flamer_tank{
+	current_rounds = 0;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/flamer_tank{
+	current_rounds = 0;
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/storage/pouch/flamertank{
+	pixel_x = 5;
+	pixel_y = 9
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -10669,7 +10651,7 @@ Cr
 jc
 ry
 jg
-jg
+jG
 ry
 jc
 Cr
@@ -10974,7 +10956,7 @@ dl
 Bh
 AY
 zK
-qs
+pt
 jc
 Cr
 Cr
@@ -12190,9 +12172,9 @@ dl
 dl
 Iw
 jc
-lQ
-lQ
-lQ
+it
+it
+it
 jc
 Cr
 Cr
@@ -13102,9 +13084,9 @@ uH
 uH
 Mv
 Zk
-qa
-LF
-LF
+XI
+hQ
+hQ
 Zk
 Cr
 Cr
@@ -13251,7 +13233,7 @@ qX
 tr
 iN
 uH
-lD
+eE
 hQ
 OG
 bZ
@@ -13710,7 +13692,7 @@ wl
 bZ
 bZ
 jM
-jG
+mJ
 eo
 bZ
 qa
@@ -14318,7 +14300,7 @@ uH
 yj
 qK
 FS
-Vp
+XI
 Zk
 Cr
 Cr
@@ -14620,7 +14602,7 @@ tr
 wp
 uH
 gt
-aQ
+Vp
 aQ
 gt
 Zk

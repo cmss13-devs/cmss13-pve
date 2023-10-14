@@ -78,6 +78,11 @@ var/list/shotgun_boxes_12g = list(
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 	handful_state = "beanbag_slug"
 	caliber = "20g"
+
+/obj/item/ammo_magazine/shotgun/buckshot/special
+	name = "box of buckshot shells, USCM special type"
+	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 //-------------------------------------------------------
 
 /*
