@@ -12,10 +12,6 @@ Format:
 	disabled (disables the map)
 endmap
 
-map almayer
-	disabled
-endmap
-
 map golden_arrow
 	default
 endmap
