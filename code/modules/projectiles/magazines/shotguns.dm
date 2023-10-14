@@ -145,6 +145,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
 
+/obj/item/ammo_magazine/internal/shotgun/special
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
 //-------------------------------------------------------
 
 /*
@@ -191,6 +194,10 @@ var/list/shotgun_handfuls_12g = list(
 	icon_state = "buckshot_shell_5"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	handful_state = "buckshot_shell"
+
+/obj/item/ammo_magazine/handful/shotgun/buckshot/special
+	name = "handful of shotgun buckshot shells, USCM special type (12g)"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 
 /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
 	name = "handful of incendiary buckshot shells (12g)"

@@ -1219,18 +1219,28 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 5
-	max_range = 8
-	damage = 140
+	accurate_range = 4
+	max_range = 4
+	damage = 65
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_4
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_1
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	handful_state = "buckshot_shell"
 	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/buckshot/special
+	name = "buckshot shell, USCM special type"
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/special
+
+	accurate_range = 8
+	max_range = 8
+	damage = 140
+	penetration = ARMOR_PENETRATION_TIER_4
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary
 	name = "incendiary buckshot shell"
@@ -1258,16 +1268,24 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
-	accurate_range = 5
-	max_range = 8
-	damage = 140
+	accurate_range = 4
+	max_range = 4
+	damage = 65
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_1
 	shell_speed = AMMO_SPEED_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_1
 	damage_armor_punch = 0
 	pen_armor_punch = 0
+
+/datum/ammo/bullet/shotgun/spread/special
+	name = "additional buckshot, USCM special type"
+
+	accurate_range = 8
+	max_range = 8
+	damage = 140
+	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
