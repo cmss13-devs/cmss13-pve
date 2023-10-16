@@ -262,7 +262,7 @@
 		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
 		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
-		list("ME3 hand welder", round(scale * 1), /obj/item/tool/weldingtool/simple, VENDOR_ITEM_REGULAR),
+		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
@@ -272,7 +272,6 @@
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
-		list("Engineer Kit", round(scale * 1), /obj/item/storage/toolkit/empty, VENDOR_ITEM_REGULAR),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 1), /obj/item/roller, VENDOR_ITEM_REGULAR),
