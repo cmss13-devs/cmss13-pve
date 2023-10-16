@@ -186,7 +186,9 @@
 	var/max_fuel = 40
 	/// Used to slowly deplete the fuel when the tool is left on.
 	var/weld_tick = 0
-	var/has_welding_screen = FALSE
+
+	/// Whether you need welding protection to use without eye damage, if it has a welding screen you do not take eye damage
+	var/has_welding_screen = TRUE
 
 /obj/item/tool/weldingtool/Initialize()
 	. = ..()
