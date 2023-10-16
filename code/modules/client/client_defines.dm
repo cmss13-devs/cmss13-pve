@@ -131,3 +131,6 @@
 
 	///datum that controls the displaying and hiding of tooltips
 	var/datum/tooltip/tooltips
+
+	/// Holds the game master datum for this client
+	var/datum/game_master/game_master_menu

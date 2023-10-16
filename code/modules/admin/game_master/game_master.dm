@@ -2,8 +2,11 @@
 	set name = "Game Master Panel"
 	set category = "Game Master"
 
-	new /datum/game_master(using_client)
+	if(using_client.game_master_menu)
+		using_client.game_master_menu.tgui_interact(using_client.mob)
+		return
 
+	using_client.game_master_menu = new /datum/game_master(using_client)
 
 /client/proc/toggle_game_master()
 	set name = "Game Master Panel"
@@ -20,15 +23,34 @@
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
+/// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
+
 
 /datum/game_master
 
+	/// Associated list of game master submenus organized by object_type = game_master_submenu
+	var/list/submenu_types = list(
+		/obj/structure/pipes/vents/scrubber = /datum/game_master_submenu/vents,
+		/obj/structure/pipes/vents/pump = /datum/game_master_submenu/vents,
+	)
+
+	/// List of current submenus
+	var/list/current_submenus
+
+	/// The xeno selected to be spawned in the spawn section
 	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
-	var/xenos_to_spawn = DEFAULT_XENO_AMOUNT_TO_SPAWN
+
+	/// The amount of xenos to spawn in the spawn section
+	var/xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
+
+	/// If the spawned xeno is an AI in the spawn section
 	var/spawn_ai = TRUE
+
+	/// If we are currently using the click intercept for the spawn section
 	var/spawn_click_intercept = FALSE
 
+	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
 
 /datum/game_master/New(client/using_client)
@@ -37,8 +59,14 @@
 	if(using_client.mob)
 		tgui_interact(using_client.mob)
 
+	current_submenus = list()
+
+	using_client.click_intercept = src
+
 /datum/game_master/Destroy(force, ...)
 	. = ..()
+	submenu_types = null
+	current_submenus = null
 
 /datum/game_master/ui_data(mob/user)
 	. = ..()
@@ -68,14 +96,11 @@
 
 	switch(action)
 		if("toggle_click_spawn")
-			var/client/user_client = ui.user.client
-			if(user_client.click_intercept == src)
-				user_client.click_intercept = null
+			if(spawn_click_intercept)
 				spawn_click_intercept = FALSE
 				current_click_intercept_action = null
 				return
 
-			user_client.click_intercept = src
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
 			return
@@ -86,7 +111,7 @@
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
-			xenos_to_spawn = DEFAULT_XENO_AMOUNT_TO_SPAWN
+			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
 			return
 
 		if("set_xeno_spawns")
@@ -94,7 +119,7 @@
 			if(!new_number)
 				return
 
-			xenos_to_spawn = clamp(new_number, 1, 10)
+			xeno_spawn_count = clamp(new_number, 1, 10)
 			return
 
 /datum/game_master/ui_close(mob/user)
@@ -103,8 +128,6 @@
 	var/client/user_client = user.client
 	if(user_client?.click_intercept == src)
 		user_client.click_intercept = null
-
-	qdel(src)
 
 /datum/game_master/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
@@ -115,7 +138,12 @@
 		ui = new(user, src, "GameMaster", "Game Master Menu")
 		ui.open()
 
+	user.client?.click_intercept = src
+
 /datum/game_master/proc/InterceptClickOn(mob/user, params, atom/object)
+
+	var/list/modifiers = params2list(params)
+
 	switch(current_click_intercept_action)
 		if(SPAWN_CLICK_INTERCEPT_ACTION)
 			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
@@ -126,10 +154,23 @@
 
 			var/turf/spawn_turf = get_turf(object)
 
-			for(var/i = 1 to xenos_to_spawn)
+			for(var/i = 1 to xeno_spawn_count)
 				new spawning_xeno_type(spawn_turf, null, XENO_HIVE_NORMAL, !spawn_ai)
 
-			return
+			return TRUE
+
+		else
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK) && (object.type in submenu_types))
+				for(var/datum/game_master_submenu/submenu in current_submenus)
+					if(submenu.referenced_atom == object)
+						submenu.tgui_interact(user)
+						return TRUE
+
+				var/new_menu_type = submenu_types[object.type]
+
+				current_submenus += new new_menu_type(user, object)
+				return TRUE
+
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
