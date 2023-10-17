@@ -452,6 +452,15 @@
 	icon_state = "cargo"
 	},
 /area/almayer/hallways/hangar)
+"dS" = (
+/obj/structure/machinery/power/fusion_engine{
+	name = "\improper S-52 fusion reactor 4"
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "ea" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/kitchen/tray{
@@ -668,6 +677,13 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
+"gf" = (
+/obj/structure/closet/toolcloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/almayer/engineering)
 "gh" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
@@ -850,9 +866,11 @@
 "ho" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	name = "\improper Medical Subsection";
-	req_one_access = null
+	req_one_access = list()
 	},
-/turf/open/space/basic,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/almayer/medical)
 "hq" = (
 /obj/structure/machinery/light{
@@ -1172,8 +1190,23 @@
 	},
 /area/almayer/hallways/hangar)
 "kB" = (
-/turf/closed/wall/almayer/outer,
-/area/almayer/living/briefing)
+/obj/structure/machinery/door/airlock/almayer/engineering{
+	name = "\improper Engineering Hallway";
+	req_one_access = list()
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/almayer/engineering)
+"kH" = (
+/obj/structure/machinery/power/fusion_engine{
+	name = "\improper S-52 fusion reactor 1"
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "kI" = (
 /obj/structure/largecrate/random/barrel/blue,
 /turf/open/floor/almayer{
@@ -1455,6 +1488,13 @@
 	icon_state = "plate"
 	},
 /area/almayer/squads/alpha/squad_one)
+"ns" = (
+/obj/structure/closet/cryo,
+/obj/structure/closet/cryo,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "nx" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1755,6 +1795,15 @@
 	icon_state = "test_floor4"
 	},
 /area/almayer/hallways/hangar)
+"qj" = (
+/obj/structure/machinery/power/fusion_engine{
+	name = "\improper S-52 fusion reactor 2"
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "qp" = (
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
@@ -1912,6 +1961,15 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/port_hallway)
+"qZ" = (
+/obj/structure/machinery/power/fusion_engine{
+	name = "\improper S-52 fusion reactor 3"
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "rd" = (
 /obj/structure/closet/cryo,
 /turf/open/floor/almayer{
@@ -3056,6 +3114,12 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"AH" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/almayer/engineering)
 "AK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3580,6 +3644,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
+"Fz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/almayer/engineering)
 "FE" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/flashlight/lamp{
@@ -3998,6 +4069,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/almayer/squads/alpha/squad_two)
+"IN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/almayer/engineering)
 "IT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -4203,6 +4281,14 @@
 "Ks" = (
 /turf/open/floor/almayer,
 /area/almayer/living/briefing)
+"Kt" = (
+/obj/structure/machinery/power/smes/buildable,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Kv" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -4602,6 +4688,19 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/cafeteria_port)
+"Oc" = (
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/machinery/power/terminal,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Oj" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4679,7 +4778,7 @@
 "Pe" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	name = "\improper Platoon Medic Office";
-	req_one_access = null
+	req_one_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -5078,13 +5177,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/grunt_rnr)
-"SD" = (
-/obj/structure/closet/cryo,
-/obj/structure/closet/cryo,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/cryo_cells)
 "SG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -5261,6 +5353,9 @@
 	},
 /turf/open/floor/plating,
 /area/almayer/hallways/hangar)
+"TN" = (
+/turf/closed/wall/almayer,
+/area/almayer/engineering)
 "TO" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5442,6 +5537,12 @@
 	icon_state = "dark_sterile"
 	},
 /area/almayer/living/cryo_cells)
+"Vj" = (
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Vp" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/flamer{
@@ -5752,8 +5853,8 @@
 	},
 /area/almayer/living/grunt_rnr)
 "YB" = (
-/turf/closed/wall/almayer,
-/area/space)
+/turf/closed/wall/almayer/outer,
+/area/almayer/engineering)
 "YG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -18087,23 +18188,23 @@ Xv
 iR
 Bz
 qU
-MK
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
+hS
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
 DC
 Yb
 Gx
@@ -18239,7 +18340,7 @@ BZ
 iR
 Bz
 OC
-MK
+hS
 DC
 DC
 DC
@@ -18391,7 +18492,7 @@ vt
 iR
 Bz
 Jg
-MK
+hS
 DC
 Lh
 Fl
@@ -18543,7 +18644,7 @@ sY
 iR
 Bz
 dH
-MK
+hS
 DC
 Yb
 DC
@@ -18695,21 +18796,21 @@ MK
 hS
 MB
 hS
-MK
+hS
 Dj
 Yb
 DC
+TN
+TN
+kB
+TN
 YB
-Cr
-Cr
-Cr
-YB
-Cr
-Cr
-Cr
-Cr
-Cr
-YB
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
 DX
 DX
 ho
@@ -18847,21 +18948,21 @@ MK
 NE
 DB
 Wg
-MK
+hS
 DC
 Yb
 DC
+TN
+Fz
+Vj
+AH
 YB
 Cr
 Cr
 Cr
-YB
 Cr
 Cr
-Cr
-Cr
-Cr
-YB
+Cq
 DX
 sm
 Cb
@@ -18879,7 +18980,7 @@ HK
 rd
 rd
 HK
-SD
+ns
 rd
 rd
 HK
@@ -18999,21 +19100,21 @@ MK
 oA
 QQ
 gp
-MK
+hS
 DC
 Yb
 nH
+TN
+IN
+Vj
+gf
 YB
 Cr
 Cr
 Cr
-YB
 Cr
 Cr
-Cr
-Cr
-Cr
-YB
+Cq
 DX
 QI
 Cb
@@ -19155,17 +19256,17 @@ MK
 DC
 Yb
 DC
+TN
+kH
+Vj
+qZ
 YB
 Cr
 Cr
 Cr
-YB
 Cr
 Cr
-Cr
-Cr
-Cr
-YB
+Cq
 DX
 yY
 Cb
@@ -19308,16 +19409,16 @@ WV
 WV
 WV
 YB
-Cr
-Cr
-Cr
+qj
+Vj
+dS
 YB
 Cr
 Cr
 Cr
 Cr
 Cr
-YB
+Cq
 DX
 hW
 Cb
@@ -19459,17 +19560,17 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
+YB
+Kt
+Oc
+Kt
 YB
 Cr
 Cr
 Cr
 Cr
 Cr
-YB
+Cq
 DX
 yY
 Cb
@@ -19611,17 +19712,17 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 YB
+YB
+YB
+YB
+YB
+Cr
+Cr
+Cr
+Cr
+Cr
+Cq
 DX
 hW
 Cb
