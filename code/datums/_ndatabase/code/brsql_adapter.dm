@@ -530,7 +530,7 @@
 			if(first && !is_id)
 				if(!items_first)
 					update_items+=","
-				update_items+="`[table_name]`.[esfield]=`__prep_update`.[esfield]"
+				update_items+="`[table_name]`.[esfield]=`subquery`.[esfield]"
 				items_first = FALSE
 			local_first = FALSE
 		calltext += "SELECT [local_text]"
