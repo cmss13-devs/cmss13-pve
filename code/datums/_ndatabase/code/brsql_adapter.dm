@@ -539,9 +539,7 @@
 		issue_log += "No ID passed to update query."
 		return "" // AAAAAAAAAAAAAH FUCK DON'T JUST KILL THE ENTIRE FUCKING TABLE BRUH
 	return {"
-		WITH __prep_update as (
-			[calltext]
-		) UPDATE `[connection.database]`.`[table_name]` INNER JOIN `__prep_update` ON `[table_name]`.id = `__prep_update`.id SET [update_items]
+		UPDATE `[connection.database]`.`[table_name]` JOIN (WITH `__prep_update` AS ( [calltext] ) SELECT * FROM `__prep_update`) subquery ON `[table_name]`.id = subquery.id SET [update_items]
 	"}
 
 /datum/db/adapter/brsql_adapter/proc/getquery_delete_table(table_name, list/ids)
