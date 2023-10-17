@@ -540,7 +540,6 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/silver
-	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SO
 	rank = JOB_SO
 	paygrade = "MO2"
@@ -550,6 +549,10 @@
 
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_BRONZE)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+
+/datum/equipment_preset/uscm_ship/so/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
 /datum/equipment_preset/uscm_ship/so/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel

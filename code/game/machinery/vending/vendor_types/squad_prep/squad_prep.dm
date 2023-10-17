@@ -75,6 +75,7 @@
 		list("Marine Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Marine Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
+		list("Marine Alpha Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine/alpha, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Brown Webbing Vest", round(scale * 1.25), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
@@ -153,12 +154,6 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha
 	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO)
-
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha/populate_product_list(scale)
-	listed_products += list(
-		list("HEADSET", -1, null, null),
-		list("Marine Alpha Radio Headset", 10, /obj/item/device/radio/headset/almayer/marine/alpha, VENDOR_ITEM_REGULAR),
-		)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/bravo
 	req_access = list(ACCESS_MARINE_PREP)
@@ -264,12 +259,27 @@
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 
+		list("EXPLOSIVES", -1, null, null),
+		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
+
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARMS", -1, null, null),
+		list("88 Mod 4 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/mod88, VENDOR_ITEM_REGULAR),
+		list("M44 Combat Revolver", round(scale * 2), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
+		list("M4A3 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARM AMMUNITION", -1, null, null),
+		list("88M4 AP Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol/mod88, VENDOR_ITEM_REGULAR),
+		list("M44 Speedloader (.44)", round(scale * 10), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),

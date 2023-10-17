@@ -878,6 +878,9 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
 	pixel_x = -20
 	},
+/obj/structure/closet/secure_closet/platoon_sergeant{
+	pixel_x = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1075,6 +1078,7 @@
 /obj/item/prop/magazine/boots/n054{
 	pixel_x = 29
 	},
+/obj/structure/closet/secure_closet/smartgunner,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1909,7 +1913,7 @@
 	},
 /area/almayer/hallways/port_hallway)
 "rd" = (
-/obj/structure/closet,
+/obj/structure/closet/cryo,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2134,8 +2138,8 @@
 	},
 /area/almayer/medical)
 "sv" = (
-/obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/cryo,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2670,6 +2674,13 @@
 	icon_state = "cargo"
 	},
 /area/almayer/living/cryo_cells)
+"xs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/squad_sergeant,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_one)
 "xz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -4210,6 +4221,13 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"KD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/smartgunner,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_one)
 "KH" = (
 /obj/vehicle/powerloader,
 /turf/open/floor/almayer,
@@ -4373,6 +4391,13 @@
 	icon_state = "dark_sterile"
 	},
 /area/almayer/living/cryo_cells)
+"Me" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/squad_sergeant,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/squads/alpha/squad_two)
 "Mi" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/alpha,
@@ -5053,6 +5078,13 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/grunt_rnr)
+"SD" = (
+/obj/structure/closet/cryo,
+/obj/structure/closet/cryo,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/cryo_cells)
 "SG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -14139,7 +14171,7 @@ Iw
 jc
 Iu
 jj
-it
+Me
 jc
 Cr
 Cr
@@ -15050,8 +15082,8 @@ uH
 Mv
 Zk
 HD
-hQ
-hQ
+KD
+xs
 Zk
 Cr
 Cr
@@ -18847,7 +18879,7 @@ HK
 rd
 rd
 HK
-rd
+SD
 rd
 rd
 HK

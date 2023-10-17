@@ -74,3 +74,54 @@
 	new /obj/item/clothing/suit/storage/lawyer/purpjacket(src)
 	new /obj/item/clothing/shoes/brown(src)
 	new /obj/item/clothing/shoes/black(src)
+
+/obj/structure/closet/secure_closet/platoon_sergeant
+	name = "platoon sergeant locker"
+	desc = "A secure storage unit for the platoon sergeant."
+	req_one_access = list(ACCESS_MARINE_LEADER)
+
+/obj/structure/closet/secure_closet/platoon_sergeant/Initialize()
+	. = ..()
+	new /obj/item/weapon/gun/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/clothing/head/helmet/marine/leader(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/whistle(src)
+
+/obj/structure/closet/secure_closet/squad_sergeant
+	name = "squad sergeant locker"
+	desc = "A secure storage unit for a squad sergeant."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_TL_PREP)
+
+/obj/structure/closet/secure_closet/squad_sergeant/Initialize()
+	. = ..()
+	new /obj/item/clothing/head/helmet/marine/rto(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/whistle(src)
+
+/obj/structure/closet/secure_closet/smartgunner
+	name = "smartgunner locker"
+	desc = "A secure storage unit for a smartgunner."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/closet/secure_closet/smartgunner/Initialize()
+	. = ..()
+	new /obj/item/weapon/gun/smartgun(src)
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/storage/belt/marine/smartgunner(src)
+
+/obj/structure/closet/cryo/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine(src)
+	new /obj/item/clothing/shoes/marine(src)
