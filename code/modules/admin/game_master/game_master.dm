@@ -1,3 +1,7 @@
+
+/// Assoc list that holds our custom game master objectives, formatted as atom = objective_string
+GLOBAL_LIST_EMPTY(game_master_objectives)
+
 /proc/open_game_master_panel(client/using_client)
 	set name = "Game Master Panel"
 	set category = "Game Master"
@@ -17,14 +21,20 @@
 	if(src)
 		open_game_master_panel(src)
 
-
+// Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
 #define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_CRUSHER)
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
+// Objective stuff
+#define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+#define OBJECTIVE_COLOR_OPTIONS list("red", "purple", "blue")
+#define OBJECTIVE_COLOR_OPTIONS_ASSOC list("red" = COLOR_RED, "purple" = COLOR_PURPLE, "blue" = COLOR_BLUE)
+
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
+#define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
 
 
 /datum/game_master
@@ -38,6 +48,9 @@
 	/// List of current submenus
 	var/list/current_submenus
 
+
+	/// Spawn stuff
+
 	/// The xeno selected to be spawned in the spawn section
 	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
 
@@ -49,6 +62,16 @@
 
 	/// If we are currently using the click intercept for the spawn section
 	var/spawn_click_intercept = FALSE
+
+	/// End Spawn Stuff
+
+	/// Objective stuff
+
+	/// If we are currently using the click intercept for the objective section
+	var/objective_click_intercept = FALSE
+
+	/// End Objective Stuff
+
 
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
@@ -73,12 +96,16 @@
 
 	var/list/data = list()
 
+	// Spawn stuff
 	data["selected_xeno"] = selected_xeno
 	data["spawn_ai"] = spawn_ai
 	data["spawn_click_intercept"] = spawn_click_intercept
 
-	return data
+	// Objective stuff
+	data["objective_click_intercept"] = objective_click_intercept
 
+
+	return data
 
 /datum/game_master/ui_static_data(mob/user)
 	. = ..()
@@ -90,11 +117,12 @@
 
 	return data
 
-
 /datum/game_master/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 
 	switch(action)
+
+		//Spawn Section
 		if("toggle_click_spawn")
 			if(spawn_click_intercept)
 				spawn_click_intercept = FALSE
@@ -121,6 +149,18 @@
 
 			xeno_spawn_count = clamp(new_number, 1, 10)
 			return
+
+		//Objective Section
+		if("toggle_click_objective")
+			if(objective_click_intercept)
+				objective_click_intercept = FALSE
+				current_click_intercept_action = null
+				return
+
+			objective_click_intercept = TRUE
+			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
+			return
+
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
@@ -159,6 +199,52 @@
 
 			return TRUE
 
+		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
+			if(object in GLOB.game_master_objectives)
+				if(tgui_alert(user, "Do you want to remove [object] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
+					return TRUE
+
+				SSminimaps.remove_marker(object)
+				GLOB.game_master_objectives -= object
+				return TRUE
+
+			var/turf/object_turf = get_turf(object)
+			if(!object_turf)
+				return TRUE
+
+			var/z_level = object_turf.z
+
+			if(tgui_alert(user, "Do you want to make [object] an objective?", "Confirmation", list("Yes", "No")) != "Yes")
+				return TRUE
+
+			var/number_option = tgui_input_list(user, "Number on tacmap marker?", "Marker Number", OBJECTIVE_NUMBER_OPTIONS)
+			if(!number_option)
+				return TRUE
+
+			var/color_option = tgui_input_list(user, "Color of tacmap marker?", "Marker Color", OBJECTIVE_COLOR_OPTIONS)
+			if(!color_option)
+				return TRUE
+
+			color_option = OBJECTIVE_COLOR_OPTIONS_ASSOC[color_option]
+
+			var/image/background = mutable_appearance('icons/ui_icons/map_blips.dmi', "background")
+			background.color = color_option
+
+			var/mutable_appearance/icon = image('icons/ui_icons/map_blips.dmi', icon_state = number_option)
+			icon.appearance_flags = RESET_COLOR
+
+			background.overlays += icon
+
+			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
+
+			/// objective_info needs to be implemented both in the game master menu and overwatch TGUI
+			/// GLOB.game_master_objectives should also probably hold a datum with more info including the icon here for TGUI usage
+			/// - Morrow
+			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
+
+			GLOB.game_master_objectives[object] = objective_info || ""
+			return TRUE
+
 		else
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK) && (object.type in submenu_types))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
@@ -175,4 +261,8 @@
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
 #undef DEFAULT_XENO_AMOUNT_TO_SPAWN
+#undef OBJECTIVE_NUMBER_OPTIONS
+#undef OBJECTIVE_COLOR_OPTIONS
+#undef OBJECTIVE_COLOR_OPTIONS_ASSOC
 #undef SPAWN_CLICK_INTERCEPT_ACTION
+#undef OBJECTIVE_CLICK_INTERCEPT_ACTION
