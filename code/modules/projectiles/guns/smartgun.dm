@@ -357,7 +357,7 @@
 
 		if(original_target_turf && !(original_target_turf in checked_turfs))
 			var/user_to_target_dist = get_dist(user_turf, original_target_turf)
-			var/list/temp_checked_turfs = checked_turfs
+			var/list/temp_checked_turfs = checked_turfs.Copy()
 			checked_turfs = list()
 
 			for(var/turf/checked_turf as anything in temp_checked_turfs)
