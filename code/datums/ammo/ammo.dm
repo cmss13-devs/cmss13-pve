@@ -164,9 +164,9 @@
 /datum/ammo/proc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
-		target.apply_effect(0.7, WEAKEN) // 0.9 seconds of stun, per agreement from Balance Team when switched from MC stuns to exact stuns
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(2, SLOW)
+		target.apply_effect(1, WEAKEN)
+		target.apply_effect(2, SUPERSLOW)
+		target.apply_effect(4, SLOW)
 		to_chat(target, SPAN_XENODANGER("You are shaken by the sudden impact!"))
 	else
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
