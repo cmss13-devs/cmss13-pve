@@ -1966,15 +1966,6 @@
 	icon_state = "plating"
 	},
 /area/almayer/engineering)
-"rc" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp,
-/obj/effect/spawner/random/toolbox,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "rd" = (
 /obj/structure/closet/cryo,
 /turf/open/floor/almayer{
@@ -2389,6 +2380,10 @@
 "uA" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	unacidable = 1;
+	unslashable = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3055,6 +3050,15 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/port_hallway)
+"Ae" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Af" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3334,15 +3338,6 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
-"CG" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "CK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3651,6 +3646,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
+"Fs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
@@ -5446,6 +5451,13 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
+"Uf" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Uh" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -5595,6 +5607,9 @@
 	},
 /area/almayer/squads/alpha/platoon_sergeant)
 "VX" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5670,6 +5685,15 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/cafeteria_port)
+"WQ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "WV" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -5802,13 +5826,6 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
-"Yu" = (
-/obj/structure/machinery/telecomms/relay/preset/tower,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "Yw" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -15174,7 +15191,7 @@ Dc
 ad
 Yj
 YA
-JA
+Fs
 Sy
 mk
 kg
@@ -19717,9 +19734,9 @@ Cr
 Cr
 Cr
 YB
-Yu
-CG
-rc
+Uf
+Ae
+WQ
 YB
 Cr
 Cr
