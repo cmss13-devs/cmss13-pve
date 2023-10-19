@@ -115,14 +115,15 @@
 
 /// Shakes the vent and creates timers to spawn multiple xenos in succession
 /datum/game_master_submenu/vents/proc/handle_vent_spawn(ambush)
-	var/obj/structure/pipes/vents/reference_vent = referenced_atom
-	if(!istype(reference_vent))
+	var/obj/structure/pipes/vents/referenced_vent = referenced_atom
+	if(!istype(referenced_vent))
 		log_debug("Vent game master submenu has reference atom that is not a vent. Referenced atom: [referenced_atom]")
 		return
 
-	reference_vent.animate_ventcrawl()
+	referenced_vent.animate_ventcrawl()
+	playsound(referenced_vent, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 25, 1)
 	var/timer_increment = VENT_ESCAPE_INCREMENT_TIME
-	reference_vent.visible_message(SPAN_NOTICE("Something begins climbing out of [reference_vent]!"))
+	referenced_vent.visible_message(SPAN_NOTICE("Something begins climbing out of [referenced_vent]!"))
 
 	if(ambush)
 		for(var/ambusher_type in current_ambush)
@@ -130,7 +131,7 @@
 				addtimer(CALLBACK(src, PROC_REF(spawn_xeno), ambusher_type), timer_increment)
 				timer_increment += VENT_ESCAPE_INCREMENT_TIME
 
-		addtimer(CALLBACK(reference_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset)), timer_increment)
+		addtimer(CALLBACK(referenced_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset)), timer_increment)
 		current_ambush = list()
 		ambush_info = initial(ambush_info)
 		ambushing = FALSE
@@ -140,7 +141,7 @@
 		addtimer(CALLBACK(src, PROC_REF(spawn_xeno), selected_xeno), timer_increment)
 		timer_increment += VENT_ESCAPE_INCREMENT_TIME
 
-	addtimer(CALLBACK(reference_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset)), timer_increment)
+	addtimer(CALLBACK(referenced_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset)), timer_increment)
 
 #undef VENT_ESCAPE_INCREMENT_TIME
 
@@ -157,6 +158,8 @@
 	if(!xeno_type)
 		log_debug("Vent game master submenu unable to find xeno type. Xeno type name: [spawning_xeno_name]")
 		return
+
+	playsound(referenced_atom, pick('sound/effects/alien_ventpass1.ogg', 'sound/effects/alien_ventpass2.ogg'), 25, 1)
 
 	new xeno_type(spawn_turf, null, XENO_HIVE_NORMAL)
 
