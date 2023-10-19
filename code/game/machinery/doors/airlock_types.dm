@@ -892,7 +892,7 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit
 	icon = 'icons/obj/structures/doors/dropship1_pilot.dmi'
 	name = "cockpit"
-	req_access = list(ACCESS_MARINE_DROPSHIP)
+	req_access = list()
 	req_one_access = list()
 	unslashable = TRUE
 	unacidable = TRUE
