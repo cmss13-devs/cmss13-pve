@@ -132,6 +132,14 @@
 	dir = 4;
 	pixel_x = -17
 	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	pixel_y = 14;
+	pixel_x = -17;
+	icon_state = "shuttle";
+	dir = 4;
+	name = "Tactical Map Display";
+	layer = 2.97
+	},
 /turf/open/floor/almayer,
 /area/almayer/living/platoon_commander_rooms)
 "be" = (
@@ -552,6 +560,15 @@
 	icon_state = "dark_sterile"
 	},
 /area/almayer/living/cryo_cells)
+"eP" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "eT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -778,6 +795,13 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/cryo_cells)
+"gK" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "gL" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2409,7 +2433,7 @@
 "vb" = (
 /obj/structure/surface/table/reinforced/almayer_B{
 	layer = 2.0;
-	pixel_x = 14
+	pixel_x = 12
 	},
 /turf/closed/wall/almayer,
 /area/almayer/living/platoon_commander_rooms)
@@ -2481,6 +2505,16 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/platoon_commander_rooms)
+"vv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "vB" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -3050,15 +3084,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/port_hallway)
-"Ae" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "Af" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3646,16 +3671,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
-"Fs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	dir = 8;
-	invisibility = 101
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/grunt_rnr)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
@@ -5097,6 +5112,15 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/hallways/port_hallway)
+"RS" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "RT" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /turf/open/floor/almayer{
@@ -5451,13 +5475,6 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
-"Uf" = (
-/obj/structure/machinery/telecomms/relay/preset/tower,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "Uh" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -5685,15 +5702,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/cafeteria_port)
-"WQ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp,
-/obj/effect/spawner/random/toolbox,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "WV" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -15191,7 +15199,7 @@ Dc
 ad
 Yj
 YA
-Fs
+vv
 Sy
 mk
 kg
@@ -19734,9 +19742,9 @@ Cr
 Cr
 Cr
 YB
-Uf
-Ae
-WQ
+gK
+RS
+eP
 YB
 Cr
 Cr
