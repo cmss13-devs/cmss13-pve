@@ -1073,16 +1073,8 @@
 /area/almayer/medical)
 "jg" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = -3;
-	pixel_y = -6
-	},
+/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank,
 /obj/item/weapon/gun/flamer{
 	current_mag = null;
 	pixel_y = 4
@@ -1202,6 +1194,10 @@
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 1"
 	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20
+	},
 /turf/open/floor/almayer{
 	dir = 5;
 	icon_state = "plating"
@@ -1307,7 +1303,7 @@
 /area/almayer/living/briefing)
 "lQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1970,6 +1966,15 @@
 	icon_state = "plating"
 	},
 /area/almayer/engineering)
+"rc" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "rd" = (
 /obj/structure/closet/cryo,
 /turf/open/floor/almayer{
@@ -2575,10 +2580,7 @@
 /area/almayer/living/briefing)
 "wc" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	access_modified = 1;
-	name = "\improper Platoon Commander's Quarters";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Platoon Commander's Quarters"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -3332,6 +3334,15 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
+"CG" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "CK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3471,12 +3482,8 @@
 /area/almayer/hallways/hangar)
 "DV" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	access_modified = 1;
 	dir = 1;
-	id_tag = "CO-Office";
-	name = "\improper Platoon Commander's Office";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Platoon Commander's Office"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -4433,7 +4440,7 @@
 /area/almayer/living/platoon_commander_rooms)
 "LF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4693,9 +4700,6 @@
 	dir = 1
 	},
 /obj/structure/machinery/power/terminal,
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	dir = 5;
 	icon_state = "plating"
@@ -5549,15 +5553,8 @@
 	current_mag = null;
 	pixel_y = 4
 	},
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/flamer_tank{
-	current_rounds = 0;
-	pixel_x = -3;
-	pixel_y = -6
-	},
+/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5805,6 +5802,13 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
+"Yu" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Yw" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -19713,9 +19717,9 @@ Cr
 Cr
 Cr
 YB
-YB
-YB
-YB
+Yu
+CG
+rc
 YB
 Cr
 Cr
@@ -19864,11 +19868,11 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+Cq
+Cq
+Cq
+Cq
+Cq
 Cr
 Cr
 Cr
