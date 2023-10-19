@@ -123,5 +123,5 @@
 	. = ..()
 	new /obj/item/clothing/under/marine(src)
 	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/shoes/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
