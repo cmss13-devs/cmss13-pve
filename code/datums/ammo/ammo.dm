@@ -89,8 +89,8 @@
 	/// The flicker that plays when a bullet hits a target. Usually red. Can be nulled so it doesn't show up at all.
 	var/hit_effect_color = "#FF0000"
 
-	/// currently responsible for increasing firing sound volume ONLY
-	var/special = FALSE
+	/// Changes the freq of firing sound based on ammo type
+	var/firing_freq_offset = FALSE
 
 /datum/ammo/New()
 	set_bullet_traits()
