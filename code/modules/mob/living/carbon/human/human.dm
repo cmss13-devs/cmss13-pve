@@ -539,49 +539,6 @@
 						else if(U.has_sensor == oldsens)
 							U.set_sensors(usr)
 
-	if (href_list["squadfireteam"])
-
-		var/mob/living/carbon/human/target
-		var/mob/living/carbon/human/sl
-		if(href_list["squadfireteam_target"])
-			sl = src
-			for(var/mob/living/carbon/human/mar in sl.assigned_squad.marines_list)
-				if(href_list["squadfireteam_target"] == "\ref[mar]")
-					target = mar
-					break
-		else
-			sl = usr
-			target = src
-
-		if(sl.is_mob_incapacitated() || !hasHUD(sl,"squadleader"))
-			return
-
-		if(!target || !target.assigned_squad || !target.assigned_squad.squad_leader || target.assigned_squad.squad_leader != sl)
-			return
-
-		if(target.squad_status == "K.I.A.")
-			to_chat(sl, "[FONT_SIZE_BIG("<font color='red'>You can't assign K.I.A. marines to fireteams.</font>")]")
-			return
-
-		target.assigned_squad.manage_fireteams(target)
-
-	if (href_list["squad_status"])
-		var/mob/living/carbon/human/target
-		for(var/mob/living/carbon/human/mar in assigned_squad.marines_list)
-			if(href_list["squad_status_target"] == "\ref[mar]")
-				target = mar
-				break
-		if(!istype(target))
-			return
-
-		if(is_mob_incapacitated() && !hasHUD(src,"squadleader"))
-			return
-
-		if(!target.assigned_squad || !target.assigned_squad.squad_leader || target.assigned_squad.squad_leader != src)
-			return
-
-		assigned_squad.change_squad_status(target)
-
 	if(href_list["criminal"])
 		if(hasHUD(usr,"security"))
 			var/modified = 0

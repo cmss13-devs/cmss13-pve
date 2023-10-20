@@ -77,17 +77,16 @@
 	//vvv Do not set these in squad defines
 	var/mob/living/carbon/human/squad_leader = null //Who currently leads it.
 	var/list/fireteam_leaders = list(
-									"FT1" = null,
-									"FT2" = null,
-									"FT3" = null
+									"SQ1" = null,
+									"SQ2" = null,
 									) //FT leaders stored here
 	var/list/list/fireteams = list(
-							"FT1" = list(),
-							"FT2" = list(),
-							"FT3" = list()
-							) //3 FTs where references to marines stored.
+							"SQ1" = list(),
+							"SQ2" = list(),
+							)
 	var/list/squad_info_data = list()
 
+	var/num_riflemen = 0
 	var/num_engineers = 0
 	var/num_medics = 0
 	var/num_leaders = 0
@@ -290,9 +289,8 @@
 	. = ..()
 
 	tracking_id = SStracking.setup_trackers()
-	SStracking.setup_trackers(null, "FT1")
-	SStracking.setup_trackers(null, "FT2")
-	SStracking.setup_trackers(null, "FT3")
+	SStracking.setup_trackers(null, "SQ1")
+	SStracking.setup_trackers(null, "SQ2")
 	update_all_squad_info()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
@@ -454,6 +452,11 @@
 	var/list/extra_access = list()
 
 	switch(GET_DEFAULT_ROLE(M.job))
+		if(JOB_SQUAD_MARINE)
+			assignment = JOB_SQUAD_MARINE
+			num_riflemen++
+			var/squad_number = (Ceiling(num_riflemen / 2) > 2) ? pick(1, 2) : Ceiling(num_riflemen / 2)
+			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_ENGI)
 			assignment = JOB_SQUAD_ENGI
 			num_engineers++
@@ -469,9 +472,14 @@
 			assignment = JOB_SQUAD_TEAM_LEADER
 			num_tl++
 			M.important_radio_channels += radio_freq
+			var/squad_number = (num_tl > 2) ? pick(1, 2) : num_tl
+			assign_fireteam("SQ[squad_number]", M)
+			assign_ft_leader("SQ[squad_number]", M)
 		if(JOB_SQUAD_SMARTGUN)
 			assignment = JOB_SQUAD_SMARTGUN
 			num_smartgun++
+			var/squad_number = (num_smartgun > 2) ? pick(1, 2) : num_smartgun
+			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_LEADER)
 			if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_SQUAD_LEADER) //field promoted SL
 				var/old_lead = squad_leader
@@ -610,7 +618,7 @@
 			old_lead.comm_title = "SG"
 		if(JOB_SQUAD_LEADER)
 			if(!leader_killed)
-				old_lead.comm_title = "PlSgt"
+				old_lead.comm_title = "PltSgt"
 		if(JOB_MARINE_RAIDER)
 			old_lead.comm_title = "Op."
 		if(JOB_MARINE_RAIDER_SL)
@@ -737,104 +745,7 @@
 	if(!H.stat)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were unassigned as [fireteam] Team Leader.")))
 
-/datum/squad/proc/unassign_all_ft_leaders()
-	for(var/team in fireteam_leaders)
-		if(fireteam_leaders[team])
-			unassign_ft_leader(team, TRUE, TRUE)
-
 /datum/squad/proc/reassign_ft_tracker_group(fireteam, old_id, new_id)
 	for(var/mob/living/carbon/human/H in fireteams[fireteam])
 		SStracking.stop_tracking(old_id, H)
 		SStracking.start_tracking(new_id, H)
-
-//moved the main proc for ft management from human.dm here to make it support both examine and squad info way to edit fts
-/datum/squad/proc/manage_fireteams(mob/living/carbon/human/target)
-	var/obj/item/card/id/ID = target.get_idcard()
-	if(!ID || !(ID.rank in ROLES_MARINES))
-		return
-	if(ID.rank == JOB_SQUAD_LEADER || squad_leader == target) //if SL/aSL are chosen
-		var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Unassign Fireteam 1 Leader", "Unassign Fireteam 2 Leader", "Unassign Fireteam 3 Leader", "Unassign all Team Leaders"))
-		if(target.assigned_squad != src)
-			return //in case they somehow change squad while SL is choosing
-		if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
-			return //if SL got knocked out or demoted while choosing
-		switch(choice)
-			if("Unassign Fireteam 1 Leader") unassign_ft_leader("FT1", TRUE)
-			if("Unassign Fireteam 2 Leader") unassign_ft_leader("FT2", TRUE)
-			if("Unassign Fireteam 3 Leader") unassign_ft_leader("FT3", TRUE)
-			if("Unassign all Team Leaders") unassign_all_ft_leaders()
-			else return
-		target.hud_set_squad()
-		return
-	if(target.assigned_fireteam)
-		if(fireteam_leaders[target.assigned_fireteam] == target) //Check if person already is FT leader
-			var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Unassign from Team Leader position"))
-			if(target.assigned_squad != src)
-				return
-			if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
-				return
-			if(choice == "Unassign from Team Leader position")
-				unassign_ft_leader(target.assigned_fireteam, TRUE)
-			target.hud_set_squad()
-			return
-
-		var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Remove from Fireteam", "Assign to Fireteam 1", "Assign to Fireteam 2", "Assign to Fireteam 3", "Assign as Team Leader"))
-		if(target.assigned_squad != src)
-			return
-		if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
-			return
-		switch(choice)
-			if("Remove from Fireteam") unassign_fireteam(target)
-			if("Assign to Fireteam 1") assign_fireteam("FT1", target)
-			if("Assign to Fireteam 2") assign_fireteam("FT2", target)
-			if("Assign to Fireteam 3") assign_fireteam("FT3", target)
-			if("Assign as Team Leader") assign_ft_leader(target.assigned_fireteam, target)
-			else return
-		target.hud_set_squad()
-		return
-
-	var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Assign to Fireteam 1", "Assign to Fireteam 2", "Assign to Fireteam 3"))
-	if(target.assigned_squad != src)
-		return
-	if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
-		return
-	switch(choice)
-		if("Assign to Fireteam 1") assign_fireteam("FT1", target)
-		if("Assign to Fireteam 2") assign_fireteam("FT2", target)
-		if("Assign to Fireteam 3") assign_fireteam("FT3", target)
-		else return
-	target.hud_set_squad()
-	return
-
-//Managing MIA and KIA statuses for marines
-/datum/squad/proc/change_squad_status(mob/living/carbon/human/target)
-	if(target == squad_leader)
-		return //you can't mark yourself KIA
-	var/choice = tgui_input_list(squad_leader, "Marine status management: M.I.A. for missing marines, K.I.A. for confirmed unrevivable dead.", "Squad Management", list("Cancel", "Remove status", "M.I.A.", "K.I.A."))
-	if(target.assigned_squad != src)
-		return //in case they somehow change squad while SL is choosing
-	if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
-		return //if SL got knocked out or demoted while choosing
-	switch(choice)
-		if("Remove status") target.squad_status = null
-		if("M.I.A.")
-			target.squad_status = choice
-			to_chat(squad_leader, FONT_SIZE_BIG(SPAN_BLUE("You set [target]'s status as Missing In Action.")))
-			if(target.stat == CONSCIOUS)
-				to_chat(target, FONT_SIZE_HUGE(SPAN_BLUE("You were marked as Missing In Action by Squad Leader.")))
-		if("K.I.A.")
-			target.squad_status = choice
-			if(target.assigned_fireteam)
-				if(fireteam_leaders[target.assigned_fireteam] == target)
-					unassign_ft_leader(target.assigned_fireteam, TRUE, FALSE)
-				unassign_fireteam(target, FALSE)
-			to_chat(squad_leader, FONT_SIZE_BIG(SPAN_BLUE("You set [target]'s status as Killed In Action. If they were Team Leader or in fireteam, they were demoted and unassigned.")))
-			if(target.stat == CONSCIOUS)
-				to_chat(target, FONT_SIZE_HUGE(SPAN_BLUE("You were marked as Killed In Action by Squad Leader.")))
-		else return
-	if(target.assigned_fireteam)
-		update_fireteam(target.assigned_fireteam)
-	else
-		update_free_mar()
-	target.hud_set_squad()
-	return

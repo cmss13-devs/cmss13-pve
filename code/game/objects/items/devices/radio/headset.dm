@@ -20,8 +20,8 @@
 	maxf = 1489
 
 	var/list/inbuilt_tracking_options = list(
-		"Squad Leader" = TRACKER_SL,
-		"Fireteam Leader" = TRACKER_FTL,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
 	var/list/tracking_options = list()
@@ -33,7 +33,7 @@
 
 	var/has_hud = FALSE
 	var/headset_hud_on = FALSE
-	var/locate_setting = TRACKER_SL
+	var/locate_setting = TRACKER_FTL
 	var/misc_tracking = FALSE
 	var/hud_type = MOB_HUD_FACTION_USCM
 	var/default_freq

@@ -123,6 +123,7 @@
 	pixel_x = 2
 	},
 /obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/device/motiondetector,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -131,6 +132,14 @@
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
 	pixel_x = -17
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	pixel_y = 14;
+	pixel_x = -17;
+	icon_state = "shuttle";
+	dir = 4;
+	name = "Tactical Map Display";
+	layer = 2.97
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/platoon_commander_rooms)
@@ -368,6 +377,7 @@
 	pixel_x = 14;
 	pixel_y = 29
 	},
+/obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1079,6 +1089,7 @@
 	current_mag = null;
 	pixel_y = 4
 	},
+/obj/item/device/motiondetector,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1117,6 +1128,7 @@
 	pixel_y = -2
 	},
 /obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/device/motiondetector,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2409,7 +2421,7 @@
 "vb" = (
 /obj/structure/surface/table/reinforced/almayer_B{
 	layer = 2.0;
-	pixel_x = 14
+	pixel_x = 12
 	},
 /turf/closed/wall/almayer,
 /area/almayer/living/platoon_commander_rooms)
@@ -2977,6 +2989,15 @@
 	icon_state = "cargo_arrow"
 	},
 /area/almayer/hallways/hangar)
+"zG" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "zH" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -3050,15 +3071,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/port_hallway)
-"Ae" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "Af" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3151,6 +3163,15 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
+"AW" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "AY" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -3646,16 +3667,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
-"Fs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	dir = 8;
-	invisibility = 101
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/grunt_rnr)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
@@ -4710,6 +4721,16 @@
 	icon_state = "plating"
 	},
 /area/almayer/engineering)
+"Od" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/almayer/living/grunt_rnr)
 "Oj" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5451,13 +5472,6 @@
 	icon_state = "sterile_green"
 	},
 /area/almayer/medical)
-"Uf" = (
-/obj/structure/machinery/telecomms/relay/preset/tower,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "Uh" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -5522,6 +5536,13 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
+"UZ" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/almayer/engineering)
 "Va" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -5567,6 +5588,7 @@
 	},
 /obj/item/ammo_magazine/flamer_tank,
 /obj/item/ammo_magazine/flamer_tank,
+/obj/item/device/motiondetector,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5685,15 +5707,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/living/cafeteria_port)
-"WQ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp,
-/obj/effect/spawner/random/toolbox,
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "WV" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -5774,6 +5787,7 @@
 	},
 /area/almayer/squads/alpha/platoon_sergeant)
 "XI" = (
+/obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -15191,7 +15205,7 @@ Dc
 ad
 Yj
 YA
-Fs
+Od
 Sy
 mk
 kg
@@ -19734,9 +19748,9 @@ Cr
 Cr
 Cr
 YB
-Uf
-Ae
-WQ
+UZ
+zG
+AW
 YB
 Cr
 Cr
