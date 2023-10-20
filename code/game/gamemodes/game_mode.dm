@@ -17,7 +17,7 @@ var/global/cas_tracking_id_increment = 0 //this var used to assign unique tracki
 /datum/game_mode
 	var/name = "invalid"
 	var/config_tag = null
-	var/votable = TRUE
+	var/votable = FALSE
 	var/vote_cycle = null
 	var/probability = 0
 	var/list/datum/mind/modePlayer = new
