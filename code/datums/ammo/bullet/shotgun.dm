@@ -162,6 +162,7 @@
 	damage = 140
 	penetration = ARMOR_PENETRATION_TIER_4
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
+	firing_freq_offset = SOUND_FREQ_LOW
 
 //buckshot variant only used by the masterkey shotgun attachment.
 /datum/ammo/bullet/shotgun/buckshot/masterkey
@@ -196,6 +197,7 @@
 	max_range = 8
 	damage = 140
 	penetration = ARMOR_PENETRATION_TIER_4
+	firing_freq_offset = SOUND_FREQ_LOW
 
 /*
 					8 GAUGE SHOTGUN AMMO

@@ -1677,6 +1677,11 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	projectile_to_fire.shot_from = src
 
+	if(user)
+		projectile_to_fire.firer = user
+		if(isliving(user))
+			projectile_to_fire.def_zone = user.zone_selected
+
 	return 1
 
 /obj/item/weapon/gun/proc/play_firing_sounds(obj/projectile/projectile_to_fire, mob/user)
@@ -1690,12 +1695,10 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	if(projectile_to_fire.ammo && projectile_to_fire.ammo.sound_override)
 		actual_sound = projectile_to_fire.ammo.sound_override
 
-	projectile_to_fire.firer = user
-	if(isliving(user))
-		projectile_to_fire.def_zone = user.zone_selected
-
 	//Guns with low ammo have their firing sound
 	var/firing_sndfreq = (current_mag && (current_mag.current_rounds / current_mag.max_rounds) > GUN_LOW_AMMO_PERCENTAGE) ? FALSE : SOUND_FREQ_HIGH
+
+	firing_sndfreq = in_chamber.ammo.firing_freq_offset ? in_chamber.ammo.firing_freq_offset : firing_sndfreq
 
 	//firing from an attachment
 	if(active_attachable && active_attachable.flags_attach_features & ATTACH_PROJECTILE)
@@ -1704,7 +1707,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	else
 		if(!(flags_gun_features & GUN_SILENCED))
 			if (firing_sndfreq && fire_rattle)
-				playsound(user, fire_rattle, firesound_volume, FALSE)//if the gun has a unique 'mag rattle' SFX play that instead of pitch shifting.
+				playsound(user, fire_rattle, firesound_volume, FALSE) //if the gun has a unique 'mag rattle' SFX play that instead of pitch shifting.
 			else
 				playsound(user, actual_sound, firesound_volume, firing_sndfreq)
 		else

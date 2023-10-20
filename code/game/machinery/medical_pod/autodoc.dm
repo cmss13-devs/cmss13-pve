@@ -1,7 +1,7 @@
 //Autodoc
 /obj/structure/machinery/medical_pod/autodoc
 	name = "\improper autodoc emergency medical system"
-	desc = "An emergency surgical device designed to perform life-saving treatments and basic surgeries on patients automatically, without the need of a surgeon. <br>It still requires someone with medical knowledge to program the treatments correctly; for this reason, colonies that use these often have paramedics trained in autodoc operation."
+	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention. The interface is rather complex and would only be useful to trained Doctors however."
 	icon_state = "autodoc_open"
 
 	entry_timer = 2 SECONDS
@@ -35,6 +35,11 @@
 			icon_state = "autodoc_closed"
 	else
 		icon_state = "autodoc_open"
+
+/obj/structure/machinery/medical_pod/autodoc/get_examine_text(mob/user)
+	. = ..()
+	if(ishuman(user))
+		. += SPAN_NOTICE("It has [stored_metal] metal available for limb replacements.")
 
 /obj/structure/machinery/medical_pod/autodoc/Initialize()
 	. = ..()
@@ -730,10 +735,22 @@
 					dat += "<a href='?src=\ref[src];brute=1'>Brute Damage Treatment</a><br>"
 				if(isnull(surgeryqueue["burn"]))
 					dat += "<a href='?src=\ref[src];burn=1'>Burn Damage Treatment</a><br>"
+				dat += "<b>Orthopedic Surgeries</b>"
+				dat += "<br>"
+				if(isnull(surgeryqueue["broken"]))
+					dat += "<a href='?src=\ref[src];broken=1'>Broken Bone Surgery</a><br>"
+				if(isnull(surgeryqueue["internal"]))
+					dat += "<a href='?src=\ref[src];internal=1'>Internal Bleeding Surgery</a><br>"
 				if(isnull(surgeryqueue["open"]))
 					dat += "<a href='?src=\ref[src];open=1'>Close Open Incisions</a><br>"
 				if(isnull(surgeryqueue["shrapnel"]))
 					dat += "<a href='?src=\ref[src];shrapnel=1'>Shrapnel Removal Surgery</a><br>"
+				dat += "<b>Organ Surgeries</b>"
+				dat += "<br>"
+				if(isnull(surgeryqueue["eyes"]))
+					dat += "<a href='?src=\ref[src];eyes=1'>Corrective Eye Surgery</a><br>"
+				if(isnull(surgeryqueue["organdamage"]))
+					dat += "<a href='?src=\ref[src];organdamage=1'>Organ Damage Treatment</a><br>"
 				dat += "<b>Hematology Treatments</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["blood"]))
@@ -743,6 +760,10 @@
 				if(isnull(surgeryqueue["toxin"]))
 					dat += "<a href='?src=\ref[src];toxin=1'>Bloodstream Toxin Removal</a><br>"
 				dat += "<br>"
+				if(isnull(surgeryqueue["facial"]))
+					dat += "<a href='?src=\ref[src];facial=1'>Facial Reconstruction Surgery</a><br>"
+				if(isnull(surgeryqueue["missing"]))
+					dat += "<a href='?src=\ref[src];missing=1'>Limb Replacement Surgery</a><hr>"
 		else
 			dat += "The autodoc is empty."
 	dat += text("<a href='?src=\ref[];mach_close=sleeper'>Close</a>", user)
