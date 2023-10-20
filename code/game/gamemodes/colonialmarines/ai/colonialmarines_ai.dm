@@ -2,6 +2,7 @@
 	name = "Distress Signal: Lowpop"
 	config_tag = "Distress Signal: Lowpop"
 	required_players = 0
+	votable = TRUE
 
 	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN
 
