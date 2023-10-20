@@ -27,7 +27,7 @@ export const GameMaster = (props, context) => {
                     <Flex.Item grow>
                       <Dropdown
                         options={data.spawnable_xenos}
-                        selected={data.default_spawnable_xeno_string}
+                        selected={data.selected_xeno}
                         onSelected={(new_xeno) => {
                           act('set_selected_xeno', { new_xeno });
                         }}

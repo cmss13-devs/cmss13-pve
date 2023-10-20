@@ -9,7 +9,7 @@
 	idle_power_usage = 20
 	layer = BELOW_OBJ_LAYER //So bottles/pills reliably appear above it
 	var/req_skill = SKILL_MEDICAL
-	var/req_skill_level = SKILL_MEDICAL_DOCTOR
+	var/req_skill_level = SKILL_MEDICAL_MEDIC
 	var/pill_maker = TRUE
 	var/vial_maker = FALSE
 	var/obj/item/reagent_container/beaker = null

@@ -1,20 +1,22 @@
 
 //procs directly related to mob health
 
+#define MAX_DAMAGE_OF_TYPE(user) (user.maxHealth + abs(HEALTH_THRESHOLD_DEAD))
+
 
 /mob/living/getBruteLoss()
 	return bruteloss
 
 /mob/living/proc/adjustBruteLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	bruteloss = min(max(bruteloss + amount, 0),(maxHealth*2))
+	bruteloss = min(max(bruteloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/getOxyLoss()
 	return oxyloss
 
 /mob/living/proc/adjustOxyLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	oxyloss = min(max(oxyloss + amount, 0),(maxHealth*2))
+	oxyloss = min(max(oxyloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/proc/setOxyLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
@@ -25,7 +27,7 @@
 
 /mob/living/proc/adjustToxLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	toxloss = min(max(toxloss + amount, 0),(maxHealth*2))
+	toxloss = min(max(toxloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/proc/setToxLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
@@ -36,14 +38,14 @@
 
 /mob/living/proc/adjustFireLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	fireloss = min(max(fireloss + amount, 0),(maxHealth*2))
+	fireloss = min(max(fireloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/getCloneLoss()
 	return cloneloss
 
 /mob/living/proc/adjustCloneLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	cloneloss = min(max(cloneloss + amount, 0),(maxHealth*2))
+	cloneloss = min(max(cloneloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/proc/setCloneLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
@@ -58,7 +60,7 @@
 		var/mob/living/carbon/human/H = src
 		if(H.chem_effect_flags & CHEM_EFFECT_RESIST_NEURO)
 			return
-	brainloss = min(max(brainloss + amount, 0),(maxHealth*2))
+	brainloss = min(max(brainloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/proc/setBrainLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
@@ -69,7 +71,7 @@
 
 /mob/living/proc/adjustHalLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
-	halloss = min(max(halloss + amount, 0),(maxHealth*2))
+	halloss = min(max(halloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
 
 /mob/living/proc/setHalLoss(amount)
 	if(status_flags & GODMODE) return 0 //godmode
@@ -82,8 +84,7 @@
 	maxHealth = newMaxHealth
 
 
-
-
+#undef MAX_DAMAGE_OF_TYPE
 
 
 

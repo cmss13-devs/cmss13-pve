@@ -305,21 +305,31 @@ SUBSYSTEM_DEF(radio)
 	return frequency
 
 /datum/controller/subsystem/radio/proc/get_available_tcomm_zs(frequency)
-	//Returns lists of Z levels that have comms
-	var/list/target_zs = SSmapping.levels_by_trait(ZTRAIT_ADMIN)
-	var/list/extra_zs = SSmapping.levels_by_trait(ZTRAIT_AWAY)
-	if(length(extra_zs))
-		target_zs += extra_zs
-	for(var/obj/structure/machinery/telecomms/T as anything in tcomm_machines_ground)
-		if(!length(T.freq_listening) || (frequency in T.freq_listening))
-			target_zs += SSmapping.levels_by_trait(ZTRAIT_GROUND)
-			break
-	for(var/obj/structure/machinery/telecomms/T as anything in tcomm_machines_almayer)
-		if(!length(T.freq_listening) || (frequency in T.freq_listening))
-			target_zs += SSmapping.levels_by_trait(ZTRAIT_MARINE_MAIN_SHIP)
-			target_zs += SSmapping.levels_by_trait(ZTRAIT_RESERVED)
-			break
-	SEND_SIGNAL(src, COMSIG_SSRADIO_GET_AVAILABLE_TCOMMS_ZS, target_zs)
+	if(SSticker?.mode?.requires_comms)
+		//Returns lists of Z levels that have comms
+		var/list/target_zs = SSmapping.levels_by_trait(ZTRAIT_ADMIN)
+		var/list/extra_zs = SSmapping.levels_by_trait(ZTRAIT_AWAY)
+		if(length(extra_zs))
+			target_zs += extra_zs
+		for(var/obj/structure/machinery/telecomms/T as anything in tcomm_machines_ground)
+			if(!length(T.freq_listening) || (frequency in T.freq_listening))
+				target_zs += SSmapping.levels_by_trait(ZTRAIT_GROUND)
+				break
+		for(var/obj/structure/machinery/telecomms/T as anything in tcomm_machines_almayer)
+			if(!length(T.freq_listening) || (frequency in T.freq_listening))
+				target_zs += SSmapping.levels_by_trait(ZTRAIT_MARINE_MAIN_SHIP)
+				target_zs += SSmapping.levels_by_trait(ZTRAIT_RESERVED)
+				break
+		SEND_SIGNAL(src, COMSIG_SSRADIO_GET_AVAILABLE_TCOMMS_ZS, target_zs)
+		return target_zs
+
+	var/list/target_zs = list()
+
+	target_zs += SSmapping.levels_by_trait(ZTRAIT_MARINE_MAIN_SHIP)
+	target_zs += SSmapping.levels_by_trait(ZTRAIT_RESERVED)
+	target_zs += SSmapping.levels_by_trait(ZTRAIT_GROUND)
+	target_zs += SSmapping.levels_by_trait(ZTRAIT_ADMIN)
+
 	return target_zs
 
 /datum/controller/subsystem/radio/proc/add_tcomm_machine(obj/machine)

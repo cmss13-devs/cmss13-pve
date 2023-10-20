@@ -165,10 +165,7 @@
 					comm_title = H.assigned_squad.name + " " + comm_title
 				else
 					if(H.assigned_fireteam)
-						if(H.assigned_squad.fireteam_leaders[H.assigned_fireteam] == H)
-							comm_title = H.comm_title + " [H.assigned_fireteam] TL"
-						else
-							comm_title = H.comm_title + " [H.assigned_fireteam]"
+						comm_title = H.comm_title + " [H.assigned_fireteam]"
 
 
 		else if(istype(M,/mob/living/silicon/decoy/ship_ai))

@@ -95,7 +95,7 @@
 	config_entry_value = TRUE
 
 /datum/config_entry/flag/events_disallowed
-	config_entry_value = FALSE
+	config_entry_value = TRUE
 
 /datum/config_entry/flag/aggressive_changelog
 
@@ -113,10 +113,6 @@
 /// Relative inclusion path for nightmare configuration files
 /datum/config_entry/string/nightmare_path
 	config_entry_value = "maps/Nightmare/"
-
-/datum/config_entry/flag/events_disallowed
-	config_entry_value = FALSE
-
 
 ///Used to determine how many extra larva you want per burst. Supports fractions. See /datum/hive_status/proc/increase_larva_after_burst()
 /datum/config_entry/number/extra_larva_per_burst

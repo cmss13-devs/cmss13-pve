@@ -98,6 +98,9 @@ Additional game mode variables.
 	var/flags_round_type = NO_FLAGS
 	var/toggleable_flags = NO_FLAGS
 
+	/// Whether our game mode requires a comms tower on the z-level for radio transmissions to work
+	var/requires_comms = TRUE
+
 
 /datum/game_mode/proc/get_roles_list()
 	return ROLES_USCM
@@ -333,6 +336,9 @@ Additional game mode variables.
 /datum/game_mode/proc/check_xeno_late_join(mob/xeno_candidate)
 	if(jobban_isbanned(xeno_candidate, JOB_XENOMORPH)) // User is jobbanned
 		to_chat(xeno_candidate, SPAN_WARNING("You are banned from playing aliens and cannot spawn as a xenomorph."))
+		return FALSE
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_JOIN_AS_XENO))
+		to_chat(xeno_candidate, SPAN_WARNING("Joining as xenos is currently disabled in this mode."))
 		return FALSE
 	return TRUE
 

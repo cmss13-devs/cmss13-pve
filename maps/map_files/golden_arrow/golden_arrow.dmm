@@ -1321,9 +1321,7 @@
 	},
 /area/almayer/squads/alpha/squad_two)
 "lS" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access{
-	req_access = null
-	},
+/obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
@@ -3188,7 +3186,9 @@
 	},
 /area/almayer/hallways/hangar)
 "Bg" = (
-/obj/structure/machinery/cm_vending/sorted/medical/blood,
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -4724,8 +4724,7 @@
 "Od" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	dir = 8;
-	invisibility = 101
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"

@@ -52,7 +52,7 @@
 	/// maximum # of fireteam leaders allowed in the suqad
 	var/max_tl = 2
 	/// maximum # of smartgunners allowed in the squad
-	var/max_smartgun = 1
+	var/max_smartgun = 2
 	/// maximum # of squad leaders allowed in the squad
 	var/max_leaders = 1
 	/// Squad headsets default radio frequency
