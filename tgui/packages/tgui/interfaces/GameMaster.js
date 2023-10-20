@@ -16,9 +16,10 @@ export const GameMaster = (props, context) => {
                   <Flex grow>
                     <Flex.Item>
                       <Button.Input
-                        fluid
-                        middle
-                        content="###"
+                        minWidth={4}
+                        minHeight={2}
+                        content={data.xeno_spawn_count}
+                        currentValue={data.xeno_spawn_count}
                         onCommit={(e, value) => {
                           act('set_xeno_spawns', { value });
                         }}

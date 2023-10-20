@@ -114,6 +114,7 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	data["selected_xeno"] = selected_xeno
 	data["spawn_ai"] = spawn_ai
 	data["spawn_click_intercept"] = spawn_click_intercept
+	data["xeno_spawn_count"] = xeno_spawn_count
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
