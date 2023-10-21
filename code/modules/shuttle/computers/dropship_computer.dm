@@ -14,9 +14,6 @@
 	var/dropship_control_lost = FALSE
 	var/door_control_cooldown
 
-	// Allows admins to var edit the time lock away.
-	var/skip_time_lock = FALSE
-
 	// Landing zones which can be used
 	var/compatible_landing_zones = list()
 
@@ -98,9 +95,6 @@
 		return UI_CLOSE
 	if(disabled)
 		return UI_UPDATE
-	if(!skip_time_lock && world.time < SSticker.mode.round_time_lobby + SHUTTLE_TIME_LOCK)
-		to_chat(user, SPAN_WARNING("The shuttle is still undergoing pre-flight fueling and cannot depart yet. Please wait another [round((SSticker.mode.round_time_lobby + SHUTTLE_TIME_LOCK-world.time)/600)] minutes before trying again."))
-		return UI_CLOSE
 	if(dropship_control_lost)
 		var/remaining_time = timeleft(door_control_cooldown) / 10
 		var/units = "seconds"
