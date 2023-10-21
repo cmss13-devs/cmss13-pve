@@ -258,51 +258,43 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "Changelog"
-	elem "rules"
+	elem "wiki"
 		type = BUTTON
 		pos = 120,5
 		size = 100x20
 		anchor1 = 19,0
 		anchor2 = 34,0
 		saved-params = "is-checked"
-		text = "Rules"
-		command = "rules"
-	elem "wiki"
+		text = "Wiki"
+		command = "wiki"
+	elem "worksheet"
 		type = BUTTON
 		pos = 220,5
 		size = 100x20
 		anchor1 = 34,0
 		anchor2 = 50,0
 		saved-params = "is-checked"
-		text = "Wiki"
-		command = "wiki"
-	elem "forum"
+		text = "Worksheet"
+		command = "worksheet"
+	elem "github"
 		type = BUTTON
 		pos = 320,5
 		size = 100x20
 		anchor1 = 50,0
 		anchor2 = 66,0
 		saved-params = "is-checked"
-		text = "Forum"
-		command = "forum"
-	elem "report-issue"
-		type = BUTTON
-		pos = 420,5
-		size = 100x20
-		anchor1 = 66,0
-		anchor2 = 81,0
-		saved-params = "is-checked"
-		text = "Submit Bug"
-		command = "submit-bug"
+		text = "Github"
+		command = "github"
 	elem "discord"
 		type = BUTTON
-		pos = 520,5
-		size = 100x20
-		anchor1 = 81,0
+		pos = 420,5
+		size = 210x50
+		anchor1 = 66,0
 		anchor2 = 97,0
 		background-color = #7289da
+		font-size = 26px
 		saved-params = "is-checked"
-		text = "Discord"
+		text = "discord.gg/v6P6wns5dN"
 		command = "discord"
 
 window "outputwindow"
