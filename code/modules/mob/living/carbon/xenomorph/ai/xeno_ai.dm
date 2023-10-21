@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		current_path = null
 		return TRUE
 
-	if(QDELETED(current_target) || current_target.stat == DEAD || get_dist(current_target, src) > ai_range)
+	if(QDELETED(current_target) || current_target.stat != CONSCIOUS || get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
 		if(QDELETED(src))
 			return TRUE
