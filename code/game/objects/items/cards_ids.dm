@@ -61,7 +61,7 @@
 	desc = "A slice of encoded compressed fiber glass. Used for identification and access control."
 	icon_state = "id"
 	item_state = "card-id"
-	var/access = list()
+	var/list/access
 	var/faction = FACTION_NEUTRAL
 	var/list/faction_group
 
@@ -92,6 +92,10 @@
 
 	var/modification_log = list()
 
+/obj/item/card/id/Initialize(mapload, ...)
+	. = ..()
+
+	access = list()
 
 /obj/item/card/id/Destroy()
 	. = ..()

@@ -330,7 +330,10 @@
 /obj/item/prop/magazine/boots/n054{
 	pixel_x = 29
 	},
-/obj/structure/closet/secure_closet/smartgunner,
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;40";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -379,7 +382,8 @@
 "cS" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	name = "\improper Platoon Medic Office";
-	req_one_access = list()
+	req_one_access = list();
+	req_one_access_txt = "8"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -725,7 +729,8 @@
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 1;
 	name = "\improper Medical Subsection";
-	req_one_access = list()
+	req_one_access = list();
+	req_one_access_txt = "8"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -1419,7 +1424,10 @@
 /area/almayer/squads/alpha/platoon_sergeant)
 "lW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access_txt = "12;40";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1438,7 +1446,8 @@
 "me" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	name = "\improper Briefing Room"
+	name = "\improper Briefing Room";
+	req_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -1493,7 +1502,9 @@
 	},
 /area/almayer/hallways/hangar)
 "mD" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	req_one_access_txt = "1;12;39"
+	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -1527,7 +1538,8 @@
 /area/almayer/living/cryo_cells)
 "nb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Squad Two Armoury"
+	name = "\improper Squad Two Armoury";
+	req_one_access_txt = "12;40"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -2697,7 +2709,8 @@
 "wV" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	name = "\improper Platoon Sergeants Bunk"
+	name = "\improper Platoon Sergeants Bunk";
+	req_one_access_txt = "12"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -2796,7 +2809,10 @@
 /area/almayer/living/grunt_rnr)
 "xZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_one_access_txt = "12;40";
+	req_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2848,7 +2864,10 @@
 /area/almayer/living/grunt_rnr)
 "yA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/squad_sergeant,
+/obj/structure/closet/secure_closet/squad_sergeant{
+	req_access_txt = "32;39";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3064,7 +3083,9 @@
 	},
 /area/almayer/hallways/hangar)
 "AH" = (
-/obj/structure/closet/secure_closet/engineering_welding,
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -3322,7 +3343,8 @@
 /area/almayer/living/cafeteria_port)
 "Cu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Sergeants Room"
+	name = "\improper Sergeants Room";
+	req_one_access_txt = "12;32"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -3769,7 +3791,9 @@
 /area/almayer/squads/alpha/squad_two)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -3995,7 +4019,10 @@
 /area/almayer/hallways/hangar)
 "GP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_one_access_txt = "12;39";
+	req_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4054,7 +4081,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	req_one_access_txt = "1;12;40"
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -4197,7 +4226,9 @@
 /area/almayer/squads/alpha/squad_two)
 "IN" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -5029,7 +5060,8 @@
 /area/almayer/squads/alpha/squad_two)
 "Pp" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Squad One Armoury"
+	name = "\improper Squad One Armoury";
+	req_one_access_txt = "12;39"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -5102,7 +5134,9 @@
 /area/almayer/squads/alpha/platoon_sergeant)
 "PW" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Private Briefing Room"
+	name = "\improper Private Briefing Room";
+	req_access = list();
+	req_one_access_txt = "12;19;32"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -5349,7 +5383,10 @@
 	},
 /area/almayer/squads/alpha/platoon_sergeant)
 "Rj" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access_txt = "12;39";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5422,7 +5459,10 @@
 /area/almayer/living/cryo_cells)
 "RO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/squad_sergeant,
+/obj/structure/closet/secure_closet/squad_sergeant{
+	req_access_txt = "32;40";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5998,7 +6038,10 @@
 /area/almayer/hallways/hangar)
 "VK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/smartgunner,
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;39";
+	req_one_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
