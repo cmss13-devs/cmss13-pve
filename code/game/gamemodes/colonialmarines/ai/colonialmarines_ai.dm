@@ -24,7 +24,6 @@
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
 	)
 
-	hardcore = TRUE
 	static_comms_amount = 0
 	requires_comms = FALSE
 	toggleable_flags = MODE_NO_JOIN_AS_XENO
