@@ -21,6 +21,7 @@
 	density = FALSE
 	universal_speak = 0
 	universal_understand = 1
+	squeeze_under = TRUE
 
 /mob/living/simple_animal/alien_slug/Life(delta_time)
 	. = ..()

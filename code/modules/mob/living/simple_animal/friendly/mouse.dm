@@ -28,6 +28,7 @@
 	universal_speak = 0
 	universal_understand = 1
 	holder_type = /obj/item/holder/mouse
+	squeeze_under = TRUE
 
 /mob/living/simple_animal/mouse/Life(delta_time)
 	..()

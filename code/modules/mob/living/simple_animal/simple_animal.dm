@@ -46,6 +46,9 @@
 	var/unsuitable_atoms_damage = 2 //This damage is taken when atmos doesn't fit all the requirements above
 	speed = 0 //LETS SEE IF I CAN SET SPEEDS FOR SIMPLE MOBS WITHOUT DESTROYING EVERYTHING. Higher speed is slower, negative speed is faster
 
+	/// Whether or not this simple_animal can squeeze under doors
+	var/squeeze_under = FALSE
+
 	//LETTING SIMPLE ANIMALS ATTACK? WHAT COULD GO WRONG. Defaults to zero so Ian can still be cuddly
 	melee_damage_lower = 0
 	melee_damage_upper = 0

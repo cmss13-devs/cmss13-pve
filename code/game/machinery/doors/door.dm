@@ -289,6 +289,35 @@
 			filler = (get_step(src,NORTH)) //Find new turf
 			filler.set_opacity(opacity)
 
+/obj/structure/machinery/door/attack_animal(mob/living/user)
+	. = ..()
+
+	if(!istype(user, /mob/living/simple_animal))
+		return FALSE
+
+	var/mob/living/simple_animal/simple_user = user
+
+	if(!simple_user.squeeze_under)
+		return FALSE
+
+	var/move_dir = get_dir(simple_user, loc)
+	for(var/atom/movable/cycled_atom in get_turf(src))
+		if(cycled_atom != src && cycled_atom.density && cycled_atom.BlockedPassDirs(src, move_dir))
+			to_chat(simple_user, SPAN_WARNING("[cycled_atom] prevents you from squeezing under [src]!"))
+			return FALSE
+
+	if(istype(src, /obj/structure/machinery/door/airlock))
+		var/obj/structure/machinery/door/airlock/current_airlock = src
+		if(current_airlock.locked || current_airlock.welded) //Can't pass through airlocks that have been bolted down or welded
+			to_chat(simple_user, SPAN_WARNING("[current_airlock] is locked down tight. You can't squeeze underneath!"))
+			return FALSE
+
+	simple_user.visible_message(SPAN_WARNING("[simple_user] squeezes underneath [src]!"), \
+	SPAN_WARNING("You squeeze underneath [src]."), max_distance = 5)
+	simple_user.forceMove(src.loc)
+	return TRUE
+
+
 
 /obj/structure/machinery/door/morgue
 	icon = 'icons/obj/structures/doors/doormorgue.dmi'
