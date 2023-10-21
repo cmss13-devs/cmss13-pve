@@ -79,6 +79,9 @@
 		log_message += " from [key_name(cause_data.resolve_mob())]"
 		cause_mob.attack_log += "\[[time_stamp()]\] [key_name(cause_mob)] killed [key_name(src)] with [cause_data.cause_name]."
 
+		if(iscarbon(src)) // no mice overkill sadly
+			cause_mob.life_kills_total += life_value
+
 	attack_log += "[log_message]."
 
 	if(!mind || statistic_exempt)
@@ -107,9 +110,6 @@
 		new_death.cause_player_id = cause_player.id
 	new_death.cause_role_name = cause_data?.role
 	new_death.cause_faction_name = cause_data?.faction
-
-	if(cause_mob)
-		cause_mob.life_kills_total += life_value
 
 	if(getBruteLoss())
 		new_death.total_brute = round(getBruteLoss())
