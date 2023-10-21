@@ -26,6 +26,7 @@
 
 	static_comms_amount = 0
 	requires_comms = FALSE
+	flags_round_type = MODE_NO_XENO_EVOLVE
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 /datum/game_mode/colonialmarines/ai/can_start()
