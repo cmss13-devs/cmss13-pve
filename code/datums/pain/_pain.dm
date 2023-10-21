@@ -194,9 +194,7 @@
 				activate_horrible()
 
 	if(new_level >= PAIN_LEVEL_SEVERE)
-		RegisterSignal(source_mob, COMSIG_MOB_DRAGGED, PROC_REF(oxyloss_drag), override = TRUE)
 		RegisterSignal(source_mob, COMSIG_MOB_DEVOURED, PROC_REF(handle_devour), override = TRUE)
-		RegisterSignal(source_mob, COMSIG_MOVABLE_PRE_THROW, PROC_REF(oxy_kill), override = TRUE)
 
 	last_level = new_level
 	addtimer(CALLBACK(src, PROC_REF(before_update)), PAIN_UPDATE_FREQUENCY)
@@ -283,14 +281,6 @@
 	pain_slowdown = PAIN_SPEED_VERYSLOW
 	new /datum/effects/pain/human/horrible(source_mob)
 
-/datum/pain/proc/oxyloss_drag(mob/living/source, mob/puller)
-	SIGNAL_HANDLER
-	if(isxeno(puller) && source.stat == UNCONSCIOUS)
-		if(source.get_species())
-			var/mob/living/carbon/human/H = source
-			if(H.species.flags & HAS_HARDCRIT)
-				source.apply_damage(20, OXY)
-
 /datum/pain/proc/handle_devour(mob/living/source)
 	SIGNAL_HANDLER
 	if(source.chestburst)
@@ -299,7 +289,6 @@
 	return COMPONENT_CANCEL_DEVOUR
 
 /datum/pain/proc/oxy_kill(mob/living/source)
-	SIGNAL_HANDLER
 	INVOKE_ASYNC(source, TYPE_PROC_REF(/mob, death), source.last_damage_data)
 
 /datum/pain/Destroy()
