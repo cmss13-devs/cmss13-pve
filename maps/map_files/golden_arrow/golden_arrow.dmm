@@ -55,7 +55,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "aB" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
@@ -568,7 +568,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "eH" = (
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/almayer{
@@ -1148,9 +1148,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/hallways/hangar)
-"jo" = (
-/turf/open/floor/plating/plating_catwalk,
-/area/almayer/living/briefing)
 "js" = (
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
@@ -1457,15 +1454,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/squads/alpha/squad_two)
-"mg" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/briefing)
 "mk" = (
 /turf/open/floor/almayer{
 	dir = 8;
@@ -2626,7 +2614,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "wc" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "\improper Platoon Commander's Quarters"
@@ -4081,7 +4069,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "HF" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -4112,7 +4100,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "HJ" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -4127,7 +4115,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "HK" = (
 /turf/closed/wall/almayer,
 /area/almayer/living/cryo_cells)
@@ -4424,7 +4412,7 @@
 /turf/open/floor/almayer{
 	icon_state = "bluefull"
 	},
-/area/almayer/living/briefing)
+/area/almayer/hallways/hangar)
 "Kt" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/effect/decal/cleanable/dirt,
@@ -6483,14 +6471,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/squads/alpha/squad_two)
-"Zv" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/living/briefing)
 "ZB" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -17847,8 +17827,8 @@ bo
 hS
 hS
 ay
-jo
-Zv
+Ea
+Rg
 Nf
 Nf
 Bj
@@ -17999,8 +17979,8 @@ Bz
 Bz
 bo
 eu
-jo
-Zv
+Ea
+Rg
 Nf
 Jb
 Cv
@@ -18151,8 +18131,8 @@ Bz
 rY
 DV
 Ks
-Np
-Zv
+KO
+Rg
 Nf
 uF
 OA
@@ -18303,8 +18283,8 @@ Bz
 LZ
 hS
 HH
-jo
-Zv
+Ea
+Rg
 Nf
 cH
 cJ
@@ -18454,9 +18434,9 @@ Bz
 LE
 tv
 hS
-mg
-jo
-Zv
+pD
+Ea
+Rg
 Nf
 ov
 OA
@@ -18758,9 +18738,9 @@ iR
 Bz
 qU
 hS
-XJ
-XJ
-XJ
+Yj
+Yj
+Yj
 Nf
 Nf
 Nf
