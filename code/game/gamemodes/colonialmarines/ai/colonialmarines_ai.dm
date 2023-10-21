@@ -26,7 +26,7 @@
 
 	static_comms_amount = 0
 	requires_comms = FALSE
-	toggleable_flags = MODE_NO_JOIN_AS_XENO
+	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 /datum/game_mode/colonialmarines/ai/can_start()
 	return ..()
