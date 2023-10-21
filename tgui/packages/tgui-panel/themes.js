@@ -87,8 +87,6 @@ export const setClientTheme = (name) => {
       // Buttons
       'changelog.background-color': '#494949',
       'changelog.text-color': COLOR_DARK_TEXT,
-      'rules.background-color': '#494949',
-      'rules.text-color': COLOR_DARK_TEXT,
       'wiki.background-color': '#494949',
       'wiki.text-color': COLOR_DARK_TEXT,
       'worksheet.background-color': '#494949',
