@@ -5,10 +5,14 @@
 /obj/structure/mineral_door/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
 
-/obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(X.hivenumber != hivenumber)
+/obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno)
+	if(xeno.hivenumber != hivenumber)
 		return ..()
 	return 0
+
+/obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
+	acting_xeno.a_intent = INTENT_HELP
+	. = ..()
 
 // AIRLOCK
 /obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
