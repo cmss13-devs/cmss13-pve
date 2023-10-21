@@ -33,6 +33,7 @@
 	if(!(moving_xeno in view(world.view, moving_xeno.current_target)) && COOLDOWN_FINISHED(src, reengage_cooldown))
 		travelling_turf = get_turf(moving_xeno.current_target)
 		COOLDOWN_START(src, reengage_cooldown, REENGAGE_COOLDOWN)
+		moving_xeno.emote("growl")
 		return
 
 	if(!travelling_turf || get_dist(travelling_turf, moving_xeno) <= 0)
