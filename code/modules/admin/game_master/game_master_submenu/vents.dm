@@ -45,21 +45,20 @@
 
 	var/list/data = list()
 
+	data["xeno_spawn_count"] = xeno_spawn_count
+	data["selected_xeno"] = selected_xeno
 	data["ambush_info"] = ambush_info
 
 	return data
-
 
 /datum/game_master_submenu/vents/ui_static_data(mob/user)
 	. = ..()
 
 	var/list/data = list()
 
-	data["default_spawnable_xeno_string"] = DEFAULT_SPAWN_XENO_STRING
 	data["spawnable_xenos"] = GAME_MASTER_VENT_AI_XENOS
 
 	return data
-
 
 /datum/game_master_submenu/vents/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()

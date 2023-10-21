@@ -13,9 +13,10 @@ export const GameMasterSubmenuVents = (props, context) => {
             <Stack grow>
               <Stack.Item>
                 <Button.Input
-                  fluid
-                  middle
-                  content="###"
+                  minWidth={4}
+                  minHeight={2}
+                  content={data.xeno_spawn_count}
+                  currentValue={data.xeno_spawn_count}
                   onCommit={(e, value) => {
                     act('set_xeno_spawns', { value });
                   }}
@@ -24,7 +25,7 @@ export const GameMasterSubmenuVents = (props, context) => {
               <Stack.Item grow>
                 <Dropdown
                   options={data.spawnable_xenos}
-                  selected={data.default_spawnable_xeno_string}
+                  selected={data.selected_xeno}
                   onSelected={(new_xeno) => {
                     act('set_selected_xeno', { new_xeno });
                   }}
