@@ -16,6 +16,8 @@
 	var/ai_timeout_time = 0
 	var/ai_timeout_period = 2 SECONDS
 
+	var/ai_target_xenohost = TRUE
+
 	var/list/datum/action/xeno_action/registered_ai_abilities = list()
 
 	var/datum/xeno_ai_movement/ai_movement_handler
@@ -196,6 +198,8 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	for(var/mob/living/carbon/human/alive_human as anything in GLOB.alive_human_list)
 		if(alive_human.species.flags & IS_SYNTHETIC)
 			return pick(viable_humans)
+		if((alive_human.status_flags & XENO_HOST) && !ai_target_xenohost)
+			continue
 		if(z != alive_human.z)
 			continue
 		var/distance = get_dist(src, alive_human)

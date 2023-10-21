@@ -1986,6 +1986,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\base_define.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\drone.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\linger.dm"
+#include "code\modules\mob\living\carbon\xenomorph\ai\movement\linger_facehugger.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Boiler.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Burrower.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Carrier.dm"
