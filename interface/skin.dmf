@@ -288,7 +288,7 @@ window "infowindow"
 	elem "discord"
 		type = BUTTON
 		pos = 420,5
-		size = 210x50
+		size = 210x45
 		anchor1 = 66,0
 		anchor2 = 97,0
 		background-color = #7289da
