@@ -20,6 +20,10 @@
 
 	var/datum/xeno_ai_movement/ai_movement_handler
 
+/mob/living/carbon/xenomorph/Destroy()
+	QDEL_NULL(ai_movement_handler)
+	return ..()
+
 GLOBAL_LIST_INIT(ai_target_limbs, list(
 	"head",
 	"chest",
