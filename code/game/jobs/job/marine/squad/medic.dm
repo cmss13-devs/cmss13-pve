@@ -1,3 +1,7 @@
+
+#define LCPL_VARIANT "Lance Corporal"
+#define CPL_VARIANT "Corporal"
+
 /datum/job/marine/medic
 	title = JOB_SQUAD_MEDIC
 	total_positions = 16
@@ -6,6 +10,8 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/medic
 	entry_message_body = "<a href='%WIKIPAGE%'>You tend the wounds of your squad mates</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters."
+
+	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
 
 /datum/job/marine/medic/set_spawn_positions(count)
 	for(var/datum/squad/sq in RoleAuthority.squads)
@@ -26,6 +32,12 @@
 				sq.max_medics = slots
 
 	return (slots*4)
+
+/datum/job/marine/medic/handle_job_options(option)
+	if(option != CPL_VARIANT)
+		gear_preset = /datum/equipment_preset/uscm/medic/lesser_rank
+	else
+		gear_preset = /datum/equipment_preset/uscm/medic
 
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
@@ -67,3 +79,6 @@ AddTimelock(/datum/job/marine/medic, list(
 
 /datum/job/marine/medic/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
+
+#undef LCPL_VARIANT
+#undef CPL_VARIANT

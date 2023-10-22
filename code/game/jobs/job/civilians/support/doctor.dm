@@ -59,3 +59,6 @@ AddTimelock(/datum/job/civilian/doctor, list(
 	name = JOB_DOCTOR
 	icon_state = "doc_spawn"
 	job = /datum/job/civilian/doctor
+
+#undef DOCTOR_VARIANT
+#undef SURGEON_VARIANT

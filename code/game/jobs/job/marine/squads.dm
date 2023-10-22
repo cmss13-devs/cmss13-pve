@@ -708,6 +708,13 @@
 			to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned to [fireteam].")))
 	H.hud_set_squad()
 
+	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
+	if(H.wear_id)
+		if(fireteam == "SQ1")
+			H.wear_id.access += ACCESS_SQUAD_ONE
+		if(fireteam == "SQ2")
+			H.wear_id.access += ACCESS_SQUAD_TWO
+
 /datum/squad/proc/unassign_fireteam(mob/living/carbon/human/H, upd_ui = TRUE)
 	fireteams[H.assigned_fireteam].Remove(H)
 	var/ft = H.assigned_fireteam
@@ -721,6 +728,9 @@
 	if(!H.stat)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were unassigned from [ft].")))
 	H.hud_set_squad()
+
+	if(H.wear_id)
+		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
 
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])

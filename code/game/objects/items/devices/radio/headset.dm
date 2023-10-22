@@ -566,6 +566,9 @@
 	volume = RADIO_VOLUME_CRITICAL
 
 /obj/item/device/radio/headset/almayer/marine
+	name = "marine radio headset"
+	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	frequency = ALPHA_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/public)
 
 //############################## ALPHA ###############################

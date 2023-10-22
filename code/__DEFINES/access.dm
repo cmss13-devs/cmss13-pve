@@ -45,6 +45,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_MARINE_ASO 37
 #define ACCESS_MARINE_CHAPLAIN 38
 
+#define ACCESS_SQUAD_ONE 39
+#define ACCESS_SQUAD_TWO 40
+
 // AI Core Accesses
 /// Used in temporary passes
 #define ACCESS_MARINE_AI_TEMP 90

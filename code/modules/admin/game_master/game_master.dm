@@ -21,20 +21,6 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	if(src)
 		open_game_master_panel(src)
 
-/client/proc/toggle_join_xeno()
-	set name = "Toggle Player Xeno Joins"
-	set category = "Game Master"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_NO_JOIN_AS_XENO
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_JOIN_AS_XENO) ? "disallowed players from joining" : "allowed players to join"] as xenos.")
-
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
 #define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_CRUSHER)
