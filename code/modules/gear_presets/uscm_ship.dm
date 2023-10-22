@@ -547,7 +547,7 @@
 	minimum_age = 25
 	skills = /datum/skills/SO
 
-	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_BRONZE)
+	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
 /datum/equipment_preset/uscm_ship/so/New()
