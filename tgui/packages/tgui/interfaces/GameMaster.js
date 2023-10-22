@@ -77,31 +77,30 @@ export const GameMaster = (props, context) => {
             </Section>
           </Flex.Item>
           <Flex.Item>
-            <Flex grow>
-              <Section title="Communication">
-                <Flex grow direction="column">
-                  <Flex.Item>
-                    <Button
-                      content="Game Master Phone"
-                      onClick={() => {
-                        act('use_game_master_phone');
-                      }}
-                    />
-                  </Flex.Item>
-                  <Flex.Item>Communication Clarity</Flex.Item>
-                  <Flex.Item>
-                    <Slider
-                      maxValue={100}
-                      minValue={0}
-                      value={data.communication_clarity}
-                      onChange={(e, clarity) => {
-                        act('set_communication_clarity', { clarity });
-                      }}
-                    />
-                  </Flex.Item>
-                </Flex>
-              </Section>
-            </Flex>
+            <Section title="Communication">
+              <Flex grow direction="column">
+                <Flex.Item>
+                  <Button
+                    content="Game Master Phone (SoonTM)"
+                    onClick={() => {
+                      act('use_game_master_phone');
+                    }}
+                  />
+                </Flex.Item>
+                <Flex.Item>Communication Clarity</Flex.Item>
+                <Flex.Item>
+                  <Slider
+                    maxValue={100}
+                    minValue={0}
+                    value={data.communication_clarity}
+                    suppressFlicker={2500}
+                    onChange={(e, clarity) => {
+                      act('set_communication_clarity', { clarity });
+                    }}
+                  />
+                </Flex.Item>
+              </Flex>
+            </Section>
           </Flex.Item>
         </Flex>
       </Window.Content>
