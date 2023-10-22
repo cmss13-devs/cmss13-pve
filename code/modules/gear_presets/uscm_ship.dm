@@ -569,6 +569,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
+/datum/equipment_preset/uscm_ship/so/lesser_rank
+	paygrade = "MO1"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/sea
