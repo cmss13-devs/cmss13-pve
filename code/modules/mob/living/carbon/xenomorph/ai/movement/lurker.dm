@@ -217,7 +217,7 @@
 		registered_turfs += turf
 
 /datum/xeno_ai_movement/linger/lurking/proc/unregister_turf_signals()
-	for(var/turf/turf in view(world.view, parent))
+	for(var/turf/turf in registered_turfs)
 		UnregisterSignal(turf, COMSIG_TURF_ENTERED)
 	registered_turfs = list()
 
