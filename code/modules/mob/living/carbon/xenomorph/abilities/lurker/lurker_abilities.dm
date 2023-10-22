@@ -30,6 +30,10 @@
 			if (istype(lurker_invis))
 				lurker_invis.invisibility_off()
 
+		var/datum/xeno_ai_movement/linger/lurking/AI = xeno.ai_movement_handler
+		if (istype(AI))
+			AI.stop_lurking(xeno)
+
 /datum/action/xeno_action/activable/pounce/lurker/additional_effects(mob/living/L)
 	var/mob/living/carbon/xenomorph/X = owner
 	if (!istype(X))
