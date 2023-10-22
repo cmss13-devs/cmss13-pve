@@ -369,3 +369,22 @@
 /datum/chem_property/special/firepenetrating/update_reagent()
 	holder.fire_penetrating = TRUE
 	..()
+
+/datum/chem_property/special/revitalizing
+	name = PROPERTY_REVITALIZING
+	code = "REV"
+	description = "For a period of time, revitalizes the main systems of the body and prevents unconciousness."
+	rarity = PROPERTY_ADMIN
+	category = PROPERTY_TYPE_STIMULANT
+	value = 666
+	var/knocked_out_value_store = 0
+
+/datum/chem_property/special/revitalizing/reagent_added(mob/living/M)
+	if(!ishuman(M))
+		return
+	M.status_flags &= ~CANKNOCKOUT
+	knocked_out_value_store = M.knocked_out
+	M.knocked_out = 0
+
+/datum/chem_property/special/revitalizing/on_delete(mob/living/M)
+	M.status_flags |= CANKNOCKOUT
