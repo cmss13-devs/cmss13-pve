@@ -8,7 +8,7 @@
 	// Config options
 	distance = 6
 	knockdown = FALSE
-	knockdown_duration = 2.5
+	knockdown_duration = 1.5
 	freeze_self = TRUE
 	freeze_time = 15
 	can_be_shield_blocked = TRUE

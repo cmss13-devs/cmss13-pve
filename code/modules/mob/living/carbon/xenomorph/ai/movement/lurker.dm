@@ -19,7 +19,7 @@
 	// Let's lower this a little bit cause we do some heavy checks while finding our "home"
 	home_locate_range = 10
 
-	max_distance_from_home = 8
+	max_distance_from_home = 10
 
 #define AI_CHECK_ANNOYANCE_COOLDOWN 2.5 SECONDS
 
@@ -107,7 +107,7 @@
 		return ..()
 
 	var/turf/target_turf = get_turf(moving_xeno.current_target)
-	if(ai_lurking)
+	if(ai_lurking || get_dist(moving_xeno, target_turf) > world.view + 2)
 //		if(get_dist(moving_xeno, target_turf) > stalking_distance)
 //			return moving_xeno.move_to_next_turf(target_turf) /// uncomment for stalking
 		return ai_move_idle(delta_time)
@@ -212,14 +212,14 @@
 
 
 /datum/xeno_ai_movement/linger/lurking/proc/register_turf_signals()
-	for(var/turf/turf in view(world.view, parent))
-		RegisterSignal(turf, COMSIG_TURF_ENTERED, PROC_REF(set_target), override = TRUE)
-		registered_turfs += turf
+	for(var/turf/open/OT in view(world.view, parent))
+		RegisterSignal(OT, COMSIG_TURF_ENTERED, PROC_REF(set_target), override = TRUE)
+		registered_turfs += OT
 
 /datum/xeno_ai_movement/linger/lurking/proc/unregister_turf_signals()
-	for(var/turf/turf in registered_turfs)
-		UnregisterSignal(turf, COMSIG_TURF_ENTERED)
-	registered_turfs = list()
+	for(var/turf/open/OT in registered_turfs)
+		UnregisterSignal(OT, COMSIG_TURF_ENTERED)
+	registered_turfs.Cut()
 
 /datum/xeno_ai_movement/linger/lurking/proc/set_target(turf/hooked, atom/movable/subject)
 	SIGNAL_HANDLER
