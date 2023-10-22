@@ -260,10 +260,6 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	SHOULD_CALL_PARENT(TRUE)
 	SSxeno_ai.remove_ai(src)
 
-	var/datum/xeno_ai_movement/linger/lurking/AI = ai_movement_handler
-	if(AI && istype(AI))
-		AI.stop_lurking()
-
 GLOBAL_LIST_EMPTY_TYPED(xeno_ai_spawns, /obj/effect/landmark/xeno_ai)
 /obj/effect/landmark/xeno_ai
 	name = "Xeno AI Spawn"
