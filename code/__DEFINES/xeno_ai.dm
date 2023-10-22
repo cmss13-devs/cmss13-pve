@@ -28,6 +28,8 @@ PROBABILITY CALCULATIONS ARE HERE
 #define RETREAT_AT_PLASMA_LEVEL 0.2
 #define RETREAT_AT_HEALTH_LEVEL 0.4
 
+#define LURKING_IGNORE_SHOT_CHANCE 75
+
 // Warrior
 
 /// How likely should it be that you lunge when off cooldown?
