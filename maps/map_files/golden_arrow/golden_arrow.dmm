@@ -842,9 +842,6 @@
 	},
 /area/almayer/living/cryo_cells)
 "eT" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 8
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
@@ -858,6 +855,9 @@
 	icon_state = "NE-out";
 	pixel_x = 1;
 	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
 	},
 /turf/open/floor/almayer,
 /area/almayer/living/synthcloset)
@@ -1260,7 +1260,6 @@
 	},
 /area/almayer/medical)
 "hq" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
@@ -4800,7 +4799,6 @@
 	},
 /area/almayer/living/briefing)
 "Ep" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6232,7 +6230,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/hangar)
 "MW" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
@@ -6284,7 +6281,6 @@
 /turf/open/floor/almayer,
 /area/almayer/hallways/hangar)
 "No" = (
-/obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
