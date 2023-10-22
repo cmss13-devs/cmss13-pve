@@ -89,6 +89,9 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
+/datum/equipment_preset/uscm/pfc/lesser_rank
+	paygrade = "ME1"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -118,6 +121,9 @@
 /datum/equipment_preset/uscm/sg/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/uscm/sg/lesser_rank
+	paygrade = "ME3"
 
 //*****************************************************************************************************/
 
@@ -285,6 +291,9 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/med(new_human), WEAR_L_EAR)
 
+/datum/equipment_preset/uscm/medic/lesser_rank
+	paygrade = "ME3"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -378,6 +387,8 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/lead(new_human), WEAR_L_EAR)
 
+/datum/equipment_preset/uscm/leader/lesser_rank
+	paygrade = "ME6"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

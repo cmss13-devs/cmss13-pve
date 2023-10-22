@@ -292,9 +292,10 @@ window "infowindow"
 		anchor1 = 66,0
 		anchor2 = 97,0
 		background-color = #7289da
-		font-size = 22px
+		font-size = 20px
 		font-family = "Arial"
 		text-align = center
+		font-weight = bold
 		saved-params = "is-checked"
 		text = "discord.gg/v6P6wns5dN"
 		command = "discord"
