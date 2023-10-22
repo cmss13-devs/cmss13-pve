@@ -1425,7 +1425,7 @@
 "lW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "12;40";
+	req_one_access_txt = "8;12;40";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer{
@@ -1503,7 +1503,7 @@
 /area/almayer/hallways/hangar)
 "mD" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	req_one_access_txt = "1;12;39"
+	req_one_access_txt = "8;12;39"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1539,7 +1539,7 @@
 "nb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Squad Two Armoury";
-	req_one_access_txt = "12;40"
+	req_one_access_txt = "8;12;40"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -2810,7 +2810,7 @@
 "xZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "12;40";
+	req_one_access_txt = "8;12;40";
 	req_access = list()
 	},
 /turf/open/floor/almayer{
@@ -4020,7 +4020,7 @@
 "GP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "12;39";
+	req_one_access_txt = "8;12;39";
 	req_access = list()
 	},
 /turf/open/floor/almayer{
@@ -4082,7 +4082,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/airlock/almayer/generic{
-	req_one_access_txt = "1;12;40"
+	req_one_access_txt = "8;12;40"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -5061,7 +5061,7 @@
 "Pp" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Squad One Armoury";
-	req_one_access_txt = "12;39"
+	req_one_access_txt = "8;12;39"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -5384,7 +5384,7 @@
 /area/almayer/squads/alpha/platoon_sergeant)
 "Rj" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "12;39";
+	req_one_access_txt = "8;12;39";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer{
