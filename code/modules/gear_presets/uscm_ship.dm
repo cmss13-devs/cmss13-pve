@@ -101,7 +101,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/reporter
-	name = "Combat Correspondent"
+	name = "Combat Correspondent (CIV)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
 	access = list(
@@ -142,7 +142,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/notepad(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm_ship/reporter_uscm
-	name = "Combat Correspondent"
+	name = "Combat Correspondent (USCM)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	access = list(
 		ACCESS_MARINE_COMMAND,
