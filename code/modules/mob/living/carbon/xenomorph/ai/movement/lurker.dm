@@ -1,6 +1,6 @@
 /datum/xeno_ai_movement/linger/lurking
 
-	// Are we currentlu hiding?
+	// Are we currently hiding?
 	var/ai_lurking = FALSE
 
 	// Gradually increases the chance of AI to try and bait marines
