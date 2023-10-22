@@ -32,7 +32,7 @@
 
 		var/datum/xeno_ai_movement/linger/lurking/AI = xeno.ai_movement_handler
 		if (AI && istype(AI))
-			AI.stop_lurking(xeno)
+			AI.stop_lurking()
 
 /datum/action/xeno_action/activable/pounce/lurker/additional_effects(mob/living/L)
 	var/mob/living/carbon/xenomorph/X = owner
