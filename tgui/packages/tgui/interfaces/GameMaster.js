@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Flex, Dropdown, Button, Section } from '../components';
+import { Flex, Dropdown, Button, Section, Slider } from '../components';
 import { Window } from '../layouts';
 
 export const GameMaster = (props, context) => {
@@ -25,7 +25,7 @@ export const GameMaster = (props, context) => {
                         }}
                       />
                     </Flex.Item>
-                    <Flex.Item grow>
+                    <Flex.Item>
                       <Dropdown
                         options={data.spawnable_xenos}
                         selected={data.selected_xeno}
@@ -75,6 +75,33 @@ export const GameMaster = (props, context) => {
                 </Flex.Item>
               </Flex>
             </Section>
+          </Flex.Item>
+          <Flex.Item>
+            <Flex grow>
+              <Section title="Communication">
+                <Flex grow direction="column">
+                  <Flex.Item>
+                    <Button
+                      content="Game Master Phone"
+                      onClick={() => {
+                        act('use_game_master_phone');
+                      }}
+                    />
+                  </Flex.Item>
+                  <Flex.Item>Communication Clarity</Flex.Item>
+                  <Flex.Item>
+                    <Slider
+                      maxValue={100}
+                      minValue={0}
+                      value={data.communication_clarity}
+                      onChange={(e, clarity) => {
+                        act('set_communication_clarity', { clarity });
+                      }}
+                    />
+                  </Flex.Item>
+                </Flex>
+              </Section>
+            </Flex>
           </Flex.Item>
         </Flex>
       </Window.Content>

@@ -73,6 +73,11 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	/// End Objective Stuff
 
 
+	/// Communication stuff
+
+
+	/// End Communication stuff
+
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
 
@@ -91,6 +96,9 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	submenu_types = null
 	current_submenus = null
 
+	if(user_client?.click_intercept == src)
+		user_client.click_intercept = null
+
 /datum/game_master/ui_data(mob/user)
 	. = ..()
 
@@ -104,7 +112,6 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
-
 
 	return data
 
@@ -161,6 +168,8 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
 
+		//Communication Section
+		if("set_communication_clarity")
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
