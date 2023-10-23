@@ -15,9 +15,6 @@
 	if(idle_xeno.throwing)
 		return
 
-	if(idle_xeno.resting)
-		return
-
 	if(home_turf)
 		if(get_dist(home_turf, idle_xeno) > max_distance_from_home)
 			home_turf = null
@@ -38,51 +35,15 @@
 	if(next_home_search > world.time)
 		return
 
-	var/turf/current_turf = get_turf(idle_xeno.loc)
+	var/turf/current_turf = get_turf(idle_xeno)
 	next_home_search = world.time + home_search_delay
-	if(!current_turf.weeds && current_turf.is_weedable() >= FULLY_WEEDABLE)
+	if(!current_turf.weeds && check_turf(current_turf))
 		home_turf = current_turf
 	else
 		var/shortest_distance
 		for(var/turf/potential_home as anything in RANGE_TURFS(home_locate_range, current_turf))
-
-			var/area/found_area = get_area(potential_home)
-			if(found_area.flags_area & AREA_NOTUNNEL)
+			if(!check_turf(potential_home))
 				continue
-
-			if(found_area.flags_area & AREA_UNWEEDABLE)
-				continue
-
-			if(!found_area.can_build_special)
-				continue
-
-			if(potential_home in blacklisted_turfs)
-				continue
-
-			if(potential_home.weeds)
-				continue
-
-			if(potential_home.is_weedable() < FULLY_WEEDABLE)
-				continue
-
-			if(locate(/obj/effect/alien/weeds/node) in range(3, potential_home))
-				continue
-
-			if(potential_home.density)
-				continue
-
-			var/blocked = FALSE
-			for(var/atom/potential_blocker as anything in potential_home)
-				if(potential_blocker.can_block_movement)
-					blocked = TRUE
-					break
-
-			if(blocked)
-				continue
-
-			for(var/obj/structure/struct in potential_home)
-				if(struct.density && !(struct.flags_atom & ON_BORDER))
-					continue
 
 			if(shortest_distance && get_dist(idle_xeno, potential_home) > shortest_distance)
 				continue
@@ -103,3 +64,44 @@
 
 /datum/xeno_ai_movement/drone/proc/unblacklist_turf(turf/unblacklisting_turf)
 	blacklisted_turfs -= unblacklisting_turf
+
+/datum/xeno_ai_movement/drone/proc/check_turf(turf/checked_turf)
+	var/area/found_area = get_area(checked_turf)
+	if(found_area.flags_area & AREA_NOTUNNEL)
+		return FALSE
+
+	if(found_area.flags_area & AREA_UNWEEDABLE)
+		return FALSE
+
+	if(!found_area.can_build_special)
+		return FALSE
+
+	if(checked_turf in blacklisted_turfs)
+		return FALSE
+
+	if(checked_turf.weeds)
+		return FALSE
+
+	if(checked_turf.is_weedable() < FULLY_WEEDABLE)
+		return FALSE
+
+	if(locate(/obj/effect/alien/weeds/node) in range(3, checked_turf))
+		return FALSE
+
+	if(checked_turf.density)
+		return FALSE
+
+	var/blocked = FALSE
+	for(var/atom/potential_blocker as anything in checked_turf)
+		if(potential_blocker.can_block_movement)
+			blocked = TRUE
+			break
+
+	if(blocked)
+		return FALSE
+
+	for(var/obj/structure/struct in checked_turf)
+		if(struct.density && !(struct.flags_atom & ON_BORDER))
+			return FALSE
+
+	return TRUE
