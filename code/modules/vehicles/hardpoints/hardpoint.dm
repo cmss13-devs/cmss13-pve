@@ -62,7 +62,7 @@
 	//------INTERACTION VARS----------
 
 	//which seat can use this module
-	var/allowed_seat = VEHICLE_GUNNER
+	var/allowed_seat = VEHICLE_DRIVER
 
 	//Cooldown on use of the hardpoint
 	var/cooldown = 100
