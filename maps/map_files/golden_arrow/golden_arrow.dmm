@@ -218,10 +218,14 @@
 	},
 /area/almayer/hallways/hangar)
 "bg" = (
-/obj/structure/largecrate/supply/supplies/sandbags,
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -3122,8 +3126,6 @@
 /obj/structure/closet/secure_closet/personal/cabinet{
 	req_access = null
 	},
-/obj/item/clothing/suit/storage/jacket/marine/service/tanker,
-/obj/item/clothing/suit/storage/jacket/marine/service,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3385,10 +3387,10 @@
 /turf/closed/wall/almayer,
 /area/almayer/living/platoon_commander_rooms)
 "vc" = (
-/obj/structure/closet/radiation,
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/emcloset,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -3639,6 +3641,10 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/item/device/walkman{
+	pixel_y = -6;
+	pixel_x = 4
 	},
 /turf/open/floor/almayer{
 	dir = 5;
@@ -4345,10 +4351,6 @@
 "Bv" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
 	name = "Damage Control Locker";
-	req_one_access = list()
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
-	name = "\improper Damage Control Locker";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer{
@@ -5425,6 +5427,7 @@
 "Hx" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/structure/machinery/light,
+/obj/item/device/cassette_tape/aesthetic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -5565,15 +5568,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/squads/alpha/squad_two)
-"IN" = (
-/obj/structure/closet/toolcloset,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/engineering)
 "IP" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/engineering)
@@ -6419,7 +6413,7 @@
 	},
 /area/almayer/living/cryo_cells)
 "NZ" = (
-/obj/structure/closet/radiation,
+/obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -6487,6 +6481,9 @@
 "OC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light,
+/obj/item/device/cassette_tape/pop3{
+	pixel_y = 3
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6895,10 +6892,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/cryo_cells)
 "Qz" = (
-/obj/structure/closet/radiation,
 /obj/structure/machinery/status_display{
 	pixel_y = 30
 	},
+/obj/structure/closet/firecloset/full,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -7772,15 +7769,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/grunt_rnr)
-"UR" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "UT" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -8251,12 +8239,11 @@
 	},
 /area/almayer/engineering)
 "XP" = (
-/obj/effect/decal/cleanable/greenglow,
-/obj/structure/reagent_dispensers/fueltank/custom,
 /obj/structure/sign/safety/storage{
 	pixel_x = 7;
 	pixel_y = -28
 	},
+/obj/structure/reagent_dispensers/ammoniatank,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -21750,7 +21737,7 @@ DC
 RW
 mZ
 TN
-IN
+CX
 IP
 gf
 Bd
@@ -22668,7 +22655,7 @@ fm
 fm
 fm
 TN
-UR
+yc
 Sn
 Vq
 YB
