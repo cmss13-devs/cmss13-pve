@@ -8239,12 +8239,11 @@
 	},
 /area/almayer/engineering)
 "XP" = (
-/obj/effect/decal/cleanable/greenglow,
-/obj/structure/reagent_dispensers/fueltank/custom,
 /obj/structure/sign/safety/storage{
 	pixel_x = 7;
 	pixel_y = -28
 	},
+/obj/structure/reagent_dispensers/ammoniatank,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
