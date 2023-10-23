@@ -218,10 +218,14 @@
 	},
 /area/almayer/hallways/hangar)
 "bg" = (
-/obj/structure/largecrate/supply/supplies/sandbags,
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
+/obj/item/stack/sandbags_empty/half,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -3640,6 +3644,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/item/device/walkman{
+	pixel_y = -6;
+	pixel_x = 4
+	},
 /turf/open/floor/almayer{
 	dir = 5;
 	icon_state = "plating"
@@ -4345,10 +4353,6 @@
 "Bv" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
 	name = "Damage Control Locker";
-	req_one_access = list()
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
-	name = "\improper Damage Control Locker";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer{
@@ -5425,6 +5429,7 @@
 "Hx" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/structure/machinery/light,
+/obj/item/device/cassette_tape/aesthetic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -6487,6 +6492,9 @@
 "OC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light,
+/obj/item/device/cassette_tape/pop3{
+	pixel_y = 3
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7772,15 +7780,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/grunt_rnr)
-"UR" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "plating"
-	},
-/area/almayer/engineering)
 "UT" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -22668,7 +22667,7 @@ fm
 fm
 fm
 TN
-UR
+yc
 Sn
 Vq
 YB
