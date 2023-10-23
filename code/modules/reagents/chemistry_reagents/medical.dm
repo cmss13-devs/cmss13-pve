@@ -275,7 +275,7 @@
 	id = "adrenaline"
 	description = "A natural muscle and heart stimulant. Useful for restarting the heart. Overdosing may stress the heart and cause tissue damage."
 	reagent_state = LIQUID
-	color = "FFE703" // Yellow-ish
+	color = "#FFE703" // Yellow-ish
 	overdose = LOWM_REAGENTS_OVERDOSE
 	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 5 SECONDS)
@@ -284,11 +284,11 @@
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/adrenaline/strong
-	name = "Epinephrine (Concerntrated)"
-	id = "adrenaline (concerntrated)"
-	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concerntrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
+	name = "Epinephrine (concentrated)"
+	id = "adrenaline (concentrated)"
+	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
 	reagent_state = LIQUID
-	color = "FFE702" // Yellow-ish
+	color = "#FFE702" // Yellow-ish
 	overdose = LOWM_REAGENTS_OVERDOSE
 	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 10 SECONDS)
