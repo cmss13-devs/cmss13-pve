@@ -79,16 +79,14 @@
 
 /mob/living/carbon/xenomorph/lurker/handle_ai_shot(obj/projectile/P)
 	if(P.firer)
-		var/distance = get_dist(src, P.firer)
-		if(distance > world.view)
-			if(prob(LURKING_IGNORE_SHOT_CHANCE))
-				return
+		if(prob(LURKING_IGNORE_SHOT_CHANCE))
+			return
 
 		var/datum/xeno_ai_movement/linger/lurking/lurker_ai = ai_movement_handler
 		if(lurker_ai && istype(lurker_ai))
 			lurker_ai.stop_lurking()
 
-		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
+		SSxeno_pathfinding.calculate_path(src, P.firer, ai_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/lurker/ai_move_target(delta_time)
 	if(throwing)

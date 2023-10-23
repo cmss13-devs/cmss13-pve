@@ -539,6 +539,10 @@ Make sure their actual health updates immediately.*/
 	if(!lying)
 		update_canmove()
 
+	var/datum/xeno_ai_movement/linger/lurking/AI = ai_movement_handler
+	if(AI && istype(AI))
+		AI.stop_lurking()
+
 /mob/living/carbon/xenomorph/proc/handle_luminosity()
 	var/new_luminosity = 0
 	if(caste)
