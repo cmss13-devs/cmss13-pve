@@ -134,7 +134,7 @@
 
 
 #define LURKER_BAIT_TYPES list("Taunt","Emote","Interact")
-#define LURKER_BAIT_EMOTES list("growl","roar","scream","needshelp")
+#define LURKER_BAIT_EMOTES list("growl","roar","hiss","needshelp")
 #define LURKER_BAIT_TAUNTS list("Come here, little host","I won't bite","I see you","Safe to go, little one")
 #define LURKER_BAITS_BEFORE_AMBUSH 4
 
