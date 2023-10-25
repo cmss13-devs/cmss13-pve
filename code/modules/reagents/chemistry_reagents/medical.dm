@@ -270,7 +270,7 @@
 	chemclass = CHEM_CLASS_UNCOMMON
 	properties = list(PROPERTY_NEOGENETIC = 3)
 
-/datum/reagent/medical/adrenaline // Legacy version
+/datum/reagent/medical/adrenaline
 	name = "Epinephrine"
 	id = "adrenaline"
 	description = "A natural muscle and heart stimulant. Useful for restarting the heart. Overdosing may stress the heart and cause tissue damage."
@@ -283,7 +283,7 @@
 	properties = list(PROPERTY_PAINKILLING = 1.5, PROPERTY_ELECTROGENETIC = 4, PROPERTY_INTRAVENOUS = 1)
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
-/datum/reagent/medical/adrenaline/strong
+/datum/reagent/medical/adrenaline_concentrated
 	name = "Epinephrine (concentrated)"
 	id = "adrenaline_concentrated"
 	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."

@@ -14,12 +14,11 @@
 	required_reagents = list("carbon" = 1, "nitrogen" = 1, "oxygen" = 1)
 	result_amount = 2
 
-/datum/chemical_reaction/adrenaline/strong
+/datum/chemical_reaction/adrenaline_concentrated
 	name = "Epinephrine (concentrated)"
 	id = "adrenaline_concentrated"
 	result = "adrenaline_concentrated"
-	required_reagents = list("carbon" = 1, "nitrogen" = 1, "oxygen" = 1)
-	required_catalysts = list("phoron" = 5)
+	required_reagents = list("carbon" = 1, "nitrogen" = 1, "oxygen" = 1, "phoron" = 3)
 	result_amount = 1
 
 /datum/chemical_reaction/alkysine

@@ -92,6 +92,15 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline
 	name = "epinephrine autoinjector"
+	chemname = "adrenaline"
+	desc = "An autoinjector loaded with 3 uses of Epinephrine, better known as Adrenaline, a nerve stimulant useful in restarting the heart."
+	amount_per_transfer_from_this = LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
+	volume = (LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
+	display_maptext = TRUE
+	maptext_label = "Ep"
+
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated
+	name = "epinephrine (concentrated) autoinjector"
 	chemname = "adrenaline_concentrated"
 	desc = "An autoinjector loaded with 3 uses of Epinephrine, better known as Adrenaline, a nerve stimulant useful in restarting the heart. In this concentrated form, it will prevent unconciousness but will cause minor suffocation."
 	amount_per_transfer_from_this = LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
