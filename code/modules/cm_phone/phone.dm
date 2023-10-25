@@ -12,23 +12,18 @@
 	/// Whether or not the phone is receiving calls or not. Varies between on/off or forcibly on/off.
 	var/do_not_disturb = PHONE_DO_NOT_DISTURB_OFF
 
-	var/base_icon_state
-
 	var/list/networks_receive = list(FACTION_MARINE) // pass these to component, plus that shit above - Morrow
 	var/list/networks_transmit = list(FACTION_MARINE)
 
 /obj/structure/phone_base/Initialize(mapload, ...)
 	. = ..()
-	base_icon_state = icon_state
-
-	update_icon()
 
 	AddComponent(/datum/component/phone, phone_category, phone_color, phone_id, phone_icon)
 
 // this needs a specific handling on the component level - Morrow
-/obj/structure/phone_base/update_icon()
+///obj/structure/phone_base/update_icon()
 	. = ..()
-	SEND_SIGNAL(src, COMSIG_TRANSMITTER_UPDATE_ICON)
+
 	//if(attached_to.loc != src)
 	//	icon_state = "[base_icon_state]_ear"
 	//	return
@@ -42,6 +37,8 @@
 	networks_receive = null
 	networks_transmit = null
 	return ..()
+
+
 
 /obj/structure/phone_base/hidden
 	do_not_disturb = PHONE_DO_NOT_DISTURB_FORCED
