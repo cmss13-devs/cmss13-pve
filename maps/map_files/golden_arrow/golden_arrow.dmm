@@ -4343,6 +4343,7 @@
 	},
 /area/almayer/engineering)
 "Bu" = (
+/obj/item/ammo_magazine/sentry,
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6343,6 +6344,7 @@
 	pixel_x = 14;
 	pixel_y = 29
 	},
+/obj/item/ammo_magazine/sentry,
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
