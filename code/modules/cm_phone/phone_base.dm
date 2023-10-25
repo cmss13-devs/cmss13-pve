@@ -18,27 +18,38 @@
 /obj/structure/phone_base/Initialize(mapload, ...)
 	. = ..()
 
-	AddComponent(/datum/component/phone, phone_category, phone_color, phone_id, phone_icon)
-
-// this needs a specific handling on the component level - Morrow
-///obj/structure/phone_base/update_icon()
-	. = ..()
-
-	//if(attached_to.loc != src)
-	//	icon_state = "[base_icon_state]_ear"
-	//	return
-
-	//if(caller)
-	//	icon_state = "[base_icon_state]_ring"
-	//else
-	//	icon_state = base_icon_state
+	AddComponent(/datum/component/phone, phone_category, phone_color, phone_id, phone_icon, do_not_disturb, networks_receive, networks_transmit)
+	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
+	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
+	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
+	RegisterSignal(src, COMSIG_ATOM_PHONE_STOPPED_RINGING, PROC_REF(phone_stopped_ringing))
 
 /obj/structure/phone_base/Destroy()
 	networks_receive = null
 	networks_transmit = null
 	return ..()
 
+#define PHONE_ON_BASE_UNIT_ICON_STATE "[initial(icon_state)]"
+#define PHONE_OFF_BASE_UNIT_ICON_STATE "[initial(icon_state)]_ear"
+#define PHONE_RINGING_ICON_STATE "[initial(icon_state)]_ring"
 
+/obj/structure/phone_base/proc/phone_picked_up()
+	icon_state = PHONE_OFF_BASE_UNIT_ICON_STATE
+
+/obj/structure/phone_base/proc/phone_hung_up()
+	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
+
+/obj/structure/phone_base/proc/phone_ringing()
+	icon_state = PHONE_RINGING_ICON_STATE
+
+/obj/structure/phone_base/proc/phone_stopped_ringing()
+	if(icon_state == PHONE_OFF_BASE_UNIT_ICON_STATE)
+		return
+	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
+
+#undef PHONE_ON_BASE_UNIT_ICON_STATE
+#undef PHONE_OFF_BASE_UNIT_ICON_STATE
+#undef PHONE_RINGING_ICON_STATE
 
 /obj/structure/phone_base/hidden
 	do_not_disturb = PHONE_DO_NOT_DISTURB_FORCED
