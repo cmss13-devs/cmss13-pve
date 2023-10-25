@@ -80,6 +80,9 @@
 		to_chat(src, SPAN_NOTICE("You try to move your [temp.display_name], but cannot!"))
 		return
 
+	if(SEND_SIGNAL(A, COMSIG_ATOM_HUMAN_ATTACK_HAND, src) & COMPONENT_CANCEL_ATTACK_HAND)
+		return
+
 	A.attack_hand(src, click_parameters)
 
 /datum/proc/handle_click(mob/living/carbon/human/user, atom/A, params) //Heres our handle click relay proc thing.

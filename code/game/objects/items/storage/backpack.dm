@@ -499,7 +499,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 	flags_item = ITEM_OVERRIDE_NORTHFACE
 
-	var/obj/structure/transmitter/internal/internal_transmitter
+	//var/obj/structure/transmitter/internal/internal_transmitter
 
 	var/phone_category = PHONE_MARINE
 	var/list/networks_receive = list(FACTION_MARINE)
@@ -524,14 +524,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/Initialize()
 	. = ..()
-	internal_transmitter = new(src)
-	internal_transmitter.relay_obj = src
-	internal_transmitter.phone_category = phone_category
-	internal_transmitter.enabled = FALSE
-	internal_transmitter.networks_receive = networks_receive
-	internal_transmitter.networks_transmit = networks_transmit
-	RegisterSignal(internal_transmitter, COMSIG_TRANSMITTER_UPDATE_ICON, PROC_REF(check_for_ringing))
-	GLOB.radio_packs += src
+	//internal_transmitter = new(src)
+	//internal_transmitter.relay_obj = src
+	//internal_transmitter.phone_category = phone_category
+	//internal_transmitter.enabled = FALSE
+	//internal_transmitter.networks_receive = networks_receive
+	//internal_transmitter.networks_transmit = networks_transmit
+	//RegisterSignal(internal_transmitter, COMSIG_TRANSMITTER_UPDATE_ICON, PROC_REF(check_for_ringing))
+	//GLOB.radio_packs += src
 
 /obj/item/storage/backpack/marine/satchel/rto/proc/check_for_ringing()
 	SIGNAL_HANDLER
@@ -539,63 +539,63 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/update_icon()
 	. = ..()
-	if(!internal_transmitter)
-		return
+	//if(!internal_transmitter)
+	//	return
 
-	if(!internal_transmitter.attached_to \
-		|| internal_transmitter.attached_to.loc != internal_transmitter)
-		icon_state = "[base_icon]_ear"
-		return
+	//if(!internal_transmitter.attached_to \
+	//	|| internal_transmitter.attached_to.loc != internal_transmitter)
+	//	icon_state = "[base_icon]_ear"
+	//	return
 
-	if(internal_transmitter.caller)
-		icon_state = "[base_icon]_ring"
-	else
-		icon_state = base_icon
+	//if(internal_transmitter.caller)
+	//	icon_state = "[base_icon]_ring"
+	//else
+	//	icon_state = base_icon
 
 /obj/item/storage/backpack/marine/satchel/rto/forceMove(atom/dest)
 	. = ..()
-	if(isturf(dest))
-		internal_transmitter.set_tether_holder(src)
-	else
-		internal_transmitter.set_tether_holder(loc)
+	//if(isturf(dest))
+	//	internal_transmitter.set_tether_holder(src)
+	//else
+	//	internal_transmitter.set_tether_holder(loc) - Morrow
 
 /obj/item/storage/backpack/marine/satchel/rto/Destroy()
 	GLOB.radio_packs -= src
-	qdel(internal_transmitter)
+	//qdel(internal_transmitter)
 	return ..()
 
 /obj/item/storage/backpack/marine/satchel/rto/pickup(mob/user)
 	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.comm_title)
-			internal_transmitter.phone_id = "[H.comm_title] [H]"
-		else if(H.job)
-			internal_transmitter.phone_id = "[H.job] [H]"
-		else
-			internal_transmitter.phone_id = "[H]"
+//	if(ishuman(user))
+//		var/mob/living/carbon/human/H = user
+//		if(H.comm_title)
+			//internal_transmitter.phone_id = "[H.comm_title] [H]"
+//		else if(H.job)
+			//internal_transmitter.phone_id = "[H.job] [H]"
+//		else
+			//internal_transmitter.phone_id = "[H]"
 
-		if(H.assigned_squad)
-			internal_transmitter.phone_id += " ([H.assigned_squad.name])"
-	else
-		internal_transmitter.phone_id = "[user]"
+//		if(H.assigned_squad)
+			//internal_transmitter.phone_id += " ([H.assigned_squad.name])"
+//	else
+		//internal_transmitter.phone_id = "[user]"
 
-	internal_transmitter.enabled = TRUE
+	//internal_transmitter.enabled = TRUE
 
 /obj/item/storage/backpack/marine/satchel/rto/dropped(mob/user)
 	. = ..()
-	internal_transmitter.phone_id = "[src]"
-	internal_transmitter.enabled = FALSE
+	//internal_transmitter.phone_id = "[src]"
+	//internal_transmitter.enabled = FALSE
 
 /obj/item/storage/backpack/marine/satchel/rto/proc/use_phone(mob/user)
-	internal_transmitter.attack_hand(user)
+	//internal_transmitter.attack_hand(user)
 
 
 /obj/item/storage/backpack/marine/satchel/rto/attackby(obj/item/W, mob/user)
-	if(internal_transmitter && internal_transmitter.attached_to == W)
-		internal_transmitter.attackby(W, user)
-	else
-		. = ..()
+//	if(internal_transmitter && internal_transmitter.attached_to == W)
+//		internal_transmitter.attackby(W, user)
+//	else
+//		. = ..()
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
 	name = "\improper UPP Radio Telephone Pack"

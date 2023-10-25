@@ -216,18 +216,18 @@
 	color = "yellow"
 
 /obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/transmitter/Phone = new(loc)
+	var/obj/structure/phone_base/phone = new(loc)
 
-	Phone.icon = icon
-	Phone.icon_state = icon_state
-	Phone.layer = layer
-	Phone.setDir(dir)
-	Phone.alpha = alpha
-	Phone.update_icon()
-	Phone.pixel_x = pixel_x
-	Phone.pixel_y = pixel_y
-	Phone.phone_category = "Vehicles"
-	Phone.phone_id = I.exterior.name
+	phone.icon = icon
+	phone.icon_state = icon_state
+	phone.layer = layer
+	phone.setDir(dir)
+	phone.alpha = alpha
+	phone.update_icon()
+	phone.pixel_x = pixel_x
+	phone.pixel_y = pixel_y
+	phone.phone_category = "Vehicles"
+	phone.phone_id = I.exterior.name
 
 	qdel(src)
 

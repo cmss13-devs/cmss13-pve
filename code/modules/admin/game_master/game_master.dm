@@ -73,6 +73,12 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	/// End Objective Stuff
 
 
+	/// Communication stuff
+
+	//var/datum/component/phone/game_master/game_master_phone
+
+	/// End Communication stuff
+
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
 
@@ -84,12 +90,15 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 	current_submenus = list()
 
+	//game_master_phone = new()
+
 	using_client.click_intercept = src
 
 /datum/game_master/Destroy(force, ...)
 	. = ..()
 	submenu_types = null
 	current_submenus = null
+	//QDEL_NULL(game_master_phone)
 
 /datum/game_master/ui_data(mob/user)
 	. = ..()
@@ -161,6 +170,21 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
 
+		//Communication Section
+		//if("use_game_master_phone")
+			//if(!game_master_phone)
+			//	game_master_phone = new()
+
+			//var/new_phone_id = tgui_input_text(ui.user, "New phone id?", "Phone ID", game_master_phone.phone_id)
+			//if(!new_phone_id)
+			//	return
+
+			//game_master_phone.phone_id = new_phone_id
+
+			//game_master_phone.tgui_interact(ui.user)
+			//return
+
+		//if("set_communication_clarity")
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
