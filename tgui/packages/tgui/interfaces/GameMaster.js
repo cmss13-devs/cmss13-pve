@@ -81,7 +81,7 @@ export const GameMaster = (props, context) => {
               <Flex grow direction="column">
                 <Flex.Item>
                   <Button
-                    content="Game Master Phone (SoonTM)"
+                    content="Game Master Phone"
                     onClick={() => {
                       act('use_game_master_phone');
                     }}

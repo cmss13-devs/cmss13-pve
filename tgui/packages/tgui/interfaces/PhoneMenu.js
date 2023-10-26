@@ -145,14 +145,31 @@ const GeneralPanel = (props, context) => {
         </Stack.Item>
         {data.virtual_phone && (
           <Stack.Item>
-            <Button
-              content="Hang Up"
-              color="red"
-              fluid
-              textAlign="center"
-              disabled={!active_call}
-              onClick={() => act('hang_up')}
-            />
+            <Stack vertical fill>
+              <Stack.Item>
+                <Section title={data.calling_phone_id || 'Phone Control'} />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  content="Pick Up"
+                  color="good"
+                  fluid
+                  textAlign="center"
+                  disabled={!data.being_called}
+                  onClick={() => act('pick_up')}
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  content="Hang Up"
+                  color="red"
+                  fluid
+                  textAlign="center"
+                  disabled={!data.active_call}
+                  onClick={() => act('hang_up')}
+                />
+              </Stack.Item>
+            </Stack>
           </Stack.Item>
         )}
       </Stack>

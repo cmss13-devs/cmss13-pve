@@ -91,7 +91,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
-	RegisterSignal(src.holder, COMSIG_ATOM_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
+	RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
 
 	if(istype(src.holder, /obj/item))
 		RegisterSignal(src.holder, COMSIG_ITEM_PICKUP, PROC_REF(holder_picked_up))
@@ -322,7 +322,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_STOPPED_RINGING)
 
-	ringing_loop.stop()
+	ringing_loop?.stop()
 
 	handle_reset_call_message(timeout, recursed)
 
@@ -358,7 +358,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 /// Handles any messages that our handset 'hears' and passes to us. Passes the message to this phone and any connected phone via handle_hear()
 /datum/component/phone/proc/handle_speak(message, datum/language/message_language, mob/speaker, direct_talking = TRUE)
-	if(message_language.flags & SIGNLANG)
+	if(message_language?.flags & SIGNLANG)
 		return
 
 	if(!calling_phone)
@@ -434,12 +434,14 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	switch(action)
 		if("call_phone")
+			if(calling_phone)
+				return TRUE
 			call_phone(ui.user, params["phone_id"])
-			. = TRUE
+			return TRUE
 
 		if("toggle_do_not_disturb")
 			toggle_do_not_disturb(ui.user)
-			. = TRUE
+			return TRUE
 
 /datum/component/phone/ui_data(mob/user)
 	var/list/data = list()
@@ -496,10 +498,17 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return FALSE
 	src.virtual_user = virtual_user
 
+	RegisterSignal(src.holder, COMSIG_ATOM_ATTACK_HAND, PROC_REF(use_phone))
+
 	return TRUE
 
+/datum/component/phone/virtual/use_phone(atom/phone, mob/living/carbon/human/user, click_parameters)
+	INVOKE_ASYNC(src, PROC_REF(tgui_interact), user)
+
 /datum/component/phone/virtual/picked_up_call(mob/living/carbon/human/user)
-	to_chat(user, SPAN_PURPLE("[icon2html(src, user)] Picked up a call from [calling_phone.phone_id]."))
+	to_chat(user, SPAN_PURPLE("[icon2html(holder, user)] Picked up a call from [calling_phone.phone_id]."))
+
+	RegisterSignal(virtual_user.mob, COMSIG_DEAD_SPEAK, PROC_REF(handle_virtual_speak))
 
 /datum/component/phone/virtual/other_phone_picked_up_call()
 	if(!calling_phone)
@@ -509,6 +518,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		deltimer(timeout_timer_id)
 		timeout_timer_id = null
 
+	RegisterSignal(virtual_user.mob, COMSIG_DEAD_SPEAK, PROC_REF(handle_virtual_speak))
 	to_chat(virtual_user, SPAN_PURPLE("[icon2html(calling_phone.holder, virtual_user)] [calling_phone.phone_id] has picked up."))
 
 /datum/component/phone/virtual/phone_available()
@@ -523,6 +533,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	return TRUE
 
+/datum/component/phone/virtual/reset_call(timeout = FALSE, recursed = FALSE)
+	. = ..()
+	UnregisterSignal(virtual_user.mob, COMSIG_DEAD_SPEAK)
+
 /datum/component/phone/virtual/handle_reset_call_message(timeout = FALSE, recursed = FALSE)
 	if(recursed)
 		to_chat(virtual_user, SPAN_PURPLE("[icon2html(holder, virtual_user)] [calling_phone.phone_id] has hung up on you."))
@@ -534,6 +548,14 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 /datum/component/phone/virtual/getting_call(datum/component/phone/incoming_call)
 	calling_phone = incoming_call
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_RINGING)
+	playsound_client(virtual_user, 'sound/machines/telephone/telephone_ring.ogg', vol = 50)
+	addtimer(CALLBACK(src, PROC_REF(delayed_client_sound)), (10 SECONDS))
+
+/datum/component/phone/virtual/proc/delayed_client_sound()
+	if(!calling_phone || !calling_phone.timeout_timer_id)
+		return
+
+	playsound_client(virtual_user, 'sound/machines/telephone/telephone_ring.ogg', vol = 50)
 
 /datum/component/phone/virtual/post_call_phone(mob/user, calling_phone_id)
 	to_chat(user, SPAN_PURPLE("[icon2html(holder, user)] Dialing [calling_phone_id].."))
@@ -545,7 +567,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	reset_call() // I don't think this will be possible given like... we don't have a handset but just in case
 	return
 
-/datum/component/phone/virtual/handle_hear(message, datum/language/message_language, mob/speaker)
+/datum/component/phone/virtual/handle_hear(message, datum/language/message_language, mob/speaker, direct_talking)
 	if(!calling_phone)
 		return
 
@@ -559,12 +581,51 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	virtual_user.mob.hear_radio(message, "says", message_language, part_a = "<span class='purple'><span class='name'>", part_b = "</span><span class='message'> ", vname = name_override, speaker = speaker, command = 3, no_paygrade = TRUE)
 
+/// Used to fake the other side of our phone connection as a virtual user
+/datum/component/phone/virtual/proc/handle_virtual_speak(mob/speaker, message)
+	SIGNAL_HANDLER
+
+	if(!calling_phone)
+		return
+
+	handle_hear(message, null, speaker, TRUE)
+
+	log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
+
+	for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
+		if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
+			var/ghost_message = "<span class='purple'><span class='name'>Game Master</span> on '[phone_id]' to '[calling_phone.phone_id]': <span class='body'>\"[message]\"</span></span>"
+			cycled_observer.show_message(ghost_message, SHOW_MESSAGE_AUDIBLE)
+
+	calling_phone.handle_hear(message, null, speaker, TRUE)
+
+	return COMPONENT_OVERRIDE_DEAD_SPEAK
+
 // TGUI section
 
 /datum/component/phone/virtual/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
 
+/datum/component/phone/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	. = ..()
+	if(.)
+		return
+
+	switch(action)
+		if("hang_up")
+			reset_call()
+			return TRUE
+		if("pick_up")
+			if(!calling_phone)
+				return
+			picked_up_call(ui.user)
+			calling_phone.other_phone_picked_up_call()
+			return TRUE
+
 /datum/component/phone/virtual/ui_data(mob/user)
 	. = ..()
 
 	.["virtual_phone"] = TRUE
+	.["being_called"] = calling_phone?.timeout_timer_id ? TRUE : FALSE
+	.["active_call"] = calling_phone ? TRUE : FALSE
+	.["calling_phone_id"] = "[calling_phone?.phone_id]"

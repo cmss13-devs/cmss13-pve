@@ -47,12 +47,15 @@
 #define COMSIG_ATOM_VV_MODIFY_TRANSFORM "atom_vv_modify_transform"
 
 /// From /mob/living/carbon/human/UnarmedAttack()
-#define COMSIG_ATOM_HUMAN_ATTACK_HAND "atom_human_attack_hand"
+#define COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND "atom_before_human_attack_hand"
 	#define COMPONENT_CANCEL_ATTACK_HAND (1<<0)
 
 /// From /mob/proc/click_adjacent()
 #define COMSIG_ATOM_MOB_ATTACKBY "atom_mob_attackby"
 	#define COMPONENT_CANCEL_ATTACKBY (1<<0)
+
+/// From /atom/proc/attack_hand()
+#define COMSIG_ATOM_ATTACK_HAND "atom_attack_hand"
 
 /// From /datum/component/phone/proc/picked_up_call() and /datum/component/phone/proc/post_call_phone()
 #define COMSIG_ATOM_PHONE_PICKED_UP "atom_phone_picked_up"
