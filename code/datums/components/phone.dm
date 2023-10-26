@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Our phone category which sorts us into tabs in the phone menu TGUI
 	var/phone_category = "Uncategorised"
 
-	/// Honestly no idea yet - Morrow
+	/// Color of phone displayed in the phone menu
 	var/phone_color = "white"
 
 	/// The id of our phone which shows up when we talk
@@ -366,11 +366,21 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	if(direct_talking)
 		handle_hear(message, message_language, speaker, direct_talking)
+
 		log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
 
-	calling_phone.handle_hear(message, message_language, speaker, direct_talking)
+		var/comm_paygrade = ""
 
-	// Add dchat listen in because it's funny, check radio preferences first, oh and don't do the background stuff - Morrow
+		if (ishuman(speaker))
+			var/mob/living/carbon/human/human_speaker = speaker
+			comm_paygrade = human_speaker.get_paygrade()
+
+		for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
+			if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
+				var/ghost_message = "[comm_paygrade][speaker] (<a href='byond://?src=\ref[cycled_observer];track=\ref[speaker]'>F</a>) on '[phone_id]' to '[calling_phone.phone_id]': \"[message]\""
+				cycled_observer.show_message(ghost_message, SHOW_MESSAGE_AUDIBLE)
+
+	calling_phone.handle_hear(message, message_language, speaker, direct_talking)
 
 /// Handles any messages passed from handle_speak() and serves them to the user
 /datum/component/phone/proc/handle_hear(message, datum/language/message_language, mob/speaker, direct_talking)

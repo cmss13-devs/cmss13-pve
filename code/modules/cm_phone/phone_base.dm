@@ -12,7 +12,7 @@
 	/// Whether or not the phone is receiving calls or not. Varies between on/off or forcibly on/off.
 	var/do_not_disturb = PHONE_DO_NOT_DISTURB_OFF
 
-	var/list/networks_receive = list(FACTION_MARINE) // pass these to component, plus that shit above - Morrow
+	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 
 /obj/structure/phone_base/Initialize(mapload, ...)
