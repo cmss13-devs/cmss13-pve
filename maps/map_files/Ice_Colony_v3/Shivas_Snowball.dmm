@@ -11183,7 +11183,7 @@
 	pixel_y = 5
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -12;
 	pixel_y = 7
 	},

@@ -69,7 +69,7 @@
 /area/bigredv2/outside/filtration_cave_cas)
 "kd" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "red";
 	phone_id = "Filtration Checkpoint"

@@ -21,7 +21,7 @@
 	dir = 1
 	},
 /obj/structure/surface/table,
-/obj/structure/transmitter/tent{
+/obj/structure/phone_base/tent{
 	phone_category = "Command";
 	phone_id = "Ground Command";
 	pixel_x = -2;

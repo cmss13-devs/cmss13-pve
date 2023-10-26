@@ -17,7 +17,7 @@
 	},
 /area/lv624/lazarus/main_hall)
 "d" = (
-/obj/item/phone{
+/obj/item/handset{
 	desc = "A model of an ancient Earth communication device.";
 	force = 8
 	},

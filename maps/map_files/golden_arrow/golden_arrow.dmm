@@ -6787,7 +6787,7 @@
 	pixel_x = -17;
 	pixel_y = 16
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Alpha Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Alpha Overwatch"

@@ -53,7 +53,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair,
-/obj/structure/transmitter/tent{
+/obj/structure/phone_base/tent{
 	pixel_y = 30;
 	pixel_x = 16;
 	phone_category = "Command";

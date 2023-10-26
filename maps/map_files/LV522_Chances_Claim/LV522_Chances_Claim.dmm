@@ -1367,7 +1367,7 @@
 	},
 /area/lv522/indoors/a_block/dorms)
 "aNn" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Colony Corporate";
@@ -2377,7 +2377,7 @@
 /area/lv522/indoors/c_block/garage)
 "bny" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Garage";
@@ -8838,7 +8838,7 @@
 /area/lv522/oob)
 "ebR" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 1;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -11205,7 +11205,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "LZ1 Service Tunnel";
@@ -11478,7 +11478,7 @@
 /area/lv522/landing_zone_2)
 "ffO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 8;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -17534,7 +17534,7 @@
 "huX" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 1;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -18627,7 +18627,7 @@
 "hPQ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "LV522 Chances Claim";
 	phone_id = "Chief Engineer Office";
 	pixel_x = -2;
@@ -19659,7 +19659,7 @@
 /area/lv522/landing_zone_1/tunnel)
 "ike" = (
 /obj/item/prop/alien/hugger,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -22663,7 +22663,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -23515,7 +23515,7 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/oob)
 "jEF" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Meeting Room";
@@ -29654,7 +29654,7 @@
 /area/lv522/landing_zone_2)
 "lSP" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "LV522 Chances Claim";
 	phone_id = "Colony Operations Centre";
 	pixel_y = 6
@@ -30067,7 +30067,7 @@
 "mbw" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Colony Dining";
@@ -31010,7 +31010,7 @@
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
 "mtM" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -31032,7 +31032,7 @@
 "muO" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 1;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -32905,7 +32905,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
 "nem" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Colony Northern Dorms";
@@ -34187,7 +34187,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "nDS" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Colony Dorms";
@@ -36356,7 +36356,7 @@
 	},
 /area/lv522/outdoors/colony_streets/north_west_street)
 "osm" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Sewer";
@@ -37068,7 +37068,7 @@
 	},
 /area/lv522/indoors/a_block/admin)
 "oHR" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -37219,7 +37219,7 @@
 	},
 /area/lv522/atmos/east_reactor/south)
 "oKN" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Central Office";
@@ -41954,7 +41954,7 @@
 	},
 /area/lv522/indoors/a_block/dorms)
 "qyp" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Eastern Reactor Control";
@@ -42387,7 +42387,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/central_streets)
 "qGh" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Colony Fitness";
@@ -44203,7 +44203,7 @@
 "rjl" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/decal/cleanable/blood,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
 	phone_id = "Reactor Entrance Office";
@@ -47074,7 +47074,7 @@
 /area/lv522/landing_zone_2)
 "slt" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "LV522 Chances Claim";
 	phone_id = "Reactor Control";
 	pixel_y = 6
@@ -55594,7 +55594,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 8;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -59282,7 +59282,7 @@
 /area/lv522/indoors/a_block/admin)
 "wDu" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 8;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
@@ -60553,7 +60553,7 @@
 /area/lv522/outdoors/colony_streets/north_street)
 "xfS" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 1;
 	phone_category = "LV522 Chances Claim";
 	phone_color = "red";
