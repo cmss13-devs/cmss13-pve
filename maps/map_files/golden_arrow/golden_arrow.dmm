@@ -4249,7 +4249,7 @@
 	layer = 2.1
 	},
 /obj/structure/sign/safety/manualopenclose{
-	layer = 4.3;
+	layer = 2.11;
 	pixel_x = 12;
 	pixel_y = 2
 	},
