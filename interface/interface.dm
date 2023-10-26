@@ -43,7 +43,7 @@
 	if(tgui_alert(src, "This will open the discord in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
 		return
 
-	src << link("https://discord.gg/v6P6wns5dN")
+	src << link("https://discord.gg/pve-cmss13")
 	return
 
 /client/verb/github()
