@@ -160,7 +160,6 @@
 	accurate_range = 8
 	max_range = 8
 	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_4
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
 	firing_freq_offset = SOUND_FREQ_LOW
 
