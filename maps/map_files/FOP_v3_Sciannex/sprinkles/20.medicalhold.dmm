@@ -494,7 +494,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -3;
 	pixel_y = 13
 	},

@@ -8246,7 +8246,7 @@
 "ayG" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
-/obj/item/phone,
+/obj/item/handset,
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "blue"

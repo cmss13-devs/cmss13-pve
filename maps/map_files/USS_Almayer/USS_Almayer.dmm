@@ -1576,7 +1576,7 @@
 /area/almayer/shipboard/starboard_missiles)
 "afb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 4;
 	name = "Starboard Railgun Control Telephone";
 	phone_category = "Command";
@@ -5561,7 +5561,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 8;
 	name = "OT Telephone";
 	phone_category = "Almayer";
@@ -6983,7 +6983,7 @@
 	unacidable = 1;
 	unslashable = 1
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "AI Reception Telephone";
 	phone_category = "ARES";
 	phone_color = "blue";
@@ -10373,7 +10373,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Researcher Office Telephone";
 	phone_category = "Almayer";
 	phone_id = "Research";
@@ -12001,7 +12001,7 @@
 /turf/closed/wall/almayer,
 /area/almayer/hallways/starboard_umbilical)
 "aQy" = (
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 8;
 	name = "RO Office Telephone";
 	phone_category = "Offices";
@@ -19162,14 +19162,14 @@
 	pixel_x = -17
 	},
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Telephone";
 	phone_category = "Almayer";
 	phone_id = "Auxiliary Support Office Second Line";
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Telephone";
 	phone_category = "Almayer";
 	phone_id = "Auxiliary Support Office";
@@ -25705,7 +25705,7 @@
 	pixel_x = -6;
 	pixel_y = -5
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Flight Deck Telephone";
 	phone_category = "Almayer";
 	phone_id = "Flight Deck";
@@ -30126,7 +30126,7 @@
 	},
 /obj/item/reagent_container/food/condiment/enzyme,
 /obj/item/reagent_container/food/condiment/enzyme,
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	name = "Kitchen Telephone";
 	phone_category = "Almayer";
 	phone_id = "Kitchen";
@@ -34010,7 +34010,7 @@
 /area/almayer/medical/medical_science)
 "eSJ" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Captain's Office";
 	phone_category = "Offices";
 	phone_id = "Captain's Office";
@@ -34626,7 +34626,7 @@
 "ffV" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/crew/alt,
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Brig Cells Telephone";
 	phone_category = "Almayer";
 	phone_id = "Brig Cells";
@@ -36627,7 +36627,7 @@
 	department = "AI Core";
 	pixel_y = 8
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "AI Core Telephone";
 	phone_category = "ARES";
 	phone_color = "blue";
@@ -37479,7 +37479,7 @@
 /area/almayer/command/cichallway)
 "gtA" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 8;
 	name = "Medical Telephone";
 	phone_category = "Almayer";
@@ -39952,7 +39952,7 @@
 	pixel_x = 5
 	},
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "CIC Reception Telephone";
 	phone_category = "Command";
 	phone_id = "CIC Reception";
@@ -41307,7 +41307,7 @@
 	},
 /area/almayer/medical/lower_medical_medbay)
 "hZU" = (
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	name = "Brig Offices Telephone";
 	phone_category = "Almayer";
 	phone_id = "Brig Main Offices";
@@ -41764,7 +41764,7 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Senior Enlisted Advisor Office Telephone";
 	phone_category = "Almayer";
 	phone_id = "Senior Enlisted Advisor's Office";
@@ -43988,7 +43988,7 @@
 /obj/structure/surface/table/almayer,
 /obj/effect/landmark/map_item,
 /obj/item/folder/red,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Brig CMP's Office Telephone";
 	phone_category = "Offices";
 	phone_id = "Brig CMP's Office";
@@ -45990,7 +45990,7 @@
 	unacidable = 1;
 	unslashable = 1
 	},
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 1;
 	name = "Brig Warden's Office Telephone";
 	phone_category = "Offices";
@@ -46299,7 +46299,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	name = "CMO Office Telephone";
 	phone_category = "Offices";
 	phone_id = "CMO Office";
@@ -50677,7 +50677,7 @@
 	pixel_x = -17;
 	pixel_y = 16
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Alpha Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Alpha Overwatch"
@@ -54503,7 +54503,7 @@
 	},
 /area/almayer/hull/lower_hull/l_f_s)
 "nDh" = (
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "CL Office Telephone";
 	phone_category = "Almayer";
 	phone_id = "CL Office"
@@ -58707,7 +58707,7 @@
 	pixel_y = 28
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Intelligence Center Telephone";
 	phone_category = "Almayer";
 	phone_id = "Intelligence Center Telephone"
@@ -65440,7 +65440,7 @@
 	pixel_x = -17;
 	pixel_y = -17
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Delta Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Delta Overwatch"
@@ -66792,7 +66792,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Charlie Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Charlie Overwatch"
@@ -67587,7 +67587,7 @@
 	dir = 4;
 	layer = 3.25
 	},
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	name = "CE Office Telephone";
 	phone_category = "Offices";
 	phone_id = "CE Office";
@@ -69696,7 +69696,7 @@
 	pixel_y = 15
 	},
 /obj/structure/machinery/light,
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Bravo Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Bravo Overwatch"
@@ -73872,7 +73872,7 @@
 	pixel_y = -5;
 	req_one_access_txt = "1;4"
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Combat Information Center Telephone";
 	phone_category = "Command";
 	phone_id = "Combat Information Center";
@@ -75727,7 +75727,7 @@
 	pixel_x = 7;
 	pixel_y = 29
 	},
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "Reporter Telephone";
 	phone_category = "Almayer";
 	phone_id = "Reporter";
@@ -80027,7 +80027,7 @@
 /area/almayer/hull/lower_hull/l_a_s)
 "ybZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/transmitter{
+/obj/structure/phone_base{
 	dir = 4;
 	name = "Port Railgun Control Telephone";
 	phone_category = "Command";
