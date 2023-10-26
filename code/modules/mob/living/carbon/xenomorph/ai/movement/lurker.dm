@@ -3,6 +3,9 @@
 	// Are we currently hiding?
 	var/ai_lurking = FALSE
 
+	// Should we stalk people when they walk too far away?
+	var/enable_stalking = FALSE
+
 	// Gradually increases the chance of AI to try and bait marines
 	// Annoyance accumulate when we lurk (stand invisible) and aware of our target
 	var/annoyance = 0
@@ -10,11 +13,11 @@
 	// Total baits this xeno made
 	var/total_baits = 0
 
+	// Distance at which we want to stay from our spotted target
+	var/stalking_distance = 12
+
 	// List of turfs we see and register while lurking
 	var/list/registered_turfs = list()
-
-	// Distance at which we want to stay from our spotted target
-//	var/stalking_distance = 12 /// uncomment for stalking
 
 	// Let's lower this a little bit cause we do some heavy checks while finding our "home"
 	home_locate_range = 10
@@ -88,9 +91,9 @@
 		return
 
 	/// Abandon hiding place to stalk our target
-//	if(idle_xeno.current_target && get_dist(home_turf, idle_xeno.current_target) > stalking_distance)
-//		home_turf = null
-//		return /// uncomment for stalking
+	if(idle_xeno.current_target && get_dist(home_turf, idle_xeno.current_target) > stalking_distance && enable_stalking)
+		home_turf = null
+		return
 
 	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range))
 		if(get_dist(home_turf, idle_xeno) <= 0 && !ai_lurking)
@@ -108,8 +111,8 @@
 
 	var/turf/target_turf = get_turf(moving_xeno.current_target)
 	if(ai_lurking || get_dist(moving_xeno, target_turf) > world.view + 2)
-//		if(get_dist(moving_xeno, target_turf) > stalking_distance)
-//			return moving_xeno.move_to_next_turf(target_turf) /// uncomment for stalking
+		if(get_dist(moving_xeno, target_turf) > stalking_distance && enable_stalking)
+			return moving_xeno.move_to_next_turf(target_turf)
 		return ai_move_idle(delta_time)
 
 	annoyance = 0
