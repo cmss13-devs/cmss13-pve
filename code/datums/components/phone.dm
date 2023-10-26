@@ -377,7 +377,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 		for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
 			if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
-				var/ghost_message = "[comm_paygrade][speaker] (<a href='byond://?src=\ref[cycled_observer];track=\ref[speaker]'>F</a>) on '[phone_id]' to '[calling_phone.phone_id]': \"[message]\""
+				var/ghost_message = "<span class='purple'><span class='name'>[comm_paygrade][speaker] (<a href='byond://?src=\ref[cycled_observer];track=\ref[speaker]'>F</a>)</span> on '[phone_id]' to '[calling_phone.phone_id]': <span class='body'>\"[message]\"</span></span>"
 				cycled_observer.show_message(ghost_message, SHOW_MESSAGE_AUDIBLE)
 
 	calling_phone.handle_hear(message, message_language, speaker, direct_talking)
