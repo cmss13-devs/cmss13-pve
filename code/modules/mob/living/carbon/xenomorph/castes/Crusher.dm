@@ -5,13 +5,13 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_5
 	melee_damage_upper = XENO_DAMAGE_TIER_5
 	melee_vehicle_damage = XENO_DAMAGE_TIER_5
-	max_health = XENO_HEALTH_TIER_10
+	max_health = XENO_HEALTH_QUEEN
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
-	plasma_max = XENO_PLASMA_TIER_4
+	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_2
+	speed = XENO_SPEED_TIER_4
 	heal_standing = 0.66
 
 	behavior_delegate_type = /datum/behavior_delegate/crusher_base
@@ -56,7 +56,8 @@
 		/datum/action/xeno_action/onclick/regurgitate,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/activable/pounce/crusher_charge,
+		/datum/action/xeno_action/activable/fling/charger,
+		/datum/action/xeno_action/onclick/charger_charge,
 		/datum/action/xeno_action/onclick/crusher_stomp,
 		/datum/action/xeno_action/onclick/crusher_shield,
 		/datum/action/xeno_action/onclick/tacmap,
@@ -64,10 +65,29 @@
 
 	claw_type = CLAW_TYPE_VERY_SHARP
 	mutation_icon_state = CRUSHER_NORMAL
-	mutation_type = CRUSHER_NORMAL
+	mutation_type = CRUSHER_CHARGER
 
 	icon_xeno = 'icons/mob/xenos/crusher.dmi'
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
+
+	ai_range = 24
+
+/mob/living/carbon/xenomorph/crusher/init_movement_handler()
+	return new /datum/xeno_ai_movement/crusher(src)
+
+/mob/living/carbon/xenomorph/crusher/New(loc, ...)
+	. = ..()
+	qdel(behavior_delegate)
+	behavior_delegate = new /datum/behavior_delegate/crusher_charger()
+	behavior_delegate.bound_xeno = src
+	behavior_delegate.add_to_xeno()
+
+	RegisterSignal(src, COMSIG_MOB_PRE_CLICK, PROC_REF(on_click))
+
+/mob/living/carbon/xenomorph/crusher/proc/on_click(mob/living/carbon/xenomorph/X, atom/target, list/mods)
+	SIGNAL_HANDLER
+	if(HAS_TRAIT(src, TRAIT_CHARGING) && !istype(target, /atom/movable/screen))
+		return COMPONENT_INTERRUPT_CLICK
 
 // Refactored to handle all of crusher's interactions with object during charge.
 /mob/living/carbon/xenomorph/proc/handle_collision(atom/target)
@@ -205,7 +225,7 @@
 	if (!.)
 		update_icons()
 
-// Mutator delegate for base ravager
+// Mutator delegate for base crusher
 /datum/behavior_delegate/crusher_base
 	name = "Base Crusher Behavior Delegate"
 

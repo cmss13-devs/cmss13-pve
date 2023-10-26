@@ -109,6 +109,22 @@
 	if (!check_and_use_plasma_owner())
 		return
 
+	apply_cooldown()
+
+	X.frozen = TRUE
+	X.anchored = TRUE
+	X.update_canmove()
+
+	if (!do_after(X, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
+		X.frozen = FALSE
+		X.anchored = FALSE
+		X.update_canmove()
+		return
+
+	X.frozen = FALSE
+	X.anchored = FALSE
+	X.update_canmove()
+
 	playsound(get_turf(X), 'sound/effects/bang.ogg', 25, 0)
 	X.visible_message(SPAN_XENODANGER("[X] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
 	X.create_stomp()
@@ -131,11 +147,15 @@
 			continue
 
 		new effect_type_base(H, X, , , get_xeno_stun_duration(H, effect_duration))
-		if(H.mob_size < MOB_SIZE_BIG)
+		if (H.mob_size < MOB_SIZE_BIG)
 			H.apply_effect(get_xeno_stun_duration(H, 0.2), WEAKEN)
+
+		if (H.client)
+			var/steps = 20 / get_dist(H, X)
+			shake_camera(H, steps, 2)
+
 		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
 
-	apply_cooldown()
 	return ..()
 
 /datum/action/xeno_action/onclick/crusher_stomp/charger/use_ability()

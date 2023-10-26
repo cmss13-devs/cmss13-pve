@@ -59,7 +59,9 @@
 	name = "Charger Crusher Behavior Delegate"
 
 	var/frontal_armor = 30
-	var/side_armor = 15
+	var/side_armor = 20
+
+	var/aoe_slash_damage_reduction = 0.40
 
 /datum/behavior_delegate/crusher_charger/add_to_xeno()
 	RegisterSignal(bound_xeno, COMSIG_MOB_SET_FACE_DIR, PROC_REF(cancel_dir_lock))
@@ -68,6 +70,38 @@
 /datum/behavior_delegate/crusher_charger/proc/cancel_dir_lock()
 	SIGNAL_HANDLER
 	return COMPONENT_CANCEL_SET_FACE_DIR
+
+/datum/behavior_delegate/crusher_charger/melee_attack_additional_effects_target(mob/living/carbon/A)
+
+	if (!isxeno_human(A))
+		return
+
+	new /datum/effects/xeno_slow(A, bound_xeno, , , 20)
+
+	var/damage = bound_xeno.melee_damage_upper * aoe_slash_damage_reduction
+
+	var/base_cdr_amount = 15
+	var/cdr_amount = base_cdr_amount
+	for (var/mob/living/carbon/H in orange(1, A))
+		if (H.stat == DEAD)
+			continue
+
+		if(!isxeno_human(H) || bound_xeno.can_not_harm(H))
+			continue
+
+		cdr_amount += 5
+
+		bound_xeno.visible_message(SPAN_DANGER("[bound_xeno] slashes [H]!"), \
+			SPAN_DANGER("You slash [H]!"), null, null, CHAT_TYPE_XENO_COMBAT)
+
+		bound_xeno.flick_attack_overlay(H, "slash")
+
+		H.last_damage_data = create_cause_data(initial(bound_xeno.name), bound_xeno)
+		H.apply_armoured_damage(get_xeno_damage_slash(H, damage), ARMOR_MELEE, BRUTE, bound_xeno.zone_selected)
+
+	var/datum/action/xeno_action/onclick/crusher_stomp/cAction = get_xeno_action_by_type(bound_xeno, /datum/action/xeno_action/onclick/crusher_stomp)
+	if (!cAction.action_cooldown_check())
+		cAction.reduce_cooldown(cdr_amount)
 
 /datum/behavior_delegate/crusher_charger/proc/apply_directional_armor(mob/living/carbon/xenomorph/xeno, list/damagedata)
 	SIGNAL_HANDLER
@@ -363,7 +397,7 @@
 	if(LinkBlocked(src, cur_turf, target_turf))
 		ram_dir = REVERSE_DIR(ram_dir)
 	step(src, ram_dir, charger_ability.momentum * 0.5)
-	charger_ability.lose_momentum(CCA_MOMENTUM_LOSS_MIN)
+//	charger_ability.lose_momentum(CCA_MOMENTUM_LOSS_MIN)
 	return XENO_CHARGE_TRY_MOVE
 
 // Fellow xenos

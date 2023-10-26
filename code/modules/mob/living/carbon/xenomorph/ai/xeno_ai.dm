@@ -135,7 +135,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(!path)
 		no_path_found = TRUE
 
-/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range)
+/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range, list/ignore)
 	if(!T)
 		return FALSE
 
@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	if(!current_path || (next_path_generation < world.time && current_target_turf != T))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
-			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
+			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target) + ignore)
 			current_target_turf = T
 		next_path_generation = world.time + path_update_period
 

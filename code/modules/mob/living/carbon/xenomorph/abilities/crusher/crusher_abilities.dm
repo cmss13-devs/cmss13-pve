@@ -44,9 +44,19 @@
 
 	var/damage = 65
 
-	var/distance = 2
+	var/distance = 5
 	var/effect_type_base = /datum/effects/xeno_slow/superslow
 	var/effect_duration = 10
+	var/windup_duration = 1 SECONDS
+
+	default_ai_action = TRUE
+	var/prob_chance = 80
+
+/datum/action/xeno_action/onclick/crusher_stomp/process_ai(mob/living/carbon/xenomorph/X, delta_time)
+	if(get_dist(X, X.current_target) >= distance-1 || HAS_TRAIT(X, TRAIT_CHARGING) || !DT_PROB(prob_chance, delta_time))
+		return
+
+	use_ability_async()
 
 /datum/action/xeno_action/onclick/crusher_stomp/charger
 	name = "Crush"
@@ -86,6 +96,15 @@
 	weaken_power = 0
 	slowdown = 8
 
+	default_ai_action = TRUE
+	var/prob_chance = 60
+
+/datum/action/xeno_action/activable/fling/charger/process_ai(mob/living/carbon/xenomorph/X, delta_time)
+	if(get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || !DT_PROB(prob_chance, delta_time))
+		return
+
+	use_ability_async(X.current_target)
+
 
 /datum/action/xeno_action/onclick/charger_charge
 	name = "Toggle Charging"
@@ -97,9 +116,9 @@
 
 	// Config vars
 	var/max_momentum = 8
-	var/steps_to_charge = 4
-	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5 + XENO_SPEED_FASTMOD_TIER_1//2
-	var/plasma_per_step = 3 // charger has 400 plasma atm, this gives a good 100 tiles of crooshing
+	var/steps_to_charge = 3
+	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5//2.2
+	var/plasma_per_step = 0
 
 	// State vars
 	var/activated = FALSE
@@ -177,6 +196,9 @@
 	if(noise_timer == 3)
 		playsound(Xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
 
+		for(var/mob/living/carbon/human/Mob in range(10, Xeno))
+			shake_camera(Mob, 2, 1)
+
 	for(var/mob/living/carbon/human/Mob in Xeno.loc)
 		if(Mob.lying && Mob.stat != DEAD)
 			Xeno.visible_message(SPAN_DANGER("[Xeno] runs [Mob] over!"),
@@ -189,7 +211,7 @@
 			step(Mob, ram_dir, dist)
 			Mob.take_overall_armored_damage(momentum * 6)
 			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon/human, emote),"pain")
-			shake_camera(Mob, 7,3)
+			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
 
 	Xeno.recalculate_speed()
