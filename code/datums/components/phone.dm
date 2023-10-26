@@ -535,7 +535,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 /datum/component/phone/virtual/reset_call(timeout = FALSE, recursed = FALSE)
 	. = ..()
-	if(!virtual_user.mob)
+	if(!virtual_user?.mob)
 		return
 
 	UnregisterSignal(virtual_user.mob, COMSIG_DEAD_SPEAK)
