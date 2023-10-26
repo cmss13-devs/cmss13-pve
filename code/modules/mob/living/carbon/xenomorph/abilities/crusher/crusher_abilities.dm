@@ -53,7 +53,7 @@
 	var/prob_chance = 80
 
 /datum/action/xeno_action/onclick/crusher_stomp/process_ai(mob/living/carbon/xenomorph/X, delta_time)
-	if(get_dist(X, X.current_target) >= distance-1 || HAS_TRAIT(X, TRAIT_CHARGING) || !DT_PROB(prob_chance, delta_time))
+	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) >= distance-1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
 		return
 
 	use_ability_async()
@@ -100,7 +100,7 @@
 	var/prob_chance = 60
 
 /datum/action/xeno_action/activable/fling/charger/process_ai(mob/living/carbon/xenomorph/X, delta_time)
-	if(get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || !DT_PROB(prob_chance, delta_time))
+	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
 		return
 
 	use_ability_async(X.current_target)
