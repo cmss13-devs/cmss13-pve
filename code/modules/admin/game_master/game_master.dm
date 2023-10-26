@@ -201,6 +201,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	switch(current_click_intercept_action)
 		if(SPAWN_CLICK_INTERCEPT_ACTION)
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+				if(isxeno(object))
+					qdel(object)
+				return
+
 			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
 
 			if(!spawning_xeno_type)
