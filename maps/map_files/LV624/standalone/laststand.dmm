@@ -404,7 +404,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "Yc" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	pixel_y = 32;
 	phone_category = "Lazarus Landing";
 	phone_id = "Lakeside Bar"

@@ -297,7 +297,7 @@ window "infowindow"
 		text-align = center
 		font-weight = bold
 		saved-params = "is-checked"
-		text = "discord.gg/v6P6wns5dN"
+		text = "discord.gg/PVE-CMSS13"
 		command = "discord"
 
 window "outputwindow"

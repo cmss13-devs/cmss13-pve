@@ -58,6 +58,14 @@ export const GameMaster = (props, context) => {
                     </Flex.Item>
                   </Flex>
                 </Flex.Item>
+                <Flex.Item>
+                  <Button
+                    content="Delete all xenos"
+                    onClick={() => {
+                      act('delete_all_xenos');
+                    }}
+                  />
+                </Flex.Item>
               </Flex>
             </Section>
           </Flex.Item>
@@ -81,7 +89,7 @@ export const GameMaster = (props, context) => {
               <Flex grow direction="column">
                 <Flex.Item>
                   <Button
-                    content="Game Master Phone (SoonTM)"
+                    content="Game Master Phone"
                     onClick={() => {
                       act('use_game_master_phone');
                     }}

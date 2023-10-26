@@ -7,7 +7,7 @@
 
 	interior_map = /datum/map_template/interior/apc_command
 
-	passengers_slots = 8
+	passengers_slots = 15
 
 	var/sensor_radius = 45 //45 tiles radius
 

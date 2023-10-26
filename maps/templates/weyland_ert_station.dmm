@@ -2794,7 +2794,7 @@
 /area/adminlevel/ert_station/weyland_station)
 "Js" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	do_not_disturb = 2;
 	name = "Weyland-Yutani Station CiC";
 	phone_category = "W-Y";
@@ -3587,7 +3587,7 @@
 /area/adminlevel/ert_station/weyland_station)
 "SE" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	do_not_disturb = 2;
 	name = "Weyland-Yutani Station Meeting Room";
 	phone_category = "W-Y";

@@ -221,6 +221,7 @@
 #define PROPERTY_ANTICARCINOGENIC "anti-carcinogenic"
 #define PROPERTY_UNKNOWN "unknown" //just has an OD effect
 #define PROPERTY_HEMOSITIC "hemositic"
+#define PROPERTY_REVITALIZING "revitalizing"
 
 
 //Property rarity

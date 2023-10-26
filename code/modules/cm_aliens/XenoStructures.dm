@@ -752,7 +752,7 @@
 /obj/effect/alien/resin/resin_pillar/proc/handle_attackby(turf/T, obj/item/I, mob/M)
 	SIGNAL_HANDLER
 	attackby(I, M)
-	return COMPONENT_CANCEL_ATTACKBY
+	return COMPONENT_CANCEL_RESIN_ATTACKBY
 
 /obj/effect/alien/resin/resin_pillar/proc/handle_hitby(turf/T, atom/movable/AM)
 	SIGNAL_HANDLER

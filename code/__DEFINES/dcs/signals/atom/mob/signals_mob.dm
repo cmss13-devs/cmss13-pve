@@ -128,3 +128,7 @@
 
 /// From /obj/item/proc/pickup() : (obj/item/picked_up)
 #define COMSIG_MOB_PICKUP_ITEM "mob_pickup_item"
+
+/// From /mob/proc/say_dead(message)
+#define COMSIG_DEAD_SPEAK "comsig_dead_speak"
+		#define COMPONENT_OVERRIDE_DEAD_SPEAK (1<<0)

@@ -3126,6 +3126,8 @@
 /obj/structure/closet/secure_closet/personal/cabinet{
 	req_access = null
 	},
+/obj/item/clothing/suit/storage/jacket/marine/service,
+/obj/item/clothing/suit/storage/jacket/marine/service/tanker,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4247,7 +4249,7 @@
 	layer = 2.1
 	},
 /obj/structure/sign/safety/manualopenclose{
-	layer = 4.3;
+	layer = 2.11;
 	pixel_x = 12;
 	pixel_y = 2
 	},
@@ -4343,6 +4345,9 @@
 	},
 /area/almayer/engineering)
 "Bu" = (
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01
+	},
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4575,6 +4580,9 @@
 	pixel_y = 4
 	},
 /obj/item/device/motiondetector,
+/obj/item/attachable/attached_gun/extinguisher/pyro{
+	layer = 3.01
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6343,6 +6351,9 @@
 	pixel_x = 14;
 	pixel_y = 29
 	},
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01
+	},
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6785,7 +6796,7 @@
 	pixel_x = -17;
 	pixel_y = 16
 	},
-/obj/structure/transmitter/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd{
 	name = "Alpha Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Alpha Overwatch"
@@ -8074,6 +8085,9 @@
 /obj/item/ammo_magazine/flamer_tank,
 /obj/item/ammo_magazine/flamer_tank,
 /obj/item/device/motiondetector,
+/obj/item/attachable/attached_gun/extinguisher/pyro{
+	layer = 3.01
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
