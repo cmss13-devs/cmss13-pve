@@ -4580,6 +4580,9 @@
 	pixel_y = 4
 	},
 /obj/item/device/motiondetector,
+/obj/item/attachable/attached_gun/extinguisher/pyro{
+	layer = 3.01
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8082,6 +8085,9 @@
 /obj/item/ammo_magazine/flamer_tank,
 /obj/item/ammo_magazine/flamer_tank,
 /obj/item/device/motiondetector,
+/obj/item/attachable/attached_gun/extinguisher/pyro{
+	layer = 3.01
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
