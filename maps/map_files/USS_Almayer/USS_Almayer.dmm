@@ -48101,7 +48101,7 @@
 	},
 /area/almayer/hallways/aft_hallway)
 "kSU" = (
-/obj/structure/transmitter/no_dnd{
+/obj/structure/phone_base/no_dnd{
 	name = "Requisition Telephone";
 	phone_category = "Almayer";
 	phone_id = "Requisition";
