@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 	/// Communication stuff
 
-	//var/datum/component/phone/game_master/game_master_phone
+	var/atom/game_master_phone
 
 	/// End Communication stuff
 
@@ -85,12 +85,12 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 /datum/game_master/New(client/using_client)
 	. = ..()
 
-	if(using_client.mob)
-		tgui_interact(using_client.mob)
+	tgui_interact(using_client.mob)
 
 	current_submenus = list()
 
-	//game_master_phone = new()
+	game_master_phone = new()
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_FORCED, list(), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	using_client.click_intercept = src
 
@@ -98,7 +98,7 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	. = ..()
 	submenu_types = null
 	current_submenus = null
-	//QDEL_NULL(game_master_phone)
+	QDEL_NULL(game_master_phone)
 
 /datum/game_master/ui_data(mob/user)
 	. = ..()
@@ -169,22 +169,6 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			objective_click_intercept = TRUE
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
-
-		//Communication Section
-		//if("use_game_master_phone")
-			//if(!game_master_phone)
-			//	game_master_phone = new()
-
-			//var/new_phone_id = tgui_input_text(ui.user, "New phone id?", "Phone ID", game_master_phone.phone_id)
-			//if(!new_phone_id)
-			//	return
-
-			//game_master_phone.phone_id = new_phone_id
-
-			//game_master_phone.tgui_interact(ui.user)
-			//return
-
-		//if("set_communication_clarity")
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()

@@ -475,7 +475,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 /// Virtual phone used for situations where you want to be able to use a phone without a handset
 /datum/component/phone/virtual
 	/// If it is a virtual phone we need a virtual user
-	var/mob/virtual_user
+	var/client/virtual_user
 
 /datum/component/phone/virtual/Destroy()
 	virtual_user = null
@@ -554,7 +554,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	if(virtual_user == speaker)
 		name_override = phone_id
 
-	virtual_user.hear_radio(message, "says", message_language, part_a = "<span class='purple'><span class='name'>", part_b = "</span><span class='message'> ", vname = name_override, speaker = speaker, command = 3, no_paygrade = TRUE)
+	if(!virtual_user.mob)
+		return
+
+	virtual_user.mob.hear_radio(message, "says", message_language, part_a = "<span class='purple'><span class='name'>", part_b = "</span><span class='message'> ", vname = name_override, speaker = speaker, command = 3, no_paygrade = TRUE)
 
 // TGUI section
 
