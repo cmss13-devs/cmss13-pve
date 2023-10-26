@@ -876,7 +876,7 @@
 /area/adminlevel/ert_station/upp_station)
 "mG" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "UPP Station";
 	phone_category = "UPP";
 	phone_id = "UPP Station";

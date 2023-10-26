@@ -662,7 +662,7 @@
 /turf/open/space/transit/east/shuttlespace_ew8,
 /area/space)
 "qu" = (
-/obj/structure/transmitter/hidden{
+/obj/structure/phone_base/hidden{
 	dir = 8;
 	name = "Station Telephone";
 	phone_id = "Unknown Signal";

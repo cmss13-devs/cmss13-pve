@@ -202,7 +202,7 @@
 		to_chat(src, SPAN_WARNING("Nuh-uh."))
 		return FALSE
 
-	if(SSticker?.mode?.flags_round_type & MODE_NO_XENO_EVOLVE)
+	if(SSticker.mode?.flags_round_type & MODE_NO_XENO_EVOLVE)
 		to_chat(src, SPAN_WARNING("This mode disallows xeno evolution."))
 		return FALSE
 

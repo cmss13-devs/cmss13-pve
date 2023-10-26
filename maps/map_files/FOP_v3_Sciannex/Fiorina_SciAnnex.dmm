@@ -2035,7 +2035,7 @@
 /area/fiorina/station/botany)
 "bck" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_y = 7
 	},
 /turf/open/floor/prison{
@@ -11656,7 +11656,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -11946,7 +11946,7 @@
 	},
 /area/fiorina/station/lowsec)
 "hob" = (
-/obj/item/phone{
+/obj/item/handset{
 	pixel_y = 7
 	},
 /turf/open/floor/plating/prison,
@@ -12421,11 +12421,11 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 7;
 	pixel_y = -16
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -3;
 	pixel_y = 16
 	},
@@ -16569,11 +16569,11 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 6;
 	pixel_y = -15
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_y = 7
 	},
 /turf/open/floor/prison{
@@ -17733,7 +17733,7 @@
 /area/fiorina/station/transit_hub)
 "kLX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone,
+/obj/item/handset,
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "sterile_white"
@@ -19893,7 +19893,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -3;
 	pixel_y = 13
 	},
@@ -21789,7 +21789,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -3;
 	pixel_y = 13
 	},
@@ -31826,7 +31826,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/medbay)
 "tER" = (
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 9;
 	pixel_y = -10
 	},
@@ -34510,11 +34510,11 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = -3;
 	pixel_y = 10
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 9;
 	pixel_y = -10
 	},
@@ -36440,10 +36440,10 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_y = -4
 	},
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 7;
 	pixel_y = 10
 	},

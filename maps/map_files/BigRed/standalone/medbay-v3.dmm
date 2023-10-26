@@ -1729,7 +1729,7 @@
 /area/bigredv2/outside/medical)
 "eD" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_id = "Clinic Reception"
 	},
@@ -2055,7 +2055,7 @@
 	},
 /area/bigredv2/outside/medical)
 "Xh" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "green";
 	phone_id = "Clinic Labs";
