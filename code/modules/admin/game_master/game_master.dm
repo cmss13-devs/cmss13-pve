@@ -164,6 +164,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			xeno_spawn_count = clamp(new_number, 1, 10)
 			return
 
+		if("delete_all_xenos")
+			if(tgui_alert(ui.user, "Do you want to delete all xenos?", "Confirmation", list("Yes", "No")) != "Yes")
+				return
+
+			for(var/mob/living/carbon/xenomorph/cycled_xeno in GLOB.alive_mob_list)
+				qdel(cycled_xeno)
+
+			return
+
 		//Objective Section
 		if("toggle_click_objective")
 			if(objective_click_intercept)
