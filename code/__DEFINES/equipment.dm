@@ -556,3 +556,7 @@ var/global/list/uniform_categories = list(
 #define PHONE_DO_NOT_DISTURB_ON 1
 #define PHONE_DO_NOT_DISTURB_OFF 0
 #define PHONE_DO_NOT_DISTURB_FORBIDDEN -1
+
+#define PHONE_ON_BASE_UNIT_ICON_STATE "[initial(icon_state)]"
+#define PHONE_OFF_BASE_UNIT_ICON_STATE "[initial(icon_state)]_ear"
+#define PHONE_RINGING_ICON_STATE "[initial(icon_state)]_ring"

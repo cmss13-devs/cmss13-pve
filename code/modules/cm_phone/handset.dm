@@ -11,6 +11,7 @@
 	flags_atom = FPRINT|USES_HEARING
 
 	var/datum/component/phone/phone_component
+
 	var/atom/holder
 
 	var/datum/effects/tethering/tether_effect
@@ -25,7 +26,7 @@
 
 	src.phone_component = phone_component
 	src.holder = holder
-	attach_to(holder)
+	attach_to(src.holder)
 
 /obj/item/handset/Destroy()
 	phone_component = null
@@ -34,6 +35,8 @@
 	return ..()
 
 /obj/item/handset/hear_talk(mob/living/talker, message, verb="says", datum/language/message_language, italics = 0)
+	. = ..()
+
 	if(talker == loc)
 		phone_component.handle_speak(message, message_language, talker, direct_talking = TRUE)
 		return
@@ -78,21 +81,15 @@
 	if(!holder)
 		return
 
-	if(loc == holder)
+	if(!loc)
 		return
 
 	if(get_dist(holder, src) > HANDSET_RANGE)
 		phone_component.recall_handset()
 
-	var/atom/tether_to = src
+	var/atom/tether_to = get_atom_on_turf(src)
 
-	if(loc != get_turf(src))
-		tether_to = loc
-		if(tether_to.loc != get_turf(tether_to))
-			phone_component.recall_handset()
-			return
-
-	var/atom/tether_from = holder
+	var/atom/tether_from = get_atom_on_turf(holder)
 
 	if(tether_from == tether_to)
 		return
@@ -127,9 +124,8 @@
 
 /obj/item/handset/dropped(mob/user)
 	. = ..()
-	UnregisterSignal(user, COMSIG_LIVING_SPEAK)
-
 	set_raised(FALSE, user)
+	reset_tether()
 
 /obj/item/handset/on_enter_storage(obj/item/storage/S)
 	. = ..()
@@ -141,8 +137,13 @@
 	if(.)
 		reset_tether()
 
+/obj/item/handset/moveToNullspace()
+	. = ..()
+	if(.)
+		reset_tether()
+
 /obj/item/handset/proc/do_zlevel_check()
-	if(!holder || !loc.z || !holder.z)
+	if(!holder || !loc?.z || !holder.z)
 		return FALSE
 
 	if(zlevel_transfer)

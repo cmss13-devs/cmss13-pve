@@ -40,9 +40,13 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Networks that this phone can call
 	var/list/networks_transmit = list()
 
+	/// The looping ringing sound when the phone is called
 	var/datum/looping_sound/phone_ringing/ringing_loop
 
-/datum/component/phone/Initialize(...)
+	/// Whether the phone is able to be called or not
+	var/enabled = TRUE
+
+/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
 	. = ..()
 
 	if(!istype(parent, /atom))
@@ -55,7 +59,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 /datum/component/phone/Destroy()
 	if(phone_handset)
-		if(phone_handset.loc == src)
+		if(!phone_handset.loc)
 			UnregisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED)
 			qdel(phone_handset)
 		else
@@ -73,7 +77,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	return ..()
 
 /// Handles all of our variables usually set in Initialize(), needs to be a proc so virtual phones don't get incorrect signals or a handset
-/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, networks_receive, networks_transmit, holder)
+/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
 	src.phone_category = isnull(phone_category) ? src.phone_category : phone_category
 	src.phone_color = isnull(phone_color) ? src.phone_color : phone_color
 	src.phone_id = isnull(phone_id) ? src.phone_id : phone_id
@@ -83,11 +87,18 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	src.networks_transmit = isnull(networks_transmit) ? src.networks_transmit : networks_transmit.Copy()
 	src.holder = holder ? holder : parent
 
-	phone_handset = new(src.holder, src, src.holder)
+	phone_handset = new(null, src, src.holder)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
 	RegisterSignal(src.holder, COMSIG_ATOM_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
+
+	if(istype(src.holder, /obj/item))
+		RegisterSignal(src.holder, COMSIG_ITEM_PICKUP, PROC_REF(holder_picked_up))
+		RegisterSignal(src.holder, COMSIG_ITEM_DROPPED, PROC_REF(holder_dropped))
+		enabled = FALSE
+
+	RegisterSignal(src.holder, COMSIG_MOVABLE_FORCEMOVED, PROC_REF(holder_forcemoved))
 
 	ringing_loop = new(src.holder)
 
@@ -108,21 +119,26 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return COMPONENT_CANCEL_ATTACKBY
 
 /// When we initially interact with the phone, whether opening the menu to call someone or picking up the phone being called
-/datum/component/phone/proc/use_phone(atom/phone, mob/living/carbon/human/user)
+/datum/component/phone/proc/use_phone(atom/phone, mob/living/carbon/human/user, click_parameters)
 	SIGNAL_HANDLER
 
 	if(!calling_phone)
 		INVOKE_ASYNC(src, PROC_REF(tgui_interact), user)
+
+		if(enabled)
+			return COMPONENT_CANCEL_HUMAN_ATTACK_HAND
 		return
 
 	if(!phone_handset)
 		return
 
-	if(phone_handset.loc != holder)
+	if(phone_handset.loc)
 		return
 
 	picked_up_call(user)
 	calling_phone.other_phone_picked_up_call()
+
+	return COMPONENT_CANCEL_HUMAN_ATTACK_HAND
 
 /// Handles what we want to do when we pick up a phone
 /datum/component/phone/proc/picked_up_call(mob/living/carbon/human/user)
@@ -131,6 +147,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	user.put_in_active_hand(phone_handset)
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_PICKED_UP)
+	ringing_loop.stop()
 
 /// Handles what we want to do when a phone we are calling picks up
 /datum/component/phone/proc/other_phone_picked_up_call()
@@ -149,6 +166,43 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	var/mob/phone_user = phone_handset.loc
 	to_chat(phone_user, SPAN_PURPLE("[icon2html(calling_phone.holder, phone_user)] [calling_phone.phone_id] has picked up."))
+
+/// Handles setting a specific phone ID and enabling the phone when the holder is picked up
+/datum/component/phone/proc/holder_picked_up(obj/item/picked_up_holder, mob/user)
+	SIGNAL_HANDLER
+
+	enabled = TRUE
+
+	if(!ishuman(user))
+		phone_id = "[user]"
+		return
+
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.comm_title)
+		phone_id = "[human_user.comm_title] [human_user]"
+	else if(human_user.job)
+		phone_id = "[human_user.job] [human_user]"
+	else
+		phone_id = "[human_user]"
+
+	if(human_user.assigned_squad)
+		phone_id += " ([human_user.assigned_squad.name])"
+
+/// Handles disabling the phone when the holder is dropped
+/datum/component/phone/proc/holder_dropped(obj/item/dropped_hold, mob/user)
+	SIGNAL_HANDLER
+
+	enabled = FALSE
+	phone_id = "[holder]"
+
+/// Tells our phone_handset that the holder has been forcemoved so the tether can be updated if need be
+/datum/component/phone/proc/holder_forcemoved(atom/movable/moving_atom, atom/destination)
+	SIGNAL_HANDLER
+
+	if(!phone_handset)
+		return
+
+	phone_handset.reset_tether()
 
 /// Gathers all phones that we can call from our phone, returns a list of those phones
 /datum/component/phone/proc/get_phones()
@@ -187,7 +241,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	if(!phone_handset)
 		return FALSE
 
-	if(phone_handset.loc != holder)
+	if(!enabled)
+		return FALSE
+
+	if(phone_handset.loc)
 		return FALSE
 
 	if(do_not_disturb == PHONE_DO_NOT_DISTURB_ON)
@@ -206,7 +263,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	if(!phone_handset)
 		return FALSE
 
-	if(phone_handset.loc != holder)
+	if(!enabled)
+		return FALSE
+
+	if(phone_handset.loc)
 		return
 
 	return TRUE
@@ -291,7 +351,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		M.drop_held_item(phone_handset)
 		playsound(get_turf(M), "rtb_handset", 100, FALSE, 7)
 
-	phone_handset.forceMove(holder)
+	phone_handset.moveToNullspace()
 	reset_call()
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_HUNG_UP)
@@ -347,13 +407,6 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		else
 			return FALSE
 	return TRUE
-
-///datum/component/phone/proc/set_tether_holder(atom/A) - Do something with this, likely need to have a signal for if the parent is moving? - Morrow
-//	tether_holder = A
-//
-//	if(phone_handset)
-//		phone_handset.reset_tether()
-
 
 
 
@@ -419,7 +472,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	return ..()
 
-/datum/component/phone/virtual/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, networks_receive, networks_transmit, holder, virtual_user)
+/datum/component/phone/virtual/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, virtual_user)
 	src.phone_category = isnull(phone_category) ? src.phone_category : phone_category
 	src.phone_color = isnull(phone_color) ? src.phone_color : phone_color
 	src.phone_id = isnull(phone_id) ? src.phone_id : phone_id

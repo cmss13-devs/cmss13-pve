@@ -80,7 +80,7 @@
 		to_chat(src, SPAN_NOTICE("You try to move your [temp.display_name], but cannot!"))
 		return
 
-	if(SEND_SIGNAL(A, COMSIG_ATOM_HUMAN_ATTACK_HAND, src) & COMPONENT_CANCEL_HUMAN_ATTACK_HAND)
+	if(SEND_SIGNAL(A, COMSIG_ATOM_HUMAN_ATTACK_HAND, src, click_parameters) & COMPONENT_CANCEL_HUMAN_ATTACK_HAND)
 		return
 
 	A.attack_hand(src, click_parameters)

@@ -29,10 +29,6 @@
 	networks_transmit = null
 	return ..()
 
-#define PHONE_ON_BASE_UNIT_ICON_STATE "[initial(icon_state)]"
-#define PHONE_OFF_BASE_UNIT_ICON_STATE "[initial(icon_state)]_ear"
-#define PHONE_RINGING_ICON_STATE "[initial(icon_state)]_ring"
-
 /obj/structure/phone_base/proc/phone_picked_up()
 	icon_state = PHONE_OFF_BASE_UNIT_ICON_STATE
 
@@ -46,10 +42,6 @@
 	if(icon_state == PHONE_OFF_BASE_UNIT_ICON_STATE)
 		return
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
-
-#undef PHONE_ON_BASE_UNIT_ICON_STATE
-#undef PHONE_OFF_BASE_UNIT_ICON_STATE
-#undef PHONE_RINGING_ICON_STATE
 
 /obj/structure/phone_base/hidden
 	do_not_disturb = PHONE_DO_NOT_DISTURB_FORCED

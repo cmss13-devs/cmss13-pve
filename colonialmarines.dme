@@ -1587,7 +1587,6 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\cm_marines\equipment\mortar\mortar_shells.dm"
 #include "code\modules\cm_marines\equipment\mortar\mortars.dm"
 #include "code\modules\cm_phone\handset.dm"
-#include "code\modules\cm_phone\internal_phone.dm"
 #include "code\modules\cm_phone\phone_base.dm"
 #include "code\modules\cm_preds\_yaut_defines.dm"
 #include "code\modules\cm_preds\falcon.dm"
