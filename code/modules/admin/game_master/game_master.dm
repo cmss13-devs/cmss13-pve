@@ -2,6 +2,9 @@
 /// Assoc list that holds our custom game master objectives, formatted as atom = objective_string
 GLOBAL_LIST_EMPTY(game_master_objectives)
 
+/// Percentage of characters end up clear when sent via radio message
+GLOBAL_VAR_INIT(radio_communication_clarity, 100)
+
 /proc/open_game_master_panel(client/using_client)
 	set name = "Game Master Panel"
 	set category = "Game Master"
@@ -114,6 +117,8 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
 
+	// Communication stuff
+	data["communication_clarity"] = GLOB.radio_communication_clarity
 
 	return data
 
@@ -169,6 +174,14 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			objective_click_intercept = TRUE
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
+
+		//Communication Section
+		if("set_communication_clarity")
+			var/new_clarity = text2num(params["clarity"])
+			if(!isnum(new_clarity))
+				return
+
+			GLOB.radio_communication_clarity = clamp(new_clarity, 0, 100)
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
