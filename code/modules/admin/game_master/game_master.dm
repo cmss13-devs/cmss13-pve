@@ -2,6 +2,9 @@
 /// Assoc list that holds our custom game master objectives, formatted as atom = objective_string
 GLOBAL_LIST_EMPTY(game_master_objectives)
 
+/// Percentage of characters end up clear when sent via radio message
+GLOBAL_VAR_INIT(radio_communication_clarity, 100)
+
 /proc/open_game_master_panel(client/using_client)
 	set name = "Game Master Panel"
 	set category = "Game Master"
@@ -73,16 +76,24 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	/// End Objective Stuff
 
 
+	/// Communication stuff
+
+	var/atom/movable/game_master_phone
+
+	/// End Communication stuff
+
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
 
 /datum/game_master/New(client/using_client)
 	. = ..()
 
-	if(using_client.mob)
-		tgui_interact(using_client.mob)
+	tgui_interact(using_client.mob)
 
 	current_submenus = list()
+
+	game_master_phone = new(null)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	using_client.click_intercept = src
 
@@ -90,6 +101,7 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 	. = ..()
 	submenu_types = null
 	current_submenus = null
+	QDEL_NULL(game_master_phone)
 
 /datum/game_master/ui_data(mob/user)
 	. = ..()
@@ -104,7 +116,10 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
+	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
 
+	// Communication stuff
+	data["communication_clarity"] = GLOB.radio_communication_clarity
 
 	return data
 
@@ -150,6 +165,15 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			xeno_spawn_count = clamp(new_number, 1, 10)
 			return
 
+		if("delete_all_xenos")
+			if(tgui_alert(ui.user, "Do you want to delete all xenos?", "Confirmation", list("Yes", "No")) != "Yes")
+				return
+
+			for(var/mob/living/carbon/xenomorph/cycled_xeno in GLOB.alive_mob_list)
+				qdel(cycled_xeno)
+
+			return
+
 		//Objective Section
 		if("toggle_click_objective")
 			if(objective_click_intercept)
@@ -161,6 +185,33 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
 
+		if("jump_to")
+			if(!params["val"])
+				return
+
+			var/list/objective = params["val"]
+
+			var/atom/objective_atom = locate(objective["object_ref"])
+
+			var/turf/objective_turf = get_turf(objective_atom)
+
+			if(!objective_turf)
+				return TRUE
+
+			var/client/jumping_client = ui.user.client
+			jumping_client.jump_to_turf(objective_turf)
+			return TRUE
+
+		//Communication Section
+		if("use_game_master_phone")
+			game_master_phone.attack_hand(ui.user)
+
+		if("set_communication_clarity")
+			var/new_clarity = text2num(params["clarity"])
+			if(!isnum(new_clarity))
+				return
+
+			GLOB.radio_communication_clarity = clamp(new_clarity, 0, 100)
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
@@ -190,6 +241,11 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 	switch(current_click_intercept_action)
 		if(SPAWN_CLICK_INTERCEPT_ACTION)
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+				if(isxeno(object))
+					qdel(object)
+				return
+
 			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
 
 			if(!spawning_xeno_type)
@@ -204,19 +260,21 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
-			if(object in GLOB.game_master_objectives)
+			var/turf/object_turf = get_turf(object)
+
+			if(!object_turf)
+				return TRUE
+
+			if(SSminimaps.has_marker(object))
 				if(tgui_alert(user, "Do you want to remove [object] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 					return TRUE
 
 				SSminimaps.remove_marker(object)
-				GLOB.game_master_objectives -= object
+				for(var/list/cycled_objective in GLOB.game_master_objectives)
+					var/atom/objective_object = locate(cycled_objective["object_ref"])
+					if(objective_object == object)
+						GLOB.game_master_objectives.Remove(list(cycled_objective))
 				return TRUE
-
-			var/turf/object_turf = get_turf(object)
-			if(!object_turf)
-				return TRUE
-
-			var/z_level = object_turf.z
 
 			if(tgui_alert(user, "Do you want to make [object] an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 				return TRUE
@@ -239,14 +297,22 @@ GLOBAL_LIST_EMPTY(game_master_objectives)
 
 			background.overlays += icon
 
+			var/z_level = object_turf?.z
+
+			if(!object || !z_level)
+				return
+
 			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
 
-			/// objective_info needs to be implemented both in the game master menu and overwatch TGUI
-			/// GLOB.game_master_objectives should also probably hold a datum with more info including the icon here for TGUI usage
-			/// - Morrow
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 
-			GLOB.game_master_objectives[object] = objective_info || ""
+			var/object_ref = REF(object)
+
+			GLOB.game_master_objectives += list(list(
+				"object_name" = object.name,
+				"objective_info" = (objective_info || ""),
+				"object_ref" = object_ref,
+				))
 			return TRUE
 
 		else

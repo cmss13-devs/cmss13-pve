@@ -1306,7 +1306,7 @@
 /area/strata/ug/interior)
 "adR" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -4512,7 +4512,7 @@
 /area/strata/ag/interior/research_decks/security)
 "anv" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -4540,7 +4540,7 @@
 /area/strata/ag/exterior/research_decks)
 "anz" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -4819,7 +4819,7 @@
 /area/strata/ag/interior/outpost/security)
 "aoD" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -6165,7 +6165,7 @@
 /area/strata/ag/interior/outpost/security)
 "asB" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -6252,7 +6252,7 @@
 /area/strata/ag/interior/outpost/canteen/lower_cafeteria)
 "asP" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -7055,7 +7055,7 @@
 "avj" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/flashlight/lamp,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -7274,7 +7274,7 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -8812,7 +8812,7 @@
 /area/strata/ag/interior/outpost/security)
 "aAC" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -8842,7 +8842,7 @@
 "aAG" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/flashlight/lamp,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -12599,7 +12599,7 @@
 	pixel_x = -10
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -14807,7 +14807,7 @@
 /area/strata/ag/interior/outpost/admin)
 "aTN" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -15826,7 +15826,7 @@
 /area/strata/ag/interior/mountain)
 "aXH" = (
 /obj/structure/surface/table,
-/obj/item/phone,
+/obj/item/handset,
 /turf/open/floor/strata,
 /area/strata/ag/interior/dorms/south)
 "aXI" = (
@@ -17987,7 +17987,7 @@
 /area/strata/ag/exterior/paths/adminext)
 "bfF" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -20087,7 +20087,7 @@
 "bnI" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -21469,7 +21469,7 @@
 /area/strata/ag/interior/outpost/admin)
 "bsH" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -23500,7 +23500,7 @@
 /area/strata/ag/interior/outpost/med)
 "bBY" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -23736,7 +23736,7 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -24098,7 +24098,7 @@
 /area/strata/ag/interior/outpost/med)
 "bGx" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -24569,7 +24569,7 @@
 /area/strata/ag/interior/outpost/med)
 "bJW" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -27900,7 +27900,7 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -28071,7 +28071,7 @@
 /area/strata/ag/interior/outpost/engi/drome/shuttle)
 "clr" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -29755,7 +29755,7 @@
 	dir = 1
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -31540,7 +31540,7 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -31654,7 +31654,7 @@
 "gkA" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/flashlight/lamp,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -32113,7 +32113,7 @@
 /area/strata/ag/exterior/research_decks)
 "haw" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -37528,7 +37528,7 @@
 /area/strata/ag/interior/mountain)
 "qzf" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 8;
 	pixel_y = 6
 	},

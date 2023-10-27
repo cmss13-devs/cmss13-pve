@@ -306,14 +306,11 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if(CONFIG_GET(string/servername))
-		s += "<a href=\"[CONFIG_GET(string/forumurl)]\"><b>[CONFIG_GET(string/servername)]</b></a>"
-
-	if(SSmapping?.configs)
-		var/datum/map_config/MG = SSmapping.configs[GROUND_MAP]
-		s += "<br>Map: [MG?.map_name ? "<b>[MG.map_name]</b>" : ""]"
-	if(SSticker?.mode)
-		s += "<br>Mode: <b>[SSticker.mode.name]</b>"
+		s += "<a href=\"[CONFIG_GET(string/discordurl)]\"><b>[CONFIG_GET(string/servername)]</b></a>"
+		s += "<br>Hosted by: <b>[CONFIG_GET(string/hostedby)]</b>"
 		s += "<br>Round time: <b>[duration2text()]</b>"
+		s += "<br>An RP server focused on a tight knit platoon fighting xenos!"
+		s += "<br>Shoot the shit *and* shoot shit."
 
 	world.status = s
 

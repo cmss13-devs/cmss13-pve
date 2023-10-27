@@ -25,6 +25,10 @@
 	return FALSE
 
 /datum/mutator_set/proc/list_and_purchase_mutators()
+	if(SSticker.mode?.flags_round_type & MODE_NO_XENO_EVOLVE)
+		to_chat(usr, SPAN_WARNING("This mode disallows xeno mutators."))
+		return FALSE
+
 	var/list/mutators_for_purchase = available_mutators()
 	var/mob/living/carbon/xenomorph/Xeno = usr
 	if(mutators_for_purchase.len == 0)

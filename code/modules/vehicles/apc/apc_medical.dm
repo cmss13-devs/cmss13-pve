@@ -8,7 +8,7 @@
 	interior_map = /datum/map_template/interior/apc_med
 
 
-	passengers_slots = 8
+	passengers_slots = 15
 	//MED APC can store additional 6 dead revivable bodies for the triage
 	//but interior won't allow more revivable dead if passengers_taken_slots >= passengers_slots + revivable_dead_slots
 	//to prevent infinitely growing the marine force inside of the vehicle
@@ -54,6 +54,8 @@
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
@@ -75,6 +77,8 @@
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
