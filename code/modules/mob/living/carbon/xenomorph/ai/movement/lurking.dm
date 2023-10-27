@@ -25,6 +25,8 @@
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
 
+	RegisterSignal(parent, COMSIG_XENO_HANDLE_AI_SHOT, PROC_REF(stop_lurking))
+	RegisterSignal(parent, COMSIG_XENO_HANDLE_CRIT, PROC_REF(stop_lurking))
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
@@ -58,9 +60,12 @@
 	var/turf/non_preferred_turf
 	for(var/turf/potential_home as anything in shuffle(RANGE_TURFS(home_locate_range, current_turf)))
 
+		if(potential_home.density)
+			continue
+
 		var/blocked = FALSE
 		for(var/atom/potential_blocker as anything in potential_home)
-			if(potential_blocker.can_block_movement)
+			if(potential_blocker.can_block_movement || potential_blocker.density)
 				blocked = TRUE
 				break
 
@@ -123,7 +128,7 @@
 	if(!annoyed_xeno.current_target || !ai_lurking)
 		return
 
-	if(get_dist(annoyed_xeno, annoyed_xeno.current_target) > 8)
+	if(get_dist(annoyed_xeno, annoyed_xeno.current_target) > 10)
 		annoyance = 0
 		total_baits = 0
 		return
