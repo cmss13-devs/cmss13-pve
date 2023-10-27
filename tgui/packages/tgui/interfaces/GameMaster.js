@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Flex, Dropdown, Button, Section, Slider } from '../components';
+import { Flex, Dropdown, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
 import { Window } from '../layouts';
 
 export const GameMaster = (props, context) => {
@@ -70,8 +70,6 @@ export const GameMaster = (props, context) => {
             </Section>
           </Flex.Item>
           <Flex.Item>
-            <Section title="Objectives">
-              <Flex grow>
             <Section title="Objective">
               <Flex direction="column">
                 <Flex.Item>
