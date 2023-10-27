@@ -195,22 +195,7 @@
 	if(directional)
 		cast_directional_light()
 	else if(length(current_holder?.locs) > 1)
-		var/multitile_translate_x = 0
-		var/multitile_translate_y = 0
-		switch(current_holder.dir)
-			if(NORTH, SOUTH)
-				multitile_translate_x = current_holder.bound_width * 0.5
-				multitile_translate_y = current_holder.bound_height * 0.5
-			if(EAST, WEST)
-				multitile_translate_x = current_holder.bound_height * 0.5
-				multitile_translate_y = current_holder.bound_width * 0.5
-		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
-			current_holder.underlays -= visible_mask
-		var/matrix/transform = new
-		transform.Translate(multitile_translate_x - base_offset_x, multitile_translate_y - base_offset_y)
-		visible_mask.transform = transform
-		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
-			current_holder.underlays += visible_mask
+		handle_multitile_light()
 
 	get_new_turfs()
 
@@ -442,6 +427,8 @@
 		add_dynamic_lumi(current_holder)
 		if(directional)
 			cast_directional_light()
+		else if(length(current_holder?.locs) > 1)
+			handle_multitile_light()
 	if(current_holder && current_holder != parent && current_holder != parent_attached_to)
 		RegisterSignal(current_holder, COMSIG_MOVABLE_MOVED, PROC_REF(on_holder_moved))
 	get_new_turfs()
@@ -532,6 +519,25 @@
 	if(overlay_lighting_flags & LIGHTING_ON)
 		current_holder.underlays += visible_mask
 		current_holder.underlays += cone
+
+/datum/component/overlay_lighting/proc/handle_multitile_light()
+	if(length(current_holder?.locs) > 1)
+		var/multitile_translate_x = 0
+		var/multitile_translate_y = 0
+		switch(current_holder.dir)
+			if(NORTH, SOUTH)
+				multitile_translate_x = current_holder.bound_width * 0.5
+				multitile_translate_y = current_holder.bound_height * 0.5
+			if(EAST, WEST)
+				multitile_translate_x = current_holder.bound_height * 0.5
+				multitile_translate_y = current_holder.bound_width * 0.5
+		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
+			current_holder.underlays -= visible_mask
+		var/matrix/transform = new
+		transform.Translate(multitile_translate_x - base_offset_x, multitile_translate_y - base_offset_y)
+		visible_mask.transform = transform
+		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
+			current_holder.underlays += visible_mask
 
 ///Called when current_holder changes loc.
 /datum/component/overlay_lighting/proc/on_holder_dir_change(atom/movable/source, olddir, newdir)
