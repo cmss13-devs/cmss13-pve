@@ -242,19 +242,18 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
-			if(object in GLOB.game_master_objectives)
+			var/turf/object_turf = get_turf(object)
+
+			if(!object_turf)
+				return TRUE
+
+			if(SSminimaps.has_marker(object))
 				if(tgui_alert(user, "Do you want to remove [object] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 					return TRUE
 
 				SSminimaps.remove_marker(object)
 				GLOB.game_master_objectives -= object
 				return TRUE
-
-			var/turf/object_turf = get_turf(object)
-			if(!object_turf)
-				return TRUE
-
-			var/z_level = object_turf.z
 
 			if(tgui_alert(user, "Do you want to make [object] an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 				return TRUE
@@ -276,6 +275,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			icon.appearance_flags = RESET_COLOR
 
 			background.overlays += icon
+
+			var/z_level = object_turf?.z
+
+			if(!object || !z_level)
+				return
 
 			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
 
