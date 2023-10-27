@@ -3,18 +3,14 @@
 	// Are we currently hiding?
 	var/ai_lurking = FALSE
 
-	// Should we stalk people when they walk too far away?
-	var/enable_stalking = FALSE
-
-	// Gradually increases the chance of AI to try and bait marines
-	// Annoyance accumulate when we lurk (stand invisible) and aware of our target
+	// Gradually increases the chance of AI to try and bait marines, annoyance accumulate when we lurk (stand invisible) and aware of our target
 	var/annoyance = 0
 
-	// Total baits this xeno made
+	// Total baits this xeno has made
 	var/total_baits = 0
 
 	// Distance at which we want to stay from our spotted target
-	var/stalking_distance = 12
+	var/stalking_distance = 10
 
 	// List of turfs we see and register while lurking
 	var/list/registered_turfs = list()
@@ -28,10 +24,6 @@
 
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
-	var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_xeno_action_by_type(parent, /datum/action/xeno_action/activable/pounce/lurker)
-	if (LPA && istype(LPA))
-		LPA.knockdown = TRUE // pounce knocks down
-		LPA.freeze_self = TRUE
 
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(stop_lurking))
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
@@ -43,63 +35,67 @@
 	if(idle_xeno.throwing)
 		return
 
-	if(next_home_search < world.time && (!home_turf || get_dist(home_turf, idle_xeno) > max_distance_from_home))
-		var/turf/T = get_turf(idle_xeno.loc)
-		next_home_search = world.time + home_search_delay
-		var/shortest_distance = INFINITY
-		for(var/i in shuffle(RANGE_TURFS(home_locate_range, T)))
-			var/turf/potential_home = i
-			var/lets_continue
+	if(home_turf)
+		if(get_dist(home_turf, idle_xeno) <= 0)
+			start_lurking()
+			return
 
-			var/mob/living/carbon/xenomorph/blocking_xeno = locate() in potential_home
-			if(blocking_xeno && blocking_xeno.stat == CONSCIOUS && blocking_xeno != idle_xeno)
+		if(!idle_xeno.move_to_next_turf(home_turf))
+			home_turf = null
+			return
+
+		return
+
+	if(next_home_search > world.time)
+		return
+
+	var/turf/current_turf = get_turf(idle_xeno)
+
+	if(!current_turf)
+		return
+
+	next_home_search = world.time + home_search_delay
+	var/shortest_distance = INFINITY
+	var/turf/non_preferred_turf
+	for(var/turf/potential_home as anything in shuffle(RANGE_TURFS(home_locate_range, current_turf)))
+
+		var/blocked = FALSE
+		for(var/atom/potential_blocker as anything in potential_home)
+			if(potential_blocker.can_block_movement)
+				blocked = TRUE
+				break
+
+		if(blocked)
+			continue
+
+		var/preferred = FALSE
+		for(var/turf/closed/touching_turf in orange(1, potential_home))
+			preferred = TRUE
+			break
+
+		if(idle_xeno.current_target)
+			var/potential_home_dir = get_dir(idle_xeno, potential_home)
+			var/current_target_dir = get_dir(idle_xeno, idle_xeno.current_target)
+
+			if(current_target_dir != potential_home_dir && current_target_dir != turn(potential_home_dir, 45) && current_target_dir != turn(potential_home_dir, -45))
 				continue
 
-			var/atom/target = idle_xeno.current_target
-			if(target && potential_home != T && (potential_home in view(world.view, target)))
-				continue // We prefer standing still when someone can see us
+		var/xeno_to_potential_home_distance = get_dist(idle_xeno, potential_home)
+		if(xeno_to_potential_home_distance > shortest_distance)
+			continue
 
-			if(!potential_home.density && get_dist(idle_xeno, potential_home) < shortest_distance)
-				shortest_distance = get_dist(idle_xeno, potential_home)
+		if(preferred)
+			home_turf = potential_home
+			shortest_distance = xeno_to_potential_home_distance
+			continue
 
-				/// First we try to locate some structures to stand and hide on
-				for(var/obj/structure/S in potential_home)
-					if(S && !istype(S, /obj/structure/pipes)) // Don't care if it's dense cause we can break it and hide on remains
-						home_turf = potential_home
-						lets_continue = TRUE
-						break
-
-				if(lets_continue)
-					continue
-
-				/// If we cannot find any structures, we look for walls around our potential home
-				for(var/turf/t_around in orange(1, potential_home))
-					if(t_around && t_around.density) // Let's find a wall to stick to it
-						home_turf = potential_home
-						shortest_distance += 5 // Penalty for no structures, we can do better
-						lets_continue = TRUE
-						break
-
-				if(lets_continue)
-					continue
-
-				/// If we have no structures or walls to stick to (strange), just hide on closest turf
-				home_turf = potential_home
-				shortest_distance += 10 // Penalty for empty turfs (we don't wanna hide on them)
+		if(xeno_to_potential_home_distance < get_dist(idle_xeno, non_preferred_turf))
+			non_preferred_turf = potential_home
+			continue
 
 	if(!home_turf)
+		home_turf = non_preferred_turf
 		return
-
-	/// Abandon hiding place to stalk our target
-	if(idle_xeno.current_target && get_dist(home_turf, idle_xeno.current_target) > stalking_distance && enable_stalking)
-		home_turf = null
-		return
-
-	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range))
-		if(get_dist(home_turf, idle_xeno) <= 0 && !ai_lurking)
-			start_lurking()
-	else
-		home_turf = null
 
 /datum/xeno_ai_movement/linger/lurking/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
@@ -111,7 +107,8 @@
 
 	var/turf/target_turf = get_turf(moving_xeno.current_target)
 	if(ai_lurking || get_dist(moving_xeno, target_turf) > world.view + 2)
-		if(get_dist(moving_xeno, target_turf) > stalking_distance && enable_stalking)
+		if(get_dist(moving_xeno, target_turf) > stalking_distance)
+			home_turf = null
 			return moving_xeno.move_to_next_turf(target_turf)
 		return ai_move_idle(delta_time)
 
@@ -127,14 +124,10 @@
 	if(!annoyed_xeno.current_target || !ai_lurking)
 		return
 
-	if(annoyed_xeno.current_target in view(world.view, annoyed_xeno))
-		return
-
 	annoyance++
 
 	if(prob(annoyance))
 		try_bait()
-
 
 #define LURKER_BAIT_TYPES list("Taunt","Emote","Interact")
 #define LURKER_BAIT_EMOTES list("growl","roar","hiss","needshelp")
@@ -187,45 +180,50 @@
 		return TRUE
 	return FALSE
 
-
 /datum/xeno_ai_movement/linger/lurking/proc/start_lurking()
 	SIGNAL_HANDLER
-	if(!ai_lurking)
-		var/mob/living/carbon/xenomorph/lurking_xeno = parent
-		animate(lurking_xeno, alpha = 20, time = 0.5 SECONDS, easing = QUAD_EASING)
-		lurking_xeno.set_movement_intent(MOVE_INTENT_WALK)
-		register_turf_signals()
-		ai_lurking = TRUE
+	if(ai_lurking)
+		return
 
-		var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_xeno_action_by_type(lurking_xeno, /datum/action/xeno_action/activable/pounce/lurker)
-		if(LPA && istype(LPA))
-			LPA.knockdown = TRUE // pounce knocks down again
-			LPA.freeze_self = TRUE
+	var/mob/living/carbon/xenomorph/lurking_xeno = parent
+	animate(lurking_xeno, alpha = 20, time = 0.5 SECONDS, easing = QUAD_EASING)
+	lurking_xeno.set_movement_intent(MOVE_INTENT_WALK)
+	register_turf_signals()
+	ai_lurking = TRUE
+
+	var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_xeno_action_by_type(lurking_xeno, /datum/action/xeno_action/activable/pounce/lurker)
+	if(LPA && istype(LPA))
+		LPA.knockdown = TRUE
+		LPA.freeze_self = TRUE
 
 /datum/xeno_ai_movement/linger/lurking/proc/stop_lurking()
 	SIGNAL_HANDLER
-	if(ai_lurking)
-		var/mob/living/carbon/xenomorph/lurking_xeno = parent
-		animate(lurking_xeno, alpha = initial(lurking_xeno.alpha), time = 0.2 SECONDS, easing = QUAD_EASING)
-		lurking_xeno.set_movement_intent(MOVE_INTENT_RUN)
-		unregister_turf_signals()
-		ai_lurking = FALSE
+	if(!ai_lurking)
+		return
 
-		INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
+	var/mob/living/carbon/xenomorph/lurking_xeno = parent
+	animate(lurking_xeno, alpha = initial(lurking_xeno.alpha), time = 0.2 SECONDS, easing = QUAD_EASING)
+	lurking_xeno.set_movement_intent(MOVE_INTENT_RUN)
+	unregister_turf_signals()
+	ai_lurking = FALSE
 
+	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
 
 /datum/xeno_ai_movement/linger/lurking/proc/register_turf_signals()
-	for(var/turf/open/OT in view(world.view, parent))
-		RegisterSignal(OT, COMSIG_TURF_ENTERED, PROC_REF(set_target), override = TRUE)
-		registered_turfs += OT
+	for(var/turf/open/cycled_open_turf in view(5, parent))
+		RegisterSignal(cycled_open_turf, COMSIG_TURF_ENTERED, PROC_REF(set_target))
+		registered_turfs += cycled_open_turf
 
 /datum/xeno_ai_movement/linger/lurking/proc/unregister_turf_signals()
-	for(var/turf/open/OT in registered_turfs)
-		UnregisterSignal(OT, COMSIG_TURF_ENTERED)
+	for(var/turf/open/cycled_open_turf in registered_turfs)
+		UnregisterSignal(cycled_open_turf, COMSIG_TURF_ENTERED)
 	registered_turfs.Cut()
 
-/datum/xeno_ai_movement/linger/lurking/proc/set_target(turf/hooked, atom/movable/subject)
+/datum/xeno_ai_movement/linger/lurking/proc/set_target(turf/hooked, atom/movable/entering_atom)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/xenomorph/lurking_xeno = parent
-	if(subject in GLOB.alive_human_list)
-		lurking_xeno.current_target = subject
+
+	if(!istype(entering_atom, /mob/living/carbon/human))
+		return
+
+	lurking_xeno.current_target = entering_atom
