@@ -4404,10 +4404,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/almayer/living/cryo_cells)
-"BN" = (
-/obj/structure/closet/emcloset,
-/turf/closed/wall/almayer/outer,
-/area/almayer/engineering)
 "BO" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -23434,7 +23430,7 @@ HT
 ah
 wa
 yo
-BN
+YB
 yy
 mo
 an
