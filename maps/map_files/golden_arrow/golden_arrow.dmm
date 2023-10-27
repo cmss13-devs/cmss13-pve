@@ -3711,7 +3711,7 @@
 "wV" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	name = "\improper Platoon Sergeants Bunk";
+	name = "\improper Platoon Sergeant's Bunk";
 	req_one_access_txt = "12"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6795,7 +6795,7 @@
 	pixel_y = 16
 	},
 /obj/structure/phone_base/rotary/no_dnd{
-	name = "Alpha Overwatch Telephone";
+	name = "Overwatch Telephone";
 	phone_category = "Command";
 	phone_id = "Alpha Overwatch"
 	},
