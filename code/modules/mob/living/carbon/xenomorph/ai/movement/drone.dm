@@ -93,7 +93,7 @@
 
 	var/blocked = FALSE
 	for(var/atom/potential_blocker as anything in checked_turf)
-		if(potential_blocker.can_block_movement)
+		if(potential_blocker.density || potential_blocker.can_block_movement)
 			blocked = TRUE
 			break
 
