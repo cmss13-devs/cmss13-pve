@@ -72,6 +72,8 @@ export const GameMaster = (props, context) => {
           <Flex.Item>
             <Section title="Objectives">
               <Flex grow>
+            <Section title="Objective">
+              <Flex direction="column">
                 <Flex.Item>
                   <Button
                     selected={data.objective_click_intercept}
@@ -81,6 +83,41 @@ export const GameMaster = (props, context) => {
                     }}
                   />
                 </Flex.Item>
+                {data.game_master_objectives && (
+                  <Flex.Item>
+                    <Collapsible title="Objectives">
+                      <Stack vertical>
+                        {data.game_master_objectives.map((val) => {
+                          if (val) {
+                            return (
+                              <Stack.Item>
+                                <Divider />
+                                <Flex>
+                                  <Flex.Item align="center">
+                                    <Button
+                                      content={val.object_name}
+                                      onClick={() => {
+                                        act('jump_to', { val });
+                                      }}
+                                    />
+                                  </Flex.Item>
+                                  <Flex.Item
+                                    grow
+                                    pl={1}
+                                    py={0.25}
+                                    fontSize="12px">
+                                    {val.objective_info}
+                                  </Flex.Item>
+                                </Flex>
+                              </Stack.Item>
+                            );
+                          }
+                        })}
+                        <Divider />
+                      </Stack>
+                    </Collapsible>
+                  </Flex.Item>
+                )}
               </Flex>
             </Section>
           </Flex.Item>
