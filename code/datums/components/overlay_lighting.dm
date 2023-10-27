@@ -462,6 +462,7 @@
 		scanning = next_turf
 
 	current_holder.underlays -= visible_mask
+	current_holder.underlays -= cone
 
 	var/translate_x = -((range - 1) * 32)
 	var/translate_y = translate_x
@@ -474,14 +475,40 @@
 			translate_x += 32 * final_distance
 		if(WEST)
 			translate_x += -32 * final_distance
+
+	var/multitile_light = length(current_holder.locs) > 1
+	var/multitile_translate_x = 0
+	var/multitile_translate_y = 0
+
+	if(multitile_light)
+		switch(current_direction)
+			if(NORTH)
+				multitile_translate_x += current_holder.bound_width / 2
+				multitile_translate_y += current_holder.bound_height
+			if(SOUTH)
+				multitile_translate_x += current_holder.bound_width / 2
+			if(EAST)
+				multitile_translate_x += current_holder.bound_width
+				multitile_translate_y += current_holder.bound_height / 2
+			if(WEST)
+				multitile_translate_y += current_holder.bound_height / 2
+
+	translate_x += multitile_translate_x
+	translate_y += multitile_translate_y
+
 	if((directional_offset_x != translate_x) || (directional_offset_y != translate_y))
 		directional_offset_x = translate_x
 		directional_offset_y = translate_y
 		var/matrix/transform = matrix()
 		transform.Translate(translate_x, translate_y)
 		visible_mask.transform = transform
+		if(multitile_light)
+			var/matrix/cone_transform = matrix()
+			cone_transform.Translate(multitile_translate_x - 32, multitile_translate_y - 32)
+			cone.transform = cone_transform
 	if(overlay_lighting_flags & LIGHTING_ON)
 		current_holder.underlays += visible_mask
+		current_holder.underlays += cone
 
 ///Called when current_holder changes loc.
 /datum/component/overlay_lighting/proc/on_holder_dir_change(atom/movable/source, olddir, newdir)

@@ -21,12 +21,14 @@
 
 	can_buckle = FALSE
 
-	//light_system = MOVABLE_LIGHT
-	//light_range = 5
-	//light_flags = LIGHT_ATTACHED
+	//Vehicle self-illumination
+	light_system = MOVABLE_LIGHT
+	light_flags = LIGHT_ATTACHED
+	light_range = 5
+	light_power = 2
 
-	var/atom/movable/vehicle_light_holder/lighting_holder
-
+	//Vehicle headlights
+	var/atom/movable/vehicle_light/light_holder
 	var/vehicle_light_range = 5
 	var/vehicle_light_power = 2
 
@@ -176,22 +178,17 @@
 	rotate_entrances(angle_to_turn)
 	rotate_bounds(angle_to_turn)
 
-	//light_pixel_x = -64
-	//light_pixel_y = -64
+	//light_pixel_x = -bound_x
+	//light_pixel_y = -bound_y
 
 	if(bound_width > world.icon_size || bound_height > world.icon_size)
-		lighting_holder = new(src)
-		//lighting_holder.light_pixel_x = -64
-		//lighting_holder.light_pixel_y = -64
-		//lighting_holder.transform = lighting_holder.transform.Translate(-64, -64)
-		lighting_holder.set_light_range(1.4)
-		lighting_holder.set_light_power(10)
-		lighting_holder.set_light_on(vehicle_light_range || vehicle_light_power)
-		//lighting_holder.cone.transform = lighting_holder.cone.transform.Translate(32, 32)
-		//affected_movable_lights[1].cone.transform = affected_movable_lights[1].cone.transform.Translate(-64, -64)
-		//SEND_SIGNAL(lighting_holder, COMSIG_ITEM_EQUIPPED, src)
+		light_holder = new(src)
+		light_holder.set_light_flags(LIGHT_ATTACHED)
+		light_holder.set_light_range(vehicle_light_range)
+		light_holder.set_light_power(vehicle_light_power)
+		light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
 	//else if(light_range)
-		//set_light_on(TRUE)
+	//set_light_on(TRUE)
 
 	healthcheck()
 	update_icon()
@@ -216,7 +213,7 @@
 		return
 
 /obj/vehicle/multitile/Destroy()
-	QDEL_NULL(lighting_holder)
+	QDEL_NULL(light_holder)
 
 	if(!QDELETED(interior))
 		QDEL_NULL(interior)
@@ -450,47 +447,5 @@
 	for(var/obj/item/hardpoint/locomotion/Loco in hardpoints)
 		Loco.handle_acid_damage(A)
 
-/atom/movable/vehicle_light_holder
+/atom/movable/vehicle_light
 	light_system = DIRECTIONAL_LIGHT
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-
-/atom/movable/vehicle_light_holder/Initialize(mapload, ...)
-	. = ..()
-
-	//pixel_x = 0
-	//pixel_y = -2 * world.icon_size
-
-	//var/matrix/transform = matrix()
-	transform = transform.Translate(0, -2 * world.icon_size)
-
-	var/atom/attached_to = loc
-
-	forceMove(attached_to.loc)
-	RegisterSignal(attached_to, COMSIG_MOVABLE_MOVED, PROC_REF(handle_parent_move))
-	RegisterSignal(attached_to, COMSIG_ATOM_DIR_CHANGE, PROC_REF(handle_parent_dir_change))
-
-/atom/movable/vehicle_light_holder/proc/handle_parent_move(atom/movable/mover, atom/oldloc, direction)
-	SIGNAL_HANDLER
-
-	forceMove(get_turf(mover))
-
-/atom/movable/vehicle_light_holder/proc/handle_parent_dir_change(atom/movable/source, olddir, newdir)
-	SIGNAL_HANDLER
-
-	/*
-	switch(newdir)
-		if(NORTH)
-			pixel_x = 0
-			pixel_y = 2 * world.icon_size
-		if(SOUTH)
-			pixel_x = 0
-			pixel_y = -2 * world.icon_size
-		if(EAST)
-			pixel_x = 2 * world.icon_size
-			pixel_y = 0
-		if(WEST)
-			pixel_x = -2 * world.icon_size
-			pixel_y = 0
-	*/
-
-	setDir(newdir)
