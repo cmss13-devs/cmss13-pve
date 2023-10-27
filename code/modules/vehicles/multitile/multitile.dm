@@ -186,9 +186,9 @@
 		light_holder.set_light_flags(LIGHT_ATTACHED)
 		light_holder.set_light_range(vehicle_light_range)
 		light_holder.set_light_power(vehicle_light_power)
-		light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
+		//light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
 	//else if(light_range)
-	//set_light_on(TRUE)
+	set_light_on(TRUE)
 
 	healthcheck()
 	update_icon()

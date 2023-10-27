@@ -74,6 +74,9 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
+	var/base_offset_x
+	var/base_offset_y
+
 
 /datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional)
 	if(!ismovable(parent))
@@ -191,6 +194,24 @@
 		return
 	if(directional)
 		cast_directional_light()
+	else if(length(current_holder?.locs) > 1)
+		var/multitile_translate_x = 0
+		var/multitile_translate_y = 0
+		switch(current_holder.dir)
+			if(NORTH, SOUTH)
+				multitile_translate_x = current_holder.bound_width * 0.5
+				multitile_translate_y = current_holder.bound_height * 0.5
+			if(EAST, WEST)
+				multitile_translate_x = current_holder.bound_height * 0.5
+				multitile_translate_y = current_holder.bound_width * 0.5
+		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
+			current_holder.underlays -= visible_mask
+		var/matrix/transform = new
+		transform.Translate(multitile_translate_x - base_offset_x, multitile_translate_y - base_offset_y)
+		visible_mask.transform = transform
+		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
+			current_holder.underlays += visible_mask
+
 	get_new_turfs()
 
 
@@ -336,6 +357,8 @@
 		visible_mask.transform = null
 		return
 	var/offset = (pixel_bounds - 32) * 0.5
+	base_offset_x = offset
+	base_offset_y = offset
 	var/matrix/transform = new
 	transform.Translate(-offset, -offset)
 	visible_mask.transform = transform
@@ -476,22 +499,22 @@
 		if(WEST)
 			translate_x += -32 * final_distance
 
-	var/multitile_light = length(current_holder.locs) > 1
+	var/multitile_light = length(current_holder?.locs) > 1
 	var/multitile_translate_x = 0
 	var/multitile_translate_y = 0
 
 	if(multitile_light)
 		switch(current_direction)
 			if(NORTH)
-				multitile_translate_x += current_holder.bound_width / 2
+				multitile_translate_x += current_holder.bound_width * 0.5
 				multitile_translate_y += current_holder.bound_height
 			if(SOUTH)
-				multitile_translate_x += current_holder.bound_width / 2
+				multitile_translate_x += current_holder.bound_width * 0.5
 			if(EAST)
 				multitile_translate_x += current_holder.bound_width
-				multitile_translate_y += current_holder.bound_height / 2
+				multitile_translate_y += current_holder.bound_height * 0.5
 			if(WEST)
-				multitile_translate_y += current_holder.bound_height / 2
+				multitile_translate_y += current_holder.bound_height * 0.5
 
 	translate_x += multitile_translate_x
 	translate_y += multitile_translate_y
