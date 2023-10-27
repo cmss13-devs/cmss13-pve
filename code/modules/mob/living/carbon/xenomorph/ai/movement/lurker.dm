@@ -10,7 +10,7 @@
 	var/total_baits = 0
 
 	// Distance at which we want to stay from our spotted target
-	var/stalking_distance = 10
+	var/stalking_distance = 12
 
 	// List of turfs we see and register while lurking
 	var/list/registered_turfs = list()
@@ -25,7 +25,6 @@
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
 
-	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(stop_lurking))
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
@@ -77,7 +76,7 @@
 			var/potential_home_dir = get_dir(idle_xeno, potential_home)
 			var/current_target_dir = get_dir(idle_xeno, idle_xeno.current_target)
 
-			if(current_target_dir != potential_home_dir && current_target_dir != turn(potential_home_dir, 45) && current_target_dir != turn(potential_home_dir, -45))
+			if(current_target_dir == potential_home_dir || current_target_dir == turn(potential_home_dir, 45) || current_target_dir == turn(potential_home_dir, -45))
 				continue
 
 		var/xeno_to_potential_home_distance = get_dist(idle_xeno, potential_home)
@@ -106,7 +105,7 @@
 		return ..()
 
 	var/turf/target_turf = get_turf(moving_xeno.current_target)
-	if(ai_lurking || get_dist(moving_xeno, target_turf) > world.view + 2)
+	if(ai_lurking || get_dist(moving_xeno, target_turf) > world.view + 1)
 		if(get_dist(moving_xeno, target_turf) > stalking_distance)
 			home_turf = null
 			return moving_xeno.move_to_next_turf(target_turf)
@@ -122,6 +121,11 @@
 /datum/xeno_ai_movement/linger/lurking/proc/check_annoyance()
 	var/mob/living/carbon/xenomorph/annoyed_xeno = parent
 	if(!annoyed_xeno.current_target || !ai_lurking)
+		return
+
+	if(get_dist(annoyed_xeno, annoyed_xeno.current_target) > 8)
+		annoyance = 0
+		total_baits = 0
 		return
 
 	annoyance++
