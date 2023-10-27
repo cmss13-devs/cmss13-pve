@@ -244,7 +244,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				if(isxeno(object))
 					qdel(object)
-				return
+				return TRUE
 
 			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
 
