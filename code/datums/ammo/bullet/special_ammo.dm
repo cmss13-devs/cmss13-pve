@@ -83,7 +83,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	max_range = 22
 	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_7
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	shell_speed = 2*AMMO_SPEED_TIER_6
