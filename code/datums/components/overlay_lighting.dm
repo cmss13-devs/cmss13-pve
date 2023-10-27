@@ -74,8 +74,7 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
-	var/base_offset_x
-	var/base_offset_y
+	var/base_offset
 
 
 /datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional)
@@ -342,8 +341,7 @@
 		visible_mask.transform = null
 		return
 	var/offset = (pixel_bounds - 32) * 0.5
-	base_offset_x = offset
-	base_offset_y = offset
+	base_offset = offset
 	var/matrix/transform = new
 	transform.Translate(-offset, -offset)
 	visible_mask.transform = transform
@@ -534,7 +532,7 @@
 		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
 			current_holder.underlays -= visible_mask
 		var/matrix/transform = new
-		transform.Translate(multitile_translate_x - base_offset_x, multitile_translate_y - base_offset_y)
+		transform.Translate(multitile_translate_x - base_offset, multitile_translate_y - base_offset)
 		visible_mask.transform = transform
 		if(current_holder && overlay_lighting_flags & LIGHTING_ON)
 			current_holder.underlays += visible_mask
