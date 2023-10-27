@@ -389,8 +389,8 @@
 		handle_all_modules_broken()
 
 	//vehicle is dead, no more lights
-	//if(health <= 0 && lighting_holder.light_range)
-		//lighting_holder.set_light_on(FALSE)
+	if(health <= 0 && light_holder.light_range)
+		light_holder.set_light_on(FALSE)
 	update_icon()
 
 /*
