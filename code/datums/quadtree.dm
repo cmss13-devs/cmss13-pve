@@ -139,7 +139,8 @@
 		if(range.contains(P))
 			if(flags & QTREE_SCAN_MOBS)
 				found_players.Add(P.player)
-				return
+				continue
 
 			if(P.player.client)
 				found_players.Add(P.player.client)
+				continue
