@@ -59,13 +59,12 @@
 	var/shortest_distance = INFINITY
 	var/turf/non_preferred_turf
 	for(var/turf/potential_home as anything in shuffle(RANGE_TURFS(home_locate_range, current_turf)))
-
 		if(potential_home.density)
 			continue
 
 		var/blocked = FALSE
 		for(var/atom/potential_blocker as anything in potential_home)
-			if(potential_blocker.can_block_movement || potential_blocker.density)
+			if(potential_blocker != idle_xeno && (potential_blocker.can_block_movement || potential_blocker.density))
 				blocked = TRUE
 				break
 
