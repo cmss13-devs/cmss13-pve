@@ -321,6 +321,22 @@ SUBSYSTEM_DEF(minimaps)
 		for(var/flag in GLOB.all_minimap_flags)
 			minimaps_by_z["[z_level]"].images_assoc["[flag]"] -= source
 
+/// Checks if the source has a marker already set
+/datum/controller/subsystem/minimaps/proc/has_marker(atom/source)
+	var/turf/turf_gotten = get_turf(source)
+
+	if(!turf_gotten)
+		return
+
+	var/z_level = turf_gotten.z
+
+	if(minimaps_by_z["[z_level]"])
+		for(var/flag in GLOB.all_minimap_flags)
+			if(source in minimaps_by_z["[z_level]"].images_assoc["[flag]"])
+				return TRUE
+
+	return FALSE
+
 /**
  * Fetches a /atom/movable/screen/minimap instance or creates on if none exists
  * Note this does not destroy them when the map is unused, might be a potential thing to do?

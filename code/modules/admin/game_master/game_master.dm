@@ -116,6 +116,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
+	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
 
 	// Communication stuff
 	data["communication_clarity"] = GLOB.radio_communication_clarity
@@ -184,6 +185,23 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
 
+		if("jump_to")
+			if(!params["val"])
+				return
+
+			var/list/objective = params["val"]
+
+			var/atom/objective_atom = locate(objective["object_ref"])
+
+			var/turf/objective_turf = get_turf(objective_atom)
+
+			if(!objective_turf)
+				return TRUE
+
+			var/client/jumping_client = ui.user.client
+			jumping_client.jump_to_turf(objective_turf)
+			return TRUE
+
 		//Communication Section
 		if("use_game_master_phone")
 			game_master_phone.attack_hand(ui.user)
@@ -242,19 +260,21 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
-			if(object in GLOB.game_master_objectives)
+			var/turf/object_turf = get_turf(object)
+
+			if(!object_turf)
+				return TRUE
+
+			if(SSminimaps.has_marker(object))
 				if(tgui_alert(user, "Do you want to remove [object] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 					return TRUE
 
 				SSminimaps.remove_marker(object)
-				GLOB.game_master_objectives -= object
+				for(var/list/cycled_objective in GLOB.game_master_objectives)
+					var/atom/objective_object = locate(cycled_objective["object_ref"])
+					if(objective_object == object)
+						GLOB.game_master_objectives.Remove(list(cycled_objective))
 				return TRUE
-
-			var/turf/object_turf = get_turf(object)
-			if(!object_turf)
-				return TRUE
-
-			var/z_level = object_turf.z
 
 			if(tgui_alert(user, "Do you want to make [object] an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 				return TRUE
@@ -277,14 +297,22 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			background.overlays += icon
 
+			var/z_level = object_turf?.z
+
+			if(!object || !z_level)
+				return
+
 			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
 
-			/// objective_info needs to be implemented both in the game master menu and overwatch TGUI
-			/// GLOB.game_master_objectives should also probably hold a datum with more info including the icon here for TGUI usage
-			/// - Morrow
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 
-			GLOB.game_master_objectives[object] = objective_info || ""
+			var/object_ref = REF(object)
+
+			GLOB.game_master_objectives += list(list(
+				"object_name" = object.name,
+				"objective_info" = (objective_info || ""),
+				"object_ref" = object_ref,
+				))
 			return TRUE
 
 		else
