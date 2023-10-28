@@ -340,10 +340,9 @@
 	if(pixel_bounds == 32)
 		visible_mask.transform = null
 		return
-	var/offset = (pixel_bounds - 32) * 0.5
-	base_offset = offset
+	base_offset = (pixel_bounds - 32) * 0.5
 	var/matrix/transform = new
-	transform.Translate(-offset, -offset)
+	transform.Translate(-base_offset, -base_offset)
 	visible_mask.transform = transform
 	directional_offset_x = 0
 	directional_offset_y = 0
