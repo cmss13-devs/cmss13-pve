@@ -6797,7 +6797,7 @@
 /obj/structure/phone_base/rotary/no_dnd{
 	name = "Overwatch Telephone";
 	phone_category = "Command";
-	phone_id = "Alpha Overwatch"
+	phone_id = "Overwatch"
 	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = -8;
