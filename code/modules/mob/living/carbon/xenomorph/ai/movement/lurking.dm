@@ -78,7 +78,7 @@
 			preferred = TRUE
 			break
 
-		var/our_target = idle_xeno.current_target
+		var/atom/movable/our_target = idle_xeno.current_target
 		if(our_target)
 			var/potential_home_dir = get_dir(idle_xeno, potential_home)
 			var/current_target_dir = get_dir(idle_xeno, our_target)
