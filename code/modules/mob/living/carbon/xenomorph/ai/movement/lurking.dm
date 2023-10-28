@@ -229,7 +229,7 @@
 		registered_turfs += cycled_open_turf
 
 		var/mob/living/carbon/human/possible_target = locate() in cycled_open_turf
-		if(possible_target)
+		if(possible_target && (!parent.current_target || get_dist(parent, possible_target) < get_dist(parent, parent.current_target)))
 			parent.current_target = possible_target
 
 /datum/xeno_ai_movement/linger/lurking/proc/unregister_turf_signals()
@@ -239,12 +239,12 @@
 
 /datum/xeno_ai_movement/linger/lurking/proc/set_target(turf/hooked, atom/movable/entering_atom)
 	SIGNAL_HANDLER
-	var/mob/living/carbon/xenomorph/lurking_xeno = parent
 
 	if(!istype(entering_atom, /mob/living/carbon/human))
 		return
 
-	lurking_xeno.current_target = entering_atom
+	if(!parent.current_target || get_dist(parent, entering_atom) < get_dist(parent, parent.current_target))
+		parent.current_target = entering_atom
 
 /datum/xeno_ai_movement/linger/lurking/proc/lurking_parent_moved(atom/movable/moving_atom, atom/oldloc, direction, Forced)
 	SIGNAL_HANDLER
