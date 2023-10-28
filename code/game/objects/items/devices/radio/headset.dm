@@ -493,6 +493,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/mcom)
 	volume = RADIO_VOLUME_CRITICAL
 	multibroadcast_cooldown = LOW_MULTIBROADCAST_COOLDOWN
+	frequency = ALPHA_FREQ
 
 /obj/item/device/radio/headset/almayer/mcom/alt
 	initial_keys = list(/obj/item/device/encryptionkey/mcom/alt)
@@ -566,7 +567,9 @@
 	volume = RADIO_VOLUME_CRITICAL
 
 /obj/item/device/radio/headset/almayer/marine
-	initial_keys = list(/obj/item/device/encryptionkey/public)
+	name = "marine radio headset"
+	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	frequency = ALPHA_FREQ
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha

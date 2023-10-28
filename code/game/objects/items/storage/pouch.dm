@@ -168,7 +168,7 @@
 	name = "synth survival pouch"
 	desc = "An emergency pouch given to synthetics in the event of an emergency."
 	icon_state = "tools"
-	storage_slots = 7
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	can_hold = list(
 		/obj/item/device/flashlight,
@@ -181,7 +181,6 @@
 	)
 
 /obj/item/storage/pouch/survival/synth/full/fill_preset_inventory()
-	new /obj/item/device/flashlight(src)
 	new /obj/item/tool/crowbar/red(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/stack/cable_coil(src)
@@ -1151,7 +1150,7 @@
 /obj/item/storage/pouch/tools
 	name = "tools pouch"
 	desc = "It's designed to hold maintenance tools - screwdriver, wrench, cable coil, etc. It also has a hook for an entrenching tool or light replacer."
-	storage_slots = 4
+	storage_slots = 5
 	max_w_class = SIZE_MEDIUM
 	icon_state = "tools"
 	can_hold = list(
@@ -1193,17 +1192,20 @@
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/pfc/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wrench(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/synth/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/weldingtool(src)
+	new /obj/item/stack/cable_coil(src)
 	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/tank/fill_preset_inventory()
@@ -1211,12 +1213,14 @@
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool/hugetank(src)
 	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/mortar/fill_preset_inventory()
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/tactical/full/fill_preset_inventory()
 	new /obj/item/tool/screwdriver/tactical(src)
@@ -1233,6 +1237,7 @@
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wrench(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/sling
 	name = "sling strap"

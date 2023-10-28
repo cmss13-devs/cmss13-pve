@@ -65,6 +65,9 @@
 	if(!src.client) //Somehow
 		return
 
+	if(SEND_SIGNAL(src, COMSIG_DEAD_SPEAK, message) & COMPONENT_OVERRIDE_DEAD_SPEAK)
+		return
+
 	if(!src.client.admin_holder || !(client.admin_holder.rights & R_MOD))
 		if(!dsay_allowed)
 			to_chat(src, SPAN_DANGER("Deadchat is globally muted"))

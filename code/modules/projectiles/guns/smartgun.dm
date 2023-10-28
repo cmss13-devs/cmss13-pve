@@ -29,7 +29,7 @@
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
-		/datum/action/item_action/smartgun/toggle_auto_fire,
+		///datum/action/item_action/smartgun/toggle_auto_fire, - Thanks Bales
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
@@ -213,6 +213,7 @@
 //	else
 //		button.icon_state = "template"
 
+/*
 /datum/action/item_action/smartgun/toggle_auto_fire/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Auto Fire"
@@ -234,6 +235,8 @@
 		button.icon_state = "template_on"
 	else
 		button.icon_state = "template"
+
+*/
 
 /datum/action/item_action/smartgun/toggle_accuracy_improvement/New(Target, obj/item/holder)
 	. = ..()
@@ -476,6 +479,7 @@
 		drain -= 50
 	recalculate_attachment_bonuses()
 
+/*
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_fire(mob/user)
 	if(!(flags_item & WIELDED))
 		to_chat(user, "[icon2html(src, usr)] You need to wield \the [src] to enable autofire.")
@@ -513,6 +517,7 @@
 			return
 		long_range_cooldown = initial(long_range_cooldown)
 		MD.scan()
+
 
 /obj/item/weapon/gun/smartgun/proc/auto_prefire(warned) //To allow the autofire delay to properly check targets after waiting.
 	if(ishuman(loc) && (flags_item & WIELDED))
@@ -595,7 +600,6 @@
 /obj/item/weapon/gun/smartgun/proc/process_shot(mob/living/user, warned)
 	set waitfor = 0
 
-
 	if(!target)
 		return //Acquire our victim.
 
@@ -611,6 +615,8 @@
 		Fire(target,user)
 
 	target = null
+
+*/
 
 ///obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
 //	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")

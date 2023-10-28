@@ -7,7 +7,7 @@
 
 	interior_map = /datum/map_template/interior/apc_command
 
-	passengers_slots = 8
+	passengers_slots = 15
 
 	var/sensor_radius = 45 //45 tiles radius
 
@@ -98,6 +98,8 @@
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
@@ -119,6 +121,8 @@
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(

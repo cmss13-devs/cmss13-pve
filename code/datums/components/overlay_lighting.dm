@@ -74,6 +74,8 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
+	var/base_offset
+
 
 /datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional)
 	if(!ismovable(parent))
@@ -191,6 +193,9 @@
 		return
 	if(directional)
 		cast_directional_light()
+	else if(length(current_holder?.locs) > 1)
+		handle_multitile_light()
+
 	get_new_turfs()
 
 
@@ -335,9 +340,9 @@
 	if(pixel_bounds == 32)
 		visible_mask.transform = null
 		return
-	var/offset = (pixel_bounds - 32) * 0.5
+	base_offset = (pixel_bounds - 32) * 0.5
 	var/matrix/transform = new
-	transform.Translate(-offset, -offset)
+	transform.Translate(-base_offset, -base_offset)
 	visible_mask.transform = transform
 	directional_offset_x = 0
 	directional_offset_y = 0
@@ -419,6 +424,8 @@
 		add_dynamic_lumi(current_holder)
 		if(directional)
 			cast_directional_light()
+		else if(length(current_holder?.locs) > 1)
+			handle_multitile_light()
 	if(current_holder && current_holder != parent && current_holder != parent_attached_to)
 		RegisterSignal(current_holder, COMSIG_MOVABLE_MOVED, PROC_REF(on_holder_moved))
 	get_new_turfs()
@@ -462,6 +469,7 @@
 		scanning = next_turf
 
 	current_holder.underlays -= visible_mask
+	current_holder.underlays -= cone
 
 	var/translate_x = -((range - 1) * 32)
 	var/translate_y = translate_x
@@ -474,13 +482,57 @@
 			translate_x += 32 * final_distance
 		if(WEST)
 			translate_x += -32 * final_distance
+
+	var/multitile_light = length(current_holder?.locs) > 1
+	var/multitile_translate_x = 0
+	var/multitile_translate_y = 0
+
+	if(multitile_light)
+		switch(current_direction)
+			if(NORTH)
+				multitile_translate_x += current_holder.bound_width * 0.5
+				multitile_translate_y += current_holder.bound_height
+			if(SOUTH)
+				multitile_translate_x += current_holder.bound_width * 0.5
+			if(EAST)
+				multitile_translate_x += current_holder.bound_width
+				multitile_translate_y += current_holder.bound_height * 0.5
+			if(WEST)
+				multitile_translate_y += current_holder.bound_height * 0.5
+
+	translate_x += multitile_translate_x
+	translate_y += multitile_translate_y
+
 	if((directional_offset_x != translate_x) || (directional_offset_y != translate_y))
 		directional_offset_x = translate_x
 		directional_offset_y = translate_y
 		var/matrix/transform = matrix()
 		transform.Translate(translate_x, translate_y)
 		visible_mask.transform = transform
+		if(multitile_light)
+			var/matrix/cone_transform = matrix()
+			cone_transform.Translate(multitile_translate_x - 32, multitile_translate_y - 32)
+			cone.transform = cone_transform
 	if(overlay_lighting_flags & LIGHTING_ON)
+		current_holder.underlays += visible_mask
+		current_holder.underlays += cone
+
+/datum/component/overlay_lighting/proc/handle_multitile_light()
+	var/multitile_translate_x = 0
+	var/multitile_translate_y = 0
+	switch(current_holder.dir)
+		if(NORTH, SOUTH)
+			multitile_translate_x = current_holder.bound_width * 0.5
+			multitile_translate_y = current_holder.bound_height * 0.5
+		if(EAST, WEST)
+			multitile_translate_x = current_holder.bound_height * 0.5
+			multitile_translate_y = current_holder.bound_width * 0.5
+	if(current_holder && overlay_lighting_flags & LIGHTING_ON)
+		current_holder.underlays -= visible_mask
+	var/matrix/transform = new
+	transform.Translate(multitile_translate_x - base_offset, multitile_translate_y - base_offset)
+	visible_mask.transform = transform
+	if(current_holder && overlay_lighting_flags & LIGHTING_ON)
 		current_holder.underlays += visible_mask
 
 ///Called when current_holder changes loc.

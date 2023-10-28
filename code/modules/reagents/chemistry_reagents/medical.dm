@@ -275,12 +275,25 @@
 	id = "adrenaline"
 	description = "A natural muscle and heart stimulant. Useful for restarting the heart. Overdosing may stress the heart and cause tissue damage."
 	reagent_state = LIQUID
-	color = "FFE703" // Yellow-ish
+	color = "#FFE703" // Yellow-ish
 	overdose = LOWM_REAGENTS_OVERDOSE
 	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 5 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
 	properties = list(PROPERTY_PAINKILLING = 1.5, PROPERTY_ELECTROGENETIC = 4, PROPERTY_INTRAVENOUS = 1)
+	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
+
+/datum/reagent/medical/adrenaline_concentrated
+	name = "Epinephrine (concentrated)"
+	id = "adrenaline_concentrated"
+	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
+	reagent_state = LIQUID
+	color = "#FFE702" // Yellow-ish
+	overdose = LOWM_REAGENTS_OVERDOSE
+	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
+	custom_metabolism = AMOUNT_PER_TIME(1, 10 SECONDS)
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_PAINKILLING = 1.5, PROPERTY_ELECTROGENETIC = 4, PROPERTY_REVITALIZING = 1, PROPERTY_HYPOXEMIC = 5, PROPERTY_INTRAVENOUS = 1)
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/ultrazine

@@ -647,9 +647,9 @@ var/const/MAX_SAVE_SLOTS = 10
 
 //limit - The amount of jobs allowed per column. Defaults to 13 to make it look nice.
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
-//width - Screen' width. Defaults to 550 to make it look nice.
-//height - Screen's height. Defaults to 500 to make it look nice.
-/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 950, height = 700)
+//width - Screen' width.
+//height - Screen's height.
+/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 450, height = 450)
 	if(!RoleAuthority)
 		return
 
@@ -1414,11 +1414,8 @@ var/const/MAX_SAVE_SLOTS = 10
 						var/all_ok = TRUE
 						for(var/i=1, i<=length(new_xeno_prefix), i++)
 							var/ascii_char = text2ascii(new_xeno_prefix,i)
-							switch(ascii_char)
-								// A  .. Z
-								if(65 to 90) //Uppercase Letters will work
-								else
-									all_ok = FALSE //everything else - won't
+							if(ascii_char < 65 || ascii_char > 90)
+								all_ok = FALSE //everything else - won't
 						if(all_ok)
 							xeno_prefix = new_xeno_prefix
 							owner.load_xeno_name()

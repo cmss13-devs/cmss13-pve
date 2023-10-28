@@ -41,7 +41,8 @@
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 	honk_sound = 'sound/vehicles/honk_2_truck.ogg'
 
-	vehicle_light_range = 8
+	light_range = 3
+	vehicle_light_range = 6
 
 	move_max_momentum = 3
 
@@ -55,8 +56,6 @@
 	req_one_access = list()
 
 	door_locked = FALSE
-
-	mob_size_required_to_hit = MOB_SIZE_XENO
 
 	var/overdrive_next = 0
 	var/overdrive_cooldown = 15 SECONDS

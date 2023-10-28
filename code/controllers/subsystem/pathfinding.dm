@@ -11,9 +11,6 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	var/list/hash_path = list()
 	var/current_position = 1
 
-	/// Any special blockers we want to account for that do not normally block movement
-	var/list/special_blockers = list(/obj/flamer_fire)
-
 /datum/controller/subsystem/xeno_pathfinding/stat_entry(msg)
 	msg = "P:[length(paths_to_calculate)]"
 	return ..()
@@ -133,7 +130,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	var/list/pass_back = list()
 
 	for(var/atom/checked_atom as anything in checking_turf)
-		for(var/special_block in special_blockers)
+		for(var/special_block in XENO_AI_SPECIAL_BLOCKERS)
 			if(istype(checked_atom, special_block))
 				pass_back += checked_atom
 

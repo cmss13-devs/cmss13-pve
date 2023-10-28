@@ -102,11 +102,14 @@
 
 /atom/movable/proc/forceMove(atom/destination)
 	. = FALSE
+
 	if(destination)
 		. = doMove(destination)
 	else
 		CRASH("No valid destination passed into forceMove")
 
+	if(SEND_SIGNAL(src, COMSIG_MOVABLE_FORCEMOVED, destination))
+		return
 
 /atom/movable/proc/moveToNullspace()
 	return doMove(null)
