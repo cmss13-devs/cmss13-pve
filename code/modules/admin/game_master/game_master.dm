@@ -244,7 +244,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				if(isxeno(object))
 					qdel(object)
-				return
+				return TRUE
 
 			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
 
@@ -270,10 +270,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					return TRUE
 
 				SSminimaps.remove_marker(object)
-				for(var/list/cycled_objective in GLOB.game_master_objectives)
-					var/atom/objective_object = locate(cycled_objective["object_ref"])
-					if(objective_object == object)
-						GLOB.game_master_objectives.Remove(list(cycled_objective))
+				remove_objective(object)
 				return TRUE
 
 			if(tgui_alert(user, "Do you want to make [object] an objective?", "Confirmation", list("Yes", "No")) != "Yes")
@@ -308,6 +305,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			var/object_ref = REF(object)
 
+			RegisterSignal(object, COMSIG_PARENT_QDELETING, PROC_REF(remove_objective))
+
 			GLOB.game_master_objectives += list(list(
 				"object_name" = object.name,
 				"objective_info" = (objective_info || ""),
@@ -327,6 +326,14 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				current_submenus += new new_menu_type(user, object)
 				return TRUE
 
+/datum/game_master/proc/remove_objective(datum/destroying_datum)
+	SIGNAL_HANDLER
+
+	for(var/list/cycled_objective in GLOB.game_master_objectives)
+		var/atom/objective_object = locate(cycled_objective["object_ref"])
+		if(objective_object == destroying_datum)
+			GLOB.game_master_objectives.Remove(list(cycled_objective))
+			UnregisterSignal(objective_object, COMSIG_PARENT_QDELETING)
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS

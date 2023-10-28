@@ -15,7 +15,6 @@
 
 	var/turns_per_move = 1
 	var/turns_since_move = 0
-	universal_speak = 0 //No, just no.
 	var/meat_amount = 0
 	var/meat_type
 	var/stop_automated_movement = 0 //Use this to temporarely stop random movement or to if you write special movement code for animals.
@@ -58,6 +57,11 @@
 	can_crawl = FALSE
 	black_market_value = 25
 	dead_black_market_value = 0
+
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+
+	universal_speak = FALSE
+	universal_understand = TRUE
 
 /mob/living/simple_animal/Initialize()
 	. = ..()

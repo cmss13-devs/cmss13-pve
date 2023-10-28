@@ -37,19 +37,17 @@
 
 	var/turf/current_turf = get_turf(idle_xeno)
 	next_home_search = world.time + home_search_delay
-	if(!current_turf.weeds && check_turf(current_turf))
-		home_turf = current_turf
-	else
-		var/shortest_distance
-		for(var/turf/potential_home as anything in RANGE_TURFS(home_locate_range, current_turf))
-			if(!check_turf(potential_home))
-				continue
 
-			if(shortest_distance && get_dist(idle_xeno, potential_home) > shortest_distance)
-				continue
+	var/shortest_distance
+	for(var/turf/potential_home as anything in shuffle(RANGE_TURFS(home_locate_range, current_turf)))
+		if(!check_turf(potential_home))
+			continue
 
-			shortest_distance = get_dist(idle_xeno, potential_home)
-			home_turf = potential_home
+		if(!isnull(shortest_distance) && get_dist(idle_xeno, potential_home) > shortest_distance)
+			continue
+
+		shortest_distance = get_dist(idle_xeno, potential_home)
+		home_turf = potential_home
 
 	if(!home_turf)
 		if(!idle_xeno.resting)
@@ -93,7 +91,7 @@
 
 	var/blocked = FALSE
 	for(var/atom/potential_blocker as anything in checked_turf)
-		if(potential_blocker.can_block_movement)
+		if(parent != potential_blocker && (potential_blocker.density || potential_blocker.can_block_movement))
 			blocked = TRUE
 			break
 

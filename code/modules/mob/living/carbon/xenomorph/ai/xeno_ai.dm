@@ -1,7 +1,7 @@
 /mob/living/carbon/xenomorph
 	// AI stuff
 	var/flags_ai = XENO_AI_NO_DESPAWN
-	var/mob/current_target
+	var/atom/movable/current_target
 
 	var/next_path_generation = 0
 	var/list/current_path
@@ -68,13 +68,20 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		current_path = null
 		return TRUE
 
-	if(QDELETED(current_target) || current_target.stat != CONSCIOUS || get_dist(current_target, src) > ai_range)
+	var/stat_check = FALSE
+	if(istype(current_target, /mob))
+		var/mob/current_target_mob = current_target
+		stat_check = (current_target_mob != CONSCIOUS)
+
+	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
 		if(QDELETED(src))
 			return TRUE
 
 		if(current_target)
 			resting = FALSE
+			if(prob(5))
+				emote("hiss")
 			return TRUE
 
 	a_intent = INTENT_HARM
@@ -98,8 +105,19 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		if(XA.process_ai(src, delta_time) == PROCESS_KILL)
 			unregister_ai_action(XA)
 
-	if(get_dist(src, current_target) <= 1 && DT_PROB(XENO_SLASH, delta_time))
+	if(!current_target || !DT_PROB(XENO_SLASH, delta_time))
+		return
+
+	var/list/turf/turfs_to_dist_check = list(get_turf(current_target))
+
+	if(length(current_target.locs) > 1)
+		turfs_to_dist_check = get_multitile_turfs_to_check()
+
+	for(var/turf/checked_turf as anything in turfs_to_dist_check)
+		if(get_dist(src, checked_turf) > 1)
+			continue
 		INVOKE_ASYNC(src, PROC_REF(do_click), current_target, "", list())
+		return
 
 /** Controls movement when idle. Called by process_ai */
 /mob/living/carbon/xenomorph/proc/ai_move_idle(delta_time)
@@ -174,9 +192,9 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(!can_move_and_apply_move_delay())
 		return TRUE
 
-
 	var/turf/next_turf = current_path[current_path.len]
 	var/list/L = LinkBlocked(src, loc, next_turf, list(src, current_target), TRUE)
+	L += SSxeno_pathfinding.check_special_blockers(src, next_turf)
 	for(var/a in L)
 		var/atom/A = a
 		if(A.xeno_ai_obstacle(src, get_dir(loc, next_turf)) == INFINITY)
@@ -264,60 +282,36 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	SHOULD_CALL_PARENT(TRUE)
 	SSxeno_ai.remove_ai(src)
 
-GLOBAL_LIST_EMPTY_TYPED(xeno_ai_spawns, /obj/effect/landmark/xeno_ai)
-/obj/effect/landmark/xeno_ai
-	name = "Xeno AI Spawn"
-	var/list/spawned_xenos
-	var/remaining_spawns = 5
+/mob/living/carbon/xenomorph/proc/get_multitile_turfs_to_check()
+	var/angle = get_angle(current_target, src)
+	var/turf/base_turf = current_target.locs[1]
 
-	var/spawn_radius = 5
-	var/list/spawnable_turfs
-
-/obj/effect/landmark/xeno_ai/Initialize(mapload, ...)
-	. = ..()
-	spawned_xenos = list()
-
-	GLOB.xeno_ai_spawns += src
-	spawnable_turfs = list()
-	for(var/i in RANGE_TURFS(spawn_radius, src))
-		var/turf/T = i
-		if(T == get_turf(src))
-			spawnable_turfs += T
-			continue
-
-		if(T.density)
-			continue
-
-		var/failed = FALSE
-		for(var/a in T)
-			var/atom/A = a
-			if(A.density)
-				failed = TRUE
-				break
-
-		if(failed)
-			continue
-
-		for(var/t in getline(T, src))
-			var/turf/line = t
-			if(line.density)
-				failed = TRUE
-				break
-
-		if(failed)
-			continue
-
-		spawnable_turfs += T
-
-/obj/effect/landmark/xeno_ai/proc/reduce_remaining_spawns(mob/living/carbon/xenomorph/X)
-	SIGNAL_HANDLER
-	remaining_spawns--
-
-/obj/effect/landmark/xeno_ai/proc/handle_xeno_delete(mob/living/carbon/xenomorph/X)
-	SIGNAL_HANDLER
-	spawned_xenos -= X
-
-/obj/effect/landmark/xeno_ai/Destroy()
-	spawnable_turfs = null
-	GLOB.xeno_ai_spawns -= src
-	return ..()
+	switch(angle)
+		if(315 to 360, 0 to 45) //northerly
+			var/max_y_value = base_turf.y + (round(current_target.bound_height / 32) - 1)
+			var/list/turf/max_y_turfs = list()
+			for(var/turf/cycled_turf as anything in current_target.locs)
+				if(cycled_turf.y == max_y_value)
+					max_y_turfs += cycled_turf
+			return max_y_turfs
+		if(45 to 135) //easterly
+			var/max_x_value = base_turf.x + (round(current_target.bound_width / 32) - 1)
+			var/list/turf/max_x_turfs = list()
+			for(var/turf/cycled_turf as anything in current_target.locs)
+				if(cycled_turf.x == max_x_value)
+					max_x_turfs += cycled_turf
+			return max_x_turfs
+		if(135 to 225) //southerly
+			var/min_y_value = base_turf.y
+			var/list/turf/min_y_turfs = list()
+			for(var/turf/cycled_turf as anything in current_target.locs)
+				if(cycled_turf.y == min_y_value)
+					min_y_turfs += cycled_turf
+			return min_y_turfs
+		if(225 to 315) //westerly
+			var/min_x_value = base_turf.x
+			var/list/turf/min_x_turfs = list()
+			for(var/turf/cycled_turf as anything in current_target.locs)
+				if(cycled_turf.x == min_x_value)
+					min_x_turfs += cycled_turf
+			return min_x_turfs

@@ -65,7 +65,6 @@
 			if(T == get_turf(X.current_target))
 				break
 
-
 	if(!X.move_to_next_turf(T))
 		X.current_target = null
 		return TRUE
