@@ -763,9 +763,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/structure/machinery/cm_vending/gear/Initialize()
 	. = ..()
-	if(length(list(z) & SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
-
 
 /obj/structure/machinery/cm_vending/gear/ui_static_data(mob/user)
 	. = ..(user)
@@ -786,7 +785,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/structure/machinery/cm_vending/clothing/Initialize()
 	. = ..()
-	if(length(list(z) & SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
 
 /obj/structure/machinery/cm_vending/clothing/ui_static_data(mob/user)
