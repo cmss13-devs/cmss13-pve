@@ -238,7 +238,7 @@
 	if(prompt == "Current Location")
 		override_spawn_loc = get_turf(usr)
 
-	chosen_ert.activate(quiet_launch = launch_broadcast, announce_incoming = announce_receipt, override_spawn_loc = override_spawn_loc)
+	chosen_ert.activate(quiet_launch = !launch_broadcast, announce_incoming = announce_receipt, override_spawn_loc = override_spawn_loc)
 
 	message_admins("[key_name_admin(usr)] admin-called a [choice == "Randomize" ? "randomized ":""]distress beacon: [chosen_ert.name]")
 
