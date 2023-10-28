@@ -142,7 +142,7 @@
 #define LURKER_BAIT_TYPES list("Taunt","Emote","Interact")
 #define LURKER_BAIT_EMOTES list("growl","roar","hiss","needshelp")
 #define LURKER_BAIT_TAUNTS list("Come here, little host","I won't bite","I see you","Safe to go, little one")
-#define LURKER_BAITS_BEFORE_AMBUSH 4
+#define LURKER_BAITS_BEFORE_AMBUSH 3
 
 /datum/xeno_ai_movement/linger/lurking/proc/try_bait(no_interact)
 	var/mob/living/carbon/xenomorph/baiting_xeno = parent
@@ -207,6 +207,8 @@
 	if(LPA && istype(LPA))
 		LPA.knockdown = TRUE
 		LPA.freeze_self = TRUE
+
+	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
 
 /datum/xeno_ai_movement/linger/lurking/proc/stop_lurking()
 	SIGNAL_HANDLER
