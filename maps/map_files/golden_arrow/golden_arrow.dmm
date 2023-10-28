@@ -4832,10 +4832,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"Ez" = (
-/obj/structure/machinery/vending/walkman,
-/turf/closed/wall/almayer,
-/area/golden_arrow/canteen)
 "EA" = (
 /obj/structure/machinery/power/monitor{
 	name = "Core Power Monitoring"
@@ -19458,7 +19454,7 @@ Ui
 Ui
 Ui
 Ui
-Ez
+Ui
 Ui
 ZM
 Fa
