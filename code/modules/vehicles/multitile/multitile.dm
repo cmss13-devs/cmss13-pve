@@ -177,16 +177,13 @@
 	rotate_entrances(angle_to_turn)
 	rotate_bounds(angle_to_turn)
 
-	//light_pixel_x = -bound_x
-	//light_pixel_y = -bound_y
-
 	if(bound_width > world.icon_size || bound_height > world.icon_size)
 		light_holder = new(src)
 		light_holder.set_light_flags(LIGHT_ATTACHED)
 		light_holder.set_light_range(vehicle_light_range)
 		light_holder.set_light_power(vehicle_light_power)
 		light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
-	//else if(light_range)
+
 	set_light_on(light_range && light_power)
 
 	healthcheck()
@@ -389,6 +386,7 @@
 
 	//vehicle is dead, no more lights
 	if(health <= 0 && light_holder.light_range)
+		set_light_on(FALSE)
 		light_holder.set_light_on(FALSE)
 	update_icon()
 
