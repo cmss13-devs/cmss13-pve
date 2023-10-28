@@ -1391,6 +1391,15 @@
 	icon_state = "sterile_green"
 	},
 /area/golden_arrow/medical)
+"ie" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "if" = (
 /obj/structure/reagent_dispensers/fueltank/custom,
 /turf/open/floor/almayer{
@@ -1897,10 +1906,7 @@
 "ld" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	unacidable = 1;
-	unslashable = 1
-	},
+/obj/structure/machinery/light,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -19725,7 +19731,7 @@ pO
 Rt
 OH
 SR
-SR
+fx
 SR
 Cl
 JZ
@@ -20027,7 +20033,7 @@ Mc
 bo
 eu
 Dc
-Rg
+ie
 Nf
 Jb
 Cv
