@@ -96,7 +96,12 @@
 	if(get_dist(current_target, src) > 1)
 		return
 
-	if(!current_target.is_mob_incapacitated())
+	if(!istype(current_target, /mob))
+		return
+
+	var/mob/current_target_mob = current_target
+
+	if(!current_target_mob.is_mob_incapacitated())
 		return
 
 	if(isxeno(current_target.pulledby))
