@@ -5863,6 +5863,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/structure/machinery/vending/walkman,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
