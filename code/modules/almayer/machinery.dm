@@ -325,3 +325,18 @@
 	new /obj/item/clothing/under/shorts/red(src)
 	new /obj/item/clothing/under/shorts/blue(src)
 	new /obj/item/clothing/under/shorts/green(src)
+
+/obj/structure/machinery/prop/almayer/overwatch_console
+	name = "Overwatch Console"
+	desc = "State of the art machinery for giving orders to a squad."
+	density = FALSE
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "overwatch"
+
+/obj/structure/machinery/prop/almayer/orbital_cannon_console
+	name = "\improper Orbital Cannon Console"
+	desc = "The console controlling the orbital cannon loading systems."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "ob_console"
+	dir = WEST
+	flags_atom = ON_BORDER|CONDUCT|FPRINT
