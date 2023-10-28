@@ -12,7 +12,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/Initialize()
 	. = ..()
-	if(length(list(z) & SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/vend_fail()
@@ -216,7 +216,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/Initialize()
 	. = ..()
-	if(length(list(z) & SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
 
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/vend_fail()
@@ -343,7 +343,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/attachments/Initialize()
 	. = ..()
-	if(length(list(z) & SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
 
 /obj/structure/machinery/cm_vending/sorted/attachments/vend_fail()

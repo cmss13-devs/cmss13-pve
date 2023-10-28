@@ -63,7 +63,6 @@
 	fake_zlevel = 1 // upperdeck
 	soundscape_playlist = SCAPE_PL_CIC
 	soundscape_interval = 50
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/cichallway
 	name = "\improper Secure Command Hallway"
@@ -76,10 +75,6 @@
 	fake_zlevel = 1 // upperdeck
 	soundscape_playlist = SCAPE_PL_ARES
 	soundscape_interval = 120
-	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
-	can_build_special = FALSE
-	is_resin_allowed = FALSE
-	resin_construction_allowed = FALSE
 
 /area/almayer/command/securestorage
 	name = "\improper Secure Storage"
@@ -95,13 +90,11 @@
 	name = "\improper Telecommunications"
 	icon_state = "tcomms"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/self_destruct
 	name = "\improper Self-Destruct Core Room"
 	icon_state = "selfdestruct"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/corporateliason
 	name = "\improper Corporate Liaison Office"
@@ -732,19 +725,16 @@
 /area/almayer/ert_port
 	name = "\improper ERT Docking Port"
 	icon_state = "lifeboat"
-	flags_area = AREA_NOTUNNEL
 
 /area/space/almayer/lifeboat_dock
 	name = "\improper Lifeboat Docking Port"
 	icon_state = "lifeboat"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/evacuation
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttle2"
 	requires_power = 0
-	flags_area = AREA_NOTUNNEL
 
 //Placeholder.
 /area/almayer/evacuation/pod1

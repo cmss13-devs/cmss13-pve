@@ -61,8 +61,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 
 	vehicle_flags = VEHICLE_CLASS_LIGHT
 
-	mob_size_required_to_hit = MOB_SIZE_XENO
-
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 1.6,
