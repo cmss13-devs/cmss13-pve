@@ -6,6 +6,7 @@
 	bound_width = 64
 	bound_height = 64
 	density = TRUE
+	unslashable = TRUE
 
 /obj/structure/lz_sign/lazarus_sign
 	name = "Lazarus Landing Sign"

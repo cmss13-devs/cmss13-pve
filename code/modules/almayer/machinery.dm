@@ -113,6 +113,7 @@
 	desc = "THIS SHOULDN'T BE VISIBLE, AHELP 'ART-P02' IF SEEN IN ROUND WITH LOCATION"
 	density = TRUE
 	anchored = TRUE
+	unslashable = TRUE
 
 /obj/structure/prop/almayer/minigun_crate
 	name = "30mm ammo crate"

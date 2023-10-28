@@ -893,6 +893,7 @@
 //Crates, closets, other paraphernalia
 /obj/structure/closet/attack_alien(mob/living/carbon/xenomorph/M)
 	if(!unacidable)
+		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
 		M.animation_attack_on(src)
 		if(!opened)
 			var/difficulty = 70 //if its just closed we can smash open quite easily
