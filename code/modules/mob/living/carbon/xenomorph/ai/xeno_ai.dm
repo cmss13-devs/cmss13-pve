@@ -217,6 +217,10 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 		if(z != alive_human.z)
 			continue
+
+		if(FACTION_XENOMORPH in alive_human.faction_group)
+			continue
+
 		var/distance = get_dist(src, alive_human)
 
 		if(distance < ai_range && alive_human.stat == CONSCIOUS)
