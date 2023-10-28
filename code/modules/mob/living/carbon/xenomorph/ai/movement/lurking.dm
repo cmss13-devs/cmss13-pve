@@ -78,11 +78,15 @@
 			preferred = TRUE
 			break
 
-		if(idle_xeno.current_target)
+		var/our_target = idle_xeno.current_target
+		if(our_target)
 			var/potential_home_dir = get_dir(idle_xeno, potential_home)
-			var/current_target_dir = get_dir(idle_xeno, idle_xeno.current_target)
+			var/current_target_dir = get_dir(idle_xeno, our_target)
 
 			if(current_target_dir == potential_home_dir || current_target_dir == turn(potential_home_dir, 45) || current_target_dir == turn(potential_home_dir, -45))
+				continue
+
+			if(get_dist(potential_home, our_target) > stalking_distance)
 				continue
 
 		var/xeno_to_potential_home_distance = get_dist(idle_xeno, potential_home)
@@ -129,7 +133,12 @@
 	if(!annoyed_xeno.current_target || !ai_lurking)
 		return
 
-	if(get_dist(annoyed_xeno, annoyed_xeno.current_target) > 10)
+	var/target_distance = get_dist(annoyed_xeno, annoyed_xeno.current_target)
+
+	if(target_distance < world.view)
+		return
+
+	if(target_distance > 10)
 		annoyance = 0
 		total_baits = 0
 		return
@@ -166,11 +175,11 @@
 			baiting_xeno.say(pick(LURKER_BAIT_TAUNTS))
 		if("Interact")
 			if(!interact_random(baiting_xeno))
-				try_bait(no_interact = TRUE)
-				return
+				return try_bait(no_interact = TRUE)
 
 	total_baits++
 	annoyance = 0
+	return bait
 
 #undef LURKER_BAIT_TYPES
 #undef LURKER_BAIT_EMOTES
