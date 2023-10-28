@@ -71,6 +71,8 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 		if(current_target)
 			resting = FALSE
+			if(prob(5))
+				emote("hiss")
 			return TRUE
 
 	a_intent = INTENT_HARM
