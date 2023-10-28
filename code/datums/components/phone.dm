@@ -369,11 +369,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 		log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
 
-		var/comm_paygrade = ""
-
-		if (ishuman(speaker))
-			var/mob/living/carbon/human/human_speaker = speaker
-			comm_paygrade = human_speaker.get_paygrade()
+		var/comm_paygrade = speaker.get_paygrade()
 
 		for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
 			if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
