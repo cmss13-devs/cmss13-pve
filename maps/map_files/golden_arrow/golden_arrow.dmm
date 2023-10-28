@@ -1058,7 +1058,9 @@
 /area/almayer/living/cryo_cells)
 "fY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list()
+	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -1176,9 +1178,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/medical/blood{
-	req_access = list()
-	},
+/obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
