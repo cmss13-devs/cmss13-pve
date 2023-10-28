@@ -4467,6 +4467,10 @@
 	pixel_x = 5;
 	pixel_y = 4
 	},
+/obj/item/tool/hand_labeler{
+	pixel_x = -3;
+	pixel_y = 14
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5691,6 +5695,9 @@
 /obj/item/prop/helmetgarb/flair_io{
 	pixel_x = -10;
 	pixel_y = 6
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/almayer/squads/alpha/platoon_sergeant)
@@ -7610,10 +7617,6 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger{
 	pixel_y = 5
-	},
-/obj/item/tool/hand_labeler{
-	pixel_x = -3;
-	pixel_y = 14
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
