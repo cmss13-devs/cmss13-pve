@@ -213,7 +213,8 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/smallest_distance = INFINITY
 	for(var/mob/living/carbon/human/alive_human as anything in GLOB.alive_human_list)
 		if(alive_human.species.flags & IS_SYNTHETIC)
-			return pick(viable_humans)
+			continue
+
 		if(z != alive_human.z)
 			continue
 		var/distance = get_dist(src, alive_human)
