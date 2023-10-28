@@ -3770,15 +3770,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/squads/alpha/squad_two)
-"xD" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/machinery/light,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/almayer/hallways/hangar)
 "xJ" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_one_access = list()
@@ -20079,7 +20070,7 @@ Mc
 bo
 eu
 Dc
-xD
+Rg
 Nf
 Jb
 Cv
