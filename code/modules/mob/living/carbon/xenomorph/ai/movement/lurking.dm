@@ -27,6 +27,8 @@
 
 	RegisterSignal(parent, COMSIG_XENO_HANDLE_AI_SHOT, PROC_REF(stop_lurking))
 	RegisterSignal(parent, COMSIG_XENO_HANDLE_CRIT, PROC_REF(stop_lurking))
+	RegisterSignal(parent, COMSIG_XENO_USED_POUNCE, PROC_REF(stop_lurking))
+
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
@@ -176,14 +178,14 @@
 #undef LURKER_BAITS_BEFORE_AMBUSH
 
 /datum/xeno_ai_movement/linger/lurking/proc/interact_random(mob/living/carbon/xenomorph/X)
-	for(var/obj/O in orange(1, X))
-		if(istype(O, /obj/structure/window_frame))
+	for(var/obj/potential_interaction in orange(1, X))
+		if(istype(potential_interaction, /obj/structure/window_frame))
 			continue
-		if(istype(O, /obj/structure/pipes))
+		if(istype(potential_interaction, /obj/structure/pipes))
 			continue
-		if(istype(O, /obj/structure/sign))
+		if(istype(potential_interaction, /obj/structure/sign))
 			continue
-		if(!O.xeno_ai_act(X))
+		if(!potential_interaction.xeno_ai_act(X))
 			continue
 		return TRUE
 	return FALSE
@@ -198,6 +200,8 @@
 	lurking_xeno.set_movement_intent(MOVE_INTENT_WALK)
 	register_turf_signals()
 	ai_lurking = TRUE
+
+	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(lurking_parent_moved))
 
 	var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_xeno_action_by_type(lurking_xeno, /datum/action/xeno_action/activable/pounce/lurker)
 	if(LPA && istype(LPA))
@@ -215,12 +219,18 @@
 	unregister_turf_signals()
 	ai_lurking = FALSE
 
+	UnregisterSignal(parent, COMSIG_MOVABLE_MOVED)
+
 	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
 
 /datum/xeno_ai_movement/linger/lurking/proc/register_turf_signals()
-	for(var/turf/open/cycled_open_turf in view(5, parent))
+	for(var/turf/open/cycled_open_turf in view(world.view, parent))
 		RegisterSignal(cycled_open_turf, COMSIG_TURF_ENTERED, PROC_REF(set_target))
 		registered_turfs += cycled_open_turf
+
+		var/mob/living/carbon/human/possible_target = locate() in cycled_open_turf
+		if(possible_target)
+			parent.current_target = possible_target
 
 /datum/xeno_ai_movement/linger/lurking/proc/unregister_turf_signals()
 	for(var/turf/open/cycled_open_turf in registered_turfs)
@@ -235,3 +245,9 @@
 		return
 
 	lurking_xeno.current_target = entering_atom
+
+/datum/xeno_ai_movement/linger/lurking/proc/lurking_parent_moved(atom/movable/moving_atom, atom/oldloc, direction, Forced)
+	SIGNAL_HANDLER
+
+	unregister_turf_signals()
+	register_turf_signals()

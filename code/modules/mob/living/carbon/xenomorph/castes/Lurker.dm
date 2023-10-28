@@ -77,12 +77,6 @@
 /mob/living/carbon/xenomorph/lurker/init_movement_handler()
 	return new /datum/xeno_ai_movement/linger/lurking(src)
 
-/mob/living/carbon/xenomorph/lurker/handle_ai_shot(obj/projectile/P)
-	if(prob(LURKING_IGNORE_SHOT_CHANCE))
-		return
-
-	. = ..()
-
 /mob/living/carbon/xenomorph/lurker/ai_move_target(delta_time)
 	if(throwing)
 		return

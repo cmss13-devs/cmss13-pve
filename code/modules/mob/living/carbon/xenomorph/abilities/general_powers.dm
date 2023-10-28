@@ -448,6 +448,8 @@
 
 	X.launch_towards(LM)
 
+	SEND_SIGNAL(owner, COMSIG_XENO_USED_POUNCE, A)
+
 	X.update_icons()
 
 	additional_effects_always()
