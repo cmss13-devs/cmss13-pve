@@ -17,7 +17,13 @@
 	if(moving_xeno.throwing)
 		return
 
-	if(moving_xeno.current_target.is_mob_incapacitated())
+	// Always charge forward if sentries/APCs, no real reason to dodge and weave
+	var/incapacitated_check = TRUE
+	if(istype(moving_xeno.current_target, /mob))
+		var/mob/current_target_mob = moving_xeno.current_target
+		incapacitated_check = current_target_mob.is_mob_incapacitated()
+
+	if(incapacitated_check)
 		return ..()
 
 	check_for_travelling_turf_change(moving_xeno)
