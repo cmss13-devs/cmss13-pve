@@ -446,9 +446,9 @@
 	LM.pass_flags = pounce_pass_flags
 	LM.collision_callbacks = pounce_callbacks
 
-	X.launch_towards(LM)
-
 	SEND_SIGNAL(owner, COMSIG_XENO_USED_POUNCE, A)
+
+	X.launch_towards(LM)
 
 	X.update_icons()
 
