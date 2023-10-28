@@ -133,6 +133,12 @@
 	html_link = "images/9/94/New_Varadero.png"
 	color = "red"
 
+/obj/item/map/almayer
+	name = "\improper USS Almayer map"
+	desc = "A labeled blueprint of the USS Almayer"
+	html_link = "images/5/54/USS_Almayer.png"
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -149,7 +155,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CORSAT = new /obj/item/map/corsat(),
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
-		MAP_NEW_VARADERO = new /obj/item/map/new_varadero()
+		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
+		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

@@ -59,5 +59,8 @@ endmap
 map new_varadero
 endmap
 
+map derelict_almayer
+endmap
+
 map whiskey_outpost_v2
 endmap

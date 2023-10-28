@@ -369,13 +369,12 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 		log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
 
-		var/comm_paygrade = ""
-
-		if (ishuman(speaker))
-			var/mob/living/carbon/human/human_speaker = speaker
-			comm_paygrade = human_speaker.get_paygrade()
+		var/comm_paygrade = speaker.get_paygrade()
 
 		for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
+			if(cycled_observer == get_user() || cycled_observer == calling_phone.get_user())
+				continue
+
 			if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
 				var/ghost_message = "<span class='purple'><span class='name'>[comm_paygrade][speaker] (<a href='byond://?src=\ref[cycled_observer];track=\ref[speaker]'>F</a>)</span> on '[phone_id]' to '[calling_phone.phone_id]': <span class='body'>\"[message]\"</span></span>"
 				cycled_observer.show_message(ghost_message, SHOW_MESSAGE_AUDIBLE)
@@ -418,7 +417,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 			return FALSE
 	return TRUE
 
-
+/// Returns a mob that is using the phone or null if unable to find a user
+/datum/component/phone/proc/get_user()
+	return ismob(phone_handset.loc) ? phone_handset.loc : null
 
 //TGUI section
 
@@ -596,6 +597,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	log_say("TELEPHONE: [key_name(speaker)] on Phone '[phone_id]' to '[calling_phone.phone_id]' said '[message]'")
 
 	for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
+		if(cycled_observer == get_user() || cycled_observer == calling_phone.get_user())
+			continue
+
 		if((cycled_observer.client) && (cycled_observer.client.prefs) && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
 			var/ghost_message = "<span class='purple'><span class='name'>Game Master</span> on '[phone_id]' to '[calling_phone.phone_id]': <span class='body'>\"[message]\"</span></span>"
 			cycled_observer.show_message(ghost_message, SHOW_MESSAGE_AUDIBLE)
@@ -603,6 +607,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	calling_phone.handle_hear(message, null, speaker, TRUE)
 
 	return COMPONENT_OVERRIDE_DEAD_SPEAK
+
+/datum/component/phone/virtual/get_user()
+	return virtual_user
 
 // TGUI section
 
