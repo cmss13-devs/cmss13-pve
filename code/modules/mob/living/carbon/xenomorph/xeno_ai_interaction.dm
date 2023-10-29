@@ -4,6 +4,7 @@
 
 /obj/structure/mineral_door/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
+	return TRUE
 
 /obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno)
 	if(xeno.hivenumber != hivenumber)
@@ -22,6 +23,7 @@
 
 /obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
+	return TRUE
 
 // OBJECTS
 /obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
@@ -38,6 +40,7 @@
 			do_climb(X)
 		return
 	X.do_click(src, "", list())
+	return TRUE
 
 
 // HUMANS
@@ -50,6 +53,7 @@
 	if(status_flags & GODMODE)
 		return ..()
 	X.do_click(src, "", list())
+	return TRUE
 
 // VEHICLES
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
@@ -57,6 +61,7 @@
 
 /obj/vehicle/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
+	return TRUE
 
 // SENTRY
 /obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
@@ -64,6 +69,7 @@
 
 /obj/structure/machinery/defenses/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
+	return TRUE
 
 // WINDOW FRAME
 /obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)

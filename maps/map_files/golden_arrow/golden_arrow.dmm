@@ -3837,6 +3837,7 @@
 	dir = 1;
 	name = "ship-grade camera"
 	},
+/obj/structure/machinery/vending/walkman,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
