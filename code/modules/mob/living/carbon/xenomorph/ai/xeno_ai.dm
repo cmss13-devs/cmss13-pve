@@ -67,7 +67,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/stat_check = FALSE
 	if(istype(current_target, /mob))
 		var/mob/current_target_mob = current_target
-		stat_check = (current_target_mob != CONSCIOUS)
+		stat_check = (current_target_mob.stat != CONSCIOUS)
 
 	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
