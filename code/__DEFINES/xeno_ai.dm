@@ -122,3 +122,5 @@ PROBABILITY CALCULATIONS ARE HERE
 #define XENO_SPAWN_T2 (1<<1)
 #define XENO_SPAWN_T3 (1<<2)
 
+/// Special blockers for pathfinding or obstacle handling
+#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile)

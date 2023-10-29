@@ -57,8 +57,6 @@
 
 	door_locked = FALSE
 
-	mob_size_required_to_hit = MOB_SIZE_XENO
-
 	var/overdrive_next = 0
 	var/overdrive_cooldown = 15 SECONDS
 	var/overdrive_duration = 3 SECONDS

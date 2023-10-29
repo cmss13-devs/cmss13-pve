@@ -8,7 +8,7 @@
     "traits": [{ "Ground": true }],
     "nightmare_path": "maps/Nightmare/maps/derelict_almayer/",
     "camouflage": "classic",
-	    "gamemodes": [
+	"gamemodes": [
         "Distress Signal",
         "Hunter Games",
         "Hive Wars",
