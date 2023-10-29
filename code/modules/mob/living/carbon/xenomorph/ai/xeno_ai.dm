@@ -36,12 +36,16 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	return new /datum/xeno_ai_movement(src)
 
 /mob/living/carbon/xenomorph/proc/handle_ai_shot(obj/projectile/P)
-	if(!current_target && P.firer)
-		var/distance = get_dist(src, P.firer)
-		if(distance > max_travel_distance)
-			return
+	SEND_SIGNAL(src, COMSIG_XENO_HANDLE_AI_SHOT, P)
 
-		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
+	if(current_target || !P.firer)
+		return
+
+	var/distance = get_dist(src, P.firer)
+	if(distance > max_travel_distance)
+		return
+
+	SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)
