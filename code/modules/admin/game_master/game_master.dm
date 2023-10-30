@@ -35,8 +35,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Behavior stuff
 #define DEFAULT_BEHAVIOR_STRING "Attack"
-#define SELECTABLE_XENO_BEHAVIORS list("Attack")
-#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack)
+#define SELECTABLE_XENO_BEHAVIORS list("Attack", "Kidnap")
+#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Kidnap" = /datum/component/ai_behavior_override/kidnap)
 
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
