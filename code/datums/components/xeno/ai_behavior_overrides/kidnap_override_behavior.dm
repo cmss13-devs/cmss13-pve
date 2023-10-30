@@ -1,16 +1,32 @@
 
 /datum/component/ai_behavior_override/kidnap
+//	behavior_icon_state = "capture order"
 
 /datum/component/ai_behavior_override/kidnap/Initialize(...)
 	. = ..()
 
-	if(!istype(parent, /mob))
+	if(!istype(parent, /mob) || isxeno(parent))
 		return COMPONENT_INCOMPATIBLE
 
 /datum/component/ai_behavior_override/kidnap/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
 	. = ..()
 
-	if(distance > 10) // Probably want checks like if(!target) and not already pulling someone and such
+	var/stat = parent?:stat
+	var/mob/pulledby = parent?:pulledby
+
+	if(stat == DEAD)
+		return OVERRIDE_BEHAVIOR_QDEL
+
+	if(HAS_TRAIT(parent, TRAIT_NESTED))
+		return OVERRIDE_BEHAVIOR_QDEL
+
+	if(distance > 10)
+		return FALSE
+
+	if(stat == CONSCIOUS)
+		return FALSE
+
+	if(isxeno(pulledby) && pulledby != checked_xeno)
 		return FALSE
 
 	return TRUE
@@ -18,30 +34,25 @@
 /datum/component/ai_behavior_override/kidnap/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	. = ..()
 
-/*
-	if(get_active_hand())
-		swap_hand()
+	processing_xeno.current_target = parent
+	processing_xeno.resting = FALSE
 
-	if(stat_check && GLOB.xeno_kidnapping)
-		if(pulling)
-			if(ai_move_hive(delta_time))
-				return TRUE
+	if(processing_xeno.get_active_hand())
+		processing_xeno.swap_hand()
 
-		if(isxeno(current_target.pulledby) || HAS_TRAIT(current_target, TRAIT_NESTED))
-			current_target = null
-			ai_move_idle(delta_time)
-			return TRUE
-
-		if(get_dist(current_target, src) <= 1)
-			INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
-			face_atom(current_target)
-			swap_hand()
-
-		ai_move_target(delta_time)
+	var/datum/xeno_ai_movement/AI = processing_xeno.ai_movement_handler
+	if(processing_xeno.pulling == parent)
+		AI.ai_move_hive(delta_time)
 		return TRUE
 
-	return FALSE
-*/
+	var/atom/movable/target = processing_xeno.current_target
+	if(get_dist(processing_xeno, target) <= 1)
+		INVOKE_ASYNC(processing_xeno, TYPE_PROC_REF(/mob, start_pulling), target)
+		processing_xeno.face_atom(target)
+		processing_xeno.swap_hand()
+
+	processing_xeno.ai_move_target(delta_time)
+	return TRUE
 
 /*
 This is where we do our target setting and such, instead of moving in here:.

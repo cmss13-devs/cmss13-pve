@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		var/mob/current_target_mob = current_target
 		stat_check = (current_target_mob.stat != CONSCIOUS)
 
-	if(QDELETED(current_target) || (stat_check && !GLOB.xeno_kidnapping) || get_dist(current_target, src) > ai_range)
+	if(QDELETED(current_target) || stat_check|| get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
 		if(QDELETED(src))
 			return TRUE
@@ -222,7 +222,13 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/datum/component/ai_behavior_override/closest_valid_override
 	for(var/datum/component/ai_behavior_override/cycled_override in GLOB.all_ai_behavior_overrides)
 		var/distance = get_dist(src, cycled_override.parent)
-		if(cycled_override.check_behavior_validity(src, distance) && distance < shortest_distance)
+		var/validity = cycled_override.check_behavior_validity(src, distance)
+
+		if(validity == OVERRIDE_BEHAVIOR_QDEL)
+			qdel(cycled_override)
+			continue
+
+		if(validity && distance < shortest_distance)
 			shortest_distance = distance
 			closest_valid_override = cycled_override
 
@@ -324,7 +330,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(FACTION_XENOMORPH in checked_human.faction_group)
 		return FALSE
 
-	if(checked_human.stat != CONSCIOUS && !GLOB.xeno_kidnapping)
+	if(checked_human.stat != CONSCIOUS)
 		return FALSE
 
 	return TRUE

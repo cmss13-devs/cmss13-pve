@@ -756,6 +756,7 @@
 	for(var/obj/structure/bed/nest/preexisting_nest in get_turf(host_to_nest))
 		if(preexisting_nest.dir == dir_to_nest)
 			to_chat(src, SPAN_XENONOTICE("There is already a host nested here!"))
+			step_to(host_to_nest, src)
 			return
 
 	var/obj/structure/bed/nest/applicable_nest = new(get_turf(host_to_nest))
