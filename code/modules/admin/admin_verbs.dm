@@ -325,6 +325,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/cmd_mentor_say)
 		add_verb(src, /datum/admins/proc/imaginary_friend)
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
+		add_verb(src, /client/proc/toggle_xeno_kidnapping)
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -356,6 +357,7 @@ var/list/roundstart_mod_verbs = list(
 /client/proc/remove_admin_verbs()
 	remove_verb(src, list(
 		admin_verbs_default,
+		/client/proc/toggle_xeno_kidnapping,
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
 		/client/proc/toggle_join_xeno,

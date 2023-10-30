@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		var/mob/current_target_mob = current_target
 		stat_check = (current_target_mob.stat != CONSCIOUS)
 
-	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
+	if(QDELETED(current_target) || (stat_check && !GLOB.xeno_kidnapping) || get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
 		if(QDELETED(src))
 			return TRUE
@@ -84,6 +84,28 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 			return TRUE
 
 	a_intent = INTENT_HARM
+
+	if(get_active_hand())
+		swap_hand()
+
+	var/turf/target_turf = get_turf(current_target)
+	if(stat_check && GLOB.xeno_kidnapping)
+		if(pulling)
+			if(ai_move_hive(delta_time))
+				return TRUE
+
+		if(isxeno(current_target.pulledby) || HAS_TRAIT(current_target, TRAIT_NESTED))
+			current_target = null
+			ai_move_idle(delta_time)
+			return TRUE
+
+		if(get_dist(target_turf, src) <= 1)
+			INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
+			face_atom(current_target)
+			swap_hand()
+
+		ai_move_target(delta_time)
+		return TRUE
 
 	if(!current_target)
 		ai_move_idle(delta_time)
@@ -129,6 +151,12 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(!ai_movement_handler)
 		CRASH("No valid movement handler for [src]!")
 	return ai_movement_handler.ai_move_target(delta_time)
+
+/** Controls movement towards hive landmarks. Called by process_ai */
+/mob/living/carbon/xenomorph/proc/ai_move_hive(delta_time)
+	if(!ai_movement_handler)
+		CRASH("No valid movement handler for [src]!")
+	return ai_movement_handler.ai_move_hive(delta_time)
 
 /atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
 	return INFINITY
@@ -299,10 +327,13 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(checked_human.species.flags & IS_SYNTHETIC)
 		return FALSE
 
+	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
+		return FALSE
+
 	if(FACTION_XENOMORPH in checked_human.faction_group)
 		return FALSE
 
-	if(checked_human.stat != CONSCIOUS)
+	if(checked_human.stat != CONSCIOUS && !GLOB.xeno_kidnapping)
 		return FALSE
 
 	return TRUE
