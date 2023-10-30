@@ -609,7 +609,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	return COMPONENT_OVERRIDE_DEAD_SPEAK
 
 /datum/component/phone/virtual/get_user()
-	return virtual_user
+	return virtual_user.mob
 
 // TGUI section
 
