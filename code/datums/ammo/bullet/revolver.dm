@@ -8,9 +8,15 @@
 	name = "revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_1
-	accuracy = HIT_ACCURACY_TIER_1
+	damage = 70
+	penetration = ARMOR_PENETRATION_TIER_3
+	accuracy = HIT_ACCURACY_TIER_2
+
+/datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
+	. = ..()
+
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 4)
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
