@@ -90,27 +90,6 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	a_intent = INTENT_HARM
 
-	if(get_active_hand())
-		swap_hand()
-
-	if(stat_check && GLOB.xeno_kidnapping)
-		if(pulling)
-			if(ai_move_hive(delta_time))
-				return TRUE
-
-		if(isxeno(current_target.pulledby) || HAS_TRAIT(current_target, TRAIT_NESTED))
-			current_target = null
-			ai_move_idle(delta_time)
-			return TRUE
-
-		if(get_dist(current_target, src) <= 1)
-			INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
-			face_atom(current_target)
-			swap_hand()
-
-		ai_move_target(delta_time)
-		return TRUE
-
 	if(!current_target)
 		ai_move_idle(delta_time)
 		return TRUE
