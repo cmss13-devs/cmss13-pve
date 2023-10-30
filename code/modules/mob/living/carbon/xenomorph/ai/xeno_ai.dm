@@ -67,6 +67,11 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		current_path = null
 		return TRUE
 
+	var/datum/component/ai_behavior_override/behavior_override = check_overrides()
+
+	if(behavior_override?.process_override_behavior(src, delta_time))
+		return TRUE
+
 	var/stat_check = FALSE
 	if(istype(current_target, /mob))
 		var/mob/current_target_mob = current_target
@@ -130,7 +135,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	var/list/turf/turfs_to_dist_check = list(get_turf(current_target))
 
-	if(length(current_target.locs) > 1)
+	if(istype(current_target, /atom/movable) && length(current_target.locs) > 1)
 		turfs_to_dist_check = get_multitile_turfs_to_check()
 
 	for(var/turf/checked_turf as anything in turfs_to_dist_check)
@@ -151,13 +156,9 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		CRASH("No valid movement handler for [src]!")
 	return ai_movement_handler.ai_move_target(delta_time)
 
-/** Controls movement towards hive landmarks. Called by process_ai */
-/mob/living/carbon/xenomorph/proc/ai_move_hive(delta_time)
-	if(!ai_movement_handler)
-		CRASH("No valid movement handler for [src]!")
-	return ai_movement_handler.ai_move_hive(delta_time)
-
-/atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	if(get_turf(src) == target)
+		return 0
 	return INFINITY
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
@@ -235,6 +236,18 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		return FALSE
 
 	return TRUE
+
+/// Checks and returns the nearest override for behavior
+/mob/living/carbon/xenomorph/proc/check_overrides()
+	var/shortest_distance = INFINITY
+	var/datum/component/ai_behavior_override/closest_valid_override
+	for(var/datum/component/ai_behavior_override/cycled_override in GLOB.all_ai_behavior_overrides)
+		var/distance = get_dist(src, cycled_override.parent)
+		if(cycled_override.check_behavior_validity(src, distance) && distance < shortest_distance)
+			shortest_distance = distance
+			closest_valid_override = cycled_override
+
+	return closest_valid_override
 
 #define EXTRA_CHECK_DISTANCE_MULTIPLIER 0.20
 

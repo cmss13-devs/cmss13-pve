@@ -72,8 +72,25 @@
 	action_type = XENO_ACTION_ACTIVATE
 	xeno_cooldown = 100
 	plasma_cost = 20
+	default_ai_action = TRUE
 
 	var/buff_duration = 50
+
+/datum/action/xeno_action/onclick/lurker_assassinate/process_ai(mob/living/carbon/xenomorph/using_xeno, delta_time)
+	. = ..()
+
+	if(using_xeno.next_move <= world.time)
+		return FALSE
+
+	if(get_dist(using_xeno, using_xeno.current_target) > 1)
+		return FALSE
+
+	if(!DT_PROB(ai_prob_chance, delta_time))
+		return FALSE
+
+	use_ability_async(using_xeno.current_target)
+
+	return TRUE
 
 // VAMP LURKER ABILITIES
 

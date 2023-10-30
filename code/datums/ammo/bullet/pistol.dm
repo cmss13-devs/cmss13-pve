@@ -180,11 +180,11 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	debilitate = list(0,0,0,0,0,0,0,2)
 
-	accuracy = HIT_ACCURACY_TIER_4
-	damage = 45
-	penetration= ARMOR_PENETRATION_TIER_6
+	accuracy = HIT_ACCURACY_TIER_2
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	damage_falloff = DAMAGE_FALLOFF_TIER_6 //"VP78 - the only pistol viable as a primary."-Vampmare, probably.
+	damage_falloff = DAMAGE_FALLOFF_TIER_3 //"VP78 - the only pistol viable as a primary."-Vampmare, probably.
 
 /datum/ammo/bullet/pistol/squash/toxin
 	name = "toxic squash-head pistol bullet"

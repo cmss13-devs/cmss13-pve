@@ -1,12 +1,12 @@
 // MINERAL DOOR
-/obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return DOOR_PENALTY
 
 /obj/structure/mineral_door/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	X.do_click(src, "", list())
 	return TRUE
 
-/obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno)
+/obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
 	if(xeno.hivenumber != hivenumber)
 		return ..()
 	return 0
@@ -16,9 +16,9 @@
 	. = ..()
 
 // AIRLOCK
-/obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(locked || welded || isElectrified())
-		return INFINITY
+		return ..()
 	return DOOR_PENALTY
 
 /obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
@@ -26,7 +26,7 @@
 	return TRUE
 
 // OBJECTS
-/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(!density)
 		return 0
 
@@ -44,7 +44,7 @@
 
 
 // HUMANS
-/mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(status_flags & GODMODE)
 		return ..()
 	return HUMAN_PENALTY
@@ -56,7 +56,7 @@
 	return TRUE
 
 // VEHICLES
-/obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return VEHICLE_PENALTY
 
 /obj/vehicle/xeno_ai_act(mob/living/carbon/xenomorph/X)
@@ -64,7 +64,7 @@
 	return TRUE
 
 // SENTRY
-/obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return VEHICLE_PENALTY
 
 /obj/structure/machinery/defenses/xeno_ai_act(mob/living/carbon/xenomorph/X)
@@ -72,7 +72,7 @@
 	return TRUE
 
 // WINDOW FRAME
-/obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(X.claw_type == CLAW_TYPE_VERY_SHARP || (X.claw_type >= CLAW_TYPE_SHARP && !reinforced))
 		return ..()
 	return WINDOW_FRAME_PENALTY
@@ -83,11 +83,11 @@
 		do_climb(X)
 
 // Avoid barricades if possible.
-/obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return BARRICADE_PENALTY
 
 // FIRE
-/obj/flamer_fire/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction)
+/obj/flamer_fire/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
 	if(xeno.caste?.fire_immunity & (FIRE_IMMUNITY_NO_IGNITE|FIRE_IMMUNITY_NO_DAMAGE))
 		return 0
 
