@@ -1,5 +1,8 @@
 
-/// Assoc list that holds our custom game master objectives, formatted as atom = objective_string
+/// Holds our active game_masters
+GLOBAL_LIST_EMPTY(game_masters)
+
+/// List of assoc lists that hold "object_name", "objective_info", and "object_ref". Name of the objective, any info typed about the objective, and then a reference to be resolved of the object for passing through TGUI
 GLOBAL_LIST_EMPTY(game_master_objectives)
 
 /// Percentage of characters end up clear when sent via radio message
@@ -30,6 +33,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
+// Behavior stuff
+#define DEFAULT_BEHAVIOR_STRING "Attack"
+#define SELECTABLE_XENO_BEHAVIORS list("Attack")
+#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack)
+
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 #define OBJECTIVE_COLOR_OPTIONS list("red", "purple", "blue")
@@ -37,10 +45,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
+#define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
 
 
 /datum/game_master
+
+	var/client/game_master_client
 
 	/// Associated list of game master submenus organized by object_type = game_master_submenu
 	var/list/submenu_types = list(
@@ -51,8 +62,10 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// List of current submenus
 	var/list/current_submenus
 
+	/// Holds what type of click intercept we are using
+	var/current_click_intercept_action
 
-	/// Spawn stuff
+	// Spawn stuff
 
 	/// The xeno selected to be spawned in the spawn section
 	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
@@ -66,42 +79,57 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// If we are currently using the click intercept for the spawn section
 	var/spawn_click_intercept = FALSE
 
-	/// End Spawn Stuff
 
-	/// Objective stuff
+	// Behavior stuff
+
+	/// The current behavior to add when clicking with behavior_click_intercept on
+	var/selected_behavior = DEFAULT_BEHAVIOR_STRING
+
+	/// If we are currently using click intercept for the behavior section
+	var/behavior_click_intercept = FALSE
+
+
+	// Objective stuff
 
 	/// If we are currently using the click intercept for the objective section
 	var/objective_click_intercept = FALSE
 
-	/// End Objective Stuff
 
+	// Communication stuff
 
-	/// Communication stuff
-
+	/// The holder for the game master's virtual phone
 	var/atom/movable/game_master_phone
 
-	/// End Communication stuff
-
-	/// Holds what type of click intercept we are using
-	var/current_click_intercept_action
 
 /datum/game_master/New(client/using_client)
 	. = ..()
 
-	tgui_interact(using_client.mob)
+	game_master_client = using_client
+
+	tgui_interact(game_master_client.mob)
 
 	current_submenus = list()
 
 	game_master_phone = new(null)
 	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
-	using_client.click_intercept = src
+	game_master_client.click_intercept = src
+
+	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
+		game_master_client.images += override.behavior_image
+
+	GLOB.game_masters += game_master_client
 
 /datum/game_master/Destroy(force, ...)
 	. = ..()
 	submenu_types = null
 	current_submenus = null
 	QDEL_NULL(game_master_phone)
+
+	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
+		game_master_client.images -= override.behavior_image
+
+	GLOB.game_masters -= game_master_client
 
 /datum/game_master/ui_data(mob/user)
 	. = ..()
@@ -113,6 +141,10 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	data["spawn_ai"] = spawn_ai
 	data["spawn_click_intercept"] = spawn_click_intercept
 	data["xeno_spawn_count"] = xeno_spawn_count
+
+	// Behavior stuff
+	data["selected_behavior"] = selected_behavior
+	data["behavior_click_intercept"] = behavior_click_intercept
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
@@ -130,6 +162,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS
 
+	data["selectable_behaviors"] = SELECTABLE_XENO_BEHAVIORS
+
 	return data
 
 /datum/game_master/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -138,18 +172,12 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	switch(action)
 
 		//Spawn Section
-		if("toggle_click_spawn")
-			if(spawn_click_intercept)
-				spawn_click_intercept = FALSE
-				current_click_intercept_action = null
+		if("set_xeno_spawns")
+			var/new_number = text2num(params["value"])
+			if(!new_number)
 				return
 
-			spawn_click_intercept = TRUE
-			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
-			return
-
-		if("xeno_spawn_ai_toggle")
-			spawn_ai = !spawn_ai
+			xeno_spawn_count = clamp(new_number, 1, 10)
 			return
 
 		if("set_selected_xeno")
@@ -157,12 +185,18 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
 			return
 
-		if("set_xeno_spawns")
-			var/new_number = text2num(params["value"])
-			if(!new_number)
+		if("xeno_spawn_ai_toggle")
+			spawn_ai = !spawn_ai
+			return
+
+		if("toggle_click_spawn")
+			if(spawn_click_intercept)
+				reset_click_overrides()
 				return
 
-			xeno_spawn_count = clamp(new_number, 1, 10)
+			reset_click_overrides()
+			spawn_click_intercept = TRUE
+			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
 			return
 
 		if("delete_all_xenos")
@@ -174,13 +208,28 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			return
 
+		//Behavior Section
+		if("set_selected_behavior")
+			selected_behavior = params["new_behavior"]
+			return
+
+		if("toggle_click_behavior")
+			if(behavior_click_intercept)
+				reset_click_overrides()
+				return
+
+			reset_click_overrides()
+			behavior_click_intercept = TRUE
+			current_click_intercept_action = BEHAVIOR_CLICK_INTERCEPT_ACTION
+			return
+
 		//Objective Section
 		if("toggle_click_objective")
 			if(objective_click_intercept)
-				objective_click_intercept = FALSE
-				current_click_intercept_action = null
+				reset_click_overrides()
 				return
 
+			reset_click_overrides()
 			objective_click_intercept = TRUE
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
@@ -222,6 +271,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
+	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
 
 /datum/game_master/ui_status(mob/user, datum/ui_state/state)
@@ -257,6 +307,18 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			for(var/i = 1 to xeno_spawn_count)
 				new spawning_xeno_type(spawn_turf, null, XENO_HIVE_NORMAL, !spawn_ai)
 
+			return TRUE
+
+		if(BEHAVIOR_CLICK_INTERCEPT_ACTION)
+			var/behavior_type = SELECTABLE_XENO_BEHAVIORS_ASSOC[selected_behavior]
+
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+				if(object.datum_components[behavior_type])
+					var/component_to_remove = object.datum_components[behavior_type]
+					qdel(component_to_remove)
+				return TRUE
+
+			object.AddComponent(behavior_type)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
@@ -315,16 +377,25 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return TRUE
 
 		else
-			if(LAZYACCESS(modifiers, MIDDLE_CLICK) && (object.type in submenu_types))
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
 					if(submenu.referenced_atom == object)
 						submenu.tgui_interact(user)
 						return TRUE
 
-				var/new_menu_type = submenu_types[object.type]
+				for(var/submenu_type in submenu_types)
+					if(istype(object, submenu_type))
+						var/new_submenu_type = submenu_types[submenu_type]
+						current_submenus += new new_submenu_type(user, object)
+						return TRUE
 
-				current_submenus += new new_menu_type(user, object)
 				return TRUE
+
+/datum/game_master/proc/reset_click_overrides()
+	spawn_click_intercept = FALSE
+	objective_click_intercept = FALSE
+	behavior_click_intercept = FALSE
+	current_click_intercept_action = null
 
 /datum/game_master/proc/remove_objective(datum/destroying_datum)
 	SIGNAL_HANDLER
@@ -335,11 +406,19 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			GLOB.game_master_objectives.Remove(list(cycled_objective))
 			UnregisterSignal(objective_object, COMSIG_PARENT_QDELETING)
 
+
+
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
 #undef DEFAULT_XENO_AMOUNT_TO_SPAWN
+
 #undef OBJECTIVE_NUMBER_OPTIONS
 #undef OBJECTIVE_COLOR_OPTIONS
 #undef OBJECTIVE_COLOR_OPTIONS_ASSOC
+
+#undef DEFAULT_BEHAVIOR_STRING
+#undef SELECTABLE_XENO_BEHAVIORS
+#undef SELECTABLE_XENO_BEHAVIORS_ASSOC
+
 #undef SPAWN_CLICK_INTERCEPT_ACTION
 #undef OBJECTIVE_CLICK_INTERCEPT_ACTION

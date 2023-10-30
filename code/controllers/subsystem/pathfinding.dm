@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 				if(length(L))
 					for(var/i in L)
 						var/atom/A = i
-						distance_between += A.xeno_ai_obstacle(X, direction)
+						distance_between += A.xeno_ai_obstacle(X, direction, target)
 
 				if(distance_between < distances[neighbor])
 					distances[neighbor] = distance_between

@@ -10,6 +10,9 @@
 	/// Whether this action gets added to AI xenos
 	var/default_ai_action = FALSE
 
+	/// Chance of use per tick applicable tick
+	var/ai_prob_chance = 80
+
 	// Cooldown
 	/// Cooldown of the ability (do not use the cooldown var)
 	/// Probably should only have the cooldown var, but that is for another rework

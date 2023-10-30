@@ -220,11 +220,15 @@
 										// (note that if a collided atom does not match any of the key types, defaults to the appropriate X_launch_collision proc)
 
 	default_ai_action = TRUE
-	var/prob_chance = 80
 
 /datum/action/xeno_action/activable/pounce/process_ai(mob/living/carbon/xenomorph/pouncing_xeno, delta_time)
-	if(get_dist(pouncing_xeno, pouncing_xeno.current_target) > distance || !DT_PROB(prob_chance, delta_time))
-		return
+	. = ..()
+
+	if(get_dist(pouncing_xeno, pouncing_xeno.current_target) > distance)
+		return FALSE
+
+	if(!DT_PROB(ai_prob_chance, delta_time))
+		return FALSE
 
 	var/turf/last_turf = pouncing_xeno.loc
 	var/clear = TRUE
@@ -240,9 +244,10 @@
 	pouncing_xeno.remove_temp_pass_flags(PASS_OVER_THROW_MOB)
 
 	if(!clear)
-		return
+		return FALSE
 
 	use_ability_async(pouncing_xeno.current_target)
+	return TRUE
 
 /datum/action/xeno_action/activable/pounce/New()
 	. = ..()

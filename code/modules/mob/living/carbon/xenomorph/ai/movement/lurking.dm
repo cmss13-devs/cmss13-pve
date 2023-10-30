@@ -31,6 +31,8 @@
 
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
+	start_lurking()
+
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
 
 /datum/xeno_ai_movement/linger/lurking/ai_move_idle(delta_time)
