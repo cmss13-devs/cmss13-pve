@@ -1,5 +1,5 @@
 
-/// As long as this toggled xeno will try and steal crit marines to their "home"
+/// As long as this toggled xenos will try and steal crit marines to nest them on nearest ai_hive landmark. This can be toggled by game masters.
 /client/proc/toggle_xeno_kidnapping()
 	set name = "Toggle Xeno Kidnapping"
 	set category = "Game Master"
