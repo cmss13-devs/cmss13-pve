@@ -92,3 +92,8 @@
 		return 0
 
 	return FIRE_PENALTY
+
+// HOLES
+/obj/effect/acid_hole/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	X.do_click(src, "", list())
+	return TRUE
