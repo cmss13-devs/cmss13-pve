@@ -18,7 +18,7 @@
 // AIRLOCK
 /obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(locked || welded || isElectrified())
-		return INFINITY
+		return ..()
 	return DOOR_PENALTY
 
 /obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
