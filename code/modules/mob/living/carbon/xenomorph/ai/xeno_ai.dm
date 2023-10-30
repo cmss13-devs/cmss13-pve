@@ -88,7 +88,6 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	if(get_active_hand())
 		swap_hand()
 
-	var/turf/target_turf = get_turf(current_target)
 	if(stat_check && GLOB.xeno_kidnapping)
 		if(pulling)
 			if(ai_move_hive(delta_time))
@@ -99,7 +98,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 			ai_move_idle(delta_time)
 			return TRUE
 
-		if(get_dist(target_turf, src) <= 1)
+		if(get_dist(current_target, src) <= 1)
 			INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
 			face_atom(current_target)
 			swap_hand()
