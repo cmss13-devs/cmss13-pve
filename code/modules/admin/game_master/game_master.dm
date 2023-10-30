@@ -315,15 +315,18 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return TRUE
 
 		else
-			if(LAZYACCESS(modifiers, MIDDLE_CLICK) && (object.type in submenu_types))
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
 					if(submenu.referenced_atom == object)
 						submenu.tgui_interact(user)
 						return TRUE
 
-				var/new_menu_type = submenu_types[object.type]
+				for(var/submenu_type in submenu_types)
+					if(istype(object, submenu_type))
+						var/new_submenu_type = submenu_types[submenu_type]
+						current_submenus += new new_submenu_type(user, object)
+						return TRUE
 
-				current_submenus += new new_menu_type(user, object)
 				return TRUE
 
 /datum/game_master/proc/remove_objective(datum/destroying_datum)
