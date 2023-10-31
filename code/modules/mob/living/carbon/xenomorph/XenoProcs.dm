@@ -750,7 +750,7 @@
 
 	if(!locate(dir_to_nest) in GLOB.cardinals)
 		to_chat(src, SPAN_XENONOTICE("The host must be directly next to the wall its being nested on!"))
-		step(host_to_nest, turn(dir_to_nest, pick(45,-45)))
+		step_to(host_to_nest, src)
 		return
 
 	for(var/obj/structure/bed/nest/preexisting_nest in get_turf(host_to_nest))

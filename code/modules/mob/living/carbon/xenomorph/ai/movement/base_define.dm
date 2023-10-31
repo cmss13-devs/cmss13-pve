@@ -121,6 +121,10 @@
 		if(!potential_nest.weeds)
 			continue
 
+		var/mob/living/carbon/xenomorph/xeno = locate() in potential_nest
+		if(xeno && xeno != capping_xeno)
+			continue
+
 		var/obj/structure/bed/nest/preexisting_nest = locate() in potential_nest
 		if(preexisting_nest && preexisting_nest.buckled_mob)
 			continue
