@@ -7,8 +7,6 @@
 	var/max_distance_from_home = 15
 	var/home_locate_range = 15
 	var/turf/home_turf
-	var/obj/effect/landmark/ai_hive/hive_landmark
-
 
 /datum/xeno_ai_movement/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
@@ -74,38 +72,37 @@
 /datum/xeno_ai_movement/proc/ai_move_hive(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/retreating_xeno = parent
+
 	if(retreating_xeno.throwing)
 		return
 
 	var/shortest_distance = INFINITY
-	var/obj/effect/landmark/ai_hive/hive
-	if(!hive_landmark)
-		for(var/obj/effect/landmark/ai_hive/potential_hive in world)
-			if(potential_hive.z != retreating_xeno.z)
-				continue
+	var/obj/effect/landmark/ai_hive/closest_hive
+	for(var/obj/effect/landmark/ai_hive/potential_hive in GLOB.ai_hive_landmarks)
+		if(potential_hive.z != retreating_xeno.z)
+			continue
 
-			var/xeno_to_potential_hive_distance = get_dist(retreating_xeno, potential_hive)
-			if(xeno_to_potential_hive_distance > shortest_distance)
-				continue
+		var/xeno_to_potential_hive_distance = get_dist(retreating_xeno, potential_hive)
+		if(xeno_to_potential_hive_distance > shortest_distance)
+			continue
 
-			hive = potential_hive
-			shortest_distance = xeno_to_potential_hive_distance
+		closest_hive = potential_hive
+		shortest_distance = xeno_to_potential_hive_distance
 
-		if(!hive)
-			return
+	if(!closest_hive)
+		return
 
-		hive_landmark = hive
+	if(get_dist(retreating_xeno, closest_hive) <= closest_hive.hive_radius)
+		return ai_strap_host(closest_hive, delta_time)
 
-	if(get_dist(retreating_xeno, hive_landmark) <= hive_landmark.hive_radius)
-		return ai_strap_host(delta_time)
-
-	var/turf/hive_turf = get_turf(hive_landmark)
+	var/turf/hive_turf = get_turf(closest_hive)
 	if(retreating_xeno.move_to_next_turf(hive_turf, world.maxx))
 		return TRUE
 
-/datum/xeno_ai_movement/proc/ai_strap_host(delta_time)
+/datum/xeno_ai_movement/proc/ai_strap_host(obj/effect/landmark/ai_hive/closest_hive, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/capping_xeno = parent
+
 	if(capping_xeno.throwing)
 		return
 
@@ -113,8 +110,11 @@
 	var/turf/weeded_wall
 
 	var/shortest_distance = INFINITY
-	for(var/turf/potential_nest as anything in RANGE_TURFS(hive_landmark.hive_radius, hive_landmark))
-		if(potential_nest.density || !potential_nest.weeds)
+	for(var/turf/potential_nest as anything in RANGE_TURFS(closest_hive.hive_radius, closest_hive))
+		if(potential_nest.density)
+			continue
+
+		if(!potential_nest.weeds)
 			continue
 
 		var/obj/structure/bed/nest/preexisting_nest = locate() in potential_nest
@@ -135,7 +135,7 @@
 		if(!potential_weeded_wall)
 			continue
 
-		var/hive_to_potential_nest_distance = get_dist(hive_landmark, potential_nest)
+		var/hive_to_potential_nest_distance = get_dist(closest_hive, potential_nest)
 		if(hive_to_potential_nest_distance > shortest_distance)
 			continue
 

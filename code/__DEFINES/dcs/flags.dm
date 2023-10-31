@@ -5,9 +5,6 @@
 /// Returned in PostTransfer to prevent transfer, similar to `COMPONENT_INCOMPATIBLE`
 #define COMPONENT_NOTRANSFER 2
 
-/// Returned in case we want to qdel our ai_behavior_override on /check_behavior_validity()
-#define OVERRIDE_BEHAVIOR_QDEL 2
-
 /// Return value to cancel attaching
 #define ELEMENT_INCOMPATIBLE 1
 

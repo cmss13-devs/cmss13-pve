@@ -1,24 +1,38 @@
 
-/datum/component/ai_behavior_override/kidnap
+/datum/component/ai_behavior_override/capture
 //	behavior_icon_state = "capture order"
 
-/datum/component/ai_behavior_override/kidnap/Initialize(...)
+/datum/component/ai_behavior_override/capture/Initialize(...)
 	. = ..()
 
-	if(!istype(parent, /mob) || isxeno(parent))
+	if(!istype(parent, /mob))
 		return COMPONENT_INCOMPATIBLE
 
-/datum/component/ai_behavior_override/kidnap/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
+	if(isxeno(parent))
+		return COMPONENT_INCOMPATIBLE
+
+/datum/component/ai_behavior_override/capture/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
 	. = ..()
 
-	var/stat = parent?:stat
-	var/mob/pulledby = parent?:pulledby
+	var/mob/parent_mob = parent
+
+	var/stat = parent_mob.stat
+	var/mob/pulledby = parent_mob.pulledby
 
 	if(stat == DEAD)
-		return OVERRIDE_BEHAVIOR_QDEL
+		qdel(src)
+		return FALSE
 
 	if(HAS_TRAIT(parent, TRAIT_NESTED))
-		return OVERRIDE_BEHAVIOR_QDEL
+		qdel(src)
+		return FALSE
+
+	if(!length(GLOB.ai_hive_landmarks))
+		for(var/client/game_master in GLOB.game_masters)
+			to_chat(game_master, SPAN_XENOBOLDNOTICE("Capture behavior requires a valid hive landmark (/obj/effect/landmark/ai_hive)"))
+
+		qdel(src)
+		return FALSE
 
 	if(distance > 10)
 		return FALSE
@@ -31,7 +45,7 @@
 
 	return TRUE
 
-/datum/component/ai_behavior_override/kidnap/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
+/datum/component/ai_behavior_override/capture/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	. = ..()
 
 	processing_xeno.current_target = parent
@@ -40,9 +54,9 @@
 	if(processing_xeno.get_active_hand())
 		processing_xeno.swap_hand()
 
-	var/datum/xeno_ai_movement/AI = processing_xeno.ai_movement_handler
+	var/datum/xeno_ai_movement/processing_xeno_movement = processing_xeno.ai_movement_handler
 	if(processing_xeno.pulling == parent)
-		AI.ai_move_hive(delta_time)
+		processing_xeno_movement.ai_move_hive(delta_time)
 		return TRUE
 
 	var/atom/movable/target = processing_xeno.current_target
@@ -53,15 +67,3 @@
 
 	processing_xeno.ai_move_target(delta_time)
 	return TRUE
-
-/*
-This is where we do our target setting and such, instead of moving in here:.
-If pulling our target should be the hive landmark so we just keep pulling all the way there
-If in certain range of hive landmark and are pulling we try to find a wall to place the person
-
-If we are not pulling we want to set target to the parent of this component so we walk towards the person
-If distance <= 1 we start pulling
-
-As a note you'll likely need to implement some sort of "target stat_check bypass" variable so we don't get our target cleaned up when he's unconscious
-
-*/

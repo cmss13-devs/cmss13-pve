@@ -13,6 +13,11 @@
 	claws_minimum = CLAW_TYPE_VERY_SHARP
 
 /turf/closed/wall/r_wall/attackby(obj/item/W, mob/user)
+	if(isxeno(user) && istype(W, /obj/item/grab))
+		var/obj/item/grab/attacker_grab = W
+		var/mob/living/carbon/xenomorph/user_as_xenomorph = user
+		user_as_xenomorph.do_nesting_host(attacker_grab.grabbed_thing, src)
+
 	if(hull)
 		return
 

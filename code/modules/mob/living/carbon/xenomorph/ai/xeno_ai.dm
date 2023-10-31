@@ -224,13 +224,14 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		var/distance = get_dist(src, cycled_override.parent)
 		var/validity = cycled_override.check_behavior_validity(src, distance)
 
-		if(validity == OVERRIDE_BEHAVIOR_QDEL)
-			qdel(cycled_override)
+		if(!validity)
 			continue
 
-		if(validity && distance < shortest_distance)
-			shortest_distance = distance
-			closest_valid_override = cycled_override
+		if(distance >= shortest_distance)
+			continue
+
+		shortest_distance = distance
+		closest_valid_override = cycled_override
 
 	return closest_valid_override
 
