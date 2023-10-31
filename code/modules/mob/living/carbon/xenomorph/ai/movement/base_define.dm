@@ -77,8 +77,12 @@
 		return
 
 	var/shortest_distance = INFINITY
-	var/obj/effect/landmark/ai_hive/closest_hive
-	for(var/obj/effect/landmark/ai_hive/potential_hive in GLOB.ai_hive_landmarks)
+	var/turf/closest_hive
+	var/hive_radius
+	for(var/datum/component/ai_behavior_override/hive/hive_component as anything in GLOB.ai_hives)
+		var/turf/potential_hive = hive_component.parent
+		hive_radius = hive_component.hive_radius
+
 		if(potential_hive.z != retreating_xeno.z)
 			continue
 
@@ -92,14 +96,14 @@
 	if(!closest_hive)
 		return
 
-	if(get_dist(retreating_xeno, closest_hive) <= closest_hive.hive_radius)
-		return ai_strap_host(closest_hive, delta_time)
+	if(get_dist(retreating_xeno, closest_hive) <= hive_radius)
+		return ai_strap_host(closest_hive, hive_radius, delta_time)
 
 	var/turf/hive_turf = get_turf(closest_hive)
 	if(retreating_xeno.move_to_next_turf(hive_turf, world.maxx))
 		return TRUE
 
-/datum/xeno_ai_movement/proc/ai_strap_host(obj/effect/landmark/ai_hive/closest_hive, delta_time)
+/datum/xeno_ai_movement/proc/ai_strap_host(turf/closest_hive, hive_radius, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/capping_xeno = parent
 
@@ -110,7 +114,7 @@
 	var/turf/weeded_wall
 
 	var/shortest_distance = INFINITY
-	for(var/turf/potential_nest as anything in RANGE_TURFS(closest_hive.hive_radius, closest_hive))
+	for(var/turf/potential_nest as anything in RANGE_TURFS(hive_radius, closest_hive))
 		if(potential_nest.density)
 			continue
 

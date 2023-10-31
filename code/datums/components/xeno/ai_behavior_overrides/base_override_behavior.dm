@@ -3,10 +3,10 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 /datum/component/ai_behavior_override
 
 	/// Icon file for the behavior attached to parent as game masters will see it
-	var/behavior_icon = 'icons/landmarks.dmi'
+	var/behavior_icon = 'icons/effects/game_master_xeno_behaviors.dmi'
 
 	/// Specific icon state for the behavior attached to parent as game masters will see it
-	var/behavior_icon_state = "x2"
+	var/behavior_icon_state = "should_not_see_this"
 
 	/// The actual image holder that sits on parent for game masters
 	var/image/behavior_image

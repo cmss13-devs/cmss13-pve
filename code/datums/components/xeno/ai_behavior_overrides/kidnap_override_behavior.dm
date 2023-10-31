@@ -1,6 +1,6 @@
 
 /datum/component/ai_behavior_override/capture
-//	behavior_icon_state = "capture order"
+	behavior_icon_state = "capture_order"
 
 /datum/component/ai_behavior_override/capture/Initialize(...)
 	. = ..()
@@ -27,9 +27,9 @@
 		qdel(src)
 		return FALSE
 
-	if(!length(GLOB.ai_hive_landmarks))
+	if(!length(GLOB.ai_hives))
 		for(var/client/game_master in GLOB.game_masters)
-			to_chat(game_master, SPAN_XENOBOLDNOTICE("Capture behavior requires a valid hive landmark (/obj/effect/landmark/ai_hive)"))
+			to_chat(game_master, SPAN_XENOBOLDNOTICE("Capture behavior requires a valid hive placed"))
 
 		qdel(src)
 		return FALSE
