@@ -7,7 +7,7 @@
 	no_weather_turf_icon_state = "strata_clearsky"
 
 	potential_weather_events = list(
-		/datum/weather_event/snow
+		/datum/weather_event/snow,
 	)
 
 /datum/weather_ss_map_holder/shivas_snowball/should_affect_area(area/A)
