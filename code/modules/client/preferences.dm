@@ -254,7 +254,7 @@ var/const/MAX_SAVE_SLOTS = 10
 				if(load_character())
 					return
 	if(!ooccolor)
-		ooccolor = CONFIG_GET(string/ooc_color_default)
+		ooccolor = CONFIG_GET(string/ooc_color_normal)
 	gender = pick(MALE, FEMALE)
 	real_name = random_name(gender)
 	gear = list()

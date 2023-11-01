@@ -46,7 +46,7 @@
 	else if(donator)
 		display_colour = prefs.ooccolor
 	if(!display_colour) // if invalid R_COLOR choice
-		display_colour = CONFIG_GET(string/ooc_color_default)
+		display_colour = CONFIG_GET(string/ooc_color_normal)
 
 	msg = process_chat_markup(msg, list("*"))
 	var/ooc_prefix = handle_ooc_prefix()
