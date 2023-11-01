@@ -86,4 +86,4 @@ PROBABILITY CALCULATIONS ARE HERE
 
 
 /// Special blockers for pathfinding or obstacle handling
-#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile)
+#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space)

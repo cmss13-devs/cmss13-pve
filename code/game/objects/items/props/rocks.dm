@@ -10,6 +10,7 @@
 	icon_state = "rock"//go figure
 	desc = "A solidified collection of local minerals. When melted, becomes a substance best known as lava."
 
+	unslashable = TRUE
 	opacity = FALSE
 	density = TRUE
 	var/dir_list_full = list(1,2,4,8,5,6,9,10)

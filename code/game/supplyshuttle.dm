@@ -50,6 +50,7 @@ var/datum/controller/supply/supply_controller = new()
 	gender = PLURAL
 	density = FALSE
 	anchored = TRUE
+	unslashable = TRUE
 	layer = MOB_LAYER
 	var/collide_message_busy // Timer to stop collision spam
 

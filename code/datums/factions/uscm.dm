@@ -75,7 +75,7 @@
 				marine_rk = "co"
 				border_rk = "command"
 			if(JOB_SO)
-				marine_rk = "aso" //buffed by PvE CM
+				marine_rk = "wo_co"
 				border_rk = "command"
 			if(JOB_AUXILIARY_OFFICER)
 				marine_rk = "aso"

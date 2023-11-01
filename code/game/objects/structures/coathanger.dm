@@ -3,6 +3,7 @@
 	desc = "Rack that holds coats."
 	icon = 'icons/obj/structures/props/misc.dmi'
 	icon_state = "coatrack0"
+	unslashable = TRUE
 	var/obj/item/clothing/suit/coat
 	var/list/allowed = list(/obj/item/clothing/suit/storage/labcoat, /obj/item/clothing/suit/storage/det_suit, /obj/item/clothing/suit/storage/bomber, /obj/item/clothing/suit/storage/bomber/alt)
 

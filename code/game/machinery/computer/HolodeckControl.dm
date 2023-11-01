@@ -94,6 +94,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "stool"
 	anchored = TRUE
+	unslashable = TRUE
 	flags_atom = FPRINT
 
 
@@ -111,6 +112,7 @@
 	density = TRUE
 	layer = WINDOW_LAYER
 	anchored = TRUE
+	unslashable = TRUE
 	flags_atom = ON_BORDER
 
 /obj/structure/holowindow/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -134,6 +136,7 @@
 	icon_state = "hoop"
 	anchored = TRUE
 	density = TRUE
+	unslashable = TRUE
 	throwpass = 1
 	var/side = ""
 	var/id = ""
