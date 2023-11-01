@@ -11,6 +11,12 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	/// The actual image holder that sits on parent for game masters
 	var/image/behavior_image
 
+	/// The xenos currently handling this task
+	var/currently_assigned
+
+	/// How many xenos we want assigned to this task at max
+	var/max_assigned = 3
+
 /datum/component/ai_behavior_override/Initialize(...)
 	. = ..()
 
@@ -19,7 +25,9 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	behavior_image = new(behavior_icon, parent, behavior_icon_state, layer = ABOVE_FLY_LAYER)
 
 	for(var/client/game_master in GLOB.game_masters)
-		game_master.images += behavior_image
+		game_master.images |= behavior_image
+
+	currently_assigned = list()
 
 /datum/component/ai_behavior_override/Destroy(force, silent, ...)
 	GLOB.all_ai_behavior_overrides -= src
@@ -28,15 +36,21 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 		game_master.images -= behavior_image
 
 	QDEL_NULL(behavior_image)
+	currently_assigned = null
 
 	. = ..()
 
 /// Override this to check if we want our behavior to be valid for the checked_xeno, passes the common factor of "distance" which is the distance between the checked_xeno and src parent
 /datum/component/ai_behavior_override/proc/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
-	return FALSE
+	if(length(currently_assigned) >= max_assigned && !(checked_xeno in currently_assigned))
+		return FALSE
+
+	return TRUE
 
 /// Processes what we want this behavior to do, return FALSE if we want to continue in the process_ai() proc or TRUE if we want to handle everything and have process_ai() return
 /datum/component/ai_behavior_override/proc/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 
-	return FALSE
+	currently_assigned |= processing_xeno
+
+	return TRUE

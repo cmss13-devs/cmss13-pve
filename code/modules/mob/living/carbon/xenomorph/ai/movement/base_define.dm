@@ -114,7 +114,7 @@
 	var/turf/weeded_wall
 
 	var/shortest_distance = INFINITY
-	for(var/turf/potential_nest as anything in RANGE_TURFS(hive_radius, closest_hive))
+	for(var/turf/potential_nest as anything in shuffle(RANGE_TURFS(hive_radius, closest_hive)))
 		if(potential_nest.density)
 			continue
 

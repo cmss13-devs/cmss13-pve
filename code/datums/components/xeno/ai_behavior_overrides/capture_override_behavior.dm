@@ -2,6 +2,8 @@
 /datum/component/ai_behavior_override/capture
 	behavior_icon_state = "capture_order"
 
+	max_assigned = 1
+
 /datum/component/ai_behavior_override/capture/Initialize(...)
 	. = ..()
 
@@ -13,6 +15,8 @@
 
 /datum/component/ai_behavior_override/capture/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
 	. = ..()
+	if(!.)
+		return
 
 	var/mob/parent_mob = parent
 
@@ -47,6 +51,8 @@
 
 /datum/component/ai_behavior_override/capture/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	. = ..()
+	if(!.)
+		return
 
 	processing_xeno.current_target = parent
 	processing_xeno.resting = FALSE
