@@ -12,7 +12,7 @@
 
 	indestructible = TRUE
 	var/defense_type = /obj/structure/machinery/defenses
-	var/deployment_time = 3 SECONDS
+	var/deployment_time = (0.5 SECONDS)
 
 	var/dropped = 1
 	var/obj/structure/machinery/defenses/TR
