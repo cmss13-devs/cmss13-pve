@@ -41,16 +41,8 @@
 	var/display_colour = GLOB.ooc_color_override
 	if(!display_colour)
 		display_colour = CONFIG_GET(string/ooc_color_normal)
-	if(admin_holder && !admin_holder.fakekey)
-		display_colour = CONFIG_GET(string/ooc_color_other)
-		if(admin_holder.rights & R_DEBUG)
-			display_colour = CONFIG_GET(string/ooc_color_debug)
-		if(admin_holder.rights & R_MOD)
-			display_colour = CONFIG_GET(string/ooc_color_mods)
-		if(admin_holder.rights & R_ADMIN)
-			display_colour = CONFIG_GET(string/ooc_color_admin)
-		if(admin_holder.rights & R_COLOR)
-			display_colour = prefs.ooccolor
+	if(admin_holder && !admin_holder.fakekey && admin_holder.rights & R_COLOR)
+		display_colour = prefs.ooccolor
 	else if(donator)
 		display_colour = prefs.ooccolor
 	if(!display_colour) // if invalid R_COLOR choice
