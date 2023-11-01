@@ -204,9 +204,6 @@
 	walltype = WALL_REINFORCED
 	hull = 1
 
-/turf/closed/wall/r_wall/unmeltable/attackby() //This should fix everything else. No cables, etc
-	return
-
 //Chigusa
 
 /turf/closed/wall/r_wall/chigusa
@@ -249,15 +246,6 @@
 	walltype = WALL_REINFORCED
 	hull = 1
 
-/turf/closed/wall/r_wall/prison_unmeltable/ex_act(severity) //Should make it indestructible
-		return
-
-/turf/closed/wall/r_wall/prison_unmeltable/fire_act(exposed_temperature, exposed_volume)
-		return
-
-/turf/closed/wall/r_wall/prison_unmeltable/attackby() //This should fix everything else. No cables, etc
-		return
-
 //Biodome
 
 /turf/closed/wall/r_wall/biodome
@@ -271,16 +259,6 @@
 	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. Looks virtually indestructible."
 	icon_state = "h_dome"
 	hull = TRUE
-
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable/ex_act(severity) //Should make it indestructible
-		return
-
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable/fire_act(exposed_temperature, exposed_volume)
-		return
-
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable/attackby() //This should fix everything else. No cables, etc
-		return
-
 
 /// Destructible elevator walls, for when you want the elevator to act as a prop rather than an actual elevator
 /turf/closed/wall/r_wall/elevator

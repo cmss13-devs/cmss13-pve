@@ -143,13 +143,13 @@
 		if(!potential_weeded_wall)
 			continue
 
-		var/hive_to_potential_nest_distance = get_dist(closest_hive, potential_nest)
-		if(hive_to_potential_nest_distance > shortest_distance)
+		var/xeno_to_potential_nest_distance = get_dist(capping_xeno, potential_nest)
+		if(xeno_to_potential_nest_distance > shortest_distance)
 			continue
 
 		nest_turf = potential_nest
 		weeded_wall = potential_weeded_wall
-		shortest_distance = hive_to_potential_nest_distance
+		shortest_distance = xeno_to_potential_nest_distance
 
 	if(!nest_turf)
 		return
