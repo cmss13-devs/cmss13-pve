@@ -19,8 +19,7 @@
 	name = "Dropship Lockdown";
 	normaldoorcontrol = 3;
 	pixel_y = -19;
-	req_one_access_txt = "3;22";
-	
+	req_one_access_txt = "3;22"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
