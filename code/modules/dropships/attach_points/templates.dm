@@ -80,6 +80,47 @@
 	transverse  =  3
 	long    =  0
 
+/obj/effect/attach_point/weapon/midway
+	ship_tag = DROPSHIP_MIDWAY
+
+/obj/effect/attach_point/weapon/midway/left_wing
+	name = "port wing weapon attach point"
+	icon_state = "equip_base_l_wing"
+	attach_id = 1
+	dir = WEST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  = -3
+	long    =  0
+
+/obj/effect/attach_point/weapon/midway/left_fore
+	name = "port fore weapon attach point"
+	attach_id = 2
+	dir = NORTH
+	firing_arc_min = -6
+	firing_arc_max =  0
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/midway/right_fore
+	name = "starboard fore weapon attach point"
+	attach_id = 3
+	dir = NORTH
+	firing_arc_min =  0
+	firing_arc_max =  6
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/midway/right_wing
+	name = "starboard wing weapon attach point"
+	icon_state = "equip_base_r_wing";
+	attach_id = 4
+	dir = EAST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  =  3
+	long    =  0
+
 /obj/effect/attach_point/crew_weapon
 	name = "crew compartment attach point"
 	base_category = DROPSHIP_CREW_WEAPON
@@ -89,6 +130,9 @@
 
 /obj/effect/attach_point/crew_weapon/dropship2
 	ship_tag = DROPSHIP_NORMANDY
+
+/obj/effect/attach_point/crew_weapon/midway
+	ship_tag = DROPSHIP_MIDWAY
 
 /obj/effect/attach_point/electronics
 	name = "electronic system attach point"
@@ -102,6 +146,9 @@
 /obj/effect/attach_point/electronics/dropship2
 	ship_tag = DROPSHIP_NORMANDY
 
+/obj/effect/attach_point/electronics/midway
+	ship_tag = DROPSHIP_MIDWAY
+
 /obj/effect/attach_point/fuel
 	name = "engine system attach point"
 	icon = 'icons/obj/structures/props/almayer_props64.dmi'
@@ -114,6 +161,9 @@
 /obj/effect/attach_point/fuel/dropship2
 	ship_tag = DROPSHIP_NORMANDY
 
+/obj/effect/attach_point/fuel/midway
+	ship_tag = DROPSHIP_MIDWAY
+
 /obj/effect/attach_point/computer
 	base_category = DROPSHIP_COMPUTER
 
@@ -122,3 +172,6 @@
 
 /obj/effect/attach_point/computer/dropship2
 	ship_tag = DROPSHIP_NORMANDY
+
+/obj/effect/attach_point/computer/midway
+	ship_tag = DROPSHIP_MIDWAY
