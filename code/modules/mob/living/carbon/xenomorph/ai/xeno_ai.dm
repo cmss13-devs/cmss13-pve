@@ -15,8 +15,6 @@
 	var/ai_timeout_time = 0
 	var/ai_timeout_period = 2 SECONDS
 
-	var/ai_target_xenohost = TRUE
-
 	var/list/datum/action/xeno_action/registered_ai_abilities = list()
 
 	var/datum/xeno_ai_movement/ai_movement_handler

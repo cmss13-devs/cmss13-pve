@@ -18,4 +18,4 @@
 	freeze_play_sound = FALSE
 	can_be_shield_blocked = TRUE
 
-	prob_chance = 45 // AI
+	ai_prob_chance = 45

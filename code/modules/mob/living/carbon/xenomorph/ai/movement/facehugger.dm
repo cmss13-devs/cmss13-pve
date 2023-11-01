@@ -1,5 +1,6 @@
 /datum/xeno_ai_movement/linger/facehugger/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
+
 	if(moving_xeno.action_busy)
 		return
 
@@ -39,3 +40,9 @@
 #undef REENGAGE_COOLDOWN
 #undef FIND_NEW_TRAVEL_TURF_LIMIT
 #undef FIND_NEW_TRAVEL_RADIUS_MAX
+
+/mob/living/carbon/xenomorph/facehugger/check_mob_target(mob/living/carbon/human/checked_human)
+	if(checked_human.status_flags & XENO_HOST)
+		return FALSE
+
+	return ..()

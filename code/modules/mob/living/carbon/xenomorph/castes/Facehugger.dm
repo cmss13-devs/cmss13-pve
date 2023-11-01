@@ -7,7 +7,7 @@
 	melee_damage_upper = 5
 	max_health = XENO_HEALTH_LARVA
 	caste_desc = "Ewwww, that's disgusting!"
-	speed = XENO_SPEED_TIER_8
+	speed = XENO_SPEED_TIER_10
 
 	evolution_allowed = FALSE
 	can_be_revived = FALSE
@@ -61,7 +61,6 @@
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
 
 	ai_range = 24
-	ai_target_xenohost = FALSE
 	var/linger_range = 8
 	var/linger_deviation = 1
 
