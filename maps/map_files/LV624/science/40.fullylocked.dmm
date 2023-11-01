@@ -409,7 +409,7 @@
 	},
 /area/lv624/lazarus/research)
 "oe" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_id = "Research Dome";
 	pixel_y = 24

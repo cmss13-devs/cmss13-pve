@@ -17167,7 +17167,7 @@
 	},
 /area/prison/security/checkpoint/highsec/n)
 "aWF" = (
-/obj/item/phone,
+/obj/item/handset,
 /obj/structure/surface/table/reinforced,
 /turf/open/floor/prison{
 	dir = 9;
@@ -18315,7 +18315,7 @@
 /turf/open/floor/prison,
 /area/prison/kitchen)
 "bag" = (
-/obj/item/phone,
+/obj/item/handset,
 /obj/structure/surface/table/reinforced,
 /turf/open/floor{
 	icon_state = "hydrofloor"
@@ -20844,7 +20844,7 @@
 	},
 /area/prison/cellblock/vip)
 "bhq" = (
-/obj/item/phone,
+/obj/item/handset,
 /obj/structure/surface/table/reinforced,
 /turf/open/floor/prison{
 	icon_state = "cell_stripe"
@@ -23437,7 +23437,7 @@
 	},
 /area/prison/cellblock/vip)
 "boR" = (
-/obj/item/phone,
+/obj/item/handset,
 /obj/structure/surface/table/reinforced,
 /turf/open/floor/prison{
 	dir = 1;
@@ -37320,7 +37320,7 @@
 /turf/open/floor/prison,
 /area/prison/recreation/medsec)
 "cgm" = (
-/obj/item/phone,
+/obj/item/handset,
 /obj/structure/surface/table/reinforced,
 /turf/open/floor/prison,
 /area/prison/recreation/medsec)

@@ -10,6 +10,11 @@
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_LOAD_AMMO_BOXES
 
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/Initialize()
+	. = ..()
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+		malfunction()
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/vend_fail()
 	return
 
@@ -191,7 +196,7 @@
 				turf_to_vent_to = H.loc
 	return turf_to_vent_to
 
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/blend
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/cargo/blend
 	icon_state = "req_guns_wall"
 	tiles_with = list(
 		/obj/structure/window/framed/almayer,
@@ -208,6 +213,11 @@
 	req_access = list(ACCESS_MARINE_CARGO)
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_LOAD_AMMO_BOXES
+
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/Initialize()
+	. = ..()
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+		malfunction()
 
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/vend_fail()
 	return
@@ -295,7 +305,7 @@
 			updateUsrDialog()
 			return //We found our item, no reason to go on.
 
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/blend
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/cargo/blend
 		icon_state = "req_ammo_wall"
 		tiles_with = list(
 			/obj/structure/window/framed/almayer,
@@ -330,6 +340,11 @@
 	req_access = list(ACCESS_MARINE_CARGO)
 	vendor_theme = VENDOR_THEME_USCM
 	icon_state = "req_attach"
+
+/obj/structure/machinery/cm_vending/sorted/attachments/Initialize()
+	. = ..()
+	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+		malfunction()
 
 /obj/structure/machinery/cm_vending/sorted/attachments/vend_fail()
 	return

@@ -37,9 +37,6 @@
 	maxbodytemp = 323 //Above 50 Degrees Celcius
 	holder_type = /obj/item/holder/cat
 	mob_size = MOB_SIZE_SMALL
-	sight = SEE_MOBS
-	see_in_dark = 8
-	see_invisible = 15
 	black_market_value = 50
 	dead_black_market_value = 0
 	var/miaow_counter = 0

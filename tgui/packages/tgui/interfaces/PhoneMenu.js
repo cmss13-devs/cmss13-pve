@@ -15,10 +15,10 @@ export const PhoneMenu = (props, context) => {
 
 const GeneralPanel = (props, context) => {
   const { act, data } = useBackend(context);
-  const { availability } = data;
-  const available_transmitters = Object.keys(data.available_transmitters);
-  const transmitters = data.transmitters.filter((val1) =>
-    available_transmitters.includes(val1.phone_id)
+  const { do_not_disturb } = data;
+  const available_phones = Object.keys(data.available_phones);
+  const phones = data.phones.filter((val1) =>
+    available_phones.includes(val1.phone_id)
   );
 
   const [currentSearch, setSearch] = useLocalState(
@@ -34,8 +34,8 @@ const GeneralPanel = (props, context) => {
   );
 
   const categories = [];
-  for (let i = 0; i < transmitters.length; i++) {
-    let data = transmitters[i];
+  for (let i = 0; i < phones.length; i++) {
+    let data = phones[i];
     if (categories.includes(data.phone_category)) continue;
 
     categories.push(data.phone_category);
@@ -50,14 +50,14 @@ const GeneralPanel = (props, context) => {
   let dnd_tooltip = 'Do Not Disturb is DISABLED';
   let dnd_locked = 'No';
   let dnd_icon = 'volume-high';
-  if (availability === 1) {
+  if (do_not_disturb === 1) {
     dnd_tooltip = 'Do Not Disturb is ENABLED';
     dnd_icon = 'volume-xmark';
-  } else if (availability >= 2) {
+  } else if (do_not_disturb >= 2) {
     dnd_tooltip = 'Do Not Disturb is ENABLED (LOCKED)';
     dnd_locked = 'Yes';
     dnd_icon = 'volume-xmark';
-  } else if (availability < 0) {
+  } else if (do_not_disturb < 0) {
     dnd_tooltip = 'Do Not Disturb is DISABLED (LOCKED)';
     dnd_locked = 'Yes';
   }
@@ -88,7 +88,7 @@ const GeneralPanel = (props, context) => {
         <Stack.Item grow>
           <Section fill scrollable onComponentDidMount={(node) => node.focus()}>
             <Tabs vertical>
-              {transmitters.map((val) => {
+              {phones.map((val) => {
                 if (
                   val.phone_category !== currentCategory ||
                   !val.phone_id.toLowerCase().match(currentSearch)
@@ -140,9 +140,38 @@ const GeneralPanel = (props, context) => {
             icon={dnd_icon}
             fluid
             textAlign="center"
-            onClick={() => act('toggle_dnd')}
+            onClick={() => act('toggle_do_not_disturb')}
           />
         </Stack.Item>
+        {data.virtual_phone && (
+          <Stack.Item>
+            <Stack vertical fill>
+              <Stack.Item>
+                <Section title={data.calling_phone_id || 'Phone Control'} />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  content="Pick Up"
+                  color="good"
+                  fluid
+                  textAlign="center"
+                  disabled={!data.being_called}
+                  onClick={() => act('pick_up')}
+                />
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  content="Hang Up"
+                  color="red"
+                  fluid
+                  textAlign="center"
+                  disabled={!data.active_call}
+                  onClick={() => act('hang_up')}
+                />
+              </Stack.Item>
+            </Stack>
+          </Stack.Item>
+        )}
       </Stack>
     </Section>
   );

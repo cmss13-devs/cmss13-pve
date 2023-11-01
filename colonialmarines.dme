@@ -1,4 +1,4 @@
-s// DM Environment file for colonialmarines.dme.
+// DM Environment file for colonialmarines.dme.
 // All manual changes should be made outside the BEGIN_ and END_ blocks.
 // New source code should be placed in .dm files: choose File/New --> Code File.
 // BEGIN_INTERNALS
@@ -11,6 +11,7 @@ s// DM Environment file for colonialmarines.dme.
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include "code\__odlint.dm"
 #include "code\_byond_version_compat.dm"
 #include "code\_compile_options.dm"
 #include "code\_experiments.dm"
@@ -388,6 +389,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\datums\components\label.dm"
 #include "code\datums\components\orbiter.dm"
 #include "code\datums\components\overlay_lighting.dm"
+#include "code\datums\components\phone.dm"
 #include "code\datums\components\rename.dm"
 #include "code\datums\components\speed_modifier.dm"
 #include "code\datums\components\toxin_buildup.dm"
@@ -396,6 +398,10 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\datums\components\autofire\_automated_fire.dm"
 #include "code\datums\components\autofire\autofire.dm"
 #include "code\datums\components\xeno\shield_slash.dm"
+#include "code\datums\components\xeno\ai_behavior_overrides\attack_override_behavior.dm"
+#include "code\datums\components\xeno\ai_behavior_overrides\base_override_behavior.dm"
+#include "code\datums\components\xeno\ai_behavior_overrides\capture_override_behavior.dm"
+#include "code\datums\components\xeno\ai_behavior_overrides\hive_override_behavior.dm"
 #include "code\datums\construction\construction_template.dm"
 #include "code\datums\construction\xenomorph\construction_template_xenomorph.dm"
 #include "code\datums\decorators\decorator.dm"
@@ -657,6 +663,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_map_holders\lv624.dm"
 #include "code\datums\weather\weather_map_holders\new_varadero.dm"
+#include "code\datums\weather\weather_map_holders\shivas_snowball.dm"
 #include "code\datums\weather\weather_map_holders\sorokyne.dm"
 #include "code\datums\xeno_shields\xeno_shield.dm"
 #include "code\datums\xeno_shields\shield_types\crusher_shield.dm"
@@ -689,6 +696,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\game\area\chinook.dm"
 #include "code\game\area\Corsat.dm"
 #include "code\game\area\DesertDam.dm"
+#include "code\game\area\golden_arrow.dm"
 #include "code\game\area\IceColony.dm"
 #include "code\game\area\kutjevo.dm"
 #include "code\game\area\LV522_Chances_Claim.dm"
@@ -942,6 +950,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\game\machinery\vending\vendor_types\crew\sea.dm"
 #include "code\game\machinery\vending\vendor_types\crew\senior_officers.dm"
 #include "code\game\machinery\vending\vendor_types\crew\staff_officer.dm"
+#include "code\game\machinery\vending\vendor_types\crew\staff_officer_armory.dm"
 #include "code\game\machinery\vending\vendor_types\crew\synthetic.dm"
 #include "code\game\machinery\vending\vendor_types\crew\vehicle_crew.dm"
 #include "code\game\machinery\vending\vendor_types\squad_prep\squad_engineer.dm"
@@ -1365,6 +1374,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\admin\ToRban.dm"
 #include "code\modules\admin\game_master\game_master.dm"
 #include "code\modules\admin\game_master\game_master_submenu.dm"
+#include "code\modules\admin\game_master\toggle_join_xeno.dm"
 #include "code\modules\admin\game_master\game_master_submenu\vents.dm"
 #include "code\modules\admin\medal_panel\medals_panel.dm"
 #include "code\modules\admin\medal_panel\medals_panel_tgui.dm"
@@ -1584,8 +1594,8 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\cm_marines\equipment\weapons.dm"
 #include "code\modules\cm_marines\equipment\mortar\mortar_shells.dm"
 #include "code\modules\cm_marines\equipment\mortar\mortars.dm"
-#include "code\modules\cm_phone\internal_phone.dm"
-#include "code\modules\cm_phone\phone.dm"
+#include "code\modules\cm_phone\handset.dm"
+#include "code\modules\cm_phone\phone_base.dm"
 #include "code\modules\cm_preds\_yaut_defines.dm"
 #include "code\modules\cm_preds\falcon.dm"
 #include "code\modules\cm_preds\huntdata.dm"
@@ -1754,6 +1764,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\law\laws\major_crime.dm"
 #include "code\modules\law\laws\minor_crime.dm"
 #include "code\modules\law\laws\optional.dm"
+#include "code\modules\law\laws\precautionary_charge.dm"
 #include "code\modules\lighting\emissive_blocker.dm"
 #include "code\modules\lighting\lighting_area.dm"
 #include "code\modules\lighting\lighting_atom.dm"
@@ -1987,6 +1998,7 @@ s// DM Environment file for colonialmarines.dme.
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\drone.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\linger.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\linger_facehugger.dm"
+#include "code\modules\mob\living\carbon\xenomorph\ai\movement\lurking.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Boiler.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Burrower.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Carrier.dm"

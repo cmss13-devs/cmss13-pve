@@ -6,6 +6,7 @@
 	anchored = TRUE
 	density = TRUE
 	opacity = TRUE
+	unslashable = TRUE
 
 /obj/structure/bookcase/Initialize()
 	. = ..()
@@ -58,8 +59,6 @@
 			contents_explosion(severity)
 			deconstruct(FALSE)
 			return
-		else
-	return
 
 /obj/structure/bookcase/update_icon()
 	if(contents.len < 5)

@@ -1328,7 +1328,7 @@
 /obj/structure/machinery/computer/telecomms/monitor{
 	req_one_access_txt = "19;200"
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "Solaris Ridge";
 	phone_color = "yellow";
@@ -2958,7 +2958,7 @@
 "aiG" = (
 /obj/structure/surface/table,
 /obj/item/handcuffs,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "red";
 	phone_id = "Marshal Office"
@@ -7964,7 +7964,7 @@
 "awB" = (
 /obj/structure/surface/table/holotable/wood,
 /obj/item/reagent_container/food/drinks/coffee,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lambda Labs";
 	phone_color = "blue";
 	phone_id = "Administration"
@@ -9835,7 +9835,7 @@
 /obj/item/device/healthanalyzer,
 /obj/structure/pipes/vents/pump,
 /obj/item/reagent_container/spray/cleaner,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "green";
 	phone_id = "Clinic";
@@ -11088,7 +11088,7 @@
 "aFl" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "Eta Labs";
 	phone_id = "Observation";
@@ -14186,7 +14186,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "blue";
 	phone_id = "Administration"
@@ -14648,7 +14648,7 @@
 /area/bigredv2/caves/eta/storage)
 "aOQ" = (
 /obj/structure/surface/table,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Eta Labs";
 	phone_color = "Blue";
 	phone_id = "Director"
@@ -14778,7 +14778,7 @@
 /area/bigredv2/outside/hydroponics)
 "aPf" = (
 /obj/structure/surface/table,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Eta Labs";
 	phone_id = "Workshop"
 	},
@@ -15068,7 +15068,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/item/phone,
+/obj/item/handset,
 /turf/open/floor{
 	dir = 4;
 	icon_state = "warnwhite"
@@ -17370,7 +17370,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "blue";
 	phone_id = "Operations";
@@ -22512,7 +22512,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/reinforced,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lambda Labs";
 	phone_id = "Virology"
 	},
@@ -22833,7 +22833,7 @@
 /area/bigredv2/outside/filtration_plant)
 "boY" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "yellow";
 	phone_id = "Filtration";
@@ -23347,7 +23347,7 @@
 /obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "yellow";
 	phone_id = "Engineering";
@@ -24065,7 +24065,7 @@
 "bwr" = (
 /obj/structure/machinery/light,
 /obj/structure/surface/table,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "green";
 	phone_id = "Virology Lab"
@@ -24158,7 +24158,7 @@
 "bwQ" = (
 /obj/structure/surface/table,
 /obj/item/tool/screwdriver,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Eta Labs";
 	phone_color = "yellow";
 	phone_id = "Robotics"
@@ -25169,7 +25169,7 @@
 "bzF" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
-/obj/item/phone,
+/obj/item/handset,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "darkblue2"
@@ -27603,7 +27603,7 @@
 /area/bigredv2/caves_sw)
 "daB" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lambda Labs";
 	phone_id = "Xenobiology"
 	},
@@ -28788,7 +28788,7 @@
 	},
 /area/bigredv2/caves/eta/living)
 "fyO" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Solaris Ridge";
 	phone_color = "green";
 	phone_id = "Clinic Labs";
@@ -28898,7 +28898,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lambda Labs";
 	phone_id = "Surgery";
 	pixel_y = 24
@@ -29563,7 +29563,7 @@
 	},
 /area/bigredv2/outside/filtration_plant)
 "htp" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	do_not_disturb = 1;
 	dir = 4;
 	phone_category = "Lambda Labs";
@@ -31175,7 +31175,7 @@
 	},
 /area/bigredv2/caves/eta/xenobiology)
 "kyz" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	dir = 4;
 	phone_category = "Eta Labs";
 	phone_id = "Observation";
@@ -32691,7 +32691,7 @@
 /area/bigredv2/caves/mining)
 "ofJ" = (
 /obj/structure/surface/table,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Eta Labs";
 	phone_color = "red";
 	phone_id = "Security"
@@ -36454,7 +36454,7 @@
 /area/bigredv2/caves_research)
 "vBT" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_id = "Clinic Reception"
 	},
@@ -36812,7 +36812,7 @@
 /area/bigredv2/outside/w)
 "wry" = (
 /obj/structure/surface/table,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "blue";
 	phone_id = "Space Port"

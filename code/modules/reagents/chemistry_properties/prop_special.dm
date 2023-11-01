@@ -96,7 +96,7 @@
 		H.contract_disease(new /datum/disease/xeno_transformation(0),1) //This is the real reason PMCs are being sent to retrieve it.
 
 /datum/chem_property/special/DNA_Disintegrating/trigger()
-	SSticker.mode.get_specific_call("Weyland-Yutani Goon (Chemical Investigation Squad)", TRUE, FALSE, FALSE, holder.name, TRUE)
+	SSticker.mode.get_specific_call("Weyland-Yutani Goon (Chemical Investigation Squad)", TRUE, FALSE, holder.name)
 	chemical_data.update_credits(10)
 	message_admins("The research department has discovered DNA_Disintegrating in [holder.name] adding 10 bonus tech points.")
 	var/datum/techtree/tree = GET_TREE(TREE_MARINE)
@@ -369,3 +369,20 @@
 /datum/chem_property/special/firepenetrating/update_reagent()
 	holder.fire_penetrating = TRUE
 	..()
+
+/datum/chem_property/special/revitalizing
+	name = PROPERTY_REVITALIZING
+	code = "REV"
+	description = "For a period of time, revitalizes the main systems of the body and prevents unconciousness."
+	rarity = PROPERTY_ADMIN
+	category = PROPERTY_TYPE_STIMULANT
+	value = 666
+
+/datum/chem_property/special/revitalizing/reagent_added(mob/living/M)
+	if(!ishuman(M))
+		return
+	M.status_flags &= ~CANKNOCKOUT
+	M.knocked_out = 0
+
+/datum/chem_property/special/revitalizing/on_delete(mob/living/M)
+	M.status_flags |= CANKNOCKOUT

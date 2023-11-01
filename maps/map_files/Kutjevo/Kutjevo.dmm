@@ -3336,7 +3336,7 @@
 /turf/open/floor/almayer/research/containment/floor2,
 /area/kutjevo/interior/power)
 "ewF" = (
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 1;
 	pixel_y = 4
 	},
@@ -8059,7 +8059,7 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/phone{
+/obj/item/handset{
 	pixel_x = 5;
 	pixel_y = -4
 	},

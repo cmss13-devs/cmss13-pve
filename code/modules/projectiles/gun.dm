@@ -1248,7 +1248,7 @@ and you're good to go.
 		return TRUE //Nothing else to do here, time to cancel out.
 	return TRUE
 
-#define EXECUTION_CHECK (attacked_mob.stat == UNCONSCIOUS || attacked_mob.is_mob_restrained()) && ((user.a_intent == INTENT_GRAB)||(user.a_intent == INTENT_DISARM))
+#define EXECUTION_CHECK (attacked_mob.stat == UNCONSCIOUS || attacked_mob.is_mob_restrained()) && ((user.a_intent == INTENT_GRAB) || (user.a_intent == INTENT_DISARM)) && !(length(user.faction_group & attacked_mob.faction_group)) && ishuman(attacked_mob)
 
 /obj/item/weapon/gun/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!proximity_flag)

@@ -9,7 +9,6 @@
 	powernet_name = "almayer"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_interval = 30
-	//soundscape_playlist = list('sound/effects/xylophone1.ogg', 'sound/effects/xylophone2.ogg', 'sound/effects/xylophone3.ogg')
 	ambience_exterior = AMBIENCE_ALMAYER
 	ceiling_muffle = FALSE
 
@@ -64,7 +63,6 @@
 	fake_zlevel = 1 // upperdeck
 	soundscape_playlist = SCAPE_PL_CIC
 	soundscape_interval = 50
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/cichallway
 	name = "\improper Secure Command Hallway"
@@ -77,10 +75,6 @@
 	fake_zlevel = 1 // upperdeck
 	soundscape_playlist = SCAPE_PL_ARES
 	soundscape_interval = 120
-	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
-	can_build_special = FALSE
-	is_resin_allowed = FALSE
-	resin_construction_allowed = FALSE
 
 /area/almayer/command/securestorage
 	name = "\improper Secure Storage"
@@ -96,13 +90,11 @@
 	name = "\improper Telecommunications"
 	icon_state = "tcomms"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/self_destruct
 	name = "\improper Self-Destruct Core Room"
 	icon_state = "selfdestruct"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/command/corporateliason
 	name = "\improper Corporate Liaison Office"
@@ -548,11 +540,6 @@
 	icon_state = "livingspace"
 	fake_zlevel = 1 // upperdeck
 
-/area/almayer/living/platoon_commander_rooms
-	name = "\improper Platoon Commander's Rooms"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
 /area/almayer/living/chapel
 	name = "\improper Almayer Chapel"
 	icon_state = "officerrnr"
@@ -666,17 +653,6 @@
 	icon_state = "alpha"
 	fake_zlevel = 2 // lowerdeck
 
-/area/almayer/squads/alpha/platoon_sergeant
-	name = "\improper Alpha Platoon Sergeant Office"
-
-/area/almayer/squads/alpha/squad_one
-	name = "\improper Alpha Squad One Preparation"
-	icon_state = "charlie"
-
-/area/almayer/squads/alpha/squad_two
-	name = "\improper Alpha Squad Two Preparation"
-	icon_state = "delta"
-
 /area/almayer/squads/bravo
 	name = "\improper Squad Bravo Preparation"
 	icon_state = "bravo"
@@ -749,19 +725,16 @@
 /area/almayer/ert_port
 	name = "\improper ERT Docking Port"
 	icon_state = "lifeboat"
-	flags_area = AREA_NOTUNNEL
 
 /area/space/almayer/lifeboat_dock
 	name = "\improper Lifeboat Docking Port"
 	icon_state = "lifeboat"
 	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/almayer/evacuation
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttle2"
 	requires_power = 0
-	flags_area = AREA_NOTUNNEL
 
 //Placeholder.
 /area/almayer/evacuation/pod1

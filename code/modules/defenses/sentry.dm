@@ -530,6 +530,8 @@
 	icon_state = "premade" //for the map editor only
 	faction_group = FACTION_LIST_MARINE
 	static = TRUE
+	fire_delay = 5
+	burst = 1
 
 /obj/structure/machinery/defenses/sentry/premade/Initialize()
 	. = ..()

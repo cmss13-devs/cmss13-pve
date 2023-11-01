@@ -4750,7 +4750,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_id = "Research Dome";
 	pixel_y = 24
@@ -5744,7 +5744,7 @@
 /area/lv624/lazarus/sleep_female)
 "aBe" = (
 /obj/structure/surface/table,
-/obj/item/phone,
+/obj/item/handset,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor{
 	dir = 9;
@@ -8068,7 +8068,7 @@
 	},
 /area/lv624/lazarus/main_hall)
 "aJC" = (
-/obj/item/phone{
+/obj/item/handset{
 	desc = "A model of an ancient Earth communication device.";
 	force = 8
 	},
@@ -8640,7 +8640,7 @@
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lazarus Landing";
 	phone_color = "red";
 	phone_id = "Marshal Office"
@@ -11548,7 +11548,7 @@
 "aXt" = (
 /obj/structure/surface/rack,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_color = "yellow";
 	phone_id = "Engineering";
@@ -11861,7 +11861,7 @@
 "aYJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/trash/chips,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lazarus Landing";
 	phone_color = "blue";
 	phone_id = "Director's Office"
@@ -14986,7 +14986,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "hXt" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_id = "Lakeside Bar";
 	pixel_y = 32
@@ -17005,7 +17005,7 @@
 	},
 /area/lv624/ground/barrens/west_barrens)
 "nrP" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_id = "Cargo";
 	pixel_y = 24
@@ -18086,7 +18086,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lazarus Landing";
 	phone_id = "Medbay"
 	},
@@ -18254,7 +18254,7 @@
 	pixel_x = 25;
 	pixel_y = -5
 	},
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_color = "blue";
 	phone_id = "Corporate Office";
@@ -19042,7 +19042,7 @@
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/colony/north_tcomms_road)
 "rVH" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_color = "yellow";
 	phone_id = "Communications";
@@ -20048,7 +20048,7 @@
 	},
 /area/lv624/ground/caves/sand_temple)
 "ulp" = (
-/obj/structure/transmitter/colony_net{
+/obj/structure/phone_base/colony_net{
 	phone_category = "Lazarus Landing";
 	phone_color = "red";
 	phone_id = "Secure Storage";

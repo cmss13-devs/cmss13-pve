@@ -5,6 +5,7 @@
 	icon_state = "latticefull"
 	density = FALSE
 	anchored = TRUE
+	unslashable = TRUE
 	layer = LATTICE_LAYER
 	plane = FLOOR_PLANE
 	// flags = CONDUCT
@@ -43,8 +44,6 @@
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			deconstruct(FALSE)
 			return
-		else
-	return
 
 /obj/structure/lattice/attackby(obj/item/C as obj, mob/user as mob)
 

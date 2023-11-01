@@ -149,6 +149,9 @@
 		if(W.attack_speed && !src.contains(A)) //Not being worn or carried in the user's inventory somewhere, including internal storages.
 			next_move += W.attack_speed
 
+		if(SEND_SIGNAL(A, COMSIG_ATOM_MOB_ATTACKBY, W, src) & COMPONENT_CANCEL_ATTACKBY)
+			return
+
 		if(!A.attackby(W, src, mods) && A && !QDELETED(A))
 			// in case the attackby slept
 			if(!W)

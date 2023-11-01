@@ -164,6 +164,7 @@
 	anchored = TRUE
 	opacity = TRUE
 	density = TRUE
+	unslashable = TRUE
 	icon = 'icons/obj/apc.dmi'
 	icon_state = "apc"
 

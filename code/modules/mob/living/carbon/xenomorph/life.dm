@@ -539,6 +539,8 @@ Make sure their actual health updates immediately.*/
 	if(!lying)
 		update_canmove()
 
+	SEND_SIGNAL(src, COMSIG_XENO_HANDLE_CRIT)
+
 /mob/living/carbon/xenomorph/proc/handle_luminosity()
 	var/new_luminosity = 0
 	if(caste)

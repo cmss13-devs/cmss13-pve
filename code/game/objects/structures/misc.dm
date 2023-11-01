@@ -5,6 +5,7 @@
 	desc = "A stand with the empty body of a cyborg bolted to it."
 	density = TRUE
 	anchored = TRUE
+	unslashable = TRUE
 	health = 250
 
 /obj/structure/showcase/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -53,6 +54,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "target_a"
 	density = FALSE
+	unslashable = TRUE
 	health = 5000
 
 /obj/structure/target/syndicate
@@ -71,6 +73,7 @@
 	icon_state = "monorail"
 	density = FALSE
 	anchored = TRUE
+	unslashable = TRUE
 	layer = ATMOS_PIPE_LAYER + 0.01
 
 
@@ -80,6 +83,7 @@
 	name = "Research thingies"
 	icon = 'icons/obj/structures/props/alien_autopsy.dmi'
 	icon_state = "jarshelf_9"
+	unslashable = TRUE
 
 /obj/structure/xenoautopsy/jar_shelf
 	name = "jar shelf"
@@ -167,6 +171,7 @@
 	desc = "A heavy box used for storing ore."
 	density = TRUE
 	anchored = FALSE
+	unslashable = TRUE
 
 /obj/structure/ore_box/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -176,6 +181,7 @@
 /obj/structure/computer3frame
 	density = TRUE
 	anchored = FALSE
+	unslashable = TRUE
 	name = "computer frame"
 	icon = 'icons/obj/structures/machinery/stock_parts.dmi'
 	icon_state = "0"
@@ -273,7 +279,7 @@
 	. = ..()
 	if(over_object != usr || !Adjacent(usr))
 		return
-		
+
 	if(!ishuman(usr))
 		return
 

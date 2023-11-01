@@ -4,7 +4,7 @@
 
 [![Build Status](https://github.com/PvE-CMSS13/PvE-CMSS13/workflows/CI%20Suite/badge.svg)](https://github.com/PvE-CMSS13/PvE-CMSS13/actions?query=workflow%3A%22CI+Suite%22)
 * **Code:** https://github.com/PvE-CMSS13/PvE-CMSS13
-* **Discord:** https://discord.gg/v6P6wns5dN
+* **Discord:** https://discord.gg/pve-cmss13
 
 This is the codebase for the PvE CM-SS13 fork of CM-SS13 flavoured fork of SpaceStation 13
 

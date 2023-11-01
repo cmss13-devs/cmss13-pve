@@ -15,7 +15,7 @@
 
 /// From /turf/closed/wall/resin/attackby(): (obj/item/I, mob/M)
 #define COMSIG_WALL_RESIN_ATTACKBY "wall_resin_attackby"
-	#define COMPONENT_CANCEL_ATTACKBY (1<<0)
+	#define COMPONENT_CANCEL_RESIN_ATTACKBY (1<<0)
 
 ///from /turf/closed/wall/proc/place_poster
 #define COMSIG_POSTER_PLACED "poster_placed"

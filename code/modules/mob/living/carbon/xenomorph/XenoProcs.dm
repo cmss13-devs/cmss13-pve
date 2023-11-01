@@ -357,8 +357,8 @@
 
 /mob/living/carbon/xenomorph/proc/pounced_turf(turf/T)
 	if(!T.density)
-		for(var/mob/M in T)
-			pounced_mob(M)
+		for(var/mob/living/mob in T)
+			pounced_mob(mob)
 			break
 	else
 		turf_launch_collision(T)
@@ -732,11 +732,7 @@
 	var/turf/supplier_turf = get_turf(nest_structural_base)
 	var/obj/effect/alien/weeds/supplier_weeds = locate(/obj/effect/alien/weeds) in supplier_turf
 	if(!supplier_weeds)
-		to_chat(src, SPAN_XENOBOLDNOTICE("There are no weeds here! Nesting hosts requires hive weeds."))
-		return
-
-	if(supplier_weeds.weed_strength < WEED_LEVEL_HIVE)
-		to_chat(src, SPAN_XENOBOLDNOTICE("The weeds here are not strong enough for nesting hosts."))
+		to_chat(src, SPAN_XENOBOLDNOTICE("There are no weeds here! Nesting hosts requires any sort of weeds."))
 		return
 
 	if(!supplier_turf.density)
@@ -749,15 +745,18 @@
 
 	if(!host_to_nest.Adjacent(supplier_turf))
 		to_chat(src, SPAN_XENONOTICE("The host must be directly next to the wall its being nested on!"))
+		step(host_to_nest, dir_to_nest)
 		return
 
 	if(!locate(dir_to_nest) in GLOB.cardinals)
 		to_chat(src, SPAN_XENONOTICE("The host must be directly next to the wall its being nested on!"))
+		step_to(host_to_nest, src)
 		return
 
 	for(var/obj/structure/bed/nest/preexisting_nest in get_turf(host_to_nest))
 		if(preexisting_nest.dir == dir_to_nest)
 			to_chat(src, SPAN_XENONOTICE("There is already a host nested here!"))
+			step_to(host_to_nest, src)
 			return
 
 	var/obj/structure/bed/nest/applicable_nest = new(get_turf(host_to_nest))
