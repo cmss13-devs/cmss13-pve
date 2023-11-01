@@ -251,6 +251,22 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			jumping_client.jump_to_turf(objective_turf)
 			return TRUE
 
+		if("remove_objective")
+			if(!params["val"])
+				return
+
+			var/list/objective = params["val"]
+
+			var/atom/objective_atom = locate(objective["object_ref"])
+
+			if(!objective_atom)
+				return TRUE
+
+			if(tgui_alert(ui.user, "Do you want to remove [objective_atom] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
+				return TRUE
+
+			remove_objective(objective_atom)
+
 		//Communication Section
 		if("use_game_master_phone")
 			game_master_phone.attack_hand(ui.user)
@@ -333,11 +349,10 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(!object_turf)
 				return TRUE
 
-			if(SSminimaps.has_marker(object))
+			if(SSminimaps.has_marker(object) || is_objective(object))
 				if(tgui_alert(user, "Do you want to remove [object] as an objective?", "Confirmation", list("Yes", "No")) != "Yes")
 					return TRUE
 
-				SSminimaps.remove_marker(object)
 				remove_objective(object)
 				return TRUE
 
@@ -376,6 +391,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			RegisterSignal(object, COMSIG_PARENT_QDELETING, PROC_REF(remove_objective))
 
 			GLOB.game_master_objectives += list(list(
+				"object" = object,
 				"object_name" = object.name,
 				"objective_info" = (objective_info || ""),
 				"object_ref" = object_ref,
@@ -403,15 +419,22 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
 
-/datum/game_master/proc/remove_objective(datum/destroying_datum)
+/datum/game_master/proc/is_objective(atom/checked_object)
+	for(var/list/cycled_objective in GLOB.game_master_objectives)
+		if(cycled_objective["object"] == checked_object)
+			return TRUE
+
+	return FALSE
+
+/datum/game_master/proc/remove_objective(datum/removing_datum)
 	SIGNAL_HANDLER
 
 	for(var/list/cycled_objective in GLOB.game_master_objectives)
-		var/atom/objective_object = locate(cycled_objective["object_ref"])
-		if(objective_object == destroying_datum)
+		if(cycled_objective["object"] == removing_datum)
 			GLOB.game_master_objectives.Remove(list(cycled_objective))
-			UnregisterSignal(objective_object, COMSIG_PARENT_QDELETING)
+			UnregisterSignal(removing_datum, COMSIG_PARENT_QDELETING)
 
+	SSminimaps.remove_marker(removing_datum)
 
 
 #undef DEFAULT_SPAWN_XENO_STRING

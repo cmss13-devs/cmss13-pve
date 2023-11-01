@@ -152,6 +152,15 @@ export const ObjectivePanel = (props, context) => {
                               }}
                             />
                           </Stack.Item>
+                          <Stack.Item>
+                            <Button
+                              content="X"
+                              color="bad"
+                              onClick={() => {
+                                act('remove_objective', { val });
+                              }}
+                            />
+                          </Stack.Item>
                           <Stack.Item grow pl={1} py={0.25} fontSize="12px">
                             {val.objective_info}
                           </Stack.Item>
