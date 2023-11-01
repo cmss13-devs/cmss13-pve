@@ -20,7 +20,7 @@
 	normaldoorcontrol = 3;
 	pixel_y = -19;
 	req_one_access_txt = "3;22";
-	throw_range = 15
+	
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
