@@ -4,6 +4,7 @@
 	name = "\improper magazine_box"
 	icon = 'icons/obj/items/weapons/guns/ammo_boxes/boxes_and_lids.dmi'
 	icon_state = "base_m41"
+	unslashable = TRUE
 	var/obj/item/ammo_box/magazine/item_box
 	var/can_explode = TRUE
 	var/burning = FALSE

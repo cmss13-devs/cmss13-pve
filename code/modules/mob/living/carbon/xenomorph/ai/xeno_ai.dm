@@ -222,9 +222,16 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/datum/component/ai_behavior_override/closest_valid_override
 	for(var/datum/component/ai_behavior_override/cycled_override in GLOB.all_ai_behavior_overrides)
 		var/distance = get_dist(src, cycled_override.parent)
-		if(cycled_override.check_behavior_validity(src, distance) && distance < shortest_distance)
-			shortest_distance = distance
-			closest_valid_override = cycled_override
+		var/validity = cycled_override.check_behavior_validity(src, distance)
+
+		if(!validity)
+			continue
+
+		if(distance >= shortest_distance)
+			continue
+
+		shortest_distance = distance
+		closest_valid_override = cycled_override
 
 	return closest_valid_override
 
@@ -316,6 +323,9 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 /mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/human/checked_human)
 	if(checked_human.species.flags & IS_SYNTHETIC)
+		return FALSE
+
+	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
 		return FALSE
 
 	if(FACTION_XENOMORPH in checked_human.faction_group)

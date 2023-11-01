@@ -32,6 +32,7 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	name = "plant"
 	anchored = TRUE
 	density = TRUE
+	unslashable = TRUE
 	var/icon_tag = null
 	var/variations = 1
 	var/cut_level = PLANT_NO_CUT

@@ -54,6 +54,8 @@
 			idle_xeno.lay_down()
 		return
 
+	idle_xeno.resting = FALSE
+
 	if(home_turf == last_home_turf)
 		blacklisted_turfs += home_turf
 		addtimer(CALLBACK(src, PROC_REF(unblacklist_turf), home_turf), BLACKLIST_TURF_TIMEOUT)

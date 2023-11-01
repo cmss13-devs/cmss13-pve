@@ -10,6 +10,7 @@
 
 	density = FALSE
 	wrenchable = TRUE
+	unslashable = TRUE
 
 	var/droppod_flags = NO_FLAGS
 

@@ -35,8 +35,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Behavior stuff
 #define DEFAULT_BEHAVIOR_STRING "Attack"
-#define SELECTABLE_XENO_BEHAVIORS list("Attack")
-#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack)
+#define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive")
+#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive)
 
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
@@ -118,7 +118,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images += override.behavior_image
 
-	GLOB.game_masters += game_master_client
+	GLOB.game_masters |= game_master_client
 
 /datum/game_master/Destroy(force, ...)
 	. = ..()
@@ -274,6 +274,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
 
+	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
+		game_master_client.images -= override.behavior_image
+
 /datum/game_master/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
 
@@ -284,6 +287,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		ui.open()
 
 	user.client?.click_intercept = src
+
+	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
+		game_master_client.images |= override.behavior_image
 
 /datum/game_master/proc/InterceptClickOn(mob/user, params, atom/object)
 
@@ -313,7 +319,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			var/behavior_type = SELECTABLE_XENO_BEHAVIORS_ASSOC[selected_behavior]
 
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
-				if(object.datum_components[behavior_type])
+				if(object.datum_components?[behavior_type])
 					var/component_to_remove = object.datum_components[behavior_type]
 					qdel(component_to_remove)
 				return TRUE
