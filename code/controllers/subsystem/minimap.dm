@@ -247,12 +247,19 @@ SUBSYSTEM_DEF(minimaps)
 		blip.overlays += overlay
 
 	images_by_source[target] = blip
+
 	for(var/flag in bitfield2list(hud_flags))
 		minimaps_by_z["[zlevel]"].images_assoc["[flag]"][target] = blip
 		minimaps_by_z["[zlevel]"].images_raw["[flag]"] += blip
+
 	if(ismovableatom(target))
 		RegisterSignal(target, COMSIG_MOVABLE_Z_CHANGED, PROC_REF(on_z_change))
 		blip.RegisterSignal(target, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move))
+
+		if(isitem(target))
+			blip.RegisterSignal(target, COMSIG_ITEM_PICKUP, TYPE_PROC_REF(/image, minimap_on_pickup))
+			blip.RegisterSignal(target, COMSIG_ITEM_DROPPED, TYPE_PROC_REF(/image, minimap_on_drop))
+
 	removal_cbs[target] = CALLBACK(src, PROC_REF(removeimage), blip, target)
 	RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_marker))
 
@@ -298,6 +305,17 @@ SUBSYSTEM_DEF(minimaps)
 		return
 	pixel_x = MINIMAP_PIXEL_FROM_WORLD(source.x) + SSminimaps.minimaps_by_z["[source_z]"].x_offset
 	pixel_y = MINIMAP_PIXEL_FROM_WORLD(source.y) + SSminimaps.minimaps_by_z["[source_z]"].y_offset
+
+/image/proc/minimap_on_pickup(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	RegisterSignal(user, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move), override = TRUE)
+
+/image/proc/minimap_on_drop(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	if(recursive_holder_check(source) != user)
+		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 
 /**
  * Removes an atom and it's blip from the subsystem.
