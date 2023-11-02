@@ -15,14 +15,31 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 */// - Morrow
 
+// OBJECTS
+/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(!density)
+		return 0
+
+	if(unslashable && !climbable)
+		return
+
+	return OBJECT_PENALTY
+
+/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(unslashable)
+		if(!X.action_busy)
+			do_climb(X)
+		return
+
+	return ..()
 
 // MINERAL DOOR
 /obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return DOOR_PENALTY
-
-/obj/structure/mineral_door/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
 
 /obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
 	if(xeno.hivenumber != hivenumber)
@@ -30,8 +47,17 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	return 0
 
 /obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
-	acting_xeno.a_intent = INTENT_HELP
+	if(xeno.hivenumber == hivenumber)
+		acting_xeno.a_intent = INTENT_HELP
 	. = ..()
+
+/// Platforms
+/obj/structure/platform/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return DOOR_PENALTY
 
 // Poddoors/shutters
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -61,60 +87,34 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
-/obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
-
-// OBJECTS
-/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return
-
-	if(!density)
-		return 0
-
-	if(unslashable && !climbable)
-		return
-
-	return OBJECT_PENALTY
-
-/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(unslashable)
-		if(!X.action_busy)
-			do_climb(X)
-		return
-	X.do_click(src, "", list())
-	return TRUE
-
-
 // HUMANS
 /mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(status_flags & GODMODE)
 		return ..()
+
 	return HUMAN_PENALTY
 
 /mob/living/carbon/human/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	if(status_flags & GODMODE)
-		return ..()
-	X.do_click(src, "", list())
-	return TRUE
+		return
+
+	. = ..()
 
 // VEHICLES
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	return VEHICLE_PENALTY
+	. = ..()
+	if(!.)
+		return
 
-/obj/vehicle/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+	return VEHICLE_PENALTY
 
 // SENTRY
 /obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	return VEHICLE_PENALTY
+	. = ..()
+	if(!.)
+		return
 
-/obj/structure/machinery/defenses/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+	return VEHICLE_PENALTY
 
 // WINDOW FRAME
 /obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -127,8 +127,19 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!X.action_busy)
 		do_climb(X)
 
+/obj/structure/barricade/handrail/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return DOOR_PENALTY
+
 // Avoid barricades if possible.
 /obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
 	return BARRICADE_PENALTY
 
 // FIRE
@@ -138,7 +149,18 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return FIRE_PENALTY
 
-// HOLES
-/obj/effect/acid_hole/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+/// Open turfs, sometimes open turfs are passed back as obstacles due to platforms and such, generally it's fast so very slight penalty mainly for handling subtypes properly
+/turf/open/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return OPEN_TURF_PENALTY
+
+/// Space, do NOT path into space.
+/turf/open/space/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return INFINITY

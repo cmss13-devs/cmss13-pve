@@ -143,7 +143,8 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
 /atom/proc/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	return
+	X.do_click(src, "", list())
+	return TRUE
 
 /mob/living/carbon/xenomorph/proc/can_move_and_apply_move_delay()
 	// Unable to move, try next time.
