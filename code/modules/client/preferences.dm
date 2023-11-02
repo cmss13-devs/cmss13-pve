@@ -1399,10 +1399,6 @@ var/const/MAX_SAVE_SLOTS = 10
 						return
 
 					if(prefix_length==3)
-						var/playtime = user.client.get_total_xeno_playtime()
-						if(playtime < 124 HOURS)
-							to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(124 HOURS, playtime, 1 HOURS)] more hours to unlock xeno three letter prefix.")))
-							return
 						if(xeno_postfix)
 							to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 							return
@@ -1426,10 +1422,6 @@ var/const/MAX_SAVE_SLOTS = 10
 					if(xeno_name_ban)
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You are banned from xeno name picking.")))
 						xeno_postfix = ""
-						return
-					var/playtime = user.client.get_total_xeno_playtime()
-					if(playtime < 24 HOURS)
-						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(24 HOURS, playtime, 1 HOURS)] more hours to unlock xeno postfix.")))
 						return
 
 					if(length(xeno_prefix)==3)
@@ -1457,9 +1449,6 @@ var/const/MAX_SAVE_SLOTS = 10
 										to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 										return
 
-									if(!first_char && playtime < 300 HOURS)
-										to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(300 HOURS, playtime, 1 HOURS)] more hours to unlock double letter xeno postfix.")))
-										all_ok = FALSE
 								// 0  .. 9
 								if(48 to 57) //Numbers will work if not the first char
 									if(first_char)

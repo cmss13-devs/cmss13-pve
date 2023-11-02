@@ -206,10 +206,10 @@
 
 /datum/asset/spritesheet/playtime_rank/register()
 	var/icon_file = 'icons/mob/hud/hud.dmi'
-	var/tier1_state = "hudxenoupgrade2"
-	var/tier2_state = "hudxenoupgrade3"
-	var/tier3_state = "hudxenoupgrade4"
-	var/tier4_state = "hudxenoupgrade5"
+	var/tier1_state = "hudxenoupgrade1"
+	var/tier2_state = "hudxenoupgrade2"
+	var/tier3_state = "hudxenoupgrade3"
+	var/tier4_state = "hudxenoupgrade4"
 
 	var/icon/tier1_icon = icon(icon_file, tier1_state, SOUTH)
 	var/icon/tier2_icon = icon(icon_file, tier2_state, SOUTH)
