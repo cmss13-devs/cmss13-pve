@@ -173,7 +173,8 @@
 "aT" = (
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
-	pixel_x = -17
+	pixel_x = -17;
+	network = list("Golden Arrow","Vehicle","Midway")
 	},
 /obj/structure/machinery/prop/almayer/CICmap{
 	dir = 4;
@@ -250,7 +251,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -260,7 +261,7 @@
 	},
 /area/golden_arrow/hangar)
 "bu" = (
-/obj/structure/machinery/camera/autoname/almayer,
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -504,7 +505,7 @@
 	},
 /area/golden_arrow/squad_two)
 "cB" = (
-/obj/structure/machinery/camera/autoname/almayer,
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "cD" = (
@@ -1243,7 +1244,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "hk" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -1583,7 +1584,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -1832,7 +1833,7 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -3225,7 +3226,7 @@
 	},
 /area/golden_arrow/canteen)
 "ug" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -3747,7 +3748,7 @@
 /obj/structure/machinery/recharger{
 	pixel_y = 6
 	},
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -3833,7 +3834,7 @@
 	},
 /area/golden_arrow/supply)
 "yj" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera"
 	},
@@ -3985,7 +3986,7 @@
 	},
 /area/golden_arrow/hangar)
 "za" = (
-/obj/structure/machinery/camera/autoname/almayer,
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 2
@@ -4005,7 +4006,7 @@
 /area/golden_arrow/squad_one)
 "zl" = (
 /obj/structure/machinery/power/smes/buildable,
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -4053,7 +4054,7 @@
 	},
 /area/golden_arrow/hangar)
 "zG" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -4251,7 +4252,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "AY" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -4629,8 +4630,8 @@
 "CZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
-	name = "Alamo Remote Control Console";
-	shuttleId = "dropship_alamo"
+	name = "Midway Remote Control Console";
+	shuttleId = "dropship_midway"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4888,7 +4889,7 @@
 /area/golden_arrow/engineering)
 "EK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -5580,7 +5581,7 @@
 /area/golden_arrow/engineering)
 "IS" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -5949,7 +5950,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "Lg" = (
-/obj/docking_port/stationary/marine_dropship/almayer_hangar_1,
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Ll" = (
@@ -5998,7 +5999,7 @@
 	},
 /area/golden_arrow/supply)
 "LE" = (
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -6434,7 +6435,7 @@
 	},
 /area/golden_arrow/briefing)
 "Oj" = (
-/obj/structure/machinery/camera/autoname/almayer,
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7109,7 +7110,7 @@
 /obj/item/tool/wrench{
 	pixel_y = 7
 	},
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
@@ -7342,7 +7343,7 @@
 /area/golden_arrow/cryo_cells)
 "Sy" = (
 /obj/structure/machinery/disposal,
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
@@ -7656,7 +7657,7 @@
 "Ub" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname/almayer{
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
 	},
