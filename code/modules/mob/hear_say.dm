@@ -90,9 +90,6 @@
 		else
 			message = stars(message)
 
-	if(GLOB.radio_communication_clarity < 100)
-		message = stars(message, GLOB.radio_communication_clarity)
-
 	if(language)
 		style = language.color
 
