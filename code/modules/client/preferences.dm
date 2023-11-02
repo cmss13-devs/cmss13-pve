@@ -1394,11 +1394,11 @@ var/const/MAX_SAVE_SLOTS = 10
 
 					var/prefix_length = length(new_xeno_prefix)
 
-					if(prefix_length>3)
+					if(prefix_length > 3)
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("Invalid Xeno Prefix. Your Prefix can only be up to 3 letters long.")))
 						return
 
-					if(prefix_length==3)
+					if(prefix_length == 3)
 						if(xeno_postfix)
 							to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 							return
@@ -1424,7 +1424,7 @@ var/const/MAX_SAVE_SLOTS = 10
 						xeno_postfix = ""
 						return
 
-					if(length(xeno_prefix)==3)
+					if(length(xeno_prefix) == 3)
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 						return
 
@@ -1441,10 +1441,10 @@ var/const/MAX_SAVE_SLOTS = 10
 						var/first_char = TRUE
 						for(var/i=1, i<=length(new_xeno_postfix), i++)
 							var/ascii_char = text2ascii(new_xeno_postfix,i)
+
 							switch(ascii_char)
 								// A  .. Z
 								if(65 to 90) //Uppercase Letters will work on first char
-
 									if(length(xeno_prefix)!=2)
 										to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 										return
@@ -1453,8 +1453,10 @@ var/const/MAX_SAVE_SLOTS = 10
 								if(48 to 57) //Numbers will work if not the first char
 									if(first_char)
 										all_ok = FALSE
+
 								else
 									all_ok = FALSE //everything else - won't
+
 							first_char = FALSE
 						if(all_ok)
 							xeno_postfix = new_xeno_postfix

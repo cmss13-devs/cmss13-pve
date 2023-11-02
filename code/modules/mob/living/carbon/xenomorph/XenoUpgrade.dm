@@ -3,7 +3,6 @@
 		return
 
 	age = XENO_NORMAL
-	var/hours_as_xeno = client.get_total_xeno_playtime()
 	var/hours_as_caste = get_job_playtime(client, caste.caste_type)
 
 	switch(hours_as_caste)
