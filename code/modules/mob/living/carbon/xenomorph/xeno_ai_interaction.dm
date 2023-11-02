@@ -47,7 +47,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	return 0
 
 /obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
-	if(xeno.hivenumber == hivenumber)
+	if(acting_xeno.hivenumber == hivenumber)
 		acting_xeno.a_intent = INTENT_HELP
 	. = ..()
 
