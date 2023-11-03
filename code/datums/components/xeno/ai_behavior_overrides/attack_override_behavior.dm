@@ -2,6 +2,12 @@
 /datum/component/ai_behavior_override/attack
 	behavior_icon_state = "attack_order"
 
+/datum/component/ai_behavior_override/attack/Destroy(force, silent, ...)
+	for(var/mob/living/carbon/xenomorph/assigned_xeno in currently_assigned)
+		assigned_xeno.current_target = null
+
+	. = ..()
+
 /datum/component/ai_behavior_override/attack/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
 	. = ..()
 	if(!.)
