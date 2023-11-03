@@ -66,6 +66,7 @@
 		"max_threads" = max_threads,
 	)
 	connection_result = rustg_sql_connect_pool(json_encode(options))
+	debug_log(connection_result)
 	connection_handle = json_decode(connection_result)["handle"]
 	if(!connection_handle)
 		status = DB_CONNECTION_BROKEN
