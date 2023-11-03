@@ -8,6 +8,7 @@
 	density = FALSE
 	anchored = TRUE
 	can_buckle = TRUE
+	unslashable = TRUE
 	var/open = 0 //if the lid is up
 	var/cistern = 0 //if the cistern bit is open
 	var/w_items = 0 //the combined w_class of all the items in the cistern
@@ -177,6 +178,7 @@
 	icon_state = "urinal"
 	density = FALSE
 	anchored = TRUE
+	unslashable = TRUE
 
 /obj/structure/urinal/attackby(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/grab))
@@ -424,6 +426,7 @@
 	icon_state = "sink_emptied_animation"
 	desc = "A sink used for washing one's hands and face."
 	anchored = TRUE
+	unslashable = TRUE
 	var/busy = FALSE //Something's being washed at the moment
 
 /obj/structure/sink/Initialize()

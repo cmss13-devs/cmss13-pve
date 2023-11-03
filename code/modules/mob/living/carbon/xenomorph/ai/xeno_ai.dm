@@ -23,15 +23,6 @@
 	QDEL_NULL(ai_movement_handler)
 	return ..()
 
-GLOBAL_LIST_INIT(ai_target_limbs, list(
-	"head",
-	"chest",
-	"l_leg",
-	"r_leg",
-	"l_arm",
-	"r_arm"
-))
-
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
@@ -143,7 +134,8 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
 /atom/proc/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	return
+	X.do_click(src, "", list())
+	return TRUE
 
 /mob/living/carbon/xenomorph/proc/can_move_and_apply_move_delay()
 	// Unable to move, try next time.
@@ -222,9 +214,16 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 	var/datum/component/ai_behavior_override/closest_valid_override
 	for(var/datum/component/ai_behavior_override/cycled_override in GLOB.all_ai_behavior_overrides)
 		var/distance = get_dist(src, cycled_override.parent)
-		if(cycled_override.check_behavior_validity(src, distance) && distance < shortest_distance)
-			shortest_distance = distance
-			closest_valid_override = cycled_override
+		var/validity = cycled_override.check_behavior_validity(src, distance)
+
+		if(!validity)
+			continue
+
+		if(distance >= shortest_distance)
+			continue
+
+		shortest_distance = distance
+		closest_valid_override = cycled_override
 
 	return closest_valid_override
 
@@ -316,6 +315,9 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 /mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/human/checked_human)
 	if(checked_human.species.flags & IS_SYNTHETIC)
+		return FALSE
+
+	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
 		return FALSE
 
 	if(FACTION_XENOMORPH in checked_human.faction_group)

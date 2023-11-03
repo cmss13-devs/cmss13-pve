@@ -1,37 +1,32 @@
-// MINERAL DOOR
-/obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	return DOOR_PENALTY
+/*
 
-/obj/structure/mineral_door/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+Just as a note, eventually it may be prudent to convert most of attack_alien() checks into two parts.
 
-/obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
-	if(xeno.hivenumber != hivenumber)
-		return ..()
-	return 0
+attack_alien() gets called as usual by normal sources but then immediately goes into:
+Can we do the attack_alien(), probably like can_attack_alien() or some such
+And then the usual attack_alien() effect
 
-/obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
-	acting_xeno.a_intent = INTENT_HELP
-	. = ..()
+This way we can keep our obstacle checks up to date with any future attack_alien() changes by calling can_attack_alien()
 
-// AIRLOCK
-/obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	if(locked || welded || isElectrified())
-		return ..()
-	return DOOR_PENALTY
+Future problem for the time being and maybe not worth pursuing :shrug:
 
-/obj/structure/machinery/door/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+As a second note, please god follow the xeno_ai_obstacle chain to atom if possible, things like if(get_turf(src) == target) NEEDING to return 0 most times is very important.
+At bare minimum, make sure the relevant checks from parent types gets copied in if you need to snowflake something.
+
+*/// - Morrow
 
 // OBJECTS
 /obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
 	if(!density)
 		return 0
 
 	if(unslashable && !climbable)
-		return ..()
+		return
+
 	return OBJECT_PENALTY
 
 /obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
@@ -39,37 +34,87 @@
 		if(!X.action_busy)
 			do_climb(X)
 		return
-	X.do_click(src, "", list())
-	return TRUE
 
+	return ..()
+
+// MINERAL DOOR
+/obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	return DOOR_PENALTY
+
+/obj/structure/mineral_door/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
+	if(xeno.hivenumber != hivenumber)
+		return ..()
+	return 0
+
+/obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
+	if(acting_xeno.hivenumber == hivenumber)
+		acting_xeno.a_intent = INTENT_HELP
+	. = ..()
+
+/// Platforms
+/obj/structure/platform/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return DOOR_PENALTY
+
+// Poddoors/shutters
+/obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(!(stat & NOPOWER))
+		return
+
+	if(operating)
+		return
+
+	if(unacidable)
+		return
+
+	return DOOR_PENALTY
+
+// AIRLOCK
+/obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(locked || welded || isElectrified())
+		return INFINITY
+
+	return DOOR_PENALTY
 
 // HUMANS
 /mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(status_flags & GODMODE)
 		return ..()
+
 	return HUMAN_PENALTY
 
 /mob/living/carbon/human/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	if(status_flags & GODMODE)
-		return ..()
-	X.do_click(src, "", list())
-	return TRUE
+		return
+
+	. = ..()
 
 // VEHICLES
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	return VEHICLE_PENALTY
+	. = ..()
+	if(!.)
+		return
 
-/obj/vehicle/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+	return VEHICLE_PENALTY
 
 // SENTRY
 /obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	return VEHICLE_PENALTY
+	. = ..()
+	if(!.)
+		return
 
-/obj/structure/machinery/defenses/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	X.do_click(src, "", list())
-	return TRUE
+	return VEHICLE_PENALTY
 
 // WINDOW FRAME
 /obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -82,8 +127,19 @@
 	if(!X.action_busy)
 		do_climb(X)
 
+/obj/structure/barricade/handrail/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return DOOR_PENALTY
+
 // Avoid barricades if possible.
 /obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
 	return BARRICADE_PENALTY
 
 // FIRE
@@ -92,3 +148,19 @@
 		return 0
 
 	return FIRE_PENALTY
+
+/// Open turfs, sometimes open turfs are passed back as obstacles due to platforms and such, generally it's fast so very slight penalty mainly for handling subtypes properly
+/turf/open/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return OPEN_TURF_PENALTY
+
+/// Space, do NOT path into space.
+/turf/open/space/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return INFINITY

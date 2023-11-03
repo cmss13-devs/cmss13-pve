@@ -116,7 +116,10 @@
 		acided_hole.expand_hole(user) //This proc applies the attack delay itself.
 		return XENO_NO_DELAY_ACTION
 
-	if(!hull && user.claw_type >= claws_minimum && !acided_hole)
+	if(!hull && user.claw_type >= claws_minimum)
+		if(acided_hole)
+			acided_hole.attack_alien(user)
+			return XENO_NO_DELAY_ACTION
 		user.animation_attack_on(src)
 		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
 		if(damage >= (damage_cap - (damage_cap / XENO_HITS_TO_DESTROY_WALL)))

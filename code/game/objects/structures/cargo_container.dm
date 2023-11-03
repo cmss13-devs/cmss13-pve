@@ -8,6 +8,7 @@
 	health = 200
 	opacity = TRUE
 	anchored = TRUE
+	unslashable = TRUE
 //Note, for Watatsumi, Grant, and Arious, "left" and "leftmid" are both the left end of the container, but "left" is generic and "leftmid" has the Sat Mover mark on it
 /obj/structure/cargo_container/watatsumi
 	name = "Watatsumi Cargo Container"

@@ -139,6 +139,7 @@
 	layer = OBJ_LAYER
 	var/obj/structure/morgue/linked_morgue = null
 	anchored = TRUE
+	unslashable = TRUE
 	throwpass = 1
 	var/bloody = FALSE
 

@@ -6,6 +6,7 @@
     "environment_traits": {
         "COLD": true
     },
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
     "survivor_types": [
         "/datum/equipment_preset/survivor/corporate/shiva",
         "/datum/equipment_preset/survivor/doctor/shiva",

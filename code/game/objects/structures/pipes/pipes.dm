@@ -4,6 +4,7 @@
 	anchored = TRUE
 	layer = ATMOS_DEVICE_LAYER
 	plane = FLOOR_PLANE
+	unslashable = TRUE
 
 	var/list/connected_to = list()
 	var/list/valid_directions = list(NORTH, SOUTH, EAST, WEST)
