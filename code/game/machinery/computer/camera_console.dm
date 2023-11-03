@@ -377,4 +377,8 @@
 	name = "\improper 'Normandy' camera controls"
 	network = list(CAMERA_NET_NORMANDY, CAMERA_NET_LASER_TARGETS)
 
+/obj/structure/machinery/computer/cameras/dropship/midway
+	name = "\improper 'Midway' camera controls"
+	network = list(CAMERA_NET_MIDWAY, CAMERA_NET_LASER_TARGETS)
+
 #undef DEFAULT_MAP_SIZE
