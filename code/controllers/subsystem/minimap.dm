@@ -310,12 +310,14 @@ SUBSYSTEM_DEF(minimaps)
 	SIGNAL_HANDLER
 
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move), override = TRUE)
+	UnregisterSignal(source, COMSIG_MOVABLE_MOVED)
 
 /image/proc/minimap_on_drop(obj/item/source, mob/user)
 	SIGNAL_HANDLER
 
-	if(recursive_holder_check(source) != user)
+	if(recursive_holder_check(source, recursion_limit = 5) != user)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
+		RegisterSignal(source, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move))
 
 /**
  * Removes an atom and it's blip from the subsystem.
