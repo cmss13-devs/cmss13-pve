@@ -51,7 +51,7 @@
 	icon_state = "port"
 
 /area/golden_arrow/platoon_sergeant
-	name = "\improper Platoon Sergeant Office"
+	name = "\improper Section Sergeant Office"
 	icon_state = "alpha"
 
 /area/golden_arrow/squad_one
