@@ -31,15 +31,15 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/eyewear/aviators
 	display_name = "Aviator shades"
-	path = /obj/item/clothing/glasses/sunglasses/aviator
+	path = /obj/item/clothing/glaes/sunglaes/aviator
 
 /datum/gear/eyewear/eyepatch
 	display_name = "Eyepatch"
-	path = /obj/item/clothing/glasses/eyepatch
+	path = /obj/item/clothing/glaes/eyepatch
 
-/datum/gear/eyewear/rpg_glasses
-	display_name = "Marine RPG Glasses"
-	path = /obj/item/clothing/glasses/regular
+/datum/gear/eyewear/rpg_glaes
+	display_name = "Marine RPG Glaes"
+	path = /obj/item/clothing/glaes/regular
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/eyewear/prescription_glasses
@@ -835,5 +835,5 @@ var/global/list/gear_datums_by_name = list()
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/misc/patch_uscm/devils
-	display_name = "Solar Devilss shoulder patch"
+	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
