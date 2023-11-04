@@ -148,8 +148,8 @@
 
 /mob/living/carbon/xenomorph/runner/stop_pulling()
 	. = ..()
-	pass_flags = initial(pass_flags)
+	pass_flags |= PASS_FLAGS_CRAWLER
 
 /mob/living/carbon/xenomorph/runner/start_pulling(atom/movable/clone/victim, lunge, no_msg)
 	. = ..()
-	pass_flags = victim.pass_flags
+	pass_flags &= ~PASS_FLAGS_CRAWLER
