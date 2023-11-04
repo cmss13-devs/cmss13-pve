@@ -20,7 +20,7 @@
 	maxf = 1489
 
 	var/list/inbuilt_tracking_options = list(
-		"Platoon Sergeant" = TRACKER_SL,
+		"Section Sergeant" = TRACKER_SL,
 		"Squad Sergeant" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)

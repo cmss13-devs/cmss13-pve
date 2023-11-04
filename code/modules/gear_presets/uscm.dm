@@ -359,14 +359,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
-	name = "USCM Platoon Sergeant"
+	name = "USCM Section Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -380,7 +380,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/cryo
-	name = "USCM Cryo Platoon Sergeant"
+	name = "USCM Cryo Section Sergeant"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/leader/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -442,7 +442,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader_equipped
-	name = "USCM Platoon Sergeant (Equipped)"
+	name = "USCM Section Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm/leader_equipped/load_status(mob/living/carbon/human/new_human)
@@ -452,7 +452,7 @@
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -478,7 +478,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/leader_equipped/cryo
-	name = "USCM Cryo Platoon Sergeant (Equipped)"
+	name = "USCM Cryo Section Sergeant (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //*****************************************************************************************************/

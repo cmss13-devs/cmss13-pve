@@ -11,8 +11,8 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
+	name = "Section"
+	lead_name = "Section Sergeant"
 	lead_icon = "leader"
 	sub_squad = "Squad"
 	sub_leader = "Squad Sergeant"
@@ -70,7 +70,7 @@
 	var/faction = FACTION_MARINE
 
 	/// What will the assistant squad leader be called
-	var/squad_type = "Platoon" //Referenced for aSL details. Squad/Team/Cell etc.
+	var/squad_type = "Section" //Referenced for aSL details. Squad/Team/Cell etc.
 	/// Squad leaders icon
 	var/lead_icon //Referenced for SL's 'L' icon. If nulled, won't override icon for aSLs.
 

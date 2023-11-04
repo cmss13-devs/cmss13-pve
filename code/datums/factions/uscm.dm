@@ -31,7 +31,7 @@
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
-				if("Platoon") marine_rk = "leader_a"
+				if("Section") marine_rk = "leader_a"
 				if("Team") marine_rk = "soctl_a"
 
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders

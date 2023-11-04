@@ -388,9 +388,9 @@
 				return TRUE
 
 			current_squad.send_message(input, 1) //message, adds username
-			current_squad.send_maptext(input, "Platoon Message:")
-			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to all Marines of platoon '[current_squad]'.")]")
-			log_overwatch("[key_name(user)] sent '[input]' to platoon [current_squad].")
+			current_squad.send_maptext(input, "Section Message:")
+			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to all Marines of section '[current_squad]'.")]")
+			log_overwatch("[key_name(user)] sent '[input]' to section [current_squad].")
 
 			var/comm_paygrade = user.get_paygrade()
 
@@ -405,20 +405,20 @@
 			if(!current_squad)
 				return TRUE
 
-			var/input = tgui_input_text(user, "Please write a message to announce to the Platoon leader:", "SL Message")
+			var/input = tgui_input_text(user, "Please write a message to announce to the Section leader:", "SL Message")
 			if(!input)
 				return TRUE
 
 			current_squad.send_message(input, 1, 1) //message, adds username, only to leader
-			current_squad.send_maptext(input, "Platoon Sergeant Message:", 1)
-			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to Platoon Sergeant [current_squad.squad_leader] of platoon '[current_squad]'.")]")
-			log_overwatch("[key_name(user)] sent '[input]' to Platoon Sergeant [current_squad.squad_leader] of squad [current_squad].")
+			current_squad.send_maptext(input, "Section Sergeant Message:", 1)
+			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to Section Sergeant [current_squad.squad_leader] of section '[current_squad]'.")]")
+			log_overwatch("[key_name(user)] sent '[input]' to Section Sergeant [current_squad.squad_leader] of section [current_squad].")
 
 			var/comm_paygrade = user.get_paygrade()
 
 			for(var/mob/dead/observer/cycled_observer in GLOB.player_list)
 				if(cycled_observer.client && cycled_observer.client.prefs && (cycled_observer.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
-					var/ghost_message = "<span class='medium'><span class='orange'><span class='name'>[comm_paygrade][user] (<a href='byond://?src=\ref[cycled_observer];track=\ref[user]'>F</a>)</span> messaged platoon leader of '[current_squad]': <span class='body'>\"[input]\"</span></span></span>"
+					var/ghost_message = "<span class='medium'><span class='orange'><span class='name'>[comm_paygrade][user] (<a href='byond://?src=\ref[cycled_observer];track=\ref[user]'>F</a>)</span> messaged section leader of '[current_squad]': <span class='body'>\"[input]\"</span></span></span>"
 					cycled_observer.show_message(ghost_message)
 
 			return TRUE
