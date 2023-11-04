@@ -834,6 +834,6 @@ var/global/list/gear_datums_by_name = list()
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
+/datum/gear/misc/patch_uscm/devils
+	display_name = "Solar Devilss shoulder patch"
+	path = /obj/item/clothing/accessory/patch/devils
