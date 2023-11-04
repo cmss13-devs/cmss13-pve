@@ -1,6 +1,5 @@
 /mob/living/carbon/xenomorph
 	// AI stuff
-	var/flags_ai = XENO_AI_NO_DESPAWN
 	var/atom/movable/current_target
 
 	var/next_path_generation = 0
@@ -24,25 +23,20 @@
 	QDEL_NULL(ai_movement_handler)
 	return ..()
 
-GLOBAL_LIST_INIT(ai_target_limbs, list(
-	"head",
-	"chest",
-	"l_leg",
-	"r_leg",
-	"l_arm",
-	"r_arm"
-))
-
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
 /mob/living/carbon/xenomorph/proc/handle_ai_shot(obj/projectile/P)
-	if(!current_target && P.firer)
-		var/distance = get_dist(src, P.firer)
-		if(distance > max_travel_distance)
-			return
+	SEND_SIGNAL(src, COMSIG_XENO_HANDLE_AI_SHOT, P)
 
-		SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
+	if(current_target || !P.firer)
+		return
+
+	var/distance = get_dist(src, P.firer)
+	if(distance > max_travel_distance)
+		return
+
+	SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)
@@ -64,10 +58,15 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		current_path = null
 		return TRUE
 
+	var/datum/component/ai_behavior_override/behavior_override = check_overrides()
+
+	if(behavior_override?.process_override_behavior(src, delta_time))
+		return TRUE
+
 	var/stat_check = FALSE
 	if(istype(current_target, /mob))
 		var/mob/current_target_mob = current_target
-		stat_check = (current_target_mob != CONSCIOUS)
+		stat_check = (current_target_mob.stat != CONSCIOUS)
 
 	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
 		current_target = get_target(ai_range)
@@ -106,7 +105,7 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	var/list/turf/turfs_to_dist_check = list(get_turf(current_target))
 
-	if(length(current_target.locs) > 1)
+	if(istype(current_target, /atom/movable) && length(current_target.locs) > 1)
 		turfs_to_dist_check = get_multitile_turfs_to_check()
 
 	for(var/turf/checked_turf as anything in turfs_to_dist_check)
@@ -127,13 +126,16 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 		CRASH("No valid movement handler for [src]!")
 	return ai_movement_handler.ai_move_target(delta_time)
 
-/atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction)
+/atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	if(get_turf(src) == target)
+		return 0
 	return INFINITY
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
 /atom/proc/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	return
+	X.do_click(src, "", list())
+	return TRUE
 
 /mob/living/carbon/xenomorph/proc/can_move_and_apply_move_delay()
 	// Unable to move, try next time.
@@ -206,56 +208,125 @@ GLOBAL_LIST_INIT(ai_target_limbs, list(
 
 	return TRUE
 
+/// Checks and returns the nearest override for behavior
+/mob/living/carbon/xenomorph/proc/check_overrides()
+	var/shortest_distance = INFINITY
+	var/datum/component/ai_behavior_override/closest_valid_override
+	for(var/datum/component/ai_behavior_override/cycled_override in GLOB.all_ai_behavior_overrides)
+		var/distance = get_dist(src, cycled_override.parent)
+		var/validity = cycled_override.check_behavior_validity(src, distance)
+
+		if(!validity)
+			continue
+
+		if(distance >= shortest_distance)
+			continue
+
+		shortest_distance = distance
+		closest_valid_override = cycled_override
+
+	return closest_valid_override
+
+#define EXTRA_CHECK_DISTANCE_MULTIPLIER 0.20
+
 /mob/living/carbon/xenomorph/proc/get_target(range)
-	var/list/viable_humans = list()
-	var/list/viable_vehicles = list()
-	var/list/viable_defenses = list()
+	var/list/viable_targets = list()
+	var/atom/movable/closest_target
 	var/smallest_distance = INFINITY
-	for(var/mob/living/carbon/human/alive_human as anything in GLOB.alive_human_list)
-		if(alive_human.species.flags & IS_SYNTHETIC)
-			return pick(viable_humans)
-		if(z != alive_human.z)
+	for(var/mob/living/carbon/human/potential_alive_human_target as anything in GLOB.alive_human_list)
+		if(z != potential_alive_human_target.z)
 			continue
-		var/distance = get_dist(src, alive_human)
 
-		if(distance < ai_range && alive_human.stat == CONSCIOUS)
-			viable_humans += alive_human
-		smallest_distance = min(distance, smallest_distance)
-
-	for(var/l in GLOB.all_multi_vehicles)
-		var/obj/vehicle/multitile/V = l
-		if(z != V.z)
+		if(!check_mob_target(potential_alive_human_target))
 			continue
-		var/distance = get_dist(src, V)
 
-		if(distance < ai_range)
-			viable_vehicles += V
-		smallest_distance = min(distance, smallest_distance)
+		var/distance = get_dist(src, potential_alive_human_target)
 
-	for(var/l in GLOB.all_defenses)
-		var/obj/structure/machinery/defenses/S = l
-		if(z != S.z)
+		if(distance > ai_range)
 			continue
-		var/distance = get_dist(src, S)
 
-		if(distance < ai_range)
-			viable_defenses += S
-		smallest_distance = min(distance, smallest_distance)
+		viable_targets += potential_alive_human_target
 
+		if(smallest_distance <= distance)
+			continue
 
-	if(smallest_distance > RANGE_TO_DESPAWN_XENO && !(XENO_AI_NO_DESPAWN & flags_ai))
-		remove_ai()
-		qdel(src)
-		return
+		closest_target = potential_alive_human_target
+		smallest_distance = distance
 
-	if(length(viable_humans))
-		return pick(viable_humans)
+	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
+		if(z != potential_vehicle_target.z)
+			continue
 
-	if(length(viable_vehicles))
-		return pick(viable_vehicles)
+		var/distance = get_dist(src, potential_vehicle_target)
 
-	if(length(viable_defenses))
-		return pick(viable_defenses)
+		if(distance > ai_range)
+			continue
+
+		if(potential_vehicle_target.health <= 0)
+			var/skip_vehicle = TRUE
+
+			var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
+			for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
+				if(!check_mob_target(human_mob))
+					continue
+
+				skip_vehicle = FALSE
+
+			if(skip_vehicle)
+				continue
+
+		viable_targets += potential_vehicle_target
+
+		if(smallest_distance <= distance)
+			continue
+
+		closest_target = potential_vehicle_target
+		smallest_distance = distance
+
+	for(var/obj/structure/machinery/defenses/potential_defense_target as anything in GLOB.all_active_defenses)
+		if(z != potential_defense_target.z)
+			continue
+
+		var/distance = get_dist(src, potential_defense_target)
+
+		if(distance > ai_range)
+			continue
+
+		viable_targets += potential_defense_target
+
+		if(smallest_distance <= distance)
+			continue
+
+		closest_target = potential_defense_target
+		smallest_distance = distance
+
+	var/extra_check_distance = round(smallest_distance * EXTRA_CHECK_DISTANCE_MULTIPLIER)
+
+	if(extra_check_distance < 1)
+		return closest_target
+
+	var/list/extra_checked = orange(extra_check_distance, closest_target)
+
+	var/list/final_targets = extra_checked & viable_targets
+
+	return length(final_targets) ? pick(final_targets) : closest_target
+
+#undef EXTRA_CHECK_DISTANCE_MULTIPLIER
+
+/mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/human/checked_human)
+	if(checked_human.species.flags & IS_SYNTHETIC)
+		return FALSE
+
+	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
+		return FALSE
+
+	if(FACTION_XENOMORPH in checked_human.faction_group)
+		return FALSE
+
+	if(checked_human.stat != CONSCIOUS)
+		return FALSE
+
+	return TRUE
 
 /mob/living/carbon/xenomorph/proc/make_ai()
 	SHOULD_CALL_PARENT(TRUE)

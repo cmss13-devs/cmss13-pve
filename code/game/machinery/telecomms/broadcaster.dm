@@ -135,6 +135,9 @@
 			if(R.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
 				radios += R
 
+		if(GLOB.radio_communication_clarity < 100)
+			message = stars(message, GLOB.radio_communication_clarity)
+
 	// Get a list of mobs who can hear from the radios we collected.
 	var/list/receive = get_mobs_in_radio_ranges(radios)
 

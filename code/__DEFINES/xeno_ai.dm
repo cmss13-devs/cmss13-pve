@@ -5,19 +5,17 @@
 #define DISTANCE_PENALTY 1
 #define ASTAR_COST_FUNCTION(n) (abs(n.x - target.x)+abs(n.y - target.y))
 
+#define OPEN_TURF_PENALTY 1
 #define DOOR_PENALTY 3
 #define OBJECT_PENALTY 20
 #define HUMAN_PENALTY 4
+#define XENO_PENALTY 20
 #define VEHICLE_PENALTY 25
 #define SENTRY_PENALTY 25
 #define WINDOW_FRAME_PENALTY 25
 #define BARRICADE_PENALTY 50
 #define WALL_PENALTY 50
 #define FIRE_PENALTY 25
-
-// Xeno AI flags
-#define XENO_AI_NO_DESPAWN (1<<0)
-#define XENO_AI_CHOOSE_RANDOM_STRAIN (1<<1)
 
 /*
 PROBABILITY CALCULATIONS ARE HERE
@@ -27,6 +25,8 @@ PROBABILITY CALCULATIONS ARE HERE
 
 #define RETREAT_AT_PLASMA_LEVEL 0.2
 #define RETREAT_AT_HEALTH_LEVEL 0.4
+
+#define LURKING_IGNORE_SHOT_CHANCE 75
 
 // Warrior
 
@@ -86,41 +86,6 @@ PROBABILITY CALCULATIONS ARE HERE
 #define PRAETORIAN_SPIT 80
 #define PRAETORIAN_SPRAY 80
 
-/*
-	GAME DIRECTOR AI
-*/
-
-/datum/config_entry/number/ai_director
-	abstract_type = /datum/config_entry/number/ai_director
-
-#define IDEAL_T2_PERCENT 0.5
-#define IDEAL_T3_PERCENT 0.25
-
-/// The maximum amount of xenomorphs that can spawn, scaled up by population.
-/datum/config_entry/number/ai_director/max_xeno_per_player
-	config_entry_value = 1
-
-// Xenos spawn
-/datum/config_entry/number/ai_director/t2_spawn_at_percentage
-	config_entry_value = 0.25
-
-/datum/config_entry/number/ai_director/t3_spawn_at_percentage
-	config_entry_value = 0.5
-
-/// The minimum range at which a xeno can be spawned from a human
-#define MIN_RANGE_TO_SPAWN_XENO 10
-/// The maximum range at which a xeno can be spawned from a human
-#define MAX_RANGE_TO_SPAWN_XENO 25
-
-/// When a xeno gets despawned if there is no human within a specific range.
-#define RANGE_TO_DESPAWN_XENO 25
-/// When a xeno gets despawned if they can't find a target within a specific amount of time.
-#define XENO_DESPAWN_NO_TARGET_PERIOD 200 SECONDS
-
-// Director flags
-#define XENO_SPAWN_T1 (1<<0)
-#define XENO_SPAWN_T2 (1<<1)
-#define XENO_SPAWN_T3 (1<<2)
 
 /// Special blockers for pathfinding or obstacle handling
-#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile)
+#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space)

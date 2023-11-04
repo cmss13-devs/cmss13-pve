@@ -3,6 +3,7 @@
 	icon = 'icons/obj/structures/structures.dmi'
 	icon_state = "wall_phone"
 	desc = "It is a wall mounted telephone. The fine text reads: To log your details with the mainframe please insert your keycard into the slot below. Unfortunately the slot is jammed. You can still use the phone, however."
+	unslashable = TRUE
 
 	var/phone_category = "Uncategorised"
 	var/phone_color = "white"

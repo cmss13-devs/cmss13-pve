@@ -104,6 +104,15 @@
 			set_security_level(SEC_LEVEL_RED)
 			return
 
+/obj/docking_port/mobile/marine_dropship/midway
+	name = "Midway"
+	id = DROPSHIP_MIDWAY
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -260,6 +269,12 @@
 	auto_open = TRUE
 	roundstart_template = /datum/map_template/shuttle/normandy
 
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar
+	name = "Hangar Bay"
+	id = GOLDEN_ARROW_LZ
+	auto_open = TRUE
+	roundstart_template = /datum/map_template/shuttle/midway
+
 /obj/docking_port/stationary/marine_dropship/crash_site
 	auto_open = TRUE
 
@@ -284,6 +299,10 @@
 			affected_mob.apply_effect(3, WEAKEN)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING)
+
+/datum/map_template/shuttle/midway
+	name = "Midway"
+	shuttle_id = DROPSHIP_MIDWAY
 
 /datum/map_template/shuttle/alamo
 	name = "Alamo"

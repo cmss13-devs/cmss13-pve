@@ -28,7 +28,7 @@
 
 //TODO: Integrate defence zones and targeting body parts with the actual organ system, move these into organ definitions.
 
-//The base miss chance for the different defence zones
+/// The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
 	"head" = 10,
 	"chest" = 0,
@@ -48,7 +48,7 @@ var/list/global/base_miss_chance = list(
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
 //Also used to weight the protection value that armor provides for covering that body part when calculating protection from full-body effects.
 var/list/global/organ_rel_size = list(
-	"head" = 15,
+	"head" = 20,
 	"chest" = 70,
 	"groin" = 30,
 	"l_leg" = 25,
@@ -60,7 +60,7 @@ var/list/global/organ_rel_size = list(
 	"l_foot" = 10,
 	"r_foot" = 10,
 	"eyes" = 5,
-	"mouth" = 15,
+	"mouth" = 5,
 )
 
 // This is much faster than a string comparison

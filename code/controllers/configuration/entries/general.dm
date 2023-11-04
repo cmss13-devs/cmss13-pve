@@ -144,21 +144,6 @@ Administrative related.
 /datum/config_entry/string/ooc_color_normal
 	config_entry_value = "#1c52f5"
 
-/datum/config_entry/string/ooc_color_other
-	config_entry_value = "#2e78d9"
-
-/datum/config_entry/string/ooc_color_mods
-	config_entry_value = "#ffbf00"
-
-/datum/config_entry/string/ooc_color_debug
-	config_entry_value = "#6bd1b4"
-
-/datum/config_entry/string/ooc_color_admin
-	config_entry_value = "#ff8000"
-
-/datum/config_entry/string/ooc_color_default
-	config_entry_value = "#b82e00"
-
 /datum/config_entry/flag/usewhitelist
 
 /datum/config_entry/flag/usealienwhitelist

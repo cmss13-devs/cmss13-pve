@@ -35,7 +35,6 @@
 	tier = 0  //Larva's don't count towards Pop limits
 	age = XENO_NO_AGE
 	crit_health = -25
-	gib_chance = 25
 	mob_size = MOB_SIZE_SMALL
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,

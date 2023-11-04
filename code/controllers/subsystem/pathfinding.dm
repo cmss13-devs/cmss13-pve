@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 				if(length(L))
 					for(var/i in L)
 						var/atom/A = i
-						distance_between += A.xeno_ai_obstacle(X, direction)
+						distance_between += A.xeno_ai_obstacle(X, direction, target)
 
 				if(distance_between < distances[neighbor])
 					distances[neighbor] = distance_between
@@ -129,10 +129,10 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 /datum/controller/subsystem/xeno_pathfinding/proc/check_special_blockers(mob/living/carbon/xenomorph/xeno, turf/checking_turf)
 	var/list/pass_back = list()
 
+	pass_back += (checking_turf.type in XENO_AI_SPECIAL_BLOCKERS) ? checking_turf : list()
+
 	for(var/atom/checked_atom as anything in checking_turf)
-		for(var/special_block in XENO_AI_SPECIAL_BLOCKERS)
-			if(istype(checked_atom, special_block))
-				pass_back += checked_atom
+		pass_back += (checked_atom.type in XENO_AI_SPECIAL_BLOCKERS) ? checked_atom : list()
 
 	return pass_back
 

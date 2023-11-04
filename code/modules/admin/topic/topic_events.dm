@@ -308,7 +308,7 @@
 			else
 				announce_receipt = FALSE
 
-			em_call.activate(launch_broadcast, announce_receipt)
+			em_call.activate(!launch_broadcast, announce_receipt)
 
 		message_admins("[key_name_admin(usr)] created [xenos_to_spawn] xenos as [xeno_caste] at [get_area(initial_spot)]")
 

@@ -9,6 +9,7 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	exproof = TRUE
+
 	var/shuttle_tag  // Used to know which shuttle we're linked to.
 	var/obj/structure/dropship_equipment/selected_equipment //the currently selected equipment installed on the shuttle this console controls.
 	var/list/shuttle_equipments = list() //list of the equipments on the shuttle this console controls
@@ -28,6 +29,8 @@
 /obj/structure/machinery/computer/dropship_weapons/Initialize()
 	. = ..()
 	simulation = new()
+	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
 
 /obj/structure/machinery/computer/dropship_weapons/New()
 	..()
@@ -717,28 +720,22 @@
 	else
 		firemission_envelope.change_current_loc(shootloc)
 
-/obj/structure/machinery/computer/dropship_weapons/dropship1
-	name = "\improper 'Alamo' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
-	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
-
-/obj/structure/machinery/computer/dropship_weapons/dropship1/New()
-	..()
-	shuttle_tag = DROPSHIP_ALAMO
-
-/obj/structure/machinery/computer/dropship_weapons/dropship2
-	name = "\improper 'Normandy' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
-	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
-
-/obj/structure/machinery/computer/dropship_weapons/dropship2/New()
-	..()
-	shuttle_tag = DROPSHIP_NORMANDY
-
 /obj/structure/machinery/computer/dropship_weapons/Destroy()
 	. = ..()
 
 	QDEL_NULL(firemission_envelope)
+
+/obj/structure/machinery/computer/dropship_weapons/midway
+	name = "\improper 'Midway' weapons controls"
+	shuttle_tag = DROPSHIP_MIDWAY
+
+/obj/structure/machinery/computer/dropship_weapons/dropship1
+	name = "\improper 'Alamo' weapons controls"
+	shuttle_tag = DROPSHIP_ALAMO
+
+/obj/structure/machinery/computer/dropship_weapons/dropship2
+	name = "\improper 'Normandy' weapons controls"
+	shuttle_tag = DROPSHIP_NORMANDY
 
 // CAS TGUI SHIT \\
 

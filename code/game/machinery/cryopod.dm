@@ -145,6 +145,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	icon_state = "cryo_rear"
 	anchored = TRUE
 	density = TRUE
+	unslashable = TRUE
 
 	var/orient_right = null //Flips the sprite.
 

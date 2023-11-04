@@ -7,6 +7,7 @@
 	dir = WEST
 	anchored = FALSE
 	density = TRUE
+	unslashable = TRUE
 	layer = ABOVE_LYING_MOB_LAYER
 
 /obj/structure/lawnmower/Move(atom/NewLoc, dir)
