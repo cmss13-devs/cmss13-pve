@@ -145,3 +145,11 @@
 	var/datum/action/xeno_action/onclick/xenohide/hide = get_xeno_action_by_type(bound_xeno, /datum/action/xeno_action/onclick/xenohide)
 	if(hide)
 		hide.post_attack()
+
+/mob/living/carbon/xenomorph/runner/stop_pulling()
+	. = ..()
+	pass_flags = initial(pass_flags)
+
+/mob/living/carbon/xenomorph/runner/start_pulling(atom/movable/clone/victim, lunge, no_msg)
+	. = ..()
+	pass_flags = victim.pass_flags
