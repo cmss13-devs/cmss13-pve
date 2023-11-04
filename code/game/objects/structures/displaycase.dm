@@ -6,6 +6,7 @@
 	density = TRUE
 	anchored = TRUE
 	unacidable = FALSE
+	unslashable = TRUE
 	health = 30
 	var/occupied = 1
 	var/destroyed = 0

@@ -247,12 +247,19 @@ SUBSYSTEM_DEF(minimaps)
 		blip.overlays += overlay
 
 	images_by_source[target] = blip
+
 	for(var/flag in bitfield2list(hud_flags))
 		minimaps_by_z["[zlevel]"].images_assoc["[flag]"][target] = blip
 		minimaps_by_z["[zlevel]"].images_raw["[flag]"] += blip
+
 	if(ismovableatom(target))
 		RegisterSignal(target, COMSIG_MOVABLE_Z_CHANGED, PROC_REF(on_z_change))
 		blip.RegisterSignal(target, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move))
+
+		if(isitem(target))
+			blip.RegisterSignal(target, COMSIG_ITEM_PICKUP, TYPE_PROC_REF(/image, minimap_on_pickup))
+			blip.RegisterSignal(target, COMSIG_ITEM_DROPPED, TYPE_PROC_REF(/image, minimap_on_drop))
+
 	removal_cbs[target] = CALLBACK(src, PROC_REF(removeimage), blip, target)
 	RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_marker))
 
@@ -299,6 +306,19 @@ SUBSYSTEM_DEF(minimaps)
 	pixel_x = MINIMAP_PIXEL_FROM_WORLD(source.x) + SSminimaps.minimaps_by_z["[source_z]"].x_offset
 	pixel_y = MINIMAP_PIXEL_FROM_WORLD(source.y) + SSminimaps.minimaps_by_z["[source_z]"].y_offset
 
+/image/proc/minimap_on_pickup(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	RegisterSignal(user, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move), override = TRUE)
+	UnregisterSignal(source, COMSIG_MOVABLE_MOVED)
+
+/image/proc/minimap_on_drop(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	if(recursive_holder_check(source, recursion_limit = 5) != user)
+		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
+		RegisterSignal(source, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/image, minimap_on_move))
+
 /**
  * Removes an atom and it's blip from the subsystem.
  * Force has no effect on this proc, but is here because we are a COMSIG_PARENT_QDELETING handler.
@@ -320,6 +340,22 @@ SUBSYSTEM_DEF(minimaps)
 	else
 		for(var/flag in GLOB.all_minimap_flags)
 			minimaps_by_z["[z_level]"].images_assoc["[flag]"] -= source
+
+/// Checks if the source has a marker already set
+/datum/controller/subsystem/minimaps/proc/has_marker(atom/source)
+	var/turf/turf_gotten = get_turf(source)
+
+	if(!turf_gotten)
+		return
+
+	var/z_level = turf_gotten.z
+
+	if(minimaps_by_z["[z_level]"])
+		for(var/flag in GLOB.all_minimap_flags)
+			if(source in minimaps_by_z["[z_level]"].images_assoc["[flag]"])
+				return TRUE
+
+	return FALSE
 
 /**
  * Fetches a /atom/movable/screen/minimap instance or creates on if none exists

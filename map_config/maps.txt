@@ -20,7 +20,6 @@ map bigredv2
 endmap
 
 map prison_station_fop
-	disabled
 endmap
 
 map fiorina_sciannex
@@ -30,7 +29,6 @@ endmap
 map corsat
 	minplayers 130
 	voteweight 0
-	disabled
 endmap
 
 map desert_dam
@@ -45,7 +43,6 @@ endmap
 
 map shivas_snowball
 	voteweight 0
-	disabled
 endmap
 
 map kutjevo
@@ -60,6 +57,9 @@ map lv522_chances_claim
 endmap
 
 map new_varadero
+endmap
+
+map derelict_almayer
 endmap
 
 map whiskey_outpost_v2

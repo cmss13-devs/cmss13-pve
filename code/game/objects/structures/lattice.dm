@@ -5,6 +5,7 @@
 	icon_state = "latticefull"
 	density = FALSE
 	anchored = TRUE
+	unslashable = TRUE
 	layer = LATTICE_LAYER
 	plane = FLOOR_PLANE
 	// flags = CONDUCT

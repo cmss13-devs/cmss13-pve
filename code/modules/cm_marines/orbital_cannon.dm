@@ -16,6 +16,7 @@ var/list/ob_type_fuel_requirements
 	bound_height = 64
 	bound_y = 64
 	unacidable = TRUE
+	unslashable = TRUE
 	var/obj/structure/orbital_tray/tray
 	var/chambered_tray = FALSE
 	var/loaded_tray = FALSE
@@ -244,6 +245,7 @@ var/list/ob_type_fuel_requirements
 	bound_width = 64
 	bound_height = 32
 	unacidable = TRUE
+	unslashable = TRUE
 	pixel_y = -9
 	pixel_x = -6
 	var/obj/structure/ob_ammo/warhead/warhead
@@ -328,6 +330,7 @@ var/list/ob_type_fuel_requirements
 	throwpass = TRUE
 	climbable = TRUE
 	unacidable = TRUE // issue: being used for defences, solution: abomb
+	unslashable = TRUE
 	icon = 'icons/obj/structures/props/almayer_props.dmi'
 	var/is_solid_fuel = 0
 	var/source_mob
@@ -559,8 +562,8 @@ var/list/ob_type_fuel_requirements
 	icon_state = "ob_fuel"
 	is_solid_fuel = 1
 
-/obj/structure/ob_ammo/ob_fuel/New()
-	..()
+/obj/structure/ob_ammo/ob_fuel/Initialize()
+	. = ..()
 	pixel_x = rand(-5,5)
 	pixel_y = rand(-5,5)
 

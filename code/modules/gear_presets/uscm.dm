@@ -366,7 +366,7 @@
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
-	role_comm_title = "SL"
+	role_comm_title = "PltSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 

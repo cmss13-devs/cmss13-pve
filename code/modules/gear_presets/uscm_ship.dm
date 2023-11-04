@@ -417,7 +417,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 	dress_hat = list(/obj/item/clothing/head/marine/peaked/captain/white, /obj/item/clothing/head/marine/peaked/captain/black, /obj/item/clothing/head/marine/peaked)
 	dress_shoes = list(/obj/item/clothing/shoes/dress/commander)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/white, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/black, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/suit, /obj/item/clothing/suit/storage/jacket/marine/dress, /obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat_grey, )
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/white, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/black, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/suit, /obj/item/clothing/suit/storage/jacket/marine/dress)
 
 /datum/equipment_preset/uscm_ship/commander/New()
 	. = ..()
@@ -478,8 +478,6 @@
 		/obj/item/clothing/suit/storage/jacket/marine/dress/officer/black,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/officer/suit,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/officer/falcon,
-		/obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat_grey,
-		/obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat,
 	)
 
 /datum/equipment_preset/uscm_ship/commander/council/load_gear(mob/living/carbon/human/new_human)
@@ -513,7 +511,7 @@
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_HEAD)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
-	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full, /obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat_grey,)
+	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm_ship/xo/New()
 	. = ..()
@@ -537,14 +535,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/so
-	name = "USCM Platoon Commander (PltCO)"
+	name = "USCM Platoon Commander (PltCo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/silver
 	assignment = JOB_SO
 	rank = JOB_SO
 	paygrade = "MO2"
-	role_comm_title = "PltCO"
+	role_comm_title = "PltCo"
 	minimum_age = 25
 	skills = /datum/skills/SO
 

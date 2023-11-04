@@ -3,6 +3,7 @@
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
+	unslashable = TRUE
 	layer = WALL_OBJ_LAYER
 
 /obj/structure/sign/ex_act(severity)

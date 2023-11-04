@@ -463,6 +463,7 @@
 ///Virtual disposal object, travels through pipes in lieu of actual items
 ///Contents will be items flushed by the disposal, this allows the gas flushed to be tracked
 /obj/structure/disposalholder
+	unslashable = TRUE
 	invisibility = 101
 	var/active = 0 //True if the holder is moving, otherwise inactive
 	dir = 0
@@ -618,6 +619,7 @@
 	desc = "An underfloor disposal pipe."
 	anchored = TRUE
 	density = FALSE
+	unslashable = TRUE
 
 	level = 1 //Underfloor only
 	var/dpdir = 0 //Bitmask of pipe directions

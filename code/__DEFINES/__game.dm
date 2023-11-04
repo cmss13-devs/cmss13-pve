@@ -40,6 +40,7 @@ block( \
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
+#define MAP_DERELICT_ALMAYER "Derelict Almayer"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -154,7 +155,7 @@ block( \
 
 //=================================================
 
-#define TOGGLES_CHAT_DEFAULT (CHAT_OOC|CHAT_DEAD|CHAT_GHOSTEARS|CHAT_GHOSTSIGHT|CHAT_PRAYER|CHAT_RADIO|CHAT_LOOC|CHAT_GHOSTHIVEMIND)
+#define TOGGLES_CHAT_DEFAULT (CHAT_OOC|CHAT_DEAD|CHAT_GHOSTRADIO|CHAT_PRAYER|CHAT_RADIO|CHAT_LOOC|CHAT_GHOSTHIVEMIND)
 
 #define TOGGLES_GHOST_DEFAULT (GHOST_HEALTH_SCAN)
 

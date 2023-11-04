@@ -192,8 +192,8 @@
 #define SKILL_DOMESTIC_MAX 2
 
 //multitile vehicle skills
-//Can't drive
-#define SKILL_VEHICLE_DEFAULT 0
+
+#define SKILL_VEHICLE_DEFAULT 2
 //Can drive small vehicles (truck)
 #define SKILL_VEHICLE_SMALL 1
 //Can drive large vehicles (apc, tank)
@@ -210,7 +210,7 @@
 #define SKILL_INTEL_MAX 2
 
 // Fireman carry - Separated from police skills for further rebalances. Determines how fast you carry someone.
-#define SKILL_FIREMAN_DEFAULT 2
+#define SKILL_FIREMAN_DEFAULT 3
 #define SKILL_FIREMAN_TRAINED 1
 #define SKILL_FIREMAN_SKILLED 2
 #define SKILL_FIREMAN_EXPERT 3

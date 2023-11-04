@@ -5,6 +5,9 @@
 #define MOTION_DETECTOR_RANGE_LONG 14
 #define MOTION_DETECTOR_RANGE_SHORT 7
 
+#define MOTION_DETECTOR_BASE_COOLDOWN (1 SECONDS)
+#define MOTION_DETECTOR_RANGE_LONG_MULTIPLIER 2.5
+
 /obj/effect/detector_blip
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "detector_blip"
@@ -30,7 +33,6 @@
 	w_class = SIZE_MEDIUM
 	var/active = 0
 	var/recycletime = 120
-	var/long_range_cooldown = 2
 	var/blip_type = "detector"
 	var/iff_signal = FACTION_MARINE
 	actions_types = list(/datum/action/item_action)
@@ -38,6 +40,9 @@
 	var/datum/shape/rectangle/range_bounds
 	var/long_range_locked = FALSE //only long-range MD
 	var/ping_overlay
+
+	/// Handles our cooldowns regarding pings
+	COOLDOWN_DECLARE(ping_cooldown)
 
 /obj/item/device/motiondetector/proc/get_help_text()
 	. = "Blue bubble-like indicators on your HUD will show pings locations or direction to them. The device screen will show the amount of unidentified movements detected (up to 9). Has two modes: slow long-range [SPAN_HELPFUL("([MOTION_DETECTOR_RANGE_LONG] tiles)")] and fast short-range [SPAN_HELPFUL("([MOTION_DETECTOR_RANGE_SHORT] tiles)")]. Use [SPAN_HELPFUL("Alt + Click")] on the device to switch between modes. Using the device on the adjacent multitile vehicle will start the process of recalibrating and scanning vehicle interior for unidentified movements inside."
@@ -136,7 +141,7 @@
 	else if(user)
 		to_chat(user, SPAN_NOTICE("You activate \the [src]."))
 	playsound(loc, 'sound/items/detector_turn_on.ogg', 30, FALSE, 5, 2)
-	START_PROCESSING(SSobj, src)
+	START_PROCESSING(SSfastobj, src)
 
 /obj/item/device/motiondetector/proc/turn_off(mob/user, forced = FALSE)
 	if(forced)
@@ -146,33 +151,36 @@
 	scanning = FALSE // safety if MD runtimes in scan and stops scanning
 	icon_state = "[initial(icon_state)]"
 	playsound(loc, 'sound/items/detector_turn_off.ogg', 30, FALSE, 5, 2)
-	STOP_PROCESSING(SSobj, src)
+	STOP_PROCESSING(SSfastobj, src)
 
 /obj/item/device/motiondetector/Destroy()
-	STOP_PROCESSING(SSobj, src)
+	STOP_PROCESSING(SSfastobj, src)
 	for(var/to_delete in blip_pool)
 		qdel(blip_pool[to_delete])
 		blip_pool.Remove(to_delete)
 	blip_pool = null
 	return ..()
 
-/obj/item/device/motiondetector/process()
+/obj/item/device/motiondetector/process(delta_time)
 	if(isturf(loc))
 		toggle_active(null, TRUE)
+
 	if(!active)
-		STOP_PROCESSING(SSobj, src)
+		STOP_PROCESSING(SSfastobj, src)
 		return
+
 	recycletime--
 	if(!recycletime)
 		recycletime = initial(recycletime)
 		refresh_blip_pool()
 
-	if(!detector_mode)
-		long_range_cooldown--
-		if(long_range_cooldown) return
-		else long_range_cooldown = initial(long_range_cooldown)
+	if(!COOLDOWN_FINISHED(src, ping_cooldown))
+		return
 
 	scan()
+
+	var/next_ping_cooldown = MOTION_DETECTOR_BASE_COOLDOWN * (detector_mode ? 1 : MOTION_DETECTOR_RANGE_LONG_MULTIPLIER)
+	COOLDOWN_START(src, ping_cooldown, next_ping_cooldown)
 
 /obj/item/device/motiondetector/proc/refresh_blip_pool()
 	for(var/X in blip_pool) //we dump and remake the blip pool every few minutes
