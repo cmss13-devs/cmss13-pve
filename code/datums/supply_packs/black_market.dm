@@ -28,6 +28,7 @@ black market prices are NOT based on real or in-universe costs. they are based o
 	crate_heat = 5
 
 /obj/structure/largecrate/black_market
+	fill_from_loc = FALSE
 	/// Wipes points from objects inside to avoid infinite farming.
 	var/points_wipe = TRUE
 	//no special name so it can be hidden

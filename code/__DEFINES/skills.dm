@@ -192,8 +192,8 @@
 #define SKILL_DOMESTIC_MAX 2
 
 //multitile vehicle skills
-//Can't drive
-#define SKILL_VEHICLE_DEFAULT 0
+
+#define SKILL_VEHICLE_DEFAULT 2
 //Can drive small vehicles (truck)
 #define SKILL_VEHICLE_SMALL 1
 //Can drive large vehicles (apc, tank)

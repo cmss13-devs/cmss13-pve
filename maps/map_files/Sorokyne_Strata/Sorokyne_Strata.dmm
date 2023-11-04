@@ -26654,11 +26654,6 @@
 	icon_state = "floor2"
 	},
 /area/strata/ag/interior/outpost/engi/drome)
-"chz" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
-/obj/structure/bed/medevac_stretcher,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/strata/ug/exterior/jungle/deep/carplake_center)
 "chB" = (
 /turf/open/floor/interior/plastic,
 /area/strata/ag/interior/outpost/canteen)
@@ -26669,12 +26664,6 @@
 	icon_state = "white_cyan2"
 	},
 /area/strata/ag/interior/outpost/canteen)
-"chJ" = (
-/mob/living/simple_animal/hostile/carp{
-	desc = "You think this might be Glubs's son."
-	},
-/turf/open/gm/dirt,
-/area/strata/ug/exterior/jungle/deep/carplake_center)
 "chN" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/south_res)
@@ -79028,7 +79017,7 @@ bDH
 cwD
 cuM
 cuM
-chz
+caw
 cuM
 cuM
 cwD
@@ -80003,7 +79992,7 @@ cwD
 cwD
 cwD
 mmF
-chJ
+cwD
 cwD
 cwD
 cuM

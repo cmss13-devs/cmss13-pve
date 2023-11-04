@@ -116,7 +116,6 @@
 /mob/living/carbon/xenomorph/lurker/process_ai(delta_time)
 	if(get_active_hand())
 		swap_hand()
-	zone_selected = pick(GLOB.ai_target_limbs)
 	return ..()
 
 /datum/behavior_delegate/lurker_base

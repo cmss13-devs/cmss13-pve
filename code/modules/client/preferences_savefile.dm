@@ -208,7 +208,7 @@
 	S["tooltips"] >> tooltips
 
 	//Sanitize
-	ooccolor = sanitize_hexcolor(ooccolor, CONFIG_GET(string/ooc_color_default))
+	ooccolor = sanitize_hexcolor(ooccolor, CONFIG_GET(string/ooc_color_normal))
 	lastchangelog = sanitize_text(lastchangelog, initial(lastchangelog))
 	UI_style = sanitize_inlist(UI_style, list("white", "dark", "midnight", "orange", "old"), initial(UI_style))
 	tgui_say = sanitize_integer(tgui_say, FALSE, TRUE, TRUE)

@@ -1,10 +1,12 @@
 // Networks
 #define CAMERA_NET_ALMAYER "Almayer"
+#define CAMERA_NET_GOLDEN_ARROW "Golden Arrow"
 #define CAMERA_NET_CONTAINMENT "Containment"
 #define CAMERA_NET_CONTAINMENT_HIDDEN "Containment Hidden"
 #define CAMERA_NET_RESEARCH "Research"
 #define CAMERA_NET_ALAMO "Alamo"
 #define CAMERA_NET_NORMANDY "Normandy"
+#define CAMERA_NET_MIDWAY "Midway"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
 

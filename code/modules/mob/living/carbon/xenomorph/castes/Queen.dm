@@ -414,8 +414,6 @@
 	if(queen_aged)
 		age_xeno()
 		switch(age)
-			if(XENO_YOUNG)
-				name = "[name_prefix]Young Queen" //Young
 			if(XENO_NORMAL)
 				name = "[name_prefix]Queen"  //Regular
 			if(XENO_MATURE)
