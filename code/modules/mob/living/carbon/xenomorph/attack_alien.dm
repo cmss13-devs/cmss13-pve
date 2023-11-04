@@ -92,7 +92,7 @@
 
 			M.flick_attack_overlay(src, "slash")
 			var/obj/limb/affecting
-			affecting = get_limb(rand_zone(M.zone_selected, 70))
+			affecting = get_limb(M.mob_flags & AI_CONTROLLED ? rand_zone() : rand_zone(M.zone_selected, 70))
 			if(!affecting) //No organ, just get a random one
 				affecting = get_limb(rand_zone(null, 0))
 			if(!affecting) //Still nothing??
@@ -517,46 +517,42 @@
 //Prying open doors
 /obj/structure/machinery/door/airlock/attack_alien(mob/living/carbon/xenomorph/M)
 	var/turf/cur_loc = M.loc
-	if(isElectrified())
-		if(shock(M, 100))
-			return XENO_NO_DELAY_ACTION
+
+	. = XENO_NO_DELAY_ACTION
+
+	if(M.claw_type >= CLAW_TYPE_SHARP)
+		M.animation_attack_on(src)
+		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+		take_damage(damage_cap / XENO_HITS_TO_DESTROY_DOOR)
+		. = XENO_ATTACK_ACTION
+
+	if(isElectrified() && shock(M, 100))
+		return
 
 	if(!density)
 		to_chat(M, SPAN_WARNING("[src] is already open!"))
-		return XENO_NO_DELAY_ACTION
+		return
 
 	if(heavy)
 		to_chat(M, SPAN_WARNING("[src] is too heavy to open."))
-		return XENO_NO_DELAY_ACTION
+		return
 
 	if(welded)
-		if(M.claw_type >= CLAW_TYPE_SHARP)
-			M.animation_attack_on(src)
-			playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-			take_damage(damage_cap / XENO_HITS_TO_DESTROY_WELDED_DOOR)
-			return XENO_ATTACK_ACTION
-		else
-			to_chat(M, SPAN_WARNING("[src] is welded shut."))
-			return XENO_NO_DELAY_ACTION
+		to_chat(M, SPAN_WARNING("[src] is welded shut."))
+		return
 
 	if(locked)
-		if(M.claw_type >= CLAW_TYPE_SHARP)
-			M.animation_attack_on(src)
-			playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-			take_damage(HEALTH_DOOR / XENO_HITS_TO_DESTROY_BOLTED_DOOR)
-			return XENO_ATTACK_ACTION
-		else
-			to_chat(M, SPAN_WARNING("[src] is bolted down tight."))
-			return XENO_NO_DELAY_ACTION
+		to_chat(M, SPAN_WARNING("[src] is bolted down tight."))
+		return
 
 	if(!istype(cur_loc))
-		return XENO_NO_DELAY_ACTION //Some basic logic here
+		return //Some basic logic here
 
 	if(M.action_busy)
-		return XENO_NO_DELAY_ACTION
+		return
 
 	if(M.lying)
-		return XENO_NO_DELAY_ACTION
+		return
 
 	var/delay
 
