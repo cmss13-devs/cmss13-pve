@@ -110,8 +110,8 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 			/obj/vehicle/multitile/proc/activate_horn,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/name_vehicle,
-			/obj/vehicle/multitile/proc/cycle_firemode
+			///obj/vehicle/multitile/proc/cycle_firemode,
+			/obj/vehicle/multitile/proc/name_vehicle
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
@@ -140,14 +140,15 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 			/obj/vehicle/multitile/proc/activate_horn,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/name_vehicle,
+			///obj/vehicle/multitile/proc/cycle_firemode,
+			/obj/vehicle/multitile/proc/name_vehicle
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_shift_click,
-			/obj/vehicle/multitile/proc/name_vehicle,
+			/obj/vehicle/multitile/proc/name_vehicle
 		))
 	else if(seat == VEHICLE_SUPPORT_GUNNER_ONE || seat == VEHICLE_SUPPORT_GUNNER_TWO)
 		remove_verb(M.client, list(
