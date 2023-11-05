@@ -3,7 +3,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	allow_additional = TRUE
-	scaled = TRUE
+	scaled = FALSE
 	supervisors = "the pilot officers"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/dcc
@@ -17,3 +17,7 @@ AddTimelock(/datum/job/command/crew_chief, list(
 	name = JOB_DROPSHIP_CREW_CHIEF
 	icon_state = "dcc_spawn"
 	job = /datum/job/command/crew_chief
+
+/datum/job/command/auxiliary/crew_chief/ai
+	total_positions = 1
+	spawn_positions = 1

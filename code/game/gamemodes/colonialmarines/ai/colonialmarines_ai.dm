@@ -17,6 +17,9 @@
 
 	role_mappings = list(
 		/datum/job/command/bridge/ai = JOB_SO,
+		/datum/job/civilians/support/synthetic/ai = JOB_SYNTH,
+		/datum/job/command/auxiliary/pilot/ai = JOB_PILOT,
+		/datum/job/command/auxiliary/crew_chief/ai = JOB_DROPSHIP_CREW_CHIEF,
 		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,

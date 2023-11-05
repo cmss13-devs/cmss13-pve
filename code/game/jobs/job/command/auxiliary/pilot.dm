@@ -3,7 +3,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	allow_additional = TRUE
-	scaled = TRUE
+	scaled = FALSE
 	supervisors = "the auxiliary support officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/po
@@ -18,3 +18,7 @@ AddTimelock(/datum/job/command/pilot, list(
 	name = JOB_PILOT
 	icon_state = "po_spawn"
 	job = /datum/job/command/pilot
+
+/datum/job/command/auxiliary/pilot/ai
+	total_positions = 1
+	spawn_positions = 1

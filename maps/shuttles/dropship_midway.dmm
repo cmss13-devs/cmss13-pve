@@ -71,6 +71,9 @@
 	dir = 8;
 	pixel_x = -14
 	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin2"
 	},
@@ -93,6 +96,14 @@
 "iv" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -207,14 +218,6 @@
 "sl" = (
 /turf/closed/shuttle/midway{
 	icon_state = "31"
-	},
-/area/shuttle/midway)
-"tf" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/shuttle/midway)
 "ti" = (
@@ -334,6 +337,14 @@
 	dir = 8;
 	pixel_x = 23
 	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -400,6 +411,9 @@
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin2"
@@ -716,7 +730,7 @@ Kw
 nH
 Aw
 LY
-tf
+ME
 PP
 jW
 Dg

@@ -50,3 +50,7 @@
 	name = JOB_SYNTH
 	icon_state = "syn_spawn"
 	job = /datum/job/civilian/synthetic
+
+/datum/job/civilians/support/synthetic/ai
+	total_positions = 1
+	spawn_positions = 1
