@@ -100,6 +100,14 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
+// XENOS
+/mob/living/carbon/xenomorph/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return XENO_PENALTY
+
 // VEHICLES
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
@@ -121,11 +129,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(X.claw_type == CLAW_TYPE_VERY_SHARP || (X.claw_type >= CLAW_TYPE_SHARP && !reinforced))
 		return ..()
 	return WINDOW_FRAME_PENALTY
-
-/obj/structure/window_frame/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	. = ..()
-	if(!X.action_busy)
-		do_climb(X)
 
 /obj/structure/barricade/handrail/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()

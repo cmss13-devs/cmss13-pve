@@ -2465,11 +2465,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/computer/supply_drop_console/limited{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "sensor_comp2";
-	layer = 4
-	},
+/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

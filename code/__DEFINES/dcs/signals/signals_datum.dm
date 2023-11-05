@@ -64,3 +64,6 @@
 
 // from /proc/update_living_queens() : /mob/living/carbon/xenomorph/queen
 #define COMSIG_HIVE_NEW_QUEEN "hive_new_queen"
+
+/// From /datum/game_master_submenu/vents/proc/setup_ambush()
+#define COMSIG_GAME_MASTER_AMBUSH_SET "game_master_ambush_set"
