@@ -25,6 +25,9 @@
 	/// Are we currently ambushing?
 	var/ambushing = FALSE
 
+	/// Are we the primary spawner for all menus looking at this vent?
+	var/primary = FALSE
+
 /datum/game_master_submenu/vents/New(client/using_client)
 	. = ..()
 	current_ambush = list()
@@ -35,6 +38,8 @@
 
 	for(var/turf/cycled_turf as anything in ambush_turfs)
 		RegisterSignal(cycled_turf, COMSIG_TURF_ENTERED, PROC_REF(ambush_turf_movement))
+
+	RegisterSignal(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, PROC_REF(other_ambush_set))
 
 /datum/game_master_submenu/vents/Destroy(force, ...)
 	. = ..()
@@ -94,7 +99,7 @@
 /datum/game_master_submenu/vents/proc/ambush_turf_movement(turf/crossed_turf, atom/movable/entering_movable)
 	SIGNAL_HANDLER
 
-	if(length(current_ambush) && !ambushing && ishuman(entering_movable))
+	if(length(current_ambush) && !ambushing && primary && ishuman(entering_movable))
 		ambushing = TRUE
 		handle_vent_spawn(TRUE)
 
@@ -109,6 +114,18 @@
 	temp_string = copytext(temp_string, 1, -2)
 
 	ambush_info = temp_string
+
+	SEND_SIGNAL(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, current_ambush.Copy(), ambush_info)
+
+	primary = TRUE
+
+/datum/game_master_submenu/vents/proc/other_ambush_set(atom/movable/other_parent, new_ambush, new_ambush_info)
+	SIGNAL_HANDLER
+
+	primary = FALSE
+
+	current_ambush = new_ambush
+	ambush_info = new_ambush_info
 
 #define VENT_ESCAPE_INCREMENT_TIME (1 SECONDS)
 
