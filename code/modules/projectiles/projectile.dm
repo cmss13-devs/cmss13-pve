@@ -520,8 +520,10 @@
 		else if(!L.lying)
 			animatation_displace_reset(L)
 			if(ammo.sound_miss) playsound_client(L.client, ammo.sound_miss, get_turf(L), 75, TRUE)
-			L.visible_message(SPAN_AVOIDHARM("[src] misses [L]!"),
-				SPAN_AVOIDHARM("[src] narrowly misses you!"), null, 4, CHAT_TYPE_TAKING_HIT)
+			if(COOLDOWN_FINISHED(L, shot_cooldown))
+				L.visible_message(SPAN_AVOIDHARM("[src] misses [L]!"),
+					SPAN_AVOIDHARM("[src] narrowly misses you!"), null, 4, CHAT_TYPE_TAKING_HIT)
+				COOLDOWN_START(L, shot_cooldown, 1 SECONDS)
 			var/log_message = "[src] narrowly missed [key_name(L)]"
 
 			var/mob/living/carbon/shotby = firer

@@ -908,6 +908,20 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	return job_preference_list[J]
 
+/// Returns a list of all the proference's jobs set to the priority argument
+/datum/preferences/proc/get_jobs_by_priority(priority)
+	var/list/jobs_to_return = list()
+
+	if(!length(job_preference_list))
+		ResetJobs()
+		return jobs_to_return
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] == priority)
+			jobs_to_return += job
+
+	return jobs_to_return
+
 /datum/preferences/proc/SetJobDepartment(datum/job/J, priority)
 	if(!J || priority < 0 || priority > 4)
 		return FALSE
