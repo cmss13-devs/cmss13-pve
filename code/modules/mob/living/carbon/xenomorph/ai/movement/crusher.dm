@@ -1,83 +1,142 @@
-#define CRUSHER_MOMENTUM_MOBILITY 3
-#define CRUSHER_CHARGE_DISTANCE 10
-#define CROOSH_MODE_TIME 16 SECONDS
-#define CROOSH_MODE_CD 4 SECONDS
-
 /datum/xeno_ai_movement/crusher
-	var/datum/action/xeno_action/onclick/charger_charge/charge_action
-	var/croosh_mode = FALSE
 
-	COOLDOWN_DECLARE(croosh_mode_cooldown)
-	COOLDOWN_DECLARE(croosh_mode_timer)
+	/// The turf we force our crusher to walk to when he charges
+	var/turf/charge_turf
+
+
+#define AI_NEW_TARGET_COOLDOWN 5 SECONDS
 
 /datum/xeno_ai_movement/crusher/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
-	charge_action = get_xeno_action_by_type(parent, /datum/action/xeno_action/onclick/charger_charge)
+	addtimer(CALLBACK(src, PROC_REF(get_new_target), parent), AI_NEW_TARGET_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
+
+/datum/xeno_ai_movement/crusher/proc/get_new_target(mob/living/carbon/xenomorph/parent)
+	parent.current_target = parent.get_target(parent.ai_range)
+
+#undef AI_NEW_TARGET_COOLDOWN
+
+
+#define MIN_TARGETS_TO_CHARGE 3
+#define MIN_CHARGE_DISTANCE 5
+#define CHARGE_DEVIATION 1
 
 /datum/xeno_ai_movement/crusher/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
 	if(moving_xeno.throwing)
 		return
 
-	check_ai_mode()
+	var/target = moving_xeno.current_target
 
-	if(HAS_TRAIT(moving_xeno, TRAIT_CHARGING))
-		var/turf/current_loc = moving_xeno.loc
-		var/mob/target = moving_xeno.current_target
-		var/moving_dir = moving_xeno.dir
+	if(charge_turf)
+		if(get_dist(target, moving_xeno) >= moving_xeno.ai_range)
+			toggle_charging(FALSE)
+			return TRUE
 
-		if(!(get_dir(target, moving_xeno) in reverse_nearby_direction(moving_dir) + NONE))
-			if(charge_action.momentum <= CRUSHER_MOMENTUM_MOBILITY)
-				charge_action.stop_momentum()
-				return ..()
-
-			charge_action.lose_momentum(1.5)
-
-		var/turf/charge_turf = current_loc
 		var/list/to_ram = list()
+		for(var/turf/turfs in getline2(moving_xeno, charge_turf))
+			to_ram += turfs.contents
 
-		for(var/i=0, i<=CRUSHER_CHARGE_DISTANCE, i++)
-			var/turf/T = get_step(charge_turf, moving_dir)
-			for(var/atom/A in T)
-				to_ram += A
+		var/charging_dir = get_dir(moving_xeno, charge_turf)
+		if(moving_xeno.move_to_next_turf(charge_turf, world.maxx, to_ram))
+			if(charging_dir in cardinal)
+				return TRUE
 
-			if(LinkBlocked(moving_xeno, moving_xeno.loc, T, list(target, moving_xeno) + to_ram))
-				break
+		var/turf/next_turf = get_step(moving_xeno, charging_dir)
+		if(LinkBlocked(moving_xeno, get_turf(moving_xeno), next_turf))
+			if(moving_xeno.Move(next_turf, 0))
+				return TRUE
 
-			charge_turf = T
+		toggle_charging(FALSE)
+		return TRUE
 
-		if(!moving_xeno.move_to_next_turf(charge_turf, ignore = to_ram))
-			return ..()
+	if(get_dist(moving_xeno, target) <= MIN_CHARGE_DISTANCE)
+		return ..()
 
-		var/turf/next_turf = get_step(moving_xeno.loc, moving_dir)
+	var/humans_x = 0
+	var/humans_y = 0
+	var/humans_count = 0
 
-		if(next_turf.density)
-			if(!moving_xeno.Move(next_turf, moving_dir))
-				charge_action.stop_momentum()
+	for(var/mob/living/carbon/human/humie in view(MIN_CHARGE_DISTANCE, target))
+		if(humie.stat)
+			continue
 
-		return
+		humans_x += humie.x
+		humans_y += humie.y
+		humans_count++
 
-	return ..()
+	if(humans_count < MIN_TARGETS_TO_CHARGE)
+		return ..()
 
-/datum/xeno_ai_movement/crusher/proc/check_ai_mode()
-	var/mob/living/carbon/xenomorph/croosher = parent
+	humans_x = Floor(humans_x / humans_count) + rand(-CHARGE_DEVIATION, CHARGE_DEVIATION)
+	humans_y = Floor(humans_y / humans_count) + rand(-CHARGE_DEVIATION, CHARGE_DEVIATION)
 
-	if(COOLDOWN_FINISHED(src, croosh_mode_cooldown) && !croosh_mode)
+	var/turf/middle = locate(humans_x, humans_y, moving_xeno.z)
+
+	var/turf/WE_move_variant = locate(moving_xeno.x, middle.y, moving_xeno.z)
+	var/turf/NS_move_variant = locate(middle.x, moving_xeno.y, moving_xeno.z)
+
+	var/list/possible_blocked_turfs = list(WE_move_variant, NS_move_variant)
+	var/list/non_blocked_turfs = list()
+
+	for(var/i=1 to LAZYLEN(possible_blocked_turfs))
+		var/turf/next_turf = possible_blocked_turfs[i]
+		var/blocked = FALSE
+
+		for(var/I=0 to MIN_CHARGE_DISTANCE)
+			var/turf/last_turf = next_turf
+			next_turf = get_step(next_turf, get_dir(next_turf, middle))
+
+			if(LinkBlocked(moving_xeno, last_turf, next_turf))
+				blocked = TRUE
+
+		if(blocked)
+			continue
+
+		non_blocked_turfs += possible_blocked_turfs[i]
+
+	var/lenght = LAZYLEN(non_blocked_turfs)
+	if(!lenght)
+		return ..()
+
+	var/turf/to_move
+	if(lenght == 1)
+		to_move = pick(non_blocked_turfs)
+
+	if(!to_move)
+		var/dist_check = get_dist(WE_move_variant, parent) > get_dist(NS_move_variant, parent)
+		to_move = dist_check ? NS_move_variant : WE_move_variant
+
+	if(!moving_xeno.move_to_next_turf(to_move))
+		return ..()
+
+	if(get_turf(moving_xeno) != to_move)
+		return TRUE
+
+	var/step_dir = get_dir(to_move, middle)
+	var/turf/edge_turf = get_step(moving_xeno, step_dir)
+
+	while(!edge_turf.density)
+		edge_turf = get_step(edge_turf, step_dir)
+
+	toggle_charging(TRUE)
+	charge_turf = edge_turf
+
+	return TRUE
+
+#undef CHARGE_DEVIATION
+#undef MIN_CHARGE_DISTANCE
+#undef MIN_TARGETS_TO_CHARGE
+
+
+/datum/xeno_ai_movement/crusher/proc/toggle_charging(toggle)
+	var/datum/action/xeno_action/onclick/charger_charge/charge_action = get_xeno_action_by_type(parent, /datum/action/xeno_action/onclick/charger_charge)
+
+	if(toggle && !charge_action.activated)
 		INVOKE_ASYNC(charge_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/charger_charge, use_ability_wrapper))
-		COOLDOWN_START(src, croosh_mode_timer, CROOSH_MODE_TIME)
-		croosher.emote("roar")
-		croosh_mode = TRUE
 
-	if(COOLDOWN_FINISHED(src, croosh_mode_timer) && croosh_mode && !HAS_TRAIT(croosher, TRAIT_CHARGING))
+	if(!toggle && charge_action.activated)
 		INVOKE_ASYNC(charge_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/charger_charge, use_ability_wrapper))
-		COOLDOWN_START(src, croosh_mode_cooldown, CROOSH_MODE_CD)
-		croosher.emote("growl")
-		croosh_mode = FALSE
-
-#undef CROOSH_MODE_CD
-#undef CROOSH_MODE_TIME
-#undef CRUSHER_CHARGE_DISTANCE
-#undef CRUSHER_MOMENTUM_MOBILITY
+		charge_turf = null
 
 /mob/living/carbon/xenomorph/crusher/Move(NewLoc, direct)
 	if(direct == 0)

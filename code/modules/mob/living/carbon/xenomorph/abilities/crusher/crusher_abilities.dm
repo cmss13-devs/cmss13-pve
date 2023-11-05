@@ -214,6 +214,17 @@
 			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
 
+	for(var/mob/living/carbon/human/Mob in orange(1, Xeno))
+		if(Mob.knocked_down)
+			continue
+
+		if(momentum < max_momentum / 2)
+			continue
+
+		Mob.apply_effect(0.5, WEAKEN)
+		animation_flash_color(Mob)
+		shake_camera(Mob, 4, 2)
+
 	Xeno.recalculate_speed()
 
 /datum/action/xeno_action/onclick/charger_charge/proc/handle_dir_change(datum/source, old_dir, new_dir)

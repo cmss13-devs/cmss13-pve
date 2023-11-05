@@ -136,7 +136,7 @@
 		charger_ability.stop_momentum()
 		return
 
-	health -= CHARGER_DESTROY //Usually knocks it down.
+	health -= CHARGER_DESTROY * 2 //Usually knocks it down.
 	healthcheck()
 
 	if(QDELETED(src))

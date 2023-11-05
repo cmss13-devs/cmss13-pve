@@ -70,7 +70,7 @@
 	icon_xeno = 'icons/mob/xenos/crusher.dmi'
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
 
-	ai_range = 24
+	ai_range = 28
 
 /mob/living/carbon/xenomorph/crusher/init_movement_handler()
 	return new /datum/xeno_ai_movement/crusher(src)
@@ -296,6 +296,6 @@
 	. += "Shield: [shield_total]"
 
 /datum/behavior_delegate/crusher_base/on_update_icons()
-	if(bound_xeno.throwing || is_charging) //Let it build up a bit so we're not changing icons every single turf
+	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && !bound_xeno.lying)
 		bound_xeno.icon_state = "[bound_xeno.mutation_icon_state || bound_xeno.mutation_type] Crusher Charging"
 		return TRUE
