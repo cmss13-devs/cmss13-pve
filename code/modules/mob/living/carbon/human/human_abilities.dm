@@ -391,6 +391,10 @@ CULT
 /datum/action/human_action/activable/cult_leader/convert/use_ability(mob/M)
 	var/datum/hive_status/hive = get_hive()
 
+	if(!istype(hive))
+		to_chat(owner, SPAN_DANGER("There is no Queen. You are alone."))
+		return
+
 	if(!can_use_action())
 		return
 
@@ -435,6 +439,10 @@ CULT
 		return
 
 	var/datum/hive_status/hive = get_hive()
+
+	if(!istype(hive))
+		to_chat(owner, SPAN_DANGER("There is no Queen. You are alone."))
+		return
 
 	if(!can_use_action())
 		return
