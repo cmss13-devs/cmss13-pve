@@ -295,6 +295,32 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
 
+/datum/squad/marine/alpha/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	name = new_name
+
+	for(var/mob/living/carbon/human/marine in marines_list)
+		if(!istype(marine.wear_id, /obj/item/card/id))
+			continue
+
+		var/obj/item/card/id/marine_card = marine.wear_id
+		var/datum/weakref/marine_card_registered = marine.wear_id.registered_ref
+
+		if(!istype(marine_card_registered))
+			continue
+
+		if(marine != marine_card_registered.resolve())
+			continue
+
+		marine_card.assignment = "[new_name] [marine.job]"
+		marine_card.name = "[marine_card.registered_name]'s ID Card ([marine_card.assignment])"
+
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
 

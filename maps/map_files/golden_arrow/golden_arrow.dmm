@@ -5636,7 +5636,7 @@
 	},
 /area/golden_arrow/hangar)
 "Jb" = (
-/obj/structure/machinery/cm_vending/clothing/medic/alpha,
+/obj/structure/machinery/cm_vending/clothing/medic,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},

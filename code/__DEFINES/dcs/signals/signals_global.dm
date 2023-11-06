@@ -65,3 +65,6 @@
 /// From /proc/biohazard_lockdown()
 #define COMSIG_GLOB_RESEARCH_LOCKDOWN "research_lockdown_closed"
 #define COMSIG_GLOB_RESEARCH_LIFT "research_lockdown_opened"
+
+/// From /client/proc/rename_platoon()
+#define COMSIG_GLOB_PLATOON_NAME_CHANGE "platoon_name_change"

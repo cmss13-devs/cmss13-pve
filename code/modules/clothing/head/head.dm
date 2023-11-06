@@ -99,9 +99,6 @@
 	if(istype(H))
 		if(H.assigned_squad)
 			switch(H.assigned_squad.name)
-				if(SQUAD_MARINE_1)
-					icon_state = "beret_alpha"
-					desc = "Often found atop heads, slightly less found on those still attached."
 				if(SQUAD_MARINE_2)
 					icon_state = "beret_bravo"
 					desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
@@ -114,6 +111,10 @@
 				if(SQUAD_MARINE_5)
 					icon_state = "beret_echo"
 					desc = "Tightly Woven, as it should be."
+
+			if(H.assigned_squad.name == GLOB.main_platoon_name)
+				icon_state = "beret_alpha"
+				desc = "Often found atop heads, slightly less found on those still attached."
 		else
 			icon_state = "beret"
 			desc = initial(desc)
