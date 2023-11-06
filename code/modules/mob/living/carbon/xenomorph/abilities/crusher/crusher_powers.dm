@@ -316,9 +316,8 @@
 	return ..()
 
 /datum/action/xeno_action/activable/fling/charger/use_ability(atom/Target)
-	if(!.)
+	if (..() == FALSE)
 		return FALSE
-
 	flick("Normal Crusher Charging", owner)
 	return TRUE
 
