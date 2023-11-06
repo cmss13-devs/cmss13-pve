@@ -334,7 +334,7 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/toy/farwadoll{
+/obj/item/toy/plush/farwa{
 	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
 	force = 15;
 	icon_state = "therapyred";
