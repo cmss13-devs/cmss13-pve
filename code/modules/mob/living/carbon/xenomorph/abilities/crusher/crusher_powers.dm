@@ -315,10 +315,12 @@
 		button.icon_state = "template"
 	return ..()
 
-/datum/action/xeno_action/activable/fling/charger/use_ability(atom/Target)
-	if (..() == FALSE)
+/datum/action/xeno_action/activable/fling/charger/check_and_use_plasma_owner(plasma_to_use)
+	if (!check_plasma_owner(plasma_to_use))
 		return FALSE
+
 	flick("Normal Crusher Charging", owner)
+	use_plasma_owner(plasma_to_use)
 	return TRUE
 
 /datum/action/xeno_action/activable/tumble/use_ability(atom/Target)
