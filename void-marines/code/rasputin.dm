@@ -83,15 +83,22 @@
 	dwidth = 6
 	dheight = 8
 
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar/ru
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar_ru
+	name = "Hangar Bay"
+	id = GOLDEN_ARROW_LZ
+	auto_open = TRUE
 	roundstart_template = /datum/map_template/shuttle/rasputin
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control/rasputin
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "shuttle"
+	shuttleId = DROPSHIP_RASPUTIN
+	is_remote = TRUE
+	needs_power = TRUE
 
 //ATTACH POINT
 
 /obj/effect/attach_point/computer/rasputin
-	ship_tag = DROPSHIP_RASPUTIN
-
-/obj/effect/attach_point/electronics/rasputin
 	ship_tag = DROPSHIP_RASPUTIN
 
 /obj/effect/attach_point/electronics/rasputin
@@ -131,6 +138,15 @@
 	name = "\improper 'Rasputin' camera controls"
 	network = list(CAMERA_NET_RASPUTIN, CAMERA_NET_LASER_TARGETS)
 
+/obj/structure/machinery/computer/cameras/dropship/rasputin/update_icon()
+	return
+
 /obj/structure/machinery/computer/dropship_weapons/rasputin
 	name = "\improper 'Rasputin' weapons controls"
 	shuttle_tag = DROPSHIP_RASPUTIN
+
+/obj/structure/machinery/computer/dropship_weapons/rasputin/update_icon()
+	return
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/update_icon()
+	return
