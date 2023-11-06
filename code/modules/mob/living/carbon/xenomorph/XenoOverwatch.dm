@@ -26,10 +26,6 @@
 	if (X.caste_type == XENO_CASTE_QUEEN)
 		isQueen = TRUE
 
-	if(!X.hive.living_xeno_queen && !X.hive.allow_no_queen_actions)
-		to_chat(X, SPAN_WARNING("There is no Queen. You are alone."))
-		return
-
 	// We are already overwatching something
 	if (X.observed_xeno)
 		if (isQueen)
@@ -79,10 +75,6 @@
 				oldXeno.hud_set_queen_overwatch()
 	else
 		if(!hive)
-			return
-
-		if(!hive.living_xeno_queen && !hive.allow_no_queen_actions)
-			to_chat(src, SPAN_WARNING("There is no Queen. You are alone."))
 			return
 
 		if(targetXeno == src)
