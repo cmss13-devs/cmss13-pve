@@ -7,6 +7,7 @@
 #define CAMERA_NET_ALAMO "Alamo"
 #define CAMERA_NET_NORMANDY "Normandy"
 #define CAMERA_NET_MIDWAY "Midway"
+#define CAMERA_NET_RASPUTIN "Rasputin"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
 
