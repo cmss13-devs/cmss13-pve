@@ -374,9 +374,9 @@
 	attack_log += text("\[[time_stamp()]\] <font color='orange'>was xeno charged by [xeno] ([xeno.ckey])</font>")
 	xeno.attack_log += text("\[[time_stamp()]\] <font color='red'>xeno charged [src] ([src.ckey])</font>")
 	log_attack("[xeno] ([xeno.ckey]) xeno charged [src] ([src.ckey])")
-	var/momentum_mult = 5
+	var/momentum_mult = 7
 	if(charger_ability.momentum == charger_ability.max_momentum)
-		momentum_mult = 8
+		momentum_mult = 10
 	take_overall_armored_damage(charger_ability.momentum * momentum_mult, ARMOR_MELEE, BRUTE, 60, 13) // Giving AP because this spreads damage out and then applies armor to them
 	apply_armoured_damage(charger_ability.momentum * momentum_mult/4, ARMOR_MELEE, BRUTE,"chest")
 	xeno.visible_message(

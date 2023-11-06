@@ -46,8 +46,8 @@
 
 	var/distance = 5
 	var/effect_type_base = /datum/effects/xeno_slow/superslow
-	var/effect_duration = 10
-	var/windup_duration = 1 SECONDS
+	var/effect_duration = 1 SECONDS
+	var/windup_duration = 1.5 SECONDS
 
 	default_ai_action = TRUE
 	var/prob_chance = 80
@@ -209,7 +209,7 @@
 			if(momentum == max_momentum)
 				dist = momentum * 0.25
 			step(Mob, ram_dir, dist)
-			Mob.take_overall_armored_damage(momentum * 6)
+			Mob.take_overall_armored_damage(momentum * 10)
 			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon/human, emote),"pain")
 			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
@@ -218,7 +218,7 @@
 		if(Mob.knocked_down)
 			continue
 
-		if(momentum < max_momentum / 2)
+		if(momentum < 5)
 			continue
 
 		Mob.apply_effect(0.5, WEAKEN)
