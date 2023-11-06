@@ -668,20 +668,6 @@
 	icon_state = "squareswood"
 	},
 /area/yautja)
-"bC" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/weapon/claymore/mercsword/machete/arnold{
-	anchored = 1;
-	desc = "Won by an Elder during their youthful hunting days. None are allowed to touch it.";
-	name = "\improper Dutch's Machete"
-	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
-/area/yautja)
 "bD" = (
 /obj/structure/machinery/door/airlock/yautja/secure{
 	dir = 1;
@@ -1266,47 +1252,6 @@
 /obj/item/reagent_container/food/drinks/drinkingglass,
 /turf/open/shuttle/predship,
 /area/yautja)
-"cK" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = 12
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = 8
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = 4
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = -4
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = -12
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25
-	},
-/obj/item/weapon/claymore/mercsword{
-	attack_speed = 12;
-	force = 25;
-	pixel_x = -8
-	},
-/turf/open/shuttle/predship,
-/area/yautja)
 "cL" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -1801,19 +1746,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/yautja)
-"gG" = (
-/obj/structure/machinery/door_control{
-	id = "Yautja Armory";
-	name = "Armory Shutters";
-	needs_power = 0;
-	pixel_x = 24;
-	req_one_access_txt = "392"
-	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
-/area/yautja)
 "ha" = (
 /obj/structure/barricade/handrail/strata,
 /obj/structure/barricade/handrail/strata{
@@ -1877,36 +1809,6 @@
 	icon_state = "squareswood"
 	},
 /area/yautja)
-"jP" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/weapon/claymore{
-	attack_speed = 12;
-	force = 25;
-	name = "duelling claymore"
-	},
-/obj/item/weapon/claymore{
-	attack_speed = 12;
-	force = 25;
-	name = "duelling claymore";
-	pixel_x = -5
-	},
-/obj/item/weapon/claymore{
-	attack_speed = 12;
-	force = 25;
-	name = "duelling claymore";
-	pixel_x = 5
-	},
-/obj/item/weapon/claymore{
-	attack_speed = 12;
-	force = 25;
-	name = "duelling claymore";
-	pixel_x = 10
-	},
-/turf/open/shuttle/predship,
-/area/yautja)
 "jR" = (
 /obj/structure/machinery/sleep_console,
 /turf/open/floor/corsat{
@@ -1947,17 +1849,6 @@
 "lw" = (
 /turf/open/gm/dirtgrassborder{
 	icon_state = "desert1"
-	},
-/area/yautja)
-"mv" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/storage/large_holster/katana,
-/obj/item/weapon/katana,
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
 	},
 /area/yautja)
 "nd" = (
@@ -2173,6 +2064,20 @@
 	icon_state = "multi_tiles"
 	},
 /area/yautja)
+"tl" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/weapon/sword/machete/arnold{
+	anchored = 1;
+	desc = "Won by an Elder during their youthful hunting days. None are allowed to touch it.";
+	name = "\improper Dutch's Machete"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/yautja)
 "tn" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -2236,16 +2141,6 @@
 /obj/structure/bed/chair/hunter{
 	dir = 4
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
-/area/yautja)
-"uZ" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/weapon/claymore/mercsword/ceremonial,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "squareswood"
@@ -2421,6 +2316,47 @@
 /obj/structure/machinery/cryopod/right,
 /turf/open/shuttle/predship,
 /area/yautja)
+"Bf" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = 12
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = 8
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = 4
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = -4
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = -12
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	pixel_x = -8
+	},
+/turf/open/shuttle/predship,
+/area/yautja)
 "Bg" = (
 /obj/structure/closet/crate/secure{
 	req_one_access_txt = "392";
@@ -2569,6 +2505,17 @@
 /turf/open/floor/strata{
 	color = "#5e5d5d";
 	icon_state = "multi_tiles"
+	},
+/area/yautja)
+"EZ" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/storage/large_holster/katana,
+/obj/item/weapon/sword/katana,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
 	},
 /area/yautja)
 "Fh" = (
@@ -2918,6 +2865,16 @@
 	icon_state = "squareswood"
 	},
 /area/yautja)
+"KX" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/weapon/sword/ceremonial,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/yautja)
 "Lo" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/corsat{
@@ -3050,6 +3007,19 @@
 "Qs" = (
 /obj/structure/machinery/chem_master{
 	req_skill_level = 2
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/yautja)
+"Qz" = (
+/obj/structure/machinery/door_control{
+	id = "Yautja Armory";
+	name = "Armory Shutters";
+	needs_power = 0;
+	pixel_x = 24;
+	req_one_access_txt = "392"
 	},
 /turf/open/floor/corsat{
 	dir = 1;
@@ -3195,6 +3165,36 @@
 /obj/structure/machinery/door/airlock/yautja{
 	dir = 1;
 	name = "\improper Gladiator Hall"
+	},
+/turf/open/shuttle/predship,
+/area/yautja)
+"Wj" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	name = "duelling claymore"
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	name = "duelling claymore";
+	pixel_x = -5
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	name = "duelling claymore";
+	pixel_x = 5
+	},
+/obj/item/weapon/sword{
+	attack_speed = 12;
+	force = 25;
+	name = "duelling claymore";
+	pixel_x = 10
 	},
 /turf/open/shuttle/predship,
 /area/yautja)
@@ -5615,7 +5615,7 @@ bL
 cP
 bL
 bL
-mv
+EZ
 xO
 JH
 bL
@@ -5640,7 +5640,7 @@ bL
 bL
 bL
 bL
-jP
+Wj
 bj
 aq
 cP
@@ -5900,7 +5900,7 @@ bL
 bL
 bL
 bI
-bC
+tl
 bE
 bL
 bL
@@ -5917,7 +5917,7 @@ OZ
 bL
 bL
 bj
-cK
+Bf
 cP
 cP
 ca
@@ -6191,7 +6191,7 @@ bL
 cP
 bL
 bL
-uZ
+KX
 Mb
 JH
 bL
@@ -7277,7 +7277,7 @@ bj
 bL
 bL
 bL
-gG
+Qz
 bL
 Fy
 dl
