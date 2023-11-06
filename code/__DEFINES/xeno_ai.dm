@@ -5,9 +5,11 @@
 #define DISTANCE_PENALTY 1
 #define ASTAR_COST_FUNCTION(n) (abs(n.x - target.x)+abs(n.y - target.y))
 
+#define OPEN_TURF_PENALTY 1
 #define DOOR_PENALTY 3
 #define OBJECT_PENALTY 20
 #define HUMAN_PENALTY 4
+#define XENO_PENALTY 20
 #define VEHICLE_PENALTY 25
 #define SENTRY_PENALTY 25
 #define WINDOW_FRAME_PENALTY 25

@@ -88,6 +88,7 @@
 
 /obj/structure/largecrate/supply
 	name = "supply crate"
+	fill_from_loc = FALSE
 	var/list/supplies = list()
 
 /obj/structure/largecrate/supply/Initialize()
@@ -334,6 +335,7 @@
 	name = "machine crate"
 	desc = "A crate containing a pre-assembled machine."
 	icon_state = "secure_crate_strapped"
+	fill_from_loc = FALSE
 	var/dir_needed = EAST //If set to anything but 0, will check that space before spawning in.
 	var/unmovable = 1 //If set to 1, then on examine, the user will see a warning that states the contents cannot be moved after opened.
 

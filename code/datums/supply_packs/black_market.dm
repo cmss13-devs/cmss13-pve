@@ -28,6 +28,7 @@ black market prices are NOT based on real or in-universe costs. they are based o
 	crate_heat = 5
 
 /obj/structure/largecrate/black_market
+	fill_from_loc = FALSE
 	/// Wipes points from objects inside to avoid infinite farming.
 	var/points_wipe = TRUE
 	//no special name so it can be hidden
@@ -585,7 +586,7 @@ Primarily made up of things that would be best utilized, well, shipside. Recreat
 		/obj/item/storage/box/packet/hefa/toy,
 		/obj/item/toy/inflatable_duck,
 		/obj/item/toy/beach_ball,
-		/obj/item/toy/farwadoll,
+		/obj/item/toy/plush/farwa,
 		/obj/item/toy/waterflower,
 		/obj/item/toy/spinningtoy,
 		/obj/item/storage/box/snappops,

@@ -908,6 +908,20 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	return job_preference_list[J]
 
+/// Returns a list of all the proference's jobs set to the priority argument
+/datum/preferences/proc/get_jobs_by_priority(priority)
+	var/list/jobs_to_return = list()
+
+	if(!length(job_preference_list))
+		ResetJobs()
+		return jobs_to_return
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] == priority)
+			jobs_to_return += job
+
+	return jobs_to_return
+
 /datum/preferences/proc/SetJobDepartment(datum/job/J, priority)
 	if(!J || priority < 0 || priority > 4)
 		return FALSE
@@ -1394,15 +1408,11 @@ var/const/MAX_SAVE_SLOTS = 10
 
 					var/prefix_length = length(new_xeno_prefix)
 
-					if(prefix_length>3)
+					if(prefix_length > 3)
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("Invalid Xeno Prefix. Your Prefix can only be up to 3 letters long.")))
 						return
 
-					if(prefix_length==3)
-						var/playtime = user.client.get_total_xeno_playtime()
-						if(playtime < 124 HOURS)
-							to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(124 HOURS, playtime, 1 HOURS)] more hours to unlock xeno three letter prefix.")))
-							return
+					if(prefix_length == 3)
 						if(xeno_postfix)
 							to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 							return
@@ -1427,12 +1437,8 @@ var/const/MAX_SAVE_SLOTS = 10
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You are banned from xeno name picking.")))
 						xeno_postfix = ""
 						return
-					var/playtime = user.client.get_total_xeno_playtime()
-					if(playtime < 24 HOURS)
-						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(24 HOURS, playtime, 1 HOURS)] more hours to unlock xeno postfix.")))
-						return
 
-					if(length(xeno_prefix)==3)
+					if(length(xeno_prefix) == 3)
 						to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 						return
 
@@ -1449,23 +1455,22 @@ var/const/MAX_SAVE_SLOTS = 10
 						var/first_char = TRUE
 						for(var/i=1, i<=length(new_xeno_postfix), i++)
 							var/ascii_char = text2ascii(new_xeno_postfix,i)
+
 							switch(ascii_char)
 								// A  .. Z
 								if(65 to 90) //Uppercase Letters will work on first char
-
 									if(length(xeno_prefix)!=2)
 										to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You can't use three letter prefix with any postfix.")))
 										return
 
-									if(!first_char && playtime < 300 HOURS)
-										to_chat(user, SPAN_WARNING(FONT_SIZE_BIG("You need to play [time_left_until(300 HOURS, playtime, 1 HOURS)] more hours to unlock double letter xeno postfix.")))
-										all_ok = FALSE
 								// 0  .. 9
 								if(48 to 57) //Numbers will work if not the first char
 									if(first_char)
 										all_ok = FALSE
+
 								else
 									all_ok = FALSE //everything else - won't
+
 							first_char = FALSE
 						if(all_ok)
 							xeno_postfix = new_xeno_postfix

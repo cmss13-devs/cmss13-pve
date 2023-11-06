@@ -15557,11 +15557,6 @@
 	icon_state = "blue"
 	},
 /area/prison/command/secretary_office)
-"aRX" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/katana/replica,
-/turf/open/floor/wood,
-/area/prison/command/office)
 "aRY" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -17166,14 +17161,6 @@
 	icon_state = "darkredfull2"
 	},
 /area/prison/security/checkpoint/highsec/n)
-"aWF" = (
-/obj/item/handset,
-/obj/structure/surface/table/reinforced,
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "greenfull"
-	},
-/area/prison/cellblock/lowsec/nw)
 "aWG" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
@@ -18314,13 +18301,6 @@
 	},
 /turf/open/floor/prison,
 /area/prison/kitchen)
-"bag" = (
-/obj/item/handset,
-/obj/structure/surface/table/reinforced,
-/turf/open/floor{
-	icon_state = "hydrofloor"
-	},
-/area/prison/hallway/central/west)
 "bah" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/blood,
@@ -20839,13 +20819,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/turf/open/floor/prison{
-	icon_state = "cell_stripe"
-	},
-/area/prison/cellblock/vip)
-"bhq" = (
-/obj/item/handset,
-/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison{
 	icon_state = "cell_stripe"
 	},
@@ -23431,14 +23404,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "cell_stripe"
-	},
-/area/prison/cellblock/vip)
-"boR" = (
-/obj/item/handset,
-/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "cell_stripe"
@@ -37319,11 +37284,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison,
 /area/prison/recreation/medsec)
-"cgm" = (
-/obj/item/handset,
-/obj/structure/surface/table/reinforced,
-/turf/open/floor/prison,
-/area/prison/recreation/medsec)
 "cgn" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -43204,6 +43164,11 @@
 	icon_state = "darkred2"
 	},
 /area/prison/security/monitoring/medsec/south)
+"czR" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/sword/katana/replica,
+/turf/open/floor/wood,
+/area/prison/command/office)
 "czZ" = (
 /obj/structure/machinery/door/airlock/prison/horizontal{
 	density = 0;
@@ -44008,6 +43973,13 @@
 	icon_state = "sterile_white"
 	},
 /area/prison/cellblock/lowsec/se)
+"fpO" = (
+/obj/item/handset,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor{
+	icon_state = "hydrofloor"
+	},
+/area/prison/hallway/central/west)
 "fqG" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -46785,6 +46757,13 @@
 /obj/structure/window/framed/prison/reinforced/hull,
 /turf/open/floor/plating,
 /area/prison/maintenance/staff_research)
+"nMM" = (
+/obj/item/handset,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/prison{
+	icon_state = "cell_stripe"
+	},
+/area/prison/cellblock/vip)
 "nMW" = (
 /obj/effect/decal/siding/wood_siding{
 	icon_state = "wood_siding6"
@@ -47068,6 +47047,11 @@
 /obj/structure/machinery/door/airlock/almayer/maint/colony,
 /turf/open/floor/plating,
 /area/prison/residential/central)
+"oBE" = (
+/obj/item/handset,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/prison,
+/area/prison/recreation/medsec)
 "oBG" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -47553,6 +47537,14 @@
 	icon_state = "darkyellow2"
 	},
 /area/prison/telecomms)
+"pWq" = (
+/obj/item/handset,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/prison{
+	dir = 9;
+	icon_state = "greenfull"
+	},
+/area/prison/cellblock/lowsec/nw)
 "pXk" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison{
@@ -48829,6 +48821,14 @@
 	icon_state = "green"
 	},
 /area/prison/monorail/west)
+"uJE" = (
+/obj/item/handset,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/prison{
+	dir = 1;
+	icon_state = "cell_stripe"
+	},
+/area/prison/cellblock/vip)
 "uKd" = (
 /obj/structure/machinery/power/apc{
 	dir = 4;
@@ -68095,14 +68095,14 @@ bby
 bdm
 bdk
 bgy
-bhq
+nMM
 bla
 bjy
 bdk
 bmc
 bnk
 bla
-boR
+uJE
 bgy
 bdk
 bdm
@@ -69155,14 +69155,14 @@ bbz
 bdm
 bdk
 bgy
-bhq
+nMM
 bla
 bjy
 bdk
 bmc
 bnk
 bla
-boR
+uJE
 bgy
 bdk
 bdm
@@ -70215,14 +70215,14 @@ bby
 bdm
 bdk
 bgy
-bhq
+nMM
 bla
 bjy
 bdk
 bmc
 bnk
 bla
-boR
+uJE
 bgy
 bdk
 bdm
@@ -71275,14 +71275,14 @@ bby
 bdu
 bdk
 bgy
-bhq
+nMM
 bla
 bjy
 bdk
 bmc
 bnk
 bla
-boR
+uJE
 bgy
 bdk
 bdm
@@ -74658,10 +74658,10 @@ aKy
 aKy
 aKy
 aSa
-bag
-bag
-bag
-bag
+fpO
+fpO
+fpO
+fpO
 lIs
 aWG
 tOU
@@ -75562,7 +75562,7 @@ cbU
 cdv
 caa
 caa
-cgm
+oBE
 caa
 cae
 cbr
@@ -76141,7 +76141,7 @@ eev
 hKn
 aNp
 aNp
-aWF
+pWq
 aNp
 aYD
 aPC
@@ -77625,7 +77625,7 @@ aSw
 aTM
 aNp
 aNp
-aWF
+pWq
 aNp
 aYD
 aPC
@@ -97972,7 +97972,7 @@ aMQ
 aMS
 aPV
 aMS
-aRX
+czR
 aLG
 acL
 aXt

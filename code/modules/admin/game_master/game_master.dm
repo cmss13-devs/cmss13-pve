@@ -55,8 +55,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// Associated list of game master submenus organized by object_type = game_master_submenu
 	var/list/submenu_types = list(
-		/obj/structure/pipes/vents/scrubber = /datum/game_master_submenu/vents,
-		/obj/structure/pipes/vents/pump = /datum/game_master_submenu/vents,
+		/obj/structure/pipes/vents = /datum/game_master_submenu/vents,
 	)
 
 	/// List of current submenus

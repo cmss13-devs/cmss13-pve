@@ -111,6 +111,12 @@
 				if(SQUAD_MARINE_5)
 					icon_state = "beret_echo"
 					desc = "Tightly Woven, as it should be."
+				if(SQUAD_MARINE_CRYO)
+					icon_state = "beret_foxtrot"
+					desc = "Looks and feels starched, cold to the touch."
+				if(SQUAD_MARINE_INTEL)
+					icon_state = "beret_intel"
+					desc = "Looks more intellegent than the person wearing it."
 
 			if(H.assigned_squad.name == GLOB.main_platoon_name)
 				icon_state = "beret_alpha"
