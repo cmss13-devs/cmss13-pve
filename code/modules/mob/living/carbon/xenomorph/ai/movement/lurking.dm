@@ -21,6 +21,7 @@
 	max_distance_from_home = 10
 
 #define AI_CHECK_ANNOYANCE_COOLDOWN 2.5 SECONDS
+#define AI_NEW_TARGET_COOLDOWN 5 SECONDS
 
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
@@ -30,9 +31,14 @@
 	RegisterSignal(parent, COMSIG_XENO_USED_POUNCE, PROC_REF(stop_lurking))
 
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(get_new_target), parent), AI_NEW_TARGET_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
 	start_lurking()
 
+/datum/xeno_ai_movement/linger/lurking/proc/get_new_target(mob/living/carbon/xenomorph/parent)
+	parent.current_target = parent.get_target(parent.ai_range)
+
+#undef AI_NEW_TARGET_COOLDOWN
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
 
 /datum/xeno_ai_movement/linger/lurking/ai_move_idle(delta_time)
@@ -67,7 +73,12 @@
 			continue
 
 		var/blocked = FALSE
-		for(var/atom/potential_blocker as anything in potential_home)
+		for(var/obj/structure/potential_blocker in potential_home)
+			if(potential_blocker.unslashable && (potential_blocker.can_block_movement || potential_blocker.density))
+				blocked = TRUE
+				break
+
+		for(var/mob/potential_blocker in potential_home)
 			if(potential_blocker != idle_xeno && (potential_blocker.can_block_movement || potential_blocker.density))
 				blocked = TRUE
 				break
@@ -76,7 +87,21 @@
 			continue
 
 		var/preferred = FALSE
+		for(var/obj/structure/structure in potential_home)
+			if(structure.unslashable && (structure.can_block_movement || structure.density))
+				continue
+
+			preferred = TRUE
+			break
+
 		for(var/turf/closed/touching_turf in orange(1, potential_home))
+			if(get_dir(idle_xeno, touching_turf) in diagonals)
+				continue
+
+			preferred = TRUE
+			break
+
+		for(var/obj/item/stack/sheet/sheet in potential_home)
 			preferred = TRUE
 			break
 
@@ -194,12 +219,14 @@
 #undef LURKER_BAITS_BEFORE_AMBUSH
 
 /datum/xeno_ai_movement/linger/lurking/proc/interact_random(mob/living/carbon/xenomorph/X)
-	for(var/obj/potential_interaction in orange(1, X))
-		if(istype(potential_interaction, /obj/structure/window_frame))
+	for(var/atom/potential_interaction in orange(1, X))
+		if(istype(potential_interaction, /obj/structure/shuttle))
 			continue
-		if(istype(potential_interaction, /obj/structure/pipes))
+		if(istype(potential_interaction, /turf/closed/shuttle))
 			continue
-		if(istype(potential_interaction, /obj/structure/sign))
+		if(istype(potential_interaction, /obj/effect))
+			continue
+		if(istype(potential_interaction, /turf/open))
 			continue
 		if(!potential_interaction.xeno_ai_act(X))
 			continue
