@@ -143,7 +143,7 @@
 		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
 
 		if(H.mob_size < MOB_SIZE_BIG)
-			H.apply_effect(get_xeno_stun_duration(H, 0.2), WEAKEN)
+			H.apply_effect(get_xeno_stun_duration(H, 0.4), WEAKEN)
 
 		H.apply_armoured_damage(get_xeno_damage_slash(H, damage), ARMOR_MELEE, BRUTE)
 		H.last_damage_data = create_cause_data(X.caste_type, X)
@@ -154,7 +154,7 @@
 
 		new effect_type_base(H, X, , , get_xeno_stun_duration(H, effect_duration))
 		if (H.mob_size < MOB_SIZE_BIG)
-			H.apply_effect(get_xeno_stun_duration(H, 0.2), WEAKEN)
+			H.apply_effect(get_xeno_stun_duration(H, 0.4), WEAKEN)
 
 		if (H.client)
 			var/steps = 20 / get_dist(H, X)
