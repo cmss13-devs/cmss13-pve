@@ -300,7 +300,8 @@
 			if(EVACUATION_STATUS_INITIATING) dat += "<font color='red'><b>The [MAIN_SHIP_NAME] is being evacuated.</b></font><br>"
 			if(EVACUATION_STATUS_COMPLETE) dat += "<font color='red'>The [MAIN_SHIP_NAME] has undergone evacuation.</font><br>"
 
-	dat += "Choose from the following open positions:<br>"
+	var/positions = FALSE
+	var/position_dat = "Choose from the following open positions:<br>"
 	var/roles_show = FLAG_SHOW_ALL_JOBS
 
 	for(var/i in RoleAuthority.roles_for_mode)
@@ -313,38 +314,41 @@
 			if(M.client && M.job == J.title)
 				active++
 		if(roles_show & FLAG_SHOW_CIC && ROLES_CIC.Find(J.title))
-			dat += "Command:<br>"
+			position_dat += "Command:<br>"
 			roles_show ^= FLAG_SHOW_CIC
 
 		else if(roles_show & FLAG_SHOW_AUXIL_SUPPORT && ROLES_AUXIL_SUPPORT.Find(J.title))
-			dat += "<hr>Auxiliary Combat Support:<br>"
+			position_dat += "<hr>Auxiliary Combat Support:<br>"
 			roles_show ^= FLAG_SHOW_AUXIL_SUPPORT
 
 		else if(roles_show & FLAG_SHOW_MISC && ROLES_MISC.Find(J.title))
-			dat += "<hr>Other:<br>"
+			position_dat += "<hr>Other:<br>"
 			roles_show ^= FLAG_SHOW_MISC
 
 		else if(roles_show & FLAG_SHOW_POLICE && ROLES_POLICE.Find(J.title))
-			dat += "<hr>Military Police:<br>"
+			position_dat += "<hr>Military Police:<br>"
 			roles_show ^= FLAG_SHOW_POLICE
 
 		else if(roles_show & FLAG_SHOW_ENGINEERING && ROLES_ENGINEERING.Find(J.title))
-			dat += "<hr>Engineering:<br>"
+			position_dat += "<hr>Engineering:<br>"
 			roles_show ^= FLAG_SHOW_ENGINEERING
 
 		else if(roles_show & FLAG_SHOW_REQUISITION && ROLES_REQUISITION.Find(J.title))
-			dat += "<hr>Requisitions:<br>"
+			position_dat += "<hr>Requisitions:<br>"
 			roles_show ^= FLAG_SHOW_REQUISITION
 
 		else if(roles_show & FLAG_SHOW_MEDICAL && ROLES_MEDICAL.Find(J.title))
-			dat += "<hr>Medbay:<br>"
+			position_dat += "<hr>Medbay:<br>"
 			roles_show ^= FLAG_SHOW_MEDICAL
 
 		else if(roles_show & FLAG_SHOW_MARINES && ROLES_MARINES.Find(J.title))
-			dat += "<hr>Squad Riflemen:<br>"
+			position_dat += "<hr>Squad Riflemen:<br>"
 			roles_show ^= FLAG_SHOW_MARINES
 
-		dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
+		positions = TRUE
+		position_dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
+
+	dat += positions ? position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
 	show_browser(src, dat, "Late Join", "latechoices", "size=420x700")
