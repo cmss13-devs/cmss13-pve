@@ -135,15 +135,6 @@
 "aaw" = (
 /turf/closed/wall/solaris,
 /area/bigredv2/outside/space_port)
-"aax" = (
-/obj/structure/filingcabinet,
-/obj/structure/sign/safety/hvac{
-	pixel_x = -32
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/space_port)
 "aay" = (
 /obj/structure/machinery/vending/cigarette/colony,
 /turf/open/floor{
@@ -214,19 +205,6 @@
 /obj/structure/cargo_container/grant/right,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"aaK" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/technology_scanner,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/telecomm)
-"aaL" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/space_port)
 "aaM" = (
 /obj/structure/machinery/vending/snack,
 /obj/structure/machinery/light{
@@ -292,12 +270,6 @@
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"aaV" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/telecomm)
 "aaW" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -307,10 +279,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/space_port)
-"aaX" = (
-/obj/structure/closet/secure_closet/injection,
-/turf/open/floor,
-/area/bigredv2/outside/marshal_office)
 "aaY" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
@@ -734,12 +702,6 @@
 	icon_state = "mars_cave_23"
 	},
 /area/bigredv2/caves_north)
-"acl" = (
-/obj/structure/filingcabinet,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/marshal_office)
 "acm" = (
 /obj/item/tool/pickaxe,
 /turf/open/floor{
@@ -786,12 +748,6 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigred/ground/garage_workshop)
-"acv" = (
-/obj/structure/filingcabinet/security,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/marshal_office)
 "acw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
@@ -1131,15 +1087,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/telecomm)
-"adv" = (
-/obj/structure/surface/table,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/telecomm)
 "adw" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
@@ -1172,12 +1119,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
-/area/bigredv2/outside/marshal_office)
-"adC" = (
-/obj/structure/pipes/vents/pump,
-/turf/open/floor{
-	icon_state = "white"
-	},
 /area/bigredv2/outside/marshal_office)
 "adD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1292,14 +1233,6 @@
 	icon_state = "floor4"
 	},
 /area/bigredv2/outside/marshal_office)
-"adU" = (
-/obj/structure/surface/table,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/paper/bigred/crazy,
-/turf/open/floor,
-/area/bigredv2/outside/marshal_office)
 "adW" = (
 /turf/open/floor{
 	icon_state = "wood"
@@ -1324,21 +1257,6 @@
 "adZ" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/caves/lambda/xenobiology)
-"aea" = (
-/obj/structure/machinery/computer/telecomms/monitor{
-	req_one_access_txt = "19;200"
-	},
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "Solaris Ridge";
-	phone_color = "yellow";
-	phone_id = "Communications";
-	pixel_x = -18
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/telecomm)
 "aeb" = (
 /obj/item/device/radio/headset,
 /turf/open/floor{
@@ -1492,10 +1410,6 @@
 	},
 /area/bigredv2/outside/marshal_office)
 "aev" = (
-/turf/open/floor/plating,
-/area/bigredv2/caves/lambda/xenobiology)
-"aew" = (
-/obj/structure/closet/crate/internals,
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
 "aex" = (
@@ -1681,13 +1595,6 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"afa" = (
-/obj/structure/closet/secure_closet/chemical,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whiteyellow"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "afb" = (
 /obj/structure/machinery/computer/telecomms/traffic{
 	req_one_access_txt = "19;200"
@@ -1748,16 +1655,6 @@
 /area/bigredv2/outside/marshal_office)
 "afl" = (
 /obj/structure/machinery/flasher/portable,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "vault"
-	},
-/area/bigredv2/outside/marshal_office)
-"afm" = (
-/obj/structure/closet/l3closet/security,
-/obj/structure/machinery/light{
-	dir = 1
-	},
 /turf/open/floor{
 	dir = 8;
 	icon_state = "vault"
@@ -2319,12 +2216,6 @@
 	icon_state = "wood"
 	},
 /area/bigredv2/outside/marshal_office)
-"agP" = (
-/obj/structure/surface/rack,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/general_offices)
 "agQ" = (
 /turf/open/floor{
 	dir = 1;
@@ -2376,12 +2267,6 @@
 	icon_state = "darkpurple2"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"agY" = (
-/obj/structure/closet/secure_closet/CMO,
-/turf/open/floor{
-	icon_state = "whitegreenfull"
-	},
-/area/bigredv2/outside/medical)
 "agZ" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/light/small{
@@ -2955,18 +2840,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/marshal_office)
-"aiG" = (
-/obj/structure/surface/table,
-/obj/item/handcuffs,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Solaris Ridge";
-	phone_color = "red";
-	phone_id = "Marshal Office"
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/marshal_office)
 "aiH" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/camera/autoname,
@@ -3084,16 +2957,6 @@
 	icon_state = "bcircuit"
 	},
 /area/bigredv2/outside/marshal_office)
-"aiY" = (
-/obj/structure/surface/table,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/item/device/defibrillator,
-/turf/open/floor{
-	icon_state = "whitegreenfull"
-	},
-/area/bigredv2/outside/medical)
 "aiZ" = (
 /obj/structure/machinery/computer/cameras,
 /obj/structure/surface/table,
@@ -3156,25 +3019,12 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/marshal_office)
-"ajk" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/bomb_supply,
-/obj/effect/spawner/random/bomb_supply,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurplecorner"
-	},
-/area/bigredv2/outside/medical)
 "ajl" = (
 /obj/structure/surface/table,
 /turf/open/floor{
 	icon_state = "wood"
 	},
 /area/bigredv2/outside/dorms)
-"ajm" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/wood,
-/area/bigredv2/caves/lambda/breakroom)
 "ajn" = (
 /obj/structure/platform/shiva{
 	dir = 1
@@ -3474,10 +3324,6 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/nw)
-"aka" = (
-/obj/structure/filingcabinet/chestdrawer,
-/turf/open/floor/wood,
-/area/bigredv2/caves/lambda/breakroom)
 "akc" = (
 /obj/structure/window/framed/solaris,
 /turf/open/floor/plating,
@@ -3689,17 +3535,6 @@
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whitegreen"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"akJ" = (
-/obj/structure/surface/table,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitegreen_v"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akK" = (
@@ -4027,12 +3862,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
-"alL" = (
-/turf/open/floor/plating{
-	dir = 9;
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "alM" = (
 /obj/effect/landmark/monkey_spawn,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -4167,6 +3996,15 @@
 	icon_state = "redcorner"
 	},
 /area/bigredv2/outside/marshal_office)
+"amf" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/telecomm)
 "amg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -4690,12 +4528,6 @@
 "anD" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor,
-/area/bigredv2/outside/marshal_office)
-"anE" = (
-/obj/structure/surface/table/woodentable,
-/turf/open/floor{
-	icon_state = "cult"
-	},
 /area/bigredv2/outside/marshal_office)
 "anF" = (
 /obj/structure/machinery/light{
@@ -5935,13 +5767,6 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/bigredv2/outside/medical)
-"arf" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurplecorner"
-	},
-/area/bigredv2/outside/medical)
 "arg" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -6059,14 +5884,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/general_offices)
-"arz" = (
-/obj/structure/toilet{
-	pixel_y = 8
-	},
-/turf/open/floor{
-	icon_state = "freezerfloor"
-	},
-/area/bigredv2/outside/dorms)
 "arA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -6222,17 +6039,6 @@
 /obj/structure/bed/roller,
 /turf/open/floor{
 	icon_state = "white"
-	},
-/area/bigredv2/outside/medical)
-"arW" = (
-/obj/structure/surface/table,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/pipes/vents/pump,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
 	},
 /area/bigredv2/outside/medical)
 "arX" = (
@@ -6666,17 +6472,6 @@
 	icon_state = "elevatorshaft"
 	},
 /area/bigredv2/caves/lambda/breakroom)
-"atf" = (
-/obj/structure/closet/crate/medical,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/rad,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "elevatorshaft"
-	},
-/area/bigredv2/caves/lambda/breakroom)
 "atg" = (
 /obj/structure/machinery/vending/snack{
 	icon_state = "snack-broken";
@@ -6969,18 +6764,6 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/bigredv2/outside/medical)
-"atT" = (
-/obj/structure/surface/table,
-/obj/item/tool/pen,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/item/tool/hand_labeler,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurplecorner"
-	},
-/area/bigredv2/outside/medical)
 "atU" = (
 /obj/structure/window_frame/solaris,
 /turf/open/floor/plating,
@@ -7116,13 +6899,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/caves/lambda/breakroom)
-"aun" = (
-/obj/structure/closet/firecloset/full,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "asteroidwarning"
-	},
-/area/bigred/ground/garage_workshop)
 "auo" = (
 /obj/structure/sign/safety/maint{
 	pixel_y = 32
@@ -7961,16 +7737,6 @@
 	icon_state = "purple"
 	},
 /area/bigredv2/caves/lambda/research)
-"awB" = (
-/obj/structure/surface/table/holotable/wood,
-/obj/item/reagent_container/food/drinks/coffee,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Lambda Labs";
-	phone_color = "blue";
-	phone_id = "Administration"
-	},
-/turf/open/floor/carpet,
-/area/bigredv2/caves/lambda/breakroom)
 "awC" = (
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/carpet,
@@ -8901,14 +8667,6 @@
 	icon_state = "whitepurple"
 	},
 /area/bigredv2/caves/lambda/research)
-"azh" = (
-/obj/structure/surface/table,
-/obj/item/clothing/glasses/science,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/research)
 "azi" = (
 /obj/structure/machinery/r_n_d/protolathe,
 /turf/open/floor{
@@ -9830,30 +9588,9 @@
 	icon_state = "white"
 	},
 /area/bigredv2/outside/medical)
-"aBN" = (
-/obj/structure/surface/table,
-/obj/item/device/healthanalyzer,
-/obj/structure/pipes/vents/pump,
-/obj/item/reagent_container/spray/cleaner,
-/obj/structure/phone_base/colony_net{
-	phone_category = "Solaris Ridge";
-	phone_color = "green";
-	phone_id = "Clinic";
-	pixel_y = 24
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/medical)
 "aBO" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/recharger,
-/turf/open/floor{
-	icon_state = "whitegreencorner"
-	},
-/area/bigredv2/outside/medical)
-"aBP" = (
-/obj/structure/surface/table,
 /turf/open/floor{
 	icon_state = "whitegreencorner"
 	},
@@ -10195,12 +9932,6 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/c)
-"aCP" = (
-/obj/structure/closet/secure_closet/bar,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/bar)
 "aCQ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "\improper Dormitories Restroom"
@@ -10215,12 +9946,6 @@
 	},
 /turf/open/floor{
 	icon_state = "freezerfloor"
-	},
-/area/bigredv2/outside/dorms)
-"aCS" = (
-/obj/structure/closet/boxinggloves,
-/turf/open/floor{
-	icon_state = "wood"
 	},
 /area/bigredv2/outside/dorms)
 "aCT" = (
@@ -10722,15 +10447,6 @@
 /obj/structure/window/framed/solaris/reinforced,
 /turf/open/floor/plating,
 /area/bigredv2/caves/eta/living)
-"aEk" = (
-/obj/structure/surface/table/woodentable,
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/library)
 "aEl" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -10830,13 +10546,6 @@
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whitegreen"
-	},
-/area/bigredv2/outside/medical)
-"aEB" = (
-/obj/structure/surface/table,
-/obj/structure/pipes/vents/pump,
-/turf/open/floor{
-	icon_state = "dark"
 	},
 /area/bigredv2/outside/medical)
 "aEC" = (
@@ -11032,14 +10741,6 @@
 	icon_state = "grass_impenetrable"
 	},
 /area/bigredv2/outside/admin_building)
-"aFf" = (
-/obj/structure/closet/secure_closet/scientist,
-/obj/structure/machinery/light,
-/turf/open/floor{
-	dir = 10;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/research)
 "aFg" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
@@ -11051,14 +10752,6 @@
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor{
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/research)
-"aFi" = (
-/obj/structure/closet/secure_closet/scientist,
-/obj/structure/machinery/light/built,
-/turf/open/floor{
-	dir = 6;
 	icon_state = "whitepurple"
 	},
 /area/bigredv2/caves/lambda/research)
@@ -11083,20 +10776,6 @@
 /turf/open/floor{
 	dir = 4;
 	icon_state = "darkpurple2"
-	},
-/area/bigredv2/caves/lambda/research)
-"aFl" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/technology_scanner,
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "Eta Labs";
-	phone_id = "Observation";
-	pixel_x = -18
-	},
-/turf/open/floor{
-	dir = 10;
-	icon_state = "purple"
 	},
 /area/bigredv2/caves/lambda/research)
 "aFm" = (
@@ -11410,13 +11089,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/library)
-"aGd" = (
-/obj/structure/closet/l3closet/virology,
-/turf/open/floor{
-	dir = 10;
-	icon_state = "warnwhite"
-	},
-/area/bigredv2/caves/lambda/virology)
 "aGe" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -11460,13 +11132,6 @@
 	icon_state = "purplecorner"
 	},
 /area/bigredv2/caves/lambda/research)
-"aGj" = (
-/obj/structure/closet/l3closet/virology,
-/turf/open/floor{
-	dir = 6;
-	icon_state = "warnwhite"
-	},
-/area/bigredv2/caves/lambda/virology)
 "aGk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -11626,12 +11291,6 @@
 	icon_state = "whitegreenfull"
 	},
 /area/bigredv2/outside/medical)
-"aGD" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/admin_building)
 "aGE" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -11696,12 +11355,6 @@
 	icon_state = "carpet10-8"
 	},
 /area/bigredv2/outside/library)
-"aGP" = (
-/obj/structure/filingcabinet/medical,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "aGQ" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -11742,13 +11395,6 @@
 	icon_state = "purple"
 	},
 /area/bigredv2/caves/lambda/research)
-"aGX" = (
-/obj/structure/surface/table,
-/obj/item/tool/weedkiller/D24,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "aGY" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -11772,13 +11418,6 @@
 	icon_state = "whitegreen"
 	},
 /area/bigredv2/caves/lambda/virology)
-"aHa" = (
-/obj/structure/surface/table,
-/obj/item/storage/pill_bottle/spaceacillin,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "aHc" = (
 /obj/structure/surface/table/reinforced,
 /turf/open/floor{
@@ -12153,12 +11792,6 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/virology)
-"aIc" = (
-/obj/structure/closet/wardrobe/virology_white,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "aIg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -12211,13 +11844,6 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/outside/c)
-"aIo" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/surface/table,
-/turf/open/floor,
-/area/bigredv2/outside/office_complex)
 "aIp" = (
 /turf/open/mars{
 	icon_state = "mars_dirt_9"
@@ -12832,12 +12458,6 @@
 	icon_state = "darkpurple2"
 	},
 /area/bigredv2/caves/lambda/research)
-"aJT" = (
-/obj/structure/filingcabinet/medical,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/admin_building)
 "aJU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -13241,20 +12861,6 @@
 	icon_state = "darkgreencorners2"
 	},
 /area/bigredv2/caves/lambda/virology)
-"aKZ" = (
-/obj/structure/window/reinforced/toughened{
-	dir = 4
-	},
-/obj/structure/window/reinforced/toughened,
-/obj/structure/closet/crate/freezer,
-/obj/structure/pipes/vents/pump{
-	dir = 8
-	},
-/turf/open/floor{
-	dir = 6;
-	icon_state = "darkgreen2"
-	},
-/area/bigredv2/caves/lambda/virology)
 "aLa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-in"
@@ -13304,12 +12910,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/office_complex)
-"aLg" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	icon_state = "grimy"
-	},
-/area/bigredv2/outside/office_complex)
 "aLh" = (
 /obj/effect/landmark/nightmare{
 	insert_tag = "lz1north"
@@ -13326,13 +12926,6 @@
 	icon_state = "whiteyellowfull"
 	},
 /area/bigredv2/outside/office_complex)
-"aLl" = (
-/obj/structure/filingcabinet,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
 "aLn" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/light,
@@ -13491,10 +13084,6 @@
 "aLI" = (
 /turf/open/floor/greengrid,
 /area/bigredv2/caves/lambda/research)
-"aLJ" = (
-/obj/structure/filingcabinet,
-/turf/open/floor,
-/area/bigredv2/outside/engineering)
 "aLM" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -13832,17 +13421,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/admin_building)
-"aMG" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/surface/table,
-/obj/item/tool/surgery/retractor,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkyellow2"
-	},
-/area/bigredv2/caves/eta/research)
 "aMH" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -13963,12 +13541,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/caves/lambda/virology)
-"aMZ" = (
-/obj/structure/closet/firecloset/full,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "aNa" = (
 /obj/structure/closet/l3closet/general,
 /turf/open/floor{
@@ -14180,22 +13752,6 @@
 	icon_state = "white"
 	},
 /area/bigredv2/outside/admin_building)
-"aNE" = (
-/obj/structure/surface/table,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 80
-	},
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Solaris Ridge";
-	phone_color = "blue";
-	phone_id = "Administration"
-	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "warnwhite"
-	},
-/area/bigredv2/outside/admin_building)
 "aNG" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -14366,10 +13922,6 @@
 /turf/open/floor{
 	icon_state = "yellowfull"
 	},
-/area/bigredv2/outside/hydroponics)
-"aOc" = (
-/obj/structure/surface/table,
-/turf/open/floor,
 /area/bigredv2/outside/hydroponics)
 "aOd" = (
 /obj/structure/bed/chair{
@@ -14605,11 +14157,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/admin_building)
-"aOJ" = (
-/obj/structure/surface/table,
-/obj/effect/decal/cleanable/blood/gibs/limb,
-/turf/open/floor/plating,
-/area/bigredv2/caves/eta/research)
 "aOK" = (
 /turf/open/floor{
 	dir = 4;
@@ -14646,18 +14193,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/eta/storage)
-"aOQ" = (
-/obj/structure/surface/table,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Eta Labs";
-	phone_color = "Blue";
-	phone_id = "Director"
-	},
-/turf/open/floor{
-	dir = 6;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/caves/eta/research)
 "aOR" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor{
@@ -14776,17 +14311,6 @@
 	icon_state = "yellowfull"
 	},
 /area/bigredv2/outside/hydroponics)
-"aPf" = (
-/obj/structure/surface/table,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Eta Labs";
-	phone_id = "Workshop"
-	},
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkred2"
-	},
-/area/bigredv2/caves/eta/research)
 "aPg" = (
 /obj/structure/surface/table,
 /obj/item/XenoBio/Blood,
@@ -15010,13 +14534,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
 /area/bigredv2/outside/general_store)
-"aPH" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
-/area/bigredv2/caves/eta/research)
 "aPI" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 4
@@ -15060,18 +14577,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor{
 	icon_state = "white"
-	},
-/area/bigredv2/outside/admin_building)
-"aPO" = (
-/obj/structure/surface/table,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 80
-	},
-/obj/item/handset,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "warnwhite"
 	},
 /area/bigredv2/outside/admin_building)
 "aPP" = (
@@ -15132,13 +14637,6 @@
 	icon_state = "wood"
 	},
 /area/bigredv2/outside/bar)
-"aPZ" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkredcorners2"
-	},
-/area/bigredv2/caves/eta/xenobiology)
 "aQa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -15296,12 +14794,6 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/outside/e)
-"aQv" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "podhatch"
-	},
-/area/bigredv2/caves/lambda/research)
 "aQw" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor{
@@ -16006,12 +15498,6 @@
 	icon_state = "whitegreen"
 	},
 /area/bigredv2/caves/lambda/virology)
-"aSp" = (
-/turf/open/floor{
-	dir = 9;
-	icon_state = "darkgreen2"
-	},
-/area/bigredv2/caves/lambda/virology)
 "aSq" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/pipes/vents/scrubber/on{
@@ -16309,12 +15795,6 @@
 /area/bigredv2/outside/admin_building)
 "aTa" = (
 /turf/open/floor/plating,
-/area/bigredv2/outside/admin_building)
-"aTb" = (
-/obj/structure/surface/table/woodentable,
-/turf/open/floor{
-	icon_state = "wood"
-	},
 /area/bigredv2/outside/admin_building)
 "aTc" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
@@ -16920,15 +16400,6 @@
 	icon_state = "darkgreen2"
 	},
 /area/bigredv2/caves/lambda/virology)
-"aUJ" = (
-/obj/structure/bed,
-/obj/item/bedsheet/medical,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor{
-	dir = 6;
-	icon_state = "whitegreen"
-	},
-/area/bigredv2/caves/lambda/virology)
 "aUM" = (
 /obj/structure/machinery/computer/operating,
 /turf/open/floor{
@@ -17002,14 +16473,6 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
-	},
-/area/bigredv2/outside/general_store)
-"aUY" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/drinks/coffee,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitebluefull"
@@ -17366,21 +16829,6 @@
 	icon_state = "darkblue2"
 	},
 /area/bigredv2/outside/admin_building)
-"aVW" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
-/obj/structure/phone_base/colony_net{
-	phone_category = "Solaris Ridge";
-	phone_color = "blue";
-	phone_id = "Operations";
-	pixel_y = 24
-	},
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/outside/admin_building)
 "aVX" = (
 /obj/structure/machinery/computer/cameras,
 /obj/structure/surface/table,
@@ -17675,13 +17123,6 @@
 	icon_state = "warnwhite"
 	},
 /area/bigredv2/outside/virology)
-"aWS" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/glass/bottle/toxin,
-/turf/open/floor{
-	icon_state = "freezerfloor"
-	},
-/area/bigredv2/outside/virology)
 "aWT" = (
 /obj/structure/bed,
 /turf/open/floor{
@@ -17966,13 +17407,6 @@
 	icon_state = "darkblue2"
 	},
 /area/bigredv2/outside/admin_building)
-"aXQ" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 6;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/outside/admin_building)
 "aXS" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor,
@@ -18085,14 +17519,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/bigredv2/outside/admin_building)
-"aYq" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "freezerfloor"
-	},
-/area/bigredv2/outside/admin_building)
 "aYr" = (
 /obj/structure/toilet{
 	dir = 8
@@ -18163,10 +17589,6 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
-/area/bigredv2/outside/virology)
-"aYB" = (
-/obj/structure/closet/l3closet/virology,
-/turf/open/floor/plating,
 /area/bigredv2/outside/virology)
 "aYC" = (
 /obj/structure/surface/table,
@@ -18368,13 +17790,6 @@
 /area/bigredv2/outside/cargo)
 "aZn" = (
 /obj/structure/closet/secure_closet/quartermaster,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"aZo" = (
-/obj/structure/closet/secure_closet/cargotech{
-	req_access = null;
-	req_one_access_txt = "21;101"
-	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "aZp" = (
@@ -18975,12 +18390,6 @@
 	icon_state = "carpet15-15"
 	},
 /area/bigredv2/outside/admin_building)
-"bbn" = (
-/obj/structure/safe,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/admin_building)
 "bbo" = (
 /obj/structure/bed/chair,
 /turf/open/floor,
@@ -19109,16 +18518,6 @@
 	icon_state = "cult"
 	},
 /area/bigredv2/outside/chapel)
-"bbE" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/surface/table/woodentable,
-/obj/item/storage/bible,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/bigredv2/outside/chapel)
 "bbF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -19155,6 +18554,16 @@
 	icon_state = "mars_dirt_14"
 	},
 /area/bigredv2/outside/w)
+"bbL" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Solaris Ridge";
+	phone_id = "Clinic Reception"
+	},
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/medical)
 "bbM" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 4
@@ -20200,12 +19609,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/office_complex)
-"bfe" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/office_complex)
 "bff" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -20515,14 +19918,6 @@
 	icon_state = "bot"
 	},
 /area/bigredv2/outside/cargo)
-"bfX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/trashcart,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "bot"
-	},
-/area/bigredv2/outside/cargo)
 "bfY" = (
 /obj/structure/largecrate/cow,
 /turf/open/floor{
@@ -20668,10 +20063,6 @@
 	dir = 1;
 	icon_state = "bot"
 	},
-/area/bigredv2/outside/cargo)
-"bgr" = (
-/obj/structure/closet/secure_closet/security,
-/turf/open/floor,
 /area/bigredv2/outside/cargo)
 "bgs" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -20970,14 +20361,6 @@
 	},
 /turf/open/floor{
 	icon_state = "redcorner"
-	},
-/area/bigredv2/outside/office_complex)
-"bhm" = (
-/obj/structure/surface/table,
-/obj/item/trash/kepler,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
 	},
 /area/bigredv2/outside/office_complex)
 "bhn" = (
@@ -21717,10 +21100,6 @@
 /obj/structure/machinery/constructable_frame,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
-"bkl" = (
-/obj/structure/filingcabinet,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
 "bkn" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor,
@@ -22220,13 +21599,6 @@
 /obj/structure/surface/table,
 /turf/open/floor,
 /area/bigredv2/outside/engineering)
-"bmw" = (
-/obj/structure/closet/secure_closet/engineering_chief,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor,
-/area/bigredv2/outside/engineering)
 "bmx" = (
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor,
@@ -22502,25 +21874,6 @@
 /obj/effect/landmark/crap_item,
 /turf/open/floor,
 /area/bigredv2/outside/engineering)
-"bny" = (
-/obj/structure/window/reinforced/toughened{
-	dir = 1;
-	icon_state = "fwindow";
-	pixel_y = 12
-	},
-/obj/structure/window/reinforced/toughened{
-	dir = 4
-	},
-/obj/structure/surface/table/reinforced,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Lambda Labs";
-	phone_id = "Virology"
-	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "darkgreen2"
-	},
-/area/bigredv2/caves/lambda/virology)
 "bnz" = (
 /obj/structure/surface/table,
 /obj/item/tool/lighter/zippo,
@@ -22829,16 +22182,6 @@
 /area/bigredv2/outside/filtration_plant)
 "boX" = (
 /obj/structure/machinery/pipedispenser,
-/turf/open/floor,
-/area/bigredv2/outside/filtration_plant)
-"boY" = (
-/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
-/obj/structure/phone_base/colony_net{
-	phone_category = "Solaris Ridge";
-	phone_color = "yellow";
-	phone_id = "Filtration";
-	pixel_y = 24
-	},
 /turf/open/floor,
 /area/bigredv2/outside/filtration_plant)
 "boZ" = (
@@ -23341,18 +22684,6 @@
 /area/bigredv2/outside/engineering)
 "brm" = (
 /obj/structure/surface/table,
-/turf/open/floor,
-/area/bigredv2/outside/engineering)
-"brn" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/technology_scanner,
-/obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/structure/phone_base/colony_net{
-	phone_category = "Solaris Ridge";
-	phone_color = "yellow";
-	phone_id = "Engineering";
-	pixel_y = 24
-	},
 /turf/open/floor,
 /area/bigredv2/outside/engineering)
 "bro" = (
@@ -23924,6 +23255,16 @@
 	icon_state = "mars_cave_16"
 	},
 /area/bigredv2/outside/s)
+"bvr" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/surface/table/woodentable,
+/obj/item/storage/bible,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/bigredv2/outside/chapel)
 "bvv" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -24062,18 +23403,6 @@
 	icon_state = "mars_dirt_10"
 	},
 /area/bigredv2/caves/eta/xenobiology)
-"bwr" = (
-/obj/structure/machinery/light,
-/obj/structure/surface/table,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Solaris Ridge";
-	phone_color = "green";
-	phone_id = "Virology Lab"
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/virology)
 "bww" = (
 /turf/open/floor/plating,
 /area/bigredv2/caves/eta/storage)
@@ -24151,18 +23480,6 @@
 /area/bigredv2/caves/eta/storage)
 "bwP" = (
 /obj/structure/filingcabinet,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/eta/storage)
-"bwQ" = (
-/obj/structure/surface/table,
-/obj/item/tool/screwdriver,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Eta Labs";
-	phone_color = "yellow";
-	phone_id = "Robotics"
-	},
 /turf/open/floor{
 	icon_state = "dark"
 	},
@@ -24372,15 +23689,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/eta/storage)
-"bxx" = (
-/obj/structure/closet/l3closet/scientist,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "freezerfloor"
-	},
-/area/bigredv2/caves/eta/research)
 "bxy" = (
 /turf/open/floor{
 	dir = 8;
@@ -25166,25 +24474,9 @@
 	icon_state = "darkblue2"
 	},
 /area/bigredv2/caves/eta/research)
-"bzF" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/tech_supply,
-/obj/item/handset,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/caves/eta/research)
 "bzG" = (
 /obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/caves/eta/research)
-"bzH" = (
-/obj/structure/closet/secure_closet/RD,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "darkblue2"
@@ -25440,14 +24732,6 @@
 /obj/item/storage/box/wy_mre,
 /turf/open/floor/plating,
 /area/bigredv2/caves/eta/research)
-"bAv" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "darkish"
-	},
-/area/bigredv2/caves/eta/storage)
 "bAw" = (
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	name = "\improper Eta Lab Server"
@@ -26011,13 +25295,6 @@
 	icon_state = "darkgreen2"
 	},
 /area/bigredv2/caves/eta/xenobiology)
-"bCj" = (
-/obj/structure/closet/l3closet/scientist,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkgreen2"
-	},
-/area/bigredv2/caves/eta/xenobiology)
 "bCk" = (
 /obj/structure/closet/l3closet/scientist,
 /turf/open/floor{
@@ -26566,13 +25843,6 @@
 	icon_state = "carpet10-8"
 	},
 /area/bigredv2/caves/eta/living)
-"bDL" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/tool,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/caves/eta/living)
 "bDM" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/microwave,
@@ -26840,13 +26110,6 @@
 	icon_state = "darkyellowcorners2"
 	},
 /area/bigredv2/caves/eta/living)
-"bEB" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "darkblue2"
-	},
-/area/bigredv2/caves/eta/research)
 "bEC" = (
 /obj/structure/machinery/light,
 /obj/structure/closet/cabinet,
@@ -27001,6 +26264,17 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/lz2_south_cas)
+"bHh" = (
+/obj/structure/surface/table,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Eta Labs";
+	phone_id = "Workshop"
+	},
+/turf/open/floor{
+	dir = 1;
+	icon_state = "darkred2"
+	},
+/area/bigredv2/caves/eta/research)
 "bII" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -27060,6 +26334,13 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/marshal_office)
+"bOz" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/technology_scanner,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/telecomm)
 "bPy" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_nest,
@@ -27176,13 +26457,6 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/s)
-"caN" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "carpet15-15"
-	},
-/area/bigredv2/outside/admin_building)
 "ccP" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/bomb_supply,
@@ -27357,6 +26631,14 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/eta/xenobiology)
+"cvs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/firecloset,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "cxi" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -27451,15 +26733,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
-"cHI" = (
-/obj/structure/closet/crate,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/dorms)
 "cIq" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -27493,6 +26766,19 @@
 	icon_state = "mars_cave_20"
 	},
 /area/bigredv2/caves_north)
+"cKj" = (
+/obj/structure/closet/l3closet/virology,
+/turf/open/floor/plating,
+/area/bigredv2/outside/virology)
+"cKB" = (
+/obj/structure/filingcabinet,
+/obj/structure/sign/safety/hvac{
+	pixel_x = -32
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/space_port)
 "cNH" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor{
@@ -27533,6 +26819,17 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/c)
+"cRc" = (
+/obj/structure/closet/crate/medical,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/rad,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "elevatorshaft"
+	},
+/area/bigredv2/caves/lambda/breakroom)
 "cRP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -27591,27 +26888,12 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/lz2_west_cas)
-"cZj" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/plating,
-/area/bigredv2/caves/mining)
 "daf" = (
 /obj/effect/landmark/crap_item,
 /turf/open/mars_cave{
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves_sw)
-"daB" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Lambda Labs";
-	phone_id = "Xenobiology"
-	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "dbi" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bigredv2/outside/telecomm/lz2_cave)
@@ -27646,6 +26928,13 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
+"diy" = (
+/obj/structure/surface/table,
+/obj/item/tool/weedkiller/D24,
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/virology)
 "dlr" = (
 /obj/effect/landmark/static_comms/net_two,
 /turf/open/floor,
@@ -27654,6 +26943,13 @@
 /obj/item/tool/pickaxe,
 /turf/open/mars,
 /area/bigredv2/outside/filtration_plant)
+"dnn" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whitepurplecorner"
+	},
+/area/bigredv2/outside/medical)
 "dnV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
@@ -27661,6 +26957,13 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/filtration_plant)
+"dos" = (
+/obj/structure/surface/table,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/medical)
 "dot" = (
 /obj/structure/barricade/wooden{
 	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
@@ -27675,6 +26978,13 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
+"doK" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/glass/bottle/toxin,
+/turf/open/floor{
+	icon_state = "freezerfloor"
+	},
+/area/bigredv2/outside/virology)
 "dqy" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 8
@@ -27769,6 +27079,22 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"dwU" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "darkredcorners2"
+	},
+/area/bigredv2/caves/eta/xenobiology)
+"dxf" = (
+/obj/structure/closet/crate,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/dorms)
 "dxV" = (
 /turf/open/mars_cave{
 	icon_state = "mars_dirt_4"
@@ -27830,11 +27156,6 @@
 /obj/item/weapon/twohanded/folded_metal_chair,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
-"dEf" = (
-/obj/structure/closet/toolcloset,
-/obj/structure/machinery/light,
-/turf/open/floor,
-/area/bigred/ground/garage_workshop)
 "dEr" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -27859,6 +27180,18 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"dFJ" = (
+/obj/structure/surface/table,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 80
+	},
+/obj/item/handset,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "warnwhite"
+	},
+/area/bigredv2/outside/admin_building)
 "dFR" = (
 /obj/item/stack/sheet/wood{
 	pixel_y = -8
@@ -27903,6 +27236,11 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"dIX" = (
+/obj/structure/bed,
+/obj/item/toy/plush/farwa,
+/turf/open/floor/plating,
+/area/bigredv2/outside/cargo)
 "dJc" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -28073,6 +27411,13 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/eta)
+"dYS" = (
+/obj/structure/closet/l3closet/virology,
+/turf/open/floor{
+	dir = 10;
+	icon_state = "warnwhite"
+	},
+/area/bigredv2/caves/lambda/virology)
 "dZO" = (
 /obj/effect/decal/cleanable/blood{
 	dir = 8;
@@ -28334,6 +27679,19 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/eta)
+"eAV" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/phone_base/colony_net{
+	phone_category = "Lambda Labs";
+	phone_id = "Surgery";
+	pixel_y = 24
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "eBn" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = 3;
@@ -28344,10 +27702,12 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
-"eDQ" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor,
-/area/bigred/ground/garage_workshop)
+"eDs" = (
+/obj/structure/surface/rack,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/general_offices)
 "eDS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/solaris/rock,
@@ -28469,6 +27829,10 @@
 /obj/structure/prop/server_equipment/broken,
 /turf/open/floor/greengrid,
 /area/bigredv2/caves/lambda/research)
+"eQg" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor,
+/area/bigred/ground/garage_workshop)
 "eRc" = (
 /turf/open/floor{
 	dir = 6;
@@ -28542,18 +27906,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/mars,
 /area/bigredv2/outside/filtration_plant)
-"eWy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/moneybag,
-/turf/open/floor/plating,
-/area/bigredv2/caves/mining)
-"eWG" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
 "eWP" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/bomb_supply,
@@ -28582,14 +27934,6 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves_north)
-"fcG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/firecloset,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
 "fdr" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_10"
@@ -28598,6 +27942,25 @@
 "fdy" = (
 /turf/open/floor,
 /area/bigredv2/caves/eta/living)
+"fep" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 1;
+	icon_state = "fwindow";
+	pixel_y = 12
+	},
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/obj/structure/surface/table/reinforced,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Lambda Labs";
+	phone_id = "Virology"
+	},
+/turf/open/floor{
+	dir = 5;
+	icon_state = "darkgreen2"
+	},
+/area/bigredv2/caves/lambda/virology)
 "feN" = (
 /turf/open/floor{
 	dir = 9;
@@ -28628,6 +27991,20 @@
 	icon_state = "mars_cave_16"
 	},
 /area/bigredv2/caves_north)
+"fim" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/technology_scanner,
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "Eta Labs";
+	phone_id = "Observation";
+	pixel_x = -18
+	},
+/turf/open/floor{
+	dir = 10;
+	icon_state = "purple"
+	},
+/area/bigredv2/caves/lambda/research)
 "fin" = (
 /turf/open/floor/plating,
 /area/bigredv2/caves/eta/xenobiology)
@@ -28755,6 +28132,22 @@
 /obj/structure/surface/table,
 /turf/open/floor,
 /area/bigredv2/caves)
+"fxb" = (
+/obj/structure/surface/table,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 80
+	},
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Solaris Ridge";
+	phone_color = "blue";
+	phone_id = "Administration"
+	},
+/turf/open/floor{
+	dir = 4;
+	icon_state = "warnwhite"
+	},
+/area/bigredv2/outside/admin_building)
 "fxh" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -28787,18 +28180,12 @@
 	icon_state = "wood"
 	},
 /area/bigredv2/caves/eta/living)
-"fyO" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "Solaris Ridge";
-	phone_color = "green";
-	phone_id = "Clinic Labs";
-	pixel_y = 24
-	},
+"fAw" = (
+/obj/structure/surface/table,
 /turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurplecorner"
+	icon_state = "white"
 	},
-/area/bigredv2/outside/medical)
+/area/bigredv2/outside/admin_building)
 "fBc" = (
 /obj/structure/pipes/standard/tank/phoron,
 /turf/open/floor/plating,
@@ -28812,6 +28199,10 @@
 	icon_state = "darkred2"
 	},
 /area/bigredv2/caves/eta/research)
+"fFp" = (
+/obj/structure/closet/secure_closet/injection,
+/turf/open/floor,
+/area/bigredv2/outside/marshal_office)
 "fFG" = (
 /obj/structure/largecrate/random/barrel,
 /turf/open/mars_cave{
@@ -28894,19 +28285,6 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
-"fMZ" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/phone_base/colony_net{
-	phone_category = "Lambda Labs";
-	phone_id = "Surgery";
-	pixel_y = 24
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "fOc" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_3"
@@ -29015,6 +28393,13 @@
 	icon_state = "grass_impenetrable"
 	},
 /area/bigredv2/caves/eta/xenobiology)
+"fXL" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/surface/table,
+/turf/open/floor,
+/area/bigredv2/outside/office_complex)
 "fYH" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bigredv2/caves/mining)
@@ -29231,6 +28616,14 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves/mining)
+"gyK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "bot"
+	},
+/area/bigredv2/outside/cargo)
 "gyL" = (
 /obj/item/ore{
 	pixel_x = 13;
@@ -29249,6 +28642,13 @@
 	icon_state = "mars_dirt_7"
 	},
 /area/bigredv2/caves/mining)
+"gzF" = (
+/obj/structure/filingcabinet,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "gzG" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -9;
@@ -29270,26 +28670,6 @@
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor,
 /area/bigredv2/outside/filtration_plant)
-"gCC" = (
-/obj/structure/closet/secure_closet,
-/obj/item/explosive/plastic{
-	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
-	name = "Mining explosives"
-	},
-/obj/item/explosive/plastic{
-	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
-	name = "Mining explosives"
-	},
-/obj/item/explosive/plastic{
-	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
-	name = "Mining explosives"
-	},
-/obj/item/explosive/plastic{
-	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
-	name = "Mining explosives"
-	},
-/turf/open/floor/plating,
-/area/bigredv2/caves/mining)
 "gCE" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_2"
@@ -29318,6 +28698,12 @@
 	icon_state = "mars_cave_4"
 	},
 /area/bigredv2/caves_virology)
+"gNf" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/office_complex)
 "gNz" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -29464,6 +28850,16 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/caves/mining)
+"hfR" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/item/device/defibrillator,
+/turf/open/floor{
+	icon_state = "whitegreenfull"
+	},
+/area/bigredv2/outside/medical)
 "hgT" = (
 /turf/open/mars_cave{
 	icon_state = "mars_dirt_7"
@@ -29562,20 +28958,25 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/filtration_plant)
-"htp" = (
+"huR" = (
+/obj/structure/surface/table,
+/turf/open/floor,
+/area/bigredv2/outside/hydroponics)
+"hvx" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
 /obj/structure/phone_base/colony_net{
-	do_not_disturb = 1;
-	dir = 4;
-	phone_category = "Lambda Labs";
-	phone_color = "red";
-	phone_id = "Secure Storage";
-	pixel_x = -18
+	phone_category = "Solaris Ridge";
+	phone_color = "blue";
+	phone_id = "Operations";
+	pixel_y = 24
 	},
 /turf/open/floor{
 	dir = 1;
-	icon_state = "elevatorshaft"
+	icon_state = "darkblue2"
 	},
-/area/bigredv2/caves/lambda/breakroom)
+/area/bigredv2/outside/admin_building)
 "hvQ" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -29731,6 +29132,12 @@
 /obj/structure/sign/poster/safety,
 /turf/closed/wall/wood,
 /area/bigredv2/caves/mining)
+"hMe" = (
+/obj/structure/closet/secure_closet/CMO,
+/turf/open/floor{
+	icon_state = "whitegreenfull"
+	},
+/area/bigredv2/outside/medical)
 "hNg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/crap_item,
@@ -29739,6 +29146,20 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/eta/research)
+"hOo" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/obj/structure/window/reinforced/toughened,
+/obj/structure/closet/crate/freezer,
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor{
+	dir = 6;
+	icon_state = "darkgreen2"
+	},
+/area/bigredv2/caves/lambda/virology)
 "hOx" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/open/floor{
@@ -29799,6 +29220,10 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"hUK" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/wood,
+/area/bigredv2/caves/lambda/breakroom)
 "hWa" = (
 /turf/open/floor{
 	icon_state = "dark"
@@ -30087,14 +29512,6 @@
 /obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
-"iAy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/hefa_cult_decals/d96,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
 "iAF" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_11"
@@ -30138,6 +29555,18 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"iFd" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "Solaris Ridge";
+	phone_color = "green";
+	phone_id = "Clinic Labs";
+	pixel_y = 24
+	},
+/turf/open/floor{
+	dir = 1;
+	icon_state = "whitepurplecorner"
+	},
+/area/bigredv2/outside/medical)
 "iGK" = (
 /turf/open/mars_cave,
 /area/bigredv2/caves_sw)
@@ -30265,6 +29694,10 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/caves/mining)
+"iXY" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/plating,
+/area/bigredv2/caves/mining)
 "iYR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
@@ -30377,11 +29810,6 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/general_store)
-"jjt" = (
-/obj/structure/bed,
-/obj/item/toy/farwadoll,
-/turf/open/floor/plating,
-/area/bigredv2/outside/cargo)
 "jkn" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
@@ -30400,6 +29828,16 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"jkM" = (
+/obj/effect/decal/cleanable/dirt{
+	pixel_x = 17
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "jkO" = (
 /obj/item/explosive/grenade/high_explosive/frag,
 /turf/open/mars_cave,
@@ -30411,6 +29849,12 @@
 /obj/structure/reagent_dispensers/fueltank/gas,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"jnA" = (
+/turf/open/floor{
+	dir = 1;
+	icon_state = "podhatch"
+	},
+/area/bigredv2/caves/lambda/research)
 "jnR" = (
 /turf/open/floor{
 	dir = 9;
@@ -30511,6 +29955,16 @@
 	icon_state = "bcircuitoff"
 	},
 /area/bigredv2/caves/lambda/research)
+"jxC" = (
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 27
+	},
+/obj/structure/closet/toolcloset,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "jzD" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor{
@@ -30616,14 +30070,6 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
-"jHS" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor,
-/area/bigred/ground/garage_workshop)
 "jIQ" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_19"
@@ -30705,6 +30151,13 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"jPt" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	dir = 9;
+	icon_state = "darkblue2"
+	},
+/area/bigredv2/caves/eta/research)
 "jPV" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -1;
@@ -30757,6 +30210,10 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"jSd" = (
+/obj/structure/closet/crate/internals,
+/turf/open/floor/plating,
+/area/bigredv2/caves/lambda/xenobiology)
 "jUc" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -30814,6 +30271,12 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"jWf" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/marshal_office)
 "jWj" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/mars_cave{
@@ -31060,6 +30523,12 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"klP" = (
+/turf/open/floor/plating{
+	dir = 9;
+	icon_state = "warnplate"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "kmb" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	desc = "A pipe.";
@@ -31078,6 +30547,12 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/admin_building)
+"knl" = (
+/obj/structure/surface/table/woodentable,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/bigredv2/outside/marshal_office)
 "knN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -31174,17 +30649,18 @@
 	icon_state = "darkredcorners2"
 	},
 /area/bigredv2/caves/eta/xenobiology)
-"kyz" = (
-/obj/structure/phone_base/colony_net{
-	dir = 4;
+"kyg" = (
+/obj/structure/surface/table,
+/obj/item/tool/screwdriver,
+/obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Eta Labs";
-	phone_id = "Observation";
-	pixel_x = -18
+	phone_color = "yellow";
+	phone_id = "Robotics"
 	},
 /turf/open/floor{
 	icon_state = "dark"
 	},
-/area/bigredv2/caves/eta/xenobiology)
+/area/bigredv2/caves/eta/storage)
 "kBn" = (
 /turf/closed/wall/solaris,
 /area/bigredv2/caves)
@@ -31199,6 +30675,12 @@
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"kBV" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/telecomm)
 "kCe" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating{
@@ -31229,6 +30711,12 @@
 	icon_state = "darkgreencorners2"
 	},
 /area/bigredv2/caves/eta/research)
+"kHH" = (
+/obj/structure/closet/wardrobe/virology_white,
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/virology)
 "kHK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
@@ -31253,6 +30741,26 @@
 	icon_state = "darkred2"
 	},
 /area/bigredv2/caves/eta/research)
+"kKX" = (
+/obj/structure/closet/secure_closet,
+/obj/item/explosive/plastic{
+	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
+	name = "Mining explosives"
+	},
+/obj/item/explosive/plastic{
+	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
+	name = "Mining explosives"
+	},
+/obj/item/explosive/plastic{
+	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
+	name = "Mining explosives"
+	},
+/obj/item/explosive/plastic{
+	desc = "A compact explosive charge for controlled demolitions. Looks to be made from C4";
+	name = "Mining explosives"
+	},
+/turf/open/floor/plating,
+/area/bigredv2/caves/mining)
 "kMs" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	desc = "Righty tighty, lefty loosey!";
@@ -31387,6 +30895,16 @@
 "kYd" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bigredv2/outside/e)
+"kYR" = (
+/obj/structure/surface/table/holotable/wood,
+/obj/item/reagent_container/food/drinks/coffee,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Lambda Labs";
+	phone_color = "blue";
+	phone_id = "Administration"
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/caves/lambda/breakroom)
 "kZG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/bible/hefa,
@@ -31584,6 +31102,11 @@
 	icon_state = "wood"
 	},
 /area/bigredv2/outside/dorms)
+"lzl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/moneybag,
+/turf/open/floor/plating,
+/area/bigredv2/caves/mining)
 "lzI" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/closed/wall/solaris/reinforced,
@@ -31709,6 +31232,17 @@
 	icon_state = "mars_cave_15"
 	},
 /area/bigredv2/caves/mining)
+"lPw" = (
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "Eta Labs";
+	phone_id = "Observation";
+	pixel_x = -18
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves/eta/xenobiology)
 "lPL" = (
 /obj/structure/platform/shiva{
 	dir = 4
@@ -31771,6 +31305,15 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
+"lST" = (
+/obj/structure/surface/table/woodentable,
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/library)
 "lUd" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -31803,6 +31346,12 @@
 	icon_state = "mars_cave_7"
 	},
 /area/bigredv2/caves_sw)
+"lXX" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	icon_state = "grimy"
+	},
+/area/bigredv2/outside/office_complex)
 "lYi" = (
 /obj/structure/ore_box,
 /turf/open/mars_cave{
@@ -31850,6 +31399,18 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/telecomm/lz2_cave)
+"meK" = (
+/obj/structure/surface/table,
+/obj/item/handcuffs,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Solaris Ridge";
+	phone_color = "red";
+	phone_id = "Marshal Office"
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/marshal_office)
 "meT" = (
 /turf/open/mars,
 /area/bigredv2/outside/eta)
@@ -31892,6 +31453,19 @@
 	},
 /turf/open/floor,
 /area/bigred/ground/garage_workshop)
+"mlt" = (
+/obj/structure/closet/l3closet/scientist,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor{
+	icon_state = "freezerfloor"
+	},
+/area/bigredv2/caves/eta/research)
+"mlO" = (
+/obj/structure/closet/secure_closet/security,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "mmg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip{
@@ -32051,6 +31625,12 @@
 	icon_state = "mars_cave_15"
 	},
 /area/bigredv2/outside/lz1_north_cas)
+"mET" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/space_port)
 "mFT" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/effect/landmark/corpsespawner/russian,
@@ -32244,6 +31824,14 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"ndp" = (
+/obj/structure/surface/table,
+/obj/item/trash/kepler,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whiteyellowfull"
+	},
+/area/bigredv2/outside/office_complex)
 "ndy" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -3;
@@ -32389,6 +31977,20 @@
 	icon_state = "mars_cave_3"
 	},
 /area/bigredv2/caves/mining)
+"nxm" = (
+/obj/structure/phone_base/colony_net{
+	do_not_disturb = 1;
+	dir = 4;
+	phone_category = "Lambda Labs";
+	phone_color = "red";
+	phone_id = "Secure Storage";
+	pixel_x = -18
+	},
+/turf/open/floor{
+	dir = 1;
+	icon_state = "elevatorshaft"
+	},
+/area/bigredv2/caves/lambda/breakroom)
 "nBb" = (
 /obj/item/ammo_magazine/pistol/b92fs,
 /obj/item/weapon/gun/pistol/b92fs{
@@ -32659,13 +32261,6 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/library)
-"ocG" = (
-/obj/structure/bookcase/manuals/research_and_development,
-/obj/item/storage/fancy/vials/random,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/caves/eta/living)
 "odw" = (
 /obj/structure/bed,
 /turf/open/floor/plating,
@@ -32689,17 +32284,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
-"ofJ" = (
-/obj/structure/surface/table,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Eta Labs";
-	phone_color = "red";
-	phone_id = "Security"
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/eta/storage)
 "ofX" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -32810,6 +32394,12 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"onJ" = (
+/obj/structure/closet/secure_closet/bar,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/bar)
 "onR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/broken,
@@ -32875,6 +32465,12 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves_se)
+"otK" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/dorms)
 "oud" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil/streak,
@@ -32962,12 +32558,30 @@
 	icon_state = "mars_cave_5"
 	},
 /area/bigredv2/caves_virology)
+"oBC" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/marshal_office)
 "oEJ" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"oGg" = (
+/obj/structure/machinery/light,
+/obj/structure/surface/table,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Solaris Ridge";
+	phone_color = "green";
+	phone_id = "Virology Lab"
+	},
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/virology)
 "oIc" = (
 /obj/effect/decal/cleanable/blood{
 	base_icon = 'icons/obj/items/weapons/grenade.dmi';
@@ -32994,6 +32608,13 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"oJM" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/obj/item/storage/fancy/vials/random,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/caves/eta/living)
 "oJO" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -8;
@@ -33341,6 +32962,14 @@
 /obj/structure/sign/safety/hazard,
 /turf/closed/wall/solaris/rock,
 /area/bigredv2/caves)
+"psc" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor{
+	icon_state = "freezerfloor"
+	},
+/area/bigredv2/outside/admin_building)
 "ptL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -33378,6 +33007,10 @@
 	icon_state = "mars_dirt_13"
 	},
 /area/bigredv2/outside/filtration_plant)
+"pvr" = (
+/obj/structure/filingcabinet,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "pxp" = (
 /obj/structure/ore_box,
 /turf/open/floor/plating{
@@ -33428,6 +33061,12 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"pDX" = (
+/obj/structure/surface/table/woodentable,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/admin_building)
 "pGP" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -33478,6 +33117,13 @@
 	icon_state = "mars_cave_19"
 	},
 /area/bigredv2/caves/mining)
+"pLx" = (
+/obj/structure/closet/secure_closet/RD,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "darkblue2"
+	},
+/area/bigredv2/caves/eta/research)
 "pMm" = (
 /turf/open/floor{
 	dir = 8;
@@ -33552,6 +33198,11 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigred/ground/garage_workshop)
+"pWm" = (
+/obj/structure/surface/table,
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/floor/plating,
+/area/bigredv2/caves/eta/research)
 "pXm" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -33562,16 +33213,6 @@
 	icon_state = "redcorner"
 	},
 /area/bigredv2/outside/marshal_office)
-"pXn" = (
-/obj/structure/closet/fireaxecabinet{
-	pixel_y = 27
-	},
-/obj/structure/closet/toolcloset,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
 "pXu" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_2"
@@ -33644,12 +33285,25 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves_north)
+"qeE" = (
+/obj/structure/safe,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/admin_building)
 "qeK" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor,
 /area/bigredv2/outside/filtration_plant)
+"qeL" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "qeX" = (
 /obj/structure/largecrate,
 /obj/effect/decal/cleanable/dirt,
@@ -33702,6 +33356,15 @@
 	},
 /turf/open/mars_cave{
 	icon_state = "mars_cave_6"
+	},
+/area/bigredv2/caves/mining)
+"qhV" = (
+/obj/structure/surface/table,
+/obj/item/device/radio{
+	pixel_y = 8
+	},
+/turf/open/mars_cave{
+	icon_state = "mars_cave_3"
 	},
 /area/bigredv2/caves/mining)
 "qiA" = (
@@ -33807,6 +33470,16 @@
 "qtx" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bigredv2/outside/space_port_lz2)
+"qtB" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
+/obj/structure/phone_base/colony_net{
+	phone_category = "Solaris Ridge";
+	phone_color = "yellow";
+	phone_id = "Filtration";
+	pixel_y = 24
+	},
+/turf/open/floor,
+/area/bigredv2/outside/filtration_plant)
 "qux" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = 6
@@ -33872,6 +33545,13 @@
 	icon_state = "mars_cave_13"
 	},
 /area/bigredv2/caves/mining)
+"qCg" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/tool,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/caves/eta/living)
 "qCK" = (
 /turf/open/floor{
 	icon_state = "asteroidwarning"
@@ -34005,6 +33685,15 @@
 	icon_state = "mars_cave_6"
 	},
 /area/bigredv2/caves_lambda)
+"qQV" = (
+/obj/structure/bed,
+/obj/item/bedsheet/medical,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor{
+	dir = 6;
+	icon_state = "whitegreen"
+	},
+/area/bigredv2/caves/lambda/virology)
 "qSj" = (
 /obj/structure/cargo_container/hd/mid/alt,
 /turf/open/floor/plating,
@@ -34197,6 +33886,14 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"rlw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/hefa_cult_decals/d96,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "rml" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor,
@@ -34298,6 +33995,29 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/caves/mining)
+"rvB" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/technology_scanner,
+/obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
+/obj/structure/phone_base/colony_net{
+	phone_category = "Solaris Ridge";
+	phone_color = "yellow";
+	phone_id = "Engineering";
+	pixel_y = 24
+	},
+/turf/open/floor,
+/area/bigredv2/outside/engineering)
+"rvY" = (
+/obj/structure/surface/table,
+/obj/item/device/analyzer/plant_analyzer,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitegreen_v"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "rxh" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_2"
@@ -34309,6 +34029,21 @@
 	icon_state = "mars_cave_23"
 	},
 /area/bigredv2/caves_east)
+"rye" = (
+/obj/structure/closet/secure_closet/chemical,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whiteyellow"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
+"rzc" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/drinks/coffee,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/general_store)
 "rzO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/water_cooler/stacks{
@@ -34379,6 +34114,13 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/filtration_plant)
+"rGk" = (
+/obj/structure/closet/l3closet/scientist,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "darkgreen2"
+	},
+/area/bigredv2/caves/eta/xenobiology)
 "rGP" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/mars_cave{
@@ -34528,6 +34270,14 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/oob)
+"rRo" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor{
+	icon_state = "darkish"
+	},
+/area/bigredv2/caves/eta/storage)
 "rRO" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor{
@@ -34775,33 +34525,6 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
-"sog" = (
-/obj/item/explosive/grenade/slug/baton{
-	dir = 1;
-	pixel_y = -8
-	},
-/obj/item/explosive/grenade/baton{
-	dir = 4;
-	pixel_x = 9;
-	pixel_y = -8
-	},
-/obj/structure/cable{
-	icon_state = "4-10"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-5"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
 "sqc" = (
 /obj/effect/decal/cleanable/blood{
 	base_icon = 'icons/obj/items/weapons/grenade.dmi';
@@ -35048,6 +34771,14 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
+"sKz" = (
+/obj/structure/closet/secure_closet/scientist,
+/obj/structure/machinery/light,
+/turf/open/floor{
+	dir = 10;
+	icon_state = "whitepurple"
+	},
+/area/bigredv2/caves/lambda/research)
 "sLr" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_11"
@@ -35059,6 +34790,39 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves_sw)
+"sLO" = (
+/turf/open/floor{
+	dir = 9;
+	icon_state = "darkgreen2"
+	},
+/area/bigredv2/caves/lambda/virology)
+"sNo" = (
+/obj/item/explosive/grenade/slug/baton{
+	dir = 1;
+	pixel_y = -8
+	},
+/obj/item/explosive/grenade/baton{
+	dir = 4;
+	pixel_x = 9;
+	pixel_y = -8
+	},
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-5"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "sNQ" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_11"
@@ -35082,6 +34846,17 @@
 	icon_state = "mars_cave_10"
 	},
 /area/bigredv2/caves_east)
+"sOY" = (
+/obj/structure/surface/table,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Solaris Ridge";
+	phone_color = "blue";
+	phone_id = "Space Port"
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/space_port)
 "sPv" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -35095,11 +34870,24 @@
 	icon_state = "mars_cave_23"
 	},
 /area/bigredv2/outside/lz1_telecomm_cas)
+"sRK" = (
+/obj/structure/filingcabinet/medical,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/admin_building)
 "sSU" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_19"
 	},
 /area/bigredv2/outside/lz2_south_cas)
+"sVh" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/bigredv2/outside/admin_building)
 "sWa" = (
 /obj/item/ore{
 	pixel_x = 12;
@@ -35282,6 +35070,18 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves/mining)
+"tjx" = (
+/obj/structure/surface/table,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Eta Labs";
+	phone_color = "Blue";
+	phone_id = "Director"
+	},
+/turf/open/floor{
+	dir = 6;
+	icon_state = "darkblue2"
+	},
+/area/bigredv2/caves/eta/research)
 "tkN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -35321,6 +35121,21 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/caves_research)
+"tnk" = (
+/obj/structure/machinery/computer/telecomms/monitor{
+	req_one_access_txt = "19;200"
+	},
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "Solaris Ridge";
+	phone_color = "yellow";
+	phone_id = "Communications";
+	pixel_x = -18
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/outside/telecomm)
 "tpR" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -35597,6 +35412,14 @@
 	icon_state = "mars_cave_14"
 	},
 /area/bigredv2/caves_north)
+"tLN" = (
+/obj/structure/surface/table,
+/obj/item/clothing/glasses/science,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "whitepurple"
+	},
+/area/bigredv2/caves/lambda/research)
 "tNz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E-corner"
@@ -35684,6 +35507,14 @@
 /obj/item/pizzabox,
 /turf/open/floor,
 /area/bigredv2/outside/engineering)
+"tUm" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor,
+/area/bigred/ground/garage_workshop)
 "tUL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/hefa_cult_decals/d32,
@@ -35730,6 +35561,14 @@
 	icon_state = "darkpurple2"
 	},
 /area/bigredv2/caves/lambda/research)
+"uaI" = (
+/obj/structure/surface/table,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/paper/bigred/crazy,
+/turf/open/floor,
+/area/bigredv2/outside/marshal_office)
 "ubY" = (
 /obj/structure/barricade/wooden,
 /turf/open/mars_cave{
@@ -35772,6 +35611,12 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"uhT" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/virology)
 "uij" = (
 /turf/open/floor{
 	dir = 8;
@@ -35815,6 +35660,18 @@
 	icon_state = "floor5"
 	},
 /area/bigredv2/oob)
+"ukZ" = (
+/obj/structure/surface/table,
+/obj/item/tool/pen,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/item/tool/hand_labeler,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whitepurplecorner"
+	},
+/area/bigredv2/outside/medical)
 "ulk" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	desc = "A heavy duty power cable for high voltage applications";
@@ -35833,6 +35690,12 @@
 /obj/item/device/flashlight/on,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"umh" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	icon_state = "whitegreencorner"
+	},
+/area/bigredv2/outside/medical)
 "umK" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -8;
@@ -35968,6 +35831,17 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"uDP" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/medical)
 "uDZ" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -36040,6 +35914,17 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigred/ground/garage_workshop)
+"uJr" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Lambda Labs";
+	phone_id = "Xenobiology"
+	},
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whitepurple"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "uJu" = (
 /obj/item/robot_parts/robot_component/diagnosis_unit{
 	pixel_y = 15
@@ -36064,6 +35949,14 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves/mining)
+"uNV" = (
+/obj/structure/toilet{
+	pixel_y = 8
+	},
+/turf/open/floor{
+	icon_state = "freezerfloor"
+	},
+/area/bigredv2/outside/dorms)
 "uNW" = (
 /obj/effect/decal/cleanable/blood{
 	dir = 8;
@@ -36236,6 +36129,11 @@
 	icon_state = "mars_cave_13"
 	},
 /area/bigredv2/caves/mining)
+"vir" = (
+/obj/structure/closet/toolcloset,
+/obj/structure/machinery/light,
+/turf/open/floor,
+/area/bigred/ground/garage_workshop)
 "vis" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -36452,16 +36350,6 @@
 	icon_state = "mars_cave_17"
 	},
 /area/bigredv2/caves_research)
-"vBT" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Solaris Ridge";
-	phone_id = "Clinic Reception"
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/bigredv2/outside/medical)
 "vCd" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/twohanded/lungemine{
@@ -36490,6 +36378,17 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/filtration_plant)
+"vES" = (
+/obj/structure/surface/table,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Eta Labs";
+	phone_color = "red";
+	phone_id = "Security"
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves/eta/storage)
 "vEU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/mars{
@@ -36541,6 +36440,21 @@
 	icon_state = "mars_cave_5"
 	},
 /area/bigredv2/caves_virology)
+"vNP" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "darkred2"
+	},
+/area/bigredv2/caves/eta/research)
+"vOQ" = (
+/obj/structure/closet/secure_closet/scientist,
+/obj/structure/machinery/light/built,
+/turf/open/floor{
+	dir = 6;
+	icon_state = "whitepurple"
+	},
+/area/bigredv2/caves/lambda/research)
 "vPP" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = 6
@@ -36570,6 +36484,17 @@
 /obj/structure/sign/safety/high_voltage,
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/caves/mining)
+"vRD" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/surface/table,
+/obj/item/tool/surgery/retractor,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "darkyellow2"
+	},
+/area/bigredv2/caves/eta/research)
 "vRK" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -36666,6 +36591,13 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/outside/lz1_north_cas)
+"wcv" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "asteroidwarning"
+	},
+/area/bigred/ground/garage_workshop)
 "wcw" = (
 /turf/open/gm/river,
 /area/bigredv2/outside/filtration_plant)
@@ -36810,17 +36742,6 @@
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/mars,
 /area/bigredv2/outside/w)
-"wry" = (
-/obj/structure/surface/table,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Solaris Ridge";
-	phone_color = "blue";
-	phone_id = "Space Port"
-	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/space_port)
 "wrz" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/mars_cave{
@@ -36834,6 +36755,13 @@
 /obj/structure/plasticflaps,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
+"wrV" = (
+/obj/structure/closet/l3closet/virology,
+/turf/open/floor{
+	dir = 6;
+	icon_state = "warnwhite"
+	},
+/area/bigredv2/caves/lambda/virology)
 "wtj" = (
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
@@ -36894,6 +36822,15 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/caves/lambda/virology)
+"wBe" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/bomb_supply,
+/obj/effect/spawner/random/bomb_supply,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "whitepurplecorner"
+	},
+/area/bigredv2/outside/medical)
 "wBi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -37056,6 +36993,13 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/eta/xenobiology)
+"wPy" = (
+/obj/structure/closet/secure_closet/engineering_chief,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor,
+/area/bigredv2/outside/engineering)
 "wQa" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/beer{
@@ -37085,6 +37029,10 @@
 	},
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bigredv2/oob)
+"wSG" = (
+/obj/structure/filingcabinet,
+/turf/open/floor,
+/area/bigredv2/outside/engineering)
 "wUo" = (
 /obj/item/stack/sheet/wood{
 	pixel_y = -8
@@ -37174,6 +37122,21 @@
 	icon_state = "mars_dirt_7"
 	},
 /area/bigredv2/caves/mining)
+"xei" = (
+/obj/structure/surface/table,
+/obj/item/device/healthanalyzer,
+/obj/structure/pipes/vents/pump,
+/obj/item/reagent_container/spray/cleaner,
+/obj/structure/phone_base/colony_net{
+	phone_category = "Solaris Ridge";
+	phone_color = "green";
+	phone_id = "Clinic";
+	pixel_y = 24
+	},
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/medical)
 "xeN" = (
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/mars_cave{
@@ -37254,6 +37217,12 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"xjz" = (
+/obj/structure/filingcabinet,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/marshal_office)
 "xkq" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_3"
@@ -37407,6 +37376,10 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"xwz" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/open/floor/wood,
+/area/bigredv2/caves/lambda/breakroom)
 "xya" = (
 /obj/structure/barricade/wooden{
 	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
@@ -37477,6 +37450,12 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/caves/mining)
+"xBO" = (
+/obj/structure/filingcabinet/medical,
+/turf/open/floor{
+	icon_state = "white"
+	},
+/area/bigredv2/outside/virology)
 "xBS" = (
 /turf/open/mars_cave{
 	icon_state = "mars_cave_14"
@@ -37565,6 +37544,13 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"xMi" = (
+/obj/structure/closet/secure_closet/cargotech{
+	req_access = null;
+	req_one_access_txt = "21;101"
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "xMr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/solaris/reinforced/hull,
@@ -37579,6 +37565,13 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"xMB" = (
+/obj/structure/surface/table,
+/turf/open/floor{
+	dir = 6;
+	icon_state = "darkblue2"
+	},
+/area/bigredv2/outside/admin_building)
 "xMT" = (
 /obj/structure/closet,
 /obj/item/explosive/grenade/high_explosive/frag,
@@ -37608,6 +37601,15 @@
 	icon_state = "mars_dirt_4"
 	},
 /area/bigredv2/outside/c)
+"xPG" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/tech_supply,
+/obj/item/handset,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "darkblue2"
+	},
+/area/bigredv2/caves/eta/research)
 "xQb" = (
 /obj/structure/pipes/vents/pump/on,
 /obj/effect/decal/cleanable/dirt,
@@ -37665,16 +37667,6 @@
 	desc = "You feel fuzzy just looking at it.... it's slightly lumanesant"
 	},
 /turf/open/floor/plating,
-/area/bigredv2/caves/mining)
-"xWz" = (
-/obj/effect/decal/cleanable/dirt{
-	pixel_x = 17
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
 /area/bigredv2/caves/mining)
 "xWH" = (
 /obj/structure/barricade/wooden,
@@ -37833,15 +37825,13 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
-"yha" = (
+"ygo" = (
 /obj/structure/surface/table,
-/obj/item/device/radio{
-	pixel_y = 8
+/obj/item/storage/pill_bottle/spaceacillin,
+/turf/open/floor{
+	icon_state = "white"
 	},
-/turf/open/mars_cave{
-	icon_state = "mars_cave_3"
-	},
-/area/bigredv2/caves/mining)
+/area/bigredv2/outside/virology)
 "yhc" = (
 /turf/open/mars_cave{
 	icon_state = "mars_dirt_5"
@@ -37863,6 +37853,16 @@
 	icon_state = "delivery"
 	},
 /area/bigredv2/outside/filtration_plant)
+"yjg" = (
+/obj/structure/closet/l3closet/security,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/bigredv2/outside/marshal_office)
 "yjU" = (
 /obj/item/weapon/broken_bottle,
 /turf/open/floor/plating{
@@ -39458,9 +39458,9 @@ aas
 aas
 acQ
 acY
-aaK
+bOz
 adH
-aea
+tnk
 aeB
 afb
 afI
@@ -39680,7 +39680,7 @@ ade
 aeb
 aeC
 ade
-aaV
+kBV
 afv
 ahd
 ahd
@@ -40759,7 +40759,7 @@ acA
 aas
 aas
 acQ
-aaV
+kBV
 adt
 adt
 adt
@@ -41411,7 +41411,7 @@ aaf
 acJ
 acQ
 adf
-adv
+amf
 adI
 aef
 ade
@@ -41858,7 +41858,7 @@ aao
 qsE
 qsE
 qlK
-jHS
+tUm
 qrZ
 qsE
 aao
@@ -41895,20 +41895,20 @@ aFv
 aGr
 aHg
 aoD
-aMZ
+uhT
 aNc
 aoD
-aGP
+xBO
 aRE
 aSu
 arT
-aGX
+diy
 aVC
 aWd
 aWO
 aXu
 aoD
-aIc
+kHH
 aRE
 aoD
 aao
@@ -42123,7 +42123,7 @@ aUM
 aNc
 aWe
 aNc
-bwr
+oGg
 aoD
 aYA
 aWe
@@ -42336,13 +42336,13 @@ aQA
 aRG
 aSv
 arT
-aHa
+ygo
 aVD
 aWf
 aRG
 aNc
 aoD
-aYB
+cKj
 aZj
 aoD
 aao
@@ -42642,7 +42642,7 @@ tfz
 kCe
 kCe
 kCe
-iAy
+rlw
 tUL
 rxh
 wBq
@@ -42952,7 +42952,7 @@ vLd
 upE
 vLd
 vLd
-dEf
+vir
 qsE
 aao
 aao
@@ -43083,7 +43083,7 @@ wBq
 ulk
 kSt
 uHQ
-eWG
+qeL
 jCg
 qwy
 xzi
@@ -43169,7 +43169,7 @@ qsE
 vLd
 upE
 vLd
-eDQ
+eQg
 qsE
 aao
 aao
@@ -43525,7 +43525,7 @@ wuC
 nkW
 kCe
 kCe
-xWz
+jkM
 pSa
 lSH
 yln
@@ -43718,7 +43718,7 @@ qGg
 vxQ
 mtL
 pUi
-eWy
+lzl
 qOM
 hZl
 ust
@@ -43808,7 +43808,7 @@ acJ
 aae
 aao
 qsE
-aun
+wcv
 uvz
 clB
 msS
@@ -44148,7 +44148,7 @@ aao
 aao
 aao
 uHQ
-gCC
+kKX
 wtj
 duo
 wtj
@@ -44509,7 +44509,7 @@ aNc
 aNc
 aNc
 asl
-aWS
+doK
 aNi
 asl
 aYC
@@ -44582,7 +44582,7 @@ aao
 aao
 aao
 uHQ
-cZj
+iXY
 mIu
 fML
 eUs
@@ -45038,7 +45038,7 @@ opz
 szw
 wCo
 uHQ
-pXn
+jxC
 rNc
 vzL
 pSa
@@ -46319,7 +46319,7 @@ kvp
 wog
 eGf
 fYH
-fcG
+cvs
 dCA
 cAN
 yfs
@@ -47469,13 +47469,13 @@ pXu
 pXu
 xbV
 aae
-aax
+cKB
 aaO
 aaP
 abe
 abn
 aby
-wry
+sOY
 abE
 aaw
 aca
@@ -48337,7 +48337,7 @@ mDN
 pMv
 aao
 aae
-aaL
+mET
 aaO
 aaO
 aaO
@@ -48554,7 +48554,7 @@ pXu
 iuu
 aao
 aae
-aaL
+mET
 aaO
 aaO
 abg
@@ -48629,7 +48629,7 @@ aoH
 aoH
 aoH
 aoH
-aUY
+rzc
 aNo
 aNm
 aoH
@@ -48935,7 +48935,7 @@ aao
 aao
 uHQ
 xwy
-sog
+sNo
 pZe
 mmg
 lBx
@@ -49170,7 +49170,7 @@ aao
 aao
 aao
 kDs
-yha
+qhV
 rsv
 rsv
 rsv
@@ -49309,7 +49309,7 @@ aZu
 aZO
 aZO
 atA
-bkl
+pvr
 aZO
 blg
 axL
@@ -49504,7 +49504,7 @@ aoH
 aXH
 aXH
 asK
-aZo
+xMi
 aZu
 aZu
 aZu
@@ -49526,7 +49526,7 @@ biK
 aZO
 aZO
 atA
-bkl
+pvr
 aZu
 aZu
 axL
@@ -49721,7 +49721,7 @@ aoH
 aXH
 aXH
 asK
-aZo
+xMi
 aZM
 baB
 aZO
@@ -49733,7 +49733,7 @@ aZu
 aZu
 beU
 bfC
-bfX
+gyK
 baF
 bgE
 bhe
@@ -49743,7 +49743,7 @@ aZu
 aZu
 aZu
 asK
-aLl
+gzF
 aZu
 blh
 asK
@@ -50152,7 +50152,7 @@ aOB
 aOB
 aNm
 aoH
-jjt
+dIX
 aXH
 asK
 aZn
@@ -50333,7 +50333,7 @@ aqq
 are
 aim
 asy
-ajk
+wBe
 are
 auG
 alu
@@ -50546,7 +50546,7 @@ aeI
 aeI
 ajy
 alu
-fyO
+iFd
 aqr
 aqr
 asz
@@ -50981,7 +50981,7 @@ aeI
 aoP
 alu
 aqt
-arf
+dnn
 arP
 asB
 ato
@@ -51202,7 +51202,7 @@ arg
 arQ
 arg
 aqu
-atT
+ukZ
 auI
 alu
 avZ
@@ -51216,7 +51216,7 @@ aBd
 aBb
 amj
 aDF
-arW
+uDP
 aFz
 aGv
 aHq
@@ -52260,7 +52260,7 @@ wXg
 wXg
 wcs
 acp
-aaX
+fFp
 adB
 adk
 adk
@@ -52555,7 +52555,7 @@ atA
 beW
 aZu
 baz
-bgr
+mlO
 asK
 bYa
 aZu
@@ -53166,7 +53166,7 @@ ayL
 azx
 aAv
 alu
-aBN
+xei
 aCF
 ari
 aEC
@@ -53367,7 +53367,7 @@ anx
 afS
 akM
 alX
-agY
+hMe
 arl
 arl
 arl
@@ -53389,7 +53389,7 @@ aDJ
 aDJ
 aDJ
 awN
-aBP
+umh
 alu
 aHD
 aBR
@@ -53780,7 +53780,7 @@ acD
 vPZ
 acC
 adn
-adC
+oBC
 adN
 aen
 adN
@@ -53803,7 +53803,7 @@ acp
 alX
 aqB
 arn
-aiY
+hfR
 asF
 arl
 amj
@@ -53880,7 +53880,7 @@ ayr
 bor
 bmi
 axX
-brn
+rvB
 bmq
 trr
 bpl
@@ -54235,7 +54235,7 @@ anx
 afS
 akM
 alX
-aEB
+dos
 aro
 arY
 asG
@@ -54698,7 +54698,7 @@ aKm
 aHF
 aHF
 uRE
-aGD
+fAw
 aMf
 aPL
 aMf
@@ -54931,9 +54931,9 @@ asT
 aYM
 aZB
 aZT
-caN
+sVh
 bbj
-caN
+sVh
 bcE
 bcN
 aYO
@@ -55172,7 +55172,7 @@ bjA
 bjH
 blr
 axX
-aLJ
+wSG
 bmW
 bnx
 boa
@@ -55389,7 +55389,7 @@ bjA
 bjH
 blr
 axX
-bmw
+wPy
 bmX
 bAo
 bmg
@@ -55558,7 +55558,7 @@ aCK
 aDO
 aEH
 aFI
-vBT
+bbL
 amj
 amj
 alu
@@ -55954,7 +55954,7 @@ aao
 acP
 asc
 acp
-afm
+yjg
 afS
 afS
 afS
@@ -56176,7 +56176,7 @@ afS
 agD
 afS
 acp
-aiG
+meK
 afS
 afT
 afS
@@ -56217,9 +56217,9 @@ aHF
 aHF
 aHF
 apD
-aNE
+fxb
 aOH
-aPO
+dFJ
 aQZ
 aof
 aSS
@@ -57323,7 +57323,7 @@ bbm
 aJb
 bcN
 aof
-aJT
+sRK
 apC
 aHD
 aIn
@@ -57827,7 +57827,7 @@ bzp
 ebZ
 aAp
 bAf
-bAv
+rRo
 bAN
 aCe
 bBb
@@ -58181,7 +58181,7 @@ aof
 aVU
 aWE
 aXm
-aXQ
+xMB
 aof
 aYV
 aOM
@@ -58273,7 +58273,7 @@ bCb
 qTC
 pvg
 aKi
-aPZ
+dwU
 aCe
 dyv
 dyv
@@ -58395,7 +58395,7 @@ aof
 aSZ
 aTa
 aof
-aVW
+hvx
 aWF
 aof
 aof
@@ -58404,11 +58404,11 @@ aYU
 aOM
 aZX
 aof
-bbn
+qeE
 bbZ
 bcP
 bdq
-aJT
+sRK
 apC
 aHD
 aIn
@@ -58772,7 +58772,7 @@ aao
 acP
 asc
 acp
-acl
+xjz
 aes
 aeO
 adW
@@ -58801,7 +58801,7 @@ atY
 jpT
 aty
 atB
-cHI
+dxf
 aty
 atB
 mhF
@@ -58925,7 +58925,7 @@ aKi
 wPk
 qTC
 aKi
-kyz
+lPw
 aKi
 aKi
 aKi
@@ -58989,7 +58989,7 @@ aao
 acP
 asc
 acq
-acv
+jWf
 adW
 aeP
 afs
@@ -59650,7 +59650,7 @@ adS
 adS
 aiO
 ajg
-adU
+uaI
 akt
 acr
 alA
@@ -59766,7 +59766,7 @@ kdr
 kdr
 kdr
 aAp
-bwQ
+kyg
 bxj
 bDi
 bDi
@@ -59918,7 +59918,7 @@ aNP
 aOO
 aOO
 aof
-aYq
+psc
 aof
 aNL
 aUb
@@ -60090,7 +60090,7 @@ acr
 adk
 amy
 ang
-anE
+knl
 aok
 adk
 acr
@@ -60128,7 +60128,7 @@ aGG
 aPX
 aof
 aNQ
-aTb
+pDX
 aUg
 aof
 aNQ
@@ -60222,7 +60222,7 @@ bBv
 bww
 bBN
 aCL
-bCj
+rGk
 aKi
 bCA
 bCG
@@ -60385,7 +60385,7 @@ bne
 bkJ
 bkJ
 awM
-boY
+qtB
 bpo
 bpU
 bqv
@@ -60430,7 +60430,7 @@ aBy
 bzp
 bzC
 aBQ
-ofJ
+vES
 aOP
 aOP
 aBE
@@ -61287,7 +61287,7 @@ kdr
 aBv
 bwW
 bwW
-bxx
+mlt
 bwW
 aBA
 ufB
@@ -61414,7 +61414,7 @@ amn
 aBo
 aBW
 amn
-arz
+uNV
 aEN
 aBk
 amn
@@ -61720,7 +61720,7 @@ kdr
 kdr
 aBw
 bwX
-aMG
+vRD
 bxy
 bxI
 bxO
@@ -62164,8 +62164,8 @@ aBw
 byT
 bzd
 aBv
-bzF
-bEB
+xPG
+jPt
 aOl
 bAF
 bAS
@@ -62183,7 +62183,7 @@ xpl
 xpl
 kKB
 aDX
-ocG
+oJM
 kqS
 bDB
 kqS
@@ -62281,7 +62281,7 @@ aws
 amn
 aBr
 alT
-aCS
+otK
 aDU
 alT
 aFT
@@ -62384,7 +62384,7 @@ aBv
 bzG
 bzW
 bAp
-aOQ
+tjx
 bAS
 aBv
 bBj
@@ -62598,7 +62598,7 @@ aBw
 byT
 bzf
 aBv
-bzH
+pLx
 bzX
 bxn
 bxn
@@ -62754,7 +62754,7 @@ asv
 bfd
 wKf
 bgc
-bfe
+gNf
 bgI
 asv
 aHF
@@ -63038,7 +63038,7 @@ aBv
 aBv
 aBv
 aBv
-aPf
+bHh
 xpl
 xpl
 bBQ
@@ -63262,7 +63262,7 @@ bBR
 bBY
 bCn
 bCw
-aPH
+vNP
 bCI
 bCU
 pNa
@@ -64139,7 +64139,7 @@ aDY
 aDY
 aRf
 bDA
-bDL
+qCg
 aDX
 bDU
 knN
@@ -64987,7 +64987,7 @@ bzl
 ocp
 wXz
 bAa
-aOJ
+pWm
 bAu
 bAX
 aBv
@@ -65107,7 +65107,7 @@ aEc
 aEc
 aFY
 aGJ
-aCP
+onJ
 aIv
 anJ
 aKz
@@ -65359,7 +65359,7 @@ bfp
 asv
 bgi
 bgv
-aLg
+lXX
 bgg
 bgg
 asH
@@ -66662,7 +66662,7 @@ asv
 bgm
 bgy
 bgS
-bhm
+ndp
 bhZ
 asv
 gSg
@@ -67300,7 +67300,7 @@ aTq
 aTq
 asH
 baj
-aIo
+fXL
 bbC
 asv
 asv
@@ -68790,7 +68790,7 @@ arD
 arD
 arD
 anT
-aOc
+huR
 aCo
 aCo
 aEZ
@@ -69205,7 +69205,7 @@ aao
 aao
 aao
 akL
-agP
+eDs
 aoB
 apZ
 aoB
@@ -70990,7 +70990,7 @@ atd
 nRT
 ban
 baR
-bbE
+bvr
 baR
 baR
 nRT
@@ -71830,7 +71830,7 @@ arD
 aMk
 anW
 aDg
-aEk
+lST
 aui
 anW
 voz
@@ -73985,13 +73985,13 @@ adZ
 aqX
 arE
 asn
-htp
+nxm
 amk
-ajm
+hUK
 aqc
 avM
 aqc
-aka
+xwz
 amk
 tQw
 tQw
@@ -74641,7 +74641,7 @@ amW
 aqc
 auY
 auY
-awB
+kYR
 aqc
 amk
 aao
@@ -74853,7 +74853,7 @@ adZ
 amk
 arG
 ara
-atf
+cRc
 amk
 aqc
 aqc
@@ -75050,7 +75050,7 @@ aao
 aao
 aao
 adZ
-fMZ
+eAV
 agc
 agc
 agc
@@ -75711,7 +75711,7 @@ aev
 anM
 adZ
 adZ
-alL
+klP
 amJ
 adZ
 anO
@@ -75916,7 +75916,7 @@ tQw
 aao
 aao
 adZ
-aew
+jSd
 aeV
 aev
 adZ
@@ -76388,7 +76388,7 @@ aAP
 aCs
 aAP
 aEm
-aFf
+sKz
 anI
 aao
 anI
@@ -76598,7 +76598,7 @@ awF
 amk
 aao
 anI
-azh
+tLN
 aAj
 afz
 xWm
@@ -77039,7 +77039,7 @@ afz
 afz
 xWm
 aEo
-aFi
+vOQ
 anI
 aao
 anI
@@ -77436,7 +77436,7 @@ aao
 aao
 adZ
 adZ
-afa
+rye
 afG
 adZ
 agX
@@ -77664,7 +77664,7 @@ adZ
 adZ
 aeQ
 ald
-daB
+uJr
 amO
 afy
 amO
@@ -79615,7 +79615,7 @@ agc
 agc
 ajt
 adZ
-akJ
+rvY
 alj
 alg
 alg
@@ -79643,7 +79643,7 @@ aAU
 anL
 aDp
 arN
-aFl
+fim
 anI
 anI
 anI
@@ -80523,7 +80523,7 @@ aMs
 aLH
 aOo
 anL
-aQv
+jnA
 aRx
 anI
 aao
@@ -81603,7 +81603,7 @@ aob
 aIW
 aJU
 aFV
-aGd
+dYS
 aob
 aao
 aao
@@ -82037,7 +82037,7 @@ aob
 aDB
 aJW
 aKT
-aGj
+wrV
 aob
 aao
 aao
@@ -82912,7 +82912,7 @@ aob
 aob
 aob
 aRz
-aSp
+sLO
 aTE
 aUF
 aVy
@@ -83334,7 +83334,7 @@ aao
 aob
 aFr
 aGm
-bny
+fep
 aHW
 bQi
 aKc
@@ -83555,7 +83555,7 @@ aHd
 aHX
 aJd
 aKd
-aKZ
+hOo
 aLa
 aMy
 aob
@@ -83999,7 +83999,7 @@ aao
 aob
 aob
 aTJ
-aUJ
+qQV
 aob
 aob
 aao

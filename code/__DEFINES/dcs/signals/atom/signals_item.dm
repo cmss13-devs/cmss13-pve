@@ -38,3 +38,6 @@
 #define COMSIG_ITEM_ZOOM "item_zoom"
 /// from /obj/item/proc/unzoom() : (mob/user)
 #define COMSIG_ITEM_UNZOOM "item_unzoom"
+
+//Additional procs on items that will be triggered right after the human finishes spawns in
+#define COMSIG_POST_SPAWN_UPDATE "post_spawn_update"
