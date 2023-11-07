@@ -119,7 +119,14 @@
 		return FALSE
 
 	if(!S.Lock())
-		to_chat(owner, SPAN_BOLDWARNING("Failed to load your preferences file - it may be in use by another process. Please try again."))
+		to_chat(owner, SPAN_BOLDWARNING("Failed to load your preferences file. It may be in use by another process. Please try again."))
+
+		var/options = tgui_alert(owner, "Failed to load your preferences file. It may be in use by another process. Please try again.", "Failed to Load", list("Retry", "Disconnect"), timeout = FALSE)
+		if(options != "Retry")
+			qdel(owner, force = TRUE)
+			return FALSE
+
+		load_preferences()
 		return FALSE
 
 	S.cd = "/"
