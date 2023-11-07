@@ -27,6 +27,7 @@
 
 	var/target = moving_xeno.current_target
 
+	/// If we are charging - override everything and just move straight towards charge_turf
 	if(charge_turf)
 		if(get_dist(target, moving_xeno) >= moving_xeno.ai_range)
 			toggle_charging(FALSE)
@@ -56,6 +57,7 @@
 	var/humans_y = 0
 	var/humans_count = 0
 
+	/// Now we getting medium coordinates from all humans standing around our target
 	for(var/mob/living/carbon/human/humie in view(MIN_CHARGE_DISTANCE, target))
 		if(humie.stat)
 			continue
@@ -78,6 +80,7 @@
 	var/list/possible_blocked_turfs = list(WE_move_variant, NS_move_variant)
 	var/list/non_blocked_turfs = list()
 
+	/// Checking which one of two ways is non-blocked in distance of MIN_CHARGE_DISTANCE
 	for(var/i=1 to LAZYLEN(possible_blocked_turfs))
 		var/turf/next_turf = possible_blocked_turfs[i]
 		var/blocked = FALSE
@@ -94,13 +97,13 @@
 
 		non_blocked_turfs += possible_blocked_turfs[i]
 
-	var/lenght = LAZYLEN(non_blocked_turfs)
-	if(!lenght)
+	var/length = LAZYLEN(non_blocked_turfs)
+	if(!length)
 		return ..()
 
 	var/turf/to_move
-	if(lenght == 1)
-		to_move = pick(non_blocked_turfs)
+	if(length == 1)
+		to_move = non_blocked_turfs[1]
 
 	if(!to_move)
 		var/dist_check = get_dist(WE_move_variant, parent) > get_dist(NS_move_variant, parent)
@@ -112,6 +115,7 @@
 	if(get_turf(moving_xeno) != to_move)
 		return TRUE
 
+	/// When we eventially get to our move_variant - get an edge_turf in middle direction and toggle charging
 	var/step_dir = get_dir(to_move, middle)
 	var/turf/edge_turf = get_step(moving_xeno, step_dir)
 

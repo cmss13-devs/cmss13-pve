@@ -215,15 +215,16 @@
 			animation_flash_color(Mob)
 
 	for(var/mob/living/carbon/human/Mob in orange(1, Xeno))
-		if(Mob.knocked_down)
+		if(momentum < 5)
 			continue
 
-		if(momentum < 5)
+		shake_camera(Mob, 4, 2)
+
+		if(Mob.knocked_down)
 			continue
 
 		Mob.apply_effect(0.5, WEAKEN)
 		animation_flash_color(Mob)
-		shake_camera(Mob, 4, 2)
 
 	Xeno.recalculate_speed()
 
