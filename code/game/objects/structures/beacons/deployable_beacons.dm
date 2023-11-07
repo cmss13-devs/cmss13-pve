@@ -26,7 +26,7 @@
 		if((R_ADMIN|R_MOD) & admin_client.admin_holder.rights)
 			playsound_client(admin_client,'sound/effects/sos-morse-code.ogg',10)
 
-	message_admins("[key_name(user)] has deployed [src]! [ADMIN_JMP_USER(user)]")
+	message_admins("[key_name(user)] has deployed [src]! [ADMIN_JMP(src)]")
 
 /obj/structure/deployable_beacon/attackby(obj/item/attacking_item, mob/user)
 	if(!HAS_TRAIT(attacking_item, TRAIT_TOOL_MULTITOOL))
