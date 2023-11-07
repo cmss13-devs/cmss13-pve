@@ -11,6 +11,38 @@
 	var/list/tracking_options
 	var/abstract = FALSE
 
+/obj/item/device/encryptionkey/Initialize(mapload, ...)
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+	if(!isnull(channels[SQUAD_MARINE_1]) && SQUAD_MARINE_1 != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+
+/obj/item/device/encryptionkey/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	var/toggled_channel = channels[old_name]
+
+	if(isnull(toggled_channel))
+		return
+
+	channels -= old_name
+
+	channels[new_name] = toggled_channel
+
+	if(!istype(loc, /obj/item/device/radio/headset))
+		return
+
+	var/obj/item/device/radio/headset/current_headset = loc
+
+	var/passed_freq = current_headset.secure_radio_connections[old_name].frequency
+	current_headset.secure_radio_connections -= old_name
+
+	SSradio.remove_object(current_headset, passed_freq)
+
+	current_headset.recalculateChannels()
+
 /obj/item/device/encryptionkey/binary
 	icon_state = "binary_key"
 	translate_apollo = TRUE

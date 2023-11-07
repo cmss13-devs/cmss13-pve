@@ -281,8 +281,8 @@
 		list("Med", "hudsquad_med"),
 		list("SG", "hudsquad_gun"),
 		list("Spc", "hudsquad_spec"),
-		list("TL", "hudsquad_tl"),
-		list("SL", "hudsquad_leader"),
+		list("SqSgt", "hudsquad_tl"),
+		list("PltSgt", "hudsquad_leader"),
 	)
 
 	for(var/datum/squad/marine/squad in RoleAuthority.squads)
@@ -297,7 +297,7 @@
 			background.Crop(25,25,32,32)
 			background.Scale(16,16)
 
-			Insert("squad-[squad]-hud-[iconref[1]]", background)
+			Insert("squad-[copytext(REF(squad), 2, 12)]-hud-[iconref[1]]", background)
 	return ..()
 
 /datum/asset/spritesheet/vending_products
