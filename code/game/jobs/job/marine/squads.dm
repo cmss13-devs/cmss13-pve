@@ -115,7 +115,6 @@
 
 /datum/squad/marine
 	name = "Root"
-	usable = TRUE
 	active = TRUE
 	faction = FACTION_MARINE
 	lead_icon = "leader"
@@ -128,6 +127,7 @@
 	radio_freq = ALPHA_FREQ
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
+	usable = TRUE
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2

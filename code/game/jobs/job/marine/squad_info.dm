@@ -23,6 +23,7 @@
 		"primary" = primary_objective,
 		"secondary" = secondary_objective,
 	)
+	data["squad_ref"] = REF(src)
 	return data
 
 /datum/squad/proc/get_leadership(mob/user)
