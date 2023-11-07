@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 21
+#define SAVEFILE_VERSION_MAX 22
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -88,6 +88,13 @@
 		else
 			dual_wield_pref = DUAL_WIELD_FIRE
 		S["dual_wield_pref"] << dual_wield_pref
+
+	if(savefile_version < 22)
+		var/temp_ooccolor
+		S["ooccolor"] >> temp_ooccolor
+		if(temp_ooccolor == "#b82e00")
+			temp_ooccolor = "#1c52f5"
+		S["ooccolor"] << temp_ooccolor
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
