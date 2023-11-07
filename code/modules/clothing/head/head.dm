@@ -194,7 +194,7 @@
 	return ..()
 
 /obj/item/clothing/head/headband/squad/proc/adapt_to_squad()
-	var/squad_color = "gray"
+	var/squad_color = "Delta"
 	var/mob/living/carbon/human/wearer = recursive_holder_check(src)
 	if(istype(wearer) && wearer.assigned_squad)
 		var/squad_name = lowertext(wearer.assigned_squad.name)
