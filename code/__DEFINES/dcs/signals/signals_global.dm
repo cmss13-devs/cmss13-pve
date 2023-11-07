@@ -68,3 +68,6 @@
 
 /// From /obj/structure/machinery/power/fusion_engine/proc/set_overloading() : (set_overloading)
 #define COMSIG_GLOB_GENERATOR_SET_OVERLOADING "!generator_set_overloading"
+
+/// From /client/proc/rename_platoon()
+#define COMSIG_GLOB_PLATOON_NAME_CHANGE "platoon_name_change"
