@@ -94,7 +94,7 @@
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey) return
-	path = "data/player_saves/[copytext(ckey,1,2)]/[ckey]/[filename]"
+	path = "[CONFIG_GET(string/playersave_path)]/[copytext(ckey,1,2)]/[ckey]/[filename]"
 	savefile_version = SAVEFILE_VERSION_MAX
 
 /proc/sanitize_keybindings(value)
@@ -108,10 +108,20 @@
 	return base_bindings
 
 /datum/preferences/proc/load_preferences()
-	if(!path) return 0
-	if(!fexists(path)) return 0
+	if(!path)
+		return FALSE
+
+	if(!fexists(path))
+		return FALSE
+
 	var/savefile/S = new /savefile(path)
-	if(!S) return 0
+	if(!S)
+		return FALSE
+
+	if(!S.Lock())
+		to_chat(owner, SPAN_BOLDWARNING("Failed to load your preferences file - it may be in use by another process. Please try again."))
+		return FALSE
+
 	S.cd = "/"
 
 	S["version"] >> savefile_version
@@ -290,6 +300,8 @@
 
 	S["remembered_key_bindings"] << GLOB.keybindings_by_name
 
+	S.Unlock()
+
 	if(toggles_chat & SHOW_TYPING)
 		owner.typing_indicators = FALSE
 	else
@@ -305,6 +317,9 @@
 		return FALSE
 	var/savefile/S = new /savefile(path)
 	if(!S)
+		return FALSE
+	if(!S.Lock())
+		to_chat(owner, SPAN_BOLDWARNING("Failed to save your preferences file - it may be in use by another process. Please try again."))
 		return FALSE
 	S.cd = "/"
 
@@ -392,15 +407,29 @@
 	S["no_radial_labels_preference"] << no_radial_labels_preference
 	S["custom_cursors"] << custom_cursors
 
+	S.Unlock()
+
 	return TRUE
 
 /datum/preferences/proc/load_character(slot)
-	if(!path) return 0
-	if(!fexists(path)) return 0
+	if(!path)
+		return FALSE
+
+	if(!fexists(path))
+		return FALSE
+
 	var/savefile/S = new /savefile(path)
-	if(!S) return 0
+	if(!S)
+		return FALSE
+
+	if(!S.Lock())
+		to_chat(owner, SPAN_BOLDWARNING("Failed to load your character slot - it may be in use by another process. Please try again."))
+		return FALSE
+
 	S.cd = "/"
-	if(!slot) slot = default_slot
+
+	if(!slot)
+		slot = default_slot
 	slot = sanitize_integer(slot, 1, MAX_SAVE_SLOTS, initial(default_slot))
 	if(slot != default_slot)
 		default_slot = slot
@@ -478,6 +507,8 @@
 	S["uplinklocation"] >> uplinklocation
 	S["exploit_record"] >> exploit_record
 
+	S.Unlock()
+
 	//Sanitize
 	metadata = sanitize_text(metadata, initial(metadata))
 	real_name = reject_bad_name(real_name)
@@ -549,9 +580,16 @@
 	return 1
 
 /datum/preferences/proc/save_character()
-	if(!path) return 0
+	if(!path)
+		return FALSE
 	var/savefile/S = new /savefile(path)
-	if(!S) return 0
+	if(!S)
+		return FALSE
+
+	if(!S.Lock())
+		to_chat(owner, SPAN_BOLDWARNING("Failed to save your character slot - it may be in use by another process. Please try again."))
+		return FALSE
+
 	S.cd = "/character[default_slot]"
 
 	//Character
@@ -623,7 +661,9 @@
 	S["uplinklocation"] << uplinklocation
 	S["exploit_record"] << exploit_record
 
-	return 1
+	S.Unlock()
+
+	return TRUE
 
 /// checks through keybindings for outdated unbound keys and updates them
 /datum/preferences/proc/check_keybindings()
