@@ -297,7 +297,7 @@
 			background.Crop(25,25,32,32)
 			background.Scale(16,16)
 
-			Insert("squad-[REF(squad)]-hud-[iconref[1]]", background)
+			Insert("squad-[copytext(REF(squad), 2, 12)]-hud-[iconref[1]]", background)
 	return ..()
 
 /datum/asset/spritesheet/vending_products
