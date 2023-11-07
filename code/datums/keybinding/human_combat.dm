@@ -191,6 +191,7 @@
 		var/obj/item/weapon/gun/rifle/m46c/COgun = held_item
 		COgun.toggle_iff(human)
 		return TRUE
+*/
 
 /datum/keybinding/human/combat/toggle_shotgun_tube
 	hotkey_keys = list("Unbound")

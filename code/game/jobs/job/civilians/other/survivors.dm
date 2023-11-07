@@ -65,8 +65,6 @@
 	if(picked_spawner.hostile)
 		hostile = TRUE
 
-	new /datum/cm_objective/move_mob/almayer/survivor(H)
-
 /datum/job/civilian/survivor/generate_entry_message(mob/living/carbon/human/survivor)
 	if(intro_text)
 		for(var/line in intro_text)

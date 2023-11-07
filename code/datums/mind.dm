@@ -19,15 +19,8 @@
 	src.key = key
 	src.ckey = ckey
 	player_entity = setup_player_entity(ckey)
-	objective_memory = new()
-	objective_interface = new()
-	research_objective_interface = new()
 
 /datum/mind/Destroy()
-	QDEL_NULL(initial_account)
-	QDEL_NULL(objective_memory)
-	QDEL_NULL(objective_interface)
-	QDEL_NULL(research_objective_interface)
 	current = null
 	original = null
 	ghost_mob = null
