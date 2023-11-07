@@ -49,7 +49,7 @@
 	if(!do_after(user, (1 SECONDS), INTERRUPT_ALL, BUSY_ICON_BUILD, src))
 		return
 
-	playsound(deploying_turf, 'sound/mecha/mechmove01.ogg', 30, 1)
+	playsound(deploying_turf, 'sound/machines/beacon_activated.ogg')
 
 	var/obj/structure/deployable_beacon/deployed_beacon = new beacon_type(get_turf(src), user)
 
