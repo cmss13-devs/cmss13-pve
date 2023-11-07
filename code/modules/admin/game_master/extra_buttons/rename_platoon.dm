@@ -2,15 +2,33 @@
 GLOBAL_VAR_INIT(main_platoon_name, SQUAD_MARINE_1)
 
 /// Ability to rename the platoon
-/client/proc/rename_platoon()
-	set name = "Rename Platoon"
+/client/proc/game_master_rename_platoon()
+	set name = "Rename Platoon Override"
 	set category = "Game Master.Extras"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return
 
+	rename_platoon()
+
+/client/proc/commander_rename_platoon()
+	set name = "Rename Platoon"
+	set category = "OOC.Commander"
+
+	if(GLOB.main_platoon_name != SQUAD_MARINE_1)
+		to_chat(src, SPAN_NOTICE("The platoon has already been renamed this round."))
+		return
+
+	rename_platoon()
+
+/// Actually renames the platoon
+/client/proc/rename_platoon()
 	var/new_name = tgui_input_text(mob, "New platoon name?", "Platoon Name", GLOB.main_platoon_name)
 	if(!new_name || !istext(new_name))
+		return
+
+	if(length(new_name) > 10)
+		to_chat(src, SPAN_NOTICE("The platoon name should be 10 characters or less."))
 		return
 
 	var/old_name = GLOB.main_platoon_name
