@@ -57,4 +57,6 @@ GLOBAL_VAR_INIT(main_platoon_name, SQUAD_MARINE_1)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_PLATOON_NAME_CHANGE, new_name, old_name)
 
+	log_admin("[key_name(src)] has renamed the platoon from [GLOB.main_platoon_name] to [new_name].")
+
 	GLOB.main_platoon_name = new_name
