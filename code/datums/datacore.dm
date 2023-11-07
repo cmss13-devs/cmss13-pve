@@ -15,7 +15,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 /datum/datacore/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
-	for(var/datum/data/record/cycled_data_record in GLOB.data_core.general)
+	for(var/datum/data/record/cycled_data_record in general)
 		if(cycled_data_record.fields["squad"] == old_name)
 			cycled_data_record.fields["squad"] = new_name
 
