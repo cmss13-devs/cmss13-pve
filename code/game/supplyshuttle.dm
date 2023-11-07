@@ -350,6 +350,10 @@ var/datum/controller/supply/supply_controller = new()
 		current_squad = get_squad_by_name("Echo") //Hardwired into Echo
 	. = ..()
 
+/obj/structure/machinery/computer/supply_drop_console/limited/alternate
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "sensor_comp2"
+
 /*
 /obj/effect/marker/supplymarker
 	icon_state = "X"

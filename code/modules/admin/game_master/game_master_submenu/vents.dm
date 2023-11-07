@@ -25,6 +25,9 @@
 	/// Are we currently ambushing?
 	var/ambushing = FALSE
 
+	/// Are we the primary spawner for all menus looking at this vent?
+	var/primary = FALSE
+
 /datum/game_master_submenu/vents/New(client/using_client)
 	. = ..()
 	current_ambush = list()
@@ -35,6 +38,8 @@
 
 	for(var/turf/cycled_turf as anything in ambush_turfs)
 		RegisterSignal(cycled_turf, COMSIG_TURF_ENTERED, PROC_REF(ambush_turf_movement))
+
+	RegisterSignal(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, PROC_REF(other_ambush_set))
 
 /datum/game_master_submenu/vents/Destroy(force, ...)
 	. = ..()
@@ -67,34 +72,46 @@
 		if("set_xeno_spawns")
 			var/new_number = text2num(params["value"])
 			if(!new_number)
-				return
+				return TRUE
 
 			xeno_spawn_count = clamp(new_number, 1, 10)
-			return
+			return TRUE
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-			return
+			return TRUE
 
 		if("ambush")
 			setup_ambush()
-			return
+			return TRUE
 
 		if("spawn")
 			handle_vent_spawn()
-			return
+			return TRUE
 
 		if("clear_ambush")
 			current_ambush = list()
 			ambush_info = initial(ambush_info)
-			return
+			return TRUE
+
+		if("shake_vent")
+			var/obj/structure/pipes/vents/referenced_vent = referenced_atom
+
+			if(!referenced_vent)
+				log_debug("A submenu for [referenced_atom] was not a /obj/structure/pipes/vents. Returning.")
+				return TRUE
+
+			referenced_vent.animate_ventcrawl()
+			playsound(referenced_vent, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 40, 1)
+			addtimer(CALLBACK(referenced_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset)), (0.5 SECONDS))
+			return TRUE
 
 /// Callback for when one of our registered turfs has something move across it, tells the ambush to start if set up
 /datum/game_master_submenu/vents/proc/ambush_turf_movement(turf/crossed_turf, atom/movable/entering_movable)
 	SIGNAL_HANDLER
 
-	if(length(current_ambush) && !ambushing && ishuman(entering_movable))
+	if(length(current_ambush) && !ambushing && primary && ishuman(entering_movable))
 		ambushing = TRUE
 		handle_vent_spawn(TRUE)
 
@@ -110,6 +127,18 @@
 
 	ambush_info = temp_string
 
+	SEND_SIGNAL(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, current_ambush.Copy(), ambush_info)
+
+	primary = TRUE
+
+/datum/game_master_submenu/vents/proc/other_ambush_set(atom/movable/other_parent, new_ambush, new_ambush_info)
+	SIGNAL_HANDLER
+
+	primary = FALSE
+
+	current_ambush = new_ambush
+	ambush_info = new_ambush_info
+
 #define VENT_ESCAPE_INCREMENT_TIME (1 SECONDS)
 
 /// Shakes the vent and creates timers to spawn multiple xenos in succession
@@ -120,7 +149,7 @@
 		return
 
 	referenced_vent.animate_ventcrawl()
-	playsound(referenced_vent, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 25, 1)
+	playsound(referenced_vent, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 40, 1)
 	var/timer_increment = VENT_ESCAPE_INCREMENT_TIME
 	referenced_vent.visible_message(SPAN_NOTICE("Something begins climbing out of [referenced_vent]!"))
 

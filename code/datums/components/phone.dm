@@ -616,7 +616,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 /datum/component/phone/virtual/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
 
-/datum/component/phone/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+/datum/component/phone/virtual/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
