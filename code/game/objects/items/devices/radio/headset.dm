@@ -63,6 +63,16 @@
 			if(radiochannels[cycled_channel] == frequency)
 				default_freq = cycled_channel
 
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+	if(SQUAD_MARINE_1 == default_freq && SQUAD_MARINE_1 != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+
+/obj/item/device/radio/headset/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	set_frequency(frequency)
+
 /obj/item/device/radio/headset/Destroy()
 	wearer = null
 	QDEL_NULL_LIST(keys)
@@ -763,11 +773,6 @@
 	if(istype(H, /mob/living/carbon/human))
 		if(H.assigned_squad)
 			switch(H.assigned_squad.name)
-				if(SQUAD_MARINE_1)
-					name = "[SQUAD_MARINE_1] radio headset"
-					desc = "This is used by [SQUAD_MARINE_1] squad members."
-					icon_state = "alpha_headset"
-					frequency = ALPHA_FREQ
 				if(SQUAD_MARINE_2)
 					name = "[SQUAD_MARINE_2] radio headset"
 					desc = "This is used by [SQUAD_MARINE_2] squad members."
@@ -791,6 +796,12 @@
 					name = "[SQUAD_MARINE_CRYO] radio headset"
 					desc = "This is used by [SQUAD_MARINE_CRYO] squad members."
 					frequency = CRYO_FREQ
+
+			if(H.assigned_squad.name == GLOB.main_platoon_name)
+				name = "[GLOB.main_platoon_name] radio headset"
+				desc = "This is used by [GLOB.main_platoon_name] squad members."
+				icon_state = "alpha_headset"
+				frequency = ALPHA_FREQ
 
 			switch(GET_DEFAULT_ROLE(H.job))
 				if(JOB_SQUAD_LEADER)

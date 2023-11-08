@@ -234,6 +234,21 @@
 	name = "pool"
 	},
 /area/template_noop)
+"ks" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/toy/plush/therapy/blue{
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/clothing/head/bowlerhat{
+	pixel_y = 16;
+	layer = 3.1
+	},
+/turf/open/floor/wood,
+/area/template_noop)
 "kA" = (
 /obj/structure/platform{
 	dir = 1
@@ -335,6 +350,23 @@
 "ni" = (
 /turf/closed/wall/prison,
 /area/template_noop)
+"nA" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/mono{
+	pixel_x = 6;
+	pixel_y = 5;
+	layer = 3.1
+	},
+/obj/item/toy/plush/farwa{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/turf/open/floor/wood,
+/area/template_noop)
 "nC" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap"
@@ -396,6 +428,23 @@
 	},
 /turf/open/floor/prison{
 	dir = 8;
+	icon_state = "darkbrown2"
+	},
+/area/template_noop)
+"pM" = (
+/obj/structure/prop/souto_land/pole{
+	dir = 1
+	},
+/obj/structure/prop/souto_land/pole{
+	dir = 8;
+	pixel_y = 24
+	},
+/obj/item/toy/plush/barricade{
+	pixel_x = -3;
+	pixel_y = -9
+	},
+/turf/open/floor/prison{
+	dir = 4;
 	icon_state = "darkbrown2"
 	},
 /area/template_noop)
@@ -547,22 +596,6 @@
 	icon_state = "darkbrowncorners2"
 	},
 /area/template_noop)
-"vd" = (
-/obj/structure/prop/souto_land/pole,
-/obj/structure/prop/souto_land/pole{
-	dir = 4;
-	pixel_y = 24
-	},
-/obj/item/toy/plushie_cade{
-	pixel_x = 1;
-	pixel_y = -9
-	},
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkbrown2"
-	},
-/area/template_noop)
 "vf" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -626,6 +659,22 @@
 	},
 /turf/open/floor/wood,
 /area/template_noop)
+"wl" = (
+/obj/structure/prop/souto_land/pole,
+/obj/structure/prop/souto_land/pole{
+	dir = 4;
+	pixel_y = 24
+	},
+/obj/item/toy/plush/barricade{
+	pixel_x = 1;
+	pixel_y = -9
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/prison{
+	dir = 8;
+	icon_state = "darkbrown2"
+	},
+/area/template_noop)
 "wS" = (
 /turf/open/floor/prison{
 	dir = 6;
@@ -642,6 +691,28 @@
 	},
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
+	},
+/area/template_noop)
+"xr" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/prop/souto_land/pole,
+/obj/structure/prop/souto_land/pole{
+	dir = 4;
+	pixel_y = 24
+	},
+/obj/item/toy/plush/barricade{
+	pixel_x = 1;
+	pixel_y = -9
+	},
+/turf/open/floor/prison{
+	dir = 8;
+	icon_state = "darkbrown2"
 	},
 /area/template_noop)
 "xz" = (
@@ -723,23 +794,6 @@
 	icon_state = "darkbrown2"
 	},
 /area/template_noop)
-"Bm" = (
-/obj/structure/prop/souto_land/pole{
-	dir = 1
-	},
-/obj/structure/prop/souto_land/pole{
-	dir = 8;
-	pixel_y = 24
-	},
-/obj/item/toy/plushie_cade{
-	pixel_x = -3;
-	pixel_y = -9
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkbrown2"
-	},
-/area/template_noop)
 "Bv" = (
 /obj/structure/prop/souto_land/streamer{
 	dir = 9
@@ -753,23 +807,6 @@
 /obj/structure/prop/souto_land/pole,
 /obj/structure/prop/souto_land/streamer{
 	dir = 6
-	},
-/turf/open/floor/wood,
-/area/template_noop)
-"BY" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/mono{
-	pixel_x = 6;
-	pixel_y = 5;
-	layer = 3.1
-	},
-/obj/item/toy/farwadoll{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -6;
-	pixel_y = 11
 	},
 /turf/open/floor/wood,
 /area/template_noop)
@@ -815,16 +852,16 @@
 	name = "pool"
 	},
 /area/template_noop)
+"DW" = (
+/obj/structure/closet/crate/trashcart,
+/obj/item/storage/pill_bottle/kelotane/skillless,
+/turf/open/floor/prison,
+/area/template_noop)
 "Fj" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/template_noop)
-"Fl" = (
-/obj/structure/closet/crate/trashcart,
-/obj/item/storage/pill_bottle/kelotane/skillless,
-/turf/open/floor/prison,
 /area/template_noop)
 "Fo" = (
 /turf/open/floor/prison{
@@ -844,21 +881,6 @@
 	icon_state = "darkbrown2"
 	},
 /area/template_noop)
-"FD" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/toy/therapy_blue{
-	pixel_y = 4
-	},
-/obj/item/reagent_container/food/drinks/bottle/whiskey{
-	pixel_x = 10;
-	pixel_y = 4
-	},
-/obj/item/clothing/head/bowlerhat{
-	pixel_y = 16;
-	layer = 3.1
-	},
-/turf/open/floor/wood,
-/area/template_noop)
 "FN" = (
 /obj/item/toy/crossbow{
 	pixel_x = 11;
@@ -874,32 +896,6 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/floor/plating/prison,
-/area/template_noop)
-"Gp" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/trash/plate{
-	pixel_x = -7
-	},
-/obj/item/trash/plate{
-	pixel_x = -7;
-	pixel_y = 4
-	},
-/obj/item/trash/plate{
-	pixel_x = -7;
-	pixel_y = 9
-	},
-/obj/item/trash/plate{
-	pixel_x = 7
-	},
-/obj/item/trash/plate{
-	pixel_x = 7;
-	pixel_y = 4
-	},
-/obj/item/trash/plate{
-	pixel_x = 7;
-	pixel_y = 9
-	},
-/turf/open/floor/wood,
 /area/template_noop)
 "Gu" = (
 /obj/item/trash/crushed_cup{
@@ -1116,6 +1112,30 @@
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
+"MQ" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/prop/souto_land/pole{
+	dir = 1
+	},
+/obj/structure/prop/souto_land/pole{
+	dir = 8;
+	pixel_y = 24
+	},
+/obj/item/toy/plush/barricade{
+	pixel_x = -1;
+	pixel_y = -9
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "darkbrown2"
+	},
+/area/template_noop)
 "MS" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -1255,28 +1275,6 @@
 	pixel_y = -16
 	},
 /turf/open/floor/wood,
-/area/template_noop)
-"SW" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_sn_full_cap"
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/prop/souto_land/pole,
-/obj/structure/prop/souto_land/pole{
-	dir = 4;
-	pixel_y = 24
-	},
-/obj/item/toy/plushie_cade{
-	pixel_x = 1;
-	pixel_y = -9
-	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkbrown2"
-	},
 /area/template_noop)
 "Th" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -1435,30 +1433,6 @@
 /obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/wood,
 /area/template_noop)
-"XU" = (
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_sn_full_cap"
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/prop/souto_land/pole{
-	dir = 1
-	},
-/obj/structure/prop/souto_land/pole{
-	dir = 8;
-	pixel_y = 24
-	},
-/obj/item/toy/plushie_cade{
-	pixel_x = -1;
-	pixel_y = -9
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkbrown2"
-	},
-/area/template_noop)
 "XX" = (
 /obj/structure/platform_decoration,
 /turf/open/floor/prison{
@@ -1477,6 +1451,32 @@
 	dir = 4;
 	pixel_x = 10;
 	pixel_y = -3
+	},
+/turf/open/floor/wood,
+/area/template_noop)
+"Yr" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate{
+	pixel_x = -7
+	},
+/obj/item/trash/plate{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/trash/plate{
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/obj/item/trash/plate{
+	pixel_x = 7
+	},
+/obj/item/trash/plate{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/trash/plate{
+	pixel_x = 7;
+	pixel_y = 9
 	},
 /turf/open/floor/wood,
 /area/template_noop)
@@ -1508,7 +1508,7 @@
 (1,1,1) = {"
 Rs
 Qn
-Fl
+DW
 Qn
 rp
 fX
@@ -1678,7 +1678,7 @@ ou
 ni
 ni
 Zr
-FD
+ks
 az
 Wh
 xQ
@@ -1723,7 +1723,7 @@ Wh
 "}
 (10,1,1) = {"
 uw
-SW
+xr
 ng
 yx
 yx
@@ -1739,7 +1739,7 @@ fL
 XM
 yx
 yx
-vd
+wl
 pB
 pH
 XM
@@ -1747,7 +1747,7 @@ Jr
 "}
 (11,1,1) = {"
 DN
-XU
+MQ
 JR
 Fo
 Fo
@@ -1763,7 +1763,7 @@ rU
 KM
 Fo
 Gu
-Bm
+pM
 yL
 LW
 Fo
@@ -1809,7 +1809,7 @@ DT
 Wh
 cj
 Zr
-BY
+nA
 az
 cb
 Fy
@@ -1886,7 +1886,7 @@ RW
 nf
 nf
 nf
-Gp
+Yr
 Bf
 "}
 (17,1,1) = {"
