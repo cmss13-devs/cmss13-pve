@@ -10,7 +10,7 @@ Never inject a marine you haven't scanned! You might overdose them; ESPECIALLY s
 Check dead marines (skull icon on medhud) for useful gear, such as webbings, AP ammo, or binoculars.
 Always check for traps beneath loose objects - it could save your life!
 Bring a fire extinguisher, it might just save someone's life. They can remove flames that block a push, remove acid from other marines, as well as put out people on fire.
-Trading your life for a Xenomorph's is almost always never it.
+Trading your life for a Xenomorph's is almost never worth it.
 If another marine is stunned, you can click on them with help intent with an open hand to shake them up faster.
 No round has ever been won behind a barricade. Apart from the ones that have.
 Always clear weeds and alien structures as you advance.
@@ -21,6 +21,7 @@ More dakka is not good when it is directed towards your teammates.
 Never place barricades facing each other - Not only does this block bullets, both barricades are damaged at once if one is slashed!
 An FOB is as strong as its weakest part. Secure all flanks, remember that walls can be pried open.
 Flamethrowers: Green fire is weak but has a lot of utility, such as melting through armor and being instantly extinguishable. Queens and Ravagers are flameproof. Most flamethrower damage comes from the initial burst, not the flame on the ground. Don't forget you have an underbarrel extinguisher.
+Use CPR to keep critically wounded marines alive for a corpsman to get to them. It can be done by clicking the marine on help intent with an open hand. Make sure to get the rhythm correct!
 If the main push is stagnating and the area is congested, try to coordinate with a few others and go to a different area.
 When pushing into an area, check the flanks. Especially so in caves.
 Examine your gun and click [See combat statistics] to view information such as damage for your weapon.
@@ -43,7 +44,7 @@ You can put screwdrivers, cigarettes, and some other things in your second ear s
 You can use a hand labeler (as found in squad prep rooms) to name your equipment and make it less likely to be stolen.
 You can use a health analyzer in hand (Z key) to check the last scan readout from it.
 Holocards are a useful triage tool for doctors and medics. Ensure you assign them (examine the marine with shift-click and select an appropriate holocard) to marines who have taken damage that cannot be healed without surgery. (Hint : major organ damage or larval infection = red card!)
-You can change what your TL tracker beacon is tracking by right clicking on your headset and clicking "Switch Tracker Target".
+You can change what your SL tracker beacon is tracking by right clicking on your headset and clicking "Switch Tracker Target".
 The amount of items in Requisitions and Squad Preparations depend on how many players readied up at the start of the round.
 You can carry a variety of items inside your helmet - from gauze and cigarettes to flares and screwdrivers.
 the PLTCO can track every USCM-aligned person via the suit sensors console and overwatch console - useful for finding escaped prisoners or dead marines.
