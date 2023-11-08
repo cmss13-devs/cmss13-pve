@@ -13,7 +13,7 @@
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/synthsplatter
 
-	total_health = 200 //more health than regular humans
+	total_health = 100 //same health as regular humans
 
 	cold_level_1 = -1
 	cold_level_2 = -1
@@ -79,7 +79,6 @@
 
 	pain_type = /datum/pain/synthetic/colonial
 	rarity_value = 1.5
-	total_health = 300 //But more durable
 
 	default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 
@@ -104,8 +103,8 @@
 	uses_ethnicity = FALSE
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES)
 
-	burn_mod = 0.6 //made for combat
-	total_health = 350 //made for combat
+	brute_mod = 0.5
+	burn_mod = 0.5 //made for combat
 
 	hair_color = "#000000"
 	icobase = 'icons/mob/humans/species/r_synthetic.dmi'
