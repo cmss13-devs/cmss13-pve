@@ -35,6 +35,13 @@
 /datum/game_mode/colonialmarines/ai/pre_setup()
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 
+	for(var/datum/squad/squad in RoleAuthority.squads)
+		if(squad.type in squad_limit)
+			continue
+
+		RoleAuthority.squads -= squad
+		RoleAuthority.squads_by_type -= squad.type
+
 	. = ..()
 
 /datum/game_mode/colonialmarines/ai/announce_bioscans()
