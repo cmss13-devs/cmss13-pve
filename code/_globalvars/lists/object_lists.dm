@@ -32,3 +32,6 @@ GLOBAL_LIST_EMPTY_TYPED(all_active_defenses, /obj/structure/machinery/defenses)
 
 GLOBAL_LIST_EMPTY_TYPED(lifeboat_almayer_docks, /obj/docking_port/stationary/lifeboat_dock)
 GLOBAL_LIST_EMPTY_TYPED(lifeboat_doors, /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/blastdoor)
+
+GLOBAL_LIST_EMPTY_TYPED(teleporters, /datum/teleporter)
+GLOBAL_LIST_EMPTY(teleporters_by_id)
