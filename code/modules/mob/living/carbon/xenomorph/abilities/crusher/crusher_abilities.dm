@@ -19,6 +19,9 @@
 	should_destroy_objects = TRUE
 	throw_speed = SPEED_FAST
 	tracks_target = FALSE
+
+	default_ai_action = FALSE
+
 	var/direct_hit_damage = 60
 	var/frontal_armor = 15
 	// Object types that dont reduce cooldown when hit
