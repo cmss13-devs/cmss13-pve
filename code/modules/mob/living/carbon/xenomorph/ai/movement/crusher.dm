@@ -119,8 +119,10 @@
 	var/step_dir = get_dir(to_move, middle)
 	var/turf/edge_turf = get_step(moving_xeno, step_dir)
 
-	while(!edge_turf.density)
+	var/cap = 0
+	while(!edge_turf.density && cap < 8)
 		edge_turf = get_step(edge_turf, step_dir)
+		cap++
 
 	toggle_charging(TRUE)
 	charge_turf = edge_turf
