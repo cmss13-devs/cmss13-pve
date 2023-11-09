@@ -47,7 +47,7 @@
 	var/distance = 5
 	var/effect_type_base = /datum/effects/xeno_slow/superslow
 	var/effect_duration = 1 SECONDS
-	var/windup_duration = 1 SECONDS
+	var/windup_duration = 1.5 SECONDS
 
 	default_ai_action = TRUE
 	var/prob_chance = 80
