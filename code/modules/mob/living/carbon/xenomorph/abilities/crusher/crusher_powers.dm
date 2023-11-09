@@ -152,12 +152,14 @@
 		if (H.stat == DEAD || X.can_not_harm(H))
 			continue
 
+		var/distance = get_dist(H,X)
+
 		new effect_type_base(H, X, , , get_xeno_stun_duration(H, effect_duration))
-		if (H.mob_size < MOB_SIZE_BIG)
+		if (H.mob_size < MOB_SIZE_BIG && distance <= 3)
 			H.apply_effect(get_xeno_stun_duration(H, 0.4), WEAKEN)
 
 		if (H.client)
-			var/steps = 20 / get_dist(H, X)
+			var/steps = 20 / distance
 			shake_camera(H, steps, 2)
 
 		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
