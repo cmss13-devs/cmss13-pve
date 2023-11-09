@@ -435,7 +435,7 @@
 			apply_effect(1, WEAKEN) // brief flicker stun
 			src.throw_atom(src.loc,1,3,xeno,TRUE)
 		step(src, ram_dir, charger_ability.momentum * 0.5)
-		charger_ability.lose_momentum(CCA_MOMENTUM_LOSS_MIN)
+//		charger_ability.lose_momentum(CCA_MOMENTUM_LOSS_MIN)
 		return XENO_CHARGE_TRY_MOVE
 	charger_ability.stop_momentum()
 
