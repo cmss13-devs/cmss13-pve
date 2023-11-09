@@ -25,7 +25,7 @@
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_WARRIOR)
 	caste_desc = "A huge tanky xenomorph."
-	fire_intensity_resistance = 40
+	fire_intensity_resistance = 10
 	fire_vulnerability_mult = 0.25
 
 	minimap_icon = "crusher"
