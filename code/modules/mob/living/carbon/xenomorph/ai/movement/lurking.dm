@@ -21,7 +21,7 @@
 	max_distance_from_home = 10
 
 #define AI_CHECK_ANNOYANCE_COOLDOWN 2.5 SECONDS
-#define AI_NEW_TARGET_COOLDOWN 5 SECONDS
+#define AI_NEW_TARGET_COOLDOWN 2 SECONDS
 
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
