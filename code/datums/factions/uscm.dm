@@ -33,8 +33,9 @@
 			switch(squad.squad_type)
 				if("Platoon") marine_rk = "leader_a"
 				if("Team") marine_rk = "soctl_a"
-
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
+		else if(squad.fireteam_leaders["SQ1"] == current_human || squad.fireteam_leaders["SQ2"] == current_human)
+			current_human.langchat_styles = "langchat_smaller_bolded"
 		else
 			current_human.langchat_styles = initial(current_human.langchat_styles)
 

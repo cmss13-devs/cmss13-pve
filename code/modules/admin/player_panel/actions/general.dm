@@ -13,7 +13,7 @@
 	name = "Kill"
 
 /datum/player_action/kill/act(client/user, mob/target, list/params)
-	target.death(create_cause_data("[user.key]"))
+	target.death()
 	message_admins("[key_name_admin(user)] killed [key_name_admin(target)].")
 	return TRUE
 
