@@ -17,7 +17,8 @@
 
 
 #define MIN_TARGETS_TO_CHARGE 3
-#define MIN_CHARGE_DISTANCE 5
+#define MIN_CHARGE_DISTANCE 4
+#define FLOCK_SCAN_RADIUS 5
 #define CHARGE_DEVIATION 1
 
 /datum/xeno_ai_movement/crusher/ai_move_target(delta_time)
@@ -25,11 +26,12 @@
 	if(moving_xeno.throwing)
 		return
 
+	var/ai_range = moving_xeno.ai_range
 	var/target = moving_xeno.current_target
 
 	/// If we are charging - override everything and just move straight towards charge_turf
 	if(charge_turf)
-		if(get_dist(target, moving_xeno) >= moving_xeno.ai_range)
+		if(get_dist(target, moving_xeno) >= ai_range)
 			toggle_charging(FALSE)
 			return TRUE
 
@@ -58,7 +60,7 @@
 	var/humans_count = 0
 
 	/// Now we getting medium coordinates from all humans standing around our target
-	for(var/mob/living/carbon/human/humie in view(MIN_CHARGE_DISTANCE, target))
+	for(var/mob/living/carbon/human/humie in view(FLOCK_SCAN_RADIUS, target))
 		if(humie.stat)
 			continue
 
@@ -89,7 +91,11 @@
 			var/turf/last_turf = next_turf
 			next_turf = get_step(next_turf, get_dir(next_turf, middle))
 
-			if(LinkBlocked(moving_xeno, last_turf, next_turf))
+			var/list/ignore = list()
+			for(var/mob/living/carbon/xenomorph/xeno_blocker in next_turf)
+				ignore += xeno_blocker
+
+			if(LinkBlocked(moving_xeno, last_turf, next_turf, ignore))
 				blocked = TRUE
 
 		if(blocked)
@@ -119,10 +125,10 @@
 	var/step_dir = get_dir(to_move, middle)
 	var/turf/edge_turf = get_step(moving_xeno, step_dir)
 
-	var/cap = 0
-	while(!edge_turf.density && cap < 8)
+	for(var/i=1 to ai_range * 2)
+		if(edge_turf.density)
+			break
 		edge_turf = get_step(edge_turf, step_dir)
-		cap++
 
 	toggle_charging(TRUE)
 	charge_turf = edge_turf
@@ -130,6 +136,7 @@
 	return TRUE
 
 #undef CHARGE_DEVIATION
+#undef FLOCK_SCAN_RADIUS
 #undef MIN_CHARGE_DISTANCE
 #undef MIN_TARGETS_TO_CHARGE
 
