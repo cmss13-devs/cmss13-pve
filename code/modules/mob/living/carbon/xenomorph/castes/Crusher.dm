@@ -4,8 +4,8 @@
 
 	melee_damage_lower = XENO_DAMAGE_TIER_5
 	melee_damage_upper = XENO_DAMAGE_TIER_5
-	melee_vehicle_damage = XENO_DAMAGE_TIER_5
-	max_health = XENO_HEALTH_QUEEN
+	melee_vehicle_damage = XENO_DAMAGE_TIER_5 * 8
+	max_health = XENO_HEALTH_IMMORTAL
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
 	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
@@ -25,6 +25,8 @@
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_WARRIOR)
 	caste_desc = "A huge tanky xenomorph."
+	fire_intensity_resistance = 40
+	fire_vulnerability_mult = 0.25
 
 	minimap_icon = "crusher"
 
@@ -37,6 +39,7 @@
 	plasma_types = list(PLASMA_CHITIN)
 	tier = 3
 	drag_delay = 6 //pulling a big dead xeno is hard
+	melee_sentry_damage_multiplier = 2
 
 	small_explosives_stun = FALSE
 

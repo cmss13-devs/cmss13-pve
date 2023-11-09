@@ -4,7 +4,7 @@
 	var/turf/charge_turf
 
 
-#define AI_NEW_TARGET_COOLDOWN 5 SECONDS
+#define AI_NEW_TARGET_COOLDOWN 2 SECONDS
 
 /datum/xeno_ai_movement/crusher/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
