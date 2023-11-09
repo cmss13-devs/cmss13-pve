@@ -77,10 +77,10 @@
 /obj/docking_port/mobile/marine_dropship/rasputin
 	name = "Rasputin"
 	id = DROPSHIP_RASPUTIN
-	width = 13
+	width = 11
 	height = 18
 
-	dwidth = 6
+	dwidth = 5
 	dheight = 8
 
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar_ru
