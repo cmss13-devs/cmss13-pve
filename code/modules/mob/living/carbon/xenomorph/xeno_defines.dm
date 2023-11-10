@@ -293,7 +293,7 @@
 	var/evolution_rate = 3 // Only has use if dynamic_evolution is false
 	var/evolution_bonus = 0
 
-	var/allow_no_queen_actions = FALSE
+	var/allow_no_queen_actions = TRUE
 	var/allow_no_queen_evo = FALSE
 	var/evolution_without_ovipositor = TRUE //Temporary for the roundstart.
 	/// Set to false if you want to prevent evolutions into Queens
