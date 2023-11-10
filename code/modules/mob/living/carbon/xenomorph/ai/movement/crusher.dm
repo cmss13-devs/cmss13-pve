@@ -17,8 +17,8 @@
 
 
 #define MIN_TARGETS_TO_CHARGE 2
-#define MIN_CHARGE_DISTANCE 4
-#define FLOCK_SCAN_RADIUS 5
+#define MIN_CHARGE_DISTANCE 3
+#define FLOCK_SCAN_RADIUS 4
 #define CHARGE_DEVIATION 1
 
 /datum/xeno_ai_movement/crusher/ai_move_target(delta_time)
