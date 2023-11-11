@@ -17,6 +17,7 @@
 
 
 #define MIN_TARGETS_TO_CHARGE 2
+#define MAX_CHARGE_DISTANCE 50
 #define MIN_CHARGE_DISTANCE 3
 #define FLOCK_SCAN_RADIUS 4
 #define CHARGE_DEVIATION 1
@@ -121,14 +122,14 @@
 	if(get_turf(moving_xeno) != to_move)
 		return TRUE
 
-	/// When we eventially get to our move_variant - get an edge_turf in middle direction and toggle charging
+	/// When we eventially get to our move_variant - get an edge_turf in direction of middle, and then toggle our charging ability
 	var/step_dir = get_dir(to_move, middle)
 	var/turf/edge_turf = get_step(moving_xeno, step_dir)
 
-	for(var/i=1 to ai_range * 2)
+	for(var/i=1 to MAX_CHARGE_DISTANCE)
+		edge_turf = get_step(edge_turf, step_dir)
 		if(edge_turf.density)
 			break
-		edge_turf = get_step(edge_turf, step_dir)
 
 	toggle_charging(TRUE)
 	charge_turf = edge_turf
@@ -138,12 +139,12 @@
 #undef CHARGE_DEVIATION
 #undef FLOCK_SCAN_RADIUS
 #undef MIN_CHARGE_DISTANCE
+#undef MAX_CHARGE_DISTANCE
 #undef MIN_TARGETS_TO_CHARGE
 
 
 /datum/xeno_ai_movement/crusher/proc/toggle_charging(toggle)
 	var/datum/action/xeno_action/onclick/charger_charge/charge_action = get_xeno_action_by_type(parent, /datum/action/xeno_action/onclick/charger_charge)
-
 	if(toggle && !charge_action.activated)
 		INVOKE_ASYNC(charge_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/charger_charge, use_ability_wrapper))
 
