@@ -15865,16 +15865,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/engineering/engineering_workshop)
-"eVl" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "cargo_arrow"
-	},
-/area/almayer/hallways/aft_hallway)
 "eVm" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -41773,16 +41763,6 @@
 	icon_state = "plate"
 	},
 /area/almayer/hull/lower_hull/l_a_s)
-"mUU" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "silver"
-	},
-/area/almayer/hallways/aft_hallway)
 "mUZ" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -55018,15 +54998,6 @@
 	icon_state = "test_floor4"
 	},
 /area/almayer/hallways/vehiclehangar)
-"qWw" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer{
-	icon_state = "silvercorner"
-	},
-/area/almayer/hallways/aft_hallway)
 "qWG" = (
 /turf/closed/shuttle/dropship2{
 	icon_state = "59"
@@ -64931,9 +64902,6 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/hallways/port_hallway)
-"tZN" = (
-/turf/closed/wall/almayer/outer,
-/area)
 "tZR" = (
 /obj/structure/machinery/door/airlock/almayer/security{
 	dir = 2;
@@ -77760,16 +77728,6 @@
 	},
 /turf/open/floor/plating,
 /area/almayer/living/pilotbunks)
-"yaI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "silvercorner"
-	},
-/area/almayer/hallways/aft_hallway)
 "yaN" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/largecrate/random/barrel/green,
@@ -88491,7 +88449,7 @@ bGT
 lCU
 ccm
 erk
-tZN
+ewq
 qeX
 qeX
 qeX
@@ -89502,7 +89460,7 @@ vOd
 ccm
 pnB
 ewq
-csy
+ewq
 ndl
 tEF
 qeX
@@ -89704,7 +89662,7 @@ bGT
 ccm
 yff
 lfc
-csy
+ewq
 ndl
 tEF
 qeX
@@ -109776,17 +109734,17 @@ nLe
 iOi
 ivK
 kOO
-iOi
 kOO
-qWw
-mUU
-eVl
-eVl
-eVl
-mUU
-yaI
 kOO
-mRf
+kOO
+kOO
+kOO
+kOO
+kOO
+kOO
+kOO
+kOO
+kOO
 kOO
 ivK
 mRf
