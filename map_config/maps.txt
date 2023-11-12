@@ -62,5 +62,8 @@ endmap
 map derelict_almayer
 endmap
 
+map derelict_almayer_ru
+endmap
+
 map whiskey_outpost_v2
 endmap
