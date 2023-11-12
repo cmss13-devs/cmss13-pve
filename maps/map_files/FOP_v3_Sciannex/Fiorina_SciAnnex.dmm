@@ -3284,7 +3284,7 @@
 	},
 /area/fiorina/maintenance)
 "bTI" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -21274,7 +21274,7 @@
 	},
 /area/fiorina/station/flight_deck)
 "mTy" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -29967,7 +29967,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/power_ring)
 "ssD" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -34660,7 +34660,7 @@
 /obj/structure/monorail{
 	name = "launch track"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -34934,7 +34934,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/lz/near_lzI)
 "vzB" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -36210,7 +36210,7 @@
 /turf/closed/wall/prison,
 /area/fiorina/station/botany)
 "wsy" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	indestructible = 1;
 	name = "launch bay door"
 	},

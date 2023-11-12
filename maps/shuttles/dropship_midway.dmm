@@ -94,7 +94,6 @@
 	},
 /area/shuttle/midway)
 "im" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_left,
 /obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
 	name = "\improper Midway"
 	},
@@ -185,7 +184,9 @@
 	},
 /area/shuttle/midway)
 "mR" = (
-/obj/structure/shuttle/part/dropship1/nose_front_left,
+/obj/structure/shuttle/part/dropship1/nose_front_left{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "nH" = (
@@ -216,7 +217,9 @@
 	},
 /area/shuttle/midway)
 "rF" = (
-/obj/structure/shuttle/part/dropship1/lower_right_wall,
+/obj/structure/shuttle/part/dropship1/lower_right_wall{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "rR" = (
@@ -414,7 +417,9 @@
 	},
 /area/shuttle/midway)
 "EN" = (
-/obj/structure/shuttle/part/dropship1/nose_front_right,
+/obj/structure/shuttle/part/dropship1/nose_front_right{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "Fu" = (
@@ -568,7 +573,9 @@
 	},
 /area/shuttle/midway)
 "QI" = (
-/obj/structure/shuttle/part/dropship1/lower_left_wall,
+/obj/structure/shuttle/part/dropship1/lower_left_wall{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "QK" = (
