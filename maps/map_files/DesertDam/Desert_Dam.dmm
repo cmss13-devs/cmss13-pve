@@ -3390,7 +3390,7 @@
 	},
 /area/desert_dam/exterior/valley/valley_labs)
 "akw" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	name = "\improper Containment Lock";
 	unacidable = 0
@@ -3433,7 +3433,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/interior/lab_northeast/east_lab_containment)
 "akD" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	name = "\improper Containment Lock";
 	unacidable = 0
@@ -4017,7 +4017,7 @@
 /turf/open/floor/prison,
 /area/desert_dam/interior/lab_northeast/east_lab_containment)
 "amn" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Containment Lock";
 	unacidable = 0
 	},
@@ -4038,7 +4038,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_biology)
 "amq" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Containment Lock";
 	unacidable = 0
 	},
@@ -4459,7 +4459,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_east_hallway)
 "anx" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -4479,7 +4479,7 @@
 /obj/effect/decal/sand_overlay/sand1/corner1{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -4504,7 +4504,7 @@
 	},
 /area/desert_dam/interior/caves/east_caves)
 "anC" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -4856,7 +4856,7 @@
 	},
 /area/desert_dam/interior/dam_interior/west_tunnel)
 "aoI" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Containment Lock";
 	unacidable = 0
 	},
@@ -5082,7 +5082,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_biology)
 "apr" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	name = "\improper Containment Lock";
 	unacidable = 0
@@ -5116,7 +5116,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_biology)
 "apx" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";
@@ -5613,7 +5613,7 @@
 	},
 /area/desert_dam/interior/caves/east_caves)
 "aqZ" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -5669,7 +5669,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_east_hallway)
 "arf" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";
@@ -5829,7 +5829,7 @@
 /area/desert_dam/interior/lab_northeast/east_lab_east_hallway)
 "arz" = (
 /obj/effect/decal/sand_overlay/sand1/corner1,
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -6100,7 +6100,7 @@
 	},
 /area/desert_dam/exterior/river/riverside_central_north)
 "asz" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";
@@ -7058,7 +7058,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_lobby)
 "avj" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = null;
 	name = "\improper Elevator Lock"
@@ -9968,7 +9968,7 @@
 	},
 /area/desert_dam/exterior/valley/valley_crashsite)
 "aEs" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = null;
 	name = "\improper Elevator Lock"
@@ -13452,7 +13452,7 @@
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river_mouth/southern)
 "aOW" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = null;
 	name = "\improper Elevator Lock"
@@ -29139,7 +29139,7 @@
 /area/desert_dam/interior/dam_interior/workshop)
 "bPV" = (
 /obj/structure/desertdam/decals/road_edge,
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_northwest";
 	name = "\improper Checkpoint Lock";
@@ -30212,7 +30212,7 @@
 	},
 /area/desert_dam/building/security/prison)
 "bTk" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_northwest";
 	name = "\improper Checkpoint Lock";
@@ -31548,7 +31548,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal2"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_northwest";
 	name = "\improper Checkpoint Lock";
@@ -36077,7 +36077,7 @@
 	},
 /area/desert_dam/exterior/valley/valley_civilian)
 "cmf" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_shutter_hangar";
 	name = "\improper Hangar Lock"
@@ -36659,7 +36659,7 @@
 "coj" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_shutter_hangar";
 	name = "\improper Hangar Lock"
@@ -37896,7 +37896,7 @@
 /area/desert_dam/building/bar/bar)
 "csz" = (
 /obj/structure/desertdam/decals/road_edge,
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -39126,7 +39126,7 @@
 /turf/open/asphalt,
 /area/desert_dam/interior/dam_interior/west_tunnel)
 "cwr" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_shutter_hangar";
 	name = "\improper Hangar Lock"
@@ -39753,7 +39753,7 @@
 	},
 /area/desert_dam/building/medical/primary_storage)
 "cyf" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -40216,7 +40216,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal4"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_east";
 	name = "\improper Storm Lock"
@@ -40292,7 +40292,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_east";
 	name = "\improper Storm Lock"
@@ -40549,7 +40549,7 @@
 /turf/open/asphalt,
 /area/desert_dam/interior/dam_interior/east_tunnel_entrance)
 "cAO" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_east";
 	name = "\improper Storm Lock"
@@ -40652,7 +40652,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_east";
 	name = "\improper Storm Lock"
@@ -43278,7 +43278,7 @@
 	},
 /area/desert_dam/building/warehouse/loading)
 "cIZ" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar1";
 	name = "\improper Cargo Bay Hangar"
@@ -43286,7 +43286,7 @@
 /turf/open/asphalt,
 /area/desert_dam/building/warehouse/warehouse)
 "cJb" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar2";
 	name = "\improper Cargo Bay Hangar"
@@ -43618,7 +43618,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/exterior/telecomm/lz2_containers)
 "cKg" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar3";
 	name = "\improper Cargo Bay Hangar"
@@ -44129,7 +44129,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar2";
 	name = "\improper Cargo Bay Hangar"
@@ -44202,7 +44202,7 @@
 /turf/open/asphalt,
 /area/desert_dam/building/warehouse/loading)
 "cMB" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -44454,7 +44454,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar3";
 	name = "\improper Cargo Bay Hangar"
@@ -44515,7 +44515,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal2"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -44629,7 +44629,7 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/valley/valley_cargo)
 "cNR" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar1";
 	name = "\improper Cargo Bay Hangar"
@@ -44960,7 +44960,7 @@
 	},
 /area/desert_dam/building/church)
 "cOT" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar2";
 	name = "\improper Cargo Bay Hangar"
@@ -45338,7 +45338,7 @@
 /turf/open/floor/interior/tatami,
 /area/desert_dam/building/bar/bar)
 "cQb" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar3";
 	name = "\improper Cargo Bay Hangar"
@@ -45373,7 +45373,7 @@
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/bar/bar)
 "cQh" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_shutter_hangar";
 	name = "\improper Hangar Lock"
@@ -46107,7 +46107,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -46118,7 +46118,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_checkpoint_west";
 	name = "\improper Checkpoint Lock"
@@ -46157,7 +46157,7 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/valley/valley_northwest)
 "cTa" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar2";
 	name = "\improper Cargo Bay Hangar"
@@ -46642,7 +46642,7 @@
 /turf/open/asphalt,
 /area/desert_dam/building/warehouse/loading)
 "cUV" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "cargo_hangar3";
 	name = "\improper Cargo Bay Hangar"
@@ -47555,7 +47555,7 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cZq" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_shutter_hangar";
 	name = "\improper Hangar Lock"
@@ -50930,7 +50930,7 @@
 /area/desert_dam/building/administration/office)
 "duq" = (
 /obj/structure/desertdam/decals/road_edge,
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_stormlock_north2";
 	name = "\improper Storm Lock"
@@ -50959,7 +50959,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_stormlock_north2";
 	name = "\improper Storm Lock"
@@ -51329,7 +51329,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_stormlock_north2";
 	name = "\improper Storm Lock"
@@ -51521,7 +51521,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal2"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
 	id = "dam_stormlock_north2";
 	name = "\improper Storm Lock"
@@ -51675,7 +51675,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal4"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_central";
 	name = "\improper Storm Lock";
@@ -51860,7 +51860,7 @@
 	},
 /area/desert_dam/building/water_treatment_one/breakroom)
 "dAr" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_central";
 	name = "\improper Storm Lock";
@@ -54495,7 +54495,7 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/valley/valley_civilian)
 "dNf" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_central";
 	name = "\improper Storm Lock";
@@ -54990,7 +54990,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_stormlock_central";
 	name = "\improper Storm Lock";
@@ -63494,7 +63494,7 @@
 /turf/open/asphalt,
 /area/desert_dam/exterior/valley/bar_valley_dam)
 "rNg" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";
@@ -64080,7 +64080,7 @@
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_west_hallway)
 "tEn" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_northeast";
 	name = "\improper Checkpoint Lock"
@@ -65207,7 +65207,7 @@
 	},
 /area/desert_dam/exterior/valley/valley_labs)
 "xlE" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";
@@ -65261,7 +65261,7 @@
 	},
 /area/desert_dam/exterior/valley/valley_northwest)
 "xss" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = null;
 	name = "\improper Elevator Lock"
@@ -65518,7 +65518,7 @@
 /turf/closed/wall/r_wall/bunker,
 /area/desert_dam/exterior/rock)
 "ykJ" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
 	id = "dam_checkpoint_north";
 	name = "\improper Checkpoint Lock";

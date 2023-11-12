@@ -5811,11 +5811,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/prep_hallway)
-"KE" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/item/toy/plush/therapy,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/prep_hallway)
 "KH" = (
 /obj/vehicle/powerloader,
 /turf/open/floor/almayer,
@@ -17339,7 +17334,7 @@ iK
 SO
 SY
 SO
-KE
+iK
 wn
 iK
 SO
