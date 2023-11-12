@@ -69,10 +69,8 @@
 	var/max_grab_size = user.mob_size
 	/// Amazing what you can do with a bit of dexterity.
 	if(HAS_TRAIT(user, TRAIT_DEXTROUS))
-		max_grab_size++
 	/// Strong mobs can lift above their own weight.
 	if(HAS_TRAIT(user, TRAIT_SUPER_STRONG))//NB; this will mean Yautja can bodily lift MOB_SIZE_XENO(3) and Synths can lift MOB_SIZE_XENO_SMALL(2)
-		max_grab_size++
 	last_upgrade = world.time
 
 	switch(user.grab_level)
