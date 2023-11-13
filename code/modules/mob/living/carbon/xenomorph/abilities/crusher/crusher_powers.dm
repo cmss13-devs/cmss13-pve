@@ -115,12 +115,6 @@
 	X.anchored = TRUE
 	X.update_canmove()
 
-	if(X.dir == WEST)
-		animate_stomp(windup_duration, 30)
-
-	if(X.dir == EAST)
-		animate_stomp(windup_duration, -30)
-
 	if (!do_after(X, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 		X.frozen = FALSE
 		X.anchored = FALSE
@@ -165,20 +159,6 @@
 		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
 
 	return ..()
-
-/datum/action/xeno_action/onclick/crusher_stomp/proc/animate_stomp(windup_duration, angle)
-	set waitfor = FALSE
-	var/duration = windup_duration / 3
-
-	animate(owner, transform = turn(matrix(), angle / -3.75), time = duration, easing = SINE_EASING|EASE_OUT)
-
-	sleep(duration)
-
-	animate(owner, pixel_y = 3, transform = turn(matrix(), angle), time = duration, easing = SINE_EASING|EASE_OUT)
-
-	sleep(duration)
-
-	animate(owner, pixel_y = 0, transform = matrix(), time = duration, easing = QUAD_EASING|EASE_IN)
 
 /datum/action/xeno_action/onclick/crusher_stomp/charger/use_ability()
 	var/mob/living/carbon/xenomorph/Xeno = owner
