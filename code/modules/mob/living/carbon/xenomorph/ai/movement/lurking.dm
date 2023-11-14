@@ -74,12 +74,12 @@
 
 		var/blocked = FALSE
 		for(var/obj/structure/potential_blocker in potential_home)
-			if(potential_blocker.unslashable && (potential_blocker.can_block_movement || potential_blocker.density))
+			if(potential_blocker.unslashable && potential_blocker.can_block_movement && potential_blocker.density)
 				blocked = TRUE
 				break
 
 		for(var/mob/potential_blocker in potential_home)
-			if(potential_blocker != idle_xeno && (potential_blocker.can_block_movement || potential_blocker.density))
+			if(potential_blocker != idle_xeno && potential_blocker.can_block_movement && potential_blocker.density)
 				blocked = TRUE
 				break
 
@@ -88,7 +88,7 @@
 
 		var/preferred = FALSE
 		for(var/obj/structure/structure in potential_home)
-			if(structure.unslashable && (structure.can_block_movement || structure.density))
+			if(structure.unslashable && structure.can_block_movement && structure.density)
 				continue
 
 			preferred = TRUE
