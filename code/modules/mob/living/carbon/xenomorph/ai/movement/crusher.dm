@@ -6,6 +6,7 @@
 /datum/xeno_ai_movement/crusher/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
 
+	RegisterSignal(parent, COMSIG_XENO_STOPPED_CHARGING, PROC_REF(stopped_charging))
 
 #define MIN_TARGETS_TO_CHARGE 2
 #define MAX_CHARGE_DISTANCE 50
@@ -142,6 +143,11 @@
 	if(!toggle && charge_action.activated)
 		INVOKE_ASYNC(charge_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/charger_charge, use_ability_wrapper))
 		charge_turf = null
+
+/datum/xeno_ai_movement/crusher/proc/stopped_charging()
+	SIGNAL_HANDLER
+
+	charge_turf = null
 
 /mob/living/carbon/xenomorph/crusher/Move(NewLoc, direct)
 	if(direct == 0)

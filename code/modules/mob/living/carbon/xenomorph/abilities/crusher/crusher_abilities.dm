@@ -240,6 +240,7 @@
 		Xeno.visible_message(SPAN_DANGER("[Xeno] skids to a halt!"))
 
 	REMOVE_TRAIT(Xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
+	SEND_SIGNAL(Xeno, COMSIG_XENO_STOPPED_CHARGING)
 	steps_taken = 0
 	momentum = 0
 	Xeno.recalculate_speed()
