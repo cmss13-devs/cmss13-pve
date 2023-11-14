@@ -9,7 +9,7 @@
 	RegisterSignal(parent, COMSIG_XENO_STOPPED_CHARGING, PROC_REF(stopped_charging))
 
 #define MIN_TARGETS_TO_CHARGE 2
-#define MAX_CHARGE_DISTANCE 50
+#define MAX_CHARGE_DISTANCE 30
 #define MIN_CHARGE_DISTANCE 3
 #define FLOCK_SCAN_RADIUS 4
 #define CHARGE_DEVIATION 1
@@ -33,7 +33,7 @@
 			to_ram += turfs.contents
 
 		var/charging_dir = get_dir(moving_xeno, charge_turf)
-		if(moving_xeno.move_to_next_turf(charge_turf, world.maxx, to_ram))
+		if(moving_xeno.move_to_next_turf(charge_turf, MAX_CHARGE_DISTANCE, to_ram))
 			if(charging_dir in cardinal)
 				return TRUE
 
@@ -118,7 +118,7 @@
 	var/step_dir = get_dir(to_move, middle)
 	var/turf/edge_turf = get_step(moving_xeno, step_dir)
 
-	for(var/i=1 to MAX_CHARGE_DISTANCE)
+	for(var/i = 1 to MAX_CHARGE_DISTANCE)
 		edge_turf = get_step(edge_turf, step_dir)
 		if(edge_turf.density)
 			break
