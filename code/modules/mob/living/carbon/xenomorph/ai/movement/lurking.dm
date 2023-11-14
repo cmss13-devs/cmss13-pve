@@ -85,11 +85,14 @@
 			if(structure.unslashable && structure.can_block_movement && structure.density)
 				continue
 
+			if(structure.invisibility == 101)
+				continue
+
 			preferred = TRUE
 			break
 
 		for(var/turf/closed/touching_turf in orange(1, potential_home))
-			if(get_dir(idle_xeno, touching_turf) in diagonals)
+			if(get_dir(potential_home, touching_turf) in diagonals)
 				continue
 
 			preferred = TRUE
