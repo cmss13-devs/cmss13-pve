@@ -14,7 +14,7 @@
 	speed = XENO_SPEED_TIER_4
 	heal_standing = 0.66
 
-	behavior_delegate_type = /datum/behavior_delegate/crusher_base
+	behavior_delegate_type = /datum/behavior_delegate/crusher_charger
 
 	minimum_evolve_time = 15 MINUTES
 
@@ -78,19 +78,10 @@
 /mob/living/carbon/xenomorph/crusher/init_movement_handler()
 	return new /datum/xeno_ai_movement/crusher(src)
 
-/mob/living/carbon/xenomorph/crusher/New(loc, ...)
+/mob/living/carbon/xenomorph/crusher/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
-	qdel(behavior_delegate)
-	behavior_delegate = new /datum/behavior_delegate/crusher_charger()
-	behavior_delegate.bound_xeno = src
-	behavior_delegate.add_to_xeno()
 
-	RegisterSignal(src, COMSIG_MOB_PRE_CLICK, PROC_REF(on_click))
-
-/mob/living/carbon/xenomorph/crusher/proc/on_click(mob/living/carbon/xenomorph/X, atom/target, list/mods)
-	SIGNAL_HANDLER
-	if(HAS_TRAIT(src, TRAIT_CHARGING) && !istype(target, /atom/movable/screen))
-		return COMPONENT_INTERRUPT_CLICK
+	playsound(src, 'sound/voice/alien_crusher_spawn.ogg', 100, 1, 30)
 
 // Refactored to handle all of crusher's interactions with object during charge.
 /mob/living/carbon/xenomorph/proc/handle_collision(atom/target)
