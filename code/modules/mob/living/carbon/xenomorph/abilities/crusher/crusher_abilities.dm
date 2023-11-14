@@ -47,31 +47,17 @@
 
 	var/damage = 65
 
-	var/distance = 5
-	var/effect_type_base = /datum/effects/xeno_slow/superslow
-	var/effect_duration = 1 SECONDS
+	var/distance = 4
 	var/windup_duration = 1.5 SECONDS
 
 	default_ai_action = TRUE
 	var/prob_chance = 80
 
 /datum/action/xeno_action/onclick/crusher_stomp/process_ai(mob/living/carbon/xenomorph/X, delta_time)
-	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) >= distance-1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
+	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) >= distance - 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
 		return
 
 	use_ability_async()
-
-/datum/action/xeno_action/onclick/crusher_stomp/charger
-	name = "Crush"
-	action_icon_state = "stomp"
-	macro_path = /datum/action/xeno_action/verb/verb_crusher_charger_stomp
-	action_type = XENO_ACTION_CLICK
-	ability_primacy = XENO_PRIMARY_ACTION_3
-	plasma_cost = 25
-	damage = 75
-	distance = 3
-	xeno_cooldown = 12 SECONDS
-
 
 /datum/action/xeno_action/onclick/crusher_shield
 	name = "Defensive Shield"

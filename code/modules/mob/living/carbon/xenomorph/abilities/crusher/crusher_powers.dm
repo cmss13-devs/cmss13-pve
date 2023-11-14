@@ -96,14 +96,14 @@
 	..(T)
 
 /datum/action/xeno_action/onclick/crusher_stomp/use_ability(atom/A)
-	var/mob/living/carbon/xenomorph/X = owner
-	if (!istype(X))
+	var/mob/living/carbon/xenomorph/xeno_owner = owner
+	if (!istype(xeno_owner))
 		return
 
 	if (!action_cooldown_check())
 		return
 
-	if (!X.check_state())
+	if (!xeno_owner.check_state())
 		return
 
 	if (!check_and_use_plasma_owner())
@@ -111,99 +111,48 @@
 
 	apply_cooldown()
 
-	X.frozen = TRUE
-	X.anchored = TRUE
-	X.update_canmove()
+	xeno_owner.frozen = TRUE
+	xeno_owner.anchored = TRUE
+	xeno_owner.update_canmove()
 
-	if (!do_after(X, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
-		X.frozen = FALSE
-		X.anchored = FALSE
-		X.update_canmove()
+	if (!do_after(xeno_owner, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
+		xeno_owner.frozen = FALSE
+		xeno_owner.anchored = FALSE
+		xeno_owner.update_canmove()
 		return
 
-	X.frozen = FALSE
-	X.anchored = FALSE
-	X.update_canmove()
+	xeno_owner.frozen = FALSE
+	xeno_owner.anchored = FALSE
+	xeno_owner.update_canmove()
 
-	playsound(get_turf(X), 'sound/effects/bang.ogg', 25, 0)
-	X.visible_message(SPAN_XENODANGER("[X] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
-	X.create_stomp()
+	playsound(get_turf(xeno_owner), 'sound/effects/bang.ogg', 25, 0)
+	xeno_owner.visible_message(SPAN_XENODANGER("[xeno_owner] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
+	xeno_owner.create_stomp()
 
-	for (var/mob/living/carbon/H in get_turf(X))
-		if (H.stat == DEAD || X.can_not_harm(H))
+	for(var/mob/living/carbon/carbon_in_range in range(distance, get_turf(xeno_owner)))
+		if(carbon_in_range.stat == DEAD || xeno_owner.can_not_harm(carbon_in_range))
 			continue
 
-		new effect_type_base(H, X, , , get_xeno_stun_duration(H, effect_duration))
-		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
+		var/distance_to_target = get_dist(carbon_in_range, xeno_owner)
 
-		if(H.mob_size < MOB_SIZE_BIG)
-			H.apply_effect(get_xeno_stun_duration(H, 0.4), WEAKEN)
+		to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You fall as [xeno_owner] knocks you off balance!"))
+		shake_camera(carbon_in_range, (6 - distance_to_target), 2)
 
-		H.apply_armoured_damage(get_xeno_damage_slash(H, damage), ARMOR_MELEE, BRUTE)
-		H.last_damage_data = create_cause_data(X.caste_type, X)
+		var/weaken_time = 2.5 - (distance_to_target / 2)
 
-	for (var/mob/living/carbon/H in orange(distance, get_turf(X)))
-		if (H.stat == DEAD || X.can_not_harm(H))
+		carbon_in_range.apply_effect(weaken_time, WEAKEN)
+
+		if(distance_to_target == 0)
+			carbon_in_range.apply_armoured_damage(damage, ARMOR_MELEE, BRUTE)
+			carbon_in_range.last_damage_data = create_cause_data(xeno_owner.caste_type, xeno_owner)
+			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are crushed as [xeno_owner] stomps on you!"))
 			continue
 
-		var/distance = get_dist(H,X)
-
-		new effect_type_base(H, X, , , get_xeno_stun_duration(H, effect_duration))
-		if (H.mob_size < MOB_SIZE_BIG && distance <= 3)
-			H.apply_effect(get_xeno_stun_duration(H, 0.4), WEAKEN)
-
-		if (H.client)
-			var/steps = 20 / distance
-			shake_camera(H, steps, 2)
-
-		to_chat(H, SPAN_XENOHIGHDANGER("You are slowed as [X] knocks you off balance!"))
-
-	return ..()
-
-/datum/action/xeno_action/onclick/crusher_stomp/charger/use_ability()
-	var/mob/living/carbon/xenomorph/Xeno = owner
-	var/mob/living/carbon/Targeted
-	if (!istype(Xeno))
-		return
-
-	if (!action_cooldown_check())
-		return
-
-	if (!Xeno.check_state())
-		return
-
-	if (!check_and_use_plasma_owner())
-		return
-
-	playsound(get_turf(Xeno), 'sound/effects/bang.ogg', 25, 0)
-	Xeno.visible_message(SPAN_XENODANGER("[Xeno] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
-	Xeno.create_stomp()
-
-	for (var/mob/living/carbon/Human in get_turf(Xeno)) // MOBS ONTOP
-		if (Human.stat == DEAD || Xeno.can_not_harm(Human))
+		if(distance_to_target <= 2)
+			xeno_throw_human(carbon_in_range, xeno_owner, get_dir(xeno_owner, carbon_in_range), (6 - (distance_to_target * 2)), FALSE)
+			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are flung by [xeno_owner] from the force of his crashing weight!"))
 			continue
 
-		new effect_type_base(Human, Xeno, , , get_xeno_stun_duration(Human, effect_duration))
-		to_chat(Human, SPAN_XENOHIGHDANGER("You are BRUTALLY crushed and stomped on by [Xeno]!!!"))
-		shake_camera(Human, 10, 2)
-		if(Human.mob_size < MOB_SIZE_BIG)
-			Human.apply_effect(get_xeno_stun_duration(Human, 0.2), WEAKEN)
-
-		Human.apply_armoured_damage(get_xeno_damage_slash(Human, damage), ARMOR_MELEE, BRUTE,"chest", 3)
-		Human.apply_armoured_damage(15, BRUTE) // random
-		Human.last_damage_data = create_cause_data(Xeno.caste_type, Xeno)
-		Human.emote("pain")
-		Targeted = Human
-	for (var/mob/living/carbon/Human in orange(distance, get_turf(Xeno))) // MOBS AROUND
-		if (Human.stat == DEAD || Xeno.can_not_harm(Human))
-			continue
-		if(Human.client)
-			shake_camera(Human, 10, 2)
-		if(Targeted)
-			to_chat(Human, SPAN_XENOHIGHDANGER("You watch as [Targeted] gets crushed by [Xeno]!"))
-		to_chat(Human, SPAN_XENOHIGHDANGER("You are shaken as [Xeno] quakes the earth!"))
-
-	apply_cooldown()
 	return ..()
 
 /datum/action/xeno_action/onclick/crusher_shield/use_ability(atom/Target)
