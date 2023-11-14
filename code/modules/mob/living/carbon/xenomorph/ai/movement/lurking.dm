@@ -21,7 +21,6 @@
 	max_distance_from_home = 10
 
 #define AI_CHECK_ANNOYANCE_COOLDOWN 2.5 SECONDS
-#define AI_NEW_TARGET_COOLDOWN 2 SECONDS
 
 /datum/xeno_ai_movement/linger/lurking/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
@@ -31,14 +30,9 @@
 	RegisterSignal(parent, COMSIG_XENO_USED_POUNCE, PROC_REF(stop_lurking))
 
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
-	addtimer(CALLBACK(src, PROC_REF(get_new_target), parent), AI_NEW_TARGET_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
 
 	start_lurking()
 
-/datum/xeno_ai_movement/linger/lurking/proc/get_new_target(mob/living/carbon/xenomorph/parent)
-	parent.current_target = parent.get_target(parent.ai_range)
-
-#undef AI_NEW_TARGET_COOLDOWN
 #undef AI_CHECK_ANNOYANCE_COOLDOWN
 
 /datum/xeno_ai_movement/linger/lurking/ai_move_idle(delta_time)
