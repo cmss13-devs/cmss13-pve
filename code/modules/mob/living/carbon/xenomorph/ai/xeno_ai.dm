@@ -162,7 +162,7 @@
 	if(!path)
 		no_path_found = TRUE
 
-/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range, list/ignore)
+/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range, list/ignore = list())
 	if(!T)
 		return FALSE
 
