@@ -1064,8 +1064,8 @@
 "anL" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -2770,8 +2770,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -5885,8 +5885,8 @@
 "bTc" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -7689,8 +7689,8 @@
 "cvT" = (
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
@@ -8338,8 +8338,8 @@
 "cIw" = (
 /obj/effect/projector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -8380,8 +8380,8 @@
 "cJQ" = (
 /obj/effect/projector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -8778,8 +8778,8 @@
 "cQs" = (
 /obj/effect/projector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -8883,8 +8883,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -9063,8 +9063,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -9834,8 +9834,8 @@
 "dis" = (
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -10173,8 +10173,8 @@
 "doo" = (
 /obj/effect/projector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
@@ -11356,8 +11356,8 @@
 "dHV" = (
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/port_hallway)
@@ -12903,8 +12903,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -13245,8 +13245,8 @@
 "eiE" = (
 /obj/effect/projector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -14304,8 +14304,8 @@
 "ezA" = (
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -15235,12 +15235,12 @@
 /obj/structure/stairs{
 	dir = 1
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
 	},
@@ -17030,8 +17030,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -18965,8 +18965,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -20316,8 +20316,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -20432,8 +20432,8 @@
 "gpg" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/stair_clone/upper)
@@ -22795,8 +22795,8 @@
 /obj/structure/stairs,
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -23152,8 +23152,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -23685,16 +23685,16 @@
 	},
 /area/almayer/shipboard/brig/cic_hallway)
 "hny" = (
-/obj/effect/step_trigger/teleporter_vector{
-	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
-	},
 /obj/structure/catwalk{
 	health = null
 	},
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down2";
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -25010,8 +25010,8 @@
 "hFX" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -26705,12 +26705,12 @@
 /area/almayer/hallways/hangar)
 "ieS" = (
 /obj/structure/stairs,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
 	},
@@ -28042,12 +28042,12 @@
 /turf/open/floor/plating/almayer,
 /area/almayer/shipboard/brig/armory)
 "iCq" = (
+/obj/structure/machinery/light,
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
-/obj/structure/machinery/light,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/stair_clone/upper)
 "iCX" = (
@@ -28327,8 +28327,8 @@
 "iHy" = (
 /obj/effect/projector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -28909,8 +28909,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -29949,13 +29949,13 @@
 	},
 /area/almayer/command/cic)
 "jfR" = (
-/obj/effect/step_trigger/teleporter_vector{
-	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
-	},
 /obj/structure/catwalk{
 	health = null
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down3";
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -30509,8 +30509,8 @@
 "jpx" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -32177,8 +32177,8 @@
 /obj/structure/stairs,
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -32864,8 +32864,8 @@
 /obj/structure/machinery/light,
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/port_hallway)
@@ -34625,8 +34625,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -34740,8 +34740,8 @@
 "kCy" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -34966,6 +34966,19 @@
 	icon_state = "red"
 	},
 /area/almayer/hallways/aft_hallway)
+"kEV" = (
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down3";
+	vector_x = -8;
+	vector_y = -100
+	},
+/obj/structure/catwalk{
+	health = null
+	},
+/turf/open/floor/plating/almayer{
+	allow_construction = 0
+	},
+/area/almayer/stair_clone/upper)
 "kFf" = (
 /obj/structure/machinery/cm_vending/gear/medic,
 /turf/open/floor/almayer{
@@ -35123,8 +35136,8 @@
 "kGQ" = (
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/port_hallway)
@@ -36780,8 +36793,8 @@
 "ljG" = (
 /obj/effect/projector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -37513,8 +37526,8 @@
 "lxJ" = (
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -37572,8 +37585,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/port_hallway)
@@ -37880,8 +37893,8 @@
 "lEA" = (
 /obj/effect/projector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -39557,13 +39570,13 @@
 	},
 /area/almayer/command/cichallway)
 "mjj" = (
-/obj/effect/projector{
-	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
-	},
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/effect/projector{
+	name = "Almayer_Up2";
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
@@ -39729,8 +39742,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -41957,16 +41970,16 @@
 	},
 /area/almayer/engineering/lower_engineering)
 "mYs" = (
-/obj/effect/step_trigger/teleporter_vector{
-	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
-	},
 /obj/structure/catwalk{
 	health = null
 	},
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down3";
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -43534,13 +43547,13 @@
 	},
 /area/almayer/hallways/vehiclehangar)
 "nxo" = (
-/obj/effect/step_trigger/teleporter_vector{
-	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
-	},
 /obj/structure/machinery/light{
 	dir = 1
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down1";
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/stair_clone/upper)
@@ -44273,8 +44286,8 @@
 "nJH" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/stair_clone/upper)
@@ -46029,8 +46042,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -46892,8 +46905,8 @@
 "oxX" = (
 /obj/effect/projector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -48186,12 +48199,12 @@
 /obj/structure/stairs{
 	dir = 4
 	},
+/obj/structure/machinery/light,
 /obj/effect/projector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
-/obj/structure/machinery/light,
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
 	},
@@ -48594,8 +48607,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down1";
-	vector_x = 19;
-	vector_y = -98
+	vector_x = 10;
+	vector_y = -96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -49292,8 +49305,8 @@
 "piJ" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -49757,12 +49770,12 @@
 	dir = 8;
 	icon_state = "ramptop"
 	},
+/obj/structure/machinery/light,
 /obj/effect/projector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
-/obj/structure/machinery/light,
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
 	},
@@ -50224,8 +50237,8 @@
 "pwv" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -50234,8 +50247,8 @@
 "pwA" = (
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -50354,8 +50367,8 @@
 "pyL" = (
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -50767,8 +50780,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -51062,8 +51075,8 @@
 "pJQ" = (
 /obj/effect/projector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -53666,8 +53679,8 @@
 "qxy" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -56359,8 +56372,8 @@
 "rqJ" = (
 /obj/effect/projector{
 	name = "Almayer_Down3";
-	vector_x = 1;
-	vector_y = -102
+	vector_x = -8;
+	vector_y = -100
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -61131,8 +61144,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up1";
-	vector_x = -19;
-	vector_y = 98
+	vector_x = -10;
+	vector_y = 96
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/starboard_hallway)
@@ -62074,8 +62087,8 @@
 "thf" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -62912,8 +62925,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -63253,8 +63266,8 @@
 "tzk" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0
@@ -63334,8 +63347,8 @@
 "tAp" = (
 /obj/effect/projector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -64396,8 +64409,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -64796,8 +64809,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up2";
-	vector_x = -1;
-	vector_y = 100
+	vector_x = 8;
+	vector_y = 98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -66375,8 +66388,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Down4";
-	vector_x = 19;
-	vector_y = -104
+	vector_x = 10;
+	vector_y = -102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -69057,6 +69070,19 @@
 	icon_state = "plate"
 	},
 /area/almayer/hull/lower_hull/l_m_s)
+"vta" = (
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down2";
+	vector_x = -8;
+	vector_y = -98
+	},
+/obj/structure/catwalk{
+	health = null
+	},
+/turf/open/floor/plating/almayer{
+	allow_construction = 0
+	},
+/area/almayer/stair_clone/upper)
 "vtg" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo,
 /turf/open/floor/almayer{
@@ -69112,13 +69138,13 @@
 	},
 /area/almayer/command/computerlab)
 "vuw" = (
-/obj/effect/step_trigger/teleporter_vector{
-	name = "Almayer_Down2";
-	vector_x = 1;
-	vector_y = -100
-	},
 /obj/structure/catwalk{
 	health = null
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	name = "Almayer_Down2";
+	vector_x = -8;
+	vector_y = -98
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -76079,8 +76105,8 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Almayer_Up3";
-	vector_x = -1;
-	vector_y = 102
+	vector_x = 8;
+	vector_y = 100
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -77268,8 +77294,8 @@
 	},
 /obj/effect/projector{
 	name = "Almayer_Up4";
-	vector_x = -19;
-	vector_y = 104
+	vector_x = -10;
+	vector_y = 102
 	},
 /turf/open/floor/plating/almayer{
 	allow_construction = 0
@@ -99824,7 +99850,7 @@ hsJ
 cQs
 cQs
 cQs
-vuw
+vta
 qxy
 qxy
 qxy
@@ -99858,7 +99884,7 @@ hTG
 piJ
 piJ
 piJ
-jfR
+kEV
 lEA
 lEA
 lEA
