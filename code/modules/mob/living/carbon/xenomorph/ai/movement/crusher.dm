@@ -3,17 +3,8 @@
 	/// The turf we force our crusher to walk to when he charges
 	var/turf/charge_turf
 
-
-#define AI_NEW_TARGET_COOLDOWN 1 SECONDS
-
 /datum/xeno_ai_movement/crusher/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
-	addtimer(CALLBACK(src, PROC_REF(get_new_target), parent), AI_NEW_TARGET_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)
-
-/datum/xeno_ai_movement/crusher/proc/get_new_target(mob/living/carbon/xenomorph/parent)
-	parent.current_target = parent.get_target(parent.ai_range)
-
-#undef AI_NEW_TARGET_COOLDOWN
 
 
 #define MIN_TARGETS_TO_CHARGE 2

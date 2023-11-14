@@ -74,6 +74,7 @@
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
 
 	ai_range = 28
+	forced_retarget_time = (3 SECONDS)
 
 /mob/living/carbon/xenomorph/crusher/init_movement_handler()
 	return new /datum/xeno_ai_movement/crusher(src)
