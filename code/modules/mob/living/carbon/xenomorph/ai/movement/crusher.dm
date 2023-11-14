@@ -8,10 +8,10 @@
 
 	RegisterSignal(parent, COMSIG_XENO_STOPPED_CHARGING, PROC_REF(stopped_charging))
 
-#define MIN_TARGETS_TO_CHARGE 2
+#define MIN_TARGETS_TO_CHARGE 3
 #define MAX_CHARGE_DISTANCE 30
-#define MIN_CHARGE_DISTANCE 3
-#define FLOCK_SCAN_RADIUS 4
+#define MIN_CHARGE_DISTANCE 2
+#define FLOCK_SCAN_RADIUS 3
 #define CHARGE_DEVIATION 1
 
 /datum/xeno_ai_movement/crusher/ai_move_target(delta_time)
@@ -39,26 +39,23 @@
 
 		var/turf/next_turf = get_step(moving_xeno, charging_dir)
 		if(LinkBlocked(moving_xeno, get_turf(moving_xeno), next_turf))
-			if(moving_xeno.Move(next_turf, 0))
+			if(moving_xeno.Move(next_turf, 0)) // So we croosh into it and not just go away
 				return TRUE
 
 		toggle_charging(FALSE)
 		return TRUE
-
-	if(get_dist(moving_xeno, target) <= MIN_CHARGE_DISTANCE)
-		return ..()
 
 	var/humans_x = 0
 	var/humans_y = 0
 	var/humans_count = 0
 
 	/// Now we getting medium coordinates from all humans standing around our target
-	for(var/mob/living/carbon/human/humie in view(FLOCK_SCAN_RADIUS, target))
-		if(humie.stat)
+	for(var/mob/living/carbon/human/hooman in view(FLOCK_SCAN_RADIUS, target))
+		if(!moving_xeno.check_mob_target(hooman))
 			continue
 
-		humans_x += humie.x
-		humans_y += humie.y
+		humans_x += hooman.x
+		humans_y += hooman.y
 		humans_count++
 
 	if(humans_count < MIN_TARGETS_TO_CHARGE)
@@ -75,8 +72,8 @@
 	var/list/possible_blocked_turfs = list(WE_move_variant, NS_move_variant)
 	var/list/non_blocked_turfs = list()
 
-	/// Checking which one of two ways is non-blocked in distance of MIN_CHARGE_DISTANCE
-	for(var/i=1 to LAZYLEN(possible_blocked_turfs))
+	/// Checking which one of two ways is non-blocked by MIN_CHARGE_DISTANCE closest turfs in direction of middle turf
+	for(var/i = 1 to LAZYLEN(possible_blocked_turfs))
 		var/turf/next_turf = possible_blocked_turfs[i]
 		var/blocked = FALSE
 
@@ -85,8 +82,8 @@
 			next_turf = get_step(next_turf, get_dir(next_turf, middle))
 
 			var/list/ignore = list()
-			for(var/mob/living/carbon/xenomorph/xeno_blocker in next_turf)
-				ignore += xeno_blocker
+			for(var/mob/mob_blocker in next_turf)
+				ignore += mob_blocker
 
 			if(LinkBlocked(moving_xeno, last_turf, next_turf, ignore))
 				blocked = TRUE
@@ -116,7 +113,7 @@
 
 	/// When we eventially get to our move_variant - get an edge_turf in direction of middle, and then toggle our charging ability
 	var/step_dir = get_dir(to_move, middle)
-	var/turf/edge_turf = get_step(moving_xeno, step_dir)
+	var/turf/edge_turf = get_turf(moving_xeno)
 
 	for(var/i = 1 to MAX_CHARGE_DISTANCE)
 		edge_turf = get_step(edge_turf, step_dir)
@@ -147,7 +144,7 @@
 /datum/xeno_ai_movement/crusher/proc/stopped_charging()
 	SIGNAL_HANDLER
 
-	charge_turf = null
+	toggle_charging(FALSE)
 
 /mob/living/carbon/xenomorph/crusher/Move(NewLoc, direct)
 	if(direct == 0)
