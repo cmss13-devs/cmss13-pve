@@ -752,6 +752,12 @@
 		if(fireteam == "SQ2")
 			H.wear_id.access += ACCESS_SQUAD_TWO
 
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Squad Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Squad Sergeant"]
+
 /datum/squad/proc/unassign_fireteam(mob/living/carbon/human/H, upd_ui = TRUE)
 	fireteams[H.assigned_fireteam].Remove(H)
 	var/ft = H.assigned_fireteam
@@ -769,6 +775,12 @@
 	if(H.wear_id)
 		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
 
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])
 		unassign_ft_leader(fireteam, FALSE, FALSE)
@@ -779,6 +791,12 @@
 	SStracking.start_tracking("marine_sl", H)
 	if(H.stat == CONSCIOUS)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned as [fireteam] Team Leader.")))
+
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
 
 /datum/squad/proc/unassign_ft_leader(fireteam, clear_group_id, upd_ui = TRUE)
 	if(!fireteam_leaders[fireteam])
