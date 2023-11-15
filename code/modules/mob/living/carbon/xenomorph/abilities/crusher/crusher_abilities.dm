@@ -221,27 +221,27 @@
 #undef MINIMUM_CHARGE_DISTANCE
 #undef MAXIMUM_TARGET_DISTANCE
 
-/datum/action/xeno_action/onclick/charger_charge/proc/handle_movement(mob/living/carbon/xenomorph/Xeno, atom/oldloc, dir, forced)
+/datum/action/xeno_action/onclick/charger_charge/proc/handle_movement(mob/living/carbon/xenomorph/xeno, atom/oldloc, dir, forced)
 	SIGNAL_HANDLER
-	if(Xeno.pulling)
+	if(xeno.pulling)
 		if(!momentum)
 			steps_taken = 0
 			return
 		else
-			Xeno.stop_pulling()
+			xeno.stop_pulling()
 
-	if(Xeno.is_mob_incapacitated())
+	if(xeno.is_mob_incapacitated())
 		if(!momentum)
 			return
-		var/lol = get_ranged_target_turf(Xeno, charge_dir, momentum/2)
-		INVOKE_ASYNC(Xeno, TYPE_PROC_REF(/atom/movable, throw_atom), lol, momentum/2, SPEED_FAST, null, TRUE)
+		var/lol = get_ranged_target_turf(xeno, charge_dir, momentum/2)
+		INVOKE_ASYNC(xeno, TYPE_PROC_REF(/atom/movable, throw_atom), lol, momentum/2, SPEED_FAST, null, TRUE)
 		stop_momentum()
 		return
-	if(!isturf(Xeno.loc))
+	if(!isturf(xeno.loc))
 		stop_momentum()
 		return
 	// Don't build up charge if you move via getting propelled by something
-	if(Xeno.throwing)
+	if(xeno.throwing)
 		stop_momentum()
 		return
 
@@ -256,7 +256,7 @@
 
 	if(do_stop_momentum)
 		stop_momentum()
-	if(Xeno.plasma_stored <= plasma_per_step)
+	if(xeno.plasma_stored <= plasma_per_step)
 		stop_momentum()
 		return
 	last_charge_move = world.time
@@ -265,49 +265,46 @@
 		return
 	if(momentum < max_momentum)
 		momentum++
-		ADD_TRAIT(Xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
-		Xeno.update_icons()
+		ADD_TRAIT(xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
+		xeno.update_icons()
 		if(momentum == max_momentum)
-			Xeno.emote("roar")
+			xeno.emote("roar")
 	//X.use_plasma(plasma_per_step) // take if you are in toggle charge mode
 	if(momentum > 0)
-		Xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
+		xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
 
 	noise_timer = noise_timer ? --noise_timer : 3
 	if(noise_timer == 3)
-		playsound(Xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
+		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
 
-		for(var/mob/living/carbon/human/Mob in range(10, Xeno))
+		for(var/mob/living/carbon/human/Mob in range(10, xeno))
 			shake_camera(Mob, 2, 1)
 
-	for(var/mob/living/carbon/human/Mob in Xeno.loc)
+	for(var/mob/living/carbon/human/Mob in xeno.loc)
 		if(Mob.lying && Mob.stat != DEAD)
-			Xeno.visible_message(SPAN_DANGER("[Xeno] runs [Mob] over!"),
+			xeno.visible_message(SPAN_DANGER("[xeno] runs [Mob] over!"),
 				SPAN_DANGER("You run [Mob] over!")
 			)
-			var/ram_dir = pick(get_perpen_dir(Xeno.dir))
+			var/ram_dir = pick(get_perpen_dir(xeno.dir))
 			var/dist = 1
 			if(momentum == max_momentum)
 				dist = momentum * 0.25
 			step(Mob, ram_dir, dist)
-			Mob.take_overall_armored_damage(momentum * 10)
+			Mob.take_overall_armored_damage(momentum * 8)
 			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon/human, emote),"pain")
 			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
 
-	for(var/mob/living/carbon/human/Mob in orange(1, Xeno))
-		if(momentum < 5)
-			continue
+	if(momentum >= 5)
+		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
+			shake_camera(hit_human, 4, 2)
+			INVOKE_ASYNC(xeno_throw_human(hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE))
+			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
+			hit_human.take_overall_armored_damage(momentum * 4)
+			hit_human.apply_effect(0.5, WEAKEN)
+			animation_flash_color(hit_human)
 
-		shake_camera(Mob, 4, 2)
-
-		if(Mob.knocked_down)
-			continue
-
-		Mob.apply_effect(0.5, WEAKEN)
-		animation_flash_color(Mob)
-
-	Xeno.recalculate_speed()
+	xeno.recalculate_speed()
 
 /datum/action/xeno_action/onclick/charger_charge/proc/handle_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
