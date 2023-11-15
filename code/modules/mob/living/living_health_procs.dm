@@ -83,6 +83,7 @@
 /mob/living/proc/setMaxHealth(newMaxHealth)
 	maxHealth = newMaxHealth
 
+#undef MAX_DAMAGE_OF_TYPE
 
 /mob/living
 	VAR_PROTECTED/stun_timer = TIMER_ID_NULL
