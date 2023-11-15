@@ -33,16 +33,14 @@
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
-
-	//Hacky pre-setup shit since RoleAuthority sucks
-	RoleAuthority.squads = list()
-	RoleAuthority.squads_by_type = list()
-	for(var/cycled_squad_type in squad_limit)
-		var/datum/squad/cycled_squad = new cycled_squad_type()
-		RoleAuthority.squads += cycled_squad
-		RoleAuthority.squads_by_type[cycled_squad.type] = cycled_squad
-
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
+
+	for(var/datum/squad/squad in RoleAuthority.squads)
+		if(squad.type in squad_limit)
+			continue
+
+		RoleAuthority.squads -= squad
+		RoleAuthority.squads_by_type -= squad.type
 
 	. = ..()
 

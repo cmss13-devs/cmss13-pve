@@ -162,26 +162,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
-"mK" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth{
-	desc = "A modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, offering protection and storage while not restricting movement. This set seems damaged...";
-	name = "damaged M4 synthetic PMC armor";
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/obj/effect/spawner/gibspawner/robot,
-/obj/item/limb/head/synth{
-	desc = "This appears to be the head of a synthetic, though it it is so destroyed there is no way in hell anyone is going to bring it back to even basic functionality.";
-	name = "shattered synthetic head";
-	pixel_x = 9;
-	pixel_y = 3
-	},
-/obj/item/robot_parts/arm/l_arm,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
 "np" = (
 /obj/item/tool/weldingtool/simple,
 /obj/item/stack/sheet/wood,
@@ -368,6 +348,26 @@
 	icon_state = "platingdmg1"
 	},
 /area/lv624/lazarus/hydroponics)
+"Dy" = (
+/obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth{
+	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind. This set seems damaged...";
+	name = "damaged M4 Synthetic PMC armor";
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/effect/spawner/gibspawner/robot,
+/obj/item/limb/head/synth{
+	desc = "This appears to be the head of a synthetic, though it it is so destroyed there is no way in hell anyone is going to bring it back to even basic functionality.";
+	name = "shattered synthetic head";
+	pixel_x = 9;
+	pixel_y = 3
+	},
+/obj/item/robot_parts/arm/l_arm,
+/turf/open/floor{
+	dir = 9;
+	icon_state = "green"
+	},
+/area/lv624/lazarus/hydroponics)
 "Ed" = (
 /obj/item/stack/sheet/metal,
 /turf/open/floor{
@@ -417,6 +417,13 @@
 	icon_state = "platingdmg1"
 	},
 /area/lv624/lazarus/hydroponics)
+"IP" = (
+/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/stack/sheet/wood,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/lv624/lazarus/hydroponics)
 "Jc" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/decal/cleanable/blood/tracks/footprints{
@@ -461,6 +468,12 @@
 "LQ" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/spawner/random/claymore/lowchance,
+/turf/open/floor{
+	icon_state = "platingdmg1"
+	},
+/area/lv624/lazarus/hydroponics)
+"Mi" = (
+/obj/structure/closet/crate/hydroponics/prespawned,
 /turf/open/floor{
 	icon_state = "platingdmg1"
 	},
@@ -530,19 +543,6 @@
 /obj/item/reagent_container/glass/fertilizer,
 /obj/item/stack/sheet/metal,
 /turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"OK" = (
-/obj/structure/closet/crate/hydroponics/prespawned,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"OO" = (
-/obj/item/ammo_magazine/rifle/nsg23/extended,
-/obj/item/stack/sheet/wood,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
 /area/lv624/lazarus/hydroponics)
 "Pk" = (
 /obj/item/stack/sheet/metal,
@@ -760,8 +760,8 @@ Wg
 YV
 Wg
 Wg
-OK
-OK
+Mi
+Mi
 xM
 zL
 fk
@@ -806,7 +806,7 @@ TC
 bm
 tK
 zj
-OO
+IP
 xa
 JO
 Wg
@@ -867,7 +867,7 @@ Xv
 bd
 aO
 QR
-mK
+Dy
 Wg
 TC
 Wg

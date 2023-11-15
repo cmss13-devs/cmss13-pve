@@ -74,6 +74,17 @@
 			C.overeat_cooldown = world.time + OVEREAT_TIME
 
 		if(M == user)//If you're eating it yourself
+
+			var/eat_time = (1.5 SECONDS)
+			if(user.buckled)
+				eat_time *= 0.25
+
+			if(user.action_busy)
+				return
+
+			if(!do_after(user, eat_time, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+				return
+
 			if (fullness <= NUTRITION_VERYLOW)
 				to_chat(M, SPAN_WARNING("You hungrily chew out a piece of [src] and gobble it!"))
 			if (fullness > NUTRITION_VERYLOW && fullness <= NUTRITION_LOW)
@@ -91,7 +102,11 @@
 					SPAN_HELPFUL("[user] <b>starts feeding</b> you <b>[src]</b>."),
 					SPAN_NOTICE("[user] starts feeding [user == M ? "themselves" : "[M]"] [src]."))
 
-			if(!do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M)) return
+			if(user.action_busy)
+				return
+
+			if(!do_after(user, (3 SECONDS), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M))
+				return
 
 			var/rgt_list_text = get_reagent_list_text()
 

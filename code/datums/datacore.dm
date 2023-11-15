@@ -7,6 +7,18 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	//This list tracks characters spawned in the world and cannot be modified in-game. Currently referenced by respawn_character().
 	var/locked[] = list()
 
+/datum/datacore/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/datacore/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	for(var/datum/data/record/cycled_data_record in general)
+		if(cycled_data_record.fields["squad"] == old_name)
+			cycled_data_record.fields["squad"] = new_name
+
 /datum/datacore/proc/get_manifest(monochrome, OOC, nonHTML)
 	var/list/cic = ROLES_CIC.Copy()
 	var/list/auxil = ROLES_AUXIL_SUPPORT.Copy()
@@ -133,6 +145,9 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 				continue
 			dept_flags |= FLAG_SHOW_MARINES
 			squad_sublists[squad_name] = TRUE
+			///If it is a real squad in the USCM squad list to prevent the crew manifest from breaking
+			if(!(squad_name in ROLES_SQUAD_ALL))
+				continue
 			LAZYSET(marines_by_squad[squad_name][real_rank], name, rank)
 
 	//here we fill manifest

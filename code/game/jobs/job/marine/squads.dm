@@ -115,7 +115,6 @@
 
 /datum/squad/marine
 	name = "Root"
-	usable = TRUE
 	active = TRUE
 	faction = FACTION_MARINE
 	lead_icon = "leader"
@@ -128,6 +127,7 @@
 	radio_freq = ALPHA_FREQ
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
+	usable = TRUE
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -205,6 +205,17 @@
 	squad_type = "Team"
 	lead_icon = "soctl"
 	minimap_color = MINIMAP_SQUAD_SOF
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/cbrn
+	name = SQUAD_CBRN
+	equipment_color = "#3B2A7B" //Chemical Corps Purple
+	chat_color = "#553EB2"
+	radio_freq = CBRN_FREQ
+	minimap_color = "#3B2A7B"
 
 	active = FALSE
 	roundstart = FALSE
@@ -294,6 +305,32 @@
 	update_all_squad_info()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
+
+/datum/squad/marine/alpha/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	name = new_name
+
+	for(var/mob/living/carbon/human/marine in marines_list)
+		if(!istype(marine.wear_id, /obj/item/card/id))
+			continue
+
+		var/obj/item/card/id/marine_card = marine.wear_id
+		var/datum/weakref/marine_card_registered = marine.wear_id.registered_ref
+
+		if(!istype(marine_card_registered))
+			continue
+
+		if(marine != marine_card_registered.resolve())
+			continue
+
+		marine_card.assignment = "[new_name] [marine.job]"
+		marine_card.name = "[marine_card.registered_name]'s ID Card ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
@@ -715,6 +752,12 @@
 		if(fireteam == "SQ2")
 			H.wear_id.access += ACCESS_SQUAD_TWO
 
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Squad Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Squad Sergeant"]
+
 /datum/squad/proc/unassign_fireteam(mob/living/carbon/human/H, upd_ui = TRUE)
 	fireteams[H.assigned_fireteam].Remove(H)
 	var/ft = H.assigned_fireteam
@@ -732,6 +775,12 @@
 	if(H.wear_id)
 		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
 
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])
 		unassign_ft_leader(fireteam, FALSE, FALSE)
@@ -742,6 +791,12 @@
 	SStracking.start_tracking("marine_sl", H)
 	if(H.stat == CONSCIOUS)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned as [fireteam] Team Leader.")))
+
+	for(var/obj/item/device/radio/headset/cycled_headset in H)
+		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+			continue
+
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
 
 /datum/squad/proc/unassign_ft_leader(fireteam, clear_group_id, upd_ui = TRUE)
 	if(!fireteam_leaders[fireteam])
