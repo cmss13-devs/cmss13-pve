@@ -298,7 +298,7 @@
 	if(momentum >= 5)
 		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
 			shake_camera(hit_human, 4, 2)
-			INVOKE_ASYNC(xeno_throw_human(hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE))
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
 			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
 			hit_human.take_overall_armored_damage(momentum * 4)
 			hit_human.apply_effect(0.5, WEAKEN)
