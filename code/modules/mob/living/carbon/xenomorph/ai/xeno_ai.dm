@@ -84,7 +84,6 @@
 			resting = FALSE
 			if(prob(5))
 				emote("hiss")
-			return TRUE
 
 	a_intent = INTENT_HARM
 
@@ -162,7 +161,7 @@
 	if(!path)
 		no_path_found = TRUE
 
-/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range, list/ignore = list())
+/mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range)
 	if(!T)
 		return FALSE
 
@@ -172,7 +171,7 @@
 
 	if(!current_path || (next_path_generation < world.time && current_target_turf != T))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
-			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target) + ignore)
+			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
 		next_path_generation = world.time + path_update_period
 

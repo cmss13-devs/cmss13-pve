@@ -112,7 +112,7 @@
 	else
 		button.color = rgb(255,255,255,255)
 
-/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/X, delta_time)
+/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	return PROCESS_KILL
 

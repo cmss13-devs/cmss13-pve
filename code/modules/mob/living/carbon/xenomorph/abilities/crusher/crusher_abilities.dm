@@ -51,10 +51,9 @@
 	var/windup_duration = 1.5 SECONDS
 
 	default_ai_action = TRUE
-	var/prob_chance = 80
 
 /datum/action/xeno_action/onclick/crusher_stomp/process_ai(mob/living/carbon/xenomorph/X, delta_time)
-	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) >= distance - 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
+	if(!DT_PROB(ai_prob_chance, delta_time) || get_dist(X, X.current_target) >= distance - 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
 		return
 
 	use_ability_async()
@@ -86,14 +85,13 @@
 	slowdown = 8
 
 	default_ai_action = TRUE
-	var/prob_chance = 60
+	ai_prob_chance = 60
 
 /datum/action/xeno_action/activable/fling/charger/process_ai(mob/living/carbon/xenomorph/X, delta_time)
-	if(!DT_PROB(prob_chance, delta_time) || get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
+	if(!DT_PROB(ai_prob_chance, delta_time) || get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
 		return
 
 	use_ability_async(X.current_target)
-
 
 /datum/action/xeno_action/onclick/charger_charge
 	name = "Toggle Charging"
@@ -102,6 +100,9 @@
 	macro_path = /datum/action/xeno_action/verb/verb_crusher_toggle_charging
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_1
+
+	default_ai_action = TRUE
+	ai_prob_chance = 50
 
 	// Config vars
 	var/max_momentum = 8
@@ -127,7 +128,98 @@
 	/// Dictates speed and damage dealt via collision, increased with movement
 	var/momentum = 0
 
+#define MIN_TARGETS_TO_CHARGE 3
+#define FLOCK_SCAN_RADIUS 3
+#define MINIMUM_CHARGE_DISTANCE 3
+#define MAXIMUM_TARGET_DISTANCE 12
 
+/datum/action/xeno_action/onclick/charger_charge/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
+	if(!DT_PROB(ai_prob_chance, delta_time) || !isnull(charge_dir) || processing_xeno.action_busy)
+		return
+
+	var/turf/xeno_turf = get_turf(processing_xeno)
+
+	if(!xeno_turf)
+		return
+
+	var/list/possible_charge_dirs = list()
+
+	for(var/mob/living/carbon/human/base_checked_human as anything in GLOB.alive_human_list)
+		var/distance_between_base_human_and_xeno = get_dist(processing_xeno, base_checked_human)
+
+		if(distance_between_base_human_and_xeno > MAXIMUM_TARGET_DISTANCE)
+			continue
+
+		if(distance_between_base_human_and_xeno < MINIMUM_CHARGE_DISTANCE)
+			continue
+
+		if(!processing_xeno.check_mob_target(base_checked_human))
+			continue
+
+		var/secondary_count = 0
+		var/secondary_x_sum = 0
+		var/secondary_y_sum = 0
+
+		for(var/mob/living/carbon/human/secondary_checked_human in range(FLOCK_SCAN_RADIUS, base_checked_human))
+			if(!processing_xeno.check_mob_target(secondary_checked_human))
+				continue
+
+			secondary_count++
+			secondary_x_sum += secondary_checked_human.x
+			secondary_y_sum += secondary_checked_human.y
+
+		if(secondary_count < MIN_TARGETS_TO_CHARGE)
+			continue
+
+		var/x_middle = round(secondary_x_sum / secondary_count)
+		var/y_middle = round(secondary_y_sum / secondary_count)
+
+		if((abs(x_middle - processing_xeno.x) > 1) && (abs(y_middle - processing_xeno.y) > 1))
+			continue
+
+		var/turf/potential_charge_turf = locate(x_middle, y_middle, processing_xeno.z)
+
+		var/distance_between_potential_charge_turf_and_xeno = get_dist(potential_charge_turf, processing_xeno)
+
+		if(distance_between_potential_charge_turf_and_xeno < MINIMUM_CHARGE_DISTANCE)
+			continue
+
+		var/cardinal_dir_to_potential_charge_turf = get_cardinal_dir(processing_xeno, potential_charge_turf)
+
+		var/list/turf/turfs_to_check = getline2(xeno_turf, get_angle_target_turf(xeno_turf, cardinal_dir_to_potential_charge_turf, MINIMUM_CHARGE_DISTANCE), FALSE)
+
+		var/blocked = FALSE
+		var/turf/previous_turf = xeno_turf
+
+		for(var/turf/checked_turf in turfs_to_check)
+			var/list/ignore = list()
+
+			for(var/mob/mob_blocker in checked_turf)
+				ignore += mob_blocker
+
+			if(LinkBlocked(processing_xeno, previous_turf, checked_turf, ignore))
+				blocked = TRUE
+				break
+
+			previous_turf = checked_turf
+
+		if(blocked)
+			continue
+
+		possible_charge_dirs += cardinal_dir_to_potential_charge_turf
+
+	if(!length(possible_charge_dirs))
+		return
+
+	charge_dir = pick(possible_charge_dirs)
+
+	last_charge_move = world.time
+	use_ability_async()
+
+#undef MIN_TARGETS_TO_CHARGE
+#undef FLOCK_SCAN_RADIUS
+#undef MINIMUM_CHARGE_DISTANCE
+#undef MAXIMUM_TARGET_DISTANCE
 
 /datum/action/xeno_action/onclick/charger_charge/proc/handle_movement(mob/living/carbon/xenomorph/Xeno, atom/oldloc, dir, forced)
 	SIGNAL_HANDLER
@@ -241,6 +333,7 @@
 
 	REMOVE_TRAIT(Xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
 	SEND_SIGNAL(Xeno, COMSIG_XENO_STOPPED_CHARGING)
+	charge_dir = null
 	steps_taken = 0
 	momentum = 0
 	Xeno.recalculate_speed()
