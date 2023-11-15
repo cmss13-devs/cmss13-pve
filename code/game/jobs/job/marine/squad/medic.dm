@@ -71,8 +71,8 @@ AddTimelock(/datum/job/marine/medic, list(
 	squad = SQUAD_MARINE_4
 
 /datum/job/marine/medic/ai
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 
 /datum/job/marine/medic/ai/set_spawn_positions(count)
 	return spawn_positions
