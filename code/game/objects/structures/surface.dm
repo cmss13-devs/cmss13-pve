@@ -2,19 +2,19 @@
 /obj/structure/surface
 	health = 100
 
-/obj/structure/surface/attackby(obj/item/W, mob/user, click_data)
-	if(!user.drop_inv_item_to_loc(W, loc))
+/obj/structure/surface/attackby(obj/item/attacking_item, mob/user, click_data)
+	if(!user.drop_inv_item_to_loc(attacking_item, loc))
 		return
 
-	auto_align(W, click_data)
+	auto_align(attacking_item, click_data)
 	user.next_move = world.time + 2
 	return TRUE
 
-/obj/structure/surface/proc/auto_align(obj/item/W, click_data)
-	if(!W.center_of_mass) // Clothing, material stacks, generally items with large sprites where exact placement would be unhandy.
-		W.pixel_x = rand(-W.randpixel, W.randpixel)
-		W.pixel_y = rand(-W.randpixel, W.randpixel)
-		W.pixel_z = 0
+/obj/structure/surface/proc/auto_align(obj/item/new_item, click_data)
+	if(!new_item.center_of_mass) // Clothing, material stacks, generally items with large sprites where exact placement would be unhandy.
+		new_item.pixel_x = rand(-new_item.randpixel, new_item.randpixel)
+		new_item.pixel_y = rand(-new_item.randpixel, new_item.randpixel)
+		new_item.pixel_z = 0
 		return
 
 	if(!click_data)
@@ -30,8 +30,8 @@
 	var/cell_x = Clamp(round(mouse_x/CELLSIZE), 0, CELLS-1) // Ranging from 0 to CELLS-1
 	var/cell_y = Clamp(round(mouse_y/CELLSIZE), 0, CELLS-1)
 
-	var/list/center = cached_key_number_decode(W.center_of_mass)
+	var/list/center = cached_key_number_decode(new_item.center_of_mass)
 
-	W.pixel_x = (CELLSIZE * (cell_x + 0.5)) - center["x"]
-	W.pixel_y = (CELLSIZE * (cell_y + 0.5)) - center["y"]
-	W.pixel_z = 0
+	new_item.pixel_x = (CELLSIZE * (cell_x + 0.5)) - center["x"]
+	new_item.pixel_y = (CELLSIZE * (cell_y + 0.5)) - center["y"]
+	new_item.pixel_z = 0
