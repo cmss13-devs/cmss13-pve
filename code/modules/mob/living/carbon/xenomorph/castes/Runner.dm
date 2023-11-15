@@ -71,10 +71,10 @@
 	var/linger_deviation = 1
 	var/pull_direction
 
-/mob/living/carbon/xenomorph/runner/initialize_pass_flags(datum/pass_flags_container/PF)
+/mob/living/carbon/xenomorph/runner/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
 	..()
-	if (PF)
-		PF.flags_pass |= PASS_FLAGS_CRAWLER
+	if (pass_flags_container)
+		pass_flags_container.flags_pass |= PASS_FLAGS_CRAWLER
 
 /mob/living/carbon/xenomorph/runner/launch_towards(datum/launch_metadata/LM)
 	if(!current_target)
