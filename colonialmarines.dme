@@ -2448,4 +2448,5 @@
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
 #include "void-marines\code\rasputin.dm"
+#include "void-marines\code\reserve_role.dm"
 // END_INCLUDE

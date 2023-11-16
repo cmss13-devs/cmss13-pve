@@ -23,6 +23,7 @@
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
+		/datum/job/civilian/reserve = JOB_RESERVE
 	)
 
 	static_comms_amount = 0

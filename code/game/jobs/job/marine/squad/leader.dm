@@ -1,6 +1,5 @@
 
-#define SSGT_VARIANT "Staff Sergeant"
-#define GYSGT_VARIANT "Gunnery Sergeant"
+#define SGT_VARIANT "Sergeant"
 
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
@@ -11,13 +10,7 @@
 	gear_preset = /datum/equipment_preset/uscm/leader
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your squad.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way."
 
-	job_options = list(GYSGT_VARIANT = "GYSGT", SSGT_VARIANT = "SSGT")
-
-/datum/job/marine/leader/handle_job_options(option)
-	if(option != GYSGT_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm/leader/lesser_rank
-	else
-		gear_preset = /datum/equipment_preset/uscm/leader
+	job_options = list(SGT_VARIANT = "SGT")
 
 /datum/job/marine/leader/whiskey
 	title = JOB_WO_SQUAD_LEADER
@@ -53,5 +46,4 @@ AddTimelock(/datum/job/marine/leader, list(
 	total_positions = 1
 	spawn_positions = 1
 
-#undef SSGT_VARIANT
-#undef GYSGT_VARIANT
+#undef SGT_VARIANT

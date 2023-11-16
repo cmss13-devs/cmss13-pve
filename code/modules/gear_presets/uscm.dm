@@ -103,7 +103,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	assignment = JOB_SQUAD_SMARTGUN
 	rank = JOB_SQUAD_SMARTGUN
-	paygrade = "ME4"
+	paygrade = "ME3"
 	role_comm_title = "SG"
 	skills = /datum/skills/smartgunner
 
@@ -213,7 +213,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	assignment = JOB_SQUAD_SPECIALIST
 	rank = JOB_SQUAD_SPECIALIST
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "Spc"
 	skills = /datum/skills/specialist
 
@@ -305,8 +305,8 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
-	paygrade = "ME5"
-	role_comm_title = "SqSgt"
+	paygrade = "ME4"
+	role_comm_title = "FTL"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
@@ -335,7 +335,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
 
@@ -367,8 +367,8 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	paygrade = "ME5"
+	role_comm_title = "PltSGT"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -390,7 +390,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/lead(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/leader/lesser_rank
-	paygrade = "ME6"
+	paygrade = "ME4"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
@@ -450,8 +450,8 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	paygrade = "ME5"
+	role_comm_title = "PltSGT"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -529,7 +529,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
 
@@ -629,7 +629,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	assignment = JOB_SQUAD_SPECIALIST
 	rank = JOB_SQUAD_SPECIALIST
-	paygrade = "ME3"
+	paygrade = "ME4"
 	role_comm_title = "Spc"
 	skills = /datum/skills/specialist
 
@@ -699,8 +699,8 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
-	paygrade = "ME5"
-	role_comm_title = "SqSgt"
+	paygrade = "ME4"
+	role_comm_title = "FTL"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
