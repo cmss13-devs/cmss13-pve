@@ -111,17 +111,17 @@
 
 	apply_cooldown()
 
-	xeno_owner.frozen = TRUE
+	ADD_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 	xeno_owner.anchored = TRUE
 	xeno_owner.update_canmove()
 
 	if (!do_after(xeno_owner, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
-		xeno_owner.frozen = FALSE
+		REMOVE_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 		xeno_owner.anchored = FALSE
 		xeno_owner.update_canmove()
 		return
 
-	xeno_owner.frozen = FALSE
+	REMOVE_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 	xeno_owner.anchored = FALSE
 	xeno_owner.update_canmove()
 
