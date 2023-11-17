@@ -19,6 +19,9 @@
 	should_destroy_objects = TRUE
 	throw_speed = SPEED_FAST
 	tracks_target = FALSE
+
+	default_ai_action = FALSE
+
 	var/direct_hit_damage = 60
 	var/frontal_armor = 15
 	// Object types that dont reduce cooldown when hit
@@ -44,21 +47,16 @@
 
 	var/damage = 65
 
-	var/distance = 2
-	var/effect_type_base = /datum/effects/xeno_slow/superslow
-	var/effect_duration = 10
+	var/distance = 4
+	var/windup_duration = 1.5 SECONDS
 
-/datum/action/xeno_action/onclick/crusher_stomp/charger
-	name = "Crush"
-	action_icon_state = "stomp"
-	macro_path = /datum/action/xeno_action/verb/verb_crusher_charger_stomp
-	action_type = XENO_ACTION_CLICK
-	ability_primacy = XENO_PRIMARY_ACTION_3
-	plasma_cost = 25
-	damage = 75
-	distance = 3
-	xeno_cooldown = 12 SECONDS
+	default_ai_action = TRUE
 
+/datum/action/xeno_action/onclick/crusher_stomp/process_ai(mob/living/carbon/xenomorph/X, delta_time)
+	if(!DT_PROB(ai_prob_chance, delta_time) || get_dist(X, X.current_target) >= distance - 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
+		return
+
+	use_ability_async()
 
 /datum/action/xeno_action/onclick/crusher_shield
 	name = "Defensive Shield"
@@ -86,6 +84,14 @@
 	weaken_power = 0
 	slowdown = 8
 
+	default_ai_action = TRUE
+	ai_prob_chance = 60
+
+/datum/action/xeno_action/activable/fling/charger/process_ai(mob/living/carbon/xenomorph/X, delta_time)
+	if(!DT_PROB(ai_prob_chance, delta_time) || get_dist(X, X.current_target) > 1 || HAS_TRAIT(X, TRAIT_CHARGING) || X.action_busy)
+		return
+
+	use_ability_async(X.current_target)
 
 /datum/action/xeno_action/onclick/charger_charge
 	name = "Toggle Charging"
@@ -95,11 +101,14 @@
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_1
 
+	default_ai_action = TRUE
+	ai_prob_chance = 40
+
 	// Config vars
 	var/max_momentum = 8
-	var/steps_to_charge = 4
-	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5 + XENO_SPEED_FASTMOD_TIER_1//2
-	var/plasma_per_step = 3 // charger has 400 plasma atm, this gives a good 100 tiles of crooshing
+	var/steps_to_charge = 3
+	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5//2.2
+	var/plasma_per_step = 0
 
 	// State vars
 	var/activated = FALSE
@@ -119,29 +128,120 @@
 	/// Dictates speed and damage dealt via collision, increased with movement
 	var/momentum = 0
 
+#define MIN_TARGETS_TO_CHARGE 2
+#define FLOCK_SCAN_RADIUS 3
+#define MINIMUM_CHARGE_DISTANCE 3
+#define MAXIMUM_TARGET_DISTANCE 12
 
+/datum/action/xeno_action/onclick/charger_charge/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
+	if(!DT_PROB(ai_prob_chance, delta_time) || !isnull(charge_dir) || processing_xeno.action_busy)
+		return
 
-/datum/action/xeno_action/onclick/charger_charge/proc/handle_movement(mob/living/carbon/xenomorph/Xeno, atom/oldloc, dir, forced)
+	var/turf/xeno_turf = get_turf(processing_xeno)
+
+	if(!xeno_turf)
+		return
+
+	var/list/possible_charge_dirs = list()
+
+	for(var/mob/living/carbon/human/base_checked_human as anything in GLOB.alive_human_list)
+		var/distance_between_base_human_and_xeno = get_dist(processing_xeno, base_checked_human)
+
+		if(distance_between_base_human_and_xeno > MAXIMUM_TARGET_DISTANCE)
+			continue
+
+		if(distance_between_base_human_and_xeno < MINIMUM_CHARGE_DISTANCE)
+			continue
+
+		if(!processing_xeno.check_mob_target(base_checked_human))
+			continue
+
+		var/secondary_count = 0
+		var/secondary_x_sum = 0
+		var/secondary_y_sum = 0
+
+		for(var/mob/living/carbon/human/secondary_checked_human in range(FLOCK_SCAN_RADIUS, base_checked_human))
+			if(!processing_xeno.check_mob_target(secondary_checked_human))
+				continue
+
+			secondary_count++
+			secondary_x_sum += secondary_checked_human.x
+			secondary_y_sum += secondary_checked_human.y
+
+		if(secondary_count < MIN_TARGETS_TO_CHARGE)
+			continue
+
+		var/x_middle = round(secondary_x_sum / secondary_count)
+		var/y_middle = round(secondary_y_sum / secondary_count)
+
+		if((abs(x_middle - processing_xeno.x) > 1) && (abs(y_middle - processing_xeno.y) > 1))
+			continue
+
+		var/turf/potential_charge_turf = locate(x_middle, y_middle, processing_xeno.z)
+
+		var/distance_between_potential_charge_turf_and_xeno = get_dist(potential_charge_turf, processing_xeno)
+
+		if(distance_between_potential_charge_turf_and_xeno < MINIMUM_CHARGE_DISTANCE)
+			continue
+
+		var/cardinal_dir_to_potential_charge_turf = get_cardinal_dir(processing_xeno, potential_charge_turf)
+
+		var/list/turf/turfs_to_check = getline2(xeno_turf, get_angle_target_turf(xeno_turf, cardinal_dir_to_potential_charge_turf, MINIMUM_CHARGE_DISTANCE), FALSE)
+
+		var/blocked = FALSE
+		var/turf/previous_turf = xeno_turf
+
+		for(var/turf/checked_turf in turfs_to_check)
+			var/list/ignore = list()
+
+			for(var/mob/mob_blocker in checked_turf)
+				ignore += mob_blocker
+
+			if(LinkBlocked(processing_xeno, previous_turf, checked_turf, ignore))
+				blocked = TRUE
+				break
+
+			previous_turf = checked_turf
+
+		if(blocked)
+			continue
+
+		possible_charge_dirs += cardinal_dir_to_potential_charge_turf
+
+	if(!length(possible_charge_dirs))
+		return
+
+	charge_dir = pick(possible_charge_dirs)
+
+	last_charge_move = world.time
+	use_ability_async()
+
+#undef MIN_TARGETS_TO_CHARGE
+#undef FLOCK_SCAN_RADIUS
+#undef MINIMUM_CHARGE_DISTANCE
+#undef MAXIMUM_TARGET_DISTANCE
+
+/datum/action/xeno_action/onclick/charger_charge/proc/handle_movement(mob/living/carbon/xenomorph/xeno, atom/oldloc, dir, forced)
 	SIGNAL_HANDLER
-	if(Xeno.pulling)
+	if(xeno.pulling)
 		if(!momentum)
 			steps_taken = 0
 			return
 		else
-			Xeno.stop_pulling()
+			xeno.stop_pulling()
 
-	if(Xeno.is_mob_incapacitated())
+	if(xeno.is_mob_incapacitated())
 		if(!momentum)
 			return
-		var/lol = get_ranged_target_turf(Xeno, charge_dir, momentum/2)
-		INVOKE_ASYNC(Xeno, TYPE_PROC_REF(/atom/movable, throw_atom), lol, momentum/2, SPEED_FAST, null, TRUE)
+		var/lol = get_ranged_target_turf(xeno, charge_dir, momentum/2)
+		INVOKE_ASYNC(xeno, TYPE_PROC_REF(/atom/movable, throw_atom), lol, momentum/2, SPEED_FAST, null, TRUE)
 		stop_momentum()
 		return
-	if(!isturf(Xeno.loc))
+	if(!isturf(xeno.loc))
 		stop_momentum()
 		return
 	// Don't build up charge if you move via getting propelled by something
-	if(Xeno.throwing)
+	if(xeno.throwing)
 		stop_momentum()
 		return
 
@@ -156,7 +256,7 @@
 
 	if(do_stop_momentum)
 		stop_momentum()
-	if(Xeno.plasma_stored <= plasma_per_step)
+	if(xeno.plasma_stored <= plasma_per_step)
 		stop_momentum()
 		return
 	last_charge_move = world.time
@@ -165,34 +265,49 @@
 		return
 	if(momentum < max_momentum)
 		momentum++
-		ADD_TRAIT(Xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
-		Xeno.update_icons()
+		ADD_TRAIT(xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
+		xeno.update_icons()
 		if(momentum == max_momentum)
-			Xeno.emote("roar")
+			xeno.emote("roar")
 	//X.use_plasma(plasma_per_step) // take if you are in toggle charge mode
 	if(momentum > 0)
-		Xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
+		xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
 
 	noise_timer = noise_timer ? --noise_timer : 3
 	if(noise_timer == 3)
-		playsound(Xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
+		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
 
-	for(var/mob/living/carbon/human/Mob in Xeno.loc)
+		for(var/mob/living/carbon/human/Mob in range(10, xeno))
+			shake_camera(Mob, 2, 1)
+
+	for(var/mob/living/carbon/human/Mob in xeno.loc)
 		if(Mob.lying && Mob.stat != DEAD)
-			Xeno.visible_message(SPAN_DANGER("[Xeno] runs [Mob] over!"),
+			xeno.visible_message(SPAN_DANGER("[xeno] runs [Mob] over!"),
 				SPAN_DANGER("You run [Mob] over!")
 			)
-			var/ram_dir = pick(get_perpen_dir(Xeno.dir))
+			var/ram_dir = pick(get_perpen_dir(xeno.dir))
 			var/dist = 1
 			if(momentum == max_momentum)
 				dist = momentum * 0.25
 			step(Mob, ram_dir, dist)
-			Mob.take_overall_armored_damage(momentum * 6)
+			Mob.take_overall_armored_damage(momentum * 8)
 			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon/human, emote),"pain")
-			shake_camera(Mob, 7,3)
+			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
 
-	Xeno.recalculate_speed()
+	if(momentum >= 5)
+		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
+			if(hit_human.knocked_down)
+				continue
+
+			shake_camera(hit_human, 4, 2)
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
+			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
+			hit_human.take_overall_armored_damage(momentum * 4)
+			hit_human.apply_effect(0.5, WEAKEN)
+			animation_flash_color(hit_human)
+
+	xeno.recalculate_speed()
 
 /datum/action/xeno_action/onclick/charger_charge/proc/handle_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
@@ -217,6 +332,8 @@
 		Xeno.visible_message(SPAN_DANGER("[Xeno] skids to a halt!"))
 
 	REMOVE_TRAIT(Xeno, TRAIT_CHARGING, TRAIT_SOURCE_XENO_ACTION_CHARGE)
+	SEND_SIGNAL(Xeno, COMSIG_XENO_STOPPED_CHARGING)
+	charge_dir = null
 	steps_taken = 0
 	momentum = 0
 	Xeno.recalculate_speed()

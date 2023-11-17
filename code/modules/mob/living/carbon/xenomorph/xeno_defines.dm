@@ -101,7 +101,7 @@
 	var/caste_luminosity = 0
 
 	/// if fire_immunity is set to be vulnerable, how much will fire damage be multiplied. Defines in xeno.dm
-	var/fire_vulnerability_mult = 0
+	var/fire_vulnerability_mult = 1
 
 	var/burrow_cooldown = 5 SECONDS
 	var/tunnel_cooldown = 100
