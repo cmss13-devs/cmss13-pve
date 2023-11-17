@@ -1381,6 +1381,8 @@
 #include "code\modules\admin\game_master\game_master_submenu.dm"
 #include "code\modules\admin\game_master\extra_buttons\rename_platoon.dm"
 #include "code\modules\admin\game_master\extra_buttons\toggle_join_xeno.dm"
+#include "code\modules\admin\game_master\game_master_submenu\ambush.dm"
+#include "code\modules\admin\game_master\game_master_submenu\tunnels.dm"
 #include "code\modules\admin\game_master\game_master_submenu\vents.dm"
 #include "code\modules\admin\medal_panel\medals_panel.dm"
 #include "code\modules\admin\medal_panel\medals_panel_tgui.dm"
