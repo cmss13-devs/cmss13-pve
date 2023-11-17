@@ -102,7 +102,7 @@
 	ability_primacy = XENO_PRIMARY_ACTION_1
 
 	default_ai_action = TRUE
-	ai_prob_chance = 50
+	ai_prob_chance = 40
 
 	// Config vars
 	var/max_momentum = 8
@@ -128,7 +128,7 @@
 	/// Dictates speed and damage dealt via collision, increased with movement
 	var/momentum = 0
 
-#define MIN_TARGETS_TO_CHARGE 3
+#define MIN_TARGETS_TO_CHARGE 2
 #define FLOCK_SCAN_RADIUS 3
 #define MINIMUM_CHARGE_DISTANCE 3
 #define MAXIMUM_TARGET_DISTANCE 12
@@ -297,6 +297,9 @@
 
 	if(momentum >= 5)
 		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
+			if(hit_human.knocked_down)
+				continue
+
 			shake_camera(hit_human, 4, 2)
 			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
 			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))

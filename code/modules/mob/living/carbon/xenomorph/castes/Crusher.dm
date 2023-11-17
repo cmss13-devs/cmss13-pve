@@ -25,7 +25,7 @@
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_WARRIOR)
 	caste_desc = "A huge tanky xenomorph."
-	fire_intensity_resistance = 10
+	fire_intensity_resistance = 20
 	fire_vulnerability_mult = 0.25
 
 	minimap_icon = "crusher"
@@ -73,7 +73,7 @@
 	icon_xeno = 'icons/mob/xenos/crusher.dmi'
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
 
-	ai_range = 28
+	ai_range = 24
 	forced_retarget_time = (3 SECONDS)
 
 /mob/living/carbon/xenomorph/crusher/init_movement_handler()
