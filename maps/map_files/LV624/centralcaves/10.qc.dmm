@@ -26,10 +26,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
-"ae" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/central_caves)
 "af" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/central_caves)
@@ -63,12 +59,6 @@
 /area/lv624/ground/barrens/north_east_barrens)
 "al" = (
 /turf/closed/wall/rock/brown,
-/area/lv624/ground/caves/south_central_caves)
-"am" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
-/turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
 "an" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
@@ -119,10 +109,6 @@
 "aw" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/south_central_caves)
-"ax" = (
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
 "ay" = (
@@ -222,15 +208,6 @@
 	pixel_y = 13
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/lv624/ground/caves/south_central_caves)
-"aO" = (
-/obj/effect/landmark/hunter_primary,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/south_central_caves)
-"aP" = (
-/obj/effect/landmark/structure_spawner/xvx_hive/xeno_membrane,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_membrane,
-/turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
 "aQ" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
@@ -503,7 +480,7 @@ av
 aA
 az
 aC
-ax
+aC
 al
 al
 "}
