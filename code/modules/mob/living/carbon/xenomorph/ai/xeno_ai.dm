@@ -84,7 +84,6 @@
 			resting = FALSE
 			if(prob(5))
 				emote("hiss")
-			return TRUE
 
 	a_intent = INTENT_HARM
 
@@ -327,7 +326,7 @@
 	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
 		return FALSE
 
-	if(FACTION_XENOMORPH in checked_human.faction_group)
+	if(can_not_harm(checked_human))
 		return FALSE
 
 	if(checked_human.stat != CONSCIOUS)

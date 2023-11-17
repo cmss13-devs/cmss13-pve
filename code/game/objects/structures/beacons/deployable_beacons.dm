@@ -20,11 +20,13 @@
 
 	visible_message(SPAN_NOTICE("[src] beeps quietly as it begins broadcasting preprogrammed signals."))
 
+	set_light(2, 1, beacon_light_color)
+
 	for(var/client/admin_client in GLOB.admins)
 		if((R_ADMIN|R_MOD) & admin_client.admin_holder.rights)
 			playsound_client(admin_client,'sound/effects/sos-morse-code.ogg',10)
 
-	message_admins("[key_name(user)] has deployed [src]! [ADMIN_JMP_USER(user)]")
+	message_admins("[key_name(user)] has deployed [src]! [ADMIN_JMP(src)]")
 
 /obj/structure/deployable_beacon/attackby(obj/item/attacking_item, mob/user)
 	if(!HAS_TRAIT(attacking_item, TRAIT_TOOL_MULTITOOL))
@@ -39,7 +41,18 @@
 	visible_message(SPAN_NOTICE("[src] gives a drone as it powers down and collapses into itself for easier carrying."))
 
 	var/obj/item/deployable_beacon/undeployed_beacon = new beacon_type()
-	transfer_label_component(undeployed_beacon)
+
+	var/datum/component/label/src_label_component = GetComponent(/datum/component/label)
+	var/label_text
+	if(src_label_component)
+		label_text = src_label_component.label_name
+		src_label_component.remove_label()
+
+	undeployed_beacon.name = name
+	undeployed_beacon.desc = desc
+
+	if(label_text)
+		undeployed_beacon.AddComponent(/datum/component/label, label_text)
 
 	user.put_in_hands(undeployed_beacon)
 

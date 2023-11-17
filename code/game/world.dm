@@ -71,8 +71,6 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 		RoleAuthority = new /datum/authority/branch/role()
 		to_world(SPAN_DANGER("\b Job setup complete"))
 
-	if(!EvacuationAuthority) EvacuationAuthority = new
-
 	initiate_minimap_icons()
 
 	change_tick_lag(CONFIG_GET(number/ticklag))
@@ -172,11 +170,6 @@ var/world_topic_spam_protect_time = world.timeofday
 	if(length(T) > CONFIG_GET(number/topic_max_size))
 		response["statuscode"] = 413
 		response["response"] = "Payload too large"
-		return json_encode(response)
-
-	if(SSfail_to_topic?.IsRateLimited(addr))
-		response["statuscode"] = 429
-		response["response"] = "Rate limited"
 		return json_encode(response)
 
 	var/logging = CONFIG_GET(flag/log_world_topic)

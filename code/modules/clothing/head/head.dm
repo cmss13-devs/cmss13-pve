@@ -99,9 +99,6 @@
 	if(istype(H))
 		if(H.assigned_squad)
 			switch(H.assigned_squad.name)
-				if(SQUAD_MARINE_1)
-					icon_state = "beret_alpha"
-					desc = "Often found atop heads, slightly less found on those still attached."
 				if(SQUAD_MARINE_2)
 					icon_state = "beret_bravo"
 					desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
@@ -120,6 +117,10 @@
 				if(SQUAD_MARINE_INTEL)
 					icon_state = "beret_intel"
 					desc = "Looks more intellegent than the person wearing it."
+
+			if(H.assigned_squad.name == GLOB.main_platoon_name)
+				icon_state = "beret_alpha"
+				desc = "Often found atop heads, slightly less found on those still attached."
 		else
 			icon_state = "beret"
 			desc = initial(desc)
@@ -193,7 +194,7 @@
 	return ..()
 
 /obj/item/clothing/head/headband/squad/proc/adapt_to_squad()
-	var/squad_color = "gray"
+	var/squad_color = "Delta"
 	var/mob/living/carbon/human/wearer = recursive_holder_check(src)
 	if(istype(wearer) && wearer.assigned_squad)
 		var/squad_name = lowertext(wearer.assigned_squad.name)

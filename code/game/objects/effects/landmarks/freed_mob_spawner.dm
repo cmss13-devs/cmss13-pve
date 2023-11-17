@@ -6,7 +6,7 @@
 
 /obj/effect/landmark/freed_mob_spawner/Initialize()
 	. = ..()
-	spawn_freed_mob()
+	INVOKE_ASYNC(src, PROC_REF(spawn_freed_mob))
 	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/freed_mob_spawner/Destroy()

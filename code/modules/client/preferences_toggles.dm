@@ -439,11 +439,10 @@
 		to_chat(src, SPAN_NOTICE("You will [atmospheric_toggle ? "now" : "no longer"] hear atmospheric admin sounds."))
 
 /client/proc/receive_random_tip()
-	var/picked_type = tgui_alert(src, "What kind of tip?", "Tip Type", list("Marine", "Xenomorph", "Meta")) //no memetips for them joker imp
+	var/picked_type = tgui_alert(src, "What kind of tip?", "Tip Type", list("Marine", "Meta")) //no memetips for them joker imp
 	var/message
 	var/static/list/types_to_pick = list(
 		"Marine" = "strings/marinetips.txt",
-		"Xenomorph" = "strings/xenotips.txt",
 		"Meta" = "strings/metatips.txt"
 	)
 	var/list/tip_list = file2list(types_to_pick[picked_type])

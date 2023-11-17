@@ -49,10 +49,21 @@
 	if(!do_after(user, (1 SECONDS), INTERRUPT_ALL, BUSY_ICON_BUILD, src))
 		return
 
-	playsound(deploying_turf, 'sound/mecha/mechmove01.ogg', 30, 1)
+	playsound(deploying_turf, 'sound/machines/beacon_activated.ogg')
 
 	var/obj/structure/deployable_beacon/deployed_beacon = new beacon_type(get_turf(src), user)
-	transfer_label_component(deployed_beacon)
+
+	var/datum/component/label/src_label_component = GetComponent(/datum/component/label)
+	var/label_text
+	if(src_label_component)
+		label_text = src_label_component.label_name
+		src_label_component.remove_label()
+
+	deployed_beacon.name = name
+	deployed_beacon.desc = desc
+
+	if(label_text)
+		deployed_beacon.AddComponent(/datum/component/label, label_text)
 
 	qdel(src)
 

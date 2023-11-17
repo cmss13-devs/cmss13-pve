@@ -2,25 +2,25 @@ import { useBackend } from '../backend';
 import { Stack, Dropdown, Button, Section } from '../components';
 import { Window } from '../layouts';
 
-export const GameMasterSubmenuVents = (props, context) => {
+export const GameMasterSubmenuAmbush = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
     <Window width={400} height={400}>
       <Window.Content scrollable>
         <Stack direction="column" vertical>
-          <GameMasterSubmenuVentsSpawningPanel />
+          <GameMasterSubmenuAmbushSpawningPanel />
 
-          <GameMasterSubmenuVentsAmbushPanel />
+          <GameMasterSubmenuAmbushAmbushPanel />
 
-          <GameMasterSubmenuVentsMiscPanel />
+          <GameMasterSubmenuAmbushMiscPanel />
         </Stack>
       </Window.Content>
     </Window>
   );
 };
 
-export const GameMasterSubmenuVentsSpawningPanel = (props, context) => {
+export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -64,7 +64,7 @@ export const GameMasterSubmenuVentsSpawningPanel = (props, context) => {
   );
 };
 
-export const GameMasterSubmenuVentsAmbushPanel = (props, context) => {
+export const GameMasterSubmenuAmbushAmbushPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -94,7 +94,7 @@ export const GameMasterSubmenuVentsAmbushPanel = (props, context) => {
   );
 };
 
-export const GameMasterSubmenuVentsMiscPanel = (props, context) => {
+export const GameMasterSubmenuAmbushMiscPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -103,9 +103,9 @@ export const GameMasterSubmenuVentsMiscPanel = (props, context) => {
         <Stack.Item>
           <Button
             middle
-            content="Shake Vent"
+            content="Shake Spawner"
             onClick={() => {
-              act('shake_vent');
+              act('shake_spawner');
             }}
           />
         </Stack.Item>

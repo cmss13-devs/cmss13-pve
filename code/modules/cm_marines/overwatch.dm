@@ -872,18 +872,14 @@
 
 	busy = TRUE
 	C.visible_message(SPAN_WARNING("\The [C] loads into a launch tube. Stand clear!"))
-	C.anchored = TRUE //To avoid accidental pushes
-	current_squad.send_message("'[C.name]' supply drop incoming. Heads up!")
-	current_squad.send_maptext(C.name, "Incoming Supply Drop:")
-	var/datum/squad/S = current_squad //in case the operator changes the overwatched squad mid-drop
-	COOLDOWN_START(S, next_supplydrop, 500 SECONDS)
+	SEND_SIGNAL(C, COMSIG_STRUCTURE_CRATE_SQUAD_LAUNCHED, current_squad)
+	COOLDOWN_START(current_squad, next_supplydrop, 500 SECONDS)
 	if(ismob(usr))
 		var/mob/M = usr
 		M.count_niche_stat(STATISTICS_NICHE_CRATES)
 
 	playsound(C.loc,'sound/effects/bamf.ogg', 50, 1)  //Ehh
-	var/obj/structure/droppod/supply/pod = new()
-	C.forceMove(pod)
+	var/obj/structure/droppod/supply/pod = new(null, C)
 	pod.launch(T)
 	visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("'[C.name]' supply drop launched! Another launch will be available in five minutes.")]")
 	busy = FALSE
@@ -930,6 +926,16 @@
 /obj/structure/supply_drop/alpha
 	icon_state = "alphadrop"
 	squad = SQUAD_MARINE_1
+
+/obj/structure/supply_drop/alpha/Initialize(mapload, ...)
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/obj/structure/supply_drop/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+	SIGNAL_HANDLER
+
+	squad = new_name
 
 /obj/structure/supply_drop/bravo
 	icon_state = "bravodrop"
