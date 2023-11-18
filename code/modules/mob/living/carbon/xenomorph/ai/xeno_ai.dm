@@ -19,6 +19,12 @@
 
 	var/datum/xeno_ai_movement/ai_movement_handler
 
+	/// The time interval before this xeno should forcefully get a new target
+	var/forced_retarget_time = (10 SECONDS)
+
+	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
+	COOLDOWN_DECLARE(forced_retarget_cooldown)
+
 /mob/living/carbon/xenomorph/Destroy()
 	QDEL_NULL(ai_movement_handler)
 	return ..()
@@ -68,8 +74,9 @@
 		var/mob/current_target_mob = current_target
 		stat_check = (current_target_mob.stat != CONSCIOUS)
 
-	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
+	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
+		COOLDOWN_START(src, forced_retarget_cooldown, forced_retarget_time)
 		if(QDELETED(src))
 			return TRUE
 
@@ -77,7 +84,6 @@
 			resting = FALSE
 			if(prob(5))
 				emote("hiss")
-			return TRUE
 
 	a_intent = INTENT_HARM
 

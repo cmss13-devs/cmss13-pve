@@ -22,7 +22,6 @@
 	acid_level = 3
 	caste_luminosity = 2
 	spit_types = list(/datum/ammo/xeno/boiler_gas, /datum/ammo/xeno/boiler_gas/acid)
-	fire_immunity = FIRE_VULNERABILITY
 	// 3x fire damage
 	fire_vulnerability_mult = FIRE_MULTIPLIER_DEADLY
 

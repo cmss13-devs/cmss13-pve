@@ -659,7 +659,7 @@
 
 	M.animation_attack_on(src)
 	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-	update_health(rand(M.melee_damage_lower, M.melee_damage_upper))
+	update_health(rand(M.melee_damage_lower, M.melee_damage_upper) * M.melee_sentry_damage_multiplier)
 	if(health <= 0)
 		M.visible_message(SPAN_DANGER("[M] slices \the [src] apart!"), \
 		SPAN_DANGER("You slice \the [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)

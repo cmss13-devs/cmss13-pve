@@ -20,6 +20,9 @@
 	var/list/flags_pass_temp
 	var/list/temp_flag_counter
 
+	var/list/flags_pass_temp_negative
+	var/list/negative_temp_flag_counter
+
 	// Temporary flags for what can pass through an atom
 	var/list/flags_can_pass_all_temp
 	var/list/flags_can_pass_front_temp
@@ -412,10 +415,11 @@ Parameters are passed from New.
 /atom/clone
 	var/proj_x = 0
 	var/proj_y = 0
+	var/proj_z = 0
 
-/atom/proc/create_clone(shift_x, shift_y) //NOTE: Use only for turfs, otherwise use create_clone_movable
+/atom/proc/create_clone(shift_x, shift_y, shift_z) //NOTE: Use only for turfs, otherwise use create_clone_movable
 	var/turf/T = null
-	T = locate(src.x + shift_x, src.y + shift_y, src.z)
+	T = locate(src.x + shift_x, src.y + shift_y, src.z + shift_z)
 
 	T.appearance = src.appearance
 	T.setDir(src.dir)
@@ -459,6 +463,34 @@ Parameters are passed from New.
 			if (temp_flag_counter[flag_str] == 0)
 				temp_flag_counter -= flag_str
 				flags_pass_temp &= ~flag
+
+/atom/proc/add_temp_negative_pass_flags(flags_to_add)
+	if (isnull(negative_temp_flag_counter))
+		negative_temp_flag_counter = list()
+
+	for (var/flag in GLOB.bitflags)
+		if(!(flags_to_add & flag))
+			continue
+		var/flag_str = "[flag]"
+		if (negative_temp_flag_counter[flag_str])
+			negative_temp_flag_counter[flag_str]++
+		else
+			negative_temp_flag_counter[flag_str] = 1
+			flags_pass_temp_negative |= flag
+
+/atom/proc/remove_temp_negative_pass_flags(flags_to_remove)
+	if (isnull(negative_temp_flag_counter))
+		return
+
+	for (var/flag in GLOB.bitflags)
+		if(!(flags_to_remove & flag))
+			continue
+		var/flag_str = "[flag]"
+		if (negative_temp_flag_counter[flag_str])
+			negative_temp_flag_counter[flag_str]--
+			if (negative_temp_flag_counter[flag_str] == 0)
+				negative_temp_flag_counter -= flag_str
+				flags_pass_temp_negative &= ~flag
 
 // This proc is for initializing pass flags (allows for inheriting pass flags and list-based pass flags)
 /atom/proc/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -724,7 +756,7 @@ Parameters are passed from New.
 		usr.client.cmd_admin_emp(src)
 
 	if(href_list[VV_HK_MODIFY_TRANSFORM] && check_rights(R_VAREDIT))
-		var/result = tgui_input_list(usr, "Choose the transformation to apply","Transform Mod", list("Scale","Translate","Rotate"))
+		var/result = tgui_input_list(usr, "Choose the transformation to apply","Transform Mod", list("Scale","Translate","Rotate", "Reflect X Axis", "Reflect Y Axis"))
 		if(!result)
 			return
 		if(!result)
@@ -750,7 +782,22 @@ Parameters are passed from New.
 					return
 				var/matrix/base_matrix = matrix(base_transform)
 				update_base_transform(base_matrix.Turn(angle))
-
+			if("Reflect X Axis")
+				var/matrix/current = matrix(base_transform)
+				var/matrix/reflector = matrix()
+				reflector.a = -1
+				reflector.d = 0
+				reflector.b = 0
+				reflector.e = 1
+				update_base_transform(current * reflector)
+			if("Reflect Y Axis")
+				var/matrix/current = matrix(base_transform)
+				var/matrix/reflector = matrix()
+				reflector.a = 1
+				reflector.d = 0
+				reflector.b = 0
+				reflector.e = -1
+				update_base_transform(current * reflector)
 		SEND_SIGNAL(src, COMSIG_ATOM_VV_MODIFY_TRANSFORM)
 
 	if(href_list[VV_HK_AUTO_RENAME] && check_rights(R_VAREDIT))

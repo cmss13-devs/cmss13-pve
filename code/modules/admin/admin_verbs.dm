@@ -115,6 +115,7 @@ var/list/admin_verbs_minor_event = list(
 	/datum/admins/proc/force_predator_round, //Force spawns a predator round.
 	/client/proc/adjust_predator_round,
 	/client/proc/cmd_admin_world_narrate, /*sends text to all players with no padding*/
+	/client/proc/cmd_admin_ground_narrate,
 	/client/proc/cmd_admin_atom_narrate,
 	/client/proc/cmd_admin_create_centcom_report, //Messages from USCM command/other factions.
 	/client/proc/cmd_admin_create_predator_report, //Predator ship AI report

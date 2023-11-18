@@ -53,11 +53,11 @@
 
 	playsound(src, "pry", 25, 1)
 	xeno_attack_delay(user)
-	user.freeze()
+	ADD_TRAIT(user, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Acid hole"))
 	if(do_after(user, 60, INTERRUPT_ALL, BUSY_ICON_GENERIC) && !QDELETED(src) && holed_wall && !user.lying && istype(holed_wall))
 		holed_wall.take_damage(rand(2000,3500))
 		user.emote("roar")
-	user.unfreeze()
+	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Acid hole"))
 
 /obj/effect/acid_hole/proc/use_wall_hole(mob/user)
 

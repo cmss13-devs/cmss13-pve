@@ -89,6 +89,16 @@
 			pull_direction &= (EAST|WEST)
 	return ..()
 
+/mob/living/carbon/xenomorph/runner/start_pulling(atom/movable/AM, lunge, no_msg)
+	. = ..()
+
+	add_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
+
+/mob/living/carbon/xenomorph/runner/stop_pulling()
+	. = ..()
+
+	remove_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
+
 /mob/living/carbon/xenomorph/runner/init_movement_handler()
 	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
 	linger_movement.linger_range = linger_range

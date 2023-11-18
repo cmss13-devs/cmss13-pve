@@ -248,6 +248,7 @@
 	var/atom/movable/mstr = null //Used by clones for referral
 	var/proj_x = 0
 	var/proj_y = 0
+	var/proj_z = 0
 	unacidable = TRUE
 
 	var/list/image/hud_list
@@ -275,11 +276,12 @@
 	return src.mstr.bullet_act(P)
 /////////////////////
 
-/atom/movable/proc/create_clone_movable(shift_x, shift_y)
+/atom/movable/proc/create_clone_movable(shift_x, shift_y, shift_z)
 	var/atom/movable/clone/C = new /atom/movable/clone(src.loc)
 	C.density = FALSE
 	C.proj_x = shift_x
 	C.proj_y = shift_y
+	C.proj_z = shift_z
 
 	clones.Add(C)
 	C.mstr = src //Link clone and master
@@ -287,7 +289,7 @@
 
 /atom/movable/proc/update_clone()
 	///---Var-Copy---////
-	clone.forceMove(locate(x + clone.proj_x, y + clone.proj_y, z))
+	clone.forceMove(locate(x + clone.proj_x, y + clone.proj_y, z + clone.proj_z))
 	//Translate clone position by projection factor
 	//This is done first to reduce movement latency
 

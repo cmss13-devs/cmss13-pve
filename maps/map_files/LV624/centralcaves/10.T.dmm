@@ -1,4 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"b" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 10
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"c" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 9
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
 "d" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/caves/central_caves)
@@ -14,16 +26,18 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/central_caves)
-"h" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/gm/dirt,
-/area/lv624/ground/caves/central_caves)
 "i" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
+"j" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/central_caves)
 "k" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -53,44 +67,140 @@
 	icon_state = "warning"
 	},
 /area/lv624/ground/barrens/containers)
+"q" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"t" = (
+/obj/effect/decal/grass_overlay/grass1,
+/turf/open/gm/dirt,
+/area/lv624/ground/barrens/north_east_barrens)
+"u" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/barrens/north_east_barrens)
+"v" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/barrens/north_east_barrens)
 "w" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/west_barrens)
-"z" = (
-/obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/gm/dirt,
+"x" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/amanita,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
+"y" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
+	pixel_x = 2;
+	pixel_y = 7;
+	light_on = 1;
+	light_range = 1;
+	light_system = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/south_central_caves)
 "A" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/central_caves)
+"B" = (
+/obj/effect/landmark/hunter_primary,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"D" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"F" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/south_central_caves)
 "G" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
+"I" = (
+/obj/effect/decal/grass_overlay/grass1,
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"K" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/lv624/ground/caves/south_central_caves)
+"L" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/central_caves)
+"O" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/south_central_caves)
+"P" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/central_caves)
 "Q" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
+"R" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"T" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
+	pixel_x = 4;
+	light_on = 1;
+	light_range = 1;
+	light_system = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/barrens/north_east_barrens)
+"U" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/central_caves)
 "V" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
+"X" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/central_caves)
+"Y" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"Z" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/caves/central_caves)
 
 (1,1,1) = {"
 f
-z
-V
-V
-V
-V
-G
-V
-V
+g
+c
+D
+B
+F
+F
+q
+b
 Q
 V
 V
@@ -107,13 +217,13 @@ l
 (2,1,1) = {"
 f
 g
-V
-V
-V
-V
-V
-V
-V
+R
+O
+F
+y
+F
+F
+I
 Q
 V
 V
@@ -130,14 +240,14 @@ l
 (3,1,1) = {"
 f
 g
-V
-G
-V
-V
+R
+F
+F
+K
+K
 l
-l
-n
-n
+I
+Q
 V
 G
 V
@@ -153,10 +263,10 @@ w
 (4,1,1) = {"
 f
 A
-V
-V
 l
 l
+K
+K
 l
 l
 l
@@ -705,9 +815,9 @@ o
 (28,1,1) = {"
 f
 e
-V
-V
-V
+Y
+Y
+Y
 l
 l
 l
@@ -727,9 +837,9 @@ p
 "}
 (29,1,1) = {"
 f
-f
-V
-V
+L
+F
+F
 l
 l
 l
@@ -750,8 +860,8 @@ p
 "}
 (30,1,1) = {"
 f
-f
-f
+L
+x
 l
 l
 l
@@ -773,9 +883,9 @@ p
 "}
 (31,1,1) = {"
 f
-f
-f
-l
+X
+Z
+K
 l
 l
 l
@@ -795,16 +905,16 @@ k
 p
 "}
 (32,1,1) = {"
-f
-f
+L
+P
+K
+K
 l
 l
 l
 l
-l
-l
-l
-l
+K
+K
 l
 l
 l
@@ -819,16 +929,16 @@ p
 "}
 (33,1,1) = {"
 f
-f
-h
-k
-k
-k
-k
-l
-l
-k
-k
+j
+U
+v
+v
+v
+u
+K
+K
+T
+t
 l
 k
 k
