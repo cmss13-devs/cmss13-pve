@@ -102,7 +102,7 @@
 	ability_primacy = XENO_PRIMARY_ACTION_1
 
 	default_ai_action = TRUE
-	ai_prob_chance = 40
+	ai_prob_chance = 80
 
 	// Config vars
 	var/max_momentum = 8
