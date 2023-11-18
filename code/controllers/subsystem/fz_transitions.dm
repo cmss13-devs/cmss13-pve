@@ -24,16 +24,17 @@ SUBSYSTEM_DEF(fz_transitions)
 			projectors -= P
 			continue
 		if(!P.loc.clone)
-			P.loc.create_clone(P.vector_x, P.vector_y)
+			P.loc.create_clone(P.vector_x, P.vector_y, P.vector_z)
 
 		if(P.loc.contents)
 			for(var/atom/movable/O in P.loc.contents)
 				if(!istype(O, /obj/effect/projector) && !istype(O, /mob/dead/observer) && !istype(O, /obj/structure/stairs) && !istype(O, /obj/structure/catwalk) && O.type != /atom/movable/clone)
 					if(!O.clone) //Create a clone if it's on a projector
-						O.create_clone_movable(P.vector_x, P.vector_y)
+						O.create_clone_movable(P.vector_x, P.vector_y, P.vector_z)
 					else
 						O.clone.proj_x = P.vector_x //Make sure projection is correct
 						O.clone.proj_y = P.vector_y
+						O.clone.proj_z = P.vector_z
 
 
 	for(var/atom/movable/clone/C in clones)

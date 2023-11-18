@@ -415,10 +415,11 @@ Parameters are passed from New.
 /atom/clone
 	var/proj_x = 0
 	var/proj_y = 0
+	var/proj_z = 0
 
-/atom/proc/create_clone(shift_x, shift_y) //NOTE: Use only for turfs, otherwise use create_clone_movable
+/atom/proc/create_clone(shift_x, shift_y, shift_z) //NOTE: Use only for turfs, otherwise use create_clone_movable
 	var/turf/T = null
-	T = locate(src.x + shift_x, src.y + shift_y, src.z)
+	T = locate(src.x + shift_x, src.y + shift_y, src.z + shift_z)
 
 	T.appearance = src.appearance
 	T.setDir(src.dir)

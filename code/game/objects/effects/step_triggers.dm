@@ -114,7 +114,7 @@
 	if(A && A.loc && A.type != /atom/movable/clone) //Prevent clones from teleporting
 		var/lx = A.x
 		var/ly = A.y
-		var/target = locate(A.x + vector_x, A.y + vector_y, A.z)
+		var/target = locate(A.x + vector_x, A.y + vector_y, A.z + vector_z)
 		var/target_dir = get_dir(A, target)
 
 		if(A.clone) //Clones have to be hard-synced both before and after the transition
@@ -124,7 +124,7 @@
 			var/mob/AM = A
 			sleep(AM.movement_delay() + 0.4) //Make the transition as seamless as possible
 
-		if(!Adjacent(A, locate(lx, ly, A.z))) //If the subject has moved too quickly, abort - this prevents double jumping
+		if(!(A in locate(lx, ly, A.z))) //If the subject has moved too quickly, abort - this prevents double jumping
 			return
 
 		for(var/mob/M in target) //If the target location is obstructed, abort
@@ -138,6 +138,7 @@
 		if(A.clone)
 			A.clone.proj_x *= -1 //Swap places with the clone
 			A.clone.proj_y *= -1
+			A.clone.proj_z *= -1
 			A.update_clone() //Update No. 2
 
 
