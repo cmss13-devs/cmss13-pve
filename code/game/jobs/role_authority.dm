@@ -234,7 +234,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		temp_roles_for_mode = overwritten_roles_for_mode
 
 	// Assign the roles, this time for real, respecting limits we have established.
-	var/list/roles_left = assign_roles(temp_roles_for_mode.Copy(), unassigned_players)
+	assign_roles(temp_roles_for_mode.Copy(), unassigned_players)
 
 	unassigned_players = null
 
@@ -296,7 +296,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 							log_debug("We have randomly assigned [random_job_name] to [cycled_unassigned]")
 							unassigned_players -= cycled_unassigned
 
-							if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
+							if(random_job.spawn_positions != -1 && random_job.current_positions >= random_job.spawn_positions)
 								roles_to_assign -= random_job_name
 								log_debug("We have ran out of slots for [random_job_name] and it has been removed from roles to assign")
 
@@ -310,8 +310,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						log_debug("We have assigned [marine_job.title] to [cycled_unassigned] via alternate option")
 						unassigned_players -= cycled_unassigned
 
-						if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
-							roles_to_assign -= job_name
+						if(marine_job.spawn_positions != -1 && marine_job.current_positions >= marine_job.spawn_positions)
+							roles_to_assign -= marine_job.title
 							log_debug("We have ran out of slots for [marine_job.title] and it has been removed from roles to assign")
 
 				if(RETURN_TO_LOBBY)
