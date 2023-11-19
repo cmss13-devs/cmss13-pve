@@ -318,7 +318,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						log_debug("ASSIGNMENT: We were unable to assign [marine_job.title] to [cycled_unassigned] via alternate option.")
 
 				if(RETURN_TO_LOBBY)
-					log_debug("[cycled_unassigned] has opted for return to lobby alternate option.")
+					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for return to lobby alternate option.")
 					cycled_unassigned.ready = 0
 
 	log_debug("ASSIGNMENT: Assigning complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
