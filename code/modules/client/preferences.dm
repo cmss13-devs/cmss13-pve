@@ -744,9 +744,6 @@ var/const/MAX_SAVE_SLOTS = 10
 		else if(user.client.prefs.alternate_option == RETURN_TO_LOBBY)
 			b_color = "purple"
 			msg = "Return to lobby if preference unavailable"
-		else if(user.client.prefs.alternate_option == BE_XENOMORPH)
-			b_color = "orange"
-			msg = "Be Xenomorph if preference unavailable"
 
 		HTML += "<center><br><a class='[b_color]' href='?_src_=prefs;preference=job;task=random'>[msg]</a></center><br>"
 
@@ -986,9 +983,9 @@ var/const/MAX_SAVE_SLOTS = 10
 					ResetJobs()
 					SetChoices(user)
 				if("random")
-					if(alternate_option == GET_RANDOM_JOB || alternate_option == BE_MARINE || alternate_option == RETURN_TO_LOBBY)
+					if(alternate_option == GET_RANDOM_JOB || alternate_option == BE_MARINE)
 						alternate_option++
-					else if(alternate_option == BE_XENOMORPH)
+					else if(alternate_option == RETURN_TO_LOBBY)
 						alternate_option = 0
 					else
 						return 0
