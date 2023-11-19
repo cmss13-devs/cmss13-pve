@@ -3,8 +3,8 @@
 #define BELL_TOWER_COOLDOWN 1 SECONDS
 
 /obj/structure/machinery/defenses/bell_tower/md/radio
-	name = "R-1NG/S MOTION TOWER"
-	desc = "A tactical advanced version of the motion detector. Also has installed radio reciever."
+	name = "M313-P MOTION TOWER"
+	desc = "A tactical, stationary version of the motion detector. Also has installed radio reciever."
 	icon_state = "md_port"
 	icon = 'void-marines/icons/port_md.dmi'
 	handheld_type = /obj/item/defenses/handheld/bell_tower/md_radio
@@ -19,13 +19,13 @@
 
 	code = pick("TANGO","CHARLIE","FOXTROT","GAMMA","BETA","ALPHA","BRAVO","WHISKEY","EPSILON","DELTA","VODKA")
 	serial_number = rand(1,500)
-	name = "R-1NG/S MOTION TOWER:UNIT-[serial_number]-[code]"
+	name = "M313-P MOTION TOWER:UNIT-[serial_number]-[code]"
 
 /obj/structure/machinery/defenses/bell_tower/md/radio/update_icon()
 	return
 
 /obj/item/defenses/handheld/bell_tower/md_radio
-	name = "handheld R-1NG/S motion tower"
+	name = "handheld M313-P motion tower"
 	icon = 'void-marines/icons/port_md.dmi'
 	icon_state = "md_port_handheld"
 	flags_equip_slot = SLOT_BACK
@@ -38,9 +38,11 @@
 	var/obj/structure/machinery/defenses/bell_tower/md/radio/linked_tower2
 
 /obj/item/device/motiondetector/internal/no_debuff/apply_debuff(mob/target)
-	var/mob/living/to_apply = target
+	return
+
+/*	var/mob/living/to_apply = target
 	if(istype(to_apply))
-		sound_to(to_apply, 'sound/items/detector.ogg')
+		sound_to(to_apply, 'sound/items/detector.ogg')*/
 
 /obj/structure/machinery/defenses/bell_tower/md/radio/setup_tripwires()
 	clear_tripwires()
