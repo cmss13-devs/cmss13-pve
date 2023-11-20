@@ -318,6 +318,7 @@
 		var/imgid = replacetext(replacetext("[k]", "/obj/item/", ""), "/", "-")
 
 		if(sprites[imgid])
+			stack_trace("[imgid] has already been registered in vending products spritesheet!")
 			continue
 
 		if(icon_state in icon_states(icon_file))
