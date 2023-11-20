@@ -716,6 +716,8 @@
 
 	QDEL_NULL(iff_tag)
 
+	QDEL_NULL(ai_movement_handler)
+
 	if(hardcore)
 		attack_log?.Cut() // Completely clear out attack_log to limit mem usage if we fail to delete
 

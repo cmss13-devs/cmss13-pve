@@ -31,10 +31,6 @@
 	/// Cooldown declaration for delaying finding a new path if no path was found
 	COOLDOWN_DECLARE(no_path_found_cooldown)
 
-/mob/living/carbon/xenomorph/Destroy()
-	QDEL_NULL(ai_movement_handler)
-	return ..()
-
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
