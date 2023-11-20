@@ -215,6 +215,9 @@
 /// NEVER HAVE ANYTHING BELOW THIS PLANE ADJUST IF YOU NEED MORE SPACE
 #define LOWEST_EVER_PLANE -200
 
+#define PLANE_SPACE -25
+#define PLANE_SPACE_PARALLAX -20
+
 /// Floor plane, self explanatory. Used for Ambient Occlusion filter
 #define FLOOR_PLANE -7
 /// Game Plane, where most of the game objects reside
@@ -240,6 +243,12 @@
 #define ESCAPE_MENU_PLANE 997
 
 #define RENDER_PLANE_MASTER 999
+
+// NOTE! You can only ever have planes greater then -10000, if you add too many with large offsets you will brick multiz
+// Same can be said for large multiz maps. Tread carefully mappers
+#define HIGHEST_EVER_PLANE RENDER_PLANE_MASTER
+/// The range unique planes can be in
+#define PLANE_RANGE (HIGHEST_EVER_PLANE - LOWEST_EVER_PLANE)
 
 //-------------------- HUD ---------------------
 #define FULLSCREEN_PLANE 900

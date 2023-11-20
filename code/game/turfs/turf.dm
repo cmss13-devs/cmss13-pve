@@ -69,6 +69,17 @@
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
 	flags_atom |= INITIALIZED
 
+	if(SSmapping.max_plane_offset)
+		if(!SSmapping.plane_offset_blacklist["[plane]"])
+			plane = plane - (PLANE_RANGE * SSmapping.z_level_to_plane_offset[z])
+
+		var/turf/T = GET_TURF_ABOVE(src)
+		if(T)
+			T.multiz_turf_new(src, DOWN)
+		T = GET_TURF_BELOW(src)
+		if(T)
+			T.multiz_turf_new(src, UP)
+
 	// by default, vis_contents is inherited from the turf that was here before
 	vis_contents.Cut()
 
@@ -119,6 +130,13 @@
 	for(var/cleanable_type in cleanables)
 		var/obj/effect/decal/cleanable/C = cleanables[cleanable_type]
 		C.cleanup_cleanable()
+	if(GET_LOWEST_STACK_OFFSET(z))
+		var/turf/T = GET_TURF_ABOVE(src)
+		if(T)
+			T.multiz_turf_del(src, DOWN)
+		T = GET_TURF_BELOW(src)
+		if(T)
+			T.multiz_turf_del(src, UP)
 	if(force)
 		..()
 		//this will completely wipe turf state
@@ -162,6 +180,12 @@
 
 /turf/process()
 	return
+
+/turf/proc/multiz_turf_del(turf/T, dir)
+	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_DEL, T, dir)
+
+/turf/proc/multiz_turf_new(turf/T, dir)
+	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_NEW, T, dir)
 
 // Handles whether an atom is able to enter the src turf
 /turf/Enter(atom/movable/mover, atom/forget)
@@ -394,21 +418,23 @@
 
 	changing_turf = TRUE
 	qdel(src) //Just get the side effects and call Destroy
-	var/turf/W = new path(src)
+	var/carryover_flags_turf = (RESERVATION_TURF | UNUSED_RESERVATION_TURF) & flags_turf
+	var/turf/new_turf = new path(src)
+	new_turf.flags_turf |= carryover_flags_turf
 
-	for(var/i in W.contents)
+	for(var/i in new_turf.contents)
 		var/datum/A = i
 		SEND_SIGNAL(A, COMSIG_ATOM_TURF_CHANGE, src)
 
 	if(new_baseturfs)
-		W.baseturfs = new_baseturfs
+		new_turf.baseturfs = new_baseturfs
 	else
-		W.baseturfs = old_baseturfs
+		new_turf.baseturfs = old_baseturfs
 
-	W.linked_pylons = pylons
+	new_turf.linked_pylons = pylons
 
-	W.hybrid_lights_affecting = old_hybrid_lights_affecting
-	W.dynamic_lumcount = dynamic_lumcount
+	new_turf.hybrid_lights_affecting = old_hybrid_lights_affecting
+	new_turf.dynamic_lumcount = dynamic_lumcount
 
 	lighting_corner_NE = old_lighting_corner_NE
 	lighting_corner_SE = old_lighting_corner_SE
@@ -419,25 +445,25 @@
 	if(SSlighting.initialized)
 		recalculate_directional_opacity()
 
-		W.static_lighting_object = old_lighting_object
+		new_turf.static_lighting_object = old_lighting_object
 
 		if(static_lighting_object && !static_lighting_object.needs_update)
 			static_lighting_object.update()
 
 	//Since the old turf was removed from hybrid_lights_affecting, readd the new turf here
-	if(W.hybrid_lights_affecting)
-		for(var/atom/movable/lighting_mask/mask as anything in W.hybrid_lights_affecting)
-			LAZYADD(mask.affecting_turfs, W)
+	if(new_turf.hybrid_lights_affecting)
+		for(var/atom/movable/lighting_mask/mask as anything in new_turf.hybrid_lights_affecting)
+			LAZYADD(mask.affecting_turfs, new_turf)
 
-	if(W.directional_opacity != old_directional_opacity)
-		W.reconsider_lights()
+	if(new_turf.directional_opacity != old_directional_opacity)
+		new_turf.reconsider_lights()
 
-	var/area/thisarea = get_area(W)
+	var/area/thisarea = get_area(new_turf)
 	if(thisarea.lighting_effect)
-		W.overlays += thisarea.lighting_effect
+		new_turf.overlays += thisarea.lighting_effect
 
-	W.levelupdate()
-	return W
+	new_turf.levelupdate()
+	return new_turf
 
 // Take off the top layer turf and replace it with the next baseturf down
 /turf/proc/ScrapeAway(amount=1, flags)

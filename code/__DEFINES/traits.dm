@@ -406,6 +406,9 @@ GLOBAL_LIST(trait_name_map)
 ///Status trait coming from being flipped or unflipped.
 #define TRAIT_SOURCE_FLIP_TABLE "t_s_flip_table"
 
+/// Trait applied by element
+#define ELEMENT_TRAIT(source) "element_trait_[source]"
+
 ///Status trait from weapons?? buh
 #define TRAIT_SOURCE_WEAPON "t_s_weapon"
 ///Status trait coming from generic items
@@ -424,3 +427,6 @@ GLOBAL_LIST(trait_name_map)
 #define XENO_WEED_TRAIT "xeno_weed"
 /// traits from chloroform usage
 #define CHLOROFORM_TRAIT "chloroform"
+
+///Turf trait for when a turf is transparent
+#define TURF_Z_TRANSPARENT_TRAIT "turf_z_transparent"

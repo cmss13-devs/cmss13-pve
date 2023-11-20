@@ -52,7 +52,7 @@ var/global/list/note_categories = list("Admin", "Merit", "Commanding Officer", "
 #define ARES_REPLY(user, ref) "(<a href='?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];AresReply=[REF(user)];AresRef=[ref]'>RPLY</a>)"
 
 /atom/proc/Admin_Coordinates_Readable(area_name, admin_jump_ref)
-	var/turf/T = get_turf(src)
+	var/turf/T = get_step(src, 0)
 	var/msg = T ? "[area_name ? "[get_area_name(T, TRUE)] " : " "]([T.x],[T.y],[T.z])" : "nonexistent location"
 	return T && admin_jump_ref ? "[msg] [ADMIN_JMP(T)]" : msg
 

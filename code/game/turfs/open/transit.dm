@@ -5,6 +5,12 @@
 	baseturfs = /turf/open/space/transit
 	var/auto_space_icon = TRUE
 
+/turf/open/space/transit/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+	RegisterSignal(src, COMSIG_TURF_RESERVATION_RELEASED, PROC_REF(launch_contents))
+
 /turf/open/space/transit/Entered(atom/movable/crosser, atom/old_loc)
 	. = ..()
 
@@ -25,31 +31,22 @@
 
 	QDEL_IN(crosser, 0.5 SECONDS)
 
-/turf/open/space/transit/south
-	dir = SOUTH
-
-/turf/open/space/transit/north
-	dir = NORTH
-
-/turf/open/space/transit/horizontal
-	dir = WEST
-
-/turf/open/space/transit/west
-	dir = WEST
-
-/turf/open/space/transit/east
-	dir = EAST
-
-
-/turf/open/space/transit/Initialize(mapload)
-	. = ..()
-	update_icon()
-
 /turf/open/space/transit/update_icon()
 	. = ..()
 	if(auto_space_icon)
 		icon_state = "speedspace_ns_[get_transit_state(src)]"
 		transform = turn(matrix(), get_transit_angle(src))
+
+///Get rid of all our contents, called when our reservation is released (which in our case means the shuttle arrived)
+/turf/open/space/transit/proc/launch_contents(datum/turf_reservation/reservation)
+	SIGNAL_HANDLER
+
+	for(var/atom/movable/movable in contents)
+		dump_in_space(movable)
+
+///Destroy anything that may be sent to space, TG uses it like: Dump a movable in a random valid spacetile
+/proc/dump_in_space(atom/movable/dumpee)
+	qdel(dumpee)
 
 /proc/get_transit_state(turf/T)
 	var/p = 9
@@ -78,12 +75,26 @@
 		if(WEST)
 			. = -90
 
+/turf/open/space/transit/south
+	dir = SOUTH
+
+/turf/open/space/transit/north
+	dir = NORTH
+
+/turf/open/space/transit/horizontal
+	dir = WEST
+
+/turf/open/space/transit/west
+	dir = WEST
+
+/turf/open/space/transit/east
+	dir = EAST
+
 
 // =======================
 // Legacy static turf type definitions below. Just use the above instead
 // =======================
 
-/turf/open/space/transit/north // moving to the north
 /turf/open/space/transit/north/shuttlespace_ns1
 	auto_space_icon = FALSE
 	icon_state = "speedspace_ns_1"

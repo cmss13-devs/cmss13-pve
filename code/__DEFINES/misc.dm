@@ -228,13 +228,6 @@
 // These guns can be used at maximum efficacy by untrained civilians.
 #define UNTRAINED_USABLE_CATEGORIES list(GUN_CATEGORY_HANDGUN, GUN_CATEGORY_SMG)
 
-/**
- * Get the ultimate area of `A`, similarly to [get_turf].
- *
- * Use instead of `A.loc.loc`.
- */
-#define get_area(A) (isarea(A) ? A : get_step(A, 0)?.loc)
-
 //https://secure.byond.com/docs/ref/info.html#/atom/var/mouse_opacity
 #define MOUSE_OPACITY_TRANSPARENT 0
 #define MOUSE_OPACITY_ICON 1

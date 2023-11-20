@@ -420,7 +420,7 @@ SUBSYSTEM_DEF(shuttle)
 	for(var/area/A as anything in preview_shuttle.shuttle_areas)
 		for(var/turf/T as anything in A)
 			// turfs inside the shuttle are not available for shuttles
-			T.flags_atom &= ~UNUSED_RESERVATION_TURF
+			T.flags_turf &= ~UNUSED_RESERVATION_TURF
 
 			// update underlays
 			if(istype(T, /turf/closed/shuttle))

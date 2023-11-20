@@ -13,7 +13,17 @@
 #define isfloorturf(A) (istype(A, /turf/open/floor))
 #define isweakref(D) (istype(D, /datum/weakref))
 #define isgenerator(A) (istype(A, /generator))
+#define istransparentturf(A) (HAS_TRAIT(A, TURF_Z_TRANSPARENT_TRAIT))
+#define isclosedturf(A) (istype(A, /turf/closed))
+#define isopenturf(A) (istype(A, /turf/open))
 
+
+GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
+	/turf/open/openspace,
+	/turf/open/space/openspace,
+	)))
+
+#define isopenspaceturf(A) (is_type_in_typecache(A, GLOB.turfs_openspace))
 
 //Byond type ids
 #define TYPEID_NULL "0"
