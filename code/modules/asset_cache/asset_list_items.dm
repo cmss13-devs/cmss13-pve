@@ -305,16 +305,13 @@
 	name = "vending"
 
 /datum/asset/spritesheet/vending_products/register()
-	log_debug("[type] is registering.")
-	stack_trace("[type] is registering.") // Remove these after testing - Morrow
-
-	for (var/k in GLOB.vending_products)
+	for(var/k in GLOB.vending_products)
 		var/atom/item = k
 		var/icon_file = initial(item.icon)
 		var/icon_state = initial(item.icon_state)
 		var/icon/I
 
-		if (!ispath(item, /atom))
+		if(!ispath(item, /atom))
 			log_debug("not atom! [item]")
 			continue
 
