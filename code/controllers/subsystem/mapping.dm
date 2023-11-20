@@ -71,6 +71,10 @@ SUBSYSTEM_DEF(mapping)
 	do_wipe_turf_reservations()
 	clearing_reserved_turfs = FALSE
 
+/datum/controller/subsystem/mapping/proc/get_reservation_from_turf(turf/T)
+	RETURN_TYPE(/datum/turf_reservation)
+	return used_turfs[T]
+
 /datum/controller/subsystem/mapping/Recover()
 	flags |= SS_NO_INIT
 	initialized = SSmapping.initialized
@@ -258,7 +262,7 @@ SUBSYSTEM_DEF(mapping)
 		reserve.turf_type = turf_type_override
 	if(!z)
 		for(var/i in levels_by_trait(ZTRAIT_RESERVED))
-			if(reserve.Reserve(width, height, i))
+			if(reserve.reserve(width, height, z_reservation = i))
 				return reserve
 		//If we didn't return at this point, theres a good chance we ran out of room on the exisiting reserved z levels, so lets try a new one
 		log_debug("Ran out of space in existing transit levels, adding a new one")
@@ -266,7 +270,7 @@ SUBSYSTEM_DEF(mapping)
 		var/datum/space_level/newReserved = add_new_zlevel("Transit/Reserved [num_of_res_levels]", list(ZTRAIT_RESERVED = TRUE))
 		initialize_reserved_level(newReserved.z_value)
 		for(var/i in levels_by_trait(ZTRAIT_RESERVED))
-			if(reserve.Reserve(width, height, i))
+			if(reserve.reserve(width, height, z_reservation = i))
 				return reserve
 		CRASH("Despite adding a fresh reserved zlevel still failed to get a reservation")
 	else
@@ -275,7 +279,7 @@ SUBSYSTEM_DEF(mapping)
 			qdel(reserve)
 			return
 		else
-			if(reserve.Reserve(width, height, z))
+			if(reserve.reserve(width, height, z_reservation = z))
 				return reserve
 	log_debug("unknown reservation failure")
 	QDEL_NULL(reserve)

@@ -116,6 +116,122 @@
 
 */
 
+/atom/movable/proc/onZImpact(turf/impacted_turf, levels, message = TRUE)
+	SHOULD_CALL_PARENT(TRUE)
+	if(message)
+		visible_message(SPAN_DANGER("[src] crashes into [impacted_turf]!"))
+	var/atom/highest = impacted_turf
+	for(var/atom/hurt_atom as anything in impacted_turf.contents)
+		if(!hurt_atom.density)
+			continue
+		if(isobj(hurt_atom) || ismob(hurt_atom))
+			if(hurt_atom.layer > highest.layer)
+				highest = hurt_atom
+	INVOKE_ASYNC(src, PROC_REF(SpinAnimation), 5, 2)
+	SEND_SIGNAL(src, COMSIG_ATOM_ON_Z_IMPACT, impacted_turf, levels)
+	return TRUE
+
+/*
+ * Attempts to move using zMove if direction is UP or DOWN, step if not
+ *
+ * Args:
+ * direction: The direction to go
+ * z_move_flags: bitflags used for checks in zMove and can_z_move
+*/
+/atom/movable/proc/try_step_multiz(direction, z_move_flags = ZMOVE_FLIGHT_FLAGS)
+	if(direction == UP || direction == DOWN)
+		return zMove(direction, null, z_move_flags)
+	return step(src, direction)
+
+/*
+ * The core multi-z movement proc. Used to move a movable through z levels.
+ * If target is null, it'll be determined by the can_z_move proc, which can potentially return null if
+ * conditions aren't met (see z_move_flags defines in __DEFINES/movement.dm for info) or if dir isn't set.
+ * Bear in mind you don't need to set both target and dir when calling this proc, but at least one or two.
+ * This will set the currently_z_moving to CURRENTLY_Z_MOVING_GENERIC if unset, and then clear it after
+ * Forcemove().
+ *
+ *
+ * Args:
+ * * dir: the direction to go, UP or DOWN, only relevant if target is null.
+ * * target: The target turf to move the src to. Set by can_z_move() if null.
+ * * z_move_flags: bitflags used for various checks in both this proc and can_z_move(). See __DEFINES/movement.dm.
+ */
+/atom/movable/proc/zMove(dir, turf/target, z_move_flags = ZMOVE_FLIGHT_FLAGS)
+	if(!target)
+		target = can_z_move(dir, get_turf(src), null, z_move_flags)
+		if(!target)
+			set_currently_z_moving(FALSE, TRUE)
+			return FALSE
+
+	var/list/moving_movs = get_z_move_affected(z_move_flags)
+
+	for(var/atom/movable/movable as anything in moving_movs)
+		movable.currently_z_moving = currently_z_moving || CURRENTLY_Z_MOVING_GENERIC
+		movable.forceMove(target)
+		movable.set_currently_z_moving(FALSE, TRUE)
+	// This is run after ALL movables have been moved, so pulls don't get broken unless they are actually out of range.
+	if(z_move_flags & ZMOVE_CHECK_PULLS)
+		for(var/atom/movable/moved_mov as anything in moving_movs)
+			if(z_move_flags & ZMOVE_CHECK_PULLEDBY && moved_mov.pulledby && (moved_mov.z != moved_mov.pulledby.z || get_dist(moved_mov, moved_mov.pulledby) > 1))
+				moved_mov.pulledby.stop_pulling()
+			if(z_move_flags & ZMOVE_CHECK_PULLING)
+				moved_mov.check_pulling(TRUE)
+	return TRUE
+
+/// Returns a list of movables that should also be affected when src moves through zlevels, and src.
+/atom/movable/proc/get_z_move_affected(z_move_flags)
+	. = list(src)
+	if(buckled_mobs)
+		. |= buckled_mobs
+	if(!(z_move_flags & ZMOVE_INCLUDE_PULLED))
+		return
+	for(var/mob/living/buckled as anything in buckled_mobs)
+		if(buckled.pulling)
+			. |= buckled.pulling
+	if(pulling)
+		. |= pulling
+
+/**
+ * Checks if the destination turf is elegible for z movement from the start turf to a given direction and returns it if so.
+ * Args:
+ * * direction: the direction to go, UP or DOWN, only relevant if target is null.
+ * * start: Each destination has a starting point on the other end. This is it. Most of the times the location of the source.
+ * * z_move_flags: bitflags used for various checks. See __DEFINES/movement.dm.
+ * * rider: A living mob in control of the movable. Only non-null when a mob is riding a vehicle through z-levels.
+ */
+/atom/movable/proc/can_z_move(direction, turf/start, turf/destination, z_move_flags = ZMOVE_FLIGHT_FLAGS, mob/living/rider)
+	if(!start)
+		start = get_turf(src)
+		if(!start)
+			return FALSE
+	if(!direction)
+		if(!destination)
+			return FALSE
+		direction = get_dir_multiz(start, destination)
+	if(direction != UP && direction != DOWN)
+		return FALSE
+	if(!destination)
+		destination = get_step_multiz(start, direction)
+		if(!destination)
+			if(z_move_flags & ZMOVE_FEEDBACK)
+				to_chat(rider || src, span_warning("There's nowhere to go in that direction!"))
+			return FALSE
+	if(z_move_flags & ZMOVE_FALL_CHECKS && (throwing || (movement_type & (FLYING|FLOATING)) || !has_gravity(start)))
+		return FALSE
+	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS && !(movement_type & (FLYING|FLOATING)) && has_gravity(start))
+		if(z_move_flags & ZMOVE_FEEDBACK)
+			if(rider)
+				to_chat(rider, span_warning("[src] is is not capable of flight."))
+			else
+				to_chat(src, span_warning("You are not Superman."))
+		return FALSE
+	if((!(z_move_flags & ZMOVE_IGNORE_OBSTACLES) && !(start.zPassOut(direction) && destination.zPassIn(direction))) || (!(z_move_flags & ZMOVE_ALLOW_ANCHORED) && anchored))
+		if(z_move_flags & ZMOVE_FEEDBACK)
+			to_chat(rider || src, span_warning("You couldn't move there!"))
+		return FALSE
+	return destination //used by some child types checks and zMove()
+
 /atom/movable/vv_get_dropdown()
 	. = ..()
 	VV_DROPDOWN_OPTION(VV_HK_EDIT_PARTICLES, "Edit Particles")

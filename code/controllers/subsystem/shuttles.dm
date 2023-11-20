@@ -205,7 +205,7 @@ SUBSYSTEM_DEF(shuttle)
 		log_debug("generate_transit_dock() failed to get a block reservation from mapping system")
 		return FALSE
 
-	var/turf/bottomleft = locate(proposal.bottom_left_coords[1], proposal.bottom_left_coords[2], proposal.bottom_left_coords[3])
+	var/turf/bottomleft = proposal.bottom_left_turfs[1]
 	// Then create a transit docking port in the middle
 	var/coords = M.return_coords(0, 0, dock_dir)
 	/* 0------2
@@ -458,7 +458,7 @@ SUBSYSTEM_DEF(shuttle)
 	preview_reservation = SSmapping.RequestBlockReservation(S.width, S.height, SSmapping.transit.z_value, /datum/turf_reservation/transit)
 	if(!preview_reservation)
 		CRASH("failed to reserve an area for shuttle template loading")
-	var/turf/BL = TURF_FROM_COORDS_LIST(preview_reservation.bottom_left_coords)
+	var/turf/BL = preview_reservation.bottom_left_turfs[1]
 	S.load(BL, centered = FALSE, register = FALSE)
 
 	var/affected = S.get_affected_turfs(BL, centered=FALSE)

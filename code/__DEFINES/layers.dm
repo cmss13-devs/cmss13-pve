@@ -218,6 +218,11 @@
 #define PLANE_SPACE -25
 #define PLANE_SPACE_PARALLAX -20
 
+/// Transparent plane that shows openspace underneath the floor
+#define RENDER_PLANE_TRANSPARENT -12
+
+#define TRANSPARENT_FLOOR_PLANE -11
+
 /// Floor plane, self explanatory. Used for Ambient Occlusion filter
 #define FLOOR_PLANE -7
 /// Game Plane, where most of the game objects reside

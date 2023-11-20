@@ -3,6 +3,7 @@
 	desc = "Watch your step!"
 	// We don't actually draw openspace, but it needs to have color
 	// In its icon state so we can count it as a "non black" tile
+	icon = 'icons/turfs/floors/space.dmi'
 	icon_state = "invisible"
 	baseturfs = /turf/open/openspace
 	overfloor_placed = FALSE
@@ -20,18 +21,12 @@
 	if(PERFORM_ALL_TESTS(focus_only/openspace_clear) && !GET_TURF_BELOW(src))
 		stack_trace("[src] was inited as openspace with nothing below it at ([x], [y], [z])")
 	RegisterSignal(src, COMSIG_ATOM_AFTER_SUCCESSFUL_INITIALIZED_ON, PROC_REF(on_atom_created))
-	var/area/our_area = loc
-	if(istype(our_area, /area/space))
-		force_no_gravity = TRUE
+
 	return INITIALIZE_HINT_LATELOAD
 
 /turf/open/openspace/LateInitialize()
 	. = ..()
 	AddElement(/datum/element/turf_z_transparency)
-
-/turf/open/openspace/ChangeTurf(path, list/new_baseturfs, flags)
-	UnregisterSignal(src, COMSIG_ATOM_AFTER_SUCCESSFUL_INITIALIZED_ON)
-	return ..()
 
 /**
  * Prepares a moving movable to be precipitated if Move() is successful.
@@ -49,6 +44,7 @@
 	. = ..()
 	if(movable.set_currently_z_moving(CURRENTLY_Z_FALLING))
 		zFall(movable, falling_from_move = TRUE)
+
 /**
  * Drops movables spawned on this turf after they are successfully initialized.
  * so that spawned movables that should fall to gravity, will fall.

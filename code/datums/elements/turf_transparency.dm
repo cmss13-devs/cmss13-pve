@@ -46,7 +46,6 @@ GLOBAL_LIST_EMPTY(pillars_by_z)
 	appearance_flags = PIXEL_SCALE
 	plane = HUD_PLANE
 	anchored = TRUE
-	move_resist = INFINITY
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/abstract/z_holder/Destroy()
