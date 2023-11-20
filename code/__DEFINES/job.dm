@@ -3,7 +3,7 @@
 #define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
 
 // Squad name defines
-#define SQUAD_MARINE_1 "Alpha"
+#define SQUAD_MARINE_1 "Sun Riders"
 #define SQUAD_MARINE_2 "Bravo"
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
