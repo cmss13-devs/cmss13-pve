@@ -25,10 +25,6 @@
 	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
 	COOLDOWN_DECLARE(forced_retarget_cooldown)
 
-/mob/living/carbon/xenomorph/Destroy()
-	QDEL_NULL(ai_movement_handler)
-	return ..()
-
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
