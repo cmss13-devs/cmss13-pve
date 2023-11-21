@@ -155,7 +155,6 @@
 					A.loc.Entered(A)
 
 /turf/open/space/openspace
-	icon = 'icons/turfs/floors/space.dmi'
 	icon_state = "invisible"
 	plane = TRANSPARENT_FLOOR_PLANE
 
@@ -173,21 +172,15 @@
 	. = ..()
 	AddElement(/datum/element/turf_z_transparency)
 
-/turf/open/space/openspace/zAirIn()
-	return TRUE
-
-/turf/open/space/openspace/zAirOut()
-	return TRUE
-
 /turf/open/space/openspace/zPassIn(direction)
 	if(direction == DOWN)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_IN_DOWN)
+			if(contained_object.flags_obj & BLOCK_Z_IN_DOWN)
 				return FALSE
 		return TRUE
 	if(direction == UP)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_IN_UP)
+			if(contained_object.flags_obj & BLOCK_Z_IN_UP)
 				return FALSE
 		return TRUE
 	return FALSE
@@ -195,12 +188,12 @@
 /turf/open/space/openspace/zPassOut(direction)
 	if(direction == DOWN)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_OUT_DOWN)
+			if(contained_object.flags_obj & BLOCK_Z_OUT_DOWN)
 				return FALSE
 		return TRUE
 	if(direction == UP)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_OUT_UP)
+			if(contained_object.flags_obj & BLOCK_Z_OUT_UP)
 				return FALSE
 		return TRUE
 	return FALSE

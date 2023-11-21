@@ -3,16 +3,11 @@
 	desc = "Watch your step!"
 	// We don't actually draw openspace, but it needs to have color
 	// In its icon state so we can count it as a "non black" tile
-	icon = 'icons/turfs/floors/space.dmi'
+	icon = 'icons/turf/floors/space.dmi'
 	icon_state = "invisible"
 	baseturfs = /turf/open/openspace
-	overfloor_placed = FALSE
-	underfloor_accessibility = UNDERFLOOR_INTERACTABLE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	pathing_pass_method = TURF_PATHING_PASS_PROC
 	plane = TRANSPARENT_FLOOR_PLANE
-	var/can_cover_up = TRUE
-	var/can_build_on = TRUE
 
 // Reminder, any behavior code written here needs to be duped to /turf/open/space/openspace
 // I am so sorry
@@ -59,26 +54,15 @@
 		return
 	zFall(movable)
 
-/turf/open/openspace/can_have_cabling()
-	if(locate(/obj/structure/lattice/catwalk, src))
-		return TRUE
-	return FALSE
-
-/turf/open/openspace/zAirIn()
-	return TRUE
-
-/turf/open/openspace/zAirOut()
-	return TRUE
-
 /turf/open/openspace/zPassIn(direction)
 	if(direction == DOWN)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_IN_DOWN)
+			if(contained_object.flags_obj & BLOCK_Z_IN_DOWN)
 				return FALSE
 		return TRUE
 	if(direction == UP)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_IN_UP)
+			if(contained_object.flags_obj & BLOCK_Z_IN_UP)
 				return FALSE
 		return TRUE
 	return FALSE
@@ -86,44 +70,12 @@
 /turf/open/openspace/zPassOut(direction)
 	if(direction == DOWN)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_OUT_DOWN)
+			if(contained_object.flags_obj & BLOCK_Z_OUT_DOWN)
 				return FALSE
 		return TRUE
 	if(direction == UP)
 		for(var/obj/contained_object in contents)
-			if(contained_object.obj_flags & BLOCK_Z_OUT_UP)
+			if(contained_object.flags_obj & BLOCK_Z_OUT_UP)
 				return FALSE
 		return TRUE
 	return FALSE
-
-/turf/open/openspace/proc/CanCoverUp()
-	return can_cover_up
-
-/turf/open/openspace/proc/CanBuildHere()
-	return can_build_on
-
-/turf/open/openspace/attackby(obj/item/C, mob/user, params)
-	..()
-	if(!CanBuildHere())
-		return
-	if(istype(C, /obj/item/stack/rods))
-		build_with_rods(C, user)
-	else if(istype(C, /obj/item/stack/tile/iron))
-		build_with_floor_tiles(C, user)
-	else if(istype(C, /obj/item/stack/thermoplastic))
-		build_with_transport_tiles(C, user)
-	else if(istype(C, /obj/item/stack/sheet/mineral/titanium))
-		build_with_titanium(C, user)
-
-/turf/open/openspace/build_with_floor_tiles(obj/item/stack/tile/iron/used_tiles)
-	if(!CanCoverUp())
-		return
-	return ..()
-
-/turf/open/openspace/replace_floor(turf/open/new_floor_path, flags)
-	if (!initial(new_floor_path.overfloor_placed))
-		ChangeTurf(new_floor_path, flags = flags)
-		return
-	// Create plating under tiled floor we try to create directly onto the air
-	PlaceOnTop(/turf/open/floor/plating, flags = flags)
-	PlaceOnTop(new_floor_path, flags = flags)

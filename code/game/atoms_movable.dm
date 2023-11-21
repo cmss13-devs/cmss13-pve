@@ -31,6 +31,11 @@
 	///Highest-intensity light affecting us, which determines our visibility.
 	var/affecting_dynamic_lumi = 0
 
+	///is the mob currently ascending or descending through z levels?
+	var/currently_z_moving
+
+	var/atom/movable/pulling = null
+
 //===========================================================================
 /atom/movable/Destroy(force)
 	for(var/atom/movable/I in contents)
@@ -182,13 +187,10 @@
 /// Returns a list of movables that should also be affected when src moves through zlevels, and src.
 /atom/movable/proc/get_z_move_affected(z_move_flags)
 	. = list(src)
-	if(buckled_mobs)
-		. |= buckled_mobs
+
 	if(!(z_move_flags & ZMOVE_INCLUDE_PULLED))
 		return
-	for(var/mob/living/buckled as anything in buckled_mobs)
-		if(buckled.pulling)
-			. |= buckled.pulling
+
 	if(pulling)
 		. |= pulling
 
@@ -215,22 +217,31 @@
 		destination = get_step_multiz(start, direction)
 		if(!destination)
 			if(z_move_flags & ZMOVE_FEEDBACK)
-				to_chat(rider || src, span_warning("There's nowhere to go in that direction!"))
+				to_chat(rider || src, SPAN_WARNING("There's nowhere to go in that direction!"))
 			return FALSE
-	if(z_move_flags & ZMOVE_FALL_CHECKS && (throwing || (movement_type & (FLYING|FLOATING)) || !has_gravity(start)))
+	if(z_move_flags & ZMOVE_FALL_CHECKS && throwing)
 		return FALSE
-	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS && !(movement_type & (FLYING|FLOATING)) && has_gravity(start))
+	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS)
 		if(z_move_flags & ZMOVE_FEEDBACK)
 			if(rider)
-				to_chat(rider, span_warning("[src] is is not capable of flight."))
+				to_chat(rider, SPAN_WARNING("[src] is is not capable of flight."))
 			else
-				to_chat(src, span_warning("You are not Superman."))
+				to_chat(src, SPAN_WARNING("You are not Superman."))
 		return FALSE
 	if((!(z_move_flags & ZMOVE_IGNORE_OBSTACLES) && !(start.zPassOut(direction) && destination.zPassIn(direction))) || (!(z_move_flags & ZMOVE_ALLOW_ANCHORED) && anchored))
 		if(z_move_flags & ZMOVE_FEEDBACK)
-			to_chat(rider || src, span_warning("You couldn't move there!"))
+			to_chat(rider || src, SPAN_WARNING("You couldn't move there!"))
 		return FALSE
 	return destination //used by some child types checks and zMove()
+
+/// Sets the currently_z_moving variable to a new value. Used to allow some zMovement sources to have precedence over others.
+/atom/movable/proc/set_currently_z_moving(new_z_moving_value, forced = FALSE)
+	if(forced)
+		currently_z_moving = new_z_moving_value
+		return TRUE
+	var/old_z_moving_value = currently_z_moving
+	currently_z_moving = max(currently_z_moving, new_z_moving_value)
+	return currently_z_moving > old_z_moving_value
 
 /atom/movable/vv_get_dropdown()
 	. = ..()
@@ -473,3 +484,6 @@
 	set_light_range(range)
 	set_light_power(power)
 	set_light_color(color)
+
+/atom/movable/proc/stop_pulling()
+	return

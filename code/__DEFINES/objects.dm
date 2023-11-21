@@ -164,6 +164,14 @@ var/list/RESTRICTED_CAMERA_NETWORKS = list( //Those networks can only be accesse
 #define OBJ_IS_HELMET_GARB (1<<2)
 /// can you customize the description/name of the thing?
 #define OBJ_UNIQUE_RENAME (1<<3)
+/// Should this object block z falling from loc?
+#define BLOCK_Z_OUT_DOWN (1<<4)
+/// Should this object block z uprise from loc?
+#define BLOCK_Z_OUT_UP (1<<5)
+/// Should this object block z falling from above?
+#define BLOCK_Z_IN_DOWN (1<<6)
+/// Should this object block z uprise from below?
+#define BLOCK_Z_IN_UP (1<<7)
 
 // For reinforced table status
 #define RTABLE_WEAKENED 1

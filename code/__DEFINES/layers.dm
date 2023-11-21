@@ -177,6 +177,8 @@
 
 /// This plane masks out lighting to create an "emissive" effect, ie for glowing lights in otherwise dark areas.
 #define EMISSIVE_PLANE 90
+/// This plane masks out lighting to create an "emissive" effect, ie for glowing lights in otherwise dark areas.
+#define EMISSIVE_RENDER_PLATE 100
 /// The render target used by the emissive layer.
 #define EMISSIVE_RENDER_TARGET "*EMISSIVE_PLANE"
 /// The layer you should use if you _really_ don't want an emissive overlay to be blocked.
@@ -202,6 +204,11 @@
 #define LIGHTING_SECONDARY_LAYER 16	//The colourful, usually small lights that go on top
 
 #define LIGHTING_SHADOW_LAYER 17	//Where the shadows happen
+
+/// Masks the lighting plane with turfs, so we never light up the void
+/// Failing that, masks emissives and the overlay lighting plane
+#define LIGHT_MASK_PLANE 140
+#define LIGHT_MASK_RENDER_TARGET "*LIGHT_MASK_PLANE"
 
 #define ABOVE_LIGHTING_PLANE 150
 #define ABOVE_LIGHTING_LAYER 18
@@ -265,6 +272,20 @@
 #define CINEMATIC_PLANE 1200
 
 
-/// Plane master controller keys
+///Plane master controller keys
 #define PLANE_MASTERS_GAME "plane_masters_game"
 #define PLANE_MASTERS_NON_MASTER "plane_masters_non_master"
+
+//Plane master critical flags
+//Describes how different plane masters behave when they are being culled for performance reasons
+/// This plane master will not go away if its layer is culled. useful for preserving effects
+#define PLANE_CRITICAL_DISPLAY (1<<0)
+/// This plane master will temporarially remove relays to all other planes
+/// Allows us to retain the effects of a plane while cutting off the changes it makes
+#define PLANE_CRITICAL_NO_RELAY (1<<1)
+/// We assume this plane master has a render target starting with *, it'll be removed, forcing it to render in place
+#define PLANE_CRITICAL_CUT_RENDER (1<<2)
+
+#define PLANE_CRITICAL_FUCKO_PARALLAX (PLANE_CRITICAL_DISPLAY|PLANE_CRITICAL_NO_RELAY|PLANE_CRITICAL_CUT_RENDER)
+
+#define MAX_EXPECTED_Z_DEPTH 3

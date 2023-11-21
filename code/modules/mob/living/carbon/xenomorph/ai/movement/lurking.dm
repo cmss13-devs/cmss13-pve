@@ -224,7 +224,7 @@
 		LPA.knockdown = TRUE
 		LPA.freeze_self = TRUE
 
-	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
+	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/atom/movable, stop_pulling))
 
 /datum/xeno_ai_movement/linger/lurking/proc/stop_lurking()
 	SIGNAL_HANDLER
@@ -239,7 +239,7 @@
 
 	UnregisterSignal(parent, COMSIG_MOVABLE_MOVED)
 
-	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/mob, stop_pulling))
+	INVOKE_ASYNC(lurking_xeno, TYPE_PROC_REF(/atom/movable, stop_pulling))
 
 /datum/xeno_ai_movement/linger/lurking/proc/register_turf_signals()
 	for(var/turf/open/cycled_open_turf in view(world.view, parent))
