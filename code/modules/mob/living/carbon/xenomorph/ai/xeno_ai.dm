@@ -7,7 +7,7 @@
 	var/turf/current_target_turf
 
 	var/ai_move_delay = 0
-	var/path_update_period = 0.5 SECONDS
+	var/path_update_period = (0.5 SECONDS)
 	var/no_path_found = FALSE
 	var/ai_range = 16
 	var/max_travel_distance = 24
@@ -24,6 +24,12 @@
 
 	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
 	COOLDOWN_DECLARE(forced_retarget_cooldown)
+
+	/// The time interval between calculating new paths if we cannot find a path
+	var/no_path_found_period = (2.5 SECONDS)
+
+	/// Cooldown declaration for delaying finding a new path if no path was found
+	COOLDOWN_DECLARE(no_path_found_cooldown)
 
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
@@ -162,10 +168,11 @@
 		return FALSE
 
 	if(no_path_found)
+		COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
 		no_path_found = FALSE
 		return FALSE
 
-	if(!current_path || (next_path_generation < world.time && current_target_turf != T))
+	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
 			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
