@@ -76,12 +76,24 @@ export const GameMasterSpawningPanel = (props, context) => {
           </Stack>
         </Stack.Item>
         <Stack.Item>
-          <Button
-            content="Delete all xenos"
-            onClick={() => {
-              act('delete_all_xenos');
-            }}
-          />
+          <Stack>
+            <Stack.Item>
+              <Button
+                content="Delete all xenos"
+                onClick={() => {
+                  act('delete_all_xenos');
+                }}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button
+                content="Delete near xenos"
+                onClick={() => {
+                  act('delete_near_xenos');
+                }}
+              />
+            </Stack.Item>
+          </Stack>
         </Stack.Item>
       </Stack>
     </Section>
