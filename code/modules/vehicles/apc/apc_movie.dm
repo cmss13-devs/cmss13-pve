@@ -96,7 +96,7 @@
 /obj/effect/vehicle_spawner/apc_movie
 	name = "Movie APC Spawner"
 	icon = 'icons/obj/vehicles/movieapc.dmi'
-	icon_state = "apc_base"
+	icon_state = "apc_base_movie"
 	pixel_x = -64
 	pixel_y = -64
 
