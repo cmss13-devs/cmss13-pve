@@ -107,7 +107,7 @@
 
 
 /obj/structure/blocker/forcefield/vehicles/handle_vehicle_bump(obj/vehicle/multitile/multitile_vehicle)
-	if(multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_BYPASS_VEHICLE_BLOCKERS) || multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
 		return TRUE
 	return FALSE
 
@@ -116,7 +116,7 @@
 
 
 /obj/structure/blocker/forcefield/multitile_vehicles/handle_vehicle_bump(obj/vehicle/multitile/multitile_vehicle)
-	if(multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_BYPASS_VEHICLE_BLOCKERS) || multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
 		return TRUE
 	return FALSE
 

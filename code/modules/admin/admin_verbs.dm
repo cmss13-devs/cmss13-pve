@@ -330,6 +330,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/toggle_game_master)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/game_master_rename_platoon)
+		add_verb(src, /client/proc/toggle_vehicle_blockers)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
