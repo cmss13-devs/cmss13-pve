@@ -45,9 +45,11 @@
 		return FALSE
 
 	if(checked_xeno.get_plasma_percentage() < PLASMA_RETREAT_PERCENTAGE)
-		var/atom/xeno_loc = checked_xeno.loc
-		if(xeno_loc?.weeds)
-			checked_xeno.resting = TRUE
+		var/turf/xeno_loc = get_turf(checked_xeno)
+		if(xeno_loc.weeds && !checked_xeno.resting)
+			currently_assigned -= checked_xeno
+			checked_xeno.lay_down()
+
 		return FALSE
 
 	return TRUE
@@ -59,9 +61,9 @@
 
 	processing_xeno.resting = FALSE
 
-	var/atom/xeno_loc = processing_xeno.loc
-	if(xeno_loc?.density) // imagine putting droney in a bag
-		return FALSE
+	var/turf/xeno_loc = get_turf(processing_xeno)
+	if(xeno_loc.density)
+		return FALSE // We shouldn't stand in a wall, let's act default
 
 	var/turf/parent_turf = get_turf(parent)
 
@@ -82,19 +84,19 @@
 	var/list/resin_types = processing_xeno.resin_build_order
 	processing_xeno.selected_resin = locate(/datum/resin_construction/resin_turf/wall) in resin_types
 
-	var/walls = 0
+	var/wall_nearby
 	var/blocked_turfs = 0
 	for(var/turf/blocked_turf in orange(1, parent_turf) - parent_turf.AdjacentTurfs())
 		if(get_dir(blocked_turf, parent_turf) in diagonals)
 			continue
 
 		if(blocked_turf.density)
-			walls++
+			wall_nearby = TRUE
 
 		blocked_turfs++
 
 	if(blocked_turfs)
-		if(prob(XENO_DOOR_BUILDING_CHANCE) || (walls && blocked_turfs == 2))
+		if(prob(XENO_DOOR_BUILDING_CHANCE) || (wall_nearby && blocked_turfs == 2))
 			processing_xeno.selected_resin = locate(/datum/resin_construction/resin_obj/door) in resin_types
 
 	var/datum/action/xeno_action/activable/secrete_resin/build_action = locate() in processing_xeno.actions
