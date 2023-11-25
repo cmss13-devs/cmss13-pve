@@ -45,7 +45,8 @@
 		return FALSE
 
 	if(checked_xeno.get_plasma_percentage() < PLASMA_RETREAT_PERCENTAGE)
-		if(checked_xeno.loc?:weeds)
+		var/atom/xeno_loc = checked_xeno.loc
+		if(xeno_loc?.weeds)
 			checked_xeno.resting = TRUE
 		return FALSE
 
