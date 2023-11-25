@@ -58,7 +58,8 @@
 
 	processing_xeno.resting = FALSE
 
-	if(processing_xeno.loc?:density) // imagine putting droney in a bag
+	var/atom/xeno_loc = processing_xeno.loc
+	if(xeno_loc?.density) // imagine putting droney in a bag
 		return FALSE
 
 	var/turf/parent_turf = get_turf(parent)
