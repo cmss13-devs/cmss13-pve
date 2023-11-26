@@ -97,14 +97,14 @@
 	var/view_x_offset = 0
 	var/view_y_offset = 0
 	if(c_view > 7)
-		if(user.client.pixel_x >= 0) 
+		if(user.client.pixel_x >= 0)
 			view_x_offset = round(user.client.pixel_x/32)
-		else 
+		else
 			view_x_offset = Ceiling(user.client.pixel_x/32)
 
-		if(user.client.pixel_y >= 0) 
+		if(user.client.pixel_y >= 0)
 			view_y_offset = round(user.client.pixel_y/32)
-		else 
+		else
 			view_y_offset = Ceiling(user.client.pixel_y/32)
 
 	screen_loc = "[Clamp(c_view + 1 - view_x_offset + (target.x - user.x), 1, 2*c_view+1)],[Clamp(c_view + 1 - view_y_offset + (target.y - user.y), 1, 2*c_view+1)]"
@@ -241,7 +241,7 @@
 			mark.update_marker_pos(human_user, target)
 			continue
 
-		remove_marker(human_user, target, TM)
+		remove_marker(human_user, target, mark)
 
 /obj/item/clothing/glasses/night/m56_goggles/proc/show_marker(mob/user, atom/target)
 	blip_pool[target] = new /obj/effect/target_mark
