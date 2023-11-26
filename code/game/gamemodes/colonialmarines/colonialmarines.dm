@@ -119,7 +119,6 @@
 		flags_round_type |= MODE_BASIC_RT
 
 	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 20 SECONDS)
 
 	return ..()
 
@@ -140,11 +139,6 @@
 		var/turf/T = get_turf(pick_n_take(GLOB.monkey_spawns))
 		var/monkey_to_spawn = pick(monkey_types)
 		new monkey_to_spawn(T)
-
-/datum/game_mode/colonialmarines/proc/map_announcement()
-	if(SSmapping.configs[GROUND_MAP].announce_text)
-		var/rendered_announce_text = replacetext(SSmapping.configs[GROUND_MAP].announce_text, "###SHIPNAME###", MAIN_SHIP_NAME)
-		marine_announcement(rendered_announce_text, "[MAIN_SHIP_NAME]")
 
 /datum/game_mode/colonialmarines/proc/ares_conclude()
 	ai_silent_announcement("Bioscan complete. No unknown lifeform signature detected.", ".V")
