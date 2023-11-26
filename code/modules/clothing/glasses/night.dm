@@ -236,9 +236,9 @@
 		playsound_client(human_user.client, 'sound/items/tick.ogg')
 
 	for(var/target in blip_pool)
-		var/obj/effect/target_mark/TM = blip_pool[target]
+		var/obj/effect/target_mark/mark = blip_pool[target]
 		if(target in viewed)
-			TM.update_marker_pos(human_user, target)
+			mark.update_marker_pos(human_user, target)
 			continue
 
 		remove_marker(human_user, target, TM)
