@@ -177,9 +177,9 @@
 			remove_marker(user, target, blip_pool[target])
 		STOP_PROCESSING(SSfastobj, src)
 
-	var/datum/action/item_action/m56_goggles/target_highlighting/TH = locate(/datum/action/item_action/m56_goggles/target_highlighting) in actions
-	if(TH)
-		TH.update_button_icon()
+	var/datum/action/item_action/m56_goggles/target_highlighting/action = locate(/datum/action/item_action/m56_goggles/target_highlighting) in actions
+	if(action)
+		action.update_button_icon()
 
 /obj/item/clothing/glasses/night/m56_goggles/proc/disable_target_highlighting(mob/living/carbon/human/user)
 	if(!istype(user))
