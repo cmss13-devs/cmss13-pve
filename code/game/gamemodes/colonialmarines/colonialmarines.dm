@@ -118,8 +118,6 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[ZTRAIT_BASIC_RT])
 		flags_round_type |= MODE_BASIC_RT
 
-	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
-
 	return ..()
 
 #define MONKEYS_TO_TOTAL_RATIO 1/32

@@ -26,9 +26,6 @@
 	for(var/mob/new_player/np in GLOB.new_player_list)
 		np.new_player_panel_proc()
 
-	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
-	return ..()
-
 /datum/game_mode/infection/proc/initialize_post_survivor_list()
 	if(synth_survivor)
 		transform_survivor(synth_survivor, TRUE)

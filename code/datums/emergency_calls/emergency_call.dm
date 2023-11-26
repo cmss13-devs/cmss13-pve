@@ -10,11 +10,6 @@
 	var/datum/emergency_call/picked_calls[] = list() //Which distress calls are currently active
 	var/ert_dispatched = FALSE
 
-/datum/game_mode/proc/ares_online()
-	var/name = "ARES Online"
-	var/input = "ARES. Online. Good morning, marines."
-	shipwide_ai_announcement(input, name, 'sound/AI/ares_online.ogg')
-
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
 		return FALSE
