@@ -209,22 +209,12 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			return
 
-		if("delete_near_xenos")
-			if(tgui_alert(ui.user, "Do you want to delete xenos within your view range?", "Confirmation", list("Yes", "No")) != "Yes")
+		if("delete_xenos_in_view")
+			if(tgui_alert(ui.user, "Do you want to delete all xenos within your view range?", "Confirmation", list("Yes", "No")) != "Yes")
 				return
 
-			var/turf/current_turf = get_turf(usr)
-			var/view_min_x = current_turf.x - usr.client.view
-			var/view_min_y = current_turf.y - usr.client.view
-			var/view_max_x = current_turf.x + usr.client.view
-			var/view_max_y = current_turf.y + usr.client.view
-
-			for(var/mob/living/carbon/xenomorph/nearby_xeno as anything in GLOB.xeno_mob_list)
-				var/turf/xeno_turf = get_turf(nearby_xeno)
-				if(xeno_turf.z != current_turf.z || !ISINRANGE(xeno_turf.x, view_min_x, view_max_x) || !ISINRANGE(xeno_turf.y, view_min_y, view_max_y))
-					continue
-
-				qdel(nearby_xeno)
+			for(var/mob/living/carbon/xenomorph/viewed_xeno in view(ui.user.client.view))
+				qdel(viewed_xeno)
 
 			return
 

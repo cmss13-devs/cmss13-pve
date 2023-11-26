@@ -87,9 +87,9 @@ export const GameMasterSpawningPanel = (props, context) => {
             </Stack.Item>
             <Stack.Item>
               <Button
-                content="Delete near xenos"
+                content="Delete viewed xenos"
                 onClick={() => {
-                  act('delete_near_xenos');
+                  act('delete_xenos_in_view');
                 }}
               />
             </Stack.Item>
