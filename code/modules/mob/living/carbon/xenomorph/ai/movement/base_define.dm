@@ -134,6 +134,9 @@
 			if(!touching_turf.weeds)
 				continue
 
+			if(istype(touching_turf, /turf/closed/shuttle))
+				continue
+
 			if(get_dir(potential_nest, touching_turf) in diagonals)
 				continue
 
