@@ -3136,8 +3136,8 @@
 	},
 /area/golden_arrow/engineering)
 "tH" = (
-/obj/structure/surface/table/woodentable/fancy,
 /obj/item/toy/deck,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "tS" = (
@@ -5893,7 +5893,7 @@
 /area/golden_arrow/hangar)
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8004,8 +8004,8 @@
 	},
 /area/golden_arrow/platoon_sergeant)
 "VS" = (
-/obj/structure/surface/table/woodentable/fancy,
 /obj/item/toy/deck/uno,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "VT" = (
@@ -8152,8 +8152,8 @@
 	},
 /area/golden_arrow/hangar)
 "Ww" = (
-/obj/structure/surface/table/woodentable/fancy,
 /obj/item/prop/colony/game,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Wz" = (
