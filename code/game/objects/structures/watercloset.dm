@@ -9,6 +9,7 @@
 	anchored = TRUE
 	can_buckle = TRUE
 	unslashable = TRUE
+	buckle_lying = 0
 	var/open = 0 //if the lid is up
 	var/cistern = 0 //if the cistern bit is open
 	var/w_items = 0 //the combined w_class of all the items in the cistern
