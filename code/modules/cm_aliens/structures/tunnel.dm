@@ -48,7 +48,7 @@
 	if(resin_trap)
 		qdel(resin_trap)
 
-	SSminimaps.add_marker(src, z, MINIMAP_FLAG_XENO, "xenotunnel")
+	SSminimaps.add_marker(src, z, get_minimap_flag_for_faction(hivenumber), "xenotunnel")
 
 /obj/structure/tunnel/Destroy()
 	if(hive)
@@ -254,6 +254,14 @@
 	else
 		to_chat(M, SPAN_WARNING("\The [src] ended unexpectedly, so you return back up."))
 	return XENO_NO_DELAY_ACTION
+
+/obj/structure/tunnel/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
+	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, loop = loop_amount, easing = JUMP_EASING)
+	for(var/i in 1 to sections)
+		animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, easing = JUMP_EASING)
+
+/obj/structure/tunnel/proc/animate_crawl_reset()
+	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
 
 /obj/structure/tunnel/maint_tunnel
 	name = "\improper Maintenance Hatch"

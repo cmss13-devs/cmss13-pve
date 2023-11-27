@@ -62,6 +62,12 @@
 
 	can_be_near_defense = TRUE
 
+	/// Delay sending no ammo messages
+	COOLDOWN_DECLARE(no_ammo_message_cooldown)
+
+	/// Delay for the beep before firing after not firing for a while
+	COOLDOWN_DECLARE(beep_fire_sound_cooldown)
+
 /obj/structure/machinery/defenses/sentry/Initialize()
 	. = ..()
 	spark_system = new /datum/effect_system/spark_spread
@@ -317,14 +323,18 @@
 	if(!(world.time-last_fired >= fire_delay) || !turned_on || !ammo || QDELETED(target))
 		return
 
-	if(world.time-last_fired >= 30 SECONDS) //if we haven't fired for a while, beep first
+	if(COOLDOWN_FINISHED(src, beep_fire_sound_cooldown)) //if we haven't fired for a while, beep first
 		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
 
 	if(ammo && ammo.current_rounds <= 0)
-		to_chat(usr, SPAN_WARNING("[name] does not have any ammo."))
+		if(COOLDOWN_FINISHED(src, no_ammo_message_cooldown))
+			visible_message(SPAN_WARNING("[src] beeps steadily and its ammo light blinks red."))
+			COOLDOWN_START(src, no_ammo_message_cooldown, (3 SECONDS))
+
 		return
 
 	last_fired = world.time
+	COOLDOWN_START(src, beep_fire_sound_cooldown, (30 SECONDS))
 
 	if(QDELETED(owner_mob))
 		owner_mob = src
@@ -583,6 +593,10 @@
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(FACTION_COLONY, FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = FACTION_COLONY
+
+/obj/structure/machinery/defenses/sentry/premade/deployable/almayer
+	fire_delay = 4
+	omni_directional = TRUE
 
 //the turret inside the shuttle sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/dropship

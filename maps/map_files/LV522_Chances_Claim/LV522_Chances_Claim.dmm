@@ -388,6 +388,15 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/south)
+"akb" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	pixel_y = 5
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/cargo)
 "akh" = (
 /obj/structure/foamed_metal,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -456,24 +465,6 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor)
-"amy" = (
-/obj/item/toy/farwadoll{
-	desc = "A Farwa plush doll. Once soft and comforting now just really wet.";
-	name = "Soaked farwa plush doll"
-	},
-/turf/open/gm/river,
-/area/lv522/atmos/sewer)
-"amC" = (
-/obj/structure/bed/roller,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname{
-	dir = 4
-	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue_plate"
-	},
-/area/lv522/indoors/a_block/admin)
 "amP" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -507,6 +498,11 @@
 	icon_state = "cell_stripe"
 	},
 /area/lv522/atmos/way_in_command_centre)
+"anc" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/glasses/sunglasses,
+/turf/open/floor/carpet,
+/area/lv522/indoors/c_block/garage)
 "ann" = (
 /obj/structure/barricade/wooden{
 	dir = 4
@@ -807,6 +803,10 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
+"avX" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/cargo)
 "awj" = (
 /obj/item/stack/rods,
 /turf/open/floor/prison,
@@ -1146,6 +1146,20 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/indoors/c_block/mining)
+"aGA" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos.";
+	icon_state = "pottedplant_22";
+	name = "synthetic potted plant";
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/turf/open/floor/prison{
+	icon_state = "darkpurplefull2"
+	},
+/area/lv522/indoors/a_block/dorms)
 "aGE" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/trash/buritto,
@@ -1366,18 +1380,6 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
-"aNn" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Corporate";
-	pixel_y = 26
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/corpo)
 "aNr" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -1411,6 +1413,15 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
+"aOj" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate,
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/garage)
 "aOP" = (
 /obj/effect/spawner/gibspawner/xeno,
 /obj/effect/decal/cleanable/dirt,
@@ -1460,14 +1471,6 @@
 	icon_state = "cement12"
 	},
 /area/lv522/outdoors/colony_streets/central_streets)
-"aQe" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/recharger,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical)
 "aQs" = (
 /obj/structure/machinery/telecomms/bus/preset_one,
 /turf/open/floor/prison{
@@ -2375,18 +2378,6 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/indoors/c_block/garage)
-"bny" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Garage";
-	pixel_y = 26
-	},
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lv522/atmos/reactor_garage)
 "bnz" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/flora/pottedplant{
@@ -2417,6 +2408,21 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
+"bof" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "LV522 Chances Claim";
+	phone_id = "Chief Engineer Office";
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/turf/open/floor/wood/ship,
+/area/lv522/atmos/way_in_command_centre)
 "bou" = (
 /obj/item/stack/tile/plasteel{
 	name = "ceiling tile";
@@ -2437,6 +2443,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
+"bpb" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whiteyellowfull"
+	},
+/area/lv522/indoors/a_block/corpo)
 "bpD" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/corsat{
@@ -2558,6 +2571,10 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
+"bvU" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/dorm_north)
 "bwd" = (
 /obj/item/toy/beach_ball/holoball{
 	pixel_x = 8;
@@ -2709,6 +2726,15 @@
 	icon_state = "cell_stripe"
 	},
 /area/lv522/atmos/reactor_garage)
+"bzw" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Dorms";
+	pixel_y = 26
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/dorms)
 "bzC" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/atmos/cargo_intake)
@@ -2799,6 +2825,22 @@
 /obj/structure/cargo_container/grant/left,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
+"bBE" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Garage";
+	pixel_x = -16
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/garage)
 "bBF" = (
 /obj/item/ammo_box/magazine/misc/mre,
 /obj/item/prop/colony/usedbandage{
@@ -2946,6 +2988,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
+"bFC" = (
+/obj/structure/machinery/power/apc/weak{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/pen/blue,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/corpo/glass)
 "bFU" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -2968,32 +3021,10 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
-"bGN" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 4
-	},
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
 "bGT" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges)
-"bGV" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/device/flashlight/lamp/on{
-	pixel_x = 4;
-	pixel_y = 14
-	},
-/obj/item/device/binoculars,
-/turf/open/floor/wood,
-/area/lv522/indoors/a_block/executive)
 "bHa" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
 	req_access = list(7,23,27)
@@ -3121,12 +3152,6 @@
 	icon_state = "kitchen"
 	},
 /area/lv522/indoors/a_block/kitchen)
-"bJy" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/atmos/way_in_command_centre)
 "bJE" = (
 /obj/structure/prop/vehicles/crawler{
 	icon_state = "crawler_fuel";
@@ -3535,17 +3560,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
-"bTA" = (
-/obj/structure/surface/table/gamblingtable,
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_x = 3;
-	pixel_y = 13
-	},
-/obj/item/storage/box/drinkingglasses{
-	pixel_y = 4
-	},
-/turf/open/floor/carpet,
-/area/lv522/indoors/c_block/casino)
 "bTF" = (
 /obj/structure/machinery/blackbox_recorder,
 /obj/effect/decal/cleanable/cobweb,
@@ -4129,6 +4143,17 @@
 	icon_state = "greenfull"
 	},
 /area/lv522/indoors/a_block/fitness)
+"cgF" = (
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.1
+	},
+/obj/item/clothing/under/suit_jacket/stowaway,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "multi_tiles"
+	},
+/area/lv522/indoors/c_block/mining)
 "cgG" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper C-Block - Cargo Airlock"
@@ -4147,6 +4172,16 @@
 	icon_state = "platebot"
 	},
 /area/lv522/indoors/c_block/cargo)
+"chG" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin/wy{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/prison{
+	icon_state = "darkredfull2"
+	},
+/area/lv522/indoors/a_block/security)
 "chR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -4413,6 +4448,29 @@
 	dir = 1;
 	icon_state = "blue_plate"
 	},
+/area/lv522/indoors/a_block/admin)
+"cpE" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/phone_base/colony_net{
+	dir = 1;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Engineering";
+	pixel_y = -6
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "darkyellowfull2"
+	},
+/area/lv522/indoors/lone_buildings/engineering)
+"cpG" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "LV522 Chances Claim";
+	phone_id = "Colony Operations Centre";
+	pixel_y = 6
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/admin)
 "cpJ" = (
 /obj/structure/barricade/deployable{
@@ -5487,16 +5545,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
-"cMq" = (
-/obj/structure/surface/rack,
-/obj/item/stack/sheet/mineral/diamond{
-	amount = 2
-	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
-/area/lv522/atmos/cargo_intake)
 "cMv" = (
 /obj/effect/spawner/gibspawner/xeno,
 /obj/structure/machinery/light{
@@ -5901,6 +5949,22 @@
 	icon_state = "browncorner"
 	},
 /area/lv522/atmos/east_reactor)
+"cVv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/grown/nettle/death{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/seeds/glowshroom,
+/obj/item/seeds/glowshroom{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/b_block/hydro)
 "cVy" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/corsat,
@@ -6051,6 +6115,18 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
+"cYB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Garage";
+	pixel_y = 26
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lv522/atmos/reactor_garage)
 "cYE" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
@@ -6356,29 +6432,6 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/east_reactor/south)
-"ddo" = (
-/obj/structure/surface/rack,
-/obj/item/stack/sheet/metal{
-	amount = 50;
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/stack/sheet/metal{
-	amount = 30
-	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
-/area/lv522/atmos/cargo_intake)
-"ddq" = (
-/obj/structure/surface/rack,
-/obj/item/device/analyzer,
-/obj/item/stack/sheet/cardboard/full_stack,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/mining)
 "ddr" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/bottle/davenport{
@@ -6627,6 +6680,13 @@
 	icon_state = "cement1"
 	},
 /area/lv522/outdoors/colony_streets/north_street)
+"dht" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison{
+	dir = 10;
+	icon_state = "floor_marked"
+	},
+/area/lv522/atmos/cargo_intake)
 "dhH" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement12"
@@ -6895,6 +6955,20 @@
 	icon_state = "plate"
 	},
 /area/lv522/indoors/c_block/mining)
+"dmA" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/adv/empty{
+	pixel_x = -3;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/hypospray/autoinjector/kelotane{
+	pixel_y = -3
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/garage)
 "dmE" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/flora/pottedplant{
@@ -7375,12 +7449,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/north_command_centre)
-"dwX" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/garage)
 "dxc" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	name = "overhead pipe";
@@ -7450,6 +7518,13 @@
 	icon_state = "white_cyan3"
 	},
 /area/lv522/indoors/a_block/medical)
+"dyQ" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "kitchen"
+	},
+/area/lv522/indoors/a_block/kitchen)
 "dyS" = (
 /obj/item/stack/sheet/wood,
 /turf/open/auto_turf/sand_white/layer0,
@@ -8439,10 +8514,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/oob)
-"dTs" = (
-/obj/structure/bed/roller,
-/turf/open/floor/prison,
-/area/lv522/atmos/cargo_intake)
 "dTv" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/floor/prison,
@@ -8489,6 +8560,28 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/dorms)
+"dUw" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	dir = 1;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "LZ1 Checkpoint";
+	pixel_x = 4;
+	pixel_y = -5
+	},
+/obj/item/tool/stamp/denied{
+	pixel_x = -11;
+	pixel_y = 8
+	},
+/obj/item/clothing/head/hardhat/white{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/landing_zone_1/ceiling)
 "dUD" = (
 /obj/item/prop/colony/proptag{
 	desc = "A fallen marine's information dog tag. It reads, Ensign Robert 'Roach' Yangley"
@@ -8558,6 +8651,14 @@
 /obj/structure/closet/crate/trashcart,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"dWm" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/pen/blue/clicky,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/casino)
 "dWn" = (
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -8594,6 +8695,17 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/west_reactor)
+"dWX" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Eastern Reactor Control";
+	pixel_y = 26
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lv522/atmos/east_reactor)
 "dWY" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "32"
@@ -8780,20 +8892,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/b_block/bridge)
-"eah" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/flora/pottedplant{
-	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
-	icon_state = "pottedplant_21";
-	layer = 3.1;
-	name = "synthethic potted plant";
-	pixel_y = 14
-	},
-/obj/item/prop/alien/hugger,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/lv522/indoors/a_block/dorms)
 "eam" = (
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/floor/corsat{
@@ -8806,6 +8904,13 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor/west)
+"eaC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/plate{
+	pixel_y = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/dorms)
 "eaE" = (
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
@@ -8836,20 +8941,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/oob)
-"ebR" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/phone_base/colony_net{
-	dir = 1;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Engineering";
-	pixel_y = -6
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellowfull2"
-	},
-/area/lv522/indoors/lone_buildings/engineering)
 "ecm" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/prison{
@@ -9654,10 +9745,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/north_command_centre)
-"erw" = (
-/obj/vehicle/train/cargo/trolley,
-/turf/open/floor/prison,
-/area/lv522/atmos/cargo_intake)
 "erA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -9923,6 +10010,16 @@
 /obj/item/tool/wirecutters/clippers,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
+"exy" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "darkyellowfull2"
+	},
+/area/lv522/indoors/lone_buildings/engineering)
 "exB" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -10114,6 +10211,11 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/east)
+"eAT" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/dorms)
 "eAX" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/glass/fertilizer,
@@ -10130,6 +10232,17 @@
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/plating,
 /area/lv522/atmos/east_reactor)
+"eBk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/tool/pen/blue/clicky,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/a_block/hallway)
 "eBm" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/corsat{
@@ -10386,13 +10499,10 @@
 	icon_state = "marked"
 	},
 /area/lv522/atmos/east_reactor/west)
-"eHX" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
-/area/lv522/atmos/cargo_intake)
+"eHY" = (
+/obj/structure/surface/table/gamblingtable,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/casino)
 "eIk" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -10427,10 +10537,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/south)
-"eJc" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/cargo)
 "eJd" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -10649,6 +10755,32 @@
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/b_block/hydro)
+"eNy" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Fitness";
+	pixel_y = 26
+	},
+/turf/open/floor/prison{
+	dir = 10;
+	icon_state = "whitegreenfull"
+	},
+/area/lv522/indoors/a_block/fitness)
+"eNR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	dir = 8;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Medical";
+	pixel_x = 16
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical/glass)
 "eNT" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -10843,6 +10975,20 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor)
+"eSb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/tool/pen/blue/clicky,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/landing_zone_1/ceiling)
 "eSf" = (
 /obj/structure/barricade/wooden{
 	dir = 4
@@ -11141,6 +11287,15 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/atmos/outdoor)
+"eYF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/atmos/way_in_command_centre)
 "eYM" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/lv522/landing_zone_1/tunnel)
@@ -11197,23 +11352,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
-"eZW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "LZ1 Service Tunnel";
-	pixel_y = 24
-	},
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/plating,
-/area/lv522/landing_zone_1/tunnel)
 "eZY" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -11233,6 +11371,19 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/outdoors/colony_streets/south_east_street)
+"fad" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/cargo)
 "faK" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat{
@@ -11399,6 +11550,10 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/kitchen/glass)
+"fej" = (
+/obj/structure/bed/roller,
+/turf/open/floor/prison,
+/area/lv522/atmos/cargo_intake)
 "feu" = (
 /obj/item/prop/alien/hugger,
 /obj/effect/decal/cleanable/dirt,
@@ -11476,20 +11631,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2)
-"ffO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	dir = 8;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Medical";
-	pixel_x = 16
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical/glass)
 "fgf" = (
 /obj/item/ammo_magazine/m2c{
 	current_rounds = 0;
@@ -11921,6 +12062,20 @@
 	icon_state = "wood-broken4"
 	},
 /area/lv522/indoors/b_block/bar)
+"fqe" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Entrance Office";
+	pixel_y = 26
+	},
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lv522/atmos/east_reactor/south)
 "fqD" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -12211,25 +12366,6 @@
 	icon_state = "greenfull"
 	},
 /area/lv522/indoors/a_block/fitness)
-"fwT" = (
-/obj/item/tool/lighter/random{
-	pixel_x = -4;
-	pixel_y = 13
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = 5;
-	pixel_y = 1
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = 4
-	},
-/obj/item/paper/crumpled/bloody{
-	pixel_x = -9
-	},
-/turf/open/floor/plating,
-/area/lv522/indoors/c_block/cargo)
 "fwV" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -12560,20 +12696,6 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor/east)
-"fDj" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/tool/pen/blue/clicky,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/landing_zone_1/ceiling)
 "fDn" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat{
@@ -12788,6 +12910,22 @@
 	icon_state = "white_cyan2"
 	},
 /area/lv522/indoors/a_block/executive)
+"fHE" = (
+/obj/structure/surface/table/almayer,
+/obj/item/disk{
+	desc = "a 2000 Russian crime film. It is a sequel to the 1997 film Brother.";
+	name = "brat 2 disk"
+	},
+/obj/structure/machinery/recharger{
+	layer = 2.9;
+	pixel_x = 5;
+	pixel_y = -13
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/landing_zone_2/ceiling)
 "fHH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -12844,6 +12982,16 @@
 	icon_state = "marked"
 	},
 /area/lv522/atmos/west_reactor)
+"fJd" = (
+/obj/item/storage/firstaid/o2,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan3"
+	},
+/area/lv522/indoors/a_block/medical/glass)
 "fJe" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat{
@@ -13381,6 +13529,14 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/hallway)
+"fUk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/circuitboard/airlock,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/mining)
 "fUx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -13441,6 +13597,14 @@
 "fWG" = (
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_east_street)
+"fWM" = (
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/lone_buildings/storage_blocks)
 "fWW" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
@@ -13546,17 +13710,13 @@
 	icon_state = "greenfull"
 	},
 /area/lv522/indoors/b_block/bridge)
-"fYw" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/snacks/sandwich{
-	pixel_x = -6;
-	pixel_y = 3
+"fYC" = (
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/plasteel/large_stack,
+/turf/open/floor/plating{
+	icon_state = "platebot"
 	},
-/obj/item/clothing/glasses/meson,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/c_block/mining)
+/area/lv522/indoors/c_block/cargo)
 "fYD" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -13983,6 +14143,11 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/indoors/c_block/garage)
+"ggC" = (
+/obj/structure/surface/table/almayer,
+/mob/living/simple_animal/mouse,
+/turf/open/floor/plating,
+/area/lv522/indoors/c_block/cargo)
 "ggH" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat{
@@ -14107,6 +14272,10 @@
 	icon_state = "marked"
 	},
 /area/lv522/atmos/west_reactor)
+"giL" = (
+/obj/vehicle/train/cargo/trolley,
+/turf/open/floor/prison,
+/area/lv522/atmos/cargo_intake)
 "giV" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/warning_stripes{
@@ -14305,14 +14474,6 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor)
-"gnl" = (
-/obj/structure/surface/table/almayer,
-/obj/item/circuitboard/airlock,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/mining)
 "gnx" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -14512,16 +14673,6 @@
 	},
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/executive)
-"grZ" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "Sec-Kitchen-Lockdown";
-	name = "remote door-control";
-	pixel_x = -4;
-	pixel_y = 2
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/security/glass)
 "gse" = (
 /obj/structure/machinery/seed_extractor,
 /obj/effect/decal/cleanable/dirt,
@@ -15081,6 +15232,12 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
+"gCz" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/strata{
+	icon_state = "blue1"
+	},
+/area/lv522/indoors/a_block/dorm_north)
 "gCE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/snacks/meat,
@@ -15323,22 +15480,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
-"gHm" = (
+"gHj" = (
 /obj/structure/surface/table/almayer,
-/obj/item/seeds/bananaseed{
-	pixel_x = -5;
-	pixel_y = 8
+/obj/item/trash/plate{
+	pixel_y = 13
 	},
-/obj/item/seeds/berryseed,
-/obj/structure/machinery/light{
-	dir = 4
+/obj/item/reagent_container/food/snacks/toastedsandwich{
+	pixel_y = 20
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
+	icon_state = "darkbrownfull2"
 	},
-/area/lv522/indoors/b_block/hydro)
+/area/lv522/indoors/c_block/cargo)
 "gHz" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement2"
@@ -16079,6 +16232,14 @@
 	icon_state = "floor_marked"
 	},
 /area/lv522/landing_zone_2/ceiling)
+"gVD" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/recharger,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical)
 "gWb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/bottle/sake{
@@ -16562,6 +16723,14 @@
 /obj/structure/platform_decoration,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/mining)
+"hcQ" = (
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/b_block/hydro)
 "hcV" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat{
@@ -16622,6 +16791,21 @@
 	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/n_rockies)
+"hdC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/tool/pen/blue/clicky,
+/obj/item/device/flashlight/lamp{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/cargo)
 "hdG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17286,13 +17470,6 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/atmos/cargo_intake)
-"hoZ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/trash/plate{
-	pixel_y = 8
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/dorms)
 "hpe" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -17531,20 +17708,6 @@
 	icon_state = "blue"
 	},
 /area/lv522/indoors/a_block/hallway)
-"huX" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	dir = 1;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Kitchen";
-	pixel_y = -6
-	},
-/turf/open/floor/prison{
-	icon_state = "kitchen"
-	},
-/area/lv522/indoors/a_block/kitchen)
 "hvh" = (
 /obj/structure/platform,
 /turf/open/gm/river,
@@ -17919,14 +18082,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/command_centre)
-"hBC" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/device/autopsy_scanner,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical)
 "hBD" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/floor/corsat{
@@ -18624,21 +18779,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
-"hPQ" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/surface/table/woodentable/fancy,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "LV522 Chances Claim";
-	phone_id = "Chief Engineer Office";
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	pixel_x = 3;
-	pixel_y = -1
-	},
-/turf/open/floor/wood/ship,
-/area/lv522/atmos/way_in_command_centre)
 "hPT" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2;
@@ -19053,12 +19193,6 @@
 	icon_state = "bcircuit"
 	},
 /area/lv522/atmos/east_reactor)
-"hYn" = (
-/obj/item/tool/pen/blue/clicky{
-	pixel_x = 6
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/dorms)
 "hYw" = (
 /obj/structure/bed/sofa/south/grey/left{
 	pixel_y = 16
@@ -19427,6 +19561,18 @@
 	icon_state = "marked"
 	},
 /area/lv522/atmos/north_command_centre)
+"ifv" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/storage/firstaid/regular,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical/glass)
 "ifw" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -19657,19 +19803,6 @@
 /obj/effect/landmark/lv624/fog_blocker/short,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
-"ike" = (
-/obj/item/prop/alien/hugger,
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Bar & Grill";
-	pixel_x = -16
-	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/lv522/indoors/b_block/bar)
 "ikp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -19858,22 +19991,6 @@
 	},
 /turf/open/floor/corsat,
 /area/lv522/atmos/cargo_intake)
-"ipC" = (
-/obj/structure/toilet{
-	pixel_y = 16
-	},
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "white_cyan2"
-	},
-/area/lv522/indoors/toilet)
 "ipH" = (
 /obj/structure/surface/table/almayer,
 /obj/item/stack/sheet/mineral/gold{
@@ -19971,17 +20088,6 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/indoors/c_block/casino)
-"irH" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/reagent_container/food/drinks/drinkingglass{
-	icon_state = "shotglass";
-	pixel_x = 13;
-	pixel_y = 17
-	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/lv522/indoors/b_block/bar)
 "irR" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -20431,18 +20537,6 @@
 	icon_state = "whiteyellowfull"
 	},
 /area/lv522/indoors/a_block/corpo/glass)
-"izp" = (
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/glasses/meson,
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellowfull2"
-	},
-/area/lv522/indoors/lone_buildings/engineering)
 "izr" = (
 /obj/structure/platform/stair_cut,
 /obj/structure/stairs/perspective{
@@ -20650,6 +20744,15 @@
 	icon_state = "floor_marked"
 	},
 /area/lv522/atmos/cargo_intake)
+"iEN" = (
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 12;
+	pixel_y = 16
+	},
+/obj/structure/surface/table/gamblingtable,
+/turf/open/floor/carpet,
+/area/lv522/indoors/c_block/casino)
 "iFe" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/classic_baton,
@@ -21227,11 +21330,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/lone_buildings/storage_blocks)
-"iPO" = (
-/obj/structure/surface/table/almayer,
-/mob/living/simple_animal/mouse,
-/turf/open/floor/plating,
-/area/lv522/indoors/c_block/cargo)
 "iPR" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement3"
@@ -21503,6 +21601,29 @@
 	icon_state = "darkredfull2"
 	},
 /area/lv522/indoors/a_block/security)
+"iVZ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/tool/pen/blue/clicky,
+/obj/item/device/flashlight/lamp{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "LZ1_Lockdown_Lo";
+	name = "remote door-control";
+	pixel_x = -7
+	},
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/landing_zone_1/ceiling)
 "iWc" = (
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_A_1"
@@ -22180,6 +22301,16 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/east_reactor)
+"jih" = (
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Cargo";
+	pixel_x = -16
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/indoors/c_block/cargo)
 "jin" = (
 /obj/structure/filtration/machine_96x96/indestructible{
 	icon_state = "sedimentation_A_1";
@@ -22658,22 +22789,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/oob)
-"joL" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Garage";
-	pixel_x = -16
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/garage)
 "joV" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/asphalt/cement{
@@ -23514,18 +23629,6 @@
 	},
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/oob)
-"jEF" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Meeting Room";
-	pixel_y = 26
-	},
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lv522/atmos/east_reactor/south)
 "jEW" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -24309,6 +24412,17 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/lv522/indoors/lone_buildings/outdoor_bot)
+"jUE" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 13;
+	pixel_y = 17
+	},
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/lv522/indoors/b_block/bar)
 "jUI" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -24352,6 +24466,18 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/east_reactor)
+"jVm" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/bronze{
+	icon_state = "ashtray_full_bl";
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/item/toy/plush/farwa,
+/turf/open/floor/strata{
+	icon_state = "blue1"
+	},
+/area/lv522/outdoors/colony_streets/windbreaker/observation)
 "jVq" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 4
@@ -24899,16 +25025,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/security)
-"kfi" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/extinguisher_cabinet{
-	pixel_y = 30
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkyellowfull2"
-	},
-/area/lv522/indoors/lone_buildings/engineering)
 "kfq" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -9;
@@ -25653,6 +25769,22 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
+"kru" = (
+/obj/structure/surface/table/almayer,
+/obj/item/seeds/bananaseed{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/seeds/berryseed,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/b_block/hydro)
 "krw" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/monkey_spawn,
@@ -26152,14 +26284,6 @@
 /obj/structure/cargo_container/grant/left,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
-"kBU" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/pen/blue/clicky,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/casino)
 "kCf" = (
 /obj/item/prop/colony/proptag{
 	desc = "A fallen marine's information dog tag. It reads, Sergeant James 'Four eyes' Brown"
@@ -27216,14 +27340,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/w_rockies)
-"kUP" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/prison{
-	icon_state = "darkredfull2"
-	},
-/area/lv522/indoors/a_block/security)
 "kVa" = (
 /obj/effect/spawner/gibspawner/xeno,
 /obj/effect/decal/cleanable/blood/xeno{
@@ -27372,17 +27488,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/medical)
-"kXk" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.1
-	},
-/obj/item/clothing/under/suit_jacket/stowaway,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "multi_tiles"
-	},
-/area/lv522/indoors/c_block/mining)
 "kXo" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -27833,6 +27938,20 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/atmos/sewer)
+"lfI" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	dir = 1;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Kitchen";
+	pixel_y = -6
+	},
+/turf/open/floor/prison{
+	icon_state = "kitchen"
+	},
+/area/lv522/indoors/a_block/kitchen)
 "lfS" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement2"
@@ -28232,6 +28351,14 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/filt)
+"lol" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/storage/fancy/cigarettes/blackpack{
+	pixel_y = 4
+	},
+/turf/open/floor/wood,
+/area/lv522/indoors/a_block/executive)
 "lot" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -29250,6 +29377,24 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/landing_zone_2)
+"lIu" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/item/tool/lighter/random{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/landing_zone_1/ceiling)
 "lIB" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -29585,6 +29730,22 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_street)
+"lRn" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/head/hardhat/orange{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/tool/lighter/random{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/landing_zone_1/ceiling)
 "lRx" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/condiment/hotsauce/sriracha{
@@ -29652,15 +29813,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_2)
-"lSP" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "LV522 Chances Claim";
-	phone_id = "Colony Operations Centre";
-	pixel_y = 6
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/a_block/admin)
 "lTd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -30064,19 +30216,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/south)
-"mbw" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Dining";
-	pixel_y = 26
-	},
-/turf/open/floor/prison{
-	icon_state = "darkredfull2"
-	},
-/area/lv522/indoors/a_block/kitchen/glass)
 "mbx" = (
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/shale/layer2,
@@ -30774,6 +30913,16 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/west)
+"mpo" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/mineral/diamond{
+	amount = 2
+	},
+/turf/open/floor/prison{
+	dir = 10;
+	icon_state = "floor_marked"
+	},
+/area/lv522/atmos/cargo_intake)
 "mpr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
@@ -31009,16 +31158,6 @@
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
-"mtM" = (
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Cargo";
-	pixel_x = -16
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/c_block/cargo)
 "mua" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/atmos/filt)
@@ -31029,28 +31168,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
-"muO" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/phone_base/colony_net{
-	dir = 1;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "LZ1 Checkpoint";
-	pixel_x = 4;
-	pixel_y = -5
-	},
-/obj/item/tool/stamp/denied{
-	pixel_x = -11;
-	pixel_y = 8
-	},
-/obj/item/clothing/head/hardhat/white{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/landing_zone_1/ceiling)
 "muP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
@@ -31529,24 +31646,6 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/east_reactor/south)
-"mFm" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = 5;
-	pixel_y = 1
-	},
-/obj/item/tool/lighter/random{
-	pixel_x = -3;
-	pixel_y = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/landing_zone_1/ceiling)
 "mFA" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -31769,6 +31868,13 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/indoors/a_block/admin)
+"mKC" = (
+/obj/item/toy/plush/farwa{
+	desc = "A Farwa plush doll. Once soft and comforting now just really wet.";
+	name = "Soaked farwa plush doll"
+	},
+/turf/open/gm/river,
+/area/lv522/atmos/sewer)
 "mKK" = (
 /obj/structure/barricade/deployable{
 	dir = 8
@@ -32243,6 +32349,17 @@
 	icon_state = "kitchen"
 	},
 /area/lv522/indoors/a_block/kitchen)
+"mRg" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Sewer";
+	pixel_y = 26
+	},
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/atmos/sewer)
 "mRh" = (
 /obj/structure/window/framed/corsat,
 /turf/open/floor/corsat,
@@ -32487,6 +32604,22 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms/glass)
+"mWa" = (
+/obj/structure/toilet{
+	pixel_y = 16
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/area/lv522/indoors/toilet)
 "mWc" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement12"
@@ -32665,6 +32798,23 @@
 "nax" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
+"naB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "LZ1 Service Tunnel";
+	pixel_y = 24
+	},
+/obj/effect/landmark/lv624/fog_blocker/short,
+/turf/open/floor/plating,
+/area/lv522/landing_zone_1/tunnel)
 "naC" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8;
@@ -32904,18 +33054,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
-"nem" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Northern Dorms";
-	pixel_y = 26
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata{
-	icon_state = "blue1"
-	},
-/area/lv522/indoors/a_block/dorm_north)
 "nez" = (
 /obj/item/ammo_magazine/rifle/heap{
 	current_rounds = 0
@@ -33016,6 +33154,11 @@
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"ngb" = (
+/obj/structure/surface/table/gamblingtable,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/casino)
 "ngd" = (
 /obj/item/tool/wrench,
 /obj/effect/decal/cleanable/dirt,
@@ -33566,10 +33709,6 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/east_reactor/south)
-"nqj" = (
-/obj/structure/surface/table/gamblingtable,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/casino)
 "nqo" = (
 /obj/item/device/flashlight/lamp{
 	pixel_y = 13
@@ -33682,18 +33821,6 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/indoors/lone_buildings/storage_blocks)
-"nrJ" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 6;
-	pixel_y = 11
-	},
-/obj/item/storage/firstaid/regular,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical/glass)
 "nrL" = (
 /obj/structure/surface/table/almayer{
 	dir = 8;
@@ -34186,15 +34313,18 @@
 /obj/item/tool/wrench,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
-"nDS" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Dorms";
-	pixel_y = 26
+"nDZ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = 2;
+	pixel_y = 4
 	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/dorms)
+/obj/item/tool/pen/blue/clicky,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/a_block/hallway)
 "nEd" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -34407,15 +34537,6 @@
 "nJv" = (
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/lone_buildings/engineering)
-"nJO" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/atmos/way_in_command_centre)
 "nJV" = (
 /obj/structure/noticeboard,
 /turf/closed/wall/strata_outpost,
@@ -34478,6 +34599,18 @@
 	icon_state = "darkredfull2"
 	},
 /area/lv522/indoors/a_block/security)
+"nKU" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/camera/autoname{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/prison{
+	icon_state = "darkpurplefull2"
+	},
+/area/lv522/indoors/a_block/dorms/glass)
 "nKZ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -34661,6 +34794,11 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/outdoors/colony_streets/north_street)
+"nNz" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/glass/bucket,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/indoors/b_block/hydro)
 "nNA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -34889,6 +35027,18 @@
 /obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/mining)
+"nQX" = (
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Security";
+	pixel_x = -16
+	},
+/turf/open/floor/prison{
+	icon_state = "darkredfull2"
+	},
+/area/lv522/indoors/a_block/security/glass)
 "nQY" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "53"
@@ -34941,6 +35091,18 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/c_block/t_comm)
+"nSk" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Corporate";
+	pixel_y = 26
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/corpo)
 "nSm" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate,
@@ -35387,13 +35549,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/kitchen)
-"nZn" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/plasteel/large_stack,
-/turf/open/floor/plating{
-	icon_state = "platebot"
-	},
-/area/lv522/indoors/c_block/cargo)
 "nZv" = (
 /obj/structure/machinery/conveyor{
 	dir = 4;
@@ -35507,6 +35662,18 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/lv522/indoors/c_block/t_comm)
+"occ" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/shovel/etool/folded,
+/obj/item/tool/soap/deluxe{
+	pixel_x = 4;
+	pixel_y = 13
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/corpo)
 "ocn" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -36355,17 +36522,6 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/outdoors/colony_streets/north_west_street)
-"osm" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Sewer";
-	pixel_y = 26
-	},
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/atmos/sewer)
 "osN" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement4"
@@ -36403,6 +36559,14 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/medical)
+"otv" = (
+/obj/structure/surface/rack,
+/obj/item/device/analyzer,
+/obj/item/stack/sheet/cardboard/full_stack,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/mining)
 "otx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -36555,6 +36719,20 @@
 /obj/structure/platform,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
+"ovV" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
+	icon_state = "pottedplant_21";
+	layer = 3.1;
+	name = "synthethic potted plant";
+	pixel_y = 14
+	},
+/obj/item/prop/alien/hugger,
+/turf/open/floor/prison{
+	icon_state = "darkpurplefull2"
+	},
+/area/lv522/indoors/a_block/dorms)
 "owe" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -36682,6 +36860,18 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/dorms)
+"oyR" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/surgical_tray/empty,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/area/lv522/outdoors/w_rockies)
 "oyY" = (
 /obj/structure/largecrate,
 /obj/effect/landmark/lv624/fog_blocker/short,
@@ -36723,12 +36913,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/t_comm)
-"ozJ" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/strata{
-	icon_state = "blue1"
-	},
-/area/lv522/indoors/a_block/dorm_north)
 "ozQ" = (
 /obj/structure/stairs/perspective{
 	dir = 9;
@@ -36748,10 +36932,6 @@
 	icon_state = "blue"
 	},
 /area/lv522/indoors/a_block/hallway)
-"oAd" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/dorm_north)
 "oAp" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -36946,15 +37126,6 @@
 	icon_state = "white_cyan2"
 	},
 /area/lv522/indoors/a_block/dorms)
-"oFG" = (
-/obj/item/reagent_container/food/drinks/drinkingglass{
-	icon_state = "shotglass";
-	pixel_x = 12;
-	pixel_y = 16
-	},
-/obj/structure/surface/table/gamblingtable,
-/turf/open/floor/carpet,
-/area/lv522/indoors/c_block/casino)
 "oFN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -37067,18 +37238,6 @@
 	icon_state = "blue"
 	},
 /area/lv522/indoors/a_block/admin)
-"oHR" = (
-/obj/structure/phone_base/colony_net{
-	dir = 4;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Security";
-	pixel_x = -16
-	},
-/turf/open/floor/prison{
-	icon_state = "darkredfull2"
-	},
-/area/lv522/indoors/a_block/security/glass)
 "oIr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
@@ -37218,17 +37377,6 @@
 	icon_state = "cell_stripe"
 	},
 /area/lv522/atmos/east_reactor/south)
-"oKN" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Central Office";
-	pixel_y = 26
-	},
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lv522/atmos/command_centre)
 "oKP" = (
 /obj/structure/machinery/autolathe,
 /obj/effect/decal/cleanable/dirt,
@@ -37949,6 +38097,18 @@
 	icon_state = "darkredfull2"
 	},
 /area/lv522/indoors/a_block/bridges/op_centre)
+"oZd" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/glasses/meson,
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "darkyellowfull2"
+	},
+/area/lv522/indoors/lone_buildings/engineering)
 "oZC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -38742,12 +38902,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_street)
-"pqA" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison{
-	icon_state = "kitchen"
-	},
-/area/lv522/indoors/b_block/bar)
 "pqB" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/newspaper,
@@ -38756,24 +38910,6 @@
 	icon_state = "darkbrownfull2"
 	},
 /area/lv522/indoors/c_block/casino)
-"pqI" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/soap{
-	pixel_x = 5
-	},
-/obj/item/reagent_container/spray/cleaner{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/stack/nanopaste{
-	pixel_x = 8;
-	pixel_y = 15
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan2"
-	},
-/area/lv522/indoors/a_block/medical)
 "pqQ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -39316,24 +39452,6 @@
 	icon_state = "darkpurple2"
 	},
 /area/lv522/indoors/a_block/dorms)
-"pCb" = (
-/obj/structure/filingcabinet/seeds{
-	density = 0;
-	pixel_x = -8;
-	pixel_y = 16
-	},
-/obj/structure/filingcabinet/seeds{
-	density = 0;
-	pixel_x = 7;
-	pixel_y = 16
-	},
-/obj/structure/pipes/vents/pump,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/indoors/b_block/hydro)
 "pCg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -39558,6 +39676,18 @@
 /obj/effect/landmark/lv624/fog_blocker/short,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
+"pEZ" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/adv{
+	pixel_y = 9
+	},
+/obj/item/storage/firstaid/adv,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical/glass)
 "pFw" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
 /obj/effect/landmark/lv624/fog_blocker/short,
@@ -39721,14 +39851,6 @@
 	icon_state = "rasputin15"
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
-"pJd" = (
-/obj/effect/decal/cleanable/cobweb2,
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/indoors/b_block/hydro)
 "pJh" = (
 /obj/structure/surface/table/almayer{
 	dir = 4;
@@ -40315,6 +40437,15 @@
 	icon_state = "rasputin15"
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
+"pTJ" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 4;
+	pixel_y = 14
+	},
+/obj/item/device/binoculars,
+/turf/open/floor/wood,
+/area/lv522/indoors/a_block/executive)
 "pTO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed{
@@ -40699,6 +40830,12 @@
 	icon_state = "wood"
 	},
 /area/lv522/indoors/b_block/bar)
+"qaj" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/a_block/hallway)
 "qal" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/flashlight/lamp/green,
@@ -40877,6 +41014,35 @@
 	},
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
+"qdg" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Dining";
+	pixel_y = 26
+	},
+/turf/open/floor/prison{
+	icon_state = "darkredfull2"
+	},
+/area/lv522/indoors/a_block/kitchen/glass)
+"qdA" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/stamp/denied{
+	pixel_x = -11;
+	pixel_y = 8
+	},
+/obj/item/card/id/silver/clearance_badge/cl{
+	desc = "Wow sorry, didn't mean to drop that in front of you, it's real, btw.";
+	name = "certified powerloader operator card";
+	pixel_x = 5;
+	registered_name = "John Forklift"
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/cargo)
 "qdO" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -41256,6 +41422,19 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/atmos/cargo_intake)
+"qmF" = (
+/obj/item/prop/alien/hugger,
+/obj/structure/phone_base/colony_net{
+	dir = 4;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Bar & Grill";
+	pixel_x = -16
+	},
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/lv522/indoors/b_block/bar)
 "qmM" = (
 /obj/structure/prop/invuln/fire{
 	pixel_x = -8;
@@ -41586,6 +41765,12 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/filt)
+"qrU" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/atmos/way_in_command_centre)
 "qsd" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 10
@@ -41953,17 +42138,6 @@
 	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
-"qyp" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Eastern Reactor Control";
-	pixel_y = 26
-	},
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lv522/atmos/east_reactor)
 "qyG" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/sand_white/layer0,
@@ -42062,6 +42236,10 @@
 "qzQ" = (
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/bridge)
+"qzT" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison,
+/area/lv522/indoors/b_block/hydro)
 "qzU" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -42386,18 +42564,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/central_streets)
-"qGh" = (
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Fitness";
-	pixel_y = 26
-	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "whitegreenfull"
-	},
-/area/lv522/indoors/a_block/fitness)
 "qGq" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -42658,18 +42824,6 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/lv522/indoors/lone_buildings/engineering)
-"qLd" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/surgical_tray/empty,
-/obj/structure/machinery/light/double{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "white_cyan2"
-	},
-/area/lv522/outdoors/w_rockies)
 "qLk" = (
 /obj/structure/closet/firecloset/full,
 /obj/effect/landmark/lv624/fog_blocker/short,
@@ -43151,24 +43305,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
+"qSA" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison{
+	icon_state = "kitchen"
+	},
+/area/lv522/indoors/b_block/bar)
 "qSH" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"qSL" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/tool/pen/blue/clicky,
-/obj/item/device/flashlight/lamp{
-	pixel_x = -9;
-	pixel_y = 10
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
 "qSP" = (
 /turf/closed/shuttle/dropship2/tornado/typhoon{
 	icon_state = "61"
@@ -43419,6 +43564,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/lone_buildings/engineering)
+"qWi" = (
+/obj/structure/machinery/computer/operating,
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan2"
+	},
+/area/lv522/indoors/a_block/medical)
 "qWt" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -43602,14 +43755,6 @@
 	},
 /turf/closed/wall/strata_ice/dirty,
 /area/lv522/oob)
-"qZh" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/fancy/egg_box,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/lv522/indoors/a_block/dorms)
 "qZu" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/asphalt/cement{
@@ -43996,6 +44141,16 @@
 	},
 /turf/open/floor/carpet,
 /area/lv522/indoors/a_block/dorm_north)
+"rfc" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/prison{
+	dir = 1;
+	icon_state = "blue_plate"
+	},
+/area/lv522/indoors/c_block/mining)
 "rfe" = (
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
@@ -44021,22 +44176,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/lv522/indoors/a_block/dorm_north)
-"rfl" = (
-/obj/structure/surface/table/almayer,
-/obj/item/grown/nettle/death{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/seeds/glowshroom,
-/obj/item/seeds/glowshroom{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/indoors/b_block/hydro)
 "rfB" = (
 /obj/structure/prop/ice_colony/flamingo{
 	dir = 6;
@@ -44048,27 +44187,16 @@
 	icon_state = "cement1"
 	},
 /area/lv522/outdoors/colony_streets/east_central_street)
-"rfK" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/stamp/denied{
-	pixel_x = -11;
-	pixel_y = 8
-	},
-/obj/item/card/id/silver/clearance_badge/cl{
-	desc = "Wow sorry, didn't mean to drop that in front of you, it's real, btw.";
-	name = "certified powerloader operator card";
-	pixel_x = 5;
-	registered_name = "John Forklift"
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
-"rfW" = (
+"rfC" = (
+/obj/item/tool/surgery/circular_saw,
+/obj/item/tool/surgery/cautery,
+/obj/item/tool/surgery/retractor,
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/glasses/sunglasses,
-/turf/open/floor/carpet,
-/area/lv522/indoors/c_block/garage)
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical)
 "rge" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
@@ -44095,18 +44223,6 @@
 /obj/structure/platform,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
-"rgW" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ashtray/bronze{
-	icon_state = "ashtray_full_bl";
-	pixel_x = -8;
-	pixel_y = 7
-	},
-/obj/item/toy/farwadoll,
-/turf/open/floor/strata{
-	icon_state = "blue1"
-	},
-/area/lv522/outdoors/colony_streets/windbreaker/observation)
 "rhh" = (
 /obj/structure/bed/chair/wheelchair,
 /obj/effect/decal/cleanable/dirt,
@@ -44166,6 +44282,18 @@
 	icon_state = "102"
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
+"ris" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/fire{
+	pixel_x = 7;
+	pixel_y = 9
+	},
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical/glass)
 "riE" = (
 /turf/closed/shuttle/dropship2/tornado/typhoon{
 	icon_state = "68"
@@ -44200,20 +44328,6 @@
 	icon_state = "greenfull"
 	},
 /area/lv522/indoors/b_block/bridge)
-"rjl" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/effect/decal/cleanable/blood,
-/obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Reactor Entrance Office";
-	pixel_y = 26
-	},
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lv522/atmos/east_reactor/south)
 "rjn" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6;
@@ -44264,13 +44378,6 @@
 	icon_state = "rasputin3"
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
-"rkd" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "kitchen"
-	},
-/area/lv522/indoors/a_block/kitchen)
 "rkR" = (
 /obj/structure/barricade/deployable{
 	dir = 4
@@ -44470,6 +44577,19 @@
 /obj/structure/largecrate/random/barrel,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
+"rob" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = -9;
+	pixel_y = 7
+	},
+/obj/item/device/flashlight/lamp{
+	pixel_x = 7
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/cargo)
 "rod" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -44680,6 +44800,21 @@
 /obj/item/toy/beach_ball,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorm_north)
+"rsB" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/metal{
+	amount = 50;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/stack/sheet/metal{
+	amount = 30
+	},
+/turf/open/floor/prison{
+	dir = 10;
+	icon_state = "floor_marked"
+	},
+/area/lv522/atmos/cargo_intake)
 "rsF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -44795,20 +44930,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
-"ruW" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/adv/empty{
-	pixel_x = -3;
-	pixel_y = 9
-	},
-/obj/item/reagent_container/hypospray/autoinjector/kelotane{
-	pixel_y = -3
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/garage)
 "ruY" = (
 /obj/structure/machinery/optable,
 /obj/structure/machinery/light{
@@ -44990,16 +45111,6 @@
 "rxI" = (
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/north_street)
-"rxK" = (
-/obj/item/tool/surgery/circular_saw,
-/obj/item/tool/surgery/cautery,
-/obj/item/tool/surgery/retractor,
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical)
 "rxT" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "East_Lock";
@@ -45233,6 +45344,18 @@
 	icon_state = "greenfull"
 	},
 /area/lv522/indoors/b_block/bridge)
+"rCH" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/radio/off{
+	layer = 3.1;
+	pixel_x = -5;
+	pixel_y = 14
+	},
+/obj/item/tool/screwdriver,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/landing_zone_2/ceiling)
 "rCI" = (
 /obj/structure/prop/invuln/fire{
 	pixel_x = -6;
@@ -45403,18 +45526,6 @@
 /obj/item/trash/chips,
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
-"rIa" = (
-/obj/structure/surface/table/almayer,
-/obj/item/toy/farwadoll{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/toy/farwadoll,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/indoors/a_block/fitness/glass)
 "rIj" = (
 /obj/structure/fence{
 	layer = 2.9
@@ -45455,6 +45566,13 @@
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "darkpurple2"
+	},
+/area/lv522/indoors/a_block/dorms)
+"rIE" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffee,
+/turf/open/floor/prison{
+	icon_state = "darkpurplefull2"
 	},
 /area/lv522/indoors/a_block/dorms)
 "rIH" = (
@@ -45533,11 +45651,6 @@
 	icon_state = "cement2"
 	},
 /area/lv522/outdoors/colony_streets/north_street)
-"rJH" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/dorms)
 "rJI" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/prison{
@@ -46358,17 +46471,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
-"rYT" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/pen{
-	pixel_x = -7
-	},
-/obj/item/paper_bin{
-	pixel_x = 7;
-	pixel_y = 8
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/landing_zone_2/ceiling)
 "rZc" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -46802,14 +46904,6 @@
 "sgT" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522/indoors/a_block/corpo)
-"sgV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/storage/fancy/cigarettes/blackpack{
-	pixel_y = 4
-	},
-/turf/open/floor/wood,
-/area/lv522/indoors/a_block/executive)
 "sha" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
@@ -47062,6 +47156,14 @@
 	icon_state = "kitchen"
 	},
 /area/lv522/indoors/b_block/bar)
+"sli" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/prison{
+	icon_state = "darkredfull2"
+	},
+/area/lv522/indoors/a_block/security)
 "slq" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -47072,17 +47174,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_2)
-"slt" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "LV522 Chances Claim";
-	phone_id = "Reactor Control";
-	pixel_y = 6
-	},
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/atmos/way_in_command_centre)
 "slD" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -47487,6 +47578,22 @@
 	icon_state = "browncorner"
 	},
 /area/lv522/atmos/west_reactor)
+"ssp" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/weapon/pole/fancy_cane,
+/turf/open/floor{
+	dir = 4;
+	icon_state = "whiteyellowfull"
+	},
+/area/lv522/indoors/a_block/corpo)
+"ssH" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/autopsy_scanner,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/lv522/indoors/a_block/medical)
 "ssU" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "89"
@@ -48016,14 +48123,6 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/indoors/a_block/kitchen/glass)
-"sED" = (
-/obj/structure/barricade/wooden{
-	dir = 4
-	},
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/lone_buildings/storage_blocks)
 "sFb" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -48755,6 +48854,12 @@
 	icon_state = "darkredfull2"
 	},
 /area/lv522/indoors/a_block/security)
+"sPX" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/b_block/bar)
 "sQb" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison{
@@ -49587,6 +49692,17 @@
 	icon_state = "49"
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
+"thb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/machinery/power/apc/weak{
+	dir = 1
+	},
+/turf/open/floor/prison{
+	icon_state = "darkredfull2"
+	},
+/area/lv522/indoors/a_block/security)
 "thc" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -49620,6 +49736,12 @@
 	icon_state = "cement1"
 	},
 /area/lv522/outdoors/colony_streets/north_east_street)
+"thw" = (
+/obj/item/tool/pen/blue/clicky{
+	pixel_x = 6
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/dorms)
 "thI" = (
 /obj/structure/barricade/wooden{
 	dir = 1
@@ -50012,16 +50134,6 @@
 	},
 /turf/open/floor/carpet,
 /area/lv522/indoors/b_block/bar)
-"toS" = (
-/obj/item/storage/firstaid/o2,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan3"
-	},
-/area/lv522/indoors/a_block/medical/glass)
 "toY" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "72"
@@ -50364,6 +50476,17 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
+"tvv" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/phone_base/colony_net{
+	dir = 1;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Private Casino";
+	pixel_y = -6
+	},
+/turf/open/floor/wood,
+/area/lv522/indoors/c_block/casino)
 "tvx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair,
@@ -50462,6 +50585,18 @@
 	icon_state = "browncorner"
 	},
 /area/lv522/atmos/cargo_intake)
+"txt" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Meeting Room";
+	pixel_y = 26
+	},
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lv522/atmos/east_reactor/south)
 "txK" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/dirt,
@@ -50709,6 +50844,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
+"tCL" = (
+/obj/structure/surface/table/gamblingtable,
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_x = 3;
+	pixel_y = 13
+	},
+/obj/item/storage/box/drinkingglasses{
+	pixel_y = 4
+	},
+/turf/open/floor/carpet,
+/area/lv522/indoors/c_block/casino)
 "tCN" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/lv522/outdoors/colony_streets/south_east_street)
@@ -50744,14 +50890,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/a_block/fitness)
-"tDu" = (
-/obj/structure/machinery/computer/operating,
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan2"
-	},
-/area/lv522/indoors/a_block/medical)
 "tDB" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -51077,6 +51215,16 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/b_block/bridge)
+"tIW" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "Sec-Kitchen-Lockdown";
+	name = "remote door-control";
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/security/glass)
 "tJa" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/auto_turf/shale/layer1,
@@ -51232,6 +51380,22 @@
 	},
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
+"tLA" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/phone_base/colony_net{
+	dir = 8;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Casino";
+	pixel_x = 16
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/casino)
 "tLE" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -52437,14 +52601,6 @@
 	},
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/south)
-"uhF" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/pole/fancy_cane,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv522/indoors/a_block/corpo)
 "uhP" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -52504,13 +52660,6 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/hallway)
-"uii" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv522/indoors/a_block/corpo)
 "uiu" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate,
@@ -52847,11 +52996,6 @@
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/central_streets)
-"upP" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/glass/bucket,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/b_block/hydro)
 "upX" = (
 /obj/structure/machinery/disposal,
 /obj/effect/landmark/lv624/fog_blocker/short,
@@ -52939,6 +53083,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
+"urA" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/egg_box,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	icon_state = "darkpurplefull2"
+	},
+/area/lv522/indoors/a_block/dorms)
 "urM" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 8
@@ -53003,22 +53155,6 @@
 	icon_state = "radiator_tile2"
 	},
 /area/lv522/indoors/a_block/bridges/corpo_fitness)
-"utm" = (
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/head/hardhat/orange{
-	pixel_x = 8;
-	pixel_y = 12
-	},
-/obj/item/tool/lighter/random{
-	pixel_x = -3;
-	pixel_y = 4
-	},
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/landing_zone_1/ceiling)
 "utq" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/item/stack/sheet/metal,
@@ -53057,17 +53193,6 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/atmos/way_in_command_centre)
-"utR" = (
-/obj/structure/machinery/power/apc/weak{
-	dir = 1
-	},
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/pen/blue,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/corpo/glass)
 "uue" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/disposal,
@@ -53241,18 +53366,6 @@
 	icon_state = "white_cyan1"
 	},
 /area/lv522/indoors/a_block/corpo)
-"uxb" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/fire{
-	pixel_x = 7;
-	pixel_y = 9
-	},
-/obj/item/storage/firstaid/fire,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical/glass)
 "uxd" = (
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/shale/layer1,
@@ -53780,18 +53893,6 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/cargo_intake)
-"uHq" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/camera/autoname{
-	dir = 8
-	},
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/lv522/indoors/a_block/dorms/glass)
 "uHE" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement{
@@ -54633,16 +54734,6 @@
 "uVS" = (
 /turf/open/floor/plating,
 /area/lv522/indoors/lone_buildings/storage_blocks)
-"uVU" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin/wy{
-	pixel_x = 7;
-	pixel_y = 7
-	},
-/turf/open/floor/prison{
-	icon_state = "darkredfull2"
-	},
-/area/lv522/indoors/a_block/security)
 "uVZ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light{
@@ -54754,6 +54845,10 @@
 	icon_state = "platebot"
 	},
 /area/lv522/indoors/c_block/cargo)
+"uYu" = (
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor/carpet,
+/area/lv522/indoors/b_block/bar)
 "uZc" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/open/floor/prison{
@@ -54768,18 +54863,6 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/west_reactor)
-"uZC" = (
-/obj/structure/surface/table/almayer,
-/obj/item/trash/plate{
-	pixel_y = 13
-	},
-/obj/item/reagent_container/food/snacks/toastedsandwich{
-	pixel_y = 20
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
 "uZO" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -54816,19 +54899,6 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/admin)
-"vaA" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	pixel_x = -9;
-	pixel_y = 7
-	},
-/obj/item/device/flashlight/lamp{
-	pixel_x = 7
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
 "vaZ" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -10;
@@ -54871,6 +54941,18 @@
 /obj/structure/cargo_container/hd/mid/alt,
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2)
+"vbI" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Northern Dorms";
+	pixel_y = 26
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "blue1"
+	},
+/area/lv522/indoors/a_block/dorm_north)
 "vbJ" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -54979,22 +55061,6 @@
 	icon_state = "cement12"
 	},
 /area/lv522/outdoors/colony_streets/south_street)
-"vdx" = (
-/obj/structure/surface/table/almayer,
-/obj/item/disk{
-	desc = "a 2000 Russian crime film. It is a sequel to the 1997 film Brother.";
-	name = "brat 2 disk"
-	},
-/obj/structure/machinery/recharger{
-	layer = 2.9;
-	pixel_x = 5;
-	pixel_y = -13
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/landing_zone_2/ceiling)
 "vdH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -55589,22 +55655,6 @@
 	icon_state = "white_cyan1"
 	},
 /area/lv522/indoors/a_block/corpo/glass)
-"voi" = (
-/obj/effect/decal/cleanable/blood,
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/structure/phone_base/colony_net{
-	dir = 8;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Casino";
-	pixel_x = 16
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/casino)
 "vou" = (
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
@@ -55798,6 +55848,18 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/admin)
+"vri" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/plush/farwa{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/toy/plush/farwa,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/a_block/fitness/glass)
 "vrE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -56108,10 +56170,17 @@
 	icon_state = "brown"
 	},
 /area/lv522/atmos/east_reactor/south)
-"vxv" = (
-/obj/structure/surface/table/woodentable/fancy,
-/turf/open/floor/carpet,
-/area/lv522/indoors/b_block/bar)
+"vxr" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/snacks/sandwich{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/meson,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/indoors/c_block/mining)
 "vxD" = (
 /obj/effect/spawner/gibspawner/xeno,
 /obj/effect/decal/cleanable/blood/xeno{
@@ -56720,17 +56789,6 @@
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
-"vHU" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp,
-/obj/effect/decal/cleanable/cobweb,
-/obj/structure/machinery/power/apc/weak{
-	dir = 1
-	},
-/turf/open/floor/prison{
-	icon_state = "darkredfull2"
-	},
-/area/lv522/indoors/a_block/security)
 "vIb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/gloves/boxing,
@@ -57475,15 +57533,6 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/hallway)
-"vUn" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/trash/plate,
-/obj/item/reagent_container/food/drinks/coffee{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/garage)
 "vUx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -58445,6 +58494,17 @@
 	icon_state = "wood"
 	},
 /area/lv522/indoors/b_block/bar)
+"wmJ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/pen{
+	pixel_x = -7
+	},
+/obj/item/paper_bin{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/landing_zone_2/ceiling)
 "wng" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -58551,11 +58611,6 @@
 	icon_state = "floor_marked"
 	},
 /area/lv522/indoors/lone_buildings/outdoor_bot)
-"wpd" = (
-/obj/structure/surface/table/gamblingtable,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/casino)
 "wpg" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /obj/structure/machinery/light{
@@ -58864,18 +58919,6 @@
 	icon_state = "marked"
 	},
 /area/lv522/atmos/east_reactor/west)
-"wwn" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/shovel/etool/folded,
-/obj/item/tool/soap/deluxe{
-	pixel_x = 4;
-	pixel_y = 13
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/corpo)
 "wwy" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
@@ -59025,20 +59068,6 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/east_reactor/south)
-"wyE" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/pottedplant{
-	desc = "It is made of Fiberbush(tm). It contains asbestos.";
-	icon_state = "pottedplant_22";
-	name = "synthetic potted plant";
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/lv522/indoors/a_block/dorms)
 "wyI" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -59280,20 +59309,6 @@
 	icon_state = "blue"
 	},
 /area/lv522/indoors/a_block/admin)
-"wDu" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/phone_base/colony_net{
-	dir = 8;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Botany";
-	pixel_x = 16
-	},
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "greenfull"
-	},
-/area/lv522/indoors/b_block/hydro)
 "wDy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
@@ -59447,15 +59462,6 @@
 	icon_state = "floor_plate"
 	},
 /area/lv522/atmos/way_in_command_centre)
-"wGE" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/prop/almayer/computer/PC{
-	pixel_y = 5
-	},
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/indoors/c_block/cargo)
 "wGG" = (
 /obj/structure/surface/table/almayer{
 	dir = 8;
@@ -59652,13 +59658,6 @@
 "wLp" = (
 /turf/closed/wall/mineral/bone_resin,
 /area/lv522/atmos/east_reactor/west)
-"wLN" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffee,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/lv522/indoors/a_block/dorms)
 "wLU" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -59757,12 +59756,6 @@
 	icon_state = "cement12"
 	},
 /area/lv522/outdoors/n_rockies)
-"wOC" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/b_block/bar)
 "wOU" = (
 /obj/item/prop/alien/hugger,
 /turf/open/floor/prison{
@@ -59895,6 +59888,17 @@
 	icon_state = "30"
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
+"wRQ" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "LV522 Chances Claim";
+	phone_id = "Reactor Control";
+	pixel_y = 6
+	},
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/lv522/atmos/way_in_command_centre)
 "wRZ" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/corsat{
@@ -60214,6 +60218,24 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/admin)
+"wYX" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/soap{
+	pixel_x = 5
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/stack/nanopaste{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan2"
+	},
+/area/lv522/indoors/a_block/medical)
 "wZl" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -60551,17 +60573,6 @@
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_street)
-"xfS" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/structure/phone_base/colony_net{
-	dir = 1;
-	phone_category = "LV522 Chances Claim";
-	phone_color = "red";
-	phone_id = "Colony Private Casino";
-	pixel_y = -6
-	},
-/turf/open/floor/wood,
-/area/lv522/indoors/c_block/casino)
 "xfW" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/prison{
@@ -61004,12 +61015,6 @@
 	icon_state = "darkredfull2"
 	},
 /area/lv522/indoors/lone_buildings/chunk)
-"xnG" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/a_block/hallway)
 "xnI" = (
 /turf/open/floor/prison{
 	dir = 1;
@@ -61513,6 +61518,12 @@
 	icon_state = "marked"
 	},
 /area/lv522/indoors/c_block/mining)
+"xAr" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison{
+	icon_state = "darkbrownfull2"
+	},
+/area/lv522/indoors/c_block/garage)
 "xAw" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522/indoors/a_block/bridges/op_centre)
@@ -61615,6 +61626,17 @@
 	icon_state = "cement12"
 	},
 /area/lv522/outdoors/colony_streets/east_central_street)
+"xCp" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Reactor Central Office";
+	pixel_y = 26
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lv522/atmos/command_centre)
 "xCG" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -61883,6 +61905,20 @@
 	},
 /turf/open/floor/wood,
 /area/lv522/indoors/c_block/casino)
+"xHJ" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/phone_base/colony_net{
+	dir = 8;
+	phone_category = "LV522 Chances Claim";
+	phone_color = "red";
+	phone_id = "Colony Botany";
+	pixel_x = 16
+	},
+/turf/open/floor/prison{
+	dir = 9;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/b_block/hydro)
 "xIr" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -62135,10 +62171,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
-"xNo" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/prison,
-/area/lv522/indoors/b_block/hydro)
 "xNt" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat{
@@ -62335,18 +62367,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/lv522/atmos/way_in_command_centre)
-"xQw" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/tool/pen/blue/clicky,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/a_block/hallway)
 "xQZ" = (
 /obj/effect/decal/cleanable/blood/xeno{
 	icon_state = "xgib3"
@@ -62485,6 +62505,24 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
+"xSz" = (
+/obj/structure/filingcabinet/seeds{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet/seeds{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/lv522/indoors/b_block/hydro)
 "xSA" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -62884,17 +62922,6 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/lv522/indoors/lone_buildings/engineering)
-"yae" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/tool/pen/blue/clicky,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/lv522/indoors/a_block/hallway)
 "yaf" = (
 /obj/structure/surface/rack,
 /obj/item/tool/pickaxe/plasmacutter,
@@ -63157,6 +63184,17 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/admin)
+"yen" = (
+/obj/structure/bed/roller,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/open/floor/prison{
+	dir = 1;
+	icon_state = "blue_plate"
+	},
+/area/lv522/indoors/a_block/admin)
 "yeD" = (
 /obj/item/ammo_magazine/pistol/m1911{
 	current_rounds = 0;
@@ -63197,6 +63235,25 @@
 	icon_state = "squares"
 	},
 /area/lv522/atmos/north_command_centre)
+"yfk" = (
+/obj/item/tool/lighter/random{
+	pixel_x = -4;
+	pixel_y = 13
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 4
+	},
+/obj/item/paper/crumpled/bloody{
+	pixel_x = -9
+	},
+/turf/open/floor/plating,
+/area/lv522/indoors/c_block/cargo)
 "yfu" = (
 /turf/open/floor/prison,
 /area/lv522/indoors/lone_buildings/storage_blocks)
@@ -63296,18 +63353,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
-"yhy" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/adv{
-	pixel_y = 9
-	},
-/obj/item/storage/firstaid/adv,
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "white_cyan1"
-	},
-/area/lv522/indoors/a_block/medical/glass)
 "yhz" = (
 /obj/structure/window_frame/corsat,
 /obj/effect/spawner/gibspawner/xeno,
@@ -63484,18 +63529,6 @@
 	icon_state = "whitegreenfull"
 	},
 /area/lv522/oob)
-"yjP" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/radio/off{
-	layer = 3.1;
-	pixel_x = -5;
-	pixel_y = 14
-	},
-/obj/item/tool/screwdriver,
-/turf/open/floor/prison{
-	icon_state = "darkbrownfull2"
-	},
-/area/lv522/landing_zone_2/ceiling)
 "yjT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -63533,16 +63566,6 @@
 	icon_state = "blue_plate"
 	},
 /area/lv522/indoors/a_block/admin)
-"ykn" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "blue_plate"
-	},
-/area/lv522/indoors/c_block/mining)
 "ykL" = (
 /turf/open/floor/prison{
 	dir = 4;
@@ -63563,29 +63586,6 @@
 "ykT" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/op_centre)
-"ykU" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/tool/pen/blue/clicky,
-/obj/item/device/flashlight/lamp{
-	pixel_x = -8;
-	pixel_y = 12
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "LZ1_Lockdown_Lo";
-	name = "remote door-control";
-	pixel_x = -7
-	},
-/obj/effect/landmark/lv624/fog_blocker/short,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "greenfull"
-	},
-/area/lv522/landing_zone_1/ceiling)
 "yld" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -67101,7 +67101,7 @@ bIJ
 bIJ
 fXS
 dsq
-eHX
+dht
 bIJ
 bIJ
 sLZ
@@ -67325,7 +67325,7 @@ uWO
 uWO
 aTA
 bIJ
-cMq
+mpo
 nZF
 nZF
 nZF
@@ -67353,7 +67353,7 @@ rWS
 rWS
 pUc
 qrj
-qLd
+oyR
 qUD
 rkR
 rkR
@@ -67552,7 +67552,7 @@ uWO
 uWO
 cpy
 bIJ
-ddo
+rsB
 eaE
 eaE
 eaE
@@ -69922,7 +69922,7 @@ yiM
 yiM
 fCU
 kvq
-izp
+oZd
 qWf
 icy
 wdj
@@ -70377,8 +70377,8 @@ yiM
 fXx
 nJv
 xVd
-kfi
-ebR
+exy
+cpE
 jkL
 xzj
 pWW
@@ -70962,7 +70962,7 @@ hzM
 eaE
 cFv
 fsQ
-dTs
+fej
 eaE
 eaE
 gbH
@@ -72210,7 +72210,7 @@ max
 max
 rFw
 aFf
-mFm
+lIu
 nnv
 vbu
 vbu
@@ -72226,7 +72226,7 @@ lBl
 veq
 gej
 tFx
-ykU
+iVZ
 rzz
 nEq
 tUB
@@ -72242,7 +72242,7 @@ yhU
 yhU
 ggS
 tFx
-eZW
+naB
 pET
 fxZ
 fxZ
@@ -72402,7 +72402,7 @@ ruS
 ruS
 cLx
 pMd
-eah
+ovV
 trj
 tUM
 uOs
@@ -72680,7 +72680,7 @@ ien
 jZD
 saL
 ymc
-muO
+dUw
 yhU
 tfl
 tKS
@@ -72862,7 +72862,7 @@ fjP
 uOs
 uOs
 lsD
-wyE
+aGA
 nLm
 ien
 vXc
@@ -72893,7 +72893,7 @@ rFw
 tFx
 tFx
 nuU
-fDj
+eSb
 opt
 tFx
 tFx
@@ -73078,7 +73078,7 @@ nLm
 pTj
 drM
 vKA
-uHq
+nKU
 hJp
 yjW
 jTS
@@ -73107,7 +73107,7 @@ mBF
 ydU
 bSD
 nqY
-pqA
+qSA
 gKY
 eEv
 rdc
@@ -73138,7 +73138,7 @@ fDF
 tKS
 mvP
 yhU
-utm
+lRn
 tFx
 cpy
 cpy
@@ -73732,7 +73732,7 @@ clY
 clY
 oNQ
 nLm
-qZh
+urA
 eJm
 hDE
 kPV
@@ -73914,7 +73914,7 @@ tfP
 tfP
 tfP
 eaE
-erw
+giL
 eaE
 eaE
 eaE
@@ -73940,7 +73940,7 @@ qNM
 oiZ
 rod
 kvJ
-rIa
+vri
 seJ
 xtb
 myP
@@ -74017,7 +74017,7 @@ hnA
 oqJ
 xuB
 wZH
-wOC
+sPX
 mBF
 fnA
 fnA
@@ -74141,7 +74141,7 @@ tfP
 tfP
 eaE
 eaE
-erw
+giL
 bex
 eaE
 eaE
@@ -74368,7 +74368,7 @@ tfP
 tfP
 eaE
 eaE
-erw
+giL
 fFA
 gzu
 eaE
@@ -74451,7 +74451,7 @@ ulL
 ulL
 lAj
 wRd
-wLN
+rIE
 nLm
 qQM
 vXc
@@ -74898,7 +74898,7 @@ trj
 nLm
 nLm
 nLm
-nDS
+bzw
 uMM
 uOs
 fjP
@@ -75598,7 +75598,7 @@ fXx
 rMF
 vVs
 xYn
-vxv
+uYu
 xci
 wuQ
 wDy
@@ -75788,7 +75788,7 @@ mns
 gWL
 sPk
 mZK
-rJH
+eAT
 hGX
 sLQ
 nLm
@@ -76059,7 +76059,7 @@ hMI
 pCg
 nAa
 pZV
-ike
+qmF
 wDy
 mMI
 mBF
@@ -76259,7 +76259,7 @@ nLm
 kDH
 trj
 aSE
-hoZ
+eaC
 pUd
 nLm
 enD
@@ -76512,7 +76512,7 @@ bIF
 xQj
 pCg
 lpq
-irH
+jUE
 wDy
 wDy
 nia
@@ -77366,7 +77366,7 @@ xWL
 lfe
 lbg
 dmm
-hYn
+thw
 vWl
 fjP
 guB
@@ -77853,7 +77853,7 @@ qWX
 sPk
 dnM
 wDZ
-rJH
+eAT
 mum
 rGE
 rHu
@@ -77884,7 +77884,7 @@ tSL
 tSL
 gkg
 kzT
-xNo
+qzT
 xNR
 gkg
 rLg
@@ -78254,7 +78254,7 @@ rbb
 jZo
 rwK
 hzk
-qGh
+eNy
 uEC
 jXc
 xtb
@@ -79914,7 +79914,7 @@ xNR
 wnM
 kzT
 hsh
-upP
+nNz
 eKL
 qNl
 kzT
@@ -80012,7 +80012,7 @@ otQ
 xho
 tiQ
 xce
-oKN
+xCp
 xdF
 iKC
 hCv
@@ -80146,7 +80146,7 @@ mCA
 qYG
 wyy
 phu
-wDu
+xHJ
 cKi
 phu
 phu
@@ -80607,7 +80607,7 @@ tSL
 roN
 srM
 tSL
-pJd
+hcQ
 kui
 cIe
 qNQ
@@ -80818,7 +80818,7 @@ vXc
 rOP
 tSL
 tSL
-pCb
+xSz
 wyy
 lUv
 dOz
@@ -81166,7 +81166,7 @@ saC
 saC
 uAm
 iAv
-bny
+cYB
 gbo
 bBJ
 iuC
@@ -81273,11 +81273,11 @@ cys
 rMF
 tSL
 tSL
-gHm
+kru
 vZm
 qqW
 mjC
-rfl
+cVv
 wXq
 tSL
 tSL
@@ -81875,7 +81875,7 @@ oUq
 oAY
 lDk
 uFA
-bJy
+qrU
 oUq
 oUq
 oUq
@@ -82103,7 +82103,7 @@ lbo
 kXY
 kXY
 lDk
-bJy
+qrU
 oUq
 oUq
 fjr
@@ -82330,7 +82330,7 @@ kXY
 nFc
 rqE
 kXY
-slt
+wRQ
 oUq
 oUq
 oUq
@@ -82799,7 +82799,7 @@ beB
 beB
 beB
 beB
-utR
+bFC
 saS
 vnX
 vMM
@@ -83270,7 +83270,7 @@ sjy
 mhn
 sDY
 kTm
-oHR
+nQX
 ort
 wdi
 wdi
@@ -83323,7 +83323,7 @@ tnM
 wHU
 woq
 qsC
-iPO
+ggC
 jmG
 uKS
 ild
@@ -83485,7 +83485,7 @@ rhF
 nTx
 jNv
 wrC
-wwn
+occ
 wTu
 htN
 wrC
@@ -83774,7 +83774,7 @@ ldC
 nbn
 kaV
 izz
-fwT
+yfk
 ild
 jwM
 qsr
@@ -84209,7 +84209,7 @@ jzu
 vXc
 uWD
 xkO
-ipC
+mWa
 waD
 qJN
 vXc
@@ -84637,12 +84637,12 @@ azl
 mnU
 xhu
 sjy
-vHU
+thb
 uVj
 kHU
 iYO
 wtK
-uVU
+chG
 pgt
 sjy
 ohL
@@ -84857,7 +84857,7 @@ urY
 sjy
 aUb
 aPN
-grZ
+tIW
 sjy
 lhK
 azl
@@ -84879,7 +84879,7 @@ lxL
 xGf
 xiG
 lVp
-mbw
+qdg
 yca
 xXo
 lNs
@@ -85277,8 +85277,8 @@ mkh
 iTI
 oUq
 oUq
-nJO
-bJy
+eYF
+qrU
 dio
 kkR
 lbI
@@ -85522,10 +85522,10 @@ wrC
 sNU
 toZ
 tFk
-uhF
+ssp
 jyx
 wrC
-aNn
+nSk
 mYo
 wcO
 sgT
@@ -85810,8 +85810,8 @@ swf
 jmG
 jmG
 jmG
-bGN
-uZC
+fad
+gHj
 jmG
 xMl
 qIJ
@@ -85820,7 +85820,7 @@ jmG
 wkp
 qIJ
 iup
-qSL
+hdC
 wZy
 jmz
 uTh
@@ -85874,7 +85874,7 @@ eso
 vWI
 hzc
 aAI
-ykn
+rfc
 vpe
 uEE
 eBu
@@ -86038,9 +86038,9 @@ uPn
 jmG
 cZb
 khN
-vaA
+rob
 jmG
-wGE
+akb
 jBR
 srm
 jmG
@@ -86104,7 +86104,7 @@ jas
 oeT
 sKx
 vpe
-ykn
+rfc
 jas
 cpy
 cpy
@@ -86186,7 +86186,7 @@ nMX
 gvk
 sSv
 raH
-hPQ
+bof
 sMA
 oMo
 oUq
@@ -86273,7 +86273,7 @@ srm
 jmG
 kkP
 wly
-rfK
+qdA
 jmG
 jmG
 kie
@@ -86430,7 +86430,7 @@ wrC
 sOe
 nzt
 rAX
-uii
+bpb
 uuW
 uiS
 mvR
@@ -86541,7 +86541,7 @@ nax
 nax
 fki
 jas
-ddq
+otv
 eso
 eso
 eso
@@ -87412,7 +87412,7 @@ wiE
 yhi
 vNi
 nNA
-mtM
+jih
 rqA
 gXc
 yhi
@@ -88035,7 +88035,7 @@ ocw
 sjy
 sjy
 sjy
-kUP
+sli
 xxs
 uDb
 xtO
@@ -88093,7 +88093,7 @@ xPK
 yhi
 yhi
 saz
-eJc
+avX
 qot
 yhi
 spM
@@ -88439,7 +88439,7 @@ mPY
 qJE
 qJE
 xQc
-rjl
+fqe
 gyB
 aox
 yiu
@@ -88518,7 +88518,7 @@ mRf
 qcA
 fpl
 qcw
-huX
+lfI
 kqb
 kqb
 dCJ
@@ -88992,7 +88992,7 @@ wGh
 gij
 mHv
 nlW
-nqj
+eHY
 ozn
 xMO
 vcH
@@ -89200,7 +89200,7 @@ fpl
 qcA
 eXd
 fpl
-rkd
+dyQ
 kqb
 dCJ
 rnB
@@ -89698,7 +89698,7 @@ jwM
 ild
 ild
 vBd
-nZn
+fYC
 jmG
 fEY
 fWG
@@ -90184,7 +90184,7 @@ vsk
 phq
 phq
 jas
-kXk
+cgF
 phq
 jas
 nQu
@@ -90292,7 +90292,7 @@ pZo
 qSH
 uRb
 xjF
-bGV
+pTJ
 eHy
 vSU
 xjF
@@ -90301,7 +90301,7 @@ xCN
 xPW
 wgW
 jRT
-sgV
+lol
 ryO
 xFp
 sYk
@@ -90353,7 +90353,7 @@ cKf
 wNp
 vdH
 jLD
-voi
+tLA
 fOe
 gFs
 pDU
@@ -90804,7 +90804,7 @@ vNk
 vNk
 vdZ
 urd
-xfS
+tvv
 vdZ
 vNk
 mdr
@@ -91089,7 +91089,7 @@ vbV
 ozw
 jas
 nHT
-fYw
+vxr
 aGy
 eJd
 ptU
@@ -91180,7 +91180,7 @@ fSf
 cZH
 jDN
 mqx
-amy
+mKC
 hvh
 eZF
 lfj
@@ -91484,7 +91484,7 @@ igT
 vJD
 tGh
 pBK
-oFG
+iEN
 pTZ
 tGh
 vNk
@@ -91627,7 +91627,7 @@ oyK
 ayX
 vKP
 bjd
-osm
+mRg
 pqQ
 bjd
 fSf
@@ -91937,7 +91937,7 @@ rnB
 igT
 vJD
 tGo
-bTA
+tCL
 vmG
 pTZ
 cbW
@@ -92097,7 +92097,7 @@ alI
 alI
 alI
 wDj
-rgW
+jVm
 eJR
 kbH
 iHD
@@ -92397,7 +92397,7 @@ xez
 veT
 dzB
 uQr
-wpd
+ngb
 hMT
 hFG
 mfS
@@ -92502,7 +92502,7 @@ lXC
 lXC
 hOy
 tiQ
-qyp
+dWX
 jcl
 jcl
 bCd
@@ -93097,7 +93097,7 @@ qjO
 jOF
 oiR
 pLs
-sED
+fWM
 ylo
 mkm
 uwT
@@ -93510,7 +93510,7 @@ mTx
 jmi
 sbJ
 tTK
-pqI
+wYX
 lPa
 rar
 tTK
@@ -93959,7 +93959,7 @@ pej
 ubw
 oml
 tTK
-aQe
+gVD
 nwZ
 vyH
 tTK
@@ -93990,7 +93990,7 @@ wNp
 wNp
 rIx
 vNk
-kBU
+dWm
 ozn
 sYM
 vNk
@@ -94421,7 +94421,7 @@ eFK
 ici
 otY
 rex
-yhy
+pEZ
 jab
 dCJ
 tTD
@@ -94648,7 +94648,7 @@ kaD
 kaD
 eYh
 cMQ
-nrJ
+ifv
 jab
 dCJ
 rnB
@@ -94796,7 +94796,7 @@ nbj
 sZq
 tiQ
 tiQ
-jEF
+txt
 ayX
 ayX
 ayX
@@ -94875,7 +94875,7 @@ dBo
 dBb
 iad
 haq
-uxb
+ris
 jab
 dCJ
 tTD
@@ -94952,7 +94952,7 @@ uUm
 eso
 wJq
 wNX
-gnl
+fUk
 jas
 cpy
 cpy
@@ -95989,7 +95989,7 @@ lOk
 mqv
 fYZ
 btb
-amC
+yen
 hWD
 way
 jgV
@@ -96689,7 +96689,7 @@ kFx
 qPu
 nWI
 wfh
-toS
+fJd
 oRG
 jJi
 jab
@@ -96869,7 +96869,7 @@ xCT
 niT
 dRL
 dRL
-ozJ
+gCz
 xCT
 xCT
 qMd
@@ -96915,7 +96915,7 @@ gGa
 gVr
 klz
 hMR
-ffO
+eNR
 smF
 hMR
 pBl
@@ -96953,7 +96953,7 @@ xvB
 xWO
 ppD
 xkO
-ipC
+mWa
 waD
 ujy
 uwT
@@ -97096,7 +97096,7 @@ xCT
 nuo
 dRL
 npA
-oAd
+bvU
 xCT
 tMp
 qjr
@@ -97318,7 +97318,7 @@ ouv
 uSJ
 sLl
 dRL
-nem
+vbI
 fzE
 yfP
 rJf
@@ -97595,7 +97595,7 @@ dQh
 qzD
 vzZ
 tTK
-tDu
+qWi
 bDn
 idt
 iWz
@@ -98079,7 +98079,7 @@ ekR
 wsz
 tjh
 bhD
-joL
+bBE
 wbE
 xRw
 uaI
@@ -98289,7 +98289,7 @@ tTD
 rnB
 igT
 cUG
-ruW
+dmA
 wgR
 tum
 pRH
@@ -98734,7 +98734,7 @@ lhP
 gbR
 oLG
 oLG
-rxK
+rfC
 tTK
 dCJ
 rnB
@@ -98760,7 +98760,7 @@ uaI
 vBN
 arq
 anv
-vUn
+aOj
 tID
 rzR
 uaI
@@ -98942,7 +98942,7 @@ jMr
 xFw
 wWV
 lCh
-lSP
+cpG
 lUR
 mwh
 gdO
@@ -98961,7 +98961,7 @@ tTK
 rRr
 vyH
 vyH
-hBC
+ssH
 tTK
 dCJ
 rnB
@@ -98991,7 +98991,7 @@ cIA
 uKw
 dKd
 oaq
-dwX
+xAr
 cUG
 hMz
 uwT
@@ -99693,7 +99693,7 @@ rRy
 feu
 aTw
 sGQ
-yjP
+rCH
 oQW
 snX
 snX
@@ -100143,7 +100143,7 @@ uwT
 ewf
 vpp
 tlR
-rYT
+wmJ
 piD
 rZL
 lHH
@@ -100320,7 +100320,7 @@ dsQ
 pej
 uIa
 gdO
-xnG
+qaj
 tby
 uEP
 gdO
@@ -100351,7 +100351,7 @@ xCY
 xjO
 inA
 gDL
-rfW
+anc
 inA
 xjO
 hMz
@@ -100542,12 +100542,12 @@ sha
 puJ
 onT
 gdO
-xQw
-xnG
+nDZ
+qaj
 uyB
 lmp
 gdO
-yae
+eBk
 gxs
 gdO
 gdO
@@ -100598,7 +100598,7 @@ ewf
 snX
 snX
 pWx
-vdx
+fHE
 dkJ
 lVA
 fOX

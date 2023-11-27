@@ -17,25 +17,6 @@
 	icon_state = "whiteyellow"
 	},
 /area/lv624/lazarus/main_hall)
-"d" = (
-/obj/item/handset{
-	desc = "A model of an ancient Earth communication device.";
-	force = 8
-	},
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/lv624/lazarus/main_hall)
 "e" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -186,18 +167,25 @@
 	icon_state = "cult"
 	},
 /area/lv624/lazarus/armory)
-"K" = (
-/obj/item/stack/sheet/metal,
-/obj/structure/machinery/door_control{
-	id = "secure_inner_blast";
-	name = "Secure Inner Doors";
-	pixel_x = 25;
-	pixel_y = 5
+"Q" = (
+/obj/item/handset{
+	desc = "A model of an ancient Earth communication device.";
+	force = 8
 	},
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
 /turf/open/floor{
-	icon_state = "cult"
+	icon_state = "wood"
 	},
-/area/lv624/lazarus/armory)
+/area/lv624/lazarus/main_hall)
 "T" = (
 /obj/structure/machinery/door_control{
 	id = "garage_blast";
@@ -266,7 +254,7 @@ i
 w
 w
 w
-K
+w
 p
 i
 "}
@@ -283,7 +271,7 @@ B
 i
 "}
 (7,1,1) = {"
-d
+Q
 g
 a
 j

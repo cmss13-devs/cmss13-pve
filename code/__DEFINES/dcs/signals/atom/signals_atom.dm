@@ -65,3 +65,12 @@
 #define COMSIG_ATOM_PHONE_RINGING "atom_phone_ringing"
 /// From /datum/component/phone/proc/reset_call()
 #define COMSIG_ATOM_PHONE_STOPPED_RINGING "atom_phone_stopped_ringing"
+
+/// Called when an atom has something mouse dropped on it, from /client/MouseDrop: (atom/dropped_on)
+#define COMSIG_ATOM_DROPPED_ON "atom_dropped_on"
+
+/// Called when an atom is mouse dropped on another atom, from /client/MouseDrop: (atom/dropped_onto)
+#define COMSIG_ATOM_DROP_ON "atom_drop_on"
+
+/// Called when an atom has emp_act called on it, from /atom/emp_act: (severity)
+#define COMSIG_ATOM_EMP_ACT "atom_emp_act"

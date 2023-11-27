@@ -10,7 +10,7 @@
 	scaled = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/sg
-	entry_message_body = "<a href='%WIKIPAGE%'>You are the smartgunner.</a> Your task is to provide heavy weapons support."
+	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the smartgunner.</a> Your task is to provide heavy weapons support."
 
 	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
 

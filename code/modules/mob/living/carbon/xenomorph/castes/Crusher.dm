@@ -4,17 +4,17 @@
 
 	melee_damage_lower = XENO_DAMAGE_TIER_5
 	melee_damage_upper = XENO_DAMAGE_TIER_5
-	melee_vehicle_damage = XENO_DAMAGE_TIER_5
-	max_health = XENO_HEALTH_TIER_10
+	melee_vehicle_damage = XENO_DAMAGE_TIER_5 * 8
+	max_health = XENO_HEALTH_IMMORTAL
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
-	plasma_max = XENO_PLASMA_TIER_4
+	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_2
+	speed = XENO_SPEED_TIER_4
 	heal_standing = 0.66
 
-	behavior_delegate_type = /datum/behavior_delegate/crusher_base
+	behavior_delegate_type = /datum/behavior_delegate/crusher_charger
 
 	minimum_evolve_time = 15 MINUTES
 
@@ -25,6 +25,8 @@
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_WARRIOR)
 	caste_desc = "A huge tanky xenomorph."
+	fire_intensity_resistance = 20
+	fire_vulnerability_mult = 0.25
 
 	minimap_icon = "crusher"
 
@@ -37,6 +39,7 @@
 	plasma_types = list(PLASMA_CHITIN)
 	tier = 3
 	drag_delay = 6 //pulling a big dead xeno is hard
+	melee_sentry_damage_multiplier = 2
 
 	small_explosives_stun = FALSE
 
@@ -56,7 +59,8 @@
 		/datum/action/xeno_action/onclick/regurgitate,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/activable/pounce/crusher_charge,
+		/datum/action/xeno_action/activable/fling/charger,
+		/datum/action/xeno_action/onclick/charger_charge,
 		/datum/action/xeno_action/onclick/crusher_stomp,
 		/datum/action/xeno_action/onclick/crusher_shield,
 		/datum/action/xeno_action/onclick/tacmap,
@@ -64,10 +68,25 @@
 
 	claw_type = CLAW_TYPE_VERY_SHARP
 	mutation_icon_state = CRUSHER_NORMAL
-	mutation_type = CRUSHER_NORMAL
+	mutation_type = CRUSHER_CHARGER
 
 	icon_xeno = 'icons/mob/xenos/crusher.dmi'
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
+
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
+
+/mob/living/carbon/xenomorph/crusher/init_movement_handler()
+	return new /datum/xeno_ai_movement/crusher(src)
+
+/mob/living/carbon/xenomorph/crusher/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
+	. = ..()
+
+	playsound(src, 'sound/voice/alien_crusher_spawn.ogg', 100, FALSE, 30)
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
+		var/relative_dir = get_dir(current_mob, src)
+		var/final_dir = dir2text(relative_dir)
+		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
 
 // Refactored to handle all of crusher's interactions with object during charge.
 /mob/living/carbon/xenomorph/proc/handle_collision(atom/target)
@@ -205,7 +224,7 @@
 	if (!.)
 		update_icons()
 
-// Mutator delegate for base ravager
+// Mutator delegate for base crusher
 /datum/behavior_delegate/crusher_base
 	name = "Base Crusher Behavior Delegate"
 
@@ -276,6 +295,6 @@
 	. += "Shield: [shield_total]"
 
 /datum/behavior_delegate/crusher_base/on_update_icons()
-	if(bound_xeno.throwing || is_charging) //Let it build up a bit so we're not changing icons every single turf
+	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && !bound_xeno.lying)
 		bound_xeno.icon_state = "[bound_xeno.mutation_icon_state || bound_xeno.mutation_type] Crusher Charging"
 		return TRUE

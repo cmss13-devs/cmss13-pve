@@ -308,50 +308,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"bG" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/toy/farwadoll{
-	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
-	force = 15;
-	icon_state = "therapyred";
-	layer = 4.1;
-	name = "Sergeant Huggs";
-	pixel_y = 15;
-	throwforce = 15
-	},
-/obj/item/clothing/head/cmcap{
-	layer = 4.1;
-	pixel_x = -1;
-	pixel_y = 22
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/dorms)
 "bO" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -2293,6 +2249,10 @@
 "nM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_x = -16;
+	pixel_y = 30
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2435,21 +2395,6 @@
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
-"oB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/machinery/computer/supply_drop_console/limited{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "sensor_comp2";
-	layer = 4
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/supply)
 "oC" = (
 /obj/structure/plasticflaps,
 /obj/structure/machinery/conveyor{
@@ -2947,9 +2892,6 @@
 "rX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
-/obj/structure/machinery/alarm/almayer{
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4619,6 +4561,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"CS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/supply)
 "CX" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -5353,6 +5306,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"Hd" = (
+/obj/structure/closet,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "Hh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -5635,12 +5597,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"Jb" = (
-/obj/structure/machinery/cm_vending/clothing/medic/alpha,
-/turf/open/floor/almayer{
-	icon_state = "sterile_green"
-	},
-/area/golden_arrow/medical)
 "Jc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5748,6 +5704,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"JU" = (
+/obj/structure/machinery/cm_vending/clothing/medic,
+/turf/open/floor/almayer{
+	icon_state = "sterile_green"
+	},
+/area/golden_arrow/medical)
 "JZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -5898,6 +5860,49 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"KZ" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/head/cmcap{
+	layer = 4.1;
+	pixel_x = -1;
+	pixel_y = 22
+	},
+/obj/item/toy/plush/therapy/red{
+	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
+	force = 15;
+	layer = 4.1;
+	name = "Sergeant Huggs";
+	pixel_y = 15;
+	throwforce = 15
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "La" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -18087,7 +18092,7 @@ EF
 wl
 wl
 wl
-bG
+KZ
 Vp
 xm
 XI
@@ -18387,7 +18392,7 @@ ol
 rV
 Vr
 Vp
-Tk
+Hd
 wl
 FE
 wl
@@ -20037,7 +20042,7 @@ eu
 Dc
 ie
 Nf
-Jb
+JU
 Cv
 Cv
 dd
@@ -23229,7 +23234,7 @@ Cr
 Cr
 Cr
 kS
-oB
+CS
 vK
 aA
 kS

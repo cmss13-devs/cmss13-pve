@@ -284,7 +284,7 @@
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/adrenaline_concentrated
-	name = "Epinephrine (concentrated)"
+	name = "Concentrated Adrenaline"
 	id = "adrenaline_concentrated"
 	description = "A natural muscle and heart stimulant that is in a high concerntration. Useful for restarting the heart and preventing unconciousness but in this concentrated form it will cause minor suffocation. Overdosing may stress the heart and cause tissue damage."
 	reagent_state = LIQUID

@@ -4,7 +4,7 @@
 	required_players = 0
 	votable = TRUE
 
-	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN
+	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
 
 	var/list/squad_limit = list(
 		/datum/squad/marine/alpha
@@ -26,23 +26,20 @@
 
 	static_comms_amount = 0
 	requires_comms = FALSE
-	flags_round_type = MODE_NO_XENO_EVOLVE
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 /datum/game_mode/colonialmarines/ai/can_start()
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
-
-	//Hacky pre-setup shit since RoleAuthority sucks
-	RoleAuthority.squads = list()
-	RoleAuthority.squads_by_type = list()
-	for(var/cycled_squad_type in squad_limit)
-		var/datum/squad/cycled_squad = new cycled_squad_type()
-		RoleAuthority.squads += cycled_squad
-		RoleAuthority.squads_by_type[cycled_squad.type] = cycled_squad
-
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
+
+	for(var/datum/squad/squad in RoleAuthority.squads)
+		if(squad.type in squad_limit)
+			continue
+
+		RoleAuthority.squads -= squad
+		RoleAuthority.squads_by_type -= squad.type
 
 	. = ..()
 

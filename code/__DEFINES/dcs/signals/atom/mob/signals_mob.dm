@@ -1,3 +1,5 @@
+///from base of mob/set_stat(): (new_stat, old_stat)
+#define COMSIG_MOB_STATCHANGE "mob_statchange"
 /// From /obj/structure/machinery/door/airlock/proc/take_damage
 #define COMSIG_MOB_DESTROY_AIRLOCK "mob_destroy_airlock"
 
@@ -132,3 +134,6 @@
 /// From /mob/proc/say_dead(message)
 #define COMSIG_DEAD_SPEAK "comsig_dead_speak"
 		#define COMPONENT_OVERRIDE_DEAD_SPEAK (1<<0)
+
+/// Cancels all running cloaking effects on target
+#define COMSIG_MOB_EFFECT_CLOAK_CANCEL "mob_effect_cloak_cancel"

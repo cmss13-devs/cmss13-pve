@@ -63,7 +63,7 @@
 	output += "</div>"
 	if (refresh)
 		close_browser(src, "playersetup")
-	show_browser(src, output, null, "playersetup", "size=240x[round_start ? 330 : 460];can_close=0;can_minimize=0")
+	show_browser(src, output, null, "playersetup", "size=240x[round_start ? 360 : 460];can_close=0;can_minimize=0")
 	return
 
 /mob/new_player/Topic(href, href_list[])
@@ -150,7 +150,7 @@
 				observer.set_huds_from_prefs()
 
 				qdel(src)
-				return 1
+				return TRUE
 
 		if("late_join")
 
@@ -248,8 +248,8 @@
 	RoleAuthority.equip_role(character, player_rank, late_join = TRUE)
 	EquipCustomItems(character)
 
-	if((security_level > SEC_LEVEL_BLUE || EvacuationAuthority.evac_status) && player_rank.gets_emergency_kit)
-		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[EvacuationAuthority.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
+	if((security_level > SEC_LEVEL_BLUE || SShijack.hijack_status) && player_rank.gets_emergency_kit)
+		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[SShijack.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
 		character.put_in_hands(new /obj/item/storage/box/kit/cryo_self_defense(character.loc))
 
 	GLOB.data_core.manifest_inject(character)
@@ -276,11 +276,11 @@
 		if(player.get_playtime(STATISTIC_HUMAN) == 0 && player.get_playtime(STATISTIC_XENO) == 0)
 			msg_admin_niche("NEW JOIN: <b>[key_name(character, 1, 1, 0)]</b>. IP: [character.lastKnownIP], CID: [character.computer_id]")
 		if(character.client)
-			var/client/C = character.client
-			if(C.player_data && C.player_data.playtime_loaded && length(C.player_data.playtimes) == 0)
+			var/client/client = character.client
+			if(client.player_data && client.player_data.playtime_loaded && length(client.player_data.playtimes) == 0)
 				msg_admin_niche("NEW PLAYER: <b>[key_name(character, 1, 1, 0)]</b>. IP: [character.lastKnownIP], CID: [character.computer_id]")
-			if(C.player_data && C.player_data.playtime_loaded && ((round(C.get_total_human_playtime() DECISECONDS_TO_HOURS, 0.1)) <= 5))
-				msg_sea("NEW PLAYER: <b>[key_name(character, 0, 1, 0)]</b> only has [(round(C.get_total_human_playtime() DECISECONDS_TO_HOURS, 0.1))] hours as a human. Current role: [get_actual_job_name(character)] - Current location: [get_area(character)]")
+			if(client.player_data && client.player_data.playtime_loaded && ((round(client.get_total_human_playtime() DECISECONDS_TO_HOURS, 0.1)) <= 5))
+				msg_sea("NEW PLAYER: <b>[key_name(character, 0, 1, 0)]</b> only has [(round(client.get_total_human_playtime() DECISECONDS_TO_HOURS, 0.1))] hours as a human. Current role: [get_actual_job_name(character)] - Current location: [get_area(character)]")
 
 	character.client.init_verbs()
 	qdel(src)
@@ -295,12 +295,13 @@
 	var/dat = "<html><body onselectstart='return false;'><center>"
 	dat += "Round Duration: [round(hours)]h [round(mins)]m<br>"
 
-	if(EvacuationAuthority)
-		switch(EvacuationAuthority.evac_status)
-			if(EVACUATION_STATUS_INITIATING) dat += "<font color='red'><b>The [MAIN_SHIP_NAME] is being evacuated.</b></font><br>"
-			if(EVACUATION_STATUS_COMPLETE) dat += "<font color='red'>The [MAIN_SHIP_NAME] has undergone evacuation.</font><br>"
+	if(SShijack)
+		switch(SShijack.evac_status)
+			if(EVACUATION_STATUS_INITIATED)
+				dat += "<font color='red'><b>The [MAIN_SHIP_NAME] is being evacuated.</b></font><br>"
 
-	dat += "Choose from the following open positions:<br>"
+	var/positions = FALSE
+	var/position_dat = "Choose from the following open positions:<br>"
 	var/roles_show = FLAG_SHOW_ALL_JOBS
 
 	for(var/i in RoleAuthority.roles_for_mode)
@@ -313,38 +314,41 @@
 			if(M.client && M.job == J.title)
 				active++
 		if(roles_show & FLAG_SHOW_CIC && ROLES_CIC.Find(J.title))
-			dat += "Command:<br>"
+			position_dat += "Command:<br>"
 			roles_show ^= FLAG_SHOW_CIC
 
 		else if(roles_show & FLAG_SHOW_AUXIL_SUPPORT && ROLES_AUXIL_SUPPORT.Find(J.title))
-			dat += "<hr>Auxiliary Combat Support:<br>"
+			position_dat += "<hr>Auxiliary Combat Support:<br>"
 			roles_show ^= FLAG_SHOW_AUXIL_SUPPORT
 
 		else if(roles_show & FLAG_SHOW_MISC && ROLES_MISC.Find(J.title))
-			dat += "<hr>Other:<br>"
+			position_dat += "<hr>Other:<br>"
 			roles_show ^= FLAG_SHOW_MISC
 
 		else if(roles_show & FLAG_SHOW_POLICE && ROLES_POLICE.Find(J.title))
-			dat += "<hr>Military Police:<br>"
+			position_dat += "<hr>Military Police:<br>"
 			roles_show ^= FLAG_SHOW_POLICE
 
 		else if(roles_show & FLAG_SHOW_ENGINEERING && ROLES_ENGINEERING.Find(J.title))
-			dat += "<hr>Engineering:<br>"
+			position_dat += "<hr>Engineering:<br>"
 			roles_show ^= FLAG_SHOW_ENGINEERING
 
 		else if(roles_show & FLAG_SHOW_REQUISITION && ROLES_REQUISITION.Find(J.title))
-			dat += "<hr>Requisitions:<br>"
+			position_dat += "<hr>Requisitions:<br>"
 			roles_show ^= FLAG_SHOW_REQUISITION
 
 		else if(roles_show & FLAG_SHOW_MEDICAL && ROLES_MEDICAL.Find(J.title))
-			dat += "<hr>Medbay:<br>"
+			position_dat += "<hr>Medbay:<br>"
 			roles_show ^= FLAG_SHOW_MEDICAL
 
 		else if(roles_show & FLAG_SHOW_MARINES && ROLES_MARINES.Find(J.title))
-			dat += "<hr>Squad Riflemen:<br>"
+			position_dat += "<hr>Squad Riflemen:<br>"
 			roles_show ^= FLAG_SHOW_MARINES
 
-		dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
+		positions = TRUE
+		position_dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
+
+	dat += positions ? position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
 	show_browser(src, dat, "Late Join", "latechoices", "size=420x700")

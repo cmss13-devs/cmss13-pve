@@ -1,7 +1,3 @@
-#define NARRATION_METHOD_SAY "Say"
-#define NARRATION_METHOD_ME "Me"
-#define NARRATION_METHOD_DIRECT "Direct"
-
 // Converted this into a proc. Verb will be separate
 /client/proc/change_ckey(mob/M in GLOB.mob_list, a_ckey = null)
 	var/new_ckey = a_ckey
@@ -203,36 +199,26 @@
 		else
 			return
 
-/client/proc/cmd_admin_object_narrate(obj/selected)
-	set name = "Object Narrate"
+/client/proc/cmd_admin_atom_narrate(atom/selected)
+	set name = "Atom Narrate"
 	set category = null
 
 	if(!check_rights(R_MOD))
 		return
 
-	var/type = tgui_input_list(usr,
-				"What type of narration?",
-				"Narration",
-				list(NARRATION_METHOD_SAY, NARRATION_METHOD_ME, NARRATION_METHOD_DIRECT))
-	if(!type) return
-	var/message = input(usr,
-				"What should it say?",
-				"Narrating as [selected.name]")
-	if(!message) return
+	var/delayed = tgui_alert(mob, "Do you want this narration to occur when someone walks nearby?", "Confirmation", list("Yes", "No")) == "Yes"
 
-	var/list/heard = get_mobs_in_view(world_view_size, selected)
+	var/narration_type = tgui_input_list(mob,"What type of narration?", "Narration", list(NARRATION_METHOD_SAY, NARRATION_METHOD_ME, NARRATION_METHOD_DIRECT))
 
-	switch(type)
-		if(NARRATION_METHOD_SAY)
-			selected.langchat_speech(message, heard, GLOB.all_languages, skip_language_check = TRUE)
-			selected.visible_message("<b>[selected]</b> says, \"[message]\"")
-		if(NARRATION_METHOD_ME)
-			selected.langchat_speech(message, heard, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_small", "emote"))
-			selected.visible_message("<b>[selected]</b> [message]")
-		if(NARRATION_METHOD_DIRECT)
-			selected.visible_message("[message]")
-	log_admin("[key_name(src)] sent an Object Narrate with message [message].")
-	message_admins("[key_name(src)] sent an Object Narrate with message [message].")
+	if(!narration_type)
+		return
+
+	var/message = tgui_input_text(mob, "What should it say?", "Narrating as [selected]")
+
+	if(!message)
+		return
+
+	selected.AddComponent(/datum/component/atom_narrate, message, narration_type, delayed, key_name(src))
 
 /client/proc/cmd_admin_direct_narrate(mob/M)
 	set name = "Narrate"

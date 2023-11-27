@@ -41,6 +41,7 @@ interface SquadProps {
   total_free: number;
   user: { name: string; observer: number };
   squad: string;
+  partial_squad_ref: string;
   squad_color: string;
   is_lead: 'pltsgt' | 'SQ1' | 'SQ2' | 0;
   objective: { primary?: string; secondary?: string };
@@ -58,7 +59,7 @@ const FireTeamLeadLabel = (props: { ftl: SquadMarineEntry }, context) => {
         <span
           className={classes([
             'squadranks16x16',
-            `squad-${data.squad}-hud-${ftl.rank}`,
+            `squad-${data.partial_squad_ref}-hud-${ftl.rank}`,
           ])}
         />
       </Stack.Item>
@@ -224,7 +225,7 @@ const FireTeamMember = (
         <span
           className={classes([
             'squadranks16x16',
-            `squad-${data.squad}-hud-${props.member.rank}`,
+            `squad-${data.partial_squad_ref}-hud-${props.member.rank}`,
           ])}
         />
       </TableCell>

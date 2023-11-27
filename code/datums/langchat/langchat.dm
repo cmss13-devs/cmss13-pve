@@ -116,7 +116,7 @@
 		if(langchat_client_enabled(M) && !M.ear_deaf && (skip_language_check || M.say_understands(src, language)))
 			M.client.images += langchat_image
 
-	if(isturf(loc))
+	if(isturf(src) || isturf(loc))
 		langchat_image.loc = src
 	else
 		langchat_image.loc = recursive_holder_check(src)

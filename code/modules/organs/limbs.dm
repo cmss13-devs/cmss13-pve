@@ -171,6 +171,7 @@
 */
 
 /obj/limb/emp_act(severity)
+	. = ..()
 	if(!(status & (LIMB_ROBOT|LIMB_SYNTHSKIN))) //meatbags do not care about EMP
 		return
 	var/probability = 30
@@ -469,7 +470,7 @@ This function completely restores a damaged organ to perfect condition.
 	if(!is_ff && type != BURN && !(status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))
 		take_damage_internal_bleeding(damage)
 
-	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob(50 + damage * 2.5)) //If they have it splinted, the splint won't hold.
+	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob(10 + damage * 2.5)) //If they have it splinted, the splint won't hold.
 		status &= ~LIMB_SPLINTED
 		playsound(get_turf(loc), 'sound/items/splintbreaks.ogg', 20)
 		to_chat(owner, SPAN_DANGER("The splint on your [display_name] comes apart!"))

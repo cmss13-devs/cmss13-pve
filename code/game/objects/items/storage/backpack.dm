@@ -72,9 +72,9 @@
 		return FALSE
 
 	// Create their vis object if needed
-	if(!xeno.backpack_icon_carrier)
-		xeno.backpack_icon_carrier = new(null, xeno)
-		xeno.vis_contents += xeno.backpack_icon_carrier
+	if(!xeno.backpack_icon_holder)
+		xeno.backpack_icon_holder = new(null, xeno)
+		xeno.vis_contents += xeno.backpack_icon_holder
 
 	target_mob.put_in_back(src)
 	return FALSE
@@ -670,6 +670,7 @@
 
 	RegisterSignal(H, COMSIG_GRENADE_PRE_PRIME, PROC_REF(cloak_grenade_callback))
 	RegisterSignal(H, COMSIG_HUMAN_EXTINGUISH, PROC_REF(wrapper_fizzle_camouflage))
+	RegisterSignal(H, COMSIG_MOB_EFFECT_CLOAK_CANCEL, PROC_REF(deactivate_camouflage))
 
 	camo_active = TRUE
 	ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
@@ -699,12 +700,14 @@
 	deactivate_camouflage(wearer, TRUE, TRUE)
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/proc/deactivate_camouflage(mob/living/carbon/human/H, anim = TRUE, forced)
+	SIGNAL_HANDLER
 	if(!istype(H))
 		return FALSE
 
 	UnregisterSignal(H, list(
 	COMSIG_GRENADE_PRE_PRIME,
-	COMSIG_HUMAN_EXTINGUISH
+	COMSIG_HUMAN_EXTINGUISH,
+	COMSIG_MOB_EFFECT_CLOAK_CANCEL,
 	))
 
 	if(forced)
@@ -1038,6 +1041,10 @@
 
 	max_storage_space = 21
 	camo_alpha = 10
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/weak
+	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This one is less effective than normal."
+	actions_types = null
 
 //----------TWE SECTION----------
 /obj/item/storage/backpack/rmc
