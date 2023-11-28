@@ -259,11 +259,13 @@
 
 	remove_marker(human_user, target, blip_pool[target])
 
-/obj/item/clothing/glasses/night/m56_goggles/proc/remove_marker(mob/user, atom/target, obj/effect/target_mark/TM)
-	if(user.client)
-		user.client.remove_from_screen(TM)
-		blip_pool -= target
-		qdel(TM)
+/obj/item/clothing/glasses/night/m56_goggles/proc/remove_marker(mob/user, atom/target, obj/effect/target_mark/mark)
+	if(!user.client)
+		return
+
+	user.client.remove_from_screen(mark)
+	blip_pool -= target
+	qdel(mark)
 
 /datum/action/item_action/m56_goggles/target_highlighting/New()
 	. = ..()
