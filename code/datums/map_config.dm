@@ -30,6 +30,9 @@
 	var/allow_custom_shuttles = TRUE
 	var/shuttles = list()
 
+	var/announce_text = ""
+	var/infection_announce_text = ""
+
 	var/squads_max_num = 4
 
 	var/weather_holder
@@ -335,6 +338,12 @@
 
 	if(json["vote_cycle"])
 		vote_cycle = json["vote_cycle"]
+
+	if(json["announce_text"])
+		announce_text = json["announce_text"]
+
+	if(json["infection_announce_text"])
+		infection_announce_text = json["infection_announce_text"]
 
 	if(json["weather_holder"])
 		weather_holder = text2path(json["weather_holder"])
