@@ -4,7 +4,6 @@
     "map_file": "derelict_almayer.dmm",
     "webmap_url": "Almayer",
     "map_item_type": "/obj/item/map/almayer",
-    "announce_text": "An automated distress signal has been received from the \"USS Almayer\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
     "traits": [{ "Ground": true }],
     "nightmare_path": "maps/Nightmare/maps/derelict_almayer/",
     "camouflage": "classic",
