@@ -72,7 +72,7 @@
 	/// How much to make the bullet fall off by accuracy-wise when closer than the ideal range
 	var/accuracy_range_falloff = 10
 
-	glide_size = INFINITY //disables gliding, fights against what animate() is doing
+	glide_size = INFINITY //disables gliding because it fights against what animate() is doing
 
 /obj/projectile/Initialize(mapload, datum/cause_data/cause_data)
 	. = ..()
@@ -250,10 +250,6 @@
 		else if(dx < 0)
 			angle += 360
 
-	var/matrix/rotate = matrix() //Change the bullet angle.
-	rotate.Turn(angle)
-	apply_transform(rotate)
-
 /obj/projectile/process(delta_time)
 	. = PROC_RETURN_SLEEP
 
@@ -272,6 +268,8 @@
 
 	time_carry += delta_time
 
+	//Get pixelspace coordinates of visual start and end positions
+
 	//if this is the first leg (vis not reset) start at loc center, otherwise use p_x&y of prev leg (half of current leg)
 	var/prev_p_mult = (distance_travelled == vis_travelled) ? (0) : (0.5)
 	var/pixel_x_source = vis_source.x * world.icon_size + p_x * prev_p_mult
@@ -280,6 +278,8 @@
 	var/turf/vis_target = path[path.len]
 	var/pixel_x_target = vis_target.x * world.icon_size + p_x
 	var/pixel_y_target = vis_target.y * world.icon_size + p_y
+
+	//Determine relative position along visual path, then lerp between start and end positions
 
 	var/vis_length = vis_travelled + path.len
 	//speed * (time_carry * 0.1) advances forward the remainder time, visually "catching up" to where it should be at this point in time and showing sub-tile movement
@@ -290,12 +290,28 @@
 	var/pixel_x_lerped = pixel_x_source + (pixel_x_target - pixel_x_source) * vis_interpolant
 	var/pixel_y_lerped = pixel_y_source + (pixel_y_target - pixel_y_source) * vis_interpolant
 
+	//Convert pixelspace to pixel offset relative to current loc
+
 	var/turf/current_turf = get_turf(src)
 	var/pixel_x_rel_new = pixel_x_lerped - current_turf.x * world.icon_size
 	var/pixel_y_rel_new = pixel_y_lerped - current_turf.y * world.icon_size
 
+	//Get pixel offset of old position and set as initial position
+
 	var/pixel_x_rel_old = (turf_old.x - current_turf.x) * world.icon_size + pixel_x
 	var/pixel_y_rel_old = (turf_old.y - current_turf.y) * world.icon_size + pixel_y
+
+	//Change the bullet angle to its visual path
+
+	var/vis_angle = get_pixel_angle(x = pixel_x_rel_new - pixel_x_rel_old, y = pixel_y_rel_new - pixel_y_rel_old) //naming vars because the proc takes y,x in that order and that's WEIRD
+	var/matrix/rotate = matrix()
+	rotate.Turn(vis_angle)
+	apply_transform(rotate)
+
+	if(projectile_flags & PROJECTILE_SHRAPNEL) //there can be a LOT of shrapnel especially from a cluster OB, not important enough for the expense of an animate()
+		pixel_x = pixel_x_rel_new
+		pixel_y = pixel_y_rel_new
+		return FALSE
 
 	if(distance_travelled_old == 0 && distance_travelled > 0)
 		//shift the fire origin slightly away from the firer, makes first move look a little "slower" but can't really schedule the animation start at a fraction of a tick
@@ -305,6 +321,8 @@
 	else
 		pixel_x = pixel_x_rel_old
 		pixel_y = pixel_y_rel_old
+
+	//Animate the movement from set (old) position to new position
 
 	//time "consumed" by movement and remainder time for sub-tile movement
 	var/anim_time = (distance_travelled - distance_travelled_old) / speed + time_carry * 0.1
