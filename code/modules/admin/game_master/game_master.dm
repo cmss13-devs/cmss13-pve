@@ -209,6 +209,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			return
 
+		if("delete_xenos_in_view")
+			if(tgui_alert(ui.user, "Do you want to delete all xenos within your view range?", "Confirmation", list("Yes", "No")) != "Yes")
+				return
+
+			for(var/mob/living/carbon/xenomorph/viewed_xeno in view(ui.user.client))
+				qdel(viewed_xeno)
+
+			return
+
 		//Behavior Section
 		if("set_selected_behavior")
 			selected_behavior = params["new_behavior"]

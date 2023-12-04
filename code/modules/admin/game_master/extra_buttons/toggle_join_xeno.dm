@@ -2,7 +2,7 @@
 /// For PvE CM we start without the ability for people to join as xenos. This can be toggled by game masters.
 /client/proc/toggle_join_xeno()
 	set name = "Toggle Player Xeno Joins"
-	set category = "Game Master.Extras"
+	set category = "Game Master.Flags"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return
