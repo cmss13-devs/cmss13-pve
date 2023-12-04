@@ -90,6 +90,32 @@
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 
+/obj/vehicle/multitile/apc/movie/set_muzzle_offsets(obj/item/hardpoint/HP)
+	//sets muzzle flash offsets for APC weapons as appropriate for the movie APC
+	switch(HP.slot)
+		if(HDPT_PRIMARY) //dualcannon
+			HP.muzzle_flash_pos = list(
+				"1" = list(8, -20),
+				"2" = list(25, 31),
+				"4" = list(-7, 27),
+				"8" = list(37, 9)
+			)
+		if(HDPT_SECONDARY) //frontalcannon
+			HP.muzzle_flash_pos = list(
+				"1" = list(34, 70),
+				"2" = list(-1, -70),
+				"4" = list(88, -7),
+				"8" = list(-56, 12)
+			)
+		if(HDPT_SUPPORT) //flare
+			HP.muzzle_flash_pos = list(
+				"1" = list(22, -20),
+				"2" = list(11, 32),
+				"4" = list(-5, 10),
+				"8" = list(37, 24)
+			)
+	return ..()
+
 /*
 ** PRESETS SPAWNERS
 */
