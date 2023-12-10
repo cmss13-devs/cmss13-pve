@@ -21,5 +21,9 @@ map golden_arrow
 endmap
 
 map golden_arrow_RU
+	disabled
+endmap
+
+map hivecleaners_spacestart
 	default
 endmap

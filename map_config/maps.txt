@@ -13,7 +13,6 @@ Format:
 endmap
 
 map lv624
-	default
 endmap
 
 map bigredv2
@@ -36,6 +35,7 @@ map desert_dam
 endmap
 
 map desert_dam_ru
+	default
 endmap
 
 map ice_colony_v2
