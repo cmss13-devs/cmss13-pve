@@ -253,12 +253,8 @@
 	var/pounce_distance = 0
 
 	// Life reduction variables.
-	var/life_stun_reduction = -1.5
-	var/life_knockdown_reduction = -1.5
-	var/life_knockout_reduction = -1.5
 	var/life_daze_reduction = -1.5
 	var/life_slow_reduction = -1.5
-
 
 	//////////////////////////////////////////////////////////////////
 	//
@@ -1118,7 +1114,15 @@
 	forceMove(current_structure.loc)
 	return TRUE
 
-/mob/living/carbon/xenomorph/knocked_down_callback()
-	. = ..()
-	if(!resting) // !resting because we dont wanna prematurely update wounds if they're just trying to rest
-		update_wounds()
+///Generate a new unused nicknumber for the current hive, if hive doesn't exist return 0
+/mob/living/carbon/xenomorph/proc/generate_and_set_nicknumber()
+	if(!hive)
+		//If hive doesn't exist make it 0
+		nicknumber = 0
+		return
+	var/datum/hive_status/hive_status = hive
+	if(length(hive_status.available_nicknumbers))
+		nicknumber = pick_n_take(hive_status.available_nicknumbers)
+	else
+		//If we somehow use all 999 numbers fallback on 0
+		nicknumber = 0
