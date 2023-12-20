@@ -24,6 +24,6 @@ map golden_arrow_RU
 	disabled
 endmap
 
-map hivecleaners_spacestart
+map desert_dam_fob
 	default
 endmap

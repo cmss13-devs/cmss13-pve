@@ -35,7 +35,6 @@ map desert_dam
 endmap
 
 map desert_dam_ru
-	default
 endmap
 
 map ice_colony_v2
@@ -69,4 +68,8 @@ map derelict_almayer_ru
 endmap
 
 map whiskey_outpost_v2
+endmap
+
+map whiskey_outpost_ru
+	default
 endmap
