@@ -1661,7 +1661,6 @@
 #include "code\modules\customitems\item_spawning.dm"
 #include "code\modules\decorators\admin_runtime_decorator.dm"
 #include "code\modules\decorators\cassette_decorator.dm"
-#include "code\modules\decorators\christmas.dm"
 #include "code\modules\decorators\mass_xeno_decorator.dm"
 #include "code\modules\decorators\weapon_decorator.dm"
 #include "code\modules\decorators\weapon_map_decorator.dm"
