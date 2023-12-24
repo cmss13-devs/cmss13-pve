@@ -119,12 +119,12 @@
 "cA" = (/obj/structure/barricade/handrail/wire{dir = 4},/obj/item/stool,/turf/open/desert/rock/edge1{dir = 4},/area/whiskey_outpost/outside/lane/two_south)
 "cB" = (/obj/structure/prop/dam/boulder/boulder2,/turf/open/desert/rock,/area/whiskey_outpost/outside/south/very_far)
 "cC" = (/obj/structure/sign/poster,/turf/closed/wall/r_wall,/area/whiskey_outpost/inside/bunker/pillbox/two)
-"cD" = (/obj/structure/closet/secure_closet/bar{name = "Success Cabinet"; req_access_txt = "1"},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
+"cD" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
 "cE" = (/obj/structure/window/reinforced/tinted/frosted,/obj/structure/sink{pixel_y = 32},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{icon_state = "kitchen"},/area/whiskey_outpost/inside/cic)
 "cF" = (/obj/structure/mirror{pixel_y = 30},/turf/open/floor/prison{icon_state = "kitchen"},/area/whiskey_outpost/inside/cic)
 "cG" = (/obj/structure/machinery/door/airlock/almayer/generic{name = "\improper Bathroom"},/obj/structure/machinery/door/firedoor/border_only/almayer,/turf/open/floor/wood,/area/whiskey_outpost/inside/cic)
 "cH" = (/obj/structure/flora/bush/desert/cactus{icon_state = "cactus_8"},/turf/open/desert/rock,/area/whiskey_outpost/outside/south/far)
-"cI" = (/obj/structure/surface/table/woodentable/fancy,/obj/item/storage/bible/booze,/obj/item/ammo_magazine/rifle/m41aMK1,/obj/item/ammo_magazine/rifle/m41aMK1,/obj/item/ammo_magazine/rifle/m41aMK1,/obj/item/weapon/gun/rifle/m41aMK1,/turf/open/floor/wood,/area/whiskey_outpost/inside/cic)
+"cI" = (/obj/structure/surface/table/woodentable/fancy,/obj/item/storage/bible/booze,/turf/open/floor/wood,/area/whiskey_outpost/inside/cic)
 "cJ" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/card{dir = 8},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
 "cK" = (/turf/open/desert/dirt,/area/whiskey_outpost/outside/north)
 "cL" = (/obj/structure/surface/table/woodentable/fancy,/obj/item/paper_bin,/obj/item/tool/pen,/turf/open/floor/wood,/area/whiskey_outpost/inside/cic)
@@ -173,8 +173,8 @@
 "dK" = (/obj/effect/landmark/crap_item,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/one)
 "dL" = (/obj/structure/bed/chair{dir = 4; icon_state = "chair_alt"},/turf/open/floor/wood,/area/whiskey_outpost/inside/bunker/bunker/front)
 "dM" = (/turf/open/mars_cave{icon_state = "mars_cave_18"},/area/whiskey_outpost/inside/caves/caverns/east)
-"dN" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
-"dO" = (/obj/structure/safe,/obj/item/moneybag,/obj/item/clothing/glasses/monocle,/obj/item/weapon/telebaton,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
+"dN" = (/obj/structure/prop/almayer/computers/sensor_computer1,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"dO" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "dP" = (/obj/structure/surface/table/reinforced/prison,/obj/item/storage/box/beakers{pixel_x = 5; pixel_y = 5},/obj/item/storage/box/pillbottles,/obj/item/reagent_container/spray/cleaner,/obj/item/storage/box/gloves,/obj/item/tool/hand_labeler,/obj/item/reagent_container/glass/beaker/bluespace,/turf/open/floor{dir = 1; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "dQ" = (/obj/structure/surface/table/reinforced/prison,/obj/item/storage/box/masks,/obj/item/storage/box/masks,/obj/item/storage/box/masks,/obj/item/storage/box/gloves{pixel_x = -5; pixel_y = -5},/obj/item/storage/box/gloves{pixel_x = -5; pixel_y = -5},/obj/item/device/defibrillator,/obj/item/device/defibrillator,/obj/item/device/defibrillator,/obj/item/device/defibrillator,/obj/item/device/defibrillator,/turf/open/floor{dir = 9; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "dS" = (/obj/structure/window/framed/colony/reinforced,/obj/structure/machinery/door/poddoor/shutters/almayer{dir = 2; id = "WOlineshutters1"; name = "\improper Supply Depo Line 1"},/turf/open/floor/plating,/area/whiskey_outpost/inside/supply)
@@ -423,11 +423,12 @@
 "iV" = (/obj/structure/pipes/vents/pump{dir = 1},/turf/open/floor{icon_state = "white"},/area/whiskey_outpost/inside/hospital)
 "iW" = (/obj/structure/flora/grass/desert/heavygrass_9,/turf/open/desert/rock,/area/whiskey_outpost/outside/south/far)
 "iY" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/light/small{dir = 4},/obj/structure/machinery/computer/overwatch/almayer{layer = 3.2; pixel_y = 20},/obj/item/tool/pen,/obj/item/paper_bin,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
+"iZ" = (/obj/structure/machinery/sensortower{pixel_x = -8},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "ja" = (/turf/open/desert/rock/edge1{dir = 10},/area/whiskey_outpost/outside/lane/four_north)
 "jb" = (/obj/effect/decal/warning_stripes/asteroid{dir = 4; icon_state = "warning_s"},/obj/item/device/flashlight/lamp/tripod/grey,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/outside/north)
 "jc" = (/turf/open/mars_dirt{icon_state = "mars_dirt_7"},/area/whiskey_outpost/outside/south/far)
 "jd" = (/turf/open/mars_dirt{icon_state = "mars_dirt_5"},/area/whiskey_outpost/outside/south/very_far)
-"je" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/recharger{pixel_y = 5},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"je" = (/obj/structure/prop/almayer/computers/sensor_computer2,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "jf" = (/turf/open/desert/rock/corner1{dir = 8},/area/whiskey_outpost/outside/north/beach)
 "jg" = (/obj/structure/machinery/door/poddoor/two_tile/four_tile{breakable = 0; indestructible = 1},/turf/open/desert/dirt,/area/whiskey_outpost/outside/south/very_far)
 "jk" = (/obj/structure/pipes/vents/pump{dir = 1},/turf/open/floor/prison,/area/whiskey_outpost/inside/living)
@@ -476,7 +477,7 @@
 "ke" = (/obj/item/lightstick/red/planted,/turf/open/desert/dirt,/area/whiskey_outpost/outside/south/far)
 "kf" = (/obj/structure/flora/grass/desert/heavygrass_8,/turf/open/desert/rock,/area/whiskey_outpost/outside/south)
 "kg" = (/obj/structure/flora/grass/desert/lightgrass_1,/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/beach)
-"kh" = (/obj/structure/surface/rack,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"kh" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/prop/almayer/CICmap,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "ki" = (/obj/structure/surface/table/reinforced/prison,/obj/item/paper_bin{pixel_x = 2; pixel_y = 8},/obj/item/reagent_container/food/condiment/saltshaker{pixel_x = -9; pixel_y = 7},/obj/item/tool/kitchen/utensil/pknife{pixel_x = 12; pixel_y = 7},/turf/open/floor/wood,/area/whiskey_outpost/inside/bunker/bunker/front)
 "kj" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "kk" = (/obj/structure/machinery/disposal,/obj/structure/disposalpipe/trunk,/turf/open/floor/prison,/area/whiskey_outpost/inside/cic)
@@ -494,7 +495,7 @@
 "kx" = (/turf/open/floor/almayer{icon_state = "emeraldfull"},/area/whiskey_outpost/inside/living)
 "ky" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/desert/dirt,/area/whiskey_outpost/outside/lane/two_north)
 "kz" = (/obj/structure/fence,/turf/open/desert/rock,/area/whiskey_outpost/outside/south/far)
-"kA" = (/obj/structure/surface/table/reinforced/prison,/obj/item/storage/box/bodybags,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"kA" = (/obj/structure/machinery/computer/telecomms/server{pixel_x = 3},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "kB" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 10},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/beach)
 "kC" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/door/window/southleft{req_one_access_txt = "2;21"},/obj/structure/machinery/door/window/northleft,/obj/structure/machinery/door/poddoor/shutters/almayer{dir = 2; id = "WOlineshutters2"; name = "\improper Supply Depo Line 2"},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "kD" = (/obj/structure/flora/bush/desert,/turf/open/desert/rock,/area/whiskey_outpost/outside/south)
@@ -506,7 +507,7 @@
 "kK" = (/obj/structure/bed/chair/office/dark{dir = 1},/turf/open/floor/almayer{dir = 9; icon_state = "red"},/area/whiskey_outpost/inside/cic)
 "kL" = (/obj/structure/machinery/colony_floodlight,/turf/open/desert/rock/edge1,/area/whiskey_outpost/outside/north)
 "kN" = (/obj/structure/disposalpipe/segment,/obj/structure/machinery/medical_pod/sleeper,/turf/open/floor{icon_state = "whitegreenfull"},/area/whiskey_outpost/inside/hospital)
-"kO" = (/obj/structure/bed/roller,/turf/open/floor{dir = 8; icon_state = "whitegreencorner"},/area/whiskey_outpost/inside/hospital)
+"kO" = (/obj/structure/bed/roller,/obj/effect/decal/cleanable/blood,/turf/open/floor{dir = 8; icon_state = "whitegreencorner"},/area/whiskey_outpost/inside/hospital)
 "kQ" = (/obj/structure/platform{dir = 1},/turf/open/desert/desert_shore/desert_shore1{dir = 4},/area/whiskey_outpost/outside/south)
 "kR" = (/obj/structure/flora/grass/desert/heavygrass_4,/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/one_south)
 "kS" = (/turf/open/floor/prison,/area/whiskey_outpost/inside/supply)
@@ -528,7 +529,7 @@
 "ll" = (/turf/open/desert/rock/edge1{dir = 1},/area/whiskey_outpost/outside/south/very_far)
 "lm" = (/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/cic)
 "ln" = (/obj/item/shard{icon_state = "large"; pixel_x = -5; pixel_y = -6},/turf/open/floor/wood,/area/whiskey_outpost/inside/bunker/bunker/front)
-"lo" = (/obj/structure/flora/pottedplant{icon_state = "pottedplant_22"; pixel_y = 8},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"lo" = (/obj/effect/decal/medical_decals{dir = 8; icon_state = "docstripingdir"},/obj/structure/bed,/obj/item/bedsheet/medical,/obj/effect/decal/cleanable/blood,/turf/open/floor{icon_state = "whitegreenfull"},/area/whiskey_outpost/inside/hospital)
 "lp" = (/obj/item/lightstick/red/planted,/turf/open/desert/dirt,/area/whiskey_outpost/outside/south/very_far)
 "lq" = (/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/inside/bunker)
 "lr" = (/obj/structure/disposalpipe/segment,/turf/open/floor/prison,/area/whiskey_outpost/inside/cic)
@@ -541,7 +542,7 @@
 "ly" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 4},/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/two_north)
 "lz" = (/turf/open/desert/rock/edge1{dir = 9},/area/whiskey_outpost/outside/south/far)
 "lA" = (/turf/closed/wall/rock/brown,/area/whiskey_outpost)
-"lB" = (/obj/structure/surface/table/reinforced/prison,/obj/item/facepaint/green,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"lB" = (/obj/structure/surface/table/reinforced/prison,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "lC" = (/obj/structure/disposalpipe/segment{dir = 8; icon_state = "pipe-c"},/turf/open/floor/prison,/area/whiskey_outpost/inside/living)
 "lD" = (/obj/structure/surface/table,/turf/open/floor/prison,/area/whiskey_outpost/inside/living)
 "lE" = (/turf/open/desert/rock/corner1{dir = 8},/area/whiskey_outpost/outside/south/far)
@@ -603,7 +604,7 @@
 "mP" = (/obj/structure/prop/dam/boulder/boulder1,/turf/open/desert/dirt,/area/whiskey_outpost/outside/lane/three_south)
 "mQ" = (/obj/structure/disposalpipe/segment,/obj/structure/window/framed/colony/reinforced,/turf/open/floor/plating,/area/whiskey_outpost/inside/hospital)
 "mR" = (/obj/structure/flora/bush/ausbushes/reedbush,/turf/open/gm/river/desert/shallow_edge{dir = 8},/area/whiskey_outpost/outside/river/east)
-"mS" = (/obj/effect/decal/medical_decals{icon_state = "triagedecalleft"},/obj/structure/machinery/light/small,/turf/open/floor{dir = 10; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
+"mS" = (/obj/effect/decal/medical_decals{icon_state = "triagedecalleft"},/obj/structure/machinery/light/small,/obj/item/storage/box/bodybags,/turf/open/floor{dir = 10; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "mT" = (/turf/closed/wall/rock/brown,/area/whiskey_outpost/inside/caves)
 "mU" = (/obj/structure/machinery/conveyor{dir = 8; id = "crate"},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "mV" = (/obj/structure/sign/poster{serial_number = 7},/turf/closed/wall/r_wall,/area/whiskey_outpost/inside/living)
@@ -634,7 +635,7 @@
 "nv" = (/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/whiskey_outpost)
 "nw" = (/obj/structure/disposalpipe/segment,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/whiskey_outpost)
 "nx" = (/turf/open/mars_cave{icon_state = "mars_cave_13"},/area/whiskey_outpost/outside/lane/two_north)
-"ny" = (/obj/structure/machinery/sensortower{pixel_x = -8},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"ny" = (/obj/structure/bed/chair/office/dark,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "nz" = (/obj/structure/bed/chair,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/inside/bunker/bunker/front)
 "nA" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{name = "\improper Hospital"; req_one_access = null},/turf/open/floor{icon_state = "whitegreenfull"},/area/whiskey_outpost/inside/hospital)
 "nB" = (/obj/structure/machinery/vending/cigarette/colony,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker)
@@ -817,6 +818,7 @@
 "rl" = (/turf/open/floor/plating{dir = 6; icon_state = "warnplate"},/area/whiskey_outpost/outside/north/northeast)
 "rm" = (/obj/structure/window/framed/colony/reinforced,/turf/open/floor/plating,/area/whiskey_outpost/inside/supply)
 "rn" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 10},/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/two_north)
+"rp" = (/obj/structure/prop/almayer/computers/mapping_computer,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "rq" = (/obj/structure/platform{dir = 8},/obj/effect/decal/cleanable/blood/oil,/turf/open/floor/plating,/area/whiskey_outpost/inside/bunker/bunker/front)
 "rr" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/wood,/area/whiskey_outpost/inside/bunker/bunker/front)
 "rs" = (/obj/item/storage/toolbox/emergency,/turf/open/floor/plating/plating_catwalk/prison,/area/whiskey_outpost/inside/engineering)
@@ -837,7 +839,7 @@
 "rH" = (/obj/structure/flora/bush/desert,/turf/open/desert/rock,/area/whiskey_outpost/outside/south/very_far)
 "rI" = (/obj/structure/largecrate/supply/supplies/plasteel,/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/inside/engineering)
 "rL" = (/obj/structure/disposalpipe/segment,/obj/structure/window/framed/colony/reinforced,/turf/open/floor/plating,/area/whiskey_outpost/inside/supply)
-"rM" = (/obj/structure/machinery/door/airlock/almayer/marine/requisitions{dir = 2; name = "\improper Supply Depo"; no_panel = 1; not_weldable = 1},/obj/structure/disposalpipe/segment,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
+"rM" = (/obj/structure/machinery/door/airlock/almayer/marine/requisitions{dir = 2; name = "\improper Supply Depo"; no_panel = 1; not_weldable = 1; req_one_access = list()},/obj/structure/disposalpipe/segment,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "rN" = (/turf/open/desert/rock,/area/whiskey_outpost/outside/mortar_pit)
 "rO" = (/obj/structure/largecrate/supply/explosives/mortar_flare,/turf/open/desert/rock,/area/whiskey_outpost/inside/caves/caverns)
 "rQ" = (/obj/structure/platform,/obj/structure/platform{dir = 8},/obj/structure/platform_decoration{dir = 10},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/beach)
@@ -853,7 +855,7 @@
 "sb" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/open/desert/dirt,/area/whiskey_outpost/outside/lane/two_north)
 "sc" = (/obj/structure/disposalpipe/segment,/obj/structure/machinery/door/airlock/almayer/marine/charlie{dir = 1; name = "\improper Pillbox Vodka"; req_access = null; req_one_access = null},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/three)
 "sd" = (/turf/open/floor/corsat{icon_state = "marked"},/area/whiskey_outpost/inside/bunker/bunker/front)
-"se" = (/obj/structure/machinery/door/airlock/almayer/maint{name = "\improper Generator Hatch"},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
+"se" = (/obj/structure/machinery/door/airlock/almayer/maint{name = "\improper Generator Hatch"; req_one_access = list()},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
 "sg" = (/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/item/storage/box/lightstick,/obj/structure/surface/table,/obj/item/storage/toolbox/mechanical,/obj/item/storage/toolbox/mechanical,/obj/item/storage/toolbox/mechanical,/obj/item/storage/toolbox/mechanical,/obj/item/clothing/glasses/welding,/obj/item/clothing/glasses/welding,/obj/item/stack/barbed_wire{amount = 60},/obj/item/tool/shovel/etool,/obj/item/tool/shovel/etool,/obj/item/tool/shovel/etool,/obj/item/device/lightreplacer,/turf/open/floor/plating/plating_catwalk/prison,/area/whiskey_outpost/inside/engineering)
 "sh" = (/obj/structure/surface/table/almayer,/obj/effect/landmark/crap_item,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "si" = (/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/gm/river/desert/shallow,/area/whiskey_outpost/outside/river/east)
@@ -864,7 +866,7 @@
 "sn" = (/turf/closed/wall/r_wall,/area/whiskey_outpost/inside/bunker/pillbox/four)
 "so" = (/turf/open/desert/desert_shore/desert_shore1,/area/whiskey_outpost/outside/south/far)
 "sp" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
-"sq" = (/obj/structure/machinery/door/airlock/almayer/engineering{name = "Engineering"; req_one_access_txt = "2;7"},/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
+"sq" = (/obj/structure/machinery/door/airlock/almayer/engineering{name = "Engineering"; req_one_access = list(); req_one_access_txt = null},/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
 "sr" = (/turf/open/mars_dirt{icon_state = "mars_dirt_6"},/area/whiskey_outpost/outside/south/far)
 "ss" = (/obj/structure/platform_decoration{dir = 1},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/beach)
 "st" = (/obj/structure/pipes/vents/pump{dir = 1},/turf/open/floor/prison,/area/whiskey_outpost/inside/supply)
@@ -950,7 +952,7 @@
 "uc" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 4},/turf/open/desert/rock,/area/whiskey_outpost/outside/south/very_far)
 "ue" = (/obj/structure/window/reinforced{dir = 8; layer = 3.3; pixel_y = 4},/obj/structure/bed{can_buckle = 0},/obj/structure/bed{buckling_y = 13; layer = 3.5; pixel_y = 13},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/almayer{icon_state = "orangefull"},/area/whiskey_outpost/inside/living)
 "uf" = (/obj/structure/machinery/autolathe,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
-"ug" = (/obj/structure/surface/table/almayer,/obj/structure/machinery/line_nexter_control{id = "WOline1"; pixel_x = -4; pixel_y = -2; req_one_access_txt = "2;21"},/obj/structure/machinery/door_control{id = "WOlineshutters1"; name = "Line 1 Shutters"; pixel_x = 5; pixel_y = -2; req_one_access_txt = "2;21"},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
+"ug" = (/obj/structure/surface/table/almayer,/obj/structure/machinery/line_nexter_control{id = "WOline1"; pixel_x = -4; pixel_y = -2; req_one_access_txt = null},/obj/structure/machinery/door_control{id = "WOlineshutters1"; name = "Line 1 Shutters"; pixel_x = 5; pixel_y = -2; req_one_access_txt = null},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "uh" = (/obj/structure/bed/chair/office/dark{dir = 1},/turf/open/floor/prison,/area/whiskey_outpost/inside/supply)
 "ui" = (/obj/structure/window/reinforced{dir = 8; layer = 3.3; pixel_y = 4},/obj/structure/bed{can_buckle = 0},/obj/structure/bed{buckling_y = 13; layer = 3.5; pixel_y = 13},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/almayer{icon_state = "redfull"},/area/whiskey_outpost/inside/living)
 "uj" = (/obj/structure/platform_decoration{dir = 1},/turf/open/floor/plating,/area/whiskey_outpost/inside/bunker/bunker/front)
@@ -970,7 +972,7 @@
 "uz" = (/obj/structure/extinguisher_cabinet,/turf/closed/wall/r_wall/unmeltable,/area/whiskey_outpost/outside/mortar_pit)
 "uA" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/turf/open/desert/dirt,/area/whiskey_outpost/inside/caves/tunnel)
 "uB" = (/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/whiskey_outpost/inside/supply)
-"uC" = (/obj/structure/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Disposals"},/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/inside/engineering)
+"uC" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/obj/structure/machinery/door/airlock/almayer/engineering{dir = 2; name = "Engineering"; req_one_access = list(); req_one_access_txt = null},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/inside/engineering)
 "uD" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/three)
 "uE" = (/turf/open/mars_cave{icon_state = "mars_cave_19"},/area/whiskey_outpost/inside/caves/caverns/east)
 "uF" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 8},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/beach)
@@ -1033,7 +1035,7 @@
 "vP" = (/obj/structure/machinery/light,/turf/open/floor/prison,/area/whiskey_outpost/inside/supply)
 "vQ" = (/turf/open/desert/desert_shore/shore_edge1{dir = 4},/area/whiskey_outpost/outside/lane/one_south)
 "vR" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
-"vS" = (/obj/structure/machinery/door/airlock/almayer/engineering{name = "Engineering Dorms"; req_one_access = null},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
+"vS" = (/obj/structure/machinery/door/airlock/almayer/engineering{name = "Engineering"; req_one_access = list(); req_one_access_txt = null},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
 "vT" = (/obj/item/stack/tile/plasteel{pixel_x = -4; pixel_y = 9},/turf/open/floor/wood,/area/whiskey_outpost/inside/bunker/bunker/front)
 "vU" = (/obj/effect/decal/cleanable/dirt,/obj/structure/largecrate/black_market/confiscated_equipment,/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/outside/south/far)
 "vV" = (/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/whiskey_outpost/inside/supply)
@@ -1082,7 +1084,7 @@
 "wS" = (/obj/structure/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 1},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker)
 "wT" = (/obj/structure/flora/grass/desert/lightgrass_10,/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/four_south)
 "wU" = (/obj/structure/machinery/cm_vending/sorted/medical/wall_med{name = "Emergency NanoMed"; pixel_x = -30; req_access = null},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/bunker/front)
-"wV" = (/obj/structure/machinery/door/airlock/almayer/marine/requisitions{dir = 8; name = "\improper Supply Depo"; no_panel = 1; not_weldable = 1},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
+"wV" = (/obj/structure/machinery/door/airlock/almayer/marine/requisitions{dir = 8; name = "\improper Supply Depo"; no_panel = 1; not_weldable = 1; req_one_access = list()},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "wW" = (/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/gm/river/desert/shallow_edge,/area/whiskey_outpost/outside/river/east)
 "wX" = (/obj/structure/machinery/m56d_hmg/mg_turret{dir = 4; icon_state = "towergun"},/turf/open/floor/plating/plating_catwalk/prison,/area/whiskey_outpost/inside/bunker)
 "wY" = (/obj/structure/surface/rack,/obj/item/weapon/gun/shotgun/combat/riot,/obj/item/weapon/gun/shotgun/pump/special{pixel_y = -7},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker)
@@ -1240,6 +1242,7 @@
 "Am" = (/obj/structure/surface/rack,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/two)
 "An" = (/turf/closed/wall/r_wall,/area/whiskey_outpost/inside/bunker/pillbox/three)
 "Ao" = (/obj/structure/extinguisher_cabinet,/turf/closed/wall/r_wall,/area/whiskey_outpost/inside/bunker/pillbox/one)
+"Ap" = (/obj/effect/decal/medical_decals{icon_state = "triagedecaldir"},/obj/structure/machinery/computer/telecomms/traffic,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "Aq" = (/obj/structure/prop/dam/boulder/boulder3,/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/one_north)
 "Ar" = (/obj/structure/barricade/plasteel/wired{dir = 1},/turf/open/floor/plating/plating_catwalk/prison,/area/whiskey_outpost/inside/bunker)
 "As" = (/obj/structure/surface/table/reinforced/prison,/obj/item/paper_bin/uscm{pixel_y = 7},/obj/item/tool/pen,/turf/open/floor{icon_state = "whitegreenfull"},/area/whiskey_outpost/inside/hospital)
@@ -1851,6 +1854,7 @@
 "Nu" = (/turf/open/floor/plating,/area/whiskey_outpost/inside/bunker/bunker/front)
 "Nv" = (/obj/structure/flora/jungle/alienplant1,/turf/open/desert/desert_shore/desert_shore1{dir = 1},/area/whiskey_outpost/outside/lane/one_north)
 "Nw" = (/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/four_south)
+"Nx" = (/obj/structure/bed/chair/office/dark{dir = 1},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "Ny" = (/obj/structure/barricade/sandbags/wired{dir = 8; icon_state = "sandbag_0"},/turf/open/floor/plating{dir = 8; icon_state = "warnplate"},/area/whiskey_outpost/outside/north/beach)
 "Nz" = (/obj/structure/barricade/sandbags/wired{dir = 4; icon_state = "sandbag_0"},/turf/open/floor/plating{dir = 4; icon_state = "warnplate"},/area/whiskey_outpost/outside/north/beach)
 "NA" = (/turf/open/floor{dir = 4; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital/triage)
@@ -1964,7 +1968,7 @@
 "PR" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 4},/turf/open/desert/rock,/area/whiskey_outpost/outside/south)
 "PS" = (/obj/structure/flora/tree/joshua,/turf/open/desert/rock,/area/whiskey_outpost/outside/south)
 "PT" = (/obj/structure/machinery/medical_pod/sleeper,/turf/open/floor{dir = 10; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital/triage)
-"PU" = (/obj/structure/bed/bedroll{dir = 5; pixel_y = 10},/turf/open/floor{dir = 4; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
+"PU" = (/obj/structure/bed/bedroll{dir = 5; pixel_y = 10},/obj/effect/decal/cleanable/blood,/turf/open/floor{dir = 4; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "PV" = (/turf/open/mars_dirt{icon_state = "mars_dirt_4"},/area/whiskey_outpost/outside/lane/three_north)
 "PW" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north)
 "PX" = (/obj/structure/flora/bush/ausbushes/reedbush,/turf/open/gm/river/desert/shallow,/area/whiskey_outpost/outside/lane/one_north)
@@ -1978,6 +1982,7 @@
 "Qf" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
 "Qi" = (/turf/open/desert/rock/edge1{dir = 8},/area/whiskey_outpost/outside/south)
 "Qj" = (/obj/structure/machinery/light/small{dir = 1},/obj/structure/surface/rack,/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/bunker/front)
+"Qk" = (/obj/effect/decal/medical_decals{icon_state = "docstriping"},/obj/structure/machinery/light/small{dir = 8},/obj/structure/machinery/cm_vending/sorted/medical/wall_med{name = "Emergency NanoMed"; pixel_x = -30; req_access = null},/obj/structure/bed,/obj/item/bedsheet/medical,/obj/effect/decal/cleanable/blood,/turf/open/floor{dir = 8; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "Ql" = (/obj/item/lightstick/red/planted,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/outside/north/beach)
 "Qm" = (/obj/structure/machinery/medical_pod/sleeper{dir = 1},/turf/open/floor{dir = 6; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital/triage)
 "Qn" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/outside/south/far)
@@ -2052,7 +2057,7 @@
 "RR" = (/obj/structure/barricade/plasteel/wired,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/three)
 "RS" = (/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/desert/rock/edge1{dir = 1},/area/whiskey_outpost/outside/lane/one_north)
 "RT" = (/obj/structure/surface/table/reinforced/prison,/obj/item/prop/helmetgarb/spacejam_tickets{desc = "Hubba hubba."; icon = 'icons/obj/structures/props/posters.dmi'; icon_state = "poster17"; name = "\improper torn magazine page"; pixel_x = -2; pixel_y = 3},/obj/item/newspaper,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{icon_state = "darkbrownfull2"},/area/whiskey_outpost/inside/bunker/bunker/front)
-"RU" = (/obj/structure/closet/secure_closet/personal,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
+"RU" = (/obj/structure/machinery/computer/telecomms/monitor{pixel_x = -2},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost)
 "RV" = (/obj/structure/flora/grass/desert/lightgrass_2,/turf/open/desert/rock,/area/whiskey_outpost/outside/south)
 "RW" = (/turf/open/desert/desert_shore/shore_edge1,/area/whiskey_outpost/outside/river)
 "RX" = (/obj/structure/largecrate/random/case,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/inside/bunker/bunker/front)
@@ -2141,7 +2146,7 @@
 "TL" = (/turf/open/desert/rock/edge1{dir = 1},/area/whiskey_outpost/outside/north)
 "TN" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 1},/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/two_north)
 "TO" = (/turf/open/gm/river/desert/shallow_edge{dir = 1},/area/whiskey_outpost/outside/river)
-"TP" = (/obj/structure/surface/table/almayer,/obj/structure/machinery/line_nexter_control{id = "WOline2"; pixel_x = -4; pixel_y = -2; req_one_access_txt = "2;21"},/obj/structure/machinery/door_control{id = "WOlineshutters2"; name = "Line 2 Shutters"; pixel_x = 5; pixel_y = -2; req_one_access_txt = "2;21"},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
+"TP" = (/obj/structure/surface/table/almayer,/obj/structure/machinery/line_nexter_control{id = "WOline2"; pixel_x = -4; pixel_y = -2; req_one_access_txt = null},/obj/structure/machinery/door_control{id = "WOlineshutters2"; name = "Line 2 Shutters"; pixel_x = 5; pixel_y = -2; req_one_access_txt = null},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "TQ" = (/obj/structure/largecrate/random/mini/med{pixel_x = 7; pixel_y = 3},/turf/open/desert/rock/edge1{dir = 8},/area/whiskey_outpost/outside/lane/two_south)
 "TR" = (/obj/structure/flora/grass/tallgrass/desert/corner,/turf/open/desert/rock,/area/whiskey_outpost/outside/lane/two_north)
 "TT" = (/obj/structure/surface/rack,/obj/effect/spawner/random/tool,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/camera/autoname{dir = 4},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{icon_state = "darkbrownfull2"},/area/whiskey_outpost/inside/bunker/bunker/front)
@@ -2366,7 +2371,7 @@
 "YB" = (/obj/effect/decal/warning_stripes/asteroid{icon_state = "warning_s"},/obj/effect/decal/warning_stripes/asteroid{dir = 8; icon_state = "warning_s"},/obj/effect/decal/warning_stripes/asteroid{dir = 1; icon_state = "warning_s"},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/outside/north)
 "YC" = (/obj/structure/flora/grass/desert/lightgrass_9,/turf/open/desert/dirt,/area/whiskey_outpost/outside/lane/four_north)
 "YE" = (/obj/structure/bed/chair,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
-"YF" = (/obj/effect/decal/medical_decals{icon_state = "triagedecalleft"},/obj/structure/bed/bedroll{dir = 4; pixel_y = -5},/turf/open/floor{dir = 10; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
+"YF" = (/obj/effect/decal/medical_decals{icon_state = "triagedecalleft"},/obj/structure/bed/bedroll{dir = 4; pixel_y = -5},/obj/effect/decal/cleanable/blood,/turf/open/floor{dir = 10; icon_state = "whitegreen"},/area/whiskey_outpost/inside/hospital)
 "YG" = (/turf/open/mars_dirt{icon_state = "mars_dirt_4"},/area/whiskey_outpost/outside/south/far)
 "YH" = (/turf/open/desert/rock/corner1{dir = 1},/area/whiskey_outpost/inside/caves/caverns/west)
 "YI" = (/obj/structure/surface/rack,/obj/effect/landmark/crap_item,/obj/effect/landmark/crap_item,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/one)
@@ -2461,20 +2466,20 @@ mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakakakakGu
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakauaxaAaEczaNaNakrjsxcrdlbwJFbwSCqzqzaSbbbfbfbiaSqzqzaWbGbGodYsYsYsbQpqgooabepqxFkxkxpqBXmdEipqQGrCFMpqmTmTmTmTmTmTzIsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakczbsbsbsbsbsczaklmxjcrdllaqBiVlafHlabbqBzdbAbNbPbzqzaWoFcbpqdfjkYsbQpqoaoabepqxFkxjspqjvmdEipqQGrCrCpqmTmTmTmTmTmTzIsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakakakbRbsbsbTbsbsbVaklmOScrdlbwyhbwAsqzbYaVqBqBjDqBeScaqzpqpqpqpqdfYsYsTYpqoaoabepqxFkxjspqmdmdEipqQGrCrCpqmTmTmTmTmTmTzIsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakcEcFcGczcIcLcMcpcqczaQlmcDcrdlqzqzqzqzqzqzcQaVJTcTeScXqzqzqzqzqzqzYsdhYsbQpqGeoaGepqGekxGepqGemdGepqGerCGepqpqpqpqBdpqpqhChWsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakdsdzakdFakakexakakdFakdNdOcrdlqzWAdPLieNqzqzapKoeZfhqzqzdQdTqwfkqzpqpqfopqpqYsoaYsooYskxYsooYsmdYsooYsrCooYsYsYsooYsooYsVmsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakakakeaebetfxrceFeMakakakcrdleigNeOqBfcfioUhngPgShnqzqzfpqBqBgXqzBdYsYsYsooYsYsYsYsYsYsfrfrfrfrfrfrfrYsYsYsfrfrfrfrfrYsVmsVsVsVsVeXzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakcEcFcGczcIcLcMcpcqczaQcDlmcrdlqzqzqzqzqzqzcQaVJTcTeScXqzqzqzqzqzqzYsdhYsbQpqGeoaGepqGekxGepqGemdGepqGerCGepqpqpqpqBdpqpqhChWsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakdsdzakdFakakexakakdFakakakcrdlqzWAdPLieNqzqzapKoeZfhqzqzdQdTqwfkqzpqpqfopqpqYsoaYsooYskxYsooYsmdYsooYsrCooYsYsYsooYsooYsVmsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakakakeaebetfxrceFeMakmTmTcrdleigNeOqBfcfioUhngPgShnqzqzfpqBqBgXqzBdYsYsYsooYsYsYsYsYsYsfrfrfrfrfrfrfrYsYsYsfrfrfrfrfrYsVmsVsVsVsVeXzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakftfxlmfBlmfxftakmTmTmTqzCvqBZmiVfNfWfYgehlghgihmhnhtiVqBhDqzpqcsljjkYsYsYsYsYsYsYsfrfrfrfrfrfrfrYsjkYsfrfrfrfrfrYsVmsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakgpeagAgCgEeMgpakakmTmTqzdYJTeOoQeSgIaVqpiggJqpeSiiaVJTqBimqzpqpqgLYsYsdhYsYsdhsIsIYsdhYsYsYsdhYsYsdhYsYsdhYsYsdhYsVmsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakgTfxfxgVfxfxgWakakmTmTqzqzCCgZCsqzqzqzhfiziBiChiqzqziJiNiOqzmTBddcsIYspqpqpqpqoBYspqpqpqBdpqpqpqpqpqpqpqpqpqpqpqpqhChWsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakhjkKlmjohujqlmtYiYakmTjejeqzqzqzqzqzmvhxhzhBhEhFhNmvqzqzqzqzqzpqpqhOhQpqpqpqhZiljMjMkqiskqpqpqhZitpqpqmTmTmTmTmTmTmTzIiKiKiKiKiKzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakiQeelmfxiTfxlmjtcJakkhabababRUqzqznbkJqBjDoQkOjDqBkXmEqzmTmTmTpqevqfjMYspqjmYsYsYsYsYsqiYsYsooYsYsiqpqmTmTmTmTmTmTzIzIsVsVsVsVsVzIzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakiTlmjojpjqlmjnakakkhabababRUqzqzjAlGkvltjHhtneqBnikwqzmTmTmTpqdDqijkjRpqjWYskGjXlDpNqikGlDpGpNYscypqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakjYjNlmfxkkfxlmEZkpakkhabababkAoUqznbnRqBkNvvxBxDqBBcmEqzmTmTmTpqYsgaljYsYsYsYskGlDlDpNqikGlDlDpNYslepqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakliEzlmfxlrfxlmVqlvaklAloabablBqzqzjAlGkvHoPUhtltqBUikwqzmTmTmTpqYsqieulHlIlHlHlJluluePlCkGlPlDpNYslFpqmTmTmTmTmTmTzIhWsVsVsVsVsVeXzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakaklWmimomimxmzakakmGmGlOlOlOqzqznbYFqBjDjJgNZrqBJAmEqzmTmTmTpqYsqiqiYspqjWYskGdAmFpNjkkGlDlDpNYscypqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakmLmMmNmMmLakakmGlZmcabababqzqzqzLSmSnaigignfnsmvqzqzmTmTmTpqdDqiqijRpqjmYsYsdhYsYsdhYsYsdhYsYskqpqmTmTmTmTmTmTzIzIsVsVsVsVsVzIzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakmhnvnvnwnvnvnvmhmCmhabababnymGqzqzqzqzmQnAlamQqzqzqzmTmTmTmTpqYsqiqiYspqpqnFnGpqpqpqnHpqmVpqnFnGpqpqmTmTmToEqbmTmTzIgsgsgsgsgszImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakhjkKlmjohujqlmtYiYakmTjedNqzqzqzqzqzmvhxhzhBhEhFhNmvqzqzqzqzqzpqpqhOhQpqpqpqhZiljMjMkqiskqpqpqhZitpqpqmTmTmTmTmTmTmTzIiKiKiKiKiKzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakiQeelmfxiTfxlmjtcJakkhdOabkARUqzqznbkJqBjDoQkOjDqBkXloqzmTmTmTpqevqfjMYspqjmYsYsYsYsYsqiYsYsooYsYsiqpqmTmTmTmTmTmTzIzIsVsVsVsVsVzIzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakiTlmjojpjqlmjnakaklBababnyabqzqzQklGkvltjHhtneqBnikwqzmTmTmTpqdDqijkjRpqjWYskGjXlDpNqikGlDpGpNYscypqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakjYjNlmfxkkfxlmEZkpakrpababababoUqznbnRqBkNvvxBxDqBBcmEqzmTmTmTpqYsgaljYsYsYsYskGlDlDpNqikGlDlDpNYslepqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakliEzlmfxlrfxlmVqlvaklAabiZababqzqzjAlGkvHoPUhtltqBUikwqzmTmTmTpqYsqieulHlIlHlHlJluluePlCkGlPlDpNYslFpqmTmTmTmTmTmTzIhWsVsVsVsVsVeXzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakaklWmimomimxmzakakmGmGAplOlOqzqznbYFqBjDjJgNZrqBJAmEqzmTmTmTpqYsqiqiYspqjWYskGdAmFpNjkkGlDlDpNYscypqmTmTmTmTmTmTzIsVsVsVsVsVsVsVzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakakmLmMmNmMmLakakmGlZmcNxababqzqzqzLSmSnaigignfnsmvqzqzmTmTmTpqdDqiqijRpqjmYsYsdhYsYsdhYsYsdhYsYskqpqmTmTmTmTmTmTzIzIsVsVsVsVsVzIzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakmhnvnvnwnvnvnvmhmCmhababababmGqzqzqzqzmQnAlamQqzqzqzmTmTmTmTpqYsqiqiYspqpqnFnGpqpqpqnHpqmVpqnFnGpqpqmTmTmToEqbmTmTzIgsgsgsgsgszImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTakmhnImhnLmZnMnMnMmZnNabababncnOmGmGmGoenonnnnnonpajmIajajajmIpqpqhOoroupqpqpqpqpqnBnCajowoDpqpqpqpqlArNmTqboEqboOmTzIhWsVsVsVeXzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTnKnKnKnKKrnKnKnKnKnKnKnKoHoIkjkjoKoNkjMMkjkjoPaboIpwpaVjhAeqzDqRconSfjbCnVrBrBrBrBrBrBrBoXpcpxpEpFpRpZiMrNrNaGqbqboOqbzIzIsVsVsVsVsVzIzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTnKquqxquqCnKqEqGoyoCqHnKqJoGababababababababababrgqLpaAgrBrBrBrBoXbBoYqNbLnSeCfjfjeCfjvknWpzqUrNrNrNrNrNrNrNoSqbqbqbmTzIsVsVsVsVsVsVqWzImTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
