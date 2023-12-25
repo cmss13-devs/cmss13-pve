@@ -37,14 +37,17 @@
 /turf/template_noop,
 /area/shuttle/drop2/sulaco)
 "do" = (
-/obj/effect/attach_point/crew_weapon/dropship2,
+/obj/effect/attach_point/crew_weapon/dropship2{
+	attach_id = 9
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
 /area/shuttle/drop2/sulaco)
 "es" = (
 /obj/effect/attach_point/fuel/dropship2{
-	pixel_x = -32
+	pixel_x = -32;
+	attach_id = 11
 	},
 /turf/closed/shuttle/dropship2/transparent{
 	icon_state = "33"
@@ -254,7 +257,9 @@
 	},
 /area/shuttle/drop2/sulaco)
 "vw" = (
-/obj/effect/attach_point/fuel/dropship2,
+/obj/effect/attach_point/fuel/dropship2{
+	attach_id = 10
+	},
 /turf/closed/shuttle/dropship2/transparent{
 	icon_state = "28"
 	},
@@ -266,7 +271,8 @@
 /area/shuttle/drop2/sulaco)
 "xd" = (
 /obj/effect/attach_point/electronics/dropship2{
-	dir = 1
+	dir = 1;
+	attach_id = 6
 	},
 /obj/structure/shuttle/part/dropship2/transparent/inner_right_weapons,
 /turf/template_noop,
@@ -467,6 +473,14 @@
 "LY" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_center,
 /turf/template_noop,
+/area/shuttle/drop2/sulaco)
+"Mj" = (
+/obj/effect/attach_point/crew_weapon/dropship2{
+	attach_id = 7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
 /area/shuttle/drop2/sulaco)
 "Mx" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_top_left,
@@ -671,6 +685,14 @@
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust,
 /turf/template_noop,
 /area/shuttle/drop2/sulaco)
+"Zn" = (
+/obj/effect/attach_point/crew_weapon/dropship2{
+	attach_id = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/drop2/sulaco)
 "ZK" = (
 /turf/closed/shuttle/dropship2{
 	icon_state = "63"
@@ -806,9 +828,9 @@ Bb
 Iv
 rc
 vd
-do
+Mj
 vd
-do
+Zn
 vd
 do
 PJ
