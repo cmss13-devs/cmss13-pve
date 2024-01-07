@@ -242,24 +242,28 @@
 	var/list/viable_targets = list()
 	var/atom/movable/closest_target
 	var/smallest_distance = INFINITY
-	for(var/mob/living/carbon/human/potential_alive_human_target as anything in GLOB.alive_human_list)
-		if(z != potential_alive_human_target.z)
+
+	for(var/mob/living/carbon/potential_target as anything in GLOB.alive_mob_list)
+		if(!iscarbon(potential_target))
 			continue
 
-		if(!check_mob_target(potential_alive_human_target))
+		if(z != potential_target.z)
 			continue
 
-		var/distance = get_dist(src, potential_alive_human_target)
+		if(!check_mob_target(potential_target))
+			continue
+
+		var/distance = get_dist(src, potential_target)
 
 		if(distance > ai_range)
 			continue
 
-		viable_targets += potential_alive_human_target
+		viable_targets += potential_target
 
 		if(smallest_distance <= distance)
 			continue
 
-		closest_target = potential_alive_human_target
+		closest_target = potential_target
 		smallest_distance = distance
 
 	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
@@ -322,17 +326,22 @@
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
-/mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/human/checked_human)
-	if(checked_human.species.flags & IS_SYNTHETIC)
+/mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/checked_target)
+	if(ishuman(checked_target))
+		var/mob/living/carbon/human/checked_human = checked_target
+		if(checked_human.species.flags & IS_SYNTHETIC)
+			return FALSE
+
+		if(HAS_TRAIT(checked_target, TRAIT_NESTED))
+			return FALSE
+
+	if(hivenumber == checked_target.hivenumber)
 		return FALSE
 
-	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
+	if(can_not_harm(checked_target))
 		return FALSE
 
-	if(can_not_harm(checked_human))
-		return FALSE
-
-	if(checked_human.stat != CONSCIOUS)
+	if(checked_target.stat != CONSCIOUS)
 		return FALSE
 
 	return TRUE

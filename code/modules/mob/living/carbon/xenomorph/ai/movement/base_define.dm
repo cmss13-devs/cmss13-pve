@@ -25,7 +25,8 @@
 	if(idle_xeno.throwing)
 		return
 
-	if(next_home_search < world.time && (!home_turf || !home_turf.weeds || get_dist(home_turf, idle_xeno) > max_distance_from_home))
+	var/obj/effect/alien/weeds/home_weeds = home_turf.weeds
+	if(next_home_search < world.time && (!home_turf || !home_weeds || home_weeds.hivenumber != idle_xeno.hivenumber || get_dist(home_turf, idle_xeno) > max_distance_from_home))
 		var/turf/T = get_turf(idle_xeno.loc)
 		next_home_search = world.time + home_search_delay
 		if(T.weeds)
