@@ -94,5 +94,4 @@
 /obj/effect/spawner/prop_gun/anti_tank
 	prop_gun_type = /obj/item/weapon/gun/launcher/rocket/anti_tank
 	custom_gun_name = "\improper Spent M83A2 SADAR"
-	custom_gun_desc = "A spent M83A2 tube. It's, partially, been kept as a trophy after a lucky tank kill nearly a thousand meters out. Someone has spray-painted a single tally-mark on the side to commemorate its kill-count."
-
+	custom_gun_desc = "A spent M83A2 tube. It's been kept as a trophy after a lucky tank kill nearly a thousand meters out. Someone has engraved a single tally-mark on the side to begin recording a kill-count."
