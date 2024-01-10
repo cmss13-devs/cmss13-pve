@@ -16,7 +16,6 @@ export const GameMaster = (props, context) => {
           <GameMasterObjectivePanel />
 
           <GameMasterCommunicationPanel />
-
         </Stack>
       </Window.Content>
     </Window>
