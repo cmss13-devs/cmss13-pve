@@ -1587,6 +1587,50 @@
 /obj/item/weapon/gun/rifle/m4ra/training
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/rubber
 
+// pve - kinda weird icon usage, uses urban M4RA sprite w/ custom attachie sprite
+/obj/item/weapon/gun/rifle/m4ra/pve
+	name = "\improper M4RA-R2 battle rifle"
+	desc = "The M4RA-R2 is a souped-up M4RA, the result of an upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 'hard-slug' tungsten rounds,</b> infamous for their overpenetration abilities. The thicker barrel, of course, also has no issue with non-HV ammo."
+	desc_lore = "The USMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M4RA platform to be capable of firing advanced AP rounds. They succeeded- sort of. The R2 is a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, its oversized muzzle-barrel extends an already long barrel-length, and A19 ammo, already expensive, was driven to absurd highs by the specification of depleted uranium slugs."
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
+	icon_state = "m4ra"
+	item_state = "m4ra"
+	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/flashlight/grip,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_VERY_FAST
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m4ra/pve/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m4ra_barrel/pve/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
+
 //-------------------------------------------------------
 
 //L42A Battle Rifle
