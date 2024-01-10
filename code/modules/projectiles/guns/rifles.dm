@@ -1624,6 +1624,13 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	map_specific_decoration = FALSE
 
+// obnoxiously enough, need to do this manually...
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/urban/back.dmi'
+	)
+
 /obj/item/weapon/gun/rifle/m4ra/pve/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/m4ra_barrel/pve/integrated = new(src)
