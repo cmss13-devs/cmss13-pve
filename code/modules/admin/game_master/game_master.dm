@@ -48,6 +48,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
 
+
 /datum/game_master
 
 	var/client/game_master_client
@@ -99,6 +100,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// The holder for the game master's virtual phone
 	var/atom/movable/game_master_phone
+
 
 /datum/game_master/New(client/using_client)
 	. = ..()
@@ -443,6 +445,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			UnregisterSignal(removing_datum, COMSIG_PARENT_QDELETING)
 
 	SSminimaps.remove_marker(removing_datum)
+
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
