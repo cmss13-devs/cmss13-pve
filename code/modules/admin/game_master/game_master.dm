@@ -5,6 +5,8 @@ GLOBAL_LIST_EMPTY(game_masters)
 /// List of assoc lists that hold "object_name", "objective_info", and "object_ref". Name of the objective, any info typed about the objective, and then a reference to be resolved of the object for passing through TGUI
 GLOBAL_LIST_EMPTY(game_master_objectives)
 
+GLOBAL_LIST_EMPTY(game_master_rappels)
+
 /// Percentage of characters end up clear when sent via radio message
 GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
@@ -160,6 +162,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	// Rappel stuff
 	data["rappel_click_intercept"] = rappel_click_intercept
+	data["game_master_rappels"] = length(GLOB.game_master_rappels) ? GLOB.game_master_rappels : ""
 
 	return data
 
@@ -251,6 +254,17 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
 			return
 
+		if("toggle_click_rappel")
+			if(rappel_click_intercept)
+				reset_click_overrides()
+				return
+
+			reset_click_overrides()
+			rappel_click_intercept = TRUE
+			current_click_intercept_action = RAPPEL_CLICK_INTERCEPT_ACTION
+			return
+
+
 		if("jump_to")
 			if(!params["val"])
 				return
@@ -294,6 +308,39 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				return
 
 			GLOB.radio_communication_clarity = clamp(new_clarity, 0, 100)
+
+		if("remove_rappel")
+			if(!params["val"])
+				return
+
+			var/list/rappel = params["val"]
+
+			var/atom/rappel_atom = locate(rappel["rappel_ref"])
+
+			if(!rappel_atom)
+				return TRUE
+
+			if(tgui_alert(ui.user, "Do you want to remove [rappel_atom] ?", "Confirmation", list("Yes", "No")) != "Yes")
+				return TRUE
+
+			remove_rappel(rappel_atom)
+
+		if("jump_to_rappel")
+			if(!params["val"])
+				return
+
+			var/list/rappel = params["val"]
+
+			var/atom/rappel_atom = locate(rappel["rappel_ref"])
+
+			var/turf/rappel_turf = get_turf(rappel_atom)
+
+			if(!rappel_turf)
+				return TRUE
+
+			var/client/jumping_client = ui.user.client
+			jumping_client.jump_to_turf(rappel_turf)
+			return TRUE
 
 /datum/game_master/ui_close(mob/user)
 	. = ..()
@@ -416,6 +463,23 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				))
 			return TRUE
 
+		if(RAPPEL_CLICK_INTERCEPT_ACTION)
+			var/turf/object_turf = get_turf(object)
+			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+				for(var/obj/effect/landmark/rappel/R in object_turf)
+					GLOB.game_master_rappels -= R
+					QDEL_NULL(R)
+				return TRUE
+
+			var/obj/effect/landmark/rappel/rappel = new(object_turf)
+			var/rappel_ref = REF(rappel)
+			GLOB.game_master_rappels += list(list(
+				"rappel" = rappel,
+				"rappel_name" = rappel.name,
+				"rappel_ref" = rappel_ref,
+				))
+			return TRUE
+
 		else
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
@@ -454,6 +518,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			UnregisterSignal(removing_datum, COMSIG_PARENT_QDELETING)
 
 	SSminimaps.remove_marker(removing_datum)
+
+/datum/game_master/proc/remove_rappel(obj/removing_datum)
+	SIGNAL_HANDLER
+
+	for(var/list/cycled_rappel in GLOB.game_master_rappels)
+		if(cycled_rappel["rappel"] == removing_datum)
+			GLOB.game_master_rappels.Remove(list(cycled_rappel))
+			QDEL_NULL(removing_datum)
+
 
 
 #undef DEFAULT_SPAWN_XENO_STRING

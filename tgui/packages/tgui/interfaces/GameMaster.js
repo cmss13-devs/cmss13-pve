@@ -229,23 +229,23 @@ export const GameMasterRappelPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
-    <Section title="Objective" mb={1}>
+    <Section title="Rappel" mb={1}>
       <Stack direction="column">
         <Stack.Item>
           <Button
             ml={1}
-            selected={data.objective_click_intercept}
-            content="Click Objective"
+            selected={data.rappel_click_intercept}
+            content="Click Rappel"
             onClick={() => {
-              act('toggle_click_objective');
+              act('toggle_click_rappel');
             }}
           />
         </Stack.Item>
-        {data.game_master_objectives && (
+        {data.game_master_rappels && (
           <Stack.Item>
-            <Collapsible title="Objectives">
+            <Collapsible title="Rappel Points">
               <Stack vertical>
-                {data.game_master_objectives.map((val) => {
+                {data.game_master_rappels.map((val) => {
                   if (val) {
                     return (
                       <Stack.Item>
@@ -253,9 +253,9 @@ export const GameMasterRappelPanel = (props, context) => {
                         <Stack>
                           <Stack.Item align="center">
                             <Button
-                              content={val.object_name}
+                              content={val.rappel_name}
                               onClick={() => {
-                                act('jump_to', { val });
+                                act('jump_to_rappel', { val });
                               }}
                             />
                           </Stack.Item>
@@ -264,12 +264,9 @@ export const GameMasterRappelPanel = (props, context) => {
                               content="X"
                               color="bad"
                               onClick={() => {
-                                act('remove_objective', { val });
+                                act('remove_rappel', { val });
                               }}
                             />
-                          </Stack.Item>
-                          <Stack.Item grow pl={1} py={0.25} fontSize="12px">
-                            {val.objective_info}
                           </Stack.Item>
                         </Stack>
                       </Stack.Item>
