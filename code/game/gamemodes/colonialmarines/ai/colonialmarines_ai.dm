@@ -4,7 +4,7 @@
 	required_players = 0
 	votable = TRUE
 
-	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN
+	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
 
 	var/list/squad_limit = list(
 		/datum/squad/marine/alpha
@@ -26,7 +26,6 @@
 
 	static_comms_amount = 0
 	requires_comms = FALSE
-	flags_round_type = MODE_NO_XENO_EVOLVE
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 /datum/game_mode/colonialmarines/ai/can_start()
@@ -34,6 +33,13 @@
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
+
+	for(var/datum/squad/squad in RoleAuthority.squads)
+		if(squad.type in squad_limit)
+			continue
+
+		RoleAuthority.squads -= squad
+		RoleAuthority.squads_by_type -= squad.type
 
 	. = ..()
 

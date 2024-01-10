@@ -586,8 +586,7 @@ var/const/MAX_SAVE_SLOTS = 10
 			dat += "<b>Tooltips:</b> <a href='?_src_=prefs;preference=tooltips'><b>[tooltips ? "Enabled" : "Disabled"]</b></a><br>"
 			dat += "<b>tgui Window Mode:</b> <a href='?_src_=prefs;preference=tgui_fancy'><b>[(tgui_fancy) ? "Fancy (default)" : "Compatible (slower)"]</b></a><br>"
 			dat += "<b>tgui Window Placement:</b> <a href='?_src_=prefs;preference=tgui_lock'><b>[(tgui_lock) ? "Primary monitor" : "Free (default)"]</b></a><br>"
-			dat += "<b>Play Admin Midis:</b> <a href='?_src_=prefs;preference=hear_midis'><b>[(toggles_sound & SOUND_MIDI) ? "Yes" : "No"]</b></a><br>"
-			dat += "<b>Play Admin Internet Sounds:</b> <a href='?_src_=prefs;preference=hear_internet'><b>[(toggles_sound & SOUND_INTERNET) ? "Yes" : "No"]</b></a><br>"
+			dat += "<b>Play Admin Sounds:</b> <a href='?_src_=prefs;preference=hear_admin_sounds'><b>[(toggles_sound & SOUND_MIDI) ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Toggle Meme or Atmospheric Sounds:</b> <a href='?src=\ref[src];action=proccall;procpath=/client/proc/toggle_admin_sound_types'>Toggle</a><br>"
 			dat += "<b>Set Eye Blur Type:</b> <a href='?src=\ref[src];action=proccall;procpath=/client/proc/set_eye_blur_type'>Set</a><br>"
 			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'><b>[(toggles_sound & SOUND_LOBBY) ? "Yes" : "No"]</b></a><br>"
@@ -744,9 +743,6 @@ var/const/MAX_SAVE_SLOTS = 10
 		else if(user.client.prefs.alternate_option == RETURN_TO_LOBBY)
 			b_color = "purple"
 			msg = "Return to lobby if preference unavailable"
-		else if(user.client.prefs.alternate_option == BE_XENOMORPH)
-			b_color = "orange"
-			msg = "Be Xenomorph if preference unavailable"
 
 		HTML += "<center><br><a class='[b_color]' href='?_src_=prefs;preference=job;task=random'>[msg]</a></center><br>"
 
@@ -986,9 +982,9 @@ var/const/MAX_SAVE_SLOTS = 10
 					ResetJobs()
 					SetChoices(user)
 				if("random")
-					if(alternate_option == GET_RANDOM_JOB || alternate_option == BE_MARINE || alternate_option == RETURN_TO_LOBBY)
+					if(alternate_option == GET_RANDOM_JOB || alternate_option == BE_MARINE)
 						alternate_option++
-					else if(alternate_option == BE_XENOMORPH)
+					else if(alternate_option == RETURN_TO_LOBBY)
 						alternate_option = 0
 					else
 						return 0
@@ -1812,11 +1808,10 @@ var/const/MAX_SAVE_SLOTS = 10
 				if("rand_body")
 					be_random_body = !be_random_body
 
-				if("hear_midis")
+				if("hear_admin_sounds")
 					toggles_sound ^= SOUND_MIDI
-
-				if("hear_internet")
-					toggles_sound ^= SOUND_INTERNET
+					if(!(toggles_sound & SOUND_MIDI))
+						user?.client?.tgui_panel?.stop_music()
 
 				if("lobby_music")
 					toggles_sound ^= SOUND_LOBBY

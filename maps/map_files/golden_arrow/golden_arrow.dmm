@@ -2249,6 +2249,10 @@
 "nM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_x = -16;
+	pixel_y = 30
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2888,9 +2892,6 @@
 "rX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
-/obj/structure/machinery/alarm/almayer{
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5305,6 +5306,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"Hd" = (
+/obj/structure/closet,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "Hh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -5876,19 +5886,18 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/toy/plush/farwa{
-	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
-	force = 15;
-	icon_state = "therapyred";
-	layer = 4.1;
-	name = "Sergeant Huggs";
-	pixel_y = 15;
-	throwforce = 15
-	},
 /obj/item/clothing/head/cmcap{
 	layer = 4.1;
 	pixel_x = -1;
 	pixel_y = 22
+	},
+/obj/item/toy/plush/therapy/red{
+	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
+	force = 15;
+	layer = 4.1;
+	name = "Sergeant Huggs";
+	pixel_y = 15;
+	throwforce = 15
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -18383,7 +18392,7 @@ ol
 rV
 Vr
 Vp
-Tk
+Hd
 wl
 FE
 wl

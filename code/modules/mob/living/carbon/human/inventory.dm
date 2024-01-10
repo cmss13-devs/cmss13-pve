@@ -499,7 +499,7 @@
 
 	/// Delay then gets + 0.5s per skill level, so long as not dead or cuffed.
 	if(!(target.stat || target.handcuffed))
-		target_delay += (target_skills * 5)
+		target_delay += (target_skills * 2)
 
 	/// Final result is overall delay * speed multiplier
 	return target_delay * user_speed

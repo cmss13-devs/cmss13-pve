@@ -147,6 +147,7 @@
 		"cmblogo.png" = 'html/images/cmblogo.png',
 		"faxwylogo.png" = 'html/images/faxwylogo.png',
 		"faxbackground.jpg" = 'html/images/faxbackground.jpg',
+		"colonialspacegruntsEZ.png" = 'html/images/colonialspacegruntsEZ.png',
 	)
 
 /datum/asset/spritesheet/chat
@@ -304,17 +305,20 @@
 	name = "vending"
 
 /datum/asset/spritesheet/vending_products/register()
-	for (var/k in GLOB.vending_products)
+	for(var/k in GLOB.vending_products)
 		var/atom/item = k
 		var/icon_file = initial(item.icon)
 		var/icon_state = initial(item.icon_state)
 		var/icon/I
 
-		if (!ispath(item, /atom))
+		if(!ispath(item, /atom))
 			log_debug("not atom! [item]")
 			continue
 
-		if (sprites[icon_file])
+		var/imgid = replacetext(replacetext("[k]", "/obj/item/", ""), "/", "-")
+
+		if(sprites[imgid])
+			stack_trace("[imgid] has already been registered in vending products spritesheet!")
 			continue
 
 		if(icon_state in icon_states(icon_file))
@@ -338,7 +342,6 @@
 				item = new k()
 				I = icon(item.icon, item.icon_state, SOUTH)
 				qdel(item)
-		var/imgid = replacetext(replacetext("[k]", "/obj/item/", ""), "/", "-")
 
 		Insert(imgid, I)
 	return ..()

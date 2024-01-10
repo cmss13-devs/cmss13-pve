@@ -101,7 +101,7 @@
 	var/caste_luminosity = 0
 
 	/// if fire_immunity is set to be vulnerable, how much will fire damage be multiplied. Defines in xeno.dm
-	var/fire_vulnerability_mult = 0
+	var/fire_vulnerability_mult = 1
 
 	var/burrow_cooldown = 5 SECONDS
 	var/tunnel_cooldown = 100
@@ -293,7 +293,7 @@
 	var/evolution_rate = 3 // Only has use if dynamic_evolution is false
 	var/evolution_bonus = 0
 
-	var/allow_no_queen_actions = FALSE
+	var/allow_no_queen_actions = TRUE
 	var/allow_no_queen_evo = FALSE
 	var/evolution_without_ovipositor = TRUE //Temporary for the roundstart.
 	/// Set to false if you want to prevent evolutions into Queens
@@ -362,7 +362,7 @@
 	/// This number divides the total xenos counted for slots to give the max number of lesser drones
 	var/playable_lesser_drones_max_divisor = 3
 
-	var/datum/tacmap/xeno/tacmap
+	var/datum/tacmap/drawing/xeno/tacmap
 	var/minimap_type = MINIMAP_FLAG_XENO
 
 /datum/hive_status/New()
@@ -370,6 +370,7 @@
 	hive_ui = new(src)
 	mark_ui = new(src)
 	faction_ui = new(src)
+	minimap_type = get_minimap_flag_for_faction(hivenumber)
 	tacmap = new(src, minimap_type)
 	if(!internal_faction)
 		internal_faction = name
@@ -1057,20 +1058,29 @@
 /datum/hive_status/proc/can_spawn_as_hugger(mob/dead/observer/user)
 	if(!GLOB.hive_datum || ! GLOB.hive_datum[hivenumber])
 		return FALSE
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_JOIN_AS_XENO))
+		to_chat(user, SPAN_WARNING("Joining as xenos is currently disabled in this mode."))
+		return FALSE
+
 	if(jobban_isbanned(user, JOB_XENOMORPH)) // User is jobbanned
 		to_chat(user, SPAN_WARNING("You are banned from playing aliens and cannot spawn as a xenomorph."))
 		return FALSE
+
 	if(world.time < hugger_timelock)
 		to_chat(user, SPAN_WARNING("The hive cannot support facehuggers yet..."))
 		return FALSE
+
 	if(world.time - user.timeofdeath < JOIN_AS_FACEHUGGER_DELAY)
 		var/time_left = round((user.timeofdeath + JOIN_AS_FACEHUGGER_DELAY - world.time) / 10)
 		to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a facehugger until 3 minutes have passed ([time_left] seconds remaining)."))
 		return FALSE
+
 	if(totalXenos.len <= 0)
 		//This is to prevent people from joining as Forsaken Huggers on the pred ship
 		to_chat(user, SPAN_WARNING("The hive has fallen, you can't join it!"))
 		return FALSE
+
 	for(var/mob_name in banished_ckeys)
 		if(banished_ckeys[mob_name] == user.ckey)
 			to_chat(user, SPAN_WARNING("You are banished from the [name], you may not rejoin unless the Queen re-admits you or dies."))
@@ -1082,6 +1092,7 @@
 	for(var/mob/mob as anything in totalXenos)
 		if(isfacehugger(mob))
 			current_hugger_count++
+
 	if(playable_hugger_limit <= current_hugger_count)
 		to_chat(user, SPAN_WARNING("\The [GLOB.hive_datum[hivenumber]] cannot support more facehuggers! Limit: <b>[current_hugger_count]/[playable_hugger_limit]</b>"))
 		return FALSE
@@ -1112,6 +1123,10 @@
 
 /datum/hive_status/proc/can_spawn_as_lesser_drone(mob/dead/observer/user, obj/effect/alien/resin/special/pylon/spawning_pylon)
 	if(!GLOB.hive_datum || ! GLOB.hive_datum[hivenumber])
+		return FALSE
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_JOIN_AS_XENO))
+		to_chat(user, SPAN_WARNING("Joining as xenos is currently disabled in this mode."))
 		return FALSE
 
 	if(jobban_isbanned(user, JOB_XENOMORPH)) // User is jobbanned

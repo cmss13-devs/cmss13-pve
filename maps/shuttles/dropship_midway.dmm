@@ -5,7 +5,9 @@
 	},
 /area/shuttle/midway)
 "bm" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust,
+/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "bs" = (
@@ -26,7 +28,9 @@
 	},
 /area/shuttle/midway)
 "dB" = (
-/obj/structure/shuttle/part/dropship1/left_inner_wing_connector,
+/obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
+	name = "\improper Midway"
+	},
 /turf/open/space/basic,
 /area/shuttle/midway)
 "dD" = (
@@ -40,7 +44,9 @@
 	},
 /area/shuttle/midway)
 "eu" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing,
+/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "go" = (
@@ -58,7 +64,9 @@
 	},
 /area/shuttle/midway)
 "gw" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap,
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "hl" = (
@@ -86,8 +94,9 @@
 	},
 /area/shuttle/midway)
 "im" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_left,
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_left,
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "iv" = (
@@ -145,15 +154,21 @@
 	},
 /area/shuttle/midway)
 "mh" = (
-/obj/structure/shuttle/part/dropship1/right_inner_wing_connector,
+/obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
+	name = "\improper Midway"
+	},
 /turf/open/space/basic,
 /area/shuttle/midway)
 "mE" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing,
+/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "mG" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing,
+/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "mL" = (
@@ -169,15 +184,21 @@
 	},
 /area/shuttle/midway)
 "mR" = (
-/obj/structure/shuttle/part/dropship1/nose_front_left,
+/obj/structure/shuttle/part/dropship1/nose_front_left{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "nH" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_center,
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "od" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing,
+/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "ro" = (
@@ -196,7 +217,9 @@
 	},
 /area/shuttle/midway)
 "rF" = (
-/obj/structure/shuttle/part/dropship1/lower_right_wall,
+/obj/structure/shuttle/part/dropship1/lower_right_wall{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "rR" = (
@@ -234,11 +257,15 @@
 	},
 /area/shuttle/midway)
 "tP" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing,
+/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "ul" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap,
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "ux" = (
@@ -258,7 +285,9 @@
 	},
 /area/shuttle/midway)
 "vN" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing,
+/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "wB" = (
@@ -292,7 +321,9 @@
 	},
 /area/shuttle/midway)
 "yN" = (
-/obj/structure/shuttle/part/dropship1/right_outer_wing_connector,
+/obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
+	name = "\improper Midway"
+	},
 /turf/open/space/basic,
 /area/shuttle/midway)
 "yO" = (
@@ -326,7 +357,9 @@
 	},
 /area/shuttle/midway)
 "BU" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust,
+/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "Cc" = (
@@ -384,11 +417,15 @@
 	},
 /area/shuttle/midway)
 "EN" = (
-/obj/structure/shuttle/part/dropship1/nose_front_right,
+/obj/structure/shuttle/part/dropship1/nose_front_right{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "Fu" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing,
+/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
+	name = "\improper Midway"
+	},
 /obj/effect/attach_point/weapon/midway/right_wing,
 /turf/template_noop,
 /area/shuttle/midway)
@@ -411,7 +448,9 @@
 	},
 /area/shuttle/midway)
 "Go" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons,
+/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
+	name = "\improper Midway"
+	},
 /obj/effect/attach_point/weapon/midway/left_fore,
 /turf/template_noop,
 /area/shuttle/midway)
@@ -421,7 +460,9 @@
 	},
 /area/shuttle/midway)
 "Hz" = (
-/obj/structure/shuttle/part/dropship1/left_outer_wing_connector,
+/obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
+	name = "\improper Midway"
+	},
 /turf/open/space/basic,
 /area/shuttle/midway)
 "HY" = (
@@ -449,7 +490,9 @@
 	},
 /area/shuttle/midway)
 "Ks" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing,
+/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
+	name = "\improper Midway"
+	},
 /obj/effect/attach_point/weapon/midway/left_wing,
 /turf/template_noop,
 /area/shuttle/midway)
@@ -478,7 +521,9 @@
 	},
 /area/shuttle/midway)
 "LZ" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing,
+/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "Mf" = (
@@ -528,7 +573,9 @@
 	},
 /area/shuttle/midway)
 "QI" = (
-/obj/structure/shuttle/part/dropship1/lower_left_wall,
+/obj/structure/shuttle/part/dropship1/lower_left_wall{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "QK" = (
@@ -562,11 +609,15 @@
 	},
 /area/shuttle/midway)
 "SZ" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing,
+/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "Tl" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_right,
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_right{
+	name = "\improper Midway"
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "UI" = (
@@ -617,7 +668,9 @@
 	},
 /area/shuttle/midway)
 "Zr" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons,
+/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
+	name = "\improper Midway"
+	},
 /obj/effect/attach_point/weapon/midway/right_fore,
 /turf/template_noop,
 /area/shuttle/midway)

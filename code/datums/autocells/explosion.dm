@@ -71,7 +71,7 @@
 	if(!V)
 		return
 
-	var/turf/new_turf = locate(in_turf.x + V.vector_x, in_turf.y + V.vector_y, in_turf.z)
+	var/turf/new_turf = locate(in_turf.x + V.vector_x, in_turf.y + V.vector_y, in_turf.z + V.vector_z)
 	transfer_turf(new_turf)
 
 /datum/automata_cell/explosion/death()

@@ -101,12 +101,29 @@
 	if(!visible)
 		invisibility = 101
 
+GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 
 /obj/structure/blocker/forcefield/vehicles
 	types = list(/obj/vehicle/)
 
+
+/obj/structure/blocker/forcefield/vehicles/handle_vehicle_bump(obj/vehicle/multitile/multitile_vehicle)
+	if(!GLOB.vehicle_blockers)
+		return TRUE
+	if(multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
+		return TRUE
+	return FALSE
+
 /obj/structure/blocker/forcefield/multitile_vehicles
 	types = list(/obj/vehicle/multitile/)
+
+
+/obj/structure/blocker/forcefield/multitile_vehicles/handle_vehicle_bump(obj/vehicle/multitile/multitile_vehicle)
+	if(!GLOB.vehicle_blockers)
+		return TRUE
+	if(multitile_vehicle.vehicle_flags & VEHICLE_BYPASS_BLOCKERS)
+		return TRUE
+	return FALSE
 
 /obj/structure/blocker/forcefield/human
 	types = list(/mob/living/carbon/human)

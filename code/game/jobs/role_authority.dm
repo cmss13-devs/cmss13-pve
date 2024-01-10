@@ -16,7 +16,6 @@ var/global/datum/authority/branch/role/RoleAuthority
 #define GET_RANDOM_JOB 0
 #define BE_MARINE 1
 #define RETURN_TO_LOBBY 2
-#define BE_XENOMORPH 3
 
 #define NEVER_PRIORITY 0
 #define HIGH_PRIORITY 1
@@ -235,24 +234,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		temp_roles_for_mode = overwritten_roles_for_mode
 
 	// Assign the roles, this time for real, respecting limits we have established.
-	var/list/roles_left = assign_roles(temp_roles_for_mode, unassigned_players)
-
-	for(var/mob/new_player/M in unassigned_players)
-		switch(M.client.prefs.alternate_option)
-			if(GET_RANDOM_JOB)
-				roles_left = assign_random_role(M, roles_left) //We want to keep the list between assignments.
-			if(BE_MARINE)
-				var/datum/job/marine_job = GET_MAPPED_ROLE(JOB_SQUAD_MARINE)
-				assign_role(M, marine_job) //Should always be available, in all game modes, as a candidate. Even if it may not be a marine.
-			if(BE_XENOMORPH)
-				assign_role(M, temp_roles_for_mode[JOB_XENOMORPH])
-			if(RETURN_TO_LOBBY)
-				M.ready = 0
-		unassigned_players -= M
-
-	if(length(unassigned_players))
-		to_world(SPAN_DEBUG("Error setting up jobs, unassigned_players still has players left. Length of: [length(unassigned_players)]."))
-		log_debug("Error setting up jobs, unassigned_players still has players left. Length of: [length(unassigned_players)].")
+	assign_roles(temp_roles_for_mode.Copy(), unassigned_players)
 
 	unassigned_players = null
 
@@ -265,43 +247,81 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
 		var/player_assigned_job = FALSE
-		log_debug("We have started assigning for [cycled_unassigned]")
+		log_debug("ASSIGNMENT: We have started assigning for [cycled_unassigned].")
 
 		for(var/priority in HIGH_PRIORITY to LOW_PRIORITY)
 			var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(priority))
-			log_debug("We have started cycled through priority [priority] for [cycled_unassigned]")
+			log_debug("ASSIGNMENT: We have started cycled through priority [priority] for [cycled_unassigned].")
 
 			for(var/job_name in wanted_jobs_by_name)
-				log_debug("We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned]")
+				log_debug("ASSIGNMENT: We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned].")
 				if(job_name in roles_to_assign)
-					log_debug("We have found [job_name] in roles to assign for [cycled_unassigned]")
+					log_debug("ASSIGNMENT: We have found [job_name] in roles to assign for [cycled_unassigned].")
 					var/datum/job/actual_job = roles_to_assign[job_name]
 
 					if(assign_role(cycled_unassigned, actual_job))
-						log_debug("We have assigned [job_name] to [cycled_unassigned]")
+						log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned].")
 						unassigned_players -= cycled_unassigned
 
 						if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
 							roles_to_assign -= job_name
-							log_debug("We have ran out of slots for [job_name] and it has been removed from roles to assign")
+							log_debug("ASSIGNMENT: We have ran out of slots for [job_name] and it has been removed from roles to assign.")
 
 						player_assigned_job = TRUE
 						break
 
 			if(player_assigned_job)
-				log_debug("[cycled_unassigned] has been assigned a job and we are breaking")
+				log_debug("ASSIGNMENT: [cycled_unassigned] has been assigned a job and we are breaking.")
 				break
 
-			log_debug("[cycled_unassigned] did not get a job at priority [priority], moving to next priority level")
+			log_debug("ASSIGNMENT: [cycled_unassigned] did not get a job at priority [priority], moving to next priority level.")
 
 		if(!length(roles_to_assign))
-			log_debug("No more roles to assign, breaking")
+			log_debug("ASSIGNMENT: No more roles to assign, breaking.")
 			break
 
 		if(!player_assigned_job)
-			log_debug("[cycled_unassigned] was unable to be assigned a job based on preferences and roles to assign. We still have roles to assign, continuing to next player")
+			log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be assigned a job based on preferences and roles to assign. Attempting alternate options.")
 
-	log_debug("Assigning complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
+			switch(cycled_unassigned.client.prefs.alternate_option)
+				if(GET_RANDOM_JOB)
+					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for random job alternate option. Finding random job.")
+					var/iterator = 0
+					while((cycled_unassigned in unassigned_players) || iterator >= 5)
+						iterator++
+						var/random_job_name = pick(roles_to_assign)
+						var/datum/job/random_job = roles_to_assign[random_job_name]
+						log_debug("ASSIGNMENT: [cycled_unassigned] is attempting to be assigned to [random_job_name].")
+
+						if(assign_role(cycled_unassigned, random_job))
+							log_debug("ASSIGNMENT: We have randomly assigned [random_job_name] to [cycled_unassigned]")
+							unassigned_players -= cycled_unassigned
+
+							if(random_job.spawn_positions != -1 && random_job.current_positions >= random_job.spawn_positions)
+								roles_to_assign -= random_job_name
+								log_debug("ASSIGNMENT: We have ran out of slots for [random_job_name] and it has been removed from roles to assign.")
+
+					if(iterator > 5)
+						log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be randomly assigned a job. Something has gone wrong.")
+
+				if(BE_MARINE)
+					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for marine alternate option. Checking if slot is available.")
+					var/datum/job/marine_job = GET_MAPPED_ROLE(JOB_SQUAD_MARINE)
+					if(assign_role(cycled_unassigned, marine_job))
+						log_debug("ASSIGNMENT: We have assigned [marine_job.title] to [cycled_unassigned] via alternate option.")
+						unassigned_players -= cycled_unassigned
+
+						if(marine_job.spawn_positions != -1 && marine_job.current_positions >= marine_job.spawn_positions)
+							roles_to_assign -= marine_job.title
+							log_debug("ASSIGNMENT: We have ran out of slots for [marine_job.title] and it has been removed from roles to assign.")
+					else
+						log_debug("ASSIGNMENT: We were unable to assign [marine_job.title] to [cycled_unassigned] via alternate option.")
+
+				if(RETURN_TO_LOBBY)
+					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for return to lobby alternate option.")
+					cycled_unassigned.ready = 0
+
+	log_debug("ASSIGNMENT: Assigning complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
 
 	return roles_to_assign
 
@@ -319,30 +339,6 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(J.title == JOB_SURVIVOR)
 		return 1
 	return SHIPSIDE_ROLE_WEIGHT
-
-/datum/authority/branch/role/proc/assign_random_role(mob/new_player/M, list/roles_to_iterate) //In case we want to pass on a list.
-	. = roles_to_iterate
-	if(length(roles_to_iterate))
-		var/datum/job/J
-		var/i = 0
-		var/j
-		while(++i < 3) //Get two passes.
-			if(!roles_to_iterate.len || prob(65)) break //Base chance to become a marine when being assigned randomly, or there are no roles available.
-			j = pick(roles_to_iterate)
-			J = roles_to_iterate[j]
-
-			if(!istype(J))
-				to_world(SPAN_DEBUG("Error setting up jobs, no job datum set for: [j]."))
-				log_debug("Error setting up jobs, no job datum set for: [j].")
-				continue
-
-			if(assign_role(M, J)) //Check to see if they can actually get it.
-				if(J.current_positions >= J.spawn_positions) roles_to_iterate -= j
-				return roles_to_iterate
-
-	//If they fail the two passes, or no regular roles are available, they become a marine regardless.
-	var/datum/job/marine_job = GET_MAPPED_ROLE(JOB_SQUAD_MARINE)
-	assign_role(M, marine_job)
 
 /datum/authority/branch/role/proc/assign_role(mob/new_player/M, datum/job/J, latejoin = FALSE)
 	if(ismob(M) && istype(J))
@@ -524,9 +520,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	new_human.sec_hud_set_ID()
 	new_human.hud_set_squad()
 
-	for(var/obj/current_item in new_human.get_contents())
-		SEND_SIGNAL(current_item, COMSIG_POST_SPAWN_UPDATE, new_human)
-
+	SEND_SIGNAL(new_human, COMSIG_POST_SPAWN_UPDATE)
 	SSround_recording.recorder.track_player(new_human)
 
 //Find which squad has the least population. If all 4 squads are equal it should just use a random one
