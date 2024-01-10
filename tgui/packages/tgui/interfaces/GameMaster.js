@@ -16,6 +16,8 @@ export const GameMaster = (props, context) => {
           <GameMasterObjectivePanel />
 
           <GameMasterCommunicationPanel />
+
+          <GameMasterRappelPanel />
         </Stack>
       </Window.Content>
     </Window>
@@ -218,6 +220,67 @@ export const GameMasterCommunicationPanel = (props, context) => {
             }}
           />
         </Stack.Item>
+      </Stack>
+    </Section>
+  );
+};
+
+export const GameMasterRappelPanel = (props, context) => {
+  const { data, act } = useBackend(context);
+
+  return (
+    <Section title="Objective" mb={1}>
+      <Stack direction="column">
+        <Stack.Item>
+          <Button
+            ml={1}
+            selected={data.objective_click_intercept}
+            content="Click Objective"
+            onClick={() => {
+              act('toggle_click_objective');
+            }}
+          />
+        </Stack.Item>
+        {data.game_master_objectives && (
+          <Stack.Item>
+            <Collapsible title="Objectives">
+              <Stack vertical>
+                {data.game_master_objectives.map((val) => {
+                  if (val) {
+                    return (
+                      <Stack.Item>
+                        <Divider />
+                        <Stack>
+                          <Stack.Item align="center">
+                            <Button
+                              content={val.object_name}
+                              onClick={() => {
+                                act('jump_to', { val });
+                              }}
+                            />
+                          </Stack.Item>
+                          <Stack.Item>
+                            <Button
+                              content="X"
+                              color="bad"
+                              onClick={() => {
+                                act('remove_objective', { val });
+                              }}
+                            />
+                          </Stack.Item>
+                          <Stack.Item grow pl={1} py={0.25} fontSize="12px">
+                            {val.objective_info}
+                          </Stack.Item>
+                        </Stack>
+                      </Stack.Item>
+                    );
+                  }
+                })}
+                <Divider />
+              </Stack>
+            </Collapsible>
+          </Stack.Item>
+        )}
       </Stack>
     </Section>
   );

@@ -47,6 +47,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 #define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
+#define RAPPEL_CLICK_INTERCEPT_ACTION "rappel_click_intercept_action"
 
 
 /datum/game_master
@@ -101,6 +102,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// The holder for the game master's virtual phone
 	var/atom/movable/game_master_phone
 
+	/// If we are currently using the click intercept for the rappel section
+	var/rappel_click_intercept = FALSE
+
 
 /datum/game_master/New(client/using_client)
 	. = ..()
@@ -153,6 +157,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	// Communication stuff
 	data["communication_clarity"] = GLOB.radio_communication_clarity
+
+	// Rappel stuff
+	data["rappel_click_intercept"] = rappel_click_intercept
 
 	return data
 
@@ -299,6 +306,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
+	rappel_click_intercept = FALSE
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
@@ -428,6 +436,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
+	rappel_click_intercept = FALSE
 
 /datum/game_master/proc/is_objective(atom/checked_object)
 	for(var/list/cycled_objective in GLOB.game_master_objectives)
