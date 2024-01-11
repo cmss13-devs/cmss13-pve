@@ -173,17 +173,17 @@
 "aT" = (
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
-	pixel_x = -17;
-	network = list("Golden Arrow","Vehicle","Midway")
+	network = list("Golden Arrow","Vehicle","Midway");
+	pixel_x = -17
 	},
 /obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
 	dir = 4;
 	icon_state = "shuttle";
 	layer = 2.97;
 	name = "Tactical Map Display";
 	pixel_x = -17;
-	pixel_y = 14;
-	density = 0
+	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -744,8 +744,8 @@
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
 	access_modified = 1;
 	dir = 8;
-	req_one_access = list(36);
-	name = "\improper Synthetic Preperations"
+	name = "\improper Synthetic Preperations";
+	req_one_access = list(36)
 	},
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	dir = 4;
@@ -1949,14 +1949,10 @@
 	},
 /area/golden_arrow/squad_two)
 "lS" = (
-/obj/structure/surface/rack,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 13
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/platoon_sergeant)
+/area/space)
 "lV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
@@ -1975,14 +1971,14 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "mc" = (
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/structure/surface/rack,
+/obj/item/storage/belt/marine/m16,
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_x = -4;
+	pixel_y = 9
 	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "test_floor5"
 	},
 /area/golden_arrow/platoon_sergeant)
 "me" = (
@@ -2062,6 +2058,16 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/squad_one)
+"mQ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Platoon Sergeant's Bunk";
+	req_one_access_txt = "12"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "mR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -3575,8 +3581,8 @@
 	dir = 8
 	},
 /obj/item/device/walkman{
-	pixel_y = -6;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -6
 	},
 /turf/open/floor/almayer{
 	dir = 5;
@@ -3630,6 +3636,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/synthcloset)
+"wQ" = (
+/obj/structure/closet/secure_closet/platoon_sergeant,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "wS" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -4139,6 +4151,17 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
+"AD" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/golden_arrow/platoon_sergeant)
 "AG" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -5270,6 +5293,17 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"GR" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "GU" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/radio,
@@ -5473,9 +5507,9 @@
 /area/golden_arrow/cryo_cells)
 "It" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/autoname{
+	autoname = 0;
 	dir = 1;
-	req_one_access = list();
-	autoname = 0
+	req_one_access = list()
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -6157,8 +6191,8 @@
 /area/golden_arrow/cryo_cells)
 "Mu" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/reinforced{
-	req_one_access = list();
-	name = "\improper Engineering Airlock"
+	name = "\improper Engineering Airlock";
+	req_one_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -6360,8 +6394,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "NI" = (
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -6387,9 +6421,9 @@
 /area/golden_arrow/canteen)
 "NU" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/autoname{
+	autoname = 0;
 	dir = 1;
-	req_one_access = list();
-	autoname = 0
+	req_one_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -6829,8 +6863,8 @@
 /area/golden_arrow/prep_hallway)
 "Qq" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/reinforced{
-	req_one_access = list();
-	name = "\improper Engineering Airlock"
+	name = "\improper Engineering Airlock";
+	req_one_access = list()
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -7363,6 +7397,11 @@
 "SC" = (
 /turf/closed/wall/almayer/outer,
 /area/space)
+"SH" = (
+/obj/structure/foamed_metal,
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/space)
 "SL" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -7706,8 +7745,8 @@
 "Um" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/clothing/synth{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -7882,11 +7921,14 @@
 	},
 /area/golden_arrow/squad_one)
 "VL" = (
-/obj/structure/closet/secure_closet/platoon_sergeant,
+/obj/structure/surface/rack,
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 13
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/platoon_sergeant)
+/area/space)
 "VQ" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/almayer{
@@ -8317,8 +8359,8 @@
 /area/golden_arrow/hangar)
 "Yl" = (
 /obj/structure/machinery/cm_vending/gear/synth{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -15649,8 +15691,8 @@ SC
 Xz
 Xz
 sC
-sC
-VL
+wQ
+KQ
 sC
 sC
 wJ
@@ -15799,7 +15841,7 @@ Cr
 Cr
 SC
 Xz
-Xz
+SH
 sC
 Ls
 KQ
@@ -15950,8 +15992,8 @@ Cr
 Cr
 Cr
 SC
-Xz
-Xz
+SC
+SC
 sC
 sC
 Uj
@@ -16102,11 +16144,11 @@ Cr
 Cr
 Cr
 SC
-Xz
-Xz
-sC
 lS
-KQ
+lS
+mQ
+Kv
+Kv
 bw
 KQ
 Ap
@@ -16254,11 +16296,11 @@ Cr
 Cr
 Cr
 SC
-Xz
-Xz
+VL
+GR
 sC
 mc
-KQ
+AD
 bw
 KQ
 QS
