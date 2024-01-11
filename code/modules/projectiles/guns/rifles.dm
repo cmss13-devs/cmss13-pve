@@ -1537,7 +1537,7 @@
 	fire_sound = 'sound/weapons/gun_m4ra.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/pve
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
@@ -1600,10 +1600,6 @@
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
@@ -1637,6 +1633,8 @@
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
+
+
 
 //-------------------------------------------------------
 
