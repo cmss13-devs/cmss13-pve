@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Dropdown, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
+import { Button, Section, Collapsible, Stack, Divider } from '../components';
 import { Window } from '../layouts';
 
 export const GameMasterRappelMenu = (props, context) => {
