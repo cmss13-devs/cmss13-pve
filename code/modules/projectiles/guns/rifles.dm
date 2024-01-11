@@ -1537,7 +1537,7 @@
 	fire_sound = 'sound/weapons/gun_m4ra.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/pve
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
@@ -1598,7 +1598,8 @@
 	fire_sound = 'sound/weapons/gun_m4ra.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra
+
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/pve
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
@@ -1619,6 +1620,13 @@
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m4ra/pve/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_4)
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	recoil = RECOIL_AMOUNT_TIER_3
+
 
 // obnoxiously enough, need to do this manually...
 	item_icons = list(
