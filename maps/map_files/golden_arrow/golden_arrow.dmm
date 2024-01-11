@@ -1949,10 +1949,11 @@
 	},
 /area/golden_arrow/squad_two)
 "lS" = (
+/obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "lV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
@@ -2064,6 +2065,7 @@
 	name = "\improper Platoon Sergeant's Bunk";
 	req_one_access_txt = "12"
 	},
+/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2851,7 +2853,9 @@
 	},
 /area/golden_arrow/prep_hallway)
 "rH" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3126,6 +3130,13 @@
 	icon_state = "test_floor5"
 	},
 /area/golden_arrow/engineering)
+"tM" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/curtain/red,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "tS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
@@ -4101,6 +4112,9 @@
 "Ap" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/ceramic_plate,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
 "As" = (
@@ -5303,7 +5317,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "GU" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/radio,
@@ -6015,9 +6029,6 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
 	density = 0
 	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6487,6 +6498,15 @@
 /obj/structure/janitorialcart,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"Oq" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_sergeant)
 "Os" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer{
@@ -6514,6 +6534,10 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"OF" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoon_sergeant)
 "OG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/alarm/almayer{
@@ -7395,13 +7419,16 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "SC" = (
-/turf/closed/wall/almayer/outer,
-/area/space)
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "SH" = (
 /obj/structure/foamed_metal,
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "SL" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -7682,6 +7709,12 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_two)
+"TU" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_sergeant)
 "TW" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer{
@@ -7928,7 +7961,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "VQ" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/almayer{
@@ -8231,7 +8264,7 @@
 "Xz" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "XI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -15535,9 +15568,9 @@ Cr
 Cr
 Cr
 Cr
-SC
-SC
-SC
+sC
+sC
+sC
 sC
 sC
 sC
@@ -15687,12 +15720,12 @@ Cr
 Cr
 Cr
 Cr
-SC
+sC
 Xz
 Xz
 sC
 wQ
-KQ
+TU
 sC
 sC
 wJ
@@ -15839,12 +15872,12 @@ Cr
 Cr
 Cr
 Cr
-SC
+sC
 Xz
 SH
 sC
 Ls
-KQ
+Kv
 sC
 QX
 rH
@@ -15991,15 +16024,15 @@ Cr
 Cr
 Cr
 Cr
-SC
-SC
-SC
+sC
+sC
+sC
 sC
 sC
 Uj
 sC
 Tj
-Hm
+Oq
 Kv
 yt
 Kv
@@ -16143,14 +16176,14 @@ Cr
 Cr
 Cr
 Cr
+sC
+lS
 SC
-lS
-lS
 mQ
-Kv
-Kv
-bw
-KQ
+OF
+OF
+tM
+SC
 Ap
 uO
 qA
@@ -16295,7 +16328,7 @@ Cr
 Cr
 Cr
 Cr
-SC
+sC
 VL
 GR
 sC
