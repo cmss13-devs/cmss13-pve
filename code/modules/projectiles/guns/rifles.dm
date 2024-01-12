@@ -1636,7 +1636,6 @@
 	)
 
 /obj/item/weapon/gun/rifle/m4ra/pve/handle_starting_attachment()
-	..()
 	var/obj/item/attachable/m4ra_barrel/pve/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	integrated.Attach(src)
