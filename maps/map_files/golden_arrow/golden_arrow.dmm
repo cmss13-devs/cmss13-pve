@@ -173,17 +173,17 @@
 "aT" = (
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
-	pixel_x = -17;
-	network = list("Golden Arrow","Vehicle","Midway")
+	network = list("Golden Arrow","Vehicle","Midway");
+	pixel_x = -17
 	},
 /obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
 	dir = 4;
 	icon_state = "shuttle";
 	layer = 2.97;
 	name = "Tactical Map Display";
 	pixel_x = -17;
-	pixel_y = 14;
-	density = 0
+	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -482,11 +482,13 @@
 /area/golden_arrow/hangar)
 "cD" = (
 /obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
-	name = "dip cup";
-	pixel_x = -4;
-	pixel_y = 8
+/obj/item/spacecash/c10{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/box/co2_knife{
+	pixel_x = 3;
+	pixel_y = 13
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
@@ -526,6 +528,13 @@
 "cR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
+	name = "dip cup";
+	pixel_x = -4;
+	pixel_y = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
@@ -783,8 +792,8 @@
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
 	access_modified = 1;
 	dir = 8;
-	req_one_access = list(36);
-	name = "\improper Synthetic Preperations"
+	name = "\improper Synthetic Preperations";
+	req_one_access = list(36)
 	},
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	dir = 4;
@@ -1501,16 +1510,7 @@
 	},
 /area/golden_arrow/prep_hallway)
 "iE" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/item/spacecash/c10{
-	pixel_x = 5;
-	pixel_y = 7
-	},
-/obj/item/storage/box/co2_knife{
-	pixel_x = 3;
-	pixel_y = 13
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "iF" = (
@@ -3703,8 +3703,8 @@
 	dir = 8
 	},
 /obj/item/device/walkman{
-	pixel_y = -6;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -6
 	},
 /turf/open/floor/almayer{
 	dir = 5;
@@ -5716,9 +5716,9 @@
 /area/golden_arrow/firingrange)
 "It" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/autoname{
+	autoname = 0;
 	dir = 1;
-	req_one_access = list();
-	autoname = 0
+	req_one_access = list()
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -6431,8 +6431,8 @@
 /area/golden_arrow/cryo_cells)
 "Mu" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/reinforced{
-	req_one_access = list();
-	name = "\improper Engineering Airlock"
+	name = "\improper Engineering Airlock";
+	req_one_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -6567,6 +6567,7 @@
 /area/golden_arrow/briefing)
 "Nr" = (
 /obj/structure/surface/table/almayer,
+/obj/effect/spawner/prop_gun/anti_tank,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_two)
 "Nx" = (
@@ -6643,8 +6644,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "NI" = (
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -6670,9 +6671,9 @@
 /area/golden_arrow/canteen)
 "NU" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/autoname{
+	autoname = 0;
 	dir = 1;
-	req_one_access = list();
-	autoname = 0
+	req_one_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -7082,6 +7083,12 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/surface/table/almayer,
+/obj/item/device/cassette_tape/nam{
+	layer = 2.9;
+	pixel_x = -6;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "Qc" = (
@@ -7144,8 +7151,8 @@
 /area/golden_arrow/prep_hallway)
 "Qq" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/reinforced{
-	req_one_access = list();
-	name = "\improper Engineering Airlock"
+	name = "\improper Engineering Airlock";
+	req_one_access = list()
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -8046,8 +8053,8 @@
 "Um" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/clothing/synth{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -8061,12 +8068,6 @@
 	},
 /area/golden_arrow/canteen)
 "UI" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/cassette_tape/nam{
-	layer = 2.9;
-	pixel_x = -6;
-	pixel_y = 7
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "UK" = (
@@ -8692,8 +8693,8 @@
 /area/golden_arrow/firingrange)
 "Yl" = (
 /obj/structure/machinery/cm_vending/gear/synth{
-	pixel_x = -30;
-	density = 0
+	density = 0;
+	pixel_x = -30
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -18480,7 +18481,7 @@ wp
 ZC
 Fe
 cT
-cT
+cD
 aJ
 iE
 xx
@@ -18786,7 +18787,7 @@ qa
 cT
 cR
 Uk
-cD
+cT
 cT
 zk
 Ty

@@ -90,3 +90,8 @@
 	prop_gun_type = /obj/item/weapon/gun/rifle/m41aMK1
 	custom_gun_name = "\improper Broken M41A pulse rifle"
 	custom_gun_desc = "An older design of the Pulse Rifle commonly used by Colonial Marines. This one has seen better days. The trigger is missing, the barrel is bent, and it no longer appropriately feeds magazines."
+
+/obj/effect/spawner/prop_gun/anti_tank
+	prop_gun_type = /obj/item/weapon/gun/launcher/rocket/anti_tank
+	custom_gun_name = "\improper Spent M83A2 SADAR"
+	custom_gun_desc = "A spent M83A2 tube. It's been kept as a trophy after a lucky tank kill nearly a thousand meters out. Someone has engraved a single tally-mark on the side to begin recording a kill-count."
