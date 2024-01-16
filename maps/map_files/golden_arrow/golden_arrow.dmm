@@ -156,6 +156,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
+"aO" = (
+/obj/item/prop/colony/game,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "aQ" = (
 /obj/structure/sign/safety/galley{
 	pixel_y = 29
@@ -1193,10 +1198,10 @@
 	},
 /area/golden_arrow/cryo_cells)
 "gL" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3036,6 +3041,9 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
 	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3108,6 +3116,9 @@
 /area/golden_arrow/canteen)
 "sR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/bed/chair{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "sS" = (
@@ -3379,11 +3390,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "uH" = (
-/obj/structure/largecrate/random/case/small,
-/obj/item/toy/deck{
-	pixel_x = -6;
-	pixel_y = 6
-	},
 /obj/structure/sign/poster{
 	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
 	icon_state = "poster12";
@@ -3393,6 +3399,9 @@
 	serial_number = 12
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3617,6 +3626,9 @@
 "vU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/bed/chair{
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -3964,11 +3976,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"yw" = (
+/obj/item/toy/deck/uno,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "yx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
+/obj/structure/machinery/computer/arcade,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5945,6 +5963,10 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/medical)
+"JL" = (
+/obj/structure/bed/chair,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "JP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -6082,6 +6104,7 @@
 /area/golden_arrow/hangar)
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6475,6 +6498,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/largecrate/random/case/small,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7765,6 +7789,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/prep_hallway)
+"Tb" = (
+/obj/item/toy/deck,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "Tc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -8199,6 +8228,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Vz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "VG" = (
 /turf/open/floor/almayer{
 	dir = 5;
@@ -18165,11 +18201,11 @@ Sy
 mk
 vk
 Vp
-EQ
+KZ
 gL
 sk
 uH
-Vp
+wl
 Vp
 wd
 XQ
@@ -18318,10 +18354,10 @@ Vr
 As
 Vp
 EQ
-wl
-wl
+JL
+Tb
 KK
-EQ
+JL
 Vp
 OG
 XI
@@ -18470,10 +18506,10 @@ rJ
 As
 Vp
 EF
-wl
-wl
-wl
-KZ
+JL
+aO
+yw
+Vz
 Vp
 xm
 XI
