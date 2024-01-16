@@ -112,6 +112,9 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return
 
+	if(X.hivenumber != hivenumber)
+		return HUMAN_PENALTY
+
 	return XENO_PENALTY
 
 // VEHICLES
