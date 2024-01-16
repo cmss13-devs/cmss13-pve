@@ -8,7 +8,7 @@
 	icon_state = "Egg Growing"
 	density = FALSE
 	anchored = TRUE
-	layer = BELOW_TABLE_LAYER //so facehuggers will be above the eggs
+	layer = RESIN_STRUCTURE_LAYER //so facehuggers will be above the eggs
 	health = 80
 	plane = GAME_PLANE
 	var/list/egg_triggers = list()
