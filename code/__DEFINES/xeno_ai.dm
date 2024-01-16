@@ -93,4 +93,4 @@ PROBABILITY CALCULATIONS ARE HERE
 #define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space)
 
 // Friend-or-foe universal check
-#define IS_SAME_HIVENUMBER(A,B) (A?:hivenumber == B?:hivenumber)
+#define IS_SAME_HIVENUMBER(A,B) (A.hivenumber == B.hivenumber)
