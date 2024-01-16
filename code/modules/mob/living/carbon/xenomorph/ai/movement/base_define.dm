@@ -25,18 +25,22 @@
 	if(idle_xeno.throwing)
 		return
 
-	if(next_home_search < world.time && (!home_turf || !home_turf.weeds || home_turf.weeds.hivenumber != idle_xeno.hivenumber || get_dist(home_turf, idle_xeno) > max_distance_from_home))
+	if(next_home_search < world.time && (!home_turf || !home_turf.weeds || !IS_SAME_HIVENUMBER(idle_xeno, home_turf.weeds) || get_dist(home_turf, idle_xeno) > max_distance_from_home))
 		var/turf/T = get_turf(idle_xeno.loc)
 		next_home_search = world.time + home_search_delay
-		if(T.weeds && T.weeds.hivenumber == idle_xeno.hivenumber)
+		var/current_weeds = T.weeds
+		if(current_weeds && IS_SAME_HIVENUMBER(idle_xeno, current_weeds))
 			home_turf = T
 		else
 			var/shortest_distance = INFINITY
 			for(var/i in RANGE_TURFS(home_locate_range, T))
 				var/turf/potential_home = i
-				if(potential_home.weeds && !potential_home.density && get_dist(idle_xeno, potential_home) < shortest_distance)
+				var/potential_weeds = potential_home.weeds
+				if(potential_weeds && IS_SAME_HIVENUMBER(idle_xeno, potential_weeds) && !potential_home.density && get_dist(idle_xeno, potential_home) < shortest_distance)
 					home_turf = potential_home
 					shortest_distance = get_dist(idle_xeno, potential_home)
+			if(idle_xeno.resting)
+				idle_xeno.lay_down()
 
 	if(!home_turf)
 		return
