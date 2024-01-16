@@ -1642,7 +1642,7 @@
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
 	if(old_barrel)
-		old_barrel.Detach(detaching_gub = src)
+		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
 		qdel(old_barrel)
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
