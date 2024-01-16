@@ -2232,14 +2232,8 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/m4ra_barrel/pve
 	name = "M4RA-R2 muzzle break"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
 	icon_state = "pve_m4ra_barrel"
 	attach_icon = "pve_m4ra_barrel"
-	slot = "special"
-	wield_delay_mod = WIELD_DELAY_NONE
-	flags_attach_features = NO_FLAGS
-	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
-	size_mod = 0
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"

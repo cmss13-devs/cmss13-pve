@@ -200,9 +200,9 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
-/datum/ammo/bullet/rifle/m4ra/du/on_hit_mob(mob/M,obj/projectile/P)
-	M.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
-	knockback(M, P, 2)
+/datum/ammo/bullet/rifle/m4ra/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
+	knockback(target, fired_proj, max_range = 2)
 
 
 /datum/ammo/bullet/rifle/mar40
