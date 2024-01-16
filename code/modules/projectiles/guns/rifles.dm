@@ -1636,8 +1636,14 @@
 	)
 
 /obj/item/weapon/gun/rifle/m4ra/pve/handle_starting_attachment()
+
+	..()
 	var/obj/item/attachable/m4ra_barrel/pve/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
+	if(old_barrel)
+		old_barrel.Detach(src)
+		qdel(old_barrel)
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
