@@ -327,22 +327,22 @@
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
 /mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/checked_target)
-	if(ishuman(checked_target))
-		var/mob/living/carbon/human/checked_human = checked_target
-		if(checked_human.species.flags & IS_SYNTHETIC)
-			return FALSE
-
-		if(HAS_TRAIT(checked_target, TRAIT_NESTED))
-			return FALSE
+	if(checked_target.stat != CONSCIOUS)
+		return FALSE
 
 	if(hivenumber == checked_target.hivenumber)
+		return FALSE
+
+	if(HAS_TRAIT(checked_target, TRAIT_NESTED))
 		return FALSE
 
 	if(can_not_harm(checked_target))
 		return FALSE
 
-	if(checked_target.stat != CONSCIOUS)
-		return FALSE
+	if(ishuman(checked_target))
+		var/mob/living/carbon/human/checked_human = checked_target
+		if(checked_human.species.flags & IS_SYNTHETIC)
+			return FALSE
 
 	return TRUE
 
