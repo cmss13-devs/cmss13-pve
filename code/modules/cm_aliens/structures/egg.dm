@@ -8,7 +8,7 @@
 	icon_state = "Egg Growing"
 	density = FALSE
 	anchored = TRUE
-	layer = LYING_BETWEEN_MOB_LAYER //to stop hiding eggs under corpses
+	layer = BELOW_TABLE_LAYER //so facehuggers will be above the eggs
 	health = 80
 	plane = GAME_PLANE
 	var/list/egg_triggers = list()
@@ -16,10 +16,10 @@
 	var/on_fire = FALSE
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/flags_embryo = NO_FLAGS
+	var/trigger_radius = 2
 
 /obj/effect/alien/egg/Initialize(mapload, hive)
 	. = ..()
-	create_egg_triggers()
 	if (hive)
 		hivenumber = hive
 
@@ -93,21 +93,10 @@
 		update_icon()
 		deploy_egg_triggers()
 
-/obj/effect/alien/egg/proc/create_egg_triggers()
-	for(var/i in 1 to 8)
-		egg_triggers += new /obj/effect/egg_trigger(src, src)
-
 /obj/effect/alien/egg/proc/deploy_egg_triggers()
-	var/i = 1
-	var/x_coords = list(-1,-1,-1,0,0,1,1,1)
-	var/y_coords = list(1,0,-1,1,-1,1,0,-1)
-	var/turf/target_turf
-	for(var/trigger in egg_triggers)
-		var/obj/effect/egg_trigger/ET = trigger
-		target_turf = locate(x+x_coords[i],y+y_coords[i], z)
-		if(target_turf)
-			ET.forceMove(target_turf)
-			i++
+	var/list/observed_turfs = orange(trigger_radius, src)
+	for(var/target_turf in observed_turfs)
+		egg_triggers += new /obj/effect/egg_trigger(target_turf, src)
 
 /obj/effect/alien/egg/proc/hide_egg_triggers()
 	for(var/trigger in egg_triggers)
@@ -136,20 +125,10 @@
 	status = EGG_BURST
 	if(is_hugger_player_controlled)
 		return //Don't need to spawn a hugger, a player controls it already!
-	var/obj/item/clothing/mask/facehugger/child = new(loc, hivenumber)
 
-	child.flags_embryo = flags_embryo
-	flags_embryo = NO_FLAGS // Lose the embryo flags when passed on
-
-	if(X && X.caste.can_hold_facehuggers && (!X.l_hand || !X.r_hand)) //sanity checks
-		X.put_in_hands(child)
-		return
-
-	if(instant_trigger)
-		if(!child.leap_at_nearest_target())
-			child.return_to_egg(src)
-	else
-		child.go_idle()
+	var/mob/living/carbon/xenomorph/facehugger/child = new(loc)
+	if(hivenumber != XENO_HIVE_NORMAL)
+		child.set_hive_and_update(hivenumber)
 
 /obj/effect/alien/egg/bullet_act(obj/projectile/P)
 	..()
@@ -286,9 +265,9 @@
 /obj/effect/egg_trigger/Crossed(atom/movable/AM)
 	if(!linked_egg && !linked_eggmorph) //something went very wrong.
 		qdel(src)
-	else if(linked_egg && (get_dist(src, linked_egg) != 1 || !isturf(linked_egg.loc))) //something went wrong
+	else if(linked_egg && (get_dist(src, linked_egg) > linked_egg.trigger_radius || !isturf(linked_egg.loc))) //something went wrong
 		forceMove(linked_egg)
-	else if(linked_eggmorph && (get_dist(src, linked_eggmorph) != 1 || !isturf(linked_eggmorph.loc))) //something went wrong
+	else if(linked_eggmorph && (get_dist(src, linked_eggmorph) > linked_egg.trigger_radius || !isturf(linked_eggmorph.loc))) //something went wrong
 		forceMove(linked_eggmorph)
 	else if(iscarbon(AM))
 		var/mob/living/carbon/C = AM

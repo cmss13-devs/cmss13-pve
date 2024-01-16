@@ -1,3 +1,39 @@
+/datum/xeno_ai_movement/linger/facehugger/New(mob/living/carbon/xenomorph/parent)
+	. = ..()
+	var/turf/current_turf = get_turf(parent)
+	if(. != INITIALIZE_HINT_QDEL && (locate(/obj/effect/alien/egg) in current_turf))
+		home_turf = current_turf
+
+/datum/xeno_ai_movement/linger/facehugger/ai_move_idle(delta_time)
+	var/mob/living/carbon/xenomorph/facehugger/idle_xeno = parent
+	if(idle_xeno.throwing)
+		return
+
+	if(next_home_search < world.time && (!home_turf || !(locate(/obj/effect/alien/egg) in home_turf) || get_dist(home_turf, idle_xeno) > max_distance_from_home))
+		var/turf/T = get_turf(idle_xeno.loc)
+		next_home_search = world.time + home_search_delay
+		var/obj/effect/alien/egg/possible_egg = locate(/obj/effect/alien/egg) in T
+		if(possible_egg && possible_egg.status == EGG_BURST)
+			home_turf = T
+		else
+			var/shortest_distance = INFINITY
+			for(var/i in RANGE_TURFS(home_locate_range, T))
+				var/turf/potential_home = i
+				possible_egg = locate(/obj/effect/alien/egg) in potential_home
+				if(possible_egg && possible_egg.status == EGG_BURST && get_dist(idle_xeno, potential_home) < shortest_distance)
+					home_turf = potential_home
+					shortest_distance = get_dist(idle_xeno, potential_home)
+
+	if(!home_turf)
+		return
+
+	var/obj/effect/alien/egg/eggy = locate(/obj/effect/alien/egg) in home_turf
+	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range) && eggy && eggy.status == EGG_BURST)
+		if(get_dist(home_turf, idle_xeno) <= 0)
+			idle_xeno.climb_in_egg(eggy)
+	else
+		home_turf = null
+
 /datum/xeno_ai_movement/linger/facehugger/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
 
@@ -42,7 +78,27 @@
 #undef FIND_NEW_TRAVEL_RADIUS_MAX
 
 /mob/living/carbon/xenomorph/facehugger/check_mob_target(mob/living/carbon/human/checked_human)
+	if(istype(checked_human.wear_mask, /obj/item/clothing/mask/facehugger))
+		return FALSE
+
 	if(checked_human.status_flags & XENO_HOST)
 		return FALSE
 
-	return ..()
+	if(can_not_harm(checked_human))
+		return FALSE
+
+	if(checked_human.stat == DEAD)
+		return FALSE
+
+	return TRUE
+
+/mob/living/carbon/xenomorph/facehugger/proc/climb_in_egg(obj/effect/alien/egg/eggy)
+	set waitfor = FALSE
+
+	if(do_after(src, 10, INTERRUPT_ALL, BUSY_ICON_GENERIC, eggy))
+		visible_message(SPAN_XENOWARNING("[src] crawls back into [eggy]!"))
+		eggy.status = EGG_GROWN
+		eggy.icon_state = "Egg"
+		eggy.deploy_egg_triggers()
+		qdel(src)
+

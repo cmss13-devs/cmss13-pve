@@ -24,7 +24,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!density)
 		return 0
 
-	if(unslashable && !climbable)
+	if((unslashable || isfacehugger(X)) && !climbable)
 		return
 
 	return OBJECT_PENALTY
@@ -91,7 +91,18 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(locked || welded || isElectrified())
 		return INFINITY
 
+	if(isfacehugger(X))
+		return -1 // We LOVE going under doors!
+
 	return DOOR_PENALTY
+
+// TABLES
+/obj/structure/surface/table/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(isfacehugger(X))
+		return -1 // We also love to skiddle under the tables!
+
+	return
 
 // HUMANS
 /mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
