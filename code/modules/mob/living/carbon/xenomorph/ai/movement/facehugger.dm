@@ -78,6 +78,9 @@
 #undef FIND_NEW_TRAVEL_RADIUS_MAX
 
 /mob/living/carbon/xenomorph/facehugger/check_mob_target(mob/living/carbon/human/checked_human)
+	if(!istype(checked_human))
+		return FALSE // We don't wanna to attack anyone except humans (compat for soon coming XvX code)
+
 	if(istype(checked_human.wear_mask, /obj/item/clothing/mask/facehugger))
 		return FALSE
 
