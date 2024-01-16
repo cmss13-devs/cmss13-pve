@@ -168,8 +168,8 @@
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/rifle/m4ra/pve
-	name = "\improper M4RA magazine (10x24mm)"
-	desc = "A magazine of standard 10x24mm rounds for use in the M4RA battle rifle."
+	name = "\improper M4RA depleted uranium magazine (10x24mm)"
+	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
 	icon_state = "m4ra"
 	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
 	max_rounds = 25
