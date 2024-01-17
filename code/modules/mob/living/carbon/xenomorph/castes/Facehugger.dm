@@ -5,7 +5,7 @@
 	plasma_max = 10
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	max_health = XENO_HEALTH_LARVA
+	max_health = 45
 	caste_desc = "Ewwww, that's disgusting!"
 	speed = XENO_SPEED_TIER_10
 
@@ -19,7 +19,7 @@
 	caste_type = XENO_CASTE_FACEHUGGER
 	speak_emote = list("hisses")
 	icon_state = "Facehugger"
-	icon_size = 48
+	icon_size = 45
 	pixel_x = -8
 	pixel_y = -6
 	old_x = -8
@@ -29,7 +29,7 @@
 	see_in_dark = 8
 	tier = 0  //Facehuggers don't count towards Pop limits
 	acid_blood_damage = 5
-	crit_health = 0
+	crit_health = -25
 	crit_grace_time = 0
 	mob_size = MOB_SIZE_SMALL
 	death_fontsize = 2
@@ -69,20 +69,6 @@
 	if (PF)
 		PF.flags_pass = PASS_MOB_THRU|PASS_FLAGS_CRAWLER
 		PF.flags_can_pass_all = PASS_ALL^PASS_OVER_THROW_ITEM
-
-/mob/living/carbon/xenomorph/facehugger/Life(delta_time)
-	if(stat == DEAD)
-		return ..()
-
-	if(!lying && !(mutation_type == FACEHUGGER_WATCHER) && !(locate(/obj/effect/alien/weeds) in get_turf(src)))
-		adjustBruteLoss(1)
-		return ..()
-
-	if(!client && !aghosted && away_timer > XENO_FACEHUGGER_LEAVE_TIMER)
-		// Become a npc once again
-		new /obj/item/clothing/mask/facehugger(loc, hivenumber)
-		qdel(src)
-	return ..()
 
 /mob/living/carbon/xenomorph/facehugger/init_movement_handler()
 	var/datum/xeno_ai_movement/linger/facehugger/facehugger_movement = new(src)
