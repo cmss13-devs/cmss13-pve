@@ -16,25 +16,6 @@
 	icon_state = "whiteyellow"
 	},
 /area/lv624/lazarus/main_hall)
-"d" = (
-/obj/item/handset{
-	desc = "A model of an ancient Earth communication device.";
-	force = 8
-	},
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/lv624/lazarus/main_hall)
 "e" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -178,25 +159,6 @@
 	icon_state = "cult"
 	},
 /area/lv624/lazarus/armory)
-"w" = (
-/obj/item/storage/toolbox/syndicate,
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/ammo_magazine/smg/m39/extended,
-/obj/item/weapon/gun/smg/m39,
-/obj/structure/machinery/door_control{
-	id = "secure_inner_blast";
-	name = "Secure Inner Doors";
-	pixel_x = 25;
-	pixel_y = 5
-	},
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/armory)
 "y" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -247,6 +209,38 @@
 	icon_state = "cult"
 	},
 /area/lv624/lazarus/armory)
+"L" = (
+/obj/item/storage/toolbox/syndicate,
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/ammo_magazine/smg/m39/extended,
+/obj/item/weapon/gun/smg/m39,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/lv624/lazarus/armory)
+"Z" = (
+/obj/item/handset{
+	desc = "A model of an ancient Earth communication device.";
+	force = 8
+	},
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/lv624/lazarus/main_hall)
 
 (1,1,1) = {"
 a
@@ -304,7 +298,7 @@ i
 l
 q
 q
-w
+L
 p
 i
 "}
@@ -321,7 +315,7 @@ B
 i
 "}
 (7,1,1) = {"
-d
+Z
 g
 a
 j

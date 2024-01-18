@@ -9,7 +9,7 @@
 
 
 /mob/living/carbon/human/attack_alien(mob/living/carbon/xenomorph/M, dam_bonus)
-	if(M.fortify || M.burrow)
+	if(M.fortify || HAS_TRAIT(M, TRAIT_ABILITY_BURROWED))
 		return XENO_NO_DELAY_ACTION
 
 	var/intent = M.a_intent
@@ -220,7 +220,7 @@
 
 //Every other type of nonhuman mob
 /mob/living/attack_alien(mob/living/carbon/xenomorph/M)
-	if(M.fortify || M.burrow)
+	if(M.fortify || HAS_TRAIT(M, TRAIT_ABILITY_BURROWED))
 		return XENO_NO_DELAY_ACTION
 
 	switch(M.a_intent)
@@ -520,6 +520,10 @@
 
 	. = XENO_NO_DELAY_ACTION
 
+	if(M.action_busy)
+		to_chat(M, SPAN_WARNING("You are already doing something!"))
+		return
+
 	if(M.claw_type >= CLAW_TYPE_SHARP)
 		M.animation_attack_on(src)
 		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
@@ -659,7 +663,7 @@
 
 	M.animation_attack_on(src)
 	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-	update_health(rand(M.melee_damage_lower, M.melee_damage_upper))
+	update_health(rand(M.melee_damage_lower, M.melee_damage_upper) * M.melee_sentry_damage_multiplier)
 	if(health <= 0)
 		M.visible_message(SPAN_DANGER("[M] slices \the [src] apart!"), \
 		SPAN_DANGER("You slice \the [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
@@ -900,6 +904,7 @@
 				M.visible_message(SPAN_DANGER("[M] smashes \the [src] open!"), \
 				SPAN_DANGER("You smash \the [src] open!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 		else
+			take_damage(M.melee_damage_upper)
 			M.visible_message(SPAN_DANGER("[M] smashes [src]!"), \
 			SPAN_DANGER("You smash [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 		return XENO_ATTACK_ACTION
@@ -933,6 +938,7 @@
 			M.visible_message(SPAN_DANGER("[M] smashes [src] beyond recognition!"), \
 			SPAN_DANGER("You enter a frenzy and smash [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 			malfunction()
+			tip_over()
 		else
 			M.visible_message(SPAN_DANGER("[M] [M.slashes_verb] [src]!"), \
 			SPAN_DANGER("You [M.slash_verb] [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)

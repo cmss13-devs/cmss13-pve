@@ -112,7 +112,7 @@ explosion resistance exactly as much as their health
 		//check for stair-teleporters. If there is a stair teleporter, switch to the teleported-to tile instead
 		if(istype(A, /obj/effect/step_trigger/teleporter_vector))
 			var/obj/effect/step_trigger/teleporter_vector/V = A
-			var/turf/T = locate(V.x + V.vector_x, V.y + V.vector_y, V.z)
+			var/turf/T = locate(V.x + V.vector_x, V.y + V.vector_y, V.z + V.vector_z)
 			if(T)
 				spawn(0)
 					T.explosion_spread(Controller, power, direction)

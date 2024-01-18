@@ -250,7 +250,7 @@
 	if(!SSticker.mode || !check_rights(R_ADMIN))
 		return
 	set_security_level(SEC_LEVEL_RED)
-	EvacuationAuthority.initiate_evacuation()
+	SShijack.initiate_evacuation()
 
 	message_admins("[key_name_admin(usr)] forced an emergency evacuation.")
 
@@ -261,7 +261,7 @@
 
 	if(!SSticker.mode || !check_rights(R_ADMIN))
 		return
-	EvacuationAuthority.cancel_evacuation()
+	SShijack.cancel_evacuation()
 
 	message_admins("[key_name_admin(usr)] canceled an emergency evacuation.")
 
@@ -660,6 +660,28 @@
 	to_chat_spaced(world, html = SPAN_ANNOUNCEMENT_HEADER_BLUE(msg))
 	message_admins("\bold GlobalNarrate: [key_name_admin(usr)] : [msg]")
 
+/client/proc/cmd_admin_ground_narrate()
+	set name = "Narrate to Ground Levels"
+	set category = "Admin.Events"
+
+	if(!admin_holder || !(admin_holder.rights & R_MOD))
+		to_chat(src, "Only administrators may use this command.")
+		return
+
+	var/msg = tgui_input_text(usr, "Enter the text you wish to appear to everyone", "Message", multiline = TRUE)
+
+	if(!msg)
+		return
+
+	var/list/all_clients = GLOB.clients.Copy()
+
+	for(var/client/cycled_client as anything in all_clients)
+		if(!(cycled_client.mob?.z in SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+			continue
+
+		to_chat_spaced(cycled_client, html = SPAN_ANNOUNCEMENT_HEADER_BLUE(msg))
+
+	message_admins("\bold GroundNarrate: [key_name_admin(usr)] : [msg]")
 
 /client
 	var/remote_control = FALSE

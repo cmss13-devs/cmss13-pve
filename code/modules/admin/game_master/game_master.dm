@@ -35,8 +35,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Behavior stuff
 #define DEFAULT_BEHAVIOR_STRING "Attack"
-#define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive")
-#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive)
+#define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive", "Build")
+#define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive, "Build" = /datum/component/ai_behavior_override/build)
 
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
@@ -55,7 +55,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// Associated list of game master submenus organized by object_type = game_master_submenu
 	var/list/submenu_types = list(
-		/obj/structure/pipes/vents = /datum/game_master_submenu/vents,
+		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
+		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
 	)
 
 	/// List of current submenus
@@ -63,6 +64,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// Holds what type of click intercept we are using
 	var/current_click_intercept_action
+
 
 	// Spawn stuff
 
@@ -204,6 +206,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			for(var/mob/living/carbon/xenomorph/cycled_xeno in GLOB.alive_mob_list)
 				qdel(cycled_xeno)
+
+			return
+
+		if("delete_xenos_in_view")
+			if(tgui_alert(ui.user, "Do you want to delete all xenos within your view range?", "Confirmation", list("Yes", "No")) != "Yes")
+				return
+
+			for(var/mob/living/carbon/xenomorph/viewed_xeno in view(ui.user.client))
+				qdel(viewed_xeno)
 
 			return
 

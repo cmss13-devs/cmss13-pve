@@ -37,6 +37,9 @@
 /obj/item/handset/hear_talk(mob/living/talker, message, verb="says", datum/language/message_language, italics = 0)
 	. = ..()
 
+	if(!phone_component)
+		return
+
 	if(talker == loc)
 		phone_component.handle_speak(message, message_language, talker, direct_talking = TRUE)
 		return

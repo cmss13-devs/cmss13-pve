@@ -20,6 +20,13 @@
 	src.ckey = ckey
 	player_entity = setup_player_entity(ckey)
 
+/datum/mind/Destroy()
+	current = null
+	original = null
+	ghost_mob = null
+	player_entity = null
+	return ..()
+
 /datum/mind/proc/transfer_to(mob/living/new_character, force = FALSE)
 	if(QDELETED(new_character))
 		msg_admin_niche("[key]/[ckey] has tried to transfer to deleted [new_character].")

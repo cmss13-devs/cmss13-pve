@@ -9,20 +9,20 @@ export const GameMaster = (props, context) => {
     <Window width={400} height={500}>
       <Window.Content scrollable>
         <Stack direction="column" grow>
-          <SpawningPanel />
+          <GameMasterSpawningPanel />
 
-          <BehaviorPanel />
+          <GameMasterBehaviorPanel />
 
-          <ObjectivePanel />
+          <GameMasterObjectivePanel />
 
-          <CommunicationPanel />
+          <GameMasterCommunicationPanel />
         </Stack>
       </Window.Content>
     </Window>
   );
 };
 
-export const SpawningPanel = (props, context) => {
+export const GameMasterSpawningPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -76,19 +76,31 @@ export const SpawningPanel = (props, context) => {
           </Stack>
         </Stack.Item>
         <Stack.Item>
-          <Button
-            content="Delete all xenos"
-            onClick={() => {
-              act('delete_all_xenos');
-            }}
-          />
+          <Stack>
+            <Stack.Item>
+              <Button
+                content="Delete all xenos"
+                onClick={() => {
+                  act('delete_all_xenos');
+                }}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button
+                content="Delete viewed xenos"
+                onClick={() => {
+                  act('delete_xenos_in_view');
+                }}
+              />
+            </Stack.Item>
+          </Stack>
         </Stack.Item>
       </Stack>
     </Section>
   );
 };
 
-export const BehaviorPanel = (props, context) => {
+export const GameMasterBehaviorPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -118,7 +130,7 @@ export const BehaviorPanel = (props, context) => {
   );
 };
 
-export const ObjectivePanel = (props, context) => {
+export const GameMasterObjectivePanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
@@ -179,7 +191,7 @@ export const ObjectivePanel = (props, context) => {
   );
 };
 
-export const CommunicationPanel = (props, context) => {
+export const GameMasterCommunicationPanel = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (

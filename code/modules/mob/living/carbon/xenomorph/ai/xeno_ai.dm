@@ -7,7 +7,7 @@
 	var/turf/current_target_turf
 
 	var/ai_move_delay = 0
-	var/path_update_period = 0.5 SECONDS
+	var/path_update_period = (0.5 SECONDS)
 	var/no_path_found = FALSE
 	var/ai_range = 16
 	var/max_travel_distance = 24
@@ -19,9 +19,17 @@
 
 	var/datum/xeno_ai_movement/ai_movement_handler
 
-/mob/living/carbon/xenomorph/Destroy()
-	QDEL_NULL(ai_movement_handler)
-	return ..()
+	/// The time interval before this xeno should forcefully get a new target
+	var/forced_retarget_time = (10 SECONDS)
+
+	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
+	COOLDOWN_DECLARE(forced_retarget_cooldown)
+
+	/// The time interval between calculating new paths if we cannot find a path
+	var/no_path_found_period = (2.5 SECONDS)
+
+	/// Cooldown declaration for delaying finding a new path if no path was found
+	COOLDOWN_DECLARE(no_path_found_cooldown)
 
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
@@ -68,8 +76,9 @@
 		var/mob/current_target_mob = current_target
 		stat_check = (current_target_mob.stat != CONSCIOUS)
 
-	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range)
+	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
+		COOLDOWN_START(src, forced_retarget_cooldown, forced_retarget_time)
 		if(QDELETED(src))
 			return TRUE
 
@@ -77,7 +86,6 @@
 			resting = FALSE
 			if(prob(5))
 				emote("hiss")
-			return TRUE
 
 	a_intent = INTENT_HARM
 
@@ -160,10 +168,11 @@
 		return FALSE
 
 	if(no_path_found)
+		COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
 		no_path_found = FALSE
 		return FALSE
 
-	if(!current_path || (next_path_generation < world.time && current_target_turf != T))
+	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
 			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
@@ -320,7 +329,7 @@
 	if(HAS_TRAIT(checked_human, TRAIT_NESTED))
 		return FALSE
 
-	if(FACTION_XENOMORPH in checked_human.faction_group)
+	if(can_not_harm(checked_human))
 		return FALSE
 
 	if(checked_human.stat != CONSCIOUS)

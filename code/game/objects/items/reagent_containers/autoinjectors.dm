@@ -100,13 +100,13 @@
 	maptext_label = "Ep"
 
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated
-	name = "epinephrine (concentrated) autoinjector"
+	name = "concentrated adrenaline autoinjector"
 	chemname = "adrenaline_concentrated"
-	desc = "An autoinjector loaded with 3 uses of Epinephrine, better known as Adrenaline, a nerve stimulant useful in restarting the heart. In this concentrated form, it will prevent unconciousness but will cause minor suffocation."
+	desc = "An autoinjector loaded with 3 uses of Concentrated Adrenaline, a stimulant that prevents unconsciousness but causes suffocation in the process."
 	amount_per_transfer_from_this = LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
 	volume = (LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
 	display_maptext = TRUE
-	maptext_label = "Ep"
+	maptext_label = "Ad"
 
 /obj/item/reagent_container/hypospray/autoinjector/dexalinp
 	name = "dexalin plus autoinjector"
