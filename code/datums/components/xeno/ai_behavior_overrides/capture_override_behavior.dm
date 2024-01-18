@@ -18,6 +18,9 @@
 	if(!.)
 		return
 
+	if(isfacehugger(checked_xeno))
+		return FALSE
+
 	var/mob/parent_mob = parent
 
 	var/stat = parent_mob.stat
