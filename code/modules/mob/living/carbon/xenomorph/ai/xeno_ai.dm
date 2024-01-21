@@ -74,7 +74,8 @@
 	var/stat_check = FALSE
 	if(istype(current_target, /mob))
 		var/mob/current_target_mob = current_target
-		stat_check = (current_target_mob.stat != CONSCIOUS)
+		var/enemy_stat = current_target_mob.stat
+		stat_check = isxeno(current_target_mob) ? (enemy_stat == DEAD) : (enemy_stat != CONSCIOUS)
 
 	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
@@ -327,7 +328,7 @@
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
 /mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/checked_target)
-	if(checked_target.stat != CONSCIOUS)
+	if(checked_target.stat == DEAD)
 		return FALSE
 
 	if(hivenumber == checked_target.hivenumber)
@@ -343,6 +344,9 @@
 		var/mob/living/carbon/human/checked_human = checked_target
 		if(checked_human.species.flags & IS_SYNTHETIC)
 			return FALSE
+
+		if(checked_human.stat != CONSCIOUS)
+			return FALSE // We leave crit people be
 
 	return TRUE
 
