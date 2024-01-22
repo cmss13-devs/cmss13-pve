@@ -25,6 +25,9 @@
 	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
 	COOLDOWN_DECLARE(forced_retarget_cooldown)
 
+	/// Amount of times no path found has occured
+	var/no_path_found_amount = 0
+
 	/// The time interval between calculating new paths if we cannot find a path
 	var/no_path_found_period = (2.5 SECONDS)
 
@@ -169,9 +172,14 @@
 		return FALSE
 
 	if(no_path_found)
-		COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
+
+		if(no_path_found_amount > 0)
+			COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
 		no_path_found = FALSE
+		no_path_found_amount++
 		return FALSE
+
+	no_path_found_amount = 0
 
 	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
