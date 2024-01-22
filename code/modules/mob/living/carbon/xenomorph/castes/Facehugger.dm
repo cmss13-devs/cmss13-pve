@@ -82,8 +82,8 @@
 
 	if(stat == DEAD)
 		icon_state = "[mutation_type] [caste.caste_type] Dead"
-	else if(lying)
-		if((resting || sleeping) && (!knocked_down && !knocked_out && health > 0))
+	else if(body_position == LYING_DOWN)
+		if(!HAS_TRAIT(src, TRAIT_INCAPACITATED) && !HAS_TRAIT(src, TRAIT_FLOORED))
 			icon_state = "[mutation_type] [caste.caste_type] Sleeping"
 		else
 			icon_state = "[mutation_type] [caste.caste_type] Knocked Down"
@@ -106,8 +106,8 @@
 	if(!caste)
 		return FALSE
 
-	if(lying) //No attacks while laying down
-		return FALSE
+	if(body_position == LYING_DOWN) //No attacks while laying down
+		return FALSE // Yoooo replace this by a mobility_flag for attacks or something
 
 	if(istype(A, /obj/effect/alien/resin/special/eggmorph))
 		var/obj/effect/alien/resin/special/eggmorph/morpher = A
@@ -126,7 +126,7 @@
 
 	if(ishuman(A))
 		var/mob/living/carbon/human/human = A
-		if(!human.lying)
+		if(human.body_position != LYING_DOWN)
 			to_chat(src, SPAN_WARNING("You can't reach \the [human], they need to be lying down."))
 			return
 		if(!can_hug(human, hivenumber))
@@ -135,7 +135,7 @@
 		visible_message(SPAN_WARNING("\The [src] starts climbing onto \the [human]'s face..."), SPAN_XENONOTICE("You start climbing onto \the [human]'s face..."))
 		if(!do_after(src, FACEHUGGER_WINDUP_DURATION, INTERRUPT_ALL, BUSY_ICON_HOSTILE, human, INTERRUPT_MOVED, BUSY_ICON_HOSTILE))
 			return
-		if(!human.lying)
+		if(human.body_position != LYING_DOWN)
 			to_chat(src, SPAN_WARNING("You can't reach \the [human], they need to be lying down."))
 			return
 		if(!can_hug(human, hivenumber))

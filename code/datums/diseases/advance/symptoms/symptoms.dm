@@ -3,8 +3,6 @@
 var/list/list_symptoms = typesof(/datum/symptom) - /datum/symptom
 var/list/dictionary_symptoms = list()
 
-var/global/const/SYMPTOM_ACTIVATION_PROB = 3
-
 /datum/symptom
 	// Buffs/Debuffs the symptom has to the overall engineered disease.
 	var/name = ""
