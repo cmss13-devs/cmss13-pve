@@ -113,17 +113,14 @@
 
 	ADD_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 	xeno_owner.anchored = TRUE
-	xeno_owner.update_canmove()
 
 	if (!do_after(xeno_owner, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 		REMOVE_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 		xeno_owner.anchored = FALSE
-		xeno_owner.update_canmove()
 		return
 
 	REMOVE_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 	xeno_owner.anchored = FALSE
-	xeno_owner.update_canmove()
 
 	playsound(get_turf(xeno_owner), 'sound/effects/bang.ogg', 25, 0)
 	xeno_owner.visible_message(SPAN_XENODANGER("[xeno_owner] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
@@ -223,7 +220,7 @@
 	to_chat(Xeno, SPAN_XENONOTICE("You will [will_charge] charge when moving."))
 	if(activated)
 		RegisterSignal(Xeno, COMSIG_MOVABLE_MOVED, PROC_REF(handle_movement))
-		RegisterSignal(Xeno, COMSIG_MOB_KNOCKED_DOWN, PROC_REF(handle_movement))
+		RegisterSignal(Xeno, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(handle_position_change))
 		RegisterSignal(Xeno, COMSIG_ATOM_DIR_CHANGE, PROC_REF(handle_dir_change))
 		RegisterSignal(Xeno, COMSIG_XENO_RECALCULATE_SPEED, PROC_REF(update_speed))
 		RegisterSignal(Xeno, COMSIG_XENO_STOP_MOMENTUM, PROC_REF(stop_momentum))
@@ -235,7 +232,7 @@
 		stop_momentum()
 		UnregisterSignal(Xeno, list(
 			COMSIG_MOVABLE_MOVED,
-			COMSIG_MOB_KNOCKED_DOWN,
+			COMSIG_LIVING_SET_BODY_POSITION,
 			COMSIG_ATOM_DIR_CHANGE,
 			COMSIG_XENO_RECALCULATE_SPEED,
 			COMSIG_MOVABLE_ENTERED_RIVER,

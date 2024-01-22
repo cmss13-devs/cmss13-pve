@@ -156,6 +156,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
+"aO" = (
+/obj/item/prop/colony/game,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "aQ" = (
 /obj/structure/sign/safety/galley{
 	pixel_y = 29
@@ -960,6 +965,13 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/supply)
+"ft" = (
+/obj/structure/curtain/red,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "fv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -1046,6 +1058,13 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/medical)
+"fW" = (
+/obj/structure/pipes/vents/scrubber,
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_sergeant)
 "fX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -1192,11 +1211,24 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
+"gI" = (
+/obj/structure/surface/rack,
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 13
+	},
+/obj/item/weapon/straight_razor{
+	pixel_x = 4;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "gL" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1204,6 +1236,12 @@
 "gM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
+"gQ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2020,13 +2058,8 @@
 	},
 /area/golden_arrow/squad_two)
 "lS" = (
-/obj/structure/surface/rack,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 13
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_sergeant)
 "lV" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2046,11 +2079,9 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "mc" = (
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_y = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2807,6 +2838,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"qK" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "qQ" = (
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
@@ -2941,7 +2983,9 @@
 	},
 /area/golden_arrow/prep_hallway)
 "rH" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3036,6 +3080,9 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
 	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3108,6 +3155,9 @@
 /area/golden_arrow/canteen)
 "sR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/bed/chair{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "sS" = (
@@ -3169,8 +3219,8 @@
 	pixel_y = 7
 	},
 /obj/structure/sign/safety/hazard{
-	pixel_y = -7;
-	pixel_x = -24
+	pixel_x = -24;
+	pixel_y = -7
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3379,11 +3429,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "uH" = (
-/obj/structure/largecrate/random/case/small,
-/obj/item/toy/deck{
-	pixel_x = -6;
-	pixel_y = 6
-	},
 /obj/structure/sign/poster{
 	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
 	icon_state = "poster12";
@@ -3393,6 +3438,9 @@
 	serial_number = 12
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3503,6 +3551,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"vA" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Platoon Sergeant's Bunk";
+	req_one_access_txt = "12"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "vB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3617,6 +3676,9 @@
 "vU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/bed/chair{
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -3964,11 +4026,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"yw" = (
+/obj/item/toy/deck/uno,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "yx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
+/obj/structure/machinery/computer/arcade,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4242,6 +4310,9 @@
 "Ap" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/ceramic_plate,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
 "As" = (
@@ -4498,6 +4569,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/firingrange)
+"BK" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "BM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -5945,6 +6027,10 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/medical)
+"JL" = (
+/obj/structure/bed/chair,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "JP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -6082,6 +6168,7 @@
 /area/golden_arrow/hangar)
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6254,9 +6341,6 @@
 "Ls" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/alpha{
 	density = 0
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6475,6 +6559,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/largecrate/random/case/small,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7698,8 +7783,20 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "SC" = (
-/turf/closed/wall/almayer/outer,
-/area/space)
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/cans/souto/classic{
+	pixel_x = 10;
+	pixel_y = 3
+	},
+/obj/item/prop/magazine/boots/n054{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_sergeant)
 "SE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7710,6 +7807,15 @@
 	icon_state = "redfull"
 	},
 /area/golden_arrow/firingrange)
+"SI" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_sergeant)
 "SL" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -7765,6 +7871,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/prep_hallway)
+"Tb" = (
+/obj/item/toy/deck,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "Tc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -8199,6 +8310,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Vz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "VG" = (
 /turf/open/floor/almayer{
 	dir = 5;
@@ -8230,6 +8348,9 @@
 /area/golden_arrow/squad_one)
 "VL" = (
 /obj/structure/closet/secure_closet/platoon_sergeant,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8499,9 +8620,9 @@
 /area/golden_arrow/hangar)
 "Xu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 2;
 	name = "\improper Firing Range";
-	req_one_access_txt = "8;12;40";
-	dir = 2
+	req_one_access_txt = "8;12;40"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -8549,7 +8670,7 @@
 "Xz" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
-/area/space)
+/area/golden_arrow/platoon_sergeant)
 "XI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -15874,9 +15995,9 @@ Cr
 Cr
 Cr
 Cr
-SC
-SC
-SC
+sC
+sC
+sC
 sC
 sC
 sC
@@ -16026,7 +16147,7 @@ Cr
 Cr
 Cr
 Cr
-SC
+sC
 Xz
 Xz
 sC
@@ -16178,9 +16299,9 @@ Cr
 Cr
 Cr
 Cr
-SC
-Xz
-Xz
+sC
+sC
+sC
 sC
 Ls
 KQ
@@ -16330,15 +16451,15 @@ Cr
 Cr
 Cr
 Cr
+sC
 SC
-Xz
-Xz
+Kv
 sC
 sC
 Uj
 sC
 Tj
-Hm
+SI
 Kv
 yt
 Kv
@@ -16482,14 +16603,14 @@ Cr
 Cr
 Cr
 Cr
-SC
-Xz
-Xz
 sC
+fW
+dr
+vA
 lS
-KQ
-bw
-KQ
+lS
+ft
+gQ
 Ap
 uO
 qA
@@ -16634,12 +16755,12 @@ Cr
 Cr
 Cr
 Cr
-SC
-Xz
-Xz
+sC
+gI
+BK
 sC
 mc
-KQ
+qK
 bw
 KQ
 QS
@@ -18165,11 +18286,11 @@ Sy
 mk
 vk
 Vp
-EQ
+KZ
 gL
 sk
 uH
-Vp
+wl
 Vp
 wd
 XQ
@@ -18318,10 +18439,10 @@ Vr
 As
 Vp
 EQ
-wl
-wl
+JL
+Tb
 KK
-EQ
+JL
 Vp
 OG
 XI
@@ -18470,10 +18591,10 @@ rJ
 As
 Vp
 EF
-wl
-wl
-wl
-KZ
+JL
+aO
+yw
+Vz
 Vp
 xm
 XI

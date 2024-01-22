@@ -151,7 +151,7 @@
 
 /mob/living/carbon/xenomorph/proc/can_move_and_apply_move_delay()
 	// Unable to move, try next time.
-	if(ai_move_delay > world.time || !canmove || is_mob_incapacitated(TRUE) || (lying && !can_crawl) || anchored)
+	if(ai_move_delay > world.time || !(mobility_flags & MOBILITY_MOVE) || is_mob_incapacitated(TRUE) || (body_position != STANDING_UP && !can_crawl) || anchored)
 		return FALSE
 
 	ai_move_delay = world.time + move_delay
