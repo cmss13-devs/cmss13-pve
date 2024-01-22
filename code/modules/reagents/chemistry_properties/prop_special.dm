@@ -381,8 +381,8 @@
 /datum/chem_property/special/revitalizing/reagent_added(mob/living/M)
 	if(!ishuman(M))
 		return
+	M.SetKnockOut(0)
 	M.status_flags &= ~CANKNOCKOUT
-	M.knocked_out = 0
 
 /datum/chem_property/special/revitalizing/on_delete(mob/living/M)
 	M.status_flags |= CANKNOCKOUT

@@ -376,7 +376,7 @@
 			return
 
 		for(var/mob/living/checked_living in checked_turf)
-			if(checked_living.lying && projectile_to_fire.original != checked_living)
+			if(checked_living.body_position == LYING_DOWN && projectile_to_fire.original != checked_living)
 				continue
 
 			if(checked_living.get_target_lock(user.faction_group))
