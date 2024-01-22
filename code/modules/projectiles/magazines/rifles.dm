@@ -172,7 +172,7 @@
 	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
 	icon_state = "m4ra"
 	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
-	max_rounds = 25
+	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
