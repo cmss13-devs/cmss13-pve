@@ -35,8 +35,8 @@ interface DropshipNavigationProps extends NavigationProps {
   playing_launch_announcement_alarm: boolean;
 }
 
-const DropshipDoorControl = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+const DropshipDoorControl = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const in_flight =
     data.shuttle_mode === 'called' || data.shuttle_mode === 'pre-arrival';
   const disable_door_controls = in_flight;
@@ -119,10 +119,9 @@ const DropshipDoorControl = (_, context) => {
   );
 };
 
-export const DropshipDestinationSelection = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+export const DropshipDestinationSelection = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const [siteselection, setSiteSelection] = useSharedState<string | undefined>(
-    context,
     'target_site',
     undefined
   );
@@ -157,8 +156,8 @@ interface DestinationProps {
   readonly availableOnly?: boolean;
 }
 
-const DestinationSelector = (props: DestinationProps, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+const DestinationSelector = (props: DestinationProps) => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
       {props.options
@@ -194,8 +193,8 @@ const DestinationSelector = (props: DestinationProps, context) => {
   );
 };
 
-export const TouchdownCooldown = (_, context) => {
-  const { data } = useBackend<NavigationProps>(context);
+export const TouchdownCooldown = () => {
+  const { data } = useBackend<NavigationProps>();
   return (
     <Section title={`Final Approach: ${data.target_destination}`}>
       <div className="InFlightCountdown">
@@ -218,13 +217,12 @@ export const TouchdownCooldown = (_, context) => {
   );
 };
 
-const AutopilotConfig = (props, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+const AutopilotConfig = (props) => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const [automatedHangar, setAutomatedHangar] = useSharedState<
     string | undefined
-  >(context, 'autopilot_hangar', undefined);
+  >('autopilot_hangar', undefined);
   const [automatedLZ, setAutomatedLZ] = useSharedState<string | undefined>(
-    context,
     'autopilot_groundside',
     undefined
   );
@@ -289,8 +287,8 @@ const AutopilotConfig = (props, context) => {
   );
 };
 
-const StopLaunchAnnouncementAlarm = (_, context) => {
-  const { act } = useBackend<NavigationProps>(context);
+const StopLaunchAnnouncementAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="ban"
@@ -302,8 +300,8 @@ const StopLaunchAnnouncementAlarm = (_, context) => {
   );
 };
 
-const PlayLaunchAnnouncementAlarm = (_, context) => {
-  const { act } = useBackend<NavigationProps>(context);
+const PlayLaunchAnnouncementAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="rocket"
@@ -315,10 +313,9 @@ const PlayLaunchAnnouncementAlarm = (_, context) => {
   );
 };
 
-const LaunchAnnouncementAlarm = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+const LaunchAnnouncementAlarm = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const [siteselection, setSiteSelection] = useSharedState<string | undefined>(
-    context,
     'target_site',
     undefined
   );
@@ -336,8 +333,8 @@ const LaunchAnnouncementAlarm = (_, context) => {
   );
 };
 
-const RenderScreen = (props, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+const RenderScreen = (props) => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
       {data.can_set_automated === 1 && <AutopilotConfig />}
@@ -357,8 +354,8 @@ const RenderScreen = (props, context) => {
   );
 };
 
-export const DropshipFlightControl = (props, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+export const DropshipFlightControl = (props) => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Window theme="crtgreen" height={500} width={700}>
       <Window.Content className="NavigationMenu">

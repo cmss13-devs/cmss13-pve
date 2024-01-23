@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Button, Section, ProgressBar, NoticeBox, Box, Stack } from '../components';
 import { Window } from '../layouts';
 
-export const DemoSim = (_props, context) => {
-  const { act, data } = useBackend(context);
+export const DemoSim = () => {
+  const { act, data } = useBackend<DemoSimData>();
 
   const timeLeft = data.nextdetonationtime - data.worldtime;
   const timeLeftPct = timeLeft / data.detonation_cooldown;
