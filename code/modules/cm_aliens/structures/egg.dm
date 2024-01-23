@@ -126,9 +126,7 @@
 	if(is_hugger_player_controlled)
 		return //Don't need to spawn a hugger, a player controls it already!
 
-	var/mob/living/carbon/xenomorph/facehugger/child = new(loc)
-	if(hivenumber != XENO_HIVE_NORMAL)
-		child.set_hive_and_update(hivenumber)
+	new /mob/living/carbon/xenomorph/facehugger(loc, null, hivenumber)
 
 /obj/effect/alien/egg/bullet_act(obj/projectile/P)
 	..()

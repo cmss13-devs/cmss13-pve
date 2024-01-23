@@ -33,7 +33,7 @@
 	tacklestrength_max = 5
 
 	aura_strength = 2
-	hugger_delay = 20
+	hugger_delay = 10
 	egg_cooldown = 250
 
 	minimum_evolve_time = 5 MINUTES
@@ -193,9 +193,7 @@
 			visible_message(SPAN_XENOWARNING("The chittering mass of tiny aliens is trying to escape [src]!"))
 			for(var/i in 1 to huggers_cur)
 				if(prob(chance))
-					hugger = new(loc)
-					if(hivenumber != XENO_HIVE_NORMAL)
-						hugger.set_hive_and_update(hivenumber)
+					hugger = new(loc, null, hivenumber)
 					step_away(hugger, src, 1)
 
 		var/eggs_dropped = FALSE
@@ -301,20 +299,17 @@
 		var/datum/action/A = X
 		A.update_button_icon()
 
-	if(!do_after(src, 10, INTERRUPT_INCAPACITATED, BUSY_ICON_HOSTILE))
+	if(!do_after(src, 1 SECONDS, INTERRUPT_INCAPACITATED, BUSY_ICON_HOSTILE))
 		return
 
 	var/turf/target_turf = get_turf(T)
-
-	var/mob/living/carbon/xenomorph/facehugger/child = new(loc)
-	if(hivenumber != XENO_HIVE_NORMAL)
-		child.set_hive_and_update(hivenumber)
-
-	visible_message(SPAN_XENOWARNING("\The [src] throws something towards \the [target_turf]!"), \
-		SPAN_XENOWARNING("You throw a facehugger towards \the [target_turf]!"))
+	var/mob/living/carbon/xenomorph/facehugger/child = new(loc, null, hivenumber)
 
 	huggers_cur--
 	update_icons()
+
+	visible_message(SPAN_XENOWARNING("\The [src] throws something towards \the [target_turf]!"), \
+		SPAN_XENOWARNING("You throw a facehugger towards \the [target_turf]!"))
 
 	playsound(loc, get_sfx("alien_tail_swipe"), 120, 1)
 	child.throw_atom(target_turf, 6, caste.throwspeed)

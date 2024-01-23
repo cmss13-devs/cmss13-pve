@@ -85,7 +85,7 @@
 
 /mob/living/carbon/xenomorph/facehugger/check_mob_target(mob/living/carbon/checked_target)
 	if(!ishuman(checked_target))
-		return FALSE // We don't wanna to attack anyone except humans (compat for soon coming XvX code)
+		return FALSE // We don't wanna to attack anyone except humans
 
 	if(istype(checked_target.wear_mask, /obj/item/clothing/mask/facehugger))
 		return FALSE
@@ -104,25 +104,27 @@
 /mob/living/carbon/xenomorph/facehugger/proc/climb_in(shelter)
 	set waitfor = FALSE
 
-	if(do_after(src, 10, INTERRUPT_ALL, BUSY_ICON_GENERIC, shelter, INTERRUPT_NONE))
-		if(!shelter)
+	if(!do_after(src, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, shelter, INTERRUPT_NONE))
+		return
+
+	if(!shelter)
+		return
+
+	if(iscarrier(shelter))
+		var/mob/living/carbon/xenomorph/carrier/horsey = shelter
+		if(horsey.huggers_cur >= horsey.huggers_max)
 			return
+		visible_message(SPAN_XENOWARNING("[src] crawls onto [horsey]!"))
+		horsey.huggers_cur = min(horsey.huggers_max, horsey.huggers_cur + 1)
+		horsey.update_hugger_overlays()
 
-		if(iscarrier(shelter))
-			var/mob/living/carbon/xenomorph/carrier/horsey = shelter
-			if(horsey.huggers_cur >= horsey.huggers_max)
-				return
-			visible_message(SPAN_XENOWARNING("[src] crawls onto [horsey]!"))
-			horsey.huggers_cur = min(horsey.huggers_max, horsey.huggers_cur + 1)
-			horsey.update_hugger_overlays()
+	else
+		var/obj/effect/alien/egg/eggy = shelter
+		if(eggy.status != EGG_BURST)
+			return
+		visible_message(SPAN_XENOWARNING("[src] crawls back into [eggy]!"))
+		eggy.status = EGG_GROWN
+		eggy.icon_state = "Egg"
+		eggy.deploy_egg_triggers()
 
-		else
-			var/obj/effect/alien/egg/eggy = shelter
-			if(eggy.status != EGG_BURST)
-				return
-			visible_message(SPAN_XENOWARNING("[src] crawls back into [eggy]!"))
-			eggy.status = EGG_GROWN
-			eggy.icon_state = "Egg"
-			eggy.deploy_egg_triggers()
-
-		qdel(src)
+	qdel(src)
