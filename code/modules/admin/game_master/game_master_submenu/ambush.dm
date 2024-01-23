@@ -1,6 +1,7 @@
 
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
 #define GAME_MASTER_AMBUSH_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_FACEHUGGER)
+#define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
@@ -16,8 +17,14 @@
 	/// Current selected xeno string to spawn when we hit spawn
 	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
 
+	/// Current selected hive string to spawn when we hit spawn
+	var/selected_hive = DEFAULT_SPAWN_HIVE_STRING
+
 	/// Current xenos to spawn in an ambush, organized as xeno_type = number_to_spawn
 	var/list/current_ambush = list()
+
+	/// Current hive to spawn in an ambush
+	var/current_ambushing_hive = DEFAULT_SPAWN_HIVE_STRING
 
 	/// Current info on the ambush passed to the menu
 	var/ambush_info = "No Current Ambush"
@@ -55,6 +62,7 @@
 
 	data["xeno_spawn_count"] = xeno_spawn_count
 	data["selected_xeno"] = selected_xeno
+	data["selected_hive"] = selected_hive
 	data["ambush_info"] = ambush_info
 
 	return data
@@ -65,6 +73,8 @@
 	var/list/data = list()
 
 	data["spawnable_xenos"] = GAME_MASTER_AMBUSH_AI_XENOS
+
+	data["spawnable_hives"] = ALL_XENO_HIVES
 
 	return data
 
@@ -82,6 +92,11 @@
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
+			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
+			return TRUE
+
+		if("set_selected_hive")
+			selected_hive = params["new_hive"]
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
 			return TRUE
 
@@ -126,18 +141,21 @@
 
 	temp_string = copytext(temp_string, 1, -2)
 
+	temp_string += " of [selected_hive]"
+
 	ambush_info = temp_string
 
-	SEND_SIGNAL(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, current_ambush.Copy(), ambush_info)
+	SEND_SIGNAL(referenced_atom, COMSIG_GAME_MASTER_AMBUSH_SET, current_ambush.Copy(), selected_hive, ambush_info)
 
 	primary = TRUE
 
-/datum/game_master_submenu/ambush/proc/other_ambush_set(atom/movable/other_parent, new_ambush, new_ambush_info)
+/datum/game_master_submenu/ambush/proc/other_ambush_set(atom/movable/other_parent, new_ambush, new_hive, new_ambush_info)
 	SIGNAL_HANDLER
 
 	primary = FALSE
 
 	current_ambush = new_ambush
+	current_ambushing_hive = new_hive
 	ambush_info = new_ambush_info
 
 #define AMBUSH_ESCAPE_INCREMENT_TIME (1 SECONDS)
@@ -187,7 +205,7 @@
 
 	playsound(referenced_atom, pick(ambush_sounds), 25, 1)
 
-	new xeno_type(spawn_turf, null, XENO_HIVE_NORMAL)
+	new xeno_type(spawn_turf, null, selected_hive)
 
 /// Shakes the spawner via animation and returns a callback to reset the animation
 /datum/game_master_submenu/ambush/proc/shake_spawner()
@@ -195,4 +213,5 @@
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AMBUSH_AI_XENOS
+#undef DEFAULT_SPAWN_HIVE_STRING
 #undef DEFAULT_XENO_AMOUNT_TO_SPAWN
