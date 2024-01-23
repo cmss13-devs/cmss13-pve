@@ -259,7 +259,7 @@
 		if(z != potential_target.z)
 			continue
 
-		if(!check_mob_target(potential_target))
+		if(!potential_target.check_mob_target(src))
 			continue
 
 		var/distance = get_dist(src, potential_target)
@@ -288,8 +288,8 @@
 			var/skip_vehicle = TRUE
 
 			var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
-			for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
-				if(!check_mob_target(human_mob))
+			for(var/mob/living/carbon/carbon_mob in interior_living_mobs)
+				if(!carbon_mob.check_mob_target(src))
 					continue
 
 				skip_vehicle = FALSE
@@ -335,26 +335,12 @@
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
-/mob/living/carbon/xenomorph/proc/check_mob_target(mob/living/carbon/checked_target)
-	if(checked_target.stat == DEAD)
+/mob/living/carbon/proc/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
+	if(stat == DEAD)
+		return FALSE // We leave dead bodies alone
+
+	if(ai_xeno.can_not_harm(src))
 		return FALSE
-
-	if(hivenumber == checked_target.hivenumber)
-		return FALSE
-
-	if(HAS_TRAIT(checked_target, TRAIT_NESTED))
-		return FALSE
-
-	if(can_not_harm(checked_target))
-		return FALSE
-
-	if(ishuman(checked_target))
-		var/mob/living/carbon/human/checked_human = checked_target
-		if(checked_human.species.flags & IS_SYNTHETIC)
-			return FALSE
-
-		if(checked_human.stat != CONSCIOUS)
-			return FALSE // We leave crit people be
 
 	return TRUE
 

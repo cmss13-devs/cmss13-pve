@@ -106,6 +106,22 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
+/mob/living/carbon/human/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
+	. = ..()
+	if(!.)
+		return FALSE
+
+	if(stat == UNCONSCIOUS)
+		return FALSE // We also leave crit people be
+
+	if(species.flags & IS_SYNTHETIC)
+		return FALSE
+
+	if(HAS_TRAIT(src, TRAIT_NESTED))
+		return FALSE
+
+	return TRUE
+
 // XENOS
 /mob/living/carbon/xenomorph/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
@@ -116,6 +132,16 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return HUMAN_PENALTY
 
 	return XENO_PENALTY
+
+/mob/living/carbon/xenomorph/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
+	. = ..()
+	if(!.)
+		return FALSE
+
+	if(ai_xeno.hivenumber == hivenumber)
+		return FALSE
+
+	return TRUE
 
 // VEHICLES
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)

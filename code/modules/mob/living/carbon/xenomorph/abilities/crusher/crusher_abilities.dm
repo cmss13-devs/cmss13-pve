@@ -158,7 +158,7 @@
 		if(distance_between_base_carbon_and_xeno < MINIMUM_CHARGE_DISTANCE)
 			continue
 
-		if(!processing_xeno.check_mob_target(base_checked_carbon))
+		if(!base_checked_carbon.check_mob_target(processing_xeno))
 			continue
 
 		var/secondary_count = 0
@@ -166,7 +166,7 @@
 		var/secondary_y_sum = 0
 
 		for(var/mob/living/carbon/secondary_checked_carbon in range(FLOCK_SCAN_RADIUS, base_checked_carbon))
-			if(!processing_xeno.check_mob_target(secondary_checked_carbon))
+			if(!secondary_checked_carbon.check_mob_target(processing_xeno))
 				continue
 
 			secondary_count++
