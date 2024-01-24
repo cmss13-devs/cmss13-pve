@@ -104,6 +104,9 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(status_flags & GODMODE)
 		return
 
+	if(X.can_not_harm(src))
+		return // No nibbles for friendlies
+
 	. = ..()
 
 /mob/living/carbon/human/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
