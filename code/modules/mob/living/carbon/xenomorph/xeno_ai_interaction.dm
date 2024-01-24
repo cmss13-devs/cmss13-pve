@@ -136,6 +136,12 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return XENO_PENALTY
 
+/mob/living/carbon/xenomorph/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(X.can_not_harm(src))
+		return
+
+	. = ..()
+
 /mob/living/carbon/xenomorph/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
 	. = ..()
 	if(!.)
