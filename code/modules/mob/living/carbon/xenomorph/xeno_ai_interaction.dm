@@ -131,7 +131,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return
 
-	if(X.hivenumber != hivenumber)
+	if(!IS_SAME_HIVENUMBER(X, src))
 		return HUMAN_PENALTY
 
 	return XENO_PENALTY
@@ -147,7 +147,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return FALSE
 
-	if(ai_xeno.hivenumber == hivenumber)
+	if(IS_SAME_HIVENUMBER(ai_xeno, src))
 		return FALSE
 
 	return TRUE
