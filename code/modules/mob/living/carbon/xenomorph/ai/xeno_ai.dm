@@ -65,13 +65,13 @@
 	if(!hive || !get_turf(src))
 		return TRUE
 
-	if(is_mob_incapacitated(TRUE))
-		current_path = null
-		return TRUE
-
 	var/datum/component/ai_behavior_override/behavior_override = check_overrides()
 
 	if(behavior_override?.process_override_behavior(src, delta_time))
+		return TRUE
+
+	if(is_mob_incapacitated(TRUE))
+		current_path = null
 		return TRUE
 
 	var/stat_check = FALSE
@@ -87,7 +87,7 @@
 			return TRUE
 
 		if(current_target)
-			resting = FALSE
+			set_resting(FALSE, FALSE, TRUE)
 			if(prob(5))
 				emote("hiss")
 
@@ -234,10 +234,9 @@
 		var/distance = get_dist(src, cycled_override.parent)
 		var/validity = cycled_override.check_behavior_validity(src, distance)
 
-		if(!validity)
-			continue
-
-		if(distance >= shortest_distance)
+		if(!validity || distance >= shortest_distance)
+			if(cycled_override.currently_assigned)
+				cycled_override.currently_assigned -= src
 			continue
 
 		shortest_distance = distance

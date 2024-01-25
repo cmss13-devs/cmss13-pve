@@ -45,6 +45,9 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	if(length(currently_assigned) >= max_assigned && !(checked_xeno in currently_assigned))
 		return FALSE
 
+	if(checked_xeno.stat != CONSCIOUS)
+		return FALSE
+
 	return TRUE
 
 /// Processes what we want this behavior to do, return FALSE if we want to continue in the process_ai() proc or TRUE if we want to handle everything and have process_ai() return
