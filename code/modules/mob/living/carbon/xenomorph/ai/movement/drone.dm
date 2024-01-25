@@ -50,11 +50,10 @@
 		home_turf = potential_home
 
 	if(!home_turf)
-		if(!idle_xeno.resting)
-			idle_xeno.lay_down()
+		idle_xeno.set_resting(TRUE, FALSE, TRUE)
 		return
 
-	idle_xeno.resting = FALSE
+	idle_xeno.set_resting(FALSE, FALSE, TRUE)
 
 	if(home_turf == last_home_turf)
 		blacklisted_turfs += home_turf

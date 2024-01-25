@@ -39,15 +39,13 @@
 				if(potential_weeds && IS_SAME_HIVENUMBER(idle_xeno, potential_weeds) && !potential_home.density && get_dist(idle_xeno, potential_home) < shortest_distance)
 					home_turf = potential_home
 					shortest_distance = get_dist(idle_xeno, potential_home)
-			if(idle_xeno.resting)
-				idle_xeno.lay_down()
-
+			idle_xeno.set_resting(FALSE, FALSE, TRUE)
 	if(!home_turf)
 		return
 
 	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range))
-		if(get_dist(home_turf, idle_xeno) <= 0 && !idle_xeno.resting)
-			idle_xeno.lay_down()
+		if(get_dist(home_turf, idle_xeno) <= 0)
+			idle_xeno.set_resting(TRUE, FALSE, TRUE)
 	else
 		home_turf = null
 
