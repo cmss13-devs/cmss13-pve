@@ -36,6 +36,9 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 		game_master.images -= behavior_image
 
 	QDEL_NULL(behavior_image)
+
+	for(var/assigned_xeno in currently_assigned)
+		UnregisterSignal(assigned_xeno, COMSIG_PARENT_QDELETING)
 	currently_assigned = null
 
 	. = ..()
@@ -54,6 +57,14 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 /datum/component/ai_behavior_override/proc/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 
+	RegisterSignal(processing_xeno, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_queue), TRUE)
 	currently_assigned |= processing_xeno
 
 	return TRUE
+
+/datum/component/ai_behavior_override/proc/remove_from_queue(mob/removed_xeno)
+	SIGNAL_HANDLER
+	if(currently_assigned)
+		currently_assigned -= removed_xeno
+
+	UnregisterSignal(removed_xeno, COMSIG_PARENT_QDELETING)

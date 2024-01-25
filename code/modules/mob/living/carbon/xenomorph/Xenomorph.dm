@@ -725,10 +725,6 @@
 	if(hardcore)
 		attack_log?.Cut() // Completely clear out attack_log to limit mem usage if we fail to delete
 
-	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
-		if(override.currently_assigned)
-			override.currently_assigned -= src
-
 	. = ..()
 
 	// Everything below fits the "we have to clear by principle it but i dont wanna break stuff" bill

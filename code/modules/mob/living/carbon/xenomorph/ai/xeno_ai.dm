@@ -235,8 +235,7 @@
 		var/validity = cycled_override.check_behavior_validity(src, distance)
 
 		if(!validity || distance >= shortest_distance)
-			if(cycled_override.currently_assigned)
-				cycled_override.currently_assigned -= src
+			cycled_override.remove_from_queue(src)
 			continue
 
 		shortest_distance = distance
