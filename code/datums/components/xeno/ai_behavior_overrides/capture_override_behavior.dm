@@ -7,10 +7,11 @@
 /datum/component/ai_behavior_override/capture/Initialize(...)
 	. = ..()
 
-	if(!istype(parent, /mob))
-		return COMPONENT_INCOMPATIBLE
+	if(!ishuman(parent))
+		var/mob/living/new_parent = locate() in get_turf(parent)
+		if(new_parent)
+			new_parent.AddComponent(/datum/component/ai_behavior_override/capture)
 
-	if(isxeno(parent))
 		return COMPONENT_INCOMPATIBLE
 
 /datum/component/ai_behavior_override/capture/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
