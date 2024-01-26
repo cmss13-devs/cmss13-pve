@@ -79,14 +79,14 @@
 		return FALSE
 
 	var/obj/effect/alien/weeds/checked_weeds = checked_turf.weeds
-	if(checked_weeds && checked_weeds.hivenumber == parent.hivenumber)
+	if(checked_weeds && IS_SAME_HIVENUMBER(checked_weeds, parent))
 		return FALSE
 
 	if(checked_turf.is_weedable() < FULLY_WEEDABLE)
 		return FALSE
 
 	var/obj/effect/alien/weeds/found_weeds = locate(/obj/effect/alien/weeds/node) in range(3, checked_turf)
-	if(found_weeds && found_weeds.hivenumber == parent.hivenumber)
+	if(found_weeds && IS_SAME_HIVENUMBER(found_weeds, parent))
 		return FALSE
 
 	if(checked_turf.density)
