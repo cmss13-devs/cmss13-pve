@@ -15,7 +15,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 */// - Morrow
 
-// OBJECTS
+
+/////////////////////////////
+//         OBJECTS         //
+/////////////////////////////
 /obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -43,7 +46,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return ..()
 
-// MINERAL DOOR
+
+/////////////////////////////
+//       MINERAL DOOR      //
+/////////////////////////////
 /obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	return DOOR_PENALTY
 
@@ -57,7 +63,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		acting_xeno.a_intent = INTENT_HELP
 	. = ..()
 
-/// Platforms
+
+/////////////////////////////
+//        PLATFORMS        //
+/////////////////////////////
 /obj/structure/platform/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -65,7 +74,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
-// Poddoors/shutters
+
+/////////////////////////////
+//    Poddoors/shutters    //
+/////////////////////////////
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -82,7 +94,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
-// AIRLOCK
+
+/////////////////////////////
+//         AIRLOCK         //
+/////////////////////////////
 /obj/structure/machinery/door/airlock/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -93,7 +108,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
-// HUMANS
+
+/////////////////////////////
+//         HUMANS         //
+/////////////////////////////
 /mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(status_flags & GODMODE)
 		return ..()
@@ -125,7 +143,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return TRUE
 
-// XENOS
+
+/////////////////////////////
+//          XENOS          //
+/////////////////////////////
 /mob/living/carbon/xenomorph/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -152,7 +173,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return TRUE
 
-// VEHICLES
+
+/////////////////////////////
+//         VEHICLES        //
+/////////////////////////////
 /obj/vehicle/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -160,7 +184,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return VEHICLE_PENALTY
 
-// SENTRY
+
+/////////////////////////////
+//         SENTRY          //
+/////////////////////////////
 /obj/structure/machinery/defenses/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -168,7 +195,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return VEHICLE_PENALTY
 
-// WINDOW FRAME
+
+/////////////////////////////
+//      WINDOW FRAME       //
+/////////////////////////////
 /obj/structure/window_frame/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(X.claw_type == CLAW_TYPE_VERY_SHARP || (X.claw_type >= CLAW_TYPE_SHARP && !reinforced))
 		return ..()
@@ -181,7 +211,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
-// Avoid barricades if possible.
+
+/////////////////////////////
+//       BARRICADES        //
+/////////////////////////////
 /obj/structure/barricade/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -189,14 +222,24 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return BARRICADE_PENALTY
 
-// FIRE
+
+/////////////////////////////
+//          FIRE           //
+/////////////////////////////
 /obj/flamer_fire/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
 	if(xeno.caste?.fire_immunity & (FIRE_IMMUNITY_NO_IGNITE|FIRE_IMMUNITY_NO_DAMAGE))
 		return 0
 
 	return FIRE_PENALTY
 
-/// Open turfs, sometimes open turfs are passed back as obstacles due to platforms and such, generally it's fast so very slight penalty mainly for handling subtypes properly
+
+/////////////////////////////
+//          FLOOR          //
+/////////////////////////////
+/*
+	Sometimes open turfs are passed back as obstacles due to platforms and such,
+	generally it's fast so very slight penalty mainly for handling subtypes properly
+*/
 /turf/open/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
