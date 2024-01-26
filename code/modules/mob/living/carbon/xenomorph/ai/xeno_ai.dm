@@ -340,6 +340,9 @@
 	if(ai_xeno.can_not_harm(src))
 		return FALSE
 
+	if(alpha <= 45 && get_dist(ai_xeno, src) > 2)
+		return FALSE
+
 	return TRUE
 
 /mob/living/carbon/xenomorph/proc/make_ai()
