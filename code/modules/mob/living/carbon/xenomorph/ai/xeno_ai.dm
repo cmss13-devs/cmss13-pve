@@ -282,18 +282,21 @@
 		if(distance > ai_range)
 			continue
 
-		if(potential_vehicle_target.health <= 0)
-			var/skip_vehicle = TRUE
+		var/skip_vehicle
 
-			var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
-			for(var/mob/living/carbon/carbon_mob in interior_living_mobs)
-				if(!carbon_mob.check_mob_target(src))
-					continue
-
-				skip_vehicle = FALSE
-
-			if(skip_vehicle)
+		var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
+		for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
+			if(human_mob.stat == DEAD || human_mob.check_mob_target(src))
 				continue
+
+			skip_vehicle = TRUE
+			break
+
+		if(potential_vehicle_target.health <= 0)
+			skip_vehicle = TRUE
+
+		if(skip_vehicle)
+			continue
 
 		viable_targets += potential_vehicle_target
 
