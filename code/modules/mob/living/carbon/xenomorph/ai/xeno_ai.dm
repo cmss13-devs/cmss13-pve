@@ -282,18 +282,21 @@
 		if(distance > ai_range)
 			continue
 
-		var/skip_vehicle
+		if(potential_vehicle_target.health <= 0)
+			continue
 
+		var/multitile_faction = potential_vehicle_target.vehicle_faction
+		if(hive.faction_is_ally(multitile_faction))
+			continue
+
+		var/skip_vehicle
 		var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
 		for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
-			if(human_mob.stat == DEAD || human_mob.check_mob_target(src))
+			if(!human_mob.check_mob_target(src))
 				continue
 
-			skip_vehicle = TRUE
+			skip_vehicle = FALSE
 			break
-
-		if(potential_vehicle_target.health <= 0)
-			skip_vehicle = TRUE
 
 		if(skip_vehicle)
 			continue
