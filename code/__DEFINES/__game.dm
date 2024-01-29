@@ -44,6 +44,10 @@ block( \
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 
+#define MAP_DESERT_DAM_RU "Trijent Dam RU"
+#define MAP_WHISKEY_OUTPOST_RU "Outpost Tango"
+#define MAP_DERELICT_ALMAYER_RU "Derelict Almayer RU"
+
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
 

@@ -1,4 +1,4 @@
-#define HEALTH_THRESHOLD_DEAD -200
+#define HEALTH_THRESHOLD_DEAD -400
 #define HEALTH_THRESHOLD_CRIT -50
 
 //Some mob defines below
