@@ -13,7 +13,6 @@ Format:
 endmap
 
 map lv624
-	default
 endmap
 
 map bigredv2
@@ -35,12 +34,13 @@ map desert_dam
 	minplayers 130
 endmap
 
-map ice_colony_v1
-	minplayers 130
+map desert_dam_ru
 endmap
 
 map ice_colony_v2
 	minplayers 130
+	voteweight 0
+	disabled
 endmap
 
 map shivas_snowball
@@ -64,5 +64,12 @@ endmap
 map derelict_almayer
 endmap
 
+map derelict_almayer_ru
+endmap
+
 map whiskey_outpost_v2
+endmap
+
+map whiskey_outpost_ru
+	default
 endmap
