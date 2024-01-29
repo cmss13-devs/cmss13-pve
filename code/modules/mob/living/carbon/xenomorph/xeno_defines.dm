@@ -1034,7 +1034,7 @@
 
 	return faction_is_ally(living_mob.faction)
 
-/datum/hive_status/proc/faction_is_ally(faction, ignore_queen_check = FALSE)
+/datum/hive_status/proc/faction_is_ally(faction, ignore_queen_check = TRUE)
 	if(faction == internal_faction)
 		return TRUE
 	if(!ignore_queen_check && !living_xeno_queen)
@@ -1425,7 +1425,7 @@
 	return ..()
 
 /datum/hive_status/proc/on_queen_death() //break alliances on queen's death
-	if(allow_no_queen_actions || living_xeno_queen)
+/*	if(allow_no_queen_actions || living_xeno_queen)
 		return
 	var/broken_alliances = FALSE
 	for(var/faction in allies)
@@ -1437,7 +1437,7 @@
 
 	if(broken_alliances)
 		xeno_message(SPAN_XENOANNOUNCE("With the death of the Queen, all alliances have been broken."), 3, hivenumber)
-
+*/
 /datum/hive_status/proc/change_stance(faction, should_ally)
 	if(faction == name)
 		return
