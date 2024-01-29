@@ -133,6 +133,11 @@
 #define MINIMUM_CHARGE_DISTANCE 3
 #define MAXIMUM_TARGET_DISTANCE 12
 
+/datum/action/xeno_action/onclick/charger_charge/proc/handle_position_change(mob/living/carbon/xenomorph/xeno, body_position)
+	SIGNAL_HANDLER
+	if(body_position == LYING_DOWN)
+		handle_movement(xeno)
+
 /datum/action/xeno_action/onclick/charger_charge/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	if(!DT_PROB(ai_prob_chance, delta_time) || !isnull(charge_dir) || processing_xeno.action_busy)
 		return
@@ -281,7 +286,7 @@
 			shake_camera(Mob, 2, 1)
 
 	for(var/mob/living/carbon/human/Mob in xeno.loc)
-		if(Mob.lying && Mob.stat != DEAD)
+		if(Mob.body_position == LYING_DOWN && Mob.stat != DEAD)
 			xeno.visible_message(SPAN_DANGER("[xeno] runs [Mob] over!"),
 				SPAN_DANGER("You run [Mob] over!")
 			)
@@ -297,7 +302,7 @@
 
 	if(momentum >= 5)
 		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
-			if(hit_human.knocked_down)
+			if(hit_human.body_position == LYING_DOWN)
 				continue
 
 			shake_camera(hit_human, 4, 2)

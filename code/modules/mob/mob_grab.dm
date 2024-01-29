@@ -66,15 +66,6 @@
 
 
 	var/mob/victim = grabbed_thing
-	var/max_grab_size = user.mob_size
-	/// Amazing what you can do with a bit of dexterity.
-	if(HAS_TRAIT(user, TRAIT_DEXTROUS))
-		max_grab_size++
-	/// Strong mobs can lift above their own weight.
-	if(HAS_TRAIT(user, TRAIT_SUPER_STRONG))//NB; this will mean Yautja can bodily lift MOB_SIZE_XENO(3) and Synths can lift MOB_SIZE_XENO_SMALL(2)
-		max_grab_size++
-	if(victim.mob_size > max_grab_size || !(victim.status_flags & CANPUSH))
-		return //can't tighten your grip on mobs bigger than you and mobs you can't push.
 	last_upgrade = world.time
 
 	switch(user.grab_level)
@@ -83,20 +74,20 @@
 		if(GRAB_AGGRESSIVE)
 			progress_aggressive(user, victim)
 
-/obj/item/grab/proc/progress_passive(mob/living/carbon/human/user, mob/victim)
+	if(user.grab_level >= GRAB_AGGRESSIVE)
+		ADD_TRAIT(victim, TRAIT_FLOORED, CHOKEHOLD_TRAIT)
+
+/obj/item/grab/proc/progress_passive(mob/living/carbon/human/user, mob/living/victim)
 	user.grab_level = GRAB_AGGRESSIVE
 	playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 	user.visible_message(SPAN_WARNING("[user] has grabbed [victim] aggressively!"), null, null, 5)
-	victim.update_canmove()
 
-/obj/item/grab/proc/progress_aggressive(mob/living/carbon/human/user, mob/victim)
+/obj/item/grab/proc/progress_aggressive(mob/living/carbon/human/user, mob/living/victim)
 	user.grab_level = GRAB_CHOKE
 	playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 	user.visible_message(SPAN_WARNING("[user] holds [victim] by the neck and starts choking them!"), null, null, 5)
 	victim.Move(user.loc, get_dir(victim.loc, user.loc))
 	victim.update_transform(TRUE)
-
-	victim.update_canmove()
 
 /obj/item/grab/attack(mob/living/M, mob/living/user)
 	if(M == grabbed_thing)
