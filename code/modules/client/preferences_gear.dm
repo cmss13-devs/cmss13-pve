@@ -171,7 +171,6 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/clothing/mask/rebreather/skull/black
 	cost = 4
 
-
 /datum/gear/headwear
 	category = "Headwear"
 	cost = 3
