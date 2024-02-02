@@ -93,6 +93,7 @@
 
 /obj/item/clothing/accessory/purple
 	name = "purple tie"
+	icon_state = "purpletie"
 
 /obj/item/clothing/accessory/horrible
 	name = "horrible tie"
