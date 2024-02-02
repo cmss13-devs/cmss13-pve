@@ -164,7 +164,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/uscm/skull_balaclava_blue
 	display_name = "USCM balaclava, blue skull"
 	path = /obj/item/clothing/mask/rebreather/skull
-	cost = 4 //same as skull facepaint
+	cost = 4
 
 /datum/gear/mask/uscm/skull_balaclava_black
 	display_name = "USCM balaclava, black skull"
