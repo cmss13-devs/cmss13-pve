@@ -837,7 +837,9 @@
 	},
 /area/golden_arrow/medical)
 "eL" = (
-/obj/structure/machinery/cryopod/right,
+/obj/structure/machinery/cryopod/right{
+	dir = 2
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -1857,7 +1859,9 @@
 	},
 /area/golden_arrow/cryo_cells)
 "kr" = (
-/obj/structure/machinery/cryopod/right,
+/obj/structure/machinery/cryopod/right{
+	dir = 2
+	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -2382,7 +2386,8 @@
 "nR" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
-	pixel_y = 13
+	pixel_y = 13;
+	dir = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -2728,7 +2733,8 @@
 /area/golden_arrow/hangar)
 "qf" = (
 /obj/structure/machinery/cryopod/right{
-	pixel_y = 6
+	pixel_y = 6;
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -2750,7 +2756,8 @@
 "qm" = (
 /obj/structure/machinery/cryopod/right{
 	layer = 3.1;
-	pixel_y = 13
+	pixel_y = 13;
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -2873,7 +2880,8 @@
 /area/golden_arrow/engineering)
 "rb" = (
 /obj/structure/machinery/cryopod{
-	pixel_y = 6
+	pixel_y = 6;
+	dir = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -5769,7 +5777,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/firingrange)
 "Ii" = (
-/obj/structure/machinery/cryopod,
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -6503,6 +6513,14 @@
 /turf/open/floor/almayer{
 	dir = 1;
 	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/cryo_cells)
+"Mo" = (
+/obj/structure/machinery/cryopod{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
 	},
 /area/golden_arrow/cryo_cells)
 "Mu" = (
@@ -7383,7 +7401,9 @@
 	},
 /area/golden_arrow/platoon_sergeant)
 "QT" = (
-/obj/structure/machinery/cryopod,
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -20125,7 +20145,7 @@ HK
 Pf
 KP
 HK
-Ii
+Mo
 nR
 QT
 nR
