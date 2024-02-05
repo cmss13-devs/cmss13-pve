@@ -11,7 +11,7 @@
 	gear_preset = /datum/equipment_preset/uscm/leader
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your squad.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way."
 
-	job_options = list(GYSGT_VARIANT = "GYSGT", SSGT_VARIANT = "SSGT")
+	job_options = list(GYSGT_VARIANT = "MSzh", SSGT_VARIANT = "Serzhant")
 
 /datum/job/marine/leader/handle_job_options(option)
 	if(option != GYSGT_VARIANT)

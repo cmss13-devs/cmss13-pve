@@ -12,7 +12,7 @@
 	gear_preset = /datum/equipment_preset/uscm_ship/so
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to monitor the Marines, man the CIC, and listen to your superior officers.</a> You are in charge of logistics and the overwatch system. You are also in line to take command after other eligible superior commissioned officers."
 
-	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")
+	job_options = list(FIRST_LT_VARIANT = "Sr. Lt.", SECOND_LT_VARIANT = "Lt.")
 
 /datum/job/command/bridge/set_spawn_positions(count)
 	spawn_positions = so_slot_formula(count)
@@ -51,6 +51,7 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai
 	total_positions = 1
 	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm_ship/so
 
 /datum/job/command/bridge/ai/set_spawn_positions(count)
 	return spawn_positions

@@ -129,6 +129,16 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/upp
+	name = SQUAD_UPP
+	equipment_color = "#8B0000"
+	chat_color = "#B22222"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = UPP_FREQ
+	minimap_color = MINIMAP_SQUAD_ALPHA
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

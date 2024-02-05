@@ -262,6 +262,11 @@ var/list/shotgun_handfuls_12g = list(
 	handful_state = "heavy_buckshot"
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
 
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special
+	name = "handful of superheavy buckshot shells (8g)"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
+
+
 /obj/item/ammo_magazine/handful/shotgun/heavy/dragonsbreath
 	name = "handful of dragon's breath shells (8g)"
 	desc = "These shells fire magnesium (rather than the usual lead) pellets that ignite on contact with the air, setting anything it hits on fire. Its custom design also increases maximum range."

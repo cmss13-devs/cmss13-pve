@@ -19,3 +19,6 @@ endmap
 map golden_arrow
 	default
 endmap
+
+map chapaev
+endmap

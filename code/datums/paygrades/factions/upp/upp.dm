@@ -16,8 +16,8 @@
 
 /datum/paygrade/upp/ue2
 	paygrade = "UE2"
-	name = "Private First Class"
-	prefix = "PFC."
+	name = "Efreitor"
+	prefix = "Efr."
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3

@@ -16,8 +16,8 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-	if(!isnull(channels[SQUAD_MARINE_1]) && SQUAD_MARINE_1 != GLOB.main_platoon_name)
-		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+	if(!isnull(channels[SQUAD_UPP]) && SQUAD_UPP != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, SQUAD_UPP)
 
 /obj/item/device/encryptionkey/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER

@@ -7,7 +7,7 @@
 	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
 
 	var/list/squad_limit = list(
-		/datum/squad/marine/alpha
+		/datum/squad/marine/upp
 	)
 
 	var/list/objectives = list()

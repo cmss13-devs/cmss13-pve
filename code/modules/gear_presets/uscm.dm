@@ -64,20 +64,21 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
-	name = "USCM Squad Rifleman"
+	name = "UPP Squad Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
-	paygrade = "ME2"
+	paygrade = "UE1"
 	role_comm_title = "RFN"
 	skills = /datum/skills/pfc
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 
 	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/pfc/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -92,25 +93,26 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/pfc/lesser_rank
-	paygrade = "ME1"
+	paygrade = "UE0"
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
-	name = "USCM Squad Smartgunner"
+	name = "UPP Squad Machinegunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	assignment = JOB_SQUAD_SMARTGUN
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	rank = JOB_SQUAD_SMARTGUN
-	paygrade = "ME4"
-	role_comm_title = "SG"
+	paygrade = "UE3"
+	role_comm_title = "MG"
 	skills = /datum/skills/smartgunner
 
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/sg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -125,7 +127,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/sg/lesser_rank
-	paygrade = "ME3"
+	paygrade = "UE32"
 
 //*****************************************************************************************************/
 
@@ -264,13 +266,13 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/medic
-	name = "USCM Squad Hospital Corpsman"
+	name = "UPP Squad Corpsman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SQUAD_MEDIC
 	rank = JOB_SQUAD_MEDIC
-	paygrade = "ME4"
+	paygrade = "UE3"
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
 
@@ -279,9 +281,9 @@
 	utility_under = list(/obj/item/clothing/under/marine/medic)
 
 /datum/equipment_preset/uscm/medic/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel/medic
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine/medic
+		back_item = /obj/item/storage/backpack/marine/medic/upp
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -294,25 +296,25 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/med(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/medic/lesser_rank
-	paygrade = "ME3"
+	paygrade = "UE2"
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Squad Sergeant"
+	name = "UPP Squad Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
-	paygrade = "ME5"
+	paygrade = "UE4"
 	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
-
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	minimap_icon = "tl"
 
 /datum/equipment_preset/uscm/tl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -361,13 +363,13 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
-	name = "USCM Platoon Sergeant"
+	name = "UPP Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "ME7"
+	paygrade = "UE6"
 	role_comm_title = "PltSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
@@ -375,7 +377,7 @@
 	minimap_icon = "leader"
 
 /datum/equipment_preset/uscm/leader/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
@@ -390,7 +392,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/lead(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/leader/lesser_rank
-	paygrade = "ME6"
+	paygrade = "UE5"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

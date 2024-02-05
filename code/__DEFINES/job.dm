@@ -12,6 +12,7 @@
 #define SQUAD_MARINE_INTEL "Intel"
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
+#define SQUAD_UPP "Red Dawn"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

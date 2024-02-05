@@ -65,8 +65,8 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-	if(SQUAD_MARINE_1 == default_freq && SQUAD_MARINE_1 != GLOB.main_platoon_name)
-		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+	if(SQUAD_UPP == default_freq && SQUAD_UPP != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, SQUAD_UPP)
 
 /obj/item/device/radio/headset/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
@@ -514,7 +514,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/mcom)
 	volume = RADIO_VOLUME_CRITICAL
 	multibroadcast_cooldown = LOW_MULTIBROADCAST_COOLDOWN
-	frequency = ALPHA_FREQ
+	frequency = UPP_FREQ
 
 /obj/item/device/radio/headset/almayer/mcom/alt
 	initial_keys = list(/obj/item/device/encryptionkey/mcom/alt)
@@ -590,7 +590,7 @@
 /obj/item/device/radio/headset/almayer/marine
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	frequency = ALPHA_FREQ
+	frequency = UPP_FREQ
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
