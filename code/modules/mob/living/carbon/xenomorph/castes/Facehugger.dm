@@ -5,7 +5,7 @@
 	plasma_max = 10
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	max_health = 45
+	max_health = XENO_HEALTH_LARVA
 	caste_desc = "Ewwww, that's disgusting!"
 	speed = XENO_SPEED_TIER_10
 
@@ -19,7 +19,7 @@
 	caste_type = XENO_CASTE_FACEHUGGER
 	speak_emote = list("hisses")
 	icon_state = "Facehugger"
-	icon_size = 45
+	icon_size = 48
 	pixel_x = -8
 	pixel_y = -6
 	old_x = -8
@@ -61,8 +61,6 @@
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
 
 	ai_range = 24
-	var/linger_range = 8
-	var/linger_deviation = 1
 
 /mob/living/carbon/xenomorph/facehugger/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -71,10 +69,7 @@
 		PF.flags_can_pass_all = PASS_ALL^PASS_OVER_THROW_ITEM
 
 /mob/living/carbon/xenomorph/facehugger/init_movement_handler()
-	var/datum/xeno_ai_movement/linger/facehugger/facehugger_movement = new(src)
-	facehugger_movement.linger_range = linger_range
-	facehugger_movement.linger_deviation = linger_deviation
-	return facehugger_movement
+	return new /datum/xeno_ai_movement/linger/facehugger(src)
 
 /mob/living/carbon/xenomorph/facehugger/update_icons(is_pouncing)
 	if(!caste)
