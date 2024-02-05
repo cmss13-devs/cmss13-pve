@@ -150,6 +150,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 /proc/setup_all_maps()
 	return list(
 		MAP_LV_624 = new /obj/item/map/lazarus_landing_map(),
+		MAP_LV_624_REPAIRED = new /obj/item/map/lazarus_landing_map(),
 		MAP_ICE_COLONY = new /obj/item/map/ice_colony_map(),
 		MAP_ICE_COLONY_V1 = new /obj/item/map/ice_colony_map/v1(),
 		MAP_ICE_COLONY_V2 = new /obj/item/map/ice_colony_map_/v2(),
