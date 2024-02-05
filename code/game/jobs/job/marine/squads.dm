@@ -139,6 +139,11 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/upp/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
@@ -321,7 +326,7 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-/datum/squad/marine/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+/datum/squad/marine/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	name = new_name
