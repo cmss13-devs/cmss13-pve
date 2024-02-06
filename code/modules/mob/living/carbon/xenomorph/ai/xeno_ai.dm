@@ -74,13 +74,7 @@
 		current_path = null
 		return TRUE
 
-	var/stat_check = FALSE
-	if(istype(current_target, /mob))
-		var/mob/current_target_mob = current_target
-		var/enemy_stat = current_target_mob.stat
-		stat_check = isxeno(current_target_mob) ? (enemy_stat == DEAD) : (enemy_stat != CONSCIOUS)
-
-	if(QDELETED(current_target) || stat_check || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
+	if(QDELETED(current_target) || current_target.ai_check_stat() || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
 		COOLDOWN_START(src, forced_retarget_cooldown, forced_retarget_time)
 		if(QDELETED(src))
@@ -142,6 +136,9 @@
 	if(get_turf(src) == target)
 		return 0
 	return INFINITY
+
+/atom/proc/ai_check_stat()
+	return FALSE
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
@@ -259,7 +256,7 @@
 		if(z != potential_target.z)
 			continue
 
-		if(!potential_target.check_mob_target(src))
+		if(!potential_target.ai_can_target(src))
 			continue
 
 		var/distance = get_dist(src, potential_target)
@@ -294,7 +291,7 @@
 		var/skip_vehicle
 		var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
 		for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
-			if(!human_mob.check_mob_target(src))
+			if(!human_mob.ai_can_target(src))
 				continue
 
 			skip_vehicle = FALSE
@@ -341,9 +338,9 @@
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
-/mob/living/carbon/proc/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
-	if(stat == DEAD)
-		return FALSE // We leave dead bodies alone
+/mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
+	if(!ai_check_stat())
+		return FALSE
 
 	if(ai_xeno.can_not_harm(src))
 		return FALSE

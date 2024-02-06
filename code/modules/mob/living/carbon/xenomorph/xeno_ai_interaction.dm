@@ -59,7 +59,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	return 0
 
 /obj/structure/mineral_door/resin/xeno_ai_act(mob/living/carbon/xenomorph/acting_xeno)
-	if(acting_xeno.hivenumber == hivenumber)
+	if(IS_SAME_HIVENUMBER(acting_xeno, src))
 		acting_xeno.a_intent = INTENT_HELP
 	. = ..()
 
@@ -110,6 +110,13 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
+//          MOBS           //
+/////////////////////////////
+/mob/living/ai_check_stat()
+	return stat == CONSCIOUS
+
+
+/////////////////////////////
 //         HUMANS         //
 /////////////////////////////
 /mob/living/carbon/human/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -127,13 +134,10 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
-/mob/living/carbon/human/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
+/mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
 	. = ..()
 	if(!.)
 		return FALSE
-
-	if(stat == UNCONSCIOUS)
-		return FALSE // We also leave crit people be
 
 	if(species.flags & IS_SYNTHETIC)
 		return FALSE
@@ -163,7 +167,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
-/mob/living/carbon/xenomorph/check_mob_target(mob/living/carbon/xenomorph/ai_xeno)
+/mob/living/carbon/xenomorph/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
 	. = ..()
 	if(!.)
 		return FALSE
@@ -172,6 +176,9 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return FALSE
 
 	return TRUE
+
+/mob/living/carbon/xenomorph/ai_check_stat()
+	return stat != DEAD // Should slash enemy xenos, even if they are critted out
 
 
 /////////////////////////////

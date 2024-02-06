@@ -158,7 +158,7 @@
 		if(distance_between_base_carbon_and_xeno < MINIMUM_CHARGE_DISTANCE)
 			continue
 
-		if(!base_checked_carbon.check_mob_target(processing_xeno))
+		if(!base_checked_carbon.ai_can_target(processing_xeno))
 			continue
 
 		var/secondary_count = 0
@@ -166,7 +166,7 @@
 		var/secondary_y_sum = 0
 
 		for(var/mob/living/carbon/secondary_checked_carbon in range(FLOCK_SCAN_RADIUS, base_checked_carbon))
-			if(!secondary_checked_carbon.check_mob_target(processing_xeno))
+			if(!secondary_checked_carbon.ai_can_target(processing_xeno))
 				continue
 
 			secondary_count++
@@ -303,6 +303,9 @@
 	if(momentum >= 5)
 		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
 			if(hit_human.body_position == LYING_DOWN)
+				continue
+
+			if(xeno.can_not_harm(hit_human))
 				continue
 
 			shake_camera(hit_human, 4, 2)
