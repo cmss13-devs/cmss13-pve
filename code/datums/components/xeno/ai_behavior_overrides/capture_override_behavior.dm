@@ -8,7 +8,7 @@
 	. = ..()
 
 	if(!ishuman(parent))
-		var/mob/living/new_parent = locate() in get_turf(parent)
+		var/mob/living/carbon/human/new_parent = locate() in get_turf(parent)
 		if(new_parent)
 			new_parent.AddComponent(/datum/component/ai_behavior_override/capture)
 

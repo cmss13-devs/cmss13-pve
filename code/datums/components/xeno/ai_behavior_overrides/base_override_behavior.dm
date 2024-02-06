@@ -46,9 +46,11 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 /// Override this to check if we want our behavior to be valid for the checked_xeno, passes the common factor of "distance" which is the distance between the checked_xeno and src parent
 /datum/component/ai_behavior_override/proc/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
 	if(length(currently_assigned) >= max_assigned && !(checked_xeno in currently_assigned))
+		remove_from_queue(checked_xeno)
 		return FALSE
 
 	if(checked_xeno.stat != CONSCIOUS)
+		remove_from_queue(checked_xeno)
 		return FALSE
 
 	return TRUE
