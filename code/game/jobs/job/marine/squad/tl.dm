@@ -45,4 +45,13 @@ AddTimelock(/datum/job/marine/tl, list(
 	total_positions = 2
 	spawn_positions = 2
 
+/datum/job/marine/tl/ai/upp
+	title = JOB_SQUAD_TEAM_LEADER_UPP
+	gear_preset = /datum/equipment_preset/uscm/tl/upp
+
+/obj/effect/landmark/start/marine/tl/upp
+	name = JOB_SQUAD_TEAM_LEADER_UPP
+	squad = SQUAD_UPP
+	job = /datum/job/marine/tl/ai/upp
+
 #undef SGT_VARIANT

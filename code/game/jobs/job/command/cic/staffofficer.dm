@@ -10,9 +10,10 @@
 	scaled = FALSE
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/so
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to monitor the Marines, man the CIC, and listen to your superior officers.</a> You are in charge of logistics and the overwatch system. You are also in line to take command after other eligible superior commissioned officers."
 
-	job_options = list(FIRST_LT_VARIANT = "Sr. Lt.", SECOND_LT_VARIANT = "Lt.")
+	job_options = list(FIRST_LT_VARIANT = "1stLt.", SECOND_LT_VARIANT = "2ndLt.")
 
 /datum/job/command/bridge/set_spawn_positions(count)
 	spawn_positions = so_slot_formula(count)
@@ -34,9 +35,9 @@
 
 /datum/job/command/bridge/handle_job_options(option)
 	if(option != FIRST_LT_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm_ship/so/lesser_rank
+		gear_preset = gear_preset_secondary
 	else
-		gear_preset = /datum/equipment_preset/uscm_ship/so
+		gear_preset = initial(gear_preset)
 
 AddTimelock(/datum/job/command/bridge, list(
 	JOB_SQUAD_LEADER = 1 HOURS,
@@ -51,13 +52,22 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai
 	total_positions = 1
 	spawn_positions = 1
-	gear_preset = /datum/equipment_preset/uscm_ship/so
 
 /datum/job/command/bridge/ai/set_spawn_positions(count)
 	return spawn_positions
 
 /datum/job/command/bridge/ai/get_total_positions(latejoin = 0)
 	return latejoin ? total_positions : spawn_positions
+
+/datum/job/command/bridge/ai/upp
+	title = JOB_SO_UPP
+	gear_preset = /datum/equipment_preset/uscm_ship/so/upp
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+
+/obj/effect/landmark/start/bridge/upp
+	name = JOB_SO_UPP
+	icon_state = "so_spawn"
+	job = /datum/job/command/bridge/ai/upp
 
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT

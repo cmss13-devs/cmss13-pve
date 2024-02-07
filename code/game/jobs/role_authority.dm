@@ -181,6 +181,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 	var/datum/game_mode/G = SSticker.mode
 	roles_for_mode = list()
+	to_chat(world, "[english_list(G.get_roles_list())]")
 	for(var/role_name in G.get_roles_list())
 		var/datum/job/J = roles_by_name[role_name]
 		if(!J)
@@ -449,6 +450,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	. = TRUE
 
 	if(!ishuman(new_mob))
+		to_chat(world, "FUCK!")
 		return
 
 	var/mob/living/carbon/human/new_human = new_mob
@@ -510,6 +512,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		else
 			join_turf = get_turf(pick(GLOB.latejoin))
 		new_human.forceMove(join_turf)
+		to_chat(world, "[assigned_squad], [GLOB.spawns_by_squad_and_job[assigned_squad]], [GLOB.spawns_by_squad_and_job[assigned_squad][new_job.type]]")
 
 	for(var/cardinal in GLOB.cardinals)
 		var/obj/structure/machinery/cryopod/pod = locate() in get_step(new_human, cardinal)

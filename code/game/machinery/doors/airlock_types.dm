@@ -883,6 +883,10 @@
 	icon = 'icons/obj/structures/doors/dropship2_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
 	id = "sh_dropship2"
 
+/obj/structure/machinery/door/airlock/dropship_hatch/upp
+	icon = 'icons/obj/structures/doors/dropshipupp_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
+
+
 /obj/structure/machinery/door/airlock/dropship_hatch/monorail
 	icon = 'icons/obj/structures/doors/pod_doors.dmi' //TEMPLATE NEED TO REPLACE LATER
 	name = "monorail door"
@@ -900,6 +904,9 @@
 
 /obj/structure/machinery/door/airlock/hatch/cockpit/two
 	icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
+
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp
+	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
 
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison

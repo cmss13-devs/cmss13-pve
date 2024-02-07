@@ -1,0 +1,569 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_1";
+	opacity = 0
+	},
+/area/space)
+"b" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"c" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 19
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"d" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_leftengine"
+	},
+/area/space)
+"e" = (
+/obj/structure/stairs,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"f" = (
+/obj/structure/machinery/computer/cameras/dropship/midway,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"g" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/space)
+"h" = (
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/space)
+"i" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp3"
+	},
+/area/space)
+"j" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/space)
+"k" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"l" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/turf/open/space/basic,
+/area/space)
+"m" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"n" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"o" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp21"
+	},
+/area/space)
+"p" = (
+/obj/structure/machinery/computer/dropship_weapons/midway,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"q" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"r" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/space)
+"s" = (
+/turf/open/space/basic,
+/area/space)
+"t" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"u" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp1"
+	},
+/area/space)
+"v" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp4"
+	},
+/area/space)
+"w" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp20"
+	},
+/area/space)
+"x" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/space)
+"y" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"z" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp9"
+	},
+/area/space)
+"A" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp27"
+	},
+/area/space)
+"B" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"C" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"D" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"E" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
+	},
+/area/space)
+"F" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "port_door"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"G" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp25"
+	},
+/area/space)
+"H" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_1";
+	opacity = 0
+	},
+/area/space)
+"I" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"J" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp23"
+	},
+/area/space)
+"K" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp5"
+	},
+/area/space)
+"L" = (
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"M" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12;
+	pixel_y = 29
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"N" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"O" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	dir = 8;
+	id = "starboard_door"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/space)
+"P" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"Q" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp27";
+	opacity = 0
+	},
+/area/space)
+"R" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"S" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T15"
+	},
+/area/space)
+"T" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"U" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp22"
+	},
+/area/space)
+"V" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"W" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -13;
+	pixel_y = 29
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"X" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp8"
+	},
+/area/space)
+"Y" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/space)
+"Z" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T6"
+	},
+/area/space)
+
+(1,1,1) = {"
+s
+s
+s
+s
+w
+F
+F
+d
+j
+H
+s
+s
+Z
+d
+j
+r
+H
+s
+"}
+(2,1,1) = {"
+s
+s
+l
+w
+U
+L
+L
+X
+v
+v
+v
+v
+v
+v
+d
+j
+r
+H
+"}
+(3,1,1) = {"
+w
+v
+v
+o
+L
+k
+C
+q
+q
+q
+q
+q
+C
+e
+X
+v
+v
+u
+"}
+(4,1,1) = {"
+o
+f
+q
+Q
+L
+I
+B
+Y
+Y
+Y
+Y
+M
+C
+D
+C
+C
+C
+b
+"}
+(5,1,1) = {"
+A
+T
+y
+t
+m
+V
+c
+h
+h
+h
+h
+M
+k
+D
+q
+q
+q
+q
+"}
+(6,1,1) = {"
+o
+p
+q
+Q
+L
+P
+C
+N
+R
+R
+R
+W
+C
+D
+C
+C
+C
+C
+"}
+(7,1,1) = {"
+G
+K
+K
+o
+L
+k
+C
+q
+q
+q
+q
+q
+C
+e
+z
+K
+K
+i
+"}
+(8,1,1) = {"
+s
+s
+l
+G
+J
+L
+L
+z
+K
+K
+K
+K
+K
+K
+E
+g
+x
+a
+"}
+(9,1,1) = {"
+s
+s
+s
+s
+G
+n
+O
+E
+g
+a
+s
+s
+S
+E
+g
+x
+a
+s
+"}

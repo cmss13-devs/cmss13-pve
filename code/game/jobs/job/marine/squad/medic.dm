@@ -9,9 +9,10 @@
 	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/medic
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You tend the wounds of your squad mates</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters."
 
-	job_options = list(CPL_VARIANT = "Kpl.", LCPL_VARIANT = "Efr.")
+	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
 
 /datum/job/marine/medic/set_spawn_positions(count)
 	for(var/datum/squad/sq in RoleAuthority.squads)
@@ -35,9 +36,9 @@
 
 /datum/job/marine/medic/handle_job_options(option)
 	if(option != CPL_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm/medic/lesser_rank
+		gear_preset = gear_preset_secondary
 	else
-		gear_preset = /datum/equipment_preset/uscm/medic
+		gear_preset = initial(gear_preset)
 
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
@@ -79,6 +80,16 @@ AddTimelock(/datum/job/marine/medic, list(
 
 /datum/job/marine/medic/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/medic/ai/upp
+	title = JOB_SQUAD_MEDIC_UPP
+	gear_preset = /datum/equipment_preset/uscm/medic/upp
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/lesser_rank
+
+/obj/effect/landmark/start/marine/medic/upp
+	name = JOB_SQUAD_MEDIC_UPP
+	squad = SQUAD_UPP
+	job = /datum/job/marine/medic/ai/upp
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT
