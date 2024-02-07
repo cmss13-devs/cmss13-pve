@@ -138,7 +138,7 @@
 	return INFINITY
 
 /atom/proc/ai_check_stat()
-	return FALSE
+	return TRUE // So we aren't trying to find a new target on attack override
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
