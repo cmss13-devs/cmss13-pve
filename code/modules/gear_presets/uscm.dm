@@ -105,6 +105,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE0"
@@ -146,6 +147,14 @@
 	name = "UPP Squad Machinegunner"
 	paygrade = "UE3"
 	role_comm_title = "MG"
+
+/datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	paygrade = "UE2"
@@ -329,6 +338,8 @@
 		back_item = /obj/item/storage/backpack/marine/medic/upp
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.faction = FACTION_UPP
+
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
 	paygrade = "UE2"
@@ -373,6 +384,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.faction = FACTION_UPP
 
 /*****************************************************************************************************/
 
@@ -450,6 +462,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	paygrade = "UE5"

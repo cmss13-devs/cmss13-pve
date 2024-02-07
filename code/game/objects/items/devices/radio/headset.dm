@@ -932,6 +932,9 @@
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
 
+/obj/item/device/radio/headset/distress/UPP/pve
+	hud_type = MOB_HUD_FACTION_USCM
+
 /obj/item/device/radio/headset/distress/UPP/cct
 	name = "UPP-CCT headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n engineering."

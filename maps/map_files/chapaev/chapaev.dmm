@@ -74,6 +74,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"aI" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
 "aS" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 2"
@@ -108,6 +119,17 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/supply)
+"bm" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "bt" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -154,6 +176,17 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_two)
+"bC" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "bH" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -174,6 +207,15 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"bO" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "bR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/ammo/type71,
@@ -257,6 +299,17 @@
 "cT" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/canteen)
+"cX" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
 "dr" = (
 /obj/structure/machinery/body_scanconsole{
 	pixel_y = 6;
@@ -622,6 +675,27 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
+"gZ" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/hangar)
+"hh" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/medical)
 "hq" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -843,6 +917,7 @@
 	},
 /obj/item/clothing/head/uppcap/peaked,
 /obj/item/clothing/suit/storage/marine/faction/UPP/officer,
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_green,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -901,6 +976,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"kB" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "kS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/tea{
@@ -992,6 +1077,17 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
+"mv" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_sergeant)
 "mB" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/strata{
@@ -1228,6 +1324,10 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -1427,6 +1527,17 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"rJ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "rV" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/pillbottles,
@@ -1499,6 +1610,11 @@
 /area/golden_arrow/prep_hallway)
 "sL" = (
 /obj/item/tool/soap,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -1693,6 +1809,16 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
+"uA" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "uE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/drinkingglasses,
@@ -1858,11 +1984,11 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine,
-/obj/item/device/radio/headset/almayer/marine,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP/pve,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2161,6 +2287,17 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"Bs" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/prep_hallway)
 "Bw" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	name = "\improper Platoon Sergeant's Bunk";
@@ -2193,7 +2330,8 @@
 	pixel_x = 7
 	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
-	pixel_x = -12
+	pixel_x = -12;
+	network = list("Chapaev","Vehicle")
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -2242,11 +2380,11 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine,
-/obj/item/device/radio/headset/almayer/marine,
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP/pve,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2435,6 +2573,18 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"DW" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/hangar)
 "DX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -2796,6 +2946,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/supply)
+"HX" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/canteen)
 "Id" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/strata{
@@ -2936,7 +3097,9 @@
 	},
 /area/golden_arrow/medical)
 "JR" = (
-/obj/structure/machinery/computer/overwatch/almayer,
+/obj/structure/machinery/computer/overwatch/almayer{
+	faction = "UPP"
+	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
 	pixel_y = 17
@@ -3236,6 +3399,26 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"OE" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/platoon_commander_rooms)
+"OL" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "OX" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3414,6 +3597,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
+"RN" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/supply)
 "Sf" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/rifle/type71,
@@ -3467,6 +3660,17 @@
 "Tf" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/platoon_sergeant)
+"Tg" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/prep_hallway)
 "Tk" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -3491,6 +3695,18 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"Tx" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "Tz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/cameras/wooden_tv/prop{
@@ -3511,6 +3727,16 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"TF" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "TH" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -3768,8 +3994,8 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine,
-/obj/item/device/radio/headset/almayer/marine,
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP/pve,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3881,6 +4107,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/squad_two)
+"XO" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "Yo" = (
 /obj/structure/closet,
 /obj/item/clothing/accessory/patch/upp,
@@ -10753,7 +10989,7 @@ Tf
 OB
 tG
 QY
-tG
+aI
 tV
 hE
 mV
@@ -11208,7 +11444,7 @@ vW
 vW
 PL
 vW
-vW
+mv
 NU
 Lm
 Hp
@@ -11369,7 +11605,7 @@ Hp
 yY
 CM
 VX
-oH
+kB
 bt
 Nz
 bt
@@ -11802,14 +12038,14 @@ os
 tT
 Bj
 os
-TB
+uA
 zU
 Ar
 ww
 Tw
 mT
 dU
-dU
+TF
 eo
 ww
 Hf
@@ -11819,7 +12055,7 @@ vW
 sy
 NU
 bR
-Hp
+OL
 Hp
 hV
 WY
@@ -12107,7 +12343,7 @@ UV
 OX
 iv
 OX
-OX
+OE
 os
 Aj
 mt
@@ -12122,7 +12358,7 @@ Sx
 Sx
 bK
 bK
-bK
+Bs
 AA
 Sx
 Sx
@@ -12244,7 +12480,7 @@ Jf
 Jf
 Jf
 Jf
-iz
+gZ
 Jf
 Jf
 Jf
@@ -12264,7 +12500,7 @@ qm
 bK
 bK
 sJ
-bK
+Tg
 bK
 EP
 bK
@@ -12717,7 +12953,7 @@ xD
 xD
 cv
 PJ
-PJ
+rJ
 cT
 tq
 Zv
@@ -12727,7 +12963,7 @@ Wp
 kS
 nO
 EA
-af
+HX
 cT
 WP
 WP
@@ -12741,7 +12977,7 @@ AS
 AS
 sL
 iO
-KF
+Tx
 jS
 hx
 jS
@@ -13037,7 +13273,7 @@ sp
 sp
 Rz
 sp
-sp
+bO
 iO
 AC
 iO
@@ -13317,7 +13553,7 @@ wq
 wq
 Jf
 fh
-PJ
+bm
 PJ
 XC
 PJ
@@ -13343,7 +13579,7 @@ wH
 WP
 WP
 iO
-Cs
+bC
 CJ
 CJ
 CJ
@@ -13758,7 +13994,7 @@ Jf
 ED
 Jf
 Jf
-iz
+DW
 Jf
 Jf
 Jf
@@ -13775,7 +14011,7 @@ Jf
 yH
 Dh
 fh
-PJ
+XO
 PJ
 PJ
 PJ
@@ -13936,7 +14172,7 @@ sM
 ts
 ts
 ts
-ts
+cX
 ts
 ts
 ts
@@ -13945,7 +14181,7 @@ Mb
 Mb
 Mb
 ts
-ts
+cX
 bN
 bN
 bN
@@ -13953,7 +14189,7 @@ ts
 ts
 sM
 vN
-Cx
+RN
 Cx
 sz
 Cx
@@ -14394,7 +14630,7 @@ lK
 Ax
 mm
 wV
-DG
+hh
 DG
 DG
 TH
