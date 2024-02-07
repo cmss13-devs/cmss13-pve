@@ -222,7 +222,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine/veteran/UPP/medic, /obj/item/clothing/shoes/marine/upp, /obj/item/clothing/gloves/marine/veteran/upp, /obj/item/device/radio/headset/almayer/marine, /obj/item/clothing/head/helmet/marine/veteran/UPP), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Standard Apparel", 0, list(/obj/item/clothing/under/marine/veteran/UPP/medic, /obj/item/clothing/shoes/marine/upp, /obj/item/clothing/gloves/marine/veteran/upp, /obj/item/device/radio/headset/distress/UPP/pve, /obj/item/clothing/head/helmet/marine/veteran/UPP), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Combat Sterile Gloves", 0, /obj/item/clothing/gloves/marine/medical, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("Ration", 0, /obj/item/reagent_container/food/snacks/upp, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
@@ -275,6 +275,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 /obj/structure/machinery/cm_vending/clothing/medic/upp
 	name = "\improper UnTech Squad Medical Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of hospital corpsman standard-issue equipment."
+	icon_state = "upp_gear"
 	req_access = list(ACCESS_MARINE_MEDPREP)
 	vendor_role = list(JOB_SQUAD_MEDIC)
 

@@ -165,7 +165,7 @@
 		list("UPP Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/upp, VENDOR_ITEM_REGULAR),
 		list("UM4 Pattern Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
-		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine, VENDOR_ITEM_REGULAR),
+		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/UPP/pve, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Brown Webbing Vest", round(scale * 1.25), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
@@ -213,7 +213,7 @@
 
 		list("MASK", -1, null, null, null),
 		list("Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
-		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf/green, VENDOR_ITEM_REGULAR),
+		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
 		list("Rebreather", round(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),

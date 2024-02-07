@@ -499,8 +499,7 @@
 "TN" = (
 /obj/structure/machinery/computer/dropship_weapons/midway{
 	name = "\improper 'Akademia Nauk' weapons controls";
-	shuttle_tag = "dropship_upp";
-	faction = "UPP"
+	shuttle_tag = "dropship_upp"
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/strata{

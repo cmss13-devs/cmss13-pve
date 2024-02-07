@@ -1051,9 +1051,7 @@
 /obj/structure/closet/secure_closet/personal/cabinet{
 	req_access = null
 	},
-/obj/item/clothing/head/uppcap/peaked,
-/obj/item/clothing/suit/storage/marine/faction/UPP/officer,
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_green,
+/obj/item/clothing/suit/storage/snow_suit/soviet,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -1180,10 +1178,7 @@
 	},
 /area/golden_arrow/briefing)
 "me" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access = list();
-	req_one_access_txt = "8;12;39"
-	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -2407,9 +2402,9 @@
 /area/golden_arrow/platoon_sergeant)
 "xU" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
-	name = "\improper Squad Two Armoury";
+	name = "\improper Sergeants Room";
 	req_one_access = null;
-	req_one_access_txt = "8;12;40"
+	req_one_access_txt = "12;32"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2747,10 +2742,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "Cg" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access = list();
-	req_one_access_txt = "8;12;39"
-	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3599,9 +3591,7 @@
 	},
 /area/golden_arrow/medical)
 "JR" = (
-/obj/structure/machinery/computer/overwatch/almayer{
-	faction = "UPP"
-	},
+/obj/structure/machinery/computer/overwatch/almayer,
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
 	pixel_y = 17
@@ -15312,7 +15302,7 @@ gm
 PJ
 PJ
 fh
-Of
+fh
 wV
 SI
 Ax

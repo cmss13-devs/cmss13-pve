@@ -98,8 +98,6 @@
 	name = "UPP Squad Rifleman"
 	paygrade = "UE1"
 	assignment = JOB_SQUAD_MARINE_UPP
-	rank = JOB_SQUAD_MARINE_UPP
-	faction = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
@@ -108,7 +106,6 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE0"
@@ -149,9 +146,7 @@
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
 	assignment = JOB_SQUAD_SMARTGUN_UPP
-	rank = JOB_SQUAD_SMARTGUN_UPP
 	paygrade = "UE3"
-	faction = FACTION_UPP
 	role_comm_title = "MG"
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
@@ -336,9 +331,7 @@
 	name = "UPP Sanitar"
 	paygrade = "UE3"
 	assignment = JOB_SQUAD_MEDIC_UPP
-	rank = JOB_SQUAD_MEDIC_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
-	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -383,8 +376,6 @@
 	name = "UPP Squad Sergeant"
 	paygrade = "UE4"
 	assignment = JOB_SQUAD_TEAM_LEADER_UPP
-	rank = JOB_SQUAD_TEAM_LEADER_UPP
-	faction = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
@@ -432,8 +423,8 @@
 	name = "USCM Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
-	assignment = JOB_SQUAD_LEADER_UPP
-	rank = JOB_SQUAD_LEADER_UPP
+	assignment = JOB_SQUAD_LEADER
+	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
 	role_comm_title = "PltSgt"
 	minimum_age = 27
@@ -461,10 +452,8 @@
 
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
-	assignment = JOB_SQUAD_LEADER
-	rank = JOB_SQUAD_LEADER
+	assignment = JOB_SQUAD_LEADER_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
-	faction = FACTION_UPP
 	paygrade = "UE6"
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
