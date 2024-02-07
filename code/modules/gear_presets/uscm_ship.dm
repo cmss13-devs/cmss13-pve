@@ -582,6 +582,7 @@
 	name = "UPP Platoon Commander (PltCo)"
 	assignment = JOB_SO_UPP
 	rank = JOB_SO_UPP
+	faction = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_TSL, LANGUAGE_SPANISH, LANGUAGE_CHINESE)
 	paygrade = "UO2"
 
