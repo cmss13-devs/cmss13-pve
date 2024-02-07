@@ -1179,7 +1179,6 @@
 	},
 /area/golden_arrow/canteen)
 "nS" = (
-/obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/mechanical/green{
 	pixel_y = 10
 	},
