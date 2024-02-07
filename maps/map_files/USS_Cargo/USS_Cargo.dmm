@@ -350,6 +350,9 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -585,8 +588,8 @@
 	dir = 5
 	},
 /turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "orangecorner"
+	dir = 10;
+	icon_state = "orange"
 	},
 /area/space)
 "cL" = (
@@ -771,6 +774,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/space)
+"dF" = (
+/obj/structure/cargo_container/horizontal/blue/middle,
+/turf/open/floor/plating,
+/area/space)
 "dH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -819,7 +826,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer{
-	dir = 4;
+	dir = 6;
 	icon_state = "orange"
 	},
 /area/space)
@@ -1457,16 +1464,36 @@
 	},
 /area/space)
 "hi" = (
-/turf/closed/wall/almayer/research/containment/wall/corner{
-	dir = 1
+/obj/structure/cryofeed/right{
+	color = "silver";
+	desc = "A bewildering tangle of machinery and pipes.";
+	name = "\improper coolant feed"
+	},
+/turf/open/floor/bluegrid{
+	icon_state = "bcircuitoff"
 	},
 /area/space)
 "hk" = (
-/turf/closed/wall/almayer/research/containment/wall/north,
+/obj/structure/cryofeed{
+	color = "silver";
+	desc = "A bewildering tangle of machinery and pipes.";
+	name = "coolant feed"
+	},
+/turf/open/floor/bluegrid{
+	icon_state = "bcircuitoff"
+	},
 /area/space)
 "ho" = (
-/turf/closed/wall/almayer/research/containment/wall/corner{
-	dir = 4
+/obj/structure/cryofeed/right{
+	color = "silver";
+	desc = "A bewildering tangle of machinery and pipes.";
+	name = "\improper coolant feed"
+	},
+/obj/structure/machinery/light/blue{
+	dir = 8
+	},
+/turf/open/floor/bluegrid{
+	icon_state = "bcircuitoff"
 	},
 /area/space)
 "hp" = (
@@ -1545,66 +1572,35 @@
 	},
 /area/space)
 "hE" = (
-/turf/closed/wall/almayer/research/containment/wall/west,
+/obj/structure/window/framed/almayer/hull,
+/turf/open/floor/almayer,
 /area/space)
 "hF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/almayer/research/containment/corner_var1{
-	icon_state = "containment_corner_variant_2"
-	},
-/area/space)
-"hG" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 1
-	},
-/area/space)
-"hH" = (
-/obj/structure/machinery/flasher{
-	alpha = 1;
-	id = "Containment Cell 2";
-	layer = 2.1;
-	name = "Mounted Flash";
+/obj/structure/closet/fireaxecabinet{
 	pixel_y = 30
 	},
-/obj/structure/machinery/light/containment{
+/turf/open/floor/almayer,
+/area/space)
+"hG" = (
+/obj/structure/machinery/door/airlock/almayer/maint/reinforced{
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
+/obj/structure/machinery/door/poddoor/almayer,
+/turf/open/floor/plating,
+/area/space)
+"hH" = (
+/obj/structure/sign/safety/nonpress_0g{
+	pixel_x = 32
 	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 1
+/obj/structure/sign/safety/rad_haz{
+	pixel_x = 32;
+	pixel_y = 13
 	},
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "hI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/bed{
-	icon_state = "abed"
-	},
-/turf/open/floor/almayer/research/containment/corner_var1{
-	dir = 4
-	},
-/area/space)
-"hK" = (
-/turf/closed/wall/almayer/research/containment/wall/east,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "hM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1652,35 +1648,35 @@
 	},
 /area/space)
 "ie" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
+/obj/structure/closet/hydrant{
+	pixel_y = 32
 	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 8
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
 /area/space)
 "if" = (
-/turf/open/floor/almayer/research/containment/corner_var1{
-	icon_state = "containment_corner_variant_2"
+/obj/structure/sign/safety/nonpress_0g{
+	pixel_x = 20;
+	pixel_y = 32
 	},
-/area/space)
-"il" = (
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 1
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "orange"
 	},
 /area/space)
 "ir" = (
-/turf/open/floor/almayer/research/containment/corner_var1{
-	dir = 4
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "orange"
 	},
 /area/space)
 "iu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 8
+/turf/open/floor/almayer{
+	icon_state = "emeraldfull"
 	},
 /area/space)
 "iy" = (
@@ -1716,22 +1712,11 @@
 	icon_state = "test_floor4"
 	},
 /area/space)
-"iK" = (
-/turf/open/floor/almayer{
-	icon_state = "emeraldcorner"
-	},
-/area/space)
 "iL" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
-"iM" = (
-/turf/open/floor/almayer{
-	dir = 6;
-	icon_state = "emerald"
-	},
 /area/space)
 "iO" = (
 /turf/open/floor/almayer{
@@ -1739,21 +1724,15 @@
 	icon_state = "emerald"
 	},
 /area/space)
-"iP" = (
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "emeraldcorner"
-	},
-/area/space)
 "iQ" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	dir = 8
+/obj/structure/sign/safety/medical{
+	pixel_x = -32
 	},
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "iR" = (
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 8
-	},
+/obj/structure/machinery/door/airlock/almayer/research,
+/turf/open/floor/almayer,
 /area/space)
 "iS" = (
 /turf/open/floor/almayer{
@@ -1827,12 +1806,10 @@
 	},
 /area/space)
 "jh" = (
-/obj/structure/pipes/vents/pump/no_boom{
-	name = "Secure Reinforced Air Vent";
-	welded = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 1
+/obj/structure/machinery/r_n_d/protolathe,
+/turf/open/floor/almayer{
+	dir = 9;
+	icon_state = "emerald"
 	},
 /area/space)
 "ji" = (
@@ -1920,18 +1897,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
-	},
-/area/space)
-"jF" = (
-/turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "emerald"
-	},
-/area/space)
-"jG" = (
-/turf/open/floor/almayer{
-	dir = 9;
-	icon_state = "emerald"
 	},
 /area/space)
 "jJ" = (
@@ -2087,58 +2052,36 @@
 	},
 /area/space)
 "kh" = (
-/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
-	id = "Containment Cell 2";
-	locked = 1;
-	name = "\improper Containment Cell"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 4
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor4"
+	dir = 5;
+	icon_state = "orange"
 	},
 /area/space)
 "kk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_y = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
-	},
-/turf/open/floor/almayer/research/containment/entrance{
-	dir = 8
+/obj/structure/closet/emcloset,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
 	},
 /area/space)
 "kl" = (
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 4
+/obj/structure/coatrack,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
 /area/space)
 "km" = (
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 1
+/obj/structure/closet/hydrant{
+	pixel_y = 32
 	},
+/turf/open/floor/almayer,
 /area/space)
 "ko" = (
-/obj/structure/machinery/camera/autoname/almayer/containment{
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 8
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "emerald"
 	},
 /area/space)
 "kp" = (
@@ -2190,6 +2133,12 @@
 "kG" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer,
+/area/space)
+"kH" = (
+/obj/structure/largecrate/random/secure,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/space)
 "kI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2245,40 +2194,44 @@
 	},
 /area/space)
 "kW" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	dir = 4
+/obj/structure/sign/catclock{
+	pixel_y = 32
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "emerald"
 	},
 /area/space)
 "kY" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/machinery/r_n_d/organic_analyzer,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "emerald"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/almayer/research/containment/corner3,
 /area/space)
 "lh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/surface/table/reinforced/black,
+/obj/item/prop/almayer/flight_recorder{
+	pixel_x = -8;
+	pixel_y = -20
 	},
-/turf/open/floor/almayer/research/containment/floor2{
-	dir = 1
+/obj/item/prop/almayer/handheld1{
+	pixel_x = 8
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "Cerebraxenon is a derivative of amphetamines mixed with a delayed-release Alkysine solution, developed for the researchers and doctors that want their already-busy minds to go just a tiny bit faster. The side-effects are nasty enough that only the most desperate militaries consider using it, and it's outright banned in most nations. This one is empty.";
+	name = "cerebraxenon bottle"
+	},
+/turf/open/floor/almayer{
+	dir = 8;
+	icon_state = "emerald"
 	},
 /area/space)
 "lj" = (
-/obj/structure/machinery/light/containment{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 1
+/obj/structure/machinery/r_n_d/destructive_analyzer,
+/turf/open/floor/almayer{
+	dir = 4;
+	icon_state = "emerald"
 	},
 /area/space)
 "ln" = (
@@ -2363,16 +2316,31 @@
 	},
 /area/space)
 "lD" = (
-/turf/closed/wall/almayer/research/containment/wall/corner{
-	dir = 8
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/almayer{
+	dir = 10;
+	icon_state = "emerald"
 	},
 /area/space)
+"lG" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/plating,
+/area/space)
 "lH" = (
-/turf/closed/wall/almayer/research/containment/wall/divide,
+/obj/structure/machinery/r_n_d/bioprinter,
+/turf/open/floor/almayer{
+	dir = 6;
+	icon_state = "emerald"
+	},
 /area/space)
 "lK" = (
-/turf/closed/wall/almayer/research/containment/wall/connect_e2{
-	icon_state = "containment_wall_connect_e"
+/turf/open/floor/almayer{
+	icon_state = "sterile_green_side"
 	},
 /area/space)
 "lN" = (
@@ -2547,27 +2515,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
-"mq" = (
-/obj/structure/machinery/r_n_d/protolathe,
-/turf/open/floor/almayer{
-	dir = 9;
-	icon_state = "emerald"
-	},
-/area/space)
 "ms" = (
-/obj/structure/sign/catclock{
-	pixel_y = 32
-	},
 /turf/open/floor/almayer{
 	dir = 1;
-	icon_state = "emerald"
+	icon_state = "sterile_green_side"
 	},
 /area/space)
 "mv" = (
-/obj/structure/machinery/r_n_d/organic_analyzer,
 /turf/open/floor/almayer{
-	dir = 5;
-	icon_state = "emerald"
+	icon_state = "sterile_green_corner"
 	},
 /area/space)
 "mB" = (
@@ -2722,24 +2678,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/space)
-"nx" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/prop/almayer/flight_recorder{
-	pixel_x = -8;
-	pixel_y = -20
-	},
-/obj/item/prop/almayer/handheld1{
-	pixel_x = 8
-	},
-/obj/item/prop/helmetgarb/prescription_bottle{
-	desc = "Cerebraxenon is a derivative of amphetamines mixed with a delayed-release Alkysine solution, developed for the researchers and doctors that want their already-busy minds to go just a tiny bit faster. The side-effects are nasty enough that only the most desperate militaries consider using it, and it's outright banned in most nations. This one is empty.";
-	name = "cerebraxenon bottle"
-	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "emerald"
-	},
-/area/space)
 "ny" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/communications{
@@ -2771,17 +2709,15 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "nF" = (
-/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/almayer{
-	dir = 10;
-	icon_state = "emerald"
+	dir = 8;
+	icon_state = "sterile_green_corner"
 	},
 /area/space)
 "nG" = (
-/obj/structure/machinery/r_n_d/bioprinter,
 /turf/open/floor/almayer{
-	dir = 6;
-	icon_state = "emerald"
+	dir = 4;
+	icon_state = "sterile_green_corner"
 	},
 /area/space)
 "nH" = (
@@ -3923,7 +3859,8 @@
 /area/space)
 "tB" = (
 /turf/open/floor/almayer{
-	icon_state = "emeraldfull"
+	dir = 1;
+	icon_state = "sterile_green_corner"
 	},
 /area/space)
 "tF" = (
@@ -4035,19 +3972,16 @@
 	},
 /area/space)
 "uC" = (
-/obj/structure/sign/safety/nonpress_0g{
+/obj/structure/sign/safety/medical{
 	pixel_x = 32
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/closed/wall/almayer,
 /area/space)
 "uG" = (
-/obj/structure/machinery/door/airlock/almayer/maint/reinforced{
-	dir = 1
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
 	},
-/obj/structure/machinery/door/poddoor/almayer,
-/turf/open/floor/plating,
+/turf/open/floor/almayer,
 /area/space)
 "uI" = (
 /obj/structure/pipes/standard/simple/hidden/purple{
@@ -4106,23 +4040,25 @@
 /turf/open/floor/plating,
 /area/space)
 "vc" = (
-/obj/structure/surface/table/reinforced/black,
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/obj/structure/sign/safety/medical{
+	pixel_x = 8;
+	pixel_y = 32
 	},
+/turf/open/floor/almayer,
 /area/space)
 "ve" = (
-/obj/structure/sign/safety/nonpress_0g{
-	pixel_x = 32
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
 	},
-/obj/structure/sign/safety/rad_haz{
-	pixel_x = 32;
-	pixel_y = 13
-	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/plating,
 /area/space)
 "vf" = (
-/obj/structure/pipes/vents/pump,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "vh" = (
@@ -4169,8 +4105,7 @@
 /area/space)
 "vG" = (
 /turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "emeraldcorner"
+	icon_state = "dark_sterile"
 	},
 /area/space)
 "vJ" = (
@@ -4178,10 +4113,7 @@
 	pixel_x = 12;
 	pixel_y = 29
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "emerald"
-	},
+/turf/open/floor/almayer,
 /area/space)
 "wb" = (
 /obj/structure/platform{
@@ -4200,6 +4132,14 @@
 	icon_state = "plate"
 	},
 /area/space)
+"wO" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/plating,
+/area/space)
 "xh" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Cargo Hold 1 Shutters"
@@ -4209,10 +4149,9 @@
 	},
 /area/space)
 "yo" = (
-/obj/structure/machinery/r_n_d/destructive_analyzer,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "emerald"
+	icon_state = "dark_sterile"
 	},
 /area/space)
 "yM" = (
@@ -4373,8 +4312,8 @@
 /area/space)
 "EJ" = (
 /turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "emerald"
+	dir = 8;
+	icon_state = "sterile_green_side"
 	},
 /area/space)
 "Ff" = (
@@ -4408,6 +4347,10 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
+/area/space)
+"Gh" = (
+/obj/structure/cargo_container/horizontal/blue/top,
+/turf/open/floor/plating,
 /area/space)
 "Gz" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4704,6 +4647,19 @@
 "QN" = (
 /turf/open/floor/almayer,
 /area/space)
+"RJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "usscargotwo";
+	name = "\improper Cargo Hold 3 Shutters"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
 "RK" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Cargo Hold 2 Shutters"
@@ -4732,10 +4688,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "Sw" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/almayer{
-	icon_state = "test_floor5"
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
 	},
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "SD" = (
 /obj/effect/decal/warning_stripes{
@@ -4764,6 +4720,12 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"TR" = (
+/obj/structure/largecrate/supply/supplies/mre,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
 "TV" = (
 /turf/open/floor/almayer{
 	dir = 8;
@@ -4790,6 +4752,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"UJ" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/plating,
+/area/space)
 "UK" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer{
@@ -4812,9 +4784,16 @@
 	},
 /area/space)
 "Vj" = (
-/obj/structure/window/framed/almayer,
-/obj/structure/window/framed/almayer,
-/turf/open/space/basic,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "usscargotwo";
+	name = "\improper Cargo Hold 3 Shutters"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/space)
 "Vk" = (
 /turf/open/floor/almayer{
@@ -4836,6 +4815,10 @@
 	icon_state = "greenfull"
 	},
 /area/space)
+"WA" = (
+/obj/structure/cargo_container/horizontal/blue/bottom,
+/turf/open/floor/plating,
+/area/space)
 "WG" = (
 /turf/open/floor/plating,
 /area/space)
@@ -4856,8 +4839,8 @@
 /area/space)
 "Xb" = (
 /turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "emeraldcorner"
+	dir = 4;
+	icon_state = "sterile_green_side"
 	},
 /area/space)
 "Xu" = (
@@ -12179,7 +12162,7 @@ Cr
 Cr
 Cr
 ZP
-QN
+km
 UC
 QN
 ZL
@@ -12510,14 +12493,14 @@ ZL
 UC
 sE
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
 Cr
 Cr
 Cr
@@ -12662,14 +12645,14 @@ ZL
 UC
 QN
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+QN
+dm
+dm
+dm
+dm
+dm
+dm
+QN
 Cr
 Cr
 Cr
@@ -12811,26 +12794,26 @@ ZL
 ZL
 ZL
 ZL
-UC
+vf
 QN
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+QN
+dm
+WG
+WG
+ZL
+ZL
+tr
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+uy
+ZL
+ZL
+ZL
 Cr
 Cr
 Cr
@@ -12966,23 +12949,23 @@ iX
 UC
 QN
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+QN
+dm
+WG
+WG
+ZL
+tA
+WG
+WG
+WG
+ND
+tA
+ZL
+Yd
+WG
+WG
+WG
+ZL
 Cr
 Cr
 Cr
@@ -13123,18 +13106,18 @@ tr
 ZL
 ZL
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+tF
+WG
+WG
+WG
+uL
+tF
+ZL
+WG
+WG
+WG
+WG
+ZL
 Cr
 Cr
 Cr
@@ -13275,18 +13258,18 @@ tv
 ZC
 WG
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+tA
+Va
+WG
+WG
+uM
+WG
+RK
+WG
+UK
+QN
+QN
+ZL
 Cr
 Cr
 Cr
@@ -13427,18 +13410,18 @@ dm
 dm
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+tF
+ra
+Pr
+Pr
+Pr
+Pr
+RK
+Uv
+vs
+Yk
+Tb
+ZL
 Cr
 Cr
 Cr
@@ -13579,18 +13562,18 @@ ty
 ZL
 tr
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+tH
+JI
+Gh
+dF
+WA
+WG
+ZL
+Tb
+QN
+WG
+WG
+ZL
 Cr
 Cr
 Cr
@@ -13730,19 +13713,19 @@ ZL
 ZL
 ZL
 dm
+tl
+tJ
+JI
+WG
+WG
+WG
+WG
 ZL
 ZL
 ZL
+WG
 ZL
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 Cr
 Cr
 Cr
@@ -13882,19 +13865,19 @@ ZV
 ZL
 tZ
 dm
-tv
-uG
-dm
-dm
-uG
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+tM
+JI
+WG
+WG
+WG
+WG
+ZL
+WG
+WG
+WG
+Yc
+ZL
 Cr
 Cr
 Cr
@@ -14034,19 +14017,19 @@ ZV
 ZL
 tZ
 dm
-uC
-cY
-ve
-vf
-cY
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+lG
+JI
+WG
+WG
+WG
+WG
+AW
+Yd
+UK
+Yd
+WG
+ZL
 Cr
 Cr
 Cr
@@ -14152,7 +14135,7 @@ ZL
 fK
 gf
 gq
-ZC
+kl
 gL
 ZL
 QN
@@ -14187,18 +14170,18 @@ ZL
 ZL
 uq
 ZL
+YO
+qZ
+Pr
+Pr
+Pr
+Pr
+vj
+Uv
+vs
+Yk
+WG
 ZL
-ZL
-ZL
-ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 Cr
 Cr
 Cr
@@ -14312,7 +14295,7 @@ UC
 QN
 ZC
 ZL
-ZC
+ie
 kI
 lA
 lA
@@ -14330,7 +14313,7 @@ lA
 rq
 ZC
 ZL
-ZC
+ie
 UC
 sL
 ZL
@@ -14339,18 +14322,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+JI
+ZL
+ZL
+ZL
+WG
+ZL
+Yd
+WG
+WG
+WG
+ZL
 Cr
 Cr
 Cr
@@ -14490,19 +14473,19 @@ ZV
 Cr
 cY
 dm
+Vj
+WG
+JI
+WG
+WG
+WG
+WG
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+WG
+WG
+ZL
+ZL
+ZL
 Cr
 Cr
 Cr
@@ -14642,19 +14625,19 @@ ZV
 Cr
 cY
 dm
+RJ
+Pr
+rC
+WG
+WG
+WG
+WG
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+WG
+WG
+Yd
+QN
+ZL
 Cr
 Cr
 Cr
@@ -14794,19 +14777,19 @@ ZV
 Cr
 cY
 dm
+Vj
+WG
+JI
+WG
+WG
+WG
+WG
+AW
+Yc
+UK
+QN
+Fr
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 Cr
 Cr
 Cr
@@ -14945,20 +14928,20 @@ ZL
 ZV
 ZV
 ZL
-dm
+Sw
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+Va
+qZ
+Pr
+Pr
+Pr
+Pr
+vj
+Uv
+vs
+Yk
+QN
+ZL
 Cr
 Cr
 Cr
@@ -15099,18 +15082,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+JI
+ZL
+ZL
+ZL
+WG
+ZL
+Tb
+QN
+WG
+QN
+ZL
 Cr
 Cr
 Cr
@@ -15251,18 +15234,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+Yc
+JI
+WG
+Ls
+uQ
+WG
+ZL
+ZL
+ZL
+ZL
+WG
+ZL
 Cr
 Cr
 Cr
@@ -15403,18 +15386,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+IU
+JI
+WG
+Lx
+NZ
+WG
+ZL
+TF
+dm
+ZC
+dm
+ZL
 Cr
 Cr
 Cr
@@ -15555,18 +15538,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+IT
+JI
+Ke
+LC
+uW
+WG
+RK
+dm
+dm
+TF
+bO
+ZL
 Cr
 Cr
 Cr
@@ -15707,18 +15690,18 @@ ZV
 ZL
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+JI
+ZL
+ZL
+ZL
+WG
+cV
+vq
+ZC
+dm
+dm
+ZL
 Cr
 Cr
 Cr
@@ -15859,18 +15842,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+WG
+JI
+WG
+tY
+WG
+WG
+ZL
+vq
+dm
+dm
+TF
+ZL
 Cr
 Cr
 Cr
@@ -16011,18 +15994,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZL
+JI
+ZL
+ZL
+ZL
+WG
+ZL
+WG
+ZL
+ZL
+ZL
+ZL
 Cr
 Cr
 Cr
@@ -16114,7 +16097,7 @@ Cr
 Cr
 Cr
 ZP
-ZC
+ie
 UC
 ZC
 ZP
@@ -16163,18 +16146,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+WG
+JI
+WG
+WG
+WG
+WG
+ZL
+Yd
+Va
+WG
+WG
+ZL
 Cr
 Cr
 Cr
@@ -16315,18 +16298,18 @@ Cr
 cY
 dm
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+YO
+UJ
+wO
+wO
+Pr
+Pr
+vl
+Pr
+sC
+YO
+Yd
+ZL
 Cr
 Cr
 Cr
@@ -16468,17 +16451,17 @@ ZL
 dm
 ZL
 ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+TR
+kH
+kH
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
 Cr
 Cr
 Cr
@@ -16587,7 +16570,7 @@ ZP
 dm
 ZC
 ZL
-QN
+km
 UC
 QN
 jf
@@ -17373,7 +17356,7 @@ ZL
 ZL
 Ff
 WG
-WG
+BA
 ZL
 tF
 WG
@@ -17525,7 +17508,7 @@ ZL
 ZL
 Ff
 sQ
-WG
+BA
 ZL
 tA
 Va
@@ -17667,7 +17650,7 @@ oI
 Gz
 QN
 ZL
-WG
+ve
 zl
 WG
 WG
@@ -17829,7 +17812,7 @@ ZL
 ZL
 Ff
 JI
-WG
+BA
 ZL
 tH
 JI
@@ -17981,7 +17964,7 @@ ZL
 ZL
 Ff
 Va
-WG
+BA
 tl
 tJ
 JI
@@ -18114,7 +18097,7 @@ cY
 ZP
 iG
 ZL
-ZL
+uC
 mo
 nv
 uu
@@ -18542,9 +18525,9 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
+ZP
+ZP
+ZP
 ZP
 aK
 at
@@ -18575,7 +18558,7 @@ ZL
 ZL
 ZL
 ZL
-QN
+uG
 Gz
 qn
 ZL
@@ -18694,10 +18677,10 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-ZP
+hG
+dm
+dm
+hG
 aK
 at
 Vk
@@ -18716,18 +18699,18 @@ Cr
 ZP
 tB
 EJ
-Mi
-Mi
-Mi
-Mi
-Mi
-Bv
-ZL
-mq
-nx
+EJ
+EJ
+EJ
+EJ
+EJ
 nF
 ZL
+tB
 vG
+nF
+ZL
+QN
 Gz
 wK
 xh
@@ -18846,10 +18829,10 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-ZP
+cY
+hH
+hI
+cY
 aK
 at
 Vk
@@ -18866,18 +18849,18 @@ Cr
 Cr
 Cr
 ZP
-tB
-EJ
-Mi
-iK
-tB
+ms
 vG
-Mi
-Bv
+vG
+vG
+vG
+vG
+vG
+lK
 AW
-EJ
-Mi
-Bv
+ms
+vG
+lK
 ZL
 vJ
 UC
@@ -18998,9 +18981,9 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
+ZP
+ZP
+ZP
 ZP
 aK
 UC
@@ -19017,21 +19000,21 @@ Cr
 Cr
 Cr
 Cr
-cY
-tB
-EJ
-Mi
-iM
-tB
-jF
-Mi
-Bv
+ZP
+ms
+vG
+vG
+vG
+vG
+vG
+vG
+lK
 AW
-EJ
-tB
-Bv
+ms
+vG
+vG
 RN
-tB
+Oj
 UC
 wK
 xh
@@ -19154,7 +19137,7 @@ Cr
 Cr
 Cr
 ZP
-aK
+if
 UC
 Vk
 ZL
@@ -19169,21 +19152,21 @@ Cr
 Cr
 Cr
 Cr
-cY
-tB
-EJ
-Bv
-tB
-tB
-tB
-EJ
-Bv
+ZP
+ms
+vG
+vG
+vG
+vG
+vG
+vG
+lK
 ZL
-EJ
-tB
-Bv
+ms
+vG
+lK
 ZL
-EJ
+vc
 UC
 QN
 ZL
@@ -19287,55 +19270,55 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
 ZP
 aK
 UC
 Vk
-ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-cY
-tB
-EJ
-tB
-tB
-tB
-tB
-tB
-Bv
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ms
+vG
+vG
+vG
+vG
+vG
+vG
+lK
 RN
-EJ
-tB
-Bv
-Vj
-Xb
+vG
+vG
+lK
+ZL
+QN
 QN
 QN
 ZL
@@ -19439,54 +19422,54 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+hi
+hi
+hi
+ho
+hi
+hi
+hi
+ho
+hi
+hi
+hi
+ho
+hi
+hi
+hi
+ho
+hi
 ZP
 aK
 at
 Vk
-ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 cY
-tB
-EJ
-Bv
-tB
-tB
-tB
-EJ
-Bv
+hi
+ho
+hi
+hi
+ho
+hi
+hi
+hi
+hi
+hi
+hi
+ZP
+ms
+vG
+vG
+vG
+vG
+vG
+vG
+lK
 ZL
-EJ
-tB
-Bv
-vc
+ms
+vG
+lK
+ZL
 QN
 QN
 QN
@@ -19591,57 +19574,57 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 ZP
-aK
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+ZP
+ir
 at
 Vk
-ZL
-ZL
-ZL
-ZL
-ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
 cY
-tB
-EJ
-Mi
-iO
-tB
-jG
-Mi
-Bv
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+hk
+ZP
+ms
+vG
+vG
+vG
+vG
+vG
+vG
+lK
 ZL
 ms
-Mi
-Bv
-Vj
-Cr
-Cr
-Cr
+vG
+lK
+ZL
+QN
+QN
+QN
 ZL
 qI
 FK
@@ -19655,7 +19638,7 @@ FK
 FK
 GO
 ZL
-WG
+ve
 JI
 WG
 Lx
@@ -19743,57 +19726,57 @@ Cr
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
-ZL
+ZP
+ZP
+ZP
+ZP
+ZP
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+hE
+ZP
+hE
+hE
+hE
+ZP
 ZP
 aK
 at
-TV
-Jz
-ZL
-dy
-Sw
-ZL
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+Vk
 ZP
-tB
-EJ
-Mi
-iP
-tB
+cY
+cY
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+mv
 Xb
-Mi
-Bv
+Xb
+Xb
+Xb
+Xb
+Xb
+nG
 ZL
 mv
 yo
 nG
 ZL
-Cr
-Cr
-Cr
+QN
+dm
+QN
 ZL
 FK
 FK
@@ -19898,7 +19881,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 QN
 QN
@@ -19918,10 +19901,10 @@ aK
 ct
 YB
 cJ
-Uq
-Uq
-Jz
+cB
+kk
 ZL
+Cr
 Cr
 Cr
 Cr
@@ -19930,22 +19913,22 @@ Cr
 Cr
 Cr
 ZP
-tB
-EJ
-Mi
-Mi
-Mi
-Mi
-Mi
-Bv
+ZP
+ZP
+ZP
+iR
+ZP
+ZP
+ZP
+ZP
 ZL
 ZL
 ZL
 ZL
 ZL
-Cr
-Cr
-Cr
+QN
+dm
+QN
 ZL
 WG
 Ei
@@ -20050,7 +20033,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 tf
 PV
@@ -20070,9 +20053,8 @@ bX
 PV
 PV
 dV
-PV
-PV
-dX
+cB
+dy
 ZL
 Cr
 Cr
@@ -20081,23 +20063,24 @@ Cr
 Cr
 Cr
 Cr
-ZP
-hi
-hE
-hE
-iQ
-iQ
-iQ
-kh
-kW
-lD
+Cr
 ZP
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+QN
+dm
+dm
+iQ
+QN
+QN
+dm
+dm
+dm
+QN
+QN
+dm
+dm
+QN
 ZL
 WG
 zJ
@@ -20202,7 +20185,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 JK
 ab
@@ -20223,7 +20206,7 @@ ZL
 ZL
 cL
 ZL
-bw
+ZL
 ZL
 ZL
 Cr
@@ -20234,22 +20217,22 @@ Cr
 Cr
 Cr
 ZP
-hk
-hF
-ie
-ie
-iR
-iR
-kk
-kY
-lD
+Cr
 ZP
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
+QN
 ZL
 WG
 Bj
@@ -20354,7 +20337,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -20365,7 +20348,7 @@ aA
 aK
 QN
 ZL
-QN
+hF
 QN
 QN
 QN
@@ -20386,22 +20369,22 @@ Cr
 Cr
 Cr
 ZP
-hk
-hG
-if
-iR
-iR
-iR
-kl
-lh
-lH
+Cr
 ZP
-Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+iR
+ZP
+AW
+AW
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
 ZL
 WG
 GQ
@@ -20506,7 +20489,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -20538,16 +20521,16 @@ Cr
 Cr
 Cr
 ZP
-hk
-hH
-il
-il
-jh
-il
-il
-lh
-lH
+Cr
+Cr
 ZP
+iu
+jh
+lh
+lD
+ZP
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -20658,7 +20641,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 JK
 ac
@@ -20690,16 +20673,16 @@ Cr
 Cr
 Cr
 ZP
-hk
-hG
-ir
-iR
-iR
-iR
-km
-lh
-lH
+Cr
+Cr
 ZP
+iu
+ko
+Mi
+Bv
+ZP
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -20810,7 +20793,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -20842,16 +20825,16 @@ dm
 dm
 dm
 ZP
-hk
-hI
-iu
-iu
-iu
+Cr
+Cr
+ZP
 iu
 ko
-lj
-lH
+iu
+Bv
 ZP
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -20962,7 +20945,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -20989,21 +20972,21 @@ PV
 PV
 qt
 ZL
-ZC
-ZC
+WG
+WG
 ZC
 dm
 ZP
-ho
-hK
-hK
-hK
-hK
-hK
-hK
-hK
-lK
+Cr
+Cr
 ZP
+iu
+ko
+iu
+Bv
+ZP
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -21114,7 +21097,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -21146,16 +21129,16 @@ ax
 ZC
 dm
 ZP
+Cr
+Cr
 ZP
 ZP
+ko
+iu
+Bv
 ZP
-ZP
-ZP
-ZP
-ZP
-ZP
-ZP
-ZP
+Cr
+Cr
 Cr
 Cr
 Cr
@@ -21266,7 +21249,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 iL
@@ -21301,11 +21284,11 @@ ZP
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+ko
+iu
+Bv
+ZP
 Cr
 Cr
 Cr
@@ -21418,7 +21401,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 Vk
 ad
@@ -21453,11 +21436,11 @@ ZP
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+kW
+Mi
+Bv
+ZP
 Cr
 Cr
 Cr
@@ -21570,7 +21553,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 TV
 Uq
@@ -21605,11 +21588,11 @@ ZP
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+kY
+lj
+lH
+ZP
 Cr
 Cr
 Cr
@@ -21722,7 +21705,7 @@ Cr
 Cr
 Cr
 Cr
-ZL
+ZP
 QN
 QN
 QN
@@ -21741,7 +21724,7 @@ ZL
 ZL
 ZL
 ZL
-bX
+kh
 PV
 dB
 PV
@@ -21757,11 +21740,11 @@ ZP
 Cr
 Cr
 Cr
-Cr
-Cr
-Cr
-Cr
-Cr
+ZP
+ZP
+ZP
+ZP
+ZP
 Cr
 Cr
 Cr
