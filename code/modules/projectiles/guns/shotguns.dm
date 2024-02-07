@@ -489,6 +489,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	integrated_grip.Attach(src)
 	update_attachable(integrated_grip.slot)
 
+/obj/item/weapon/gun/shotgun/type23/pve
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/special
+
 //-------------------------------------------------------
 //DOUBLE SHOTTY
 

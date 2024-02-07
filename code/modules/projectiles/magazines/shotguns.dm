@@ -143,6 +143,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/type23/beanbag
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 
+/obj/item/ammo_magazine/internal/shotgun/type23/special
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
+
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4

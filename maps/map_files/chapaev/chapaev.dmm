@@ -2639,7 +2639,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23,
+/obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4620,7 +4620,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23,
+/obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
