@@ -148,6 +148,7 @@
 	assignment = JOB_SQUAD_SMARTGUN_UPP
 	paygrade = "UE3"
 	role_comm_title = "MG"
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
