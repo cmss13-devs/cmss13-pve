@@ -86,6 +86,5 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
 
-
 #undef LCPL_VARIANT
 #undef CPL_VARIANT
