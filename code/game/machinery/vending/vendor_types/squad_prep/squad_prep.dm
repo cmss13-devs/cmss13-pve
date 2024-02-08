@@ -420,7 +420,7 @@
 		list("SIDEARM AMMUNITION", -1, null, null),
 		list("NP92 Magazine (9x18mm Makarov)", round(scale * 20), /obj/item/ammo_magazine/pistol/np92, VENDOR_ITEM_REGULAR),
 		list("ZHNK-72 Speedloader (7.62x38mmR)", round(scale * 20), /obj/item/ammo_magazine/revolver/upp, VENDOR_ITEM_REGULAR),
-		list("Type 73 Magazine (7.62x25mm Tokarev)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Type 73 Magazine (7.62x25mm Tokarev)", round(scale * 20), /obj/item/ammo_magazine/pistol/t73, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
