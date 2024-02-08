@@ -361,12 +361,12 @@
 /datum/emote/living/carbon/human/warcry/get_sound(mob/living/carbon/human/user)
 	if(ishumansynth_strict(user))
 		if(user.gender == MALE)
-			if(user.get_default_language().name == LANGUAGE_RUSSIAN)
+			if(user.faction == FACTION_UPP || user.assigned_squad.type == /datum/squad/marine/upp)
 				return get_sfx("male_upp_warcry")
 			else
 				return get_sfx("male_warcry")
 		else
-			if(user.get_default_language().name == LANGUAGE_RUSSIAN)
+			if(user.faction == FACTION_UPP || user.assigned_squad.type == /datum/squad/marine/upp)
 				return get_sfx("female_upp_warcry")
 			else
 				return get_sfx("female_warcry")
