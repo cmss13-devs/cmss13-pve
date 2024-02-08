@@ -13,7 +13,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to monitor the Marines, man the CIC, and listen to your superior officers.</a> You are in charge of logistics and the overwatch system. You are also in line to take command after other eligible superior commissioned officers."
 
-	job_options = list(FIRST_LT_VARIANT = "1stLt.", SECOND_LT_VARIANT = "2ndLt.")
+	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")
 
 /datum/job/command/bridge/set_spawn_positions(count)
 	spawn_positions = so_slot_formula(count)
