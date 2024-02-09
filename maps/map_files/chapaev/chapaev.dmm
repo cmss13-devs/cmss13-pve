@@ -781,7 +781,7 @@
 /area/golden_arrow/engineering)
 "gU" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
-	name = "\improper Infirmary";
+	name = "\improper Cleaning Supplies";
 	req_one_access = null
 	},
 /turf/open/floor/strata{
@@ -1062,14 +1062,36 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "kj" = (
 /obj/structure/closet,
-/obj/item/clothing/head/uppcap/ushanka,
-/turf/open/floor/strata{
-	icon_state = "floor2"
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
-/area/golden_arrow/dorms)
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "kl" = (
 /obj/structure/machinery/light,
 /obj/structure/pipes/vents/pump,
@@ -1933,7 +1955,9 @@
 	},
 /area/golden_arrow/medical)
 "tq" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -2448,10 +2472,16 @@
 	pixel_x = 17;
 	pixel_y = -2
 	},
+/obj/item/paper{
+	name = "scribbled note";
+	info = "you fucktards should clean your boots because lieutenant kotov made me scrub the deck clean with a toothbrush when i fucked up (wasnt my fault too) and BOY was it dirty. fuck you all though. know my struggles.";
+	pixel_y = 22;
+	icon_state = "paper_words"
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "yu" = (
 /obj/structure/surface/rack,
 /obj/item/device/motiondetector,
@@ -2464,18 +2494,13 @@
 	},
 /area/golden_arrow/squad_one)
 "yz" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -1;
-	pixel_y = 4
+/obj/item/clothing/shoes/slippers_worn{
+	pixel_y = 16
 	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	icon_state = "floor2"
 	},
-/area/golden_arrow/canteen)
+/area/golden_arrow/dorms)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
@@ -3401,7 +3426,7 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "HI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -3460,7 +3485,7 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "IG" = (
 /obj/structure/ladder{
 	height = 2;
@@ -3676,6 +3701,9 @@
 "KG" = (
 /obj/structure/machinery/chem_dispenser,
 /obj/item/reagent_container/glass/beaker/bluespace,
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -3935,32 +3963,9 @@
 	},
 /area/golden_arrow/canteen)
 "NL" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/obj/structure/closet,
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
 "NQ" = (
@@ -4152,7 +4157,7 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "Qx" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4
@@ -4353,7 +4358,7 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "Tb" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4894,7 +4899,7 @@
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "XL" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -12438,7 +12443,7 @@ VX
 kB
 bt
 Nz
-bt
+NL
 IS
 mV
 mV
@@ -13347,9 +13352,9 @@ bK
 bK
 kl
 CM
-Yo
-bt
 oH
+bt
+yz
 bt
 CM
 ns
@@ -13499,7 +13504,7 @@ mB
 mB
 CO
 CM
-kj
+Yo
 bt
 EW
 NL
@@ -14399,7 +14404,7 @@ af
 DK
 uE
 CF
-yz
+nO
 EA
 af
 cT
@@ -14407,7 +14412,7 @@ WP
 WP
 wH
 WP
-WP
+kj
 iO
 bC
 CJ
