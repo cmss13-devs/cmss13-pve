@@ -2733,7 +2733,8 @@
 	icon_state = "shuttle";
 	layer = 2.97;
 	name = "Tactical Map Display";
-	pixel_x = 7
+	pixel_x = 7;
+	faction = "UPP"
 	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	pixel_x = -12;
@@ -3061,7 +3062,9 @@
 /area/golden_arrow/hangar)
 "EM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap,
+/obj/structure/machinery/prop/almayer/CICmap{
+	faction = "UPP"
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -3430,6 +3433,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/supply)
+"HR" = (
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_x = 7;
+	faction = "UPP"
+	},
+/turf/open/space/basic,
+/area/space)
 "HX" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -12136,7 +12150,7 @@ mV
 mV
 mV
 mV
-mV
+HR
 mV
 mV
 mV
