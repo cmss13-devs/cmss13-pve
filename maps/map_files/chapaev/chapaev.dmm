@@ -1064,34 +1064,13 @@
 	},
 /area/golden_arrow/briefing)
 "kj" = (
-/obj/structure/closet,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/item/clothing/shoes/slippers_worn{
+	pixel_y = 16
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "floor2"
 	},
-/area/golden_arrow/cryo_cells)
+/area/golden_arrow/dorms)
 "kl" = (
 /obj/structure/machinery/light,
 /obj/structure/pipes/vents/pump,
@@ -2494,13 +2473,34 @@
 	},
 /area/golden_arrow/squad_one)
 "yz" = (
-/obj/item/clothing/shoes/slippers_worn{
-	pixel_y = 16
+/obj/structure/closet,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/dorms)
+/area/golden_arrow/cryo_cells)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
@@ -13355,7 +13355,7 @@ kl
 CM
 oH
 bt
-yz
+kj
 bt
 CM
 ns
@@ -14413,7 +14413,7 @@ WP
 WP
 wH
 WP
-kj
+yz
 iO
 bC
 CJ
