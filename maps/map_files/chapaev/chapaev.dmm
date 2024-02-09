@@ -674,7 +674,10 @@
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_sergeant)
 "ff" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	name = "\improper MinZdrav Plus";
+	desc = "Medical Pharmaceutical dispenser. Provided by Ministry of Health of UPP."
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1163,7 +1166,8 @@
 "lK" = (
 /obj/structure/machinery/cm_vending/gear/synth{
 	density = 0;
-	pixel_y = 32
+	pixel_y = 32;
+	name = "\improper UnTech Synthetic Auxiliary Gear Rack"
 	},
 /obj/item/stool,
 /turf/open/floor/strata{
@@ -1892,7 +1896,9 @@
 /area/golden_arrow/briefing)
 "sO" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
-	req_access = list()
+	req_access = list();
+	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
+	name = "\improper MinZdrav Blood Dispenser"
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -2295,8 +2301,8 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2463,44 +2469,21 @@
 /area/golden_arrow/briefing)
 "yu" = (
 /obj/structure/surface/rack,
-/obj/item/device/motiondetector,
 /obj/item/ammo_magazine/sentry{
-	layer = 3.01
+	layer = 3.01;
+	name = "AK-500 ammo drum (7,62mm Caseless)";
+	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	},
-/obj/item/defenses/handheld/sentry,
+/obj/item/device/motiondetector/hacked,
+/obj/item/defenses/handheld/sentry/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
 "yz" = (
-/obj/structure/closet,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
+/obj/item/clothing/head/helmet/marine/veteran/van_bandolier,
+/turf/open/space/basic,
+/area/space)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
@@ -2803,8 +2786,8 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3211,7 +3194,8 @@
 "FG" = (
 /obj/structure/machinery/cm_vending/clothing/synth{
 	density = 0;
-	pixel_y = 32
+	pixel_y = 32;
+	name = "\improper UnTech Synthetic Equipment Rack"
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -3333,11 +3317,13 @@
 /area/golden_arrow/hangar)
 "GT" = (
 /obj/structure/surface/rack,
-/obj/item/device/motiondetector,
 /obj/item/ammo_magazine/sentry{
-	layer = 3.01
+	layer = 3.01;
+	name = "AK-500 ammo drum (7,62mm Caseless)";
+	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	},
-/obj/item/defenses/handheld/sentry,
+/obj/item/device/motiondetector/hacked,
+/obj/item/defenses/handheld/sentry/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3419,10 +3405,6 @@
 /area/golden_arrow/briefing)
 "HA" = (
 /obj/structure/machinery/light/small,
-/obj/item/reagent_container/glass/bucket{
-	pixel_x = 23;
-	pixel_y = 40
-	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3616,7 +3598,9 @@
 	},
 /area/golden_arrow/medical)
 "JR" = (
-/obj/structure/machinery/computer/overwatch/almayer,
+/obj/structure/machinery/computer/overwatch/almayer{
+	faction = "UPP"
+	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
 	pixel_y = 17
@@ -3699,7 +3683,9 @@
 	},
 /area/golden_arrow/cryo_cells)
 "KG" = (
-/obj/structure/machinery/chem_dispenser,
+/obj/structure/machinery/chem_dispenser{
+	desc = "A complex machine for mixing elements into chemicals. A MinZdrav product."
+	},
 /obj/item/reagent_container/glass/beaker/bluespace,
 /obj/structure/machinery/light{
 	dir = 4
@@ -3734,7 +3720,10 @@
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "KT" = (
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access{
+	desc = "Medical chemistry dispenser. Provided by Ministry of Health of UPP.";
+	name = "\improper MinZdrav Chem"
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -4182,7 +4171,10 @@
 /turf/open/floor/plating,
 /area/golden_arrow/canteen)
 "QX" = (
-/obj/structure/machinery/cm_vending/clothing/synth/snowflake,
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake{
+	desc = "A vendor with a large snowflake on it. Provided by Ministry of Fashion.";
+	name = "\improper UPP Synthetic Conformity Unit"
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4771,8 +4763,8 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP/pve,
-/obj/item/device/radio/headset/distress/UPP/pve,
+/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -4897,6 +4889,10 @@
 /area/golden_arrow/briefing)
 "XH" = (
 /obj/structure/janitorialcart,
+/obj/item/reagent_container/glass/bucket{
+	pixel_y = 8;
+	pixel_x = -7
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -10608,7 +10604,7 @@ mV
 mV
 mV
 mV
-mV
+yz
 mV
 mV
 mV
@@ -14413,7 +14409,7 @@ WP
 WP
 wH
 WP
-yz
+WP
 iO
 bC
 CJ

@@ -138,6 +138,7 @@
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
 	usable = TRUE
+	faction = FACTION_UPP
 
 /datum/squad/marine/upp/New()
 	. = ..()

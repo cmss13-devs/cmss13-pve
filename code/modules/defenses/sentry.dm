@@ -757,5 +757,17 @@
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
 
+/obj/structure/machinery/defenses/sentry/upp
+	name = "\improper UPPA 32-H sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),
+	)
+
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+
+
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

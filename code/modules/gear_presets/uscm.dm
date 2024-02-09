@@ -99,6 +99,8 @@
 	paygrade = "UE1"
 	assignment = JOB_SQUAD_MARINE_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -149,6 +151,8 @@
 	paygrade = "UE3"
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -333,6 +337,8 @@
 	paygrade = "UE3"
 	assignment = JOB_SQUAD_MEDIC_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -378,6 +384,8 @@
 	paygrade = "UE4"
 	assignment = JOB_SQUAD_TEAM_LEADER_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -456,6 +464,8 @@
 	assignment = JOB_SQUAD_LEADER_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	paygrade = "UE6"
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
