@@ -359,14 +359,18 @@
 	user.show_speech_bubble("warcry")
 
 /datum/emote/living/carbon/human/warcry/get_sound(mob/living/carbon/human/user)
+	var/is_russian = FALSE
+	var/datum/language/L = user.get_default_language()
+	if(istype(L, /datum/language/russian))
+		is_russian = TRUE
 	if(ishumansynth_strict(user))
 		if(user.gender == MALE)
-			if(user.faction == FACTION_UPP || user.assigned_squad.type == /datum/squad/marine/upp)
+			if(user.faction == FACTION_UPP || is_russian)
 				return get_sfx("male_upp_warcry")
 			else
 				return get_sfx("male_warcry")
 		else
-			if(user.faction == FACTION_UPP || user.assigned_squad.type == /datum/squad/marine/upp)
+			if(user.faction == FACTION_UPP || is_russian)
 				return get_sfx("female_upp_warcry")
 			else
 				return get_sfx("female_warcry")
