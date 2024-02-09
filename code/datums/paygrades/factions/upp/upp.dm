@@ -8,6 +8,7 @@
 	paygrade = "UE0"
 	name = "Conscript"
 	pay_multiplier = 0.05
+	prefix = "Cnscr."
 
 /datum/paygrade/upp/ue1
 	paygrade = "UE1"
