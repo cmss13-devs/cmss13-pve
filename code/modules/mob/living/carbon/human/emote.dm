@@ -360,17 +360,16 @@
 
 /datum/emote/living/carbon/human/warcry/get_sound(mob/living/carbon/human/user)
 	var/is_russian = FALSE
-	var/datum/language/L = user.get_default_language()
-	if(istype(L, /datum/language/russian))
+	if(istype(user.get_default_language(), /datum/language/russian))
 		is_russian = TRUE
 	if(ishumansynth_strict(user))
 		if(user.gender == MALE)
-			if(user.faction == FACTION_UPP || is_russian)
+			if(is_russian)
 				return get_sfx("male_upp_warcry")
 			else
 				return get_sfx("male_warcry")
 		else
-			if(user.faction == FACTION_UPP || is_russian)
+			if(is_russian)
 				return get_sfx("female_upp_warcry")
 			else
 				return get_sfx("female_warcry")
