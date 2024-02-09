@@ -3873,7 +3873,8 @@
 /obj/item/book/codebook/upp,
 /obj/item/prop/magazine/book{
 	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
-	name = "Communist Manifesto"
+	name = "Communist Manifesto";
+	pixel_y = 35
 	},
 /turf/open/floor/strata{
 	dir = 4;
