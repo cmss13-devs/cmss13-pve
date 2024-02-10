@@ -157,6 +157,7 @@
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
+	vendor_theme = VENDOR_THEME_UPP
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp/populate_product_list(scale)
 	listed_products = list(
@@ -385,6 +386,7 @@
 	vend_x_offset = 2
 	vend_y_offset = 1
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND
+	vendor_theme = VENDOR_THEME_UPP
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp/populate_product_list(scale)
 	listed_products = list(

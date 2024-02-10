@@ -277,8 +277,7 @@
 /obj/item/weapon/gun/pkp/iff
 	name = "\improper QYJ-72-I General Purpose Machine Gun"
 	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
-	actions_types = list(
-		/datum/action/item_action/toggle_iff_pkp,)
+	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
 	var/iff_enabled = TRUE
 
 /obj/item/weapon/gun/pkp/iff/set_bullet_traits()

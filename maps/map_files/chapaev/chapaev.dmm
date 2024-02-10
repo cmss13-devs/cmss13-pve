@@ -674,10 +674,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_sergeant)
 "ff" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access{
-	name = "\improper MinZdrav Plus";
-	desc = "Medical Pharmaceutical dispenser. Provided by Ministry of Health of UPP."
-	},
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1898,7 +1895,8 @@
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list();
 	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
-	name = "\improper MinZdrav Blood Dispenser"
+	name = "\improper MinZdrav Blood Dispenser";
+	vendor_theme = 3
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -3736,7 +3734,8 @@
 "KT" = (
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access{
 	desc = "Medical chemistry dispenser. Provided by Ministry of Health of UPP.";
-	name = "\improper MinZdrav Chem"
+	name = "\improper MinZdrav Chem";
+	vendor_theme = 3
 	},
 /turf/open/floor/strata{
 	dir = 4;

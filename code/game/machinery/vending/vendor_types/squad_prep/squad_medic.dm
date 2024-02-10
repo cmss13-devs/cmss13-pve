@@ -275,6 +275,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 	icon_state = "upp_gear"
 	req_access = list(ACCESS_MARINE_MEDPREP)
 	vendor_role = list(JOB_SQUAD_MEDIC)
+	vendor_theme = VENDOR_THEME_UPP
 
 /obj/structure/machinery/cm_vending/clothing/medic/upp/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_upp_medic
