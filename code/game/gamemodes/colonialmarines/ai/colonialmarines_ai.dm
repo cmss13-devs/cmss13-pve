@@ -32,13 +32,11 @@
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
-	to_chat(world, "[MAIN_SHIP_PLATOON]")
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 	squad_limit.Cut()
 	squad_limit += MAIN_SHIP_PLATOON
 	for(var/i in squad_limit)
 		role_mappings = GLOB.platoon_to_jobs[i]
-		to_chat(world, "[english_list(role_mappings)]")
 	RoleAuthority.reset_roles()
 	for(var/datum/squad/sq in RoleAuthority.squads)
 		if(sq.type in squad_limit)
@@ -77,38 +75,7 @@
 		return
 
 /datum/game_mode/colonialmarines/ai/get_roles_list()
-	to_chat(world, "[english_list(GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON])]")
 	return GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON]
-
-GLOBAL_VAR_INIT(platoon_overriden, FALSE)
-GLOBAL_LIST_INIT(overriden_platoon, list())
-
-/client/proc/game_master_choose_platoon()
-	set name = "Choose Platoon"
-	set category = "Game Master.Extras"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(GLOB.master_mode != "Distress Signal: Lowpop")
-		return
-
-	GLOB.platoon_overriden = TRUE
-
-	override_platoon()
-
-/proc/override_platoon()
-	to_chat(usr, "Current platoon: [english_list(GLOB.overriden_platoon)]")
-	if(SSticker.current_state != GAME_STATE_PREGAME)
-		to_chat(usr, "This can only be used during lobby!")
-		return
-	var/list/possible_platoons = list(/datum/squad/marine/upp, /datum/squad/marine/alpha)
-	var/platoon_input = input(usr, "Select your Platoon.", "Squad Selection")  as null|anything in possible_platoons
-	GLOB.overriden_platoon.Cut()
-	GLOB.overriden_platoon += platoon_input
-	GLOB.gamemode_roles["Distress Signal: Lowpop"] = GLOB.platoon_to_role_list[platoon_input]
-	to_chat(usr, "Selected platoon: [english_list(GLOB.overriden_platoon)]")
-	to_chat(world, SPAN_NOTICE("Gamemaster has changed platoon type! Check out occupation preferences!"))
 
 GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/job/command/bridge/ai = JOB_SO,\
 		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
