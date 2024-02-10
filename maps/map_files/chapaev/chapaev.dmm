@@ -1229,6 +1229,15 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"my" = (
+/obj/structure/closet,
+/obj/item/clothing/head/uppcap/ushanka/civi{
+	pixel_y = 6
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "mB" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/strata{
@@ -2904,6 +2913,9 @@
 "CW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/belt/utility/full,
+/obj/item/clothing/head/uppcap/ushanka/civi{
+	pixel_y = 6
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4931,11 +4943,10 @@
 /area/golden_arrow/briefing)
 "Yo" = (
 /obj/structure/closet,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/accessory/patch/upp,
+/obj/item/clothing/head/uppcap/civi{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -12453,7 +12464,7 @@ VX
 kB
 bt
 Nz
-NL
+Yo
 IS
 mV
 mV
@@ -13514,10 +13525,10 @@ mB
 mB
 CO
 CM
-Yo
+NL
 bt
 EW
-NL
+my
 iO
 iO
 iO
