@@ -4,5 +4,6 @@
     "map_file": "chapaev.dmm",
     "webmap_url": "GoldenArrow",
     "traits": [{"Marine Main Ship": true}],
-    "nightmare_path": "maps/Nightmare/maps/chapaev/"
+    "nightmare_path": "maps/Nightmare/maps/chapaev/",
+    "platoon": "/datum/squad/marine/upp"
 }

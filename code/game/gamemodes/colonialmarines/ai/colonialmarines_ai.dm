@@ -32,17 +32,18 @@
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
+	to_chat(world, "[MAIN_SHIP_PLATOON]")
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
-	if(GLOB.platoon_overriden)
-		squad_limit.Cut()
-		squad_limit += GLOB.overriden_platoon
-		for(var/i in squad_limit)
-			role_mappings = GLOB.platoon_to_jobs[i]
-		RoleAuthority.reset_roles()
-		for(var/datum/squad/sq in RoleAuthority.squads)
-			if(sq.type in squad_limit)
-				GLOB.main_platoon_name = sq.name
-				GLOB.main_platoon_initial_name = sq.name
+	squad_limit.Cut()
+	squad_limit += MAIN_SHIP_PLATOON
+	for(var/i in squad_limit)
+		role_mappings = GLOB.platoon_to_jobs[i]
+		to_chat(world, "[english_list(role_mappings)]")
+	RoleAuthority.reset_roles()
+	for(var/datum/squad/sq in RoleAuthority.squads)
+		if(sq.type in squad_limit)
+			GLOB.main_platoon_name = sq.name
+			GLOB.main_platoon_initial_name = sq.name
 
 
 	for(var/datum/squad/squad in RoleAuthority.squads)
@@ -76,13 +77,8 @@
 		return
 
 /datum/game_mode/colonialmarines/ai/get_roles_list()
-	if(GLOB.platoon_overriden)
-		var/squad
-		for(var/i in GLOB.overriden_platoon)
-			squad = i
-		return GLOB.platoon_to_role_list[squad]
-	else
-		return ROLES_AI
+	to_chat(world, "[english_list(GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON])]")
+	return GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON]
 
 GLOBAL_VAR_INIT(platoon_overriden, FALSE)
 GLOBAL_LIST_INIT(overriden_platoon, list())
