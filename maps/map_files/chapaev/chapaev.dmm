@@ -289,7 +289,7 @@
 	dir = 8;
 	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/prep_hallway)
+/area/golden_arrow/briefing)
 "ce" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -595,17 +595,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
-"er" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/briefing)
 "es" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1015,7 +1004,8 @@
 "jH" = (
 /obj/item/newspaper{
 	pixel_x = -15;
-	pixel_y = 34
+	pixel_y = 34;
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space."
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -2676,6 +2666,18 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"Bf" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
 "Bj" = (
 /obj/structure/sink{
 	dir = 4;
@@ -4496,7 +4498,6 @@
 	},
 /area/golden_arrow/dorms)
 "Ua" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
@@ -4506,7 +4507,7 @@
 	dir = 8;
 	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/briefing)
+/area/golden_arrow/prep_hallway)
 "Ug" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -13377,7 +13378,7 @@ bK
 bK
 bK
 bK
-cd
+Ua
 bK
 bK
 bK
@@ -14888,7 +14889,7 @@ ts
 CI
 ts
 ts
-er
+cd
 ts
 ts
 CI
@@ -15040,7 +15041,7 @@ bN
 bN
 Fh
 FZ
-Ua
+Bf
 FZ
 FZ
 bN
