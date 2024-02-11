@@ -222,6 +222,18 @@
 	icon_state = "medicalbelt_upp"
 	item_state = "upp_belt"
 
+/obj/item/storage/belt/medical/upp/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."

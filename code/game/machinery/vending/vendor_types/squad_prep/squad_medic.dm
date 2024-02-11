@@ -238,7 +238,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("Type 41 Ammo Load Rig", 0, /obj/item/storage/belt/marine/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("Type 47 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/type47, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("Type 41 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),

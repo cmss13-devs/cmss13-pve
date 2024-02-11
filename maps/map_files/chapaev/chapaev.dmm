@@ -280,18 +280,16 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "cd" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
 	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	dir = 8;
+	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/prep_hallway)
 "ce" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -598,19 +596,17 @@
 	},
 /area/golden_arrow/squad_one)
 "er" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
 	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	dir = 8;
+	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "es" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1052,6 +1048,7 @@
 	req_access = null
 	},
 /obj/item/clothing/suit/storage/snow_suit/soviet,
+/obj/item/clothing/suit/gimmick/jason,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -1091,6 +1088,10 @@
 "ku" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader"
+	},
+/obj/structure/machinery/door_control{
+	id = "chapaevcargo";
+	pixel_x = 32
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -2615,6 +2616,11 @@
 	dir = 8
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "AC" = (
@@ -2667,16 +2673,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
-"Bf" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/supply)
 "Bj" = (
 /obj/structure/sink{
 	dir = 4;
@@ -2732,9 +2728,6 @@
 /area/golden_arrow/engineering)
 "BQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base/no_dnd{
-	pixel_y = 32
-	},
 /obj/structure/machinery/prop/almayer/CICmap{
 	density = 0;
 	icon_state = "shuttle";
@@ -2746,6 +2739,12 @@
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	pixel_x = -12;
 	network = list("Chapaev","Vehicle")
+	},
+/obj/structure/phone_base/no_dnd{
+	pixel_y = 30;
+	name = "Overwatch Telephone";
+	phone_id = "Overwatch";
+	phone_category = "Command"
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3537,7 +3536,7 @@
 /area/golden_arrow/hangar)
 "Jj" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "W"
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -3623,7 +3622,8 @@
 /area/golden_arrow/medical)
 "JR" = (
 /obj/structure/machinery/computer/overwatch/almayer{
-	faction = "UPP"
+	faction = "UPP";
+	density = 1
 	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
@@ -4148,6 +4148,11 @@
 /area/golden_arrow/dorms)
 "Qi" = (
 /obj/structure/largecrate/random/case/double,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -4488,15 +4493,16 @@
 	},
 /area/golden_arrow/dorms)
 "Ua" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10
 	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	dir = 8;
+	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/briefing)
 "Ug" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -13367,7 +13373,7 @@ bK
 bK
 bK
 bK
-bK
+cd
 bK
 bK
 bK
@@ -14878,7 +14884,7 @@ ts
 CI
 ts
 ts
-ts
+Ua
 ts
 ts
 CI
@@ -15030,7 +15036,7 @@ bN
 bN
 Fh
 FZ
-FZ
+er
 FZ
 FZ
 bN
@@ -15502,8 +15508,8 @@ ys
 HA
 vN
 oW
-Bf
-Li
+Jj
+Jj
 Jj
 Li
 Tr
@@ -15654,9 +15660,9 @@ XH
 SQ
 vN
 HO
-er
-Ua
-cd
+Li
+Li
+Li
 Li
 Tr
 mV
