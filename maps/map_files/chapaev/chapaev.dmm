@@ -596,7 +596,6 @@
 	},
 /area/golden_arrow/squad_one)
 "er" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
@@ -1718,6 +1717,10 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen{
 	pixel_x = 12
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = 12;
+	pixel_x = -8
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -4493,6 +4496,7 @@
 	},
 /area/golden_arrow/dorms)
 "Ua" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
@@ -14884,7 +14888,7 @@ ts
 CI
 ts
 ts
-Ua
+er
 ts
 ts
 CI
@@ -15036,7 +15040,7 @@ bN
 bN
 Fh
 FZ
-er
+Ua
 FZ
 FZ
 bN
