@@ -9,6 +9,17 @@
 	icon_state = "cyan1"
 	},
 /area/golden_arrow/medical)
+"ac" = (
+/turf/closed/shuttle/midway{
+	icon_state = "47"
+	},
+/area/space)
+"ad" = (
+/obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "ae" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer{
@@ -37,6 +48,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"al" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_right{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "an" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4
@@ -53,6 +70,12 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"ay" = (
+/obj/structure/shuttle/part/dropship1/lower_left_wall{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "az" = (
 /obj/structure/machinery/cryopod{
 	dir = 1
@@ -247,6 +270,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
+"bM" = (
+/turf/closed/shuttle/midway{
+	icon_state = "64"
+	},
+/area/space)
 "bN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -283,7 +311,13 @@
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_y = 10;
+	pixel_x = -19
 	},
 /turf/open/floor/strata{
 	dir = 8;
@@ -383,6 +417,43 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"dg" = (
+/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
+"dh" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "96"
+	},
+/area/space)
+"di" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "29"
+	},
+/area/space)
+"dj" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin2"
+	},
+/area/space)
+"dk" = (
+/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
+	name = "\improper Midway"
+	},
+/obj/effect/attach_point/weapon/midway/right_wing,
+/turf/open/space/basic,
+/area/space)
+"dm" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/space)
 "dr" = (
 /obj/structure/machinery/body_scanconsole{
 	pixel_y = 6;
@@ -477,6 +548,14 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"dQ" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "33"
+	},
+/area/space)
 "dS" = (
 /obj/structure/closet,
 /obj/item/clothing/head/uppcap,
@@ -552,6 +631,11 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"ec" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "26"
+	},
+/area/space)
 "ei" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/squad_one)
@@ -595,6 +679,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"ep" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "23"
+	},
+/area/space)
 "es" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -630,6 +719,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"eI" = (
+/turf/closed/shuttle/midway{
+	icon_state = "42"
+	},
+/area/space)
 "eL" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata{
@@ -650,6 +744,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/supply)
+"eU" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "fc" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -700,6 +799,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"gk" = (
+/obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "gm" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -772,6 +877,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
+"gV" = (
+/turf/closed/shuttle/midway{
+	icon_state = "92"
+	},
+/area/space)
 "gZ" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -859,6 +969,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"ij" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "86"
+	},
+/area/space)
 "io" = (
 /obj/structure/toilet{
 	dir = 4
@@ -938,6 +1053,19 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"iI" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
+"iJ" = (
+/turf/closed/shuttle/midway{
+	icon_state = "77"
+	},
+/area/space)
 "iK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -953,6 +1081,19 @@
 "iO" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/cryo_cells)
+"iS" = (
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_x = 12
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "78"
+	},
+/area/space)
+"iV" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "34"
+	},
+/area/space)
 "iW" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -981,6 +1122,20 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"ju" = (
+/obj/structure/phone_base/rotary{
+	name = "Midway Telephone";
+	phone_category = "Dropship";
+	phone_id = "Midway";
+	pixel_x = 11;
+	pixel_y = 16
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/dropship_weapons/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "jF" = (
 /obj/structure/bed/bedroll{
 	pixel_y = 21;
@@ -1011,6 +1166,17 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"jL" = (
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -10;
+	pixel_y = 16
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/cameras/dropship/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "jS" = (
 /obj/effect/landmark/start/marine/upp,
 /obj/effect/landmark/late_join/upp,
@@ -1049,6 +1215,15 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
+"ki" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "kj" = (
 /obj/item/clothing/shoes/slippers_worn{
 	pixel_y = 16
@@ -1126,6 +1301,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"kV" = (
+/turf/closed/shuttle/midway{
+	icon_state = "72"
+	},
+/area/space)
 "kW" = (
 /obj/item/stool,
 /obj/structure/pipes/vents/pump{
@@ -1136,6 +1316,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"le" = (
+/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "lo" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -1143,6 +1329,12 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/canteen)
+"ls" = (
+/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "lE" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata{
@@ -1169,6 +1361,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"lS" = (
+/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "me" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
@@ -1255,6 +1453,15 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"mZ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "nb" = (
 /obj/structure/machinery/conveyor,
 /obj/structure/pipes/standard/cap/hidden/supply{
@@ -1323,6 +1530,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"nw" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "nD" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -1415,6 +1632,16 @@
 "os" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/platoon_commander_rooms)
+"ot" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "35"
+	},
+/area/space)
+"oA" = (
+/turf/closed/shuttle/midway{
+	icon_state = "48"
+	},
+/area/space)
 "oB" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/hangar)
@@ -1749,6 +1976,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"rq" = (
+/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "ru" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -1808,6 +2041,11 @@
 	icon_state = "cyan1"
 	},
 /area/golden_arrow/medical)
+"sk" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "97"
+	},
+/area/space)
 "so" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -1833,6 +2071,12 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
+"st" = (
+/obj/docking_port/mobile/marine_dropship/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "su" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata{
@@ -2076,6 +2320,13 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"uo" = (
+/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
+	name = "\improper Midway"
+	},
+/obj/effect/attach_point/weapon/midway/left_fore,
+/turf/open/space/basic,
+/area/space)
 "uq" = (
 /obj/structure/machinery/conveyor{
 	dir = 8
@@ -2123,6 +2374,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"uF" = (
+/obj/structure/shuttle/part/dropship1/lower_right_wall{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "uQ" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -2179,6 +2436,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"vl" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "32"
+	},
+/area/space)
 "vq" = (
 /obj/structure/largecrate,
 /obj/structure/largecrate{
@@ -2221,6 +2483,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"wb" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "wc" = (
 /obj/item/stack/sheet/metal{
 	amount = 50
@@ -2237,6 +2505,15 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
+"wf" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "wq" = (
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -2340,6 +2617,15 @@
 "wV" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/synthcloset)
+"wY" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "xe" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/landmark/late_join/alpha,
@@ -2363,6 +2649,12 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"xt" = (
+/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "xz" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata{
@@ -2387,6 +2679,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"xF" = (
+/turf/closed/shuttle/midway{
+	icon_state = "62"
+	},
+/area/space)
 "xK" = (
 /obj/structure/foamed_metal,
 /obj/structure/foamed_metal,
@@ -2410,6 +2707,21 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"xP" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
+"xT" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "80"
+	},
+/area/space)
 "xU" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	name = "\improper Sergeants Room";
@@ -2424,6 +2736,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"xW" = (
+/turf/closed/shuttle/midway{
+	icon_state = "24"
+	},
+/area/space)
 "xX" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -2453,6 +2770,15 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"yo" = (
+/obj/structure/shuttle/part/dropship1/nose_front_right{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
+"yq" = (
+/turf/open/shuttle/dropship,
+/area/space)
 "ys" = (
 /obj/item/tool/mop{
 	pixel_x = 17;
@@ -2481,9 +2807,27 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"yv" = (
+/turf/closed/shuttle/midway{
+	icon_state = "73"
+	},
+/area/space)
 "yz" = (
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier,
 /turf/open/space/basic,
+/area/space)
+"yG" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16
+	},
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin2"
+	},
 /area/space)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -2505,6 +2849,26 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"zc" = (
+/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
+	name = "\improper Midway"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore,
+/turf/open/space/basic,
+/area/space)
+"zi" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
+"zl" = (
+/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
+	name = "\improper Midway"
+	},
+/obj/effect/attach_point/weapon/midway/left_wing,
+/turf/open/space/basic,
+/area/space)
 "zq" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -2534,6 +2898,24 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"zF" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "38"
+	},
+/area/space)
+"zO" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "zR" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/light{
@@ -2559,6 +2941,11 @@
 "zX" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/cryo_cells)
+"Ab" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "98"
+	},
+/area/space)
 "Ac" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -2610,9 +2997,15 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_y = 10;
+	pixel_x = -19
+	},
+/obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 13
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
@@ -2635,6 +3028,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"AJ" = (
+/turf/closed/shuttle/midway{
+	icon_state = "94"
+	},
+/area/space)
 "AS" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/shower{
@@ -2669,9 +3067,9 @@
 "Bf" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_y = 10
+	icon_state = "lattice8";
+	pixel_y = 10;
+	pixel_x = 13
 	},
 /turf/open/floor/strata{
 	dir = 8;
@@ -2724,6 +3122,11 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"By" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "39"
+	},
+/area/space)
 "BD" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2731,6 +3134,18 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"BK" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/space)
 "BQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -2811,6 +3226,14 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"Cw" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -30
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "Cx" = (
 /turf/open/floor/strata{
 	dir = 6;
@@ -2925,6 +3348,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
+"CY" = (
+/obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "CZ" = (
 /obj/structure/toilet{
 	dir = 4
@@ -2964,6 +3393,12 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"DB" = (
+/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "DE" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -3109,6 +3544,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"EV" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "EW" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 4
@@ -3117,6 +3563,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"EY" = (
+/turf/closed/shuttle/midway{
+	icon_state = "104"
+	},
+/area/space)
 "Fb" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -3177,6 +3628,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/cryo_cells)
+"Fu" = (
+/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "FB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -3297,6 +3754,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"Gy" = (
+/obj/structure/shuttle/part/dropship1/nose_front_left{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
+"Gz" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "GB" = (
 /obj/structure/closet/secure_closet{
 	name = "platoon sergeant locker";
@@ -3322,6 +3790,29 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
+"GI" = (
+/turf/closed/shuttle/midway{
+	icon_state = "69"
+	},
+/area/space)
+"GN" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 30
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
+"GO" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "GS" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -3420,6 +3911,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"Hv" = (
+/turf/closed/shuttle/midway{
+	icon_state = "67"
+	},
+/area/space)
 "HA" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata{
@@ -3506,6 +4002,13 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"IR" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "IS" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/dorms)
@@ -3526,6 +4029,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"IZ" = (
+/turf/closed/shuttle/midway{
+	icon_state = "103"
+	},
+/area/space)
 "Jc" = (
 /obj/effect/landmark/start/bridge/upp,
 /turf/open/floor/strata{
@@ -3607,6 +4115,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"JJ" = (
+/turf/closed/shuttle/midway{
+	icon_state = "25"
+	},
+/area/space)
 "JN" = (
 /obj/structure/machinery/conveyor{
 	dir = 6
@@ -3681,6 +4194,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
+"Ko" = (
+/turf/closed/shuttle/midway{
+	icon_state = "31"
+	},
+/area/space)
 "Ku" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -3690,6 +4208,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/dorms)
+"Kz" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "22"
+	},
+/area/space)
 "KB" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3831,6 +4354,14 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/cryo_cells)
+"LK" = (
+/obj/structure/machinery/door/airlock/dropship_hatch{
+	id = "port_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "LL" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/rifle/sniper/svd/pve,
@@ -3859,6 +4390,14 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
+"Me" = (
+/obj/structure/machinery/m56d_hmg/mg_turret/dropship{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "Mm" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -3874,6 +4413,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"My" = (
+/turf/closed/shuttle/midway{
+	icon_state = "83"
+	},
+/area/space)
 "MC" = (
 /obj/structure/foamed_metal,
 /obj/structure/foamed_metal,
@@ -3907,6 +4451,18 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/squad_one)
+"MI" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/space)
 "ML" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
@@ -3949,6 +4505,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Nf" = (
+/turf/closed/shuttle/midway{
+	icon_state = "81"
+	},
+/area/space)
 "Nz" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -4062,6 +4623,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"OW" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/space)
 "OX" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -4154,9 +4720,9 @@
 "Qi" = (
 /obj/structure/largecrate/random/case/double,
 /obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_y = 10
+	icon_state = "lattice8";
+	pixel_y = 10;
+	pixel_x = 13
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -4170,6 +4736,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"Qk" = (
+/turf/closed/shuttle/midway{
+	icon_state = "54"
+	},
+/area/space)
 "Qr" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -4233,6 +4804,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Rd" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust{
+	name = "\improper Midway"
+	},
+/turf/template_noop,
+/area/space)
 "Re" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4248,6 +4825,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Ro" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "89"
+	},
+/area/space)
 "Ru" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_magazine/pistol/np92,
@@ -4336,6 +4918,16 @@
 	},
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/platoon_sergeant)
+"Su" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/space)
 "Sx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -4343,6 +4935,18 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
+"SB" = (
+/obj/structure/machinery/door_control{
+	id = "dropship_midway";
+	name = "Dropship Lockdown";
+	normaldoorcontrol = 3;
+	pixel_y = -19;
+	req_one_access_txt = "3;22"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "SF" = (
 /obj/structure/machinery/computer/station_alert{
 	dir = 8;
@@ -4497,17 +5101,32 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"TU" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "Ua" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
 	icon_state = "lattice-simple";
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 13
 	},
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
+"Ue" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
+	id = "aft_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "Ug" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4557,6 +5176,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"UC" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust{
+	name = "\improper Midway"
+	},
+/turf/template_noop,
+/area/space)
 "UM" = (
 /obj/item/trash/ceramic_plate{
 	pixel_x = -6;
@@ -4706,6 +5331,11 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"VY" = (
+/turf/closed/shuttle/midway{
+	icon_state = "75"
+	},
+/area/space)
 "VZ" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -4734,6 +5364,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
+"Wo" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "Wp" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/snacks/beetsoup,
@@ -4746,6 +5382,11 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"Wr" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "27"
+	},
+/area/space)
 "Wt" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader"
@@ -4761,12 +5402,30 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/cryo_cells)
+"Wy" = (
+/turf/closed/shuttle/midway{
+	icon_state = "30"
+	},
+/area/space)
+"WC" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/space)
 "WI" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"WJ" = (
+/obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "WM" = (
 /obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
 	pixel_y = 20;
@@ -4952,6 +5611,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"XT" = (
+/obj/effect/attach_point/fuel/midway,
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "28"
+	},
+/area/space)
 "Yo" = (
 /obj/structure/closet,
 /obj/item/clothing/head/uppcap/civi{
@@ -4962,6 +5627,17 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"Yq" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/space)
 "YA" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -5065,6 +5741,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"ZI" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Midway"
+	},
+/turf/open/space/basic,
+/area/space)
 "ZN" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 5"
@@ -5074,6 +5756,18 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"ZO" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/space)
 "ZU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -22511,19 +23205,19 @@ mV
 mV
 mV
 mV
+lS
+DB
+zl
 mV
 mV
 mV
+ZI
+iV
+XT
+Kz
+UC
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+dg
 mV
 mV
 mV
@@ -22661,21 +23355,21 @@ mV
 mV
 mV
 mV
+uo
+VY
+kV
+Hv
+xF
+LK
+LK
+ay
+Wo
+ot
+di
+ep
+Rd
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+xt
 mV
 mV
 mV
@@ -22810,24 +23504,24 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+wb
+Gy
+gV
+ij
+Nf
+EV
+Cw
+GO
+eU
+SB
+ac
+eI
+eI
+Wy
+xW
+IZ
+CY
+ad
 mV
 mV
 mV
@@ -22962,22 +23656,22 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+zi
+dh
+jL
+dj
+iS
+Yq
+dm
+Gz
+Gz
+Gz
+Su
+BK
+Gz
+ki
+wf
+Ue
 mV
 mV
 mV
@@ -23114,22 +23808,22 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+zi
+sk
+WC
+iI
+IR
+Gz
+yq
+zO
+eU
+st
+TU
+ZO
+eU
+eU
+eU
+eU
 mV
 mV
 mV
@@ -23266,22 +23960,22 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+zi
+Ab
+ju
+yG
+xT
+Yq
+OW
+Gz
+Gz
+Gz
+nw
+MI
+GN
+Gz
+wY
+eU
 mV
 mV
 mV
@@ -23418,24 +24112,24 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+al
+yo
+AJ
+Ro
+iJ
+EV
+mZ
+xP
+eU
+SB
+oA
+Qk
+Qk
+Ko
+JJ
+EY
+WJ
+gk
 mV
 mV
 mV
@@ -23573,21 +24267,21 @@ mV
 mV
 mV
 mV
+zc
+My
+yv
+GI
+bM
+Me
+eU
+uF
+ZI
+zF
+vl
+ec
+UC
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+Fu
 mV
 mV
 mV
@@ -23727,19 +24421,19 @@ mV
 mV
 mV
 mV
+rq
+ls
+dk
 mV
 mV
 mV
+Wo
+By
+dQ
+Wr
+Rd
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+le
 mV
 mV
 mV
