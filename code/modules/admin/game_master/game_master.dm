@@ -78,6 +78,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// The amount of xenos to spawn in the spawn section
 	var/xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
 
+	/// The number of seconds between the placement of a xeno spawner and the moment of their actual spawning.
+	var/xeno_spawn_delay = 0
+
+	/// Whether new spawners will loop their spawns.
+	var/xeno_spawn_looping = FALSE
+
+	/// Whether newly placed spawners (including instant ones) will fail if placed near living, connected humans.
+	var/xeno_spawn_fail_human
+
 	/// If the spawned xeno is an AI in the spawn section
 	var/spawn_ai = TRUE
 
@@ -147,6 +156,25 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	data["spawn_ai"] = spawn_ai
 	data["spawn_click_intercept"] = spawn_click_intercept
 	data["xeno_spawn_count"] = xeno_spawn_count
+	data["xeno_spawn_delay"] = xeno_spawn_delay
+	data["xeno_spawn_looping"] = xeno_spawn_looping
+	data["xeno_spawn_fail_human"] = xeno_spawn_fail_human
+
+	if(length(GLOB.gm_xeno_spawners))
+		data["xeno_spawners"] = list()
+		for(var/datum/game_master_xeno_spawner/spawner as anything in GLOB.gm_xeno_spawners)
+			// list addition, gotta double wrap!
+			data["xeno_spawners"] += list(list(
+				"ref" = REF(spawner),
+				"spawn_type" = initial(spawner.spawn_type.name), // name's a little prettier
+				"spawn_count" = spawner.spawn_count,
+				"spawn_delay" = spawner.spawn_delay / (1 SECONDS),
+				"looping" = spawner.looping,
+				"fail_human" = spawner.fail_if_human_near,
+				"fail_range" = spawner.fail_range // they can't modify it, but nice to tell them about
+			))
+	else
+		data["xeno_spawners"] = ""
 
 	// Behavior stuff
 	data["selected_behavior"] = selected_behavior
@@ -186,31 +214,47 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				return
 
 			xeno_spawn_count = clamp(new_number, 1, 10)
-			return
+			return TRUE
+
+		if("set_xeno_spawn_delay")
+			var/new_delay = text2num(params["value"])
+			if(!new_delay)
+				return
+			// gotta set some kind of maximum
+			xeno_spawn_delay = round(clamp(new_delay, 0, 1 HOURS))
+			return TRUE
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-			return
+			return TRUE
 
 		if("set_selected_hive")
 			selected_hive = params["new_hive"]
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
-			return
+			return TRUE
 
 		if("xeno_spawn_ai_toggle")
 			spawn_ai = !spawn_ai
-			return
+			return TRUE
+
+		if("xeno_spawn_looping_toggle")
+			xeno_spawn_looping = !xeno_spawn_looping
+			return TRUE
+
+		if("xeno_spawn_fail_human_toggle")
+			xeno_spawn_fail_human = !xeno_spawn_fail_human
+			return TRUE
 
 		if("toggle_click_spawn")
 			if(spawn_click_intercept)
 				reset_click_overrides()
-				return
+				return TRUE
 
 			reset_click_overrides()
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
-			return
+			return TRUE
 
 		if("delete_all_xenos")
 			if(tgui_alert(ui.user, "Do you want to delete all xenos?", "Confirmation", list("Yes", "No")) != "Yes")
@@ -271,6 +315,30 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			var/client/jumping_client = ui.user.client
 			jumping_client.jump_to_turf(objective_turf)
+			return TRUE
+
+		if("jump_to_spawner")
+			if(!params["spawner_ref"])
+				return TRUE
+
+			var/datum/game_master_xeno_spawner/spawner = locate(params["spawner_ref"])
+			if(!spawner)
+				return TRUE
+			var/turf/spawner_turf = spawner.spawn_loc
+
+			var/client/jumping_client = ui.user.client
+			jumping_client.jump_to_turf(spawner_turf)
+			return TRUE
+
+		if("delete_spawner")
+			if(!params["spawner_ref"])
+				return TRUE
+
+			var/datum/game_master_xeno_spawner/spawner = locate(params["spawner_ref"])
+			if(!spawner)
+				return TRUE
+
+			qdel(spawner)
 			return TRUE
 
 		if("remove_objective")
@@ -348,8 +416,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			var/turf/spawn_turf = get_turf(object)
 
-			for(var/i = 1 to xeno_spawn_count)
-				new spawning_xeno_type(spawn_turf, null, selected_hive, !spawn_ai)
+			new /datum/game_master_xeno_spawner(
+				spawn_turf,
+				spawning_xeno_type,
+				xeno_spawn_count,
+				(xeno_spawn_delay SECONDS),
+				xeno_spawn_looping,
+				selected_hive,
+				spawn_ai,
+				xeno_spawn_fail_human
+			)
 
 			return TRUE
 

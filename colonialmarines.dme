@@ -1385,6 +1385,7 @@
 #include "code\modules\admin\ToRban.dm"
 #include "code\modules\admin\game_master\game_master.dm"
 #include "code\modules\admin\game_master\game_master_submenu.dm"
+#include "code\modules\admin\game_master\game_master_xeno_spawner.dm"
 #include "code\modules\admin\game_master\extra_buttons\rappel_menu.dm"
 #include "code\modules\admin\game_master\extra_buttons\rename_platoon.dm"
 #include "code\modules\admin\game_master\extra_buttons\toggle_join_xeno.dm"

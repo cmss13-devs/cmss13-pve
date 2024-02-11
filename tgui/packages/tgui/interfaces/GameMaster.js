@@ -6,7 +6,7 @@ export const GameMaster = (props, context) => {
   const { data, act } = useBackend(context);
 
   return (
-    <Window width={400} height={500}>
+    <Window width={650} height={500}>
       <Window.Content scrollable>
         <Stack direction="column" grow>
           <GameMasterSpawningPanel />
@@ -65,6 +65,41 @@ export const GameMasterSpawningPanel = (props, context) => {
         </Stack.Item>
         <Stack.Item>
           <Stack>
+            <Stack.Item>Delay (s)</Stack.Item>
+            <Stack.Item>
+              <Button.Input
+                ml={1}
+                minWidth={6}
+                minHeight={1.5}
+                content={data.xeno_spawn_delay}
+                currentValue={data.xeno_spawn_delay}
+                onCommit={(e, value) => {
+                  act('set_xeno_spawn_delay', { value });
+                }}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button.Checkbox
+                checked={data.xeno_spawn_looping}
+                content="Looping"
+                onClick={() => {
+                  act('xeno_spawn_looping_toggle');
+                }}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button.Checkbox
+                checked={data.xeno_spawn_fail_human}
+                content="Fail spawn if humans nearby"
+                onClick={() => {
+                  act('xeno_spawn_fail_human_toggle');
+                }}
+              />
+            </Stack.Item>
+          </Stack>
+        </Stack.Item>
+        <Stack.Item>
+          <Stack>
             <Stack.Item>
               <Button.Checkbox
                 checked={data.spawn_ai}
@@ -105,6 +140,57 @@ export const GameMasterSpawningPanel = (props, context) => {
             </Stack.Item>
           </Stack>
         </Stack.Item>
+        {data.xeno_spawners && (
+          <Stack.Item>
+            <Collapsible title="Spawners">
+              <Stack vertical>
+                {data.xeno_spawners.map((spawner) => {
+                  if (spawner) {
+                    let spawner_ref = spawner.ref;
+                    return (
+                      <Stack.Item>
+                        <Stack direction="column">
+                          <Divider />
+                          <Stack.Item>Caste: {spawner.spawn_type}</Stack.Item>
+                          <Stack.Item>Count: {spawner.spawn_count}</Stack.Item>
+                          <Stack.Item>Delay: {spawner.spawn_delay}s</Stack.Item>
+                          <Stack.Item>
+                            Looping: {spawner.looping ? 'True' : 'False'}
+                          </Stack.Item>
+                          <Stack.Item>
+                            Fail if human within {spawner.fail_range}:{' '}
+                            {spawner.fail_human ? 'True' : 'False'}
+                          </Stack.Item>
+                          <Stack.Item>
+                            <Stack vertical>
+                              <Stack.Item>
+                                <Button
+                                  content="Jump To"
+                                  onClick={() => {
+                                    act('jump_to_spawner', { spawner_ref });
+                                  }}
+                                />
+                              </Stack.Item>
+                              <Stack.Item>
+                                <Button
+                                  content="Delete"
+                                  onClick={() => {
+                                    act('delete_spawner', { spawner_ref });
+                                  }}
+                                />
+                              </Stack.Item>
+                            </Stack>
+                          </Stack.Item>
+                        </Stack>
+                      </Stack.Item>
+                    );
+                  }
+                })}
+                <Divider />
+              </Stack>
+            </Collapsible>
+          </Stack.Item>
+        )}
       </Stack>
     </Section>
   );
