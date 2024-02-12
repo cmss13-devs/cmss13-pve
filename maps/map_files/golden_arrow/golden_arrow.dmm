@@ -8618,8 +8618,7 @@
 "Xu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 2;
-	name = "\improper Firing Range";
-	req_one_access_txt = "8;12;40"
+	name = "\improper Firing Range"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
