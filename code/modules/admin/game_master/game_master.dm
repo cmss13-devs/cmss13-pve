@@ -218,7 +218,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 		if("set_xeno_spawn_delay")
 			var/new_delay = text2num(params["value"])
-			if(!new_delay)
+			if(isnull(new_delay)) // obviously !new_delay won't work, because 0 is valid
 				return
 			// gotta set some kind of maximum
 			xeno_spawn_delay = round(clamp(new_delay, 0, 1 HOURS))
