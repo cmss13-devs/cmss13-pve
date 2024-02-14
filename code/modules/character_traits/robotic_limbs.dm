@@ -6,7 +6,6 @@
 /datum/character_trait/robo_limb
 	var/robo_limb_name
 	var/code_limb
-	var/additional_description = "Only usable by 2ndLts and up."
 	applyable = FALSE
 	trait_group = /datum/character_trait_group/robo_limb
 	cost = 1
