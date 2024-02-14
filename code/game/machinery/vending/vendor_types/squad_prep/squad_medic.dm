@@ -273,7 +273,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 	name = "\improper UnTech Squad Medical Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of hospital corpsman standard-issue equipment."
 	icon_state = "upp_gear"
-	req_access = list(ACCESS_MARINE_MEDPREP)
+	req_access = list(ACCESS_UPP_MEDPREP)
 	vendor_role = list(JOB_SQUAD_MEDIC)
 	vendor_theme = VENDOR_THEME_UPP
 

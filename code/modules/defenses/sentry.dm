@@ -62,6 +62,8 @@
 
 	can_be_near_defense = TRUE
 
+	var/start_up_message = "Default systems initiated."
+
 	/// Delay sending no ammo messages
 	COOLDOWN_DECLARE(no_ammo_message_cooldown)
 
@@ -237,7 +239,7 @@
 	set_light(luminosity_strength)
 
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] hums to life and emits several beeps.")]")
-	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: 'Default systems initiated'")]")
+	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: '[start_up_message]'")]")
 	start_processing()
 	setup_target_acquisition()
 
@@ -767,7 +769,7 @@
 	selected_categories = list(
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
-
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

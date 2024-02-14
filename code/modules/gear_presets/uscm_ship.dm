@@ -547,10 +547,11 @@
 	skills = /datum/skills/SO
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_MAIN)
+	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
@@ -586,6 +587,7 @@
 	paygrade = "UO2"
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	access_list = ACCESS_LIST_UPP_PLATOON
 
 /datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)

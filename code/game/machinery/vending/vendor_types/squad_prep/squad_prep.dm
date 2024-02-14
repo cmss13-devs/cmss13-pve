@@ -153,7 +153,7 @@
 	name = "\improper UnTech Surplus Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard UPP uniforms."
 	icon_state = "upp_gear"
-	req_access = list(ACCESS_MARINE_PREP)
+	req_access = list(ACCESS_UPP_GENERAL)
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
@@ -381,7 +381,7 @@
 	name = "\improper UnTech Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any UPP Rifleman."
 	req_access = list()
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_RO, ACCESS_MARINE_PREP)
+	req_one_access = list(ACCESS_UPP_GENERAL)
 	hackable = TRUE
 
 	vend_x_offset = 2

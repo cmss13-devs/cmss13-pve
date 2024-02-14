@@ -97,6 +97,7 @@
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
 	paygrade = "UE1"
+	access = list(ACCESS_UPP_GENERAL)
 	assignment = JOB_SQUAD_MARINE_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -147,6 +148,7 @@
 
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = JOB_SQUAD_SMARTGUN_UPP
 	paygrade = "UE3"
 	role_comm_title = "MG"
@@ -335,6 +337,7 @@
 /datum/equipment_preset/uscm/medic/upp
 	name = "UPP Sanitar"
 	paygrade = "UE3"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = JOB_SQUAD_MEDIC_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -382,6 +385,7 @@
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
 	paygrade = "UE4"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	assignment = JOB_SQUAD_TEAM_LEADER_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -462,6 +466,7 @@
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
 	assignment = JOB_SQUAD_LEADER_UPP
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	paygrade = "UE6"
 	faction_group = list(FACTION_UPP)

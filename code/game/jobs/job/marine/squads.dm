@@ -112,6 +112,8 @@
 	///Should we add the name of our squad in front of their name? Ex: Alpha Hospital Corpsman
 	var/prepend_squad_name_to_assignment = TRUE
 
+	var/squad_one_access = ACCESS_SQUAD_ONE
+	var/squad_two_access = ACCESS_SQUAD_TWO
 
 /datum/squad/marine
 	name = "Root"
@@ -133,12 +135,14 @@
 	name = SQUAD_UPP
 	equipment_color = "#8B0000"
 	chat_color = "#B22222"
-	access = list(ACCESS_MARINE_ALPHA)
+	access = list(ACCESS_UPP_GENERAL)
 	radio_freq = UPP_FREQ
-	minimap_color = MINIMAP_SQUAD_ALPHA
+	minimap_color = MINIMAP_SQUAD_UPP
 	use_stripe_overlay = FALSE
 	usable = TRUE
 	faction = FACTION_UPP
+	squad_one_access = ACCESS_UPP_SQUAD_ONE
+	squad_two_access = ACCESS_UPP_SQUAD_TWO
 
 /datum/squad/marine/upp/New()
 	. = ..()
@@ -764,9 +768,9 @@
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
 	if(H.wear_id)
 		if(fireteam == "SQ1")
-			H.wear_id.access += ACCESS_SQUAD_ONE
+			H.wear_id.access += squad_one_access
 		if(fireteam == "SQ2")
-			H.wear_id.access += ACCESS_SQUAD_TWO
+			H.wear_id.access += squad_two_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Sergeant" in cycled_headset.tracking_options))
@@ -789,7 +793,7 @@
 	H.hud_set_squad()
 
 	if(H.wear_id)
-		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
+		H.wear_id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
