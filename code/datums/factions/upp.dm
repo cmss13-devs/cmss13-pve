@@ -21,7 +21,7 @@
 			hud_icon_state = "sl"
 		if(JOB_UPP_POLICE)
 			hud_icon_state = "mp"
-		if(JOB_UPP_LT_OFFICER, JOB_SO_UPP)
+		if(JOB_UPP_LT_OFFICER, JOB_SO)
 			hud_icon_state = "lt"
 		if(JOB_UPP_SRLT_OFFICER)
 			hud_icon_state = "slt"
