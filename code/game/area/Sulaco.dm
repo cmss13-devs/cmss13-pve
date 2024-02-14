@@ -124,7 +124,7 @@
 	return TRUE
 
 /area/shuttle/ds_upp
-	name = "\improper Dropship Akademia Nauk"
+	name = "dropship Akademia Nauk"
 	icon_state = "shuttlered"
 	base_muffle = MUFFLE_HIGH
 	soundscape_interval = 30
