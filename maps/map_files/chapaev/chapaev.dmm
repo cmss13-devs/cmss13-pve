@@ -636,6 +636,13 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"eG" = (
+/obj/item/ammo_box/magazine/type71/empty,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "eL" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata{
@@ -4927,6 +4934,13 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"XD" = (
+/obj/item/ammo_box/rounds/pkp,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "XH" = (
 /obj/structure/janitorialcart,
 /obj/item/reagent_container/glass/bucket{
@@ -15823,8 +15837,8 @@ vN
 Cy
 Ck
 Tk
-Li
-Li
+XD
+eG
 Tr
 mV
 mV
