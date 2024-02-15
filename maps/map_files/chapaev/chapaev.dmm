@@ -631,6 +631,12 @@
 /obj/item/clipboard{
 	pixel_x = 4
 	},
+/obj/item/reagent_container/pill/cyanide{
+	icon_state = "pill5";
+	pixel_y = 1;
+	pixel_x = -8;
+	name = "cyanide pill"
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
