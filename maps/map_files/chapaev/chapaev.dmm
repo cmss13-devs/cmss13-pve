@@ -3058,7 +3058,9 @@
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/turf/open/space/basic,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
 /area/golden_arrow/dorms)
 "Ez" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4456,7 +4458,9 @@
 /obj/item/tool/wrench{
 	pixel_y = 25
 	},
-/turf/open/space/basic,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
 /area/golden_arrow/dorms)
 "TB" = (
 /turf/open/floor/strata{
