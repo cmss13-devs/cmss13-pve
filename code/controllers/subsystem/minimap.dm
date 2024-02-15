@@ -443,7 +443,7 @@ SUBSYSTEM_DEF(minimaps)
 		return
 
 	var/is_observer = user.faction == FACTION_NEUTRAL && isobserver(user)
-	if(is_observer || user.faction in FACTION_LIST_HUMANOID )
+	if(is_observer || (user.faction in FACTION_LIST_HUMANOID))
 		// Send marine maps
 		var/datum/flattened_tacmap/latest = get_tacmap_data_png(user.faction)
 		if(latest)
@@ -807,7 +807,7 @@ SUBSYSTEM_DEF(minimaps)
 
 	data["isXeno"] = is_xeno
 	data["canViewTacmap"] = is_xeno
-	data["canViewCanvas"] = faction in FACTION_LIST_HUMANOID || faction == XENO_HIVE_NORMAL
+	data["canViewCanvas"] = (faction in FACTION_LIST_HUMANOID) || faction == XENO_HIVE_NORMAL
 
 	if(skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || faction == XENO_HIVE_NORMAL && isqueen(user))
 		data["canDraw"] = TRUE
