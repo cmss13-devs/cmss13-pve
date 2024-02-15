@@ -2747,7 +2747,8 @@
 	layer = 2.97;
 	name = "Tactical Map Display";
 	pixel_x = 7;
-	faction = "UPP"
+	faction = "UPP";
+	minimap_type = 8
 	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	pixel_x = -12;
