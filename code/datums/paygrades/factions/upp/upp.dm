@@ -22,13 +22,13 @@
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3
-	paygrade = "UE4"
+	paygrade = "UE3"
 	name = "Korporal"
 	prefix = "Kpl."
 	pay_multiplier = 0.3
 
 /datum/paygrade/upp/ue4
-	paygrade = "UE5"
+	paygrade = "UE4"
 	name = "Junior Serzhant"
 	prefix = "JrSzh."
 	pay_multiplier = 0.5
