@@ -1076,7 +1076,7 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in ROLES_AI)
+	if(job in SSticker.mode.get_roles_list())
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 	else

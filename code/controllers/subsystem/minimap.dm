@@ -381,7 +381,7 @@ SUBSYSTEM_DEF(minimaps)
 /proc/get_tacmap_data_png(faction)
 	var/list/map_list
 
-	if(faction in FACTION_LIST_HUMANOID )
+	if(faction in FACTION_LIST_HUMANOID)
 		map_list = GLOB.uscm_flat_tacmap_data
 	else if(faction == XENO_HIVE_NORMAL)
 		map_list = GLOB.xeno_flat_tacmap_data
@@ -898,7 +898,7 @@ SUBSYSTEM_DEF(minimaps)
 			if(!istype(params["image"], /list)) // potentially very serious?
 				return FALSE
 
-			if(faction in FACTION_LIST_HUMANOID )
+			if(faction in FACTION_LIST_HUMANOID)
 				GLOB.uscm_flat_tacmap_data += new_current_map
 			else if(faction == XENO_HIVE_NORMAL)
 				GLOB.xeno_flat_tacmap_data += new_current_map
@@ -914,7 +914,7 @@ SUBSYSTEM_DEF(minimaps)
 					current_squad.send_maptext("Tactical map update in progress...", "Tactical Map:")
 				human_leader.visible_message(SPAN_BOLDNOTICE("Tactical map update in progress..."))
 				playsound_client(human_leader.client, "sound/effects/sos-morse-code.ogg")
-				notify_ghosts(header = "Tactical Map", message = "The USCM tactical map has been updated.", ghost_sound = "sound/effects/sos-morse-code.ogg", notify_volume = 80, action = NOTIFY_USCM_TACMAP, enter_link = "uscm_tacmap=1", enter_text = "View", source = owner)
+				notify_ghosts(header = "Tactical Map", message = "The [faction] tactical map has been updated.", ghost_sound = "sound/effects/sos-morse-code.ogg", notify_volume = 80, action = NOTIFY_USCM_TACMAP, enter_link = "uscm_tacmap=1", enter_text = "View", source = owner)
 
 			else if(faction == XENO_HIVE_NORMAL)
 				var/mutable_appearance/appearance = mutable_appearance(icon('icons/mob/hud/actions_xeno.dmi'), "toggle_queen_zoom")
