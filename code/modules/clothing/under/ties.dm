@@ -391,8 +391,8 @@
 	icon_state = "commandopatch"
 
 /obj/item/clothing/accessory/patch/upp
-	name = "UPPA patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Army."
+	name = "UPP patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
 	icon_state = "upppatch"
 
 /obj/item/clothing/accessory/patch/upp/airborne
