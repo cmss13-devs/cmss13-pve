@@ -8,7 +8,7 @@
 	name = "catwalk"
 	layer = CATWALK_LAYER
 	desc = "These things have no depth to them, are they just, painted on?"
-	ahcnored = TRUE
+	anchored = TRUE
 
 //////////////////OUTDOOR STUFF/////////////////
 
