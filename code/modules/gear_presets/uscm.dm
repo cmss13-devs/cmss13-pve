@@ -96,7 +96,7 @@
 
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
-	paygrade = "UE1"
+	paygrade = "UE2"
 	access = list(ACCESS_UPP_GENERAL)
 	assignment = JOB_SQUAD_MARINE_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -111,7 +111,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
-	paygrade = "UE0"
+	paygrade = "UE1"
 
 //*****************************************************************************************************/
 
@@ -150,7 +150,7 @@
 	name = "UPP Squad Machinegunner"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = JOB_SQUAD_SMARTGUN_UPP
-	paygrade = "UE3"
+	paygrade = "UE4"
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -164,7 +164,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
-	paygrade = "UE2"
+	paygrade = "UE3"
 
 //*****************************************************************************************************/
 
@@ -336,7 +336,7 @@
 
 /datum/equipment_preset/uscm/medic/upp
 	name = "UPP Sanitar"
-	paygrade = "UE3"
+	paygrade = "UE4"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = JOB_SQUAD_MEDIC_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -351,7 +351,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
-	paygrade = "UE2"
+	paygrade = "UE3"
 
 //*****************************************************************************************************/
 
@@ -384,7 +384,7 @@
 
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
-	paygrade = "UE4"
+	paygrade = "UE5"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	assignment = JOB_SQUAD_TEAM_LEADER_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -468,7 +468,7 @@
 	assignment = JOB_SQUAD_LEADER_UPP
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
-	paygrade = "UE6"
+	paygrade = "UE7"
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -480,7 +480,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
-	paygrade = "UE5"
+	paygrade = "UE6"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

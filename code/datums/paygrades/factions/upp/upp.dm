@@ -22,13 +22,13 @@
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3
-	paygrade = "UE3"
+	paygrade = "UE4"
 	name = "Korporal"
 	prefix = "Kpl."
 	pay_multiplier = 0.3
 
 /datum/paygrade/upp/ue4
-	paygrade = "UE4"
+	paygrade = "UE5"
 	name = "Junior Serzhant"
 	prefix = "JrSzh."
 	pay_multiplier = 0.5
@@ -44,6 +44,12 @@
 	name = "Master Serzhant"
 	prefix = "MSzh."
 	pay_multiplier = 0.9
+
+/datum/paygrade/upp/ue7
+	paygrade = "UE7"
+	name = "Starshina"
+	prefix = "Strsh."
+	pay_multiplier = 1 //here comes the moneyyy
 
 //UPP Commandos
 /datum/paygrade/upp/uc1
