@@ -43,6 +43,10 @@
 
 	. = ..()
 
+/datum/game_mode/colonialmarines/ai/post_setup()
+	set_lz_resin_allowed(TRUE)
+	return ..()
+
 /datum/game_mode/colonialmarines/ai/announce_bioscans()
 	return
 

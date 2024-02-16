@@ -119,6 +119,7 @@
 	woyer.flick_attack_overlay(carbone, "disarm")
 	carbone.throw_atom(throw_turf, fling_distance, SPEED_VERY_FAST, woyer, TRUE)
 
+	COOLDOWN_RESET(woyer, forced_retarget_cooldown)
 	apply_cooldown()
 	return ..()
 
