@@ -10,7 +10,7 @@
 
 	damage_multiplier = 0.11
 
-	health = 350
+	health = 2000
 	firing_arc = 120
 
 	origins = list(0, -2)
@@ -31,7 +31,7 @@
 		"8" = list(-62, -26)
 	)
 
-	scatter = 4
+	scatter = 1
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
