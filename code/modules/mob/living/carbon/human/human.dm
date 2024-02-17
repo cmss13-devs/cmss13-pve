@@ -115,7 +115,7 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in ROLES_AI)
+	if(job in ROLES_USCM)
 		. += ""
 		. += "<a href='?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
@@ -1076,7 +1076,7 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in SSticker.mode.get_roles_list())
+	if(job in ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 	else
