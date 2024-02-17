@@ -110,6 +110,9 @@
 /obj/effect/attach_point/weapon/rasputin
 	ship_tag = DROPSHIP_RASPUTIN
 
+/obj/effect/attach_point/crew_weapon/rasputin
+	ship_tag = DROPSHIP_RASPUTIN
+
 /obj/effect/attach_point/weapon/rasputin/left_fore
 	name = "port fore weapon attach point"
 	attach_id = 1
@@ -118,7 +121,6 @@
 	firing_arc_max =  0
 	transverse  =  0
 	long    =  0
-
 
 /obj/effect/attach_point/weapon/rasputin/right_fore
 	name = "starboard fore weapon attach point"
