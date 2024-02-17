@@ -1436,7 +1436,12 @@
 	},
 /area/golden_arrow/dorms)
 "oW" = (
-/obj/structure/largecrate,
+/obj/structure/largecrate{
+	fill_from_loc = 0
+	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_y = 12
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
