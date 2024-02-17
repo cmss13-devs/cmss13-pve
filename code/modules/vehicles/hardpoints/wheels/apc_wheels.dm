@@ -9,7 +9,7 @@
 	disp_icon = "apc"
 	disp_icon_state = "wheels"
 
-	health = 2000
+	health = 1500
 
 	move_delay = VEHICLE_SPEED_SUPERFAST
 	move_max_momentum = 2
