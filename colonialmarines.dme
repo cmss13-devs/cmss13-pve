@@ -2463,6 +2463,7 @@
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
 #include "maps\map_files\LV671_Ark\LV671.dm"
+#include "void-marines\code\factory_areas.dm"
 #include "void-marines\code\portable_detector.dm"
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\reserve_role.dm"
