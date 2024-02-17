@@ -1440,7 +1440,9 @@
 	fill_from_loc = 0
 	},
 /obj/item/storage/backpack/marine/ammo_rack{
-	pixel_y = 12
+	pixel_y = 12;
+	name = "\improper makeshift ammo rack";
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest."
 	},
 /turf/open/floor/strata{
 	dir = 4;
