@@ -1,7 +1,7 @@
 {
-    "map_name": "Repaired LV-624",
+    "map_name": "LV-624 Repaired",
     "map_path": "map_files/LV624_Fixed",
-    "map_file": "Repaired_LV624.dmm",
+    "map_file": "LV624_repaired.dmm",
     "webmap_url": "LV624",
     "weather_holder": "/datum/weather_ss_map_holder/lv624",
     "survivor_types": [
