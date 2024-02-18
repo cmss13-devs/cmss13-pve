@@ -5,7 +5,7 @@
 	icon_state = "ace_autocannon"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/tank/dualcannon
-	max_rounds = 100
+	max_rounds = 80
 	gun_type = /obj/item/hardpoint/primary/dualcannon
 
 /obj/item/ammo_magazine/hardpoint/boyars_dualcannon/update_icon()
