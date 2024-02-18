@@ -162,7 +162,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		if(status_flags & XENO_HOST)
 			return FALSE
 
-		if(istype(src, /obj/item/clothing/mask/facehugger))
+		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
 			return FALSE
 
 	return TRUE
