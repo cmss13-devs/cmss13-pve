@@ -11,7 +11,7 @@
 
 	damage_multiplier = .15
 
-	health = 2000
+	health = 1500
 	firing_arc = 60
 
 	origins = list(0, -2)
