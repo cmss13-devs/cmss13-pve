@@ -9,7 +9,7 @@
 	disp_icon_state = "dualcannon"
 	activation_sounds = list('sound/weapons/vehicles/dual_autocannon_fire.ogg')
 
-	damage_multiplier = 0
+	damage_multiplier = .15
 
 	health = 2000
 	firing_arc = 60
