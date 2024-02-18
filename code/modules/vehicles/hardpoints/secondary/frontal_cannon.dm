@@ -8,7 +8,7 @@
 	disp_icon_state = "frontalcannon"
 	activation_sounds = list('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg')
 
-	damage_multiplier = 0.11
+	damage_multiplier = 0.20
 
 	health = 2000
 	firing_arc = 120
