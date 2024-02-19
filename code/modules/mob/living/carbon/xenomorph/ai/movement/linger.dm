@@ -12,6 +12,8 @@
 	/// The cooldown for how long the xeno will wait out of view before attempting to re-engage
 	COOLDOWN_DECLARE(reengage_cooldown)
 
+	var/reengage_interval = (2 SECONDS)
+
 /datum/xeno_ai_movement/linger/ai_move_target(delta_time)
 	var/mob/living/carbon/xenomorph/moving_xeno = parent
 	if(moving_xeno.throwing)
@@ -32,13 +34,12 @@
 		travelling_turf = get_turf(moving_xeno.current_target)
 		return TRUE
 
-#define REENGAGE_COOLDOWN (2 SECONDS)
 #define FIND_NEW_TRAVEL_TURF_LIMIT 5
 
 /datum/xeno_ai_movement/linger/proc/check_for_travelling_turf_change(mob/living/carbon/xenomorph/moving_xeno)
 	if(!(moving_xeno in view(world.view, moving_xeno.current_target)) && COOLDOWN_FINISHED(src, reengage_cooldown))
 		travelling_turf = get_turf(moving_xeno.current_target)
-		COOLDOWN_START(src, reengage_cooldown, REENGAGE_COOLDOWN)
+		COOLDOWN_START(src, reengage_cooldown, reengage_interval)
 		moving_xeno.emote("growl")
 		return
 
@@ -59,5 +60,4 @@
 		travelling_turf = get_turf(moving_xeno.current_target)
 		return
 
-#undef REENGAGE_COOLDOWN
 #undef FIND_NEW_TRAVEL_TURF_LIMIT
