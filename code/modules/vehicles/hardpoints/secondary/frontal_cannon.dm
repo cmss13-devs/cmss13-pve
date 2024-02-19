@@ -36,7 +36,7 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.3 SECONDS
+	fire_delay = 0.1 SECONDS
 
 /obj/item/hardpoint/secondary/frontalcannon/set_bullet_traits()
 	..()
