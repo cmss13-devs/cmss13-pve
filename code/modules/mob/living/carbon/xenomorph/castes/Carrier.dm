@@ -17,7 +17,7 @@
 
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_DRONE)
-	throwspeed = SPEED_AVERAGE
+	throwspeed = SPEED_FAST
 	can_hold_facehuggers = 1
 	can_hold_eggs = CAN_HOLD_ONE_HAND
 	weed_level = WEED_LEVEL_STANDARD
@@ -33,7 +33,7 @@
 	tacklestrength_max = 5
 
 	aura_strength = 2
-	hugger_delay = 20
+	hugger_delay = 10
 	egg_cooldown = 250
 
 	minimum_evolve_time = 5 MINUTES
@@ -176,6 +176,8 @@
 	. = ..()
 	hugger_overlays_icon = mutable_appearance('icons/mob/xenos/overlay_effects64x64.dmi',"empty")
 	eggsac_overlays_icon = mutable_appearance('icons/mob/xenos/overlay_effects64x64.dmi',"empty")
+	huggers_cur = rand(3,16)
+	update_hugger_overlays()
 
 /mob/living/carbon/xenomorph/carrier/death(cause, gibbed)
 	. = ..(cause, gibbed)
@@ -187,11 +189,11 @@
 
 		if(huggers_cur)
 			//Hugger explosion, like an egg morpher
-			var/obj/item/clothing/mask/facehugger/hugger
+			var/mob/living/carbon/xenomorph/facehugger/hugger
 			visible_message(SPAN_XENOWARNING("The chittering mass of tiny aliens is trying to escape [src]!"))
 			for(var/i in 1 to huggers_cur)
 				if(prob(chance))
-					hugger = new(loc, hivenumber)
+					hugger = new(loc, null, hivenumber)
 					step_away(hugger, src, 1)
 
 		var/eggs_dropped = FALSE
@@ -255,6 +257,8 @@
 	if(!check_state())
 		return
 
+	face_atom(T)
+
 	//target a hugger on the ground to store it directly
 	if(istype(T, /obj/item/clothing/mask/facehugger))
 		var/obj/item/clothing/mask/facehugger/F = T
@@ -282,42 +286,39 @@
 			store_huggers_from_egg_morpher(morpher)
 			return
 
-	var/obj/item/clothing/mask/facehugger/F = get_active_hand()
-	if(!F) //empty active hand
-		//if no hugger in active hand, we take one from our storage
-		if(huggers_cur <= 0)
-			to_chat(src, SPAN_WARNING("You don't have any facehuggers to use!"))
-			return
-
-		if(on_fire)
-			to_chat(src, SPAN_WARNING("Retrieving a stored facehugger while you're on fire would burn it!"))
-			return
-
-		F = new(src, hivenumber)
-		huggers_cur--
-		put_in_active_hand(F)
-		to_chat(src, SPAN_XENONOTICE("You grab one of the facehugger in your storage. Now sheltering: [huggers_cur] / [huggers_max]."))
-		update_icons()
+	//We throw a hugger from our storage
+	if(huggers_cur <= 0)
+		to_chat(src, SPAN_WARNING("You don't have any facehuggers to use!"))
 		return
 
-	if(!istype(F)) //something else in our hand
-		to_chat(src, SPAN_WARNING("You need a facehugger in your hand to throw one!"))
+	if(threw_a_hugger)
 		return
 
-	if(!threw_a_hugger)
-		threw_a_hugger = TRUE
+	threw_a_hugger = TRUE
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.update_button_icon()
+
+	if(!do_after(src, 1 SECONDS, INTERRUPT_INCAPACITATED, BUSY_ICON_HOSTILE))
+		return
+
+	var/turf/target_turf = get_turf(T)
+	var/mob/living/carbon/xenomorph/facehugger/child = new(loc, null, hivenumber)
+
+	huggers_cur--
+	update_icons()
+
+	visible_message(SPAN_XENOWARNING("\The [src] throws something towards \the [target_turf]!"), \
+		SPAN_XENOWARNING("You throw a facehugger towards \the [target_turf]!"))
+
+	playsound(loc, get_sfx("alien_tail_swipe"), 120, 1)
+	child.throw_atom(target_turf, 6, caste.throwspeed)
+
+	spawn(caste.hugger_delay)
+		threw_a_hugger = 0
 		for(var/X in actions)
 			var/datum/action/A = X
 			A.update_button_icon()
-		drop_inv_item_on_ground(F)
-		F.throw_atom(T, 4, caste.throwspeed)
-		visible_message(SPAN_XENOWARNING("\The [src] throws something towards \the [T]!"), \
-			SPAN_XENOWARNING("You throw a facehugger towards \the [T]!"))
-		spawn(caste.hugger_delay)
-			threw_a_hugger = 0
-			for(var/X in actions)
-				var/datum/action/A = X
-				A.update_button_icon()
 
 /mob/living/carbon/xenomorph/carrier/proc/store_egg(obj/item/xeno_egg/E)
 	if(E.hivenumber != hivenumber)

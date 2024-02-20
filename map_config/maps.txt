@@ -16,6 +16,9 @@ map lv624
 	default
 endmap
 
+map lv624_repaired
+endmap
+
 map bigredv2
 endmap
 
