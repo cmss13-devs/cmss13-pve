@@ -411,7 +411,7 @@
 	else
 		drain -= 50
 	recalculate_attachment_bonuses()
-
+/*
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_fire(mob/user)
 	if(!(flags_item & WIELDED))
 		to_chat(user, "[icon2html(src, usr)] You need to wield \the [src] to enable autofire.")
@@ -547,7 +547,7 @@
 		Fire(target,user)
 
 	target = null
-/*
+
 /obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
