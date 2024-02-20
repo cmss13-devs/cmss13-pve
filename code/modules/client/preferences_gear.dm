@@ -623,6 +623,11 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/weapon/gun/revolver/m44/custom
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/m48a4
+	display_name = "M48A4 Service Pistol"
+	path = /obj/item/storage/box/M48A4_loadout
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/drink
 	category = "Canned drinks"
 
