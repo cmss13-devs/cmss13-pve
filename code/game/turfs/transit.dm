@@ -241,6 +241,14 @@
 	shuttle_tag = DROPSHIP_NORMANDY
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/midway
+	shuttle_tag = DROPSHIP_MIDWAY
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/cyclone
+	shuttle_tag = DROPSHIP_CYCLONE
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 

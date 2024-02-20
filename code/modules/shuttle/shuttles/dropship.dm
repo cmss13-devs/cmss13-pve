@@ -130,6 +130,9 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/midway/get_transit_path_type()
+	return /turf/open/space/transit/dropship/midway
+
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
 	id = DROPSHIP_UPP
@@ -148,15 +151,24 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
+	return /turf/open/space/transit/dropship/cyclone
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
-	preferred_direction = SOUTH
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/alamo/get_transit_path_type()
+	return /turf/open/space/transit/dropship/alamo
 
 /obj/docking_port/mobile/marine_dropship/normandy
 	name = "Normandy"
 	id = DROPSHIP_NORMANDY
-	preferred_direction = SOUTH
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/normandy/get_transit_path_type()
+	return /turf/open/space/transit/dropship/normandy
 
 /obj/docking_port/mobile/marine_dropship/check()
 	. = ..()
