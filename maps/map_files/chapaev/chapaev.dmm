@@ -1590,7 +1590,7 @@
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/space)
 "pS" = (
-/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3595,12 +3595,12 @@
 /turf/open/floor/plating,
 /area/golden_arrow/squad_two)
 "Ju" = (
-/obj/structure/machinery/line_nexter{
-	dir = 2;
-	id = "MTline"
-	},
-/obj/structure/barricade/handrail{
+/obj/structure/barricade/handrail/strata{
 	dir = 4
+	},
+/obj/structure/machinery/line_nexter{
+	icon_state = "turnstile_strata";
+	dir = 2
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -5076,7 +5076,7 @@
 	},
 /area/golden_arrow/engineering)
 "Zv" = (
-/obj/structure/barricade/handrail{
+/obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
 /turf/open/floor/strata{
