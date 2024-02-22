@@ -876,6 +876,12 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/small,
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet";
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	pixel_x = 11;
+	pixel_y = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1649,13 +1655,12 @@
 	},
 /area/golden_arrow/engineering)
 "qf" = (
-/obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 12
+/obj/structure/barricade/handrail/strata{
+	dir = 1
 	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/golden_arrow/supply)
 "qm" = (
@@ -2462,6 +2467,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"xY" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "xZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
@@ -2984,7 +2999,6 @@
 /area/golden_arrow/engineering)
 "Dr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/magazine/book/theartofwar,
 /obj/item/tool/pen{
 	pixel_x = 12
 	},
@@ -2993,6 +3007,7 @@
 	pixel_y = 12;
 	pixel_x = 11
 	},
+/obj/item/prop/magazine/book/theartofwar,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3173,6 +3188,12 @@
 /area/golden_arrow/briefing)
 "Fi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet";
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	pixel_x = 1;
+	pixel_y = 6
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -3317,6 +3338,11 @@
 /obj/item/attachable/bayonet/upp{
 	pixel_y = -1;
 	pixel_x = -9
+	},
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet";
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	pixel_x = 13
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3600,7 +3626,8 @@
 	},
 /obj/structure/machinery/line_nexter{
 	icon_state = "turnstile_strata";
-	dir = 2
+	dir = 2;
+	layer = 4.1
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -15088,7 +15115,7 @@ RN
 OJ
 sz
 OJ
-Cx
+Li
 Tr
 vN
 vN
@@ -15212,7 +15239,7 @@ xK
 fh
 dH
 nI
-nI
+xY
 PJ
 fh
 KV
