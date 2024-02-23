@@ -626,7 +626,7 @@
 	set category = "Object"
 	set src in usr
 
-	if(!usr.canmove || usr.stat || usr.is_mob_restrained())
+	if(usr.is_mob_incapacitated())
 		return 0
 
 	if(!injections)
@@ -905,7 +905,6 @@
 	H.alpha = full_camo_alpha
 	H.FF_hit_evade = 1000
 	ADD_TRAIT(H, TRAIT_UNDENSE, SPECIALIST_GEAR_TRAIT)
-	H.density = FALSE
 
 	RegisterSignal(H, COMSIG_MOB_MOVE_OR_LOOK, PROC_REF(handle_mob_move_or_look))
 
@@ -930,7 +929,6 @@
 		COMSIG_MOB_FIRED_GUN,
 		COMSIG_MOB_FIRED_GUN_ATTACHMENT,
 		COMSIG_MOB_DEATH,
-		COMSIG_MOB_POST_UPDATE_CANMOVE,
 		COMSIG_HUMAN_EXTINGUISH,
 		COMSIG_MOB_MOVE_OR_LOOK
 	))
@@ -939,7 +937,6 @@
 	animate(H, alpha = initial(H.alpha), flags = ANIMATION_END_NOW)
 	H.FF_hit_evade = initial(H.FF_hit_evade)
 	REMOVE_TRAIT(H, TRAIT_UNDENSE, SPECIALIST_GEAR_TRAIT)
-	H.update_canmove()
 
 	var/datum/mob_hud/security/advanced/SA = huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.add_to_hud(H)
@@ -984,7 +981,7 @@
 
 /datum/action/item_action/specialist/prepare_position/can_use_action()
 	var/mob/living/carbon/human/H = owner
-	if(istype(H) && !H.is_mob_incapacitated() && !H.lying && holder_item == H.wear_suit)
+	if(istype(H) && !H.is_mob_incapacitated() && H.body_position == STANDING_UP && holder_item == H.wear_suit)
 		return TRUE
 
 /datum/action/item_action/specialist/prepare_position/action_activate()
@@ -1478,9 +1475,10 @@
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 
 /obj/item/clothing/suit/storage/CMB
-	name = "\improper CMB jacket"
-	desc = "A black jacket worn by Colonial Marshals. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	name = "\improper CMB Deputy jacket"
+	desc = "A thick and stylish black leather jacket with a Marshal's Deputy badge pinned to it. The back is enscribed with the powerful letters of 'DEPUTY' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
 	icon_state = "CMB_jacket"
+	item_state = "CMB_jacket"
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
@@ -1526,6 +1524,12 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 	pockets.max_storage_space = 8
+
+/obj/item/clothing/suit/storage/CMB/marshal
+	name = "\improper CMB Marshal jacket"
+	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	icon_state = "CMB_jacket_marshal"
+	item_state = "CMB_jacket_marshal"
 
 /obj/item/clothing/suit/storage/RO
 	name = "quartermaster jacket"

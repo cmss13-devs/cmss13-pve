@@ -44,7 +44,6 @@
 			set_stat(CONSCIOUS)
 			icon_state = "mouse_[body_color]"
 			wander = 1
-			canmove = 1
 		else if(prob(5))
 			INVOKE_ASYNC(src, PROC_REF(emote), "snuffles")
 

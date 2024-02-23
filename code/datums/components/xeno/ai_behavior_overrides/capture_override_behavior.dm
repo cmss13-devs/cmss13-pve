@@ -7,10 +7,11 @@
 /datum/component/ai_behavior_override/capture/Initialize(...)
 	. = ..()
 
-	if(!istype(parent, /mob))
-		return COMPONENT_INCOMPATIBLE
+	if(!ishuman(parent))
+		var/mob/living/carbon/human/new_parent = locate() in get_turf(parent)
+		if(new_parent)
+			new_parent.AddComponent(/datum/component/ai_behavior_override/capture)
 
-	if(isxeno(parent))
 		return COMPONENT_INCOMPATIBLE
 
 /datum/component/ai_behavior_override/capture/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
@@ -18,12 +19,15 @@
 	if(!.)
 		return
 
+	if(isfacehugger(checked_xeno))
+		return FALSE
+
 	var/mob/parent_mob = parent
 
-	var/stat = parent_mob.stat
+	var/captee_stat = parent_mob.stat
 	var/mob/pulledby = parent_mob.pulledby
 
-	if(stat == DEAD)
+	if(captee_stat == DEAD)
 		qdel(src)
 		return FALSE
 
@@ -41,7 +45,7 @@
 	if(distance > 10)
 		return FALSE
 
-	if(stat == CONSCIOUS)
+	if(captee_stat == CONSCIOUS)
 		return FALSE
 
 	if(isxeno(pulledby) && pulledby != checked_xeno)
@@ -55,7 +59,7 @@
 		return
 
 	processing_xeno.current_target = parent
-	processing_xeno.resting = FALSE
+	processing_xeno.set_resting(FALSE, FALSE, TRUE)
 
 	if(processing_xeno.get_active_hand())
 		processing_xeno.swap_hand()

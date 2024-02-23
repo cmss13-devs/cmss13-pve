@@ -524,6 +524,27 @@
 		qdel(signal)
 	..()
 
+/obj/effect/landmark/rappel
+	name = "Rappel Point"
+	var/datum/cas_signal/signal
+	invisibility_value = SEE_INVISIBLE_OBSERVER
+	icon_state = "o_green"
+
+/obj/effect/landmark/rappel/New()
+	. = ..()
+	signal = new(src)
+	signal.target_id = ++cas_tracking_id_increment
+	name = "Rappel Point #[signal.target_id]"
+	signal.name = name
+	cas_groups[FACTION_MARINE].add_signal(signal)
+
+/obj/effect/landmark/rappel/Destroy()
+	if(signal)
+		cas_groups[FACTION_MARINE].remove_signal(signal)
+		QDEL_NULL(signal)
+	return ..()
+
+
 /// Signal flares deployed by a flare gun
 /obj/item/device/flashlight/flare/signal/gun
 	activate_message = FALSE

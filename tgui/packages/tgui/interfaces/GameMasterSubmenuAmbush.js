@@ -48,6 +48,16 @@ export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
                 }}
               />
             </Stack.Item>
+            <Stack.Item>
+              <Dropdown
+                options={data.spawnable_hives}
+                selected={data.selected_hive}
+                width="15rem"
+                onSelected={(new_hive) => {
+                  act('set_selected_hive', { new_hive });
+                }}
+              />
+            </Stack.Item>
           </Stack>
         </Stack.Item>
         <Stack.Item>

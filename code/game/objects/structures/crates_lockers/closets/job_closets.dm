@@ -118,6 +118,7 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/storage/belt/marine/smartgunner(src)
+	new /obj/item/storage/belt/gun/smartgunner(src)
 
 /obj/structure/closet/cryo/Initialize()
 	. = ..()

@@ -13,7 +13,7 @@
 	flags_armor_protection = 0
 	toggleable = TRUE
 	hud_type = MOB_HUD_MEDICAL_ADVANCED
-	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/view_publications)
+	actions_types = list(/datum/action/item_action/toggle)
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_MEDIC
 
@@ -36,7 +36,7 @@
 	return
 
 /datum/action/item_action/view_publications/can_use_action()
-	if(owner && !owner.is_mob_incapacitated() && !owner.lying && owner.faction != FACTION_SURVIVOR)
+	if(owner && !owner.is_mob_incapacitated() && owner.faction != FACTION_SURVIVOR)
 		return TRUE
 
 /datum/action/item_action/view_publications/action_activate()

@@ -789,6 +789,9 @@
 	if(ovipositor)
 		return //sanity check
 	ovipositor = TRUE
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, OVIPOSITOR_TRAIT)
+	set_body_position(STANDING_UP)
+	set_resting(FALSE)
 
 	set_resin_build_order(GLOB.resin_build_order_ovipositor) // This needs to occur before we update the abilities so we can update the choose resin icon
 	for(var/datum/action/xeno_action/action in actions)
@@ -841,7 +844,6 @@
 	egg_planting_range = 3
 	anchored = TRUE
 	resting = FALSE
-	update_canmove()
 	update_icons()
 	bubble_icon_x_offset = 32
 	bubble_icon_y_offset = 32
@@ -869,6 +871,7 @@
 	if(!ovipositor)
 		return
 	ovipositor = FALSE
+	REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, OVIPOSITOR_TRAIT)
 	update_icons()
 	bubble_icon_x_offset = initial(bubble_icon_x_offset)
 	bubble_icon_y_offset = initial(bubble_icon_y_offset)
@@ -897,7 +900,6 @@
 			ovi_ability.apply_cooldown()
 			break
 	anchored = FALSE
-	update_canmove()
 
 	for(var/mob/living/carbon/xenomorph/L in hive.xeno_leader_list)
 		L.handle_xeno_leader_pheromones()
@@ -906,14 +908,6 @@
 		xeno_message(SPAN_XENOANNOUNCE("The Queen has shed her ovipositor, evolution progress paused."), 3, hivenumber)
 
 	SEND_SIGNAL(src, COMSIG_QUEEN_DISMOUNT_OVIPOSITOR, instant_dismount)
-
-/mob/living/carbon/xenomorph/queen/update_canmove()
-	. = ..()
-	if(ovipositor)
-		lying = FALSE
-		density = TRUE
-		canmove = FALSE
-		return canmove
 
 /mob/living/carbon/xenomorph/queen/handle_special_state()
 	if(ovipositor)
