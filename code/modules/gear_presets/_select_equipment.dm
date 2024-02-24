@@ -262,7 +262,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			continue
 		closet.owner = new_human.real_name
 		closet_to_spawn_in = closet
-		closet_to_spawn_in.name = "[owner]'s personal locker"
+		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"
 		break
 	if(!closet_to_spawn_in)
 		load_vanity(new_human, mob_client)
