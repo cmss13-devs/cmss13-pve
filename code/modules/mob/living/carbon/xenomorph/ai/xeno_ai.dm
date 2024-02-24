@@ -250,7 +250,7 @@
 	var/smallest_distance = INFINITY
 
 	for(var/mob/living/carbon/potential_target as anything in GLOB.alive_mob_list)
-		if(!iscarbon(potential_target))
+		if(!istype(potential_target))
 			continue
 
 		if(z != potential_target.z)
@@ -339,7 +339,7 @@
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
 /mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
-	if(!ai_check_stat())
+	if(!ai_check_stat(ai_xeno))
 		return FALSE
 
 	if(ai_xeno.can_not_harm(src))

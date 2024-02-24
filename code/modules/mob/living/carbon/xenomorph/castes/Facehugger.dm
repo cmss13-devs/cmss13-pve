@@ -7,7 +7,7 @@
 	melee_damage_upper = 5
 	max_health = XENO_HEALTH_LARVA
 	caste_desc = "Ewwww, that's disgusting!"
-	speed = XENO_SPEED_TIER_8
+	speed = XENO_SPEED_TIER_10
 
 	evolution_allowed = FALSE
 	can_be_revived = FALSE
@@ -24,12 +24,12 @@
 	pixel_y = -6
 	old_x = -8
 	old_y = -6
-	layer = MOB_LAYER
+	layer = XENO_HIDING_LAYER
 	mob_flags = NOBIOSCAN
 	see_in_dark = 8
 	tier = 0  //Facehuggers don't count towards Pop limits
 	acid_blood_damage = 5
-	crit_health = 0
+	crit_health = -25
 	crit_grace_time = 0
 	mob_size = MOB_SIZE_SMALL
 	death_fontsize = 2
@@ -55,9 +55,12 @@
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 	mutation_type = "Normal"
+	claw_type = 0 // No claws at all
 
 	icon_xeno = 'icons/mob/xenos/facehugger.dmi'
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
+
+	ai_range = 24
 
 /mob/living/carbon/xenomorph/facehugger/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -65,19 +68,8 @@
 		PF.flags_pass = PASS_MOB_THRU|PASS_FLAGS_CRAWLER
 		PF.flags_can_pass_all = PASS_ALL^PASS_OVER_THROW_ITEM
 
-/mob/living/carbon/xenomorph/facehugger/Life(delta_time)
-	if(stat == DEAD)
-		return ..()
-
-	if(body_position == STANDING_UP && !(mutation_type == FACEHUGGER_WATCHER) && !(locate(/obj/effect/alien/weeds) in get_turf(src)))
-		adjustBruteLoss(1)
-		return ..()
-
-	if(!client && !aghosted && away_timer > XENO_FACEHUGGER_LEAVE_TIMER)
-		// Become a npc once again
-		new /obj/item/clothing/mask/facehugger(loc, hivenumber)
-		qdel(src)
-	return ..()
+/mob/living/carbon/xenomorph/facehugger/init_movement_handler()
+	return new /datum/xeno_ai_movement/linger/facehugger(src)
 
 /mob/living/carbon/xenomorph/facehugger/update_icons(is_pouncing)
 	if(!caste)
