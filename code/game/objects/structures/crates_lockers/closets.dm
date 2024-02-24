@@ -10,6 +10,7 @@
 	var/opened = 0
 	var/welded = 0
 	var/wall_mounted = 0 //never solid (You can always pass over it)
+	var/can_be_stacked = FALSE
 	health = 100
 	var/lastbang
 	var/storage_capacity = 30 //This is so that someone can't pack hundreds of items in a locker/crate
@@ -63,17 +64,21 @@
 	return 1
 
 /obj/structure/closet/proc/can_close()
+	for(var/mob/living/carbon/xenomorph/xeno in get_turf(src))
+		return 0
+	if(can_be_stacked)
+		return 1
 	for(var/obj/structure/closet/closet in get_turf(src))
 		if(closet != src && !closet.wall_mounted)
 			return 0
-	for(var/mob/living/carbon/xenomorph/xeno in get_turf(src))
-		return 0
 	return 1
 
 /obj/structure/closet/proc/dump_contents()
 
 	for(var/obj/I in src)
 		I.forceMove(loc)
+		I.pixel_x = pixel_x
+		I.pixel_y = pixel_y
 
 	for(var/mob/M in src)
 		M.forceMove(loc)

@@ -153,7 +153,10 @@
 		load_gear(new_human, mob_client)
 	load_id(new_human, mob_client)
 	load_status(new_human, mob_client)
-	load_vanity(new_human, mob_client)
+	if(is_ground_level(new_human.z))
+		load_vanity(new_human, mob_client)
+	else
+		INVOKE_ASYNC(src, PROC_REF(spawn_vanity_in_personal_lockers), new_human, mob_client)
 	load_traits(new_human, mob_client)
 	if(round_statistics && count_participant)
 		round_statistics.track_new_participant(faction)
@@ -245,6 +248,82 @@
 				if(!new_human.equip_to_slot_if_possible(P, WEAR_L_HAND))
 					if(!new_human.equip_to_slot_if_possible(P, WEAR_R_HAND))
 						P.forceMove(new_human.loc)
+
+GLOBAL_LIST_EMPTY(personal_closets)
+
+/datum/equipment_preset/proc/spawn_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client)
+	var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
+	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
+		return//We want to equip them with custom stuff second, after they are equipped with everything else.
+	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
+		if(closet.owner)
+			continue
+		if(new_human.job != closet.job)
+			continue
+		closet.owner = new_human.real_name
+		closet_to_spawn_in = closet
+		break
+	if(!closet_to_spawn_in)
+		load_vanity(new_human, mob_client)
+		return
+
+	for(var/gear_name in new_human.client.prefs.gear)
+		var/datum/gear/current_gear = gear_datums_by_name[gear_name]
+		if(current_gear)
+			if(current_gear.allowed_roles && !(assignment in current_gear.allowed_roles))
+				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Role"))
+				return
+			if(current_gear.allowed_origins && !(new_human.origin in current_gear.allowed_origins))
+				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Origin"))
+				return
+			new current_gear.path(closet_to_spawn_in)
+
+	//Gives ranks to the ranked
+	var/current_rank = paygrade
+	var/obj/item/card/id/I = new_human.get_idcard()
+	if(I)
+		current_rank = I.paygrade
+	if(current_rank)
+		var/rankpath = get_rank_pins(current_rank)
+		if(rankpath)
+			new rankpath(closet_to_spawn_in)
+
+	if(flags & EQUIPMENT_PRESET_MARINE)
+		var/playtime = get_job_playtime(new_human.client, assignment)
+		var/medal_type
+
+		switch(playtime)
+			if(JOB_PLAYTIME_TIER_1 to JOB_PLAYTIME_TIER_2)
+				medal_type = /obj/item/clothing/accessory/medal/bronze/service
+			if(JOB_PLAYTIME_TIER_2 to JOB_PLAYTIME_TIER_3)
+				medal_type = /obj/item/clothing/accessory/medal/silver/service
+			if(JOB_PLAYTIME_TIER_3 to JOB_PLAYTIME_TIER_4)
+				medal_type = /obj/item/clothing/accessory/medal/gold/service
+			if(JOB_PLAYTIME_TIER_4 to INFINITY)
+				medal_type = /obj/item/clothing/accessory/medal/platinum/service
+
+		if(!new_human.client.prefs.playtime_perks)
+			medal_type = null
+
+		if(medal_type)
+			var/obj/item/clothing/accessory/medal/medal = new medal_type(closet_to_spawn_in)
+			medal.recipient_name = new_human.real_name
+			medal.recipient_rank = current_rank
+
+
+	//Gives glasses to the vision impaired
+	if(new_human.disabilities & NEARSIGHTED)
+		new /obj/item/clothing/glasses/regular(closet_to_spawn_in)
+
+	for(var/datum/view_record/medal_view/medal as anything in DB_VIEW(/datum/view_record/medal_view, DB_COMP("player_id", DB_EQUALS, mob_client.player_data.id)))
+		if(medal.recipient_name != new_human.real_name)
+			continue
+		if(medal.recipient_role != new_human.job)
+			continue
+		var/obj/item/clothing/accessory/medal/given_medal = new medal.medal_type(closet_to_spawn_in)
+		given_medal.recipient_name = medal.recipient_name
+		given_medal.recipient_rank = medal.recipient_role
+		given_medal.medal_citation = medal.citation
 
 /datum/equipment_preset/proc/load_traits(mob/living/carbon/human/new_human, client/mob_client)
 	var/client/real_client = mob_client || new_human.client
