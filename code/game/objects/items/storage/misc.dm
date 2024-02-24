@@ -133,21 +133,17 @@
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 
-/obj/item/storage/box/M48A4_loadout
-	name = "M48A4 storage case"
-	desc = "A relatively large storage case containing the M48A4 and magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
+/obj/item/storage/box/M1911_loadout
+	name = "M1911 storage case"
+	desc = "A relatively large storage case containing the 1911 and additional magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
 	icon = 'icons/obj/items/storage.dmi'
-	icon_state = "guncase"
+	icon_state = "matebacase"
 	w_class = SIZE_MEDIUM
 	max_w_class = SIZE_MEDIUM
-	storage_slots = 7
+	storage_slots = 3
 
-/obj/item/storage/box/M48A4_loadout/fill_preset_inventory()
-	new /obj/item/weapon/gun/pistol/m1911/socom(src)
-	new /obj/item/ammo_magazine/pistol/m1911(src)
-	new /obj/item/ammo_magazine/pistol/m1911(src)
-	new /obj/item/ammo_magazine/pistol/m1911(src)
-	new /obj/item/ammo_magazine/pistol/m1911(src)
+/obj/item/storage/box/M1911_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 
