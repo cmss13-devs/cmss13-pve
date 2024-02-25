@@ -8,7 +8,7 @@
 
 /obj/structure/closet/secure_closet/marine_personal/get_examine_text(mob/user)
 	. = ..()
-	. += SPAN_NOTICE("It has a name tag[owner ? ": [owner]." : ". It's someone's from 1st Platoon..."]")
+	. += SPAN_NOTICE("It has a name tag[owner ? ": [owner]." : ". They are sill in hypersleep..."]")
 
 /obj/structure/closet/secure_closet/marine_personal/Initialize(mapload, ...)
 	. = ..()
