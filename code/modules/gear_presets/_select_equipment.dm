@@ -156,7 +156,7 @@
 	if(is_ground_level(new_human.z))
 		load_vanity(new_human, mob_client)
 	else
-		INVOKE_ASYNC(src, PROC_REF(spawn_vanity_in_personal_lockers), new_human, mob_client)
+		spawn_vanity_in_personal_lockers(new_human, mob_client)
 	load_traits(new_human, mob_client)
 	if(round_statistics && count_participant)
 		round_statistics.track_new_participant(faction)
