@@ -582,7 +582,7 @@
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
 	assignment = JOB_SO_UPP
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_TSL, LANGUAGE_SPANISH, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
 	paygrade = "UO2"
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
