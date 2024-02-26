@@ -96,7 +96,7 @@ var/list/admin_verbs_admin = list(
 )
 
 var/list/admin_verbs_ban = list(
-	/client/proc/unban_panel
+	/client/proc/unban_panel,
 	/client/proc/stickyban_panel,
 
 	// /client/proc/jobbans // Disabled temporarily due to 15-30 second lag spikes. Don't forget the comma in the line above when uncommenting this!
