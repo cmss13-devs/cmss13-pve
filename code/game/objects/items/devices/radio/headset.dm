@@ -65,7 +65,7 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-	if(SQUAD_MARINE_1  == default_freq && SQUAD_MARINE_1  != GLOB.main_platoon_name)
+	if(SQUAD_MARINE_1 == default_freq && SQUAD_MARINE_1 != GLOB.main_platoon_name)
 		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
 
 /obj/item/device/radio/headset/proc/rename_platoon(datum/source, new_name, old_name)
