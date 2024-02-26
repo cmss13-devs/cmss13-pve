@@ -8,9 +8,9 @@
 	disp_icon_state = "frontalcannon"
 	activation_sounds = list('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg')
 
-	damage_multiplier = 0.11
+	damage_multiplier = 0.15
 
-	health = 350
+	health = 2000
 	firing_arc = 120
 
 	origins = list(0, -2)
@@ -31,12 +31,12 @@
 		"8" = list(-62, -26)
 	)
 
-	scatter = 4
+	scatter = 1
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.3 SECONDS
+	fire_delay = 0.1 SECONDS
 
 /obj/item/hardpoint/secondary/frontalcannon/set_bullet_traits()
 	..()
