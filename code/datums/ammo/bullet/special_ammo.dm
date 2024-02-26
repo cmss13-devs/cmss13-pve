@@ -172,5 +172,5 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 14
 	damage = 45
-	penetration= ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
