@@ -1187,6 +1187,21 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"lS" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin,
+/obj/item/tool/pen{
+	pixel_x = 12
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "me" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
@@ -2471,6 +2486,10 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/magazine/book{
 	name = "UPP Party Doctrine Booklet"
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_y = 1;
+	pixel_x = 6
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -14325,7 +14344,7 @@ KD
 PE
 KN
 PJ
-dH
+lS
 VH
 bg
 xD
