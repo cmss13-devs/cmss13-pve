@@ -138,6 +138,20 @@
 	new /obj/item/ammo_magazine/pistol/t73(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
 
+/obj/item/storage/box/M1911_loadout
+	name = "M1911 storage case"
+	desc = "A relatively large storage case containing the 1911 and additional magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_MEDIUM
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+	
+/obj/item/storage/box/M1911_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+
 /obj/item/storage/box/co2_knife
 	name = "M8 cartridge bayonet packaging"
 	desc = "Contains one M8 Cartridge Bayonet and two sister CO2 cartridges. Thanks for being a dedicated Boots magazine subscriber!"
