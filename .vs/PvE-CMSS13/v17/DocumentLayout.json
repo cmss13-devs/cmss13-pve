@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\multitile\\multitile.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\multitile\\multitile.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\datums\\ammo\\bullet\\tank.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\datums\\ammo\\bullet\\tank.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dualcannon_ammo.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\dualcannon_ammo.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T22:01:36.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "multitile.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\Source\\Repos\\PvE-CMSS13\\code\\modules\\vehicles\\multitile\\multitile.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\multitile\\multitile.dm",
+              "ToolTip": "C:\\Users\\Scott\\Source\\Repos\\PvE-CMSS13\\code\\modules\\vehicles\\multitile\\multitile.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\multitile\\multitile.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAALAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T21:56:10.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "cupola.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\secondary\\cupola.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T20:29:37.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cupola_ammo.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\hardpoint_ammo\\cupola_ammo.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T20:29:25.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frontal_cannon.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\secondary\\frontal_cannon.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAWAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T20:16:32.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dual_cannon.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\primary\\dual_cannon.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T20:15:24.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "tank.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\datums\\ammo\\bullet\\tank.dm",
+              "RelativeDocumentMoniker": "code\\datums\\ammo\\bullet\\tank.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\datums\\ammo\\bullet\\tank.dm",
+              "RelativeToolTip": "code\\datums\\ammo\\bullet\\tank.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T19:58:43.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "apc_wheels.dm",
+              "DocumentMoniker": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm",
+              "RelativeDocumentMoniker": "code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm",
+              "ToolTip": "C:\\Users\\Scott\\source\\repos\\PvE-CMSS13\\code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm",
+              "RelativeToolTip": "code\\modules\\vehicles\\hardpoints\\wheels\\apc_wheels.dm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVDhPhVNbSBRhFP5mZi8zu\u002BuqmZdFsiQMNEO8UYYVPnShoiiktwpKJNh86CF8MCIi8kEKoaceJegpegsCC5QCXSql1aystljXXTdddnXUvczs/J2ZnYRtH/rg/Gf\u002Bc873zflvHEw0d/Qy3fNmRJ84JAGaBqTSWXQdaZt8MNjbkcuaYMzgGNAFdMiybJimMRaNxtjPX2F24kwf6zruZddvDH2nUnuOkQNv\u002Bi1Mx6Yxl/iChUQEgWQQWYlHaDWO/gEvxt/P7u7xPpyisi2RAgELb4fGeMyvBKh9ARuZDDRBhSjW40rPTfj8Hxu6vQMzuIZao95gmVCzpLhkg9Ppxlc/EAyrKHLFcajxKIYG\u002BxFeShDBjh9Ty3WYwE6ihPI6UFRAgxP3Hq1jeERENF6GpFIO3/wBFHku4s7tPoyMPDarsY/MmSewsZnG67E5NHmewmrJHYeiMFitHCTJgflPr/BuchRalv4EVJBxeQKjYwsILVcgw\u002B/F2WMlaG9yoLbGju6TpXA6OKTlCBaXGLEEvXxFH/IEZr6k4JspRiDWCZudQ0OLiLIdPET6XpOBZ77LWE64oaQ39PLt\u002BpAnoGYZbNRufZ2IcDyDW0\u002BCqC61I5ZQjZieA0f7nltdYQc1HoYLp0sR\u002Ba2ApTi0FLkRmLoPW/KlEdNzLjEOXrCajH8E9rdWIri4Dv/nJMYnZchxDf5vTXgxUWvEQpFNCIhQAwatcAmSqxLtjWtwiPQACDxlLcWdSKpVtIkMEnuL8upWCBajg8Il6PdgT30zLp1L4dThGCTbKqxcAl1tUdRV\u002BLGt6iBVebC5XkP\u002B6i6dU/Aa/0LTslCVJFQS5XkXOK6E7oNMR6jH3Zj94LsLvBneEiC4yc6TFRuz/2MVwPM/7GkAKiQ2XmoAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-16T19:55:15.141Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
