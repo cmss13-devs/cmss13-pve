@@ -6733,7 +6733,8 @@
 "ND" = (
 /obj/structure/sign/safety/rewire{
 	pixel_x = 14;
-	pixel_y = 29
+	pixel_y = 29;
+	layer = 3
 	},
 /obj/structure/gun_rack/m41,
 /obj/item/reagent_container/food/drinks/cans/souto/blue{
