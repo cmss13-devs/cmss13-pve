@@ -2490,7 +2490,8 @@
 /area/golden_arrow/supply)
 "ot" = (
 /obj/structure/largecrate/supply/ammo{
-	name = "sentry crate"
+	name = "sentry crate";
+	fill_from_loc = 1
 	},
 /obj/item/ammo_magazine/sentry{
 	layer = 3.01
@@ -4524,7 +4525,8 @@
 	},
 /obj/item/defenses/handheld/sentry,
 /obj/structure/largecrate/supply/ammo{
-	name = "sentry crate"
+	name = "sentry crate";
+	fill_from_loc = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
