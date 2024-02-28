@@ -1,6 +1,6 @@
 /obj/structure/gun_rack
 	name = "gun rack"
-	desc = "Cutting-edge technology!"
+	desc = "Nice rack!"
 	icon = 'icons/obj/structures/gun_racks.dmi'
 	icon_state = "m41a"
 	var/allowed_type
