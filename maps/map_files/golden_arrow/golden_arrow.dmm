@@ -4792,11 +4792,11 @@
 /obj/item/storage/box/guncase/flamer,
 /obj/item/explosive/grenade/smokebomb{
 	pixel_y = 14;
-	pixel_x = -10
+	pixel_x = -5
 	},
 /obj/item/explosive/grenade/smokebomb{
 	pixel_y = 11;
-	pixel_x = -14
+	pixel_x = -9
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6353,6 +6353,19 @@
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"Lh" = (
+/obj/structure/sign/poster{
+	pixel_y = -8;
+	pixel_x = -25;
+	icon_state = "poster15";
+	name = "pulse rifle pinup";
+	desc = "The Armat Battlefield Systems Model 41 Derivative 'A' Pulse Rifle Mark One. The only pinup you'll ever need."
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_two)
 "Ll" = (
 /obj/structure/ship_ammo/minirocket/incendiary,
 /turf/open/floor/almayer{
@@ -7096,6 +7109,10 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Px" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/squad_two)
 "Py" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
@@ -15885,8 +15902,8 @@ Cr
 Cr
 Qw
 ot
-gd
-gd
+Lh
+pB
 Pm
 Qw
 Cr
@@ -16038,7 +16055,7 @@ pt
 Qw
 ND
 Fg
-Fg
+Px
 CC
 Qw
 Cr
@@ -19685,7 +19702,7 @@ XI
 wp
 ZC
 yL
-cT
+xf
 cT
 cV
 Ty
