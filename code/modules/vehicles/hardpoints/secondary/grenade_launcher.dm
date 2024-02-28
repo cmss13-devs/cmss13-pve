@@ -7,7 +7,7 @@
 	disp_icon_state = "glauncher"
 	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
 
-	health = 500
+	health = 2000
 	firing_arc = 90
 	var/max_range = 7
 

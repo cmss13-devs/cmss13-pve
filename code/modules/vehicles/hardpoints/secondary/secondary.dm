@@ -4,6 +4,6 @@
 
 	slot = HDPT_SECONDARY
 
-	damage_multiplier = 0.125
+	damage_multiplier = 0.15
 
 	activatable = TRUE

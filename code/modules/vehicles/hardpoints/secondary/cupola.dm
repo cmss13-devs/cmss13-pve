@@ -7,7 +7,7 @@
 	disp_icon_state = "m56cupola"
 	activation_sounds = list('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')
 
-	health = 350
+	health = 2000
 	firing_arc = 120
 
 	origins = list(0, -2)
@@ -27,9 +27,9 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_BURSTFIRE,
 	)
-	burst_amount = 3
+	burst_amount = 5
 	burst_delay = 0.3 SECONDS
-	extra_delay = 0.6 SECONDS
+	extra_delay = 0.2 SECONDS
 
 /obj/item/hardpoint/secondary/m56cupola/set_bullet_traits()
 	..()
