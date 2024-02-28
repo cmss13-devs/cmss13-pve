@@ -58,5 +58,14 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/get_total_positions(latejoin = 0)
 	return latejoin ? total_positions : spawn_positions
 
+/datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)
+	. = ..()
+	GLOB.marine_leaders[JOB_SO] = M
+	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
+
+/datum/job/command/bridge/ai/proc/cleanup_leader_candidate(mob/M)
+	SIGNAL_HANDLER
+	GLOB.marine_leaders -= JOB_SO
+
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT
