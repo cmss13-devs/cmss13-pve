@@ -1255,6 +1255,9 @@
 		if(TRACKER_XO)
 			H = GLOB.marine_leaders[JOB_XO]
 			tracking_suffix = "_xo"
+		if(TRACKER_PLTCO)
+			H = GLOB.marine_leaders[JOB_SO]
+			tracking_suffix = "_co"
 		if(TRACKER_CL)
 			var/datum/job/civilian/liaison/liaison_job = RoleAuthority.roles_for_mode[JOB_CORPORATE_LIAISON]
 			if(liaison_job?.active_liaison)
