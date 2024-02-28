@@ -3,6 +3,7 @@
 	desc = "Nice rack!"
 	icon = 'icons/obj/structures/gun_racks.dmi'
 	icon_state = "m41a"
+	density = TRUE
 	var/allowed_type
 	var/max_stored = 5
 	var/initial_stored = 5

@@ -218,6 +218,12 @@
 	desc = "A case containing two twenty-five M40 HDEP grenade boxes."
 	supplies = list(/obj/item/storage/box/nade_box = 2)
 
+/obj/structure/largecrate/supply/explosives/grenades/less
+	name = "\improper M40 HDEP grenade case (x25)"
+	desc = "A case containing one twenty-five M40 HDEP grenade box."
+	icon_state = "case"
+	supplies = list(/obj/item/storage/box/nade_box = 1)
+
 /obj/structure/largecrate/supply/explosives/mortar_he
 	name = "80mm HE mortar shell case (x25)"
 	desc = "A case containing twenty-five 80mm HE mortar shells."
@@ -290,6 +296,13 @@
 	name = "\improper P.A.C.M.A.N. crate"
 	desc = "A crate containing a P.A.C.M.A.N. generator, some fuel, and some cable coil to get your power up and going."
 	supplies = list(/obj/structure/machinery/power/port_gen/pacman = 1, /obj/item/stack/sheet/mineral/phoron/medium_stack = 1, /obj/item/stack/cable_coil/yellow = 3)
+
+/obj/structure/largecrate/supply/motiondetectors
+	name = "\improper motion detectors crate"
+	desc = "A crate containing two motiondetectors."
+	icon_state = "case"
+	supplies = list(/obj/item/device/motiondetector = 2)
+
 
 /obj/structure/largecrate/supply/medicine
 	name = "medical crate"
