@@ -2299,16 +2299,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"ns" = (
-/obj/structure/surface/rack,
-/obj/item/reagent_container/spray/cleaner{
-	name = "Weyland-Yutani premium shampoo";
-	desc = "Can be also used as body wash, shaving foam, deodorant, bug repellant and fire starting liquid."
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/cryo_cells)
 "nx" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2912,10 +2902,8 @@
 /obj/item/clothing/under/shorts/blue,
 /obj/item/clothing/under/shorts/red,
 /obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/head/headband/red,
 /obj/item/clothing/under/shorts/red,
-/obj/item/clothing/head/headband/red{
-	pixel_y = 10
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3241,7 +3229,8 @@
 	icon_locked = "cabinetdetective_locked";
 	icon_state = "cabinetdetective_locked";
 	icon_opened = "cabinetdetective_open";
-	icon_off = "cabinetdetective_broken"
+	icon_off = "cabinetdetective_broken";
+	has_cryo_gear = 0
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4862,6 +4851,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"CJ" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/spray/cleaner{
+	name = "Weyland-Yutani premium shampoo";
+	desc = "Can also be used as body wash, shaving foam, deodorant, bug repellant, ignition fluid and gatorade."
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/cryo_cells)
 "CK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -22136,7 +22135,7 @@ Br
 Br
 HK
 lc
-ns
+CJ
 Br
 HK
 Br

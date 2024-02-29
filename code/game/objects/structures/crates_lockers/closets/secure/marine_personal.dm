@@ -5,6 +5,7 @@
 	can_be_stacked = TRUE
 	var/owner
 	var/job = "Rifleman"
+	var/has_cryo_gear = TRUE
 
 /obj/structure/closet/secure_closet/marine_personal/get_examine_text(mob/user)
 	. = ..()
@@ -22,3 +23,10 @@
 	if(owner == M.name)
 		return TRUE
 	return FALSE
+
+/obj/structure/closet/secure_closet/marine_personal/Initialize()
+	. = ..()
+	if(has_cryo_gear)
+		new /obj/item/clothing/under/marine(src)
+		new /obj/item/clothing/shoes/marine/knife(src)
+		new /obj/item/device/radio/headset/almayer/marine(src)
