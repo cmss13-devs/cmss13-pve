@@ -323,7 +323,18 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			continue
 		if(medal.recipient_role != new_human.job)
 			continue
-		var/obj/item/clothing/accessory/medal/given_medal = new medal.medal_type(closet_to_spawn_in)
+		var/obj/item/clothing/accessory/medal/given_medal
+		switch(medal.medal_type)
+			if(MARINE_CONDUCT_MEDAL)
+				given_medal = new /obj/item/clothing/accessory/medal/bronze/conduct(closet_to_spawn_in)
+			if(MARINE_BRONZE_HEART_MEDAL)
+				given_medal = new /obj/item/clothing/accessory/medal/bronze/heart(closet_to_spawn_in)
+			if(MARINE_VALOR_MEDAL)
+				given_medal = new /obj/item/clothing/accessory/medal/silver/valor(closet_to_spawn_in)
+			if(MARINE_HEROISM_MEDAL)
+				given_medal = new /obj/item/clothing/accessory/medal/gold/heroism(closet_to_spawn_in)
+			else
+				return FALSE
 		given_medal.recipient_name = medal.recipient_name
 		given_medal.recipient_rank = medal.recipient_role
 		given_medal.medal_citation = medal.citation
