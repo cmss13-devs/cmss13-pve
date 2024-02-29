@@ -4855,7 +4855,7 @@
 /obj/structure/surface/rack,
 /obj/item/reagent_container/spray/cleaner{
 	name = "Weyland-Yutani premium shampoo";
-	desc = "Can also be used as body wash, shaving foam, deodorant, bug repellant, ignition fluid and gatorade."
+	desc = "Can also be used as body wash, shaving foam, deodorant, bug repellant, lighter fluid and gatorade."
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
