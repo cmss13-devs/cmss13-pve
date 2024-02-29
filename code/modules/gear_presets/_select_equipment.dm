@@ -316,7 +316,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	if(new_human.disabilities & NEARSIGHTED)
 		new /obj/item/clothing/glasses/regular(closet_to_spawn_in)
 
-	for(var/datum/view_record/medal_view/medal as anything in DB_VIEW(/datum/view_record/medal_view, DB_COMP("player_id", DB_EQUALS, mob_client.player_data.id)))
+	for(var/datum/view_record/medal_view/medal as anything in DB_VIEW(/datum/view_record/medal_view, DB_COMP("player_id", DB_EQUALS, new_human.client.player_data.id)))
 		if(medal.recipient_name != new_human.real_name)
 			continue
 		if(medal.recipient_role != new_human.job)
