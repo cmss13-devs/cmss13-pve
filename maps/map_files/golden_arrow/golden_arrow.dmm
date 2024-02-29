@@ -1993,8 +1993,17 @@
 	},
 /area/golden_arrow/prep_hallway)
 "lc" = (
-/obj/structure/closet/cryo,
-/obj/structure/closet/cryo,
+/obj/structure/surface/rack,
+/obj/item/tool/soap,
+/obj/item/tool/soap{
+	pixel_y = 4;
+	pixel_x = 6
+	},
+/obj/item/tool/soap{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/tool/soap,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2110,9 +2119,7 @@
 /area/golden_arrow/supply)
 "mc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Sergeant"
-	},
+/obj/structure/surface/rack,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2275,7 +2282,8 @@
 	pixel_y = -15
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -8
+	pixel_x = -8;
+	job = "Smartgunner"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
@@ -2292,8 +2300,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ns" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/cryo,
+/obj/structure/surface/rack,
+/obj/item/reagent_container/spray/cleaner{
+	name = "Weyland-Yutani premium shampoo";
+	desc = "Can be also used as body wash, shaving foam, deodorant, bug repellant and fire starting liquid."
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2895,7 +2906,16 @@
 	},
 /area/golden_arrow/cryo_cells)
 "rd" = (
-/obj/structure/closet/cryo,
+/obj/structure/closet/wardrobe{
+	name = "PT uniform"
+	},
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/under/shorts/red,
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/under/shorts/red,
+/obj/item/clothing/head/headband/red{
+	pixel_y = 10
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3032,7 +3052,14 @@
 /turf/open/floor/almayer/uscm/directional,
 /area/golden_arrow/briefing)
 "rX" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8;
+	job = "Squad Sergeant"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Sergeant"
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4835,19 +4862,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
-"CJ" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -8;
-	job = "Squad Sergeant"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Sergeant"
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/platoon_sergeant)
 "CK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -5653,7 +5667,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Smartgunner"
+	job = "Platoon Sergeant"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -16183,7 +16197,7 @@ wJ
 VQ
 qA
 zV
-CJ
+KQ
 qA
 dl
 Bh
@@ -22115,18 +22129,18 @@ DX
 HX
 Qx
 HK
-ns
-ns
+Sc
+Sc
 HK
-rd
-rd
+Br
+Br
 HK
 lc
-rd
-rd
+ns
+Br
 HK
-rd
-rd
+Br
+Br
 rd
 HK
 eL
