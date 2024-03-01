@@ -328,7 +328,7 @@
 		user.emote("scream")
 	user.apply_effect(10, STUN)
 	animate(user, time = 2, pixel_x = 360, pixel_y = 360, flags = ANIMATION_PARALLEL)
-	playsound(loc, 'sound/items/fulton.ogg', 50, 1)
+	playsound(user,'sound/effects/bamf.ogg', 50, 1)
 	addtimer(CALLBACK(src, PROC_REF(on_extract), user, rapsys), 1.5 SECONDS)
 
 /obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/rappel_system/system)
@@ -363,6 +363,7 @@
 		to_chat(H, SPAN_WARNING("There's no space for fulton balloon to fly in this area."))
 		return
 	H.visible_message(SPAN_DANGER("[H] begins to adjust the fulton device for self-extraction!"))
+	playsound(H, 'sound/items/fulton.ogg', 50, 1)
 	if(!do_after(H, (10 SECONDS), INTERRUPT_ALL, BUSY_ICON_HOSTILE, harness))
 		return
 
