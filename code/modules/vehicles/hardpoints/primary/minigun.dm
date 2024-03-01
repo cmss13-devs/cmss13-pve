@@ -6,13 +6,13 @@
 	disp_icon = "tank"
 	disp_icon_state = "ltaaap_minigun"
 
-	health = 2500
+	health = 2000
 	firing_arc = 90
 
 	origins = list(0, -3)
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/ltaaap_minigun
-	max_clips = 1
+	max_clips = 2
 
 	px_offsets = list(
 		"1" = list(0, 21),
@@ -28,7 +28,7 @@
 		"8" = list(-77, 0)
 	)
 
-	scatter = 2
+	scatter = 3
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
