@@ -331,6 +331,31 @@
 	playsound(user,'sound/effects/bamf.ogg', 50, 1)
 	addtimer(CALLBACK(src, PROC_REF(on_extract), user, rapsys), 1.5 SECONDS)
 
+/obj/item/rappel_harness/extract/attack(mob/living/carbon/human/H, mob/living/carbon/human/user)
+	if(H.belt)
+		to_chat(user, SPAN_WARNING("Remove their belt first!"))
+		return
+
+	if(!is_ground_level(H.z))
+		return
+
+	var/area/location_area = get_area(H)
+	if(CEILING_IS_PROTECTED(location_area.ceiling, CEILING_PROTECTION_TIER_1))
+		to_chat(H, SPAN_WARNING("There's no space for fulton balloon to fly in this area."))
+		return
+
+	user.visible_message(SPAN_DANGER("[user] begins to adjust the fulton device on [H] for extraction!"))
+	playsound(H, 'sound/items/fulton.ogg', 50, 1)
+	if(!do_after(user, (10 SECONDS), INTERRUPT_ALL, BUSY_ICON_HOSTILE, H))
+		return
+
+	if(H.belt)
+		to_chat(user, SPAN_WARNING("Remove their belt!"))
+		return
+	user.drop_inv_item_to_loc(src, H)
+	H.equip_to_slot_if_possible(src, WEAR_WAIST)
+	try_extract(H)
+
 /obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/rappel_system/system)
 	flick("rappel_hatch_opening", system)
 	user.apply_effect(5, WEAKEN)
