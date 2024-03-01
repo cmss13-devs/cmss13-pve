@@ -628,7 +628,7 @@
 	..()
 
 /obj/item/storage/backpack/general_belt/upp
-	name = "\improper Type 48-M general utility pouch."
+	name = "\improper Type 48-M general utility pouch"
 	desc = "A small, lightweight pouch that can be clipped onto U-pattern UPP armor to provide additional storage. The newer 48-M model, while uncomfortable, can also be clipped around the waist."
 	icon_state = "upp_g8pouch"
 	item_state = "upp_g8pouch"
