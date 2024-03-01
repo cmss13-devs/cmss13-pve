@@ -334,6 +334,7 @@
 	addtimer(CALLBACK(src, PROC_REF(on_extract), user, rapsys), 1.5 SECONDS)
 
 /obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/rappel_system/system)
+	flick("rappel_hatch_opening", system)
 	user.apply_effect(5, WEAKEN)
 	user.pixel_x = 0
 	user.pixel_y = 0
