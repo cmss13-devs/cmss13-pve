@@ -207,10 +207,6 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/beret_squad
-	display_name = "USCM beret, squad specific"
-	path = /obj/item/clothing/head/beret/cm/squadberet
-
 /datum/gear/headwear/uscm/beret_green
 	display_name = "USCM beret, green"
 	path = /obj/item/clothing/head/beret/cm
@@ -226,6 +222,30 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/beret_white
 	display_name = "USCM beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
+
+/datum/gear/headwear/uscm/beret_alpha
+	display_name = "USCM beret, red flash"
+	path = /obj/item/clothing/head/beret/cm/alpha
+
+/datum/gear/headwear/uscm/beret_bravo
+	display_name = "USCM beret, yellow flash"
+	path = /obj/item/clothing/head/beret/cm/bravo
+
+/datum/gear/headwear/uscm/beret_charlie
+	display_name = "USCM beret, purple flash"
+	path = /obj/item/clothing/head/beret/cm/charlie
+
+/datum/gear/headwear/uscm/beret_delta
+	display_name = "USCM beret, blue flash"
+	path = /obj/item/clothing/head/beret/cm/delta
+
+/datum/gear/headwear/uscm/beret_echo
+	display_name = "USCM beret, green flash"
+	path = /obj/item/clothing/head/beret/cm/echo
+
+/datum/gear/headwear/uscm/beret_foxtrot
+	display_name = "USCM beret, brown flash"
+	path = /obj/item/clothing/head/beret/cm/foxtrot
 
 /datum/gear/headwear/uscm/boonie_olive
 	display_name = "USCM boonie hat, olive"

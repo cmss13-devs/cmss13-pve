@@ -81,50 +81,29 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
-/obj/item/clothing/head/beret/cm/squadberet
-	name = "USCM Squad Beret"
-	desc = "For those who want to show pride and have nothing to lose (in their head, at least)."
+/obj/item/clothing/head/beret/cm/alpha
+	desc = "Often found atop heads, slightly less found on those still attached."
+	icon_state = "beret_alpha"
 
-/obj/item/clothing/head/beret/cm/squadberet/equipped(mob/user, slot)
-	. = ..()
-	self_set()
-	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(self_set), TRUE)
+/obj/item/clothing/head/beret/cm/bravo
+	desc = "Often found atop heads, slightly less found on those still attached."
+	icon_state = "beret_bravo"
 
-/obj/item/clothing/head/beret/cm/squadberet/dropped(mob/user)
-	. = ..()
-	UnregisterSignal(user, COMSIG_SET_SQUAD)
+/obj/item/clothing/head/beret/cm/charlie
+	desc = "Still has some morning toast crumbs on it."
+	icon_state = "beret_charlie"
 
-/obj/item/clothing/head/beret/cm/squadberet/proc/self_set()
-	var/mob/living/carbon/human/H = loc
-	if(istype(H))
-		if(H.assigned_squad)
-			switch(H.assigned_squad.name)
-				if(SQUAD_MARINE_2)
-					icon_state = "beret_bravo"
-					desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
-				if(SQUAD_MARINE_3)
-					icon_state = "beret_charlie"
-					desc = "Still has some morning toast crumbs on it."
-				if(SQUAD_MARINE_4)
-					icon_state = "beret_delta"
-					desc = "Hard to consider protection, but these types of people don't seek protection."
-				if(SQUAD_MARINE_5)
-					icon_state = "beret_echo"
-					desc = "Tightly Woven, as it should be."
-				if(SQUAD_MARINE_CRYO)
-					icon_state = "beret_foxtrot"
-					desc = "Looks and feels starched, cold to the touch."
-				if(SQUAD_MARINE_INTEL)
-					icon_state = "beret_intel"
-					desc = "Looks more intellegent than the person wearing it."
+/obj/item/clothing/head/beret/cm/delta
+	desc = "Hard to consider protection, but these types of people don't seek protection."
+	icon_state = "beret_delta"
 
-			if(H.assigned_squad.name == GLOB.main_platoon_name)
-				icon_state = "beret_alpha"
-				desc = "Often found atop heads, slightly less found on those still attached."
-		else
-			icon_state = "beret"
-			desc = initial(desc)
-		H.update_inv_head()
+/obj/item/clothing/head/beret/cm/echo
+	desc = "Tightly Woven, as it should be."
+	icon_state = "beret_echo"
+
+/obj/item/clothing/head/beret/cm/foxtrot
+	desc = "Looks and feels starched, cold to the touch."
+	icon_state = "beret_foxtrot"
 
 
 /obj/item/clothing/head/headband
