@@ -5,6 +5,6 @@
 	slot = HDPT_ARMOR
 	hdpt_layer = HDPT_LAYER_ARMOR
 
-	damage_multiplier = 0.5
+	damage_multiplier = 0.10
 
-	health = 1000
+	health = 2000
