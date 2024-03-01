@@ -504,6 +504,8 @@
 		return FALSE //No ID found
 
 	var/assignment = M.job
+
+	var/id_assignment = M.assigned_equipment_preset.assignment
 	var/paygrade
 
 	var/list/extra_access = list()
@@ -585,9 +587,9 @@
 	M.assigned_squad = src //Add them to the squad
 	C.access += (src.access + extra_access) //Add their squad access to their ID
 	if(prepend_squad_name_to_assignment)
-		C.assignment = "[name] [assignment]"
+		C.assignment = "[name] [id_assignment]"
 	else
-		C.assignment = assignment
+		C.assignment = id_assignment
 
 	SEND_SIGNAL(M, COMSIG_SET_SQUAD)
 
@@ -614,7 +616,7 @@
 		return FALSE //Abort, no ID found
 
 	C.access -= src.access
-	C.assignment = M.job
+	C.assignment = M.assigned_equipment_preset.assignment
 	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
 
 	forget_marine_in_squad(M)

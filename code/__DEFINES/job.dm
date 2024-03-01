@@ -27,7 +27,7 @@
 
 #define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
 #define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
-#define JOB_SQUAD_MEDIC_UPP "UPP Platoon Corpsman"
+#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
 #define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
 #define JOB_SO_UPP "UPP Platoon Commander"
