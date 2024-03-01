@@ -303,7 +303,7 @@
 
 /obj/item/rappel_harness/extract
 	name = "dual purpose rappel-fulton harness"
-	desc = "A complex net of extra-tough kevlar belts and an assortement of reinforced buckles attached to a fulton surface-to-air recovery system, STARS for short. Can be used for rappel drops or fulton extractions. Requires some set up before use. Fulton recovery balloon can be picked up by a shuttle flying low-orbit with a rappel device."
+	desc = "A fulton Surface To Air Recovery System (STARS). Special latch/hook assembly allows for aircraft on flyby equipped with a rappel system to pick up the attached item or person. The complex assembly of venlar rigging and secured buckles takes some time to set up though."
 	icon_state = "rappel_harness_adv"
 	var/shuttle_id = DROPSHIP_MIDWAY
 	actions_types = list(/datum/action/item_action/STARS)
