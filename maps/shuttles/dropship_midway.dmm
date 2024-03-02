@@ -201,6 +201,14 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
+"ok" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Midway";
+	icon_state = "105"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/midway)
 "ro" = (
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "80"
@@ -766,7 +774,7 @@ Kw
 Kw
 "}
 (5,1,1) = {"
-nH
+ok
 Aw
 LY
 tf
