@@ -13,7 +13,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_8
 	scatter = 0
-	damage = 160
+	damage = 170
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_7
 	accurate_range = 32
