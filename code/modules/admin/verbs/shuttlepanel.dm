@@ -34,6 +34,9 @@
 			set_mode(SHUTTLE_IGNITING)
 			on_ignition()
 			setTimer(ignitionTime)
+			if(istype(src, /obj/docking_port/mobile/marine_dropship))
+				var/obj/docking_port/mobile/marine_dropship/MD = src
+				MD.in_flyby = TRUE
 
 		if("Delete Shuttle")
 			if(alert(user, "Really delete [name || id]?", "Delete Shuttle", "Cancel", "Really!") != "Really!")
