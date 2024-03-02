@@ -1,4 +1,4 @@
- /obj/item/hardpoint/armor/ballistic
+/obj/item/hardpoint/armor/ballistic
 	name = "Ballistic Armor"
 	desc = "Protects the vehicle from high-penetration weapons"
 
