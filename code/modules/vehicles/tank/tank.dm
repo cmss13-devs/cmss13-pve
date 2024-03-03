@@ -32,8 +32,8 @@
 
 	vehicle_flags = VEHICLE_CLASS_MEDIUM
 
-	move_max_momentum = 3
-	move_momentum_build_factor = 1.8
+	move_max_momentum = 2
+	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.6
 
 	light_range = 4
