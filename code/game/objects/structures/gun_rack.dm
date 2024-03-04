@@ -1,6 +1,6 @@
 /obj/structure/gun_rack
 	name = "gun rack"
-	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M41A rifles. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball.".
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M41A rifles. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball."
 	icon = 'icons/obj/structures/gun_racks.dmi'
 	icon_state = "m41a"
 	density = TRUE
@@ -29,13 +29,13 @@
 
 /obj/structure/gun_rack/attack_hand(mob/living/user)
 	if(!contents.len)
-		to_chat(user, SPAN_WARNING("\The [src] is empty."))
+		to_chat(user, SPAN_WARNING("[src] is empty."))
 		return
 
-	var/obj/Obj = contents[contents.len]
-	contents -= Obj
-	user.put_in_hands(Obj)
-	to_chat(user, SPAN_NOTICE("You grab \a [Obj] from \the [src]."))
+	var/obj/stored_obj = contents[contents.len]
+	contents -= stored_obj
+	user.put_in_hands(stored_obj)
+	to_chat(user, SPAN_NOTICE("You grab [storing_obj] from [src]."))
 	playsound(src, "gunequip", 25, TRUE)
 	update_icon()
 
