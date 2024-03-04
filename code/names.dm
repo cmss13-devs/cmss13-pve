@@ -26,7 +26,7 @@ var/list/last_names_upp = list("Azarov","Bogdanov","Barsukov","Golovin","Davydov
 
 var/list/first_names_male_pmc = list("Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "Xray", "Yankee", "Zulu", "Bravost", "Element", "Unit", "Hunter", "Outlaw", "Kronos", "Oni", "Kappa")
 var/list/first_names_female_pmc = list("Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "Xray", "Yankee", "Zulu", "Bravost", "Element", "Unit", "Hunter", "Outlaw", "Kronos", "Oni", "Kappa")
-var/list/last_names_pmc = list("Bates","Shaw","Hansen","Black", "Chambers", "Hall", "Gibson", "Weiss", "Waller", "Burton", "Bakin", "Rohan", "Naomichi", "Yakumo", "Yosai", "Gallagher", "Hiles", "Bourdon", "Strassman", "Palau")
+var/list/last_names_pmc = list("Amaranth", "Amber", "Apricot", "Brown", "Blue", "Bronze", )
 
 var/list/first_names_male_gladiator = list("Augustus", "Maximus", "Octavius", "Septimus", "Titus", "Brutus", "Caesar", "Justinian")
 var/list/first_names_female_gladiator = list("Aelia", "Aquila", "Caecilia", "Camilla", "Claudia", "Flavia", "Martina", "Theodora")
