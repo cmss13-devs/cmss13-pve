@@ -1,12 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ak" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	dir = 1;
-	name = "\improper Hangar"
-	},
-/turf/open/floor/corsat{
-	icon_state = "marked"
-	},
+/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
+/turf/open/space/basic,
 /area/space)
 "aq" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -18,6 +13,14 @@
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
+	},
+/area/space)
+"au" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "aY" = (
@@ -69,6 +72,22 @@
 	},
 /turf/open/floor/carpet,
 /area/space)
+"dx" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 5;
+	layer = 3.7
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "dX" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/corsat{
@@ -84,10 +103,42 @@
 	icon_state = "arrow_north"
 	},
 /area/space)
+"eR" = (
+/obj/structure/platform/kutjevo{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "fQ" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 1;
 	name = "Omega squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"gc" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 9;
+	layer = 3.7
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 3.3
+	},
+/obj/structure/platform_decoration{
+	dir = 5;
+	layer = 3.7
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
@@ -150,6 +201,7 @@
 	},
 /area/space)
 "hO" = (
+/obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
 	dir = 10;
 	icon_state = "yellow"
@@ -173,12 +225,25 @@
 	icon_state = "squares"
 	},
 /area/space)
+"iz" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "yellow"
+	},
+/area/space)
 "iM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"iR" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
 /area/space)
 "jj" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
@@ -202,6 +267,21 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"lo" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 10
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
 	},
 /area/space)
 "lP" = (
@@ -245,10 +325,8 @@
 	},
 /area/space)
 "nW" = (
-/obj/structure/bed/sofa/south/white/right,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
+/obj/item/tool/wrench,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/space)
 "or" = (
 /turf/open/floor/plating/plating_catwalk,
@@ -268,7 +346,9 @@
 	},
 /area/space)
 "oR" = (
-/obj/structure/bed/sofa/south/white/left,
+/obj/structure/machinery/vending/cola{
+	pixel_y = 22
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -278,6 +358,13 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
+/area/space)
+"pX" = (
+/obj/structure/machinery/autolathe/full,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
 /area/space)
 "qi" = (
 /obj/structure/machinery/power/terminal,
@@ -290,6 +377,13 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"qD" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "yellow"
 	},
 /area/space)
 "ro" = (
@@ -305,6 +399,10 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
+/area/space)
+"rI" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/turf/open/floor/wood/ship,
 /area/space)
 "si" = (
 /obj/effect/landmark/start/marine/alpha,
@@ -324,6 +422,10 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
+/area/space)
+"ur" = (
+/obj/structure/machinery/hologram/holopad,
+/turf/open/floor/carpet,
 /area/space)
 "uv" = (
 /obj/structure/window/framed/corsat/indestructible,
@@ -377,6 +479,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "wM" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
 /turf/open/floor/corsat{
 	dir = 5;
 	icon_state = "yellow"
@@ -390,6 +498,14 @@
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
+	},
+/area/space)
+"yl" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "yH" = (
@@ -432,9 +548,21 @@
 "Cu" = (
 /obj/structure/surface/rack,
 /obj/item/storage/large_holster/m39,
-/obj/item/weapon/gun/smg/m39/elite,
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"CD" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Hangar"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/space)
 "CT" = (
@@ -480,6 +608,10 @@
 /obj/structure/bed/chair/comfy/charlie{
 	name = "Omege squad chair"
 	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -494,10 +626,23 @@
 	icon_state = "arrow_south"
 	},
 /area/space)
+"Es" = (
+/obj/structure/machinery/autolathe/full,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "yellow"
+	},
+/area/space)
 "EJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"FZ" = (
+/obj/structure/reagent_dispensers/fueltank/custom,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/space)
 "Gv" = (
@@ -543,6 +688,20 @@
 	icon_state = "cargo"
 	},
 /area/space)
+"HZ" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"Iu" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/space)
 "IH" = (
 /turf/open/floor/corsat{
 	icon_state = "yellow"
@@ -552,6 +711,18 @@
 /obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"IN" = (
+/obj/structure/closet/crate/construction,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"Jl" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/corsat{
+	icon_state = "yellow"
+	},
 /area/space)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -573,6 +744,22 @@
 	dir = 8
 	},
 /turf/open/floor/carpet,
+/area/space)
+"KB" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 9;
+	layer = 3.8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "KN" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -618,6 +805,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"NC" = (
+/obj/structure/machinery/pipedispenser,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "ND" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/carpet,
@@ -626,6 +819,26 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/wood/ship,
+/area/space)
+"OA" = (
+/obj/structure/prop/almayer/computers/sensor_computer2,
+/turf/open/floor/wood/ship,
+/area/space)
+"ON" = (
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/space)
+"Po" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/obj/structure/machinery/portable_atmospherics/powered/pump,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
 /area/space)
 "Pt" = (
 /obj/effect/decal/warning_stripes{
@@ -653,15 +866,29 @@
 	},
 /area/space)
 "Qx" = (
-/obj/structure/machinery/portable_atmospherics/powered/pump,
+/obj/vehicle/powerloader/ft,
 /turf/open/floor/corsat{
-	icon_state = "squares"
+	dir = 1;
+	icon_state = "yellow"
 	},
 /area/space)
 "QE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"QQ" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform/kutjevo{
+	dir = 1;
+	layer = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "Ra" = (
@@ -674,6 +901,12 @@
 /obj/structure/bed/chair/comfy/teal{
 	name = "Theta squad chair"
 	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"RE" = (
+/obj/structure/stairs/perspective,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -710,6 +943,12 @@
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"Ti" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/corsat{
+	icon_state = "yellow"
+	},
+/area/space)
 "Ts" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -722,6 +961,13 @@
 	},
 /turf/open/floor/carpet,
 /area/space)
+"TT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "Uu" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/light{
@@ -729,6 +975,27 @@
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
+	},
+/area/space)
+"Uz" = (
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/wood/ship,
+/area/space)
+"UK" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"UO" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "UV" = (
@@ -773,10 +1040,40 @@
 	icon_state = "arrow_west"
 	},
 /area/space)
+"WL" = (
+/obj/item/tool/wrench,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Xi" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "XS" = (
 /turf/open/floor/almayer{
 	dir = 1;
 	icon_state = "w-y2"
+	},
+/area/space)
+"XX" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/tools/tactical,
+/obj/item/tool/shovel/etool/folded{
+	pixel_x = 9;
+	pixel_y = 10
+	},
+/obj/item/tool/screwdriver/tactical{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "Ys" = (
@@ -798,6 +1095,13 @@
 	density = 0;
 	pixel_y = 16
 	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"ZR" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -5402,7 +5706,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -5554,7 +5858,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -5706,7 +6010,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -5858,7 +6162,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -6010,7 +6314,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -6162,7 +6466,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -6314,7 +6618,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -6466,23 +6770,23 @@ gR
 gR
 gR
 gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 Mj
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-Mj
-Bu
+kA
 Bu
 gR
 gR
@@ -6618,7 +6922,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 gR
 gR
 gR
@@ -6628,13 +6932,13 @@ gR
 Mj
 KN
 KN
+KN
+KN
+KN
+KN
+KN
 Mj
-Mj
-Mj
-Mj
-Mj
-Mj
-Bu
+au
 Bu
 gR
 gR
@@ -6779,14 +7083,14 @@ gR
 gR
 gR
 KN
-tl
+Uz
 tl
 tl
 tl
 tl
 tl
 uv
-Bu
+eR
 Bu
 gR
 gR
@@ -6938,7 +7242,7 @@ TA
 hA
 tl
 uv
-Bu
+eR
 Bu
 gR
 gR
@@ -7084,13 +7388,13 @@ gR
 gR
 KN
 tl
-hA
+ur
 ND
 ND
 pT
 tl
 uv
-Bu
+eR
 Bu
 gR
 gR
@@ -7242,9 +7546,9 @@ ND
 pT
 tl
 uv
+QQ
+yl
 Bu
-Bu
-gR
 gR
 gR
 gR
@@ -7394,9 +7698,9 @@ du
 pT
 tl
 uv
+kA
+KB
 Bu
-Bu
-gR
 gR
 gR
 gR
@@ -7547,8 +7851,8 @@ pT
 tl
 ih
 kA
-Bu
-gR
+RE
+nk
 gR
 gR
 gR
@@ -7698,9 +8002,9 @@ ND
 pT
 tl
 uv
+kA
+gc
 Bu
-Bu
-gR
 gR
 gR
 gR
@@ -7843,7 +8147,7 @@ gR
 gR
 gR
 KN
-tl
+rI
 hA
 ND
 ND
@@ -7851,9 +8155,9 @@ pT
 tl
 ih
 kA
+RE
+nk
 Bu
-gR
-gR
 gR
 gR
 gR
@@ -7995,7 +8299,7 @@ gR
 gR
 gR
 KN
-tl
+OA
 hA
 JM
 JM
@@ -8003,8 +8307,8 @@ hA
 tl
 uv
 kA
+dx
 Bu
-gR
 gR
 gR
 gR
@@ -8134,7 +8438,7 @@ gR
 gR
 gR
 gR
-gR
+ak
 gR
 gR
 gR
@@ -8153,9 +8457,9 @@ tl
 tl
 tl
 tl
-KN
+Mj
 oR
-Bu
+HZ
 Bu
 gR
 gR
@@ -8297,17 +8601,17 @@ gR
 gR
 gR
 gR
-gR
 KN
 KN
-KN
-KN
-KN
-KN
-KN
-KN
-nW
-Bu
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+kA
+HZ
 Bu
 kA
 gR
@@ -8449,20 +8753,20 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
 KN
-KN
+Df
+Df
+Df
+Df
+Df
+Df
+Df
+Mj
+Mj
+UO
 Gy
 Gy
-KN
-gR
+Mj
 gR
 gR
 gR
@@ -8601,28 +8905,28 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
 KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+Df
+Mj
+Mj
 ro
-ak
-KN
-KN
-KN
-KN
-KN
-KN
-KN
-KN
-KN
-KN
+CD
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
 gR
 gR
 gR
@@ -8753,19 +9057,19 @@ gR
 gR
 gR
 gR
-gR
+KN
 uK
 mb
 mb
-mb
+qD
 mb
 hO
-KN
-KN
-KN
-Wv
-Wv
+Mj
+Mj
+Mj
 Bu
+Wv
+Wv
 Bu
 RC
 JJ
@@ -8774,7 +9078,7 @@ PG
 Bu
 RC
 JJ
-KN
+Mj
 gR
 gR
 gR
@@ -8904,15 +9208,15 @@ gR
 gR
 gR
 gR
-gR
-gR
+KN
+KN
 Ts
 Bu
 Bu
 Bu
 Bu
-IH
-KN
+Jl
+Mj
 vm
 vm
 Bu
@@ -8926,9 +9230,9 @@ Bu
 Bu
 Bu
 KO
-KN
-gR
-gR
+Mj
+kA
+kA
 gR
 gR
 gR
@@ -9056,16 +9360,16 @@ gR
 gR
 gR
 gR
-gR
+KN
 uK
 PW
-kA
-kA
+Po
+Xi
 Bu
 Bu
-IH
-KN
-QE
+Ti
+Mj
+TT
 JJ
 Bu
 Bu
@@ -9078,9 +9382,9 @@ Bu
 md
 md
 Bu
-KN
-gR
-gR
+Mj
+kA
+kA
 gR
 gR
 gR
@@ -9208,15 +9512,15 @@ gR
 gR
 gR
 gR
-gR
+KN
 Ts
 kA
-kA
-kA
+IN
+FZ
 zn
 nR
-bX
-KN
+iz
+Mj
 Wb
 Wb
 Bu
@@ -9230,9 +9534,9 @@ RC
 JJ
 JJ
 PG
-KN
-gR
-gR
+Mj
+kA
+kA
 gR
 gR
 gR
@@ -9360,15 +9664,15 @@ gR
 gR
 gR
 gR
-gR
-Ts
+KN
+Qx
 kA
-kA
+WL
 kA
 IH
 KN
 KN
-KN
+Mj
 Bu
 Bu
 Bu
@@ -9382,9 +9686,9 @@ RC
 JJ
 JJ
 PG
-KN
-gR
-gR
+Mj
+kA
+kA
 gR
 gR
 gR
@@ -9512,9 +9816,9 @@ gR
 gR
 gR
 gR
-gR
+KN
 Ts
-kA
+NC
 kA
 Bu
 IH
@@ -9534,9 +9838,9 @@ Bu
 KO
 KO
 Bu
-KN
-gR
-gR
+Mj
+Mj
+Mj
 gR
 gR
 gR
@@ -9664,8 +9968,8 @@ gR
 gR
 gR
 gR
-gR
-Ts
+nW
+ON
 kA
 Bu
 Bu
@@ -9686,9 +9990,9 @@ Bu
 Bu
 Bu
 Bu
-KN
-gR
-gR
+En
+Iu
+nk
 gR
 gR
 gR
@@ -9816,9 +10120,9 @@ gR
 gR
 gR
 gR
-gR
-Ts
-Bu
+KN
+lo
+XX
 Bu
 Bu
 IH
@@ -9838,9 +10142,9 @@ Bu
 kA
 kA
 Bu
-KN
-gR
-gR
+En
+ro
+nk
 gR
 gR
 gR
@@ -9968,8 +10272,8 @@ gR
 gR
 gR
 gR
-gR
-Ts
+KN
+pX
 kA
 Bu
 EJ
@@ -9986,13 +10290,13 @@ ro
 HD
 KN
 KN
-KN
+Mj
 zO
 zO
 Bu
-KN
-gR
-gR
+Mj
+Mj
+Mj
 gR
 gR
 gR
@@ -10120,10 +10424,10 @@ gR
 gR
 gR
 gR
-gR
-Ts
+KN
+Es
 kA
-Qx
+Bu
 Bu
 IH
 qi
@@ -10138,13 +10442,13 @@ Wv
 Wv
 kA
 qn
-KN
+Mj
 kA
 Wg
-KN
-KN
-gR
-gR
+Mj
+Mj
+iR
+Mj
 gR
 gR
 gR
@@ -10272,7 +10576,7 @@ gR
 gR
 gR
 gR
-gR
+KN
 wM
 nR
 nR
@@ -10290,11 +10594,11 @@ Bu
 Bu
 En
 kA
-KN
+Mj
 zO
 zO
 Bu
-KN
+Mj
 KN
 KN
 KN
@@ -10424,11 +10728,11 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
 KN
 KN
 Bu
@@ -10442,11 +10746,11 @@ Bu
 Bu
 En
 kA
-KN
+Mj
 Bu
 Bu
 Bu
-KN
+Mj
 kA
 kA
 kA
@@ -10594,7 +10898,7 @@ Bu
 Bu
 En
 kA
-KN
+Mj
 vo
 Bu
 Bu
@@ -10746,7 +11050,7 @@ Bu
 Bu
 En
 kA
-KN
+Mj
 Bu
 Bu
 Bu
@@ -10886,7 +11190,7 @@ gR
 gR
 gR
 KN
-Bu
+lm
 Bu
 Bu
 Bu
@@ -10898,7 +11202,7 @@ Bu
 Bu
 En
 kA
-KN
+Mj
 Bu
 Bu
 Bu
@@ -11048,18 +11352,18 @@ KN
 KN
 Gy
 Gy
-KN
-KN
-KN
-KN
+Mj
+Mj
+Mj
+Mj
 kA
 kA
-KN
-KN
-KN
+Mj
+Mj
+Mj
 ro
 ro
-KN
+Mj
 KN
 gR
 gR
@@ -11203,10 +11507,10 @@ JL
 yX
 vY
 vY
-KN
-KN
-KN
-KN
+Mj
+Mj
+Mj
+Mj
 Ra
 Bu
 Bu
@@ -11358,7 +11662,7 @@ yX
 yX
 yX
 Df
-KN
+Mj
 Ra
 Bu
 Bu
@@ -11493,7 +11797,7 @@ gR
 gR
 gR
 KN
-Ra
+ZR
 Bu
 Bu
 Ra
@@ -11510,12 +11814,12 @@ Mu
 Mu
 yX
 Df
-KN
+Mj
 Ra
 Bu
 Bu
 Bu
-Bu
+UK
 KN
 gR
 gR
@@ -11662,7 +11966,7 @@ or
 or
 yX
 Df
-KN
+Mj
 Bu
 Bu
 Ra
