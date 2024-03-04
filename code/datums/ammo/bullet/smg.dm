@@ -27,13 +27,13 @@
 
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
-	shell_speed = AMMO_SPEED_TIER_3 //high velocitisn't
+	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't
 	bonus_projectiles_type = /datum/ammo/bullet/smg/duplex
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_1 //1 extra
 
 /datum/ammo/bullet/smg/duplex
 	name = "squash-head submachinegun duplex bullet"
-	shell_speed = AMMO_SPEED_TIER_3 //high velocitisn't
+	shell_speed = AMMO_SPEED_TIER_3 //high velocitisn't - lags behind first
 
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
