@@ -1,6 +1,6 @@
 /obj/structure/gun_rack
 	name = "gun rack"
-	desc = "Nice rack!"
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M41A rifles. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball.".
 	icon = 'icons/obj/structures/gun_racks.dmi'
 	icon_state = "m41a"
 	density = TRUE
@@ -50,6 +50,7 @@
 
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
+	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
 	max_stored = 6
 	initial_stored = 6
 	allowed_type = /obj/item/weapon/gun/rifle/type71
