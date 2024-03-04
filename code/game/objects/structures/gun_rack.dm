@@ -35,7 +35,7 @@
 	var/obj/stored_obj = contents[contents.len]
 	contents -= stored_obj
 	user.put_in_hands(stored_obj)
-	to_chat(user, SPAN_NOTICE("You grab [storing_obj] from [src]."))
+	to_chat(user, SPAN_NOTICE("You grab [stored_obj] from [src]."))
 	playsound(src, "gunequip", 25, TRUE)
 	update_icon()
 
