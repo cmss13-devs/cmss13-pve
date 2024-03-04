@@ -94,6 +94,24 @@
 /datum/equipment_preset/uscm/pfc/lesser_rank
 	paygrade = "ME1"
 
+/datum/equipment_preset/uscm/pfc/upp
+	name = "UPP Squad Rifleman"
+	paygrade = "UE2"
+	access = list(ACCESS_UPP_GENERAL)
+	languages = list(LANGUAGE_RUSSIAN)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/pfc/upp/lesser_rank
+	paygrade = "UE1"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -126,6 +144,26 @@
 
 /datum/equipment_preset/uscm/sg/lesser_rank
 	paygrade = "ME3"
+
+/datum/equipment_preset/uscm/sg/upp
+	name = "UPP Squad Machinegunner"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+	assignment = "Machinegunner"
+	paygrade = "UE4"
+	role_comm_title = "MG"
+	languages = list(LANGUAGE_RUSSIAN)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/sg/upp/lesser_rank
+	paygrade = "UE3"
 
 //*****************************************************************************************************/
 
@@ -266,7 +304,6 @@
 /datum/equipment_preset/uscm/medic
 	name = "USCM Squad Hospital Corpsman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	assignment = JOB_SQUAD_MEDIC
 	rank = JOB_SQUAD_MEDIC
@@ -296,6 +333,25 @@
 /datum/equipment_preset/uscm/medic/lesser_rank
 	paygrade = "ME3"
 
+/datum/equipment_preset/uscm/medic/upp
+	name = "UPP Sanitar"
+	paygrade = "UE4"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
+	assignment = "Sanitar"
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/medic/upp
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/medic/upp/lesser_rank
+	paygrade = "UE3"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -308,7 +364,6 @@
 	paygrade = "ME5"
 	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
-
 	minimap_icon = "tl"
 
 /datum/equipment_preset/uscm/tl/load_gear(mob/living/carbon/human/new_human)
@@ -325,6 +380,21 @@
 /datum/equipment_preset/uscm/tl/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/tl(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/uscm/tl/upp
+	name = "UPP Squad Sergeant"
+	paygrade = "UE5"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /*****************************************************************************************************/
 
@@ -363,7 +433,6 @@
 /datum/equipment_preset/uscm/leader
 	name = "USCM Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
@@ -391,6 +460,24 @@
 
 /datum/equipment_preset/uscm/leader/lesser_rank
 	paygrade = "ME6"
+
+/datum/equipment_preset/uscm/leader/upp
+	name = "UPP Platoon Sergeant"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH) //ground commander and stuff
+	paygrade = "UE7"
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/leader/upp/lesser_rank
+	paygrade = "UE6"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

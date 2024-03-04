@@ -275,6 +275,10 @@
 	name = "\improper Normandy cargo door"
 	icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
+	name = "\improper Akademia Nauk cargo door"
+	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor
 	name = "bulkhead blast door"
 	icon = 'icons/obj/structures/doors/almayerblastdoor.dmi'
