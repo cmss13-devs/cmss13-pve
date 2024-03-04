@@ -139,6 +139,7 @@ SUBSYSTEM_DEF(mapping)
 
 /datum/controller/subsystem/mapping/proc/Loadship(list/errorList, name, path, files, list/traits, list/default_traits, silent = FALSE, override_map_path = "maps/")
 	LoadGroup(errorList, name, path, files, traits, default_traits, silent, override_map_path = override_map_path)
+	GLOB.gamemode_roles["Distress Signal: Lowpop"] = GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON]
 
 /datum/controller/subsystem/mapping/proc/Loadground(list/errorList, name, path, files, list/traits, list/default_traits, silent = FALSE, override_map_path = "maps/")
 	LoadGroup(errorList, name, path, files, traits, default_traits, silent, override_map_path = override_map_path)
@@ -339,3 +340,11 @@ SUBSYSTEM_DEF(mapping)
 	if(!MC)
 		return MAIN_SHIP_DEFAULT_NAME
 	return MC.map_name
+
+/datum/controller/subsystem/mapping/proc/get_main_ship_platoon()
+	if(!configs)
+		return MAIN_SHIP_DEFAULT_PLATOON
+	var/datum/map_config/MC = configs[SHIP_MAP]
+	if(!MC)
+		return MAIN_SHIP_DEFAULT_PLATOON
+	return MC.platoon
