@@ -1532,14 +1532,10 @@
 	},
 /area/golden_arrow/engineering)
 "pw" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/type71,
-/obj/item/weapon/gun/rifle/type71{
-	pixel_y = 10
-	},
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/gun_rack/type71,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -1558,11 +1554,14 @@
 	},
 /area/golden_arrow/squad_one)
 "pz" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/type71,
-/obj/item/weapon/gun/rifle/type71{
-	pixel_y = 10
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_magazine/minigun{
+	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
+	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
+	pixel_y = 8;
+	pixel_x = 6
 	},
+/obj/item/reagent_container/food/drinks/dry_ramen,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -1801,6 +1800,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"rv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/ammo/type71,
+/obj/structure/largecrate/supply/ammo/type71{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "rE" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -2969,14 +2979,10 @@
 	},
 /area/golden_arrow/prep_hallway)
 "CU" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/type71,
-/obj/item/weapon/gun/rifle/type71{
-	pixel_y = 10
-	},
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/gun_rack/type71,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4299,6 +4305,10 @@
 /obj/item/clothing/accessory/armband{
 	pixel_x = 6
 	},
+/obj/item/tool/screwdriver{
+	pixel_y = 8;
+	pixel_x = -9
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -4358,6 +4368,24 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
+"RM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/bayonet/upp,
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 20
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "RN" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -4392,10 +4420,20 @@
 	},
 /area/golden_arrow/medical)
 "Sf" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/type71,
-/obj/item/weapon/gun/rifle/type71{
-	pixel_y = 10
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_magazine/handful/shotgun/heavy/flechette{
+	current_rounds = 1;
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy{
+	pixel_y = 5;
+	current_rounds = 1
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag{
+	pixel_y = 5;
+	pixel_x = -8;
+	current_rounds = 1
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -4495,16 +4533,23 @@
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/supply)
 "Tw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/type71,
-/obj/structure/largecrate/supply/ammo/type71{
-	pixel_x = 4;
-	pixel_y = 8
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -3;
+	pixel_y = 24
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
-/area/golden_arrow/squad_one)
+/area/golden_arrow/squad_two)
 "Tx" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -12375,11 +12420,11 @@ tZ
 tZ
 tZ
 ei
-uS
+RM
 dU
 dU
 dU
-IW
+rv
 ww
 vW
 vW
@@ -12387,11 +12432,11 @@ PL
 Rm
 mv
 NU
-Lm
+Tw
 Hp
 Hp
 Hp
-bw
+bR
 IS
 IS
 IS
@@ -12831,7 +12876,7 @@ TB
 VP
 TB
 ww
-pz
+IW
 dU
 MH
 dU
@@ -12843,7 +12888,7 @@ es
 Rm
 vW
 NU
-Sf
+bw
 Hp
 Jt
 Hp
@@ -12983,7 +13028,7 @@ uA
 zU
 Ar
 ww
-Tw
+uS
 mT
 Mm
 TF
@@ -12995,7 +13040,7 @@ zb
 vQ
 sy
 NU
-bR
+Lm
 OL
 bc
 hV
