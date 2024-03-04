@@ -214,13 +214,13 @@
 	supplies = list(/obj/item/storage/box/explosive_mines = 5)
 
 /obj/structure/largecrate/supply/explosives/grenades
-	name = "\improper M40 HDEP grenade case (x50)"
-	desc = "A case containing two twenty-five M40 HDEP grenade boxes."
+	name = "\improper M40 HEDP grenade case (x50)"
+	desc = "A case containing two twenty-five M40 HEDP grenade boxes."
 	supplies = list(/obj/item/storage/box/nade_box = 2)
 
 /obj/structure/largecrate/supply/explosives/grenades/less
-	name = "\improper M40 HDEP grenade case (x25)"
-	desc = "A case containing one twenty-five M40 HDEP grenade box."
+	name = "\improper M40 HEDP grenade case (x25)"
+	desc = "A case containing one twenty-five M40 HEDP grenade box."
 	icon_state = "case"
 	supplies = list(/obj/item/storage/box/nade_box = 1)
 
