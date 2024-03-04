@@ -201,6 +201,10 @@
 	desc = "An ammunition case containing six M56D ammunition drums."
 	supplies = list(/obj/item/ammo_magazine/m56d = 6)
 
+/obj/structure/largecrate/supply/ammo/type71
+	name = "\improper Type 71 magazine case (x20)"
+	desc = "An ammunition case containing 20 Type 71 magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
 
 
 /obj/structure/largecrate/supply/explosives

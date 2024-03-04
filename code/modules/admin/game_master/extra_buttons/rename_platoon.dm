@@ -1,5 +1,6 @@
 
 GLOBAL_VAR_INIT(main_platoon_name, SQUAD_MARINE_1)
+GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 /// Ability to rename the platoon
 /client/proc/game_master_rename_platoon()
@@ -15,7 +16,7 @@ GLOBAL_VAR_INIT(main_platoon_name, SQUAD_MARINE_1)
 	set name = "Rename Platoon"
 	set category = "OOC.Commander"
 
-	if(GLOB.main_platoon_name != SQUAD_MARINE_1)
+	if(GLOB.main_platoon_name != GLOB.main_platoon_initial_name)
 		to_chat(src, SPAN_NOTICE("The platoon has already been renamed this round."))
 		return
 

@@ -143,6 +143,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/type23/beanbag
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 
+/obj/item/ammo_magazine/internal/shotgun/type23/special
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
+
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4
@@ -261,6 +264,11 @@ var/list/shotgun_handfuls_12g = list(
 	icon_state = "heavy_buckshot_4"
 	handful_state = "heavy_buckshot"
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special
+	name = "handful of superheavy buckshot shells (8g)"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
+
 
 /obj/item/ammo_magazine/handful/shotgun/heavy/dragonsbreath
 	name = "handful of dragon's breath shells (8g)"

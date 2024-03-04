@@ -404,7 +404,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(!object || !z_level)
 				return
 
-			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
+			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_ALL, given_image = background)
 
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 
