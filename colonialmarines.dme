@@ -707,6 +707,7 @@
 #include "code\game\area\golden_arrow.dm"
 #include "code\game\area\IceColony.dm"
 #include "code\game\area\kutjevo.dm"
+#include "code\game\area\lead_hawk.dm"
 #include "code\game\area\LV522_Chances_Claim.dm"
 #include "code\game\area\LV624.dm"
 #include "code\game\area\prison.dm"
