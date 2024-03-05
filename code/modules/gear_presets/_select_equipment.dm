@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 
 /datum/equipment_preset/proc/spawn_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
-	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
+	if(!new_human?.client?.prefs?.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
 	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
 		if(closet.owner)
