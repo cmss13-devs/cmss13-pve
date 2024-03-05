@@ -1840,8 +1840,13 @@
 	},
 /area/golden_arrow/briefing)
 "rV" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/pillbottles,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Corpsman"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -2318,7 +2323,6 @@
 	},
 /area/golden_arrow/canteen)
 "wH" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -2334,15 +2338,19 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/structure/machinery/light{
-	dir = 4
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
 	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101;
+	unacidable = 1;
+	unslashable = 1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2842,7 +2850,6 @@
 	},
 /area/golden_arrow/supply)
 "Cq" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -2858,15 +2865,19 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
 	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101;
+	unacidable = 1;
+	unslashable = 1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3143,6 +3154,34 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"EH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Sergeant"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "EM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -3728,8 +3767,38 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
+"JY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "Ka" = (
 /obj/structure/machinery/chem_master,
+/obj/item/storage/box/pillbottles{
+	pixel_y = 12
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -3785,7 +3854,9 @@
 /obj/structure/machinery/chem_dispenser{
 	desc = "A complex machine for mixing elements into chemicals. A MinZdrav product."
 	},
-/obj/item/reagent_container/glass/beaker/bluespace,
+/obj/item/reagent_container/glass/beaker/bluespace{
+	pixel_y = 17
+	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -4853,7 +4924,6 @@
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/hangar)
 "WP" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -4869,11 +4939,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
+	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
@@ -13906,11 +13977,11 @@ nO
 EA
 HX
 cT
-WP
-WP
+JY
+JY
 Cq
-WP
-WP
+JY
+EH
 iO
 pk
 AS
@@ -14514,11 +14585,11 @@ nO
 EA
 af
 cT
-WP
-WP
+JY
+JY
 wH
 WP
-WP
+JY
 iO
 bC
 CJ
