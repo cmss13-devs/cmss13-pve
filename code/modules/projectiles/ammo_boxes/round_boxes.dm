@@ -143,3 +143,14 @@
 
 /obj/item/ammo_box/rounds/type71/heap/empty
 	empty = TRUE
+
+/obj/item/ammo_box/rounds/pkp
+	name = "machinegun ammunition box (7.62x54mmR)"
+	desc = "A 7.62x54mmR machinegun ammunition box. Used to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
+	icon_state = "base_type71"
+	overlay_gun_type = "_rounds_pkp"
+	overlay_content = "_type71_reg"
+	default_ammo = /datum/ammo/bullet/pkp
+	bullet_amount = 1500
+	max_bullet_amount = 1500
+	caliber = "7.62x54mmR"

@@ -334,6 +334,16 @@
 	storage_slots = null
 	max_storage_space = 15
 
+/obj/item/storage/backpack/satchel/blue
+	name = "leather satchel"
+	desc = "A very fancy satchel made of fine leather. Looks pretty pricey. This one is blue."
+	icon_state = "satchel-blue"
+
+/obj/item/storage/backpack/satchel/black
+	name = "leather satchel"
+	desc = "A very fancy satchel made of fine leather. Looks pretty pricey. This one is black."
+	icon_state = "satchel-black"
+
 /obj/item/storage/backpack/satchel/withwallet
 
 /obj/item/storage/backpack/satchel/withwallet/fill_preset_inventory()
@@ -616,6 +626,13 @@
 /obj/item/storage/backpack/general_belt/dropped(mob/user)
 	mouse_opacity = initial(mouse_opacity)
 	..()
+
+/obj/item/storage/backpack/general_belt/upp
+	name = "\improper Type 48-M general utility pouch"
+	desc = "A small, lightweight pouch that can be clipped onto U-pattern UPP armor to provide additional storage. The newer 48-M model, while uncomfortable, can also be clipped around the waist."
+	icon_state = "upp_g8pouch"
+	item_state = "upp_g8pouch"
+	has_gamemode_skin = FALSE
 
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak

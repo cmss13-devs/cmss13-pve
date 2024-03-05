@@ -112,6 +112,8 @@
 	///Should we add the name of our squad in front of their name? Ex: Alpha Hospital Corpsman
 	var/prepend_squad_name_to_assignment = TRUE
 
+	var/squad_one_access = ACCESS_SQUAD_ONE
+	var/squad_two_access = ACCESS_SQUAD_TWO
 
 /datum/squad/marine
 	name = "Root"
@@ -128,6 +130,24 @@
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
 	usable = TRUE
+
+/datum/squad/marine/upp
+	name = SQUAD_UPP
+	equipment_color = "#8B0000"
+	chat_color = "#B22222"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+	squad_one_access = ACCESS_UPP_SQUAD_ONE
+	squad_two_access = ACCESS_UPP_SQUAD_TWO
+
+/datum/squad/marine/upp/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -311,7 +331,7 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-/datum/squad/marine/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+/datum/squad/marine/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	name = new_name
@@ -484,6 +504,8 @@
 		return FALSE //No ID found
 
 	var/assignment = M.job
+
+	var/id_assignment = M.assigned_equipment_preset.assignment
 	var/paygrade
 
 	var/list/extra_access = list()
@@ -565,9 +587,9 @@
 	M.assigned_squad = src //Add them to the squad
 	C.access += (src.access + extra_access) //Add their squad access to their ID
 	if(prepend_squad_name_to_assignment)
-		C.assignment = "[name] [assignment]"
+		C.assignment = "[name] [id_assignment]"
 	else
-		C.assignment = assignment
+		C.assignment = id_assignment
 
 	SEND_SIGNAL(M, COMSIG_SET_SQUAD)
 
@@ -594,7 +616,7 @@
 		return FALSE //Abort, no ID found
 
 	C.access -= src.access
-	C.assignment = M.job
+	C.assignment = M.assigned_equipment_preset.assignment
 	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
 
 	forget_marine_in_squad(M)
@@ -748,9 +770,9 @@
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
 	if(H.wear_id)
 		if(fireteam == "SQ1")
-			H.wear_id.access += ACCESS_SQUAD_ONE
+			H.wear_id.access += squad_one_access
 		if(fireteam == "SQ2")
-			H.wear_id.access += ACCESS_SQUAD_TWO
+			H.wear_id.access += squad_two_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Sergeant" in cycled_headset.tracking_options))
@@ -773,7 +795,7 @@
 	H.hud_set_squad()
 
 	if(H.wear_id)
-		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
+		H.wear_id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Platoon Sergeant" in cycled_headset.tracking_options))

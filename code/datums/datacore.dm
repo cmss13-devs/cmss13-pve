@@ -45,8 +45,6 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 		departments += marines_by_squad
 		var/list/manifest_out = list()
 		for(var/datum/data/record/t in GLOB.data_core.general)
-			if(t.fields["mob_faction"] != FACTION_MARINE) //we process only USCM humans
-				continue
 			var/name = t.fields["name"]
 			var/rank = t.fields["rank"]
 			var/squad = t.fields["squad"]
@@ -98,8 +96,6 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	var/list/squad_sublists = ROLES_SQUAD_ALL.Copy() //Are there any marines in the squad?
 
 	for(var/datum/data/record/t in GLOB.data_core.general)
-		if(t.fields["mob_faction"] != FACTION_MARINE) //we process only USCM humans
-			continue
 
 		var/name = t.fields["name"]
 		var/rank = t.fields["rank"]

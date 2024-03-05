@@ -1,0 +1,722 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cw" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "port_door"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"di" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_11";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"ev" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12;
+	pixel_y = 29
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	network = list("Chapaev","Akademia Nauk")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"ex" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23;
+	network = list("Chapaev","Akademia Nauk")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"fz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12;
+	pixel_y = 29
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"fC" = (
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	network = list("Akademia Nauk","Laser Targets");
+	name = "\improper 'Akademia Nauk' camera controls"
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/phone_base{
+	pixel_y = 32;
+	name = "Akademia Nauk Telephone";
+	phone_category = "Dropship";
+	phone_id = "Akademia Nauk"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"fX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"he" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 11
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"hg" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp9"
+	},
+/area/shuttle/ds_upp)
+"is" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"jh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"ld" = (
+/obj/effect/attach_point/weapon/midway/left_wing,
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
+	},
+/area/shuttle/ds_upp)
+"lm" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp1"
+	},
+/area/shuttle/ds_upp)
+"mu" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"nA" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"nS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"of" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"pv" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"qf" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T61"
+	},
+/area/shuttle/ds_upp)
+"rX" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"rZ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"sC" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
+	id = "aft_door"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"sP" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"tx" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/blocker/invisible_wall,
+/obj/item/frame/camera{
+	pixel_x = 12;
+	pixel_y = 17;
+	name = "broken dashcam";
+	desc = "Welp, no more funny crash vids..."
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"us" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"wO" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
+	},
+/area/shuttle/ds_upp)
+"wQ" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	dir = 8;
+	id = "starboard_door"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"xc" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
+	},
+/area/shuttle/ds_upp)
+"xE" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp4"
+	},
+/area/shuttle/ds_upp)
+"xZ" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"yy" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23;
+	network = list("Chapaev","Akademia Nauk")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"zL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"AK" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp21"
+	},
+/area/shuttle/ds_upp)
+"BT" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"Cw" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Dn" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"DG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"Fd" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Fz" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"GR" = (
+/obj/structure/stairs,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"GY" = (
+/obj/docking_port/mobile/marine_dropship/upp,
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/shuttle/ds_upp)
+"Hk" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp251"
+	},
+/area/shuttle/ds_upp)
+"HB" = (
+/turf/closed/shuttle/dropship1/transparent{
+	name = "wall";
+	icon = 'icons/turf/ert_shuttle.dmi';
+	icon_state = "upp27"
+	},
+/area/shuttle/ds_upp)
+"HD" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp3"
+	},
+/area/shuttle/ds_upp)
+"HV" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Jo" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/effect/attach_point/weapon/midway/right_fore,
+/turf/template_noop,
+/area/space)
+"Jy" = (
+/turf/template_noop,
+/area/space)
+"JD" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -30
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"My" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"MF" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_leftengine"
+	},
+/area/shuttle/ds_upp)
+"Nh" = (
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/shuttle/ds_upp)
+"RL" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Sf" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 30
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Sg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -13;
+	pixel_y = 29
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Sx" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp5"
+	},
+/area/shuttle/ds_upp)
+"SF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 19
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"TG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp23"
+	},
+/area/shuttle/ds_upp)
+"TN" = (
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	name = "\improper 'Akademia Nauk' weapons controls";
+	shuttle_tag = "dropship_upp";
+	faction = "UPP"
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"Uw" = (
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
+"Xe" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/effect/attach_point/weapon/midway/left_fore,
+/turf/template_noop,
+/area/space)
+"Xo" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T151"
+	},
+/area/shuttle/ds_upp)
+"Zm" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp8"
+	},
+/area/shuttle/ds_upp)
+"Zn" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_11";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"ZO" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp22"
+	},
+/area/shuttle/ds_upp)
+
+(1,1,1) = {"
+Jy
+Jy
+Jy
+Jy
+ld
+cw
+cw
+MF
+pv
+Zn
+Jy
+Jy
+qf
+MF
+pv
+DG
+Zn
+Jy
+"}
+(2,1,1) = {"
+Jy
+Jy
+Xe
+wO
+ZO
+Uw
+Uw
+Zm
+xE
+xE
+xE
+xE
+xE
+xE
+MF
+pv
+DG
+Zn
+"}
+(3,1,1) = {"
+wO
+xE
+xE
+AK
+he
+xZ
+nA
+HV
+ex
+jh
+JD
+HV
+nA
+GR
+Zm
+xE
+xE
+lm
+"}
+(4,1,1) = {"
+AK
+fC
+jh
+HB
+Uw
+of
+zL
+Fd
+Fd
+Fd
+Fd
+fz
+nA
+Dn
+nA
+Cw
+nA
+sC
+"}
+(5,1,1) = {"
+HB
+tx
+RL
+us
+mu
+My
+SF
+Nh
+Nh
+GY
+Nh
+ev
+xZ
+Dn
+HV
+HV
+HV
+HV
+"}
+(6,1,1) = {"
+AK
+TN
+rZ
+HB
+Uw
+fX
+nA
+nS
+sP
+sP
+sP
+Sg
+nA
+Dn
+nA
+rX
+nA
+nA
+"}
+(7,1,1) = {"
+Hk
+Sx
+Sx
+AK
+he
+xZ
+nA
+HV
+yy
+is
+Sf
+HV
+nA
+GR
+hg
+Sx
+Sx
+HD
+"}
+(8,1,1) = {"
+Jy
+Jy
+Jo
+Hk
+TG
+Uw
+Uw
+hg
+Sx
+Sx
+Sx
+Sx
+Sx
+Sx
+xc
+Fz
+BT
+di
+"}
+(9,1,1) = {"
+Jy
+Jy
+Jy
+Jy
+Hk
+wQ
+wQ
+xc
+Fz
+di
+Jy
+Jy
+Xo
+xc
+Fz
+BT
+di
+Jy
+"}

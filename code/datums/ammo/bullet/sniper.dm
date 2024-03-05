@@ -99,6 +99,11 @@
 	damage = 80
 	penetration = ARMOR_PENETRATION_TIER_10
 
+/datum/ammo/bullet/sniper/upp_pve
+	name = "high-power sniper bullet"
+	damage = 180
+	penetration = ARMOR_PENETRATION_TIER_4
+
 /datum/ammo/bullet/sniper/anti_materiel
 	name = "anti-materiel sniper bullet"
 

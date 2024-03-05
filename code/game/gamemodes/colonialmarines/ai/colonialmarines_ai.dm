@@ -33,13 +33,23 @@
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
 	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
+	squad_limit.Cut()
+	squad_limit += MAIN_SHIP_PLATOON
+	for(var/i in squad_limit)
+		role_mappings = GLOB.platoon_to_jobs[i]
+	RoleAuthority.reset_roles()
+	for(var/datum/squad/sq in RoleAuthority.squads)
+		if(sq.type in squad_limit)
+			GLOB.main_platoon_name = sq.name
+			GLOB.main_platoon_initial_name = sq.name
+
 
 	for(var/datum/squad/squad in RoleAuthority.squads)
 		if(squad.type in squad_limit)
 			continue
-
 		RoleAuthority.squads -= squad
 		RoleAuthority.squads_by_type -= squad.type
+
 
 	. = ..()
 
@@ -65,4 +75,19 @@
 		return
 
 /datum/game_mode/colonialmarines/ai/get_roles_list()
-	return ROLES_AI
+	return GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON]
+
+GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/job/command/bridge/ai = JOB_SO,\
+		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE), /datum/squad/marine/upp = list(/datum/job/command/bridge/ai/upp = JOB_SO,\
+		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE)))
+
+GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
+												/datum/squad/marine/upp = ROLES_AI_UPP))
