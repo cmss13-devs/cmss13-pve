@@ -20,7 +20,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "aq" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -32,7 +32,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "at" = (
 /obj/structure/cargo_container/arious/mid,
 /turf/open/floor/corsat{
@@ -81,13 +81,16 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "bd" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "bi" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/almayer{
@@ -114,7 +117,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "bp" = (
 /turf/open/floor/corsat{
 	dir = 9;
@@ -135,7 +138,7 @@
 	dir = 6;
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "bJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -148,11 +151,23 @@
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "bN" = (
 /turf/open/floor/corsat{
 	dir = 10;
 	icon_state = "red"
+	},
+/area/space)
+"bP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "bU" = (
@@ -167,7 +182,10 @@
 	dir = 6;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"cc" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/cryo_cell)
 "ce" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/corsat{
@@ -178,7 +196,18 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/box/cups,
 /turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"cB" = (
+/obj/structure/dropship_equipment/electronics/spotlights,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
 /area/space)
+"cD" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/cafeteria)
 "cE" = (
 /obj/structure/pipes/standard/simple/visible/purple{
 	dir = 10
@@ -193,7 +222,12 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
+"cT" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/squad_omega)
 "dq" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -203,7 +237,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "ds" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -215,14 +249,14 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "du" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/ashtray/glass{
 	pixel_x = -6
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "dx" = (
 /obj/structure/platform{
 	dir = 8;
@@ -293,13 +327,13 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/prop/flower_vase/bluewhiteflowers,
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "dX" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "ee" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -308,13 +342,17 @@
 /turf/open/floor/corsat{
 	icon_state = "arrow_north"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "el" = (
 /turf/open/floor/corsat{
 	dir = 5;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
+"em" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk/squad_theta)
 "eJ" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/corsat{
@@ -347,7 +385,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
 "eR" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -363,25 +401,55 @@
 	},
 /turf/open/floor/engine,
 /area/space)
+"fb" = (
+/obj/structure/ship_ammo/sentry,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "fh" = (
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "white"
 	},
 /area/space)
+"fl" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/briefing)
 "fp" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/pillbottles,
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
-/area/space)
-"fE" = (
-/obj/structure/dropship_equipment/weapon/rocket_pod,
+/area/lead_hawk/medical)
+"fr" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/squad_omega)
+"fy" = (
 /turf/open/floor/corsat{
-	icon_state = "cargo"
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"fz" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"fE" = (
+/obj/structure/closet/l3closet/security,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
+"fO" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/engineer)
 "fQ" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 1;
@@ -390,7 +458,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "gc" = (
 /obj/structure/platform{
 	dir = 8;
@@ -424,6 +492,14 @@
 "gR" = (
 /turf/open/space/basic,
 /area/space)
+"gT" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "hb" = (
 /obj/structure/machinery/cryopod{
 	dir = 4
@@ -431,7 +507,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "hq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -445,7 +521,7 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "hr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -472,7 +548,7 @@
 /area/space)
 "hA" = (
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "hB" = (
 /obj/structure/prop/almayer/hangar_stencil,
 /obj/effect/decal/warning_stripes{
@@ -498,14 +574,14 @@
 	dir = 1;
 	icon_state = "w-y0"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "hO" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
 	dir = 10;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "hX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -514,7 +590,7 @@
 	dir = 8;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "ih" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	dir = 2;
@@ -523,7 +599,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/briefing)
 "ip" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 8;
@@ -532,7 +608,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "iy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -547,7 +623,7 @@
 	dir = 6;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "iC" = (
 /obj/structure/pipes/standard/simple/visible/purple{
 	dir = 6
@@ -574,13 +650,13 @@
 	icon_state = "S"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "iR" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
 "iZ" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -588,6 +664,14 @@
 	icon_state = "plate"
 	},
 /area/space)
+"jb" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
 "jj" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -611,19 +695,32 @@
 	dir = 8;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "jE" = (
 /obj/structure/largecrate/random/case,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
 /area/space)
+"jG" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk)
 "jH" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
 /area/space)
+"jT" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/cryo_cell)
+"jX" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "kc" = (
 /obj/structure/machinery/cryopod{
 	pixel_y = 6
@@ -639,6 +736,17 @@
 	},
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/space)
+"kw" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "kx" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -647,6 +755,9 @@
 	icon_state = "plate"
 	},
 /area/space)
+"ky" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/medical)
 "kz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -671,19 +782,19 @@
 /turf/open/floor/corsat{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "kI" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "kO" = (
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "kY" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -698,13 +809,18 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
+"lg" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cryo_cell)
 "lj" = (
 /turf/open/floor/almayer{
 	dir = 1;
 	icon_state = "w-y1"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "lm" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -713,7 +829,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "lo" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/toolbox/mechanical/green{
@@ -728,19 +844,22 @@
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "lP" = (
 /turf/open/floor/corsat{
 	dir = 4;
 	icon_state = "whitetancorner"
 	},
 /area/space)
+"lV" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cryo_cell)
 "mb" = (
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "mc" = (
 /turf/open/floor/corsat{
 	icon_state = "whitetan"
@@ -754,13 +873,31 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "me" = (
 /obj/structure/cargo_container/arious/right,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
 /area/space)
+"mo" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
+"mC" = (
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"mH" = (
+/turf/closed/wall/almayer/white/hull,
+/area/lead_hawk/cryo_cell)
 "mJ" = (
 /obj/structure/cargo_container/lockmart/right{
 	layer = 3.1;
@@ -770,6 +907,11 @@
 	icon_state = "plate"
 	},
 /area/space)
+"mO" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/cafeteria)
 "mV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -801,7 +943,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "np" = (
 /obj/structure/largecrate/random/mini/chest/b{
 	pixel_x = -7;
@@ -823,7 +965,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "nz" = (
 /obj/structure/prop/almayer/hangar_stencil,
 /obj/effect/decal/warning_stripes{
@@ -837,6 +979,12 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"nE" = (
+/obj/structure/ship_ammo/rocket/napalm,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/space)
 "nF" = (
@@ -856,14 +1004,14 @@
 	dir = 4;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "nW" = (
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "ob" = (
 /obj/structure/platform{
 	dir = 4
@@ -880,7 +1028,7 @@
 /area/space)
 "or" = (
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "oB" = (
 /obj/structure/machinery/light/blue{
 	dir = 8;
@@ -911,7 +1059,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "oR" = (
 /obj/structure/machinery/vending/cola{
 	pixel_y = 22
@@ -919,7 +1067,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/briefing)
 "pa" = (
 /obj/structure/machinery/light/blue{
 	dir = 4;
@@ -930,19 +1078,27 @@
 	icon_state = "whitetan"
 	},
 /area/space)
+"pR" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	name = "\improper Kerr-Newman Engine"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/engineer)
 "pT" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "pX" = (
 /obj/structure/machinery/autolathe/full,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "qd" = (
 /obj/structure/machinery/cryopod/right,
 /turf/open/floor/almayer{
@@ -963,11 +1119,11 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "qi" = (
 /obj/structure/machinery/power/terminal,
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/engineer)
 "qn" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
 	density = 0;
@@ -976,7 +1132,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "qt" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/light{
@@ -992,7 +1148,7 @@
 	dir = 5;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "qB" = (
 /obj/structure/pipes/standard/simple/visible/purple,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -1003,7 +1159,7 @@
 	dir = 8;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "qE" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/glass{
 	name = "\improper Kerr-Newman Engine"
@@ -1017,7 +1173,7 @@
 	dir = 4;
 	icon_state = "greencorner"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "qH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1029,7 +1185,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "qK" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -1038,7 +1194,7 @@
 	dir = 10;
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "qL" = (
 /obj/vehicle/powerloader/ft,
 /turf/open/floor/corsat{
@@ -1052,7 +1208,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "qX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1062,11 +1218,21 @@
 	icon_state = "cargo_arrow"
 	},
 /area/space)
+"rg" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk/cafeteria)
 "ro" = (
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
 /area/space)
+"rx" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/medical)
 "ry" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
 	name = "Engineering";
@@ -1075,7 +1241,12 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"rC" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/cryo_cell)
 "rD" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
@@ -1088,13 +1259,19 @@
 "rI" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "rV" = (
 /obj/structure/platform,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
 /area/space)
+"rZ" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
 "se" = (
 /obj/structure/pipes/standard/manifold/visible/purple{
 	dir = 4
@@ -1143,7 +1320,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "sR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1153,7 +1330,10 @@
 	dir = 8;
 	icon_state = "greencorner"
 	},
-/area/space)
+/area/lead_hawk/medical)
+"tc" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/squad_theta)
 "td" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1172,7 +1352,7 @@
 /area/space)
 "tl" = (
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "tv" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/guestpass{
@@ -1188,6 +1368,14 @@
 	icon_state = "white"
 	},
 /area/space)
+"tA" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "tD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -1196,7 +1384,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "tJ" = (
 /obj/structure/cargo_container/lockmart/mid{
 	layer = 3.1;
@@ -1207,7 +1395,9 @@
 	},
 /area/space)
 "tM" = (
-/obj/structure/dropship_equipment/electronics/flare_launcher,
+/obj/structure/largecrate/random{
+	pixel_y = 4
+	},
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
@@ -1229,6 +1419,12 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"uk" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
 "up" = (
 /obj/structure/pipes/standard/simple/visible/purple,
 /turf/open/floor/engine,
@@ -1236,11 +1432,16 @@
 "ur" = (
 /obj/structure/machinery/hologram/holopad,
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "uv" = (
 /obj/structure/window/framed/corsat/indestructible,
 /turf/open/floor/plating,
-/area/space)
+/area/lead_hawk/briefing)
+"uE" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "uG" = (
 /turf/open/floor/corsat{
 	dir = 5;
@@ -1252,7 +1453,7 @@
 	dir = 9;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "uP" = (
 /turf/open/floor/corsat{
 	dir = 8;
@@ -1260,7 +1461,16 @@
 	},
 /area/space)
 "uV" = (
-/obj/structure/ship_ammo/sentry,
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = -8
+	},
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = 9
+	},
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = 4;
+	pixel_y = 9
+	},
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
@@ -1273,7 +1483,12 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/briefing)
+"vi" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/engineer)
 "vm" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 4;
@@ -1282,7 +1497,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "vo" = (
 /obj/structure/machinery/light/double{
 	dir = 1
@@ -1290,9 +1505,22 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
 "vx" = (
 /obj/structure/cargo_container/wy/left,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"vN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -1305,7 +1533,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "vW" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -1318,11 +1546,11 @@
 	icon_state = "S"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "vY" = (
 /obj/structure/foamed_metal,
 /turf/open/space/basic,
-/area/space)
+/area/lead_hawk/squad_theta)
 "wf" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -1332,19 +1560,34 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "wg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
 /turf/closed/wall/r_wall/biodome,
-/area/space)
-"wz" = (
-/obj/structure/ship_ammo/rocket/napalm,
+/area/lead_hawk/cryo_cell)
+"wn" = (
 /turf/open/floor/corsat{
-	icon_state = "cargo"
+	dir = 4;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"wr" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
+"wz" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/engineer)
 "wB" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
@@ -1374,6 +1617,14 @@
 	dir = 5;
 	icon_state = "yellow"
 	},
+/area/lead_hawk/engineer)
+"wW" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "xx" = (
 /obj/effect/decal/warning_stripes{
@@ -1383,7 +1634,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "xE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1393,7 +1644,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "xH" = (
 /obj/structure/machinery/chem_dispenser{
 	req_access_txt = "100"
@@ -1403,7 +1654,7 @@
 	dir = 10;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "xX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1436,6 +1687,11 @@
 	icon_state = "squares"
 	},
 /area/space)
+"yp" = (
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
 "yt" = (
 /turf/open/floor/corsat{
 	icon_state = "white"
@@ -1449,6 +1705,9 @@
 	icon_state = "plate"
 	},
 /area/space)
+"yG" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/medical)
 "yH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1457,7 +1716,7 @@
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "yM" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
@@ -1480,7 +1739,7 @@
 /turf/open/floor/corsat{
 	icon_state = "yellowcorner"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "zt" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
 	dir = 1
@@ -1488,7 +1747,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "zG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1523,7 +1782,7 @@
 /turf/open/floor/corsat{
 	icon_state = "theta"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "zR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1536,7 +1795,7 @@
 	dir = 8;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "zY" = (
 /obj/structure/machinery/cryopod/right{
 	pixel_y = 6
@@ -1550,7 +1809,7 @@
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Ae" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -1559,8 +1818,11 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Ao" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
 /turf/open/floor/corsat{
 	dir = 5;
 	icon_state = "red"
@@ -1574,7 +1836,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Au" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -1610,6 +1872,12 @@
 	icon_state = "plate"
 	},
 /area/space)
+"AM" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
 "AO" = (
 /obj/structure/cargo_container/lockmart/left{
 	layer = 3.1;
@@ -1623,6 +1891,12 @@
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "whitetan"
+	},
+/area/space)
+"Bd" = (
+/obj/structure/dropship_equipment/electronics/flare_launcher,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/space)
 "Bu" = (
@@ -1656,7 +1930,12 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
+"Cj" = (
+/turf/open/floor/corsat{
+	icon_state = "omega"
+	},
+/area/lead_hawk/squad_omega)
 "Cl" = (
 /turf/open/floor/corsat{
 	dir = 4;
@@ -1671,7 +1950,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "Cu" = (
 /obj/item/tool/mop{
 	pixel_x = -9;
@@ -1680,7 +1959,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "CB" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
 	dir = 2;
@@ -1698,17 +1977,22 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
+"CI" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
 "CK" = (
 /obj/structure/pipes/standard/simple/visible/purple,
 /turf/open/floor/plating,
 /area/space)
 "CO" = (
-/obj/structure/closet/radiation,
+/obj/structure/closet/l3closet/scientist,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "CT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1722,7 +2006,12 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
+"CV" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/squad_theta)
 "CZ" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -1734,7 +2023,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "Dc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -1742,7 +2031,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "Df" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -1752,7 +2041,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Dy" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -1772,7 +2061,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "DE" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -1781,7 +2070,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "DK" = (
 /obj/structure/bed/chair/comfy/charlie{
 	name = "Omege squad chair"
@@ -1793,7 +2082,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "DO" = (
 /turf/open/floor/corsat{
 	dir = 8;
@@ -1823,6 +2112,9 @@
 	icon_state = "cargo"
 	},
 /area/space)
+"DZ" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/engineer)
 "Ea" = (
 /obj/structure/prop/almayer/computers/sensor_computer3{
 	name = "weapon targetting computer"
@@ -1862,7 +2154,7 @@
 	dir = 5;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "Et" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -1876,7 +2168,7 @@
 	},
 /area/space)
 "Ey" = (
-/obj/structure/dropship_equipment/rappel_system,
+/obj/structure/largecrate/random/barrel/red,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
@@ -1906,7 +2198,7 @@
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "EP" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -1918,6 +2210,16 @@
 /obj/effect/landmark/start/marine/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"Fa" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cryo_cell)
+"Fd" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/medical)
 "Fw" = (
 /obj/structure/window/framed/corsat/hull/security,
 /obj/structure/machinery/door/poddoor/almayer/blended/white{
@@ -1936,19 +2238,26 @@
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "FO" = (
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
+"FV" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cafeteria)
 "FZ" = (
 /obj/structure/reagent_dispensers/fueltank/custom,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"Gg" = (
+/obj/structure/window/framed/corsat/indestructible,
+/turf/open/floor/plating,
+/area/lead_hawk/squad_theta)
 "Gh" = (
 /obj/structure/machinery/light/blue{
 	dir = 8;
@@ -1981,7 +2290,7 @@
 	icon_state = "S"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "Gy" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_east"
@@ -2004,7 +2313,7 @@
 	dir = 1;
 	icon_state = "w-y0"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "GX" = (
 /obj/structure/window/framed/corsat/hull/security,
 /turf/open/floor/plating,
@@ -2028,7 +2337,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "Hx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2055,7 +2364,7 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/prop/geiger_counter,
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "HD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -2064,7 +2373,7 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "HF" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 9
@@ -2072,7 +2381,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "HO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -2085,7 +2394,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "HT" = (
 /turf/open/floor/corsat{
 	dir = 8;
@@ -2100,12 +2409,17 @@
 	icon_state = "squares"
 	},
 /area/space)
+"It" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
 "Iu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "IG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -2114,12 +2428,12 @@
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "IH" = (
 /turf/open/floor/corsat{
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "II" = (
 /obj/structure/window/framed/corsat/hull/security,
 /obj/structure/machinery/door/poddoor/almayer/blended/white{
@@ -2151,13 +2465,13 @@
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "Jl" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "Jn" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -2168,7 +2482,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "JL" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -2177,19 +2491,44 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "JM" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "JW" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/crew/alt,
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Ke" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/briefing)
+"Km" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"Kx" = (
+/obj/structure/largecrate/random,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"KA" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "KB" = (
@@ -2219,7 +2558,7 @@
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "KN" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/space)
@@ -2231,14 +2570,14 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "Li" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/juicer{
 	pixel_y = 9
 	},
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "Lz" = (
 /obj/structure/machinery/light/blue{
 	dir = 1;
@@ -2267,6 +2606,14 @@
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
 /area/space)
+"Mh" = (
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_x = 7
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "Mi" = (
 /obj/structure/surface/rack,
 /obj/item/storage/large_holster/m39,
@@ -2277,7 +2624,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "Mj" = (
 /turf/closed/wall/r_wall/biodome,
 /area/space)
@@ -2290,13 +2637,13 @@
 	dir = 4;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Mu" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "MB" = (
 /obj/structure/machinery/cryopod/right{
 	layer = 3.1;
@@ -2315,12 +2662,15 @@
 	icon_state = "plate"
 	},
 /area/space)
+"MO" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/squad_omega)
 "Nm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
 /turf/closed/wall/almayer/white/hull,
-/area/space)
+/area/lead_hawk/cryo_cell)
 "Ns" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/taperecorder{
@@ -2335,16 +2685,16 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "ND" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "NP" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "NR" = (
 /obj/structure/machinery/cryopod/right,
 /obj/structure/machinery/light{
@@ -2368,18 +2718,31 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
+/area/lead_hawk/squad_theta)
+"Oz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "OA" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "ON" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"OS" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cafeteria)
 "OZ" = (
 /obj/structure/cargo_container/arious/left,
 /turf/open/floor/corsat{
@@ -2415,13 +2778,26 @@
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"Pn" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
 "Po" = (
 /obj/structure/machinery/portable_atmospherics/powered/pump,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"Pq" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
 "Pt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2431,7 +2807,11 @@
 	dir = 1;
 	icon_state = "w-y2"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
+"PA" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk)
 "PG" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 1;
@@ -2440,7 +2820,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "PN" = (
 /obj/item/tool/weldpack{
 	pixel_x = 7
@@ -2451,7 +2831,7 @@
 	dir = 4;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "PP" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/corsat{
@@ -2463,12 +2843,21 @@
 	dir = 1;
 	icon_state = "yellowcorner"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "PZ" = (
 /obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"Qq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
 "Qw" = (
 /turf/open/floor/almayer/no_build{
 	icon_state = "test_floor4"
@@ -2480,17 +2869,20 @@
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "QE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
+"QH" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/squad_theta)
 "QI" = (
 /obj/structure/window/framed/corsat/research,
 /turf/open/floor/plating,
-/area/space)
+/area/lead_hawk/medical)
 "QK" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -2500,7 +2892,17 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
+"QN" = (
+/obj/structure/largecrate/supply/ammo/m41a/extended,
+/obj/structure/largecrate/supply/ammo/m41a/extended{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "QQ" = (
 /obj/structure/platform{
 	dir = 4;
@@ -2525,7 +2927,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
 "Rk" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/white{
 	name = "Overlord Auxilliary Processor Access"
@@ -2541,7 +2943,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "RE" = (
 /obj/structure/stairs/perspective,
 /turf/open/floor/corsat{
@@ -2552,7 +2954,7 @@
 /turf/open/floor/corsat{
 	icon_state = "omega"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "Se" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -2568,7 +2970,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
 "Ss" = (
 /obj/structure/machinery/suit_storage_unit/carbon_unit{
 	density = 0;
@@ -2580,13 +2982,8 @@
 	},
 /area/space)
 "St" = (
-/obj/structure/ship_ammo/rocket/widowmaker{
-	pixel_x = 7
-	},
-/turf/open/floor/corsat{
-	icon_state = "cargo"
-	},
-/area/space)
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk)
 "Sw" = (
 /obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -2600,7 +2997,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "SA" = (
 /obj/structure/bed/chair/comfy/teal{
 	name = "Theta squad chair"
@@ -2612,11 +3009,20 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "SF" = (
 /turf/open/floor/corsat{
 	dir = 4;
 	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"SK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "SV" = (
@@ -2625,6 +3031,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"Tc" = (
+/obj/structure/largecrate/random/barrel/white,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "Tg" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -2634,19 +3046,33 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_omega)
+"Th" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "Ti" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/corsat{
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "Ts" = (
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellow"
 	},
-/area/space)
+/area/lead_hawk/engineer)
+"Tw" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/lead_hawk/cryo_cell)
 "Tx" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop,
@@ -2654,7 +3080,7 @@
 	dir = 1;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Tz" = (
 /obj/structure/machinery/door/airlock/multi_tile/secure{
 	dir = 1
@@ -2668,7 +3094,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/lead_hawk/briefing)
 "TD" = (
 /obj/structure/machinery/defenses/tesla_coil/stun,
 /turf/open/floor/engine,
@@ -2681,7 +3107,7 @@
 	dir = 9;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "TK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2690,20 +3116,30 @@
 	dir = 6;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
+"TL" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/engineer)
 "TT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "TU" = (
 /obj/structure/platform_decoration,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
 /area/space)
+"TW" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "Ug" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/corsat{
@@ -2716,7 +3152,7 @@
 	dir = 1;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Uw" = (
 /obj/item/prop/almayer/comp_closed,
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2740,7 +3176,7 @@
 	name = "alien potted plant"
 	},
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
 "UF" = (
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/corsat{
@@ -2755,7 +3191,7 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
 "UO" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -2773,7 +3209,20 @@
 	dir = 1;
 	icon_state = "w-y1"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
+"UY" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"Vb" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/briefing)
+"Vd" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk/cryo_cell)
 "Vr" = (
 /obj/structure/pipes/standard/simple/visible/purple,
 /obj/structure/pipes/binary/circulator{
@@ -2789,7 +3238,7 @@
 	dir = 1;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Wb" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 8;
@@ -2798,7 +3247,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "Wg" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -2807,7 +3256,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/squad_theta)
 "Wt" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
@@ -2816,7 +3265,7 @@
 	dir = 5;
 	icon_state = "green"
 	},
-/area/space)
+/area/lead_hawk/medical)
 "Wv" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_west"
@@ -2836,13 +3285,13 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "WL" = (
 /obj/item/tool/wrench,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
-/area/space)
+/area/lead_hawk/engineer)
 "WT" = (
 /obj/structure/platform{
 	dir = 8
@@ -2856,6 +3305,27 @@
 	icon_state = "cargo"
 	},
 /area/space)
+"Xr" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"Xu" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
+	},
+/area/lead_hawk/cryo_cell)
+"Xz" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
 "XC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2869,12 +3339,17 @@
 /obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"XP" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/medical)
 "XS" = (
 /turf/open/floor/almayer{
 	dir = 1;
 	icon_state = "w-y2"
 	},
-/area/space)
+/area/lead_hawk/cafeteria)
 "XX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/pouch/tools/tactical,
@@ -2889,9 +3364,30 @@
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
+/area/lead_hawk/engineer)
+"Ye" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
+"Yl" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/cryo_cell)
 "Yo" = (
-/obj/structure/dropship_equipment/electronics/spotlights,
+/obj/structure/largecrate/random/barrel/green{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = -9;
+	pixel_y = -4
+	},
 /turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
@@ -2901,6 +3397,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"Yt" = (
+/obj/structure/dropship_equipment/rappel_system,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
 /area/space)
 "Yy" = (
 /obj/structure/surface/table/woodentable/poor,
@@ -2924,12 +3426,32 @@
 	icon_state = "plate"
 	},
 /area/space)
+"YB" = (
+/obj/structure/largecrate/machine/recycler,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"YJ" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating,
+/area/lead_hawk/briefing)
+"YL" = (
+/turf/open/floor/corsat{
+	icon_state = "theta"
+	},
+/area/lead_hawk/squad_theta)
 "YT" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
 /area/space)
+"Za" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/cafeteria)
 "Zo" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/sign/safety/coffee{
@@ -2948,7 +3470,13 @@
 	layer = 2.97
 	},
 /turf/open/floor/wood/ship,
-/area/space)
+/area/lead_hawk/briefing)
+"Zr" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
+	},
+/area/lead_hawk/cryo_cell)
 "Zy" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
 	density = 0;
@@ -2957,7 +3485,12 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk/cryo_cell)
+"ZP" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/engineer)
 "ZR" = (
 /obj/structure/prop/invuln/lattice_prop,
 /turf/open/space/basic,
@@ -6820,21 +7353,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -6972,21 +7505,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Xi
+Xi
+Xi
+Bu
+Oz
+kA
+SK
+KA
+KA
+KA
+KA
+KA
+Bu
+KN
 gR
 gR
 gR
@@ -7124,21 +7657,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Xi
+Xi
+Xi
+kA
+Oz
+kA
+SK
+Xi
+Xi
+Xi
+mC
+Yt
+Ye
+KN
 gR
 gR
 gR
@@ -7276,21 +7809,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Xi
+Xi
+Xi
+Bu
+Oz
+kA
+SK
+Xi
+Xi
+Xi
+Mh
+nE
+Ye
+KN
 gR
 gR
 gR
@@ -7428,21 +7961,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Xi
+Xi
+Xi
+Bu
+bP
+kA
+vN
+cB
+Bd
+fb
+Xi
+Xi
+Ye
+KN
 gR
 gR
 gR
@@ -7580,21 +8113,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Xi
+Xi
+Xi
+Oz
+kA
+kA
+kA
+wr
+gT
+gT
+gT
+gT
+Bu
+KN
 gR
 gR
 gR
@@ -7737,9 +8270,9 @@ KN
 KN
 KN
 KN
-KN
-KN
-KN
+mo
+mo
+mo
 KN
 KN
 KN
@@ -7889,9 +8422,9 @@ Bu
 Bu
 Bu
 Bu
-Bu
-Bu
-vx
+iy
+iy
+iy
 Bu
 kx
 Yy
@@ -8037,13 +8570,13 @@ KN
 KN
 KN
 KN
-Bu
+wW
 AE
 iy
 hB
 Bu
 Bu
-oE
+Bu
 Bu
 kA
 kA
@@ -8195,7 +8728,7 @@ kA
 XC
 Bu
 Bu
-bj
+Bu
 Bu
 Bu
 Bu
@@ -8786,14 +9319,14 @@ gR
 gR
 gR
 gR
-KN
-KN
-KN
-KN
-KN
-KN
-KN
-Mj
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Ke
 au
 Bu
 Bu
@@ -8938,14 +9471,14 @@ gR
 gR
 gR
 gR
-KN
+Vb
 Uz
 tl
 tl
 tl
 tl
 tl
-yV
+YJ
 eR
 kA
 Bu
@@ -9090,14 +9623,14 @@ gR
 gR
 gR
 gR
-KN
+Vb
 tl
 hA
 TA
 TA
 hA
 tl
-yV
+YJ
 eR
 Bu
 Bu
@@ -9242,14 +9775,14 @@ gR
 gR
 gR
 gR
-KN
+Vb
 tl
 ur
 ND
 HB
 pT
 tl
-yV
+YJ
 eR
 Bu
 Bu
@@ -9394,14 +9927,14 @@ gR
 gR
 gR
 gR
-KN
+Vb
 Zo
 hA
 dS
 ND
 pT
 tl
-yV
+YJ
 QQ
 yl
 Bu
@@ -9553,8 +10086,8 @@ ND
 du
 pT
 tl
-yV
-kA
+YJ
+fl
 KB
 Bu
 Bu
@@ -9706,7 +10239,7 @@ ND
 pT
 tl
 ih
-kA
+fl
 RE
 nk
 Bu
@@ -9857,8 +10390,8 @@ ND
 ND
 pT
 tl
-yV
-kA
+YJ
+fl
 gc
 Bu
 Bu
@@ -10002,7 +10535,7 @@ gR
 gR
 gR
 gR
-KN
+Vb
 rI
 hA
 ND
@@ -10010,7 +10543,7 @@ ND
 pT
 tl
 ih
-kA
+fl
 RE
 nk
 Bu
@@ -10154,15 +10687,15 @@ gR
 gR
 gR
 gR
-KN
+Vb
 OA
 hA
 JM
 JM
 hA
 tl
-yV
-kA
+YJ
+fl
 dx
 Bu
 Bu
@@ -10306,14 +10839,14 @@ gR
 gR
 gR
 gR
-KN
+Vb
+rZ
 tl
 tl
 tl
 tl
 tl
-tl
-Mj
+Ke
 oR
 HZ
 Bu
@@ -10324,10 +10857,10 @@ XC
 wK
 Bu
 eJ
+Kx
 Xi
 Xi
 Xi
-fE
 Ey
 HA
 ob
@@ -10457,15 +10990,15 @@ gR
 gR
 gR
 gR
-KN
-KN
-Mj
-Mj
-Mj
-Mj
-Mj
-Mj
-Mj
+St
+Vb
+Ke
+Ke
+Ke
+Ke
+Ke
+Ke
+Ke
 vh
 HZ
 Bu
@@ -10479,8 +11012,8 @@ Bu
 Xi
 Xi
 Xi
-St
-wz
+Xi
+Ug
 Gm
 jH
 kz
@@ -10609,16 +11142,16 @@ gR
 gR
 gR
 gR
-KN
-Df
-Df
-Df
-Df
-Df
-Df
-Df
-Mj
-Mj
+St
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+jG
+jG
 UO
 Gy
 Gy
@@ -10631,8 +11164,8 @@ eJ
 Yo
 tM
 uV
-Xi
-Xi
+Tc
+YB
 Dy
 WT
 UO
@@ -10761,18 +11294,18 @@ gR
 gR
 gR
 gR
-KN
-Mj
-Mj
-Mj
-Mj
-Mj
-Mj
-Mj
-Df
-Mj
-Mj
-ro
+wz
+DZ
+DZ
+DZ
+DZ
+DZ
+DZ
+jG
+PA
+jG
+jG
+OS
 CD
 Mj
 Mj
@@ -10789,11 +11322,11 @@ Mj
 Mj
 Mj
 Mj
-Mj
-Mj
-KN
-KN
-KN
+ky
+ky
+ky
+ky
+yG
 KN
 KN
 KN
@@ -10913,28 +11446,28 @@ gR
 gR
 gR
 gR
-KN
+wz
 uK
 mb
 mb
 qD
 mb
 hO
-Mj
-Mj
-Mj
-Bu
-Wv
-Wv
-Bu
+FV
+FV
+FV
+uE
+rg
+rg
+uE
 RC
 JJ
 JJ
 PG
-Bu
+uE
 RC
 JJ
-Mj
+FV
 TJ
 jv
 hX
@@ -10945,7 +11478,7 @@ QI
 JW
 FO
 xH
-KN
+yG
 gR
 gR
 gR
@@ -11064,29 +11597,29 @@ gR
 gR
 gR
 gR
-KN
-KN
+wz
+wz
 Ts
-Bu
-Bu
-Bu
-Bu
+ZP
+ZP
+ZP
+ZP
 Jl
-Mj
+FV
 vm
 vm
-Bu
+uE
 Cp
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
 KO
-Mj
+FV
 Uu
 Dk
 qW
@@ -11095,9 +11628,9 @@ qH
 xx
 QI
 Tx
-kA
+Fd
 FL
-KN
+yG
 gR
 gR
 gR
@@ -11216,15 +11749,15 @@ gR
 gR
 gR
 gR
-KN
+wz
 uK
 PW
 Po
-Xi
-Bu
-Bu
+yp
+ZP
+ZP
 Ti
-Mj
+FV
 TT
 JJ
 lc
@@ -11232,24 +11765,24 @@ GS
 WI
 cG
 cG
-Bu
-Bu
-Bu
+uE
+uE
+uE
 md
 md
-Bu
-Mj
+uE
+FV
 VB
 Dk
 Ae
-Dc
+Km
 HO
 IG
 QI
-bd
-kA
+Xz
+Fd
 fp
-KN
+yG
 gR
 gR
 gR
@@ -11368,7 +11901,7 @@ gR
 gR
 gR
 gR
-KN
+wz
 Pl
 Cu
 IN
@@ -11376,7 +11909,7 @@ FZ
 zn
 nR
 iz
-Mj
+FV
 Wb
 Wb
 lc
@@ -11385,23 +11918,23 @@ SA
 QE
 QE
 nm
-Bu
+uE
 RC
 JJ
 JJ
 PG
-Mj
+FV
 VB
 HF
-kA
-Bu
-Bu
+Fd
+CI
+CI
 bM
 zt
-bd
-Bu
+Xz
+CI
 Ad
-KN
+yG
 gR
 gR
 gR
@@ -11520,40 +12053,40 @@ gR
 gR
 gR
 gR
-KN
+wz
 Qx
-kA
+TL
 WL
-Xi
+yp
 IH
-Mj
-Mj
-Mj
-Bu
-Bu
+DZ
+DZ
+FV
+tA
+uE
 lc
 XS
 SA
 QE
 QE
 nm
-Bu
+uE
 RC
 JJ
 JJ
 PG
-Mj
+FV
 Wt
 SF
 qG
-kA
-Bu
+Fd
+CI
 bM
 QI
 el
 SF
 kO
-KN
+yG
 gR
 gR
 gR
@@ -11672,40 +12205,40 @@ gR
 gR
 gR
 gR
-KN
+wz
 nW
 NC
-Bu
-Bu
+ZP
+ZP
 IH
-En
+vi
 ry
-nk
-Bu
-Bu
-Bu
+mO
+uE
+uE
+uE
 Dc
-Bu
+uE
 ip
 ip
-Bu
-Bu
-Bu
+uE
+uE
+uE
 KO
 KO
-Bu
-Mj
-Mj
-Mj
+uE
+FV
+ky
+ky
 bd
-kA
-Bu
+Fd
+CI
 bM
-Mj
-KN
-KN
-KN
-KN
+ky
+yG
+yG
+yG
+yG
 gR
 gR
 gR
@@ -11824,37 +12357,37 @@ gR
 gR
 gR
 gR
-KN
+wz
 ON
-kA
-Bu
-Bu
+TL
+ZP
+ZP
 IH
-En
-ro
-nk
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-En
+vi
+fO
+mO
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+Za
 Iu
-nk
-bd
-Bu
-Bu
+rx
+Xz
+CI
+CI
 sR
 kI
-KN
+yG
 gR
 gR
 gR
@@ -11976,37 +12509,37 @@ gR
 gR
 gR
 gR
-KN
+wz
 lo
 XX
-Bu
-Bu
+ZP
+ZP
 IH
-Mj
-Mj
-Mj
-kA
-kA
+DZ
+DZ
+FV
+jX
+jX
 DK
 JJ
 fQ
-Gy
-Gy
-Bu
+cD
+cD
+uE
 lm
-Bu
-kA
-kA
-Bu
-En
-ro
-nk
-bd
-Bu
-Bu
+uE
+jX
+jX
+uE
+Za
+XP
+rx
+Xz
+CI
+CI
 Sx
 an
-KN
+yG
 gR
 gR
 gR
@@ -12128,37 +12661,37 @@ gR
 gR
 gR
 gR
-KN
+wz
 pX
-kA
-Bu
+TL
+ZP
 EJ
 IH
 qi
 dX
-Mj
+FV
 RT
 RT
-Mj
-Mj
-Mj
-ro
+lV
+lV
+lV
+Fa
 HD
-KN
-KN
-Mj
+cc
+cc
+lV
 zO
 zO
 KK
-Mj
-Mj
-Mj
+FV
+ky
+ky
 qx
 SF
 SF
 Ms
 TK
-KN
+yG
 gR
 gR
 gR
@@ -12280,37 +12813,37 @@ gR
 gR
 gR
 gR
-KN
+wz
 Es
-kA
-Bu
-Xi
+TL
+ZP
+yp
 IH
 qi
 dX
-Mj
-ro
+fr
+cT
 tD
-Mj
+lV
 Zy
-kA
-Wv
-Wv
-kA
+fz
+Vd
+Vd
+fz
 qn
-Mj
-kA
+lV
+TW
 Wg
-Mj
-Mj
+tc
+tc
 iR
-Mj
-KN
-KN
-KN
-KN
-KN
-gR
+tc
+ky
+ky
+ky
+yG
+yG
+yG
 gR
 gR
 gR
@@ -12432,35 +12965,35 @@ gR
 gR
 gR
 gR
-KN
+wz
 wM
 nR
 nR
 PN
 bX
-Mj
-Mj
-Mj
-RT
-RT
-Mj
-kA
-nk
-Bu
-Bu
-En
-kA
-Mj
-zO
-zO
-Bu
-Mj
-Mj
-Mj
-kA
-kA
-kA
-KN
+fr
+fr
+fr
+Cj
+Cj
+lV
+fz
+Yl
+lg
+lg
+jT
+fz
+lV
+YL
+YL
+It
+tc
+tc
+tc
+TW
+TW
+TW
+QH
 gR
 gR
 gR
@@ -12584,35 +13117,35 @@ gR
 gR
 gR
 gR
-KN
-KN
-KN
-qE
-Mj
-Mj
-KN
+wz
+wz
+wz
+pR
+fr
+fr
+MO
 Tg
 DE
-Bu
-Bu
-Mj
-kA
-nk
-Bu
-Bu
-En
-kA
-Mj
-Bu
-Bu
-Bu
-Mj
-kA
-kA
-Bu
-Bu
-Bu
-uv
+UY
+UY
+lV
+fz
+Yl
+lg
+lg
+jT
+fz
+lV
+It
+It
+It
+tc
+TW
+TW
+It
+It
+It
+Gg
 gR
 gR
 gR
@@ -12736,35 +13269,35 @@ gR
 gR
 gR
 gR
-KN
+wz
 CO
-bp
-DO
+Xr
+uk
 qK
-Mj
-kA
-Bu
-Bu
-Bu
+fr
+Pn
+UY
+UY
+UY
 aY
-Mj
-kA
-nk
-Bu
-Bu
-En
-kA
-Mj
+lV
+fz
+Yl
+lg
+lg
+jT
+fz
+lV
 vo
-Bu
-Bu
-DE
-Bu
-Bu
-Bu
-Bu
-Bu
-uv
+It
+It
+Qq
+It
+It
+It
+It
+It
+Gg
 gR
 gR
 gR
@@ -12888,35 +13421,35 @@ KN
 KN
 KN
 KN
-KN
+wz
 CO
-kY
-kA
+fy
+TL
 kF
-Mj
-kA
-Bu
-Bu
-Bu
-Bu
-Mj
-kA
-nk
-Bu
-Bu
-En
-kA
-Mj
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-uv
+fr
+Pq
+UY
+UY
+UY
+UY
+lV
+fz
+Yl
+lg
+lg
+jT
+fz
+lV
+jb
+It
+It
+It
+It
+It
+It
+It
+It
+Gg
 gR
 gR
 gR
@@ -13040,35 +13573,35 @@ KN
 eL
 tv
 aj
-KN
+wz
 CO
-Ao
-Cl
+AM
+wn
 bG
-Mj
+fr
 vS
-Bu
-Bu
-Bu
+UY
+UY
+UY
 Mi
-Mj
+lV
 Sf
 ee
-Bu
-Bu
-En
-kA
-Mj
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-Bu
-KN
+lg
+lg
+jT
+fz
+lV
+It
+It
+It
+It
+It
+It
+It
+It
+It
+QH
 gR
 gR
 gR
@@ -13195,32 +13728,32 @@ fh
 KN
 KN
 qE
-Mj
-Mj
-Mj
-Mj
-ro
-ro
-Mj
-Mj
-Mj
-Mj
+fr
+fr
+fr
+fr
+cT
+cT
+fr
+fr
+lV
+lV
 wg
-Gy
-Gy
-Mj
-Mj
-Mj
-Mj
-RC
+rC
+rC
+lV
+lV
+lV
+tc
+Th
 eM
-Mj
-Mj
-Mj
-ro
-ro
-Mj
-KN
+tc
+tc
+tc
+CV
+CV
+tc
+QH
 gR
 gR
 gR
@@ -13347,32 +13880,32 @@ DO
 DO
 DO
 bN
-Mj
+fr
 Ra
 DE
-Bu
-Bu
-Bu
+UY
+UY
+UY
 Mj
 Df
 Df
 Df
 Nm
-ro
+Fa
 JL
-yX
+mH
 vY
 vY
-Mj
-Mj
-Mj
-Mj
-Ra
-Bu
-Bu
-Bu
-Ra
-KN
+tc
+tc
+tc
+tc
+kw
+It
+It
+It
+kw
+QH
 gR
 gR
 gR
@@ -13499,32 +14032,32 @@ kA
 kA
 kA
 dA
-Mj
+fr
 Ra
-Bu
+UY
 sM
-Bu
+UY
 Ra
-yX
-yX
-yX
-yX
+mH
+mH
+mH
+mH
 Nm
-Wv
-Wv
-yX
-yX
-yX
-yX
-yX
-Df
-Mj
-nr
-Bu
+Vd
+Vd
+mH
+mH
+mH
+mH
+mH
+em
+tc
+QN
+It
 Ci
-Bu
-Ra
-KN
+It
+kw
+QH
 gR
 gR
 gR
@@ -13651,13 +14184,13 @@ kA
 nF
 kA
 dA
-Mj
+fr
 Ra
-Bu
-Bu
-Bu
+UY
+UY
+UY
 Ra
-yX
+mH
 Mu
 Mu
 Mu
@@ -13668,15 +14201,15 @@ wf
 Mu
 Mu
 Mu
-yX
-Df
-Mj
-Ra
-Bu
-Bu
-Bu
+mH
+em
+tc
+kw
+It
+It
+It
 UK
-KN
+QH
 gR
 gR
 gR
@@ -13803,13 +14336,13 @@ kA
 PP
 kA
 dA
-Mj
+fr
 Ra
 QK
 nr
 Ra
 Ra
-yX
+mH
 or
 or
 or
@@ -13820,15 +14353,15 @@ Ho
 or
 or
 or
-yX
-Df
-Mj
+mH
+em
+tc
 Of
-Ra
-Ra
-Ra
-Ra
-KN
+kw
+kw
+kw
+kw
+QH
 gR
 gR
 gR
@@ -13955,13 +14488,13 @@ kA
 Ea
 kA
 dA
-Mj
-Mj
-Mj
-Mj
-Mj
-Mj
-yX
+fr
+fr
+fr
+fr
+fr
+fr
+mH
 Ys
 Ys
 Ys
@@ -13972,15 +14505,15 @@ dq
 Ys
 Ys
 Ys
-yX
-KN
-KN
-KN
-KN
-KN
-KN
-KN
-KN
+mH
+QH
+QH
+QH
+QH
+QH
+QH
+QH
+QH
 gR
 gR
 gR
@@ -14113,18 +14646,18 @@ Df
 Df
 Df
 Df
-yX
-yX
-yX
-yX
-yX
-GS
+mH
+mH
+mH
+mH
+mH
+Tw
 hD
-yX
-yX
-yX
-yX
-yX
+mH
+mH
+mH
+mH
+mH
 gR
 gR
 gR
@@ -14267,14 +14800,14 @@ Df
 Df
 Df
 Df
-yX
+mH
 hb
 bn
-lj
+Zr
 UV
 hq
 hb
-yX
+mH
 gR
 gR
 gR
@@ -14405,7 +14938,7 @@ ZR
 ZR
 ZR
 Mj
-kA
+fE
 Mj
 Gy
 Gy
@@ -14419,14 +14952,14 @@ Df
 Df
 Df
 Df
-yX
-yX
+mH
+mH
 Nm
-XS
+Xu
 Pt
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -14554,8 +15087,8 @@ gR
 gR
 gR
 gR
-Mj
-Mj
+gR
+gR
 Mj
 Mj
 Mj
@@ -14571,14 +15104,14 @@ Df
 Df
 Df
 Df
-yX
+mH
 hb
 qe
 xE
 xE
 CT
 hb
-yX
+mH
 gR
 gR
 gR
@@ -14706,13 +15239,14 @@ gR
 gR
 KN
 KN
-Mj
-Mj
-Mj
-Mj
+KN
+KN
+KN
+KN
 Mj
 Wv
 Wv
+Mj
 KN
 KN
 KN
@@ -14722,15 +15256,14 @@ KN
 KN
 KN
 KN
-KN
-yX
-yX
-yX
+mH
+mH
+mH
 oQ
 oQ
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -14875,14 +15408,14 @@ KN
 gR
 gR
 gR
-yX
+mH
 hb
 aq
 oQ
 oQ
 hq
 hb
-yX
+mH
 gR
 gR
 gR
@@ -15027,14 +15560,14 @@ KN
 gR
 gR
 gR
-yX
-yX
-yX
+mH
+mH
+mH
 oQ
 oQ
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -15179,14 +15712,14 @@ KN
 gR
 gR
 gR
-yX
+mH
 hb
 CZ
 oQ
 oQ
 CT
 hb
-yX
+mH
 gR
 gR
 gR
@@ -15331,14 +15864,14 @@ KN
 gR
 gR
 gR
-yX
-yX
-yX
+mH
+mH
+mH
 oQ
 oQ
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -15483,14 +16016,14 @@ KN
 gR
 gR
 gR
-yX
+mH
 hb
 aq
 oQ
 oQ
 hq
 hb
-yX
+mH
 gR
 gR
 gR
@@ -15635,14 +16168,14 @@ KN
 gR
 gR
 gR
-yX
-yX
-yX
+mH
+mH
+mH
 oQ
 oQ
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -15787,14 +16320,14 @@ gR
 gR
 gR
 gR
-yX
+mH
 hb
 CZ
 oQ
 oQ
 CT
 hb
-yX
+mH
 gR
 gR
 gR
@@ -15939,14 +16472,14 @@ gR
 gR
 gR
 gR
-yX
-yX
-yX
+mH
+mH
+mH
 oQ
 oQ
-yX
-yX
-yX
+mH
+mH
+mH
 gR
 gR
 gR
@@ -16091,14 +16624,14 @@ gR
 gR
 gR
 gR
-yX
+mH
 hb
 aq
 oQ
 oQ
 hq
 hb
-yX
+mH
 gR
 gR
 gR
@@ -16243,14 +16776,14 @@ gR
 gR
 gR
 gR
-yX
-yX
-yX
-yX
-yX
-yX
-yX
-yX
+mH
+mH
+mH
+mH
+mH
+mH
+mH
+mH
 gR
 gR
 gR
