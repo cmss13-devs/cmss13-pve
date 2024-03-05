@@ -7,9 +7,9 @@
 	layer = BELOW_OBJ_LAYER
 	var/icon_closed = "closed"
 	var/icon_opened = "open"
-	var/opened = 0
-	var/welded = 0
-	var/wall_mounted = 0 //never solid (You can always pass over it)
+	var/opened = FALSE
+	var/welded = FALSE
+	var/wall_mounted = FALSE //never solid (You can always pass over it)
 	var/can_be_stacked = FALSE
 	health = 100
 	var/lastbang
@@ -60,18 +60,18 @@
 
 /obj/structure/closet/proc/can_open()
 	if(src.welded)
-		return 0
-	return 1
+		return FALSE
+	return TRUE
 
 /obj/structure/closet/proc/can_close()
 	for(var/mob/living/carbon/xenomorph/xeno in get_turf(src))
-		return 0
+		return FALSE
 	if(can_be_stacked)
-		return 1
+		return TRUE
 	for(var/obj/structure/closet/closet in get_turf(src))
 		if(closet != src && !closet.wall_mounted)
-			return 0
-	return 1
+			return FALSE
+	return TRUE
 
 /obj/structure/closet/proc/dump_contents()
 
@@ -92,25 +92,25 @@
 
 /obj/structure/closet/proc/open()
 	if(opened)
-		return 0
+		return FALSE
 
 	if(!can_open())
-		return 0
+		return FALSE
 
 	dump_contents()
 
 	UnregisterSignal(src, COMSIG_CLOSET_FLASHBANGED)
-	opened = 1
+	opened = TRUE
 	update_icon()
 	playsound(src.loc, open_sound, 15, 1)
 	density = FALSE
-	return 1
+	return TRUE
 
 /obj/structure/closet/proc/close()
 	if(!src.opened)
-		return 0
+		return FALSE
 	if(!src.can_close())
-		return 0
+		return FALSE
 
 	var/stored_units = 0
 	if(store_items)
@@ -119,12 +119,12 @@
 		stored_units = store_mobs(stored_units)
 		RegisterSignal(src, COMSIG_CLOSET_FLASHBANGED, PROC_REF(flashbang))
 
-	opened = 0
+	opened = FALSE
 	update_icon()
 
 	playsound(src.loc, close_sound, 15, 1)
 	density = TRUE
-	return 1
+	return TRUE
 
 /obj/structure/closet/proc/store_items(stored_units)
 	for(var/obj/item/I in src.loc)
@@ -214,7 +214,7 @@
 				src.MouseDrop_T(G.grabbed_thing, user)   //act like they were dragged onto the closet
 			return
 		if(W.flags_item & ITEM_ABSTRACT)
-			return 0
+			return FALSE
 		if(material == MATERIAL_METAL)
 			if(iswelder(W))
 				if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
@@ -374,5 +374,5 @@
 
 /obj/structure/closet/proc/break_open()
 	if(!opened)
-		welded = 0
+		welded = FALSE
 		open()
