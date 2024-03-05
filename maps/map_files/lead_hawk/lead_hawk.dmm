@@ -1,7 +1,25 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "white"
+	},
+/area/space)
 "ak" = (
-/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
-/turf/open/space/basic,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/space)
+"an" = (
+/obj/structure/machinery/sleep_console,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/space)
 "aq" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -15,12 +33,47 @@
 	icon_state = "cargo_arrow"
 	},
 /area/space)
+"at" = (
+/obj/structure/cargo_container/arious/mid,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "au" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
+/obj/structure/closet/hydrant{
+	pixel_y = 30
+	},
 /turf/open/floor/corsat{
-	icon_state = "plate"
+	icon_state = "squares"
+	},
+/area/space)
+"az" = (
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 20
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/space)
+"aA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"aL" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "aY" = (
@@ -29,11 +82,85 @@
 	icon_state = "squares"
 	},
 /area/space)
-"by" = (
-/obj/structure/machinery/cryopod/right,
+"bd" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/space)
+"bi" = (
+/obj/structure/machinery/cryopod,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
+/area/space)
+"bj" = (
+/obj/structure/cargo_container/wy/right,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"bn" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/space)
+"bp" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/space)
+"by" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "whitetan"
+	},
+/area/space)
+"bG" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "red"
+	},
+/area/space)
+"bJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"bM" = (
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/space)
+"bN" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/space)
+"bU" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/space)
 "bX" = (
 /turf/open/floor/corsat{
@@ -41,15 +168,27 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"ce" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "ct" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/box/cups,
 /turf/open/floor/wood/ship,
 /area/space)
+"cE" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/space)
 "cG" = (
-/obj/structure/bed/chair/comfy/charlie{
+/obj/structure/bed/chair/comfy/teal{
 	dir = 4;
-	name = "Omega squad chair"
+	name = "Theta squad chair"
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
@@ -64,6 +203,18 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"ds" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/space)
 "du" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -88,6 +239,61 @@
 	icon_state = "plate"
 	},
 /area/space)
+"dA" = (
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/space)
+"dJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"dK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"dL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"dM" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/space)
+"dQ" = (
+/obj/structure/prop/almayer/computers/mission_planning_system{
+	pixel_x = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"dS" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/prop/flower_vase/bluewhiteflowers,
+/turf/open/floor/carpet,
+/area/space)
 "dX" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/corsat{
@@ -103,12 +309,77 @@
 	icon_state = "arrow_north"
 	},
 /area/space)
+"el" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/space)
+"eJ" = (
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"eL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/area_atmos/area{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "white"
+	},
+/area/space)
+"eM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/meatsteak{
+	pixel_x = -5
+	},
+/obj/item/tool/candle{
+	pixel_x = 13;
+	pixel_y = -8
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
+	pixel_x = 9;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "eR" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
 /turf/open/floor/corsat{
-	icon_state = "plate"
+	dir = 1;
+	icon_state = "red"
+	},
+/area/space)
+"eZ" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/space)
+"fh" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "white"
+	},
+/area/space)
+"fp" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/pillbottles,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/space)
+"fE" = (
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/space)
 "fQ" = (
@@ -145,9 +416,10 @@
 	},
 /area/space)
 "gp" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
 /area/space)
 "gR" = (
 /turf/open/space/basic,
@@ -174,17 +446,44 @@
 	icon_state = "cargo_arrow"
 	},
 /area/space)
-"hx" = (
-/obj/structure/machinery/cryopod/right{
-	layer = 3.1;
-	pixel_y = 13
+"hr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"hs" = (
+/obj/structure/bed/sofa/south/white/left,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"hx" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetancorner"
 	},
 /area/space)
 "hA" = (
 /turf/open/floor/carpet,
+/area/space)
+"hB" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
 /area/space)
 "hD" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -207,6 +506,15 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"hX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/space)
 "ih" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	dir = 2;
@@ -217,12 +525,20 @@
 	},
 /area/space)
 "ip" = (
-/obj/structure/bed/chair/comfy/charlie{
+/obj/structure/bed/chair/comfy/teal{
 	dir = 8;
-	name = "Omega squad chair"
+	name = "Theta squad chair"
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"iy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "iz" = (
@@ -232,10 +548,30 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"iC" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/space)
+"iH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "iM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
@@ -245,13 +581,122 @@
 	icon_state = "plate"
 	},
 /area/space)
+"iZ" = (
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "jj" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"jo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"jv" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/space)
+"jE" = (
+/obj/structure/largecrate/random/case,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"jH" = (
+/obj/structure/machinery/floodlight/landing,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"kc" = (
+/obj/structure/machinery/cryopod{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"kg" = (
+/mob/living/silicon/decoy/ship_ai{
+	layer = 2.98;
+	pixel_y = -16
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
+"kx" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"kz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "kA" = (
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"kF" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/space)
+"kI" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
+"kO" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "green"
+	},
+/area/space)
+"kY" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/space)
+"lc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "lj" = (
@@ -285,18 +730,20 @@
 	},
 /area/space)
 "lP" = (
-/obj/structure/machinery/cryopod{
-	layer = 3.1;
-	pixel_y = 13
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetancorner"
 	},
 /area/space)
 "mb" = (
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "yellow"
+	},
+/area/space)
+"mc" = (
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
 	},
 /area/space)
 "md" = (
@@ -308,15 +755,101 @@
 	icon_state = "plate"
 	},
 /area/space)
+"me" = (
+/obj/structure/cargo_container/arious/right,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"mJ" = (
+/obj/structure/cargo_container/lockmart/right{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"mV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"nd" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/space)
 "nk" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_north"
 	},
 /area/space)
+"nm" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"np" = (
+/obj/structure/largecrate/random/mini/chest/b{
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/obj/structure/largecrate/random/mini/chest{
+	pixel_x = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"nr" = (
+/obj/structure/largecrate/supply/ammo/m41a/extended,
+/obj/structure/largecrate/supply/ammo/m41a/extended{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"nz" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"nF" = (
+/obj/structure/machinery/prop/almayer/computer/NavCon2,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "nN" = (
-/obj/effect/landmark/start/marine/tl/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "whitetan"
+	},
 /area/space)
 "nR" = (
 /turf/open/floor/corsat{
@@ -325,19 +858,53 @@
 	},
 /area/space)
 "nW" = (
-/obj/item/tool/wrench,
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/space)
+"ob" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"oj" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 9
+	},
+/turf/open/floor/plating,
 /area/space)
 "or" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "oB" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "cargo_arrow"
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/space)
+"oE" = (
+/obj/structure/cargo_container/wy/mid,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"oO" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "white"
 	},
 /area/space)
 "oQ" = (
@@ -353,6 +920,16 @@
 	icon_state = "plate"
 	},
 /area/space)
+"pa" = (
+/obj/structure/machinery/light/blue{
+	dir = 4;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/space)
 "pT" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -364,6 +941,27 @@
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellow"
+	},
+/area/space)
+"qd" = (
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"qe" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
 	},
 /area/space)
 "qi" = (
@@ -379,11 +977,89 @@
 	icon_state = "plate"
 	},
 /area/space)
+"qt" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"qx" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/space)
+"qB" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
 "qD" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "yellow"
+	},
+/area/space)
+"qE" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	name = "\improper Kerr-Newman Engine"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/space)
+"qG" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "greencorner"
+	},
+/area/space)
+"qH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"qK" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/space)
+"qL" = (
+/obj/vehicle/powerloader/ft,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"qW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"qX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
 	},
 /area/space)
 "ro" = (
@@ -400,19 +1076,117 @@
 	icon_state = "marked"
 	},
 /area/space)
+"rD" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/space)
 "rI" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/wood/ship,
 /area/space)
+"rV" = (
+/obj/structure/platform,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"se" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/space)
 "si" = (
-/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "whitetan"
+	},
+/area/space)
+"ss" = (
+/obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
-/turf/open/floor/almayer{
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"sA" = (
+/obj/structure/foamed_metal,
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/space)
+"sM" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/attachable/pkpbarrel{
+	desc = "A spare barrel for the M41A, in case of wear-and-tear and overheating. You'd need to deconstruct the entire gun to swap this out.";
+	name = "spare m41a barrel";
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/attachable/scope/mini_iff{
+	pixel_x = 5;
+	pixel_y = -3
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
+	layer = 2.97;
+	name = "go-pills";
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"sR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "greencorner"
+	},
+/area/space)
+"td" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
 	icon_state = "plate"
 	},
 /area/space)
 "tl" = (
 /turf/open/floor/wood/ship,
+/area/space)
+"tv" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/guestpass{
+	dir = 4;
+	pixel_y = 9
+	},
+/obj/item/tool/pen/red{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
 /area/space)
 "tD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -423,6 +1197,42 @@
 	icon_state = "marked"
 	},
 /area/space)
+"tJ" = (
+/obj/structure/cargo_container/lockmart/mid{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"tM" = (
+/obj/structure/dropship_equipment/electronics/flare_launcher,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"tQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"tW" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
+"up" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/open/floor/engine,
+/area/space)
 "ur" = (
 /obj/structure/machinery/hologram/holopad,
 /turf/open/floor/carpet,
@@ -431,10 +1241,37 @@
 /obj/structure/window/framed/corsat/indestructible,
 /turf/open/floor/plating,
 /area/space)
+"uG" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "white"
+	},
+/area/space)
 "uK" = (
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "yellow"
+	},
+/area/space)
+"uP" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/space)
+"uV" = (
+/obj/structure/ship_ammo/sentry,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"vh" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "vm" = (
@@ -454,6 +1291,21 @@
 	icon_state = "squares"
 	},
 /area/space)
+"vx" = (
+/obj/structure/cargo_container/wy/left,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"vS" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "vW" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -461,6 +1313,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
@@ -478,6 +1333,36 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"wg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/closed/wall/r_wall/biodome,
+/area/space)
+"wz" = (
+/obj/structure/ship_ammo/rocket/napalm,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"wB" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/space)
+"wK" = (
+/obj/item/tool/warning_cone{
+	pixel_x = 4;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "wM" = (
 /obj/structure/surface/rack,
 /obj/item/stack/sheet/glass{
@@ -490,6 +1375,15 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"xx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/body_scanconsole,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
 "xE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -500,12 +1394,59 @@
 	icon_state = "dark_sterile"
 	},
 /area/space)
+"xH" = (
+/obj/structure/machinery/chem_dispenser{
+	req_access_txt = "100"
+	},
+/obj/item/reagent_container/glass/beaker/bluespace,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "green"
+	},
+/area/space)
+"xX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"yj" = (
+/obj/structure/machinery/cryopod{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
 "yl" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"yt" = (
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/space)
+"yA" = (
+/obj/structure/prop/almayer/computers/mission_planning_system{
+	pixel_x = -6
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "yH" = (
@@ -517,43 +1458,236 @@
 	icon_state = "dark_sterile"
 	},
 /area/space)
+"yM" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/space)
+"yV" = (
+/turf/open/floor/plating,
+/area/space)
 "yX" = (
 /turf/closed/wall/almayer/white/hull,
+/area/space)
+"zb" = (
+/turf/closed/wall/almayer/white,
 /area/space)
 "zn" = (
 /turf/open/floor/corsat{
 	icon_state = "yellowcorner"
 	},
 /area/space)
+"zt" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"zG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "zH" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetancorner"
+	},
+/area/space)
+"zN" = (
+/obj/structure/prop/dam/crane{
+	bound_height = 32;
+	climbable = 1;
+	layer = 3.5;
+	pixel_y = -23
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "zO" = (
 /turf/open/floor/corsat{
 	icon_state = "theta"
 	},
 /area/space)
+"zR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/space)
+"zY" = (
+/obj/structure/machinery/cryopod/right{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"Ad" = (
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/space)
+"Ae" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"Ao" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "red"
+	},
+/area/space)
+"Ar" = (
+/obj/structure/machinery/medical_pod/autodoc,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/space)
+"Au" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Az" = (
+/turf/open/floor/corsat{
+	icon_state = "whitetancorner"
+	},
+/area/space)
+"AE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"AO" = (
+/obj/structure/cargo_container/lockmart/left{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "AT" = (
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "whitetan"
+	},
 /area/space)
 "Bu" = (
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
 /area/space)
+"BF" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/space)
+"BM" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/space)
+"Ci" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/geiger_counter{
+	desc = "An attempted upgrade to the B8 smart-scope that used an onboard AGI to automatically resolve firing solutions, resulting in IFF with none of the downsides of the B8. Unfortunately, it was not to be- the battery pack was too big and clumsy, and the electronics too fragile.";
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi';
+	icon_state = "sniperscope";
+	name = "unpowered B10 Smart-Scope"
+	},
+/obj/item/attachable/scope/mini_iff{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"Cl" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/space)
+"Cp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "Cu" = (
-/obj/structure/surface/rack,
-/obj/item/storage/large_holster/m39,
-/obj/item/weapon/gun/smg/m39/elite/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/tool/mop{
+	pixel_x = -9;
+	pixel_y = 20
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"CB" = (
+/obj/structure/machinery/door/airlock/almayer/security/reinforced{
+	dir = 2;
+	name = "\improper OVERLORD Airlock"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/space)
 "CD" = (
@@ -563,6 +1697,16 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
+	},
+/area/space)
+"CK" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/open/floor/plating,
+/area/space)
+"CO" = (
+/obj/structure/closet/radiation,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "CT" = (
@@ -591,9 +1735,43 @@
 	icon_state = "cargo_arrow"
 	},
 /area/space)
+"Dc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "Df" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
+/area/space)
+"Dk" = (
+/obj/structure/pipes/standard/manifold/visible,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Dy" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"DB" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/space)
 "DE" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -616,10 +1794,62 @@
 	icon_state = "plate"
 	},
 /area/space)
+"DO" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/space)
+"DP" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "DQ" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 20
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"Ea" = (
+/obj/structure/prop/almayer/computers/sensor_computer3{
+	name = "weapon targetting computer"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Ej" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"Ek" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
 /area/space)
 "En" = (
 /turf/open/floor/corsat{
@@ -633,16 +1863,110 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"Et" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Ey" = (
+/obj/structure/dropship_equipment/rappel_system,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"EC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/space)
+"ED" = (
+/turf/open/floor/engine,
+/area/space)
 "EJ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 40;
+	pixel_x = 7;
+	pixel_y = 6
+	},
 /turf/open/floor/corsat{
-	icon_state = "squares"
+	icon_state = "cargo"
+	},
+/area/space)
+"EP" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/space)
+"EY" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Fw" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/floor/plating,
+/area/space)
+"FJ" = (
+/obj/structure/bed/sofa/south/white/right,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"FL" = (
+/obj/structure/machinery/chem_master,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/space)
+"FO" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
 	},
 /area/space)
 "FZ" = (
 /obj/structure/reagent_dispensers/fueltank/custom,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
+	},
+/area/space)
+"Gh" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "white"
+	},
+/area/space)
+"Gm" = (
+/obj/structure/platform,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "Gv" = (
@@ -653,11 +1977,26 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "Gy" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_east"
+	},
+/area/space)
+"GB" = (
+/obj/item/prop/almayer/box{
+	pixel_x = 5;
+	pixel_y = -7
+	},
+/obj/structure/largecrate/random/mini/wooden{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/space)
 "GS" = (
@@ -666,12 +2005,56 @@
 	icon_state = "w-y0"
 	},
 /area/space)
+"GX" = (
+/obj/structure/window/framed/corsat/hull/security,
+/turf/open/floor/plating,
+/area/space)
+"Hb" = (
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Hj" = (
+/obj/structure/largecrate{
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "Ho" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Hx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"HA" = (
+/obj/structure/platform_decoration,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"HB" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/prop/geiger_counter,
+/turf/open/floor/carpet,
 /area/space)
 "HD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -682,10 +2065,31 @@
 	icon_state = "marked"
 	},
 /area/space)
+"HF" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"HO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "HT" = (
-/obj/structure/machinery/cryopod,
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
 	},
 /area/space)
 "HZ" = (
@@ -702,15 +2106,45 @@
 	icon_state = "marked"
 	},
 /area/space)
+"IG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/space)
 "IH" = (
 /turf/open/floor/corsat{
 	icon_state = "yellow"
 	},
 /area/space)
+"II" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/space/basic,
+/area/space)
+"IJ" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "red"
+	},
+/area/space)
 "IL" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/prop/almayer/computer/NavCon{
+	pixel_y = 24
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
 /area/space)
 "IN" = (
 /obj/structure/closet/crate/construction,
@@ -723,6 +2157,11 @@
 /turf/open/floor/corsat{
 	icon_state = "yellow"
 	},
+/area/space)
+"Jn" = (
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -745,6 +2184,14 @@
 	},
 /turf/open/floor/carpet,
 /area/space)
+"JW" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/crew/alt,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "green"
+	},
+/area/space)
 "KB" = (
 /obj/structure/platform{
 	dir = 4;
@@ -761,6 +2208,18 @@
 	icon_state = "squares"
 	},
 /area/space)
+"KC" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"KK" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "KN" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/space)
@@ -775,35 +2234,101 @@
 /area/space)
 "Li" = (
 /obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/juicer{
+	pixel_y = 9
+	},
 /turf/open/floor/wood/ship,
 /area/space)
 "Lz" = (
-/obj/structure/machinery/cryopod/right{
-	pixel_y = 6
+/obj/structure/machinery/light/blue{
+	dir = 1;
+	light_color = "#66FFFF"
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
 	},
 /area/space)
 "LJ" = (
-/obj/structure/machinery/cryopod{
-	pixel_y = 6
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitecorner"
 	},
 /area/space)
 "LY" = (
-/turf/closed/wall/almayer/white,
+/obj/structure/machinery/light/blue{
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/space)
+"Mf" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/turf/open/floor/plating,
+/area/space)
+"Mi" = (
+/obj/structure/surface/rack,
+/obj/item/storage/large_holster/m39,
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
 /area/space)
 "Mj" = (
 /turf/closed/wall/r_wall/biodome,
+/area/space)
+"Ms" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
 /area/space)
 "Mu" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"MB" = (
+/obj/structure/machinery/cryopod/right{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"MJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Nm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/closed/wall/almayer/white/hull,
+/area/space)
+"Ns" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/taperecorder{
+	name = "maintenance log recorder"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "NC" = (
 /obj/structure/machinery/pipedispenser,
@@ -820,6 +2345,30 @@
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/wood/ship,
 /area/space)
+"NR" = (
+/obj/structure/machinery/cryopod/right,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"Of" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/helmetgarb/compass{
+	pixel_x = 4
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
+	name = "go-pills";
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "OA" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/wood/ship,
@@ -831,10 +2380,43 @@
 	icon_state = "yellow"
 	},
 /area/space)
-"Po" = (
-/obj/structure/barricade/handrail/wire{
-	dir = 8
+"OZ" = (
+/obj/structure/cargo_container/arious/left,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
+/area/space)
+"Pb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"Pl" = (
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/structure/janitorialcart,
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/space)
+"Po" = (
 /obj/structure/machinery/portable_atmospherics/powered/pump,
 /turf/open/floor/corsat{
 	icon_state = "cargo"
@@ -859,10 +2441,37 @@
 	icon_state = "plate"
 	},
 /area/space)
+"PN" = (
+/obj/item/tool/weldpack{
+	pixel_x = 7
+	},
+/obj/item/tool/weldpack,
+/obj/structure/surface/rack,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "yellow"
+	},
+/area/space)
+"PP" = (
+/obj/structure/prop/almayer/computers/sensor_computer2,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "PW" = (
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "yellowcorner"
+	},
+/area/space)
+"PZ" = (
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Qw" = (
+/turf/open/floor/almayer/no_build{
+	icon_state = "test_floor4"
 	},
 /area/space)
 "Qx" = (
@@ -878,6 +2487,20 @@
 	icon_state = "squares"
 	},
 /area/space)
+"QI" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/plating,
+/area/space)
+"QK" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "QQ" = (
 /obj/structure/platform{
 	dir = 4;
@@ -888,13 +2511,27 @@
 	layer = 1
 	},
 /turf/open/floor/corsat{
-	icon_state = "plate"
+	dir = 1;
+	icon_state = "red"
 	},
 /area/space)
 "Ra" = (
-/obj/structure/surface/rack,
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/space)
+"Rk" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/space)
 "RC" = (
@@ -916,6 +2553,14 @@
 	icon_state = "omega"
 	},
 /area/space)
+"Se" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "Sf" = (
 /obj/structure/sign/poster/safety{
 	pixel_x = 27
@@ -924,12 +2569,54 @@
 	icon_state = "plate"
 	},
 /area/space)
-"SA" = (
-/obj/structure/bed/chair/comfy/charlie{
-	name = "Omege squad chair"
+"Ss" = (
+/obj/structure/machinery/suit_storage_unit/carbon_unit{
+	density = 0;
+	pixel_x = 2;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"St" = (
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_x = 7
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"Sw" = (
+/obj/effect/landmark/start/marine/leader/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Sx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/space)
+"SA" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"SF" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
 	},
 /area/space)
 "SV" = (
@@ -939,9 +2626,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "Tg" = (
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/space)
 "Ti" = (
 /obj/structure/closet/secure_closet/engineering_welding,
@@ -955,11 +2647,49 @@
 	icon_state = "yellow"
 	},
 /area/space)
+"Tx" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/space)
+"Tz" = (
+/obj/structure/machinery/door/airlock/multi_tile/secure{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/space)
 "TA" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
 /turf/open/floor/carpet,
+/area/space)
+"TD" = (
+/obj/structure/machinery/defenses/tesla_coil/stun,
+/turf/open/floor/engine,
+/area/space)
+"TJ" = (
+/obj/structure/pipes/unary/freezer{
+	icon_state = "freezer_1"
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "green"
+	},
+/area/space)
+"TK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "green"
+	},
 /area/space)
 "TT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -968,18 +2698,54 @@
 	icon_state = "squares"
 	},
 /area/space)
-"Uu" = (
-/obj/structure/machinery/cryopod,
-/obj/structure/machinery/light{
-	dir = 8
+"TU" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
-/turf/open/floor/almayer{
+/area/space)
+"Ug" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat{
 	icon_state = "cargo"
 	},
 /area/space)
+"Uu" = (
+/obj/structure/pipes/standard/tank/oxygen,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/space)
+"Uw" = (
+/obj/item/prop/almayer/comp_closed,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"Uy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "Uz" = (
-/obj/structure/flora/pottedplant/random,
+/obj/structure/flora/pottedplant{
+	desc = "A bioluminescent potted-plant from a particularly pleased W-Y executive after a mission well-done. This costs more than the contents of your armory.";
+	icon_state = "pottedplant_20";
+	name = "alien potted plant"
+	},
 /turf/open/floor/wood/ship,
+/area/space)
+"UF" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
 /area/space)
 "UK" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -1008,13 +2774,20 @@
 	icon_state = "w-y1"
 	},
 /area/space)
-"VB" = (
-/obj/structure/machinery/cryopod/right,
-/obj/structure/machinery/light{
+"Vr" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/obj/structure/pipes/binary/circulator{
 	dir = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/plating,
+/area/space)
+"VB" = (
+/obj/structure/machinery/cryo_cell{
+	layer = 3.20
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
 	},
 /area/space)
 "Wb" = (
@@ -1035,25 +2808,66 @@
 	icon_state = "plate"
 	},
 /area/space)
+"Wt" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list()
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/space)
 "Wv" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_west"
 	},
 /area/space)
+"WD" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitecorner"
+	},
+/area/space)
+"WI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
 "WL" = (
 /obj/item/tool/wrench,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"WT" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"Xi" = (
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
+"XC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
 /area/space)
-"Xi" = (
-/obj/structure/barricade/handrail/wire{
-	dir = 8
-	},
-/obj/structure/barricade/handrail/wire,
-/turf/open/floor/corsat{
-	icon_state = "cargo"
-	},
+"XI" = (
+/obj/effect/landmark/start/marine/medic/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "XS" = (
 /turf/open/floor/almayer{
@@ -1076,17 +2890,62 @@
 	icon_state = "squares"
 	},
 /area/space)
+"Yo" = (
+/obj/structure/dropship_equipment/electronics/spotlights,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/space)
 "Ys" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"Yy" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/drinks/cans/ale{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/cans/souto/vanilla{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/item/ashtray/glass{
+	pixel_x = 6
+	},
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt{
+	pixel_x = -4;
+	pixel_y = 17
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"YT" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
 "Zo" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 8;
 	pixel_y = 32
+	},
+/obj/item/reagent_container/food/snacks/grown/lemon{
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/snacks/grown/lime,
+/obj/item/reagent_container/food/snacks/grown/orange{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/obj/item/trash/ceramic_plate{
+	layer = 2.97
 	},
 /turf/open/floor/wood/ship,
 /area/space)
@@ -1100,11 +2959,8 @@
 	},
 /area/space)
 "ZR" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/camera/autoname/golden_arrow,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
+/obj/structure/prop/invuln/lattice_prop,
+/turf/open/space/basic,
 /area/space)
 
 (1,1,1) = {"
@@ -5876,34 +7732,34 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -6028,34 +7884,34 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+vx
+Bu
+kx
+Yy
+kx
+Bu
+TU
+ob
+yl
+eJ
+kA
+kA
+AO
+OZ
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+KN
 gR
 gR
 gR
@@ -6176,38 +8032,38 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
+Bu
+AE
+iy
+hB
+Bu
+Bu
+oE
+Bu
+kA
+kA
+kA
+Bu
+rV
+jH
+kz
+eJ
+kA
+kA
+tJ
+at
+Bu
+Bu
+Et
+iy
+DP
+Bu
+KN
 gR
 gR
 gR
@@ -6328,38 +8184,38 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Ss
+Bu
+Bu
+Bu
+Bu
+Uy
+kA
+XC
+Bu
+Bu
+bj
+Bu
+Bu
+Bu
+Bu
+Bu
+Se
+WT
+UO
+eJ
+kA
+kA
+mJ
+me
+Bu
+Bu
+Uy
+kA
+XC
+Bu
+KN
 gR
 gR
 gR
@@ -6480,38 +8336,38 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Ss
+Bu
+Bu
+Bu
+Bu
+zG
+MJ
+xX
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+Pb
+Hx
+hr
+Bu
+KN
 gR
 gR
 gR
@@ -6632,38 +8488,38 @@ gR
 gR
 gR
 gR
-gR
-Mj
+KN
+KN
+hs
+YT
 Bu
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+KN
 gR
 gR
 gR
@@ -6785,37 +8641,37 @@ gR
 gR
 gR
 gR
-Mj
-kA
+KN
+FJ
+YT
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+KN
 gR
 gR
 gR
@@ -6929,7 +8785,7 @@ gR
 gR
 gR
 gR
-Mj
+gR
 KN
 KN
 KN
@@ -6940,34 +8796,34 @@ KN
 Mj
 au
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+KN
 gR
 gR
 gR
@@ -7089,37 +8945,37 @@ tl
 tl
 tl
 tl
-uv
+yV
 eR
+kA
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+vx
+KN
 gR
 gR
 gR
@@ -7241,37 +9097,37 @@ TA
 TA
 hA
 tl
-uv
+yV
 eR
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+kA
+Uw
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+oE
+KN
 gR
 gR
 gR
@@ -7390,40 +9246,40 @@ KN
 tl
 ur
 ND
-ND
+HB
 pT
 tl
-uv
+yV
 eR
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+kA
+Ns
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+Mf
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+bj
+KN
 gR
 gR
 gR
@@ -7541,41 +9397,41 @@ gR
 KN
 Zo
 hA
-ND
+dS
 ND
 pT
 tl
-uv
+yV
 QQ
 yl
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+vx
+KN
 gR
 gR
 gR
@@ -7690,44 +9546,44 @@ gR
 gR
 gR
 gR
-KN
+uv
 Li
 hA
 ND
 du
 pT
 tl
-uv
+yV
 kA
 KB
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+oE
+KN
 gR
 gR
 gR
@@ -7842,7 +9698,7 @@ gR
 gR
 gR
 gR
-KN
+uv
 ct
 hA
 ND
@@ -7853,33 +9709,33 @@ ih
 kA
 RE
 nk
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+bj
+KN
 gR
 gR
 gR
@@ -7994,44 +9850,44 @@ gR
 gR
 gR
 gR
-KN
+uv
 NP
 hA
 ND
 ND
 pT
 tl
-uv
+yV
 kA
 gc
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+KN
 gR
 gR
 gR
@@ -8158,32 +10014,32 @@ kA
 RE
 nk
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+KN
 gR
 gR
 gR
@@ -8305,37 +10161,37 @@ JM
 JM
 hA
 tl
-uv
+yV
 kA
 dx
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+mV
+iy
+nz
+yM
+yM
+yM
+Ek
+Ek
+Ek
+Ek
+Ek
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+Au
+iH
+hB
+Bu
+KN
 gR
 gR
 gR
@@ -8438,7 +10294,7 @@ gR
 gR
 gR
 gR
-ak
+gR
 gR
 gR
 gR
@@ -8461,33 +10317,33 @@ Mj
 oR
 HZ
 Bu
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Uy
+kA
+XC
+wK
+Bu
+eJ
+Xi
+Xi
+Xi
+fE
+Ey
+HA
+ob
+yl
+Bu
+Xi
+Xi
+Xi
+Bu
+Bu
+Bu
+Uy
+kA
+XC
+Bu
+KN
 gR
 gR
 gR
@@ -8610,36 +10466,36 @@ Mj
 Mj
 Mj
 Mj
-kA
+vh
 HZ
 Bu
-kA
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+td
+MJ
+hr
+Bu
+qL
+Bu
+Xi
+Xi
+Xi
+St
+wz
+Gm
+jH
+kz
+Hj
+np
+Xi
+Xi
+Ug
+zN
+Bu
+zG
+MJ
+dK
+Bu
+KN
 gR
 gR
 gR
@@ -8767,31 +10623,31 @@ UO
 Gy
 Gy
 Mj
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+aL
+Bu
+eJ
+Yo
+tM
+uV
+Xi
+Xi
+Dy
+WT
+UO
+Bu
+jE
+GB
+UF
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+KN
 gR
 gR
 gR
@@ -8906,13 +10762,13 @@ gR
 gR
 gR
 KN
-KN
-KN
-KN
-KN
-KN
-KN
-KN
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
 Df
 Mj
 Mj
@@ -8927,23 +10783,23 @@ Mj
 Mj
 Mj
 Mj
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -9079,17 +10935,17 @@ Bu
 RC
 JJ
 Mj
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+TJ
+jv
+hX
+Ar
+zR
+ds
+QI
+JW
+FO
+xH
+KN
 gR
 gR
 gR
@@ -9220,7 +11076,7 @@ Mj
 vm
 vm
 Bu
-Bu
+Cp
 Bu
 Bu
 Bu
@@ -9231,17 +11087,17 @@ Bu
 Bu
 KO
 Mj
+Uu
+Dk
+qW
+DB
+qH
+xx
+QI
+Tx
 kA
-kA
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+FL
+KN
 gR
 gR
 gR
@@ -9371,9 +11227,9 @@ Ti
 Mj
 TT
 JJ
-Bu
-Bu
-Bu
+lc
+GS
+WI
 cG
 cG
 Bu
@@ -9383,17 +11239,17 @@ md
 md
 Bu
 Mj
+VB
+Dk
+Ae
+Dc
+HO
+IG
+QI
+bd
 kA
-kA
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+fp
+KN
 gR
 gR
 gR
@@ -9513,8 +11369,8 @@ gR
 gR
 gR
 KN
-Ts
-kA
+Pl
+Cu
 IN
 FZ
 zn
@@ -9523,29 +11379,29 @@ iz
 Mj
 Wb
 Wb
-Bu
-Bu
+lc
+lj
 SA
 QE
 QE
-fQ
+nm
 Bu
 RC
 JJ
 JJ
 PG
 Mj
+VB
+HF
 kA
-kA
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+Bu
+bM
+zt
+bd
+Bu
+Ad
+KN
 gR
 gR
 gR
@@ -9668,36 +11524,36 @@ KN
 Qx
 kA
 WL
-kA
+Xi
 IH
-KN
-KN
+Mj
+Mj
 Mj
 Bu
 Bu
-Bu
-Bu
+lc
+XS
 SA
 QE
 QE
-fQ
+nm
 Bu
 RC
 JJ
 JJ
 PG
 Mj
+Wt
+SF
+qG
 kA
-kA
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Bu
+bM
+QI
+el
+SF
+kO
+KN
 gR
 gR
 gR
@@ -9817,9 +11673,9 @@ gR
 gR
 gR
 KN
-Ts
+nW
 NC
-kA
+Bu
 Bu
 IH
 En
@@ -9828,7 +11684,7 @@ nk
 Bu
 Bu
 Bu
-Bu
+Dc
 Bu
 ip
 ip
@@ -9841,6 +11697,15 @@ Bu
 Mj
 Mj
 Mj
+bd
+kA
+Bu
+bM
+Mj
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -9859,15 +11724,6 @@ gR
 gR
 gR
 gR
-gR
-gR
-yX
-yX
-yX
-yX
-yX
-yX
-yX
 gR
 gR
 gR
@@ -9968,7 +11824,7 @@ gR
 gR
 gR
 gR
-nW
+KN
 ON
 kA
 Bu
@@ -9993,6 +11849,12 @@ Bu
 En
 Iu
 nk
+bd
+Bu
+Bu
+sR
+kI
+KN
 gR
 gR
 gR
@@ -10013,13 +11875,7 @@ gR
 gR
 gR
 gR
-LY
-HT
-lP
-Uu
-lP
-LJ
-yX
+gR
 gR
 gR
 gR
@@ -10126,9 +11982,9 @@ XX
 Bu
 Bu
 IH
-KN
-KN
-KN
+Mj
+Mj
+Mj
 kA
 kA
 DK
@@ -10145,6 +12001,12 @@ Bu
 En
 ro
 nk
+bd
+Bu
+Bu
+Sx
+an
+KN
 gR
 gR
 gR
@@ -10165,13 +12027,7 @@ gR
 gR
 gR
 gR
-oB
-Tg
-Tg
-si
-Tg
-Tg
-yX
+gR
 gR
 gR
 gR
@@ -10280,12 +12136,12 @@ EJ
 IH
 qi
 dX
-KN
+Mj
 RT
 RT
-KN
-KN
-KN
+Mj
+Mj
+Mj
 ro
 HD
 KN
@@ -10293,10 +12149,16 @@ KN
 Mj
 zO
 zO
-Bu
+KK
 Mj
 Mj
 Mj
+qx
+SF
+SF
+Ms
+TK
+KN
 gR
 gR
 gR
@@ -10317,13 +12179,7 @@ gR
 gR
 gR
 gR
-oB
-zH
-gp
-si
-AT
-AT
-yX
+gR
 gR
 gR
 gR
@@ -10428,14 +12284,14 @@ KN
 Es
 kA
 Bu
-Bu
+Xi
 IH
 qi
 dX
-KN
+Mj
 ro
 tD
-KN
+Mj
 Zy
 kA
 Wv
@@ -10449,6 +12305,11 @@ Mj
 Mj
 iR
 Mj
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -10469,13 +12330,8 @@ gR
 gR
 gR
 gR
-LY
-VB
-hx
-by
-hx
-Lz
-yX
+gR
+gR
 gR
 gR
 gR
@@ -10580,14 +12436,14 @@ KN
 wM
 nR
 nR
-nR
+PN
 bX
-KN
-KN
-KN
+Mj
+Mj
+Mj
 RT
 RT
-KN
+Mj
 kA
 nk
 Bu
@@ -10599,12 +12455,12 @@ zO
 zO
 Bu
 Mj
+Mj
+Mj
+kA
+kA
+kA
 KN
-KN
-KN
-KN
-KN
-KN
 gR
 gR
 gR
@@ -10621,13 +12477,13 @@ gR
 gR
 gR
 gR
-LY
-LY
-LY
-LY
-LY
-LY
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -10731,15 +12587,15 @@ gR
 KN
 KN
 KN
+qE
+Mj
+Mj
 KN
-KN
-KN
-KN
-Bu
+Tg
 DE
 Bu
 Bu
-KN
+Mj
 kA
 nk
 Bu
@@ -10753,10 +12609,10 @@ Bu
 Mj
 kA
 kA
-kA
-kA
-kA
-KN
+Bu
+Bu
+Bu
+uv
 gR
 gR
 gR
@@ -10773,13 +12629,13 @@ gR
 gR
 gR
 gR
-LY
-Uu
-lP
-HT
-lP
-LJ
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -10880,18 +12736,18 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
 KN
-Bu
+CO
+bp
+DO
+qK
+Mj
+kA
 Bu
 Bu
 Bu
 aY
-KN
+Mj
 kA
 nk
 Bu
@@ -10908,7 +12764,7 @@ Bu
 Bu
 Bu
 Bu
-KN
+uv
 gR
 gR
 gR
@@ -10925,13 +12781,13 @@ gR
 gR
 gR
 gR
-oB
-Tg
-Tg
-si
-Tg
-Tg
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11028,22 +12884,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
 KN
-Bu
-Bu
-Bu
-Bu
-Bu
 KN
+KN
+KN
+KN
+CO
+kY
+kA
+kF
+Mj
+kA
+Bu
+Bu
+Bu
+Bu
+Mj
 kA
 nk
 Bu
@@ -11060,7 +12916,7 @@ Bu
 Bu
 Bu
 Bu
-KN
+uv
 gR
 gR
 gR
@@ -11077,13 +12933,13 @@ gR
 gR
 gR
 gR
-oB
-IL
-IL
-si
-Tg
-Tg
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11180,22 +13036,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
 KN
-lm
-Bu
-Bu
-Bu
-Bu
+eL
+tv
+aj
 KN
+CO
+Ao
+Cl
+bG
+Mj
+vS
+Bu
+Bu
+Bu
+Mi
+Mj
 Sf
 ee
 Bu
@@ -11229,13 +13085,13 @@ gR
 gR
 gR
 gR
-LY
-by
-hx
-VB
-hx
-Lz
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11326,38 +13182,38 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+ZR
+ZR
+ZR
+ZR
+ZR
+KN
+uG
+dM
+fh
 KN
 KN
-KN
+qE
+Mj
+Mj
+Mj
+Mj
 ro
 ro
-KN
-KN
-KN
-KN
-KN
+Mj
+Mj
+Mj
+Mj
+wg
 Gy
 Gy
 Mj
 Mj
 Mj
 Mj
-kA
-kA
+RC
+eM
 Mj
 Mj
 Mj
@@ -11381,13 +13237,13 @@ gR
 gR
 gR
 gR
-LY
-LY
-LY
-LY
-LY
-LY
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11478,30 +13334,30 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+iC
+CK
+Vr
+CK
+BM
 KN
-Cu
+bp
+DO
+DO
+DO
+DO
+bN
+Mj
+Ra
+DE
 Bu
 Bu
 Bu
-KN
+Mj
 Df
 Df
 Df
-yX
+Nm
 ro
 JL
 yX
@@ -11533,13 +13389,13 @@ gR
 gR
 gR
 gR
-LY
-Uu
-lP
-HT
-lP
-LJ
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11630,30 +13486,30 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+KC
 KN
+GX
+GX
+bU
+KN
+az
+dQ
+kA
+kA
+kA
+dA
+Mj
 Ra
 Bu
+sM
 Bu
 Ra
 yX
 yX
 yX
 yX
-yX
+Nm
 Wv
 Wv
 yX
@@ -11663,9 +13519,9 @@ yX
 yX
 Df
 Mj
-Ra
+nr
 Bu
-Bu
+Ci
 Bu
 Ra
 KN
@@ -11685,13 +13541,13 @@ gR
 gR
 gR
 gR
-oB
-nN
-nN
-si
-Tg
-Tg
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11782,22 +13638,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-KN
 ZR
+tW
+qB
+up
+se
+se
+GX
+kY
+ce
+kA
+nF
+kA
+dA
+Mj
+Ra
+Bu
 Bu
 Bu
 Ra
@@ -11837,13 +13693,13 @@ gR
 gR
 gR
 gR
-oB
-Tg
-DQ
-si
-Tg
-Tg
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -11934,23 +13790,23 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+KC
 KN
-Ra
+TD
+ED
+ED
+GX
+kY
+PP
 kA
+PP
+kA
+dA
+Mj
+Ra
+QK
+nr
 Ra
 Ra
 yX
@@ -11967,8 +13823,8 @@ or
 yX
 Df
 Mj
-Bu
-Bu
+Of
+Ra
 Ra
 Ra
 Ra
@@ -11989,13 +13845,13 @@ gR
 gR
 gR
 gR
-LY
-by
-hx
-VB
-hx
-Lz
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -12086,25 +13942,25 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-KN
-KN
-KN
-KN
+ZR
+tW
+qB
+up
+eZ
+eZ
+GX
+kY
+ce
+kA
+Ea
+kA
+dA
+Mj
+Mj
+Mj
+Mj
+Mj
+Mj
 yX
 Ys
 Ys
@@ -12141,13 +13997,13 @@ gR
 gR
 gR
 gR
-yX
-yX
-yX
-yX
-yX
-yX
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -12238,25 +14094,25 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+KC
+KN
+GX
+GX
+bU
+Mj
+kY
+yA
+kA
+kA
+kA
+dA
+Mj
+Df
+Df
+Df
+Df
+Df
 yX
 yX
 yX
@@ -12390,30 +14246,30 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+cE
+CK
+Vr
+CK
+oj
+Mj
+Ao
+Cl
+Cl
+Cl
+Cl
+IJ
+Mj
+Df
+Df
+Df
+Df
+Df
+Df
+Df
 yX
 hb
-aq
+bn
 lj
 UV
 hq
@@ -12542,30 +14398,30 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+ZR
+ZR
+ZR
+ZR
+ZR
+ZR
+Mj
+kA
+Mj
+Gy
+Gy
+Mj
+Mj
+Mj
+Df
+Df
+Df
+Df
+Df
+Df
+Df
 yX
 yX
-yX
+Nm
 XS
 Pt
 yX
@@ -12698,26 +14554,26 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+Mj
+Mj
+Mj
+Mj
+Mj
+ro
+Tz
+Mj
+Df
+Df
+Df
+Df
+Df
+Df
+Df
+Df
+Df
 yX
 hb
-CZ
+qe
 xE
 xE
 CT
@@ -12848,25 +14704,25 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+Mj
+Mj
+Mj
+Mj
+Mj
+Wv
+Wv
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
 yX
 yX
 yX
@@ -13000,22 +14856,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+EC
+dJ
+dL
+EC
+Fw
+oO
+kA
+kA
+Gh
+Fw
+EC
+dJ
+dL
+EC
+KN
 gR
 gR
 gR
@@ -13152,22 +15008,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Qw
+Ej
+bJ
+Qw
+Fw
+EP
+kA
+kA
+yt
+Fw
+Qw
+Ej
+bJ
+Qw
+KN
 gR
 gR
 gR
@@ -13304,22 +15160,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Qw
+Ej
+bJ
+Qw
+II
+EP
+kA
+kA
+yt
+II
+Qw
+Ej
+bJ
+Qw
+KN
 gR
 gR
 gR
@@ -13456,22 +15312,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+aA
+jo
+tQ
+aA
+Rk
+nk
+kA
+kA
+En
+Rk
+aA
+jo
+tQ
+aA
+KN
 gR
 gR
 gR
@@ -13608,22 +15464,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+Qw
+Qw
+Qw
+Qw
+Fw
+EP
+kA
+kA
+yt
+Fw
+Qw
+Qw
+Qw
+Qw
+KN
 gR
 gR
 gR
@@ -13756,26 +15612,26 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+KN
+Lz
+kA
+kA
+LY
+KN
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -13908,21 +15764,21 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+by
+oB
+si
+KN
+Df
+Df
+sA
+KN
+KN
+EP
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14059,22 +15915,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+gp
+nd
+mc
+KN
+KN
+KN
+KN
+KN
+DQ
+EP
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14210,23 +16066,23 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+kg
+uP
+hx
+nd
+zH
+uP
+uP
+uP
+uP
+CB
+HT
+WD
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14362,23 +16218,23 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+nd
+nd
+nd
+nd
+nd
+nd
+nd
+nd
+KN
+kA
+kA
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14514,23 +16370,23 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+ak
+lP
+nd
+Az
+ak
+ak
+ak
+ak
+CB
+dM
+LJ
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14667,22 +16523,22 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+gp
+nd
+mc
+KN
+KN
+KN
+KN
+KN
+IL
+EP
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14820,21 +16676,21 @@ gR
 gR
 gR
 gR
+KN
+nN
+pa
+AT
+KN
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+EP
+kA
+kA
+yt
+KN
 gR
 gR
 gR
@@ -14972,21 +16828,21 @@ gR
 gR
 gR
 gR
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+uG
+dM
+dM
+fh
+KN
 gR
 gR
 gR
@@ -15133,12 +16989,12 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
+KN
+KN
+KN
+KN
+KN
+KN
 gR
 gR
 gR
@@ -16257,13 +18113,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+yX
+yX
+yX
+yX
+yX
+yX
+yX
 gR
 gR
 gR
@@ -16409,13 +18265,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+bi
+yj
+qt
+yj
+kc
+yX
 gR
 gR
 gR
@@ -16561,13 +18417,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+Jn
+Jn
+iZ
+Jn
+Jn
+yX
 gR
 gR
 gR
@@ -16713,13 +18569,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+Sw
+EY
+iZ
+Hb
+Hb
+yX
 gR
 gR
 gR
@@ -16865,13 +18721,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+NR
+MB
+qd
+MB
+zY
+yX
 gR
 gR
 gR
@@ -17017,13 +18873,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+zb
+zb
+zb
+zb
+zb
+yX
 gR
 gR
 gR
@@ -17169,13 +19025,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+qt
+yj
+bi
+yj
+kc
+yX
 gR
 gR
 gR
@@ -17321,13 +19177,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+Jn
+Jn
+iZ
+Jn
+Jn
+yX
 gR
 gR
 gR
@@ -17473,13 +19329,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+PZ
+PZ
+iZ
+Jn
+Jn
+yX
 gR
 gR
 gR
@@ -17625,13 +19481,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+qd
+MB
+NR
+MB
+zY
+yX
 gR
 gR
 gR
@@ -17777,13 +19633,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+zb
+zb
+zb
+zb
+zb
+yX
 gR
 gR
 gR
@@ -17929,13 +19785,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+qt
+yj
+bi
+yj
+kc
+yX
 gR
 gR
 gR
@@ -18081,13 +19937,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+ss
+ss
+iZ
+Jn
+Jn
+yX
 gR
 gR
 gR
@@ -18233,13 +20089,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qX
+Jn
+XI
+iZ
+Jn
+Jn
+yX
 gR
 gR
 gR
@@ -18385,13 +20241,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+zb
+qd
+MB
+NR
+MB
+zY
+yX
 gR
 gR
 gR
@@ -18537,13 +20393,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+yX
+yX
+yX
+yX
+yX
+yX
+yX
 gR
 gR
 gR
