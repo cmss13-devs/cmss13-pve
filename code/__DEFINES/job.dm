@@ -12,6 +12,7 @@
 #define SQUAD_MARINE_INTEL "Intel"
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
+#define SQUAD_UPP "Red Dawn"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -23,6 +24,13 @@
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
+
+#define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
+#define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
+#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
+#define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
+#define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
+#define JOB_SO_UPP "UPP Platoon Commander"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 

@@ -9,7 +9,7 @@
 	spawn_positions = -1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/pfc
-
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/lesser_rank
 	job_options = list(PFC_VARIANT = "PFC", PVT_VARIANT = "PVT")
 
 /datum/job/marine/standard/on_config_load()
@@ -21,9 +21,9 @@
 
 /datum/job/marine/standard/handle_job_options(option)
 	if(option != PFC_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm/pfc/lesser_rank
+		gear_preset = gear_preset_secondary
 	else
-		gear_preset = /datum/equipment_preset/uscm/pfc
+		gear_preset = initial(gear_preset)
 
 /datum/job/marine/standard/whiskey
 	title = JOB_WO_SQUAD_MARINE
@@ -57,6 +57,16 @@
 
 /datum/job/marine/standard/ai/set_spawn_positions(count)
 	return spawn_positions
+
+/datum/job/marine/standard/ai/upp
+	title = JOB_SQUAD_MARINE_UPP
+	gear_preset = /datum/equipment_preset/uscm/pfc/upp
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
+
+/obj/effect/landmark/start/marine/upp
+	name = JOB_SQUAD_MARINE_UPP
+	squad = SQUAD_UPP
+	job = /datum/job/marine/standard/ai/upp
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

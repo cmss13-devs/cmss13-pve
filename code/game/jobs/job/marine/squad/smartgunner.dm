@@ -10,6 +10,7 @@
 	scaled = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/sg
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the smartgunner.</a> Your task is to provide heavy weapons support."
 
 	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
@@ -31,9 +32,9 @@
 
 /datum/job/marine/smartgunner/handle_job_options(option)
 	if(option != CPL_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm/sg/lesser_rank
+		gear_preset = gear_preset_secondary
 	else
-		gear_preset = /datum/equipment_preset/uscm/sg
+		gear_preset = initial(gear_preset)
 
 /datum/job/marine/smartgunner/whiskey
 	title = JOB_WO_SQUAD_SMARTGUNNER
@@ -74,6 +75,16 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 
 /datum/job/marine/smartgunner/ai/get_total_positions(latejoin = 0)
 	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/smartgunner/ai/upp
+	title = JOB_SQUAD_SMARTGUN_UPP
+	gear_preset = /datum/equipment_preset/uscm/sg/upp
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/lesser_rank
+
+/obj/effect/landmark/start/marine/smartgunner/upp
+	name = JOB_SQUAD_SMARTGUN_UPP
+	job = JOB_SQUAD_SMARTGUN_UPP
+	squad = SQUAD_UPP
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT

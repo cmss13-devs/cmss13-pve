@@ -113,6 +113,15 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/upp
+	name = "Akademia Nauk"
+	id = DROPSHIP_UPP
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -311,3 +320,7 @@
 /datum/map_template/shuttle/normandy
 	name = "Normandy"
 	shuttle_id = DROPSHIP_NORMANDY
+
+/datum/map_template/shuttle/upp
+	name = "Akademia Nauk"
+	shuttle_id = DROPSHIP_UPP

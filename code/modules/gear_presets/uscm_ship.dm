@@ -545,13 +545,13 @@
 	role_comm_title = "PltCo"
 	minimum_age = 25
 	skills = /datum/skills/SO
-
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_MAIN)
+	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
@@ -578,6 +578,28 @@
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	paygrade = "MO1"
+
+/datum/equipment_preset/uscm_ship/so/upp
+	name = "UPP Platoon Commander (PltCo)"
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
+	paygrade = "UO2"
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	access_list = ACCESS_LIST_UPP_PLATOON
+
+/datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/officer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
+
+/datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+	paygrade = "UO1"
 
 //*****************************************************************************************************/
 
