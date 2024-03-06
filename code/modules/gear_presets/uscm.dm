@@ -91,26 +91,6 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
-/datum/equipment_preset/uscm/prf/rto
-	name = "USCM Radio Telehpone Operator"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-
-	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
-	assignment = JOB_SQUAD_RTO
-	rank = JOB_SQUAD_RTO
-	paygrade = "ME2"
-	role_comm_title = "RTO"
-	skills = /datum/skills/pfc
-
-	minimap_icon = "private"
-
-/datum/equipment_preset/uscm/prf/rto/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
 /datum/equipment_preset/uscm/pfc/cryo
 	name = "USCM Cryo Squad Rifleman"
 	auto_squad_name = SQUAD_MARINE_CRYO
@@ -139,6 +119,13 @@
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE1"
+
+/datum/equipment_preset/uscm/pfc/forecon
+	name = "FORECON Squad Rifleman"
+	paygrade = "ME3"
+
+/datum/equipment_preset/uscm/pfc/forecon/lesser_rank
+	paygrade = "ME2"
 
 //*****************************************************************************************************/
 
@@ -193,6 +180,13 @@
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	paygrade = "UE3"
 
+/datum/equipment_preset/uscm/sg/forecon
+	name = "FORECON Squad Smartgunner"
+	paygrade = "ME5"
+
+/datum/equipment_preset/uscm/sg/forecon/lesser_rank
+	paygrade = "ME4"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg/full
@@ -211,6 +205,29 @@
 
 /datum/equipment_preset/uscm/sg/full/load_status(mob/living/carbon/human/new_human)
 	return //No cryo munchies
+
+/datum/equipment_preset/uscm/rto
+	name = "USCM Radio Telehpone Operator"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	assignment = JOB_SQUAD_RTO
+	rank = JOB_SQUAD_RTO
+	paygrade = "ME4"
+	role_comm_title = "RTO"
+	skills = /datum/skills/pfc
+
+	minimap_icon = "rto"
+
+/datum/equipment_preset/uscm/prf/rto/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/rto/lesser_rank
+	paygrade = "ME3"
 
 //*****************************************************************************************************/
 
@@ -383,6 +400,10 @@
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
 	assignment = "Squad Corpsman"
+	paygrade = "ME5"
+
+/datum/equipment_preset/uscm/medic/forecon/lesser_rank
+	paygrade = "ME4"
 
 //*****************************************************************************************************/
 
@@ -431,6 +452,7 @@
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
+	paygrade = "ME6"
 
 /*****************************************************************************************************/
 
@@ -518,6 +540,10 @@
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Sergeant"
 	assignment = "Squad Sergeant"
+	paygrade = "ME8"
+
+/datum/equipment_preset/uscm/leader/forecon/lesser_rank
+	paygrade = "ME7"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

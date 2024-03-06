@@ -80,11 +80,15 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 	title = JOB_SQUAD_SMARTGUN_UPP
 	gear_preset = /datum/equipment_preset/uscm/sg/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/lesser_rank
+	job_options = list("Junior Serzhant" = "JSzh.", "Korporal" = "Kpl.")
 
 /datum/job/marine/smartgunner/ai/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON
 	total_positions = 1
 	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/sg/forecon
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/lesser_rank
+	job_options = list("Sergeant" = "SGT", "Corporal" = "CPL")
 
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP

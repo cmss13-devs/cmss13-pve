@@ -45,6 +45,19 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/canteen)
+"ax" = (
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_base";
+	layer = 3.9;
+	pixel_x = -16;
+	pixel_y = -17;
+	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
+	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "aA" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/warning_stripes{
@@ -370,10 +383,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
-"dF" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "dG" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -2590,6 +2599,10 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/squad_one)
+"Ag" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Ap" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -4318,6 +4331,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
+"UB" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "UO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -4346,19 +4364,6 @@
 /area/golden_arrow/squad_one)
 "Vz" = (
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
-"VI" = (
-/obj/structure/machinery/prop{
-	icon = 'icons/obj/vehicles/tank.dmi';
-	icon_state = "tank_base";
-	layer = 4.1;
-	pixel_x = -16;
-	pixel_y = -17;
-	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
-	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "VX" = (
 /obj/structure/closet,
@@ -4439,11 +4444,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
-"WQ" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "WV" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer{
@@ -11343,9 +11343,9 @@ Cr
 Vz
 Fg
 nZ
-dF
-dF
-VI
+Ag
+Ag
+ax
 Bt
 Uz
 Uz
@@ -11495,7 +11495,7 @@ Cr
 Vz
 Fg
 ac
-WQ
+UB
 wu
 wu
 wB
@@ -11647,9 +11647,9 @@ Cr
 Vz
 Fg
 DY
-dF
-dF
-dF
+Ag
+Ag
+Ag
 Fg
 Fg
 Fg
