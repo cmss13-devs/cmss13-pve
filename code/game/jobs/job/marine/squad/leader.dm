@@ -58,14 +58,11 @@ AddTimelock(/datum/job/marine/leader, list(
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
-	job_options = list("Starshina" = "Strsh.", "Master Serzhant" = "MSzh.")
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
-	job_options = list("Master Sergeant" = "MSGT", "Gunnery Sergeant" = "GYSGT")
-
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP

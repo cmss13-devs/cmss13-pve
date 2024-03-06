@@ -62,7 +62,6 @@
 	title = JOB_SQUAD_MARINE_UPP
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
-	job_options = list("Private" = "PVT", "Efreitor" = "Efr.")
 
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
@@ -70,7 +69,6 @@
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
-	job_options = list("Lance Corporal" = "LCPL", "Private First Class" = "PFC")
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
@@ -78,7 +76,6 @@
 	title = JOB_SQUAD_RTO
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
-	job_options = list("Corporal" = "CPL", "Lance Corporal" = "LCPL")
 
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP

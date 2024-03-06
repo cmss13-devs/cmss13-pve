@@ -85,13 +85,11 @@ AddTimelock(/datum/job/marine/medic, list(
 	title = JOB_SQUAD_MEDIC_UPP
 	gear_preset = /datum/equipment_preset/uscm/medic/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/lesser_rank
-	job_options = list("Junior Serzhant" = "JSzh.", "Korporal" = "Kpl.")
 
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/forecon/lesser_rank
-	job_options = list("Sergeant" = "SGT", "Corporal" = "CPL")
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP
