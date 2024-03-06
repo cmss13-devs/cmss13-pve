@@ -19,9 +19,8 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "cm" = (
-/obj/structure/bed/chair/dropship/passenger,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin14"
 	},
 /area/shuttle/cyclone)
 "cy" = (
@@ -87,7 +86,8 @@
 "gn" = (
 /obj/structure/machinery/camera/autoname/almayer/dropship_two{
 	pixel_x = 8;
-	pixel_y = -16
+	pixel_y = -16;
+	network = list("Golden Arrow","Cyclone")
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -119,8 +119,11 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ia" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "iO" = (
@@ -158,7 +161,9 @@
 	},
 /area/shuttle/cyclone)
 "ml" = (
-/obj/structure/stairs/perspective,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -178,8 +183,9 @@
 	},
 /area/shuttle/cyclone)
 "nH" = (
+/obj/structure/stairs/perspective,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "od" = (
@@ -190,7 +196,8 @@
 "oX" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
-	pixel_x = 23
+	pixel_x = 23;
+	network = list("Golden Arrow","Cyclone")
 	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -349,7 +356,8 @@
 "Ax" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/cameras/dropship/two{
-	name = "\improper 'Cyclon' camera controls"
+	name = "\improper 'Cyclon' camera controls";
+	network = list("Cyclone","Laser Targets")
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -392,7 +400,8 @@
 "Dl" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
-	pixel_x = -23
+	pixel_x = -23;
+	network = list("Golden Arrow","Cyclone")
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -478,16 +487,14 @@
 	},
 /area/shuttle/cyclone)
 "KQ" = (
+/obj/structure/bed/chair/dropship/passenger,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "KU" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin8"
 	},
 /area/shuttle/cyclone)
 "MD" = (
@@ -506,7 +513,7 @@
 	name = "\improper 'Cyclon' weapons controls"
 	},
 /obj/structure/phone_base/rotary{
-	name = "Normandy Telephone";
+	name = "Cyclone Telephone";
 	phone_category = "Dropship";
 	phone_id = "Normandy";
 	pixel_x = 11;
@@ -570,16 +577,8 @@
 	},
 /area/shuttle/cyclone)
 "Vu" = (
-/obj/item/device/radio/intercom/normandy{
-	layer = 3.5;
-	pixel_x = 21;
-	pixel_y = 43
-	},
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin4"
 	},
 /area/shuttle/cyclone)
 "Wr" = (
@@ -698,8 +697,8 @@ ZU
 nj
 Sk
 Sk
-ia
-KQ
+Vu
+cm
 cy
 nj
 Sk
@@ -713,14 +712,14 @@ wk
 yA
 XU
 Pg
-Vu
+ia
 Iz
 FV
-cm
-cm
+KQ
+KQ
 FV
 fy
-ml
+nH
 FV
 Ty
 Ty
@@ -738,8 +737,8 @@ zz
 Ob
 Sk
 Sk
-nH
-KQ
+KU
+cm
 yP
 Ob
 BU
@@ -755,7 +754,7 @@ ro
 XY
 Bt
 Kv
-KU
+ml
 oX
 FD
 jr
