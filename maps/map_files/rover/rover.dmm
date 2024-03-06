@@ -178,9 +178,13 @@
 	},
 /area/golden_arrow/medical)
 "cl" = (
-/obj/structure/window/framed/almayer,
-/turf/open/space/basic,
-/area/golden_arrow/squad_one)
+/obj/structure/prop/tower{
+	desc = "Military-grade communications tower.";
+	icon_state = "comm_tower";
+	name = "communications tower"
+	},
+/turf/open/floor/almayer_hull,
+/area/space)
 "cn" = (
 /obj/structure/surface/table/almayer,
 /obj/item/toy/deck/uno{
@@ -214,24 +218,15 @@
 	},
 /area/golden_arrow/cryo_cells)
 "ct" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = -20;
-	pixel_y = 6
-	},
-/obj/structure/sign/safety/hazard{
-	pixel_x = -20;
-	pixel_y = -7
-	},
-/obj/structure/sign/safety/storage{
-	pixel_x = -32
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = 29;
+	pixel_x = 16
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor4"
+	icon_state = "plate"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/squad_one)
 "cJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname/golden_arrow,
@@ -482,20 +477,14 @@
 	},
 /area/golden_arrow/hangar)
 "ez" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
-/obj/structure/sign/safety/distribution_pipes{
-	pixel_y = 8;
-	pixel_x = 32
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
+	layer = 2.1
 	},
-/obj/structure/sign/safety/rewire{
-	pixel_x = 32;
-	pixel_y = -5
+/obj/structure/sign/safety/manualopenclose,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
-/obj/structure/sign/safety/high_voltage{
-	pixel_x = 45
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar)
 "eB" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -525,27 +514,28 @@
 /turf/open/space/basic,
 /area/golden_arrow/dorms)
 "eF" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/kitchen/utensil/spoon{
-	desc = "Its tongs molded together after someone tried a bite of that arcturian curry.";
-	name = "melted fork";
-	pixel_y = 9;
-	pixel_x = -9
+/obj/structure/machinery/light{
+	dir = 8
 	},
-/obj/item/tool/kitchen/tray,
-/obj/item/reagent_container/food/snacks/resin_fruit{
-	name = "arcturian curry";
-	desc = "Never tell Joes cook alien cuisine. Eugh.";
-	pixel_y = 4;
-	pixel_x = 6
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -20;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -20;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = -32
 	},
 /turf/open/floor/almayer{
-	icon_state = "dark_sterile"
+	icon_state = "test_floor4"
 	},
-/area/golden_arrow/canteen)
+/area/golden_arrow/hangar)
 "eJ" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -588,11 +578,22 @@
 	},
 /area/golden_arrow/prep_hallway)
 "fk" = (
-/obj/structure/sign/safety/landingzone{
-	pixel_x = -19
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -20;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -20;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = -32
 	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
 "fm" = (
@@ -964,15 +965,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "iy" = (
-/obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/sign/safety/commline_connection{
-	pixel_y = 29;
-	pixel_x = 16
+/turf/open/floor/almayer_hull{
+	dir = 9;
+	icon_state = "outerhull_dir"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/squad_one)
+/area/space)
 "iB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1083,6 +1080,18 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/squad_one)
+"jE" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101;
+	unacidable = 1;
+	unslashable = 1
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "jF" = (
 /turf/open/floor/almayer_hull{
 	icon_state = "blackfull"
@@ -1131,6 +1140,26 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"kb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/forecon,
+/obj/effect/landmark/late_join/forecon,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 29
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "kd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -1191,26 +1220,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/prep_hallway)
-"kN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/forecon,
-/obj/effect/landmark/late_join/forecon,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/sign/safety/bathunisex{
-	pixel_y = 29
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/cryo_cells)
 "kU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1389,13 +1398,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "lQ" = (
-/obj/structure/prop/tower{
-	desc = "Military-grade communications tower.";
-	icon_state = "comm_tower";
-	name = "communications tower"
+/obj/structure/largecrate/random/case/double,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_y = 27
 	},
-/turf/open/floor/almayer_hull,
-/area/space)
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "lY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
@@ -1522,6 +1532,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"nw" = (
+/obj/structure/sign/safety/landingzone{
+	pixel_x = -19
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "nx" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/m94/signal,
@@ -1535,28 +1553,27 @@
 	},
 /area/golden_arrow/squad_one)
 "nz" = (
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/utensil/spoon{
+	desc = "Its tongs molded together after someone tried a bite of that arcturian curry.";
+	name = "melted fork";
+	pixel_y = 9;
+	pixel_x = -9
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera"
+/obj/item/tool/kitchen/tray,
+/obj/item/reagent_container/food/snacks/resin_fruit{
+	name = "arcturian curry";
+	desc = "Never let Joes cook alien cuisine. Eugh.";
+	pixel_y = 4;
+	pixel_x = 6
 	},
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = -20;
-	pixel_y = 6
-	},
-/obj/structure/sign/safety/hazard{
-	pixel_x = -20;
-	pixel_y = -7
-	},
-/obj/structure/sign/safety/storage{
-	pixel_x = -32
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor4"
+	icon_state = "dark_sterile"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/canteen)
 "nX" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -1974,19 +1991,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"rP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/safety/medical{
-	pixel_y = 27
-	},
-/obj/structure/sign/safety/autodoc{
-	pixel_y = 27;
-	pixel_x = 13
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/prep_hallway)
 "rQ" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/canteen)
@@ -2175,18 +2179,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
-"tw" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	invisibility = 101;
-	unacidable = 1;
-	unslashable = 1
-	},
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 32
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "tA" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Supply Bay"
@@ -2468,16 +2460,6 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"xu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/safety/commline_connection{
-	pixel_y = -29;
-	pixel_x = 15
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/squad_one)
 "xw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2554,14 +2536,11 @@
 	},
 /area/golden_arrow/hangar)
 "yj" = (
-/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
-	layer = 2.1
+/turf/open/floor/almayer_hull{
+	dir = 5;
+	icon_state = "outerhull_dir"
 	},
-/obj/structure/sign/safety/manualopenclose,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
+/area/space)
 "yu" = (
 /obj/structure/foamed_metal,
 /turf/open/space/basic,
@@ -2879,6 +2858,21 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"BG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = -20
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/medical)
 "Cd" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -3231,21 +3225,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"GA" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera"
-	},
-/obj/structure/sign/safety/chem_lab{
-	pixel_x = -20
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/medical)
 "GI" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18"
@@ -3258,15 +3237,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
-"GN" = (
-/obj/structure/largecrate/random/case/double,
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_y = 27
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
 "GQ" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/squad_one)
@@ -3560,6 +3530,19 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
+"Kj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/medical{
+	pixel_y = 27
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_y = 27;
+	pixel_x = 13
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/prep_hallway)
 "Kk" = (
 /turf/closed/wall/almayer/white/hull,
 /area/golden_arrow/medical)
@@ -3948,11 +3931,20 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "OC" = (
-/turf/open/floor/almayer_hull{
-	dir = 9;
-	icon_state = "outerhull_dir"
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/obj/structure/sign/safety/distribution_pipes{
+	pixel_y = 8;
+	pixel_x = 32
 	},
-/area/space)
+/obj/structure/sign/safety/rewire{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = 45
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
 "OJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -4320,21 +4312,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "To" = (
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/obj/structure/machinery/line_nexter{
-	dir = 2
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/safety/food_storage{
-	pixel_y = 35;
-	pixel_x = -20
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo_arrow"
-	},
-/area/golden_arrow/canteen)
+/obj/structure/window/framed/almayer,
+/turf/open/space/basic,
+/area/golden_arrow/squad_one)
 "Tp" = (
 /obj/structure/ladder{
 	id = "rover1";
@@ -4462,6 +4442,22 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
+"Vv" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/line_nexter{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/food_storage{
+	pixel_y = 35;
+	pixel_x = -20
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/canteen)
 "Vz" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
@@ -4545,11 +4541,15 @@
 	},
 /area/golden_arrow/cryo_cells)
 "WV" = (
-/turf/open/floor/almayer_hull{
-	dir = 5;
-	icon_state = "outerhull_dir"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = -29;
+	pixel_x = 15
 	},
-/area/space)
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_one)
 "Xd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7692,12 +7692,12 @@ Bt
 Uz
 Uz
 jj
-ct
+fk
 jG
 Ln
 Zj
 Is
-nz
+eF
 Sb
 Uz
 Uz
@@ -8749,7 +8749,7 @@ Mb
 wQ
 Fg
 yC
-yj
+ez
 ln
 ln
 ln
@@ -8775,7 +8775,7 @@ QW
 Fg
 Fg
 ou
-fk
+nw
 sK
 Tp
 Vz
@@ -9205,7 +9205,7 @@ TD
 Vz
 MF
 yC
-yj
+ez
 ln
 ln
 ln
@@ -10124,7 +10124,7 @@ PY
 pu
 pu
 pu
-tw
+jE
 Nj
 Fg
 vx
@@ -10145,7 +10145,7 @@ ou
 ou
 Wv
 qt
-ez
+OC
 rS
 xe
 Cr
@@ -11650,7 +11650,7 @@ Cr
 Cr
 Cr
 Vz
-GN
+lQ
 Fg
 ou
 Vz
@@ -15149,7 +15149,7 @@ Cr
 Kk
 Yw
 EY
-GA
+BG
 tS
 wD
 AW
@@ -15760,7 +15760,7 @@ xx
 qi
 Dc
 wD
-rP
+Kj
 kC
 IM
 pB
@@ -16662,7 +16662,7 @@ Cr
 Cr
 Cr
 Cr
-OC
+iy
 Ra
 Ra
 TD
@@ -16813,7 +16813,7 @@ Cr
 Cr
 Cr
 Cr
-OC
+iy
 HL
 HL
 HL
@@ -16970,17 +16970,17 @@ HL
 HL
 HL
 HL
-cl
+To
 Tz
 zZ
 Kg
-iy
+ct
 mv
 mv
 ZC
 Vp
 mv
-xu
+WV
 Kg
 wd
 dv
@@ -17119,10 +17119,10 @@ Cr
 Cr
 Mb
 HL
-lQ
-HL
-HL
 cl
+HL
+HL
+To
 LC
 io
 HQ
@@ -17274,7 +17274,7 @@ HL
 HL
 HL
 HL
-cl
+To
 nx
 IX
 Kg
@@ -17421,7 +17421,7 @@ Cr
 Cr
 Cr
 Cr
-WV
+yj
 HL
 HL
 HL
@@ -17574,7 +17574,7 @@ Cr
 Cr
 Cr
 Cr
-WV
+yj
 HL
 HL
 TD
@@ -17735,7 +17735,7 @@ aB
 aB
 dV
 ar
-To
+Vv
 sX
 Kh
 Rv
@@ -17889,7 +17889,7 @@ dV
 ar
 eL
 dJ
-eF
+nz
 jY
 fP
 Of
@@ -19404,7 +19404,7 @@ AC
 mH
 AC
 fX
-kN
+kb
 dE
 Dw
 Pj

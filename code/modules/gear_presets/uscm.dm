@@ -207,7 +207,7 @@
 	return //No cryo munchies
 
 /datum/equipment_preset/uscm/rto
-	name = "USCM Radio Telehpone Operator"
+	name = "USCM Radio Telephone Operator"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
