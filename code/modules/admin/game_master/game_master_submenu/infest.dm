@@ -66,9 +66,6 @@
 		infesting_embryo.hivenumber = selected_hive
 
 		var/mob/living/carbon/human/infested_host = referenced_atom
-		infesting_embryo.hugger_ckey = infested_host.ckey
-
-		GLOB.player_embryo_list += infesting_embryo
 		infested_host.species?.larva_impregnated(infesting_embryo) //Yautja handling
 
 	infesting_embryo.stage = embryo_stage
@@ -79,20 +76,22 @@
 
 /datum/game_master_submenu/infest/proc/force_burst()
 	var/mob/living/carbon/xenomorph/larva/infesting_larva = locate() in referenced_atom //if a larva already exists, use it
+	if(infesting_larva)
+		infesting_larva.chest_burst(referenced_atom)
+		return
 
-	if(!infesting_larva) //else if this hive's embryo already exists, convert to larva and use it
-		for(var/obj/item/alien_embryo/embryo in referenced_atom)
-			if(embryo.hivenumber == selected_hive)
-				embryo.become_larva()
-				infesting_larva = locate() in referenced_atom
-				break
+	for(var/obj/item/alien_embryo/embryo in referenced_atom) //else if this hive's embryo already exists, convert to larva and use it
+		if(embryo.hivenumber == selected_hive)
+			embryo.become_larva()
+			infesting_larva = locate() in referenced_atom
+			break
+	if(infesting_larva)
+		infesting_larva.chest_burst(referenced_atom)
+		return
 
-	if(!infesting_larva) //else, make a new larva
-		infesting_larva = new /mob/living/carbon/xenomorph/larva(referenced_atom, null, selected_hive)
-
-		var/mob/living/carbon/human/infested_host = referenced_atom
-		infesting_larva.ckey = infested_host.ckey
-
+	infesting_larva = new /mob/living/carbon/xenomorph/larva(referenced_atom, null, selected_hive) //else, make a new larva
+	var/mob/living/carbon/human/infested_host = referenced_atom
+	infesting_larva.ckey = infested_host.ckey
 	infesting_larva.chest_burst(referenced_atom)
 
 #undef DEFAULT_SPAWN_HIVE_STRING
