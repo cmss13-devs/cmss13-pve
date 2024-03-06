@@ -1792,7 +1792,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/landmark/observer_start,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "qC" = (
@@ -3552,6 +3551,7 @@
 	dir = 8;
 	invisibility = 101
 	},
+/obj/effect/landmark/observer_start,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
