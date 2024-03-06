@@ -185,6 +185,17 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -20;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -20;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = -32
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -223,6 +234,10 @@
 /area/golden_arrow/cryo_cells)
 "ct" = (
 /obj/structure/machinery/camera/autoname/golden_arrow,
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = 29;
+	pixel_x = 16
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -480,6 +495,17 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -20;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -20;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = -32
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -582,6 +608,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
+	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = -20
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -730,6 +759,9 @@
 	invisibility = 101;
 	unacidable = 1;
 	unslashable = 1
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -911,6 +943,12 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"ia" = (
+/obj/effect/decal/strata_decals/catwalk/prison{
+	pixel_y = 5
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "io" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer{
@@ -952,6 +990,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 29
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -1115,6 +1156,9 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"ka" = (
+/turf/open/space/basic,
+/area/golden_arrow/squad_one)
 "kd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -1290,6 +1334,14 @@
 "ls" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
+"lt" = (
+/obj/structure/sign/safety/landingzone{
+	pixel_x = -19
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "lv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -1360,6 +1412,10 @@
 	dir = 2
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/food_storage{
+	pixel_y = 35;
+	pixel_x = -20
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
@@ -1506,6 +1562,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/safety/medical{
 	pixel_y = 27
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_y = 27;
+	pixel_x = 13
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2191,6 +2251,18 @@
 /obj/structure/machinery/power/terminal,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"uk" = (
+/obj/structure/prop{
+	name = "\improper comfy HE orbital warhead";
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon_state = "ob_warhead_1";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	can_buckle = 1;
+	pixel_y = 13;
+	layer = 5.2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "uo" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -3396,6 +3468,19 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/dorms)
+"JK" = (
+/obj/structure/prop{
+	name = "\improper comfy HE orbital warhead";
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon_state = "ob_warhead_1";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	can_buckle = 1;
+	pixel_y = 11;
+	layer = 2.4;
+	plane = -7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "JL" = (
 /obj/structure/machinery/autodoc_console{
 	dir = 1;
@@ -3861,6 +3946,7 @@
 /obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
 	layer = 2.1
 	},
+/obj/structure/sign/safety/manualopenclose,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3898,6 +3984,22 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/prep_hallway)
+"OR" = (
+/obj/structure/prop{
+	name = "\improper comfy HE orbital warhead";
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon_state = "ob_warhead_1";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	can_buckle = 1;
+	pixel_y = -10;
+	layer = 2.4;
+	plane = -7
+	},
+/obj/effect/decal/strata_decals/catwalk/prison{
+	pixel_y = 5
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "OU" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -4069,6 +4171,19 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
+"QM" = (
+/obj/structure/prop{
+	name = "\improper comfy HE orbital warhead";
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon_state = "ob_warhead_1";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	can_buckle = 1;
+	pixel_y = -10;
+	layer = 2.4;
+	plane = -7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "QW" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -4129,6 +4244,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"Rz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = -29;
+	pixel_x = 15
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_one)
 "RO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp,
@@ -4233,6 +4358,17 @@
 /area/golden_arrow/platoon_commander_rooms)
 "To" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/obj/structure/sign/safety/distribution_pipes{
+	pixel_y = 8;
+	pixel_x = 32
+	},
+/obj/structure/sign/safety/rewire{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = 45
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "Tp" = (
@@ -4446,6 +4582,9 @@
 /area/golden_arrow/cryo_cells)
 "WV" = (
 /obj/structure/largecrate/random/case/double,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_y = 27
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -12420,9 +12559,9 @@ ln
 ln
 ln
 ln
+uk
 ln
-ln
-ln
+OR
 ln
 ln
 ln
@@ -12433,7 +12572,7 @@ QW
 Fg
 Fg
 ou
-ou
+lt
 sK
 Tp
 Vz
@@ -12574,7 +12713,7 @@ ln
 ln
 ln
 ln
-ln
+ia
 ln
 ln
 ln
@@ -12724,9 +12863,9 @@ ln
 ln
 ln
 ln
+JK
 ln
-ln
-ln
+QM
 ln
 ln
 ln
@@ -14268,7 +14407,7 @@ Cr
 Cr
 Cr
 Cr
-GQ
+ka
 Tz
 zZ
 Kg
@@ -14278,7 +14417,7 @@ mv
 ZC
 Vp
 mv
-vy
+Rz
 Kg
 wd
 dv
@@ -14420,7 +14559,7 @@ Cr
 Cr
 Cr
 Cr
-GQ
+ka
 LC
 io
 HQ
@@ -14572,7 +14711,7 @@ Cr
 Cr
 Cr
 Cr
-GQ
+ka
 nx
 IX
 Kg
