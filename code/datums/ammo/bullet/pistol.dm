@@ -184,8 +184,8 @@
 	damage = 50
 	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
-	effective_range_max = 6 //hopefully this fixes the damage woes.
-	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	effective_range_max = 3 //hopefully this fixes the damage woes.
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
 /datum/ammo/bullet/pistol/squash/toxin
 	name = "toxic squash-head pistol bullet"
