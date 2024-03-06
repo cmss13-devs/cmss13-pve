@@ -366,7 +366,7 @@
 /area/golden_arrow/canteen)
 "dO" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	roundstart_template = /datum/map_template/shuttle/cyclon
+	roundstart_template = /datum/map_template/shuttle/cyclone
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
