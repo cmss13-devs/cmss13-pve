@@ -4,6 +4,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ad" = (
@@ -538,6 +539,10 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"eR" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ff" = (
 /obj/structure/largecrate,
@@ -1109,6 +1114,19 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"kg" = (
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_base";
+	layer = 4.1;
+	pixel_x = -16;
+	pixel_y = -17;
+	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
+	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "ki" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -1505,6 +1523,7 @@
 /area/golden_arrow/hangar)
 "nZ" = (
 /obj/structure/cargo_container/wy/left,
+/obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "oc" = (
@@ -2313,11 +2332,8 @@
 	},
 /area/golden_arrow/hangar)
 "wu" = (
-/obj/vehicle/multitile/tank{
-	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay.";
-	name = "M34A2 Longstreet Light Tank 'Lawnmower'"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "wx" = (
@@ -2928,6 +2944,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Eo" = (
@@ -3147,6 +3164,11 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"Gx" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "GI" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18"
@@ -11320,9 +11342,9 @@ Cr
 Vz
 Fg
 nZ
-Fg
-Fg
-Fg
+eR
+eR
+kg
 Bt
 Uz
 Uz
@@ -11472,9 +11494,9 @@ Cr
 Vz
 Fg
 ac
-qF
+Gx
 wu
-Ni
+wu
 wB
 wB
 Ni
@@ -11624,9 +11646,9 @@ Cr
 Vz
 Fg
 DY
-Fg
-Fg
-Fg
+eR
+eR
+eR
 Fg
 Fg
 Fg
