@@ -430,10 +430,7 @@
 	pixel_y = 9;
 	pixel_x = -9
 	},
-/obj/item/trash/ceramic_plate{
-	pixel_y = -3;
-	pixel_x = 6
-	},
+/obj/item/tool/kitchen/tray,
 /obj/item/reagent_container/food/snacks/resin_fruit{
 	name = "arcturian curry";
 	desc = "Never tell Joes cook alien cuisine. Eugh.";
@@ -520,10 +517,6 @@
 	pixel_x = -27
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera"
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1005,7 +998,7 @@
 "lh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_one_access_txt = "8;12;39";
+	req_one_access_txt = "8;12;13;39";
 	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -3023,7 +3016,6 @@
 /area/golden_arrow/engineering)
 "MI" = (
 /obj/structure/surface/table/almayer,
-/obj/item/tool/kitchen/tray,
 /obj/item/trash/ceramic_plate,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 1
@@ -3544,6 +3536,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Vn" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "Vp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
@@ -3741,7 +3742,7 @@
 /area/space)
 "ZC" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_one_access_txt = "8;12;39";
+	req_one_access_txt = "8;12;13;39";
 	req_access = list()
 	},
 /turf/open/floor/almayer,
@@ -14023,7 +14024,7 @@ Zb
 Jc
 fs
 eB
-Fs
+Vn
 FT
 Kd
 FT

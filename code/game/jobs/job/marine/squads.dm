@@ -152,7 +152,7 @@
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
 	access = list(ACCESS_MARINE_ALPHA)
-	radio_freq = ALPHA_FREQ
+	radio_freq = SOF_FREQ
 	use_stripe_overlay = FALSE
 	equipment_color = "#32CD32"
 	chat_color = "#32CD32"
