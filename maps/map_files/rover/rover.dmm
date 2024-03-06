@@ -2486,9 +2486,9 @@
 	pixel_y = 8
 	},
 /obj/structure/phone_base/rotary/no_dnd{
-	name = "Overwatch Telephone";
+	name = "Squad Leader Telephone";
 	phone_category = "Command";
-	phone_id = "Overwatch";
+	phone_id = "Squad Leader";
 	pixel_x = 6;
 	pixel_y = -7
 	},

@@ -515,7 +515,7 @@
 /obj/structure/phone_base/rotary{
 	name = "Cyclone Telephone";
 	phone_category = "Dropship";
-	phone_id = "Normandy";
+	phone_id = "Cyclone";
 	pixel_x = 11;
 	pixel_y = 16
 	},
