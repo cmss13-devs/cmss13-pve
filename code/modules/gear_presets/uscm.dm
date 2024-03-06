@@ -219,7 +219,7 @@
 
 	minimap_icon = "rto"
 
-/datum/equipment_preset/uscm/prf/rto/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/rto/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
