@@ -370,6 +370,10 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
+"dF" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "dG" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -540,10 +544,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"eR" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "ff" = (
 /obj/structure/largecrate,
 /obj/item/clothing/shoes/swimmingfins,
@@ -591,7 +591,8 @@
 	icon_state = "ob_warhead_1";
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	can_buckle = 1;
-	pixel_y = -6
+	pixel_y = -10;
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1113,19 +1114,6 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/hangar)
-"kg" = (
-/obj/structure/machinery/prop{
-	icon = 'icons/obj/vehicles/tank.dmi';
-	icon_state = "tank_base";
-	layer = 4.1;
-	pixel_x = -16;
-	pixel_y = -17;
-	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
-	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ki" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3164,11 +3152,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"Gx" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "GI" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18"
@@ -4364,6 +4347,19 @@
 "Vz" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
+"VI" = (
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_base";
+	layer = 4.1;
+	pixel_x = -16;
+	pixel_y = -17;
+	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
+	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "VX" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -4443,6 +4439,11 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
+"WQ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "WV" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer{
@@ -11342,9 +11343,9 @@ Cr
 Vz
 Fg
 nZ
-eR
-eR
-kg
+dF
+dF
+VI
 Bt
 Uz
 Uz
@@ -11494,7 +11495,7 @@ Cr
 Vz
 Fg
 ac
-Gx
+WQ
 wu
 wu
 wB
@@ -11646,9 +11647,9 @@ Cr
 Vz
 Fg
 DY
-eR
-eR
-eR
+dF
+dF
+dF
 Fg
 Fg
 Fg
