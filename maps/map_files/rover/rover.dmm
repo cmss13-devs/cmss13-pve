@@ -1614,8 +1614,7 @@
 "ph" = (
 /obj/structure/cargo_container/lockmart/right{
 	pixel_y = 5;
-	layer = 5.2;
-	opacity = 0
+	layer = 5.2
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -1793,6 +1792,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/landmark/observer_start,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "qC" = (
@@ -1850,9 +1850,6 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/obj/structure/sign/safety/chem_lab{
-	pixel_x = -20
-	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1868,7 +1865,8 @@
 	desc = "Nobody knows how a mannequin got aboard, but last Halloween it got dressed up as Voorhees and scared the shit out of new guy. Heh, good times.";
 	icon = 'icons/mob/humans/species/r_synthetic.dmi';
 	icon_state = "Synthetic_Template";
-	name = "mannequin"
+	name = "mannequin";
+	indestructible = 1
 	},
 /obj/item/clothing/under/gimmick/jason{
 	icon = 'icons/mob/humans/onmob/uniform_1.dmi';
@@ -2426,8 +2424,9 @@
 /area/golden_arrow/platoon_commander_rooms)
 "wQ" = (
 /obj/structure/window/framed/almayer/hull,
-/obj/structure/window/framed/almayer,
-/turf/open/space/basic,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/hangar)
 "wV" = (
 /turf/open/floor/almayer{
@@ -3344,7 +3343,7 @@
 	},
 /area/golden_arrow/supply)
 "In" = (
-/obj/structure/window/framed/almayer,
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -4017,8 +4016,7 @@
 /area/golden_arrow/medical)
 "Pw" = (
 /obj/structure/cargo_container/lockmart/left{
-	pixel_y = 5;
-	opacity = 0
+	pixel_y = 5
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4373,8 +4371,7 @@
 /area/space)
 "TJ" = (
 /obj/structure/cargo_container/lockmart/mid{
-	pixel_y = 5;
-	opacity = 0
+	pixel_y = 5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -4674,6 +4671,9 @@
 "Yw" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
+	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = -20
 	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
@@ -15023,7 +15023,7 @@ Cr
 Kk
 wD
 mf
-wD
+Yj
 wD
 wD
 kG
