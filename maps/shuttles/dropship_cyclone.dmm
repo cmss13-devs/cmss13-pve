@@ -7,7 +7,7 @@
 /area/shuttle/cyclone)
 "aP" = (
 /obj/structure/shuttle/part/dropship2/left_outer_wing_connector,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "bw" = (
 /turf/closed/shuttle/cyclone/transparent{
@@ -19,14 +19,7 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "cm" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = 8
-	},
+/obj/structure/bed/chair/dropship/passenger,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -34,8 +27,7 @@
 "cy" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
-	dir = 4;
-	layer = 2.7
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -63,8 +55,8 @@
 	dir = 8;
 	pixel_x = -14
 	},
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone"
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -85,14 +77,14 @@
 /area/shuttle/cyclone)
 "fy" = (
 /obj/docking_port/mobile/marine_dropship/cyclone,
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_cyclone"
+	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin14"
 	},
 /area/shuttle/cyclone)
 "gn" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
 /obj/structure/machinery/camera/autoname/almayer/dropship_two{
 	pixel_x = 8;
 	pixel_y = -16
@@ -127,16 +119,13 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ia" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin4"
 	},
 /area/shuttle/cyclone)
 "iO" = (
 /obj/structure/shuttle/part/dropship2/right_inner_wing_connector,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "jr" = (
 /obj/effect/attach_point/crew_weapon/midway{
@@ -169,15 +158,9 @@
 	},
 /area/shuttle/cyclone)
 "ml" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
+/obj/structure/stairs/perspective,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "mI" = (
@@ -195,15 +178,8 @@
 	},
 /area/shuttle/cyclone)
 "nH" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
+	icon_state = "rasputin8"
 	},
 /area/shuttle/cyclone)
 "od" = (
@@ -215,6 +191,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
 	pixel_x = 23
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -279,11 +258,8 @@
 	},
 /area/shuttle/cyclone)
 "sR" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -323,7 +299,7 @@
 /area/shuttle/cyclone)
 "xY" = (
 /obj/structure/shuttle/part/dropship2/lower_left_wall,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "yA" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_center,
@@ -332,8 +308,7 @@
 "yP" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
-	dir = 8;
-	layer = 2.7
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -369,7 +344,7 @@
 /area/shuttle/cyclone)
 "At" = (
 /obj/structure/shuttle/part/dropship2/lower_right_wall,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "Ax" = (
 /obj/structure/blocker/invisible_wall,
@@ -404,7 +379,7 @@
 /area/shuttle/cyclone)
 "Cf" = (
 /obj/structure/shuttle/part/dropship2/left_inner_wing_connector,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "Da" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust,
@@ -412,7 +387,7 @@
 /area/shuttle/cyclone)
 "Df" = (
 /obj/structure/shuttle/part/dropship2/right_outer_wing_connector,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/cyclone)
 "Dl" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
@@ -435,25 +410,18 @@
 	},
 /area/shuttle/cyclone)
 "FD" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone"
-	},
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "FV" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
 /turf/open/shuttle/dropship{
 	icon_state = "floor8"
 	},
@@ -501,7 +469,7 @@
 	req_one_access_txt = "3;22"
 	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin14"
 	},
 /area/shuttle/cyclone)
 "Kv" = (
@@ -510,22 +478,24 @@
 	},
 /area/shuttle/cyclone)
 "KQ" = (
-/turf/open/shuttle/dropship,
-/area/shuttle/cyclone)
-"KU" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
-	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin14"
+	},
+/area/shuttle/cyclone)
+"KU" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "MD" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -604,6 +574,9 @@
 	layer = 3.5;
 	pixel_x = 21;
 	pixel_y = 43
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -705,7 +678,7 @@ Sl
 sR
 MD
 eu
-Ty
+jr
 JZ
 qs
 dN
@@ -722,13 +695,13 @@ pj
 Ax
 gn
 ZU
-KU
 nj
 Sk
 Sk
-Sk
+ia
+KQ
 cy
-ml
+nj
 Sk
 Dl
 qj
@@ -742,12 +715,12 @@ XU
 Pg
 Vu
 Iz
-Sk
-KQ
+FV
 cm
-Ty
+cm
+FV
 fy
-jr
+ml
 FV
 Ty
 Ty
@@ -760,15 +733,15 @@ wk
 yA
 bw
 MU
-ia
+Ty
 zz
-KU
 Ob
 Sk
 Sk
-Sk
-yP
 nH
+KQ
+yP
+Ob
 BU
 Sk
 lc
@@ -782,10 +755,10 @@ ro
 XY
 Bt
 Kv
-sR
+KU
 oX
 FD
-Ty
+jr
 JZ
 qX
 GE
