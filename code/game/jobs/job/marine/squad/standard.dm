@@ -63,10 +63,32 @@
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 
+/datum/job/marine/standard/ai/forecon
+	title = JOB_SQUAD_MARINE_FORECON
+	total_positions = 2
+	spawn_positions = 2
+
+/datum/job/marine/standard/ai/rto
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_RTO
+	gear_preset = /datum/equipment_preset/uscm/prf/rto
+	gear_preset_secondary = /datum/equipment_preset/uscm/prf/rto
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
+
+/obj/effect/landmark/start/marine/forecon
+	name = JOB_SQUAD_MARINE_FORECON
+	squad = SQUAD_LRRP
+	job = /datum/job/marine/standard/ai/forecon
+
+/obj/effect/landmark/start/marine/rto
+	name = JOB_SQUAD_RTO
+	squad = SQUAD_LRRP
+	job = /datum/job/marine/standard/ai/rto
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

@@ -433,6 +433,11 @@
 	name = "working joe late join"
 	job = JOB_WORKING_JOE
 
+/obj/effect/landmark/late_join/forecon
+	name = "forecon late join"
+	squad = SQUAD_LRRP
+
+
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()
 	if(squad)

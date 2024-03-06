@@ -149,6 +149,16 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
+/datum/squad/marine/forecon
+	name = SQUAD_LRRP
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = ALPHA_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#32CD32"
+	chat_color = "#32CD32"
+	minimap_color = "#32CD32"
+	usable = TRUE
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
@@ -551,6 +561,8 @@
 
 			if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_LEADER) //field promoted SL don't count as real ones
 				num_leaders++
+		if(JOB_SQUAD_RTO)
+			assignment = JOB_SQUAD_RTO
 
 		if(JOB_MARINE_RAIDER)
 			assignment = JOB_MARINE_RAIDER
