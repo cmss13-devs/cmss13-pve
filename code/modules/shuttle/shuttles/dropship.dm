@@ -122,9 +122,9 @@
 	dwidth = 4
 	dheight = 8
 
-/obj/docking_port/mobile/marine_dropship/cyclon
-	name = "Cyclon"
-	id = DROPSHIP_CYCLON
+/obj/docking_port/mobile/marine_dropship/cyclone
+	name = "Cyclone"
+	id = DROPSHIP_CYCLONE
 	width = 9
 	height = 18
 
@@ -334,6 +334,6 @@
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
 
-/datum/map_template/shuttle/cyclon
-	name = "Cyclon"
-	shuttle_id = DROPSHIP_CYCLON
+/datum/map_template/shuttle/cyclone
+	name = "Cyclone"
+	shuttle_id = DROPSHIP_CYCLONE
