@@ -690,6 +690,8 @@
 		if(JOB_SQUAD_LEADER)
 			if(!leader_killed)
 				old_lead.comm_title = "PltSgt"
+		if(JOB_SQUAD_RTO)
+			old_lead.comm_title = "RTO"
 		if(JOB_MARINE_RAIDER)
 			old_lead.comm_title = "Op."
 		if(JOB_MARINE_RAIDER_SL)
