@@ -1372,6 +1372,11 @@
 /area/golden_arrow/canteen)
 "lN" = (
 /obj/structure/machinery/power/smes/buildable,
+/obj/item/clothing/ears/earmuffs{
+	pixel_y = 16;
+	icon_state = "earmuffs2";
+	item_state = "earmuffs2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "lQ" = (
@@ -3380,6 +3385,15 @@
 	pixel_y = 10
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/ice_colony/tiger_rug{
+	pixel_x = -13;
+	layer = 2.5;
+	pixel_y = -15;
+	desc = "It's a rug, made from real tiger! Well, not *real* real tiger - this pelt belonged to similar-looking species, native to LV-842, that Snake Eaters ran over with their ATV. It still has some tire prints visible here and there...";
+	icon_state = "HotlineAlt";
+	dir = 4;
+	name = "moon tiger rug"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "IA" = (
@@ -4030,6 +4044,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "Pt" = (
 /obj/structure/machinery/chem_dispenser,
+/obj/item/reagent_container/glass/beaker/bluespace,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -11081,7 +11096,7 @@ Nu
 Nu
 ou
 Rr
-ou
+bQ
 Vz
 Cr
 Cr
