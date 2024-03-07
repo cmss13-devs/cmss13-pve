@@ -1605,7 +1605,9 @@
 	dir = 2;
 	name = "\improper Hangar Lockdown Blast Door"
 	},
-/turf/open/space/basic,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/golden_arrow/hangar)
 "oM" = (
 /obj/structure/closet/firecloset/full,
@@ -1704,7 +1706,9 @@
 	name = "\improper Hangar Lockdown Blast Door";
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/golden_arrow/hangar)
 "pU" = (
 /turf/open/floor/almayer{
@@ -2493,6 +2497,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"xJ" = (
+/obj/structure/machinery/conveyor{
+	dir = 8
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/golden_arrow/supply)
 "xL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -11415,9 +11429,9 @@ Et
 ls
 ls
 ls
-lm
+xJ
 ls
-lm
+xJ
 ls
 ls
 ls
