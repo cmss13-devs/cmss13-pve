@@ -1040,6 +1040,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/forecon,
 /obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1643,6 +1644,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/forecon,
 /obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -2210,6 +2212,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/leader/forecon,
 /obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -3568,7 +3571,6 @@
 	dir = 8;
 	invisibility = 101
 	},
-/obj/effect/landmark/observer_start,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -4018,6 +4020,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join/forecon,
 /obj/effect/landmark/start/marine/smartgunner/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
