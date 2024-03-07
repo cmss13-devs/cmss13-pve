@@ -8,11 +8,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ad" = (
-/obj/structure/closet/secure_closet/squad_sergeant{
+/obj/structure/closet/secure_closet{
 	req_access_txt = "32;39";
-	req_one_access = list();
 	name = "assistant squad leader locker"
 	},
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -703,9 +704,18 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "fM" = (
-/obj/structure/closet/secure_closet/platoon_sergeant{
-	name = "squad leader locker"
+/obj/structure/closet/secure_closet{
+	name = "squad leader locker";
+	req_one_access = list(12)
 	},
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
