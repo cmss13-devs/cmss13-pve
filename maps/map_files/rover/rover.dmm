@@ -1380,8 +1380,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "lQ" = (
-/obj/structure/window/framed/almayer,
-/turf/open/space/basic,
+/obj/structure/window/framed/almayer/hull,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/squad_one)
 "lY" = (
 /obj/effect/decal/cleanable/dirt,
