@@ -22,14 +22,12 @@
 		"8" = list(-5, 7)
 	)
 
-	scatter = 3
-	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	scatter = 1
+	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
-		GUN_FIREMODE_BURSTFIRE,
+		GUN_FIREMODE_AUTOMATIC,
 	)
-	burst_amount = 5
-	burst_delay = 0.3 SECONDS
-	extra_delay = 0.2 SECONDS
+	fire_delay = 0.1 SECONDS
 
 /obj/item/hardpoint/secondary/m56cupola/set_bullet_traits()
 	..()

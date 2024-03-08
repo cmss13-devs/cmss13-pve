@@ -8,7 +8,7 @@
 	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
 
 	health = 2000
-	firing_arc = 90
+	firing_arc = 120
 	var/max_range = 7
 
 	origins = list(0, -2)

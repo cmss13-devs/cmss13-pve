@@ -7,7 +7,7 @@
 	disp_icon_state = "towlauncher"
 
 	health = 2000
-	firing_arc = 60
+	firing_arc = 120
 
 	origins = list(0, -2)
 

@@ -66,7 +66,7 @@
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 0.5, // Acid melts the tank
-		"slash" = 0.4, // Slashing a massive, solid chunk of metal does very little except leave scratches
+		"slash" = 1.6, // Slashing a massive, solid chunk of metal does very little except leave scratches
 		"bullet" = 0.4,
 		"explosive" = 0.8,
 		"blunt" = 0.8,
@@ -220,7 +220,7 @@
 	TANK.update_icon()
 
 /obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -231,7 +231,7 @@
 
 //PRESET: default hardpoints
 /obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -264,7 +264,7 @@
 
 //PRESET: autocannon kit
 /obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)

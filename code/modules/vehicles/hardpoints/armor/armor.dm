@@ -7,4 +7,4 @@
 
 	damage_multiplier = 0.10
 
-	health = 2000
+	health = 1000
