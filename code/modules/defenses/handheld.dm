@@ -132,6 +132,11 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/mini
 	deployment_time = 0.75 SECONDS
 
+/obj/item/defenses/handheld/sentry/upp
+	name = "handheld UPPA 32-H sentry gun"
+	desc = "A compact version of the UPPA defenses. Designed for quick deployment of the associated type in the field."
+	defense_type = /obj/structure/machinery/defenses/sentry/upp
+
 
 // FLAMER BASE AND UPGRADES
 /obj/item/defenses/handheld/sentry/flamer

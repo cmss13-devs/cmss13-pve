@@ -65,6 +65,7 @@
 
 	var/nightmare_path
 
+	var/platoon
 	/// If truthy this is config for a round overriden map: search for override maps in data/, instead of using a path in maps/
 	var/override_map
 
@@ -359,6 +360,9 @@
 
 	if(json["nightmare_path"])
 		nightmare_path = json["nightmare_path"]
+
+	if(json["platoon"])
+		platoon = json["platoon"]
 
 	if(islist(json["environment_traits"]))
 		environment_traits = json["environment_traits"]
