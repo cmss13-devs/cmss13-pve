@@ -212,6 +212,7 @@
 	var/watertemp = "normal" //freezing, normal, or boiling
 	var/mobpresent = 0 //true if there is a mob on the shower's loc, this is to ease process()
 	var/is_washing = 0
+	var/last_sound = 0
 
 /obj/structure/machinery/shower/Initialize()
 	. = ..()
@@ -379,6 +380,9 @@
 
 /obj/structure/machinery/shower/process()
 	if(!on) return
+	if(world.time > last_sound + 80)
+		last_sound = world.time
+		playsound(src, "gurgle", 25, FALSE)
 	wash_floor()
 	if(!mobpresent) return
 	for(var/mob/living/carbon/C in loc)
