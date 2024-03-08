@@ -218,6 +218,16 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 #define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
 
+////-------- PMC PLATOON --------//
+
+#define JOB_PMCPLAT_OW "OVERWATCH"
+#define JOB_PMCPLAT_LEADER "Operations Leader"
+#define JOB_PMCPLAT_FTL "Team Leader"
+#define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
+#define JOB_PMCPLAT_STANDARD "Tactical Unit"
+#define JOB_PMC_MEDIC "Medical Specialist"
+
+
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
 #define JOB_CONTRACTOR_ST "VAIPO Mercenary"

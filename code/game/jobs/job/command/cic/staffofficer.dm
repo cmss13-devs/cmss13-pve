@@ -78,5 +78,12 @@ AddTimelock(/datum/job/command/bridge, list(
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
 
+/datum/job/command/bridge/pmc
+	title = JOB_PMCPLAT_OW
+// todo: funny AR goggles perma cyan 	gear_preset =
+// todo:	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+
+	job_options = list(FIRST_LT_VARIANT = "OVERWATCH", SECOND_LT_VARIANT = "OVERLORD")
+
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT
