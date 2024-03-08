@@ -54,4 +54,14 @@ AddTimelock(/datum/job/marine/tl, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/tl/ai/upp
 
+/datum/job/marine/tl/ai/pmc
+	title = JOB_PMCPLAT_FTL
+	gear_preset = /datum/equipment_preset/uscm/pmc/tl
+
+/obj/effect/landmark/start/marine/tl/pmc
+	name = JOB_PMCPLAT_FTL
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/tl/ai/pmc
+
+
 #undef SGT_VARIANT

@@ -78,12 +78,18 @@ AddTimelock(/datum/job/command/bridge, list(
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
 
-/datum/job/command/bridge/pmc
+/datum/job/command/bridge/ai/pmc
 	title = JOB_PMCPLAT_OW
 // todo: funny AR goggles perma cyan 	gear_preset =
-// todo:	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+// todo: above	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 
 	job_options = list(FIRST_LT_VARIANT = "OVERWATCH", SECOND_LT_VARIANT = "OVERLORD")
+
+/obj/effect/landmark/start/bridge/pmc
+	name = JOB_PMCPLAT_OW
+	job = /datum/job/command/bridge/ai/pmc
+	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are OVERWATCH, a highly-advanced AGI created by the Company to direct and lead the crew under you.</a> You are in charge of logistics and the overwatch system. You walk through the thin-realm, the realm of data, as well as the thick world, being able to inhabit special synthetic shells."
+
 
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT

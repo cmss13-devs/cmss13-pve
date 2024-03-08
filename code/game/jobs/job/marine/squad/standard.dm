@@ -68,5 +68,12 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+/datum/job/marine/standard/ai/pmc
+	title = JOB_PMCPLAT_STANDARD
+	squad = SQUAD_PMCPLT
+	job = /datum/equipment_preset/uscm/pmc
+
+/obj/effect/landmark/start/marine/pmc
+
 #undef PVT_VARIANT
 #undef PFC_VARIANT
