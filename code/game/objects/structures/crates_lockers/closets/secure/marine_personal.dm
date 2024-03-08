@@ -9,7 +9,7 @@
 
 /obj/structure/closet/secure_closet/marine_personal/get_examine_text(mob/user)
 	. = ..()
-	. += SPAN_NOTICE("It has a name tag[owner ? ": [owner]." : ". They are sill in hypersleep..."]")
+	. += SPAN_NOTICE("It has a name tag[owner ? ": [owner]." : ". They are still in hypersleep..."]")
 
 /obj/structure/closet/secure_closet/marine_personal/Initialize(mapload, ...)
 	. = ..()
