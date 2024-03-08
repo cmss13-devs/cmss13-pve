@@ -57,6 +57,7 @@ AddTimelock(/datum/job/marine/tl, list(
 /datum/job/marine/tl/ai/pmc
 	title = JOB_PMCPLAT_FTL
 	gear_preset = /datum/equipment_preset/uscm/pmc/tl
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/tl
 
 /obj/effect/landmark/start/marine/tl/pmc
 	name = JOB_PMCPLAT_FTL
