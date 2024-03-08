@@ -284,6 +284,7 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
 	))
+	AddComponent(/datum/component/iff_fire_prevention)
 
 /datum/action/item_action/toggle_iff_pkp/New(Target, obj/item/holder)
 	. = ..()
@@ -320,6 +321,7 @@
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
 	if(!iff_enabled)
 		remove_bullet_trait("iff")
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
 /obj/effect/syringe_gun_dummy
 	name = ""
