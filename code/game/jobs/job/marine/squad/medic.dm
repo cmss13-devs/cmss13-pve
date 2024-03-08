@@ -98,7 +98,7 @@ AddTimelock(/datum/job/marine/medic, list(
 
 /obj/effect/landmark/start/marine/medic/pmc
 	name = JOB_PMC_MEDIC
-	squad = SQUAD_PMCPLAT
+	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/medic/ai/pmc
 
 #undef LCPL_VARIANT

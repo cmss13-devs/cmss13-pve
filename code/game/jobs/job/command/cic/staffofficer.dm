@@ -88,8 +88,6 @@ AddTimelock(/datum/job/command/bridge, list(
 /obj/effect/landmark/start/bridge/pmc
 	name = JOB_PMCPLAT_OW
 	job = /datum/job/command/bridge/ai/pmc
-	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are OVERWATCH, a highly-advanced AGI created by the Company to direct and lead the crew under you.</a> You are in charge of logistics and the overwatch system. You walk through the thin-realm, the realm of data, as well as the thick world, being able to inhabit special synthetic shells."
-
 
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT
