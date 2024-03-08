@@ -70,10 +70,13 @@
 
 /datum/job/marine/standard/ai/pmc
 	title = JOB_PMCPLAT_STANDARD
-	squad = SQUAD_PMCPLT
-	job = /datum/equipment_preset/uscm/pmc
+	gear_preset = /datum/equipment_preset/uscm/pmc
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc
 
 /obj/effect/landmark/start/marine/pmc
+	name = JOB_PMCPLAT_STANDARD
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/standard/ai/pmc
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

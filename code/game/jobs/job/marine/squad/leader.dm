@@ -66,11 +66,11 @@ AddTimelock(/datum/job/marine/leader, list(
 
 /datum/job/marine/leader/ai/pmc
 	title = JOB_PMCPLAT_LEADER
-	gear_preset =
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	gear_preset = /datum/equipment_preset/uscm/pmc/sl
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sl
 
-/obj/effect/landmark/start/marine/leader/upp
-	name = JOB_SQUAD_LEADER_UPP
+/obj/effect/landmark/start/marine/leader/pmc
+	name = JOB_PMCPLAT_LEADER
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/leader/ai/pmc
 
