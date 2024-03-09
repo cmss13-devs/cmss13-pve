@@ -343,9 +343,8 @@
 /area/golden_arrow/cryo_cells)
 "dv" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/emails{
-	pixel_y = 4;
-	dir = 4
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2752,6 +2751,12 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
+"zO" = (
+/obj/item/map/sorokyne_map,
+/turf/open/floor/almayer_hull{
+	icon_state = "outerhull_dir"
+	},
+/area/space)
 "zU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
@@ -16207,7 +16212,7 @@ pB
 HL
 HL
 HL
-Bc
+zO
 Cr
 Cr
 Cr
