@@ -1,0 +1,9 @@
+{
+    "map_name": "PMV ",
+    "map_path": "map_files/lead_hawk",
+    "map_file": "lead_hawk.dmm",
+    "webmap_url": "GoldenArrow", //not used
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/lead_hawk/", //not used
+    "platoon": "/datum/squad/pmc/pve"
+}
