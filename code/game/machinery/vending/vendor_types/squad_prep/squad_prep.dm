@@ -571,9 +571,7 @@
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
-		list("Poncho (green)", round(scale * 5), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
-		list("Poncho (black)", round(scale * 5), /obj/item/clothing/accessory/poncho/black, VENDOR_ITEM_REGULAR),
-		list("Poncho (brown)", round(scale * 5), /obj/item/clothing/accessory/poncho/brown, VENDOR_ITEM_REGULAR),
+		list("Poncho (camo comforming)", round(scale * 10), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
 		list("Durag (black)", round(scale * 5), /obj/item/clothing/head/durag/black, VENDOR_ITEM_REGULAR),
 		list("Durag (camo)", round(scale * 5), /obj/item/clothing/head/durag/black, VENDOR_ITEM_REGULAR),
 		list("Bandana (green)", round(scale * 5), /obj/item/clothing/head/cmbandana, VENDOR_ITEM_REGULAR),
