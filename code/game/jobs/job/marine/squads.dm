@@ -296,6 +296,17 @@
 	name = "Taskforce White"
 	locked = TRUE
 	faction = FACTION_WY_DEATHSQUAD
+
+
+//##############################
+
+/datum/squad/pmc/pve
+	name = SQUAD_PMCPLT
+	chat_color = "#ccffe9"
+	minimap_color = MINIMAP_SQUAD_PMC
+	use_stripe_overlay = FALSE
+
+
 //###############################
 /datum/squad/clf
 	name = "Root"
