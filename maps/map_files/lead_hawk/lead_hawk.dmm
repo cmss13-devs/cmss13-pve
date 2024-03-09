@@ -107,6 +107,12 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"aR" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/space)
 "aU" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -131,9 +137,8 @@
 	},
 /area/lead_hawk/medical)
 "bi" = (
-/obj/structure/machinery/cryopod,
-/turf/open/floor/almayer{
-	icon_state = "cargo"
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/space)
 "bj" = (
@@ -172,6 +177,16 @@
 	icon_state = "whitetan"
 	},
 /area/lead_hawk/ares)
+"bA" = (
+/obj/structure/sign/safety/maint{
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/space)
 "bG" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -580,6 +595,19 @@
 	icon_state = "whitetan"
 	},
 /area/lead_hawk/ares)
+"gE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/vehicle/powerloader{
+	desc = "An abstract representation of the digital tasks and automation required to load an orbital-cannon slug.";
+	name = "\improper Abstract Virtual Loader"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "gR" = (
 /turf/open/space/basic,
 /area/space)
@@ -666,6 +694,15 @@
 	icon_state = "w-y0"
 	},
 /area/lead_hawk/cryo_cell)
+"hG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "hO" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
@@ -770,10 +807,8 @@
 	},
 /area/lead_hawk/hangar)
 "iZ" = (
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/space)
 "jb" = (
@@ -853,6 +888,12 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"jP" = (
+/turf/open/floor/almayer_hull{
+	dir = 8;
+	icon_state = "outerhull_dir"
+	},
+/area/space)
 "jT" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_south"
@@ -880,12 +921,7 @@
 	},
 /area/lead_hawk/cryo_cell)
 "kc" = (
-/obj/structure/machinery/cryopod{
-	pixel_y = 6
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/closed/wall/dev/reinforced/hull,
 /area/space)
 "kg" = (
 /mob/living/silicon/decoy/ship_ai{
@@ -941,6 +977,12 @@
 	icon_state = "red"
 	},
 /area/lead_hawk/engineer)
+"kH" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
 "kI" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer{
@@ -1330,10 +1372,7 @@
 	},
 /area/lead_hawk/engineer)
 "qd" = (
-/obj/structure/machinery/cryopod/right,
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer_hull,
 /area/space)
 "qe" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -1365,14 +1404,13 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/cryo_cell)
-"qt" = (
-/obj/structure/machinery/cryopod,
-/obj/structure/machinery/light{
-	dir = 8
-	},
+"qr" = (
 /turf/open/floor/almayer{
-	icon_state = "cargo"
+	icon_state = "red"
 	},
+/area/space)
+"qt" = (
+/turf/closed/wall/almayer/outer,
 /area/space)
 "qx" = (
 /obj/structure/machinery/iv_drip,
@@ -1445,12 +1483,12 @@
 	},
 /area/lead_hawk/medical)
 "qX" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
+/turf/open/floor/plating/almayer,
+/area/space)
+"rc" = (
+/obj/structure/surface/rack,
 /turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "cargo_arrow"
+	icon_state = "red"
 	},
 /area/space)
 "rg" = (
@@ -1523,15 +1561,25 @@
 	},
 /area/lead_hawk/ares)
 "ss" = (
-/obj/effect/landmark/start/marine/tl/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/almayer,
 /area/space)
 "sA" = (
 /obj/structure/foamed_metal,
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
 /area/lead_hawk/ares)
+"sF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "sM" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/prop/helmetgarb/gunoil{
@@ -1588,6 +1636,13 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"tg" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/built,
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/space)
 "tl" = (
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
@@ -1773,6 +1828,9 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/squad_theta)
+"vr" = (
+/turf/open/floor/almayer,
+/area/space)
 "vx" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/corsat{
@@ -1998,12 +2056,11 @@
 	},
 /area/lead_hawk/hangar)
 "yj" = (
-/obj/structure/machinery/cryopod{
-	layer = 3.1;
-	pixel_y = 13
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
 /turf/open/floor/almayer{
-	icon_state = "cargo"
+	icon_state = "plate"
 	},
 /area/space)
 "yl" = (
@@ -2063,10 +2120,19 @@
 /turf/open/floor/plating,
 /area/lead_hawk/hangar)
 "yX" = (
-/turf/closed/wall/almayer/white/hull,
+/turf/open/floor/almayer{
+	dir = 4;
+	icon_state = "red"
+	},
 /area/space)
 "zb" = (
-/turf/closed/wall/almayer/white,
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	unacidable = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/space)
 "zn" = (
 /turf/open/floor/corsat{
@@ -2130,12 +2196,7 @@
 	},
 /area/lead_hawk/medical)
 "zY" = (
-/obj/structure/machinery/cryopod/right{
-	pixel_y = 6
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "Ad" = (
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
@@ -2603,9 +2664,10 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk)
 "EY" = (
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
 /area/space)
 "Fa" = (
 /turf/open/floor/corsat{
@@ -2748,9 +2810,9 @@
 /turf/open/floor/plating,
 /area/space)
 "Hb" = (
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
 /area/space)
 "Hj" = (
 /obj/structure/largecrate{
@@ -2921,9 +2983,10 @@
 	},
 /area/lead_hawk/engineer)
 "Jn" = (
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/prop/almayer/cannon_cables,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
 /area/space)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3131,12 +3194,9 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk/ares)
 "MB" = (
-/obj/structure/machinery/cryopod/right{
-	layer = 3.1;
-	pixel_y = 13
-	},
 /turf/open/floor/almayer{
-	icon_state = "cargo"
+	dir = 4;
+	icon_state = "redcorner"
 	},
 /area/space)
 "MC" = (
@@ -3189,13 +3249,8 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
 "NR" = (
-/obj/structure/machinery/cryopod/right,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/obj/structure/window/framed/almayer/hull,
+/turf/open/floor/plating,
 /area/space)
 "Of" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -3357,9 +3412,10 @@
 	},
 /area/lead_hawk/engineer)
 "PZ" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/orbital_cannon{
+	density = 0
+	},
+/turf/open/floor/plating/almayer,
 /area/space)
 "Qk" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -3572,9 +3628,11 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk)
 "Sw" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/computer/orbital_cannon_console,
+/obj/structure/bed/chair/ob_chair,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
 /area/space)
 "Sx" = (
 /obj/effect/decal/warning_stripes{
@@ -3854,6 +3912,15 @@
 	icon_state = "green"
 	},
 /area/lead_hawk/medical)
+"VE" = (
+/obj/structure/sign/safety/fire_haz{
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/space)
 "VL" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
@@ -4002,9 +4069,10 @@
 	},
 /area/lead_hawk/hangar)
 "XI" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/prop/almayer/cannon_cable_connector,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
 /area/space)
 "XP" = (
 /turf/open/floor/corsat{
@@ -9827,15 +9895,15 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qd
+qt
+zb
+zb
+qt
+qd
+qd
+qd
+jP
 gR
 gR
 gR
@@ -9979,15 +10047,15 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qd
+qt
+zY
+zY
+qt
+qd
+qd
+qd
+qt
 gR
 gR
 gR
@@ -10131,15 +10199,15 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qt
+qt
+zb
+zb
+qt
+NR
+NR
+NR
+qt
 gR
 gR
 gR
@@ -10283,15 +10351,15 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qt
+qX
+EY
+EY
+Hb
+PZ
+gE
+bA
+qt
 gR
 gR
 gR
@@ -10435,15 +10503,15 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+qt
+ss
+EY
+EY
+Hb
+qX
+sF
+VE
+qt
 gR
 gR
 gR
@@ -10586,16 +10654,16 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+kc
+qt
+qX
+EY
+EY
+Hb
+Sw
+sF
+qr
+qt
 gR
 gR
 gR
@@ -10738,16 +10806,16 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+kc
+qt
+qX
+EY
+EY
+Jn
+XI
+sF
+tg
+qt
 gR
 gR
 gR
@@ -10890,16 +10958,16 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+kc
+qt
+yj
+yj
+yj
+yj
+yj
+hG
+rc
+qt
 gR
 gR
 gR
@@ -11042,16 +11110,16 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+kc
+qt
+yX
+yX
+yX
+MB
+vr
+vr
+aR
+qt
 gR
 gR
 gR
@@ -11648,8 +11716,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+bi
+iZ
 Wn
 Xl
 Xl
@@ -11799,9 +11867,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+bi
+iZ
+iZ
 Wn
 Xl
 Xl
@@ -11951,9 +12019,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+iZ
+iZ
+iZ
 QU
 Ee
 Ee
@@ -12103,9 +12171,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+bi
+iZ
+iZ
 Wn
 Xl
 Xl
@@ -12256,8 +12324,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+bi
+iZ
 Wn
 Xl
 Xl
@@ -17008,7 +17076,7 @@ gR
 mH
 hb
 oN
-oQ
+kH
 oQ
 QO
 hb
@@ -19331,13 +19399,13 @@ gR
 gR
 gR
 gR
-yX
-yX
-yX
-yX
-yX
-yX
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -19483,13 +19551,13 @@ gR
 gR
 gR
 gR
-zb
-bi
-yj
-qt
-yj
-kc
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -19635,13 +19703,13 @@ gR
 gR
 gR
 gR
-qX
-Jn
-Jn
-iZ
-Jn
-Jn
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -19787,13 +19855,13 @@ gR
 gR
 gR
 gR
-qX
-Sw
-EY
-iZ
-Hb
-Hb
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -19939,13 +20007,13 @@ gR
 gR
 gR
 gR
-zb
-NR
-MB
-qd
-MB
-zY
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20091,13 +20159,13 @@ gR
 gR
 gR
 gR
-zb
-zb
-zb
-zb
-zb
-zb
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20243,13 +20311,13 @@ gR
 gR
 gR
 gR
-zb
-qt
-yj
-bi
-yj
-kc
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20395,13 +20463,13 @@ gR
 gR
 gR
 gR
-qX
-Jn
-Jn
-iZ
-Jn
-Jn
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20547,13 +20615,13 @@ gR
 gR
 gR
 gR
-qX
-PZ
-PZ
-iZ
-Jn
-Jn
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20699,13 +20767,13 @@ gR
 gR
 gR
 gR
-zb
-qd
-MB
-NR
-MB
-zY
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -20851,13 +20919,13 @@ gR
 gR
 gR
 gR
-zb
-zb
-zb
-zb
-zb
-zb
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -21003,13 +21071,13 @@ gR
 gR
 gR
 gR
-zb
-qt
-yj
-bi
-yj
-kc
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -21155,13 +21223,13 @@ gR
 gR
 gR
 gR
-qX
-ss
-ss
-iZ
-Jn
-Jn
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -21307,13 +21375,13 @@ gR
 gR
 gR
 gR
-qX
-Jn
-XI
-iZ
-Jn
-Jn
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -21459,13 +21527,13 @@ gR
 gR
 gR
 gR
-zb
-qd
-MB
-NR
-MB
-zY
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
@@ -21611,13 +21679,13 @@ gR
 gR
 gR
 gR
-yX
-yX
-yX
-yX
-yX
-yX
-yX
+gR
+gR
+gR
+gR
+gR
+gR
+gR
 gR
 gR
 gR
