@@ -249,6 +249,14 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/ares)
+"co" = (
+/obj/structure/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "ct" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/box/cups,
@@ -439,6 +447,12 @@
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
 /area/lead_hawk/squad_theta)
+"eo" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
 "ew" = (
 /turf/closed/wall/r_wall/biodome,
 /area/lead_hawk/hangar)
@@ -535,6 +549,9 @@
 	},
 /area/lead_hawk/engineer)
 "fz" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -625,6 +642,20 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/cryo_cell)
+"hk" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "hq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -969,6 +1000,12 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/ares)
+"kD" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "kF" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -978,7 +1015,7 @@
 	},
 /area/lead_hawk/engineer)
 "kH" = (
-/obj/effect/landmark/observer_start,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1184,6 +1221,9 @@
 	pixel_x = 3;
 	pixel_y = 8
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -1335,6 +1375,22 @@
 	icon_state = "whitetan"
 	},
 /area/lead_hawk/ares)
+"pv" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"py" = (
+/obj/structure/machinery/light/blue{
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
 "pz" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_west"
@@ -1566,6 +1622,10 @@
 	},
 /turf/open/floor/plating/almayer,
 /area/space)
+"sz" = (
+/obj/structure/machinery/light/small,
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
 "sA" = (
 /obj/structure/foamed_metal,
 /obj/structure/foamed_metal,
@@ -2547,6 +2607,15 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/ares)
+"DY" = (
+/obj/structure/machinery/light/blue{
+	dir = 1;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
 "DZ" = (
 /turf/closed/wall/r_wall/biodome,
 /area/lead_hawk/engineer)
@@ -3022,6 +3091,18 @@
 	icon_state = "green"
 	},
 /area/lead_hawk/medical)
+"Kd" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 8;
+	name = "Omega squad chair"
+	},
+/obj/structure/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "Ke" = (
 /turf/closed/wall/r_wall/biodome,
 /area/lead_hawk/briefing)
@@ -3422,6 +3503,12 @@
 /obj/item/tool/pen/fountain,
 /turf/open/floor/carpet,
 /area/lead_hawk/briefing)
+"Qm" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
 "Qq" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -3903,6 +3990,14 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"Vv" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "VB" = (
 /obj/structure/machinery/cryo_cell{
 	layer = 3.20
@@ -12663,7 +12758,7 @@ zn
 nR
 iz
 FV
-Wb
+Kd
 Wb
 lc
 lj
@@ -12979,7 +13074,7 @@ uE
 uE
 KO
 KO
-uE
+kD
 FV
 ky
 ky
@@ -13278,7 +13373,7 @@ JJ
 fQ
 cD
 cD
-uE
+co
 lm
 uE
 jX
@@ -13894,7 +13989,7 @@ It
 It
 tc
 TW
-TW
+Vv
 It
 It
 It
@@ -14348,7 +14443,7 @@ lV
 TW
 It
 It
-It
+pv
 It
 It
 It
@@ -15096,7 +15191,7 @@ nr
 Ra
 Ra
 mH
-or
+eo
 or
 or
 iM
@@ -15105,13 +15200,13 @@ oQ
 Ho
 or
 or
-or
+sz
 mH
 em
 tc
 Of
 kw
-kw
+hk
 kw
 kw
 QH
@@ -16012,8 +16107,8 @@ KN
 mH
 mH
 mH
-oQ
-oQ
+DY
+py
 mH
 mH
 mH
@@ -16924,8 +17019,8 @@ gR
 mH
 mH
 mH
-oQ
-oQ
+DY
+py
 mH
 mH
 mH
@@ -17228,7 +17323,7 @@ gR
 mH
 mH
 mH
-oQ
+Qm
 oQ
 mH
 mH

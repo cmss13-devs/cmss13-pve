@@ -300,11 +300,12 @@
 
 //##############################
 
-/datum/squad/pmc/pve
+/datum/squad/marine/pmc
 	name = SQUAD_PMCPLT
 	chat_color = "#ccffe9"
 	minimap_color = MINIMAP_SQUAD_PMC
 	use_stripe_overlay = FALSE
+	usable = TRUE
 
 
 //###############################
