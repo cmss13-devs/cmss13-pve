@@ -873,6 +873,7 @@
 	},
 /area/golden_arrow/platoon_commander_rooms)
 "hj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "bluefull"
 	},
@@ -1576,6 +1577,18 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/squad_one)
+"nH" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "nX" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -2733,10 +2746,10 @@
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine,
-/obj/item/clothing/under/marine,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2752,11 +2765,11 @@
 	},
 /area/golden_arrow/engineering)
 "zO" = (
-/obj/item/map/sorokyne_map,
-/turf/open/floor/almayer_hull{
-	icon_state = "outerhull_dir"
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
 	},
-/area/space)
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "zU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
@@ -3860,6 +3873,13 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/canteen)
+"Ly" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "LC" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -4192,10 +4212,10 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine,
-/obj/item/clothing/under/marine,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4717,10 +4737,10 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine,
-/obj/item/clothing/under/marine,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Wf" = (
@@ -10262,7 +10282,7 @@ Ni
 Ni
 Ni
 Ni
-Ni
+zO
 Wk
 qF
 sw
@@ -10414,7 +10434,7 @@ Fg
 Fg
 PY
 pu
-pu
+lq
 pu
 gd
 Nj
@@ -10566,7 +10586,7 @@ In
 In
 ot
 pS
-pS
+nH
 pS
 Vz
 rA
@@ -10718,7 +10738,7 @@ Ps
 Yh
 Nu
 ou
-kF
+Sz
 ou
 Vz
 ro
@@ -10870,7 +10890,7 @@ Ps
 ae
 FP
 hj
-kF
+Ly
 Et
 Vz
 AD
@@ -16212,7 +16232,7 @@ pB
 HL
 HL
 HL
-zO
+Bc
 Cr
 Cr
 Cr

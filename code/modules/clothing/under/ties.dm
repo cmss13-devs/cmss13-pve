@@ -410,27 +410,34 @@
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
 	icon_state = "poncho"
 	slot = ACCESSORY_SLOT_PONCHO
+	var/has_variation = TRUE
 
 /obj/item/clothing/accessory/poncho/Initialize()
 	. = ..()
-	select_gamemode_skin(type)
-	inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
-	update_icon()
+	if(has_variation)
+		select_gamemode_skin(type)
+		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+		update_icon()
 
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/brown
 	icon_state = "d_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/black
 	icon_state = "u_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/blue
 	icon_state = "c_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/purple
 	icon_state = "s_poncho"
+	has_variation = FALSE
 
 
 //Ties that can store stuff

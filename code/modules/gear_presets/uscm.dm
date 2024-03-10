@@ -124,6 +124,14 @@
 	name = "FORECON Squad Rifleman"
 	paygrade = "ME3"
 
+/datum/equipment_preset/uscm/pfc/forecon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 	paygrade = "ME2"
 
@@ -183,6 +191,13 @@
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
 	paygrade = "ME5"
+
+/datum/equipment_preset/uscm/sg/forecon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/forecon/lesser_rank
 	paygrade = "ME4"
@@ -402,6 +417,13 @@
 	assignment = "Squad Corpsman"
 	paygrade = "ME5"
 
+/datum/equipment_preset/uscm/medic/forecon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/medic/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/medic/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
 /datum/equipment_preset/uscm/medic/forecon/lesser_rank
 	paygrade = "ME4"
 
@@ -453,6 +475,13 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
+
+/datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /*****************************************************************************************************/
 
@@ -541,6 +570,13 @@
 	name = "FORECON Squad Sergeant"
 	assignment = "Squad Sergeant"
 	paygrade = "ME8"
+
+/datum/equipment_preset/uscm/leader/forecon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	paygrade = "ME7"

@@ -48,12 +48,18 @@
 		if(findtext(icon_state, i, 1, 3))
 			flags_jumpsuit |= UNIFORM_DO_NOT_HIDE_ACCESSORIES
 
+/obj/item/clothing/under/marine/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
 	desc = "Standard-issue Marine hospital corpsman fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
 	icon_state = "marine_medic"
 	worn_state = "marine_medic"
 	specialty = "USCM Hospital Corpsman"
+
+/obj/item/clothing/under/marine/medic/standard
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/engineer
 	name = "\improper USCM ComTech uniform"
