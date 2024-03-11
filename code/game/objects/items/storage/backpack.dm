@@ -414,6 +414,9 @@
 	xeno_icon_state = "marinepack"
 	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
+/obj/item/storage/backpack/marine/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/backpack/marine/ammo_rack
 	name = "\improper IMP ammo rack"
 	desc = "A bare IMP frame with buckles designed to hold multiple ammo cans, but can fit any cumbersome box thanks to Marine ingenuity. Helps you lug around extra rounds or supplies."
@@ -452,6 +455,9 @@
 	xeno_icon_state = "medicpack"
 	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
+/obj/item/storage/backpack/marine/medic/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/backpack/marine/medic/upp
 	name = "\improper UPP corpsman backpack"
 	desc = "Uncommon issue backpack worn by UPP medics from isolated sectors. You can swear you can see a faded USCM symbol."
@@ -479,6 +485,9 @@
 	max_storage_space = 15
 	xeno_types = null
 
+/obj/item/storage/backpack/marine/satchel/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/backpack/marine/satchel/big //wacky squad marine loadout item, its the IO backpack.
 	name = "\improper USCM logistics IMP backpack"
 	desc = "A standard-issue backpack worn by logistics personnel. It is occasionally issued to combat personnel for longer term expeditions and deep space incursions."
@@ -491,6 +500,9 @@
 	name = "\improper USCM corpsman satchel"
 	desc = "A heavy-duty satchel used by USCM medics. It sacrifices capacity for usability. A small patch is sewn to the top flap."
 	icon_state = "marinesatch_medic"
+
+/obj/item/storage/backpack/marine/satchel/medic/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/backpack/marine/satchel/tech
 	name = "\improper USCM technician chestrig"
@@ -626,6 +638,9 @@
 /obj/item/storage/backpack/general_belt/dropped(mob/user)
 	mouse_opacity = initial(mouse_opacity)
 	..()
+
+/obj/item/storage/backpack/general_belt/standard
+	can_hold_skill = FALSE
 
 /obj/item/storage/backpack/general_belt/upp
 	name = "\improper Type 48-M general utility pouch"
