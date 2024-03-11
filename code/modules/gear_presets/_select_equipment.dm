@@ -153,10 +153,8 @@
 		load_gear(new_human, mob_client)
 	load_id(new_human, mob_client)
 	load_status(new_human, mob_client)
-	if(is_ground_level(new_human.z))
-		load_vanity(new_human, mob_client)
-	else
-		spawn_vanity_in_personal_lockers(new_human, mob_client)
+	INVOKE_NEXT_TICK(src, PROC_REF(create_vanity), new_human, mob_client)
+
 	load_traits(new_human, mob_client)
 	if(round_statistics && count_participant)
 		round_statistics.track_new_participant(faction)
@@ -170,6 +168,13 @@
 	new_human.marine_buyable_categories = MARINE_CAN_BUY_ALL
 	new_human.hud_set_squad()
 	new_human.add_to_all_mob_huds()
+
+/datum/equipment_preset/proc/do_vanity(mob/living/carbon/human/new_human, client/mob_client)
+	var/turf/T = get_turf(new_human)
+	if(is_mainship_level(T.z))
+		spawn_vanity_in_personal_lockers(new_human, mob_client)
+	else
+		load_vanity(new_human, mob_client)
 
 /datum/equipment_preset/proc/load_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
