@@ -4,29 +4,28 @@
 /datum/equipment_preset/uscm/pmc
 	name = "Tactical Unit"
 	paygrade = "PMC"
-//	access = list(ACCESS_PMC_GENERAL)
-	access = list(ACCESS_LIST_WY_ALL)
+	access = list(ACCESS_WY_GENERAL)
 	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	faction_group = list(FACTION_LIST_WY)
 	faction = FACTION_PMC
 
 /datum/equipment_preset/uscm/pmc/sl
-	name = "Team Leader"
+	name = "Operation Leader"
 	paygrade = "PMC-TL"
-//	access = list(ACCESS_PMC_GENERAL, ACCESS_PMC_TLPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
 	paygrade = "PMC-OP"
-//	access = list(ACCESS_PMC_GENERAL, ACCESS_PMC_TLPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ARMORY)
 
 /datum/equipment_preset/uscm/pmc/sg
-	name = "Team Leader"
+	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
-//	access = list(ACCESS_PMC_GENERAL, ACCESS_PMC_TLPREP)
+	access = list(ACCESS_WY_GENERAL,ACCESS_WY_ENGINEERING)
 
 /datum/equipment_preset/uscm/pmc/med
-	name = "Team Leader"
+	name = "Medical Specialist"
 	paygrade = "PMC-MS"
-//	access = list(ACCESS_PMC_GENERAL, ACCESS_PMC_TLPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_PMC_TLPREP, ACCESS_WY_MEDICAL)
 

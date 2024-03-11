@@ -112,7 +112,15 @@
 /turf/open/floor/almayer{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
+"aT" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "aU" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -186,7 +194,7 @@
 	dir = 10;
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "bG" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -196,6 +204,15 @@
 	icon_state = "red"
 	},
 /area/lead_hawk/engineer)
+"bI" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk)
 "bJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -606,6 +623,19 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"gl" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
+/turf/open/floor/wood/ship,
+/area/lead_hawk)
+"gn" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/item/ammo_box/rounds,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
 "gp" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -624,7 +654,23 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk)
+"gO" = (
+/obj/structure/closet/secure_closet{
+	name = "heavy weapons specialist locker";
+	req_one_access_txt = "204"
+	},
+/obj/item/storage/belt/marine/smartgunner,
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
 "gR" = (
 /turf/open/space/basic,
 /area/space)
@@ -634,6 +680,14 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
+"gZ" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/briefing)
 "hb" = (
 /obj/structure/machinery/cryopod{
 	dir = 4
@@ -733,7 +787,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk)
 "hO" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
@@ -843,8 +897,8 @@
 	},
 /area/space)
 "jb" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 1
+/obj/structure/closet/secure_closet{
+	name = "team leader locker"
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -924,7 +978,7 @@
 	dir = 8;
 	icon_state = "outerhull_dir"
 	},
-/area/space)
+/area/lead_hawk)
 "jT" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_south"
@@ -1429,7 +1483,7 @@
 /area/lead_hawk/engineer)
 "qd" = (
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/lead_hawk)
 "qe" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -1464,10 +1518,10 @@
 /turf/open/floor/almayer{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "qt" = (
 /turf/closed/wall/almayer/outer,
-/area/space)
+/area/lead_hawk)
 "qx" = (
 /obj/structure/machinery/iv_drip,
 /obj/structure/sign/nosmoking_2{
@@ -1530,6 +1584,15 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"qS" = (
+/obj/structure/closet/secure_closet{
+	name = "team leader locker";
+	req_one_access_txt = "212"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
 "qW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1540,13 +1603,13 @@
 /area/lead_hawk/medical)
 "qX" = (
 /turf/open/floor/plating/almayer,
-/area/space)
+/area/lead_hawk)
 "rc" = (
 /obj/structure/surface/rack,
 /turf/open/floor/almayer{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "rg" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_west"
@@ -1621,7 +1684,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/almayer,
-/area/space)
+/area/lead_hawk)
 "sz" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating/plating_catwalk,
@@ -1639,7 +1702,17 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk)
+"sK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
 "sM" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/prop/helmetgarb/gunoil{
@@ -1702,7 +1775,7 @@
 /turf/open/floor/almayer{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "tl" = (
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
@@ -1742,7 +1815,7 @@
 "tD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
-	name = "\improper Theta Squad Preparation"
+	name = "\improper Omega Squad Preparation"
 	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -1890,7 +1963,7 @@
 /area/lead_hawk/squad_theta)
 "vr" = (
 /turf/open/floor/almayer,
-/area/space)
+/area/lead_hawk)
 "vx" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/corsat{
@@ -2037,6 +2110,22 @@
 	icon_state = "yellow"
 	},
 /area/lead_hawk/engineer)
+"wQ" = (
+/obj/structure/closet/secure_closet{
+	name = "heavy weapons specialist locker";
+	req_one_access_txt = "204"
+	},
+/obj/item/storage/belt/marine/smartgunner,
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
 "wV" = (
 /obj/item/storage/large_holster/m39,
 /obj/item/weapon/gun/smg/m39/elite/pve,
@@ -2056,6 +2145,26 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"xf" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/structure/closet{
+	name = "operation leader closet"
+	},
+/obj/item/weapon/gun/rifle/m46c,
+/turf/open/floor/wood/ship,
+/area/lead_hawk)
+"xg" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
 "xx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2115,6 +2224,13 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"ya" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
 "yj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2122,7 +2238,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk)
 "yl" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -2132,7 +2248,10 @@
 	},
 /area/lead_hawk/hangar)
 "yn" = (
-/obj/structure/machinery/door/airlock/almayer/generic/glass,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	name = "\improper Operation Leader";
+	req_one_access_txt = "216"
+	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
@@ -2184,7 +2303,7 @@
 	dir = 4;
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "zb" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
@@ -2193,7 +2312,17 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/space)
+/area/lead_hawk)
+"zj" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
 "zn" = (
 /turf/open/floor/corsat{
 	icon_state = "yellowcorner"
@@ -2201,7 +2330,9 @@
 /area/lead_hawk/engineer)
 "zt" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	dir = 1
+	dir = 1;
+	req_one_access = null;
+	req_one_access_txt = "202"
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
@@ -2257,7 +2388,7 @@
 /area/lead_hawk/medical)
 "zY" = (
 /turf/open/floor/plating/plating_catwalk,
-/area/space)
+/area/lead_hawk)
 "Ad" = (
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
 /turf/open/floor/corsat{
@@ -2423,12 +2554,13 @@
 	},
 /area/lead_hawk/hangar)
 "CB" = (
-/obj/structure/machinery/door/airlock/almayer/security/reinforced{
-	dir = 2;
-	name = "\improper OVERLORD Airlock"
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
 	},
 /turf/open/floor/corsat{
-	icon_state = "marked"
+	dir = 8;
+	icon_state = "white"
 	},
 /area/lead_hawk/ares)
 "CD" = (
@@ -2698,6 +2830,16 @@
 "ED" = (
 /turf/open/floor/engine,
 /area/space)
+"EF" = (
+/obj/structure/machinery/door/airlock/almayer/security/reinforced{
+	dir = 2;
+	name = "\improper OVERLORD Airlock";
+	req_one_access_txt = "216"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/ares)
 "EJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/construction,
@@ -2737,7 +2879,7 @@
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
 	},
-/area/space)
+/area/lead_hawk)
 "Fa" = (
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -2771,6 +2913,11 @@
 /area/lead_hawk/cafeteria)
 "FJ" = (
 /obj/structure/bed/sofa/south/white/right,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -2878,11 +3025,19 @@
 /obj/structure/window/framed/corsat/hull/security,
 /turf/open/floor/plating,
 /area/space)
+"GY" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
 "Hb" = (
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
 	},
-/area/space)
+/area/lead_hawk)
 "Hj" = (
 /obj/structure/largecrate{
 	pixel_y = 16
@@ -3056,7 +3211,11 @@
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
 	},
-/area/space)
+/area/lead_hawk)
+"JH" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/closed/wall/almayer/white/hull,
+/area/lead_hawk/cryo_cell)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat{
@@ -3186,6 +3345,16 @@
 /obj/structure/window/framed/corsat,
 /turf/open/floor/plating,
 /area/lead_hawk/hangar)
+"Lc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
 "Li" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/juicer{
@@ -3279,7 +3448,7 @@
 	dir = 4;
 	icon_state = "redcorner"
 	},
-/area/space)
+/area/lead_hawk)
 "MC" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/paper_bin/wy,
@@ -3294,9 +3463,20 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"MM" = (
+/obj/item/weapon/gun/smartgun/dirty,
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cryo_cell)
 "MO" = (
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/lead_hawk/squad_omega)
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
 "Nm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3332,7 +3512,7 @@
 "NR" = (
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/plating,
-/area/space)
+/area/lead_hawk)
 "Of" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/prop/helmetgarb/compass{
@@ -3368,6 +3548,14 @@
 /area/lead_hawk/hangar)
 "OA" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"OJ" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
+	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
 "ON" = (
@@ -3497,7 +3685,7 @@
 	density = 0
 	},
 /turf/open/floor/plating/almayer,
-/area/space)
+/area/lead_hawk)
 "Qk" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/tool/pen/fountain,
@@ -3720,7 +3908,7 @@
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
 	},
-/area/space)
+/area/lead_hawk)
 "Sx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3755,6 +3943,17 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"SR" = (
+/obj/item/ammo_box/rounds{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/rounds{
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
 "SV" = (
@@ -3978,6 +4177,15 @@
 	icon_state = "arrow_west"
 	},
 /area/lead_hawk/cryo_cell)
+"Vh" = (
+/obj/structure/machinery/cryopod{
+	dir = 4
+	},
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
 "Vp" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_east"
@@ -4015,7 +4223,7 @@
 /turf/open/floor/almayer{
 	icon_state = "red"
 	},
-/area/space)
+/area/lead_hawk)
 "VL" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
@@ -4102,6 +4310,23 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"Xe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/medic/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
 "Xh" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 8
@@ -4168,7 +4393,7 @@
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
 	},
-/area/space)
+/area/lead_hawk)
 "XP" = (
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -8805,10 +9030,10 @@ gR
 gR
 St
 St
+gl
 ei
-ei
-ei
-ei
+bI
+xf
 rK
 Xi
 Xi
@@ -9268,7 +9493,7 @@ ei
 rK
 Bu
 Bu
-Bu
+zj
 Bu
 iy
 iy
@@ -10173,7 +10398,7 @@ Vb
 Vb
 Vb
 Vb
-Vb
+gZ
 Ke
 au
 Bu
@@ -10323,9 +10548,9 @@ Vb
 Uz
 tl
 tl
-tl
-tl
-tl
+OJ
+GY
+GY
 YJ
 eR
 fl
@@ -10475,7 +10700,7 @@ Vb
 Df
 hA
 TA
-TA
+xg
 hA
 tl
 YJ
@@ -11708,7 +11933,7 @@ eJ
 Kx
 Xi
 Xi
-Xi
+SR
 Ey
 HA
 ob
@@ -13535,7 +13760,7 @@ FV
 ky
 ky
 qx
-SF
+ya
 SF
 Ms
 TK
@@ -13677,7 +13902,7 @@ Zy
 fz
 Vd
 Vd
-fz
+gn
 qn
 lV
 TW
@@ -13971,7 +14196,7 @@ wz
 pR
 fr
 fr
-MO
+fr
 Tg
 DE
 UY
@@ -13988,7 +14213,7 @@ Rq
 It
 It
 tc
-TW
+aT
 Vv
 It
 It
@@ -14128,7 +14353,7 @@ UY
 UY
 UY
 aY
-lV
+MM
 UC
 Yl
 lg
@@ -14280,7 +14505,7 @@ UY
 UY
 UY
 UY
-lV
+MM
 UC
 Yl
 lg
@@ -14430,8 +14655,8 @@ fr
 vS
 UY
 UY
-Mi
-Mi
+qS
+wQ
 lV
 Sf
 ee
@@ -14440,7 +14665,7 @@ lg
 jT
 UC
 lV
-TW
+gO
 It
 It
 pv
@@ -15653,7 +15878,7 @@ hb
 bn
 Zr
 UV
-hq
+Xe
 hb
 mH
 gR
@@ -16109,7 +16334,7 @@ mH
 mH
 DY
 py
-mH
+JH
 mH
 mH
 gR
@@ -16262,7 +16487,7 @@ aq
 oQ
 oQ
 jZ
-hb
+Vh
 mH
 gR
 gR
@@ -16414,7 +16639,7 @@ mH
 oQ
 oQ
 mH
-mH
+JH
 mH
 gR
 gR
@@ -17455,8 +17680,8 @@ nd
 zH
 uP
 uP
-uP
-uP
+MO
+EF
 CB
 HT
 WD
@@ -17608,8 +17833,8 @@ nd
 nd
 nd
 nd
-nd
 Mw
+kA
 kA
 kA
 kA
@@ -17759,9 +17984,9 @@ nd
 Az
 ak
 ak
-ak
-ak
-CB
+Lc
+EF
+sK
 dM
 LJ
 kA
