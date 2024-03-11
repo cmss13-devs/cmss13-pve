@@ -212,7 +212,8 @@
 	var/watertemp = "normal" //freezing, normal, or boiling
 	var/mobpresent = 0 //true if there is a mob on the shower's loc, this is to ease process()
 	var/is_washing = 0
-	var/last_sound = 0
+
+	COOLDOWN_DECLARE(last_sound)
 
 /obj/structure/machinery/shower/Initialize()
 	. = ..()
@@ -380,8 +381,9 @@
 
 /obj/structure/machinery/shower/process()
 	if(!on) return
-	if(world.time > last_sound + 80)
-		last_sound = world.time
+
+	if(COOLDOWN_FINISHED(src, last_sound))
+		COOLDOWN_START(src, last_sound, 8 SECONDS)
 		playsound(src, "gurgle", 25, FALSE)
 	wash_floor()
 	if(!mobpresent) return
