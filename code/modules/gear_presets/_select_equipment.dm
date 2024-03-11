@@ -171,6 +171,8 @@
 
 /datum/equipment_preset/proc/do_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	var/turf/T = get_turf(new_human)
+	if(!T)
+		return
 	if(is_mainship_level(T.z))
 		spawn_vanity_in_personal_lockers(new_human, mob_client)
 	else
