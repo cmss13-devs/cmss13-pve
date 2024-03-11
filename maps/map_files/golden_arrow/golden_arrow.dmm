@@ -340,8 +340,12 @@
 /area/golden_arrow/platoon_commander_rooms)
 "bL" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Corpsman"
+	job = "Platoon Corpsman";
+	has_cryo_gear = 0
 	},
+/obj/item/clothing/shoes/marine/knife,
+/obj/item/device/radio/headset/almayer/marine,
+/obj/item/clothing/under/marine/medic,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
