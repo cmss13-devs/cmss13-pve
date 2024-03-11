@@ -7,7 +7,7 @@
 	disp_icon_state = "flamer"
 	activation_sounds = list('sound/weapons/vehicles/flamethrower.ogg')
 
-	health = 300
+	health = 2000
 	firing_arc = 120
 
 	origins = list(0, -2)
@@ -26,8 +26,8 @@
 		"8" = list(-3, 18)
 	)
 
-	scatter = 6
-	fire_delay = 3.0 SECONDS
+	scatter = 2
+	fire_delay = 1.5 SECONDS
 
 /obj/item/hardpoint/secondary/small_flamer/handle_fire(atom/target, mob/living/user, params)
 	var/turf/origin_turf = get_origin_turf()

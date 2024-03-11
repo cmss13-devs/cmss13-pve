@@ -264,6 +264,12 @@
 	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/marine/officer/intel)
 	specialty = "XM4 pattern intel"
 
+/obj/item/clothing/suit/storage/marine/rto/forecon
+	name = "\improper M3-R pattern recon armor"
+	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a leather pouch strapped to it for limited storage. Issued exclusively to FORECON units."
+	icon_state = "forecon"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
 /obj/item/clothing/suit/storage/marine/MP
 	name = "\improper M2 pattern MP armor"
 	desc = "A standard Colonial Marines M2 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage."
@@ -491,6 +497,9 @@
 /obj/item/clothing/suit/storage/marine/light/smooth
 	icon_state = "L6"
 	armor_variation = 0
+
+/obj/item/clothing/suit/storage/marine/light/standard
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/vest
 	name = "\improper M3-VL pattern ballistics vest"
