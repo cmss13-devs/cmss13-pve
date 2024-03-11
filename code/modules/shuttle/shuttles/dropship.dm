@@ -83,6 +83,8 @@
 
 /obj/docking_port/mobile/marine_dropship/enterTransit()
 	. = ..()
+	if(!destination)
+		in_flyby = TRUE
 	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
 		SSticker.mode.ds_first_drop(src)
 
