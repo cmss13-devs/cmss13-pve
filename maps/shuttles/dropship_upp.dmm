@@ -114,7 +114,9 @@
 	},
 /area/shuttle/ds_upp)
 "ld" = (
-/obj/effect/attach_point/weapon/midway/left_wing,
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_upp"
+	},
 /turf/closed/shuttle/ert{
 	icon_state = "upp201"
 	},
@@ -396,7 +398,9 @@
 /area/shuttle/ds_upp)
 "Jo" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
-/obj/effect/attach_point/weapon/midway/right_fore,
+/obj/effect/attach_point/weapon/midway/right_fore{
+	ship_tag = "dropship_upp"
+	},
 /turf/template_noop,
 /area/space)
 "Jy" = (
@@ -434,6 +438,14 @@
 "Nh" = (
 /turf/closed/shuttle/ert{
 	icon_state = "uppwall"
+	},
+/area/shuttle/ds_upp)
+"PQ" = (
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_upp"
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp251"
 	},
 /area/shuttle/ds_upp)
 "RL" = (
@@ -515,7 +527,9 @@
 /area/shuttle/ds_upp)
 "Xe" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
-/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/effect/attach_point/weapon/midway/left_fore{
+	ship_tag = "dropship_upp"
+	},
 /turf/template_noop,
 /area/space)
 "Xo" = (
@@ -705,7 +719,7 @@ Jy
 Jy
 Jy
 Jy
-Hk
+PQ
 wQ
 wQ
 xc

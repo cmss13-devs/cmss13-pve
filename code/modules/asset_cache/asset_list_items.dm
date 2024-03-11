@@ -284,6 +284,7 @@
 		list("Spc", "hudsquad_spec"),
 		list("SqSgt", "hudsquad_tl"),
 		list("PltSgt", "hudsquad_leader"),
+		list("RTO", "hudsquad_rto"),
 	)
 
 	for(var/datum/squad/marine/squad in RoleAuthority.squads)
