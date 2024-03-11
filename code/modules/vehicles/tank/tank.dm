@@ -65,8 +65,8 @@
 
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 0.5, // Acid melts the tank
-		"slash" = 1.6, // Slashing a massive, solid chunk of metal does very little except leave scratches
+		"acid" = 0.5,
+		"slash" = 1.6,
 		"bullet" = 0.4,
 		"explosive" = 0.8,
 		"blunt" = 0.8,
