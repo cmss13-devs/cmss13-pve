@@ -153,7 +153,7 @@
 		load_gear(new_human, mob_client)
 	load_id(new_human, mob_client)
 	load_status(new_human, mob_client)
-	INVOKE_NEXT_TICK(src, PROC_REF(create_vanity), new_human, mob_client)
+	INVOKE_NEXT_TICK(src, PROC_REF(do_vanity), new_human, mob_client)
 
 	load_traits(new_human, mob_client)
 	if(round_statistics && count_participant)
