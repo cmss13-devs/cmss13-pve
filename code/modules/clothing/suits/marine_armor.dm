@@ -435,6 +435,9 @@
 
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
+/obj/item/clothing/suit/storage/marine/smartgunner/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/suit/storage/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "A lightweight suit of carbon fiber body armor built for quick movement. Designed in a lovely forest green. Use it to toggle the built-in flashlight."
