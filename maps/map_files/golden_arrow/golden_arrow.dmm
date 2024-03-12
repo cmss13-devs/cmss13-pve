@@ -4853,7 +4853,7 @@
 /area/golden_arrow/prep_hallway)
 "CC" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/flamer,
+/obj/item/storage/box/guncase/flamer/special,
 /obj/item/explosive/grenade/smokebomb{
 	pixel_y = 14;
 	pixel_x = -5
@@ -5105,7 +5105,7 @@
 /area/golden_arrow/briefing)
 "Ei" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/flamer,
+/obj/item/storage/box/guncase/flamer/special,
 /obj/item/trash/cigbutt/cigarbutt{
 	pixel_y = 18
 	},
