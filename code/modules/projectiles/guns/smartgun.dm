@@ -13,6 +13,12 @@
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/smartgun
+
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/smartgun,
+		/obj/item/ammo_magazine/smartgun/holo_targetting,
+		/obj/item/ammo_magazine/smartgun/dirty,
+	)
 	flags_equip_slot = NO_FLAGS
 	w_class = SIZE_HUGE
 	force = 20
