@@ -258,6 +258,25 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/belt/medical/lifesaver/standard
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/medical/lifesaver/standard/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
+
 /obj/item/storage/belt/medical/lifesaver/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -467,6 +486,9 @@
 		/obj/item/ammo_magazine/smg,
 	)
 	has_gamemode_skin = TRUE
+
+/obj/item/storage/belt/marine/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/m41a/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -1098,6 +1120,9 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/belt/gun/m4a3/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/gun/m4a3/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
 	for(var/i = 1 to storage_slots - 1)
@@ -1217,6 +1242,9 @@
 		"1" = list(
 			"icon_x" = -1,
 			"icon_y" = -3))
+
+/obj/item/storage/belt/gun/m44/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m44/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44())

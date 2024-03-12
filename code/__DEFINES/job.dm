@@ -13,6 +13,7 @@
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -31,6 +32,13 @@
 #define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
 #define JOB_SO_UPP "UPP Platoon Commander"
+
+#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
+#define JOB_SQUAD_RTO "Radio Telephone Operator"
+#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 

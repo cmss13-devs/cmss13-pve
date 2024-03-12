@@ -213,6 +213,8 @@
 	var/mobpresent = 0 //true if there is a mob on the shower's loc, this is to ease process()
 	var/is_washing = 0
 
+	COOLDOWN_DECLARE(last_sound)
+
 /obj/structure/machinery/shower/Initialize()
 	. = ..()
 	create_reagents(2)
@@ -379,6 +381,10 @@
 
 /obj/structure/machinery/shower/process()
 	if(!on) return
+
+	if(COOLDOWN_FINISHED(src, last_sound))
+		COOLDOWN_START(src, last_sound, 8 SECONDS)
+		playsound(src, "gurgle", 25, FALSE)
 	wash_floor()
 	if(!mobpresent) return
 	for(var/mob/living/carbon/C in loc)

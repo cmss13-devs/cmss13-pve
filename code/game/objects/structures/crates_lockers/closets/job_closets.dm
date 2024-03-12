@@ -92,6 +92,22 @@
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon
+	name = "squad leader locker"
+	desc = "A secure storage unit for the squad leader."
+	req_one_access = list(ACCESS_MARINE_LEADER)
+
+/obj/structure/closet/secure_closet/platoon_sergeant_forecon/Initialize()
+	. = ..()
+	new /obj/item/weapon/gun/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/whistle(src)
+
 /obj/structure/closet/secure_closet/squad_sergeant
 	name = "squad sergeant locker"
 	desc = "A secure storage unit for a squad sergeant."
@@ -100,6 +116,16 @@
 /obj/structure/closet/secure_closet/squad_sergeant/Initialize()
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/rto(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/whistle(src)
+
+/obj/structure/closet/secure_closet/squad_sergeant_forecon
+	name = "assistant squad leader locker"
+	desc = "A secure storage unit for an assistant squad leader."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_TL_PREP)
+
+/obj/structure/closet/secure_closet/squad_sergeant_forecon/Initialize()
+	. = ..()
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
