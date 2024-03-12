@@ -1434,7 +1434,11 @@
 /area/golden_arrow/engineering)
 "ob" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/command/capt,
+/obj/structure/machinery/faxmachine{
+	name = "\improper UPP Military Fax Machine";
+	network = "UPP Encrypted Network";
+	target_department = "UPP High Command"
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
