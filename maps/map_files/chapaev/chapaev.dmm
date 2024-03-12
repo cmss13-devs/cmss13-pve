@@ -98,6 +98,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/sign{
+	desc = "Comrade! Don't forget to return your state-issued items to your assigned locker before returning to hypersleep!";
+	icon_state = "securearea";
+	pixel_y = 30;
+	name = "Vnimanie! 注意!"
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "aS" = (
@@ -1051,11 +1057,18 @@
 	},
 /area/golden_arrow/platoon_sergeant)
 "kb" = (
-/obj/structure/closet/secure_closet/personal/cabinet{
-	req_access = null
-	},
 /obj/item/clothing/suit/storage/snow_suit/soviet,
 /obj/item/clothing/suit/gimmick/jason,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Commander";
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_state = "cabinetdetective_locked";
+	icon_opened = "cabinetdetective_open";
+	icon_off = "cabinetdetective_broken";
+	has_cryo_gear = 0
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -1850,8 +1863,13 @@
 	},
 /area/golden_arrow/briefing)
 "rV" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/pillbottles,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Corpsman"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/device/radio/headset/distress/UPP,
+/obj/item/clothing/under/marine/veteran/UPP/medic,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -2328,7 +2346,6 @@
 	},
 /area/golden_arrow/canteen)
 "wH" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -2344,15 +2361,19 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/structure/machinery/light{
-	dir = 4
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
 	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101;
+	unacidable = 1;
+	unslashable = 1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2807,6 +2828,33 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"BK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "BQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -2852,7 +2900,6 @@
 	},
 /area/golden_arrow/supply)
 "Cq" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -2868,15 +2915,19 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
 	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101;
+	unacidable = 1;
+	unslashable = 1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3736,6 +3787,9 @@
 /area/golden_arrow/prep_hallway)
 "Ka" = (
 /obj/structure/machinery/chem_master,
+/obj/item/storage/box/pillbottles{
+	pixel_y = 12
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -3791,7 +3845,9 @@
 /obj/structure/machinery/chem_dispenser{
 	desc = "A complex machine for mixing elements into chemicals. A MinZdrav product."
 	},
-/obj/item/reagent_container/glass/beaker/bluespace,
+/obj/item/reagent_container/glass/beaker/bluespace{
+	pixel_y = 17
+	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -4788,6 +4844,34 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"VL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "VP" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -4898,7 +4982,6 @@
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/hangar)
 "WP" = (
-/obj/structure/closet,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -4914,11 +4997,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/clothing/shoes/marine/upp,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Sergeant"
+	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
@@ -13951,10 +14035,10 @@ nO
 EA
 HX
 cT
-WP
-WP
+BK
+BK
 Cq
-WP
+BK
 WP
 iO
 pk
@@ -14559,11 +14643,11 @@ nO
 EA
 af
 cT
-WP
-WP
+BK
+BK
 wH
-WP
-WP
+VL
+BK
 iO
 bC
 CJ

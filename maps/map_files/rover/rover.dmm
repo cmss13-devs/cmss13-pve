@@ -168,8 +168,6 @@
 	},
 /area/golden_arrow/hangar)
 "bS" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1,
 /obj/structure/sign/poster/music{
 	pixel_y = 29
 	},
@@ -177,9 +175,7 @@
 	pixel_y = 34;
 	pixel_x = 8
 	},
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1,
+/obj/structure/gun_rack/m41,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -681,6 +677,12 @@
 	pixel_x = -27
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2375,6 +2377,12 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2723,15 +2731,15 @@
 	},
 /area/golden_arrow/platoon_commander_rooms)
 "zF" = (
-/obj/structure/closet,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Sergeant";
+	has_cryo_gear = 0
+	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/clothing/under/marine/standard,
 /obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3189,15 +3197,11 @@
 	},
 /area/golden_arrow/dorms)
 "EF" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1,
+/obj/structure/gun_rack/m41,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3667,6 +3671,13 @@
 	pixel_x = -30
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Smartgunner";
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4192,12 +4203,12 @@
 	},
 /area/golden_arrow/prep_hallway)
 "OU" = (
-/obj/structure/closet,
-/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Squad Sergeant";
+	has_cryo_gear = 0
+	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/clothing/under/marine/standard,
 /obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4236,6 +4247,10 @@
 "Pt" = (
 /obj/structure/machinery/chem_dispenser,
 /obj/item/reagent_container/glass/beaker/bluespace,
+/obj/item/storage/box/pillbottles{
+	pixel_y = 18;
+	pixel_x = -5
+	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -4273,6 +4288,18 @@
 	icon_state = "outerhull_dir"
 	},
 /area/space)
+"PN" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Radio Telephone Operator"
+	},
+/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/standard,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "PY" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -4510,8 +4537,13 @@
 	},
 /area/golden_arrow/hangar)
 "SR" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/pillbottles,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Corpsman";
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/jungle/knife,
+/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
+/obj/item/clothing/under/marine/medic/standard,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -4717,13 +4749,7 @@
 	},
 /area/golden_arrow/synthcloset)
 "VX" = (
-/obj/structure/closet,
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/clothing/under/marine/standard,
-/obj/item/clothing/under/marine/standard,
+/obj/structure/largecrate/random/case/small,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Wf" = (
@@ -18341,7 +18367,7 @@ DM
 qs
 oR
 Nc
-VX
+PN
 Ap
 Ey
 OU
