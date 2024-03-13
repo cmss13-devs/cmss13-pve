@@ -167,6 +167,15 @@
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
+/obj/item/ammo_magazine/rifle/m4ra/pve
+	name = "\improper M4RA depleted uranium magazine (10x24mm)"
+	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
+	icon_state = "m4ra"
+	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
 //-------------------------------------------------------
 //XM40 AKA SOF RIFLE FROM HELL (It's an EM-2, a prototype of the real world L85A1 way back from the 1940s. We've given it a blue plastic shell and an integral suppressor)
 /obj/item/ammo_magazine/rifle/xm40

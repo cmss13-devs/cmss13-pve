@@ -5,7 +5,7 @@
 	icon_state = "slauncher_1"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/flare
-	max_rounds = 10
+	max_rounds = 90
 	gun_type = /obj/item/hardpoint/support/flare_launcher
 
 /obj/item/ammo_magazine/hardpoint/flare_launcher/update_icon()

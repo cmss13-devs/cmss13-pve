@@ -6,6 +6,8 @@
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_3
 
+	default_ai_action = TRUE
+
 /datum/action/xeno_action/activable/throw_hugger/action_cooldown_check()
 	if(owner)
 		var/mob/living/carbon/xenomorph/carrier/X = owner

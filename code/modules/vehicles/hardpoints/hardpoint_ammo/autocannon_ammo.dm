@@ -5,7 +5,7 @@
 	icon_state = "ace_autocannon"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/tank/flak
-	max_rounds = 40
+	max_rounds = 100
 	gun_type = /obj/item/hardpoint/primary/autocannon
 
 /obj/item/ammo_magazine/hardpoint/ace_autocannon/update_icon()

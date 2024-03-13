@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(ai_hives)
 
 	max_assigned = 0
 
-	var/hive_radius = 7
+	var/hive_radius = 5
 
 /datum/component/ai_behavior_override/hive/Initialize(...)
 	. = ..()

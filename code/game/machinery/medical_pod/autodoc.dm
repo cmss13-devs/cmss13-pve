@@ -248,6 +248,11 @@
 				if(H.disfigured)
 					surgery_list += create_autodoc_surgery(L,LIMB_SURGERY,"facial")
 
+			if(istype(L,/obj/limb/chest))
+				var/obj/limb/chest/C = L
+				if(M.status_flags & XENO_HOST)
+					surgery_list += create_autodoc_surgery(C,LIMB_SURGERY,"object")
+
 			if(L.status & LIMB_BROKEN)
 				surgery_list += create_autodoc_surgery(L,LIMB_SURGERY,"broken")
 			if(L.status & LIMB_DESTROYED)
@@ -256,7 +261,7 @@
 			if(L.implants.len)
 				for(var/I in L.implants)
 					if(!is_type_in_list(I,known_implants))
-						surgery_list += create_autodoc_surgery(L,LIMB_SURGERY,"shrapnel")
+						surgery_list += create_autodoc_surgery(L,LIMB_SURGERY,"object")
 			if(M.incision_depths[L.name] != SURGERY_DEPTH_SURFACE)
 				surgery_list += create_autodoc_surgery(L,LIMB_SURGERY,"open")
 	var/datum/internal_organ/I = M.internal_organs_by_name["eyes"]
@@ -481,8 +486,8 @@
 						H.updatehealth()
 						H.UpdateDamageIcon()
 
-					if("shrapnel")
-						if(prob(30)) visible_message("[icon2html(src, viewers(src))] \The <b>[src]</b> speaks: Beginning shrapnel removal.");
+					if("object")
+						if(prob(30)) visible_message("[icon2html(src, viewers(src))] \The <b>[src]</b> speaks: Beginning foreign object removal.");
 						if(S.unneeded)
 							sleep(UNNEEDED_DELAY)
 							visible_message("[icon2html(src, viewers(src))] \The <b>[src]</b> speaks: Procedure has been deemed unnecessary.");
@@ -500,6 +505,11 @@
 									S.limb_ref.implants -= I
 									H.embedded_items -= I
 									qdel(I)
+						var/obj/item/larva_ref = locate(/obj/item/alien_embryo) in H.contents
+						if(S.limb_ref.name == "chest" && larva_ref)
+							sleep(REMOVE_OBJECT_MAX_DURATION*surgery_mod)
+							H.contents -= larva_ref
+						qdel(larva_ref)
 						if(S.limb_ref.name == "chest" || S.limb_ref.name == "head")
 							close_encased(H,S.limb_ref)
 						if(!surgery) break
@@ -716,9 +726,9 @@
 								if("missing")
 									surgeryqueue["missing"] = 1
 									dat += "Limb Replacement Surgery"
-								if("shrapnel")
-									surgeryqueue["shrapnel"] = 1
-									dat += "Shrapnel Removal Surgery"
+								if("object")
+									surgeryqueue["object"] = 1
+									dat += "Foreign Object Removal Surgery"
 								if("facial")
 									surgeryqueue["facial"] = 1
 									dat += "Facial Reconstruction Surgery"
@@ -743,8 +753,8 @@
 					dat += "<a href='?src=\ref[src];internal=1'>Internal Bleeding Surgery</a><br>"
 				if(isnull(surgeryqueue["open"]))
 					dat += "<a href='?src=\ref[src];open=1'>Close Open Incisions</a><br>"
-				if(isnull(surgeryqueue["shrapnel"]))
-					dat += "<a href='?src=\ref[src];shrapnel=1'>Shrapnel Removal Surgery</a><br>"
+				if(isnull(surgeryqueue["object"]))
+					dat += "<a href='?src=\ref[src];object=1'>Foreign Object Removal Surgery</a><br>"
 				dat += "<b>Organ Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["eyes"]))
@@ -852,17 +862,23 @@
 					N.fields["autodoc_manual"] += create_autodoc_surgery(null,LIMB_SURGERY,"missing",1)
 				updateUsrDialog()
 
-			if(href_list["shrapnel"])
+			if(href_list["object"])
 				var/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/loyalty, /obj/item/implant/tracking, /obj/item/implant/neurostim)
 				for(var/obj/limb/L in connected.occupant.limbs)
 					if(L)
+						if(istype(L,/obj/limb/chest))
+							var/obj/limb/chest/C = L
+							if(connected.occupant.status_flags & XENO_HOST)
+								N.fields["autodoc_manual"] += create_autodoc_surgery(C,LIMB_SURGERY,"object")
+								needed++
+								continue
 						if(L.implants.len)
 							for(var/I in L.implants)
 								if(!is_type_in_list(I,known_implants))
-									N.fields["autodoc_manual"] += create_autodoc_surgery(L,LIMB_SURGERY,"shrapnel")
+									N.fields["autodoc_manual"] += create_autodoc_surgery(L,LIMB_SURGERY,"object")
 									needed++
 				if(!needed)
-					N.fields["autodoc_manual"] += create_autodoc_surgery(null,LIMB_SURGERY,"shrapnel",1)
+					N.fields["autodoc_manual"] += create_autodoc_surgery(null,LIMB_SURGERY,"object",1)
 				updateUsrDialog()
 
 			if(href_list["facial"])

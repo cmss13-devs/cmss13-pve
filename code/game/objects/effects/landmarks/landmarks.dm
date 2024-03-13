@@ -403,7 +403,7 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-/obj/effect/landmark/late_join/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+/obj/effect/landmark/late_join/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	squad = new_name
@@ -420,10 +420,23 @@
 	name = "delta late join"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/late_join/upp
+	name = "upp late join"
+	squad = SQUAD_UPP
+
+/obj/effect/landmark/late_join/upp/Initialize(mapload, ...)
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
 /obj/effect/landmark/late_join/working_joe
 	name = "working joe late join"
 	job = JOB_WORKING_JOE
+
+/obj/effect/landmark/late_join/forecon
+	name = "forecon late join"
+	squad = SQUAD_LRRP
+
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()

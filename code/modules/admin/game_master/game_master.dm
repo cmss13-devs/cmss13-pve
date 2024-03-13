@@ -29,7 +29,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER)
+#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
+#define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
@@ -70,6 +71,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// The xeno selected to be spawned in the spawn section
 	var/selected_xeno = DEFAULT_SPAWN_XENO_STRING
+
+	/// The hive selected to be spawned in the spawn section
+	var/selected_hive = DEFAULT_SPAWN_HIVE_STRING
 
 	/// The amount of xenos to spawn in the spawn section
 	var/xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
@@ -139,6 +143,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	// Spawn stuff
 	data["selected_xeno"] = selected_xeno
+	data["selected_hive"] = selected_hive
 	data["spawn_ai"] = spawn_ai
 	data["spawn_click_intercept"] = spawn_click_intercept
 	data["xeno_spawn_count"] = xeno_spawn_count
@@ -163,6 +168,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS
 
+	data["spawnable_hives"] = ALL_XENO_HIVES
+
 	data["selectable_behaviors"] = SELECTABLE_XENO_BEHAVIORS
 
 	return data
@@ -183,6 +190,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 		if("set_selected_xeno")
 			selected_xeno = params["new_xeno"]
+			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
+			return
+
+		if("set_selected_hive")
+			selected_hive = params["new_hive"]
 			xeno_spawn_count = DEFAULT_XENO_AMOUNT_TO_SPAWN
 			return
 
@@ -337,7 +349,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			var/turf/spawn_turf = get_turf(object)
 
 			for(var/i = 1 to xeno_spawn_count)
-				new spawning_xeno_type(spawn_turf, null, XENO_HIVE_NORMAL, !spawn_ai)
+				new spawning_xeno_type(spawn_turf, null, selected_hive, !spawn_ai)
 
 			return TRUE
 
@@ -392,7 +404,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(!object || !z_level)
 				return
 
-			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
+			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_ALL, given_image = background)
 
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 
@@ -449,6 +461,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
+#undef DEFAULT_SPAWN_HIVE_STRING
 #undef DEFAULT_XENO_AMOUNT_TO_SPAWN
 
 #undef OBJECTIVE_NUMBER_OPTIONS

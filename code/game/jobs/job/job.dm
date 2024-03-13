@@ -24,6 +24,7 @@
 	var/minimum_playtime_as_job = 3 HOURS
 
 	var/gear_preset //Gear preset name used for this job
+	var/gear_preset_secondary //Additional gear preset for different thingies
 	var/list/gear_preset_whitelist = list()//Gear preset name used for council snowflakes ;)
 
 	//For generating entry messages
