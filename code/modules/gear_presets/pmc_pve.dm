@@ -8,6 +8,7 @@
 	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	faction_group = list(FACTION_LIST_WY)
 	faction = FACTION_PMC
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/uscm/pmc/sl
 	name = "Operation Leader"
@@ -27,5 +28,5 @@
 /datum/equipment_preset/uscm/pmc/med
 	name = "Medical Specialist"
 	paygrade = "PMC-MS"
-	access = list(ACCESS_WY_GENERAL, ACCESS_PMC_TLPREP, ACCESS_WY_MEDICAL)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_MEDICAL)
 
