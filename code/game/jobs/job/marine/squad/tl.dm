@@ -49,10 +49,17 @@ AddTimelock(/datum/job/marine/tl, list(
 	title = JOB_SQUAD_TEAM_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/tl/upp
 
+/datum/job/marine/tl/ai/forecon
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_TEAM_LEADER_FORECON
+	gear_preset = /datum/equipment_preset/uscm/tl/forecon
+
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/tl/ai/upp
+
 
 /datum/job/marine/tl/ai/pmc
 	title = JOB_PMCPLAT_FTL
@@ -63,6 +70,12 @@ AddTimelock(/datum/job/marine/tl, list(
 	name = JOB_PMCPLAT_FTL
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/tl/ai/pmc
+
+
+/obj/effect/landmark/start/marine/tl/forecon
+	name = JOB_SQUAD_TEAM_LEADER_FORECON
+	squad = SQUAD_LRRP
+	job = /datum/job/marine/tl/ai/forecon
 
 
 #undef SGT_VARIANT

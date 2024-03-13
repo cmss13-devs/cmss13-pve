@@ -6,8 +6,8 @@
 	disp_icon = "tank"
 	disp_icon_state = "towlauncher"
 
-	health = 500
-	firing_arc = 60
+	health = 2000
+	firing_arc = 120
 
 	origins = list(0, -2)
 
@@ -28,6 +28,6 @@
 		"8" = list(-5, 10)
 	)
 
-	scatter = 4
-	fire_delay = 15.0 SECONDS
+	scatter = 2
+	fire_delay = 7.0 SECONDS
 

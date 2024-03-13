@@ -83,6 +83,8 @@
 
 /obj/docking_port/mobile/marine_dropship/enterTransit()
 	. = ..()
+	if(!destination)
+		in_flyby = TRUE
 	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
 		SSticker.mode.ds_first_drop(src)
 
@@ -116,6 +118,15 @@
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
 	id = DROPSHIP_UPP
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/cyclone
+	name = "Cyclone"
+	id = DROPSHIP_CYCLONE
 	width = 9
 	height = 18
 
@@ -324,3 +335,7 @@
 /datum/map_template/shuttle/upp
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
+
+/datum/map_template/shuttle/cyclone
+	name = "Cyclone"
+	shuttle_id = DROPSHIP_CYCLONE

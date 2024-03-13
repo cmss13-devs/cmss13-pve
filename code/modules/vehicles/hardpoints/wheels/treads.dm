@@ -8,19 +8,19 @@
 
 	slot = HDPT_TREADS
 
-	health = 500
+	health = 1500
 
 	//with this settings, takes 3 tiles to reach top speed
-	move_delay = 3.8
+	move_delay = 2.0
 	move_max_momentum = 3
-	move_momentum_build_factor = 1.8
+	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.6
 
 /obj/item/hardpoint/locomotion/treads/robust
 	name = "Reinforced Treads"
 	desc = "These treads are made of a tougher material and are more durable. However, the extra weight slows the tank down slightly."
 
-	health = 750
+	health = 2500
 	acid_resistant = TRUE
 
 	move_max_momentum = 5 //same top speed, but takes 5 tiles to reach it
