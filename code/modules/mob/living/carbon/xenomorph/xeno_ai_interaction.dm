@@ -128,6 +128,17 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
 	return stat == CONSCIOUS
 
+/mob/living/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
+	if(!ai_check_stat(ai_xeno))
+		return FALSE
+
+	if(ai_xeno.can_not_harm(src))
+		return FALSE
+
+	if(alpha <= 45 && get_dist(ai_xeno, src) > 2)
+		return FALSE
+
+	return TRUE
 
 /////////////////////////////
 //         HUMANS         //

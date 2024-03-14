@@ -138,7 +138,7 @@
 	return INFINITY
 
 /atom/proc/ai_check_stat()
-	return TRUE // So we aren't trying to find a new target on attack override
+	return TRUE // So we aren't trying to find a new target while being forced to kick walls e.g.
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
@@ -338,17 +338,8 @@
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
-/mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
-	if(!ai_check_stat(ai_xeno))
-		return FALSE
-
-	if(ai_xeno.can_not_harm(src))
-		return FALSE
-
-	if(alpha <= 45 && get_dist(ai_xeno, src) > 2)
-		return FALSE
-
-	return TRUE
+/atom/proc/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
+	return FALSE
 
 /mob/living/carbon/xenomorph/proc/make_ai()
 	SHOULD_CALL_PARENT(TRUE)
