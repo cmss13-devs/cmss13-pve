@@ -48,6 +48,28 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_SQUAD_ONE 39
 #define ACCESS_SQUAD_TWO 40
 
+//=================================================
+
+/*Specific access for the Whiskey Outpost PvE variant as I don't want it to overlap with standard marine access.
+The actual access on doors on map also takes into account normal marine access, so if the marines do show up,
+they will have access to some areas but not to others. 50 to 63. */
+#define ACCESS_MARINE_WO_GENERAL 50 //Mostly for armory and barracks access.
+#define ACCESS_MARINE_WO_MAINT 51 //Maintenance and engineering.
+#define ACCESS_MARINE_WO_SYNTH 52 //Synth storage.
+#define ACCESS_MARINE_WO_MEDICAL 53 //Access to the medical bay.
+#define ACCESS_MARINE_WO_ARMORY 54 //Who can unlock the armory shutters.
+#define ACCESS_MARINE_WO_GUEST 55 //Civilian access to unlock the guest bedrooms, only officers and guests have this access.
+#define ACCESS_MARINE_WO_LOCKDOWN  56 //Who can lockdown the base, only officers have this access.
+#define ACCESS_MARINE_WO_SMARTPREP 57 //Smartgun lockers.
+#define ACCESS_MARINE_WO_MEDPREP 58 //Corpseman vendor.
+#define ACCESS_MARINE_WO_SPECPREP 59 //Specialist vendor.
+#define ACCESS_MARINE_WO_TLPREP 60 //Squad/team leader prep.
+#define ACCESS_MARINE_WO_PLATOONL 61 //Platoon leader office(s).
+#define ACCESS_MARINE_WO_CO  62 //Commander's personal quarters.
+#define ACCESS_MARINE_WO_LT  63 //Lieutenant's personal quarters.
+
+//=================================================
+
 // AI Core Accesses
 /// Used in temporary passes
 #define ACCESS_MARINE_AI_TEMP 90

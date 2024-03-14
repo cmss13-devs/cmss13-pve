@@ -1,3 +1,4 @@
+//I think these need to be children of colony, not the other way around.
 
 /obj/structure/machinery/door/airlock/secure/colony
 	name = "\improper Secure Airlock"
@@ -163,6 +164,78 @@
 	opacity = 0
 	glass = 1
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_LOGISTICS)
+
+//Secret WY/UPP ground-side bunker doors.
+
+/obj/structure/machinery/door/airlock/bunker
+	dir = NORTH
+	openspeed = 4
+
+//==========================================
+
+//WY Version
+
+/obj/structure/machinery/door/airlock/bunker/wy
+
+/obj/structure/machinery/door/airlock/bunker/wy/containment
+	name = "\improper Containment Access"
+	icon = 'icons/obj/structures/doors/medidoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	locked = TRUE
+	masterkey_resist = TRUE
+	autoclose = FALSE //Can lead to some strange behavior with the computer.
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/research
+	name = "\improper Containment Monitoring"
+	icon = 'icons/obj/structures/doors/medidoor.dmi'
+	dir = EAST
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/server
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	name = "\improper Server Monitoring"
+	req_access = list(ACCESS_WY_GENERAL)
+
+/obj/structure/machinery/door/airlock/bunker/wy/surgery
+	name = "\improper Operating Theatre"
+	icon = 'icons/obj/structures/doors/medidoor.dmi'
+	req_one_access = list(ACCESS_WY_MEDICAL, ACCESS_WY_PMC)
+
+/obj/structure/machinery/door/airlock/bunker/wy/specimen_storage
+	name = "\improper Specimen Storage"
+	icon = 'icons/obj/structures/doors/securedoor.dmi'
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/aux_storage
+	name = "\improper Auxiliary Storage"
+	icon = 'icons/obj/structures/doors/maintdoor.dmi'
+	dir = EAST
+	req_one_access = list(ACCESS_WY_SECURITY, ACCESS_WY_ENGINEERING, ACCESS_WY_PMC)
+
+//==========================================
+
+//Secret UPP ground-side bunker
+
+/obj/structure/machinery/door/airlock/bunker/upp
+	icon = 'icons/obj/structures/doors/strata/strata_doors.dmi'
+	req_one_access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_COMMANDO)
+
+/obj/structure/machinery/door/airlock/bunker/upp/gulag_cell
+	name = "\improper Gulag Cell"
+
+/obj/structure/machinery/door/airlock/bunker/upp/security
+	name = "\improper Gulag Security Access"
+	icon  = 'icons/obj/structures/doors/prison_FOP/prison_hatches.dmi'
+	dir = EAST
+
+/obj/structure/machinery/door/airlock/bunker/upp/autopsy
+	name = "\improper Specimen Autopsy"
+	dir = EAST
+	req_one_access = list(ACCESS_UPP_MEDICAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_COMMANDO)
+
+//==========================================
 
 /obj/structure/machinery/door/airlock/gold
 	name = "\improper Gold Airlock"
@@ -429,6 +502,14 @@
 	icon = 'icons/obj/structures/doors/maintdoor.dmi'
 	req_access = list()
 	req_one_access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_MAINT)
+
+/obj/structure/machinery/door/airlock/almayer/maint/sealed
+	req_access = null //No access requirements
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/almayer/maint/sealed/LateInitialize() //Has a chance to start bolted, welded, or both.
+	. = ..()
+	break_or_seal(15) //15% chance it starts out deconstructed.
 
 /obj/structure/machinery/door/airlock/almayer/maint/autoname
 	autoname = TRUE

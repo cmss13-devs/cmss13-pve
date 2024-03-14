@@ -130,3 +130,27 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	icon_state = "purple_line"
 
 	visible = TRUE
+
+/obj/structure/blocker/rock_debris
+	name = "rock debris"
+	desc = "A pile of rock debris from a cavein or something similar."
+	icon = 'icons/obj/structures/props/mining.dmi'
+	icon_state = "cavein"
+	color = "#826161"
+	opacity = TRUE
+	var/id //Used to pick out the proper rocks to toggle.
+
+/obj/structure/blocker/rock_debris/Initialize()
+	. = ..()
+	GLOB.map_specific_trigger_atoms += src
+
+/obj/structure/blocker/rock_debris/Destroy()
+	GLOB.map_specific_trigger_atoms -= src
+	. = ..()
+
+//Makes it block movement or hides it instead.
+/obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal)
+	if(trigger_signal == id)
+		invisibility = invisibility ? 0 : INVISIBILITY_MAXIMUM
+		density = !density
+		opacity = !opacity

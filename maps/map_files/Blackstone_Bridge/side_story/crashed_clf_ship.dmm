@@ -1,0 +1,691 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aZ" = (
+/obj/item/ammo_magazine/rifle/m16/ap{
+	pixel_x = -8
+	},
+/turf/open/floor/plating,
+/area/template_noop)
+"bw" = (
+/obj/structure/largecrate/supply/supplies/water,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"cw" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan5"
+	},
+/area/template_noop)
+"eC" = (
+/obj/structure/girder/displaced,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"eK" = (
+/obj/item/stack/sheet/metal,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"eS" = (
+/obj/item/ammo_magazine/rifle/m16/ap{
+	pixel_x = -8
+	},
+/obj/item/stack/rods,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"eX" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"fV" = (
+/obj/item/stack/rods,
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/template_noop)
+"hz" = (
+/turf/open/floor{
+	icon_state = "wall_thermite"
+	},
+/area/template_noop)
+"ij" = (
+/obj/item/stack/cable_coil/cut,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"jv" = (
+/obj/effect/spawner/gibspawner/human,
+/turf/open/jungle,
+/area/template_noop)
+"jE" = (
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/template_noop)
+"jQ" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"kq" = (
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"ks" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan8"
+	},
+/area/template_noop)
+"lO" = (
+/obj/structure/surface/rack,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"mF" = (
+/obj/item/weapon/gun/rifle/mar40/lmg{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/template_noop)
+"nP" = (
+/obj/item/stack/tile/plasteel{
+	turf_type = /turf/open/shuttle/dropship
+	},
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"oF" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan22"
+	},
+/area/template_noop)
+"oU" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"pv" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan20"
+	},
+/area/template_noop)
+"pT" = (
+/obj/structure/prop/invuln/fire{
+	pixel_y = 2
+	},
+/turf/closed/shuttle/ert,
+/area/template_noop)
+"rJ" = (
+/obj/item/stack/rods,
+/turf/open/floor/plating,
+/area/template_noop)
+"tL" = (
+/obj/item/ammo_magazine/smg/fp9000,
+/turf/open/floor/plating,
+/area/template_noop)
+"vL" = (
+/turf/closed/shuttle/ert,
+/area/template_noop)
+"wl" = (
+/obj/item/shard{
+	pixel_x = 12;
+	pixel_y = 3
+	},
+/obj/item/prop/almayer/flight_recorder/colony,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/template_noop)
+"zj" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/stack/cable_coil/cut,
+/turf/open/floor{
+	icon_state = "platingdmg1"
+	},
+/area/template_noop)
+"zv" = (
+/obj/effect/spawner/gibspawner/human,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"Ae" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"AB" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_1"
+	},
+/area/template_noop)
+"Be" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"BV" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan27"
+	},
+/area/template_noop)
+"BW" = (
+/obj/effect/landmark/corpsespawner/clf,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"Cw" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null;
+	req_access_txt = "260"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"Cz" = (
+/obj/item/stack/sheet/metal,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"CK" = (
+/obj/item/stack/rods,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/stack/cable_coil/cut,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"DQ" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/computerframe,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"Ec" = (
+/turf/open/jungle,
+/area/template_noop)
+"Es" = (
+/obj/item/stack/tile/plasteel{
+	turf_type = /turf/open/shuttle/dropship;
+	pixel_x = 5
+	},
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"EF" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan1"
+	},
+/area/template_noop)
+"EK" = (
+/obj/item/stack/rods,
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/template_noop)
+"EN" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan25"
+	},
+/area/template_noop)
+"EO" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"Gb" = (
+/turf/open/floor{
+	icon_state = "platingdmg1"
+	},
+/area/template_noop)
+"Gf" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan9"
+	},
+/area/template_noop)
+"GX" = (
+/obj/effect/landmark/corpsespawner/clf,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"Hl" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_leftengine"
+	},
+/area/template_noop)
+"Hx" = (
+/obj/item/storage/backpack/general_belt{
+	pixel_y = 3
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"HE" = (
+/obj/structure/largecrate/black_market/clf_supplies,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"It" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"JB" = (
+/obj/item/ammo_magazine/rifle/mar40/lmg{
+	pixel_x = -7;
+	pixel_y = -4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"LN" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"Mw" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan3"
+	},
+/area/template_noop)
+"MJ" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_rightengine"
+	},
+/area/template_noop)
+"NG" = (
+/obj/item/stack/medical/ointment,
+/turf/open/floor/plating,
+/area/template_noop)
+"NJ" = (
+/turf/template_noop,
+/area/template_noop)
+"OD" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan23"
+	},
+/area/template_noop)
+"OT" = (
+/obj/item/weapon/gun/rifle/mar40/lmg{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/template_noop)
+"OU" = (
+/obj/structure/prop/invuln/fire{
+	pixel_y = -8
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2"
+	},
+/area/template_noop)
+"QN" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "damaged3"
+	},
+/area/template_noop)
+"RS" = (
+/obj/item/stack/rods,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"Tf" = (
+/obj/item/weapon/gun/rifle/mar40/lmg{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/template_noop)
+"Ux" = (
+/obj/structure/prop/invuln/fire{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/template_noop)
+"UJ" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3"
+	},
+/area/template_noop)
+"UT" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan21"
+	},
+/area/template_noop)
+"Vf" = (
+/obj/structure/prop/invuln/fire{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/template_noop)
+"Wh" = (
+/obj/item/weapon/gun/rifle/m16,
+/turf/open/jungle{
+	bushes_spawn = 0;
+	icon_state = "grass_impenetrable"
+	},
+/area/template_noop)
+"XU" = (
+/obj/structure/prop/invuln/fire{
+	pixel_y = 4
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "stan25"
+	},
+/area/template_noop)
+"XZ" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_1";
+	opacity = 0
+	},
+/area/template_noop)
+"ZW" = (
+/turf/open/floor/plating,
+/area/template_noop)
+
+(1,1,1) = {"
+kq
+Ec
+Ec
+kq
+kq
+kq
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+"}
+(2,1,1) = {"
+kq
+kq
+pv
+pT
+Cw
+vL
+EK
+vL
+It
+vL
+Hl
+kq
+Ux
+Vf
+XZ
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+NJ
+NJ
+"}
+(3,1,1) = {"
+Ec
+UT
+Gb
+GX
+Gb
+Ae
+oU
+Ae
+ij
+lO
+ks
+jE
+vL
+EF
+kq
+kq
+eK
+kq
+kq
+bw
+kq
+kq
+kq
+kq
+kq
+kq
+"}
+(4,1,1) = {"
+oF
+jv
+hz
+mF
+Be
+Es
+It
+BW
+Tf
+QN
+jQ
+ZW
+aZ
+QN
+zv
+HE
+EO
+eK
+kq
+kq
+eK
+EO
+kq
+kq
+kq
+kq
+"}
+(5,1,1) = {"
+kq
+BV
+DQ
+rJ
+eX
+eX
+GX
+jQ
+eX
+fV
+Be
+ZW
+QN
+nP
+RS
+kq
+kq
+kq
+zv
+kq
+kq
+kq
+eK
+kq
+kq
+kq
+"}
+(6,1,1) = {"
+kq
+EN
+OD
+wl
+Hx
+It
+tL
+It
+JB
+Gb
+GX
+OT
+Cz
+zj
+kq
+kq
+Wh
+EO
+eK
+kq
+EO
+HE
+kq
+kq
+kq
+kq
+"}
+(7,1,1) = {"
+kq
+kq
+UT
+lO
+jQ
+LN
+jQ
+LN
+jQ
+eS
+Gf
+cw
+cw
+Mw
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+XU
+kq
+NJ
+"}
+(8,1,1) = {"
+NJ
+kq
+kq
+ZW
+CK
+cw
+NG
+cw
+Cw
+cw
+MJ
+UJ
+kq
+kq
+kq
+kq
+OU
+AB
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+NJ
+"}
+(9,1,1) = {"
+NJ
+NJ
+kq
+kq
+kq
+kq
+kq
+eC
+kq
+kq
+kq
+NJ
+NJ
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+kq
+NJ
+NJ
+NJ
+NJ
+"}

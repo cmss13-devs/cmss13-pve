@@ -7,7 +7,7 @@
 /obj/structure/machinery/defenses/sentry
 	name = "\improper UA 571-C sentry gun"
 	icon = 'icons/obj/structures/machinery/defenses/sentry.dmi'
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 500-round drum magazine."
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 autocannon and a 500-round drum magazine."
 	req_one_access = list(ACCESS_MARINE_ENGINEERING, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_LEADER)
 	var/list/targets = list() // Lists of current potential targets
 	var/list/other_targets = list() //List of special target types to shoot at, if needed.
@@ -536,7 +536,7 @@
 	fire(target)
 
 /obj/structure/machinery/defenses/sentry/premade
-	name = "UA-577 Gauss Turret"
+	name = "\improper UA-577 gauss turret"
 	immobile = TRUE
 	turned_on = TRUE
 	icon_state = "premade" //for the map editor only
@@ -566,16 +566,21 @@
 /obj/structure/machinery/defenses/sentry/premade/damaged_action()
 	return
 
+/obj/structure/machinery/defenses/sentry/premade/upp
+	name = "\improper UPPA 30-KG gauss turret"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-477 autocannon and a 500-round drum magazine, an older design, affectionally referred to as 'Komrade Sentry'."
+	faction_group = list(FACTION_UPP)
+
 /obj/structure/machinery/defenses/sentry/premade/dumb
-	name = "Modified UA-577 Gauss Turret"
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
+	name = "modified UA-577 gauss turret"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
 	faction_group = null
 	ammo = new /obj/item/ammo_magazine/sentry/premade/dumb
 
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
-	name = "UA-633 Static Gauss Turret"
-	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed."
+	name = "\improper UA-633 Static gauss turret"
+	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S autocannon and an internal belt feed."
 	density = TRUE
 	faction_group = FACTION_LIST_MARINE
 	fire_delay = 1
@@ -618,7 +623,7 @@
 	. = ..()
 
 /obj/structure/machinery/defenses/sentry/shotgun
-	name = "UA 12-G Shotgun Sentry"
+	name = "\improper UA 12-G shotgun turret"
 	defense_type = "Shotgun"
 	health = 250
 	health_max = 250
@@ -651,7 +656,7 @@
 				L.apply_effect(1, WEAKEN)
 
 /obj/structure/machinery/defenses/sentry/mini
-	name = "UA 512-M mini sentry"
+	name = "\improper UA 512-M mini sentry"
 	defense_type = "Mini"
 	fire_delay = 0.15 SECONDS
 	health = 150
@@ -666,7 +671,7 @@
 
 /obj/structure/machinery/defenses/sentry/launchable
 	name = "\improper UA 571-O sentry post"
-	desc = "A deployable, omni-directional automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
+	desc = "A deployable, omni-directional automated turret with AI targeting capabilities. Armed with an M30 autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
 	ammo = new /obj/item/ammo_magazine/sentry/dropped
 	faction_group = FACTION_LIST_MARINE
 	omni_directional = TRUE
@@ -761,7 +766,10 @@
 
 /obj/structure/machinery/defenses/sentry/upp
 	name = "\improper UPPA 32-H sentry gun"
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 autocannon and a 500-round drum magazine."
+	//This doesn't appear to do anything, but might as well have it.
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_SECURITY)
+
 	choice_categories = list(
 		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),
 	)
@@ -770,6 +778,7 @@
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

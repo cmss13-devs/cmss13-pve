@@ -811,6 +811,21 @@
 	icon_state = "grass_clear"
 	icon_spawn_state = "grass1"
 
+/turf/open/jungle/vines
+	bushes_spawn = FALSE
+	icon_state = "grass_vines"
+	icon_spawn_state = "grass2"
+
+/turf/open/jungle/vines/Initialize(mapload, ...)
+	. = ..()
+	if(prob(35))
+		if(prob(70))
+			switch(pick(1,3))
+				if(1) new /obj/structure/flora/jungle/vines/light_1(src)
+				if(2) new /obj/structure/flora/jungle/vines/light_2(src)
+				if(3) new /obj/structure/flora/jungle/vines/light_3(src)
+		else new /obj/structure/flora/jungle/vines/heavy(src)
+
 /turf/open/jungle/path
 	bushes_spawn = 0
 	name = "dirt"

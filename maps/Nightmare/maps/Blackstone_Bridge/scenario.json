@@ -1,0 +1,20 @@
+[
+{
+	"type": "pick", "name": "Blackstone Main Story", //One of three major variations; WY, UPP, or predators. This determines major extra features about the map.
+	"choices": [
+		{ "type": "def", "values": { "blackstone_main_story": "wy_experiment"   } },
+		{ "type": "def", "values": { "blackstone_main_story": "upp_experiment" } },
+		{ "type": "def", "values": { "blackstone_main_story": "predators" } }
+\\
+	]
+},
+{
+	"type": "pick", "name": "Blackstone Side Story", //Determine what additional things will spawn. Mainly the CLF ship and the cave church.
+	"choices": [
+		{ "weight": 3, "type": "def", "values": { "blackstone_side_story": "nothing" } }, //Higher chance nothing will spawn.
+		{ "weight": 2, "type": "def", "values": { "blackstone_side_story": "cave_church" } },
+		{ "weight": 2, "type": "def", "values": { "blackstone_side_story": "crashed_clf_ship" } },
+		{ "weight": 1, "type": "def", "values": { "blackstone_side_story": "cave_church", "crashed_clf_ship" } } //Everything together.
+	]
+}
+]

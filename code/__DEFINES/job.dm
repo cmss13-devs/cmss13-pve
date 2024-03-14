@@ -182,7 +182,22 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_WO_SQUAD_SMARTGUNNER "Dust Raider Squad Smartgunner"
 #define JOB_WO_SQUAD_SPECIALIST "Dust Raider Squad Weapons Specialist"
 #define JOB_WO_SQUAD_LEADER "Dust Raider Squad Leader"
+//------------------------------------
 
+//-------------WO Lowpop roles---------------
+
+#define JOB_WO_AI_CO "Outpost Commander"
+#define JOB_WO_AI_MO "Medical Officer"
+#define JOB_WO_AI_SYNTH "Maintenance Synthetic"
+
+#define JOB_WO_AI_SQUAD_LEADER "Platoon Leader"
+#define JOB_WO_AI_SQUAD_TEAM_LEADER "Squad Sergeant"
+#define JOB_WO_AI_SQUAD_MEDIC "Hospital Corpsman"
+#define JOB_WO_AI_SQUAD_SPECIALIST "Weapons Specialist"
+#define JOB_WO_AI_SQUAD_SMARTGUNNER "Smartgunner"
+#define JOB_WO_AI_SQUAD_MARINE "Rifleman"
+
+#define JOB_WO_AI_CIVILIAN "Visiting Civilian"
 //------------------------------------
 
 //-------- PMC --------//

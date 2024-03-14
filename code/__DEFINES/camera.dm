@@ -9,6 +9,10 @@
 #define CAMERA_NET_MIDWAY "Midway"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
+#define CAMERA_NET_USCM_GROUND "USCM Outpost"
+#define CAMERA_NET_WY_BUNKER "WY Secret Facility"
+#define CAMERA_NET_WY_BUNKER_CONTAINMENT "WY Secret Facility Containment"
+#define CAMERA_NET_UPP_BUNKER "UPP Secret Facility"
 
 #define CAMERA_NET_MILITARY "Military"
 #define CAMERA_NET_OVERWATCH "Overwatch"

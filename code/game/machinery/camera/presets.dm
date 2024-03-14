@@ -120,6 +120,21 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
 
+/obj/structure/machinery/camera/autoname/uscm_ground
+	network = list(CAMERA_NET_USCM_GROUND)
+
+/obj/structure/machinery/camera/autoname/wy_bunker
+	network = list(CAMERA_NET_WY_BUNKER)
+
+/obj/structure/machinery/camera/autoname/wy_bunker/containment
+	name = "containment camera"
+	network = list(CAMERA_NET_WY_BUNKER_CONTAINMENT)
+	unslashable = TRUE
+	unacidable = TRUE
+
+/obj/structure/machinery/camera/autoname/upp_bunker
+	network = list(CAMERA_NET_UPP_BUNKER)
+
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.
 /obj/structure/machinery/camera/autoname/lz_camera
