@@ -107,6 +107,14 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"aO" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk)
 "aR" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer{
@@ -579,6 +587,10 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/ares)
+"fN" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass,
+/turf/open/floor/wood/ship,
+/area/lead_hawk)
 "fO" = (
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -681,13 +693,12 @@
 	},
 /area/lead_hawk/hangar)
 "gZ" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 28
+/obj/effect/landmark/start/bridge/pmc,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
 	},
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/lead_hawk/briefing)
+/area/lead_hawk/ares)
 "hb" = (
 /obj/structure/machinery/cryopod{
 	dir = 4
@@ -779,6 +790,10 @@
 	icon_state = "w-y0"
 	},
 /area/lead_hawk/cryo_cell)
+"hF" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
 "hG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -2155,16 +2170,8 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk)
 "xg" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
-	},
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 28
-	},
 /turf/open/floor/carpet,
-/area/lead_hawk/briefing)
+/area/lead_hawk)
 "xx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2898,7 +2905,6 @@
 /turf/open/floor/plating,
 /area/lead_hawk/ares)
 "FG" = (
-/obj/effect/landmark/start/bridge/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -3026,13 +3032,9 @@
 /turf/open/floor/plating,
 /area/space)
 "GY" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 28
-	},
-/turf/open/floor/wood/ship,
-/area/lead_hawk/briefing)
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor/carpet,
+/area/lead_hawk)
 "Hb" = (
 /turf/open/floor/almayer{
 	icon_state = "tcomms"
@@ -3398,6 +3400,16 @@
 	icon_state = "white"
 	},
 /area/lead_hawk/ares)
+"Me" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
 "Mf" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
@@ -3454,6 +3466,12 @@
 /obj/item/paper_bin/wy,
 /turf/open/floor/carpet,
 /area/lead_hawk/briefing)
+"MG" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk)
 "MJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3885,6 +3903,8 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -3999,6 +4019,10 @@
 	icon_state = "yellow"
 	},
 /area/lead_hawk/engineer)
+"Tu" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/space)
 "Tw" = (
 /turf/open/floor/almayer{
 	dir = 1;
@@ -4116,6 +4140,8 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4515,6 +4541,8 @@
 "Ze" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/marine,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -9479,26 +9507,26 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
 St
 St
-ei
+St
+St
+St
+St
+St
+aO
 ei
 ei
 ei
 rK
-Bu
+Me
 Bu
 zj
 Bu
 iy
 iy
 iy
-Bu
+zj
 kx
 Yy
 kx
@@ -9631,12 +9659,12 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
+St
+ei
+ei
+ei
+ei
+ei
 St
 rK
 rK
@@ -9783,13 +9811,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+St
+ei
+xg
+MG
+xg
+ei
+St
 rK
 Ss
 Bu
@@ -9935,13 +9963,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+St
+ei
+GY
+GY
+GY
+ei
+St
 rK
 Ss
 Bu
@@ -10087,13 +10115,13 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+St
+ei
+ei
+ei
+ei
+ei
+St
 rK
 rK
 hs
@@ -10239,14 +10267,14 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
-gR
+St
+ei
+ei
+xg
+ei
+ei
+St
+Tu
 rK
 FJ
 YT
@@ -10391,14 +10419,14 @@ gR
 gR
 gR
 gR
-gR
+St
+St
+St
+fN
+hF
 Vb
 Vb
 Vb
-Vb
-Vb
-Vb
-gZ
 Ke
 au
 Bu
@@ -10549,8 +10577,8 @@ Uz
 tl
 tl
 OJ
-GY
-GY
+tl
+tl
 YJ
 eR
 fl
@@ -10700,7 +10728,7 @@ Vb
 Df
 hA
 TA
-xg
+TA
 hA
 tl
 YJ
@@ -11883,9 +11911,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+kc
+kc
+kc
 Wn
 Xl
 mn
@@ -12033,9 +12061,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+kc
+kc
+kc
 bi
 iZ
 Wn
@@ -12185,8 +12213,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+kc
+bi
 bi
 iZ
 iZ
@@ -12337,8 +12365,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+kc
+bi
 iZ
 iZ
 iZ
@@ -12489,8 +12517,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+kc
+bi
 bi
 iZ
 iZ
@@ -12641,9 +12669,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+kc
+kc
+kc
 bi
 iZ
 Wn
@@ -12795,9 +12823,9 @@ gR
 gR
 gR
 gR
-gR
-gR
-gR
+kc
+kc
+kc
 Wn
 Xl
 Xl
@@ -17828,7 +17856,7 @@ Mw
 Mw
 nd
 nd
-nd
+gZ
 nd
 nd
 nd

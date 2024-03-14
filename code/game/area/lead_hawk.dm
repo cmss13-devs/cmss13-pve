@@ -31,6 +31,17 @@
 
 /area/lead_hawk/ares
 	name = "OVERLORD Restricted Area"
+	soundscape_playlist = SCAPE_PL_ARES
+	soundscape_interval = 120
+
+/area/lead_hawk/computer
+	name = "Power Production Center"
+
+/area/lead_hawk/ptsgt
+	name = "Operational Leaders' Room"
+
+/area/lead_hawk/co
+	name = "OVERWATCH Center"
 
 /area/lead_hawk/hangar
 	name = "\improper Hangar"
