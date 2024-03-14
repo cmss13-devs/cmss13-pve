@@ -56,7 +56,8 @@
 /datum/behavior_delegate/crusher_charger
 	name = "Charger Crusher Behavior Delegate"
 
-	var/frontal_armor = 30
+	var/frontal_armor = 40
+	var/rear_armor = 30 // Fortified butt
 	var/side_armor = 20
 
 	var/aoe_slash_damage_reduction = 0.40
@@ -104,14 +105,12 @@
 /datum/behavior_delegate/crusher_charger/proc/apply_directional_armor(mob/living/carbon/xenomorph/xeno, list/damagedata)
 	SIGNAL_HANDLER
 	var/projectile_direction = damagedata["direction"]
-	if(xeno.dir & REVERSE_DIR(projectile_direction))
-		// During the charge windup, crusher gets an extra 15 directional armor in the direction its charging
+	if(xeno.dir in reverse_nearby_direction(projectile_direction))
 		damagedata["armor"] += frontal_armor
+	else if(xeno.dir & projectile_direction)
+		damagedata["armor"] += rear_armor
 	else
-		for(var/side_direction in get_perpen_dir(xeno.dir))
-			if(projectile_direction == side_direction)
-				damagedata["armor"] += side_armor
-				return
+		damagedata["armor"] += side_armor
 
 /datum/behavior_delegate/crusher_charger/on_update_icons()
 	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && bound_xeno.body_position == STANDING_UP)
