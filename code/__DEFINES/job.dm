@@ -234,7 +234,7 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_PMCPLAT_FTL "Team Leader"
 #define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
 #define JOB_PMCPLAT_STANDARD "Tactical Unit"
-#define JOB_PMC_MEDIC "Medical Specialist"
+#define JOB_PMCPLAT_MEDIC "Medical Specialist"
 
 
 //---- Contractors ----//

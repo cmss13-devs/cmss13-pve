@@ -98,12 +98,12 @@ AddTimelock(/datum/job/marine/medic, list(
 
 
 /datum/job/marine/medic/ai/pmc
-	title = JOB_PMC_MEDIC
+	title = JOB_PMCPLAT_MEDIC
 	gear_preset = /datum/equipment_preset/uscm/pmc/med
 	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/med
 
 /obj/effect/landmark/start/marine/medic/pmc
-	name = JOB_PMC_MEDIC
+	name = JOB_PMCPLAT_MEDIC
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/medic/ai/pmc
 
