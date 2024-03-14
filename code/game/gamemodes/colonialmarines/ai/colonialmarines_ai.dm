@@ -103,5 +103,5 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON))
 
