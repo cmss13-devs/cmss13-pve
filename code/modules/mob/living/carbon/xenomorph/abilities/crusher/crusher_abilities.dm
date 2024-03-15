@@ -107,7 +107,7 @@
 	// Config vars
 	var/max_momentum = 8
 	var/steps_to_charge = 3
-	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_7
+	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5 // 2.2
 	var/plasma_per_step = 0
 
 	// State vars
