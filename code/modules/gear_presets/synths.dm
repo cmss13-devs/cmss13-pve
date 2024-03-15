@@ -714,7 +714,7 @@
 
 //*****************************************************************************************************/
 
-datum/equipment_preset/synth/survivor/overwatch
+/datum/equipment_preset/synth/survivor/overwatch
 	name = "Synthetic - OVERWATCH"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	faction = FACTION_PMC
