@@ -155,16 +155,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(species.flags & IS_SYNTHETIC)
 		return FALSE
 
-	if(HAS_TRAIT(src, TRAIT_NESTED))
-		return FALSE
-
-	if(isfacehugger(X))
-		if(status_flags & XENO_HOST)
-			return FALSE
-
-		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
-			return FALSE
-
 	return TRUE
 
 /mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)
