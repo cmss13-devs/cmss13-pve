@@ -104,6 +104,9 @@
 
 /datum/behavior_delegate/crusher_charger/proc/apply_directional_armor(mob/living/carbon/xenomorph/xeno, list/damagedata)
 	SIGNAL_HANDLER
+	if(xeno.resting)
+		return
+
 	var/projectile_direction = damagedata["direction"]
 	if(xeno.dir in reverse_nearby_direction(projectile_direction))
 		damagedata["armor"] += frontal_armor
