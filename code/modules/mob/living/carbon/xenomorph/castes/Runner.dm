@@ -73,7 +73,7 @@
 
 /mob/living/carbon/xenomorph/runner/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
-	AddComponent(/datum/component/footstep, 2, 100, 9, 1, "alien_footstep_small")
+	AddComponent(/datum/component/footstep, 2, 100, 12, 1, "alien_footstep_small")
 
 /mob/living/carbon/xenomorph/runner/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
 	..()

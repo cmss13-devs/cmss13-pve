@@ -81,4 +81,4 @@
 
 /mob/living/carbon/xenomorph/drone/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
-	AddComponent(/datum/component/footstep, 3, 100, 9, 1, "alien_footstep_small")
+	AddComponent(/datum/component/footstep, 3, 100, 12, 1, "alien_footstep_small")

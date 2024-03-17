@@ -81,7 +81,7 @@
 
 /mob/living/carbon/xenomorph/crusher/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
-	AddComponent(/datum/component/footstep, 2, 25, 15, 1, "metalbang")
+	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "metalbang")
 
 	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30)
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
@@ -91,7 +91,7 @@
 
 /mob/living/carbon/xenomorph/crusher/death(cause, gibbed)
 	. = ..()
-	playsound(src, 'sound/voice/alien_crusher_death.ogg', 50)
+	playsound(src, 'sound/voice/alien_crusher_death.ogg', 50, FALSE, 15)
 
 
 // Refactored to handle all of crusher's interactions with object during charge.
