@@ -43,7 +43,7 @@
 	crusher.small_explosives_stun = FALSE
 	crusher.health_modifier += XENO_HEALTH_MOD_LARGE
 	crusher.speed_modifier += XENO_SPEED_FASTMOD_TIER_3
-	crusher.armor_modifier -= XENO_ARMOR_MOD_SMALL
+	crusher.armor_modifier -= XENO_ARMOR_MOD_VERY_SMALL
 	crusher.damage_modifier -= XENO_DAMAGE_MOD_SMALL
 	crusher.ignore_aura = "frenzy" // no funny crushers going 7 morbillion kilometers per second
 	crusher.phero_modifier = -crusher.caste.aura_strength
@@ -56,9 +56,8 @@
 /datum/behavior_delegate/crusher_charger
 	name = "Charger Crusher Behavior Delegate"
 
-	var/frontal_armor = 40
-	var/rear_armor = 30 // Fortified butt
-	var/side_armor = 20
+	var/frontal_armor = 20
+	var/rear_armor = 10 // Fortified butt
 
 	var/aoe_slash_damage_reduction = 0.40
 
@@ -112,8 +111,6 @@
 		damagedata["armor"] += frontal_armor
 	else if(xeno.dir & projectile_direction)
 		damagedata["armor"] += rear_armor
-	else
-		damagedata["armor"] += side_armor
 
 /datum/behavior_delegate/crusher_charger/on_update_icons()
 	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && bound_xeno.body_position == STANDING_UP)
