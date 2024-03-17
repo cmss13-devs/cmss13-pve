@@ -52,6 +52,7 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai
 	total_positions = 1
 	spawn_positions = 1
+	prime_priorty = TRUE
 
 /datum/job/command/bridge/ai/set_spawn_positions(count)
 	return spawn_positions

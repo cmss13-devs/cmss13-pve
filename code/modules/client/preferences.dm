@@ -652,6 +652,10 @@ var/const/MAX_SAVE_SLOTS = 10
 	if(!RoleAuthority)
 		return
 
+	var/host_bypass = FALSE
+	if(user.client?.admin_holder?.check_for_rights(R_HOST))
+		host_bypass = TRUE
+
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
 	HTML += "<b>Choose occupation chances</b><br>Unavailable occupations are crossed out.<br><br>"
@@ -714,6 +718,9 @@ var/const/MAX_SAVE_SLOTS = 10
 				if(NEVER_PRIORITY)
 					b_color = "red"
 					priority_text = "NEVER"
+				if(PRIME_PRIORITY)
+					b_color = "purple"
+					priority_text = "PRIME"
 				if(HIGH_PRIORITY)
 					b_color = "blue"
 					priority_text = "HIGH"
@@ -723,6 +730,9 @@ var/const/MAX_SAVE_SLOTS = 10
 				if(LOW_PRIORITY)
 					b_color = "orange"
 					priority_text = "LOW"
+
+			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_option || !user.client?.player_data?.discord_link_id))
+				continue
 
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"
 			if (j < 4)
@@ -922,11 +932,15 @@ var/const/MAX_SAVE_SLOTS = 10
 	if(!J || priority < 0 || priority > 4)
 		return FALSE
 
-
 	if(!length(job_preference_list))
 		ResetJobs()
 
 	// Need to set old HIGH priority to 2
+	if(priority == PRIME_PRIORITY)
+		for(var/job in job_preference_list)
+			if(job_preference_list[job] == PRIME_PRIORITY)
+				job_preference_list[job] = MED_PRIORITY
+
 	if(priority == HIGH_PRIORITY)
 		for(var/job in job_preference_list)
 			if(job_preference_list[job] == HIGH_PRIORITY)

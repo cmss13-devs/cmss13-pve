@@ -18,9 +18,10 @@ var/global/datum/authority/branch/role/RoleAuthority
 #define RETURN_TO_LOBBY 2
 
 #define NEVER_PRIORITY 0
-#define HIGH_PRIORITY 1
-#define MED_PRIORITY 2
-#define LOW_PRIORITY 3
+#define PRIME_PRIORITY 1
+#define HIGH_PRIORITY 2
+#define MED_PRIORITY 3
+#define LOW_PRIORITY 4
 
 #define SHIPSIDE_ROLE_WEIGHT 0.25
 
@@ -244,6 +245,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 /datum/authority/branch/role/proc/assign_roles(list/roles_to_assign, list/unassigned_players)
 	if(!length(roles_to_assign) || !length(unassigned_players))
 		return
+
+	//for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+	//	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(PRIME_PRIORITY))
+	// Set up prime priority first rolls, probably put line 257 in a new function and then pass priority through manually - Morrow
 
 	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
 		var/player_assigned_job = FALSE
