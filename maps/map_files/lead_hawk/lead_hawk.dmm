@@ -1634,6 +1634,7 @@
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
 /obj/item/clothing/mask/gas/pmc,
+/obj/item/clothing/under/marine/veteran/pmc/leader,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -2207,6 +2208,7 @@
 	},
 /obj/item/weapon/gun/rifle/m46c,
 /obj/item/device/binoculars/range/designator,
+/obj/item/clothing/under/marine/veteran/pmc/leader,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
 "xg" = (
@@ -3986,6 +3988,8 @@
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/device/radio/headset/distress/WY,
 /obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4227,6 +4231,8 @@
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/device/radio/headset/distress/WY,
 /obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4649,6 +4655,8 @@
 /obj/item/clothing/shoes/marine,
 /obj/item/device/radio/headset/distress/WY,
 /obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},

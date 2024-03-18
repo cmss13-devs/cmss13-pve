@@ -11,6 +11,8 @@
 	idtype = /obj/item/card/id/pmc
 	assignment = JOB_PMC_STANDARD
 	rank = JOB_SQUAD_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	skills = /datum/skills/pfc
 
 /datum/equipment_preset/uscm/pmc/sl
 	name = "Operation Leader"
@@ -19,6 +21,7 @@
 	assignment = JOB_PMC_LEADER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_LEADER
+	skills = /datum/skills/general
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
@@ -27,6 +30,7 @@
 	assignment = JOB_PMC_LEADER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_TEAM_LEADER
+	skills = /datum/skills/pmc/specialist
 
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"
@@ -35,6 +39,7 @@
 	assignment = JOB_PMC_GUNNER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_SMARTGUN
+	skills = /datum/skills/smartgunner
 
 /datum/equipment_preset/uscm/pmc/med
 	name = "Medical Specialist"
@@ -43,3 +48,4 @@
 	assignment = JOB_PMCPLAT_MEDIC
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_MEDIC
+	skills = /datum/skills/combat_medic
