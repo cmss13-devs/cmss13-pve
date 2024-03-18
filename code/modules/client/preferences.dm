@@ -731,7 +731,7 @@ var/const/MAX_SAVE_SLOTS = 10
 					b_color = "orange"
 					priority_text = "LOW"
 
-			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_option || !user.client?.player_data?.discord_link_id))
+			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || !user.client?.player_data?.discord_link_id))
 				continue
 
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"
