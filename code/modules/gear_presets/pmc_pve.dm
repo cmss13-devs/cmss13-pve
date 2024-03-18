@@ -8,29 +8,38 @@
 	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	faction_group = list(FACTION_LIST_WY)
 	faction = FACTION_PMC
-	idtype = /obj/item/card/id/silver
-	rank = JOB_PMC_STANDARD
+	idtype = /obj/item/card/id/pmc
+	assignment = JOB_PMC_STANDARD
+	rank = JOB_SQUAD_MARINE
 
 /datum/equipment_preset/uscm/pmc/sl
 	name = "Operation Leader"
 	paygrade = "PMC-TL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
-	rank = JOB_PMC_LEADER
+	assignment = JOB_PMC_LEADER
+	idtype = /obj/item/card/id/pmc
+	rank = JOB_SQUAD_LEADER
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
 	paygrade = "PMC-OP"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ARMORY)
-	rank = JOB_PMC_LEADER
+	assignment = JOB_PMC_LEADER
+	idtype = /obj/item/card/id/pmc
+	rank = JOB_SQUAD_TEAM_LEADER
 
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
 	access = list(ACCESS_WY_GENERAL,ACCESS_WY_ENGINEERING)
-	rank = JOB_PMC_GUNNER
+	assignment = JOB_PMC_GUNNER
+	idtype = /obj/item/card/id/pmc
+	rank = JOB_SQUAD_SMARTGUN
 
 /datum/equipment_preset/uscm/pmc/med
 	name = "Medical Specialist"
 	paygrade = "PMC-MS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_MEDICAL)
-	rank = JOB_PMC_MEDIC
+	assignment = JOB_PMCPLAT_MEDIC
+	idtype = /obj/item/card/id/pmc
+	rank = JOB_SQUAD_MEDIC
