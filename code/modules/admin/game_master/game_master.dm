@@ -58,6 +58,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	var/list/submenu_types = list(
 		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
 		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
+		/mob/living/carbon/human = /datum/game_master_submenu/infest,
 	)
 
 	/// List of current submenus
