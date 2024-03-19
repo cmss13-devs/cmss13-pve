@@ -29,7 +29,7 @@
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
-		///datum/action/item_action/smartgun/toggle_auto_fire, - Thanks Bales
+		///datum/action/item_action/smartgun/toggle_auto_fire,
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
@@ -50,9 +50,6 @@
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
-
-	/// Cooldown used for the delay on sound and to_chat() when IFF encounters a friendly target while trying to fire
-	COOLDOWN_DECLARE(iff_halt_cooldown)
 
 	unacidable = 1
 	indestructible = 1
@@ -109,7 +106,7 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
 	))
-	RegisterSignal(src, COMSIG_GUN_BEFORE_FIRE, PROC_REF(check_firing_lane))
+	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/smartgun/get_examine_text(mob/user)
 	. = ..()
@@ -190,30 +187,29 @@
 
 /datum/action/item_action/smartgun/update_button_icon()
 	return
-
-///datum/action/item_action/smartgun/toggle_motion_detector/New(Target, obj/item/holder)
-//	. = ..()
-//	name = "Toggle Motion Detector"
-//	action_icon_state = "motion_detector"
-//	button.name = name
-//	button.overlays.Cut()
-//	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-///datum/action/item_action/smartgun/toggle_motion_detector/action_activate()
-//	. = ..()
-//	var/obj/item/weapon/gun/smartgun/G = holder_item
-//	G.toggle_motion_detector(usr)
-
-///datum/action/item_action/smartgun/toggle_motion_detector/proc/update_icon()
-//	if(!holder_item)
-//		return
-//	var/obj/item/weapon/gun/smartgun/G = holder_item
-//	if(G.motion_detector)
-//		button.icon_state = "template_on"
-//	else
-//		button.icon_state = "template"
-
 /*
+/datum/action/item_action/smartgun/toggle_motion_detector/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Motion Detector"
+	action_icon_state = "motion_detector"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_motion_detector/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	G.toggle_motion_detector(usr)
+
+/datum/action/item_action/smartgun/toggle_motion_detector/proc/update_icon()
+	if(!holder_item)
+		return
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	if(G.motion_detector)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
 /datum/action/item_action/smartgun/toggle_auto_fire/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Auto Fire"
@@ -235,9 +231,7 @@
 		button.icon_state = "template_on"
 	else
 		button.icon_state = "template"
-
 */
-
 /datum/action/item_action/smartgun/toggle_accuracy_improvement/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Accuracy Improvement"
@@ -322,75 +316,16 @@
 			return FALSE
 		var/mob/living/carbon/human/H = user
 		if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_SMARTGUN) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-			to_chat(H, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
+			balloon_alert(user, "insufficient skills")
 			return FALSE
 		if(requires_harness)
 			if(!H.wear_suit || !(H.wear_suit.flags_inventory & SMARTGUN_HARNESS))
-				to_chat(H, SPAN_WARNING("You need a harness suit to be able to fire [src]..."))
+				balloon_alert(user, "harness required")
 				return FALSE
 		if(cover_open)
 			to_chat(H, SPAN_WARNING("You can't fire \the [src] with the feed cover open! (alt-click to close)"))
+			balloon_alert(user, "cannot fire; feed cover open")
 			return FALSE
-
-#define SMARTGUN_IFF_RANGE_CHECK 7
-#define SMARTGUN_IFF_HALT_COOLDOWN (0.5 SECONDS)
-
-/obj/item/weapon/gun/smartgun/proc/check_firing_lane(obj/item/weapon/gun/smartgun/firing_weapon, obj/projectile/projectile_to_fire, atom/target, mob/living/user)
-	SIGNAL_HANDLER
-
-	var/angle = get_angle(user, target)
-
-	var/range_to_check = SMARTGUN_IFF_RANGE_CHECK
-
-	var/extended_target_turf = get_angle_target_turf(user, angle, range_to_check)
-
-	var/turf/user_turf = get_turf(user)
-
-	if(!user_turf || !extended_target_turf)
-		return COMPONENT_CANCEL_GUN_BEFORE_FIRE
-
-	var/list/checked_turfs = getline2(user_turf, extended_target_turf)
-
-	checked_turfs -= user_turf
-
-	//At some angles (scatter or otherwise) the original target is not in checked_turfs so we put it in there in order based on distance from user
-	//If we are literally clicking on someone with IFF then we don't want to fire, feels funny as a user otherwise
-	if(projectile_to_fire.original)
-		var/turf/original_target_turf = get_turf(projectile_to_fire.original)
-
-		if(original_target_turf && !(original_target_turf in checked_turfs))
-			var/user_to_target_dist = get_dist(user_turf, original_target_turf)
-			var/list/temp_checked_turfs = checked_turfs.Copy()
-			checked_turfs = list()
-
-			for(var/turf/checked_turf as anything in temp_checked_turfs)
-				if(!(original_target_turf in checked_turfs) && user_to_target_dist < get_dist(user_turf, checked_turf))
-					checked_turfs += original_target_turf
-
-				checked_turfs += checked_turf
-
-	for(var/turf/checked_turf as anything in checked_turfs)
-
-		//Wall, should block the bullet so we're good to stop checking.
-		if(istype(checked_turf, /turf/closed))
-			return
-
-		for(var/mob/living/checked_living in checked_turf)
-			if(checked_living.body_position == LYING_DOWN && projectile_to_fire.original != checked_living)
-				continue
-
-			if(checked_living.get_target_lock(user.faction_group))
-				if(COOLDOWN_FINISHED(src, iff_halt_cooldown))
-					playsound_client(user.client, 'sound/weapons/smartgun_fail.ogg', src, 25)
-					to_chat(user, SPAN_WARNING("[src] halts firing as an IFF marked target crosses your field of fire!"))
-					COOLDOWN_START(src, iff_halt_cooldown, SMARTGUN_IFF_HALT_COOLDOWN)
-
-				return COMPONENT_CANCEL_GUN_BEFORE_FIRE
-
-			return //if we have a target we *can* hit and find it before any IFF targets we want to fire
-
-#undef SMARTGUN_IFF_RANGE_CHECK
-#undef SMARTGUN_IFF_HALT_COOLDOWN
 
 /obj/item/weapon/gun/smartgun/unique_action(mob/user)
 	if(isobserver(usr) || isxeno(usr))
@@ -403,6 +338,7 @@
 		return
 	secondary_toggled = !secondary_toggled
 	to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire [secondary_toggled ? "armor shredding rounds" : "highly precise rounds"].")
+	balloon_alert(user, "firing [secondary_toggled ? "armor shredding" : "highly precise"]")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
@@ -420,14 +356,13 @@
 	secondary_toggled = FALSE
 	if(iff_enabled)
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
-		RegisterSignal(src, COMSIG_GUN_BEFORE_FIRE, PROC_REF(check_firing_lane))
 		drain += 10
 		MD.iff_signal = initial(MD.iff_signal)
 	if(!iff_enabled)
 		remove_bullet_trait("iff")
-		UnregisterSignal(src, COMSIG_GUN_BEFORE_FIRE)
 		drain -= 10
 		MD.iff_signal = null
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if(!requires_battery)
@@ -455,7 +390,7 @@
 			return FALSE
 		return TRUE
 	if(!battery || battery.power_cell.charge == 0)
-		to_chat(usr, SPAN_WARNING("[src] emits a low power warning and immediately shuts down!"))
+		balloon_alert(usr, "low power")
 		return FALSE
 	return FALSE
 
@@ -478,7 +413,6 @@
 	else
 		drain -= 50
 	recalculate_attachment_bonuses()
-
 /*
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_fire(mob/user)
 	if(!(flags_item & WIELDED))
@@ -517,7 +451,6 @@
 			return
 		long_range_cooldown = initial(long_range_cooldown)
 		MD.scan()
-
 
 /obj/item/weapon/gun/smartgun/proc/auto_prefire(warned) //To allow the autofire delay to properly check targets after waiting.
 	if(ishuman(loc) && (flags_item & WIELDED))
@@ -600,6 +533,7 @@
 /obj/item/weapon/gun/smartgun/proc/process_shot(mob/living/user, warned)
 	set waitfor = 0
 
+
 	if(!target)
 		return //Acquire our victim.
 
@@ -616,26 +550,24 @@
 
 	target = null
 
+/obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
+	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	motion_detector = !motion_detector
+	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
+	TMD.update_icon()
+	motion_detector()
+
+/obj/item/weapon/gun/smartgun/proc/motion_detector()
+	if(motion_detector)
+		drain += 15
+		if(!auto_fire)
+			START_PROCESSING(SSobj, src)
+	if(!motion_detector)
+		drain -= 15
+		if(!auto_fire)
+			STOP_PROCESSING(SSobj, src)
 */
-
-///obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
-//	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
-//	playsound(loc,'sound/machines/click.ogg', 25, 1)
-//	motion_detector = !motion_detector
-//	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
-//	TMD.update_icon()
-//	motion_detector()
-
-///obj/item/weapon/gun/smartgun/proc/motion_detector()
-//	if(motion_detector)
-//		drain += 15
-//		if(!auto_fire)
-//			START_PROCESSING(SSobj, src)
-//	if(!motion_detector)
-//		drain -= 15
-//		if(!auto_fire)
-//			STOP_PROCESSING(SSobj, src)
-
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
 	name = "\improper M56C 'Cavalier' smartgun"

@@ -932,6 +932,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
+	minimap_type = MINIMAP_FLAG_UPP
 
 /obj/item/device/radio/headset/distress/UPP/cct
 	name = "UPP-CCT headset"

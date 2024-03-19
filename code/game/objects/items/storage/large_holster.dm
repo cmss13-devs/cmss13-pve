@@ -67,6 +67,9 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/large_holster/m37/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/large_holster/m37/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 

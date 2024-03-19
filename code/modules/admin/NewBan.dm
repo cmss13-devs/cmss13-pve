@@ -196,8 +196,9 @@ var/savefile/Banlist
 /datum/admins/proc/stickypanel()
 	var/add_sticky = "<a href='?src=\ref[src];[HrefToken()];sticky=1;new_sticky=1'>Add Sticky Ban</a>"
 	var/find_sticky = "<a href='?src=\ref[src];[HrefToken()];sticky=1;find_sticky=1'>Find Sticky Ban</a>"
+	var/refresh_button = "<a href='?src=\ref[src];[HrefToken()];sticky=1;refresh_panel=1'>Refresh Panel</a>"
 
-	var/data = "<hr><b>Sticky Bans:</b> [add_sticky] [find_sticky] <table border=1 rules=all frame=void cellspacing=0 cellpadding=3>"
+	var/data = "<hr><b>Sticky Bans:</b> [add_sticky] [find_sticky] [refresh_button] <table border=1 rules=all frame=void cellspacing=0 cellpadding=3>"
 
 	var/list/datum/view_record/stickyban/stickies = DB_VIEW(/datum/view_record/stickyban,
 		DB_COMP("active", DB_EQUALS, TRUE)

@@ -7,7 +7,7 @@
 	disp_icon_state = "ace_autocannon"
 	activation_sounds = list('sound/weapons/vehicles/autocannon_fire.ogg')
 
-	health = 500
+	health = 2000
 	firing_arc = 60
 
 	origins = list(0, -3)

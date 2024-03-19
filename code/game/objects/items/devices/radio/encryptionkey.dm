@@ -253,7 +253,7 @@
 /obj/item/device/encryptionkey/soc/forecon
 	name = "\improper SOF Radio Encryption Key"
 	icon_state = "binary_key"
-	channels = list(RADIO_CHANNEL_COLONY= TRUE)
+	channels = list()
 
 //ERT, PMC
 

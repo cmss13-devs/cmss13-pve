@@ -47,6 +47,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"am" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "an" = (
 /obj/structure/closet/emcloset,
 /obj/structure/machinery/light,
@@ -268,6 +279,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"br" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "bu" = (
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/effect/decal/warning_stripes{
@@ -316,6 +338,18 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"bL" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Corpsman";
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/shoes/marine/knife,
+/obj/item/device/radio/headset/almayer/marine,
+/obj/item/clothing/under/marine/medic,
+/turf/open/floor/almayer{
+	icon_state = "sterile_green"
+	},
+/area/golden_arrow/medical)
 "bO" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -454,6 +488,14 @@
 	dir = 1
 	},
 /obj/structure/pipes/vents/scrubber,
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/mk1,
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contained High-Explosive Armor-Piercing bullets. It also has some... notches on the side..?";
+	current_rounds = 0;
+	pixel_y = 6;
+	pixel_x = 13
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -569,6 +611,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/prep_hallway)
+"cV" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/pumpshotgun/special,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_one)
 "cZ" = (
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
 /turf/open/floor/almayer{
@@ -1963,16 +2012,25 @@
 	},
 /area/golden_arrow/prep_hallway)
 "lc" = (
-/obj/structure/closet/cryo,
-/obj/structure/closet/cryo,
+/obj/structure/surface/rack,
+/obj/item/tool/soap,
+/obj/item/tool/soap{
+	pixel_y = 4;
+	pixel_x = 6
+	},
+/obj/item/tool/soap{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/tool/soap,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
 "ld" = (
-/obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
+/obj/structure/machinery/disposal,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2079,8 +2137,8 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "mc" = (
-/obj/structure/surface/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/rack,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2236,35 +2294,19 @@
 	},
 /area/golden_arrow/briefing)
 "nj" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
 	pixel_y = -15
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8;
+	job = "Smartgunner"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Smartgunner"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2276,13 +2318,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"ns" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/cryo,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/cryo_cells)
 "nx" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2474,14 +2509,14 @@
 	},
 /area/golden_arrow/supply)
 "ot" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1{
-	pixel_y = 7
+/obj/structure/largecrate/supply/ammo{
+	name = "sentry crate";
+	fill_from_loc = 1
 	},
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1{
-	pixel_y = -7
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01
 	},
+/obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2880,7 +2915,14 @@
 	},
 /area/golden_arrow/cryo_cells)
 "rd" = (
-/obj/structure/closet/cryo,
+/obj/structure/closet/wardrobe{
+	name = "PT uniform"
+	},
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/under/shorts/red,
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/head/headband/red,
+/obj/item/clothing/under/shorts/red,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3017,8 +3059,14 @@
 /turf/open/floor/almayer/uscm/directional,
 /area/golden_arrow/briefing)
 "rX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8;
+	job = "Squad Sergeant"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Sergeant"
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3191,11 +3239,18 @@
 	},
 /area/golden_arrow/supply)
 "sY" = (
-/obj/structure/closet/secure_closet/personal/cabinet{
-	req_access = null
-	},
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/service/tanker,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Commander";
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_state = "cabinetdetective_locked";
+	icon_opened = "cabinetdetective_open";
+	icon_off = "cabinetdetective_broken";
+	has_cryo_gear = 0
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3258,6 +3313,14 @@
 /obj/item/storage/box/pdt_kit{
 	pixel_x = 7;
 	pixel_y = 9
+	},
+/obj/item/prop/helmetgarb/spent_slug{
+	pixel_y = 9;
+	pixel_x = 8
+	},
+/obj/item/prop/helmetgarb/spent_slug{
+	pixel_y = 9;
+	pixel_x = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_two)
@@ -3362,6 +3425,30 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"ur" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/dorms)
 "us" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -4069,13 +4156,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
 "yL" = (
-/obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
 /obj/structure/sign/safety/rewire{
 	pixel_x = 14;
 	pixel_y = 29
+	},
+/obj/structure/gun_rack/m41,
+/obj/item/ashtray/plastic{
+	pixel_y = 14;
+	pixel_x = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4500,6 +4588,10 @@
 	layer = 3.01
 	},
 /obj/item/defenses/handheld/sentry,
+/obj/structure/largecrate/supply/ammo{
+	name = "sentry crate";
+	fill_from_loc = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4760,16 +4852,15 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "CC" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/flamer_tank,
-/obj/item/ammo_magazine/flamer_tank,
-/obj/item/weapon/gun/flamer{
-	current_mag = null;
-	pixel_y = 4
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/flamer/special,
+/obj/item/explosive/grenade/smokebomb{
+	pixel_y = 14;
+	pixel_x = -5
 	},
-/obj/item/device/motiondetector,
-/obj/item/attachable/attached_gun/extinguisher/pyro{
-	layer = 3.01
+/obj/item/explosive/grenade/smokebomb{
+	pixel_y = 11;
+	pixel_x = -9
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4791,6 +4882,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/canteen)
+"CJ" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/spray/cleaner{
+	name = "Weyland-Yutani premium shampoo";
+	desc = "Can also be used as body wash, shaving foam, deodorant, bug repellant, lighter fluid and gatorade."
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/cryo_cells)
 "CK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -4879,6 +4980,19 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Di" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/helmetgarb/spent_slug{
+	pixel_y = -9;
+	pixel_x = 8;
+	name = "spent snailshot";
+	layer = 2.7
+	},
+/obj/item/storage/box/guncase/pumpshotgun/special,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_two)
 "Dl" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin{
@@ -4990,7 +5104,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "Ei" = (
-/obj/structure/machinery/space_heater,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/flamer/special,
+/obj/item/trash/cigbutt/cigarbutt{
+	pixel_y = 18
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5588,9 +5706,15 @@
 	},
 /area/golden_arrow/engineering)
 "Hd" = (
-/obj/structure/closet,
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 30
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Platoon Sergeant"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6109,13 +6233,11 @@
 	},
 /area/golden_arrow/platoon_sergeant)
 "Kp" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1{
-	pixel_y = 7
-	},
-/obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/weapon/gun/rifle/m41aMK1{
-	pixel_y = -7
+/obj/structure/largecrate/supply/motiondetectors,
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
+	pixel_y = 10;
+	pixel_x = 3
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6268,25 +6390,6 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 1;
 	icon_state = "lattice-simple";
@@ -6297,6 +6400,13 @@
 	icon_state = "lattice2";
 	pixel_x = 16;
 	pixel_y = 16
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8;
+	job = "Smartgunner"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -6311,6 +6421,19 @@
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"Lh" = (
+/obj/structure/sign/poster{
+	pixel_y = -8;
+	pixel_x = -25;
+	icon_state = "poster15";
+	name = "pulse rifle pinup";
+	desc = "The Armat Battlefield Systems Model 41 Derivative 'A' Pulse Rifle Mark One. The only pinup you'll ever need."
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/squad_two)
 "Ll" = (
 /obj/structure/ship_ammo/minirocket/incendiary,
 /turf/open/floor/almayer{
@@ -6691,12 +6814,14 @@
 "ND" = (
 /obj/structure/sign/safety/rewire{
 	pixel_x = 14;
-	pixel_y = 29
+	pixel_y = 29;
+	layer = 3
 	},
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01
+/obj/structure/gun_rack/m41,
+/obj/item/reagent_container/food/drinks/cans/souto/blue{
+	pixel_y = 22;
+	pixel_x = 9
 	},
-/obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7000,16 +7125,12 @@
 	},
 /area/golden_arrow/cryo_cells)
 "Pm" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/special{
-	pixel_y = 8
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case"
 	},
-/obj/item/storage/box/nade_box{
-	pixel_x = 4;
-	pixel_y = -2
+/obj/structure/largecrate/supply/motiondetectors{
+	pixel_y = 10
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/special,
-/obj/item/device/motiondetector,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7056,6 +7177,10 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Px" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/squad_two)
 "Py" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
@@ -7066,16 +7191,9 @@
 	},
 /area/golden_arrow/hangar)
 "PA" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/special{
-	pixel_y = 10
-	},
-/obj/item/storage/box/nade_box{
-	pixel_x = 2;
-	pixel_y = -4
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/special,
-/obj/item/device/motiondetector,
+/obj/structure/closet/crate/supply,
+/obj/item/storage/box/m94,
+/obj/item/storage/box/m94,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7635,29 +7753,11 @@
 	pixel_y = 29;
 	serial_number = 16
 	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -7887,11 +7987,6 @@
 	freerange = 1;
 	name = "General Listening Channel";
 	pixel_y = 28
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -8526,17 +8621,6 @@
 	},
 /area/golden_arrow/supply)
 "WK" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/flamer{
-	current_mag = null;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/flamer_tank,
-/obj/item/ammo_magazine/flamer_tank,
-/obj/item/device/motiondetector,
-/obj/item/attachable/attached_gun/extinguisher/pyro{
-	layer = 3.01
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8997,6 +9081,8 @@
 	dir = 1
 	},
 /obj/structure/pipes/vents/scrubber,
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/mk1,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -15861,9 +15947,9 @@ Cr
 Cr
 Qw
 ot
-CC
+Lh
+pB
 Pm
-ot
 Qw
 Cr
 Cr
@@ -16014,8 +16100,8 @@ pt
 Qw
 ND
 Fg
-Fg
-gd
+Px
+CC
 Qw
 Cr
 Cr
@@ -16155,7 +16241,7 @@ wJ
 VQ
 qA
 zV
-DY
+KQ
 qA
 dl
 Bh
@@ -16167,7 +16253,7 @@ Me
 Zl
 DE
 DR
-gd
+Di
 Qw
 Cr
 Cr
@@ -18286,7 +18372,7 @@ KZ
 gL
 sk
 uH
-wl
+Vp
 Vp
 wd
 XQ
@@ -18434,7 +18520,7 @@ Vr
 Vr
 As
 Vp
-EQ
+am
 JL
 Tb
 KK
@@ -19654,16 +19740,16 @@ Tg
 wl
 FR
 wl
-Tk
+ur
 Vp
 UT
 XI
 wp
 ZC
 yL
+xf
 cT
-cT
-Bu
+cV
 Ty
 Cr
 Cr
@@ -19806,13 +19892,13 @@ Sd
 Cb
 Gf
 MJ
-Tk
+br
 Vp
 aQ
 XI
 wp
 ZC
-Kp
+Bu
 WK
 PA
 Kp
@@ -20544,7 +20630,7 @@ JU
 Cv
 Cv
 dd
-Mj
+bL
 Nf
 fY
 hW
@@ -22087,18 +22173,18 @@ DX
 HX
 Qx
 HK
-ns
-ns
+Sc
+Sc
 HK
-rd
-rd
+Br
+Br
 HK
 lc
-rd
-rd
+CJ
+Br
 HK
-rd
-rd
+Br
+Br
 rd
 HK
 eL

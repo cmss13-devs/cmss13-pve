@@ -248,6 +248,9 @@
 		important_message_external("[owner] has removed the permanent ban on [unban_player.ckey].", "Permaban Removed")
 
 	else if(href_list["sticky"])
+		if(href_list["refresh_panel"])
+			stickypanel()
+
 		if(href_list["view_all_ckeys"])
 			var/list/datum/view_record/stickyban_matched_ckey/all_ckeys = DB_VIEW(/datum/view_record/stickyban_matched_ckey,
 				DB_COMP("linked_stickyban", DB_EQUALS, href_list["sticky"])
