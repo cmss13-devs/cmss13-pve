@@ -435,6 +435,9 @@
 
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
+/obj/item/clothing/suit/storage/marine/smartgunner/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/suit/storage/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."

@@ -137,7 +137,7 @@
 			if(target_id_card)
 				if(target_id_card.registered_name != origin_name || target_id_card.assignment != origin_assignment)
 					GLOB.data_core.manifest_modify(target_id_card.registered_name, target_id_card.registered_ref, target_id_card.assignment, target_id_card.rank)
-					target_id_card.name = text("[target_id_card.registered_name]'s ID Card ([target_id_card.assignment])")
+					target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.card_name] ([target_id_card.assignment])")
 					if(target_id_card.registered_name != origin_name)
 						log_idmod(target_id_card, "<font color='orange'> [key_name_admin(usr)] changed the registered name of the ID to '[target_id_card.registered_name]'. </font>")
 					if(target_id_card.assignment != origin_assignment)
@@ -451,7 +451,7 @@
 			usr.put_in_hands(target_id_card)
 		if(operable()) // Powered. Make comp proceed ejection
 			GLOB.data_core.manifest_modify(target_id_card.registered_name, target_id_card.registered_ref, target_id_card.assignment, target_id_card.rank)
-			target_id_card.name = text("[target_id_card.registered_name]'s ID Card ([target_id_card.assignment])")
+			target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.card_name] ([target_id_card.assignment])")
 			visible_message("[SPAN_BOLD("[src]")] states, \"CARD EJECT: Data imprinted. Updating database... Success.\"")
 		else
 			to_chat(usr, "You remove \the [target_id_card] from \the [src].")
