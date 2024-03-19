@@ -160,8 +160,8 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 55 //7.62x51 is scary, redux...
-	penetration = ARMOR_PENETRATION_TIER_0 //...but frangibles suck ass at punching through armor...
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_0 //...and they tend to disintegrate into dust.
+	penetration = 0 //...but frangibles suck ass at punching through armor...
+	shrapnel_chance = 0 //...and they tend to disintegrate into dust.
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"
