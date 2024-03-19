@@ -58,7 +58,7 @@
 
 /obj/item/clothing/suit/armor/vest/pilot
 	name = "\improper M70 flak jacket"
-	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics..."
+	desc = "A flak jacket used by dropship pilots to protect themselves while flying in the cockpit. Excels in protecting the wearer against high-velocity solid projectiles."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "pilot"
 	blood_overlay_type = "armor"
