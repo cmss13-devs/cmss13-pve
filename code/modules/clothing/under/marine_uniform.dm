@@ -4,7 +4,7 @@
 
 /obj/item/clothing/under/marine
 	name = "\improper USCM uniform"
-	desc = "Standard-issue Marine uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
 	siemens_coefficient = 0.9
 	icon_state = "marine_jumpsuit"
 	worn_state = "marine_jumpsuit"
@@ -53,7 +53,7 @@
 
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
-	desc = "Standard-issue Marine hospital corpsman fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine hospital corpsman fatigues with venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "marine_medic"
 	worn_state = "marine_medic"
 	specialty = "USCM Hospital Corpsman"
@@ -139,7 +139,7 @@
 
 /obj/item/clothing/under/marine/officer
 	name = "marine officer uniform"
-	desc = "Softer than silk. Lighter than feather. More protective than Kevlar. Fancier than a regular jumpsuit, too. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Very comfortable, but unfortunately has the same actual protective fragmentation weave as the standard uniform. Special padding protects against chafing after long hours seated at a console."
 	icon_state = "officertanclothes"
 	item_state = "officertanclothes"
 	worn_state = "officertanclothes"
@@ -176,7 +176,7 @@
 
 /obj/item/clothing/under/marine/officer/pilot
 	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, and is meant for survival in inhospitable conditions. Fly the marines onwards to glory. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
 	icon_state = "pilot_flightsuit"
 	item_state = "pilot_flightsuit"
 	worn_state = "pilot_flightsuit"
@@ -206,7 +206,7 @@
 
 /obj/item/clothing/under/marine/officer/tanker
 	name = "vehicle crewman uniform"
-	desc = "A uniform worn by vehicle crewmen of the USCM. Do the corps proud. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Armored vehicle crew uniform worn by tankers and cav crew of the USCMC. Shrapnel protection provided by venlar panels, badassery hinges on how well the operator works their vehicle. Do the Corps proud."
 	icon_state = "marine_tanker"
 	worn_state = "marine_tanker"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/tanker, /obj/item/clothing/suit/storage/jacket/marine/service/tanker)
