@@ -152,7 +152,7 @@
 	accurate_range = 12
 
 /datum/ammo/bullet/m60
-	name = "7.62x51mm frangible bullet"
+	name = "frangible machine gun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	accuracy = HIT_ACCURACY_TIER_2
