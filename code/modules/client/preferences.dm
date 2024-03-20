@@ -648,7 +648,7 @@ var/const/MAX_SAVE_SLOTS = 10
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
 //width - Screen' width.
 //height - Screen's height.
-/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 450, height = 450)
+/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 480, height = 450)
 	if(!RoleAuthority)
 		return
 
@@ -680,7 +680,7 @@ var/const/MAX_SAVE_SLOTS = 10
 			HTML += "</table></td><td valign='top' width='20%'><table width='100%' cellpadding='1' cellspacing='0'>"
 			index = 0
 
-		HTML += "<tr class='[job.selection_class]'><td width='40%' align='right'>"
+		HTML += "<tr class='[job.selection_class]'><td width='30%' align='center'>"
 
 		if(jobban_isbanned(user, job.title))
 			HTML += "<b><del>[job.disp_title]</del></b></td><td width='10%' align='center'></td><td><b>BANNED</b></td></tr>"
@@ -731,7 +731,7 @@ var/const/MAX_SAVE_SLOTS = 10
 					b_color = "orange"
 					priority_text = "LOW"
 
-			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || !user.client?.player_data?.discord_link_id))
+			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || !user.client?.player_data?.discord_link_id || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_1))
 				continue
 
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"

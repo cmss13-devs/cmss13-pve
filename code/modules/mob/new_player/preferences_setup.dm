@@ -216,16 +216,17 @@
 		rotate_right.screen_loc = "preview:1:-16,0"
 
 /datum/preferences/proc/job_pref_to_gear_preset()
-	var/highest_priority
+	var/highest_priority_job
+	var/highest_priority = LOW_PRIORITY
+
 	for(var/job in job_preference_list)
-		if(job_preference_list[job] == HIGH_PRIORITY)
-			highest_priority = job
+		if(job_preference_list[job] == NEVER_PRIORITY)
+			continue
 
-		if(job_preference_list[job] == PRIME_PRIORITY)
-			highest_priority = job
-			break
+		if(job_preference_list[job] < highest_priority)
+			highest_priority_job = job
 
-	switch(highest_priority)
+	switch(highest_priority_job)
 		if(JOB_SQUAD_MARINE)
 			return /datum/equipment_preset/uscm/private_equipped
 		if(JOB_SQUAD_ENGI)
