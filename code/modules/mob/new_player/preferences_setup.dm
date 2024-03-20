@@ -225,6 +225,7 @@
 
 		if(job_preference_list[job] < highest_priority)
 			highest_priority_job = job
+			highest_priority = job_preference_list[job]
 
 	switch(highest_priority_job)
 		if(JOB_SQUAD_MARINE)
