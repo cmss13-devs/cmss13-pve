@@ -278,10 +278,30 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/headband_tan
 	display_name = "USCM headband, tan"
 	path = /obj/item/clothing/head/headband/tan
+//commented out due to redundancy of color with headband_red
+///datum/gear/headwear/uscm/headband_alpha
+//	display_name = "USCM headband, alpha red"
+//	path = /obj/item/clothing/head/headband/alpha
 
-/datum/gear/headwear/uscm/headband_squad
-	display_name = "USCM headband, squad specific"
-	path = /obj/item/clothing/head/headband/squad
+/datum/gear/headwear/uscm/headband_bravo
+	display_name = "USCM headband, orange"
+	path = /obj/item/clothing/head/headband/bravo
+
+/datum/gear/headwear/uscm/headband_charlie
+	display_name = "USCM headband, purple"
+	path = /obj/item/clothing/head/headband/charlie
+
+/datum/gear/headwear/uscm/headband_delta
+	display_name = "USCM headband, blue"
+	path = /obj/item/clothing/head/headband/delta
+
+/datum/gear/headwear/uscm/headband_echo
+	display_name = "USCM headband, cyan green"
+	path = /obj/item/clothing/head/headband/echo
+//commented out due to redundancy of color with headband_brown
+///datum/gear/headwear/uscm/headband_foxtrot
+//	display_name = "USCM headband, foxtrot brown"
+//	path = /obj/item/clothing/head/headband/foxtrot
 
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
