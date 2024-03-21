@@ -320,6 +320,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/head/headband/delta = "helmet_headbanddelta",
 	/obj/item/clothing/head/headband/echo = "helmet_headbandecho",
 	/obj/item/clothing/head/headband/foxtrot = "helmet_headbandfoxtrot",
+	/obj/item/clothing/head/headband/foxtrot = "helmet_headbandintel",
 	/obj/item/tool/candle = "candle",
 	/obj/item/clothing/mask/facehugger/lamarr = "lamarr",
 	/obj/item/toy/crayon/red = "crayonred",
