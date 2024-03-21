@@ -341,7 +341,7 @@
 	icon = 'icons/obj/structures/doors/dropship2_side2.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
-	name = "improper Cyclone crew hatch"
+	name = "\improper Cyclone crew hatch"
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
 	name = "\improper Akademia Nauk cargo door"
