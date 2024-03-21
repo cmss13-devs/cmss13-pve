@@ -113,6 +113,10 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/face_wrap_tan
 	display_name = "Face wrap, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan
+
+/datum/gear/mask/face_wrap_intel
+	display_name = "Face wrap, black"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
 //commented out due to redundancy with face wrap, red
 ///datum/gear/mask/face_wrap_alpha
 //	display_name = "Face wrap, alpha red"
@@ -267,6 +271,10 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "USCM beret, brown flash"
 	path = /obj/item/clothing/head/beret/cm/foxtrot
 
+/datum/gear/headwear/uscm/beret_intel
+	display_name = "USCM beret, black flash"
+	path = /obj/item/clothing/head/beret/cm/intel
+
 /datum/gear/headwear/uscm/boonie_olive
 	display_name = "USCM boonie hat, olive"
 	path = /obj/item/clothing/head/cmcap/boonie
@@ -298,6 +306,10 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/headband_tan
 	display_name = "USCM headband, tan"
 	path = /obj/item/clothing/head/headband/tan
+
+/datum/gear/headwear/uscm/headband_intel
+	display_name = "USCM headband, black"
+	path = /obj/item/clothing/head/headband/intel
 //commented out due to redundancy of color with headband_red
 ///datum/gear/headwear/uscm/headband_alpha
 //	display_name = "USCM headband, alpha red"

@@ -105,6 +105,10 @@
 	desc = "Looks and feels starched, cold to the touch."
 	icon_state = "beret_foxtrot"
 
+/obj/item/clothing/head/beret/cm/intel
+	desc = "Looks more intellegent than the person wearing it."
+	icon_state = "beret_intel"
+
 
 /obj/item/clothing/head/headband
 	name = "headband"
@@ -159,6 +163,10 @@
 /obj/item/clothing/head/headband/foxtrot
 	desc = "A brown headband made out of durable cloth. it is still cold to the touch from years of cryosleep"
 	icon_state = "headbandfoxtrot"
+
+/obj/item/clothing/head/headband/intel
+	desc = "A black headband made out of durable cloth. wearing this makes you feel like a secret agent."
+	icon_state = "headbandintel"
 
 /obj/item/clothing/head/headband/rambo
 	desc = "It flutters in the face of the wind, defiant and unrestrained, like the man who wears it."
@@ -222,6 +230,7 @@
 						/obj/item/clothing/head/headband/delta = "hat_headbanddelta",
 						/obj/item/clothing/head/headband/echo = "hat_headbandecho",
 						/obj/item/clothing/head/headband/foxtrot = "hat_headbandfoxtrot",
+						/obj/item/clothing/head/headband/foxtrot = "hat_headbandintel",
 						/obj/item/prop/helmetgarb/lucky_feather = "lucky_feather",
 						/obj/item/prop/helmetgarb/lucky_feather/blue = "lucky_feather_blue",
 						/obj/item/prop/helmetgarb/lucky_feather/purple = "lucky_feather_purple",

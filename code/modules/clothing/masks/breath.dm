@@ -184,6 +184,11 @@
 	item_state = "scarf_foxtrot"
 	original_state = "scarf_foxtrot"
 
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
+	icon_state = "scarf_black"
+	item_state = "scarf_black"
+	original_state = "scarf_black"
+
 /obj/item/clothing/mask/tornscarf
 	name = "tactical scarf"
 	desc = "A tactical scarf used to keep warm in the cold."
