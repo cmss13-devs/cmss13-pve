@@ -256,6 +256,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 		for(var/priority in HIGH_PRIORITY to LOW_PRIORITY)
 			player_assigned_job = assign_role_to_player_by_priority(cycled_unassigned, roles_to_assign, unassigned_players, priority)
+			if(player_assigned_job)
+				break
 
 		if(!length(roles_to_assign))
 			log_debug("ASSIGNMENT: No more roles to assign, breaking.")
