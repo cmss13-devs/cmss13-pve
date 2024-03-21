@@ -4,7 +4,7 @@
 /obj/structure/target{
 	name = "ready line Ronald"
 	},
-/obj/item/clothing/suit/storage/marine/heavy/smooth,
+/obj/item/clothing/suit/storage/marine/smooth,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
