@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 23
+#define SAVEFILE_VERSION_MAX 24
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -96,9 +96,19 @@
 			temp_ooccolor = "#1c52f5"
 		S["ooccolor"] << temp_ooccolor
 
-	if(savefile_version < 23)
-		var/overwrite_job_preference_list = list()
-		S["job_preference_list"] << overwrite_job_preference_list
+	/// Skipping 23 due to a woopsy with job resets
+	if(savefile_version < 24)
+		for(var/i in 1 to 10)
+			S.cd = "/character[i]"
+			var/overwrite_job_preference_list
+			S["job_preference_list"] >> overwrite_job_preference_list
+
+			for(var/j in overwrite_job_preference_list)
+				overwrite_job_preference_list[j] = 0
+
+			S["job_preference_list"] << overwrite_job_preference_list
+
+		S.cd = "/"
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
