@@ -303,8 +303,8 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /////////////////////////////
 /turf/open/gm/river/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
-	if(!. && !covered)
-		. *= base_river_slowdown
+	if(. && !covered)
+		. += base_river_slowdown
 
 /turf/open/gm/river/desert/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(toxic && !covered)
