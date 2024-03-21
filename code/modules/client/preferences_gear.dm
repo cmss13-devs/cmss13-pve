@@ -113,10 +113,30 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/face_wrap_tan
 	display_name = "Face wrap, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan
+//commented out due to redundancy with face wrap, red
+///datum/gear/mask/face_wrap_alpha
+//	display_name = "Face wrap, alpha red"
+//	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/alpha
 
-/datum/gear/mask/face_wrap_squad
-	display_name = "Face wrap, squad specific"
-	path =/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad
+/datum/gear/mask/face_wrap_bravo
+	display_name = "Face wrap, yellow"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
+
+/datum/gear/mask/face_wrap_charlie
+	display_name = "Face wrap, purple"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/charlie
+
+/datum/gear/mask/face_wrap_delta
+	display_name = "Face wrap, blue"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta
+
+/datum/gear/mask/face_wrap_echo
+	display_name = "Face wrap, cyan green"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
+//commented out due to redundancy with face wrap, tan
+///datum/gear/mask/face_wrap_foxtrot
+//	display_name = "Face wrap, foxtrot brown"
+//	path =/obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot
 
 /datum/gear/mask/gas
 	display_name = "Gas mask"

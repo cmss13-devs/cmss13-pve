@@ -154,6 +154,36 @@
 	item_state = "scarf_black"
 	original_state = "scarf_black"
 
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/alpha
+	icon_state = "scarf_alpha"
+	item_state = "scarf_alpha"
+	original_state = "scarf_alpha"
+
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
+	icon_state = "scarf_bravo"
+	item_state = "scarf_bravo"
+	original_state = "scarf_bravo"
+
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/charlie
+	icon_state = "scarf_charlie"
+	item_state = "scarf_charlie"
+	original_state = "scarf_charlie"
+
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta
+	icon_state = "scarf_delta"
+	item_state = "scarf_delta"
+	original_state = "scarf_delta"
+
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
+	icon_state = "scarf_echo"
+	item_state = "scarf_echo"
+	original_state = "scarf_echo"
+
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot
+	icon_state = "scarf_foxtrot"
+	item_state = "scarf_foxtrot"
+	original_state = "scarf_foxtrot"
+
 /obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad
 	var/dummy_icon_state = "scarf_%SQUAD%"
 	item_state = "scarf_%SQUAD%"
