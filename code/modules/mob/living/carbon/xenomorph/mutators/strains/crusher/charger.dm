@@ -43,7 +43,6 @@
 	crusher.small_explosives_stun = FALSE
 	crusher.health_modifier += XENO_HEALTH_MOD_LARGE
 	crusher.speed_modifier += XENO_SPEED_FASTMOD_TIER_3
-	crusher.armor_modifier -= XENO_ARMOR_MOD_VERY_SMALL
 	crusher.damage_modifier -= XENO_DAMAGE_MOD_SMALL
 	crusher.ignore_aura = "frenzy" // no funny crushers going 7 morbillion kilometers per second
 	crusher.phero_modifier = -crusher.caste.aura_strength
@@ -56,8 +55,8 @@
 /datum/behavior_delegate/crusher_charger
 	name = "Charger Crusher Behavior Delegate"
 
-	var/frontal_armor = 20
-	var/rear_armor = 10 // Fortified butt
+	var/frontal_armor = 30 // +75%
+	var/rear_armor = 15 // Fortified butt, +37%
 
 	var/aoe_slash_damage_reduction = 0.40
 
