@@ -233,6 +233,13 @@
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc
+	name = "\improper ColmarTech Marine Raider Uniform Vendor"
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/populate_product_list(scale)
+	listed_products = list(
+		list("STANDARD EQUIPMENT", -1, null, null, null),
+	)
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon
 	name = "\improper ColMarTech FORECON Uniform Vendor"
 
