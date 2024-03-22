@@ -129,10 +129,11 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 /datum/controller/subsystem/xeno_pathfinding/proc/check_special_blockers(mob/living/carbon/xenomorph/xeno, turf/checking_turf)
 	var/list/pass_back = list()
 
-	pass_back += (checking_turf.type in XENO_AI_SPECIAL_BLOCKERS) ? checking_turf : list()
+	for(var/spec_blocker in XENO_AI_SPECIAL_BLOCKERS)
+		pass_back += istype(checking_turf, spec_blocker) ? checking_turf : list()
 
-	for(var/atom/checked_atom as anything in checking_turf)
-		pass_back += (checked_atom.type in XENO_AI_SPECIAL_BLOCKERS) ? checked_atom : list()
+		for(var/atom/checked_atom as anything in checking_turf)
+			pass_back += istype(checked_atom, spec_blocker) ? checked_atom : list()
 
 	return pass_back
 
