@@ -14,12 +14,6 @@
 	icon_state = "plate"
 	},
 /area/space)
-"k" = (
-/obj/item/clothing/suit/storage/marine/sof,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/space)
 "l" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
@@ -4400,7 +4394,7 @@ h
 I
 h
 I
-k
+h
 I
 Z
 B
