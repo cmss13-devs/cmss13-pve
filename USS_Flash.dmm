@@ -6,9 +6,16 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0
 	},
+/obj/item/clothing/under/marine/veteran/marsoc,
 /turf/open/floor/almayer,
 /area/space)
 "h" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
+"k" = (
+/obj/item/clothing/suit/storage/marine/sof,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4393,7 +4400,7 @@ h
 I
 h
 I
-h
+k
 I
 Z
 B

@@ -239,6 +239,23 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
+		list("Marine Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
+		list("Marine Raider Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/marsoc, VENDOR_ITEM_REGULAR),
+		list("Marine Black Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/black, VENDOR_ITEM_REGULAR),
+		list("Marine Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/sof, VENDOR_ITEM_REGULAR),
+		list("M10 Pattern SOF Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/sof, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS", -1, null, null),
+		list("Black Webbing Vest", round(max(2,(scale * 2))), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Webbing", round(max(3,(scale *3))), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
+
+		list("ARMOR", -1, null, null),
+		list("M3 SOF Armor", round(scale *10), /obj/item/clothing/suit/storage/marine/sof, VENDOR_ITEM_REGULAR),
+		list("M3 SOF Light Armor", round(scale *10), /obj/item/clothing/suit/storage/marine/sof/light, VENDOR_ITEM_REGULAR),
+
+
 	)
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon
 	name = "\improper ColMarTech FORECON Uniform Vendor"
