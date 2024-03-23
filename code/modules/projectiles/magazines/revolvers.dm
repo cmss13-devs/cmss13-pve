@@ -69,17 +69,18 @@
 	icon_state = "zhnk72loader_shrapnel"
 
 /obj/item/ammo_magazine/revolver/small
-	name = "\improper S&W speed loader (.38)"
+	name = "\improper .357 overpressure speedloader (.357)"
+	desc = "A speedloader of 6 overpressure .357 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition."
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".38"
+	caliber = ".357 Hotload"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "38"
+	icon_state = "cmb"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/small
 
 /obj/item/ammo_magazine/revolver/cmb
 	name = "\improper Spearhead hollowpoint speed loader (.357)"
-	desc = "This speedloader was created for the Colonial Marshals' most commonly issued sidearm, loaded with hollowpoint rounds either for colonies with wildlife problems or orbital stations, which favor the lesser penetration over other ammunition to lessen the risk of hull breaches. In exchange, they're near useless against armored targets, but what's the chance of that being a problem on a space station?"
+	desc = "A speedloader of 6 hollowpoint .357 bullets, issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife. Less effective against hard targets, but what're the chances of encountering those?"
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	caliber = ".357"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
@@ -89,7 +90,7 @@
 
 /obj/item/ammo_magazine/revolver/cmb/normalpoint //put these in the marshal ert - ok sure :)
 	name = "\improper Spearhead speed loader (.357)"
-	desc = "This speedloader is fitted with standard .357 revolver bullets. A surprising rarity, as most CMB revolvers are issued to Marshals on colonies with wildlife, or weakly-hulled space stations."
+	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
 	default_ammo = /datum/ammo/bullet/revolver/small
 	icon_state = "cmb"
 
@@ -181,7 +182,7 @@
 
 /obj/item/ammo_magazine/internal/revolver/small
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".38"
+	caliber = ".357 Hotload"
 	gun_type = /obj/item/weapon/gun/revolver/small
 
 //-------------------------------------------------------
