@@ -45,7 +45,7 @@
 
 	if(idle_xeno.move_to_next_turf(home_turf, home_locate_range))
 		if(get_dist(home_turf, idle_xeno) <= 0)
-			idle_xeno.set_resting(TRUE, FALSE, TRUE)
+			idle_xeno.set_resting(TRUE, FALSE)
 	else
 		home_turf = null
 
