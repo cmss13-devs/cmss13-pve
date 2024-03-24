@@ -273,8 +273,6 @@
 	if(loc != user) //Only do unique stuff if you are holding it
 		return ..()
 
-	if(!do_after(user, interaction_time, INTERRUPT_INCAPACITATED, BUSY_ICON_HOSTILE))
-		return
 	playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
 	change_razor_state(!razor_opened)
 	to_chat(user, SPAN_NOTICE("You [razor_opened ? "reveal" : "hide"] [src]'s blade."))
@@ -375,3 +373,29 @@
 	human_user.apply_damage(rand(1,5), BRUTE, "head", src)
 	human_user.update_hair()
 
+/obj/item/weapon/straight_razor/attack(mob/target, mob/user)
+	if((!ishuman(target)) || (user.a_intent == INTENT_HARM) || !razor_opened)
+		return ..()
+	var/mob/living/carbon/human/poor_bastard = target
+
+	var/timer = 10 SECONDS
+	var/message = "\The [user] begins to shave \the [poor_bastard]!"
+	if(skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT))
+		timer = 5 SECONDS
+		message = "\The [user] begins to <b>expertly</b> shave \the [poor_bastard]!"
+
+	user.visible_message(SPAN_WARNING(message))
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		return
+
+	switch(user.zone_selected)
+		if("mouth")
+			poor_bastard.f_style = "Shaved"
+			user.visible_message(SPAN_WARNING("\The [user] shaves off \the [poor_bastard]'s facial hair!"))
+		if("head")
+			poor_bastard.h_style = pick("Skinhead", "Bald")
+			user.visible_message(SPAN_WARNING("\The [user] shaves off \the [poor_bastard]'s hair!"))
+
+	poor_bastard.apply_damage(rand(1,5), BRUTE, "head", src)
+	poor_bastard.update_hair()
+	return TRUE
