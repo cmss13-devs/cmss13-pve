@@ -14,7 +14,7 @@
 
 	debris = list(/obj/item/stack/rods, /obj/item/stack/sheet/metal) //Want to initialize lists here instead of defining them per item.
 
-	if(initial_stored)
+	if(initial_stored && allowed_type)
 		var/i = 0
 		while(i++ < initial_stored)
 			new allowed_type(src) //Automatically go into contents.

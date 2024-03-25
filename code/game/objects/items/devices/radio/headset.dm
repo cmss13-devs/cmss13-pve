@@ -805,7 +805,7 @@
 
 		if( (user == user.assigned_squad.fireteam_leaders["SQ1"] || user == user.assigned_squad.fireteam_leaders["SQ2"]) && (JOB_USCM_GROUND_SQUAD_LEADER in tracking_options) )
 			locate_setting = tracking_options[JOB_USCM_GROUND_SQUAD_LEADER]
-		else if( (user in user.assigned_squad.fireteams["SQ1"] || user in user.assigned_squad.fireteams["SQ2"]) && (JOB_USCM_GROUND_SQUAD_TEAM_LEADER in tracking_options) )
+		else if(((user in user.assigned_squad.fireteams["SQ1"]) || (user in user.assigned_squad.fireteams["SQ2"])) && (JOB_USCM_GROUND_SQUAD_TEAM_LEADER in tracking_options))
 			locate_setting = tracking_options[JOB_USCM_GROUND_SQUAD_TEAM_LEADER]
 
 //Marine headsets have the hud installed. Also, I got tired of configuring frequencies. So it does that automatically, but only for the squad headsets.

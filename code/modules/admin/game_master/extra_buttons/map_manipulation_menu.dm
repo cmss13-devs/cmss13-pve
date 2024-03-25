@@ -434,7 +434,7 @@
 					var/obj/structure/surface/table/I
 					for(I in world)
 						if(I.z == selected_z_level && prob(specified_percentage_to_break))
-							if(prob(35) && I.flip(pick(1,2,4,8), FALSE, TRUE)) //We'll try to flip it normally. Hide the message so it doesn't spam us.
+							if(prob(35) && I.flip(pick(1,2,4,8), FALSE, TRUE)) continue//We'll try to flip it normally. Hide the message so it doesn't spam us.
 							else I.deconstruct(FALSE) //If that doesn't work, we deconstruct it instead.
 
 				if("break_lockers")

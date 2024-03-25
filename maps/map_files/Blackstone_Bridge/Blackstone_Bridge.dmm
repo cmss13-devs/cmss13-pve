@@ -3604,6 +3604,17 @@
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east)
+"ddn" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "Outpost Armory Lockdown 1";
+	name = "\improper Armory Lockdown"
+	},
+/turf/open/floor/prison{
+	dir = 1;
+	icon_state = "darkred2"
+	},
+/area/whiskey_outpost/blackstone/inside/armory)
 "ddL" = (
 /turf/open/floor/wood,
 /area/whiskey_outpost/blackstone/underground/western_caves/north)
@@ -9940,6 +9951,11 @@
 /area/whiskey_outpost/blackstone/outside/outpost/north)
 "iIA" = (
 /obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/prep,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "Outpost Armory Lockdown 2";
+	name = "\improper Armory Lockdown"
+	},
 /turf/open/floor/prison{
 	dir = 2;
 	icon_state = "darkred2"
@@ -11188,13 +11204,17 @@
 	pixel_x = -8;
 	pixel_y = 8;
 	id = "highwaycheckpoint1";
-	name = "north shutters"
+	name = "north shutters";
+	access_modified = 1;
+	req_access_txt = "68"
 	},
 /obj/structure/machinery/door_control{
 	pixel_x = -8;
 	pixel_y = 1;
 	id = "highwaycheckpoint2";
-	name = "south shutters'"
+	name = "south shutters'";
+	req_access_txt = "68";
+	access_modified = 1
 	},
 /obj/item/device/flashlight/lamp{
 	pixel_x = 1;
@@ -12524,6 +12544,14 @@
 "kSC" = (
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 4;
+	pixel_x = -21;
+	id = "Outpost Armory Lockdown 1";
+	name = "toggle armory lockdown";
+	access_modified = 1;
+	req_access_txt = "54"
 	},
 /turf/open/floor/prison{
 	dir = 8;
@@ -14128,6 +14156,23 @@
 /obj/item/lightstick/red/planted,
 /turf/open/gm/grass/grass1,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
+"mjC" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 7;
+	pixel_x = -21;
+	id = "Outpost Armory Lockdown 2";
+	name = "toggle secure armory lockdown";
+	req_access_txt = "54";
+	access_modified = 1
+	},
+/turf/open/floor/prison{
+	dir = 8;
+	icon_state = "darkred2"
+	},
+/area/whiskey_outpost/blackstone/inside/armory)
 "mjG" = (
 /obj/effect/decal/remains/human{
 	desc = "They look like human remains, but the size doesn't match up. These remains are much larger."
@@ -15447,16 +15492,17 @@
 	pixel_x = 6;
 	pixel_y = 11
 	},
-/obj/structure/machinery/door_control{
-	id = "Outpost Lockdown";
-	name = "toggle lockdown";
-	pixel_x = 8;
-	pixel_y = -3;
-	req_access_txt = "1"
-	},
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -9;
 	pixel_y = -1
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	req_access_txt = "56";
+	access_modified = 1;
+	name = "toggle lockdown";
+	id = "Outpost Lockdown";
+	pixel_y = -1;
+	pixel_x = 4
 	},
 /turf/open/floor/prison{
 	dir = 1;
@@ -16418,6 +16464,17 @@
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/western_caves/north)
+"otx" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "Outpost Armory Lockdown 2";
+	name = "\improper Armory Lockdown"
+	},
+/turf/open/floor/prison{
+	dir = 1;
+	icon_state = "darkred2"
+	},
+/area/whiskey_outpost/blackstone/inside/armory)
 "otS" = (
 /obj/structure/largecrate/random/mini/ammo{
 	pixel_x = 10;
@@ -24771,21 +24828,24 @@
 	name = "vehicle entrance shutters";
 	pixel_x = -5;
 	pixel_y = -2;
-	req_one_access_txt = "2;21"
+	req_access_txt = "68";
+	access_modified = 1
 	},
 /obj/structure/machinery/door_control{
 	id = "warehouseshutters3";
 	name = "vehicle vestibule shutters";
 	pixel_x = 5;
 	pixel_y = -2;
-	req_one_access_txt = "2;21"
+	req_access_txt = "68";
+	access_modified = 1
 	},
 /obj/structure/machinery/door_control{
 	id = "warehouseshutters2";
 	name = "vehicle exit shutters";
 	pixel_x = -5;
 	pixel_y = 5;
-	req_one_access_txt = "2;21"
+	access_modified = 1;
+	req_access_txt = "68"
 	},
 /obj/structure/machinery/light/small,
 /obj/item/tool/stamp/ro{
@@ -25175,6 +25235,11 @@
 /area/whiskey_outpost/blackstone/outside/digsite_wilderness)
 "wst" = (
 /obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/weapons,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "Outpost Armory Lockdown 1";
+	name = "\improper Armory Lockdown"
+	},
 /turf/open/floor/prison{
 	dir = 2;
 	icon_state = "darkred2"
@@ -39519,7 +39584,7 @@ uJq
 uJq
 uJq
 kpU
-agL
+otx
 iIA
 lHu
 swv
@@ -39720,7 +39785,7 @@ fSn
 uJq
 kzb
 gdO
-kSC
+mjC
 veI
 mPA
 weF
@@ -39928,7 +39993,7 @@ mPA
 aRM
 bRB
 kpU
-agL
+ddn
 wst
 mxz
 swv

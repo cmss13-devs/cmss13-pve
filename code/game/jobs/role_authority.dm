@@ -596,8 +596,6 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		if (S.roundstart && S.usable && S.faction == H.faction && S.name != "Root")
 			mixed_squads += S
 
-	to_world(SPAN_DEBUG("We have [mixed_squads.len] squads available."))
-
 	//Deal with IOs first
 	if(H.job == JOB_INTEL)
 		var/datum/squad/intel_squad = get_squad_by_name(SQUAD_MARINE_INTEL)
@@ -648,22 +646,16 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 			if(JOB_SQUAD_LEADER)
 				for(var/datum/squad/S in mixed_squads)
-					to_world(SPAN_DEBUG("Looking at squad [S]."))
 					if(S.usable && S.roundstart)
-						to_world(SPAN_DEBUG("Usable."))
 						if(!skip_limit && S.num_leaders >= S.max_leaders) continue
-						to_world(SPAN_DEBUG("Did not skip it."))
 						if(pref_squad_name && S.name == pref_squad_name)
 							S.put_marine_in_squad(H) //fav squad has a spot for us.
 							return
-						to_world(SPAN_DEBUG("Not a preferred squad."))
 
 						if(!lowest)
 							lowest = S
 						else if(S.num_leaders < lowest.num_leaders)
 							lowest = S
-
-						to_world(SPAN_DEBUG("Lowest is [lowest]"))
 
 			if(JOB_SQUAD_SPECIALIST)
 				for(var/datum/squad/S in mixed_squads)
@@ -714,7 +706,6 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						if(!lowest)
 							lowest = S
 		if(!lowest)
-			to_world(SPAN_DEBUG("Somehow did not get a lowest.."))
 			var/len = length(mixed_squads)
 			if(len) //Let's check to see we even have choices.
 				len = rand(1,len) //More of a fallback; rand() should not be higher than the list length, otherwise it will runtime.
