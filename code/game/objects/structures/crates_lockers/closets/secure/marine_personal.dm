@@ -78,6 +78,7 @@
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 	new /obj/item/device/flash(src)
+	new /obj/item/clothing/head/drillhat(src)
 	new headset_path(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/captain
