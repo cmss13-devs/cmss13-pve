@@ -69,10 +69,10 @@
 	icon_state = "zhnk72loader_shrapnel"
 
 /obj/item/ammo_magazine/revolver/small
-	name = "\improper .357 overpressure speedloader (.357)"
-	desc = "A speedloader of 6 overpressure .357 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition."
+	name = "\improper .38 overpressure speedloader (.38 +P)"
+	desc = "A speedloader of 6 handloaded overpressure .38 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition. Liable to damage firearms not built to handle the chamber pressure."
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".357 Hotload"
+	caliber = ".38 +P"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "cmb"
 	max_rounds = 6
