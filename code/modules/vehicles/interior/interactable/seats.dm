@@ -300,6 +300,7 @@
 	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
 	icon_state = "vehicle_seat"
+	buckling_sound = 'sound/effects/metal_close.ogg'
 	var/image/chairbar = null
 	var/broken = FALSE
 	buildstackamount = 0
@@ -442,3 +443,8 @@
 				break_seat()
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			break_seat()
+
+/obj/structure/bed/chair/vehicle/toc
+	name = "overwatch chair"
+	desc = "A sturdy chair with a brace that lowers over the body. Prevents being flung around in vehicle during a crash and being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon_state = "armor_chair"
