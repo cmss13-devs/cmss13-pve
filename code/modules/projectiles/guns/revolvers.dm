@@ -494,7 +494,7 @@
 //a lean mean machine, pretty inaccurate unless you play its dance.
 
 /obj/item/weapon/gun/revolver/small
-	name = "\improper .357 revolver"
+	name = "\improper .38 revolver"
 	desc = "A Frontier Special. Out here, you get a lot of smalltime companies that try to push themselves as better by upping the pressure of their ammo and fiddling with the designs to make it work. It usually means that their accuracy is awful, but the impact is impressive... if you've got the knowhow to shoot them straight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "sw357"

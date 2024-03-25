@@ -74,7 +74,7 @@
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".38 +P"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "cmb"
+	icon_state = "38"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/small
 
