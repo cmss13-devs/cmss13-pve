@@ -207,6 +207,7 @@
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	toggleable = TRUE
+	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = 255
