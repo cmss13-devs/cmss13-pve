@@ -136,9 +136,7 @@
 	name = "USCM Outpost Visiting Civilian (Random)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
-	access = list(
-		ACCESS_USCM_GROUND_GUEST
-		)
+	access = list(ACCESS_USCM_GROUND_GUEST)
 	assignment = JOB_USCM_GROUND_CIVILIAN
 	rank = JOB_USCM_GROUND_CIVILIAN
 	paygrade = "C"
