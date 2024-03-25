@@ -36,6 +36,37 @@
 		SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
 	..()
 
+// LEGACY SUPPORT
+/obj/structure/machinery/door/airlock/multi_tile/secure
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/Door2x1_secure.dmi'
+	openspeed = 34
+
+/obj/structure/machinery/door/airlock/multi_tile/secure/colony
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/obj/structure/machinery/door/airlock/multi_tile/secure2
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/Door2x1_secure2.dmi'
+	openspeed = 31
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/secure2/colony
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/obj/structure/machinery/door/airlock/multi_tile/secure2_glass
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/Door2x1_secure2_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	openspeed = 31
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/secure2_glass/colony
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
 
 // ALMAYER
 

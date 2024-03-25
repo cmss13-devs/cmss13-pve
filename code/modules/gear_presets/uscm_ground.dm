@@ -59,7 +59,7 @@
 		ACCESS_USCM_GROUND_WAREHOUSE,
 		ACCESS_USCM_GROUND_COMMAND,
 		ACCESS_USCM_GROUND_CHECKPOINT,
-		)
+	)
 
 /datum/equipment_preset/uscm_ground/oco/load_race(mob/living/carbon/human/new_human, client/mob_client)
 	..()
@@ -115,7 +115,7 @@
 		ACCESS_USCM_GROUND_WAREHOUSE,
 		ACCESS_USCM_GROUND_COMMAND,
 		ACCESS_USCM_GROUND_CHECKPOINT,
-		)
+	)
 
 /datum/equipment_preset/uscm_ground/ao/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
