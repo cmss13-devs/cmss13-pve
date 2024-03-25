@@ -1214,7 +1214,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 //head rag
 
-/obj/item/clothing/head/helmet/specrag
+/obj/item/clothing/head/specrag
 	name = "weapons specialist head-rag"
 	desc = "A hat worn by heavy-weapons operators to block sweat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -1233,7 +1233,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
-/obj/item/clothing/head/helmet/specrag/New()
+/obj/item/clothing/head/specrag/New()
 	select_gamemode_skin(type)
 	..()
 
