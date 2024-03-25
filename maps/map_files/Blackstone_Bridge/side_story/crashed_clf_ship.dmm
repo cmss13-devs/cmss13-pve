@@ -7,10 +7,7 @@
 /area/template_noop)
 "bw" = (
 /obj/structure/largecrate/supply/supplies/water,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "cw" = (
 /turf/closed/shuttle/ert{
@@ -19,17 +16,11 @@
 /area/template_noop)
 "eC" = (
 /obj/structure/girder/displaced,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "eK" = (
 /obj/item/stack/sheet/metal,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "eS" = (
 /obj/item/ammo_magazine/rifle/m16/ap{
@@ -65,7 +56,7 @@
 /area/template_noop)
 "jv" = (
 /obj/effect/spawner/gibspawner/human,
-/turf/open/jungle,
+/turf/open/jungle/clear,
 /area/template_noop)
 "jE" = (
 /obj/structure/girder,
@@ -74,12 +65,6 @@
 "jQ" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
-	},
-/area/template_noop)
-"kq" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
 	},
 /area/template_noop)
 "ks" = (
@@ -106,10 +91,7 @@
 /obj/item/stack/tile/plasteel{
 	turf_type = /turf/open/shuttle/dropship
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "oF" = (
 /turf/closed/shuttle/ert{
@@ -161,13 +143,6 @@
 	icon_state = "platingdmg1"
 	},
 /area/template_noop)
-"zv" = (
-/obj/effect/spawner/gibspawner/human,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
-/area/template_noop)
 "Ae" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
@@ -190,12 +165,6 @@
 "BV" = (
 /turf/closed/shuttle/ert{
 	icon_state = "stan27"
-	},
-/area/template_noop)
-"BW" = (
-/obj/effect/landmark/corpsespawner/clf,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
 	},
 /area/template_noop)
 "Cw" = (
@@ -229,17 +198,15 @@
 	},
 /area/template_noop)
 "Ec" = (
-/turf/open/jungle,
+/turf/open/jungle/clear,
 /area/template_noop)
 "Es" = (
 /obj/item/stack/tile/plasteel{
 	turf_type = /turf/open/shuttle/dropship;
 	pixel_x = 5
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/obj/effect/spawner/gibspawner/human,
+/turf/open/jungle/clear,
 /area/template_noop)
 "EF" = (
 /turf/closed/shuttle/ert{
@@ -258,10 +225,7 @@
 /area/template_noop)
 "EO" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "Gb" = (
 /turf/open/floor{
@@ -271,12 +235,6 @@
 "Gf" = (
 /turf/closed/shuttle/ert{
 	icon_state = "stan9"
-	},
-/area/template_noop)
-"GX" = (
-/obj/effect/landmark/corpsespawner/clf,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/template_noop)
 "Hl" = (
@@ -294,10 +252,7 @@
 /area/template_noop)
 "HE" = (
 /obj/structure/largecrate/black_market/clf_supplies,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "It" = (
 /turf/open/shuttle/dropship{
@@ -368,10 +323,7 @@
 /area/template_noop)
 "RS" = (
 /obj/item/stack/rods,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "Tf" = (
 /obj/item/weapon/gun/rifle/mar40/lmg{
@@ -414,10 +366,7 @@
 /area/template_noop)
 "Wh" = (
 /obj/item/weapon/gun/rifle/m16,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/template_noop)
 "XU" = (
 /obj/structure/prop/invuln/fire{
@@ -438,26 +387,26 @@
 /area/template_noop)
 
 (1,1,1) = {"
-kq
+NJ
 Ec
 Ec
-kq
-kq
-kq
+Ec
+Ec
+Ec
 NJ
 NJ
 NJ
 NJ
 NJ
 NJ
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 NJ
 NJ
 NJ
@@ -466,8 +415,8 @@ NJ
 NJ
 "}
 (2,1,1) = {"
-kq
-kq
+Ec
+Ec
 pv
 pT
 Cw
@@ -477,19 +426,19 @@ vL
 It
 vL
 Hl
-kq
+Ec
 Ux
 Vf
 XZ
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 NJ
 NJ
 "}
@@ -497,7 +446,7 @@ NJ
 Ec
 UT
 Gb
-GX
+jQ
 Gb
 Ae
 oU
@@ -508,18 +457,18 @@ ks
 jE
 vL
 EF
-kq
-kq
+Ec
+Ec
 eK
-kq
-kq
+Ec
+Ec
 bw
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 "}
 (4,1,1) = {"
 oF
@@ -529,34 +478,34 @@ mF
 Be
 Es
 It
-BW
+It
 Tf
 QN
 jQ
 ZW
 aZ
 QN
-zv
+jv
 HE
 EO
 eK
-kq
-kq
+Ec
+Ec
 eK
 EO
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
 "}
 (5,1,1) = {"
-kq
+Ec
 BV
 DQ
 rJ
 eX
 eX
-GX
+jQ
 jQ
 eX
 fV
@@ -565,20 +514,20 @@ ZW
 QN
 nP
 RS
-kq
-kq
-kq
-zv
-kq
-kq
-kq
+jv
+Ec
+Ec
+jv
+Ec
+Ec
+Ec
 eK
-kq
-kq
-kq
+Ec
+Ec
+Ec
 "}
 (6,1,1) = {"
-kq
+Ec
 EN
 OD
 wl
@@ -588,26 +537,26 @@ tL
 It
 JB
 Gb
-GX
+jQ
 OT
 Cz
 zj
-kq
-kq
+Ec
+Ec
 Wh
 EO
 eK
-kq
+Ec
 EO
 HE
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
 "}
 (7,1,1) = {"
-kq
-kq
+Ec
+Ec
 UT
 lO
 jQ
@@ -620,23 +569,23 @@ Gf
 cw
 cw
 Mw
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 XU
-kq
+Ec
 NJ
 "}
 (8,1,1) = {"
 NJ
-kq
-kq
+Ec
+Ec
 ZW
 CK
 cw
@@ -646,44 +595,44 @@ Cw
 cw
 MJ
 UJ
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
 OU
 AB
-kq
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 NJ
 "}
 (9,1,1) = {"
 NJ
 NJ
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
 eC
-kq
-kq
-kq
+Ec
+Ec
+Ec
 NJ
 NJ
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
-kq
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
+Ec
 NJ
 NJ
 NJ

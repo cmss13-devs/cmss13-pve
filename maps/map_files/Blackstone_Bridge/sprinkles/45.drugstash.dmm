@@ -24,10 +24,7 @@
 	pixel_x = -1;
 	pixel_y = 15
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/template_noop)
 "l" = (
 /obj/item/storage/backpack/satchel/lockable{
@@ -49,43 +46,30 @@
 	pixel_x = 19;
 	contents = "The contents are smeared with blood and impossible to make out."
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
-/area/template_noop)
-"O" = (
-/obj/structure/fence,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
-/area/template_noop)
-"R" = (
-/turf/open/jungle,
+/turf/open/jungle/shrubs,
 /area/template_noop)
 
 (1,1,1) = {"
 a
-R
+a
 a
 a
 "}
 (2,1,1) = {"
-R
+a
 f
-O
+a
 a
 "}
 (3,1,1) = {"
-R
+a
 l
-O
+a
 a
 "}
 (4,1,1) = {"
 a
-R
+a
 a
 a
 "}

@@ -43,10 +43,7 @@
 /obj/structure/barricade/handrail/sandstone/b{
 	dir = 1
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "eg" = (
 /obj/structure/flora/jungle/vines/light_3,
@@ -75,10 +72,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "lM" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -119,10 +113,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "sy" = (
 /obj/effect/decal/grass_overlay/jungle{
@@ -153,21 +144,11 @@
 /obj/structure/barricade/handrail/sandstone/b{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "uw" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/mineral/sandstone/runed,
-/area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
-"vg" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "wq" = (
 /obj/effect/decal/grass_overlay/jungle{
@@ -221,10 +202,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 1
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "AU" = (
 /obj/effect/decal/grass_overlay/jungle{
@@ -239,10 +217,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 8
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "CD" = (
 /obj/structure/stairs/perspective{
@@ -254,10 +229,7 @@
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "Fs" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "Gx" = (
 /obj/structure/stairs/perspective{
@@ -327,10 +299,7 @@
 /turf/open/floor/sandstone,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "IO" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "JW" = (
 /obj/structure/prop/brazier/frame/full/torch{
@@ -348,10 +317,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "Ls" = (
 /obj/item/device/flashlight/lamp/tripod{
@@ -406,10 +372,7 @@
 	armed = 1;
 	pixel_y = 6
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "PY" = (
 /turf/closed/wall/mineral/sandstone/runed,
@@ -501,10 +464,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/vines,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_shrine)
 "XO" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -529,14 +489,14 @@ Sc
 Sc
 "}
 (2,1,1) = {"
-IO
+qY
 BN
 BN
 Nz
 wq
 BN
 BN
-IO
+qY
 IO
 Sc
 Sc
@@ -576,8 +536,8 @@ xk
 IA
 ga
 IO
-vg
 IO
+qY
 IO
 "}
 (6,1,1) = {"
@@ -607,7 +567,7 @@ wK
 qY
 "}
 (8,1,1) = {"
-IO
+qY
 XO
 Oz
 Ls

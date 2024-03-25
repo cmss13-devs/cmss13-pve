@@ -895,6 +895,13 @@
 /obj/structure/machinery/computer/overwatch/almayer/broken
 	name = "Broken Overwatch Console"
 
+/obj/structure/machinery/computer/overwatch/uscm_ground
+	faction = FACTION_USCM_GROUND
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "overwatch"
+	dir = WEST
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+
 /obj/structure/machinery/computer/overwatch/clf
 	faction = FACTION_CLF
 /obj/structure/machinery/computer/overwatch/upp

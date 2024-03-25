@@ -1,7 +1,7 @@
 //Some debug variables. Toggle them to 1 in order to see the related debug messages. Helpful when testing out formulas.
-#define DEBUG_HIT_CHANCE 1
-#define DEBUG_HUMAN_DEFENSE 1
-#define DEBUG_XENO_DEFENSE 1
+#define DEBUG_HIT_CHANCE FALSE
+#define DEBUG_HUMAN_DEFENSE FALSE
+#define DEBUG_XENO_DEFENSE FALSE
 
 //The actual bullet objects.
 /obj/projectile

@@ -11,10 +11,10 @@
 /turf/open/floor/sandstone/runed,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "aU" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"bL" = (
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "bN" = (
 /obj/structure/platform/mineral/sandstone/runed{
@@ -24,10 +24,6 @@
 	dir = 1
 	},
 /turf/open/floor/sandstone/runed,
-/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
-"cb" = (
-/obj/structure/blocker/invisible_wall,
-/turf/closed/wall/mineral/sandstone/runed/decor,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "de" = (
 /obj/structure/platform/mineral/sandstone/runed,
@@ -51,6 +47,12 @@
 	icon_state = "squareswood"
 	},
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"dw" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "el" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/sandstone/runed,
@@ -70,10 +72,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "gE" = (
 /turf/open/floor/sandstone/runed,
@@ -148,10 +147,7 @@
 	dir = 2;
 	icon_state = "p_stair_full"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "nd" = (
 /obj/structure/stairs/perspective{
@@ -186,20 +182,7 @@
 	dir = 8;
 	color = "#b29082"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
-/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
-"px" = (
-/obj/structure/machinery/door/airlock/sandstone/runed{
-	name = "Strange Temple"
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "pV" = (
 /obj/structure/stairs/perspective{
@@ -212,10 +195,7 @@
 	layer = 1.99;
 	icon_state = "stone_stair"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "ql" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -229,14 +209,7 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
-/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
-"qu" = (
-/obj/structure/blocker/invisible_wall,
-/turf/closed/wall/mineral/sandstone/runed,
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "qR" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -249,10 +222,7 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/platform/mineral/sandstone/runed,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "rq" = (
 /obj/structure/stairs/perspective{
@@ -260,10 +230,7 @@
 	dir = 4;
 	color = "#b29082"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "rz" = (
 /obj/effect/decal/remains/human{
@@ -327,10 +294,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 5
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "vt" = (
 /obj/effect/decal/remains/human{
@@ -346,10 +310,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 1
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "yg" = (
 /obj/structure/stairs/perspective{
@@ -357,10 +318,7 @@
 	dir = 1;
 	icon_state = "p_stair_full"
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "zT" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -414,6 +372,12 @@
 	icon_state = "stone_stair"
 	},
 /turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Hx" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/jungle/vines,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "HN" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -538,10 +502,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/vines,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "NZ" = (
 /obj/structure/stairs/perspective{
@@ -597,6 +558,12 @@
 /turf/open/floor/sandstone/runed,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "Sf" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "squareswood"
@@ -700,10 +667,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 10
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/vines,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 
 (1,1,1) = {"
@@ -752,14 +716,14 @@ Bc
 Bc
 AC
 AC
-qu
-cb
-cb
-px
-px
-cb
-cb
-qu
+AC
+wf
+wf
+dq
+dq
+wf
+wf
+AC
 AC
 AC
 AC
@@ -804,7 +768,7 @@ Xl
 nA
 Rp
 md
-aU
+bL
 "}
 (6,1,1) = {"
 Bc
@@ -824,7 +788,7 @@ Xl
 vt
 Rp
 md
-aU
+bL
 "}
 (7,1,1) = {"
 Bc
@@ -844,7 +808,7 @@ Ii
 gE
 Rp
 md
-aU
+bL
 "}
 (8,1,1) = {"
 aU
@@ -887,7 +851,7 @@ md
 aU
 "}
 (10,1,1) = {"
-aU
+bL
 oZ
 HN
 fP
@@ -904,7 +868,7 @@ ql
 KM
 Ii
 rq
-aU
+bL
 "}
 (11,1,1) = {"
 aU
@@ -922,9 +886,9 @@ Vl
 Wn
 QX
 vc
-gq
+Hx
 NY
-aU
+bL
 "}
 (12,1,1) = {"
 Bc
@@ -932,16 +896,16 @@ Bc
 Bc
 xb
 gq
+Hx
 gq
-gq
-NY
+dw
 aU
 aU
 xb
 gq
-gq
-gq
-NY
+Hx
+Hx
+dw
 Bc
 Bc
 Bc

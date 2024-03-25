@@ -227,6 +227,28 @@
 	max_smartgun = 0
 	max_leaders = 0
 
+/datum/squad/marine/ground_one
+	name = SQUAD_USCM_GROUND_1
+	equipment_color = "#D99281"
+	chat_color = "#965545"
+	access = list(ACCESS_USCM_GROUND_PLATOON_ONE)
+	radio_freq = USCM_GROUND_ONE_FREQ
+	minimap_color = MINIMAP_SQUAD_USCM_GROUND_ONE
+	usable = TRUE
+	faction = FACTION_USCM_GROUND
+	max_medics = 2
+
+/datum/squad/marine/ground_two
+	name = SQUAD_USCM_GROUND_2
+	equipment_color = "#9FCD61"
+	chat_color = "#698740"
+	access = list(ACCESS_USCM_GROUND_PLATOON_TWO)
+	radio_freq = USCM_GROUND_TWO_FREQ
+	minimap_color = MINIMAP_SQUAD_USCM_GROUND_TWO
+	usable = TRUE
+	faction = FACTION_USCM_GROUND
+	max_medics = 2
+
 /datum/squad/marine/sof
 	name = SQUAD_SOF
 	equipment_color = "#400000"
@@ -520,7 +542,7 @@
 
 	var/list/extra_access = list()
 
-	switch(GET_DEFAULT_ROLE(M.job))
+	switch(GET_SQUAD_ROLE_MAP(M.job))
 		if(JOB_SQUAD_MARINE)
 			assignment = JOB_SQUAD_MARINE
 			num_riflemen++
@@ -609,8 +631,8 @@
 		C.paygrade = paygrade
 	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
-	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
-	if(headset && radio_freq)
+	var/obj/item/device/radio/headset/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
+	if(headset?.squad_headset && radio_freq) //Must be a platoon headset.
 		headset.set_frequency(radio_freq)
 	M.update_inv_head()
 	M.update_inv_wear_suit()
@@ -676,7 +698,7 @@
 	SStracking.stop_tracking("marine_sl", old_lead)
 
 	squad_leader = null
-	switch(GET_DEFAULT_ROLE(old_lead.job))
+	switch(GET_SQUAD_ROLE_MAP(old_lead.job))
 		if(JOB_SQUAD_SPECIALIST)
 			old_lead.comm_title = "Spc"
 		if(JOB_SQUAD_ENGI)

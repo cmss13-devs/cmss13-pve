@@ -50,23 +50,33 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 //=================================================
 
-/*Specific access for the Whiskey Outpost PvE variant as I don't want it to overlap with standard marine access.
-The actual access on doors on map also takes into account normal marine access, so if the marines do show up,
-they will have access to some areas but not to others. 50 to 63. */
-#define ACCESS_MARINE_WO_GENERAL 50 //Mostly for armory and barracks access.
-#define ACCESS_MARINE_WO_MAINT 51 //Maintenance and engineering.
-#define ACCESS_MARINE_WO_SYNTH 52 //Synth storage.
-#define ACCESS_MARINE_WO_MEDICAL 53 //Access to the medical bay.
-#define ACCESS_MARINE_WO_ARMORY 54 //Who can unlock the armory shutters.
-#define ACCESS_MARINE_WO_GUEST 55 //Civilian access to unlock the guest bedrooms, only officers and guests have this access.
-#define ACCESS_MARINE_WO_LOCKDOWN  56 //Who can lockdown the base, only officers have this access.
-#define ACCESS_MARINE_WO_SMARTPREP 57 //Smartgun lockers.
-#define ACCESS_MARINE_WO_MEDPREP 58 //Corpseman vendor.
-#define ACCESS_MARINE_WO_SPECPREP 59 //Specialist vendor.
-#define ACCESS_MARINE_WO_TLPREP 60 //Squad/team leader prep.
-#define ACCESS_MARINE_WO_PLATOONL 61 //Platoon leader office(s).
-#define ACCESS_MARINE_WO_CO  62 //Commander's personal quarters.
-#define ACCESS_MARINE_WO_LT  63 //Lieutenant's personal quarters.
+/*
+Access codes for USCM ground operations, unique from their ship codes.
+May be necessary to make these unique, but for now they are only used in
+Blackstone Bridge.
+*/
+#define ACCESS_USCM_GROUND_GENERAL 50 //Mostly for armory and barracks access.
+#define ACCESS_USCM_GROUND_MAINT 51 //Maintenance and engineering.
+#define ACCESS_USCM_GROUND_SYNTH 52 //Synth storage.
+#define ACCESS_USCM_GROUND_MEDICAL 53 //Access to the medical bay.
+#define ACCESS_USCM_GROUND_ARMORY 54 //Who can unlock the armory shutters.
+#define ACCESS_USCM_GROUND_GUEST 55 //Civilian access to unlock the guest bedrooms, only officers and guests have this access.
+#define ACCESS_USCM_GROUND_LOCKDOWN  56 //Who can lockdown the base, only officers have this access.
+#define ACCESS_USCM_GROUND_SMARTPREP 57 //Smartgun lockers.
+#define ACCESS_USCM_GROUND_MEDPREP 58 //Corpseman vendor.
+#define ACCESS_USCM_GROUND_SPECPREP 59 //Specialist vendor.
+#define ACCESS_USCM_GROUND_TLPREP 60 //Squad/team leader prep.
+#define ACCESS_USCM_GROUND_PLATOONL 61 //Platoon leader office(s).
+
+#define ACCESS_USCM_GROUND_COMMAND 63 //CIC and other stuff.
+#define ACCESS_USCM_GROUND_CO_OFFICE  64 //Commander's office.
+#define ACCESS_USCM_GROUND_CO_QUARTERS 65 //Commander's personal quarters.
+#define ACCESS_USCM_GROUND_LT  66 //Lieutenant's personal quarters.
+#define ACCESS_USCM_GROUND_WAREHOUSE  67 //Warehouse access.
+#define ACCESS_USCM_GROUND_CHECKPOINT  68 //Checkpoint access.
+
+#define ACCESS_USCM_GROUND_PLATOON_ONE 71 //Two platoons.
+#define ACCESS_USCM_GROUND_PLATOON_TWO 72
 
 //=================================================
 

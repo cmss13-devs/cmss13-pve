@@ -32,32 +32,40 @@
 	GLOB.ladder_list += src
 	return INITIALIZE_HINT_LATELOAD
 
+//If we drop ladders down, only need to run the proc on the middle ladder to connect three. Or any of two ladders.
 /obj/structure/ladder/LateInitialize()
 	. = ..()
 
-	var/obj/structure/ladder/L
-	for(var/i in GLOB.ladder_list)
-		L = i
-		if(L.id == id)
-			if(L.height == (height - 1))
-				down = L
-				continue
-			if(L.height == (height + 1))
-				up = L
-				continue
+	if(id) //Don't need to run this if there is no ID.
+		var/obj/structure/ladder/I
+		for(var/i in GLOB.ladder_list)
+			if(up && down) break //If both our connections are filled; we are done.
 
-		if(up && down) //If both our connections are filled
-			break
-	update_icon()
+			I = i
+			if(I.id == id)
+				switch(I.height - height)
+					if(-1)
+						if(!down) down = I //Only if the connection isn't established yet.
+						if(!I.up)
+							I.up = src
+							I.update_icon()
+					if(1)
+						if(!up) up = I
+						if(!I.down)
+							I.down = src
+							I.update_icon()
+	update_icon() //Update the icon regardless.
 
 /obj/structure/ladder/Destroy()
 	if(down)
 		if(istype(down))
 			down.up = null
+			down.update_icon()
 		down = null
 	if(up)
 		if(istype(up))
 			up.down = null
+			up.update_icon()
 		up = null
 	QDEL_NULL(cam)
 	GLOB.ladder_list -= src
@@ -74,7 +82,7 @@
 
 	switch(state)
 		if(LADDER_LOCKED) //Can't descend if it's locked.
-			to_chat(user, SPAN_WARNING("[src] appears to be locked and bolted!"))
+			to_chat(user, SPAN_WARNING("It appears to be locked and bolted!"))
 			return
 		if(LADDER_UNLOCKED) //If it's closed and unlocked, we need to first pop it open, then we can climb in.
 			open_hatch(user)
@@ -289,14 +297,6 @@
 	desc = "A tightly closed hatch. It is currently locked and bolted, and cannot be opened."
 	icon_state = "ladder_hatch0"
 	state = LADDER_LOCKED
-
-/obj/structure/ladder/hatch/Initialize()
-	. = ..()
-	GLOB.map_specific_trigger_atoms += src
-
-/obj/structure/ladder/hatch/Destroy()
-	GLOB.map_specific_trigger_atoms -= src
-	. = ..()
 
 /obj/structure/ladder/hatch/update_icon()
 	icon_state = "ladder_hatch[state]"

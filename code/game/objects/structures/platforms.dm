@@ -54,6 +54,9 @@
 	..()
 
 /obj/structure/platform/BlockedPassDirs(atom/movable/mover, target_dir)
+	if(istype(mover, /obj/vehicle/multitile))
+		return BLOCKED_MOVEMENT
+
 	var/obj/structure/S = locate(/obj/structure) in get_turf(mover)
 	if(S && S.climbable && !(S.flags_atom & ON_BORDER) && climbable && isliving(mover)) //Climbable objects allow you to universally climb over others
 		return NO_BLOCKED_MOVEMENT

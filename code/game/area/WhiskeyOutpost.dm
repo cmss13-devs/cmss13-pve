@@ -253,6 +253,11 @@ powernet.
 	icon_state = "bunks"
 	sound_environment = SOUND_ENVIRONMENT_LIVINGROOM
 
+/area/whiskey_outpost/blackstone/inside/bunks/bathroom
+	name = "\improper Squad Bathrooms"
+	icon_state = "bathrooms"
+	sound_environment = SOUND_ENVIRONMENT_BATHROOM
+
 /area/whiskey_outpost/blackstone/inside/cryo
 	name = "\improper Cryo Room"
 	icon_state = "cryo"
@@ -656,6 +661,7 @@ Just about all underground areas are unpowered and cannot be powered on other th
 	icon_state = "bunker"
 	fake_zlevel = MAP_FAKE_Z_BLACKSTONE_BUNKER
 	ceiling = CEILING_DEEP_UNDERGROUND_METAL
+	powernet_name = "underground_bunker"
 	unlimited_power = TRUE //Gets power from the rest of the facility.
 
 //So the cameras display proper names.
@@ -699,6 +705,10 @@ Just about all underground areas are unpowered and cannot be powered on other th
 	icon_state = "maint_engi"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	sound_environment = SOUND_ENVIRONMENT_STONEROOM
+
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler
+	name = "\improper Maintenance Tunnels - Boiler Room"
+	icon_state = "maint_boiler"
 
 /area/whiskey_outpost/blackstone/underground/maintenance/south_west
 	name = "\improper Maintenance Tunnels - South West"

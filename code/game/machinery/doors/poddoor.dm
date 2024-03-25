@@ -351,12 +351,3 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	id = "tunnel_gate_main"
-
-/obj/structure/machinery/door/poddoor/tunnel/Initialize()
-	. = ..()
-	GLOB.map_specific_trigger_atoms += src
-
-/obj/structure/machinery/door/poddoor/tunnel/Destroy()
-	GLOB.map_specific_trigger_atoms -= src
-	. = ..()
-

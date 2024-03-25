@@ -1,20 +1,24 @@
 [
 {
-	"type": "pick", "name": "Blackstone Main Story", //One of three major variations; WY, UPP, or predators. This determines major extra features about the map.
+	"type": "pick",
+	"name": "Blackstone Main Story",
 	"choices": [
-		{ "type": "def", "values": { "blackstone_main_story": "wy_experiment"   } },
-		{ "type": "def", "values": { "blackstone_main_story": "upp_experiment" } },
-		{ "type": "def", "values": { "blackstone_main_story": "predators" } }
-\\
+		{ "type": "def", "values": { "blackstone_main_story": "nothing", "bunker_ladder": "no_ladder", "vault_contents": "regular_loot" } },
+		{ "type": "def", "values": { "blackstone_main_story": "wy_lab", "bunker_ladder": "place_ladder", "vault_contents": "regular_loot" } },
+		{ "type": "def", "values": { "blackstone_main_story": "upp_gulag", "bunker_ladder": "place_ladder", "vault_contents": "regular_loot" } },
+		{ "type": "def", "values": { "blackstone_main_story": "predators", "bunker_ladder": "no_ladder", "vault_contents": "predator_loot" } }
+
 	]
 },
 {
-	"type": "pick", "name": "Blackstone Side Story", //Determine what additional things will spawn. Mainly the CLF ship and the cave church.
+	"type": "pick",
+	"name": "Blackstone Side Story",
 	"choices": [
-		{ "weight": 3, "type": "def", "values": { "blackstone_side_story": "nothing" } }, //Higher chance nothing will spawn.
+		{ "weight": 4, "type": "def", "values": { "blackstone_side_story": "nothing" } },
 		{ "weight": 2, "type": "def", "values": { "blackstone_side_story": "cave_church" } },
-		{ "weight": 2, "type": "def", "values": { "blackstone_side_story": "crashed_clf_ship" } },
-		{ "weight": 1, "type": "def", "values": { "blackstone_side_story": "cave_church", "crashed_clf_ship" } } //Everything together.
+		{ "weight": 3, "type": "def", "values": { "blackstone_side_story": "crashed_clf_ship" } },
+		{ "weight": 2, "type": "def", "values": { "blackstone_side_story": "boiler_room" } },
+		{ "weight": 1, "type": "def", "values": { "blackstone_side_story": "everything" } }
 	]
 }
 ]

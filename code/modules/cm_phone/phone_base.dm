@@ -65,8 +65,8 @@
 	desc = "Ancient aliens, it's all true. I'm an expert just like you!"
 
 /obj/structure/phone_base/uscm_ground
-	networks_receive = list(FACTION_MARINE_GROUND)
-	networks_transmit = list(FACTION_MARINE_GROUND)
+	networks_receive = list(FACTION_USCM_GROUND)
+	networks_transmit = list(FACTION_USCM_GROUND)
 
 /obj/structure/phone_base/uscm_ground/rotary
 	name = "rotary telephone"

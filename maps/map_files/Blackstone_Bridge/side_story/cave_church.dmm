@@ -1,16 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aK" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 5
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "df" = (
 /obj/item/reagent_container/food/drinks/flask/canteen{
 	pixel_x = -8
@@ -18,9 +6,6 @@
 /obj/item/reagent_container/food/drinks/flask/canteen{
 	pixel_x = -1;
 	pixel_y = -4
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
@@ -45,9 +30,6 @@
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "dL" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 6
-	},
 /turf/open/gm/dirt{
 	icon_state = "desert3"
 	},
@@ -62,12 +44,6 @@
 "iL" = (
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"jA" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 5
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "kb" = (
 /obj/item/reagent_container/food/drinks/bottle/wine{
 	pixel_x = -11;
@@ -76,7 +52,6 @@
 /obj/item/reagent_container/food/drinks/bottle/pwine{
 	pixel_x = -3
 	},
-/obj/effect/decal/grass_overlay/grass1/inner,
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "ki" = (
@@ -109,21 +84,6 @@
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "mp" = (
 /obj/effect/decal/sand_overlay/sand5,
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 6
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"mt" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "mu" = (
@@ -160,18 +120,9 @@
 /obj/item/trash/eat,
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"ow" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 5
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "oU" = (
 /obj/structure/bed/bedroll{
 	dir = 4
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
@@ -183,12 +134,6 @@
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"rH" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 6
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "rK" = (
 /obj/item/toy/deck{
 	pixel_x = -9;
@@ -221,15 +166,6 @@
 	pixel_y = -1;
 	pixel_x = 4
 	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 6
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"ur" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 10
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "uJ" = (
@@ -247,17 +183,8 @@
 	pixel_y = 3
 	},
 /obj/item/storage/fancy/cigar/matchbook/brown,
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 9
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"vg" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 4
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "vR" = (
 /obj/item/tool/candle{
 	color = "#911D6A";
@@ -282,9 +209,6 @@
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "xg" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 9
-	},
 /obj/item/clothing/suit/storage/apron/overalls,
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
@@ -298,27 +222,9 @@
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"zs" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 6
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "zM" = (
 /turf/open/gm/dirt,
 /area/template_noop)
-"zY" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 9
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "As" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 1;
@@ -342,28 +248,6 @@
 	pixel_x = -2;
 	pixel_y = 1
 	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 9
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"AT" = (
-/obj/structure/bookcase,
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 5
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"CJ" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 10
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "CS" = (
@@ -384,18 +268,6 @@
 /obj/item/tool/minihoe,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"Fy" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 9
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "Gt" = (
 /turf/template_noop,
 /area/template_noop)
@@ -413,18 +285,6 @@
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/western_caves/center)
-"GR" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 4
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "HO" = (
 /obj/item/prop/magazine/book/borntokill,
 /obj/item/prop/magazine/book/spacebeast{
@@ -439,12 +299,6 @@
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"IE" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 6
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "Jl" = (
 /mob/living/simple_animal/bat,
 /turf/open/floor/engine/cult,
@@ -454,7 +308,6 @@
 	color = "#911D6A";
 	pixel_x = -12
 	},
-/obj/effect/decal/grass_overlay/grass1/inner,
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "JC" = (
@@ -468,12 +321,6 @@
 	color = "#911D6A";
 	pixel_y = -4;
 	pixel_x = 8
-	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 10
-	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 6
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
@@ -516,40 +363,9 @@
 "LH" = (
 /turf/closed/wall/rock/brown,
 /area/whiskey_outpost/blackstone/underground)
-"Mr" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 1
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
-"Nt" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"NS" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	color = "#3c3434";
-	name = "darkwood chair";
-	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
 "Oy" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/auto_turf/strata_grass/layer1,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"OI" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 4
-	},
-/turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "Pj" = (
 /obj/item/coin/silver{
@@ -558,16 +374,6 @@
 	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"PQ" = (
-/obj/effect/decal/grass_overlay/grass1/inner,
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
-"PW" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 8
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "Qw" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/whiskey_outpost/blackstone/underground/western_caves/center)
@@ -582,25 +388,10 @@
 	desc = "You think you can make out the iconography of a Xenomorph.";
 	icon_state = "4"
 	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 10
-	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 6
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
-"RO" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 5
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "Tb" = (
 /obj/effect/decal/sand_overlay/sand5,
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 9
-	},
 /obj/item/trash/candle{
 	color = "#911D6A";
 	pixel_y = -1;
@@ -641,15 +432,6 @@
 	pixel_x = -10;
 	pixel_y = 7
 	},
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 5
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"Xx" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 9
-	},
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "XC" = (
@@ -671,18 +453,6 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"ZG" = (
-/obj/effect/decal/grass_overlay/grass1{
-	dir = 6
-	},
-/turf/open/floor/engine/cult,
-/area/whiskey_outpost/blackstone/underground/western_caves/church)
-"ZP" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 8
-	},
-/turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 
 (1,1,1) = {"
@@ -762,7 +532,7 @@ zj
 UM
 Lu
 Fg
-PQ
+eY
 eY
 "}
 (5,1,1) = {"
@@ -794,12 +564,12 @@ iL
 mQ
 ng
 ej
-Fy
-ZP
-NS
+As
+iL
+VP
 ej
 zj
-AT
+dA
 Lu
 Lj
 zj
@@ -813,14 +583,14 @@ iL
 iL
 iL
 KM
-Fy
-Xx
+As
+iL
 ki
-CJ
-mt
+As
+As
 zj
 rK
-ow
+iL
 Tq
 zj
 GL
@@ -828,12 +598,12 @@ GL
 (8,1,1) = {"
 Gt
 zj
-Nt
+iL
 AS
 df
 Gx
-zY
-Xx
+iL
+iL
 Lu
 Lu
 CS
@@ -841,42 +611,42 @@ Jx
 iL
 iL
 iL
-OI
+iL
 mp
 eY
 "}
 (9,1,1) = {"
 Gt
 zj
-ur
+Lu
 uJ
-ur
+iL
 oU
 WV
-ow
+Lu
 Gy
 Lu
 sM
-ZG
+iL
 Jl
 iL
 iL
 iL
 Tb
-PW
+eY
 "}
 (10,1,1) = {"
-Mr
+eY
 Lu
 Lu
 YE
 Lu
 kb
 zq
-aK
-GR
-OI
-zs
+As
+As
+iL
+As
 As
 zj
 dA
@@ -886,7 +656,7 @@ Ri
 mu
 "}
 (11,1,1) = {"
-Mr
+eY
 zj
 sc
 Lu
@@ -906,12 +676,12 @@ Ri
 Qw
 "}
 (12,1,1) = {"
-Mr
+eY
 zj
 zj
 zj
 Lu
-ur
+iL
 xg
 iL
 VP
@@ -926,9 +696,9 @@ LH
 Gt
 "}
 (13,1,1) = {"
-RO
-vg
-jA
+eY
+eY
+eY
 zj
 Zs
 Lu
@@ -941,15 +711,15 @@ zj
 zj
 Qw
 Qw
-PQ
+eY
 Gt
 Gt
 "}
 (14,1,1) = {"
 Gt
 Gt
-RO
-jA
+eY
+eY
 Qw
 Qw
 Qw
@@ -960,8 +730,8 @@ LH
 Qw
 lU
 Qw
-rH
-IE
+eY
+eY
 Gt
 Gt
 "}
@@ -969,18 +739,18 @@ Gt
 Gt
 Gt
 Gt
-RO
-vg
-vg
-vg
-vg
-vg
-jA
+eY
+eY
+eY
+eY
+eY
+eY
+eY
 Qw
 Qw
 Qw
 dL
-IE
+eY
 Gt
 Gt
 Gt

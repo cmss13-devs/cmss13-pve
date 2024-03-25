@@ -20,7 +20,7 @@
 	var/burst_fire_delay = 0.1
 
 	var/immobile = FALSE //Used for prebuilt ones.
-	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
+	var/obj/item/ammo_magazine/ammo
 
 	/// Sound used when firing
 	var/firing_sound = 'sound/weapons/sentry_shoot_loop_01.ogg'
@@ -72,6 +72,7 @@
 
 /obj/structure/machinery/defenses/sentry/Initialize()
 	. = ..()
+	ammo = new /obj/item/ammo_magazine/sentry(src)
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -534,6 +535,16 @@
 		return
 
 	fire(target)
+
+/obj/structure/machinery/defenses/sentry/custom
+	name = "\improper UA 571-C 'Death Blossom' sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 autocannon and a 500-round drum magazine, tuned to perfection. It has omni-directional capabilities."
+	omni_directional = TRUE
+	damage_mult = 1.1
+	burst = 3
+	health = 300
+	health_max = 350
+	handheld_type = /obj/item/defenses/handheld/sentry/custom
 
 /obj/structure/machinery/defenses/sentry/premade
 	name = "\improper UA-577 gauss turret"

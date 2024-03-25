@@ -139,18 +139,24 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	color = "#826161"
 	opacity = TRUE
 	var/id //Used to pick out the proper rocks to toggle.
-
-/obj/structure/blocker/rock_debris/Initialize()
-	. = ..()
-	GLOB.map_specific_trigger_atoms += src
-
-/obj/structure/blocker/rock_debris/Destroy()
-	GLOB.map_specific_trigger_atoms -= src
-	. = ..()
+	var/animating = FALSE
 
 //Makes it block movement or hides it instead.
-/obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal)
-	if(trigger_signal == id)
-		invisibility = invisibility ? 0 : INVISIBILITY_MAXIMUM
+/obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal, play_sound = FALSE)
+	if(trigger_signal == id && !animating)
+		animating = TRUE //We are animating, so this doesn't get activated again until the animation is done and variables are set.
+		if(invisibility) //It is invisible.
+			if(play_sound) playsound(src, 'sound/effects/rocks_falling.ogg', 50, FALSE)
+			invisibility = 0 //Immediately make it visible.
+			animate(src, alpha = 255, 1.5 SECONDS) //15 deciseconds, make it opaque.
+		else
+			animate(src, alpha = 0, 1.5 SECONDS) //15 deciseconds.
+			addtimer(VARSET_CALLBACK(src, invisibility, INVISIBILITY_MAXIMUM), 1.5 SECONDS) //Max invisbility.
+
 		density = !density
 		opacity = !opacity
+		//I could add effects of actually being caught in the rocks, but that seems pointless.
+		addtimer(VARSET_CALLBACK(src, animating, FALSE), 1.5 SECONDS) //Resets our status.
+
+
+

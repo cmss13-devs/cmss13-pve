@@ -113,15 +113,22 @@
 	name = "ares core camera"
 	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_ARES)
 
+/obj/structure/machinery/camera/autoname/uscm_ground
+	name = "military-grade camera"
+	network = list(CAMERA_NET_USCM_GROUND)
+
+/obj/structure/machinery/camera/autoname/uscm_ground/checkpoint
+	network = list(CAMERA_NET_USCM_GROUND_WEST)
+
+/obj/structure/machinery/camera/autoname/uscm_ground/checkpoint/east
+	network = list(CAMERA_NET_USCM_GROUND_EAST)
+
 /obj/structure/machinery/camera/autoname/golden_arrow
 	name = "military-grade camera"
 	network = list(CAMERA_NET_GOLDEN_ARROW)
 
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
-
-/obj/structure/machinery/camera/autoname/uscm_ground
-	network = list(CAMERA_NET_USCM_GROUND)
 
 /obj/structure/machinery/camera/autoname/wy_bunker
 	network = list(CAMERA_NET_WY_BUNKER)
