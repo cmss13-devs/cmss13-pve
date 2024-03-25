@@ -68,9 +68,9 @@
 /turf/open/space/basic,
 /area/golden_arrow/canteen)
 "aC" = (
-/obj/structure/closet/secure_closet/smartgunner{
-	req_access_txt = "14;39";
-	req_one_access = list()
+/obj/structure/closet/secure_closet/smartgunner_forecon{
+	req_one_access = list();
+	req_access_txt = "14;39"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
