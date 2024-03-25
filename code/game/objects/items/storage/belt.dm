@@ -234,6 +234,53 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 
+/obj/item/storage/belt/medical/marsoc
+	name = "\improper M276 pattern medical storage rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+	icon_state = "medicalbelt_sof"
+	item_state = "medi"
+
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/glass/beaker,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/syringe,
+		/obj/item/tool/lighter,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/storage/syringe_case,
+		/obj/item/device/flashlight/flare,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/bodybag,
+		/obj/item/device/defibrillator,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/device/reagent_scanner,
+		/obj/item/device/analyzer/plant_analyzer,
+		/obj/item/roller,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/reagent_container/glass/minitank,
+		/obj/item/storage/surgical_case,
+		/obj/item/reagent_container/blood,
+	)
+
+/obj/item/storage/belt/medical/marsoc/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
@@ -343,6 +390,48 @@
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/partial/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+
+/obj/item/storage/belt/medical/lifesaver/marsoc
+	name = "\improper M276 Tactical Lifesaver Bag"
+	desc = "The M276 is the standard load-bearing equipment for the USCM. This special configuration mounts a duffel bag filled with a range of injectors and medical supplies, along with a sleek black kevlar layer for added protection."
+	icon_state = "medicbag_marsoc"
+	item_state = "medicbag_marsoc"
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/medical/lifesaver/marsoc/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+
+/obj/item/storage/belt/medical/lifesaver/marsoc/partial/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)

@@ -2,14 +2,27 @@
 "a" = (
 /turf/open/space/basic,
 /area/space)
+"b" = (
+/obj/item/clothing/suit/storage/marine/sof/smartgun,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
 "g" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/shoes/marine/knife,
 /turf/open/floor/almayer,
 /area/space)
 "h" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
+"k" = (
+/obj/item/clothing/suit/storage/marine/sof,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -35,6 +48,12 @@
 /area/space)
 "B" = (
 /turf/open/floor/almayer,
+/area/space)
+"D" = (
+/obj/item/clothing/suit/storage/marine/sof/light,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/space)
 "I" = (
 /turf/open/floor/plating/plating_catwalk,
@@ -69,10 +88,10 @@
 /turf/open/floor/almayer,
 /area/space)
 "W" = (
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 30
+/obj/item/storage/backpack/marine/marsoc,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
-/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "Z" = (
 /turf/closed/wall/almayer,
@@ -3781,7 +3800,7 @@ a
 a
 a
 x
-W
+I
 h
 I
 h
@@ -4089,10 +4108,10 @@ h
 h
 h
 h
-h
-h
-h
-h
+W
+k
+D
+b
 B
 B
 B

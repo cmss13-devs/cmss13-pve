@@ -165,6 +165,23 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 
+/obj/structure/closet/secure_closet/smartgunner_marsoc
+	name = "smartgunner locker"
+	desc = "A secure storage unit for a smartgunner."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/closet/secure_closet/smartgunner_marsoc/Initialize()
+	. = ..()
+	new /obj/item/weapon/gun/smartgun(src)
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/clothing/suit/storage/marine/sof/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/storage/belt/marine/smartgunner/standard(src)
+	new /obj/item/storage/belt/gun/smartgunner/standard(src)
+
 /obj/structure/closet/cryo/Initialize()
 	. = ..()
 	new /obj/item/clothing/under/marine(src)
