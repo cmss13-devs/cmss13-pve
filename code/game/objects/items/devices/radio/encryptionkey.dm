@@ -37,7 +37,7 @@
 
 	var/obj/item/device/radio/headset/current_headset = loc
 
-	var/list/datum/radio_frequency/old_freq = current_headset.secure_radio_connections[old_name]
+	var/datum/radio_frequency/old_freq = current_headset.secure_radio_connections[old_name]
 	if(old_freq)
 		current_headset.secure_radio_connections -= old_name
 		SSradio.remove_object(current_headset, old_freq.frequency)
@@ -236,9 +236,6 @@
 /obj/item/device/encryptionkey/squadlead/uscm_ground
 	name = "\improper Outpost Platoon Leader Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_USCM_GROUND_CMD = TRUE)
-
-/obj/item/device/encryptionkey/squadlead/acting
-	abstract = TRUE
 
 /obj/item/device/encryptionkey/alpha
 	name = "\improper Alpha Squad Radio Encryption Key"
