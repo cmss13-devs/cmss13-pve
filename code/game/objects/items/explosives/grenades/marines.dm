@@ -93,7 +93,7 @@
 	det_time = 0 //this should mean that itll explode instantly when fired and thus generate the shotshell effect.
 	shrapnel_count = 13
 	shrapnel_type = /datum/ammo/bullet/shotgun/spread/canister
-	direct_hit_shrapnel = 5
+	direct_hit_shrapnel = 0
 	dispersion_angle = 10 //hopefully this means the cone spread is pretty small
 
 /obj/item/explosive/grenade/high_explosive/airburst/canister/prime()
