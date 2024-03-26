@@ -16,15 +16,16 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-	if(!isnull(channels[SQUAD_MARINE_1]) && SQUAD_MARINE_1 != GLOB.main_platoon_name)
-		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+	//If we have a frequency with the initial name, but that name doesn't match the current name.
+	if(channels[GLOB.main_platoon_initial_name] && GLOB.main_platoon_initial_name != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, GLOB.main_platoon_initial_name)
 
 /obj/item/device/encryptionkey/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	var/toggled_channel = channels[old_name]
 
-	if(isnull(toggled_channel))
+	if(!toggled_channel)
 		return
 
 	channels -= old_name
@@ -36,10 +37,10 @@
 
 	var/obj/item/device/radio/headset/current_headset = loc
 
-	var/passed_freq = current_headset.secure_radio_connections[old_name].frequency
-	current_headset.secure_radio_connections -= old_name
-
-	SSradio.remove_object(current_headset, passed_freq)
+	var/list/datum/radio_frequency/old_freq = current_headset.secure_radio_connections[old_name]
+	if(old_freq)
+		current_headset.secure_radio_connections -= old_name
+		SSradio.remove_object(current_headset, old_freq.frequency)
 
 	current_headset.recalculateChannels()
 

@@ -63,8 +63,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 /obj/structure/machinery/cm_vending/gear/spec/uscm_ground/get_listed_products(mob/user)
 	listed_products = list(
 		list("WEAPONS SPECIALIST SETS", -1, null, null, null),
-		list("Scout Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/B18, null, VENDOR_ITEM_REGULAR),
-		list("Sniper Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/sapper, null, VENDOR_ITEM_REGULAR),
+		list("B18 Personal Defense Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/B18, null, VENDOR_ITEM_REGULAR),
+		list("Sapper and Custom Turret Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/sapper, null, VENDOR_ITEM_REGULAR),
 		)
 	return listed_products
 

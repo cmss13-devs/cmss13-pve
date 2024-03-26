@@ -981,8 +981,8 @@
 
 /obj/structure/machinery/door/airlock/uscm_ground/platoon_sarge_office/Initialize()
 	. = ..()
-	name += "[name] - [uppertext(squad_name)]"
-	desc += "[desc] [uppertext(squad_name)] platoon."
+	name = "[name] - [uppertext(squad_name)]"
+	desc = "[desc] [uppertext(squad_name)] platoon."
 
 /obj/structure/machinery/door/airlock/uscm_ground/command
 	icon = 'icons/obj/structures/doors/secdoor.dmi'

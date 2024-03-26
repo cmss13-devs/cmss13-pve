@@ -425,6 +425,9 @@
 	req_access = list(200);
 	access_modified = 1
 	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
 /turf/open/floor/corsat,
 /area/whiskey_outpost/blackstone/underground/bunker/servers)
 "jR" = (
@@ -654,6 +657,9 @@
 	dir = 8;
 	layer = 3.3;
 	pixel_y = 4
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
 	},
 /turf/open/floor/corsat,
 /area/whiskey_outpost/blackstone/underground/bunker/servers)
@@ -1079,6 +1085,9 @@
 	req_access = list(200);
 	access_modified = 1
 	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
 /turf/open/floor/corsat,
 /area/whiskey_outpost/blackstone/underground/bunker/servers)
 "MN" = (
@@ -1193,6 +1202,9 @@
 	dir = 4;
 	pixel_x = -2;
 	pixel_y = 4
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
 	},
 /turf/open/floor/corsat,
 /area/whiskey_outpost/blackstone/underground/bunker/servers)
