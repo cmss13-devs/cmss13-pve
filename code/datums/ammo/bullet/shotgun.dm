@@ -200,6 +200,10 @@
 	damage_armor_punch = 1
 	pen_armor_punch = 0
 
+/datum/ammo/bullet/shotgun/spread/canister/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
 
