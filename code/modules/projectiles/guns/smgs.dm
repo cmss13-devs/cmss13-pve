@@ -11,7 +11,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,			
+		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
@@ -50,7 +50,7 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/angledgrip,	
+		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/stock/smg,
@@ -145,7 +145,7 @@
 
 /obj/item/weapon/gun/smg/mp5
 	name = "\improper MP5 submachinegun"
-	desc = "A German design, this was one of the most widely used submachine guns in the world. It's still possible to find this firearm in the hands of collectors or gun fanatics."
+	desc = "Knockoff of an antique UPP submachine gun, made somewhere in the former German state. Chambered for 9x19mm cased ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp5"
 	item_state = "mp5"
@@ -197,7 +197,7 @@
 
 /obj/item/weapon/gun/smg/mp27
 	name = "\improper MP27 submachinegun"
-	desc = "An archaic design going back almost a century, the MP27 was common in its day. Today it sees limited use as cheap computer-printed replicas or family heirlooms. An extremely ergonomic and lightweight design allows easy mass production and surpisingly good handling, but the cheap materials used hurt the weapon's scatter noticeably."
+	desc = "Once a respectable weapon, now after the design files were leaked in '67 the cheaply made copies are everywhere. Lightweight and fast firing, but the poor construction of almost every copy severely hampers accuracy."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp7"
 	item_state = "mp7"
@@ -475,7 +475,7 @@
 
 /obj/item/weapon/gun/smg/uzi
 	name = "\improper UZI"
-	desc = "Exported to over 90 countries, somehow this relic has managed to end up here. Couldn't be simpler to use."
+	desc = "Antique firearm, now almost two centuries old. 9mm, fully automatic. Pull the trigger and hold on tight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "uzi"
 	item_state = "uzi"
