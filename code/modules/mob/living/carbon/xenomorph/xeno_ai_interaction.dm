@@ -125,7 +125,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /////////////////////////////
 //          MOBS           //
 /////////////////////////////
-/mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
+/mob/living/ai_check_stat()
 	return stat == CONSCIOUS
 
 
@@ -147,7 +147,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
-/mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/X)
+/mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
 	. = ..()
 	if(!.)
 		return FALSE
@@ -158,19 +158,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(HAS_TRAIT(src, TRAIT_NESTED))
 		return FALSE
 
-	if(isfacehugger(X))
-		if(status_flags & XENO_HOST)
-			return FALSE
-
-		if(istype(src, /obj/item/clothing/mask/facehugger))
-			return FALSE
-
 	return TRUE
-
-/mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)
-	. = ..()
-	if(isfacehugger(X))
-		return stat != DEAD
 
 
 /////////////////////////////
@@ -192,20 +180,17 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	. = ..()
 
-/mob/living/carbon/xenomorph/ai_can_target(mob/living/carbon/xenomorph/X)
+/mob/living/carbon/xenomorph/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
 	. = ..()
 	if(!.)
 		return FALSE
 
-	if(isfacehugger(X))
-		return FALSE
-
-	if(IS_SAME_HIVENUMBER(X, src))
+	if(IS_SAME_HIVENUMBER(ai_xeno, src))
 		return FALSE
 
 	return TRUE
 
-/mob/living/carbon/xenomorph/ai_check_stat(mob/living/carbon/xenomorph/X)
+/mob/living/carbon/xenomorph/ai_check_stat()
 	return stat != DEAD // Should slash enemy xenos, even if they are critted out
 
 

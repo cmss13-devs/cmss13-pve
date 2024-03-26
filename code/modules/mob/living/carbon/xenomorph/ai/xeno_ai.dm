@@ -339,7 +339,7 @@
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
 /mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/ai_xeno)
-	if(!ai_check_stat(ai_xeno))
+	if(!ai_check_stat())
 		return FALSE
 
 	if(ai_xeno.can_not_harm(src))

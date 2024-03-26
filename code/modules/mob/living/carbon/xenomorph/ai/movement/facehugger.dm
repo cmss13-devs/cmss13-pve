@@ -52,6 +52,24 @@
 
 	return ..()
 
+/mob/living/carbon/xenomorph/facehugger/check_mob_target(mob/living/carbon/checked_target)
+	if(!ishuman(checked_target))
+		return FALSE // We don't wanna to attack anyone except humans
+
+	if(istype(checked_target.wear_mask, /obj/item/clothing/mask/facehugger))
+		return FALSE
+
+	if(checked_target.status_flags & XENO_HOST)
+		return FALSE
+
+	if(can_not_harm(checked_target))
+		return FALSE
+
+	if(checked_target.stat == DEAD)
+		return FALSE
+
+	return TRUE
+
 /mob/living/carbon/xenomorph/facehugger/proc/climb_in(shelter)
 	set waitfor = FALSE
 
