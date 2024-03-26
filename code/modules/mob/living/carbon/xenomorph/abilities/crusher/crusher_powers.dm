@@ -109,6 +109,7 @@
 	if (!check_and_use_plasma_owner())
 		return
 
+	playsound(get_turf(xeno_owner), 'sound/voice/alien_crusher_spawn.ogg', 75)
 	apply_cooldown()
 
 	ADD_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
@@ -122,7 +123,7 @@
 	REMOVE_TRAIT(xeno_owner, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Stomp"))
 	xeno_owner.anchored = FALSE
 
-	playsound(get_turf(xeno_owner), 'sound/effects/bang.ogg', 25, 0)
+	playsound(get_turf(xeno_owner), 'sound/effects/alien_footstep_charge3.ogg', 75)
 	xeno_owner.visible_message(SPAN_XENODANGER("[xeno_owner] smashes into the ground!"), SPAN_XENODANGER("You smash into the ground!"))
 	xeno_owner.create_stomp()
 
