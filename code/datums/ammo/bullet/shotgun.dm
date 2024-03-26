@@ -159,14 +159,14 @@
 
 	accurate_range = 8
 	max_range = 8
-	damage = 50
+	damage = 16
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 //special B/S type is super buffed vs xenomorphs but not as much against anything else
 /datum/ammo/bullet/shotgun/buckshot/special/on_hit_mob(mob/hit_mob, obj/projectile/hit_projectile)
 	if(isxeno(hit_mob))
 		var/mob/living/carbon/xenomorph/xeno = hit_mob
-		xeno.apply_damage(damage * 1.75, BRUTE)
+		xeno.apply_damage(damage * 5, BRUTE)
 
 //buckshot variant only used by the masterkey shotgun attachment.
 /datum/ammo/bullet/shotgun/buckshot/masterkey
@@ -199,13 +199,13 @@
 
 	accurate_range = 8
 	max_range = 8
-	damage = 25
+	damage = 16
 	firing_freq_offset = SOUND_FREQ_LOW
 
 /datum/ammo/bullet/shotgun/spread/special/on_hit_mob(mob/hit_mob, obj/projectile/hit_projectile)
 	if(isxeno(hit_mob))
 		var/mob/living/carbon/xenomorph/xeno = hit_mob
-		xeno.apply_damage(damage * 3.50, BRUTE)
+		xeno.apply_damage(damage * 5, BRUTE)
 
 /*
 					8 GAUGE SHOTGUN AMMO
