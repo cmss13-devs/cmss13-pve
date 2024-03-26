@@ -228,7 +228,11 @@
 				activate_severe()
 
 	if(new_level < PAIN_LEVEL_SEVERE)
-		UnregisterSignal(source_mob, COMSIG_MOB_DEVOURED)
+		UnregisterSignal(source_mob, list(
+			COMSIG_MOB_DRAGGED,
+			COMSIG_MOB_DEVOURED,
+			COMSIG_MOVABLE_PRE_THROW
+		))
 
 	last_level = new_level
 	addtimer(CALLBACK(src, PROC_REF(before_update)), PAIN_UPDATE_FREQUENCY)

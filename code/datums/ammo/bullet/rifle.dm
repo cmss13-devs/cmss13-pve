@@ -191,7 +191,8 @@
 	name = "depleted uranium bullet"
 
 	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_10
+	var/acid_per_hit = 15 //woe, toxin upon ye
 
 /datum/ammo/bullet/rifle/m4ra/du/set_bullet_traits()
 	. = ..()
@@ -200,7 +201,7 @@
 	))
 
 /datum/ammo/bullet/rifle/m4ra/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/toxic_buildup)
+	target.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
 	knockback(target, fired_proj, max_range = 2)
 
 

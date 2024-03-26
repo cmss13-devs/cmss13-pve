@@ -120,7 +120,7 @@ var/list/AAlarmWireColorToIndex
 #define MAX_EMOTE_LEN 256
 #define MAX_PAPER_MESSAGE_LEN 3072
 #define MAX_BOOK_MESSAGE_LEN 9216
-#define MAX_NAME_LEN 28
+#define MAX_NAME_LEN 26
 
 /// 3 minutes in the station.
 #define shuttle_time_in_station 3 MINUTES

@@ -13,6 +13,8 @@
 	activatable = TRUE
 
 	health = 500
+	cooldown = 30
+	accuracy = 0.7
 	firing_arc = 120
 
 	origins = list(0, -2)
@@ -32,9 +34,6 @@
 		"4" = list(-14, -6),
 		"8" = list(14, -6)
 	)
-
-	scatter = 6
-	fire_delay = 3.0 SECONDS
 
 /obj/item/hardpoint/support/flare_launcher/set_bullet_traits()
 	..()

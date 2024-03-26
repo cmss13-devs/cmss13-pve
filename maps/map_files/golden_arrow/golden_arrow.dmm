@@ -2080,7 +2080,9 @@
 /area/golden_arrow/supply)
 "mc" = (
 /obj/structure/surface/rack,
-/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_y = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2836,6 +2838,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"qK" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m4ra/pve,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/platoon_sergeant)
 "qQ" = (
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
@@ -6097,13 +6110,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "Kl" = (
-/obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/photocopier,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8174,11 +8182,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
 "UK" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m4ra/pve{
-	pixel_y = 8
-	},
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -8618,7 +8621,8 @@
 "Xu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 2;
-	name = "\improper Firing Range"
+	name = "\improper Firing Range";
+	req_one_access_txt = "8;12;40"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -16756,7 +16760,7 @@ gI
 BK
 sC
 mc
-KQ
+qK
 bw
 KQ
 QS

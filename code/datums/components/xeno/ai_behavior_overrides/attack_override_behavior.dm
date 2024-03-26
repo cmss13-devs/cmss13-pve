@@ -27,7 +27,7 @@
 		return FALSE
 
 	processing_xeno.current_target = parent
-	processing_xeno.set_resting(FALSE, FALSE, TRUE)
+	processing_xeno.resting = FALSE
 	if(prob(5))
 		processing_xeno.emote("hiss")
 
