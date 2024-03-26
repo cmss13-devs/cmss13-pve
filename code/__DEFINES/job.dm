@@ -12,17 +12,33 @@
 #define SQUAD_MARINE_INTEL "Intel"
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
+#define SQUAD_UPP "Red Dawn"
+#define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
-#define JOB_SQUAD_LEADER "Section Sergeant"
+#define JOB_SQUAD_LEADER "Platoon Sergeant"
 #define JOB_SQUAD_ENGI "Combat Technician"
-#define JOB_SQUAD_MEDIC "Section Corpsman"
+#define JOB_SQUAD_MEDIC "Platoon Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
-#define JOB_SQUAD_TEAM_LEADER "Fireteam Leader"
+#define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
+
+#define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
+#define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
+#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
+#define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
+#define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
+#define JOB_SO_UPP "UPP Platoon Commander"
+
+#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
+#define JOB_SQUAD_RTO "Radio Telephone Operator"
+#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
@@ -31,7 +47,6 @@ var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 #define JOB_SURVIVOR "Survivor"
 #define JOB_SYNTH_SURVIVOR "Synth Survivor"
 #define JOB_CO_SURVIVOR "CO Survivor"
-#define JOB_RESERVE "Reserve Unit"
 
 #define ANY_SURVIVOR "Any Survivor"
 #define CIVILIAN_SURVIVOR "Civilian Survivor"
@@ -76,7 +91,7 @@ var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 #define JOB_AUXILIARY_OFFICER "Auxiliary Support Officer"
-#define JOB_PILOT "Dropship Pilot"
+#define JOB_PILOT "Pilot Officer"
 #define JOB_DROPSHIP_CREW_CHIEF "Dropship Crew Chief"
 #define JOB_CREWMAN "Vehicle Crewman"
 #define JOB_INTEL "Intelligence Officer"
