@@ -1,4 +1,4 @@
-//Copy of the original jobs.dm, used for prevent merge conflicts. Include it instead of the main one
+//Copy of the original job.dm, used for prevent merge conflicts. Include it instead of the main one
 
 #define get_job_playtime(client, job) (client.player_data? LAZYACCESS(client.player_data.playtimes, job)? client.player_data.playtimes[job].total_minutes MINUTES_TO_DECISECOND : 0 : 0)
 #define GET_MAPPED_ROLE(title) (RoleAuthority?.role_mappings[title] ? RoleAuthority.role_mappings[title] : RoleAuthority.roles_by_name[title])

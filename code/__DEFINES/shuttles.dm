@@ -117,6 +117,8 @@
 #define DROPSHIP_UPP "dropship_upp"
 #define DROPSHIP_CYCLONE "dropship_cyclone"
 
+#define DROPSHIP_RASPUTIN "dropship_rasputin"
+
 #define ALMAYER_DROPSHIP_LZ1 "almayer-hangar-lz1"
 #define ALMAYER_DROPSHIP_LZ2 "almayer-hangar-lz2"
 

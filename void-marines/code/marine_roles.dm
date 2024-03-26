@@ -18,16 +18,9 @@
 	supervisors = "the acting commanding officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/leader
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your squad.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way."
 
 	job_options = list(SGT_VARIANT = "SGT")
-
-/datum/job/marine/leader/handle_job_options(option)
-	if(option != GYSGT_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
-		gear_preset = initial(gear_preset)
 
 /datum/job/marine/leader/whiskey
 	title = JOB_WO_SQUAD_LEADER

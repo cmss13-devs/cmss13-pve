@@ -25,3 +25,11 @@ endmap
 
 map rover
 endmap
+
+map golden_arrow_RU
+	disabled
+endmap
+
+map desert_dam_fob
+	default
+endmap
