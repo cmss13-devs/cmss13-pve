@@ -128,7 +128,7 @@
 	xeno_owner.create_stomp()
 
 	for(var/mob/living/carbon/carbon_in_range in range(distance, get_turf(xeno_owner)))
-		if(carbon_in_range.stat == DEAD || xeno_owner.can_not_harm(carbon_in_range))
+		if(xeno_owner.can_not_harm(carbon_in_range))
 			continue
 
 		var/distance_to_target = get_dist(carbon_in_range, xeno_owner)
