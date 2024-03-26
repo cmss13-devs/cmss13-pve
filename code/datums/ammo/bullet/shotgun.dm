@@ -186,6 +186,20 @@
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
+/datum/ammo/bullet/shotgun/spread/canister
+	name = "low velocity canister shot"
+	icon_state = "buckshot"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_3
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
+	accurate_range = 5
+	max_range = 8
+	damage = 25
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_1
+	damage_armor_punch = 1
+	pen_armor_punch = 0
+
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
 

@@ -81,6 +81,23 @@
 	explosion_power = 100
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/obj/item/explosive/grenade/high_explosive/airburst/canister
+	name = "\improper M108 canister grenade"
+	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
+	icon_state = "grenade"
+	item_state = "grenade_hedp"
+	hand_throwable = FALSE
+	underslug_launchable = TRUE
+	explosion_power = 0
+	explosion_falloff = 25
+	det_time = 0 //this should mean that itll explode instantly when fired and thus generate the shotshell effect.
+	shrapnel_count = 13
+	shrapnel_type = /datum/ammo/bullet/shotgun/spread/canister
+	direct_hit_shrapnel = 5
+	dispersion_angle = 25 //hopefully this means the cone spread is pretty small
+
+/obj/item/explosive/grenade/high_explosive/airburst/canister/prime()
+	return
 
 /*
 //================================================
