@@ -13,6 +13,10 @@ Format:
 endmap
 
 map lv624
+	default
+endmap
+
+map lv624_repaired
 endmap
 
 map bigredv2
@@ -64,17 +68,4 @@ map derelict_almayer
 endmap
 
 map whiskey_outpost_v2
-endmap
-
-map kutjevo_ru
-	default
-endmap
-
-map derelict_almayer_ru
-endmap
-
-map desert_dam_ru
-endmap
-
-map whiskey_outpost_ru
 endmap

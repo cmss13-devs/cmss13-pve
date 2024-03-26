@@ -2,12 +2,12 @@
 
 /turf/closed/shuttle/rasputin
 	name = "\improper Rasputin"
-	icon = 'icons/turf/shuttle.dmi'
+	icon = 'void-marines/icons/rasputin.dmi'
 	icon_state = "dwall26"
 
 /obj/structure/shuttle/part/rasputin
 	name = "\improper Rasputin"
-	icon = 'icons/turf/shuttle.dmi'
+	icon = 'void-marines/icons/rasputin.dmi'
 	icon_state = "dwall26"
 
 /obj/structure/shuttle/part/rasputin/transparent

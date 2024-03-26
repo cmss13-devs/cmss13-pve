@@ -17,13 +17,11 @@ map almayer
 endmap
 
 map golden_arrow
-	disabled
-endmap
-
-map golden_arrow_RU
-	disabled
-endmap
-
-map desert_dam_fob
 	default
+endmap
+
+map chapaev
+endmap
+
+map rover
 endmap
