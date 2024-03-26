@@ -94,10 +94,14 @@
 	shrapnel_count = 13
 	shrapnel_type = /datum/ammo/bullet/shotgun/spread/canister
 	direct_hit_shrapnel = 5
-	dispersion_angle = 25 //hopefully this means the cone spread is pretty small
+	dispersion_angle = 10 //hopefully this means the cone spread is pretty small
 
 /obj/item/explosive/grenade/high_explosive/airburst/canister/prime()
-	return
+	set waitfor = 0
+	if(shrapnel_count)
+		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+	qdel(src)
 
 /*
 //================================================

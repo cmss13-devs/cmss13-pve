@@ -190,7 +190,7 @@
 	name = "low velocity canister shot"
 	icon_state = "buckshot"
 
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_3
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	accurate_range = 5
 	max_range = 8
