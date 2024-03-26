@@ -92,6 +92,8 @@
 
 	var/modification_log = list()
 
+	var/card_name = "ID Card"
+
 /obj/item/card/id/Initialize(mapload, ...)
 	. = ..()
 
@@ -132,7 +134,7 @@
 
 /obj/item/card/id/proc/set_assignment(new_assignment)
 	assignment = new_assignment
-	name = "[registered_name]'s ID Card ([assignment])"
+	name = "[registered_name]'s [card_name] ([assignment])"
 
 /obj/item/card/id/GetAccess()
 	return access
@@ -279,7 +281,7 @@
 	else
 		registered_name = "Agent Card"
 	assignment = "Agent"
-	name = "[registered_name]'s ID Card ([assignment])"
+	name = "[registered_name]'s [card_name] ([assignment])"
 
 /obj/item/card/id/syndicate/afterattack(obj/item/O as obj, mob/user as mob, proximity)
 	if(!proximity) return
@@ -304,7 +306,7 @@
 			src.registered_name = ""
 			return
 		src.assignment = u
-		src.name = "[src.registered_name]'s ID Card ([src.assignment])"
+		src.name = "[src.registered_name]'s [card_name] ([src.assignment])"
 		to_chat(user, SPAN_NOTICE(" You successfully forge the ID card."))
 		registered_user = user
 	else if(!registered_user || registered_user == user)
@@ -324,7 +326,7 @@
 					alert("Invalid assignment.")
 					return
 				src.assignment = u
-				src.name = "[src.registered_name]'s ID Card ([src.assignment])"
+				src.name = "[src.registered_name]'s [card_name] ([src.assignment])"
 				to_chat(user, SPAN_NOTICE(" You successfully forge the ID card."))
 				return
 			if("Show")
@@ -387,6 +389,7 @@
 	item_state = "dogtag"
 	pinned_on_uniform = FALSE
 	var/dogtag_taken = FALSE
+	card_name = "dog tags"
 
 
 /obj/item/card/id/dogtag/get_examine_text(mob/user)
