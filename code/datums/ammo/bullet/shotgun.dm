@@ -202,7 +202,7 @@
 
 /datum/ammo/bullet/shotgun/spread/canister/on_hit_mob(mob/M, obj/projectile/P)
 	knockback(M, P, 4)
-	slowdown(entity, bullet)
+	slowdown(M, P)
 
 
 /datum/ammo/bullet/shotgun/spread/canister/set_bullet_traits()
