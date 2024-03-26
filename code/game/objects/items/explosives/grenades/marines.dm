@@ -96,12 +96,24 @@
 	direct_hit_shrapnel = 0
 	dispersion_angle = 10 //hopefully this means the cone spread is pretty small
 
-/obj/item/explosive/grenade/high_explosive/airburst/canister/prime()
-	set waitfor = 0
-	if(shrapnel_count)
-		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
-	qdel(src)
+/obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
+	..()
+	var/detonate = TRUE
+	var/active = TRUE //maybe...
+	if(isobj(hit_atom) && !rebounding)
+		detonate = TRUE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = TRUE
+	if(active && detonate) // Active, and we reached our destination.
+		if(ismob(hit_atom))
+			var/mob/M = hit_atom
+			create_shrapnel(loc, min(direct_hit_shrapnel, shrapnel_count), last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 100)
+			M.apply_effect(3.0, SUPERSLOW)
+			shrapnel_count -= direct_hit_shrapnel
+		if(shrapnel_count)
+			create_shrapnel(loc, shrapnel_count, last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 0)
+			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+		qdel(src)
 
 /*
 //================================================
