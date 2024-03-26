@@ -216,6 +216,24 @@
 	. = ..()
 	. += SPAN_NOTICE("The belt is currently set to [mode ? "take pills directly from bottles": "NOT take pills directly from bottles"].")
 
+/obj/item/storage/belt/medical/upp
+	name = "\improper Type 41 pattern medical storage rig"
+	desc = "The Type 41 is the standard load-bearing equipment of UPP military. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+	icon_state = "medicalbelt_upp"
+	item_state = "upp_belt"
+
+/obj/item/storage/belt/medical/upp/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
@@ -239,6 +257,25 @@
 		/obj/item/device/analyzer/plant_analyzer,
 	)
 	has_gamemode_skin = TRUE
+
+/obj/item/storage/belt/medical/lifesaver/standard
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/medical/lifesaver/standard/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -450,6 +487,9 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/belt/marine/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/marine/m41a/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle (src)
@@ -567,6 +607,9 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/marine/smartgunner/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/quackers
 	name = "Mr. Quackers"
@@ -1080,6 +1123,9 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/belt/gun/m4a3/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/gun/m4a3/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
 	for(var/i = 1 to storage_slots - 1)
@@ -1199,6 +1245,9 @@
 		"1" = list(
 			"icon_x" = -1,
 			"icon_y" = -3))
+
+/obj/item/storage/belt/gun/m44/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m44/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44())
@@ -1593,6 +1642,9 @@
 		/obj/item/ammo_magazine/smartgun,
 	)
 	has_gamemode_skin = TRUE
+
+/obj/item/storage/belt/gun/smartgunner/standard
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())

@@ -280,10 +280,10 @@
 
 	noise_timer = noise_timer ? --noise_timer : 3
 	if(noise_timer == 3)
-		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
+		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 100)
 
-		for(var/mob/living/carbon/human/Mob in range(10, xeno))
-			shake_camera(Mob, 2, 1)
+		for(var/mob/living/carbon/human/Mob in range(14, xeno))
+			shake_camera(Mob, 2, 2)
 
 	for(var/mob/living/carbon/human/Mob in xeno.loc)
 		if(Mob.body_position == LYING_DOWN && Mob.stat != DEAD)
@@ -306,6 +306,8 @@
 				continue
 
 			shake_camera(hit_human, 4, 2)
+			if(hit_human.buckled)
+				hit_human.buckled.unbuckle()
 			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
 			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
 			hit_human.take_overall_armored_damage(momentum * 4)

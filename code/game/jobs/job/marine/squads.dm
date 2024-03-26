@@ -112,6 +112,8 @@
 	///Should we add the name of our squad in front of their name? Ex: Alpha Hospital Corpsman
 	var/prepend_squad_name_to_assignment = TRUE
 
+	var/squad_one_access = ACCESS_SQUAD_ONE
+	var/squad_two_access = ACCESS_SQUAD_TWO
 
 /datum/squad/marine
 	name = "Root"
@@ -127,6 +129,34 @@
 	radio_freq = ALPHA_FREQ
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
+	usable = TRUE
+
+/datum/squad/marine/upp
+	name = SQUAD_UPP
+	equipment_color = "#8B0000"
+	chat_color = "#B22222"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+	squad_one_access = ACCESS_UPP_SQUAD_ONE
+	squad_two_access = ACCESS_UPP_SQUAD_TWO
+
+/datum/squad/marine/upp/New()
+	. = ..()
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/forecon
+	name = SQUAD_LRRP
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = SOF_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#32CD32"
+	chat_color = "#32CD32"
+	minimap_color = "#32CD32"
 	usable = TRUE
 
 /datum/squad/marine/bravo
@@ -311,7 +341,7 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-/datum/squad/marine/alpha/proc/rename_platoon(datum/source, new_name, old_name)
+/datum/squad/marine/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	name = new_name
@@ -330,7 +360,7 @@
 			continue
 
 		marine_card.assignment = "[new_name] [marine.job]"
-		marine_card.name = "[marine_card.registered_name]'s ID Card ([marine_card.assignment])"
+		marine_card.name = "[marine_card.registered_name]'s [marine_card.card_name] ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
@@ -484,6 +514,8 @@
 		return FALSE //No ID found
 
 	var/assignment = M.job
+
+	var/id_assignment = M.assigned_equipment_preset.assignment
 	var/paygrade
 
 	var/list/extra_access = list()
@@ -529,6 +561,8 @@
 
 			if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_LEADER) //field promoted SL don't count as real ones
 				num_leaders++
+		if(JOB_SQUAD_RTO)
+			assignment = JOB_SQUAD_RTO
 
 		if(JOB_MARINE_RAIDER)
 			assignment = JOB_MARINE_RAIDER
@@ -565,15 +599,15 @@
 	M.assigned_squad = src //Add them to the squad
 	C.access += (src.access + extra_access) //Add their squad access to their ID
 	if(prepend_squad_name_to_assignment)
-		C.assignment = "[name] [assignment]"
+		C.assignment = "[name] [id_assignment]"
 	else
-		C.assignment = assignment
+		C.assignment = id_assignment
 
 	SEND_SIGNAL(M, COMSIG_SET_SQUAD)
 
 	if(paygrade)
 		C.paygrade = paygrade
-	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
 	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
 	if(headset && radio_freq)
@@ -594,8 +628,8 @@
 		return FALSE //Abort, no ID found
 
 	C.access -= src.access
-	C.assignment = M.job
-	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
+	C.assignment = M.assigned_equipment_preset.assignment
+	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
 	forget_marine_in_squad(M)
 
@@ -656,6 +690,8 @@
 		if(JOB_SQUAD_LEADER)
 			if(!leader_killed)
 				old_lead.comm_title = "PltSgt"
+		if(JOB_SQUAD_RTO)
+			old_lead.comm_title = "RTO"
 		if(JOB_MARINE_RAIDER)
 			old_lead.comm_title = "Op."
 		if(JOB_MARINE_RAIDER_SL)
@@ -748,9 +784,9 @@
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
 	if(H.wear_id)
 		if(fireteam == "SQ1")
-			H.wear_id.access += ACCESS_SQUAD_ONE
+			H.wear_id.access += squad_one_access
 		if(fireteam == "SQ2")
-			H.wear_id.access += ACCESS_SQUAD_TWO
+			H.wear_id.access += squad_two_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Sergeant" in cycled_headset.tracking_options))
@@ -773,7 +809,7 @@
 	H.hud_set_squad()
 
 	if(H.wear_id)
-		H.wear_id.access.Remove(ACCESS_SQUAD_ONE, ACCESS_SQUAD_TWO)
+		H.wear_id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Platoon Sergeant" in cycled_headset.tracking_options))

@@ -279,11 +279,12 @@
 		list("Mar", null),
 		list("ass", "hudsquad_ass"),
 		list("Eng", "hudsquad_engi"),
-		list("Med", "hudsquad_med"),
+		list("HM", "hudsquad_med"),
 		list("SG", "hudsquad_gun"),
 		list("Spc", "hudsquad_spec"),
 		list("SqSgt", "hudsquad_tl"),
 		list("PltSgt", "hudsquad_leader"),
+		list("RTO", "hudsquad_rto"),
 	)
 
 	for(var/datum/squad/marine/squad in RoleAuthority.squads)

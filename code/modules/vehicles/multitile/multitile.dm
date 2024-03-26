@@ -9,7 +9,7 @@
 	name = "multitile vehicle"
 	desc = "Get inside to operate the vehicle."
 
-	health = 1000
+	health = 3000
 
 	//How big the vehicle is in pixels, defined facing SOUTH, which is the byond default (i.e. a 3x3 vehicle is going to be 96x96) ~Cakey
 	bound_width = 32

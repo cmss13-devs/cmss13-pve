@@ -114,9 +114,25 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Face wrap, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan
 
-/datum/gear/mask/face_wrap_squad
-	display_name = "Face wrap, squad specific"
-	path =/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad
+/datum/gear/mask/face_wrap_intel
+	display_name = "Face wrap, black"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
+
+/datum/gear/mask/face_wrap_bravo
+	display_name = "Face wrap, yellow"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
+
+/datum/gear/mask/face_wrap_charlie
+	display_name = "Face wrap, purple"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/charlie
+
+/datum/gear/mask/face_wrap_delta
+	display_name = "Face wrap, blue"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta
+
+/datum/gear/mask/face_wrap_echo
+	display_name = "Face wrap, cyan green"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
 
 /datum/gear/mask/gas
 	display_name = "Gas mask"
@@ -197,10 +213,6 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/beret_squad
-	display_name = "USCM beret, squad specific"
-	path = /obj/item/clothing/head/beret/cm/squadberet
-
 /datum/gear/headwear/uscm/beret_green
 	display_name = "USCM beret, green"
 	path = /obj/item/clothing/head/beret/cm
@@ -216,6 +228,34 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/beret_white
 	display_name = "USCM beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
+
+/datum/gear/headwear/uscm/beret_alpha
+	display_name = "USCM beret, red flash"
+	path = /obj/item/clothing/head/beret/cm/alpha
+
+/datum/gear/headwear/uscm/beret_bravo
+	display_name = "USCM beret, yellow flash"
+	path = /obj/item/clothing/head/beret/cm/bravo
+
+/datum/gear/headwear/uscm/beret_charlie
+	display_name = "USCM beret, purple flash"
+	path = /obj/item/clothing/head/beret/cm/charlie
+
+/datum/gear/headwear/uscm/beret_delta
+	display_name = "USCM beret, blue flash"
+	path = /obj/item/clothing/head/beret/cm/delta
+
+/datum/gear/headwear/uscm/beret_echo
+	display_name = "USCM beret, green flash"
+	path = /obj/item/clothing/head/beret/cm/echo
+
+/datum/gear/headwear/uscm/beret_foxtrot
+	display_name = "USCM beret, brown flash"
+	path = /obj/item/clothing/head/beret/cm/foxtrot
+
+/datum/gear/headwear/uscm/beret_intel
+	display_name = "USCM beret, black flash"
+	path = /obj/item/clothing/head/beret/cm/intel
 
 /datum/gear/headwear/uscm/boonie_olive
 	display_name = "USCM boonie hat, olive"
@@ -249,9 +289,25 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "USCM headband, tan"
 	path = /obj/item/clothing/head/headband/tan
 
-/datum/gear/headwear/uscm/headband_squad
-	display_name = "USCM headband, squad specific"
-	path = /obj/item/clothing/head/headband/squad
+/datum/gear/headwear/uscm/headband_intel
+	display_name = "USCM headband, black"
+	path = /obj/item/clothing/head/headband/intel
+
+/datum/gear/headwear/uscm/headband_bravo
+	display_name = "USCM headband, orange"
+	path = /obj/item/clothing/head/headband/bravo
+
+/datum/gear/headwear/uscm/headband_charlie
+	display_name = "USCM headband, purple"
+	path = /obj/item/clothing/head/headband/charlie
+
+/datum/gear/headwear/uscm/headband_delta
+	display_name = "USCM headband, blue"
+	path = /obj/item/clothing/head/headband/delta
+
+/datum/gear/headwear/uscm/headband_echo
+	display_name = "USCM headband, cyan green"
+	path = /obj/item/clothing/head/headband/echo
 
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
@@ -611,6 +667,11 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "M44 Custom Revolver"
 	path = /obj/item/weapon/gun/revolver/m44/custom
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/m1911
+	display_name = "M1911 Service Pistol"
+	path = /obj/item/storage/box/M1911_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/drink
