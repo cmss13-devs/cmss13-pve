@@ -632,14 +632,14 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/canister
-	name = "\improper M108 Canister Grenade Box"
+	name = "\improper M108 canister grenade box"
 	desc = "Reinforced box of 25 30mm M108 canister grenades."
 	icon_state = "airburst_nade_placeholder" //ill get a sprite done for this
 	w_class = SIZE_LARGE
 	storage_slots = 25
 	max_storage_space = 25
-	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
-	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
+	can_hold = list(/datum/ammo/bullet/shotgun/buckshot/canister)
+	grenade_type = /datum/ammo/bullet/shotgun/buckshot/canister
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/airburst

@@ -81,6 +81,7 @@
 	explosion_power = 100
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/*
 /obj/item/explosive/grenade/high_explosive/airburst/canister
 	name = "\improper M108 canister grenade"
 	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
@@ -114,7 +115,8 @@
 			create_shrapnel(loc, shrapnel_count, last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 0)
 			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
 		qdel(src)
-
+*/
+//one day i might properly put this in here but elsewise i dunno we'll see
 /*
 //================================================
 				Fragmentation Grenades

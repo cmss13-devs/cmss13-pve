@@ -209,7 +209,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/proc/activate_attachment(atom/target, mob/user) //This is for activating stuff like flamethrowers, or switching weapon modes.
 	return
 
-/obj/item/attachable/proc/reload_attachment(obj/item/I, mob/user)
+/obj/item/attachable/proc/reload_attachment(list(obj/item/I, /datum/ammo/bullet/I), mob/user)
 	return
 
 /obj/item/attachable/proc/unique_action(mob/user)
@@ -2717,7 +2717,7 @@ Defined in conflicts.dm of the #defines folder.
 		playsound(src, open_sound, 15, 1)
 	update_icon()
 
-/obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
+/obj/item/attachable/attached_gun/grenade/reload_attachment(list(obj/item/explosive/grenade/G, ), mob/user)
 	if(!breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
