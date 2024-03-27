@@ -3,9 +3,19 @@
 /turf/open/space/basic,
 /area/space)
 "b" = (
-/obj/item/clothing/suit/storage/marine/sof/smartgun,
+/obj/structure/surface/rack,
+/obj/item/storage/belt/marine/smartgunner/tactical,
+/obj/item/storage/belt/gun/smartgunner/tactical,
+/obj/item/weapon/gun/smartgun,
 /turf/open/floor/almayer{
 	icon_state = "plate"
+	},
+/area/space)
+"f" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/weapon/gun/shotgun/combat,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
 	},
 /area/space)
 "g" = (
@@ -21,23 +31,90 @@
 	icon_state = "plate"
 	},
 /area/space)
-"k" = (
-/obj/item/clothing/suit/storage/marine/sof,
+"i" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/space)
+"j" = (
+/obj/structure/closet/secure_closet/squad_sergeant_marsoc,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/space)
+"k" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 12
+	},
+/turf/open/floor/almayer,
+/area/space)
 "l" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"m" = (
+/obj/structure/gun_rack/xm40{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/space)
+"n" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/space)
+"o" = (
+/obj/structure/closet/secure_closet/platoon_sergeant_marsoc,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
+/area/space)
+"p" = (
+/turf/open/floor/almayer{
+	dir = 4;
+	icon_state = "cargo_arrow"
+	},
+/area/space)
+"q" = (
+/obj/structure/largecrate/random/barrel{
+	pixel_y = 6;
+	pixel_x = -11
+	},
+/turf/open/floor/almayer,
+/area/space)
+"r" = (
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
 /area/space)
 "s" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"t" = (
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0
+	},
+/turf/closed/wall/almayer/outer,
+/area/space)
+"u" = (
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/handrail,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"v" = (
+/obj/structure/surface/table/almayer,
+/obj/item/facepaint/sniper,
+/turf/open/floor/almayer,
 /area/space)
 "x" = (
 /turf/closed/wall/almayer/outer,
@@ -46,36 +123,130 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
+"z" = (
+/obj/structure/bed/chair{
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/turf/open/floor/almayer,
+/area/space)
+"A" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/weapon/gun/flamer/underextinguisher,
+/obj/item/ammo_magazine/flamer_tank,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/space)
 "B" = (
 /turf/open/floor/almayer,
 /area/space)
-"D" = (
-/obj/item/clothing/suit/storage/marine/sof/light,
+"C" = (
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/space)
+"D" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/shoes/marine/knife,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"E" = (
+/obj/structure/barricade/handrail,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"F" = (
+/turf/open/floor/plating,
+/area/space)
+"G" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/m94/signal{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/storage/box/m94/signal{
+	pixel_y = 7;
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
+/area/space)
 "I" = (
 /turf/open/floor/plating/plating_catwalk,
+/area/space)
+"J" = (
+/obj/structure/largecrate/random/barrel,
+/turf/open/floor/almayer,
 /area/space)
 "K" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
 /area/space)
-"P" = (
-/obj/structure/gun_rack/xm40{
-	pixel_y = 32;
-	density = 0
+"L" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
 	},
-/obj/structure/gun_rack/xm40{
-	pixel_y = -32
+/area/space)
+"M" = (
+/obj/structure/closet/crate/green,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
+"N" = (
+/obj/structure/machinery/line_nexter{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/space)
+"O" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/weapon/gun/launcher/grenade/m92,
+/obj/item/storage/box/nade_box,
+/obj/item/storage/box/nade_box,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/space)
+"P" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"Q" = (
+/obj/structure/surface/table/almayer,
+/obj/item/weapon/gun/revolver/upp{
+	pixel_y = 33;
+	layer = 3.4;
+	anchored = 1
+	},
+/obj/item/stack/sheet/wood{
+	pixel_y = 40;
+	pixel_x = -1;
+	anchored = 1
+	},
+/obj/item/stack/sheet/wood{
+	pixel_y = 31;
+	pixel_x = -3;
+	anchored = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
 "R" = (
-/obj/structure/window/framed/almayer/hull,
-/turf/open/space/basic,
+/obj/structure/bed/chair{
+	pixel_y = 7;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer,
 /area/space)
 "S" = (
 /obj/structure/machinery/shower{
@@ -87,11 +258,43 @@
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer,
 /area/space)
-"W" = (
-/obj/item/storage/backpack/marine/marsoc,
-/turf/open/floor/almayer{
-	icon_state = "plate"
+"U" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
+	pixel_y = 4
 	},
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
+	pixel_y = -4
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/space)
+"W" = (
+/obj/structure/machinery/line_nexter{
+	dir = 2
+	},
+/turf/open/floor/almayer,
+/area/space)
+"X" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/binoculars/range/designator,
+/obj/item/storage/backpack/marine/satchel/rto,
+/turf/open/floor/almayer,
+/area/space)
+"Y" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	pixel_y = -5;
+	dir = 4;
+	layer = 2.99
+	},
+/obj/structure/machinery/computer/cameras{
+	dir = 4;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer,
 /area/space)
 "Z" = (
 /turf/closed/wall/almayer,
@@ -2599,10 +2802,10 @@ x
 x
 x
 x
-a
-a
-a
-a
+x
+x
+x
+x
 a
 a
 a
@@ -2744,6 +2947,10 @@ h
 h
 h
 Z
+F
+F
+F
+Z
 K
 K
 K
@@ -2751,10 +2958,6 @@ K
 K
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -2891,10 +3094,14 @@ a
 a
 a
 x
-I
-I
-I
-I
+r
+r
+r
+r
+Z
+Z
+Z
+Z
 Z
 K
 s
@@ -2903,10 +3110,6 @@ s
 s
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3048,6 +3251,10 @@ K
 K
 K
 h
+B
+B
+B
+h
 K
 Z
 Z
@@ -3055,10 +3262,6 @@ Z
 Z
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3200,6 +3403,10 @@ K
 K
 K
 h
+B
+B
+B
+h
 K
 Z
 Z
@@ -3207,10 +3414,6 @@ Z
 Z
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3347,10 +3550,14 @@ a
 a
 a
 x
-I
-I
-I
-I
+r
+r
+r
+r
+Z
+Z
+Z
+Z
 Z
 K
 S
@@ -3359,10 +3566,6 @@ S
 S
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3504,6 +3707,10 @@ h
 h
 h
 Z
+F
+F
+F
+Z
 K
 K
 K
@@ -3511,10 +3718,6 @@ K
 K
 K
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3646,11 +3849,15 @@ a
 a
 a
 a
-a
 x
 x
 x
 x
+Z
+Z
+Z
+Z
+Z
 Z
 Z
 Z
@@ -3664,10 +3871,6 @@ Z
 Z
 x
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3798,28 +4001,28 @@ a
 a
 a
 a
-a
 x
-I
+D
 h
-I
+D
+Z
+J
+R
+v
+Z
 h
-I
 h
-I
+h
 Z
 B
 B
 B
 B
 B
-B
+W
+p
 Z
 x
-a
-a
-a
-a
 a
 a
 a
@@ -3950,28 +4153,28 @@ a
 a
 a
 a
-a
 x
-g
-h
-g
-h
 g
 h
 g
 Z
+q
+z
+i
+Z
 B
+I
 B
+Z
 B
-B
-B
-B
+I
+i
+I
+I
+E
+I
 T
 x
-a
-a
-a
-a
 a
 a
 a
@@ -4102,28 +4305,28 @@ a
 a
 a
 a
-a
-R
+x
 h
 h
 h
 h
-W
-k
-D
-b
+h
+h
+h
+h
 B
+I
 B
+h
 B
-B
-B
-B
+I
+i
+I
+I
+E
+I
 T
 x
-a
-a
-a
-a
 a
 a
 a
@@ -4254,28 +4457,28 @@ a
 a
 a
 a
-a
 x
-g
-h
-g
-h
 g
 h
 g
 Z
+k
 B
+k
+Z
 B
+I
 B
+Z
 B
-B
-B
+I
+i
+I
+I
+u
+I
 T
 x
-a
-a
-a
-a
 a
 a
 a
@@ -4406,28 +4609,28 @@ a
 a
 a
 a
-a
 x
-I
+D
 h
+D
+Z
+k
+n
+k
+Z
+B
 I
-h
-I
-h
-I
+B
 Z
 B
 B
 B
 B
 B
-B
+N
+L
 Z
 x
-a
-a
-a
-a
 a
 a
 a
@@ -4558,28 +4761,28 @@ a
 a
 a
 a
-a
 x
 x
 x
 Z
-h
+Z
+Z
+Z
+Z
+Z
+B
+I
+B
 Z
 Z
 Z
 Z
 Z
 Z
-h
-h
 Z
 Z
 Z
 x
-a
-a
-a
-a
 a
 a
 a
@@ -4714,21 +4917,21 @@ a
 a
 a
 x
-B
-B
-B
+X
+Y
+G
+C
 Z
-h
+B
 I
 B
-B
-I
-h
 Z
-h
-h
+M
+m
+m
+m
+A
 x
-a
 a
 a
 a
@@ -4869,18 +5072,18 @@ x
 I
 I
 I
-Z
-I
-B
-B
-B
-B
-I
+y
 Z
 B
+I
 B
+Z
+h
+I
+P
+I
+f
 x
-a
 a
 a
 a
@@ -5018,21 +5221,21 @@ a
 a
 a
 x
-l
-l
-y
-Z
-P
-Z
-I
-I
-B
-I
+j
+h
+h
+h
 h
 B
+I
 B
+h
+h
+I
+l
+I
+b
 x
-a
 a
 a
 a
@@ -5170,21 +5373,21 @@ a
 a
 a
 x
-Z
-Z
-Z
-Z
-I
-B
-B
-B
-B
-I
-Z
-B
-B
 x
-a
+x
+x
+x
+x
+B
+I
+B
+Z
+h
+I
+P
+I
+O
+x
 a
 a
 a
@@ -5325,18 +5528,18 @@ a
 a
 a
 a
-Z
+a
+x
 h
-I
-B
-B
-I
+h
 h
 Z
-h
+U
+B
+B
+B
 h
 x
-a
 a
 a
 a
@@ -5477,18 +5680,18 @@ a
 a
 a
 a
-Z
-Z
-Z
-Z
+x
+x
 Z
 h
-h
-Z
 Z
 Z
 x
-a
+x
+h
+x
+x
+x
 a
 a
 a
@@ -5629,18 +5832,18 @@ a
 a
 a
 a
-Z
-a
-a
-a
-a
-a
-a
-a
-a
-a
 x
-a
+h
+I
+B
+I
+h
+x
+B
+B
+B
+B
+x
 a
 a
 a
@@ -5781,18 +5984,18 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+x
+h
+I
+B
+I
+h
+x
+I
+I
+I
+B
+x
 a
 a
 a
@@ -5933,18 +6136,18 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+x
+h
+I
+B
+I
+h
+x
+Q
+y
+y
+B
+x
 a
 a
 a
@@ -6085,18 +6288,18 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+x
+x
+x
+x
+x
+x
+x
+I
+I
+I
+B
+x
 a
 a
 a
@@ -6243,12 +6446,12 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
+x
+o
+h
+h
+x
+x
 a
 a
 a
@@ -6395,11 +6598,11 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
+x
+x
+t
+x
+x
 a
 a
 a
