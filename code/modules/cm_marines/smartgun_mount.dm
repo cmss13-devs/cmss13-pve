@@ -512,6 +512,8 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	update_icon()
 	AddComponent(/datum/component/automatedfire/autofire, fire_delay, burst_fire_delay, burst_amount, gun_firemode, autofire_slow_mult, CALLBACK(src, PROC_REF(set_burst_firing)), CALLBACK(src, PROC_REF(reset_fire)), CALLBACK(src, PROC_REF(try_fire)), CALLBACK(src, PROC_REF(display_ammo)))
+	AddComponent(/datum/component/iff_fire_prevention)
+
 
 /obj/structure/machinery/m56d_hmg/Destroy(force) //Make sure we pick up our trash.
 	operator?.unset_interaction()
@@ -723,6 +725,16 @@
 		final_angle += rand(-total_scatter_angle, total_scatter_angle)
 		target = get_angle_target_turf(T, final_angle, 30)
 
+	var/before_fire_cancel = SEND_SIGNAL(src, COMSIG_GUN_BEFORE_FIRE, in_chamber, target, operator)
+
+	if(before_fire_cancel)
+		if(before_fire_cancel & COMPONENT_CANCEL_GUN_BEFORE_FIRE)
+			return AUTOFIRE_CONTINUE
+
+		if(before_fire_cancel & COMPONENT_HARD_CANCEL_GUN_BEFORE_FIRE)
+			return
+
+
 	in_chamber.weapon_cause_data = create_cause_data(initial(name), operator)
 	in_chamber.setDir(dir)
 	in_chamber.def_zone = pick("chest","chest","chest","head")
@@ -839,7 +851,7 @@
 			to_chat(usr, SPAN_NOTICE("You are too far from the handles to man [src]!"))
 
 /obj/structure/machinery/m56d_hmg/on_set_interaction(mob/user)
-	RegisterSignal(user, list(COMSIG_MOB_MG_EXIT, COMSIG_MOB_RESISTED, COMSIG_MOB_DEATH, COMSIG_MOB_KNOCKED_DOWN), PROC_REF(exit_interaction))
+	RegisterSignal(user, list(COMSIG_MOB_MG_EXIT, COMSIG_MOB_RESISTED, COMSIG_MOB_DEATH, COMSIG_LIVING_SET_BODY_POSITION), PROC_REF(exit_interaction))
 	flags_atom |= RELAY_CLICK
 	user.status_flags |= IMMOBILE_ACTION
 	user.visible_message(SPAN_NOTICE("[user] mans \the [src]."),SPAN_NOTICE("You man \the [src], locked and loaded!"))
@@ -854,7 +866,7 @@
 	update_pixels(user)
 	operator = user
 
-/obj/structure/machinery/m56d_hmg/on_unset_interaction(mob/user)
+/obj/structure/machinery/m56d_hmg/on_unset_interaction(mob/living/user)
 	flags_atom &= ~RELAY_CLICK
 	SEND_SIGNAL(src, COMSIG_GUN_INTERRUPT_FIRE)
 	user.status_flags &= ~IMMOBILE_ACTION
@@ -875,7 +887,7 @@
 		COMSIG_MOB_MG_EXIT,
 		COMSIG_MOB_RESISTED,
 		COMSIG_MOB_DEATH,
-		COMSIG_MOB_KNOCKED_DOWN,
+		COMSIG_LIVING_SET_BODY_POSITION,
 	))
 
 
@@ -915,8 +927,8 @@
 			user.client.pixel_y = 0
 		animate(user, pixel_x=user_old_x, pixel_y=user_old_y, 4, 1)
 
-/obj/structure/machinery/m56d_hmg/check_eye(mob/user)
-	if(user.lying || get_dist(user,src) > 0 || user.is_mob_incapacitated() || !user.client)
+/obj/structure/machinery/m56d_hmg/check_eye(mob/living/user)
+	if(user.body_position != STANDING_UP || get_dist(user,src) > 0 || user.is_mob_incapacitated() || !user.client)
 		user.unset_interaction()
 
 /obj/structure/machinery/m56d_hmg/clicked(mob/user, list/mods)

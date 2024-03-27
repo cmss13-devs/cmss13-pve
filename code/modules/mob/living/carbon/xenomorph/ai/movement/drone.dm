@@ -50,11 +50,10 @@
 		home_turf = potential_home
 
 	if(!home_turf)
-		if(!idle_xeno.resting)
-			idle_xeno.lay_down()
+		idle_xeno.set_resting(TRUE, FALSE, TRUE)
 		return
 
-	idle_xeno.resting = FALSE
+	idle_xeno.set_resting(FALSE, FALSE, TRUE)
 
 	if(home_turf == last_home_turf)
 		blacklisted_turfs += home_turf
@@ -79,13 +78,15 @@
 	if(checked_turf in blacklisted_turfs)
 		return FALSE
 
-	if(checked_turf.weeds)
+	var/obj/effect/alien/weeds/checked_weeds = checked_turf.weeds
+	if(checked_weeds && IS_SAME_HIVENUMBER(checked_weeds, parent))
 		return FALSE
 
 	if(checked_turf.is_weedable() < FULLY_WEEDABLE)
 		return FALSE
 
-	if(locate(/obj/effect/alien/weeds/node) in range(3, checked_turf))
+	var/obj/effect/alien/weeds/found_weeds = locate(/obj/effect/alien/weeds/node) in range(3, checked_turf)
+	if(found_weeds && IS_SAME_HIVENUMBER(found_weeds, parent))
 		return FALSE
 
 	if(checked_turf.density)

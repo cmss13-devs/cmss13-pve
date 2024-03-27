@@ -732,6 +732,13 @@
 
 
 
+/mob/living/carbon/xenomorph/Moved(atom/oldloc, direction, Forced)
+	. = ..()
+	if(!client) // We are not, in fact, counted steps for AI xeno in /client/Move()
+		life_steps_total++
+
+
+
 /mob/living/carbon/xenomorph/slip(slip_source_name, stun_level, weaken_level, run_only, override_noslip, slide_steps)
 	return FALSE
 
@@ -1107,7 +1114,7 @@
 			to_chat(src, SPAN_WARNING("[current_airlock] is locked down tight. You can't squeeze underneath!"))
 			return FALSE
 	visible_message(SPAN_WARNING("[src] scuttles underneath [current_structure]!"), \
-	SPAN_WARNING("You squeeze and scuttle underneath [current_structure]."), max_distance = 5)
+	SPAN_WARNING("You squeeze and scuttle underneath [current_structure]."), max_distance = 2)
 	forceMove(current_structure.loc)
 	return TRUE
 

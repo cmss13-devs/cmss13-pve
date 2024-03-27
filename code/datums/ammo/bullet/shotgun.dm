@@ -225,6 +225,23 @@
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
 
+/datum/ammo/bullet/shotgun/heavy/buckshot/special
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
+	accurate_range = 8
+	max_range = 8
+	damage = 75
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	damage_armor_punch = 0
+	pen_armor_punch = 0
+
+/datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
+	name = "additional superheavy buckshot"
+	accurate_range = 8
+	max_range = 8
+	damage = 100
+
 //basically the same
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
 	name = "dragon's breath shell"
@@ -352,7 +369,7 @@
 	if(P.distance_travelled > 8)
 		knockback(M, P, 12)
 
-	else if(!M || M == P.firer || M.lying) //These checks are included in knockback and would be redundant above.
+	else if(!M || M == P.firer || M.body_position == LYING_DOWN) //These checks are included in knockback and would be redundant above.
 		return
 
 	shake_camera(M, 3, 4)

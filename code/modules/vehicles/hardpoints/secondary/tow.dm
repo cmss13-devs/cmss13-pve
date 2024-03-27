@@ -6,10 +6,8 @@
 	disp_icon = "tank"
 	disp_icon_state = "towlauncher"
 
-	health = 500
-	cooldown = 150
-	accuracy = 0.8
-	firing_arc = 60
+	health = 2000
+	firing_arc = 120
 
 	origins = list(0, -2)
 
@@ -29,3 +27,7 @@
 		"4" = list(5, -8),
 		"8" = list(-5, 10)
 	)
+
+	scatter = 2
+	fire_delay = 7.0 SECONDS
+

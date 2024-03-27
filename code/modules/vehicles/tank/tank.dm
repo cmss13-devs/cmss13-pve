@@ -32,8 +32,8 @@
 
 	vehicle_flags = VEHICLE_CLASS_MEDIUM
 
-	move_max_momentum = 3
-	move_momentum_build_factor = 1.8
+	move_max_momentum = 2
+	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.6
 
 	light_range = 4
@@ -65,15 +65,15 @@
 
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 1.5, // Acid melts the tank
-		"slash" = 0.7, // Slashing a massive, solid chunk of metal does very little except leave scratches
+		"acid" = 0.5,
+		"slash" = 1.6,
 		"bullet" = 0.4,
 		"explosive" = 0.8,
 		"blunt" = 0.8,
 		"abstract" = 1
 	)
 
-	explosive_resistance = 400
+	explosive_resistance = 500
 
 /obj/vehicle/multitile/tank/initialize_cameras(change_tag = FALSE)
 	if(!camera)
@@ -220,7 +220,7 @@
 	TANK.update_icon()
 
 /obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -231,7 +231,7 @@
 
 //PRESET: default hardpoints
 /obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -264,7 +264,7 @@
 
 //PRESET: autocannon kit
 /obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)

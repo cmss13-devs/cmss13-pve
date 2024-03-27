@@ -9,6 +9,7 @@
 	anchored = TRUE
 	can_buckle = TRUE
 	unslashable = TRUE
+	buckle_lying = 0
 	var/open = 0 //if the lid is up
 	var/cistern = 0 //if the cistern bit is open
 	var/w_items = 0 //the combined w_class of all the items in the cistern
@@ -212,6 +213,8 @@
 	var/mobpresent = 0 //true if there is a mob on the shower's loc, this is to ease process()
 	var/is_washing = 0
 
+	COOLDOWN_DECLARE(last_sound)
+
 /obj/structure/machinery/shower/Initialize()
 	. = ..()
 	create_reagents(2)
@@ -378,6 +381,10 @@
 
 /obj/structure/machinery/shower/process()
 	if(!on) return
+
+	if(COOLDOWN_FINISHED(src, last_sound))
+		COOLDOWN_START(src, last_sound, 8 SECONDS)
+		playsound(src, "gurgle", 25, FALSE)
 	wash_floor()
 	if(!mobpresent) return
 	for(var/mob/living/carbon/C in loc)

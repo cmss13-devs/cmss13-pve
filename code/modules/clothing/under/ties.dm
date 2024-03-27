@@ -79,6 +79,22 @@
 	name = "red tie"
 	icon_state = "redtie"
 
+/obj/item/clothing/accessory/green
+	name = "green tie"
+	icon_state = "greentie"
+
+/obj/item/clothing/accessory/black
+	name = "black tie"
+	icon_state = "blacktie"
+
+/obj/item/clothing/accessory/gold
+	name = "gold tie"
+	icon_state = "goldtie"
+
+/obj/item/clothing/accessory/purple
+	name = "purple tie"
+	icon_state = "purpletie"
+
 /obj/item/clothing/accessory/horrible
 	name = "horrible tie"
 	desc = "A neosilk clip-on tie. This one is disgusting."
@@ -342,6 +358,11 @@
 	desc = "An armband, worn by the crew to display which department they're assigned to. This one is white and green."
 	icon_state = "medgreen"
 
+/obj/item/clothing/accessory/armband/nurse
+	name = "nurse armband"
+	desc = "An armband, worn by the rookie nurses to display they are still not doctors. This one is dark red."
+	icon_state = "nurse"
+
 //patches
 /obj/item/clothing/accessory/patch
 	name = "USCM patch"
@@ -361,7 +382,7 @@
 
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the USS Hanyut, USCM FORECON."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
 /obj/item/clothing/accessory/patch/royal_marines
@@ -370,36 +391,53 @@
 	icon_state = "commandopatch"
 
 /obj/item/clothing/accessory/patch/upp
+	name = "UPP patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
+	icon_state = "upppatch"
+
+/obj/item/clothing/accessory/patch/upp/airborne
 	name = "UPP Airborne Reconnaissance patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
-	icon_state = "upppatch"
+	icon_state = "vdvpatch"
+
+/obj/item/clothing/accessory/patch/upp/platoon
+	name = "UPP Naval Infantry patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
+	icon_state = "navalpatch"
 
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
 	icon_state = "poncho"
 	slot = ACCESSORY_SLOT_PONCHO
+	var/has_variation = TRUE
 
 /obj/item/clothing/accessory/poncho/Initialize()
 	. = ..()
-	select_gamemode_skin(type)
-	inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
-	update_icon()
+	if(has_variation)
+		select_gamemode_skin(type)
+		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+		update_icon()
 
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/brown
 	icon_state = "d_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/black
 	icon_state = "u_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/blue
 	icon_state = "c_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/purple
 	icon_state = "s_poncho"
+	has_variation = FALSE
 
 
 //Ties that can store stuff

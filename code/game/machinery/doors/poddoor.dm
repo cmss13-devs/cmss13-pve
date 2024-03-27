@@ -7,11 +7,12 @@
 	var/base_icon_state = "pdoor"
 	id = 1
 	dir = NORTH
-	unslashable = TRUE
 	health = 0
 	layer = PODDOOR_CLOSED_LAYER
 	open_layer = PODDOOR_OPEN_LAYER
 	closed_layer = PODDOOR_CLOSED_LAYER
+	///How many tiles the shutter occupies
+	var/shutter_length = 1
 
 /obj/structure/machinery/door/poddoor/Initialize()
 	. = ..()
@@ -114,6 +115,8 @@
 	operating = FALSE
 
 /obj/structure/machinery/door/poddoor/two_tile/open()
+	if(!density)
+		return
 	if(operating) //doors can still open when emag-disabled
 		return
 
@@ -151,6 +154,8 @@
 	..()
 
 /obj/structure/machinery/door/poddoor/two_tile/close()
+	if(density)
+		return
 	if(operating)
 		return
 	start_closing()
@@ -185,6 +190,7 @@
 /obj/structure/machinery/door/poddoor/two_tile
 	dir = EAST
 	icon = 'icons/obj/structures/doors/1x2blast_hor.dmi'
+	shutter_length = 2
 	var/obj/structure/machinery/door/poddoor/filler_object/f1
 	var/obj/structure/machinery/door/poddoor/filler_object/f2
 
@@ -214,6 +220,7 @@
 
 /obj/structure/machinery/door/poddoor/two_tile/four_tile
 	icon = 'icons/obj/structures/doors/1x4blast_hor.dmi'
+	shutter_length = 4
 	var/obj/structure/machinery/door/poddoor/filler_object/f3
 	var/obj/structure/machinery/door/poddoor/filler_object/f4
 
@@ -243,14 +250,13 @@
 
 /obj/structure/machinery/door/poddoor/filler_object
 	name = ""
+	icon = null
 	icon_state = ""
-	unslashable = TRUE
 	unacidable = TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/secure
 	icon = 'icons/obj/structures/doors/1x4blast_hor_secure.dmi'
 	openspeed = 17
-	unslashable = TRUE
 	unacidable = TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/secure/opened
@@ -259,16 +265,23 @@
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/vertical/secure
 	icon = 'icons/obj/structures/doors/1x4blast_vert_secure.dmi'
 	openspeed = 17
-	unslashable = TRUE
 	unacidable = TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/vertical/secure/open
 	density = FALSE
 
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/pivot/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(direction_change_move))
+
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/pivot/proc/direction_change_move(source, old_dir, new_dir)
+	if(old_dir == new_dir)
+		return
+	x -= shutter_length - 1
+
 /obj/structure/machinery/door/poddoor/two_tile/secure
 	icon = 'icons/obj/structures/doors/1x2blast_hor.dmi'
 	openspeed = 17
-	unslashable = TRUE
 	unacidable = TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/vertical/secure
@@ -307,7 +320,6 @@
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, relativewall_neighbours)), 10)
 
 /obj/structure/machinery/door/poddoor/almayer/locked
-	unslashable = TRUE
 	unacidable = TRUE
 
 /obj/structure/machinery/door/poddoor/almayer/locked/attackby(obj/item/C as obj, mob/user as mob)

@@ -267,6 +267,14 @@
 /turf/closed/shuttle/midway/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/cyclone
+	name = "\improper Cyclone"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/cyclone/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/twe_dropship
 	name = "\improper UD4-UK"
 	icon = 'icons/turf/twedropship.dmi'
