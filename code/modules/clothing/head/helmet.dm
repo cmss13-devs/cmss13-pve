@@ -1225,14 +1225,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A hat worn by heavy-weapons operators to block sweat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "spec"
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_inventory = NO_FLAGS
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	item_icons = list(
