@@ -74,8 +74,8 @@
 	title = JOB_SQUAD_MARINE_RAIDER
 	total_positions = 5
 	spawn_positions = 5
-	gear_preset =
-	gear_preset_secondary =
+	gear_preset = /datum/equipment_preset/uscm/pfc/raider
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/raider/lesser_rank
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1

@@ -68,7 +68,6 @@ AddTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/raider
 	title = JOB_SQUAD_LEADER_RAIDER
 	gear_preset = /datum/equipment_preset/uscm/leader/raider
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/raider/lesser_rank
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP

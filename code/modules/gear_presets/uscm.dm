@@ -135,7 +135,7 @@
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 	paygrade = "ME2"
 
-/datum/equipment_preset/pfc/raider
+/datum/equipment_preset/uscm/pfc/raider
 	name = "Marine Raider Critical Skill Operator"
 	paygrade = "ME5"
 	skills = /datum/skills/commando/deathsquad
@@ -497,7 +497,7 @@
 	paygrade = "ME6"
 	skills = /datum/skills/commando/deathsquad/medic
 
-/datum/equipment_preset/uscm/medic/raider/load_Gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medic/raider/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine

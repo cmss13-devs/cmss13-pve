@@ -94,7 +94,6 @@ AddTimelock(/datum/job/marine/medic, list(
 /datum/job/marine/medic/ai/raider
 	title = JOB_SQUAD_MEDIC_RAIDER
 	gear_preset = /datum/equipment_preset/uscm/medic/raider
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/raider/lesser_rank
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP
