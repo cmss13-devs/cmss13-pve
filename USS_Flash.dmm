@@ -3,20 +3,30 @@
 /turf/open/space/basic,
 /area/space)
 "b" = (
-/obj/structure/surface/rack,
-/obj/item/storage/belt/marine/smartgunner/tactical,
-/obj/item/storage/belt/gun/smartgunner/tactical,
-/obj/item/weapon/gun/smartgun,
+/obj/structure/closet/crate/weapon,
+/obj/item/ammo_magazine/sniper/flak,
+/obj/item/ammo_magazine/sniper/flak,
+/obj/item/ammo_magazine/sniper/flak,
+/obj/item/ammo_magazine/sniper/flak,
+/obj/item/ammo_magazine/sniper/flak,
+/obj/item/weapon/gun/rifle/sniper/M42A,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/space)
-"f" = (
+"d" = (
 /obj/structure/closet/crate/weapon,
-/obj/item/weapon/gun/shotgun/combat,
+/obj/item/ammo_magazine/flamer_tank,
+/obj/item/weapon/gun/flamer/underextinguisher,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
+/area/space)
+"f" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
+/turf/open/floor/almayer,
 /area/space)
 "g" = (
 /obj/structure/closet/secure_closet/marine_personal{
@@ -36,7 +46,12 @@
 /turf/open/floor/almayer,
 /area/space)
 "j" = (
-/obj/structure/closet/secure_closet/squad_sergeant_marsoc,
+/obj/structure/closet/secure_closet/platoon_sergeant_marsoc,
+/obj/item/weapon/gun/rifle/m41a/elite/xm40/ap,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -62,13 +77,18 @@
 	},
 /area/space)
 "n" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
+/obj/structure/machinery/cryopod,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
-/turf/open/floor/almayer,
 /area/space)
 "o" = (
-/obj/structure/closet/secure_closet/platoon_sergeant_marsoc,
+/obj/structure/closet/secure_closet/squad_sergeant_marsoc,
+/obj/item/weapon/gun/rifle/m41a/elite/xm40/ap,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
+/obj/item/ammo_magazine/rifle/xm40,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -87,8 +107,10 @@
 /turf/open/floor/almayer,
 /area/space)
 "r" = (
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/space)
 "s" = (
 /obj/structure/machinery/shower{
@@ -116,6 +138,10 @@
 /obj/item/facepaint/sniper,
 /turf/open/floor/almayer,
 /area/space)
+"w" = (
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
 "x" = (
 /turf/closed/wall/almayer/outer,
 /area/space)
@@ -131,18 +157,26 @@
 /turf/open/floor/almayer,
 /area/space)
 "A" = (
-/obj/structure/closet/crate/weapon,
-/obj/item/weapon/gun/flamer/underextinguisher,
-/obj/item/ammo_magazine/flamer_tank,
+/obj/structure/largecrate/supply/ammo/xm40,
+/obj/structure/largecrate/supply/ammo/xm40{
+	pixel_y = 10
+	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor5"
+	icon_state = "plate"
 	},
 /area/space)
 "B" = (
 /turf/open/floor/almayer,
 /area/space)
 "C" = (
-/obj/structure/surface/table/almayer,
+/obj/item/storage/belt/marine/smartgunner/tactical,
+/obj/item/storage/belt/gun/smartgunner/tactical,
+/obj/structure/closet/crate/green,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/weapon/gun/smartgun,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -175,6 +209,14 @@
 	},
 /turf/open/floor/almayer,
 /area/space)
+"H" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/weapon/gun/shotgun/combat,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/space)
 "I" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/space)
@@ -194,13 +236,16 @@
 	},
 /area/space)
 "M" = (
-/obj/structure/closet/crate/green,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
+/obj/structure/closet/crate/weapon,
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
+	pixel_y = -4
+	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "test_floor5"
 	},
 /area/space)
 "N" = (
@@ -211,9 +256,9 @@
 /area/space)
 "O" = (
 /obj/structure/closet/crate/weapon,
+/obj/item/storage/box/nade_box,
+/obj/item/storage/box/nade_box,
 /obj/item/weapon/gun/launcher/grenade/m92,
-/obj/item/storage/box/nade_box,
-/obj/item/storage/box/nade_box,
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -259,16 +304,9 @@
 /turf/open/floor/almayer,
 /area/space)
 "U" = (
-/obj/structure/closet/crate/weapon,
-/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
-	pixel_y = 4
-	},
-/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
-/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable{
-	pixel_y = -4
-	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
-	icon_state = "test_floor5"
+	icon_state = "plate"
 	},
 /area/space)
 "W" = (
@@ -2942,10 +2980,10 @@ a
 a
 a
 x
-h
-h
-h
-h
+r
+r
+r
+r
 Z
 F
 F
@@ -3094,10 +3132,10 @@ a
 a
 a
 x
-r
-r
-r
-r
+w
+w
+w
+w
 Z
 Z
 Z
@@ -3550,10 +3588,10 @@ a
 a
 a
 x
-r
-r
-r
-r
+w
+w
+w
+w
 Z
 Z
 Z
@@ -3702,10 +3740,10 @@ a
 a
 a
 x
-h
-h
-h
-h
+n
+n
+n
+n
 Z
 F
 F
@@ -4615,7 +4653,7 @@ h
 D
 Z
 k
-n
+f
 k
 Z
 B
@@ -4920,17 +4958,17 @@ x
 X
 Y
 G
-C
+U
 Z
 B
 I
 B
 Z
-M
-m
-m
-m
 A
+m
+m
+B
+d
 x
 a
 a
@@ -5082,7 +5120,7 @@ h
 I
 P
 I
-f
+H
 x
 a
 a
@@ -5221,7 +5259,7 @@ a
 a
 a
 x
-j
+o
 h
 h
 h
@@ -5234,7 +5272,7 @@ h
 I
 l
 I
-b
+C
 x
 a
 a
@@ -5534,11 +5572,11 @@ h
 h
 h
 Z
-U
+M
 B
 B
 B
-h
+b
 x
 a
 a
@@ -6447,7 +6485,7 @@ a
 a
 a
 x
-o
+j
 h
 h
 x

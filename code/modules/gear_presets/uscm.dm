@@ -135,6 +135,21 @@
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 	paygrade = "ME2"
 
+/datum/equipment_preset/pfc/raider
+	name = "Marine Raider Critical Skill Operator"
+	paygrade = "ME5"
+	skills = /datum/skills/commando/deathsquad
+
+/datum/equipment_preset/uscm/pfc/raider/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+
+/datum/equipment_preset/uscm/pfc/raider/lesser_rank
+	paygrade = "ME4"
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -476,6 +491,18 @@
 /datum/equipment_preset/uscm/medic/forecon/lesser_rank
 	paygrade = "ME4"
 
+/datum/equipment_preset/uscm/medic/raider
+	name = "Marine Raider Special Reconnaisance Corpsman"
+	assignment = "Special Reconnaisance Corpsman"
+	paygrade = "ME6"
+	skills = /datum/skills/commando/deathsquad/medic
+
+/datum/equipment_preset/uscm/medic/raider/load_Gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -530,6 +557,18 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/standard
 
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/tl/raider
+	name = "Marine Raider Communications and Signals Specialist"
+	assignment = "Communications and Signals Specialist"
+	paygrade = "ME7"
+	skills = /datum/skills/commando/deathsquad/leader
+
+/datum/equipment_preset/uscm/tl/raider/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /*****************************************************************************************************/
@@ -629,6 +668,19 @@
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	paygrade = "ME7"
+
+/datum/equipment_preset/uscm/leader/raider
+	name = "Marine Raider Element Leader"
+	assignment = "Element Leader"
+	paygrade = "ME8"
+	skills = /datum/skills/commando/deathsquad/officer
+
+/datum/equipment_preset/uscm/leader/raider/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine/standard
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
