@@ -732,6 +732,13 @@
 
 
 
+/mob/living/carbon/xenomorph/Moved(atom/oldloc, direction, Forced)
+	. = ..()
+	if(!client) // We are not, in fact, counted steps for AI xeno in /client/Move()
+		life_steps_total++
+
+
+
 /mob/living/carbon/xenomorph/slip(slip_source_name, stun_level, weaken_level, run_only, override_noslip, slide_steps)
 	return FALSE
 
