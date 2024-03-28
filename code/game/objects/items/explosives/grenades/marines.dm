@@ -135,10 +135,8 @@
 //================================================
 				Canister Grenades
 //================================================
-Special thanks to vero5123 for making this work.He, uh, basically put this all together in an hour???
-- koishi
+Special thanks to vero5123 for making this work. He, uh, basically put this all together in an hour??? -koishi
 */
-
 /obj/item/explosive/grenade/high_explosive/airburst/canister
 	name = "\improper M108 canister grenade"
 	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
@@ -162,7 +160,6 @@ Special thanks to vero5123 for making this work.He, uh, basically put this all t
 // canister has no impact explosion.
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
-
 /*
 //================================================
 				Airburst Grenades
