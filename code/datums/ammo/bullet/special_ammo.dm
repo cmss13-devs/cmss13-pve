@@ -163,6 +163,10 @@
 	penetration = 0 //...but frangibles suck ass at punching through armor...
 	shrapnel_chance = 0 //...and they tend to disintegrate into dust.
 
+/datum/ammo/bullet/m60/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 3) //at close range you can juggle back a horde which should be nice.
+
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
