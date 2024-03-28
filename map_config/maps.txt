@@ -80,5 +80,8 @@ endmap
 map desert_dam_ru
 endmap
 
+map lv759_hybrisa
+endmap
+
 map whiskey_outpost_ru
 endmap
