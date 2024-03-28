@@ -81,42 +81,7 @@
 	explosion_power = 100
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
-/*
-/obj/item/explosive/grenade/high_explosive/airburst/canister
-	name = "\improper M108 canister grenade"
-	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
-	icon_state = "grenade"
-	item_state = "grenade_hedp"
-	hand_throwable = FALSE
-	underslug_launchable = TRUE
-	explosion_power = 0
-	explosion_falloff = 25
-	det_time = 0 //this should mean that itll explode instantly when fired and thus generate the shotshell effect.
-	shrapnel_count = 13
-	shrapnel_type = /datum/ammo/bullet/shotgun/spread/canister
-	direct_hit_shrapnel = 0
-	dispersion_angle = 10 //hopefully this means the cone spread is pretty small
 
-/obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
-	..()
-	var/detonate = TRUE
-	var/active = TRUE //maybe...
-	if(isobj(hit_atom) && !rebounding)
-		detonate = TRUE
-	if(isturf(hit_atom) && hit_atom.density && !rebounding)
-		detonate = TRUE
-	if(active && detonate) // Active, and we reached our destination.
-		if(ismob(hit_atom))
-			var/mob/M = hit_atom
-			create_shrapnel(loc, min(direct_hit_shrapnel, shrapnel_count), last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 100)
-			M.apply_effect(3.0, SUPERSLOW)
-			shrapnel_count -= direct_hit_shrapnel
-		if(shrapnel_count)
-			create_shrapnel(loc, shrapnel_count, last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 0)
-			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
-		qdel(src)
-*/
-//one day i might properly put this in here but elsewise i dunno we'll see
 /*
 //================================================
 				Fragmentation Grenades
@@ -164,6 +129,39 @@
 	explosion_power = 60
 	shrapnel_count = 56
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+
+
+ /*
+//================================================
+				Canister Grenades
+//================================================
+Special thanks to vero5123 for making this work.He, uh, basically put this all together in an hour???
+- koishi
+*/
+
+/obj/item/explosive/grenade/high_explosive/airburst/canister
+	name = "\improper M108 canister grenade"
+	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
+	icon_state = "grenade"
+	item_state = "grenade_hedp"
+	hand_throwable = FALSE
+	underslug_launchable = TRUE
+	explosion_power = 0
+	explosion_falloff = 25
+	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
+	shrapnel_count = 20
+	shrapnel_type = /datum/ammo/bullet/shotgun/buckshot/canister
+	dispersion_angle = 20 //hopefully this means the cone spread is pretty small
+/obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(obj/item/weapon/gun/launcher/grenade/gl, target)
+	var/direction = Get_Compass_Dir(gl, target)
+	var/position = get_step(gl, direction) //otherwise we buckshot ourselves
+	create_shrapnel(position, min(direct_hit_shrapnel, shrapnel_count), direction , dispersion_angle, shrapnel_type, cause_data, FALSE, 100)
+	if(shrapnel_count)
+		create_shrapnel(loc, shrapnel_count, direction, dispersion_angle, shrapnel_type, cause_data, FALSE, 0)
+	qdel(src)
+// canister has no impact explosion.
+/obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
+	return
 
 /*
 //================================================
