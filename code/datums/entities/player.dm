@@ -469,6 +469,7 @@ BSQL_PROTECT_DATUM(/datum/entity/player)
 	set waitfor=0
 	WAIT_DB_READY
 	load_player_data_info(get_player_from_key(ckey))
+	check_discord_link()
 
 /client/proc/load_player_data_info(datum/entity/player/player)
 	if(ckey != player.ckey)
@@ -480,6 +481,25 @@ BSQL_PROTECT_DATUM(/datum/entity/player)
 	player_data.last_known_cid = computer_id
 	player_data.save()
 	record_login_triplet(player.ckey, address, computer_id)
+	player_data.sync()
+
+/client/proc/check_discord_link()
+	var/datum/view_record/discord_link/current_link = locate() in DB_VIEW(/datum/view_record/discord_link, DB_COMP("player_id", DB_EQUALS, player_data.id))
+
+	if(!current_link)
+
+		if(player_data.discord_link_id != null)
+			player_data.discord_link_id = null
+			player_data.save()
+			player_data.sync()
+
+		return
+
+	if(player_data.discord_link_id == current_link.id)
+		return
+
+	player_data.discord_link_id = current_link.id
+	player_data.save()
 	player_data.sync()
 
 /datum/entity/player/proc/check_ban(computer_id, address, is_telemetry)

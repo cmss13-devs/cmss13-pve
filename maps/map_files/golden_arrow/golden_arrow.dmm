@@ -3251,6 +3251,7 @@
 	icon_off = "cabinetdetective_broken";
 	has_cryo_gear = 0
 	},
+/obj/item/clothing/under/marine/officer/boiler,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
