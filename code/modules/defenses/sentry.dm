@@ -774,7 +774,7 @@
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
 	defense_type = "UPP"
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
-	fire_delay = 1.3
+	fire_delay = 1.2
 	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
