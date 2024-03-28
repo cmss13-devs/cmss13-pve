@@ -1,5 +1,5 @@
 /datum/job/marine
-	supervisors = "the acting squad leader"
+	supervisors = "the acting platoon leader"
 	selection_class = "job_marine"
 	total_positions = 8
 	spawn_positions = 8
