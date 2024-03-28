@@ -288,8 +288,8 @@
 //M44 Revolver
 
 /obj/item/weapon/gun/revolver/m44
-	name = "\improper M44 combat revolver"
-	desc = "A bulky revolver, occasionally carried by assault troops and officers in the Colonial Marines, as well as civilian law enforcement. Fires .44 Magnum rounds."
+	name = "\improper M44 revolver"
+	desc = ".44 Magnum revolver, in limited service with the USCMC for personal defense against larger xenofauna. For best results, aim carefully."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
@@ -337,7 +337,7 @@
 
 /obj/item/weapon/gun/revolver/m44/custom //loadout
 	name = "\improper M44 custom combat revolver"
-	desc = "A bulky combat revolver. The handle has been polished to a pearly perfection, and the body is silver plated. Fires .44 Magnum rounds."
+	desc = "A custom version of the M44 revolver, with a handle that's been polished to a pearly sheen, and a body that's been silver-plated. Fires .44 Magnum rounds."
 	current_mag = /obj/item/ammo_magazine/internal/revolver/m44
 	icon_state = "m44rc"
 	item_state = "m44rc"
@@ -494,8 +494,8 @@
 //a lean mean machine, pretty inaccurate unless you play its dance.
 
 /obj/item/weapon/gun/revolver/small
-	name = "\improper S&W .38 model 37 revolver"
-	desc = "A lean .38 made by Smith & Wesson. A timeless classic, from antiquity to the future. This specific model is known to be wildly inaccurate, yet extremely lethal."
+	name = "\improper .38 revolver"
+	desc = "A Frontier Special. Out here, you get a lot of smalltime companies that try to push themselves as better by upping the pressure of their ammo and fiddling with the designs to make it work. It usually means that their accuracy is awful, but the impact is impressive... if you've got the knowhow to shoot them straight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "sw357"
 	item_state = "ny762" //PLACEHOLDER
