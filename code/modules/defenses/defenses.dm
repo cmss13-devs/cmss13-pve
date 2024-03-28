@@ -2,7 +2,8 @@
 	name = "Don't see this"
 	desc = "Call for help."
 	icon = 'icons/obj/structures/machinery/defenses/sentry.dmi'
-	icon_state = "defense_base_off"
+	icon_state = "defense_base"
+	var/icon_off = "defense_base_off"
 	anchored = TRUE
 	unacidable = TRUE
 	density = TRUE
@@ -69,9 +70,9 @@
 	if(!composite_icon)
 		icon_state = null
 	else if(turned_on)
-		icon_state = "defense_base"
+		icon_state = initial(icon_state)
 	else
-		icon_state = "defense_base_off"
+		icon_state = icon_off
 
 
 /obj/structure/machinery/defenses/get_examine_text(mob/user)

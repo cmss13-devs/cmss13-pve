@@ -89,6 +89,9 @@
 	shell_speed = 2*AMMO_SPEED_TIER_6
 	accuracy = HIT_ACCURACY_TIER_5
 
+/datum/ammo/bullet/turret/upp
+	damage = 45
+
 /datum/ammo/bullet/turret/dumb
 	icon_state = "bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
