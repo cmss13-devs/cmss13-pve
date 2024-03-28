@@ -994,12 +994,13 @@
 
 		damage_result = armor_damage_reduction(GLOB.marine_ranged, damage, armor, P.ammo.penetration)
 
-		if(damage_result <= 5)
+		if(damage_result <= 20)
 			to_chat(src,SPAN_XENONOTICE("Your armor absorbs the force of [P]!"))
-		if(damage_result <= 3)
-			damage_result = 0
+		if(damage_result <= 10)
 			bullet_ping(P)
 			visible_message(SPAN_AVOIDHARM("[src]'s armor deflects [P]!"))
+			if(damage_result <= 1)
+                damage_result = 0
 			if(P.ammo.sound_armor) playsound(src, P.ammo.sound_armor, 50, 1)
 
 	if(P.ammo.debilitate && stat != DEAD && ( damage || ( ammo_flags & AMMO_IGNORE_RESIST) ) )  //They can't be dead and damage must be inflicted (or it's a xeno toxin).
