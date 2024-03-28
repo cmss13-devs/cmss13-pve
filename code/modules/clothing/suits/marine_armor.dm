@@ -401,7 +401,7 @@
 	)
 
 /obj/item/clothing/suit/storage/marine/sof/smartgunner
-	name = "\improper SOF Smartgun Harness"
+	name = "\improper SOF smartgun harness"
 	desc = "A heavily customized M56 smartgun harness. This version has a reinforced arm and advanced high-speed gyroscopes used to stabilize recoil. Used by marine raiders."
 	icon_state = "marsoc_sg"
 	armor_melee = CLOTHING_ARMOR_HIGH
