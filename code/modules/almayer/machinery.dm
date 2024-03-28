@@ -113,6 +113,11 @@
 	minimap_type = MINIMAP_FLAG_PMC
 	faction = FACTION_PMC
 
+/obj/structure/machinery/prop/almayer/CICmap/toc
+	name = "tactical map screen"
+	desc = "A screen on the TOC computer displaying the tactical map."
+	icon_state =  "toc_map"
+
 //Nonpower using props
 
 /obj/structure/prop/almayer
