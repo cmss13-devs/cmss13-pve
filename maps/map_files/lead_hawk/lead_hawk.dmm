@@ -184,6 +184,10 @@
 	},
 /area/lead_hawk/cryo_cell)
 "bp" = (
+/obj/structure/machinery/light/blue{
+	dir = 1;
+	light_color = "#66FFFF"
+	},
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "red"
@@ -529,7 +533,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/lead_hawk/squad_theta)
+/area/lead_hawk/squad_omega)
 "eO" = (
 /obj/structure/catwalk/bigred,
 /obj/structure/barricade/handrail{
@@ -2246,6 +2250,7 @@
 /obj/item/weapon/gun/rifle/m46c,
 /obj/item/device/binoculars/range/designator,
 /obj/item/clothing/under/marine/veteran/pmc/leader,
+/obj/item/storage/large_holster/ceremonial_sword/full,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
 "xg" = (
@@ -2783,6 +2788,16 @@
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
+"Du" = (
+/obj/structure/machinery/light/blue{
+	dir = 4;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
 "Dy" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -2976,6 +2991,23 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/engineer)
+"EN" = (
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	dir = 4;
+	network = list("Golden Arrow","Vehicle","Midway");
+	pixel_x = -17
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	dir = 4;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_x = -17;
+	pixel_y = 14
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "EP" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -3018,6 +3050,19 @@
 	},
 /turf/open/floor/plating,
 /area/lead_hawk/ares)
+"FE" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/obj/structure/phone_base/rotary/no_dnd{
+	name = "Overwatch Telephone";
+	phone_category = "Command";
+	phone_id = "Overwatch"
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/co)
 "FG" = (
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -3074,6 +3119,15 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/engineer)
+"Gc" = (
+/obj/structure/machinery/computer/overwatch/almayer{
+	dir = 8;
+	layer = 3.2;
+	pixel_x = -17;
+	pixel_y = 16
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "Gg" = (
 /obj/structure/window/framed/corsat/indestructible,
 /turf/open/floor/plating,
@@ -3152,6 +3206,10 @@
 /area/lead_hawk/medical)
 "GY" = (
 /obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
+	name = "Midway Remote Control Console";
+	shuttleId = "dropship_midway"
+	},
 /turf/open/floor/carpet,
 /area/lead_hawk/co)
 "Hb" = (
@@ -3335,6 +3393,14 @@
 	icon_state = "tcomms"
 	},
 /area/lead_hawk)
+"JA" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "JH" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
 /turf/closed/wall/almayer/white/hull,
@@ -3696,6 +3762,14 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/squad_omega)
+"Ok" = (
+/obj/structure/machinery/light/blue{
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
 "Om" = (
 /obj/structure/machinery/light/blue,
 /turf/open/floor/corsat{
@@ -4177,7 +4251,7 @@
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
-/area/lead_hawk/squad_theta)
+/area/lead_hawk/squad_omega)
 "Ti" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/corsat{
@@ -4222,7 +4296,10 @@
 /turf/open/floor/carpet,
 /area/lead_hawk/briefing)
 "TD" = (
-/obj/structure/machinery/defenses/tesla_coil/stun,
+/obj/item/toy/spinningtoy{
+	desc = "A naked singularity, stabilized by its own pata-relativistic spin.";
+	name = "stabilized miniature-singularity"
+	},
 /turf/open/floor/engine,
 /area/lead_hawk/computer)
 "TE" = (
@@ -4343,6 +4420,11 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"US" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/faxmachine/uscm/command/capt,
+/turf/open/floor/carpet,
+/area/lead_hawk/co)
 "UV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -9876,9 +9958,9 @@ gR
 gR
 ku
 ei
-ei
-ei
-ei
+JA
+EN
+Gc
 ei
 ku
 ew
@@ -10181,8 +10263,8 @@ gR
 ku
 ei
 GY
-GY
-GY
+FE
+US
 ei
 oe
 ew
@@ -15499,7 +15581,7 @@ ce
 LW
 nF
 LW
-dA
+Ok
 tc
 qo
 UY
@@ -15803,7 +15885,7 @@ ce
 LW
 Ea
 LW
-dA
+Ok
 tc
 tc
 tc
@@ -17930,7 +18012,7 @@ HT
 WD
 kA
 kA
-yt
+LY
 Mw
 gR
 gR
@@ -18226,7 +18308,7 @@ lP
 nd
 Az
 ak
-ak
+pa
 Lc
 EF
 sK
@@ -18234,7 +18316,7 @@ dM
 LJ
 kA
 kA
-yt
+LY
 Mw
 gR
 gR
@@ -18688,7 +18770,7 @@ gR
 gR
 Mw
 uG
-dM
+Du
 dM
 fh
 Mw
