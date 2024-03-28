@@ -1046,7 +1046,7 @@
 	storage_slots = 4
 
 /obj/item/clothing/suit/storage/marine/sof/light
-	name = "\improper SOF Armor (Padless)"
+	name = "\improper SOF padless armor"
 	desc = "A heavily custmoized suit of M3 armor. Used by marine raiders. This one is stripped of it's pauldrons."
 	icon_state = "marsoc_l"
 	armor_melee = CLOTHING_ARMOR_HIGH
