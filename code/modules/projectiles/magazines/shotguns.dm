@@ -191,18 +191,6 @@ var/list/shotgun_handfuls_12g = list(
 
 /obj/item/ammo_magazine/handful/shotgun/slug
 
-/obj/item/ammo_magazine/handful/shotgun/buckshot/canister
-	name = "M108 canister grenade"
-	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
-	icon_state = "grenade_hedp"
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot/canister
-	caliber = "30mm"
-	max_rounds = 1
-	current_rounds = 1
-	gun_type = /obj/item/attachable/attached_gun/grenade
-	handful_state = "grenade_hedp"
-	transfer_handful_amount = 1
-
 /obj/item/ammo_magazine/handful/shotgun/incendiary
 	name = "handful of incendiary slugs (12g)"
 	icon_state = "incendiary_slug_5"

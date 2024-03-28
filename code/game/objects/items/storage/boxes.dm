@@ -638,8 +638,8 @@
 	w_class = SIZE_LARGE
 	storage_slots = 25
 	max_storage_space = 25
-	can_hold = list(/datum/ammo/bullet/shotgun/buckshot/canister)
-	grenade_type = /datum/ammo/bullet/shotgun/buckshot/canister
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/airburst
