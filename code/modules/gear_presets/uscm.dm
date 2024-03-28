@@ -138,6 +138,8 @@
 /datum/equipment_preset/uscm/pfc/raider
 	name = "Marine Raider Critical Skill Operator"
 	paygrade = "ME5"
+	assignment = JOB_SQUAD_MARINE_RAIDER
+	rank = JOB_SQUAD_MARINE_RAIDER
 	skills = /datum/skills/commando/deathsquad
 
 /datum/equipment_preset/uscm/pfc/raider/load_gear(mob/living/carbon/human/new_human)
