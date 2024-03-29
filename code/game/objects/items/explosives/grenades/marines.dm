@@ -148,7 +148,7 @@
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
 	shrapnel_count = 20
 	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
-	dispersion_angle = 20 //hopefully this means the cone spread is pretty small
+	dispersion_angle = 15 //hopefully this means the cone spread is pretty small
 /obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
 	var/direction = Get_Compass_Dir(user, target)
 	var/position = get_step(user, direction) //otherwise we buckshot ourselves
@@ -159,7 +159,6 @@
 // canister has no impact explosion.
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
-/*
 
 /*
 //================================================
