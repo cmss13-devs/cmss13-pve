@@ -71,6 +71,7 @@ AddTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai
 	total_positions = 1
 	spawn_positions = 1
+	prime_priority = TRUE
 
 /datum/job/marine/leader/ai/upp
 	title = JOB_SQUAD_LEADER_UPP
