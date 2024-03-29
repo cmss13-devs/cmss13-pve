@@ -39,9 +39,9 @@
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/marine
 	has_cryo_gear = TRUE
+	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/marine/standard
-	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
 	job = JOB_USCM_GROUND_SQUAD_MARINE
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/marine/gunner

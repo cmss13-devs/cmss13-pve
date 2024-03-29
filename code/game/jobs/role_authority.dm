@@ -379,7 +379,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 //here is the main reason this proc exists - to remove freed squad jobs from squad,
 //so latejoining person ends in the squad which's job was freed and not random one
 	var/datum/squad/sq = null
-	if(job_squad_roles.Find(J.title))
+	if(job_squad_roles.Find(roles_for_squad[J.title]))
 		var/list/squad_list = list()
 		for(sq in RoleAuthority.squads)
 			if(sq.usable)
@@ -480,7 +480,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(new_job.flags_startup_parameters & ROLE_ADD_TO_SQUAD) //Are we a muhreen? Randomize our squad. This should go AFTER IDs. //TODO Robust this later.
 		randomize_squad(new_human)
 
-	if(Check_WO() && job_squad_roles.Find(GET_DEFAULT_ROLE(new_human.job))) //activates self setting proc for marine headsets for WO
+	if(Check_WO() && job_squad_roles.Find(roles_for_squad[new_human.job])) //activates self setting proc for marine headsets for WO
 		var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
 		WO.self_set_headset(new_human)
 
@@ -714,7 +714,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		else to_chat(H, "Something went badly with randomize_squad()! Tell a coder!")
 
 	else
-		//Deal with marines. They get distributed to the lowest populated squad.
+		//Deal with standards. They get distributed to the lowest populated squad.
 		var/datum/squad/given_squad = get_lowest_squad(H)
 		if(!given_squad || !istype(given_squad)) //Something went horribly wrong!
 			to_chat(H, "Something went wrong with randomize_squad()! Tell a coder!")
@@ -810,7 +810,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 // returns TRUE if transfer_marine's role is at max capacity in the new squad
 /datum/authority/branch/role/proc/check_squad_capacity(mob/living/carbon/human/transfer_marine, datum/squad/new_squad)
-	switch(transfer_marine.job)
+	switch(roles_for_squad[transfer_marine.job])
 		if(JOB_SQUAD_LEADER)
 			if(new_squad.num_leaders >= new_squad.max_leaders)
 				return TRUE

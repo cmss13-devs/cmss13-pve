@@ -206,6 +206,16 @@ Blackstone Bridge.
 #define ACCESS_LIST_MARINE_MAIN "Almayer (Main)"
 ///All USCM Access levels used on the USS Almayer
 #define ACCESS_LIST_MARINE_ALL "Almayer (ALL)"
+///Pulls up a list of mapped Almayer access regions for the ID changer. A few similar defines in here as well. Works with the faction datums.
+#define ACCESS_LIST_MARINE_REGIONS "Almayer Access Regions"
+
+///Most access outside of certain officer access.
+#define ACCESS_LIST_USCM_GROUND_MAIN "USCM Ground (Main)"
+///All of the ground access for USCM.
+#define ACCESS_LIST_USCM_GROUND_ALL "USCM Ground (ALL)"
+///Regions for the outpost.
+#define ACCESS_LIST_USCM_GROUND_REGIONS "USCM Ground Access Regions"
+
 ///Used by the Wey-Yu - USCM Liaison
 #define ACCESS_LIST_MARINE_LIAISON "Wey-Yu (Liaison)"
 
@@ -224,9 +234,13 @@ Blackstone Bridge.
 #define ACCESS_LIST_WY_SENIOR "Wey-Yu (Senior Lead)"
 ///All access levels associated with Weyland Yutani
 #define ACCESS_LIST_WY_ALL "Wey-Yu (ALL)"
+#define ACCESS_LIST_PMC_REGIONS "PMC Access Regions"
+#define ACCESS_LIST_WY_REGIONS "Weyland-Yutani Access Regions"
 
 ///All the access levels in the civillian category, excluding Press.
 #define ACCESS_LIST_COLONIAL_ALL "Colonial (ALL)"
+///Colony access.
+#define ACCESS_LIST_COLONIAL_REGIONS "Colonial Access Regions"
 ///Used by the Wey-Yu - Civil Authority Liaison
 #define ACCESS_LIST_CIVIL_LIAISON "Colonial (Liaison)"
 ///The access used by delivery ERT (Pizza/Souto)
@@ -235,8 +249,14 @@ Blackstone Bridge.
 ///All access levels associated with UPP
 #define ACCESS_LIST_UPP_ALL "UPP (ALL)"
 #define ACCESS_LIST_UPP_PLATOON "UPP (Platoon)"
+#define ACCESS_LIST_UPP_REGIONS "UPP Access Regions"
 
 ///Generic/basic access to CLF stuff
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
+#define ACCESS_LIST_CLF_REGIONS "CLF Access Regions"
+
+//For the Brits.
+#define ACCESS_LIST_TWE_ALL "TWE (ALL)"
+#define ACCESS_LIST_TWE_REGIONS "TWE Access Regions"

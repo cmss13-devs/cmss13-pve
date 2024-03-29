@@ -117,7 +117,8 @@
 	name = "squad lead locker"
 	desc = "A secure storage unit for an outpost squad leader."
 	req_one_access = null
-	density = FALSE
+	density = TRUE
+	can_be_stacked = TRUE
 
 /obj/structure/closet/secure_closet/squad_sergeant/uscm_ground/one/Initialize()
 	. = ..()
@@ -156,7 +157,7 @@
 /obj/structure/closet/secure_closet/smartgunner/uscm_ground
 	req_one_access = null
 	desc = "A secure storage unit for an outpost smartgunner."
-	density = FALSE
+	can_be_stacked = TRUE
 
 /obj/structure/closet/secure_closet/smartgunner/uscm_ground/one/Initialize()
 	. = ..()

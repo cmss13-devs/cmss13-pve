@@ -138,16 +138,19 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	icon_state = "cavein"
 	color = "#826161"
 	opacity = TRUE
+	layer = BELOW_WEATHER_LAYER //We want it to overlay mobs if it crushes them.
 	var/id //Used to pick out the proper rocks to toggle.
 	var/animating = FALSE
 
 //Makes it block movement or hides it instead.
-/obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal, play_sound = FALSE)
+/obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal, play_sound = TRUE)
 	if(trigger_signal == id && !animating)
 		animating = TRUE //We are animating, so this doesn't get activated again until the animation is done and variables are set.
 		if(invisibility) //It is invisible.
-			if(play_sound) playsound(src, 'sound/effects/rocks_falling.ogg', 50, FALSE)
 			invisibility = 0 //Immediately make it visible.
+			if(play_sound)
+				playsound(src, 'sound/effects/rocks_falling.ogg', 75, FALSE)
+				visible_message(SPAN_LARGE(SPAN_WARNING("Rocks fall, stones tremble, as a dense pile of debris forms nearby!")), SPAN_WARNING("You hear something collapse and crumble nearby!"))
 			animate(src, alpha = 255, 1.5 SECONDS) //15 deciseconds, make it opaque.
 		else
 			animate(src, alpha = 0, 1.5 SECONDS) //15 deciseconds.
@@ -155,7 +158,7 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 
 		density = !density
 		opacity = !opacity
-		//I could add effects of actually being caught in the rocks, but that seems pointless.
+		//I could add effects of actually being caught in the rocks, but that doesn't seem very useful. Maybe later.
 		addtimer(VARSET_CALLBACK(src, animating, FALSE), 1.5 SECONDS) //Resets our status.
 
 

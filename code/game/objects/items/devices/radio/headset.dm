@@ -795,10 +795,11 @@
 		"Landing Zone" = TRACKER_LZ
 	)
 
+//Marine headsets have the hud installed. Also, I got tired of configuring frequencies. So it does that automatically, but only for squad headsets.
 /obj/item/device/radio/headset/uscm_ground/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 
-	if(user.assigned_squad)
+	if(squad_headset && user.assigned_squad)
 		frequency = user.assigned_squad.radio_freq
 		set_frequency(frequency) //Voila based and awesome.
 		name = "[initial(name)] - [uppertext(user.assigned_squad.name)]"
@@ -808,7 +809,6 @@
 		else if(((user in user.assigned_squad.fireteams["SQ1"]) || (user in user.assigned_squad.fireteams["SQ2"])) && (JOB_USCM_GROUND_SQUAD_TEAM_LEADER in tracking_options))
 			locate_setting = tracking_options[JOB_USCM_GROUND_SQUAD_TEAM_LEADER]
 
-//Marine headsets have the hud installed. Also, I got tired of configuring frequencies. So it does that automatically, but only for the squad headsets.
 /obj/item/device/radio/headset/uscm_ground/marine
 	name = "outpost marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."

@@ -91,120 +91,120 @@
 
 		//PRESETS
 		if("preset_light_damage") //Parameters for presets are set through params with the tgui menu.
-			dest_actions = list(\
-				"break_all_machines", 10, \
-				"break_gear_vendors", 20, \
-				"break_normal_vendors", 15, \
-				"break_computers", 20, \
-				"break_apcs", 5, \
-				"break_cameras", 10, \
-				"break_gun_racks", 15, \
-				"break_grilles", 15, \
-				"break_windows", 10, \
-				"break_large_crates", 20, \
-				"break_racks", 10, \
-				"break_reagent_tanks", 15,\
-				"damage_walls", 5, \
-				"damage_floors", 5, \
-				"destroy_guns", 20, \
-				"destroy_devices", 20, \
-				"destroy_item_storage", 15, \
-				"destroy_clothing", 20, \
-				"destroy_food", 20)
+			dest_actions = list(
+				"break_all_machines", 10,
+				"break_gear_vendors", 20,
+				"break_normal_vendors", 15,
+				"break_computers", 20,
+				"break_apcs", 5,
+				"break_cameras", 10,
+				"break_gun_racks", 15,
+				"break_grilles", 15,
+				"break_windows", 10,
+				"break_large_crates", 20,
+				"break_racks", 10,
+				"break_reagent_tanks", 15,
+				"damage_walls", 5,
+				"damage_floors", 5,
+				"destroy_guns", 20,
+				"destroy_devices", 20,
+				"destroy_item_storage", 15,
+				"destroy_clothing", 20,
+				"destroy_food", 20,)
 
 		if("preset_moderate_damage")
-			dest_actions = list(\
-				"break_all_machines", 35,\
-				"break_gear_vendors", 45,\
-				"break_normal_vendors", 30,\
-				"break_computers", 50,\
-				"break_apcs", 35,\
-				"break_lights", 40,\
-				"break_cameras", 30,\
-				"break_comm_towers", 50,\
-				"break_airlocks", 35,\
-				"break_gun_racks", 35, \
-				"break_mirrors", 30,\
-				"break_grilles", 45,\
-				"break_fences", 30,\
-				"damage_barricades", 45,\
-				"break_windows", 30,\
-				"break_window_frames", 15,\
-				"break_chairs_and_beds", 35,\
-				"break_tables", 30,\
-				"break_lockers", 20,\
-				"break_large_crates", 50,\
-				"break_racks", 30,\
-				"break_reagent_tanks", 35,\
-				"break_powerloaders", 40,\
-				"damage_walls", 20,\
-				"damage_floors", 20,\
-				"destroy_all_items", 30,\
-				"destroy_guns", 50,\
-				"destroy_ammo", 60,\
-				"destroy_weapons", 35,\
-				"destroy_devices", 40,\
-				"destroy_item_storage", 30,\
-				"destroy_clothing", 30,\
-				"destroy_reagent_containers", 40,\
-				"destroy_food", 60)
+			dest_actions = list(
+				"break_all_machines", 35,
+				"break_gear_vendors", 45,
+				"break_normal_vendors", 30,
+				"break_computers", 50,
+				"break_apcs", 35,
+				"break_lights", 40,
+				"break_cameras", 30,
+				"break_comm_towers", 50,
+				"break_airlocks", 35,
+				"break_gun_racks", 35,
+				"break_mirrors", 30,
+				"break_grilles", 45,
+				"break_fences", 30,
+				"damage_barricades", 45,
+				"break_windows", 30,
+				"break_window_frames", 15,
+				"break_chairs_and_beds", 35,
+				"break_tables", 30,
+				"break_lockers", 20,
+				"break_large_crates", 50,
+				"break_racks", 30,
+				"break_reagent_tanks", 35,
+				"break_powerloaders", 40,
+				"damage_walls", 20,
+				"damage_floors", 20,
+				"destroy_all_items", 30,
+				"destroy_guns", 50,
+				"destroy_ammo", 60,
+				"destroy_weapons", 35,
+				"destroy_devices", 40,
+				"destroy_item_storage", 30,
+				"destroy_clothing", 30,
+				"destroy_reagent_containers", 40,
+				"destroy_food", 60,)
 
 		if("preset_heavy_damage")
-			dest_actions = list(\
-				"break_all_machines", 60,\
-				"break_gear_vendors", 80,\
-				"break_normal_vendors", 70,\
-				"break_computers", 80,\
-				"break_apcs", 55,\
-				"break_lights", 70,\
-				"break_cameras", 60,\
-				"break_comm_towers", 100,\
-				"break_airlocks", 65,\
-				"break_gun_racks", 80, \
-				"break_mirrors", 95,\
-				"break_grilles", 75,\
-				"break_fences", 75,\
-				"damage_barricades", 85,\
-				"break_windows", 55,\
-				"break_window_frames", 30,\
-				"break_chairs_and_beds", 65,\
-				"break_tables", 60,\
-				"break_lockers", 40,\
-				"break_large_crates", 70,\
-				"break_racks", 55,\
-				"break_reagent_tanks", 70,\
-				"break_powerloaders", 90,\
-				"damage_walls", 45,\
-				"damage_floors", 50,\
-				"destroy_all_items", 55,\
-				"destroy_guns", 80,\
-				"destroy_ammo", 90,\
-				"destroy_weapons", 60,\
-				"destroy_devices", 80,\
-				"destroy_item_storage", 90,\
-				"destroy_clothing", 90,\
-				"destroy_reagent_containers", 80,\
-				"destroy_food", 90)
+			dest_actions = list(
+				"break_all_machines", 60,
+				"break_gear_vendors", 80,
+				"break_normal_vendors", 70,
+				"break_computers", 80,
+				"break_apcs", 55,
+				"break_lights", 70,
+				"break_cameras", 60,
+				"break_comm_towers", 100,
+				"break_airlocks", 65,
+				"break_gun_racks", 80,
+				"break_mirrors", 95,
+				"break_grilles", 75,
+				"break_fences", 75,
+				"damage_barricades", 85,
+				"break_windows", 55,
+				"break_window_frames", 30,
+				"break_chairs_and_beds", 65,
+				"break_tables", 60,
+				"break_lockers", 40,
+				"break_large_crates", 70,
+				"break_racks", 55,
+				"break_reagent_tanks", 70,
+				"break_powerloaders", 90,
+				"damage_walls", 45,
+				"damage_floors", 50,
+				"destroy_all_items", 55,
+				"destroy_guns", 80,
+				"destroy_ammo", 90,
+				"destroy_weapons", 60,
+				"destroy_devices", 80,
+				"destroy_item_storage", 90,
+				"destroy_clothing", 90,
+				"destroy_reagent_containers", 80,
+				"destroy_food", 90,)
 
 		//NIGHTMARE
 
 		if("nightmare_update_scenario", "nightmare_prepare_game")
 			if(SSticker.current_state != GAME_STATE_PREGAME || SSnightmare.stat != NIGHTMARE_STATUS_STANDBY) //Extra safety in case they click on something while the game is setting up or something.
-				to_chat(ui.user, SPAN_WARNING("Nightmare configuration is only available in the pre-game lobby."))
+				to_chat(ui.user, SPAN_WARNING("Nightmare configuration is only available in the pre-game lobby and when Nightmare is available to run."))
 				return FALSE
 
 			if(action == "nightmare_update_scenario")
 				SSnightmare.set_scenario_value(params["nightmare_name"], params["nightmare_value"], params["nightmare_context"])
 			else
 				if(tgui_alert(ui.user, "Are you sure you want to start the Nightmare system before round start? This cannot be undone.", "Confirmation", list("Yes", "No")) != "Yes") return FALSE
-				SSnightmare.prepare_game() //Fire it early. Everything else is handled by the system. If it ran once successfully, it won't run again.
+				SSnightmare.prepare_game() //Fire it early. Everything else is handled by the system. If it ran once successfully, it won't run again. Could potentially remove this limitation to maybe restore default map states.
 
 		//SPECIFIC MAP MANIPULATION
 		/*
 		If the map has unique things it can do, it still needs individual cases here.
 		The functions themselves are applicable to other maps, so long as the frontend tgui is configured in MapManipulation.js.
 		To keep in mind: If area pathing changes, things are going to break with no compiler error. This will only come up when
-		using the applicable menu. Absolute pathing is kind an issue because of that, but hopefully this will be reworked by, or if,
+		using the appropriate menu. Absolute pathing is kind an issue because of that, but hopefully this will be reworked by, or if,
 		that ever comes up. "toggle_blocker" and "flicker_light" both use absolute pathing right now and should probably switch over
 		to some kind of list in the future. I originally had a unique list for map manipulations, but several atoms
 		were in other lists as well, so I cut it. /N
@@ -214,13 +214,9 @@
 			var/obj/structure/blocker/rock_debris/I
 			var/signal_id = params["signal_id"]
 			var/signal_area = locate(text2path(params["signal_area"])) //Faster than searching through world. Full pathing.
-			var/sound_source = TRUE
 			for(I in signal_area)
 				if(I.z in possible_maps) //Don't care about the .z level. Leaving it in for future reference if this is refactored, and these fold into a global list.
-					I.toggle_blocker(signal_id, sound_source)
-					//Resets it after playing a sound for one of the affected objects, so they are not all producing the same sound.
-					//Probably could be trimmed.
-					sound_source = FALSE
+					I.toggle_blocker(signal_id)
 
 		if("toggle_hatch")
 			var/obj/structure/ladder/hatch/I
@@ -525,7 +521,7 @@
 								for(D in I)
 									D.deconstruct(prob(40) ? TRUE : FALSE)
 
-				//ITEMS //These are just qdeleted. They don't have any damage states.
+				//ITEMS //These are qdeleted. They don't have damage states.
 				if("destroy_all_items")
 					var/obj/item/I
 					for(I in world)

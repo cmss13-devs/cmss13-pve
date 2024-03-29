@@ -100,7 +100,7 @@ United States Colonial Marines
 	name = "Squad Weapons Specialist (Outpost)"
 	skills = list(
 		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT, //Only the spec is a firearms expert.
-		SKILL_SPEC_WEAPONS = SKILL_SPEC_ALL, //In case GMs spawn equipment.
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_TRAINED, //They will get all spec skills when they purchase a kit.
 		SKILL_MELEE_WEAPONS = SKILL_MELEE_SUPER, //For funny melee spec builds.
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 		SKILL_CQC = SKILL_CQC_TRAINED,

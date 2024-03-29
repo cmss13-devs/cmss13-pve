@@ -116,6 +116,7 @@
 /obj/structure/machinery/camera/autoname/uscm_ground
 	name = "military-grade camera"
 	network = list(CAMERA_NET_USCM_GROUND)
+	colony_camera_mapload = FALSE
 
 /obj/structure/machinery/camera/autoname/uscm_ground/checkpoint
 	network = list(CAMERA_NET_USCM_GROUND_WEST)
@@ -132,6 +133,7 @@
 
 /obj/structure/machinery/camera/autoname/wy_bunker
 	network = list(CAMERA_NET_WY_BUNKER)
+	colony_camera_mapload = FALSE
 
 /obj/structure/machinery/camera/autoname/wy_bunker/containment
 	name = "containment camera"
@@ -141,6 +143,7 @@
 
 /obj/structure/machinery/camera/autoname/upp_bunker
 	network = list(CAMERA_NET_UPP_BUNKER)
+	colony_camera_mapload = FALSE
 
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.

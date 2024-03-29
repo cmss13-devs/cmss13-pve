@@ -756,12 +756,12 @@
 	SStracking.set_leader(tracking_id, selected_sl)
 	SStracking.start_tracking("marine_sl", selected_sl)
 
-	selected_sl.comm_title = GET_SQUAD_ROLE_MAP(selected_sl.job) == JOB_SQUAD_LEADER ? "PL" : "aPL"
-
+	//Resetting regular platoon lead's comm title shouldn't be necessary, but is done for completeness.
+	selected_sl.comm_title = ( GET_SQUAD_ROLE_MAP(selected_sl.job) == JOB_SQUAD_LEADER ) ? set_new_radio_title(selected_sl, "PltSgt") : "aPltSgt"
 	ADD_TRAIT(selected_sl, TRAIT_LEADERSHIP, TRAIT_SOURCE_SQUAD_LEADER)
 
 	if(encryption_key_path)
-		var/obj/item/device/radio/headset/sl_headset = selected_sl.get_type_in_ears(headset_path) //Simple istype() check. Should be a define.
+		var/obj/item/device/radio/headset/sl_headset = selected_sl.get_type_in_ears(headset_path) //get_type_in_ears() is a simple istype() check. Should be a define.
 		if(sl_headset)
 			var/obj/item/device/encryptionkey/K = new encryption_key_path(sl_headset)
 			sl_headset.keys += K
@@ -783,11 +783,8 @@
 	SStracking.stop_tracking("marine_sl", old_lead)
 
 	squad_leader = null
-	var/datum/job/job_datum = RoleAuthority?.roles_by_name[old_lead.job] //Look up RoleAuthority for the appropriate role name --> datum.
-	if(job_datum)
-		var/datum/equipment_preset/gear_datum = job_datum.gear_preset //Pull up the gear preset.
-		if(gear_datum)
-			old_lead.comm_title = initial(gear_datum.role_comm_title) //Set the comm title to what it normally initializes to.
+
+	old_lead.comm_title = set_new_radio_title(old_lead)
 
 	if(GET_SQUAD_ROLE_MAP(old_lead.job) != JOB_SQUAD_LEADER || !leader_killed)
 		var/obj/item/device/radio/headset/sl_headset = old_lead.get_type_in_ears(headset_path)
@@ -798,7 +795,7 @@
 					qdel(i)
 			sl_headset.recalculateChannels()
 
-		if(platoon_leader_access) //May not have one. Not strictly needed for removing null  from list, but might as well.
+		if(platoon_leader_access) //May not have one. Not strictly needed for removing null from the list, but might as well.
 			var/obj/item/card/id/ID = old_lead.wear_id
 			if(istype(ID)) ID.access -= platoon_leader_access
 
@@ -807,6 +804,15 @@
 	old_lead.update_inv_head() //updating marine helmet leader overlays
 	old_lead.update_inv_wear_suit()
 	to_chat(old_lead, FONT_SIZE_BIG(SPAN_BLUE("You're no longer the [squad_type] Leader for [src]!")))
+
+/datum/squad/proc/set_new_radio_title(mob/living/carbon/human/H, fallback_title = "RFN")
+	var/new_comm_title
+	var/datum/job/job_datum = RoleAuthority?.roles_by_name[H.job] //Look up RoleAuthority for the appropriate role name --> datum.
+	if(job_datum)
+		var/datum/equipment_preset/gear_datum = job_datum.gear_preset //Pull up the gear preset.
+		if(gear_datum)
+			new_comm_title = initial(gear_datum.role_comm_title) //Set the comm title to what it normally initializes to.
+	return new_comm_title || fallback_title //In case we get something completely unexpected.
 
 //Not a safe proc. Returns null if squads or jobs aren't set up.
 //Mostly used in the marine squad console in marine_consoles.dm.

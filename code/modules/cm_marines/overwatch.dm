@@ -577,13 +577,13 @@
 	if(!istype(selected_sl))
 		return
 
-	if(!istype(selected_sl) || !selected_sl.mind || selected_sl.stat == DEAD) //marines_list replaces mob refs of gibbed marines with just a name string
+	if(!istype(selected_sl) || selected_sl.stat == DEAD) //marines_list replaces mob refs of gibbed marines with just a name string //Good to know, thanks.
 		to_chat(user, "[icon2html(src, usr)] [SPAN_WARNING("[selected_sl] is KIA!")]")
 		return
 	if(selected_sl == current_squad.squad_leader)
 		to_chat(user, "[icon2html(src, usr)] [SPAN_WARNING("[selected_sl] is already the Squad Leader!")]")
 		return
-	if(jobban_isbanned(selected_sl, JOB_SQUAD_LEADER))
+	if(!selected_sl.mind || jobban_isbanned(selected_sl, JOB_SQUAD_LEADER)) //If they are mindless, best to declare them incompetent than KIA.
 		to_chat(user, "[icon2html(src, usr)] [SPAN_WARNING("[selected_sl] is unfit to lead!")]")
 		return
 	if(current_squad.squad_leader)

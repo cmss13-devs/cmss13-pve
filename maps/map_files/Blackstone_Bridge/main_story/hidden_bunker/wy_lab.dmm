@@ -1138,10 +1138,6 @@
 /area/whiskey_outpost/blackstone/underground/bunker/containment)
 "Ok" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/machinery/computer/cameras/almayer/containment{
-	network = list("Blackstone WY Containment", "Blackstone WY Labs");
-	name = "\improper Containment Monitor"
-	},
 /obj/structure/machinery/door_control{
 	id = "WY Bunker Lockdown";
 	name = "lockdown containment";
@@ -1150,6 +1146,7 @@
 	req_one_access_txt = "206;213";
 	access_modified = 1
 	},
+/obj/structure/machinery/computer/cameras/bunker/wy,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "tan"

@@ -32,6 +32,12 @@ block( \
 #define MAP_FAKE_Z_BLACKSTONE_BASEMENT 8
 #define MAP_FAKE_Z_BLACKSTONE_BUNKER 9
 
+/*
+It took me a minute to realize that all sanity needed is for the map object reference to return something.
+If it does not, that means there is no reference map to begin with and we don't need to continue checking.
+*/
+#define PATH_TO_GROUND_MAP_OBJ GLOB.map_type_list[SSmapping.configs[GROUND_MAP].map_name]
+
 #define MAP_ICE_COLONY "Ice Colony" // Highpop only
 #define MAP_LV_624 "LV-624"
 #define MAP_LV_624_REPAIRED "LV-624 Repaired"
@@ -39,7 +45,7 @@ block( \
 #define MAP_PRISON_STATION "Fiorina Cellblocks"
 #define MAP_PRISON_STATION_V3 "Fiorina Science Annex"
 #define MAP_WHISKEY_OUTPOST "Whiskey Outpost" // Unused
-#define MAP_BLACKSTONE_BRIDGE "Blackstone Bridge"
+#define MAP_BLACKSTONE_BRIDGE "Blackstone Bridge" //Whiskey Outpost re-imagined.
 #define MAP_DESERT_DAM "Trijent Dam"  // Highpop only
 #define MAP_SOROKYNE_STRATA "Sorokyne Strata"
 #define MAP_CORSAT "CORSAT" // Highpop only

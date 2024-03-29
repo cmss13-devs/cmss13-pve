@@ -992,6 +992,9 @@
 			else
 				armor = getarmor_organ(organ, ARMOR_ENERGY) //Won't be used, but just in case.
 
+		#if DEBUG_HUMAN_DEFENSE
+		to_world(SPAN_DEBUG("Reducing damage by armor ([P.ammo.damage_type]). raw damage: [damage], armor: [armor], ammo penetration: [P.ammo.penetration]"))
+		#endif
 		damage_result = armor_damage_reduction(GLOB.marine_ranged, damage, armor, P.ammo.penetration)
 
 		if(damage_result <= 5)

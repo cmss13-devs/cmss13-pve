@@ -403,25 +403,16 @@
 "lJ" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/obj/structure/machinery/computer/cameras/almayer{
-	pixel_x = -8;
-	pixel_y = 6;
-	network = list("UPP Secret Facility");
-	name = "\improper Gulag Security Monitor"
-	},
-/obj/item/tool/stamp{
-	pixel_x = -7;
-	pixel_y = -3
+	pixel_x = 9;
+	pixel_y = 7
 	},
 /obj/item/paper{
 	pixel_x = 10;
 	pixel_y = 4
 	},
-/obj/item/tool/pen/red/clicky{
-	pixel_x = 5
+/obj/structure/machinery/computer/cameras/bunker/upp{
+	pixel_y = 2;
+	pixel_x = -5
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -963,6 +954,14 @@
 	pixel_y = 7;
 	access_modified = 1;
 	req_one_access_txt = "233;239"
+	},
+/obj/item/tool/stamp{
+	pixel_x = -7;
+	pixel_y = -9
+	},
+/obj/item/tool/pen/red/clicky{
+	pixel_x = 7;
+	pixel_y = -4
 	},
 /turf/open/floor/strata{
 	dir = 6;

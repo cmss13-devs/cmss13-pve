@@ -272,6 +272,10 @@ powernet.
 	minimap_color = MINIMAP_AREA_SEC_CAVE
 	sound_environment = SOUND_ENVIRONMENT_HANGAR
 
+/area/whiskey_outpost/blackstone/inside/armory/weapons
+	name = "\improper Platoon Weapon Storage"
+	icon_state = "weapons"
+
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_west
 	name = "\improper Senior Enlisted West Office"
 	icon_state = "senior_enlisted"

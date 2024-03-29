@@ -401,8 +401,6 @@
 	skills = /datum/skills/specialist/uscm_ground
 	faction = FACTION_USCM_GROUND
 
-/datum/equipment_preset/uscm/spec/uscm_ground/
-
 /datum/equipment_preset/uscm/spec/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
@@ -547,7 +545,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/tl/uscm_ground
-	name = "USCM Outpost Squad Lead"
+	name = "USCM Outpost Squad Sergeant"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_TLPREP)
 	assignment = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
@@ -645,7 +643,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/uscm_ground
-	name = "USCM Outpost Platoon Lead"
+	name = "USCM Outpost Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_ARMORY, ACCESS_USCM_GROUND_PLATOONL)
 	assignment = JOB_USCM_GROUND_SQUAD_LEADER

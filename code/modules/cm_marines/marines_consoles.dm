@@ -1,13 +1,3 @@
-#define CARDCON_DEPARTMENT_MISC "Miscellaneous"
-#define CARDCON_DEPARTMENT_MARINE "Marines"
-#define CARDCON_DEPARTMENT_SECURITY "Security"
-#define CARDCON_DEPARTMENT_MEDICAL "Medical and Science"
-#define CARDCON_DEPARTMENT_MEDICALWO "Medical"
-#define CARDCON_DEPARTMENT_SUPPLY "Supply"
-#define CARDCON_DEPARTMENT_AUXCOM "Auxiliary Command"
-#define CARDCON_DEPARTMENT_ENGINEERING "Engineering"
-#define CARDCON_DEPARTMENT_COMMAND "Command"
-
 /obj/structure/machinery/computer/card
 	name = "Identification Computer"
 	desc = "Terminal for programming USCM employee ID card access."
@@ -17,10 +7,10 @@
 	var/obj/item/card/id/user_id_card
 	var/obj/item/card/id/target_id_card
 	// What factions we are able to modify
-	var/list/factions = list(FACTION_MARINE)
+	var/faction = FACTION_MARINE //Hardcoded to be singular as faction search is how variables are retrieved. The variable passed to the machine for IFF can be turned into a list if desired. That shouldn't be too hard.
+	var/location //If we're located somewhere specific, text string. Otherwise will pull from station_name.
 	var/printing
 
-	var/is_centcom = FALSE
 	var/authenticated = FALSE
 
 /obj/structure/machinery/computer/card/proc/authenticate(mob/user, obj/item/card/id/id_card)
@@ -49,6 +39,7 @@
 		return
 
 	var/mob/user = usr
+	var/datum/faction/F = get_faction(faction)
 
 	playsound(src, pick('sound/machines/computer_typing4.ogg', 'sound/machines/computer_typing5.ogg', 'sound/machines/computer_typing6.ogg'), 5, 1)
 	switch(action)
@@ -91,25 +82,26 @@
 					printing = TRUE
 					playsound(src.loc, 'sound/machines/fax.ogg', 15, 1)
 					sleep(40)
-					var/faction = "N/A"
+					var/tar_faction = "N/A"
 					if(target_id_card.faction_group && islist(target_id_card.faction_group))
-						faction = jointext(target_id_card.faction_group, ", ")
+						tar_faction = jointext(target_id_card.faction_group, ", ")
 					if(isnull(target_id_card.faction_group))
 						target_id_card.faction_group = list()
 					else
-						faction = target_id_card.faction_group
+						tar_faction = target_id_card.faction_group
 					var/contents = {"<center><h4>Access Report</h4></center>
 								<u>Prepared By:</u> [user_id_card?.registered_name ? user_id_card.registered_name : "Unknown"]<br>
 								<u>For:</u> [target_id_card.registered_name ? target_id_card.registered_name : "Unregistered"]<br>
 								<hr>
-								<u>Faction:</u> [faction]<br>
+								<u>Faction:</u> [tar_faction]<br>
 								<u>Assignment:</u> [target_id_card.assignment]<br>
 								<u>Account Number:</u> #[target_id_card.associated_account_number]<br>
 								<u>Blood Type:</u> [target_id_card.blood_type]<br><br>
 								<u>Access:</u><br>
 								"}
 
-					var/known_access_rights = get_access(ACCESS_LIST_MARINE_ALL)
+					var/known_access_rights = F.get_faction_access(faction)
+
 					for(var/A in target_id_card.access)
 						if(A in known_access_rights)
 							contents += "  [get_access_desc(A)]"
@@ -196,17 +188,13 @@
 					target_id_card.assignment = custom_name
 			else
 				var/list/new_access = list()
-				if(is_centcom)
-					new_access = get_access(ACCESS_LIST_WY_ALL)
-				else
-					var/datum/job/job = RoleAuthority.roles_for_mode[target]
+				var/datum/job/job = RoleAuthority.roles_by_name[target] //We don't need to make this hardcoded for round only roles. The ID changer should work regardless of what the mode is.
 
-					if(!job)
-						visible_message("[SPAN_BOLD("[src]")] states, \"DATA ERROR: Can not find next entry in database: [target]\"")
-						return
-					new_access = job.get_access()
-				target_id_card.access -= get_access(ACCESS_LIST_WY_ALL) + get_access(ACCESS_LIST_MARINE_MAIN)
-				target_id_card.access |= new_access
+				if(!job)
+					visible_message("[SPAN_BOLD("[src]")] states, \"DATA ERROR: Can not find next entry in database: [target]\"")
+					return
+				new_access = job.get_access()
+				target_id_card.access = new_access //You get all of it; you don't keep anything. Not sure why it was subtracted and then added before, this is like getting a brand-new ID.
 				target_id_card.assignment = target
 				target_id_card.rank = target
 			message_admins("[key_name_admin(usr)] gave the ID of [target_id_card.registered_name] the assignment '[target_id_card.assignment]'.")
@@ -216,71 +204,85 @@
 				return
 
 			var/access_type = params["access_target"]
-			if(params["access_target"] in factions)
+			if(access_type == F.faction_tag) //We're adding IFF instead of access. We want our main faction IFF>
+
 				if(!target_id_card.faction_group)
 					target_id_card.faction_group = list()
-				if(params["access_target"] in target_id_card.faction_group)
-					target_id_card.faction_group -= params["access_target"]
+				if(access_type in target_id_card.faction_group)
+					target_id_card.faction_group -= access_type
 					log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked [access_type] IFF. </font>")
 				else
-					target_id_card.faction_group |= params["access_target"]
+					target_id_card.faction_group |= access_type
 					log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted [access_type] IFF. </font>")
 				return TRUE
-			access_type = text2num(params["access_target"])
-			if(access_type in (is_centcom ? get_access(ACCESS_LIST_WY_ALL) : get_access(ACCESS_LIST_MARINE_MAIN)))
-				if(access_type in target_id_card.access)
-					target_id_card.access -= access_type
-					log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked access '[access_type]'. </font>")
-				else
-					target_id_card.access |= access_type
-					log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted access '[access_type]'. </font>")
-				return TRUE
+
+			else
+				access_type = text2num(access_type) //Have to convert into a number here, which will be the access code.
+				var/known_access_rights = F.get_faction_access(faction)
+
+				if(access_type in known_access_rights)
+					if(access_type in target_id_card.access)
+						target_id_card.access -= access_type
+						log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked access '[access_type]'. </font>")
+					else
+						target_id_card.access |= access_type
+						log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted access '[access_type]'. </font>")
+					return TRUE
 		if("PRG_grantall")
 			if(!authenticated || !target_id_card)
 				return
 
-			target_id_card.access |= (is_centcom ? get_access(ACCESS_LIST_WY_ALL) : get_access(ACCESS_LIST_MARINE_MAIN))
-			target_id_card.faction_group |= factions
-			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted the ID all access and USCM IFF. </font>")
+			target_id_card.access |= F.get_faction_access(faction)
+
+			if(!target_id_card.faction_group)
+				target_id_card.faction_group = list()
+
+			target_id_card.faction_group |= F.faction_tag //The tag of the main group, if we're in a faction group.
+			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted the ID all access and [faction] IFF. </font>")
 			return TRUE
 		if("PRG_denyall")
 			if(!authenticated || !target_id_card)
 				return
 
-			var/list/access = target_id_card.access
-			access.Cut()
-			target_id_card.faction_group -= factions
-			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] removed all accesses and USCM IFF. </font>")
+			target_id_card.access -= F.get_faction_access(faction)
+			target_id_card?.faction_group -= F.faction_tag
+
+			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] removed all accesses and [faction] IFF. </font>")
 			return TRUE
 		if("PRG_grantregion")
 			if(!authenticated || !target_id_card)
 				return
 
-			if(params["region"] == "Faction (IFF system)")
-				target_id_card.faction_group |= factions
-				log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted USCM IFF. </font>")
+			var/region = params["region"]
+			if(!region)	return
+			if(region == "Faction (IFF system)")
+				if(!target_id_card.faction_group)
+					target_id_card.faction_group = list()
+
+				target_id_card.faction_group |= F.faction_tag
+				log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted [F.faction_tag] IFF. </font>")
 				return TRUE
-			var/region = text2num(params["region"])
-			if(isnull(region))
-				return
-			target_id_card.access |= get_region_accesses(region)
-			var/additions = get_region_accesses_name(region)
-			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted all [additions] accesses. </font>")
+
+			var/regions[] = F.get_faction_regions(faction)
+
+			target_id_card.access |= regions[region]
+			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted all [regions] accesses. </font>")
 			return TRUE
 		if("PRG_denyregion")
 			if(!authenticated || !target_id_card)
 				return
 
-			if(params["region"] == "Faction (IFF system)")
-				target_id_card.faction_group -= factions
-				log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked USCM IFF. </font>")
+			var/region = params["region"]
+			if(!region)	return
+			if(region == "Faction (IFF system)")
+				target_id_card.faction_group -= faction
+				log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked [faction] IFF. </font>")
 				return TRUE
-			var/region = text2num(params["region"])
-			if(isnull(region))
-				return
-			target_id_card.access -= get_region_accesses(region)
-			var/additions = get_region_accesses_name(region)
-			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked all [additions] accesses. </font>")
+
+			var/regions[] = F.get_faction_regions(faction)
+
+			target_id_card.access -= regions[region]
+			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked all [region] accesses. </font>")
 			return TRUE
 		if("PRG_account")
 			if(!authenticated || !target_id_card)
@@ -293,40 +295,16 @@
 
 /obj/structure/machinery/computer/card/ui_static_data(mob/user)
 	var/list/data = list()
-	data["station_name"] = station_name
-	data["centcom_access"] = is_centcom
+	data["station_name"] = location || station_name
 	data["manifest"] = GLOB.data_core.get_manifest(FALSE, FALSE, TRUE)
 
-	var/list/departments
-	if(is_centcom)
-		departments = list("CentCom" = get_all_centcom_jobs())
-	else if(Check_WO())
-		// I am not sure about WOs departments so it may need adjustment
-		departments = list(
-			CARDCON_DEPARTMENT_COMMAND = ROLES_CIC & ROLES_WO,
-			CARDCON_DEPARTMENT_AUXCOM = ROLES_AUXIL_SUPPORT & ROLES_WO,
-			CARDCON_DEPARTMENT_MISC = ROLES_MISC & ROLES_WO,
-			CARDCON_DEPARTMENT_SECURITY = ROLES_POLICE & ROLES_WO,
-			CARDCON_DEPARTMENT_ENGINEERING = ROLES_ENGINEERING & ROLES_WO,
-			CARDCON_DEPARTMENT_SUPPLY = ROLES_REQUISITION & ROLES_WO,
-			CARDCON_DEPARTMENT_MEDICAL = ROLES_MEDICAL & ROLES_WO,
-			CARDCON_DEPARTMENT_MARINE = ROLES_MARINES
-		)
-	else
-		departments = list(
-			CARDCON_DEPARTMENT_COMMAND = ROLES_CIC - ROLES_WO,
-			CARDCON_DEPARTMENT_AUXCOM = ROLES_AUXIL_SUPPORT - ROLES_WO,
-			CARDCON_DEPARTMENT_MISC = ROLES_MISC - ROLES_WO,
-			CARDCON_DEPARTMENT_SECURITY = ROLES_POLICE - ROLES_WO,
-			CARDCON_DEPARTMENT_ENGINEERING = ROLES_ENGINEERING - ROLES_WO,
-			CARDCON_DEPARTMENT_SUPPLY = ROLES_REQUISITION - ROLES_WO,
-			CARDCON_DEPARTMENT_MEDICAL = ROLES_MEDICAL - ROLES_WO,
-			CARDCON_DEPARTMENT_MARINE = ROLES_MARINES
-		)
+	var/datum/faction/F = get_faction(faction)
+	var/departments[] = F.get_faction_departments(faction)
+
 	data["jobs"] = list()
 	for(var/department in departments)
-		var/list/job_list = departments[department]
-		var/list/department_jobs = list()
+		var/job_list[] = departments[department]
+		var/department_jobs[0]
 		for(var/job in job_list)
 			department_jobs += list(list(
 				"display_name" = replacetext(job, "&nbsp", " "),
@@ -335,32 +313,37 @@
 		if(length(department_jobs))
 			data["jobs"][department] = department_jobs
 
-	var/list/regions = list()
-	for(var/i in 1 to 7)
 
-		var/list/accesses = list()
-		for(var/access in get_region_accesses(i))
-			if (get_access_desc(access))
+	var/faction_regions[] = F.get_faction_regions(faction)
+	var/regions[0] //This is the list that's going to the tgui menu.
+	var/access_desc
+	var/iterate = 1
+	for(var/region_name in faction_regions) //Iterate through the main list of regions.
+		var/accesses[0]
+		for(var/access in faction_regions[region_name]) //Iterate inside the sublists, it should only list the access numbers.
+			access_desc = get_access_desc(access) //Grab this so we don't roll the proc twice.
+			if(access_desc)
 				accesses += list(list(
-					"desc" = replacetext(get_access_desc(access), "&nbsp", " "),
-					"ref" = access,
+					"desc" = replacetext(access_desc, "&nbsp", " "),//regions is a string identifier.
+					"ref" = access,//Access should be a number, all things being well and good.
 				))
 
 		regions += list(list(
-			"name" = get_region_accesses_name(i),
-			"regid" = i,
+			"name" = region_name,
+			"regid" = iterate,
 			"accesses" = accesses
 		))
+		iterate++
 
 	// Factions goes here
 	if(target_id_card && target_id_card.faction_group && isnull(target_id_card.faction_group))
 		target_id_card.faction_group = list()
-	var/list/localfactions = list()
-	// We can see only those factions which have our console tuned on
-	for(var/faction in factions)
-		localfactions += list(list(
-			"desc" = faction,
-			"ref" = faction,
+	var/localfactions[0]
+
+	//This is some really confusing listception. I'm theorizing here that it is wrapped like a taco to pass it as an array, not an object.
+	localfactions += list(list(
+		"desc" = F.faction_tag,//Want the main faction tag, not the faction on the machine. The main faction is our primary IFF signal.
+		"ref" = F.faction_tag,
 	))
 
 	regions += list(list(
@@ -376,7 +359,7 @@
 /obj/structure/machinery/computer/card/ui_data(mob/user)
 	var/list/data = list()
 
-	data["station_name"] = station_name
+	data["station_name"] = location || station_name
 	data["authenticated"] = authenticated
 
 	data["has_id"] = !!target_id_card
@@ -469,15 +452,16 @@
 	user.set_interaction(src)
 	tgui_interact(user)
 
-#undef CARDCON_DEPARTMENT_MISC
-#undef CARDCON_DEPARTMENT_MARINE
-#undef CARDCON_DEPARTMENT_SECURITY
-#undef CARDCON_DEPARTMENT_MEDICAL
-#undef CARDCON_DEPARTMENT_MEDICALWO
-#undef CARDCON_DEPARTMENT_SUPPLY
-#undef CARDCON_DEPARTMENT_AUXCOM
-#undef CARDCON_DEPARTMENT_ENGINEERING
-#undef CARDCON_DEPARTMENT_COMMAND
+/obj/structure/machinery/computer/card/uscm_ground
+	dir = NORTH
+	faction = FACTION_USCM_GROUND
+	location = "USCM Outpost 29"
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+
+/obj/structure/machinery/computer/card/wy
+	faction = FACTION_WY
+	location = "WY Regional Office"
+	req_access = list(ACCESS_WY_LEADERSHIP)
 
 //This console changes a marine's squad. It's very simple.
 //It also does not: change or increment the squad count (used in the login randomizer), nor does it check for jobs.

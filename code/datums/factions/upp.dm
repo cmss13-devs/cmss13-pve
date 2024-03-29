@@ -1,6 +1,12 @@
 /datum/faction/upp
 	name = "Union of Progressive Peoples"
 	faction_tag = FACTION_UPP
+	access_all = ACCESS_LIST_UPP_ALL
+	access_main = ACCESS_LIST_UPP_PLATOON
+	access_regions = ACCESS_LIST_UPP_REGIONS
+
+/datum/faction/upp/get_faction_departments(faction_to_check)
+	return DEPARTMENT_UPP_ALL
 
 /datum/faction/upp/modify_hud_holder(image/holder, mob/living/carbon/human/H)
 	var/hud_icon_state
