@@ -226,7 +226,7 @@
 
 /obj/item/clothing/under/marine/officer/boiler
 	name = "marine operations uniform"
-	desc = "Officer's uniform, a little outdated. Why it needs to be frag rated is beyond everyone."
+	desc = "Officer's uniform, a little outdated."
 	icon_state = "uscmboiler"
 	item_state = "uscmboiler"
 	worn_state = "uscmboiler"
@@ -235,7 +235,7 @@
 
 /obj/item/clothing/under/marine/officer/command
 	name = "\improper USCM officer uniform"
-	desc = "A commanding officer's uniform. The privileges of rank extend to having your uniform custom fitted apparently."
+	desc = "A USCMC commanding officer's uniform, custom cut for maximum comfort while staying within regulation."
 	icon_state = "CO_jumpsuit"
 	worn_state = "CO_jumpsuit"
 	specialty = "USCM officer"
