@@ -207,8 +207,6 @@
 	fired.forceMove(get_turf(src))
 	fired.throw_atom(target, 20, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
 
-
-
 //Doesn't use these. Listed for reference.
 /obj/item/weapon/gun/launcher/grenade/load_into_chamber()
 	return
