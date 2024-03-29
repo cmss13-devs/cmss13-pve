@@ -147,11 +147,11 @@
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
 	shrapnel_count = 20
-	shrapnel_type = /datum/ammo/bullet/shotgun/buckshot/canister
+	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
 	dispersion_angle = 20 //hopefully this means the cone spread is pretty small
-/obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(obj/item/weapon/gun/launcher/grenade/gl, target)
-	var/direction = Get_Compass_Dir(gl, target)
-	var/position = get_step(gl, direction) //otherwise we buckshot ourselves
+/obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
+	var/direction = Get_Compass_Dir(user, target)
+	var/position = get_step(user, direction) //otherwise we buckshot ourselves
 	create_shrapnel(position, min(direct_hit_shrapnel, shrapnel_count), direction , dispersion_angle, shrapnel_type, cause_data, FALSE, 100)
 	if(shrapnel_count)
 		create_shrapnel(loc, shrapnel_count, direction, dispersion_angle, shrapnel_type, cause_data, FALSE, 0)

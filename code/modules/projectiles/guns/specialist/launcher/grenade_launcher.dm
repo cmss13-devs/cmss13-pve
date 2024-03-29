@@ -198,7 +198,7 @@
 	// canister rounds explode before leaving the barrel of the launcher.
 	if(istype(fired, /obj/item/explosive/grenade/high_explosive/airburst/canister))
 		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = fired
-		canister_round.canister_fire(src, target)
+		canister_round.canister_fire(user, target)
 		return
 
 	fired.throw_range = 20
