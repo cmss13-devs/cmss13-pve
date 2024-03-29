@@ -37,7 +37,7 @@
 
 /datum/ammo/bullet/shotgun/buckshot/canister
 //constructed with the assistance of vero5123.
-	name = "M108 Canister Grenade"
+	name = "\improper M108 Canister Grenade"
 	handful_state = "grenade_hedp"
 	icon_state = "buckshot"
 	multiple_handful_name = TRUE
