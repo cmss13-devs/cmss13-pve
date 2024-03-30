@@ -4,6 +4,7 @@
 	config_tag = GAMEMODE_REMOTE_OUTPOST
 	votable = TRUE
 	flags_round_type = MODE_GROUND_ONLY|MODE_NO_XENO_EVOLVE|MODE_NEW_SPAWN
+	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 	taskbar_icon = 'icons/taskbar/gml_wo.png'
 
@@ -35,6 +36,10 @@
 	for(var/obj/effect/landmark/late_join/I in GLOB.landmarks_list)
 		if(!(I.z in SSmapping.levels_by_trait(ZTRAIT_GROUND)))
 			qdel(I) //We don't want people to late-join somewhere they shouldn't.
+
+	for(var/obj/I in GLOB.observer_starts)
+		if(!(I.z in SSmapping.levels_by_trait(ZTRAIT_GROUND)))
+			qdel(I) //So ghosts spawn in near the action, but not strictly necessary.
 
 	. = ..()
 

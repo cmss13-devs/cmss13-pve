@@ -90,6 +90,8 @@
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/clothing/suit/storage/marine/MP/CO(src)
+	new /obj/item/clothing/head/helmet/marine/CO(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/lieutenant
 	job = JOB_USCM_GROUND_AO
@@ -99,6 +101,8 @@
 	new /obj/item/handcuffs
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
+	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
+	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/civilian
 	job = JOB_USCM_GROUND_CIVILIAN

@@ -35,7 +35,7 @@
 	paygrade = "MO3"
 	role_comm_title = "OCO"
 	minimum_age = 30
-	skills = /datum/skills/XO
+	skills = /datum/skills/oco
 
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_COMMANDER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
@@ -94,7 +94,7 @@
 	paygrade = "MO2"
 	role_comm_title = "AO"
 	minimum_age = 27
-	skills = /datum/skills/auxiliary_officer
+	skills = /datum/skills/AO
 
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_HEAD)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC

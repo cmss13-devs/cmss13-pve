@@ -657,7 +657,7 @@
 	paygrade = "MO2"
 	role_comm_title = "ASO"
 	minimum_age = 27
-	skills = /datum/skills/auxiliary_officer
+	skills = /datum/skills/AO
 
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC

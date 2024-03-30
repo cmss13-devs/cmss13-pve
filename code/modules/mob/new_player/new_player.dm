@@ -48,15 +48,15 @@
 
 	if(round_start)
 		output += "<p>\[ [ready? "<b>Ready</b>":"<a href='byond://?src=\ref[src];lobby_choice=ready'>Ready</a>"] | [ready? "<a href='byond://?src=\ref[src];lobby_choice=unready'>Not Ready</a>":"<b>Not Ready</b>"] \]</p>"
-		output += "<b>Be Xenomorph:</b> [(client.prefs && (client.prefs.get_job_priority(JOB_XENOMORPH))) ? "Yes" : "No"]"
+		//output += "<b>Be Xenomorph:</b> [(client.prefs && (client.prefs.get_job_priority(JOB_XENOMORPH))) ? "Yes" : "No"]"
 
 	else
 		output += "<a href='byond://?src=\ref[src];lobby_choice=manifest'>View the Crew Manifest</A><br><br>"
-		output += "<a href='byond://?src=\ref[src];lobby_choice=hiveleaders'>View Hive Leaders</A><br><br>"
-		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the USCM!</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_xeno'>Join the Hive!</A></p>"
-		if(SSticker.mode.flags_round_type & MODE_PREDATOR)
-			if(SSticker.mode.check_predator_late_join(src,0)) output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_pred'>Join the Hunt!</A></p>"
+		//output += "<a href='byond://?src=\ref[src];lobby_choice=hiveleaders'>View Hive Leaders</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the action!</A></p>"
+		//output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_xeno'>Join the Hive!</A></p>"
+		//if(SSticker.mode.flags_round_type & MODE_PREDATOR)
+		//	if(SSticker.mode.check_predator_late_join(src,0)) output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_pred'>Join the Hunt!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];lobby_choice=observe'>Observe</A></p>"
 
@@ -115,24 +115,27 @@
 			if(!SSticker || SSticker.current_state == GAME_STATE_STARTUP)
 				to_chat(src, SPAN_WARNING("The game is still setting up, please try again later."))
 				return
-			if(alert(src,"Are you sure you wish to observe? When you observe, you will not be able to join as marine. It might also take some time to become a xeno or responder!","Player Setup","Yes","No") == "Yes")
+			if(alert(src,"Are you sure you wish to observe? When you observe, you may not be able to play this round!","Player Setup","Yes","No") == "Yes")
 				if(!client)
 					return TRUE
+				var/obj/effect/landmark/observer_start/O = SAFEPICK(GLOB.observer_starts)
+				if(!istype(O))
+					to_chat(src, SPAN_DANGER("Could not locate an observer spawn point. Contact a coder!"))
+					log_debug(SPAN_DEBUG("[src] tried spawning as an observer but could not locate an observer spawn point."))
+					return FALSE
+
 				if(!client.prefs?.preview_dummy)
 					client.prefs.update_preview_icon()
-				var/mob/dead/observer/observer = new /mob/dead/observer(get_turf(pick(GLOB.latejoin)), client.prefs.preview_dummy)
+				var/mob/dead/observer/observer = new /mob/dead/observer(get_turf(O), client.prefs.preview_dummy)
 				observer.set_lighting_alpha_from_pref(client)
 				spawning = TRUE
 				observer.started_as_observer = TRUE
 
 				close_spawn_windows()
 
-				var/obj/effect/landmark/observer_start/O = SAFEPICK(GLOB.observer_starts)
-				if(istype(O))
-					to_chat(src, SPAN_NOTICE("Now teleporting."))
-					observer.forceMove(O.loc)
-				else
-					to_chat(src, SPAN_DANGER("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
+				to_chat(src, SPAN_NOTICE("Now teleporting."))
+				observer.forceMove(O.loc)
+
 				observer.icon = 'icons/mob/humans/species/r_human.dmi'
 				observer.icon_state = "anglo_example"
 				observer.alpha = 127

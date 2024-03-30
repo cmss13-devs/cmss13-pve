@@ -158,6 +158,7 @@
 	req_one_access = null
 	desc = "A secure storage unit for an outpost smartgunner."
 	can_be_stacked = TRUE
+	density = FALSE
 
 /obj/structure/closet/secure_closet/smartgunner/uscm_ground/one/Initialize()
 	. = ..()

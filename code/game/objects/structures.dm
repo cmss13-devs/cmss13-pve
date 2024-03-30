@@ -144,8 +144,8 @@
 	for(var/obj/item/grab/grabbing in list(user.l_hand, user.r_hand))
 		grabbed_things += grabbing.grabbed_thing
 		/*
-		Safety in case our layer doesn't reset in time. Not entirely safe, but with a short reset timer, it should. But you never know.
-		Can also cause issues if we're somehow in a logic fail of going from one thing to another thing with a higher climb_layer. Again, hopefully never comes up.
+		Safety in case our layer doesn't reset in time. Not entirely safe, but with a short reset timer, it should be okay. But you never know.
+		Can also cause issues if we're somehow in a logic fail of going from one thing to another thing with a higher climb_layer. Hopefully never comes up.
 		Xeno large sprites are still entirely cursed when it comes to layering so I am not going to bother trying to fix that. Vehicles too, unfortunately.
 		*/
 		if(climb_layer && climb_layer > grabbing.grabbed_thing.layer)

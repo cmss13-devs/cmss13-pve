@@ -123,7 +123,7 @@
 	update_icon()
 
 	playsound(src.loc, close_sound, 15, 1)
-	density = TRUE
+	density = initial(density) //If they were not dense closed, they retain that.
 	return TRUE
 
 /obj/structure/closet/proc/store_items(stored_units)

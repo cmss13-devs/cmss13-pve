@@ -353,7 +353,7 @@ COMMAND STAFF
 		SKILL_NAVIGATIONS = SKILL_NAVIGATIONS_TRAINED, //can change ship alt
 	)
 
-/datum/skills/commander/uscm_ground
+/datum/skills/oco
 	name = "Commanding Officer (Outpost)"
 	skills = list(
 		SKILL_LEADERSHIP = SKILL_LEAD_MASTER,//Command
@@ -363,7 +363,7 @@ COMMAND STAFF
 		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT,//Combat - Some of the best combat skills around. But stuck in the CIC.
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 		SKILL_CQC = SKILL_CQC_SKILLED,
-		SKILL_MELEE = SKILL_MELEE_TRAINED,
+		SKILL_MELEE_WEAPONS = SKILL_MELEE_TRAINED,
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
 		SKILL_POLICE = SKILL_POLICE_SKILLED,
 		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,//Support
@@ -397,7 +397,7 @@ COMMAND STAFF
 		SKILL_NAVIGATIONS = SKILL_NAVIGATIONS_TRAINED,
 	)
 
-/datum/skills/XO/uscm_ground //Battlefield doctor/second in command.
+/datum/skills/AO //Battlefield doctor/second in command.
 	name = "Adjunct Officer (Outpost)"
 	skills = list(
 		SKILL_LEADERSHIP = SKILL_LEAD_MASTER,//Command

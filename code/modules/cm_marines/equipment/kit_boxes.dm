@@ -164,6 +164,7 @@
 /obj/item/storage/box/spec/sapper/fill_preset_inventory()
 	new /obj/item/defenses/handheld/sentry/custom(src)
 	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/ammo_magazine/sentry(src)
 	new /obj/item/storage/pouch/general/large(src)
 	new /obj/item/storage/pouch/construction(src)
 	new /obj/item/stack/sheet/plasteel/med_large_stack(src)
