@@ -447,6 +447,16 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"cq" = (
+/obj/structure/sign/banners/happybirthdaysteve{
+	pixel_y = 24;
+	icon_state = "birthdaykirsh";
+	desc = "A nice looking banner of colorful paper letters wishing Kirsh a happy birthday. You aren't quite sure who that is..."
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/briefing)
 "cr" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -18971,7 +18981,7 @@ aN
 Dc
 eY
 XJ
-Vr
+cq
 rl
 ol
 rV
