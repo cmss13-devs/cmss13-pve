@@ -676,7 +676,7 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "M44 Custom Revolver"
-	path = /obj/item/weapon/gun/revolver/m44/custom
+	path = /obj/item/storage/box/guncase/m44/custom
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911

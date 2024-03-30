@@ -342,6 +342,9 @@
 	icon_state = "m44rc"
 	item_state = "m44rc"
 
+/obj/item/weapon/gun/revolver/m44/custom/mp //loadout w/ ammo
+	current_mag = /obj/item/ammo_magazine/internal/revolver/m44/marksman
+
 //----------------------------------------------
 // Blade Runner Blasters.
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special
