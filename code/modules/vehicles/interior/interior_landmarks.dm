@@ -146,6 +146,28 @@
 
 	qdel(src)
 
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/movie
+	name = "movie apc seat spawner"
+	var/buckling_y = 0
+
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/movie/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/driver/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.required_skill = S.vehicle.required_skill
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+	S.buckling_y = buckling_y
+
+	qdel(src)
+
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat
 	name = "1st support gunner's seat spawner"
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
@@ -215,6 +237,10 @@
 	icon_state = "wall_phone"
 	color = "yellow"
 
+/obj/effect/landmark/interior/spawn/telephone/toc
+	icon = 'icons/obj/vehicles/interiors/movie.dmi'
+	icon_state = "wall_phone"
+
 /obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
 	var/obj/structure/phone_base/phone = new(loc)
 
@@ -246,6 +272,7 @@
 	R.layer = layer
 	R.pixel_x = pixel_x
 	R.pixel_y = pixel_y
+	R.density = density
 	R.vehicle = I.exterior
 	R.setDir(dir)
 	R.update_icon()
@@ -268,6 +295,7 @@
 	V.pixel_x = pixel_x
 	V.pixel_y = pixel_y
 	V.alpha = alpha
+	V.layer = layer
 	V.update_icon()
 
 	qdel(src)

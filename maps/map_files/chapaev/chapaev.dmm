@@ -1069,6 +1069,7 @@
 	icon_off = "cabinetdetective_broken";
 	has_cryo_gear = 0
 	},
+/obj/item/clothing/under/marine/veteran/UPP/boiler,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
