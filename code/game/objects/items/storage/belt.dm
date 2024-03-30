@@ -1232,13 +1232,15 @@
 			"icon_y" = -5))
 
 /obj/item/storage/belt/gun/m44
-	name = "\improper M276 pattern M44 holster rig"
-	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the M44 magnum revolver, along with six small pouches for speedloaders. It smells faintly of hay."
+	name = "\improper M276 pattern revolver pistol holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for revolver pistols of various types, along with six small pouches for speedloaders."
 	icon_state = "m44r_holster"
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/revolver/cmb,
 		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/revolver/cmb,
 	)
 	has_gamemode_skin = TRUE
 	holster_slots = list(
