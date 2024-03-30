@@ -751,7 +751,7 @@
 //MARINE REVOLVER //Spearhead exists in Alien cannon, this one is based on the Dark Descent model.
 
 /obj/item/weapon/gun/revolver/cmb/marine
-	name = "\improper SA .357"
+	name = "\improper SA .357 Revolver"
 	desc = "An automatic revolver chambered in .357, recognizably similar to its civilian counterpart. In Limited Service with the USCM, typically provided to more veteran units."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "mspearhead"
