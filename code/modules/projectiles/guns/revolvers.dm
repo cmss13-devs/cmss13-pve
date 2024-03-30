@@ -293,6 +293,13 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
+
+	fire_sound = 'sound/weapons/gun_cmb_1.ogg' //sounds stolen from bladerunner revolvers bc they arent used and sound awesome
+	fire_rattle = 'sound/weapons/gun_cmb_2.ogg'
+	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
+	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
+	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
+
 	current_mag = /obj/item/ammo_magazine/internal/revolver/m44
 	force = 8
 	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
