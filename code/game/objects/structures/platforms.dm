@@ -25,22 +25,24 @@
 	icon_state = "platform_stair_alt"
 	dir = 1
 
-
 /obj/structure/platform/Initialize()
 	. = ..()
 	var/image/I = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
 	switch(dir)
 		if(SOUTH)
-			layer = ABOVE_MOB_LAYER+0.1
+			layer = ABOVE_MOB_LAYER+0.1 //This is pretty janky as it means mobs get placed under the platform sprite when climbing *over* it. The alternative is that sprites look weird when standing next to platforms.
+			climb_layer = layer + 0.1
 			I.pixel_y = -16
 		if(NORTH)
 			I.pixel_y = 16
 		if(EAST)
 			I.pixel_x = 16
 			layer = ABOVE_MOB_LAYER+0.1
+			climb_layer = layer + 0.1
 		if(WEST)
 			I.pixel_x = -16
 			layer = ABOVE_MOB_LAYER+0.1
+			climb_layer = layer + 0.1
 	overlays += I
 
 /obj/structure/platform/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -52,10 +54,26 @@
 	if(ismob(AM))
 		do_climb(AM)
 	..()
+/*
+/obj/structure/platform/BlockedExitDirs(obj/vehicle/multitile/V, target_dir)
+	to_world(SPAN_DEBUG("Vehicle exit detected."))
+	if(istype(V))
+		//if(REVERSE_DIR(dir) == target_dir)
+		if(dir == target_dir)
+			to_world(SPAN_DEBUG("Directions match, colliding."))
+			return BLOCKED_MOVEMENT
+		else return NO_BLOCKED_MOVEMENT
 
+	return ..()
+*/
 /obj/structure/platform/BlockedPassDirs(atom/movable/mover, target_dir)
-	if(istype(mover, /obj/vehicle/multitile))
-		return BLOCKED_MOVEMENT
+//	if(istype(V))
+//		if()
+
+	var/obj/vehicle/multitile/V = mover
+	if(istype(V) && dir == target_dir)
+		return
+
 
 	var/obj/structure/S = locate(/obj/structure) in get_turf(mover)
 	if(S && S.climbable && !(S.flags_atom & ON_BORDER) && climbable && isliving(mover)) //Climbable objects allow you to universally climb over others

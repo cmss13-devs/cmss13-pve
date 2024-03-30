@@ -10,6 +10,7 @@
 	var/list/debris
 	var/unslashable = FALSE
 	var/wrenchable = FALSE
+	var/climb_layer //If it has a "climb" layer that the mob has to be over to look right climbing. Mostly for platforms.
 	health = 100
 	anchored = TRUE
 	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
@@ -139,10 +140,24 @@
 	user.visible_message(SPAN_WARNING(climb_string))
 
 	var/list/grabbed_things = list()
+	//var/original_layer
 	for(var/obj/item/grab/grabbing in list(user.l_hand, user.r_hand))
 		grabbed_things += grabbing.grabbed_thing
+		/*
+		Safety in case our layer doesn't reset in time. Not entirely safe, but with a short reset timer, it should. But you never know.
+		Can also cause issues if we're somehow in a logic fail of going from one thing to another thing with a higher climb_layer. Again, hopefully never comes up.
+		Xeno large sprites are still entirely cursed when it comes to layering so I am not going to bother trying to fix that. Vehicles too, unfortunately.
+		*/
+		if(climb_layer && climb_layer > grabbing.grabbed_thing.layer)
+			addtimer(VARSET_CALLBACK(grabbing.grabbed_thing, layer, grabbing.grabbed_thing.layer), 0.3 SECONDS)
+			grabbing.grabbed_thing.layer = climb_layer
+
 		grabbing.grabbed_thing.forceMove(user.loc)
+	if(climb_layer && climb_layer > user.layer)
+		addtimer(VARSET_CALLBACK(user, layer, user.layer), 0.3 SECONDS)
+		user.layer = climb_layer
 	user.forceMove(TT)
+
 	for(var/atom/movable/thing as anything in grabbed_things) // grabbed things aren't moved to the tile immediately to: make the animation better, preserve the grab
 		thing.forceMove(TT)
 

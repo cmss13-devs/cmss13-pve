@@ -28,6 +28,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/uscm_ground/lesser_rank
 	total_positions = 2
 	spawn_positions = 2
+	prime_priority = TRUE
 	entry_message_body = "You were deemed competent enough to lead a platoon, act accordingly. Make sure your platoon is at task, and correct them if they are not. Delegate to your squad leaders, but let them breathe. Communicate with officers in charge of the outpost and follow their instructions."
 
 /datum/job/marine/leader/whiskey

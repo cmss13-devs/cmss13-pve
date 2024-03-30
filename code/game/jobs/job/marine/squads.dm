@@ -737,7 +737,7 @@
 		if(JOB_SQUAD_LEADER)
 			num_leaders--
 
-//proc for promoting a Platoon Leader. Moved with away from OW code as it really should be here instead. Also refactored to a degree.
+//proc for promoting a Platoon Leader. Moved away from OW code as it really should be here instead. Also refactored to a degree.
 /datum/squad/proc/promote_squad_leader(mob/living/carbon/human/selected_sl)
 	var/mob/living/carbon/human/old_lead = squad_leader
 	if(old_lead)

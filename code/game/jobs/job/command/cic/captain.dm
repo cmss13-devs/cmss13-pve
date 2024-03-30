@@ -71,6 +71,7 @@ Godspeed, Captain and Commander!"}
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	flags_whitelist = NONE
 	gear_preset = /datum/equipment_preset/uscm_ground/oco
+	prime_priority = TRUE
 
 /obj/effect/landmark/start/captain
 	name = JOB_CO

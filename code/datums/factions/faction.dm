@@ -29,7 +29,7 @@ Ovewrite this for individual factions if they get their own ID changing consoles
 Since there are no proper colonist jobs, instead having survivors, this is defaulted to the marine role list. Update as needed.
 */
 /datum/faction/proc/get_faction_departments(faction_to_check)
-	if(Check_WO())
+	if(Check_WO())//This check is a crutch for now. WO can be removed entirely given that it's pretty old and is mostly replaced by the Remote Outpost.
 		return list(
 			"Command" = ROLES_CIC & ROLES_WO,
 			"Auxiliary Command" = ROLES_AUXIL_SUPPORT & ROLES_WO,

@@ -142,7 +142,7 @@
 //Happening.
 /obj/item/storage/box/spec/B18
 	name = "\improper B18 heavy armor case"
-	desc = "A large case containing the experimental B18 armor platform, designed minimize battlefield injury. It's heavy, uncomfortable to wear for more than five minutes, and will probably never leave field testing. It's also very effective. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing the experimental B18 armor platform, designed minimize battlefield injury. The B18 system is unlikely to leave field testing due to budget cuts even though it is reported to be highly effective (but uncomfortable to wear). \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "b18"
 
 /obj/item/storage/box/spec/B18/fill_preset_inventory()
@@ -158,7 +158,7 @@
 
 /obj/item/storage/box/spec/sapper
 	name = "\improper Sapper equipment case"
-	desc = "A large case containing a variety of materials for constructing in the field, defending choke points, and sabotaging enemy fortifications. Comes with an improved sentry turret and other important equipment. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a variety of materials for constructing in the field, defending choke points, and sabotaging enemy fortifications. Comes with an improved, custom-tuned sentry turret and other important equipment. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "grenadier"
 
 /obj/item/storage/box/spec/sapper/fill_preset_inventory()

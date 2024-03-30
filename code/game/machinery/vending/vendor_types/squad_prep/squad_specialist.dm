@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 //A special...specialist vendor with actual inventory instead of points. We're old school here. Could maybe even rig it for tokens in the future.
 /obj/structure/machinery/cm_vending/sorted/spec
 	name = "\improper ColMarTech Specialist Field Testing Gear Rack"
-	desc = "An automated gear rack for Squad Weapons Specialists. Has a small selection of equipment meant for field testing or limited use."
+	desc = "An automated gear rack for Outpost Weapons Specialists. Has a small selection of equipment meant for field testing or limited use."
 	icon_state = "spec_gear"
 	vend_flags = VEND_TO_HAND|VEND_LIMITED_INVENTORY|VEND_SPECIALIZED_STOCK|VEND_USE_VENDOR_FLAGS
 	vendor_role = list(JOB_SQUAD_SPECIALIST)

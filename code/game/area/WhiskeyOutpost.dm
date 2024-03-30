@@ -207,12 +207,12 @@
 */
 
 /area/whiskey_outpost/blackstone
-	name = "\improper Whiskey Outpost Blackstone Area"
+	name = "\improper Blackstone Bridge Area"
 	fake_zlevel = MAP_FAKE_Z_BLACKSTONE_GROUND //So they are not the same as the Almayer fake z's. Stupid, but necessary.
 	sound_environment = SOUND_ENVIRONMENT_GENERIC
 
 /*
-There are some areas that start out unpowered but can be powered, mostly near the outpost or supply warehouse. They have the "whiskey_outpost"
+There are some areas that start out unpowered but can be powered, mostly near the outpost or supply warehouse. They have the "outpost_29"
 powernet. Everything else isn't really meant to be powered on, though it can be other than the river. These areas are on the "ground"
 powernet.
 */
@@ -225,7 +225,7 @@ powernet.
 
 /area/whiskey_outpost/blackstone/inside
 	name = "\improper Interior Whiskey Outpost"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	ceiling = CEILING_METAL
 	minimap_color = MINIMAP_AREA_COLONY
 	sound_environment = SOUND_ENVIRONMENT_ROOM
@@ -394,7 +394,7 @@ powernet.
 	sound_environment = SOUND_ENVIRONMENT_FOREST
 
 /area/whiskey_outpost/blackstone/outside/outpost
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	icon_state = "platform_n"
 
 /area/whiskey_outpost/blackstone/outside/outpost/north
@@ -517,7 +517,7 @@ powernet.
 
 /area/whiskey_outpost/blackstone/outside/bridge
 	icon_state = "platform"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
 
 /area/whiskey_outpost/blackstone/outside/bridge/north
@@ -554,25 +554,25 @@ powernet.
 /area/whiskey_outpost/blackstone/outside/bball_court
 	name = "\improper Basketball Court"
 	icon_state = "bball"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
 
 /area/whiskey_outpost/blackstone/outside/boxing_ring
 	name = "\improper Boxing Ring"
 	icon_state = "boxing"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
 
 /area/whiskey_outpost/blackstone/outside/central_road
 	name = "\improper Central Road"
 	icon_state = "central_road"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
 
 /area/whiskey_outpost/blackstone/outside/perimeter_defense
 	name = "\improper Perimeter Defense"
 	icon_state = "perimeter_defense"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
 
 //POWERED
@@ -580,13 +580,13 @@ powernet.
 /area/whiskey_outpost/blackstone/outside/mortar_pit
 	name = "\improper Mortar Pit"
 	icon_state = "mortarpit"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_QUARRY
 
 /area/whiskey_outpost/blackstone/outside/comm_tower
 	name = "\improper Communication Tower"
 	icon_state = "comms"
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	minimap_color = MINIMAP_AREA_ENGI
 	sound_environment = SOUND_ENVIRONMENT_QUARRY
 
@@ -698,7 +698,7 @@ Just about all underground areas are unpowered and cannot be powered on other th
 /area/whiskey_outpost/blackstone/underground/maintenance
 	name = "\improper Underground Tunnels"
 	fake_zlevel = MAP_FAKE_Z_BLACKSTONE_BASEMENT
-	powernet_name = "whiskey_outpost"
+	powernet_name = "outpost_29"
 	ceiling = CEILING_DEEP_UNDERGROUND
 	minimap_color = MINIMAP_AREA_ENGI
 	soundscape_playlist = SCAPE_PL_ENG

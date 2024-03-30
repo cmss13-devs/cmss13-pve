@@ -149,7 +149,7 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 		if(invisibility) //It is invisible.
 			invisibility = 0 //Immediately make it visible.
 			if(play_sound)
-				playsound(src, 'sound/effects/rocks_falling.ogg', 75, FALSE)
+				playsound(src, 'sound/effects/rocks_falling.ogg', 70, FALSE)
 				visible_message(SPAN_LARGE(SPAN_WARNING("Rocks fall, stones tremble, as a dense pile of debris forms nearby!")), SPAN_WARNING("You hear something collapse and crumble nearby!"))
 			animate(src, alpha = 255, 1.5 SECONDS) //15 deciseconds, make it opaque.
 		else

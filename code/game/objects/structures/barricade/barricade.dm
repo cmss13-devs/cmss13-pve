@@ -78,10 +78,13 @@
 		switch(dir)
 			if(SOUTH)
 				layer = ABOVE_MOB_LAYER
+				climb_layer = layer
 			if(NORTH)
 				layer = initial(layer) - 0.01
+				climb_layer = null
 			else
 				layer = initial(layer)
+				climb_layer = null
 		if(!anchored)
 			layer = initial(layer)
 	else
