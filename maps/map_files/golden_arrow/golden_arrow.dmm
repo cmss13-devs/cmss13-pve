@@ -451,7 +451,7 @@
 /obj/structure/sign/banners/happybirthdaysteve{
 	pixel_y = 24;
 	icon_state = "birthdaykirsh";
-	desc = "A nice looking banner of colorful paper letters wishing Kirsh a happy birthday. You aren't quite sure who that is..."
+	desc = "A nice looking banner of colorful paper letters wishing Kirsh a happy birthday. You aren't quite sure who that is...";
 	name = "\improper Happy Birthday Kirsh banner"
 	},
 /turf/open/floor/almayer{
