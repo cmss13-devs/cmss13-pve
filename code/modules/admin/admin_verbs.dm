@@ -96,9 +96,12 @@ var/list/admin_verbs_admin = list(
 )
 
 var/list/admin_verbs_ban = list(
-	/client/proc/unban_panel
+	/client/proc/unban_panel,
+	/client/proc/stickyban_panel,
+
 	// /client/proc/jobbans // Disabled temporarily due to 15-30 second lag spikes. Don't forget the comma in the line above when uncommenting this!
 )
+
 
 var/list/admin_verbs_sounds = list(
 	/client/proc/play_admin_sound,
@@ -330,6 +333,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
+		add_verb(src, /client/proc/toggle_rappel_menu)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -363,6 +367,7 @@ var/list/roundstart_mod_verbs = list(
 		/client/proc/toggle_join_xeno,
 		/client/proc/game_master_rename_platoon,
 		/client/proc/toggle_vehicle_blockers,
+		/client/proc/toggle_rappel_menu,
 		admin_verbs_admin,
 		admin_verbs_ban,
 		admin_verbs_minor_event,

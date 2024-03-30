@@ -133,6 +133,11 @@
 #define MINIMUM_CHARGE_DISTANCE 3
 #define MAXIMUM_TARGET_DISTANCE 12
 
+/datum/action/xeno_action/onclick/charger_charge/proc/handle_position_change(mob/living/carbon/xenomorph/xeno, body_position)
+	SIGNAL_HANDLER
+	if(body_position == LYING_DOWN)
+		handle_movement(xeno)
+
 /datum/action/xeno_action/onclick/charger_charge/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	if(!DT_PROB(ai_prob_chance, delta_time) || !isnull(charge_dir) || processing_xeno.action_busy)
 		return
@@ -144,29 +149,29 @@
 
 	var/list/possible_charge_dirs = list()
 
-	for(var/mob/living/carbon/human/base_checked_human as anything in GLOB.alive_human_list)
-		var/distance_between_base_human_and_xeno = get_dist(processing_xeno, base_checked_human)
+	for(var/mob/living/carbon/base_checked_carbon as anything in GLOB.alive_mob_list)
+		var/distance_between_base_carbon_and_xeno = get_dist(processing_xeno, base_checked_carbon)
 
-		if(distance_between_base_human_and_xeno > MAXIMUM_TARGET_DISTANCE)
+		if(distance_between_base_carbon_and_xeno > MAXIMUM_TARGET_DISTANCE)
 			continue
 
-		if(distance_between_base_human_and_xeno < MINIMUM_CHARGE_DISTANCE)
+		if(distance_between_base_carbon_and_xeno < MINIMUM_CHARGE_DISTANCE)
 			continue
 
-		if(!processing_xeno.check_mob_target(base_checked_human))
+		if(!base_checked_carbon.ai_can_target(processing_xeno))
 			continue
 
 		var/secondary_count = 0
 		var/secondary_x_sum = 0
 		var/secondary_y_sum = 0
 
-		for(var/mob/living/carbon/human/secondary_checked_human in range(FLOCK_SCAN_RADIUS, base_checked_human))
-			if(!processing_xeno.check_mob_target(secondary_checked_human))
+		for(var/mob/living/carbon/secondary_checked_carbon in range(FLOCK_SCAN_RADIUS, base_checked_carbon))
+			if(!secondary_checked_carbon.ai_can_target(processing_xeno))
 				continue
 
 			secondary_count++
-			secondary_x_sum += secondary_checked_human.x
-			secondary_y_sum += secondary_checked_human.y
+			secondary_x_sum += secondary_checked_carbon.x
+			secondary_y_sum += secondary_checked_carbon.y
 
 		if(secondary_count < MIN_TARGETS_TO_CHARGE)
 			continue
@@ -275,13 +280,13 @@
 
 	noise_timer = noise_timer ? --noise_timer : 3
 	if(noise_timer == 3)
-		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
+		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 100)
 
-		for(var/mob/living/carbon/human/Mob in range(10, xeno))
-			shake_camera(Mob, 2, 1)
+		for(var/mob/living/carbon/human/Mob in range(14, xeno))
+			shake_camera(Mob, 2, 2)
 
 	for(var/mob/living/carbon/human/Mob in xeno.loc)
-		if(Mob.lying && Mob.stat != DEAD)
+		if(Mob.body_position == LYING_DOWN && Mob.stat != DEAD)
 			xeno.visible_message(SPAN_DANGER("[xeno] runs [Mob] over!"),
 				SPAN_DANGER("You run [Mob] over!")
 			)
@@ -297,10 +302,15 @@
 
 	if(momentum >= 5)
 		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
-			if(hit_human.knocked_down)
+			if(hit_human.body_position == LYING_DOWN)
+				continue
+
+			if(xeno.can_not_harm(hit_human))
 				continue
 
 			shake_camera(hit_human, 4, 2)
+			if(hit_human.buckled)
+				hit_human.buckled.unbuckle()
 			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
 			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
 			hit_human.take_overall_armored_damage(momentum * 4)

@@ -67,6 +67,9 @@
 	)
 	has_gamemode_skin = TRUE
 
+/obj/item/storage/large_holster/m37/standard
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/large_holster/m37/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 
@@ -367,7 +370,7 @@
 
 /datum/action/item_action/specialist/toggle_fuel/can_use_action()
 	var/mob/living/carbon/human/H = owner
-	if(istype(H) && !H.is_mob_incapacitated() && !H.lying && holder_item == H.back)
+	if(istype(H) && !H.is_mob_incapacitated() && H.body_position == STANDING_UP && holder_item == H.back)
 		return TRUE
 
 /datum/action/item_action/specialist/toggle_fuel/action_activate()

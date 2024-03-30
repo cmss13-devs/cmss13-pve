@@ -7,15 +7,15 @@
 
 #define OPEN_TURF_PENALTY 1
 #define DOOR_PENALTY 3
-#define OBJECT_PENALTY 20
 #define HUMAN_PENALTY 4
 #define XENO_PENALTY 20
-#define VEHICLE_PENALTY 25
+#define OBJECT_PENALTY 20
+#define FIRE_PENALTY 25
 #define SENTRY_PENALTY 25
+#define VEHICLE_PENALTY 25
 #define WINDOW_FRAME_PENALTY 25
 #define BARRICADE_PENALTY 50
 #define WALL_PENALTY 50
-#define FIRE_PENALTY 25
 
 /*
 PROBABILITY CALCULATIONS ARE HERE
@@ -23,8 +23,10 @@ PROBABILITY CALCULATIONS ARE HERE
 
 #define XENO_SLASH 80
 
-#define RETREAT_AT_PLASMA_LEVEL 0.2
-#define RETREAT_AT_HEALTH_LEVEL 0.4
+#define XENO_DOOR_BUILDING_CHANCE 40
+
+#define PLASMA_RETREAT_PERCENTAGE 10
+#define HEALTH_RETREAT_PERCENTAGE 20
 
 #define LURKING_IGNORE_SHOT_CHANCE 75
 
@@ -88,4 +90,7 @@ PROBABILITY CALCULATIONS ARE HERE
 
 
 /// Special blockers for pathfinding or obstacle handling
-#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space)
+#define XENO_AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space, /turf/open/gm/river)
+
+// Friend-or-foe universal check
+#define IS_SAME_HIVENUMBER(A,B) (A.hivenumber == B.hivenumber)

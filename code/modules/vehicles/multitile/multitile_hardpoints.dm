@@ -201,6 +201,7 @@
 //ALWAYS CALL THIS WHEN ATTACHING HARDPOINTS
 /obj/vehicle/multitile/proc/add_hardpoint(obj/item/hardpoint/HP, mob/user)
 	HP.owner = src
+	set_muzzle_offsets(HP)
 	HP.forceMove(src)
 	hardpoints += HP
 
@@ -208,6 +209,9 @@
 	HP.rotate(turning_angle(HP.dir, dir))
 
 	update_icon()
+
+/obj/vehicle/multitile/proc/set_muzzle_offsets(obj/item/hardpoint/HP)
+	return
 
 //General proc for taking off hardpoints
 //ALWAYS CALL THIS WHEN REMOVING HARDPOINTS
@@ -230,47 +234,3 @@
 		qdel(old)
 
 	update_icon()
-
-//proc that fires non selected weaponry
-/obj/vehicle/multitile/proc/shoot_other_weapon(mob/living/carbon/human/M, seat, atom/A)
-
-	if(!istype(M))
-		return
-
-	var/list/usable_hps = get_hardpoints_with_ammo(seat)
-	for(var/obj/item/hardpoint/HP in usable_hps)
-		if(HP == active_hp[seat] || HP.slot != HDPT_PRIMARY && HP.slot != HDPT_SECONDARY)
-			usable_hps.Remove(HP)
-
-	if(!LAZYLEN(usable_hps))
-		to_chat(M, SPAN_WARNING("No other working weapons detected."))
-		return
-
-	for(var/obj/item/hardpoint/HP in usable_hps)
-		if(!HP.can_activate(M, A))
-			return
-		HP.activate(M, A)
-		break
-	return
-
-//proc that activates support module if it can be activated and you meet requirements
-/obj/vehicle/multitile/proc/activate_support_module(mob/living/carbon/human/M, seat, atom/A)
-
-	if(!istype(M))
-		return
-
-	var/list/usable_hps = get_activatable_hardpoints(seat)
-	for(var/obj/item/hardpoint/HP in usable_hps)
-		if(HP.slot != HDPT_SUPPORT)
-			usable_hps.Remove(HP)
-
-	if(!LAZYLEN(usable_hps))
-		to_chat(M, SPAN_WARNING("No activatable support modules detected."))
-		return
-
-	for(var/obj/item/hardpoint/HP in usable_hps)
-		if(!HP.can_activate(M, A))
-			return
-		HP.activate(M, A)
-		break
-	return

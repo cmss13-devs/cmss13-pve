@@ -16,6 +16,9 @@ map lv624
 	default
 endmap
 
+map lv624_repaired
+endmap
+
 map bigredv2
 endmap
 
@@ -35,10 +38,12 @@ map desert_dam
 	minplayers 130
 endmap
 
+map ice_colony_v1
+	minplayers 130
+endmap
+
 map ice_colony_v2
 	minplayers 130
-	voteweight 0
-	disabled
 endmap
 
 map shivas_snowball

@@ -40,8 +40,8 @@
 		return
 
 	if(QDELETED(buckled_mob))
-		vehicle.set_seated_mob(seat, null)
 		M.unset_interaction()
+		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(world_view_size, vehicle)
 			M.client.pixel_x = 0
@@ -174,8 +174,8 @@
 		return
 
 	if(QDELETED(buckled_mob))
-		vehicle.set_seated_mob(seat, null)
 		M.unset_interaction()
+		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(world_view_size, vehicle)
 			M.client.pixel_x = 0
@@ -252,8 +252,8 @@
 		return
 
 	if(QDELETED(buckled_mob))
-		vehicle.set_seated_mob(seat, null)
 		M.unset_interaction()
+		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(world_view_size, vehicle)
 			M.client.pixel_x = 0
@@ -300,6 +300,7 @@
 	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
 	icon_state = "vehicle_seat"
+	buckling_sound = 'sound/effects/metal_close.ogg'
 	var/image/chairbar = null
 	var/broken = FALSE
 	buildstackamount = 0
@@ -388,17 +389,6 @@
 
 	handle_rotation()
 
-/obj/structure/bed/chair/vehicle/unbuckle()
-	if(buckled_mob && buckled_mob.buckled == src)
-		buckled_mob.buckled = null
-		buckled_mob.anchored = initial(buckled_mob.anchored)
-		buckled_mob.update_canmove()
-
-		var/M = buckled_mob
-		buckled_mob = null
-
-		afterbuckle(M)
-
 //attack handling
 
 /obj/structure/bed/chair/vehicle/attack_alien(mob/living/user)
@@ -453,3 +443,39 @@
 				break_seat()
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			break_seat()
+
+/obj/structure/bed/chair/vehicle/toc
+	name = "overwatch chair"
+	desc = "A sturdy chair with a brace that lowers over the body. Prevents being flung around in vehicle during a crash and being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon_state = "armor_chair"
+	can_rotate = TRUE
+
+/obj/structure/bed/chair/vehicle/toc/afterbuckle(mob/M)
+	if(buckled_mob)
+		if(buckled_mob != M)
+			return
+		icon_state = initial(icon_state) + "_buckled"
+		overlays += chairbar
+
+		if(buckle_offset_x != 0)
+			mob_old_x = M.pixel_x
+			M.pixel_x = buckle_offset_x
+		if(buckle_offset_y != 0)
+			mob_old_y = M.pixel_y
+			M.pixel_y = buckle_offset_y
+
+		ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, BUCKLED_TRAIT)
+	else
+		icon_state = initial(icon_state)
+		overlays -= chairbar
+
+		if(buckle_offset_x != 0)
+			M.pixel_x = mob_old_x
+			mob_old_x = 0
+		if(buckle_offset_y != 0)
+			M.pixel_y = mob_old_y
+			mob_old_y = 0
+
+		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
+
+	handle_rotation()

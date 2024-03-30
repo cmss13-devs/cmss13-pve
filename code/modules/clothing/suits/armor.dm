@@ -28,7 +28,7 @@
 
 /obj/item/clothing/suit/armor/vest
 	name = "armored vest"
-	desc = "An armored vest that protects against some damage."
+	desc = "Generic venlar bulletproof vest found in the hands of various private sector security types."
 	icon_state = "armor"
 	item_state = "armor"
 	blood_overlay_type = "armor"
@@ -58,7 +58,7 @@
 
 /obj/item/clothing/suit/armor/vest/pilot
 	name = "\improper M70 flak jacket"
-	desc = "A flak jacket used by dropship pilots to protect themselves while flying in the cockpit. Excels in protecting the wearer against high-velocity solid projectiles."
+	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics..."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "pilot"
 	blood_overlay_type = "armor"
@@ -118,7 +118,7 @@
 
 /obj/item/clothing/suit/armor/vest/security
 	name = "Wey-Yu security armor"
-	desc = "An armored vest that protects against some damage. This one has a Weyland-Yutani corporate badge."
+	desc = "Generic venlar bulletproof vest found in the hands of various private sector security types. This one has a Weyland-Yutani corporate badge."
 	icon_state = "armorsec"
 	item_state = "armor"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN

@@ -78,8 +78,8 @@
 //M41A (MK1) TRUE AND ORIGINAL
 
 /obj/item/ammo_magazine/rifle/m41aMK1
-	name = "\improper M41A MK1 magazine (10x24mm)"
-	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds."
+	name = "\improper M41A magazine (10x24mm)"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm rounds."
 	icon_state = "m41a_mk1"
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/m41aMK1
@@ -87,21 +87,33 @@
 	ammo_band_icon = "+m41a_mk1_band"
 	ammo_band_icon_empty = "+m41a_mk1_band_e"
 
+/obj/item/ammo_magazine/rifle/m41aMK1/rubber
+	name = "\improper M41A Less Lethal magazine"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm less lethal rubber bullets. Be careful, they're LESS, lethal, not NON, lethal."
+	default_ammo = /datum/ammo/bullet/rifle/rubber
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+/obj/item/ammo_magazine/rifle/m41aMK1/training
+	name = "\improper M41A training magazine"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm training rounds."
+	default_ammo = /datum/ammo/bullet/rifle/rubber
+	ammo_band_color = AMMO_BAND_COLOR_TRAINING
+
 /obj/item/ammo_magazine/rifle/m41aMK1/ap
-	name = "\improper M41A MK1 AP magazine (10x24mm)"
-	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains AP bullets."
+	name = "\improper M41A AP magazine (10x24mm)"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm steelcore armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/m41aMK1/heap
-	name = "\improper M41A MK1 HEAP magazine (10x24mm)"
-	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains High-Explosive Armor-Piercing bullets."
+	name = "\improper M41A HEAP magazine (10x24mm)"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm M309 Armor Piercing High Explosive rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	name = "\improper M41A MK1 incendiary magazine (10x24mm)"
-	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains incendiary bullets."
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm incendiary rounds."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
@@ -167,6 +179,15 @@
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
+/obj/item/ammo_magazine/rifle/m4ra/pve
+	name = "\improper M4RA depleted uranium magazine (10x24mm)"
+	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
+	icon_state = "m4ra"
+	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
 //-------------------------------------------------------
 //XM40 AKA SOF RIFLE FROM HELL (It's an EM-2, a prototype of the real world L85A1 way back from the 1940s. We've given it a blue plastic shell and an integral suppressor)
 /obj/item/ammo_magazine/rifle/xm40
@@ -218,8 +239,8 @@
 //M16 RIFLE
 
 /obj/item/ammo_magazine/rifle/m16
-	name = "\improper M16 magazine (5.56x45mm)"
-	desc = "A 5.56x45mm magazine for the M16 assault rifle."
+	name = "\improper M16 magazine"
+	desc = "An FMJ 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
@@ -230,9 +251,22 @@
 	ammo_band_icon = "+m16_band"
 	ammo_band_icon_empty = "+m16_band_e"
 
+/obj/item/ammo_magazine/rifle/m16/extended
+	name = "\improper M16 extended magazine"
+	desc = "An FMJ 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 30 rounds."
+	caliber = "5.56x45mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "m16"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/m16
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+m16_band"
+	ammo_band_icon_empty = "+m16_band_e"
+
 /obj/item/ammo_magazine/rifle/m16/ap
-	name = "\improper M16 AP magazine (5.56x45mm)"
-	desc = "An AP 5.56x45mm magazine for the M16 assault rifle."
+	name = "\improper M16 AP magazine"
+	desc = "An AP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
 	caliber = "5.56x45mm"
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	max_rounds = 20

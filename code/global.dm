@@ -1,7 +1,10 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
 #define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
-#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow")
+#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow", "SSV Chapaev", "USS Rover")
+
+#define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
+#define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn
 //Admin Permissions
@@ -120,7 +123,7 @@ var/list/AAlarmWireColorToIndex
 #define MAX_EMOTE_LEN 256
 #define MAX_PAPER_MESSAGE_LEN 3072
 #define MAX_BOOK_MESSAGE_LEN 9216
-#define MAX_NAME_LEN 26
+#define MAX_NAME_LEN 28
 
 /// 3 minutes in the station.
 #define shuttle_time_in_station 3 MINUTES

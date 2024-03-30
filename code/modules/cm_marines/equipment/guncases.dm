@@ -13,9 +13,9 @@
 
 /obj/item/storage/box/guncase/update_icon()
 	if(LAZYLEN(contents))
-		icon_state = "guncase"
+		icon_state = initial(icon_state)
 	else
-		icon_state = "guncase_e"
+		icon_state = "[initial(icon_state)]_e"
 
 /obj/item/storage/box/guncase/Initialize()
 	. = ..()
@@ -151,6 +151,14 @@
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher(src)
 
+/obj/item/storage/box/guncase/flamer/special
+	storage_slots = 3
+
+/obj/item/storage/box/guncase/flamer/special/fill_preset_inventory()
+	new /obj/item/weapon/gun/flamer(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
+
 //------------
 /obj/item/storage/box/guncase/m56d
 	name = "\improper M56D heavy machine gun case"
@@ -201,6 +209,7 @@
 /obj/item/storage/box/guncase/pumpshotgun
 	name = "\improper M37A2 Pump Shotgun case"
 	desc = "A gun case containing the M37A2 Pump Shotgun."
+	icon_state = "guncase_red"
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs)
 
@@ -215,6 +224,13 @@
 				new /obj/item/ammo_magazine/shotgun/flechette(src)
 			if(3)
 				new /obj/item/ammo_magazine/shotgun/slugs(src)
+
+/obj/item/storage/box/guncase/pumpshotgun/special
+	storage_slots = 2
+
+/obj/item/storage/box/guncase/pumpshotgun/special/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/pump/special(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
 
 /obj/item/storage/box/guncase/mk45_automag
 	name = "\improper MK-45 Automagnum case"
@@ -322,12 +338,6 @@
 		/obj/item/tool/screwdriver,
 		/obj/item/pamphlet/trait/vulture,
 	)
-
-/obj/item/storage/box/guncase/vulture/update_icon()
-	if(LAZYLEN(contents))
-		icon_state = "guncase_blue"
-	else
-		icon_state = "guncase_blue_e"
 
 /obj/item/storage/box/guncase/vulture/fill_preset_inventory()
 	var/obj/item/weapon/gun/boltaction/vulture/rifle = new(src)
