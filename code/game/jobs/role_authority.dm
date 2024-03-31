@@ -18,9 +18,10 @@ var/global/datum/authority/branch/role/RoleAuthority
 #define RETURN_TO_LOBBY 2
 
 #define NEVER_PRIORITY 0
-#define HIGH_PRIORITY 1
-#define MED_PRIORITY 2
-#define LOW_PRIORITY 3
+#define PRIME_PRIORITY 1
+#define HIGH_PRIORITY 2
+#define MED_PRIORITY 3
+#define LOW_PRIORITY 4
 
 #define SHIPSIDE_ROLE_WEIGHT 0.25
 
@@ -245,36 +246,18 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(!length(roles_to_assign) || !length(unassigned_players))
 		return
 
+	log_debug("ASSIGNMENT: Starting prime priority assignments.")
+	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+		assign_role_to_player_by_priority(cycled_unassigned, roles_to_assign, unassigned_players, PRIME_PRIORITY)
+
+	log_debug("ASSIGNMENT: Starting regular priority assignments.")
 	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
 		var/player_assigned_job = FALSE
-		log_debug("ASSIGNMENT: We have started assigning for [cycled_unassigned].")
 
 		for(var/priority in HIGH_PRIORITY to LOW_PRIORITY)
-			var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(priority))
-			log_debug("ASSIGNMENT: We have started cycled through priority [priority] for [cycled_unassigned].")
-
-			for(var/job_name in wanted_jobs_by_name)
-				log_debug("ASSIGNMENT: We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned].")
-				if(job_name in roles_to_assign)
-					log_debug("ASSIGNMENT: We have found [job_name] in roles to assign for [cycled_unassigned].")
-					var/datum/job/actual_job = roles_to_assign[job_name]
-
-					if(assign_role(cycled_unassigned, actual_job))
-						log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned].")
-						unassigned_players -= cycled_unassigned
-
-						if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
-							roles_to_assign -= job_name
-							log_debug("ASSIGNMENT: We have ran out of slots for [job_name] and it has been removed from roles to assign.")
-
-						player_assigned_job = TRUE
-						break
-
+			player_assigned_job = assign_role_to_player_by_priority(cycled_unassigned, roles_to_assign, unassigned_players, priority)
 			if(player_assigned_job)
-				log_debug("ASSIGNMENT: [cycled_unassigned] has been assigned a job and we are breaking.")
 				break
-
-			log_debug("ASSIGNMENT: [cycled_unassigned] did not get a job at priority [priority], moving to next priority level.")
 
 		if(!length(roles_to_assign))
 			log_debug("ASSIGNMENT: No more roles to assign, breaking.")
@@ -321,9 +304,38 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for return to lobby alternate option.")
 					cycled_unassigned.ready = 0
 
-	log_debug("ASSIGNMENT: Assigning complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
+	log_debug("ASSIGNMENT: Assignment complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
 
 	return roles_to_assign
+
+/datum/authority/branch/role/proc/assign_role_to_player_by_priority(mob/new_player/cycled_unassigned, list/roles_to_assign, list/unassigned_players, priority)
+	log_debug("ASSIGNMENT: We have started cycled through priority [priority] for [cycled_unassigned].")
+	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(priority))
+	var/player_assigned_job = FALSE
+
+	for(var/job_name in wanted_jobs_by_name)
+		log_debug("ASSIGNMENT: We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned].")
+		if(job_name in roles_to_assign)
+			log_debug("ASSIGNMENT: We have found [job_name] in roles to assign for [cycled_unassigned].")
+			var/datum/job/actual_job = roles_to_assign[job_name]
+
+			if(assign_role(cycled_unassigned, actual_job))
+				log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned].")
+				unassigned_players -= cycled_unassigned
+
+				if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
+					roles_to_assign -= job_name
+					log_debug("ASSIGNMENT: We have ran out of slots for [job_name] and it has been removed from roles to assign.")
+
+				player_assigned_job = TRUE
+				break
+
+	if(player_assigned_job)
+		log_debug("ASSIGNMENT: [cycled_unassigned] has been assigned a job.")
+		return player_assigned_job
+
+	log_debug("ASSIGNMENT: [cycled_unassigned] did not get a job at priority [priority].")
+	return player_assigned_job
 
 /**
 * Calculate role balance weight for one person joining as that role. This weight is used
