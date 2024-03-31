@@ -620,7 +620,6 @@
 	bypass_w_limit = list(
 		/obj/item/ammo_magazine/pkp,
 	)
-	max_w_class = SIZE_MEDIUM
 	can_hold = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/device/flashlight/flare,
@@ -1763,10 +1762,6 @@
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
 	icon_state = "upp_machinegun_pistol"
 	storage_slots = 7
-	holster_slots = list(
-		"1" = list(
-			"icon_x" = 5,
-			"icon_y" = -2))
 	can_hold = list(
 		/obj/item/weapon/gun/pistol/t73,
 		/obj/item/ammo_magazine/pistol/t73,
