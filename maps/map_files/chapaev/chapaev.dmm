@@ -213,7 +213,11 @@
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
 /obj/item/weapon/gun/pkp/iff,
 /turf/open/floor/strata{
@@ -700,6 +704,34 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"fC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "fJ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	id = "Delta_1";
@@ -2748,13 +2780,7 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3650,7 +3676,11 @@
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
 /obj/item/weapon/gun/pkp/iff,
 /turf/open/floor/strata{
@@ -4431,18 +4461,10 @@
 /area/golden_arrow/medical)
 "RM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper/crumpled/bloody{
+	pixel_y = 6
+	},
 /obj/item/attachable/bayonet/upp,
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 20
-	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 16;
-	pixel_x = -7
-	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4827,13 +4849,7 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -14652,7 +14668,7 @@ BK
 BK
 wH
 VL
-BK
+fC
 iO
 bC
 CJ
