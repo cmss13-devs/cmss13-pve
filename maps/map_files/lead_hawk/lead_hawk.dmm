@@ -1005,6 +1005,18 @@
 	},
 /turf/open/organic/grass,
 /area/lead_hawk)
+"jB" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/bush/ausbushes/var3/leafybush{
+	layer = 3.05;
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/turf/open/organic/grass,
+/area/lead_hawk/co)
 "jE" = (
 /obj/structure/largecrate/random/case,
 /turf/open/floor/corsat{
@@ -3043,6 +3055,17 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/medical)
+"Fg" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/window/reinforced/ultra,
+/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+	pixel_x = -15;
+	pixel_y = 16
+	},
+/turf/open/organic/grass,
+/area/lead_hawk/co)
 "Fw" = (
 /obj/structure/window/framed/corsat/hull/security,
 /obj/structure/machinery/door/poddoor/almayer/blended/white{
@@ -3836,6 +3859,13 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"Pj" = (
+/obj/structure/window/reinforced/ultra,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/organic/grass,
+/area/lead_hawk/co)
 "Pl" = (
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = 5;
@@ -4798,6 +4828,23 @@
 	icon_state = "theta"
 	},
 /area/lead_hawk/squad_omega)
+"YS" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/flora/grass/tallgrass/jungle,
+/mob/living/simple_animal/lizard/lexi,
+/obj/item/toy/plush/rock{
+	desc = "A rock, what-for lying on and throwing and such.";
+	name = "rock";
+	pixel_y = 9
+	},
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 6;
+	pixel_y = 24
+	},
+/turf/open/organic/grass,
+/area/lead_hawk/co)
 "YT" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat{
@@ -10106,8 +10153,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+ku
+ku
 ku
 cx
 xg
@@ -10258,9 +10305,9 @@ gR
 gR
 gR
 gR
-gR
-gR
 ku
+YS
+Pj
 ei
 GY
 FE
@@ -10410,9 +10457,9 @@ gR
 gR
 gR
 gR
-gR
-gR
 ku
+jB
+Fg
 ei
 ei
 ei
@@ -10562,8 +10609,8 @@ gR
 gR
 gR
 gR
-gR
-gR
+ku
+ku
 ku
 ei
 ei
