@@ -734,7 +734,7 @@
 	return ..()
 
 /obj/item/weapon/gun/revolver/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17)
 
 /obj/item/weapon/gun/revolver/cmb/set_gun_config_values()
 	..()
