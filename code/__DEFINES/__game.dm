@@ -27,7 +27,7 @@ block( \
 
 #define MAP_ICE_COLONY "Ice Colony" // Highpop only
 #define MAP_LV_624 "LV-624"
-#define MAP_LV_624_REPAIRED "LV-624 Repaired"
+#define MAP_LV_624_REPAIRED "LV-624"
 #define MAP_BIG_RED "Solaris Ridge"
 #define MAP_PRISON_STATION "Fiorina Cellblocks"
 #define MAP_PRISON_STATION_V3 "Fiorina Science Annex"
@@ -42,6 +42,7 @@ block( \
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
+#define MAP_NEW_VARADERO_REPAIRED "New Varadero"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 
