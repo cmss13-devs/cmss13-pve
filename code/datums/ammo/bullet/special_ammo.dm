@@ -91,6 +91,9 @@
 
 /datum/ammo/bullet/turret/upp
 	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_2
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_4
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_4
 
 /datum/ammo/bullet/turret/dumb
 	icon_state = "bullet"
