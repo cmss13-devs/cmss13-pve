@@ -17,12 +17,16 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	/// How many xenos we want assigned to this task at max
 	var/max_assigned = 3
 
+	/// Should we try and find new xenos for this override, or stick to currently assigned
+	var/search_assign = TRUE
+
 /datum/component/ai_behavior_override/Initialize(...)
 	. = ..()
 
 	GLOB.all_ai_behavior_overrides += src
 
 	behavior_image = new(behavior_icon, parent, behavior_icon_state, layer = ABOVE_FLY_LAYER)
+	behavior_image.alpha = 150
 
 	for(var/client/game_master in GLOB.game_masters)
 		game_master.images |= behavior_image
@@ -59,8 +63,9 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 /datum/component/ai_behavior_override/proc/process_override_behavior(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 
-	RegisterSignal(processing_xeno, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_queue), TRUE)
-	currently_assigned |= processing_xeno
+	if(search_assign)
+		RegisterSignal(processing_xeno, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_queue), TRUE)
+		currently_assigned |= processing_xeno
 
 	return TRUE
 

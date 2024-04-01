@@ -64,9 +64,8 @@
 	if(processing_xeno.get_active_hand())
 		processing_xeno.swap_hand()
 
-	var/datum/xeno_ai_movement/processing_xeno_movement = processing_xeno.ai_movement_handler
 	if(processing_xeno.pulling == parent)
-		processing_xeno_movement.ai_move_hive(delta_time)
+		processing_xeno.ai_move_hive(delta_time)
 		return TRUE
 
 	var/atom/movable/target = processing_xeno.current_target

@@ -94,6 +94,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// If we are currently using click intercept for the behavior section
 	var/behavior_click_intercept = FALSE
 
+	/// List of xenoids currently selected by GM for manual control
+	var/list/controlled_xenos = list()
+
 
 	// Objective stuff
 
@@ -134,6 +137,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
+
+	for(var/controlled_xeno in controlled_xenos)
+		deselect_xeno(controlled_xeno)
 
 	GLOB.game_masters -= game_master_client
 
@@ -316,6 +322,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
 
+	for(var/controlled_xeno in controlled_xenos)
+		deselect_xeno(controlled_xeno)
+
 /datum/game_master/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
 
@@ -363,7 +372,48 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					qdel(component_to_remove)
 				return TRUE
 
-			object.AddComponent(behavior_type)
+			if(LAZYACCESS(modifiers, RIGHT_CLICK))
+				if(LAZYACCESS(modifiers, CTRL_CLICK))
+					object.AddComponent(behavior_type)
+					if(!LAZYLEN(controlled_xenos))
+						return TRUE
+
+					var/datum/component/ai_behavior_override/behavior = object.datum_components?[behavior_type]
+					if(!behavior)
+						return TRUE
+
+					behavior.search_assign = FALSE
+					var/list/currently_assigned = behavior.currently_assigned
+					for(var/mob/living/carbon/xenomorph/assigned_xeno as anything in controlled_xenos)
+						if(LAZYLEN(currently_assigned) >= behavior.max_assigned)
+							break
+						currently_assigned |= assigned_xeno
+						assigned_xeno.patrol_points = list(object)
+
+				else if(LAZYACCESS(modifiers, SHIFT_CLICK))
+					for(var/mob/living/carbon/xenomorph/patrolling_xeno as anything in controlled_xenos)
+						patrolling_xeno.patrol_points |= object
+
+				else
+					for(var/mob/living/carbon/xenomorph/moving_xeno as anything in controlled_xenos)
+						moving_xeno.patrol_points = list(object)
+
+				return TRUE
+
+			if(isxeno(object))
+				if(object in controlled_xenos)
+					deselect_xeno(object)
+					return TRUE
+
+				if(!LAZYACCESS(modifiers, SHIFT_CLICK))
+					for(var/deselected_xeno in controlled_xenos)
+						deselect_xeno(deselected_xeno)
+
+				select_xeno(object)
+				return TRUE
+
+			for(var/deselected_xeno in controlled_xenos)
+				deselect_xeno(deselected_xeno)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
@@ -441,6 +491,37 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
+
+/client/proc/select_box_wrapper(atom/first_corner, atom/second_corner)
+	if(game_master_menu && game_master_menu.current_click_intercept_action == BEHAVIOR_CLICK_INTERCEPT_ACTION)
+		game_master_menu.select_box(first_corner, second_corner)
+
+/datum/game_master/proc/select_box(atom/first_corner, atom/second_corner)
+	if(!("Shift" in game_master_client.keys_held))
+		for(var/controlled_xeno in controlled_xenos)
+			deselect_xeno(controlled_xeno)
+
+	var/turf/start = get_turf(first_corner)
+	var/turf/end = get_turf(second_corner)
+
+	var/list/selection_box = block(start, end)
+	for(var/mob/living/carbon/xenomorph/cycled_xeno as anything in GLOB.living_xeno_list)
+		if(cycled_xeno.loc in selection_box)
+			select_xeno(cycled_xeno)
+
+/datum/game_master/proc/select_xeno(selected_xeno)
+	controlled_xenos |= selected_xeno
+	if(controlled_xenos?[selected_xeno])
+		return
+
+	var/image/selection_image = new('icons/effects/game_master_xeno_behaviors.dmi', selected_xeno, "selected", layer = ABOVE_FLY_LAYER)
+
+	controlled_xenos[selected_xeno] = selection_image
+	game_master_client.images |= selection_image
+
+/datum/game_master/proc/deselect_xeno(deselected_xeno)
+	game_master_client.images -= controlled_xenos[deselected_xeno]
+	controlled_xenos -= deselected_xeno
 
 /datum/game_master/proc/is_objective(atom/checked_object)
 	for(var/list/cycled_objective in GLOB.game_master_objectives)

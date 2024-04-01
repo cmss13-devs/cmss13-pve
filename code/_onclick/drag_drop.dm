@@ -7,6 +7,11 @@
 */
 /atom/MouseDrop(atom/over)
 	if(!usr || !over) return
+
+	spawn(0)
+		if(over && usr.client)
+			usr.client.select_box_wrapper(src, over)
+
 	if(!Adjacent(usr) || !over.Adjacent(usr)) return // should stop you from dragging through windows
 
 	spawn(0)
@@ -20,5 +25,6 @@
 	Called on the atom that you release mouse drag over. "dropping" is the atom being mouse dragged
 */
 /atom/proc/MouseDrop_T(atom/dropping, mob/user)
+
 	if (dropping.flags_atom & NOINTERACT)
 		return
