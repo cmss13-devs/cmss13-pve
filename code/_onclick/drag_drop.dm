@@ -25,6 +25,5 @@
 	Called on the atom that you release mouse drag over. "dropping" is the atom being mouse dragged
 */
 /atom/proc/MouseDrop_T(atom/dropping, mob/user)
-
 	if (dropping.flags_atom & NOINTERACT)
 		return
