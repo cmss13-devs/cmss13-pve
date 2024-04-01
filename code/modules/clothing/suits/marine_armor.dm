@@ -401,7 +401,7 @@
 	/obj/item/weapon/gun/rifle/m41aMK1,
 	/obj/item/storage/large_holster/m37,
 	/obj/item/weapon/gun/flamer,
-	/obj/item/storage/large_holster/machete/full,
+	/obj/item/storage/large_holster/machete,
 	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
