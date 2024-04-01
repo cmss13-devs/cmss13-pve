@@ -4636,6 +4636,9 @@
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
+"faY" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
+/area/lv624/ground/jungle/south_central_jungle)
 "faZ" = (
 /obj/structure/surface/table,
 /obj/item/tool/kitchen/utensil/knife,
@@ -5838,7 +5841,7 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "gxv" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/faxmachine,
+/obj/structure/machinery/faxmachine/corporate/liaison,
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whiteyellow"
@@ -16947,7 +16950,6 @@
 "sPK" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	locked = 1;
 	name = "\improper Storage Room"
 	},
 /turf/open/floor{
@@ -36745,8 +36747,8 @@ gOl
 gOl
 gOl
 tOc
-eUI
-mdK
+tOc
+fcJ
 mdK
 aeW
 bZf
@@ -36969,8 +36971,8 @@ fMc
 bFS
 fMc
 lDp
-eUI
-mdK
+faY
+iwh
 mdK
 hOD
 vLL
