@@ -130,7 +130,7 @@
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
-	max_w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 
 /obj/item/storage/box/upp/fill_preset_inventory()
@@ -144,7 +144,7 @@
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
-	max_w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 	
 /obj/item/storage/box/M1911_loadout/fill_preset_inventory()
