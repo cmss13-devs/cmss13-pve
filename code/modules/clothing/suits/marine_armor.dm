@@ -396,6 +396,12 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
+	var/list/smartgun_back = list(
+	/obj/item/weapon/gun/shotgun/pump/special,
+	/obj/item/weapon/gun/rifle/m41aMK1,
+	/obj/item/storage/large_holster/m37,
+	/obj/item/weapon/gun/flamer,
+	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
@@ -425,7 +431,7 @@
 		return
 
 
-	if(istype(equipping_item, /obj/item/weapon/gun))
+	if(is_type_in_list(equipping_item, smartgun_back))
 		return
 		
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
