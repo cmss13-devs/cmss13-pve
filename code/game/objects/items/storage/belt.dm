@@ -1639,6 +1639,7 @@
 		/obj/item/weapon/gun/flare,
 		/obj/item/weapon/gun/pistol,
 		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/revolver/cmb/marine,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
