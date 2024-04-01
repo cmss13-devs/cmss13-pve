@@ -11,7 +11,7 @@
 
 	max_range = 12
 	accuracy = HIT_ACCURACY_TIER_4
-	damage = 35
+	damage = 40
 	penetration = 0
 	
 
