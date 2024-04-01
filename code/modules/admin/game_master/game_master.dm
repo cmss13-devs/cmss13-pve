@@ -39,6 +39,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive", "Build")
 #define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive, "Build" = /datum/component/ai_behavior_override/build)
 
+#define DEFAULT_BEHAVIOR_LIFE_SPAN 15
+
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 #define OBJECTIVE_COLOR_OPTIONS list("red", "purple", "blue")
@@ -90,6 +92,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	/// The current behavior to add when clicking with behavior_click_intercept on
 	var/selected_behavior = DEFAULT_BEHAVIOR_STRING
+
+	/// The amount of xenos to spawn in the spawn section
+	var/behavior_lifespan = DEFAULT_BEHAVIOR_LIFE_SPAN
 
 	/// If we are currently using click intercept for the behavior section
 	var/behavior_click_intercept = FALSE
@@ -158,6 +163,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	// Behavior stuff
 	data["selected_behavior"] = selected_behavior
 	data["behavior_click_intercept"] = behavior_click_intercept
+	data["behavior_lifespan"] = behavior_lifespan
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
@@ -238,6 +244,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return
 
 		//Behavior Section
+		if("set_behavior_lifespan")
+			var/new_number = text2num(params["lifespan_value"])
+			behavior_lifespan = clamp(new_number, -1, 600)
+			return
+
 		if("set_selected_behavior")
 			selected_behavior = params["new_behavior"]
 			return
@@ -377,7 +388,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			if(LAZYACCESS(modifiers, RIGHT_CLICK))
 				if(LAZYACCESS(modifiers, CTRL_CLICK))
-					object.AddComponent(behavior_type)
+					object.AddComponent(behavior_type, behavior_lifespan SECONDS)
 					if(!LAZYLEN(controlled_xenos))
 						return TRUE
 

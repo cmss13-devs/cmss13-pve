@@ -31,6 +31,10 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	for(var/client/game_master in GLOB.game_masters)
 		game_master.images |= behavior_image
 
+	var/delete_timer = args[1]
+	if(delete_timer && delete_timer > 0)
+		QDEL_IN(src, delete_timer)
+
 	currently_assigned = list()
 
 /datum/component/ai_behavior_override/Destroy(force, silent, ...)
