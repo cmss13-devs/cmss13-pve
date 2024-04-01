@@ -102,6 +102,7 @@
 			if(!pulling)
 				INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, start_pulling), human_target)
 				face_atom(human_target)
+				swap_hand()
 
 			ai_move_hive(delta_time)
 			return TRUE
