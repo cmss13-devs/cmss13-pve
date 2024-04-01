@@ -250,6 +250,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			reset_click_overrides()
 			behavior_click_intercept = TRUE
 			current_click_intercept_action = BEHAVIOR_CLICK_INTERCEPT_ACTION
+			game_master_client.show_popup_menus = FALSE
 			return
 
 		//Objective Section
@@ -313,6 +314,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	var/client/user_client = user.client
 	if(user_client?.click_intercept == src)
 		user_client.click_intercept = null
+
+	game_master_client.show_popup_menus = TRUE
 
 	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
@@ -387,6 +390,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					for(var/mob/living/carbon/xenomorph/assigned_xeno as anything in controlled_xenos)
 						if(LAZYLEN(currently_assigned) >= behavior.max_assigned)
 							break
+
+						deselect_xeno(deselected_xeno)
 						currently_assigned |= assigned_xeno
 						assigned_xeno.patrol_points = list(object)
 
@@ -487,6 +492,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				return TRUE
 
 /datum/game_master/proc/reset_click_overrides()
+	game_master_client.show_popup_menus = TRUE
 	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE

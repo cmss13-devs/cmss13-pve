@@ -9,7 +9,7 @@
 	if(!usr || !over) return
 
 	spawn(0)
-		if(over && usr.client)
+		if(usr.client)
 			usr.client.select_box_wrapper(src, over)
 
 	if(!Adjacent(usr) || !over.Adjacent(usr)) return // should stop you from dragging through windows

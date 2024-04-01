@@ -67,11 +67,12 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 		RegisterSignal(processing_xeno, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_queue), TRUE)
 		currently_assigned |= processing_xeno
 
+	else if(!LAZYLEN(currently_assigned))
+		qdel(component_to_remove)
+
 	return TRUE
 
 /datum/component/ai_behavior_override/proc/remove_from_queue(mob/removed_xeno)
 	SIGNAL_HANDLER
-	if(currently_assigned)
-		currently_assigned -= removed_xeno
-
+	LAZYREMOVE(currently_assigned, removed_xeno)
 	UnregisterSignal(removed_xeno, COMSIG_PARENT_QDELETING)
