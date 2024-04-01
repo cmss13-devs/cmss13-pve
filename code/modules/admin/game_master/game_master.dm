@@ -39,7 +39,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define SELECTABLE_XENO_BEHAVIORS list("Attack", "Capture", "Hive", "Build")
 #define SELECTABLE_XENO_BEHAVIORS_ASSOC list("Attack" = /datum/component/ai_behavior_override/attack, "Capture" = /datum/component/ai_behavior_override/capture, "Hive" = /datum/component/ai_behavior_override/hive, "Build" = /datum/component/ai_behavior_override/build)
 
-#define DEFAULT_BEHAVIOR_LIFE_SPAN 15
+#define DEFAULT_BEHAVIOR_LIFE_SPAN 0
 
 // Objective stuff
 #define OBJECTIVE_NUMBER_OPTIONS list("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
@@ -416,20 +416,15 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 				return TRUE
 
+			if(!LAZYACCESS(modifiers, SHIFT_CLICK))
+				for(var/deselected_xeno in controlled_xenos)
+					deselect_xeno(deselected_xeno)
+
 			if(isxeno(object))
 				if(object in controlled_xenos)
 					deselect_xeno(object)
-					return TRUE
-
-				if(!LAZYACCESS(modifiers, SHIFT_CLICK))
-					for(var/deselected_xeno in controlled_xenos)
-						deselect_xeno(deselected_xeno)
-
-				select_xeno(object)
-				return TRUE
-
-			for(var/deselected_xeno in controlled_xenos)
-				deselect_xeno(deselected_xeno)
+				else
+					select_xeno(object)
 			return TRUE
 
 		if(OBJECTIVE_CLICK_INTERCEPT_ACTION)
@@ -527,6 +522,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			select_xeno(cycled_xeno)
 
 /datum/game_master/proc/select_xeno(selected_xeno)
+	RegisterSignal(selected_xeno, COMSIG_PARENT_QDELETING, PROC_REF(deselect_xeno), TRUE)
 	controlled_xenos |= selected_xeno
 	if(controlled_xenos?[selected_xeno])
 		return
@@ -537,6 +533,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	game_master_client.images |= selection_image
 
 /datum/game_master/proc/deselect_xeno(deselected_xeno)
+	UnregisterSignal(deselected_xeno, COMSIG_PARENT_QDELETING)
 	game_master_client.images -= controlled_xenos[deselected_xeno]
 	controlled_xenos -= deselected_xeno
 

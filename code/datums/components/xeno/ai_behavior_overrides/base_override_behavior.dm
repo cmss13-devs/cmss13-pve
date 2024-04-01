@@ -53,7 +53,7 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 
 /// Override this to check if we want our behavior to be valid for the checked_xeno, passes the common factor of "distance" which is the distance between the checked_xeno and src parent
 /datum/component/ai_behavior_override/proc/check_behavior_validity(mob/living/carbon/xenomorph/checked_xeno, distance)
-	if(length(currently_assigned) >= max_assigned && !(checked_xeno in currently_assigned))
+	if(!search_assign || length(currently_assigned) >= max_assigned && !(checked_xeno in currently_assigned))
 		remove_from_queue(checked_xeno)
 		return FALSE
 
@@ -71,12 +71,12 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 		RegisterSignal(processing_xeno, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_queue), TRUE)
 		currently_assigned |= processing_xeno
 
-	else if(!LAZYLEN(currently_assigned))
-		qdel(src)
-
 	return TRUE
 
 /datum/component/ai_behavior_override/proc/remove_from_queue(mob/removed_xeno)
 	SIGNAL_HANDLER
 	LAZYREMOVE(currently_assigned, removed_xeno)
 	UnregisterSignal(removed_xeno, COMSIG_PARENT_QDELETING)
+
+	if(!search_assign && !LAZYLEN(currently_assigned))
+		qdel(src)
