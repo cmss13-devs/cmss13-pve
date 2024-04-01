@@ -68,7 +68,7 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 		currently_assigned |= processing_xeno
 
 	else if(!LAZYLEN(currently_assigned))
-		qdel(component_to_remove)
+		qdel(src)
 
 	return TRUE
 

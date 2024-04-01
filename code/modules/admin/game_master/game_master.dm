@@ -391,7 +391,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 						if(LAZYLEN(currently_assigned) >= behavior.max_assigned)
 							break
 
-						deselect_xeno(deselected_xeno)
+						deselect_xeno(assigned_xeno)
 						currently_assigned |= assigned_xeno
 						assigned_xeno.patrol_points = list(object)
 
