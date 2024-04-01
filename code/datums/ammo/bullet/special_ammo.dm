@@ -11,8 +11,9 @@
 
 	max_range = 12
 	accuracy = HIT_ACCURACY_TIER_4
-	damage = 36
+	damage = 35
 	penetration = 0
+	
 
 /datum/ammo/bullet/smartgun/armor_piercing
 	name = "armor-piercing smartgun bullet"
@@ -20,7 +21,7 @@
 
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 24
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 1
 
@@ -39,13 +40,13 @@
 
 	accurate_range = 22
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 30
+	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_7
 	damage_armor_punch = 3
 
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
 	name = "holo-targeting smartgun bullet"
-	damage = 30
+	damage = 32
 	///Stuff for the HRP holotargetting stacks
 	var/holo_stacks = 15
 
