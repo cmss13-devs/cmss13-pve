@@ -137,9 +137,8 @@
 
 /datum/equipment_preset/uscm/pfc/raider
 	name = "Marine Raider Critical Skill Operator"
-	paygrade = "ME5"
+	paygrade = "ME4"
 	assignment = JOB_SQUAD_MARINE_RAIDER
-	rank = JOB_SQUAD_MARINE_RAIDER
 	skills = /datum/skills/commando/deathsquad
 
 /datum/equipment_preset/uscm/pfc/raider/load_gear(mob/living/carbon/human/new_human)
@@ -151,7 +150,7 @@
 
 
 /datum/equipment_preset/uscm/pfc/raider/lesser_rank
-	paygrade = "ME4"
+	paygrade = "ME3"
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -496,7 +495,7 @@
 /datum/equipment_preset/uscm/medic/raider
 	name = "Marine Raider Special Reconnaisance Corpsman"
 	assignment = "Special Reconnaisance Corpsman"
-	paygrade = "ME6"
+	paygrade = "ME5"
 	skills = /datum/skills/commando/deathsquad/medic
 
 /datum/equipment_preset/uscm/medic/raider/load_gear(mob/living/carbon/human/new_human)
@@ -564,7 +563,7 @@
 /datum/equipment_preset/uscm/tl/raider
 	name = "Marine Raider Communications and Signals Specialist"
 	assignment = "Communications and Signals Specialist"
-	paygrade = "ME7"
+	paygrade = "ME6"
 	skills = /datum/skills/commando/deathsquad/leader
 
 /datum/equipment_preset/uscm/tl/raider/load_gear(mob/living/carbon/human/new_human)
