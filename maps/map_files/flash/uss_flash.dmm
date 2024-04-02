@@ -26,6 +26,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"an" = (
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/shoes/marine/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Squad Sergeant";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
 "aq" = (
 /obj/structure/machinery/cryopod/right,
 /turf/open/floor/almayer{
@@ -1671,14 +1680,6 @@
 /obj/effect/landmark/start/marine/medic/raider,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"GR" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_y = 21;
-	pixel_x = 10
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one)
 "GW" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc,
 /turf/open/floor/plating/plating_catwalk,
@@ -1785,6 +1786,14 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/dorms)
+"Ij" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_y = 21;
+	pixel_x = 10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/squad_one)
 "Ir" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /obj/effect/decal/cleanable/dirt,
@@ -1826,6 +1835,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/squad_one)
+"IY" = (
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/shoes/marine/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Sergeant";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
 "Jg" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -2196,6 +2214,16 @@
 /obj/item/reagent_container/food/drinks/jar,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"QH" = (
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/shoes/marine/knife,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Corpsman";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
 "QJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6849,7 +6877,7 @@ jZ
 jZ
 jZ
 oF
-CT
+an
 TC
 CT
 iM
@@ -7001,9 +7029,9 @@ jZ
 jZ
 jZ
 oF
-CT
+IY
 hG
-oi
+QH
 iM
 UP
 DP
@@ -7775,7 +7803,7 @@ Hl
 jj
 WM
 wP
-GR
+Ij
 yx
 fV
 QY
