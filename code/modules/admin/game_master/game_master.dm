@@ -416,6 +416,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 				return TRUE
 
+			if(LAZYACCESS(modifiers, ALT_CLICK))
+				for(var/atom/selected_xeno in GLOB.xeno_mob_list)
+					if(selected_xeno.z != game_master_client.mob.z)
+						continue
+					select_xeno(selected_xeno)
+				return TRUE
+
 			if(!LAZYACCESS(modifiers, SHIFT_CLICK))
 				for(var/deselected_xeno in controlled_xenos)
 					deselect_xeno(deselected_xeno)
