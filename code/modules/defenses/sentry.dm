@@ -763,6 +763,7 @@
 	name = "\improper UPPA 32-H sentry gun"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
 	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
 	icon_off = "upp_defense_base_off"
 	choice_categories = list(
 		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),

@@ -4,6 +4,7 @@
 	icon = 'icons/obj/structures/machinery/defenses/sentry.dmi'
 	icon_state = "defense_base"
 	var/icon_off = "defense_base_off"
+	var/icon_on = "defense_base"
 	anchored = TRUE
 	unacidable = TRUE
 	density = TRUE
@@ -70,7 +71,7 @@
 	if(!composite_icon)
 		icon_state = null
 	else if(turned_on)
-		icon_state = initial(icon_state)
+		icon_state = icon_on
 	else
 		icon_state = icon_off
 
