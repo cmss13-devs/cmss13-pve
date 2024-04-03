@@ -530,6 +530,10 @@
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
+/obj/item/clothing/under/marine/veteran/UPP/snow
+	icon_state = "s_upp_uniform"
+	worn_state = "s_upp_uniform"
+
 /obj/item/clothing/under/marine/veteran/UPP/boiler
 	name = "\improper UPP operations fatigues"
 	desc = "A set of UPP operations fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
