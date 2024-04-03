@@ -76,6 +76,7 @@
 	force = 25
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK
 	gun_category = GUN_CATEGORY_HEAVY
+	fire_delay = FIRE_DELAY_TIER_9
 	attachable_allowed = list(
 		/obj/item/attachable/m60barrel,
 		/obj/item/attachable/bipod/m60,

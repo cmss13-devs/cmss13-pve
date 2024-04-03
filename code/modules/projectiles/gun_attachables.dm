@@ -3404,6 +3404,7 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "bipod_m60_a"
 
 	flags_attach_features = ATTACH_ACTIVATION
+	delay_mod = FIRE_DELAY_TIER_1
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"
