@@ -89,21 +89,23 @@
 
 	a_intent = INTENT_HARM
 
-	if(!current_target)
-		if(length(patrol_points))
-			ai_move_patrol(delta_time)
-		else
-			ai_move_idle(delta_time)
+	var/patrol_lenght = length(patrol_points)
+	if(patrol_lenght == 1)
+		ai_move_patrol(delta_time)
 		return TRUE
 
-	if(GLOB.ai_capture_crit && target_distance <= 1 && ishuman(current_target))
-		var/mob/living/carbon/human/human_target = current_target
-		if(human_target.stat != CONSCIOUS)
-			if(!pulling)
-				INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, start_pulling), human_target)
-				face_atom(human_target)
-				swap_hand()
+	if(!current_target)
+		if(patrol_lenght)
+			ai_move_patrol(delta_time)
+			return TRUE
 
+		ai_move_idle(delta_time)
+		return TRUE
+
+	if(GLOB.ai_capture_crit && ishuman(current_target))
+		var/mob/living/carbon/human/human_target = current_target
+		if(human_target.stat != CONSCIOUS && target_distance <= 1)
+			ai_start_pulling(human_target)
 			ai_move_hive(delta_time)
 			return TRUE
 
@@ -442,3 +444,11 @@
 				if(cycled_turf.x == min_x_value)
 					min_x_turfs += cycled_turf
 			return min_x_turfs
+
+/mob/living/carbon/xenomorph/proc/ai_start_pulling(atom/movable/target)
+	if(pulling)
+		return
+
+	INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, start_pulling), target)
+	face_atom(target)
+	swap_hand()
