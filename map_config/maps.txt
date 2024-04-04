@@ -64,6 +64,9 @@ endmap
 map new_varadero
 endmap
 
+map new_varadero_repaired
+endmap
+
 map derelict_almayer
 endmap
 
