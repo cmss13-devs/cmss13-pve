@@ -999,7 +999,7 @@
 		if(damage_result <= 10)
 			bullet_ping(P)
 			visible_message(SPAN_AVOIDHARM("[src]'s armor deflects [P]!"))
-			if(damage_result <= 1)
+			if(damage_result < 1)
                 damage_result = 0
 			if(P.ammo.sound_armor) playsound(src, P.ammo.sound_armor, 50, 1)
 
