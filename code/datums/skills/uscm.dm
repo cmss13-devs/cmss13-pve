@@ -8,12 +8,37 @@ United States Colonial Marines
 	name = "Private"
 	//same as default
 
+/datum/skills/pfc/uscm_ground //Our ground marines aren't quite as robust as their Distress Signal counterparts.
+	name = "Private (Outpost)"
+	skills = list(
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED,
+		SKILL_ENGINEER = SKILL_UNSKILLED,
+		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
+		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
+		SKILL_PILOT = SKILL_UNSKILLED,
+	)
+
 /datum/skills/combat_medic
 	name = "Combat Medic"
 	skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
 		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+	)
+
+/datum/skills/combat_medic/uscm_ground
+	name = "Combat Medic (Outpost)"
+	skills = list(
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
+		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
+		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED, //They can still construct basic 'cades.
+		SKILL_ENGINEER = SKILL_UNSKILLED,
+		SKILL_FIREMAN = SKILL_FIREMAN_EXPERT,
+		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
+		SKILL_PILOT = SKILL_UNSKILLED,
 	)
 
 /datum/skills/combat_engineer

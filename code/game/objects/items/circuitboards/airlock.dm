@@ -25,7 +25,7 @@
 
 	var/engineering_skill = user.skills.get_skill_level(SKILL_ENGINEER)
 	if(engineering_skill <= SKILL_UNSKILLED) //No engineering skill or they don't have the datum.
-		to_chat(SPAN_WARNING("You have no idea what to do with this."))
+		to_chat(user, SPAN_WARNING("You have no idea what to do with this."))
 		return
 
 	if(!conf_access) conf_access = list()
