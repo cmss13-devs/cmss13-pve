@@ -64,7 +64,7 @@
 //M60
 /obj/item/weapon/gun/m60
 	name = "\improper H-G Mk70 Machine Gun"
-	desc = "Part of the Henjin-Garcia repro line, found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. /nAlt-click to open the feed tray cover for handling reloads."
+	desc = "Part of the Henjin-Garcia repro line, found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. \n<b>Alt-click to open the feed tray cover for handling reloads.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
