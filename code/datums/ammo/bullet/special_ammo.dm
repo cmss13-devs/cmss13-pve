@@ -11,8 +11,9 @@
 
 	max_range = 12
 	accuracy = HIT_ACCURACY_TIER_4
-	damage = 36
+	damage = 65
 	penetration = 0
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
 /datum/ammo/bullet/smartgun/armor_piercing
 	name = "armor-piercing smartgun bullet"
@@ -20,8 +21,9 @@
 
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 24
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_8
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/dirty
