@@ -872,7 +872,10 @@
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CL
 	inbuilt_tracking_options = list(
-		"Corporate Liaison" = TRACKER_CL
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
 	)
 
 /obj/item/device/radio/headset/distress/cbrn
