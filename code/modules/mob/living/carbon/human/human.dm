@@ -1076,11 +1076,11 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in ROLES_USCM)
+	if(job in GET_MANIFEST_ROLES) ///This will *hopefully* prevent mobs that are not part of round start from viewing the manifest.
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 	else
-		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
+		to_chat(usr, SPAN_WARNING("You have no access to the crew manifest."))
 
 /mob/living/carbon/human/proc/set_species(new_species, default_colour)
 	if(!new_species)

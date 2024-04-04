@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ac" = (
 /turf/closed/wall/rock/brown,
-/area/whiskey_outpost/blackstone/outside/impassable)
+/area/whiskey_outpost/blackstone/underground)
 "aL" = (
 /obj/structure/prop/brazier,
 /obj/structure/platform/mineral/sandstone/runed{
@@ -360,6 +360,15 @@
 	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Gu" = (
+/obj/structure/machinery/door/airlock/sandstone/runed/destroyable{
+	id = "blackstone_temple"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "GV" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -568,7 +577,7 @@
 	dir = 1;
 	icon_state = "squareswood"
 	},
-/area/whiskey_outpost/blackstone/outside/impassable)
+/area/whiskey_outpost/blackstone/underground)
 "Sw" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -779,8 +788,8 @@ Jp
 AC
 AC
 wf
-dq
-dq
+Gu
+Gu
 wf
 AC
 AC

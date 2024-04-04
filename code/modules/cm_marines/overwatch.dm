@@ -159,6 +159,7 @@
 		var/mob_state = ""
 		var/has_helmet = TRUE
 		var/role = "unknown"
+		var/display_role = "unknown"//What will display on the monitor rather than internal tracking.
 		var/acting_sl = ""
 		var/fteam = ""
 		var/distance = "???"
@@ -188,12 +189,13 @@
 						continue
 
 			if(marine_human.job)
-				role = marine_human.job
+				role = GET_SQUAD_ROLE_MAP(marine_human.job)
+				display_role = marine_human.job
 			else if(istype(marine_human.wear_id, /obj/item/card/id)) //decapitated marine is mindless,
 				var/obj/item/card/id/ID = marine_human.wear_id //we use their ID to get their role.
 				if(ID.rank)
-					role = ID.rank
-
+					role = GET_SQUAD_ROLE_MAP(ID.rank)
+					display_role = ID.rank
 
 			if(current_squad.squad_leader)
 				if(marine_human == current_squad.squad_leader)
@@ -282,7 +284,7 @@
 				if(mob_state != "Dead")
 					marines_alive++
 
-		var/marine_data = list(list("name" = mob_name, "state" = mob_state, "has_helmet" = has_helmet, "role" = role, "acting_sl" = acting_sl, "fteam" = fteam, "distance" = distance, "area_name" = area_name,"ref" = REF(marine)))
+		var/marine_data = list(list("name" = mob_name, "state" = mob_state, "has_helmet" = has_helmet, "role" = display_role, "acting_sl" = acting_sl, "fteam" = fteam, "distance" = distance, "area_name" = area_name,"ref" = REF(marine)))
 		data["marines"] += marine_data
 		if(is_squad_leader)
 			if(!data["squad_leader"])

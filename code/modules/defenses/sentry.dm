@@ -577,6 +577,11 @@
 /obj/structure/machinery/defenses/sentry/premade/damaged_action()
 	return
 
+/obj/structure/machinery/defenses/sentry/premade/strong //Same as the regular turret in terms of strength.
+	name = "\improper UA 571-B sentry gun"
+	fire_delay = 1
+	burst = 2
+
 /obj/structure/machinery/defenses/sentry/premade/upp
 	name = "\improper UPPA 30-KG gauss turret"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-477 autocannon and a 500-round drum magazine, an older design, affectionally referred to as 'Komrade Sentry'."

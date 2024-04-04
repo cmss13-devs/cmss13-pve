@@ -2,6 +2,7 @@
 #define GET_MAPPED_ROLE(title) (RoleAuthority?.role_mappings[title] ? RoleAuthority.role_mappings[title] : RoleAuthority.roles_by_name[title])
 #define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
 #define GET_SQUAD_ROLE_MAP(title) (RoleAuthority?.roles_for_squad[title] ? RoleAuthority.roles_for_squad[title] : title)
+#define GET_MANIFEST_ROLES (RoleAuthority? ((RoleAuthority.default_roles|RoleAuthority.role_mappings)-RoleAuthority.role_manifest_blacklist) : list())
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
@@ -435,16 +436,17 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_OBSERVER "Observer"
 #define TIMELOCK_JOB(role_id, hours) new/datum/timelock(role_id, hours, role_id)
 
-//For displaying groups of jobs. Used by new player's latejoin menu and by crew manifest.
-#define FLAG_SHOW_CIC 1
-#define FLAG_SHOW_AUXIL_SUPPORT 2
-#define FLAG_SHOW_MISC 4
-#define FLAG_SHOW_POLICE 8
-#define FLAG_SHOW_ENGINEERING 16
-#define FLAG_SHOW_REQUISITION 32
-#define FLAG_SHOW_MEDICAL 64
-#define FLAG_SHOW_MARINES 128
-#define FLAG_SHOW_ALL_JOBS FLAG_SHOW_CIC|FLAG_SHOW_AUXIL_SUPPORT|FLAG_SHOW_MISC|FLAG_SHOW_POLICE|FLAG_SHOW_ENGINEERING|FLAG_SHOW_REQUISITION|FLAG_SHOW_MEDICAL|FLAG_SHOW_MARINES
+/// Job categories, for the crew manifest and late joining. Replaces the flags that were previously used.
+#define JOB_CATEGORY_OTHER "Other / RP"
+#define JOB_CATEGORY_CIC "Command"
+#define JOB_CATEGORY_SUPPORT "Auxiliary Support"
+#define JOB_CATEGORY_POLICE "Law Enforcement"
+#define JOB_CATEGORY_ENGINEERING "Engineering"
+#define JOB_CATEGORY_REQUISITION "Requisitions"
+#define JOB_CATEGORY_MEDICAL "Medical"
+#define JOB_CATEGORY_COMBAT "Combat"
+//This list allows us to keep all manifest categories in the same order every time, regardless of who spawned when/first/second/third.
+#define JOB_CATEGORY_ALL list(JOB_CATEGORY_OTHER, JOB_CATEGORY_CIC, JOB_CATEGORY_SUPPORT, JOB_CATEGORY_POLICE, JOB_CATEGORY_ENGINEERING, JOB_CATEGORY_REQUISITION, JOB_CATEGORY_MEDICAL, JOB_CATEGORY_COMBAT)
 
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.

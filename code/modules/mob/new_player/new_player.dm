@@ -255,7 +255,8 @@
 		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[SShijack.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
 		character.put_in_hands(new /obj/item/storage/box/kit/cryo_self_defense(character.loc))
 
-	GLOB.data_core.manifest_inject(character)
+	if(character.job in GET_MANIFEST_ROLES) ///Inject them into the manifest if they are spawning as a role that should be on the manifest/have access to it.
+		GLOB.data_core.manifest_inject(character)
 	SSticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc. //TODO!!!!! ~Carn
 	SSticker.mode.latejoin_tally += RoleAuthority.calculate_role_weight(player_rank)
 
@@ -303,55 +304,28 @@
 			if(EVACUATION_STATUS_INITIATED)
 				dat += "<font color='red'><b>The [MAIN_SHIP_NAME] is being evacuated.</b></font><br>"
 
-	var/positions = FALSE
-	var/position_dat = "Choose from the following open positions:<br>"
-	var/roles_show = FLAG_SHOW_ALL_JOBS
-
+	var/position_dat
+	var/categories_shown[0]
+	var/datum/job/J
+	var/active
+	var/mob/M
 	for(var/i in RoleAuthority.roles_for_mode)
-		var/datum/job/J = RoleAuthority.roles_for_mode[i]
+		J = RoleAuthority.roles_for_mode[i]
 		if(!RoleAuthority.check_role_entry(src, J, TRUE))
 			continue
-		var/active = 0
+		active = 0
 		// Only players with the job assigned and AFK for less than 10 minutes count as active
-		for(var/mob/M in GLOB.player_list)
+		for(M in GLOB.player_list)
 			if(M.client && M.job == J.title)
 				active++
-		if(roles_show & FLAG_SHOW_CIC && ROLES_CIC.Find(J.title))
-			position_dat += "Command:<br>"
-			roles_show ^= FLAG_SHOW_CIC
 
-		else if(roles_show & FLAG_SHOW_AUXIL_SUPPORT && ROLES_AUXIL_SUPPORT.Find(J.title))
-			position_dat += "<hr>Auxiliary Combat Support:<br>"
-			roles_show ^= FLAG_SHOW_AUXIL_SUPPORT
+		if(!(J.category in categories_shown)) ///If it is not found in the list of categories already displayed, display it.
+			position_dat += "[J.category]:<br>"
+			categories_shown += J.category
 
-		else if(roles_show & FLAG_SHOW_MISC && ROLES_MISC.Find(J.title))
-			position_dat += "<hr>Other:<br>"
-			roles_show ^= FLAG_SHOW_MISC
-
-		else if(roles_show & FLAG_SHOW_POLICE && ROLES_POLICE.Find(J.title))
-			position_dat += "<hr>Military Police:<br>"
-			roles_show ^= FLAG_SHOW_POLICE
-
-		else if(roles_show & FLAG_SHOW_ENGINEERING && ROLES_ENGINEERING.Find(J.title))
-			position_dat += "<hr>Engineering:<br>"
-			roles_show ^= FLAG_SHOW_ENGINEERING
-
-		else if(roles_show & FLAG_SHOW_REQUISITION && ROLES_REQUISITION.Find(J.title))
-			position_dat += "<hr>Requisitions:<br>"
-			roles_show ^= FLAG_SHOW_REQUISITION
-
-		else if(roles_show & FLAG_SHOW_MEDICAL && ROLES_MEDICAL.Find(J.title))
-			position_dat += "<hr>Medbay:<br>"
-			roles_show ^= FLAG_SHOW_MEDICAL
-
-		else if(roles_show & FLAG_SHOW_MARINES && ROLES_MARINES.Find(J.title))
-			position_dat += "<hr>Squad Riflemen:<br>"
-			roles_show ^= FLAG_SHOW_MARINES
-
-		positions = TRUE
 		position_dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
 
-	dat += positions ? position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
+	dat += position_dat ? "Choose from the following open positions:<br>" + position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
 	show_browser(src, dat, "Late Join", "latechoices", "size=420x700")

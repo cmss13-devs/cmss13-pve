@@ -3,7 +3,7 @@
 	name = GAMEMODE_REMOTE_OUTPOST
 	config_tag = GAMEMODE_REMOTE_OUTPOST
 	votable = TRUE
-	flags_round_type = MODE_GROUND_ONLY|MODE_NO_XENO_EVOLVE|MODE_NEW_SPAWN
+	flags_round_type = MODE_GROUND_ONLY|MODE_NO_XENO_EVOLVE|MODE_NEW_SPAWN|MODE_XENO_AI
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 	taskbar_icon = 'icons/taskbar/gml_wo.png'
@@ -41,6 +41,11 @@
 		if(!(I.z in SSmapping.levels_by_trait(ZTRAIT_GROUND)))
 			qdel(I) //So ghosts spawn in near the action, but not strictly necessary.
 
+	for(var/obj/effect/landmark/defense_sentry/I in GLOB.landmarks_list) //Spawns some stronger than normal static sentries, but only when the round is set to Outpost.
+		if(I.z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+			new /obj/structure/machinery/defenses/sentry/premade/strong(I.loc)
+			qdel(I)
+
 	. = ..()
 
 /datum/game_mode/remote_outpost/announce()
@@ -74,4 +79,3 @@
 	declare_completion_announce_medal_awards()
 
 	return TRUE
-

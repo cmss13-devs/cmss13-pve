@@ -13,6 +13,7 @@
 	var/current_positions = 0 //How many players have this job
 	var/supervisors = "" //Supervisors, who this person answers to directly. Should be a string, shown to the player when they enter the game.
 	var/selection_class = "" // Job Selection span class (for background color)
+	var/category = JOB_CATEGORY_OTHER ///What category the job is sorted into for late joining and the crew manifest.
 
 	var/late_joinable = TRUE
 

@@ -575,55 +575,11 @@
 	base_river_slowdown = 3 //More wading, more slowdown.
 	color = "#e4f0ef"
 	block_vehicles = TRUE //Don't want vehicles crossing this.
-/*
-/turf/open/gm/river/deep/Entered(atom/movable/A)
-	. = ..()
+	/*
+	There was some potential code here to make people fall/get bitten by fish, but it doesn't balance out well when we have synths/preds/xenos running through deep water.
+	For now it only slows down. Maybe if something like agility is a thing, it could be checked here.
+	*/
 
-	if(prob(30) && isliving(A)) //I love you.
-		to_chat(M, pick(SPAN_NOTICE("You slip on something slimy."),SPAN_NOTICE("You fall over into the murk.")))
-		M.apply_effect(2, STUN)
-		M.apply_effect(1, WEAKEN)
-
-
-	..()
-	if(istype(O, /mob/living/))
-		var/mob/living/M = O
-		//slip in the murky water if we try to run through it
-		if(prob(50))
-			to_chat(M, pick(SPAN_NOTICE("You slip on something slimy."),SPAN_NOTICE("You fall over into the murk.")))
-			M.apply_effect(2, STUN)
-			M.apply_effect(1, WEAKEN)
-
-		//piranhas - 25% chance to be an omnipresent risk, although they do practically no damage
-		if(prob(25))
-			to_chat(M, SPAN_NOTICE(" You feel something slithering around your legs."))
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-
-
-*/
 /turf/open/gm/river/ocean
 	name = "ocean"
 	color = "#dae3e2"
@@ -806,19 +762,18 @@
 		else
 			if((flags_jungle_vegetation & JUNGLE_SPAWN_PLANTS) && prob(40))
 				if(prob(90))
-					var/image/I
+					var/obj/structure/flora/F
 					if(prob(35))
-						I = image('icons/obj/structures/props/jungleplants.dmi',"plant[rand(1,7)]")
+						F = new /obj/structure/flora/bush/jungle(src)
 					else
 						switch(pick(50; 1, 70; 2, 150; 3, 30; 4))
-							if(1) I = image('icons/obj/structures/props/ausflora.dmi',"reedbush_[rand(1,4)]")
-							if(2) I = image('icons/obj/structures/props/ausflora.dmi',"leafybush_[rand(1,3)]")
-							if(3) I = image('icons/obj/structures/props/ausflora.dmi',"fernybush_[rand(1,3)]")
-							else I = image('icons/obj/structures/props/ausflora.dmi',"stalkybush_[rand(1,3)]")
+							if(1) F = new /obj/structure/flora/bush/ausbushes/reedbush(src)
+							if(2) F = new /obj/structure/flora/bush/ausbushes/var3/leafybush(src)
+							if(3) F = new /obj/structure/flora/bush/ausbushes/var3/fernybush(src)
+							else F = new /obj/structure/flora/bush/ausbushes/var3/stalkybush(src)
 
-					I.pixel_x = rand(-6,6)
-					I.pixel_y = rand(-6,6)
-					overlays += I
+					F.pixel_x = rand(-6,6)
+					F.pixel_y = rand(-6,6)
 
 				else if(!(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)) //Don't want to spawn these along with vines.
 					var/obj/structure/flora/jungle/thickbush/jungle_plant/J = new(src)

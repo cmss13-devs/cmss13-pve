@@ -284,6 +284,11 @@
 	name = "xeno ambush"
 	icon_state = "xeno_ambush"
 
+//Used to round-spawn strong, static sentry turrets. But could be used for other stuff.
+/obj/effect/landmark/defense_sentry
+	name = "defense sentry"
+	icon_state = "defense_sentry"
+
 //****************************************** MARINE ROLES ************************************************/
 /obj/effect/landmark/start/whiskey //category moment, indeed
 

@@ -59,7 +59,8 @@
 #define MODE_THUNDERSTORM (1<<13)// Enables thunderstorm effects on maps that are compatible with it. (Lit exterior tiles, rain effects)
 #define MODE_FACTION_CLASH (1<<14)// Disables scopes, sniper sentries, OBs, shooting corpses, dragging enemy corpses, stripping enemy corpses
 #define MODE_NO_XENO_EVOLVE (1<<15) // Stops all xenos from evolving or straining
-#define MODE_GROUND_ONLY (1<<16) //No ship map, ground map only.
+#define MODE_GROUND_ONLY (1<<16) ///No ship map, ground map only.
+#define MODE_XENO_AI (1<<17) ///Allows for alien AI to be used in the game mode.
 
 // Gamemode Toggleable Flags
 #define MODE_NO_SNIPER_SENTRY (1<<0) /// Upgrade kits will no longer allow you to select long-range upgrades
@@ -124,7 +125,8 @@ var/global/list/ROLES_ENGINEERING = list(JOB_CHIEF_ENGINEER, JOB_ORDNANCE_TECH, 
 var/global/list/ROLES_REQUISITION = list(JOB_CHIEF_REQUISITION, JOB_CARGO_TECH, JOB_WO_CHIEF_REQUISITION, JOB_WO_REQUISITION)
 var/global/list/ROLES_MEDICAL = list(JOB_CMO, JOB_RESEARCHER, JOB_DOCTOR, JOB_NURSE, JOB_WO_CMO, JOB_WO_RESEARCHER, JOB_WO_DOCTOR)
 var/global/list/ROLES_MARINES = list(JOB_SQUAD_LEADER, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MEDIC, JOB_SQUAD_ENGI, JOB_SQUAD_MARINE, JOB_SQUAD_RTO)
-var/global/list/ROLES_SQUAD_ALL = list(SQUAD_MARINE_1, SQUAD_MARINE_2, SQUAD_MARINE_3, SQUAD_MARINE_4, SQUAD_MARINE_5, SQUAD_MARINE_CRYO, SQUAD_MARINE_INTEL, SQUAD_UPP, SQUAD_LRRP)
+var/global/list/ROLES_SQUAD_ALL = list(SQUAD_MARINE_1, SQUAD_MARINE_2, SQUAD_MARINE_3, SQUAD_MARINE_4, SQUAD_MARINE_5, SQUAD_MARINE_CRYO, SQUAD_MARINE_INTEL, SQUAD_UPP, SQUAD_LRRP, SQUAD_USCM_GROUND_1, SQUAD_USCM_GROUND_2)
+#define ROLES_SQUAD_USCM_GROUND list(SQUAD_USCM_GROUND_1, SQUAD_USCM_GROUND_2) ///Referenced in marines_consoles.dm for crew tracking individual squads+members.
 
 //Groundside roles
 var/global/list/ROLES_XENO = list(JOB_XENOMORPH_QUEEN, JOB_XENOMORPH)

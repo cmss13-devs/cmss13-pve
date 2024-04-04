@@ -52,7 +52,6 @@
 /area/template_noop)
 "R" = (
 /obj/structure/ladder/hatch{
-	pixel_y = 10;
 	id = "blackstone_hidden_bunker";
 	height = 2;
 	color = "#8f8f8f"

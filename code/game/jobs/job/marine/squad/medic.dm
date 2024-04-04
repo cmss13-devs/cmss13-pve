@@ -49,6 +49,8 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/uscm_ground/lesser_rank
 	entry_message_body = "You are uniquely qualified to treat battlefield injuries, so make sure to do just that. Stick close to your allies, and pull them out of harm's way when they need it."
 
+/datum/job/marine/medic/uscm_ground/get_total_positions(latejoin = FALSE)
+	return latejoin ? total_positions : spawn_positions
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD

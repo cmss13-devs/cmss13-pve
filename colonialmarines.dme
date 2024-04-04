@@ -1396,6 +1396,7 @@
 #include "code\modules\admin\game_master\extra_buttons\toggle_vehicle_blockers.dm"
 #include "code\modules\admin\game_master\game_master_submenu\ambush.dm"
 #include "code\modules\admin\game_master\game_master_submenu\infest.dm"
+#include "code\modules\admin\game_master\game_master_submenu\laders.dm"
 #include "code\modules\admin\game_master\game_master_submenu\tunnels.dm"
 #include "code\modules\admin\game_master\game_master_submenu\vents.dm"
 #include "code\modules\admin\medal_panel\medals_panel.dm"

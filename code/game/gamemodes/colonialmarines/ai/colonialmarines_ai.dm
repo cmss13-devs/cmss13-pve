@@ -4,7 +4,7 @@
 	required_players = 0
 	votable = TRUE
 
-	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
+	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE|MODE_XENO_AI
 
 	var/list/squad_limit = list(
 		/datum/squad/marine/alpha

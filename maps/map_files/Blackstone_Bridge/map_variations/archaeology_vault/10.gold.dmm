@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/wall/rock/brown,
-/area/whiskey_outpost/blackstone/underground)
+/turf/template_noop,
+/area/template_noop)
 "c" = (
 /obj/effect/decal/remains/human{
 	pixel_y = -5;
@@ -65,9 +65,6 @@
 	},
 /turf/open/floor/sandstone/runed,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
-"M" = (
-/turf/closed/wall/mineral/sandstone/runed/decor,
-/area/whiskey_outpost/blackstone/underground/excavation_site)
 "N" = (
 /obj/effect/decal/remains/human{
 	pixel_y = 2;
@@ -90,15 +87,6 @@
 /obj/item/coin/gold{
 	pixel_x = 3;
 	pixel_y = 9
-	},
-/turf/open/floor/sandstone/runed,
-/area/whiskey_outpost/blackstone/underground/excavation_site)
-"R" = (
-/obj/effect/decal/sand_overlay/sand5/corner5{
-	dir = 4
-	},
-/obj/structure/machinery/door/airlock/sandstone/runed{
-	name = "Strange Temple"
 	},
 /turf/open/floor/sandstone/runed,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
@@ -181,7 +169,7 @@ C
 a
 "}
 (3,1,1) = {"
-M
+a
 O
 V
 S
@@ -190,7 +178,7 @@ C
 a
 "}
 (4,1,1) = {"
-R
+a
 w
 q
 p
@@ -199,7 +187,7 @@ C
 a
 "}
 (5,1,1) = {"
-M
+a
 K
 V
 N

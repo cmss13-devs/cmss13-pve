@@ -70,7 +70,8 @@ var/global/cas_tracking_id_increment = 0 //this var used to assign unique tracki
 /datum/game_mode/proc/pre_setup()
 	SHOULD_CALL_PARENT(TRUE)
 
-	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
+	if(flags_round_type & MODE_XENO_AI)
+		RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 	setup_structures()
 	if(static_comms_amount)
 		spawn_static_comms()
@@ -83,7 +84,7 @@ var/global/cas_tracking_id_increment = 0 //this var used to assign unique tracki
 /datum/game_mode/proc/handle_xeno_spawn(datum/source, mob/living/carbon/xenomorph/spawning_xeno, ai_hard_off = FALSE)
 	SIGNAL_HANDLER
 
-	return !ai_hard_off && spawning_xeno.make_ai()
+	return (flags_round_type & MODE_XENO_AI) && !ai_hard_off && spawning_xeno.make_ai()
 
 ///Triggered partway through the first drop, based on DROPSHIP_DROP_MSG_DELAY. Marines are underway but haven't yet landed.
 /datum/game_mode/proc/ds_first_drop(obj/docking_port/mobile/marine_dropship)

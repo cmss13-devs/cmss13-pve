@@ -361,8 +361,8 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "LH" = (
-/turf/closed/wall/rock/brown,
-/area/whiskey_outpost/blackstone/underground)
+/turf/closed/wall/rock/brown/destructible,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
 "Oy" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/auto_turf/strata_grass/layer1,

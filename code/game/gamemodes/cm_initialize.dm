@@ -79,6 +79,7 @@ Additional game mode variables.
 	//Role Authority set up.
 	/// List of role titles to override to different roles when starting game
 	var/list/role_mappings
+	var/list/role_manifest_blacklist ///This will transfer to RoleAuthority to indicate what roles should not have access to the manifest/injected into it, whether or not they spawn.
 
 	//current amount of survivors by type
 	var/list/survivors_by_type_amounts = list()

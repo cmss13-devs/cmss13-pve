@@ -936,13 +936,13 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_MESS_SERGEANT = 62,
 				// 70-139: SQUADS (look below)
 				// 140+: Civilian/other
-				JOB_CORPORATE_LIAISON = 140,
-				JOB_PASSENGER = 141,
+				JOB_CORPORATE_LIAISON = 240,
+				JOB_PASSENGER = 241,
 				// Non Almayer jobs lower then registered
-				JOB_SYNTH_SURVIVOR = 150,
-				JOB_SURVIVOR = 151,
-				JOB_COLONIST = 152,
-				JOB_WORKING_JOE = 153,
+				JOB_SYNTH_SURVIVOR = 250,
+				JOB_SURVIVOR = 251,
+				JOB_COLONIST = 252,
+				JOB_WORKING_JOE = 253,
 
 				// WO jobs
 				// 10-19: Command
@@ -967,31 +967,31 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_WO_REQUISITION = 61,
 				// 70-139: SQUADS (look below)
 				// 140+: Civilian/other
-				JOB_WO_CORPORATE_LIAISON = 140,
-				JOB_WO_SYNTH = 150,
+				JOB_WO_CORPORATE_LIAISON = 240,
+				JOB_WO_SYNTH = 250,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,
 
 				// 200-229: Visitors
-				JOB_UPP_REPRESENTATIVE = 201,
-				JOB_TWE_REPRESENTATIVE = 201,
-				JOB_TIS_SA = 210,
-				JOB_TIS_IO = 211,
-				JOB_PMC_DIRECTOR = 220,
-				JOB_PMC_LEADER = 220,
-				JOB_PMC_LEAD_INVEST = 220,
-				JOB_PMC_SYNTH = 221,
-				JOB_PMC_XENO_HANDLER = 221,
-				JOB_PMC_SNIPER = 222,
-				JOB_PMC_GUNNER = 223,
-				JOB_PMC_MEDIC = 224,
-				JOB_PMC_INVESTIGATOR = 224,
-				JOB_PMC_ENGINEER = 225,
-				JOB_PMC_STANDARD = 226,
-				JOB_PMC_DOCTOR = 227,
-				JOB_WY_GOON_LEAD = 228,
-				JOB_WY_GOON = 229,
+				JOB_UPP_REPRESENTATIVE = 301,
+				JOB_TWE_REPRESENTATIVE = 301,
+				JOB_TIS_SA = 310,
+				JOB_TIS_IO = 311,
+				JOB_PMC_DIRECTOR = 320,
+				JOB_PMC_LEADER = 320,
+				JOB_PMC_LEAD_INVEST = 320,
+				JOB_PMC_SYNTH = 321,
+				JOB_PMC_XENO_HANDLER = 321,
+				JOB_PMC_SNIPER = 322,
+				JOB_PMC_GUNNER = 323,
+				JOB_PMC_MEDIC = 324,
+				JOB_PMC_INVESTIGATOR = 324,
+				JOB_PMC_ENGINEER = 325,
+				JOB_PMC_STANDARD = 326,
+				JOB_PMC_DOCTOR = 327,
+				JOB_WY_GOON_LEAD = 328,
+				JOB_WY_GOON = 329,
 
 				// Appear at bottom of squad list
 				JOB_MARINE_RAIDER_SL = 130,
@@ -999,19 +999,20 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_MARINE_RAIDER = 131,
 				RAIDER_SQUAD = 131,
 			)
+			///This adds squads to the selector, I've expanded squad numbers from 70 to 240. 70 to 130 are Almayer, then the raiders, then the two Outpost squads, ending at 150-159 presently.
+			///This sets up the proper squad colors.
 			var/squad_number = 70
-			for(var/squad_name in ROLES_SQUAD_ALL + "")
-				if(!squad_name) squad_number = 120
-				else squad_name += " "
+			for(var/squad_name in ROLES_SQUAD_ALL)
+				if(squad_number >= 130) break //Only the Almayer squads, 70 - 130
 				jobs += list(
 					"[squad_name][JOB_SQUAD_LEADER]" = (squad_number),
 					"[squad_name][JOB_SQUAD_TEAM_LEADER]" = (squad_number + 1),
 					"[squad_name][JOB_SQUAD_SPECIALIST]" = (squad_number + 2),
-					"[squad_name][JOB_SQUAD_SPECIALIST] (Scout)" = (squad_number + 2),
-					"[squad_name][JOB_SQUAD_SPECIALIST] (Sniper)" = (squad_number + 2),
-					"[squad_name][JOB_SQUAD_SPECIALIST] (Demo)" = (squad_number + 2),
-					"[squad_name][JOB_SQUAD_SPECIALIST] (Grenadier)" = (squad_number + 2),
-					"[squad_name][JOB_SQUAD_SPECIALIST] (Pyro)" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Scout" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Sniper" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Demo" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Grenadier" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Pyro" = (squad_number + 2),
 					"[squad_name][JOB_SQUAD_SMARTGUN]" = (squad_number + 3),
 					"[squad_name][JOB_SQUAD_ENGI]" = (squad_number + 4),
 					"[squad_name][JOB_SQUAD_MEDIC]" = (squad_number + 5),
@@ -1061,10 +1062,10 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_STOWAWAY = 999,
 
 				// 200-229: Visitors
-				JOB_UPP_REPRESENTATIVE = 201,
-				JOB_TWE_REPRESENTATIVE = 201,
-				JOB_COLONEL = 201,
-				JOB_TRAINEE = 202, //Trainees aren't really cared about
+				JOB_UPP_REPRESENTATIVE = 301,
+				JOB_TWE_REPRESENTATIVE = 301,
+				JOB_COLONEL = 301,
+				JOB_TRAINEE = 302, //Trainees aren't really cared about
 			)
 		if(FACTION_UPP)
 			jobs = list(
@@ -1087,21 +1088,21 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				// 50-59: Engineering
 				JOB_UPP_COMBAT_SYNTH = 50,
 				JOB_UPP_CREWMAN = 51,
-				// 60-69: Soldiers
-				JOB_UPP_LEADER = 60,
-				JOB_UPP_SPECIALIST = 61,
-				JOB_UPP_MEDIC = 62,
-				JOB_UPP_ENGI = 63,
-				JOB_UPP = 64,
-				JOB_UPP_CONSCRIPT = 65,
+				// 70-69: Soldiers //Was 60 previously, which cargo colors.
+				JOB_UPP_LEADER = 70,
+				JOB_UPP_SPECIALIST = 71,
+				JOB_UPP_MEDIC = 72,
+				JOB_UPP_ENGI = 73,
+				JOB_UPP = 74,
+				JOB_UPP_CONSCRIPT = 75,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,
 
 				// 200-229: Visitors
-				JOB_UPP_REPRESENTATIVE = 201,
-				JOB_TWE_REPRESENTATIVE = 201,
-				JOB_COLONEL = 201
+				JOB_UPP_REPRESENTATIVE = 301,
+				JOB_TWE_REPRESENTATIVE = 301,
+				JOB_COLONEL = 301
 			)
 		if(FACTION_USCM_GROUND)
 			jobs = list(
@@ -1116,30 +1117,39 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PROVOST_INSPECTOR = 04,
 
 				JOB_USCM_GROUND_CO = 10,
+				JOB_CO = 11,
+				JOB_XO = 12,
+				JOB_MARINE_RAIDER_CMD = 13,
+				RAIDER_OFFICER_SQUAD = 14,
 				JOB_USCM_GROUND_AO = 20,
 
-				JOB_USCM_GROUND_SQUAD_LEADER = 02,
-				JOB_USCM_GROUND_SQUAD_TEAM_LEADER = 03,
-				JOB_USCM_GROUND_SQUAD_MEDIC = 04,
-				JOB_USCM_GROUND_SQUAD_SPECIALIST = 05,
-				JOB_USCM_GROUND_SQUAD_SMARTGUNNER = 06,
-				JOB_USCM_GROUND_SQUAD_MARINE = 07,
 
-				JOB_USCM_GROUND_CIVILIAN = 140,
-				JOB_USCM_GROUND_SYNTH = 150,
+				JOB_USCM_GROUND_CIVILIAN = 240,
+				JOB_USCM_GROUND_SYNTH = 250,
 
 				JOB_STOWAWAY = 999,
 
 				// 200-229: Visitors, includes other USCM ranking officers. Subject to change.
-				JOB_UPP_REPRESENTATIVE = 201,
-				JOB_TWE_REPRESENTATIVE = 201,
-				JOB_CO = 202,
-				JOB_XO = 203,
-				JOB_MARINE_RAIDER_CMD = 204,
-				RAIDER_OFFICER_SQUAD = 205,
-				JOB_PMC_DIRECTOR = 220,
-				JOB_PMC_LEAD_INVEST = 220,
+				JOB_UPP_REPRESENTATIVE = 301,
+				JOB_TWE_REPRESENTATIVE = 301,
+				JOB_PMC_DIRECTOR = 320,
+				JOB_PMC_LEAD_INVEST = 320,
 			)
+			var/squad_number = 140 ///Squad colors 140 to 159 are USCM Ground.
+			for(var/squad_name in ROLES_SQUAD_USCM_GROUND)
+				squad_name += " "
+				jobs += list(
+					"[squad_name][JOB_USCM_GROUND_SQUAD_LEADER]" = (squad_number),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_TEAM_LEADER]" = (squad_number + 1),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]" = (squad_number + 2),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]: Heavy" = (squad_number + 2),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]: Sapper" = (squad_number + 2),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_SMARTGUNNER]" = (squad_number + 3),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_MEDIC]" = (squad_number + 4),
+					"[squad_name][JOB_USCM_GROUND_SQUAD_MARINE]" = (squad_number + 5),
+				)
+				squad_number += 10
+
 		else
 			jobs = list()
 

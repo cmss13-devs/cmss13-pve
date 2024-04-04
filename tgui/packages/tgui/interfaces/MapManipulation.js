@@ -7,7 +7,7 @@ export const MapManipulation = (props, context) => {
   const [main_tab, setTab] = useLocalState(context, 'main_tab', data.main_tab);
 
   return (
-    <Window title="Map Manipulator" width={420} height={430}>
+    <Window title="Map Manipulator" width={430} height={430}>
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
@@ -753,7 +753,7 @@ export const BlackstoneBlockersTab = (props, context) => {
               content="Toggle Tunnel Gates"
               tooltip="Toggles the podlocks that block the mountain tunnel."
               onClick={() => {
-                act('toggle_gate', {
+                act('toggle_poddoor', {
                   signal_id: 'tunnel_gate_main',
                 });
               }}
@@ -764,8 +764,53 @@ export const BlackstoneBlockersTab = (props, context) => {
               content="Toggle LZ Gates"
               tooltip="Toggles the podlocks that block off the landing zone."
               onClick={() => {
-                act('toggle_gate', {
+                act('toggle_poddoor', {
                   signal_id: 'tunnel_gate_lz',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              content="Toggle Outpost Lockdown"
+              tooltip="Toggles the podlocks that lockdown the outpost."
+              onClick={() => {
+                act('toggle_poddoor', {
+                  signal_id: 'outpost_lockdown',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              color="yellow"
+              content="Toggle Lockdown Door Control"
+              tooltip="Toggles the use of the outpost lockdown door control."
+              onClick={() => {
+                act('toggle_door_control', {
+                  signal_id: 'outpost_lockdown',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              content="Toggle Vault Door"
+              tooltip="Toggles the runed sandstone door at the archaelogical site vault."
+              onClick={() => {
+                act('toggle_airlock', {
+                  signal_id: 'blackstone_vault',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              content="Toggle Temple Doors"
+              tooltip="Toggles the podlocks at the Yautja temple (if it spawned)."
+              onClick={() => {
+                act('toggle_airlock', {
+                  signal_id: 'blackstone_temple',
                 });
               }}
             />
@@ -799,6 +844,30 @@ export const BlackstoneHatchesTab = (props, context) => {
           <Stack.Item>
             <Button
               ml={1}
+              color="yellow"
+              content="Unlock ALL Hatches"
+              tooltip="Unlocks *all* hatches. Hatches that were unlocked or open remain open."
+              onClick={() => {
+                act('toggle_hatch', {
+                  hatch_to_unlock: 'unlock_all',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              color="yellow"
+              content="Lock ALL Hatches"
+              tooltip="Locks *all* hatches. Hatches that were locked remain so."
+              onClick={() => {
+                act('toggle_hatch', {
+                  hatch_to_unlock: 'lock_all',
+                });
+              }}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Button
               content="Toggle LZ Hatch"
               tooltip="Toggles the hatch next to the landing zone."
               onClick={() => {

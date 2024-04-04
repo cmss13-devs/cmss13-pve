@@ -11,6 +11,7 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/uscm_medical/researcher
 	entry_message_body = "You're a commissioned officer of the USCM, though you are not in the ship's chain of command. You are tasked with <a href='"+WIKI_PLACEHOLDER+"'>researching</a> and developing new medical treatments, helping your fellow doctors, and generally learning new things. Your role involves a lot of roleplaying, but you can perform the function of a regular doctor. Do not hand out things to Marines without getting permission from your supervisor."
+	category = JOB_CATEGORY_MEDICAL
 
 /datum/job/civilian/researcher/set_spawn_positions(count)
 	spawn_positions = rsc_slot_formula(count)
@@ -38,6 +39,7 @@ AddTimelock(/datum/job/civilian/researcher, list(
 	supervisors = "greater scientific community"
 	gear_preset = /datum/equipment_preset/uscm_ground/civilian
 	entry_message_body = null
+	category = JOB_CATEGORY_OTHER
 
 /datum/job/civilian/researcher/uscm_ground/generate_entry_message()
 	entry_message_body =  {"You are a visiting scientific expert, conducting studies around [SSmapping.configs[GROUND_MAP].map_name] outpost.

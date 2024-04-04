@@ -1,4 +1,4 @@
-/proc/CreateGeneralRecord()
+/proc/CreateGeneralRecord(faction = FACTION_MARINE)
 	var/datum/data/record/G = new /datum/data/record()
 	G.fields["name"] = "New Record"
 	G.fields["id"] = text("[]", add_zero(num2hex(rand(1, 1.6777215E7)), 6))
@@ -12,7 +12,7 @@
 	G.fields["species"] = "Human"
 	G.fields["origin"] = "Unknown"
 	G.fields["faction"] = "Unknown"
-	G.fields["mob_faction"] = "Unknown"
+	G.fields["mob_faction"] = faction
 	G.fields["religion"] = "Unknown"
 	GLOB.data_core.general += G
 	return G

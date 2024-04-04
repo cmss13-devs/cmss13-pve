@@ -223,7 +223,15 @@
 			var/signal_id = params["hatch_to_unlock"]
 			for(I in GLOB.ladder_list)
 				if(I.z in possible_maps)
-					I.toggle_lock(signal_id)
+					switch(signal_id)
+						if("toggle_all")
+							I.toggle_lock(I.id)
+						if("unlock_all")
+							I.unlock_hatch(I.id)
+						if("lock_all")
+							I.lock_hatch(I.id)
+						else
+							I.toggle_lock(signal_id)
 
 		if("flicker_light")
 			var/L[]
@@ -243,18 +251,41 @@
 					for(I in A)
 						if(prob(70)) I.flicker(rand(5,10))
 
-		if("toggle_gate")
-			var/obj/structure/machinery/door/poddoor/tunnel/I
+		if("toggle_poddoor")
+			var/obj/structure/machinery/door/poddoor/I
 			var/signal_id = params["signal_id"]
 			for(I in machines)
 				if(I.z in possible_maps)
 					I.toggle_pod_door(signal_id)
+
+		if("toggle_airlock")
+			var/obj/structure/machinery/door/airlock/I
+			var/signal_id = params["signal_id"]
+			for(I in machines)
+				if( (I.z in possible_maps) && signal_id == I.id) //Very important to have the in statement enclosed, otherwise it will interpret it incorrectly.
+					if(I.density) I.open(TRUE) //Forced.
+					else I.close(TRUE)
+
+		if("toggle_door_control")//Nothing fancy here, changes the button's id so it cannot be used, or changes it back.
+			var/obj/structure/machinery/door_control/I
+			var/signal_id = params["signal_id"]
+			var/toggle = "disabled" //Not strictly accurate, but should be fine.
+			for(I in machines)
+				if(I.z in possible_maps)
+					if(I.id == signal_id + "_disabled")
+						I.id = signal_id
+						toggle = "enabled"
+						continue
+					else if(I.id == signal_id)
+						I.id += "_disabled"
+			message_admins("[key_name_admin(ui.user)] has [toggle] door controls with ID: [signal_id].") //Could be important to know.
 
 		if("spawn_ambush")
 			var/obj/effect/landmark/tunnel_ambush/I
 			var/turf/T
 			var/obj/structure/tunnel/U
 			var/turf/closed/wall/W
+			var/i = 0//We use this to count how many were actually spawned and report on it.
 			for(I in GLOB.landmarks_list)
 				if(I.z in possible_maps)
 					if(prob(20)) //We don't want to spam too many of these.
@@ -266,6 +297,8 @@
 						U = new(T)
 						U.id = length(GLOB.landmarks_list)
 						qdel(I) //This will remove it from landmarks.
+						i++
+			message_admins("[key_name_admin(ui.user)] has spawned [i] ambush sites.") //Possibly important to know this. Plus it gives a message that it was successful.
 
 		else dest_actions = list(action, percentage_to_break) //Everything else falls into here.
 

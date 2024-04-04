@@ -136,7 +136,7 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	desc = "A pile of rock debris from a cavein or something similar."
 	icon = 'icons/obj/structures/props/mining.dmi'
 	icon_state = "cavein"
-	color = "#826161"
+	color = "#9b7e7e"
 	opacity = TRUE
 	layer = BELOW_WEATHER_LAYER //We want it to overlay mobs if it crushes them.
 	var/id //Used to pick out the proper rocks to toggle.

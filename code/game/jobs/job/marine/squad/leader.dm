@@ -63,8 +63,10 @@ AddTimelock(/datum/job/marine/leader, list(
 
 /obj/effect/landmark/start/marine/leader/uscm_ground
 	name = JOB_USCM_GROUND_SQUAD_LEADER
-	squad = SQUAD_USCM_GROUND_1
 	job = /datum/job/marine/leader/uscm_ground
+
+/obj/effect/landmark/start/marine/leader/uscm_ground/one
+	squad = SQUAD_USCM_GROUND_1
 
 /obj/effect/landmark/start/marine/leader/uscm_ground/two
 	squad = SQUAD_USCM_GROUND_2

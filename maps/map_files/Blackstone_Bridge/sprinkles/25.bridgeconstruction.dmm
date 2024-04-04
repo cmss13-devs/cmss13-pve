@@ -66,6 +66,9 @@
 /obj/item/tool/warning_cone{
 	pixel_y = -8
 	},
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
 /turf/open/asphalt,
 /area/template_noop)
 "r" = (

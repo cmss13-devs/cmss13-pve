@@ -45,6 +45,7 @@ var/global/players_preassigned = 0
 	/// List of mapped roles that should be used in place of usual ones
 	var/list/role_mappings
 	var/list/default_roles
+	var/list/role_manifest_blacklist ///Roles we want to blacklist from manifest access/not inject into the manifest, despite being able to spawn at round start or later.
 
 	var/list/unassigned_players
 	var/list/squads
@@ -101,6 +102,7 @@ var/global/players_preassigned = 0
 	roles_by_name = list()
 	roles_for_squad = list()
 	roles_for_mode = list()
+	role_manifest_blacklist = list()  ///Initialized on New() and then set when the mode starts, if applicable.
 	for(var/role in roles_all) //Setting up our roles.
 		var/datum/job/J = new role()
 
@@ -201,6 +203,9 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 				continue
 			role_mappings[mapped_title] = J
 			default_roles[J.title] = mapped_title
+	if(G.role_manifest_blacklist)
+		role_manifest_blacklist = G.role_manifest_blacklist ///Simple copy, we want to keep this here.
+		G.role_manifest_blacklist = null
 
 	/*===============================================================*/
 

@@ -80,13 +80,12 @@
 		to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
 		return
 
-	switch(state)
-		if(LADDER_LOCKED) //Can't descend if it's locked.
-			to_chat(user, SPAN_WARNING("It appears to be locked and bolted!"))
-			return
-		if(LADDER_UNLOCKED) //If it's closed and unlocked, we need to first pop it open, then we can climb in.
-			open_hatch(user)
-			return
+
+	if(state == LADDER_LOCKED) //Can't descend if it's locked.
+		to_chat(user, SPAN_WARNING("It appears to be locked and bolted!"))
+		return
+
+	if(open_hatch(user)) return //If it's closed and unlocked, we need to first pop it open, then we can climb in.
 
 	var/ladder_dir_name
 	var/obj/structure/ladder/ladder_dest
@@ -120,9 +119,7 @@
 				user.visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src]."),
 				SPAN_NOTICE("You climb [ladder_dir_name] [src]."))
 				user.trainteleport(ladder_dest.loc)
-				if(ladder_dest.state == LADDER_UNLOCKED) //If out destination is closed, we want to pop it open.
-					ladder_dest.open_hatch(user)
-				else ladder_dest.add_fingerprint(user) //Fingerprints are added by the open proc, elsewise we add them here.
+				if(!ladder_dest.open_hatch(user)) ladder_dest.add_fingerprint(user) //Fingerprints are added by the open proc, elsewise we add them here.
 
 	busy = FALSE
 	add_fingerprint(user)
@@ -297,44 +294,63 @@
 	desc = "A tightly closed hatch. It is currently locked and bolted, and cannot be opened."
 	icon_state = "ladder_hatch0"
 	state = LADDER_LOCKED
+	pixel_y = 10 //Offset it up more.
 
 /obj/structure/ladder/hatch/update_icon()
 	icon_state = "ladder_hatch[state]"
 
-//The following procs are made general as to cut down on type checking, since it's not really needed.
+/*
+The following procs are made general as to cut down on type checking, since it's not really needed. Could make them children specific to hatch, but it should never come up.
+If that changes, may need a slight refactor.
+*/
 /obj/structure/ladder/proc/toggle_lock(trigger_signal)
-	if(trigger_signal == "toggle_all" || trigger_signal == id)
-		if(state == LADDER_OPEN) //We want to close the hatch if it is open and we're toggling it.
-			close_hatch()
+	if(!unlock_hatch(trigger_signal)) lock_hatch(trigger_signal) //If it doesn't match the first one, we will do the second.
 
-		switch(state)
-			if(LADDER_LOCKED)
-				name = "unlocked hatch"
-				desc = "A tightly closed hatch. It has been unlocked and can now be opened."
-			if(LADDER_UNLOCKED)
-				name = initial(name)
-				desc = initial(desc)
-
+/obj/structure/ladder/proc/unlock_hatch(trigger_signal)
+	if(state == LADDER_LOCKED && trigger_signal == id)
+		name = "unlocked hatch"
+		desc = "A tightly closed hatch. It has been unlocked and can now be opened."
+		state = LADDER_UNLOCKED
 		playsound(src, 'sound/effects/industrial_buzzer.ogg', 25, FALSE)
-		state = !state //0 and 1, so this works.
 		update_icon()
+		return TRUE
+
+/obj/structure/ladder/proc/lock_hatch(trigger_signal)
+	if(state > LADDER_LOCKED && trigger_signal == id)
+		if(state == LADDER_OPEN)
+			visible_message(SPAN_NOTICE("[src] closes!"), SPAN_NOTICE("Something closes nearby!"))
+			playsound(src, 'sound/effects/hydraulic_close.ogg', 25, FALSE)
+		name = initial(name)
+		desc = initial(desc)
+		state = LADDER_LOCKED
+		playsound(src, 'sound/effects/industrial_buzzer.ogg', 25, FALSE)
+		update_icon()
+		return TRUE
 
 /obj/structure/ladder/proc/open_hatch(mob/living/user)
-	user.visible_message(SPAN_NOTICE("[user] opens [src]."))
-	add_fingerprint(user)
-	playsound(src, 'sound/effects/metal_open.ogg', 25, FALSE)
-	name = "ladder hatch"
-	desc = "A hatch with a metal ladder leading somewhere below."
-	state = LADDER_OPEN
-	update_icon()
+	if(state == LADDER_UNLOCKED)
+		if(user)
+			user.visible_message(SPAN_NOTICE("[user] opens [src]."), SPAN_NOTICE("Something swings open nearby,"))
+			add_fingerprint(user)
+		else
+			visible_message(SPAN_NOTICE("[src].swings open."), SPAN_NOTICE("Something swings open nearby,"))
+
+		playsound(src, 'sound/effects/metal_open.ogg', 25, FALSE)
+		name = "ladder hatch"
+		desc = "A hatch with a metal ladder leading somewhere below."
+		state = LADDER_OPEN
+		update_icon()
+		return TRUE
 
 /obj/structure/ladder/proc/close_hatch()
-	visible_message(SPAN_NOTICE("[src] closes!"))
-	playsound(src, 'sound/effects/hydraulic_close.ogg', 25, FALSE)
-	name = "unlocked hatch"
-	desc = "A tightly closed hatch. It has been unlocked and can now be opened."
-	state = LADDER_UNLOCKED
-	update_icon()
+	if(state == LADDER_OPEN)
+		visible_message(SPAN_NOTICE("[src] closes!"), SPAN_NOTICE("Something closes nearby!"))
+		playsound(src, 'sound/effects/hydraulic_close.ogg', 25, FALSE)
+		name = "unlocked hatch"
+		desc = "A tightly closed hatch. It has been unlocked and can now be opened."
+		state = LADDER_UNLOCKED
+		update_icon()
+		return TRUE
 
 //==============================================
 

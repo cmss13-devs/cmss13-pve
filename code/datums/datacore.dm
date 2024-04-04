@@ -18,62 +18,61 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	for(var/datum/data/record/cycled_data_record in general)
 		if(cycled_data_record.fields["squad"] == old_name)
 			cycled_data_record.fields["squad"] = new_name
+/*
+get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_GENERAL) //We'll get the right list in a moment.
+	L[0] //Empty list to send back.
+	switch(record_type) //What sort of record we're pulling from.
+		if(RECORD_GENERAL)
+			record_type = general
+		if(RECORD_MEDICAL)
+			record_type = medical
+		if(RECORD_SECURITY)
+			record_type = security
 
+	if(record_type)
+		var/datum/record/R
+		for(var/i in record_type)
+			R = i
+			if(R.fields[mob_faction] in factions)
+				L += R
+	return L
+*/
 /datum/datacore/proc/get_manifest(monochrome, OOC, nonHTML)
-	var/list/cic = ROLES_CIC.Copy()
-	var/list/auxil = ROLES_AUXIL_SUPPORT.Copy()
-	var/list/misc = ROLES_MISC.Copy()
-	var/list/mp = ROLES_POLICE.Copy()
-	var/list/eng = ROLES_ENGINEERING.Copy()
-	var/list/req = ROLES_REQUISITION.Copy()
-	var/list/med = ROLES_MEDICAL.Copy()
-	var/list/marines_by_squad = ROLES_SQUAD_ALL.Copy()
-	for(var/squad_name in marines_by_squad)
-		marines_by_squad[squad_name] = ROLES_MARINES.Copy()
-	var/list/isactive = new()
+	var/list/manifest_out = list() ///This will be our final compiled list.
+	var/name ///Iterator for the person's name.
+	var/rank ///Iterator for the person's rank.
+	var/real_rank ///What their real rank is.
+	var/squad_name ///What their squad is called.
+	var/datum/job/J ///Referenced through their mob job to pull up where their role is sorted.
 
-// If we need not the HTML table, but list
+	///Returns a list and not HTML itself. Used by the id card computer.
 	if(nonHTML)
-		var/list/departments = list(
-			"Command" = cic,
-			"Auxiliary" = auxil,
-			"Security" = mp,
-			"Engineering" = eng,
-			"Requisition" = req,
-			"Medical" = med
-		)
-		departments += marines_by_squad
-		var/list/manifest_out = list()
+		var/category
 		for(var/datum/data/record/t in GLOB.data_core.general)
-			var/name = t.fields["name"]
-			var/rank = t.fields["rank"]
-			var/squad = t.fields["squad"]
-			if(isnull(name) || isnull(rank))
-				continue
-			var/has_department = FALSE
-			for(var/department in departments)
-				// STOP SIGNING ALL MARINES IN ALPHA!
-				if(department in ROLES_SQUAD_ALL)
-					if(squad != department)
-						continue
-				var/list/jobs = departments[department]
-				if(rank in jobs)
-					if(!manifest_out[department])
-						manifest_out[department] = list()
-					manifest_out[department] += list(list(
-						"name" = name,
-						"rank" = rank
-					))
-					has_department = TRUE
-					break
-			if(!has_department)
-				if(!manifest_out["Miscellaneous"])
-					manifest_out["Miscellaneous"] = list()
-				manifest_out["Miscellaneous"] += list(list(
-					"name" = name,
-					"rank" = rank
-				))
+			name = t.fields["name"]
+			rank = t.fields["rank"]
+			squad_name = t.fields["squad"]
+			if(!name || !rank) continue
+
+			J = RoleAuthority.roles_by_name[rank]
+			if(!J)
+				category = JOB_CATEGORY_OTHER
+			else
+				category = squad_name ? squad_name : J.category
+
+			if(!manifest_out[category]) manifest_out[category] = list()
+			manifest_out[category] += list(list(
+				"name" = name,
+				"rank" = rank
+			))
+
 		return manifest_out
+
+	///Returns an HTML table with the manifest.
+	var/list/isactive = list()
+	var/even = 0 ///For prettier lines.
+	var/category_list[] ///To simplify lookup.
+	var/mob/M //Iterator.
 
 	var/dat = {"
 	<div align='center'>
@@ -89,135 +88,77 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
 	"}
 
-	var/even = 0
-
-	// sort mobs
-	var/dept_flags = NO_FLAGS //Is there anybody in the department?.
-	var/list/squad_sublists = ROLES_SQUAD_ALL.Copy() //Are there any marines in the squad?
-
 	for(var/datum/data/record/t in GLOB.data_core.general)
+		name = t.fields["name"]
+		rank = t.fields["rank"]
+		real_rank = t.fields["real_rank"]
+		squad_name = t.fields["squad"]
 
-		var/name = t.fields["name"]
-		var/rank = t.fields["rank"]
-		var/real_rank = t.fields["real_rank"]
-		var/squad_name = t.fields["squad"]
-		if(isnull(name) || isnull(rank) || isnull(real_rank))
+		if(!name || !rank || !real_rank) ///If something is missing, we ignore them.
 			continue
 
-		if(OOC)
-			var/active = 0
-			for(var/mob/M in GLOB.player_list)
+		if(OOC) ///This returns a more accurate estimate of whether or not they are active.
+			isactive[name] = "Inactive"
+			for(M in GLOB.player_list)
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 * 60 * 10)
-					active = 1
+					isactive[name] = "Active"
 					break
-			isactive[name] = active ? "Active" : "Inactive"
 		else
 			isactive[name] = t.fields["p_stat"]
 			//cael - to prevent multiple appearances of a player/job combination, add a continue after each line
 
-		if(real_rank in ROLES_CIC)
-			dept_flags |= FLAG_SHOW_CIC
-			LAZYSET(cic[real_rank], name, rank)
-		else if(real_rank in ROLES_AUXIL_SUPPORT)
-			dept_flags |= FLAG_SHOW_AUXIL_SUPPORT
-			LAZYSET(auxil[real_rank], name, rank)
-		else if(real_rank in ROLES_MISC)
-			dept_flags |= FLAG_SHOW_MISC
-			LAZYSET(misc[real_rank], name, rank)
-		else if(real_rank in ROLES_POLICE)
-			dept_flags |= FLAG_SHOW_POLICE
-			LAZYSET(mp[real_rank], name, rank)
-		else if(real_rank in ROLES_ENGINEERING)
-			dept_flags |= FLAG_SHOW_ENGINEERING
-			LAZYSET(eng[real_rank], name, rank)
-		else if(real_rank in ROLES_REQUISITION)
-			dept_flags |= FLAG_SHOW_REQUISITION
-			LAZYSET(req[real_rank], name, rank)
-		else if(real_rank in ROLES_MEDICAL)
-			dept_flags |= FLAG_SHOW_MEDICAL
-			LAZYSET(med[real_rank], name, rank)
-		else if(real_rank in ROLES_MARINES)
-			if(isnull(squad_name))
-				continue
-			dept_flags |= FLAG_SHOW_MARINES
-			squad_sublists[squad_name] = TRUE
-			///If it is a real squad in the USCM squad list to prevent the crew manifest from breaking
-			if(!(squad_name in ROLES_SQUAD_ALL))
-				continue
-			LAZYSET(marines_by_squad[squad_name][real_rank], name, rank)
+		J = RoleAuthority.roles_by_name[real_rank]
+		if(!J) continue ///They should have a job datum with their real rank, but you never know.
 
-	//here we fill manifest
-	var/name
-	var/real_rank
-	if(dept_flags & FLAG_SHOW_CIC)
-		dat += "<tr><th colspan=3>Command</th></tr>"
-		for(real_rank in cic)
-			for(name in cic[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[cic[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_AUXIL_SUPPORT)
-		dat += "<tr><th colspan=3>Auxiliary Combat Support</th></tr>"
-		for(real_rank in auxil)
-			for(name in auxil[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[auxil[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_MARINES)
-		dat += "<tr><th colspan=3>Marines</th></tr>"
-		for(var/squad_name in ROLES_SQUAD_ALL)
-			if(!squad_sublists[squad_name])
-				continue
-			dat += "<tr><th colspan=3>[squad_name]</th></tr>"
-			for(real_rank in marines_by_squad[squad_name])
-				for(name in marines_by_squad[squad_name][real_rank])
-					dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[marines_by_squad[squad_name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
+		LAZYINITLIST(manifest_out[J.category]) ///Initialize each individual category.
+		if(J.category == JOB_CATEGORY_COMBAT)
+			if(!squad_name) continue ///If they are a combat role but have no squad, we skip them.
+			LAZYINITLIST(manifest_out[J.category][squad_name]) ///Initializes the squad itself.
+			LAZYSET(manifest_out[J.category][squad_name][real_rank], name, rank) ///Initializes the person's information for that squad.
+		else
+			LAZYSET(manifest_out[J.category][real_rank], name, rank) ///Initializes the job category as per normal.
+
+	for(var/category in JOB_CATEGORY_ALL) ///This keeps the list in the same order every time.
+		category_list = manifest_out[category]
+		if(!length(category_list)) continue ///Should not have empty lists, but it is possible for squads.
+		dat += "<tr><th colspan=3>[category]</th></tr>" ///We add this after we've established that we have the category listed.
+		if(category == JOB_CATEGORY_COMBAT)
+			var/datum/squad_type/S
+			for(var/i in RoleAuthority.squads)
+				S = i
+				if(!category_list[S.name]) continue ///Only if the squad is actually listed.
+				dat += "<tr><th colspan=3>[S.name]</th></tr>"
+				for(real_rank in category_list[S.name])
+					for(name in category_list[S.name][real_rank]) ///This nesting gets confusing. But it's manifest_out -> squad name -> real rank they are -> name = rank
+						dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[category_list[S.name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
+						even = !even
+
+		else
+			for(real_rank in category_list)
+				for(name in category_list[real_rank])
+					dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[manifest_out[category][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
 					even = !even
-	if(dept_flags & FLAG_SHOW_POLICE)
-		dat += "<tr><th colspan=3>Military Police</th></tr>"
-		for(real_rank in mp)
-			for(name in mp[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[mp[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_ENGINEERING)
-		dat += "<tr><th colspan=3>Engineering</th></tr>"
-		for(real_rank in eng)
-			for(name in eng[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[eng[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_REQUISITION)
-		dat += "<tr><th colspan=3>Requisition</th></tr>"
-		for(real_rank in req)
-			for(name in req[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[req[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_MEDICAL)
-		dat += "<tr><th colspan=3>Medbay</th></tr>"
-		for(real_rank in med)
-			for(name in med[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[med[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-	if(dept_flags & FLAG_SHOW_MISC)
-		dat += "<tr><th colspan=3>Other</th></tr>"
-		for(real_rank in misc)
-			for(name in misc[real_rank])
-				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[misc[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-				even = !even
-
 
 	dat += "</table></div>"
 	dat = replacetext(dat, "\n", "") // so it can be placed on paper correctly
 	dat = replacetext(dat, "\t", "")
 	return dat
 
+///This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
+///And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
 /datum/datacore/proc/manifest(nosleep = 0)
 	spawn()
 		if(!nosleep)
 			sleep(40)
 
-		var/list/jobs_to_check = ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
-		for(var/mob/living/carbon/human/H in GLOB.human_mob_list)
+		var/roles_to_inject[] = GET_MANIFEST_ROLES ///At the time of writing it takes (mapped roles | roundstart roles) - blacklisted manifest roles.
+
+		var/mob/living/carbon/human/H
+		for(var/i in GLOB.human_mob_list)
+			H = i
 			if(is_admin_level(H.z))
 				continue
-			if(H.job in jobs_to_check)
+			if(H.job in roles_to_inject)
 				manifest_inject(H)
 
 /datum/datacore/proc/manifest_modify(name, ref, assignment, rank, p_stat)
