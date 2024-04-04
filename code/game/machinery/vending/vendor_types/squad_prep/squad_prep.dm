@@ -234,7 +234,7 @@
 		)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc
-	name = "\improper ColmarTech Marine Raider Uniform Vendor"
+	name = "\improper ColMarTech Marine Raider Uniform Vendor"
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/populate_product_list(scale)
 	listed_products = list(
@@ -263,6 +263,7 @@
 		list("M276 Pattern Tactical Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/tactical, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Tactical M40 Grenade Rig", round(scale * 10), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Tactical General Pistol Holster Rig", round(scale * 15), /obj/item/storage/belt/gun/tactical, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern Tactical M44 Holster Rig", round(scale *15), /obj/item/storage/belt/gun/m44/tactical, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Tactical M82F Holster Rig", round(scale * 5), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 		list("M276 G8-A Tactical Utility Pouch", round(scale * 15), /obj/item/storage/backpack/general_belt/standard, VENDOR_ITEM_REGULAR),
 
@@ -280,9 +281,9 @@
 		list("RESTRICTED POUCHES", -1, null, null, null),
 		list("Construction Pouch", round(scale * 1.25), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", round(scale * 1.25), /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
-		list("First Responder Pouch (Empty)", round(scale * 2.5), /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR),
+		list("Tactical Medical Pouch", round(scale * 2.5), /obj/item/storage/pouch/medical/socmed, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", round(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
-		list("Tools Pouch", round(scale * 1.25), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+		list("Tactical Tools Pouch", round(scale * 1.25), /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),

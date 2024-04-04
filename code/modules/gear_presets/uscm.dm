@@ -673,7 +673,7 @@
 /datum/equipment_preset/uscm/leader/raider
 	name = "Marine Raider Element Leader"
 	assignment = "Element Leader"
-	paygrade = "ME8"
+	paygrade = "MO1"
 	skills = /datum/skills/commando/deathsquad/officer
 
 /datum/equipment_preset/uscm/leader/raider/load_gear(mob/living/carbon/human/new_human)

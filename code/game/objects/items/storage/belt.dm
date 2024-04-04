@@ -664,30 +664,9 @@
 /obj/item/storage/belt/marine/tactical
 	name = "\improper M276 pattern tactical ammo load rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This is the tactical variant, designed for bulk ammunition-carrying operations."
-	icon_state = "t_marinebelt"
-	item_state = "t_marinebelt"
-	w_class = SIZE_LARGE
-	storage_slots = 5
-	max_w_class = SIZE_MEDIUM
-	max_storage_space = 20
-	can_hold = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/device/flashlight/flare,
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/handful,
-		/obj/item/explosive/grenade,
-		/obj/item/explosive/mine,
-		/obj/item/reagent_container/food/snacks,
-	)
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-	)
-	has_gamemode_skin = TRUE
+	icon_state = "s_marinebelt"
+	item_state = "s_marinebelt"
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/smartgunner
 	name = "\improper M280 pattern smartgunner drum belt"
@@ -729,28 +708,9 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/smartgunner/tactical
-	name = "\improper M280 pattern smartgunner drum belt"
+	name = "\improper M280 pattern tactical smartgunner drum belt"
 	desc = "Despite the fact that 1. drum magazines are incredibly non-ergonomical, and 2. require incredibly precise machining in order to fit universally (spoiler, they don't, adding further to the myth of 'Smartgun Personalities'), the USCM decided to issue a modified marine belt (more formally known by the designation M280) with hooks and dust covers (overly complex for the average jarhead) for the M56B system's drum munitions. When the carry catch on the drum isn't getting stuck in the oiled up velcro, the rig actually does do a decent job at holding a plentiful amount of drums. But at the end of the day, compared to standard rigs... it sucks, but isn't that what being a Marine is all about?"
-	icon_state = "t_sgbelt_ammo"
-	storage_slots = 6
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/smartgun,
-	)
-	max_w_class = SIZE_MEDIUM
-	can_hold = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/device/flashlight/flare,
-		/obj/item/ammo_magazine/smartgun,
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/handful,
-		/obj/item/explosive/grenade,
-		/obj/item/explosive/mine,
-		/obj/item/reagent_container/food/snacks,
-	)
+	icon_state = "s_sgbelt_ammo"
 
 /obj/item/storage/belt/marine/quackers
 	name = "Mr. Quackers"
@@ -1359,20 +1319,8 @@
 /obj/item/storage/belt/gun/tactical
 	name = "\improper M276 pattern tactical pistol holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version has a tactical holster assembly that allows one to carry uncommon pistols. It also contains side pouches that can store most pistol magazines."
-	icon_state = "t_m4a3_holster"
+	icon_state = "s_m4a3_holster"
 	item_state = "marinebelt"
-	storage_slots = 7
-	can_hold = list(
-		/obj/item/weapon/gun/pistol,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/pistol/heavy,
-		/obj/item/ammo_magazine/pistol/heavy/super,
-		/obj/item/ammo_magazine/pistol/heavy/super/highimpact,
-	)
-	cant_hold = list(
-		/obj/item/weapon/gun/pistol/smart,
-		/obj/item/ammo_magazine/pistol/smart,
-	)
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m39
@@ -1423,6 +1371,11 @@
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44/mp())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/marksman(src)
+
+/obj/item/storage/belt/gun/m44/tactical
+	name = "M276 pattern tactical M44 holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the M44 magnum revolver, along with six small pouches for speedloaders. It has a sleek black coat of paint."
+	icon_state = "s_m44r_holster"
 
 /obj/item/storage/belt/gun/m44/gunslinger
 	name = "custom-tooled gunslinger's belt"
@@ -1882,23 +1835,10 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 
 /obj/item/storage/belt/gun/smartgunner/tactical
-	name = "\improper M802 pattern smartgunner sidearm rig"
+	name = "\improper M802 pattern tactical smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
-	icon_state = "t_sgbelt"
-	holster_slots = list(
-		"1" = list(
-			"icon_x" = 5,
-			"icon_y" = -2))
-	can_hold = list(
-		/obj/item/device/flashlight/flare,
-		/obj/item/weapon/gun/flare,
-		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/m44,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/smartgun,
-	)
-	has_gamemode_skin = TRUE
+	icon_state = "s_sgbelt"
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"
