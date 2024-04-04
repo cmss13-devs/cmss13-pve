@@ -3399,12 +3399,20 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/bipod/m60
 	name = "bipod"
-	desc = "A simple set of telescopic poles to keep a weapon stabilized during firing. This one looks rather old.\nGreatly increases accuracy and reduces recoil when properly placed, but also increases weapon size and slows firing speed."
+	desc = "The bipod of an H-G Mk70 machine gun. Wait, how did you get this off of the gun?! \nReduces unbraced fire effectiveness, but substantially improves the performance of the Mk70 when braced correctly."
 	icon_state = "bipod_m60"
 	attach_icon = "bipod_m60_a"
 
 	flags_attach_features = ATTACH_ACTIVATION
-	delay_mod = FIRE_DELAY_TIER_1
+	delay_mod = FIRE_DELAY_TIER_10
+/obj/item/attachable/bipod/m60
+	..()
+
+	delay_mod = FIRE_DELAY_TIER_10
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	recoil_mod = RECOIL_AMOUNT_TIER_5
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"
