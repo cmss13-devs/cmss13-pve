@@ -31,5 +31,6 @@
 		new /obj/item/clothing/suit/storage/jacket/marine/service(src)
 		new /obj/item/clothing/under/marine/dress(src)
 		new /obj/item/clothing/shoes/dress(src)
+		new /obj/item/clothing/head/marine/peaked/service(src)
 		new /obj/item/clothing/shoes/marine/knife(src)
 		new /obj/item/device/radio/headset/almayer/marine(src)
