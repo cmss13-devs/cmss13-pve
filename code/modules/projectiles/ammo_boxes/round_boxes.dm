@@ -48,6 +48,7 @@
 	overlay_content = "_reg"
 	default_ammo = /datum/ammo/bullet/smartgun
 	caliber = "10x28mm"
+	bullet_amount = 1000
 	max_bullet_amount = 1000
 
 /obj/item/ammo_box/rounds/smartgun/empty

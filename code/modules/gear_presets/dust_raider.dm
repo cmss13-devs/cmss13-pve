@@ -26,7 +26,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrade = "ME2"
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 
 /datum/equipment_preset/dust_raider/private/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
