@@ -155,7 +155,7 @@
 
 /datum/equipment_preset/uscm_ground/civilian/load_preset()
 	spec = pick(CIVILIAN_BIOLOGIST, CIVILIAN_ARACHAEOLOGIST, CIVILIAN_ANTHROPOLOGIST, CIVILIAN_LINGUIST)
-	assignment = initial(assignment) + "- [spec]"
+	assignment = initial(assignment) + ": [spec]"
 
 	if(spec == CIVILIAN_LINGUIST)
 		languages = ALL_HUMAN_LANGUAGES //Linguists get all human languages, but they have fewer skills.
