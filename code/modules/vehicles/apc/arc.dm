@@ -112,7 +112,7 @@
 */
 /obj/effect/vehicle_spawner/arc
 	name = "ARC Spawner"
-	icon = 'icons/obj/vehicles/movieapc.dmi'
+	icon = 'icons/obj/vehicles/arc.dmi'
 	icon_state = "arc_base"
 	pixel_x = -48
 	pixel_y = -48
