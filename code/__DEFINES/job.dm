@@ -28,7 +28,7 @@
 #define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
-#define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
+#define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_LEADER, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE)
 
 #define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
 #define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
@@ -446,7 +446,7 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_CATEGORY_MEDICAL "Medical"
 #define JOB_CATEGORY_COMBAT "Combat"
 //This list allows us to keep all manifest categories in the same order every time, regardless of who spawned when/first/second/third.
-#define JOB_CATEGORY_ALL list(JOB_CATEGORY_OTHER, JOB_CATEGORY_CIC, JOB_CATEGORY_SUPPORT, JOB_CATEGORY_POLICE, JOB_CATEGORY_ENGINEERING, JOB_CATEGORY_REQUISITION, JOB_CATEGORY_MEDICAL, JOB_CATEGORY_COMBAT)
+#define JOB_CATEGORY_ALL list(JOB_CATEGORY_CIC, JOB_CATEGORY_SUPPORT, JOB_CATEGORY_POLICE, JOB_CATEGORY_ENGINEERING, JOB_CATEGORY_REQUISITION, JOB_CATEGORY_MEDICAL, JOB_CATEGORY_COMBAT, JOB_CATEGORY_OTHER)
 
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.

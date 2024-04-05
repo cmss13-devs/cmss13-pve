@@ -114,7 +114,7 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 		if(J.category == JOB_CATEGORY_COMBAT)
 			if(!squad_name) continue ///If they are a combat role but have no squad, we skip them.
 			LAZYINITLIST(manifest_out[J.category][squad_name]) ///Initializes the squad itself.
-			LAZYSET(manifest_out[J.category][squad_name][real_rank], name, rank) ///Initializes the person's information for that squad.
+			LAZYSET(manifest_out[J.category][squad_name][GET_SQUAD_ROLE_MAP(real_rank)], name, rank) ///Initializes the person's information for that squad. We get their mapped role for sorting later. real_rank isn't shown in the manifest, it's backend only.
 		else
 			LAZYSET(manifest_out[J.category][real_rank], name, rank) ///Initializes the job category as per normal.
 
@@ -128,12 +128,15 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 				S = i
 				if(!category_list[S.name]) continue ///Only if the squad is actually listed.
 				dat += "<tr><th colspan=3>[S.name]</th></tr>"
-				for(real_rank in category_list[S.name])
-					for(name in category_list[S.name][real_rank]) ///This nesting gets confusing. But it's manifest_out -> squad name -> real rank they are -> name = rank
-						dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[category_list[S.name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
-						even = !even
+				for(real_rank in JOB_SQUAD_ROLES_LIST) ///Again, here we have a static ordered list to properly sort every name.
+					if(category_list[S.name][real_rank])///May not exist.
+						for(name in category_list[S.name][real_rank]) ///This nesting gets confusing. But it's manifest_out -> squad name -> real rank they are -> name = rank
+							dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[category_list[S.name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
+							even = !even
 
 		else
+			///Who is sorted first or second will depend on when they were added to the data_core, priority to who is listed first. Small issue that can be addressed if there is a need for it.
+			///Requires a sorting category list like is done for general sorting and squads. Trickier though.
 			for(real_rank in category_list)
 				for(name in category_list[real_rank])
 					dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[manifest_out[category][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
@@ -156,9 +159,7 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 		var/mob/living/carbon/human/H
 		for(var/i in GLOB.human_mob_list)
 			H = i
-			if(is_admin_level(H.z))
-				continue
-			if(H.job in roles_to_inject)
+			if(!is_admin_level(H.z) && H.job in roles_to_inject)
 				manifest_inject(H)
 
 /datum/datacore/proc/manifest_modify(name, ref, assignment, rank, p_stat)
