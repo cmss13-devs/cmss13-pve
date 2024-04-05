@@ -23,7 +23,7 @@
 /obj/structure/surface/table,
 /obj/structure/phone_base/uscm_ground/tent{
 	pixel_x = -1;
-	pixel_y = 5;
+	pixel_y = 15;
 	phone_id = "Officer Tent";
 	phone_category = "Operations"
 	},
@@ -48,7 +48,7 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/obj/structure/machinery/computer/overwatch/tent,
+/obj/structure/machinery/computer/overwatch/uscm_ground/tent,
 /turf/template_noop,
 /area/template_noop)
 "X" = (

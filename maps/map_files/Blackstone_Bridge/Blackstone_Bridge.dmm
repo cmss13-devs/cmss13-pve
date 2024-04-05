@@ -1870,26 +1870,14 @@
 /turf/open/gm/river,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
 "bBV" = (
-/obj/item/mortar_shell/incendiary,
-/obj/item/mortar_shell/incendiary,
+/obj/structure/surface/rack,
+/obj/item/mortar_shell/incendiary{
+	pixel_x = -5
+	},
 /obj/item/mortar_shell/incendiary,
 /obj/item/mortar_shell/incendiary{
 	pixel_x = 3;
 	pixel_y = 2
-	},
-/obj/item/mortar_shell/incendiary{
-	pixel_x = -5
-	},
-/obj/item/mortar_shell/incendiary{
-	pixel_x = -9;
-	pixel_y = 2
-	},
-/obj/item/mortar_shell/incendiary{
-	pixel_x = 8;
-	pixel_y = 3
-	},
-/obj/structure/closet/coffin/woodencrate{
-	name = "incendiary shell crate"
 	},
 /turf/open/asphalt{
 	icon_state = "tile"
@@ -2267,12 +2255,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance)
 "bVu" = (
-/obj/structure/machinery/cm_vending/clothing/synth/snowflake{
-	req_one_access = null;
-	req_access = null;
-	req_access_txt = "52";
-	access_modified = 1
-	},
+/obj/structure/closet,
 /turf/open/floor/plating{
 	dir = 6;
 	icon_state = "warnplate"
@@ -2501,7 +2484,6 @@
 "cfg" = (
 /obj/structure/closet/crate/construction,
 /obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/metal/large_stack,
 /obj/item/stack/sheet/glass/large_stack,
 /obj/item/stack/sheet/plasteel/large_stack,
 /obj/structure/machinery/light/small,
@@ -2526,7 +2508,7 @@
 /obj/structure/machinery/door_control/brbutton/alt{
 	req_access_txt = "56";
 	access_modified = 1;
-	name = "toggle outpost lockdown";
+	name = "\improper Outpost Lockdown Button";
 	id = "outpost_lockdown";
 	pixel_x = -6;
 	pixel_y = 7
@@ -3029,9 +3011,12 @@
 	},
 /area/whiskey_outpost/blackstone/inside/medbay)
 "cFg" = (
-/obj/structure/machinery/power/geothermal,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
+	},
+/obj/structure/machinery/power/geothermal{
+	fail_rate = 20;
+	fail_check_ticks = 500
 	},
 /turf/open/floor/plating{
 	dir = 4;
@@ -7546,7 +7531,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/prop/flower_vase/redwhiteflowers{
 	pixel_x = -12;
-	pixel_y = 13
+	pixel_y = 5
 	},
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -8599,10 +8584,6 @@
 /area/whiskey_outpost/blackstone/inside/eastern_checkpoint)
 "hfz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/notepad{
-	pixel_y = -3;
-	pixel_x = -5
-	},
 /obj/item/stack/cable_coil{
 	pixel_x = 8;
 	pixel_y = 10
@@ -8773,12 +8754,15 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/commander_quarters)
 "hmZ" = (
-/obj/structure/machinery/power/geothermal,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
+	},
+/obj/structure/machinery/power/geothermal{
+	fail_rate = 20;
+	fail_check_ticks = 500
 	},
 /turf/open/floor/plating{
 	dir = 6;
@@ -9068,7 +9052,24 @@
 	},
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "hCc" = (
-/obj/structure/largecrate/supply/explosives/mortar_he,
+/obj/structure/closet/coffin/woodencrate{
+	name = "incendiary shell crate"
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = -9
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = 9
+	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/mortar_pit)
 "hCn" = (
@@ -9131,7 +9132,25 @@
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/north_east)
 "hFP" = (
-/obj/structure/largecrate/supply/explosives/mortar_flare,
+/obj/structure/closet/coffin/woodencrate{
+	name = "incendiary shell crate"
+	},
+/obj/item/mortar_shell/incendiary{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/item/mortar_shell/incendiary{
+	pixel_x = -5
+	},
+/obj/item/mortar_shell/incendiary,
+/obj/item/mortar_shell/incendiary{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/obj/item/mortar_shell/incendiary{
+	pixel_x = 8;
+	pixel_y = 3
+	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/mortar_pit)
 "hGi" = (
@@ -12568,12 +12587,6 @@
 	icon_state = "darkredfull2"
 	},
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
-"kAU" = (
-/obj/structure/largecrate/supply/explosives/mortar_incend{
-	pixel_y = -1
-	},
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/outside/mortar_pit)
 "kCa" = (
 /obj/structure/barricade/plasteel/wired{
 	dir = 4
@@ -17111,12 +17124,7 @@
 	},
 /area/whiskey_outpost/blackstone/outside/outpost_beach)
 "owR" = (
-/obj/structure/machinery/cm_vending/gear/synth{
-	req_one_access = null;
-	req_access = null;
-	req_access_txt = "52";
-	access_modified = 1
-	},
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake/uscm_ground,
 /turf/open/floor/plating{
 	dir = 5;
 	icon_state = "warnplate"
@@ -17584,9 +17592,12 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/western_caves/north)
 "oSO" = (
-/obj/structure/machinery/power/geothermal,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
+	},
+/obj/structure/machinery/power/geothermal{
+	fail_rate = 20;
+	fail_check_ticks = 500
 	},
 /turf/open/floor/plating{
 	dir = 8;
@@ -18475,9 +18486,12 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "pCX" = (
-/obj/structure/machinery/power/geothermal,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
+	},
+/obj/structure/machinery/power/geothermal{
+	fail_rate = 20;
+	fail_check_ticks = 500
 	},
 /turf/open/floor/plating{
 	dir = 10;
@@ -19055,11 +19069,9 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "qeO" = (
-/obj/structure/machinery/cm_vending/clothing/synth{
-	req_access_txt = "52";
-	req_access = null;
-	req_one_access = null;
-	access_modified = 1
+/obj/structure/machinery/cm_vending/clothing/synth/uscm_ground,
+/obj/structure/machinery/light/small{
+	dir = 8
 	},
 /turf/open/floor/plating{
 	dir = 9;
@@ -19163,8 +19175,23 @@
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/engineering)
 "qhD" = (
-/obj/structure/largecrate/supply/explosives/mortar_he{
-	pixel_y = -3
+/obj/structure/closet/coffin/woodencrate{
+	name = "high explosive shell crate"
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = -9
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = 9
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/mortar_pit)
@@ -19460,8 +19487,24 @@
 	},
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "qwE" = (
-/obj/structure/largecrate/supply/explosives/mortar_incend{
-	pixel_x = -4
+/obj/structure/closet/coffin/woodencrate{
+	name = "flare shell crate"
+	},
+/obj/item/mortar_shell/flare{
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/item/mortar_shell/flare{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare{
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/item/mortar_shell/flare{
+	pixel_x = 9
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/mortar_pit)
@@ -20924,29 +20967,18 @@
 	},
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
 "sbn" = (
-/obj/item/mortar_shell/flare,
-/obj/item/mortar_shell/flare,
-/obj/item/mortar_shell/flare,
-/obj/item/mortar_shell/flare{
-	pixel_x = 5;
-	pixel_y = 1
+/obj/structure/machinery/light/small{
+	dir = 1
 	},
+/obj/structure/surface/rack,
 /obj/item/mortar_shell/flare{
 	pixel_x = -7;
 	pixel_y = 2
 	},
+/obj/item/mortar_shell/flare,
 /obj/item/mortar_shell/flare{
-	pixel_x = 9
-	},
-/obj/item/mortar_shell/flare{
-	pixel_x = -10;
+	pixel_x = 5;
 	pixel_y = 1
-	},
-/obj/structure/closet/coffin/woodencrate{
-	name = "flare shell crate"
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
 	},
 /turf/open/asphalt{
 	icon_state = "tile"
@@ -23384,32 +23416,22 @@
 	},
 /area/whiskey_outpost/blackstone/underground/mountain/tunnel)
 "uhB" = (
-/obj/item/mortar_shell/he,
-/obj/item/mortar_shell/he,
-/obj/item/mortar_shell/he,
-/obj/item/mortar_shell/he{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/mortar_shell/he{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/obj/item/mortar_shell/he{
-	pixel_x = -9
-	},
-/obj/item/mortar_shell/he{
-	pixel_x = 9
-	},
-/obj/structure/closet/coffin/woodencrate{
-	name = "high explosive shell crate"
-	},
 /obj/structure/phone_base/uscm_ground{
 	pixel_x = -5;
 	pixel_y = 26;
 	name = "mortar telephone";
 	phone_category = "Operations";
 	phone_id = "Mortar Pit"
+	},
+/obj/structure/surface/rack,
+/obj/item/mortar_shell/he{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he{
+	pixel_x = 6;
+	pixel_y = 3
 	},
 /turf/open/asphalt{
 	icon_state = "tile"
@@ -23460,7 +23482,8 @@
 /obj/structure/machinery/colony_floodlight_switch{
 	pixel_x = -32;
 	desc = "This switch controls the floodlights surrounding the outpost and surrounding areas. It only functions when there is power.";
-	pixel_y = -4
+	pixel_y = -4;
+	name = "\improper Outpost Floodlight Switch"
 	},
 /obj/item/device/flashlight,
 /obj/structure/machinery/light/small{
@@ -25607,7 +25630,6 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach)
 "wcg" = (
 /obj/structure/closet/crate/construction,
-/obj/item/stack/sheet/metal/large_stack,
 /obj/item/stack/sheet/metal/large_stack,
 /obj/item/stack/sheet/glass/large_stack,
 /obj/item/stack/sheet/plasteel/large_stack,
@@ -43027,7 +43049,7 @@ lUo
 wSR
 fSn
 qhD
-hCc
+njP
 gFS
 rIW
 rIW
@@ -43229,7 +43251,7 @@ lUo
 wSR
 fSn
 hFP
-hFP
+njP
 qxU
 rIW
 rIW
@@ -43431,7 +43453,7 @@ lUo
 wSR
 fSn
 qwE
-kAU
+njP
 gFS
 rIW
 rIW
@@ -43632,7 +43654,7 @@ lUo
 wyf
 wSR
 ufV
-njP
+hCc
 njP
 gFS
 rIW

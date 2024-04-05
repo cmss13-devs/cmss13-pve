@@ -162,7 +162,7 @@
 		skills = /datum/skills/civilian/researcher/linguist
 	else
 		skills = initial(skills)
-		languages = initial(languages)
+		languages = list(LANGUAGE_ENGLISH) ///initial(languages) probably returns null as lists initialize at runtime.
 
 	return ..()
 
