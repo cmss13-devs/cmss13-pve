@@ -89,7 +89,7 @@
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
 	gender = NEUTER
-	desc = "The headset camera and eyepiece part of the M56 Smartgun system. Connects to the weapon for tracking and detection of targets."
+	desc = "A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
@@ -200,13 +200,6 @@
 		button.icon_state = "template"
 
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision
-	name = "\improper M56 head mounted sight"
-	gender = NEUTER
-	desc = "The headset, camera, and eyepiece part of the M56 Smartgun system. Connects to the weapon for tracking and detection of targets."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "m56_goggles"
-	deactive_state = "m56_goggles_0"
-	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 0
 	vision_flags = 0
