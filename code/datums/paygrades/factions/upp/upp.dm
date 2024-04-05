@@ -8,6 +8,7 @@
 	paygrade = "UE0"
 	name = "Conscript"
 	pay_multiplier = 0.05
+	prefix = "Cnscr."
 
 /datum/paygrade/upp/ue1
 	paygrade = "UE1"
@@ -16,8 +17,8 @@
 
 /datum/paygrade/upp/ue2
 	paygrade = "UE2"
-	name = "Private First Class"
-	prefix = "PFC."
+	name = "Efreitor"
+	prefix = "Efr."
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3
@@ -43,6 +44,12 @@
 	name = "Master Serzhant"
 	prefix = "MSzh."
 	pay_multiplier = 0.9
+
+/datum/paygrade/upp/ue7
+	paygrade = "UE7"
+	name = "Starshina"
+	prefix = "Strsh."
+	pay_multiplier = 1 //here comes the moneyyy
 
 //UPP Commandos
 /datum/paygrade/upp/uc1

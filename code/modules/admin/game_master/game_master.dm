@@ -58,6 +58,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	var/list/submenu_types = list(
 		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
 		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
+		/mob/living/carbon/human = /datum/game_master_submenu/infest,
 	)
 
 	/// List of current submenus
@@ -404,7 +405,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			if(!object || !z_level)
 				return
 
-			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_USCM, given_image = background)
+			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_ALL, given_image = background)
 
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 

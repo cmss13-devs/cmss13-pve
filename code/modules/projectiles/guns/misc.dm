@@ -274,6 +274,55 @@
 		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
 		return 0
 
+/obj/item/weapon/gun/pkp/iff
+	name = "\improper QYJ-72-I General Purpose Machine Gun"
+	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
+	var/iff_enabled = TRUE
+
+/obj/item/weapon/gun/pkp/iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
+	))
+	AddComponent(/datum/component/iff_fire_prevention)
+
+/datum/action/item_action/toggle_iff_pkp/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle IFF"
+	action_icon_state = "iff_toggle_on"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/toggle_iff_pkp/action_activate()
+	var/obj/item/weapon/gun/pkp/iff/G = holder_item
+	if(!ishuman(owner))
+		return
+	var/mob/living/carbon/human/H = owner
+	if(H.is_mob_incapacitated() || G.get_active_firearm(H, FALSE) != holder_item)
+		return
+
+/datum/action/item_action/toggle_iff_pkp/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/pkp/iff/G = holder_item
+	G.toggle_lethal_mode(usr)
+	if(G.iff_enabled)
+		action_icon_state = "iff_toggle_on"
+	else
+		action_icon_state = "iff_toggle_off"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/obj/item/weapon/gun/pkp/iff/proc/toggle_lethal_mode(mob/user)
+	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	iff_enabled = !iff_enabled
+	if(iff_enabled)
+		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
+	if(!iff_enabled)
+		remove_bullet_trait("iff")
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
+
 /obj/effect/syringe_gun_dummy
 	name = ""
 	desc = ""

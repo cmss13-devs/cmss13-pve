@@ -4,7 +4,7 @@
 
 /obj/item/clothing/under/marine
 	name = "\improper USCM uniform"
-	desc = "Standard-issue Marine uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
 	siemens_coefficient = 0.9
 	icon_state = "marine_jumpsuit"
 	worn_state = "marine_jumpsuit"
@@ -48,12 +48,18 @@
 		if(findtext(icon_state, i, 1, 3))
 			flags_jumpsuit |= UNIFORM_DO_NOT_HIDE_ACCESSORIES
 
+/obj/item/clothing/under/marine/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
-	desc = "Standard-issue Marine hospital corpsman fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine hospital corpsman fatigues with venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "marine_medic"
 	worn_state = "marine_medic"
 	specialty = "USCM Hospital Corpsman"
+
+/obj/item/clothing/under/marine/medic/standard
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/engineer
 	name = "\improper USCM ComTech uniform"
@@ -170,7 +176,7 @@
 
 /obj/item/clothing/under/marine/officer/pilot
 	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, and is meant for survival in inhospitable conditions. Fly the marines onwards to glory. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
 	icon_state = "pilot_flightsuit"
 	item_state = "pilot_flightsuit"
 	worn_state = "pilot_flightsuit"
@@ -200,7 +206,7 @@
 
 /obj/item/clothing/under/marine/officer/tanker
 	name = "vehicle crewman uniform"
-	desc = "A uniform worn by vehicle crewmen of the USCM. Do the corps proud. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Armored vehicle crew uniform worn by tankers and cav crew of the USCMC. Shrapnel protection provided by venlar panels, badassery hinges on how well the operator works their vehicle. Do the Corps proud."
 	icon_state = "marine_tanker"
 	worn_state = "marine_tanker"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/tanker, /obj/item/clothing/suit/storage/jacket/marine/service/tanker)
@@ -445,7 +451,7 @@
 
 /obj/item/clothing/under/marine/veteran/marsoc
 	name = "SOF Uniform"
-	desc = "A black uniform for elite Marine personnel. Designed to be comfortable and help blend into dark enviorments."
+	desc = "MARSOC standard uniform, in a dark camouflage pattern. Venlar liners provide slight protection from ballistics or blades."
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	icon_state = "marsoc"
 	worn_state = "marsoc"
@@ -523,6 +529,13 @@
 	sensor_faction = FACTION_UPP
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
+/obj/item/clothing/under/marine/veteran/UPP/boiler
+	name = "\improper UPP operations fatigues"
+	desc = "A set of UPP operations fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
+	icon_state = "upp_boiler"
+	worn_state = "upp_boiler"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/medic
 	name = "\improper UPP medic fatigues"
@@ -731,6 +744,22 @@
 	icon_state = "clf_uniform"
 	worn_state = "clf_uniform"
 	sensor_faction = FACTION_CLF
+
+/obj/item/clothing/under/colonist/prison_boiler
+	name = "\improper prisoner boiler uniform"
+	desc = "A standardised prisoner-wear boiler uniform."
+	icon_state = "prison_boiler"
+	worn_state = "prison_boiler"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/ua_boiler
+	name = "\improper UA blue operations uniform"
+	desc = "A stylish blue jumpsuit - standard issue for UA civilian support personnel."
+	icon_state = "ua_boiler"
+	worn_state = "ua_boiler"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_MARINE
 
 /obj/item/clothing/under/colonist/ua_civvies
 	name = "\improper UA gray utility uniform"

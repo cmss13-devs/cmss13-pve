@@ -24,6 +24,7 @@
 	var/minimum_playtime_as_job = 3 HOURS
 
 	var/gear_preset //Gear preset name used for this job
+	var/gear_preset_secondary //Additional gear preset for different thingies
 	var/list/gear_preset_whitelist = list()//Gear preset name used for council snowflakes ;)
 
 	//For generating entry messages
@@ -39,6 +40,9 @@
 	var/job_options
 	/// If TRUE, this job will spawn w/ a cryo emergency kit during evac/red alert
 	var/gets_emergency_kit = TRUE
+
+	/// Whether or not linking your discord account can let you get prime priority for this role
+	var/prime_priority = FALSE
 
 /datum/job/New()
 	. = ..()
