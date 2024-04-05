@@ -159,7 +159,7 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 		var/mob/living/carbon/human/H
 		for(var/i in GLOB.human_mob_list)
 			H = i
-			if(!is_admin_level(H.z) && H.job in roles_to_inject)
+			if(!is_admin_level(H.z) && (H.job in roles_to_inject))
 				manifest_inject(H)
 
 /datum/datacore/proc/manifest_modify(name, ref, assignment, rank, p_stat)
