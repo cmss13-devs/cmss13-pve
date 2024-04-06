@@ -730,6 +730,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	button.overlays.Cut()
 	button.overlays += image('icons/obj/items/clothing/helmet_visors.dmi', button, action_icon_state)
 
+/obj/item/clothing/head/helmet/marine/attached_headset/Initialize(mapload, list/new_protection)
+	. = ..()
+
+	var/obj/item/device/radio/headset/almayer/marine/temp_helmet = new()
+	AddComponent(/datum/component/attached_headset, null, temp_helmet, WEAR_HEAD)
+
 /obj/item/clothing/head/helmet/marine/tech
 	name = "\improper M10 technician helmet"
 	desc = "A modified M10 marine helmet for ComTechs. Features a toggleable welding screen for eye protection."
