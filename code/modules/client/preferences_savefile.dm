@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 22
+#define SAVEFILE_VERSION_MAX 24
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -95,6 +95,20 @@
 		if(temp_ooccolor == "#b82e00")
 			temp_ooccolor = "#1c52f5"
 		S["ooccolor"] << temp_ooccolor
+
+	/// Skipping 23 due to a woopsy with job resets
+	if(savefile_version < 24)
+		for(var/i in 1 to 10)
+			S.cd = "/character[i]"
+			var/overwrite_job_preference_list
+			S["job_preference_list"] >> overwrite_job_preference_list
+
+			for(var/j in overwrite_job_preference_list)
+				overwrite_job_preference_list[j] = 0
+
+			S["job_preference_list"] << overwrite_job_preference_list
+
+		S.cd = "/"
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
@@ -574,7 +588,7 @@
 		ResetJobs()
 	else
 		for(var/job in job_preference_list)
-			job_preference_list[job] = sanitize_integer(job_preference_list[job], 0, 3, initial(job_preference_list[job]))
+			job_preference_list[job] = sanitize_integer(job_preference_list[job], 0, 4, initial(job_preference_list[job]))
 
 	if(!organ_data)
 		organ_data = list()

@@ -49,9 +49,15 @@
 
 /obj/item/weapon/sword/machete/arnold
 	name = "\improper M2100 \"Ngájhe\" machete"
-	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. Difficult to carry with the usual kit."
+	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. Difficult to carry with the usual kit ."
 	icon_state = "arnold-machete"
+	item_state = "arnold-machete"
 	force = MELEE_FORCE_TIER_11
+
+/obj/item/weapon/sword/machete/arnold/weak
+	name = "\improper M2100 machete"
+	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
+	force = MELEE_FORCE_STRONG
 
 /obj/item/weapon/sword/hefa
 	name = "HEFA sword"
@@ -273,8 +279,6 @@
 	if(loc != user) //Only do unique stuff if you are holding it
 		return ..()
 
-	if(!do_after(user, interaction_time, INTERRUPT_INCAPACITATED, BUSY_ICON_HOSTILE))
-		return
 	playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
 	change_razor_state(!razor_opened)
 	to_chat(user, SPAN_NOTICE("You [razor_opened ? "reveal" : "hide"] [src]'s blade."))
@@ -375,3 +379,29 @@
 	human_user.apply_damage(rand(1,5), BRUTE, "head", src)
 	human_user.update_hair()
 
+/obj/item/weapon/straight_razor/attack(mob/target, mob/user)
+	if((!ishuman(target)) || (user.a_intent == INTENT_HARM) || !razor_opened)
+		return ..()
+	var/mob/living/carbon/human/poor_bastard = target
+
+	var/timer = 10 SECONDS
+	var/message = "\The [user] begins to shave \the [poor_bastard]!"
+	if(skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT))
+		timer = 5 SECONDS
+		message = "\The [user] begins to <b>expertly</b> shave \the [poor_bastard]!"
+
+	user.visible_message(SPAN_WARNING(message))
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		return
+
+	switch(user.zone_selected)
+		if("mouth")
+			poor_bastard.f_style = "Shaved"
+			user.visible_message(SPAN_WARNING("\The [user] shaves off \the [poor_bastard]'s facial hair!"))
+		if("head")
+			poor_bastard.h_style = pick("Skinhead", "Bald")
+			user.visible_message(SPAN_WARNING("\The [user] shaves off \the [poor_bastard]'s hair!"))
+
+	poor_bastard.apply_damage(rand(1,5), BRUTE, "head", src)
+	poor_bastard.update_hair()
+	return TRUE
