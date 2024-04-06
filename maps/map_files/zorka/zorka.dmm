@@ -72,12 +72,16 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"bf" = (
+/obj/structure/prop/dam/crane,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "bh" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkyellowfull2"
+/turf/open/floor/strata{
+	icon_state = "yellow1"
 	},
 /area/zorka/fortress)
 "bn" = (
@@ -131,6 +135,17 @@
 	icon_state = "blue1"
 	},
 /area/zorka/fortress)
+"bM" = (
+/obj/structure/largecrate/random/mini/chest{
+	pixel_y = 10;
+	pixel_x = 20
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "bP" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/almayer/no_build{
@@ -152,6 +167,14 @@
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"ca" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "ce" = (
 /obj/structure/machinery/defenses/sentry/upp{
 	dir = 1
@@ -194,6 +217,22 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"ct" = (
+/obj/structure/machinery/computer3/powermonitor,
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
+"cu" = (
+/obj/structure/barricade/handrail/strata,
+/obj/structure/catwalk/prison{
+	icon = 'icons/turf/floors/strata_floor.dmi';
+	icon_state = "catwalk"
+	},
+/turf/open/gm/river/desert/deep{
+	base_river_slowdown = 0
+	},
+/area/zorka/exterior)
 "cx" = (
 /turf/open/floor/strata{
 	dir = 8;
@@ -223,6 +262,9 @@
 "cI" = (
 /turf/open/floor/carpet,
 /area/zorka/fortress)
+"cJ" = (
+/turf/open/gm/river/desert/deep/covered,
+/area/zorka/exterior)
 "cK" = (
 /obj/structure/bed/bedroll{
 	dir = 1;
@@ -300,6 +342,16 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/zorka/fortress)
+"dl" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "dq" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 6
@@ -315,6 +367,21 @@
 	dir = 8
 	},
 /area/zorka/fortress)
+"dx" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 8;
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
 "dy" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/cameras/wooden_tv/prop{
@@ -341,15 +408,9 @@
 	},
 /area/zorka/fortress)
 "dQ" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	name = "\improper Checkpoint 2-M";
-	req_one_access = null;
-	dir = 1
-	},
-/turf/open/floor/strata{
-	icon_state = "red1"
-	},
-/area/zorka/fortress)
+/turf/closed/wall/strata_outpost/reinforced,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "dV" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -362,13 +423,9 @@
 /turf/open/floor/plating,
 /area/zorka/fortress)
 "ea" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	dir = 2;
-	name = "\improper Checkpoint 1-E";
-	req_one_access = null
-	},
-/turf/closed/wall/strata_outpost/reinforced,
-/area/zorka/fortress)
+/turf/open/space/basic,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "eb" = (
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP/mp,
@@ -414,6 +471,23 @@
 	icon_state = "blue4"
 	},
 /area/zorka/fortress)
+"eo" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/structure/catwalk/prison{
+	icon = 'icons/turf/floors/strata_floor.dmi';
+	icon_state = "catwalk"
+	},
+/obj/structure/catwalk/prison{
+	icon = 'icons/turf/floors/strata_floor.dmi';
+	icon_state = "catwalk"
+	},
+/turf/open/gm/river/desert/deep{
+	base_river_slowdown = 0
+	},
+/area/zorka/exterior)
 "er" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -422,6 +496,13 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"ev" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "ey" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/light/small,
@@ -474,6 +555,12 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"eZ" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "fb" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/strata{
@@ -519,6 +606,15 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"fH" = (
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "fR" = (
 /obj/structure/filingcabinet{
 	pixel_x = -9
@@ -531,14 +627,23 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"fS" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "fT" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
 	desc = "ProgMash produced generator made for heavy use by frontier colonies.";
 	color = "#F08080"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkyellowfull2"
+/turf/open/floor/strata{
+	icon_state = "yellow2"
 	},
 /area/zorka/exterior)
 "fV" = (
@@ -575,6 +680,28 @@
 	icon_state = "floor2"
 	},
 /area/zorka/fortress)
+"gk" = (
+/obj/structure/largecrate/supply/floodlights{
+	anchored = 1
+	},
+/obj/structure/largecrate/supply/floodlights{
+	pixel_y = 17;
+	anchored = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"gm" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
 "gs" = (
 /obj/structure/closet/crate/plastic,
 /obj/item/reagent_container/food/snacks/upp,
@@ -610,6 +737,12 @@
 	},
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"gN" = (
+/obj/structure/closet/crate,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "gO" = (
 /obj/structure/machinery/door/airlock/prison{
 	dir = 1;
@@ -631,6 +764,13 @@
 "gY" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/zorka/fortress)
+"hh" = (
+/obj/structure/machinery/power/smes,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 8
+	},
+/area/zorka/exterior)
 "hl" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/reagent_container/food/drinks/cans/boda,
@@ -675,9 +815,26 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"hK" = (
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "hL" = (
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"hQ" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/prop/static_tank/water{
+	pixel_y = 15
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 4
+	},
+/area/zorka/exterior)
 "ib" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced/colony{
 	req_one_access = null
@@ -757,6 +914,12 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"jl" = (
+/obj/structure/closet/crate/radiation,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "jo" = (
 /obj/item/robot_parts/arm/r_arm{
 	pixel_y = -8;
@@ -765,6 +928,11 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"jr" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "jx" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 8
@@ -814,6 +982,11 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"jV" = (
+/obj/effect/spawner/random/tool,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "jX" = (
 /turf/open/floor/strata{
 	icon_state = "blue1"
@@ -822,7 +995,7 @@
 "ka" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony,
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	icon_state = "yellow2"
 	},
 /area/zorka/exterior)
 "kb" = (
@@ -897,6 +1070,17 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"kq" = (
+/obj/structure/largecrate/random/mini/chest{
+	pixel_y = -1;
+	pixel_x = -20
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "kx" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
 	dir = 2
@@ -961,6 +1145,9 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"kX" = (
+/turf/open/space/basic,
+/area/zorka/fortress)
 "lf" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/cameras{
@@ -971,6 +1158,19 @@
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"lg" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 30
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "lk" = (
 /obj/structure/surface/rack,
 /turf/open/floor/carpet,
@@ -1011,6 +1211,14 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"lD" = (
+/obj/effect/spawner/random/tool,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "lE" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
@@ -1066,6 +1274,12 @@
 	icon_state = "red3"
 	},
 /area/zorka/fortress)
+"mh" = (
+/obj/structure/reagent_dispensers/fueltank/gas,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "mm" = (
 /obj/structure/prop/dam/truck{
 	layer = 3.1
@@ -1092,6 +1306,11 @@
 /area/zorka/fortress)
 "mA" = (
 /turf/open/space/basic,
+/area/zorka/exterior)
+"mB" = (
+/turf/open/floor/strata{
+	icon_state = "yellow4"
+	},
 /area/zorka/exterior)
 "mI" = (
 /obj/effect/decal/warning_stripes{
@@ -1276,6 +1495,10 @@
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"oe" = (
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "ol" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -1301,6 +1524,9 @@
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"oq" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/zorka/exterior)
 "os" = (
 /obj/structure/barricade/deployable{
 	layer = 3;
@@ -1328,6 +1554,12 @@
 /obj/structure/flora/pottedplant/random/unanchored,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"oI" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "oK" = (
 /obj/structure/pipes/standard/tank/oxygen{
 	dir = 8
@@ -1337,11 +1569,12 @@
 	},
 /area/zorka/fortress)
 "oR" = (
-/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata{
-	icon_state = "red1"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/zorka/fortress)
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "oS" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -1356,6 +1589,12 @@
 	},
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"oW" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
 "oZ" = (
 /turf/open/floor/strata{
 	icon_state = "red1"
@@ -1383,6 +1622,12 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"ph" = (
+/obj/structure/closet/l3closet/general,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "pk" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/skills,
@@ -1573,6 +1818,19 @@
 	icon_state = "blue1"
 	},
 /area/zorka/fortress)
+"rl" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "ro" = (
 /turf/open/floor/strata{
 	dir = 5;
@@ -1590,6 +1848,11 @@
 	color = "#CD5C5C"
 	},
 /area/zorka/fortress)
+"rI" = (
+/turf/open/floor/strata{
+	icon_state = "red4"
+	},
+/area/zorka/exterior)
 "rO" = (
 /obj/structure/pipes/vents/pump/no_boom{
 	welded = 1
@@ -1598,6 +1861,15 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"rP" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "rT" = (
 /obj/structure/bed{
 	icon_state = "abed"
@@ -1619,6 +1891,15 @@
 	},
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"sf" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "sk" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/kitchen/utensil/pknife,
@@ -1649,6 +1930,12 @@
 	},
 /turf/open/floor/carpet,
 /area/zorka/fortress)
+"sC" = (
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 8
+	},
+/area/zorka/exterior)
 "sF" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/microwave{
@@ -1667,10 +1954,27 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"sI" = (
+/obj/structure/prop/dam/crane,
+/turf/open/space/basic,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "sM" = (
 /obj/structure/machinery/vending/sovietsoda,
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"sN" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
+"sS" = (
+/obj/item/circuitboard/airlock,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "sU" = (
 /obj/structure/bed,
 /obj/item/bedsheet/red,
@@ -1683,6 +1987,34 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"sZ" = (
+/obj/structure/filtration/machine_64x128{
+	icon_state = "filtration_0";
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
+"td" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/structure/catwalk/prison{
+	icon = 'icons/turf/floors/strata_floor.dmi';
+	icon_state = "catwalk"
+	},
+/turf/open/gm/river/desert/deep{
+	base_river_slowdown = 0
+	},
+/area/zorka/exterior)
+"tp" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "tr" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -1701,6 +2033,15 @@
 "tS" = (
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/zorka/fortress)
+"tV" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "tW" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -1795,6 +2136,12 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"uR" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "uX" = (
 /obj/structure/largecrate/random/barrel/white{
 	pixel_x = -11;
@@ -1896,8 +2243,8 @@
 	},
 /area/zorka/fortress)
 "vJ" = (
-/turf/open/floor/prison{
-	icon_state = "darkyellowfull2"
+/turf/open/floor/strata{
+	icon_state = "yellow2"
 	},
 /area/zorka/exterior)
 "vN" = (
@@ -1996,12 +2343,49 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"wr" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "red3"
+	},
+/area/zorka/exterior)
+"wu" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/colony,
+/turf/open/auto_turf/snow/brown_base/layer3,
+/area/zorka/exterior)
+"wz" = (
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
+"wD" = (
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 4
+	},
+/area/zorka/exterior)
+"wE" = (
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "wH" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/carpet{
 	color = "#00FF00"
 	},
 /area/zorka/fortress)
+"wO" = (
+/obj/structure/filtration/machine_64x128{
+	icon_state = "filtration_0";
+	dir = 1;
+	layer = 2.97
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
 "wS" = (
 /obj/structure/closet/secure_closet/commander,
 /turf/open/floor/kutjevo/fake_wood,
@@ -2025,6 +2409,22 @@
 	icon_state = "blue1"
 	},
 /area/zorka/fortress)
+"xd" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"xe" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	icon_state = "conveyor-1"
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "xf" = (
 /obj/structure/window/framed/almayer/white/hull,
 /obj/structure/machinery/door/poddoor/almayer/blended/white/open{
@@ -2138,6 +2538,14 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"yl" = (
+/obj/vehicle/powerloader/jd{
+	name = "\improper CosmosStal 12 Bogatyr Power Loader"
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
 "yn" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -2157,6 +2565,16 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"yp" = (
+/obj/structure/filtration/machine_64x128{
+	icon_state = "filtration_0";
+	pixel_y = -1;
+	layer = 2.97
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
 "yr" = (
 /obj/structure/barricade/deployable{
 	dir = 8;
@@ -2179,6 +2597,15 @@
 	icon_state = "red3"
 	},
 /area/zorka/fortress)
+"yz" = (
+/obj/effect/spawner/random/tool,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "yH" = (
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
@@ -2235,6 +2662,13 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"zv" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/cameras/wooden_tv/prop,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "zw" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony,
 /turf/open/floor/strata{
@@ -2256,6 +2690,26 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"zD" = (
+/obj/structure/largecrate/supply/supplies/tables_racks{
+	anchored = 1
+	},
+/obj/structure/largecrate/supply/supplies/tables_racks{
+	pixel_y = 15;
+	pixel_x = 9;
+	anchored = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"zE" = (
+/turf/open/floor/strata{
+	icon_state = "red3"
+	},
+/area/zorka/exterior)
 "zL" = (
 /obj/structure/bed,
 /turf/open/floor/wood,
@@ -2283,6 +2737,17 @@
 	},
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"Ah" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "Al" = (
 /obj/structure/largecrate/supply/supplies/plasteel{
 	layer = 2.9;
@@ -2301,6 +2766,11 @@
 	dir = 8
 	},
 /area/zorka/fortress)
+"Ay" = (
+/turf/open/space/basic,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "AD" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -2323,18 +2793,58 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"AG" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	layer = 2.97
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 8
+	},
+/area/zorka/exterior)
+"AO" = (
+/obj/item/tool/warning_cone{
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "AP" = (
 /turf/open/floor/strata{
 	icon_state = "red4";
 	dir = 1
 	},
 /area/zorka/fortress)
+"AU" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/prop/mech/hydralic_clamp,
+/obj/structure/prop/mech/drill{
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "AV" = (
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"Bd" = (
+/obj/structure/filtration/machine_96x96{
+	icon_state = "sedimentation_A_1"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
 "Bg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair{
@@ -2375,6 +2885,16 @@
 /obj/structure/bookcase,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Bv" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	icon_state = "conveyor-1"
+	},
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "BA" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -2586,6 +3106,20 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"Ds" = (
+/turf/open/floor/strata{
+	icon_state = "yellow1"
+	},
+/area/zorka/fortress)
+"Dv" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "Dx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2612,10 +3146,18 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"DL" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "DR" = (
 /obj/structure/barricade/handrail/strata,
-/turf/open/floor/prison{
-	icon_state = "darkyellowfull2"
+/turf/open/floor/strata{
+	icon_state = "yellow1"
 	},
 /area/zorka/fortress)
 "DV" = (
@@ -2632,6 +3174,12 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/zorka/fortress)
+"Ea" = (
+/obj/structure/machinery/door/airlock/engineering/colony,
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
 "Ec" = (
 /obj/structure/gun_rack/type71{
 	initial_stored = 2
@@ -2663,6 +3211,12 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Ei" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "red3"
+	},
+/area/zorka/exterior)
 "Ek" = (
 /obj/structure/bed/chair/bolted{
 	dir = 1
@@ -2678,6 +3232,13 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"Em" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 8
+	},
+/area/zorka/exterior)
 "EB" = (
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/zorka/exterior)
@@ -2709,6 +3270,20 @@
 	icon_state = "red3"
 	},
 /area/zorka/fortress)
+"ES" = (
+/obj/structure/filtration/machine_64x128{
+	icon_state = "filtration_0";
+	dir = 1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
+"ET" = (
+/obj/item/stack/sheet/metal/med_small_stack,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "EU" = (
 /obj/structure/toilet,
 /turf/open/floor/strata{
@@ -2727,6 +3302,30 @@
 /obj/structure/curtain/black,
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"Fj" = (
+/obj/item/tool/warning_cone{
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"Fu" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	icon_state = "cellconsole";
+	color = "#F08080";
+	dir = 1;
+	pixel_y = 2;
+	name = "filtration control computer";
+	desc = "It's a computer which controls many functions of filtration machinery. Too bad you have no clue what any of them do."
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 8
+	},
+/area/zorka/exterior)
 "FB" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -2776,6 +3375,21 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"FO" = (
+/obj/structure/surface/rack,
+/obj/item/storage/backpack/marine/engineerpack/welder_chestrig,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
+"FQ" = (
+/obj/effect/spawner/random/tool,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "FR" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -2888,6 +3502,12 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"GR" = (
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Hb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
@@ -2904,6 +3524,13 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Hm" = (
+/obj/structure/reagent_dispensers/fueltank/gas/methane,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 4
+	},
+/area/zorka/exterior)
 "Hn" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -2914,6 +3541,15 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"Ho" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/atmos_alert{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
 "Hr" = (
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
@@ -2950,6 +3586,15 @@
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"HD" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/station_alert{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
 "HG" = (
 /turf/open/floor/strata{
 	icon_state = "red4";
@@ -3070,6 +3715,12 @@
 	icon_state = "floor2"
 	},
 /area/zorka/fortress)
+"Jn" = (
+/obj/structure/barricade/handrail/strata,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "Jq" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light{
@@ -3215,6 +3866,13 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"JC" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
+	name = "\improper Checkpoint 2-M";
+	req_one_access = null
+	},
+/turf/open/auto_turf/snow/brown_base/layer3,
+/area/zorka/exterior)
 "JF" = (
 /obj/structure/sink{
 	dir = 8;
@@ -3249,6 +3907,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Kq" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "Kr" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -3298,6 +3965,17 @@
 	dir = 8
 	},
 /area/zorka/fortress)
+"KC" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/barricade/handrail/strata,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/zorka/exterior)
 "KE" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/strata{
@@ -3311,6 +3989,14 @@
 	icon_state = "red3"
 	},
 /area/zorka/fortress)
+"KK" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "KM" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 10
@@ -3375,6 +4061,16 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"Ly" = (
+/obj/structure/machinery/door/airlock/engineering/colony,
+/turf/open/space/basic,
+/area/zorka/exterior)
+"LC" = (
+/obj/structure/machinery/door/airlock/engineering/colony,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "LH" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/cameras{
@@ -3526,6 +4222,12 @@
 	icon_state = "white_cyan2"
 	},
 /area/zorka/fortress)
+"MW" = (
+/obj/structure/closet/secure_closet/engineering_electrical,
+/turf/open/floor/strata{
+	icon_state = "yellow4"
+	},
+/area/zorka/exterior)
 "MX" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/kutjevo/fake_wood,
@@ -3561,12 +4263,39 @@
 	icon_state = "white_cyan2"
 	},
 /area/zorka/fortress)
+"Nf" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/fancy/vials,
+/obj/item/reagent_container/dropper,
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Ng" = (
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"Nl" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	icon_state = "cellconsole";
+	color = "#F08080";
+	dir = 1;
+	pixel_y = 2;
+	name = "filtration control computer";
+	desc = "It's a computer which controls many functions of filtration machinery. Too bad you have no clue what any of them do."
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Nr" = (
 /obj/structure/machinery/light/built{
 	dir = 8
@@ -3596,6 +4325,12 @@
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
+"NC" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 6
 	},
 /area/zorka/exterior)
 "ND" = (
@@ -3663,12 +4398,32 @@
 	icon_state = "floor2"
 	},
 /area/zorka/fortress)
+"Ob" = (
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "red3"
+	},
+/area/zorka/exterior)
 "Oc" = (
 /obj/structure/surface/rack,
 /obj/item/storage/toolbox/electrical,
 /obj/item/cell/high,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Od" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/trash/semki{
+	pixel_y = 4;
+	pixel_x = -10
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = 9;
+	pixel_x = 6
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "OM" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/prop{
@@ -3694,6 +4449,13 @@
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"OP" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "OX" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/white,
 /obj/structure/pipes/standard/simple/visible/cyan,
@@ -3701,6 +4463,12 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"OZ" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 8
+	},
+/area/zorka/exterior)
 "Pb" = (
 /obj/structure/prop/dam/crane,
 /turf/open/floor/strata{
@@ -3722,6 +4490,21 @@
 	color = "#CD5C5C"
 	},
 /area/zorka/fortress)
+"Pi" = (
+/obj/structure/largecrate/supply/supplies/metal{
+	anchored = 1
+	},
+/obj/structure/largecrate/supply/supplies/plasteel{
+	pixel_y = 15;
+	anchored = 1;
+	layer = 3.1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "Pq" = (
 /obj/structure/bed/chair/wood/wings,
 /turf/open/floor/wood,
@@ -3741,6 +4524,13 @@
 	color = "#CD5C5C"
 	},
 /area/zorka/fortress)
+"Px" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/wrench,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "Py" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -3750,6 +4540,13 @@
 	icon_state = "white_cyan2"
 	},
 /area/zorka/fortress)
+"Pz" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "PB" = (
 /obj/structure/grille/fence/east_west,
 /turf/open/auto_turf/snow/brown_base/layer3,
@@ -3767,6 +4564,12 @@
 	icon_state = "white_cyan2"
 	},
 /area/zorka/fortress)
+"PO" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "PS" = (
 /obj/structure/barricade/deployable{
 	dir = 4
@@ -3797,6 +4600,22 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"PY" = (
+/obj/structure/filtration/machine_64x96{
+	icon_state = "filtration_machine_A_0"
+	},
+/turf/open/gm/river/desert/deep{
+	base_river_slowdown = 0
+	},
+/area/zorka/exterior)
+"PZ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/reagent_scanner/adv,
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Qc" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/tool/kitchen/tray,
@@ -3807,6 +4626,13 @@
 	},
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"Qh" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/vehicle_clamp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "Qi" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -3857,9 +4683,12 @@
 	},
 /area/zorka/fortress)
 "QQ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
-/turf/open/auto_turf/snow/brown_base/layer3,
-/area/zorka/fortress)
+/obj/structure/closet/radiation,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 4
+	},
+/area/zorka/exterior)
 "QT" = (
 /obj/structure/surface/table/woodentable,
 /turf/open/floor/wood,
@@ -3882,6 +4711,12 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"Rh" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "Rk" = (
 /obj/structure/bed,
 /obj/item/bedsheet/red,
@@ -3915,6 +4750,18 @@
 	},
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"RF" = (
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 4
+	},
+/area/zorka/exterior)
+"RH" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "RI" = (
 /obj/structure/toilet{
 	dir = 1
@@ -4012,6 +4859,15 @@
 /obj/structure/bookcase/manuals/medical,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"SA" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "SC" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/strata{
@@ -4075,6 +4931,13 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Tg" = (
+/obj/structure/machinery/recycler,
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "Tt" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/zorka/exterior)
@@ -4082,6 +4945,19 @@
 /obj/item/tool/screwdriver,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Ty" = (
+/obj/structure/largecrate/supply/supplies{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"TA" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 5
+	},
+/area/zorka/exterior)
 "TO" = (
 /obj/structure/largecrate/chick,
 /turf/open/floor/strata{
@@ -4130,6 +5006,12 @@
 	color = "#00FF00"
 	},
 /area/zorka/fortress)
+"Ug" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Uk" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony,
 /turf/open/floor/wood,
@@ -4146,6 +5028,12 @@
 	icon_state = "red3"
 	},
 /area/zorka/fortress)
+"Us" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "Ux" = (
 /obj/structure/bed/chair/wood/wings,
 /obj/effect/decal/cleanable/blood{
@@ -4181,6 +5069,19 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/zorka/fortress)
+"UO" = (
+/obj/structure/largecrate/supply/generator{
+	pixel_x = 7;
+	anchored = 1;
+	pixel_y = 9;
+	layer = 3.1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "UQ" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -4211,6 +5112,24 @@
 	icon_state = "floor2"
 	},
 /area/zorka/fortress)
+"Ve" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
+"Vk" = (
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Vn" = (
 /obj/structure/closet/secure_closet,
 /turf/open/floor/strata,
@@ -4279,6 +5198,12 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"VQ" = (
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
 "VR" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -4303,6 +5228,13 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"Wj" = (
+/obj/structure/machinery/power/smes,
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 4
+	},
+/area/zorka/exterior)
 "Wq" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full,
 /turf/open/floor/strata{
@@ -4319,6 +5251,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"Ww" = (
+/turf/open/floor/strata{
+	icon_state = "yellow3";
+	dir = 4
+	},
+/area/zorka/exterior)
 "Wz" = (
 /obj/structure/prop{
 	icon = 'icons/mob/xenos/weeds.dmi';
@@ -4451,6 +5389,15 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"XY" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/prop/static_tank/water{
+	pixel_y = 15
+	},
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "Yc" = (
 /obj/structure/largecrate/random/barrel/green,
 /turf/open/floor/prison{
@@ -4504,11 +5451,38 @@
 /obj/item/trash/cigbutt,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"YA" = (
+/turf/open/floor/strata{
+	icon_state = "yellow4";
+	dir = 8
+	},
+/area/zorka/exterior)
+"YN" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/strata{
+	icon_state = "yellow2"
+	},
+/area/zorka/exterior)
+"YP" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "YS" = (
 /obj/structure/bed/chair/office/light,
 /obj/item/clothing/ears/earmuffs,
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"YV" = (
+/turf/open/gm/river/desert/deep{
+	base_river_slowdown = 0
+	},
+/area/zorka/exterior)
 "YX" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -4517,6 +5491,12 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"YY" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/strata{
+	icon_state = "yellow4"
+	},
+/area/zorka/exterior)
 "YZ" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/strata{
@@ -4589,6 +5569,26 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"ZF" = (
+/obj/structure/largecrate/supply/supplies{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"ZJ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 2;
+	name = "\improper Restroom"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "ZM" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/head/uppcap/peaked{
@@ -4622,6 +5622,19 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"ZV" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan2"
+	},
+/turf/open/floor/plating,
+/area/zorka/exterior)
+"ZX" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/zorka/exterior)
 "ZZ" = (
 /obj/structure/largecrate/supply/medicine/medkits,
 /turf/open/floor/strata{
@@ -8840,29 +9853,29 @@ cM
 cM
 cM
 cM
+oq
+EH
+EH
+EH
+EH
+EH
+EH
+oq
+EH
+EH
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -9092,29 +10105,29 @@ cM
 cM
 cM
 cM
+oq
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+oq
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -9344,29 +10357,29 @@ cM
 cM
 cM
 cM
+oq
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+oq
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -9596,29 +10609,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -9740,7 +10753,7 @@ MU
 MU
 MU
 MU
-ea
+gY
 ab
 fc
 ts
@@ -9848,29 +10861,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -10100,29 +11113,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -10352,29 +11365,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -10604,29 +11617,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -10856,29 +11869,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -11108,29 +12121,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -11360,29 +12373,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -11610,31 +12623,31 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -11862,29 +12875,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -12114,29 +13127,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+oI
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -12316,7 +13329,7 @@ Dx
 Dx
 Dx
 Dx
-hu
+Ds
 Dx
 Dx
 Dx
@@ -12327,68 +13340,68 @@ gY
 gY
 gY
 gY
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+NB
+NB
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -12618,29 +13631,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+Gt
+bf
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -12831,68 +13844,68 @@ gY
 gY
 gY
 gY
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+oe
+oe
+oe
+VQ
+OP
+OP
+OP
+oe
+oe
+jV
+dQ
+oe
+jV
+oe
+VQ
+OP
+OP
+VQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -13122,29 +14135,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -13374,29 +14387,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+EH
 cM
 cM
 cM
@@ -13626,29 +14639,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -13878,29 +14891,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+ea
+ea
+OP
+VQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+VQ
+OP
+OP
+VQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -14130,29 +15143,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+ea
+OP
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -14382,29 +15395,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dQ
+dQ
+dQ
+dQ
+ea
+OP
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+EH
 cM
 cM
 cM
@@ -14634,29 +15647,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+jV
+oe
+dQ
+ea
+OP
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -14886,29 +15899,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+ea
+ea
+OP
+VQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+VQ
+OP
+OP
+Gt
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -15088,7 +16101,7 @@ aF
 aF
 aF
 aF
-hu
+Ds
 aF
 aF
 aF
@@ -15138,29 +16151,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -15372,6 +16385,13 @@ cM
 cM
 cM
 cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -15379,44 +16399,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -15624,6 +16637,13 @@ cM
 cM
 cM
 cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -15631,44 +16651,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+EH
+oR
+oR
+oR
+oR
+OP
+OP
+dQ
+ea
+ea
+ea
+dQ
+ea
+ea
+ea
+dQ
+OP
+FQ
+oR
+oR
+oR
+oR
+EH
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -15876,6 +16889,13 @@ cM
 cM
 cM
 cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -15883,44 +16903,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+DL
+DL
+DL
+DL
+ca
+ca
+dQ
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+dQ
+OP
+OP
+oR
+oR
+oR
+lD
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -16128,6 +17141,13 @@ cM
 cM
 cM
 cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -16135,44 +17155,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+EH
+DL
+DL
+DL
+DL
+yz
+ca
+dQ
+ea
+VQ
+VQ
+ea
+ea
+ea
+ea
+dQ
+OP
+OP
+oR
+oR
+oR
+oR
+EH
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -16359,72 +17372,72 @@ ND
 gY
 gY
 gY
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+DL
+DL
+DL
+DL
+ca
+ca
+oR
+oR
+oR
+ea
+ea
+ea
+oR
+ea
+oR
+OP
+OP
+oR
+oR
+oR
+oR
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -16608,71 +17621,71 @@ Rr
 ND
 ND
 ND
-QQ
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+Qz
+rl
+cx
+cx
+cx
+cx
+fS
+cx
+cx
+cx
+cx
+cx
+fS
+cx
+cx
+cx
+cx
+cx
+fS
+cx
+cx
+YP
+YP
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+Gt
+Gt
+Gt
+cx
+cx
+Gt
+cx
+cx
+cx
+Gt
+Gt
+Fj
+Gt
+KK
+KK
+KK
+KK
+KK
+Dv
+KK
+KK
+KK
+Ay
+Ay
+Ay
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+Gt
 cM
 cM
 cM
@@ -16803,7 +17816,7 @@ al
 al
 al
 al
-al
+gY
 al
 Gw
 Gw
@@ -16860,71 +17873,71 @@ Gh
 ND
 ND
 ND
-tS
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+Gw
+Ah
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+Ah
+Ah
+cx
+Me
+cx
+cx
+cx
+Gt
+Gt
+Gt
+cx
+Gt
+oI
+Gt
+cx
+Gt
+cx
+Gt
+Me
+Gt
+Fj
+Gt
+KK
+KK
+KK
+KK
+KK
+Dv
+KK
+KK
+KK
+Ay
+Ay
+Ay
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+Gt
 cM
 cM
 cM
@@ -17115,72 +18128,72 @@ ND
 gY
 gY
 gY
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+NB
+NB
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+DL
+DL
+DL
+DL
+ca
+SA
+oR
+DL
+DL
+KK
+Ay
+Ay
+oR
+oR
+oR
+OP
+OP
+oR
+oR
+oR
+oR
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -17353,7 +18366,7 @@ hL
 hL
 gY
 bh
-hu
+Ds
 ND
 ND
 SE
@@ -17389,6 +18402,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -17398,41 +18415,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+EH
+DL
+DL
+DL
+DL
+ca
+SA
+xd
+Ay
+hK
+sI
+Ay
+Ay
+VQ
+ea
+dQ
+OP
+OP
+lD
+oR
+oR
+oR
+EH
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -17604,8 +18617,8 @@ gY
 gY
 hL
 gY
-hu
-hu
+Ds
+Ds
 ND
 ND
 vz
@@ -17641,6 +18654,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -17650,41 +18667,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Vv
+DL
+DL
+DL
+DL
+tV
+SA
+xd
+Ay
+hK
+Ay
+hK
+Ay
+VQ
+ea
+dQ
+OP
+OP
+oR
+oR
+oR
+oR
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -17857,7 +18870,7 @@ hL
 hL
 gY
 bh
-hu
+Ds
 us
 ND
 Nb
@@ -17893,6 +18906,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -17902,41 +18919,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+EH
+DL
+DL
+DL
+DL
+ca
+AO
+xd
+Ay
+Ay
+Ay
+xd
+Ay
+ea
+ea
+dQ
+OP
+bM
+oR
+oR
+oR
+oR
+EH
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -18145,6 +19158,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -18154,41 +19171,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+dQ
+dQ
+dQ
+dQ
+oe
+oe
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+zD
+UO
+dQ
+dQ
+dQ
+dQ
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -18397,6 +19410,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -18410,33 +19427,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+jV
+oe
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+gk
+Pi
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -18649,6 +19662,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -18662,33 +19679,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+sS
+oe
+oe
+oe
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+VQ
+ZF
+Ty
+Gt
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -18901,6 +19914,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -18914,33 +19931,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+kq
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -19153,6 +20166,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -19166,33 +20183,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dQ
+dQ
+dQ
+dQ
+oe
+oe
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+EH
 cM
 cM
 cM
@@ -19405,6 +20418,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -19418,33 +20435,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -19657,6 +20670,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -19670,33 +20687,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+oe
+oe
+ET
+oe
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+Gt
+Gt
+Gt
+Gt
+Gt
+oe
+oe
+EH
 cM
 cM
 cM
@@ -19909,6 +20922,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -19922,33 +20939,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -20161,6 +21174,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -20174,33 +21191,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dQ
+dQ
+dQ
+dQ
+oe
+oe
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+OP
+OP
+dQ
+dQ
+dQ
+dQ
+EH
 cM
 cM
 cM
@@ -20413,6 +21426,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -20426,33 +21443,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+oe
+jV
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -20665,6 +21678,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -20678,33 +21695,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+oe
+oe
+oe
+oe
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+Gt
+Gt
+Gt
+Gt
+Gt
+oe
+oe
+EH
 cM
 cM
 cM
@@ -20917,6 +21930,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -20930,33 +21947,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+oe
+oe
+oe
+dQ
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+oe
+oe
+oe
+dQ
+OP
+OP
+dQ
+oe
+oe
+oe
+EH
 cM
 cM
 cM
@@ -21169,6 +22182,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -21182,33 +22199,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dQ
+dQ
+dQ
+dQ
+ZV
+ZV
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+dQ
+ZV
+ZV
+dQ
+dQ
+dQ
+dQ
+EH
 cM
 cM
 cM
@@ -21421,6 +22434,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -21434,33 +22451,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+ev
+ev
+ev
+OP
+OP
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+OP
+OP
+ev
+ev
+ev
+Gt
+EH
 cM
 cM
 cM
@@ -21673,6 +22686,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -21686,33 +22703,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+ev
+ev
+ev
+OP
+OP
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+ev
+OP
+OP
+ev
+ev
+ev
+Gt
+EH
 cM
 cM
 cM
@@ -21925,6 +22938,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -21938,35 +22955,31 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -22177,6 +23190,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -22192,33 +23209,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -22429,6 +23442,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -22444,33 +23461,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -22681,6 +23694,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -22696,33 +23713,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -22933,6 +23946,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -22948,33 +23965,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -23185,6 +24198,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -23200,33 +24217,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -23437,6 +24450,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -23452,33 +24469,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+EH
+EH
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -23689,6 +24702,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -23704,33 +24721,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+EH
+Gt
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -23941,6 +24954,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -23956,33 +24973,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+Gt
+Gt
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -24164,10 +25177,10 @@ gY
 lW
 lW
 gY
-gY
-gY
-gY
-gY
+kX
+kX
+kX
+kX
 cM
 cM
 cM
@@ -24193,6 +25206,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -24209,27 +25226,23 @@ cM
 cM
 cM
 cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -24415,11 +25428,11 @@ hL
 gY
 lW
 lW
-dQ
-qJ
-KH
-HG
 gY
+kX
+kX
+kX
+kX
 cM
 cM
 cM
@@ -24445,6 +25458,10 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -24461,27 +25478,23 @@ cM
 cM
 cM
 cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Gt
+Gt
+Gt
+Gt
+EH
 cM
 cM
 cM
@@ -24668,10 +25681,39 @@ gY
 lW
 lW
 gY
-WM
-MN
-Ln
 gY
+gY
+gY
+gY
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -24688,52 +25730,23 @@ cM
 cM
 cM
 cM
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -24919,11 +25932,13 @@ al
 al
 lW
 lW
-oR
-WM
-MN
-Ln
-gY
+al
+al
+al
+al
+al
+cx
+cx
 cM
 cM
 cM
@@ -24947,12 +25962,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -25171,11 +26184,13 @@ al
 al
 lW
 lW
-oR
-WM
-MN
-Ln
-gY
+al
+al
+al
+al
+al
+cx
+cx
 cM
 cM
 cM
@@ -25199,12 +26214,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -25424,39 +26437,39 @@ gY
 lW
 Io
 gY
-AP
-Uq
-Ap
 gY
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+kX
+kX
+gY
+JC
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -25676,10 +26689,12 @@ gY
 lW
 lW
 gY
-gY
-gY
-gY
-gY
+qJ
+KH
+KH
+KH
+RF
+EH
 cM
 cM
 cM
@@ -25703,12 +26718,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -25928,6 +26941,12 @@ gY
 lW
 lW
 gY
+Ob
+Vv
+Vv
+Vv
+zE
+EH
 cM
 cM
 cM
@@ -25951,16 +26970,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -26180,6 +27193,12 @@ gY
 lW
 lW
 gY
+GR
+wr
+wr
+wr
+sC
+EH
 cM
 cM
 cM
@@ -26203,16 +27222,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -26432,6 +27445,12 @@ gY
 lW
 lW
 gY
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -26455,16 +27474,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -26686,6 +27699,10 @@ lW
 gY
 cM
 cM
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -26709,14 +27726,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -26938,6 +27951,10 @@ Io
 gY
 cM
 cM
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -26961,14 +27978,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -27190,6 +28203,10 @@ lW
 gY
 cM
 cM
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -27213,14 +28230,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -27442,6 +28455,12 @@ lW
 gY
 cM
 cM
+mA
+mA
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -27463,16 +28482,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -27694,6 +28707,12 @@ lW
 gY
 cM
 cM
+mA
+mA
+rI
+Ei
+RF
+EH
 cM
 cM
 cM
@@ -27715,16 +28734,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -27946,6 +28959,12 @@ lW
 PH
 cM
 cM
+mA
+mA
+Ob
+Vv
+zE
+EH
 cM
 cM
 cM
@@ -27967,16 +28986,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -28200,6 +29213,10 @@ cM
 cM
 cM
 cM
+Ob
+Vv
+zE
+EH
 cM
 cM
 cM
@@ -28221,14 +29238,10 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 cM
 cM
@@ -28452,6 +29465,10 @@ cM
 cM
 cM
 cM
+Ob
+Vv
+zE
+EH
 cM
 cM
 cM
@@ -28473,31 +29490,27 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -28704,6 +29717,10 @@ cM
 cM
 cM
 cM
+GR
+wr
+sC
+EH
 cM
 cM
 cM
@@ -28725,31 +29742,27 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
+EH
+AU
+Vv
+Jn
+yl
+OZ
+OZ
+OZ
+Hm
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ho
+HD
+ct
+EH
 cM
 cM
 cM
@@ -28956,6 +29969,10 @@ cM
 cM
 cM
 cM
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -28977,32 +29994,28 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
+EH
+Qh
+Vv
+Jn
+Ve
+Vv
+Vv
+Vv
+Us
+EH
 cM
+EH
+vJ
+vJ
+vJ
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-mA
 EH
 EH
 EH
@@ -29233,30 +30246,30 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
+EH
+Px
+Vv
+Jn
+vJ
+TA
+Vv
+Vv
+ZX
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-mA
 EH
 vJ
+vJ
+vJ
+EH
+cM
+EH
+YN
 fT
 fT
 fT
@@ -29485,25 +30498,25 @@ cM
 cM
 cM
 cM
+EH
+NB
+NB
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mh
+Vv
+Vv
+sf
+Ug
+Vv
+Vv
+FO
+EH
 cM
 EH
 EH
-EH
+Ea
 EH
 EH
 EH
@@ -29737,28 +30750,28 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+NB
+NB
+EH
 cM
 EH
+RH
+Vv
+Vv
+dl
+wE
+Ww
+Ww
+YA
+EH
+cM
+EH
+MW
 Vv
 Vv
 Vv
-Vv
-lJ
+QQ
 EH
 vJ
 vJ
@@ -29766,7 +30779,7 @@ vJ
 vJ
 vJ
 vJ
-vJ
+YN
 EH
 cM
 cM
@@ -29990,6 +31003,8 @@ EH
 Gt
 EH
 EH
+NB
+NB
 EH
 EH
 EH
@@ -29999,10 +31014,8 @@ EH
 EH
 EH
 EH
-EH
-EH
-EH
-EH
+vJ
+gm
 EH
 EH
 EH
@@ -30010,7 +31023,7 @@ Vv
 Vv
 Vv
 Vv
-Vv
+lJ
 EH
 EH
 cy
@@ -30264,9 +31277,9 @@ Vv
 Vv
 Vv
 ka
-Vv
-Vv
-Vv
+OZ
+OZ
+Wj
 Ms
 vJ
 vJ
@@ -30507,18 +31520,18 @@ cx
 cx
 cx
 cx
+Me
 cx
 cx
-cx
 Vv
 Vv
 Vv
 Vv
 Vv
-Vv
-Vv
-Vv
-Vv
+vJ
+Ww
+Ww
+hh
 Ms
 vJ
 vJ
@@ -30680,8 +31693,8 @@ gY
 gY
 gY
 gY
-gY
-gY
+kX
+kX
 gY
 gY
 gY
@@ -30752,13 +31765,13 @@ EH
 EH
 EH
 EH
+Ly
 EH
 EH
 EH
 EH
-EH
-EH
-EH
+vJ
+gm
 EH
 EH
 EH
@@ -30766,7 +31779,7 @@ Vv
 Vv
 Vv
 Vv
-Vv
+sN
 EH
 EH
 cy
@@ -30931,10 +31944,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -30997,28 +32010,28 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 EH
+mA
+EH
+gN
+Jn
+fH
+EH
+YY
+OZ
+OZ
+OZ
+OZ
+hQ
+EH
+Pz
+tp
 Vv
 Vv
-Vv
-Vv
-Vv
+Em
 EH
 vJ
 vJ
@@ -31026,7 +32039,7 @@ vJ
 vJ
 vJ
 vJ
-vJ
+YN
 EH
 cM
 cM
@@ -31183,10 +32196,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -31249,27 +32262,27 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mA
+EH
+gN
+Jn
+Bv
+EH
+Nf
+Vv
+Vv
+Vv
+Vv
+XY
 EH
 EH
 EH
 EH
-EH
+LC
 EH
 EH
 vJ
@@ -31435,10 +32448,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -31501,37 +32514,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
 EH
-vJ
-fT
-fT
-fT
-fT
-EH
+cM
+cM
 EH
 mA
+EH
+Vv
+Vv
+Bv
+EH
+PZ
+Vv
+Vv
+Vv
+Vv
+eZ
+EH
+Kq
+EH
+uR
+Vv
+Vv
+EH
+YN
+fT
+fT
+fT
+fT
+EH
+EH
+cM
 cM
 cM
 cM
@@ -31687,10 +32700,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -31753,37 +32766,37 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
 EH
-EH
-EH
-EH
-EH
-EH
+cM
+cM
 EH
 mA
-mA
+EH
+Vv
+Jn
+xe
+EH
+Vk
+Vv
+Vv
+Vv
+Vv
+ph
+EH
+Rh
+ZJ
+Vv
+Vv
+Vv
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+cM
+cM
 cM
 cM
 cM
@@ -31939,10 +32952,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -32005,30 +33018,30 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mA
+EH
+jl
+Jn
+Tg
+EH
+Ug
+NC
+Ww
+Ww
+TA
+jr
+EH
+lg
+EH
+Vv
+Vv
+Vv
+PO
+EH
 cM
 cM
 cM
@@ -32191,10 +33204,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -32257,30 +33270,30 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mA
+EH
+EH
+EH
+EH
+EH
+Nl
+AG
+dx
+KC
+rP
+Fu
+EH
+EH
+EH
+zv
+Vv
+Vv
+PO
+EH
 cM
 cM
 cM
@@ -32443,10 +33456,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -32509,30 +33522,30 @@ cM
 cM
 cM
 cM
+EH
+cM
+cM
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+wz
+wz
+wz
+yp
+eo
+cu
+wz
+wz
+wz
+sZ
+EH
+Od
+Vv
+Vv
+Vv
+EH
 cM
 cM
 cM
@@ -32695,10 +33708,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -32764,27 +33777,27 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+wz
+wz
+wz
+wz
+td
+cu
+wz
+wz
+wz
+wz
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -32947,10 +33960,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -33020,18 +34033,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+YV
+YV
+PY
+cJ
+td
+cu
+cJ
+YV
+PY
+YV
+EH
 cM
 cM
 cM
@@ -33199,10 +34212,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -33272,18 +34285,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+YV
+YV
+YV
+cJ
+td
+cu
+cJ
+YV
+YV
+YV
+EH
 cM
 cM
 cM
@@ -33451,10 +34464,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -33524,18 +34537,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+wz
+wz
+wz
+wO
+td
+cu
+wz
+wz
+wz
+ES
+EH
 cM
 cM
 cM
@@ -33703,10 +34716,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -33776,18 +34789,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+wz
+wz
+wz
+wz
+td
+cu
+wz
+wz
+wz
+wz
+EH
 cM
 cM
 cM
@@ -33955,10 +34968,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -34028,18 +35041,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+Vv
+Vv
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -34207,10 +35220,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -34283,12 +35296,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mB
+OZ
+OZ
+wD
+EH
 cM
 cM
 cM
@@ -34459,10 +35472,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -34535,12 +35548,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ug
+wz
+Bd
+jr
+EH
 cM
 cM
 cM
@@ -34711,10 +35724,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -34787,12 +35800,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ug
+wz
+wz
+jr
+EH
 cM
 cM
 cM
@@ -34963,10 +35976,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -35039,12 +36052,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ug
+wz
+wz
+jr
+EH
 cM
 cM
 cM
@@ -35215,10 +36228,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -35291,12 +36304,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+wE
+Ww
+Ww
+YA
+EH
 cM
 cM
 cM
@@ -35467,10 +36480,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -35543,12 +36556,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -35719,10 +36732,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -35971,10 +36984,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -36223,10 +37236,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -36475,10 +37488,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -36727,10 +37740,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -36979,10 +37992,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -37231,10 +38244,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -37483,10 +38496,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -37735,10 +38748,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -37987,10 +39000,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -38239,10 +39252,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -38491,10 +39504,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -38743,10 +39756,10 @@ cM
 cM
 cM
 cM
+EH
+mA
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -38995,10 +40008,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -39247,10 +40260,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -39499,10 +40512,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -39751,10 +40764,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -40003,10 +41016,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -40255,10 +41268,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -40507,10 +41520,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -40759,10 +41772,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -41011,10 +42024,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -41263,10 +42276,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -41515,10 +42528,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -41767,10 +42780,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -42019,10 +43032,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -42261,6 +43274,7 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
@@ -42270,11 +43284,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -42513,6 +43526,7 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
@@ -42522,11 +43536,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -42765,6 +43778,7 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
@@ -42774,11 +43788,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -43010,6 +44023,14 @@ cM
 cM
 cM
 cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -43019,18 +44040,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -43262,6 +44275,14 @@ cM
 cM
 cM
 cM
+EH
+cM
+cM
+cM
+cM
+cM
+cM
+EH
 cM
 cM
 cM
@@ -43271,18 +44292,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -43514,27 +44527,27 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
+mA
+mA
+mA
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -43773,6 +44786,7 @@ cM
 cM
 cM
 cM
+wu
 cM
 cM
 cM
@@ -43782,11 +44796,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -44035,10 +45048,10 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
-cM
-cM
+EH
 cM
 cM
 cM
@@ -44270,28 +45283,28 @@ cM
 cM
 cM
 cM
+EH
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+oW
+oW
+oW
+oW
+oW
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -44522,14 +45535,14 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -44781,7 +45794,7 @@ cM
 cM
 cM
 cM
-cM
+mA
 cM
 cM
 cM
@@ -45028,12 +46041,12 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -45285,7 +46298,7 @@ cM
 cM
 cM
 cM
-cM
+oW
 cM
 cM
 cM
@@ -47551,7 +48564,7 @@ cM
 cM
 cM
 cM
-cM
+oW
 cM
 cM
 cM
