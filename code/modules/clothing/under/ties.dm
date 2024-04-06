@@ -777,7 +777,6 @@
 		/obj/item/storage/firstaid,
 		/obj/item/storage/bible,
 		/obj/item/storage/toolkit,
-		/obj/item/ammo_magazine/smartgun,
 		)
 	storage_flags = NONE //no verb, no quick draw, no tile gathering
 
