@@ -581,7 +581,10 @@
 
 /obj/structure/machinery/defenses/sentry/premade/upp
 	name = "\improper UPPA 30-KG gauss turret"
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-477 autocannon and a 500-round drum magazine, an older design, affectionally referred to as 'Komrade Sentry'."
+	desc = "A semi-automated turret with AI targeting capabilities. Armed with an AK-477 autocannon and a 500-round drum magazine. An older design, affectionally referred to as 'Komrade Sentry'."
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
 	faction_group = list(FACTION_UPP)
 
 /obj/structure/machinery/defenses/sentry/premade/dumb
