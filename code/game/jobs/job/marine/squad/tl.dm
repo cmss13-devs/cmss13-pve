@@ -8,7 +8,7 @@
 	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/tl
-	entry_message_body = "You are the <a href='"+WIKI_PLACEHOLDER+"'>Team Leader.</a>Your task is to assist the squad leader in leading the squad as well as utilize ordnance such as orbital bombardments, CAS, and mortar as well as coordinating resupply with Requisitions and CIC. If the squad leader dies, you are expected to lead in their place."
+	entry_message_body = "You are the <a href='"+WIKI_PLACEHOLDER+"'>Squad Leader.</a> Your task is leading the designated squad and utilize available ordnance. If the platoon leader dies, you are expected to lead in their place.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
 	job_options = list(SGT_VARIANT = "SGT")
 
@@ -44,5 +44,25 @@ AddTimelock(/datum/job/marine/tl, list(
 /datum/job/marine/tl/ai
 	total_positions = 2
 	spawn_positions = 2
+
+/datum/job/marine/tl/ai/upp
+	title = JOB_SQUAD_TEAM_LEADER_UPP
+	gear_preset = /datum/equipment_preset/uscm/tl/upp
+
+/datum/job/marine/tl/ai/forecon
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_TEAM_LEADER_FORECON
+	gear_preset = /datum/equipment_preset/uscm/tl/forecon
+
+/obj/effect/landmark/start/marine/tl/upp
+	name = JOB_SQUAD_TEAM_LEADER_UPP
+	squad = SQUAD_UPP
+	job = /datum/job/marine/tl/ai/upp
+
+/obj/effect/landmark/start/marine/tl/forecon
+	name = JOB_SQUAD_TEAM_LEADER_FORECON
+	squad = SQUAD_LRRP
+	job = /datum/job/marine/tl/ai/forecon
 
 #undef SGT_VARIANT

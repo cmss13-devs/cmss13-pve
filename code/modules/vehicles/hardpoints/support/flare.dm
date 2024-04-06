@@ -8,11 +8,11 @@
 	disp_icon_state = "flare_launcher"
 	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
 
-	damage_multiplier = 0.1
+	damage_multiplier = 0.15
 
 	activatable = TRUE
 
-	health = 500
+	health = 1500
 	firing_arc = 120
 
 	origins = list(0, -2)

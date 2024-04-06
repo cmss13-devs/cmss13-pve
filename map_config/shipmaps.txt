@@ -19,3 +19,9 @@ endmap
 map golden_arrow
 	default
 endmap
+
+map chapaev
+endmap
+
+map rover
+endmap

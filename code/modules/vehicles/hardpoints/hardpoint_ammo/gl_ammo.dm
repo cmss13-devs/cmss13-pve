@@ -5,7 +5,7 @@
 	icon_state = "glauncher_2"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/grenade_container
-	max_rounds = 10
+	max_rounds = 20
 	gun_type = /obj/item/hardpoint/secondary/grenade_launcher
 
 /obj/item/ammo_magazine/hardpoint/tank_glauncher/update_icon()

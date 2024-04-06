@@ -6,5 +6,5 @@
 	icon_state = "quad_rocket"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/rocket/ap
-	max_rounds = 5
+	max_rounds = 10
 	gun_type = /obj/item/hardpoint/secondary/towlauncher

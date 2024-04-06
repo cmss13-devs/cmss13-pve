@@ -108,11 +108,17 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_UPP_FLIGHT 235
 #define ACCESS_UPP_RESEARCH 236
 
+#define ACCESS_UPP_SQUAD_ONE 237
+#define ACCESS_UPP_SQUAD_TWO 238
+
 #define ACCESS_UPP_COMMANDO 239
 #define ACCESS_UPP_LEADERSHIP 240
 ///Senior leadership, the highest ranks
 #define ACCESS_UPP_SENIOR_LEAD 241
 
+#define ACCESS_UPP_MEDPREP 242
+#define ACCESS_UPP_MACHINEGUN 243
+#define ACCESS_UPP_TLPREP 244
 //=================================================
 
 //Colonial Liberation Front access levels (260-289)
@@ -196,6 +202,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 ///All access levels associated with UPP
 #define ACCESS_LIST_UPP_ALL "UPP (ALL)"
+#define ACCESS_LIST_UPP_PLATOON "UPP (Platoon)"
 
 ///Generic/basic access to CLF stuff
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"

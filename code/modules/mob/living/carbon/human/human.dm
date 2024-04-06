@@ -115,7 +115,7 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(faction == FACTION_MARINE)
+	if(job in ROLES_USCM)
 		. += ""
 		. += "<a href='?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
@@ -1076,12 +1076,11 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(faction != FACTION_MARINE && !(faction in FACTION_LIST_WY))
+	if(job in ROLES_USCM)
+		var/dat = GLOB.data_core.get_manifest()
+		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
+	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
-		return
-	var/dat = GLOB.data_core.get_manifest()
-
-	show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 
 /mob/living/carbon/human/proc/set_species(new_species, default_colour)
 	if(!new_species)
@@ -1255,6 +1254,9 @@
 		if(TRACKER_XO)
 			H = GLOB.marine_leaders[JOB_XO]
 			tracking_suffix = "_xo"
+		if(TRACKER_PLTCO)
+			H = GLOB.marine_leaders[JOB_SO]
+			tracking_suffix = "_co"
 		if(TRACKER_CL)
 			var/datum/job/civilian/liaison/liaison_job = RoleAuthority.roles_for_mode[JOB_CORPORATE_LIAISON]
 			if(liaison_job?.active_liaison)

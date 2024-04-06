@@ -52,6 +52,7 @@
 #define TRACKER_CO "track_co"
 #define TRACKER_XO "track_xo"
 #define TRACKER_CL "track_cl"
+#define TRACKER_PLTCO "track_pltco"
 
 #define TRACKER_ASL "_asl" // Alpha Squad Leader
 #define TRACKER_BSL "_bsl" // Bravo Squad Leader

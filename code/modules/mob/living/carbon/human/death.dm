@@ -37,7 +37,7 @@
 /mob/living/carbon/human/dust_animation()
 	new /obj/effect/overlay/temp/dust_animation(loc, src, "dust-h")
 
-/mob/living/carbon/human/death(cause, gibbed)
+/mob/living/carbon/human/death(cause, gibbed, should_deathmessage = TRUE)
 	if(stat == DEAD)
 		species?.handle_dead_death(src, gibbed)
 		return
@@ -48,12 +48,13 @@
 		if(HAS_TRAIT(src, TRAIT_HARDCORE) || MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA))
 			if(!(species.flags & IS_SYNTHETIC)) // Synths wont perma
 				status_flags |= PERMANENTLY_DEAD
+				should_deathmessage = FALSE
 		if(HAS_TRAIT(src, TRAIT_INTENT_EYES)) //their eyes need to be 'offline'
 			r_eyes = 0
 			g_eyes = 0
 			b_eyes = 0
 		disable_special_flags()
-		disable_lights()
+//		disable_lights()
 		disable_special_items()
 		disable_headsets() //Disable radios for dead people to reduce load
 
@@ -110,7 +111,7 @@
 	if(HAS_TRAIT(src, TRAIT_HARDCORE))
 		death_message = "valiantly falls to the ground, dead, unable to continue."
 
-	. = ..(cause, gibbed, death_message)
+	. = ..(cause, gibbed, death_message, should_deathmessage)
 
 	// stat is now set
 	/*

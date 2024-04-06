@@ -1,6 +1,6 @@
 /obj/item/hardpoint/holder/tank_turret
 	name = "M34A2-A Multipurpose Turret"
-	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt smoke screen deployment system."
+	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt flare deployment system."
 
 	icon = 'icons/obj/vehicles/tank.dmi'
 	icon_state = "tank_turret_0"
@@ -14,8 +14,8 @@
 
 	activatable = TRUE
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke
-	max_clips = 2
+	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
+	max_clips = 5
 	use_muzzle_flash = FALSE
 
 	w_class = SIZE_MASSIVE
@@ -27,7 +27,7 @@
 	slot = HDPT_TURRET
 
 	// big beefy chonk of metal
-	health = 750
+	health = 1500
 	damage_multiplier = 0.05
 
 	accepted_hardpoints = list(
@@ -54,18 +54,18 @@
 	var/gyro = FALSE
 
 	// How long the windup is before the turret rotates
-	var/rotation_windup = 15
+	var/rotation_windup = 5
 	// Used during the windup
 	var/rotating = FALSE
 
-	scatter = 4
+	scatter = 2
 	gun_firemode = GUN_FIREMODE_BURSTFIRE
 	gun_firemode_list = list(
 		GUN_FIREMODE_BURSTFIRE,
 	)
 	burst_amount = 2
 	burst_delay = 1.0 SECONDS
-	extra_delay = 13.0 SECONDS
+	extra_delay = 5.0 SECONDS
 
 /obj/item/hardpoint/holder/tank_turret/update_icon()
 	var/broken = (health <= 0)
