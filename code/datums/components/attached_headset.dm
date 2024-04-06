@@ -103,7 +103,7 @@
 
 	headset.flags_item |= NODROP
 
-
+/// When parent is dropped we make sure the headset is where it should be
 /datum/component/attached_headset/proc/dropped(obj/item/dropped_item, mob/user)
 	if(!(headset in user))
 		if(headset.loc)
