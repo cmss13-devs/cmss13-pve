@@ -88,7 +88,7 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/clothing/head/helmet/marine/leader(src)
+	new /obj/item/clothing/head/helmet/marine/leader/attached_headset(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
@@ -115,7 +115,7 @@
 
 /obj/structure/closet/secure_closet/squad_sergeant/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/rto(src)
+	//new /obj/item/clothing/head/helmet/marine/rto/attached_headset(src) //add attached_headset version - Morrow
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
@@ -162,12 +162,3 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/storage/belt/marine/smartgunner/standard(src)
 	new /obj/item/storage/belt/gun/smartgunner/standard(src)
-
-/obj/structure/closet/cryo/Initialize()
-	. = ..()
-	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine/knife(src)
-	new /obj/item/clothing/shoes/marine/knife(src)
-	new /obj/item/device/radio/headset/almayer/marine(src)
-	new /obj/item/device/radio/headset/almayer/marine(src)

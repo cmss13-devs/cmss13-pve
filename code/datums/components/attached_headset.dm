@@ -25,6 +25,8 @@
 	item_parent = parent
 
 	if(!icon_exists(item_parent.icon, item_parent.icon_state + "_hs", FALSE))
+		if(user)
+			to_chat(user, SPAN_NOTICE("[headset] doesn't seem to support an integrated headset."))
 		return COMPONENT_INCOMPATIBLE_NO_ERROR
 
 	if(!activation_slot)
@@ -35,6 +37,8 @@
 
 	if(user)
 		user.drop_inv_item_on_ground(headset)
+		to_chat(user, SPAN_NOTICE("You attach [headset] to [parent]."))
+		playsound(user, 'sound/effects/gunrustle1.ogg', 20, TRUE)
 
 	headset.moveToNullspace()
 
@@ -48,7 +52,8 @@
 
 	headset = null
 
-	item_parent.icon_state = parent_initial_icon_state
+	if(parent_initial_icon_state)
+		item_parent.icon_state = parent_initial_icon_state
 
 	item_parent = null
 
@@ -124,6 +129,7 @@
 	if(parent != user.r_hand && parent != user.l_hand)
 		return
 
+	playsound(user, 'sound/items/Screwdriver.ogg', 20, TRUE)
 	to_chat(user, SPAN_NOTICE("You use [attacking_item] to take [headset] off of [parent]."))
 	user.put_in_hands(headset)
 	qdel(src)

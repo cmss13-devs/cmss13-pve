@@ -733,8 +733,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/attached_headset/Initialize(mapload, list/new_protection)
 	. = ..()
 
-	var/obj/item/device/radio/headset/almayer/marine/temp_helmet = new()
-	AddComponent(/datum/component/attached_headset, null, temp_helmet, WEAR_HEAD)
+	var/obj/item/device/radio/headset/almayer/marine/temp_headset = new()
+	AddComponent(/datum/component/attached_headset, null, temp_headset, WEAR_HEAD)
 
 /obj/item/clothing/head/helmet/marine/tech
 	name = "\improper M10 technician helmet"
@@ -806,6 +806,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M11 pattern marine"
 
+/obj/item/clothing/head/helmet/marine/leader/attached_headset/Initialize(mapload, list/new_protection)
+	. = ..()
+
+	var/obj/item/device/radio/headset/almayer/marine/lead/temp_headset = new()
+	AddComponent(/datum/component/attached_headset, null, temp_headset, WEAR_HEAD)
+
 /obj/item/clothing/head/helmet/marine/rto
 	name = "\improper M12 pattern dust helmet"
 	desc = "An experimental brain-bucket. A dust ruffle hangs from back instead of the standard lobster shell design. Moderately better at deflecting blunt objects at the cost of humiliation, can also hold a second visor optic. But who will be laughing at the memorial? Not you, you'll be busy getting medals for your fantastic leadership."
@@ -815,6 +821,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M12 pattern"
 	max_inserted_visors = 2
+
+/*
+/obj/item/clothing/head/helmet/marine/rto/attached_headset/Initialize(mapload, list/new_protection)
+	. = ..()
+
+	var/obj/item/device/radio/headset/almayer/marine/temp_headset = new()
+	AddComponent(/datum/component/attached_headset, null, temp_headset, WEAR_HEAD)
+*/
 
 /obj/item/clothing/head/helmet/marine/rto/intel
 	name = "\improper XM12 pattern intelligence helmet"

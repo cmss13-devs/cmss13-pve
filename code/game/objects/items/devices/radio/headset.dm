@@ -593,6 +593,11 @@
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	frequency = ALPHA_FREQ
 
+/obj/item/device/radio/headset/almayer/marine/lead
+	name = "marine leader radio headset"
+	desc = "This is used by a marine squad leader. Channels are as follows: :v - marine command, :j - JTAC. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
