@@ -10,6 +10,7 @@
 			entry_message_body = "<a href='[generate_wiki_link()]'>You are second in command aboard the [MAIN_SHIP_NAME],</a> and are in next in the chain of command after the Commanding Officer. Where applicable, you must abide by the <a href='[CONFIG_GET(string/wikiarticleurl)][URL_WIKI_CO_RULES]'>Commanding Officer Code of Conduct</a>. You may need to fill in for other duties if areas are understaffed, and you are given access to do so. Make the USCM proud!"
 		if(JOB_USCM_GROUND_AO)
 			entry_message_body = {"You are the right hand of the Commander, a lieutenant, and an officer tasked with supporting the marines in their duties. You are also a highly-skilled medical professional.
+While the Outpost Commander handles general logistics and mission control, you are in charge of supply lines, medical affairs, and day-to-day operations.
 Tend to the needs of the men and women in the outpost, make sure they are healthy and able to perform their duties, and are supplied with the equipment they need.
 The Outpost Commander may assign additional duties for you. You are second in command, should anything happen to the senior officer.
 

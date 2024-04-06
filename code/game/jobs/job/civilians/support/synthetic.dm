@@ -54,12 +54,13 @@
 	supervisors = "the outpost commanding officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	flags_whitelist = NONE
-	gear_preset = /datum/equipment_preset/synth/uscm_ground
+	gear_preset = /datum/equipment_preset/synth/uscm/uscm_ground
 
 //Important to have no spacing/tabs in {} blocks as they are rendered directly.
 /datum/job/civilian/synthetic/uscm_ground/generate_entry_message()
-	. = {"You are a synthetic unit deployed to assist the USCM in one of their remote outposts. You are in charge of engineering and maintenance duties. Make sure the lights stay on.
-You may perform other duties and functions as assigned by the officers in charge of the operation. You must obey the chain of command: Outpost Commander followed by the Adjunct Officer.
+	. = {"You are a synthetic unit deployed to assist the USCM in one of their remote outposts. You are in charge of engineering and maintenance duties.
+Aside from that, you may carry out other functions, such as helping out, socializing, and generally roleplaying as you see fit. Just remember to keep the lights on.
+You must obey the chain of command: Outpost Commander followed by the Adjunct Officer. Command may assign additional duties for you, so do keep an ear out.
 You are not required to follow orders that are clearly dangerous to yourself or others, nonsensical, impossible, or made under duress, even if they come from proper chain of command.
 
 Prioritize orders from those higher on the chain of command. In case of conflicting orders, those higher on the chain of command take priority.

@@ -21,9 +21,9 @@
 			entry_message_body = "<a href='[generate_wiki_link()]'>You are the Commanding Officer of the [MAIN_SHIP_NAME] as well as the operation.</a> Your goal is to lead the Marines on their mission as well as protect and command the ship and her crew. Your job involves heavy roleplay and requires you to behave like a high-ranking officer and to stay in character at all times. As the Commanding Officer your only superior is High Command itself. You must abide by the <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_CO_RULES]'>Commanding Officer Code of Conduct</a>. Failure to do so may result in punitive action against you. Godspeed."
 		if(JOB_USCM_GROUND_CO)
 			entry_message_body = {"You have been placed in charge of [SSmapping.configs[GROUND_MAP].map_name] outpost by USCM High Command, and it is up to you to carry out your mission, whatever it may be.
-Protect the outpost from any and all dangers, and conduct operations as assigned by High Command.
+Protect the outpost from any and all dangers, and conduct operations as assigned by High Command. You are in charge of general logistics and mission control.
 You and your men are the first and last line of defense on the frontier: brief them on the mission and man the Combat Information Center so they are informed and aware.
-The Adjunct Officer is your right hand, so delegate tasks to them as necessary. They will take over command should anything happen to you.
+The Adjunct Officer is your right hand, so delegate tasks to them as necessary. They will run the outpost day-to-day operations, and they will take over command should anything happen to you.
 
 Civilian guests have to follow military regulations, but they are not military personnel. Protect them.
 

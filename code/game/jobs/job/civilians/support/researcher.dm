@@ -43,10 +43,12 @@ AddTimelock(/datum/job/civilian/researcher, list(
 
 /datum/job/civilian/researcher/uscm_ground/generate_entry_message()
 	entry_message_body =  {"You are a visiting scientific expert, conducting studies around [SSmapping.configs[GROUND_MAP].map_name] outpost.
-You have been graciously housed and fed by the USCM for the duration of your visit through a substantial government grant.
+You have been graciously housed and fed by the USCM for the duration of your visit, through a substantial government grant.
 You are not a military asset, but you are expected to follow military rules and regulations; you have guest access to the outpost, but it is fairly limited.
 Keep your head down, study the local environment as befit your expertise, and further the reaches of science and reason.
-While you may defend yourself if needed, the outpost houses marines who are far better trained and equipped to do the fighting for you."}
+You may defend yourself if directly threatened, but <b>you have zero combat experience</b>.
+Let the marines protect you. It's their job, and they are trained and equipped for it.
+The rest is up to you. Roleplay, get to know people, make your own fun. You may or may not have more to do depending on the GM."}
 
 	return ..()
 

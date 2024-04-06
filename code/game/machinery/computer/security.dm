@@ -21,12 +21,7 @@
 	//Sorting Variables
 	var/sortBy = "name"
 	var/order = 1 // -1 = Descending - 1 = Ascending
-	var/datum/datacore/core
 	var/factions = list(FACTION_MARINE)
-
-/obj/structure/machinery/computer/secure_data/Initialize()
-	. = ..()
-	core = GLOB.data_core
 
 /obj/structure/machinery/computer/secure_data/attackby(obj/item/O as obj, user as mob)
 

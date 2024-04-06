@@ -18,25 +18,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	for(var/datum/data/record/cycled_data_record in general)
 		if(cycled_data_record.fields["squad"] == old_name)
 			cycled_data_record.fields["squad"] = new_name
-/*
-get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_GENERAL) //We'll get the right list in a moment.
-	L[0] //Empty list to send back.
-	switch(record_type) //What sort of record we're pulling from.
-		if(RECORD_GENERAL)
-			record_type = general
-		if(RECORD_MEDICAL)
-			record_type = medical
-		if(RECORD_SECURITY)
-			record_type = security
 
-	if(record_type)
-		var/datum/record/R
-		for(var/i in record_type)
-			R = i
-			if(R.fields[mob_faction] in factions)
-				L += R
-	return L
-*/
 /datum/datacore/proc/get_manifest(monochrome, OOC, nonHTML)
 	var/list/manifest_out = list() ///This will be our final compiled list.
 	var/name ///Iterator for the person's name.
@@ -147,6 +129,7 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 	dat = replacetext(dat, "\t", "")
 	return dat
 
+///This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
 ///This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
 ///And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
 /datum/datacore/proc/manifest(nosleep = 0)
@@ -190,6 +173,12 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 	return FALSE
 
 /datum/datacore/proc/manifest_inject(mob/living/carbon/human/H)
+	var/datum/data/record/existing_record
+	var/datum/weak_ref = WEAKREF(H)
+	for(var/i in GLOB.data_core.general) //So they are not added to the manifest twice. Double records mess up reporting.
+		existing_record = i
+		if(existing_record.fields["ref"] == weak_ref) return FALSE //Already have a record for this human. Abort.
+
 	var/assignment
 	if(H.job)
 		assignment = H.job
@@ -208,7 +197,7 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 	G.fields["rank"] = assignment
 	G.fields["squad"] = H.assigned_squad ? H.assigned_squad.name : null
 	G.fields["age"] = H.age
-	G.fields["p_stat"] = "Active"
+	G.fields["p_stat"] = H.species.manifest_alive
 	G.fields["m_stat"] = "Stable"
 	G.fields["sex"] = H.gender
 	G.fields["species"] = H.get_species()
@@ -264,7 +253,6 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 		S.fields["comments"] = list("1" = new_comment)
 		S.fields["notes"] = H.sec_record
 	security += S
-
 
 	//Locked Record
 	var/datum/data/record/L = new()
@@ -358,3 +346,54 @@ get_faction_record(factions = list(FACTION_MARINE), list/record_type = RECORDS_G
 	qdel(clothes_s)
 
 	return preview_icon
+
+//These do not need to be global procs. They were who knows where before. Now they are here, where they belong.
+
+/proc/CreateGeneralRecord(faction = FACTION_MARINE)
+	var/datum/data/record/G = new /datum/data/record()
+	G.fields["name"] = "New Record"
+	G.fields["id"] = text("[]", add_zero(num2hex(rand(1, 1.6777215E7)), 6))
+	G.fields["rank"] = "Unassigned"
+	G.fields["real_rank"] = "Unassigned"
+	G.fields["sex"] = "Male"
+	G.fields["age"] = "Unknown"
+	G.fields["ethnicity"] = "Unknown"
+	G.fields["p_stat"] = "Alive"
+	G.fields["m_stat"] = "Stable"
+	G.fields["species"] = "Human"
+	G.fields["origin"] = "Unknown"
+	G.fields["faction"] = "Unknown"
+	G.fields["mob_faction"] = faction
+	G.fields["religion"] = "Unknown"
+	GLOB.data_core.general += G
+	return G
+
+/proc/CreateSecurityRecord(name as text, id as text)
+	var/datum/data/record/R = new /datum/data/record()
+	R.fields["name"] = name
+	R.fields["id"] = id
+	R.name = text("Security Record #[id]")
+	R.fields["incidents"] = "None"
+	GLOB.data_core.security += R
+	return R
+
+/proc/create_medical_record(mob/living/carbon/human/H)
+	var/datum/data/record/M = new /datum/data/record()
+	M.fields["id"] = null
+	M.fields["name"] = H.real_name
+	M.fields["b_type"] = H.b_type
+	M.fields["mi_dis"] = "None"
+	M.fields["mi_dis_d"] = "No minor disabilities have been declared."
+	M.fields["ma_dis"] = "None"
+	M.fields["ma_dis_d"] = "No major disabilities have been diagnosed."
+	M.fields["alg"] = "None"
+	M.fields["alg_d"] = "No allergies have been detected in this patient."
+	M.fields["cdi"] = "None"
+	M.fields["cdi_d"] = "No diseases have been diagnosed at the moment."
+	M.fields["last_scan_time"] = null
+	M.fields["last_scan_result"] = "No scan data on record"
+	M.fields["autodoc_data"] = list()
+	M.fields["autodoc_manual"] = list()
+	M.fields["ref"] = WEAKREF(H)
+	GLOB.data_core.medical += M
+	return M

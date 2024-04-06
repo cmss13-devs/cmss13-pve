@@ -330,10 +330,10 @@
 		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
 
 	if(ammo && ammo.current_rounds <= 0)
+		if(immobile) power_off() //We don't want to have this thing keep beeping with no ammo, since it cannot be reloaded.
 		if(COOLDOWN_FINISHED(src, no_ammo_message_cooldown))
 			visible_message(SPAN_WARNING("[src] beeps steadily and its ammo light blinks red."))
 			COOLDOWN_START(src, no_ammo_message_cooldown, (3 SECONDS))
-
 		return
 
 	last_fired = world.time
@@ -569,9 +569,6 @@
 	return
 
 /obj/structure/machinery/defenses/sentry/premade/power_on()
-	return
-
-/obj/structure/machinery/defenses/sentry/premade/power_off()
 	return
 
 /obj/structure/machinery/defenses/sentry/premade/damaged_action()

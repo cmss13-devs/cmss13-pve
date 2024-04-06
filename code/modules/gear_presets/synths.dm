@@ -44,6 +44,10 @@
 	paygrade = "SYN"
 	role_comm_title = "Syn"
 
+/datum/equipment_preset/synth/uscm/New(access_override)
+	. = ..(access_override)
+	faction_group = FACTION_LIST_MARINE
+
 /datum/equipment_preset/synth/uscm/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
@@ -102,21 +106,18 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/synth/uscm_ground
+/datum/equipment_preset/synth/uscm/uscm_ground
 	name = "USCM Outpost Maintenance Synthetic"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	faction = FACTION_USCM_GROUND
-	idtype = /obj/item/card/id/gold
 	assignment = JOB_USCM_GROUND_SYNTH
 	rank = JOB_USCM_GROUND_SYNTH
-	role_comm_title = "Syn"
 
-/datum/equipment_preset/synth/uscm_ground/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/uscm/uscm_ground/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/uscm_ground/cmd/synth(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
-/datum/equipment_preset/synth/uscm_ground/New()
+/datum/equipment_preset/synth/uscm/uscm_ground/New()
 	. = ..(list(
 		ACCESS_USCM_GROUND_GENERAL,
 		ACCESS_USCM_GROUND_MAINT,
