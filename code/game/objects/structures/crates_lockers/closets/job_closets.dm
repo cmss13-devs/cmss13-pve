@@ -165,7 +165,6 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 
-
 /obj/structure/closet/cryo/Initialize()
 	. = ..()
 	new /obj/item/clothing/under/marine(src)
