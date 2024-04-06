@@ -783,6 +783,9 @@
 	//This doesn't appear to do anything, but might as well have it.
 	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_SECURITY)
 
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
 	choice_categories = list(
 		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),
 	)
@@ -791,7 +794,11 @@
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
-
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE
