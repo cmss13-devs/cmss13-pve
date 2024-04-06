@@ -87,11 +87,16 @@
 	name = "\improper QH20 pattern M2100 custom machete scabbard"
 	desc = "A large leather scabbard used to carry a M2100 \"Ngájhe\" machete. It can be strapped to the back or the armor."
 	icon_state = "arnold-machete-pouch"
-	flags_equip_slot = SLOT_WAIST|SLOT_BACK
-	can_hold = list(/obj/item/weapon/sword/machete)
 
 /obj/item/storage/large_holster/machete/arnold/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete/arnold(src)
+
+/obj/item/storage/large_holster/machete/arnold/weak
+	name = "\improper QH20 pattern M2100 machete scabbard"
+	desc = "A large leather scabbard used to carry a M2100 machete. It can be strapped to the back or the armor."
+
+/obj/item/storage/large_holster/machete/arnold/weak/fill_preset_inventory()
+	new /obj/item/weapon/sword/machete/arnold/weak(src)
 
 /obj/item/storage/large_holster/katana
 	name = "\improper katana scabbard"
