@@ -4,6 +4,8 @@
 #define COMPONENT_INCOMPATIBLE 1
 /// Returned in PostTransfer to prevent transfer, similar to `COMPONENT_INCOMPATIBLE`
 #define COMPONENT_NOTRANSFER 2
+/// Same as COMPONENT_INCOMPATIBLE just it won't error
+#define COMPONENT_INCOMPATIBLE_NO_ERROR 3
 
 /// Return value to cancel attaching
 #define ELEMENT_INCOMPATIBLE 1

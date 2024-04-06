@@ -381,6 +381,7 @@
 #include "code\datums\components\_component.dm"
 #include "code\datums\components\armor_link.dm"
 #include "code\datums\components\atom_narrate.dm"
+#include "code\datums\components\attached_headset.dm"
 #include "code\datums\components\bad_leg.dm"
 #include "code\datums\components\bonus_damage_stack.dm"
 #include "code\datums\components\cell.dm"

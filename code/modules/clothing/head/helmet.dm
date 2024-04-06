@@ -535,6 +535,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 		return
 
+	if(istype(attacking_item, /obj/item/device/radio/headset) && (src == user.l_hand || src == user.r_hand))
+		AddComponent(/datum/component/attached_headset, user, attacking_item, WEAR_HEAD)
+		return
+
 	..()
 	return pockets.attackby(attacking_item, user)
 
