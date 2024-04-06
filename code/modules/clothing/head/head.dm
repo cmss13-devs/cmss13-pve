@@ -219,6 +219,7 @@
 						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/head/headset = "headset",
 						/obj/item/clothing/head/headband = "hat_headbandgreen",
 						/obj/item/clothing/head/headband/tan = "hat_headbandtan",
 						/obj/item/clothing/head/headband/red = "hat_headbandred",

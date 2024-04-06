@@ -352,7 +352,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine
 	name = "\improper M10 pattern marine helmet"
-	desc = "A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side."
+	desc = "A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side and a slot for a radio earpiece."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "helmet"
 	item_state = "helmet"
