@@ -43,7 +43,7 @@
 
 /datum/component/attached_headset/Destroy()
 	. = ..()
-	if(!headset.loc && !QDELETED(headset))
+	if(!QDELETED(headset) && !headset.loc)
 		qdel(headset)
 
 	headset = null
@@ -54,21 +54,19 @@
 
 /datum/component/attached_headset/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_HUMAN_ATTEMPTING_EQUIP, PROC_REF(on_attempted_equip))
+	RegisterSignal(parent, COMSIG_ITEM_ATTEMPTING_HUMAN_EQUIP, PROC_REF(on_attempted_equip))
 	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equipped))
 	RegisterSignal(parent, COMSIG_ITEM_ATTACKED, PROC_REF(attackby))
 	RegisterSignal(parent, COMSIG_ITEM_DROPPED, PROC_REF(dropped))
 	RegisterSignal(headset, COMSIG_PARENT_QDELETING, PROC_REF(headset_deletion))
 
 /datum/component/attached_headset/UnregisterFromParent()
-	UnregisterSignal(parent, COMSIG_HUMAN_ATTEMPTING_EQUIP)
+	UnregisterSignal(parent, COMSIG_ITEM_ATTEMPTING_HUMAN_EQUIP)
 	UnregisterSignal(parent, COMSIG_ITEM_EQUIPPED)
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACKED)
 	UnregisterSignal(parent, COMSIG_ITEM_DROPPED)
 	UnregisterSignal(headset, COMSIG_PARENT_QDELETING)
 	. = ..()
-
-	//Unregister your shit - Morrow
 
 /datum/component/attached_headset/InheritComponent(datum/component/C, i_am_original)
 	if(!istype(item_parent.loc, /mob))
@@ -78,15 +76,15 @@
 	to_chat(user, SPAN_NOTICE("[parent] already has [headset] attached to it. Looks like you could remove it with a screwdriver."))
 
 /// Cancels equipping parent if there's a headset already on the left ear
-/datum/component/attached_headset/proc/on_attempted_equip(mob/living/carbon/human/user, obj/item/equipping_item, slot)
+/datum/component/attached_headset/proc/on_attempted_equip(obj/item/equipping_item, mob/living/carbon/human/user, slot)
 	SIGNAL_HANDLER
 
 	if(slot != parent_activation_slot)
 		return
 
-	if(user.wear_l_ear)
-		to_chat(user, SPAN_NOTICE("[equipping_item] has [headset] attached to it. It can't fit while you're wearing [user.wear_l_ear]."))
-		return COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
+	if(user.wear_l_ear || istype(user.wear_r_ear, /obj/item/device/radio/headset))
+		to_chat(user, SPAN_NOTICE("[equipping_item] has [headset] attached to it. It can't fit while you're wearing [user.wear_l_ear ? user.wear_l_ear : user.wear_r_ear]."))
+		return COMPONENT_ITEM_CANCEL_ATTEMPTING_HUMAN_EQUIP
 
 /// When parent is equipped we check if it's the right slot, if so then we deploy our headset
 /datum/component/attached_headset/proc/on_equipped(obj/item/equipping_item, mob/user, slot)

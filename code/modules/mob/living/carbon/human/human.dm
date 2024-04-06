@@ -1653,6 +1653,9 @@
 	if(SEND_SIGNAL(src, COMSIG_HUMAN_ATTEMPTING_EQUIP, equipping_item, slot) & COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP)
 		return FALSE
 
+	if(SEND_SIGNAL(equipping_item, COMSIG_ITEM_ATTEMPTING_HUMAN_EQUIP, src, slot) & COMPONENT_ITEM_CANCEL_ATTEMPTING_HUMAN_EQUIP)
+		return FALSE
+
 	. = ..()
 
 /mob/living/carbon/human/make_dizzy(amount)

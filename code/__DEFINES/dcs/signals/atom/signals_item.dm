@@ -15,6 +15,11 @@
 
 ///from base of obj/item/dropped(): (mob/user)
 #define COMSIG_ITEM_DROPPED "item_drop"
+
+///from base of /mob/living/carbon/human/equip_to_slot_if_possible : (/obj/item/equipping_item, mob/living/carbon/human/user, slot)
+#define COMSIG_ITEM_ATTEMPTING_HUMAN_EQUIP "item_attempting_human_equip"
+	#define COMPONENT_ITEM_CANCEL_ATTEMPTING_HUMAN_EQUIP (1<<0)
+
 /// From base of /obj/item/proc/equipped(): (mob/user, slot)
 #define COMSIG_ITEM_EQUIPPED "item_equipped"
 /// From base of /obj/item/proc/unequipped(): (mob/user, slot)
