@@ -49,9 +49,15 @@
 
 /obj/item/weapon/sword/machete/arnold
 	name = "\improper M2100 \"Ngájhe\" machete"
-	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. Difficult to carry with the usual kit."
+	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. Difficult to carry with the usual kit ."
 	icon_state = "arnold-machete"
+	item_state = "arnold-machete"
 	force = MELEE_FORCE_TIER_11
+
+/obj/item/weapon/sword/machete/arnold/weak
+	name = "\improper M2100 machete"
+	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
+	force = MELEE_FORCE_STRONG
 
 /obj/item/weapon/sword/hefa
 	name = "HEFA sword"
