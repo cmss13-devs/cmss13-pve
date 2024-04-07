@@ -48,6 +48,9 @@
 /obj/structure/gun_rack/m41
 	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1
 
+/obj/structure/gun_rack/m41/empty
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/empty
+
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
 	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
@@ -55,6 +58,8 @@
 	initial_stored = 6
 	allowed_type = /obj/item/weapon/gun/rifle/type71
 
+/obj/structure/gun_rack/type71/empty
+	allowed_type = /obj/item/weapon/gun/rifle/type71/empty
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
 	icon_state = "frontal"

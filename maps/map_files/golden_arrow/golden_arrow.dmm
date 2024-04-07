@@ -4161,11 +4161,11 @@
 	pixel_x = 14;
 	pixel_y = 29
 	},
-/obj/structure/gun_rack/m41,
 /obj/item/ashtray/plastic{
 	pixel_y = 14;
 	pixel_x = 8
 	},
+/obj/structure/gun_rack/m41/empty,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6818,11 +6818,11 @@
 	pixel_y = 29;
 	layer = 3
 	},
-/obj/structure/gun_rack/m41,
 /obj/item/reagent_container/food/drinks/cans/souto/blue{
 	pixel_y = 22;
 	pixel_x = 9
 	},
+/obj/structure/gun_rack/m41/empty,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
