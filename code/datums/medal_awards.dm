@@ -35,7 +35,6 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 	giver_mob = list()
 	giver_ckey = list()
 
-
 /proc/give_medal_award(medal_location, as_admin = FALSE)
 	if(as_admin && !check_rights(R_ADMIN))
 		as_admin = FALSE
@@ -45,11 +44,10 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 	var/list/recipient_ranks = list()
 	for(var/datum/data/record/record in GLOB.data_core.general)
 		var/recipient_name = record.fields["name"]
+		if(usr.real_name == recipient_name && !as_admin)
+			continue
 		recipient_ranks[recipient_name] = record.fields["rank"]
 		possible_recipients += recipient_name
-
-	if(!as_admin)
-		possible_recipients -= usr.real_name
 
 	var/chosen_recipient = tgui_input_list(usr, "Who do you want to award a medal to?", "Medal Recipient", possible_recipients)
 	if(!chosen_recipient)
@@ -185,6 +183,10 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 
 	if(!(FACTION_USCM in user.faction_group))
 		to_chat(user, SPAN_WARNING("Medals only available for USCM personnel."))
+		return
+
+	if(length(GLOB.medal_awards))
+		to_chat(user, SPAN_WARNING("Only one medal may be awarded per operation."))
 		return
 
 	if(give_medal_award(get_turf(printer)))
