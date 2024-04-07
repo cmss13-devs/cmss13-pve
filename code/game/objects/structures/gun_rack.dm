@@ -60,6 +60,7 @@
 
 /obj/structure/gun_rack/type71/empty
 	allowed_type = /obj/item/weapon/gun/rifle/type71/empty
+
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
 	icon_state = "frontal"
