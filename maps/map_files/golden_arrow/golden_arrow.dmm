@@ -3252,6 +3252,7 @@
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/under/marine/officer/boiler,
+/obj/item/clothing/head/cmcap/bridge,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
