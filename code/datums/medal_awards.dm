@@ -47,6 +47,10 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 		var/recipient_name = record.fields["name"]
 		recipient_ranks[recipient_name] = record.fields["rank"]
 		possible_recipients += recipient_name
+
+	if(!as_admin)
+		possible_recipients -= usr.real_name
+
 	var/chosen_recipient = tgui_input_list(usr, "Who do you want to award a medal to?", "Medal Recipient", possible_recipients)
 	if(!chosen_recipient)
 		return FALSE
@@ -177,6 +181,10 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 
 	if(real_owner_ref != WEAKREF(user))
 		user.visible_message("ERROR: ID card not registered for [user.real_name] in USCM registry. Potential medal fraud detected.")
+		return
+
+	if(!(FACTION_USCM in user.faction_group))
+		to_chat(user, SPAN_WARNING("Medals only available for USCM personnel."))
 		return
 
 	if(give_medal_award(get_turf(printer)))
