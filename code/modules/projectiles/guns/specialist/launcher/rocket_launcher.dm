@@ -222,6 +222,35 @@
 
 
 //-------------------------------------------------------
+//MEAN GREEN FF MACHINE
+
+/obj/item/weapon/gun/launcher/rocket/m57a4cucked
+	name = "\improper XM57-A4 'Lightning Bolt' quad thermobaric launcher"
+	desc = "The XM57-A4 'Lightning Bolt' is possibly the most destructive man-portable weapon ever made, or atleast thats what the company making it says. It is a 4-barreled missile launcher capable of burst-firing 4 thermobaric missiles. If those 4 missiles hit you or the enemy, thats up to you"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
+	icon_state = "m57a4"
+	item_state = "m57a4"
+	skill_locked = FALSE
+
+	current_mag = /obj/item/ammo_magazine/rocket/quadcucked
+	aim_slowdown = SLOWDOWN_ADS_SUPERWEAPON
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY
+
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rocket/quadcucked,
+	)
+/obj/item/weapon/gun/launcher/rocket/quadcucked/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_7)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_3
+
+
+//-------------------------------------------------------
 //AT rocket launchers, can be used by non specs
 
 /obj/item/weapon/gun/launcher/rocket/anti_tank //reloadable

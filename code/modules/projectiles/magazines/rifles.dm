@@ -274,6 +274,16 @@
 	w_class = SIZE_MEDIUM
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
+/obj/item/ammo_magazine/rifle/m16/ext
+	name = "\improper M16 Extended magazine (5.56x45mm)"
+	desc = "An extended 5.56x45mm magazine for the M16 assault rifle."
+	caliber = "5.56x45mm"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 50
+	gun_type = /obj/item/weapon/gun/rifle/m16
+	w_class = SIZE_MEDIUM
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "m16_ext"
 //-------------------------------------------------------
 //AR10 RIFLE
 
@@ -431,6 +441,21 @@
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+/obj/item/ammo_magazine/rifle/l42a/l42B
+	name = "\improper L42B magazine (10x26mm)"
+	desc = "An L42B magazine loaded with 10x26mm caseless"
+	caliber = "10x26mm"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 20
+	icon_state = "l42mk1"
+
+/obj/item/ammo_magazine/rifle/l42a/L42Bext
+	name = "\improper L42B extended magazine (10x26mm)"
+	desc = "An extended L42B magazine loaded with 10x26mm caseless"
+	caliber = "10x26mm"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 40
+	icon_state = "l42mk1_extended"
 //-------------------------------------------------------
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 

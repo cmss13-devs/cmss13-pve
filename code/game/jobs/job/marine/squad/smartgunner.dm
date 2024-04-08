@@ -98,5 +98,16 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
 
+/datum/job/marine/sg/ai/fl
+	title = JOB_SQUAD_SMARTGUN_FL
+	gear_preset = /datum/equipment_preset/uscm/sg/fl
+
+
+/obj/effect/landmark/start/marine/sg/fl
+	name = JOB_SQUAD_SMARTGUN_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/sg/ai/fl
+
 #undef LCPL_VARIANT
 #undef CPL_VARIANT
+

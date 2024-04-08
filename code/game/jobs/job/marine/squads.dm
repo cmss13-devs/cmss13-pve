@@ -159,6 +159,16 @@
 	minimap_color = "#32CD32"
 	usable = TRUE
 
+/datum/squad/marine/fl
+	name = SQUAD_MERC
+	equipment_color = "#687a9c"
+	chat_color = "#687a9c"
+	access = list(ACCESS_ILLEGAL_PIRATE)
+	radio_freq = MERC_FREQ
+	minimap_color = "#687a9c"
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

@@ -70,7 +70,13 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 ///The generic "I'm a bad guy" access
 #define ACCESS_ILLEGAL_PIRATE 120
-
+#define ACCESS_ILLEGAL_PIRATE_PREP 121
+#define ACCESS_ILLEGAL_PIRATE_SMARTGUNNER 122
+#define ACCESS_ILLEGAL_PIRATE_TEAMLEAD 123
+#define ACCESS_ILLEGAL_PIRATE_SENIOR_LEAD 124
+#define ACCESS_ILLEGAL_PIRATE_MEDICAL 125
+#define ACCESS_ILLEGAL_PIRATE_CO 126
+///I have no fucking clue what im doing send help -Godson
 //=================================================
 
 //Weyland Yutani access levels (200-229)
@@ -208,3 +214,5 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
+
+#define ACCESS_LIST_FL_PLATOON "FL (platoon)"

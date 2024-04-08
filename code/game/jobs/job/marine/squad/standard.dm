@@ -92,5 +92,26 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
 
+/datum/job/marine/standard/ai/fl
+	title = JOB_SQUAD_RIFLEMAN_FL
+	gear_preset = /datum/equipment_preset/uscm/pfc/fl
+
+
+/obj/effect/landmark/start/marine/fl
+	name = JOB_SQUAD_RIFLEMAN_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/standard/ai/fl
+
+/datum/job/command/bridge/ai/fl
+	title = JOB_RTO_FL
+	gear_preset = /datum/equipment_preset/uscm/rto/fl
+
+/obj/effect/landmark/start/bridge/fl
+	name = JOB_RTO_FL
+	squad = SQUAD_MERC
+	icon_state = "so_spawn"
+	job = /datum/job/command/bridge/ai/fl
+
 #undef PVT_VARIANT
 #undef PFC_VARIANT
+

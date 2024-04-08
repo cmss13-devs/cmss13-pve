@@ -101,5 +101,15 @@ AddTimelock(/datum/job/marine/medic, list(
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
+/datum/job/marine/medic/ai/fl
+	title = JOB_SQUAD_MEDIC_FL
+	gear_preset = /datum/equipment_preset/uscm/medic/fl
+
+
+/obj/effect/landmark/start/marine/medic/fl
+	name = JOB_SQUAD_MEDIC_FL
+	squad = SQUAD_MERC
+	job = /datum/job/marine/medic/ai/fl
+
 #undef LCPL_VARIANT
 #undef CPL_VARIANT
