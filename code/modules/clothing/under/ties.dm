@@ -420,13 +420,13 @@
 		update_icon()
 
 /obj/item/clothing/accessory/poncho/on_attached(obj/item/clothing/suit/storage/marine/S, mob/living/user, silent)
-    . =..()
-    if(.)
-        S.armor_overlays["poncho"] = src
+	. =..()
+	if(.)
+	S.armor_overlays["poncho"] = src
 
 /obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
 	if(!has_suit) return
-    var/obj/item/clothing/suit/storage/marine/S = has_suit
+	var/obj/item/clothing/suit/storage/marine/S = has_suit
     S.armor_overlays -= "poncho"
     . = ..()
 
