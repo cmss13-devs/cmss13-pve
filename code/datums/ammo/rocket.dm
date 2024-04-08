@@ -272,7 +272,7 @@
 	drop_flame(get_turf(P), P.weapon_cause_data)
 	explosion(P.loc,  -1, 2, 4, 5, , , ,P.weapon_cause_data)
 
-/datum/ammo/rocket/wp/quad/quadcucked
+/datum/ammo/rocket/wp/quad/weak
 	name = "thermobaric rocket"
 	flags_ammo_behavior = AMMO_ROCKET|AMMO_STRIKES_SURFACE
 
@@ -280,7 +280,7 @@
 	max_range = 32
 	shell_speed = AMMO_SPEED_TIER_3
 
-/datum/ammo/rocket/wp/quad/quadcucked/drop_flame(turf/turf, datum/cause_data/cause_data)
+/datum/ammo/rocket/wp/quad/weak/drop_flame(turf/turf, datum/cause_data/cause_data)
 	. = ..()
 	playsound(turf, 'sound/weapons/gun_flamethrower3.ogg', 75, 1, 7)
 	if(!istype(turf)) return
