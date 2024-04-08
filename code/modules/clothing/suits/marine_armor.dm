@@ -396,6 +396,9 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
+	var/list/smartgun_back = list(
+		/obj/item/storage/large_holster/machete,
+	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
@@ -424,6 +427,10 @@
 	if(slot != WEAR_BACK)
 		return
 
+
+	if(is_type_in_list(equipping_item, smartgun_back))
+		return
+		
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
