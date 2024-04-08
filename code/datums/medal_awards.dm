@@ -3,6 +3,8 @@
 #define MARINE_VALOR_MEDAL "medal of valor"
 #define MARINE_HEROISM_MEDAL "medal of exceptional heroism"
 
+#define ALL_MARINE_MEDALS list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL)
+
 #define XENO_SLAUGHTER_MEDAL "royal jelly of slaughter"
 #define XENO_RESILIENCE_MEDAL "royal jelly of resilience"
 #define XENO_SABOTAGE_MEDAL "royal jelly of sabotage"
@@ -53,8 +55,13 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 	if(!chosen_recipient)
 		return FALSE
 
+	var/list/choosable_medals = list(MARINE_CONDUCT_MEDAL)
+
+	if(as_admin)
+		choosable_medals = ALL_MARINE_MEDALS
+
 	// Pick a medal
-	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL))
+	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", choosable_medals)
 	if(!medal_type)
 		return FALSE
 
