@@ -1072,7 +1072,7 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 //PVE 177, for lancers, updated with better desc no attachies on spawn and other stuff :)
-/obj/item/weapon/gun/rifle/xm177repro
+/obj/item/weapon/gun/rifle/xm177/repro
 	name = "\improper XM177E2 carbine"
 	desc = "An old design reproduced by Weston Reproductions, essentially a shortened M16A1 with a collapsable stock. It is chambered in 5.56x45mm. The short length inhibits the attachment of most underbarrel attachments, and the barrel moderator prohibits the attachment of all muzzle devices."
 	desc_lore = "A carbine similar to the M16A1, with a collapsible stock and a distinct flash suppressor. A stamp on the receiver reads: 'COLT AR-15 - XM177E2 - CAL 5.56MM - REPRO' \nA design originating from the Vietnam War, the XM177, also known as the Colt Commando or GAU-5/A, was an improvement on the CAR-15 Model 607, fixing multiple issues found with the limited service of the Model 607 with Special Forces. The XM177 saw primary use with Army Special Forces and Navy Seals operating as commandos. \nThis one was produced by Weston Reproductions."
@@ -1102,10 +1102,10 @@
 		/obj/item/attachable/stock/m16/xm177,
 	)
 
-/obj/item/weapon/gun/rifle/xm177repro/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/xm177/repro/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 18,"rail_x" = 9, "rail_y" = 20, "under_x" = 19, "under_y" = 13, "stock_x" = 15, "stock_y" = 14)
 
-/obj/item/weapon/gun/rifle/xm177repro/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/xm177/repro/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/stock/m16/xm177/integrated = new(src)
 	integrated.hidden = FALSE
@@ -1113,7 +1113,7 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-/obj/item/weapon/gun/rifle/xm177repro/set_gun_config_values()
+/obj/item/weapon/gun/rifle/xm177/repro/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
@@ -1129,7 +1129,7 @@
 
 //-------------------------------------------------------
 //PVE M16 Grenadier, EAT 40 XENO SCUM
-/obj/item/weapon/gun/rifle/m16/grenadierrepro
+/obj/item/weapon/gun/rifle/m16/grenadier/repro
 	name = "\improper M16 grenadier rifle"
 	desc = "An old, reliable design first adopted by the U.S. military in the 1960s and reproduced by Weston Reproductions. It is chambered in 5.56x45mm. This one has an irremovable M203 grenade launcher attached to it, holds one propriatary 40mm shell, it lacks IFF systems and will impact the first target it hits; introduce your little friend."
 	icon_state = "m16g"
@@ -1152,7 +1152,7 @@
 		/obj/item/attachable/attached_gun/grenade/m203,
 	)
 
-/obj/item/weapon/gun/rifle/m16/grenadierrepro/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/m16/grenadier/repro/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/attached_gun/grenade/m203/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
@@ -1160,7 +1160,7 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-/obj/item/weapon/gun/rifle/m16/grenadierrepro/set_gun_config_values()
+/obj/item/weapon/gun/rifle/m16/grenadier/repro/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
@@ -1809,7 +1809,7 @@
 //-------------------------------------------------------
 //L42A Battle Rifle FAL ripoff edition
 
-/obj/item/weapon/gun/rifle/l42B
+/obj/item/weapon/gun/rifle/l42a/L42B
 	name = "\improper L42B battle rifle"
 	desc = "The L42B Battle Rifle, found commonly around the frontiers of the Galaxy. It's commonly used by colonists for self defense, as well as many colonial militias, whomever they serve due to it's rugged reliability and ease of use without much training. This rifle is the B variant, equipped with 10x26mm and full auto functionality."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
@@ -1849,10 +1849,10 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine)
 	map_specific_decoration = TRUE
 
-/obj/item/weapon/gun/rifle/l42B/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/l42a/l42B/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10)
 
-/obj/item/weapon/gun/rifle/l42B/set_gun_config_values()
+/obj/item/weapon/gun/rifle/l42a/l42B/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_9)
 	set_burst_amount(0)

@@ -385,7 +385,7 @@
 
 	//Type-19 lancer
 
-/obj/item/weapon/gun/smg/pps43lancer
+/obj/item/weapon/gun/smg/pps43/lancer
 	name = "\improper Type-19 Submachinegun" //placeholder
 	desc = "An outdated, but reliable and powerful, submachinegun originating in the Union of Progressive Peoples, it is still in limited service in the UPP but is most often used by paramilitary groups or corporate security forces. It is usually used with a 35 round stick magazine, or a 71 round drum."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
@@ -407,7 +407,7 @@
 		/obj/item/attachable/magnetic_harness,
 	)
 
-/obj/item/weapon/gun/smg/pps43lancer/set_gun_attachment_offsets()
+/obj/item/weapon/gun/smg/pps43/lancer/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15)
 
 /obj/item/weapon/gun/smg/pps43lancer/set_gun_config_values()
@@ -456,13 +456,13 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/smg/bizonlancer
+/obj/item/weapon/gun/smg/bizon/lancer
 	name = "\improper Type 64 Submachinegun"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type64"
 	item_state = "type64"
 
-/obj/item/weapon/gun/smg/bizonlancer/set_gun_config_values()
+/obj/item/weapon/gun/smg/bizon/lancer/set_gun_config_values()
 	..()
 	fire_delay = FIRE_DELAY_TIER_SMG
 	burst_delay = FIRE_DELAY_TIER_SMG

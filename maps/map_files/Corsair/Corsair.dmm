@@ -191,10 +191,10 @@
 /area/space)
 "hF" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m16/grenadierrepro,
-/obj/item/weapon/gun/rifle/m16/grenadierrepro,
-/obj/item/weapon/gun/rifle/xm177repro,
-/obj/item/weapon/gun/rifle/xm177repro,
+/obj/item/weapon/gun/rifle/xm177/repro,
+/obj/item/weapon/gun/rifle/xm177/repro,
+/obj/item/weapon/gun/rifle/m16/grenadier/repro,
+/obj/item/weapon/gun/rifle/m16/grenadier/repro,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "ie" = (
@@ -202,8 +202,8 @@
 /obj/item/weapon/gun/smg/fp9000,
 /obj/item/weapon/gun/smg/mac15,
 /obj/item/weapon/gun/smg/mp5,
-/obj/item/weapon/gun/smg/pps43lancer,
-/obj/item/weapon/gun/smg/bizonlancer,
+/obj/item/weapon/gun/smg/pps43/lancer,
+/obj/item/weapon/gun/smg/bizon/lancer,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "iw" = (
@@ -371,10 +371,10 @@
 /area/golden_arrow/canteen)
 "pJ" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/l42B,
-/obj/item/weapon/gun/rifle/l42B,
-/obj/item/weapon/gun/rifle/l42B,
-/obj/item/weapon/gun/rifle/l42B,
+/obj/item/weapon/gun/rifle/l42a/L42B,
+/obj/item/weapon/gun/rifle/l42a/L42B,
+/obj/item/weapon/gun/rifle/l42a/L42B,
+/obj/item/weapon/gun/rifle/l42a/L42B,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "pW" = (
@@ -406,7 +406,6 @@
 /area/golden_arrow/squad_one)
 "qK" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/item/weapon/gun/minigunlancer,
 /obj/item/ammo_magazine/minigun,
 /obj/item/ammo_magazine/minigun,
 /obj/item/ammo_magazine/minigun,
@@ -421,6 +420,7 @@
 /obj/item/clothing/under/marine/veteran/freelancer,
 /obj/item/clothing/shoes/marine/brown/knife,
 /obj/item/device/radio/headset/distress/fl,
+/obj/item/weapon/gun/minigun/lancer,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "qX" = (
@@ -1033,7 +1033,6 @@
 /area/golden_arrow/canteen)
 "LL" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
-/obj/item/weapon/gun/minigunlancer,
 /obj/item/ammo_magazine/minigun,
 /obj/item/ammo_magazine/minigun,
 /obj/item/ammo_magazine/minigun,
@@ -1048,6 +1047,7 @@
 /obj/item/clothing/under/marine/veteran/freelancer,
 /obj/item/clothing/shoes/marine/corporate,
 /obj/item/device/radio/headset/distress/fl,
+/obj/item/weapon/gun/minigun/lancer,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "LN" = (

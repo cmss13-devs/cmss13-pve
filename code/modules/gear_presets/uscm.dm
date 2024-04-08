@@ -518,7 +518,7 @@
 	paygrade = "ME4"
 
 /datum/equipment_preset/uscm/medic/fl
-	name = "UPP Sanitar"
+	name = "Freelancer Surgeon"
 	paygrade = "Freelancer Medic"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_MEDICAL)
 	assignment = "Surgeon"

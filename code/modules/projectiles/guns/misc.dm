@@ -61,9 +61,9 @@
 		return 0
 
 //Lancer minigun
-/obj/item/weapon/gun/minigunlancer
+/obj/item/weapon/gun/minigun/lancer
 	name = "\improper Minigun"
-	desc = "An enormous multi-barreled rotating gatling gun. This thing looks llike its straight out of an action movie. Sporting immaculate grips and triggers this bad bitch has been customized solely by order for the user and costing more than you can dream. It also contains space age anti scratch and anti jam technology, along with magnets to auto attach to armor. Only thing this gun lacks is IFF tech. aint the future great?"
+	desc = "An enormous multi-barreled rotating gatling gun. This thing looks like its straight out of an action movie. Sporting immaculate grips and triggers this bad bitch has been customized solely by order for the user and costing more than you can dream. It also contains space age anti scratch and anti jam technology, along with magnets to auto attach to armor. Only thing this gun lacks is IFF tech. aint the future great?"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
 	icon_state = "painless"
 	item_state = "painless"
@@ -78,11 +78,11 @@
 	start_semiauto = FALSE
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/minigunlancer/Initialize(mapload, spawn_empty)
+/obj/item/weapon/gun/minigun/lancer/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
 
-/obj/item/weapon/gun/minigunlancer/set_gun_config_values()
+/obj/item/weapon/gun/minigun/lancer/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_12)
 
@@ -94,7 +94,7 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_buildup_limit = RECOIL_AMOUNT_TIER_3 / RECOIL_BUILDUP_VIEWPUNCH_MULTIPLIER
 
-/obj/item/weapon/gun/minigunlancer/handle_starting_attachment()
+/obj/item/weapon/gun/minigun/lancer/handle_starting_attachment()
 	..()
 	//invisible mag harness
 	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
