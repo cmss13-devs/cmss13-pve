@@ -422,7 +422,7 @@
 /obj/item/clothing/accessory/poncho/on_attached(obj/item/clothing/suit/storage/marine/S, mob/living/user, silent)
 	. =..()
 	if(.)
-	S.armor_overlays["poncho"] = src
+		S.armor_overlays["poncho"] = src
 
 /obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
 	if(!has_suit) return
