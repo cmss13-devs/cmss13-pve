@@ -415,9 +415,9 @@
 /obj/item/clothing/accessory/poncho/Initialize()
 	. = ..()
 	if(has_variation)
-		select_gamemode_skin(type)
-		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
-		update_icon()
+	select_gamemode_skin(type)
+	inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+	update_icon()
 
 /obj/item/clothing/accessory/poncho/on_attached(obj/item/clothing/suit/storage/marine/S, mob/living/user, silent)
 	. =..()
@@ -427,8 +427,8 @@
 /obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
 	if(!has_suit) return
 	var/obj/item/clothing/suit/storage/marine/S = has_suit
-    S.armor_overlays -= "poncho"
-    . = ..()
+	S.armor_overlays -= "poncho"
+	. = ..()
 
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
