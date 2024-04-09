@@ -111,7 +111,7 @@
 	if(!idtype)
 		return
 	var/obj/item/card/id/ID = new idtype()
-	ID.name = "[new_human.real_name]'s ID Card"
+	ID.name = "[new_human.real_name]'s [ID.card_name]"
 	if(assignment)
 		ID.name += " ([assignment])"
 	ID.access = access.Copy(1, 0)

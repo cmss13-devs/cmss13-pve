@@ -374,7 +374,7 @@
 			continue
 
 		marine_card.assignment = "[new_name] [marine.job]"
-		marine_card.name = "[marine_card.registered_name]'s ID Card ([marine_card.assignment])"
+		marine_card.name = "[marine_card.registered_name]'s [marine_card.card_name] ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
@@ -621,7 +621,7 @@
 
 	if(paygrade)
 		C.paygrade = paygrade
-	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
 	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
 	if(headset && radio_freq)
@@ -643,7 +643,7 @@
 
 	C.access -= src.access
 	C.assignment = M.assigned_equipment_preset.assignment
-	C.name = "[C.registered_name]'s ID Card ([C.assignment])"
+	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
 	forget_marine_in_squad(M)
 

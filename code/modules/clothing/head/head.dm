@@ -81,50 +81,33 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
-/obj/item/clothing/head/beret/cm/squadberet
-	name = "USCM Squad Beret"
-	desc = "For those who want to show pride and have nothing to lose (in their head, at least)."
+/obj/item/clothing/head/beret/cm/alpha
+	desc = "Often found atop heads, slightly less found on those still attached."
+	icon_state = "beret_alpha"
 
-/obj/item/clothing/head/beret/cm/squadberet/equipped(mob/user, slot)
-	. = ..()
-	self_set()
-	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(self_set), TRUE)
+/obj/item/clothing/head/beret/cm/bravo
+	desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
+	icon_state = "beret_bravo"
 
-/obj/item/clothing/head/beret/cm/squadberet/dropped(mob/user)
-	. = ..()
-	UnregisterSignal(user, COMSIG_SET_SQUAD)
+/obj/item/clothing/head/beret/cm/charlie
+	desc = "Still has some morning toast crumbs on it."
+	icon_state = "beret_charlie"
 
-/obj/item/clothing/head/beret/cm/squadberet/proc/self_set()
-	var/mob/living/carbon/human/H = loc
-	if(istype(H))
-		if(H.assigned_squad)
-			switch(H.assigned_squad.name)
-				if(SQUAD_MARINE_2)
-					icon_state = "beret_bravo"
-					desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
-				if(SQUAD_MARINE_3)
-					icon_state = "beret_charlie"
-					desc = "Still has some morning toast crumbs on it."
-				if(SQUAD_MARINE_4)
-					icon_state = "beret_delta"
-					desc = "Hard to consider protection, but these types of people don't seek protection."
-				if(SQUAD_MARINE_5)
-					icon_state = "beret_echo"
-					desc = "Tightly Woven, as it should be."
-				if(SQUAD_MARINE_CRYO)
-					icon_state = "beret_foxtrot"
-					desc = "Looks and feels starched, cold to the touch."
-				if(SQUAD_MARINE_INTEL)
-					icon_state = "beret_intel"
-					desc = "Looks more intellegent than the person wearing it."
+/obj/item/clothing/head/beret/cm/delta
+	desc = "Hard to consider protection, but these types of people don't seek protection."
+	icon_state = "beret_delta"
 
-			if(H.assigned_squad.name == GLOB.main_platoon_name)
-				icon_state = "beret_alpha"
-				desc = "Often found atop heads, slightly less found on those still attached."
-		else
-			icon_state = "beret"
-			desc = initial(desc)
-		H.update_inv_head()
+/obj/item/clothing/head/beret/cm/echo
+	desc = "Tightly Woven, as it should be."
+	icon_state = "beret_echo"
+
+/obj/item/clothing/head/beret/cm/foxtrot
+	desc = "Looks and feels starched, cold to the touch."
+	icon_state = "beret_foxtrot"
+
+/obj/item/clothing/head/beret/cm/intel
+	desc = "Looks more intellegent than the person wearing it."
+	icon_state = "beret_intel"
 
 
 /obj/item/clothing/head/headband
@@ -157,50 +140,33 @@
 	desc = "A headband made from a simple strip of cloth. The words \"DOWN WITH TYRANTS\" are emblazoned on the front."
 	icon_state = "rebelband"
 
-/obj/item/clothing/head/headband/squad
-	var/dummy_icon_state = "headband%SQUAD%"
+/obj/item/clothing/head/headband/alpha
+	desc = "A bright red headband made out of durable cloth. it seems brand new, yet to see any wear"
+	icon_state = "headbandalpha"
 
-	var/static/list/valid_icon_states
+/obj/item/clothing/head/headband/bravo
+	desc = "An orangish yellow headband made out of durable cloth. this one stained with sweat and dust from manual labor"
+	icon_state = "headbandbravo"
 
-/obj/item/clothing/head/headband/squad/Initialize(mapload, ...)
-	. = ..()
-	if(!valid_icon_states)
-		valid_icon_states = icon_states(icon)
-	adapt_to_squad()
+/obj/item/clothing/head/headband/charlie
+	desc = "A purple headband made out of durable cloth. this one smells of jealousy and breakfast"
+	icon_state = "headbandcharlie"
 
-/obj/item/clothing/head/headband/squad/proc/update_clothing_wrapper(mob/living/carbon/human/wearer)
-	SIGNAL_HANDLER
+/obj/item/clothing/head/headband/delta
+	desc = "A blue headband made out of durable cloth. just wearing it makes you want to recklessly charge the enemy"
+	icon_state = "headbanddelta"
 
-	var/is_worn_by_wearer = recursive_holder_check(src) == wearer
-	if(is_worn_by_wearer)
-		update_clothing_icon()
-	else
-		UnregisterSignal(wearer, COMSIG_SET_SQUAD) // we can't set this in dropped, because dropping into a helmet unsets it and then it never updates
+/obj/item/clothing/head/headband/echo
+	desc = "A sea green headband made out of durable cloth. its color has been washed out from many long sneaking missions and raids behind enemy lines"
+	icon_state = "headbandecho"
 
-/obj/item/clothing/head/headband/squad/update_clothing_icon()
-	adapt_to_squad()
-	if(istype(loc, /obj/item/storage/internal) && istype(loc.loc, /obj/item/clothing/head/helmet))
-		var/obj/item/clothing/head/helmet/headwear = loc.loc
-		headwear.update_icon()
-	return ..()
+/obj/item/clothing/head/headband/foxtrot
+	desc = "A brown headband made out of durable cloth. it is still cold to the touch from years of cryosleep"
+	icon_state = "headbandfoxtrot"
 
-/obj/item/clothing/head/headband/squad/pickup(mob/user, silent)
-	. = ..()
-	adapt_to_squad()
-
-/obj/item/clothing/head/headband/squad/equipped(mob/user, slot, silent)
-	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(update_clothing_wrapper), TRUE)
-	adapt_to_squad()
-	return ..()
-
-/obj/item/clothing/head/headband/squad/proc/adapt_to_squad()
-	var/squad_color = "Delta"
-	var/mob/living/carbon/human/wearer = recursive_holder_check(src)
-	if(istype(wearer) && wearer.assigned_squad)
-		var/squad_name = lowertext(wearer.assigned_squad.name)
-		if("headband[squad_name]" in valid_icon_states)
-			squad_color = squad_name
-	icon_state = replacetext(initial(dummy_icon_state), "%SQUAD%", squad_color)
+/obj/item/clothing/head/headband/intel
+	desc = "A black headband made out of durable cloth. wearing this makes you feel like a secret agent."
+	icon_state = "headbandintel"
 
 /obj/item/clothing/head/headband/rambo
 	desc = "It flutters in the face of the wind, defiant and unrestrained, like the man who wears it."
@@ -258,7 +224,13 @@
 						/obj/item/clothing/head/headband/red = "hat_headbandred",
 						/obj/item/clothing/head/headband/brown = "hat_headbandbrown",
 						/obj/item/clothing/head/headband/gray = "hat_headbandgray",
-						/obj/item/clothing/head/headband/squad = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/head/headband/alpha = "hat_headbandalpha",
+						/obj/item/clothing/head/headband/bravo = "hat_headbandbravo",
+						/obj/item/clothing/head/headband/charlie = "hat_headbandcharlie",
+						/obj/item/clothing/head/headband/delta = "hat_headbanddelta",
+						/obj/item/clothing/head/headband/echo = "hat_headbandecho",
+						/obj/item/clothing/head/headband/foxtrot = "hat_headbandfoxtrot",
+						/obj/item/clothing/head/headband/foxtrot = "hat_headbandintel",
 						/obj/item/prop/helmetgarb/lucky_feather = "lucky_feather",
 						/obj/item/prop/helmetgarb/lucky_feather/blue = "lucky_feather_blue",
 						/obj/item/prop/helmetgarb/lucky_feather/purple = "lucky_feather_purple",
