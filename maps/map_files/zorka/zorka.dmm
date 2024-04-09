@@ -146,6 +146,15 @@
 	},
 /turf/open/floor/plating,
 /area/zorka/exterior)
+"bN" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "bP" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/almayer/no_build{
@@ -167,6 +176,15 @@
 	icon_state = "blue3"
 	},
 /area/zorka/fortress)
+"bV" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/scalpel,
+/obj/item/tool/surgery/cautery,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "ca" = (
 /turf/open/floor/strata{
 	dir = 6;
@@ -342,6 +360,13 @@
 	icon_state = "darkyellowfull2"
 	},
 /area/zorka/fortress)
+"dk" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "dl" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -407,6 +432,18 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"dN" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/dry_ramen,
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	pixel_y = 8;
+	pixel_x = 11
+	},
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "dQ" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /turf/open/floor/plating,
@@ -591,6 +628,44 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"fp" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
+"fx" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/glasses/regular/hipster{
+	name = "prescription glasses";
+	desc = "Ugly glasses with thick lenses."
+	},
+/obj/item/clothing/glasses/regular/hipster{
+	name = "prescription glasses";
+	desc = "Ugly glasses with thick lenses.";
+	pixel_y = -3;
+	pixel_x = -6
+	},
+/obj/item/clothing/glasses/regular/hipster{
+	name = "prescription glasses";
+	desc = "Ugly glasses with thick lenses.";
+	pixel_y = -7
+	},
+/obj/item/storage/pill_bottle/imidazoline/skillless{
+	pixel_y = 11;
+	pixel_x = -9
+	},
+/obj/item/reagent_container/dropper{
+	pixel_y = 10;
+	pixel_x = 6
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "fD" = (
 /obj/structure/bed/chair/wood/wings,
 /obj/item/clothing/glasses/disco_fever{
@@ -606,6 +681,12 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"fF" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "cyan4"
+	},
+/area/zorka/exterior)
 "fH" = (
 /obj/structure/disposaloutlet{
 	dir = 4
@@ -680,6 +761,15 @@
 	icon_state = "floor2"
 	},
 /area/zorka/fortress)
+"gf" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door/window/brigdoor/southright{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "gk" = (
 /obj/structure/largecrate/supply/floodlights{
 	anchored = 1
@@ -764,6 +854,12 @@
 "gY" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/zorka/fortress)
+"gZ" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/zorka/exterior)
 "hh" = (
 /obj/structure/machinery/power/smes,
 /turf/open/floor/strata{
@@ -825,6 +921,15 @@
 "hL" = (
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"hN" = (
+/obj/structure/machinery/medical_pod/autodoc/unskilled{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "hQ" = (
 /obj/structure/prop/static_tank/water,
 /obj/structure/prop/static_tank/water{
@@ -900,9 +1005,22 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"iI" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "iJ" = (
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"iN" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "iR" = (
 /turf/open/floor/strata{
 	icon_state = "blue3"
@@ -1118,6 +1236,11 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"kD" = (
+/turf/open/floor/strata{
+	icon_state = "cyan4"
+	},
+/area/zorka/exterior)
 "kJ" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/wood,
@@ -1146,8 +1269,10 @@
 	},
 /area/zorka/fortress)
 "kX" = (
-/turf/open/space/basic,
-/area/zorka/fortress)
+/turf/open/floor/strata{
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "lf" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/cameras{
@@ -1338,6 +1463,12 @@
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/carpet,
 /area/zorka/fortress)
+"mR" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "mY" = (
 /obj/structure/machinery/light/built,
 /turf/open/floor/strata{
@@ -1474,6 +1605,22 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"nT" = (
+/turf/open/floor/strata{
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
+"nU" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list();
+	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
+	name = "\improper MinZdrav Blood Dispenser";
+	vendor_theme = 3
+	},
+/turf/open/floor/strata{
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "nW" = (
 /obj/structure/surface/table/reinforced/cloth,
 /obj/item/reagent_container/spray/cleaner,
@@ -1921,6 +2068,12 @@
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"sx" = (
+/turf/open/floor/strata{
+	dir = 5;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "sz" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
@@ -2030,6 +2183,18 @@
 "tw" = (
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"tB" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
+"tI" = (
+/obj/structure/bed/chair/comfy/teal,
+/turf/open/floor/strata{
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "tS" = (
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/zorka/fortress)
@@ -2051,6 +2216,14 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"tZ" = (
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/zorka/exterior)
 "ua" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "\improper Head Watchman Office";
@@ -2803,6 +2976,12 @@
 	dir = 8
 	},
 /area/zorka/exterior)
+"AH" = (
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "AO" = (
 /obj/item/tool/warning_cone{
 	pixel_y = 10
@@ -2893,6 +3072,13 @@
 /turf/open/floor/strata{
 	color = "#5e5d5d";
 	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
+"Bw" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/microwave,
+/turf/open/floor/strata{
+	icon_state = "white_cyan4"
 	},
 /area/zorka/exterior)
 "BA" = (
@@ -3129,6 +3315,15 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"DF" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/surgical_line,
+/obj/item/tool/surgery/synthgraft,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/zorka/exterior)
 "DK" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/pistol/t73{
@@ -3160,6 +3355,13 @@
 	icon_state = "yellow1"
 	},
 /area/zorka/fortress)
+"DS" = (
+/obj/structure/bed/chair/comfy/teal,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "DV" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/strata{
@@ -3211,6 +3413,11 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Eh" = (
+/turf/open/floor/strata{
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "Ei" = (
 /turf/open/floor/strata{
 	dir = 8;
@@ -3237,6 +3444,12 @@
 /turf/open/floor/strata{
 	icon_state = "yellow4";
 	dir = 8
+	},
+/area/zorka/exterior)
+"Ep" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan3"
 	},
 /area/zorka/exterior)
 "EB" = (
@@ -3291,6 +3504,12 @@
 	icon_state = "white_cyan2"
 	},
 /area/zorka/fortress)
+"EV" = (
+/turf/open/floor/strata{
+	icon_state = "cyan4";
+	dir = 1
+	},
+/area/zorka/exterior)
 "Fa" = (
 /obj/item/trash/cigbutt,
 /turf/open/floor/strata{
@@ -3326,6 +3545,14 @@
 	dir = 8
 	},
 /area/zorka/exterior)
+"Fw" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/stack/medical/advanced/bruise_pack,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "FB" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -3342,6 +3569,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/zorka/fortress)
+"FI" = (
+/turf/open/floor/strata{
+	icon_state = "cyan3";
+	dir = 1
+	},
+/area/zorka/exterior)
 "FK" = (
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
@@ -3382,6 +3615,12 @@
 	icon_state = "yellow3"
 	},
 /area/zorka/exterior)
+"FP" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
 "FQ" = (
 /obj/effect/spawner/random/tool,
 /turf/open/floor/strata{
@@ -3407,6 +3646,12 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"FU" = (
+/turf/open/floor/strata{
+	dir = 10;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
 "Gh" = (
 /obj/structure/cargo_container/watatsumi/rightmid,
 /turf/open/floor/strata{
@@ -3414,6 +3659,12 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"Gj" = (
+/turf/open/floor/strata{
+	dir = 5;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
 "Gk" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/cameras{
@@ -3473,6 +3724,15 @@
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"GF" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door/window/brigdoor/southleft{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/zorka/exterior)
 "GH" = (
 /obj/structure/cargo_container/kelland/left,
 /obj/structure/cargo_container/kelland/left,
@@ -3502,10 +3762,26 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"GN" = (
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = -1;
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "GR" = (
 /turf/open/floor/strata{
 	icon_state = "red4";
 	dir = 1
+	},
+/area/zorka/exterior)
+"GW" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan4"
 	},
 /area/zorka/exterior)
 "Hb" = (
@@ -3702,6 +3978,13 @@
 	},
 /turf/open/floor/plating,
 /area/zorka/fortress)
+"Jd" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/colony,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/zorka/exterior)
 "Jj" = (
 /obj/item/tool/kitchen/knife,
 /obj/item/tool/kitchen/utensil/fork{
@@ -4168,6 +4451,15 @@
 /obj/item/bedsheet/mime,
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Mz" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/hemostat,
+/obj/item/tool/surgery/retractor,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "MC" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -4587,6 +4879,15 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"PU" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/bonesetter,
+/obj/item/tool/surgery/circular_saw,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan1"
+	},
+/area/zorka/exterior)
 "PW" = (
 /obj/structure/machinery/door/poddoor/almayer/blended{
 	id = "turrets"
@@ -4738,6 +5039,12 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"Ru" = (
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "Rw" = (
 /obj/item/tool/crowbar,
 /obj/structure/machinery/light/small,
@@ -4845,6 +5152,13 @@
 	icon_state = "red1"
 	},
 /area/zorka/fortress)
+"Sn" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "Sx" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced/colony{
 	dir = 2;
@@ -4931,6 +5245,12 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"Te" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp,
+/turf/open/floor/strata{
+	icon_state = "white_cyan2"
+	},
+/area/zorka/exterior)
 "Tg" = (
 /obj/structure/machinery/recycler,
 /turf/open/floor/strata{
@@ -5041,6 +5361,16 @@
 	},
 /turf/open/floor/wood,
 /area/zorka/fortress)
+"UG" = (
+/obj/structure/machinery/sleep_console{
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "UJ" = (
 /obj/structure/machinery/blackbox_recorder,
 /obj/item/prop/almayer/flight_recorder/colony{
@@ -5089,6 +5419,13 @@
 	},
 /turf/open/floor/carpet,
 /area/zorka/fortress)
+"UR" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/zorka/exterior)
 "UV" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata{
@@ -5213,6 +5550,12 @@
 	icon_state = "floor3"
 	},
 /area/zorka/fortress)
+"VT" = (
+/turf/open/floor/strata{
+	dir = 9;
+	icon_state = "cyan3"
+	},
+/area/zorka/exterior)
 "VZ" = (
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/vertical/secure{
 	id = "entry4"
@@ -5319,6 +5662,12 @@
 	icon_state = "fake_wood"
 	},
 /area/zorka/fortress)
+"Xb" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/strata{
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "Xc" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/strata{
@@ -5339,6 +5688,12 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/zorka/fortress)
+"Xf" = (
+/turf/open/floor/strata{
+	icon_state = "cyan3";
+	dir = 8
+	},
+/area/zorka/exterior)
 "Xh" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/strata{
@@ -5389,6 +5744,15 @@
 	icon_state = "ai_floors"
 	},
 /area/zorka/fortress)
+"XQ" = (
+/obj/structure/machinery/autodoc_console{
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan3"
+	},
+/area/zorka/exterior)
 "XY" = (
 /obj/structure/prop/static_tank/water,
 /obj/structure/prop/static_tank/water{
@@ -5398,12 +5762,26 @@
 	icon_state = "yellow3"
 	},
 /area/zorka/exterior)
+"XZ" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "Yc" = (
 /obj/structure/largecrate/random/barrel/green,
 /turf/open/floor/prison{
 	icon_state = "darkyellowfull2"
 	},
 /area/zorka/fortress)
+"Ye" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/bonegel,
+/obj/item/tool/surgery/FixOVein,
+/turf/open/floor/strata{
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "Yh" = (
 /turf/closed/wall/almayer/white/hull,
 /area/zorka/fortress)
@@ -5478,6 +5856,18 @@
 /obj/item/clothing/ears/earmuffs,
 /turf/open/floor/strata,
 /area/zorka/fortress)
+"YU" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea{
+	pixel_y = 9;
+	pixel_x = 6
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "white_cyan4"
+	},
+/area/zorka/exterior)
 "YV" = (
 /turf/open/gm/river/desert/deep{
 	base_river_slowdown = 0
@@ -25177,10 +25567,10 @@ gY
 lW
 lW
 gY
-kX
-kX
-kX
-kX
+tS
+tS
+tS
+tS
 cM
 cM
 cM
@@ -25429,10 +25819,10 @@ gY
 lW
 lW
 gY
-kX
-kX
-kX
-kX
+tS
+tS
+tS
+tS
 cM
 cM
 cM
@@ -26438,8 +26828,8 @@ lW
 Io
 gY
 gY
-kX
-kX
+MN
+MN
 gY
 JC
 EH
@@ -31693,8 +32083,8 @@ gY
 gY
 gY
 gY
-kX
-kX
+lW
+lW
 gY
 gY
 gY
@@ -31945,8 +32335,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -32197,8 +32587,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -32449,8 +32839,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -32701,8 +33091,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -32953,8 +33343,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -33205,8 +33595,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -33457,8 +33847,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -33709,8 +34099,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -33961,8 +34351,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -34213,8 +34603,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -34465,8 +34855,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -34717,8 +35107,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -34969,8 +35359,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -35221,8 +35611,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -35473,8 +35863,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -35725,8 +36115,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -35977,8 +36367,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -36229,8 +36619,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -36481,8 +36871,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -36733,8 +37123,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -36985,8 +37375,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -37237,8 +37627,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -37489,8 +37879,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -37741,8 +38131,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -37993,8 +38383,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -38245,8 +38635,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -38497,8 +38887,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -38749,8 +39139,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -39001,8 +39391,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -39253,8 +39643,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -39505,8 +39895,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -39757,8 +40147,8 @@ cM
 cM
 cM
 EH
-mA
-cM
+NB
+NB
 EH
 cM
 cM
@@ -40009,8 +40399,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -40261,8 +40651,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -40513,8 +40903,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -40765,8 +41155,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -41017,8 +41407,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -41269,8 +41659,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -41521,8 +41911,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -41750,13 +42140,13 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -41773,8 +42163,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -42002,18 +42392,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Bw
+Ep
+Ep
+DS
+YU
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -42025,8 +42415,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -42254,18 +42644,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dN
+kX
+kX
+tI
+Xb
+EH
+Te
+Te
+nU
+kX
+EH
 cM
 cM
 cM
@@ -42277,8 +42667,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -42506,18 +42896,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+dk
+mR
+sx
+kX
+Eh
+EH
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -42529,8 +42919,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -42758,18 +43148,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+AH
+kX
+Eh
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -42781,8 +43171,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -43012,16 +43402,16 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ru
+mR
+XZ
+EH
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -43033,8 +43423,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -43261,19 +43651,19 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+mA
+mA
+mA
+EH
+EH
+iI
+EH
+EH
+EH
+EH
+Vv
+EH
+EH
 EH
 cM
 cM
@@ -43285,8 +43675,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -43497,35 +43887,35 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+kD
+FP
+GW
+EH
+Vv
+Vv
+Vv
+Vv
+Vv
 EH
 cM
 cM
@@ -43537,8 +43927,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -43749,35 +44139,35 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Ye
+gZ
+gZ
+gZ
+bV
+EH
+fp
+fx
+EH
+UR
+UR
+EH
+gZ
+hN
+EH
+FI
+Vv
+nT
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 EH
 cM
 cM
@@ -43789,8 +44179,8 @@ cM
 cM
 cM
 EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -44001,19 +44391,36 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+PU
+gZ
+tZ
+gZ
+DF
+EH
+gZ
+bN
+EH
+DS
+Ep
+EH
+gZ
+XQ
+EH
+FI
+tB
+fF
+EH
+Vv
+Vv
+Vv
+Vv
+Vv
+EH
 cM
 cM
 cM
@@ -44024,25 +44431,8 @@ cM
 cM
 cM
 EH
-EH
-EH
-EH
-EH
-EH
-EH
-EH
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -44253,19 +44643,36 @@ cM
 cM
 cM
 cM
+EH
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Mz
+gZ
+gZ
+gZ
+Fw
+EH
+gZ
+gZ
+EH
+gZ
+gZ
+EH
+gZ
+gZ
+EH
+FI
+nT
+EH
+EH
+Ms
+gf
+GF
+Ms
+EH
+EH
 cM
 cM
 cM
@@ -44276,25 +44683,8 @@ cM
 cM
 cM
 EH
-cM
-cM
-cM
-cM
-cM
-cM
-EH
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-EH
-cM
-cM
+NB
+NB
 EH
 cM
 cM
@@ -44505,39 +44895,35 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
 EH
-cM
-cM
-cM
-mA
-mA
+EH
 mA
 EH
 EH
 EH
 EH
+gZ
+EH
+EH
+EH
+EH
+gZ
+EH
+EH
+gZ
+EH
+EH
+gZ
+EH
+FI
+nT
+EH
+kD
+Xf
+Xf
+Xf
+Xf
+GW
 EH
 EH
 EH
@@ -44545,8 +44931,12 @@ EH
 EH
 EH
 EH
-cM
-cM
+EH
+EH
+EH
+EH
+NB
+NB
 EH
 cM
 cM
@@ -44757,48 +45147,48 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-wu
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
 EH
 cM
 cM
+cM
+cM
+kD
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+FP
+VT
+nT
+wu
+FI
+Vv
+Vv
+Vv
+Vv
+nT
+Jd
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+NB
+NB
 EH
 cM
 cM
@@ -45009,48 +45399,48 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
 EH
 cM
 cM
+cM
+cM
+EV
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+oW
+Gj
+nT
+cM
+FI
+Vv
+Vv
+Vv
+Vv
+nT
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+cx
+NB
+NB
 EH
 cM
 cM
@@ -45261,35 +45651,35 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 cM
 EH
-cM
+EH
+EH
+gZ
+EH
+EH
+EH
+EH
+gZ
+EH
+EH
+gZ
+EH
+EH
+gZ
+EH
+FI
+nT
+EH
+EV
 oW
 oW
 oW
 oW
-oW
+fF
 EH
 EH
 EH
@@ -45513,28 +45903,28 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+Ye
+gZ
+gZ
+gZ
+bV
+EH
+gZ
+gZ
+EH
+gZ
+gZ
+EH
+gZ
+gZ
+EH
+FI
+nT
 EH
 EH
 EH
@@ -45769,29 +46159,29 @@ cM
 cM
 cM
 cM
+EH
+PU
+gZ
+tZ
+gZ
+DF
+EH
+gZ
+gZ
+EH
+gZ
+UG
+EH
+gZ
+GN
+EH
+FI
+FU
+GW
+EH
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
 cM
 cM
 mA
@@ -46021,29 +46411,29 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+Mz
+gZ
+gZ
+gZ
+Fw
+EH
+gZ
+gZ
+EH
+gZ
+Sn
+EH
+gZ
+iN
+EH
+FI
+Vv
+nT
 EH
 mA
 mA
+EH
 mA
 mA
 mA
@@ -46273,33 +46663,33 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-oW
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+FI
+Vv
+nT
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -46533,25 +46923,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
+FI
+Vv
+nT
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -46785,25 +47175,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
+FI
+Vv
+nT
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -47037,25 +47427,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+kX
+FI
+Vv
+nT
+kX
+kX
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -47289,25 +47679,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
+FI
+Vv
+nT
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -47541,25 +47931,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
+EV
+oW
+fF
+EH
+kX
+kX
+kX
+kX
+kX
+kX
+EH
 cM
 cM
 cM
@@ -47793,25 +48183,25 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+mA
+mA
+mA
+EH
+EH
+EH
+EH
+EH
+EH
+EH
+EH
 cM
 cM
 cM
@@ -48049,17 +48439,17 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -48301,17 +48691,17 @@ cM
 cM
 cM
 cM
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
+mA
 cM
 cM
 cM
@@ -48553,18 +48943,18 @@ cM
 cM
 cM
 cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-cM
-oW
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
+mA
 cM
 cM
 cM
@@ -48806,7 +49196,7 @@ cM
 cM
 cM
 cM
-cM
+mA
 cM
 cM
 cM

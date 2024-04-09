@@ -91,6 +91,12 @@
 /obj/structure/sign/double/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
 
+/obj/structure/sign/upp_sivtsev_table
+	name = "\improper Sivtsev table"
+	desc = "The Sivtsev table is a standardized table for testing visual acuity, which was developed in 1923 by Soviet ophthalmologist D. A. Sivtsev."
+	desc_lore = "The table consists of series of the Cyrillic letters Ш, Б, М, Н, К, Ы, and И in a definite order representing visual acuity values between 0.1 and 2.0.
+	icon_state = "sivtsev"
+
 //============//
 //  Banners  //
 //==========//
