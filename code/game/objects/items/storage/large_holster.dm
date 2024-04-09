@@ -383,3 +383,142 @@
 	if (!istype(FP))
 		return
 	FP.toggle_fuel()
+
+/obj/item/storage/large_holster/m56
+	name = "\improper M277 Pistol Holster Rig"
+	desc = "holster"
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "m56b_holster"
+	storage_slots = 5
+	max_storage_space = 11
+	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
+	var/flap = TRUE
+	var/list/obj/item/weapon/gun/holster_slots = list(
+		"1" = list(
+			"gun" = null,
+			"underlay_sprite" = null,
+			"underlay_transform" = null,
+			"icon_x" = 0,
+			"icon_y" = 0))
+
+	var/list/holstered_guns = list()
+
+	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
+	///Used to get flap overlay states as inserting a gun changes icon state.
+	can_hold = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/ammo_magazine/pistol,
+	)
+
+/obj/item/storage/large_holster/m56/post_skin_selection()
+	base_icon = icon_state
+	//Saving current inhands, since we'll be switching item_state around for belt onmobs.
+	LAZYSET(item_state_slots, WEAR_L_HAND, item_state)
+	LAZYSET(item_state_slots, WEAR_R_HAND, item_state)
+	//And switch to correct belt state in case we aren't spawning with a gun inserted.
+	item_state = icon_state
+
+/obj/item/storage/large_holster/m56/update_icon()
+	overlays.Cut()
+
+	if(content_watchers && flap)
+		return
+	var/magazines = length(contents) - length(holstered_guns)
+	if(!magazines)
+		return
+	if(magazines <= (storage_slots - length(holster_slots)) * 0.5) //Don't count slots reserved for guns, even if they're empty.
+		overlays += "+[base_icon]_half"
+	else
+		overlays += "+[base_icon]_full"
+	. = ..()
+
+/obj/item/storage/large_holster/m56/on_stored_atom_del(atom/movable/AM)
+	if(!isgun(AM))
+		return
+	holstered_guns -= AM
+	for(var/slot in holster_slots)
+		if(AM == holster_slots[slot]["gun"])
+			holster_slots[slot]["gun"] = null
+
+			update_gun_icon(slot)
+			return
+
+/obj/item/storage/large_holster/m56/can_be_inserted(obj/item/W, mob/user, stop_messages = FALSE) //We don't need to stop messages, but it can be left in.
+	. = ..()
+	if(!.)
+		return
+
+	if(isgun(W))
+		for(var/slot in holster_slots)
+			if(!holster_slots[slot]["gun"]) //Open holster.
+				return
+
+		if(!stop_messages) //No open holsters.
+			if(length(holster_slots) == 1)
+				to_chat(usr, SPAN_WARNING("[src] already holds a gun."))
+			else
+				to_chat(usr, SPAN_WARNING("[src] doesn't have any empty holsters."))
+		return FALSE
+
+	else if(length(contents) - length(holstered_guns) >= storage_slots - length(holster_slots)) //Compare amount of nongun items in storage with usable ammo pockets.
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more ammo."))
+		return FALSE
+
+/obj/item/storage/large_holster/m56/_item_insertion(obj/item/W, prevent_warning = FALSE)
+	if(isgun(W))
+		holstered_guns += W
+		for(var/slot in holster_slots)
+			if(holster_slots[slot]["gun"])
+				continue
+			holster_slots[slot]["gun"] = W
+			update_gun_icon(slot)
+			break
+	..()
+
+/obj/item/storage/large_holster/m56/_item_removal(obj/item/W, atom/new_location)
+	if(isgun(W))
+		holstered_guns -= W
+		for(var/slot in holster_slots)
+			if(holster_slots[slot]["gun"] != W)
+				continue
+			holster_slots[slot]["gun"] = null
+			update_gun_icon(slot)
+			break
+	..()
+
+/obj/item/storage/large_holster/m56/proc/update_gun_icon(slot) //We do not want to use regular update_icon as it's called for every item inserted. Not worth the icon math.
+	var/mob/living/carbon/human/user = loc
+	var/obj/item/weapon/gun/current_gun = holster_slots[slot]["gun"]
+	if(current_gun)
+		/*
+		Have to use a workaround here, otherwise images won't display properly at all times.
+		Reason being, transform is not displayed when right clicking/alt+clicking an object,
+		so it's necessary to pre-load the potential states so the item actually shows up
+		correctly without having to rotate anything. Preloading weapon icons also makes
+		sure that we don't have to do any extra calculations.
+		*/
+		playsound(src, drawSound, 7, TRUE)
+		var/image/gun_underlay = image(icon, current_gun.base_gun_icon)
+		gun_underlay.pixel_x = holster_slots[slot]["icon_x"]
+		gun_underlay.pixel_y = holster_slots[slot]["icon_y"]
+		gun_underlay.color = current_gun.color
+		gun_underlay.transform = holster_slots[slot]["underlay_transform"]
+		holster_slots[slot]["underlay_sprite"] = gun_underlay
+		underlays += gun_underlay
+
+		icon_state += "_g"
+		item_state = icon_state
+	else
+		playsound(src, sheatheSound, 7, TRUE)
+		underlays -= holster_slots[slot]["underlay_sprite"]
+		holster_slots[slot]["underlay_sprite"] = null
+
+		icon_state = copytext(icon_state,1,-2)
+		item_state = icon_state
+
+	if(istype(user))
+		if(src == user.belt)
+			user.update_inv_belt()
+		else if(src == user.s_store)
+			user.update_inv_s_store()
