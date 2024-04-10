@@ -394,12 +394,11 @@
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	var/flap = TRUE
 	var/list/obj/item/weapon/gun/holster_slots = list(
-		"1" = list(
-			"gun" = null,
-			"underlay_sprite" = null,
-			"underlay_transform" = null,
-			"icon_x" = 0,
-			"icon_y" = 0))
+		"gun" = null,
+		"underlay_sprite" = null,
+		"underlay_transform" = null,
+		"icon_x" = 0,
+		"icon_y" = 0)
 
 	var/list/holstered_guns = list()
 
