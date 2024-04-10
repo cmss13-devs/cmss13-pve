@@ -95,7 +95,7 @@ also doesn't really matter. You can only reload them with handfuls.
 	desc = "An internal magazine. It is not supposed to be seen or removed."
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
-	max_rounds = 9
+	max_rounds = 6
 	chamber_closed = 0
 
 /obj/item/ammo_magazine/internal/shotgun/m37
