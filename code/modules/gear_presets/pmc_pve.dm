@@ -5,8 +5,7 @@
 	name = "Tactical Unit"
 	paygrade = "PMC"
 	access = list(ACCESS_WY_GENERAL)
-	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
-	faction_group = list(FACTION_LIST_WY)
+	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	idtype = /obj/item/card/id/pmc
 	assignment = JOB_PMC_STANDARD
@@ -27,7 +26,7 @@
 	name = "Team Leader"
 	paygrade = "PMC-OP"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ARMORY)
-	assignment = JOB_PMC_LEADER
+	assignment = JOB_PMC_ELITE
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_TEAM_LEADER
 	skills = /datum/skills/pmc/SL

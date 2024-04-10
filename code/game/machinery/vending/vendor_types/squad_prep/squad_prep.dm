@@ -156,8 +156,8 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc
 	name = "\improper PMC Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard UPP uniforms."
-	icon_state = "upp_gear"
-	req_access = list(ACCESS_UPP_GENERAL)
+	icon_state = "pmc_gear"
+	req_access = list(ACCESS_WY_GENERAL)
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
@@ -166,14 +166,13 @@
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
 		list("Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/corporate, VENDOR_ITEM_REGULAR),
-		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc/corporate, VENDOR_ITEM_REGULAR),
+		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("M11-PMC Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/pve, VENDOR_ITEM_REGULAR),
 		list("PMC Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/pmc, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
-		list("Brown Webbing Vest", round(scale * 1.25), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
-		list("Black Webbing Vest", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
+		list("Black Webbing Vest", round(scale * 4), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
 		list("Webbing", round(scale * 2), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
@@ -231,7 +230,6 @@
 		list("M10 Helmet Rain Cover", round(scale * 10), /obj/item/prop/helmetgarb/raincover, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("PMC Cap", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
-		list("PMC Beret", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/leader, VENDOR_ITEM_REGULAR),
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		)
 
