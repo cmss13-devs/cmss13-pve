@@ -182,9 +182,10 @@
 
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_4
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	damage_falloff = DAMAGE_FALLOFF_TIER_3 //"VP78 - the only pistol viable as a primary."-Vampmare, probably.
+	penetration = ARMOR_PENETRATION_TIER_2
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
+	effective_range_max = 3 //hopefully this fixes the damage woes.
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
 /datum/ammo/bullet/pistol/squash/toxin
 	name = "toxic squash-head pistol bullet"

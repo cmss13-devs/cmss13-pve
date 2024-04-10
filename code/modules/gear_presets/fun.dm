@@ -14,7 +14,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_PIRATE
 
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 
 /datum/equipment_preset/fun/pirate/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
@@ -417,7 +417,7 @@
 
 	uses_special_name = TRUE
 
-	skills = /datum/skills/pfc/crafty // about equivalent to a marine
+	skills = /datum/skills/pfc // about equivalent to a marine
 
 	assignment = "Monkey"
 	rank = "Monkey"

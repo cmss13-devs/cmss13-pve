@@ -22,6 +22,13 @@
 /obj/item/ammo_magazine/sentry/premade/dumb
 	default_ammo = /datum/ammo/bullet/turret/dumb
 
+/obj/item/ammo_magazine/sentry/upp
+	name = "AK-500 ammo drum (7.62mm Caseless)"
+	desc = "An ammo drum of 7.62mm caseless rounds for the UPPA 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "sentry"
+	default_ammo = /datum/ammo/bullet/turret/upp
+
 /obj/item/ammo_magazine/sentry/shotgun
 	name = "12g buckshot drum"
 	desc = "An ammo drum of 50 12g buckshot drums for the UA 12-G Shotgun Sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."

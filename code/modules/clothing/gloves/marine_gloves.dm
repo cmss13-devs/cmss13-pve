@@ -3,7 +3,7 @@
 
 /obj/item/clothing/gloves/marine
 	name = "marine combat gloves"
-	desc = "Standard issue marine tactical gloves. It reads: 'knit by Marine Widows Association'."
+	desc = "Standard USCMC issue combat gloves, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 0
@@ -47,14 +47,14 @@
 
 /obj/item/clothing/gloves/marine/brown
 	name = "marine brown combat gloves"
-	desc = "Standard issue marine tactical gloves. It reads: 'knit by Marine Widows Association'. These are brown instead of the classic black."
+	desc = "USCMC issue combat gloves, now in brown rather than black, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
 	icon_state = "brown"
 	item_state = "brown"
 	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/medical
 	name = "marine medical combat gloves"
-	desc = "Standard issue marine sterile gloves, offers regular protection whilst offering the user a better grip when performing medical work."
+	desc = "Special USCMC issue to hospital corpsmen or other field medical workers. Offers protection from shock and cuts while also improving one's grip on medical tools. Unlike the regular gloves, these are relatively comfortable to wear."
 	icon_state = "latex"
 	item_state = "lgloves"
 	adopts_squad_color = FALSE
@@ -116,7 +116,7 @@
 
 /obj/item/clothing/gloves/marine/veteran
 	name = "armored gloves"
-	desc = "Non-standard kevlon fiber gloves. They're insulated and heavily armored."
+	desc = "Non-standard para-aramid fiber gloves. They're insulated and heavily armored."
 	icon_state = "veteran"
 	item_state = "veteran"
 	siemens_coefficient = 0
@@ -135,7 +135,7 @@
 
 /obj/item/clothing/gloves/marine/veteran/insulated
 	name = "insulated armored gloves"
-	desc = "Non-standard kevlon fiber gloves. These are apparently ESPECIALLY insulated."
+	desc = "Non-standard para-aramid fiber gloves. These are apparently ESPECIALLY insulated."
 	icon_state = "insulated"
 	item_state = "insulated"
 
@@ -143,7 +143,7 @@
 	name = "\improper WY PMC gloves"
 	icon_state = "pmc"
 	item_state = "pmc"
-	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division. They are insulated against electrical shock."
+	desc = "Standard issue venlar protected gloves manufactured for and by Weyland-Yutani for their PMC teams. Features a special polymer that insulates from electric shock."
 
 /obj/item/clothing/gloves/marine/veteran/pmc/commando
 	name = "\improper M5X gauntlets"
