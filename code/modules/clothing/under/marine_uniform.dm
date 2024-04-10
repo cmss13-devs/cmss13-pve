@@ -745,6 +745,30 @@
 	worn_state = "clf_uniform"
 	sensor_faction = FACTION_CLF
 
+/obj/item/clothing/under/colonist/clf/crew
+	name = "\improper Colonial Liberation Front Combat Clothes"
+	desc = "A stylish Brown-Green mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "CLF_FIGHTER"
+	worn_state = "CLF_FIGHTER"
+	sensor_faction = FACTION_CLF
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/medic
+	name = "\improper Colonial Liberation Front Medic Clothes"
+	desc = "A stylish Light Blue-White mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "CLF_MEDIC"
+	worn_state = "CLF_MEDIC"
+	sensor_faction = FACTION_CLF
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/leader
+	name = "\improper Colonial Liberation Front Clothes"
+	desc = "A stylish Dark blue mix of Military Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas, shows the rank of the leaders on the shoulder."
+	icon_state = "CLF_LEADER"
+	worn_state = "CLF_LEADER"
+	sensor_faction = FACTION_CLF
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
 /obj/item/clothing/under/colonist/prison_boiler
 	name = "\improper prisoner boiler uniform"
 	desc = "A standardised prisoner-wear boiler uniform."

@@ -14,6 +14,7 @@
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_CLF_SHIP "Tunnel Rats"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -309,6 +310,18 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_CLF_SYNTH "CLF Multipurpose Synthetic"
 
 #define CLF_JOB_LIST list(JOB_CLF, JOB_CLF_ENGI, JOB_CLF_MEDIC, JOB_CLF_SPECIALIST, JOB_CLF_LEADER, JOB_CLF_COMMANDER, JOB_CLF_SYNTH)
+
+
+//-------- CLF Coughing Canary Crew --------//
+#define JOB_CLF_SHIP "CLF Freedom Fighter"
+#define JOB_CLF_SHIP_ENGI "CLF Combat Technician"
+#define JOB_CLF_SHIP_SPECIALIST "CLF Heavy Autogunner"
+#define JOB_CLF_SHIP_MEDIC "CLF Combat Medic"
+#define JOB_CLF_LEADER_SHIP "CLF Combat Team Leader"
+#define JOB_CLF_COMMANDER_SHIP "Coughing Canary Captain"
+#define JOB_CLF_SHIP_SYNTH "Coughing Canary Multipurpose Synthetic"
+
+#define CLF_SHIP_JOB_LIST list(JOB_CLF_SHIP, JOB_CLF_SHIP_ENGI, JOB_CLF_SHIP_MEDIC, JOB_CLF_SHIP_SPECIALIST, JOB_CLF_SHIP_LEADER, JOB_CLF_SHIP_COMMANDER, JOB_CLF_SHIP_SYNTH)
 
 //-------- TWE --------//
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
