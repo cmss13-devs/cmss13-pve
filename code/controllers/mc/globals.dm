@@ -16,7 +16,8 @@ GLOBAL_REAL(GLOB, /datum/controller/global_vars)
 	// I know this is dumb but the nested vars list hangs a ref to the datum. This fixes that
 	var/list/controller_vars = exclude_these.vars.Copy()
 	controller_vars["vars"] = null
-	gvars_datum_in_built_vars = controller_vars + list(NAMEOF(src, gvars_datum_protected_varlist), NAMEOF(src, gvars_datum_in_built_vars), NAMEOF(src, gvars_datum_init_order))	QDEL_IN(exclude_these, 0) //signal logging isn't ready
+	gvars_datum_in_built_vars = controller_vars + list(NAMEOF(src, gvars_datum_protected_varlist), NAMEOF(src, gvars_datum_in_built_vars), NAMEOF(src, gvars_datum_init_order))
+	QDEL_IN(exclude_these, 0) //signal logging isn't ready
 
 	log_world("[vars.len - gvars_datum_in_built_vars.len] global variables")
 
