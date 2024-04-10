@@ -613,7 +613,6 @@
 /area/golden_arrow/prep_hallway)
 "cV" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/pumpshotgun/special,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4983,13 +4982,6 @@
 /area/golden_arrow/platoon_sergeant)
 "Di" = (
 /obj/structure/surface/table/almayer,
-/obj/item/prop/helmetgarb/spent_slug{
-	pixel_y = -9;
-	pixel_x = 8;
-	name = "spent snailshot";
-	layer = 2.7
-	},
-/obj/item/storage/box/guncase/pumpshotgun/special,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6229,6 +6221,9 @@
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/rifle/lmg,
+/obj/item/ammo_magazine/rifle/lmg,
+/obj/item/ammo_magazine/rifle/lmg,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6284,6 +6279,13 @@
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/pumpshotgun/special,
+/obj/item/prop/helmetgarb/spent_slug{
+	pixel_y = -9;
+	pixel_x = 8;
+	name = "spent snailshot";
+	layer = 2.7
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8278,6 +8280,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/gun/rifle/lmg,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

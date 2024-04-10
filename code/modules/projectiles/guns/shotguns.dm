@@ -1070,7 +1070,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump
 	name = "\improper M37 pump shotgun"
-	desc = "A nonstandard piece kept around for close encounters. Likely worth a lot to a museum, that's probably not what grandpa wanted. Chambered in twelve gauge and uses a pump action."
+	desc = "An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability. Utilizes a pump action system."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m37"
 	item_state = "m37"
@@ -1105,8 +1105,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/shotgun,
 	)
 	map_specific_decoration = TRUE
-
-	starting_attachment_types = list/obj/item/attachable/stock/shotgun)
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -1195,7 +1193,10 @@ can cause issues with ammo types getting mixed up during the burst.
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/shotgun/pump/special
+	name = "\improper M37 pump shotgun"
+	desc = "A nonstandard piece kept around for close encounters. Likely worth a lot to a museum, that's probably not what grandpa wanted. Chambered in twelve gauge and uses a pump action."
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/special
+	starting_attachment_types = list(/obj/item/attachable/stock/shotgun)
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube
 	name = "generic dual-tube pump shotgun"

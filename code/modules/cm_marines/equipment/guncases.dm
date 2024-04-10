@@ -207,7 +207,7 @@
 
 //------------
 /obj/item/storage/box/guncase/pumpshotgun
-	name = "\improper M37A2 Pump Shotgun case"
+	name = "\improper M37 Pump Shotgun case"
 	desc = "A gun case containing the M37A2 Pump Shotgun."
 	icon_state = "guncase_red"
 	storage_slots = 4
@@ -226,6 +226,8 @@
 				new /obj/item/ammo_magazine/shotgun/slugs(src)
 
 /obj/item/storage/box/guncase/pumpshotgun/special
+	name = "\improper M37 Pump Shotgun case"
+	desc = "A gun case containing a Marine's family heirloom."
 	storage_slots = 2
 
 /obj/item/storage/box/guncase/pumpshotgun/special/fill_preset_inventory()
