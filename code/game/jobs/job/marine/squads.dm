@@ -318,7 +318,7 @@
 	usable = TRUE
 	squad_one_access = ACCESS_PMC_SQUAD_ONE
 	squad_two_access = ACCESS_PMC_SQUAD_TWO
-
+	faction = FACTION_PMC
 
 //###############################
 /datum/squad/clf
