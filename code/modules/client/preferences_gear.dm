@@ -679,6 +679,11 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/box/guncase/m44/custom
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/sa_357
+	display_name = "SA .357 Service Revolver"
+	path = /obj/item/storage/box/guncase/cmb
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/weapon/m1911
 	display_name = "M1911 Service Pistol"
 	path = /obj/item/storage/box/M1911_loadout
