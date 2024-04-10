@@ -53,10 +53,11 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/item/weapon/gun/shotgun/pump,
 /obj/item/ammo_magazine/shotgun/slugs,
 /obj/item/ammo_magazine/shotgun/flechette,
 /obj/item/ammo_magazine/shotgun/incendiary,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -99,13 +100,13 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/item/weapon/gun/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
-/obj/item/explosive/grenade/flashbang,
-/obj/item/explosive/grenade/flashbang,
-/obj/item/ammo_magazine/shotgun/beanbag,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
 /turf/open/floor{
 	icon_state = "cult"
 	},

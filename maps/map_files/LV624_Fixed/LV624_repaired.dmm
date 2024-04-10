@@ -1017,11 +1017,11 @@
 /area/lv624/ground/river/central_river)
 "bdI" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
@@ -1093,11 +1093,11 @@
 /area/lv624/ground/river/east_river)
 "bhm" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
@@ -1262,11 +1262,11 @@
 /area/lv624/ground/caves/north_central_caves)
 "brg" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
@@ -1452,11 +1452,11 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "bCs" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -1605,11 +1605,11 @@
 /area/lv624/lazarus/quartstorage)
 "bMe" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_east_caves)
@@ -2686,10 +2686,10 @@
 /area/lv624/ground/river/central_river)
 "cWT" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -2745,11 +2745,11 @@
 /area/lv624/lazarus/engineering)
 "dbt" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -5;
-	pixel_y = -5;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -2842,10 +2842,10 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "dfv" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -4442,11 +4442,11 @@
 /area/lv624/ground/caves/central_caves)
 "eRc" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_east_caves)
@@ -4728,11 +4728,17 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz2)
 "fhS" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
 /turf/open/floor{
-	dir = 8;
-	icon_state = "asteroidwarning"
+	icon_state = "cult"
 	},
-/area/lv624/ground/colony/telecomm/sw_lz2)
+/area/lv624/lazarus/armory)
 "fhU" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river,
@@ -5219,10 +5225,10 @@
 /area/lv624/lazarus/research)
 "fLD" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_east_caves)
@@ -5293,8 +5299,8 @@
 /area/lv624/ground/jungle/west_jungle)
 "fNO" = (
 /obj/item/stack/cable_coil/random{
-	pixel_y = 9;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 9
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
@@ -5561,11 +5567,11 @@
 /area/lv624/ground/caves/south_east_caves)
 "ghf" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
@@ -5919,11 +5925,11 @@
 /area/lv624/ground/jungle/west_central_jungle)
 "gDZ" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -5947,11 +5953,11 @@
 /area/lv624/ground/caves/north_central_caves)
 "gEZ" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/east_caves)
@@ -6412,7 +6418,7 @@
 "hao" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/under/CM_uniform,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/clothing/suit/armor/det_suit,
 /turf/open/floor{
 	icon_state = "red"
 	},
@@ -6645,11 +6651,11 @@
 /area/lv624/lazarus/hop)
 "hmC" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -6929,10 +6935,10 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "hzy" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
@@ -7925,8 +7931,8 @@
 /area/lv624/ground/barrens/east_barrens/ceiling)
 "iya" = (
 /turf/open/floor{
-	icon_state = "asteroidwarning";
-	dir = 8
+	dir = 8;
+	icon_state = "asteroidwarning"
 	},
 /area/lv624/ground/colony/telecomm/sw_lz2)
 "iyu" = (
@@ -8087,11 +8093,11 @@
 /area/lv624/ground/caves/west_caves)
 "iIC" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
@@ -8351,7 +8357,7 @@
 /turf/closed/wall,
 /area/lv624/lazarus/toilet)
 "jbu" = (
-/obj/structure/target/syndicate,
+/obj/structure/target,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "red"
@@ -8529,11 +8535,11 @@
 /area/lv624/ground/colony/telecomm/cargo)
 "jle" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -8598,11 +8604,11 @@
 /area/lv624/ground/jungle/south_west_jungle)
 "jpQ" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_east_caves)
@@ -9121,8 +9127,8 @@
 "jVg" = (
 /obj/structure/target,
 /obj/item/clothing/head/militia/bucket{
-	pixel_y = 9;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = 9
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -9303,11 +9309,11 @@
 /area/lv624/ground/jungle/south_west_jungle)
 "khX" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/east_caves)
@@ -9519,11 +9525,11 @@
 /area/lv624/lazarus/quart)
 "krA" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_east_caves)
@@ -9630,11 +9636,11 @@
 /area/lv624/ground/colony/north_nexus_road)
 "kyR" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 11;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 11;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
@@ -10069,11 +10075,11 @@
 /area/lv624/ground/jungle/north_west_jungle)
 "kXZ" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 11;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 11;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
@@ -11830,10 +11836,10 @@
 /area/lv624/ground/jungle/east_central_jungle)
 "mZb" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -10;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -10
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_west_caves)
@@ -12202,11 +12208,11 @@
 /area/lv624/ground/jungle/north_west_jungle)
 "npI" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_west_caves)
@@ -13388,7 +13394,8 @@
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
 /obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/weapon/gun/rifle/m16,
+/obj/item/ammo_box/magazine/M16,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -13740,10 +13747,10 @@
 /area/lv624/lazarus/engineering)
 "pfY" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
@@ -13935,11 +13942,11 @@
 /area/lv624/ground/caves/south_west_caves)
 "prL" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -5;
-	pixel_y = -5;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_west_caves)
@@ -14854,11 +14861,11 @@
 /area/lv624/ground/caves/south_west_caves)
 "quF" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -1;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -1;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -15443,10 +15450,10 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "rde" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
@@ -15607,7 +15614,7 @@
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
 /obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/stack/folding_barricade/three,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -15667,11 +15674,11 @@
 /area/lv624/ground/caves/north_east_caves)
 "rqH" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -5;
-	pixel_y = -5;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
@@ -15688,10 +15695,10 @@
 "rsS" = (
 /obj/structure/girder,
 /obj/structure/prop/invuln/fire{
-	pixel_x = -5;
-	pixel_y = -15;
 	density = 0;
-	layer = 4.1
+	layer = 4.1;
+	pixel_x = -5;
+	pixel_y = -15
 	},
 /turf/closed/shuttle{
 	icon_state = "wall3"
@@ -16119,11 +16126,11 @@
 /area/lv624/ground/colony/south_medbay_road)
 "rRZ" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 11;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 11;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
@@ -16399,10 +16406,10 @@
 /area/lv624/ground/colony/west_nexus_road)
 "skB" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_west_caves)
@@ -16764,8 +16771,9 @@
 /area/lv624/lazarus/yggdrasil)
 "sDw" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump,
 /obj/item/ammo_magazine/shotgun/slugs,
+/obj/item/ammo_magazine/shotgun/buckshot,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -17732,10 +17740,14 @@
 	dir = 1
 	},
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
-/obj/item/ammo_magazine/pistol/highpower,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/ammo_magazine/revolver/cmb/normalpoint,
+/obj/item/weapon/gun/revolver/cmb/normalpoint,
+/obj/item/weapon/gun/revolver/cmb/normalpoint,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -18120,12 +18132,12 @@
 /area/lv624/ground/barrens/east_barrens)
 "tWI" = (
 /obj/effect/decal/cleanable/cobweb2,
-/obj/item/reagent_container/hypospray/autoinjector/tricord,
 /obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/storage/firstaid,
 /obj/item/reagent_container/hypospray/autoinjector/tricord,
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/reagent_container/hypospray/autoinjector/tricord,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -18474,11 +18486,11 @@
 /area/lv624/ground/jungle/south_central_jungle)
 "unM" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_east_caves)
@@ -19211,8 +19223,8 @@
 	},
 /obj/structure/coatrack,
 /obj/item/clothing/head/soft/sec/corp{
-	pixel_y = 11;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 11
 	},
 /turf/open/floor{
 	dir = 6;
@@ -19575,11 +19587,11 @@
 	dir = 10
 	},
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_east_caves)
@@ -19651,11 +19663,11 @@
 "vBE" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 11;
-	pixel_y = -2;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 11;
+	pixel_y = -2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
@@ -19774,11 +19786,11 @@
 /area/lv624/ground/river/central_river)
 "vIc" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 2;
-	pixel_y = 7;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
@@ -19849,9 +19861,9 @@
 /area/lv624/lazarus/fitness)
 "vMj" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
+	dir = 4;
 	id = "colony_sec_armory";
-	name = "Secure Storage";
-	dir = 4
+	name = "Secure Storage"
 	},
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
@@ -20386,11 +20398,11 @@
 /area/lv624/ground/jungle/west_central_jungle)
 "wsb" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/east_caves)
@@ -20513,8 +20525,8 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "wyb" = (
 /obj/structure/closet/secure_closet/security,
-/obj/item/clothing/suit/armor/vest/security,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
 /turf/open/floor{
 	dir = 4;
 	icon_state = "red"
@@ -21022,11 +21034,11 @@
 /area/lv624/lazarus/yggdrasil)
 "xgs" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 6;
-	pixel_y = -8;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
@@ -21581,10 +21593,10 @@
 /area/lv624/lazarus/yggdrasil)
 "xQe" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = 4;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/east_caves)
@@ -21725,11 +21737,11 @@
 /area/lv624/lazarus/canteen)
 "xXU" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
-	pixel_x = -5;
-	pixel_y = -5;
 	light_on = 1;
 	light_range = 1;
-	light_system = 1
+	light_system = 1;
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_east_caves)
@@ -28639,7 +28651,7 @@ nQl
 nQl
 nQl
 vmC
-fhS
+iya
 tst
 lzr
 beo
@@ -45246,7 +45258,7 @@ aFP
 dBu
 tWI
 oJt
-oJt
+fhS
 rog
 iDu
 dBu
