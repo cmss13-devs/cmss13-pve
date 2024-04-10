@@ -82,7 +82,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "aA" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
@@ -165,7 +165,7 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "aS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -235,9 +235,7 @@
 	layer = 2.36
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "bd" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -256,7 +254,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "bg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -311,7 +309,7 @@
 /area/golden_arrow/hangar)
 "bk" = (
 /turf/closed/wall/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "bl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster{
@@ -437,9 +435,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "bK" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -594,9 +590,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "cB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -706,7 +700,7 @@
 	pixel_x = -24
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "db" = (
 /obj/structure/bed/chair/comfy{
 	buckling_y = 2;
@@ -786,9 +780,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "ds" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27
@@ -1168,7 +1160,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "eY" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -1257,9 +1249,7 @@
 	req_access = list()
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "fp" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 8;
@@ -1395,11 +1385,11 @@
 	pixel_y = 1
 	},
 /turf/closed/wall/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "ga" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "gb" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -1493,7 +1483,7 @@
 "gn" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "gp" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -1643,9 +1633,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "gX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1674,7 +1662,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "hd" = (
 /obj/structure/shuttle/part/dropship1/lower_right_wall{
 	name = "\improper Tripoli"
@@ -1716,7 +1704,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "hl" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
@@ -1843,9 +1831,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "hI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1988,9 +1974,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "ir" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
@@ -2050,9 +2034,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "iP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2306,7 +2288,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "jB" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
@@ -2553,7 +2535,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "kn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -2561,7 +2543,7 @@
 	pixel_x = 1
 	},
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "kq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/firealarm{
@@ -3151,9 +3133,7 @@
 	layer = 2.36
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "mI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -3162,7 +3142,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "mJ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3239,9 +3219,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "mX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -3344,9 +3322,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "nq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case/double,
@@ -3443,7 +3419,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "nM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3656,7 +3632,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "oM" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -3889,7 +3865,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "pN" = (
 /obj/structure/prop/dam/crane{
 	bound_height = 32;
@@ -3955,7 +3931,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "qm" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4
@@ -4032,9 +4008,7 @@
 	pixel_y = 29
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "qz" = (
 /obj/structure/ship_ammo/minirocket,
 /obj/structure/ship_ammo/minirocket{
@@ -4099,7 +4073,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "qP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -4116,9 +4090,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "qQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -4163,9 +4135,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "qZ" = (
 /obj/item/reagent_container/food/drinks/cans/beer{
 	layer = 4.2;
@@ -4190,9 +4160,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "rg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -4228,7 +4196,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "rm" = (
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -4283,7 +4251,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "rH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -4295,9 +4263,7 @@
 "rI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "rJ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4392,9 +4358,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "sc" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -4517,7 +4481,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "sM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4771,9 +4735,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "tS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -4856,9 +4818,7 @@
 	desc = "The Armat Battlefield Systems Model 41 Derivative 'A' Pulse Rifle Mark One. The only pinup you'll ever need."
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "ud" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
@@ -4935,7 +4895,7 @@
 	},
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "ut" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -5277,7 +5237,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "vt" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -5592,9 +5552,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "wx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -5686,12 +5644,10 @@
 	layer = 2.7
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "wQ" = (
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "wR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -6106,9 +6062,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "yQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6126,9 +6080,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "yS" = (
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
@@ -6233,7 +6185,7 @@
 	pixel_y = 18
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "zq" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -6250,9 +6202,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "zx" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -6320,9 +6270,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "zJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -6446,9 +6394,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Ao" = (
 /obj/effect/decal/strata_decals/grime/grime3,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6604,7 +6550,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Bf" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -6651,9 +6597,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Bv" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
@@ -6792,9 +6736,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Ce" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6823,7 +6765,7 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Cm" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -6860,7 +6802,7 @@
 "Cv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Cw" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -6976,7 +6918,7 @@
 "CX" = (
 /obj/structure/gun_rack/m41,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Da" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -7020,9 +6962,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Dz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/railing{
@@ -7089,9 +7029,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "DI" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -7106,7 +7044,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "DM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -7130,9 +7068,7 @@
 /area/golden_arrow/engineering)
 "DQ" = (
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "DY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump{
@@ -7254,9 +7190,7 @@
 	pixel_x = 9
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Et" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
@@ -7410,9 +7344,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Ff" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -7578,9 +7510,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "FN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -7625,9 +7555,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "FU" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = -29
@@ -7665,9 +7593,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "FZ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/soap{
@@ -7714,9 +7640,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Gp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -7779,9 +7703,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "GM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/radio/intercom{
@@ -8023,9 +7945,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "HK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable{
@@ -8116,9 +8036,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "HW" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8134,10 +8052,10 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "HZ" = (
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Ia" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -8151,7 +8069,7 @@
 	layer = 2.36
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Ib" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8225,12 +8143,10 @@
 	},
 /obj/structure/surface/rack,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Ir" = (
 /turf/closed/wall/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "It" = (
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -8356,9 +8272,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "IO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/safety/bulkhead_door{
@@ -8402,7 +8316,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "IZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable{
@@ -8463,7 +8377,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Jk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
@@ -8518,7 +8432,7 @@
 	layer = 2.36
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "JB" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -8544,9 +8458,7 @@
 	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "JF" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -8611,7 +8523,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "JQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -8625,7 +8537,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "JV" = (
 /obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
 	name = "non-functional maintenance airlock";
@@ -8737,9 +8649,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "KE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -9200,9 +9110,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "MB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -9235,7 +9143,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "MJ" = (
 /obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
 	name = "\improper Tripoli"
@@ -9364,16 +9272,14 @@
 	req_one_access_txt = "19;12"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Nk" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Nn" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 28;
@@ -9698,7 +9604,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Ou" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -9730,15 +9636,13 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "OB" = (
 /turf/open/floor/almayer{
 	dir = 8;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "OD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -10050,9 +9954,7 @@
 	req_one_access = list()
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Qi" = (
 /obj/structure/platform{
 	dir = 4;
@@ -10194,7 +10096,7 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "QK" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -10280,9 +10182,7 @@
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "QY" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
@@ -10300,9 +10200,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Rb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -10326,9 +10224,7 @@
 	pixel_y = -8
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Rj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/wy/right{
@@ -10397,7 +10293,7 @@
 	pixel_x = -12
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Rz" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -10412,9 +10308,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "RD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -10428,9 +10322,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "RF" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -10448,9 +10340,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "RI" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -10621,9 +10511,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Sz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -10667,7 +10555,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "SK" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/cigbutt/cigarbutt{
@@ -10698,9 +10586,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "SL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -10738,7 +10624,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "SR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out"
@@ -10835,18 +10721,14 @@
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Td" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Tg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -10967,9 +10849,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "TI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -11086,9 +10966,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Ui" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/mini/small_case/c{
@@ -11139,7 +11017,7 @@
 	},
 /obj/structure/machinery/light,
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Uo" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -11236,7 +11114,7 @@
 	},
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "UI" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 17"
@@ -11371,9 +11249,7 @@
 	pixel_y = 35
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Vh" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -11383,9 +11259,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Vi" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -11441,9 +11315,7 @@
 	req_one_access_txt = "19;12"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "VB" = (
 /turf/closed/shuttle/elevator/freight,
 /area/golden_arrow/supply)
@@ -11457,9 +11329,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two{
-	name = "\improper Platoon Armory"
-	})
+/area/golden_arrow/platoonarmory)
 "VD" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
@@ -11489,9 +11359,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "VM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -11550,9 +11418,7 @@
 "VZ" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Wa" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -11585,9 +11451,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Wg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -11619,7 +11483,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Wk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -11628,9 +11492,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Wn" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light{
@@ -11802,7 +11664,7 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "WO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -11904,9 +11766,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Xm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
@@ -11999,9 +11859,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "XI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -12030,9 +11888,7 @@
 	layer = 2.36
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "XN" = (
 /obj/structure/machinery/cm_vending/clothing/medic,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -12117,7 +11973,7 @@
 	layer = 3.1
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Ye" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -12130,7 +11986,7 @@
 	dir = 8;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Yf" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -12145,7 +12001,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "Yj" = (
 /obj/structure/platform{
 	dir = 8;
@@ -12186,9 +12042,7 @@
 /area/golden_arrow/engineering)
 "Yr" = (
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Ys" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4
@@ -12406,9 +12260,7 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
-/area/golden_arrow/squad_one{
-	name = "\improper Platoon Prep"
-	})
+/area/golden_arrow/platoonprep)
 "Zh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -12582,7 +12434,7 @@
 	pixel_x = -2
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_two)
+/area/golden_arrow/platoonarmory)
 "ZM" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
