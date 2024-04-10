@@ -1069,12 +1069,12 @@ can cause issues with ammo types getting mixed up during the burst.
 //Shotguns in this category will need to be pumped each shot.
 
 /obj/item/weapon/gun/shotgun/pump
-	name = "\improper M37A2 pump shotgun"
-	desc = "An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability. Requires a pump, which is a Unique Action."
+	name = "\improper M37 pump shotgun"
+	desc = "A nonstandard piece kept around for close encounters. Likely worth a lot to a museum, that's probably not what grandpa wanted. Chambered in twelve gauge and uses a pump action."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m37"
 	item_state = "m37"
-	current_mag = /obj/item/ammo_magazine/internal/shotgun
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/m37
 	flags_equip_slot = SLOT_BACK
 	fire_sound = 'sound/weapons/gun_shotgun.ogg'
 	firesound_volume = 60
@@ -1105,6 +1105,8 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/shotgun,
 	)
 	map_specific_decoration = TRUE
+
+	starting_attachment_types = list/obj/item/attachable/stock/shotgun)
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
 	. = ..()

@@ -98,6 +98,9 @@ also doesn't really matter. You can only reload them with handfuls.
 	max_rounds = 9
 	chamber_closed = 0
 
+/obj/item/ammo_magazine/internal/shotgun/m37
+	max_rounds = 4
+
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 2
@@ -145,6 +148,7 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/type23/special
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
+	max_rounds = 4
 
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
@@ -155,6 +159,7 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/special
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+	max_rounds = 4
 
 //-------------------------------------------------------
 
