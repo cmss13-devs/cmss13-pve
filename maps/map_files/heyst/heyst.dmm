@@ -516,33 +516,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"bX" = (
-/obj/structure/cable{
-	layer = 2.45;
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "0-8";
-	color = "#b30000";
-	pixel_y = 2;
-	pixel_x = 2;
-	name = "cable"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/golden_arrow/hangar)
-"ca" = (
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/golden_arrow/hangar)
 "cb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -664,17 +637,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/cryo_cells)
-"cL" = (
-/obj/item/tool/screwdriver{
-	pixel_y = 7;
-	pixel_x = -4;
-	layer = 3.03;
-	icon_state = "screwdriver3"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/golden_arrow/hangar)
 "cM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable{
@@ -685,6 +647,17 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/cryo_cells)
+"cN" = (
+/obj/structure/machinery/prop{
+	density = 1;
+	icon_state = "pipe_d";
+	name = "refueling pump";
+	desc = "A pump used for refueling the dropship.";
+	pixel_y = -5;
+	layer = 2.7
+	},
+/turf/open/space/basic,
+/area/space)
 "cO" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -819,6 +792,22 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/hangar)
+"dn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/tool/screwdriver{
+	pixel_y = 7;
+	pixel_x = -4;
+	layer = 3.03
+	},
+/obj/item/tool/wirecutters{
+	pixel_y = -7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "do" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/shared_office)
@@ -923,34 +912,6 @@
 	dir = 1
 	},
 /area/golden_arrow/hangar)
-"dJ" = (
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "8-9";
-	color = "#b30000";
-	pixel_y = -15;
-	pixel_x = 4;
-	layer = 2.9;
-	name = "cable"
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "1-4";
-	color = "#b30000";
-	name = "cable";
-	pixel_x = -9
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "8-10";
-	color = "#b30000";
-	name = "cable";
-	pixel_x = 21
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/golden_arrow/hangar)
 "dL" = (
 /obj/structure/closet/secure_closet{
 	icon_broken = "fridgebroken";
@@ -1000,18 +961,6 @@
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
-	},
-/area/golden_arrow/hangar)
-"dQ" = (
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "4-5";
-	color = "#b30000";
-	pixel_x = 5;
-	name = "cable"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
 	},
 /area/golden_arrow/hangar)
 "dS" = (
@@ -1131,15 +1080,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/prep_hallway)
-"es" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "ev" = (
 /turf/open/floor/almayer/uscm{
 	icon_state = "logo_directional1";
@@ -1265,17 +1205,6 @@
 	icon_state = "rasputin15"
 	},
 /area/golden_arrow/hangar)
-"eT" = (
-/obj/structure/machinery/prop{
-	density = 1;
-	icon_state = "pipe_d";
-	name = "refueling pump";
-	desc = "A pump used for refueling the dropship.";
-	pixel_y = -5;
-	layer = 2.7
-	},
-/turf/open/space/basic,
-/area/space)
 "eW" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1363,19 +1292,15 @@
 	},
 /area/golden_arrow/cryo_cells)
 "fn" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Tripoli"
-	},
 /obj/item/tool/screwdriver{
-	pixel_y = 5;
+	pixel_y = 7;
 	pixel_x = -4;
 	layer = 3.03;
-	icon_state = "screwdriver5"
+	icon_state = "screwdriver3"
 	},
-/obj/item/trash/eat{
-	pixel_x = 10
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "fo" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
@@ -1417,6 +1342,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"fD" = (
+/obj/effect/spawner/prop_gun/anti_tank{
+	anchored = 1
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
 "fI" = (
 /obj/structure/barricade/metal{
 	dir = 8
@@ -2202,13 +2133,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/platoonprep)
-"iN" = (
-/obj/item/stack/cable_coil{
-	pixel_y = 13;
-	pixel_x = 7
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "iP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2655,6 +2579,14 @@
 "jY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"ka" = (
+/obj/item/tool/weldingtool{
+	pixel_y = 6
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/golden_arrow/hangar)
 "kb" = (
 /turf/closed/wall/almayer,
@@ -3112,7 +3044,6 @@
 /obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/weapon/midway/right_fore,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "lQ" = (
@@ -3535,22 +3466,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoonprep)
-"np" = (
-/obj/effect/spawner/prop_gun/anti_tank{
-	anchored = 1
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "nq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
-/area/golden_arrow/hangar)
-"nr" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "ns" = (
 /obj/effect/decal/warning_stripes{
@@ -3617,6 +3538,13 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
+/area/golden_arrow/hangar)
+"nA" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Tripoli"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "nE" = (
 /obj/structure/ship_ammo/rocket/widowmaker,
@@ -4036,17 +3964,11 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "px" = (
-/obj/item/prop/almayer/comp_open{
-	pixel_y = 4;
-	pixel_x = 40
-	},
 /obj/structure/prop{
 	icon = 'icons/obj/pipes/power_cond_white.dmi';
 	icon_state = "4-5";
 	color = "#b30000";
 	pixel_x = 5;
-	pixel_y = 2;
-	layer = 2.8;
 	name = "cable"
 	},
 /turf/open/shuttle/dropship{
@@ -4749,6 +4671,15 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/platoonarmory)
+"sL" = (
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/golden_arrow/hangar)
 "sM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5356,30 +5287,6 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/hangar)
-"uT" = (
-/obj/structure/bed{
-	can_buckle = 0;
-	desc = "A lightweight support lattice.";
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "latticefull";
-	layer = 2.1;
-	name = "lattice"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_x = -8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_x = 2
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "node";
-	pixel_x = -3
-	},
-/obj/structure/girder/displaced,
-/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "uU" = (
 /obj/item/storage/toolbox/mechanical/green{
@@ -6325,6 +6232,30 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"ys" = (
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = -8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	pixel_x = -3
+	},
+/obj/structure/girder/displaced,
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "yx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -6359,6 +6290,23 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
+/area/golden_arrow/hangar)
+"yL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/bedroll{
+	pixel_y = -4;
+	color = "#006db0";
+	name = "floor mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A mechanic's mat."
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "yN" = (
 /obj/structure/surface/table/almayer,
@@ -6787,6 +6735,14 @@
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
 /area/golden_arrow/shared_office)
+"AB" = (
+/obj/item/prop/almayer/box{
+	pixel_y = 17
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/golden_arrow/hangar)
 "AC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -7119,14 +7075,6 @@
 	icon_state = "black"
 	},
 /area/golden_arrow/hangar)
-"Cj" = (
-/obj/item/stack/sheet/metal,
-/obj/item/stack/rods{
-	pixel_y = 16;
-	pixel_x = -13
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -7297,6 +7245,38 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"Df" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Tripoli"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt{
+	pixel_y = 13;
+	pixel_x = 1
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 10;
+	pixel_x = 4;
+	layer = 3.2
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -1;
+	pixel_y = 17
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "Dj" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7314,6 +7294,11 @@
 	icon_state = "97";
 	name = "\improper Tripoli"
 	},
+/area/golden_arrow/hangar)
+"Ds" = (
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Dt" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -7918,14 +7903,6 @@
 	name = "\improper Tripoli"
 	},
 /area/golden_arrow/hangar)
-"FR" = (
-/obj/item/tool/weldingtool{
-	pixel_y = 6
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/golden_arrow/hangar)
 "FS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -8008,19 +7985,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"Gf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/prop{
-	density = 1;
-	icon_state = "pipe_d";
-	name = "refueling pump";
-	desc = "A pump used for refueling the dropship.";
-	pixel_x = -4;
-	pixel_y = -5;
-	layer = 2.7
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "Gg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -8057,6 +8021,13 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/platoonprep)
+"Gl" = (
+/obj/item/stack/cable_coil{
+	pixel_y = 13;
+	pixel_x = 7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "Gp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -8135,6 +8106,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"GO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/prop{
+	density = 1;
+	icon_state = "pipe_d";
+	name = "refueling pump";
+	desc = "A pump used for refueling the dropship.";
+	pixel_x = -4;
+	pixel_y = -5;
+	layer = 2.7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "GP" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -8156,6 +8140,24 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"GT" = (
+/obj/structure/cable{
+	layer = 2.45;
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/pipes/power_cond_white.dmi';
+	icon_state = "0-8";
+	color = "#b30000";
+	pixel_y = 2;
+	pixel_x = 2;
+	name = "cable"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/golden_arrow/hangar)
 "GU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -9042,6 +9044,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"Kw" = (
+/obj/item/stack/sheet/metal,
+/obj/item/stack/rods{
+	pixel_y = 16;
+	pixel_x = -13
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "Kx" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -9278,9 +9288,21 @@
 	},
 /area/golden_arrow/cryo_cells)
 "Lm" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/obj/item/prop/almayer/comp_open{
+	pixel_y = 4;
+	pixel_x = 40
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/pipes/power_cond_white.dmi';
+	icon_state = "4-5";
+	color = "#b30000";
+	pixel_x = 5;
+	pixel_y = 2;
+	layer = 2.8;
+	name = "cable"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
 	},
 /area/golden_arrow/hangar)
 "Ln" = (
@@ -9361,6 +9383,10 @@
 	dir = 4;
 	icon_state = "cargo_arrow"
 	},
+/area/golden_arrow/hangar)
+"LG" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "LH" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -9600,19 +9626,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"MH" = (
-/obj/item/prop/almayer/box{
-	pixel_y = 17
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/golden_arrow/hangar)
 "MJ" = (
 /obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/weapon/midway/left_wing,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "MM" = (
@@ -10154,6 +10171,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"OJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "OK" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/space/basic,
@@ -10241,7 +10267,6 @@
 /obj/structure/shuttle/part/dropship1/transparent/inner_left_weapons{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/electronics/midway,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -10421,10 +10446,9 @@
 /obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/weapon/midway/left_fore,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
-"Qe" = (
+"Qb" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/largecrate/random/case{
 	pixel_y = 11
@@ -10735,14 +10759,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Rm" = (
-/obj/structure/surface/table/almayer,
-/obj/item/trash/wy_chips_pepper{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "Rn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -10974,7 +10990,15 @@
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
 	name = "\improper Tripoli"
 	},
-/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/screwdriver{
+	pixel_y = 5;
+	pixel_x = -4;
+	layer = 3.03;
+	icon_state = "screwdriver5"
+	},
+/obj/item/trash/eat{
+	pixel_x = 10
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Sn" = (
@@ -10992,10 +11016,33 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"Ss" = (
-/obj/structure/largecrate/random/case/double,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+"Sr" = (
+/obj/structure/prop{
+	icon = 'icons/obj/pipes/power_cond_white.dmi';
+	icon_state = "8-9";
+	color = "#b30000";
+	pixel_y = -15;
+	pixel_x = 4;
+	layer = 2.9;
+	name = "cable"
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/pipes/power_cond_white.dmi';
+	icon_state = "1-4";
+	color = "#b30000";
+	name = "cable";
+	pixel_x = -9
+	},
+/obj/structure/prop{
+	icon = 'icons/obj/pipes/power_cond_white.dmi';
+	icon_state = "8-10";
+	color = "#b30000";
+	name = "cable";
+	pixel_x = 21
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
 /area/golden_arrow/hangar)
 "Su" = (
 /obj/structure/sign/safety/ladder{
@@ -11315,7 +11362,6 @@
 /obj/structure/shuttle/part/dropship1/transparent/inner_right_weapons{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/electronics/midway,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Tu" = (
@@ -11509,6 +11555,12 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonprep)
+"Ug" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Ui" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/mini/small_case/c{
@@ -11814,7 +11866,7 @@
 "Vm" = (
 /obj/structure/bed/bedroll{
 	pixel_y = -4;
-	color = "006db0";
+	color = "#006db0";
 	name = "floor mat";
 	buckle_lying = null;
 	can_buckle = 0;
@@ -12244,38 +12296,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/platoonarmory)
-"WN" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/trash/cigbutt{
-	pixel_y = 13;
-	pixel_x = 1
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 10;
-	pixel_x = 4;
-	layer = 3.2
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -10;
-	pixel_y = 13
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -1;
-	pixel_y = 17
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 10;
-	pixel_x = -7
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "WO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -12650,22 +12670,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
-"Yi" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/tool/screwdriver{
-	pixel_y = 7;
-	pixel_x = -4;
-	layer = 3.03
-	},
-/obj/item/tool/wirecutters{
-	pixel_y = -7
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "Yj" = (
 /obj/structure/platform{
 	dir = 8;
@@ -12972,6 +12976,14 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
+"Zm" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/wy_chips_pepper{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Zo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -13153,7 +13165,6 @@
 /obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
 	name = "\improper Tripoli"
 	},
-/obj/effect/attach_point/weapon/midway/right_wing,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -20414,7 +20425,7 @@ EG
 EG
 EG
 EG
-eT
+cN
 EG
 EG
 EG
@@ -22356,7 +22367,7 @@ zs
 zs
 zs
 zs
-np
+fD
 Vg
 bc
 KC
@@ -25897,9 +25908,9 @@ sY
 sY
 dp
 vd
-Yi
+dn
 sY
-es
+OJ
 Xd
 Xd
 sY
@@ -26198,8 +26209,8 @@ yX
 yX
 yX
 yX
-iN
-Cj
+Gl
+Kw
 yX
 yX
 yX
@@ -26345,13 +26356,13 @@ yX
 xC
 yX
 MM
-nr
+LG
 yX
 ml
 tn
 MJ
 Vm
-fn
+Sl
 hf
 Ie
 jx
@@ -26503,7 +26514,7 @@ dM
 QD
 WF
 qH
-WN
+Df
 CK
 KP
 KA
@@ -26512,7 +26523,7 @@ ft
 hX
 MM
 yX
-Gf
+GO
 mG
 HP
 Md
@@ -26651,7 +26662,7 @@ yX
 yX
 Tt
 kU
-FR
+ka
 Kh
 Qi
 lo
@@ -26662,7 +26673,7 @@ mx
 de
 vm
 HO
-Ss
+Ds
 yX
 yX
 cC
@@ -26803,13 +26814,13 @@ gL
 Zj
 BT
 iA
-MH
-ca
+AB
+sL
 RO
 mV
 sH
 XZ
-Qe
+Qb
 sH
 mq
 MM
@@ -26955,9 +26966,9 @@ Dp
 Nq
 EP
 EQ
-dQ
 px
-uT
+Lm
+ys
 mE
 sH
 sH
@@ -27107,8 +27118,8 @@ kl
 CQ
 JH
 Mn
-dJ
-bX
+Sr
+GT
 oF
 He
 sH
@@ -27259,7 +27270,7 @@ yX
 yX
 Pe
 FQ
-cL
+fn
 eP
 Vd
 mg
@@ -27407,7 +27418,7 @@ lu
 yX
 yX
 yX
-nr
+LG
 yX
 lO
 ld
@@ -27415,7 +27426,7 @@ Oy
 uz
 Zv
 hd
-Sl
+nA
 HD
 NM
 XK
@@ -27855,7 +27866,7 @@ lh
 cB
 Wa
 Wa
-Rm
+Zm
 cE
 Wa
 os
@@ -27877,7 +27888,7 @@ cC
 lu
 lu
 lu
-Lm
+Ug
 lu
 cC
 lu
@@ -28175,7 +28186,7 @@ Rb
 sY
 Xd
 Xd
-Xd
+yL
 sY
 hI
 cE
