@@ -71,6 +71,7 @@
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
 //10
 #define AGGRESSION_LUNGE 1
+/// Threshold for throwing humans around.
 #define AGGRESSION_FLING 35
 /// Threshold for stabbing them with the tail.
 #define AGGRESSION_TAIL_STAB 70
@@ -91,7 +92,7 @@
 		/datum/action/xeno_action/activable/lunge/soldier,
 		/datum/action/xeno_action/activable/headbite/soldier,
 		/datum/action/xeno_action/onclick/tacmap,
-		)
+	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
