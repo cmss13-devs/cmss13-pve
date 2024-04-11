@@ -8,26 +8,12 @@ United States Colonial Marines
 	name = "Private"
 	//same as default
 
-/datum/skills/pfc/crafty
-	name = "Crafty Private"
-	skills = list(
-		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED,
-		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
-	)
-
 /datum/skills/combat_medic
 	name = "Combat Medic"
 	skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
 		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
-	)
-
-/datum/skills/combat_medic/crafty
-	name = "Crafty Combat Medic"
-	skills = list(
-		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED,
-		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
 	)
 
 /datum/skills/combat_engineer
@@ -287,7 +273,7 @@ COMMAND STAFF
 		SKILL_OVERWATCH = SKILL_OVERWATCH_TRAINED,
 		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
 		SKILL_POLICE = SKILL_POLICE_FLASH,
-		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
+		SKILL_VEHICLE = SKILL_VEHICLE_LARGE,
 		SKILL_JTAC = SKILL_JTAC_EXPERT,
 		SKILL_INTEL = SKILL_INTEL_TRAINED,
 		SKILL_SURGERY = SKILL_SURGERY_NOVICE,

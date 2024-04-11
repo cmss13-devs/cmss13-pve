@@ -81,12 +81,18 @@
 
 /mob/living/carbon/xenomorph/crusher/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
+	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "metalbang")
 
-	playsound(src, 'sound/voice/alien_crusher_spawn.ogg', 100, FALSE, 30)
+	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30)
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)
 		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
+
+/mob/living/carbon/xenomorph/crusher/death(cause, gibbed)
+	. = ..()
+	playsound(src, 'sound/voice/alien_crusher_death.ogg', 50, FALSE, 15)
+
 
 // Refactored to handle all of crusher's interactions with object during charge.
 /mob/living/carbon/xenomorph/proc/handle_collision(atom/target)

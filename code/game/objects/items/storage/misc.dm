@@ -129,7 +129,7 @@
 	desc = "A small case containing the once-standard sidearm of the UPP, the Type 73, and two additional magazines. The contained sidearm is probably looted off a dead officer or from a captured stockpile, either way this thing is worth a pretty penny."
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 
@@ -143,7 +143,7 @@
 	desc = "A relatively large storage case containing the 1911 and additional magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 	
