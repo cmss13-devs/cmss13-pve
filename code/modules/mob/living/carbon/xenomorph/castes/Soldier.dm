@@ -4,7 +4,7 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_3
 	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_3
-	max_health = XENO_HEALTH_TIER_3
+	max_health = XENO_HEALTH_TIER_2
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	crystal_max = XENO_CRYSTAL_LOW
@@ -180,7 +180,7 @@
 	/// Want to make sure when nesting, they actually have the grab active in their main claw.
 	/// This can lead to some funny behavior of the alien standing around with the victim next to them, but it should be fine for the moment.
 	/// Something to address later perhaps.
-	if(parent.pulling && !parent.get_active_hand()) parent.swap_hand()
+	if(parent.pulling && parent.get_active_hand()) parent.swap_hand()
 	return ..()
 
 /*
