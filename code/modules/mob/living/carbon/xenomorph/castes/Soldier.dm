@@ -54,9 +54,6 @@
  * ==========================================================================|
 */
 
-/// How often we inflict pain on our dragged target. Targets need to be lying down when they are nested, and pain helps to knock them down.
-#define PAIN_DRAG_PROBABILITY 95
-
 /// The aggression the alien starts with by default.
 #define AGGRESSION_MINIMUM 0
 /// The maximum aggression it is possible to accumulate.
@@ -69,8 +66,7 @@
 #define AGGRESSION_INCREMENT_CAP 10
 
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
-//10
-#define AGGRESSION_LUNGE 1
+#define AGGRESSION_LUNGE 10
 /// Threshold for throwing humans around.
 #define AGGRESSION_FLING 35
 /// Threshold for stabbing them with the tail.
@@ -127,7 +123,6 @@
 
 	if(istype(pulling_target)) /// Our soldier is pulling someone.
 		if(get_active_hand()) swap_hand() /// Swap hand to either tackle or harm.
-		/// A little bit of a copy-pasting with intent switching, but saves a tad on processing.
 		ai_active_intent = INTENT_DISARM /// If we are pulling someone and are not too aggressive, switch to disarm.
 		if(prob(5)) emote("tail")
 
@@ -229,8 +224,8 @@
 /datum/action/xeno_action/activable/lunge/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// Want to make sure no obstacles are in the way so that the alien is not lunging for no reason, or bonking into barricades like an idiot.
 	/// Maybe in the future the actual lunge can be stripped down for the AI only?
-	/// get_step_to() should return the turf of the target if successful, with no obstacles to block movement there with the lunge.
 	if( parent.check_additional_ai_activation(AGGRESSION_LUNGE) && DT_PROB(ai_prob_chance, delta_time) && get_dist(parent, parent.current_target) == grab_range )
+		/// get_step_to() should return the turf nearest the target if successful, with no obstacles to block movement there with the lunge.
 		var/turf/T = get_step_to(parent, parent.current_target)
 		return T?.AdjacentQuick(parent.current_target.loc) && use_ability_async(parent.current_target)
 
@@ -258,7 +253,7 @@
 		L.pain.apply_pain(pain_to_cause)
 		grab_level = GRAB_XENO /// Alien-specific grab level, with its own logic for escaping. AI only for the moment. See /mob/living/resist_grab()
 		if(prob(10)) emote("growl")
-		///	The actual pain processing for humans is handled in: /mob/living/carbon/proc/handle_grabbed() Other mobs don't process the effects of the grab, like aliens.
+		///	The actual pain processing for humans is handled in: /mob/living/carbon/proc/handle_grabbed() Other mobs don't process the effects of the grab, like other xenomorphs.
 
 /mob/living/carbon/xenomorph/soldier/stop_pulling(bumped_movement = FALSE)
 	//Let's see if we can ignore this. If our direction is the same as where the mob went, we likely bumped into them. So we lasso them back.
@@ -273,8 +268,6 @@
 
 /datum/action/xeno_action/activable/headbite/soldier/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	return parent.check_additional_ai_activation(AGGRESSION_HEADBITE) && DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
-
-#undef PAIN_DRAG_PROBABILITY
 
 #undef AGGRESSION_MINIMUM
 #undef AGGRESSION_MAXIMUM
