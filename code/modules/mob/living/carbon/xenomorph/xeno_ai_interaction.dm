@@ -122,6 +122,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return
 
+
 /////////////////////////////
 //          MOBS           //
 /////////////////////////////
@@ -165,16 +166,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	if(species.flags & IS_SYNTHETIC)
 		return FALSE
-
-	if(HAS_TRAIT(src, TRAIT_NESTED))
-		return FALSE
-
-	if(isfacehugger(X))
-		if(status_flags & XENO_HOST)
-			return FALSE
-
-		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
-			return FALSE
 
 	return TRUE
 
@@ -239,7 +230,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return
 
-	return VEHICLE_PENALTY
+	return SENTRY_PENALTY
 
 
 /////////////////////////////
@@ -249,13 +240,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(X.claw_type == CLAW_TYPE_VERY_SHARP || (X.claw_type >= CLAW_TYPE_SHARP && !reinforced))
 		return ..()
 	return WINDOW_FRAME_PENALTY
-
-/obj/structure/barricade/handrail/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return
-
-	return DOOR_PENALTY
 
 
 /////////////////////////////
@@ -268,6 +252,13 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return BARRICADE_PENALTY
 
+/obj/structure/barricade/handrail/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return DOOR_PENALTY
+
 
 /////////////////////////////
 //          FIRE           //
@@ -277,6 +268,17 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return 0
 
 	return FIRE_PENALTY
+
+
+/////////////////////////////
+//          WALLS          //
+/////////////////////////////
+/turf/closed/wall/resin/xeno_ai_obstacle(mob/living/carbon/xenomorph/xeno, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return WALL_PENALTY
 
 
 /////////////////////////////
@@ -293,6 +295,11 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return OPEN_TURF_PENALTY
 
+/// For now there is no attack_alien() proc overrides on any child of /turf/open
+/// Also, we don't want xenos swiping all around - forbit the clicking!
+/turf/open/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	return FALSE
+
 /// Space, do NOT path into space.
 /turf/open/space/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
@@ -300,3 +307,18 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return
 
 	return INFINITY
+
+
+/////////////////////////////
+//          RIVER          //
+/////////////////////////////
+/turf/open/gm/river/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(. && !covered)
+		. += base_river_slowdown
+
+/turf/open/gm/river/desert/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	if(toxic && !covered)
+		return FIRE_PENALTY
+
+	return ..()

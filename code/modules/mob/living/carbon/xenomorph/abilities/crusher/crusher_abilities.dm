@@ -280,10 +280,10 @@
 
 	noise_timer = noise_timer ? --noise_timer : 3
 	if(noise_timer == 3)
-		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 50)
+		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 100)
 
-		for(var/mob/living/carbon/Mob in range(10, xeno))
-			shake_camera(Mob, 2, 1)
+		for(var/mob/living/carbon/human/Mob in range(14, xeno))
+			shake_camera(Mob, 2, 2)
 
 	for(var/mob/living/carbon/human/Mob in xeno.loc)
 		if(Mob.body_position == LYING_DOWN && Mob.stat != DEAD)

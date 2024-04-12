@@ -154,47 +154,40 @@
 	item_state = "scarf_black"
 	original_state = "scarf_black"
 
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad
-	var/dummy_icon_state = "scarf_%SQUAD%"
-	item_state = "scarf_%SQUAD%"
-	original_state = "scarf_%SQUAD%"
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/alpha
+	icon_state = "scarf_alpha"
+	item_state = "scarf_alpha"
+	original_state = "scarf_alpha"
 
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
+	icon_state = "scarf_bravo"
+	item_state = "scarf_bravo"
+	original_state = "scarf_bravo"
 
-	var/static/list/valid_icon_states
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/charlie
+	icon_state = "scarf_charlie"
+	item_state = "scarf_charlie"
+	original_state = "scarf_charlie"
 
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/Initialize(mapload, ...)
-	. = ..()
-	if(!valid_icon_states)
-		valid_icon_states = icon_states(icon)
-	adapt_to_squad()
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta
+	icon_state = "scarf_delta"
+	item_state = "scarf_delta"
+	original_state = "scarf_delta"
 
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/update_clothing_icon()
-	adapt_to_squad()
-	return ..()
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
+	icon_state = "scarf_echo"
+	item_state = "scarf_echo"
+	original_state = "scarf_echo"
 
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/pickup(mob/user, silent)
-	. = ..()
-	adapt_to_squad()
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot
+	icon_state = "scarf_foxtrot"
+	item_state = "scarf_foxtrot"
+	original_state = "scarf_foxtrot"
 
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/equipped(mob/user, slot, silent)
-	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(update_clothing_icon), TRUE)
-	adapt_to_squad()
-	return ..()
-
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/dropped(mob/user)
-	. = ..()
-	UnregisterSignal(user, COMSIG_SET_SQUAD)
-
-/obj/item/clothing/mask/rebreather/scarf/tacticalmask/squad/proc/adapt_to_squad()
-	var/squad_color = "gray"
-	var/mob/living/carbon/human/wearer = loc
-	if(istype(wearer) && wearer.assigned_squad)
-		var/squad_name = lowertext(wearer.assigned_squad.name)
-		if("scarf_[squad_name]" in valid_icon_states)
-			squad_color = squad_name
-	icon_state = replacetext("[initial(dummy_icon_state)][pulled ? "_down" : ""]", "%SQUAD%", squad_color)
-	item_state = replacetext("[initial(item_state)][pulled ? "_down" : ""]", "%SQUAD%", squad_color)
-
+/obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
+	icon_state = "scarf_black"
+	item_state = "scarf_black"
+	original_state = "scarf_black"
 
 /obj/item/clothing/mask/tornscarf
 	name = "tactical scarf"
