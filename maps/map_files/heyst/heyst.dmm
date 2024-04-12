@@ -931,11 +931,12 @@
 	},
 /area/golden_arrow/platoonprep)
 "dO" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "\improper Storage Bay One Blast Door"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -2536,7 +2537,7 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Storage Bay Blast Door";
+	name = "\improper Weapons Bay One Blast Door";
 	id = "bay1door"
 	},
 /turf/open/floor/almayer{
@@ -3766,7 +3767,7 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Storage Bay Blast Door";
+	name = "\improper Weapons Bay Two Blast Door";
 	id = "bay2door"
 	},
 /turf/open/floor/almayer{
@@ -4061,6 +4062,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"pG" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Two Blast Door"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/golden_arrow/hangar)
 "pI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -5963,7 +5973,8 @@
 /area/golden_arrow/hangar)
 "wX" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
+	dir = 4;
+	name = "\improper Storage Bay One Blast Door"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -7589,7 +7600,7 @@
 "Et" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Storage Bay Blast Door";
+	name = "\improper Weapons Bay Two Blast Door";
 	id = "bay2door"
 	},
 /turf/open/floor/almayer{
@@ -9318,16 +9329,8 @@
 	},
 /area/golden_arrow/cryo_cells)
 "Lm" = (
-/obj/structure/machinery/prop{
-	density = 1;
-	icon_state = "pipe_d";
-	name = "refueling pump";
-	desc = "A pump used for refueling the dropship.";
-	pixel_y = -5;
-	layer = 2.7
-	},
-/turf/open/space/basic,
-/area/space)
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/engineering)
 "Ln" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -10052,12 +10055,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "Ol" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4;
-	name = "\improper Storage Bay Blast Door"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Two Blast Door"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -12888,7 +12891,7 @@
 "Zb" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Storage Bay Blast Door";
+	name = "\improper Weapons Bay One Blast Door";
 	id = "bay1door"
 	},
 /turf/open/floor/almayer{
@@ -18684,11 +18687,11 @@ EG
 EG
 EG
 EG
-DA
+Lm
 wV
 wV
 wV
-DA
+Lm
 EG
 EG
 EG
@@ -18833,17 +18836,17 @@ EG
 EG
 EG
 EG
-DA
-DA
-DA
-DA
+Lm
+Lm
+Lm
+Lm
 Su
 Yo
 PO
-DA
-DA
-DA
-DA
+Lm
+Lm
+Lm
+Lm
 EG
 EG
 EG
@@ -18985,7 +18988,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 bd
 uJ
 Uw
@@ -18995,7 +18998,7 @@ bb
 hT
 qr
 JF
-DA
+Lm
 EG
 EG
 EG
@@ -19137,7 +19140,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 ei
 Ii
 LQ
@@ -19147,7 +19150,7 @@ ex
 Wt
 oM
 fV
-DA
+Lm
 EG
 EG
 EG
@@ -19289,7 +19292,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 Hn
 PR
 Gs
@@ -19299,7 +19302,7 @@ Ys
 gX
 PR
 dW
-DA
+Lm
 EG
 EG
 EG
@@ -19441,7 +19444,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 fR
 yW
 em
@@ -19451,7 +19454,7 @@ yS
 fx
 xf
 Zi
-DA
+Lm
 EG
 EG
 EG
@@ -19589,11 +19592,11 @@ EG
 EG
 EG
 EG
-DA
-DA
-DA
-DA
-DA
+Lm
+Lm
+Lm
+Lm
+Lm
 Tl
 BU
 OP
@@ -19603,8 +19606,8 @@ yS
 IF
 gt
 DA
-DA
-DA
+Lm
+Lm
 EG
 EG
 EG
@@ -19741,7 +19744,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 jn
 Bl
 eR
@@ -19756,7 +19759,7 @@ lR
 PR
 pr
 hp
-DA
+Lm
 EG
 EG
 EG
@@ -19893,7 +19896,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 Py
 SL
 di
@@ -19908,7 +19911,7 @@ Sp
 wj
 cc
 Gi
-DA
+Lm
 EG
 EG
 EG
@@ -20045,7 +20048,7 @@ EG
 EG
 EG
 EG
-DA
+Lm
 lV
 Co
 wd
@@ -20060,7 +20063,7 @@ tD
 yW
 Wv
 dg
-DA
+Lm
 EG
 EG
 EG
@@ -20197,22 +20200,22 @@ EG
 EG
 EG
 EG
-DA
+Lm
 Jm
 GQ
 DP
 tX
-DA
-DA
-DA
-DA
-DA
-DA
+Lm
+Lm
+Lm
+Lm
+Lm
+Lm
 wV
 qm
-DA
-DA
-DA
+Lm
+Lm
+Lm
 EG
 EG
 EG
@@ -20349,20 +20352,20 @@ EG
 EG
 EG
 EG
-DA
+Lm
 ke
 mc
 uP
 tX
-DA
+Lm
 EG
 EG
 EG
 EG
-DA
+Lm
 pW
 Xi
-DA
+Lm
 EG
 EG
 EG
@@ -20425,7 +20428,7 @@ EG
 EG
 EG
 EG
-Lm
+EG
 EG
 EG
 EG
@@ -20501,12 +20504,12 @@ EG
 EG
 EG
 EG
-DA
-DA
-DA
-DA
-DA
-DA
+Lm
+Lm
+Lm
+Lm
+Lm
+Lm
 EG
 EG
 EG
@@ -24991,11 +24994,11 @@ AY
 AY
 AY
 dz
-tV
-tV
+pG
+pG
 Ol
-tV
-tV
+pG
+pG
 dz
 EG
 EG
