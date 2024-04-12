@@ -992,7 +992,6 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "M70 flak vest"
 	path = /obj/item/clothing/accessory/flak
 	cost = 3
-	slot = WEAR_IN_ACCESSORY
 	allowed_roles = JOB_SQUAD_SMARTGUN
 
 /datum/gear/misc/patch_uscm
