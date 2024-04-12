@@ -11004,21 +11004,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "Sq" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Two Blast Door"
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/bed/bedroll{
-	pixel_y = -4;
-	color = "#006db0";
-	name = "floor mat";
-	buckle_lying = null;
-	can_buckle = 0;
-	foldabletype = null;
-	desc = "A mechanic's mat."
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
 	},
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Su" = (
 /obj/structure/sign/safety/ladder{
@@ -11110,15 +11102,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonarmory)
-"SJ" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4;
-	name = "\improper Storage Bay Two Blast Door"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/hangar)
 "SK" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/cigbutt/cigarbutt{
@@ -24994,11 +24977,11 @@ AY
 AY
 AY
 dz
-SJ
-SJ
+Sq
+Sq
 Ol
-SJ
-SJ
+Sq
+Sq
 dz
 EG
 EG
@@ -28189,7 +28172,7 @@ Rb
 sY
 Xd
 Xd
-Sq
+Xd
 sY
 hI
 cE
