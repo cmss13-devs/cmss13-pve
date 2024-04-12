@@ -4062,15 +4062,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
-"pG" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4;
-	name = "\improper Storage Bay Two Blast Door"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/hangar)
 "pI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -6946,7 +6937,7 @@
 "Bv" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Vehicle Bay One Blast Door";
+	name = "\improper Vehicle Bay Two Blast Door";
 	id = "apc2blastdoor"
 	},
 /turf/open/floor/almayer{
@@ -11119,6 +11110,15 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonarmory)
+"SJ" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Two Blast Door"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/golden_arrow/hangar)
 "SK" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/cigbutt/cigarbutt{
@@ -12311,7 +12311,7 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Vehicle Bay One Blast Door";
+	name = "\improper Vehicle Bay Two Blast Door";
 	id = "apc2blastdoor"
 	},
 /turf/open/floor/almayer{
@@ -24994,11 +24994,11 @@ AY
 AY
 AY
 dz
-pG
-pG
+SJ
+SJ
 Ol
-pG
-pG
+SJ
+SJ
 dz
 EG
 EG
