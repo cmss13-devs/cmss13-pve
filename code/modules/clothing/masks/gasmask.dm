@@ -32,7 +32,7 @@
 	item_state = "kutjevo_respirator"
 
 /obj/item/clothing/mask/gas/pve_mopp
-	name = "M2 MOPP mask"
+	name = "\improper M2 MOPP mask"
 	desc = "The M2 MOPP mask includes a full covering cowl that securely attaches to the MOPP suit. It is capable of protecting of a variety of radiological and biological threats."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "cbrn_hood"
