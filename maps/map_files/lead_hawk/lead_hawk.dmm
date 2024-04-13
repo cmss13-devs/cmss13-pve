@@ -507,6 +507,13 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"eK" = (
+/obj/structure/machinery/cm_vending/clothing/medic/pmc,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
 "eL" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/area_atmos/area{
@@ -955,18 +962,6 @@
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/lead_hawk/engineer)
-"jn" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/suit/storage/snow_suit/liaison,
-/obj/item/clothing/under/liaison_suit,
-/obj/item/clothing/under/liaison_suit/black,
-/obj/item/clothing/under/liaison_suit/blazer,
-/obj/item/clothing/under/liaison_suit/blue,
-/obj/item/clothing/under/liaison_suit/corporate_formal,
-/obj/item/clothing/under/liaison_suit/charcoal,
-/obj/item/clothing/under/liaison_suit/brown,
-/turf/open/floor/wood/ship,
-/area/lead_hawk/co)
 "jo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out"
@@ -1140,13 +1135,6 @@
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/corsat{
 	dir = 6;
-	icon_state = "green"
-	},
-/area/lead_hawk/medical)
-"kP" = (
-/obj/structure/machinery/cm_vending/clothing/medic/pmc,
-/turf/open/floor/corsat{
-	dir = 1;
 	icon_state = "green"
 	},
 /area/lead_hawk/medical)
@@ -1517,6 +1505,18 @@
 	icon_state = "whitetan"
 	},
 /area/lead_hawk/ares)
+"ph" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/clothing/suit/storage/snow_suit/liaison,
+/obj/item/clothing/under/liaison_suit,
+/obj/item/clothing/under/liaison_suit/black,
+/obj/item/clothing/under/liaison_suit/blazer,
+/obj/item/clothing/under/liaison_suit/blue,
+/obj/item/clothing/under/liaison_suit/corporate_formal,
+/obj/item/clothing/under/liaison_suit/charcoal,
+/obj/item/clothing/under/liaison_suit/brown,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "pv" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -1725,6 +1725,12 @@
 	icon_state = "marked"
 	},
 /area/lead_hawk/computer)
+"rr" = (
+/obj/structure/bed/chair/comfy{
+	pixel_x = -15
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
 "rx" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_north"
@@ -10631,7 +10637,7 @@ gR
 ku
 ku
 ku
-jn
+ph
 ei
 xg
 ei
@@ -11697,7 +11703,7 @@ gR
 gR
 uv
 ct
-hA
+rr
 MC
 ND
 pT
@@ -13243,7 +13249,7 @@ Km
 HO
 IG
 QI
-kP
+eK
 Fd
 fp
 yG
