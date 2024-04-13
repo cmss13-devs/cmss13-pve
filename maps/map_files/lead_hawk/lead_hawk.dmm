@@ -955,6 +955,18 @@
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/lead_hawk/engineer)
+"jn" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/clothing/suit/storage/snow_suit/liaison,
+/obj/item/clothing/under/liaison_suit,
+/obj/item/clothing/under/liaison_suit/black,
+/obj/item/clothing/under/liaison_suit/blazer,
+/obj/item/clothing/under/liaison_suit/blue,
+/obj/item/clothing/under/liaison_suit/corporate_formal,
+/obj/item/clothing/under/liaison_suit/charcoal,
+/obj/item/clothing/under/liaison_suit/brown,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "jo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out"
@@ -1049,6 +1061,11 @@
 	icon_state = "cargo_arrow"
 	},
 /area/lead_hawk/cryo_cell)
+"ka" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/tool/hand_labeler,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
 "kc" = (
 /turf/closed/wall/dev/reinforced/hull,
 /area/space)
@@ -1123,6 +1140,13 @@
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/corsat{
 	dir = 6;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"kP" = (
+/obj/structure/machinery/cm_vending/clothing/medic/pmc,
+/turf/open/floor/corsat{
+	dir = 1;
 	icon_state = "green"
 	},
 /area/lead_hawk/medical)
@@ -1202,9 +1226,7 @@
 	},
 /area/lead_hawk/ares)
 "lT" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -3711,10 +3733,6 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
-"MM" = (
-/obj/item/weapon/gun/smartgun/dirty,
-/turf/closed/wall/r_wall/biodome,
-/area/lead_hawk/cryo_cell)
 "MO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3908,9 +3926,7 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4348,6 +4364,10 @@
 "TJ" = (
 /obj/structure/pipes/unary/freezer{
 	icon_state = "freezer_1"
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /turf/open/floor/corsat{
 	dir = 9;
@@ -10611,7 +10631,7 @@ gR
 ku
 ku
 ku
-ei
+jn
 ei
 xg
 ei
@@ -11983,7 +12003,7 @@ Vb
 rI
 hA
 ND
-ND
+ka
 pT
 tl
 ih
@@ -13223,7 +13243,7 @@ Km
 HO
 IG
 QI
-Xz
+kP
 Fd
 fp
 yG
@@ -14724,7 +14744,7 @@ UY
 UY
 UY
 aY
-MM
+lV
 Ze
 Yl
 lg
@@ -14876,7 +14896,7 @@ UY
 UY
 UY
 UY
-MM
+lV
 Ze
 Yl
 lg

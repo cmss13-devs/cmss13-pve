@@ -1,17 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ax" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "bw" = (
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
 	},
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_pmc"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5;
-	pixel_x = -2
-	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "bM" = (
@@ -31,16 +34,9 @@
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "eV" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	icon = 'icons/obj/objects.dmi';
-	icon_state = "hotseat";
-	pixel_y = 10;
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	dir = 1;
-	icon_state = "w-y0"
+	icon_state = "w-y2"
 	},
 /area/shuttle/pmc)
 "eX" = (
@@ -62,6 +58,12 @@
 	icon_state = "33"
 	},
 /area/shuttle/pmc)
+"go" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/shuttle/pmc)
 "gG" = (
 /turf/closed/shuttle/pmc/transparent{
 	icon_state = "86"
@@ -74,18 +76,7 @@
 /turf/template_noop,
 /area/shuttle/pmc)
 "hn" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	icon = 'icons/obj/objects.dmi';
-	icon_state = "hotseat";
-	pixel_y = 10
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8;
-	icon_state = "hotseat";
-	icon = 'icons/obj/objects.dmi';
-	pixel_y = 10
-	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "hT" = (
@@ -176,13 +167,7 @@
 	dir = 8;
 	pixel_x = -14
 	},
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_pmc"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2
-	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "rd" = (
@@ -191,17 +176,11 @@
 	},
 /area/shuttle/pmc)
 "rU" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8;
-	icon_state = "hotseat";
-	icon = 'icons/obj/objects.dmi';
-	pixel_y = 10;
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "w-y2"
-	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "sh" = (
 /obj/structure/shuttle/part/dropshippmc/lower_left_corner,
@@ -235,6 +214,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
 	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "vY" = (
@@ -399,6 +379,17 @@
 	icon_state = "39"
 	},
 /area/shuttle/pmc)
+"KT" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5;
+	pixel_x = -2
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "Lv" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	pixel_x = -6;
@@ -439,6 +430,10 @@
 	ship_tag = "dropship_pmc"
 	},
 /obj/docking_port/mobile/marine_dropship/pmc,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "Qz" = (
@@ -447,6 +442,7 @@
 	pixel_x = 23;
 	network = list("Golden Arrow","Orphan Stomper")
 	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
 "QX" = (
@@ -604,7 +600,7 @@ zI
 hn
 uT
 qm
-lo
+ax
 Ud
 pp
 HW
@@ -622,10 +618,10 @@ lJ
 SE
 Ki
 hn
-kB
-eV
+hn
+rU
+go
 la
-lo
 Nx
 la
 lo
@@ -642,9 +638,9 @@ zu
 Op
 jt
 lo
+lo
 kB
 Ji
-la
 OW
 Nx
 la
@@ -662,10 +658,10 @@ GL
 Lv
 DZ
 hn
-kB
+hn
 rU
+eV
 la
-lo
 Nx
 la
 SQ
@@ -684,7 +680,7 @@ zI
 hn
 Qz
 bw
-lo
+KT
 Ud
 vY
 zk
