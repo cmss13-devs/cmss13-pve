@@ -4165,7 +4165,7 @@
 	pixel_y = 14;
 	pixel_x = 8
 	},
-/obj/structure/gun_rack/m41/empty,
+/obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6822,7 +6822,7 @@
 	pixel_y = 22;
 	pixel_x = 9
 	},
-/obj/structure/gun_rack/m41/empty,
+/obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
