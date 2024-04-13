@@ -665,10 +665,6 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
-"gn" = (
-/obj/item/clothing/under/liaison_suit/formal,
-/turf/open/floor/wood/ship,
-/area/lead_hawk/co)
 "gp" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -10469,7 +10465,7 @@ ku
 jB
 Fg
 ei
-gn
+ei
 ei
 ei
 ei
