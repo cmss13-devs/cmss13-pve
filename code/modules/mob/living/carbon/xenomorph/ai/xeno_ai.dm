@@ -89,13 +89,13 @@
 
 	a_intent = INTENT_HARM
 
-	var/patrol_lenght = length(patrol_points)
-	if(patrol_lenght == 1)
+	var/patrol_length = length(patrol_points)
+	if(patrol_length == 1)
 		ai_move_patrol(delta_time)
 		return TRUE
 
 	if(!current_target)
-		if(patrol_lenght)
+		if(patrol_length)
 			ai_move_patrol(delta_time)
 			return TRUE
 
