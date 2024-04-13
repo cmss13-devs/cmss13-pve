@@ -604,6 +604,7 @@
 /datum/equipment_preset/uscm_ship/so/pmc
 	name = "PMC Overwatch (PltCo)"
 	paygrade = "PMC-OW"
+	assignment = "Overwatch Operator"
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	access_list = ACCESS_LIST_WY_SENIOR
