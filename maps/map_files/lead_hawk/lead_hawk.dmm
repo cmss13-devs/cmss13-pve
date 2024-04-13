@@ -666,14 +666,9 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
 "gn" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/item/ammo_box/rounds,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lead_hawk/cryo_cell)
+/obj/item/clothing/under/liaison_suit/formal,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
 "gp" = (
 /turf/open/floor/corsat{
 	dir = 1;
@@ -4636,23 +4631,6 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
-"Xe" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera"
-	},
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/medic/pmc,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "cargo_arrow"
-	},
-/area/lead_hawk/cryo_cell)
 "Xh" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 8
@@ -10491,7 +10469,7 @@ ku
 jB
 Fg
 ei
-ei
+gn
 ei
 ei
 ei
@@ -14304,7 +14282,7 @@ Zy
 fz
 Vd
 Vd
-gn
+fz
 qn
 lV
 TW
@@ -16280,7 +16258,7 @@ hb
 bn
 Zr
 UV
-Xe
+hq
 hb
 mH
 gR
