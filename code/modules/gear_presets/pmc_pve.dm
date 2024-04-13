@@ -34,7 +34,7 @@
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING)
+	access = list(ACCESS_WY_GENERAL, ACCESS_PMC_GUNNER)
 	assignment = JOB_PMC_GUNNER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_SMARTGUN
