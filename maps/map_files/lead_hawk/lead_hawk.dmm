@@ -709,13 +709,6 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
-"gZ" = (
-/obj/effect/landmark/start/bridge/pmc,
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "tan"
-	},
-/area/lead_hawk/ares)
 "hb" = (
 /obj/structure/machinery/cryopod{
 	dir = 4
@@ -1536,7 +1529,7 @@
 "pR" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/glass{
 	name = "\improper Kerr-Newman Engine";
-	req_one_access = null
+	req_one_access = list(217)
 	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -1630,7 +1623,8 @@
 /area/lead_hawk/engineer)
 "qE" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/glass{
-	name = "\improper Kerr-Newman Engine"
+	name = "\improper Kerr-Newman Engine";
+	req_one_access = list(217)
 	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -3705,6 +3699,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
+/obj/effect/landmark/start/bridge/pmc,
 /turf/open/floor/carpet,
 /area/lead_hawk/co)
 "MJ" = (
@@ -18204,7 +18199,7 @@ Mw
 Mw
 nd
 nd
-gZ
+nd
 nd
 nd
 nd

@@ -187,20 +187,20 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 //------------------------------------
 
 //-------- PMC --------//
-#define JOB_PMC_STANDARD "PMC Tactical Unit"
+#define JOB_PMC_STANDARD "Weyland-Yutani PMC (Standard)"
 #define JOB_PMC_ENGINEER "PMC Corporate Technician"
 #define JOB_PMC_MEDIC "PMC Corporate Medic"
 #define JOB_PMC_DOCTOR "PMC Trauma Surgeon"
 #define JOB_PMC_INVESTIGATOR "PMC Medical Investigator"
 #define JOB_PMC_DETAINER "Weyland-Yutani PMC (Detainer)"
-#define JOB_PMC_ELITE "PMC Team Leader"
+#define JOB_PMC_ELITE "PMC Elite"
 #define JOB_PMC_GUNNER "PMC Support Weapons Specialist" //Renamed from Specialist to Support Specialist as it only has SG skills.
 #define JOB_PMC_SNIPER "PMC Weapons Specialist" //Renamed from Sharpshooter to specialist as it uses specialist skills.
 #define JOB_PMC_CREWMAN "Weyland-Yutani PMC (Crewman)"
 #define JOB_PMC_NINJA "PMC Ninja"
 #define JOB_PMC_XENO_HANDLER "PMC Xeno Handler"
 #define JOB_PMC_COMMANDO "PMC Commando"
-#define JOB_PMC_LEADER "PMC Operations Leader"
+#define JOB_PMC_LEADER "PMC Leader"
 #define JOB_PMC_LEAD_INVEST "PMC Lead Investigator"
 #define JOB_PMC_DIRECTOR "PMC Site Director"
 #define JOB_PMC_SYNTH "PMC Support Synthetic"

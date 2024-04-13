@@ -8,7 +8,7 @@
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	idtype = /obj/item/card/id/pmc
-	assignment = JOB_PMC_STANDARD
+	assignment = JOB_PMCPLAT_STANDARD
 	rank = JOB_SQUAD_MARINE
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	skills = /datum/skills/pfc
@@ -17,7 +17,7 @@
 	name = "Operations Leader"
 	paygrade = "PMC-OL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
-	assignment = JOB_PMC_LEADER
+	assignment = JOB_PMCPLAT_LEADER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_LEADER
 	skills = /datum/skills/pmc/director
@@ -26,7 +26,7 @@
 	name = "Team Leader"
 	paygrade = "PMC-TL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_PMC_TL)
-	assignment = JOB_PMC_ELITE
+	assignment = JOB_PMCPLAT_FTL
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_TEAM_LEADER
 	skills = /datum/skills/pmc/SL
@@ -35,7 +35,7 @@
 	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_PMC_GUNNER)
-	assignment = JOB_PMC_GUNNER
+	assignment = JOB_PMCPLAT_SG
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_SMARTGUN
 	skills = /datum/skills/smartgunner
