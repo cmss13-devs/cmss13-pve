@@ -152,7 +152,7 @@
 	start_semiauto = FALSE
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_)
+/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_empty)
 	. = ..()
 	update_icon()
 
