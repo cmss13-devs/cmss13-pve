@@ -152,7 +152,7 @@
 	start_semiauto = FALSE
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_empty)
+/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_)
 	. = ..()
 	update_icon()
 
@@ -409,7 +409,7 @@
 /obj/item/weapon/gun/rifle/m41aMK1/ap //for making it start with ap loaded
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
-/obj/item/weapon/gun/rifle/m41aMK1/empty //for making it start unloaded and with the safety on
+/obj/item/weapon/gun/rifle/m41aMK1/unloaded //for making it start unloaded and with the safety on
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
@@ -1335,7 +1335,7 @@
 	STOCK.Attach(src)
 	update_attachable(STOCK.slot)
 
-/obj/item/weapon/gun/rifle/type71/empty
+/obj/item/weapon/gun/rifle/type71/unloaded
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
