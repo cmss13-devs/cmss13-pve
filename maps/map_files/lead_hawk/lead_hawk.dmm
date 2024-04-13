@@ -696,7 +696,7 @@
 "gO" = (
 /obj/structure/closet/secure_closet{
 	name = "heavy weapons specialist locker";
-	req_one_access_txt = "204"
+	req_access_txt = "209;217"
 	},
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
@@ -942,7 +942,8 @@
 /area/space)
 "jb" = (
 /obj/structure/closet/secure_closet{
-	name = "team leader locker"
+	name = "team leader locker";
+	req_access_txt = "209;211"
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
@@ -1680,7 +1681,7 @@
 "qS" = (
 /obj/structure/closet/secure_closet{
 	name = "team leader locker";
-	req_one_access_txt = "212"
+	req_access_txt = "208;211"
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
@@ -1750,6 +1751,11 @@
 /area/lead_hawk/hangar)
 "rI" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	layer = 2;
+	pixel_y = 16
+	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
 "rK" = (
@@ -1921,7 +1927,8 @@
 "tD" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
-	name = "\improper Omega Squad Preparation"
+	name = "\improper Omega Squad Preparation";
+	req_one_access_txt = "202;216;208"
 	},
 /turf/open/floor/corsat{
 	icon_state = "marked"
@@ -2221,7 +2228,7 @@
 "wQ" = (
 /obj/structure/closet/secure_closet{
 	name = "heavy weapons specialist locker";
-	req_one_access_txt = "204"
+	req_access_txt = "208;217"
 	},
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
@@ -3016,7 +3023,8 @@
 	layer = 2.97;
 	name = "Tactical Map Display";
 	pixel_x = -17;
-	pixel_y = 14
+	pixel_y = 14;
+	faction = "PMC"
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
@@ -3147,7 +3155,8 @@
 	dir = 8;
 	layer = 3.2;
 	pixel_x = -17;
-	pixel_y = 16
+	pixel_y = 16;
+	faction = "PMC"
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
@@ -3230,8 +3239,8 @@
 "GY" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
-	name = "Midway Remote Control Console";
-	shuttleId = "dropship_midway"
+	name = "Orphan Stomper Remote Control Console";
+	shuttleId = "dropship_pmc"
 	},
 /turf/open/floor/carpet,
 /area/lead_hawk/co)
@@ -3404,6 +3413,14 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/engineer)
+"Je" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
 "Jl" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
@@ -3636,7 +3653,9 @@
 	},
 /area/lead_hawk/hangar)
 "Mf" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/pmc
+	},
 /turf/open/floor/plating,
 /area/lead_hawk/hangar)
 "Mh" = (
@@ -3822,6 +3841,11 @@
 	freerange = 1;
 	name = "General Listening Channel";
 	pixel_x = -28
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
@@ -4043,14 +4067,14 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = 12
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/m41a/elite,
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon,
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = -7
 	},
 /turf/open/floor/corsat{
@@ -4107,14 +4131,14 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = 12
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/m41a/elite,
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41a/elite/platoon,
+/obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = -7
 	},
 /turf/open/floor/corsat{
@@ -4452,7 +4476,7 @@
 /area/lead_hawk/hangar)
 "US" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/faxmachine/uscm/command/capt,
+/obj/structure/machinery/faxmachine/corporate/highcom,
 /turf/open/floor/carpet,
 /area/lead_hawk/co)
 "UV" = (
@@ -4559,7 +4583,8 @@
 "Wg" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
-	name = "\improper Theta Squad Preparation"
+	name = "\improper Theta Squad Preparation";
+	req_one_access_txt = "202;216;209"
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -4905,6 +4930,11 @@
 	},
 /obj/item/trash/ceramic_plate{
 	layer = 2.97
+	},
+/obj/structure/machinery/light/double{
+	dir = 1;
+	layer = 2;
+	pixel_y = 16
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
@@ -12288,7 +12318,7 @@ Vb
 rZ
 tl
 tl
-tl
+Je
 tl
 tl
 Ke

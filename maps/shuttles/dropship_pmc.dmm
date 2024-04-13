@@ -1,691 +1,559 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"bm" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "97"
-	},
-/area/space)
-"bv" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
-	name = "\improper Midway"
-	},
-/obj/effect/attach_point/weapon/midway/left_fore,
-/turf/template_noop,
-/area/space)
 "bw" = (
-/obj/effect/attach_point/crew_weapon/midway,
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
 	},
-/area/space)
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5;
+	pixel_x = -2
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "bM" = (
-/turf/closed/shuttle/midway{
-	icon_state = "69"
-	},
-/area/space)
+/obj/structure/shuttle/part/dropshippmc/transparent/outer_right_weapons,
+/turf/template_noop,
+/area/shuttle/pmc)
 "bO" = (
-/turf/closed/shuttle/midway{
+/turf/closed/shuttle/pmc{
 	icon_state = "30"
 	},
-/area/space)
+/area/shuttle/pmc)
 "dw" = (
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
-"eX" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"fQ" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"gg" = (
-/obj/effect/attach_point/fuel/midway{
-	pixel_x = -32
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "33"
-	},
-/area/space)
-"gk" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
-	},
-/area/space)
-"gX" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"hn" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
-"hT" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"im" = (
-/obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
-	name = "\improper Midway"
-	},
-/turf/open/space/basic,
-/area/space)
-"jt" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit,
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"jy" = (
-/turf/closed/shuttle/midway{
-	icon_state = "75"
-	},
-/area/space)
-"jA" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "27"
-	},
-/area/space)
-"jP" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"kB" = (
-/turf/closed/shuttle/midway{
-	icon_state = "64"
-	},
-/area/space)
-"kH" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_right{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"kI" = (
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"eV" = (
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"kL" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = 8
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"kN" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "34"
-	},
-/area/space)
-"la" = (
-/obj/structure/platform{
+	pixel_x = -8;
+	icon = 'icons/obj/objects.dmi';
+	icon_state = "hotseat";
+	pixel_y = 10;
 	dir = 1
 	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/shuttle/pmc)
+"eX" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Orphan Stomper"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"fQ" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_left_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"gg" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32;
+	ship_tag = "dropship_pmc"
+	},
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "33"
+	},
+/area/shuttle/pmc)
+"gG" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "86"
+	},
+/area/shuttle/pmc)
+"gX" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Orphan Stomper"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"hn" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	icon = 'icons/obj/objects.dmi';
+	icon_state = "hotseat";
+	pixel_y = 10
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	icon_state = "hotseat";
+	icon = 'icons/obj/objects.dmi';
+	pixel_y = 10
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"hT" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"im" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"jt" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"jA" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "27"
+	},
+/area/shuttle/pmc)
+"kB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"kH" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_top_right,
+/turf/template_noop,
+/area/shuttle/pmc)
+"kN" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/pmc)
+"la" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "lo" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
-	dir = 1;
-	id = "starboard_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "lJ" = (
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -10;
-	pixel_y = 16
-	},
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/cameras/dropship/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	name = "\improper 'Orphan Stomper' camera controls";
+	network = list("Orphan Stomper","Laser Targets")
 	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "lK" = (
-/turf/closed/shuttle/midway{
-	icon_state = "72"
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center{
+	icon_state = "93"
 	},
-/area/space)
+/obj/effect/attach_point/electronics/midway{
+	ship_tag = "dropship_pmc"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
 "lX" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "22"
 	},
-/area/space)
+/area/shuttle/pmc)
 "mq" = (
-/turf/closed/shuttle/midway{
+/turf/closed/shuttle/pmc{
 	icon_state = "24"
 	},
-/area/space)
+/area/shuttle/pmc)
 "po" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "26"
 	},
-/area/space)
+/area/shuttle/pmc)
 "pp" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy8"
+/obj/structure/shuttle/part/dropshippmc/inner_left_corner,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
 	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "qm" = (
-/obj/effect/attach_point/crew_weapon/midway,
 /obj/structure/machinery/light{
 	dir = 8;
 	pixel_x = -14
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"rd" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "32"
-	},
-/area/space)
-"rU" = (
-/turf/open/shuttle/dropship,
-/area/space)
-"sh" = (
-/obj/structure/shuttle/part/dropship1/lower_left_wall{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"ts" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"tv" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
-	dir = 1;
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"tC" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust{
-	name = "\improper Midway"
-	},
-/turf/template_noop,
-/area/space)
-"tQ" = (
-/obj/structure/platform_decoration{
-	dir = 8
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
+	icon_state = "E";
+	pixel_x = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"rd" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "32"
 	},
-/area/space)
-"tR" = (
-/turf/closed/shuttle/midway{
-	icon_state = "104"
+/area/shuttle/pmc)
+"rU" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	icon_state = "hotseat";
+	icon = 'icons/obj/objects.dmi';
+	pixel_y = 10;
+	dir = 1
 	},
-/area/space)
-"uo" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust{
-	name = "\improper Midway"
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
 	},
+/area/shuttle/pmc)
+"sh" = (
+/obj/structure/shuttle/part/dropshippmc/lower_left_corner,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
+"ts" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/upper_left_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc{
+	id = "port_door";
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"tC" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_right_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tR" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "57"
+	},
+/area/shuttle/pmc)
+"uo" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_left_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
 "uT" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"vU" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "98"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "vY" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy9"
+/obj/structure/shuttle/part/dropshippmc/inner_right_corner,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
 	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"wh" = (
+/obj/structure/shuttle/part/dropshippmc/nose_front_left,
+/turf/template_noop,
+/area/shuttle/pmc)
 "wN" = (
-/obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
-	name = "\improper Midway"
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
 "wR" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
-	name = "\improper Midway"
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing,
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_pmc"
 	},
-/obj/effect/attach_point/weapon/midway/right_wing,
 /turf/template_noop,
-/area/space)
-"xb" = (
-/obj/effect/attach_point/crew_weapon/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"xw" = (
-/turf/closed/shuttle/midway{
-	icon_state = "83"
-	},
-/area/space)
+/area/shuttle/pmc)
 "xz" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy20"
+/turf/closed/shuttle/pmc{
+	icon_state = "89"
 	},
-/area/space)
+/area/shuttle/pmc)
 "zh" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/left_outer_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "zk" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy5"
+/turf/closed/shuttle/pmc{
+	icon_state = "51"
 	},
-/area/space)
+/area/shuttle/pmc)
 "zu" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/shuttle/dropship/flight,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "zF" = (
-/turf/closed/shuttle/midway{
+/turf/closed/shuttle/pmc{
 	icon_state = "25"
 	},
-/area/space)
+/area/shuttle/pmc)
 "zI" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy21"
+/turf/closed/shuttle/pmc{
+	icon_state = "84"
 	},
-/area/space)
+/area/shuttle/pmc)
 "zK" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy3"
-	},
-/area/space)
+/obj/structure/shuttle/part/dropshippmc/lower_right_corner,
+/turf/template_noop,
+/area/shuttle/pmc)
 "At" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/upper_right_wing,
 /turf/template_noop,
-/area/space)
-"AP" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_center{
-	name = "\improper Midway"
-	},
+/area/shuttle/pmc)
+"AN" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/outer_left_weapons,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "AU" = (
-/turf/closed/shuttle/midway{
+/turf/closed/shuttle/pmc{
 	icon_state = "31"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Bl" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy27"
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "85"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Bq" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
-	name = "\improper Midway"
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_left_wing,
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_pmc"
 	},
-/obj/effect/attach_point/weapon/midway/left_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "Bv" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "23"
 	},
-/area/space)
-"BN" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "96"
-	},
-/area/space)
+/area/shuttle/pmc)
 "CC" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "29"
 	},
-/area/space)
-"Dh" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
-	name = "\improper Midway"
+/area/shuttle/pmc)
+"DZ" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "88"
 	},
-/obj/effect/attach_point/weapon/midway/right_fore,
+/area/shuttle/pmc)
+"Em" = (
+/obj/structure/shuttle/part/dropshippmc/nose_front_right,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "EB" = (
-/turf/closed/shuttle/midway{
-	icon_state = "92"
+/turf/closed/shuttle/pmc{
+	icon_state = "94"
 	},
-/area/space)
-"Fp" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	pixel_x = -14
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin2"
-	},
-/area/space)
+/area/shuttle/pmc)
 "FF" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_right_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "GL" = (
 /obj/structure/phone_base/rotary{
 	name = "Midway Telephone";
 	phone_category = "Dropship";
-	phone_id = "Midway";
+	phone_id = "Orphan Stomper";
 	pixel_x = 11;
 	pixel_y = 16
 	},
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/dropship_weapons/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	shuttle_tag = "dropship_pmc"
 	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "HW" = (
-/turf/closed/shuttle/midway{
-	icon_state = "67"
+/turf/closed/shuttle/pmc{
+	icon_state = "50"
 	},
-/area/space)
+/area/shuttle/pmc)
+"Iv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc{
+	id = "starboard_door";
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "IU" = (
-/obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
-	name = "\improper Midway"
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/shuttle/part/dropshippmc/transparent/left_outer_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
 "Ji" = (
-/turf/closed/shuttle/midway{
-	icon_state = "73"
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
 	},
-/area/space)
+/area/shuttle/pmc)
 "JF" = (
-/obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
-	name = "\improper Midway"
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
 "Ki" = (
 /obj/structure/extinguisher_cabinet/lifeboat{
 	pixel_x = 12
 	},
-/turf/closed/shuttle/ert{
-	icon_state = "wy27"
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "88"
 	},
-/area/space)
+/area/shuttle/pmc)
 "KE" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "39"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Lv" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	pixel_x = -6;
-	pixel_y = -16
+	pixel_y = -16;
+	network = list("Golden Arrow","Orphan Stomper")
 	},
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin2"
-	},
-/area/space)
-"MV" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "Ng" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "Nx" = (
 /obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "Op" = (
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "OO" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "86"
+/turf/closed/shuttle/pmc{
+	icon_state = "80"
 	},
-/area/space)
+/area/shuttle/pmc)
 "OQ" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_top_left,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "OW" = (
-/obj/docking_port/mobile/marine_dropship/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
 	},
-/area/space)
-"Pu" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
+/obj/docking_port/mobile/marine_dropship/pmc,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "Qz" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
-	pixel_x = 23
+	pixel_x = 23;
+	network = list("Golden Arrow","Orphan Stomper")
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "QX" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy4"
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "87"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Rv" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "38"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Sw" = (
-/turf/closed/shuttle/midway/transparent{
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "35"
 	},
-/area/space)
+/area/shuttle/pmc)
 "SE" = (
 /obj/structure/machinery/light{
 	dir = 8;
 	pixel_x = -14
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "SG" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
+/obj/effect/attach_point/electronics/midway,
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center{
+	icon_state = "93"
 	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
+/obj/effect/attach_point/electronics/midway{
+	ship_tag = "dropship_pmc"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
+/turf/template_noop,
+/area/shuttle/pmc)
 "SQ" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = 30
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "TN" = (
 /turf/template_noop,
-/area/space)
-"TT" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
-	},
 /area/space)
 "Ud" = (
 /obj/structure/machinery/door_control{
 	id = "dropship_midway";
 	name = "Dropship Lockdown";
 	normaldoorcontrol = 3;
-	pixel_y = -19;
+	pixel_y = -23;
 	req_one_access_txt = "3;22"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "UJ" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "89"
+/turf/closed/shuttle/pmc{
+	icon_state = "81"
 	},
-/area/space)
+/area/shuttle/pmc)
 "UT" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "UU" = (
-/turf/closed/shuttle/midway{
+/turf/closed/shuttle/pmc{
 	icon_state = "62"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Vk" = (
-/turf/closed/shuttle/ert{
-	icon_state = "wy25"
+/turf/closed/shuttle/pmc{
+	icon_state = "90"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Vw" = (
-/obj/effect/attach_point/fuel/midway,
-/turf/closed/shuttle/midway/transparent{
+/obj/effect/attach_point/fuel/midway{
+	ship_tag = "dropship_pmc"
+	},
+/turf/closed/shuttle/pmc/transparent{
 	icon_state = "28"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Wb" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing{
-	name = "\improper Midway"
-	},
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 "WN" = (
-/turf/closed/shuttle/midway{
-	icon_state = "103"
+/turf/closed/shuttle/pmc{
+	icon_state = "56"
 	},
-/area/space)
+/area/shuttle/pmc)
 "Yl" = (
-/turf/closed/shuttle/midway{
-	icon_state = "94"
+/turf/closed/shuttle/pmc{
+	icon_state = "95"
 	},
-/area/space)
+/area/shuttle/pmc)
 "YP" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
-	id = "aft_door";
-	name = "\improper Midway cargo door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc{
+	id = "aft_door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
 "Zl" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_center{
-	name = "\improper Midway";
-	icon_state = "105"
-	},
-/obj/effect/attach_point/electronics/midway,
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center,
 /turf/template_noop,
-/area/space)
+/area/shuttle/pmc)
 
 (1,1,1) = {"
 TN
@@ -711,12 +579,12 @@ zh
 TN
 TN
 TN
-bv
-jy
-lK
+AN
+xz
+HW
 HW
 UU
-jP
+lo
 tv
 sh
 eX
@@ -729,18 +597,18 @@ hT
 "}
 (3,1,1) = {"
 OQ
-xz
+wh
 EB
 OO
 zI
-kI
+hn
 uT
 qm
-jP
+lo
 Ud
 pp
-QX
-QX
+HW
+HW
 bO
 mq
 WN
@@ -748,19 +616,19 @@ wN
 IU
 "}
 (4,1,1) = {"
-Zl
-BN
-lJ
-Fp
-Ki
 SG
-MV
+Bl
+lJ
+SE
+Ki
 hn
-hn
-hn
+kB
+eV
+la
+lo
 Nx
-tQ
-hn
+la
+lo
 UT
 SE
 YP
@@ -768,55 +636,55 @@ TN
 TN
 "}
 (5,1,1) = {"
-AP
-bm
+Zl
+gG
 zu
 Op
 jt
-hn
-rU
-kL
-jP
-OW
-xb
+lo
+kB
+Ji
 la
-jP
-jP
-jP
-jP
+OW
+Nx
+la
+lo
+lo
+lo
+lo
 TN
 TN
 "}
 (6,1,1) = {"
-Zl
-vU
+lK
+QX
 GL
 Lv
-Bl
-SG
-TT
+DZ
 hn
-hn
-hn
-Pu
-gk
+kB
+rU
+la
+lo
+Nx
+la
 SQ
-hn
+lo
 dw
-jP
+lo
 TN
 TN
 "}
 (7,1,1) = {"
 kH
-Vk
+Em
 Yl
 UJ
 zI
-kI
+hn
 Qz
 bw
-jP
+lo
 Ud
 vY
 zk
@@ -831,13 +699,13 @@ JF
 TN
 TN
 TN
-Dh
-xw
-Ji
 bM
-kB
-jP
+Vk
+zk
+zk
+zk
 lo
+Iv
 zK
 gX
 Rv

@@ -3,7 +3,7 @@
 // riflemen
 /datum/equipment_preset/uscm/pmc
 	name = "Tactical Unit"
-	paygrade = "PMC"
+	paygrade = "PMC-OP"
 	access = list(ACCESS_WY_GENERAL)
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
@@ -14,8 +14,8 @@
 	skills = /datum/skills/pfc
 
 /datum/equipment_preset/uscm/pmc/sl
-	name = "Operation Leader"
-	paygrade = "PMC-TL"
+	name = "Operations Leader"
+	paygrade = "PMC-OL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 	assignment = JOB_PMC_LEADER
 	idtype = /obj/item/card/id/pmc
@@ -24,8 +24,8 @@
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
-	paygrade = "PMC-OP"
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ARMORY)
+	paygrade = "PMC-TL"
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_PMC_TL)
 	assignment = JOB_PMC_ELITE
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_TEAM_LEADER
@@ -34,7 +34,7 @@
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
-	access = list(ACCESS_WY_GENERAL,ACCESS_WY_ENGINEERING)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING)
 	assignment = JOB_PMC_GUNNER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_SMARTGUN

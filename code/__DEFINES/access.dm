@@ -100,6 +100,8 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
 
+#define ACCESS_PMC_GUNNER 217
+
 
 //=================================================
 
