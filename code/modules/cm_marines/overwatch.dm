@@ -468,10 +468,17 @@
 				return
 			change_lead(user, params["ref"])
 
+		if("award_medal")
+			print_medal(user, src)
+			return
+
 		if("insubordination")
 			mark_insubordination()
+			return
+
 		if("transfer_marine")
 			transfer_squad()
+			return
 
 		if("change_locations_ignored")
 			switch(z_hidden)

@@ -3,6 +3,8 @@
 #define MARINE_VALOR_MEDAL "medal of valor"
 #define MARINE_HEROISM_MEDAL "medal of exceptional heroism"
 
+#define ALL_MARINE_MEDALS list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL)
+
 #define XENO_SLAUGHTER_MEDAL "royal jelly of slaughter"
 #define XENO_RESILIENCE_MEDAL "royal jelly of resilience"
 #define XENO_SABOTAGE_MEDAL "royal jelly of sabotage"
@@ -35,7 +37,6 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 	giver_mob = list()
 	giver_ckey = list()
 
-
 /proc/give_medal_award(medal_location, as_admin = FALSE)
 	if(as_admin && !check_rights(R_ADMIN))
 		as_admin = FALSE
@@ -45,14 +46,22 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 	var/list/recipient_ranks = list()
 	for(var/datum/data/record/record in GLOB.data_core.general)
 		var/recipient_name = record.fields["name"]
+		if(usr.real_name == recipient_name && !as_admin)
+			continue
 		recipient_ranks[recipient_name] = record.fields["rank"]
 		possible_recipients += recipient_name
+
 	var/chosen_recipient = tgui_input_list(usr, "Who do you want to award a medal to?", "Medal Recipient", possible_recipients)
 	if(!chosen_recipient)
 		return FALSE
 
+	var/list/choosable_medals = list(MARINE_CONDUCT_MEDAL)
+
+	if(as_admin)
+		choosable_medals = ALL_MARINE_MEDALS
+
 	// Pick a medal
-	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL))
+	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", choosable_medals)
 	if(!medal_type)
 		return FALSE
 
@@ -177,6 +186,14 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 
 	if(real_owner_ref != WEAKREF(user))
 		user.visible_message("ERROR: ID card not registered for [user.real_name] in USCM registry. Potential medal fraud detected.")
+		return
+
+	if(!(FACTION_USCM in user.faction_group))
+		to_chat(user, SPAN_WARNING("Medals only available for USCM personnel."))
+		return
+
+	if(length(GLOB.medal_awards))
+		to_chat(user, SPAN_WARNING("Only one medal may be awarded per operation."))
 		return
 
 	if(give_medal_award(get_turf(printer)))
