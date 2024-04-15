@@ -4899,10 +4899,7 @@
 /turf/open/gm/coast/beachcorner/north_east,
 /area/lv624/ground/caves/sand_temple)
 "fsB" = (
-/obj/structure/machinery/shower{
-	dir = 8
-	},
-/obj/effect/glowshroom,
+/obj/structure/machinery/light/small,
 /turf/open/floor{
 	icon_state = "freezerfloor"
 	},
@@ -7403,15 +7400,14 @@
 /area/lv624/ground/caves/north_central_caves)
 "hVH" = (
 /obj/structure/surface/table,
-/obj/structure/mirror{
-	icon_state = "mirror_broke";
-	pixel_x = 30
-	},
 /obj/item/device/radio/intercom{
 	freerange = 1;
 	frequency = 1469;
 	name = "General Listening Channel";
 	pixel_y = 30
+	},
+/obj/structure/mirror{
+	pixel_x = 30
 	},
 /turf/open/floor{
 	icon_state = "freezerfloor"
@@ -12014,6 +12010,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
 "nga" = (
+/obj/structure/closet/secure_closet/marshal,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "red"
@@ -14101,7 +14098,6 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/effect/glowshroom,
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
@@ -18450,7 +18446,6 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/effect/glowshroom,
 /turf/open/floor{
 	icon_state = "freezerfloor"
 	},
@@ -20526,7 +20521,6 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "wyb" = (
 /obj/structure/closet/secure_closet/security,
-/obj/item/clothing/suit/armor/bulletproof/badge,
 /obj/item/clothing/suit/armor/bulletproof/badge,
 /turf/open/floor{
 	dir = 4;
@@ -45697,7 +45691,7 @@ edZ
 ulp
 xvL
 qpg
-lEz
+fsB
 bWC
 aFP
 tpc
@@ -45918,7 +45912,7 @@ tON
 bWC
 bLo
 mzY
-fsB
+mzY
 bWC
 hVH
 mxS

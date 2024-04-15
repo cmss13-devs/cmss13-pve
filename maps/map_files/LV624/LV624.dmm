@@ -11419,7 +11419,7 @@
 	},
 /area/lv624/lazarus/hop)
 "aYH" = (
-/obj/structure/closet/lawcloset,
+/obj/structure/closet/secure_closet/marshal,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "red"
@@ -16349,18 +16349,6 @@
 	icon_state = "whitebluecorner"
 	},
 /area/lv624/lazarus/corporate_dome)
-"ken" = (
-/obj/structure/surface/rack,
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/armory)
 "keS" = (
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/east_barrens/ceiling)
@@ -20644,6 +20632,18 @@
 	icon_state = "vault"
 	},
 /area/lv624/lazarus/quartstorage)
+"seQ" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/lv624/lazarus/armory)
 "sfH" = (
 /obj/structure/inflatable,
 /turf/open/gm/dirt,
@@ -47639,7 +47639,7 @@ azt
 aLk
 aLT
 aNM
-ken
+seQ
 jhe
 aMZ
 aLk
