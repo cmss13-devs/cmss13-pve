@@ -1069,6 +1069,7 @@
 	icon_off = "cabinetdetective_broken";
 	has_cryo_gear = 0
 	},
+/obj/item/clothing/under/marine/veteran/UPP/boiler,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -1552,7 +1553,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/gun_rack/type71,
+/obj/structure/gun_rack/type71/unloaded,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -2568,12 +2569,8 @@
 /area/golden_arrow/briefing)
 "yu" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
 /obj/item/device/motiondetector/hacked,
+/obj/item/ammo_magazine/sentry/upp,
 /obj/item/defenses/handheld/sentry/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3037,7 +3034,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/gun_rack/type71,
+/obj/structure/gun_rack/type71/unloaded,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3475,12 +3472,8 @@
 /area/golden_arrow/hangar)
 "GT" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
 /obj/item/device/motiondetector/hacked,
+/obj/item/ammo_magazine/sentry/upp,
 /obj/item/defenses/handheld/sentry/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
