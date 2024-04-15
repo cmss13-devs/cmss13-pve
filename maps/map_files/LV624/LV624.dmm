@@ -8293,6 +8293,7 @@
 "aLS" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/shotgun/slugs,
+/obj/item/ammo_magazine/shotgun/buckshot,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor{
 	icon_state = "cult"
@@ -8300,12 +8301,12 @@
 /area/lv624/lazarus/armory)
 "aLT" = (
 /obj/effect/decal/cleanable/cobweb2,
-/obj/item/reagent_container/hypospray/autoinjector/tricord,
 /obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/storage/firstaid,
 /obj/item/reagent_container/hypospray/autoinjector/tricord,
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/reagent_container/hypospray/autoinjector/tricord,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -8669,7 +8670,8 @@
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
 /obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/weapon/gun/rifle/m16,
+/obj/item/ammo_box/magazine/M16,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -11227,7 +11229,7 @@
 /area/lv624/lazarus/engineering)
 "aXL" = (
 /obj/structure/closet/secure_closet/security,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/clothing/suit/armor/bulletproof/badge,
 /turf/open/floor{
 	dir = 4;
 	icon_state = "red"
@@ -15855,7 +15857,9 @@
 /obj/structure/surface/rack,
 /obj/effect/landmark/crap_item,
 /obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/vest/security,
+/obj/item/stack/folding_barricade/three,
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/prop/helmetgarb/riot_shield,
 /turf/open/floor{
 	icon_state = "cult"
 	},
@@ -16345,6 +16349,18 @@
 	icon_state = "whitebluecorner"
 	},
 /area/lv624/lazarus/corporate_dome)
+"ken" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/lv624/lazarus/armory)
 "keS" = (
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/east_barrens/ceiling)
@@ -47623,7 +47639,7 @@ azt
 aLk
 aLT
 aNM
-aNM
+ken
 jhe
 aMZ
 aLk

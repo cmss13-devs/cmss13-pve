@@ -3062,7 +3062,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random,
 /obj/item/storage/backpack/lightpack,
-/obj/item/storage/belt/shotgun,
+/obj/item/storage/belt/shotgun/upp,
 /turf/open/floor/greengrid,
 /area/strata/ag/interior/dorms/hive)
 "ajn" = (
@@ -3324,7 +3324,6 @@
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "ajY" = (
 /obj/structure/closet/wardrobe/red,
-/obj/item/clothing/suit/imperium_monk,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -3335,6 +3334,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
+/obj/item/clothing/under/marine/officer/pilot/dcc,
 /obj/item/clothing/suit/storage/bomber,
 /turf/open/floor/strata{
 	icon_state = "red1"
@@ -4200,7 +4200,7 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/item/weapon/gun/pistol/holdout,
+/obj/item/weapon/gun/pistol/np92,
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "white_cyan2"
@@ -4342,15 +4342,11 @@
 /area/strata/ag/interior/dorms/canteen)
 "anr" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/ammo_magazine/shotgun/slugs{
-	pixel_x = 6;
-	pixel_y = -4
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = 6;
-	pixel_y = -4
-	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/weapon/gun/shotgun/type23/riot_control,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -4934,7 +4930,7 @@
 /area/strata/ag/interior/outpost/canteen/lower_cafeteria)
 "apE" = (
 /obj/structure/machinery/washing_machine,
-/obj/item/clothing/suit/bluetag,
+/obj/item/clothing/suit/storage/jacket/marine/service/tanker,
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -5251,7 +5247,8 @@
 /area/strata/ag/interior/dorms/maintenance)
 "aqB" = (
 /obj/item/storage/box/nade_box/tear_gas,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/item/stack/folding_barricade/three,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -10178,10 +10175,10 @@
 /area/strata/ag/interior/dorms)
 "aFR" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
+/obj/item/weapon/gun/shotgun/double/mou53,
 /turf/open/floor/strata{
 	icon_state = "white_cyan1"
 	},
@@ -12527,13 +12524,13 @@
 /turf/open/floor/strata,
 /area/strata/ag/interior/dorms/south)
 "aNQ" = (
-/obj/item/explosive/grenade/phosphorus,
 /obj/structure/surface/rack,
 /obj/item/folder/red,
 /obj/item/storage/toolbox/emergency,
 /obj/effect/decal/strata_decals/grime/grime3{
 	dir = 4
 	},
+/obj/item/explosive/grenade/phosphorus/upp,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -13640,6 +13637,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/corpsespawner/chef,
+/obj/item/weapon/gun/pistol/np92,
 /turf/open/floor/strata{
 	dir = 10;
 	icon_state = "multi_tiles"
@@ -21553,11 +21551,11 @@
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/ag/exterior/marsh)
 "bvt" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/rifle/type71,
 /obj/item/ammo_magazine/rifle/type71,
-/obj/effect/landmark/wo_supplies/storage/belts/m41abelt,
+/obj/item/storage/belt/marine/upp/full,
+/obj/item/weapon/gun/rifle/type71/carbine,
 /turf/open/floor/strata{
 	dir = 10;
 	icon_state = "multi_tiles"
@@ -24608,13 +24606,6 @@
 	icon_state = "floor3"
 	},
 /area/strata/ag/interior/administration)
-"bRw" = (
-/obj/structure/surface/rack,
-/obj/item/stack/folding_barricade,
-/turf/open/floor/strata{
-	icon_state = "red1"
-	},
-/area/strata/ag/interior/research_decks/security)
 "bRT" = (
 /obj/item/weapon/gun/rifle/type71/carbine,
 /turf/open/floor/strata{
@@ -24963,25 +24954,20 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/ammo_magazine/shotgun/slugs{
-	pixel_x = 6;
-	pixel_y = -4
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = 6;
-	pixel_y = -4
-	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/weapon/gun/shotgun/type23/riot_control,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
 /area/strata/ag/interior/research_decks/security)
 "bUV" = (
 /obj/structure/surface/rack,
-/obj/item/stack/folding_barricade,
-/obj/structure/machinery/camera/autoname{
-	dir = 8
-	},
+/obj/item/weapon/gun/smg/pps43,
+/obj/item/ammo_magazine/smg/pps43,
+/obj/item/ammo_magazine/smg/pps43,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -27256,9 +27242,9 @@
 	dir = 4
 	},
 /obj/structure/surface/rack,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/shoes/marine/upp,
 /turf/open/floor/strata{
 	icon_state = "orange_cover"
 	},
@@ -29359,6 +29345,13 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/hotsprings)
+"dPl" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/strata/ag/interior/outpost/canteen/personal_storage)
 "dQi" = (
 /obj/item/stack/rods,
 /turf/open/floor/strata{
@@ -32562,6 +32555,17 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/east_dorms)
+"iYH" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
+/obj/item/weapon/gun/shotgun/type23/riot_control,
+/turf/open/floor/strata{
+	icon_state = "red1"
+	},
+/area/strata/ag/interior/research_decks/security)
 "iZr" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement2"
@@ -33429,6 +33433,16 @@
 "kyr" = (
 /turf/open/gm/dirt,
 /area/strata/ug/interior/jungle/deep/east_engi)
+"kyz" = (
+/obj/structure/surface/rack,
+/obj/item/stack/folding_barricade/three,
+/obj/structure/machinery/camera/autoname{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "red1"
+	},
+/area/strata/ag/interior/research_decks/security)
 "kyT" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	dir = 2
@@ -34181,29 +34195,36 @@
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "lNr" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb{
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/shotgun/buckshot{
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/shotgun/buckshot{
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/shotgun/buckshot{
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/shotgun/buckshot{
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/obj/item/weapon/gun/shotgun/type23/riot_control,
+/obj/item/weapon/gun/shotgun/type23/riot_control,
+/obj/item/weapon/gun/shotgun/type23/riot_control{
+	pixel_x = 6;
+	pixel_y = -5
+	},
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -35209,10 +35230,10 @@
 /area/strata/ag/interior/tcomms)
 "nqm" = (
 /obj/structure/surface/rack,
-/obj/item/explosive/grenade/phosphorus,
-/obj/item/explosive/grenade/phosphorus,
 /obj/item/folder/red,
 /obj/item/ammo_box/magazine/shotgun/buckshot,
+/obj/item/explosive/grenade/phosphorus/upp,
+/obj/item/explosive/grenade/phosphorus/upp,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -38631,6 +38652,13 @@
 	icon_state = "white_cyan1"
 	},
 /area/strata/ag/interior/dorms)
+"sWa" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/item/clothing/suit/storage/snow_suit/soviet,
+/turf/open/floor/prison{
+	icon_state = "darkyellowfull2"
+	},
+/area/strata/ag/interior/outpost/canteen/personal_storage)
 "sWO" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -38888,6 +38916,17 @@
 "toV" = (
 /turf/open/gm/coast/beachcorner/north_east,
 /area/strata/ug/interior/jungle/deep/tearlake)
+"tqd" = (
+/obj/structure/bed/nest,
+/obj/effect/decal/cleanable/blood/gibs/core,
+/obj/item/explosive/grenade/high_explosive/upp{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/turf/open/floor/strata{
+	icon_state = "multi_tiles"
+	},
+/area/strata/ag/interior/dorms/hive)
 "tqG" = (
 /turf/open/floor/strata,
 /area/strata/ag/exterior/paths/north_outpost)
@@ -47181,7 +47220,7 @@ bjY
 afE
 cnO
 cnO
-kRb
+tqd
 bjY
 qKU
 cnO
@@ -54990,7 +55029,7 @@ aac
 adS
 anr
 bUU
-anr
+iYH
 vPi
 bXi
 asj
@@ -55378,9 +55417,9 @@ aac
 aac
 aac
 adS
-bRw
 bUV
-bRw
+bUV
+kyz
 vPi
 bXi
 asl
@@ -72541,7 +72580,7 @@ bkZ
 bkZ
 alU
 bkZ
-aqJ
+dPl
 bPf
 asS
 ccp
@@ -72922,7 +72961,7 @@ aac
 aac
 aac
 anG
-ajy
+sWa
 bkZ
 bkZ
 bJz

@@ -77,7 +77,7 @@
 	new /obj/item/clothing/under/rank/security/corp(src)
 
 /obj/structure/closet/secure_closet/security/soro
-	name = "Security Officer's Locker"
+	name = "Police Officer's Locker"
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
 	icon_state = "secure_locked_police"
 	icon_closed = "secure_closed_police"
@@ -89,23 +89,22 @@
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
 	if(prob(50))
-		new /obj/item/storage/backpack/security(src)
+		new /obj/item/storage/belt/gun/type47/np92(src)
 	else
-		new /obj/item/storage/backpack/satchel/sec(src)
-	new /obj/item/storage/belt/security(src)
+		new new /obj/item/storage/belt/gun/type47/t73(src)
 	new /obj/item/device/flash(src)
+	new /obj/item/storage/backpack/lightpack/upp(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/weapon/baton/loaded(src)
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
+	new /obj/item/clothing/glasses/hud/security(src)
 	new /obj/item/device/hailer(src)
-	new /obj/item/clothing/accessory/storage/black_vest(src)
-	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
-	new /obj/item/clothing/head/ushanka(src)
-	new /obj/item/clothing/mask/rebreather/scarf(src)
-	new /obj/item/clothing/under/rank/veteran/soviet_uniform_01(src)
-	new /obj/item/storage/belt/gun/type47/t73(src)
+	new /obj/item/clothing/accessory/storage/webbing (src)
+	new /obj/item/clothing/accessory/patch/upp(src)
+	new /obj/item/clothing/suit/storage/marine/faction/UPP/mp(src)
+	new /obj/item/clothing/head/uppcap/ushanka(src)
+	new /obj/item/clothing/under/marine/veteran/UPP/mp(src)
 
 
 

@@ -12014,7 +12014,6 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
 "nga" = (
-/obj/structure/closet/lawcloset,
 /turf/open/floor{
 	dir = 1;
 	icon_state = "red"
@@ -15615,6 +15614,8 @@
 /obj/effect/landmark/crap_item,
 /obj/effect/landmark/crap_item,
 /obj/item/stack/folding_barricade/three,
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/prop/helmetgarb/riot_shield,
 /turf/open/floor{
 	icon_state = "cult"
 	},
