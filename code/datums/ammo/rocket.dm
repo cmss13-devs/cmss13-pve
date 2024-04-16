@@ -140,6 +140,7 @@
 		M.ex_act(150, P.dir, P.weapon_cause_data, 100)
 		smoke.set_up(1, T)
 		smoke.start()
+		M.take_damage_type(initial(M.health)*rand(0.6, 0.9), "explosive", src)
 		return
 	return ..()
 
