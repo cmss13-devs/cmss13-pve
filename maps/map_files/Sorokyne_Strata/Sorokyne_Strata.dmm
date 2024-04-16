@@ -29345,13 +29345,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/hotsprings)
-"dPl" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
-/area/strata/ag/interior/outpost/canteen/personal_storage)
 "dQi" = (
 /obj/item/stack/rods,
 /turf/open/floor/strata{
@@ -30061,6 +30054,17 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/strata/ag/interior/outpost/gen/bball/nest)
+"eWC" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
+/obj/item/weapon/gun/shotgun/type23/riot_control,
+/turf/open/floor/strata{
+	icon_state = "red1"
+	},
+/area/strata/ag/interior/research_decks/security)
 "eXK" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/strata{
@@ -31644,6 +31648,13 @@
 	icon_state = "cement3"
 	},
 /area/strata/ag/exterior/landingzone_2)
+"hBR" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/strata/ag/interior/outpost/canteen/personal_storage)
 "hCp" = (
 /obj/item/reagent_container/food/drinks/cans/beer,
 /turf/open/floor/strata{
@@ -32555,17 +32566,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/east_dorms)
-"iYH" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
-/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
-/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
-/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag,
-/obj/item/weapon/gun/shotgun/type23/riot_control,
-/turf/open/floor/strata{
-	icon_state = "red1"
-	},
-/area/strata/ag/interior/research_decks/security)
 "iZr" = (
 /turf/open/asphalt/cement{
 	icon_state = "cement2"
@@ -33433,16 +33433,6 @@
 "kyr" = (
 /turf/open/gm/dirt,
 /area/strata/ug/interior/jungle/deep/east_engi)
-"kyz" = (
-/obj/structure/surface/rack,
-/obj/item/stack/folding_barricade/three,
-/obj/structure/machinery/camera/autoname{
-	dir = 8
-	},
-/turf/open/floor/strata{
-	icon_state = "red1"
-	},
-/area/strata/ag/interior/research_decks/security)
 "kyT" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	dir = 2
@@ -38652,13 +38642,6 @@
 	icon_state = "white_cyan1"
 	},
 /area/strata/ag/interior/dorms)
-"sWa" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/item/clothing/suit/storage/snow_suit/soviet,
-/turf/open/floor/prison{
-	icon_state = "darkyellowfull2"
-	},
-/area/strata/ag/interior/outpost/canteen/personal_storage)
 "sWO" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -38916,17 +38899,6 @@
 "toV" = (
 /turf/open/gm/coast/beachcorner/north_east,
 /area/strata/ug/interior/jungle/deep/tearlake)
-"tqd" = (
-/obj/structure/bed/nest,
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/item/explosive/grenade/high_explosive/upp{
-	pixel_x = -4;
-	pixel_y = -2
-	},
-/turf/open/floor/strata{
-	icon_state = "multi_tiles"
-	},
-/area/strata/ag/interior/dorms/hive)
 "tqG" = (
 /turf/open/floor/strata,
 /area/strata/ag/exterior/paths/north_outpost)
@@ -39211,6 +39183,17 @@
 /obj/effect/landmark/monkey_spawn,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/west_engi)
+"tLT" = (
+/obj/structure/bed/nest,
+/obj/effect/decal/cleanable/blood/gibs/core,
+/obj/item/explosive/grenade/high_explosive/upp{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/turf/open/floor/strata{
+	icon_state = "multi_tiles"
+	},
+/area/strata/ag/interior/dorms/hive)
 "tMP" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 10
@@ -39971,6 +39954,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/strata/ag/interior/restricted/devroom)
+"uNu" = (
+/obj/structure/surface/rack,
+/obj/item/stack/folding_barricade/three,
+/obj/structure/machinery/camera/autoname{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "red1"
+	},
+/area/strata/ag/interior/research_decks/security)
 "uNQ" = (
 /obj/structure/surface/rack,
 /obj/item/storage/firstaid/regular,
@@ -39979,6 +39972,13 @@
 	icon_state = "floor3"
 	},
 /area/strata/ag/exterior/research_decks)
+"uOp" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/item/clothing/suit/storage/snow_suit/soviet,
+/turf/open/floor/prison{
+	icon_state = "darkyellowfull2"
+	},
+/area/strata/ag/interior/outpost/canteen/personal_storage)
 "uPE" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 9
@@ -47220,7 +47220,7 @@ bjY
 afE
 cnO
 cnO
-tqd
+tLT
 bjY
 qKU
 cnO
@@ -55029,7 +55029,7 @@ aac
 adS
 anr
 bUU
-iYH
+eWC
 vPi
 bXi
 asj
@@ -55419,7 +55419,7 @@ aac
 adS
 bUV
 bUV
-kyz
+uNu
 vPi
 bXi
 asl
@@ -72580,7 +72580,7 @@ bkZ
 bkZ
 alU
 bkZ
-dPl
+hBR
 bPf
 asS
 ccp
@@ -72961,7 +72961,7 @@ aac
 aac
 aac
 anG
-sWa
+uOp
 bkZ
 bkZ
 bJz

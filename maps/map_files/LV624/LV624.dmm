@@ -18713,6 +18713,18 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
+"owx" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/obj/item/clothing/suit/armor/bulletproof/badge,
+/turf/open/floor{
+	icon_state = "cult"
+	},
+/area/lv624/lazarus/armory)
 "owQ" = (
 /turf/open/gm/coast/east,
 /area/lv624/ground/barrens/east_barrens)
@@ -20632,18 +20644,6 @@
 	icon_state = "vault"
 	},
 /area/lv624/lazarus/quartstorage)
-"seQ" = (
-/obj/structure/surface/rack,
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/obj/item/clothing/suit/armor/bulletproof/badge,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/armory)
 "sfH" = (
 /obj/structure/inflatable,
 /turf/open/gm/dirt,
@@ -47639,7 +47639,7 @@ azt
 aLk
 aLT
 aNM
-seQ
+owx
 jhe
 aMZ
 aLk
