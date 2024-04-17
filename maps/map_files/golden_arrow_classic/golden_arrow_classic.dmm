@@ -9106,10 +9106,6 @@
 "ZC" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/squad_one)
-"ZH" = (
-/obj/structure/prop/almayer/computers/sensor_computer1,
-/turf/open/space/basic,
-/area/space)
 "ZI" = (
 /obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -22755,7 +22751,7 @@ Cr
 Cr
 Cr
 Cr
-ZH
+Cr
 Cr
 Cr
 kS
