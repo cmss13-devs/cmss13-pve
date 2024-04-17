@@ -13214,7 +13214,7 @@
 /area/golden_arrow/hangar)
 "YK" = (
 /obj/structure/window/framed/almayer,
-/turf/closed/wall/almayer,
+/turf/open/floor/plating,
 /area/golden_arrow/shared_office)
 "YP" = (
 /obj/effect/decal/warning_stripes{
