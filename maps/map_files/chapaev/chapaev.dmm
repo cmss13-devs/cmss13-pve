@@ -1040,7 +1040,6 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
-/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -2806,7 +2805,6 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
-/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"

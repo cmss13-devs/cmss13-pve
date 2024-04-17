@@ -643,10 +643,6 @@
 /obj/item/storage/belt/marine/smartgunner/upp/fill_preset_inventory()
 	return
 
-/obj/item/storage/belt/marine/smartgunner/upp/shotgun/fill_preset_inventory()
-	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special(src)
-
 /obj/item/storage/belt/marine/quackers
 	name = "Mr. Quackers"
 	desc = "What are we going to do today, Mr. Quackers?"
