@@ -396,6 +396,9 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
+	var/list/smartgun_back = list(
+		/obj/item/storage/large_holster/machete,
+	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
@@ -421,6 +424,10 @@
 	if(slot != WEAR_BACK)
 		return
 
+
+	if(is_type_in_list(equipping_item, smartgun_back))
+		return
+		
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
@@ -1393,7 +1400,7 @@
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/mp
 	name = "\improper UL4 camouflaged jacket"
-	desc = "A lightweight jacket, issued to troops when they're not expected to engage in combat. Still studded to the brim with kevlar shards, though the synthread construction reduces its effectiveness."
+	desc = "A lightweight jacket, issued to troops when they're not expected to engage in combat. Some level of shrapnel and low velocity gunfire protection is provided by para-aramid inserts, though not much."
 	icon_state = "upp_coat_mp"
 	slowdown = SLOWDOWN_ARMOR_NONE
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS

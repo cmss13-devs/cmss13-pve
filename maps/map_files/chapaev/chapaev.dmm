@@ -203,27 +203,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
-"bw" = (
-/obj/structure/closet/secure_closet{
-	req_access_txt = "243;238";
-	name = "machinegunner locker"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/storage/belt/gun/smartgunner/upp,
-/obj/item/storage/belt/marine/smartgunner/upp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "bC" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -704,34 +683,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"fC" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
 "fJ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	id = "Delta_1";
@@ -750,6 +701,15 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"gl" = (
+/obj/structure/surface/rack,
+/obj/item/device/motiondetector/hacked,
+/obj/item/ammo_magazine/sentry/upp,
+/obj/item/defenses/handheld/sentry/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "gm" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -1076,6 +1036,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"jV" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light,
+/obj/item/storage/pouch/shotgun/large,
+/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
+/obj/item/weapon/gun/shotgun/type23/pve,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "jX" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -1581,15 +1551,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
-"pw" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/gun_rack/type71,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "py" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	req_one_access = null;
@@ -2117,6 +2078,15 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"tS" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/gun_rack/type71/unloaded,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "tT" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -2158,6 +2128,27 @@
 "tZ" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/platoon_commander_rooms)
+"ud" = (
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;238";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "uf" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -2277,6 +2268,34 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"vi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "vk" = (
 /obj/structure/machinery/light,
 /turf/open/floor/strata{
@@ -2599,19 +2618,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
-"yu" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
-/obj/item/device/motiondetector/hacked,
-/obj/item/defenses/handheld/sentry/upp,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
@@ -2776,16 +2782,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
-"AU" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/light,
-/obj/item/storage/pouch/shotgun/large,
-/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
-/obj/item/weapon/gun/shotgun/type23/pve,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "AW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/coffee,
@@ -2806,6 +2802,16 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"Bi" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light,
+/obj/item/storage/pouch/shotgun/large,
+/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
+/obj/item/weapon/gun/shotgun/type23/pve,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "Bj" = (
 /obj/structure/sink{
 	dir = 4;
@@ -3060,15 +3066,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
-"CU" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/gun_rack/type71,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "CW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/belt/utility/full,
@@ -3150,6 +3147,15 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"DN" = (
+/obj/structure/surface/rack,
+/obj/item/device/motiondetector/hacked,
+/obj/item/ammo_magazine/sentry/upp,
+/obj/item/defenses/handheld/sentry/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "DW" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -3500,19 +3506,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
-"GT" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
-/obj/item/device/motiondetector/hacked,
-/obj/item/defenses/handheld/sentry/upp,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "GU" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/strata{
@@ -3666,27 +3659,6 @@
 "IS" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/dorms)
-"IW" = (
-/obj/structure/closet/secure_closet{
-	req_access_txt = "243;237";
-	name = "machinegunner locker"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/storage/belt/gun/smartgunner/upp,
-/obj/item/storage/belt/marine/smartgunner/upp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "Jc" = (
 /obj/effect/landmark/start/bridge/upp,
 /turf/open/floor/strata{
@@ -4230,6 +4202,16 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"OR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper/crumpled/bloody{
+	pixel_y = 6
+	},
+/obj/item/attachable/bayonet/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "OX" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -4459,12 +4441,11 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
-"RM" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper/crumpled/bloody{
-	pixel_y = 6
+"RF" = (
+/obj/structure/machinery/light{
+	dir = 1
 	},
-/obj/item/attachable/bayonet/upp,
+/obj/structure/gun_rack/type71/unloaded,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4845,16 +4826,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
-"VE" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/light,
-/obj/item/storage/pouch/shotgun/large,
-/obj/item/storage/belt/marine/smartgunner/upp/shotgun,
-/obj/item/weapon/gun/shotgun/type23/pve,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "VH" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -5298,6 +5269,27 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"ZQ" = (
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;237";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "ZU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -12525,7 +12517,7 @@ tZ
 tZ
 tZ
 ei
-RM
+OR
 dU
 dU
 dU
@@ -12829,11 +12821,11 @@ kb
 ic
 Jc
 ww
-CU
+RF
 dU
 Ef
 dU
-AU
+Bi
 ww
 QF
 hq
@@ -12841,11 +12833,11 @@ hq
 vf
 vW
 NU
-pw
+tS
 Hp
 XL
 Hp
-VE
+jV
 CM
 Gt
 Qr
@@ -12981,11 +12973,11 @@ TB
 VP
 TB
 ww
-IW
+ZQ
 dU
 MH
 dU
-yu
+DN
 ww
 LL
 vW
@@ -12993,11 +12985,11 @@ es
 Rm
 vW
 NU
-bw
+ud
 Hp
 Jt
 Hp
-GT
+gl
 CM
 Tz
 Qr
@@ -14668,7 +14660,7 @@ BK
 BK
 wH
 VL
-fC
+vi
 iO
 bC
 CJ
