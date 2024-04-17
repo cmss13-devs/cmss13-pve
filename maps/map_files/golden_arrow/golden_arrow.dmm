@@ -3000,6 +3000,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"lk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/vehicle_spawner/apc_movie/fixed{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "lm" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -3635,6 +3644,9 @@
 /area/golden_arrow/cryo_cells)
 "nv" = (
 /obj/structure/surface/table/almayer,
+/obj/item/hardpoint/support/flare_launcher{
+	pixel_y = 11
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -10999,6 +11011,13 @@
 "QE" = (
 /turf/open/shuttle/elevator/grating,
 /area/golden_arrow/supply)
+"QG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/hardpoint/locomotion/apc_wheels,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "QH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
@@ -30427,11 +30446,11 @@ EG
 EG
 EG
 dz
-cC
+QG
 lH
 VD
 cC
-cC
+lk
 cC
 VD
 wa
