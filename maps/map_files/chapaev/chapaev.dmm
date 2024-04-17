@@ -1040,6 +1040,13 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -2805,6 +2812,13 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /obj/item/storage/pouch/shotgun/large,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/weapon/gun/shotgun/type23/pve,
 /turf/open/floor/strata{
 	icon_state = "floor2"
