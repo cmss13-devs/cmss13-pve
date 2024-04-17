@@ -1,0 +1,9 @@
+{
+    "map_name": "USS Heyst",
+    "map_path": "map_files/heyst",
+    "map_file": "heyst.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow/",
+    "platoon": "/datum/squad/marine/alpha"
+}
