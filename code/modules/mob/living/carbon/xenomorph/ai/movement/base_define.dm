@@ -84,16 +84,16 @@
 	var/list/patrol_points = moving_xeno.patrol_points
 	var/atom/move_target = patrol_points[1]
 
-	if(get_dist(move_target, moving_xeno) <= 1)
-		var/patrol_lenght = length(patrol_points)
-		if(patrol_lenght < 2)
+	if(get_dist(move_target, moving_xeno) <= moving_xeno.min_travel_distance)
+		var/patrol_length = length(patrol_points)
+		if(patrol_length < 2)
 			/// Less than two means it's just a "oneway" move order
 			patrol_points -= move_target
 			return
 
 		/// Simple sequence of swaps to move our first point to the end of list
 		patrol_points.Swap(1, 2)
-		patrol_points.Swap(2, patrol_lenght)
+		patrol_points.Swap(2, patrol_length)
 
 		move_target = patrol_points[1]
 

@@ -25,7 +25,7 @@ GLOBAL_LIST_EMPTY(ai_hives)
 /datum/component/ai_behavior_override/hive/Destroy(force, silent, ...)
 	GLOB.ai_hives -= src
 
-	if(!LAZYLEN(GLOB.ai_hives))
+	if(!length(GLOB.ai_hives))
 		GLOB.ai_capture_crit = FALSE
 		message_admins("AI kidnapping feature was disabled because all suitable hives are destroyed.")
 

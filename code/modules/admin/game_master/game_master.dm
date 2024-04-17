@@ -163,7 +163,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	// Behavior stuff
 	data["selected_behavior"] = selected_behavior
 	data["behavior_click_intercept"] = behavior_click_intercept
-	data["behavior_lifespan"] = behavior_lifespan
+	data["behavior_lifespan"] = behavior_lifespan / 10
 
 	// Objective stuff
 	data["objective_click_intercept"] = objective_click_intercept
@@ -246,7 +246,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		//Behavior Section
 		if("set_behavior_lifespan")
 			var/new_number = text2num(params["lifespan_value"])
-			behavior_lifespan = clamp(new_number, -1, 600)
+			behavior_lifespan = clamp(new_number, -1, 600) SECONDS
 			return
 
 		if("set_selected_behavior")
@@ -388,7 +388,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			if(LAZYACCESS(modifiers, RIGHT_CLICK))
 				if(LAZYACCESS(modifiers, CTRL_CLICK))
-					object.AddComponent(behavior_type, behavior_lifespan SECONDS)
+					object.AddComponent(behavior_type, behavior_lifespan)
 					if(!LAZYLEN(controlled_xenos))
 						return TRUE
 
@@ -399,7 +399,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					behavior.search_assign = FALSE
 					var/list/currently_assigned = behavior.currently_assigned
 					for(var/mob/living/carbon/xenomorph/assigned_xeno as anything in controlled_xenos)
-						if(LAZYLEN(currently_assigned) >= behavior.max_assigned)
+						if(length(currently_assigned) >= behavior.max_assigned)
 							break
 
 						deselect_xeno(assigned_xeno)
@@ -417,7 +417,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				return TRUE
 
 			if(LAZYACCESS(modifiers, ALT_CLICK))
-				for(var/atom/selected_xeno in GLOB.xeno_mob_list)
+				for(var/atom/selected_xeno as anything in GLOB.xeno_mob_list)
 					if(selected_xeno.z != game_master_client.mob.z)
 						continue
 					select_xeno(selected_xeno)
@@ -531,7 +531,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 /datum/game_master/proc/select_xeno(selected_xeno)
 	RegisterSignal(selected_xeno, COMSIG_PARENT_QDELETING, PROC_REF(deselect_xeno), TRUE)
 	controlled_xenos |= selected_xeno
-	if(controlled_xenos?[selected_xeno])
+	if(controlled_xenos[selected_xeno])
 		return
 
 	var/image/selection_image = new('icons/effects/game_master_xeno_behaviors.dmi', selected_xeno, "selected", layer = ABOVE_FLY_LAYER)
@@ -574,6 +574,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #undef DEFAULT_BEHAVIOR_STRING
 #undef SELECTABLE_XENO_BEHAVIORS
 #undef SELECTABLE_XENO_BEHAVIORS_ASSOC
+
+#undef DEFAULT_BEHAVIOR_LIFE_SPAN
 
 #undef SPAWN_CLICK_INTERCEPT_ACTION
 #undef OBJECTIVE_CLICK_INTERCEPT_ACTION

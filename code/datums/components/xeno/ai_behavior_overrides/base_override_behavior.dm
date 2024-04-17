@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	var/image/behavior_image
 
 	/// The xenos currently handling this task
-	var/currently_assigned
+	var/list/currently_assigned = list()
 
 	/// How many xenos we want assigned to this task at max
 	var/max_assigned = 3
@@ -20,7 +20,7 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	/// Should we try and find new xenos for this override, or stick to currently assigned
 	var/search_assign = TRUE
 
-/datum/component/ai_behavior_override/Initialize(...)
+/datum/component/ai_behavior_override/Initialize(delete_timer = 0)
 	. = ..()
 
 	GLOB.all_ai_behavior_overrides += src
@@ -31,11 +31,8 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 	for(var/client/game_master in GLOB.game_masters)
 		game_master.images |= behavior_image
 
-	var/delete_timer = args[1]
-	if(delete_timer && delete_timer > 0)
+	if(delete_timer > 0)
 		QDEL_IN(src, delete_timer)
-
-	currently_assigned = list()
 
 /datum/component/ai_behavior_override/Destroy(force, silent, ...)
 	GLOB.all_ai_behavior_overrides -= src
@@ -75,8 +72,8 @@ GLOBAL_LIST_EMPTY(all_ai_behavior_overrides)
 
 /datum/component/ai_behavior_override/proc/remove_from_queue(mob/removed_xeno)
 	SIGNAL_HANDLER
-	LAZYREMOVE(currently_assigned, removed_xeno)
+	currently_assigned -= removed_xeno
 	UnregisterSignal(removed_xeno, COMSIG_PARENT_QDELETING)
 
-	if(!search_assign && !LAZYLEN(currently_assigned))
+	if(!search_assign && !length(currently_assigned))
 		qdel(src)

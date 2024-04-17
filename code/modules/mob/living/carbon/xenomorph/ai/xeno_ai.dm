@@ -12,6 +12,7 @@
 	var/no_path_found = FALSE
 	var/ai_range = 16
 	var/max_travel_distance = 24
+	var/min_travel_distance = 1
 
 	var/ai_timeout_time = 0
 	var/ai_timeout_period = 2 SECONDS
@@ -449,6 +450,6 @@
 	if(pulling)
 		return
 
-	INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, start_pulling), target)
+	INVOKE_ASYNC(src, PROC_REF(start_pulling), target)
 	face_atom(target)
 	swap_hand()
