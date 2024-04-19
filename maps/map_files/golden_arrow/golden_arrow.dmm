@@ -158,6 +158,18 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
+"aM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/storage{
+	pixel_x = -18;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = -18;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "aN" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -274,6 +286,13 @@
 "bf" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_y = -26
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = 14;
+	pixel_y = -26
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -2051,8 +2070,11 @@
 /area/golden_arrow/cryo_cells)
 "hT" = (
 /obj/structure/barricade/handrail,
-/obj/structure/prop/static_tank/fuel{
-	layer = 2.9
+/obj/structure/reagent_dispensers/fueltank{
+	layer = 2.9;
+	icon = 'icons/obj/structures/props/generic_props.dmi';
+	icon_state = "weldtank_old";
+	anchored = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -2434,6 +2456,16 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/strata_decals/grime/grime3,
+/obj/structure/largecrate/supply/ammo{
+	name = "materials crate";
+	fill_from_loc = 1
+	},
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/plasteel{
+	amount = 40;
+	pixel_x = 7;
+	pixel_y = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4410,6 +4442,13 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/two{
+	pixel_x = 14;
+	pixel_y = -26
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_y = -26
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "qP" = (
@@ -5942,26 +5981,6 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/structure/largecrate/supply/ammo{
-	pixel_y = 11;
-	name = "smoke grenades case";
-	fill_from_loc = 1
-	},
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8005,6 +8024,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
+"Fb" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = -18
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "Fe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -10180,6 +10205,14 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
+/obj/structure/sign/safety/storage{
+	pixel_x = -18;
+	pixel_y = -7
+	},
+/obj/structure/sign/safety/two{
+	pixel_x = -18;
+	pixel_y = 7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "Nn" = (
@@ -11528,9 +11561,6 @@
 	},
 /area/golden_arrow/hangar)
 "SI" = (
-/obj/structure/sign/safety/ammunition{
-	pixel_x = -18
-	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Squad One Equipment Locker";
 	id = "equipment_conny"
@@ -12203,20 +12233,31 @@
 	},
 /area/golden_arrow/cryo_cells)
 "Vb" = (
-/obj/structure/largecrate/supply/ammo{
-	name = "materials crate";
-	fill_from_loc = 1
-	},
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/plasteel{
-	amount = 40;
-	pixel_x = 7;
-	pixel_y = 6
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/largecrate/supply/ammo{
+	pixel_y = 11;
+	name = "smoke grenades case";
+	fill_from_loc = 1
+	},
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
+/obj/item/explosive/grenade/smokebomb,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -22682,12 +22723,12 @@ rI
 Nk
 VK
 Yr
-rI
+aM
 rI
 rI
 rI
 Yr
-Yr
+Fb
 Yr
 Ir
 ra
