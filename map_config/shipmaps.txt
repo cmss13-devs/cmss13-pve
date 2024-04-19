@@ -29,3 +29,6 @@ endmap
 
 map rover
 endmap
+
+map golden_arrow_classic
+endmap
