@@ -2051,8 +2051,8 @@
 /area/golden_arrow/cryo_cells)
 "hT" = (
 /obj/structure/barricade/handrail,
-/obj/structure/reagent_dispensers/fueltank{
-	layer = 2.97
+/obj/structure/prop/static_tank/fuel{
+	layer = 2.9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -9515,7 +9515,6 @@
 "KN" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/medical_pod/sleeper,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
