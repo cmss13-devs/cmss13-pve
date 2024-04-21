@@ -278,8 +278,8 @@
 	if(momentum > 0)
 		xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
 
-	noise_timer = noise_timer ? --noise_timer : 3
-	if(noise_timer == 3)
+	noise_timer = noise_timer ? --noise_timer : 4
+	if(noise_timer == 4)
 		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 100)
 
 		for(var/mob/living/carbon/human/Mob in range(14, xeno))
