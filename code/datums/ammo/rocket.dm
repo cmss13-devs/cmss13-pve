@@ -152,7 +152,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
-	damage = 25
+	damage = 200
 	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/M, obj/projectile/P)

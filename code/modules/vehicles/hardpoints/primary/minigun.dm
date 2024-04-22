@@ -6,13 +6,13 @@
 	disp_icon = "tank"
 	disp_icon_state = "ltaaap_minigun"
 
-	health = 350
+	health = 2000
 	firing_arc = 90
 
 	origins = list(0, -3)
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/ltaaap_minigun
-	max_clips = 1
+	max_clips = 2
 
 	px_offsets = list(
 		"1" = list(0, 21),
@@ -28,12 +28,12 @@
 		"8" = list(-77, 0)
 	)
 
-	scatter = 7
+	scatter = 3
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.8 SECONDS //base fire rate, modified by stage_delay_mult
+	fire_delay = 0.2 SECONDS //base fire rate, modified by stage_delay_mult
 
 	activation_sounds = list('sound/weapons/gun_minigun.ogg')
 	/// Active firing time to reach max spin_stage.

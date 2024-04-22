@@ -464,10 +464,17 @@
 				return
 			change_lead(user, params["ref"])
 
+		if("award_medal")
+			print_medal(user, src)
+			return
+
 		if("insubordination")
 			mark_insubordination()
+			return
+
 		if("transfer_marine")
 			transfer_squad()
+			return
 
 		if("change_locations_ignored")
 			switch(z_hidden)
@@ -905,6 +912,14 @@
 	faction = FACTION_TWE
 /obj/structure/machinery/computer/overwatch/freelance
 	faction = FACTION_FREELANCER
+
+/obj/structure/machinery/computer/overwatch/toc
+	name = "TOC Overwatch Console"
+	desc = "The Tactical Operations Center overwatch console. Many different screens make up the display."
+	icon = 'icons/obj/structures/machinery/toc.dmi'
+	icon_state = "toc"
+	bound_width = 64
+	bound_height = 32
 
 /obj/structure/supply_drop
 	name = "Supply Drop Pad"

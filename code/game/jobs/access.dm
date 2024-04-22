@@ -286,6 +286,19 @@
 				ACCESS_UPP_SENIOR_LEAD,
 			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
+		if(ACCESS_LIST_UPP_PLATOON)
+			return list(
+				ACCESS_UPP_GENERAL,
+				ACCESS_UPP_MEDICAL,
+				ACCESS_UPP_FLIGHT,
+				ACCESS_UPP_LEADERSHIP,
+				ACCESS_UPP_SENIOR_LEAD,
+				ACCESS_UPP_MEDPREP,
+				ACCESS_UPP_TLPREP,
+				ACCESS_UPP_MACHINEGUN
+			)
+
+
 /proc/get_region_accesses(code)
 	switch(code)
 		if(0)//Everything

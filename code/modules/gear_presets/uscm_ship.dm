@@ -545,13 +545,13 @@
 	role_comm_title = "PltCo"
 	minimum_age = 25
 	skills = /datum/skills/SO
-
 	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_MAIN)
+	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
@@ -564,8 +564,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/mod88(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/bridge(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
@@ -578,6 +578,28 @@
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	paygrade = "MO1"
+
+/datum/equipment_preset/uscm_ship/so/upp
+	name = "UPP Platoon Commander (PltCo)"
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
+	paygrade = "UO2"
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	access_list = ACCESS_LIST_UPP_PLATOON
+
+/datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/officer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
+
+/datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+	paygrade = "UO1"
 
 //*****************************************************************************************************/
 
@@ -731,6 +753,49 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pilot(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/po/recon
+	name = "USCM Reconnaissance Pilot"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	assignment = "Reconnaissance Pilot"
+
+	utility_under = list(/obj/item/clothing/under/marine/officer/pilot/flight)
+
+/datum/equipment_preset/uscm_ship/po/recon/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/satchel
+	var/obj/item/clothing/under/marine/officer/pilot/flight/uniform = new()
+	var/obj/item/clothing/suit/storage/jacket/marine/pilot/jacket = new()
+	var/obj/item/clothing/accessory/patch/patch_uscm = new()
+	var/obj/item/clothing/accessory/patch/forecon/patch_forecon = new()
+	uniform.attach_accessory(new_human,patch_uscm)
+	uniform.attach_accessory(new_human,patch_forecon)
+	jacket.attach_accessory(new_human,patch_uscm)
+	jacket.attach_accessory(new_human,patch_forecon)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(jacket, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/standard/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/OMinus(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/regular(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m1911/socom(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/bridge(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_FACE)
 
 //*****************************************************************************************************/
 

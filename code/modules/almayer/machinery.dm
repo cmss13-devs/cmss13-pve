@@ -89,10 +89,8 @@
 /obj/structure/machinery/prop/almayer/CICmap/Initialize()
 	. = ..()
 
-	if (faction == FACTION_MARINE)
-		map = new /datum/tacmap/drawing(src, minimap_type)
-	else
-		map = new(src, minimap_type) // Non-drawing version
+	map = new /datum/tacmap/drawing(src, minimap_type)
+
 
 /obj/structure/machinery/prop/almayer/CICmap/Destroy()
 	QDEL_NULL(map)
@@ -114,6 +112,11 @@
 /obj/structure/machinery/prop/almayer/CICmap/pmc
 	minimap_type = MINIMAP_FLAG_PMC
 	faction = FACTION_PMC
+
+/obj/structure/machinery/prop/almayer/CICmap/toc
+	name = "tactical map screen"
+	desc = "A screen on the TOC computer displaying the tactical map."
+	icon_state =  "toc_map"
 
 //Nonpower using props
 

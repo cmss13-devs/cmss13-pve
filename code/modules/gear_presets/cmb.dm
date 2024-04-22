@@ -418,7 +418,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrade = "ME2"
 	role_comm_title = "A-RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 	faction = FACTION_MARSHAL
 	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 
@@ -590,10 +590,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/bodybag/cryobag, WEAR_IN_BELT)
-	if(new_human.disabilities & NEARSIGHTED)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription, WEAR_EYES)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
@@ -639,4 +635,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/smartgunner/full/, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/headband/red, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision, WEAR_EYES)

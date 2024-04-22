@@ -174,6 +174,8 @@
 					rank = "SqSgt"
 				if(JOB_SQUAD_LEADER)
 					rank = "PltSgt"
+				if(JOB_SQUAD_RTO)
+					rank = "RTO"
 				else
 					rank = ""
 			squad_info_data["fireteams"][team]["sqsgt"] += list("rank" = rank)
@@ -251,6 +253,8 @@
 						rank = "SqSgt"
 					if(JOB_SQUAD_LEADER)
 						rank = "PltSgt"
+					if(JOB_SQUAD_RTO)
+						rank = "RTO"
 					else
 						rank = ""
 				if(H.rank_fallback)
@@ -298,6 +302,8 @@
 						rank = "SqSgt"
 					if(JOB_SQUAD_LEADER)
 						rank = "PltSgt"
+					if(JOB_SQUAD_RTO)
+						rank = "RTO"
 					else
 						rank = ""
 				mar[H.real_name] += list("rank" = rank)

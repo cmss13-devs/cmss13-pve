@@ -89,6 +89,12 @@
 	shell_speed = 2*AMMO_SPEED_TIER_6
 	accuracy = HIT_ACCURACY_TIER_5
 
+/datum/ammo/bullet/turret/upp
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_2
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_2
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_2
+
 /datum/ammo/bullet/turret/dumb
 	icon_state = "bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
@@ -171,6 +177,6 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 14
-	damage = 35
-	penetration= ARMOR_PENETRATION_TIER_6
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2

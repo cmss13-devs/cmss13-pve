@@ -62,6 +62,8 @@
 
 	can_be_near_defense = TRUE
 
+	var/start_up_message = "Default systems initiated."
+
 	/// Delay sending no ammo messages
 	COOLDOWN_DECLARE(no_ammo_message_cooldown)
 
@@ -237,7 +239,7 @@
 	set_light(luminosity_strength)
 
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] hums to life and emits several beeps.")]")
-	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: 'Default systems initiated'")]")
+	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: '[start_up_message]'")]")
 	start_processing()
 	setup_target_acquisition()
 
@@ -756,6 +758,26 @@
 		new /obj/item/stack/sheet/metal/medium_stack(loc)
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
+
+/obj/structure/machinery/defenses/sentry/upp
+	name = "\improper UPPA 32-H sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),
+	)
+
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

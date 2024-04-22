@@ -4,7 +4,7 @@
 
 /obj/item/clothing/under/marine
 	name = "\improper USCM uniform"
-	desc = "Standard-issue Marine uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
 	siemens_coefficient = 0.9
 	icon_state = "marine_jumpsuit"
 	worn_state = "marine_jumpsuit"
@@ -48,16 +48,22 @@
 		if(findtext(icon_state, i, 1, 3))
 			flags_jumpsuit |= UNIFORM_DO_NOT_HIDE_ACCESSORIES
 
+/obj/item/clothing/under/marine/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
-	desc = "Standard-issue Marine hospital corpsman fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Standard-issue Marine hospital corpsman fatigues with venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "marine_medic"
 	worn_state = "marine_medic"
 	specialty = "USCM Hospital Corpsman"
 
+/obj/item/clothing/under/marine/medic/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/under/marine/engineer
-	name = "\improper USCM ComTech uniform"
-	desc = "Standard-issue Marine combat technician fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	name = "\improper USCM combat technician uniform"
+	desc = "USCMC combat technician's fatigues, shielded by venlar panels and no longer electrically insulated due to 'budget reprioritization'."
 	icon_state = "marine_engineer"
 	worn_state = "marine_engineer"
 	specialty = "USCM Combat Technician"
@@ -72,7 +78,7 @@
 
 /obj/item/clothing/under/marine/rto
 	name = "\improper USCM radio telephone operator uniform"
-	desc = "Standard-issue RTO fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "The uniform of a USCMC radio-telephone operator. Venlar panels provide marginal protection from shrapnel and ballistics."
 	icon_state = "marine_rto"
 	item_state = "marine_rto"
 	specialty = "marine Radio Telephone Operator"
@@ -97,7 +103,7 @@
 
 /obj/item/clothing/under/marine/chef
 	name = "\improper USCM Mess Technician uniform"
-	desc = "Standard-issue Mess Technician uniform. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "The stain resistant uniform of a mess technician. Why the USCMC requires them to wear the venlar armor inserts is unknown."
 	icon_state = "chef_uniform"
 	worn_state = "chef_uniform"
 	flags_jumpsuit = FALSE
@@ -105,8 +111,8 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/mp
-	name = "military police jumpsuit"
-	desc = "Standard-issue Military Police uniform. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	name = "USCMC military police uniform"
+	desc = "Cut and stab resistant USCMC military police uniform. The venlar liner also offers marginal ballistic defense."
 	icon_state = "MP_jumpsuit"
 	worn_state = "MP_jumpsuit"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
@@ -123,7 +129,7 @@
 
 /obj/item/clothing/under/marine/warden
 	name = "military warden jumpsuit"
-	desc = "Standard-issue Military Warden uniform. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Military Police Warden's jumpsuit. Armored as per usual."
 	icon_state = "warden_jumpsuit"
 	worn_state = "warden_jumpsuit"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/warden)
@@ -133,7 +139,7 @@
 
 /obj/item/clothing/under/marine/officer
 	name = "marine officer uniform"
-	desc = "Softer than silk. Lighter than feather. More protective than Kevlar. Fancier than a regular jumpsuit, too. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Substantially comfier officer's uniform. Still has the protection of a sheet of paper against actual threats but at least you won't be uncomfortable while bleeding out."
 	icon_state = "officertanclothes"
 	item_state = "officertanclothes"
 	worn_state = "officertanclothes"
@@ -144,15 +150,15 @@
 
 /obj/item/clothing/under/marine/officer/intel
 	name = "\improper marine intelligence officer sweatsuit"
-	desc = "Tighter than a vice. Slicker than beard oil. Covered from head to toe in pouches, pockets, bags, straps, and belts. Clearly, you are not only the most intelligent of intelligence officers, but the most fashionable as well. This suit took an entire R&D team five days to develop. It is more expensive than the entire Almayer... probably."
+	desc = "Intelligence work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
 	icon_state = "io"
 	item_state = "io"
 	worn_state = "io"
 	specialty = "marine intelligence officer"
 
 /obj/item/clothing/under/marine/officer/warrant
-	name = "\improper chief MP uniform"
-	desc = "A uniform typically worn by a Chief MP of the USCM. It has shards of light Kevlar to help protect against stabbing weapons, bullets, and shrapnel from explosions. This uniform includes a small EMF distributor to help nullify energy-based weapon fire, along with a hazmat chemical filter woven throughout the material to ward off biological and radiation hazards."
+	name = "\improper USCM MP chief uniform"
+	desc = "USCMC Military Police Chief's uniform. Alongside the standard armor panels, it has an uncomfortable energy dispersive polymer lining, and is also rated for low MOPP conditions."
 	icon_state = "WO_jumpsuit"
 	item_state = "WO_jumpsuit"
 	worn_state = "WO_jumpsuit"
@@ -170,7 +176,7 @@
 
 /obj/item/clothing/under/marine/officer/pilot
 	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, and is meant for survival in inhospitable conditions. Fly the marines onwards to glory. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
 	icon_state = "pilot_flightsuit"
 	item_state = "pilot_flightsuit"
 	worn_state = "pilot_flightsuit"
@@ -191,7 +197,7 @@
 
 /obj/item/clothing/under/marine/officer/pilot/dcc
 	name = "dropship crew chief bodysuit"
-	desc = "A bodysuit worn by dropship crew chiefs of the USCM, and is meant for survival in inhospitable conditions. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Dropship crew chief's bodysuit. The program that procured the latest line for some reason implemented a dozen odd survival features into it, which all don't really work. It also accepts standard venlar panels."
 	icon_state = "crewchief_flightsuit"
 	item_state = "crewchief_flightsuit"
 	worn_state = "crewchief_flightsuit"
@@ -200,7 +206,7 @@
 
 /obj/item/clothing/under/marine/officer/tanker
 	name = "vehicle crewman uniform"
-	desc = "A uniform worn by vehicle crewmen of the USCM. Do the corps proud. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Armored vehicle crew uniform worn by tankers and cav crew of the USCMC. Shrapnel protection provided by venlar panels, badassery hinges on how well the operator works their vehicle. Do the Corps proud."
 	icon_state = "marine_tanker"
 	worn_state = "marine_tanker"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/tanker, /obj/item/clothing/suit/storage/jacket/marine/service/tanker)
@@ -210,7 +216,7 @@
 
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"
-	desc = "A service uniform worn by members of the USCM. Do the corps proud. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Officer's uniform, a little outdated. Why it needs to be frag rated is beyond everyone."
 	icon_state = "BO_jumpsuit"
 	item_state = "BO_jumpsuit"
 	worn_state = "BO_jumpsuit"
@@ -220,7 +226,7 @@
 
 /obj/item/clothing/under/marine/officer/boiler
 	name = "marine operations uniform"
-	desc = "An operations uniform worn by members of the USCM. Do the corps proud. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "Officer's uniform, a little outdated."
 	icon_state = "uscmboiler"
 	item_state = "uscmboiler"
 	worn_state = "uscmboiler"
@@ -229,7 +235,7 @@
 
 /obj/item/clothing/under/marine/officer/command
 	name = "\improper USCM officer uniform"
-	desc = "The well-ironed utility uniform of a USCM officer. Even looking at it the wrong way could result in being court-martialed. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A USCMC commanding officer's uniform, custom cut for maximum comfort while staying within regulation."
 	icon_state = "CO_jumpsuit"
 	worn_state = "CO_jumpsuit"
 	specialty = "USCM officer"
@@ -244,7 +250,7 @@
 
 /obj/item/clothing/under/marine/officer/ce
 	name = "chief engineer uniform"
-	desc = "A uniform for a military engineer. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "The uniform of the chief engineer. Specially treated for hazardous conditions work, high density layers provide some level of radiation protection."
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	icon_state = "EC_jumpsuit"
@@ -255,7 +261,7 @@
 
 /obj/item/clothing/under/marine/officer/engi
 	name = "engineer uniform"
-	desc = "A uniform for a military engineer. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "The uniform of a maintenance technician. Specially treated for hazardous materials handing and hostile conditions."
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	icon_state = "mt_jumpsuit"
@@ -266,9 +272,9 @@
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/engi/OT
-	name = "ordnance engineer uniform"
-	desc = "A uniform for a professional bomb maker. It has shards of light Kevlar to help protect against stabbing weapons, bullets, and shrapnel from explosions. Padded with extra plates to take the brunt force of an explosion."
-	armor_bomb = CLOTHING_ARMOR_LOW
+	name = "ordnance technician uniform"
+	desc = "Ordinance technician's uniform. Improved protection from explosives and shrapnel provided by more extensive venlar coverage and hard bracing elements."
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	icon_state = "ot_jumpsuit"
 	worn_state = "ot_jumpsuit"
 	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
@@ -445,7 +451,7 @@
 
 /obj/item/clothing/under/marine/veteran/marsoc
 	name = "SOF Uniform"
-	desc = "A black uniform for elite Marine personnel. Designed to be comfortable and help blend into dark enviorments."
+	desc = "MARSOC standard uniform, in a dark camouflage pattern. Venlar liners provide slight protection from ballistics or blades."
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	icon_state = "marsoc"
 	worn_state = "marsoc"
@@ -1025,7 +1031,7 @@
 
 /obj/item/clothing/under/marine/veteran/royal_marine
 	name = "royal marines commando uniform"
-	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment"
+	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
 	icon_state = "rmc_uniform"
 	worn_state = "rmc_uniform"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
@@ -1038,7 +1044,7 @@
 
 /obj/item/clothing/under/marine/veteran/royal_marine/lt
 	name = "royal marines commando officers uniform"
-	desc = "The officers uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment"
+	desc = "The officers uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
 	icon_state = "rmc_uniform_lt"
 	worn_state = "rmc_uniform_lt"
 

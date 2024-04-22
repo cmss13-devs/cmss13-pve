@@ -7,7 +7,7 @@
 	disp_icon_state = "drgn_flamer"
 	activation_sounds = list('sound/weapons/vehicles/flamethrower.ogg')
 
-	health = 400
+	health = 2000
 	firing_arc = 90
 
 	origins = list(0, -3)

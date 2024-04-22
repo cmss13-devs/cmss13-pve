@@ -382,7 +382,7 @@
 
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the USS Hanyut, USCM FORECON."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
 /obj/item/clothing/accessory/patch/royal_marines
@@ -391,36 +391,53 @@
 	icon_state = "commandopatch"
 
 /obj/item/clothing/accessory/patch/upp
+	name = "UPP patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
+	icon_state = "upppatch"
+
+/obj/item/clothing/accessory/patch/upp/airborne
 	name = "UPP Airborne Reconnaissance patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
-	icon_state = "upppatch"
+	icon_state = "vdvpatch"
+
+/obj/item/clothing/accessory/patch/upp/platoon
+	name = "UPP Naval Infantry patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
+	icon_state = "navalpatch"
 
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
 	icon_state = "poncho"
 	slot = ACCESSORY_SLOT_PONCHO
+	var/has_variation = TRUE
 
 /obj/item/clothing/accessory/poncho/Initialize()
 	. = ..()
-	select_gamemode_skin(type)
-	inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
-	update_icon()
+	if(has_variation)
+		select_gamemode_skin(type)
+		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+		update_icon()
 
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/brown
 	icon_state = "d_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/black
 	icon_state = "u_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/blue
 	icon_state = "c_poncho"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/purple
 	icon_state = "s_poncho"
+	has_variation = FALSE
 
 
 //Ties that can store stuff
