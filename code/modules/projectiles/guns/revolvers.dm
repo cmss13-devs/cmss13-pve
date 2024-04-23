@@ -347,6 +347,9 @@
 	icon_state = "m44rc"
 	item_state = "m44rc"
 
+/obj/item/weapon/gun/revolver/m44/custom/mp //loadout w/ ammo
+	current_mag = /obj/item/ammo_magazine/internal/revolver/m44/marksman
+
 //----------------------------------------------
 // Blade Runner Blasters.
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special
@@ -736,7 +739,7 @@
 	return ..()
 
 /obj/item/weapon/gun/revolver/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17)
 
 /obj/item/weapon/gun/revolver/cmb/set_gun_config_values()
 	..()
@@ -750,4 +753,15 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
 /obj/item/weapon/gun/revolver/cmb/normalpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+
+//-------------------------------------------------------
+//MARINE REVOLVER //Spearhead exists in Alien cannon, this one is based on the Dark Descent model.
+
+/obj/item/weapon/gun/revolver/cmb/marine
+	name = "\improper SA .357 revolver"
+	desc = "An automatic revolver chambered in .357, recognizably similar to its civilian counterpart. In Limited Service with the USCM, typically provided to more veteran units."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "mspearhead"
+	item_state = "mspearhead"
 	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb

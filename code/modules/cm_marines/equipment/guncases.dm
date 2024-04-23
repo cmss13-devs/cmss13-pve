@@ -388,6 +388,23 @@
 	new /obj/item/ammo_magazine/revolver/marksman(src)
 	new /obj/item/ammo_magazine/revolver/marksman(src)
 
+//M44 Combat Revolver Custom
+/obj/item/storage/box/guncase/m44/custom
+	name = "\improper M44 Custom Revolver case"
+	desc = "A gun case containing an M44 Custom Revolver loaded with marksman ammo."
+	storage_slots = 7
+	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/revolver/m44/custom, /obj/item/ammo_magazine/revolver)
+
+/obj/item/storage/box/guncase/m44/fill_preset_inventory()
+	new /obj/item/attachable/flashlight(src)
+	new /obj/item/weapon/gun/revolver/m44/custom/mp(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+	new /obj/item/ammo_magazine/revolver/marksman(src)
+
 //M4A3 Service Pistol
 /obj/item/storage/box/guncase/m4a3
 	name = "\improper M4A3 Service Pistol case"
@@ -401,3 +418,20 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
+
+//SA .357 Service Revolver
+/obj/item/storage/box/guncase/cmb
+	name = "\improper SA .357 Service Revolver case"
+	desc = "A gun case containing an SA .357 Spearhead preloaded with standard ammunition."
+	storage_slots = 7
+	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/revolver/cmb/marine, /obj/item/ammo_magazine/revolver)
+
+/obj/item/storage/box/guncase/cmb/fill_preset_inventory()
+	new /obj/item/attachable/flashlight(src)
+	new /obj/item/weapon/gun/revolver/cmb/marine(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
