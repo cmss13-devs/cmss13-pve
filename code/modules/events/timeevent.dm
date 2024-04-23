@@ -104,7 +104,7 @@ GLOBAL_VAR(midway_dockingport)
 	sleep(3 SECONDS)
 	midway_area.base_lighting_alpha = 0
 	midway_area.update_base_lighting()
-	shipwide_ai_announcement("ALERT:\n Unknown energy pulse has hit Dropship Midway, engine power lost. Crash landing likely.", MAIN_AI_SYSTEM)
+	announcement_helper("ALERT:\n Unknown energy pulse has hit Dropship Midway, engine power lost. Crash landing likely.", MAIN_AI_SYSTEM, GLOB.human_mob_list, sound('sound/misc/interference.ogg'))
 	sleep(2 SECONDS)
 	for(var/datum/timeloop_save/save as anything in GLOB.timeloop_saves)
 		to_chat(save.relevant_mob, SPAN_WARNING("You feel the dropship's nose begin to pitch downwards as it enters freefall."))
