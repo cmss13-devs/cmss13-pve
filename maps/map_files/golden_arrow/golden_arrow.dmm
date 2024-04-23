@@ -4933,7 +4933,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/under/marine/officer/boiler,
+/obj/item/clothing/head/cmcap/bridge,
 /turf/open/floor/almayer{
 	dir = 4;
 	icon_state = "cargo_arrow"
