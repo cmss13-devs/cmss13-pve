@@ -6,6 +6,8 @@ GLOBAL_VAR(tdd_cell)
 GLOBAL_VAR_INIT(map_iteration, 1)
 GLOBAL_VAR(midway_dockingport)
 
+// <p>Hello, commander.<br><br>Your squad has been tasked with investigating a distress signal from an abandoned USCM outpost designated "Whiskey". The cause of the distress signal is unknown, considering the base was decommissioned years ago. Additionally, strange readings inconsistent with anything seen before have been reported emitting from the outpost. RADAR suggests the existence of an unknown shuttle west of the main outpost's defensive pads. <br><br>Investigate the outpost, find out what's happened, and extract any survivors if needed. To that end, ARES will be piloting the Midway for this operation.</p>
+
 /obj/docking_port/mobile/marine_dropship/midway/Initialize(mapload)
 	. = ..()
 	GLOB.midway_dockingport = src

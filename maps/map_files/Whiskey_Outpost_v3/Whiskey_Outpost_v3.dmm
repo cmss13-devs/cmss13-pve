@@ -503,7 +503,7 @@
 /area/whiskey_outpost/inside/hospital)
 "bE" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/paper/wy/xenoreport,
+/obj/item/paper/xenoreport,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -3525,10 +3525,10 @@
 /area/whiskey_outpost)
 "kB" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/smg/m39/elite{
+/obj/item/weapon/gun/smg/m39/elite/heap{
 	pixel_y = 4
 	},
-/obj/item/weapon/gun/smg/m39/elite{
+/obj/item/weapon/gun/smg/m39/elite/heap{
 	pixel_y = -8
 	},
 /turf/open/floor/corsat{
@@ -14555,7 +14555,7 @@
 /area/whiskey_outpost/inside/bunker)
 "WD" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/paper/wy/tdd_warning,
+/obj/item/paper/tdd_warning,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
