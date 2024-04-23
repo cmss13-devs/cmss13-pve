@@ -133,6 +133,8 @@ GLOBAL_VAR(midway_dockingport)
 	light_color = "#0ab42f"
 	light_power = 4
 	light_range = 3
+	indestructible = TRUE
+	unacidable = TRUE
 
 /obj/structure/tdd/get_examine_text(mob/user)
 	. = ..()
@@ -175,6 +177,7 @@ GLOBAL_VAR(midway_dockingport)
 	light_color = "#c51818"
 	light_power = 4
 	light_range = 3
+	indestructible = TRUE
 
 /obj/structure/machinery/nuclearbomb/emplaced/get_examine_text(mob/user)
 	. = ..()

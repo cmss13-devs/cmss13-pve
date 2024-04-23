@@ -20,3 +20,4 @@ SUBSYSTEM_DEF(timeloop)
 		return
 
 	revert_timeloop()
+	mainloop_timer_id = addtimer(CALLBACK(src, PROC_REF(loop)), looptime, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
