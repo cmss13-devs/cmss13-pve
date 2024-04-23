@@ -170,7 +170,7 @@ GLOBAL_VAR(midway_dockingport)
 	GLOB.timeloop_power = FALSE
 
 /obj/structure/machinery/nuclearbomb/emplaced
-	desc = "An armed nuclear self-destruct warhead, securely bolted, mounted, and welded onto the floor. Oh fuck."
+	desc = "An armed nuclear self-destruct warhead, securely bolted, mounted, and welded onto the floor. Looks entirely undisarmable. Oh fuck."
 	icon = 'icons/obj/structures/machinery/nuke.dmi'
 	icon_state = "nuke"
 	safety = FALSE
