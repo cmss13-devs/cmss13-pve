@@ -1267,6 +1267,12 @@
 	icon_state = "rasputin15"
 	},
 /area/golden_arrow/hangar)
+"eT" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "eW" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1693,6 +1699,15 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"gw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "gx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -2026,6 +2041,15 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"hK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "hL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -2960,13 +2984,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "lc" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/catwalk{
 	pixel_x = 2;
 	pixel_y = -9
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3604,6 +3628,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"nk" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "nl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3746,6 +3778,15 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonarmory)
+"nL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "nM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3832,10 +3873,10 @@
 	},
 /area/golden_arrow/hangar)
 "oa" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3945,11 +3986,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "oz" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 8
-	},
 /obj/structure/machinery/floodlight/landing/floor{
 	pixel_x = 3
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4273,6 +4314,14 @@
 	name = "\improper Tripoli"
 	},
 /area/golden_arrow/hangar)
+"pZ" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "qi" = (
 /obj/structure/machinery/cm_vending/gear/synth,
 /turf/open/floor/almayer,
@@ -4503,10 +4552,10 @@
 	},
 /area/golden_arrow/cryo_cells)
 "qU" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4598,11 +4647,11 @@
 	},
 /area/golden_arrow/cryo_cells)
 "ru" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 4
-	},
 /obj/structure/machinery/floodlight/landing/floor{
 	pixel_x = -2
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4618,6 +4667,15 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"rz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/golden_arrow/hangar)
 "rA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4896,6 +4954,13 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/platoonarmory)
+"sJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "sL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -4925,6 +4990,15 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/engineering)
+"sU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "sW" = (
 /obj/structure/closet/wardrobe{
 	name = "PT uniform"
@@ -4979,6 +5053,14 @@
 "tb" = (
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
+"tc" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
 "td" = (
@@ -5811,6 +5893,14 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
+"vJ" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "vK" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 8
@@ -6352,8 +6442,8 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "xF" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7045,8 +7135,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "AO" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7375,6 +7465,14 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"Cj" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -7458,6 +7556,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"CC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "CE" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/medical)
@@ -7584,10 +7691,10 @@
 	},
 /area/golden_arrow/hangar)
 "Dt" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -8029,6 +8136,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
+"Fd" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Fe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -8084,6 +8199,14 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
+"Fm" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Fn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -8155,6 +8278,14 @@
 /turf/open/floor/almayer{
 	dir = 8;
 	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
+"Fw" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
 "FA" = (
@@ -8507,6 +8638,12 @@
 /obj/structure/largecrate/supply/supplies/mre{
 	layer = 3.1
 	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
+"Hc" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -9630,10 +9767,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "Ld" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
 	},
-/obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -10062,6 +10199,12 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"MK" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "MM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/siding{
@@ -10354,6 +10497,13 @@
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "32";
 	name = "\improper Tripoli"
+	},
+/area/golden_arrow/hangar)
+"NO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer{
+	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
 "NQ" = (
@@ -10681,6 +10831,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"OV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "OW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -11832,15 +11991,15 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
 "TE" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 8
-	},
 /obj/item/stack/catwalk{
 	pixel_x = 4
 	},
 /obj/item/stack/catwalk{
 	pixel_x = -3;
 	pixel_y = 6
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -13281,6 +13440,14 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
 /area/golden_arrow/shared_office)
+"YM" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "YP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -26525,25 +26692,25 @@ ul
 OQ
 wC
 PA
-PA
-oa
-oa
-oa
-PA
-PA
-oa
-oa
+Fw
+CC
+gw
+rz
+Fw
+tc
+gw
+rz
 oa
 ru
+YM
+rz
+Fw
+tc
+gw
 PA
-oa
-PA
-PA
-oa
-PA
-PA
-PA
-PA
+Fw
+tc
+YM
 PA
 SH
 cB
@@ -26675,7 +26842,7 @@ Wa
 Wa
 ul
 OQ
-bT
+eT
 yX
 yX
 yX
@@ -26697,7 +26864,7 @@ yX
 yX
 yX
 yX
-nx
+Fm
 jN
 Wa
 Wa
@@ -26827,7 +26994,7 @@ JW
 zD
 nY
 OQ
-bT
+MK
 yX
 yX
 yX
@@ -26849,7 +27016,7 @@ yX
 yX
 yX
 yX
-nx
+nk
 jN
 cE
 KG
@@ -26979,7 +27146,7 @@ VD
 oR
 QC
 OQ
-xF
+NO
 yX
 yX
 yX
@@ -27283,7 +27450,7 @@ Wa
 cE
 Ff
 OQ
-bT
+eT
 yX
 yX
 yX
@@ -27305,7 +27472,7 @@ yX
 yX
 yX
 yX
-qU
+nL
 cB
 bR
 Th
@@ -27587,7 +27754,7 @@ Wa
 cE
 Ff
 OQ
-bT
+Hc
 yX
 yX
 yX
@@ -27761,7 +27928,7 @@ yX
 yX
 yX
 yX
-nx
+Cj
 cB
 VD
 bR
@@ -27891,7 +28058,7 @@ jY
 xY
 nY
 OQ
-xF
+sJ
 yX
 yX
 yX
@@ -27913,7 +28080,7 @@ yX
 yX
 yX
 yX
-nx
+Fm
 cB
 Wa
 Wa
@@ -28065,7 +28232,7 @@ yX
 yX
 yX
 yX
-nx
+Fm
 cB
 Wa
 Wa
@@ -28195,7 +28362,7 @@ aE
 QB
 MB
 OQ
-bT
+Hc
 yX
 yX
 yX
@@ -28217,7 +28384,7 @@ yX
 yX
 yX
 yX
-nx
+nk
 jN
 Wa
 Wa
@@ -28349,25 +28516,25 @@ MB
 OQ
 Gz
 ir
-ir
-Dt
-Dt
+vJ
+hK
+OV
 ir
 lc
 TE
-Dt
+OV
 ir
-ir
+vJ
 oz
-ir
+pZ
 Dt
+sU
+Fd
+pZ
 Dt
-ir
-ir
-Dt
-ir
-ir
-ir
+vJ
+Fd
+pZ
 ir
 lh
 cB
