@@ -365,7 +365,7 @@
 /area/lead_hawk/co)
 "el" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/belt/medical/lifesaver,
+/obj/item/device/helmet_visor/medical/advanced,
 /turf/open/floor/corsat{
 	dir = 5;
 	icon_state = "green"
@@ -547,12 +547,13 @@
 	name = "heavy weapons specialist locker";
 	req_access_txt = "209;217"
 	},
-/obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -1824,12 +1825,13 @@
 	name = "heavy weapons specialist locker";
 	req_access_txt = "208;217"
 	},
-/obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
 	icon_state = "plate"
