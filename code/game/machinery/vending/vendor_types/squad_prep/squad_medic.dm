@@ -378,6 +378,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
 /obj/structure/machinery/cm_vending/clothing/medic/pmc
 	name = "\improper PMC Medical Gear Rack"
+	icon_state = "pmc_gear"
 
 /obj/structure/machinery/cm_vending/clothing/medic/pmc/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_pmc_medic
