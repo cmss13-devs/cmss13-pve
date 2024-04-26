@@ -1218,8 +1218,6 @@
 "qb" = (
 /obj/structure/bed/chair/bolted{
 	dir = 8;
-	pixel_x = -7;
-	buckling_x = -7
 	},
 /turf/open/floor/prison,
 /area/adminlevel/ert_station/pizza)
@@ -3643,8 +3641,6 @@
 "VD" = (
 /obj/structure/bed/chair/bolted{
 	dir = 8;
-	pixel_x = -7;
-	buckling_x = -7
 	},
 /turf/open/floor/prison{
 	dir = 1;
