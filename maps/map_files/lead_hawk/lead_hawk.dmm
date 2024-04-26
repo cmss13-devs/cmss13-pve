@@ -550,9 +550,9 @@
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -669,6 +669,11 @@
 	},
 /obj/structure/machinery/light/spot{
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
 	},
 /turf/open/floor/corsat{
 	dir = 8;
@@ -818,6 +823,9 @@
 	icon_state = "arrow_south"
 	},
 /area/lead_hawk/cryo_cell)
+"jV" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/ptsgt)
 "jX" = (
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -906,6 +914,13 @@
 	icon_state = "green"
 	},
 /area/lead_hawk/medical)
+"kP" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/hand_labeler,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "kR" = (
 /obj/structure/largecrate/supply/ammo/m41a/extended,
 /obj/structure/largecrate/supply/ammo/m41a/extended{
@@ -1624,13 +1639,6 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
-"uX" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/weapon/gun/flamer/deathsquad/pve,
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lead_hawk/squad_theta)
 "vh" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -1819,9 +1827,9 @@
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -1873,12 +1881,9 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/ammo_magazine/flamer_tank/EX{
 	pixel_y = 7;
-	pixel_x = 7
-	},
-/obj/item/ammo_magazine/flamer_tank/EX{
-	pixel_y = 7;
 	pixel_x = -2
 	},
+/obj/item/weapon/gun/flamer/deathsquad/pve,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -1990,6 +1995,17 @@
 "yV" = (
 /turf/open/floor/plating,
 /area/lead_hawk/hangar)
+"yX" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "zj" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -2059,6 +2075,10 @@
 /area/lead_hawk/medical)
 "Aa" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/ammo_magazine/flamer_tank/EX{
+	pixel_y = 7;
+	pixel_x = 7
+	},
 /obj/item/weapon/gun/flamer/deathsquad/pve,
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -2213,6 +2233,13 @@
 	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"Cr" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/wingfangchu,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/lead_hawk/cafeteria)
 "Cu" = (
@@ -2584,17 +2611,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
-"Ge" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/ammo_magazine/flamer_tank/EX,
-/obj/item/ammo_magazine/flamer_tank/EX{
-	pixel_y = 7;
-	pixel_x = 7
-	},
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lead_hawk/squad_omega)
 "Gg" = (
 /obj/structure/window/framed/corsat/indestructible,
 /turf/open/floor/plating,
@@ -2788,6 +2804,13 @@
 	icon_state = "red"
 	},
 /area/lead_hawk/computer)
+"IL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/omelette,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "IN" = (
 /obj/structure/closet/crate/construction,
 /obj/item/stack/sandbags_empty/full,
@@ -2804,6 +2827,13 @@
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
+"Jh" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/eggplantparm,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "Jl" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat{
@@ -2949,16 +2979,6 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/computer)
-"Me" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 28
-	},
-/turf/open/floor/corsat{
-	icon_state = "squares"
-	},
-/area/lead_hawk/hangar)
 "Mf" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/pmc
@@ -3062,6 +3082,13 @@
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
+"Oc" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/milosoup,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
 "Of" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/prop/helmetgarb/compass{
@@ -3840,6 +3867,9 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
+"Xm" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/co)
 "Xr" = (
 /turf/open/floor/corsat{
 	dir = 9;
@@ -4001,6 +4031,16 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"YA" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/packaged_burrito{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
 "YB" = (
 /obj/structure/largecrate/machine/recycler,
 /turf/open/floor/corsat{
@@ -9050,15 +9090,15 @@ ku
 ku
 ku
 ku
-lC
+jV
 aO
 BB
 aV
 aV
-rK
-Me
+ew
 Bu
-zj
+Bu
+Bu
 JP
 iy
 iy
@@ -9202,12 +9242,12 @@ JA
 EN
 Gc
 ei
-ku
+Xm
 ew
 ew
 KV
 yn
-rK
+ew
 wW
 AE
 iy
@@ -9658,7 +9698,7 @@ ei
 ei
 ei
 ei
-ku
+Xm
 ew
 ew
 hs
@@ -9810,9 +9850,9 @@ ei
 xg
 ei
 ei
-ku
+Xm
 PA
-rK
+ew
 FJ
 YT
 Bu
@@ -9958,12 +9998,12 @@ gR
 gR
 ku
 ku
-ku
+Xm
 fN
 hF
-ku
-Vb
-Vb
+Xm
+Ke
+Ke
 Ke
 au
 Bu
@@ -12099,12 +12139,12 @@ rg
 rg
 uE
 Qt
-JJ
-JJ
+IL
+yX
 PG
 uE
 RC
-JJ
+Cr
 FV
 TJ
 jv
@@ -12553,7 +12593,7 @@ Wb
 lc
 lj
 SA
-QE
+Oc
 QE
 nm
 uE
@@ -12706,12 +12746,12 @@ lc
 XS
 SA
 QE
-QE
+kP
 nm
 uE
 RC
 JJ
-JJ
+YA
 PG
 FV
 Wt
@@ -13159,7 +13199,7 @@ FV
 vR
 jX
 DK
-JJ
+Jh
 fQ
 cD
 cD
@@ -13756,8 +13796,8 @@ gR
 gR
 gR
 wz
-wz
-wz
+DZ
+DZ
 pR
 DZ
 tc
@@ -14211,7 +14251,7 @@ fr
 eL
 tv
 aj
-wz
+DZ
 CO
 AM
 wn
@@ -14363,8 +14403,8 @@ fr
 fU
 Ny
 rO
-fr
-fr
+Tu
+Tu
 qE
 tc
 tc
@@ -14694,7 +14734,7 @@ QN
 TW
 It
 It
-Ge
+TW
 rA
 gR
 gR
@@ -14964,8 +15004,8 @@ gR
 ZR
 KC
 fr
-TD
 ED
+TD
 ED
 lB
 kY
@@ -14978,7 +15018,7 @@ tc
 vI
 QK
 nr
-uX
+Mi
 xA
 mH
 eo
@@ -15126,12 +15166,12 @@ LW
 Ea
 LW
 Ok
-tc
-tc
-tc
-tc
-tc
-tc
+QH
+QH
+QH
+QH
+QH
+QH
 mH
 Ys
 Ys
@@ -15271,14 +15311,14 @@ fr
 lB
 lB
 bU
-Tu
+fr
 kY
 yA
 LW
 LW
 LW
 dA
-Tu
+fr
 gR
 gR
 gR
@@ -15423,14 +15463,14 @@ CK
 Vr
 CK
 oj
-Tu
+fr
 Ao
 Cl
 Cl
 Cl
 Cl
 IJ
-Tu
+fr
 gR
 gR
 gR
@@ -15575,14 +15615,14 @@ ZR
 ZR
 ZR
 ZR
-Tu
+fr
 fE
-Tu
+fr
 Gy
 Gy
-Tu
-Tu
-Tu
+fr
+fr
+fr
 gR
 gR
 gR
@@ -15727,12 +15767,12 @@ gR
 gR
 gR
 gR
-Tu
-Tu
-Tu
+fr
+fr
+fr
 Tz
 Tz
-Tu
+fr
 gR
 gR
 gR

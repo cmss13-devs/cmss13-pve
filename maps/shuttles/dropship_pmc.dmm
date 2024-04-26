@@ -149,6 +149,11 @@
 	icon_state = "24"
 	},
 /area/shuttle/pmc)
+"mK" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "70"
+	},
+/area/shuttle/pmc)
 "po" = (
 /turf/closed/shuttle/pmc/transparent{
 	icon_state = "26"
@@ -245,6 +250,11 @@
 	icon_state = "89"
 	},
 /area/shuttle/pmc)
+"yv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "72"
+	},
+/area/shuttle/pmc)
 "zh" = (
 /obj/structure/shuttle/part/dropshippmc/transparent/left_outer_bottom_wing,
 /turf/template_noop,
@@ -308,6 +318,11 @@
 	icon_state = "29"
 	},
 /area/shuttle/pmc)
+"DU" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "71"
+	},
+/area/shuttle/pmc)
 "DZ" = (
 /turf/closed/shuttle/pmc/transparent{
 	icon_state = "88"
@@ -336,7 +351,8 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/dropship_weapons/midway{
-	shuttle_tag = "dropship_pmc"
+	shuttle_tag = "dropship_pmc";
+	name = "\improper 'Orphan Stomper' weapons controls"
 	},
 /turf/open/shuttle/vehicle/med,
 /area/shuttle/pmc)
@@ -455,6 +471,11 @@
 	icon_state = "38"
 	},
 /area/shuttle/pmc)
+"RA" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "69"
+	},
+/area/shuttle/pmc)
 "Sw" = (
 /turf/closed/shuttle/pmc/transparent{
 	icon_state = "35"
@@ -550,6 +571,11 @@
 /obj/structure/shuttle/part/dropshippmc/transparent/nose_center,
 /turf/template_noop,
 /area/shuttle/pmc)
+"ZN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "63"
+	},
+/area/shuttle/pmc)
 
 (1,1,1) = {"
 TN
@@ -577,8 +603,8 @@ TN
 TN
 AN
 xz
-HW
-HW
+yv
+ZN
 UU
 lo
 tv
@@ -697,9 +723,9 @@ TN
 TN
 bM
 Vk
-zk
-zk
-zk
+DU
+mK
+RA
 lo
 Iv
 zK
