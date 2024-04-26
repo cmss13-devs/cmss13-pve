@@ -70,5 +70,8 @@ endmap
 map derelict_almayer
 endmap
 
+map derelict_conestoga
+endmap
+
 map whiskey_outpost_v2
 endmap

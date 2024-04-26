@@ -1,0 +1,18 @@
+{
+    "map_name": "Derelict Conestoga",
+    "map_path": "map_files/derelict_conestoga",
+    "map_file": "derelict_conestoga.dmm",
+    "webmap_url": "Almayer",
+    "map_item_type": "/obj/item/map/almayer",
+    "announce_text": "An automated distress signal has been received from a Conestoga-class Light Assault Starship. A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "traits": [{ "Ground": true }],
+    "nightmare_path": "maps/Nightmare/maps/derelict_conestoga/",
+    "camouflage": "jungle",
+	"gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
