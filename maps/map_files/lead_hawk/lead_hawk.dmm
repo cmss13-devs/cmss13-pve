@@ -172,6 +172,15 @@
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
+"bL" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "bM" = (
 /turf/open/floor/corsat{
 	icon_state = "green"
@@ -542,6 +551,18 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
+"gJ" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "gO" = (
 /obj/structure/closet/secure_closet{
 	name = "heavy weapons specialist locker";
@@ -553,6 +574,7 @@
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
@@ -576,6 +598,15 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/cryo_cell)
+"he" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "hk" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -622,6 +653,15 @@
 /obj/structure/bed/sofa/south/white/left,
 /turf/open/floor/corsat{
 	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"hw" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
 	},
 /area/lead_hawk/hangar)
 "hA" = (
@@ -690,6 +730,15 @@
 	icon_state = "marked"
 	},
 /area/lead_hawk/briefing)
+"ii" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "ip" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 8;
@@ -724,7 +773,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
 /turf/open/floor/corsat{
@@ -853,6 +902,15 @@
 /obj/item/tool/hand_labeler,
 /turf/open/floor/carpet,
 /area/lead_hawk/briefing)
+"kj" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "ku" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk/co)
@@ -1113,7 +1171,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
 /turf/open/floor/corsat{
@@ -1468,6 +1526,12 @@
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
+"sb" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "se" = (
 /obj/structure/pipes/standard/manifold/visible/purple{
 	dir = 4
@@ -1735,6 +1799,15 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/squad_theta)
+"vU" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "vW" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -1831,6 +1904,7 @@
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat{
@@ -1929,7 +2003,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
 /turf/open/floor/corsat{
@@ -2101,6 +2175,18 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/medical)
+"Ag" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "Ao" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -2258,7 +2344,6 @@
 	dir = 1;
 	pixel_y = 2
 	},
-/obj/item/clothing/shoes/marine,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -2281,6 +2366,12 @@
 /obj/structure/pipes/standard/simple/visible/purple,
 /turf/open/floor/plating,
 /area/lead_hawk/computer)
+"CM" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "CO" = (
 /obj/structure/closet/l3closet/scientist,
 /turf/open/floor/corsat{
@@ -2705,7 +2796,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
 /turf/open/floor/corsat{
@@ -2840,6 +2931,15 @@
 	icon_state = "yellow"
 	},
 /area/lead_hawk/engineer)
+"Jt" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "JA" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -2914,6 +3014,15 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/medical)
+"Kw" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "Kx" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/corsat{
@@ -3141,6 +3250,18 @@
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
+"OI" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "OJ" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -3181,7 +3302,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
 	},
 /turf/open/floor/corsat{
@@ -3242,6 +3363,15 @@
 	icon_state = "w-y2"
 	},
 /area/lead_hawk/cryo_cell)
+"Px" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "PA" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -3450,7 +3580,6 @@
 	dir = 1;
 	pixel_y = 2
 	},
-/obj/item/clothing/shoes/marine/knife,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -3830,6 +3959,12 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/squad_omega)
+"Wh" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
 "Wt" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
@@ -9557,23 +9692,23 @@ zG
 MJ
 xX
 wB
+Px
+ii
+Kw
 wB
+Px
+ii
+Kw
 wB
+Px
+ii
+Kw
 wB
+Px
+ii
+Kw
 wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
-wB
+Px
 Pb
 Hx
 hr
@@ -9706,7 +9841,7 @@ YT
 Bu
 Bu
 Bu
-BF
+Wh
 yV
 yV
 yV
@@ -9858,7 +9993,7 @@ YT
 Bu
 Bu
 Bu
-BF
+CM
 yV
 yV
 yV
@@ -9880,7 +10015,7 @@ yV
 yV
 yV
 yV
-rD
+vU
 Bu
 rK
 gR
@@ -10032,7 +10167,7 @@ yV
 yV
 yV
 yV
-rD
+bL
 Bu
 rK
 gR
@@ -10162,7 +10297,7 @@ fl
 Bu
 Bu
 rK
-BF
+sb
 yV
 yV
 yV
@@ -10184,7 +10319,7 @@ yV
 yV
 yV
 yV
-rD
+hw
 vx
 rK
 gR
@@ -10314,7 +10449,7 @@ Bu
 Bu
 fl
 Uw
-BF
+Wh
 yV
 yV
 yV
@@ -10466,7 +10601,7 @@ Bu
 Bu
 fl
 Ns
-BF
+CM
 yV
 yV
 yV
@@ -10488,7 +10623,7 @@ yV
 yV
 yV
 yV
-rD
+vU
 bj
 rK
 gR
@@ -10640,7 +10775,7 @@ yV
 yV
 yV
 yV
-rD
+bL
 vx
 rK
 gR
@@ -10770,7 +10905,7 @@ KB
 Bu
 Bu
 JP
-BF
+sb
 yV
 yV
 yV
@@ -10792,7 +10927,7 @@ yV
 yV
 yV
 yV
-rD
+hw
 oE
 rK
 gR
@@ -10922,7 +11057,7 @@ RE
 iU
 Bu
 Bu
-BF
+Wh
 yV
 yV
 yV
@@ -11074,7 +11209,7 @@ gc
 Bu
 Bu
 Bu
-BF
+CM
 yV
 yV
 yV
@@ -11096,7 +11231,7 @@ yV
 yV
 yV
 yV
-rD
+vU
 Bu
 rK
 gR
@@ -11248,7 +11383,7 @@ yV
 yV
 yV
 yV
-rD
+bL
 Bu
 TY
 gR
@@ -11380,24 +11515,24 @@ Bu
 mV
 iy
 nz
+kj
+he
 yM
-yM
-yM
+gJ
+Ag
+OI
 Ek
-Ek
-Ek
-Ek
-Ek
+gJ
+kj
+he
 yM
+Jt
+kj
+he
 yM
-yM
-yM
-yM
-yM
-yM
-yM
-yM
-yM
+Jt
+kj
+he
 Au
 iH
 hB
