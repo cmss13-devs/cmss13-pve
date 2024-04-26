@@ -482,20 +482,6 @@
 /obj/structure/platform/kutjevo/smooth,
 /turf/open/space,
 /area/space)
-"fg" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "\improper Umbillical Airlock";
-	id = "pizza_ert_arrival"
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/adminlevel/ert_station/pizza)
 "fj" = (
 /obj/structure/sign/safety/nonpress_0g{
 	pixel_x = 32
@@ -643,13 +629,6 @@
 	dir = 8
 	},
 /area/adminlevel/ert_station/pizza)
-"hv" = (
-/obj/structure/barricade/handrail/sandstone{
-	color = "#b51c0b";
-	name = "diner handrail"
-	},
-/turf/open/space/basic,
-/area/space)
 "hL" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -1470,6 +1449,20 @@
 	pixel_x = -3
 	},
 /turf/open/floor/diner/white_red,
+/area/adminlevel/ert_station/pizza)
+"sY" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Umbillical Airlock";
+	id = "pizza_ert_arrival"
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/adminlevel/ert_station/pizza)
 "td" = (
 /obj/structure/disposalpipe/segment{
@@ -2296,11 +2289,15 @@
 /turf/open/floor/diner/white_red,
 /area/adminlevel/ert_station/pizza)
 "EZ" = (
-/obj/structure/barricade/handrail/sandstone{
-	color = "#FCFBF4"
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Umbillical Airlock";
+	id = "pizza_ert_arrival"
 	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/adminlevel/ert_station/pizza)
 "Fd" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/tray{
@@ -3403,16 +3400,6 @@
 	name = "diner handrail"
 	},
 /turf/open/floor/diner/white_red,
-/area/adminlevel/ert_station/pizza)
-"Tu" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "\improper Umbillical Airlock";
-	id = "pizza_ert_arrival"
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
 /area/adminlevel/ert_station/pizza)
 "TC" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer,
@@ -5228,11 +5215,11 @@ oG
 EO
 zf
 zf
-fg
+sY
 Ep
 zf
 zf
-Tu
+EZ
 KY
 Ya
 Ya
@@ -5662,11 +5649,11 @@ zE
 im
 im
 im
-fg
+sY
 OS
 im
 NN
-Tu
+EZ
 KY
 Ya
 Ya
@@ -5912,7 +5899,7 @@ ZR
 Xj
 QN
 Yy
-EZ
+Yy
 Yy
 Sr
 Sr
@@ -6035,7 +6022,7 @@ nf
 nf
 wX
 QN
-hv
+Yy
 Yy
 Yy
 Yy
