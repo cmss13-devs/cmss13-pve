@@ -2497,20 +2497,18 @@
 	},
 /area/lead_hawk/engineer)
 "EN" = (
+/obj/structure/machinery/prop/almayer/CICmap/pmc{
+	icon_state = "shuttle";
+	dir = 4;
+	pixel_x = -17;
+	pixel_y = 14;
+	layer = 2.98;
+	name = "Tactical Map Display"
+	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
 	network = list("Golden Arrow","Vehicle","Midway");
 	pixel_x = -17
-	},
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	dir = 4;
-	icon_state = "shuttle";
-	layer = 2.97;
-	name = "Tactical Map Display";
-	pixel_x = -17;
-	pixel_y = 14;
-	faction = "PMC"
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
