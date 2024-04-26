@@ -131,7 +131,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/door/airlock/multi_tile/diner,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -486,11 +486,12 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/obj/structure/machinery/door/airlock/multi_tile/diner,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "\improper Umbillical Airlock";
 	id = "pizza_ert_arrival"
 	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -1039,7 +1040,7 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/obj/structure/machinery/door/airlock/multi_tile/diner,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -1217,7 +1218,7 @@
 /area/adminlevel/ert_station/pizza)
 "qb" = (
 /obj/structure/bed/chair/bolted{
-	dir = 8;
+	dir = 8
 	},
 /turf/open/floor/prison,
 /area/adminlevel/ert_station/pizza)
@@ -1469,20 +1470,6 @@
 	pixel_x = -3
 	},
 /turf/open/floor/diner/white_red,
-/area/adminlevel/ert_station/pizza)
-"sY" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/multi_tile/diner,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "\improper Umbillical Airlock";
-	id = "pizza_ert_arrival"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
 /area/adminlevel/ert_station/pizza)
 "td" = (
 /obj/structure/disposalpipe/segment{
@@ -3418,14 +3405,11 @@
 /turf/open/floor/diner/white_red,
 /area/adminlevel/ert_station/pizza)
 "Tu" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "\improper Umbillical Airlock";
 	id = "pizza_ert_arrival"
 	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -3640,7 +3624,7 @@
 /area/adminlevel/ert_station/pizza)
 "VD" = (
 /obj/structure/bed/chair/bolted{
-	dir = 8;
+	dir = 8
 	},
 /turf/open/floor/prison{
 	dir = 1;
@@ -3966,8 +3950,8 @@
 /area/adminlevel/ert_station/pizza)
 "YM" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer,
-/obj/structure/machinery/door/airlock/multi_tile/diner{
-	dir = 2
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -5248,7 +5232,7 @@ fg
 Ep
 zf
 zf
-xV
+Tu
 KY
 Ya
 Ya
@@ -5306,7 +5290,7 @@ vA
 JU
 JU
 JU
-Tu
+sl
 Sz
 JU
 NG
@@ -5678,11 +5662,11 @@ zE
 im
 im
 im
-sY
+fg
 OS
 im
 NN
-xV
+Tu
 KY
 Ya
 Ya
