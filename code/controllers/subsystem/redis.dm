@@ -82,7 +82,7 @@ SUBSYSTEM_DEF(redis)
 		message_admins("Failed to connect to redis: [connection_attempt]")
 		return
 
-	var/list/data = list("source" = SSredis.instance_name, "type" = "connect")
+	var/list/data = list("source" = SSredis.instance_name, "event_type" = "connect")
 	publish("byond.meta", json_encode(data))
 
 	connected = TRUE
@@ -90,7 +90,7 @@ SUBSYSTEM_DEF(redis)
 
 /datum/controller/subsystem/redis/proc/disconnect(reason)
 	message_admins("Note: Redis connection interrupted.")
-	var/list/data = list("source" = SSredis.instance_name, "type" = "disconnect", "reason" = reason)
+	var/list/data = list("source" = SSredis.instance_name, "event_type" = "disconnect", "reason" = reason)
 	publish("byond.meta", json_encode(data))
 	rustg_redis_disconnect()
 	connected = FALSE

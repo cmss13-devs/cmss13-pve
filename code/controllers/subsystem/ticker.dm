@@ -107,7 +107,7 @@ SUBSYSTEM_DEF(ticker)
 				current_state = GAME_STATE_FINISHED
 				ooc_allowed = TRUE
 				mode.declare_completion(force_ending)
-				REDIS_PUBLISH("byond.round", "type" = "round-complete")
+				REDIS_PUBLISH("byond.round", "event_type" = "round-complete")
 				flash_clients()
 				addtimer(CALLBACK(
 					SSvote,
@@ -139,8 +139,6 @@ SUBSYSTEM_DEF(ticker)
 		return
 	current_state = GAME_STATE_SETTING_UP
 	INVOKE_ASYNC(src, PROC_REF(setup_start))
-
-	REDIS_PUBLISH("byond.round", "type" = "round-start")
 
 	for(var/client/C in GLOB.admins)
 		remove_verb(C, roundstart_mod_verbs)
@@ -248,7 +246,6 @@ SUBSYSTEM_DEF(ticker)
 	PostSetup()
 	return TRUE
 
-
 /datum/controller/subsystem/ticker/proc/PostSetup()
 	set waitfor = FALSE
 	mode.initialize_emergency_calls()
@@ -272,6 +269,15 @@ SUBSYSTEM_DEF(ticker)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_POST_SETUP)
 
+	/*
+	for(var/i in RoleAuthority.roles_for_mode)
+		var/datum/job/J = RoleAuthority.roles_for_mode[i]
+		if(!RoleAuthority.check_role_entry(src, J, TRUE))
+			continue
+		//Finish this - Morrow
+	*/
+
+	REDIS_PUBLISH("byond.round", "event_type" = "round-start")
 
 //These callbacks will fire after roundstart key transfer
 /datum/controller/subsystem/ticker/proc/OnRoundstart(datum/callback/cb)
