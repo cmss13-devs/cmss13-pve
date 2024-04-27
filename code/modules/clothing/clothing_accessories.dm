@@ -140,12 +140,12 @@
 		removables[capitalized_name] = image(icon = ass.icon, icon_state = ass.icon_state)
 		choice_to_accessory[capitalized_name] = ass
 
-	if(LAZYLEN(accessories) > 1)
+	if(LAZYLEN(removables) > 1)
 		var/use_radials = usr.client.prefs?.no_radials_preference ? FALSE : TRUE
 		var/choice = use_radials ? show_radial_menu(usr, src, removables, require_near = TRUE) : tgui_input_list(usr, "Select an accessory to remove from [src]", "Remove accessory", removables)
 		A = choice_to_accessory[choice]
 	else
-		A = LAZYACCESS(accessories, 1)
+		A = choice_to_accessory[removables[1]]
 	if(!usr.Adjacent(src))
 		to_chat(usr, SPAN_WARNING("You're too far away!"))
 		return
