@@ -3,14 +3,18 @@
 /obj/structure/blocker/tent{
 	dir = 8
 	},
-/obj/structure/bed/chair,
+/obj/structure/bed/chair{
+	dir = 1
+	},
 /turf/template_noop,
 /area/template_noop)
 "d" = (
 /obj/structure/blocker/tent{
 	dir = 4
 	},
-/obj/structure/bed/chair,
+/obj/structure/bed/chair{
+	dir = 1
+	},
 /turf/template_noop,
 /area/template_noop)
 "o" = (

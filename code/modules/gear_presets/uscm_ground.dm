@@ -89,7 +89,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/silver
-	assignment = JOB_USCM_GROUND_AO
+	assignment = "Adjunct Officer"
 	rank = JOB_USCM_GROUND_AO
 	paygrade = "MO2"
 	role_comm_title = "AO"
@@ -123,8 +123,9 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/uscm_ground/cmd(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap (new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
@@ -135,6 +136,8 @@
 /datum/equipment_preset/uscm_ground/civilian
 	name = "USCM Outpost Visiting Civilian (Random)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
+
+	faction = FACTION_NEUTRAL
 
 	access = list(ACCESS_USCM_GROUND_GUEST)
 	assignment = JOB_USCM_GROUND_CIVILIAN
@@ -154,8 +157,9 @@
 #define CIVILIAN_LINGUIST "Linguist"
 
 /datum/equipment_preset/uscm_ground/civilian/load_preset()
+	faction_group = FACTION_LIST_MARINE + FACTION_NEUTRAL
 	spec = pick(CIVILIAN_BIOLOGIST, CIVILIAN_ARACHAEOLOGIST, CIVILIAN_ANTHROPOLOGIST, CIVILIAN_LINGUIST)
-	assignment = initial(assignment) + ": [spec]"
+	assignment += ": [spec]"
 
 	if(spec == CIVILIAN_LINGUIST)
 		languages = ALL_HUMAN_LANGUAGES //Linguists get all human languages, but they have fewer skills.
@@ -165,6 +169,10 @@
 		languages = list(LANGUAGE_ENGLISH) ///initial(languages) probably returns null as lists initialize at runtime.
 
 	return ..()
+
+/datum/equipment_preset/uscm_ground/civilian/load_id(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	assignment = initial(assignment) /// This will reset it after it has been used, so that it is properly referenced elsewhere.
 
 /datum/equipment_preset/uscm_ground/civilian/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel

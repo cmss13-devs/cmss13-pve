@@ -79,9 +79,7 @@
 	var/roles[] = new
 	var/datum/job/J
 
-	var/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/active_role_names = GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]

@@ -1,8 +1,5 @@
 //This datum keeps track of individual squads. New squads can be added without any problem but to give them
 //access you must add them individually to access.dm with the other squads. Just look for "access_alpha" and add the new one
-
-//Note: some important procs are held by the job controller, in job_controller.dm.
-//In particular, get_lowest_squad() and randomize_squad()
 /datum/squad_type //Majority of this is for a follow-on PR to fully flesh the system out and add more bits for other factions.
 	var/name = "Squad Type"
 	var/lead_name
@@ -57,6 +54,8 @@
 	var/max_smartgun = 2
 	/// maximum # of squad leaders allowed in the squad
 	var/max_leaders = 1
+	/// Maxium number of standards; anything below 0 means there is no hard cap.
+	var/max_riflemen = -1
 	/// Squad headsets default radio frequency
 	var/radio_freq = 1461
 
@@ -173,6 +172,8 @@
 	headset_path = /obj/item/device/radio/headset/almayer
 	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
+
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
@@ -261,6 +262,7 @@
 	max_tl = 0
 	max_smartgun = 0
 	max_leaders = 0
+	max_riflemen = 0
 
 /datum/squad/marine/ground_one
 	name = SQUAD_USCM_GROUND_1
@@ -274,6 +276,7 @@
 	usable = TRUE
 	faction = FACTION_USCM_GROUND
 	max_medics = 2
+	max_riflemen = 4 /// Without this, it was likely to have uneven number of riflemen in each squad.
 	platoon_leader_access = ACCESS_USCM_GROUND_PLATOONL
 	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
 	encryption_key_path = /obj/item/device/encryptionkey/squadlead/uscm_ground
@@ -290,6 +293,7 @@
 	usable = TRUE
 	faction = FACTION_USCM_GROUND
 	max_medics = 2
+	max_riflemen = 4
 	platoon_leader_access = ACCESS_USCM_GROUND_PLATOONL
 	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
 	encryption_key_path = /obj/item/device/encryptionkey/squadlead/uscm_ground

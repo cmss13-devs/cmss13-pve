@@ -30,19 +30,16 @@
 	var/image/I = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
 	switch(dir)
 		if(SOUTH)
-			layer = ABOVE_MOB_LAYER+0.1 //This is pretty janky as it means mobs get placed under the platform sprite when climbing *over* it. The alternative is that sprites look weird when standing next to platforms.
-			climb_layer = layer + 0.1
+			layer = PLATFORM_LAYER /// Fixed the climbing animation problem to some degree, but still looks very strange under some circumstances.
 			I.pixel_y = -16
 		if(NORTH)
 			I.pixel_y = 16
 		if(EAST)
 			I.pixel_x = 16
-			layer = ABOVE_MOB_LAYER+0.1
-			climb_layer = layer + 0.1
+			layer = PLATFORM_LAYER
 		if(WEST)
 			I.pixel_x = -16
-			layer = ABOVE_MOB_LAYER+0.1
-			climb_layer = layer + 0.1
+			layer = PLATFORM_LAYER
 	overlays += I
 
 /obj/structure/platform/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -114,12 +111,13 @@
 	flags_atom = ON_BORDER
 	unacidable = TRUE
 	unslashable = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT /// Don't need to interact with them. They don't do anything.
 
 /obj/structure/platform_decoration/Initialize()
 	. = ..()
 	switch(dir)
 		if(NORTH, SOUTH, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
-			layer = ABOVE_MOB_LAYER+0.2
+			layer = PLATFORM_DECORATION_LAYER
 
 /obj/structure/platform_decoration/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()

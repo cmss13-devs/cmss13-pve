@@ -573,9 +573,9 @@ GLOBAL_LIST_EMPTY(vending_products)
 									vend_fail()
 									return FALSE
 
-							ID.set_assignment( "[user.assigned_squad? "[user.assigned_squad.name] " : null][user.job]: [specialist_assignment]" )
-
-							GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), ID.assignment)
+							ID.set_assignment(ID.assignment + ": [specialist_assignment]")
+							var/assignment = user.assigned_equipment_preset?.assignment || user.job
+							GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), assignment + ": [specialist_assignment]")
 							available_specialist_sets -= p_name //Doesn't matter for the last two.
 						else if(vendor_role.Find(JOB_SYNTH))
 							if(user.job != JOB_SYNTH)

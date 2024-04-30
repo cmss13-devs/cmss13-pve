@@ -35,8 +35,6 @@
 	. = ..()
 	if(!auto_squad_name || (is_admin_level(new_human.z) && !ert_squad))
 		return
-	if(!GLOB.data_core.manifest_modify(new_human.real_name, WEAKREF(new_human), assignment, rank))
-		GLOB.data_core.manifest_inject(new_human)
 
 	var/obj/item/card/id/ID = new_human.wear_id
 	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
@@ -45,11 +43,15 @@
 	var/datum/squad/auto_squad = get_squad_by_name(auto_squad_name)
 	if(auto_squad)
 		transfer_marine_to_squad(new_human, auto_squad, new_human.assigned_squad, new_human.wear_id)
-	if(!ert_squad && !auto_squad?.active)
-		auto_squad.engage_squad(FALSE)
+		if(!ert_squad && !auto_squad.active)
+			auto_squad.engage_squad(FALSE)
 
-	if(!auto_squad)
-		transfer_marine_to_squad(new_human, pick(RoleAuthority.squads), new_human.assigned_squad, new_human.wear_id)
+	/*
+	* We do not want to transfer them into a random squad elsewise for two reasons:
+	* 1. Random squads could mean they end up in an UPP squad if they are USCM, or WY, etc.
+	* 2. There may only be one squad because of the game mode.
+	* Since /uscm lists all sorts of faction presets, need to be careful here. Best they are assigned a squad manually.
+	*/
 
 	new_human.marine_buyable_categories[MARINE_CAN_BUY_EAR] = 0
 	new_human.sec_hud_set_ID()
@@ -90,7 +92,6 @@
 	name = "USCM Outpost Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE)
-	assignment = JOB_USCM_GROUND_SQUAD_MARINE
 	rank = JOB_USCM_GROUND_SQUAD_MARINE
 	skills = /datum/skills/pfc/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -124,6 +125,7 @@
 	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	rank = JOB_SQUAD_MARINE_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -138,6 +140,7 @@
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
 	paygrade = "ME3"
+	rank = JOB_SQUAD_MARINE_FORECON
 
 /datum/equipment_preset/uscm/pfc/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -176,7 +179,6 @@
 	name = "USCM Outpost Smartgunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_SMARTPREP)
-	assignment = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
 	rank = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
 	skills = /datum/skills/smartgunner/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -199,6 +201,7 @@
 	name = "UPP Squad Machinegunner"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = "Machinegunner"
+	rank = JOB_SQUAD_SMARTGUN_UPP
 	paygrade = "UE4"
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN)
@@ -218,6 +221,7 @@
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
 	paygrade = "ME5"
+	rank = JOB_FORECON_SMARTGUNNER
 
 /datum/equipment_preset/uscm/sg/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -397,7 +401,6 @@
 	name = "USCM Outpost Specialist"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_SPECPREP)
-	assignment = JOB_USCM_GROUND_SQUAD_SPECIALIST
 	rank = JOB_USCM_GROUND_SQUAD_SPECIALIST
 	skills = /datum/skills/specialist/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -471,7 +474,6 @@
 	name = "USCM Outpost Corpsman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL,  ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_MEDPREP)
-	assignment = JOB_USCM_GROUND_SQUAD_MEDIC
 	rank = JOB_USCM_GROUND_SQUAD_MEDIC
 	skills = /datum/skills/combat_medic/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -495,6 +497,7 @@
 	paygrade = "UE4"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = "Sanitar"
+	rank = JOB_SQUAD_MEDIC_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
@@ -511,8 +514,8 @@
 
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
-	assignment = "Squad Corpsman"
 	paygrade = "ME5"
+	rank = JOB_SQUAD_MEDIC_FORECON
 
 /datum/equipment_preset/uscm/medic/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/medic/standard
@@ -549,7 +552,6 @@
 	name = "USCM Outpost Squad Sergeant"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_TLPREP)
-	assignment = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
 	rank = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
 	skills = /datum/skills/tl/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -569,6 +571,7 @@
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	rank = JOB_SQUAD_TEAM_LEADER_UPP
 
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -581,6 +584,7 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
+	rank = JOB_SQUAD_TEAM_LEADER_FORECON
 
 /datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -647,7 +651,6 @@
 	name = "USCM Outpost Platoon Sergeant"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
 	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_ARMORY, ACCESS_USCM_GROUND_PLATOONL)
-	assignment = JOB_USCM_GROUND_SQUAD_LEADER
 	rank = JOB_USCM_GROUND_SQUAD_LEADER
 	skills = /datum/skills/SL/uscm_ground
 	faction = FACTION_USCM_GROUND
@@ -679,6 +682,7 @@
 	paygrade = "UE7"
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	rank = JOB_SQUAD_LEADER_UPP
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -694,6 +698,7 @@
 	name = "FORECON Squad Sergeant"
 	assignment = "Squad Sergeant"
 	paygrade = "ME8"
+	rank = JOB_SQUAD_LEADER_FORECON
 
 /datum/equipment_preset/uscm/leader/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard

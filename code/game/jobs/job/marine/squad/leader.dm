@@ -75,16 +75,19 @@ AddTimelock(/datum/job/marine/leader, list(
 	total_positions = 1
 	spawn_positions = 1
 	prime_priority = TRUE
+	squad_default_path = /datum/squad/marine/alpha
 
 /datum/job/marine/leader/ai/upp
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	squad_default_path = /datum/squad/marine/upp
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
+	squad_default_path = /datum/squad/marine/forecon
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP

@@ -219,10 +219,8 @@
 
 	prefs.toggle_prefs ^= TOGGLE_AMBIENT_OCCLUSION
 	prefs.save_preferences()
-	var/atom/movable/screen/plane_master/game_world/plane_master = locate() in src.screen
-	if (!plane_master)
-		return
-	plane_master.backdrop(src.mob)
+	var/atom/movable/screen/plane_master/rendering_plate/foreground/plane_master = locate() in src.screen
+	plane_master?.backdrop(src.mob)
 
 /client/verb/toggle_member_publicity()
 	set name = "Toggle Membership Publicity"

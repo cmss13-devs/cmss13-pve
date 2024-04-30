@@ -443,7 +443,7 @@
 
 	setDir(direction)
 	if(dir != NORTH)
-		layer = FLY_LAYER
+		layer = ABOVE_MOB_LAYER /// Now consistent with barricades.
 	flipped = TRUE
 	flags_can_pass_all_temp &= ~PASS_UNDER
 	flags_atom |= ON_BORDER

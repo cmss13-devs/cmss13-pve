@@ -26,21 +26,32 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	var/real_rank ///What their real rank is.
 	var/squad_name ///What their squad is called.
 	var/datum/job/J ///Referenced through their mob job to pull up where their role is sorted.
+	var/datum/data/record/current_record
 
 	///Returns a list and not HTML itself. Used by the id card computer.
 	if(nonHTML)
 		var/category
-		for(var/datum/data/record/t in GLOB.data_core.general)
-			name = t.fields["name"]
-			rank = t.fields["rank"]
-			squad_name = t.fields["squad"]
+		for(var/i in GLOB.data_core.general)
+			current_record = i
+			name = current_record.fields["name"]
+			rank = current_record.fields["rank"]
+			real_rank = current_record.fields["real_rank"]
+			squad_name = current_record.fields["squad"]
 			if(!name || !rank) continue
 
-			J = RoleAuthority.roles_by_name[rank]
+			/*
+			* Structural pitfall here. roles_by_name expects a real rank, so if the individual has a different rank, if they were re-assigned,
+			* it will still list them under the real rank's job category, which isn't always desired.
+			* This also means that anything that doesn't have a job datum will be listed as JOB_CATEGORY_OTHER.
+			* Ideally records would keep a running tally of job category, so that it can be listed appropriately if a job change takes place.
+			* Something to look into if properly refactoring records in the future. Not really worth a workaround for right now.
+			*/
+			J = RoleAuthority.roles_by_name[real_rank]
 			if(!J)
-				category = JOB_CATEGORY_OTHER
+				if(current_record.fields["ref"]) category = JOB_CATEGORY_OTHER /// Probably a real person.
+				else continue
 			else
-				category = squad_name ? squad_name : J.category
+				category = squad_name || J.category
 
 			if(!manifest_out[category]) manifest_out[category] = list()
 			manifest_out[category] += list(list(
@@ -54,6 +65,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	var/list/isactive = list()
 	var/even = 0 ///For prettier lines.
 	var/category_list[] ///To simplify lookup.
+	var/category
 	var/mob/M //Iterator.
 
 	var/dat = {"
@@ -70,11 +82,12 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
 	"}
 
-	for(var/datum/data/record/t in GLOB.data_core.general)
-		name = t.fields["name"]
-		rank = t.fields["rank"]
-		real_rank = t.fields["real_rank"]
-		squad_name = t.fields["squad"]
+	for(var/i in GLOB.data_core.general)
+		current_record = i
+		name = current_record.fields["name"]
+		rank = current_record.fields["rank"]
+		real_rank = current_record.fields["real_rank"]
+		squad_name = current_record.fields["squad"]
 
 		if(!name || !rank || !real_rank) ///If something is missing, we ignore them.
 			continue
@@ -86,21 +99,26 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 					isactive[name] = "Active"
 					break
 		else
-			isactive[name] = t.fields["p_stat"]
+			isactive[name] = current_record.fields["p_stat"]
 			//cael - to prevent multiple appearances of a player/job combination, add a continue after each line
 
 		J = RoleAuthority.roles_by_name[real_rank]
-		if(!J) continue ///They should have a job datum with their real rank, but you never know.
+		///They should have a job datum with their real rank, but they may not have a job datum defined for their gear preset.
 
-		LAZYINITLIST(manifest_out[J.category]) ///Initialize each individual category.
-		if(J.category == JOB_CATEGORY_COMBAT)
+		if(!J) /// They don't have a job datum.
+			if(current_record.fields["ref"]) category = JOB_CATEGORY_OTHER /// They do have a reference to a mob, likely means they were added manually by an admin.
+			else continue /// If they do not, skip them.
+		else category = J.category /// If we know their datum, grab the category.
+
+		LAZYINITLIST(manifest_out[category]) ///Initialize each individual category.
+		if(category == JOB_CATEGORY_COMBAT)
 			if(!squad_name) continue ///If they are a combat role but have no squad, we skip them.
-			LAZYINITLIST(manifest_out[J.category][squad_name]) ///Initializes the squad itself.
-			LAZYSET(manifest_out[J.category][squad_name][GET_SQUAD_ROLE_MAP(real_rank)], name, rank) ///Initializes the person's information for that squad. We get their mapped role for sorting later. real_rank isn't shown in the manifest, it's backend only.
+			LAZYINITLIST(manifest_out[category][squad_name]) ///Initializes the squad itself.
+			LAZYSET(manifest_out[category][squad_name][GET_SQUAD_ROLE_MAP(real_rank)], name, rank) ///Initializes the person's information for that squad. We get their mapped role for sorting later. real_rank isn't shown in the manifest, it's backend only.
 		else
-			LAZYSET(manifest_out[J.category][real_rank], name, rank) ///Initializes the job category as per normal.
+			LAZYSET(manifest_out[category][real_rank], name, rank) ///Initializes the job category as per normal.
 
-	for(var/category in JOB_CATEGORY_ALL) ///This keeps the list in the same order every time.
+	for(category in JOB_CATEGORY_ALL) ///This keeps the list in the same order every time.
 		category_list = manifest_out[category]
 		if(!length(category_list)) continue ///Should not have empty lists, but it is possible for squads.
 		dat += "<tr><th colspan=3>[category]</th></tr>" ///We add this after we've established that we have the category listed.
@@ -129,15 +147,17 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	dat = replacetext(dat, "\t", "")
 	return dat
 
-///This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
-///This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
-///And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
+/*
+* This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
+* This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
+* And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
+*/
 /datum/datacore/proc/manifest(nosleep = 0)
 	spawn()
 		if(!nosleep)
 			sleep(40)
 
-		var/roles_to_inject[] = GET_MANIFEST_ROLES ///At the time of writing it takes (mapped roles | roundstart roles) - blacklisted manifest roles.
+		var/roles_to_inject[] = GET_MANIFEST_ROLES ///At the time of writing it takes (roundstart roles - blacklisted manifest roles) | additional roles added manually.
 
 		var/mob/living/carbon/human/H
 		for(var/i in GLOB.human_mob_list)
@@ -145,32 +165,39 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 			if(!is_admin_level(H.z) && (H.job in roles_to_inject))
 				manifest_inject(H)
 
-/datum/datacore/proc/manifest_modify(name, ref, assignment, rank, p_stat)
-	var/datum/data/record/foundrecord
+/datum/datacore/proc/manifest_modify(name, datum/weakref/weak_ref, assignment, rank, p_stat, faction)
 
-	var/use_name = isnull(ref)
-	for(var/datum/data/record/t in GLOB.data_core.general)
-		if(use_name)
-			if(t.fields["name"] == name)
-				foundrecord = t
+	var/datum/data/record/current_record
+	var/i
+	if(istype(weak_ref))
+		for(i in general)
+			current_record = i
+			if(current_record.fields["ref"] == weak_ref)
+				if(assignment) current_record.fields["rank"] = assignment
+				if(rank) current_record.fields["real_rank"] = rank
+				if(p_stat) current_record.fields["p_stat"] = p_stat
+				if(name) current_record.fields["name"] = name
+				if(faction) current_record.fields["mob_faction"] = faction
+				. = TRUE
 				break
-		else
-			if(t.fields["ref"] == ref)
-				foundrecord = t
+		if(name) /// The rest only matters if we are changing their name.
+			/// To do: revise how records operate. It's silly that you have to iterate all of them and they are not connected to the reference.
+			for(var/category in list(medical, security, locked))
+				for(i in category)
+					current_record = i
+					if(current_record.fields["ref"] == weak_ref)
+						current_record.fields["name"] = name
+						break
+	else
+		for(i in general)
+			current_record = i
+			if(current_record.fields["name"] == name)
+				if(assignment) current_record.fields["rank"] = assignment
+				if(rank) current_record.fields["real_rank"] = rank
+				if(p_stat) current_record.fields["p_stat"] = p_stat
+				if(faction) current_record.fields["mob_faction"] = faction
+				. = TRUE
 				break
-
-	if(foundrecord)
-		if(assignment)
-			foundrecord.fields["rank"] = assignment
-		if(rank)
-			foundrecord.fields["real_rank"] = rank
-		if(p_stat)
-			foundrecord.fields["p_stat"] = p_stat
-		if(!use_name)
-			if(name)
-				foundrecord.fields["name"] = name
-		return TRUE
-	return FALSE
 
 /datum/datacore/proc/manifest_inject(mob/living/carbon/human/H)
 	var/datum/data/record/existing_record
@@ -179,11 +206,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 		existing_record = i
 		if(existing_record.fields["ref"] == weak_ref) return FALSE //Already have a record for this human. Abort.
 
-	var/assignment
-	if(H.job)
-		assignment = H.job
-	else
-		assignment = "Unassigned"
+	var/assignment = GET_HUMAN_DEFAULT_ASSIGNMENT(H)
 
 	var/id = add_zero(num2hex(H.gid), 6) //this was the best they could come up with? A large random number? *sigh*
 	//var/icon/front = new(get_id_photo(H), dir = SOUTH)
@@ -202,7 +225,6 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	G.fields["sex"] = H.gender
 	G.fields["species"] = H.get_species()
 	G.fields["origin"] = H.origin
-	G.fields["faction"] = H.personal_faction
 	G.fields["mob_faction"] = H.faction
 	G.fields["religion"] = H.religion
 	G.fields["ref"] = WEAKREF(H)
@@ -264,7 +286,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	L.fields["b_type"] = H.b_type
 	L.fields["species"] = H.get_species()
 	L.fields["origin"] = H.origin
-	L.fields["faction"] = H.personal_faction
+
 	L.fields["religion"] = H.religion
 	L.fields["ref"] = WEAKREF(H)
 
@@ -273,7 +295,23 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	else
 		L.fields["exploit_record"] = "No additional information acquired."
 	locked += L
+	return TRUE
 
+/// Removes all records attached it can find. Weakref only.
+/datum/datacore/proc/manifest_erase(datum/weakref/weak_ref)
+
+	if(istype(weak_ref)) /// Make sure they're sending the right thing here.
+		var/datum/data/record/current_record
+		var/i
+		for(var/list/category in list(general, medical, security, locked))
+
+			for(i in category)
+				current_record = i
+				if(current_record.fields["ref"] == weak_ref)
+					category -= current_record
+					qdel(current_record)
+					if(category == general) . = TRUE /// So long as we got rid of the general record, we're good.
+					break
 
 /proc/get_id_photo(mob/living/carbon/human/H)
 	var/icon/preview_icon = null
@@ -362,7 +400,6 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	G.fields["m_stat"] = "Stable"
 	G.fields["species"] = "Human"
 	G.fields["origin"] = "Unknown"
-	G.fields["faction"] = "Unknown"
 	G.fields["mob_faction"] = faction
 	G.fields["religion"] = "Unknown"
 	GLOB.data_core.general += G

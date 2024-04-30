@@ -3,22 +3,22 @@
 /obj/item/reagent_container/food/drinks/bottle/orangejuice{
 	layer = 3.1;
 	pixel_x = 6;
-	pixel_y = 15
+	pixel_y = 9
 	},
 /obj/item/reagent_container/food/drinks/bottle/orangejuice{
 	layer = 3.1;
 	pixel_x = -4;
-	pixel_y = 15
+	pixel_y = 7
 	},
 /obj/item/reagent_container/food/drinks/bottle/orangejuice{
 	layer = 3.1;
-	pixel_x = -4;
-	pixel_y = 5
+	pixel_x = -5;
+	pixel_y = -2
 	},
 /obj/item/reagent_container/food/drinks/bottle/orangejuice{
 	layer = 3.1;
 	pixel_x = 6;
-	pixel_y = 5
+	pixel_y = -2
 	},
 /obj/structure/surface/table,
 /turf/template_noop,

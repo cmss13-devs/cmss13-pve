@@ -160,7 +160,6 @@ var/const/MAX_SAVE_SLOTS = 10
 
 		//Some faction information.
 	var/origin = ORIGIN_USCM
-	var/faction = "None" //Antag faction/general associated faction.
 	var/religion = RELIGION_AGNOSTICISM  //Religious association.
 
 		//Mob preview
@@ -644,11 +643,15 @@ var/const/MAX_SAVE_SLOTS = 10
 	show_browser(user, dat, "Preferences", "preferencebrowser")
 	onclose(user, "preferencewindow", src)
 
-//limit - The amount of jobs allowed per column. Defaults to 13 to make it look nice.
+//limit - The amount of jobs allowed per column.
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
 //width - Screen' width.
 //height - Screen's height.
-/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 480, height = 450)
+#define PREF_COLUMN_LIMIT 20
+#define PREF_WIDTH 600
+#define PREF_HEIGHT_MIN 290 /// Minimum height, otherwise things look goofy.
+#define PREF_HEIGHT 550
+/datum/preferences/proc/SetChoices(mob/user, limit = PREF_COLUMN_LIMIT, list/splitJobs = list(JOB_CHIEF_REQUISITION, JOB_WO_CMO), width = PREF_WIDTH, height = PREF_HEIGHT)
 	if(!RoleAuthority)
 		return
 
@@ -666,9 +669,18 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
-	var/list/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
+	var/n_roles = length(active_role_names)
+	switch(n_roles)
+		if(PREF_COLUMN_LIMIT+1 to INFINITY) /// A lot of jobs? Make the window bigger.
+			width = 950
+			height = 750
+		if(1 to PREF_COLUMN_LIMIT) /// Adjusts the height of the window based on the number of jobs, to an extent.
+			height = 22 * n_roles + PREF_HEIGHT_MIN
+#undef PREF_COLUMN_LIMIT
+#undef PREF_WIDTH
+#undef PREF_HEIGHT_MIN
+#undef PREF_HEIGHT
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -782,9 +794,7 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
-	var/list/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -1881,10 +1891,8 @@ var/const/MAX_SAVE_SLOTS = 10
 
 				if("ambientocclusion")
 					toggle_prefs ^= TOGGLE_AMBIENT_OCCLUSION
-					var/atom/movable/screen/plane_master/game_world/plane_master = locate() in user?.client.screen
-					if (!plane_master)
-						return
-					plane_master.backdrop(user?.client.mob)
+					var/atom/movable/screen/plane_master/rendering_plate/foreground/plane_master = locate() in user?.client.screen
+					plane_master?.backdrop(user?.client.mob)
 
 				if("auto_fit_viewport")
 					auto_fit_viewport = !auto_fit_viewport
@@ -2081,7 +2089,6 @@ var/const/MAX_SAVE_SLOTS = 10
 	character.f_style = f_style
 
 	character.origin = origin
-	character.personal_faction = faction
 	character.religion = religion
 
 	// Destroy/cyborgize organs

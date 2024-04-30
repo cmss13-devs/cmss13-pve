@@ -1,8 +1,6 @@
 #define get_job_playtime(client, job) (client.player_data? LAZYACCESS(client.player_data.playtimes, job)? client.player_data.playtimes[job].total_minutes MINUTES_TO_DECISECOND : 0 : 0)
-#define GET_MAPPED_ROLE(title) (RoleAuthority?.role_mappings[title] ? RoleAuthority.role_mappings[title] : RoleAuthority.roles_by_name[title])
-#define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
-#define GET_SQUAD_ROLE_MAP(title) (RoleAuthority?.roles_for_squad[title] ? RoleAuthority.roles_for_squad[title] : title)
-#define GET_MANIFEST_ROLES (RoleAuthority? ((RoleAuthority.default_roles|RoleAuthority.role_mappings)-RoleAuthority.role_manifest_blacklist) : list())
+#define GET_SQUAD_ROLE_MAP(title) (RoleAuthority?.roles_for_squad[title] || title)
+#define GET_MANIFEST_ROLES (RoleAuthority? RoleAuthority.manifest_roles | RoleAuthority.manifest_append : list())
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
@@ -29,13 +27,6 @@
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_LEADER, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE)
-
-#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
-#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
-#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
-#define JOB_SQUAD_RTO "Radio Telephone Operator"
-#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
-#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
@@ -286,6 +277,15 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 //-------- FORECON --------//
 
+//Platoon version
+#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
+#define JOB_SQUAD_RTO "Radio Telephone Operator"
+#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+//Regular faction
 #define JOB_FORECON_CO "Reconnaissance Commander"
 #define JOB_FORECON_SL "Reconnaissance Squad Leader"
 #define JOB_FORECON_SYN "Reconnaissance Synthetic"

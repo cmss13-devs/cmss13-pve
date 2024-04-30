@@ -8,20 +8,6 @@
 
 	taskbar_icon = 'icons/taskbar/gml_wo.png'
 
-	role_mappings = list(
-		/datum/job/command/commander/uscm_ground = JOB_USCM_GROUND_CO,
-		/datum/job/command/executive/uscm_ground = JOB_USCM_GROUND_AO,
-		/datum/job/civilian/researcher/uscm_ground = JOB_USCM_GROUND_CIVILIAN,
-
-		/datum/job/marine/leader/uscm_ground = JOB_USCM_GROUND_SQUAD_LEADER,
-		/datum/job/marine/tl/uscm_ground = JOB_USCM_GROUND_SQUAD_TEAM_LEADER,
-		/datum/job/marine/specialist/uscm_ground = JOB_USCM_GROUND_SQUAD_SPECIALIST,
-		/datum/job/marine/smartgunner/uscm_ground = JOB_USCM_GROUND_SQUAD_SMARTGUNNER,
-		/datum/job/marine/medic/uscm_ground = JOB_USCM_GROUND_SQUAD_MEDIC,
-		/datum/job/marine/standard/uscm_ground = JOB_USCM_GROUND_SQUAD_MARINE,
-		/datum/job/civilian/synthetic/uscm_ground = JOB_USCM_GROUND_SYNTH,
-		)
-
 /datum/game_mode/remote_outpost/get_roles_list()
 	return ROLES_USCM_GROUND
 

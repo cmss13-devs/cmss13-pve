@@ -89,6 +89,7 @@ AddTimelock(/datum/job/marine/medic, list(
 /datum/job/marine/medic/ai
 	total_positions = 1
 	spawn_positions = 1
+	squad_default_path = /datum/squad/marine/alpha
 
 /datum/job/marine/medic/ai/set_spawn_positions(count)
 	return spawn_positions
@@ -100,11 +101,13 @@ AddTimelock(/datum/job/marine/medic, list(
 	title = JOB_SQUAD_MEDIC_UPP
 	gear_preset = /datum/equipment_preset/uscm/medic/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/lesser_rank
+	squad_default_path = /datum/squad/marine/upp
 
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/forecon/lesser_rank
+	squad_default_path = /datum/squad/marine/forecon
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP

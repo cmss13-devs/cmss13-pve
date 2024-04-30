@@ -330,7 +330,6 @@
 		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
 
 	if(ammo && ammo.current_rounds <= 0)
-		if(immobile) power_off() //We don't want to have this thing keep beeping with no ammo, since it cannot be reloaded.
 		if(COOLDOWN_FINISHED(src, no_ammo_message_cooldown))
 			visible_message(SPAN_WARNING("[src] beeps steadily and its ammo light blinks red."))
 			COOLDOWN_START(src, no_ammo_message_cooldown, (3 SECONDS))
@@ -542,7 +541,7 @@
 	omni_directional = TRUE
 	damage_mult = 1.1
 	burst = 3
-	health = 300
+	health = 350
 	health_max = 350
 	handheld_type = /obj/item/defenses/handheld/sentry/custom
 
@@ -573,6 +572,10 @@
 
 /obj/structure/machinery/defenses/sentry/premade/damaged_action()
 	return
+
+/obj/structure/machinery/defenses/sentry/premade/handle_empty()
+	..()
+	power_off() //We don't want to have this thing keep beeping with no ammo, since it cannot be reloaded.
 
 /obj/structure/machinery/defenses/sentry/premade/strong //Same as the regular turret in terms of strength.
 	name = "\improper UA 571-B sentry gun"

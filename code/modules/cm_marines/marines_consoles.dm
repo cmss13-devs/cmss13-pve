@@ -187,16 +187,15 @@
 				if(custom_name)
 					target_id_card.assignment = custom_name
 			else
-				var/list/new_access = list()
 				var/datum/job/job = RoleAuthority.roles_by_name[target] //We don't need to make this hardcoded for round only roles. The ID changer should work regardless of what the mode is.
 
 				if(!job)
 					visible_message("[SPAN_BOLD("[src]")] states, \"DATA ERROR: Can not find next entry in database: [target]\"")
 					return
-				new_access = job.get_access()
-				target_id_card.access = new_access //You get all of it; you don't keep anything. Not sure why it was subtracted and then added before, this is like getting a brand-new ID.
-				target_id_card.assignment = target
-				target_id_card.rank = target
+
+				target_id_card.access = job.get_access() //You get all of it; you don't keep anything. Not sure why it was subtracted and then added before, this is like getting a brand-new ID.
+				target_id_card.assignment = job.get_assignment() /// Assignment shows up on the crew tracker and manifest.
+				target_id_card.rank = target /// Unique identifer for the role. Shouldn't be used for display purposes in most cases as it's equivalent to user.job.
 			message_admins("[key_name_admin(usr)] gave the ID of [target_id_card.registered_name] the assignment '[target_id_card.assignment]'.")
 			return TRUE
 		if("PRG_access")
@@ -807,7 +806,7 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 		if(!C || !istype(C))
 			continue
 		// Check that sensors are present and active
-		if(!C.has_sensor || !C.sensor_mode || faction != H.faction)
+		if(!C.has_sensor || !C.sensor_mode || !(faction in H.factions))
 			continue
 
 		// Check if z-level is correct
@@ -1121,11 +1120,10 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_XO = 12,
 				JOB_MARINE_RAIDER_CMD = 13,
 				RAIDER_OFFICER_SQUAD = 14,
-				JOB_USCM_GROUND_AO = 20,
-
+				"Adjunct Officer" = 20,
 
 				JOB_USCM_GROUND_CIVILIAN = 240,
-				JOB_USCM_GROUND_SYNTH = 250,
+				"Maintenance Synthetic" = 250,
 
 				JOB_STOWAWAY = 999,
 
@@ -1139,14 +1137,14 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 			for(var/squad_name in ROLES_SQUAD_USCM_GROUND)
 				squad_name += " "
 				jobs += list(
-					"[squad_name][JOB_USCM_GROUND_SQUAD_LEADER]" = (squad_number),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_TEAM_LEADER]" = (squad_number + 1),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]" = (squad_number + 2),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]: Heavy" = (squad_number + 2),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_SPECIALIST]: Sapper" = (squad_number + 2),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_SMARTGUNNER]" = (squad_number + 3),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_MEDIC]" = (squad_number + 4),
-					"[squad_name][JOB_USCM_GROUND_SQUAD_MARINE]" = (squad_number + 5),
+					"[squad_name][JOB_SQUAD_LEADER]" = (squad_number),
+					"[squad_name][JOB_SQUAD_TEAM_LEADER]" = (squad_number + 1),
+					"[squad_name][JOB_SQUAD_SPECIALIST]" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Heavy" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SPECIALIST]: Sapper" = (squad_number + 2),
+					"[squad_name][JOB_SQUAD_SMARTGUN]" = (squad_number + 3),
+					"[squad_name][JOB_SQUAD_MEDIC]" = (squad_number + 4),
+					"[squad_name][JOB_SQUAD_MARINE]" = (squad_number + 5),
 				)
 				squad_number += 10
 

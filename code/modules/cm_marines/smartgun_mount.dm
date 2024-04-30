@@ -499,12 +499,6 @@
 		return 0
 	..()
 
-/obj/structure/machinery/m56d_hmg/BlockedPassDirs(atom/movable/mover, target_turf)
-	if(istype(mover, /obj/item) && mover.throwing)
-		return FALSE
-	else
-		return ..()
-
 /obj/structure/machinery/m56d_hmg/Initialize(mapload, ...)
 	. = ..()
 
@@ -1100,6 +1094,20 @@
 	locked = 1
 	projectile_coverage = PROJECTILE_COVERAGE_HIGH
 	zoom = 1
+
+/// Pretty much identical to a wired barricade.
+/obj/structure/machinery/m56d_hmg/mg_turret/initialize_pass_flags(datum/pass_flags_container/pass_flags)
+	..()
+	if (pass_flags)
+		pass_flags.flags_can_pass_all = NONE /// Resets default flags.
+		pass_flags.flags_can_pass_front = PASS_BARRICADE_FRONT
+		pass_flags.flags_can_pass_behind = PASS_BARRICADE_BEHIND
+
+/// Special handling since this object is not ON_BORDER, we have to manually check how the pass is going to work.
+/obj/structure/machinery/m56d_hmg/mg_turret/BlockedPassDirs(atom/movable/mover, target_dir)
+	var/mover_flags_pass = (mover.pass_flags.flags_pass|mover.flags_pass_temp) & ~mover.flags_pass_temp_negative
+	/// It normally only checks can_pass_behind when moving out of a turf through BlockedExitDirs().
+	return (mover_flags_pass & pass_flags.flags_can_pass_behind && target_dir != REVERSE_DIR(dir)) ? NO_BLOCKED_MOVEMENT : ..()
 
 /obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve
 	rounds = 700 //I don't want them to have stupid amounts of ammo.

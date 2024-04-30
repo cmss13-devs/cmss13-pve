@@ -96,7 +96,6 @@
 
 /obj/item/pamphlet/skill/spotter/on_use(mob/living/carbon/human/user)
 	. = ..()
-	user.rank_fallback = "ass"
 	user.hud_set_squad()
 
 	var/obj/item/card/id/ID = user.wear_id

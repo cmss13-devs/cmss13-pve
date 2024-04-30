@@ -101,6 +101,11 @@
 	new /obj/item/handcuffs
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
+	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/shoes/dress(src)
+	new /obj/item/clothing/under/marine/dress(src)
+	new /obj/item/clothing/gloves/marine/dress(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/dress(src)
 	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
 	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
 

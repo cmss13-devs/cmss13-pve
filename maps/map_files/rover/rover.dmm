@@ -678,7 +678,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "FORECON Rifleman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -2378,7 +2379,8 @@
 	name = "ship-grade camera"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "FORECON Rifleman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -2735,7 +2737,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Sergeant";
+	job = "FORECON Squad Leader";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -3672,7 +3674,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Smartgunner";
+	job = "FORECON Smartgunner";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -4204,7 +4206,7 @@
 /area/golden_arrow/prep_hallway)
 "OU" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Sergeant";
+	job = "FORECON Assistant Squad Leader";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -4538,7 +4540,7 @@
 /area/golden_arrow/hangar)
 "SR" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Corpsman";
+	job = "FORECON Squad Corpsman";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,

@@ -1060,7 +1060,7 @@
 /obj/item/clothing/suit/storage/snow_suit/soviet,
 /obj/item/clothing/suit/gimmick/jason,
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander";
+	job = "UPP Platoon Commander";
 	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
 	icon_locked = "cabinetdetective_locked";
@@ -1870,7 +1870,7 @@
 "rV" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Corpsman"
+	job = "UPP Sanitar"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/distress/UPP,
@@ -2368,7 +2368,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Smartgunner"
+	job = "UPP Machinegunner"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -2846,7 +2846,8 @@
 	icon_state = "S"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "UPP Rifleman"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -2918,7 +2919,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant"
+	job = "UPP Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -3750,14 +3751,11 @@
 	},
 /area/golden_arrow/medical)
 "JR" = (
-/obj/structure/machinery/computer/overwatch/almayer{
-	faction = "UPP";
-	density = 1
-	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
 	pixel_y = 17
 	},
+/obj/structure/machinery/computer/overwatch/map_specific/chapaev,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4585,6 +4583,34 @@
 "Tr" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/supply)
+"Tt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "UPP Machinegunner"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "Tw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/cans/boda{
@@ -4859,7 +4885,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant"
+	job = "UPP Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -4996,7 +5022,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Sergeant"
+	job = "UPP Platoon Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -14032,7 +14058,7 @@ nO
 EA
 HX
 cT
-BK
+Tt
 BK
 Cq
 BK

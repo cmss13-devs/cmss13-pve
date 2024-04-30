@@ -912,7 +912,7 @@ Still, just the name of the platoon should make it easy enough to understand wha
 				icon_state = "alpha_headset"
 				frequency = ALPHA_FREQ
 
-			switch(GET_DEFAULT_ROLE(H.job))
+			switch(GET_SQUAD_ROLE_MAP(H.job))
 				if(JOB_SQUAD_LEADER)
 					name = "marine leader " + name
 					keys += new /obj/item/device/encryptionkey/squadlead(src)

@@ -152,9 +152,10 @@
 	new /obj/item/device/helmet_visor/medical(src)
 	new /obj/item/storage/pouch/autoinjector/full(src)
 	new /obj/item/storage/pouch/machete/full(src)
-	new /obj/item/weapon/gun/shotgun/double/mou53(src)
 	new /obj/item/storage/belt/shotgun/full/mou53(src)
+	new /obj/item/weapon/gun/shotgun/double/mou53(src)
 	new /obj/item/attachable/angledgrip(src)
+	new /obj/item/attachable/stock/mou53(src)
 
 /obj/item/storage/box/spec/sapper
 	name = "\improper Sapper equipment case"

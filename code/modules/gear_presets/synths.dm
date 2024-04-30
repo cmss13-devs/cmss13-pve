@@ -109,7 +109,7 @@
 /datum/equipment_preset/synth/uscm/uscm_ground
 	name = "USCM Outpost Maintenance Synthetic"
 	faction = FACTION_USCM_GROUND
-	assignment = JOB_USCM_GROUND_SYNTH
+	assignment = "Maintenance Synthetic"
 	rank = JOB_USCM_GROUND_SYNTH
 
 /datum/equipment_preset/synth/uscm/uscm_ground/load_gear(mob/living/carbon/human/new_human)
@@ -677,11 +677,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/synth/infiltrator
-	name = "Infiltrator Synthetic"
+	name = "Colonist - Synthetic - Infiltrator"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NEUTRAL
 	assignment = JOB_COLONIST
-	rank = JOB_COLONIST
+	rank = SYNTH_INFILTRATOR
 	skills = /datum/skills/infiltrator_synthetic
 	idtype = /obj/item/card/id/lanyard
 	paygrade = "C"

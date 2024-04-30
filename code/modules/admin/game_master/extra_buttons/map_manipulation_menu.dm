@@ -201,21 +201,21 @@
 
 		//SPECIFIC MAP MANIPULATION
 		/*
-		If the map has unique things it can do, it still needs individual cases here.
-		The functions themselves are applicable to other maps, so long as the frontend tgui is configured in MapManipulation.js.
-		To keep in mind: If area pathing changes, things are going to break with no compiler error. This will only come up when
-		using the appropriate menu. Absolute pathing is kind an issue because of that, but hopefully this will be reworked by, or if,
-		that ever comes up. "toggle_blocker" and "flicker_light" both use absolute pathing right now and should probably switch over
-		to some kind of list in the future. I originally had a unique list for map manipulations, but several atoms
-		were in other lists as well, so I cut it. /N
+		* If the map has unique things it can do, it still needs individual cases here.
+		* The functions themselves are applicable to other maps, so long as the frontend tgui is configured in MapManipulation.js.
+		* To keep in mind: If area pathing changes, things are going to break with no compiler error. This will only come up when
+		* using the appropriate menu. Absolute pathing is kind an issue because of that, but hopefully this will be reworked by, or if,
+		* that ever comes up. "toggle_blocker" and "flicker_light" both use absolute pathing right now and should probably switch over
+		* to some kind of list in the future. I originally had a unique list for map manipulations, but several atoms
+		* were in other lists as well, so I cut it. /N
 		*/
 
 		if("toggle_blocker")
 			var/obj/structure/blocker/rock_debris/I
 			var/signal_id = params["signal_id"]
-			var/signal_area = locate(text2path(params["signal_area"])) //Faster than searching through world. Full pathing.
+			var/signal_area = locate(text2path(params["signal_area"])) /// Faster than searching through world. Full pathing.
 			for(I in signal_area)
-				if(I.z in possible_maps) //Don't care about the .z level. Leaving it in for future reference if this is refactored, and these fold into a global list.
+				if(I.z in possible_maps) /// Don't care about the .z level. Leaving it in for future reference if this is refactored, and these fold into a global list.
 					I.toggle_blocker(signal_id)
 
 		if("toggle_hatch")
@@ -241,7 +241,7 @@
 				else
 					L = list(text2path(params["area_to_flicker"]))
 
-			//The list should always have a length, and at least one thing in it, even if it's null.
+			/// The list should always have a length, and at least one thing in it, even if it's null.
 			var/area/whiskey_outpost/blackstone/underground/maintenance/A
 			var/obj/structure/machinery/light/I
 
@@ -315,12 +315,13 @@
 
 		var/specified_percentage_to_break //Temporary so that we can override it for a preset batch.
 
+		/// Replace length() with a local variable.
 		while(length(dest_actions))
 			specified_percentage_to_break = dest_actions[2] //Always position 2.
 
 			/*
-			Common issue here is that there is no global 'proc/break_this_thing()'.
-			Everything requires snowflake handling. Very annoying.
+			* Common issue here is that there is no global 'proc/break_this_thing()'.
+			* Everything requires snowflake handling. Very annoying.
 			*/
 
 			switch(dest_actions[1]) //The action is in position 1.
@@ -609,4 +610,4 @@
 						if(I.z == selected_z_level && prob(specified_percentage_to_break))
 							qdel(I)
 
-			dest_actions.Cut(1,2) //Removes the first two entries.
+			dest_actions.Cut(1,3) //Removes the first two entries.

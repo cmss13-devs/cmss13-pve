@@ -12,8 +12,6 @@
 
 	undefibbable = TRUE
 
-	GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, species.manifest_dead)
-
 	if(is_a_synth)
 		spawn_gibs()
 		return

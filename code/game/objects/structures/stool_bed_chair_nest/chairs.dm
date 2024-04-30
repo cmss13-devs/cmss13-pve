@@ -26,9 +26,9 @@
 
 /obj/structure/bed/chair/handle_rotation() //Making this into a separate proc so office chairs can call it on Move()
 	if(src.dir == NORTH)
-		src.layer = FLY_LAYER
+		layer = ABOVE_MOB_LAYER
 	else
-		src.layer = OBJ_LAYER
+		layer = BELOW_MOB_LAYER
 	if(buckled_mob)
 		buckled_mob.setDir(dir)
 
