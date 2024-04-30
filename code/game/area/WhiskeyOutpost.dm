@@ -396,7 +396,6 @@ powernet.
 /area/whiskey_outpost/blackstone/outside/outpost
 	powernet_name = "outpost_29"
 	icon_state = "platform_n"
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/outpost/north
 	name = "\improper Outpost Compound - North"
@@ -488,7 +487,6 @@ powernet.
 	is_landing_zone = TRUE
 	minimap_color = MINIMAP_AREA_LZ
 	sound_environment = SOUND_ENVIRONMENT_QUARRY
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 //River cannot be powered, as it doesn't make sense to have functional machinery in it.
 /area/whiskey_outpost/blackstone/outside/river
@@ -521,7 +519,6 @@ powernet.
 	icon_state = "platform"
 	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/bridge/north
 	name = "\improper Blackstone Bridge - North"
@@ -541,7 +538,6 @@ powernet.
 /area/whiskey_outpost/blackstone/outside/outpost_beach
 	name = "\improper Outpost Exterior - Central"
 	icon_state = "central"
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east
 	name = "\improper Outpost Exterior - East"
@@ -560,28 +556,24 @@ powernet.
 	icon_state = "bball"
 	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/boxing_ring
 	name = "\improper Boxing Ring"
 	icon_state = "boxing"
 	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/central_road
 	name = "\improper Central Road"
 	icon_state = "central_road"
 	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 /area/whiskey_outpost/blackstone/outside/perimeter_defense
 	name = "\improper Perimeter Defense"
 	icon_state = "perimeter_defense"
 	powernet_name = "outpost_29"
 	sound_environment = SOUND_ENVIRONMENT_PARKING_LOT
-	soundscape_playlist = SCAPE_PL_BLACKSTONE_OUTDOORS
 
 //POWERED
 
