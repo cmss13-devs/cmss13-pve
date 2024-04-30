@@ -23,7 +23,7 @@
 	if(dir == SOUTH)
 		pixel_y = -7
 
-	..(loc, user)
+	. = ..(loc, user)
 
 	for(var/i = 1 to amount-1)
 		increment_build_stage()

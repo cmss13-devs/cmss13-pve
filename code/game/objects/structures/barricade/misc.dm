@@ -19,7 +19,7 @@
 /obj/structure/barricade/snow/Initialize(loc, mob/user, direction)
 	if(direction)
 		setDir(direction)
-	..(loc, user)
+	. = ..(loc, user)
 
 //Item Attack
 /obj/structure/barricade/snow/attackby(obj/item/W, mob/user)
