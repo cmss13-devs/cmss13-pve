@@ -316,6 +316,7 @@
 	desc_lore = "Initially designed in 2173 as meal replacement for high-intensity workers, MRD was recalled from the market multiple times due to reports of gastrointestinal illness, including nausea, vomiting, and diarrhea. Improved formula was created, but the brand name was already stained (quite literally), so now Meal Ready-to-Drink remains as emergency food supply for internal Company use."
 	icon_state = "wy_soylent"
 	center_of_mass = "x=15;y=8"
+	volume = 30
 
 /obj/item/reagent_container/food/drinks/cans/soylent/Initialize()
 	. = ..()
