@@ -4365,17 +4365,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "qE" = (
-/obj/structure/sign/safety/ammunition{
-	pixel_x = -18
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "equipment_conny";
-	name = "\improper Squad One Equipment Locker"
-	},
-/obj/merge_conflict_marker{
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete.";
-	name = "---Merge Conflict Marker---"
-	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "equipment_conny";
 	name = "\improper Squad One Equipment Locker"
