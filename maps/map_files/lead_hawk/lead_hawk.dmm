@@ -2473,10 +2473,8 @@
 /area/lead_hawk/medical)
 "Fg" = (
 /obj/structure/window/reinforced/ultra,
-/obj/structure/flora/bush/ausbushes/var3/leafybush{
-	layer = 3.05;
-	pixel_x = 3;
-	pixel_y = 5
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass{
+	layer = 2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lead_hawk/co)
@@ -2770,12 +2768,6 @@
 	icon_state = "brown"
 	},
 /area/lead_hawk/supply)
-"IX" = (
-/obj/structure/bed/chair/comfy{
-	pixel_x = 16
-	},
-/turf/open/floor/carpet,
-/area/lead_hawk/briefing)
 "Je" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -4120,6 +4112,7 @@
 	pixel_x = 15;
 	pixel_y = 19
 	},
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lead_hawk/co)
 "YT" = (
@@ -4225,7 +4218,7 @@
 	},
 /obj/structure/machinery/door_control{
 	id = "pmclowerhangar";
-	name = "Upper Hangar";
+	name = "Lower Hangar";
 	pixel_y = -10
 	},
 /turf/open/floor/corsat{
@@ -10831,7 +10824,7 @@ gR
 gR
 uv
 Li
-IX
+hA
 ND
 du
 pT
