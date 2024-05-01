@@ -336,3 +336,33 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 
 /obj/structure/machinery/cm_vending/clothing/medic/forecon/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_forecon_medic
+
+
+// Chemical vendor
+
+GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
+		list("PILL BOTTLES", 0, null, null, null),
+		list("Pill Bottle (Imidazoline-Alkysine)", 60, /obj/item/storage/pill_bottle/imialk, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Meralyne-Bicardine)", 60, /obj/item/storage/pill_bottle/merabica, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane-Dermaline)", 60, /obj/item/storage/pill_bottle/keloderm, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Nitrogen-Water)", 60, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin+)", 60, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Iron)", 60, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/gear/medic_chemical
+	name = "\improper ColMarTech Squad Medical Chemical Rack"
+	desc = "An automated gear rack for specialized chemicals for the hospital corpsman."
+	icon_state = "med_chem"
+	show_points = TRUE
+	use_snowflake_points = TRUE
+	vendor_role = list(JOB_SQUAD_MEDIC)
+	req_access = list(ACCESS_MARINE_MEDPREP)
+
+/obj/structure/machinery/cm_vending/gear/medic_chemical/get_listed_products(mob/user)
+	return GLOB.cm_vending_chemical_medic
+
+/obj/structure/machinery/cm_vending/gear/medic_chemical/upp
+	name = "\improper UnTech Squad Medical Equipment Rack"
+	req_access = list(ACCESS_UPP_MEDPREP)
+	vendor_theme = VENDOR_THEME_UPP
