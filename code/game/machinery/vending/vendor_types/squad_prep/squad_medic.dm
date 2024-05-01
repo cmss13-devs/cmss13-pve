@@ -342,12 +342,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 
 GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("PILL BOTTLES", 0, null, null, null),
-		list("Pill Bottle (Imidazoline-Alkysine)", 60, /obj/item/storage/pill_bottle/imialk, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Meralyne-Bicardine)", 60, /obj/item/storage/pill_bottle/merabica, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Kelotane-Dermaline)", 60, /obj/item/storage/pill_bottle/keloderm, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Nitrogen-Water)", 60, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Dexalin+)", 60, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Iron)", 60, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Imidazoline-Alkysine)", 40, /obj/item/storage/pill_bottle/imialk, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Meralyne-Bicardine)", 40, /obj/item/storage/pill_bottle/merabica, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane-Dermaline)", 40, /obj/item/storage/pill_bottle/keloderm, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Nitrogen-Water)", 40, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin+)", 40, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Iron)", 40, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical
