@@ -756,6 +756,12 @@
 	pill_type_to_fill = /obj/item/reagent_container/pill/nitrogenwater
 	maptext_label = "NW"
 
+/obj/item/storage/pill_bottle/tricord
+	name = "\improper Tricordazine pill bottle"
+	icon_state = "pill_canister"
+	pill_type_to_fill = /obj/item/reagent_container/pill/tricordrazine
+	maptext_label = "Ti"
+
 //---------PILL PACKETS---------
 /obj/item/storage/pill_bottle/packet
 	name = "\improper pill packet"
