@@ -2522,24 +2522,6 @@
 	},
 /area/golden_arrow/hangar)
 "jz" = (
-/obj/structure/largecrate/supply/ammo{
-	fill_from_loc = 1;
-	name = "materials crate"
-	},
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/plasteel{
-	amount = 40;
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/merge_conflict_marker{
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete.";
-	name = "---Merge Conflict Marker---"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -6496,30 +6478,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
-	},
-/obj/structure/largecrate/supply/ammo{
-	fill_from_loc = 1;
-	name = "smoke grenades case";
-	pixel_y = 11
-	},
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/merge_conflict_marker{
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete.";
-	name = "---Merge Conflict Marker---"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
