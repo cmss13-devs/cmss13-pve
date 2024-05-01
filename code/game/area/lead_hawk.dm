@@ -34,8 +34,8 @@
 	soundscape_playlist = SCAPE_PL_ARES
 	soundscape_interval = 120
 
-/area/lead_hawk/computer
-	name = "Power Production Center"
+/area/lead_hawk/supply
+	name = "Supply"
 
 /area/lead_hawk/ptsgt
 	name = "Operational Leaders' Room"

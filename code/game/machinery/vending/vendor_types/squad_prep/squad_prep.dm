@@ -168,7 +168,7 @@
 		list("Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/corporate, VENDOR_ITEM_REGULAR),
 		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
-		list("M11-PMC Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/pve, VENDOR_ITEM_REGULAR),
+		list("M11-PMC Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc/pve, VENDOR_ITEM_REGULAR),
 		list("PMC Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/pmc, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),

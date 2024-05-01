@@ -4,6 +4,7 @@
 /datum/equipment_preset/uscm/pmc
 	name = "Tactical Unit"
 	paygrade = "PMC-OP"
+	role_comm_title = "TacUnit"
 	access = list(ACCESS_WY_GENERAL)
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
@@ -136,6 +137,7 @@
 /datum/equipment_preset/uscm/pmc/sl
 	name = "Operations Leader"
 	paygrade = "PMC-OL"
+	role_comm_title = "OpLead"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 	assignment = JOB_PMCPLAT_LEADER
 	idtype = /obj/item/card/id/pmc
@@ -145,6 +147,7 @@
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
 	paygrade = "PMC-TL"
+	role_comm_title = "TeamLead"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_PMC_TL)
 	assignment = JOB_PMCPLAT_FTL
 	idtype = /obj/item/card/id/pmc
@@ -154,6 +157,7 @@
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"
 	paygrade = "PMC-WS"
+	role_comm_title = "HWS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_PMC_GUNNER)
 	assignment = JOB_PMCPLAT_SG
 	idtype = /obj/item/card/id/pmc
@@ -163,6 +167,7 @@
 /datum/equipment_preset/uscm/pmc/med
 	name = "Medical Specialist"
 	paygrade = "PMC-MS"
+	role_comm_title = "MS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_MEDICAL)
 	assignment = JOB_PMCPLAT_MEDIC
 	idtype = /obj/item/card/id/pmc
