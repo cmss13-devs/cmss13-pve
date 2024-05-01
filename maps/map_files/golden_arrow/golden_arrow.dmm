@@ -1532,7 +1532,9 @@
 /area/golden_arrow/hangar)
 "fS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/gear/medic_chemical,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -10141,9 +10143,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "MY" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4
-	},
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
