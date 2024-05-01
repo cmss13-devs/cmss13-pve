@@ -81,12 +81,6 @@
 	icon_state = "bear_mask"
 	anti_hug = 2
 
-/obj/item/clothing/mask/gas/pmc/marsoc
-	name = "\improper SOF armored balaclava"
-	desc = "Designed for maximum protection -- and badassery. Provides protection against facial attacks, filters toxins, and conceals the wearer's identity."
-	icon_state = "balaclava"
-
-
 
 
 //Plague Dr suit can be found in clothing/suits/bio.dm
