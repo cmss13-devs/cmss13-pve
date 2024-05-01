@@ -267,6 +267,14 @@
 /turf/closed/shuttle/midway/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/tulagi
+	name = "\improper Tulagi"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/tulagi/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'

@@ -136,6 +136,15 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/tulagi
+	name = "Tulagi"
+	id = DROPSHIP_TULAGI
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -342,3 +351,7 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/tulagi
+	name = "Tulagi"
+	shuttle_id = DROPSHIP_TULAGI
