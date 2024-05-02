@@ -129,7 +129,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 			continue //Should not have empty lists, but it is possible for squads.
 		dat += "<tr><th colspan=3>[category]</th></tr>" //We add this after we've established that we have the category listed.
 		if(category == JOB_CATEGORY_COMBAT)
-			for(current_squad as anything in RoleAuthority.squads)
+			for(var/datum/squad/current_squad as anything in RoleAuthority.squads)
 				if(!category_list[current_squad.name])
 					continue //Only if the squad is actually listed.
 				dat += "<tr><th colspan=3>[current_squad.name]</th></tr>"
