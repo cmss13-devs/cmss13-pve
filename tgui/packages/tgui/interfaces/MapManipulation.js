@@ -1145,7 +1145,7 @@ export const NightmareGroundPanel = (props, context) => {
                   ml={i === 0 ? 1 : 0}
                   content={scenario_value}
                   selected={
-                    NightmareGroundScenario[scenario_name] === scenario_value
+                    nightmareGroundScenario[scenario_name] === scenario_value
                   }
                   tooltip="Updates the scenario value with this value."
                   onClick={() => {
