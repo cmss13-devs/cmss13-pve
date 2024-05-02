@@ -348,7 +348,8 @@
 					var/obj/structure/machinery/cm_vending/gear_vendor
 					for(gear_vendor in machines)
 						if(gear_vendor.z == selected_z_level && prob(specified_percentage_to_break))
-							if(prob(25)) gear_vendor.tip_over()
+							if(prob(25))
+								gear_vendor.tip_over()
 							gear_vendor.malfunction()
 
 				if("break_normal_vendors")
