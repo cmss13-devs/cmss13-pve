@@ -1160,7 +1160,7 @@ export const NightmareGroundPanel = (props, context) => {
             ))}
           </Stack>
         </Section>
-      ))(NightmareGround)}
+      ))(nightmareGround)}
     </Stack>
   );
 };
