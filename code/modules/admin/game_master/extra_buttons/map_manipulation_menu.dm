@@ -477,7 +477,7 @@
 					var/obj/structure/surface/table/table
 					for(table in world)
 						if(table.z == selected_z_level && prob(specified_percentage_to_break))
-							if(prob(35) && table.flip(pick(1,2,4,8), FALSE, TRUE))
+							if(prob(35) && table.flip(pick(1,2,4,8), skip_straight_check=FALSE, batch_flip=TRUE))
 								continue//We'll try to flip it normally. Hide the message so it doesn't spam us.
 							else
 								table.deconstruct(FALSE) //If that doesn't work, we deconstruct it instead.
