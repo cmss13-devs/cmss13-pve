@@ -357,7 +357,8 @@
 					var/obj/structure/machinery/vending/regular_vendor
 					for(regular_vendor in machines)
 						if(regular_vendor.z == selected_z_level && prob(specified_percentage_to_break))
-							if(prob(25)) regular_vendor.tip_over() //This calls malfunction()
+							if(prob(25))
+								regular_vendor.tip_over() //This calls malfunction()
 							else regular_vendor.malfunction()
 
 				if("break_computers")
