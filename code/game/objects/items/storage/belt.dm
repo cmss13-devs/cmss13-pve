@@ -1888,6 +1888,9 @@
 		/obj/item/ammo_magazine/pkp,
 	)
 	has_gamemode_skin = FALSE
+	item_state_slots = list(
+		WEAR_L_HAND = "upp_belt",
+		WEAR_R_HAND = "upp_belt")
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"
