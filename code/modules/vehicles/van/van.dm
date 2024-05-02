@@ -270,7 +270,8 @@
 	load_misc(spawned_van)
 	load_hardpoints(spawned_van)
 	handle_direction(spawned_van)
-	if(vehicle_status == VAN_SPAWN_DAMAGED) load_damage(spawned_van)
+	if(vehicle_status == VAN_SPAWN_DAMAGED)
+		load_damage(spawned_van)
 	spawned_van.update_icon()
 
 	if(vehicle_name)
