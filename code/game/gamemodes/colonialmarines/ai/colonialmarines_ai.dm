@@ -20,6 +20,9 @@
 /datum/game_mode/colonialmarines/ai/announce_bioscans()
 	return
 
+/datum/game_mode/colonialmarines/ai/check_queen_status()
+	return
+
 /datum/game_mode/colonialmarines/ai/check_win()
 	if(!game_started || round_finished || SSticker.current_state != GAME_STATE_PLAYING)
 		return
@@ -35,4 +38,3 @@
 			return ROLES_AI_FORECON
 		else
 			return ROLES_AI // The default option, in case we need to reference it.
-
