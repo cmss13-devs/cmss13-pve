@@ -571,7 +571,8 @@
 
 							if(enable_pipe_break)
 								for(pipe in open_floor)
-									if(prob(55)) new /obj/item/pipe(open_floor, null, null, pipe)
+									if(prob(55))
+										new /obj/item/pipe(open_floor, null, null, pipe)
 									qdel(pipe)
 								for(disposal_junction in open_floor)
 									disposal_junction.deconstruct(prob(40))
