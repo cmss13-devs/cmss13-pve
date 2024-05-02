@@ -605,7 +605,7 @@ export const MapSpecificTab = (props, context) => {
     'sel_map',
     data.selected_map
   );
-  const decl_name = data.map_name;
+  const { map_name } = data;
 
   return (
     <Stack vertical>
