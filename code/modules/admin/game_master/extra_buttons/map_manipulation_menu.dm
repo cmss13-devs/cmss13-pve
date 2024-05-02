@@ -547,7 +547,8 @@
 
 							switch(batch_damage)
 								if(2)
-									if(prob(35)) new /obj/effect/decal/cleanable/dirt(open_floor)
+									if(prob(35))
+										new /obj/effect/decal/cleanable/dirt(open_floor)
 								if(3)
 									if(prob(65))
 										new /obj/effect/decal/cleanable/dirt(open_floor)
