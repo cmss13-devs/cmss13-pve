@@ -154,12 +154,12 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	return dat
 
 /**
-  * Adds all humans to manifest at round start provided they should be on the manifest.
-  *
-  * This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
-  * This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
-  * And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
-  */
+ * Adds all humans to manifest at round start provided they should be on the manifest.
+ *
+ * This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
+ * This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
+ * And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
+ */
 /datum/datacore/proc/manifest(nosleep = 0)
 	spawn()
 		if(!nosleep)
