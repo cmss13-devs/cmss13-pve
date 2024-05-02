@@ -17,12 +17,12 @@
 			context.scenario[value] = values[value]
 
 /**
-  * Populates the context with all possible values for a frontend interface.
-  *
-  * Called from /datum/nmnode/picker/resolve(datum/nmcontext/context).
-  * Populates context with entries for scenarios so that it is possible to
-  * use them for a front end interface.
-  */
+ * Populates the context with all possible values for a frontend interface.
+ *
+ * Called from /datum/nmnode/picker/resolve(datum/nmcontext/context).
+ * Populates context with entries for scenarios so that it is possible to
+ * use them for a front end interface.
+ */
 /datum/nmnode/scenario_def/proc/catalogue(datum/nmcontext/context)
 	for(var/value in values)
 		//We want to add to a list of all potential values here.
