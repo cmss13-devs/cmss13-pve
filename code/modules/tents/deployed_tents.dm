@@ -84,14 +84,14 @@
 	if(!entrance_offset)
 		return FALSE
 	var/offset_copy[] = entrance_offset.Copy()
-	var/turf/T
-	var/L[0]
-	var/i = length(offset_copy) * 0.5
-	while(i--)
-		T = locate(offset_copy[1] + x, offset_copy[2] + y, z)
-		L += T
+	var/turf/current_turf
+	var/entrance_turfs[0]
+	var/entrance_length = length(offset_copy) * 0.5
+	while(entrance_length-- > 0)
+		current_turf = locate(offset_copy[1] + x, offset_copy[2] + y, z)
+		entrance_turfs += current_turf
 		offset_copy.Cut(1, 3)
-	return L
+	return entrance_turfs
 
 /obj/structure/tent/proc/register_turf_signals()
 	SIGNAL_HANDLER

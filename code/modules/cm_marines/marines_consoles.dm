@@ -254,7 +254,8 @@
 				return
 
 			var/region = params["region"]
-			if(!region)	return
+			if(!region)
+				return
 			if(region == "Faction (IFF system)")
 				if(!target_id_card.faction_group)
 					target_id_card.faction_group = list()

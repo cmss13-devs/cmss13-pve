@@ -166,11 +166,9 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 
 		var/roles_to_inject[] = GET_MANIFEST_ROLES //At the time of writing it takes (roundstart roles - blacklisted manifest roles) | additional roles added manually.
 
-		var/mob/living/carbon/human/H
-		for(var/i in GLOB.human_mob_list)
-			H = i
-			if(!is_admin_level(H.z) && (H.job in roles_to_inject))
-				manifest_inject(H)
+		for(var/mob/living/carbon/human/current_human as anything in GLOB.human_mob_list)
+			if(!is_admin_level(current_human.z) && (current_human.job in roles_to_inject))
+				manifest_inject(current_human)
 
 /datum/datacore/proc/manifest_modify(name, datum/weakref/weak_ref, assignment, rank, p_stat, faction)
 

@@ -85,13 +85,17 @@
 	return TRUE
 
 /mob/proc/change_mind_name(new_name)
-	return mind && new_name && (mind.name = new_name)
+	if(new_name && mind)
+		mind.name = new_name
+		return TRUE
 
 /mob/proc/change_mob_voice(new_name)
 	return FALSE
 
 /mob/living/carbon/human/change_mob_voice(new_name)
-	return new_name && (voice = new_name)
+	if(new_name)
+		voice = new_name
+		return TRUE
 
 /// More general proc caller to change a mob's name, ususally called through an admin renaming someone.
 /mob/proc/modify_name_and_record(new_name)

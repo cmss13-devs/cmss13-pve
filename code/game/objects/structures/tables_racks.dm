@@ -511,7 +511,7 @@
 	parts = /obj/item/frame/table/wood/fancy
 	table_prefix = "fwood"
 
-/obj/structure/surface/table/woodentable/fancy/flip(direction)
+/obj/structure/surface/table/woodentable/fancy/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
 	return 0 //That is mahogany!
 /*
  * Gambling tables
@@ -537,7 +537,7 @@
 	table_prefix = "reinf"
 	parts = /obj/item/frame/table/reinforced
 
-/obj/structure/surface/table/reinforced/flip(direction)
+/obj/structure/surface/table/reinforced/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
 	return 0 //No, just no. It's a full desk, you can't flip that
 
 /obj/structure/surface/table/reinforced/attackby(obj/item/W as obj, mob/user as mob)
@@ -592,7 +592,7 @@
 	icon_state = "reqNtable"
 	table_prefix = "reqN"
 
-/obj/structure/surface/table/reinforced/almayer_blend/flip(direction)
+/obj/structure/surface/table/reinforced/almayer_blend/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
 	return 0
 
 /obj/structure/surface/table/reinforced/almayer_B
@@ -600,7 +600,7 @@
 	icon_state = "req_table" //this one actually auto-tiles, but has no flipped state!
 	table_prefix = "req_"
 
-/obj/structure/surface/table/reinforced/almayer_B/flip(direction)
+/obj/structure/surface/table/reinforced/almayer_B/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
 	return 0
 
 /obj/structure/surface/table/reinforced/black
@@ -609,7 +609,7 @@
 	icon_state = "blacktable" //this one actually auto-tiles, but has no flipped state!
 	table_prefix = "black"
 
-/obj/structure/surface/table/reinforced/black/flip(direction)
+/obj/structure/surface/table/reinforced/black/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
 	return FALSE
 
 /obj/structure/surface/table/almayer
