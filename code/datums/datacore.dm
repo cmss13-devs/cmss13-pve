@@ -123,7 +123,6 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 		else
 			LAZYSET(manifest_out[category][real_rank], name, rank) //Initializes the job category as per normal.
 
-	var/datum/squad/current_squad
 	for(category in JOB_CATEGORY_ALL) //This keeps the list in the same order every time.
 		category_list = manifest_out[category]
 		if(!length(category_list))
