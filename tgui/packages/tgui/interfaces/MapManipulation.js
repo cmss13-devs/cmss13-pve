@@ -1167,8 +1167,8 @@ export const NightmareGroundPanel = (props, context) => {
 
 export const NightmareShipPanel = (props, context) => {
   const { data, act } = useBackend(context);
-  const NightmareShip = data.nightmare_ship || {};
-  const NightmareShipScenario = data.nightmare_ship || [];
+  const nightmareShip = data.nightmare_ship || {};
+  const nightmareShipScenario = data.nightmare_ship || [];
   let ship_i = 0;
 
   return (
