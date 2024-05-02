@@ -9,6 +9,28 @@
 	icon_state = "cyan1"
 	},
 /area/golden_arrow/medical)
+"ab" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 15
+	},
+/obj/item/toy/plush/therapy/green{
+	desc = "He seems lonely...";
+	layer = 3.6;
+	name = "Polkovnik Obnimashkin";
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/obj/item/clothing/head/uppcap/ushanka{
+	layer = 3.6;
+	pixel_x = 1;
+	pixel_y = 30
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "ae" = (
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer{
@@ -82,30 +104,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
-"aI" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_sergeant)
-"aQ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/sign{
-	desc = "Comrade! Don't forget to return your state-issued items to your assigned locker before returning to hypersleep!";
-	icon_state = "securearea";
-	name = "Vnimanie! 注意!";
-	pixel_y = 30
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/cryo_cells)
 "aS" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 2"
@@ -151,20 +149,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/supply)
-"bm" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/briefing)
 "bt" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -194,34 +178,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
-"bw" = (
-/obj/structure/closet/secure_closet{
-	name = "machinegunner locker";
-	req_access_txt = "243;238"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
-"bC" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
 "bH" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -249,18 +205,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
-"bO" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/cryo_cells)
 "bR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/ammo/type71,
@@ -272,27 +216,17 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_two)
+"bU" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/golden_arrow/medical)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"cd" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/briefing)
 "ce" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -325,19 +259,19 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"cC" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "chapaevcargo"
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/supply)
 "cJ" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/synthcloset)
+"cL" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "cQ" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -374,28 +308,28 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
-"cX" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
+"di" = (
+/obj/structure/cargo_container/horizontal/blue/middle{
+	opacity = 0;
+	pixel_x = 17
+	},
+/obj/item/trash/cigbutt/bcigbutt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
+"dn" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 1;
+	name = "\improper Requisitions";
+	req_one_access = null
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/briefing)
-"dr" = (
-/obj/structure/machinery/body_scanconsole{
-	dir = 1;
-	pixel_y = 6
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan1"
-	},
-/area/golden_arrow/medical)
+/area/golden_arrow/supply)
 "dx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -424,18 +358,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
-"dD" = (
-/obj/structure/largecrate/random/barrel/blue{
-	pixel_x = -9
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_x = -11;
-	pixel_y = 20
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "dF" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/straight_razor{
@@ -541,20 +463,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
-"eb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/spray/cleaner{
-	pixel_x = 6;
-	pixel_y = 5
-	},
-/obj/item/reagent_container/spray/cleaner{
-	pixel_x = -2;
-	pixel_y = 1
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/medical)
 "ei" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/squad_one)
@@ -607,6 +515,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"ew" = (
+/obj/structure/largecrate/random/barrel/blue,
+/obj/structure/largecrate/random/barrel/red{
+	layer = 4;
+	pixel_y = 22
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
 "eB" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -623,22 +541,17 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
-"eF" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clipboard{
-	pixel_x = 4
-	},
-/obj/item/reagent_container/pill/cyanide{
-	icon_state = "pill5";
-	name = "cyanide pill";
-	pixel_x = -8;
-	pixel_y = 1
+"eH" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
 	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/platoon_commander_rooms)
+/area/golden_arrow/cryo_cells)
 "eL" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata{
@@ -691,6 +604,16 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"fE" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "fJ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	id = "Delta_1";
@@ -709,6 +632,30 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"ga" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/sign{
+	desc = "Comrade! Don't forget to return your state-issued items to your assigned locker before returning to hypersleep!";
+	icon_state = "securearea";
+	name = "Vnimanie! 注意!";
+	pixel_y = 30
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
+"gh" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "gm" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -729,42 +676,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"gu" = (
-/obj/structure/cargo_container/horizontal/blue/top{
-	opacity = 0;
-	pixel_x = 17
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
-"gv" = (
-/obj/structure/largecrate{
-	fill_from_loc = 0
-	},
-/obj/structure/largecrate{
-	fill_from_loc = 0;
-	layer = 3.1;
-	pixel_x = -1;
-	pixel_y = 38
-	},
-/obj/item/toy/plush/therapy/red{
-	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
-	force = 15;
-	layer = 2.9;
-	name = "Commando Huggs";
-	pixel_y = 8;
-	throwforce = 15
-	},
-/obj/item/clothing/head/cmcap{
-	layer = 3.0;
-	pixel_x = -1;
-	pixel_y = 15
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "gx" = (
 /obj/structure/closet/secure_closet/engineering_chief,
 /turf/open/floor/strata{
@@ -781,19 +692,38 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
-"gZ" = (
-/obj/structure/machinery/floodlight/landing/floor,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
+"gX" = (
+/obj/item/prop/colony/used_flare,
+/obj/item/prop/colony/used_flare{
+	pixel_x = 9;
+	pixel_y = 10
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"ha" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
+"he" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "chapaevcargo"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "hh" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -812,18 +742,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
-"hr" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	dir = 1;
-	name = "\improper Requisitions";
-	req_one_access = null
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/supply)
 "hx" = (
 /obj/effect/landmark/start/marine/leader/upp,
 /obj/effect/landmark/late_join/upp,
@@ -868,21 +786,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"io" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/structure/machinery/light/small,
-/obj/item/prop/magazine/book{
-	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
-	name = "UPP Party Doctrine Booklet";
-	pixel_x = 11;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/dorms)
 "ip" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -996,36 +899,61 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
-"jF" = (
-/obj/structure/bed/bedroll{
-	pixel_x = -33;
-	pixel_y = 21
+"jp" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/toy/deck{
+	pixel_x = 8;
+	pixel_y = 11
 	},
-/obj/item/device/flashlight/lamp/on{
-	pixel_x = -23;
-	pixel_y = 4
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = 10;
+	pixel_y = 6
 	},
-/obj/item/prop/magazine/book{
-	desc = "By Geor Georwell.";
-	name = "1984";
-	pixel_x = -33;
-	pixel_y = 24
+/obj/item/toy/handcard/aceofspades,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
 	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/golden_arrow/hangar)
+/area/golden_arrow/briefing)
+"jr" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 1;
+	name = "\improper Dorms";
+	req_one_access = null
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "jG" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/engineering)
-"jH" = (
-/obj/item/newspaper{
-	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
-	pixel_x = -15;
-	pixel_y = 34
+"jI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_magazine/minigun{
+	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
+	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
+	pixel_x = 6;
+	pixel_y = 8
 	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
+/obj/item/reagent_container/food/drinks/dry_ramen,
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
-/area/golden_arrow/platoon_commander_rooms)
+/area/golden_arrow/squad_one)
+"jR" = (
+/obj/structure/largecrate{
+	pixel_x = 6
+	},
+/obj/structure/largecrate{
+	layer = 3.1;
+	pixel_x = 15;
+	pixel_y = 18
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
 "jS" = (
 /obj/effect/landmark/start/marine/upp,
 /obj/effect/landmark/late_join/upp,
@@ -1047,25 +975,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
-"kb" = (
-/obj/item/clothing/suit/storage/snow_suit/soviet,
-/obj/item/clothing/suit/gimmick/jason,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	icon_broken = "cabinetdetective_broken";
-	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
-	icon_opened = "cabinetdetective_open";
-	icon_state = "cabinetdetective_locked";
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/veteran/UPP/boiler,
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/platoon_commander_rooms)
 "kh" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/strata{
@@ -1088,6 +997,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
+"kn" = (
+/obj/structure/prop{
+	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
+	icon_state = "ladder11";
+	name = "ladder"
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
 "kr" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -1124,31 +1044,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
-"kB" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
-"kS" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/tea{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/obj/item/ashtray/bronze{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/canteen)
 "kW" = (
 /obj/item/stool,
 /obj/structure/pipes/vents/pump{
@@ -1166,6 +1061,42 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/canteen)
+"lr" = (
+/obj/structure/bed/bedroll{
+	pixel_x = -33;
+	pixel_y = 21
+	},
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = -23;
+	pixel_y = 4
+	},
+/obj/item/prop/magazine/book{
+	desc = "By Geor Georwell.";
+	name = "1984";
+	pixel_x = -33;
+	pixel_y = 24
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/hangar)
+"lu" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap";
+	layer = 2.5
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "lE" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata{
@@ -1173,18 +1104,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
-"lK" = (
-/obj/structure/machinery/cm_vending/gear/synth{
-	density = 0;
-	name = "\improper UnTech Synthetic Auxiliary Gear Rack";
-	pixel_y = 32
-	},
-/obj/item/stool,
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/synthcloset)
 "lN" = (
 /obj/structure/machinery/vending/coffee/simple,
 /turf/open/floor/strata{
@@ -1192,27 +1111,42 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
-"lS" = (
+"lP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper_bin,
-/obj/item/tool/pen{
-	pixel_x = 12
+/obj/item/ammo_magazine/handful/shotgun/heavy/flechette{
+	current_rounds = 1;
+	pixel_x = 7;
+	pixel_y = 6
 	},
-/obj/item/prop/tableflag/upp{
-	pixel_x = 6;
-	pixel_y = 15
+/obj/item/ammo_magazine/handful/shotgun/heavy{
+	current_rounds = 1;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag{
+	current_rounds = 1;
+	pixel_x = -8;
+	pixel_y = 5
 	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "floor2"
 	},
-/area/golden_arrow/briefing)
+/area/golden_arrow/squad_two)
 "me" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"mh" = (
+/obj/item/newspaper{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	pixel_x = -15;
+	pixel_y = 34
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "mj" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -1246,17 +1180,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
-"mv" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/platoon_sergeant)
 "my" = (
 /obj/structure/closet,
 /obj/item/clothing/head/uppcap/ushanka/civi{
@@ -1273,6 +1196,33 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
+"mN" = (
+/obj/structure/largecrate{
+	fill_from_loc = 0
+	},
+/obj/structure/largecrate{
+	fill_from_loc = 0;
+	layer = 3.1;
+	pixel_x = -1;
+	pixel_y = 38
+	},
+/obj/item/toy/plush/therapy/red{
+	desc = "A USCM approved plush doll. It's not soft and hardly comforting!";
+	force = 15;
+	layer = 2.9;
+	name = "Commando Huggs";
+	pixel_y = 8;
+	throwforce = 15
+	},
+/obj/item/clothing/head/cmcap{
+	layer = 3.0;
+	pixel_x = -1;
+	pixel_y = 15
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
 "mT" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 4
@@ -1342,6 +1292,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"nq" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/golden_arrow/medical)
 "ns" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1383,6 +1339,41 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"nF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/prep_hallway)
+"nH" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clipboard{
+	pixel_x = 4
+	},
+/obj/item/reagent_container/pill/cyanide{
+	icon_state = "pill5";
+	name = "cyanide pill";
+	pixel_x = -8;
+	pixel_y = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "nI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata{
@@ -1465,20 +1456,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
-"oW" = (
-/obj/structure/largecrate{
-	fill_from_loc = 0
-	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack";
-	pixel_y = 12
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/supply)
 "oX" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/shower{
@@ -1538,47 +1515,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_two)
-"py" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	name = "\improper Squad One Armoury";
-	req_one_access = null;
-	req_one_access_txt = "231;240;237"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
-"pz" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/minigun{
-	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
-	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/obj/item/reagent_container/food/drinks/dry_ramen,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
-"pA" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/obj/structure/machinery/cm_vending/clothing/medic/upp,
-/obj/item/clothing/head/uppcap{
-	pixel_x = 8;
-	pixel_y = 11
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/medical)
 "pH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -1587,28 +1523,31 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
-"pL" = (
-/obj/structure/cargo_container/horizontal/blue/bottom{
-	opacity = 0;
-	pixel_x = 17
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
-"pO" = (
-/obj/structure/cargo_container/horizontal/blue/middle{
-	opacity = 0;
-	pixel_x = 17
-	},
-/obj/item/trash/cigbutt/bcigbutt,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "pQ" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/space)
+"pR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101
+	},
+/obj/item/clothing/head/uppcap/beret{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/clothing/accessory/armband{
+	pixel_x = 6
+	},
+/obj/item/tool/screwdriver{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
 "pS" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata{
@@ -1616,32 +1555,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/canteen)
-"pU" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/toy/deck{
-	pixel_x = 8;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = 10;
-	pixel_y = 6
-	},
-/obj/item/toy/handcard/aceofspades,
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/briefing)
-"pV" = (
-/obj/structure/largecrate/random/barrel/blue,
-/obj/structure/largecrate/random/barrel/red{
-	layer = 4;
-	pixel_y = 22
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "pX" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	dir = 4;
@@ -1668,6 +1581,21 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"qc" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/pen{
+	pixel_x = 12
+	},
+/obj/item/paper_bin,
+/obj/item/device/flashlight/lamp{
+	pixel_x = 11;
+	pixel_y = 12
+	},
+/obj/item/prop/magazine/book/theartofwar,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "qf" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -1697,19 +1625,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"qu" = (
-/obj/structure/largecrate{
-	pixel_x = 6
-	},
-/obj/structure/largecrate{
-	layer = 3.1;
-	pixel_x = 15;
-	pixel_y = 18
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "qF" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/strata{
@@ -1740,21 +1655,18 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"qQ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper_bin,
-/obj/item/tool/pen{
-	pixel_x = 12
-	},
-/obj/item/tool/hand_labeler{
-	pixel_x = -8;
-	pixel_y = 12
+"qU" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
 	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/platoon_sergeant)
+/area/golden_arrow/hangar)
 "qZ" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
@@ -1787,6 +1699,19 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"rq" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/hangar)
 "ru" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -1820,26 +1745,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
-"rG" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1;
-	name = "\improper Bathroom"
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/platoon_commander_rooms)
-"rJ" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/briefing)
 "rL" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -1849,14 +1754,27 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
-"rV" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/accessory/armband/med,
-/obj/item/weapon/gun/rifle/type71/carbine,
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -1;
-	pixel_y = 4
+"rQ" = (
+/obj/structure/machinery/computer/overwatch/almayer{
+	density = 1;
+	faction = "UPP"
 	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = 7;
+	pixel_y = 17
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/platoon_commander_rooms)
+"rV" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Corpsman"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/device/radio/headset/distress/UPP,
+/obj/item/clothing/under/marine/veteran/UPP/medic,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -1927,18 +1845,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
-"sL" = (
-/obj/item/tool/soap,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
 "sM" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -1948,17 +1854,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"sO" = (
-/obj/structure/machinery/cm_vending/sorted/medical/blood{
-	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
-	name = "\improper MinZdrav Blood Dispenser";
-	req_access = list();
-	vendor_theme = 3
-	},
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/medical)
 "sX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/pen{
@@ -1981,10 +1876,36 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"tj" = (
+/obj/structure/cargo_container/horizontal/blue/bottom{
+	opacity = 0;
+	pixel_x = 17
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
+"tk" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "tn" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/crew/alt{
-	dir = 1
+/obj/item/clothing/accessory/armband/med,
+/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -1;
+	pixel_y = 4
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -2042,19 +1963,18 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/dorms)
-"tL" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	dir = 2;
-	name = "\improper Platoon Sergeant's Bunk";
-	req_one_access = null;
-	req_one_access_txt = "240"
+"tP" = (
+/obj/structure/largecrate/random/barrel/blue{
+	pixel_x = -9
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -11;
+	pixel_y = 20
 	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "floor2"
 	},
-/area/golden_arrow/platoon_sergeant)
+/area/golden_arrow/hangar)
 "tR" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -2105,6 +2025,44 @@
 "tZ" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/platoon_commander_rooms)
+"ua" = (
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;237"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;237";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "uf" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -2179,19 +2137,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"uS" = (
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;237"
-	},
-/obj/item/clothing/accessory/armband,
-/obj/item/device/whistle,
-/obj/item/device/binoculars/range/designator,
-/obj/item/weapon/gun/rifle/type71/flamer,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "uV" = (
 /obj/structure/machinery/light,
 /turf/open/floor/strata{
@@ -2230,6 +2175,16 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"vo" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "vq" = (
 /obj/structure/largecrate,
 /obj/structure/largecrate{
@@ -2266,6 +2221,17 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"vS" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/prep_hallway)
 "vW" = (
 /turf/open/floor/strata{
 	dir = 6;
@@ -2373,16 +2339,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/supply)
-"wN" = (
-/obj/structure/machinery/door_control{
-	id = "chapaev_engi";
-	pixel_y = -23
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/engineering)
 "wO" = (
 /turf/open/floor/strata{
 	dir = 4;
@@ -2427,6 +2383,20 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"xv" = (
+/obj/structure/largecrate{
+	fill_from_loc = 0
+	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
+	name = "\improper makeshift ammo rack";
+	pixel_y = 12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "xz" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata{
@@ -2459,21 +2429,6 @@
 	icon_state = "floor3"
 	},
 /area/space)
-"xO" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 13
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_x = -9;
-	pixel_y = 2
-	},
-/obj/item/trash/semki,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_sergeant)
 "xU" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	name = "\improper Sergeants Room";
@@ -2497,24 +2452,21 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
-"xY" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/magazine/book{
-	name = "UPP Party Doctrine Booklet"
-	},
-/obj/item/prop/tableflag/upp{
-	pixel_x = 6;
-	pixel_y = 1
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/briefing)
 "xZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/squad_one)
+"yc" = (
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -23;
+	pixel_y = 20
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -31;
+	pixel_y = 10
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/hangar)
 "ye" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2531,21 +2483,20 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"ys" = (
-/obj/item/tool/mop{
-	pixel_x = 17;
-	pixel_y = -2
+"yq" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
 	},
-/obj/item/paper{
-	icon_state = "paper_words";
-	info = "you fucktards should clean your boots because lieutenant kotov made me scrub the deck clean with a toothbrush when i fucked up (wasnt my fault too) and BOY was it dirty. fuck you all though. know my struggles.";
-	name = "scribbled note";
-	pixel_y = 22
+/obj/structure/machinery/line_nexter{
+	dir = 2;
+	icon_state = "turnstile_strata";
+	layer = 4.1
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/briefing)
+/area/golden_arrow/canteen)
 "yu" = (
 /obj/structure/surface/rack,
 /obj/item/device/motiondetector/hacked,
@@ -2555,9 +2506,32 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"yz" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
+	name = "\improper MinZdrav Blood Dispenser";
+	req_access = list();
+	vendor_theme = 3
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/medical)
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
+"yS" = (
+/obj/structure/largecrate,
+/obj/structure/largecrate{
+	layer = 3.1;
+	pixel_x = 11;
+	pixel_y = 16
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "yY" = (
 /obj/structure/surface/rack,
 /obj/item/device/motiondetector,
@@ -2585,17 +2559,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
-"zt" = (
-/obj/item/prop/colony/used_flare,
-/obj/item/prop/colony/used_flare{
-	pixel_x = 9;
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/hangar)
 "zA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -2615,6 +2578,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"zT" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "zU" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -2640,6 +2613,25 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"Ag" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/upp,
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/clothing/head/uppcap/civi{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "Aj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin,
@@ -2674,25 +2666,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/synthcloset)
-"AA" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/prep_hallway)
 "AC" = (
 /obj/structure/machinery/light,
 /obj/structure/pipes/vents/pump{
@@ -2743,18 +2716,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
-"Bf" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/briefing)
 "Bj" = (
 /obj/structure/sink{
 	dir = 4;
@@ -2767,18 +2728,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"Bs" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/prep_hallway)
 "Bw" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	name = "\improper Platoon Sergeant's Bunk";
@@ -2835,37 +2784,45 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
-"BQ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	faction = "UPP";
-	icon_state = "shuttle";
-	layer = 2.97;
-	minimap_type = 8;
-	name = "Tactical Map Display";
-	pixel_x = 7
-	},
-/obj/structure/machinery/computer/cameras/almayer/vehicle{
-	network = list("Chapaev","Vehicle");
-	pixel_x = -12
-	},
-/obj/structure/phone_base/no_dnd{
-	name = "Overwatch Telephone";
-	phone_category = "Command";
-	phone_id = "Overwatch";
-	pixel_y = 30
+"BM" = (
+/obj/structure/largecrate/random/case/double,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/platoon_commander_rooms)
+/area/golden_arrow/prep_hallway)
 "Ce" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"Cf" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/obj/item/attachable/bayonet/upp{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/obj/item/prop/magazine/book{
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	name = "UPP Party Doctrine Booklet";
+	pixel_x = 13
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "Cg" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata{
@@ -3053,21 +3010,35 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
-"Dr" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/pen{
-	pixel_x = 12
+"Dw" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
 	},
-/obj/item/paper_bin,
-/obj/item/device/flashlight/lamp{
-	pixel_x = 11;
-	pixel_y = 12
+/obj/structure/prop/ice_colony/tiger_rug{
+	desc = "A rather tasteless but impressive tiger rug. Must've costed a fortune to get this exported to the rim. Actually, this rug was 'collectivized' by internal police troopers during anti-corruption raids on colonies and later gifted to Leytenant.";
+	icon_state = "Gray";
+	pixel_x = -14;
+	pixel_y = -14
 	},
-/obj/item/prop/magazine/book/theartofwar,
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 6;
+	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"DC" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = -2;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/medical)
 "DE" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -3099,18 +3070,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
-"DW" = (
-/obj/structure/machinery/floodlight/landing/floor,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/hangar)
 "DX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -3139,25 +3098,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/squad_one)
-"Ev" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/clothing/head/uppcap/civi{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
 "Ez" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/landmark/late_join/alpha,
@@ -3232,29 +3172,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
-"Fh" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating,
-/area/golden_arrow/briefing)
-"Fi" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/magazine/book{
-	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
-	name = "UPP Party Doctrine Booklet";
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/canteen)
 "Fl" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3289,6 +3206,34 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/cryo_cells)
+"Fv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/item/trash/semki,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
+"Fz" = (
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;237"
+	},
+/obj/item/clothing/accessory/armband,
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/item/weapon/gun/rifle/type71/flamer,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "FB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -3320,27 +3265,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
-"FG" = (
-/obj/structure/machinery/cm_vending/clothing/synth{
-	density = 0;
-	name = "\improper UnTech Synthetic Equipment Rack";
-	pixel_y = 32
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/synthcloset)
-"FH" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	dir = 1;
-	name = "\improper Dorms";
-	req_one_access = null
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
 "FV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata{
@@ -3383,27 +3307,17 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
-"Gt" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/large_shrapnel/at_rocket_dud{
-	drop_sensitivity = 0;
-	impact_sensitivity = 1;
-	pixel_x = -6;
-	pixel_y = 13
-	},
-/obj/item/attachable/bayonet/upp{
-	pixel_x = -9;
-	pixel_y = -1
-	},
-/obj/item/prop/magazine/book{
-	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
-	name = "UPP Party Doctrine Booklet";
-	pixel_x = 13
+"Gn" = (
+/obj/structure/machinery/cm_vending/clothing/synth{
+	density = 0;
+	name = "\improper UnTech Synthetic Equipment Rack";
+	pixel_y = 32
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 6;
+	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/dorms)
+/area/golden_arrow/synthcloset)
 "Gw" = (
 /obj/structure/machinery/power/apc/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3548,29 +3462,21 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
-"HO" = (
-/obj/structure/largecrate,
-/obj/structure/largecrate{
-	layer = 3.1;
-	pixel_x = 11;
-	pixel_y = 16
+"HN" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin,
+/obj/item/tool/pen{
+	pixel_x = 12
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_x = 6;
+	pixel_y = 15
 	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
 	},
-/area/golden_arrow/supply)
-"HX" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/canteen)
+/area/golden_arrow/briefing)
 "Id" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3578,17 +3484,16 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
-"Io" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2;
-	id = "Delta_1";
-	name = "\improper Bathroom"
+"Ii" = (
+/obj/structure/janitorialcart,
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = -7;
+	pixel_y = 8
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
-/area/golden_arrow/dorms)
+/area/golden_arrow/briefing)
 "IB" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -3611,23 +3516,6 @@
 "IS" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/dorms)
-"IW" = (
-/obj/structure/closet/secure_closet{
-	name = "machinegunner locker";
-	req_access_txt = "243;237"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "Jc" = (
 /obj/effect/landmark/start/bridge/upp,
 /turf/open/floor/strata{
@@ -3635,6 +3523,21 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"Je" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/tea{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/item/ashtray/bronze{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/canteen)
 "Jf" = (
 /turf/open/floor/strata{
 	dir = 4;
@@ -3672,20 +3575,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/squad_two)
-"Ju" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 4
-	},
-/obj/structure/machinery/line_nexter{
-	dir = 2;
-	icon_state = "turnstile_strata";
-	layer = 4.1
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/canteen)
 "JA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe,
@@ -3694,6 +3583,15 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"JB" = (
+/obj/structure/cargo_container/horizontal/blue/top{
+	opacity = 0;
+	pixel_x = 17
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/hangar)
 "JE" = (
 /obj/structure/pipes/standard/cap/hidden/supply{
 	dir = 4
@@ -3728,19 +3626,6 @@
 	icon_state = "cyan1"
 	},
 /area/golden_arrow/medical)
-"JR" = (
-/obj/structure/machinery/computer/overwatch/almayer{
-	density = 1;
-	faction = "UPP"
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = 7;
-	pixel_y = 17
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/platoon_commander_rooms)
 "JW" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	name = "\improper Canteen";
@@ -3761,19 +3646,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
-"Ka" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Platoon Corpsman"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/distress/UPP,
-/obj/item/clothing/under/marine/veteran/UPP/medic,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan1"
-	},
-/area/golden_arrow/medical)
 "Kc" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
@@ -3820,15 +3692,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
-"KG" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan1"
-	},
-/area/golden_arrow/medical)
 "KH" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -3852,24 +3715,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/golden_arrow/briefing)
-"KT" = (
-/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan1"
-	},
-/area/golden_arrow/medical)
-"KV" = (
-/obj/structure/prop{
-	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
-	icon_state = "ladder11";
-	name = "ladder"
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
 /area/golden_arrow/briefing)
 "Lf" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -3896,15 +3741,69 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"Lm" = (
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;238"
+"Ln" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	pixel_y = 12
 	},
-/obj/item/clothing/accessory/armband,
-/obj/item/device/whistle,
-/obj/item/device/binoculars/range/designator,
-/obj/item/weapon/gun/rifle/type71/flamer,
+/obj/item/toy/deck{
+	pixel_x = 9;
+	pixel_y = -6
+	},
+/obj/item/tool/wrench{
+	pixel_y = 25
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
+"Lt" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison{
+	pixel_x = 20;
+	pixel_y = -1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"Lw" = (
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;238"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;238";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3983,24 +3882,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"MF" = (
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_x = 2;
-	pixel_y = 18
-	},
-/obj/item/book/codebook/upp,
-/obj/item/prop/magazine/book{
-	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
-	name = "Communist Manifesto";
-	pixel_y = 35
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_sergeant)
 "MH" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4026,6 +3907,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
+"MR" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/golden_arrow/medical)
 "MV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -4041,6 +3931,34 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"MX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "MZ" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -4050,6 +3968,18 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Nd" = (
+/obj/item/tool/soap,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "Nz" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -4070,6 +4000,21 @@
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
+"NF" = (
+/obj/item/tool/mop{
+	pixel_x = 17;
+	pixel_y = -2
+	},
+/obj/item/paper{
+	icon_state = "paper_words";
+	info = "you fucktards should clean your boots because lieutenant kotov made me scrub the deck clean with a toothbrush when i fucked up (wasnt my fault too) and BOY was it dirty. fuck you all though. know my struggles.";
+	name = "scribbled note";
+	pixel_y = 22
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
 "NI" = (
@@ -4098,19 +4043,32 @@
 "Of" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/space)
-"Ol" = (
-/obj/structure/machinery/power/terminal{
-	dir = 8
+"Og" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	name = "\improper Squad One Armoury";
+	req_one_access = null;
+	req_one_access_txt = "231;240;237"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison{
-	pixel_x = 20;
-	pixel_y = -1
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "0-4"
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
+/area/golden_arrow/squad_one)
+"Oo" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 1;
+	name = "\improper Platoon Medic Office";
+	req_one_access = null;
+	req_one_access_txt = "231"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/medical)
 "Os" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "\improper Platoon Commander's Quarters";
@@ -4124,6 +4082,18 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"Ov" = (
+/obj/structure/machinery/cm_vending/gear/synth{
+	density = 0;
+	name = "\improper UnTech Synthetic Auxiliary Gear Rack";
+	pixel_y = 32
+	},
+/obj/item/stool,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/synthcloset)
 "OB" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/strata{
@@ -4148,16 +4118,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/supply)
-"OL" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "OP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata{
@@ -4229,42 +4189,23 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
-"Qb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = -10;
-	pixel_y = -7
+"PR" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera";
+	network = list("Chapaev")
 	},
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = -1;
-	pixel_y = 2
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
 	},
-/obj/item/reagent_container/food/snacks/upp{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/briefing)
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "Qd" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/dorms)
-"Qi" = (
-/obj/structure/largecrate/random/case/double,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/prep_hallway)
 "Qj" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/strata{
@@ -4303,6 +4244,45 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"QJ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 2;
+	id = "Delta_1";
+	name = "\improper Bathroom"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/dorms)
+"QK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/bayonet/upp,
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	pixel_y = 20;
+	plane = 2.8
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	pixel_x = -7;
+	pixel_y = 16;
+	plane = 2.8
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper/crumpled/bloody{
+	pixel_y = 6
+	},
+/obj/item/attachable/bayonet/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "QR" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
@@ -4317,28 +4297,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/synthcloset)
-"QY" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light{
-	dir = 4;
-	invisibility = 101
-	},
-/obj/item/clothing/head/uppcap/beret{
-	pixel_x = -6;
-	pixel_y = 8
-	},
-/obj/item/clothing/accessory/armband{
-	pixel_x = 6
-	},
-/obj/item/tool/screwdriver{
-	pixel_x = -9;
-	pixel_y = 8
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_sergeant)
 "Re" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4354,6 +4312,21 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
+"Rs" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/machinery/light/small,
+/obj/item/prop/magazine/book{
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	name = "UPP Party Doctrine Booklet";
+	pixel_x = 11;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/dorms)
 "Ru" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_magazine/pistol/np92,
@@ -4393,24 +4366,39 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
-"RM" = (
+"RI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/attachable/bayonet/upp,
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	pixel_y = 20;
-	plane = 2.8
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet"
 	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	pixel_x = -7;
-	pixel_y = 16;
-	plane = 2.8
+/obj/item/prop/tableflag/upp{
+	pixel_x = 6;
+	pixel_y = 1
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
-/area/golden_arrow/squad_one)
+/area/golden_arrow/briefing)
+"RJ" = (
+/obj/item/clothing/suit/storage/snow_suit/soviet,
+/obj/item/clothing/suit/gimmick/jason,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_off = "cabinetdetective_broken";
+	icon_opened = "cabinetdetective_open";
+	icon_state = "cabinetdetective_locked";
+	job = "Platoon Commander"
+	},
+/obj/item/clothing/under/marine/veteran/UPP/boiler,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "RN" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -4429,48 +4417,57 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"RU" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
 "Sc" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"Se" = (
-/obj/structure/pipes/vents/pump{
-	dir = 1
-	},
-/obj/structure/bed/chair/office/dark,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/medical)
-"Sf" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/handful/shotgun/heavy/flechette{
-	current_rounds = 1;
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/handful/shotgun/heavy{
-	current_rounds = 1;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/handful/shotgun/heavy/beanbag{
-	current_rounds = 1;
-	pixel_x = -8;
-	pixel_y = 5
+"Sj" = (
+/obj/structure/machinery/door_control{
+	id = "chapaev_engi";
+	pixel_y = -23
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 6;
+	icon_state = "multi_tiles"
 	},
-/area/golden_arrow/squad_two)
+/area/golden_arrow/engineering)
 "Sp" = (
 /obj/item/clothing/head/helmet/marine/veteran/bear{
 	anchored = 1
 	},
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/platoon_sergeant)
+"Sv" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/prep_hallway)
 "Sx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -4478,6 +4475,28 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
+"Sz" = (
+/obj/structure/machinery/body_scanconsole{
+	dir = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "cyan1"
+	},
+/area/golden_arrow/medical)
+"SB" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
 "SF" = (
 /obj/structure/machinery/computer/station_alert{
 	dir = 8;
@@ -4522,6 +4541,24 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
+"SU" = (
+/obj/structure/bookcase{
+	density = 0;
+	icon_state = "book-5";
+	pixel_x = 2;
+	pixel_y = 18
+	},
+/obj/item/book/codebook/upp,
+/obj/item/prop/magazine/book{
+	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
+	name = "Communist Manifesto";
+	pixel_y = 35
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
 "Tb" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4534,17 +4571,6 @@
 "Tf" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/platoon_sergeant)
-"Tg" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/prep_hallway)
 "Tk" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -4576,50 +4602,12 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_two)
-"Tx" = (
-/obj/structure/machinery/cryopod,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
-"Tz" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/cameras/wooden_tv/prop{
-	pixel_y = 12
-	},
-/obj/item/toy/deck{
-	pixel_x = 9;
-	pixel_y = -6
-	},
-/obj/item/tool/wrench{
-	pixel_y = 25
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
 "TB" = (
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"TF" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "TH" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer{
@@ -4641,18 +4629,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
-"Ua" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/prep_hallway)
 "Ug" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4662,6 +4638,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"Ul" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/canteen)
 "Un" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/strata{
@@ -4669,6 +4656,19 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
+"Up" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/magazine/book{
+	desc = "A booklet provided to anyone ranging from conscripts to normal citizenry. The first page is stamped with the Party's insignia and reminds you that the Party has your best interest in heart; the following pages immensely simplify the Party's doctrine, grossly propagandizes Socialism, and greatly vilifies the United Americas.";
+	name = "UPP Party Doctrine Booklet";
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/canteen)
 "Uu" = (
 /obj/structure/machinery/conveyor,
 /obj/structure/machinery/conveyor{
@@ -4764,18 +4764,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
-"Vk" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/item/tool/hand_labeler{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
 "Vq" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 1;
@@ -4842,43 +4830,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
-"VP" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/structure/prop/ice_colony/tiger_rug{
-	desc = "A rather tasteless but impressive tiger rug. Must've costed a fortune to get this exported to the rim. Actually, this rug was 'collectivized' by internal police troopers during anti-corruption raids on colonies and later gifted to Leytenant.";
-	icon_state = "Gray";
-	pixel_x = -14;
-	pixel_y = -14
-	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/platoon_commander_rooms)
-"VX" = (
-/obj/structure/machinery/washing_machine,
-/obj/structure/machinery/washing_machine{
-	layer = 3.5;
-	pixel_y = 15
-	},
-/obj/item/toy/plush/therapy/green{
-	desc = "He seems lonely...";
-	layer = 3.6;
-	name = "Polkovnik Obnimashkin";
-	pixel_x = 1;
-	pixel_y = 26
-	},
-/obj/item/clothing/head/uppcap/ushanka{
-	layer = 3.6;
-	pixel_x = 1;
-	pixel_y = 30
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/dorms)
 "VZ" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -4894,19 +4845,18 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
-"Wg" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	dir = 1;
-	name = "\improper Platoon Medic Office";
-	req_one_access = null;
-	req_one_access_txt = "231"
-	},
-/turf/open/floor/strata{
+"Wk" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
-	icon_state = "floor3"
+	name = "ship-grade camera";
+	network = list("Chapaev")
 	},
-/area/golden_arrow/medical)
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/prep_hallway)
 "Wp" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/snacks/beetsoup,
@@ -4940,17 +4890,6 @@
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"WM" = (
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_x = -23;
-	pixel_y = 20
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_x = -31;
-	pixel_y = 10
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/golden_arrow/hangar)
 "WP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4979,6 +4918,46 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/cryo_cells)
+"WR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	faction = "UPP";
+	icon_state = "shuttle";
+	layer = 2.97;
+	minimap_type = 8;
+	name = "Tactical Map Display";
+	pixel_x = 7
+	},
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	network = list("Chapaev","Vehicle");
+	pixel_x = -12
+	},
+/obj/structure/phone_base/no_dnd{
+	name = "Overwatch Telephone";
+	phone_category = "Command";
+	phone_id = "Overwatch";
+	pixel_y = 30
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/platoon_commander_rooms)
+"WU" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin,
+/obj/item/tool/pen{
+	pixel_x = 12
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_sergeant)
 "WV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4988,6 +4967,21 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
+"WW" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/structure/machinery/cm_vending/clothing/medic/upp,
+/obj/item/clothing/head/uppcap{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/medical)
 "WY" = (
 /obj/structure/closet/crate/ammo/alt/flame,
 /obj/item/explosive/grenade/high_explosive/upp,
@@ -5066,6 +5060,35 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"Xp" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = -10;
+	pixel_y = -7
+	},
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
+"Xq" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/medical)
 "Xt" = (
 /obj/structure/toilet{
 	dir = 4
@@ -5077,35 +5100,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/dorms)
-"XC" = (
-/obj/structure/stairs/perspective{
-	color = "#6e6e6e";
-	dir = 4;
-	icon_state = "p_stair_sn_full_cap";
-	layer = 2.5
-	},
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/briefing)
-"XH" = (
-/obj/structure/janitorialcart,
-/obj/item/reagent_container/glass/bucket{
-	pixel_x = -7;
-	pixel_y = 8
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/briefing)
 "XL" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -5125,6 +5119,40 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"XY" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/briefing)
+"Yh" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Bathroom"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/platoon_commander_rooms)
+"Yk" = (
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;238"
+	},
+/obj/item/clothing/accessory/armband,
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/item/weapon/gun/rifle/type71/flamer,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "Yo" = (
 /obj/structure/closet,
 /obj/item/clothing/head/uppcap/civi{
@@ -5135,6 +5163,18 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"Yq" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "YA" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -5145,6 +5185,10 @@
 	},
 /area/golden_arrow/hangar)
 "YL" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/crew/alt{
+	dir = 1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -5216,6 +5260,17 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"Zp" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_sergeant)
 "Zv" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -5234,6 +5289,18 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"ZM" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/dorms)
 "ZN" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 5"
@@ -5243,6 +5310,19 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
+"ZT" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 2;
+	name = "\improper Platoon Sergeant's Bunk";
+	req_one_access = null;
+	req_one_access_txt = "240"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/platoon_sergeant)
 "ZU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -11718,7 +11798,7 @@ hE
 hE
 Sp
 hE
-MF
+SU
 tG
 WZ
 tG
@@ -11869,7 +11949,7 @@ hE
 hE
 UZ
 FV
-tL
+ZT
 FV
 fc
 lE
@@ -12018,14 +12098,14 @@ mV
 mV
 mV
 hE
-xO
+Fv
 tG
 dF
 Tf
 OB
 WV
-QY
-aI
+pR
+ha
 tV
 hE
 mV
@@ -12470,7 +12550,7 @@ tZ
 tZ
 tZ
 ei
-RM
+QK
 dU
 dU
 dU
@@ -12480,7 +12560,7 @@ vW
 vW
 PL
 Rm
-mv
+Zp
 NU
 Tw
 Hp
@@ -12619,29 +12699,29 @@ tZ
 tZ
 tZ
 tZ
-eF
+nH
 Qj
 ww
-pz
+jI
 dU
 xZ
 dU
 EO
 ww
 MZ
-qQ
+WU
 EM
 Ru
 eD
 NU
-Sf
+lP
 Hp
 ML
 Hp
 yY
 CM
-VX
-kB
+ab
+zT
 bt
 Nz
 Yo
@@ -12768,9 +12848,9 @@ Ms
 MC
 os
 CZ
-jH
+mh
 os
-kb
+RJ
 ic
 Jc
 ww
@@ -12792,7 +12872,7 @@ XL
 Hp
 VE
 CM
-Gt
+Cf
 Qr
 bt
 oH
@@ -12921,12 +13001,12 @@ MC
 os
 Bx
 uQ
-rG
+Yh
 TB
-VP
+Dw
 TB
 ww
-IW
+ua
 dU
 MH
 dU
@@ -12938,13 +13018,13 @@ es
 Rm
 vW
 NU
-bw
+Lw
 Hp
 Jt
 Hp
 GT
 CM
-Tz
+Ln
 Qr
 oH
 Ku
@@ -13078,10 +13158,10 @@ uA
 zU
 Ar
 ww
-uS
+Fz
 mT
 Mm
-TF
+vo
 eo
 ww
 Hf
@@ -13090,21 +13170,21 @@ zb
 vQ
 sy
 NU
-Lm
-OL
+Yk
+fE
 bc
 hV
 WY
 CM
-Ev
-Vk
+Ag
+ZM
 bt
 pH
 bt
 CM
 Xt
 CM
-io
+Rs
 IS
 mV
 mV
@@ -13232,7 +13312,7 @@ os
 ww
 ww
 ww
-py
+Og
 ww
 ww
 ww
@@ -13394,18 +13474,18 @@ NA
 MO
 Ma
 Ma
-Bs
-AA
+Wk
+nF
 Sx
 MO
 dx
 LO
-FH
+jr
 OP
 OP
 SO
 OP
-Io
+QJ
 oi
 tH
 Qd
@@ -13511,12 +13591,12 @@ Jf
 Jf
 Jf
 iz
-zt
+gX
 tx
 cW
 cW
 cW
-gZ
+rq
 cW
 cW
 cW
@@ -13527,16 +13607,16 @@ zA
 yH
 Ms
 os
-BQ
+WR
 un
-Dr
+qc
 RP
 rl
 qm
 Ma
 Ma
 Ki
-Tg
+vS
 bK
 EP
 bK
@@ -13547,7 +13627,7 @@ bK
 bK
 bK
 bK
-Ua
+Sv
 bK
 bK
 bK
@@ -13679,7 +13759,7 @@ MN
 yH
 Ms
 os
-JR
+rQ
 OX
 ob
 KK
@@ -13699,7 +13779,7 @@ cT
 cT
 Xh
 Xh
-Qi
+BM
 JX
 mB
 mB
@@ -13843,7 +13923,7 @@ cT
 aE
 wB
 DK
-Fi
+Up
 UM
 nO
 Tb
@@ -13989,17 +14069,17 @@ xD
 xD
 cv
 PJ
-rJ
+gh
 cT
 tq
 Zv
 af
 DK
 Wp
-kS
+Je
 nO
 EA
-HX
+Ul
 cT
 BK
 BK
@@ -14011,9 +14091,9 @@ pk
 AS
 AS
 AS
-sL
+Nd
 iO
-Tx
+Yq
 jS
 hx
 jS
@@ -14305,11 +14385,11 @@ qK
 Fp
 jg
 cT
-aQ
+ga
 cR
 eB
 cR
-bO
+PR
 iO
 AC
 iO
@@ -14439,7 +14519,7 @@ KD
 PE
 KN
 PJ
-lS
+HN
 VH
 bg
 xD
@@ -14495,7 +14575,7 @@ ug
 vb
 wO
 FY
-Ol
+Lt
 wy
 jG
 mV
@@ -14589,9 +14669,9 @@ wq
 wq
 MN
 fh
-bm
+tk
 Xl
-XC
+lu
 dA
 cU
 xD
@@ -14600,7 +14680,7 @@ PJ
 Ll
 cT
 tq
-Ju
+yq
 af
 DK
 uE
@@ -14613,9 +14693,9 @@ BK
 BK
 wH
 VL
-BK
+MX
 iO
-bC
+eH
 CJ
 CJ
 CJ
@@ -14795,7 +14875,7 @@ vb
 Jr
 ug
 CW
-wN
+Sj
 vb
 wO
 fA
@@ -14916,8 +14996,8 @@ cT
 lN
 DE
 CC
-pU
-Qb
+jp
+Xp
 Ht
 Un
 vN
@@ -15030,7 +15110,7 @@ Jf
 ED
 Jf
 Jf
-DW
+qU
 Jf
 tx
 cW
@@ -15058,7 +15138,7 @@ ts
 CI
 ts
 ts
-cd
+RU
 ts
 ts
 CI
@@ -15072,7 +15152,7 @@ cQ
 ts
 HI
 FZ
-hr
+dn
 ur
 ur
 Ao
@@ -15208,16 +15288,16 @@ PJ
 nc
 bN
 bN
-Fh
+cL
 FZ
-Bf
+SB
 FZ
 FZ
 bN
 Wf
 bN
 FZ
-cX
+XY
 bN
 bN
 bN
@@ -15342,7 +15422,7 @@ KB
 KB
 KB
 yH
-qu
+jR
 KB
 KB
 KB
@@ -15353,10 +15433,10 @@ xK
 fh
 dH
 nI
-xY
+RI
 PJ
 fh
-KV
+kn
 wV
 wV
 pX
@@ -15494,7 +15574,7 @@ KB
 KB
 KB
 yH
-gv
+mN
 KB
 ag
 KB
@@ -15515,24 +15595,24 @@ Ax
 TJ
 wV
 nv
-eb
+DC
 tX
 Jq
 ZU
-sO
+yz
 ff
 CK
 DH
 DH
-YL
+nq
 CK
 Qv
 kh
 vN
 vN
-cC
-cC
-cC
+he
+he
+he
 vN
 Tr
 Tr
@@ -15650,7 +15730,7 @@ YZ
 hH
 cg
 KB
-pV
+ew
 yH
 Dh
 xK
@@ -15662,7 +15742,7 @@ fh
 fh
 Dh
 wV
-lK
+Ov
 Ax
 mm
 wV
@@ -15673,15 +15753,15 @@ TH
 as
 Sc
 Sc
-Wg
+Oo
 wx
-Se
-tn
+Xq
+YL
 CK
-ys
+NF
 HA
 vN
-oW
+xv
 Jj
 Jj
 Jj
@@ -15799,10 +15879,10 @@ KB
 KB
 yH
 xi
-gu
-pO
-pL
-dD
+JB
+di
+tj
+tP
 yH
 Dh
 xK
@@ -15814,26 +15894,26 @@ Dh
 Dh
 Dh
 wV
-FG
+Gn
 Ax
 dV
 wV
 or
 DG
-dr
+Sz
 DG
 aa
 DG
 aa
 CK
-pA
+WW
 DH
-rV
+tn
 CK
-XH
+Ii
 SQ
 vN
-HO
+yS
 Li
 Li
 Li
@@ -15978,9 +16058,9 @@ wA
 qO
 wA
 CK
-KT
-KG
-Ka
+bU
+MR
+rV
 CK
 IB
 IB
@@ -16103,8 +16183,8 @@ mV
 mV
 mV
 oB
-WM
-jF
+yc
+lr
 oB
 oB
 mV
