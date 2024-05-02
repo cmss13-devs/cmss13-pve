@@ -1197,7 +1197,7 @@ export const NightmareShipPanel = (props, context) => {
             ))}
           </Stack>
         </Section>
-      ))(NightmareShip)}
+      ))(nightmareShip)}
     </Stack>
   );
 };
