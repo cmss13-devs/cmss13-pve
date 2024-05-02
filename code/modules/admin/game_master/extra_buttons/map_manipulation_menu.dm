@@ -524,7 +524,8 @@
 						if(closed_wall.z == selected_z_level && prob(specified_percentage_to_break))
 							switch(batch_damage) //For batch processing.
 								if(2)
-									if(prob(20)) closed_wall.current_bulletholes = TRUE
+									if(prob(20))
+										closed_wall.current_bulletholes = TRUE
 								if(3)
 									if(prob(40)) closed_wall.current_bulletholes = TRUE
 								else //For not-batch processing, like if it's null.
