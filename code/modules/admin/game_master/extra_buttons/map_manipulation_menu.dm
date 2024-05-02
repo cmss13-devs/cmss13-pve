@@ -570,7 +570,7 @@
 									if(prob(55)) new /obj/item/pipe(open_floor, null, null, pipe)
 									qdel(pipe)
 								for(disposal_junction in open_floor)
-									disposal_junction.deconstruct(prob(40) ? TRUE : FALSE)
+									disposal_junction.deconstruct(prob(40))
 
 				//ITEMS //These are qdeleted. They don't have damage states.
 				if("destroy_all_items")
