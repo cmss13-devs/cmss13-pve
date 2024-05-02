@@ -273,7 +273,8 @@
 	if(vehicle_status == VAN_SPAWN_DAMAGED) load_damage(spawned_van)
 	spawned_van.update_icon()
 
-	if(vehicle_name) spawned_van.name = vehicle_name
+	if(vehicle_name)
+		spawned_van.name = vehicle_name
 
 /obj/effect/vehicle_spawner/van/load_hardpoints(obj/vehicle/multitile/van/V)
 	if(vehicle_status > VAN_SPAWN_NON_FUNCTIONAL)
