@@ -180,7 +180,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_KUTJEVO = /obj/item/map/kutjevo_map,
 		MAP_LV522_CHANCES_CLAIM = /obj/item/map/lv522_map,
 		MAP_NEW_VARADERO = /obj/item/map/new_varadero,
-		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero,
+		MAP_NEW_VARADERO_REPAIRED = /obj/item/map/new_varadero,
 		MAP_DERELICT_ALMAYER = /obj/item/map/almayer,
 	)
 
