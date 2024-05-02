@@ -1182,7 +1182,7 @@ export const NightmareShipPanel = (props, context) => {
                   ml={i === 0 ? 1 : 0}
                   content={scenario_value}
                   selected={
-                    NightmareShipScenario[scenario_name] === scenario_value
+                    nightmareShipScenario[scenario_name] === scenario_value
                   }
                   tooltip="Updates the scenario value with this value."
                   onClick={() => {
