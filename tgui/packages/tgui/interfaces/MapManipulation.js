@@ -643,8 +643,8 @@ export const MapSpecificTab = (props, context) => {
           </Stack.Item>
         </Stack>
       </Section>
-      <Section title={decl_name}>
-        {decl_name === 'Blackstone Bridge' && <BlackstonePanel />}
+      <Section title={map_name}>
+        {map_name === 'Blackstone Bridge' && <BlackstonePanel />}
       </Section>
     </Stack>
   );
