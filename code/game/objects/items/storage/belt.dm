@@ -712,6 +712,38 @@
 	desc = "Despite the fact that 1. drum magazines are incredibly non-ergonomical, and 2. require incredibly precise machining in order to fit universally (spoiler, they don't, adding further to the myth of 'Smartgun Personalities'), the USCM decided to issue a modified marine belt (more formally known by the designation M280) with hooks and dust covers (overly complex for the average jarhead) for the M56B system's drum munitions. When the carry catch on the drum isn't getting stuck in the oiled up velcro, the rig actually does do a decent job at holding a plentiful amount of drums. But at the end of the day, compared to standard rigs... it sucks, but isn't that what being a Marine is all about?"
 	icon_state = "s_sgbelt_ammo"
 
+/obj/item/storage/belt/marine/smartgunner/upp
+	name = "\improper Type 90 pattern machinegunner belt"
+	desc = "Recently adopted by UPP military, this belt allows machinegunners to carry more ammo boxes into battle. It also found use with SOF breachers using Type 23 shotguns."
+	icon_state = "upp_machinegun"
+	item_state = "upp_machinegun"
+	storage_slots = 7
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/pkp,
+	)
+	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/device/flashlight/flare,
+		/obj/item/ammo_magazine/pkp,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+	)
+
+	has_gamemode_skin = FALSE
+	item_state_slots = list(
+		WEAR_L_HAND = "upp_belt",
+		WEAR_R_HAND = "upp_belt")
+
+/obj/item/storage/belt/marine/smartgunner/upp/fill_preset_inventory()
+	return
+
 /obj/item/storage/belt/marine/quackers
 	name = "Mr. Quackers"
 	desc = "What are we going to do today, Mr. Quackers?"
@@ -1839,6 +1871,26 @@
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
 	icon_state = "s_sgbelt"
 	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/gun/smartgunner/upp
+	name = "\improper Type 92 pattern machinegunner sidearm rig"
+	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
+	icon_state = "upp_machinegun_pistol"
+	storage_slots = 7
+	can_hold = list(
+		/obj/item/weapon/gun/pistol/t73,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/t73_impact,
+		/obj/item/weapon/gun/pistol/np92,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/weapon/gun/revolver/upp,
+		/obj/item/ammo_magazine/revolver/upp,
+		/obj/item/ammo_magazine/pkp,
+	)
+	has_gamemode_skin = FALSE
+	item_state_slots = list(
+		WEAR_L_HAND = "upp_belt",
+		WEAR_R_HAND = "upp_belt")
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"
