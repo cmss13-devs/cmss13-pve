@@ -1130,8 +1130,8 @@ export const NightmareTab = (props, context) => {
 
 export const NightmareGroundPanel = (props, context) => {
   const { data, act } = useBackend(context);
-  const NightmareGround = data.nightmare_ground || {};
-  const NightmareGroundScenario = data.nightmare_ground_scenario || [];
+  const nightmareGround = data.nightmare_ground || {};
+  const nightmareGroundScenario = data.nightmare_ground_scenario || [];
   let ground_i = 0;
 
   return (
