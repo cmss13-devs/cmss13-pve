@@ -567,7 +567,8 @@
 								if(3)
 									if(prob(50)) enable_pipe_break = TRUE
 								else
-									if(break_pipes) enable_pipe_break = TRUE
+									if(break_pipes)
+										enable_pipe_break = TRUE
 
 							if(enable_pipe_break)
 								for(pipe in open_floor)
