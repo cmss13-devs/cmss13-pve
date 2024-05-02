@@ -498,7 +498,7 @@
 					var/obj/structure/surface/rack/regular_rack
 					for(regular_rack in world)
 						if(regular_rack.z == selected_z_level && prob(specified_percentage_to_break))
-							regular_rack.deconstruct(prob(30) ? TRUE : FALSE) //Smaller chance to have them deconstructed into parts.
+							regular_rack.deconstruct(prob(30)) //Smaller chance to have them deconstructed into parts.
 
 				if("break_reagent_tanks")
 					var/obj/structure/reagent_dispensers/I
