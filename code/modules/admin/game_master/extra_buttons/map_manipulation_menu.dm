@@ -257,7 +257,8 @@
 				maint_area = locate(i)
 				if(maint_area) //Could be that we can't find it.
 					for(area_light_bulb in maint_area)
-						if(prob(70)) area_light_bulb.flicker(rand(5,10))
+						if(prob(70))
+							area_light_bulb.flicker(rand(5,10))
 
 		if("toggle_poddoor")
 			var/obj/structure/machinery/door/poddoor/pod_door
