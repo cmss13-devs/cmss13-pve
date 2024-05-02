@@ -530,7 +530,8 @@
 									if(prob(40))
 										closed_wall.current_bulletholes = TRUE
 								else //For not-batch processing, like if it's null.
-									if(enable_bullet_holes) closed_wall.current_bulletholes = TRUE
+									if(enable_bullet_holes)
+										closed_wall.current_bulletholes = TRUE
 							closed_wall.take_damage(closed_wall.damage_cap / rand(1,6), null)
 
 				if("damage_floors")
