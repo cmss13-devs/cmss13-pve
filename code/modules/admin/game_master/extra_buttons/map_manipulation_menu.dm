@@ -565,7 +565,8 @@
 							enable_pipe_break = FALSE
 							switch(batch_damage)
 								if(2)
-									if(prob(20)) enable_pipe_break = TRUE
+									if(prob(20))
+										enable_pipe_break = TRUE
 								if(3)
 									if(prob(50))
 										enable_pipe_break = TRUE
