@@ -160,7 +160,7 @@
 		animation_spin(5, 1 + min(1, LM.range/20))
 
 	var/old_layer
-	if(layer < FLY_LAYER) /// Only swap layers if the atom is on a lower layer.
+	if(layer < FLY_LAYER) // Only swap layers if the atom is on a lower layer.
 		old_layer = layer
 		layer = FLY_LAYER
 	var/old_speed = cur_speed
@@ -208,7 +208,7 @@
 	if (loc)
 		throwing = FALSE
 		rebounding = FALSE
-		layer = old_layer || layer /// If old_layer isn't null, we will use it, or stick with whatever layer is set.
+		layer = old_layer || layer // If old_layer isn't null, we will use it, or stick with whatever layer is set.
 		cur_speed = old_speed
 		remove_temp_pass_flags(pass_flags)
 		if(length(LM.end_throw_callbacks))

@@ -777,7 +777,8 @@
 		show_browser(usr, dat, "Change Secret Gamemode", "f_secret")
 
 	else if(href_list["c_mode2"])
-		if(!check_rights(R_ADMIN|R_SERVER)) return FALSE
+		if(!check_rights(R_ADMIN|R_SERVER))
+			return FALSE
 
 		if(SSticker.current_state < GAME_STATE_PREGAME)
 			to_chat(usr, SPAN_WARNING("Please wait until the game is ready setting up before changing the mode!"))

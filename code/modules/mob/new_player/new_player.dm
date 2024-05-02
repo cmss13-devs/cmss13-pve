@@ -255,7 +255,7 @@
 		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[SShijack.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
 		character.put_in_hands(new /obj/item/storage/box/kit/cryo_self_defense(character.loc))
 
-	if(character.job in GET_MANIFEST_ROLES) ///Inject them into the manifest if they are spawning as a role that should be on the manifest/have access to it.
+	if(character.job in GET_MANIFEST_ROLES) //Inject them into the manifest if they are spawning as a role that should be on the manifest/have access to it.
 		GLOB.data_core.manifest_inject(character)
 	SSticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc. //TODO!!!!! ~Carn
 	SSticker.mode.latejoin_tally += RoleAuthority.calculate_role_weight(player_rank)
@@ -309,7 +309,7 @@
 	var/datum/job/J
 	var/active
 	var/mob/M
-	var/len = 0 /// To autosize the latejoin window.
+	var/len = 0 // To autosize the latejoin window.
 	for(var/i in RoleAuthority.roles_for_mode)
 		J = RoleAuthority.roles_for_mode[i]
 		if(!RoleAuthority.check_role_entry(src, J, TRUE))
@@ -320,7 +320,7 @@
 			if(M.client && M.job == J.title)
 				active++
 
-		if(!(J.category in categories_shown)) ///If it is not found in the list of categories already displayed, display it.
+		if(!(J.category in categories_shown)) // If it is not found in the list of categories already displayed, display it.
 			position_dat += "[J.category]:<br>"
 			categories_shown += J.category
 

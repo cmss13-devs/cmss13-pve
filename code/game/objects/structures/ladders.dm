@@ -37,23 +37,24 @@
 	. = ..()
 
 	if(id) //Don't need to run this if there is no ID.
-		var/obj/structure/ladder/I
-		for(var/i in GLOB.ladder_list)
-			if(up && down) break //If both our connections are filled; we are done.
+		for(var/obj/structure/ladder/other_ladder as anything in GLOB.ladder_list)
+			if(up && down)
+				break //If both our connections are filled; we are done.
 
-			I = i
-			if(I.id == id)
-				switch(I.height - height)
+			if(other_ladder.id == id)
+				switch(other_ladder.height - height)
 					if(-1)
-						if(!down) down = I //Only if the connection isn't established yet.
-						if(!I.up)
-							I.up = src
-							I.update_icon()
+						if(!down)
+							down = other_ladder //Only if the connection isn't established yet.
+						if(!other_ladder.up)
+							other_ladder.up = src
+							other_ladder.update_icon()
 					if(1)
-						if(!up) up = I
-						if(!I.down)
-							I.down = src
-							I.update_icon()
+						if(!up)
+							up = other_ladder
+						if(!other_ladder.down)
+							other_ladder.down = src
+							other_ladder.update_icon()
 	update_icon() //Update the icon regardless.
 
 /obj/structure/ladder/Destroy()
@@ -72,7 +73,7 @@
 	. = ..()
 
 /obj/structure/ladder/update_icon()
-	icon_state = "ladder[up? TRUE : FALSE][down? TRUE : FALSE]" //TRUE and FALSE are just 1 and 0.
+	icon_state = "ladder[up ? 1 : 0][down ? 1 : 0]"
 
 /obj/structure/ladder/attack_hand(mob/living/user)
 	if(user.stat || get_dist(user, src) > 1 || user.blinded || user.body_position == LYING_DOWN || user.buckled || user.anchored) return
@@ -85,7 +86,8 @@
 		to_chat(user, SPAN_WARNING("It appears to be locked and bolted!"))
 		return
 
-	if(open_hatch(user)) return //If it's closed and unlocked, we need to first pop it open, then we can climb in.
+	if(open_hatch(user))
+		return //If it's closed and unlocked, we need to first pop it open, then we can climb in.
 
 	var/ladder_dir_name
 	var/obj/structure/ladder/ladder_dest
@@ -119,7 +121,8 @@
 				user.visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src]."),
 				SPAN_NOTICE("You climb [ladder_dir_name] [src]."))
 				user.trainteleport(ladder_dest.loc)
-				if(!ladder_dest.open_hatch(user)) ladder_dest.add_fingerprint(user) //Fingerprints are added by the open proc, elsewise we add them here.
+				if(!ladder_dest.open_hatch(user))
+					ladder_dest.add_fingerprint(user) //Fingerprints are added by the open proc, elsewise we add them here.
 
 	busy = FALSE
 	add_fingerprint(user)
@@ -160,7 +163,8 @@
 
 //Peeking up/down
 /obj/structure/ladder/MouseDrop(over_object, src_location, over_location)
-	if(state < LADDER_OPEN) return //Can't look through a closed hatch.
+	if(state < LADDER_OPEN)
+		return //Can't look through a closed hatch.
 
 	if((over_object == usr && (in_range(src, usr))))
 		if(islarva(usr) || isobserver(usr) || usr.is_mob_incapacitated() || usr.blinded)
@@ -214,7 +218,8 @@
 
 //Throwing Shiet
 /obj/structure/ladder/attackby(obj/item/W, mob/user)
-	if(state < LADDER_OPEN) return //Can't drop anything if it's closed. Maybe this will change if grate hatches are added.
+	if(state < LADDER_OPEN)
+		return //Can't drop anything if it's closed. Maybe this will change if grate hatches are added.
 
 	//Throwing Grenades
 	if(istype(W,/obj/item/explosive/grenade))
@@ -304,7 +309,8 @@ The following procs are made general as to cut down on type checking, since it's
 If that changes, may need a slight refactor.
 */
 /obj/structure/ladder/proc/toggle_lock(trigger_signal)
-	if(!unlock_hatch(trigger_signal)) lock_hatch(trigger_signal) //If it doesn't match the first one, we will do the second.
+	if(!unlock_hatch(trigger_signal))
+		lock_hatch(trigger_signal) //If it doesn't match the first one, we will do the second.
 
 /obj/structure/ladder/proc/unlock_hatch(trigger_signal)
 	if(state == LADDER_LOCKED && trigger_signal == id)

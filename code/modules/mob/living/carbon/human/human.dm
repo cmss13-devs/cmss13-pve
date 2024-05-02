@@ -65,7 +65,7 @@
 	if(hud_used)
 		QDEL_NULL(hud_used)
 
-	/// Modify them in the datacore, if they are on it. Rip.
+	// Modify them in the datacore, if they are on it. Rip.
 	GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, species.manifest_dead)
 	. = ..()
 
@@ -104,7 +104,7 @@
 		for(var/tab_item in species_tab_items)
 			. += tab_item
 
-	/// Some information should only be available to those who are added to the manifest.
+	// Some information should only be available to those who are added to the manifest.
 	var/manifest_roles[] = GET_MANIFEST_ROLES
 
 	if(job in manifest_roles & !isnull(SSticker) && !isnull(SSticker.mode))
@@ -1081,7 +1081,7 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in GET_MANIFEST_ROLES) ///This will prevent mobs that are not part of round start/added manually from viewing the manifest.
+	if(job in GET_MANIFEST_ROLES) //This will prevent mobs that are not part of round start/added manually from viewing the manifest.
 		show_browser(src, GLOB.data_core.get_manifest(), "Crew Manifest", "manifest", "size=400x750")
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to the crew manifest."))

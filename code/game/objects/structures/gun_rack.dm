@@ -24,10 +24,11 @@
 
 /obj/structure/gun_rack/Destroy()
 	dump_contents() //Dump everything available.
-	. = ..()
+	return ..()
 
 /obj/structure/gun_rack/ex_act(severity, direction)
-	if(indestructible || !health) return //If it has no health or isn't supposed to be destroyed.
+	if(indestructible || !health)
+		return //If it has no health or isn't supposed to be destroyed.
 
 	health -= severity
 	if(health <= 0)
@@ -59,20 +60,20 @@
 //Similar to closets, these can dump out their contents. Except in this case we dump a variable amount depending on what triggered the proc.
 /obj/structure/gun_rack/proc/dump_contents(number_to_remove = max_stored)
 	number_to_remove = min(length(contents), number_to_remove)
-	var/obj/item/weapon/gun/I
-	for(var/i in src)
-		if(!number_to_remove--) break
-		I = i
-		I.forceMove(loc)
-		I.pixel_x = pixel_x
-		I.pixel_y = pixel_y
+	for(var/obj/thing as anything in src) //Let's hope there are no mobs hiding in there.
+		if(number_to_remove-- <= 0)
+			break
+		thing.forceMove(loc)
+		thing.pixel_x = 0 //Reset offsets so that it is centered properly on a tile.
+		thing.pixel_y = 0
 
 	update_icon()
 
 /obj/structure/gun_rack/proc/empty_out(number_to_remove = max_stored)
 	number_to_remove = min(length(contents), number_to_remove) //We don't want our specified mumber, if provided, to be greater than what is actually inside the rack.
 	for(var/i in src)
-		if(!number_to_remove--) break
+		if(!number_to_remove--)
+			break
 		qdel(i)
 
 	update_icon()

@@ -25,17 +25,19 @@
 /datum/faction/proc/get_antag_guns_sorted_equipment()
 	return list()
 
-//Overwrite this if the check needs to account for something special, like sub-factions. uscm.dm for an example.
+/// Overwrite this if the check needs to account for something special, like sub-factions. uscm.dm for an example.
 /datum/faction/proc/get_faction_access(faction_to_check, all_access = TRUE)
 	return get_access(all_access ? access_all : access_main)
 
-//Pretty straightforward. Override if you need it to return a variant list.
+/// Pretty straightforward. Override if you need it to return a variant list.
 /datum/faction/proc/get_faction_regions(faction_to_check)
 	return get_access(access_regions)
-/*
-* Ovewrite this for individual factions if they get their own ID changing consoles. Might be useful elsewhere. Grabs a list of roles mapped to various departments. Check job.dm defines.
-* Since there are no proper colonist jobs, instead having survivors, this is defaulted to the marine role list. Update as needed.
-*/
+/**
+  * Returns a list of faction departments.
+  *
+  * Ovewrite this for individual factions if they get their own ID changing consoles. Might be useful elsewhere. Grabs a list of roles mapped to various departments. Check job.dm defines.
+  * Since there are no proper colonist jobs, instead having survivors, this is defaulted to the marine role list. Update as needed.
+  */
 /datum/faction/proc/get_faction_departments(faction_to_check)
 	if(Check_WO())//This check is a crutch for now. WO can be removed entirely given that it's pretty old and is mostly replaced by Remote Outpost.
 		return list(

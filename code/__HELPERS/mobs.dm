@@ -70,7 +70,8 @@
 // It also ensures our mind's name gets changed
 /// To do: Clean up all the references to this proc to run from source instead of using mob/M as an argument.
 /mob/proc/change_real_name(mob/M, new_name)
-	if(!new_name) return FALSE
+	if(!new_name)
+		return FALSE
 
 	M.real_name = new_name
 	M.name = new_name

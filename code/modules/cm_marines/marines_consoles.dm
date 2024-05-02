@@ -6,9 +6,10 @@
 	circuit = /obj/item/circuitboard/computer/card
 	var/obj/item/card/id/user_id_card
 	var/obj/item/card/id/target_id_card
-	// What factions we are able to modify
-	var/faction = FACTION_MARINE //Hardcoded to be singular as faction search is how variables are retrieved. The variable passed to the machine for IFF can be turned into a list if desired. That shouldn't be too hard.
-	var/location //If we're located somewhere specific, text string. Otherwise will pull from station_name.
+	// What factions we are able to modify. Hardcoded to be singular as faction search is how variables are retrieved. The variable passed to the machine for IFF can be turned into a list if desired. That shouldn't be too hard.
+	var/faction = FACTION_MARINE
+	/// If we're located somewhere specific, text string. Otherwise will pull from station_name.
+	var/location
 	var/printing
 
 	var/authenticated = FALSE
@@ -33,13 +34,13 @@
 		ui = new(user, src, "CardMod", name)
 		ui.open()
 
-/obj/structure/machinery/computer/card/ui_act(action, params)
+/obj/structure/machinery/computer/card/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
 
-	var/mob/user = usr
-	var/datum/faction/F = get_faction(faction)
+	var/mob/user = ui.user
+	var/datum/faction/console_faction = get_faction(faction)
 
 	playsound(src, pick('sound/machines/computer_typing4.ogg', 'sound/machines/computer_typing5.ogg', 'sound/machines/computer_typing6.ogg'), 5, 1)
 	switch(action)
@@ -100,7 +101,7 @@
 								<u>Access:</u><br>
 								"}
 
-					var/known_access_rights = F.get_faction_access(faction)
+					var/known_access_rights = console_faction.get_faction_access(faction)
 
 					for(var/A in target_id_card.access)
 						if(A in known_access_rights)
@@ -131,9 +132,9 @@
 					GLOB.data_core.manifest_modify(target_id_card.registered_name, target_id_card.registered_ref, target_id_card.assignment, target_id_card.rank)
 					target_id_card.name = text("[target_id_card.registered_name]'s [target_id_card.card_name] ([target_id_card.assignment])")
 					if(target_id_card.registered_name != origin_name)
-						log_idmod(target_id_card, "<font color='orange'> [key_name_admin(usr)] changed the registered name of the ID to '[target_id_card.registered_name]'. </font>")
+						log_idmod(target_id_card, "<font color='orange'> [key_name_admin(user)] changed the registered name of the ID to '[target_id_card.registered_name]'. </font>")
 					if(target_id_card.assignment != origin_assignment)
-						log_idmod(target_id_card, "<font color='orange'> [key_name_admin(usr)] changed the assignment of the ID to the custom position '[target_id_card.assignment]'. </font>")
+						log_idmod(target_id_card, "<font color='orange'> [key_name_admin(user)] changed the assignment of the ID to the custom position '[target_id_card.assignment]'. </font>")
 				if(ishuman(user))
 					target_id_card.forceMove(user.loc)
 					if(!user.get_active_hand())
@@ -162,8 +163,8 @@
 
 			target_id_card.assignment = "Terminated"
 			target_id_card.access = list()
-			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] terminated the ID. </font>")
-			message_admins("[key_name_admin(usr)] terminated the ID of [target_id_card.registered_name].")
+			log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] terminated the ID. </font>")
+			message_admins("[key_name_admin(user)] terminated the ID of [target_id_card.registered_name].")
 			return TRUE
 		if("PRG_edit")
 			if(!authenticated || !target_id_card)
@@ -194,59 +195,59 @@
 					return
 
 				target_id_card.access = job.get_access() //You get all of it; you don't keep anything. Not sure why it was subtracted and then added before, this is like getting a brand-new ID.
-				target_id_card.assignment = job.get_assignment() /// Assignment shows up on the crew tracker and manifest.
-				target_id_card.rank = target /// Unique identifer for the role. Shouldn't be used for display purposes in most cases as it's equivalent to user.job.
-			message_admins("[key_name_admin(usr)] gave the ID of [target_id_card.registered_name] the assignment '[target_id_card.assignment]'.")
+				target_id_card.assignment = job.get_assignment() // Assignment shows up on the crew tracker and manifest.
+				target_id_card.rank = target // Unique identifer for the role. Shouldn't be used for display purposes in most cases as it's equivalent to user.job.
+			message_admins("[key_name_admin(user)] gave the ID of [target_id_card.registered_name] the assignment '[target_id_card.assignment]'.")
 			return TRUE
 		if("PRG_access")
 			if(!authenticated || !target_id_card)
 				return
 
 			var/access_type = params["access_target"]
-			if(access_type == F.faction_tag) //We're adding IFF instead of access. We want our main faction IFF>
+			if(access_type == console_faction.faction_tag) //We're adding IFF instead of access. We want our main faction IFF>
 
 				if(!target_id_card.faction_group)
 					target_id_card.faction_group = list()
 				if(access_type in target_id_card.faction_group)
 					target_id_card.faction_group -= access_type
-					log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked [access_type] IFF. </font>")
+					log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] revoked [access_type] IFF. </font>")
 				else
 					target_id_card.faction_group |= access_type
-					log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted [access_type] IFF. </font>")
+					log_idmod(target_id_card, "<font color='green'> [key_name_admin(user)] granted [access_type] IFF. </font>")
 				return TRUE
 
 			else
 				access_type = text2num(access_type) //Have to convert into a number here, which will be the access code.
-				var/known_access_rights = F.get_faction_access(faction)
+				var/known_access_rights = console_faction.get_faction_access(faction)
 
 				if(access_type in known_access_rights)
 					if(access_type in target_id_card.access)
 						target_id_card.access -= access_type
-						log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked access '[access_type]'. </font>")
+						log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] revoked access '[access_type]'. </font>")
 					else
 						target_id_card.access |= access_type
-						log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted access '[access_type]'. </font>")
+						log_idmod(target_id_card, "<font color='green'> [key_name_admin(user)] granted access '[access_type]'. </font>")
 					return TRUE
 		if("PRG_grantall")
 			if(!authenticated || !target_id_card)
 				return
 
-			target_id_card.access |= F.get_faction_access(faction)
+			target_id_card.access |= console_faction.get_faction_access(faction)
 
 			if(!target_id_card.faction_group)
 				target_id_card.faction_group = list()
 
-			target_id_card.faction_group |= F.faction_tag //The tag of the main group, if we're in a faction group.
-			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted the ID all access and [faction] IFF. </font>")
+			target_id_card.faction_group |= console_faction.faction_tag //The tag of the main group, if we're in a faction group.
+			log_idmod(target_id_card, "<font color='green'> [key_name_admin(user)] granted the ID all access and [faction] IFF. </font>")
 			return TRUE
 		if("PRG_denyall")
 			if(!authenticated || !target_id_card)
 				return
 
-			target_id_card.access -= F.get_faction_access(faction)
-			target_id_card?.faction_group -= F.faction_tag
+			target_id_card.access -= console_faction.get_faction_access(faction)
+			target_id_card?.faction_group -= console_faction.faction_tag
 
-			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] removed all accesses and [faction] IFF. </font>")
+			log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] removed all accesses and [faction] IFF. </font>")
 			return TRUE
 		if("PRG_grantregion")
 			if(!authenticated || !target_id_card)
@@ -258,30 +259,31 @@
 				if(!target_id_card.faction_group)
 					target_id_card.faction_group = list()
 
-				target_id_card.faction_group |= F.faction_tag
-				log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted [F.faction_tag] IFF. </font>")
+				target_id_card.faction_group |= console_faction.faction_tag
+				log_idmod(target_id_card, "<font color='green'> [key_name_admin(user)] granted [console_faction.faction_tag] IFF. </font>")
 				return TRUE
 
-			var/regions[] = F.get_faction_regions(faction)
+			var/regions[] = console_faction.get_faction_regions(faction)
 
 			target_id_card.access |= regions[region]
-			log_idmod(target_id_card, "<font color='green'> [key_name_admin(usr)] granted all [regions] accesses. </font>")
+			log_idmod(target_id_card, "<font color='green'> [key_name_admin(user)] granted all [regions] accesses. </font>")
 			return TRUE
 		if("PRG_denyregion")
 			if(!authenticated || !target_id_card)
 				return
 
 			var/region = params["region"]
-			if(!region)	return
+			if(!region)
+				return
 			if(region == "Faction (IFF system)")
 				target_id_card.faction_group -= faction
-				log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked [faction] IFF. </font>")
+				log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] revoked [faction] IFF. </font>")
 				return TRUE
 
-			var/regions[] = F.get_faction_regions(faction)
+			var/regions[] = console_faction.get_faction_regions(faction)
 
 			target_id_card.access -= regions[region]
-			log_idmod(target_id_card, "<font color='red'> [key_name_admin(usr)] revoked all [region] accesses. </font>")
+			log_idmod(target_id_card, "<font color='red'> [key_name_admin(user)] revoked all [region] accesses. </font>")
 			return TRUE
 		if("PRG_account")
 			if(!authenticated || !target_id_card)
@@ -289,7 +291,7 @@
 
 			var/account = text2num(params["account"])
 			target_id_card.associated_account_number = account
-			log_idmod(target_id_card, "<font color='orange'> [key_name_admin(usr)] changed the account number to '[account]'. </font>")
+			log_idmod(target_id_card, "<font color='orange'> [key_name_admin(user)] changed the account number to '[account]'. </font>")
 			return TRUE
 
 /obj/structure/machinery/computer/card/ui_static_data(mob/user)
@@ -297,8 +299,8 @@
 	data["station_name"] = location || station_name
 	data["manifest"] = GLOB.data_core.get_manifest(FALSE, FALSE, TRUE)
 
-	var/datum/faction/F = get_faction(faction)
-	var/departments[] = F.get_faction_departments(faction)
+	var/datum/faction/console_faction = get_faction(faction)
+	var/departments[] = console_faction.get_faction_departments(faction)
 
 	data["jobs"] = list()
 	for(var/department in departments)
@@ -313,7 +315,7 @@
 			data["jobs"][department] = department_jobs
 
 
-	var/faction_regions[] = F.get_faction_regions(faction)
+	var/faction_regions[] = console_faction.get_faction_regions(faction)
 	var/regions[0] //This is the list that's going to the tgui menu.
 	var/access_desc
 	var/iterate = 1
@@ -341,8 +343,8 @@
 
 	//This is some really confusing listception. I'm theorizing here that it is wrapped like a taco to pass it as an array, not an object.
 	localfactions += list(list(
-		"desc" = F.faction_tag,//Want the main faction tag, not the faction on the machine. The main faction is our primary IFF signal.
-		"ref" = F.faction_tag,
+		"desc" = console_faction.faction_tag,//Want the main faction tag, not the faction on the machine. The main faction is our primary IFF signal.
+		"ref" = console_faction.faction_tag,
 	))
 
 	regions += list(list(
@@ -998,11 +1000,12 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_MARINE_RAIDER = 131,
 				RAIDER_SQUAD = 131,
 			)
-			///This adds squads to the selector, I've expanded squad numbers from 70 to 240. 70 to 130 are Almayer, then the raiders, then the two Outpost squads, ending at 150-159 presently.
-			///This sets up the proper squad colors.
+			//This adds squads to the selector, I've expanded squad numbers from 70 to 240. 70 to 130 are Almayer, then the raiders, then the two Outpost squads, ending at 150-159 presently.
+			//This sets up the proper squad colors.
 			var/squad_number = 70
 			for(var/squad_name in ROLES_SQUAD_ALL)
-				if(squad_number >= 130) break //Only the Almayer squads, 70 - 130
+				if(squad_number >= 130)
+					break //Only the Almayer squads, 70 - 130
 				jobs += list(
 					"[squad_name][JOB_SQUAD_LEADER]" = (squad_number),
 					"[squad_name][JOB_SQUAD_TEAM_LEADER]" = (squad_number + 1),
@@ -1133,7 +1136,7 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_DIRECTOR = 320,
 				JOB_PMC_LEAD_INVEST = 320,
 			)
-			var/squad_number = 140 ///Squad colors 140 to 159 are USCM Ground.
+			var/squad_number = 140 //Squad colors 140 to 159 are USCM Ground.
 			for(var/squad_name in ROLES_SQUAD_USCM_GROUND)
 				squad_name += " "
 				jobs += list(

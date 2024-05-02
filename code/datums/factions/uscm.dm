@@ -9,18 +9,22 @@
 
 /datum/faction/uscm/get_faction_regions(faction_to_check)
 	switch(faction_to_check)
-		if(FACTION_USCM_GROUND) return get_access(ACCESS_LIST_USCM_GROUND_REGIONS)
-		if(FACTION_MARINE) return get_access(ACCESS_LIST_MARINE_REGIONS)
+		if(FACTION_USCM_GROUND)
+			return get_access(ACCESS_LIST_USCM_GROUND_REGIONS)
+		if(FACTION_MARINE)
+			return get_access(ACCESS_LIST_MARINE_REGIONS)
 	return ..()
 
 /datum/faction/uscm/get_faction_access(faction_to_check, all_access = TRUE)
 	switch(faction_to_check)
-		if(FACTION_USCM_GROUND) return get_access(all_access ? ACCESS_LIST_USCM_GROUND_ALL : ACCESS_LIST_USCM_GROUND_MAIN)
+		if(FACTION_USCM_GROUND)
+			return get_access(all_access ? ACCESS_LIST_USCM_GROUND_ALL : ACCESS_LIST_USCM_GROUND_MAIN)
 	return  get_access(all_access ? ACCESS_LIST_MARINE_ALL : ACCESS_LIST_MARINE_MAIN) //Fallback to marine access in every other case.
 
 /datum/faction/uscm/get_faction_departments(faction_to_check)
 	switch(faction_to_check)
-		if(FACTION_USCM_GROUND) return DEPARTMENT_USCM_GROUND_ALL
+		if(FACTION_USCM_GROUND)
+			return DEPARTMENT_USCM_GROUND_ALL
 	return ..()
 
 /datum/faction/uscm/modify_hud_holder(image/holder, mob/living/carbon/human/current_human)

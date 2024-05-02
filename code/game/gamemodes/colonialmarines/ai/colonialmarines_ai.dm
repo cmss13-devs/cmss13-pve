@@ -27,8 +27,12 @@
 /datum/game_mode/colonialmarines/ai/get_roles_list(default_platoon = FALSE)
 	var/possible_platoons = default_platoon || MAIN_SHIP_PLATOON
 	switch(possible_platoons)
-		if(/datum/squad/marine/alpha) return ROLES_AI
-		if(/datum/squad/marine/upp) return ROLES_AI_UPP
-		if(/datum/squad/marine/forecon) return ROLES_AI_FORECON
-		else return ROLES_AI /// The default option, in case we need to reference it.
+		if(/datum/squad/marine/alpha)
+			return ROLES_AI
+		if(/datum/squad/marine/upp)
+			return ROLES_AI_UPP
+		if(/datum/squad/marine/forecon)
+			return ROLES_AI_FORECON
+		else
+			return ROLES_AI // The default option, in case we need to reference it.
 

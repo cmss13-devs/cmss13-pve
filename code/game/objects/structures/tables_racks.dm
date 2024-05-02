@@ -426,7 +426,8 @@
 		return FALSE
 
 	if(!skip_straight_check && !(straight_table_check(turn(direction, 90)) && straight_table_check(turn(direction, -90))))
-		if(!batch_flip) to_chat(usr, SPAN_WARNING("[src] is too wide to be flipped.")) //If we're flipping this via a batch proc, we don't want the message to spam us.
+		if(!batch_flip)
+			to_chat(usr, SPAN_WARNING("[src] is too wide to be flipped.")) //If we're flipping this via a batch proc, we don't want the message to spam us.
 		return FALSE
 
 	ADD_TRAIT(src, TRAIT_TABLE_FLIPPING, TRAIT_SOURCE_FLIP_TABLE)
@@ -443,7 +444,7 @@
 
 	setDir(direction)
 	if(dir != NORTH)
-		layer = ABOVE_MOB_LAYER /// Now consistent with barricades.
+		layer = ABOVE_MOB_LAYER // Now consistent with barricades.
 	flipped = TRUE
 	flags_can_pass_all_temp &= ~PASS_UNDER
 	flags_atom |= ON_BORDER

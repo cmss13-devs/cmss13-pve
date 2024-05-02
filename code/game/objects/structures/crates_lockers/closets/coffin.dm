@@ -52,56 +52,56 @@
 
 /obj/structure/closet/coffin/woodencrate/armory_supplies/Initialize()
 	. = ..()
-	/// Our possible options.
+	// Our possible options.
 	var/limited_options[] = list("Buck", "Flamer", "Uranium")
 	var/exclusive_options[] = list("Rocket", "Smartgun", "Sentry", "Shotgun")
 	var/possible_options[] = list("AP", "Wall", "HEAP", "Incen") + limited_options + exclusive_options
-	/// Can only have one of these per crate, no more.
+	// Can only have one of these per crate, no more.
 
 	var/selected
 	for(var/i = 1 to 4) //4 loops. 0 to 3 also works, but I think this is easier to read.
 		selected = pick(possible_options)
 		switch(selected)
-			/// Non-exclusive options.
+			// Non-exclusive options.
 			if("AP")
-				/// AP rifle ammo.
+				// AP rifle ammo.
 				POPULATE_RANDOM_AMMO(4, /obj/item/ammo_magazine/rifle/m41aMK1/ap)
 			if("Wall")
-				/// Wall-penetrating rifle ammo.
+				// Wall-penetrating rifle ammo.
 				POPULATE_RANDOM_AMMO(4, /obj/item/ammo_magazine/rifle/m41aMK1/penetrating)
 			if("HEAP")
-				/// HEAP rifle ammo.
+				// HEAP rifle ammo.
 				POPULATE_RANDOM_AMMO(4, /obj/item/ammo_magazine/rifle/m41aMK1/heap)
 			if("Incen")
-				/// Incendiary rifle ammo.
+				// Incendiary rifle ammo.
 				POPULATE_RANDOM_AMMO(4, /obj/item/ammo_magazine/rifle/m41aMK1/incendiary)
 
-			/// Limited options.
+			// Limited options.
 			if("Buck")
-				/// Special type buck.
+				// Special type buck.
 				POPULATE_RANDOM_AMMO(2, /obj/item/ammo_magazine/shotgun/buckshot/special)
-				possible_options -= selected /// Once per crate for each.
+				possible_options -= selected // Once per crate for each.
 			if("Flamer")
-				/// Incinerator tanks.
+				// Incinerator tanks.
 				POPULATE_RANDOM_AMMO(2, /obj/item/ammo_magazine/flamer_tank)
 				possible_options -= selected
 			if("Uranium")
-				/// Depeleted uranium marksman rifle ammo.
+				// Depeleted uranium marksman rifle ammo.
 				POPULATE_RANDOM_AMMO(3, /obj/item/ammo_magazine/rifle/m4ra/pve)
 				possible_options -= selected
 
-			/// Exclusive options.
+			// Exclusive options.
 			if("Rocket")
-				/// Disposable rocket launcher.
+				// Disposable rocket launcher.
 				POPULATE_RANDOM_AMMO(1, /obj/item/prop/folded_anti_tank_sadar)
 			if("Smartgun")
-				/// Smartgun drums. Individual chance.
+				// Smartgun drums. Individual chance.
 				POPULATE_RANDOM_AMMO_PICK(2, 150; /obj/item/ammo_magazine/smartgun, 50; /obj/item/ammo_magazine/smartgun/holo_targetting)
 			if("Sentry")
-				/// Sentry ammo, mostly for the Sapper.
+				// Sentry ammo, mostly for the Sapper.
 				POPULATE_RANDOM_AMMO(3, /obj/item/ammo_magazine/sentry)
 			if("Shotgun")
-				/// Slugs and flechette ammo. 100 rounds, for the B18 spec.
+				// Slugs and flechette ammo. 100 rounds, for the B18 spec.
 				POPULATE_RANDOM_AMMO_PICK(1, 100; /obj/item/ammo_box/magazine/shotgun/flechette, 200; /obj/item/ammo_box/magazine/shotgun, 70; /obj/item/ammo_box/magazine/shotgun/incendiary)
 
 		if(selected in exclusive_options) possible_options -= exclusive_options

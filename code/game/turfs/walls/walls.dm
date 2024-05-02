@@ -213,12 +213,12 @@
 
 /turf/closed/wall/proc/make_girder(destroyed_girder = FALSE)
 	if(!(flags_turf & (TURF_ORGANIC|TURF_NATURAL))) //If it is not organic or natural, we do make a girder.
-		var/obj/structure/girder/G = new /obj/structure/girder(src)
-		G.icon_state = "girder[junctiontype]"
-		G.original = src.type
+		var/obj/structure/girder/new_girder = new /obj/structure/girder(src)
+		new_girder.icon_state = "girder[junctiontype]"
+		new_girder.original = type
 
-		if (destroyed_girder)
-			G.dismantle()
+		if(destroyed_girder)
+			new_girder.dismantle()
 
 // Devastated and Explode causes the wall to spawn a damaged girder
 // Walls no longer spawn a metal sheet when destroyed to reduce clutter and

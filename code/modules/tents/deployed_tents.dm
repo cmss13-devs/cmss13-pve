@@ -1,4 +1,4 @@
-/// Only a single flag for now, so no reason to global define.
+// Only a single flag for now, so no reason to global define.
 #define FLAGS_TENT_GIVE_MEDICAL_BONUS (1<<0)
 
 /// Structures serving as landmarks and providing a buff to its users.
@@ -81,7 +81,8 @@
 
 /// Small helper proc to determine where the entrances are located, dynamically.
 /obj/structure/tent/proc/locate_entrances(list/entrance_offset)
-	if(!entrance_offset) return FALSE
+	if(!entrance_offset)
+		return FALSE
 	var/offset_copy[] = entrance_offset.Copy()
 	var/turf/T
 	var/L[0]
@@ -116,7 +117,7 @@
 		if(flags_tent & FLAGS_TENT_GIVE_MEDICAL_BONUS)
 			RegisterSignal(subject_mob, COMSIG_HUMAN_SURGERY_APPLY_MODIFIERS, PROC_REF(apply_surgery_modifiers))
 
-	/// Mob entered our humble tent.
+	// Mob entered our humble tent.
 	if(roof_visible_obj && subject_mob.client && subject_mob.hud_used)
 		var/atom/movable/screen/plane_master/roof_plane = subject_mob.hud_used.plane_masters["[ROOF_HIDDEN_PLANE]"]
 		var/atom/movable/screen/plane_master/building_mask_plane = subject_mob.hud_used.plane_masters["[BUILDING_MASK_PLANE]"]
@@ -132,7 +133,7 @@
 			animate(building_mask_plane.relay, alpha = 225, time = 0.5 SECONDS, flags = ANIMATION_PARALLEL)
 			animate(filter_blur, x=1, y=1, time = 0.5 SECONDS, flags = ANIMATION_PARALLEL)
 
-	/// This will prevent weather effects from influencing their screen (also stops physical effects, for the time being).
+	// This will prevent weather effects from influencing their screen (also stops physical effects, for the time being).
 	subject_mob.mob_flags |= MOB_COVERED_FROM_WEATHER
 	return TRUE
 
@@ -167,7 +168,7 @@
 		else /// Gives time for animations.
 			addtimer(CALLBACK(src, PROC_REF(remove_client_image), subject_mob), 0.5 SECONDS)
 
-	subject_mob.mob_flags &= ~MOB_COVERED_FROM_WEATHER /// Remove the flag.
+	subject_mob.mob_flags &= ~MOB_COVERED_FROM_WEATHER // Remove the flag.
 	return TRUE
 
 /mob/proc/tent_deletion_clean_up(obj/structure/tent/deleting_tent)
@@ -175,7 +176,8 @@
 	deleting_tent.mob_exited_tent(src)
 
 /obj/structure/tent/proc/remove_client_image(mob/subject_mob)
-	if(QDELETED(subject_mob) || (get_turf(subject_mob) in bound_turfs)) return FALSE
+	if(QDELETED(subject_mob) || (get_turf(subject_mob) in bound_turfs))
+		return FALSE
 	subject_mob.client?.images -= list(roof_hidden_image, building_mask_image)
 	return TRUE
 

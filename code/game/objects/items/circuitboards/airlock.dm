@@ -39,15 +39,15 @@
 	so clearly it would require some mind variable. Ie, the user's memory of what codes they actually
 	know how to program in.
 
-	I decided to simplify that; engineering 1 is for the main faction access codes. engineering 2 and above
+	I decided to simplify that; engineering 1 is for the main faction access codes. Engineering 2 and above
 	is all access codes for the faction. Maybe in the future that can be expanded to be more granular.
 
 	Also, I got rid of the access requirements as they don't really make sense with this system. You're
 	programming a board, not trying to crack some kind of harddrive.
 	*/
 
-	var/datum/faction/F = get_faction(user.faction)
-	var/accesses[] = F.get_faction_access(user.faction, (engineering_skill > SKILL_ENGINEER_TRAINED)) //Retrieves the main or full list. TRUE or FALSE on the second statement.
+	var/datum/faction/user_faction = get_faction(user.faction)
+	var/accesses[] = user_faction.get_faction_access(user.faction, (engineering_skill > SKILL_ENGINEER_TRAINED)) //Retrieves the main or full list. TRUE or FALSE on the second statement.
 	var/unknown_access[] = conf_access - accesses //Gives us a list of access levels we do not know. In case that is true.
 
 	var/t1

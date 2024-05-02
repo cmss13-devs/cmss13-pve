@@ -67,12 +67,12 @@
 </tr>"}
 
 					if(!isnull(GLOB.data_core.general))
-						for(var/datum/data/record/R in sortRecord(GLOB.data_core.general, sortBy, order))
-							if(R.fields["mob_faction"] in factions) //Only for the faction(s) we want.
-								for(var/datum/data/record/E in GLOB.data_core.security)
-									dat += "<tr><td><A href='?src=\ref[src];choice=Browse Record;d_rec=\ref[R]'>[R.fields["name"]]</a></td>"
-									dat += "<td>[R.fields["id"]]</td>"
-									dat += "<td>[R.fields["rank"]]</td>"
+						for(var/datum/data/record/general_record in sortRecord(GLOB.data_core.general, sortBy, order))
+							if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+								for(var/datum/data/record/security_record in GLOB.data_core.security)
+									dat += "<tr><td><A href='?src=\ref[src];choice=Browse Record;d_rec=\ref[security_record]'>[security_record.fields["name"]]</a></td>"
+									dat += "<td>[security_record.fields["id"]]</td>"
+									dat += "<td>[security_record.fields["rank"]]</td>"
 								dat += "</table><hr width='75%' />"
 
 					dat += "<A href='?src=\ref[src];choice=Record Maintenance'>Record Maintenance</A><br><br>"
@@ -262,12 +262,12 @@ What a mess.*/
 				temp += "<a href='?src=\ref[src];choice=Clear Screen'>No</a>"
 
 			if ("Purge All Records")
-				for(var/datum/data/record/R in GLOB.data_core.general)
-					if(R.fields["mob_faction"] in factions) //Only for the faction(s) we want.
-						for(var/datum/data/record/E in GLOB.data_core.security)
-							if(E.fields["name"] == R.fields["name"] && E.fields["id"] == R.fields["id"])
-								GLOB.data_core.security -= E
-								qdel(E)
+				for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+					if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+						for(var/datum/data/record/security_record as anything in GLOB.data_core.security)
+							if(general_record.fields["name"] == security_record.fields["name"] && general_record.fields["id"] == security_record.fields["id"])
+								GLOB.data_core.security -= security_record
+								qdel(security_record)
 				temp = "All Employment records deleted."
 
 			if ("Delete Record (ALL)")
@@ -355,27 +355,27 @@ What a mess.*/
 	if(inoperable())
 		return
 
-	for(var/datum/data/record/E in GLOB.data_core.general)
-		if(E.fields["mob_faction"] in factions)
-			for(var/datum/data/record/R in GLOB.data_core.security)
+	for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+		if(general_record.fields["mob_faction"] in factions)
+			for(var/datum/data/record/security_record as anything in GLOB.data_core.security)
 				if(prob(10/severity))
 					switch(rand(1,6))
 						if(1)
-							R.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
+							security_record.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
 						if(2)
-							R.fields["sex"] = pick("Male", "Female")
+							security_record.fields["sex"] = pick("Male", "Female")
 						if(3)
-							R.fields["age"] = rand(5, 85)
+							security_record.fields["age"] = rand(5, 85)
 						if(4)
-							R.fields["criminal"] = pick("None", "*Arrest*", "Incarcerated", "Released")
+							security_record.fields["criminal"] = pick("None", "*Arrest*", "Incarcerated", "Released")
 						if(5)
-							R.fields["p_stat"] = pick("*Unconcious*", "Active", "Physically Unfit")
+							security_record.fields["p_stat"] = pick("*Unconcious*", "Active", "Physically Unfit")
 						if(6)
-							R.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
+							security_record.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
 					continue
 
 				else if(prob(1))
-					GLOB.data_core.security -= R
-					qdel(R)
+					GLOB.data_core.security -= security_record
+					qdel(security_record)
 					continue
 

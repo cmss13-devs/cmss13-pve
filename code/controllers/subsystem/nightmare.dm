@@ -46,8 +46,10 @@ SUBSYSTEM_DEF(nightmare)
 		message_admins("Nightmare subsystem is performing prepare_game prior to initialization! No nightmare inserts will be loaded.")
 
 	switch(stat)
-		if(NIGHTMARE_STATUS_DONE) return TRUE
-		if(NIGHTMARE_STATUS_RUNNING) return FALSE
+		if(NIGHTMARE_STATUS_DONE)
+			return TRUE
+		if(NIGHTMARE_STATUS_RUNNING)
+			return FALSE
 		if(NIGHTMARE_STATUS_STANDBY)
 			start_time = world.time
 			stat = NIGHTMARE_STATUS_RUNNING

@@ -20,24 +20,24 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 			cycled_data_record.fields["squad"] = new_name
 
 /datum/datacore/proc/get_manifest(monochrome, OOC, nonHTML)
-	var/list/manifest_out = list() ///This will be our final compiled list.
-	var/name ///Iterator for the person's name.
-	var/rank ///Iterator for the person's rank.
-	var/real_rank ///What their real rank is.
-	var/squad_name ///What their squad is called.
-	var/datum/job/J ///Referenced through their mob job to pull up where their role is sorted.
+	var/list/manifest_out = list() //This will be our final compiled list.
+	var/name //Iterator for the person's name.
+	var/rank //Iterator for the person's rank.
+	var/real_rank //What their real rank is.
+	var/squad_name //What their squad is called.
+	var/datum/job/current_job //Referenced through their mob job to pull up where their role is sorted.
 	var/datum/data/record/current_record
 
-	///Returns a list and not HTML itself. Used by the id card computer.
+	//Returns a list and not HTML itself. Used by the id card computer.
 	if(nonHTML)
 		var/category
-		for(var/i in GLOB.data_core.general)
-			current_record = i
+		for(current_record as anything in GLOB.data_core.general)
 			name = current_record.fields["name"]
 			rank = current_record.fields["rank"]
 			real_rank = current_record.fields["real_rank"]
 			squad_name = current_record.fields["squad"]
-			if(!name || !rank) continue
+			if(!name || !rank)
+				continue
 
 			/*
 			* Structural pitfall here. roles_by_name expects a real rank, so if the individual has a different rank, if they were re-assigned,
@@ -46,14 +46,17 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 			* Ideally records would keep a running tally of job category, so that it can be listed appropriately if a job change takes place.
 			* Something to look into if properly refactoring records in the future. Not really worth a workaround for right now.
 			*/
-			J = RoleAuthority.roles_by_name[real_rank]
-			if(!J)
-				if(current_record.fields["ref"]) category = JOB_CATEGORY_OTHER /// Probably a real person.
-				else continue
+			current_job = RoleAuthority.roles_by_name[real_rank]
+			if(!current_job)
+				if(current_record.fields["ref"])
+					category = JOB_CATEGORY_OTHER // Probably a real person.
+				else
+					continue
 			else
-				category = squad_name || J.category
+				category = squad_name || current_job.category
 
-			if(!manifest_out[category]) manifest_out[category] = list()
+			if(!manifest_out[category])
+				manifest_out[category] = list()
 			manifest_out[category] += list(list(
 				"name" = name,
 				"rank" = rank
@@ -61,12 +64,11 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 
 		return manifest_out
 
-	///Returns an HTML table with the manifest.
+	//Returns an HTML table with the manifest.
 	var/list/isactive = list()
-	var/even = 0 ///For prettier lines.
-	var/category_list[] ///To simplify lookup.
+	var/even = 0 //For prettier lines.
+	var/category_list[] //To simplify lookup.
 	var/category
-	var/mob/M //Iterator.
 
 	var/dat = {"
 	<div align='center'>
@@ -82,61 +84,65 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
 	"}
 
-	for(var/i in GLOB.data_core.general)
-		current_record = i
+	for(current_record as anything in GLOB.data_core.general)
 		name = current_record.fields["name"]
 		rank = current_record.fields["rank"]
 		real_rank = current_record.fields["real_rank"]
 		squad_name = current_record.fields["squad"]
 
-		if(!name || !rank || !real_rank) ///If something is missing, we ignore them.
+		if(!name || !rank || !real_rank) //If something is missing, we ignore them.
 			continue
 
-		if(OOC) ///This returns a more accurate estimate of whether or not they are active.
+		if(OOC) //This returns a more accurate estimate of whether or not they are active.
 			isactive[name] = "Inactive"
-			for(M in GLOB.player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 * 60 * 10)
+			for(var/mob/active_mob as anything in GLOB.player_list)
+				if(active_mob.real_name == name && active_mob.client && active_mob.client.inactivity <= 10 * 60 * 10)
 					isactive[name] = "Active"
 					break
 		else
 			isactive[name] = current_record.fields["p_stat"]
 			//cael - to prevent multiple appearances of a player/job combination, add a continue after each line
 
-		J = RoleAuthority.roles_by_name[real_rank]
-		///They should have a job datum with their real rank, but they may not have a job datum defined for their gear preset.
+		current_job = RoleAuthority.roles_by_name[real_rank]
+		//They should have a job datum with their real rank, but they may not have a job datum defined for their gear preset.
 
-		if(!J) /// They don't have a job datum.
-			if(current_record.fields["ref"]) category = JOB_CATEGORY_OTHER /// They do have a reference to a mob, likely means they were added manually by an admin.
-			else continue /// If they do not, skip them.
-		else category = J.category /// If we know their datum, grab the category.
-
-		LAZYINITLIST(manifest_out[category]) ///Initialize each individual category.
-		if(category == JOB_CATEGORY_COMBAT)
-			if(!squad_name) continue ///If they are a combat role but have no squad, we skip them.
-			LAZYINITLIST(manifest_out[category][squad_name]) ///Initializes the squad itself.
-			LAZYSET(manifest_out[category][squad_name][GET_SQUAD_ROLE_MAP(real_rank)], name, rank) ///Initializes the person's information for that squad. We get their mapped role for sorting later. real_rank isn't shown in the manifest, it's backend only.
+		if(!current_job) // They don't have a job datum.
+			if(current_record.fields["ref"])
+				category = JOB_CATEGORY_OTHER // They do have a reference to a mob, likely means they were added manually by an admin.
+			else
+				continue // If they do not, skip them.
 		else
-			LAZYSET(manifest_out[category][real_rank], name, rank) ///Initializes the job category as per normal.
+			category = current_job.category // If we know their datum, grab the category.
 
-	for(category in JOB_CATEGORY_ALL) ///This keeps the list in the same order every time.
-		category_list = manifest_out[category]
-		if(!length(category_list)) continue ///Should not have empty lists, but it is possible for squads.
-		dat += "<tr><th colspan=3>[category]</th></tr>" ///We add this after we've established that we have the category listed.
+		LAZYINITLIST(manifest_out[category]) //Initialize each individual category.
 		if(category == JOB_CATEGORY_COMBAT)
-			var/datum/squad_type/S
-			for(var/i in RoleAuthority.squads)
-				S = i
-				if(!category_list[S.name]) continue ///Only if the squad is actually listed.
-				dat += "<tr><th colspan=3>[S.name]</th></tr>"
-				for(real_rank in JOB_SQUAD_ROLES_LIST) ///Again, here we have a static ordered list to properly sort every name.
-					if(category_list[S.name][real_rank])///May not exist.
-						for(name in category_list[S.name][real_rank]) ///This nesting gets confusing. But it's manifest_out -> squad name -> real rank they are -> name = rank
-							dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[category_list[S.name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
+			if(!squad_name)
+				continue //If they are a combat role but have no squad, we skip them.
+			LAZYINITLIST(manifest_out[category][squad_name]) //Initializes the squad itself.
+			LAZYSET(manifest_out[category][squad_name][GET_SQUAD_ROLE_MAP(real_rank)], name, rank) //Initializes the person's information for that squad. We get their mapped role for sorting later. real_rank isn't shown in the manifest, it's backend only.
+		else
+			LAZYSET(manifest_out[category][real_rank], name, rank) //Initializes the job category as per normal.
+
+	var/datum/squad/current_squad
+	for(category in JOB_CATEGORY_ALL) //This keeps the list in the same order every time.
+		category_list = manifest_out[category]
+		if(!length(category_list))
+			continue //Should not have empty lists, but it is possible for squads.
+		dat += "<tr><th colspan=3>[category]</th></tr>" //We add this after we've established that we have the category listed.
+		if(category == JOB_CATEGORY_COMBAT)
+			for(current_squad as anything in RoleAuthority.squads)
+				if(!category_list[current_squad.name])
+					continue //Only if the squad is actually listed.
+				dat += "<tr><th colspan=3>[current_squad.name]</th></tr>"
+				for(real_rank in JOB_SQUAD_ROLES_LIST) //Again, here we have a static ordered list to properly sort every name.
+					if(category_list[current_squad.name][real_rank])//May not exist.
+						for(name in category_list[current_squad.name][real_rank]) //This nesting gets confusing. But it's manifest_out -> squad name -> real rank they are -> name = rank
+							dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[category_list[current_squad.name][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
 							even = !even
 
 		else
-			///Who is sorted first or second will depend on when they were added to the data_core, priority to who is listed first. Small issue that can be addressed if there is a need for it.
-			///Requires a sorting category list like is done for general sorting and squads. Trickier though.
+			//Who is sorted first or second will depend on when they were added to the data_core, priority to who is listed first. Small issue that can be addressed if there is a need for it.
+			//Requires a sorting category list like is done for general sorting and squads. Trickier though.
 			for(real_rank in category_list)
 				for(name in category_list[real_rank])
 					dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[manifest_out[category][real_rank][name]]</td><td>[isactive[name]]</td></tr>"
@@ -147,17 +153,19 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	dat = replacetext(dat, "\t", "")
 	return dat
 
-/*
-* This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
-* This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
-* And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
-*/
+/**
+  * Adds all humans to manifest at round start provided they should be on the manifest.
+  *
+  * This fires at round start to add all humans to the manifest, those that should be added at least. It was previously possible to latejoin and be added twice, but I fixed that.
+  * This previously took all of these lists: ROLES_CIC + ROLES_AUXIL_SUPPORT + ROLES_MISC + ROLES_POLICE + ROLES_ENGINEERING + ROLES_REQUISITION + ROLES_MEDICAL + ROLES_MARINES
+  * And checked every mob for a role in that combined list. I was baffled by this, so I changed it. It checks only the roles that should have access to the manifest, dynamically.
+  */
 /datum/datacore/proc/manifest(nosleep = 0)
 	spawn()
 		if(!nosleep)
 			sleep(40)
 
-		var/roles_to_inject[] = GET_MANIFEST_ROLES ///At the time of writing it takes (roundstart roles - blacklisted manifest roles) | additional roles added manually.
+		var/roles_to_inject[] = GET_MANIFEST_ROLES //At the time of writing it takes (roundstart roles - blacklisted manifest roles) | additional roles added manually.
 
 		var/mob/living/carbon/human/H
 		for(var/i in GLOB.human_mob_list)
@@ -168,43 +176,47 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 /datum/datacore/proc/manifest_modify(name, datum/weakref/weak_ref, assignment, rank, p_stat, faction)
 
 	var/datum/data/record/current_record
-	var/i
 	if(istype(weak_ref))
-		for(i in general)
-			current_record = i
+		for(current_record as anything in general)
 			if(current_record.fields["ref"] == weak_ref)
-				if(assignment) current_record.fields["rank"] = assignment
-				if(rank) current_record.fields["real_rank"] = rank
-				if(p_stat) current_record.fields["p_stat"] = p_stat
-				if(name) current_record.fields["name"] = name
-				if(faction) current_record.fields["mob_faction"] = faction
+				if(assignment)
+					current_record.fields["rank"] = assignment
+				if(rank)
+					current_record.fields["real_rank"] = rank
+				if(p_stat)
+					current_record.fields["p_stat"] = p_stat
+				if(name)
+					current_record.fields["name"] = name
+				if(faction)
+					current_record.fields["mob_faction"] = faction
 				. = TRUE
 				break
-		if(name) /// The rest only matters if we are changing their name.
-			/// To do: revise how records operate. It's silly that you have to iterate all of them and they are not connected to the reference.
+		if(name) // The rest only matters if we are changing their name.
+			// To do: revise how records operate. It's silly that you have to iterate all of them and they are not connected to the reference.
 			for(var/category in list(medical, security, locked))
-				for(i in category)
-					current_record = i
+				for(current_record as anything in category)
 					if(current_record.fields["ref"] == weak_ref)
 						current_record.fields["name"] = name
 						break
 	else
-		for(i in general)
-			current_record = i
+		for(current_record as anything in general)
 			if(current_record.fields["name"] == name)
-				if(assignment) current_record.fields["rank"] = assignment
-				if(rank) current_record.fields["real_rank"] = rank
-				if(p_stat) current_record.fields["p_stat"] = p_stat
-				if(faction) current_record.fields["mob_faction"] = faction
+				if(assignment)
+					current_record.fields["rank"] = assignment
+				if(rank)
+					current_record.fields["real_rank"] = rank
+				if(p_stat)
+					current_record.fields["p_stat"] = p_stat
+				if(faction)
+					current_record.fields["mob_faction"] = faction
 				. = TRUE
 				break
 
 /datum/datacore/proc/manifest_inject(mob/living/carbon/human/H)
-	var/datum/data/record/existing_record
 	var/datum/weak_ref = WEAKREF(H)
-	for(var/i in GLOB.data_core.general) //So they are not added to the manifest twice. Double records mess up reporting.
-		existing_record = i
-		if(existing_record.fields["ref"] == weak_ref) return FALSE //Already have a record for this human. Abort.
+	for(var/datum/data/record/existing_record as anything in GLOB.data_core.general) //So they are not added to the manifest twice. Double records mess up reporting.
+		if(existing_record.fields["ref"] == weak_ref)
+			return FALSE //Already have a record for this human. Abort.
 
 	var/assignment = GET_HUMAN_DEFAULT_ASSIGNMENT(H)
 
@@ -300,7 +312,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 /// Removes all records attached it can find. Weakref only.
 /datum/datacore/proc/manifest_erase(datum/weakref/weak_ref)
 
-	if(istype(weak_ref)) /// Make sure they're sending the right thing here.
+	if(istype(weak_ref)) // Make sure they're sending the right thing here.
 		var/datum/data/record/current_record
 		var/i
 		for(var/list/category in list(general, medical, security, locked))
@@ -310,7 +322,8 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 				if(current_record.fields["ref"] == weak_ref)
 					category -= current_record
 					qdel(current_record)
-					if(category == general) . = TRUE /// So long as we got rid of the general record, we're good.
+					if(category == general)
+						. = TRUE // So long as we got rid of the general record, we're good.
 					break
 
 /proc/get_id_photo(mob/living/carbon/human/H)

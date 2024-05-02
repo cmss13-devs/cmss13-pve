@@ -353,9 +353,9 @@
 
 
 	if(!L.buckled && !L.anchored)
-		/// Small mobs can only swap/push each other around, and small and big mobs can freely move through each other.
-		/// MOB_SIZE_SMALL is defined as 0, so in the else case it should be equal or greater than 0.
-		if((mob_size * L.mob_size) - abs(mob_size - L.mob_size) < 0) /// One of the mobs is small, but not both.
+		// Small mobs can only swap/push each other around, and small and big mobs can freely move through each other.
+		// MOB_SIZE_SMALL is defined as 0, so in the else case it should be equal or greater than 0.
+		if((mob_size * L.mob_size) - abs(mob_size - L.mob_size) < 0) // One of the mobs is small, but not both.
 			L.add_temp_pass_flags(PASS_MOB_THRU)
 			add_temp_pass_flags(PASS_MOB_THRU)
 			Move(L.loc)
@@ -364,7 +364,7 @@
 			now_pushing = FALSE
 			return
 
-		else /// Our mobs are both small or both are not small.
+		else // Our mobs are both small or both are not small.
 			var/mob_swap
 			//the puller can always swap with its victim if on grab intent
 			if(L.pulledby == src && a_intent == INTENT_GRAB)

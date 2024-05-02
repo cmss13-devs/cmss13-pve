@@ -265,15 +265,15 @@
 
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/van/spawn_vehicle()
-	var/obj/vehicle/multitile/van/V = new (loc)
+	var/obj/vehicle/multitile/van/spawned_van = new (loc)
 
-	load_misc(V)
-	load_hardpoints(V)
-	handle_direction(V)
-	if(vehicle_status == VAN_SPAWN_DAMAGED) load_damage(V)
-	V.update_icon()
+	load_misc(spawned_van)
+	load_hardpoints(spawned_van)
+	handle_direction(spawned_van)
+	if(vehicle_status == VAN_SPAWN_DAMAGED) load_damage(spawned_van)
+	spawned_van.update_icon()
 
-	if(vehicle_name) V.name = vehicle_name
+	if(vehicle_name) spawned_van.name = vehicle_name
 
 /obj/effect/vehicle_spawner/van/load_hardpoints(obj/vehicle/multitile/van/V)
 	if(vehicle_status > VAN_SPAWN_NON_FUNCTIONAL) V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)

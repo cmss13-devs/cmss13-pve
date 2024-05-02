@@ -215,12 +215,12 @@
 				src.temp = text("Are you sure you wish to delete all records?<br>\n\t<A href='?src=\ref[];temp=1;del_all2=1'>Yes</A><br>\n\t<A href='?src=\ref[];temp=1'>No</A><br>", src, src)
 
 			if (href_list["del_all2"])
-				for(var/datum/data/record/R in GLOB.data_core.general)
-					if(R.fields["mob_faction"] in factions) //Only for the faction(s) we want.
-						for(var/datum/data/record/E as anything in GLOB.data_core.medical)
-							if(E.fields["name"] == R.fields["name"] && E.fields["id"] == R.fields["id"])
-								GLOB.data_core.security -= E
-								qdel(E)
+				for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+					if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+						for(var/datum/data/record/medical_record as anything in GLOB.data_core.medical)
+							if(general_record.fields["name"] == medical_record.fields["name"] && general_record.fields["id"] == medical_record.fields["id"])
+								GLOB.data_core.medical -= medical_record
+								qdel(medical_record)
 
 				src.temp = "All records deleted."
 
@@ -492,29 +492,29 @@
 	if(inoperable())
 		return
 
-	for(var/datum/data/record/E in GLOB.data_core.general)
-		if(E.fields["mob_faction"] in factions)
-			for(var/datum/data/record/R as anything in GLOB.data_core.medical)
-				if (E.fields["name"] == R.fields["name"] && E.fields["id"] == R.fields["id"])
+	for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+		if(general_record.fields["mob_faction"] in factions)
+			for(var/datum/data/record/medical_record as anything in GLOB.data_core.medical)
+				if (general_record.fields["name"] == medical_record.fields["name"] && general_record.fields["id"] == medical_record.fields["id"])
 					if(prob(10/severity))
 						switch(rand(1,6))
 							if(1)
-								R.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
+								medical_record.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
 							if(2)
-								R.fields["sex"] = pick("Male", "Female")
+								medical_record.fields["sex"] = pick("Male", "Female")
 							if(3)
-								R.fields["age"] = rand(5, 85)
+								medical_record.fields["age"] = rand(5, 85)
 							if(4)
-								R.fields["b_type"] = pick("A-", "B-", "AB-", "O-", "A+", "B+", "AB+", "O+")
+								medical_record.fields["b_type"] = pick("A-", "B-", "AB-", "O-", "A+", "B+", "AB+", "O+")
 							if(5)
-								R.fields["p_stat"] = pick("*SSD*", "Active", "Physically Unfit", "Disabled")
+								medical_record.fields["p_stat"] = pick("*SSD*", "Active", "Physically Unfit", "Disabled")
 							if(6)
-								R.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
+								medical_record.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
 						continue
 
 					else if(prob(1))
-						GLOB.data_core.medical -= R
-						qdel(R)
+						GLOB.data_core.medical -= medical_record
+						qdel(medical_record)
 						continue
 
 

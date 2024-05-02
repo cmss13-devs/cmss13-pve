@@ -649,7 +649,7 @@ var/const/MAX_SAVE_SLOTS = 10
 //height - Screen's height.
 #define PREF_COLUMN_LIMIT 20
 #define PREF_WIDTH 600
-#define PREF_HEIGHT_MIN 290 /// Minimum height, otherwise things look goofy.
+#define PREF_HEIGHT_MIN 290 // Minimum height, otherwise things look goofy.
 #define PREF_HEIGHT 550
 /datum/preferences/proc/SetChoices(mob/user, limit = PREF_COLUMN_LIMIT, list/splitJobs = list(JOB_CHIEF_REQUISITION, JOB_WO_CMO), width = PREF_WIDTH, height = PREF_HEIGHT)
 	if(!RoleAuthority)
@@ -672,10 +672,10 @@ var/const/MAX_SAVE_SLOTS = 10
 	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
 	var/n_roles = length(active_role_names)
 	switch(n_roles)
-		if(PREF_COLUMN_LIMIT+1 to INFINITY) /// A lot of jobs? Make the window bigger.
+		if(PREF_COLUMN_LIMIT+1 to INFINITY) // A lot of jobs? Make the window bigger.
 			width = 950
 			height = 750
-		if(1 to PREF_COLUMN_LIMIT) /// Adjusts the height of the window based on the number of jobs, to an extent.
+		if(1 to PREF_COLUMN_LIMIT) // Adjusts the height of the window based on the number of jobs, to an extent.
 			height = 22 * n_roles + PREF_HEIGHT_MIN
 #undef PREF_COLUMN_LIMIT
 #undef PREF_WIDTH

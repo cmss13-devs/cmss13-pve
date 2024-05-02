@@ -540,23 +540,23 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	SSround_recording.recorder.track_player(new_human)
 
 /datum/authority/branch/role/proc/randomize_squad(mob/living/carbon/human/current_mob, datum/job/current_job, skip_limit = FALSE)
-	if(!current_mob || current_mob.assigned_squad) /// No human or they already have a squad assigned.
+	if(!current_mob || current_mob.assigned_squad) // No human or they already have a squad assigned.
 		return FALSE
 
-	if(!length(squads)) /// No squad data available.
+	if(!length(squads)) // No squad data available.
 		to_chat(current_mob, SPAN_DEBUG("No squad data available in randomize_squad()! Tell a coder!"))
 		log_debug("No squad data available in randomize_squad().")
 		return FALSE
 
 	var/datum/squad/current_squad
 
-	/// We create a randomized list to then sort our people into.
-	/// Todo: Potentially pass the list info during round start, so it's not checking per person.
+	// We create a randomized list to then sort our people into.
+	// Todo: Potentially pass the list info during round start, so it's not checking per person.
 	var/list/mixed_squads
 	if(current_job.squad_default_path) /// But first let's see if they need to be in a specific platoon by default.
 		current_squad = squads_by_type[current_job.squad_default_path]
 		mixed_squads = current_squad && list(current_squad) /// If the squad exists, it will be the only squad we use here.
-	if(!mixed_squads) /// If we didn't get a default squad for any reason, we default to the regular process.
+	if(!mixed_squads) // If we didn't get a default squad for any reason, we default to the regular process.
 		mixed_squads = list()
 		var/list/squads_copy = squads.Copy()
 		// The following code removes non useable squads from the lists of squads we assign marines too.
@@ -564,7 +564,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			current_squad = pick_n_take(squads_copy)
 			if(current_squad.roundstart && current_squad.usable && current_squad.faction == current_mob.faction && current_squad.name != "Root")
 				mixed_squads += current_squad
-	if(!length(mixed_squads)) /// Still no mixed squads? Get out.
+	if(!length(mixed_squads)) // Still no mixed squads? Get out.
 		to_chat(current_mob, SPAN_DEBUG("No mixed squads available in randomize_squad()! Tell a coder!"))
 		log_debug("No mixed squads available in randomize_squad().")
 		return FALSE
@@ -572,7 +572,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	//If the number of available positions for the job are more than max_whatever, it will break.
 	//Ie. 8 squad medic jobs should be available, and total medics in squads should be 8.
 	if(current_mob.job != "Reinforcements")
-		var/marine_role = roles_for_squad[current_mob.job] || current_mob.job /// This gets us the mapped name (or whatever normal title, like IOs), so we can better make an educated guess of where they belong.
+		var/marine_role = roles_for_squad[current_mob.job] || current_mob.job // This gets us the mapped name (or whatever normal title, like IOs), so we can better make an educated guess of where they belong.
 		var/pref_squad_name = current_mob.client?.prefs?.preferred_squad != "None" && current_mob.client.prefs.preferred_squad
 
 		var/datum/squad/lowest
@@ -581,47 +581,56 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			if(JOB_SQUAD_ENGI)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_engineers >= current_squad.max_engineers) continue
+					if(!skip_limit && current_squad.num_engineers >= current_squad.max_engineers)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob) //fav squad has a spot for us, no more searching needed.
 						return TRUE
 
-					if(!lowest || current_squad.num_engineers < lowest.num_engineers) lowest = current_squad
+					if(!lowest || current_squad.num_engineers < lowest.num_engineers)
+						lowest = current_squad
 
 			if(JOB_SQUAD_MEDIC)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_medics >= current_squad.max_medics) continue
+					if(!skip_limit && current_squad.num_medics >= current_squad.max_medics)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
-						return
+						return TRUE
 
-					if(!lowest || current_squad.num_medics < lowest.num_medics) lowest = current_squad
+					if(!lowest || current_squad.num_medics < lowest.num_medics)
+						lowest = current_squad
 
 			if(JOB_SQUAD_LEADER)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_leaders >= current_squad.max_leaders) continue
+					if(!skip_limit && current_squad.num_leaders >= current_squad.max_leaders)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
 
-					if(!lowest || current_squad.num_leaders < lowest.num_leaders) lowest = current_squad
+					if(!lowest || current_squad.num_leaders < lowest.num_leaders)
+						lowest = current_squad
 
 			if(JOB_SQUAD_SPECIALIST)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_specialists >= current_squad.max_specialists) continue
+					if(!skip_limit && current_squad.num_specialists >= current_squad.max_specialists)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
 
-					if(!lowest || current_squad.num_specialists < lowest.num_specialists) lowest = current_squad
+					if(!lowest || current_squad.num_specialists < lowest.num_specialists)
+						lowest = current_squad
 
 			if(JOB_SQUAD_TEAM_LEADER)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_tl >= current_squad.max_tl) continue
+					if(!skip_limit && current_squad.num_tl >= current_squad.max_tl)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
@@ -631,12 +640,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			if(JOB_SQUAD_SMARTGUN)
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_squad.num_smartgun >= current_squad.max_smartgun) continue
+					if(!skip_limit && current_squad.num_smartgun >= current_squad.max_smartgun)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
 
-					if(!lowest || current_squad.num_smartgun < lowest.num_smartgun) lowest = current_squad
+					if(!lowest || current_squad.num_smartgun < lowest.num_smartgun)
+						lowest = current_squad
 
 			if(JOB_SQUAD_RTO, JOB_INTEL) /// They get stuck in whatever squad they default to, no population check.
 				for(var/i in mixed_squads)
@@ -645,17 +656,20 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
 
-					if(!lowest) lowest = current_squad
+					if(!lowest)
+						lowest = current_squad
 
 			else /// Riflemen. Was previously done through a unique proc for no particular reason.
 				for(var/i in mixed_squads)
 					current_squad = i
-					if(!skip_limit && current_job.total_positions >= 0 && current_squad.max_riflemen >= 0 && current_squad.num_riflemen >= current_squad.max_riflemen) continue
+					if(!skip_limit && current_job.total_positions >= 0 && current_squad.max_riflemen >= 0 && current_squad.num_riflemen >= current_squad.max_riflemen)
+						continue
 					if(current_squad.name == pref_squad_name)
 						current_squad.put_marine_in_squad(current_mob)
 						return TRUE
 
-					if(!lowest || current_squad.num_riflemen < lowest.num_riflemen) lowest = current_squad
+					if(!lowest || current_squad.num_riflemen < lowest.num_riflemen)
+						lowest = current_squad
 
 		if(!lowest) /// Somehow we got here and could not find a lowest squad.
 			lowest = mixed_squads[rand(1,length(mixed_squads))] //More of a fallback; rand() should not be higher than the list length, otherwise it will runtime.

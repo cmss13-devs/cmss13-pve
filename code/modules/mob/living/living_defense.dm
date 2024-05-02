@@ -210,7 +210,7 @@
 		current_weather_effect_type = null
 	else
 		current_weather_effect_type = SSweather.weather_event_type
-		/// MOB_COVERED_FROM_WEATHER also stops physical effects. This could be remedied by having the tent/cover object take damage from harmful weather effects.
+		// MOB_COVERED_FROM_WEATHER also stops physical effects. This could be remedied by having the tent/cover object take damage from harmful weather effects.
 		SSweather.weather_event_instance.process_mob_effect(src, delta_time)
 
 	if(current_weather_effect_type != starting_weather_type)

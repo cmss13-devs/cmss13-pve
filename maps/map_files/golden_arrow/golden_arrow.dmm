@@ -3620,12 +3620,12 @@
 /area/golden_arrow/hangar)
 "nj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed/chair/office/dark{
-	dir = 8
-	},
 /obj/structure/machinery/computer/overwatch/map_specific/golden_arrow{
 	dir = 1;
 	pixel_y = 24
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)

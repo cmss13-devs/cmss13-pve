@@ -51,8 +51,9 @@
 
 	sleep(10)
 	to_chat(mob, "<B>Objectives:</b> [objectives]")
-	var/datum/job/J = RoleAuthority.roles_by_name[mob.job]
-	if(J) RoleAuthority.randomize_squad(mob, J)
+	var/datum/job/mob_job = RoleAuthority.roles_by_name[mob.job]
+	if(mob_job)
+		RoleAuthority.randomize_squad(mob, mob_job)
 	mob.sec_hud_set_ID()
 	mob.hud_set_squad()
 

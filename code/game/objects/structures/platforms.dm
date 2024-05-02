@@ -27,20 +27,20 @@
 
 /obj/structure/platform/Initialize()
 	. = ..()
-	var/image/I = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
+	var/image/overlay_image = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
 	switch(dir)
 		if(SOUTH)
-			layer = PLATFORM_LAYER /// Fixed the climbing animation problem to some degree, but still looks very strange under some circumstances.
-			I.pixel_y = -16
+			layer = PLATFORM_LAYER // Fixed the climbing animation problem to some degree, but still looks very strange under some circumstances.
+			overlay_image.pixel_y = -16
 		if(NORTH)
-			I.pixel_y = 16
+			overlay_image.pixel_y = 16
 		if(EAST)
-			I.pixel_x = 16
+			overlay_image.pixel_x = 16
 			layer = PLATFORM_LAYER
 		if(WEST)
-			I.pixel_x = -16
+			overlay_image.pixel_x = -16
 			layer = PLATFORM_LAYER
-	overlays += I
+	overlays += overlay_image
 
 /obj/structure/platform/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()

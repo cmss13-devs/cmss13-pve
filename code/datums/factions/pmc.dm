@@ -11,14 +11,18 @@
 
 /datum/faction/pmc/get_faction_regions(faction_to_check)
 	switch(faction_to_check)
-		if(FACTION_PMC, FACTION_WY_DEATHSQUAD) return get_access(ACCESS_LIST_PMC_REGIONS)
-		if(FACTION_WY) return get_access(ACCESS_LIST_WY_REGIONS)
+		if(FACTION_PMC, FACTION_WY_DEATHSQUAD)
+			return get_access(ACCESS_LIST_PMC_REGIONS)
+		if(FACTION_WY)
+			return get_access(ACCESS_LIST_WY_REGIONS)
 	return ..()
 
 /datum/faction/pmc/get_faction_departments(faction_to_check)
 	switch(faction_to_check)
-		if(FACTION_PMC, FACTION_WY_DEATHSQUAD) return DEPARTMENT_PMC_ALL
-		if(FACTION_WY) return DEPARTMENT_WY_PMC_ALL
+		if(FACTION_PMC, FACTION_WY_DEATHSQUAD)
+			return DEPARTMENT_PMC_ALL
+		if(FACTION_WY)
+			return DEPARTMENT_WY_PMC_ALL
 	return ..()
 
 /datum/faction/pmc/modify_hud_holder(image/holder, mob/living/carbon/human/H)

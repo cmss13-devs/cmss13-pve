@@ -494,7 +494,7 @@ SUBSYSTEM_DEF(minimaps)
 			continue
 		var/mob/client_mob = client.mob
 
-		if(isxeno(client_mob)) /// Aliens won't see the human faction maps, even if their faction is the same.
+		if(isxeno(client_mob)) // Aliens won't see the human faction maps, even if their faction is the same.
 			var/mob/living/carbon/xenomorph/xeno = client_mob
 			if(xeno.hivenumber == faction)
 				faction_clients += client
@@ -724,7 +724,7 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/drawing/tgui_interact(mob/user, datum/tgui/ui)
 	var/mob/living/carbon/xenomorph/xeno = user
 	var/is_xeno = istype(xeno)
-	var/faction = faction_default || (is_xeno ? xeno.hivenumber : user.faction) /// Fallback is user.faction.
+	var/faction = faction_default || (is_xeno ? xeno.hivenumber : user.faction) // Fallback is user.faction.
 
 	if(user.faction == FACTION_NEUTRAL && isobserver(user))
 		faction = allowed_flags == MINIMAP_FLAG_XENO ? XENO_HIVE_NORMAL : FACTION_MARINE
@@ -733,7 +733,7 @@ SUBSYSTEM_DEF(minimaps)
 	old_map = get_tacmap_data_png(faction)
 	current_svg = get_tacmap_data_svg(faction)
 
-	var/use_live_map = is_xeno || skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) /// Either a xenomorph or skilled to view the live map.
+	var/use_live_map = is_xeno || skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) // Either a xenomorph or skilled to view the live map.
 
 	if(use_live_map && !map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)
@@ -818,18 +818,18 @@ SUBSYSTEM_DEF(minimaps)
 		data["isXeno"] = TRUE
 		data["canViewTacmap"] = TRUE
 		if(xeno.hivenumber == XENO_HIVE_NORMAL)
-			data["canViewCanvas"] = TRUE /// Only for the default hive. Should instead expand faction maps, I think.
-			data["canDraw"] = isqueen(xeno) /// Only the queen.
-		else /// Data has to be FALSE (0) for the tabs not to show up, thus the else case cannot be avoided.
+			data["canViewCanvas"] = TRUE // Only for the default hive. Should instead expand faction maps, I think.
+			data["canDraw"] = isqueen(xeno) // Only the queen.
+		else // Data has to be FALSE (0) for the tabs not to show up, thus the else case cannot be avoided.
 			data["canViewCanvas"] = FALSE
 			data["canDraw"] = FALSE
 	else
-		var/faction = faction_default || user.faction /// User faction should not come into play, but you never now.
-		/// Apparently you need the skills to view the tacmap feed. After thinging about it, it does promote actual leadership roles viewing the tacmap.
+		var/faction = faction_default || user.faction // User faction should not come into play, but you never now.
+		// Apparently you need the skills to view the tacmap feed. After thinging about it, it does promote actual leadership roles viewing the tacmap.
 		data["canViewTacmap"] = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_TRAINED)
-		if((user.job in GET_MANIFEST_ROLES) && user.faction == faction) /// Only manifest roles should be able to draw and update the canvas. And only if the faction matches.
+		if((user.job in GET_MANIFEST_ROLES) && user.faction == faction) // Only manifest roles should be able to draw and update the canvas. And only if the faction matches.
 			data["canViewCanvas"] = TRUE
-			data["canDraw"] = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) /// Should not be able to draw without leadership.
+			data["canDraw"] = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) // Should not be able to draw without leadership.
 		else
 			data["canViewCanvas"] = FALSE
 			data["canDraw"] = FALSE
@@ -954,9 +954,12 @@ SUBSYSTEM_DEF(minimaps)
 		return UI_INTERACTIVE
 
 	switch(get_dist(owner, user))
-		if(-1 to 1) return UI_INTERACTIVE
-		if(2) return UI_UPDATE
-		else return UI_CLOSE
+		if(-1 to 1)
+			return UI_INTERACTIVE
+		if(2)
+			return UI_UPDATE
+		else
+			return UI_CLOSE
 
 /datum/tacmap/drawing/xeno/ui_status(mob/user)
 	if(!isxeno(user))

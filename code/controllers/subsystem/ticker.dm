@@ -180,7 +180,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	if(!mode.can_start(bypass_checks))
 		to_chat(world, "Reverting to pre-game lobby.")
-		QDEL_NULL(mode)
+		mode = null
 		RoleAuthority.reset_roles()
 		return FALSE
 

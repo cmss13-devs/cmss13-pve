@@ -142,7 +142,7 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	var/id //Used to pick out the proper rocks to toggle.
 	var/animating = FALSE
 
-//Makes it block movement or hides it instead.
+//Makes it block movement or hide it instead.
 /obj/structure/blocker/rock_debris/proc/toggle_blocker(trigger_signal, play_sound = TRUE)
 	if(trigger_signal == id && !animating)
 		animating = TRUE //We are animating, so this doesn't get activated again until the animation is done and variables are set.

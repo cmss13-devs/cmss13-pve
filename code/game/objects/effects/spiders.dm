@@ -194,7 +194,7 @@
 /obj/effect/decal/cleanable/spiderling_remains
 	name = "spiderling remains"
 	gender = PLURAL
-	desc = "A dead spiderling, still gooey." /// They previously turned into cacoons when killed, for some reason.
+	desc = "A dead spiderling, still gooey." // They previously turned into cacoons when killed, for some reason.
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "spiderling_dead"
 

@@ -154,7 +154,7 @@
 
 	var/specialist_type
 	var/datum/data/record/marine_record
-	var/true_rank /// What we use to determine what their true job rank is.
+	var/true_rank // What we use to determine what their true job rank is.
 
 	var/SL_z //z level of the Squad Leader
 	if(current_squad.squad_leader)
@@ -165,7 +165,7 @@
 		if(!marine)
 			continue //just to be safe
 
-		/// This information is sent to the gui menu.
+		// This information is sent to the gui menu.
 		var/mob_name = "unknown"
 		var/mob_state = ""
 		var/has_helmet = TRUE
@@ -241,7 +241,7 @@
 			for(marine_record as anything in GLOB.data_core.general)
 				if(marine_record.fields["name"] == marine && marine_record.fields["mob_faction"] == faction)
 					role = marine_record.fields["real_rank"]
-					display_role = marine_record.fields["rank"] /// Not their real rank, their assignment.
+					display_role = marine_record.fields["rank"] // Not their real rank, their assignment.
 					break
 			mob_state = "Dead"
 			mob_name = marine
@@ -258,7 +258,7 @@
 			if(JOB_SQUAD_SPECIALIST)
 				spec_count++
 				if(marine_human && istype(marine_human.wear_id) && marine_human.wear_id.assignment) //we use their ID to get their role.
-					if(specialist_type) specialist_type = "MULTIPLE" /// Specialist type is set for the whole squad.
+					if(specialist_type) specialist_type = "MULTIPLE" // Specialist type is set for the whole squad.
 					else
 						var/string = marine_human.wear_id.assignment
 						var/position = findtext(string, ": ")
@@ -879,7 +879,6 @@
 /obj/structure/machinery/computer/overwatch/map_specific/golden_arrow
 	icon_state = "overwatch"
 	dir = WEST
-	layer = 3.2
 
 /obj/structure/machinery/computer/overwatch/map_specific/chapaev
 	icon_state = "overwatch"

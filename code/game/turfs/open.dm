@@ -752,8 +752,9 @@
 	icon_state = icon_spawn_state
 
 	if(flags_jungle_vegetation & JUNGLE_SPAWN_BLOCKER)
-		var/obj/structure/flora/jungle/thickbush/B = new(src)
-		B.indestructable = TRUE
+		var/obj/structure/flora/jungle/thickbush/blocker_brush = new(src)
+		blocker_brush.indestructable = TRUE
+		blocker_brush.unacidable = TRUE
 
 	else
 		if((flags_jungle_vegetation & JUNGLE_SPAWN_BUSHES) && prob(90))
@@ -762,32 +763,40 @@
 		else
 			if((flags_jungle_vegetation & JUNGLE_SPAWN_PLANTS) && prob(40))
 				if(prob(90))
-					var/obj/structure/flora/F
+					var/obj/structure/flora/new_flora
 					if(prob(35))
-						F = new /obj/structure/flora/bush/jungle(src)
+						new_flora = new /obj/structure/flora/bush/jungle(src)
 					else
 						switch(pick(50; 1, 70; 2, 150; 3, 30; 4))
-							if(1) F = new /obj/structure/flora/bush/ausbushes/reedbush(src)
-							if(2) F = new /obj/structure/flora/bush/ausbushes/var3/leafybush(src)
-							if(3) F = new /obj/structure/flora/bush/ausbushes/var3/fernybush(src)
-							else F = new /obj/structure/flora/bush/ausbushes/var3/stalkybush(src)
+							if(1)
+								new_flora = new /obj/structure/flora/bush/ausbushes/reedbush(src)
+							if(2)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/leafybush(src)
+							if(3)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/fernybush(src)
+							else
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/stalkybush(src)
 
-					F.pixel_x = rand(-6,6)
-					F.pixel_y = rand(-6,6)
+					new_flora.pixel_x = rand(-6,6)
+					new_flora.pixel_y = rand(-6,6)
 
 				else if(!(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)) //Don't want to spawn these along with vines.
-					var/obj/structure/flora/jungle/thickbush/jungle_plant/J = new(src)
-					J.pixel_x = rand(-6,6)
-					J.pixel_y = rand(-6,6)
+					var/obj/structure/flora/jungle/thickbush/jungle_plant/new_jungle_plant = new(src)
+					new_jungle_plant.pixel_x = rand(-6,6)
+					new_jungle_plant.pixel_y = rand(-6,6)
 
 		if(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)
 			if(prob(65))
 				if(prob(55))
 					switch(pick(1,3))
-						if(1) new /obj/structure/flora/jungle/vines/light_1(src)
-						if(2) new /obj/structure/flora/jungle/vines/light_2(src)
-						if(3) new /obj/structure/flora/jungle/vines/light_3(src)
-				else new /obj/structure/flora/jungle/vines/heavy(src)
+						if(1)
+							new /obj/structure/flora/jungle/vines/light_1(src)
+						if(2)
+							new /obj/structure/flora/jungle/vines/light_2(src)
+						if(3)
+							new /obj/structure/flora/jungle/vines/light_3(src)
+				else
+					new /obj/structure/flora/jungle/vines/heavy(src)
 
 /turf/open/jungle/attackby(obj/item/I, mob/user)
 	//Light Stick

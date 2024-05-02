@@ -49,7 +49,7 @@
 #define MELTPOINT_NAPALM_U 2050 //UPP flamer. 100 damage. Enough to damage most things, including titanium.
 #define MELTPOINT_NAPALM_W 3336 //OB White flame. 160 damage. Could damage even very reinforced walls.
 
-//Damage is configured via flame defines * 2 (BURN_LEVEL_TIER). See weapon_stats.dm for those defines.
+///Damage is configured via flame defines * 2 (BURN_LEVEL_TIER). See weapon_stats.dm for those defines.
 #define MELTPOINT_DAMAGE_CONVERT(x) ((x*21)+(rand(-150,150))) //Trying to convert some flat numbers into a temperature limit; loosey goosey.
 
 // The highest number supported is a signed 32-bit floating point number.

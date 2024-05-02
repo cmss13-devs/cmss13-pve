@@ -74,7 +74,7 @@
 		var/mob/living/carbon/human/H = target
 		if(H.assigned_squad)
 			var/datum/squad/S = H.assigned_squad
-			if(H.job == JOB_SQUAD_SPECIALIST) /// Don't care about the squad map here, as this only applies to USCM specialists.
+			if(H.job == JOB_SQUAD_SPECIALIST) // Don't care about the squad map here, as this only applies to USCM specialists.
 				//we make the set this specialist took if any available again
 				if(H.skills)
 					var/set_name
