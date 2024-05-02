@@ -178,6 +178,18 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/hangar)
+"bW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
 "bX" = (
 /turf/open/floor/corsat{
 	dir = 6;
@@ -187,6 +199,15 @@
 "cc" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk/cryo_cell)
+"ce" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/supply)
 "co" = (
 /obj/structure/machinery/light/spot{
 	dir = 4
@@ -433,7 +454,10 @@
 	},
 /area/lead_hawk/cryo_cell)
 "fN" = (
-/obj/structure/machinery/door/airlock/almayer/generic/glass,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	req_access = list(100);
+	name = "\improper Overwatch"
+	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
 "fO" = (
@@ -522,6 +546,16 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/cryo_cell)
+"hd" = (
+/obj/structure/closet/crate/secure/weyland,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "brown"
+	},
+/area/lead_hawk/supply)
 "he" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
@@ -1154,6 +1188,9 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk/co)
 "ol" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 4
+	},
 /turf/open/floor/corsat{
 	dir = 5;
 	icon_state = "brown"
@@ -1378,6 +1415,12 @@
 	icon_state = "arrow_west"
 	},
 /area/lead_hawk/cafeteria)
+"rh" = (
+/obj/structure/platform,
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/hangar)
 "rx" = (
 /turf/open/floor/corsat{
 	icon_state = "arrow_north"
@@ -1420,6 +1463,12 @@
 /area/lead_hawk/briefing)
 "rK" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/hangar)
+"rL" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/lead_hawk/hangar)
 "rV" = (
 /obj/structure/platform,
@@ -1497,8 +1546,8 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/floodlight/landing{
-	name = "bolted floodlight"
+/obj/structure/platform{
+	dir = 4
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -1557,6 +1606,17 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/cafeteria)
+"uH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
 "uK" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
@@ -1581,6 +1641,18 @@
 	icon_state = "cargo"
 	},
 /area/lead_hawk/hangar)
+"uZ" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "pmcsupply"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/supply)
 "vh" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -1795,6 +1867,9 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
 	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -1869,6 +1944,14 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
+"xZ" = (
+/obj/structure/machinery/light/double{
+	dir = 1;
+	layer = 2;
+	pixel_y = 16
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
 "ya" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/corsat{
@@ -1976,6 +2059,7 @@
 	pixel_y = 19;
 	pixel_x = -6
 	},
+/obj/structure/machinery/light/spot,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -2125,8 +2209,8 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/floodlight/landing{
-	name = "bolted floodlight"
+/obj/structure/platform{
+	dir = 8
 	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
@@ -2445,7 +2529,8 @@
 	pixel_x = -17;
 	pixel_y = 14;
 	layer = 2.98;
-	name = "Tactical Map Display"
+	name = "Tactical Map Display";
+	density = 0
 	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 4;
@@ -2759,9 +2844,6 @@
 	dir = 4;
 	pixel_x = 10;
 	pixel_y = 1
-	},
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
 	},
 /turf/open/floor/corsat{
 	dir = 4;
@@ -3338,6 +3420,12 @@
 	icon_state = "squares"
 	},
 /area/lead_hawk/cafeteria)
+"QF" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
 "QH" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk/squad_theta)
@@ -4157,12 +4245,12 @@
 /area/lead_hawk/ptsgt)
 "Ze" = (
 /obj/structure/closet,
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/device/radio/headset/distress/pmc,
-/obj/item/device/radio/headset/distress/pmc,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4196,11 +4284,6 @@
 	},
 /obj/item/trash/ceramic_plate{
 	layer = 2.97
-	},
-/obj/structure/machinery/light/double{
-	dir = 1;
-	layer = 2;
-	pixel_y = 16
 	},
 /turf/open/floor/wood/ship,
 /area/lead_hawk/briefing)
@@ -9161,9 +9244,9 @@ BB
 aV
 aV
 ew
-Bu
-Bu
-Bu
+rV
+YY
+HZ
 JP
 iy
 iy
@@ -9315,7 +9398,7 @@ yn
 ew
 wW
 AE
-iy
+uH
 hB
 Bu
 Bu
@@ -10101,7 +10184,7 @@ bL
 Bu
 Bu
 Bu
-Bu
+rL
 rK
 gR
 gR
@@ -10519,7 +10602,7 @@ gR
 gR
 gR
 Vb
-tl
+xZ
 ur
 ND
 HB
@@ -11745,9 +11828,9 @@ Ke
 vh
 HZ
 Bu
-Bu
+QF
 td
-MJ
+bW
 hr
 Bu
 qL
@@ -11897,9 +11980,9 @@ jG
 ew
 UO
 mt
-mt
-ew
-Bu
+rh
+aW
+HZ
 Xv
 aL
 Bu
@@ -13705,7 +13788,7 @@ gR
 Oi
 XT
 CO
-Oe
+uZ
 zx
 zx
 wz
@@ -14006,7 +14089,7 @@ gR
 gR
 gR
 gR
-dQ
+hv
 YI
 uk
 qK
@@ -14314,7 +14397,7 @@ hv
 YI
 qK
 qK
-qK
+ce
 qK
 CO
 CO
@@ -14926,7 +15009,7 @@ dQ
 An
 qK
 qK
-Ok
+hd
 Oi
 qo
 UY
