@@ -276,7 +276,8 @@
 	if(vehicle_name) spawned_van.name = vehicle_name
 
 /obj/effect/vehicle_spawner/van/load_hardpoints(obj/vehicle/multitile/van/V)
-	if(vehicle_status > VAN_SPAWN_NON_FUNCTIONAL) V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+	if(vehicle_status > VAN_SPAWN_NON_FUNCTIONAL)
+		V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
 
 //PRESET: wheels installed, destroyed
 /obj/effect/vehicle_spawner/van/decrepit
