@@ -107,7 +107,7 @@
 	// Some information should only be available to those who are added to the manifest.
 	var/manifest_roles[] = GET_MANIFEST_ROLES
 
-	if(job in manifest_roles & !isnull(SSticker) && !isnull(SSticker.mode))
+	if((job in manifest_roles) & !isnull(SSticker) && !isnull(SSticker.mode))
 		. += "Security Level: [uppertext(get_security_level())]"
 		if(!isnull(SSticker.mode.active_lz) && !isnull(SSticker.mode.active_lz.loc) && !isnull(SSticker.mode.active_lz.loc.loc))
 			. += "Primary LZ: [SSticker.mode.active_lz.loc.loc.name]"

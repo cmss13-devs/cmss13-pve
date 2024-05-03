@@ -4770,7 +4770,7 @@
 	},
 /obj/structure/machinery/door_control{
 	pixel_x = -4;
-	pixel_y = 11;
+	pixel_y = 10;
 	id = "blackstone_guest_room_2";
 	name = "toggle room shutters";
 	req_access_txt = "55";
@@ -5104,10 +5104,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/north_east)
-"eiu" = (
-/obj/item/folded_tent,
-/turf/open/gm/dirt,
-/area/whiskey_outpost/blackstone/underground/excavation_site)
 "eiL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/colony_floodlight{
@@ -23036,7 +23032,7 @@
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalbottomleft"
 	},
-/obj/item/storage/belt/medical/lifesaver/full,
+/obj/item/storage/belt/medical/lifesaver,
 /turf/open/floor{
 	icon_state = "whitegreenfull"
 	},
@@ -58897,7 +58893,7 @@ uge
 koc
 aZS
 lOq
-eiu
+icw
 icw
 gYR
 icw

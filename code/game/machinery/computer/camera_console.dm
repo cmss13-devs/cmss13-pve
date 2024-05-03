@@ -38,8 +38,8 @@
 		var/atom/movable/screen/plane_master/instance = new plane()
 		instance.assigned_map = map_name
 		instance.del_on_map_removal = FALSE
-		if(instance.blend_mode_override)
-			instance.blend_mode = instance.blend_mode_override
+		instance.blend_mode = instance.blend_mode_override || instance.blend_mode
+		instance.render_target = null // This draws the overlays flat one over the other without any relay shenanigans.
 		instance.screen_loc = "[map_name]:CENTER"
 		cam_plane_masters += instance
 

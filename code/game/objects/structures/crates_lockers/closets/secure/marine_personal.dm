@@ -108,6 +108,7 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/dress(src)
 	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
 	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
+	new /obj/item/storage/belt/medical/lifesaver/full(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/civilian
 	job = JOB_USCM_GROUND_CIVILIAN
