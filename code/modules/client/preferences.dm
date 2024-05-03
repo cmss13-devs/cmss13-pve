@@ -670,17 +670,13 @@ var/const/MAX_SAVE_SLOTS = 10
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
 	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
-	var/n_roles = length(active_role_names)
-	switch(n_roles)
+	var/len_of_roles = length(active_role_names)
+	switch(len_of_roles)
 		if(PREF_COLUMN_LIMIT+1 to INFINITY) // A lot of jobs? Make the window bigger.
 			width = 950
 			height = 750
 		if(1 to PREF_COLUMN_LIMIT) // Adjusts the height of the window based on the number of jobs, to an extent.
-			height = 22 * n_roles + PREF_HEIGHT_MIN
-#undef PREF_COLUMN_LIMIT
-#undef PREF_WIDTH
-#undef PREF_HEIGHT_MIN
-#undef PREF_HEIGHT
+			height = 22 * len_of_roles + PREF_HEIGHT_MIN
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -780,7 +776,7 @@ var/const/MAX_SAVE_SLOTS = 10
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
 //width - Screen' width. Defaults to 550 to make it look nice.
 //height - Screen's height. Defaults to 500 to make it look nice.
-/datum/preferences/proc/set_job_slots(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 950, height = 700)
+/datum/preferences/proc/set_job_slots(mob/user, limit = PREF_COLUMN_LIMIT, list/splitJobs = list(JOB_CHIEF_REQUISITION, JOB_WO_CMO), width = PREF_WIDTH, height = PREF_HEIGHT)
 	if(!RoleAuthority)
 		return
 
@@ -795,6 +791,13 @@ var/const/MAX_SAVE_SLOTS = 10
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
 	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
+	var/len_of_roles = length(active_role_names)
+	switch(len_of_roles)
+		if(PREF_COLUMN_LIMIT+1 to INFINITY) // A lot of jobs? Make the window bigger.
+			width = 950
+			height = 750
+		if(1 to PREF_COLUMN_LIMIT) // Adjusts the height of the window based on the number of jobs, to an extent.
+			height = 22 * len_of_roles + PREF_HEIGHT_MIN
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -850,6 +853,11 @@ var/const/MAX_SAVE_SLOTS = 10
 	show_browser(user, HTML, "Job Assignment", "job_slots_assignment", "size=[width]x[height]")
 	onclose(user, "job_slots_assignment", user.client, list("_src_" = "prefs", "preference" = "job_slot", "task" = "close"))
 	return
+
+#undef PREF_COLUMN_LIMIT
+#undef PREF_WIDTH
+#undef PREF_HEIGHT_MIN
+#undef PREF_HEIGHT
 
 /datum/preferences/proc/SetRecords(mob/user)
 	var/HTML = "<body onselectstart='return false;'>"

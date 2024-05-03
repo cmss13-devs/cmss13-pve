@@ -330,8 +330,7 @@
 	dat += position_dat ? "Choose from the following open positions:<br>" + position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
-	show_browser(src, dat, "Late Join", "latechoices", "size=420x[180 + len * 25]")
-
+	show_browser(src, dat, "Late Join", "latechoices", "size=420x[180 + len * 25]") // Sized to the number of jobs.
 
 /mob/new_player/proc/create_character(is_late_join = FALSE)
 	spawning = TRUE

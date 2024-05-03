@@ -60,7 +60,7 @@
 //Similar to closets, these can dump out their contents. Except in this case we dump a variable amount depending on what triggered the proc.
 /obj/structure/gun_rack/proc/dump_contents(number_to_remove = max_stored)
 	number_to_remove = min(length(contents), number_to_remove)
-	for(var/obj/thing as anything in src) //Let's hope there are no mobs hiding in there.
+	for(var/obj/thing in src) //obj iteration should be pretty fast.
 		if(number_to_remove-- <= 0)
 			break
 		thing.forceMove(loc)

@@ -66,10 +66,13 @@
 
 	return TRUE
 
-// We change real name, so we change the voice too if we are humans
-// It also ensures our mind's name gets changed
-/// To do: Clean up all the references to this proc to run from source instead of using mob/M as an argument.
-/mob/proc/change_real_name(mob/M, new_name)
+/**
+ * Changes the mob's real name, mind name, and voice.
+ *
+ * We change real name, so we change the voice too if we are humans.
+ * It also ensures our mind's name gets changed.
+ */
+/mob/proc/change_real_name(mob/M, new_name) // To do: Clean up all the references to this proc to run from source instead of using mob/M as an argument.
 	if(!new_name)
 		return FALSE
 
@@ -101,19 +104,19 @@
 /mob/proc/modify_name_and_record(new_name)
 	SHOULD_CALL_PARENT(TRUE) /// Call back to parent required.
 
-	/// Sets them up with all of the name changing done.
+	// Sets them up with all of the name changing done.
 	return change_real_name(src, new_name)
 
 /mob/living/carbon/human/modify_name_and_record(new_name)
 	var/previous_name = real_name
 	. = ..()
 
-	/// For ease of use, whenever you modify the name it will check for their ID too.
+	// For ease of use, whenever you modify the name it will check for their ID too.
 	if(.)
-		/// Modifies their datacore entry based on real name, should they have one. Mostly for humans, but not strictly limited to them. Move to the parent proc if the behavior changes.
+		// Modifies their datacore entry based on real name, should they have one. Mostly for humans, but not strictly limited to them. Move to the parent proc if the behavior changes.
 		GLOB.data_core.manifest_modify(new_name, WEAKREF(src))
 		if(wear_id?.registered_name == previous_name) /// They are wearing their own ID.
-			/// The following can be done with splicetext and knowing the length of the string, since the position is known. But it's best to search if the position ever changes.
+			// The following can be done with splicetext and knowing the length of the string, since the position is known. But it's best to search if the position ever changes.
 			wear_id.registered_name = new_name /// Update their name first, so that it's all matched up.
 			wear_id.name = replacetext(wear_id.name, previous_name, new_name) /// Not case sensitive, probably desirable.
 

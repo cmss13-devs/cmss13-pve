@@ -15,7 +15,7 @@
 /datum/map_manipulation_menu
 	/// What main menu tab we're currently looking at.
 	var/main_tab = TAB_DESTRUCTION
-//	var/selected_area //Unused at the moment. Could be implemented to only affect a particular area on the map.
+//	var/selected_area //Unused at the moment. Could be implemented to only affect a particular area on the map. // Turns out this is pretty bad performance wise.
 	/// Ground by default. Used to determine which z-level it affected for destruction.
 	var/selected_z_level = 2
 	/// By default we want to break at least 25% of all objects affected.
@@ -296,7 +296,7 @@
 			var/turf/current_turf
 			var/obj/structure/tunnel/tunnel_to_create
 			var/turf/closed/wall/walls_in_range
-			var/i = 0//We use this to count how many were actually spawned and report on it.
+			var/spawned_sites = 0//We use this to count how many were actually spawned and report on it.
 			for(ambush_landmark in GLOB.landmarks_list)
 				if(ambush_landmark.z in possible_maps)
 					if(prob(20)) //We don't want to spam too many of these.
@@ -308,8 +308,8 @@
 						tunnel_to_create = new(current_turf)
 						tunnel_to_create.id = length(GLOB.landmarks_list)
 						qdel(ambush_landmark) //This will remove it from landmarks.
-						i++
-			message_admins("[key_name_admin(ui.user)] has spawned [i] ambush sites.") //Possibly important to know this. Plus it gives a message that it was successful.
+						spawned_sites++
+			message_admins("[key_name_admin(ui.user)] has spawned [spawned_sites] ambush sites.") //Possibly important to know this. Plus it gives a message that it was successful.
 
 		else
 			dest_actions = list(action, percentage_to_break) //Everything else falls into here.

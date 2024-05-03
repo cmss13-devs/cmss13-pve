@@ -206,10 +206,14 @@
 	else
 		update_icon()
 
-/turf/closed/wall/flamer_fire_act(dam)
-	//Sadly, this proc has no temperature value, only flat damage, so we have to do some eyeballing. Check out math_physics.dm for the defines.
-	if(!hull && MELTPOINT_DAMAGE_CONVERT(dam) >= max_temperature) //Damage will check for hull, but we don't need to fire another proc.
-		take_damage(dam * (flags_turf & TURF_ORGANIC ? 2 : 1)) //Organic will take double damage.
+/turf/closed/wall/flamer_fire_act(damage)
+	/*
+	Sadly, this proc has no temperature value, only flat damage, so we have to do some eyeballing to convert it to a melting point.
+	Damage is configured via flame defines * 2 (BURN_LEVEL_TIER). See weapon_stats.dm for those defines. The idea is to
+	multiply the damage and give it a little variance to arrive at the final value.
+	*/
+	if(!hull && ((damage*21+rand(-150,150)) >= max_temperature)) //Damage will check for hull, but we don't need to fire another proc.
+		take_damage(damage * (flags_turf & TURF_ORGANIC ? 2 : 1)) //Organic will take double damage.
 
 /turf/closed/wall/proc/make_girder(destroyed_girder = FALSE)
 	if(!(flags_turf & (TURF_ORGANIC|TURF_NATURAL))) //If it is not organic or natural, we do make a girder.

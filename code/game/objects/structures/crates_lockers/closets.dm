@@ -74,10 +74,10 @@
 	return TRUE
 
 /obj/structure/closet/proc/dump_contents()
-	for(var/obj/I in src)
-		I.forceMove(loc)
-		I.pixel_x = wall_mounted ? 0 : pixel_x //No offset if it's dumping from a wall. Otherwise items become offset weirdly.
-		I.pixel_y = wall_mounted ? 0 : pixel_y
+	for(var/obj/contents_object in src)
+		contents_object.forceMove(loc)
+		contents_object.pixel_x = wall_mounted ? 0 : pixel_x //No offset if it's dumping from a wall. Otherwise items become offset weirdly.
+		contents_object.pixel_y = wall_mounted ? 0 : pixel_y
 
 	for(var/mob/M in src)
 		M.forceMove(loc)

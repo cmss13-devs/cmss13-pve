@@ -1,11 +1,12 @@
-/*
-* A note on factions:
-* I don't exactly know what the original intent of this datum was, but as of right now it's a way to categorize and expand faction bookkeeping.
-* As of writing this note, only the major factions are represented, and allow for group behavior, sub-faction behavior, and other functions.
-* More factions can be added, so long as they are strictly defined, but it may not needed unless those factions have a major presence.
-* Smaller factions should probably be rolled into larger categories. Such a VAI being a subfaction of mercs.
-* One possible major addition that is not already implemented is Yautja, or predators.
-*/
+/**
+ * A datum that stores relevant faction information, hud icon procs, and other relevant info.
+ *
+ * I don't exactly know what the original intent of this datum was, but as of right now it's a way to categorize and expand faction bookkeeping.
+ * As of writing this note, only the major factions are represented, and allow for group behavior, sub-faction behavior, and other functions.
+ * More factions can be added, so long as they are strictly defined, but it may not needed unless those factions have a major presence.
+ * Smaller factions should probably be rolled into larger categories. Such a VAI being a subfaction of mercs.
+ * One possible major addition that is not already implemented is Yautja, or predators.
+ */
 /datum/faction
 	var/name = "Neutral Faction"
 	var/faction_tag = FACTION_NEUTRAL
