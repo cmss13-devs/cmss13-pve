@@ -60,6 +60,11 @@
 "aO" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/engineering)
+"aR" = (
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "aS" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/mechanical/green{
@@ -97,7 +102,7 @@
 	layer = 2
 	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
 "bf" = (
@@ -389,6 +394,14 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"fZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "gk" = (
 /turf/open/floor/almayer,
 /area/space)
@@ -640,6 +653,15 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/supply)
+"kl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "ks" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out"
@@ -727,6 +749,15 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/hangar)
+"lK" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	id = "Delta_1";
+	name = "\improper Bathroom"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "lN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -1004,13 +1035,24 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"qx" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "qy" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
 "qG" = (
@@ -1127,6 +1169,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"so" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "sr" = (
 /obj/structure/window/framed/almayer/white,
 /turf/open/floor/almayer{
@@ -1310,6 +1361,10 @@
 	layer = 2.79
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1479,6 +1534,16 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"xF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "xK" = (
 /obj/structure/platform{
 	dir = 8
@@ -1608,6 +1673,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/canteen)
+"Ad" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "As" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -1748,7 +1819,9 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
 /area/golden_arrow/cryo_cells)
 "Et" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2031,6 +2104,10 @@
 "Ir" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2091,7 +2168,9 @@
 /obj/structure/mirror{
 	pixel_x = 28
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
 /area/golden_arrow/cryo_cells)
 "JA" = (
 /obj/structure/surface/table/almayer,
@@ -2181,6 +2260,15 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/hangar)
+"KI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "KO" = (
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2193,6 +2281,16 @@
 "KU" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
+"KX" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "KY" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	id = "Delta_1";
@@ -2352,6 +2450,16 @@
 /obj/effect/landmark/map_item,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
+"NL" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Oz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2443,6 +2551,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"Qc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Qe" = (
 /obj/vehicle/powerloader{
 	dir = 4
@@ -2703,10 +2820,52 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "UL" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	roundstart_template = /datum/map_template/shuttle/tulagi
+/obj/structure/surface/table/almayer,
+/obj/item/weapon/gun/revolver/upp{
+	pixel_y = 33;
+	layer = 3.4;
+	anchored = 1;
+	desc = "The ZHNK-72 is a UPP designed revolver. The ZHNK-72 is used by the UPP armed forces in a policing role as well as limited numbers in the hands of SNCOs. The Lieutenant would kill you if you took this one."
 	},
-/turf/open/floor/plating,
+/obj/item/stack/sheet/wood{
+	pixel_y = 40;
+	pixel_x = -1;
+	anchored = 1
+	},
+/obj/item/stack/sheet/wood{
+	pixel_y = 31;
+	pixel_x = -3;
+	anchored = 1
+	},
+/obj/structure/phone_base/rotary/no_dnd{
+	name = "Squad Leader Telephone";
+	phone_category = "Command";
+	phone_id = "Squad Leader";
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/paper_bin/uscm{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/tool/pen{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/device/flashlight/lamp{
+	pixel_x = 1;
+	pixel_y = -6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/squad_one)
+"UN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
 /area/golden_arrow/hangar)
 "UP" = (
 /obj/structure/bed,
@@ -2734,6 +2893,10 @@
 "US" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2847,6 +3010,16 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"Xf" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Xg" = (
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 30;
@@ -2854,6 +3027,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
+"Xn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "XB" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -2948,44 +3131,11 @@
 /turf/closed/wall/almayer/white,
 /area/golden_arrow/medical)
 "Za" = (
-/obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/revolver/upp{
-	pixel_y = 33;
-	layer = 3.4;
-	anchored = 1;
-	desc = "The ZHNK-72 is a UPP designed revolver. The ZHNK-72 is used by the UPP armed forces in a policing role as well as limited numbers in the hands of SNCOs. The Lieutenant would kill you if you took this one."
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/tulagi
 	},
-/obj/item/stack/sheet/wood{
-	pixel_y = 40;
-	pixel_x = -1;
-	anchored = 1
-	},
-/obj/item/stack/sheet/wood{
-	pixel_y = 31;
-	pixel_x = -3;
-	anchored = 1
-	},
-/obj/structure/phone_base/rotary/no_dnd{
-	name = "Squad Leader Telephone";
-	phone_category = "Command";
-	phone_id = "Squad Leader";
-	pixel_x = 6;
-	pixel_y = 11
-	},
-/obj/item/paper_bin/uscm{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/tool/pen{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/device/flashlight/lamp{
-	pixel_x = 1;
-	pixel_y = -6
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/squad_one)
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "Zi" = (
 /obj/structure/ship_ammo/minirocket,
 /turf/open/floor/almayer{
@@ -5296,9 +5446,9 @@ hB
 Rk
 zt
 KU
-KY
+lK
 KU
-KY
+lK
 bh
 jZ
 jZ
@@ -5444,13 +5594,13 @@ bh
 bh
 jZ
 HU
-KP
-Gb
-Gb
+Ad
+aR
+aR
 Es
-Gb
-Gb
-KP
+aR
+aR
+Ad
 bh
 jZ
 jZ
@@ -5599,10 +5749,10 @@ bh
 Jw
 Jw
 Jw
-Gb
-Gb
-KP
-Gb
+aR
+aR
+Ad
+aR
 bh
 jZ
 jZ
@@ -9397,7 +9547,7 @@ jZ
 jZ
 jZ
 QY
-Za
+UL
 Go
 mO
 ID
@@ -18323,26 +18473,26 @@ Wl
 zi
 QW
 zi
-Qq
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Qq
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Qq
+Xf
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+NL
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+Qc
+qx
 zi
 QW
 zi
@@ -18475,7 +18625,7 @@ Wl
 zi
 QW
 zi
-pK
+xF
 kY
 kY
 kY
@@ -18494,7 +18644,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -18627,7 +18777,7 @@ tZ
 vO
 QW
 zi
-pK
+xF
 kY
 kY
 kY
@@ -18646,7 +18796,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -18798,7 +18948,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -18950,7 +19100,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -19093,7 +19243,7 @@ kY
 kY
 kY
 kY
-UL
+Za
 kY
 kY
 kY
@@ -19102,7 +19252,7 @@ kY
 kY
 kY
 kY
-Qq
+KX
 zi
 QW
 zi
@@ -19254,7 +19404,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -19406,7 +19556,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -19539,7 +19689,7 @@ tZ
 vO
 QW
 zi
-Wl
+kl
 kY
 kY
 kY
@@ -19558,7 +19708,7 @@ kY
 kY
 kY
 kY
-Wl
+KI
 zi
 QW
 lI
@@ -19691,7 +19841,7 @@ Wl
 zi
 QW
 zi
-Wl
+kl
 kY
 kY
 kY
@@ -19710,7 +19860,7 @@ kY
 kY
 kY
 kY
-pK
+Xn
 zi
 QW
 lI
@@ -19844,24 +19994,24 @@ zi
 QW
 zi
 Ir
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-pK
-Wl
-Qq
-Wl
-Wl
-Wl
-Wl
-Wl
-Wl
-pK
-Wl
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+UN
+fZ
+so
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+UN
+fZ
 uz
 zi
 QW

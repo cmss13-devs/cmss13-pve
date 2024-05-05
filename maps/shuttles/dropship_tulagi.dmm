@@ -7,14 +7,14 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "at" = (
 /turf/template_noop,
 /area/space)
 "aV" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_right_exhaust,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "aX" = (
 /obj/structure/machinery/camera/autoname/almayer/dropship_two{
 	pixel_x = 8;
@@ -24,32 +24,32 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "bd" = (
 /turf/open/shuttle/dropship{
 	icon_state = "floor8"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "by" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "47"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "bz" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "92"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "bB" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "cF" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "80"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "cK" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -58,69 +58,71 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "cO" = (
-/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/machinery/computer/shuttle/dropship/flight{
+	shuttleId = dropship_tulagi
+	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "cS" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "75"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "dp" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "34"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "eh" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "27"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "eq" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin7"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "eE" = (
 /obj/structure/shuttle/part/dropship2/left_inner_wing_connector,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "fa" = (
 /obj/structure/machinery/door/airlock/hatch/cockpit/two,
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "fs" = (
 /obj/structure/bed/chair/dropship/passenger{
 	pixel_x = -8
 	},
 /obj/structure/bed/chair/dropship/passenger{
-	pixel_x = 8
+	pixel_x = 9
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "fD" = (
 /obj/structure/shuttle/part/dropship2/nose_front_left,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "gt" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "69"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "gz" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_top_right,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "hb" = (
 /obj/effect/attach_point/weapon/dropship2/left_wing,
 /obj/structure/shuttle/part/dropship2/transparent/lower_left_wing,
@@ -128,32 +130,37 @@
 	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "iG" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "62"
 	},
-/area/space)
+/area/shuttle/tulagi)
+"iY" = (
+/obj/effect/attach_point/weapon/midway/right_fore,
+/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons,
+/turf/template_noop,
+/area/shuttle/tulagi)
 "jQ" = (
 /obj/effect/attach_point/fuel/dropship2,
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "32"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "ki" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "39"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "kp" = (
 /obj/structure/shuttle/part/dropship2/left_outer_wing_connector,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "kQ" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "48"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "lA" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
@@ -163,16 +170,16 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "lB" = (
 /obj/structure/shuttle/part/dropship2/lower_right_wall,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "lQ" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "72"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "mh" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	ship_tag = "dropship_cyclone"
@@ -180,64 +187,64 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "oU" = (
 /obj/structure/shuttle/part/dropship2/nose_front_right,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "po" = (
 /obj/structure/shuttle/part/dropship2/transparent/right_inner_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "qv" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "77"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "rC" = (
 /obj/structure/shuttle/part/dropship2/transparent/upper_right_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "rQ" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin8"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "sC" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "33"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "sF" = (
 /obj/structure/stairs/perspective,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "sY" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "83"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "vj" = (
 /obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "vq" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "42"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "vA" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "43"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "vK" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "73"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "vP" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -245,7 +252,7 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "we" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
@@ -256,12 +263,12 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "wm" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "26"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "wq" = (
 /obj/structure/machinery/computer/cameras/dropship/two{
 	name = "\improper 'Cyclon' camera controls";
@@ -271,12 +278,12 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "wD" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin14"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "xc" = (
 /obj/effect/attach_point/weapon/dropship2/right_wing,
 /obj/structure/shuttle/part/dropship2/transparent/lower_right_wing,
@@ -284,7 +291,7 @@
 	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "zy" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -293,29 +300,29 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "zK" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "64"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "zT" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "98"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Az" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "AC" = (
 /obj/structure/shuttle/part/dropship2/transparent/left_outer_inner_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Bb" = (
 /obj/structure/shuttle/part/dropship2/transparent/middle_left_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Bu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone{
 	dir = 1;
@@ -325,7 +332,7 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "CD" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = 30
@@ -333,21 +340,21 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "CG" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin6"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "CT" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "23"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "DJ" = (
 /obj/structure/shuttle/part/dropship2/lower_left_wall,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Ej" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
 	id = "aft_door";
@@ -356,41 +363,41 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "GI" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "38"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Ho" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_cap,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "IW" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "18"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "KU" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "94"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "KX" = (
 /obj/effect/attach_point/fuel/dropship2,
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "28"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "LI" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "78"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "MJ" = (
 /obj/structure/shuttle/part/dropship2/right_inner_wing_connector,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Nx" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
@@ -398,86 +405,86 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Pi" = (
 /obj/structure/shuttle/part/dropship2/right_outer_wing_connector,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Pl" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "89"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Pp" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_right_cap,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "PR" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "96"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "PV" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "35"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Qe" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_center,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Qw" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "25"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "QY" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "19"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Rd" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "37"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Rn" = (
 /obj/structure/shuttle/part/dropship2/transparent/middle_right_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Rw" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "97"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "RC" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "RH" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "67"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "RI" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "22"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "RT" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "80"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "RU" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_top_left,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Sc" = (
 /obj/structure/shuttle/part/dropship2/transparent/left_outer_bottom_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "SM" = (
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
@@ -485,7 +492,7 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Tp" = (
 /obj/structure/machinery/computer/dropship_weapons/dropship2{
 	name = "\improper 'Cyclon' weapons controls"
@@ -494,7 +501,7 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "TP" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -503,16 +510,16 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "TX" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin4"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Ub" = (
 /obj/structure/shuttle/part/dropship2/transparent/upper_left_wing,
 /turf/template_noop,
-/area/space)
+/area/shuttle/tulagi)
 "Uv" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
@@ -525,33 +532,38 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "UL" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "36"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "UQ" = (
-/obj/docking_port/mobile/marine_dropship/cyclone,
+/obj/docking_port/mobile/marine_dropship/tulagi,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin14"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "Vj" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "86"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "VB" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "31"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "WK" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "24"
 	},
-/area/space)
+/area/shuttle/tulagi)
+"YS" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons,
+/turf/template_noop,
+/area/shuttle/tulagi)
 "Zh" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -563,7 +575,7 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "ZL" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -575,17 +587,17 @@
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "ZT" = (
 /turf/closed/shuttle/tulagi{
 	icon_state = "30"
 	},
-/area/space)
+/area/shuttle/tulagi)
 "ZU" = (
 /turf/closed/shuttle/tulagi/transparent{
 	icon_state = "29"
 	},
-/area/space)
+/area/shuttle/tulagi)
 
 (1,1,1) = {"
 at
@@ -611,7 +623,7 @@ Sc
 at
 at
 at
-at
+YS
 cS
 lQ
 RH
@@ -731,7 +743,7 @@ Pi
 at
 at
 at
-at
+iY
 sY
 vK
 gt
