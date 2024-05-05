@@ -220,6 +220,23 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_two)
+"bw" = (
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;238";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "bC" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -2760,6 +2777,22 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"AU" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light,
+/obj/item/storage/pouch/shotgun/large,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/weapon/gun/shotgun/type23/pve,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "AW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/coffee,
@@ -3657,6 +3690,23 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/squad_one)
+"IW" = (
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;237";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "Jc" = (
 /obj/effect/landmark/start/bridge/upp,
 /turf/open/floor/strata{
@@ -4436,6 +4486,19 @@
 	layer = 6;
 	plane = 2.8;
 	pixel_y = 20
+"RM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/bayonet/upp,
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 20
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
 	},
 /obj/effect/decal/cleanable/blood/drip{
 	layer = 6;
@@ -4823,6 +4886,22 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/canteen)
+"VE" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light,
+/obj/item/storage/pouch/shotgun/large,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
+/obj/item/weapon/gun/shotgun/type23/pve,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "VE" = (
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
@@ -12510,6 +12589,7 @@ tZ
 tZ
 ei
 RM
+RM
 dU
 dU
 dU
@@ -12814,9 +12894,11 @@ ic
 Jc
 ww
 CU
+CU
 dU
 Ef
 dU
+AU
 AU
 ww
 QF
@@ -12826,9 +12908,11 @@ vf
 vW
 NU
 pw
+pw
 Hp
 XL
 Hp
+VE
 VE
 CM
 Gt
@@ -12966,9 +13050,11 @@ VP
 TB
 ww
 IW
+IW
 dU
 MH
 dU
+yu
 yu
 ww
 LL
@@ -12978,9 +13064,11 @@ Rm
 vW
 NU
 bw
+bw
 Hp
 Jt
 Hp
+GT
 GT
 CM
 Tz
@@ -14652,6 +14740,7 @@ BK
 BK
 wH
 VL
+BK
 BK
 iO
 bC
