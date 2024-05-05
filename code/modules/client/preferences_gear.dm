@@ -684,11 +684,6 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/box/M1911_loadout
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/m2100_machete
-	display_name = "M2100 Machete"
-	path = /obj/item/storage/large_holster/machete/arnold/weak
-	allowed_origins = USCM_ORIGINS
-
 /datum/gear/drink
 	category = "Canned drinks"
 

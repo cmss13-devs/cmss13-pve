@@ -77,9 +77,6 @@
 /datum/game_mode/colonialmarines/ai/get_roles_list()
 	return GLOB.platoon_to_role_list[MAIN_SHIP_PLATOON]
 
-/datum/game_mode/colonialmarines/ai/check_queen_status()
-	return
-
 GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/job/command/bridge/ai = JOB_SO,\
 		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\

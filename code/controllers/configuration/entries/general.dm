@@ -620,27 +620,3 @@ This maintains a list of ip addresses that are able to bypass topic filtering.
 	protection = CONFIG_ENTRY_HIDDEN|CONFIG_ENTRY_LOCKED
 
 /datum/config_entry/flag/auto_profile
-
-/datum/config_entry/number/client_warn_version
-	default = null
-	min_val = 500
-
-/datum/config_entry/number/client_warn_build
-	default = null
-	min_val = 0
-
-/datum/config_entry/string/client_warn_message
-	default = "Your version of BYOND may have issues or be blocked from accessing this server in the future."
-
-/datum/config_entry/flag/client_warn_popup
-
-/datum/config_entry/number/client_error_version
-	default = null
-	min_val = 500
-
-/datum/config_entry/string/client_error_message
-	default = "Your version of BYOND is too old, may have issues, and is blocked from accessing this server."
-
-/datum/config_entry/number/client_error_build
-	default = null
-	min_val = 0

@@ -16,7 +16,7 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 /world/New()
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call_ext(debug_server, "auxtools_init")()
+		LIBCALL(debug_server, "auxtools_init")()
 		enable_debugging()
 	internal_tick_usage = 0.2 * world.tick_lag
 	hub_password = "kMZy3U5jJHSiBQjr"
@@ -381,14 +381,13 @@ var/datum/BSQL_Connection/connection
 		else
 			CRASH("unsupported platform")
 
-	var/init = call_ext(lib, "init")()
+	var/init = LIBCALL(lib, "init")()
 	if("0" != init)
 		CRASH("[lib] init error: [init]")
 
 /world/proc/HandleTestRun()
 	// Wait for the game ticker to initialize
 	Master.sleep_offline_after_initializations = FALSE
-	SSticker.start_immediately = TRUE
 	UNTIL(SSticker.initialized)
 
 	//trigger things to run the whole process

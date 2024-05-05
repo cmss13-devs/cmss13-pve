@@ -418,8 +418,11 @@ const SquadMonitor = (props, context) => {
             onClick={() => act('transfer_marine')}>
             Transfer Marine
           </Button>
-          <Button color="blue" icon="medal" onClick={() => act('award_medal')}>
-            Award Medal
+          <Button
+            color="red"
+            icon="running"
+            onClick={() => act('insubordination')}>
+            Insubordination
           </Button>
         </>
       }>

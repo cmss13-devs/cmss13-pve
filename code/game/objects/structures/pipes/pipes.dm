@@ -53,7 +53,6 @@
 
 	for(var/obj/structure/pipes/P in connected_to)
 		P.remove_connection(src)
-	connected_to.Cut()
 
 	GLOB.mainship_pipes -= src
 
@@ -98,7 +97,6 @@
 
 /obj/structure/pipes/proc/remove_connection(obj/structure/pipes/P)
 	connected_to -= P
-	P.connected_to -= src
 
 /obj/structure/pipes/proc/get_connection(direction)
 	var/obj/structure/pipes/best_connected_pipe = null

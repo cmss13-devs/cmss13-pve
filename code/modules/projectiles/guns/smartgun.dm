@@ -756,8 +756,3 @@
 /obj/item/weapon/gun/smartgun/rmc/Initialize(mapload, ...)
 	. = ..()
 	MD.iff_signal = FACTION_TWE
-
-/obj/item/weapon/gun/smartgun/silenced
-	name = "XM56E smartgun"
-	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
-	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)

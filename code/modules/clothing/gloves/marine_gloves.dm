@@ -114,12 +114,6 @@
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	adopts_squad_color = FALSE
 
-/obj/item/clothing/gloves/marine/pve_mopp
-	name = "\improper M2 MOPP gloves"
-	desc = "M2 MOPP gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these."
-	icon_state = "cbrn"
-	item_state = "cbrn"
-
 /obj/item/clothing/gloves/marine/veteran
 	name = "armored gloves"
 	desc = "Non-standard para-aramid fiber gloves. They're insulated and heavily armored."

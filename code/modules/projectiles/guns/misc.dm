@@ -272,26 +272,13 @@
 			return FALSE
 	if(!skillcheck(user, SKILL_FIREARMS, SKILL_FIREARMS_TRAINED))
 		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return FALSE
+		return 0
 
 /obj/item/weapon/gun/pkp/iff
 	name = "\improper QYJ-72-I General Purpose Machine Gun"
 	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
-	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	var/iff_enabled = TRUE
-	var/requires_harness = TRUE
-
-/obj/item/weapon/gun/pkp/iff/able_to_fire(mob/living/user)
-	. = ..()
-	if(.)
-		if(!ishuman(user))
-			return FALSE
-		var/mob/living/carbon/human/H = user
-		if(requires_harness)
-			if(!H.wear_suit || !(H.wear_suit.flags_inventory & SMARTGUN_HARNESS))
-				balloon_alert(user, "harness required")
-				return FALSE
 
 /obj/item/weapon/gun/pkp/iff/set_bullet_traits()
 	LAZYADD(traits_to_give, list(

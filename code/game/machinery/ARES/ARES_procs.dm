@@ -174,8 +174,6 @@ GLOBAL_LIST_INIT(maintenance_categories, list(
 		return ARES_ACCESS_HIGH
 	if(card.paygrade in GLOB.co_paygrades)
 		return ARES_ACCESS_CO
-	if(card.paygrade in GLOB.platco_paygrades)
-		return ARES_ACCESS_COMMAND
 	if(ACCESS_MARINE_SENIOR in card.access)
 		return ARES_ACCESS_SENIOR
 	if(ACCESS_WY_GENERAL in card.access)

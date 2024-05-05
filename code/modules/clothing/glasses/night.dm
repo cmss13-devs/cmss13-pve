@@ -97,7 +97,6 @@
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
 	fullscreen_vision = null
-	eye_protection = EYE_PROTECTION_FLAVOR
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = SKILL_SPEC_SMARTGUN
 
@@ -198,12 +197,6 @@
 		button.icon_state = "template_on"
 	else
 		button.icon_state = "template"
-
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision
-	actions_types = list(/datum/action/item_action/toggle)
-	darkness_view = 0
-	vision_flags = 0
-	lighting_alpha = 255
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"

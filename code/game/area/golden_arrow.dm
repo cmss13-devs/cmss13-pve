@@ -54,10 +54,6 @@
 	name = "\improper Platoon Sergeant Office"
 	icon_state = "alpha"
 
-/area/golden_arrow/shared_office
-	name = "\improper Shared Office"
-	icon_state = "alpha"
-
 /area/golden_arrow/squad_one
 	name = "\improper Squad One Prep"
 	icon_state = "charlie"
@@ -73,11 +69,3 @@
 /area/golden_arrow/firingrange
 	name = "\improper Firing Range"
 	icon_state = "firingrange"
-
-/area/golden_arrow/platoonprep
-	name = "\improper Platoon Prep"
-	icon_state = "bravo"
-
-/area/golden_arrow/platoonarmory
-	name = "\improper Platoon Armory"
-	icon_state = "alpha"
