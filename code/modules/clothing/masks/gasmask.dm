@@ -31,6 +31,17 @@
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
 
+/obj/item/clothing/mask/gas/pve_mopp
+	name = "\improper M2 MOPP mask"
+	desc = "The M2 MOPP mask includes a full covering cowl that securely attaches to the MOPP suit. It is capable of protecting of a variety of radiological and biological threats."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "cbrn_hood"
+	item_state = "cbrn_hood"
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper M8 pattern armored balaclava"
 	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter."
@@ -69,7 +80,6 @@
 	desc = "A superior balaclava worn by the Iron Bears."
 	icon_state = "bear_mask"
 	anti_hug = 2
-
 
 
 
