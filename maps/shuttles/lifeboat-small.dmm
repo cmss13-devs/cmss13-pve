@@ -73,7 +73,7 @@
 /area/shuttle/lifeboat)
 "hK" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat{
-	id = "Boat1-D1";
+	id = "Boat3-D1";
 	throw_dir = 1
 	},
 /turf/closed/shuttle/lifeboat{
@@ -124,10 +124,12 @@
 /area/shuttle/lifeboat)
 "pF" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat{
-	id = "Boat1-D3";
+	id = "Boat3-D2";
 	throw_dir = 2
 	},
-/turf/open/shuttle/lifeboat,
+/turf/open/shuttle/lifeboat{
+	icon_state = "test_floor4"
+	},
 /area/shuttle/lifeboat)
 "pS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -510,7 +512,7 @@ vi
 fc
 vi
 Js
-vi
+pV
 "}
 (11,1,1) = {"
 pV

@@ -41,7 +41,7 @@
 	port_direction = EAST
 
 /obj/docking_port/mobile/crashable/lifeboat/small
-	name = "secondary lifeboat"
+	name = "compact lifeboat"
 	id = MOBILE_SHUTTLE_LIFEBOAT_SMALL
 	preferred_direction = EAST
 	port_direction = EAST
@@ -132,7 +132,7 @@
 
 /// small dock
 /obj/docking_port/stationary/lifeboat_dock/small
-	name = "Secondary Lifeboat Docking Port"
+	name = "Compact Lifeboat Docking Port"
 	dir = NORTH
 	width  = 20
 	id = "small-lifeboat"
@@ -161,5 +161,5 @@
 
 /// Starboard-door lifeboat, bow east
 /datum/map_template/shuttle/lifeboat_small
-	name = "Secondary lifeboat"
+	name = "Compact lifeboat"
 	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_SMALL
