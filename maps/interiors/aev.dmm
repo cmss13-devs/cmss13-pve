@@ -9,9 +9,6 @@
 /turf/open/shuttle/vehicle,
 /area/vehicle/tank)
 "c" = (
-/obj/effect/landmark/interior/spawn/vehicle_top_gunner_seat{
-	pixel_y = 5
-	},
 /turf/open/shuttle/vehicle,
 /area/vehicle/tank)
 "e" = (
