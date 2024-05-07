@@ -14,7 +14,6 @@
 		/obj/item/hardpoint/armor/snowplow,
 		/obj/item/hardpoint/locomotion/treads,
 		/obj/item/hardpoint/locomotion/treads/robust,
-		/obj/item/hardpoint/special/top_gunner,
 	)
 
 
