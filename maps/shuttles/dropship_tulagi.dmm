@@ -132,7 +132,7 @@
 /turf/template_noop,
 /area/shuttle/tulagi)
 "iG" = (
-/turf/closed/shuttle/tulagi/transparent{
+/turf/closed/shuttle/tulagi{
 	icon_state = "62"
 	},
 /area/shuttle/tulagi)
@@ -271,7 +271,7 @@
 /area/shuttle/tulagi)
 "wq" = (
 /obj/structure/machinery/computer/cameras/dropship/two{
-	name = "\improper 'Cyclon' camera controls";
+	name = "\improper 'Tulagi' camera controls";
 	network = list("Cyclone","Laser Targets")
 	},
 /obj/structure/blocker/invisible_wall,
@@ -495,7 +495,7 @@
 /area/shuttle/tulagi)
 "Tp" = (
 /obj/structure/machinery/computer/dropship_weapons/dropship2{
-	name = "\improper 'Cyclon' weapons controls"
+	name = "\improper 'Tulagi' weapons controls"
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/shuttle/dropship{
