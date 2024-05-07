@@ -61,7 +61,7 @@
 /area/shuttle/tulagi)
 "cO" = (
 /obj/structure/machinery/computer/shuttle/dropship/flight{
-	shuttleId = dropship_tulagi
+	shuttleId = "dropship_tulagi"
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/shuttle/dropship{
