@@ -135,7 +135,7 @@
 	name = "Compact Lifeboat Docking Port"
 	dir = NORTH
 	width  = 20
-	id = "small-lifeboat"
+	id = "compact-lifeboat"
 	roundstart_template = /datum/map_template/shuttle/lifeboat_compact
 
 /obj/docking_port/stationary/lifeboat_dock/Initialize(mapload)
