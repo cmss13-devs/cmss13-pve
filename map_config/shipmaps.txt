@@ -32,4 +32,6 @@ endmap
 
 map desert_dam_fob
 	default
+
+map golden_arrow_classic
 endmap
