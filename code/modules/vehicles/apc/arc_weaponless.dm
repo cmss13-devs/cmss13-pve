@@ -1,18 +1,11 @@
 
-/obj/vehicle/multitile/apc/arc
-	name = "M540 Armored Recon Carrier"
-	desc = "An M540 Armored Recon Carrier, also known as an ARC. This is a much lighter and more nimble alternative to the M557A3 APC, often preferred by recon forces for that very reason. Entrance on the right."
+/obj/vehicle/multitile/apc/arc/weaponless
+	name = "M540-S Armored Recon Carrier"
+	desc = "An M540-S Armored Recon Carrier, also known as an ARC. This is a much lighter and more nimble version to the M557A3 APC, often preferred by recon forces for that very reason. This variant has had it's weapons removed to lighten it's weight and improve it's stealth capabilities. Entrance on the right."
 
-	icon = 'icons/obj/vehicles/arc.dmi'
-	icon_state = "arc_base"
-	pixel_x = -48
-	pixel_y = -48
-
-	bound_width = 96
-	bound_height = 96
+	icon_state = "arc_weaponless"
 
 	interior_map = /datum/map_template/interior/arc
-
 
 	passengers_slots = 9
 
@@ -31,12 +24,11 @@
 	)
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/primary/arc_frontalcannon,
 		/obj/item/hardpoint/support/flare_launcher,
 		/obj/item/hardpoint/locomotion/apc_wheels/arc,
 	)
 
-/obj/vehicle/multitile/apc/arc/add_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/apc/arc/weaponless/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	add_verb(M.client, list(
@@ -59,7 +51,7 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/apc/arc/remove_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/apc/arc/weaponless/remove_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	remove_verb(M.client, list(
@@ -83,19 +75,19 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/apc/arc/initialize_cameras(change_tag = FALSE)
+/obj/vehicle/multitile/apc/arc/weaponless/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
-		camera.c_tag = "#[rand(1,100)] M540 \"[nickname]\" ARC"
+		camera.c_tag = "#[rand(1,100)] M540-S \"[nickname]\" ARC"
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 	else
-		camera.c_tag = "#[rand(1,100)] M540 ARC"
+		camera.c_tag = "#[rand(1,100)] M540-S ARC"
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 
-/obj/vehicle/multitile/apc/arc/set_muzzle_offsets(obj/item/hardpoint/HP)
+/obj/vehicle/multitile/apc/arc/weaponless/set_muzzle_offsets(obj/item/hardpoint/HP)
 	//sets muzzle flash offsets for APC weapons
 	switch(HP.slot)
 		if(HDPT_SUPPORT) //flare
@@ -110,21 +102,21 @@
 /*
 ** PRESETS SPAWNERS
 */
-/obj/effect/vehicle_spawner/arc
-	name = "ARC Spawner"
+/obj/effect/vehicle_spawner/arc/weaponless
+	name = "Weaponless ARC Spawner"
 	icon = 'icons/obj/vehicles/arc.dmi'
-	icon_state = "arc_base"
+	icon_state = "arc_weaponless"
 	pixel_x = -48
 	pixel_y = -48
 
-/obj/effect/vehicle_spawner/arc/Initialize()
+/obj/effect/vehicle_spawner/arc/weaponless/Initialize()
 	. = ..()
 	spawn_vehicle()
 	qdel(src)
 
 //PRESET: no hardpoints
-/obj/effect/vehicle_spawner/arc/spawn_vehicle()
-	var/obj/vehicle/multitile/apc/arc/APC = new (loc)
+/obj/effect/vehicle_spawner/arc/weaponless/spawn_vehicle()
+	var/obj/vehicle/multitile/apc/arc/weaponless/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)
@@ -132,12 +124,12 @@
 	APC.update_icon()
 
 //PRESET: only wheels installed
-/obj/effect/vehicle_spawner/arc/plain/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
+/obj/effect/vehicle_spawner/arc/weaponless/plain/load_hardpoints(obj/vehicle/multitile/apc/arc/weaponless/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/arc)
 
 //PRESET: default hardpoints, destroyed
-/obj/effect/vehicle_spawner/arc/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/apc/arc/APC = new (loc)
+/obj/effect/vehicle_spawner/arc/weaponless/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/apc/arc/weaponless/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)
@@ -145,13 +137,11 @@
 	load_damage(APC)
 	APC.update_icon()
 
-/obj/effect/vehicle_spawner/arc/decrepit/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/arc_frontalcannon)
+/obj/effect/vehicle_spawner/arc/weaponless/decrepit/load_hardpoints(obj/vehicle/multitile/apc/arc/weaponless/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/arc)
 
 //PRESET: default hardpoints
-/obj/effect/vehicle_spawner/arc/fixed/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/arc_frontalcannon)
+/obj/effect/vehicle_spawner/arc/weaponless/fixed/load_hardpoints(obj/vehicle/multitile/apc/arc/weaponless/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/arc)
