@@ -643,7 +643,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrade = "ME2"
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 
 	minimap_icon = "private"
 
