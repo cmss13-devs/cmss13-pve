@@ -109,7 +109,7 @@
 
 #define MOBILE_SHUTTLE_LIFEBOAT_PORT "lifeboat-port"
 #define MOBILE_SHUTTLE_LIFEBOAT_STARBOARD "lifeboat-starboard"
-#define MOBILE_SHUTTLE_LIFEBOAT_SMALL "lifeboat-small"
+#define MOBILE_SHUTTLE_LIFEBOAT_COMPACT "lifeboat-compact"
 #define MOBILE_SHUTTLE_VEHICLE_ELEVATOR "vehicle_elevator"
 
 #define DROPSHIP_MIDWAY "dropship_midway"

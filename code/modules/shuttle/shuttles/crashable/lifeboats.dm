@@ -40,9 +40,9 @@
 	preferred_direction = EAST
 	port_direction = EAST
 
-/obj/docking_port/mobile/crashable/lifeboat/small
+/obj/docking_port/mobile/crashable/lifeboat/compact
 	name = "compact lifeboat"
-	id = MOBILE_SHUTTLE_LIFEBOAT_SMALL
+	id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT
 	preferred_direction = EAST
 	port_direction = EAST
 	width = 20
@@ -130,13 +130,13 @@
 	id = "almayer-lifeboat2"
 	roundstart_template = /datum/map_template/shuttle/lifeboat_starboard
 
-/// small dock
-/obj/docking_port/stationary/lifeboat_dock/small
+/// compact dock
+/obj/docking_port/stationary/lifeboat_dock/compact
 	name = "Compact Lifeboat Docking Port"
 	dir = NORTH
 	width  = 20
 	id = "small-lifeboat"
-	roundstart_template = /datum/map_template/shuttle/lifeboat_small
+	roundstart_template = /datum/map_template/shuttle/lifeboat_compact
 
 /obj/docking_port/stationary/lifeboat_dock/Initialize(mapload)
 	. = ..()
@@ -160,6 +160,6 @@
 	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_STARBOARD
 
 /// Starboard-door lifeboat, bow east
-/datum/map_template/shuttle/lifeboat_small
+/datum/map_template/shuttle/lifeboat_compact
 	name = "Compact lifeboat"
-	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_SMALL
+	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT
