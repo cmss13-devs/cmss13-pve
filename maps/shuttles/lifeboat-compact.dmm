@@ -76,8 +76,8 @@
 	id = "Boat3-D1";
 	throw_dir = 1
 	},
-/turf/closed/shuttle/lifeboat{
-	icon_state = "3,6"
+/turf/open/shuttle/lifeboat{
+	icon_state = "test_floor4"
 	},
 /area/shuttle/lifeboat)
 "iA" = (
