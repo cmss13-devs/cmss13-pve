@@ -520,6 +520,10 @@
 				else
 					A = choice_to_accessory[removables[1]]
 
+				if(!usr.Adjacent(src))
+					to_chat(usr, SPAN_WARNING("You're too far away!"))
+					return
+
 				if(!istype(A))
 					return
 				attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their accessory ([A]) removed by [key_name(usr)]</font>")
