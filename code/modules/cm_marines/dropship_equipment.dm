@@ -163,7 +163,7 @@
 	health = null
 	icon_state = "sentry_system"
 	is_interactable = TRUE
-	point_cost = 500
+	point_cost = 200
 	shorthand = "Sentry"
 	var/deployment_cooldown
 	var/obj/structure/machinery/defenses/sentry/premade/dropship/deployed_turret
@@ -281,15 +281,14 @@
 			step(M, get_dir(src,deployed_turret))
 
 	deployed_turret.start_processing()
-	deployed_turret.setup_target_acquisition()
+	deployed_turret.set_range()
 
 	deployed_turret.linked_cam = new(deployed_turret.loc, "[capitalize_first_letters(ship_base.name)] [capitalize_first_letters(name)]")
 	if (linked_shuttle.id == DROPSHIP_ALAMO)
 		deployed_turret.linked_cam.network = list(CAMERA_NET_ALAMO)
 	else if (linked_shuttle.id == DROPSHIP_NORMANDY)
 		deployed_turret.linked_cam.network = list(CAMERA_NET_NORMANDY)
-	else if(linked_shuttle.id == DROPSHIP_MIDWAY)
-		deployed_turret.linked_cam.network = list(CAMERA_NET_MIDWAY)
+
 
 /obj/structure/dropship_equipment/sentry_holder/proc/undeploy_sentry()
 	if(!deployed_turret)
@@ -300,7 +299,7 @@
 	deployed_turret.forceMove(src)
 	deployed_turret.turned_on = FALSE
 	deployed_turret.stop_processing()
-	deployed_turret.unsetup_target_acquisition()
+	deployed_turret.unset_range()
 	icon_state = "sentry_system_installed"
 	QDEL_NULL(deployed_turret.linked_cam)
 
@@ -386,9 +385,10 @@
 			if(ship_base.base_category == DROPSHIP_WEAPON)
 				switch(dir)
 					if(NORTH)
-						if( istype(get_step(src, WEST), /turf/open) )
+						var/step_contents = get_step(src, EAST).contents
+						if(locate(/obj/structure) in step_contents)
 							deployed_mg.pixel_x = 5
-						else if ( istype(get_step(src, EAST), /turf/open) )
+						else
 							deployed_mg.pixel_x = -5
 					if(EAST)
 						deployed_mg.pixel_y = 9
@@ -406,7 +406,7 @@
 			deployed_mg.forceMove(src)
 			deployed_mg.setDir(dir)
 		else
-			icon_state = "mg_system_destroyed"
+			icon_state = "sentry_system_destroyed"
 
 /obj/structure/dropship_equipment/mg_holder/proc/deploy_mg(mob/user)
 	if(deployed_mg)
@@ -415,12 +415,11 @@
 		if(ship_base.base_category == DROPSHIP_WEAPON)
 			switch(dir)
 				if(NORTH)
-					if( istype(get_step(src, WEST), /turf/open) )
+					var/step_contents = get_step(src, EAST).contents
+					if(locate(/obj/structure) in step_contents)
 						deployed_mg.forceMove(get_step(src, WEST))
-					else if ( istype(get_step(src, EAST), /turf/open) )
-						deployed_mg.forceMove(get_step(src, EAST))
 					else
-						deployed_mg.forceMove(get_step(src, NORTH))
+						deployed_mg.forceMove(get_step(src, EAST))
 				if(EAST)
 					deployed_mg.forceMove(get_step(src, SOUTH))
 				if(WEST)
@@ -686,7 +685,7 @@
 
 	msg_admin_niche("[key_name(user)] is direct-firing [SA] onto [selected_target] at ([target_turf.x],[target_turf.y],[target_turf.z]) [ADMIN_JMP(target_turf)]")
 	if(ammo_travelling_time)
-		var/total_seconds = max(round(ammo_travelling_time/10),1)
+		var/total_seconds = max(floor(ammo_travelling_time/10),1)
 		for(var/i = 0 to total_seconds)
 			sleep(10)
 			if(!selected_target || !selected_target.loc)//if laser disappeared before we reached the target,
@@ -702,7 +701,7 @@
 	new /obj/effect/overlay/temp/blinking_laser (impact)
 	sleep(10)
 	SA.source_mob = user
-	SA.detonate_on(impact)
+	SA.detonate_on(impact, src)
 
 /obj/structure/dropship_equipment/weapon/proc/open_fire_firemission(obj/selected_target, mob/user = usr)
 	set waitfor = 0
@@ -728,7 +727,7 @@
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user
-	SA.detonate_on(impact)
+	SA.detonate_on(impact, src)
 
 /obj/structure/dropship_equipment/weapon/heavygun
 	name = "\improper GAU-21 30mm cannon"
@@ -819,7 +818,7 @@
 	firing_delay = 10 //1 seconds
 	bound_height = 32
 	equip_categories = list(DROPSHIP_CREW_WEAPON) //fits inside the central spot of the dropship
-	point_cost = 400
+	point_cost = 200
 	shorthand = "LCH"
 
 /obj/structure/dropship_equipment/weapon/launch_bay/update_equipment()
@@ -1141,9 +1140,11 @@
 
 	var/list/possible_fultons = get_targets()
 
-	var/obj/item/stack/fulton/fult = possible_fultons[fulton_choice]
 	if(!fulton_choice)
 		return
+	// Strip any \proper or \improper in order to match the entry in possible_fultons.
+	fulton_choice = strip_improper(fulton_choice)
+	var/obj/item/stack/fulton/fult = possible_fultons[fulton_choice]
 
 	if(!ship_base) //system was uninstalled midway
 		return
@@ -1215,7 +1216,7 @@
 
 	var/list/possible_fultons = get_targets()
 
-	if(!possible_fultons.len)
+	if(!length(possible_fultons))
 		to_chat(user, SPAN_WARNING("No active balloons detected."))
 		return
 
@@ -1289,130 +1290,29 @@
 	fulton_cooldown = world.time + 50
 
 // Rappel deployment system
-/obj/structure/dropship_equipment/rappel_system
-	name = "\improper HPU-1 Rappel Deployment System"
-	shorthand = "Rappel"
+/obj/structure/dropship_equipment/paradrop_system
+	name = "\improper HPU-1 Paradrop Deployment System"
+	shorthand = "PDS"
 	equip_categories = list(DROPSHIP_CREW_WEAPON)
 	icon_state = "rappel_module_packaged"
 	point_cost = 50
 	combat_equipment = FALSE
+	var/system_cooldown
 
-	var/harness = /obj/item/rappel_harness
+/obj/structure/dropship_equipment/paradrop_system/ui_data(mob/user)
+	. = list()
+	.["signal"] = "[linked_shuttle.paradrop_signal]"
+	.["locked"] = !!linked_shuttle.paradrop_signal
 
-/obj/structure/dropship_equipment/rappel_system/update_equipment()
+/obj/structure/dropship_equipment/paradrop_system/update_equipment()
 	if(ship_base)
 		icon_state = "rappel_hatch_closed"
 		density = FALSE
 	else
 		icon_state = "rappel_module_packaged"
 
-/obj/effect/warning/rappel
-	color = "#17d17a"
-
-/obj/structure/dropship_equipment/rappel_system/attack_hand(mob/living/carbon/human/user)
-	var/datum/cas_iff_group/cas_group = cas_groups[FACTION_MARINE]
-	var/list/targets = cas_group.cas_signals
-
-	if(!LAZYLEN(targets))
-		to_chat(user, SPAN_NOTICE("No CAS signals found."))
-		return
-
-	if(!can_use(user))
-		return
-
-	var/user_input = tgui_input_list(user, "Choose a target to jump to.", name, targets)
-	if(!user_input)
-		return
-
-	if(!can_use(user))
-		return
-
-	var/datum/cas_signal/LT = user_input
-	if(!istype(LT) || !LT.valid_signal())
-		return
-
-	var/turf/location = get_turf(LT.signal_loc)
-	var/area/location_area = get_area(location)
-	if(CEILING_IS_PROTECTED(location_area.ceiling, CEILING_PROTECTION_TIER_1))
-		to_chat(user, SPAN_WARNING("You cannot jump to the target. It is probably underground."))
-		return
-
-	var/list/valid_turfs = list()
-	for(var/turf/T as anything in RANGE_TURFS(2, location))
-		var/area/t_area = get_area(T)
-		if(!t_area || CEILING_IS_PROTECTED(t_area.ceiling, CEILING_PROTECTION_TIER_1))
-			continue
-		if(T.density)
-			continue
-		var/found_dense = FALSE
-		for(var/atom/A in T)
-			if(A.density && A.can_block_movement)
-				found_dense = TRUE
-				break
-		if(found_dense)
-			continue
-		if(protected_by_pylon(TURF_PROTECTION_MORTAR, T))
-			continue
-		valid_turfs += T
-
-	if(!length(valid_turfs))
-		to_chat(user, SPAN_WARNING("There's nowhere safe for you to land, the landing zone is too congested."))
-		return
-
-	var/turf/deploy_turf = pick(valid_turfs)
-
-	var/obj/effect/warning/rappel/warning_zone = new(deploy_turf)
-	flick("rappel_hatch_opening", src)
-	icon_state = "rappel_hatch_open"
-	user.forceMove(loc)
-	user.client?.perspective = EYE_PERSPECTIVE
-	user.client?.eye = deploy_turf
-
-	if(!do_after(user, 4 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, user, INTERRUPT_MOVED) || !can_use(user) || protected_by_pylon(TURF_PROTECTION_MORTAR, deploy_turf))
-		qdel(warning_zone)
-		flick("rappel_hatch_closing", src)
-		icon_state = "rappel_hatch_closed"
-		user.client?.perspective = MOB_PERSPECTIVE
-		user.client?.eye = user
-		return
-
-	new /obj/effect/rappel_rope(deploy_turf)
-	user.forceMove(deploy_turf)
-	INVOKE_ASYNC(user, TYPE_PROC_REF(/mob/living/carbon/human, animation_rappel))
-	user.client?.perspective = MOB_PERSPECTIVE
-	user.client?.eye = user
-	deploy_turf.ceiling_debris_check(2)
-	playsound(deploy_turf, 'sound/items/rappel.ogg', 50, TRUE)
-
-	flick("rappel_hatch_closing", src)
-	icon_state = "rappel_hatch_closed"
-	qdel(warning_zone)
-
-/obj/structure/dropship_equipment/rappel_system/proc/can_use(mob/living/carbon/human/user)
-	if(linked_shuttle.mode != SHUTTLE_CALL)
-		to_chat(user, SPAN_WARNING("\The [src] can only be used while in flight."))
-		return FALSE
-
-	if(!linked_shuttle.in_flyby)
-		to_chat(user, SPAN_WARNING("\The [src] requires a flyby flight to be used."))
-		return FALSE
-
-	if(user.buckled)
-		to_chat(user, SPAN_WARNING("You cannot rappel while buckled!"))
-		return FALSE
-
-	if(user.is_mob_incapacitated())
-		to_chat(user, SPAN_WARNING("You are in no state to do that!"))
-		return FALSE
-
-	if(!istype(user.belt, harness))
-		to_chat(user, SPAN_WARNING("You must have a rappel harness equipped in order to use \the [src]!"))
-		return FALSE
-
-	if(user.action_busy)
-		return FALSE
-
-	return TRUE
+/obj/structure/dropship_equipment/paradrop_system/attack_hand(mob/living/carbon/human/user)
+	return
 
 // used in the simulation room for cas runs, removed the sound and ammo depletion methods.
 // copying code is definitely bad, but adding an unnecessary sim or not sim boolean check in the open_fire_firemission just doesn't seem right.
@@ -1434,4 +1334,4 @@
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user
-	SA.detonate_on(impact)
+	SA.detonate_on(impact, src)

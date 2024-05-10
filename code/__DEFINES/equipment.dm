@@ -82,6 +82,10 @@
 #define ANIMATED_SURGICAL_TOOL (1<<12)
 /// Has heat source but isn't 'on fire' and thus can be stored
 #define IGNITING_ITEM (1<<13)
+/// Overrides NODROP in some cases (stripping)
+#define FORCEDROP_CONDITIONAL (1<<14)
+/// Overrides smartgunner not being able to wear backpacks
+#define SMARTGUNNER_BACKPACK_OVERRIDE (1<<15)
 //==========================================================================================
 
 
