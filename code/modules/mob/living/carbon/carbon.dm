@@ -177,7 +177,6 @@
 		if(D.spread_by_touch())
 			contract_disease(D, 0, 1, CONTACT_HANDS)
 
-	M.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
 	return
 
 /mob/living/carbon/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null)
