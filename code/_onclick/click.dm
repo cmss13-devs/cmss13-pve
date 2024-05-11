@@ -160,8 +160,6 @@
 
 			W.afterattack(A, src, 1, mods)
 	else
-		if(!isitem(A) && !issurface(A))
-			next_move += 4
 		UnarmedAttack(A, 1, mods)
 
 /mob/proc/check_click_intercept(params,A)
