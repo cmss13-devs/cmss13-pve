@@ -55,9 +55,6 @@
 #define COMSIG_MOB_SET_FACE_DIR "mob_set_face_dir"
 	#define COMPONENT_CANCEL_SET_FACE_DIR (1<<0)
 
-/// From /obj/effect/alien/weeds/Crossed(atom/movable/AM)
-#define COMSIG_MOB_WEED_SLOWDOWN "mob_weeds_slowdown"
-
 #define COMSIG_MOB_TAKE_DAMAGE "mob_take_damage" // TODO: move COMSIG_XENO_TAKE_DAMAGE & COMSIG_HUMAN_TAKE_DAMAGE to this
 ///called in /client/change_view()
 #define COMSIG_MOB_CHANGE_VIEW "mob_change_view"

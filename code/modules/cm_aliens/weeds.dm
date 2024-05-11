@@ -168,26 +168,6 @@
 		if(ceiling_info)
 			. += ceiling_info
 
-
-/obj/effect/alien/weeds/Crossed(atom/movable/atom_movable)
-	if(!isliving(atom_movable))
-		return
-
-	var/mob/living/crossing_mob = atom_movable
-
-	var/weed_slow = weed_strength
-
-	if(crossing_mob.ally_of_hivenumber(linked_hive.hivenumber))
-		if( (crossing_mob.hivenumber != linked_hive.hivenumber) && prob(7)) // small chance for allied mobs to get a message indicating this
-			to_chat(crossing_mob, SPAN_NOTICE("The weeds seem to reshape themselves around your feet as you walk on them."))
-		return
-
-	var/list/slowdata = list("movement_slowdown" = weed_slow)
-	SEND_SIGNAL(crossing_mob, COMSIG_MOB_WEED_SLOWDOWN, slowdata, src)
-	var/final_slowdown = slowdata["movement_slowdown"]
-
-	crossing_mob.next_move_slowdown += POSITIVE(final_slowdown)
-
 // Uh oh, we might be dying!
 // I know this is bad proc naming but it was too good to pass on and it's only used in this file anyways
 // If you're still confused, scroll aaaall the way down to the bottom of the file.
