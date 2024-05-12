@@ -175,7 +175,7 @@
 	pixel_y = 34;
 	pixel_x = 8
 	},
-/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/recon/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1469,10 +1469,10 @@
 /area/golden_arrow/cryo_cells)
 "mJ" = (
 /obj/structure/largecrate,
-/obj/structure/largecrate{
-	pixel_y = 16
-	},
 /obj/structure/machinery/light,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 15
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -2804,14 +2804,30 @@
 /area/golden_arrow/dorms)
 "As" = (
 /obj/structure/closet/crate/green,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -3029,8 +3045,8 @@
 /area/golden_arrow/supply)
 "CO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon,
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -3201,7 +3217,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/recon/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
