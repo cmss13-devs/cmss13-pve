@@ -527,7 +527,7 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
-	role_comm_title = "ASl"
+	role_comm_title = "aSL"
 	skills = /datum/skills/tl/recon
 
 /datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
@@ -622,7 +622,7 @@
 
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
-	assignment = JOB_SQUAD_LEADER
+	assignment = "Squad Leader"
 	paygrade = "ME8"
 	role_comm_title = "SL"
 
