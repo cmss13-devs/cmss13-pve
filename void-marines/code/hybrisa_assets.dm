@@ -1436,18 +1436,20 @@
 
 	var/body_icon_state = "bigroller"
 	var/raised_with_body = TRUE
-	var/mob/living/carbon/human/body
-	var/datum/equipment_preset/body_preset = /datum/equipment_preset/corpse/colonist/random
+	var/body = TRUE
+//	var/mob/living/carbon/human/body
+//	var/datum/equipment_preset/body_preset = /datum/equipment_preset/corpse/colonist/random
 
 /obj/structure/bed/roller/hospital/Initialize(mapload, ...)
 	. = ..()
-	create_body()
+
+//	create_body()
 	update_icon()
 
-/obj/structure/bed/roller/hospital/Destroy()
+/*/obj/structure/bed/roller/hospital/Destroy()
 	if(body)
 		QDEL_NULL(body)
-	return ..()
+	return ..()*/
 
 /obj/structure/bed/roller/hospital/attackby()
 	if(body)
@@ -1461,7 +1463,7 @@
 			update_icon()
 			return
 		else
-			dump_body()
+			raised_with_body = TRUE
 			update_icon()
 			return
 	..()
@@ -1482,22 +1484,22 @@
 		return
 	..()
 
-/obj/structure/bed/roller/hospital/proc/create_body()
+/*/obj/structure/bed/roller/hospital/proc/create_body()
 	body = new()
 	contents += body
 	arm_equipment(body, body_preset, TRUE, FALSE)
-	body.death(create_cause_data("exposure"))
+	body.death(create_cause_data("exposure"))*/
 
-/obj/structure/bed/roller/hospital/proc/dump_body()
+/*/obj/structure/bed/roller/hospital/proc/dump_body()
 	var/turf/dump_turf = get_turf(src)
 	body.forceMove(dump_turf)
 	contents -= body
-	body = null
+	body = null*/
 
 /obj/structure/bed/roller/hospital/bloody
 	base_bed_icon = "bigrollerbloodempty"
 	body_icon_state = "bigrollerblood"
-	body_preset = /datum/equipment_preset/corpse/colonist/random/burst
+//	body_preset = /datum/equipment_preset/corpse/colonist/random/burst
 
 /obj/structure/prop/hybrisa/furniture
     icon = 'icons/obj/structures/props/zenithtables.dmi'
@@ -1757,7 +1759,7 @@
 	indestructible = TRUE
 	layer = ABOVE_MOB_LAYER
 	density = TRUE
-obj/structure/prop/hybrisa/engineer/giantpod
+/obj/structure/prop/hybrisa/engineer/giantpod
 	name = "Giant Pod"
 	desc = "temp."
 	icon = 'icons/obj/structures/props/engineerPod.dmi'

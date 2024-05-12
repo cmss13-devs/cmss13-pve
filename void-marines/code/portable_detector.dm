@@ -72,6 +72,7 @@
 	var/obj/structure/machinery/defenses/bell_tower/md/radio/linked_bell2
 
 /obj/effect/bell_tripwire/md/Initialize()
+	. = ..()
 	transceiver.forceMove(src)
 	transceiver.set_frequency(SENTRY_FREQ)
 	transceiver.config(list(RADIO_CHANNEL_SENTRY=1))
