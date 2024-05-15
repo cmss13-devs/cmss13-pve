@@ -48,8 +48,8 @@
 	tgui_interact(holder.mob)
 
 /datum/sound_panel/proc/get_sounds()
-	var/list/extensions = list("ogg", "wav")
-	var/regex/ext_rgx = new("\\.([extensions.Join("|")])$", "i")
+	var/static/list/extensions = list("mid", "midi", "mod", "it", "s3m", "xm", "oxm", "wav", "ogg", "mp3", "raw", "wma", "aiff")
+	var/static/regex/ext_rgx = new("\\.(?:[jointext(extensions, "|")])$", "i")
 
 	var/list/dirs = list("sound/")
 	var/list/file_paths = list()
@@ -62,13 +62,10 @@
 		for(var/filename as anything in filenames)
 			if(findtext(filename, "/", -1)) //found directory, add to search
 				dirs += "[path][filename]"
-				//dirs.Add("[path][filename]")
 				continue
-			if(!ext_rgx.Find(filename)) //extension check
-			//if(!findtext(filename, ext_rgx)) //extension check
+			if(!findtext(filename, ext_rgx)) //extension check
 				continue
 			file_paths += "[path][filename]"
-			//file_paths.Add("[path][filename]")
 
 	return file_paths
 
@@ -154,8 +151,20 @@
 				return
 
 			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
+			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
+			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
 
-			playsound_client(holder, sound, vol = volume, vol_cat = category)
+			var/sound/sound_datum = sound(sound)
+			sound_datum.frequency = 1 / duration
+			sound_datum.pitch = pitch * duration
+
+			playsound_client(holder, sound_datum, vol = volume, vol_cat = category, channel = SOUND_CHANNEL_TEST)
+			return TRUE
+		if("stop_preview")
+			var/sound/sound_datum = sound()
+			sound_datum.channel = SOUND_CHANNEL_TEST
+			sound_datum.status = SOUND_MUTE|SOUND_UPDATE
+			sound_to(holder, sound_datum)
 			return TRUE
 		if("select_client")
 			var/mob/chosen_player = tgui_input_list(holder.mob, "Who should hear the sound?", "Player Select", GLOB.player_list)
@@ -174,11 +183,17 @@
 				return
 
 			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
+			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
+			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
+
+			var/sound/sound_datum = sound(sound)
+			sound_datum.frequency = 1 / duration
+			sound_datum.pitch = pitch * duration
 
 			if(QDELETED(target_player))
 				return
 
-			playsound_client(target_player.client, sound, vol = volume, vol_cat = category)
+			playsound_client(target_player.client, sound_datum, vol = volume, vol_cat = category)
 			return TRUE
 		if("toggle_loc_click")
 			loc_click_intercept = !loc_click_intercept
@@ -193,11 +208,17 @@
 				return
 
 			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
+			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
+			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
+
+			var/sound/sound_datum = sound(sound)
+			sound_datum.frequency = 1 / duration
+			sound_datum.pitch = pitch * duration
 
 			if(QDELETED(target_loc))
 				return
 
-			playsound(target_loc, sound, volume, vol_cat = category)
+			playsound(target_loc, sound_datum, volume, vol_cat = category)
 			return TRUE
 		if("play_zlevel")
 			var/sound = params["sound_path"]
@@ -209,12 +230,18 @@
 				return
 
 			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
+			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
+			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
+
+			var/sound/sound_datum = sound(sound)
+			sound_datum.frequency = 1 / duration
+			sound_datum.pitch = pitch * duration
 
 			var/target_z = zlevel_lookup[params["target_zlevel"]]
 			if(isnull(target_z))
 				return
 
-			playsound_z(list(target_z), sound, volume, vol_cat = category)
+			playsound_z(list(target_z), sound_datum, volume, vol_cat = category)
 			return TRUE
 		if("play_group")
 			var/sound = params["sound_path"]
@@ -226,6 +253,12 @@
 				return
 
 			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
+			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
+			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
+
+			var/sound/sound_datum = sound(sound)
+			sound_datum.frequency = 1 / duration
+			sound_datum.pitch = pitch * duration
 
 			var/target_group = params["target_group"]
 			if(!(target_group in group_list))
@@ -243,7 +276,7 @@
 					targets = GLOB.observer_list + GLOB.dead_mob_list
 
 			for(var/mob/target as anything in targets)
-				playsound_client(target.client, sound, vol = volume, vol_cat = category)
+				playsound_client(target.client, sound_datum, vol = volume, vol_cat = category)
 			return TRUE
 
 /*

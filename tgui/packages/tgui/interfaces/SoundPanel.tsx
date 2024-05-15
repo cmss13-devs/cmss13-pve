@@ -32,16 +32,6 @@ export const SoundPanel = (props, context) => {
     'soundPath',
     ''
   );
-  const [soundVolume, setSoundVolume] = useLocalState<number>(
-    context,
-    'soundVolume',
-    50
-  );
-  const [soundCategory, setSoundCategory] = useLocalState<string>(
-    context,
-    'soundCategory',
-    category_list[0]
-  );
   const [targetZLevel, setTargetZLevel] = useLocalState<string>(
     context,
     'targetZLevel',
@@ -51,6 +41,26 @@ export const SoundPanel = (props, context) => {
     context,
     'targetGroup',
     group_list[0]
+  );
+  const [soundCategory, setSoundCategory] = useLocalState<string>(
+    context,
+    'soundCategory',
+    category_list[0]
+  );
+  const [soundVolume, setSoundVolume] = useLocalState<number>(
+    context,
+    'soundVolume',
+    50
+  );
+  const [soundPitch, setSoundPitch] = useLocalState<number>(
+    context,
+    'soundPitch',
+    1
+  );
+  const [soundDuration, setSoundDuration] = useLocalState<number>(
+    context,
+    'soundDuration',
+    1
   );
 
   const PAGES = [
@@ -65,6 +75,8 @@ export const SoundPanel = (props, context) => {
               sound_path: soundPath,
               sound_category: soundCategory,
               sound_volume: soundVolume,
+              sound_pitch: soundPitch,
+              sound_duration: soundDuration,
             })
           }
         />
@@ -82,6 +94,8 @@ export const SoundPanel = (props, context) => {
               sound_path: soundPath,
               sound_category: soundCategory,
               sound_volume: soundVolume,
+              sound_pitch: soundPitch,
+              sound_duration: soundDuration,
             })
           }
         />
@@ -99,6 +113,8 @@ export const SoundPanel = (props, context) => {
               sound_path: soundPath,
               sound_category: soundCategory,
               sound_volume: soundVolume,
+              sound_pitch: soundPitch,
+              sound_duration: soundDuration,
               target_zlevel: targetZLevel,
             })
           }
@@ -117,6 +133,8 @@ export const SoundPanel = (props, context) => {
               sound_path: soundPath,
               sound_category: soundCategory,
               sound_volume: soundVolume,
+              sound_pitch: soundPitch,
+              sound_duration: soundDuration,
               target_group: targetGroup,
             })
           }
@@ -145,29 +163,12 @@ export const SoundPanel = (props, context) => {
             </Stack>
           </Stack.Item>
           <Stack.Item>
-            <Stack fill vertical justify="space-between">
-              <Stack.Item>
-                <Section title="Hearers">
-                  <Tabs>
-                    {PAGES.map((page, i) => {
-                      return (
-                        <Tabs.Tab
-                          key={i}
-                          selected={i === tabIndex}
-                          onClick={() => setTabIndex(i)}>
-                          {page.title}
-                        </Tabs.Tab>
-                      );
-                    })}
-                  </Tabs>
-                  {PAGES[tabIndex].component()}
-                </Section>
-              </Stack.Item>
+            <Stack fill vertical>
               <Stack.Item>
                 <Stack vertical>
                   <Stack.Item>
                     <Stack>
-                      <Stack.Item>
+                      <Stack.Item grow>
                         <Box color="label" textAlign="center">
                           Category
                         </Box>
@@ -177,7 +178,7 @@ export const SoundPanel = (props, context) => {
                           options={category_list}
                           over
                           selected={soundCategory}
-                          width="90px"
+                          // minWidth="90px"
                         />
                       </Stack.Item>
                       <Stack.Item grow>
@@ -196,19 +197,80 @@ export const SoundPanel = (props, context) => {
                     </Stack>
                   </Stack.Item>
                   <Stack.Item>
-                    <Button
-                      disabled={!soundPath}
-                      content="Preview"
-                      onClick={() =>
-                        act('play_preview', {
-                          sound_path: soundPath,
-                          sound_category: soundCategory,
-                          sound_volume: soundVolume,
-                        })
-                      }
-                    />
+                    <Stack>
+                      <Stack.Item grow>
+                        <Box color="label" textAlign="center">
+                          Pitch
+                        </Box>
+                        <Slider
+                          minValue={0.5}
+                          maxValue={2}
+                          value={soundPitch}
+                          step={0.1}
+                          stepPixelSize={5}
+                          onChange={(e, value) => setSoundPitch(value)}
+                        />
+                      </Stack.Item>
+                      <Stack.Item grow>
+                        <Box color="label" textAlign="center">
+                          Duration
+                        </Box>
+                        <Slider
+                          minValue={0.5}
+                          maxValue={2}
+                          value={soundDuration}
+                          step={0.1}
+                          stepPixelSize={5}
+                          onChange={(e, value) => setSoundDuration(value)}
+                        />
+                      </Stack.Item>
+                    </Stack>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Stack>
+                      <Stack.Item>
+                        <Button
+                          color="good"
+                          disabled={!soundPath}
+                          content="Preview"
+                          onClick={() =>
+                            act('play_preview', {
+                              sound_path: soundPath,
+                              sound_category: soundCategory,
+                              sound_volume: soundVolume,
+                              sound_pitch: soundPitch,
+                              sound_duration: soundDuration,
+                            })
+                          }
+                        />
+                      </Stack.Item>
+                      <Stack.Item>
+                        <Button
+                          color="bad"
+                          content="Stop"
+                          onClick={() => act('stop_preview')}
+                        />
+                      </Stack.Item>
+                    </Stack>
                   </Stack.Item>
                 </Stack>
+              </Stack.Item>
+              <Stack.Item>
+                <Section title="Hearers">
+                  <Tabs>
+                    {PAGES.map((page, i) => {
+                      return (
+                        <Tabs.Tab
+                          key={i}
+                          selected={i === tabIndex}
+                          onClick={() => setTabIndex(i)}>
+                          {page.title}
+                        </Tabs.Tab>
+                      );
+                    })}
+                  </Tabs>
+                  {PAGES[tabIndex].component()}
+                </Section>
               </Stack.Item>
             </Stack>
           </Stack.Item>
@@ -313,7 +375,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
     return (
       <Fragment>
         <Stack.Item grow>
-          <Section fill scrollable title="Sound">
+          <Section fill scrollable title="File">
             {this.filteredItems.map((item) => {
               return (
                 <Button
@@ -372,7 +434,12 @@ const ClientPage = (props, context) => {
         <Box>{targetPlayerDesc || 'N/A'}</Box>
       </Stack.Item>
       <Stack.Item>
-        <Button disabled={!canPlay} content="Play" onClick={onPlay} />
+        <Button
+          color="good"
+          disabled={!canPlay}
+          content="Play"
+          onClick={onPlay}
+        />
       </Stack.Item>
     </Stack>
   );
@@ -395,7 +462,12 @@ const LocalPage = (props, context) => {
         <Box>{targetLocDesc || 'N/A'}</Box>
       </Stack.Item>
       <Stack.Item>
-        <Button disabled={!canPlay} content="Play" onClick={onPlay} />
+        <Button
+          color="good"
+          disabled={!canPlay}
+          content="Play"
+          onClick={onPlay}
+        />
       </Stack.Item>
     </Stack>
   );
@@ -418,7 +490,12 @@ const ZLevelPage = (props, context) => {
         />
       </Stack.Item>
       <Stack.Item>
-        <Button disabled={!canPlay} content="Play" onClick={onPlay} />
+        <Button
+          color="good"
+          disabled={!canPlay}
+          content="Play"
+          onClick={onPlay}
+        />
       </Stack.Item>
     </Stack>
   );
@@ -441,7 +518,12 @@ const ServerPage = (props, context) => {
         />
       </Stack.Item>
       <Stack.Item>
-        <Button disabled={!canPlay} content="Play" onClick={onPlay} />
+        <Button
+          color="good"
+          disabled={!canPlay}
+          content="Play"
+          onClick={onPlay}
+        />
       </Stack.Item>
     </Stack>
   );
