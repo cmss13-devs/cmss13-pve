@@ -31,3 +31,9 @@
 	scatter = 2
 	fire_delay = 7.0 SECONDS
 
+/obj/item/hardpoint/secondary/towlauncher/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+

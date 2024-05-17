@@ -28,3 +28,9 @@
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	fire_delay = 0.7 SECONDS
+
+/obj/item/hardpoint/primary/autocannon/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
