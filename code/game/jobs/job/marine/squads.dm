@@ -123,11 +123,11 @@
 
 /datum/squad/marine/alpha
 	name = SQUAD_MARINE_1
-	equipment_color = "#4148c8"
-	chat_color = "#828cff"
+	equipment_color = "#808080"
+	chat_color = "#696969"
 	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = ALPHA_FREQ
-	minimap_color = MINIMAP_SQUAD_ALPHA
+	minimap_color = "#696969"
 	use_stripe_overlay = FALSE
 	usable = TRUE
 

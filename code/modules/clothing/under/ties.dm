@@ -380,6 +380,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Solar Devils, the 3rd battalion of the 2nd division of the USCM."
 	icon_state = "solardevilspatch"
 
+/obj/item/clothing/accessory/patch/thefirst
+	name = "USCM The First patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the First battalion of the 2nd division of the USCM."
+	icon_state = "thefirstpatch"
+
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."

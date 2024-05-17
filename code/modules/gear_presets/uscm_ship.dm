@@ -69,6 +69,9 @@
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
+/datum/equipment_preset/uscm_ship/liaison/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = rand(NUTRITION_VERYLOW, NUTRITION_LOW)
+
 /datum/equipment_preset/uscm_ship/liaison/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
@@ -98,6 +101,11 @@
 				return paygrade
 	return paygrade
 
+/datum/equipment_preset/uscm_ship/liaison/ai
+	name = "USCM Corporate Liaison (CL, No Gear)"
+
+/datum/equipment_preset/uscm_ship/liaison/ai/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison(new_human), WEAR_BACK)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/reporter
@@ -574,10 +582,26 @@
 	if(!new_human.client)
 		return
 
-	add_verb(new_human.client, /client/proc/commander_rename_platoon)
+	//add_verb(new_human.client, /client/proc/commander_rename_platoon) bo womp
+
+	new_human.nutrition = rand(NUTRITION_VERYLOW, NUTRITION_LOW)
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	paygrade = "MO1"
+
+/datum/equipment_preset/uscm_ship/so/ai
+	name = "USCM Platoon Commander (PltCo, No Gear)"
+
+/datum/equipment_preset/uscm_ship/so/ai/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/satchel
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm_ship/so/ai/lesser_rank
+	paygrade = "MO1"
+
 
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
