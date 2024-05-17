@@ -31,3 +31,9 @@
 
 	scatter = 0
 	fire_delay = 10.0 SECONDS
+
+/obj/item/hardpoint/primary/cannon/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
