@@ -50,7 +50,7 @@
 	total_positions = 1
 	allow_additional = 0
 	scaled = 0
-
+	flags_whitelist = NO_FLAGS
 
 /obj/effect/landmark/start/synthetic
 	name = JOB_SYNTH
