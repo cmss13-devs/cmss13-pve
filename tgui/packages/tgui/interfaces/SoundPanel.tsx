@@ -163,97 +163,28 @@ export const SoundPanel = (props, context) => {
             </Stack>
           </Stack.Item>
           <Stack.Item>
-            <Stack fill vertical>
+            <Stack vertical>
               <Stack.Item>
-                <Stack vertical>
-                  <Stack.Item>
-                    <Stack>
-                      <Stack.Item grow>
-                        <Box color="label" textAlign="center">
-                          Category
-                        </Box>
-                        <Dropdown
-                          noscroll
-                          onSelected={(value) => setSoundCategory(value)}
-                          options={category_list}
-                          over
-                          selected={soundCategory}
-                          // minWidth="90px"
-                        />
-                      </Stack.Item>
-                      <Stack.Item grow>
-                        <Box color="label" textAlign="center">
-                          Volume
-                        </Box>
-                        <Slider
-                          minValue={0}
-                          maxValue={100}
-                          value={soundVolume}
-                          step={5}
-                          stepPixelSize={5}
-                          onChange={(e, value) => setSoundVolume(value)}
-                        />
-                      </Stack.Item>
-                    </Stack>
-                  </Stack.Item>
-                  <Stack.Item>
-                    <Stack>
-                      <Stack.Item grow>
-                        <Box color="label" textAlign="center">
-                          Pitch
-                        </Box>
-                        <Slider
-                          minValue={0.5}
-                          maxValue={2}
-                          value={soundPitch}
-                          step={0.1}
-                          stepPixelSize={5}
-                          onChange={(e, value) => setSoundPitch(value)}
-                        />
-                      </Stack.Item>
-                      <Stack.Item grow>
-                        <Box color="label" textAlign="center">
-                          Duration
-                        </Box>
-                        <Slider
-                          minValue={0.5}
-                          maxValue={2}
-                          value={soundDuration}
-                          step={0.1}
-                          stepPixelSize={5}
-                          onChange={(e, value) => setSoundDuration(value)}
-                        />
-                      </Stack.Item>
-                    </Stack>
-                  </Stack.Item>
-                  <Stack.Item>
-                    <Stack>
-                      <Stack.Item>
-                        <Button
-                          color="good"
-                          disabled={!soundPath}
-                          content="Preview"
-                          onClick={() =>
-                            act('play_preview', {
-                              sound_path: soundPath,
-                              sound_category: soundCategory,
-                              sound_volume: soundVolume,
-                              sound_pitch: soundPitch,
-                              sound_duration: soundDuration,
-                            })
-                          }
-                        />
-                      </Stack.Item>
-                      <Stack.Item>
-                        <Button
-                          color="bad"
-                          content="Stop"
-                          onClick={() => act('stop_preview')}
-                        />
-                      </Stack.Item>
-                    </Stack>
-                  </Stack.Item>
-                </Stack>
+                <SoundOptions
+                  soundCategory={soundCategory}
+                  setSoundCategory={setSoundCategory}
+                  soundVolume={soundVolume}
+                  setSoundVolume={setSoundVolume}
+                  soundPitch={soundPitch}
+                  setSoundPitch={setSoundPitch}
+                  soundDuration={soundDuration}
+                  setSoundDuration={setSoundDuration}
+                  canPreview={!!soundPath}
+                  onPreview={() =>
+                    act('play_preview', {
+                      sound_path: soundPath,
+                      sound_category: soundCategory,
+                      sound_volume: soundVolume,
+                      sound_pitch: soundPitch,
+                      sound_duration: soundDuration,
+                    })
+                  }
+                />
               </Stack.Item>
               <Stack.Item>
                 <Section title="Hearers">
@@ -421,8 +352,110 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
   }
 }
 
-const ClientPage = (props, context) => {
+const SoundOptions = (props, context) => {
   const { act, data } = useBackend<SoundPanelData>(context);
+  const { category_list } = data;
+  const {
+    soundCategory,
+    setSoundCategory,
+    soundVolume,
+    setSoundVolume,
+    soundPitch,
+    setSoundPitch,
+    soundDuration,
+    setSoundDuration,
+    canPreview,
+    onPreview,
+  } = props;
+
+  return (
+    <Section title="Options">
+      <Stack vertical>
+        <Stack.Item>
+          <Stack>
+            <Stack.Item>
+              <Box color="label" textAlign="center">
+                Category
+              </Box>
+              <Dropdown
+                noscroll
+                onSelected={(value) => setSoundCategory(value)}
+                options={category_list}
+                selected={soundCategory}
+                // minWidth="90px"
+              />
+            </Stack.Item>
+            <Stack.Item grow>
+              <Box color="label" textAlign="center">
+                Volume
+              </Box>
+              <Slider
+                minValue={0}
+                maxValue={100}
+                value={soundVolume}
+                step={5}
+                stepPixelSize={5}
+                onChange={(e, value) => setSoundVolume(value)}
+              />
+            </Stack.Item>
+          </Stack>
+        </Stack.Item>
+        <Stack.Item>
+          <Stack>
+            <Stack.Item grow>
+              <Box color="label" textAlign="center">
+                Pitch
+              </Box>
+              <Slider
+                minValue={0.5}
+                maxValue={2}
+                value={soundPitch}
+                step={0.1}
+                stepPixelSize={5}
+                onChange={(e, value) => setSoundPitch(value)}
+              />
+            </Stack.Item>
+            <Stack.Item grow>
+              <Box color="label" textAlign="center">
+                Duration
+              </Box>
+              <Slider
+                minValue={0.5}
+                maxValue={2}
+                value={soundDuration}
+                step={0.1}
+                stepPixelSize={5}
+                onChange={(e, value) => setSoundDuration(value)}
+              />
+            </Stack.Item>
+          </Stack>
+        </Stack.Item>
+        <Stack.Item>
+          <Stack>
+            <Stack.Item>
+              <Button
+                color="good"
+                disabled={!canPreview}
+                content="Preview"
+                onClick={onPreview}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button
+                color="bad"
+                content="Stop"
+                onClick={() => act('stop_preview')}
+              />
+            </Stack.Item>
+          </Stack>
+        </Stack.Item>
+      </Stack>
+    </Section>
+  );
+};
+
+const ClientPage = (props, context) => {
+  const { act } = useBackend<SoundPanelData>(context);
   const { targetPlayerDesc, canPlay, onPlay } = props;
 
   return (
@@ -437,7 +470,7 @@ const ClientPage = (props, context) => {
         <Button
           color="good"
           disabled={!canPlay}
-          content="Play"
+          content="Play to Client"
           onClick={onPlay}
         />
       </Stack.Item>
@@ -446,7 +479,7 @@ const ClientPage = (props, context) => {
 };
 
 const LocalPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+  const { act } = useBackend<SoundPanelData>(context);
   const { targetLocDesc, locClickIntercept, canPlay, onPlay } = props;
 
   return (
@@ -465,7 +498,7 @@ const LocalPage = (props, context) => {
         <Button
           color="good"
           disabled={!canPlay}
-          content="Play"
+          content="Play Locally"
           onClick={onPlay}
         />
       </Stack.Item>
@@ -487,13 +520,14 @@ const ZLevelPage = (props, context) => {
           onSelected={setTargetZLevel}
           width="180px"
           noscroll
+          over
         />
       </Stack.Item>
       <Stack.Item>
         <Button
           color="good"
           disabled={!canPlay}
-          content="Play"
+          content="Play to ZLevel"
           onClick={onPlay}
         />
       </Stack.Item>
@@ -515,13 +549,14 @@ const ServerPage = (props, context) => {
           onSelected={setTargetGroup}
           width="80px"
           noscroll
+          over
         />
       </Stack.Item>
       <Stack.Item>
         <Button
           color="good"
           disabled={!canPlay}
-          content="Play"
+          content="Play to Group"
           onClick={onPlay}
         />
       </Stack.Item>
