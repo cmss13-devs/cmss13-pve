@@ -30,7 +30,9 @@
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/toc{
 	pixel_y = 12;
-	pixel_x = 7
+	pixel_x = 7;
+	name = "skully control screen";
+	shuttleId = "dropship_skully"
 	},
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_3"

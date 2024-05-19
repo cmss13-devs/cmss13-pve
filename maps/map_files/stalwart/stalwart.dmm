@@ -395,6 +395,7 @@
 	pixel_x = 4;
 	layer = 4.1
 	},
+/obj/item/ammo_magazine/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -556,7 +557,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "er" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -596,7 +597,7 @@
 /obj/structure/sign/poster/hero/voteno{
 	pixel_y = 32
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "eF" = (
 /obj/effect/decal/warning_stripes{
@@ -1252,9 +1253,10 @@
 /area/golden_arrow/hangar)
 "kc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41a/half,
-/obj/structure/largecrate/supply/ammo/m41a/half{
-	pixel_y = 10
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 10;
+	pixel_x = 5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -1875,7 +1877,7 @@
 /obj/structure/pipes/vents{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "pQ" = (
 /obj/effect/decal/warning_stripes{
@@ -1996,7 +1998,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "qP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2366,6 +2368,7 @@
 	pixel_y = 17;
 	pixel_x = -6
 	},
+/obj/item/ammo_magazine/sentry,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -2402,12 +2405,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
-"uu" = (
-/obj/structure/closet/crate/green,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
 "uv" = (
 /turf/open/floor/plating,
 /area/space)
@@ -2507,7 +2504,9 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/prep_hallway)
 "vD" = (
-/obj/structure/closet/cabinet,
+/obj/structure/closet/cabinet{
+	storage_capacity = 60
+	},
 /obj/item/clothing/under/liaison_suit/formal,
 /obj/item/clothing/under/liaison_suit,
 /obj/item/clothing/under/liaison_suit/outing,
@@ -2536,7 +2535,10 @@
 /obj/item/clothing/accessory/red,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/storage/briefcase/stowaway,
-/turf/open/floor/plating,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "vH" = (
 /turf/open/floor/almayer{
@@ -2611,7 +2613,7 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "wI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2650,7 +2652,8 @@
 	icon = 'icons/obj/structures/doors/securedoor.dmi';
 	icon_state = "door_locked";
 	desc = "It opens and closes.";
-	name = "Airlock"
+	name = "Airlock";
+	opacity = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -2818,7 +2821,7 @@
 	pixel_y = 12;
 	pixel_x = -2
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "yX" = (
 /obj/effect/decal/warning_stripes{
@@ -3103,6 +3106,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"Ba" = (
+/obj/structure/closet/crate/green,
+/obj/item/weapon/gun/rifle/type71,
+/obj/item/weapon/gun/rifle/type71,
+/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/ammo_box/magazine/type71/ap,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "Bf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/green,
@@ -4256,10 +4269,9 @@
 /area/golden_arrow/platoonprep)
 "Lx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41a/half,
-/obj/structure/largecrate/supply/ammo/m41a/half{
-	pixel_y = 9;
-	pixel_x = 2
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -4561,7 +4573,7 @@
 	},
 /obj/item/clothing/under/redpyjamas,
 /obj/item/bedsheet/orange,
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "Os" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4976,6 +4988,12 @@
 /obj/item/ammo_magazine/rocket/anti_tank/pve{
 	pixel_y = 6
 	},
+/obj/item/ammo_magazine/rocket/anti_tank/pve{
+	pixel_y = 12
+	},
+/obj/item/ammo_magazine/rocket/anti_tank/pve{
+	pixel_y = -7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "Sc" = (
@@ -5143,7 +5161,7 @@
 /obj/structure/machinery/light_switch{
 	pixel_y = 27
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "Ua" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -5520,9 +5538,6 @@
 	dir = 1
 	},
 /area/golden_arrow/hangar)
-"Xi" = (
-/turf/open/floor/plating,
-/area/almayer/command/corporateliason)
 "Xk" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
@@ -19093,7 +19108,7 @@ Qb
 ig
 Bf
 ig
-Qb
+Ba
 YM
 rF
 YD
@@ -19245,7 +19260,7 @@ GM
 GM
 pD
 Qb
-uu
+GJ
 YM
 WH
 NY
@@ -20481,7 +20496,7 @@ Fk
 Cx
 Cx
 kV
-Xi
+CH
 ZU
 cj
 CH
@@ -20939,7 +20954,7 @@ Cx
 kV
 eB
 eo
-Xi
+CH
 zx
 kV
 Cx

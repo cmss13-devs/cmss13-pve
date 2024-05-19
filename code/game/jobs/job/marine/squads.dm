@@ -161,8 +161,8 @@
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
-	equipment_color = "#ffc32d"
-	chat_color = "#ffe650"
+	equipment_color = "#996633"
+	chat_color = "#996633"
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
