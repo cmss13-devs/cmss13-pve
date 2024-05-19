@@ -52,6 +52,12 @@
 	/// When it was last fired, related to world.time.
 	var/last_fired = 0
 
+/obj/item/hardpoint/primary/minigun/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+
 /obj/item/hardpoint/primary/minigun/set_fire_delay(value)
 	fire_delay = value
 	SEND_SIGNAL(src, COMSIG_GUN_AUTOFIREDELAY_MODIFIED, fire_delay * stage_delay_mult)
