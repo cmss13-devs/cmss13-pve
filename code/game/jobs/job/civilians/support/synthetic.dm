@@ -51,6 +51,7 @@
 	allow_additional = 0
 	scaled = 0
 	flags_whitelist = NO_FLAGS
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_CUSTOM_SPAWN
 
 /obj/effect/landmark/start/synthetic
 	name = JOB_SYNTH
