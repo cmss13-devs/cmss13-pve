@@ -224,7 +224,8 @@
 "ro" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
 	dir = 2;
-	id = "port_door"
+	id = "port_door";
+	name = "\improper Skully crew hatch"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -249,7 +250,8 @@
 	pixel_y = 19;
 	layer = 6;
 	plane = -6;
-	name = "human skull"
+	name = "human skull";
+	desc_lore = "This is a skull of some poor CLF bastard that got flattened by Skully, only head showing from under her hood. Some crazy fuck cleaned said head off skin and meat and put the skull on the control panel. Fucked up, right?"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -611,7 +613,8 @@
 "Sv" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
 	dir = 1;
-	id = "starboard_door"
+	id = "starboard_door";
+	name = "\improper Skully crew hatch"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
