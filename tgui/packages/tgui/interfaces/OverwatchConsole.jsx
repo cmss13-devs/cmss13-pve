@@ -1,5 +1,17 @@
-import { useBackend, useLocalState, useSharedState } from '../backend';
-import { Button, Section, Stack, Tabs, Table, Box, Input, NumberInput, LabeledControls, Divider, Collapsible } from '../components';
+import { useBackend, useSharedState } from '../backend';
+import {
+  Box,
+  Button,
+  Collapsible,
+  Divider,
+  Input,
+  LabeledControls,
+  NumberInput,
+  Section,
+  Stack,
+  Table,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 
 export const OverwatchConsole = (props) => {
@@ -9,7 +21,8 @@ export const OverwatchConsole = (props) => {
     <Window
       width={800}
       height={600}
-      theme={data.theme ? data.theme : 'crtblue'}>
+      theme={data.theme ? data.theme : 'crtblue'}
+    >
       <Window.Content>
         {(!data.current_squad && <HomePanel />) || <SquadPanel />}
       </Window.Content>
@@ -22,20 +35,21 @@ const HomePanel = (props) => {
 
   // Buttons don't seem to support hexcode colors, so we'll have to do this manually, sadly
   const squadColorMap = {
-    'alpha': 'red',
-    'bravo': 'yellow',
-    'charlie': 'purple',
-    'delta': 'blue',
-    'echo': 'green',
-    'foxtrot': 'brown',
-    'intel': 'green',
+    alpha: 'red',
+    bravo: 'yellow',
+    charlie: 'purple',
+    delta: 'blue',
+    echo: 'green',
+    foxtrot: 'brown',
+    intel: 'green',
   };
 
   return (
     <Section
       fontSize="20px"
       textAlign="center"
-      title="OVERWATCH DISABLED - SELECT SQUAD">
+      title="OVERWATCH DISABLED - SELECT SQUAD"
+    >
       <Stack justify="center" align="end" fontSize="20px">
         {data.squad_list.map((squad, index) => {
           return (
@@ -46,7 +60,8 @@ const HomePanel = (props) => {
                     ? squadColorMap[squad.toLowerCase()]
                     : 'red'
                 }
-                onClick={() => act('pick_squad', { squad: squad })}>
+                onClick={() => act('pick_squad', { squad: squad })}
+              >
                 {squad.toUpperCase()}
               </Button>
             </Stack.Item>
@@ -76,14 +91,16 @@ const SquadPanel = (props) => {
         <Tabs.Tab
           selected={category === 'monitor'}
           icon="heartbeat"
-          onClick={() => setCategory('monitor')}>
+          onClick={() => setCategory('monitor')}
+        >
           Squad Monitor
         </Tabs.Tab>
         {!!data.can_launch_crates && (
           <Tabs.Tab
             selected={category === 'supply'}
             icon="wrench"
-            onClick={() => setCategory('supply')}>
+            onClick={() => setCategory('supply')}
+          >
             Supply Drop
           </Tabs.Tab>
         )}
@@ -91,7 +108,8 @@ const SquadPanel = (props) => {
           <Tabs.Tab
             selected={category === 'ob'}
             icon="bomb"
-            onClick={() => setCategory('ob')}>
+            onClick={() => setCategory('ob')}
+          >
             Orbital Bombardment
           </Tabs.Tab>
         )}
@@ -123,8 +141,9 @@ const MainDashboard = (props) => {
             Stop Overwatch
           </Button>
         </>
-      }>
-      <Table fill mb="5px">
+      }
+    >
+      <Table mb="5px">
         <Table.Row bold>
           <Table.Cell textAlign="center">PRIMARY ORDERS</Table.Cell>
           <Table.Cell textAlign="center">SECONDARY ORDERS</Table.Cell>
@@ -143,7 +162,8 @@ const MainDashboard = (props) => {
           inline
           width="23%"
           icon="envelope"
-          onClick={() => act('set_primary')}>
+          onClick={() => act('set_primary')}
+        >
           SET PRIMARY
         </Button>
         {primary_objective && (
@@ -151,7 +171,8 @@ const MainDashboard = (props) => {
             inline
             width="23%"
             icon="person"
-            onClick={() => act('remind_primary')}>
+            onClick={() => act('remind_primary')}
+          >
             REMIND PRIMARY
           </Button>
         )}
@@ -159,7 +180,8 @@ const MainDashboard = (props) => {
           inline
           width="23%"
           icon="envelope"
-          onClick={() => act('set_secondary')}>
+          onClick={() => act('set_secondary')}
+        >
           SET SECONDARY
         </Button>
         {secondary_objective && (
@@ -167,7 +189,8 @@ const MainDashboard = (props) => {
             inline
             width="23%"
             icon="person"
-            onClick={() => act('remind_secondary')}>
+            onClick={() => act('remind_secondary')}
+          >
             REMIND SECONDARY
           </Button>
         )}
@@ -178,14 +201,16 @@ const MainDashboard = (props) => {
           inline
           width="45%"
           icon="envelope"
-          onClick={() => act('message')}>
+          onClick={() => act('message')}
+        >
           MESSAGE SQUAD
         </Button>
         <Button
           inline
           width="45%"
           icon="person"
-          onClick={() => act('sl_message')}>
+          onClick={() => act('sl_message')}
+        >
           MESSAGE SQUAD LEADER
         </Button>
       </Box>
@@ -299,10 +324,10 @@ const SquadMonitor = (props) => {
       'Platoon Sergeant': 10,
       'Squad Sergeant': 9,
       'Weapons Specialist': 8,
-      'Smartgunner': 7,
+      Smartgunner: 7,
       'Platoon Corpsman': 6,
       'Combat Technician': 5,
-      'Rifleman': 4,
+      Rifleman: 4,
     };
     let valueA = roleValues[a];
     let valueB = roleValues[b];
@@ -326,16 +351,16 @@ const SquadMonitor = (props) => {
 
   const [hidden_marines, setHiddenMarines] = useLocalState(
     'hidden_marines',
-    []
+    [],
   );
 
   const [showHiddenMarines, setShowHiddenMarines] = useLocalState(
     'showhidden',
-    false
+    false,
   );
   const [showDeadMarines, setShowDeadMarines] = useLocalState(
     'showdead',
-    false
+    false,
   );
 
   const [marineSearch, setMarineSearch] = useLocalState('marinesearch', null);
@@ -384,7 +409,8 @@ const SquadMonitor = (props) => {
           <Button
             color="yellow"
             tooltip="Show marines depending on location"
-            onClick={() => act('change_locations_ignored')}>
+            onClick={() => act('change_locations_ignored')}
+          >
             Shown: {location_filter}
           </Button>
           {(showDeadMarines && (
@@ -408,14 +434,16 @@ const SquadMonitor = (props) => {
           <Button
             color="yellow"
             icon="arrow-right"
-            onClick={() => act('transfer_marine')}>
+            onClick={() => act('transfer_marine')}
+          >
             Transfer Marine
           </Button>
           <Button color="blue" icon="medal" onClick={() => act('award_medal')}>
             Award Medal
           </Button>
         </>
-      }>
+      }
+    >
       <Input
         fluid
         placeholder="Search.."
@@ -443,7 +471,8 @@ const SquadMonitor = (props) => {
                 <Button
                   onClick={() =>
                     act('watch_camera', { target_ref: squad_leader.ref })
-                  }>
+                  }
+                >
                   {squad_leader.name}
                 </Button>
               )) || <Box color="yellow">{squad_leader.name} (NO HELMET)</Box>}
@@ -451,7 +480,8 @@ const SquadMonitor = (props) => {
             <Table.Cell p="2px">{squad_leader.role}</Table.Cell>
             <Table.Cell
               p="2px"
-              color={determine_status_color(squad_leader.state)}>
+              color={determine_status_color(squad_leader.state)}
+            >
               {squad_leader.state}
             </Table.Cell>
             <Table.Cell p="2px">{squad_leader.area_name}</Table.Cell>
@@ -491,7 +521,8 @@ const SquadMonitor = (props) => {
                       <Button
                         onClick={() =>
                           act('watch_camera', { target_ref: marine.ref })
-                        }>
+                        }
+                      >
                         {marine.name}
                       </Button>
                     )) || <Box color="yellow">{marine.name} (NO HELMET)</Box>}
@@ -499,7 +530,8 @@ const SquadMonitor = (props) => {
                   <Table.Cell p="2px">{marine.role}</Table.Cell>
                   <Table.Cell
                     p="2px"
-                    color={determine_status_color(marine.state)}>
+                    color={determine_status_color(marine.state)}
+                  >
                     {marine.state}
                   </Table.Cell>
                   <Table.Cell p="2px">{marine.area_name}</Table.Cell>
@@ -561,14 +593,14 @@ const SupplyDrop = (props) => {
             <LabeledControls.Item label="LONGITUDE">
               <NumberInput
                 value={supplyX}
-                onChange={(e, value) => setSupplyX(value)}
+                onChange={(value) => setSupplyX(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="LATITUDE">
               <NumberInput
                 value={supplyY}
-                onChange={(e, value) => setSupplyY(value)}
+                onChange={(value) => setSupplyY(value)}
                 width="75px"
               />
             </LabeledControls.Item>
@@ -584,7 +616,8 @@ const SupplyDrop = (props) => {
               width="100%"
               icon="box"
               color="yellow"
-              onClick={() => act('dropsupply', { x: supplyX, y: supplyY })}>
+              onClick={() => act('dropsupply', { x: supplyX, y: supplyY })}
+            >
               Launch
             </Button>
             <Button
@@ -594,7 +627,8 @@ const SupplyDrop = (props) => {
               color="yellow"
               onClick={() =>
                 act('save_coordinates', { x: supplyX, y: supplyY })
-              }>
+              }
+            >
               Save
             </Button>
           </Box>
@@ -632,14 +666,14 @@ const OrbitalBombardment = (props) => {
             <LabeledControls.Item label="LONGITUDE">
               <NumberInput
                 value={OBX}
-                onChange={(e, value) => setOBX(value)}
+                onChange={(value) => setOBX(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="LATITUDE">
               <NumberInput
                 value={OBY}
-                onChange={(e, value) => setOBY(value)}
+                onChange={(value) => setOBY(value)}
                 width="75px"
               />
             </LabeledControls.Item>
@@ -656,7 +690,8 @@ const OrbitalBombardment = (props) => {
               width="100%"
               icon="bomb"
               color="red"
-              onClick={() => act('dropbomb', { x: OBX, y: OBY })}>
+              onClick={() => act('dropbomb', { x: OBX, y: OBY })}
+            >
               Fire
             </Button>
             <Button
@@ -664,7 +699,8 @@ const OrbitalBombardment = (props) => {
               width="100%"
               icon="save"
               color="yellow"
-              onClick={() => act('save_coordinates', { x: OBX, y: OBY })}>
+              onClick={() => act('save_coordinates', { x: OBX, y: OBY })}
+            >
               Save
             </Button>
           </Box>
@@ -698,8 +734,6 @@ const SavedCoordinates = (props) => {
     }
   };
 
-  console.log(props);
-
   return (
     <Stack.Item>
       <Box bold textAlign="center">
@@ -724,7 +758,7 @@ const SavedCoordinates = (props) => {
               <Input
                 width="100%"
                 value={coords.comment}
-                onChange={(e, value) =>
+                onChange={(value) =>
                   act('change_coordinate_comment', {
                     comment: value,
                     index: coords.index,

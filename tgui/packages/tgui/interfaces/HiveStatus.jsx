@@ -1,8 +1,18 @@
 import { classes } from 'common/react';
 import { createSearch } from 'common/string';
-import { Fragment } from 'react';
-import { useBackend, useLocalState } from '../backend';
-import { Input, Button, Flex, Divider, Collapsible, Icon, NumberInput, Table } from '../components';
+import { Fragment, useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  Button,
+  Collapsible,
+  Divider,
+  Flex,
+  Icon,
+  Input,
+  NumberInput,
+  Table,
+} from '../components';
 import { Window } from '../layouts';
 
 const redFont = {
@@ -87,7 +97,8 @@ export const HiveStatus = (props) => {
       theme="hive_status"
       resizable
       width={600}
-      height={680}>
+      height={680}
+    >
       <Window.Content scrollable>
         <XenoCollapsible title="General Hive Information">
           <GeneralInformation />
@@ -167,8 +178,9 @@ const XenoCounts = (props) => {
                       <div>
                         <span
                           style={{
-                            'margin-right': '4px',
-                          }}>
+                            marginRight: '4px',
+                          }}
+                        >
                           {tier_slots[tier_str].open_slots}
                         </span>
                         remaining slot
@@ -181,8 +193,9 @@ const XenoCounts = (props) => {
                             <Fragment key={i}>
                               <span
                                 style={{
-                                  'margin-right': '4px',
-                                }}>
+                                  marginRight: '4px',
+                                }}
+                              >
                                 {
                                   tier_slots[tier_str].guaranteed_slots[
                                     caste_type
@@ -217,7 +230,8 @@ const XenoCounts = (props) => {
                           className="xenoCountCell"
                           backgroundColor={!!hive_color && hive_color}
                           textAlign="center"
-                          width={7}>
+                          width={7}
+                        >
                           {counts[caste]}
                         </Table.Cell>
                       ))}
@@ -235,13 +249,13 @@ const XenoCounts = (props) => {
 
 const XenoList = (props) => {
   const { act, data } = useBackend();
-  const [searchKey, setSearchKey] = useLocalState('searchKey', '');
-  const [searchFilters, setSearchFilters] = useLocalState('searchFilters', {
+  const [searchKey, setSearchKey] = useState('');
+  const [searchFilters, setSearchFilters] = useState({
     name: true,
     strain: true,
     location: true,
   });
-  const [maxHealth, setMaxHealth] = useLocalState('maxHealth', 100);
+  const [maxHealth, setMaxHealth] = useState(100);
   const { xeno_keys, xeno_vitals, xeno_info, user_ref, is_in_ovi, hive_color } =
     data;
   const xeno_entries = filterXenos({
@@ -261,7 +275,6 @@ const XenoList = (props) => {
           <Flex.Item>
             <Button.Checkbox
               inline
-              content="Name"
               checked={searchFilters.name}
               backgroundColor={searchFilters.name && hive_color}
               onClick={() =>
@@ -270,10 +283,11 @@ const XenoList = (props) => {
                   name: !searchFilters.name,
                 })
               }
-            />
+            >
+              Name
+            </Button.Checkbox>
             <Button.Checkbox
               inline
-              content="Strain"
               checked={searchFilters.strain}
               backgroundColor={searchFilters.strain && hive_color}
               onClick={() =>
@@ -282,10 +296,11 @@ const XenoList = (props) => {
                   strain: !searchFilters.strain,
                 })
               }
-            />
+            >
+              Strain
+            </Button.Checkbox>
             <Button.Checkbox
               inline
-              content="Location"
               checked={searchFilters.location}
               backgroundColor={searchFilters.location && hive_color}
               onClick={() =>
@@ -294,7 +309,9 @@ const XenoList = (props) => {
                   location: !searchFilters.location,
                 })
               }
-            />
+            >
+              Location
+            </Button.Checkbox>
           </Flex.Item>
         </Flex>
       </Flex.Item>
@@ -310,14 +327,14 @@ const XenoList = (props) => {
               value={maxHealth}
               minValue={0}
               maxValue={100}
-              onChange={(_, value) => setMaxHealth(value)}
+              onChange={(value) => setMaxHealth(value)}
             />
           </Flex.Item>
         </Flex>
       </Flex.Item>
       <Flex.Item mb={2}>
         <Input
-          fluid={1}
+          fluid
           placeholder="Search..."
           onInput={(_, value) => setSearchKey(value)}
         />
@@ -336,7 +353,8 @@ const XenoList = (props) => {
         {xeno_entries.map((entry, i) => (
           <Table.Row
             key={i}
-            className={classes([entry.is_ssd ? 'ssdRow' : '', 'xenoListRow'])}>
+            className={classes([entry.is_ssd ? 'ssdRow' : '', 'xenoListRow'])}
+          >
             {/*
               Leader/SSD icon
               You might think using an image for rounded corners is stupid,
@@ -364,17 +382,19 @@ const XenoList = (props) => {
                   className="actionButton"
                   align="center"
                   justify="space-around"
-                  inline>
+                  inline
+                >
                   <Flex.Item>
                     <Button
-                      content="Watch"
                       color="xeno"
                       onClick={() =>
                         act('overwatch', {
                           target_ref: entry.ref,
                         })
                       }
-                    />
+                    >
+                      Watch
+                    </Button>
                   </Flex.Item>
                   {!!is_in_ovi && <QueenOviButtons target_ref={entry.ref} />}
                 </Flex>
@@ -412,7 +432,8 @@ const XenoCollapsible = (props) => {
       title={title}
       backgroundColor={!!hive_color && hive_color}
       color={!hive_color && 'xeno'}
-      open>
+      open
+    >
       {children}
     </Collapsible>
   );
@@ -426,25 +447,27 @@ const QueenOviButtons = (props) => {
     <>
       <Flex.Item>
         <Button
-          content="Heal"
           color="green"
           onClick={() =>
             act('heal', {
               target_ref: target_ref,
             })
           }
-        />
+        >
+          Heal
+        </Button>
       </Flex.Item>
       <Flex.Item>
         <Button
-          content="Give Plasma"
           color="blue"
           onClick={() =>
             act('give_plasma', {
               target_ref: target_ref,
             })
           }
-        />
+        >
+          Give Plasma
+        </Button>
       </Flex.Item>
     </>
   );

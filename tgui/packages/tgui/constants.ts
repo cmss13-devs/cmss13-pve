@@ -59,7 +59,7 @@ export const COLORS = {
     acidicbuffer: '#fbc314',
     basicbuffer: '#3853a4',
   },
-};
+} as const;
 
 // Colors defined in CSS
 export const CSS_COLORS = [
@@ -236,7 +236,7 @@ export const RADIO_CHANNELS = [
     freq: 1453,
     color: '#1ecc43',
   },
-];
+] as const;
 
 const GASES = [
   {
@@ -379,7 +379,7 @@ const GASES = [
     label: 'Anti-Noblium',
     color: 'maroon',
   },
-];
+] as const;
 
 // Returns gas label based on gasId
 export const getGasLabel = (gasId: string, fallbackValue?: string) => {
