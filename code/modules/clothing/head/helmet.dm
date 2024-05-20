@@ -452,6 +452,33 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			if(cycle_action)
 				cycle_action.set_action_overlay(active_visor)
 
+/obj/item/clothing/head/helmet/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	if(type != expected_type)
+		return
+
+	var/new_icon_state
+	var/new_protection
+	var/new_item_state
+	if(override_icon_state && override_icon_state.len)
+		new_icon_state = override_icon_state[SSmapping.configs[GROUND_MAP].map_name]
+	if(override_protection && override_protection.len)
+		new_protection = override_protection[SSmapping.configs[GROUND_MAP].map_name]
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			icon_state = new_icon_state ? new_icon_state : "s_" + icon_state
+			item_state = new_item_state ? new_item_state : "s_" + item_state
+		if("desert")
+			icon_state = new_icon_state ? new_icon_state : "d_" + icon_state
+			item_state = new_item_state ? new_item_state : "d_" + item_state
+		if("urban")
+			icon_state = new_icon_state ? new_icon_state : "u_" + icon_state
+			item_state = new_item_state ? new_item_state : "u_" + item_state
+		if("classic")
+			icon_state = new_icon_state ? new_icon_state : "c_" + icon_state
+			item_state = new_item_state ? new_item_state : "c_" + item_state
+	if(new_protection)
+		min_cold_protection_temperature = new_protection
+
 /obj/item/clothing/head/helmet/marine/Destroy(force)
 	helmet_overlays = null
 	QDEL_NULL(camera)

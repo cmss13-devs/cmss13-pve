@@ -130,6 +130,33 @@
 
 	light_holder = new(src)
 
+/obj/item/clothing/suit/storage/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	if(type != expected_type)
+		return
+
+	var/new_icon_state
+	var/new_protection
+	var/new_item_state
+	if(override_icon_state && override_icon_state.len)
+		new_icon_state = override_icon_state[SSmapping.configs[GROUND_MAP].map_name]
+	if(override_protection && override_protection.len)
+		new_protection = override_protection[SSmapping.configs[GROUND_MAP].map_name]
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			icon_state = new_icon_state ? new_icon_state : "s_" + icon_state
+			item_state = new_item_state ? new_item_state : "s_" + item_state
+		if("desert")
+			icon_state = new_icon_state ? new_icon_state : "d_" + icon_state
+			item_state = new_item_state ? new_item_state : "d_" + item_state
+		if("urban")
+			icon_state = new_icon_state ? new_icon_state : "u_" + icon_state
+			item_state = new_item_state ? new_item_state : "u_" + item_state
+		if("classic")
+			icon_state = new_icon_state ? new_icon_state : "c_" + icon_state
+			item_state = new_item_state ? new_item_state : "c_" + item_state
+	if(new_protection)
+		min_cold_protection_temperature = new_protection
+
 /obj/item/clothing/suit/storage/marine/Destroy()
 	QDEL_NULL(light_holder)
 	return ..()
@@ -427,7 +454,7 @@
 
 	if(is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)

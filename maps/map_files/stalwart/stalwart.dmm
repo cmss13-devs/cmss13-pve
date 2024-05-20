@@ -796,6 +796,10 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"gH" = (
+/obj/item/storage/backpack/marine/satchel/rto/cl,
+/turf/open/floor/wood/ship,
+/area/almayer/command/corporateliason)
 "gS" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer,
@@ -2534,7 +2538,6 @@
 /obj/item/clothing/accessory/blue,
 /obj/item/clothing/accessory/red,
 /obj/item/clothing/suit/armor/vest,
-/obj/item/storage/briefcase/stowaway,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
@@ -2553,7 +2556,7 @@
 	req_access = list(200);
 	name = "\improper Corporate Liaison Office"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "vP" = (
 /obj/structure/machinery/pipedispenser,
@@ -3654,7 +3657,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
 "Fv" = (
 /obj/structure/machinery/body_scanconsole{
@@ -20499,7 +20502,7 @@ kV
 CH
 ZU
 cj
-CH
+gH
 kV
 Cx
 Cx
