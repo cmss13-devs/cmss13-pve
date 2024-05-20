@@ -39,11 +39,12 @@
 	req_one_access_txt = "19;12"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -162,7 +163,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -378,7 +379,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
@@ -399,11 +400,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "br" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -651,6 +652,13 @@
 	dir = 1
 	},
 /area/golden_arrow/hangar)
+"cw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "cx" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -693,10 +701,10 @@
 /area/golden_arrow/cryo_cells)
 "cM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
@@ -894,15 +902,12 @@
 	},
 /area/golden_arrow/hangar)
 "du" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_x = -10
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -1208,6 +1213,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"eB" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 8;
+	name = "\improper Shared Office";
+	req_one_access_txt = "12;32";
+	req_access = list()
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "eD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1339,7 +1353,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -1437,9 +1451,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -1447,6 +1458,9 @@
 	name = "\improper Platoon Commander's Quarters";
 	req_access = list();
 	req_one_access_txt = "19;12"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -1503,7 +1517,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -1696,7 +1710,7 @@
 	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
@@ -1965,8 +1979,12 @@
 	layer = 3.2;
 	pixel_y = 16
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "0-8";
+	layer = 2.36
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -1992,11 +2010,11 @@
 /area/golden_arrow/engineering)
 "hq" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -2232,15 +2250,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/sign/safety/bathunisex{
 	pixel_y = 28
 	},
 /obj/structure/sign/safety/water{
 	pixel_x = 15;
 	pixel_y = 28
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -2648,13 +2666,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/door/airlock/almayer/secure{
-	dir = 8;
-	name = "\improper Shared Office";
-	req_one_access_txt = "12;32";
-	req_access = list()
-	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -2816,7 +2828,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
@@ -2939,12 +2951,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "kw" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_x = -10
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -3490,8 +3502,11 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	layer = 2.36
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -3921,7 +3936,7 @@
 	},
 /area/golden_arrow/hangar)
 "nP" = (
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4107,7 +4122,10 @@
 	},
 /area/golden_arrow/hangar)
 "oB" = (
-/obj/structure/machinery/door/poddoor/almayer,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "oD" = (
@@ -4165,6 +4183,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"oN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "oP" = (
 /obj/effect/decal/strata_decals/grime/grime4,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4258,7 +4284,7 @@
 /area/golden_arrow/hangar)
 "pg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/open/floor/almayer,
@@ -4283,8 +4309,11 @@
 	},
 /area/golden_arrow/cryo_cells)
 "pl" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
 /obj/structure/cable{
-	icon_state = "1-2"
+	layer = 2.36
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/shared_office)
@@ -4348,7 +4377,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/open/floor/almayer,
@@ -4412,15 +4441,16 @@
 /area/golden_arrow/hangar)
 "pR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "pU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4850,11 +4880,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -4945,11 +4975,11 @@
 /area/golden_arrow/hangar)
 "rV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5344,7 +5374,7 @@
 "tB" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
@@ -5749,24 +5779,21 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "uM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -5835,11 +5862,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -5848,13 +5875,13 @@
 	name = "\improper Cryo Bay"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -6072,10 +6099,13 @@
 	},
 /area/golden_arrow/medical)
 "vF" = (
-/obj/structure/machinery/door/poddoor/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -6123,6 +6153,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
+"vP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "vQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -6424,7 +6463,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -6756,11 +6795,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -6985,13 +7024,6 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-8";
-	layer = 2.36
-	},
 /obj/item/device/radio/intercom{
 	freerange = 1;
 	name = "General Listening Channel";
@@ -6999,6 +7031,12 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -7012,6 +7050,12 @@
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"zo" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "zq" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -7080,11 +7124,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	dir = 8;
@@ -7145,12 +7189,12 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/item/trash/plate{
 	pixel_y = 4;
 	pixel_x = -4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -7394,9 +7438,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "AY" = (
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "AZ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm{
@@ -7441,7 +7487,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/open/floor/almayer{
@@ -7570,7 +7616,7 @@
 	pixel_y = 1
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -7651,12 +7697,13 @@
 "Cc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -8162,10 +8209,10 @@
 /area/golden_arrow/hangar)
 "Em" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
-/obj/structure/cable{
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "En" = (
@@ -8258,7 +8305,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -8516,7 +8563,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -8562,10 +8609,10 @@
 /area/golden_arrow/medical)
 "FB" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer{
 	dir = 1;
 	icon_state = "cargo_arrow"
@@ -8614,7 +8661,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/open/floor/almayer,
@@ -8830,10 +8877,10 @@
 /area/golden_arrow/synthcloset)
 "GH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-8"
-	},
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "GI" = (
@@ -8856,11 +8903,12 @@
 	name = "General Listening Channel";
 	pixel_y = -29
 	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -9016,7 +9064,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -9110,7 +9158,7 @@
 /area/golden_arrow/platoonprep)
 "HK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
@@ -9424,12 +9472,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /obj/structure/sign/safety/terminal{
 	pixel_y = -26;
 	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -9459,15 +9507,12 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	layer = 2.36
-	},
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -10129,7 +10174,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -10196,7 +10241,7 @@
 	pixel_x = 8;
 	pixel_y = 16
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
 /turf/open/floor/almayer,
@@ -10284,6 +10329,15 @@
 	icon_state = "blackcorner";
 	dir = 8
 	},
+/area/golden_arrow/hangar)
+"LP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "LQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10490,6 +10544,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "MD" = (
@@ -10604,8 +10661,9 @@
 "MZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -10627,12 +10685,12 @@
 /area/golden_arrow/cryo_cells)
 "Nb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -10779,6 +10837,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"NB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "NF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -10952,11 +11018,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Og" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -10965,7 +11031,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -11122,10 +11188,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "OI" = (
-/obj/structure/cable{
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer{
 	dir = 8;
 	icon_state = "cargo_arrow"
@@ -11186,6 +11252,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -11266,12 +11335,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -11477,7 +11546,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -11556,8 +11625,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_x = 2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -11626,12 +11696,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -11966,8 +12036,11 @@
 /area/golden_arrow/prep_hallway)
 "Sb" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
 /obj/structure/cable{
-	icon_state = "1-2"
+	layer = 2.36
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -12126,7 +12199,7 @@
 /area/golden_arrow/briefing)
 "SE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -12690,6 +12763,14 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"UA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Dorms";
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "UB" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/mechanical/green{
@@ -12699,6 +12780,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"UC" = (
+/obj/structure/machinery/door_control{
+	id = "hangarlockdownwest";
+	name = "hangarlockdownwest";
+	pixel_x = -23;
+	needs_power = 0
+	},
+/turf/open/space/basic,
+/area/space)
 "UE" = (
 /obj/structure/largecrate/supply/medicine/medkits{
 	pixel_y = 24;
@@ -12812,14 +12902,14 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -13019,6 +13109,12 @@
 "VD" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"VF" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "VI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -13187,7 +13283,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -13559,7 +13655,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer{
@@ -13579,7 +13675,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/open/floor/almayer,
@@ -13953,7 +14049,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -14051,16 +14147,12 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/structure/cable{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Zf" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Dorms";
-	dir = 1
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -14092,11 +14184,11 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -14165,7 +14257,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Zt" = (
-/obj/structure/machinery/door/poddoor/almayer,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -14293,11 +14388,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "ZN" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14311,11 +14406,7 @@
 "ZT" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/cable/heavyduty{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	layer = 2.36
+	icon_state = "1-4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -20515,7 +20606,7 @@ Rz
 og
 zH
 be
-EL
+UA
 UK
 PP
 EL
@@ -20523,7 +20614,7 @@ Fk
 nX
 Zt
 er
-Cm
+AY
 uE
 oB
 EG
@@ -20675,7 +20766,7 @@ vQ
 jJ
 vF
 Yk
-UN
+vQ
 gR
 oB
 EG
@@ -20979,7 +21070,7 @@ MY
 CE
 aI
 EG
-EG
+UC
 EG
 EG
 EG
@@ -24306,7 +24397,7 @@ Yr
 gV
 RH
 Wf
-Yr
+eB
 Wk
 Yr
 eW
@@ -25386,7 +25477,7 @@ yB
 yB
 pz
 dz
-AY
+yX
 dz
 xI
 cI
@@ -25528,7 +25619,7 @@ QL
 Ea
 Ea
 dz
-AY
+yX
 dz
 jM
 qz
@@ -25538,7 +25629,7 @@ VD
 qz
 jI
 dz
-AY
+yX
 dz
 xV
 qz
@@ -25680,7 +25771,7 @@ Lu
 tb
 wH
 dz
-AY
+yX
 dz
 za
 qz
@@ -25690,7 +25781,7 @@ jY
 qz
 cR
 dz
-AY
+yX
 dz
 za
 qz
@@ -25832,7 +25923,7 @@ WU
 oX
 Nv
 dz
-AY
+yX
 dz
 KB
 th
@@ -26296,7 +26387,7 @@ ey
 Vy
 fM
 fM
-dz
+yX
 Qk
 Cp
 rH
@@ -27777,7 +27868,7 @@ xa
 Bg
 cE
 Wa
-Wa
+zo
 cE
 cE
 Wa
@@ -27853,7 +27944,7 @@ mn
 mf
 Wa
 cE
-Wa
+zo
 Wa
 Wa
 tb
@@ -27927,11 +28018,11 @@ EG
 tb
 xa
 Bg
-cE
-VD
-VD
-jY
-cE
+LP
+NB
+NB
+vP
+LP
 Wa
 as
 KJ
@@ -28003,11 +28094,11 @@ ol
 xy
 mn
 mf
-Wa
-jY
-jY
-jY
-cE
+oN
+vP
+vP
+vP
+LP
 xy
 xa
 Bg
@@ -28231,11 +28322,11 @@ EG
 tb
 xa
 Bg
-Wa
-jY
-VD
-VD
-cE
+oN
+vP
+NB
+NB
+LP
 cE
 as
 Cq
@@ -28307,11 +28398,11 @@ ol
 tb
 mn
 mf
-cE
-VD
-VD
-VD
-Wa
+LP
+NB
+NB
+NB
+oN
 tb
 xa
 Bg
@@ -28385,7 +28476,7 @@ xa
 Bg
 Wa
 cE
-cE
+cw
 cE
 cE
 Wa
@@ -28461,7 +28552,7 @@ mn
 mf
 Wa
 Wa
-Wa
+VF
 Wa
 cE
 xy
@@ -29067,7 +29158,7 @@ Fn
 uo
 uv
 SS
-gC
+Ce
 EG
 EG
 EG
