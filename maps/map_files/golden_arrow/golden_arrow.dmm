@@ -231,6 +231,9 @@
 	pixel_y = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aY" = (
@@ -1214,14 +1217,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "eB" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
-	dir = 8;
-	name = "\improper Shared Office";
-	req_one_access_txt = "12;32";
-	req_access = list()
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "eD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1366,6 +1369,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"fc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "fe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -1482,6 +1495,19 @@
 "fF" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"fG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
 /area/golden_arrow/hangar)
 "fH" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
@@ -1902,6 +1928,9 @@
 "gZ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
@@ -2342,6 +2371,15 @@
 	name = "\improper Tripoli"
 	},
 /area/golden_arrow/hangar)
+"iB" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/golden_arrow/hangar)
 "iC" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2668,6 +2706,12 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 8;
+	name = "\improper Shared Office";
+	req_one_access_txt = "12;32";
+	req_access = list()
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -3367,6 +3411,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"mb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "mc" = (
 /obj/structure/machinery/power/terminal{
 	dir = 1
@@ -4119,6 +4171,14 @@
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
+"oA" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
 "oB" = (
@@ -5994,6 +6054,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "vp" = (
@@ -6884,6 +6947,18 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"yM" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "yN" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/tableflag{
@@ -7229,6 +7304,17 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Ag" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Ah" = (
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 8
@@ -7495,6 +7581,20 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/shared_office)
+"Bj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Bk" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -8131,6 +8231,22 @@
 "DQ" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoonprep)
+"DR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "DY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump{
@@ -8191,6 +8307,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
@@ -8570,6 +8689,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
+"Fr" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "Fu" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27
@@ -8637,6 +8765,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -8760,6 +8891,15 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
+/area/golden_arrow/hangar)
+"Gc" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Gg" = (
 /obj/effect/decal/warning_stripes{
@@ -9300,6 +9440,9 @@
 "Id" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "Ie" = (
@@ -10450,6 +10593,9 @@
 /area/golden_arrow/hangar)
 "Md" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Mf" = (
@@ -10621,6 +10767,18 @@
 	dir = 1;
 	icon_state = "cargo_arrow"
 	},
+/area/golden_arrow/hangar)
+"MS" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "MT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11011,6 +11169,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"Oe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
 "Of" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/cleanable/dirt,
@@ -11351,6 +11518,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"Pv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Py" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -12070,6 +12246,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Sg" = (
@@ -12083,6 +12262,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"Sh" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "hangarlockdownsouth"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/golden_arrow/hangar)
 "Si" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -12525,6 +12717,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoonprep)
+"TH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "TI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -12534,6 +12735,9 @@
 	pixel_y = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "TJ" = (
@@ -12764,13 +12968,12 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "UA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Dorms";
-	dir = 1
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/prep_hallway)
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "UB" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/mechanical/green{
@@ -13464,6 +13667,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "WM" = (
@@ -14015,6 +14221,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"YO" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "YP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -14155,6 +14370,10 @@
 "Zf" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Dorms";
+	dir = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -20606,7 +20825,7 @@ Rz
 og
 zH
 be
-UA
+EL
 UK
 PP
 EL
@@ -24397,7 +24616,7 @@ Yr
 gV
 RH
 Wf
-eB
+Yr
 Wk
 Yr
 eW
@@ -26846,34 +27065,34 @@ zD
 Ja
 eD
 Ek
-Ig
+iB
 TI
-ES
-ES
-vq
-ES
-ES
+UA
+UA
+eB
+UA
+UA
 aX
-Kp
-zD
-zD
-uI
-ES
-ES
-vq
-ES
-ES
+Gc
+XS
+XS
+Ag
+UA
+UA
+eB
+UA
+UA
 vo
-lj
-zD
-zD
-Kp
-Ja
-ES
-vq
+mb
+XS
+XS
+Gc
+fc
+UA
+eB
 Id
 vo
-DM
+Pv
 SN
 kb
 dz
@@ -27177,7 +27396,7 @@ sY
 sY
 sY
 rv
-RG
+TH
 ol
 xy
 zS
@@ -27481,7 +27700,7 @@ MM
 Ep
 lu
 Ve
-RG
+TH
 ol
 xy
 zS
@@ -27633,7 +27852,7 @@ yX
 gu
 zz
 jp
-Ky
+Bj
 WX
 xy
 zS
@@ -28089,11 +28308,11 @@ yX
 Lm
 lu
 we
-RG
-ol
-xy
-mn
-mf
+yM
+DR
+Oe
+Sh
+fG
 oN
 vP
 vP
@@ -28393,11 +28612,11 @@ yX
 Lm
 lu
 Ve
-RG
-ol
-tb
-mn
-mf
+MS
+DR
+oA
+Sh
+fG
 LP
 NB
 NB
@@ -28545,7 +28764,7 @@ yX
 Lm
 lu
 jp
-Ky
+Bj
 WX
 tb
 mn
@@ -29001,7 +29220,7 @@ Ch
 Zz
 lu
 Ve
-RG
+TH
 ol
 tb
 zS
@@ -29305,7 +29524,7 @@ cm
 YA
 YA
 tS
-RG
+TH
 ol
 tb
 zS
@@ -29457,7 +29676,7 @@ sY
 sY
 sY
 uB
-Ky
+Bj
 WX
 Tp
 zS
@@ -29582,32 +29801,32 @@ zD
 uI
 Ig
 Ek
-Ig
+iB
 TI
-ES
-ES
-kG
-ES
-ES
+UA
+UA
+Fr
+UA
+UA
 aX
-vS
-zD
-lj
-Ja
+YO
+XS
+mb
+fc
 Id
 Id
-kG
-ES
-ES
+Fr
+UA
+UA
 aX
-zD
-zD
-zD
+XS
+XS
+XS
 Sf
-uI
-ES
-kG
-ES
+Ag
+UA
+Fr
+UA
 aX
 WL
 Af
