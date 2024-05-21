@@ -138,6 +138,11 @@
 				return
 	return ..(M,user)
 
+//Drake Vest
+/obj/item/clothing/accessory/flak
+	name = "M70 flak vest"
+	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics...."
+	icon_state = "flak"
 
 //Medals
 /obj/item/clothing/accessory/medal
