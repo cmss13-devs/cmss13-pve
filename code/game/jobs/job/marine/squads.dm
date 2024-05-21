@@ -166,6 +166,7 @@
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
+	usable = TRUE
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
