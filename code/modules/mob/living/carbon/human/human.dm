@@ -1660,3 +1660,11 @@
 													// clamped to max 500
 	if(dizziness > 100 && !is_dizzy)
 		INVOKE_ASYNC(src, PROC_REF(dizzy_process))
+
+/mob/living/carbon/human/point_to_atom(atom/A, turf/T)
+	if(isitem(A))
+		var/obj/item/item = A
+		if(item == get_active_hand() || item == get_inactive_hand())
+			item.showoff(src)
+			return TRUE
+	return ..()

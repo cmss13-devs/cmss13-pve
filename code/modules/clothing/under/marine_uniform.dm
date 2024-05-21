@@ -527,7 +527,7 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing)
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/marine/smartgunner/upp)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/boiler
@@ -1047,6 +1047,20 @@
 	desc = "The officers uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
 	icon_state = "rmc_uniform_lt"
 	worn_state = "rmc_uniform_lt"
+
+/obj/item/clothing/under/marine/pve_mopp
+	name = "\improper M2 MOPP suit"
+	desc = "M2 MOPP suits are purpose built to defend the wearer against biological and radioactive contaminants, from nerve gas to nuclear fallout."
+	desc_lore = "The several-paragraph long expository pamphlet that usually comes with these is missing."
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_jumpsuit = NO_FLAGS
+	icon_state = "cbrn"
+	worn_state = "cbrn"
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
 
 /obj/item/clothing/under/marine/cbrn //CBRN MOPP suit
 	name = "\improper M3 MOPP suit"
