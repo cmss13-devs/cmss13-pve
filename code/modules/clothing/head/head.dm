@@ -688,6 +688,11 @@
 	desc = "This metal bucket appears to have been modified with padding and chin-straps, plus an eye-slit carved into the \"front\". Presumably, it is intended to be worn on the head, possibly for protection."
 	icon_state = "bucket"
 
+/obj/item/clothing/head/militia/helmet
+	name = "helmets"
+	desc = "This is a rather well-made helmet... for some reason painted in CLF colors. Huh."
+	icon_state = "clf_helmet"
+
 /obj/item/clothing/head/general
 	name = "\improper armored General cap"
 	desc = "A sturdy general officer's cap. More protective than it seems. Please don't ditch this for a helmet like a punk."
