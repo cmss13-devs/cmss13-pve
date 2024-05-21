@@ -1268,7 +1268,11 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-
+/obj/item/weapon/gun/rifle/lmg/stormbreakers
+	current_mag = /obj/item/ammo_magazine/rifle/lmg/holo_target
+	starting_attachment_types = list(
+		/obj/item/attachable/bipod,
+	)
 
 //-------------------------------------------------------
 
