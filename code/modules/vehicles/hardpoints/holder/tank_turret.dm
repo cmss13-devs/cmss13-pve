@@ -67,6 +67,12 @@
 	burst_delay = 1.0 SECONDS
 	extra_delay = 5.0 SECONDS
 
+/obj/item/hardpoint/holder/tank_turret/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+
 /obj/item/hardpoint/holder/tank_turret/update_icon()
 	var/broken = (health <= 0)
 	icon_state = "tank_turret_[broken]"
