@@ -32,6 +32,30 @@
 	is_resin_allowed = FALSE
 	flags_area = AREA_NOTUNNEL
 
+/area/shuttle/elevator_lv671/ground1
+	name = "\improper Hospital Elevator"
+	icon_state = "shuttle"
+	requires_power = TRUE
+	unlimited_power = FALSE
+
+/area/shuttle/elevator_lv671/underground1
+	name = "\improper Hospital Elevator"
+	icon_state = "shuttle2"
+	requires_power = TRUE
+	unlimited_power = FALSE
+
+/area/shuttle/elevator_lv671/ground2
+	name = "\improper Atmospheric Processor Elevator"
+	icon_state = "shuttle"
+	requires_power = TRUE
+	unlimited_power = FALSE
+
+/area/shuttle/elevator_lv671/underground2
+	name = "\improper Atmospheric Processor Elevator"
+	icon_state = "shuttle2"
+	requires_power = TRUE
+	unlimited_power = FALSE
+
 // A D M I N I S T R A T I O N
 
 /area/lv671/administration
