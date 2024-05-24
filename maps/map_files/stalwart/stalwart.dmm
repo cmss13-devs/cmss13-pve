@@ -1375,7 +1375,12 @@
 "lc" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/secure{
-	pixel_y = 10
+	pixel_y = 10;
+	fill_from_loc = 1
+	},
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1740,6 +1745,21 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/briefing)
+"ok" = (
+/obj/structure/prop/invuln{
+	icon = 'icons/obj/structures/doors/personaldoor.dmi';
+	icon_state = "door_locked";
+	desc = "It opens and closes.";
+	name = "Second Platoon"
+	},
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "ot" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/synthcloset)
@@ -1807,6 +1827,10 @@
 /area/golden_arrow/hangar)
 "oX" = (
 /obj/structure/surface/rack,
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -2464,6 +2488,9 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/briefing)
+"vc" = (
+/turf/closed/wall/almayer/reinforced,
+/area/golden_arrow/platoonprep)
 "vh" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -2540,6 +2567,10 @@
 /obj/item/clothing/suit/armor/vest,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
+	},
 /obj/item/spacecash/c1000,
 /turf/open/floor/wood/ship,
 /area/almayer/command/corporateliason)
@@ -2803,6 +2834,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/canteen)
+"yG" = (
+/obj/structure/foamed_metal,
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "yO" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Stalwart_Up";
@@ -2845,12 +2884,16 @@
 /obj/structure/closet,
 /obj/item/tool/soap/nanotrasen,
 /obj/item/reagent_container/spray/cleaner,
-/obj/item/clothing/gloves/fyellow{
-	name = "rubber gloves"
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
 	},
 /obj/item/reagent_container/glass/bucket/mopbucket,
 /obj/structure/sign/poster/hero/voteno{
 	pixel_x = -31
+	},
+/obj/item/clothing/gloves/fyellow{
+	name = "rubber gloves"
 	},
 /turf/open/floor/almayer{
 	dir = 5;
@@ -5363,6 +5406,18 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
+/area/golden_arrow/hangar)
+"VF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/colony/game,
+/obj/item/coin/platinum{
+	name = "The First challenge coin";
+	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides.";
+	layer = 2.7;
+	pixel_y = -8;
+	pixel_x = -4
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "VN" = (
 /obj/structure/cargo_container/hd/right{
@@ -13949,7 +14004,7 @@ Vj
 CE
 Bj
 jY
-ZX
+VF
 AE
 Cx
 Cx
@@ -22768,7 +22823,7 @@ jY
 HG
 AE
 RU
-RU
+yG
 cs
 kc
 SY
@@ -23073,7 +23128,7 @@ hS
 AE
 RU
 RU
-cs
+vc
 ug
 SY
 kY
@@ -26309,7 +26364,7 @@ ZY
 ZY
 iS
 QA
-jJ
+ok
 QA
 RL
 hV
