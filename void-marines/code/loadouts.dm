@@ -1146,3 +1146,52 @@
 		if(get_job_playtime(new_human.client, rank) > JOB_PLAYTIME_TIER_2)
 			return "MO2"
 	return paygrade
+
+/datum/equipment_preset/last_stand/platoon_lt
+	name = "Platoon Commander (LAST STAND)"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	idtype = /obj/item/card/id/silver
+	assignment = JOB_SO
+	rank = JOB_SO
+	paygrade = "MO2"
+	role_comm_title = "PltCo"
+	minimum_age = 25
+	skills = /datum/skills/SO
+	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
+	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	var/access_list = ACCESS_LIST_MARINE_MAIN
+
+/datum/equipment_preset/last_stand/platoon_lt/New()
+	. = ..()
+	access = get_access(access_list)
+
+/datum/equipment_preset/last_stand/platoon_lt/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/satchel
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/mod88(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/drillhat(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78(new_human.back), WEAR_IN_BACK)
+
+/datum/equipment_preset/last_stand/platoon_lt/load_status(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+
+	if(!new_human.client)
+		return
+
+	add_verb(new_human.client, /client/proc/commander_rename_platoon)
