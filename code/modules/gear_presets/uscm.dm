@@ -77,9 +77,9 @@
 	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/pfc/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -151,9 +151,9 @@
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/sg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -494,9 +494,9 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 
 /datum/equipment_preset/uscm/tl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -586,9 +586,9 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 
 /datum/equipment_preset/uscm/leader/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
