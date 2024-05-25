@@ -1862,7 +1862,8 @@
 /area/golden_arrow/cryo_cells)
 "gL" = (
 /obj/structure/shuttle/part/dropship1/nose_front_left{
-	name = "\improper Tripoli"
+	name = "\improper Tripoli";
+	opacity = 0
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -2127,7 +2128,8 @@
 /area/golden_arrow/hangar)
 "hG" = (
 /obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 30
+	pixel_y = 30;
+	desc = "One of the few remaining objects recovered from the original Golden Arrow just prior to it's destruction in 2181. It looks like it has seen better days, but it's still in pretty good shape all things considering."
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -2710,8 +2712,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 8;
 	name = "\improper Shared Office";
-	req_one_access_txt = "12;32";
-	req_access = list()
+	req_access = null
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -2941,7 +2942,8 @@
 /area/golden_arrow/hangar)
 "kl" = (
 /obj/structure/shuttle/part/dropship1/nose_front_right{
-	name = "\improper Tripoli"
+	name = "\improper Tripoli";
+	opacity = 0
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -3439,7 +3441,8 @@
 	dir = 1;
 	name = "\improper Assembly Room";
 	req_one_access_txt = "19;12";
-	req_access = list()
+	req_access = list();
+	id_tag = "assemblyroom"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4001,10 +4004,10 @@
 /area/golden_arrow/hangar)
 "nS" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/emails{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "nU" = (
@@ -4642,6 +4645,13 @@
 /obj/structure/sign/safety/conference_room{
 	pixel_y = 29
 	},
+/obj/structure/machinery/door_control{
+	id = "assemblyroom";
+	name = "door control button";
+	pixel_y = 30;
+	pixel_x = 8;
+	needs_power = 0
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "qz" = (
@@ -5046,7 +5056,8 @@
 "rX" = (
 /obj/structure/cargo_container/wy/right{
 	pixel_y = -17;
-	opacity = 0
+	opacity = 0;
+	layer = 2.9
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -5613,7 +5624,8 @@
 	pixel_x = -27;
 	icon_state = "poster15";
 	name = "pulse rifle pinup";
-	desc = "The Armat Battlefield Systems Model 41 Derivative 'A' Pulse Rifle Mark One. The only pinup you'll ever need."
+	desc = "The Armat Battlefield Systems Model 41 Derivative 'A' Pulse Rifle Mark One. The only pinup you'll ever need.";
+	serial_number = 15
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -8019,7 +8031,8 @@
 "CQ" = (
 /turf/closed/shuttle/midway{
 	icon_state = "94";
-	name = "\improper Tripoli"
+	name = "\improper Tripoli";
+	opacity = 0
 	},
 /area/golden_arrow/hangar)
 "CV" = (
@@ -8320,7 +8333,8 @@
 	},
 /obj/structure/cargo_container/wy/mid{
 	pixel_y = -17;
-	opacity = 0
+	opacity = 0;
+	layer = 2.9
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -8416,6 +8430,10 @@
 /obj/item/ashtray/plastic{
 	pixel_y = -3;
 	pixel_x = 10
+	},
+/obj/item/device/megaphone{
+	pixel_x = 11;
+	pixel_y = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -9432,6 +9450,13 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/machinery/door_control{
+	id = "assemblyroom";
+	name = "door control button";
+	pixel_y = -20;
+	pixel_x = -6;
+	needs_power = 0
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -10493,7 +10518,8 @@
 "LS" = (
 /obj/structure/cargo_container/wy/left{
 	pixel_y = -17;
-	opacity = 0
+	opacity = 0;
+	layer = 2.9
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -11069,10 +11095,10 @@
 /area/golden_arrow/hangar)
 "NQ" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/emails{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "NR" = (
@@ -11257,10 +11283,6 @@
 /area/golden_arrow/hangar)
 "Or" = (
 /obj/structure/surface/table/almayer,
-/obj/item/device/megaphone{
-	pixel_x = 11;
-	pixel_y = 7
-	},
 /obj/item/prop/tableflag/uscm{
 	pixel_y = -1;
 	pixel_x = -12
@@ -11787,7 +11809,9 @@
 /area/golden_arrow/prep_hallway)
 "Qz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/supply_drop/echo,
+/obj/structure/supply_drop/echo{
+	mouse_opacity = 0
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform{
 	dir = 8
@@ -12154,7 +12178,9 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "RS" = (
-/obj/structure/machinery/autodoc_console,
+/obj/structure/machinery/autodoc_console{
+	pixel_y = 6
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3;
@@ -12640,7 +12666,9 @@
 	},
 /area/golden_arrow/hangar)
 "Tq" = (
-/obj/structure/machinery/medical_pod/sleeper,
+/obj/structure/machinery/medical_pod/sleeper{
+	pixel_y = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -14423,7 +14451,8 @@
 "Zj" = (
 /turf/closed/shuttle/midway{
 	icon_state = "92";
-	name = "\improper Tripoli"
+	name = "\improper Tripoli";
+	opacity = 0
 	},
 /area/golden_arrow/hangar)
 "Zk" = (
