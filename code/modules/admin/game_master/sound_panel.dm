@@ -18,9 +18,17 @@
 	var/static/list/zlevel_lookup
 	var/static/list/group_list
 	var/client/holder
+	var/sound_path = ""
+	var/sound_category
+	var/sound_volume = 50
+	var/sound_pitch = 1
+	var/sound_duration = 1
 	var/mob/target_player
-	var/loc_click_intercept = FALSE
 	var/turf/target_loc
+	var/loc_click_intercept = FALSE
+	var/loc_click_play = FALSE
+	var/target_zlevel
+	var/target_group
 
 /datum/sound_panel/New(user)
 	//. = ..()
@@ -37,6 +45,10 @@
 			zlevel_lookup[level.name] = level.z_value
 
 		group_list = list("Global", "Humans", "Xenos", "Ghosts")
+
+	sound_category = category_list[1]
+	target_zlevel = zlevel_list[1]
+	target_group = group_list[1]
 
 	if(isclient(user))
 		holder = user
@@ -89,9 +101,17 @@
 /datum/sound_panel/ui_data(mob/user)
 	var/list/data = list()
 
+	data["sound_path"] = sound_path
+	data["sound_category"] = sound_category
+	data["sound_volume"] = sound_volume
+	data["sound_pitch"] = sound_pitch
+	data["sound_duration"] = sound_duration
 	data["target_player_desc"] = target_player?.name
 	data["target_loc_desc"] = target_loc ? "[target_loc.name]: [target_loc.x],[target_loc.y],[target_loc.z]" : null
 	data["loc_click_intercept"] = loc_click_intercept
+	data["loc_click_play"] = loc_click_play
+	data["target_zlevel"] = target_zlevel
+	data["target_group"] = target_group
 
 	return data
 
@@ -124,6 +144,17 @@
 
 		target_loc = chosen_loc
 		SStgui.update_uis(src)
+
+		if(loc_click_play)
+			if(!sound_path)
+				return
+
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
+
+			playsound(target_loc, sound_datum, sound_volume, vol_cat = category_lookup[sound_category])
+
 		return TRUE
 
 /*
@@ -141,24 +172,48 @@
 		return
 
 	switch(action)
-		if("play_preview")
+		if("set_sound_path")
 			var/sound = params["sound_path"]
 			if(!(sound in sound_list))
 				return
-
-			var/category = category_lookup[params["sound_category"]]
-			if(!category)
+			sound_path = sound
+			return TRUE
+		if("set_sound_category")
+			var/category = params["sound_category"]
+			if(isnull(category_lookup[category]))
+				return
+			sound_category = category
+			return TRUE
+		if("set_sound_volume")
+			sound_volume = clamp(params["sound_volume"], 0, 100)
+			return TRUE
+		if("set_sound_pitch")
+			sound_pitch = clamp(params["sound_pitch"], 0.5, 2)
+			return TRUE
+		if("set_sound_duration")
+			sound_duration = clamp(params["sound_duration"], 0.5, 2)
+			return TRUE
+		if("set_target_zlevel")
+			var/target_z = params["target_zlevel"]
+			if(isnull(zlevel_lookup[target_z]))
+				return
+			target_zlevel = target_z
+			return TRUE
+		if("set_target_group")
+			var/group = params["target_group"]
+			if(!(group in group_list))
+				return
+			target_group = group
+			return TRUE
+		if("play_preview")
+			if(!sound_path)
 				return
 
-			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
-			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
-			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
 
-			var/sound/sound_datum = sound(sound)
-			sound_datum.frequency = 1 / duration
-			sound_datum.pitch = pitch * duration
-
-			playsound_client(holder, sound_datum, vol = volume, vol_cat = category, channel = SOUND_CHANNEL_TEST)
+			playsound_client(holder, sound_datum, vol = sound_volume, vol_cat = category_lookup[sound_category], channel = SOUND_CHANNEL_TEST)
 			return TRUE
 		if("stop_preview")
 			var/sound/sound_datum = sound()
@@ -174,95 +229,52 @@
 			target_player = chosen_player
 			return TRUE
 		if("play_client")
-			var/sound = params["sound_path"]
-			if(!(sound in sound_list))
+			if(!sound_path)
 				return
-
-			var/category = category_lookup[params["sound_category"]]
-			if(!category)
-				return
-
-			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
-			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
-			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
-
-			var/sound/sound_datum = sound(sound)
-			sound_datum.frequency = 1 / duration
-			sound_datum.pitch = pitch * duration
-
 			if(QDELETED(target_player))
 				return
 
-			playsound_client(target_player.client, sound_datum, vol = volume, vol_cat = category)
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
+
+			playsound_client(target_player.client, sound_datum, vol = sound_volume, vol_cat = category_lookup[sound_category])
 			return TRUE
-		if("toggle_loc_click")
+		if("toggle_loc_click_intercept")
 			loc_click_intercept = !loc_click_intercept
 			return TRUE
+		if("toggle_loc_click_play")
+			loc_click_play = !loc_click_play
+			return TRUE
 		if("play_local")
-			var/sound = params["sound_path"]
-			if(!(sound in sound_list))
+			if(!sound_path)
 				return
-
-			var/category = category_lookup[params["sound_category"]]
-			if(!category)
-				return
-
-			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
-			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
-			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
-
-			var/sound/sound_datum = sound(sound)
-			sound_datum.frequency = 1 / duration
-			sound_datum.pitch = pitch * duration
-
 			if(QDELETED(target_loc))
 				return
 
-			playsound(target_loc, sound_datum, volume, vol_cat = category)
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
+
+			playsound(target_loc, sound_datum, sound_volume, vol_cat = category_lookup[sound_category])
 			return TRUE
 		if("play_zlevel")
-			var/sound = params["sound_path"]
-			if(!(sound in sound_list))
+			if(!sound_path)
 				return
 
-			var/category = category_lookup[params["sound_category"]]
-			if(!category)
-				return
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
 
-			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
-			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
-			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
-
-			var/sound/sound_datum = sound(sound)
-			sound_datum.frequency = 1 / duration
-			sound_datum.pitch = pitch * duration
-
-			var/target_z = zlevel_lookup[params["target_zlevel"]]
-			if(isnull(target_z))
-				return
-
-			playsound_z(list(target_z), sound_datum, volume, vol_cat = category)
+			playsound_z(list(zlevel_lookup[target_zlevel]), sound_datum, sound_volume, vol_cat = category_lookup[sound_category])
 			return TRUE
 		if("play_group")
-			var/sound = params["sound_path"]
-			if(!(sound in sound_list))
+			if(!sound_path)
 				return
 
-			var/category = category_lookup[params["sound_category"]]
-			if(!category)
-				return
-
-			var/volume = clamp(text2num(params["sound_volume"]), 0, 100)
-			var/pitch = clamp(text2num(params["sound_pitch"]), 0.5, 2)
-			var/duration = clamp(text2num(params["sound_duration"]), 0.5, 2)
-
-			var/sound/sound_datum = sound(sound)
-			sound_datum.frequency = 1 / duration
-			sound_datum.pitch = pitch * duration
-
-			var/target_group = params["target_group"]
-			if(!(target_group in group_list))
-				return
+			var/sound/sound_datum = sound(sound_path)
+			sound_datum.frequency = 1 / sound_duration
+			sound_datum.pitch = sound_pitch * sound_duration
 
 			var/list/targets = list()
 			switch(target_group)
@@ -276,7 +288,7 @@
 					targets = GLOB.observer_list + GLOB.dead_mob_list
 
 			for(var/mob/target as anything in targets)
-				playsound_client(target.client, sound_datum, vol = volume, vol_cat = category)
+				playsound_client(target.client, sound_datum, vol = sound_volume, vol_cat = category_lookup[sound_category])
 			return TRUE
 
 /*
