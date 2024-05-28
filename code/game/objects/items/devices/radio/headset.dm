@@ -624,8 +624,6 @@
 
 //############################## BRAVO ###############################
 /obj/item/device/radio/headset/almayer/marine/bravo
-	name = "marine bravo radio headset"
-	desc = "This is used by Bravo squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	icon_state = "bravo_headset"
 	frequency = BRAVO_FREQ
 
