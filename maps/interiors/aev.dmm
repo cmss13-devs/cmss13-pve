@@ -93,7 +93,7 @@
 	layer = 3.1;
 	name = "Tank Telephone";
 	phone_category = "Vehicles";
-	phone_id = "M34A2 Longstreet Light Tank";
+	phone_id = "M34E1 Armored Engineering Vehicle";
 	pixel_x = 14;
 	pixel_y = -21
 	},
