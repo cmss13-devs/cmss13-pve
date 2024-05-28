@@ -126,7 +126,6 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
     this.setState({
       query: value,
     });
-    this.filteredItems = this.getFilteredItems(this.parsedItems);
 
     /*
     if (this.state.selection.toLowerCase().includes(value.toLowerCase())) {
@@ -175,53 +174,49 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
       return a.id - b.id;
     });
 
-  getFilteredItems(items: ListSearchBoxEntry[]) {
-    return items.filter((item, index) => {
-      if (index === 0) logger.log('filtering items');
-      return item.fileName
-        .toLowerCase()
-        .includes(this.state.query.toLowerCase());
-    });
-  }
-
-  filteredItems = this.getFilteredItems(this.parsedItems);
-
   render() {
     logger.log('in render');
     return (
       <Fragment>
         <Stack.Item grow>
           <Section fill scrollable title="File">
-            {this.filteredItems.map((item) => {
-              return (
-                <Button
-                  color="transparent"
-                  content={item.fileName}
-                  fluid
-                  // id={item.id}
-                  key={item.id}
-                  my={0}
-                  onClick={() => this.handleSelectionChange(item.fullPath)}
-                  selected={item.fullPath === this.props.selection}
-                  style={{
-                    animation: 'none',
-                    transition: 'none',
-                  }}
-                  // tabIndex={undefined}
-                >
-                  <div
+            {this.parsedItems
+              .filter((item, index) => {
+                if (index === 0) logger.log('filtering items');
+                return item.fileName
+                  .toLowerCase()
+                  .includes(this.state.query.toLowerCase());
+              })
+              .map((item) => {
+                return (
+                  <Button
+                    color="transparent"
+                    content={item.fileName}
+                    fluid
+                    // id={item.id}
+                    key={item.id}
+                    my={0}
+                    onClick={() => this.handleSelectionChange(item.fullPath)}
+                    selected={item.fullPath === this.props.selection}
                     style={{
-                      'font-size': '0.75rem',
-                      opacity: 0.5,
-                      position: 'absolute',
-                      right: 0,
-                      top: 0,
-                    }}>
-                    {item.dirName}
-                  </div>
-                </Button>
-              );
-            })}
+                      animation: 'none',
+                      transition: 'none',
+                    }}
+                    // tabIndex={undefined}
+                  >
+                    <div
+                      style={{
+                        'font-size': '0.75rem',
+                        opacity: 0.5,
+                        position: 'absolute',
+                        right: 0,
+                        top: 0,
+                      }}>
+                      {item.dirName}
+                    </div>
+                  </Button>
+                );
+              })}
           </Section>
         </Stack.Item>
         <Stack.Item>
