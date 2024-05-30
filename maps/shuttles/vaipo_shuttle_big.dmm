@@ -663,7 +663,9 @@
 	storedinfo = list("Good day, team leader. Today you are working under the disguise of Venelli-Aegis Incorporated.", "Your mission for today is to examine few POIs.", "Look for any clues or intel: we suspect the Company has something to do with supplying terrorists on LV-701.", "Marine garrison on this planet is sparse, Operation Odolla Onslaught desperately needs more manpower, but USCM can't afford it.", "We've been tasked by TIS to investigate few CLF caches, some of which haven't been discovered yet. They will appear on your map shortly.", "And lastly - there is still XX-121 presence on this planet. Make sure your men are prepared.", "You got your payment already.");
 	timestamp = list(50, 100, 150, 200, 250, 300, 350);
 	name = "mission tape";
-	icon_state = "cassette_blue"
+	icon_state = "cassette_blue";
+	storedinfo_otherside = list("... (Seems like this side is empty. Gotta flip the tape...)");
+	timestamp_otherside = list(10)
 	},
 /obj/item/device/taperecorder/empty{
 	pixel_y = 12;
