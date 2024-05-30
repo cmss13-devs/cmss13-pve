@@ -1478,7 +1478,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NO_FLAGS
-	flags_marine_helmet = NO_FLAGS
+	flags_marine_helmet = HELMET_GARB_OVERLAY
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine/vaipo
