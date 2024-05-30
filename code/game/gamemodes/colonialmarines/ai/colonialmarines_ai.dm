@@ -103,8 +103,14 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE)))
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE),\
+		/datum/squad/marine/vaipo = list(/datum/job/marine/standard/ai/vaipo = JOB_SQUAD_MARINE,\
+		/datum/job/marine/specialist/vaipo = JOB_SQUAD_SPECIALIST,\
+		/datum/job/marine/leader/ai/vaipo = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/vaipo = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/vaipo = JOB_SQUAD_SMARTGUN)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON, /datum/squad/marine/bravo = list(JOB_SO, JOB_SQUAD_LEADER, JOB_SQUAD_MEDIC, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE)))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON, /datum/squad/marine/bravo = list(JOB_SO, JOB_SQUAD_LEADER, JOB_SQUAD_MEDIC, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE),\
+												/datum/squad/marine/vaipo = ROLES_AI_VAIPO))

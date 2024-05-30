@@ -827,6 +827,10 @@
 	starting_attachment_types = list(/obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 
+/obj/item/weapon/gun/rifle/mar40/carbine/tactical/pve
+	starting_attachment_types = list(/obj/item/attachable/angledgrip, /obj/item/attachable/reflex)
+	current_mag = /obj/item/ammo_magazine/rifle/mar40/extended
+
 /obj/item/weapon/gun/rifle/mar40/lmg
 	name = "\improper MAR-50 light machine gun"
 	desc = "A cheap, reliable LMG chambered in 7.62x39mm. Commonly found in the hands of slightly better funded criminals."
@@ -1800,6 +1804,38 @@
 	)
 	random_under_chance = 50
 	random_spawn_under = list(/obj/item/attachable/flashlight/grip)
+
+/obj/item/weapon/gun/rifle/l42a/abr40/tactical/pve
+	attachable_allowed = list(
+		//Barrel,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		//Rail,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/hunting,
+		/obj/item/attachable/scope/mini_iff,
+		//Under,
+		/obj/item/attachable/flashlight/grip,
+		//Stock,
+		/obj/item/attachable/stock/carbine,
+		/obj/item/attachable/stock/carbine/wood,
+		/obj/item/attachable/stock/carbine/wood/tactical,
+	)
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/tactical, /obj/item/attachable/suppressor, /obj/item/attachable/scope/mini_iff)
+	random_spawn_rail = list()
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/heap
+
+/obj/item/weapon/gun/rifle/l42a/abr40/tactical/pve/set_gun_config_values()
+	..()
+	damage_mult = 1.8
+
 
 //=ROYAL MARINES=\\
 
