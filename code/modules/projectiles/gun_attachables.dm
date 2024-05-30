@@ -2025,7 +2025,7 @@ Defined in conflicts.dm of the #defines folder.
 	burst_scatter_mod = -2
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_3
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_6
-	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_8
+	accuracy_unwielded_mod = 2
 	recoil_unwielded_mod = -8
 	recoil_mod = -RECOIL_AMOUNT_TIER_5
 
