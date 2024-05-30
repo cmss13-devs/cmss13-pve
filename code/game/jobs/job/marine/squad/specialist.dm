@@ -42,6 +42,8 @@ AddTimelock(/datum/job/marine/specialist, list(
 	gear_preset = /datum/equipment_preset/uscm/spec/vaipo
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the very rare and valuable weapon expert</a>, trained to use special equipment. You can serve a variety of roles, so choose carefully."
 
+/datum/job/marine/specialist/vaipo/get_total_positions(latejoin = 0)
+	return total_positions
 
 /obj/effect/landmark/start/marine/spec
 	name = JOB_SQUAD_SPECIALIST
