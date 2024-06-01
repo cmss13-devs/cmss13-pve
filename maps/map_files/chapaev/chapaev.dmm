@@ -405,6 +405,32 @@
 	icon_state = "cyan1"
 	},
 /area/golden_arrow/medical)
+"dv" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/bayonet/upp,
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 20"RM" = (/obj/structure/surface/table/reinforced/almayer_B,/obj/item/attachable/bayonet/upp,/obj/effect/decal/cleanable/blood/drip{layer = 6;
+	plane = 2.8;
+	pixel_y = 20
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "dx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -860,6 +886,27 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
+"hS" = (
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;237";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "hV" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 4
@@ -1469,6 +1516,19 @@
 "oB" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/hangar)
+"oF" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01;
+	name = "AK-500 ammo drum (7,62mm Caseless)";
+	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	},
+/obj/item/device/motiondetector/hacked,
+/obj/item/defenses/handheld/sentry/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "oH" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -1990,15 +2050,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/platoon_sergeant)
-"te" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/gun_rack/type71,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "tn" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/accessory/armband/med,
@@ -2063,6 +2114,53 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/dorms)
+"tK" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;238";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/closet/secure_closet{
+	req_access_txt = "243;238";
+	name = "machinegunner locker"
+	},
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/storage/belt/marine/smartgunner/upp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
+/obj/item/weapon/gun/pkp/iff,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_sergeant)
 "tL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
@@ -2293,32 +2391,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/platoon_sergeant)
-"vZ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/attachable/bayonet/upp,
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 20"RM" = (/obj/structure/surface/table/reinforced/almayer_B,/obj/item/attachable/bayonet/upp,/obj/effect/decal/cleanable/blood/drip{layer = 6;
-	plane = 2.8;
-	pixel_y = 20
-	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 16;
-	pixel_x = -7
-	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 16;
-	pixel_x = -7
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "wc" = (
 /obj/item/stack/sheet/metal{
 	amount = 50
@@ -2689,19 +2761,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/prep_hallway)
-"Ak" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
-/obj/item/device/motiondetector/hacked,
-/obj/item/defenses/handheld/sentry/upp,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "Ao" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -2911,6 +2970,34 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"BV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
+	},
+/obj/item/clothing/shoes/marine/upp,
+/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/device/radio/headset/distress/UPP,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "Ce" = (
 /obj/structure/machinery/power/fusion_engine{
 	name = "\improper S-52 fusion reactor 17"
@@ -3053,15 +3140,6 @@
 "CM" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/dorms)
-"CN" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/gun_rack/type71,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "CO" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/strata{
@@ -3535,19 +3613,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
-"Hk" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01;
-	name = "AK-500 ammo drum (7,62mm Caseless)";
-	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	},
-/obj/item/device/motiondetector/hacked,
-/obj/item/defenses/handheld/sentry/upp,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_two)
 "Hp" = (
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3633,33 +3698,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
-"Im" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/closet/secure_closet{
-	req_access_txt = "243;238";
-	name = "machinegunner locker"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/storage/belt/gun/smartgunner/upp,
-/obj/item/storage/belt/marine/smartgunner/upp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/platoon_sergeant)
 "Io" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	id = "Delta_1";
@@ -3690,27 +3728,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/engineering)
-"IR" = (
-/obj/structure/closet/secure_closet{
-	req_access_txt = "243;237";
-	name = "machinegunner locker"
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/storage/belt/gun/smartgunner/upp,
-/obj/item/storage/belt/marine/smartgunner/upp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
-/obj/item/weapon/gun/pkp/iff,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/squad_one)
 "IS" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/dorms)
@@ -3878,6 +3895,15 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"Kh" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/gun_rack/type71,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_two)
 "Ki" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -4521,6 +4547,19 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/platoon_commander_rooms)
+"RR" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01;
+	name = "AK-500 ammo drum (7,62mm Caseless)";
+	desc = "An ammo drum of 500 7,62mm caseless rounds for the UPPA 32-H Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	},
+/obj/item/device/motiondetector/hacked,
+/obj/item/defenses/handheld/sentry/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "Sc" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -4732,6 +4771,51 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/dorms)
+"TW" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/bayonet/upp,
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 20"RM" = (/obj/structure/surface/table/reinforced/almayer_B,/obj/item/attachable/bayonet/upp,/obj/effect/decal/cleanable/blood/drip{layer = 6;
+	plane = 2.8;
+	pixel_y = 20
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	layer = 6;
+	plane = 2.8;
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper/crumpled/bloody{
+	pixel_y = 6
+	},
+/obj/item/attachable/bayonet/upp,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper/crumpled/bloody{
+	pixel_y = 6
+	},
+/obj/item/attachable/bayonet/upp,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/squad_one)
 "Ua" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 4;
@@ -5187,34 +5271,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/briefing)
-"XD" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
 "XH" = (
 /obj/structure/janitorialcart,
 /obj/item/reagent_container/glass/bucket{
@@ -5374,38 +5430,11 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"ZZ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/attachable/bayonet/upp,
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 20"RM" = (/obj/structure/surface/table/reinforced/almayer_B,/obj/item/attachable/bayonet/upp,/obj/effect/decal/cleanable/blood/drip{layer = 6;
-	plane = 2.8;
-	pixel_y = 20
+"ZY" = (
+/obj/structure/machinery/light{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 16;
-	pixel_x = -7
-	},
-/obj/effect/decal/cleanable/blood/drip{
-	layer = 6;
-	plane = 2.8;
-	pixel_y = 16;
-	pixel_x = -7
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper/crumpled/bloody{
-	pixel_y = 6
-	},
-/obj/item/attachable/bayonet/upp,
+/obj/structure/gun_rack/type71,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -12629,8 +12658,8 @@ tZ
 tZ
 tZ
 ei
-ZZ
-vZ
+TW
+dv
 dU
 dU
 dU
@@ -12933,8 +12962,8 @@ kb
 ic
 Jc
 ww
-CN
-CN
+ZY
+ZY
 dU
 Ef
 dU
@@ -12947,8 +12976,8 @@ hq
 vf
 vW
 NU
-te
-te
+Kh
+Kh
 Hp
 XL
 Hp
@@ -13085,27 +13114,27 @@ TB
 VP
 TB
 ww
-IR
+hS
 IW
 dU
 MH
 dU
-Ak
-Ak
+RR
+RR
 ww
 LL
 vW
 es
 Rm
-Im
+tK
 NU
 bw
 bw
 Hp
 Jt
 Hp
-Hk
-Hk
+oF
+oF
 CM
 Tz
 Qr
@@ -14772,7 +14801,7 @@ BK
 BK
 wH
 VL
-XD
+BV
 BK
 iO
 bC
