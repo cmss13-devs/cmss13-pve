@@ -9,8 +9,6 @@
 	health = 2000
 	firing_arc = 90
 
-	origins = list(0, -3)
-
 	ammo = new /obj/item/ammo_magazine/hardpoint/ltaaap_minigun
 	max_clips = 2
 
@@ -51,6 +49,12 @@
 	var/stage_delay_mult = 1
 	/// When it was last fired, related to world.time.
 	var/last_fired = 0
+
+/obj/item/hardpoint/primary/minigun/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
 
 /obj/item/hardpoint/primary/minigun/set_fire_delay(value)
 	fire_delay = value
