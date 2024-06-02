@@ -646,7 +646,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/flashlight
 	name = "rail flashlight"
-	desc = "A flashlight, for rails, on guns. Can be toggled on and off. A better light source than standard M3 pattern armor lights."
+	desc = "Railmounted flashlight. Pretty generic. Surprisingly high intensity, as it's a better light source than the suit lamps of most armor systems."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "flashlight"
 	attach_icon = "flashlight_a"
@@ -899,8 +899,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "sniperscope"
 	attach_icon = "sniperscope_a"
-	desc = "An ARMAT S8 telescopic eye piece. Fixed at 4x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
-	desc_lore = "An intermediate-power Armat scope designated as the AN/PVQ-31 4x Optic. Fairly basic, but both durable and functional... enough. 780 meters is about as far as one can push the 10x24mm cartridge, really."
+	desc = "An ARMAT S8 scope, type designation AN/PVQ-31. Fixed 4x zoom, reduces fire rate and increases wield time but increases accuracy while scoped."
 	slot = "rail"
 	aim_speed_mod = SLOWDOWN_ADS_SCOPE //Extra slowdown when wielded
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -988,6 +987,9 @@ Defined in conflicts.dm of the #defines folder.
 
 #define ZOOM_LEVEL_2X 0
 #define ZOOM_LEVEL_4X 1
+
+/obj/item/attachable/scope/union
+	name = "S8 4x telescopic scope"
 
 /obj/item/attachable/scope/variable_zoom
 	name = "S10 variable zoom telescopic scope"
@@ -1094,6 +1096,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/mini/remove_scoped_buff(mob/living/carbon/user, obj/item/weapon/gun/G)
 	G.slowdown -= dynamic_aim_slowdown
 	..()
+
+
 
 /obj/item/attachable/scope/mini/flaregun
 	wield_delay_mod = 0
