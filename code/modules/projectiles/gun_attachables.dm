@@ -250,7 +250,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/suppressor
 	name = "suppressor"
-	desc = "A small tube with exhaust ports to expel noise and gas.\n Does not completely silence a weapon, but does make it much quieter and a little more accurate and stable at the cost of slightly reduced damage."
+	desc = "Small muzzle device that reduces flash and noise with special internal geometry.\n Reduces noise of the shot, increases accuracy and stability, but penalizes damage marginally."
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "suppressor"
 	slot = "muzzle"
@@ -278,7 +278,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "The standard-issue bayonet of the Colonial Marines. You can slide this knife into your boots, or attach it to the end of a rifle."
+	desc = "USCMC standard issue combat knife. Can be put into boot holster or affixed to the bayonet lug of a rifle. Can also be used to extract shrapnel..."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
 	throwforce = MELEE_FORCE_NORMAL
@@ -375,7 +375,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
-	desc = "The lengthened barrel speeds up and stabilizes the bullet, increasing velocity and accuracy."
+	desc = "Longer barrel reduces unburnt powder, improving muzzle velocity and accuracy."
 	slot = "muzzle"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "ebarrel"
@@ -608,8 +608,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/reddot
 	name = "S5 red-dot sight"
-	desc = "An ARMAT S5 red-dot sight. A zero-magnification optic that offers faster, and more accurate target acquisition."
-	desc_lore = "An all-weather collimator sight, designated as the AN/PVQ-64 Dot Sight. Equipped with a sunshade to increase clarity in bright conditions and resist weathering. Compact and efficient, a marvel of military design, until you realize that this is actually just an off-the-shelf design that got a military designation slapped on."
+	desc = "An ARMAT S5 red-dot, type designated as the AN/PVQ-62 Dot Sight. Zero-magnification optic equipped with a sunshade, for better clarity under bright conditions and weather resistance. Unobtrusive and compact, increases wielded accuracy."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "reddot"
 	attach_icon = "reddot_a"
@@ -621,10 +620,14 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
+/obj/item/attachable/reddot/union
+	. = ..()
+	name = "EKP-9-M Red Dot Sight"
+	desc = "Cutting edge UPP sight with automated reticle correction for a fixed zero point. Increases accuracy significantly. \nStatistically identical to the S5 Dot Sight."
+
 /obj/item/attachable/reflex
 	name = "S6 reflex sight"
-	desc = "An ARMAT S6 reflex sight. A zero-magnification alternative to iron sights with a more open optic window when compared to the S5 red-dot. Helps to reduce scatter during automated fire."
-	desc_lore = "A simple folding reflex sight designated as the AN/PVG-72 Reflex Sight, compatible with most rail systems. Bulky and built to last, it can link with military HUDs for limited point-of-aim calculations."
+	desc = "An ARMAT S6 reflex sight, type designated as the AN/PVG-72 Reflex. Zero-magnification alternative to irons, decreases scatter during burst fire. Can link with mil-HUDs for a limited CCIP.
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "reflex"
 	attach_icon = "reflex_a"
@@ -638,6 +641,9 @@ Defined in conflicts.dm of the #defines folder.
 	burst_scatter_mod = -1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
+/obj/item/attachable/reflex/union
+	name = "PK-12 Reflex Sight"
+	desc = "Reflector type gunsight compatible with most standard issue UPP firearms. Durable but the power supply is notoriously unreliable. Reduces scatter significantly and boosts accuracy slightly. \nStatistically identical to the S6 Reflex Sight."
 
 /obj/item/attachable/flashlight
 	name = "rail flashlight"
@@ -3181,6 +3187,10 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 
+/obj/item/attachable/verticalgrip/union
+	name = "RK-5 Vertical Grip"
+	desc = "Sturdy grip positioned at optimal place offers enhanced stability in rapid fire. Increases weapon size, penalizes one handed fire, improves scatter and accuracy while wielded."
+
 /obj/item/attachable/angledgrip
 	name = "angled grip"
 	desc = "An angled foregrip that improves weapon ergonomics resulting in faster wielding time. \nHowever, it also increases weapon size."
@@ -3191,6 +3201,10 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 1
 	slot = "under"
 	pixel_shift_x = 20
+
+/obj/item/attachable/angledgrip/union
+	name = "RK-9 Vertical Grip"
+	desc = "Ergonomic grip decreases time for shouldering the weapon. Increases weapon size, accelerates wield speed."
 
 /obj/item/attachable/gyro
 	name = "gyroscopic stabilizer"
@@ -3219,8 +3233,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/lasersight
 	name = "laser sight"
-	desc = "A laser sight that attaches to the underside of most weapons. Increases accuracy and decreases scatter, especially while one-handed."
-	desc_lore = "A standard visible-band laser module designated as the AN/PEQ-42 Laser Sight. Can be mounted onto any firearm that has a lower rail large enough to accommodate it."
+	desc = "Standard issue visible-band underbarrel laser module, type designation AN/PEQ-42. Increases accuracy and decreases scatter, especially while one-handed. Also improves handling on the move."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "lasersight_a"
@@ -3236,6 +3249,9 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 
+/obj/item/attachable/lasersight/union
+	name = "Zvezda Laser Module"
+	desc = "Visible band 512nm green laser, compatible with NVG and IR. Bears striking resemblance to an old Weyland Yutani offering... Decreases scatter, especially onehanded, slightly boosts accuracy. "
 
 /obj/item/attachable/bipod
 	name = "bipod"
