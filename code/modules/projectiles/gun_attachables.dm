@@ -540,6 +540,11 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 14
 	hud_offset_mod = -4
 
+/obj/item/attachable/smartbarrel/suppressed
+	name = "suppressed smartgun barrel"
+	icon_state = "silenced_smartgun"
+	gun_traits = list(TRAIT_GUN_SILENCED)
+
 // Mateba barrels
 
 /obj/item/attachable/mateba
