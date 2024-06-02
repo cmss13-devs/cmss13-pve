@@ -905,10 +905,6 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/clothing/mask/cigarette/cigar
 	cost = 2
 
-/datum/gear/smoking/pack_emerald_green
-	display_name = "Pack Of Emerald Greens"
-	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
-
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
