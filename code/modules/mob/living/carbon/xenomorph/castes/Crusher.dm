@@ -83,7 +83,7 @@
 	. = ..()
 	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "metalbang")
 
-	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30)
+	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)

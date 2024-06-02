@@ -611,7 +611,7 @@
 /area/shuttle/midway)
 "SS" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
-	dir = 1;
+	dir = 2;
 	id = "port_door"
 	},
 /turf/open/shuttle/dropship{
