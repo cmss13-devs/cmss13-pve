@@ -806,6 +806,10 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_NOTICE("Hold on there cowboy, that grip is bolted on. You are unable to modify it."))
 	return
 
+/obj/item/attachable/flashlight/grip/union
+	name = "RK-9 Flashlight Grip"
+	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
+
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
 	name = "VP78 Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
@@ -989,7 +993,8 @@ Defined in conflicts.dm of the #defines folder.
 #define ZOOM_LEVEL_4X 1
 
 /obj/item/attachable/scope/union
-	name = "S8 4x telescopic scope"
+	name = "PO-M 4x Optic"
+	desc = "Old fashioned 4x scope. Sturdy, but a little unergonomic. UPP tradition. Reduces RoF and increases wield time. Major accuracy bonus when scoped. \nStatistically identical to the S8 Scope."
 
 /obj/item/attachable/scope/variable_zoom
 	name = "S10 variable zoom telescopic scope"
@@ -1073,8 +1078,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "S4 2x telescopic mini-scope"
 	icon_state = "miniscope"
 	attach_icon = "miniscope_a"
-	desc = "An ARMAT S4 telescoping eye piece. Fixed at a modest 2x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
-	desc_lore = "A light-duty optic, designated as the AN/PVQ-45 2x Optic. Suited towards short to medium-range engagements. Users are advised to zero it often, as the first mass-production batch had a tendency to drift in one direction or another with sustained use."
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed. \nZero often, first production batch suffered from drifting under heavy use and some of them might be in circulation still."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
@@ -1097,7 +1101,9 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
-
+/obj/item/attachable/scope/mini/union
+	name = "1P93 2x Optic"
+	desc = "Mild update of a 2159 UPP design. Holds zero in all conditions, antiglint grid prevents glare, but the reticle is unfortunately cluttered and busy. Reduces RoF and increases wield time, boosts accuracy while scoped. \nStatistically identical to the S4 Scope."
 
 /obj/item/attachable/scope/mini/flaregun
 	wield_delay_mod = 0
@@ -1120,7 +1126,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "2x hunting mini-scope"
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
-	desc = "This civilian-grade scope is a common sight on hunting rifles due to its cheap price and great optics. Fixed at a modest 2x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
+	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
@@ -1132,7 +1138,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
-	desc = "An ARMAT XS-9 optical interface. Unlike a traditional scope, this rail-mounted device features no telescoping lens. Instead, the firearm's onboard targeting system relays data directly to the optic for the system operator to reference in realtime."
+	desc = "An ARMAT XS-9 optical interface, type designation XAN/PVG-90. Computer controlled 2x magnification with electronic fire control system, interfacing with the rifle's sensors to provide near perfect shooting accuracy... In theory."
 	icon_state = "boomslang-scope"
 	zoom_offset = 7
 	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
@@ -1146,8 +1152,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
 	attach_icon = "iffbarrel_a"
-	desc = "An experimental B8 Smart-Scope. Based on the technologies used in the Smart Gun by ARMAT, this sight has integrated IFF systems. It can only attach to the M4RA Battle Rifle and M44 Combat Revolver."
-	desc_lore = "An experimental fire-control optic capable of linking into compatible IFF systems on certain weapons, designated the XAN/PVG-110 Smart Scope. Currently programmed for usage with the M4RA battle rifle and M44 Combat Revolver, due to their relatively lower rates of fire. Experimental technology developed by Armat, who have assured that all previously reported issues with false-negative IFF recognitions have been solved. Make sure to check the sight after every op, just in case."
+	desc = "An experimental B8 Smart-Scope, type designation XAN/PVG-110. Limited automated IFF trigger interlock system allows for use with the M44 Combat Revolver and M4RA Battle Rifle. Reduces damage due to the momentary trigger delay."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
