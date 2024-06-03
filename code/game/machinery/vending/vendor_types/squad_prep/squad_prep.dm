@@ -849,7 +849,11 @@
 	icon_state = "snowflake"
 	req_access = list()
 
-	listed_products = list(
+
+/obj/structure/machinery/cm_vending/clothing/vaipo/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_vaipo_snowflake
+
+GLOBAL_LIST_INIT(cm_vending_clothing_vaipo_snowflake, list(
 		list("UNIFORM", -1, null, null, null),
 		list("Gray T-shirt", 15, /obj/item/clothing/under/tshirt/gray_blu, VENDOR_ITEM_REGULAR),
 		list("Red T-shirt", 15, /obj/item/clothing/under/tshirt/r_bla, VENDOR_ITEM_REGULAR),
@@ -867,13 +871,12 @@
 		list("Blue Workwear", 15, /obj/item/clothing/under/colonist/workwear/blue, VENDOR_ITEM_REGULAR),
 		list("Green Workwear", 15, /obj/item/clothing/under/colonist/workwear/green, VENDOR_ITEM_REGULAR),
 		list("Blue Boiler", 15, /obj/item/clothing/under/colonist/ua_boiler, VENDOR_ITEM_REGULAR),
-
 		list("ACCESSORIES", -1, null, null),
 		list("Sunglasses", 15, /obj/item/clothing/glasses/sunglasses, VENDOR_ITEM_REGULAR),
 		list("BiMex Sunglasses", 15, /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_REGULAR),
 		list("Aviators", 15, /obj/item/clothing/glasses/sunglasses/aviator, VENDOR_ITEM_REGULAR),
 		list("Brown Gloves", 15, /obj/item/clothing/gloves/marine/veteran/upp, VENDOR_ITEM_REGULAR),
-		)
+))
 
 
 //------------ESSENTIAL SETS---------------

@@ -216,7 +216,7 @@
 	name = "VAIPO Automatic Rifleman"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = "Automatic Rifleman"
-	paygrade = "VAI AR"
+	paygrade = "VAI-AR"
 	role_comm_title = "AR"
 
 
@@ -415,7 +415,7 @@
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	assignment = "Designated Marksman"
-	paygrade = "VAI MK"
+	paygrade = "VAI"
 	role_comm_title = "Mrk"
 
 
@@ -521,7 +521,7 @@
 /datum/equipment_preset/uscm/medic/vaipo
 	name = "VAIPO Medic"
 	assignment = "Medic"
-	paygrade = "VAI MED"
+	paygrade = "VAI-M"
 	role_comm_title = "MED"
 
 
@@ -693,7 +693,7 @@
 /datum/equipment_preset/uscm/leader/vaipo
 	name = "VAIPO Team Leader"
 	assignment = "Team Leader"
-	paygrade = "VAI TL"
+	paygrade = "VAI-L"
 	role_comm_title = "TL"
 
 
