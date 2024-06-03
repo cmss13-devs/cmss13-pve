@@ -1499,4 +1499,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher/vaipo
+	name = "\improper L5A3 custom ballistic helmet"
+	desc = "A High-cut ballistic helmet featuring an attached mandible. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system. This one is a custom version with black paintjob."
+	icon_state = "rmc_helm_br_vaipo"
+	item_state = "rmc_helm_br_vaipo"
+
 #undef HELMET_GARB_RELAY_ICON_STATE

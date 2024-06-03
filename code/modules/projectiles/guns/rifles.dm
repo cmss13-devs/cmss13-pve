@@ -1830,7 +1830,7 @@
 	)
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/tactical, /obj/item/attachable/suppressor, /obj/item/attachable/scope/mini_iff)
 	random_spawn_rail = list()
-	current_mag = /obj/item/ammo_magazine/rifle/l42a/heap
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/extended/heap
 
 /obj/item/weapon/gun/rifle/l42a/abr40/tactical/pve/set_gun_config_values()
 	..()

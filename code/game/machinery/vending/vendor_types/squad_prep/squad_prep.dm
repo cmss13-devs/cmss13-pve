@@ -843,6 +843,38 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/clothing/vaipo
+	name = "\improper VAIPO Dress-a-Merc Vendor"
+	desc = "All the drip a proper mercenary would ever need."
+	icon_state = "snowflake"
+	req_access = list()
+
+	listed_products = list(
+		list("UNIFORM", -1, null, null, null),
+		list("Gray T-shirt", 15, /obj/item/clothing/under/tshirt/gray_blu, VENDOR_ITEM_REGULAR),
+		list("Red T-shirt", 15, /obj/item/clothing/under/tshirt/r_bla, VENDOR_ITEM_REGULAR),
+		list("White T-shirt", 15, /obj/item/clothing/under/tshirt/w_br, VENDOR_ITEM_REGULAR),
+		list("Frontier Jumpsuit", 15, /obj/item/clothing/under/rank/synthetic/frontier, VENDOR_ITEM_REGULAR),
+		list("Green Utility Uniform", 15, /obj/item/clothing/under/rank/synthetic/utility, VENDOR_ITEM_REGULAR),
+		list("Gray Utility Uniform", 15, /obj/item/clothing/under/rank/synthetic/utility/yellow, VENDOR_ITEM_REGULAR),
+		list("UA Gray Utility Uniform", 15, /obj/item/clothing/under/colonist/ua_civvies, VENDOR_ITEM_REGULAR),
+		list("Brown Utility Uniform", 15, /obj/item/clothing/under/rank/synthetic/utility/red, VENDOR_ITEM_REGULAR),
+		list("UA Brown Utility Uniform", 15, /obj/item/clothing/under/colonist/wy_davisone, VENDOR_ITEM_REGULAR),
+		list("Blue Utility Uniform", 15, /obj/item/clothing/under/rank/synthetic/utility/blue, VENDOR_ITEM_REGULAR),
+		list("Gray Workwear", 15, /obj/item/clothing/under/colonist/workwear, VENDOR_ITEM_REGULAR),
+		list("Khaki Workwear", 15, /obj/item/clothing/under/colonist/workwear/khaki, VENDOR_ITEM_REGULAR),
+		list("Pink Workwear", 15, /obj/item/clothing/under/colonist/workwear/pink, VENDOR_ITEM_REGULAR),
+		list("Blue Workwear", 15, /obj/item/clothing/under/colonist/workwear/blue, VENDOR_ITEM_REGULAR),
+		list("Green Workwear", 15, /obj/item/clothing/under/colonist/workwear/green, VENDOR_ITEM_REGULAR),
+		list("Blue Boiler", 15, /obj/item/clothing/under/colonist/ua_boiler, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES", -1, null, null),
+		list("Sunglasses", 15, /obj/item/clothing/glasses/sunglasses, VENDOR_ITEM_REGULAR),
+		list("BiMex Sunglasses", 15, /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_REGULAR),
+		list("Aviators", 15, /obj/item/clothing/glasses/sunglasses/aviator, VENDOR_ITEM_REGULAR),
+		list("Brown Gloves", 15, /obj/item/clothing/gloves/marine/veteran/upp, VENDOR_ITEM_REGULAR),
+		)
+
 
 //------------ESSENTIAL SETS---------------
 /obj/effect/essentials_set/random/uscm_light_armor

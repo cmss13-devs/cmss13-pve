@@ -212,6 +212,9 @@
 "kc" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/shield/riot/ballistic,
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher/vaipo{
+	pixel_y = 13
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -299,8 +302,7 @@
 /area/shuttle/ert)
 "oc" = (
 /obj/structure/machinery/light,
-/obj/structure/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
+/obj/structure/machinery/cm_vending/clothing/vaipo,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -452,9 +454,6 @@
 	},
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/spec/vaipo,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "tG" = (
@@ -510,17 +509,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating/almayer,
-/area/shuttle/ert)
-"vC" = (
-/obj/structure/machinery/cryopod{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
 /area/shuttle/ert)
 "wc" = (
 /turf/open/floor/almayer,
@@ -660,7 +648,7 @@
 /obj/item/tape{
 	flipped_name = "mission tape";
 	unflipped_name = "mission tape";
-	storedinfo = list("Good day, team leader. Today you are working under the disguise of Venelli-Aegis Incorporated.", "Your mission for today is to examine few POIs.", "Look for any clues or intel: we suspect the Company has something to do with supplying terrorists on LV-701.", "Marine garrison on this planet is sparse, Operation Odolla Onslaught desperately needs more manpower, but USCM can't afford it.", "We've been tasked by TIS to investigate few CLF caches, some of which haven't been discovered yet. They will appear on your map shortly.", "And lastly - there is still XX-121 presence on this planet. Make sure your men are prepared.", "You got your payment already.");
+	storedinfo = list("Good day, team leader. Today you are working under the disguise of Venelli-Aegis Incorporated.", "Your mission for today is to dispose of  Wey-Yu test subject, marked as RED 0 on your tactical map.", "WY research facility known as Heatsink has experienced a xenomorph outbreak, so be prepared.", "It is advisable that you restore power first. Engineering is marked on your tacmap in BLUE 0", "You got your payment already.");
 	timestamp = list(50, 100, 150, 200, 250, 300, 350);
 	name = "mission tape";
 	icon_state = "cassette_blue";
@@ -674,7 +662,7 @@
 /obj/item/spacecash/ewallet{
 	pixel_y = 15;
 	pixel_x = -9;
-	worth = 100000
+	worth = 1000000
 	},
 /turf/open/floor{
 	dir = 8;
@@ -719,9 +707,6 @@
 /obj/item/clothing/under/tshirt/gray_blu,
 /obj/item/device/radio/headset/distress/contractor,
 /obj/item/clothing/shoes/marine/knife,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -737,8 +722,7 @@
 	},
 /area/shuttle/ert)
 "DO" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp,
+/obj/structure/machinery/cm_vending/sorted/walkman,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -932,12 +916,6 @@
 	icon_state = "plate"
 	},
 /area/shuttle/ert)
-"Ml" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/closed/wall/almayer/outer,
-/area/shuttle/ert)
 "Mx" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -1001,10 +979,6 @@
 	icon_state = "plate"
 	},
 /area/shuttle/ert)
-"OU" = (
-/obj/structure/disposalpipe/segment,
-/turf/closed/wall/almayer/outer,
-/area/shuttle/ert)
 "Pk" = (
 /obj/structure/surface/table/almayer,
 /obj/item/attachable/reddot{
@@ -1014,16 +988,6 @@
 /obj/item/attachable/suppressor{
 	pixel_y = 10;
 	pixel_x = 5
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/shuttle/ert)
-"Po" = (
-/obj/structure/machinery/cryopod,
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1051,6 +1015,14 @@
 "QK" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/obj/item/storage/pill_bottle/imidazoline{
+	pixel_y = 20;
+	pixel_x = -3
+	},
+/obj/item/storage/pill_bottle/alkysine{
+	pixel_y = 17;
+	pixel_x = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1102,6 +1074,9 @@
 /obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/weapon/gun/rifle/m41aMK1,
+/obj/item/clothing/head/helmet/marine/covert{
+	name = "\improper old marine helmet"
+	},
 /turf/open/floor/wood,
 /area/shuttle/ert)
 "So" = (
@@ -1218,9 +1193,6 @@
 /obj/item/clothing/under/tshirt/r_bla,
 /obj/item/device/radio/headset/distress/contractor,
 /obj/item/clothing/shoes/marine/knife,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1230,9 +1202,6 @@
 /obj/item/folder/black{
 	pixel_x = 3;
 	pixel_y = 5
-	},
-/obj/item/map/current_map{
-	pixel_y = -5
 	},
 /turf/open/floor{
 	dir = 8;
@@ -1262,9 +1231,6 @@
 /obj/item/clothing/under/tshirt/w_br,
 /obj/item/device/radio/headset/distress/contractor,
 /obj/item/clothing/shoes/marine/knife,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1321,14 +1287,17 @@
 	req_access = list(102)
 	},
 /obj/item/clothing/accessory/poncho/black,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
+/obj/item/ammo_magazine/rifle/l42a/extended/heap,
 /obj/item/weapon/gun/rifle/l42a/abr40/tactical/pve,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
-/obj/item/ammo_magazine/rifle/l42a/heap,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1609,8 +1578,8 @@ fp
 hZ
 TO
 oc
-OU
-Po
+PE
+Nt
 jP
 QQ
 PE
@@ -1672,7 +1641,7 @@ hZ
 TO
 zM
 PE
-vC
+ls
 NL
 ls
 PE
@@ -1703,7 +1672,7 @@ hZ
 TO
 hE
 PE
-Ml
+PE
 Kg
 PE
 PE
@@ -1827,7 +1796,7 @@ hZ
 TO
 KS
 PE
-Ml
+PE
 SB
 SB
 PE
