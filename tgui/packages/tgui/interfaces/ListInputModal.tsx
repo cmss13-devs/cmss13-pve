@@ -8,22 +8,15 @@ import { Window } from '../layouts';
 type ListInputData = {
   init_value: string;
   items: string[];
-  large_buttons: boolean;
   message: string;
   timeout: number;
   title: string;
+  theme: string;
 };
 
 export const ListInputModal = (props, context) => {
   const { act, data } = useBackend<ListInputData>(context);
-  const {
-    items = [],
-    message = '',
-    init_value,
-    large_buttons,
-    timeout,
-    title,
-  } = data;
+  const { items = [], message = '', init_value, timeout, title, theme } = data;
   const [selected, setSelected] = useLocalState<number>(
     context,
     'selected',
@@ -103,15 +96,14 @@ export const ListInputModal = (props, context) => {
     item?.toLowerCase().includes(searchQuery.toLowerCase())
   );
   // Dynamically changes the window height based on the message.
-  const windowHeight =
-    325 + Math.ceil(message.length / 3) + (large_buttons ? 5 : 0);
+  const windowHeight = 325 + Math.ceil(message.length / 3);
   // Grabs the cursor when no search bar is visible.
   if (!searchBarVisible) {
     setTimeout(() => document!.getElementById(selected.toString())?.focus(), 1);
   }
 
   return (
-    <Window title={title} width={325} height={windowHeight}>
+    <Window title={title} width={325} height={windowHeight} theme={theme}>
       {timeout && <Loader value={timeout} />}
       <Window.Content
         onKeyDown={(event) => {
