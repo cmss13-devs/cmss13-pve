@@ -377,7 +377,7 @@
 		cell_explosion(get_turf(M), explosion_size, falloff_size, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, cause_data)
 		M.apply_effect(2, WEAKEN)
 		M.apply_effect(2, PARALYZE)
-		//playsound(get_turf(M), 'sound/weapons/gun_sharp_explode.ogg', 45)
+		playsound(get_turf(M), 'sound/weapons/gun_sharp_explode.ogg', 45)
 
 /datum/ammo/rifle/sharp/track
 	name = "9X-T sticky tracker dart"

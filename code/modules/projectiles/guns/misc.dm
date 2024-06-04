@@ -356,7 +356,7 @@
 	desc = "A experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption."
 	icon_state = "sharprifle"
 	item_state = "sharp"
-	//fire_sound = 'sound/weapons/gun_sharp.ogg'
+	fire_sound = 'sound/weapons/gun_sharp.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	unacidable = TRUE
