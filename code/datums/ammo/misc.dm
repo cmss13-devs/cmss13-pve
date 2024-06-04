@@ -319,7 +319,7 @@
 	damage = 35
 	shell_speed = AMMO_SPEED_TIER_2
 
-/datum/ammo/rifle/sharp/on_embed(var/mob/embedded_mob, var/obj/limb/target_organ)
+/datum/ammo/rifle/sharp/on_embed(mob/embedded_mob, obj/limb/target_organ)
 	if(!ishuman(embedded_mob))
 		return
 	var/mob/living/carbon/human/humano = embedded_mob
@@ -337,7 +337,7 @@
 /datum/ammo/rifle/sharp/do_at_max_range(obj/projectile/P)
 	drop_dart(P.loc, P)
 
-/datum/ammo/rifle/sharp/proc/drop_dart(var/loc, obj/projectile/P)
+/datum/ammo/rifle/sharp/proc/drop_dart(loc, obj/projectile/P)
 	new embed_object(loc, P.dir)
 
 /datum/ammo/rifle/sharp/explosive
@@ -355,7 +355,7 @@
 			else
 				addtimer(CALLBACK(src, PROC_REF(delayed_explosion), P, M, shooter), 1 SECONDS)
 
-/datum/ammo/rifle/sharp/explosive/drop_dart(var/loc, obj/projectile/P, var/mob/shooter)
+/datum/ammo/rifle/sharp/explosive/drop_dart(loc, obj/projectile/P, mob/shooter)
 	var/signal_explosion = FALSE
 	if(locate(/obj/item/explosive/mine) in get_turf(loc))
 		signal_explosion = TRUE
@@ -399,7 +399,7 @@
 		weapon.sharp_tracked_mob_list -= M
 
 /datum/ammo/rifle/sharp/track/infinite
-	tracket_time = 999 MINUTES
+	tracker_time = 999 MINUTES
 
 /datum/ammo/rifle/sharp/flechette
 	name = "9X-F flechette dart"
@@ -428,7 +428,7 @@
 /datum/ammo/rifle/sharp/flechette/do_at_max_range(obj/projectile/P)
 	create_flechette(P.loc, P)
 
-/datum/ammo/rifle/sharp/flechette/proc/create_flechette(var/loc, obj/projectile/P)
+/datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/P)
 	var/shrapnel_count = 20
 	var/direct_hit_shrapnel = 10
 	var/dispersion_angle = 20
@@ -438,7 +438,7 @@
 		create_shrapnel(loc, shrapnel_count, P.dir, dispersion_angle ,shrapnel_type, P.weapon_cause_data, FALSE, 0)
 	apply_explosion_overlay(loc)
 
-/datum/ammo/rifle/sharp/flechette/proc/apply_explosion_overlay(var/turf/loc)
+/datum/ammo/rifle/sharp/flechette/proc/apply_explosion_overlay(turf/loc)
 	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
 	O.name = "grenade"
 	O.icon = 'icons/effects/explosion.dmi'
