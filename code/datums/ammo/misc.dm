@@ -399,7 +399,7 @@
 		weapon.sharp_tracked_mob_list -= M
 
 /datum/ammo/rifle/sharp/track/infinite
-	tracker_time = 999 MINUTES
+	tracker_timer = 999 MINUTES
 
 /datum/ammo/rifle/sharp/flechette
 	name = "9X-F flechette dart"
