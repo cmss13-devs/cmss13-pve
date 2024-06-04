@@ -370,11 +370,11 @@
 
 /datum/ammo/rifle/sharp/explosive/proc/delayed_explosion(obj/projectile/P, mob/M, mob/shooter)
 	if(ismob(M))
-		M.ex_act(150, P.dir, P.weapon_cause_data, 100)
 		var/explosion_size = 100
 		var/falloff_size = 50
 		var/cause_data = create_cause_data("P9 SHARP Rifle", shooter)
 		cell_explosion(get_turf(M), explosion_size, falloff_size, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, cause_data)
+		M.ex_act(150, P.dir, P.weapon_cause_data, 100)
 		M.apply_effect(2, WEAKEN)
 		M.apply_effect(2, PARALYZE)
 		playsound(get_turf(M), 'sound/weapons/gun_sharp_explode.ogg', 45)

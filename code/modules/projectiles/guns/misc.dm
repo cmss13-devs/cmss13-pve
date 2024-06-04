@@ -422,17 +422,10 @@
 
 	return
 
-/obj/item/weapon/gun/rifle/sharp/able_to_fire(mob/living/user)
-	. = ..()
-	if (. && istype(user))
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_GRENADIER)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
-			return FALSE
-
 /obj/item/weapon/gun/rifle/sharp/cock()
 	return
 
-/obj/item/weapon/gun/rifle/sharp/use_toggle_burst(mob/user)
+/obj/item/weapon/gun/rifle/sharp/do_toggle_firemode(datum/source, datum/keybinding, new_firemode)
 	explosion_delay_sharp = !explosion_delay_sharp
-	playsound(user, 'sound/weapons/handling/gun_burst_toggle.ogg', 50, TRUE, 3)
-	to_chat(user, SPAN_NOTICE("You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("five seconds") : SPAN_BOLD("one second")]."))
+	playsound(source, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
+	to_chat(source, SPAN_NOTICE("You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("five seconds") : SPAN_BOLD("one second")]."))
