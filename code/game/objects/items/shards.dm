@@ -283,10 +283,10 @@
 	else
 		turn_object(270)
 
-/obj/item/sharp/proc/on_embed(var/mob/embedded_mob, var/obj/limb/target_organ)
+/obj/item/sharp/proc/on_embed(mob/embedded_mob, obj/limb/target_organ)
 	return
 
-/obj/item/sharp/proc/on_embedded_movement(var/mob/living/embedded_mob)
+/obj/item/sharp/proc/on_embedded_movement(mob/living/embedded_mob)
 	if(!ishuman(embedded_mob))
 		return
 	var/mob/living/carbon/human/H = embedded_mob

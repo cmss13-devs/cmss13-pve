@@ -339,7 +339,7 @@
 			tripwire.linked_claymore = src
 			active = TRUE
 
-/obj/item/explosive/mine/sharp/prime(var/mob/user)
+/obj/item/explosive/mine/sharp/prime(mob/user)
 	set waitfor = 0
 	if(!cause_data)
 		cause_data = create_cause_data(initial(name), user)
@@ -361,7 +361,7 @@
 		return
 	. = ..()
 
-/obj/item/explosive/mine/sharp/deploy_mine(var/mob/user)
+/obj/item/explosive/mine/sharp/deploy_mine(mob/user)
 	if(disarmed)
 		return
 	if(!hard_iff_lock && user)
