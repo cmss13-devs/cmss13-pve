@@ -438,7 +438,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/swat,
 		/obj/item/clothing/gloves/combat,
-		/obj/item/clothing/gloves/botanic_leather,
 		)
 	new_human.equip_to_slot_or_del(new glovespath, WEAR_HANDS)
 
