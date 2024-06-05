@@ -429,8 +429,8 @@
 	create_flechette(P.loc, P)
 
 /datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/P)
-	var/shrapnel_count = 20
-	var/direct_hit_shrapnel = 10
+	var/shrapnel_count = 15
+	var/direct_hit_shrapnel = 8
 	var/dispersion_angle = 20
 	create_shrapnel(loc, min(direct_hit_shrapnel, shrapnel_count), P.dir, dispersion_angle, shrapnel_type, P.weapon_cause_data, FALSE, 100)
 	shrapnel_count -= direct_hit_shrapnel

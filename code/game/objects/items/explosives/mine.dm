@@ -322,8 +322,8 @@
 	icon_state = "sonicharpoon_g"
 	angle = 360
 	var/disarmed = FALSE
-	var/explosion_size = 100
-	var/explosion_falloff = 50
+	var/explosion_size = 200
+	var/explosion_falloff = 100
 
 /obj/item/explosive/mine/sharp/check_for_obstacles(mob/living/user)
 	return FALSE

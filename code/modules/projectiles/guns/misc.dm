@@ -353,18 +353,18 @@
 
 /obj/item/weapon/gun/rifle/sharp
 	name = "\improper P9 SHARP rifle"
-	desc = "A experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption."
+	desc = "A experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption.\n<b>Change firemode</b> in order to set fuse for delayed explosion darts. <b>Unique action</b> in order to track targets hit by tracker darts."
 	icon_state = "sharprifle"
 	item_state = "sharp"
 	fire_sound = 'sound/weapons/gun_sharp.ogg'
-	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
-	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	reload_sound = 'sound/weapons/handling/gun_vulture_bolt_close.ogg'
+	unload_sound = 'sound/weapons/handling/gun_vulture_bolt_eject.ogg'
 	unacidable = TRUE
 	indestructible = TRUE
 	muzzle_flash = null
 
 	current_mag = /obj/item/ammo_magazine/rifle/sharp/explosive
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet, /obj/item/attachable/flashlight)
 
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	wield_delay = WIELD_DELAY_NORMAL
@@ -379,7 +379,7 @@
 	var/list/sharp_tracked_mob_list = list()
 
 /obj/item/weapon/gun/rifle/sharp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 24, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
 
 /obj/item/weapon/gun/rifle/sharp/set_gun_config_values()
 	..()
