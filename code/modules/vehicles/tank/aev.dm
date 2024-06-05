@@ -69,7 +69,7 @@
 	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
 
 /obj/effect/vehicle_spawner/aev/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/tank/AEV = new(loc)
+	var/obj/vehicle/multitile/tank/aev/AEV = new(loc)
 
 	load_misc(AEV)
 	handle_direction(AEV)
