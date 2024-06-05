@@ -28,6 +28,11 @@
 /obj/structure/interior_exit/vehicle/apc/rear/right
 	icon_state = "door_rear_right"
 
+/obj/structure/interior_exit/vehicle/arc
+	name = "ARC side door"
+	icon = 'icons/obj/vehicles/interiors/arc.dmi'
+	icon_state = "exit_door"
+
 /obj/structure/prop/vehicle
 	name = "Generic vehicle prop"
 	desc = "Adds more flavour to vehicle interior."
@@ -39,6 +44,13 @@
 	unslashable = TRUE
 	breakable = FALSE
 	indestructible = TRUE
+
+/obj/structure/prop/vehicle/arc
+	name = "ARC chassis"
+
+	icon = 'icons/obj/vehicles/interiors/arc_chassis.dmi'
+	icon_state = "arc_chassis"
+
 
 /obj/structure/prop/vehicle/firing_port_weapon
 	name = "M56 FPW handle"
