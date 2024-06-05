@@ -91,7 +91,7 @@
 /obj/structure/phone_base{
 	dir = 8;
 	layer = 3.1;
-	name = "Tank Telephone";
+	name = "AEV Telephone";
 	phone_category = "Vehicles";
 	phone_id = "M34E1 Armored Engineering Vehicle";
 	pixel_x = 14;
