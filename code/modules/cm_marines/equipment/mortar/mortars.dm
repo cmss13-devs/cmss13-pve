@@ -382,6 +382,7 @@
 	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 		to_chat(user, SPAN_WARNING("You don't have the training to deploy [src]."))
 		return
+	var/area/A = get_area(deploy_turf)
 	if(CEILING_IS_PROTECTED(A.ceiling, CEILING_PROTECTION_TIER_1))
 		to_chat(user, SPAN_WARNING("You probably shouldn't deploy [src] indoors."))
 		return
