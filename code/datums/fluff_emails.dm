@@ -18,12 +18,12 @@
 					I can tell even the gunny ain't happy about this shit, the Lt's putting on a smile
 					but we all seen her and that friggin picture of her girlfriend she got in her wallet or whatever.
 					What happened to overtime pay?
-					<html>
-					"}
+				<html>
+				"}
 
 /datum/fluff_email/golden_arrow/section_a/reply1
 	title = "RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
 					[...]
@@ -34,12 +34,12 @@
 					hell on earth, right?
 					Also. C'mon, dude. I know what you really want. You're looking at getting that bet money from Carmen
 					right? :)
-					<html>
-					"}
+				<html>
+				"}
 
 /datum/fluff_email/golden_arrow/section_a/reply2
 	title = "RE: RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
 					[...]
@@ -52,8 +52,8 @@
 					<br>
 					<br>
 					also fuck you, i earned that shit. the spicy peanut milk fuckin sucked.
-					<html>
-					"}
+				<html>
+				"}
 
 //emails for the Almayer computers
 /datum/fluff_email/almayer
