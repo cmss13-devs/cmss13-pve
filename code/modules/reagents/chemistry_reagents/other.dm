@@ -363,6 +363,11 @@
 	properties = list(PROPERTY_NUTRITIOUS = 1)
 	flags = REAGENT_TYPE_MEDICAL
 
+/datum/reagent/cornsyrup
+	name = "High-Fructose Corn Syrup"
+	id = "cornsyrup"
+	description = "Ah, some good old, all-american, high-fructose corn syrup. Sickeningly sweet. There's worse things you can put in your body, but very few of them are considered edible."
+
 /datum/reagent/glycerol
 	name = "Glycerol"
 	id = "glycerol"
