@@ -1785,8 +1785,8 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_4
 
 /obj/item/attachable/stock/xm88
-	name = "\improper XM88 padded stock"
-	desc = "A specially made compound polymer stock reinforced with aluminum rods and thick rubber padding to shield the user from recoil. Fitted specifically for the XM88 Heavy Rifle."
+	name = "\improper XM88A padded stock"
+	desc = "A specially made compound polymer stock reinforced with aluminum rods and thick rubber padding to shield the user from recoil. Fitted specifically for the XM88A Heavy Rifle."
 	icon_state = "boomslang-stock"
 	wield_delay_mod = WIELD_DELAY_NORMAL
 	hud_offset_mod = 6
