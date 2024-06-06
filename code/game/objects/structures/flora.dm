@@ -724,15 +724,9 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 			damage = rand(8,18)
 		if(indestructable)
 			//this bush marks the edge of the map, you can't destroy it
-<<<<<<< HEAD
-			to_chat(user, SPAN_DANGER("You chop away at the undergrowth, but it's too thick here."))
-		else
-			user.visible_message(SPAN_DANGER("[user] chops away at the  [src] with [I]."),SPAN_DANGER("You chop away at the [src] with [I]."))
-=======
 			to_chat(user, SPAN_DANGER("You chop at the undergrowth, but it's too thick here."))
 		else
 			user.visible_message(SPAN_DANGER("[user] chops at the  [src] with [I]."),SPAN_DANGER("You chop at the [src] with [I]."))
->>>>>>> 48aca9e1b50768a553d2ee81fac139b060e7d0d0
 			playsound(src.loc, 'sound/effects/vegetation_hit.ogg', 25, 1)
 			health -= damage
 			if(health < 0)
