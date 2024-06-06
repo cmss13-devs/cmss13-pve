@@ -176,6 +176,10 @@
 	pixel_x = 8
 	},
 /obj/structure/gun_rack/m41/recon/unloaded,
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = 15;
+	pixel_x = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -241,6 +245,7 @@
 "ct" = (
 /obj/structure/surface/table/almayer,
 /obj/item/facepaint/sniper,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "cJ" = (
@@ -1289,6 +1294,10 @@
 /obj/item/folder/black_random{
 	pixel_x = -6;
 	pixel_y = 8
+	},
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = -1;
+	pixel_x = 6
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2887,6 +2896,8 @@
 /area/golden_arrow/cryo_cells)
 "AD" = (
 /obj/structure/closet/crate/trashcart,
+/obj/item/attachable/attached_gun/grenade/mk1,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "AF" = (
