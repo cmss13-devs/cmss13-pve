@@ -26,6 +26,8 @@
 
 	passengers_slots = 15
 
+	wall_ram_damage = 500
+
 /obj/vehicle/multitile/tank/aev/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
