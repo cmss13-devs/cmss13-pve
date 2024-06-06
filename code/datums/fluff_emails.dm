@@ -23,7 +23,7 @@
 
 /datum/fluff_email/golden_arrow/section_a/reply1
 	title = "RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
 					[...]
@@ -39,7 +39,7 @@
 
 /datum/fluff_email/golden_arrow/section_a/reply2
 	title = "RE: RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
 					[...]
