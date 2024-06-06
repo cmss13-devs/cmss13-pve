@@ -353,7 +353,7 @@
 
 /obj/item/weapon/gun/rifle/sharp
 	name = "\improper P9 SHARP rifle"
-	desc = "A experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption.\n<b>Change firemode</b> in order to set fuse for delayed explosion darts. <b>Unique action</b> in order to track targets hit by tracker darts."
+	desc = "An experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption.\n<b>Change firemode</b> in order to set fuse for delayed explosion darts. <b>Unique action</b> in order to track targets hit by tracker darts."
 	icon_state = "sharprifle"
 	item_state = "sharp"
 	fire_sound = 'sound/weapons/gun_sharp.ogg'
