@@ -141,7 +141,7 @@
 //------------
 /obj/item/storage/box/guncase/flamer
 	name = "\improper M240 incinerator case"
-	desc = "A gun case containing the M240A1 incinerator unit. It does come loaded, but you'll still have to find extra tanks as you go."
+	desc = "A gun case containing the M240 incinerator unit, underbarrel extinguisher, and two spare tanks."
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/flamer, /obj/item/ammo_magazine/flamer_tank, /obj/item/attachable/attached_gun/extinguisher)
 
@@ -152,6 +152,7 @@
 	new /obj/item/attachable/attached_gun/extinguisher(src)
 
 /obj/item/storage/box/guncase/flamer/special
+	desc = "A gun case containing the M240 incinerator unit, underbarrel extinguisher, and spare tank."
 	storage_slots = 3
 
 /obj/item/storage/box/guncase/flamer/special/fill_preset_inventory()

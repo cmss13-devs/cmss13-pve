@@ -3092,8 +3092,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/flamer_nozzle
 	name = "XM-VESG-1 flamer nozzle"
-	desc = "A special nozzle designed to alter flamethrowers to be used in a more offense orientated manner. As the inside of the nozzle is coated in a special gel and resin substance that takes the fuel that passes through and hardens it. Upon exiting the barrel, a cluster of burning gel is projected instead of a stream of burning naphtha."
-	desc_lore = "The Experimental Volatile-Exothermic-Sphere-Generator clip-on nozzle attachment for the M240A1 incinerator unit was specifically designed to allow marines to launch fireballs into enemy foxholes and bunkers. Despite the gel and resin coating, the flaming ball of naptha tears apart due the drag caused by launching it through the air, leading marines to use the attachment as a makeshift firework launcher during shore leave."
+	desc = "The Experimental Volatile Exothermic Sphere Generator is a replacement nozzle attachment which allows for the firing of semi-solidified napthal balls instead of a continuous stream."
 	icon_state = "flamer_nozzle"
 	attach_icon = "flamer_nozzle_a_1"
 	w_class = SIZE_MEDIUM
