@@ -5,6 +5,7 @@
 	icon_state = "m41a"
 	density = TRUE
 	var/allowed_type
+	var/populate_type
 	var/max_stored = 5
 	var/initial_stored = 5
 
@@ -17,7 +18,7 @@
 	if(initial_stored)
 		var/i = 0
 		while(i < initial_stored)
-			contents += new allowed_type(src)
+			contents += new populate_type(src)
 			i++
 	update_icon()
 
@@ -47,6 +48,10 @@
 
 /obj/structure/gun_rack/m41
 	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1
+
+/obj/structure/gun_rack/m41/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/unloaded
 
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
@@ -54,6 +59,10 @@
 	max_stored = 6
 	initial_stored = 6
 	allowed_type = /obj/item/weapon/gun/rifle/type71
+	populate_type = /obj/item/weapon/gun/rifle/type71
+
+/obj/structure/gun_rack/type71/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/type71/unloaded
 
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
