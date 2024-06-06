@@ -23,10 +23,10 @@
 
 /datum/fluff_email/golden_arrow/section_a/reply1
 	title = "RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
-					[...]
+					{...}
 					<br>
 					<br>
 					Okay, listen, yeah I know it's bullshit but we've got all their support gear to play with and
@@ -39,13 +39,13 @@
 
 /datum/fluff_email/golden_arrow/section_a/reply2
 	title = "RE: RE: Section A shore leave???"
-		entry_text = {"<html>
+	entry_text = {"<html>
 					LOG//:WEBMASTER/RETRIEVE/EMAIL
 					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
-					[...]
+					{...}
 					<br>
 					<br>
-					[...]
+					{...}
 					we've got their support gear to play with but where'd all the ordinance go???? Lt says the
 					ammo supply for the M83A2s is fine, but 'new regulations' require him to store it under
 					the automated quartermaster's supervision??? if that's true, why're the M40s laying out??
