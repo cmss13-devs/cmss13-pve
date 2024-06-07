@@ -8,7 +8,7 @@
 /datum/ammo/bullet/pistol
 	name = "pistol bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	accuracy = -HIT_ACCURACY_TIER_3
+	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
 	penetration= ARMOR_PENETRATION_TIER_2
@@ -98,7 +98,7 @@
 /datum/ammo/bullet/pistol/heavy
 	name = "heavy pistol bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	accuracy = -HIT_ACCURACY_TIER_3
+	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_3
@@ -140,7 +140,7 @@
 	name = ".50 heavy pistol bullet"
 	damage = 45
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	accuracy = -HIT_ACCURACY_TIER_3
+	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
