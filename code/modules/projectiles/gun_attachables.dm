@@ -812,7 +812,7 @@ Defined in conflicts.dm of the #defines folder.
 	return
 
 /obj/item/attachable/flashlight/grip/union
-	name = "RK-9 Flashlight Grip"
+	name = "RK-5A Flashlight Grip"
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
@@ -3216,7 +3216,7 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 20
 
 /obj/item/attachable/angledgrip/union
-	name = "RK-9 Vertical Grip"
+	name = "RK-9 Angled Grip"
 	desc = "Ergonomic grip decreases time for shouldering the weapon. Increases weapon size, accelerates wield speed."
 
 /obj/item/attachable/gyro
