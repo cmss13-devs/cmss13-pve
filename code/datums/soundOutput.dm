@@ -13,7 +13,7 @@
 	. = ..()
 
 /datum/soundOutput/proc/process_sound(datum/sound_template/T)
-	var/sound/S = sound(T.file, T.wait, T.repeat)
+	var/sound/S = sound(T.file, T.repeat, T.wait)
 	S.volume = owner.volume_preferences[T.volume_cat] * T.volume
 	if(T.channel == 0)
 		S.channel = get_free_channel()
@@ -21,6 +21,8 @@
 		S.channel = T.channel
 	S.frequency = T.frequency
 	S.falloff = T.falloff
+	S.offset = T.offset
+	S.pitch = T.pitch
 	S.status = T.status
 	S.echo = T.echo
 	if(T.x && T.y && T.z)
