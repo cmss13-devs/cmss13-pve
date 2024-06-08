@@ -3,7 +3,6 @@ import { Box, Button, Dropdown, Input, Section, Slider, Stack, Tabs } from 'tgui
 import { Window } from 'tgui/layouts';
 import { Component, Fragment } from 'inferno';
 import { debounce } from 'common/timer';
-import { logger } from '../logging';
 
 interface SoundPanelData {
   sound_list: string[];
@@ -117,7 +116,6 @@ interface ListSearchBoxEntry {
 class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
   state: ListSearchBoxState = {
     query: '',
-    // selection: '',
   };
   handleQueryChange(value: string) {
     if (value === this.state.query) {
@@ -126,12 +124,6 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
     this.setState({
       query: value,
     });
-
-    /*
-    if (this.state.selection.toLowerCase().includes(value.toLowerCase())) {
-      return;
-    }
-    */
     this.handleSelectionChange('');
   }
   handleSelectionChange(value: string) {
@@ -142,18 +134,8 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
     this.handleQueryChange(value);
   }, 250);
 
-  /*
-  shouldComponentUpdate(nextState) {
-    return (
-      nextState.selection !== this.state.selection ||
-      nextState.query !== this.state.query
-    );
-  }
-  */
-
   parsedItems = this.props.items
     .map<ListSearchBoxEntry>((item, index) => {
-      if (index === 0) logger.log('parsing items');
       const dirIndex = item.lastIndexOf('/');
       const dirName = item.slice(6, dirIndex);
       const extIndex = item.lastIndexOf('.');
@@ -175,14 +157,12 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
     });
 
   render() {
-    logger.log('in render');
     return (
       <Fragment>
         <Stack.Item grow>
           <Section fill scrollable title="File">
             {this.parsedItems
               .filter((item, index) => {
-                if (index === 0) logger.log('filtering items');
                 return item.fileName
                   .toLowerCase()
                   .includes(this.state.query.toLowerCase());
@@ -193,7 +173,6 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                     color="transparent"
                     content={item.fileName}
                     fluid
-                    // id={item.id}
                     key={item.id}
                     my={0}
                     onClick={() => this.handleSelectionChange(item.fullPath)}
@@ -201,9 +180,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                     style={{
                       animation: 'none',
                       transition: 'none',
-                    }}
-                    // tabIndex={undefined}
-                  >
+                    }}>
                     <div
                       style={{
                         'font-size': '0.75rem',
@@ -259,7 +236,6 @@ const SoundOptions = (props, context) => {
                 }
                 options={category_list}
                 selected={sound_category}
-                // minWidth="90px"
               />
             </Stack.Item>
             <Stack.Item grow>

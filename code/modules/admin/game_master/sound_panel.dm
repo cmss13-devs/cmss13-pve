@@ -1,9 +1,6 @@
-//GLOBAL_DATUM_INIT(sound_panel, /datum/sound_panel_tgui, new)
-
 /client/proc/open_sound_panel()
 	set name = "Sound Panel"
-	//set category = "Admin.Events"
-	set category = "Game Master"
+	set category = "Admin.Panels"
 
 	if(!check_rights(R_SOUNDS))
 		return
@@ -31,7 +28,6 @@
 	var/target_group
 
 /datum/sound_panel/New(user)
-	//. = ..()
 	if(isnull(sound_list)) //first run, init statics
 		sound_list = get_sounds()
 
@@ -67,8 +63,6 @@
 	var/list/file_paths = list()
 	for(var/i = 1, i <= length(dirs), i++)
 		var/path = dirs[i]
-	//while(length(dirs))
-		//var/path = popleft(dirs)
 
 		var/list/filenames = flist(path)
 		for(var/filename as anything in filenames)
@@ -81,14 +75,7 @@
 
 	return file_paths
 
-/*
-/datum/sound_panel/Destroy(force, ...)
-	. = ..()
-*/
-
 /datum/sound_panel/ui_static_data(mob/user)
-	//. = ..()
-
 	var/list/data = list()
 
 	data["sound_list"] = sound_list
@@ -136,7 +123,6 @@
 		ui.open()
 
 /datum/sound_panel/proc/InterceptClickOn(mob/user, params, atom/object)
-	//var/list/modifiers = params2list(params)
 	if(loc_click_intercept)
 		var/turf/chosen_loc = get_turf(object)
 		if(QDELETED(chosen_loc))
@@ -156,12 +142,6 @@
 			playsound(target_loc, sound_datum, sound_volume, vol_cat = category_lookup[sound_category])
 
 		return TRUE
-
-/*
-#define IS_VALID_SOUND(sound) ((sound) in sound_list)
-#define IS_VALID_CATEGORY(category) ((category) in category_list)
-#define IS_VALID_VOLUME(volume) (ISINRANGE((volume), 0, 100))
-*/
 
 /datum/sound_panel/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
@@ -290,9 +270,3 @@
 			for(var/mob/target as anything in targets)
 				playsound_client(target.client, sound_datum, vol = sound_volume, vol_cat = category_lookup[sound_category])
 			return TRUE
-
-/*
-#undef IS_VALID_SOUND
-#undef IS_VALID_CATEGORY
-#undef IS_VALID_VOLUME
-*/
