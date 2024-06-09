@@ -208,7 +208,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/clf/soldier/snow/sniper
-	name = "CLF Soldier (Snow)"
+	name = "CLF Sniper (Snow)"
 
 /datum/equipment_preset/clf/soldier/snow/sniper/spawn_rebel_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
