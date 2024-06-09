@@ -161,10 +161,9 @@
 
 /datum/equipment_preset/clf/soldier/snow/spawn_rebel_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
-	var/helmetpath = pick(
-		/obj/item/clothing/head/militia/snow,
-		/obj/item/clothing/head/militia/bucket/snow,
-		)
+	var/helmetpath = /obj/item/clothing/head/militia/snow
+	if(prob(75))
+		helmetpath = /obj/item/clothing/head/militia/bucket/snow
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
 /datum/equipment_preset/clf/soldier/snow/load_gear(mob/living/carbon/human/new_human)
@@ -182,23 +181,56 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/gray(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp(new_human), WEAR_WAIST)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43/extended_mag(new_human), WEAR_J_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon(new_human), WEAR_J_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
+	var/gun = pick("pps43", "mp5", "mp27")
+	switch(gun)
+		if("pps43")
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43/extended_mag(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+		if("mp5")
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/mp5(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5(new_human), WEAR_IN_BELT)
+		if("mp27")
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
+/datum/equipment_preset/clf/soldier/snow/sniper
+	name = "CLF Soldier (Snow)"
+
+/datum/equipment_preset/clf/soldier/snow/sniper/spawn_rebel_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/militia/snow, WEAR_HEAD)
+
+/datum/equipment_preset/clf/soldier/snow/sniper/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_suit(new_human)
+	spawn_rebel_helmet(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/gray(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction/sniper(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/boltaction(new_human), WEAR_J_STORE)
 
 //*****************************************************************************************************/
 
