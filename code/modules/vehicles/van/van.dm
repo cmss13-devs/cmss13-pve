@@ -62,6 +62,8 @@
 	var/overdrive_duration = 3 SECONDS
 	var/overdrive_speed_mult = 0.3 // Additive (30% more speed, adds to 80% more speed)
 
+	var/momentum_loss_on_weeds_factor = 0.2
+
 	move_on_turn = TRUE
 
 	var/list/mobs_under = list()
@@ -165,6 +167,13 @@
 		M.client.images -= normal_image
 
 	return ..()
+
+
+/obj/vehicle/multitile/van/pre_movement()
+	if(locate(/obj/effect/alien/weeds) in loc)
+		move_momentum *= momentum_loss_on_weeds_factor
+
+	. = ..()
 
 
 /obj/vehicle/multitile/van/attackby(obj/item/O, mob/user)

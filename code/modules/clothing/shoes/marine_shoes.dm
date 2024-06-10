@@ -209,6 +209,22 @@
 	flags_inventory = FPRINT|NOSLIPPING
 	siemens_coefficient = 0.6
 	items_allowed = list(/obj/item/attachable/bayonet, /obj/item/weapon/throwing_knife, /obj/item/weapon/gun/pistol/holdout, /obj/item/weapon/gun/pistol/clfpistol, /obj/item/weapon/straight_razor)
+	var/weed_slowdown_mult = 0.5
+
+/obj/item/clothing/shoes/hiking/equipped(mob/user, slot, silent)
+	. = ..()
+	var/mob/living/carbon/human/human_user = user
+	if(src != human_user.shoes)
+		return
+	RegisterSignal(user, COMSIG_MOB_WEED_SLOWDOWN, PROC_REF(handle_weed_slowdown))
+
+/obj/item/clothing/shoes/hiking/unequipped(mob/user, slot, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_MOB_WEED_SLOWDOWN, PROC_REF(handle_weed_slowdown))
+
+/obj/item/clothing/shoes/hiking/proc/handle_weed_slowdown(mob/user, list/slowdata)
+	SIGNAL_HANDLER
+	slowdata["movement_slowdown"] *= weed_slowdown_mult
 
 //=ROYAL MARINES=\\
 
