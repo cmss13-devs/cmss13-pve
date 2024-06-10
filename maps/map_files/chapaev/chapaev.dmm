@@ -1817,19 +1817,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/briefing)
-"rV" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Platoon Corpsman"
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/distress/UPP,
-/obj/item/clothing/under/marine/veteran/UPP/medic,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "cyan1"
-	},
-/area/golden_arrow/medical)
 "so" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -4442,17 +4429,8 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/distress/UPP,
 /obj/item/clothing/under/marine/veteran/UPP/medic,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/accessory/armband/med,
 /obj/item/weapon/gun/rifle/type71/carbine,
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -1;
-	pixel_y = 4
-	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -4701,18 +4679,6 @@
 	pixel_y = 17
 	},
 /obj/structure/machinery/computer/overwatch/map_specific/chapaev,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/machinery/computer/overwatch/almayer{
-	density = 1;
-	faction = "UPP"
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = 7;
-	pixel_y = 17
-	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -16057,7 +16023,7 @@ wA
 CK
 Xw
 qw
-rV
+fM
 CK
 IB
 IB
