@@ -445,6 +445,12 @@ Make sure their actual health updates immediately.*/
 		QL.icon_state = "trackoff"
 		return
 
+	if(tracking_atom.loc.z != loc.z && SSinterior.in_interior(tracking_atom))
+		var/datum/interior/interior = SSinterior.get_interior_by_coords(tracking_atom.x, tracking_atom.y, tracking_atom.z)
+		var/atom/exterior = interior.exterior
+		if(exterior)
+			tracking_atom = exterior
+
 	if(tracking_atom.loc.z != loc.z || get_dist(src, tracking_atom) < 1 || src == tracking_atom)
 		QL.icon_state = "trackondirect"
 	else

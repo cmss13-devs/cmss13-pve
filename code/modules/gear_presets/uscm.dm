@@ -141,6 +141,7 @@
 	name = "FORECON Squad Rifleman"
 	paygrade = "ME3"
 	rank = JOB_SQUAD_MARINE_FORECON
+	skills = /datum/skills/pfc/recon
 
 /datum/equipment_preset/uscm/pfc/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -222,6 +223,7 @@
 	name = "FORECON Squad Smartgunner"
 	paygrade = "ME5"
 	rank = JOB_FORECON_SMARTGUNNER
+	skills = /datum/skills/smartgunner/recon
 
 /datum/equipment_preset/uscm/sg/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -516,6 +518,7 @@
 	name = "FORECON Squad Corpsman"
 	paygrade = "ME5"
 	rank = JOB_SQUAD_MEDIC_FORECON
+	skills = /datum/skills/combat_medic/recon
 
 /datum/equipment_preset/uscm/medic/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/medic/standard
@@ -585,6 +588,8 @@
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
 	rank = JOB_SQUAD_TEAM_LEADER_FORECON
+	role_comm_title = "aSL"
+	skills = /datum/skills/tl/recon
 
 /datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -695,10 +700,11 @@
 	paygrade = "UE6"
 
 /datum/equipment_preset/uscm/leader/forecon
-	name = "FORECON Squad Sergeant"
-	assignment = "Squad Sergeant"
+	name = "FORECON Squad Leader"
+	assignment = "Squad Leader"
 	paygrade = "ME8"
 	rank = JOB_SQUAD_LEADER_FORECON
+	role_comm_title = "SL"
 
 /datum/equipment_preset/uscm/leader/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
