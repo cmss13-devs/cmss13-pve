@@ -1737,24 +1737,6 @@
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/under/marine/veteran/UPP/boiler,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/item/clothing/suit/storage/snow_suit/soviet,
-/obj/item/clothing/suit/gimmick/jason,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	icon_broken = "cabinetdetective_broken";
-	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
-	icon_opened = "cabinetdetective_open";
-	icon_state = "cabinetdetective_locked";
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/veteran/UPP/boiler,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4462,7 +4444,6 @@
 /obj/item/clothing/under/marine/veteran/UPP/medic,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,
@@ -4722,7 +4703,6 @@
 /obj/structure/machinery/computer/overwatch/map_specific/chapaev,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/machinery/computer/overwatch/almayer{
