@@ -683,6 +683,7 @@
 #include "code\defines\procs\conflict.dm"
 #include "code\defines\procs\hud.dm"
 #include "code\defines\procs\radio.dm"
+#include "code\defines\procs\records.dm"
 #include "code\game\atoms.dm"
 #include "code\game\atoms_movable.dm"
 #include "code\game\bioscans.dm"
