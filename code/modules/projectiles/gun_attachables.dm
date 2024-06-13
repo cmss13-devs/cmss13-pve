@@ -3272,6 +3272,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight_union"
 	attach_icon = "lasersight_union_a"
+	pixel_shift_x = 20
+	pixel_shift_y = 18
 
 /obj/item/attachable/bipod
 	name = "bipod"
