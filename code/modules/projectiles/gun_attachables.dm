@@ -3269,6 +3269,9 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/lasersight/union
 	name = "Zvezda Laser Module"
 	desc = "Visible band 512nm green laser, compatible with NVG and IR. Bears striking resemblance to an old Weyland Yutani offering... Decreases scatter, especially onehanded, slightly boosts accuracy. "
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "lasersight_union"
+	attach_icon = "lasersight_union_a"
 
 /obj/item/attachable/bipod
 	name = "bipod"
