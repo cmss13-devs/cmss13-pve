@@ -132,7 +132,7 @@
 	var/displayname = sentrygun.name
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
-	var/message = "[displayname]:[get_area(sentrygun)] Engaged"
+	var/message = "[displayname]:[get_area(sentrygun)] ENGAGED"
 	if(can_identify_target)
 		message += " [sentrygun.target]"
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
@@ -148,7 +148,7 @@
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
 	var/areaname = get_area(sentrygun)
-	var/message = "[displayname]:[areaname] Low ammo [sentrygun.ammo.current_rounds]/[sentrygun.ammo.max_rounds]."
+	var/message = "[displayname]:[areaname] RNDS CRITICAL [sentrygun.ammo.current_rounds]/[sentrygun.ammo.max_rounds]."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -160,7 +160,7 @@
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
 	var/areaname = get_area(sentrygun)
-	var/message = "[displayname]:[areaname] out of ammo."
+	var/message = "[displayname]:[areaname] EMPTY."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -289,7 +289,7 @@
 	if(length(sentry.nickname))
 		displayname = sentry.nickname
 	var/areaname = get_area(sentry)
-	var/message = "[displayname]:[areaname] lost contact."
+	var/message = "[displayname]:[areaname] NO SIGNAL."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 	playsound(src,  'sound/machines/buzz-two.ogg', 25, FALSE)
 
