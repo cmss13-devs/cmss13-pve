@@ -5,6 +5,7 @@ GLOBAL_VAR(timeloop_nuke)
 GLOBAL_VAR(tdd_cell)
 GLOBAL_VAR_INIT(map_iteration, 1)
 GLOBAL_VAR(midway_dockingport)
+GLOBAL_VAR(nuketimer_id)
 
 // <p>Your squad has been tasked with investigating a distress signal from an abandoned USCM outpost designated "Whiskey". The cause of the distress signal is unknown, considering the base was decommissioned years ago. Additionally, strange readings inconsistent with anything seen before have been reported emitting from the outpost. RADAR suggests the existence of an unknown shuttle west of the main outpost's defensive pads. <br><br>Investigate the outpost, find out what's happened, and extract any survivors if needed. To that end, ARES will be piloting the Midway for this operation.</p>
 
@@ -57,7 +58,7 @@ GLOBAL_VAR(midway_dockingport)
 /proc/start_nuketimer()
 	//addtimer(CALLBACK(bomb, TYPE_PROC_REF(/obj/structure/machinery/nuclearbomb, explode)), SStimeloop.nukepostloop)
 	GLOB.nuketimer_started = TRUE
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(message_admins), "TIME IS UP. DETONATE THE BOMB."), SStimeloop.nukepostloop)
+	GLOB.nuketimer_id = addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(message_admins), "TIME IS UP. DETONATE THE BOMB."), SStimeloop.nukepostloop, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 
 /proc/revert_timeloop()
 	if(!GLOB.timeloop_power)
@@ -137,6 +138,7 @@ GLOBAL_VAR(midway_dockingport)
 	light_range = 3
 	indestructible = TRUE
 	unacidable = TRUE
+	var/mid_removal = FALSE
 
 /obj/structure/tdd/get_examine_text(mob/user)
 	. = ..()
@@ -149,16 +151,22 @@ GLOBAL_VAR(midway_dockingport)
 /obj/structure/tdd/attackby(obj/item/W, mob/user)
 	. = ..()
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		if(mid_removal)
+			return
+
 		if(!GLOB.timeloop_power)
 			to_chat(user, SPAN_WARNING("There's nothing to remove!"))
 			return
 
 		to_chat(user, SPAN_WARNING("You start to unwrench [src]'s power source. You hope you know what you're doing..."))
 		playsound(src, 'sound/items/Ratchet.ogg', 25, 1)
+		mid_removal = TRUE
 		if(!do_after(user, 10 SECONDS, show_busy_icon = BUSY_ICON_GENERIC))
 			to_chat(user, SPAN_WARNING("You stop trying to remove [src]'s power source."))
+			mid_removal = FALSE
 			return
 
+		mid_removal = FALSE
 		remove_power_source(user)
 
 /obj/structure/tdd/proc/remove_power_source(mob/user)
@@ -184,7 +192,11 @@ GLOBAL_VAR(midway_dockingport)
 
 /obj/structure/machinery/nuclearbomb/emplaced/get_examine_text(mob/user)
 	. = ..()
-	. += "A timer on [src] reads \"DETONATION IN [(timeleft(SStimeloop.mainloop_timer_id) / 10) + 120] SECONDS\"." //roughly
+	if(!GLOB.nuketimer_started)
+		. += "A timer on [src] reads \"DETONATION IN [(timeleft(SStimeloop.mainloop_timer_id) / 10) + 120] SECONDS\"." //roughly
+	else
+		. += "A timer on [src] reads \"DETONATION IN [(timeleft(GLOB.nuketimer_id) / 10)] SECONDS\"."
+
 
 /obj/structure/machinery/nuclearbomb/emplaced/update_icon()
 	return
