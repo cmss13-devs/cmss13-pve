@@ -358,9 +358,9 @@
 	name = "map terminal"
 	desc = "A terminal that displays a map of the current operation location."
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
-	icon_state = "cicmap_computer"
+	icon_state = "arcmap"
 	density = FALSE
 
 /obj/structure/machinery/computer/overwatch/almayer/arc
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
-	icon_state = "overwatch_computer"
+	icon_state = "arcconsole"

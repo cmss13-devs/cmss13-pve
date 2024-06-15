@@ -33,31 +33,46 @@
 /area/vehicle/apc/arc)
 "G" = (
 /obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = -8
+	pixel_x = -8;
+	dir = 1
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 1;
-	pixel_x = 8
+	pixel_x = 8;
+	dir = 1
 	},
-/turf/open/floor/almayer,
+/turf/open/floor,
 /area/vehicle/apc/arc)
 "H" = (
-/obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_x = -2
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	layer = 3.1;
+	pixel_y = 5
+	},
+/obj/structure/machinery/prop/almayer/CICmap/arc{
+	pixel_x = 16
+	},
+/obj/structure/machinery/computer/overwatch/almayer/arc{
+	pixel_y = 5;
+	pixel_x = 20
 	},
 /turf/open/floor/almayer,
 /area/vehicle/apc/arc)
 "I" = (
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -7
+	pixel_x = -8
 	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
-	pixel_x = 8;
-	pixel_y = 4;
+	pixel_x = -16;
+	pixel_y = 11;
 	layer = 2.9
 	},
-/turf/open/floor/almayer,
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	icon = 'icons/obj/vehicles/interiors/arc.dmi';
+	icon_state = "arcloader";
+	pixel_y = 13;
+	pixel_x = 7
+	},
+/turf/open/floor,
 /area/vehicle/apc/arc)
 "N" = (
 /obj/effect/landmark/interior/spawn/entrance{
@@ -67,29 +82,19 @@
 	tag = "right";
 	pixel_y = -10
 	},
-/turf/open/floor/almayer,
+/turf/open/floor,
 /area/vehicle/apc/arc)
 "X" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
-	pixel_y = 12;
-	pixel_x = 11
-	},
-/obj/structure/machinery/prop/almayer/CICmap/arc{
-	dir = 4;
-	pixel_x = -13;
-	pixel_y = -9;
-	layer = 2.981
-	},
-/obj/structure/machinery/computer/overwatch/almayer/arc{
-	dir = 4;
-	pixel_x = -13;
-	pixel_y = 4
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
-	dir = 8;
-	pixel_x = 3
+	pixel_x = 8
 	},
-/turf/open/floor/almayer,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 16
+	},
+/turf/open/floor,
 /area/vehicle/apc/arc)
 
 (1,1,1) = {"
