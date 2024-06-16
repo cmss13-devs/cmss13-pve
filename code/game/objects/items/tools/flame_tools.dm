@@ -58,10 +58,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/tool/candle/proc/light(flavor_text)
 	if(!heat_source)
 		heat_source = 1000
-		if(!flavor_text)
+		if(!flavor_text && usr)
 			flavor_text = SPAN_NOTICE("[usr] lights [src].")
-		for(var/mob/O in viewers(usr, null))
-			O.show_message(flavor_text, SHOW_MESSAGE_VISIBLE)
+			for(var/mob/O in viewers(usr, null))
+				O.show_message(flavor_text, SHOW_MESSAGE_VISIBLE)
 		set_light(CANDLE_LUM)
 		update_icon()
 		START_PROCESSING(SSobj, src)
@@ -85,6 +85,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		update_icon()
 		set_light(0)
 		STOP_PROCESSING(SSobj, src)
+
+/obj/item/tool/candle/lit/Initialize()
+	..()
+	light()
+
+/obj/item/tool/candle/lit/infinite
+	wax = 9999999
 
 ///////////
 //MATCHES//

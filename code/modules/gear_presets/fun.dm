@@ -471,3 +471,28 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp(new_human), WEAR_IN_JACKET)
+
+/datum/equipment_preset/uscm/pfc/hefa
+	name = "HEFA Squad Rifleman"
+	paygrade = "Knight"
+	faction_group = list(FACTION_HEFA, FACTION_USCM)
+	faction = FACTION_HEFA
+	uses_special_name = TRUE
+	assignment = "Knight"
+
+/datum/equipment_preset/uscm/pfc/hefa/load_name(mob/living/carbon/human/new_human, randomise)
+	var/list/initial_name = splittext(new_human.real_name, " ")
+	var/first_word = initial_name[1]
+	var/second_word = initial_name[2]
+	if(second_word[1] == "'" || second_word[1] == "\"")
+		second_word = initial_name[3]
+	var/new_name = "[first_word] of [second_word]s"
+
+	new_human.change_real_name(new_human, new_name)
+
+/datum/equipment_preset/uscm/pfc/hefa/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/lightpack/upp
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/marine
+
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
