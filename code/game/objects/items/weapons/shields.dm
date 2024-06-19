@@ -115,12 +115,19 @@
 
 /obj/item/weapon/shield/riot/metal
 	name = "metal shield"
-	name = "A metal riot shield effective, but heavy."
+	desc = "A metal riot shield. Effective, but heavy."
 	icon_state = "riotmetal"
 	item_state = "riotmetal"
 	base_icon_state = "riotmetal"
 	passive_block = 40
 	readied_block = 60
+
+/obj/item/weapon/shield/riot/metal/hefa
+	name = "decorated metal shield.
+	desc = "A simple metal shield painted with HEFA grenade image."
+	icon_state = "hefashield"
+	item_state = "hefashield"
+	base_icon_state = "hefashield"
 
 /obj/item/weapon/shield/riot/ballistic //FOR THE ROYAL MARINE SPEC DO NOT TOUCH SMELLY MAN
 	name = "FBS-B Ballistic shield"
@@ -131,3 +138,4 @@
 	base_icon_state = "ballisticshield"
 	passive_block = 60
 	readied_block = 90
+
