@@ -14,7 +14,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_PIRATE
 
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 
 /datum/equipment_preset/fun/pirate/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
@@ -299,7 +299,7 @@
 	new_human.change_real_name(new_human, "Ivan")
 	new_human.f_style = "Shaved"
 	new_human.h_style = "Shaved Head"
-	new_human.ethnicity = "Scandinavian"
+	new_human.skin_color = "pale3"
 	new_human.r_hair = 165
 	new_human.g_hair = 42
 	new_human.b_hair = 42
@@ -362,7 +362,7 @@
 	new_human.b_facial = 51
 	new_human.h_style = "Mullet"
 	new_human.f_style = "Full English"
-	new_human.ethnicity = "Anglo"
+	new_human.skin_color = "pale2"
 	new_human.r_eyes = 102 //Brown eyes.
 	new_human.g_eyes = 51
 	new_human.b_eyes = 0
@@ -417,7 +417,7 @@
 
 	uses_special_name = TRUE
 
-	skills = /datum/skills/pfc/crafty // about equivalent to a marine
+	skills = /datum/skills/pfc // about equivalent to a marine
 
 	assignment = "Monkey"
 	rank = "Monkey"

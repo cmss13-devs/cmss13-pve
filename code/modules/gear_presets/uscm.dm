@@ -123,6 +123,7 @@
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
 	paygrade = "ME3"
+	skills = /datum/skills/pfc/recon
 
 /datum/equipment_preset/uscm/pfc/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -191,6 +192,7 @@
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
 	paygrade = "ME5"
+	skills = /datum/skills/smartgunner/recon
 
 /datum/equipment_preset/uscm/sg/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -213,6 +215,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/specrag(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
@@ -464,6 +467,7 @@
 	name = "FORECON Squad Corpsman"
 	assignment = "Squad Corpsman"
 	paygrade = "ME5"
+	skills = /datum/skills/combat_medic/recon
 
 /datum/equipment_preset/uscm/medic/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/medic/standard
@@ -523,6 +527,8 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
+	role_comm_title = "aSL"
+	skills = /datum/skills/tl/recon
 
 /datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -615,9 +621,10 @@
 	paygrade = "UE6"
 
 /datum/equipment_preset/uscm/leader/forecon
-	name = "FORECON Squad Sergeant"
-	assignment = "Squad Sergeant"
+	name = "FORECON Squad Leader"
+	assignment = "Squad Leader"
 	paygrade = "ME8"
+	role_comm_title = "SL"
 
 /datum/equipment_preset/uscm/leader/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
@@ -641,7 +648,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrade = "ME2"
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 
 	minimap_icon = "private"
 
@@ -749,6 +756,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
+
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/smartgunner_equipped/cryo
