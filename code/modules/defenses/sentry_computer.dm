@@ -256,7 +256,7 @@
 	var/obj/structure/machinery/defenses/defense = defensive_structure
 	pair_sentry(defense)
 	to_chat(user, SPAN_NOTICE("[defense] has been encrypted."))
-	var/message = "[defense] added to [src]"
+	var/message = "[defense] CONNECTED TO [src]"
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -274,7 +274,7 @@
 	if (do_after(user, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		unpair_sentry(sentry)
 		to_chat(user, SPAN_NOTICE("[sentry] has been decrypted."))
-		var/message = "[sentry] removed from from [src]"
+		var/message = "[sentry] DISCONNECTED FROM [src]"
 		INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
