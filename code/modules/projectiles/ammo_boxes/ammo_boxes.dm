@@ -79,6 +79,7 @@
 	var/overlay_gun_type = "_m41" //used for text overlay
 	var/overlay_content = "_reg"
 	var/magazine_type = /obj/item/ammo_magazine/rifle
+	var/list/allowed_magazines = list()
 	var/num_of_magazines = 10
 	var/handfuls = FALSE
 	var/icon_state_deployed = null

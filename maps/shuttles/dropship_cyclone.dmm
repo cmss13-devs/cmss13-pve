@@ -6,7 +6,9 @@
 	},
 /area/shuttle/cyclone)
 "aP" = (
-/obj/structure/shuttle/part/dropship2/left_outer_wing_connector,
+/obj/structure/shuttle/part/dropship2/left_outer_wing_connector{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "bw" = (
@@ -15,7 +17,9 @@
 	},
 /area/shuttle/cyclone)
 "cj" = (
-/obj/structure/shuttle/part/dropship2/nose_front_left,
+/obj/structure/shuttle/part/dropship2/nose_front_left{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "cm" = (
@@ -33,7 +37,9 @@
 	},
 /area/shuttle/cyclone)
 "cJ" = (
-/obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons,
+/obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons{
+	name = "\improper Cyclone"
+	},
 /obj/effect/attach_point/weapon/midway/right_fore{
 	ship_tag = "dropship_cyclone"
 	},
@@ -62,11 +68,15 @@
 	},
 /area/shuttle/cyclone)
 "eT" = (
-/obj/structure/shuttle/part/dropship2/transparent/left_outer_bottom_wing,
+/obj/structure/shuttle/part/dropship2/transparent/left_outer_bottom_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "fo" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap,
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "fr" = (
@@ -100,22 +110,29 @@
 /area/shuttle/cyclone)
 "hd" = (
 /obj/effect/attach_point/fuel/dropship2{
-	pixel_x = -32
+	pixel_x = -32;
+	ship_tag = "dropship_cyclone"
 	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "33"
 	},
 /area/shuttle/cyclone)
 "hu" = (
-/obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing,
+/obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "hS" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap,
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "hV" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_exhaust,
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_exhaust{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ia" = (
@@ -127,12 +144,15 @@
 	},
 /area/shuttle/cyclone)
 "iO" = (
-/obj/structure/shuttle/part/dropship2/right_inner_wing_connector,
+/obj/structure/shuttle/part/dropship2/right_inner_wing_connector{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "jr" = (
 /obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone"
+	ship_tag = "dropship_cyclone";
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -166,7 +186,9 @@
 	},
 /area/shuttle/cyclone)
 "mO" = (
-/obj/structure/shuttle/part/dropship2/transparent/upper_left_wing,
+/obj/structure/shuttle/part/dropship2/transparent/upper_left_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "nj" = (
@@ -210,7 +232,9 @@
 	},
 /area/shuttle/cyclone)
 "pz" = (
-/obj/structure/shuttle/part/dropship2/transparent/middle_left_wing,
+/obj/structure/shuttle/part/dropship2/transparent/middle_left_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "qj" = (
@@ -237,8 +261,19 @@
 	icon_state = "48"
 	},
 /area/shuttle/cyclone)
+"rk" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_cyclone";
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
 "ro" = (
-/obj/structure/shuttle/part/dropship2/nose_front_right,
+/obj/structure/shuttle/part/dropship2/nose_front_right{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "rB" = (
@@ -285,7 +320,9 @@
 	},
 /area/shuttle/cyclone)
 "vT" = (
-/obj/structure/shuttle/part/dropship2/transparent/right_inner_bottom_wing,
+/obj/structure/shuttle/part/dropship2/transparent/right_inner_bottom_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "wk" = (
@@ -297,11 +334,15 @@
 	},
 /area/shuttle/cyclone)
 "xY" = (
-/obj/structure/shuttle/part/dropship2/lower_left_wall,
+/obj/structure/shuttle/part/dropship2/lower_left_wall{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yA" = (
-/obj/structure/shuttle/part/dropship2/transparent/nose_center,
+/obj/structure/shuttle/part/dropship2/transparent/nose_center{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yP" = (
@@ -329,7 +370,9 @@
 	},
 /area/shuttle/cyclone)
 "zL" = (
-/obj/structure/shuttle/part/dropship2/transparent/nose_top_right,
+/obj/structure/shuttle/part/dropship2/transparent/nose_top_right{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Ak" = (
@@ -342,13 +385,15 @@
 	},
 /area/shuttle/cyclone)
 "At" = (
-/obj/structure/shuttle/part/dropship2/lower_right_wall,
+/obj/structure/shuttle/part/dropship2/lower_right_wall{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Ax" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/cameras/dropship/two{
-	name = "\improper 'Cyclon' camera controls";
+	name = "\improper 'Cyclone' camera controls";
 	network = list("Cyclone","Laser Targets")
 	},
 /turf/open/shuttle/dropship{
@@ -374,19 +419,27 @@
 	},
 /area/shuttle/cyclone)
 "Cb" = (
-/obj/structure/shuttle/part/dropship2/transparent/upper_right_wing,
+/obj/structure/shuttle/part/dropship2/transparent/upper_right_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Cf" = (
-/obj/structure/shuttle/part/dropship2/left_inner_wing_connector,
+/obj/structure/shuttle/part/dropship2/left_inner_wing_connector{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Da" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust,
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Df" = (
-/obj/structure/shuttle/part/dropship2/right_outer_wing_connector,
+/obj/structure/shuttle/part/dropship2/right_outer_wing_connector{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Dl" = (
@@ -414,7 +467,9 @@
 	},
 /area/shuttle/cyclone)
 "Fz" = (
-/obj/effect/attach_point/fuel/dropship2,
+/obj/effect/attach_point/fuel/dropship2{
+	ship_tag = "dropship_cyclone"
+	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "28"
 	},
@@ -460,14 +515,18 @@
 /area/shuttle/cyclone)
 "IP" = (
 /obj/effect/attach_point/weapon/dropship2/left_wing,
-/obj/structure/shuttle/part/dropship2/transparent/lower_left_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_left_wing{
+	name = "\improper Cyclone"
+	},
 /obj/effect/attach_point/weapon/midway/left_wing{
 	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "IZ" = (
-/obj/structure/shuttle/part/dropship2/transparent/middle_right_wing,
+/obj/structure/shuttle/part/dropship2/transparent/middle_right_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "JZ" = (
@@ -511,7 +570,7 @@
 /area/shuttle/cyclone)
 "MU" = (
 /obj/structure/machinery/computer/dropship_weapons/dropship2{
-	name = "\improper 'Cyclon' weapons controls"
+	name = "\improper 'Cyclone' weapons controls"
 	},
 /obj/structure/phone_base/rotary{
 	name = "Cyclone Telephone";
@@ -548,14 +607,18 @@
 /area/shuttle/cyclone)
 "QN" = (
 /obj/effect/attach_point/weapon/dropship2/right_wing,
-/obj/structure/shuttle/part/dropship2/transparent/lower_right_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_right_wing{
+	name = "\improper Cyclone"
+	},
 /obj/effect/attach_point/weapon/midway/right_wing{
 	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "RR" = (
-/obj/structure/shuttle/part/dropship2/transparent/nose_top_left,
+/obj/structure/shuttle/part/dropship2/transparent/nose_top_left{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Sk" = (
@@ -616,12 +679,15 @@
 "Zd" = (
 /obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons,
 /obj/effect/attach_point/weapon/midway/left_fore{
-	ship_tag = "dropship_cyclone"
+	ship_tag = "dropship_cyclone";
+	name = "\improper Cyclone"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ZG" = (
-/obj/structure/shuttle/part/dropship2/transparent/left_outer_inner_wing,
+/obj/structure/shuttle/part/dropship2/transparent/left_outer_inner_wing{
+	name = "\improper Cyclone"
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ZU" = (
@@ -759,7 +825,7 @@ Kv
 ml
 oX
 FD
-jr
+rk
 JZ
 qX
 GE
