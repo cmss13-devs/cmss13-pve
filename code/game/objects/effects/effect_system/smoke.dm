@@ -258,6 +258,7 @@
 	var/xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
+	time_to_live = 20
 
 /obj/effect/particle_effect/smoke/cn20/xeno
 	name = "CN20-X nerve gas"
@@ -300,7 +301,8 @@
 		xeno_creature.interference = 10
 		xeno_creature.blinded = TRUE
 	else
-		creature.apply_damage(12, OXY)
+		creature.apply_damage(12, TOX)
+		creature.apply_damage(2, BRAIN)
 	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
 	if(!xeno_creature && !creature.eye_blind) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
