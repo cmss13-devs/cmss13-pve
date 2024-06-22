@@ -6,6 +6,7 @@
 //emails for the Almayer computers
 /datum/fluff_email/almayer
 
+
 /datum/fluff_email/almayer/iwantout
 	title = "RE: I want out."
 	entry_text = {"<html>
