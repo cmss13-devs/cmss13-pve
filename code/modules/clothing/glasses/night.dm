@@ -102,6 +102,28 @@
 	req_skill_level = SKILL_SPEC_SMARTGUN
 
 	var/far_sight = FALSE
+	var/list/smartgun_head_ban = list(/obj/item/clothing/head/helmet/marine)
+	var/obj/structure/machinery/camera/camera
+	/obj/item/clothing/glasses/night/m56_goggles/proc/check_equipping(mob/living/carbon/human/equipping_human, obj/item/equipping_item, slot)
+	SIGNAL_HANDLER
+
+	if(slot != WEAR_HEAD)
+		return
+
+
+	if(is_type_in_list(equipping_item, smartgun_head_ban))
+		return
+
+	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
+
+	if(equipping_item.flags_equip_slot == SLOT_BACK)
+		to_chat(equipping_human, SPAN_WARNING("You can't equip [equipping_item] on your back while wearing [src]."))
+		return
+
+/obj/item/clothing/suit/storage/marine/smartgunner/unequipped(mob/user, slot)
+	. = ..()
+
+	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
 
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
