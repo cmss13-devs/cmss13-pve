@@ -73,7 +73,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/heap
-	name = "magazine box (M41A MK1 X 10)"
+	name = "magazine box (HEAP M41A MK1 X 10)"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
