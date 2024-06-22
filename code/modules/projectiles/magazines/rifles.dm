@@ -306,7 +306,7 @@
 	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS|AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
 	ammo_band_icon = "+m41ae2_band"
 	ammo_band_icon_empty = "+m41ae2_band_e"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	reload_delay = 5
 
 /obj/item/ammo_magazine/rifle/lmg/holo_target
