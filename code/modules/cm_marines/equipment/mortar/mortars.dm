@@ -215,9 +215,6 @@
 		if(busy)
 			to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
 			return
-		if(!is_ground_level(z))
-			to_chat(user, SPAN_WARNING("You cannot fire [src] here."))
-			return
 		if(targ_x == 0 && targ_y == 0) //Mortar wasn't set
 			to_chat(user, SPAN_WARNING("[src] needs to be aimed first."))
 			return
@@ -384,9 +381,6 @@
 		return
 	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 		to_chat(user, SPAN_WARNING("You don't have the training to deploy [src]."))
-		return
-	if(!is_ground_level(deploy_turf.z))
-		to_chat(user, SPAN_WARNING("You cannot deploy [src] here."))
 		return
 	var/area/A = get_area(deploy_turf)
 	if(CEILING_IS_PROTECTED(A.ceiling, CEILING_PROTECTION_TIER_1))
