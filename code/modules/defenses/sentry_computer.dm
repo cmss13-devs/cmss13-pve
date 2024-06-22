@@ -132,7 +132,7 @@
 	var/displayname = sentrygun.name
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
-	var/message = "[displayname]:[get_area(sentrygun)] ENGAGED"
+	var/message = "[displayname]:[get_area(sentrygun)] Engaged"
 	if(can_identify_target)
 		message += " [sentrygun.target]"
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
@@ -148,7 +148,7 @@
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
 	var/areaname = get_area(sentrygun)
-	var/message = "[displayname]:[areaname] RNDS CRITICAL [sentrygun.ammo.current_rounds]/[sentrygun.ammo.max_rounds]."
+	var/message = "[displayname]:[areaname] Low ammo [sentrygun.ammo.current_rounds]/[sentrygun.ammo.max_rounds]."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -160,7 +160,7 @@
 	if(length(sentrygun.nickname))
 		displayname = sentrygun.nickname
 	var/areaname = get_area(sentrygun)
-	var/message = "[displayname]:[areaname] EMPTY."
+	var/message = "[displayname]:[areaname] out of ammo."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -256,7 +256,7 @@
 	var/obj/structure/machinery/defenses/defense = defensive_structure
 	pair_sentry(defense)
 	to_chat(user, SPAN_NOTICE("[defense] has been encrypted."))
-	var/message = "[defense] CONNECTED TO [src]"
+	var/message = "[defense] added to [src]"
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -274,7 +274,7 @@
 	if (do_after(user, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		unpair_sentry(sentry)
 		to_chat(user, SPAN_NOTICE("[sentry] has been decrypted."))
-		var/message = "[sentry] DISCONNECTED FROM [src]"
+		var/message = "[sentry] removed from [src]"
 		INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
@@ -289,7 +289,7 @@
 	if(length(sentry.nickname))
 		displayname = sentry.nickname
 	var/areaname = get_area(sentry)
-	var/message = "[displayname]:[areaname] NO SIGNAL."
+	var/message = "[displayname]:[areaname] lost contact."
 	INVOKE_ASYNC(src, PROC_REF(send_message), message)
 	playsound(src,  'sound/machines/buzz-two.ogg', 25, FALSE)
 
