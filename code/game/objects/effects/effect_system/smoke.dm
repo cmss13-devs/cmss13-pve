@@ -131,18 +131,21 @@
 	for(var/mob/living/carbon/M in get_turf(src))
 		affect(M)
 
-/obj/effect/particle_effect/smoke/bad/affect(mob/living/carbon/M)
+/obj/effect/particle_effect/smoke/bad/affect(mob/living/carbon/human/M)
 	..()
 	if (M.internal != null && M.wear_mask && (M.wear_mask.flags_inventory & ALLOWINTERNALS))
 		return
+	if(M.wear_mask && (M.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(M.head && (M.head.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
 	else
 		if(prob(20))
 			M.drop_held_item()
 		M.apply_damage(1, OXY)
 		if(M.coughedtime != 1)
 			M.coughedtime = 1
-			if(ishuman(M)) //Humans only to avoid issues
-				M.emote("cough")
+			M.emote("cough")
 			addtimer(VARSET_CALLBACK(M, coughedtime, 0), 2 SECONDS)
 
 /////////////////////////////////////////////
