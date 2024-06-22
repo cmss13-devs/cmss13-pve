@@ -3315,8 +3315,6 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
 	delay_mod = FIRE_DELAY_TIER_12
-		if(istype(G,/obj/item/weapon/gun/rifle/lmg))
-			delay_mod = 0
 	G.recalculate_attachment_bonuses()
 	G.stop_fire()
 	var/mob/living/user
@@ -3359,7 +3357,7 @@ Defined in conflicts.dm of the #defines folder.
 				burst_scatter_mod = -SCATTER_AMOUNT_TIER_8
 				if(istype(G,/obj/item/weapon/gun/rifle/sniper/M42A))
 					delay_mod = -FIRE_DELAY_TIER_7
-				else if(istype(G,/obj/item/weapon/gun/rifle/lmg)))
+				else if(istype(G,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
