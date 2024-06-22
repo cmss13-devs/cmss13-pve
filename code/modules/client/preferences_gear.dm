@@ -573,9 +573,66 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Die, 20 sides"
 	path = /obj/item/toy/dice/d20
 
-/datum/gear/toy/walkman
+/datum/gear/cassettes
+	category = "Cassettes"
+
+/datum/gear/cassettes/walkman
 	display_name = "Walkman"
 	path = /obj/item/device/walkman
+
+/datum/gear/cassettes/pop1
+	display_name = "Blue Cassette"
+	path = /obj/item/device/cassette_tape/pop1
+	cost = 1
+
+/datum/gear/cassettes/pop2
+	display_name = "Rainbow Cassette"
+	path = /obj/item/device/cassette_tape/pop2
+	cost = 1
+
+/datum/gear/cassettes/pop3
+	display_name = "Orange Cassette"
+	path = /obj/item/device/cassette_tape/pop3
+	cost = 1
+
+/datum/gear/cassettes/pop4
+	display_name = "Blue Cassette"
+	path = /obj/item/device/cassette_tape/pop4
+	cost = 1
+
+/datum/gear/cassettes/heavymetal
+	display_name = "Red-Black Cassette"
+	path = /obj/item/device/cassette_tape/heavymetal
+	cost = 1
+
+/datum/gear/cassettes/hairmetal
+	display_name = "Red Striped Cassette"
+	path = /obj/item/device/cassette_tape/hairmetal
+	cost = 1
+
+/datum/gear/cassettes/indie
+	display_name = "Rising Sun Cassette"
+	path = /obj/item/device/cassette_tape/indie
+	cost = 1
+
+/datum/gear/cassettes/hiphop
+	display_name = "Blue Stripe Cassette"
+	path = /obj/item/device/cassette_tape/hiphop
+	cost = 1
+
+/datum/gear/cassettes/nam
+	display_name = "Green Cassette"
+	path = /obj/item/device/cassette_tape/nam
+	cost = 1
+
+/datum/gear/cassettes/ocean
+	display_name = "Ocean Cassette"
+	path = /obj/item/device/cassette_tape/ocean
+	cost = 1
+
+/datum/gear/cassettes/pouch
+	display_name = "Cassette Pouch"
+	path = 	/obj/item/storage/pouch/cassette
 
 /datum/gear/toy/crayon
 	display_name = "Crayon"
