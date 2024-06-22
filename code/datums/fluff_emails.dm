@@ -3,6 +3,7 @@
 	var/title //email title
 	var/entry_text //email content
 
+
 //emails for the Almayer computers
 /datum/fluff_email/almayer
 
