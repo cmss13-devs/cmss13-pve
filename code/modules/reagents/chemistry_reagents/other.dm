@@ -369,7 +369,7 @@
 	description = "Ah, some good old, all-american, high-fructose corn syrup. Sickeningly sweet. There's worse things you can put in your body, but very few of them are made to be put there."
 	color = "#593512" // rgb: 89, 53, 18
 	chemclass = CHEM_CLASS_NONE
-	properties = list(PROPERTY_NUTRITIOUS = 2)
+	properties = list(PROPERTY_NUTRITIOUS = 1)
 
 /datum/reagent/sucralose
 	name = "Sucralose"
