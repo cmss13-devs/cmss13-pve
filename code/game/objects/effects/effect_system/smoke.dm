@@ -277,10 +277,14 @@
 /obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
 	var/mob/living/carbon/xenomorph/xeno_creature
 	var/mob/living/carbon/human/human_creature
+	var/datum/internal_organ/lungs/lungs
+	var/datum/internal_organ/eyes/eyes
 	if(isxeno(creature))
 		xeno_creature = creature
 	else if(ishuman(creature))
 		human_creature = creature
+		lungs = human_creature.internal_organs_by_name["lungs"]
+		eyes = human_creature.internal_organs_by_name["eyes"]
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
 		return FALSE
 	if(!xeno_affecting && xeno_creature)
@@ -298,15 +302,18 @@
 	if(xeno_creature)
 		if(xeno_creature.interference < 4)
 			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
+		creature.apply_damage(20, BRUTE)
 		xeno_creature.interference = 10
 		xeno_creature.blinded = TRUE
 	else
 		creature.apply_damage(12, TOX)
 		creature.apply_damage(2, BRAIN)
+		lungs.take_damage(2)
 	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
-	if(!xeno_creature && !creature.eye_blind) //Eye exposure damage
+	if(!xeno_creature) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
 		creature.SetEyeBlind(round(effect_amt/3))
+		eyes.take_damage(2)
 	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
 		creature.coughedtime = 1
 		if(prob(50))
