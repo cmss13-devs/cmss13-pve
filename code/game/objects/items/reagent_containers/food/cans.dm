@@ -347,10 +347,6 @@
 	icon_state = "souto_diet_classic"
 	item_state = "souto_diet_classic"
 
-/obj/item/reagent_container/food/drinks/cans/souto/diet/Initialize()
-	. = ..()
-
-
 /obj/item/reagent_container/food/drinks/cans/souto/classic
 	name = "\improper Souto Classic"
 	desc = "The can boldly proclaims it to be tangerine flavored. You can't help but think that's a lie. Canned in Havana."
@@ -539,7 +535,7 @@
 /obj/item/reagent_container/food/drinks/cans/souto/diet/vanilla/Initialize()
 	. = ..()
 	reagents.add_reagent("sodawater", 25)
-	reagents.add_reagent("souto_vanilla", 22)
+	reagents.add_reagent("souto_vanilla", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/pineapple
 	name = "\improper Pineapple Souto"
