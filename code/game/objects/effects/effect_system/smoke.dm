@@ -364,7 +364,7 @@
 
 	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
 		return FALSE
-	if(human_creature && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
+	if(creature.head.flags_inventory & BLOCKGASEFFECT)
 		return FALSE
 
 	creature.hallucination += 15
