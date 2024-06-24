@@ -339,6 +339,33 @@
 		human_creature.recalculate_move_delay = TRUE
 	return TRUE
 
+/////////////////////////////////////////////
+// ALD-91 LSD Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/LSD
+	name = "ALD-91 LSD Gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#80c7e4"
+	var/xeno_affecting = FALSE
+	opacity = FALSE
+	alpha = 75
+	time_to_live = 20
+	var/stun_chance = 60
+
+/obj/effect/particle_effect/smoke/LSD/Move()
+	. = ..()
+	for(var/mob/living/carbon/human/human in get_turf(src))
+		affect(human)
+
+/obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/creature)
+	creature.hallucination += 15
+	creature.druggy += 1
+
+	if(prob(stun_chance))
+		creature.apply_effect(1, WEAKEN)
+
+
 //////////////////////////////////////
 // FLASHBANG SMOKE
 ////////////////////////////////////
@@ -641,6 +668,9 @@
 
 /datum/effect_system/smoke_spread/cn20/xeno
 	smoke_type = /obj/effect/particle_effect/smoke/cn20/xeno
+
+/datum/effect_system/smoke_spread/LSD
+	smoke_type = /obj/effect/particle_effect/smoke/LSD
 
 // XENO SMOKES
 
