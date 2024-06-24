@@ -359,7 +359,7 @@
 		affect(human)
 
 /obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/creature)
-if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
+	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
 		return FALSE
 
 	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
