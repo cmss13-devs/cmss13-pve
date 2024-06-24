@@ -358,7 +358,7 @@
 	for(var/mob/living/carbon/human/human in get_turf(src))
 		affect(human)
 
-/obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/creature)
+/obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/human/creature)
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
 		return FALSE
 
