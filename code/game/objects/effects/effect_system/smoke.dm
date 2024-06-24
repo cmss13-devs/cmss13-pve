@@ -346,7 +346,7 @@
 /obj/effect/particle_effect/smoke/LSD
 	name = "ALD-91 LSD Gas"
 	smokeranking = SMOKE_RANK_HIGH
-	color = "#80c7e4"
+	color = "#6e006e"
 	var/xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
@@ -359,6 +359,14 @@
 		affect(human)
 
 /obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/creature)
+if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
+		return FALSE
+
+	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(human_creature && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
+		return FALSE
+
 	creature.hallucination += 15
 	creature.druggy += 1
 
