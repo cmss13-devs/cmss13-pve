@@ -3,7 +3,7 @@
  */
 /obj/item/device/sentry_computer
 	name = "\improper Sentry Gun Network Laptop"
-	desc = "A laptop loaded with sentry control software.
+	desc = "A laptop loaded with sentry control software."
 	icon = 'icons/obj/structures/props/sentrycomp.dmi'
 	icon_state = "sentrycomp_cl"
 	w_class = SIZE_SMALL
