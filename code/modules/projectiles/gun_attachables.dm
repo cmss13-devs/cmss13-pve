@@ -3411,7 +3411,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "integral bipod"
 	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
 	icon_state = "bipod"
-	attach_icon = "bipod_a"
+	attach_icon = "bipod_integ"
 	slot = "under"
 	size_mod = 0
 	melee_mod = 0
