@@ -561,7 +561,7 @@
 	phone_category = PHONE_UPP_SOLDIER
 
 /obj/item/storage/backpack/marine/satchel/rto/io
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
+	uniform_restricted = null
 	phone_category = PHONE_IO
 
 /obj/item/storage/backpack/marine/smock

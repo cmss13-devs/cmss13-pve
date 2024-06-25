@@ -90,7 +90,7 @@
 		/obj/item/storage/belt/gun/m4a3,
 		/obj/item/storage/belt/gun/m44,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/pilot)
+	uniform_restricted = null
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -114,7 +114,7 @@
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/dutch)
+	uniform_restricted = null
 
 /obj/item/clothing/suit/armor/vest/security
 	name = "Wey-Yu security armor"
