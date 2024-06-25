@@ -347,7 +347,6 @@
 	name = "ALD-91 LSD Gas"
 	smokeranking = SMOKE_RANK_HIGH
 	color = "#6e006e"
-	var/xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
 	time_to_live = 20
