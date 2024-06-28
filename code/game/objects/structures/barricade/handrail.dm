@@ -252,12 +252,27 @@
 /obj/structure/barricade/handrail/hybrisa/road/metal/metaltan
 	name = "metal road barrier"
 	icon_state = "centerroadbarrier"
+
+/obj/structure/barricade/handrail/hybrisa/road/metal/metaltan/middle
+	name = "metal road barrier"
+	icon_state = "centerroadbarrier_middle"
+
 /obj/structure/barricade/handrail/hybrisa/road/metal/metaldark
 	name = "metal road barrier"
 	icon_state = "centerroadbarrier2"
+
+/obj/structure/barricade/handrail/hybrisa/road/metal/metaldark/middle
+	name = "metal road barrier"
+	icon_state = "centerroadbarrier2_middle"
+
 /obj/structure/barricade/handrail/hybrisa/road/metal/metaldark2
 	name = "metal road barrier"
 	icon_state = "centerroadbarrier3"
+
+/obj/structure/barricade/handrail/hybrisa/road/metal/metaldark2/middle
+	name = "metal road barrier"
+	icon_state = "centerroadbarrier3_middle"
+
 /obj/structure/barricade/handrail/hybrisa/road/metal/double
 	name = "metal road barrier"
 	icon_state = "centerroadbarrierdouble"

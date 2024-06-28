@@ -471,6 +471,8 @@
 	desc = "A long shelf filled with various foodstuffs"
 	icon = 'icons/obj/structures/props/supermart.dmi'
 	density = TRUE
+	projectile_coverage = 20
+	throwpass = TRUE
 
 /obj/structure/prop/hybrisa/supermart/rack/longrackempty
 	name = "shelf"
@@ -576,6 +578,10 @@
 	icon = 'icons/obj/structures/props/hybrisatables.dmi'
 	icon_state = "blackmetaltable"
 	health = 1000
+
+	projectile_coverage = 20
+	throwpass = TRUE
+
 /obj/structure/prop/hybrisa/furniture/tables
 	icon = 'icons/obj/structures/props/hybrisatables.dmi'
 	icon_state = "table_pool"
@@ -668,23 +674,23 @@
 	debris = list(/obj/item/stack/sheet/wood)
 
 // Chairs
-/obj/structure/bed/hybrisa/chairs
+/obj/structure/bed/chair/comfy/hybrisa
 	name = "expensive chair"
 	desc = "A expensive looking chair"
 
-/obj/structure/bed/hybrisa/chairs/black
+/obj/structure/bed/chair/comfy/hybrisa/black
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "comfychair_hybrisablack"
 
-/obj/structure/bed/hybrisa/chairs/red
+/obj/structure/bed/chair/comfy/hybrisa/red
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "comfychair_hybrisared"
 
-/obj/structure/bed/hybrisa/chairs/blue
+/obj/structure/bed/chair/comfy/hybrisa/blue
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "comfychair_hybrisablue"
 
-/obj/structure/bed/hybrisa/chairs/brown
+/obj/structure/bed/chair/comfy/hybrisa/brown
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "comfychair_hybrisabrown"
 
@@ -693,6 +699,7 @@
 /obj/structure/bed/hybrisa
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "hybrisa"
+	buckling_y = 8
 
 /obj/structure/bed/hybrisa/prisonbed
 	name = "bunk bed"
@@ -1210,9 +1217,10 @@
 
 /obj/structure/prop/hybrisa/misc/cabinet
 	name = "cabinet"
-	desc = "a small cabinet with drawers."
+	desc = "A small cabinet with drawers."
 	icon_state = "sidecabinet"
-
+	projectile_coverage = 20
+	throwpass = TRUE
 
 
 /obj/structure/prop/hybrisa/misc/trash
@@ -1901,6 +1909,8 @@
 	density = TRUE
 	health = 2000
 	anchored = TRUE
+	projectile_coverage = 20
+	throwpass = TRUE
 
 /obj/structure/prop/hybrisa/misc/stoneplanterseats/empty
 	name = "concrete planter"
@@ -1929,6 +1939,8 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	indestructible = TRUE
+	projectile_coverage = 20
+	throwpass = TRUE
 	var/id = 1
 	var/range = 15
 
@@ -1948,6 +1960,8 @@
 	density = TRUE
 	anchored = TRUE
 	health = 250
+	projectile_coverage = 20
+	throwpass = TRUE
 
 /obj/structure/prop/hybrisa/misc/firehydrant/bullet_act(obj/projectile/P)
 	health -= P.damage
