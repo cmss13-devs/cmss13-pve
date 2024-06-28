@@ -13,8 +13,10 @@
 
 	accurate_range = 8
 	max_range = 14
-	damage = 85
+	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_6
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
 	handful_state = "slug_shell"
 
@@ -129,8 +131,8 @@
 	accurate_range = 7
 	max_range = 9
 	damage = 50
-	damage_var_low = PROJECTILE_VARIANCE_TIER_8
-	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_4
 	shell_speed = AMMO_SPEED_TIER_2
