@@ -139,7 +139,7 @@
 	handful_state = "buckshot_shell"
 	multiple_handful_name = TRUE
 
-datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 5)
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
@@ -204,7 +204,7 @@ datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
 
-datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
+/datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 5)
 /datum/ammo/bullet/shotgun/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
