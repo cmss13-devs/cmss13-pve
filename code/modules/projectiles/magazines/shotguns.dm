@@ -95,7 +95,7 @@ also doesn't really matter. You can only reload them with handfuls.
 	desc = "An internal magazine. It is not supposed to be seen or removed."
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
-	max_rounds = 9
+	max_rounds = 4
 	chamber_closed = 0
 
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
@@ -115,6 +115,10 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/double/twobore //Van Bandolier's superheavy double-barreled hunting rifle.
 	caliber = "2 bore"
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
+
+/obj/item/ammo_magazine/internal/shotgun/combat
+	caliber = "12g"
+	max_rounds = 7
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	caliber = "20g"
