@@ -541,7 +541,6 @@
 	},
 /obj/item/defenses/handheld/sentry,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	layer = 3.1;
 	pixel_x = 20;
 	pixel_y = 10
@@ -2281,7 +2280,6 @@
 "iF" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	pixel_y = 10
 	},
 /obj/item/ammo_box/magazine/mk1{
@@ -3909,14 +3907,14 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "oK" = (
-/obj/item/storage/box/guncase/pumpshotgun/special{
-	pixel_y = 4
-	},
 /obj/item/storage/box/guncase/flamer/special{
 	layer = 3.1;
 	pixel_y = 10
 	},
 /obj/structure/surface/rack,
+/obj/item/storage/box/guncase/pumpshotgun,
+/obj/item/ammo_magazine/shotgun/slugs,
+/obj/item/attachable/stock,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "oM" = (
@@ -9785,6 +9783,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"LP" = (
+/obj/item/storage/box/guncase/flamer/special{
+	layer = 3.1;
+	pixel_y = 10
+	},
+/obj/structure/surface/rack,
+/obj/item/storage/box/guncase/pumpshotgun,
+/obj/item/ammo_magazine/shotgun/slugs,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "LQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -25138,7 +25146,7 @@ EG
 EG
 EG
 HZ
-oK
+LP
 pd
 Jx
 Ot
