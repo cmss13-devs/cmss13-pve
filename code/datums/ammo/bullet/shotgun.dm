@@ -11,7 +11,7 @@
 	name = "shotgun slug"
 	handful_state = "slug_shell"
 
-	accurate_range = 8
+	accurate_range = 7
 	max_range = 14
 	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_6
@@ -27,9 +27,9 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.apply_effect(2, WEAKEN)
-		target.apply_effect(3, SUPERSLOW)
-		target.apply_effect(5, SLOW)
+		target.apply_effect(3.5, WEAKEN)
+		target.apply_effect(4, SUPERSLOW)
+		target.apply_effect(6, SLOW)
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.apply_effect(1, SUPERSLOW)
@@ -134,7 +134,7 @@
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_4
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_7
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
@@ -147,7 +147,7 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.apply_effect(0.5, WEAKEN)
+		target.apply_effect(2.5, WEAKEN)
 		target.apply_effect(2, SUPERSLOW)
 		target.apply_effect(5, SLOW)
 	else
@@ -213,7 +213,7 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.apply_effect(1, WEAKEN)
+		target.apply_effect(2, WEAKEN)
 		target.apply_effect(2, SUPERSLOW)
 		target.apply_effect(5, SLOW)
 	else
