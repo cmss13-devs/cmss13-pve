@@ -258,6 +258,7 @@
 	var/xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
+	time_to_live = 20
 
 /obj/effect/particle_effect/smoke/cn20/xeno
 	name = "CN20-X nerve gas"
@@ -276,10 +277,14 @@
 /obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
 	var/mob/living/carbon/xenomorph/xeno_creature
 	var/mob/living/carbon/human/human_creature
+	var/datum/internal_organ/lungs/lungs
+	var/datum/internal_organ/eyes/eyes
 	if(isxeno(creature))
 		xeno_creature = creature
 	else if(ishuman(creature))
 		human_creature = creature
+		lungs = human_creature.internal_organs_by_name["lungs"]
+		eyes = human_creature.internal_organs_by_name["eyes"]
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
 		return FALSE
 	if(!xeno_affecting && xeno_creature)
@@ -297,14 +302,18 @@
 	if(xeno_creature)
 		if(xeno_creature.interference < 4)
 			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
+		creature.apply_damage(20, BRUTE)
 		xeno_creature.interference = 10
 		xeno_creature.blinded = TRUE
 	else
-		creature.apply_damage(12, OXY)
+		creature.apply_damage(12, TOX)
+		creature.apply_damage(2, BRAIN)
+		lungs.take_damage(2)
 	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
-	if(!xeno_creature && !creature.eye_blind) //Eye exposure damage
+	if(!xeno_creature) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
 		creature.SetEyeBlind(round(effect_amt/3))
+		eyes.take_damage(2)
 	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
 		creature.coughedtime = 1
 		if(prob(50))
@@ -329,6 +338,40 @@
 		human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
 		human_creature.recalculate_move_delay = TRUE
 	return TRUE
+
+/////////////////////////////////////////////
+// ALD-91 LSD Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/LSD
+	name = "ALD-91 LSD Gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#6e006e"
+	opacity = FALSE
+	alpha = 75
+	time_to_live = 20
+	var/stun_chance = 60
+
+/obj/effect/particle_effect/smoke/LSD/Move()
+	. = ..()
+	for(var/mob/living/carbon/human/human in get_turf(src))
+		affect(human)
+
+/obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/human/creature)
+	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
+		return FALSE
+
+	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(creature.head.flags_inventory & BLOCKGASEFFECT)
+		return FALSE
+
+	creature.hallucination += 15
+	creature.druggy += 1
+
+	if(prob(stun_chance))
+		creature.apply_effect(1, WEAKEN)
+
 
 //////////////////////////////////////
 // FLASHBANG SMOKE
@@ -632,6 +675,9 @@
 
 /datum/effect_system/smoke_spread/cn20/xeno
 	smoke_type = /obj/effect/particle_effect/smoke/cn20/xeno
+
+/datum/effect_system/smoke_spread/LSD
+	smoke_type = /obj/effect/particle_effect/smoke/LSD
 
 // XENO SMOKES
 
