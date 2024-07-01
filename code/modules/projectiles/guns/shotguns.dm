@@ -1069,8 +1069,8 @@ can cause issues with ammo types getting mixed up during the burst.
 //Shotguns in this category will need to be pumped each shot.
 
 /obj/item/weapon/gun/shotgun/pump
-	name = "customized Ithaca 37 hunting shotgun"
-	desc = "A customized Ithaca 37 hunting shotgun. Its wooden stock has been replaced with a bakelite pistol grip, and its barrel and magazine tube have been cut down to half their lengths for easier handling in close quarters at the cost of magazine size, only fitting four shells and one chambered. Despite it's age, the Ithaca 37, along with a number of other 20th century weapons remain a somewhat common sight given their enduring designs."
+	name = "Ithaca 37 pump-action shotgun"
+	desc = "A customized Ithaca 37 hunting shotgun. Its wooden stock has been replaced with a bakelite pistol grip, and its barrel and magazine tube have been cut down to half their lengths for easier handling in close quarters at the cost of magazine size, only fitting four shells and one chambered."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m37"
 	item_state = "m37"
