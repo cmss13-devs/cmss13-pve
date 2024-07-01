@@ -321,7 +321,7 @@ can cause issues with ammo types getting mixed up during the burst.
 //SOF MK210, an earlier developmental variant of the MK211 tactical used by USCM SOF.
 /obj/item/weapon/gun/shotgun/combat/marsoc
 	name = "\improper XM38 tactical shotgun"
-	desc = "Way back in 2168, Wey-Yu began testing the MK221. The USCM picked up an early prototype, and later adopted it with a limited military contract. But the USCM Special Operations Forces wasn't satisfied, and iterated on the early prototypes they had access to; eventually, their internal armorers and tinkerers produced the MK210, designated XM38, a lightweight folding shotgun that snaps to the belt. And to boot, it's fully automatic, made of stamped medal, and keeps the UGL. Truly an engineering marvel."
+	desc = "In 2168 ARMAT and Weyland-Yutani were in competition for a tactical shotgun contract with the USCM. Despite losing the contract to the Weyland-Yutani MK221, ARMAT's design was adopted by the Marine Raiders due to it's compact size, high firerate and integrated magnetic harness system. The only drawback to its design is the magazine tube size, only capable of holding four shells, and one chambered."
 	icon_state = "mk210"
 	item_state = "mk210"
 
@@ -1069,8 +1069,8 @@ can cause issues with ammo types getting mixed up during the burst.
 //Shotguns in this category will need to be pumped each shot.
 
 /obj/item/weapon/gun/shotgun/pump
-	name = "\improper M37A2 pump shotgun"
-	desc = "An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability. Requires a pump, which is a Unique Action."
+	name = "customized Ithaca 37 hunting shotgun"
+	desc = "A customized Ithaca 37 hunting shotgun. Its wooden stock has been replaced with a bakelite pistol grip, and its barrel and magazine tube have been cut down to half their lengths for easier handling in close quarters at the cost of magazine size, only fitting four shells and one chambered. Despite it's age, the Ithaca 37, along with a number of other 20th century weapons remain a somewhat common sight given their enduring designs."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m37"
 	item_state = "m37"
