@@ -238,7 +238,7 @@
 	storage_slots = 2
 
 /obj/item/storage/box/guncase/shotgun/pump/special/fill_preset_inventory()
-	new /obj/item/weapon/gun/shotgun/pump/special(src)
+	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
 
 /obj/item/storage/box/guncase/mk45_automag

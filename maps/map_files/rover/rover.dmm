@@ -488,10 +488,12 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/gun/shotgun/pump,
-/obj/item/ammo_magazine/shotgun/buckshot,
-/obj/item/ammo_magazine/shotgun/slugs,
-/obj/item/attachable/stock,
+/obj/item/storage/box/guncase/shotgun/pump{
+	pixel_y = -3
+	},
+/obj/item/storage/box/guncase/shotgun/pump{
+	pixel_y = 5
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

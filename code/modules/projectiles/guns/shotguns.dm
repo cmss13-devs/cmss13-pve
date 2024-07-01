@@ -1192,9 +1192,6 @@ can cause issues with ammo types getting mixed up during the burst.
 
 //-------------------------------------------------------
 
-/obj/item/weapon/gun/shotgun/pump/special
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/special
-
 /obj/item/weapon/gun/shotgun/pump/dual_tube
 	name = "generic dual-tube pump shotgun"
 	desc = "A twenty-round pump action shotgun with dual internal tube magazines. You can switch the active internal magazine by toggling the shotgun tube."
