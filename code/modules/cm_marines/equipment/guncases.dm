@@ -211,7 +211,7 @@
 	desc = "A gun case containing an unloaded MK221 tactical shotgun, two boxes of 12 gauge buckshot, and one box of 12 gauge slug."
 	icon_state = "guncase"
 	storage_slots = 3
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs)
+	can_hold = list(/obj/item/weapon/gun/shotgun/combat, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs)
 
 /obj/item/storage/box/guncase/shotguncombat/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/combat(src)
@@ -223,8 +223,9 @@
 	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun and one box of 12 gauge USCM Special buckshot."
 	icon_state = "matebacase"
 	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
 
-/obj/item/storage/box/guncase/shotgun/pump/special/fill_preset_inventory()
+/obj/item/storage/box/guncase/shotgunpump/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 	new /obj/item/ammo_magazine/shotgun/slugs(src)
