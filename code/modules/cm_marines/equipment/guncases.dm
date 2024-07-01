@@ -211,7 +211,7 @@
 	desc = "A gun case containing an unloaded MK221 tactical shotgun, two boxes of 12 gauge buckshot, and one box of 12 gauge slug."
 	icon_state = "guncase"
 	storage_slots = 3
-	can_hold = list(/obj/item/weapon/gun/shotgun/combat, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs)
+	can_hold = list(/obj/item/weapon/gun/shotgun/combat, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
 
 /obj/item/storage/box/guncase/shotguncombat/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/combat(src)
@@ -220,7 +220,7 @@
 
 /obj/item/storage/box/guncase/shotgunpump
 	name = "\improper Ithaca 37 pump-action shotgun case"
-	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun and one box of 12 gauge USCM Special buckshot."
+	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun, a box of 12 gauge buckshot, and a box of 12 gauge slugs."
 	icon_state = "matebacase"
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
@@ -243,7 +243,7 @@
 
 /obj/item/storage/box/guncase/mk45_automag
 	name = "\improper MK-45 Automagnum case"
-	desc = "A gun case containing the MK-45 'High-Power' Automagnum sidearm. While this weapon was rejected as a replacement for the M44 Combat Revolver, it is often back-issued to troops who prefer its powerful bullets over more common sidearms."
+	desc = "A gun case containing a MK-45 'High-Power' Automagnum sidearm. While this weapon was rejected as a replacement for the M44 Combat Revolver, it is often back-issued to troops who prefer its powerful bullets over more common sidearms."
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/pistol/highpower, /obj/item/ammo_magazine/pistol/highpower)
 
@@ -294,7 +294,7 @@
 
 /obj/item/storage/box/guncase/m1911
 	name = "\improper M1911 service pistol case"
-	desc = "A gun case containing the M1911 service pistol. It might be three centuries old but it's still a damn good pistol. Back-issue only, though."
+	desc = "A gun case containing a M1911 service pistol. It might be three centuries old but it's still a damn good pistol. Back-issue only, though."
 	storage_slots = 7
 	can_hold = list(/obj/item/weapon/gun/pistol/m1911, /obj/item/ammo_magazine/pistol/m1911)
 
@@ -336,7 +336,7 @@
 
 /obj/item/storage/box/guncase/vulture
 	name = "\improper M707 anti-materiel rifle case"
-	desc = "A gun case containing the M707 \"Vulture\" anti-materiel rifle and its requisite spotting tools."
+	desc = "A gun case containing a M707 \"Vulture\" anti-materiel rifle and its requisite spotting tools."
 	icon_state = "guncase_blue"
 	storage_slots = 7
 	can_hold = list(
