@@ -363,6 +363,13 @@
 	desc = "An armband, worn by the rookie nurses to display they are still not doctors. This one is dark red."
 	icon_state = "nurse"
 
+/obj/item/clothing/accessory/armband/mpsec
+	name = "military police armband"
+	desc = "An armband used by military police officers to denote their position."
+	icon_state = "armband_mp"
+	slot = ACCESSORY_SLOT_ARMBAND
+	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+
 //patches
 /obj/item/clothing/accessory/patch
 	name = "USCM patch"
