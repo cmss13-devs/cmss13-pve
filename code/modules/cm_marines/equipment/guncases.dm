@@ -237,7 +237,7 @@
 	icon_state = "matebacase"
 	storage_slots = 2
 
-/obj/item/storage/box/guncase/shotgun/pump/special/fill_preset_inventory()
+/obj/item/storage/box/guncase/shotgunpump/special/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
 
@@ -248,7 +248,6 @@
 	can_hold = list(/obj/item/weapon/gun/pistol/highpower, /obj/item/ammo_magazine/pistol/highpower)
 
 /obj/item/storage/box/guncase/mk45_automag/fill_preset_inventory()
-	if(prob(30))
 		new /obj/item/weapon/gun/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
@@ -256,14 +255,6 @@
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
-	else
-		new /obj/item/weapon/gun/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
 
 /obj/item/storage/box/guncase/nsg23_marine
