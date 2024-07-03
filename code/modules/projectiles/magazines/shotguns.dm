@@ -126,6 +126,10 @@ also doesn't really matter. You can only reload them with handfuls.
 	caliber = "20g"
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 
+/obj/item/ammo_magazine/internal/shotgun/marsoc
+	caliber = "12g"
+	max_rounds = 7
+
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 

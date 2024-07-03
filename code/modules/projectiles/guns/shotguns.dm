@@ -321,11 +321,11 @@ can cause issues with ammo types getting mixed up during the burst.
 //SOF MK210, an earlier developmental variant of the MK211 tactical used by USCM SOF.
 /obj/item/weapon/gun/shotgun/combat/marsoc
 	name = "\improper XM38 tactical shotgun"
-	desc = "In 2168 ARMAT and Weyland-Yutani were in competition for a tactical shotgun contract with the USCM. Despite losing the contract to the Weyland-Yutani MK221, ARMAT's design was adopted by the Marine Raiders due to it's compact size, high firerate and integrated magnetic harness system. The only drawback to its design is the magazine tube size, only capable of holding four shells, and one chambered."
+	desc = "In 2168 ARMAT and Weyland-Yutani were in competition for a tactical shotgun contract with the USCM. Despite losing the contract to the Weyland-Yutani MK221, ARMAT's design was adopted by the Marine Raiders due to it's compact size, high firerate and integrated magnetic harness system. You might think the size would leave its magazine tube wanting, but through engineering magic, the XM38 is capable of holding seven shells, and one chambered."
 	icon_state = "mk210"
 	item_state = "mk210"
 
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/buckshot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/marsoc
 
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK
 	flags_gun_features = GUN_INTERNAL_MAG
@@ -353,7 +353,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3 - HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
