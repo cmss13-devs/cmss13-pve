@@ -44,6 +44,7 @@ export const ResinPanel = (props, context) => {
                 <Button
                   selected={build_click_intercept}
                   content="Click Build"
+                  tooltip="LMB to place, MMB to remove"
                   onClick={() => act('toggle_build_click_intercept')}
                 />
               </Stack.Item>

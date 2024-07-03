@@ -3,7 +3,6 @@ list( \
 	/datum/resin_construction/resin_turf/wall, \
 	/datum/resin_construction/resin_turf/wall/thick, \
 	/datum/resin_construction/resin_turf/wall/reflective, \
-	/turf/closed/wall/mineral/bone_resin, \
 	/datum/resin_construction/resin_turf/membrane, \
 	/datum/resin_construction/resin_turf/membrane/thick, \
 	/datum/resin_construction/resin_obj/door, \
@@ -12,7 +11,8 @@ list( \
 	/datum/resin_construction/resin_obj/sticky_resin, \
 	/datum/resin_construction/resin_obj/fast_resin, \
 	/datum/resin_construction/resin_obj/resin_spike, \
-	/datum/resin_construction/resin_obj/acid_pillar \
+	/datum/resin_construction/resin_obj/acid_pillar, \
+	/turf/closed/wall/mineral/bone_resin \
 )
 
 /client/proc/open_resin_panel()
