@@ -1,8 +1,9 @@
-#define RESIN_PANEL_CONSTRUCTIONS \
+#define RESIN_PANEL_STRUCTURES \
 list( \
 	/datum/resin_construction/resin_turf/wall, \
 	/datum/resin_construction/resin_turf/wall/thick, \
 	/datum/resin_construction/resin_turf/wall/reflective, \
+	/turf/closed/wall/mineral/bone_resin, \
 	/datum/resin_construction/resin_turf/membrane, \
 	/datum/resin_construction/resin_turf/membrane/thick, \
 	/datum/resin_construction/resin_obj/door, \
@@ -24,15 +25,24 @@ list( \
 	new /datum/resin_panel(usr)
 
 /datum/resin_panel
-	var/static/list/constructions_list
+	var/static/list/structure_list
+	var/static/list/removal_allowlist
+	var/selected_structure
 	var/selected_hive = XENO_HIVE_NORMAL
-	var/selected_resin
 	var/client/holder
 	var/build_click_intercept = FALSE
 
 /datum/resin_panel/New(user)
-	if(isnull(constructions_list)) //first run, init statics
-		constructions_list = get_constructions()
+	if(isnull(structure_list)) //first run, init statics
+		structure_list = get_structures()
+
+		removal_allowlist = list()
+		for(var/structure as anything in RESIN_PANEL_STRUCTURES)
+			if(structure in GLOB.resin_constructions_list)
+				var/datum/resin_construction/construct = structure
+				removal_allowlist += construct.build_path
+			else
+				removal_allowlist += structure
 
 	if(isclient(user))
 		holder = user
@@ -43,21 +53,29 @@ list( \
 	holder.click_intercept = src
 	tgui_interact(holder.mob)
 
-/datum/resin_panel/proc/get_constructions()
-	var/list/constructions = list()
-	for(var/datum/resin_construction/RC as anything in RESIN_PANEL_CONSTRUCTIONS)
+/datum/resin_panel/proc/get_structures()
+	var/list/structures = list()
+	for(var/structure as anything in RESIN_PANEL_STRUCTURES)
 		var/list/entry = list()
 
-		entry["name"] = RC.name
-		entry["desc"] = RC.desc
-		entry["image"] = replacetext(RC.construction_name, " ", "-")
-		entry["plasma_cost"] = RC.cost
-		entry["max_per_xeno"] = RC.max_per_xeno
-		entry["id"] = "[RC]"
+		if(structure in GLOB.resin_constructions_list)
+			var/datum/resin_construction/construct = structure
+			entry["name"] = construct.name
+			entry["image"] = replacetext(construct.construction_name, " ", "-")
+			entry["id"] = "[construct]"
+		else if(structure in typesof(/turf))
+			var/turf/turf = structure
+			entry["name"] = turf.name
+			switch(turf)
+				if(/turf/closed/wall/mineral/bone_resin)
+					entry["image"] = "reflective-resin-wall" //looks just like it, saves on making new spritesheet for one image
+				else
+					entry["image"] = turf.icon_state
+			entry["id"] = "[turf]"
 
-		constructions += list(entry)
+		structures += list(entry)
 
-	return constructions
+	return structures
 
 /datum/resin_panel/ui_assets(mob/user)
 	return list(
@@ -67,7 +85,7 @@ list( \
 /datum/resin_panel/ui_static_data(mob/user)
 	var/list/data = list()
 
-	data["constructions_list"] = constructions_list
+	data["structure_list"] = structure_list
 	data["hives_list"] = ALL_XENO_HIVES
 
 	return data
@@ -75,7 +93,7 @@ list( \
 /datum/resin_panel/ui_data(mob/user)
 	var/list/data = list()
 
-	data["selected_resin"] = selected_resin
+	data["selected_structure"] = selected_structure
 	data["selected_hive"] = selected_hive
 	data["build_click_intercept"] = build_click_intercept
 
@@ -103,29 +121,31 @@ list( \
 	if(!build_click_intercept)
 		return
 
-	var/turf/current_turf = get_turf(object)
+	var/list/modifiers = params2list(params)
 
-	/*
-	if(SSinterior.in_interior(current_turf))
-		to_chat(user, SPAN_XENOWARNING("It's too tight in here to build."))
-		return
-	*/
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK)) //remove
+		if(!(object.type in removal_allowlist))
+			return
 
-	var/datum/resin_construction/construction = GLOB.resin_constructions_list[selected_resin]
+		if(isturf(object))
+			var/turf/turf = object
+			turf.ScrapeAway()
+		else
+			qdel(object)
+	else //add
+		if(!selected_structure)
+			return
 
-	/*
-	if(!construction.can_build_here(current_turf, user))
-		return
-	*/
+		var/turf/current_turf = get_turf(object)
 
-	/*
-	var/obj/effect/alien/weeds/alien_weeds = current_turf.weeds
-	if(!alien_weeds || alien_weeds.secreting)
-		return
-	*/
-
-	var/atom/new_resin = construction.build(current_turf, selected_hive)
-	new_resin.add_hiddenprint(user) //so admins know who placed it
+		var/atom/new_structure
+		if(selected_structure in GLOB.resin_constructions_list)
+			var/datum/resin_construction/construct = GLOB.resin_constructions_list[selected_structure]
+			new_structure = construct.build(current_turf, selected_hive)
+		else if(selected_structure in typesof(/turf))
+			var/turf/turf = selected_structure
+			new_structure = current_turf.PlaceOnTop(turf)
+		new_structure?.add_hiddenprint(user) //so admins know who placed it
 
 	return TRUE
 
@@ -138,11 +158,11 @@ list( \
 		return
 
 	switch(action)
-		if("set_selected_resin")
+		if("set_selected_structure")
 			var/selected_type = text2path(params["type"])
-			if(!(selected_type in RESIN_PANEL_CONSTRUCTIONS))
+			if(!(selected_type in RESIN_PANEL_STRUCTURES))
 				return
-			selected_resin = selected_type
+			selected_structure = selected_type
 			return TRUE
 		if("set_selected_hive")
 			var/hive = params["selected_hive"]
@@ -154,4 +174,4 @@ list( \
 			build_click_intercept = !build_click_intercept
 			return TRUE
 
-#undef RESIN_PANEL_CONSTRUCTIONS
+#undef RESIN_PANEL_STRUCTURES

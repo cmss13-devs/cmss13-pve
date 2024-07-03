@@ -4,16 +4,15 @@ import { Window } from 'tgui/layouts';
 import { BooleanLike, classes } from 'common/react';
 
 interface ResinPanelData {
-  constructions_list: ConstructionsEntry[];
+  structure_list: StructureEntry[];
   hives_list: string[];
-  selected_resin: string;
+  selected_structure: string;
   selected_hive: string;
   build_click_intercept: BooleanLike;
 }
 
-interface ConstructionsEntry {
+interface StructureEntry {
   name: string;
-  desc: string;
   image: string;
   id: string;
 }
@@ -21,9 +20,9 @@ interface ConstructionsEntry {
 export const ResinPanel = (props, context) => {
   const { act, data } = useBackend<ResinPanelData>(context);
   const {
-    constructions_list,
+    structure_list,
     hives_list,
-    selected_resin,
+    selected_structure,
     selected_hive,
     build_click_intercept,
   } = data;
@@ -33,7 +32,7 @@ export const ResinPanel = (props, context) => {
   return (
     <Window
       width={350}
-      height={15 + constructions_list.length * 80}
+      height={15 + structure_list.length * 80}
       title="Resin Panel"
       theme="admin">
       <Window.Content>
@@ -63,11 +62,13 @@ export const ResinPanel = (props, context) => {
           scrollable
           fill>
           <Tabs vertical fluid fill>
-            {constructions_list.map((item, index) => (
+            {structure_list.map((item, index) => (
               <Tabs.Tab
                 key={index}
-                selected={item.id === selected_resin}
-                onClick={() => act('set_selected_resin', { type: item.id })}>
+                selected={item.id === selected_structure}
+                onClick={() =>
+                  act('set_selected_structure', { type: item.id })
+                }>
                 <Stack align="center">
                   <Stack.Item>
                     <span
