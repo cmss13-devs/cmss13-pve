@@ -210,7 +210,6 @@ var/list/shotgun_handfuls_12g = list(
 	name = "handful of shotgun buckshot shells, USCM special type (12g)"
 	icon_state = "special_buck_5"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
-	handful_state = "special_buck"
 
 /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
 	name = "handful of incendiary buckshot shells (12g)"
