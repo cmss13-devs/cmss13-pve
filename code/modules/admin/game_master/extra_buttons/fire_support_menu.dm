@@ -260,25 +260,3 @@ client/proc/toggle_fire_support_menu()
 #undef MORTAR_ORDNANCE
 #undef MISC_ORDNANCE
 #undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION
-/*
-	Suno's Descent Into Madness.
-
-	I hate TGUI.
-	Why would god let something like this exist?
-
-	day 1.
-	clicky intercept doesnt work, life is pain. at least I got it to open.
-
-	day 2.
-	i forgor to actually make a clicky intercept. oh well, it works at least. yippie!!!!
-
-	day 3. success is in sight, I can now fire missiles, and even turrets at the AO. Now I just need to implement BRRT, lasers, minirockets, OB's, and the custom ammo types.
-	I am POWERFUL, all who oppose me shall fall to INFINITE HEFA grenades.
-
-	day 5. expanded catalouge, reworking sound effects to make the missiles actually sound like something. Solaris shipyards will be the conniseurs in close air support armaments soon...
-
-	day 7. where am I, what is my name. Is there anything other than /datum/fire_support_menu/proc/InterceptClickOn in the world?
-	at least I managed to refactor everything into a neat, cool proc to handle firing, and sound, so your ears dont get obliterated.
-
-	day 10. I did it. It is complete. THE PROJECT IS COMPLETE.
-*/
