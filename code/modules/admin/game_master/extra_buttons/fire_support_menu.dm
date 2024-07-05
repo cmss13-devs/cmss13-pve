@@ -256,7 +256,6 @@ client/proc/toggle_fire_support_menu()
 	ammo.warhead_impact(target_turf)
 
 #undef ORDNANCE_OPTIONS
-#undef DROPSHIP_ORDNANCE
 #undef ORBITAL_ORDNANCE
 #undef MORTAR_ORDNANCE
 #undef MISC_ORDNANCE
