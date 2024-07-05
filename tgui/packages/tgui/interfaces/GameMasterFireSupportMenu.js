@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Button, Dropdown, LabeledList, Section } from '../components';
+import { Button, Collapsible, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 export const GameMasterFireSupportMenu = (props, context) => {
@@ -9,7 +9,7 @@ export const GameMasterFireSupportMenu = (props, context) => {
       <Window.Content scrollable>
         <Section title="Fire Support Menu">
           <LabeledList>
-            <LabeledList.Item label="Fire Support">
+            <LabeledList.Item>
               <Button
                 ml={1}
                 selected={data.fire_support_click_intercept}
@@ -18,15 +18,62 @@ export const GameMasterFireSupportMenu = (props, context) => {
                   act('toggle_click_fire_support');
                 }}
               />
-              <Dropdown
-                options={data.ordnance_options}
-                selected={data.selected_ordnance}
-                width="200px"
-                content="Select Ordnance"
-                onSelected={(new_ordnance) => {
-                  act('set_selected_ordnance', { new_ordnance });
-                }}
-              />
+
+              <Collapsible content="Missiles">
+                {data.missile_ordnance_options.map((ordnance, i) => (
+                  <Button
+                    content={ordnance}
+                    selected={data.selected_ordnance === ordnance}
+                    key={i}
+                    width={'130px'}
+                    onClick={() => {
+                      act('set_selected_ordnance', { ordnance });
+                    }}
+                  />
+                ))}
+              </Collapsible>
+
+              <Collapsible content="Orbital Bombardments">
+                {data.orbital_ordnance_options.map((ordnance, i) => (
+                  <Button
+                    content={ordnance}
+                    selected={data.selected_ordnance === ordnance}
+                    key={i}
+                    width={'130px'}
+                    onClick={() => {
+                      act('set_selected_ordnance', { ordnance });
+                    }}
+                  />
+                ))}
+              </Collapsible>
+
+              <Collapsible content="Mortar Shells">
+                {data.mortar_ordnance_options.map((ordnance, i) => (
+                  <Button
+                    content={ordnance}
+                    selected={data.selected_ordnance === ordnance}
+                    key={i}
+                    width={'130px'}
+                    onClick={() => {
+                      act('set_selected_ordnance', { ordnance });
+                    }}
+                  />
+                ))}
+              </Collapsible>
+
+              <Collapsible content="Misc Ordnance">
+                {data.misc_ordnance_options.map((ordnance, i) => (
+                  <Button
+                    content={ordnance}
+                    selected={data.selected_ordnance === ordnance}
+                    key={i}
+                    width={'130px'}
+                    onClick={() => {
+                      act('set_selected_ordnance', { ordnance });
+                    }}
+                  />
+                ))}
+              </Collapsible>
             </LabeledList.Item>
           </LabeledList>
         </Section>

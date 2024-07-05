@@ -2,7 +2,11 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 #define FIRE_SUPPORT_CLICK_INTERCEPT_ACTION "fire_support_click_intercept_action"
 
 //Various ordnance selections
-#define ORDNANCE_OPTIONS list("Holy HEFA", "Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive Bombardment", "Incendiary Bombardment", "Cluster Bombardment", "High Explosive Mortar", "Incendiary Mortar", "Fragmentation Mortar", "Flare Mortar")
+#define ORDNANCE_OPTIONS list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive", "Incendiary", "Fragmentation", "Flare")
+#define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
+#define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
+#define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
+#define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21")
 
 client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -29,6 +33,12 @@ client/proc/toggle_fire_support_menu()
 	var/list/data = list()
 
 	data["ordnance_options"] = ORDNANCE_OPTIONS
+
+	data["missile_ordnance_options"] = MISSILE_ORDNANCE
+	data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
+	data["mortar_ordnance_options"] = MORTAR_ORDNANCE
+	data["misc_ordnance_options"] = MISC_ORDNANCE
+
 	data["selected_ordnance"] = selected_ordnance
 	data["fire_support_click_intercept"] = fire_support_click_intercept
 
@@ -41,7 +51,7 @@ client/proc/toggle_fire_support_menu()
 			fire_support_click_intercept = !fire_support_click_intercept
 			return
 		if("set_selected_ordnance")
-			selected_ordnance = params["new_ordnance"]
+			selected_ordnance = params["ordnance"]
 			return
 
 /datum/fire_support_menu/ui_status(mob/user, datum/ui_state/state)
@@ -59,10 +69,6 @@ client/proc/toggle_fire_support_menu()
 	var/turf/target_turf = get_turf(object)
 	if(fire_support_click_intercept)
 		switch(selected_ordnance)
-			if("Holy HEFA")
-				var/obj/item/explosive/grenade/high_explosive/frag/holyhefa = new(target_turf)
-				holyhefa.activate()
-				return TRUE
 			//PREMADE ORDNANCE
 
 			//DS missiles
@@ -180,40 +186,40 @@ client/proc/toggle_fire_support_menu()
 				return TRUE
 
 			//Orbital Bombardments
-			if("High Explosive Bombardment")
+			if("High Explosive OB")
 				var/obj/structure/ob_ammo/warhead/explosive/ammo = new()
 
 				HandleOrbitalOrdnance(target_turf, ammo)
 				return TRUE
 
-			if("Incendiary Bombardment")
+			if("Incendiary OB")
 				var/obj/structure/ob_ammo/warhead/incendiary/ammo = new()
 
 				HandleOrbitalOrdnance(target_turf, ammo)
 				return TRUE
 
-			if("Cluster Bombardment")
+			if("Cluster OB")
 				var/obj/structure/ob_ammo/warhead/cluster/ammo = new()
 
 				HandleOrbitalOrdnance(target_turf, ammo)
 				return TRUE
 
 			//Mortar Shelling
-			if("High Explosive Mortar")
+			if("High Explosive Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/item/mortar_shell/he/ammo = new()
 
 				abstract_mortar.handle_shell(target_turf, ammo)
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 
-			if("Incendiary Mortar")
+			if("Incendiary Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/item/mortar_shell/incendiary/ammo = new()
 
 				abstract_mortar.handle_shell(target_turf, ammo)
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 
-			if("Fragmentation Mortar")
+			if("Fragmentation Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/item/mortar_shell/frag/ammo = new()
 
@@ -221,7 +227,7 @@ client/proc/toggle_fire_support_menu()
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
 
-			if("Flare Mortar")
+			if("Flare Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/item/mortar_shell/flare/ammo = new()
 
@@ -239,8 +245,6 @@ client/proc/toggle_fire_support_menu()
 		soundCooldown = TRUE
 		addtimer(VARSET_CALLBACK(src, soundCooldown, FALSE), 10 SECONDS)
 
-	return
-
 /datum/fire_support_menu/proc/HandleDropshipOrdnance(turf/target_turf, obj/structure/ship_ammo/ammo)
 	addtimer(CALLBACK(src, PROC_REF(HandleDropshipSound), target_turf), 0.5 SECONDS)
 	if(!istype(ammo, /obj/structure/ship_ammo/heavygun/))
@@ -251,6 +255,12 @@ client/proc/toggle_fire_support_menu()
 /datum/fire_support_menu/proc/HandleOrbitalOrdnance(turf/target_turf, obj/structure/ob_ammo/warhead/ammo)
 	ammo.warhead_impact(target_turf)
 
+#undef ORDNANCE_OPTIONS
+#undef DROPSHIP_ORDNANCE
+#undef ORBITAL_ORDNANCE
+#undef MORTAR_ORDNANCE
+#undef MISC_ORDNANCE
+#undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION
 /*
 	Suno's Descent Into Madness.
 
@@ -271,4 +281,5 @@ client/proc/toggle_fire_support_menu()
 	day 7. where am I, what is my name. Is there anything other than /datum/fire_support_menu/proc/InterceptClickOn in the world?
 	at least I managed to refactor everything into a neat, cool proc to handle firing, and sound, so your ears dont get obliterated.
 
+	day 10. I did it. It is complete. THE PROJECT IS COMPLETE.
 */
