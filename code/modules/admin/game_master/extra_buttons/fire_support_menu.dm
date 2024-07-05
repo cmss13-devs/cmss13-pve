@@ -17,7 +17,7 @@ client/proc/toggle_fire_support_menu()
 
 /datum/fire_support_menu
 	var/fire_support_click_intercept = FALSE
-	var/selected_ordnance = "Holy HEFA"
+	var/selected_ordnance = "Banshee Missile"
 	var/soundCooldown = FALSE
 	var/obj/structure/mortar/abstract_mortar = new()
 
