@@ -966,6 +966,36 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 
+/datum/gear/smoking/pack_emeraldgreen
+	display_name = "Pack Of Emerald Greens"
+	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
+	cost = 3
+
+/datum/gear/smoking/pack_wygold
+	display_name = "Pack Of Weyland Yutani Golds"
+	path = /obj/item/storage/fancy/cigarettes/wypacket
+	cost = 3
+
+/datum/gear/smoking/pack_koorlander
+	display_name = "Pack Of Koorlander Golds"
+	path = /obj/item/storage/fancy/cigarettes/kpack
+	cost = 3
+
+/datum/gear/smoking/pack_arcturian
+	display_name = "Pack Of Arcturian Aces"
+	path = /obj/item/storage/fancy/cigarettes/arcturian_ace
+	cost = 3
+
+/datum/gear/smoking/pack_ladyfingers
+	display_name = "Pack Of Lady Fingers"
+	path = /obj/item/storage/fancy/cigarettes/lady_finger
+	cost = 3
+
+/datum/gear/smoking/pack_exec
+	display_name = "Pack Of Executive Selects"
+	path = /obj/item/storage/fancy/cigarettes/blackpack
+	cost = 4
+
 /datum/gear/smoking/weed_joint
 	display_name = "Joint of space weed"
 	path = /obj/item/clothing/mask/cigarette/weed
@@ -979,6 +1009,11 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/smoking/zippo
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
+
+/datum/gear/smoking/goldzippo
+	display_name = "Lighter, golden zippo"
+	path = /obj/item/tool/lighter/zippo/gold
+	cost = 4
 
 /datum/gear/smoking/electronic_cigarette
 	display_name = "Electronic cigarette"
