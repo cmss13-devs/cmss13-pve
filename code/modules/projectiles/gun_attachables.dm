@@ -3359,6 +3359,7 @@ Defined in conflicts.dm of the #defines folder.
 					delay_mod = -FIRE_DELAY_TIER_7
 				else if(istype(G,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
+					fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_3
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
 				G.recalculate_attachment_bonuses()

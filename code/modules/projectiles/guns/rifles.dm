@@ -1268,12 +1268,12 @@
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	set_burst_delay(FIRE_DELAY_TIER_11)
-	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
-	fa_max_scatter = SCATTER_AMOUNT_TIER_2
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_1
+	fa_max_scatter = SCATTER_AMOUNT_TIER_1
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_6
-	burst_scatter_mult = -SCATTER_AMOUNT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_5
+	burst_scatter_mult = -SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
