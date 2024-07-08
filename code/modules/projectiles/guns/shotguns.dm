@@ -245,6 +245,8 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	fire_sound = "gun_shotgun_tactical"
 	firesound_volume = 20
+
+	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
