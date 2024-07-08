@@ -3593,6 +3593,9 @@
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_y = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7969,7 +7972,7 @@
 "Fe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/m4ra/pve{
+/obj/item/storage/box/guncase/shotgunpump{
 	pixel_y = 8
 	},
 /turf/open/floor/almayer{
