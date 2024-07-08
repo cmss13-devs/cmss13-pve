@@ -1240,7 +1240,7 @@
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
-	current_mag = /obj/item/ammo_magazine/rifle/lmg
+	current_mag = /obj/item/ammo_magazine/hpr_box
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,

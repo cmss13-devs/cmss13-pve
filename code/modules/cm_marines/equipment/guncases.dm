@@ -60,13 +60,13 @@
 	name = "\improper M41AE2 heavy pulse rifle case"
 	desc = "A plastic hard weapon case containing the M41AE2 Heavy Pulse Rifle and three magazines."
 	storage_slots = 4
-	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/rifle/lmg)
+	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box)
 
 /obj/item/storage/box/guncase/lmg/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
 
 //------------
 /obj/item/storage/box/guncase/m41aMK1
