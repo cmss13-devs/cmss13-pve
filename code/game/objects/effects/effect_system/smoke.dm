@@ -18,6 +18,8 @@
 	var/spread_speed = 1 //time in decisecond for a smoke to spread one tile.
 	var/time_to_live = 8
 	var/smokeranking = SMOKE_RANK_HARMLESS //Override priority. A higher ranked smoke cloud will displace lower and equal ones on spreading.
+	var/xeno_affecting = FALSE
+	var/blocked_by_gasmask = TRUE
 	var/datum/cause_data/cause_data = null
 
 	//Remove this bit to use the old smoke
@@ -113,10 +115,24 @@
 				return TRUE
 
 
-/obj/effect/particle_effect/smoke/proc/affect(mob/living/carbon/M)
-	if (istype(M))
+/obj/effect/particle_effect/smoke/proc/affect(mob/living/carbon/creature)
+	var/mob/living/carbon/human/human_creature
+	if(ishuman(creature))
+		human_creature = creature
+	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
+		return TRUE
+	if(!xeno_affecting && isxeno(creature))
+		return TRUE
+	if(isyautja(creature) && prob(75))
+		return TRUE
+	if(creature.wear_mask && blocked_by_gasmask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return TRUE
+	if(human_creature && blocked_by_gasmask && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
+		return TRUE
+
+	/*if (istype(creature))
 		return 0
-	return 1
+	return 1*/
 
 /////////////////////////////////////////////
 // Bad smoke
@@ -132,8 +148,7 @@
 		affect(M)
 
 /obj/effect/particle_effect/smoke/bad/affect(mob/living/carbon/M)
-	..()
-	if (M.internal != null && M.wear_mask && (M.wear_mask.flags_inventory & ALLOWINTERNALS))
+	if (..())
 		return
 	else
 		if(prob(20))
@@ -255,7 +270,7 @@
 	name = "CN20 nerve gas"
 	smokeranking = SMOKE_RANK_HIGH
 	color = "#80c7e4"
-	var/xeno_affecting = FALSE
+	xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
 	time_to_live = 20
@@ -275,27 +290,21 @@
 			affect(creature)
 
 /obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
+	..()
 	var/mob/living/carbon/xenomorph/xeno_creature
 	var/mob/living/carbon/human/human_creature
 	var/datum/internal_organ/lungs/lungs
 	var/datum/internal_organ/eyes/eyes
+	if (..())
+		return
+
 	if(isxeno(creature))
 		xeno_creature = creature
 	else if(ishuman(creature))
 		human_creature = creature
 		lungs = human_creature.internal_organs_by_name["lungs"]
 		eyes = human_creature.internal_organs_by_name["eyes"]
-	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
-		return FALSE
-	if(!xeno_affecting && xeno_creature)
-		return FALSE
-	if(isyautja(creature) && prob(75))
-		return FALSE
 
-	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
-		return FALSE
-	if(human_creature && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
-		return FALSE
 
 	var/effect_amt = round(6 + amount*6)
 
@@ -358,13 +367,8 @@
 		affect(human)
 
 /obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/human/creature)
-	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
-		return FALSE
-
-	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
-		return FALSE
-	if(creature.head.flags_inventory & BLOCKGASEFFECT)
-		return FALSE
+	if (..())
+		return
 
 	creature.hallucination += 15
 	creature.druggy += 1
