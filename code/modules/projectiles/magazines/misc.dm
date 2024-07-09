@@ -22,7 +22,9 @@
 /obj/item/ammo_magazine/hpr_box
 	name = "\improper M41AE2 ammo box (10x24mm)"
 	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle."
+	caliber = "10x24mm"
 	icon_state = "m41ae2"
+	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS|AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
@@ -40,7 +42,7 @@
 
 /obj/item/ammo_magazine/hpr_box/heap
 	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
-	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle. This one contains the standard Armor-Piercing explosive tipped round of the USCM."
+	desc = "A semi-rectangular box of M903 armor piercing high explosive rounds for the M41AE2 Heavy Pulse Rifle."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg

@@ -66,6 +66,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/movement_onehanded_acc_penalty_mod = 0 //Modifies accuracy/scatter penalty when firing onehanded while moving.
 	var/velocity_mod = 0 // Added velocity to bullets
 	var/hud_offset_mod  = 0 //How many pixels to adjust the gun's sprite coords by. Ideally, this should keep the gun approximately centered.
+	var/fa_scatter_peak_mod = 0 //modifies how many bullets it takes to reach max scatter in FA firing.
 
 	var/activation_sound = 'sound/weapons/handling/gun_underbarrel_activate.ogg'
 	var/deactivation_sound = 'sound/weapons/handling/gun_underbarrel_deactivate.ogg'
@@ -3359,6 +3360,7 @@ Defined in conflicts.dm of the #defines folder.
 					delay_mod = -FIRE_DELAY_TIER_7
 				else if(istype(G,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
+					fa_scatter_peak_mod = FULL_AUTO_SCATTER_PEAK_TIER_3
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
 				G.recalculate_attachment_bonuses()
