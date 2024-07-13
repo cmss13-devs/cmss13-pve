@@ -18,7 +18,6 @@
 		if(2)
 			new /obj/item/clothing/suit/storage/apron/overalls(src)
 	new /obj/item/storage/bag/plants(src)
-	new /obj/item/clothing/under/hydroponics(src)
 	new /obj/item/device/analyzer/plant_analyzer(src)
 	new /obj/item/clothing/head/greenbandana(src)
 	new /obj/item/tool/minihoe(src)

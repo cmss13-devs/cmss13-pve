@@ -14599,7 +14599,7 @@
 	pixel_x = -5;
 	pixel_y = 13
 	},
-/obj/item/clothing/shoes/dress{
+/obj/item/clothing/shoes/laceup{
 	pixel_y = -13
 	},
 /obj/item/clothing/under/businesswear/black{

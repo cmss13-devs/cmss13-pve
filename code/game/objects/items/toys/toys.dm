@@ -414,7 +414,6 @@
 							/obj/item/toy/sword = 2,
 							/obj/item/toy/gun = 2,
 							/obj/item/toy/crossbow = 2,
-							/obj/item/clothing/suit/syndicatefake = 2,
 							/obj/item/storage/fancy/crayons = 2,
 							/obj/item/toy/spinningtoy = 2,
 							/obj/item/toy/prize/ripley = 1,

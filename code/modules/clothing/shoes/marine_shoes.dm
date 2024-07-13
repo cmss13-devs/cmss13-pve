@@ -89,7 +89,7 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
-/obj/item/clothing/shoes/dress
+/obj/item/clothing/shoes/laceup
 	name = "dress shoes"
 	desc = "Pre-polished fancy dress shoes. You can see your reflection in them."
 	icon_state = "laceups"

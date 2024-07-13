@@ -33,12 +33,11 @@
 	service_extra = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber)
 	service_hat = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/marine/commander/dress, /obj/item/clothing/head/beret/marine/commander/black)
 
-	dress_under = list(/obj/item/clothing/under/marine/dress, /obj/item/clothing/under/marine/officer/formal/servicedress)
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
-	dress_hat = list(/obj/item/clothing/head/marine/peaked/service
-, /obj/item/clothing/head/marine/peaked/captain/black)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/white, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/black, /obj/item/clothing/suit/storage/jacket/marine/dress/officer/suit)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
 
 /datum/equipment_preset/wo/commander/New()
 	. = ..()
@@ -186,9 +185,9 @@
 	minimap_icon = "so"
 
 /datum/equipment_preset/wo/vhg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/sec
+	var/back_item = /obj/item/storage/backpack/satchel/black
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/security
+		back_item = /obj/item/storage/backpack/satchel/black
 
 	//back
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
@@ -228,9 +227,9 @@
 	minimap_icon = "spec"
 
 /datum/equipment_preset/wo/hgs/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/sec
+	var/back_item = /obj/item/storage/backpack/satchel/black
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/security
+		back_item = /obj/item/storage/backpack/satchel/black
 
 	//back
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
@@ -267,9 +266,9 @@
 	minimap_icon = "mp"
 
 /datum/equipment_preset/wo/hg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/sec
+	var/back_item = /obj/item/storage/backpack/satchel/black
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/security
+		back_item = /obj/item/storage/backpack/satchel/black
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/mp_honor(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)

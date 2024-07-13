@@ -10,14 +10,9 @@
 
 /obj/structure/closet/secure_closet/quartermaster/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/cargo(src)
-	new /obj/item/clothing/shoes/brown(src)
+	new /obj/item/clothing/under/boiler(src)
+	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/suit/fire/firefighter(src)
-	new /obj/item/tank/emergency_oxygen(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/clothing/glasses/meson(src)
-	new /obj/item/clothing/head/soft(src)
 	return
 
 
@@ -40,14 +35,12 @@
 	if(prob(50))
 		new /obj/item/storage/backpack/industrial(src)
 	else
-		new /obj/item/storage/backpack/satchel/eng(src)
-// new /obj/item/device/radio/headset/almayer/ct(src)
-	new /obj/item/clothing/under/miner(src)
+		new /obj/item/storage/backpack/satchel(src)
+	new /obj/item/clothing/under/boiler/cyan(src)
 	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/shoes/black(src)
+	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/device/analyzer(src)
 	new /obj/item/storage/bag/ore(src)
 	new /obj/item/device/flashlight/lantern(src)
 	new /obj/item/tool/shovel(src)
 	new /obj/item/tool/pickaxe(src)
-	new /obj/item/clothing/glasses/meson(src)

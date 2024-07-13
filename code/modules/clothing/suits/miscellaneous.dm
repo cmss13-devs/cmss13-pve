@@ -56,47 +56,6 @@
 	item_state = "pirate"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 
-
-/obj/item/clothing/suit/hgpirate
-	name = "pirate captain coat"
-	desc = "Yarr."
-	icon_state = "hgpirate"
-	item_state = "hgpirate"
-	flags_inv_hide = HIDEJUMPSUIT
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-
-
-/obj/item/clothing/suit/cyborg_suit
-	name = "cyborg suit"
-	desc = "Suit for a cyborg costume."
-	icon_state = "death"
-	item_state = "death"
-	flags_atom = FPRINT|CONDUCT
-	fire_resist = T0C+5200
-	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
-/obj/item/clothing/suit/johnny_coat
-	name = "johnny~~ coat"
-	desc = "Johnny~~"
-	icon_state = "johnny"
-	item_state = "johnny"
-
-/obj/item/clothing/suit/justice
-	name = "justice suit"
-	desc = "This pretty much looks ridiculous."
-	icon_state = "justice"
-	item_state = "justice"
-	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_HANDS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-
 /obj/item/clothing/suit/judgerobe
 	name = "judge's robe"
 	desc = "This robe commands authority."
@@ -116,31 +75,6 @@
 	)
 	flags_inv_hide = HIDEJUMPSUIT
 
-/obj/item/clothing/suit/storage/wcoat
-	name = "waistcoat"
-	desc = "For some classy, murderous fun."
-	icon_state = "vest"
-	item_state = "wcoat"
-	blood_overlay_type = "armor"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/ammo_magazine,
-		/obj/item/ammo_casing,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/device/taperecorder,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/pen,
-	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL)
 
 /obj/item/clothing/suit/storage/apron/overalls
 	name = "blue coveralls"
@@ -178,63 +112,6 @@
 	desc = "A pair of reddish-brown overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
 	icon_state = "overalls_red"
 	item_state = "overalls_red"
-
-/obj/item/clothing/suit/syndicatefake
-	name = "red space suit replica"
-	icon_state = "syndicate"
-	item_state = "space_suit_syndicate"
-	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
-	w_class = SIZE_MEDIUM
-	allowed = list(
-		/obj/item/toy,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/pen,
-	)
-	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_HANDS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-
-/obj/item/clothing/suit/hastur
-	name = "Hastur's Robes"
-	desc = "Robes not meant to be worn by man"
-	icon_state = "hastur"
-	item_state = "hastur"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS
-	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
-
-/obj/item/clothing/suit/imperium_monk
-	name = "Imperium monk"
-	desc = "Have YOU killed a xenos today?"
-	icon_state = "imperium_monk"
-	item_state = "imperium_monk"
-	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS
-	flags_inv_hide = HIDESHOES|HIDEJUMPSUIT
-
-
-/obj/item/clothing/suit/chickensuit
-	name = "Chicken Suit"
-	desc = "A suit made long ago by the ancient empire KFC."
-	icon_state = "chickensuit"
-	item_state = "chickensuit"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_inv_hide = HIDESHOES|HIDEJUMPSUIT
-	siemens_coefficient = 2
-
-
-/obj/item/clothing/suit/monkeysuit
-	name = "Monkey Suit"
-	desc = "A suit that looks like a primate"
-	icon_state = "monkeysuit"
-	item_state = "monkeysuit"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_HANDS
-	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	siemens_coefficient = 2
-
 
 /obj/item/clothing/suit/holidaypriest
 	name = "Holiday Priest"
@@ -275,13 +152,6 @@
 		H.drop_l_hand()
 		H.drop_r_hand()
 	..()
-
-/obj/item/clothing/suit/ianshirt
-	name = "worn shirt"
-	desc = "A worn out, curiously comfortable t-shirt with a picture of Ian. You wouldn't go so far as to say it feels like being hugged when you wear it but it's pretty close. Good for sleeping in."
-	icon_state = "ianshirt"
-	item_state = "ianshirt"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 
 /obj/item/clothing/suit/storage/webbing
 	name = "external webbing"
@@ -430,21 +300,6 @@
 	icon_state = "swim_red"
 	siemens_coefficient = 1
 
-/obj/item/clothing/suit/poncho
-	name = "poncho"
-	desc = "A simple, comfortable poncho."
-	icon_state = "classicponcho"
-
-/obj/item/clothing/suit/poncho/green
-	name = "green poncho"
-	desc = "Your classic, non-racist poncho. This one is green."
-	icon_state = "greenponcho"
-
-/obj/item/clothing/suit/poncho/red
-	name = "red poncho"
-	desc = "Your classic, non-racist poncho. This one is red."
-	icon_state = "redponcho"
-
 /obj/item/clothing/suit/storage/bomber
 	name = "brown bomber jacket"
 	desc = "A well-worn leather bomber jacket."
@@ -484,68 +339,3 @@
 /obj/item/clothing/suit/storage/bomber/alt
 	name = "black bomber jacket"
 	icon_state = "bomber_2"
-
-/obj/item/clothing/suit/storage/manager
-	name = "manager's jacket"
-	desc = "A suit that belongs to someone important. It is made of insulating material and offers minor protection from all forms of damage."
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	item_state = "manager_suit"
-	icon_state = "manager_suit"
-
-	allowed = list(
-		/obj/item/weapon/gun/pistol,
-		/obj/item/device/flashlight,
-	)
-
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-
-	min_cold_protection_temperature = ICE_COLONY_TEMPERATURE
-
-	storage_slots = 1
-
-	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
-
-/obj/item/clothing/suit/storage/director
-	name = "director's jacket"
-	desc = "A jacket that belongs to someone very important. It is made of insulating material and offers minor protection from all forms of damage."
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	item_state = "director_suit"
-	icon_state = "director_suit"
-
-	allowed = list(
-		/obj/item/weapon/gun/pistol,
-		/obj/item/device/flashlight,
-	)
-
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-
-	min_cold_protection_temperature = ICE_COLONY_TEMPERATURE
-	siemens_coefficient = 0
-
-	storage_slots = 3
-
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_HARDCORE // Immune to tasers
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)

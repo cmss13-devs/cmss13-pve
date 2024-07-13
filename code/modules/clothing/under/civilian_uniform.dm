@@ -3,7 +3,7 @@
 /obj/item/clothing/under/boiler
 	name = "boiler suit"
 	desc = "A khaki boiler suit. It's made of a flame retardant fabric that provides minor protection against fire."
-	icon = 'icons/mob/humans/onmob/uniform_civilian.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "spacer_khaki"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	armor_melee = CLOTHING_ARMOR_NONE
@@ -48,7 +48,7 @@
 /obj/item/clothing/under/workwear
 	name = "workwear"
 	desc = "A pair of black slacks and a short-sleeve grey workshirt."
-	icon = 'icons/mob/humans/onmob/uniform_civilian.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "workwear_grey"
 	worn_state = "workwear_grey"
 
@@ -102,7 +102,7 @@
 /obj/item/clothing/under/businesswear
 	name = "corporate casual outfit"
 	desc = "A pair of dark brown slacks paired with a dark blue shirt."
-	icon = 'icons/mob/humans/onmob/uniform_civilian.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "corporate_field"
 	worn_state = "corporate_field"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
@@ -140,7 +140,7 @@
 /obj/item/clothing/under/cmb
 	name = "\improper CMB field uniform"
 	desc = "A pair of off-white slacks paired with a light blue shirt and dark brown tie."
-	icon = 'icons/mob/humans/onmob/uniform_civilian.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "cmb_field"
 	worn_state = "cmb_field"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE

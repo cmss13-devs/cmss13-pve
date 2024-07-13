@@ -279,7 +279,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/santahat(new_human), WEAR_HEAD)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/general/santa(new_human), WEAR_WAIST)
 

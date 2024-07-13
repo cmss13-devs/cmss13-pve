@@ -90,7 +90,7 @@
 /obj/item/clothing/under/marine/dress/blues
 	name = "marine enlisted dress blues"
 	desc = "The undershirt and trousers of the legendary Marine dress blues, virtually unchanged since the 19th century. This unadorned variant is for enlisted personnel, E-1 thru E-3."
-	icon = 'icons/mob/humans/onmob/contained/uniform_marine.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_marine.dmi'
 	icon_state = "marine_blues_un"
 	item_state = "marine_blues_un"
 	worn_state = "marine_blues_un"

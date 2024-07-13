@@ -65,7 +65,7 @@
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
 
-		new /obj/item/storage/backpack/satchel(src)
+	new /obj/item/storage/backpack/satchel(src)
 	new /obj/item/storage/belt/security(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)

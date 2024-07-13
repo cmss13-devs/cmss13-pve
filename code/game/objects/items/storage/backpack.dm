@@ -273,54 +273,13 @@
 	desc = "It's useful for both carrying extra gear and proudly declaring your insanity."
 	icon_state = "cultpack"
 
-/obj/item/storage/backpack/clown
-	name = "Giggles von Honkerton"
-	desc = "This, this thing. It fills you with the dread of a bygone age. A land of grey coveralls and mentally unstable crewmen. Of traitors and hooligans. Thank god you're in the Marines now."
-	icon_state = "clownpack"
-	black_market_value = 25
-
 //==========================//COLONY/CIVILIAN PACKS\\================================\\
-
-/obj/item/storage/backpack/medic
-	name = "medical backpack"
-	desc = "It's a backpack especially designed for use in a sterile environment."
-	icon_state = "medicalpack"
-
-/obj/item/storage/backpack/security //Universal between USCM MPs & Colony, should be split at some point.
-	name = "security backpack"
-	desc = "It's a very robust backpack."
-	icon_state = "securitypack"
 
 /obj/item/storage/backpack/industrial
 	name = "industrial backpack"
 	desc = "It's a tough backpack lookin' backpack used by engineers and the like."
 	icon_state = "engiepack"
 	item_state = "engiepack"
-
-/obj/item/storage/backpack/toxins
-	name = "laboratory backpack"
-	desc = "It's a light backpack for use in laboratories and other scientific institutions."
-	icon_state = "toxpack"
-
-/obj/item/storage/backpack/hydroponics
-	name = "herbalist's backpack"
-	desc = "It's a green backpack with many pockets to store plants and tools in."
-	icon_state = "hydpack"
-
-/obj/item/storage/backpack/genetics
-	name = "geneticist backpack"
-	desc = "It's a backpack fitted with slots for diskettes and other workplace tools."
-	icon_state = "genpack"
-
-/obj/item/storage/backpack/virology
-	name = "sterile backpack"
-	desc = "It's a sterile backpack made from pathogen-resistant fabrics."
-	icon_state = "viropack"
-
-/obj/item/storage/backpack/chemistry
-	name = "chemistry backpack"
-	desc = "It's an orange backpack designed to hold beakers, pill bottles, and bottles."
-	icon_state = "chempack"
 
 /*
  * Satchel Types
@@ -356,51 +315,6 @@
 
 /obj/item/storage/backpack/satchel/lockable/liaison
 	lock_overridable = FALSE
-
-/obj/item/storage/backpack/satchel/norm
-	name = "satchel"
-	desc = "A trendy-looking satchel."
-	icon_state = "satchel-norm"
-
-/obj/item/storage/backpack/satchel/eng
-	name = "industrial satchel"
-	desc = "A tough satchel with extra pockets."
-	icon_state = "satchel-eng"
-
-/obj/item/storage/backpack/satchel/med
-	name = "medical satchel"
-	desc = "A sterile satchel used in medical departments."
-	icon_state = "satchel-med"
-
-/obj/item/storage/backpack/satchel/vir
-	name = "virologist satchel"
-	desc = "A sterile satchel with virologist colors."
-	icon_state = "satchel-vir"
-
-/obj/item/storage/backpack/satchel/chem
-	name = "chemist satchel"
-	desc = "A sterile satchel with chemist colors."
-	icon_state = "satchel-chem"
-
-/obj/item/storage/backpack/satchel/gen
-	name = "geneticist satchel"
-	desc = "A sterile satchel with geneticist colors."
-	icon_state = "satchel-gen"
-
-/obj/item/storage/backpack/satchel/tox
-	name = "scientist satchel"
-	desc = "Useful for holding research materials."
-	icon_state = "satchel-tox"
-
-/obj/item/storage/backpack/satchel/sec //Universal between USCM MPs & Colony, should be split at some point.
-	name = "security satchel"
-	desc = "A robust satchel composed of two drop pouches and a large internal pocket. Made of a stiff fabric, it isn't very comfy to wear."
-	icon_state = "satchel-sec"
-
-/obj/item/storage/backpack/satchel/hyd
-	name = "hydroponics satchel"
-	desc = "A green satchel for plant-related work."
-	icon_state = "satchel_hyd"
 
 //==========================// MARINE BACKPACKS\\================================\\
 //=======================================================================\\
@@ -561,7 +475,6 @@
 	phone_category = PHONE_UPP_SOLDIER
 
 /obj/item/storage/backpack/marine/satchel/rto/io
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	phone_category = PHONE_IO
 
 /obj/item/storage/backpack/marine/smock

@@ -10,7 +10,7 @@
 /obj/structure/closet/secure_closet/personal/patient/Initialize()
 	. = ..()
 	contents = list()
-	new /obj/item/clothing/under/color/white( src )
+	new /obj/item/clothing/under/boiler/offwhite( src )
 	new /obj/item/clothing/shoes/white( src )
 
 

@@ -235,7 +235,7 @@
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/hardhat,
 		WEAR_BODY = /obj/item/clothing/under/boiler/cyan,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/eng,
+		WEAR_BACK = /obj/item/storage/backpack/satchel,
 		WEAR_IN_BACK = /obj/item/ammo_magazine/smg/nailgun,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,
 		WEAR_IN_JACKET = /obj/item/ammo_magazine/smg/nailgun,
@@ -358,7 +358,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/det_hat,
 		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
 		WEAR_BODY = /obj/item/clothing/under/det,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
+		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/det_suit/black,
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
@@ -381,7 +381,7 @@
 		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
 		WEAR_BODY = /obj/item/clothing/under/CM_uniform,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/holobadge/cord,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
+		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
 		WEAR_IN_BACK = /obj/item/device/camera,
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/CMB,
@@ -404,7 +404,7 @@
 		WEAR_L_EAR = /obj/item/device/radio/headset/distress/WY,
 		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
 		WEAR_BODY = /obj/item/clothing/under/marine/officer/formal/servicedress,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
+		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
 		WEAR_IN_BACK = /obj/item/weapon/telebaton,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/webbing,
 		WEAR_WAIST = /obj/item/storage/belt/security/MP/full,
@@ -456,7 +456,7 @@
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/botanic_leather,
-		WEAR_FEET = /obj/item/clothing/shoes/dress,
+		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 		WEAR_R_HAND = /obj/item/clipboard,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
@@ -468,7 +468,7 @@
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/radiation,
 		WEAR_BODY = /obj/item/clothing/under/marine/officer/engi,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/eng,
+		WEAR_BACK = /obj/item/storage/backpack/satchel,
 		WEAR_IN_BACK = /obj/item/tool/weldingtool/hugetank,
 		WEAR_IN_BACK = /obj/item/storage/firstaid/toxin,
 		WEAR_JACKET = /obj/item/clothing/suit/radiation,
@@ -505,7 +505,7 @@
 
 /datum/equipment_preset/synth/working_joe/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/joe(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mt(new_human), WEAR_L_EAR)

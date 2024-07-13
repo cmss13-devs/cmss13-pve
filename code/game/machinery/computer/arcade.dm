@@ -129,8 +129,8 @@
 				if(istype(prizeselect, /obj/item/toy/gun)) //Ammo comes with the gun
 					new /obj/item/toy/gun_ammo(src.loc)
 
-				else if(istype(prizeselect, /obj/item/clothing/suit/syndicatefake)) //Helmet is part of the suit
-					new /obj/item/clothing/head/syndicatefake(src.loc)
+				else if(istype(prizeselect, /obj/item/clothing/suit/storage/marine/veteran/dutch)) //Helmet is part of the suit
+					new /obj/item/clothing/head/helmet/marine/veteran/dutch(src.loc)
 
 			else
 				var/atom/movable/prize = pick(contents)
