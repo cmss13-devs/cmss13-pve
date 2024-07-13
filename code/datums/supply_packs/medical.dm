@@ -72,7 +72,7 @@
 		/obj/item/storage/surgical_tray,
 		/obj/item/clothing/mask/breath/medical,
 		/obj/item/tank/anesthetic,
-		/obj/item/clothing/under/rank/medical/green,
+		/obj/item/clothing/under/medical/green,
 		/obj/item/storage/box/masks,
 		/obj/item/storage/box/gloves,
 	)

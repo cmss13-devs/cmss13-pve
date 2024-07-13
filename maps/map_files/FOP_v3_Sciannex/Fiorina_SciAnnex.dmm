@@ -6164,7 +6164,7 @@
 "dFH" = (
 /obj/structure/closet/cabinet,
 /obj/item/key/cargo_train,
-/obj/item/clothing/under/rank/cargotech,
+/obj/item/clothing/under/cargotech,
 /obj/item/clothing/accessory/armband/cargo,
 /turf/open/floor/wood,
 /area/fiorina/station/civres_blue)
@@ -13368,7 +13368,7 @@
 /area/fiorina/station/telecomm/lz1_cargo)
 "igQ" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/rank/janitor,
+/obj/item/clothing/under/janitor,
 /obj/item/clothing/suit/bio_suit/janitor,
 /obj/item/clothing/head/bio_hood/janitor,
 /turf/open/floor/wood,

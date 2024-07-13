@@ -21,18 +21,18 @@
 	role_comm_title = "???"
 	skills = /datum/skills/civilian/survivor
 
-	utility_under = list(/obj/item/clothing/under/liaison_suit/outing)
+	utility_under = list(/obj/item/clothing/under/businesswear/outing)
 	utility_hat = list()
 	utility_gloves = list()
 	utility_shoes = list(/obj/item/clothing/shoes/laceup)
-	utility_extra = list(/obj/item/clothing/under/liaison_suit/suspenders)
+	utility_extra = list(/obj/item/clothing/under/businesswear/suspenders)
 
-	service_under = list(/obj/item/clothing/under/liaison_suit)
+	service_under = list(/obj/item/clothing/under/businesswear)
 	service_over = list()
 	service_hat = list()
 	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
-	dress_under = list(/obj/item/clothing/under/liaison_suit/formal)
+	dress_under = list(/obj/item/clothing/under/businesswear/formal)
 	dress_over = list()
 	dress_hat = list()
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)

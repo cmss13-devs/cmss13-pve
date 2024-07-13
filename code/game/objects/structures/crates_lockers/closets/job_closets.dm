@@ -21,8 +21,8 @@
 	new /obj/item/clothing/head/hairflower
 	new /obj/item/clothing/under/sl_suit(src)
 	new /obj/item/clothing/under/sl_suit(src)
-	new /obj/item/clothing/under/rank/bartender(src)
-	new /obj/item/clothing/under/rank/bartender(src)
+	new /obj/item/clothing/under/bartender(src)
+	new /obj/item/clothing/under/bartender(src)
 	new /obj/item/clothing/suit/storage/wcoat(src)
 	new /obj/item/clothing/suit/storage/wcoat(src)
 	new /obj/item/clothing/shoes/black(src)
@@ -40,7 +40,7 @@
 
 /obj/structure/closet/jcloset/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/rank/janitor(src)
+	new /obj/item/clothing/under/janitor(src)
 	new /obj/item/clothing/gloves/black(src)
 	new /obj/item/clothing/head/soft/purple(src)
 	new /obj/item/clothing/head/beret/jan(src)

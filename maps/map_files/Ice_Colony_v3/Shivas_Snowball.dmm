@@ -7097,7 +7097,7 @@
 	},
 /area/shiva/interior/aerodrome)
 "beP" = (
-/obj/item/clothing/under/rank/janitor,
+/obj/item/clothing/under/janitor,
 /turf/open/floor/shiva{
 	dir = 8;
 	icon_state = "bluefull"

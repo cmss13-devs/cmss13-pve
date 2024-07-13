@@ -14,8 +14,8 @@
 	else
 		new /obj/item/storage/backpack/satchel/sec(src)
 	new /obj/item/clothing/suit/armor/vest/security(src)
-	new /obj/item/clothing/under/rank/warden(src)
-	new /obj/item/clothing/under/rank/warden/corp(src)
+	new /obj/item/clothing/under/warden(src)
+	new /obj/item/clothing/under/warden/corp(src)
 	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/head/helmet/warden(src)
 	new /obj/item/clothing/glasses/sunglasses/sechud(src)
@@ -74,7 +74,7 @@
 	new /obj/item/device/hailer(src)
 	new /obj/item/clothing/accessory/storage/black_vest(src)
 	new /obj/item/clothing/head/soft/sec/corp(src)
-	new /obj/item/clothing/under/rank/security/corp(src)
+	new /obj/item/clothing/under/security/corp(src)
 
 /obj/structure/closet/secure_closet/security/soro
 	name = "Security Officer's Locker"
@@ -104,7 +104,7 @@
 	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
 	new /obj/item/clothing/head/ushanka(src)
 	new /obj/item/clothing/mask/rebreather/scarf(src)
-	new /obj/item/clothing/under/rank/veteran/soviet_uniform_01(src)
+	new /obj/item/clothing/under/veteran/soviet_uniform_01(src)
 	new /obj/item/storage/belt/gun/type47/t73(src)
 
 

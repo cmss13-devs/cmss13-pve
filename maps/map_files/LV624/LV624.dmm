@@ -5468,7 +5468,7 @@
 /area/lv624/lazarus/sleep_male)
 "aAX" = (
 /obj/structure/closet,
-/obj/item/clothing/under/rank/scientist,
+/obj/item/clothing/under/scientist,
 /obj/structure/window/reinforced/tinted,
 /obj/item/stack/medical/advanced/bruise_pack,
 /turf/open/floor{
@@ -23041,7 +23041,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/obj/item/clothing/under/liaison_suit/suspenders,
+/obj/item/clothing/under/businesswear/suspenders,
 /turf/open/floor{
 	dir = 6;
 	icon_state = "whiteyellow"

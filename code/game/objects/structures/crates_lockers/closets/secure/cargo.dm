@@ -10,7 +10,7 @@
 
 /obj/structure/closet/secure_closet/quartermaster/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/rank/cargo(src)
+	new /obj/item/clothing/under/cargo(src)
 	new /obj/item/clothing/shoes/brown(src)
 	new /obj/item/clothing/gloves/black(src)
 	new /obj/item/clothing/suit/fire/firefighter(src)
@@ -42,7 +42,7 @@
 	else
 		new /obj/item/storage/backpack/satchel/eng(src)
 // new /obj/item/device/radio/headset/almayer/ct(src)
-	new /obj/item/clothing/under/rank/miner(src)
+	new /obj/item/clothing/under/miner(src)
 	new /obj/item/clothing/gloves/black(src)
 	new /obj/item/clothing/shoes/black(src)
 	new /obj/item/device/analyzer(src)

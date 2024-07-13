@@ -50,7 +50,7 @@
 		back_item = /obj/item/storage/backpack/industrial
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
@@ -74,7 +74,7 @@
 		back_item = /obj/item/storage/backpack/industrial
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/councillor(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/councillor(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
@@ -90,7 +90,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/RO(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
@@ -113,7 +113,7 @@
 	skills = /datum/skills/colonial_synthetic
 
 	var/list/equipment_to_spawn = list(
-		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/joe,
+		WEAR_BODY = /obj/item/clothing/under/synthetic/joe,
 		WEAR_BACK = /obj/item/storage/backpack/marine/satchel,
 		WEAR_IN_BACK = /obj/item/tool/weldingtool/hugetank,
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
@@ -172,7 +172,7 @@
 		WEAR_R_EAR = /obj/item/device/flashlight/pen,
 		WEAR_FACE = /obj/item/clothing/mask/surgical,
 		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/rank/medical,
+		WEAR_BODY = /obj/item/clothing/under/medical,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/med,
 		WEAR_IN_BACK = /obj/item/roller/surgical,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/blue,
@@ -215,7 +215,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/bio_hood,
 		WEAR_FACE = /obj/item/clothing/mask/surgical,
 		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/rank/scientist,
+		WEAR_BODY = /obj/item/clothing/under/scientist,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/chem,
 		WEAR_IN_BACK = /obj/item/reagent_container/glass/beaker/vial/random/good,
 		WEAR_IN_BACK = /obj/item/paper/research_notes/good,
@@ -234,7 +234,7 @@
 	name = "Survivor - Synthetic - Engineer Synth"
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/hardhat,
-		WEAR_BODY = /obj/item/clothing/under/rank/engineer,
+		WEAR_BODY = /obj/item/clothing/under/engineer,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/eng,
 		WEAR_IN_BACK = /obj/item/ammo_magazine/smg/nailgun,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,
@@ -258,7 +258,7 @@
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/soft/purple,
 		WEAR_EYES = /obj/item/clothing/glasses/mgoggles,
-		WEAR_BODY = /obj/item/clothing/under/rank/janitor,
+		WEAR_BODY = /obj/item/clothing/under/janitor,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/vir,
 		WEAR_IN_BACK = /obj/item/reagent_container/glass/bucket,
 		WEAR_IN_BACK = /obj/item/tool/wet_sign,
@@ -278,7 +278,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/chefhat,
 		WEAR_FACE = /obj/item/clothing/mask/surgical,
 		WEAR_EYES = /obj/item/clothing/glasses/mgoggles,
-		WEAR_BODY = /obj/item/clothing/under/rank/chef,
+		WEAR_BODY = /obj/item/clothing/under/chef,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/vir,
 		WEAR_IN_BACK = /obj/item/reagent_container/food/snacks/sliceable/lemoncake,
 		WEAR_R_HAND = /obj/item/pizzabox/margherita,
@@ -325,7 +325,7 @@
 	name = "Survivor - Synthetic - Trucker Synth"
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/soft/ferret,
-		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/frontier,
+		WEAR_BODY = /obj/item/clothing/under/synthetic/frontier,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/norm,
 		WEAR_IN_BACK = /obj/item/pamphlet/skill/powerloader,
 		WEAR_R_HAND = /obj/item/tool/weldingtool/hugetank,
@@ -446,7 +446,7 @@
 	role_comm_title = "WY Syn"
 	equipment_to_spawn = list(
 		WEAR_L_EAR = /obj/item/device/radio/headset/distress/WY,
-		WEAR_BODY = /obj/item/clothing/under/suit_jacket/trainee,
+		WEAR_BODY = /obj/item/clothing/under/businesswear/black,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/lockable,
 		WEAR_IN_BACK = /obj/item/paper,
 		WEAR_IN_BACK = /obj/item/paper,
@@ -504,7 +504,7 @@
 	return
 
 /datum/equipment_preset/synth/working_joe/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/joe(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
@@ -548,9 +548,9 @@
 
 	switch(choice)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe/engi(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/joe/engi(new_human), WEAR_BODY)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe/engi/overalls(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/joe/engi/overalls(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/sling(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/working_joe_pda(new_human.back), WEAR_IN_L_STORE)
@@ -590,7 +590,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain/cultist(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chaplain/cultist(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
@@ -618,7 +618,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic/joe(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)

@@ -18605,10 +18605,10 @@
 /area/almayer/hallways/starboard_hallway)
 "bBi" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/liaison_suit/formal,
-/obj/item/clothing/under/liaison_suit,
-/obj/item/clothing/under/liaison_suit/outing,
-/obj/item/clothing/under/liaison_suit/suspenders,
+/obj/item/clothing/under/businesswear/formal,
+/obj/item/clothing/under/businesswear,
+/obj/item/clothing/under/businesswear/outing,
+/obj/item/clothing/under/businesswear/suspenders,
 /obj/item/clothing/under/blackskirt{
 	desc = "A stylish skirt, in a business-black and red colour scheme.";
 	name = "liaison's skirt"
@@ -18621,10 +18621,8 @@
 	desc = "A navy suit and red tie, intended for the Almayer's finest. And accountants.";
 	name = "liaison's navy suit"
 	},
-/obj/item/clothing/under/suit_jacket/trainee,
-/obj/item/clothing/under/liaison_suit/charcoal,
-/obj/item/clothing/under/liaison_suit/outing/red,
-/obj/item/clothing/under/liaison_suit/blazer,
+/obj/item/clothing/under/businesswear/black,
+/obj/item/clothing/under/businesswear/blazer,
 /obj/item/clothing/suit/storage/snow_suit/liaison,
 /obj/item/clothing/gloves/black,
 /obj/item/clothing/gloves/marine/dress,

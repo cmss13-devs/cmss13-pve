@@ -659,7 +659,7 @@
 	new_human.set_species(SPECIES_ZOMBIE)
 
 /datum/equipment_preset/other/zombie/load_gear(mob/living/carbon/human/new_human)
-	var/uniform_path = pick(/obj/item/clothing/under/colonist, /obj/item/clothing/under/colonist/ua_civvies, /obj/item/clothing/under/colonist/wy_davisone, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, /obj/item/clothing/under/marine/ua_riot, /obj/item/clothing/under/suit_jacket/manager, /obj/item/clothing/under/suit_jacket/director)
+	var/uniform_path = pick(/obj/item/clothing/under/colonist, /obj/item/clothing/under/colonist/ua_civvies, /obj/item/clothing/under/colonist/wy_davisone, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, /obj/item/clothing/under/marine/ua_riot, /obj/item/clothing/under/businesswear/ivory, /obj/item/clothing/under/businesswear/ivory)
 	new_human.equip_to_slot_or_del(new uniform_path, WEAR_BODY)
 	var/shoe_path = pick(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/leather, /obj/item/clothing/shoes/jackboots)
 	new_human.equip_to_slot_or_del(new shoe_path, WEAR_FEET)
@@ -773,7 +773,7 @@
 	access = get_access(ACCESS_LIST_COLONIAL_ALL)
 
 /datum/equipment_preset/other/xeno_cultist/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain/cultist(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chaplain/cultist(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
@@ -873,7 +873,7 @@
 	tablet.link_mob(new_human)
 	new_human.equip_to_slot_or_del(tablet, WEAR_R_HAND)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/medical, WEAR_BODY)
 
 //*****************************************************************************************************/
 

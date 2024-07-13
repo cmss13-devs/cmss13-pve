@@ -52,18 +52,18 @@
 	minimap_icon = "cl"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
 
-	utility_under = list(/obj/item/clothing/under/liaison_suit/black)
+	utility_under = list(/obj/item/clothing/under/businesswear/black)
 	utility_hat = list()
 	utility_gloves = list()
 	utility_shoes = list(/obj/item/clothing/shoes/laceup)
-	utility_extra = list(/obj/item/clothing/under/liaison_suit/blue)
+	utility_extra = list(/obj/item/clothing/under/businesswear/blue)
 
-	service_under = list(/obj/item/clothing/under/liaison_suit/field)
+	service_under = list(/obj/item/clothing/under/businesswear/field)
 	service_over = list()
 	service_hat = list()
 	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
-	dress_under = list(/obj/item/clothing/under/liaison_suit/corporate_formal)
+	dress_under = list(/obj/item/clothing/under/businesswear/corporate_formal)
 	dress_over = list()
 	dress_hat = list()
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
@@ -80,7 +80,7 @@
 		//back_item = /obj/item/storage/backpack
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcl(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/ivy(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/ivy(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -334,7 +334,7 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	minimap_icon = list("ct" = MINIMAP_ICON_COLOR_HEAD)
 
-	utility_under = list(/obj/item/clothing/under/rank/qm_suit)
+	utility_under = list(/obj/item/clothing/under/boiler)
 
 /datum/equipment_preset/uscm_ship/qm/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
@@ -342,7 +342,7 @@
 		back_item = /obj/item/storage/backpack/industrial
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/qm(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/qm_suit(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/req/ro(new_human), WEAR_HEAD)
@@ -365,7 +365,7 @@
 
 	minimap_icon = "ct"
 
-	utility_under = list(/obj/item/clothing/under/rank/cargotech)
+	utility_under = list(/obj/item/clothing/under/cargotech)
 
 /datum/equipment_preset/uscm_ship/cargo/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
@@ -373,7 +373,7 @@
 		back_item = /obj/item/storage/backpack/industrial
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/ct(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/cargotech(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cargotech(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
@@ -879,7 +879,7 @@
 
 /datum/equipment_preset/uscm_ship/officer/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
-	new_human.equip_if_possible(new /obj/item/clothing/under/rank/centcom/officer(new_human), WEAR_BODY)
+	new_human.equip_if_possible(new /obj/item/clothing/under/centcom/officer(new_human), WEAR_BODY)
 	new_human.equip_if_possible(new /obj/item/clothing/shoes/centcom(new_human), WEAR_FEET)
 	new_human.equip_if_possible(new /obj/item/clothing/gloves/white(new_human), WEAR_HANDS)
 	new_human.equip_if_possible(new /obj/item/clothing/head/beret/centcom/officer(new_human), WEAR_HEAD)

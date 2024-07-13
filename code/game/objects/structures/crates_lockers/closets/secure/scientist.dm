@@ -33,7 +33,7 @@
 	. = ..()
 	new /obj/item/clothing/suit/bio_suit/scientist(src)
 	new /obj/item/clothing/head/bio_hood/scientist(src)
-	new /obj/item/clothing/under/rank/rdalt(src)
+	new /obj/item/clothing/under/rdalt(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/shoes/leather(src)

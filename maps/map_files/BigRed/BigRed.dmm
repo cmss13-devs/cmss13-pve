@@ -14602,7 +14602,7 @@
 /obj/item/clothing/shoes/dress{
 	pixel_y = -13
 	},
-/obj/item/clothing/under/suit_jacket/trainee{
+/obj/item/clothing/under/businesswear/black{
 	pixel_x = -6;
 	pixel_y = 15
 	},

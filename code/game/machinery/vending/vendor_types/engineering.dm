@@ -163,7 +163,6 @@
 		list("EQUIPMENT", -1, null, null),
 		list("Bio Hood", 2, /obj/item/clothing/head/bio_hood, VENDOR_ITEM_REGULAR),
 		list("Bio Suit", 2, /obj/item/clothing/suit/bio_suit, VENDOR_ITEM_REGULAR),
-		list("Scientist's Jumpsuit", 2, /obj/item/clothing/under/rank/scientist, VENDOR_ITEM_REGULAR),
 
 		list("ASSEMBLY COMPONENTS", -1, null, null),
 		list("Igniter", round(scale * 8), /obj/item/device/assembly/igniter, VENDOR_ITEM_REGULAR),
@@ -184,7 +183,6 @@
 		list("EQUIPMENT", -1, null, null),
 		list("Labcoat", 2, /obj/item/clothing/suit/storage/labcoat, VENDOR_ITEM_REGULAR),
 		list("Medical Mask", 2, /obj/item/clothing/mask/breath/medical, VENDOR_ITEM_REGULAR),
-		list("Roboticist's Jumpsuit", 2, /obj/item/clothing/under/rank/roboticist, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
 		list("Cable Coil", 4, /obj/item/stack/cable_coil/random, VENDOR_ITEM_REGULAR),
