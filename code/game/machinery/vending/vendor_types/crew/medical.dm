@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_researcher, list(
 		list("Blue Scrubs", 0, /obj/item/clothing/under/medical/blue, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 		list("Light Blue Scrubs", 0, /obj/item/clothing/under/medical, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 		list("Purple Scrubs", 0, /obj/item/clothing/under/medical/purple, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
-		list("Researcher Uniform", 0, /obj/item/clothing/under/marine/officer/researcher, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Researcher Uniform", 0, /obj/item/clothing/under/boiler/offwhite, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("Labcoat", 0, /obj/item/clothing/suit/storage/labcoat/researcher, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),

@@ -332,8 +332,8 @@
 								/obj/item/clothing/suit/storage/marine/medium,
 								/obj/item/clothing/head/helmet/marine/tech,
 								/obj/item/clothing/head/helmet/marine/medic,
-								/obj/item/clothing/under/marine/medic,
-								/obj/item/clothing/under/marine/engineer,
+								/obj/item/clothing/under/marine,
+								/obj/item/clothing/under/marine,
 								/obj/effect/landmark/wo_supplies/storage/webbing,
 								/obj/item/device/binoculars)
 

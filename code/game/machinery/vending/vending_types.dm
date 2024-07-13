@@ -243,7 +243,7 @@
 		/obj/item/clothing/head/helmet/marine/MP = 6,
 		/obj/item/clothing/head/beret/marine/mp/mppeaked = 6,
 		/obj/item/clothing/head/beret/marine/mp/mpcap = 6,
-		/obj/item/clothing/under/marine/mp = 2,
+		/obj/item/clothing/under/marine = 2,
 		/obj/item/storage/belt/security/MP = 6,
 		/obj/item/clothing/head/beret/marine/mp = 6,
 		/obj/item/clothing/glasses/sunglasses/sechud = 3,

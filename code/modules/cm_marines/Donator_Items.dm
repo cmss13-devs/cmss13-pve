@@ -12,7 +12,7 @@
 	item_state = null
 	//DON'T GRAB STUFF BETWEEN THIS LINE
 	icon = 'icons/obj/items/clothing/hats.dmi'
-	icon_override = 'icons/mob/humans/onmob/head_0.dmi'
+	icon_override = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS
 	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
@@ -70,7 +70,7 @@
 	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	//DON'T GRAB STUFF BETWEEN THIS LINE
 	icon = 'icons/obj/items/clothing/suits.dmi'
-	icon_override = 'icons/mob/humans/onmob/suit_0.dmi'  //Don't fuck with this in the future please.
+	icon_override = 'icons/mob/humans/onmob/suit-layer/suit_0.dmi'  //Don't fuck with this in the future please.
 	flags_inventory = BLOCKSHARPOBJ
 	flags_marine_armor = NO_FLAGS
 
@@ -83,7 +83,7 @@
 	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	//DON'T GRAB STUFF BETWEEN THIS LINE
 	icon = 'icons/obj/items/clothing/suits.dmi'
-	icon_override = 'icons/mob/humans/onmob/suit_0.dmi'  //Don't fuck with this in the future please.
+	icon_override = 'icons/mob/humans/onmob/suit-layer/suit_0.dmi'  //Don't fuck with this in the future please.
 	flags_inventory = BLOCKSHARPOBJ
 	flags_marine_armor = NO_FLAGS
 

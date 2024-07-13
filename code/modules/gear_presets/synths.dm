@@ -193,7 +193,7 @@
 		WEAR_R_EAR = /obj/item/device/flashlight/pen,
 		WEAR_FACE = /obj/item/clothing/mask/surgical,
 		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/colonist/ua_civvies,
+		WEAR_BODY = /obj/item/clothing/under/boiler,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/med,
 		WEAR_IN_BACK = /obj/item/storage/firstaid/adv,
 		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
@@ -234,7 +234,7 @@
 	name = "Survivor - Synthetic - Engineer Synth"
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/hardhat,
-		WEAR_BODY = /obj/item/clothing/under/engineer,
+		WEAR_BODY = /obj/item/clothing/under/boiler/cyan,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/eng,
 		WEAR_IN_BACK = /obj/item/ammo_magazine/smg/nailgun,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,

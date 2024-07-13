@@ -516,7 +516,7 @@
 	skills = /datum/skills/tl
 
 /datum/equipment_preset/uscm/cmb/rto/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/rto, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/hp, WEAR_IN_ACCESSORY)
@@ -560,10 +560,10 @@
 	role_comm_title = "A-HM"
 	skills = /datum/skills/combat_medic
 
-	utility_under = list(/obj/item/clothing/under/marine/medic)
+	utility_under = list(/obj/item/clothing/under/marine)
 
 /datum/equipment_preset/uscm/cmb/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/medic, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/hp, WEAR_IN_ACCESSORY)

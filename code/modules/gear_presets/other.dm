@@ -517,7 +517,7 @@
 	//TODO: add backpacks and satchels
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots, WEAR_FEET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/compression, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/compression, WEAR_HEAD)
 	var /obj/item/tank/jetpack/J = new /obj/item/tank/jetpack/oxygen(new_human)
@@ -659,9 +659,9 @@
 	new_human.set_species(SPECIES_ZOMBIE)
 
 /datum/equipment_preset/other/zombie/load_gear(mob/living/carbon/human/new_human)
-	var/uniform_path = pick(/obj/item/clothing/under/colonist, /obj/item/clothing/under/colonist/ua_civvies, /obj/item/clothing/under/colonist/wy_davisone, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, /obj/item/clothing/under/marine/ua_riot, /obj/item/clothing/under/businesswear/ivory, /obj/item/clothing/under/businesswear/ivory)
+	var/uniform_path = pick(/obj/item/clothing/under/boiler, /obj/item/clothing/under/boiler/lightblue, /obj/item/clothing/under/boiler/darkblue, /obj/item/clothing/under/boiler/grey, /obj/item/clothing/under/marine/standard, /obj/item/clothing/under/businesswear/black, /obj/item/clothing/under/businesswear/brown)
 	new_human.equip_to_slot_or_del(new uniform_path, WEAR_BODY)
-	var/shoe_path = pick(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/leather, /obj/item/clothing/shoes/jackboots)
+	var/shoe_path = pick(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/laceup/brown)
 	new_human.equip_to_slot_or_del(new shoe_path, WEAR_FEET)
 
 //*****************************************************************************************************/

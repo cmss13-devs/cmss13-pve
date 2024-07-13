@@ -5012,7 +5012,7 @@
 	},
 /area/fiorina/station/chapel)
 "dbL" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "yellowfull"
 	},
@@ -6689,9 +6689,9 @@
 	},
 /area/fiorina/station/flight_deck)
 "eag" = (
-/obj/item/clothing/under/color/orange,
-/obj/item/clothing/under/color/orange,
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
+/obj/item/clothing/under/boiler/prison,
+/obj/item/clothing/under/boiler/prison,
 /obj/structure/surface/rack,
 /turf/open/floor/prison{
 	dir = 4;
@@ -27952,7 +27952,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/power_ring)
 "rcu" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "redfull"
 	},
@@ -28344,7 +28344,7 @@
 	},
 /area/fiorina/station/security/wardens)
 "rrj" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
@@ -29242,7 +29242,7 @@
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "rRT" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
@@ -30859,7 +30859,7 @@
 /turf/open/floor/wood,
 /area/fiorina/station/park)
 "tax" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "yellow"
 	},
@@ -34388,7 +34388,7 @@
 /area/fiorina/station/botany)
 "vhe" = (
 /obj/structure/closet/wardrobe/orange,
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison{
 	icon_state = "yellowfull"
 	},
@@ -39014,7 +39014,7 @@
 	},
 /area/fiorina/maintenance)
 "yft" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "yfB" = (

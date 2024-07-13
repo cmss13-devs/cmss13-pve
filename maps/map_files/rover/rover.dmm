@@ -4581,7 +4581,7 @@
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
-/obj/item/clothing/under/marine/medic/standard,
+/obj/item/clothing/under/marine/standard,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},

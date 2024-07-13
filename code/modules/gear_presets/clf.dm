@@ -56,7 +56,7 @@
 	skills = /datum/skills/clf
 
 /datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/under/boiler/grey/jumpsuit = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	jumpsuit.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
@@ -81,7 +81,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -161,7 +161,7 @@
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/M = new()
+	var/obj/item/clothing/under/boiler/grey/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -193,7 +193,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Insulated Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/distress/CLF/cct, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
@@ -285,7 +285,7 @@
 
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/boiler/grey/CLF = new()
 	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -320,7 +320,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Head Gear (Random)", 0, /obj/effect/essentials_set/random/clf_head, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
@@ -446,7 +446,7 @@
 /datum/equipment_preset/clf/specialist/load_gear(mob/living/carbon/human/new_human)
 
 	//jumpsuit and their webbing
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/boiler/grey/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/five_slots/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -486,7 +486,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor", 0, /obj/item/clothing/suit/storage/militia, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Combat Gloves", 0, /obj/item/clothing/gloves/combat, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -569,7 +569,7 @@
 /datum/equipment_preset/clf/leader/load_gear(mob/living/carbon/human/new_human)
 
 	//No random armor, so that it's more clear that he's the leader
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(new_human), WEAR_FEET)
@@ -601,7 +601,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor", 0, /obj/item/clothing/suit/storage/militia, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -744,7 +744,7 @@
 
 /datum/equipment_preset/clf/synth/load_gear(mob/living/carbon/human/new_human)
 	load_name(new_human)
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/boiler/grey/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -907,7 +907,7 @@
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
@@ -923,7 +923,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Smartgun Armor", 0, /obj/item/clothing/suit/storage/militia/smartgun, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Smartgunner Belt", 0, /obj/item/storage/belt/gun/smartgunner/clf, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),

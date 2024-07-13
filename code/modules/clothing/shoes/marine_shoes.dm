@@ -96,7 +96,7 @@
 	flags_inventory = NOSLIPPING
 	siemens_coefficient = 0.6
 
-/obj/item/clothing/shoes/dress/commander
+/obj/item/clothing/shoes/laceup
 	name = "commanding officer dress shoes"
 	desc = "Has special soles for better trampling those underneath."
 	armor_melee = CLOTHING_ARMOR_MEDIUM

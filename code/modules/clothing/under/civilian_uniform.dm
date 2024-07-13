@@ -40,6 +40,11 @@
 	desc = "A grey boiler suit. It's made of a flame retardant fabric that provides minor protection against fire. Greytide Galaxy Wide."
 	icon_state = "spacer_grey"
 
+/obj/item/clothing/under/boiler/prison
+	name = "boiler suit"
+	desc = "An orange prison suit. It's made of a flame retardant fabric that provides minor protection against fire."
+	icon_state = "spacer_orange"
+
 /obj/item/clothing/under/workwear
 	name = "workwear"
 	desc = "A pair of black slacks and a short-sleeve grey workshirt."
@@ -54,21 +59,21 @@
 	worn_state = "workwear_khaki"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/workwear/pink
+/obj/item/clothing/under/workwear/pink
 	name = "workwear"
 	desc = "A pair of jeans paired with a pink workshirt."
 	icon_state = "workwear_pink"
 	worn_state = "workwear_pink"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/workwear/blue
+/obj/item/clothing/under/workwear/blue
 	name = "workwear"
 	desc = "A pair of brown canvas workpants paired with a dark blue workshirt."
 	icon_state = "workwear_blue"
 	worn_state = "workwear_blue"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/workwear/green
+/obj/item/clothing/under/workwear/green
 	name = "workwear"
 	desc = "A pair of brown canvas workpants paired with a green workshirt."
 	icon_state = "workwear_green"

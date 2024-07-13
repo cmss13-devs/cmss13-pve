@@ -159,13 +159,13 @@
 
 	minimap_icon = "researcher"
 
-	utility_under = list(/obj/item/clothing/under/marine/officer/researcher)
+	utility_under = list(/obj/item/clothing/under/boiler/offwhite)
 	utility_hat = list()
 	utility_gloves = list()
 	utility_shoes = list(/obj/item/clothing/shoes/laceup)
 	utility_extra = list(/obj/item/clothing/suit/storage/labcoat/researcher)
 
-	service_under = list(/obj/item/clothing/under/marine/officer/researcher)
+	service_under = list(/obj/item/clothing/under/boiler/offwhite)
 
 /datum/equipment_preset/uscm_ship/uscm_medical/researcher/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
@@ -173,7 +173,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/research(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/researcher(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
 	if(new_human.disabilities & NEARSIGHTED)

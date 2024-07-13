@@ -302,7 +302,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/mp)
+	uniform_restricted = list(/obj/item/clothing/under/marine)
 	specialty = "M2 pattern MP"
 	item_state_slots = list(WEAR_JACKET = "mp_armor")
 	black_market_value = 20
@@ -313,7 +313,7 @@
 	desc = "A well-crafted suit of M3 Pattern Armor typically distributed to Wardens. Useful for letting your men know who is in charge."
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
-	uniform_restricted = list(/obj/item/clothing/under/marine/warden)
+	uniform_restricted = list(/obj/item/clothing/under/marine)
 	specialty = "M3 pattern warden MP"
 	item_state_slots = list(WEAR_JACKET = "warden")
 

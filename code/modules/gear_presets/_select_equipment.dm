@@ -390,7 +390,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/spawn_rebel_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/uniformpath = pick(
-		/obj/item/clothing/under/colonist/clf,
+		/obj/item/clothing/under/boiler/grey,
 		)
 	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
 
@@ -984,7 +984,7 @@ var/list/rebel_rifles = list(
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/boiler/grey, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),

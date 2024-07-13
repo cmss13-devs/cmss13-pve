@@ -33,7 +33,7 @@
 
 	minimap_icon = "mp"
 
-	utility_under = list(/obj/item/clothing/under/marine/mp)
+	utility_under = list(/obj/item/clothing/under/marine)
 	utility_hat = list(/obj/item/clothing/head/beret/marine/mp)
 	utility_extra = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
 
@@ -45,7 +45,7 @@
 		back_item = /obj/item/storage/backpack/security
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mmpo(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
@@ -96,7 +96,7 @@
 
 	minimap_icon = "warden"
 
-	utility_under = list(/obj/item/clothing/under/marine/warden)
+	utility_under = list(/obj/item/clothing/under/marine)
 	utility_hat = list(/obj/item/clothing/head/beret/marine/mp/warden)
 	utility_extra = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
 
@@ -108,7 +108,7 @@
 		back_item = /obj/item/storage/backpack/security
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/cmpcom(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/warden(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)

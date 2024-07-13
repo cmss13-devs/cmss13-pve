@@ -6,7 +6,7 @@
 	name = "\improper USCM uniform"
 	desc = "Standard-issue Marine uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
 	siemens_coefficient = 0.9
-	icon = 'icons/mob/humans/onmob/uniform_marine.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_marine.dmi'
 	icon_state = "marine_jumpsuit"
 	worn_state = "marine_jumpsuit"
 	armor_melee = CLOTHING_ARMOR_LOW
@@ -52,7 +52,7 @@
 /obj/item/clothing/under/marine/standard
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/under/marine/medic/standard
+/obj/item/clothing/under/marine/standard
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/bridge

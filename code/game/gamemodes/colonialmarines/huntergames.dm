@@ -253,11 +253,11 @@ var/waiting_for_drop_votes = 0
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/marine(H), WEAR_BODY)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(H), WEAR_FEET)
 		if(1) //MP
-			H.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp(H), WEAR_BODY)
+			H.equip_to_slot_or_del(new /obj/item/clothing/under/marine(H), WEAR_BODY)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(H), WEAR_FEET)
 		if(2) //Commander!
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/command(H), WEAR_BODY)
-			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/commander(H), WEAR_FEET)
+			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(H), WEAR_FEET)
 		if(3) //CL
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear(H), WEAR_BODY)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(H), WEAR_FEET)

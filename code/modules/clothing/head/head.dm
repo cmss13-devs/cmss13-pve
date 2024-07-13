@@ -173,7 +173,7 @@
 	icon = 'icons/obj/items/clothing/hats.dmi'
 	icon_state = "headband_rambo"
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 
 /obj/item/clothing/head/headset
@@ -511,7 +511,8 @@
 	)
 	black_market_value = 30
 
-/obj/item/clothing/head/marine/peaked/captain/white
+/obj/item/clothing/head/marine/peaked/service
+
 	name = "commanding officer's dress white peaked cap"
 	desc = "A white, Navy-style peaked cap for the Commanding Officer. Wearer may suffer the heavy weight of responsibility upon their head."
 	icon_state = "co_peakedcap_white"

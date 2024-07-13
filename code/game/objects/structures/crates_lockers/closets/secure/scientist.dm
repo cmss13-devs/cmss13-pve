@@ -10,8 +10,8 @@
 
 /obj/structure/closet/secure_closet/scientist/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/marine/officer/researcher(src)
-	new /obj/item/clothing/under/marine/officer/researcher(src)
+	new /obj/item/clothing/under/boiler/offwhite(src)
+	new /obj/item/clothing/under/boiler/offwhite(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/tank/air(src)

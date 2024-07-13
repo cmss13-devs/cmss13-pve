@@ -424,7 +424,7 @@
 
 	minimap_icon = "medic"
 
-	utility_under = list(/obj/item/clothing/under/marine/medic)
+	utility_under = list(/obj/item/clothing/under/marine)
 
 /datum/equipment_preset/uscm/medic/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/medic
@@ -552,7 +552,7 @@
 
 	minimap_icon = "engi"
 
-	utility_under = list(/obj/item/clothing/under/marine/engineer)
+	utility_under = list(/obj/item/clothing/under/marine)
 
 /datum/equipment_preset/uscm/engineer/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
@@ -781,14 +781,14 @@
 
 	minimap_icon = "engi"
 
-	utility_under = list(/obj/item/clothing/under/marine/engineer)
+	utility_under = list(/obj/item/clothing/under/marine)
 
 /datum/equipment_preset/uscm/engineer_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/engineer_equipped/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/engineer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/engi(new_human), WEAR_L_EAR)
@@ -827,13 +827,13 @@
 
 	minimap_icon = "medic"
 
-	utility_under = list(/obj/item/clothing/under/marine/medic)
+	utility_under = list(/obj/item/clothing/under/marine)
 
 /datum/equipment_preset/uscm/medic_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/medic_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/medic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/med(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium(new_human), WEAR_JACKET)
@@ -956,7 +956,7 @@
 
 /datum/equipment_preset/uscm/tl_equipped/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
-	var/obj/item/clothing/under/marine/rto/U = new(new_human)
+	var/obj/item/clothing/under/marine/U = new(new_human)
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	U.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(U, WEAR_BODY)

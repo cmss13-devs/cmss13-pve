@@ -32349,7 +32349,7 @@
 /area/prison/laundry)
 "bQK" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
@@ -32870,7 +32870,7 @@
 /area/prison/laundry)
 "bSt" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -32896,7 +32896,7 @@
 /area/prison/recreation/highsec/s)
 "bSw" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -32945,7 +32945,7 @@
 	},
 /area/prison/laundry)
 "bSA" = (
-/obj/item/clothing/under/color/orange,
+/obj/item/clothing/under/boiler/prison,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"

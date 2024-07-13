@@ -108,16 +108,3 @@
 	containername = "Cowboy Costume Crate"
 	group = "Clothing"
 
-/datum/supply_packs/officer_outfits//lmao this shit is so hideously out of date
-	contains = list(
-		/obj/item/clothing/under/boiler,
-		/obj/item/clothing/under/marine/officer/bridge,
-		/obj/item/clothing/under/marine/officer/bridge,
-		/obj/item/clothing/under/marine/dress,
-		/obj/item/clothing/under/marine/officer/ce,
-	)
-	name = "officer outfit crate"
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "officer dress crate"
-	group = "Clothing"

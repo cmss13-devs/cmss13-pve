@@ -1067,7 +1067,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 		if(41 to 45)
 		// Spare CLF gear!
 			new /obj/effect/essentials_set/random/clf_shoes(loc)
-			new /obj/item/clothing/under/colonist/clf(loc)
+			new /obj/item/clothing/under/boiler/grey(loc)
 			new /obj/effect/essentials_set/random/clf_armor(loc)
 			new /obj/effect/essentials_set/random/clf_gloves(loc)
 			new /obj/effect/essentials_set/random/clf_head(loc)

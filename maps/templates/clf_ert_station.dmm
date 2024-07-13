@@ -2042,7 +2042,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "Xc" = (
-/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/boiler/grey,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "Xp" = (
