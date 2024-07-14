@@ -56,63 +56,6 @@
 	item_state = "pirate"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 
-/obj/item/clothing/suit/judgerobe
-	name = "judge's robe"
-	desc = "This robe commands authority."
-	icon_state = "judge"
-	item_state = "judge"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
-	allowed = list(
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/spacecash,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/pen,
-	)
-	flags_inv_hide = HIDEJUMPSUIT
-
-
-/obj/item/clothing/suit/storage/apron/overalls
-	name = "blue coveralls"
-	desc = "A pair of denim overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
-	icon_state = "overalls"
-	item_state = "overalls"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/ammo_magazine,
-		/obj/item/ammo_casing,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/device/taperecorder,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/pen,
-	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL)
-
-/obj/item/clothing/suit/storage/apron/overalls/tan
-	name = "tan coveralls"
-	desc = "A pair of tan overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
-	icon_state = "overalls_tan"
-	item_state = "overalls_tan"
-
-/obj/item/clothing/suit/storage/apron/overalls/red
-	name = "red coveralls"
-	desc = "A pair of reddish-brown overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
-	icon_state = "overalls_red"
-	item_state = "overalls_red"
-
 /obj/item/clothing/suit/holidaypriest
 	name = "Holiday Priest"
 	desc = "This is a nice holiday my son."
@@ -246,16 +189,6 @@
 	icon_state = "red_pyjamas"
 	item_state = "red_pyjamas"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-
-//stripper
-/obj/item/clothing/under/stripper
-	flags_armor_protection = 0
-
-/obj/item/clothing/under/stripper/mankini
-	name = "the mankini"
-	desc = "No honest man would wear this abomination"
-	icon_state = "mankini"
-	siemens_coefficient = 1
 
 /obj/item/clothing/suit/xenos
 	name = "xenos suit"

@@ -158,7 +158,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_researcher, list(
 		list("Researcher Uniform", 0, /obj/item/clothing/under/boiler/offwhite, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Labcoat", 0, /obj/item/clothing/suit/storage/labcoat/researcher, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 		list("Snowcoat", 0, /obj/item/clothing/suit/storage/snow_suit/doctor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("HELMET", 0, null, null, null),

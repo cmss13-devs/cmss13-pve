@@ -103,22 +103,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/suit/storage/jacket/marine/dress
-	name = "marine formal service jacket"
-	desc = "Smells like vanilla. Signifies prestige and power, if a little flashy."
-	icon_state = "coat_formal"
-	initial_icon_state = "coat_formal"
-	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_atom = NO_SNOW_TYPE
-	has_buttons = TRUE
-
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber
 	name = "commanding officer bomber jacket"
 	desc = "A bomber jacket resembling those worn by airmen of old. A classic, stylish choice for those in the higher ranks."
@@ -189,85 +173,3 @@
 	icon_state = "wc_suit"
 	item_state = "wc_suit"
 	contained_sprite = TRUE
-
-//==================Corporate Liaison==================\\
-
-/obj/item/clothing/suit/storage/jacket/marine/vest
-	name = "brown vest"
-	desc = "A casual brown vest."
-	icon_state = "vest_brown"
-	item_state = "vest_brown"
-	has_buttons = FALSE
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/suit/storage/jacket/marine/vest/tan
-	name = "tan vest"
-	desc = "A casual tan vest."
-	icon_state = "vest_tan"
-	item_state = "vest_tan"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/vest/grey
-	name = "grey vest"
-	desc = "A casual grey vest."
-	icon_state = "vest_grey"
-	item_state = "vest_grey"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/corporate
-	name = "khaki suit jacket"
-	desc = "A khaki suit jacket."
-	icon_state = "corporate_ivy"
-	item_state = "corporate_ivy"
-	has_buttons = FALSE
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/suit/storage/jacket/marine/corporate/formal
-	name = "formal suit jacket"
-	desc = "An ivory suit jacket; a Weyland-Yutani corporate badge is attached to the right lapel."
-	icon_state = "corporate_formal"
-	item_state = "corporate_formal"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/corporate/black
-	name = "black suit jacket"
-	desc = "A black suit jacket."
-	icon_state = "corporate_black"
-	item_state = "corporate_black"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/corporate/brown
-	name = "brown suit jacket"
-	desc = "A brown suit jacket."
-	icon_state = "corporate_brown"
-	item_state = "corporate_brown"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/corporate/blue
-	name = "blue suit jacket"
-	desc = "A blue suit jacket."
-	icon_state = "corporate_blue"
-	item_state = "corporate_blue"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/bomber
-	name = "khaki bomber jacket"
-	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."
-	icon_state = "jacket_khaki"
-	item_state = "jacket_khaki"
-	has_buttons = FALSE
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/suit/storage/jacket/marine/bomber/red
-	name = "red bomber jacket"
-	desc = "A reddish-brown bomber jacket popular among stationeers and blue-collar workers everywhere."
-	icon_state = "jacket_red"
-	item_state = "jacket_red"
-	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/bomber/grey
-	name = "grey bomber jacket"
-	desc = "A blue-grey bomber jacket popular among stationeers and blue-collar workers everywhere."
-	icon_state = "jacket_grey"
-	item_state = "jacket_grey"
-	has_buttons = FALSE
