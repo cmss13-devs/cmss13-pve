@@ -1,6 +1,7 @@
 /obj/item/clothing/under/medical
 	desc = "A light blue set of scrubs. It's made of a special fiber that provides minor protection against biohazards."
 	name = "medical scrubs"
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_medsci.dmi'
 	icon_state = "scrubslightblue"
 	flags_jumpsuit = FALSE
 	permeability_coefficient = 0.50

@@ -23,63 +23,6 @@
 		/obj/item/tool/crowbar,
 		/obj/item/tool/pen,
 	)
-//Captain
-/obj/item/clothing/suit/captunic
-	name = "captain's parade tunic"
-	desc = "Worn by a Captain to show their class."
-	icon_state = "captunic"
-	item_state = "bio_suit"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
-	flags_inv_hide = HIDEJUMPSUIT
-
-/obj/item/clothing/suit/captunic/capjacket
-	name = "captain's uniform jacket"
-	desc = "A less formal jacket for everyday captain use."
-	icon_state = "capjacket"
-	item_state = "bio_suit"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
-	flags_inv_hide = HIDEJUMPSUIT
-
-//Cultist
-/obj/item/clothing/suit/cultist_hoodie
-	name = "black robe"
-	desc = "Looks eerie and weird, almost as if it belongs to a cult."
-	icon_state = "chaplain_hoodie"
-	item_state = "chaplain_hoodie"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
-	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
-
-	allowed = list(
-		/obj/item/weapon/gun/,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/storage/bible,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/large_holster/katana,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/smartpistol,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_HARDCORE
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_laser = CLOTHING_ARMOR_LOW
-
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	time_to_equip = 2 SECONDS
 
 //Chaplain
 /obj/item/clothing/suit/nun
@@ -133,28 +76,6 @@
 		/obj/item/tool/crowbar,
 		/obj/item/tool/pen,
 	)
-
-//Security
-/obj/item/clothing/suit/security/navyofficer
-	name = "security officer's jacket"
-	desc = "This jacket is for those special occasions when a security officer actually feels safe."
-	icon_state = "officerbluejacket"
-	item_state = "officerbluejacket"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-
-/obj/item/clothing/suit/security/navywarden
-	name = "warden's jacket"
-	desc = "Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig."
-	icon_state = "wardenbluejacket"
-	item_state = "wardenbluejacket"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-
-/obj/item/clothing/suit/security/navyhos
-	name = "head of security's jacket"
-	desc = "This piece of clothing was specifically designed for asserting superior authority."
-	icon_state = "hosbluejacket"
-	item_state = "hosbluejacket"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
 
 //Detective
 /obj/item/clothing/suit/storage/det_suit
