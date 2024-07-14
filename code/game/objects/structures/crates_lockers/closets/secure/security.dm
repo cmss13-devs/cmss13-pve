@@ -9,8 +9,6 @@
 	icon_off = "secure_closed_warden"
 /obj/structure/closet/secure_closet/warden/Initialize()
 	. = ..()
-
-	new /obj/item/storage/backpack/satchel/black(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)
 
@@ -29,8 +27,7 @@
 	. = ..()
 	new /obj/item/clothing/suit/storage/CMB(src)
 	new /obj/item/clothing/under/cmb(src)
-	new /obj/item/storage/backpack/satchel/black(src)
-	new /obj/item/storage/belt/security(src)
+	new /obj/item/storage/belt/security/MP/CMB(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/security/standard
@@ -49,8 +46,6 @@
 	new /obj/item/storage/belt/security(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/clothing/accessory/storage/black_vest(src)
 
 /obj/structure/closet/secure_closet/security/soro
 	name = "People's Police Officer Locker"
@@ -65,14 +60,14 @@
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
 
-	new /obj/item/storage/backpack/satchel(src)
-	new /obj/item/storage/belt/security(src)
+	new /obj/item/storage/belt/security/MP/CMB(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
 	new /obj/item/clothing/head/ushanka(src)
 	new /obj/item/clothing/under/businesswear/black(src)
+	new /obj/item/clothing/accessory/black(src)
+	new /obj/item/clothing/accessory/patch/upp(src)
 	new /obj/item/storage/belt/gun/type47/t73(src)
 
 
