@@ -96,9 +96,6 @@
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit-layer/suit_marine.dmi'
 	)
 
-/obj/item/clothing/suit/armor/vest/pilot/Initialize()
-	. = ..()
-	select_gamemode_skin(/obj/item/clothing/suit/armor/vest/pilot)
 
 /obj/item/clothing/suit/armor/vest/dutch
 	name = "armored jacket"
