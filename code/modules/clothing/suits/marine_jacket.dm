@@ -21,8 +21,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	allowed = list(
 		/obj/item/weapon/gun/,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
 		/obj/item/handcuffs,
 		/obj/item/device/binoculars,
@@ -79,6 +77,7 @@
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
 	has_buttons = TRUE
+	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot
@@ -123,14 +122,6 @@
 	icon_state = "bridge_coat"
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_MEDAL)
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat_grey
-	name = "bridge coat"
-	desc = "A heavy synthetic woolen coat issued to USCM Officers. Based on a classical design this coat is quite nice on cold nights in the Air conditioned CIC or a miserable cold night on a barren world. This one is Black."
-	has_buttons = FALSE
-	item_state = "bridge_coat_grey"
-	icon_state = "bridge_coat_grey"
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_MEDAL)
-
 /obj/item/clothing/suit/storage/jacket/marine/service/aso
 	name = "auxiliary support officer jacket"
 	desc = "A comfortable vest for officers who are expected to work long hours staring at rows of numbers and inspecting equipment from knives to torpedos to entire dropships."
@@ -173,3 +164,43 @@
 	icon_state = "wc_suit"
 	item_state = "wc_suit"
 	contained_sprite = TRUE
+
+/obj/item/clothing/suit/storage/jacket/marine/cmb
+	name = "\improper CMB Deputy jacket"
+	desc = "A thick and stylish black leather jacket with a Marshal's Deputy badge pinned to it. The back is enscribed with the powerful letters of 'DEPUTY' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	icon_state = "CMB_jacket"
+	item_state = "CMB_jacket"
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = CLOTHING_ARMOR_VERYLOW
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+
+/obj/item/clothing/suit/storage/CMB/Initialize()
+	. = ..()
+	pockets.max_w_class = SIZE_SMALL //Can contain small items AND rifle magazines.
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/sniper,
+	)
+	pockets.max_storage_space = 8
+
+/obj/item/clothing/suit/storage/CMB/marshal
+	name = "\improper CMB Marshal jacket"
+	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	icon_state = "CMB_jacket_marshal"
+	item_state = "CMB_jacket_marshal"
+
+/obj/item/clothing/suit/storage/RO
+	name = "quartermaster jacket"
+	desc = "A green jacket worn by USCM personnel. The back has the flag of the United Americas on it."
+	icon_state = "RO_jacket"
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)

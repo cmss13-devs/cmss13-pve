@@ -9,14 +9,12 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/vest/tan
-	name = "casual vest"
 	desc = "A tan vest."
 	icon_state = "vest_tan"
 	item_state = "vest_tan"
 	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/vest/grey
-	name = "casual vest"
 	desc = "A casual grey vest."
 	icon_state = "vest_grey"
 	item_state = "vest_grey"
@@ -31,28 +29,24 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/formal
-	name = "suit jacket"
 	desc = "An ivory suit jacket; a Weyland-Yutani corporate badge is attached to the right lapel."
 	icon_state = "corporate_formal"
 	item_state = "corporate_formal"
 	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/black
-	name = "suit jacket"
 	desc = "A black suit jacket."
 	icon_state = "corporate_black"
 	item_state = "corporate_black"
 	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/brown
-	name = "suit jacket"
 	desc = "A brown suit jacket."
 	icon_state = "corporate_brown"
 	item_state = "corporate_brown"
 	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/blue
-	name = "suit jacket"
 	desc = "A blue suit jacket."
 	icon_state = "corporate_blue"
 	item_state = "corporate_blue"
@@ -67,14 +61,12 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/bomber/red
-	name = "bomber jacket"
 	desc = "A reddish-brown bomber jacket popular among stationeers and blue-collar workers everywhere."
 	icon_state = "jacket_red"
 	item_state = "jacket_red"
 	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/bomber/grey
-	name = "bomber jacket"
 	desc = "A blue-grey bomber jacket popular among stationeers and blue-collar workers everywhere."
 	icon_state = "jacket_grey"
 	item_state = "jacket_grey"
@@ -106,13 +98,11 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL)
 
 /obj/item/clothing/suit/storage/apron/overalls/tan
-	name = "coveralls"
 	desc = "A pair of tan overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
 	icon_state = "overalls_tan"
 	item_state = "overalls_tan"
 
 /obj/item/clothing/suit/storage/apron/overalls/red
-	name = "coveralls"
 	desc = "A pair of reddish-brown overalls. With a large pocket in the front these overalls are popular with workers of all kinds."
 	icon_state = "overalls_red"
 	item_state = "overalls_red"
@@ -309,3 +299,4 @@
 	name = "explorer's windbreaker"
 	desc = "A brown windbreaker covered in various patches tying it to one of the first explorations into this sector."
 	icon_state = "windbreaker_covenant"
+

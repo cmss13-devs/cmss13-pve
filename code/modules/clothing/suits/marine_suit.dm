@@ -89,11 +89,10 @@
 	var/locate_cooldown = 0 //Cooldown for SL locator
 	var/armor_overlays[]
 	actions_types = list(/datum/action/item_action/toggle)
-	var/flags_marine_armor = ARMOR_SQUAD_OVERLAY|ARMOR_LAMP_OVERLAY
+	var/flags_marine_armor ARMOR_LAMP_OVERLAY
 	var/specialty = "M3 pattern marine" //Same thing here. Give them a specialty so that they show up correctly in vendors. speciality does NOTHING if you have NO_NAME_OVERRIDE
 	w_class = SIZE_HUGE
 	uniform_restricted = list(/obj/item/clothing/under/marine)
-	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	time_to_unequip = 20
 	time_to_equip = 20
 	pickup_sound = "armorequip"
@@ -101,7 +100,6 @@
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
-	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
 
 	var/atom/movable/marine_light/light_holder
 
@@ -249,11 +247,14 @@
 	icon_state = "6"
 	specialty = "M3 pattern smooth marine"
 
-/obj/item/clothing/suit/storage/marine/rto/forecon
+/obj/item/clothing/suit/storage/marine/forecon
 	name = "\improper M3-R pattern recon armor"
 	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a leather pouch strapped to it for limited storage. Issued exclusively to FORECON units."
 	icon_state = "forecon"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	storage_slots = 4
+	light_range = 5 //slightly higher
+	specialty = "M3-Recon pattern marine"
 
 /obj/item/clothing/suit/storage/marine/MP
 	name = "\improper M2 pattern MP armor"
@@ -960,8 +961,8 @@
 	flags_atom = MOB_LOCK_ON_EQUIP|NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/sof
-	name = "\improper SOF Armor"
-	desc = "A heavily customized suit of M3 armor. Used by Marine Raiders."
+	name = "\improper XM-4"
+	desc = "Intended to be the next generation of marine combat armor, presently exclusively utilized by Marine Raiders."
 	icon_state = "marsoc"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
@@ -974,328 +975,12 @@
 	flags_atom = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
 	storage_slots = 4
 
-//===========================//DISTRESS\\================================\\
-//=======================================================================\\
-
-/obj/item/clothing/suit/storage/marine/veteran/bear
-	name = "\improper H1 Iron Bears vest"
-	desc = "A protective vest worn by Iron Bears mercenaries."
-	icon_state = "bear_armor"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/bear)
-
-/obj/item/clothing/suit/storage/marine/veteran/dutch
-	name = "\improper D2 armored vest"
-	desc = "A protective vest worn by some seriously experienced mercs."
-	icon_state = "dutch_armor"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS //Makes no sense but they need leg/arm armor too.
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 2
-	light_range = 7
-	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/dutch)
-
-/obj/item/clothing/suit/storage/marine/veteran/van_bandolier
-	name = "safari jacket"
-	desc = "A tailored hunting jacket, cunningly lined with segmented armor plates. Sometimes the game shoots back."
-	icon_state = "van_bandolier"
-	item_state = "van_bandolier_jacket"
-	blood_overlay_type = "coat"
-	flags_marine_armor = NO_FLAGS //No shoulder light.
-	actions_types = list()
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	storage_slots = 2
-	movement_compensation = SLOWDOWN_ARMOR_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/van_bandolier)
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/storage/bible,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/smartpistol,
-		/obj/item/storage/belt/gun/flaregun,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-		/obj/item/storage/belt/shotgun/van_bandolier,
-	)
-
-//===========================//FREELANCER\\================================\\
-//=====================================================================\\
-
-/obj/item/clothing/suit/storage/marine/faction/freelancer
-	name = "freelancer cuirass"
-	desc = "An armored protective chestplate scrapped together from various plates. It keeps up remarkably well, as the craftsmanship is solid, and the design mirrors such armors in the UPP and the USCM. The many skilled craftsmen in the freelancers ranks produce these vests at a rate about one a month."
-	icon_state = "freelancer_armor"
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/freelancer)
-
-//this one is for CLF
-/obj/item/clothing/suit/storage/militia
-	name = "colonial militia hauberk"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	icon_state = "rebel_armor"
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
-	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/colonist)
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/grenade,
-		/obj/item/device/binoculars,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/weapon/baseballbat,
-		/obj/item/weapon/baseballbat/metal,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL)
-
-/obj/item/clothing/suit/storage/militia/Initialize()
-	. = ..()
-	pockets.max_w_class = SIZE_SMALL //Can contain small items AND rifle magazines.
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/sniper,
-	)
-	pockets.max_storage_space = 8
-
-/obj/item/clothing/suit/storage/militia/vest
-	name = "colonial militia vest"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant protects only the chest and abdomen."
-	icon_state = "clf_2"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	slowdown = 0.2
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-
-/obj/item/clothing/suit/storage/militia/brace
-	name = "colonial militia brace"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant has some of the chest pieces removed."
-	icon_state = "clf_3"
-	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	flags_cold_protection = BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	slowdown = 0.2
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-
-/obj/item/clothing/suit/storage/militia/partial
-	name = "colonial militia partial hauberk"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This even lighter variant has some of the arm pieces removed."
-	icon_state = "clf_4"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	slowdown = 0.2
-
-/obj/item/clothing/suit/storage/militia/smartgun
-	name = "colonial militia harness"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This one has straps interweaved with the plates, that allow the user to fire a captured smartgun, if a bit uncomfortably."
-	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
-
-/obj/item/clothing/suit/storage/CMB
-	name = "\improper CMB Deputy jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's Deputy badge pinned to it. The back is enscribed with the powerful letters of 'DEPUTY' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
-	icon_state = "CMB_jacket"
-	item_state = "CMB_jacket"
-	blood_overlay_type = "coat"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/device/binoculars,
-		/obj/item/attachable/bayonet,
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/crew_monitor,
-		/obj/item/tool/pen,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/mateba,
-		/obj/item/storage/belt/gun/smartpistol,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/large_holster/katana,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
-
-/obj/item/clothing/suit/storage/CMB/Initialize()
-	. = ..()
-	pockets.max_w_class = SIZE_SMALL //Can contain small items AND rifle magazines.
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/sniper,
-	)
-	pockets.max_storage_space = 8
-
-/obj/item/clothing/suit/storage/CMB/marshal
-	name = "\improper CMB Marshal jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
-	icon_state = "CMB_jacket_marshal"
-	item_state = "CMB_jacket_marshal"
-
-/obj/item/clothing/suit/storage/RO
-	name = "quartermaster jacket"
-	desc = "A green jacket worn by USCM personnel. The back has the flag of the United Americas on it."
-	icon_state = "RO_jacket"
-	blood_overlay_type = "coat"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
-
-//===========================//HELGHAST - MERCENARY\\================================\\
-//=====================================================================\\
-
-/obj/item/clothing/suit/storage/marine/veteran/mercenary
-	name = "\improper K12 ceramic plated armor"
-	desc = "A set of grey, heavy ceramic armor with dark blue highlights. It is the standard uniform of an unknown mercenary group working in the sector."
-	icon_state = "mercenary_heavy_armor"
-	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/explosive/grenade,
-		/obj/item/storage/bible,
-		/obj/item/weapon/sword/machete,
-		/obj/item/attachable/bayonet,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
-	item_state_slots = list(WEAR_JACKET = "mercenary_heavy_armor")
-
-/obj/item/clothing/suit/storage/marine/veteran/mercenary/heavy
-	name = "\improper Modified K12 ceramic plated armor"
-	desc = "A set of grey, heavy ceramic armor with dark blue highlights. It has been modified with extra ceramic plates placed in its storage pouch, and seems intended to support an extremely heavy weapon."
-	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
-	armor_bio = CLOTHING_ARMOR_HIGHPLUS
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
-	storage_slots = 1
-
-/obj/item/clothing/suit/storage/marine/veteran/mercenary/miner
-	name = "\improper Y8 armored miner vest"
-	desc = "A set of beige, light armor built for protection while mining. It is a specialized uniform of an unknown mercenary group working in the sector."
-	icon_state = "mercenary_miner_armor"
-	storage_slots = 3
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/explosive/grenade,
-		/obj/item/storage/bible,
-		/obj/item/weapon/sword/machete,
-		/obj/item/attachable/bayonet,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
-	item_state_slots = list(WEAR_JACKET = "mercenary_miner_armor")
-
-/obj/item/clothing/suit/storage/marine/veteran/mercenary/support
-	name = "\improper Z7 armored vest"
-	desc = "A set of blue armor with yellow highlights built for protection while building or carrying out medical treatment in highly dangerous environments. It is a specialized uniform of an unknown mercenary group working in the sector."
-	icon_state = "mercenary_engineer_armor"
-	item_state_slots = list(WEAR_JACKET = "mercenary_engineer_armor")
-
-/obj/item/clothing/suit/storage/marine/M3G/hefa
-	name = "\improper HEFA Knight armor"
-	desc = "A thick piece of armor adorning a HEFA. Usually seen on a HEFA knight."
-	specialty = "HEFA Knight"
-	icon_state = "hefadier"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	flags_item = NO_CRYO_STORE
-	flags_marine_armor = ARMOR_LAMP_OVERLAY
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bomb = CLOTHING_ARMOR_GIGAHIGH
-
-	storage_slots = 2
-
 //================//UNITED AMERICAS RIOT CONTROL\\=====================\\
 //=======================================================================\\
 
 /obj/item/clothing/suit/storage/marine/veteran/ua_riot
-	name = "\improper UA-M1 body armor"
-	desc = "Based on the M-3 pattern employed by the USCM, the UA-M1 body armor is employed by UA security, riot control and union-busting teams. While robust against melee and bullet attacks, it critically lacks coverage of the legs and arms."
+	name = "\improper UA-M1 armor"
+	desc = "Essentially just a reinforced M3 cuirass used by CMB Peacekeepers units and various other colonial security and policing forces."
 	icon_state = "ua_riot"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
@@ -1309,6 +994,25 @@
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT  // it's lighter
 	uniform_restricted = list(/obj/item/clothing/under/marine/ua_riot)
 	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/suit/storage/marine/veteran/
+	name = "\improper M3-MP riot control armor"
+	desc = "A heavily modified suit of M2 MP Armor used to suppress riots from buckethead marines. Slows you down a lot."
+	icon_state = "riot"
+	item_state = "swat_suit"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	siemens_coefficient = 0.5
+	time_to_unequip = 20
+	time_to_equip = 20
 
 //==================War Correspondent==================\\
 

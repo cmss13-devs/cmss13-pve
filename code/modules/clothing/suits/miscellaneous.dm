@@ -1,31 +1,3 @@
-/*
- * Lasertag
- */
-/obj/item/clothing/suit/lasertag
-	name = "blue laser tag armor"
-	desc = "Blue Pride, Station Wide."
-	icon_state = "bluetag"
-	item_state = "bluetag"
-	blood_overlay_type = "armor"
-	flags_armor_protection = BODY_FLAG_CHEST
-	allowed = list(
-		/obj/item/weapon/gun,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/pen,
-	)
-	siemens_coefficient = 3
-
-/obj/item/clothing/suit/lasertag/red
-	name = "red laser tag armor"
-	desc = "Reputed to go faster."
-	icon_state = "redtag"
-	item_state = "redtag"
-
 /obj/item/clothing/suit/cardborg
 	name = "cardborg suit"
 	desc = "An ordinary cardboard box with holes cut in the sides."

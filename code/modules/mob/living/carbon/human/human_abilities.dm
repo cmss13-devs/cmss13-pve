@@ -278,7 +278,7 @@ CULT
 
 	return ..()
 
-/datum/action/human_action/activable/cult
+/* /datum/action/human_action/activable/cult
 	name = "Activable Cult Ability"
 
 /datum/action/human_action/activable/cult/speak_hivemind
@@ -475,7 +475,7 @@ CULT
 
 	to_chat(chosen, SPAN_HIGHDANGER("An immense psychic wave passes through you, causing you to pass out!"))
 
-	playsound(get_turf(chosen), 'sound/scp/scare1.ogg', 25)
+	playsound(get_turf(chosen), 'sound/scp/scare1.ogg', 25) */
 
 /datum/action/human_action/activable/mutineer
 	name = "Mutiny abilities"
