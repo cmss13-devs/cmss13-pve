@@ -63,87 +63,6 @@
 		src.buttoned = TRUE
 	update_clothing_icon()
 
-/obj/item/clothing/suit/storage/labcoat/red
-	name = "red labcoat"
-	desc = "A suit that protects against minor chemical spills. This one is red."
-	icon_state = "red_labcoat"
-	item_state = "red_labcoat"
-
-/obj/item/clothing/suit/storage/labcoat/blue
-	name = "blue labcoat"
-	desc = "A suit that protects against minor chemical spills. This one is blue."
-	icon_state = "blue_labcoat"
-	item_state = "blue_labcoat"
-
-/obj/item/clothing/suit/storage/labcoat/purple
-	name = "purple labcoat"
-	desc = "A suit that protects against minor chemical spills. This one is purple."
-	icon_state = "purple_labcoat"
-	item_state = "purple_labcoat"
-
-/obj/item/clothing/suit/storage/labcoat/orange
-	name = "orange labcoat"
-	desc = "A suit that protects against minor chemical spills. This one is orange."
-	icon_state = "orange_labcoat"
-	item_state = "orange_labcoat"
-
-/obj/item/clothing/suit/storage/labcoat/green
-	name = "green labcoat"
-	desc = "A suit that protects against minor chemical spills. This one is green."
-	icon_state = "green_labcoat"
-	item_state = "green_labcoat"
-
-/obj/item/clothing/suit/storage/labcoat/cmo
-	name = "chief medical officer's labcoat"
-	desc = "Bluer than the standard model."
-	icon_state = "labcoat_cmo"
-	item_state = "labcoat_cmo"
-
-/obj/item/clothing/suit/storage/labcoat/mad
-	name = "The Mad's labcoat"
-	desc = "It makes you look capable of konking someone on the noggin and shooting them into space."
-	icon_state = "labgreen"
-	item_state = "labgreen"
-
-/obj/item/clothing/suit/storage/labcoat/genetics
-	name = "Geneticist labcoat"
-	desc = "A suit that protects against minor chemical spills. Has a blue stripe on the shoulder."
-	icon_state = "labcoat_gen"
-
-/obj/item/clothing/suit/storage/labcoat/chemist
-	name = "Chemist labcoat"
-	desc = "A suit that protects against minor chemical spills. Has an orange stripe on the shoulder."
-	icon_state = "labcoat_chem"
-
-/obj/item/clothing/suit/storage/labcoat/virologist
-	name = "Virologist labcoat"
-	desc = "A suit that protects against minor chemical spills. Offers slightly more protection against biohazards than the standard model. Has a green stripe on the shoulder."
-	icon_state = "labcoat_vir"
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-
-/obj/item/clothing/suit/storage/labcoat/science
-	name = "Scientist labcoat"
-	desc = "A suit that protects against minor chemical spills. Has a purple stripe on the shoulder."
-	icon_state = "labcoat_tox"
-
-/obj/item/clothing/suit/storage/labcoat/officer
-	//name = "Medical officer's labcoat"
-	icon_state = "labcoatg"
-	item_state = "labcoatg"
-
-/obj/item/clothing/suit/storage/labcoat/researcher
-	name = "researcher's labcoat"
-	desc = "A high-quality labcoat, seemingly worn by scholars and researchers alike. It has a distinct leathery feel to it, and goads you towards adventure."
-	icon_state = "sciencecoat"
-	item_state = "sciencecoat"
-
 /obj/item/clothing/suit/storage/snow_suit
 	name = "snow suit"
 	desc = "A standard snow suit. It can protect the wearer from extreme cold."
@@ -263,7 +182,7 @@
 	icon_state = "purplepark"
 
 /obj/item/clothing/suit/storage/snow_suit/soviet
-	name = "soviet snowcoat"
+	name = "\improper UPP coat"
 	desc = "A winter coat made in some desolate snowplanet. This wintercoat was made from the fur of local wildlife which donated their fur for the greater good of UPP!"
 	icon_state = "sovietcoat"
 	item_state = "sovietcoat"
@@ -296,6 +215,6 @@
 	)
 
 /obj/item/clothing/suit/storage/snow_suit/liaison
-	name = "liaison's winter coat"
-	desc = "A Weyland-Yutani winter coat. Only the best comfort for the liaison in a cold environment."
+	name = "luxury winter coat"
+	desc = "A luxury brand winter coat insulated for cold temperatures."
 	icon_state = "snowsuit_liaison"
