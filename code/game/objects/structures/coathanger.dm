@@ -5,7 +5,7 @@
 	icon_state = "coatrack0"
 	unslashable = TRUE
 	var/obj/item/clothing/suit/coat
-	var/list/allowed = list(/obj/item/clothing/suit/storage/labcoat, /obj/item/clothing/suit/storage/det_suit, /obj/item/clothing/suit/storage/bomber, /obj/item/clothing/suit/storage/bomber/alt)
+	var/list/allowed = list(/obj/item/clothing/suit/storage/labcoat, /obj/item/clothing/suit/storage/bomber)
 
 /obj/structure/coatrack/attack_hand(mob/user as mob)
 	if(coat)
@@ -46,7 +46,4 @@
 	overlays.Cut()
 	if(istype(coat, /obj/item/clothing/suit/storage/labcoat))
 		overlays += image(icon, icon_state = "coat_lab")
-	if(istype(coat, /obj/item/clothing/suit/storage/labcoat/cmo))
-		overlays += image(icon, icon_state = "coat_cmo")
-	if(istype(coat, /obj/item/clothing/suit/storage/det_suit))
-		overlays += image(icon, icon_state = "coat_det")
+

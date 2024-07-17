@@ -92,9 +92,9 @@
 	new /obj/item/clothing/head/helmet/riot(src)
 	new /obj/item/clothing/head/helmet/riot(src)
 	new /obj/item/clothing/head/helmet/riot(src)
-	new /obj/item/clothing/suit/armor/riot/marine(src)
-	new /obj/item/clothing/suit/armor/riot/marine(src)
-	new /obj/item/clothing/suit/armor/riot/marine(src)
+	new /obj/item/clothing/suit/storage/marine/veteran/riot_armor(src)
+	new /obj/item/clothing/suit/storage/marine/veteran/riot_armor(src)
+	new /obj/item/clothing/suit/storage/marine/veteran/riot_armor(src)
 	new /obj/item/storage/box/flashbangs(src)
 
 /obj/structure/closet/secure_closet/guncabinet/green

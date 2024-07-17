@@ -953,10 +953,9 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT  // it's lighter
-	uniform_restricted = list(/obj/item/clothing/under/marine/ua_riot)
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/suit/storage/marine/veteran/
+/obj/item/clothing/suit/storage/marine/veteran/riot_armor
 	name = "\improper M3-MP riot control armor"
 	desc = "A heavily modified suit of M2 MP Armor used to suppress riots from buckethead marines. Slows you down a lot."
 	icon_state = "riot"
@@ -977,13 +976,13 @@
 
 //==================War Correspondent==================\\
 
-/obj/item/clothing/suit/storage/marine/light/reporter
+/* /obj/item/clothing/suit/storage/marine/light/reporter
 	name = "press body armor"
 	desc = "Body armor used by war correspondents in battles and wars across the universe."
 	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
 	icon_state = "wc_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	contained_sprite = TRUE
+	contained_sprite = TRUE */
 
 /atom/movable/marine_light
 	light_system = DIRECTIONAL_LIGHT
@@ -1021,7 +1020,6 @@
 /obj/item/clothing/suit/storage/jacket/marine
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
-	has_buttons = TRUE
 	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
 	blood_overlay_type = "coat"
@@ -1126,7 +1124,7 @@
 	icon = 'icons/mob/humans/onmob/suit-layer/suit_marine.dmi'
 	icon_state = "coat_blues"
 	item_state = "coat_blues"
-	has_buttons = FALSE
+	has_buttons = TRUE
 	item_state_slots = null
 	contained_sprite = TRUE
 

@@ -1047,8 +1047,8 @@
 
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/observer = M
-			observer.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket(observer), WEAR_BODY)
-			observer.equip_to_slot_or_del(new /obj/item/clothing/shoes/black(observer), WEAR_FEET)
+			observer.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/lightblue(observer), WEAR_BODY)
+			observer.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(observer), WEAR_FEET)
 		M.apply_effect(5, PARALYZE)
 		sleep(5)
 		M.forceMove(get_turf(pick(GLOB.thunderdome_observer)))

@@ -5,8 +5,8 @@
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH)
 
-	utility_under = list(/obj/item/clothing/under/marine/officer/command)
-	utility_hat = list(/obj/item/clothing/head/cmcap)
+	utility_under = list(/obj/item/clothing/under/marine/officer/bridge)
+	utility_hat = list(/obj/item/clothing/head/marine/peaked/service)
 	utility_gloves = list(/obj/item/clothing/gloves/marine)
 	utility_shoes = list(/obj/item/clothing/shoes/marine/knife)
 	utility_extra = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
@@ -21,82 +21,6 @@
 	dress_hat = list(/obj/item/clothing/head/marine/peaked)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/uscm_ship/liaison
-	name = "USCM Corporate Liaison (CL)"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND
-
-	idtype = /obj/item/card/id/silver/cl
-	access = list(
-		ACCESS_WY_GENERAL,
-		ACCESS_MARINE_COMMAND,
-		ACCESS_MARINE_RESEARCH,
-		ACCESS_MARINE_MEDBAY,
-		ACCESS_CIVILIAN_PUBLIC,
-		ACCESS_CIVILIAN_RESEARCH,
-		ACCESS_CIVILIAN_ENGINEERING,
-		ACCESS_CIVILIAN_LOGISTICS,
-		ACCESS_CIVILIAN_BRIG,
-		ACCESS_CIVILIAN_MEDBAY,
-		ACCESS_WY_FLIGHT,
-		ACCESS_CIVILIAN_COMMAND,
-	)
-	assignment = JOB_CORPORATE_LIAISON
-	rank = JOB_CORPORATE_LIAISON
-	paygrade = "WYC2"
-	role_comm_title = "CL"
-	skills = /datum/skills/civilian
-
-	minimap_icon = "cl"
-	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
-
-	utility_under = list(/obj/item/clothing/under/businesswear/black)
-	utility_hat = list()
-	utility_gloves = list()
-	utility_shoes = list(/obj/item/clothing/shoes/laceup)
-	utility_extra = list(/obj/item/clothing/under/businesswear/blue)
-
-	service_under = list(/obj/item/clothing/under/businesswear/field)
-	service_over = list()
-	service_hat = list()
-	service_shoes = list(/obj/item/clothing/shoes/laceup)
-
-	dress_under = list(/obj/item/clothing/under/businesswear/corporate_formal)
-	dress_over = list()
-	dress_hat = list()
-	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/laceup)
-
-/datum/equipment_preset/uscm_ship/liaison/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_LIAISON)
-
-/datum/equipment_preset/uscm_ship/liaison/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/lockable/liaison
-	//There is no suitable backpack for a CL really...
-	//if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		//back_item = /obj/item/storage/backpack
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcl(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/ivy(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-/datum/equipment_preset/uscm_ship/liaison/load_rank(mob/living/carbon/human/new_human)
-	if(new_human.client)
-		var/playtime = get_job_playtime(new_human.client, rank)
-		if(new_human.client.prefs.playtime_perks)
-			if(playtime > JOB_PLAYTIME_TIER_4)
-				return "WYC5"
-			else if(playtime > JOB_PLAYTIME_TIER_3)
-				return "WYC4"
-			else if(playtime > JOB_PLAYTIME_TIER_2)
-				return "WYC3"
-			else
-				return paygrade
-	return paygrade
 
 //*****************************************************************************************************/
 
@@ -149,7 +73,7 @@
 		ACCESS_PRESS,
 		ACCESS_MARINE_PREP,
 	)
-	assignment = JOB_COMBAT_REPORTER
+	assignment = "Marine Corps Gazette Correspondent"
 	rank = JOB_COMBAT_REPORTER
 	paygrade = "ME4"
 	role_comm_title = "CC"

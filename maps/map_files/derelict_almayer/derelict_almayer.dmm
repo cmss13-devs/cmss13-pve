@@ -60676,7 +60676,7 @@
 /area/almayer/hallways/starboard_hallway)
 "sKS" = (
 /obj/structure/closet,
-/obj/item/clothing/suit/armor/riot/marine/vintage_riot,
+/obj/item/clothing/suit/storage/marine/veteran/riot_armor/vintage_riot,
 /obj/item/clothing/head/helmet/riot/vintage_riot,
 /obj/structure/machinery/light/small{
 	dir = 1
