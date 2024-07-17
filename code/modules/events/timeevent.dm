@@ -216,6 +216,9 @@ GLOBAL_VAR(nuketimer_id)
 /obj/structure/machinery/nuclearbomb/emplaced/tgui_interact(mob/user, datum/tgui/ui)
 	return
 
+/obj/structure/machinery/nuclearbomb/emplaced/attackby(obj/item/O, mob/user)
+	return
+
 /obj/item/tdd_powersource
 	name = "strange cell"
 	desc = "An alien-looking powercell, formerly used to power a device capable of reversing time."
