@@ -93,3 +93,19 @@
 	armor_bomb = CLOTHING_ARMOR_GIGAHIGH
 
 	storage_slots = 2
+
+/obj/item/clothing/suit/armor/vest/dutch
+	name = "armored jacket"
+	desc = "It's hot in the jungle. Sometimes it's hot and heavy, and sometimes it's hell on earth."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "dutch_armor"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/dutch)

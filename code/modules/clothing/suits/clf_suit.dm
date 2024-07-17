@@ -73,7 +73,7 @@
 	icon_state = "mercenary_engineer_armor"
 	item_state_slots = list(WEAR_JACKET = "mercenary_engineer_armor")
 
-	/obj/item/clothing/suit/storage/marine/faction/freelancer
+/obj/item/clothing/suit/storage/marine/faction/freelancer
 	name = "freelancer cuirass"
 	desc = "An armored protective chestplate scrapped together from various plates. It keeps up remarkably well, as the craftsmanship is solid, and the design mirrors such armors in the UPP and the USCM. The many skilled craftsmen in the freelancers ranks produce these vests at a rate about one a month."
 	icon_state = "freelancer_armor"
@@ -107,7 +107,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/colonist)
+	uniform_restricted = list(/obj/item/clothing/under/workwear,/obj/item/clothing/under/boiler)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,

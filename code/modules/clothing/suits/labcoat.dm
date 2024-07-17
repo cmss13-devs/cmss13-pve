@@ -83,42 +83,6 @@
 	siemens_coefficient = 0.7
 	valid_accessory_slots = list(ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 
-/obj/item/clothing/suit/storage/snow_suit/doctor
-	name = "doctor's snow suit"
-
-/obj/item/clothing/suit/storage/snow_suit/synth
-	name = "synthetic's snow suit"
-	desc = "A snow suit designed for keeping synthetic units within acceptable temperature ranges in extremely cold environments to prevent power supply inefficiency. Due to advancements made in synthetic insulation, they are not required for most cold environments."
-	armor_melee = CLOTHING_ARMOR_NONE //no free armor for synths
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
-	allowed = list(
-		/obj/item/weapon/gun/,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
-		/obj/item/device/binoculars,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/mateba,
-		/obj/item/storage/belt/gun/smartpistol,
-
-		/obj/item/device/flashlight,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/tool/crowbar,
-		/obj/item/tool/crew_monitor,
-		/obj/item/tool/pen,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/device/motiondetector,
-	)
-
 /obj/item/clothing/suit/storage/snow_suit/survivor
 	name = "robust snow suit"
 	icon_state = "snowsuit" //needs new cool sprite

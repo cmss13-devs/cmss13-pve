@@ -217,6 +217,10 @@
 			M.visible_message(SPAN_DANGER("Your programming prevents you from wearing this!"))
 			return 0
 
+/obj/item/clothing/suit/storage/marine/veteran
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
+
 /obj/item/clothing/suit/storage/marine/padded
 	name = "M3 pattern padded marine armor"
 	icon_state = "1"
@@ -361,44 +365,6 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/suit/storage/marine/smartgunner/upp
-	name = "\improper UH7-I heavy plated harness"
-	desc = "An experimental set of heavy armor with additional harnesses designed to support QYJ-72-I smartmachinegun. Heavy plates along with harnesses make wearing backpacks extremely uncomfortable and borderline impossible."
-	icon_state = "upp_armor_heavy"
-	storage_slots = 1
-	slowdown = SLOWDOWN_ARMOR_HEAVY
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS|BLOCK_KNOCKDOWN
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP, /obj/item/clothing/under/marine/veteran/UPP/medic, /obj/item/clothing/under/marine/veteran/UPP/engi)
-	allowed = list(
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/mine,
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun/pkp,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-
-
-/obj/item/clothing/suit/storage/marine/smartgunner/upp/Initialize()
-	. = ..()
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/minigun,
-		/obj/item/ammo_magazine/pkp,
-		)
-
-
 /obj/item/clothing/suit/storage/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
@@ -482,45 +448,40 @@
 	icon_state = "VL_FLAK"
 	storage_slots = 2
 
-/obj/item/clothing/suit/storage/marine/light/synvest
-	name = "\improper M3A1 Synthetic Utility Vest"
-	desc = "This variant of the ubiquitous M3 pattern ballistics vest has been extensively modified, providing no protection in exchange for maximum mobility and storage space. Synthetic programming compliant."
-	icon_state = "VL_syn_camo"
-	flags_atom = NO_NAME_OVERRIDE
-	flags_marine_armor = ARMOR_LAMP_OVERLAY|SYNTH_ALLOWED //No squad colors + can be worn by synths.
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
+/obj/item/clothing/suit/armor/vest/pilot
+	name = "\improper M70 flak jacket"
+	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics..."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "pilot"
+	blood_overlay_type = "armor"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
-	storage_slots = 3
-	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	time_to_unequip = 0.5 SECONDS
-	time_to_equip = 1 SECONDS
-	uniform_restricted = null
-
-/obj/item/clothing/suit/storage/marine/light/synvest/grey
-	icon_state = "VL_syn"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/suit/storage/marine/light/synvest/jungle
-	icon_state = "VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/suit/storage/marine/light/synvest/snow
-	icon_state = "s_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/suit/storage/marine/light/synvest/desert
-	icon_state = "d_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/suit/storage/marine/light/synvest/dgrey
-	icon_state = "c_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	allowed = list(
+		/obj/item/weapon/gun/,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine/,
+		/obj/item/weapon/baton,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+	)
+	uniform_restricted = list(/obj/item/clothing/under/marine/officer/pilot)
+	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit-layer/suit_marine.dmi'
+	)
 
 /obj/item/clothing/suit/storage/marine/heavy
 	name = "\improper M3-H pattern heavy armor"
@@ -979,7 +940,7 @@
 //=======================================================================\\
 
 /obj/item/clothing/suit/storage/marine/veteran/ua_riot
-	name = "\improper UA-M1 armor"
+	name = "\improper UA-M1 security armor"
 	desc = "Essentially just a reinforced M3 cuirass used by CMB Peacekeepers units and various other colonial security and policing forces."
 	icon_state = "ua_riot"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN

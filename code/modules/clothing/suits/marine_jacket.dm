@@ -180,7 +180,7 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 
-/obj/item/clothing/suit/storage/CMB/Initialize()
+/obj/item/clothing/suit/storage/cmb/Initialize()
 	. = ..()
 	pockets.max_w_class = SIZE_SMALL //Can contain small items AND rifle magazines.
 	pockets.bypass_w_limit = list(
@@ -190,17 +190,9 @@
 	)
 	pockets.max_storage_space = 8
 
-/obj/item/clothing/suit/storage/CMB/marshal
+/obj/item/clothing/suit/storage/cmb/marshal
 	name = "\improper CMB Marshal jacket"
 	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
 	icon_state = "CMB_jacket_marshal"
 	item_state = "CMB_jacket_marshal"
 
-/obj/item/clothing/suit/storage/RO
-	name = "quartermaster jacket"
-	desc = "A green jacket worn by USCM personnel. The back has the flag of the United Americas on it."
-	icon_state = "RO_jacket"
-	blood_overlay_type = "coat"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
