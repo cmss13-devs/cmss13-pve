@@ -1,0 +1,135 @@
+/turf/open/floor/void
+	name = "empty space"
+	desc = "A dark surface with no reflection or sound. Darker than the black of the abyss."
+	#ifdef CBT
+	icon = null
+	icon_state = ""
+	color = "#000000"
+	#else
+	icon = 'icons/turf/floors/floors.dmi'
+	icon_state = "floor"
+	#endif
+
+/turf/open/floor/void/get_examine_text(mob/user)
+	. = list()
+	if(desc)
+		. += desc
+	return .
+
+/turf/closed/wall/indestructible/void
+	name = "filled space"
+	desc = "A dark, impermeable structure with no reflection or sound."
+	#ifdef CBT
+	icon = null
+	icon_state = ""
+	color = "#000000"
+	#else
+	icon = 'icons/turf/walls/walls.dmi'
+	icon_state = "riveted"
+	#endif
+
+/turf/closed/wall/indestructible/void/get_examine_text(mob/user)
+	. = list()
+	if(desc)
+		. += desc
+	return .
+
+/area/simulacrum
+	name = "???"
+	icon_state = "purple"
+	requires_power = FALSE
+	flags_area = AREA_NOTUNNEL|AREA_AVOID_BIOSCAN
+	statistic_exempt = TRUE
+	ceiling = CEILING_METAL
+	unique = TRUE
+
+	base_lighting_alpha = 255
+	unlimited_power = TRUE
+
+/area/simulacrum/desert
+	name = "Barren Desert"
+	ceiling = CEILING_NONE
+	base_lighting_alpha = 230
+
+/area/simulacrum/interior
+	name = "Building Interior"
+	base_lighting_alpha = 0
+
+/area/simulacrum/interior/exterior
+	name = "Building Exterior"
+	icon_state = "blue"
+	base_lighting_alpha = 0
+	ceiling = CEILING_NONE
+
+/obj/structure/simulacrum_device
+	name = "strange device"
+	icon = 'icons/artifacts.dmi'
+	//bound_height = 64
+	//bound_width = 64
+	icon_state = ""
+	desc = "An unknown monolith of dark metal, glowing with a curious light."
+	light_color = "#aa23c5"
+	light_power = 4
+	light_range = 2
+	pixel_x = -32
+	pixel_y = -32
+	indestructible = TRUE
+	unacidable = TRUE
+	density = TRUE
+	opacity = TRUE
+	var/overlay_iconstate = ""
+	var/mutable_appearance/overlay_appearance
+
+/obj/structure/simulacrum_device/Initialize(mapload, ...)
+	. = ..()
+	overlay_appearance = mutable_appearance(icon, overlay_iconstate)
+	overlay_appearance.color = "#aa23c5"
+	var/matrix/scale_matrix = new /matrix
+	scale_matrix.Scale(3)
+	//overlay_appearance.transform = scale_matrix
+	transform = scale_matrix
+	update_icon()
+
+/obj/structure/simulacrum_device/update_icon()
+	. = ..()
+	overlays += overlay_appearance
+
+/obj/structure/simulacrum_device/attack_alien(mob/living/carbon/xenomorph/M)
+	return
+
+/obj/structure/simulacrum_device/attackby(obj/item/O, mob/user)
+	return
+
+/obj/structure/simulacrum_device/attack_hand(mob/user)
+	return
+
+/obj/structure/simulacrum_device/tgui_interact(mob/user, datum/tgui/ui)
+	return
+
+/obj/structure/simulacrum_device/central
+	icon_state = "ancient-4"
+	overlay_iconstate = "ancient-4fx"
+
+/obj/structure/simulacrum_device/pillar
+	icon_state = "ancient-2"
+	overlay_iconstate = "ancient-2fx"
+
+
+/obj/structure/vaultdoor
+	name = "imposing door"
+	desc = "An imposing vault door made out of a dark metal."
+	icon = 'icons/obj/structures/doors/vault.dmi'
+	icon_state = "door_valid"
+	indestructible = TRUE
+	unacidable = TRUE
+	density = TRUE
+	opacity = TRUE
+
+/obj/structure/vaultdoor/attack_hand(mob/user)
+	. = ..()
+	to_chat(user, SPAN_NOTICE("You begin to go through the door..."))
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		return
+
+	to_chat(user, SPAN_NOTICE("You enter through the door into the pitch darkness. No going back now."))
+	user.forceMove(locate(4, 165, 2))
