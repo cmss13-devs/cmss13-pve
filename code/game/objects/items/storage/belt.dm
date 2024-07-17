@@ -432,14 +432,14 @@
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
 
-/obj/item/storage/belt/security/MP/CMB
+/obj/item/storage/belt/security/MP/cmb
 	name = "\improper CMB duty belt"
 	desc = "The black duty belt used to carry the instruments of a Colonial Marshal. It is a heavy police belt with several pouches to contain various law enforcement items."
 	storage_slots = 8
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
-/obj/item/storage/belt/security/MP/CMB/full/fill_preset_inventory()
+/obj/item/storage/belt/security/MP/cmb/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
@@ -449,7 +449,7 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/explosive/grenade/flashbang(src)
 
-/obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
+/obj/item/storage/belt/security/MP/cmb/synth/fill_preset_inventory()
 	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)

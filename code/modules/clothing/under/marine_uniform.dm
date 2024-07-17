@@ -58,9 +58,9 @@
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"
 	desc = "Officer's uniform, a little outdated. Why it needs to be frag rated is beyond everyone."
-	icon_state = "BO_jumpsuit"
-	item_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "marine_service"
+	item_state = "marine_service"
+	worn_state = "marine_service"
 	specialty = "marine service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE
@@ -153,12 +153,6 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/veteran/pmc,
-		/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
-		/obj/item/clothing/suit/armor/vest/security,
-		/obj/item/clothing/suit/storage/hazardvest,
-	)
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
@@ -259,7 +253,6 @@
 	worn_state = "freelancer_uniform"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_NO_SENSORS
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/freelancer, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/utility_vest)
 
 //=========================//Dutch Dozen\\================================\\
 

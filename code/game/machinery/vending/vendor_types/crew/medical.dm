@@ -10,16 +10,12 @@
 		var/list/combined = list()
 		combined += GLOB.cm_vending_clothing_nurse
 		combined += GLOB.cm_vending_clothing_researcher
-		combined += GLOB.cm_vending_clothing_cmo
 		combined += GLOB.cm_vending_clothing_doctor
 		return combined
 	if(user.job == JOB_NURSE)
 		return GLOB.cm_vending_clothing_nurse
 	else if(user.job == JOB_RESEARCHER)
 		return GLOB.cm_vending_clothing_researcher
-	else if(user.job == JOB_CMO)
-		///defined in senior_officers.dm
-		return GLOB.cm_vending_clothing_cmo
 	else if(user.job == JOB_DOCTOR)
 		return GLOB.cm_vending_clothing_doctor
 	return ..()
@@ -45,7 +41,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_doctor, list(
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("Labcoat", 0, /obj/item/clothing/suit/storage/labcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("Snowcoat", 0, /obj/item/clothing/suit/storage/snow_suit/doctor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("HELMET", 0, null, null, null),
 		list("Surgical Cap, Blue", 0, /obj/item/clothing/head/surgery/blue, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
@@ -98,10 +93,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_nurse, list(
 		list("Blue Scrubs", 0, /obj/item/clothing/under/medical/blue, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 		list("Purple Scrubs", 0, /obj/item/clothing/under/medical/purple, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
 		list("Light Blue Scrubs", 0, /obj/item/clothing/under/medical, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-
-		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Labcoat", 0, /obj/item/clothing/suit/storage/labcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("Snowcoat", 0, /obj/item/clothing/suit/storage/snow_suit/doctor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("HELMET", 0, null, null, null),
 		list("Surgical Cap, Blue", 0, /obj/item/clothing/head/surgery/blue, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
@@ -158,7 +149,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_researcher, list(
 		list("Researcher Uniform", 0, /obj/item/clothing/under/boiler/offwhite, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Snowcoat", 0, /obj/item/clothing/suit/storage/snow_suit/doctor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("Labcoat", 0, /obj/item/clothing/suit/storage/labcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("HELMET", 0, null, null, null),
 		list("Surgical Cap, Blue", 0, /obj/item/clothing/head/surgery/blue, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),

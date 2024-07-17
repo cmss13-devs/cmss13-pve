@@ -141,14 +141,14 @@
 	idtype = /obj/item/card/id/general
 	skills = /datum/skills/general
 
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues/general)
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/officer)
 
 /datum/equipment_preset/uscm_event/dress/officer/general/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/dress/officer/general/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/dress/blues/general(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/dress/blues/officer(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/highcom(new_human), WEAR_L_EAR)
 	. = ..()
 

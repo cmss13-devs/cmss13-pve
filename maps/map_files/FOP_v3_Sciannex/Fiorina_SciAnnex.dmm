@@ -32954,7 +32954,7 @@
 /area/fiorina/station/civres_blue)
 "unc" = (
 /obj/structure/coatrack,
-/obj/item/clothing/suit/storage/CMB,
+/obj/item/clothing/suit/storage/cmb,
 /turf/open/floor/prison{
 	icon_state = "redfull"
 	},

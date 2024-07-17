@@ -9422,7 +9422,7 @@
 /area/lv522/indoors/a_block/hallway)
 "elX" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/suit/storage/CMB,
+/obj/item/clothing/suit/storage/cmb,
 /turf/open/floor/strata{
 	icon_state = "blue1"
 	},

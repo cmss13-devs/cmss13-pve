@@ -25,9 +25,9 @@
 
 /obj/structure/closet/secure_closet/marshal/Initialize()
 	. = ..()
-	new /obj/item/clothing/suit/storage/CMB(src)
+	new /obj/item/clothing/suit/storage/cmb(src)
 	new /obj/item/clothing/under/cmb(src)
-	new /obj/item/storage/belt/security/MP/CMB(src)
+	new /obj/item/storage/belt/security/MP/cmb(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/security/standard
@@ -60,7 +60,7 @@
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
 
-	new /obj/item/storage/belt/security/MP/CMB(src)
+	new /obj/item/storage/belt/security/MP/cmb(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)
 	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
@@ -117,7 +117,6 @@
 /obj/structure/closet/secure_closet/detective/Initialize()
 	. = ..()
 	new /obj/item/storage/box/evidence(src)
-	new /obj/item/clothing/suit/armor/det_suit(src)
 	new /obj/item/clothing/accessory/storage/holster/armpit(src)
 
 /obj/structure/closet/secure_closet/detective/update_icon()
@@ -158,20 +157,6 @@
 /obj/structure/closet/secure_closet/brig/Destroy()
 	GLOB.brig_locker_list -= src
 	return ..()
-/obj/structure/closet/secure_closet/courtroom
-	name = "Courtroom Locker"
-	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
-
-/obj/structure/closet/secure_closet/courtroom/Initialize()
-	. = ..()
-	new /obj/item/clothing/shoes/brown(src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/tool/pen (src)
-	new /obj/item/clothing/suit/judgerobe (src)
-	new /obj/item/clothing/head/powdered_wig (src)
-	new /obj/item/storage/briefcase(src)
 
 /obj/structure/closet/secure_closet/wall
 	name = "security wall locker"

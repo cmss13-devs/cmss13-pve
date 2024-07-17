@@ -20,7 +20,7 @@
 /area/bigredv2/caves_research)
 "bu" = (
 /obj/structure/closet/secure_closet/marshal,
-/obj/item/clothing/suit/storage/CMB,
+/obj/item/clothing/suit/storage/cmb,
 /turf/open/floor/plating{
 	dir = 8;
 	icon_state = "platingdmg3"
@@ -186,7 +186,7 @@
 	},
 /area/bigredv2/caves_sw)
 "sJ" = (
-/obj/item/clothing/suit/storage/CMB,
+/obj/item/clothing/suit/storage/cmb,
 /obj/structure/closet/secure_closet/marshal,
 /obj/structure/machinery/light/double,
 /turf/open/floor/plating{
