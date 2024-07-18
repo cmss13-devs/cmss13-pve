@@ -86,6 +86,7 @@
 	default_ammo = /datum/ammo/bullet/rifle
 	ammo_band_icon = "+m41a_mk1_band"
 	ammo_band_icon_empty = "+m41a_mk1_band_e"
+	bonus_overlay = "m41a_mk1_overlay"
 
 /obj/item/ammo_magazine/rifle/m41aMK1/rubber
 	name = "\improper M41A Less Lethal magazine"
@@ -128,6 +129,11 @@
 	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains wall-penetrating bullets."
 	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/m41aMK1/recon
+	icon_state = "m41a_mk1_recon"
+	current_rounds = 95
+	bonus_overlay = "m41a_mk1_recon_overlay"
 //-------------------------------------------------------
 //M4RA, l42 reskin, same stats as before but different, lore friendly, shell.
 
