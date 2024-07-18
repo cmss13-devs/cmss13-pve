@@ -208,6 +208,8 @@ var/list/admin_verbs_debug = list(
 	/client/proc/matrix_editor,
 	/client/proc/generate_sound_queues,
 	/client/proc/sound_debug_query,
+	/client/proc/toggle_spatial_sound_tracking,
+	/client/proc/set_spatial_sound_tracking_min_length,
 	/client/proc/debug_game_history,
 	/client/proc/enter_tree,
 	/client/proc/set_tree_points,
