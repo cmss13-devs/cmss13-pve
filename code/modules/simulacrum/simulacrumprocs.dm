@@ -331,13 +331,13 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 /proc/assemble_fates()
 	var/list/human_names = list()
 	var/list/fate_list_pre = list(
-		"Following their harrowing experience, %NAME% quietly left the USCM at the first opportunity. %NAME% retired to the backwater colony of LV-325, living out their days peacefully. They died on August 9th, 2238 of natural causes.",
-		"%NAME% continued their enlistment in the USCM following the incident. They were killed in a USCM raid on a CLF cell on June 14th, 2185.",
-		"%NAME% became far more withdrawn after the incident. Once discharged from the USCM, they moved to Station 949, becoming a private security officer. They passed away from a rapidly-expanding brain tumor on Febuary 14th, 2199.",
-		"After retiring from the USCM %NAME% was employed as a shift manager at LockMart's Leo plant on Mars. Alongside 200 others, %NAME% was killed in the Leo explosion of 2187 on May 1st.",
-		"%NAME% retired to colonial life on LV-522, Chance's Claim. A xenomorph outbreak would see %NAME% meet their fate in the xenomorph hive on August 23rd, 2192.",
-		"Quiet and reserved after the incident, %NAME% retired from the USCM and served as the Chief Engineer on a LockMart & Welsun 3300B colony carrier, ferrying atmospheric processors to budding worlds. They passed on December 1st, 2210 in a vehicular accident.",
-		"%NAME% never fully recovered from the stress experienced during the incident. %NAME% died on July 29th, 2182 of a heart attack.",
+		"- Following their harrowing experience, %NAME% quietly left the USCM at the first opportunity. %NAME% retired to the backwater colony of LV-325, living out their days peacefully. They died on August 9th, 2238 of natural causes.",
+		"- %NAME% continued their enlistment in the USCM following the incident. They were killed in a USCM raid on a CLF cell on June 14th, 2185.",
+		"- %NAME% became far more withdrawn after the incident. Once discharged from the USCM, they moved to Station 949, becoming a private security officer. They passed away from a rapidly-expanding brain tumor on Febuary 14th, 2199.",
+		"- After retiring from the USCM %NAME% was employed as a shift manager at LockMart's Leo plant on Mars. Alongside 200 others, %NAME% was killed in the Leo explosion of 2187 on May 1st.",
+		"- %NAME% retired to colonial life on LV-522, Chance's Claim. A xenomorph outbreak would see %NAME% meet their fate in the xenomorph hive on August 23rd, 2192.",
+		"- Quiet and reserved after the incident, %NAME% retired from the USCM and served as the Chief Engineer on a LockMart & Welsun 3300B colony carrier, ferrying atmospheric processors to budding worlds. They passed on December 1st, 2210 in a vehicular accident.",
+		"- %NAME% never fully recovered from the stress experienced during the incident. %NAME% died on July 29th, 2182 of a heart attack.",
 	)
 	var/list/final_fates = list()
 	for(var/savename in GLOB.simulacrum_playersaves)
