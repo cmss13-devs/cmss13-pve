@@ -231,8 +231,6 @@
 	switch(highest_priority_job)
 		if(JOB_SQUAD_MARINE)
 			return /datum/equipment_preset/uscm/private_equipped
-		if(JOB_SQUAD_ENGI)
-			return /datum/equipment_preset/uscm/engineer_equipped
 		if(JOB_SQUAD_LEADER)
 			return /datum/equipment_preset/uscm/leader_equipped
 		if(JOB_SQUAD_MEDIC)
@@ -252,14 +250,10 @@
 			return /datum/equipment_preset/uscm_ship/so
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
-		if(JOB_AUXILIARY_OFFICER)
-			return /datum/equipment_preset/uscm_ship/auxiliary_officer
 		if(JOB_PILOT)
 			return /datum/equipment_preset/uscm_ship/po/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
 			return /datum/equipment_preset/uscm_ship/dcc/full
-		if(JOB_CORPORATE_LIAISON)
-			return /datum/equipment_preset/uscm_ship/liaison
 		if(JOB_COMBAT_REPORTER)
 			return /datum/equipment_preset/uscm_ship/reporter
 		if(JOB_SYNTH)
@@ -273,14 +267,10 @@
 			return /datum/equipment_preset/uscm_ship/uscm_police/mp
 		if(JOB_CHIEF_POLICE)
 			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
-		if(JOB_WARDEN)
-			return /datum/equipment_preset/uscm_ship/uscm_police/warden
 		if(JOB_SEA)
 			return /datum/equipment_preset/uscm_ship/sea
 		if(JOB_CHIEF_ENGINEER)
 			return /datum/equipment_preset/uscm_ship/chief_engineer
-		if(JOB_ORDNANCE_TECH)
-			return /datum/equipment_preset/uscm_ship/ordn
 		if(JOB_MAINT_TECH)
 			return /datum/equipment_preset/uscm_ship/maint
 		if(JOB_CHIEF_REQUISITION)
@@ -291,8 +281,6 @@
 			return /datum/equipment_preset/uscm_ship/uscm_medical/cmo
 		if(JOB_DOCTOR)
 			return /datum/equipment_preset/uscm_ship/uscm_medical/doctor
-		if(JOB_RESEARCHER)
-			return /datum/equipment_preset/uscm_ship/uscm_medical/researcher
 		if(JOB_NURSE)
 			return /datum/equipment_preset/uscm_ship/uscm_medical/nurse
 		if(JOB_MESS_SERGEANT)
