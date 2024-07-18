@@ -18,6 +18,10 @@
 /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary
 	screen_loc = "LEFT,TOP-5"
 
+/atom/movable/screen/text/screen_text/simulacrum_message/body/fatelist
+	screen_loc = "LEFT,TOP-6.5"
+
+
 /atom/movable/screen/text/screen_text/simulacrum_message/play_to_client()
 	player?.add_to_screen(src)
 	if(fade_in_time)

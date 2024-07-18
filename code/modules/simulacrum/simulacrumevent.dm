@@ -1,3 +1,5 @@
+// <p>The USS Rover has detected a distorted signal on the desert planet of LV-739. In accordance with standard procedure, ship has been taken out of FTL travel and crew awakened for possible distress signal. Signal is detected 73.8 meters at heading 98.6 degrees from landing zone.</p>
+
 /turf/open/floor/void
 	name = "empty space"
 	desc = "A dark surface with no reflection or sound. Darker than the black of the abyss."
@@ -110,6 +112,37 @@
 	icon_state = "ancient-4"
 	overlay_iconstate = "ancient-4fx"
 
+/obj/structure/simulacrum_device/central/destructable
+	breakable = TRUE
+	indestructible = FALSE
+	unacidable = FALSE
+	health = 5000
+	debris = list(/obj/item/stack/sheet/mineral/chitin/metal)
+	var/been_shot = FALSE
+
+/obj/structure/simulacrum_device/central/destructable/get_examine_text(mob/user)
+	. = ..()
+	if(health > 4000)
+		. += SPAN_INFO("It looks undamaged.")
+	else if(health > 2500)
+		. += SPAN_INFO("It looks fairly damaged.")
+	else if(health > 1000)
+		. += SPAN_INFO("It looks like it's falling apart!")
+
+/obj/structure/simulacrum_device/central/destructable/bullet_act(obj/projectile/P)
+	. = ..()
+	health -= P.ammo.damage
+	if(!been_shot)
+		visible_message(SPAN_BOLDNOTICE("[src] lets out a small psychic groan as bullets chip away at its metal."))
+		been_shot = TRUE
+	if(health <= 0)
+		handle_debris(0, 0)
+		deconstruct(FALSE)
+
+/obj/structure/simulacrum_device/central/destructable/handle_debris(severity = 0, direction = 0)
+	visible_message(SPAN_NOTICE("[src] shatters to pieces, an unearthly low groan being the last noise it makes."))
+	return ..()
+
 /obj/structure/simulacrum_device/pillar
 	icon_state = "ancient-2"
 	overlay_iconstate = "ancient-2fx"
@@ -133,3 +166,23 @@
 
 	to_chat(user, SPAN_NOTICE("You enter through the door into the pitch darkness. No going back now."))
 	user.forceMove(locate(4, 165, 2))
+
+/obj/structure/simulacrum_ladder
+	name = "ladder"
+	desc = "A sturdy metal ladder. There's sunshine coming down through the hole above."
+	icon = 'icons/obj/structures/structures.dmi'
+	icon_state = "ladder11"
+	indestructible = TRUE
+	unacidable = TRUE
+	light_color = "#ffffff"
+	light_power = 4
+	light_range = 4
+
+/obj/structure/simulacrum_ladder/attack_hand(mob/user)
+	. = ..()
+	to_chat(user, SPAN_NOTICE("You begin to go up the ladder..."))
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		return
+
+	to_chat(user, SPAN_NOTICE("You go up the ladder, and out into the bright desert sun."))
+	user.forceMove(locate(78, 106, 2))

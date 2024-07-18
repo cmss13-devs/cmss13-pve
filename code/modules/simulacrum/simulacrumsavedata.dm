@@ -127,20 +127,29 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 
 	if(isstorage(human.s_store))
 		var/obj/item/storage/pouch = human.s_store
+		for(var/obj/item/I2 in pouch.contents)
+			qdel(I2)
 		for(var/obj/item/I as anything in save.suitstorage_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
 
 	if(isstorage(human.belt))
 		var/obj/item/storage/pouch = human.belt
+		for(var/obj/item/I2 in pouch.contents)
+			qdel(I2)
 		for(var/obj/item/I as anything in save.belt_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
+		human.belt.icon_state = replacetext(human.belt.icon_state, "_g_g", "_g") // dumb check for a dumb case
 
 	if(isstorage(human.l_store))
 		var/obj/item/storage/pouch = human.l_store
+		for(var/obj/item/I2 in pouch.contents)
+			qdel(I2)
 		for(var/obj/item/I as anything in save.pocket1_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
 
 	if(isstorage(human.r_store))
 		var/obj/item/storage/pouch = human.r_store
+		for(var/obj/item/I2 in pouch.contents)
+			qdel(I2)
 		for(var/obj/item/I as anything in save.pocket2_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)

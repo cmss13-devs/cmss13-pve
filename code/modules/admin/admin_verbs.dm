@@ -169,6 +169,10 @@ var/list/admin_verbs_major_event = list(
 	/client/proc/toggle_cutscene_verb,
 	/client/proc/decay_old_simulation_cutscene_verb,
 	/client/proc/go_to_next_simulation_verb,
+	/client/proc/boss_roar_verb,
+	/client/proc/boss_finish_verb,
+	/client/proc/end_game_good,
+	/client/proc/end_game_bad,
 )
 
 var/list/admin_verbs_spawn = list(

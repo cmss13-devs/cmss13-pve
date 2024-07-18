@@ -59,7 +59,7 @@
 	to_chat(human, SPAN_BOLDWARNING("You collapse, drifting to unconsciousness as this cacaphony of sound assaults your senses."))
 	overlay_screen.icon_state = "impairedoverlay7"
 	human.Stun(100000000)
-	human.SetEarDeafness(1000000000)
+	human.loc = null
 	human.SetEyeBlind(100000000)
 	save_human(human)
 	human.ghost_locked = TRUE
@@ -73,24 +73,27 @@
 	simulacrum_text_1(human)
 
 /proc/teleport_to_simulation(mob/living/carbon/human/human, roar = TRUE, initial_run = FALSE)
-	human.forceMove(locate(GLOB.simulation_controller.next_simulation[1], GLOB.simulation_controller.next_simulation[2], GLOB.simulation_controller.next_simulation[3]))
+	var/turf/teleport_turf = locate(GLOB.simulation_controller.next_simulation[1], GLOB.simulation_controller.next_simulation[2], GLOB.simulation_controller.next_simulation[3])
+	var/turf/picked_turf = pick(block(teleport_turf.x - 1, teleport_turf.y - 1, teleport_turf.z, teleport_turf.x + 1, teleport_turf.y + 1, teleport_turf.z))
+	human.forceMove(picked_turf)
 	if(!initial_run)
 		load_human(human)
 	sleep(4 SECONDS) // give time for weeds and me
+	to_chat(human, SPAN_NOTICE("You appear from the nothingness."))
 	if(human.client)
 		winset(human.client, "infowindow", "is-visible=true")
 		winset(human.client, "outputwindow", "is-visible=true")
 		winset(human.client, "mainwindow.split", "splitter=400")
 		human.client.fit_viewport()
 		human.client.nuke_chat()
+		if(roar)
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), human.client, 'sound/voice/alien_distantroar_3.ogg', human.loc, 55, FALSE), 10 SECONDS)
 	human.hudswitch_blocked = FALSE
 	human.hud_used.show_hud(HUD_STYLE_STANDARD, human)
 	human.SetStun(0)
-	human.SetEarDeafness(0)
 	human.SetEyeBlind(0)
 	human.rejuvenate()
 	human.clear_fullscreen("simulacrum_ko", TRUE)
-	to_chat(human, SPAN_NOTICE("You appear from the nothingness."))
 
 /mob/living/carbon/human
 	var/ghost_locked = FALSE
@@ -107,12 +110,16 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 	var/list/non_completed_simulations = list(
 		"desert_dam" = list(list(61, 194, 3), list(98, 194, 3), list(135, 194, 3)),
 		"varadero" = list(list(24, 162, 3), list(58, 162, 3), list(92, 162, 3)),
+		"ice_colony" = list(list(19, 128, 3), list(55, 128, 3), list(91, 128, 3)),
+		"chances_claim" = list(list(23, 86, 3), list(61, 86, 3), list(99, 86, 3)),
+		"final" = list(list(19, 54, 3)),
 	)
 	var/list/next_simulation = list(24, 194, 3)
 	var/list/non_completed_cutscenes = list("2", "3", "4", "5", "6")
 	var/next_cutscene = ""
 	var/current_cutscene_completed = FALSE
 	var/everyone_already_koed
+	var/list/fate_list = list()
 
 /client/proc/pick_simulation_verb()
 	set name = "Pick Next Simulation"
@@ -193,6 +200,9 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		to_chat(src, SPAN_NOTICE("Next simulation has not been selected."))
 		return
 
+	if(tgui_input_list(src, "Are you sure you want to advance the simulation?", "Advance?", list("yes", "no")) != "yes")
+		return
+
 	to_chat(src, SPAN_NOTICE("Advancing simulation. Cutscene [GLOB.simulation_controller.next_cutscene ? "will" : "will not"] play."))
 
 	for(var/savename in GLOB.simulacrum_playersaves)
@@ -205,7 +215,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		var/atom/movable/screen/fullscreen/overlay_screen = save.tied_human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 		overlay_screen.icon_state = "impairedoverlay7"
 		save.tied_human.Stun(100000000)
-		save.tied_human.SetEarDeafness(1000000000)
+		save.tied_human.loc = null
 		save.tied_human.SetEyeBlind(100000000)
 		save.tied_human.hudswitch_blocked = TRUE
 		save.tied_human.hud_used.show_hud(HUD_STYLE_NOHUD, save.tied_human)
@@ -224,4 +234,108 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 				if("5")
 					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_5), save.tied_human, TRUE)
 				if("6")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_6), save.tied_human, TRUE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_6), save.tied_human, FALSE)
+
+		else
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(teleport_to_simulation), save.tied_human, TRUE, FALSE)
+
+/client/proc/boss_roar_verb()
+	set name = "Boss Roar"
+	set category = "Admin.Simulation"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		to_chat(save.tied_human, SPAN_BOLDWARNING("The strange device lets out a low groan as xenomorphs start to appear from nothingness!"))
+
+/client/proc/boss_finish_verb()
+	set name = "Boss Finished"
+	set category = "Admin.Simulation"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		to_chat(save.tied_human, SPAN_BOLDWARNING("You now see the faintest sign of light to your south."))
+
+	for(var/turf/T as anything in block(56, 54, 3, 68, 54, 3))
+		T.ChangeTurf(/turf/open/floor/void)
+
+/client/proc/end_game_good()
+	set name = "Game End - Good"
+	set category = "Admin.Simulation"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	if(tgui_input_list(src, "Are you sure you want to end the game well?", "End game?", list("yes", "no")) != "yes")
+		return
+
+	assemble_fates()
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		if(!save.tied_human)
+			message_admins("FUCKFUCKFUCK. A save with ckey [save.tied_ckey] no longer has a tied human!!!! FUCK2")
+			continue
+
+		save.tied_human.Stun(100000000)
+		save.tied_human.loc = null
+		save.tied_human.SetEyeBlind(100000000)
+		save.tied_human.hudswitch_blocked = TRUE
+		save.tied_human.hud_used.show_hud(HUD_STYLE_NOHUD, save.tied_human)
+		winset(save.tied_human, "mainwindow.split", "splitter=1000")
+		winset(save.tied_human, "infowindow", "is-visible=false")
+		winset(save.tied_human, "outputwindow", "is-visible=false")
+
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_ending_good), save.tied_human)
+
+/client/proc/end_game_bad()
+	set name = "Game End - Bad"
+	set category = "Admin.Simulation"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	if(tgui_input_list(src, "Are you sure you want to end the game badly?", "End game?", list("yes", "no")) != "yes")
+		return
+
+	assemble_fates()
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		if(!save.tied_human)
+			message_admins("FUCKFUCKFUCK. A save with ckey [save.tied_ckey] no longer has a tied human!!!! FUCK3")
+			continue
+
+		save.tied_human.Stun(100000000)
+		save.tied_human.loc = null
+		save.tied_human.SetEyeBlind(100000000)
+		save.tied_human.hudswitch_blocked = TRUE
+		save.tied_human.hud_used.show_hud(HUD_STYLE_NOHUD, save.tied_human)
+		winset(save.tied_human, "mainwindow.split", "splitter=1000")
+		winset(save.tied_human, "infowindow", "is-visible=false")
+		winset(save.tied_human, "outputwindow", "is-visible=false")
+
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_ending_bad), save.tied_human)
+
+/proc/assemble_fates()
+	var/list/human_names = list()
+	var/list/fate_list_pre = list(
+		"Following their harrowing experience, %NAME% quietly left the USCM at the first opportunity. %NAME% retired to the backwater colony of LV-325, living out their days peacefully. They died on August 9th, 2238 of natural causes.",
+		"%NAME% continued their enlistment in the USCM following the incident. They were killed in a USCM raid on a CLF cell on June 14th, 2185.",
+		"%NAME% became far more withdrawn after the incident. Once discharged from the USCM, they moved to Station 949, becoming a private security officer. They passed away from a rapidly-expanding brain tumor on Febuary 14th, 2199.",
+		// Add more later
+	)
+	var/list/final_fates = list()
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		human_names += save.tied_human.real_name
+
+	for(var/name in human_names)
+		var/fate_string = pick(fate_list_pre)
+		fate_list_pre -= fate_string
+		final_fates += replacetext(fate_string, "%NAME%", name)
+
+	GLOB.simulation_controller.fate_list = final_fates
