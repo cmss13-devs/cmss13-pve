@@ -68,7 +68,6 @@
 		/obj/item/tool/lighter,
 		/obj/item/storage/bible,
 		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
 		/obj/item/storage/large_holster/machete,
 		/obj/item/storage/belt/gun/type47,
 		/obj/item/storage/belt/gun/m4a3,
@@ -427,7 +426,7 @@
 
 	if(is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)

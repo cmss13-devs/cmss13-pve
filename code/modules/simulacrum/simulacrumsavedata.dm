@@ -17,6 +17,7 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	var/obj/item/righthand
 	var/obj/item/pocket1
 	var/obj/item/pocket2
+	var/obj/item/back
 
 	var/list/suit_contents = list()
 	var/list/helmet_contents = list()
@@ -24,6 +25,7 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	var/list/belt_contents = list()
 	var/list/pocket1_contents = list()
 	var/list/pocket2_contents = list()
+	var/list/back_contents = list()
 
 	var/tied_ckey
 	var/mob/living/carbon/human/tied_human
@@ -51,6 +53,7 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	save.righthand = DuplicateObject(human.r_hand, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 	save.pocket1 = DuplicateObject(human.l_store, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 	save.pocket2 = DuplicateObject(human.r_store, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
+	save.back = DuplicateObject(human.back, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 
 	if(istype(human.wear_suit, /obj/item/clothing/suit/storage))
 		var/obj/item/clothing/suit/storage/storage_suit = human.wear_suit
@@ -81,6 +84,11 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 		var/obj/item/storage/pouch = human.r_store
 		for(var/obj/item/I in pouch.contents)
 			save.pocket2_contents += DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
+
+	if(isstorage(human.back))
+		var/obj/item/storage/pouch = human.back
+		for(var/obj/item/I in pouch.contents)
+			save.back_contents += DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 
 	save.tied_ckey = human.ckey || human.persistent_ckey || ""
 	save.tied_human = human
@@ -114,6 +122,7 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	human.equip_to_slot(DuplicateObject(save.righthand, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_R_HAND)
 	human.equip_to_slot(DuplicateObject(save.pocket1, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_L_STORE)
 	human.equip_to_slot(DuplicateObject(save.pocket2, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_R_STORE)
+	human.equip_to_slot(DuplicateObject(save.back, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_BACK)
 
 	if(istype(human.wear_suit, /obj/item/clothing/suit/storage))
 		var/obj/item/clothing/suit/storage/storage_suit = human.wear_suit
@@ -131,6 +140,7 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 			qdel(I2)
 		for(var/obj/item/I as anything in save.suitstorage_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
+		human.s_store.icon_state = replacetext(human.s_store.icon_state, "_g_g", "_g")
 
 	if(isstorage(human.belt))
 		var/obj/item/storage/pouch = human.belt
@@ -152,4 +162,11 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 		for(var/obj/item/I2 in pouch.contents)
 			qdel(I2)
 		for(var/obj/item/I as anything in save.pocket2_contents)
+			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
+
+	if(isstorage(human.back))
+		var/obj/item/storage/pouch = human.back
+		for(var/obj/item/I2 in pouch.contents)
+			qdel(I2)
+		for(var/obj/item/I as anything in save.back_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)

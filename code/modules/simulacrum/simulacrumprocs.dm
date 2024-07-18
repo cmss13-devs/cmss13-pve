@@ -44,6 +44,7 @@
 
 /proc/ko_single_mob(mob/living/carbon/human/human)
 	to_chat(human, SPAN_WARNING("A low whirring fills your mind."))
+	human.clear_fullscreens()
 	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 	overlay_screen.icon_state = "impairedoverlay1"
 	sleep(5 SECONDS)
@@ -157,6 +158,9 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		var/list/new_simlist = list(
 			"desert_dam" = list(),
 			"varadero" = list(),
+			"ice_colony" = list(),
+			"chances_claim" = list(),
+			"final" = list()
 		)
 		for(var/entry in GLOB.simulation_controller.non_completed_simulations)
 			for(var/list/coordset as anything in GLOB.simulation_controller.non_completed_simulations[entry])
@@ -204,6 +208,9 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		return
 
 	to_chat(src, SPAN_NOTICE("Advancing simulation. Cutscene [GLOB.simulation_controller.next_cutscene ? "will" : "will not"] play."))
+	var/do_roar = TRUE
+	if(GLOB.simulation_controller.next_simulation[1] == 19 && GLOB.simulation_controller.next_simulation[2] == 54)
+		do_roar = FALSE
 
 	for(var/savename in GLOB.simulacrum_playersaves)
 		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
@@ -212,6 +219,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 			continue
 
 		save.tied_human.rejuvenate()
+		save.tied_human.clear_fullscreens()
 		var/atom/movable/screen/fullscreen/overlay_screen = save.tied_human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 		overlay_screen.icon_state = "impairedoverlay7"
 		save.tied_human.Stun(100000000)
@@ -226,18 +234,18 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 				winset(save.tied_human, "outputwindow", "is-visible=false")
 			switch(GLOB.simulation_controller.next_cutscene)
 				if("2")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_2), save.tied_human, TRUE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_2), save.tied_human, do_roar)
 				if("3")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_3), save.tied_human, TRUE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_3), save.tied_human, do_roar)
 				if("4")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_4), save.tied_human, TRUE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_4), save.tied_human, do_roar)
 				if("5")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_5), save.tied_human, TRUE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_5), save.tied_human, do_roar)
 				if("6")
-					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_6), save.tied_human, FALSE)
+					INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(simulacrum_text_6), save.tied_human, do_roar)
 
 		else
-			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(teleport_to_simulation), save.tied_human, TRUE, FALSE)
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(teleport_to_simulation), save.tied_human, do_roar, FALSE)
 
 /client/proc/boss_roar_verb()
 	set name = "Boss Roar"
@@ -326,7 +334,10 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		"Following their harrowing experience, %NAME% quietly left the USCM at the first opportunity. %NAME% retired to the backwater colony of LV-325, living out their days peacefully. They died on August 9th, 2238 of natural causes.",
 		"%NAME% continued their enlistment in the USCM following the incident. They were killed in a USCM raid on a CLF cell on June 14th, 2185.",
 		"%NAME% became far more withdrawn after the incident. Once discharged from the USCM, they moved to Station 949, becoming a private security officer. They passed away from a rapidly-expanding brain tumor on Febuary 14th, 2199.",
-		// Add more later
+		"After retiring from the USCM %NAME% was employed as a shift manager at LockMart's Leo plant on Mars. Alongside 200 others, %NAME% was killed in the Leo explosion of 2187 on May 1st.",
+		"%NAME% retired to colonial life on LV-522, Chance's Claim. A xenomorph outbreak would see %NAME% meet their fate in the xenomorph hive on August 23rd, 2192.",
+		"Quiet and reserved after the incident, %NAME% retired from the USCM and served as the Chief Engineer on a LockMart & Welsun 3300B colony carrier, ferrying atmospheric processors to budding worlds. They passed on December 1st, 2210 in a vehicular accident.",
+		"%NAME% never fully recovered from the stress experienced during the incident. %NAME% died on July 29th, 2182 of a heart attack.",
 	)
 	var/list/final_fates = list()
 	for(var/savename in GLOB.simulacrum_playersaves)
@@ -337,5 +348,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		var/fate_string = pick(fate_list_pre)
 		fate_list_pre -= fate_string
 		final_fates += replacetext(fate_string, "%NAME%", name)
+	//for(var/fate in fate_list_pre)
+	//	final_fates += replacetext(fate, "%NAME%", human_names[1])
 
 	GLOB.simulation_controller.fate_list = final_fates

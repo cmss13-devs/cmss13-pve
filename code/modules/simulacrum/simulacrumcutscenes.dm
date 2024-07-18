@@ -1,4 +1,8 @@
+/mob/living/carbon/human
+	var/in_cutscene = FALSE
+
 /proc/simulacrum_text_1(mob/living/carbon/human/human)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "Somewhere..."
 	text_box.player = human.client
@@ -24,8 +28,10 @@
 	body.after_play()
 	body2.after_play()
 	teleport_to_simulation(human, TRUE, TRUE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_2(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "Back here again."
 	text_box.player = human.client
@@ -51,8 +57,10 @@
 	body.after_play()
 	body2.after_play()
 	teleport_to_simulation(human, should_roar, FALSE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_3(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "Pain unending."
 	text_box.player = human.client
@@ -70,8 +78,10 @@
 	text_box.after_play()
 	body.after_play()
 	teleport_to_simulation(human, should_roar, FALSE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_4(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "6 Simulations Later..."
 	text_box.player = human.client
@@ -81,8 +91,10 @@
 	sleep(2.5 SECONDS)
 	text_box.after_play()
 	teleport_to_simulation(human, should_roar, FALSE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_5(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "19 Simulations Later..."
 	text_box.player = human.client
@@ -92,8 +104,10 @@
 	sleep(2.5 SECONDS)
 	text_box.after_play()
 	teleport_to_simulation(human, should_roar, FALSE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_6(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "321 Simulations Later..."
 	text_box.player = human.client
@@ -103,8 +117,10 @@
 	sleep(2.5 SECONDS)
 	text_box.after_play()
 	teleport_to_simulation(human, should_roar, FALSE)
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_ending_good(mob/living/carbon/human/human)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "It's finally over."
 	text_box.player = human.client
@@ -162,8 +178,10 @@
 	body.after_play()
 	teleport_to_simulation(human, FALSE, FALSE)
 	message_admins("END THE ROUND IN A LITTLE TINY BIT")
+	human.in_cutscene = FALSE
 
 /proc/simulacrum_text_ending_bad(mob/living/carbon/human/human, should_roar)
+	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "That was our chance."
 	text_box.player = human.client
