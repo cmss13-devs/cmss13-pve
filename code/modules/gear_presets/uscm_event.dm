@@ -33,7 +33,7 @@
 	dress_under = list(/obj/item/clothing/under/marine/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer)
 
 /datum/equipment_preset/uscm_event/colonel/New()
 	. = ..()

@@ -36,7 +36,7 @@
 /datum/equipment_preset/survivor/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/item/clothing/under/uniform = new_human.w_uniform
 	if(istype(uniform))
-		uniform.has_sensor = UNIFORM_HAS_SENSORS
+		uniform.has_sensor = UNIFORM_NO_SENSORS
 		uniform.sensor_faction = FACTION_COLONIST
 	return ..()
 

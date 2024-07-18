@@ -34,7 +34,7 @@
 	paygrade = "ME4"
 	skills = /datum/skills/SL
 
-	dress_under = list(/obj/item/clothing/under/marine/blues/senior)
+	dress_under = list(/obj/item/clothing/under/marine/blues/nco)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/nco)
 
 /datum/equipment_preset/uscm_event/dress/nco/load_gear(mob/living/carbon/human/new_human)
@@ -85,7 +85,7 @@
 	skills = /datum/skills/SO
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_MEDBAY)
 
-	dress_under = list(/obj/item/clothing/under/marine/blues/senior)
+	dress_under = list(/obj/item/clothing/under/marine/blues/nco)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)

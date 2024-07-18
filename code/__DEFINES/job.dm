@@ -222,9 +222,9 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 //-------- WY Goons --------//
 #define JOB_WY_SEC "W-Y Corporate Security"
 #define JOB_WY_SEC_LEAD "W-Y Corporate Security Lead"
-#define JOB_WY_GOON_RESEARCHER "W-Y Research Consultant"
+#define JOB_WY_SEC_RESEARCHER "W-Y Research Consultant"
 
-#define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
+#define JOB_WY_SEC_LIST list(JOB_WY_SEC, JOB_WY_SEC_LEAD)
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
@@ -398,4 +398,4 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.
-#define JOB_ERT_GRUNT_LIST list(DUTCH_JOB_LIST, RIOT_JOB_LIST, PROVOST_JOB_LIST, CMB_GRUNT_LIST, CLF_JOB_LIST, UPP_JOB_GRUNT_LIST, UPP_COMMANDO_JOB_LIST, CONTRACTOR_JOB_LIST, JOB_WY_GOON_LIST, JOB_PMC_GRUNT_LIST)
+#define JOB_ERT_GRUNT_LIST list(DUTCH_JOB_LIST, RIOT_JOB_LIST, PROVOST_JOB_LIST, CMB_GRUNT_LIST, CLF_JOB_LIST, UPP_JOB_GRUNT_LIST, UPP_COMMANDO_JOB_LIST, CONTRACTOR_JOB_LIST, JOB_WY_SEC_LIST, JOB_PMC_GRUNT_LIST)

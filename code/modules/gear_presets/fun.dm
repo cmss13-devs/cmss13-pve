@@ -280,3 +280,4 @@
 	new_human.status_flags &= ~NO_PERMANENT_DAMAGE
 	new_human.status_flags |= STATUS_FLAGS_DEBILITATE
 	ADD_TRAIT(new_human, TRAIT_TWOBORE_TRAINING, TRAIT_SOURCE_ADMIN) //Means he can handle his gun and speak its hit lines.
+

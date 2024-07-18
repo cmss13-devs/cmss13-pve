@@ -40,7 +40,7 @@
 	rank = JOB_EXECUTIVE_SUPERVISOR
 	paygrade = "WYC6"
 
-/datum/equipment_preset/wy/division_manager
+/datum/equipment_preset/wy/manager
 	name = "Prop - WeyYu - Division Manager"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_DIVISION_MANAGER
@@ -48,7 +48,6 @@
 	paygrade = "WYC8"
 	skills = /datum/skills/civilian/manager
 	idtype = /obj/item/card/id/silver/clearance_badge/manager
-	headset_type = /obj/item/device/radio/headset/distress/pmc/command
 
 /datum/equipment_preset/wy/manager/New()
 	. = ..()
@@ -59,15 +58,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/ivory(new_human), WEAR_JACKET)
 	..()
 
-/datum/equipment_preset/wy/manager/division_manager
-	name = "Corporate - H - Division Manager"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_DIVISION_MANAGER
-	rank = JOB_DIVISION_MANAGER
-	paygrade = "WYC8"
-
 /datum/equipment_preset/wy/manager/chief_executive
-	name = "Corporate - I - Chief Executive"
+	name = "Prop - WeyYu -  Chief Executive"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CHIEF_EXECUTIVE
 	rank = JOB_CHIEF_EXECUTIVE
@@ -77,26 +69,24 @@
 	. = ..()
 	access = get_access(ACCESS_LIST_WY_ALL)
 
-/datum/equipment_preset/wy/manager/director
-	name = "Corporate - J - Director"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_DIRECTOR
-	rank = JOB_DIRECTOR
-	paygrade = "WYC10"
-	skills = /datum/skills/civilian/manager/director
-	headset_type = /obj/item/device/radio/headset/distress/pmc/command/director
-
-/datum/equipment_preset/wy/manager/director/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_WY_ALL)
-
-/datum/equipment_preset/wy/manager/director/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/ivory(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/ivory(new_human), WEAR_JACKET)
-	..()
-
 /datum/equipment_preset/wy/security
-	name = "Corporate - J - Director"
+	name = "Prop - WeyYu - Security Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_DIRECTOR
-	rank = JOB_WY_GOON
+	assignment = JOB_WY_SEC
+	rank = JOB_WY_SEC
+	paygrade = "WEY-GOON"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
+	languages = LANGUAGE_ENGLISH
+
+/datum/equipment_preset/wy/security/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/black(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack(new_human), WEAR_IN_BACK)
+

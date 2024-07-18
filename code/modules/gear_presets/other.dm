@@ -4,34 +4,10 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/other/mutineer
-	name = "Mutineer"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-/datum/equipment_preset/other/mutineer/load_status(mob/living/carbon/human/new_human)
-	. = ..()
-	new_human.mob_flags |= MUTINEER
-	new_human.hud_set_squad()
-
-	to_chat(new_human, SPAN_HIGHDANGER("<hr>You are now a Mutineer!"))
-	to_chat(new_human, SPAN_DANGER("Please check the rules to see what you can and can't do as a mutineer.<hr>"))
-
-/datum/equipment_preset/other/mutineer/leader
-	name = "Mutineer Leader"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-/datum/equipment_preset/other/mutineer/leader/load_status(mob/living/carbon/human/new_human)
-	for(var/datum/action/human_action/activable/mutineer/A in new_human.actions)
-		A.remove_from(new_human)
-
-	var/list/abilities = subtypesof(/datum/action/human_action/activable/mutineer)
-	for(var/type in abilities)
-		give_action(new_human, type)
-
 /datum/equipment_preset/other/freelancer
 	name = "Freelancer"
 
-	assignment = "Freelancer"
+	assignment = "#$$%$^&%#$"
 	rank = FACTION_FREELANCER
 	idtype = /obj/item/card/id/data
 	faction = FACTION_FREELANCER
@@ -755,95 +731,6 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/other/xeno_cultist
-	name = "Cultist - Xeno Cultist"
-	faction = FACTION_XENOMORPH
-	flags = EQUIPMENT_PRESET_EXTRA
-	idtype = /obj/item/card/id/lanyard
-	skills = /datum/skills/civilian/survivor
-
-	languages = list(LANGUAGE_XENOMORPH, LANGUAGE_ENGLISH)
-
-	assignment = "Cultist"
-	rank = "Cultist"
-
-/datum/equipment_preset/other/xeno_cultist/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_COLONIAL_ALL)
-
-/datum/equipment_preset/other/xeno_cultist/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chaplain/cultist(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
-
-	var/obj/item/clothing/suit/cultist_hoodie/hoodie = new /obj/item/clothing/suit/cultist_hoodie(new_human)
-	hoodie.flags_item |= NODROP|DELONDROP
-	new_human.equip_to_slot_or_del(hoodie, WEAR_JACKET)
-
-	var/obj/item/clothing/head/cultist_hood/hood = new /obj/item/clothing/head/cultist_hood(new_human)
-	hood.flags_item |= NODROP|DELONDROP
-	new_human.equip_to_slot_or_del(hood, WEAR_HEAD)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
-
-//*****************************************************************************************************/
-/datum/equipment_preset/other/xeno_cultist/load_status(mob/living/carbon/human/new_human, hivenumber = XENO_HIVE_NORMAL)
-	if(SSticker.mode && new_human.mind)
-		SSticker.mode.xenomorphs += new_human.mind
-
-	var/datum/hive_status/hive = GLOB.hive_datum[hivenumber]
-	if(hive)
-		new_human.faction = hive.internal_faction
-		if(hive.leading_cult_sl == new_human)
-			hive.leading_cult_sl = null
-	new_human.hivenumber = hivenumber
-
-	GLOB.xeno_cultists += new_human
-
-	var/list/huds_to_add = list(MOB_HUD_XENO_INFECTION, MOB_HUD_XENO_STATUS)
-
-	for(var/hud_to_add in huds_to_add)
-		var/datum/mob_hud/hud = huds[hud_to_add]
-		hud.add_hud_to(new_human, new_human)
-
-	var/list/actions_to_add = subtypesof(/datum/action/human_action/activable/cult)
-
-	if(istype(new_human.wear_suit, /obj/item/clothing/suit/cultist_hoodie) || istype(new_human.head, /obj/item/clothing/head/cultist_hood))
-		actions_to_add -= /datum/action/human_action/activable/cult/obtain_equipment
-
-	for(var/action_to_add in actions_to_add)
-		give_action(new_human, action_to_add)
-
-	new_human.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-	new_human.update_sight()
-
-/datum/equipment_preset/other/xeno_cultist/leader
-	name = "Cultist - Xeno Cultist Leader"
-	uses_special_name = TRUE
-	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/cultist_leader
-
-	assignment = "Cultist Leader"
-	rank = "Cultist Leader"
-
-/datum/equipment_preset/other/xeno_cultist/leader/load_gear(mob/living/carbon/human/new_human)
-	. = ..()
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/cultist(new_human), WEAR_EYES)
-
-/datum/equipment_preset/other/xeno_cultist/leader/load_status(mob/living/carbon/human/new_human)
-	. = ..()
-
-	var/datum/hive_status/hive = GLOB.hive_datum[new_human.hivenumber]
-	hive.leading_cult_sl = new_human
-
-	var/list/types = subtypesof(/datum/action/human_action/activable/cult_leader)
-	for(var/type in types)
-		give_action(new_human, type)
-
-//*****************************************************************************************************/
-
 /datum/equipment_preset/other/professor_dummy
 	name = "DUMMY"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -874,80 +761,5 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/medical, WEAR_BODY)
 
-//*****************************************************************************************************/
-
-/datum/equipment_preset/other/tank
-	name = "Event Vehicle Crewman (CRMN)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	idtype = /obj/item/card/id/dogtag
-	assignment = JOB_CREWMAN
-	rank = JOB_CREWMAN
-	paygrade = "E4"
-	role_comm_title = "CRMN"
-	minimum_age = 30
-	skills = /datum/skills/tank_crew
-
-	faction = FACTION_NEUTRAL
-
-/datum/equipment_preset/other/tank/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
-
-/datum/equipment_preset/other/tank/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/tanker(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/vc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/tanker(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldpack(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech/tanker(new_human), WEAR_HEAD)
-
-	spawn_weapon(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39/extended, new_human, 0, 3)
-
-/datum/equipment_preset/other/tank/load_status()
-	return
-
-//*****************************************************************************************************/
-
-//*****************************************************************************************************/
-//adding one for VC training camp, cause I really need these
-/datum/equipment_preset/other/tank/trainee
-	name = "Vehicle Crewman Trainee (CRTR)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	idtype = /obj/item/card/id/dogtag
-	assignment = "Crewman Trainee"
-	rank = "Crewman Trainee"
-	paygrade = "E3"
-	role_comm_title = "CRTR"
-	minimum_age = 25
-	skills = /datum/skills/tank_crew
-
-	faction = FACTION_NEUTRAL
-
-/datum/equipment_preset/other/tank/trainee/New()
-	. = ..()
-	access = list(
-		ACCESS_MARINE_PREP,
-		ACCESS_MARINE_CREWMAN,
-		ACCESS_MARINE_ALPHA,
-		ACCESS_MARINE_BRAVO,
-		ACCESS_MARINE_CHARLIE,
-		ACCESS_MARINE_DELTA,
-	)
-
-/datum/equipment_preset/other/tank/trainee/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/tanker(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
 
 //*****************************************************************************************************/

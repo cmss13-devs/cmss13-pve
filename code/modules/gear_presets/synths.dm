@@ -45,7 +45,6 @@
 	role_comm_title = "Syn"
 
 /datum/equipment_preset/synth/uscm/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/synthetic(new_human), WEAR_BODY)
@@ -199,17 +198,6 @@
 
 	survivor_variant = ENGINEERING_SURVIVOR
 
-/datum/equipment_preset/synth/survivor/chef_synth
-	name = "Synthetic - Chef Synth"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/chefhat,
-		WEAR_FACE = /obj/item/clothing/mask/surgical,
-		WEAR_BODY = /obj/item/clothing/under/boiler/offwhite,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/blue,
-		WEAR_HANDS = /obj/item/clothing/gloves/latex,
-		WEAR_FEET = /obj/item/clothing/shoes/laceup,
-	)
-
 /datum/equipment_preset/synth/survivor/freelancer_synth
 	name = "Synthetic - Freelancer Synth"
 	equipment_to_spawn = list(
@@ -236,10 +224,7 @@
 		WEAR_BODY = /obj/item/clothing/under/businesswear/black,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/black,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
-		WEAR_IN_BACK = /obj/item/weapon/telebaton,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/webbing/utility_vest,
-		WEAR_WAIST = /obj/item/storage/belt/security/CMB/full,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
+		WEAR_WAIST = /obj/item/storage/belt/security/cmb/full,
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 	)
 

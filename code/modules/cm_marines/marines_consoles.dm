@@ -995,8 +995,8 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_ENGINEER = 225,
 				JOB_PMC_STANDARD = 226,
 				JOB_PMC_DOCTOR = 227,
-				JOB_WY_GOON_LEAD = 228,
-				JOB_WY_GOON = 229,
+				JOB_WY_SEC_LEAD = 228,
+				JOB_WY_SEC = 229,
 
 				// Appear at bottom of squad list
 				JOB_MARINE_RAIDER_SL = 130,
@@ -1040,13 +1040,13 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_EXECUTIVE = 23,
 				JOB_JUNIOR_EXECUTIVE = 24,
 				// 30-39: Security
-				JOB_WY_GOON_LEAD = 30,
-				JOB_WY_GOON = 31,
+				JOB_WY_SEC_LEAD = 30,
+				JOB_WY_SEC = 31,
 				// 40-49: MedSci
 				JOB_PMC_SYNTH = 40,
 				JOB_PMC_XENO_HANDLER = 41,
 				JOB_PMC_DOCTOR = 42,
-				JOB_WY_GOON_RESEARCHER = 43,
+				JOB_WY_SEC_RESEARCHER = 43,
 				// 50-59: Engineering & Vehicle Crew
 				JOB_PMC_CREWMAN = 51,
 				JOB_PMC_ENGINEER = 52,
