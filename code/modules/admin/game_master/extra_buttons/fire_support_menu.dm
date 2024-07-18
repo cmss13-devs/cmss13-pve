@@ -76,7 +76,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/banshee/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -85,7 +85,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/harpoon/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -94,7 +94,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/keeper/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -103,7 +103,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/napalm/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -112,7 +112,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/thermobaric/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -121,7 +121,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/widowmaker/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -131,7 +131,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/laser_battery/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -140,7 +140,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/minirocket/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -149,7 +149,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/minirocket/incendiary/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -162,7 +162,7 @@ client/proc/toggle_fire_support_menu()
 					var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 					var/obj/structure/ship_ammo/sentry/ammo = new()
 
-					HandleDropshipOrdnance(target_turf, ammo)
+					handle_dropship_ordnance(target_turf, ammo)
 
 					QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 					return TRUE
@@ -171,7 +171,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/heavygun/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -180,7 +180,7 @@ client/proc/toggle_fire_support_menu()
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/heavygun/antitank/ammo = new()
 
-				HandleDropshipOrdnance(target_turf, ammo)
+				handle_dropship_ordnance(target_turf, ammo)
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -189,19 +189,19 @@ client/proc/toggle_fire_support_menu()
 			if("High Explosive OB")
 				var/obj/structure/ob_ammo/warhead/explosive/ammo = new()
 
-				HandleOrbitalOrdnance(target_turf, ammo)
+				handle_orbital_ordnance(target_turf, ammo)
 				return TRUE
 
 			if("Incendiary OB")
 				var/obj/structure/ob_ammo/warhead/incendiary/ammo = new()
 
-				HandleOrbitalOrdnance(target_turf, ammo)
+				handle_orbital_ordnance(target_turf, ammo)
 				return TRUE
 
 			if("Cluster OB")
 				var/obj/structure/ob_ammo/warhead/cluster/ammo = new()
 
-				HandleOrbitalOrdnance(target_turf, ammo)
+				handle_orbital_ordnance(target_turf, ammo)
 				return TRUE
 
 			//Mortar Shelling
@@ -239,20 +239,20 @@ client/proc/toggle_fire_support_menu()
 				to_chat(user, SPAN_ANNOUNCEMENT_HEADER_ADMIN("Invalid ordnance selection! If this appears, yell at a coder!"))
 				return TRUE
 
-/datum/fire_support_menu/proc/HandleDropshipSound(target_turf)
+/datum/fire_support_menu/proc/handle_dropship_sound(target_turf)
 	if(!soundCooldown)
 		playsound(target_turf, 'sound/weapons/dropship_sonic_boom.ogg', 100, 1, 60)
 		soundCooldown = TRUE
 		addtimer(VARSET_CALLBACK(src, soundCooldown, FALSE), 10 SECONDS)
 
-/datum/fire_support_menu/proc/HandleDropshipOrdnance(turf/target_turf, obj/structure/ship_ammo/ammo)
-	addtimer(CALLBACK(src, PROC_REF(HandleDropshipSound), target_turf), 0.5 SECONDS)
+/datum/fire_support_menu/proc/handle_dropship_ordnance(turf/target_turf, obj/structure/ship_ammo/ammo)
+	addtimer(CALLBACK(src, PROC_REF(handle_dropship_sound), target_turf), 0.5 SECONDS)
 	if(!istype(ammo, /obj/structure/ship_ammo/heavygun/))
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), target_turf, ammo.warning_sound, ammo.warning_sound_volume, 1, 15), 1.5 SECONDS)
 	addtimer(CALLBACK(ammo, TYPE_PROC_REF(/obj/structure/ship_ammo, detonate_on), target_turf), 2.5 SECONDS)
 	QDEL_IN(ammo, 5 SECONDS)
 
-/datum/fire_support_menu/proc/HandleOrbitalOrdnance(turf/target_turf, obj/structure/ob_ammo/warhead/ammo)
+/datum/fire_support_menu/proc/handle_orbital_ordnance(turf/target_turf, obj/structure/ob_ammo/warhead/ammo)
 	ammo.warhead_impact(target_turf)
 
 #undef ORDNANCE_OPTIONS
