@@ -4,7 +4,7 @@
 	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 	rank = JOB_CMB
 	idtype = /obj/item/card/id/deputy
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
+	languages = LANGUAGE_ENGLISH
 	var/human_versus_human = FALSE
 	var/headset_type = /obj/item/device/radio/headset/distress/CMB/limited
 
@@ -139,7 +139,7 @@
 	rank = JOB_CMB_TL
 	skills = /datum/skills/cmb/leader
 	minimum_age = 30
-	languages = ALL_HUMAN_LANGUAGES
+	languages = LANGUAGE_ENGLISH
 
 /datum/equipment_preset/cmb/leader/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
@@ -225,7 +225,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/liaison
-	name = "CMB - ICC Liaison"
+	name = "Prop - ICC Liaison"
 	paygrade = "GS-6"
 	idtype = /obj/item/card/id/silver/cl
 	role_comm_title = "ICC Rep."
@@ -234,38 +234,27 @@
 	assignment = "Interstellar Commerce Commission Corporate Liaison"
 	rank = JOB_CMB_ICC
 	skills = /datum/skills/civilian/survivor
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/liaison/load_gear(mob/living/carbon/human/new_human)
 
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/corporate_formal, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/mod88, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/normalpoint, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/normalpoint, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/brown, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/white, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/yellow, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/folder/blue, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
-	//holding
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clipboard, WEAR_L_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)
-	//pouches
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/spacecash/c1000, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/spacecash/c1000, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
-	//backpack and stuff in it
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/normalpoint(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/normalpoint(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/mod88(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/paper/carbon, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/paper/carbon, WEAR_IN_BACK)
@@ -275,7 +264,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/observer
-	name = "CMB - Interstellar Human Rights Observer"
+	name = "Prop - Human Rights Observer"
 	paygrade = "GS-3"
 	idtype = /obj/item/card/id/lanyard
 	role_comm_title = "OBS"
@@ -291,26 +280,14 @@
 	//clothes
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/pen, WEAR_R_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blue, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/blue, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/vest/armor, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
-	//holding
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/sensor, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical, WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_R_HAND)
-	//pouches
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper, WEAR_IN_R_STORE)
-	//backpack and stuff in it
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera_film, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_BACK)
