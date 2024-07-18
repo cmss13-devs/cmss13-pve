@@ -8,17 +8,16 @@
 	utility_under = list(/obj/item/clothing/under/marine)
 	utility_hat = list(/obj/item/clothing/head/cmcap)
 	utility_gloves = list(/obj/item/clothing/gloves/marine)
-	utility_shoes = list(/obj/item/clothing/shoes/marine)
-	utility_extra = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
+	utility_shoes = list(/obj/item/clothing/shoes/marine/knife)
 
 	service_under = list(/obj/item/clothing/under/marine/service)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service)
-	service_hat = list(/obj/item/clothing/head/cmcap)
+	service_hat = list(/obj/item/clothing/head/marine/peaked/service)
 	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_under = list(/obj/item/clothing/under/marine/blues)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-	dress_hat = list(/obj/item/clothing/head/marine/peaked)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	var/auto_squad_name
@@ -255,8 +254,6 @@
 	name = "USCM Vehicle Crewman (CRMN)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-	utility_under = list(/obj/item/clothing/under/marine/officer/tanker)
-
 /datum/equipment_preset/uscm/tank/full/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/vc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/operations(new_human), WEAR_BODY)
@@ -390,10 +387,6 @@
 	minimap_icon = "leader"
 
 /datum/equipment_preset/uscm/leader/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/cryo
@@ -416,11 +409,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	paygrade = "UE6"
@@ -432,11 +421,7 @@
 	role_comm_title = "SL"
 
 /datum/equipment_preset/uscm/leader/forecon/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine/standard
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/standard(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	paygrade = "ME7"

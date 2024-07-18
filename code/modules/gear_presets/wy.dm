@@ -26,53 +26,26 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	. = ..()
 
-/datum/equipment_preset/wy/trainee
-	name = "Corporate - A - Trainee"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_TRAINEE
-	rank = JOB_TRAINEE
-	paygrade = "WYC1"
-
-/datum/equipment_preset/wy/trainee/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/black(new_human), WEAR_BODY)
-	. = ..()
-
-/datum/equipment_preset/wy/junior_exec
-	name = "Corporate - B - Junior Executive"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_JUNIOR_EXECUTIVE
-	rank = JOB_JUNIOR_EXECUTIVE
-	paygrade = "WYC2"
-
 /datum/equipment_preset/wy/exec
-	name = "Corporate - C - Executive"
+	name = "Prop - WeyYu - Executive"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_EXECUTIVE
 	rank = JOB_EXECUTIVE
 	paygrade = "WYC3"
 
-/datum/equipment_preset/wy/senior_exec
-	name = "Corporate - D - Senior Executive"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_SENIOR_EXECUTIVE
-	rank = JOB_SENIOR_EXECUTIVE
-	paygrade = "WYC4"
-
-/datum/equipment_preset/wy/exec_spec
-	name = "Corporate - E - Executive Specialist"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_EXECUTIVE_SPECIALIST
-	rank = JOB_EXECUTIVE_SPECIALIST
-	paygrade = "WYC5"
-
 /datum/equipment_preset/wy/exec_supervisor
-	name = "Corporate - F - Executive Supervisor"
+	name = "Prop - WeyYu - Executive Supervisor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_EXECUTIVE_SUPERVISOR
 	rank = JOB_EXECUTIVE_SUPERVISOR
 	paygrade = "WYC6"
 
-/datum/equipment_preset/wy/manager
+/datum/equipment_preset/wy/division_manager
+	name = "Prop - WeyYu - Division Manager"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_DIVISION_MANAGER
+	rank = JOB_DIVISION_MANAGER
+	paygrade = "WYC8"
 	skills = /datum/skills/civilian/manager
 	idtype = /obj/item/card/id/silver/clearance_badge/manager
 	headset_type = /obj/item/device/radio/headset/distress/pmc/command
@@ -85,13 +58,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/ivory(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/ivory(new_human), WEAR_JACKET)
 	..()
-
-/datum/equipment_preset/wy/manager/assistant_manager
-	name = "Corporate - G - Assistant Manager"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_ASSISTANT_MANAGER
-	rank = JOB_ASSISTANT_MANAGER
-	paygrade = "WYC7"
 
 /datum/equipment_preset/wy/manager/division_manager
 	name = "Corporate - H - Division Manager"
@@ -128,3 +94,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/ivory(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/ivory(new_human), WEAR_JACKET)
 	..()
+
+/datum/equipment_preset/wy/security
+	name = "Corporate - J - Director"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_DIRECTOR
+	rank = JOB_WY_GOON

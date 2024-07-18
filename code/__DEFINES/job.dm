@@ -220,9 +220,9 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_DIRECTOR "W-Y Director"
 
 //-------- WY Goons --------//
-#define JOB_WY_GOON "WY Corporate Security"
-#define JOB_WY_GOON_LEAD "WY Corporate Security Lead"
-#define JOB_WY_GOON_RESEARCHER "WY Research Consultant"
+#define JOB_WY_SEC "W-Y Corporate Security"
+#define JOB_WY_SEC_LEAD "W-Y Corporate Security Lead"
+#define JOB_WY_GOON_RESEARCHER "W-Y Research Consultant"
 
 #define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
 
