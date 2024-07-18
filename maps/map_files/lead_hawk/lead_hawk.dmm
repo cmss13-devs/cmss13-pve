@@ -375,8 +375,9 @@
 	},
 /area/lead_hawk/hangar)
 "eK" = (
-/obj/structure/machinery/cm_vending/clothing/medic/pmc{
-	req_access = list(202)
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/emails{
+	pixel_y = 4
 	},
 /turf/open/floor/corsat{
 	dir = 1;
@@ -424,7 +425,7 @@
 /area/lead_hawk/hangar)
 "fp" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/syringes,
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
@@ -1909,10 +1910,9 @@
 	},
 /area/lead_hawk/squad_theta)
 "xH" = (
-/obj/structure/machinery/chem_dispenser{
-	req_access_txt = "100"
+/obj/structure/machinery/cm_vending/clothing/medic/pmc{
+	req_access = list(202)
 	},
-/obj/item/reagent_container/glass/beaker/bluespace,
 /turf/open/floor/corsat{
 	dir = 10;
 	icon_state = "green"
@@ -2133,7 +2133,12 @@
 	},
 /area/lead_hawk/squad_omega)
 "Ad" = (
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/syringe/drugs,
+/obj/item/reagent_container/syringe/drugs{
+	pixel_y = 3;
+	pixel_x = 2
+	},
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
@@ -2596,7 +2601,10 @@
 	},
 /area/lead_hawk/hangar)
 "FL" = (
-/obj/structure/machinery/chem_master,
+/obj/structure/machinery/cm_vending/gear/medic_chemical{
+	req_access = list(202);
+	name = "\improper WY Squad Medical Chemical Rack"
+	},
 /turf/open/floor/corsat{
 	icon_state = "green"
 	},
