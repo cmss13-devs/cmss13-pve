@@ -62,10 +62,9 @@
 	var/choice = rand(1,10)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cmb, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/cmb, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -80,7 +79,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/cmb/full/revolver, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/handcuffs/zip, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
@@ -96,7 +95,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/highpower, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/cmb/full/highpower, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/handcuffs/zip, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -114,7 +113,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/cmb/full/revolver, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/handcuffs/zip, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -143,21 +142,19 @@
 	languages = ALL_HUMAN_LANGUAGES
 
 /datum/equipment_preset/cmb/leader/load_gear(mob/living/carbon/human/new_human)
-	//clothes
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cmb, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB/marshal, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/cmb/marshal, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/cmb/full/revolver, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
-	//pouches
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
@@ -167,7 +164,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/incendiary, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/beanbag, WEAR_IN_R_STORE)
-	//backpack
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -182,7 +178,7 @@
 	role_comm_title = "CMB Syn"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = "CMB Investigative Synthetic"
+	assignment = "CMB Support Synthetic"
 	rank = JOB_CMB_SYN
 	languages = ALL_SYNTH_LANGUAGES
 
@@ -190,81 +186,31 @@
 		new_human.set_skills(/datum/skills/synthetic/cmb)
 		new_human.allow_gun_usage = FALSE
 
-/datum/equipment_preset/cmb/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
-	var/datum/preferences/A = new()
-	A.randomize_appearance(new_human)
-	var/random_name
-	if(new_human.gender == MALE)
-		random_name = "[pick(first_names_male)]"
-	else
-		random_name = "[pick(first_names_female)]"
-
-	if(new_human.gender == MALE)
-		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
-
-
-	new_human.change_real_name(new_human, random_name)
-	new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut")
-	var/static/list/colors = list("BLACK" = list(15, 15, 25), "BROWN" = list(102, 51, 0), "AUBURN" = list(139, 62, 19))
-	var/static/list/hair_colors = colors.Copy() + list("BLONDE" = list(197, 164, 30), "CARROT" = list(174, 69, 42))
-	var/hair_color = pick(hair_colors)
-	new_human.r_hair = hair_colors[hair_color][1]
-	new_human.g_hair = hair_colors[hair_color][2]
-	new_human.b_hair = hair_colors[hair_color][3]
-	new_human.r_facial = hair_colors[hair_color][1]
-	new_human.g_facial = hair_colors[hair_color][2]
-	new_human.b_facial = hair_colors[hair_color][3]
-	var/eye_color = pick(colors)
-	new_human.r_eyes = colors[eye_color][1]
-	new_human.g_eyes = colors[eye_color][2]
-	new_human.b_eyes = colors[eye_color][3]
-
 /datum/equipment_preset/cmb/synth/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species(SYNTH_COLONY)
 
 /datum/equipment_preset/cmb/synth/load_gear(mob/living/carbon/human/new_human)
 	load_name(new_human)
-	//backpack
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/security, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/autopsy_scanner, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
-	//face
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/pen, WEAR_R_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
-	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cmb, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/upgraded, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/candy, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/cmb, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_J_STORE)
-	//belt
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/synth, WEAR_WAIST)
-	//holding
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/cmb/synth, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_L_HAND)
-	//pouches
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/handcuffs/zip, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/handcuffs/zip, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_R_STORE)

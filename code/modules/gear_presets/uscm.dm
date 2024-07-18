@@ -11,13 +11,13 @@
 	utility_shoes = list(/obj/item/clothing/shoes/marine)
 	utility_extra = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
 
-	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
+	service_under = list(/obj/item/clothing/under/marine/service)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service)
 	service_hat = list(/obj/item/clothing/head/cmcap)
 	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
-	dress_under = list(/obj/item/clothing/under/marine/dress)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress)
+	dress_under = list(/obj/item/clothing/under/marine/blues)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/peaked)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
@@ -77,11 +77,7 @@
 	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/pfc/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/cryo
 	name = "USCM Cryo Squad Rifleman"
@@ -111,11 +107,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE1"
@@ -126,11 +118,9 @@
 	skills = /datum/skills/pfc/recon
 
 /datum/equipment_preset/uscm/pfc/forecon/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/standard
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
@@ -152,11 +142,7 @@
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/sg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/cryo
 	name = "USCM Cryo Squad Smartgunner"
@@ -180,11 +166,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/lightpack/upp
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	paygrade = "UE3"
@@ -195,11 +177,7 @@
 	skills = /datum/skills/smartgunner/recon
 
 /datum/equipment_preset/uscm/sg/forecon/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel/standard
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine/standard
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/forecon/lesser_rank
 	paygrade = "ME4"
@@ -237,11 +215,7 @@
 	minimap_icon = "rto"
 
 /datum/equipment_preset/uscm/rto/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
-
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/rto/lesser_rank
 	paygrade = "ME3"
@@ -275,7 +249,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/vc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/tanker(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service/tanker, WEAR_JACKET)
@@ -373,7 +347,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/specrag(new_human), WEAR_HEAD)
 
 /datum/equipment_preset/uscm/spec/cryo
@@ -431,7 +405,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/cryo
 	name = "USCM Cryo Squad Hospital Corpsman"
@@ -458,7 +432,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic/upp
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
 	paygrade = "UE3"
@@ -474,7 +448,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/medic/standard
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/forecon/lesser_rank
 	paygrade = "ME4"
@@ -498,7 +472,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/tl/cryo
 	name = "USCM Cryo Squad Sergeant"
@@ -521,7 +495,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
@@ -535,7 +509,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/standard
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /*****************************************************************************************************/
 
@@ -559,7 +533,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/tech
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/engineer/cryo
 	name = "USCM Cryo Squad Combat Technician"
@@ -589,7 +563,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/cryo
 	name = "USCM Cryo Platoon Sergeant"
@@ -615,7 +589,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	paygrade = "UE6"
@@ -631,7 +605,7 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine/standard
 
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	paygrade = "ME7"

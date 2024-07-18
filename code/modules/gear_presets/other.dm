@@ -516,7 +516,6 @@
 /datum/equipment_preset/other/compression_suit/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots, WEAR_FEET)
-
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/compression, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/compression, WEAR_HEAD)

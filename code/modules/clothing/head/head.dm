@@ -745,7 +745,7 @@
 /obj/item/clothing/head/marine/dress_cover
 	name = "marine dress blues cover"
 	desc = "The combination cover of the legendary Marine dress blues, virtually unchanged since the 19th century. The polished logo sits proudly on the white cloth."
-	icon = 'icons/mob/humans/onmob/contained/marinedressblues.dmi'
+	icon = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	icon_state = "e_cap"
 	item_state = "e_cap"
 	contained_sprite = TRUE
@@ -762,7 +762,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "owlf_hood"
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 	item_state = "owlf_hood"
 

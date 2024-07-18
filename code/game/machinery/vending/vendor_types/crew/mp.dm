@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Warden Uniform", 0, /obj/item/clothing/under/marine/officer/bridge, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Warden Uniform", 0, /obj/item/clothing/under/marine/service, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/cmpcom, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("Marine Dress Shoes", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 

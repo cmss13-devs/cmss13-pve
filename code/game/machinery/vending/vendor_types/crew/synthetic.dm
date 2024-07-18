@@ -172,7 +172,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Medical Scrubs, Green", 12, /obj/item/clothing/under/medical/green, null, VENDOR_ITEM_REGULAR),
 	list("Medical Scrubs, Purple", 12, /obj/item/clothing/under/medical/purple, null, VENDOR_ITEM_REGULAR),
 	list("Medical Scrubs, White", 12, /obj/item/clothing/under/medical, null, VENDOR_ITEM_REGULAR),
-	list("USCM Service Uniform", 12, /obj/item/clothing/under/marine/officer/bridge, null, VENDOR_ITEM_REGULAR),
+	list("USCM Service Uniform", 12, /obj/item/clothing/under/marine/service, null, VENDOR_ITEM_REGULAR),
 
 	list("GLASSES", 0, null, null, null),
 	list("HealthMate HUD", 12, /obj/item/clothing/glasses/hud/health, null, VENDOR_ITEM_REGULAR),

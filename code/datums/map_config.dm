@@ -85,18 +85,11 @@
 		/datum/equipment_preset/synth/survivor/emt_synth,
 		/datum/equipment_preset/synth/survivor/scientist_synth,
 		/datum/equipment_preset/synth/survivor/engineer_synth,
-		/datum/equipment_preset/synth/survivor/janitor_synth,
 		/datum/equipment_preset/synth/survivor/chef_synth,
-		/datum/equipment_preset/synth/survivor/teacher_synth,
 		/datum/equipment_preset/synth/survivor/freelancer_synth,
-		/datum/equipment_preset/synth/survivor/trucker_synth,
-		/datum/equipment_preset/synth/survivor/bartender_synth,
-		/datum/equipment_preset/synth/survivor/detective_synth,
-		/datum/equipment_preset/synth/survivor/cmb_synth,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,
 		/datum/equipment_preset/synth/survivor/wy/corporate_synth,
-		/datum/equipment_preset/synth/survivor/radiation_synth,
 	)
 
 /proc/load_map_config(filename, default, delete_after, error_if_missing = TRUE)

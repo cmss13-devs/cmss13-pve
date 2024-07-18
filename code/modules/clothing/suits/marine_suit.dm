@@ -477,8 +477,6 @@
 		/obj/item/storage/belt/gun/m4a3,
 		/obj/item/storage/belt/gun/m44,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/pilot)
-	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit-layer/suit_marine.dmi'
 	)
@@ -1087,27 +1085,19 @@
 	if(has_buttons)
 		verbs += /obj/item/clothing/suit/storage/jacket/marine/proc/toggle
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber
+/obj/item/clothing/suit/storage/jacket/marine/bomber
 	name = "commanding officer bomber jacket"
 	desc = "A bomber jacket resembling those worn by airmen of old. A classic, stylish choice for those in the higher ranks."
 	has_buttons = TRUE
 	icon_state = "co_bomber"
 	initial_icon_state = "co_bomber"
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/falcon
+/obj/item/clothing/suit/storage/jacket/marine/falcon
 	name = "commanding officer falcon jacket"
 	desc = "A refurbished jacket liner tailor made for a senior officer. This liner has become more of a proper piece of attire, with a new layer of fabric, wrist cuffs, front pockets, and a custom embroidered falcon on the back. This jacket will keep its wearer warm no matter the circumstance, from a cool Sunday drive to chilly autumn's eve."
 	icon_state = "co_falcon"
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/bridge_coat
-	name = "bridge coat"
-	desc = "A heavy synthetic woolen coat issued to USCM Officers. Based on a classical design this coat is quite nice on cold nights in the Air conditioned CIC or a miserable cold night on a barren world. This one is a Dressy Blue for a Commanding officer."
-	has_buttons = FALSE
-	item_state = "bridge_coat"
-	icon_state = "bridge_coat"
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_MEDAL)
-
-/obj/item/clothing/suit/storage/jacket/marine/service/aso
+/obj/item/clothing/suit/storage/jacket/marine/service/vest
 	name = "auxiliary support officer vest"
 	desc = "A comfortable vest for officers who are expected to work long hours staring at rows of numbers and inspecting equipment from knives to torpedos to entire dropships."
 	icon_state = "aso_jacket"
@@ -1118,7 +1108,7 @@
 //=========================//DRESS BLUES\\================================\\
 //=======================================================================\\
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/blues
+/obj/item/clothing/suit/storage/jacket/marine/dress
 	name = "marine enlisted dress blues jacket"
 	desc = "The jacket of the legendary Marine dress blues, virtually unchanged since the 19th century. You're wearing history, Marine. Don't let your ancestors down."
 	icon = 'icons/mob/humans/onmob/suit-layer/suit_marine.dmi'
@@ -1128,13 +1118,13 @@
 	item_state_slots = null
 	contained_sprite = TRUE
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco
+/obj/item/clothing/suit/storage/jacket/marine/dress/nco
 	name = "marine NCO dress blues jacket"
 	desc = "The jacket of the legendary Marine dress blues, virtually unchanged since the 19th century. Features the adornments of a decorated non-commissioned officer. Heritage, embodied."
 	icon_state = "coat_blues_nco"
 	item_state = "coat_blues_nco"
 
-/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer
+/obj/item/clothing/suit/storage/jacket/marine/dress/officer
 	name = "marine officer dress blues jacket"
 	desc = "The jacket of the legendary Marine dress blues, virtually unchanged since the 19th century. Features the sleek dark design of the uniform worn by a commissioned officer."
 	icon_state = "coat_blues_officer"
@@ -1142,13 +1132,13 @@
 
 //==================War Correspondent==================\\
 
-/obj/item/clothing/suit/storage/jacket/marine/reporter
+/* /obj/item/clothing/suit/storage/jacket/marine/reporter
 	name = "combat correspondent jacket"
 	desc = "A jacket for the most fashionable war correspondents."
 	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
 	icon_state = "wc_suit"
 	item_state = "wc_suit"
-	contained_sprite = TRUE
+	contained_sprite = TRUE */
 
 /obj/item/clothing/suit/storage/jacket/marine/cmb
 	name = "\improper CMB Deputy jacket"

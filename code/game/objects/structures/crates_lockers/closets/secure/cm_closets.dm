@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/staff_officer/gear/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/under/marine/service(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/staff_officer/armory
@@ -141,7 +141,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 /obj/structure/closet/secure_closet/warrant_officer/Initialize()
 	. = ..()
 	new /obj/item/clothing/accessory/storage/holster/armpit(src)
-	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/under/marine/service(src)
 	new /obj/item/storage/belt/security/MP(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
@@ -285,7 +285,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 /obj/structure/closet/secure_closet/sea/Initialize()
 	. = ..()
 	new /obj/item/device/whistle(src)
-	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/under/marine/service(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/cmdcabinet

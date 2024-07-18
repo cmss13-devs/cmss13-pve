@@ -23,12 +23,6 @@
 	icon_state = "jason_mask"
 	anti_hug = 100
 
-/obj/item/clothing/suit/gimmick/jason
-	name = "musty jacket"
-	desc = "A killer fashion statement."
-	icon_state = "jason_jacket"
-	item_state = "jason_jacket"
-
 //DUTCH
 /obj/item/clothing/under/gimmick/dutch
 	name = "combat fatigues"
@@ -38,30 +32,26 @@
 	flags_cold_protection = BODY_FLAG_LEGS|BODY_FLAG_GROIN
 	flags_heat_protection = BODY_FLAG_LEGS|BODY_FLAG_GROIN
 
-/obj/item/clothing/suit/armor/gimmick/dutch
-	name = "armored jacket"
-	desc = "It's hot in the jungle. Sometimes it's hot and heavy, and sometimes it's hell on earth."
-	icon_state = "dutch_armor"
-	flags_armor_protection = BODY_FLAG_CHEST
-	flags_cold_protection = BODY_FLAG_CHEST
-	flags_heat_protection = BODY_FLAG_CHEST
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/explosive/grenade,
-		/obj/item/device/binoculars,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-	)
+/obj/item/clothing/under/marine/veteran/dutch
+	name = "\improper Dutch's Dozen uniform"
+	desc = "A comfortable uniform worn by the Dutch's Dozen mercenaries. It's seen some definite wear and tear, but is still in good condition."
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	icon_state = "dutch_jumpsuit"
+	worn_state = "dutch_jumpsuit"
+	has_sensor = UNIFORM_NO_SENSORS
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/dutch, /obj/item/clothing/suit/armor/vest/dutch)
+
+
+/obj/item/clothing/under/marine/veteran/dutch/ranger
+	icon_state = "dutch_jumpsuit2"
+
+/obj/item/clothing/under/marine/veteran/van_bandolier
+	name = "hunting clothes"
+	desc = "A set of tailored clothes, made from fine but sturdy reinforced fabrics. Protects from thorns, weather, and the cuts and scrapes that forever bedevil outdoorsmen."
+	icon_state = "van_bandolier"
+	worn_state = "van_bandolier"
+	item_state = "van_bandolier_clothes"
+	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS

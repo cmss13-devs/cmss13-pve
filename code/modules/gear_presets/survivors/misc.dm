@@ -271,7 +271,7 @@ everything bellow isn't used or out of place.
 	)
 
 /datum/equipment_preset/survivor/new_varadero/commander/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/service(new_human), WEAR_BODY)
 
 	var/obj/item/clothing/suit/storage/jacket/marine/service/suit = new()
 	suit.icon_state = "[suit.initial_icon_state]_o"
