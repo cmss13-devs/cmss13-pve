@@ -173,7 +173,6 @@ var/list/shotgun_handfuls_8g = list(
 var/list/shotgun_handfuls_12g = list(
 	/obj/item/ammo_magazine/handful/shotgun/slug,
 	/obj/item/ammo_magazine/handful/shotgun/buckshot,
-	/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
 	/obj/item/ammo_magazine/handful/shotgun/flechette,
 	/obj/item/ammo_magazine/handful/shotgun/incendiary,
 	/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
