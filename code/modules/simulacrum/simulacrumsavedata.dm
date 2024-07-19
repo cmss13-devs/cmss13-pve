@@ -1,5 +1,15 @@
 GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 
+/proc/get_recursive_contents(atom/thing)
+	var/list/L = list()
+	for(var/atom/A in thing.contents)
+		if(istype(A, /obj/item/storage))
+			L += get_recursive_contents(A)
+
+		L += A
+
+	return L
+
 /datum/simulacrum_humansave
 	var/obj/item/boots
 	var/obj/item/gloves
@@ -26,6 +36,11 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	var/list/pocket1_contents = list()
 	var/list/pocket2_contents = list()
 	var/list/back_contents = list()
+	var/list/uniform_accessory_contents = list()
+
+	// These two are paths, not instances
+	var/list/uniform_accessories = list()
+	var/list/armor_accessories = list()
 
 	var/tied_ckey
 	var/mob/living/carbon/human/tied_human
@@ -37,6 +52,25 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 // hell
 /proc/save_human(mob/living/carbon/human/human)
 	var/datum/simulacrum_humansave/save = new()
+
+	if(human.w_uniform)
+		for(var/obj/item/I as anything in human.w_uniform.accessories)
+			if(istype(I, /obj/item/clothing/accessory/storage))
+				var/obj/item/clothing/accessory/storage/webbing = I
+				for(var/obj/item/I2 as anything in webbing.hold)
+					save.uniform_accessory_contents += DuplicateObject(I2, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
+			save.uniform_accessories += I.type
+			human.w_uniform.remove_accessory(human, I)
+			qdel(I)
+
+	if(human.wear_suit)
+		for(var/obj/item/I as anything in human.wear_suit.accessories)
+			save.armor_accessories += I.type
+			human.wear_suit.remove_accessory(human, I)
+
+	for(var/obj/item/storage/SI in get_recursive_contents(human))
+		SI.storage_close(human)
+
 	save.boots = DuplicateObject(human.shoes, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 	save.gloves = DuplicateObject(human.gloves, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
 	save.uniform = DuplicateObject(human.w_uniform, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
@@ -124,6 +158,26 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 	human.equip_to_slot(DuplicateObject(save.pocket2, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_R_STORE)
 	human.equip_to_slot(DuplicateObject(save.back, perfectcopy = TRUE, sameloc = FALSE, newloc = null), WEAR_BACK)
 
+	for(var/obj/item/storage/backpack/BP in get_recursive_contents(human))
+		BP.boxes = new
+		BP.boxes.name = "storage"
+		BP.boxes.master = BP
+		BP.boxes.icon_state = "block"
+		BP.boxes.screen_loc = "7,7 to 10,8"
+		BP.boxes.layer = HUD_LAYER
+		BP.storage_start = new /atom/movable/screen/storage()
+		BP.storage_start.name = "storage"
+		BP.storage_start.master = BP
+		BP.storage_start.icon_state = "storage_start"
+		BP.storage_start.screen_loc = "7,7 to 10,8"
+		BP.storage_end = new /atom/movable/screen/storage()
+		BP.storage_end.name = "storage"
+		BP.storage_end.master = BP
+		BP.storage_end.icon_state = "storage_end"
+		BP.storage_end.screen_loc = "7,7 to 10,8"
+		BP.closer = new
+		BP.closer.master = BP
+
 	if(istype(human.wear_suit, /obj/item/clothing/suit/storage))
 		var/obj/item/clothing/suit/storage/storage_suit = human.wear_suit
 		for(var/obj/item/I as anything in save.suit_contents)
@@ -170,3 +224,31 @@ GLOBAL_LIST_EMPTY(simulacrum_playersaves)
 			qdel(I2)
 		for(var/obj/item/I as anything in save.back_contents)
 			pouch.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
+
+	/*if(human.w_uniform)
+		for(var/obj/item/I as anything in human.w_uniform.accessories)
+			if(istype(I, /obj/item/clothing/accessory/storage))
+				var/obj/item/clothing/accessory/storage/webbing = I
+				for(var/obj/item/I2 as anything in webbing.hold)
+					uniform_accessory_contents += DuplicateObject(I2, perfectcopy = TRUE, sameloc = FALSE, newloc = null)
+			uniform_accessories += I.type
+			human.w_uniform.remove_accessory(human, I)
+			qdel(I)
+
+	if(human.wear_suit)
+		for(var/obj/item/I as anything in human.wear_suit.accessories)
+			armor_accessories += I.type*/
+
+	if(human.w_uniform)
+		for(var/path in save.uniform_accessories)
+			var/obj/item/clothing/accessory/attachment = new path
+			human.w_uniform.attach_accessory(human, attachment, TRUE)
+			if(istype(attachment, /obj/item/clothing/accessory/storage))
+				var/obj/item/clothing/accessory/storage/pouch = attachment
+				for(var/obj/item/I as anything in save.uniform_accessory_contents)
+					pouch.hold.handle_item_insertion(DuplicateObject(I, perfectcopy = TRUE, sameloc = FALSE, newloc = null), TRUE, human)
+
+	if(human.wear_suit)
+		for(var/path in save.armor_accessories)
+			var/obj/item/clothing/accessory/attachment = new path
+			human.wear_suit.attach_accessory(human, attachment, TRUE)

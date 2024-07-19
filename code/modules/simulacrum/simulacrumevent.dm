@@ -1,4 +1,4 @@
-// <p>The USS Rover has detected a distorted signal on the desert planet of LV-739. In accordance with standard procedure, ship has been taken out of FTL travel and crew awakened for possible distress signal. Signal is detected 73.8 meters at heading 98.6 degrees from landing zone.</p>
+// <p>The USS Rover has detected a distorted signal on the desert planet of LV-739. In accordance with standard procedure, ship has been taken out of FTL travel and crew awakened for possible distress signal. Signal is detected 73.8 meters at heading 98.6 degrees from landing zone.</p><br><p>ASRS malfunction occurred during FTL travel. Uniform attachments unavailable for use.</p>
 
 /turf/open/floor/void
 	name = "empty space"
@@ -116,18 +116,18 @@
 	breakable = TRUE
 	indestructible = FALSE
 	unacidable = FALSE
-	health = 5000
+	health = 4000
 	debris = list(/obj/item/stack/sheet/mineral/chitin/metal)
 	var/been_shot = FALSE
 
 /obj/structure/simulacrum_device/central/destructable/get_examine_text(mob/user)
 	. = ..()
-	if(health > 4000)
-		. += SPAN_INFO("It looks undamaged.")
+	if(health > 3500)
+		. += SPAN_BOLDNOTICE("It looks undamaged.")
 	else if(health > 2500)
-		. += SPAN_INFO("It looks fairly damaged.")
+		. += SPAN_BOLDWARNING("It looks fairly damaged.")
 	else if(health > 1000)
-		. += SPAN_INFO("It looks like it's falling apart!")
+		. += SPAN_BOLDWARNING("It looks like it's falling apart!")
 
 /obj/structure/simulacrum_device/central/destructable/bullet_act(obj/projectile/P)
 	. = ..()

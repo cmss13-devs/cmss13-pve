@@ -66,6 +66,7 @@
 	human.ghost_locked = TRUE
 	human.hudswitch_blocked = TRUE
 	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
+	message_admins("close inventories now")
 	sleep(5 SECONDS)
 	if(human.client) // devious shenanigans
 		winset(human.client, "mainwindow.split", "splitter=1000")
@@ -352,3 +353,18 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 	//	final_fates += replacetext(fate, "%NAME%", human_names[1])
 
 	GLOB.simulation_controller.fate_list = final_fates
+
+
+/client/proc/close_all_inventories()
+	set name = "Close All Inventories"
+	set category = "Admin.Simulation"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		for(var/obj/item/storage/SI in get_recursive_contents(save.tied_human))
+			SI.storage_close(save.tied_human)
+
+	to_chat(src, SPAN_NOTICE("Inventories closed."))

@@ -173,6 +173,7 @@ var/list/admin_verbs_major_event = list(
 	/client/proc/boss_finish_verb,
 	/client/proc/end_game_good,
 	/client/proc/end_game_bad,
+	/client/proc/close_all_inventories,
 )
 
 var/list/admin_verbs_spawn = list(
