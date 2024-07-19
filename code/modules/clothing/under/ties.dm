@@ -427,7 +427,7 @@
 /obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
 	if(!has_suit)
 		return
-	var/obj/item/clothing/suit/storage/marine/S = has_suit
+	var/obj/item/clothing/suit/storage/marine/suit = has_suit
 	S.armor_overlays -= "poncho"
 	. = ..()
 
