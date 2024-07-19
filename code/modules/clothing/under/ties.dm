@@ -425,7 +425,8 @@
 		S.armor_overlays["poncho"] = src
 
 /obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
-	if(!has_suit) return
+	if(!has_suit)
+		return
 	var/obj/item/clothing/suit/storage/marine/S = has_suit
 	S.armor_overlays -= "poncho"
 	. = ..()
