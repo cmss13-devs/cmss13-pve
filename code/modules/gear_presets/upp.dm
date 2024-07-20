@@ -1,6 +1,6 @@
 /datum/equipment_preset/upp
 	name = FACTION_UPP
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
 	idtype = /obj/item/card/id/dogtag
 	origin_override = ORIGIN_UPP
@@ -10,7 +10,7 @@
 	access = get_access(ACCESS_LIST_UPP_ALL) //ACCESS_COME_BACK_TO_ME
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(50;MALE,50;FEMALE)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -959,13 +959,13 @@
 
 /datum/equipment_preset/upp/conscript
 	//meme role
-	name = "UPP Conscript"
+	name = "UPP Colonial Defense Soldider"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	skills = /datum/skills/upp
-	assignment = JOB_UPP_CONSCRIPT
+	assignment = "Colonial Defense Rifleman"
 	rank = JOB_UPP_CONSCRIPT
-	role_comm_title = "Cons"
+	role_comm_title = "ColDef"
 	paygrade = "UE1"
 
 /datum/equipment_preset/upp/conscript/load_gear(mob/living/carbon/human/new_human)

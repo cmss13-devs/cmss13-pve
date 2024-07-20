@@ -131,9 +131,9 @@
 	flags_inventory = NOSLIPPING
 	slowdown = SHOES_SLOWDOWN+1
 
-	/obj/item/clothing/shoes/galoshes
-	desc = "Rubber boots"
+/obj/item/clothing/shoes/galoshes
 	name = "galoshes"
+	desc = "Rubber boots"
 	icon_state = "galoshes"
 	permeability_coefficient = 0.05
 	flags_inventory = NOSLIPPING

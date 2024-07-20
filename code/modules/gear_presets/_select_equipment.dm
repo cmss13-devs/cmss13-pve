@@ -415,7 +415,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/helmetpath = pick(
 		/obj/item/clothing/head/hardhat,
 		/obj/item/clothing/head/hardhat/white,
-		/obj/item/clothing/head/headband/alpha
+		/obj/item/clothing/head/headband/alpha,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
@@ -425,8 +425,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/shoespath = pick(
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/laceup/brown,
-		/obj/item/clothing/shoes/marine/civilian
-		/obj/item/clothing/shoes/marine/civilian/brown
+		/obj/item/clothing/shoes/marine/civilian,
+		/obj/item/clothing/shoes/marine/civilian/brown,
 		)
 	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
 
@@ -741,34 +741,6 @@ var/list/rebel_rifles = list(
 			spawnloc = get_turf(spawnloc)
 			for(var/i in 0 to ammo_amount-1)
 				new ammopath(spawnloc)
-
-
-/datum/equipment_preset/proc/generate_random_marine_primary_for_wo(mob/living/carbon/human/new_human, shuffle = rand(0,10))
-	switch(shuffle)
-		if(0 to 4)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1(new_human), WEAR_WAIST)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_BACK)
-		if(5,7)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39(new_human), WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m39(new_human), WEAR_WAIST)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39(new_human), WEAR_IN_BACK)
-		else
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump(new_human), WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full(new_human), WEAR_WAIST)
-	return
-
-/datum/equipment_preset/proc/add_common_wo_equipment(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/self_setting(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/proc/add_ice_colony_survivor_equipment(mob/living/carbon/human/new_human)
 	if((SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD]) && (SSmapping.configs[GROUND_MAP].map_name != MAP_CORSAT))
