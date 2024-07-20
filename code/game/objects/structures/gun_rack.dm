@@ -84,3 +84,10 @@
 	max_stored = 2
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/boyars_dualcannon
+
+/obj/structure/gun_rack/m41/recon
+	icon_state = "m41arecon"
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon
+
+/obj/structure/gun_rack/m41/recon/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
