@@ -363,6 +363,21 @@
 	properties = list(PROPERTY_NUTRITIOUS = 1)
 	flags = REAGENT_TYPE_MEDICAL
 
+/datum/reagent/cornsyrup
+	name = "High-Fructose Corn Syrup"
+	id = "cornsyrup"
+	description = "Ah, some good old, all-american, high-fructose corn syrup. Sickeningly sweet. There's worse things you can put in your body, but very few of them are made to be put there."
+	color = "#593512" // rgb: 89, 53, 18
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_NUTRITIOUS = 1)
+
+/datum/reagent/sucralose
+	name = "Sucralose"
+	id = "sucralose"
+	description = "600 times the flavor of sugar, with none of the calories!"
+	color = "#FFFFFF" // rgb: 255, 255, 255
+	chemclass = CHEM_CLASS_NONE
+
 /datum/reagent/glycerol
 	name = "Glycerol"
 	id = "glycerol"
