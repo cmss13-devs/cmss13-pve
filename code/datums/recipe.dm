@@ -410,7 +410,7 @@
 	items = list(
 		/obj/item/reagent_container/food/snacks/dough,
 		/obj/item/reagent_container/food/snacks/egg,
-		/obj/item/clothing/head/cakehat,
+		/obj/item/reagent_container/food/condiment/sugar,
 	)
 	result = /obj/item/reagent_container/food/snacks/sliceable/birthdaycake
 

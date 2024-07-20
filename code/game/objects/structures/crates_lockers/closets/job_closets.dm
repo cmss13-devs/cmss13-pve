@@ -1,35 +1,3 @@
-/* Closets for specific jobs
- * Contains:
- * Bartender
- * Janitor
- * Lawyer
- */
-
-/*
- * Janitor
- */
-/obj/structure/closet/jcloset
-	name = "custodial closet"
-	desc = "It's a storage unit for janitorial clothes and gear."
-	icon_state = "purple"
-	icon_closed = "purple"
-	icon_opened = "purple_open"
-
-/obj/structure/closet/jcloset/Initialize()
-	. = ..()
-	new /obj/item/clothing/under/boiler/lightblue(src)
-	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/head/soft/purple(src)
-	new /obj/item/clothing/head/beret/jan(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/tool/wet_sign(src)
-	new /obj/item/tool/wet_sign(src)
-	new /obj/item/tool/wet_sign(src)
-	new /obj/item/tool/wet_sign(src)
-	new /obj/item/device/lightreplacer(src)
-	new /obj/item/storage/bag/trash(src)
-	new /obj/item/clothing/shoes/galoshes(src)
-
 /obj/structure/closet/secure_closet/platoon_sergeant
 	name = "platoon sergeant locker"
 	desc = "A secure storage unit for the platoon sergeant."

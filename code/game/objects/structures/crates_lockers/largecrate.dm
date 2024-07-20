@@ -601,25 +601,3 @@
 	new /obj/item/ammo_magazine/shotgun(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 
-
-
-
-
-/obj/structure/largecrate/hunter_games_armors
-	name = "armors crate"
-
-/obj/structure/largecrate/hunter_games_armors/Initialize()
-	. = ..()
-	new /obj/item/clothing/gloves/marine(src)
-	new /obj/item/clothing/gloves/marine(src)
-	new /obj/item/clothing/gloves/marine(src)
-	new /obj/item/clothing/head/helmet(src)
-	new /obj/item/clothing/head/helmet(src)
-	new /obj/item/clothing/head/helmet/riot(src)
-	new /obj/item/clothing/shoes/combat(src)
-	new /obj/item/clothing/shoes/combat(src)
-	new /obj/item/clothing/shoes/combat(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/bulletproof(src)
-	new /obj/item/weapon/shield/riot(src)

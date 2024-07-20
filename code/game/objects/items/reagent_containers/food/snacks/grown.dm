@@ -303,14 +303,6 @@
 	filling_color = "#FAB728"
 	plantname = "pumpkin"
 
-/obj/item/reagent_container/food/snacks/grown/pumpkin/attackby(obj/item/W as obj, mob/user as mob)
-	if(W.sharp == IS_SHARP_ITEM_ACCURATE || W.sharp == IS_SHARP_ITEM_BIG)
-		to_chat(user, SPAN_NOTICE("You carve a face into [src]!"))
-		new /obj/item/clothing/head/pumpkinhead (user.loc)
-		qdel(src)
-	else
-		return ..()
-
 /obj/item/reagent_container/food/snacks/grown/lime
 	name = "lime"
 	desc = "It's so sour, your face will twist."
