@@ -85,7 +85,6 @@
 		/datum/equipment_preset/synth/survivor/emt_synth,
 		/datum/equipment_preset/synth/survivor/scientist_synth,
 		/datum/equipment_preset/synth/survivor/engineer_synth,
-		/datum/equipment_preset/synth/survivor/chef_synth,
 		/datum/equipment_preset/synth/survivor/freelancer_synth,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,

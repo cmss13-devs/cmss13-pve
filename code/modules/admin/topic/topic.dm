@@ -870,59 +870,6 @@
 
 		message_admins("[key_name_admin(usr)] infected [key_name_admin(H)] with a xeno ([newhive]) larva.")
 
-	else if(href_list["makemutineer"])
-		if(!check_rights(R_DEBUG|R_SPAWN))
-			return
-
-		var/mob/living/carbon/human/H = locate(href_list["makemutineer"])
-		if(!istype(H))
-			to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
-			return
-
-		if(H.faction != FACTION_MARINE)
-			to_chat(usr, "This player's faction must equal '[FACTION_MARINE]' to make them a mutineer.")
-			return
-
-		var/datum/equipment_preset/other/mutineer/leader/leader_preset = new()
-		leader_preset.load_status(H)
-
-		message_admins("[key_name_admin(usr)] has made [key_name_admin(H)] into a mutineer leader.")
-
-	else if(href_list["makecultist"] || href_list["makecultistleader"])
-		if(!check_rights(R_DEBUG|R_SPAWN))
-			return
-
-		var/mob/living/carbon/human/H = locate(href_list["makecultist"]) || locate(href_list["makecultistleader"])
-		if(!istype(H))
-			to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
-			return
-
-		var/list/hives = list()
-		for(var/hivenumber in GLOB.hive_datum)
-			var/datum/hive_status/hive = GLOB.hive_datum[hivenumber]
-			LAZYSET(hives, hive.name, hive)
-		LAZYSET(hives, "CANCEL", null)
-
-		var/hive_name = tgui_input_list(usr, "Which Hive will he belongs to", "Make Cultist", hives)
-		if(!hive_name || hive_name == "CANCEL")
-			to_chat(usr, SPAN_ALERT("Hive choice error. Aborting."))
-
-		var/datum/hive_status/hive = hives[hive_name]
-
-		if(href_list["makecultist"])
-			var/datum/equipment_preset/preset = GLOB.gear_path_presets_list[/datum/equipment_preset/other/xeno_cultist]
-			preset.load_race(H)
-			preset.load_status(H, hive.hivenumber)
-			message_admins("[key_name_admin(usr)] has made [key_name_admin(H)] into a cultist for [hive.name].")
-
-		else if(href_list["makecultistleader"])
-			var/datum/equipment_preset/preset = GLOB.gear_path_presets_list[/datum/equipment_preset/other/xeno_cultist/leader]
-			preset.load_race(H)
-			preset.load_status(H, hive.hivenumber)
-			message_admins("[key_name_admin(usr)] has made [key_name_admin(H)] into a cultist leader for [hive.name].")
-
-		H.faction = hive.internal_faction
-
 	else if(href_list["forceemote"])
 		if(!check_rights(R_ADMIN)) return
 

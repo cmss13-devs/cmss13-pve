@@ -380,7 +380,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELM_C)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_HELM_C)
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 	var/obj/item/storage/internal/headgear/pockets
@@ -390,7 +390,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/storage_max_storage_space = 4
 
 	/// The dmi where the grayscale squad overlays are contained
-	var/helmet_overlay_icon = 'icons/mob/humans/onmob/head_1.dmi'
+	var/helmet_overlay_icon = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 
 	///Any visors built into the helmet
 	var/list/built_in_visors = list(new /obj/item/device/helmet_visor)
@@ -1033,7 +1033,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate
 	name = "\improper WY corporate security helmet"
 	desc = "A basic skull-helm worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar."
-	icon = 'icons/mob/humans/onmob/contained/wy_goons.dmi'
+	icon = 'icons/mob/humans/onmob/head-layer/head_weyland.dmi'
 	icon_state = "helmet"
 	item_state = "helmet"
 	contained_sprite = TRUE

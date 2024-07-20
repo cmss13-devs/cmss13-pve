@@ -16,29 +16,11 @@
 	GLOB.corpse_spawns -= src
 	return ..()
 
-/obj/effect/landmark/corpsespawner/realpirate
-	name = "Pirate"
-	equip_path = /datum/equipment_preset/corpse/realpirate
-
-/obj/effect/landmark/corpsespawner/realpirate/ranged
-	name = "Pirate Gunner"
-	equip_path = /datum/equipment_preset/corpse/realpirate/ranged
-
-/obj/effect/landmark/corpsespawner/russian
-	name = "Russian"
-	equip_path = /datum/equipment_preset/corpse/russian
-
-/obj/effect/landmark/corpsespawner/russian/ranged
-
 ///////////Civilians//////////////////////
 
 /obj/effect/landmark/corpsespawner/prisoner
 	name = "Prisoner"
 	equip_path = /datum/equipment_preset/corpse/prisoner
-
-/obj/effect/landmark/corpsespawner/chef
-	name = "Chef"
-	equip_path = /datum/equipment_preset/corpse/chef
 
 /obj/effect/landmark/corpsespawner/doctor
 	name = "Doctor"
@@ -171,35 +153,3 @@
 /obj/effect/landmark/corpsespawner/freelancer/burst
 	name = "Burst Freelancer Mercenary"
 	equip_path = /datum/equipment_preset/corpse/freelancer/burst
-
-// Fun Faction Corpse
-
-/obj/effect/landmark/corpsespawner/dutchrifle
-	name = "Dutch Dozen Rifleman"
-	equip_path = /datum/equipment_preset/corpse/dutchrifle
-
-/obj/effect/landmark/corpsespawner/dutchrifle/burst
-	name = "Burst Dutch Dozen Rifleman"
-	equip_path = /datum/equipment_preset/corpse/dutchrifle/burst
-
-/obj/effect/landmark/corpsespawner/pizza
-	name = "Pizza Deliverer"
-	equip_path = /datum/equipment_preset/corpse/pizza
-
-/obj/effect/landmark/corpsespawner/pizza/burst
-	name = "Burst Pizza Deliverer"
-	equip_path = /datum/equipment_preset/corpse/pizza/burst
-
-/obj/effect/landmark/corpsespawner/gladiator
-	name = "Gladiator"
-	equip_path = /datum/equipment_preset/corpse/gladiator
-
-/obj/effect/landmark/corpsespawner/gladiator/burst
-	name = "Burst Gladiator"
-	equip_path = /datum/equipment_preset/corpse/gladiator/burst
-
-//FORECON
-
-/obj/effect/landmark/corpsespawner/forecon_spotter
-	name = "USCM Reconnaissance Spotter"
-	equip_path = /datum/equipment_preset/corpse/forecon_spotter

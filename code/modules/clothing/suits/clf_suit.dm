@@ -92,7 +92,7 @@
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "rebel_armor"
 	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit-layer/suit_0.dmi'
 	)
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS

@@ -2,8 +2,8 @@
 //marine gloves
 
 /obj/item/clothing/gloves/marine
-	name = "marine combat gloves"
-	desc = "Standard USCMC issue combat gloves, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
+	name = "combat gloves"
+	desc = "A pair of black combat gloves. Both insulated from electrical currents and capable of shrugging off shrapnel, the only downside is how sweaty your hands'll be from wearing them all the time."
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 0
@@ -21,70 +21,12 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	var/adopts_squad_color = TRUE
-	/// The dmi where the grayscale squad overlays are contained
-	var/squad_overlay_icon = 'icons/mob/humans/onmob/hands_garb.dmi'
-
-/obj/item/clothing/gloves/marine/get_mob_overlay(mob/living/carbon/human/current_human, slot)
-	var/image/ret = ..()
-	if(!adopts_squad_color || !(current_human.assigned_squad && current_human.assigned_squad.equipment_color))
-		return ret
-	var/image/glove_overlay = image(squad_overlay_icon, icon_state = "std-gloves")
-	glove_overlay.alpha = current_human.assigned_squad.armor_alpha
-	glove_overlay.color = current_human.assigned_squad.equipment_color
-	ret.overlays += glove_overlay
-	return ret
-
-/obj/item/clothing/gloves/marine/insulated
-	name = "marine insulated gloves"
-	desc = "These gloves will protect the wearer from electric shock."
-	icon_state = "lightbrown"
-	item_state = "lightbrowngloves"
-
-/obj/item/clothing/gloves/marine/black
-	name = "marine black combat gloves"
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/brown
-	name = "marine brown combat gloves"
-	desc = "USCMC issue combat gloves, now in brown rather than black, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
+	name = "combat gloves"
+	desc = "A pair of brown combat gloves. Both insulated from electrical currents and capable of shrugging off shrapnel, the only downside is how sweaty your hands'll be from wearing them all the time."
 	icon_state = "brown"
 	item_state = "brown"
-	adopts_squad_color = FALSE
-
-/obj/item/clothing/gloves/marine/medical
-	name = "marine medical combat gloves"
-	desc = "Special USCMC issue to hospital corpsmen or other field medical workers. Offers protection from shock and cuts while also improving one's grip on medical tools. Unlike the regular gloves, these are relatively comfortable to wear."
-	icon_state = "latex"
-	item_state = "lgloves"
-	adopts_squad_color = FALSE
-
-
-/obj/item/clothing/gloves/marine/officer
-	name = "officer gloves"
-	desc = "Shiny and impressive. They look expensive."
-	icon_state = "black"
-	item_state = "bgloves"
-	adopts_squad_color = FALSE
-
-/obj/item/clothing/gloves/marine/officer/chief
-	name = "chief officer gloves"
-	desc = "Blood crusts are attached to its metal studs, which are slightly dented."
-
-/obj/item/clothing/gloves/marine/techofficer
-	name = "tech officer gloves"
-	desc = "Sterile AND insulated! Why is not everyone issued with these?"
-	icon_state = "yellow"
-	item_state = "ygloves"
-	siemens_coefficient = 0
-	permeability_coefficient = 0.01
-	adopts_squad_color = FALSE
-
-/obj/item/clothing/gloves/marine/techofficer/commander
-	name = "commanding officer's gloves"
-	desc = "You may like these gloves, but THEY think you are unworthy of them."
-	icon_state = "captain"
-	item_state = "egloves"
 
 /obj/item/clothing/gloves/marine/specialist
 	name = "\improper B18 defensive gauntlets"
@@ -119,37 +61,6 @@
 	desc = "M2 MOPP gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these."
 	icon_state = "cbrn"
 	item_state = "cbrn"
-
-/obj/item/clothing/gloves/marine/veteran
-	name = "armored gloves"
-	desc = "Non-standard para-aramid fiber gloves. They're insulated and heavily armored."
-	icon_state = "veteran"
-	item_state = "veteran"
-	siemens_coefficient = 0
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_laser = CLOTHING_ARMOR_HIGH
-	armor_energy = CLOTHING_ARMOR_HIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	adopts_squad_color = FALSE
-
-/obj/item/clothing/gloves/marine/veteran/upp
-	icon_state = "brown"
-	item_state = "brown"
-
-/obj/item/clothing/gloves/marine/veteran/insulated
-	name = "insulated armored gloves"
-	desc = "Non-standard para-aramid fiber gloves. These are apparently ESPECIALLY insulated."
-	icon_state = "insulated"
-	item_state = "insulated"
-
-/obj/item/clothing/gloves/marine/veteran/pmc
-	name = "\improper WY PMC gloves"
-	icon_state = "pmc"
-	item_state = "pmc"
-	desc = "Standard issue venlar protected gloves manufactured for and by Weyland-Yutani for their PMC teams. Features a special polymer that insulates from electric shock."
 
 /obj/item/clothing/gloves/marine/veteran/pmc/commando
 	name = "\improper M5X gauntlets"
@@ -208,14 +119,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
 	adopts_squad_color = FALSE
-
-//=ROYAL MARINES=\\
-
-/obj/item/clothing/gloves/marine/veteran/royal_marine
-	name = "\improper L6 pattern combat gloves"
-	desc = "Standard issue tactical gloves used by the royal marines."
-	icon_state = "rmc_gloves"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
 /obj/item/clothing/gloves/marine/veteran/cbrn
 	name = "\improper M3 MOPP gloves"

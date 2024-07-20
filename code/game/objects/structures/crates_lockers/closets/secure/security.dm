@@ -27,7 +27,7 @@
 	. = ..()
 	new /obj/item/clothing/suit/storage/cmb(src)
 	new /obj/item/clothing/under/cmb(src)
-	new /obj/item/storage/belt/security/MP/cmb(src)
+	new /obj/item/storage/belt/security/MP/CMB(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/security/standard
@@ -60,7 +60,7 @@
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
 
-	new /obj/item/storage/belt/security/MP/cmb(src)
+	new /obj/item/storage/belt/security/MP/CMB(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/weapon/baton/loaded(src)
 	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)

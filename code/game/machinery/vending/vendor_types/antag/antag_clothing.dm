@@ -44,12 +44,10 @@
 
 /obj/effect/essentials_set/random/clf_shoes
 	spawned_gear_list = list(
-		/obj/item/clothing/shoes/black,
-		/obj/item/clothing/shoes/brown,
-		/obj/item/clothing/shoes/combat,
 		/obj/item/clothing/shoes/laceup,
-		/obj/item/clothing/shoes/leather,
-		/obj/item/clothing/shoes/swat,
+		/obj/item/clothing/shoes/laceup/brown,
+		/obj/item/clothing/shoes/marine/civilian,
+		/obj/item/clothing/shoes/marine/civilian/brown,
 	)
 
 /obj/effect/essentials_set/random/clf_armor

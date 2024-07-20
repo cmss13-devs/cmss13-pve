@@ -47,11 +47,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/soldier
-	name = "CLF - Guerilla"
+	name = "Insurgent - Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Class C Colonist"
+	assignment = "Class C Inhabitant"
 	rank = JOB_CLF
-	role_comm_title = "GRL"
 
 	skills = /datum/skills/clf
 
@@ -60,96 +59,11 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/clf/engineer
-	name = "CLF Engineer"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_CLF_ENGI
-	rank = JOB_CLF_ENGI
-	role_comm_title = "TECH"
-
-	skills = /datum/skills/clf/combat_engineer
-
-/datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
-
-	var/obj/item/clothing/under/boiler/grey/M = new()
-	var/obj/item/clothing/accessory/storage/webbing/W = new()
-	M.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(M, WEAR_BODY)
-
-	spawn_rebel_suit(new_human)
-	spawn_rebel_shoes(new_human)
-	spawn_rebel_gloves(new_human)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/welding, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/low_grade_full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
-
-	spawn_rebel_weapon(new_human)
-	spawn_rebel_weapon(new_human,1)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/clf/medic
-	name = "CLF Medic"
-	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_CLF_MEDIC
-	rank = JOB_CLF_MEDIC
-	role_comm_title = "MED"
-	skills = /datum/skills/clf/combat_medic
-
-/datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
-
-	var/obj/item/clothing/under/boiler/grey/CLF = new()
-	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
-	CLF.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
-
-	spawn_rebel_suit(new_human)
-	spawn_rebel_helmet(new_human)
-	spawn_rebel_shoes(new_human)
-	spawn_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/medic(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/structure/bed/portable_surgery(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_BACK)
-	if(new_human.disabilities & NEARSIGHTED)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
-
-	spawn_rebel_smg(new_human)
-
-//*****************************************************************************************************/
-
 /datum/equipment_preset/clf/specialist
-	name = "CLF Specialist"
+	name = "CLF - RPG"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_CLF_SPECIALIST
+	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_SPECIALIST
-	role_comm_title = "SPC"
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/specialist/New()
@@ -157,13 +71,19 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
 
 /datum/equipment_preset/clf/specialist/load_gear(mob/living/carbon/human/new_human)
+	var/random_gear = rand(1,6)
+	switch(random_gear)
+		if(1)
 
-	//jumpsuit and their webbing
-	var/obj/item/clothing/under/boiler/grey/CLF = new()
-	var/obj/item/clothing/accessory/storage/webbing/five_slots/W = new()
-	CLF.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
-	//clothing
+		if(2)
+
+		if(3)
+		if(4)
+
+		if(5)
+
+		if(6)
+
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/swat(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(new_human), WEAR_FEET)
@@ -198,11 +118,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "CLF Leader"
+	name = "Insurgent - Armed"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_CLF_LEADER
+	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_LEADER
-	role_comm_title = "LDR"
 	skills = /datum/skills/clf/leader
 
 /datum/equipment_preset/clf/leader/New()
@@ -249,9 +168,8 @@
 	languages = ALL_SYNTH_LANGUAGES
 
 	skills = /datum/skills/colonial_synthetic
-	assignment = JOB_CLF_SYNTH
+	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_SYNTH
-	role_comm_title = "Syn"
 
 /datum/equipment_preset/clf/synth/New()
 	. = ..()
@@ -318,11 +236,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "CLF Cell Commander"
+	name = "CLF - Cell Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_CLF_COMMANDER
+	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_COMMANDER
-	role_comm_title = "CMDR"
 	skills = /datum/skills/clf/commander
 
 /datum/equipment_preset/clf/commander/New()

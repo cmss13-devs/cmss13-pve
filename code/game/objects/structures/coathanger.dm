@@ -5,7 +5,7 @@
 	icon_state = "coatrack0"
 	unslashable = TRUE
 	var/obj/item/clothing/suit/coat
-	var/list/allowed = list(/obj/item/clothing/suit/storage/labcoat, /obj/item/clothing/suit/storage/bomber)
+	var/list/allowed = list(/obj/item/clothing/suit/storage/labcoat)
 
 /obj/structure/coatrack/attack_hand(mob/user as mob)
 	if(coat)

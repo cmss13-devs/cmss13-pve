@@ -224,7 +224,7 @@
 		WEAR_BODY = /obj/item/clothing/under/businesswear/black,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/black,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
-		WEAR_WAIST = /obj/item/storage/belt/security/cmb/full,
+		WEAR_WAIST = /obj/item/storage/belt/security/MP/CMB/full,
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 	)
 

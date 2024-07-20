@@ -36,11 +36,6 @@
 	else
 		gear_preset = initial(gear_preset)
 
-/datum/job/marine/smartgunner/whiskey
-	title = JOB_WO_SQUAD_SMARTGUNNER
-	flags_startup_parameters = ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/wo/marine/sg
-
 AddTimelock(/datum/job/marine/smartgunner, list(
 	JOB_SQUAD_ROLES = 5 HOURS
 ))

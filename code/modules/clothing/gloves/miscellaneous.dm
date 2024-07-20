@@ -1,45 +1,3 @@
-/obj/item/clothing/gloves/captain
-	desc = "Regal blue gloves, with a nice gold trim. Swanky."
-	name = "captain's gloves"
-	icon_state = "captain"
-	item_state = "egloves"
-	flags_cold_protection = BODY_FLAG_HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROT
-	flags_heat_protection = BODY_FLAG_HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROT
-
-/obj/item/clothing/gloves/cyborg
-	desc = "beep boop borp"
-	name = "cyborg gloves"
-	icon_state = "black"
-	item_state = "r_hands"
-	siemens_coefficient = 1
-
-/obj/item/clothing/gloves/swat
-	desc = "These tactical gloves are somewhat fire and impact-resistant."
-	name = "\improper SWAT Gloves"
-	icon_state = "black"
-	item_state = "swat_gl"
-	siemens_coefficient = 0.6
-	permeability_coefficient = 0.05
-
-	flags_cold_protection = BODY_FLAG_HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROT
-	flags_heat_protection = BODY_FLAG_HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROT
-
-/obj/item/clothing/gloves/combat //Combined effect of SWAT gloves and insulated gloves
-	desc = "These tactical gloves are somewhat fire and impact resistant."
-	name = "combat gloves"
-	icon_state = "black"
-	item_state = "swat_gl"
-	siemens_coefficient = 0
-	permeability_coefficient = 0.05
-	flags_cold_protection = BODY_FLAG_HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROT
-	flags_heat_protection = BODY_FLAG_HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROT
-
 /obj/item/clothing/gloves/latex
 	name = "latex gloves"
 	desc = "Sterile latex gloves."
@@ -55,8 +13,6 @@
 	item_state = "ggloves"
 	permeability_coefficient = 0.9
 	siemens_coefficient = 0.9
-
-
 
 /obj/item/clothing/gloves/boxing
 	name = "boxing gloves"

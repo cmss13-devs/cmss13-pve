@@ -420,8 +420,6 @@
 		new parts_type(loc, 2)
 	playsound(src, unpacking_sound, 35)
 
-	new /obj/structure/machinery/wo_recycler(loc)
-
 	qdel(src)
 	return TRUE
 

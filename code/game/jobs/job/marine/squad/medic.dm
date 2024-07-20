@@ -40,11 +40,6 @@
 	else
 		gear_preset = initial(gear_preset)
 
-/datum/job/marine/medic/whiskey
-	title = JOB_WO_SQUAD_MEDIC
-	flags_startup_parameters = ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/wo/marine/medic
-
 AddTimelock(/datum/job/marine/medic, list(
 	JOB_MEDIC_ROLES = 1 HOURS,
 	JOB_SQUAD_ROLES = 1 HOURS

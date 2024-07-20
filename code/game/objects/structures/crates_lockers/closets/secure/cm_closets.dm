@@ -98,13 +98,10 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 /obj/structure/closet/secure_closet/pilot_officer/Initialize()
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/pilot(src)
-	new /obj/item/clothing/under/marine/officer/boiler(src)
-	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/clothing/suit/armor/vest/pilot(src)
 
 /obj/structure/closet/secure_closet/pilot_officer/select_gamemode_equipment(gamemode)
 	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new /obj/item/clothing/mask/rebreather/scarf(src)
 		new /obj/item/clothing/mask/rebreather/scarf(src)
 
 //**********************Military Police Gear**************************/
