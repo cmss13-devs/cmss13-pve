@@ -17,9 +17,17 @@
 	var/amount = 2
 	var/spread_speed = 1 //time in decisecond for a smoke to spread one tile.
 	var/time_to_live = 8
+	var/stun_chance = 0
 	var/smokeranking = SMOKE_RANK_HARMLESS //Override priority. A higher ranked smoke cloud will displace lower and equal ones on spreading.
 	var/xeno_affecting = FALSE
 	var/blocked_by_gasmask = TRUE
+	var/contact_affects_synths = FALSE
+	var/mob/living/carbon/human/human_creature
+	var/mob/living/carbon/xenomorph/xeno_creature
+	var/datum/internal_organ/lungs/lungs
+	var/datum/internal_organ/eyes/eyes
+	var/datum/internal_organ/lungs/liver
+	var/datum/internal_organ/eyes/kidneys
 	var/datum/cause_data/cause_data = null
 
 	//Remove this bit to use the old smoke
@@ -116,23 +124,69 @@
 
 
 /obj/effect/particle_effect/smoke/proc/affect(mob/living/carbon/creature)
-	var/mob/living/carbon/human/human_creature
 	if(ishuman(creature))
 		human_creature = creature
+		lungs = human_creature.internal_organs_by_name["lungs"]
+		eyes = human_creature.internal_organs_by_name["eyes"]
+		liver = human_creature.internal_organs_by_name["liver"]
+		kidneys = human_creature.internal_organs_by_name["kidneys"]
+	if(isxeno(creature))
+		xeno_creature = creature
+	inhalation(creature)
+	contact(creature) //anything that affects xenos goes in contact_skin
+
+	/*if (istype(creature))
+		return 0
+	return 1*/
+
+/obj/effect/particle_effect/smoke/proc/inhalation(mob/living/carbon/creature)
+	to_chat(world, "inhalation")
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
 		return TRUE
 	if(!xeno_affecting && isxeno(creature))
 		return TRUE
 	if(isyautja(creature) && prob(75))
 		return TRUE
-	if(creature.wear_mask && blocked_by_gasmask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
-		return TRUE
-	if(human_creature && blocked_by_gasmask && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
-		return TRUE
+	if(ishuman(creature))
+		if(human_creature.wear_mask && CHECK_BITFIELD(human_creature.wear_mask.flags_inventory, BLOCKGASEFFECT))
+			return TRUE
+		if(human_creature.head && CHECK_BITFIELD(human_creature.head.flags_inventory, BLOCKGASEFFECT))
+			return TRUE
+	to_chat(world, "inhalation pass")
 
-	/*if (istype(creature))
-		return 0
-	return 1*/
+/obj/effect/particle_effect/smoke/proc/contact(mob/living/carbon/creature)
+	to_chat(world, "contact")
+	if(!contact_affects_synths && issynth(creature))
+		return
+	contact_skin(creature) //anything that affects xenos goes in contact_skin
+	contact_eyes(creature)
+	to_chat(world, "contact pass")
+
+/obj/effect/particle_effect/smoke/proc/contact_skin(mob/living/carbon/creature)
+	to_chat(world, "contact skin")
+	if(!xeno_affecting && isxeno(creature))
+		return TRUE
+	if(ishuman(creature))
+		if(human_creature.w_uniform && CHECK_BITFIELD(human_creature.w_uniform.flags_inventory, COVEREYES))
+			return TRUE
+		if(human_creature.wear_suit && CHECK_BITFIELD(human_creature.wear_suit.flags_inventory, COVEREYES))
+			return TRUE
+	to_chat(world, "contact skin pass")
+
+/obj/effect/particle_effect/smoke/proc/contact_eyes(mob/living/carbon/creature)
+	to_chat(world, "contact eyes")
+	if(ishuman(creature))
+		if(human_creature.head && CHECK_BITFIELD(human_creature.head.flags_inventory, COVEREYES))
+			return TRUE
+		if(human_creature.glasses && CHECK_BITFIELD(human_creature.glasses.flags_inventory, COVEREYES))
+			return TRUE
+		if(human_creature.wear_mask && CHECK_BITFIELD(human_creature.wear_mask.flags_inventory, COVEREYES))
+			return TRUE
+		if(human_creature.wear_mask && CHECK_BITFIELD(human_creature.wear_mask.flags_inventory, BLOCKGASEFFECT))
+			return TRUE
+		if(human_creature.head && CHECK_BITFIELD(human_creature.head.flags_inventory, BLOCKGASEFFECT))
+			return TRUE
+	to_chat(world, "contact eyes pass")
 
 /////////////////////////////////////////////
 // Bad smoke
@@ -147,7 +201,7 @@
 	for(var/mob/living/carbon/M in get_turf(src))
 		affect(M)
 
-/obj/effect/particle_effect/smoke/bad/affect(mob/living/carbon/M)
+/obj/effect/particle_effect/smoke/bad/inhalation(mob/living/carbon/M)
 	if (..())
 		return
 	else
@@ -223,6 +277,7 @@
 	var/burn_damage = 40
 	var/applied_fire_stacks = 5
 	var/xeno_yautja_reduction = 0.75
+	contact_affects_synths = TRUE
 
 /obj/effect/particle_effect/smoke/phosphorus/weak
 	time_to_live = 2
@@ -274,29 +329,26 @@
 	opacity = FALSE
 	alpha = 75
 	time_to_live = 20
+	stun_chance = 20
+	var/effect_amt //I don't know what this is or what it means but the code throws errors without it and I'm tired
 
 /obj/effect/particle_effect/smoke/cn20/xeno
 	name = "CN20-X nerve gas"
 	color = "#2da9da"
 	xeno_affecting = TRUE
+	stun_chance = 35
 
 /obj/effect/particle_effect/smoke/cn20/Move()
 	. = ..()
-	if(!xeno_affecting)
-		for(var/mob/living/carbon/human/human in get_turf(src))
-			affect(human)
-	else
-		for(var/mob/living/carbon/creature in get_turf(src))
-			affect(creature)
+	for(var/mob/living/carbon/creature in get_turf(src))
+		affect(creature)
 
-/obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
+/*/obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
 	..()
 	var/mob/living/carbon/xenomorph/xeno_creature
 	var/mob/living/carbon/human/human_creature
 	var/datum/internal_organ/lungs/lungs
 	var/datum/internal_organ/eyes/eyes
-	if (..())
-		return
 
 	if(isxeno(creature))
 		xeno_creature = creature
@@ -304,9 +356,6 @@
 		human_creature = creature
 		lungs = human_creature.internal_organs_by_name["lungs"]
 		eyes = human_creature.internal_organs_by_name["eyes"]
-
-
-	var/effect_amt = round(6 + amount*6)
 
 	if(xeno_creature)
 		if(xeno_creature.interference < 4)
@@ -318,10 +367,8 @@
 		creature.apply_damage(12, TOX)
 		creature.apply_damage(2, BRAIN)
 		lungs.take_damage(2)
-	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
 	if(!xeno_creature) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
-		creature.SetEyeBlind(round(effect_amt/3))
 		eyes.take_damage(2)
 	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
 		creature.coughedtime = 1
@@ -330,7 +377,6 @@
 		else
 			creature.emote("gasp")
 		addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 1.5 SECONDS)
-	var/stun_chance = 20
 	if(xeno_affecting)
 		stun_chance = 35
 	if(prob(stun_chance))
@@ -346,8 +392,50 @@
 	if(human_creature)
 		human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
 		human_creature.recalculate_move_delay = TRUE
-	return TRUE
+	return TRUE*/
 
+/obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
+	effect_amt = round(6 + amount*6)
+
+/obj/effect/particle_effect/smoke/cn20/inhalation(mob/living/carbon/creature)
+	if(..())
+		return
+	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5)))
+	creature.apply_damage(12, TOX)
+	creature.apply_damage(2, BRAIN)
+	lungs.take_damage(2)
+	to_chat(creature, SPAN_DANGER("Your body is going numb, almost as if paralyzed!"))
+	if(prob(stun_chance))
+		creature.apply_effect(1, WEAKEN)
+	if(prob(60 + round(amount*15))) //Highly likely to drop items due to arms/hands seizing up
+		creature.drop_held_item()
+	human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
+	human_creature.recalculate_move_delay = TRUE
+	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
+		creature.coughedtime = 1
+		if(prob(50))
+			creature.emote("cough")
+		else
+			creature.emote("gasp")
+		addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 1.5 SECONDS)
+
+/obj/effect/particle_effect/smoke/cn20/contact_skin(mob/living/carbon/creature)
+	if(..())
+		return
+	to_chat(world, "when I finish this PR it's gonna feel so good")
+	if(isxeno(creature))
+		if(xeno_creature.interference < 4)
+			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
+		creature.apply_damage(20, BRUTE)
+		xeno_creature.interference = 10
+		xeno_creature.blinded = TRUE
+
+/obj/effect/particle_effect/smoke/cn20/contact_eyes(mob/living/carbon/creature)
+	if(..())
+		return
+	to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
+	human_creature.SetEyeBlind(round(effect_amt/3))
+	eyes.take_damage(2)
 /////////////////////////////////////////////
 // ALD-91 LSD Gas
 /////////////////////////////////////////////
@@ -359,24 +447,20 @@
 	opacity = FALSE
 	alpha = 75
 	time_to_live = 20
-	var/stun_chance = 60
+	stun_chance = 60
 
 /obj/effect/particle_effect/smoke/LSD/Move()
 	. = ..()
 	for(var/mob/living/carbon/human/human in get_turf(src))
 		affect(human)
 
-/obj/effect/particle_effect/smoke/LSD/affect(mob/living/carbon/human/creature)
-	if (..())
-		return
-
+/obj/effect/particle_effect/smoke/LSD/inhalation(mob/living/carbon/human/creature)
+	. = ..()
 	creature.hallucination += 15
 	creature.druggy += 1
 
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
-
-
 //////////////////////////////////////
 // FLASHBANG SMOKE
 ////////////////////////////////////
