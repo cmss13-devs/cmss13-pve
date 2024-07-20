@@ -127,7 +127,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 //          MOBS           //
 /////////////////////////////
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS
+	return stat == CONSCIOUS && !(HAS_TRAIT(src, TRAIT_FLOORED) && HAS_TRAIT(src, TRAIT_INCAPACITATED))
 
 
 /////////////////////////////
