@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - admin: "Radio Clarity slider now shows an example message"
