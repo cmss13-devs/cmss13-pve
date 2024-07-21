@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - qol: "ARC turret shots start from the center of the ARC"
