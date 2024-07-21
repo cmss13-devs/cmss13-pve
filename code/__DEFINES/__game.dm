@@ -52,6 +52,7 @@ block( \
 #define MAP_WHISKEY_OUTPOST_RU "Outpost Tango"
 #define MAP_DERELICT_ALMAYER_RU "Derelict Almayer RU"
 #define MAP_KUTJEVO_RU "Kutjevo Refinery RU"
+#define MAP_OIL_DEPOT "Oil Depot 276"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

@@ -17,7 +17,6 @@ map almayer
 endmap
 
 map golden_arrow
-	default
 endmap
 
 map chapaev
@@ -27,11 +26,11 @@ map rover
 endmap
 
 map golden_arrow_RU
-	disabled
+	default
 endmap
 
 map desert_dam_fob
-	default
+	disabled
 
 map golden_arrow_classic
 endmap

@@ -85,6 +85,9 @@ endmap
 map desert_dam_ru
 endmap
 
+map oil_depot
+endmap
+
 map lv759_hybrisa
 endmap
 
