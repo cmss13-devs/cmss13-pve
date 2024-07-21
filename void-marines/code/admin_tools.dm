@@ -10,6 +10,31 @@
 	switch(alert("Are you sure you wish to edit this mob's appearance?",,"Yes","No"))
 		if("No")
 			return
+
+	// Changing name \\
+
+	var/newname = input(M, "What do you want to name them?", "Name:") as null|text
+	if(!newname)
+		return
+
+	if(!M)
+		to_chat(usr, "This mob no longer exists")
+		return
+
+	var/old_name = M.name
+	M.change_real_name(M, newname)
+	if(istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = M
+		if(H.wear_id)
+			H.wear_id.name = "[H.real_name]'s ID Card"
+			H.wear_id.registered_name = "[H.real_name]"
+			if(H.wear_id.assignment)
+				H.wear_id.name += " ([H.wear_id.assignment])"
+
+	message_admins("[key_name(src)] changed name of [old_name] to [newname].")
+
+	// Changing appear \\
+
 	var/new_facial = input(M, "Please select facial hair color.", "Character Generation") as color
 	if(new_facial)
 		M.r_facial = hex2num(copytext(new_facial, 2, 4))
@@ -47,13 +72,3 @@
 			M.gender = FEMALE
 	M.update_hair()
 	M.update_body()
-
-	var/old_name = M.name
-	M.change_real_name(M, newname)
-	if(M.wear_id)
-		M.wear_id.name = "[M.real_name]'s ID Card"
-		M.wear_id.registered_name = "[M.real_name]"
-		if(M.wear_id.assignment)
-			M.wear_id.name += " ([M.wear_id.assignment])"
-
-	message_admins("[key_name(src)] changed name of [old_name] to [newname].")

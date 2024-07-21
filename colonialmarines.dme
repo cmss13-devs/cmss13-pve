@@ -2476,4 +2476,5 @@
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\reserve_role.dm"
 #include "void-marines\code\vendors.dm"
+#include "void-marines\code\admin_tools.dm"
 // END_INCLUDE
