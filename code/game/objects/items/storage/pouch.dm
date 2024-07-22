@@ -455,15 +455,15 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
-/obj/item/storage/pouch/magazine/pistol/pmc_mateba/fill_preset_inventory()
+/obj/item/storage/pouch/magazine/pistol/mateba/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
-/obj/item/storage/pouch/magazine/pistol/pmc_mod88/fill_preset_inventory()
+/obj/item/storage/pouch/magazine/pistol/mod88/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
-/obj/item/storage/pouch/magazine/pistol/pmc_vp78/fill_preset_inventory()
+/obj/item/storage/pouch/magazine/pistol/vp78/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 

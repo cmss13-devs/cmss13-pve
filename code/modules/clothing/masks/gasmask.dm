@@ -64,7 +64,7 @@
 /obj/item/clothing/mask/gas/pmc/marsoc
 	name = "\improper SOF armored balaclava"
 	desc = "Designed for maximum protection -- and badassery. Provides protection against facial attacks, filters toxins, and conceals the wearer's identity."
-	icon_state = "balaclava"
+	icon_state = "coif"
 
 /obj/item/clothing/mask/gas/pmc/upp
 	name = "\improper UPP armored commando balaclava"

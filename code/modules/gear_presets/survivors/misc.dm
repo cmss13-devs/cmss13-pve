@@ -9,8 +9,8 @@ everything bellow isn't used or out of place.
 // ----- Prisioner Survivors
 // after double check prisoner isn't being used anywhere.
 /datum/equipment_preset/survivor/prisoner
-	name = "Survivor - Prisoner"
-	assignment = "Prisoner"
+	name = "Prop - Prison - Inmate"
+	assignment = "High Sec "
 	skills = /datum/skills/civilian/survivor/prisoner
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
@@ -24,7 +24,7 @@ everything bellow isn't used or out of place.
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 	if(prob(50)) new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet(new_human), WEAR_HEAD)
 	if(prob(50)) new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(new_human.back), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/prison(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	add_survivor_weapon_civilian(new_human)
 	..()

@@ -48,9 +48,6 @@
 /datum/equipment_preset/corpse/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	add_random_survivor_equipment(new_human)
-	add_survivor_weapon_civilian(new_human)
-	add_survivor_weapon_pistol(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
 
 //*****************************************************************************************************/
@@ -62,15 +59,8 @@
 
 /datum/equipment_preset/corpse/prisoner/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/prison(new_human), WEAR_BODY)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		add_ice_colony_survivor_equipment(new_human)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/prison(new_human), WEAR_FEET)
 
 //*****************************************************************************************************/
 
@@ -633,9 +623,9 @@
 
 // UPP
 /datum/equipment_preset/corpse/upp
-	name = "Corpse - Union of Progressive Peoples Soldier"
-	assignment = "Union of Progressive Peoples Soldier"
-	idtype = /obj/item/card/id/silver
+	name = "Corpse - UPP Colonial Defense Rifleman"
+	assignment = "Colonial Defense Rifleman"
+	idtype = /obj/item/card/id/dogtag
 	xenovictim = FALSE
 	faction = FACTION_UPP
 
@@ -652,17 +642,11 @@
 	var/obj/item/clothing/under/marine/veteran/UPP/UPP = new()
 	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	add_random_survivor_equipment(new_human)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green, WEAR_FACE)
 
 /datum/equipment_preset/corpse/upp/burst
-	name = "Corpse - Burst Union of Progressive Peoples Soldier"
+	name = "Corpse - UPP Colonial Defense Rifleman, Bursted"
 	xenovictim = TRUE
 
 // PMC

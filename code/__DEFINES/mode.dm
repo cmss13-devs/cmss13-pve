@@ -228,7 +228,7 @@ var/global/list/whitelist_hierarchy = list(WHITELIST_NORMAL, WHITELIST_COUNCIL, 
 #define FACTION_WY "Wey-Yu"
 #define FACTION_CLF "CLF"
 #define FACTION_PMC "PMC"
-#define FACTION_CONTRACTOR "VAI"
+#define FACTION_CONTRACTOR "Mercenary"
 #define FACTION_MARSHAL "Colonial Marshal"
 #define FACTION_WY_DEATHSQUAD "WY Death Squad"
 #define FACTION_MERCENARY "Mercenary"
