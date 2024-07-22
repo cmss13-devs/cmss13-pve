@@ -8,7 +8,7 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21")
 
-client/proc/toggle_fire_support_menu()
+/client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
 	set category = "Game Master.Extras"
 	if(!check_rights(R_ADMIN))
