@@ -943,6 +943,7 @@
 	desc = "An older model of flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Much comfier than its M70 successor, and can be worn under most combat armor, however, the ballistic protection leaves much to be desired."
 	icon_state = "flak"
 	item_state = "flak"
+	w_class = SIZE_MEDIUM
 	var/tucked_in = FALSE
 
 /obj/item/clothing/accessory/flak/get_examine_text(mob/user)
