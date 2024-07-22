@@ -28,8 +28,8 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 	if(!new_name || !istext(new_name))
 		return
 
-	if(length(new_name) > 10)
-		to_chat(src, SPAN_NOTICE("The platoon name should be 10 characters or less."))
+	if(length(new_name) > 16)
+		to_chat(src, SPAN_NOTICE("The platoon name should be 16 characters or less."))
 		return
 
 	var/old_name = GLOB.main_platoon_name

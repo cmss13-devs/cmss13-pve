@@ -540,6 +540,11 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 14
 	hud_offset_mod = -4
 
+/obj/item/attachable/smartbarrel/suppressed
+	name = "suppressed smartgun barrel"
+	icon_state = "silenced_smartgun"
+	gun_traits = list(TRAIT_GUN_SILENCED)
+
 // Mateba barrels
 
 /obj/item/attachable/mateba
@@ -2816,6 +2821,10 @@ Defined in conflicts.dm of the #defines folder.
 	max_rounds = 5
 	max_range = 10
 	attachment_firing_delay = 30
+
+/obj/item/attachable/attached_gun/grenade/mk1/recon
+	icon_state = "green_grenade-mk1"
+	attach_icon = "green_grenade-mk1_a"
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
