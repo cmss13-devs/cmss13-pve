@@ -15,10 +15,12 @@ client/proc/toggle_fire_support_menu()
 		return
 	GLOB.fire_support_menu.tgui_interact(mob)
 
+///The actual menu datum
 /datum/fire_support_menu
 	var/fire_support_click_intercept = FALSE
 	var/selected_ordnance = "Banshee Missile"
-	var/soundCooldown = FALSE
+	var/sound_cooldown = FALSE
+	///Mortar to fire the abstract shells.
 	var/obj/structure/mortar/abstract_mortar = new()
 
 /datum/fire_support_menu/tgui_interact(mob/user, datum/tgui/ui)
@@ -64,6 +66,7 @@ client/proc/toggle_fire_support_menu()
 
 	fire_support_click_intercept = FALSE
 
+///Handles firing logic whenever the mouse is clicked, and the fire_support_click_intercept var is TRUE
 /datum/fire_support_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
 	var/turf/target_turf = get_turf(object)
@@ -239,12 +242,14 @@ client/proc/toggle_fire_support_menu()
 				to_chat(user, SPAN_ANNOUNCEMENT_HEADER_ADMIN("Invalid ordnance selection! If this appears, yell at a coder!"))
 				return TRUE
 
+///Handles the dropship swooping sound effect, and makes sure it doesnt play 20 times a second.
 /datum/fire_support_menu/proc/handle_dropship_sound(target_turf)
-	if(!soundCooldown)
+	if(!sound_cooldown)
 		playsound(target_turf, 'sound/weapons/dropship_sonic_boom.ogg', 100, 1, 60)
-		soundCooldown = TRUE
-		addtimer(VARSET_CALLBACK(src, soundCooldown, FALSE), 10 SECONDS)
+		sound_cooldown = TRUE
+		addtimer(VARSET_CALLBACK(src, sound_cooldown, FALSE), 10 SECONDS)
 
+///Handles the noises and actual detonation of dropship ammo. Mainly it doesnt play the warning sound for ammo of the ship_ammo/heavygun/ type.
 /datum/fire_support_menu/proc/handle_dropship_ordnance(turf/target_turf, obj/structure/ship_ammo/ammo)
 	addtimer(CALLBACK(src, PROC_REF(handle_dropship_sound), target_turf), 0.5 SECONDS)
 	if(!istype(ammo, /obj/structure/ship_ammo/heavygun/))
@@ -255,30 +260,13 @@ client/proc/toggle_fire_support_menu()
 /datum/fire_support_menu/proc/handle_orbital_ordnance(turf/target_turf, obj/structure/ob_ammo/warhead/ammo)
 	ammo.warhead_impact(target_turf)
 
+///Deletes the mortar when the menu is closed so we dont make a thousand of them.
+/datum/fire_support_menu/Destroy(force, ...)
+	QDEL_NULL(abstract_mortar)
+	. = ..()
+
 #undef ORDNANCE_OPTIONS
 #undef ORBITAL_ORDNANCE
 #undef MORTAR_ORDNANCE
 #undef MISC_ORDNANCE
 #undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION
-/*
-	Suno's Descent Into Madness.
-
-	I hate TGUI.
-	Why would god let something like this exist?
-
-	day 1.
-	clicky intercept doesnt work, life is pain. at least I got it to open.
-
-	day 2.
-	i forgor to actually make a clicky intercept. oh well, it works at least. yippie!!!!
-
-	day 3. success is in sight, I can now fire missiles, and even turrets at the AO. Now I just need to implement BRRT, lasers, minirockets, OB's, and the custom ammo types.
-	I am POWERFUL, all who oppose me shall fall to INFINITE HEFA grenades.
-
-	day 5. expanded catalouge, reworking sound effects to make the missiles actually sound like something. Solaris shipyards will be the conniseurs in close air support armaments soon...
-
-	day 7. where am I, what is my name. Is there anything other than /datum/fire_support_menu/proc/InterceptClickOn in the world?
-	at least I managed to refactor everything into a neat, cool proc to handle firing, and sound, so your ears dont get obliterated.
-
-	day 10. I did it. It is complete. THE PROJECT IS COMPLETE.
-*/
