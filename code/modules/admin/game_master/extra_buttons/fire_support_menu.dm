@@ -57,7 +57,7 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 			return
 
 /datum/fire_support_menu/ui_status(mob/user, datum/ui_state/state)
-    return UI_INTERACTIVE
+	return UI_INTERACTIVE
 
 /datum/fire_support_menu/ui_close(mob/user)
 	var/client/user_client = user.client
