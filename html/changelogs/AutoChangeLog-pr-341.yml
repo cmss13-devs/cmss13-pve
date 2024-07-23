@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - rscdel: "Removed automatic end of round vote and reboot"
