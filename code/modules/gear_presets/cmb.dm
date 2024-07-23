@@ -49,7 +49,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/standard
-	name = "Prop - CMB - Colonial Marshal Deputy"
+	name = "Prop - UA - Deputy"
 	paygrade = "GS-9"
 	role_comm_title = "CMB DEP"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -129,7 +129,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/leader
-	name = "CMB - Colonial Marshal"
+	name = "Prop - UA - Marshal"
 	paygrade = "GS-13"
 	idtype = /obj/item/card/id/marshal
 	role_comm_title = "CMB MAR"
@@ -155,7 +155,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
@@ -225,7 +225,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/liaison
-	name = "Prop - ICC Liaison"
+	name = "Prop - UA - ICC Liaison"
 	paygrade = "GS-6"
 	idtype = /obj/item/card/id/silver/cl
 	role_comm_title = "ICC Rep."
@@ -263,7 +263,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/observer
-	name = "Prop - Human Rights Observer"
+	name = "Prop - UA - Human Rights Observer"
 	paygrade = "GS-3"
 	idtype = /obj/item/card/id/lanyard
 	role_comm_title = "OBS"

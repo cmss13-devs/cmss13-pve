@@ -521,7 +521,7 @@
 
 /obj/item/storage/pouch/magazine/large/rifle_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/heap(src)
+		new /obj/item/ammo_magazine/rifle/m41aMK1/heap(src)
 
 /obj/item/storage/pouch/magazine/large/smg_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)

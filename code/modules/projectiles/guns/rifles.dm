@@ -364,7 +364,7 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1
 	name = "\improper M41A pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine."
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC painted in a fresh coat of Humbrol 170 camoflauge. A personal friend of every Marine."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41amk1" //Placeholder.
 	item_state = "m41amk1" //Placeholder.
@@ -406,28 +406,23 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
-/obj/item/weapon/gun/rifle/m41aMK1/ap //for making it start with ap loaded
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
-
 /obj/item/weapon/gun/rifle/m41aMK1/unloaded //for making it start unloaded and with the safety on
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
+/obj/item/weapon/gun/rifle/m41aMK1/ap
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+
 /obj/item/weapon/gun/rifle/m41aMK1/tactical
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
-/obj/item/weapon/gun/rifle/m41aMK1/anchorpoint
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel shotgun. Uses 10x24mm caseless ammunition."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/shotgun)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
-
-/obj/item/weapon/gun/rifle/m41aMK1/anchorpoint/gl
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
+/obj/item/weapon/gun/rifle/m41aMK1/heap
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units."
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC painted in a fresh coat of Humbrol 76 camoflauge denoting its ownership by a Force Reconnaissance unit."
 	icon_state = "reconm41amk1"
 	item_state = "reconm41amk1"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/recon

@@ -6,7 +6,7 @@
 	rank = FACTION_WY
 	idtype = /obj/item/card/id/silver
 	faction_group = FACTION_LIST_WY
-	skills = /datum/skills/civilian
+	skills = /datum/skills/civilian/manager
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	var/headset_type = /obj/item/device/radio/headset/distress/WY
 
@@ -46,7 +46,6 @@
 	assignment = JOB_DIVISION_MANAGER
 	rank = JOB_DIVISION_MANAGER
 	paygrade = "WYC8"
-	skills = /datum/skills/civilian/manager
 	idtype = /obj/item/card/id/silver/clearance_badge/manager
 
 /datum/equipment_preset/wy/manager/New()
@@ -77,6 +76,7 @@
 	paygrade = "WEY-GOON"
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
 	languages = LANGUAGE_ENGLISH
+	skills = /datum/skills/civilian/security
 
 /datum/equipment_preset/wy/security/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/black(new_human), WEAR_BODY)
@@ -87,6 +87,5 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower(new_human), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower(new_human), WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack(new_human), WEAR_IN_BACK)
 

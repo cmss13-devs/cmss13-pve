@@ -70,15 +70,6 @@
 	var/override_map
 
 /datum/map_config/New()
-	survivor_types = list(
-		/datum/equipment_preset/survivor/scientist,
-		/datum/equipment_preset/survivor/doctor,
-		/datum/equipment_preset/survivor/chef,
-		/datum/equipment_preset/survivor/chaplain,
-		/datum/equipment_preset/survivor/miner,
-		/datum/equipment_preset/survivor/colonial_marshal,
-		/datum/equipment_preset/survivor/engineer,
-	)
 
 	synth_survivor_types = list(
 		/datum/equipment_preset/synth/survivor/medical_synth,

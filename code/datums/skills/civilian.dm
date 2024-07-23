@@ -19,8 +19,6 @@ CIVILIAN
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_MASTER,
 		SKILL_OVERWATCH = SKILL_OVERWATCH_TRAINED,
-		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
-		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 		SKILL_INTEL = SKILL_INTEL_EXPERT,
 	)
@@ -59,7 +57,7 @@ CIVILIAN
 		SKILL_ENDURANCE = SKILL_ENDURANCE_SURVIVOR,
 	)
 
-/datum/skills/civilian/survivor/manager
+/datum/skills/civilian/manager
 	name = "Weyland-Yutani Manager"
 	skills = list(
 		SKILL_LEADERSHIP = SKILL_LEAD_MASTER,
@@ -68,19 +66,19 @@ CIVILIAN
 		SKILL_INTEL = SKILL_INTEL_EXPERT,
 	)
 
-/datum/skills/civilian/survivor/goon
-	name = "Survivor Goon"
+/datum/skills/civilian/security
+	name = "Security"
 	skills = list(
 		SKILL_CQC = SKILL_CQC_TRAINED,
 		SKILL_POLICE = SKILL_POLICE_SKILLED,
 		SKILL_FIREMAN = SKILL_FIREMAN_SKILLED,
 		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_SURVIVOR,
-		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT,
+		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/pmc
+/datum/skills/civilian/pmc
 	name = "Survivor PMC"
 	additional_skills = list(
 		SKILL_CQC = SKILL_CQC_TRAINED,
@@ -91,7 +89,7 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/pmc/medic
+/datum/skills/civilian/pmc/medic
 	name = "Survivor PMC Medic"
 	additional_skills = list(
 		SKILL_POLICE = SKILL_POLICE_SKILLED,
@@ -103,7 +101,7 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/pmc/engineer
+/datum/skills/civilian/pmc/engineer
 	name = "Survivor PMC Engineer"
 	additional_skills = list(
 		SKILL_POLICE = SKILL_POLICE_SKILLED,
@@ -117,14 +115,14 @@ CIVILIAN
 		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
 	)
 
-/datum/skills/civilian/survivor/doctor
+/datum/skills/civilian/doctor
 	name = "Survivor Doctor"
 	additional_skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_DOCTOR,
 		SKILL_SURGERY = SKILL_SURGERY_TRAINED,
 	)
 
-/datum/skills/civilian/survivor/clf
+/datum/skills/civilian/clf
 	name = "Survivor CLF"
 	additional_skills = list(
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
@@ -133,7 +131,7 @@ CIVILIAN
 		SKILL_FIREMAN = SKILL_FIREMAN_SKILLED,
 	)
 
-/datum/skills/civilian/survivor/scientist
+/datum/skills/civilian/scientist
 	name = "Survivor Scientist"
 	additional_skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_DOCTOR,
@@ -141,14 +139,14 @@ CIVILIAN
 		SKILL_RESEARCH = SKILL_RESEARCH_TRAINED,
 	)
 
-/datum/skills/civilian/survivor/chef
+/datum/skills/civilian/chef
 	name = "Survivor Chef"
 	additional_skills = list(
 		SKILL_MELEE_WEAPONS = SKILL_MELEE_SUPER,
 		SKILL_DOMESTIC = SKILL_DOMESTIC_TRAINED,
 	)
 
-/datum/skills/civilian/survivor/miner
+/datum/skills/civilian/miner
 	name = "Survivor Miner"
 	additional_skills = list(
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
@@ -156,14 +154,14 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/trucker
+/datum/skills/civilian/trucker
 	name = "Survivor Trucker"
 	additional_skills = list(
 		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
 		SKILL_VEHICLE = SKILL_VEHICLE_CREWMAN,
 	)
 
-/datum/skills/civilian/survivor/engineer
+/datum/skills/civilian/engineer
 	name = "Survivor Engineer"
 	additional_skills = list(
 		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
@@ -172,13 +170,13 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/chaplain
+/datum/skills/civilian/chaplain
 	name = "Survivor Chaplain"
 	additional_skills = list(
 		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 	)
 
-/datum/skills/civilian/survivor/marshal
+/datum/skills/civilian/marshal
 	name = "Survivor Marshal"
 	skills = list(
 		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
@@ -195,7 +193,7 @@ CIVILIAN
 		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
 	)
 
-/datum/skills/civilian/survivor/prisoner
+/datum/skills/civilian/prisoner
 	name = "Survivor Prisoner"
 	additional_skills = list(
 		SKILL_CQC = SKILL_CQC_SKILLED,
@@ -204,7 +202,7 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
-/datum/skills/civilian/survivor/gangleader
+/datum/skills/civilian/gangleader
 	name = "Survivor Gang Leader"
 	additional_skills = list(
 		SKILL_CQC = SKILL_CQC_SKILLED,

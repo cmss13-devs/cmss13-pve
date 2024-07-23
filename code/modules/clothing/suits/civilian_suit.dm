@@ -402,13 +402,3 @@
 	desc = "A green windbreaker."
 	icon_state = "windbreaker_green"
 
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_fr
-	name = "first responder windbreaker"
-	desc = "A brown windbreaker with reflective strips commonly worn by first responders."
-	icon_state = "windbreaker_fr"
-
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant
-	name = "explorer's windbreaker"
-	desc = "A brown windbreaker covered in various patches tying it to one of the first explorations into this sector."
-	icon_state = "windbreaker_covenant"
-

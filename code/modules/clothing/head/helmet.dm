@@ -364,6 +364,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	health = 5
 	force = 15
 	throwforce = 15 // https://i.imgur.com/VW09I4B.gif
