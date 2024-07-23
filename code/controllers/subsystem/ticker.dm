@@ -109,7 +109,6 @@ SUBSYSTEM_DEF(ticker)
 				mode.declare_completion(force_ending)
 				REDIS_PUBLISH("byond.round", "type" = "round-complete")
 				flash_clients()
-				addtimer(CALLBACK(src, PROC_REF(Reboot)), 30 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
@@ -331,40 +330,6 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
 	fdel("data/mode.txt")
 	WRITE_FILE(file("data/mode.txt"), the_mode)
-
-
-/datum/controller/subsystem/ticker/proc/Reboot(reason, delay)
-	set waitfor = FALSE
-
-	if(usr && !check_rights(R_SERVER))
-		return
-
-	if(graceful)
-		to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Shutting down...")]</h3>")
-		world.Reboot(FALSE)
-		return
-
-	if(!delay)
-		delay = CONFIG_GET(number/round_end_countdown) * 10
-
-	var/skip_delay = check_rights()
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("An admin has delayed the round end."))
-		return
-
-	to_chat(world, SPAN_BOLDNOTICE("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
-
-	var/start_wait = world.time
-	sleep(delay - (world.time - start_wait))
-
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("Reboot was cancelled by an admin."))
-		return
-
-	log_game("Rebooting World. [reason]")
-	to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Rebooting...")]</h3>")
-
-	world.Reboot(TRUE)
 
 /datum/controller/subsystem/ticker/proc/create_characters()
 	if(!RoleAuthority)
