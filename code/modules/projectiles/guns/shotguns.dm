@@ -700,7 +700,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	seal_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
 	attachable_allowed = list()
 
-flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_TRIGGER_SAFETY|GUN_ONE_HAND_WIELDED|GUN_ANTIQUE|GUN_NO_DESCRIPTION|GUN_UNUSUAL_DESIGN
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_TRIGGER_SAFETY|GUN_ONE_HAND_WIELDED|GUN_ANTIQUE|GUN_NO_DESCRIPTION|GUN_UNUSUAL_DESIGN
 	flags_item = NO_FLAGS
 
 	inherent_traits = list(TRAIT_GUN_SILENCED)
