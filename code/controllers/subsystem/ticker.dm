@@ -109,7 +109,7 @@ SUBSYSTEM_DEF(ticker)
 				mode.declare_completion(force_ending)
 				REDIS_PUBLISH("byond.round", "type" = "round-complete")
 				flash_clients()
-				addtimer(CALLBACK(src, PROC_REF(Reboot())), 30 SECONDS)
+				addtimer(CALLBACK(src, PROC_REF(Reboot)), 30 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
