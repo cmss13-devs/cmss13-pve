@@ -153,6 +153,7 @@
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(3, WEAKEN)
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
@@ -219,6 +220,7 @@
 		target.apply_effect(5, SLOW)
 	else
 		if(!isyautja(living_mob)) //Not predators.
+			living_mob.apply_effect(3, WEAKEN)
 			living_mob.apply_effect(1, SUPERSLOW)
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
