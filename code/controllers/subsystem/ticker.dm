@@ -109,14 +109,7 @@ SUBSYSTEM_DEF(ticker)
 				mode.declare_completion(force_ending)
 				REDIS_PUBLISH("byond.round", "type" = "round-complete")
 				flash_clients()
-				addtimer(CALLBACK(
-					SSvote,
-					/datum/controller/subsystem/vote/proc/initiate_vote,
-					"gamemode",
-					"SERVER",
-					CALLBACK(src, PROC_REF(handle_map_reboot)),
-					TRUE
-				), 3 SECONDS)
+				addtimer(CALLBACK(src, PROC_REF(Reboot())), 30 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
@@ -160,16 +153,6 @@ SUBSYSTEM_DEF(ticker)
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
 		return FALSE
 	return TRUE
-
-/datum/controller/subsystem/ticker/proc/handle_map_reboot()
-	addtimer(CALLBACK(
-		SSvote,
-		/datum/controller/subsystem/vote/proc/initiate_vote,
-		"groundmap",
-		"SERVER",
-		CALLBACK(src, PROC_REF(Reboot)),
-		TRUE
-	), 3 SECONDS)
 
 /datum/controller/subsystem/ticker/proc/setup()
 	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
