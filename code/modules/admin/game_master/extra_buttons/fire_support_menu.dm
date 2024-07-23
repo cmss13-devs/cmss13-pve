@@ -263,7 +263,7 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 ///Deletes the mortar when the menu is closed so we dont make a thousand of them.
 /datum/fire_support_menu/Destroy(force, ...)
 	QDEL_NULL(abstract_mortar)
-	. = ..()
+	return ..()
 
 #undef ORDNANCE_OPTIONS
 #undef ORBITAL_ORDNANCE
