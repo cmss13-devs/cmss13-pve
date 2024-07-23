@@ -1113,16 +1113,3 @@
 	SPAN_WARNING("You squeeze and scuttle underneath [current_structure]."), max_distance = 2)
 	forceMove(current_structure.loc)
 	return TRUE
-
-///Generate a new unused nicknumber for the current hive, if hive doesn't exist return 0
-/mob/living/carbon/xenomorph/proc/generate_and_set_nicknumber()
-	if(!hive)
-		//If hive doesn't exist make it 0
-		nicknumber = 0
-		return
-	var/datum/hive_status/hive_status = hive
-	if(length(hive_status.available_nicknumbers))
-		nicknumber = pick_n_take(hive_status.available_nicknumbers)
-	else
-		//If we somehow use all 999 numbers fallback on 0
-		nicknumber = 0

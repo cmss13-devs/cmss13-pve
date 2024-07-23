@@ -96,7 +96,7 @@
 	if(stun_power)
 		carbone.Stun(get_xeno_stun_duration(carbone, stun_power))
 	if(weaken_power)
-		carbone.KnockDown(get_xeno_stun_duration(carbon, weaken_power))
+		carbone.KnockDown(get_xeno_stun_duration(carbone, weaken_power))
 	if(slowdown)
 		if(carbone.slowed < slowdown)
 			carbone.apply_effect(slowdown, SLOW)
