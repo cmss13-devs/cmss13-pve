@@ -40,9 +40,7 @@
 /obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons{
 	name = "\improper Cyclone"
 	},
-/obj/effect/attach_point/weapon/midway/left_fore{
-	ship_tag = "dropship_cyclone"
-	},
+/obj/effect/attach_point/weapon/cyclone/left_fore,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "cR" = (
@@ -86,39 +84,27 @@
 /area/shuttle/cyclone)
 "fy" = (
 /obj/docking_port/mobile/marine_dropship/cyclone,
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone";
-	attach_id = 7
-	},
+/obj/effect/attach_point/crew_weapon/cyclone,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin14"
 	},
 /area/shuttle/cyclone)
 "gn" = (
-/obj/structure/machinery/camera/autoname/almayer/dropship_two{
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
 	pixel_x = 8;
-	pixel_y = -16;
-	network = list("Golden Arrow","Cyclone")
+	pixel_y = -16
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "ha" = (
-/obj/effect/attach_point/fuel/midway{
-	attach_id = 11;
-	ship_tag = "dropship_cyclone"
-	},
+/obj/effect/attach_point/fuel/cyclone,
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "32"
 	},
 /area/shuttle/cyclone)
 "hd" = (
-/obj/effect/attach_point/fuel/dropship2{
-	pixel_x = -32;
-	ship_tag = "dropship_cyclone";
-	attach_id = 11
-	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "33"
 	},
@@ -156,11 +142,7 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "jr" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone";
-	dir = 8;
-	attach_id = 8
-	},
+/obj/effect/attach_point/crew_weapon/cyclone,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -215,13 +197,12 @@
 	},
 /area/shuttle/cyclone)
 "oX" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 8;
-	pixel_x = 23;
-	network = list("Golden Arrow","Cyclone")
-	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
+	dir = 8;
+	pixel_x = 23
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -266,16 +247,6 @@
 "qX" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "48"
-	},
-/area/shuttle/cyclone)
-"rk" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone";
-	dir = 4;
-	attach_id = 9
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "ro" = (
@@ -335,7 +306,7 @@
 /area/shuttle/cyclone)
 "wk" = (
 /turf/template_noop,
-/area/template_noop)
+/area/space)
 "wA" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "35"
@@ -400,9 +371,9 @@
 /area/shuttle/cyclone)
 "Ax" = (
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/cameras/dropship/midway{
-	network = list("Cyclone","Laser Targets");
-	name = "\improper 'Cyclone' camera controls"
+/obj/structure/machinery/computer/cameras/dropship/two{
+	name = "\improper 'Cyclone' camera controls";
+	network = list("Cyclone","Laser Targets")
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -451,22 +422,12 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Dl" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
 	dir = 4;
-	pixel_x = -23;
-	network = list("Golden Arrow","Cyclone")
+	pixel_x = -23
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
-	},
-/area/shuttle/cyclone)
-"Ey" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone{
-	dir = 1;
-	id = "starboard_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "EP" = (
@@ -475,10 +436,7 @@
 	},
 /area/shuttle/cyclone)
 "Fz" = (
-/obj/effect/attach_point/fuel/midway{
-	ship_tag = "dropship_cyclone";
-	attach_id = 10
-	},
+/obj/effect/attach_point/fuel/cyclone,
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "28"
 	},
@@ -523,12 +481,11 @@
 	},
 /area/shuttle/cyclone)
 "IP" = (
+/obj/effect/attach_point/weapon/dropship2/left_wing,
 /obj/structure/shuttle/part/dropship2/transparent/lower_left_wing{
 	name = "\improper Cyclone"
 	},
-/obj/effect/attach_point/weapon/midway/left_wing{
-	ship_tag = "dropship_cyclone"
-	},
+/obj/effect/attach_point/weapon/cyclone/left_wing,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "IZ" = (
@@ -539,7 +496,7 @@
 /area/shuttle/cyclone)
 "JZ" = (
 /obj/structure/machinery/door_control{
-	id = "dropship_midway";
+	id = "dropship_cyclone";
 	name = "Dropship Lockdown";
 	normaldoorcontrol = 3;
 	pixel_y = -19;
@@ -585,10 +542,7 @@
 	pixel_y = 16
 	},
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/dropship_weapons/midway{
-	name = "\improper 'Cyclone' weapons controls";
-	shuttle_tag = "dropship_cyclone"
-	},
+/obj/structure/machinery/computer/dropship_weapons/cyclone,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -605,23 +559,12 @@
 	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
-"QA" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone{
-	dir = 2;
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/cyclone)
 "QN" = (
 /obj/effect/attach_point/weapon/dropship2/right_wing,
 /obj/structure/shuttle/part/dropship2/transparent/lower_right_wing{
 	name = "\improper Cyclone"
 	},
-/obj/effect/attach_point/weapon/midway/right_wing{
-	ship_tag = "dropship_cyclone"
-	},
+/obj/effect/attach_point/weapon/cyclone/right_wing,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "RR" = (
@@ -686,12 +629,8 @@
 	},
 /area/shuttle/cyclone)
 "Zd" = (
-/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons{
-	name = "\improper Cyclone"
-	},
-/obj/effect/attach_point/weapon/midway/right_fore{
-	ship_tag = "dropship_cyclone"
-	},
+/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons,
+/obj/effect/attach_point/weapon/cyclone/right_fore,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ZG" = (
@@ -735,8 +674,8 @@ EP
 uH
 mI
 pb
-Ty
-QA
+dN
+dN
 xY
 hS
 wA
@@ -835,7 +774,7 @@ Kv
 ml
 oX
 FD
-rk
+jr
 JZ
 qX
 GE
@@ -855,8 +794,8 @@ AP
 sa
 Hg
 Uo
-Ty
-Ey
+GE
+GE
 At
 fo
 zH
