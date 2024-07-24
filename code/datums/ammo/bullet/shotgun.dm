@@ -155,6 +155,7 @@
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
+	handful_state = "special_buck"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/special
 
 	accurate_range = 8
