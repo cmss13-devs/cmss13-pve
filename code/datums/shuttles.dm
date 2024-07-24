@@ -133,3 +133,15 @@
 
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
+
+/datum/map_template/shuttle/golden_arrow_vehicle_one
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
+	name = "Vehicle Elevator One"
+
+/datum/map_template/shuttle/golden_arrow_vehicle_two
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
+	name = "Vehicle Elevator Two"
+
+/datum/map_template/shuttle/golden_arrow_cargo
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
+	name = "Cargo Elevator"

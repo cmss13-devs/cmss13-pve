@@ -704,7 +704,7 @@
 /area/golden_arrow/hangar)
 "cv" = (
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -1040,8 +1040,10 @@
 	},
 /area/golden_arrow/cryo_cells)
 "dC" = (
-/obj/docking_port/mobile{
-	name = "elevator one"
+/obj/docking_port/stationary/shipmap_elevator{
+	roundstart_template = /datum/map_template/shuttle/golden_arrow_vehicle_one;
+	id = "garrow_vehicle_elevator_one_storage";
+	name = "Vehicle Elevator One Storage"
 	},
 /turf/closed/void,
 /area/golden_arrow/hangar)
@@ -1061,13 +1063,13 @@
 	},
 /area/golden_arrow/cryo_cells)
 "dH" = (
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 1
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "blackcorner";
@@ -1412,9 +1414,6 @@
 	},
 /area/golden_arrow/dorms)
 "eN" = (
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -1422,6 +1421,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "blackcorner"
@@ -1809,7 +1811,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -2643,7 +2645,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -3414,7 +3416,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -3473,7 +3475,7 @@
 	},
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -3543,7 +3545,7 @@
 	},
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -3551,7 +3553,7 @@
 /area/golden_arrow/hangar)
 "lK" = (
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -3720,7 +3722,7 @@
 "mo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -4549,6 +4551,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"oY" = (
+/obj/docking_port/stationary/shipmap_elevator{
+	id = "garrow_cargo_elevator";
+	name = "Cargo Elevator";
+	width = 8;
+	height = 6
+	},
+/turf/closed/void,
+/area/golden_arrow/supply)
 "pa" = (
 /obj/structure/ship_ammo/rocket/widowmaker,
 /obj/effect/decal/cleanable/dirt,
@@ -4566,7 +4577,7 @@
 /area/golden_arrow/medical)
 "pe" = (
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_vehicle_elevator_two"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -4736,17 +4747,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth{
 	dir = 4
-	},
-/area/golden_arrow/hangar)
-"pO" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehiclebay1railing"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "black";
-	dir = 8
 	},
 /area/golden_arrow/hangar)
 "pR" = (
@@ -5392,8 +5392,8 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two";
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -6174,12 +6174,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "uH" = (
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "blackcorner";
@@ -6439,8 +6439,8 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two";
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -6666,7 +6666,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -7053,7 +7053,7 @@
 "xn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -7515,7 +7515,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -7557,12 +7557,12 @@
 	},
 /area/golden_arrow/briefing)
 "zi" = (
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 1
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "blackcorner";
@@ -8359,8 +8359,8 @@
 /area/golden_arrow/hangar)
 "Cg" = (
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two";
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -8371,6 +8371,13 @@
 	icon_state = "siding4"
 	},
 /turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Ci" = (
+/obj/docking_port/stationary/shipmap_elevator{
+	id = "garrow_vehicle_elevator_one";
+	name = "Vehicle Elevator One"
+	},
+/turf/closed/void,
 /area/golden_arrow/hangar)
 "Cj" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -8677,7 +8684,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -10175,7 +10182,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -10338,7 +10345,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -10444,8 +10451,12 @@
 	},
 /area/golden_arrow/engineering)
 "Jo" = (
-/obj/docking_port/mobile{
-	name = "cargo elevator"
+/obj/docking_port/stationary/shipmap_elevator{
+	roundstart_template = /datum/map_template/shuttle/golden_arrow_cargo;
+	id = "garrow_cargo_elevator_storage";
+	name = "Cargo Elevator Storage";
+	height = 6;
+	width = 8
 	},
 /turf/closed/void,
 /area/golden_arrow/supply)
@@ -10662,6 +10673,23 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"Kd" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/almayer{
+	icon_state = "blackcorner";
+	dir = 4
+	},
+/area/golden_arrow/hangar)
 "Kf" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/edge/smooth{
@@ -10754,7 +10782,7 @@
 	},
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -11136,7 +11164,7 @@
 "LK" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -11152,11 +11180,11 @@
 	},
 /area/golden_arrow/hangar)
 "LM" = (
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
+	},
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "blackcorner";
@@ -11326,6 +11354,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"Mj" = (
+/obj/docking_port/stationary/shipmap_elevator{
+	id = "garrow_vehicle_elevator_two";
+	name = "Vehicle Elevator Two"
+	},
+/turf/closed/void,
+/area/golden_arrow/hangar)
 "Mn" = (
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "80";
@@ -11633,8 +11668,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "Nl" = (
-/obj/docking_port/mobile{
-	name = "elevator two"
+/obj/docking_port/stationary/shipmap_elevator{
+	roundstart_template = /datum/map_template/shuttle/golden_arrow_vehicle_two;
+	id = "garrow_vehicle_elevator_two_storage";
+	name = "Vehicle Elevator Two Storage"
 	},
 /turf/closed/void,
 /area/golden_arrow/hangar)
@@ -11646,7 +11683,7 @@
 	},
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 28;
-	id = "vehiclebay1railing";
+	id = "garrow_vehicle_elevator_one";
 	name = "vehicle bay railing control";
 	pixel_x = 13
 	},
@@ -12854,7 +12891,7 @@
 	},
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -13358,7 +13395,7 @@
 "SX" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black"
@@ -13609,7 +13646,7 @@
 	},
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 28;
-	id = "vehiclebay2railing";
+	id = "garrow_vehicle_elevator_two";
 	name = "vehicle bay railing control";
 	pixel_x = 13
 	},
@@ -13755,7 +13792,7 @@
 /area/golden_arrow/prep_hallway)
 "Uu" = (
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_vehicle_elevator_one"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -14876,8 +14913,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "XW" = (
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two";
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -15358,8 +15395,8 @@
 "Zx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two";
+	dir = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -15510,7 +15547,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay2railing"
+	id = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -15539,7 +15576,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/machinery/door/poddoor/railing{
-	id = "vehiclebay1railing"
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer{
 	icon_state = "black";
@@ -23988,7 +24025,7 @@ PX
 PX
 PX
 PX
-PX
+oY
 hl
 EG
 EG
@@ -31739,7 +31776,7 @@ Dz
 Kx
 iU
 Dz
-pe
+Kd
 cC
 dz
 cC
@@ -31890,7 +31927,7 @@ lk
 lk
 lk
 lk
-lk
+Ci
 Ix
 ts
 dz
@@ -31900,7 +31937,7 @@ lk
 lk
 lk
 lk
-lk
+Mj
 ZV
 JK
 dz
@@ -32950,7 +32987,7 @@ EG
 dz
 cC
 LM
-pO
+gd
 LK
 LK
 LK
