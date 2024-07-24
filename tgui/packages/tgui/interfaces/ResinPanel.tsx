@@ -17,8 +17,8 @@ interface StructureEntry {
   id: string;
 }
 
-export const ResinPanel = (props, context) => {
-  const { act, data } = useBackend<ResinPanelData>(context);
+export const ResinPanel = () => {
+  const { act, data } = useBackend<ResinPanelData>();
   const {
     structure_list,
     hives_list,

@@ -16,14 +16,7 @@ type ListInputData = {
 
 export const ListInputModal = (props) => {
   const { act, data } = useBackend<ListInputData>();
-  const {
-    items = [],
-    message = '',
-    init_value,
-    large_buttons,
-    timeout,
-    title,
-  } = data;
+  const { items = [], message = '', init_value, timeout, title, theme } = data;
   const [selected, setSelected] = useLocalState<number>(
     'selected',
     items.indexOf(init_value)

@@ -1,7 +1,7 @@
 import { useBackend, useLocalState } from 'tgui/backend';
 import { Box, Button, Dropdown, Input, Section, Slider, Stack, Tabs } from 'tgui/components';
 import { Window } from 'tgui/layouts';
-import { Component, Fragment } from 'inferno';
+import { Component } from 'react';
 import { debounce } from 'common/timer';
 
 interface SoundPanelData {
@@ -22,8 +22,8 @@ interface SoundPanelData {
   target_group: string;
 }
 
-export const SoundPanel = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+export const SoundPanel = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { sound_list, sound_path } = data;
 
   const PAGES = [
@@ -45,7 +45,6 @@ export const SoundPanel = (props, context) => {
     },
   ];
   const [tabIndex, setTabIndex] = useLocalState<number>(
-    context,
     'tabIndex',
     PAGES.findIndex((page) => page.title === 'Local')
   );
@@ -96,9 +95,9 @@ export const SoundPanel = (props, context) => {
 };
 
 interface ListSearchBoxProps {
-  items: string[];
-  selection: string;
-  onSelection: (value: string) => void;
+  readonly items: string[];
+  readonly selection: string;
+  readonly onSelection: (value: string) => void;
 }
 
 interface ListSearchBoxState {
@@ -158,7 +157,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
 
   render() {
     return (
-      <Fragment>
+      <>
         <Stack.Item grow>
           <Section fill scrollable title="File">
             {this.parsedItems
@@ -181,7 +180,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                       animation: 'none',
                       transition: 'none',
                     }}>
-                    <div
+                    <Box
                       style={{
                         'font-size': '0.75rem',
                         opacity: 0.5,
@@ -190,7 +189,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                         top: 0,
                       }}>
                       {item.dirName}
-                    </div>
+                    </Box>
                   </Button>
                 );
               })}
@@ -204,13 +203,13 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
             value={this.state.query}
           />
         </Stack.Item>
-      </Fragment>
+      </>
     );
   }
 }
 
-const SoundOptions = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const SoundOptions = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const {
     category_list,
     sound_path,
@@ -313,8 +312,8 @@ const SoundOptions = (props, context) => {
   );
 };
 
-const ClientPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ClientPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { target_player_desc, sound_path } = data;
 
   return (
@@ -337,8 +336,8 @@ const ClientPage = (props, context) => {
   );
 };
 
-const LocalPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const LocalPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { target_loc_desc, sound_path, loc_click_intercept, loc_click_play } =
     data;
 
@@ -377,8 +376,8 @@ const LocalPage = (props, context) => {
   );
 };
 
-const ZLevelPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ZLevelPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { zlevel_list, sound_path, target_zlevel } = data;
 
   return (
@@ -407,8 +406,8 @@ const ZLevelPage = (props, context) => {
   );
 };
 
-const ServerPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ServerPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { group_list, sound_path, target_group } = data;
 
   return (

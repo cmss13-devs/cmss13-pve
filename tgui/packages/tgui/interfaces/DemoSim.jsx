@@ -3,7 +3,7 @@ import { Button, Section, ProgressBar, NoticeBox, Box, Stack } from '../componen
 import { Window } from '../layouts';
 
 export const DemoSim = () => {
-  const { act, data } = useBackend<DemoSimData>();
+  const { act, data } = useBackend();
 
   const timeLeft = data.nextdetonationtime - data.worldtime;
   const timeLeftPct = timeLeft / data.detonation_cooldown;

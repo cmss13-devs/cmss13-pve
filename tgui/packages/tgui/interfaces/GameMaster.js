@@ -163,7 +163,7 @@ export const GameMasterObjectivePanel = (props, context) => {
                 {data.game_master_objectives.map((val) => {
                   if (val) {
                     return (
-                      <Stack.Item>
+                      <Stack.Item key={val.object_name}>
                         <Divider />
                         <Stack>
                           <Stack.Item align="center">

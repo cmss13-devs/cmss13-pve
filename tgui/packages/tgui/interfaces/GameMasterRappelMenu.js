@@ -39,7 +39,7 @@ export const GameMasterRappelPanel = (props, context) => {
                 {data.game_master_rappels.map((val) => {
                   if (val) {
                     return (
-                      <Stack.Item>
+                      <Stack.Item key={val.rappel_name}>
                         <Divider />
                         <Stack>
                           <Stack.Item align="center">
