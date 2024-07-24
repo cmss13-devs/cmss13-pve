@@ -66,16 +66,16 @@
 	worn_state = "workwear_pink"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/workwear/blue
+/obj/item/clothing/under/workwear/alt
 	name = "workwear"
 	desc = "A pair of brown canvas workpants paired with a dark blue workshirt."
-	icon_state = "workwear_blue"
-	worn_state = "workwear_blue"
+	icon_state = "workwear_alt"
+	worn_state = "workwear_alt"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/workwear/green
+/obj/item/clothing/under/workwear/blue
 	name = "workwear"
-	desc = "A pair of brown canvas workpants paired with a green workshirt."
+	desc = "A pair of jeans paired with a light blue workshirt."
 	icon_state = "workwear_green"
 	worn_state = "workwear_green"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
@@ -100,7 +100,7 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/businesswear
-	name = "corporate casual outfit"
+	name = "casual outfit"
 	desc = "A pair of dark brown slacks paired with a dark blue shirt."
 	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "corporate_field"
@@ -108,7 +108,7 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/businesswear/ivy
-	name = "corporate casual outfit"
+	name = "casual outfit"
 	desc = "A pair of khaki slacks paired with a light blue shirt."
 	icon_state = "corporate_ivy"
 	worn_state = "corporate_ivy"
@@ -138,7 +138,7 @@
 	worn_state = "corporate_blue"
 
 /obj/item/clothing/under/cmb
-	name = "\improper CMB field uniform"
+	name = "\improper OCM field uniform"
 	desc = "A pair of off-white slacks paired with a light blue shirt and dark brown tie."
 	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_civilian.dmi'
 	icon_state = "cmb_field"
@@ -146,7 +146,7 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/cmb/patrol
-	name = "\improper CMB patrol uniform"
+	name = "\improper OCM patrol uniform"
 	desc = "A pair of grey-blue slacks paired with a blue shirt and dark brown tie."
 	icon_state = "cmb_patrol"
 	worn_state = "cmb_patrol"
@@ -156,6 +156,11 @@
 	desc = "95% Polyester, 5% Spandex!"
 	gender = PLURAL
 	flags_armor_protection = BODY_FLAG_GROIN
+
+/obj/item/clothing/under/shorts/uscm
+	name = "\improper USCM PT shorts"
+	desc = "Silky smooth Marine Corps PT shorts."
+	icon_state = "redshorts"
 
 /obj/item/clothing/under/shorts/red
 	name = "red athletic shorts"

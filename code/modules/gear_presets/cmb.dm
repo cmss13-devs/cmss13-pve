@@ -51,9 +51,9 @@
 /datum/equipment_preset/cmb/standard
 	name = "Prop - UA - Deputy"
 	paygrade = "GS-9"
-	role_comm_title = "CMB DEP"
+	role_comm_title = "OCM-DEP"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "CMB Deputy"
+	assignment = "Deputy"
 	rank = JOB_CMB
 	skills = /datum/skills/cmb
 
@@ -132,10 +132,10 @@
 	name = "Prop - UA - Marshal"
 	paygrade = "GS-13"
 	idtype = /obj/item/card/id/marshal
-	role_comm_title = "CMB MAR"
+	role_comm_title = "OCM-MAR"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = "CMB Marshal"
+	assignment = "Marshal"
 	rank = JOB_CMB_TL
 	skills = /datum/skills/cmb/leader
 	minimum_age = 30
@@ -150,7 +150,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/normalpoint, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/cmb/marshal, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
@@ -172,13 +172,13 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/synth
-	name = "CMB - Colonial Marshal Investigative Synthetic"
+	name = "Synthetic - OCM"
 	paygrade = "GS-C.9"
 	idtype = /obj/item/card/id/deputy
-	role_comm_title = "CMB Syn"
+	role_comm_title = "OCM-SYN"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = "CMB Support Synthetic"
+	assignment = "Support Synthetic"
 	rank = JOB_CMB_SYN
 	languages = ALL_SYNTH_LANGUAGES
 

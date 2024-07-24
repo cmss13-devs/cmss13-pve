@@ -617,7 +617,6 @@ var/list/rebel_rifles = list(
 	var/helmetpath = pick(
 		/obj/item/clothing/head/freelancer,
 		/obj/item/clothing/head/helmet/skullcap,
-		/obj/item/clothing/head/bandana,
 		/obj/item/clothing/head/cmbandana,
 		/obj/item/clothing/head/cmbandana/tan,
 		/obj/item/clothing/head/beanie,

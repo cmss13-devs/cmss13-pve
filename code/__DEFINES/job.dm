@@ -301,6 +301,7 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 //-------- CLF --------//
 #define JOB_CLF "CLF Guerilla"
+#define JOB_CLF "CLF Rifleman"
 #define JOB_CLF_ENGI "CLF Field Technician"
 #define JOB_CLF_MEDIC "CLF Field Medic"
 #define JOB_CLF_SPECIALIST "CLF Field Specialist"

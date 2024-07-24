@@ -387,18 +387,19 @@
 
 	update_clothing_icon()
 
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown
-	name = "brown windbreaker"
+/obj/item/clothing/suit/storage/windbreaker/brown
 	desc = "A brown windbreaker."
 	icon_state = "windbreaker_brown"
 
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_gray
-	name = "gray windbreaker"
+/obj/item/clothing/suit/storage/windbreaker/gray
 	desc = "A gray windbreaker."
 	icon_state = "windbreaker_gray"
 
-/obj/item/clothing/suit/storage/windbreaker/windbreaker_green
-	name = "green windbreaker"
+/obj/item/clothing/suit/storage/windbreaker/green
 	desc = "A green windbreaker."
 	icon_state = "windbreaker_green"
+
+/obj/item/clothing/suit/storage/windbreaker/yellow
+	desc = "A yellow windbreaker."
+	icon_state = "windbreaker_yellow"
 

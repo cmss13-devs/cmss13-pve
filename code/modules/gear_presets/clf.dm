@@ -13,7 +13,7 @@
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
 
-/datum/equipment_preset/uscm/load_name(mob/living/carbon/human/new_human, randomise)
+/datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(MALE, FEMALE)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
@@ -41,35 +41,54 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/clf/soldier
+/datum/equipment_preset/clf/guerilla
 	name = "Insurgent - Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Class C Inhabitant"
-	rank = JOB_CLF
+/datum/equipment_preset/clf/guerilla/New()
+	var/random_assignment = rand(0,4)
+	switch(random_assignment)
+		if(0 to 1)
+			assignment = "Class D Inhabitant"
+		if(2 to 3)
+			assignment = "Class C Inhabitant"
+		if(4)
+			assignment = "Class B Inhabitant"
 
+/datum/equipment_preset/clf/guerilla/New()
+	rank = JOB_CLF
 	skills = /datum/skills/clf
 
-/datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+/datum/equipment_preset/clf/guerilla/load_gear(mob/living/carbon/human/new_human)
 	var/random_gear = rand(1,6)
 	switch(random_gear)
 		if(1)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/pilot(new_human), WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/brown(new_human), WEAR_JACKET)
 		if(2)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/workwear/khaki(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/yellow(new_human), WEAR_JACKET)
 		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/gray(new_human), WEAR_JACKET)
 		if(4)
-
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/cyan(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest(new_human), WEAR_JACKET)
 		if(5)
-
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/workwear/blue(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/bomber(new_human), WEAR_JACKET)
 		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/gray(new_human), WEAR_JACKET)
 //*****************************************************************************************************/
 
-/datum/equipment_preset/clf/specialist
-	name = "CLF - RPG"
+/datum/equipment_preset/clf/sniper
+	name = "Insurgent - Sniper"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_SPECIALIST
@@ -81,32 +100,13 @@
 
 /datum/equipment_preset/clf/specialist/load_gear(mob/living/carbon/human/new_human)
 	var/random_gear = rand(1,6)
-	switch(random_gear)
-		if(1)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/pilot(new_human), WEAR_JACKET)
-		if(2)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
-		if(3)
-		if(4)
 
-		if(5)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/green(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
 
-		if(6)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/swat(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/mod88(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night(new_human), WEAR_EYES)
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 	//standard backpack stuff
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_BACK)
 	//specialist backpack stuff
 	new_human.equip_to_slot_or_del(new /obj/item/prop/folded_anti_tank_sadar(new_human), WEAR_IN_BACK)
@@ -128,12 +128,13 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/clf/leader
+/datum/equipment_preset/clf/soldier
 	name = "Insurgent - Armed"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Class C Inhabitant"
 	rank = JOB_CLF_LEADER
 	skills = /datum/skills/clf/leader
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/clf/leader/New()
 	. = ..()
