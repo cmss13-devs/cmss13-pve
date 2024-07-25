@@ -313,10 +313,9 @@
 					var/obj/structure/dropship_equipment/sentry_holder/sentry = equipment
 					var/obj/structure/machinery/defenses/sentry/defense = sentry.deployed_turret
 					if(defense.has_camera)
-						defense.set_range()
-						var/datum/shape/rectangle/current_bb = defense.range_bounds
+						defense.setup_target_acquisition()
 						camera_area_equipment = sentry
-						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, current_bb.center_x, current_bb.center_y, defense.loc.z, current_bb.width, current_bb.height)
+						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, defense.loc.x, defense.loc.y, defense.loc.z, 11, 11)
 				return TRUE
 
 		if("clear-camera")
