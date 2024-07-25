@@ -89,9 +89,3 @@ spawn_rebel_shoes
 		)
 	human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
-//children of spawn rebel shoes proc
-/datum/equipment_preset/survivor/clf/cold/spawn_rebel_shoes(mob/living/carbon/human/human)
-	if(!istype(human))
-		return
-	var/shoespath = /obj/item/clothing/shoes/combat
-	human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
