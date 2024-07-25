@@ -292,7 +292,8 @@ export const SquadInfo = () => {
             <Section
               title={`${data.squad} Platoon Sergeant: ${
                 data.pltsgt?.name ?? 'None'
-              }`}>
+              }`}
+            >
               <SquadObjectives />
             </Section>
           </Flex.Item>

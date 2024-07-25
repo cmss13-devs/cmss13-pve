@@ -1,5 +1,14 @@
 import { useBackend } from '../backend';
-import { Dropdown, Box, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
+import {
+  Box,
+  Button,
+  Collapsible,
+  Divider,
+  Dropdown,
+  Section,
+  Slider,
+  Stack,
+} from '../components';
 import { Window } from '../layouts';
 
 export const GameMaster = (props, context) => {
