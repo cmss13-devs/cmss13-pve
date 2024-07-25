@@ -1,8 +1,17 @@
-import { useBackend, useLocalState } from 'tgui/backend';
-import { Box, Button, Dropdown, Input, Section, Slider, Stack, Tabs } from 'tgui/components';
-import { Window } from 'tgui/layouts';
-import { Component } from 'react';
 import { debounce } from 'common/timer';
+import { Component, useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import {
+  Box,
+  Button,
+  Dropdown,
+  Input,
+  Section,
+  Slider,
+  Stack,
+  Tabs,
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
 
 interface SoundPanelData {
   sound_list: string[];
@@ -10,7 +19,7 @@ interface SoundPanelData {
   zlevel_list: string[];
   group_list: string[];
   sound_path: string;
-  sound_category: number;
+  sound_category: string;
   sound_volume: number;
   sound_pitch: number;
   sound_duration: number;
@@ -44,9 +53,8 @@ export const SoundPanel = () => {
       component: <ServerPage />,
     },
   ];
-  const [tabIndex, setTabIndex] = useLocalState<number>(
-    'tabIndex',
-    PAGES.findIndex((page) => page.title === 'Local')
+  const [tabIndex, setTabIndex] = useState<number>(
+    PAGES.findIndex((page) => page.title === 'Local'),
   );
 
   return (
@@ -77,7 +85,8 @@ export const SoundPanel = () => {
                         <Tabs.Tab
                           key={i}
                           selected={i === tabIndex}
-                          onClick={() => setTabIndex(i)}>
+                          onClick={() => setTabIndex(i)}
+                        >
                           {page.title}
                         </Tabs.Tab>
                       );
@@ -170,7 +179,6 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                 return (
                   <Button
                     color="transparent"
-                    content={item.fileName}
                     fluid
                     key={item.id}
                     my={0}
@@ -179,15 +187,18 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                     style={{
                       animation: 'none',
                       transition: 'none',
-                    }}>
+                    }}
+                  >
+                    {item.fileName}
                     <Box
+                      fontSize="0.75rem"
                       style={{
-                        'font-size': '0.75rem',
-                        opacity: 0.5,
+                        opacity: '0.5',
                         position: 'absolute',
-                        right: 0,
-                        top: 0,
-                      }}>
+                        right: '0',
+                        top: '0',
+                      }}
+                    >
                       {item.dirName}
                     </Box>
                   </Button>
@@ -229,12 +240,13 @@ const SoundOptions = () => {
                 Category
               </Box>
               <Dropdown
-                noscroll
                 onSelected={(value) =>
                   act('set_sound_category', { sound_category: value })
                 }
                 options={category_list}
                 selected={sound_category}
+                menuWidth="100px"
+                width="100px"
               />
             </Stack.Item>
             <Stack.Item grow>
@@ -294,16 +306,15 @@ const SoundOptions = () => {
               <Button
                 color="good"
                 disabled={!sound_path}
-                content="Preview"
                 onClick={() => act('play_preview')}
-              />
+              >
+                Preview
+              </Button>
             </Stack.Item>
             <Stack.Item>
-              <Button
-                color="bad"
-                content="Stop"
-                onClick={() => act('stop_preview')}
-              />
+              <Button color="bad" onClick={() => act('stop_preview')}>
+                Stop
+              </Button>
             </Stack.Item>
           </Stack>
         </Stack.Item>
@@ -319,7 +330,7 @@ const ClientPage = () => {
   return (
     <Stack vertical>
       <Stack.Item>
-        <Button content="Select Client" onClick={() => act('select_client')} />
+        <Button onClick={() => act('select_client')}>Select Client</Button>
       </Stack.Item>
       <Stack.Item>
         <Box>{target_player_desc || 'N/A'}</Box>
@@ -328,9 +339,10 @@ const ClientPage = () => {
         <Button
           color="good"
           disabled={!sound_path || !target_player_desc}
-          content="Play to Client"
           onClick={() => act('play_client')}
-        />
+        >
+          Play to Client
+        </Button>
       </Stack.Item>
     </Stack>
   );
@@ -347,17 +359,19 @@ const LocalPage = () => {
         <Stack>
           <Stack.Item>
             <Button
-              selected={loc_click_intercept}
-              content="Click Target"
+              selected={!!loc_click_intercept}
               onClick={() => act('toggle_loc_click_intercept')}
-            />
+            >
+              Click Target
+            </Button>
           </Stack.Item>
           <Stack.Item>
             <Button.Checkbox
-              checked={loc_click_play}
-              content="Play on Click"
+              checked={!!loc_click_play}
               onClick={() => act('toggle_loc_click_play')}
-            />
+            >
+              Play on Click
+            </Button.Checkbox>
           </Stack.Item>
         </Stack>
       </Stack.Item>
@@ -368,9 +382,10 @@ const LocalPage = () => {
         <Button
           color="good"
           disabled={!sound_path || !target_loc_desc}
-          content="Play Locally"
           onClick={() => act('play_local')}
-        />
+        >
+          Play Locally
+        </Button>
       </Stack.Item>
     </Stack>
   );
@@ -389,8 +404,8 @@ const ZLevelPage = () => {
           onSelected={(value) =>
             act('set_target_zlevel', { target_zlevel: value })
           }
+          menuWidth="180px"
           width="180px"
-          noscroll
           over
         />
       </Stack.Item>
@@ -398,9 +413,10 @@ const ZLevelPage = () => {
         <Button
           color="good"
           disabled={!sound_path || !target_zlevel}
-          content="Play to ZLevel"
           onClick={() => act('play_zlevel')}
-        />
+        >
+          Play to ZLevel
+        </Button>
       </Stack.Item>
     </Stack>
   );
@@ -419,8 +435,8 @@ const ServerPage = () => {
           onSelected={(value) =>
             act('set_target_group', { target_group: value })
           }
+          menuWidth="80px"
           width="80px"
-          noscroll
           over
         />
       </Stack.Item>
@@ -428,9 +444,10 @@ const ServerPage = () => {
         <Button
           color="good"
           disabled={!sound_path || !target_group}
-          content="Play to Group"
           onClick={() => act('play_group')}
-        />
+        >
+          Play to Group
+        </Button>
       </Stack.Item>
     </Stack>
   );
