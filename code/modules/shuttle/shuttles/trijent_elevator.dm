@@ -27,6 +27,8 @@
 	door_control.label = "elevator"
 	for(var/area/shuttle_area in shuttle_areas)
 		for(var/obj/structure/machinery/door/door in shuttle_area)
+			if(isnum(door.id)) //poddoor filler was sneaking in
+				continue
 			door_control.add_door(door, door.id)
 
 /obj/docking_port/mobile/trijent_elevator/Destroy(force, ...)
