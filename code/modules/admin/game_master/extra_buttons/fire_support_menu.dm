@@ -40,12 +40,12 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 	. = ..()
 	var/list/data = list()
 
-		data["ordnance_options"] = ORDNANCE_OPTIONS
+	data["ordnance_options"] = ORDNANCE_OPTIONS
 
-		data["missile_ordnance_options"] = MISSILE_ORDNANCE
-		data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
-		data["mortar_ordnance_options"] = MORTAR_ORDNANCE
-		data["misc_ordnance_options"] = MISC_ORDNANCE
+	data["missile_ordnance_options"] = MISSILE_ORDNANCE
+	data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
+	data["mortar_ordnance_options"] = MORTAR_ORDNANCE
+	data["misc_ordnance_options"] = MISC_ORDNANCE
 
 	return data
 
