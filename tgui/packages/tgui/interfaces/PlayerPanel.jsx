@@ -77,7 +77,15 @@ export const PlayerPanel = (props) => {
   const [pageIndex, setPageIndex] = useState(0);
   const [canModifyCkey, setModifyCkey] = useState(false);
   const PageComponent = PAGES[pageIndex].component();
-  const { mob_name, mob_type, client_key, client_ckey, client_rank } = data;
+  const {
+    mob_name,
+    mob_type,
+    client_key,
+    client_ckey,
+    client_rank,
+    client_age,
+    first_join,
+  } = data;
 
   return (
     <Window title={`${mob_name} Player Panel`} width={600} height={500}>
