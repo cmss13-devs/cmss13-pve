@@ -114,6 +114,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		"varadero" = list(list(24, 162, 3), list(58, 162, 3), list(92, 162, 3)),
 		"ice_colony" = list(list(19, 128, 3), list(55, 128, 3), list(91, 128, 3)),
 		"chances_claim" = list(list(23, 86, 3), list(61, 86, 3), list(99, 86, 3)),
+		"corsat" = list(list(58, 13, 3), list(119, 13, 3), list(152, 52, 3)),
 		"final" = list(list(19, 54, 3)),
 	)
 	var/list/next_simulation = list(24, 194, 3)
@@ -161,6 +162,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 			"varadero" = list(),
 			"ice_colony" = list(),
 			"chances_claim" = list(),
+			"corsat" = list(),
 			"final" = list()
 		)
 		for(var/entry in GLOB.simulation_controller.non_completed_simulations)
@@ -262,9 +264,19 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 /client/proc/boss_finish_verb()
 	set name = "Boss Finished"
 	set category = "Admin.Simulation"
+	set waitfor = FALSE
 
 	if(!check_rights(R_EVENT))
 		return
+
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		to_chat(save.tied_human, SPAN_BOLDWARNING("With the destruction of the monolith, you feel yourself rejuvinate."))
+		save.tied_human.rejuvenate()
+
+	message_admins("Finish pt1 executed")
+
+	sleep(6 SECONDS)
 
 	for(var/savename in GLOB.simulacrum_playersaves)
 		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
@@ -272,6 +284,8 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 	for(var/turf/T as anything in block(56, 54, 3, 68, 54, 3))
 		T.ChangeTurf(/turf/open/floor/void)
+
+	message_admins("Finish pt2 executed")
 
 /client/proc/end_game_good()
 	set name = "Game End - Good"

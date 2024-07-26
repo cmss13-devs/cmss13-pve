@@ -47,6 +47,12 @@
 	},
 /turf/open/floor/interior/wood,
 /area/simulacrum/interior)
+"ai" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "an" = (
 /obj/effect/decal/sand_overlay/sand1/corner1,
 /turf/open/asphalt/cement,
@@ -58,6 +64,12 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
+/area/simulacrum/interior)
+"ar" = (
+/obj/structure/ice/thin/end{
+	dir = 1
+	},
+/turf/open/ice,
 /area/simulacrum/interior)
 "at" = (
 /obj/structure/machinery/vending/coffee,
@@ -118,6 +130,12 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"aZ" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "ba" = (
 /turf/closed/ice_rock/singleEnd,
 /area/simulacrum/interior/exterior)
@@ -137,6 +155,12 @@
 /obj/structure/largecrate,
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"bh" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
 "bi" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2;
@@ -165,6 +189,18 @@
 "bs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood/alt,
+/area/simulacrum/interior)
+"bv" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
+	name = "Airlock Control";
+	req_access_txt = "101"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
 /area/simulacrum/interior)
 "bw" = (
 /obj/structure/closet/secure_closet/personal/patient,
@@ -214,6 +250,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood,
 /area/simulacrum/interior)
+"bJ" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluecorner"
+	},
+/area/simulacrum/interior)
 "bL" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -246,10 +288,35 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"bT" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "bX" = (
 /obj/effect/alien/resin/spike,
 /turf/open/gm/dirt,
 /area/simulacrum/interior/exterior)
+"bY" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/closed/wall/resin/thick,
+/area/simulacrum/interior)
+"bZ" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
 "cb" = (
 /obj/item/lightstick/red/planted,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -271,6 +338,15 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"cl" = (
+/obj/structure/machinery/constructable_frame{
+	icon_state = "box_1"
+	},
+/obj/effect/decal/cleanable/cobweb{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/simulacrum/interior)
 "cn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -278,6 +354,46 @@
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"cp" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
+"cs" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/door_control{
+	id = "GammaSouthN";
+	name = "Airlock Control";
+	pixel_x = -5;
+	pixel_y = 6;
+	use_power = 0
+	},
+/obj/structure/machinery/door_control{
+	id = "GammaSouthS";
+	name = "Airlock Control";
+	pixel_x = -5;
+	pixel_y = -3;
+	use_power = 0
+	},
+/obj/structure/machinery/door_control{
+	id = "GammaSouthAirlockC";
+	name = "Security Shutters";
+	pixel_x = 5;
+	pixel_y = 2;
+	use_power = 0
+	},
+/obj/structure/machinery/camera/autoname{
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"cu" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
 	},
 /area/simulacrum/interior)
 "cz" = (
@@ -302,6 +418,12 @@
 	},
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"cR" = (
+/obj/effect/landmark/monkey_spawn,
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 1
+	},
+/area/simulacrum/interior)
 "cS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -333,6 +455,22 @@
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
+	},
+/area/simulacrum/interior)
+"de" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"dh" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "di" = (
@@ -369,10 +507,89 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"dr" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"ds" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"dw" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 10;
+	icon_state = "full_corners"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"dx" = (
+/obj/structure/computerframe,
+/obj/effect/decal/cleanable/cobweb{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/simulacrum/interior)
+"dA" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"dD" = (
+/obj/effect/landmark/xeno_hive_spawn,
+/obj/effect/landmark/ert_spawns/groundside_xeno,
+/turf/open/ice,
+/area/simulacrum/interior)
 "dG" = (
 /turf/open/floor{
 	dir = 10;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"dU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
+"dW" = (
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"dY" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"dZ" = (
+/turf/open/floor/wood,
+/area/simulacrum/interior)
+"eb" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
+"ee" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
 	},
 /area/simulacrum/interior)
 "eg" = (
@@ -380,6 +597,23 @@
 /obj/effect/alien/resin/spike,
 /turf/open/desert/dirt,
 /area/simulacrum/interior/exterior)
+"ei" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "full_corners"
+	},
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"ej" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "west_wall"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
 "el" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -390,6 +624,11 @@
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"em" = (
+/turf/open/floor/corsat{
+	icon_state = "bluegreycorner"
 	},
 /area/simulacrum/interior)
 "en" = (
@@ -404,6 +643,12 @@
 /obj/item/shard,
 /turf/open/floor/interior/wood/alt,
 /area/simulacrum/interior)
+"eq" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "er" = (
 /obj/structure/machinery/space_heater,
 /obj/effect/spawner/random/claymore/highchance{
@@ -412,6 +657,24 @@
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"eu" = (
+/obj/structure/mineral_door/resin/thick,
+/turf/open/ice,
+/area/simulacrum/interior)
+"ew" = (
+/turf/closed/ice/corner{
+	dir = 4
+	},
+/area/simulacrum/interior)
+"ex" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "redcorner"
 	},
 /area/simulacrum/interior)
 "eA" = (
@@ -441,6 +704,18 @@
 	},
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"eX" = (
+/obj/structure/safe,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"fh" = (
+/turf/closed/ice/corner{
+	dir = 8
+	},
+/area/simulacrum/interior)
 "fk" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -494,6 +769,16 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"fA" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "fJ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -509,6 +794,20 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"fN" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
+"fO" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "fR" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/prison{
@@ -566,14 +865,73 @@
 	icon_state = "62"
 	},
 /area/simulacrum/interior)
+"gl" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 80
+	},
+/obj/item/clipboard,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "gm" = (
 /obj/item/lightstick/red/planted,
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"go" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"gq" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/simulacrum/interior)
+"gu" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 9;
+	icon_state = "full_corners"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"gx" = (
+/obj/structure/tunnel,
+/turf/open/ice,
+/area/simulacrum/interior)
+"gE" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "gH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/interior/wood,
+/area/simulacrum/interior)
+"gI" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplecorner"
+	},
+/area/simulacrum/interior)
+"gJ" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
 /area/simulacrum/interior)
 "gK" = (
 /turf/open/desert/dirt{
@@ -586,6 +944,26 @@
 /obj/item/tool/pickaxe,
 /obj/structure/machinery/light,
 /turf/open/floor/interior/wood/alt,
+/area/simulacrum/interior)
+"gY" = (
+/turf/closed/wall/r_wall/biodome,
+/area/simulacrum/interior)
+"ha" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/alien/weeds/node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"hc" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/donkpockets,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
 /area/simulacrum/interior)
 "hd" = (
 /turf/closed/shuttle/dropship2/tornado{
@@ -608,6 +986,23 @@
 "hi" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/interior/wood,
+/area/simulacrum/interior)
+"hl" = (
+/turf/open/floor/corsat{
+	icon_state = "purplewhitecorner"
+	},
+/area/simulacrum/interior)
+"hp" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 80
+	},
+/obj/structure/window/reinforced,
+/obj/item/storage/fancy/cigarettes/lucky_strikes,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
 /area/simulacrum/interior)
 "hs" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -643,6 +1038,20 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
+"hD" = (
+/obj/structure/barricade/metal/wired{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"hG" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "blue"
+	},
+/area/simulacrum/interior)
 "hT" = (
 /obj/structure/closet/crate/explosives,
 /obj/item/storage/box/explosive_mines,
@@ -655,15 +1064,36 @@
 /obj/structure/machinery/light,
 /turf/open/floor/interior/wood/alt,
 /area/simulacrum/interior)
+"hW" = (
+/obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
+/turf/open/ice,
+/area/simulacrum/interior)
+"hX" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet9-4"
+	},
+/area/simulacrum/interior)
 "hY" = (
 /obj/effect/decal/sand_overlay/sand1,
 /turf/open/asphalt/cement{
 	icon_state = "cement12"
 	},
 /area/simulacrum/interior/exterior)
+"hZ" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "id" = (
 /turf/closed/ice/corner,
 /area/simulacrum/interior/exterior)
+"ie" = (
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
 "ig" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "30"
@@ -720,6 +1150,27 @@
 /obj/structure/machinery/light,
 /turf/open/floor/interior/wood/alt,
 /area/simulacrum/interior)
+"iA" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	damage_cap = 4000;
+	dir = 1;
+	locked = 0;
+	name = "\improper Emergency Access";
+	req_access_txt = "100";
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
+"iC" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "iD" = (
 /turf/open/floor{
 	dir = 8;
@@ -752,6 +1203,13 @@
 	},
 /turf/closed/ice_rock/corners,
 /area/simulacrum/interior/exterior)
+"iM" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "iV" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -760,6 +1218,27 @@
 /turf/open/floor/shiva{
 	icon_state = "green"
 	},
+/area/simulacrum/interior)
+"iW" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplecorner"
+	},
+/area/simulacrum/interior)
+"jb" = (
+/obj/effect/landmark/monkey_spawn,
+/turf/open/floor/almayer/research/containment/corner_var1{
+	dir = 4
+	},
+/area/simulacrum/interior)
+"jc" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 4
+	},
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 8
+	},
+/turf/closed/ice_rock/corners,
 /area/simulacrum/interior)
 "jd" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -772,6 +1251,21 @@
 /obj/item/shard/shrapnel,
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"je" = (
+/turf/open/floor/almayer/research/containment/corner_var1{
+	dir = 4
+	},
+/area/simulacrum/interior)
+"jg" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "OmegaOffice";
+	name = "Privacy Shutters"
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "ji" = (
@@ -807,6 +1301,20 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"jr" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"jy" = (
+/obj/structure/bed/chair/office/light,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "jB" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -816,6 +1324,13 @@
 	},
 /obj/structure/barricade/metal/wired,
 /turf/open/floor/plating,
+/area/simulacrum/interior)
+"jC" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
 /area/simulacrum/interior)
 "jD" = (
 /turf/closed/shuttle/dropship2/tornado{
@@ -846,12 +1361,29 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"jT" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "jV" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"jW" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "jZ" = (
 /obj/structure/surface/table,
 /obj/item/storage/firstaid/fire,
@@ -890,6 +1422,10 @@
 	dir = 4;
 	icon_state = "green"
 	},
+/area/simulacrum/interior)
+"kl" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior)
 "ko" = (
 /obj/structure/surface/table,
@@ -956,15 +1492,43 @@
 /obj/structure/platform_decoration,
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"kM" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
 "kN" = (
 /obj/item/ammo_magazine/rifle/heap{
 	current_rounds = 0
 	},
 /turf/open/floor/prison,
 /area/simulacrum/interior/exterior)
+"kO" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/obj/effect/alien/weeds/node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "kP" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "25"
+	},
+/area/simulacrum/interior)
+"kR" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 4
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
 	},
 /area/simulacrum/interior)
 "kU" = (
@@ -976,9 +1540,23 @@
 	icon_state = "bright_clean"
 	},
 /area/simulacrum/interior)
+"kX" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "kZ" = (
 /turf/closed/wall/rock/orange,
 /area/simulacrum/interior/exterior)
+"lc" = (
+/turf/open/floor/almayer/research/containment/corner{
+	dir = 4
+	},
+/area/simulacrum/interior)
 "ld" = (
 /turf/open/space/basic,
 /area/simulacrum/interior/exterior)
@@ -1016,6 +1594,13 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"lj" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "lu" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpsespawner/scientist,
@@ -1029,6 +1614,29 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/simulacrum/interior/exterior)
+"lx" = (
+/obj/structure/fence,
+/obj/structure/sign/safety/airlock{
+	pixel_y = -32
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/simulacrum/interior)
+"lA" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"lB" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/device/flashlight/lamp/green,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
 "lD" = (
 /obj/structure/closet/secure_closet/medical3{
 	req_access_txt = "100"
@@ -1043,6 +1651,14 @@
 	icon_state = "26"
 	},
 /area/simulacrum/interior/exterior)
+"lR" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/lighter/random,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "lT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tool/pickaxe/drill,
@@ -1050,6 +1666,25 @@
 	dir = 10;
 	icon_state = "bright_clean"
 	},
+/area/simulacrum/interior)
+"lU" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
+	name = "ID Checkpoint";
+	req_access_txt = "101"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
+"lW" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 4;
+	icon_state = "single_ends"
+	},
+/turf/closed/ice_rock/corners,
 /area/simulacrum/interior)
 "lX" = (
 /turf/closed/shuttle/dropship2/tornado,
@@ -1059,6 +1694,13 @@
 /turf/open/floor{
 	icon_state = "whitered"
 	},
+/area/simulacrum/interior)
+"mk" = (
+/turf/open/floor/almayer/research/containment/corner4,
+/area/simulacrum/interior)
+"mm" = (
+/obj/effect/alien/weeds/node,
+/turf/open/ice,
 /area/simulacrum/interior)
 "mp" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -1084,6 +1726,12 @@
 	icon_state = "rasputin6"
 	},
 /area/simulacrum/interior)
+"mt" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet11-12"
+	},
+/area/simulacrum/interior)
 "mz" = (
 /obj/structure/barricade/metal/wired{
 	dir = 4
@@ -1097,10 +1745,54 @@
 	icon_state = "70"
 	},
 /area/simulacrum/interior/exterior)
+"mH" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/door_control{
+	id = "OmegaOffice";
+	name = "Privacy Shutters";
+	pixel_y = 1;
+	use_power = 0
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"mJ" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/simulacrum/interior)
 "mT" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood/alt,
+/area/simulacrum/interior)
+"mW" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"mY" = (
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 1
+	},
+/area/simulacrum/interior)
+"mZ" = (
+/obj/structure/barricade/metal/wired,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"na" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 6;
+	icon_state = "full_corners"
+	},
+/turf/closed/ice_rock/corners,
 /area/simulacrum/interior)
 "nb" = (
 /obj/structure/curtain/open/medical,
@@ -1120,6 +1812,12 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
+"nh" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
 "nk" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -1136,6 +1834,30 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"nm" = (
+/obj/structure/barricade/metal/wired,
+/turf/open/floor/corsat{
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"np" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"nq" = (
+/obj/structure/surface/table/almayer,
+/obj/item/form_printer,
+/obj/item/tool/pen,
+/obj/structure/machinery/camera/autoname{
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
 "nv" = (
 /obj/structure/machinery/alarm{
 	dir = 8;
@@ -1144,6 +1866,27 @@
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"nx" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/noticeboard{
+	pixel_y = 32
+	},
+/obj/item/paper_bin,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"ny" = (
+/obj/structure/surface/table/almayer,
+/obj/item/folder/black_random,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
 	},
 /area/simulacrum/interior)
 "nA" = (
@@ -1155,6 +1898,14 @@
 /turf/open/floor/shiva{
 	dir = 1;
 	icon_state = "green"
+	},
+/area/simulacrum/interior)
+"nB" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/donut_box,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
 	},
 /area/simulacrum/interior)
 "nE" = (
@@ -1185,6 +1936,23 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"nU" = (
+/obj/structure/closet/wardrobe/white,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/mask/rebreather,
+/obj/item/clothing/mask/rebreather,
+/obj/item/clothing/shoes/snow,
+/obj/item/clothing/shoes/snow,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/suit/storage/snow_suit,
+/obj/item/clothing/suit/storage/snow_suit,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "nW" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -1192,6 +1960,14 @@
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"ob" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/bronze,
+/obj/item/tool/lighter/random,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "oc" = (
@@ -1204,6 +1980,23 @@
 	},
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"oe" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"of" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "omega"
+	},
+/area/simulacrum/interior)
 "oi" = (
 /obj/structure/surface/table,
 /obj/item/paper/research_notes,
@@ -1221,6 +2014,20 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating,
 /area/simulacrum/interior)
+"oo" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet5-1"
+	},
+/area/simulacrum/interior)
+"oq" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/bronze,
+/obj/item/tool/lighter/random,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "or" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "15"
@@ -1234,6 +2041,16 @@
 "ov" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "18"
+	},
+/area/simulacrum/interior)
+"ox" = (
+/obj/structure/machinery/vending/snack,
+/obj/structure/machinery/camera/autoname{
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
 	},
 /area/simulacrum/interior)
 "oz" = (
@@ -1255,6 +2072,22 @@
 /turf/open/floor{
 	dir = 8;
 	icon_state = "darkgreencorners2"
+	},
+/area/simulacrum/interior)
+"oJ" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"oK" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
 	},
 /area/simulacrum/interior)
 "oL" = (
@@ -1281,6 +2114,14 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"pa" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/atmos_alert,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "pe" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/floor/prison{
@@ -1293,9 +2134,40 @@
 	dir = 1
 	},
 /area/simulacrum/interior/exterior)
+"ph" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"pi" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"pj" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet6-2"
+	},
+/area/simulacrum/interior)
 "pk" = (
 /obj/structure/window/framed/colony,
 /turf/open/floor/plating,
+/area/simulacrum/interior)
+"pl" = (
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/open{
+	id = "GammaSouthN";
+	name = "Gamma South Airlock"
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
 /area/simulacrum/interior)
 "pm" = (
 /turf/open/floor/prison{
@@ -1313,6 +2185,11 @@
 	icon_state = "bright_clean"
 	},
 /area/simulacrum/interior)
+"pr" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "ps" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -1323,12 +2200,47 @@
 	},
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
+"pu" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
+"pw" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/item/tool/pen/blue,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"px" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplecorner"
+	},
+/area/simulacrum/interior)
 "pz" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"pA" = (
+/obj/structure/fence,
+/turf/open/auto_turf/snow/layer1,
+/area/simulacrum/interior)
+"pC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/bronze,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "pL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/metal/wired,
@@ -1352,6 +2264,27 @@
 	dir = 4;
 	icon_state = "whiteredcorner"
 	},
+/area/simulacrum/interior)
+"pP" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
+"pS" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"pV" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"pX" = (
+/obj/structure/window/framed/corsat/hull/research,
+/turf/open/floor/plating,
 /area/simulacrum/interior)
 "qb" = (
 /obj/structure/curtain/medical,
@@ -1401,6 +2334,13 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"qv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/donut_box,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "qB" = (
 /obj/item/explosive/mine/active{
 	dir = 4
@@ -1424,6 +2364,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"qJ" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/simulacrum/interior)
 "qL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1451,6 +2397,10 @@
 /obj/structure/ice/thin/corner,
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"qW" = (
+/obj/effect/alien/weeds/node,
+/turf/open/floor/almayer/research/containment/floor2,
+/area/simulacrum/interior)
 "qX" = (
 /obj/structure/barricade/metal/wired{
 	dir = 4
@@ -1490,6 +2440,14 @@
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"rs" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "ru" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -1517,6 +2475,15 @@
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "47"
 	},
+/area/simulacrum/interior)
+"rH" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "OmegaOffice";
+	name = "Privacy Shutters"
+	},
+/turf/open/floor/plating,
 /area/simulacrum/interior)
 "rR" = (
 /obj/structure/disposalpipe/segment{
@@ -1548,6 +2515,12 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"sf" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/simulacrum/interior)
 "sp" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
@@ -1576,6 +2549,15 @@
 	},
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
+"sB" = (
+/turf/open/auto_turf/snow/layer2,
+/area/simulacrum/interior)
+"sE" = (
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "sG" = (
 /obj/structure/toilet{
 	dir = 1
@@ -1590,6 +2572,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood,
+/area/simulacrum/interior)
+"sN" = (
+/obj/structure/tunnel,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
 /area/simulacrum/interior)
 "sO" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -1614,6 +2602,17 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"sW" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/tool/stamp/rd,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
+"ta" = (
+/turf/open/floor/corsat,
+/area/simulacrum/interior)
 "tb" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor{
@@ -1629,11 +2628,31 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"tg" = (
+/obj/structure/machinery/door/airlock/almayer/command/colony{
+	dir = 1;
+	name = "Administration";
+	req_access_txt = "106"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "th" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "3"
 	},
 /area/simulacrum/interior/exterior)
+"tk" = (
+/obj/structure/machinery/camera/autoname{
+	dir = 1;
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "tm" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor{
@@ -1719,6 +2738,29 @@
 	icon_state = "68"
 	},
 /area/simulacrum/interior)
+"tM" = (
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
+"tS" = (
+/obj/structure/surface/table/almayer,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"tV" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "tX" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -1735,6 +2777,14 @@
 /turf/open/floor/shiva{
 	dir = 10;
 	icon_state = "green"
+	},
+/area/simulacrum/interior)
+"ui" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/folder/black_random,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
 	},
 /area/simulacrum/interior)
 "up" = (
@@ -1794,6 +2844,12 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"uP" = (
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "uQ" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/floor/prison,
@@ -1820,6 +2876,19 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"vb" = (
+/turf/closed/ice/end{
+	dir = 8
+	},
+/area/simulacrum/interior)
+"vf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/spray/cleaner,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
 "vg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1832,6 +2901,19 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"vk" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/colony{
+	autoclose = 0;
+	density = 0;
+	dir = 1;
+	icon_state = "door_open";
+	name = "Containment Cell 5";
+	req_one_access_txt = "103"
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/simulacrum/interior)
 "vl" = (
 /obj/structure/barricade/metal/wired{
 	dir = 8
@@ -1840,9 +2922,23 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"vq" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/barricade/plasteel/wired,
+/turf/open/floor/corsat{
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
 "vr" = (
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"vs" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "single_ends"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
 "vv" = (
 /obj/effect/spawner/random/claymore/highchance{
 	dir = 8
@@ -1870,6 +2966,46 @@
 "vH" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/interior/wood,
+/area/simulacrum/interior)
+"vI" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"vR" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhitecorner"
+	},
+/area/simulacrum/interior)
+"vU" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced,
+/obj/item/paper,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"vY" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"wb" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "south_wall"
+	},
+/turf/closed/ice_rock/corners,
 /area/simulacrum/interior)
 "wd" = (
 /turf/closed/ice_rock/corners{
@@ -1919,6 +3055,14 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"wt" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "wu" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/auto_turf/sand_white/layer1,
@@ -1953,6 +3097,12 @@
 	icon_state = "blue_plate"
 	},
 /area/simulacrum/interior/exterior)
+"wJ" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "blue"
+	},
+/area/simulacrum/interior)
 "wL" = (
 /obj/structure/flora/pottedplant,
 /obj/structure/disposalpipe/segment{
@@ -1965,6 +3115,13 @@
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"wM" = (
+/obj/structure/machinery/vending/cigarette/colony,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "bluegrey"
 	},
 /area/simulacrum/interior)
 "wR" = (
@@ -2003,6 +3160,35 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"xi" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"xj" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/faxmachine,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"xl" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/colony{
+	autoclose = 0;
+	density = 0;
+	icon_state = "door_open";
+	id = "CORSAT Containment 4";
+	name = "Containment Cell 1";
+	req_one_access_txt = "103"
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/simulacrum/interior)
 "xn" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/floor/prison{
@@ -2023,10 +3209,52 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"xu" = (
+/obj/structure/flora/pottedplant,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"xv" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluecorner"
+	},
+/area/simulacrum/interior)
+"xw" = (
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 8
+	},
+/area/simulacrum/interior)
+"xz" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/barricade/plasteel/wired,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "xB" = (
 /obj/structure/tunnel,
 /turf/open/desert/dirt,
 /area/simulacrum/interior/exterior)
+"xF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 80
+	},
+/obj/structure/machinery/computer/atmos_alert,
+/obj/structure/machinery/camera/autoname{
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "xI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2036,6 +3264,28 @@
 	},
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"xK" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
+"xL" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"xN" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
 	},
 /area/simulacrum/interior)
 "xQ" = (
@@ -2062,6 +3312,25 @@
 	},
 /turf/closed/wall/resin/thick,
 /area/simulacrum/interior/exterior)
+"xV" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 5;
+	icon_state = "full_corners"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"xY" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"ya" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
 "yj" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -2069,6 +3338,18 @@
 /obj/item/tool/wet_sign,
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"yl" = (
+/turf/open/floor/almayer/research/containment/corner_var1{
+	icon_state = "containment_corner_variant_2"
+	},
+/area/simulacrum/interior)
+"yn" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/lighter/random,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
 	},
 /area/simulacrum/interior)
 "yp" = (
@@ -2081,6 +3362,14 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"yq" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "ys" = (
 /turf/closed/wall/indestructible/other,
 /area/simulacrum/desert)
@@ -2090,6 +3379,21 @@
 	},
 /turf/open/floor{
 	icon_state = "whiteredfull"
+	},
+/area/simulacrum/interior)
+"yy" = (
+/obj/structure/ice/thin/end{
+	dir = 8
+	},
+/turf/open/ice,
+/area/simulacrum/interior)
+"yA" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
 	},
 /area/simulacrum/interior)
 "yC" = (
@@ -2113,15 +3417,47 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"yG" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "yI" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin4"
+	},
+/area/simulacrum/interior)
+"yL" = (
+/obj/structure/window/framed/corsat/cell/research,
+/turf/open/floor/plating,
+/area/simulacrum/interior)
+"yR" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor{
+	dir = 1;
+	name = "Administration Office"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "OmegaOffice";
+	name = "Privacy Shutters"
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "yS" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva{
 	icon_state = "multi_tiles"
+	},
+/area/simulacrum/interior)
+"yT" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "yV" = (
@@ -2141,18 +3477,56 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"yY" = (
+/obj/structure/machinery/vending/cigarette/colony,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "za" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/simulacrum/interior/exterior)
+"zf" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/storage/fancy/cigar,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
 "zj" = (
 /obj/structure/ice/ice_rock/cornerOverlay{
 	dir = 1
 	},
 /turf/closed/ice_rock/corners,
 /area/simulacrum/interior/exterior)
+"zm" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"zw" = (
+/obj/item/alien_embryo{
+	color = "#00ff80";
+	name = "corrupted alien embryo"
+	},
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 1
+	},
+/area/simulacrum/interior)
+"zA" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "zB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -2193,6 +3567,30 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"zK" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/station_alert,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"zL" = (
+/obj/structure/window/framed/corsat/security,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "GammaSouthAirlockC";
+	name = "Security Shutters"
+	},
+/turf/open/floor/plating,
+/area/simulacrum/interior)
+"zM" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/cigarettes/lucky_strikes,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "zQ" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/plating,
@@ -2208,6 +3606,13 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/auto_turf/snow/layer3,
 /area/simulacrum/interior/exterior)
+"zU" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 8;
+	icon_state = "single_part"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
 "zZ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -2220,6 +3625,13 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"Ab" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Ac" = (
 /obj/item/explosive/mine/active,
 /turf/open/floor/prison{
@@ -2227,11 +3639,31 @@
 	icon_state = "floor_marked"
 	},
 /area/simulacrum/interior/exterior)
+"Ah" = (
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
 "Aj" = (
 /turf/closed/ice_rock/singlePart{
 	dir = 1
 	},
 /area/simulacrum/interior/exterior)
+"Ak" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	icon_state = "north_wall"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"Al" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/simulacrum/interior)
 "An" = (
 /obj/structure/platform{
 	dir = 4
@@ -2246,6 +3678,12 @@
 /obj/item/ammo_magazine/shotgun/slugs,
 /turf/open/floor/interior/wood,
 /area/simulacrum/interior)
+"Ap" = (
+/obj/structure/mineral_door/resin/thick,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Aw" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -2257,9 +3695,21 @@
 	icon_state = "rasputin15"
 	},
 /area/simulacrum/interior)
+"Ax" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
 "Az" = (
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
+"AB" = (
+/turf/closed/ice/end{
+	dir = 4
+	},
+/area/simulacrum/interior)
 "AC" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -2278,6 +3728,16 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"AI" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/secure_data{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "AK" = (
 /turf/open/floor{
 	dir = 4;
@@ -2293,6 +3753,21 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
+"AU" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"AY" = (
+/obj/structure/tunnel,
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"Ba" = (
+/obj/structure/closet/secure_closet/security,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "Bb" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "40"
@@ -2319,6 +3794,24 @@
 	},
 /turf/open/floor/plating,
 /area/simulacrum/interior)
+"Bo" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/station_alert{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"Bp" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "Bq" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -2343,6 +3836,11 @@
 	icon_state = "rasputin15"
 	},
 /area/simulacrum/interior)
+"BQ" = (
+/turf/open/floor/corsat{
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
 "BV" = (
 /turf/open/floor/void,
 /area/simulacrum)
@@ -2351,6 +3849,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/interior/wood/alt,
+/area/simulacrum/interior)
+"BX" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating,
 /area/simulacrum/interior)
 "Cb" = (
 /obj/structure/surface/table/reinforced,
@@ -2370,6 +3872,15 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"Ch" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Ci" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
@@ -2377,6 +3888,24 @@
 	},
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"Cj" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/machinery/computer/emails,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"Ck" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
 	},
 /area/simulacrum/interior)
 "Cm" = (
@@ -2423,6 +3952,14 @@
 	},
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"CF" = (
+/obj/effect/decal/cleanable/cobweb{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "CI" = (
 /obj/structure/sink{
 	dir = 1;
@@ -2438,6 +3975,11 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"CJ" = (
+/turf/open/floor/corsat{
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
 "CP" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor{
@@ -2445,11 +3987,61 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"CR" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"CT" = (
+/obj/structure/barricade/plasteel/wired,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"CU" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "full_corners"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"CW" = (
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "CX" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Da" = (
+/obj/structure/tunnel,
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
+"Df" = (
+/obj/structure/barricade/metal/wired,
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"Di" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/simulacrum/interior)
+"Dj" = (
+/turf/open/floor/almayer/research/containment/corner1,
+/area/simulacrum/interior)
+"Dm" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "Dq" = (
@@ -2470,6 +4062,20 @@
 	icon_state = "61"
 	},
 /area/simulacrum/interior/exterior)
+"DD" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"DF" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "DG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -2492,6 +4098,12 @@
 	icon_state = "darkgreencorners2"
 	},
 /area/simulacrum/interior)
+"DP" = (
+/obj/structure/ice/thin/end{
+	dir = 4
+	},
+/turf/open/ice,
+/area/simulacrum/interior)
 "DU" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -2499,6 +4111,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"DW" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
 "Eb" = (
 /obj/structure/machinery/firealarm{
 	dir = 1;
@@ -2518,6 +4137,24 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"Eh" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
+"Ek" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"Em" = (
+/obj/structure/ice/ice_rock/cornerOverlay,
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
 "En" = (
 /obj/structure/cargo_container/horizontal/blue/top,
 /turf/open/floor/prison{
@@ -2525,6 +4162,20 @@
 	icon_state = "floor_marked"
 	},
 /area/simulacrum/interior/exterior)
+"Eo" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
+"Er" = (
+/obj/structure/machinery/camera/autoname{
+	dir = 1;
+	network = list("gamma")
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
 "Eu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -2543,6 +4194,11 @@
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Ey" = (
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
 	},
 /area/simulacrum/interior)
 "Ez" = (
@@ -2591,6 +4247,11 @@
 	icon_state = "floor8"
 	},
 /area/simulacrum/interior)
+"Ff" = (
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Fh" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "86"
@@ -2608,10 +4269,32 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"Fz" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 6;
+	icon_state = "single"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"FD" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "FG" = (
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "bright_clean"
+	},
+/area/simulacrum/interior)
+"FI" = (
+/obj/structure/barricade/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "bluegreycorner"
 	},
 /area/simulacrum/interior)
 "FL" = (
@@ -2620,6 +4303,10 @@
 	dir = 10;
 	icon_state = "bright_clean"
 	},
+/area/simulacrum/interior)
+"FO" = (
+/obj/structure/ice/thin/corner,
+/turf/open/ice,
 /area/simulacrum/interior)
 "FP" = (
 /obj/structure/platform_decoration{
@@ -2631,6 +4318,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"FR" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/simulacrum/interior)
 "FT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -2642,12 +4335,37 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"FU" = (
+/obj/structure/barricade/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
 "FV" = (
 /obj/structure/ice/thin/end{
 	dir = 1
 	},
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"FX" = (
+/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"Ga" = (
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Gd" = (
 /obj/item/shard,
 /obj/effect/spawner/random/claymore/highchance{
@@ -2655,6 +4373,14 @@
 	},
 /turf/open/floor{
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Gg" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "Gh" = (
@@ -2668,6 +4394,15 @@
 /turf/open/floor{
 	dir = 10;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Go" = (
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/open{
+	id = "GammaSouthS";
+	name = "Gamma South Airlock"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
 	},
 /area/simulacrum/interior)
 "Gp" = (
@@ -2705,6 +4440,12 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"GL" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
 "GM" = (
 /obj/structure/stairs/perspective{
 	dir = 10;
@@ -2717,6 +4458,14 @@
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"GW" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "GY" = (
@@ -2750,6 +4499,13 @@
 	dir = 6
 	},
 /area/simulacrum/interior/exterior)
+"Hk" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Ho" = (
 /turf/open/desert/dirt,
 /area/simulacrum/interior/exterior)
@@ -2757,6 +4513,63 @@
 /obj/structure/mineral_door/resin/thick,
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
+"HB" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/camera,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
+"HE" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"HF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"HG" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"HH" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/simulacrum/interior)
+"HL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"HN" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"HQ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/cigarettes/lucky_strikes,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "HR" = (
 /obj/structure/machinery/computer/cameras{
 	desc = "The flight controls for a UD6 Dropship. these controls look pretty banged up, and there's some blood covering the screen..";
@@ -2789,6 +4602,26 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"Ib" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"Ig" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/colony{
+	autoclose = 0;
+	density = 0;
+	icon_state = "door_open";
+	id = "CORSAT Containment 4";
+	name = "Containment Cell 4";
+	req_one_access_txt = "103"
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/simulacrum/interior)
 "Ik" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
@@ -2801,6 +4634,14 @@
 	icon_state = "65"
 	},
 /area/simulacrum/interior/exterior)
+"Ir" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Is" = (
 /obj/structure/closet/secure_closet/chemical{
 	req_access_txt = "100"
@@ -2847,6 +4688,21 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"IE" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"IF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/microwave,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "IH" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "75"
@@ -2884,6 +4740,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"IU" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"IW" = (
+/turf/open/auto_turf/snow/layer1,
+/area/simulacrum/interior)
 "IY" = (
 /obj/structure/mineral_door/resin/thick,
 /turf/open/auto_turf/snow/layer3,
@@ -2899,11 +4765,55 @@
 	icon_state = "69"
 	},
 /area/simulacrum/interior)
+"Jg" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/closed/wall/resin/thick,
+/area/simulacrum/interior)
+"Jh" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 8
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"Ji" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet10-8"
+	},
+/area/simulacrum/interior)
 "Jj" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "66"
 	},
 /area/simulacrum/interior/exterior)
+"Jk" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
+	dir = 1;
+	name = "ID Checkpoint";
+	req_access_txt = "101"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
+"Jl" = (
+/obj/structure/machinery/light,
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "Jo" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
@@ -2934,6 +4844,12 @@
 	icon_state = "100"
 	},
 /area/simulacrum/interior/exterior)
+"JC" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "JE" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -2943,6 +4859,21 @@
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"JF" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/simulacrum/interior)
+"JG" = (
+/obj/structure/bookcase{
+	icon_state = "book-5"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
 	},
 /area/simulacrum/interior)
 "JK" = (
@@ -2970,6 +4901,12 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/gm/dirt,
 /area/simulacrum/interior/exterior)
+"Kb" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
 "Kc" = (
 /obj/structure/mineral_door/resin/thick,
 /obj/structure/mineral_door/resin/thick,
@@ -2981,10 +4918,38 @@
 	},
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
+"Kg" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"Kh" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "Kq" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/prison,
 /area/simulacrum/interior/exterior)
+"Ku" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"Kx" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "KC" = (
 /turf/closed/wall/resin/thick,
 /area/simulacrum/interior)
@@ -3006,6 +4971,12 @@
 /turf/open/floor/shiva{
 	dir = 4;
 	icon_state = "green"
+	},
+/area/simulacrum/interior)
+"KJ" = (
+/obj/structure/surface/table,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "KK" = (
@@ -3035,6 +5006,17 @@
 	icon_state = "45"
 	},
 /area/simulacrum/interior/exterior)
+"KS" = (
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"KV" = (
+/obj/structure/fence,
+/turf/open/auto_turf/snow/layer3,
+/area/simulacrum/interior)
 "KX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -3053,6 +5035,19 @@
 	},
 /turf/open/floor{
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Le" = (
+/obj/structure/bed/chair,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"Lg" = (
+/obj/structure/surface/table,
+/obj/item/toy/deck/uno,
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "Lk" = (
@@ -3086,6 +5081,12 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/snow/layer3,
 /area/simulacrum/interior/exterior)
+"Lv" = (
+/obj/structure/ice/thin/straight{
+	dir = 4
+	},
+/turf/open/ice,
+/area/simulacrum/interior)
 "Lz" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -3093,6 +5094,12 @@
 /turf/open/floor{
 	dir = 10;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"LC" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purple"
 	},
 /area/simulacrum/interior)
 "LD" = (
@@ -3104,6 +5111,29 @@
 	icon_state = "floor_marked"
 	},
 /area/simulacrum/interior/exterior)
+"LE" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/mineral_door/resin/thick,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"LF" = (
+/obj/structure/sign/safety/airlock{
+	pixel_y = 32
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
+"LH" = (
+/obj/structure/machinery/floodlight{
+	name = "Floodlight";
+	unacidable = 0
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
 "LJ" = (
 /obj/structure/machinery/firealarm{
 	pixel_y = 24
@@ -3112,6 +5142,9 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
+/area/simulacrum/interior)
+"LM" = (
+/turf/closed/ice/straight,
 /area/simulacrum/interior)
 "LZ" = (
 /obj/structure/ice/thin/single,
@@ -3127,6 +5160,16 @@
 /obj/item/weapon/gun/pistol/holdout,
 /turf/open/floor/interior/wood/alt,
 /area/simulacrum/interior)
+"Md" = (
+/obj/structure/flora/pottedplant,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Mr" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -3137,6 +5180,22 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"Ms" = (
+/turf/open/floor/corsat{
+	icon_state = "purplecorner"
+	},
+/area/simulacrum/interior)
+"Mu" = (
+/turf/open/auto_turf/snow/layer4,
+/area/simulacrum/interior)
+"Mw" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
 "Mx" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/tool/pickaxe,
@@ -3158,6 +5217,11 @@
 	icon_state = "97"
 	},
 /area/simulacrum/interior)
+"MG" = (
+/turf/open/floor/corsat{
+	icon_state = "blue"
+	},
+/area/simulacrum/interior)
 "MH" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor{
@@ -3170,6 +5234,14 @@
 	},
 /turf/closed/wall/resin/thick,
 /area/simulacrum/interior/exterior)
+"MR" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 8
+	},
+/area/simulacrum/interior)
 "Na" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/snow/layer3,
@@ -3191,6 +5263,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/auto_turf/snow/layer2,
 /area/simulacrum/interior/exterior)
+"Nj" = (
+/obj/effect/landmark/monkey_spawn,
+/turf/open/floor/almayer/research/containment/floor2,
+/area/simulacrum/interior)
+"Nm" = (
+/obj/structure/fence,
+/turf/open/auto_turf/snow/layer2,
+/area/simulacrum/interior)
 "Nn" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	dir = 1;
@@ -3213,6 +5293,11 @@
 /turf/open/floor{
 	dir = 1;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Nz" = (
+/turf/open/floor/corsat{
+	icon_state = "gamma"
 	},
 /area/simulacrum/interior)
 "NB" = (
@@ -3246,12 +5331,28 @@
 	dir = 4
 	},
 /area/simulacrum/interior/exterior)
+"NR" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/communications,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "NS" = (
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "blue_plate"
 	},
 /area/simulacrum/interior/exterior)
+"NW" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
 "NZ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -3262,6 +5363,9 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
+"Od" = (
+/turf/open/space,
+/area/space)
 "Oe" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/shiva{
@@ -3302,6 +5406,40 @@
 	icon_state = "5"
 	},
 /area/simulacrum/interior/exterior)
+"Ov" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
+"Ox" = (
+/turf/closed/wall/biodome,
+/area/simulacrum/interior)
+"OI" = (
+/obj/structure/bed/chair/comfy/beige,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet14-10"
+	},
+/area/simulacrum/interior)
+"OL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"ON" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
 "OV" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "48"
@@ -3310,6 +5448,10 @@
 "OX" = (
 /turf/closed/ice_rock/westWall,
 /area/simulacrum/interior/exterior)
+"Pa" = (
+/obj/structure/ice/thin/single,
+/turf/open/ice,
+/area/simulacrum/interior)
 "Pi" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Bunkhouse"
@@ -3345,14 +5487,36 @@
 /obj/structure/barricade/metal/wired,
 /turf/open/floor/interior/wood/alt,
 /area/simulacrum/interior)
+"Py" = (
+/obj/structure/surface/table/almayer,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "PA" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin8"
 	},
 /area/simulacrum/interior)
+"PB" = (
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "PG" = (
 /obj/structure/mineral_door/resin/thick,
 /turf/open/floor/plating,
+/area/simulacrum/interior)
+"PH" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/cameras{
+	network = list("gamma")
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "red"
+	},
 /area/simulacrum/interior)
 "PK" = (
 /turf/open/floor/interior/wood,
@@ -3371,6 +5535,23 @@
 "PU" = (
 /obj/item/stack/sheet/metal,
 /turf/open/floor/plating,
+/area/simulacrum/interior)
+"PY" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"PZ" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"Qc" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/closed/wall/r_wall/biodome,
 /area/simulacrum/interior)
 "Qf" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -3406,9 +5587,30 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"Qr" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/power/apc/hyper{
+	dir = 1;
+	pixel_y = 24;
+	start_charge = 0
+	},
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "Qv" = (
 /turf/open/floor/shiva{
 	icon_state = "multi_tiles"
+	},
+/area/simulacrum/interior)
+"Qw" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "QH" = (
@@ -3421,6 +5623,16 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"QK" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "QP" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "101"
@@ -3429,12 +5641,38 @@
 "QV" = (
 /turf/closed/ice,
 /area/simulacrum/interior/exterior)
+"QZ" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "blue"
+	},
+/area/simulacrum/interior)
+"Rf" = (
+/obj/structure/machinery/camera/autoname{
+	dir = 1;
+	network = list("omega")
+	},
+/turf/open/floor/corsat{
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
 "Ri" = (
 /obj/structure/ice/thin/end{
 	dir = 8
 	},
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"Rk" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 80
+	},
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "Ro" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -3463,6 +5701,23 @@
 	icon_state = "floor_plate"
 	},
 /area/simulacrum/interior/exterior)
+"RJ" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "omega"
+	},
+/area/simulacrum/interior)
+"RL" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 1
+	},
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet13-5"
+	},
+/area/simulacrum/interior)
 "RM" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
@@ -3475,6 +5730,12 @@
 /turf/open/floor{
 	icon_state = "white"
 	},
+/area/simulacrum/interior)
+"RR" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/simulacrum/interior)
 "RX" = (
 /turf/open/auto_turf/snow/layer0,
@@ -3503,6 +5764,15 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"Si" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/bed/nest,
+/turf/open/floor/almayer/research/containment/entrance{
+	dir = 8
+	},
+/area/simulacrum/interior)
 "Sk" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -3517,6 +5787,12 @@
 /turf/open/floor/shiva{
 	dir = 6;
 	icon_state = "green"
+	},
+/area/simulacrum/interior)
+"So" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
 	},
 /area/simulacrum/interior)
 "Sp" = (
@@ -3542,6 +5818,13 @@
 	icon_state = "2"
 	},
 /area/simulacrum/interior/exterior)
+"Sv" = (
+/obj/structure/coatrack,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
 "Sw" = (
 /obj/structure/machinery/body_scanconsole,
 /turf/open/floor{
@@ -3553,6 +5836,22 @@
 /obj/structure/ice/thin/straight,
 /turf/open/ice,
 /area/simulacrum/interior/exterior)
+"SF" = (
+/obj/structure/barricade/metal/wired,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"SG" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/obj/effect/alien/weeds/node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "SL" = (
 /obj/structure/platform{
 	dir = 1
@@ -3565,6 +5864,18 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"SN" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/door_control{
+	id = "GammaSouthID";
+	name = "Security Shutters";
+	use_power = 0
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "SP" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "vent2";
@@ -3576,6 +5887,20 @@
 	icon_state = "floor_marked"
 	},
 /area/simulacrum/interior/exterior)
+"SU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"SV" = (
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "SX" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2;
@@ -3592,10 +5917,28 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"To" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purple"
+	},
+/area/simulacrum/interior)
 "Tr" = (
 /turf/open/floor{
 	icon_state = "white"
 	},
+/area/simulacrum/interior)
+"Ts" = (
+/obj/structure/barricade/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
+"TB" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior)
 "TD" = (
 /obj/item/ammo_magazine/rifle/heap{
@@ -3614,6 +5957,11 @@
 	},
 /turf/closed/wall/resin/thick,
 /area/simulacrum/interior/exterior)
+"TJ" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
 "TM" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/sand_white/layer0,
@@ -3642,6 +5990,26 @@
 "Uc" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "31"
+	},
+/area/simulacrum/interior)
+"Ue" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/obj/item/tool/pen/blue,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
+"Ul" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 80
+	},
+/obj/structure/window/reinforced,
+/obj/item/tool/lighter/random,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
 	},
 /area/simulacrum/interior)
 "Ur" = (
@@ -3680,6 +6048,15 @@
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/interior/wood,
 /area/simulacrum/interior)
+"Uv" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "UA" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -3706,6 +6083,27 @@
 	dir = 9;
 	icon_state = "whitered"
 	},
+/area/simulacrum/interior)
+"UH" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	icon_state = "west_wall"
+	},
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
+"UI" = (
+/turf/closed/ice/corner,
+/area/simulacrum/interior)
+"UJ" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/simulacrum/interior)
+"UO" = (
+/obj/structure/window/framed/corsat/security,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "GammaSouthID";
+	name = "Security Shutters"
+	},
+/turf/open/floor/plating,
 /area/simulacrum/interior)
 "UU" = (
 /turf/open/desert/rock,
@@ -3747,6 +6145,14 @@
 /obj/item/lightstick/red/planted,
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
+"Vl" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Vo" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -3777,6 +6183,18 @@
 "Vq" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"Vr" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/simulacrum/interior)
+"Vu" = (
+/obj/structure/barricade/plasteel/wired,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
+	},
+/area/simulacrum/interior)
 "Vz" = (
 /obj/structure/barricade/plasteel/wired,
 /turf/open/floor{
@@ -3795,9 +6213,32 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"VE" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/alien/weeds/node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"VF" = (
+/obj/structure/ice/ice_rock/cornerOverlay{
+	dir = 1;
+	icon_state = "full_corners"
+	},
+/obj/structure/ice/ice_rock/cornerOverlay,
+/turf/closed/ice_rock/corners,
+/area/simulacrum/interior)
 "VJ" = (
 /turf/closed/wall/rock/brown,
 /area/simulacrum/interior/exterior)
+"VK" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/handset,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
 "VL" = (
 /obj/effect/landmark/hunter_primary,
 /turf/open/floor{
@@ -3848,12 +6289,49 @@
 	icon_state = "whiteredcorner"
 	},
 /area/simulacrum/interior)
+"VY" = (
+/turf/open/floor/almayer/research/containment/entrance{
+	dir = 8
+	},
+/area/simulacrum/interior)
 "VZ" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
+	},
+/area/simulacrum/interior)
+"Wa" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/simulacrum/interior)
+"Wd" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
+"Wf" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/ice,
+/area/simulacrum/interior)
+"Wg" = (
+/turf/closed/ice/corner{
+	dir = 1
+	},
+/area/simulacrum/interior)
+"Wm" = (
+/obj/structure/machinery/door/airlock/almayer/command/colony{
+	dir = 1;
+	name = "Administration";
+	req_access_txt = "106"
+	},
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "Wo" = (
@@ -3878,6 +6356,15 @@
 	icon_state = "white"
 	},
 /area/simulacrum/interior)
+"Wv" = (
+/obj/structure/window/framed/corsat/hull,
+/turf/open/floor/plating,
+/area/simulacrum/interior)
+"WA" = (
+/turf/open/floor/almayer/research/containment/corner{
+	dir = 1
+	},
+/area/simulacrum/interior)
 "WE" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
 	pixel_x = 30
@@ -3896,6 +6383,23 @@
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/simulacrum/interior/exterior)
+"WH" = (
+/turf/open/ice,
+/area/simulacrum/interior)
+"WJ" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/ashtray/bronze,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet15-15"
+	},
+/area/simulacrum/interior)
+"WK" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluecorner"
+	},
+/area/simulacrum/interior)
 "WL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -3908,6 +6412,15 @@
 /obj/structure/mineral_door/resin/thick,
 /turf/open/desert/dirt,
 /area/simulacrum/interior/exterior)
+"WS" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor{
+	name = "Administration Office"
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "WT" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/shotgun/buckshot,
@@ -3918,11 +6431,31 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/gm/grass/grass1/weedable,
 /area/simulacrum/interior)
+"WV" = (
+/obj/effect/alien/weeds/node,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/almayer/research/containment/floor2,
+/area/simulacrum/interior)
 "WW" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "17"
 	},
 /area/simulacrum/interior/exterior)
+"WX" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "redcorner"
+	},
+/area/simulacrum/interior)
+"WZ" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Xe" = (
 /obj/structure/surface/table,
 /obj/item/device/defibrillator,
@@ -3944,6 +6477,17 @@
 	icon_state = "28"
 	},
 /area/simulacrum/interior/exterior)
+"Xm" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/folder/black_random,
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
+"Xp" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat,
+/area/simulacrum/interior)
 "Xv" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -3959,6 +6503,23 @@
 	},
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"XA" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/door/window/brigdoor/westleft{
+	name = "Identification Desk"
+	},
+/obj/structure/machinery/door/window/brigdoor/eastleft{
+	name = "Identification Desk"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "GammaSouthID";
+	name = "Security Shutters"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
 	},
 /area/simulacrum/interior)
 "XB" = (
@@ -3995,9 +6556,25 @@
 	icon_state = "green"
 	},
 /area/simulacrum/interior)
+"XO" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/simulacrum/interior)
 "XP" = (
 /turf/open/auto_turf/snow/layer3,
 /area/simulacrum/interior/exterior)
+"XZ" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Ya" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -4014,9 +6591,30 @@
 	icon_state = "72"
 	},
 /area/simulacrum/interior)
+"Ye" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/item/tool/pen/blue,
+/obj/structure/noticeboard{
+	pixel_y = 32
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "bluegrey"
+	},
+/area/simulacrum/interior)
 "Yg" = (
 /turf/open/space/basic,
 /area/space)
+"Yh" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "Yl" = (
 /turf/closed/shuttle/dropship2/tornado{
 	icon_state = "64"
@@ -4028,6 +6626,14 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
+"Ys" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
+	},
+/area/simulacrum/interior)
 "Yw" = (
 /turf/open/floor{
 	dir = 1;
@@ -4042,6 +6648,16 @@
 	icon_state = "whiteredfull"
 	},
 /area/simulacrum/interior)
+"Yz" = (
+/obj/structure/machinery/camera/autoname{
+	network = list("omega")
+	},
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/simulacrum/interior)
 "YC" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -4049,6 +6665,27 @@
 /obj/item/stack/sheet/metal,
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"YE" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"YJ" = (
+/obj/structure/ice/thin/end,
+/turf/open/ice,
+/area/simulacrum/interior)
+"YL" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "purple"
 	},
 /area/simulacrum/interior)
 "YM" = (
@@ -4067,6 +6704,12 @@
 	},
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"YP" = (
+/obj/structure/bed/chair/office/light,
+/turf/open/floor/corsat{
+	icon_state = "officesquares"
 	},
 /area/simulacrum/interior)
 "YR" = (
@@ -4125,6 +6768,9 @@
 	icon_state = "whitered"
 	},
 /area/simulacrum/interior)
+"YY" = (
+/turf/closed/ice/end,
+/area/simulacrum/interior)
 "YZ" = (
 /obj/structure/mineral_door/resin/thick,
 /turf/open/floor/prison{
@@ -4137,6 +6783,12 @@
 /turf/open/floor{
 	dir = 9;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"Ze" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	icon_state = "spiralplate"
 	},
 /area/simulacrum/interior)
 "Zf" = (
@@ -4153,12 +6805,41 @@
 	},
 /turf/open/floor/plating,
 /area/simulacrum/interior)
+"Zj" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/simulacrum/interior)
 "Zk" = (
 /obj/structure/machinery/firealarm{
 	pixel_y = 24
 	},
 /turf/open/floor{
 	icon_state = "white"
+	},
+/area/simulacrum/interior)
+"Zm" = (
+/turf/open/floor{
+	dir = 8;
+	icon_state = "carpet7-3"
+	},
+/area/simulacrum/interior)
+"Zr" = (
+/obj/effect/alien/weeds/node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
+"Zz" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/corsat{
+	icon_state = "red"
 	},
 /area/simulacrum/interior)
 "ZE" = (
@@ -4171,6 +6852,12 @@
 "ZK" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
+/area/simulacrum/interior)
+"ZL" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
 /area/simulacrum/interior)
 "ZO" = (
 /obj/structure/stairs/perspective{
@@ -4190,6 +6877,21 @@
 "ZR" = (
 /turf/closed/wall/resin/thick,
 /area/simulacrum/interior/exterior)
+"ZT" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "bluegreycorner"
+	},
+/area/simulacrum/interior)
+"ZV" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/mineral_door/resin/thick,
+/turf/open/floor/corsat{
+	icon_state = "retrosquares"
+	},
+/area/simulacrum/interior)
 "ZW" = (
 /obj/structure/surface/table,
 /obj/item/folder/white,
@@ -4201,6 +6903,17 @@
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitered"
+	},
+/area/simulacrum/interior)
+"ZY" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/simulacrum/interior)
+"ZZ" = (
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
 	},
 /area/simulacrum/interior)
 
@@ -4962,13 +7675,13 @@ aW
 aW
 aW
 aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
 aW
 aW
@@ -5358,21 +8071,21 @@ aW
 aW
 aW
 aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
 aW
 aW
@@ -6166,21 +8879,21 @@ aW
 aW
 aW
 aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
 aW
 aW
@@ -6570,6 +9283,13 @@ aW
 aW
 aW
 aW
+UU
+UU
+UU
+UU
+UU
+UU
+UU
 aW
 aW
 aW
@@ -6577,14 +9297,7 @@ aW
 aW
 aW
 aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
-aW
+UU
 aW
 aW
 aW
@@ -6786,7 +9499,7 @@ aW
 aW
 aW
 aW
-aW
+UU
 aW
 aW
 aW
@@ -6988,7 +9701,7 @@ aW
 aW
 aW
 aW
-aW
+UU
 aW
 aW
 aW
@@ -7190,7 +9903,7 @@ aW
 aW
 aW
 aW
-aW
+UU
 aW
 aW
 aW
@@ -7392,7 +10105,7 @@ aW
 aW
 aW
 aW
-aW
+UU
 aW
 aW
 aW
@@ -7594,7 +10307,7 @@ aW
 aW
 aW
 aW
-aW
+UU
 aW
 aW
 aW
@@ -49418,40 +52131,40 @@ XP
 XP
 XP
 wd
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
 "}
 (25,1,2) = {"
 Yg
@@ -49620,6 +52333,7 @@ vr
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -49652,8 +52366,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (26,1,2) = {"
 Yg
@@ -49822,6 +52535,7 @@ XP
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -49854,8 +52568,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (27,1,2) = {"
 Yg
@@ -50024,6 +52737,7 @@ XP
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -50056,8 +52770,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (28,1,2) = {"
 kZ
@@ -50226,6 +52939,7 @@ XP
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -50258,8 +52972,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (29,1,2) = {"
 kZ
@@ -50428,6 +53141,7 @@ sq
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -50460,8 +53174,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (30,1,2) = {"
 kZ
@@ -50630,6 +53343,7 @@ XP
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -50662,8 +53376,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (31,1,2) = {"
 kZ
@@ -50832,6 +53545,7 @@ XP
 XP
 XP
 wd
+cp
 Yg
 Yg
 Yg
@@ -50864,8 +53578,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (32,1,2) = {"
 kZ
@@ -51034,6 +53747,7 @@ ba
 wd
 wd
 wd
+cp
 Yg
 Yg
 Yg
@@ -51066,8 +53780,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (33,1,2) = {"
 kZ
@@ -51233,6 +53946,10 @@ OX
 iL
 wd
 QV
+cp
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -51265,11 +53982,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
 "}
 (34,1,2) = {"
 kZ
@@ -51433,6 +54146,9 @@ wd
 wd
 Yg
 Yg
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -51468,10 +54184,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
+cp
 "}
 (35,1,2) = {"
 kZ
@@ -51635,6 +54348,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -51672,8 +54386,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (36,1,2) = {"
 kZ
@@ -51837,6 +54550,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -51874,8 +54588,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (37,1,2) = {"
 kZ
@@ -52039,6 +54752,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -52076,8 +54790,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (38,1,2) = {"
 kZ
@@ -52241,6 +54954,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -52278,8 +54992,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (39,1,2) = {"
 kZ
@@ -52443,45 +55156,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (40,1,2) = {"
 kZ
@@ -52645,45 +55358,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (41,1,2) = {"
 kZ
@@ -52847,45 +55560,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (42,1,2) = {"
 kZ
@@ -53049,45 +55762,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+HQ
+Bp
+xL
+Bp
+yn
+Wv
+Od
+Od
+Od
+Wv
+pC
+Bp
+qv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (43,1,2) = {"
 kZ
@@ -53251,45 +55964,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+UJ
+HN
+Ys
+Ey
+Ys
+Jl
+UJ
+UJ
+UJ
+UJ
+UJ
+iC
+Ys
+uP
+UJ
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (44,1,2) = {"
 kZ
@@ -53453,45 +56166,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+oq
+gE
+JC
+DF
+DF
+DF
+DF
+DF
+FD
+Ox
+PZ
+DF
+DF
+DF
+DF
+DF
+FD
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (45,1,2) = {"
 kZ
@@ -53655,45 +56368,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+NR
+oJ
+dA
+CW
+yT
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (46,1,2) = {"
 kZ
@@ -53857,45 +56570,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+hp
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+Kx
+Ue
+IU
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (47,1,2) = {"
 kZ
@@ -54059,45 +56772,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+gl
+Ul
+dA
+YP
+bT
+pC
+yq
+CW
+Ga
+Ox
+Ch
+CW
+qv
+Ey
+Py
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (48,1,2) = {"
 kZ
@@ -54261,45 +56974,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+zK
+oJ
+dA
+YP
+pw
+HQ
+yq
+CW
+CT
+WS
+xY
+CW
+Ey
+Ey
+Ey
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
 "}
 (49,1,2) = {"
 kZ
@@ -54463,45 +57176,45 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+Ey
+dA
+YP
+fA
+iM
+oe
+Dm
+vq
+Hk
+Ku
+Dm
+Ze
+Ze
+Ze
+fO
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Ba
+UJ
 "}
 (50,1,2) = {"
 kZ
@@ -54665,45 +57378,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Cj
+oJ
+dA
+YP
+ny
+IU
+yq
+CW
+Ga
+Ox
+Ch
+CW
+pC
+Ey
+pV
+OL
+Ga
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
+CR
+UJ
 "}
 (51,1,2) = {"
 kZ
@@ -54867,45 +57580,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+xV
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+pC
+Ey
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+HN
+Kx
+HQ
+OL
+tk
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+CR
+ai
+Ax
+UJ
 "}
 (52,1,2) = {"
 kZ
@@ -55069,45 +57782,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+dw
+gu
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+xF
+oJ
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+OL
+Ff
+UJ
+UJ
+Wv
+Wv
+UJ
+UJ
+UJ
+tV
+kM
+xN
+UJ
 "}
 (53,1,2) = {"
 kZ
@@ -55271,45 +57984,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+Fz
+gY
+gY
+HH
+pr
+ta
+cl
+gY
+Kx
+vU
+dA
+CW
+rs
+CW
+CW
+em
+IE
+Ox
+xu
+eq
+eq
+eq
+ZT
+OL
+zm
+Ox
+CR
+ai
+ai
+lj
+gY
+yY
+WX
+nh
+gY
+UJ
 "}
 (54,1,2) = {"
 ld
@@ -55473,45 +58186,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+gx
+WH
+WH
+WH
+iA
+pr
+GL
+ta
+ta
+gY
+gY
+Ox
+dA
+CW
+CW
+CW
+CW
+Ff
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+Ff
+Ox
+yA
+Eh
+Eh
+sE
+gY
+yA
+Zj
+ya
+Jk
+UJ
 "}
 (55,1,2) = {"
 ld
@@ -55675,45 +58388,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+WH
+WH
+gY
+gY
+ta
+Xp
+pr
+pr
+iA
+hD
+dA
+CW
+CW
+CW
+CW
+pi
+Ox
+HF
+kR
+Ab
+QK
+zM
+xY
+OL
+Ff
+BX
+np
+Lg
+KJ
+PB
+gY
+np
+oK
+BQ
+gY
+UJ
 "}
 (56,1,2) = {"
 ld
@@ -55877,45 +58590,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+mm
+Wf
+WH
+WH
+WH
+gY
+dx
+ta
+pr
+CF
+gY
+pS
+ds
+FU
+Ts
+Ts
+FI
+Md
+Ox
+Ib
+Ys
+Ey
+Ys
+oq
+CW
+OL
+Ff
+BX
+np
+zA
+zA
+PB
+gY
+gY
+lU
+gY
+gY
+UJ
 "}
 (57,1,2) = {"
 ld
@@ -56079,45 +58792,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+RR
+dD
+WH
+WH
+WH
+WH
+gY
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+Ox
+rH
+jg
+yR
+rH
+Ox
+Ox
+nx
+CW
+CW
+CW
+CW
+CW
+OL
+Ff
+BX
+np
+pr
+pr
+nh
+KC
+bh
+DD
+nh
+ai
+UJ
 "}
 (58,1,2) = {"
 ld
@@ -56281,45 +58994,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+KC
+KC
+KC
+eu
+eu
+KC
+UJ
+Od
+Od
+Od
+Od
+UJ
+xj
+ZY
+ZY
+ZY
+ZY
+mH
+Ox
+Ye
+CW
+yG
+Dm
+Dm
+Dm
+mW
+Ff
+BX
+hG
+SV
+Zr
+SV
+Ap
+SV
+DD
+SV
+sN
+UJ
 "}
 (59,1,2) = {"
 ld
@@ -56483,45 +59196,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+mm
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Od
+UJ
+eX
+dZ
+dZ
+dZ
+dZ
+Sv
+Ox
+nB
+jr
+Ey
+jr
+lA
+CW
+OL
+Ga
+Ox
+hG
+SV
+Kg
+WZ
+LE
+WZ
+Ir
+SV
+Zr
+UJ
 "}
 (60,1,2) = {"
 ld
@@ -56685,45 +59398,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+WH
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Od
+UJ
+YE
+pj
+Zm
+Zm
+oo
+KS
+Ox
+dr
+Jh
+jW
+jT
+tS
+ZT
+OL
+Ff
+Ox
+KC
+Ap
+ZV
+KC
+KC
+To
+Ov
+To
+To
+UJ
 "}
 (61,1,2) = {"
 ld
@@ -56887,45 +59600,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+vb
+lW
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Wv
+ZY
+OI
+WJ
+ui
+RL
+ZY
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+mZ
+BX
+WK
+vY
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (62,1,2) = {"
 ld
@@ -57089,45 +59802,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+Pa
+AB
+zU
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Wv
+ZY
+OI
+Ah
+VK
+RL
+ZY
+Ox
+wM
+Uv
+IF
+hc
+Wd
+xY
+de
+xz
+tg
+WZ
+WZ
+cu
+CJ
+UJ
+yl
+Si
+lc
+UJ
+UJ
 "}
 (63,1,2) = {"
 ld
@@ -57291,45 +60004,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+Wf
+na
+UH
+xV
+Pa
+WH
+mm
+WH
+UJ
+UJ
+Od
+Wv
+ZY
+OI
+lB
+Mw
+RL
+ZY
+Ox
+jC
+CW
+CW
+CW
+CW
+CW
+OL
+nm
+BX
+bJ
+SV
+DD
+tM
+UJ
+zw
+qW
+mY
+UJ
+UJ
 "}
 (64,1,2) = {"
 ld
@@ -57493,45 +60206,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+yy
+Ak
+CU
+ei
+xV
+WH
+WH
+WH
+WH
+UJ
+Od
+Wv
+ZY
+OI
+Ah
+sW
+RL
+ZY
+Ox
+ox
+CW
+yG
+Dm
+Dm
+Dm
+dY
+Df
+BX
+hG
+SV
+DD
+CJ
+UJ
+je
+xw
+Dj
+UJ
+UJ
 "}
 (65,1,2) = {"
 kZ
@@ -57695,45 +60408,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+DP
+dw
+CU
+CU
+wb
+WH
+WH
+WH
+WH
+UJ
+Od
+UJ
+YE
+Ji
+mt
+mt
+hX
+KS
+Ox
+lR
+dh
+Le
+PY
+dh
+CW
+CW
+mZ
+BX
+WK
+SV
+DD
+CJ
+UJ
+yL
+xl
+yL
+UJ
+UJ
 "}
 (66,1,2) = {"
 kZ
@@ -57897,45 +60610,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+ew
+YY
+CU
+VF
+gu
+yy
+WH
+WH
+vb
+UJ
+UJ
+UJ
+JG
+dZ
+dZ
+dZ
+dZ
+ON
+Ox
+Ib
+dh
+Le
+ob
+dh
+CW
+CW
+Vu
+Wm
+SV
+SV
+DD
+CJ
+UJ
+vf
+ZZ
+vR
+bZ
+UJ
 "}
 (67,1,2) = {"
 kZ
@@ -58099,45 +60812,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+fh
+na
+CU
+gu
+vb
+Lv
+hW
+hW
+Wg
+UI
+gY
+Qc
+JG
+ZY
+zf
+zf
+ZY
+ON
+Ox
+go
+vI
+eq
+eq
+eq
+eq
+vI
+SF
+BX
+bJ
+Zr
+xi
+YL
+UJ
+HB
+ZZ
+ZZ
+FR
+UJ
 "}
 (68,1,2) = {"
 kZ
@@ -58301,45 +61014,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+vs
+jc
+Em
+gu
+AB
+DP
+WH
+WH
+WH
+AB
+gY
+Qc
+gY
+gY
+gY
+gY
+gY
+gY
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+hG
+SV
+DD
+CJ
+UJ
+nq
+ZZ
+ZL
+ZZ
+UJ
 "}
 (69,1,2) = {"
 kZ
@@ -58503,45 +61216,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+qJ
+WH
+dw
+gu
+ar
+YJ
+WH
+dW
+dW
+WH
+DP
+gY
+Qc
+Qr
+hZ
+ai
+ai
+Ck
+gY
+CR
+ai
+ai
+bh
+Qw
+xv
+wJ
+wJ
+QZ
+Ox
+hG
+SV
+DD
+CJ
+UJ
+XO
+ZZ
+hl
+NW
+UJ
 "}
 (70,1,2) = {"
 kZ
@@ -58705,45 +61418,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+sB
+kl
+IW
+IW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+pa
+Gg
+pr
+jy
+Bo
+gY
+np
+Kg
+WZ
+WZ
+ee
+WZ
+WZ
+SG
+MG
+Ox
+KC
+Ap
+ZV
+KC
+UJ
+yL
+Ig
+yL
+UJ
+UJ
 "}
 (71,1,2) = {"
 kZ
@@ -58907,45 +61620,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+FX
+TJ
+pu
+ya
+Zz
+gY
+np
+ha
+Ms
+px
+of
+Ms
+px
+DD
+xv
+KC
+WK
+SV
+ha
+CJ
+UJ
+yl
+VY
+mk
+UJ
+UJ
 "}
 (72,1,2) = {"
 kZ
@@ -59109,45 +61822,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+dW
+dW
+dW
+dW
+LH
+dW
+dW
+HG
+dW
+Mu
+ie
+Qc
+cs
+pr
+pr
+GL
+ex
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+cu
+tM
+UJ
+mY
+Nj
+cR
+UJ
+UJ
 "}
 (73,1,2) = {"
 kZ
@@ -59311,45 +62024,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+ie
+IW
+dW
+ie
+dW
+IW
+dW
+dW
+IW
+pP
+ie
+Qc
+PH
+ph
+Kh
+xK
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+CJ
+UJ
+jb
+MR
+WA
+UJ
+UJ
 "}
 (74,1,2) = {"
 kZ
@@ -59513,45 +62226,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+Nm
+IW
+IW
+pA
+pA
+pA
+dW
+dW
+KV
+Nm
+Nm
+UJ
+zL
+zL
+gY
+zL
+bv
+gY
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+Ms
+Jg
+px
+SV
+DD
+Rf
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (75,1,2) = {"
 kZ
@@ -59715,45 +62428,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+AY
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+pl
+Nz
+pr
+Go
+Nz
+DD
+nh
+bh
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+yl
+VY
+lc
+yL
+UJ
 "}
 (76,1,2) = {"
 kZ
@@ -59917,45 +62630,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+Wa
+TB
+TB
+TB
+TB
+TB
+TB
+Vr
+TB
+TB
+TB
+AU
+Al
+Vl
+SV
+gq
+SV
+DD
+SV
+SV
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LC
+Zr
+DD
+CJ
+UJ
+mY
+WV
+mY
+vk
+UJ
 "}
 (77,1,2) = {"
 kZ
@@ -60119,45 +62832,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+HG
+dW
+dW
+dW
+dW
+dW
+HE
+dW
+dW
+dW
+dW
+mJ
+SV
+Ek
+JF
+WZ
+So
+VE
+WZ
+cu
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LF
+SV
+DD
+CJ
+UJ
+je
+MR
+WA
+yL
+UJ
 "}
 (78,1,2) = {"
 kZ
@@ -60321,45 +63034,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+dW
+dW
+IW
+IW
+dW
+dW
+HL
+dW
+dW
+dW
+dW
+mJ
+Nz
+pr
+gq
+Nz
+DD
+BQ
+xK
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (79,1,2) = {"
 kZ
@@ -60523,45 +63236,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+KV
+ie
+sB
+pA
+pA
+pA
+HL
+dW
+pA
+pA
+lx
+UJ
+UO
+XA
+gY
+zL
+lU
+UJ
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+iW
+bY
+gI
+SV
+DD
+iW
+fN
+fN
+fN
+fN
+Kb
+UJ
 "}
 (80,1,2) = {"
 kZ
@@ -60725,45 +63438,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+ie
+pP
+dW
+dW
+HL
+dW
+IW
+ie
+Er
+Qc
+SN
+kX
+AI
+bh
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+SV
+SV
+SV
+SV
+SV
+CJ
+UJ
 "}
 (81,1,2) = {"
 kZ
@@ -60927,45 +63640,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+Pa
+WH
+ie
+sB
+IW
+HL
+dW
+dW
+ie
+pP
+Qc
+nU
+pr
+eb
+pr
+dU
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+kO
+WZ
+WZ
+WZ
+WZ
+XZ
+tM
+UJ
 "}
 (82,1,2) = {"
 kZ
@@ -61129,45 +63842,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+LM
+LM
+UI
+WH
+WH
+ie
+Eo
+dW
+dW
+ie
+gY
+Qc
+gJ
+TJ
+pu
+DW
+SU
+gY
+np
+DD
+iW
+gI
+RJ
+iW
+gI
+DD
+BQ
+KC
+Kh
+Kh
+Kh
+Kh
+Kh
+xK
+SV
+DD
+CJ
+UJ
 "}
 (83,1,2) = {"
 kZ
@@ -61331,45 +64044,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+ej
+xV
+AB
+ar
+FO
+WH
+Di
+dW
+ie
+Da
+gY
+Qc
+Yz
+pr
+pr
+GW
+Xm
+gY
+np
+wt
+VE
+WZ
+Yh
+WZ
+WZ
+Ir
+PB
+gY
+gY
+gY
+gY
+gY
+gY
+np
+sN
+ha
+CJ
+UJ
 "}
 (84,1,2) = {"
 kZ
@@ -61533,45 +64246,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (85,1,2) = {"
 kZ
@@ -61740,40 +64453,40 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
 "}
 (86,1,2) = {"
 kZ
@@ -61942,6 +64655,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -61974,8 +64688,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (87,1,2) = {"
 kZ
@@ -62144,6 +64857,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -62176,8 +64890,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (88,1,2) = {"
 kZ
@@ -62346,6 +65059,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -62378,8 +65092,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (89,1,2) = {"
 kZ
@@ -62548,6 +65261,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -62580,8 +65294,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (90,1,2) = {"
 kZ
@@ -62750,6 +65463,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -62782,8 +65496,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (91,1,2) = {"
 ld
@@ -62952,6 +65665,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -62984,8 +65698,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (92,1,2) = {"
 ld
@@ -63154,6 +65867,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -63186,8 +65900,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (93,1,2) = {"
 ld
@@ -63356,6 +66069,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -63388,8 +66102,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (94,1,2) = {"
 ld
@@ -63555,6 +66268,10 @@ Yg
 Yg
 Yg
 Yg
+cp
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -63587,11 +66304,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
 "}
 (95,1,2) = {"
 ld
@@ -63755,6 +66468,9 @@ Yg
 Yg
 Yg
 Yg
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -63790,10 +66506,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
+cp
 "}
 (96,1,2) = {"
 ld
@@ -63957,6 +66670,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -63994,8 +66708,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (97,1,2) = {"
 ld
@@ -64159,6 +66872,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -64196,8 +66910,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (98,1,2) = {"
 ld
@@ -64361,6 +67074,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -64398,8 +67112,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (99,1,2) = {"
 ld
@@ -64563,6 +67276,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -64600,8 +67314,7 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
+cp
 "}
 (100,1,2) = {"
 ld
@@ -64765,45 +67478,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (101,1,2) = {"
 ld
@@ -64967,45 +67680,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (102,1,2) = {"
 kZ
@@ -65169,45 +67882,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (103,1,2) = {"
 kZ
@@ -65371,45 +68084,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+HQ
+Bp
+xL
+Bp
+yn
+Wv
+Od
+Od
+Od
+Wv
+pC
+Bp
+qv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (104,1,2) = {"
 kZ
@@ -65573,45 +68286,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+UJ
+HN
+Ys
+Ey
+Ys
+Jl
+UJ
+UJ
+UJ
+UJ
+UJ
+iC
+Ys
+uP
+UJ
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (105,1,2) = {"
 kZ
@@ -65775,45 +68488,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+oq
+gE
+JC
+DF
+DF
+DF
+DF
+DF
+FD
+Ox
+PZ
+DF
+DF
+DF
+DF
+DF
+FD
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (106,1,2) = {"
 kZ
@@ -65977,45 +68690,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+NR
+oJ
+dA
+CW
+yT
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (107,1,2) = {"
 kZ
@@ -66179,45 +68892,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+hp
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+Kx
+Ue
+IU
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (108,1,2) = {"
 kZ
@@ -66381,45 +69094,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+gl
+Ul
+dA
+YP
+bT
+pC
+yq
+CW
+Ga
+Ox
+Ch
+CW
+qv
+Ey
+Py
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
 "}
 (109,1,2) = {"
 kZ
@@ -66583,45 +69296,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+zK
+oJ
+dA
+YP
+pw
+HQ
+yq
+CW
+CT
+WS
+xY
+CW
+Ey
+Ey
+Ey
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
 "}
 (110,1,2) = {"
 kZ
@@ -66785,45 +69498,45 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+Ey
+dA
+YP
+fA
+iM
+oe
+Dm
+vq
+Hk
+Ku
+Dm
+Ze
+Ze
+Ze
+fO
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Ba
+UJ
 "}
 (111,1,2) = {"
 kZ
@@ -66987,45 +69700,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Cj
+oJ
+dA
+YP
+ny
+IU
+yq
+CW
+Ga
+Ox
+Ch
+CW
+pC
+Ey
+pV
+OL
+Ga
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
+CR
+UJ
 "}
 (112,1,2) = {"
 kZ
@@ -67189,45 +69902,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+xV
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+pC
+Ey
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+HN
+Kx
+HQ
+OL
+tk
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+CR
+ai
+Ax
+UJ
 "}
 (113,1,2) = {"
 kZ
@@ -67391,45 +70104,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+dw
+gu
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+xF
+oJ
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+OL
+Ff
+UJ
+UJ
+Wv
+Wv
+UJ
+UJ
+UJ
+tV
+kM
+xN
+UJ
 "}
 (114,1,2) = {"
 kZ
@@ -67593,45 +70306,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+Fz
+gY
+gY
+HH
+pr
+ta
+cl
+gY
+Kx
+vU
+dA
+CW
+rs
+CW
+CW
+em
+IE
+Ox
+xu
+eq
+eq
+eq
+ZT
+OL
+zm
+Ox
+CR
+ai
+ai
+lj
+gY
+yY
+WX
+nh
+gY
+UJ
 "}
 (115,1,2) = {"
 kZ
@@ -67795,45 +70508,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+gx
+WH
+WH
+WH
+iA
+pr
+GL
+ta
+ta
+gY
+gY
+Ox
+dA
+CW
+CW
+CW
+CW
+Ff
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+Ff
+Ox
+yA
+Eh
+Eh
+sE
+gY
+yA
+Zj
+ya
+Jk
+UJ
 "}
 (116,1,2) = {"
 kZ
@@ -67997,45 +70710,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+WH
+WH
+gY
+gY
+ta
+Xp
+pr
+pr
+iA
+hD
+dA
+CW
+CW
+CW
+CW
+pi
+Ox
+HF
+kR
+Ab
+QK
+zM
+xY
+OL
+Ff
+BX
+np
+Lg
+KJ
+PB
+gY
+np
+oK
+BQ
+gY
+UJ
 "}
 (117,1,2) = {"
 kZ
@@ -68199,45 +70912,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+mm
+Wf
+WH
+WH
+WH
+gY
+dx
+ta
+pr
+CF
+gY
+pS
+ds
+FU
+Ts
+Ts
+FI
+Md
+Ox
+Ib
+Ys
+Ey
+Ys
+oq
+CW
+OL
+Ff
+BX
+np
+zA
+zA
+PB
+gY
+gY
+lU
+gY
+gY
+UJ
 "}
 (118,1,2) = {"
 kZ
@@ -68367,79 +71080,79 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+cp
+RR
+dD
+WH
+WH
+WH
+WH
+gY
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+Ox
+rH
+jg
+yR
+rH
+Ox
+Ox
+nx
+CW
+CW
+CW
+CW
+CW
+OL
+Ff
+BX
+np
+pr
+pr
+nh
+KC
+bh
+DD
+nh
+ai
+UJ
 "}
 (119,1,2) = {"
 kZ
@@ -68569,6 +71282,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -68601,47 +71315,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+KC
+KC
+KC
+eu
+eu
+KC
+UJ
+Od
+Od
+Od
+Od
+UJ
+xj
+ZY
+ZY
+ZY
+ZY
+mH
+Ox
+Ye
+CW
+yG
+Dm
+Dm
+Dm
+mW
+Ff
+BX
+hG
+SV
+Zr
+SV
+Ap
+SV
+DD
+SV
+sN
+UJ
 "}
 (120,1,2) = {"
 kZ
@@ -68771,6 +71484,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -68803,47 +71517,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+WH
+WH
+mm
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Od
+UJ
+eX
+dZ
+dZ
+dZ
+dZ
+Sv
+Ox
+nB
+jr
+Ey
+jr
+lA
+CW
+OL
+Ga
+Ox
+hG
+SV
+Kg
+WZ
+LE
+WZ
+Ir
+SV
+Zr
+UJ
 "}
 (121,1,2) = {"
 kZ
@@ -68973,6 +71686,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -69005,47 +71719,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+WH
+WH
+WH
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Od
+UJ
+YE
+pj
+Zm
+Zm
+oo
+KS
+Ox
+dr
+Jh
+jW
+jT
+tS
+ZT
+OL
+Ff
+Ox
+KC
+Ap
+ZV
+KC
+KC
+To
+Ov
+To
+To
+UJ
 "}
 (122,1,2) = {"
 kZ
@@ -69175,6 +71888,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -69207,47 +71921,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+WH
+WH
+vb
+lW
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Wv
+ZY
+OI
+WJ
+ui
+RL
+ZY
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+mZ
+BX
+WK
+vY
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (123,1,2) = {"
 kZ
@@ -69377,6 +72090,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -69409,47 +72123,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+WH
+Pa
+AB
+zU
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Wv
+ZY
+OI
+Ah
+VK
+RL
+ZY
+Ox
+wM
+Uv
+IF
+hc
+Wd
+xY
+de
+xz
+tg
+WZ
+WZ
+cu
+CJ
+UJ
+yl
+Si
+lc
+UJ
+UJ
 "}
 (124,1,2) = {"
 kZ
@@ -69579,6 +72292,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -69611,47 +72325,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+Wf
+na
+UH
+xV
+Pa
+WH
+mm
+WH
+UJ
+UJ
+Od
+Wv
+ZY
+OI
+lB
+Mw
+RL
+ZY
+Ox
+jC
+CW
+CW
+CW
+CW
+CW
+OL
+nm
+BX
+bJ
+SV
+DD
+tM
+UJ
+zw
+qW
+mY
+UJ
+UJ
 "}
 (125,1,2) = {"
 kZ
@@ -69781,6 +72494,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -69813,47 +72527,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+yy
+Ak
+CU
+ei
+xV
+WH
+WH
+WH
+WH
+UJ
+Od
+Wv
+ZY
+OI
+Ah
+sW
+RL
+ZY
+Ox
+ox
+CW
+yG
+Dm
+Dm
+Dm
+dY
+Df
+BX
+hG
+SV
+DD
+CJ
+UJ
+je
+xw
+Dj
+UJ
+UJ
 "}
 (126,1,2) = {"
 kZ
@@ -69983,6 +72696,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -70015,47 +72729,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+DP
+dw
+CU
+CU
+wb
+WH
+WH
+WH
+WH
+UJ
+Od
+UJ
+YE
+Ji
+mt
+mt
+hX
+KS
+Ox
+lR
+dh
+Le
+PY
+dh
+CW
+CW
+mZ
+BX
+WK
+SV
+DD
+CJ
+UJ
+yL
+xl
+yL
+UJ
+UJ
 "}
 (127,1,2) = {"
 kZ
@@ -70182,6 +72895,10 @@ Yg
 Yg
 Yg
 Yg
+cp
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -70214,50 +72931,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+ew
+YY
+CU
+VF
+gu
+yy
+WH
+WH
+vb
+UJ
+UJ
+UJ
+JG
+dZ
+dZ
+dZ
+dZ
+ON
+Ox
+Ib
+dh
+Le
+ob
+dh
+CW
+CW
+Vu
+Wm
+SV
+SV
+DD
+CJ
+UJ
+vf
+ZZ
+vR
+bZ
+UJ
 "}
 (128,1,2) = {"
 ld
@@ -70382,6 +73095,9 @@ Yg
 Yg
 Yg
 Yg
+cp
+cp
+cp
 Yg
 Yg
 Yg
@@ -70417,49 +73133,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+fh
+na
+CU
+gu
+vb
+Lv
+hW
+hW
+Wg
+UI
+gY
+Qc
+JG
+ZY
+zf
+zf
+ZY
+ON
+Ox
+go
+vI
+eq
+eq
+eq
+eq
+vI
+SF
+BX
+bJ
+Zr
+xi
+YL
+UJ
+HB
+ZZ
+ZZ
+FR
+UJ
 "}
 (129,1,2) = {"
 ld
@@ -70584,6 +73297,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -70621,47 +73335,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+UJ
+vs
+jc
+Em
+gu
+AB
+DP
+WH
+WH
+WH
+AB
+gY
+Qc
+gY
+gY
+gY
+gY
+gY
+gY
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+hG
+SV
+DD
+CJ
+UJ
+nq
+ZZ
+ZL
+ZZ
+UJ
 "}
 (130,1,2) = {"
 ld
@@ -70786,6 +73499,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -70823,47 +73537,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+qJ
+WH
+dw
+gu
+ar
+YJ
+WH
+dW
+dW
+WH
+DP
+gY
+Qc
+Qr
+hZ
+ai
+ai
+Ck
+gY
+CR
+ai
+ai
+bh
+Qw
+xv
+wJ
+wJ
+QZ
+Ox
+hG
+SV
+DD
+CJ
+UJ
+XO
+ZZ
+hl
+NW
+UJ
 "}
 (131,1,2) = {"
 ld
@@ -70988,6 +73701,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -71025,47 +73739,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+sf
+sB
+kl
+IW
+IW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+pa
+Gg
+pr
+jy
+Bo
+gY
+np
+Kg
+WZ
+WZ
+ee
+WZ
+WZ
+SG
+MG
+Ox
+KC
+Ap
+ZV
+KC
+UJ
+yL
+Ig
+yL
+UJ
+UJ
 "}
 (132,1,2) = {"
 ld
@@ -71190,6 +73903,7 @@ Yg
 Yg
 Yg
 Yg
+cp
 Yg
 Yg
 Yg
@@ -71227,47 +73941,46 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+sf
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+FX
+TJ
+pu
+ya
+Zz
+gY
+np
+ha
+Ms
+px
+of
+Ms
+px
+DD
+xv
+KC
+WK
+SV
+ha
+CJ
+UJ
+yl
+VY
+mk
+UJ
+UJ
 "}
 (133,1,2) = {"
 ld
@@ -71392,84 +74105,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+sf
+dW
+dW
+dW
+dW
+LH
+dW
+dW
+HG
+dW
+Mu
+ie
+Qc
+cs
+pr
+pr
+GL
+ex
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+cu
+tM
+UJ
+mY
+Nj
+cR
+UJ
+UJ
 "}
 (134,1,2) = {"
 ld
@@ -71594,84 +74307,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+sf
+ie
+IW
+dW
+ie
+dW
+IW
+dW
+dW
+IW
+pP
+ie
+Qc
+PH
+ph
+Kh
+xK
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+CJ
+UJ
+jb
+MR
+WA
+UJ
+UJ
 "}
 (135,1,2) = {"
 ld
@@ -71796,84 +74509,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Wv
+Wv
+Wv
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+sf
+Nm
+IW
+IW
+pA
+pA
+pA
+dW
+dW
+KV
+Nm
+Nm
+UJ
+zL
+zL
+gY
+zL
+bv
+gY
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+Ms
+Jg
+px
+SV
+DD
+Rf
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (136,1,2) = {"
 ld
@@ -71998,84 +74711,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+HQ
+Bp
+xL
+Bp
+yn
+Wv
+Od
+Od
+Od
+Wv
+pC
+Bp
+qv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+sf
+AY
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+pl
+Nz
+pr
+Go
+Nz
+DD
+nh
+bh
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+yl
+VY
+lc
+yL
+UJ
 "}
 (137,1,2) = {"
 ld
@@ -72200,84 +74913,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Wv
+UJ
+HN
+Ys
+Ey
+Ys
+Jl
+UJ
+UJ
+UJ
+UJ
+UJ
+iC
+Ys
+uP
+UJ
+Wv
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+Wa
+TB
+TB
+TB
+TB
+TB
+TB
+Vr
+TB
+TB
+TB
+AU
+Al
+Vl
+SV
+gq
+SV
+DD
+SV
+SV
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LC
+Zr
+DD
+CJ
+UJ
+mY
+WV
+mY
+vk
+UJ
 "}
 (138,1,2) = {"
 ld
@@ -72402,84 +75115,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+oq
+gE
+JC
+DF
+DF
+DF
+DF
+DF
+FD
+Ox
+PZ
+DF
+DF
+DF
+DF
+DF
+FD
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+UJ
+HG
+dW
+dW
+dW
+dW
+dW
+HE
+dW
+dW
+dW
+dW
+mJ
+SV
+Ek
+JF
+WZ
+So
+VE
+WZ
+cu
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LF
+SV
+DD
+CJ
+UJ
+je
+MR
+WA
+yL
+UJ
 "}
 (139,1,2) = {"
 kZ
@@ -72604,84 +75317,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+NR
+oJ
+dA
+CW
+yT
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+UJ
+dW
+dW
+IW
+IW
+dW
+dW
+HL
+dW
+dW
+dW
+dW
+mJ
+Nz
+pr
+gq
+Nz
+DD
+BQ
+xK
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (140,1,2) = {"
 kZ
@@ -72806,84 +75519,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+hp
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+Kx
+Ue
+IU
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+UJ
+KV
+ie
+sB
+pA
+pA
+pA
+HL
+dW
+pA
+pA
+lx
+UJ
+UO
+XA
+gY
+zL
+lU
+UJ
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+iW
+bY
+gI
+SV
+DD
+iW
+fN
+fN
+fN
+fN
+Kb
+UJ
 "}
 (141,1,2) = {"
 kZ
@@ -73008,84 +75721,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+gl
+Ul
+dA
+YP
+bT
+pC
+yq
+CW
+Ga
+Ox
+Ch
+CW
+qv
+Ey
+Py
+CW
+aZ
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+cp
+UJ
+WH
+WH
+ie
+pP
+dW
+dW
+HL
+dW
+IW
+ie
+Er
+Qc
+SN
+kX
+AI
+bh
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+SV
+SV
+SV
+SV
+SV
+CJ
+UJ
 "}
 (142,1,2) = {"
 kZ
@@ -73210,84 +75923,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+zK
+oJ
+dA
+YP
+pw
+HQ
+yq
+CW
+CT
+WS
+xY
+CW
+Ey
+Ey
+Ey
+CW
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
+UJ
+WH
+Pa
+WH
+ie
+sB
+IW
+HL
+dW
+dW
+ie
+pP
+Qc
+nU
+pr
+eb
+pr
+dU
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+kO
+WZ
+WZ
+WZ
+WZ
+XZ
+tM
+UJ
 "}
 (143,1,2) = {"
 kZ
@@ -73412,84 +76125,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+cp
+Yg
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+Wv
+Rk
+Ey
+dA
+YP
+fA
+iM
+oe
+Dm
+vq
+Hk
+Ku
+Dm
+Ze
+Ze
+Ze
+fO
+Ff
+Wv
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Ba
+UJ
+UJ
+LM
+LM
+UI
+WH
+WH
+ie
+Eo
+dW
+dW
+ie
+gY
+Qc
+gJ
+TJ
+pu
+DW
+SU
+gY
+np
+DD
+iW
+gI
+RJ
+iW
+gI
+DD
+BQ
+KC
+Kh
+Kh
+Kh
+Kh
+Kh
+xK
+SV
+DD
+CJ
+UJ
 "}
 (144,1,2) = {"
 kZ
@@ -73614,84 +76327,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+Cj
+oJ
+dA
+YP
+ny
+IU
+yq
+CW
+Ga
+Ox
+Ch
+CW
+pC
+Ey
+pV
+OL
+Ga
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+UJ
+UJ
+CR
+UJ
+UJ
+ej
+xV
+AB
+ar
+FO
+WH
+Di
+dW
+ie
+Da
+gY
+Qc
+Yz
+pr
+pr
+GW
+Xm
+gY
+np
+wt
+VE
+WZ
+Yh
+WZ
+WZ
+Ir
+PB
+gY
+gY
+gY
+gY
+gY
+gY
+np
+sN
+ha
+CJ
+UJ
 "}
 (145,1,2) = {"
 kZ
@@ -73816,84 +76529,84 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+xV
+UJ
+UJ
+Od
+Od
+Od
+Od
+Od
+Od
+UJ
+pC
+Ey
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+HN
+Kx
+HQ
+OL
+tk
+UJ
+Od
+Od
+Od
+Od
+Od
+UJ
+CR
+ai
+Ax
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 "}
 (146,1,2) = {"
 kZ
@@ -74018,45 +76731,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+dw
+gu
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+xF
+oJ
+dA
+CW
+OL
+CW
+CW
+CW
+Df
+BX
+dA
+CW
+CW
+CW
+CW
+OL
+Ff
+UJ
+UJ
+Wv
+Wv
+UJ
+UJ
+UJ
+tV
+kM
+xN
+UJ
 Yg
 Yg
 Yg
@@ -74220,45 +76933,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+Fz
+gY
+gY
+HH
+pr
+ta
+cl
+gY
+Kx
+vU
+dA
+CW
+rs
+CW
+CW
+em
+IE
+Ox
+xu
+eq
+eq
+eq
+ZT
+OL
+zm
+Ox
+CR
+ai
+ai
+lj
+gY
+yY
+WX
+nh
+gY
+UJ
 Yg
 Yg
 Yg
@@ -74422,45 +77135,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+gx
+WH
+WH
+WH
+iA
+pr
+GL
+ta
+ta
+gY
+gY
+Ox
+dA
+CW
+CW
+CW
+CW
+Ff
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+Ff
+Ox
+yA
+Eh
+Eh
+sE
+gY
+yA
+Zj
+ya
+Jk
+UJ
 Yg
 Yg
 Yg
@@ -74624,45 +77337,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+WH
+WH
+gY
+gY
+ta
+Xp
+pr
+pr
+iA
+hD
+dA
+CW
+CW
+CW
+CW
+pi
+Ox
+HF
+kR
+Ab
+QK
+zM
+xY
+OL
+Ff
+BX
+np
+Lg
+KJ
+PB
+gY
+np
+oK
+BQ
+gY
+UJ
 Yg
 Yg
 Yg
@@ -74826,45 +77539,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+mm
+Wf
+WH
+WH
+WH
+gY
+dx
+ta
+pr
+CF
+gY
+pS
+ds
+FU
+Ts
+Ts
+FI
+Md
+Ox
+Ib
+Ys
+Ey
+Ys
+oq
+CW
+OL
+Ff
+BX
+np
+zA
+zA
+PB
+gY
+gY
+lU
+gY
+gY
+UJ
 Yg
 Yg
 Yg
@@ -75028,45 +77741,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+RR
+dD
+WH
+WH
+WH
+WH
+gY
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+Ox
+rH
+jg
+yR
+rH
+Ox
+Ox
+nx
+CW
+CW
+CW
+CW
+CW
+OL
+Ff
+BX
+np
+pr
+pr
+nh
+KC
+bh
+DD
+nh
+ai
+UJ
 Yg
 Yg
 Yg
@@ -75230,45 +77943,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+KC
+KC
+KC
+eu
+eu
+KC
+UJ
+Od
+Od
+Od
+Od
+UJ
+xj
+ZY
+ZY
+ZY
+ZY
+mH
+Ox
+Ye
+CW
+yG
+Dm
+Dm
+Dm
+mW
+Ff
+BX
+hG
+SV
+Zr
+SV
+Ap
+SV
+DD
+SV
+sN
+UJ
 Yg
 Yg
 Yg
@@ -75432,45 +78145,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+mm
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Od
+UJ
+eX
+dZ
+dZ
+dZ
+dZ
+Sv
+Ox
+nB
+jr
+Ey
+jr
+lA
+CW
+OL
+Ga
+Ox
+hG
+SV
+Kg
+WZ
+LE
+WZ
+Ir
+SV
+Zr
+UJ
 Yg
 Yg
 Yg
@@ -75634,45 +78347,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+WH
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Od
+UJ
+YE
+pj
+Zm
+Zm
+oo
+KS
+Ox
+dr
+Jh
+jW
+jT
+tS
+ZT
+OL
+Ff
+Ox
+KC
+Ap
+ZV
+KC
+KC
+To
+Ov
+To
+To
+UJ
 Yg
 Yg
 Yg
@@ -75836,45 +78549,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+vb
+lW
+WH
+WH
+WH
+UJ
+UJ
+Od
+Od
+Wv
+ZY
+OI
+WJ
+ui
+RL
+ZY
+Ox
+Ox
+Ox
+BX
+BX
+Ox
+dA
+OL
+mZ
+BX
+WK
+vY
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -76038,45 +78751,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+Pa
+AB
+zU
+WH
+WH
+WH
+WH
+UJ
+Od
+Od
+Wv
+ZY
+OI
+Ah
+VK
+RL
+ZY
+Ox
+wM
+Uv
+IF
+hc
+Wd
+xY
+de
+xz
+tg
+WZ
+WZ
+cu
+CJ
+UJ
+yl
+Si
+lc
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -76240,45 +78953,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+Wf
+na
+UH
+xV
+Pa
+WH
+mm
+WH
+UJ
+UJ
+Od
+Wv
+ZY
+OI
+lB
+Mw
+RL
+ZY
+Ox
+jC
+CW
+CW
+CW
+CW
+CW
+OL
+nm
+BX
+bJ
+SV
+DD
+tM
+UJ
+zw
+qW
+mY
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -76442,45 +79155,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+yy
+Ak
+CU
+ei
+xV
+WH
+WH
+WH
+WH
+UJ
+Od
+Wv
+ZY
+OI
+Ah
+sW
+RL
+ZY
+Ox
+ox
+CW
+yG
+Dm
+Dm
+Dm
+dY
+Df
+BX
+hG
+SV
+DD
+CJ
+UJ
+je
+xw
+Dj
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -76644,45 +79357,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+DP
+dw
+CU
+CU
+wb
+WH
+WH
+WH
+WH
+UJ
+Od
+UJ
+YE
+Ji
+mt
+mt
+hX
+KS
+Ox
+lR
+dh
+Le
+PY
+dh
+CW
+CW
+mZ
+BX
+WK
+SV
+DD
+CJ
+UJ
+yL
+xl
+yL
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -76846,45 +79559,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+ew
+YY
+CU
+VF
+gu
+yy
+WH
+WH
+vb
+UJ
+UJ
+UJ
+JG
+dZ
+dZ
+dZ
+dZ
+ON
+Ox
+Ib
+dh
+Le
+ob
+dh
+CW
+CW
+Vu
+Wm
+SV
+SV
+DD
+CJ
+UJ
+vf
+ZZ
+vR
+bZ
+UJ
 Yg
 Yg
 Yg
@@ -77048,45 +79761,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+fh
+na
+CU
+gu
+vb
+Lv
+hW
+hW
+Wg
+UI
+gY
+Qc
+JG
+ZY
+zf
+zf
+ZY
+ON
+Ox
+go
+vI
+eq
+eq
+eq
+eq
+vI
+SF
+BX
+bJ
+Zr
+xi
+YL
+UJ
+HB
+ZZ
+ZZ
+FR
+UJ
 Yg
 Yg
 Yg
@@ -77250,45 +79963,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+vs
+jc
+Em
+gu
+AB
+DP
+WH
+WH
+WH
+AB
+gY
+Qc
+gY
+gY
+gY
+gY
+gY
+gY
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+hG
+SV
+DD
+CJ
+UJ
+nq
+ZZ
+ZL
+ZZ
+UJ
 Yg
 Yg
 Yg
@@ -77452,45 +80165,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+qJ
+WH
+dw
+gu
+ar
+YJ
+WH
+dW
+dW
+WH
+DP
+gY
+Qc
+Qr
+hZ
+ai
+ai
+Ck
+gY
+CR
+ai
+ai
+bh
+Qw
+xv
+wJ
+wJ
+QZ
+Ox
+hG
+SV
+DD
+CJ
+UJ
+XO
+ZZ
+hl
+NW
+UJ
 Yg
 Yg
 Yg
@@ -77654,45 +80367,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+sB
+kl
+IW
+IW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+pa
+Gg
+pr
+jy
+Bo
+gY
+np
+Kg
+WZ
+WZ
+ee
+WZ
+WZ
+SG
+MG
+Ox
+KC
+Ap
+ZV
+KC
+UJ
+yL
+Ig
+yL
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -77856,45 +80569,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+gY
+Qc
+FX
+TJ
+pu
+ya
+Zz
+gY
+np
+ha
+Ms
+px
+of
+Ms
+px
+DD
+xv
+KC
+WK
+SV
+ha
+CJ
+UJ
+yl
+VY
+mk
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -78058,45 +80771,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+dW
+dW
+dW
+dW
+LH
+dW
+dW
+HG
+dW
+Mu
+ie
+Qc
+cs
+pr
+pr
+GL
+ex
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+cu
+tM
+UJ
+mY
+Nj
+cR
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -78260,45 +80973,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+ie
+IW
+dW
+ie
+dW
+IW
+dW
+dW
+IW
+pP
+ie
+Qc
+PH
+ph
+Kh
+xK
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+CJ
+UJ
+jb
+MR
+WA
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -78462,45 +81175,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+Nm
+IW
+IW
+pA
+pA
+pA
+dW
+dW
+KV
+Nm
+Nm
+UJ
+zL
+zL
+gY
+zL
+bv
+gY
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+Ms
+Jg
+px
+SV
+DD
+Rf
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -78664,45 +81377,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+sf
+AY
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+dW
+pl
+Nz
+pr
+Go
+Nz
+DD
+nh
+bh
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+yl
+VY
+lc
+yL
+UJ
 Yg
 Yg
 Yg
@@ -78866,45 +81579,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+Wa
+TB
+TB
+TB
+TB
+TB
+TB
+Vr
+TB
+TB
+TB
+AU
+Al
+Vl
+SV
+gq
+SV
+DD
+SV
+SV
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LC
+Zr
+DD
+CJ
+UJ
+mY
+WV
+mY
+vk
+UJ
 Yg
 Yg
 Yg
@@ -79068,45 +81781,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+HG
+dW
+dW
+dW
+dW
+dW
+HE
+dW
+dW
+dW
+dW
+mJ
+SV
+Ek
+JF
+WZ
+So
+VE
+WZ
+cu
+CJ
+UJ
+Od
+UJ
+LC
+DD
+CJ
+Ox
+LF
+SV
+DD
+CJ
+UJ
+je
+MR
+WA
+yL
+UJ
 Yg
 Yg
 Yg
@@ -79270,45 +81983,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+dW
+dW
+IW
+IW
+dW
+dW
+HL
+dW
+dW
+dW
+dW
+mJ
+Nz
+pr
+gq
+Nz
+DD
+BQ
+xK
+DD
+CJ
+pX
+Od
+pX
+LC
+DD
+CJ
+Ox
+LC
+SV
+DD
+CJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 Yg
 Yg
 Yg
@@ -79472,45 +82185,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+KV
+ie
+sB
+pA
+pA
+pA
+HL
+dW
+pA
+pA
+lx
+UJ
+UO
+XA
+gY
+zL
+lU
+UJ
+np
+DD
+CJ
+pX
+Od
+pX
+LC
+ha
+iW
+bY
+gI
+SV
+DD
+iW
+fN
+fN
+fN
+fN
+Kb
+UJ
 Yg
 Yg
 Yg
@@ -79674,45 +82387,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+WH
+ie
+pP
+dW
+dW
+HL
+dW
+IW
+ie
+Er
+Qc
+SN
+kX
+AI
+bh
+oK
+gY
+np
+DD
+CJ
+UJ
+Od
+UJ
+LC
+DD
+SV
+Ap
+SV
+SV
+DD
+SV
+SV
+SV
+SV
+SV
+CJ
+UJ
 Yg
 Yg
 Yg
@@ -79876,45 +82589,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+WH
+Pa
+WH
+ie
+sB
+IW
+HL
+dW
+dW
+ie
+pP
+Qc
+nU
+pr
+eb
+pr
+dU
+gY
+np
+DD
+CJ
+UJ
+UJ
+UJ
+LC
+xi
+WZ
+LE
+WZ
+WZ
+kO
+WZ
+WZ
+WZ
+WZ
+XZ
+tM
+UJ
 Yg
 Yg
 Yg
@@ -80078,45 +82791,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+LM
+LM
+UI
+WH
+WH
+ie
+Eo
+dW
+dW
+ie
+gY
+Qc
+gJ
+TJ
+pu
+DW
+SU
+gY
+np
+DD
+iW
+gI
+RJ
+iW
+gI
+DD
+BQ
+KC
+Kh
+Kh
+Kh
+Kh
+Kh
+xK
+SV
+DD
+CJ
+UJ
 Yg
 Yg
 Yg
@@ -80280,45 +82993,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+ej
+xV
+AB
+ar
+FO
+WH
+Di
+dW
+ie
+Da
+gY
+Qc
+Yz
+pr
+pr
+GW
+Xm
+gY
+np
+wt
+VE
+WZ
+Yh
+WZ
+WZ
+Ir
+PB
+gY
+gY
+gY
+gY
+gY
+gY
+np
+sN
+ha
+CJ
+UJ
 Yg
 Yg
 Yg
@@ -80482,45 +83195,45 @@ Yg
 Yg
 Yg
 Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
-Yg
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
+UJ
 Yg
 Yg
 Yg
