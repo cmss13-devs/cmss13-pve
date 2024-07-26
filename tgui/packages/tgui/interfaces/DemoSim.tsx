@@ -11,14 +11,22 @@ import {
 } from '../components';
 import { Window } from '../layouts';
 
+interface DemoSimData {
+  configuration: any;
+  dummy_mode: string;
+  worldtime: number;
+  nextdetonationtime: number;
+  detonation_cooldown: number;
+}
+
 export const DemoSim = () => {
-  const { act, data } = useBackend();
+  const { act, data } = useBackend<DemoSimData>();
   const [simulationView, setSimulationView] = useState(false);
 
   const timeLeft = data.nextdetonationtime - data.worldtime;
   const timeLeftPct = timeLeft / data.detonation_cooldown;
 
-  const canDetonate = timeLeft < 0 && data.configuration && data.looking;
+  const canDetonate = timeLeft < 0 && data.configuration && simulationView;
 
   return (
     <Window width={550} height={300}>
@@ -56,7 +64,7 @@ export const DemoSim = () => {
         <Section title="Detonation controls">
           <Stack>
             <Stack.Item grow>
-              {(!data.looking && (
+              {(!simulationView && (
                 <Button
                   fontSize="16px"
                   fluid
