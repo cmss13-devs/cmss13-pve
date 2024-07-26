@@ -408,7 +408,7 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
 	. = ..()
 
-	if(equipping_mob.back)
+	if(equipping_mob.back && !(equipping_mob.back.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE))
 		to_chat(equipping_mob, SPAN_WARNING("You can't equip [src] while wearing a backpack."))
 		return FALSE
 
@@ -424,10 +424,9 @@
 	if(slot != WEAR_BACK)
 		return
 
-
-	if(is_type_in_list(equipping_item, smartgun_back))
+	if(equipping_item.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE || is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)

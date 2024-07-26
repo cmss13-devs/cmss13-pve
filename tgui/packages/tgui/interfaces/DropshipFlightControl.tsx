@@ -30,7 +30,7 @@ type DoorStatusEnums = (typeof DoorStatusEnum)[keyof typeof DoorStatusEnum];
 
 interface DoorStatus {
   id: string;
-  value: 0 | 1;
+  value: DoorStatusEnums;
 }
 
 interface AutomatedControl {
@@ -65,7 +65,7 @@ const DropshipDoorControl = () => {
         .filter((x) => x.id === 'all')
         .map((x) => (
           <>
-            {x.value === 0 && (
+            {x.value === DoorStatusEnum.SHUTTLE_DOOR_UNLOCKED && (
               <Button
                 disabled={disable_door_controls}
                 onClick={() =>
@@ -80,7 +80,7 @@ const DropshipDoorControl = () => {
               </Button>
             )}
 
-            {x.value === 1 && (
+            {x.value === DoorStatusEnum.SHUTTLE_DOOR_LOCKED && (
               <Button
                 disabled={disable_door_controls}
                 onClick={() =>
@@ -105,8 +105,14 @@ const DropshipDoorControl = () => {
             return (
               <Stack.Item key={x.id}>
                 <>
-                  {x.value === 0 && (
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_BROKEN && (
+                    <Button disabled icon="ban">
+                      No response
+                    </Button>
+                  )}
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_UNLOCKED && (
                     <Button
+                      disabled={disable_door_controls}
                       onClick={() =>
                         act('door-control', {
                           interaction: 'force-lock',
@@ -118,7 +124,7 @@ const DropshipDoorControl = () => {
                       Lock {name}
                     </Button>
                   )}
-                  {x.value === 1 && (
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_LOCKED && (
                     <Button
                       disabled={disable_door_controls}
                       onClick={() =>

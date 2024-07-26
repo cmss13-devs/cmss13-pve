@@ -43,6 +43,14 @@
 	icon_state = "rasputin15"
 	},
 /area/shuttle/drop1/sulaco)
+"cv" = (
+/obj/effect/attach_point/crew_weapon/dropship1{
+	attach_id = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/drop1/sulaco)
 "cC" = (
 /obj/structure/shuttle/part/dropship1/nose_front_right,
 /turf/template_noop,
@@ -161,7 +169,8 @@
 /area/shuttle/drop1/sulaco)
 "os" = (
 /obj/effect/attach_point/fuel/dropship1{
-	pixel_x = -32
+	pixel_x = -32;
+	attach_id = 11
 	},
 /turf/closed/shuttle/dropship1/transparent{
 	icon_state = "33"
@@ -249,7 +258,9 @@
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "wr" = (
-/obj/effect/attach_point/crew_weapon/dropship1,
+/obj/effect/attach_point/crew_weapon/dropship1{
+	attach_id = 9
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -312,6 +323,14 @@
 	icon_state = "38"
 	},
 /area/shuttle/drop1/sulaco)
+"Bq" = (
+/obj/effect/attach_point/crew_weapon/dropship1{
+	attach_id = 7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/drop1/sulaco)
 "BB" = (
 /turf/closed/shuttle/dropship1{
 	icon_state = "63"
@@ -346,14 +365,16 @@
 /area/shuttle/drop1/sulaco)
 "Da" = (
 /obj/effect/attach_point/electronics/dropship1{
-	dir = 1
+	dir = 1;
+	attach_id = 5
 	},
 /obj/structure/shuttle/part/dropship1/transparent/inner_left_weapons,
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "De" = (
 /obj/effect/attach_point/electronics/dropship1{
-	dir = 1
+	dir = 1;
+	attach_id = 6
 	},
 /obj/structure/shuttle/part/dropship1/transparent/inner_right_weapons,
 /turf/template_noop,
@@ -576,7 +597,9 @@
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "Ua" = (
-/obj/effect/attach_point/fuel/dropship1,
+/obj/effect/attach_point/fuel/dropship1{
+	attach_id = 10
+	},
 /turf/closed/shuttle/dropship1/transparent{
 	icon_state = "28"
 	},
@@ -773,9 +796,9 @@ BB
 OK
 OU
 il
-wr
+Bq
 il
-wr
+cv
 il
 wr
 il
