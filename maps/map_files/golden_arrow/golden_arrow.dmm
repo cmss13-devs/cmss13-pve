@@ -202,15 +202,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"aF" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "aG" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -245,12 +236,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
-"aK" = (
-/turf/closed/shuttle/midway{
-	icon_state = "69";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "aM" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -579,17 +564,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
-"bA" = (
-/obj/item/tool/screwdriver{
-	pixel_y = 7;
-	pixel_x = -4;
-	layer = 3.03;
-	icon_state = "screwdriver3"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "bC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -794,12 +768,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
-"bZ" = (
-/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "ca" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -825,12 +793,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
-"cc" = (
-/turf/closed/shuttle/midway{
-	icon_state = "83";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "cd" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -1026,12 +988,6 @@
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/hangar)
-"cG" = (
-/turf/closed/shuttle/midway{
-	icon_state = "104";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "cI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1167,12 +1123,6 @@
 	dir = 1
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"cY" = (
-/obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "cZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1353,12 +1303,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"dv" = (
-/turf/closed/shuttle/midway{
-	icon_state = "77";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "dw" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -1392,24 +1336,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"dC" = (
-/obj/item/prop/almayer/comp_open{
-	pixel_y = 4;
-	pixel_x = 40
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "4-5";
-	color = "#b30000";
-	pixel_x = 5;
-	pixel_y = 2;
-	layer = 2.8;
-	name = "cable"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "dF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1472,11 +1398,6 @@
 	dir = 4
 	},
 /area/golden_arrow/cryo_cells)
-"dM" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "dN" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth,
@@ -1555,15 +1476,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/engineering)
-"ec" = (
-/obj/structure/largecrate/random/case/double,
-/obj/structure/largecrate/random/case/small{
-	pixel_y = 18;
-	pixel_x = 18;
-	layer = 3.1
-	},
-/turf/open/floor/plating,
-/area/space)
 "ed" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1861,12 +1773,6 @@
 	icon_state = "blackcorner"
 	},
 /area/golden_arrow/hangar)
-"eP" = (
-/turf/closed/shuttle/midway{
-	icon_state = "25";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "eQ" = (
 /obj/structure/machinery/door_control{
 	id = "lowervehiclebay1";
@@ -2144,10 +2050,6 @@
 	dir = 8
 	},
 /area/golden_arrow/supply)
-"fx" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/plating,
-/area/space)
 "fB" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/almayer/edge/smooth/corner{
@@ -2168,12 +2070,6 @@
 	dir = 10
 	},
 /area/golden_arrow/platoonprep)
-"fF" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "35";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "fG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -2709,12 +2605,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"gX" = (
-/obj/effect/decal/siding{
-	icon_state = "siding5"
-	},
-/turf/open/floor/plating,
-/area/space)
 "gZ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -2733,16 +2623,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonarmory)
-"hd" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "he" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2750,14 +2630,6 @@
 /obj/structure/cargo_container/hd/right,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"hf" = (
-/obj/item/tool/weldingtool{
-	pixel_y = 6
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "hg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2857,9 +2729,6 @@
 	dir = 8
 	},
 /area/golden_arrow/engineering)
-"hp" = (
-/turf/open/floor/plating,
-/area/space)
 "hq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3118,19 +2987,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"hX" = (
-/obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
-"hY" = (
-/turf/closed/shuttle/midway{
-	icon_state = "92";
-	name = "\improper Tripoli";
-	opacity = 0
-	},
-/area/space)
 "hZ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3247,12 +3103,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/engineering)
-"io" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "34";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "ip" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -3403,12 +3253,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoonprep)
-"iM" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "iP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3433,16 +3277,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"iR" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "iU" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3610,17 +3444,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"jl" = (
-/obj/effect/decal/siding,
-/turf/open/floor/plating,
-/area/space)
-"jn" = (
-/turf/closed/shuttle/midway{
-	icon_state = "94";
-	name = "\improper Tripoli";
-	opacity = 0
-	},
-/area/space)
 "jo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3882,12 +3705,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
-"jP" = (
-/turf/closed/shuttle/midway{
-	icon_state = "67";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "jS" = (
 /turf/open/floor/almayer{
 	icon_state = "mono"
@@ -4004,12 +3821,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"kk" = (
-/obj/structure/machinery/computer/shuttle/dropship/flight,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "kl" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -4364,18 +4175,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"lk" = (
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "4-5";
-	color = "#b30000";
-	pixel_x = 5;
-	name = "cable"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "lm" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -4522,10 +4321,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"lF" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating,
-/area/space)
 "lH" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -4571,12 +4366,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"lO" = (
-/obj/structure/shuttle/part/dropship1/lower_left_wall{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "lQ" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -4604,15 +4393,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"lS" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/siding{
-	icon_state = "siding8"
-	},
-/turf/open/floor/plating,
-/area/space)
 "lT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -4826,16 +4606,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"mv" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/prop/dam/crane/cargo{
-	dir = 4;
-	desc = "Standard cargo crane used by the USCM. Looks like this one has replacement parts for the Tripoli on it. You probably couldn't name half of these."
-	},
-/turf/open/floor/plating,
-/area/space)
 "mx" = (
 /obj/structure/platform{
 	dir = 8
@@ -5449,12 +5219,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"nZ" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "89";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "oa" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5653,12 +5417,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
-"oJ" = (
-/turf/closed/shuttle/midway{
-	icon_state = "24";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "oL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -5994,12 +5752,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/supply)
-"pD" = (
-/obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "pE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -6028,12 +5780,6 @@
 	dir = 9
 	},
 /area/golden_arrow/prep_hallway)
-"pG" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "39";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "pH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -6151,28 +5897,6 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/engineering)
-"qe" = (
-/obj/structure/bed/bedroll{
-	pixel_y = -4;
-	color = "#006db0";
-	name = "floor mat";
-	buckle_lying = null;
-	can_buckle = 0;
-	foldabletype = null;
-	desc = "A mechanic's mat."
-	},
-/obj/effect/decal/cleanable/blood/oil,
-/obj/item/tool/weldingtool{
-	pixel_y = 21
-	},
-/obj/item/tool/wrench{
-	pixel_y = 7
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "qj" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -6267,12 +5991,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"qx" = (
-/turf/closed/shuttle/midway{
-	icon_state = "103";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "qz" = (
 /obj/structure/ship_ammo/minirocket,
 /obj/structure/ship_ammo/minirocket{
@@ -6747,12 +6465,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"rL" = (
-/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "rM" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -6885,18 +6597,6 @@
 	icon_state = "black"
 	},
 /area/golden_arrow/hangar)
-"sd" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "sg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/tool/warning_cone{
@@ -7105,12 +6805,6 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
-"sF" = (
-/turf/closed/shuttle/midway{
-	icon_state = "30";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "sG" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay One Blast Door";
@@ -7145,12 +6839,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"sL" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "sM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -7180,12 +6868,6 @@
 	dir = 4
 	},
 /area/golden_arrow/cryo_cells)
-"sR" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "sS" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7288,12 +6970,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"te" = (
-/obj/effect/decal/siding{
-	icon_state = "siding10"
-	},
-/turf/open/floor/plating,
-/area/space)
 "tf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -7457,18 +7133,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"tC" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
-"tD" = (
-/turf/closed/shuttle/midway{
-	icon_state = "75";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "tG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -7484,12 +7148,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"tI" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "tJ" = (
 /obj/structure/machinery/medical_pod/bodyscanner{
 	pixel_y = 6
@@ -7556,12 +7214,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"tP" = (
-/turf/closed/shuttle/dropship1{
-	icon_state = "97";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "tQ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7638,24 +7290,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/engineering)
-"tY" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit{
-	locked = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"tZ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/cleanable/blood/oil,
-/obj/effect/decal/siding{
-	icon_state = "siding6"
-	},
-/turf/open/floor/plating,
-/area/space)
 "uc" = (
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/structure/machinery/firealarm{
@@ -7843,17 +7477,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"uz" = (
-/obj/item/stack/sheet/metal,
-/obj/item/stack/rods{
-	pixel_y = 16;
-	pixel_x = -13
-	},
-/obj/effect/decal/siding{
-	icon_state = "siding8"
-	},
-/turf/open/floor/plating,
-/area/space)
 "uA" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8007,24 +7630,6 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/supply)
-"uP" = (
-/obj/structure/cable{
-	layer = 2.45;
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "0-8";
-	color = "#b30000";
-	pixel_y = 2;
-	pixel_x = 2;
-	name = "cable"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "uQ" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/largecrate/random/case/double,
@@ -8219,12 +7824,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/synthcloset)
-"vi" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "38";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "vl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out"
@@ -9347,12 +8946,6 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"xZ" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "26";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "yb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -9746,25 +9339,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"zb" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
-"zd" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "ze" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10397,12 +9971,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
-"AR" = (
-/obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "AS" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/reagentgrinder/industrial{
@@ -10536,21 +10104,6 @@
 "Bk" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"Bl" = (
-/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
-"Bm" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "Bo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -10599,13 +10152,6 @@
 	dir = 10
 	},
 /area/golden_arrow/engineering)
-"Bx" = (
-/obj/structure/shuttle/part/dropship1/nose_front_right{
-	name = "\improper Tripoli";
-	opacity = 0
-	},
-/turf/open/floor/plating,
-/area/space)
 "By" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10644,12 +10190,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"BF" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "86";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "BG" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Cargo Elevator Blast Door";
@@ -10680,12 +10220,6 @@
 	dir = 8
 	},
 /area/golden_arrow/cryo_cells)
-"BL" = (
-/obj/effect/decal/siding{
-	icon_state = "siding2"
-	},
-/turf/open/floor/plating,
-/area/space)
 "BM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10706,15 +10240,6 @@
 	dir = 8
 	},
 /area/golden_arrow/cryo_cells)
-"BO" = (
-/obj/effect/attach_point/fuel/midway{
-	pixel_x = -32
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "33";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "BP" = (
 /turf/open/floor/almayer/uscm{
 	icon_state = "logo_directional1";
@@ -10947,12 +10472,6 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/briefing)
-"Cy" = (
-/obj/effect/decal/siding{
-	icon_state = "siding9"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Cz" = (
 /turf/open/floor/plating,
 /area/golden_arrow/supply)
@@ -11197,12 +10716,6 @@
 	dir = 1
 	},
 /area/golden_arrow/supply)
-"Dh" = (
-/turf/closed/shuttle/midway{
-	icon_state = "73";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Dj" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11305,15 +10818,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"DA" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/siding{
-	icon_state = "siding2"
-	},
-/turf/open/floor/plating,
-/area/space)
 "DB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -11388,18 +10892,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"DJ" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "DL" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -11453,12 +10945,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"DW" = (
-/obj/structure/shuttle/part/dropship1/lower_right_wall{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "DX" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -11787,15 +11273,6 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/engineering)
-"EP" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
-	name = "\improper Tripoli cargo door";
-	locked = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "EQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -11834,15 +11311,6 @@
 	dir = 5
 	},
 /area/golden_arrow/dorms)
-"EU" = (
-/obj/structure/shuttle/part/dropship1/transparent/inner_left_weapons{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "EV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -12172,10 +11640,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"FQ" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/floor/plating,
-/area/space)
 "FR" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Three Blast Door";
@@ -12400,12 +11864,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"Gn" = (
-/turf/closed/shuttle/midway{
-	icon_state = "54";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Gp" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12436,12 +11894,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
-"Gs" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Gt" = (
 /obj/item/hardpoint/primary/arc_frontalcannon{
 	pixel_y = -15;
@@ -12451,15 +11903,6 @@
 	dir = 1
 	},
 /area/golden_arrow/engineering)
-"Gx" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "Gz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -12514,12 +11957,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"GG" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "27";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "GH" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12588,15 +12025,6 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
-"GO" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/largecrate/random/case{
-	pixel_y = 11
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "GP" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -12762,13 +12190,6 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/cryo_cells)
-"Hn" = (
-/obj/effect/attach_point/fuel/midway,
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "28";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Hp" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -12852,12 +12273,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"HE" = (
-/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "HF" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -12873,12 +12288,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
-"HJ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "HK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -13237,12 +12646,6 @@
 	dir = 4
 	},
 /area/golden_arrow/cryo_cells)
-"IF" = (
-/turf/closed/shuttle/midway{
-	icon_state = "64";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "IG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -13296,24 +12699,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
-"IK" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/prop{
-	density = 1;
-	icon_state = "pipe_d";
-	name = "refueling pump";
-	desc = "A pump used for refueling the dropship.";
-	pixel_x = -4;
-	pixel_y = -5;
-	layer = 2.7
-	},
-/obj/effect/decal/siding{
-	icon_state = "siding2"
-	},
-/turf/open/floor/plating,
-/area/space)
 "IL" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -13376,12 +12761,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/supply)
-"IS" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "IV" = (
 /obj/structure/platform{
 	dir = 4;
@@ -13859,16 +13238,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"Kh" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff"
-	},
-/obj/structure/largecrate/random/case,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "Ki" = (
 /obj/structure/closet/secure_closet,
 /obj/structure/machinery/prop{
@@ -13897,12 +13266,6 @@
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Kn" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "22";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Ko" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -13947,12 +13310,6 @@
 	dir = 8
 	},
 /area/golden_arrow/supply)
-"Kt" = (
-/turf/closed/shuttle/midway{
-	icon_state = "47";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Kw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -14092,15 +13449,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
-"KK" = (
-/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "KL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14222,11 +13570,6 @@
 	dir = 6
 	},
 /area/golden_arrow/supply)
-"La" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "Lb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14387,22 +13730,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"Lv" = (
-/obj/item/stack/cable_coil{
-	pixel_y = 13;
-	pixel_x = 7
-	},
-/obj/effect/decal/siding{
-	icon_state = "siding8"
-	},
-/turf/open/floor/plating,
-/area/space)
-"Lw" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "80";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Lx" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -14526,15 +13853,6 @@
 	dir = 8
 	},
 /area/golden_arrow/hangar)
-"LN" = (
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "LO" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -14759,12 +14077,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"Mn" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_top_right{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Ms" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -14911,12 +14223,6 @@
 	dir = 4
 	},
 /area/golden_arrow/engineering)
-"MJ" = (
-/turf/closed/shuttle/midway{
-	icon_state = "31";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "MK" = (
 /obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/almayer{
@@ -15137,14 +14443,6 @@
 	blend_objects = list(/obj/structure/window_frame,/obj/structure/window/framed)
 	},
 /area/golden_arrow/engineering)
-"Nm" = (
-/obj/item/prop/almayer/box{
-	pixel_y = 17
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "Nn" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 28;
@@ -15442,15 +14740,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
-"NV" = (
-/obj/structure/extinguisher_cabinet/lifeboat{
-	pixel_x = 12
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "78";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "NW" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -15494,15 +14783,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/supply)
-"Oc" = (
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "Od" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -15760,12 +15040,6 @@
 	dir = 8
 	},
 /area/golden_arrow/platoon_commander_rooms)
-"OJ" = (
-/obj/structure/shuttle/part/dropship1/transparent/inner_right_weapons{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "OK" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/space/basic,
@@ -15793,12 +15067,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
-"OP" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "23";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "OQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -15909,12 +15177,6 @@
 	dir = 4
 	},
 /area/golden_arrow/supply)
-"Pe" = (
-/turf/closed/shuttle/midway{
-	icon_state = "42";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Pf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -16030,46 +15292,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Px" = (
-/turf/closed/shuttle/midway{
-	icon_state = "72";
-	name = "\improper Tripoli"
-	},
-/area/space)
-"Py" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 13;
-	pixel_x = 1
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 10;
-	pixel_x = 4;
-	layer = 3.2
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -10;
-	pixel_y = 13
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -1;
-	pixel_y = 17
-	},
-/obj/item/trash/cigbutt{
-	pixel_y = 10;
-	pixel_x = -7
-	},
-/turf/open/floor/plating,
-/area/space)
 "Pz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16096,15 +15318,6 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
-"PE" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Tripoli"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "PF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -16174,12 +15387,6 @@
 	dir = 8
 	},
 /area/golden_arrow/prep_hallway)
-"PR" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "32";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "PS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -16335,12 +15542,6 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
-"Qq" = (
-/turf/closed/shuttle/midway{
-	icon_state = "62";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Qr" = (
 /turf/open/floor/almayer{
 	icon_state = "mono"
@@ -16401,13 +15602,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"Qz" = (
-/obj/structure/shuttle/part/dropship1/nose_front_left{
-	name = "\improper Tripoli";
-	opacity = 0
-	},
-/turf/open/floor/plating,
-/area/space)
 "QA" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -16673,12 +15867,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"Ri" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "29";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "Rj" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16914,16 +16102,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"RT" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "RU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -17091,18 +16269,6 @@
 	icon_state = "test_floor5"
 	},
 /area/golden_arrow/medical)
-"Sl" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/space)
 "Sm" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17148,12 +16314,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
-"Sv" = (
-/obj/effect/decal/siding{
-	icon_state = "siding4"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Sw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -17875,13 +17035,6 @@
 	dir = 4
 	},
 /area/golden_arrow/engineering)
-"Uz" = (
-/obj/structure/largecrate/random/case/double,
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/plating,
-/area/space)
 "UA" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -18052,30 +17205,6 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
-"UV" = (
-/obj/structure/bed{
-	can_buckle = 0;
-	desc = "A lightweight support lattice.";
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "latticefull";
-	layer = 2.1;
-	name = "lattice"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_x = -8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_x = 2
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "node";
-	pixel_x = -3
-	},
-/obj/structure/girder/displaced,
-/turf/open/floor/plating,
-/area/space)
 "UX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18221,18 +17350,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"Vk" = (
-/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
-"Vm" = (
-/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Vo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -18765,14 +17882,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"WF" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/space)
 "WG" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18801,21 +17910,6 @@
 /obj/structure/prop/dam/crane,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"WJ" = (
-/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Tripoli"
-	},
-/obj/item/tool/screwdriver{
-	pixel_y = 5;
-	pixel_x = -4;
-	layer = 3.03;
-	icon_state = "screwdriver5"
-	},
-/obj/item/trash/eat{
-	pixel_x = 10
-	},
-/turf/open/floor/plating,
-/area/space)
 "WK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -19326,34 +18420,6 @@
 	dir = 8
 	},
 /area/golden_arrow/hangar)
-"XZ" = (
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "8-9";
-	color = "#b30000";
-	pixel_y = -15;
-	pixel_x = 4;
-	layer = 2.9;
-	name = "cable"
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "1-4";
-	color = "#b30000";
-	name = "cable";
-	pixel_x = -9
-	},
-/obj/structure/prop{
-	icon = 'icons/obj/pipes/power_cond_white.dmi';
-	icon_state = "8-10";
-	color = "#b30000";
-	name = "cable";
-	pixel_x = 21
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
-/area/space)
 "Yb" = (
 /obj/structure/largecrate/supply/ammo{
 	name = "sentry crate";
@@ -19890,12 +18956,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
-"Zi" = (
-/obj/structure/shuttle/part/dropship1/transparent/nose_center{
-	name = "\improper Tripoli"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Zj" = (
 /obj/structure/machinery/recharge_station,
 /obj/structure/machinery/light/small{
@@ -19927,12 +18987,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/supply)
-"Zo" = (
-/obj/effect/decal/siding{
-	icon_state = "siding8"
-	},
-/turf/open/floor/plating,
-/area/space)
 "Zp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -20042,12 +19096,6 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/hangar)
-"ZC" = (
-/turf/closed/shuttle/midway{
-	icon_state = "48";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "ZE" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -20067,12 +19115,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
-"ZG" = (
-/turf/closed/shuttle/midway{
-	icon_state = "81";
-	name = "\improper Tripoli"
-	},
-/area/space)
 "ZI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -24621,27 +23663,27 @@ EG
 EG
 EG
 EG
-Cy
-Zo
-Zo
-lS
-Zo
-Zo
-Zo
-Zo
-Zo
-Zo
-Lv
-uz
-Zo
-Zo
-Zo
-Zo
-Zo
-Zo
-Zo
-lS
-te
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -24773,27 +23815,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-mv
-hp
-HJ
-fx
-hp
-aF
-tI
-sL
-qe
-WJ
-io
-Hn
-Kn
-Vm
-hp
-Vk
-hp
-hp
-DA
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -24925,27 +23967,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-hp
-hp
-HJ
-iM
-tD
-Px
-jP
-Qq
-lO
-Py
-fF
-Ri
-OP
-Gs
-lF
-IS
-HJ
-hp
-IK
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25077,27 +24119,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-hp
-hp
-hp
-OJ
-ZG
-hf
-iR
-LN
-Kt
-Pe
-Pe
-sF
-oJ
-qx
-AR
-hX
-Uz
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25229,27 +24271,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-sR
-Qz
-hY
-BF
-NV
-Nm
-Oc
-hd
-DJ
-dM
-Kh
-GO
-dM
-EP
-HJ
-hp
-hp
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25381,27 +24423,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-Zi
-tP
-kk
-WF
-tY
-lk
-dC
-UV
-sd
-dM
-dM
-dM
-dM
-La
-hp
-hp
-hp
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25533,27 +24575,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-Mn
-Bx
-jn
-nZ
-Lw
-XZ
-uP
-zd
-Sl
-dM
-RT
-dM
-dM
-La
-hp
-hp
-hp
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25685,27 +24727,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-hp
-hp
-hp
-EU
-dv
-bA
-zb
-Bm
-ZC
-Gn
-Gn
-MJ
-eP
-cG
-pD
-cY
-ec
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25837,27 +24879,27 @@ EG
 EG
 EG
 EG
-jl
-hp
-hp
-fx
-hp
-rL
-cc
-Dh
-aK
-IF
-DW
-Gx
-vi
-PR
-xZ
-Vm
-HJ
-tC
-FQ
-hp
-BL
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -25989,27 +25031,27 @@ EG
 EG
 EG
 EG
-jl
-HJ
-hp
-hp
-hp
-hp
-hp
-bZ
-HE
-KK
-hp
-PE
-pG
-BO
-GG
-Gs
-hp
-Bl
-hp
-hp
-DA
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG
@@ -26141,27 +25183,27 @@ EG
 EG
 EG
 EG
-gX
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-tZ
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
+EG
 EG
 EG
 EG

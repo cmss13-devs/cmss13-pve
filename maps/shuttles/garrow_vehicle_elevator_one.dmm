@@ -28,51 +28,51 @@
 /area/shuttle/vehicle_elevator)
 
 (1,1,1) = {"
-a
+K
 a
 a
 a
 o
 "}
 (2,1,1) = {"
-a
-A
+T
 u
 A
-T
+A
+a
 "}
 (3,1,1) = {"
 a
 A
-u
+A
 A
 K
 "}
 (4,1,1) = {"
-T
+a
+A
+A
 u
-A
-A
-K
+a
 "}
 (5,1,1) = {"
 a
 u
-A
-A
-K
+u
+u
+a
 "}
 (6,1,1) = {"
 a
 A
-A
-A
-K
+u
+u
+a
 "}
 (7,1,1) = {"
 a
 a
 a
-K
-K
+a
+a
 "}
