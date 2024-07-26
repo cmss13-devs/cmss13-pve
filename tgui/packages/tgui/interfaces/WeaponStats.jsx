@@ -1,5 +1,4 @@
 import { map } from 'common/collections';
-import { classes } from 'common/react';
 
 import { useBackend } from '../backend';
 import { Box, Divider, Flex, ProgressBar, Section, Table } from '../components';

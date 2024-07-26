@@ -143,23 +143,25 @@ const GeneralPanel = (props) => {
               </Stack.Item>
               <Stack.Item>
                 <Button
-                  content="Pick Up"
                   color="good"
                   fluid
                   textAlign="center"
                   disabled={!data.being_called}
                   onClick={() => act('pick_up')}
-                />
+                >
+                  Pick Up
+                </Button>
               </Stack.Item>
               <Stack.Item>
                 <Button
-                  content="Hang Up"
                   color="red"
                   fluid
                   textAlign="center"
                   disabled={!data.active_call}
                   onClick={() => act('hang_up')}
-                />
+                >
+                  Hang Up
+                </Button>
               </Stack.Item>
             </Stack>
           </Stack.Item>

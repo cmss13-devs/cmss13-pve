@@ -1,9 +1,9 @@
 import { useBackend } from '../backend';
-import { Stack, Dropdown, Button, Section } from '../components';
+import { Button, Dropdown, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 export const GameMasterSubmenuAmbush = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Window width={400} height={400}>
@@ -21,7 +21,7 @@ export const GameMasterSubmenuAmbush = (props, context) => {
 };
 
 export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Spawning">
@@ -32,12 +32,13 @@ export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
               <Button.Input
                 minWidth={2}
                 minHeight={1.75}
-                content={data.xeno_spawn_count}
                 currentValue={data.xeno_spawn_count}
                 onCommit={(e, value) => {
                   act('set_xeno_spawns', { value });
                 }}
-              />
+              >
+                {data.xeno_spawn_count}
+              </Button.Input>
             </Stack.Item>
             <Stack.Item>
               <Dropdown
@@ -63,11 +64,12 @@ export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
         <Stack.Item>
           <Button
             middle
-            content="Spawn Now"
             onClick={() => {
               act('spawn');
             }}
-          />
+          >
+            Spawn Now
+          </Button>
         </Stack.Item>
       </Stack>
     </Section>
@@ -75,7 +77,7 @@ export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
 };
 
 export const GameMasterSubmenuAmbushAmbushPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Ambush">
@@ -83,20 +85,22 @@ export const GameMasterSubmenuAmbushAmbushPanel = (props, context) => {
         <Stack.Item>
           <Button
             middle
-            content="Set Ambush"
             onClick={() => {
               act('ambush');
             }}
-          />
+          >
+            Set Ambush
+          </Button>
         </Stack.Item>
         <Stack.Item>
           <Button
             middle
-            content="Clear Ambush"
             onClick={() => {
               act('clear_ambush');
             }}
-          />
+          >
+            Clear Ambush
+          </Button>
         </Stack.Item>
         <Stack.Item>{data.ambush_info}</Stack.Item>
       </Stack>
@@ -105,7 +109,7 @@ export const GameMasterSubmenuAmbushAmbushPanel = (props, context) => {
 };
 
 export const GameMasterSubmenuAmbushMiscPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Misc">
@@ -113,11 +117,12 @@ export const GameMasterSubmenuAmbushMiscPanel = (props, context) => {
         <Stack.Item>
           <Button
             middle
-            content="Shake Spawner"
             onClick={() => {
               act('shake_spawner');
             }}
-          />
+          >
+            Shake Spawner
+          </Button>
         </Stack.Item>
       </Stack>
     </Section>

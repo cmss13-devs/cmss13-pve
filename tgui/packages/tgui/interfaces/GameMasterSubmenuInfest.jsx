@@ -1,9 +1,9 @@
 import { useBackend } from '../backend';
-import { Stack, Dropdown, Button, Section, Slider } from '../components';
+import { Button, Dropdown, Section, Slider, Stack } from '../components';
 import { Window } from '../layouts';
 
 export const GameMasterSubmenuInfest = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Window width={400} height={400}>
@@ -17,7 +17,7 @@ export const GameMasterSubmenuInfest = (props, context) => {
 };
 
 export const GameMasterSubmenuInfestInfestingPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Infesting">
@@ -53,31 +53,34 @@ export const GameMasterSubmenuInfestInfestingPanel = (props, context) => {
             <Stack.Item>
               <Button
                 middle
-                content="Set"
                 onClick={() => {
                   act('infest');
                 }}
-              />
+              >
+                Set
+              </Button>
             </Stack.Item>
             <Stack.Item>
               <Button
                 middle
-                content="Clear"
                 onClick={() => {
                   act('clear_infest');
                 }}
-              />
+              >
+                Clear
+              </Button>
             </Stack.Item>
           </Stack>
         </Stack.Item>
         <Stack.Item>
           <Button
             middle
-            content="Burst Now"
             onClick={() => {
               act('burst');
             }}
-          />
+          >
+            Burst Now
+          </Button>
         </Stack.Item>
       </Stack>
     </Section>

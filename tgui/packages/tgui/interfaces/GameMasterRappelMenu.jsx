@@ -1,9 +1,9 @@
 import { useBackend } from '../backend';
-import { Button, Section, Collapsible, Stack, Divider } from '../components';
+import { Button, Collapsible, Divider, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 export const GameMasterRappelMenu = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Window width={400} height={250}>
@@ -17,7 +17,7 @@ export const GameMasterRappelMenu = (props, context) => {
 };
 
 export const GameMasterRappelPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Rappel" mb={1}>
@@ -26,11 +26,12 @@ export const GameMasterRappelPanel = (props, context) => {
           <Button
             ml={1}
             selected={data.rappel_click_intercept}
-            content="Click Rappel"
             onClick={() => {
               act('toggle_click_rappel');
             }}
-          />
+          >
+            Click Rappel
+          </Button>
         </Stack.Item>
         {data.game_master_rappels && (
           <Stack.Item>
@@ -44,20 +45,22 @@ export const GameMasterRappelPanel = (props, context) => {
                         <Stack>
                           <Stack.Item align="center">
                             <Button
-                              content={val.rappel_name}
                               onClick={() => {
                                 act('jump_to_rappel', { val });
                               }}
-                            />
+                            >
+                              {val.rappel_name}
+                            </Button>
                           </Stack.Item>
                           <Stack.Item>
                             <Button
-                              content="X"
                               color="bad"
                               onClick={() => {
                                 act('remove_rappel', { val });
                               }}
-                            />
+                            >
+                              X
+                            </Button>
                           </Stack.Item>
                         </Stack>
                       </Stack.Item>
