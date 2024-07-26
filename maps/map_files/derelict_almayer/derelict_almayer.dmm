@@ -4377,7 +4377,7 @@
 	},
 /area/almayer/shipboard/brig/cic_hallway)
 "brY" = (
-/obj/structure/dropship_equipment/rappel_system,
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
