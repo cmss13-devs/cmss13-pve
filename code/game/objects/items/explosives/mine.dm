@@ -216,8 +216,8 @@
 	set waitfor = 0
 
 	if(!customizable)
-		create_shrapnel(loc, 24, dir, angle, , cause_data)
-		cell_explosion(loc, 25, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		create_shrapnel(loc, 24, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
+		cell_explosion(loc, 40, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
