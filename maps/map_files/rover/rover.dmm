@@ -2825,28 +2825,28 @@
 /area/golden_arrow/dorms)
 "As" = (
 /obj/structure/closet/crate/green,
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
-/obj/item/rappel_harness/extract{
+/obj/item/parachute/extract{
 	shuttle_id = "dropship_cyclone"
 	},
 /turf/open/floor/almayer{
