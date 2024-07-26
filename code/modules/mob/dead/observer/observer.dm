@@ -1034,6 +1034,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, SPAN_WARNING("The game hasn't started yet!"))
 		return
 
+	if(jobban_isbanned(src, "Freed Mob"))
+		to_chat(src, SPAN_WARNING("You are banned from being able to join as a freed mob."))
+		return
+
 	var/list/mobs_by_role = list() // the list the mobs are assigned to first, for sorting purposes
 	for(var/mob/freed_mob as anything in GLOB.freed_mob_list)
 		var/role_name = freed_mob.get_role_name()
@@ -1057,6 +1061,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/dead/proc/handle_joining_as_freed_mob(mob/living/freed_mob)
 	if(!istype(freed_mob) || !(freed_mob in GLOB.freed_mob_list))
+		return
+
+	if(jobban_isbanned(src, "Freed Mob"))
+		to_chat(src, SPAN_WARNING("You are banned from being able to join as a freed mob."))
 		return
 
 	if(QDELETED(freed_mob) || freed_mob.client)
