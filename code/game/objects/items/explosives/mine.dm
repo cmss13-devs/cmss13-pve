@@ -217,7 +217,7 @@
 
 	if(!customizable)
 		create_shrapnel(loc, 60, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
-		cell_explosion(loc, 40, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		cell_explosion(loc, 60, 30, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
