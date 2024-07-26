@@ -75,7 +75,7 @@ const HomePanel = (props) => {
 const SquadPanel = (props) => {
   const { act, data } = useBackend();
 
-  const [category, setCategory] = useLocalState('selected', 'monitor');
+  const [category, setCategory] = useSharedState('selected', 'monitor');
 
   return (
     <>
@@ -113,6 +113,9 @@ const SquadPanel = (props) => {
             Orbital Bombardment
           </Tabs.Tab>
         )}
+        <Tabs.Tab icon="map" onClick={() => act('tacmap_unpin')}>
+          Tactical Map
+        </Tabs.Tab>
       </Tabs>
       {category === 'monitor' && <SquadMonitor />}
       {category === 'supply' && data.can_launch_crates && <SupplyDrop />}
@@ -349,21 +352,21 @@ const SquadMonitor = (props) => {
 
   let { marines, squad_leader } = data;
 
-  const [hidden_marines, setHiddenMarines] = useLocalState(
+  const [hidden_marines, setHiddenMarines] = useSharedState(
     'hidden_marines',
     [],
   );
 
-  const [showHiddenMarines, setShowHiddenMarines] = useLocalState(
+  const [showHiddenMarines, setShowHiddenMarines] = useSharedState(
     'showhidden',
     false,
   );
-  const [showDeadMarines, setShowDeadMarines] = useLocalState(
+  const [showDeadMarines, setShowDeadMarines] = useSharedState(
     'showdead',
-    false,
+    true,
   );
 
-  const [marineSearch, setMarineSearch] = useLocalState('marinesearch', null);
+  const [marineSearch, setMarineSearch] = useSharedState('marinesearch', null);
 
   let determine_status_color = (status) => {
     let conscious = status.includes('Conscious');
