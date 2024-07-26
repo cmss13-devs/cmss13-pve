@@ -34,6 +34,21 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/shrapnel/claymore
+	name = "claymore pellet"
+	icon_state = "buckshot"
+	accurate_range_min = 5
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+
+	accuracy = HIT_ACCURACY_TIER_3
+	accurate_range = 32
+	max_range = 8
+	damage = 30
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_5
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 10
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
