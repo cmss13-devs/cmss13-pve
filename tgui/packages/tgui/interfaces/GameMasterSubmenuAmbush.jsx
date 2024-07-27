@@ -47,13 +47,14 @@ export const GameMasterSubmenuAmbushSpawningPanel = (props, context) => {
                 onSelected={(new_xeno) => {
                   act('set_selected_xeno', { new_xeno });
                 }}
+                menuWidth="10rem"
+                width="10rem"
               />
             </Stack.Item>
             <Stack.Item>
               <Dropdown
                 options={data.spawnable_hives}
                 selected={data.selected_hive}
-                width="15rem"
                 onSelected={(new_hive) => {
                   act('set_selected_hive', { new_hive });
                 }}
