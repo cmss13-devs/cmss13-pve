@@ -102,6 +102,7 @@
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
+	var/squad_overlay_state = "std-armor"
 
 	var/atom/movable/marine_light/light_holder
 
@@ -427,7 +428,7 @@
 
 	if(is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
@@ -1892,3 +1893,9 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+
+/obj/item/clothing/suit/storage/marine/tournament
+	name = "M3 pattern training marine armor"
+	icon_state = "1"
+	specialty = "M3 pattern training marine armor"
+	squad_overlay_state = "tournament-armor"

@@ -117,7 +117,7 @@
 
 /datum/squad/marine
 	name = "Root"
-	active = TRUE
+	active = FALSE
 	faction = FACTION_MARINE
 	lead_icon = "leader"
 
@@ -130,6 +130,7 @@
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
 	usable = TRUE
+	active = TRUE
 
 /datum/squad/marine/upp
 	name = SQUAD_UPP
@@ -158,6 +159,23 @@
 	chat_color = "#32CD32"
 	minimap_color = "#32CD32"
 	usable = TRUE
+
+/datum/squad/marine/tournament
+	name = "Tournament Root Squad"
+	usable = TRUE
+	active = FALSE
+
+/datum/squad/marine/tournament/red
+	name = "Red Rabbits"
+	access = list(ACCESS_MARINE_ALPHA)
+	equipment_color = "#FF0000"
+	chat_color = "#FF0000"
+
+/datum/squad/marine/tournament/blue
+	name = "Blue Bunnies"
+	access = list(ACCESS_MARINE_DELTA)
+	equipment_color = "#0000FF"
+	chat_color = "#0000FF"
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2

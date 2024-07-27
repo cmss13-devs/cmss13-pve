@@ -130,6 +130,30 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/rifle/tournament
+	name = "training rifle bullet"
+	sound_override = 'sound/weapons/gun_c99.ogg'
+	icon_state = "bullet_gs"
+	damage = 0
+	stamina_damage = 0
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/rifle/tournament/on_hit_mob(mob/M, obj/projectile/P)
+	if (!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/H = M
+
+	var/datum/effects/tournament_hits/TH = null
+	for (var/datum/effects/tournament_hits/tournament_hits in H.effects_list)
+		TH = tournament_hits
+		break
+
+	if (TH == null)
+		TH = new /datum/effects/tournament_hits(H)
+	else
+		TH.add_hit(1)
+
 /datum/ammo/bullet/rifle/m4ra
 	name = "A19 high velocity bullet"
 	shrapnel_chance = 0

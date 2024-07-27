@@ -74,3 +74,23 @@
 	to_chat(H, SPAN_XENODANGER("You feel acid eat into your skin!"))
 	qdel(src)
 	return
+
+/datum/effects/tournament_hits
+	effect_name = "Hits Taken"
+	duration = null
+	flags = DEL_ON_DEATH | INF_DURATION // We always clean ourselves up
+
+	var/hit_count = 1
+	var/max_hits = 10
+
+/datum/effects/tournament_hits/proc/add_hit(number = 1)
+	if (!istype(affected_atom, /mob/living/carbon/human))
+		return
+
+	var/mob/living/carbon/human/H = affected_atom
+	hit_count++
+
+	if (hit_count == max_hits)
+		to_chat(H, SPAN_XENODANGER("You feel paralyzed!"))
+		H.emote("pain")
+		H.knocked_down = 999

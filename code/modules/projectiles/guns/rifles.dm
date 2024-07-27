@@ -425,6 +425,34 @@
 /obj/item/weapon/gun/rifle/m41aMK1/anchorpoint/gl
 	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
+
+/obj/item/weapon/gun/rifle/m41aMK1/tournament
+	name = "\improper modified M41A pulse rifle"
+	var/squad_color
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/tournament
+
+/obj/item/weapon/gun/rifle/m41aMK1/tournament/able_to_fire(mob/user)
+	. = ..()
+	if(!squad_color)
+		to_chat(user, SPAN_WARNING("Swipe your dogtags in order to imprint squad information."))
+		return
+
+/obj/item/weapon/gun/rifle/m41aMK1/tournament/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, reflex = 0, dual_wield = 0)
+	projectile_to_fire.color = squad_color
+	..()
+
+/obj/item/weapon/gun/rifle/m41aMK1/tournament/attackby(obj/item/I, mob/user)
+	if(istype(I, /obj/item/card/id) && ishuman(user))
+		var/obj/item/card/id/ID = I
+		var/mob/living/carbon/human/human = user
+		if(ID.registered_name != user.real_name)
+			return
+		if(!human.assigned_squad)
+			return
+		squad_color = human.assigned_squad.equipment_color
+	..()
+
+
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
 

@@ -55,6 +55,11 @@ AddTimelock(/datum/job/marine/leader, list(
 	spawn_positions = 1
 	prime_priority = TRUE
 
+/datum/job/marine/leader/ai/tournament
+	total_positions = 3
+	spawn_positions = 3
+
+
 /datum/job/marine/leader/ai/upp
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp

@@ -70,6 +70,11 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 	total_positions = 2
 	spawn_positions = 2
 
+/datum/job/marine/smartgunner/ai/tournament
+	total_positions = 5
+	spawn_positions = 5
+
+
 /datum/job/marine/smartgunner/ai/set_spawn_positions(count)
 	return spawn_positions
 

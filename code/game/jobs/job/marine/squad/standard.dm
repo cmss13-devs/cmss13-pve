@@ -77,6 +77,10 @@
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
 
+/datum/job/marine/standard/ai/tournament
+	total_positions = 10
+	spawn_positions = 10
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP

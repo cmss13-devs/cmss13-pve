@@ -479,7 +479,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 			if(assigned_squad && marine_helmet.flags_marine_helmet & HELMET_SQUAD_OVERLAY)
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
 					var/leader = assigned_squad.squad_leader
-					var/image/helmet_overlay = image(marine_helmet.helmet_overlay_icon, icon_state = "std-helmet")
+					var/image/helmet_overlay = image(marine_helmet.helmet_overlay_icon, icon_state = marine_helmet.helmet_overlay_state)
 					if(leader == src)
 						helmet_overlay = image(marine_helmet.helmet_overlay_icon, icon_state = "sql-helmet")
 					helmet_overlay.layer = -HEAD_SQUAD_LAYER
@@ -541,7 +541,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 			if(marine_armor.flags_marine_armor & ARMOR_SQUAD_OVERLAY)
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
 					var/leader = assigned_squad.squad_leader
-					var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "std-armor")
+					var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = marine_armor.squad_overlay_state)
 					if(leader == src)
 						squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "sql-armor")
 					squad_overlay.layer = -SUIT_SQUAD_LAYER

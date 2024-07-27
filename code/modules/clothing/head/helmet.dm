@@ -391,6 +391,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	/// The dmi where the grayscale squad overlays are contained
 	var/helmet_overlay_icon = 'icons/mob/humans/onmob/head_1.dmi'
+	var/helmet_overlay_state = "std-helmet"
 
 	///Any visors built into the helmet
 	var/list/built_in_visors = list(new /obj/item/device/helmet_visor)
@@ -1465,5 +1466,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/head/helmet/marine/tournament
+	name = "\improper M10 pattern training helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display eyepiece. Also features white/black hot IR viewing modes from the camera system."
+	helmet_overlay_state = "tournament-helmet"
 
 #undef HELMET_GARB_RELAY_ICON_STATE
