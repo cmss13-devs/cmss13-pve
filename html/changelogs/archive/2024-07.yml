@@ -9,3 +9,8 @@
   Doubleumc:
   - bugfix: sounds & motion detectors should be more reliable
   - rscdel: Removed automatic end of round vote and reboot
+2024-07-25:
+  Doubleumc:
+  - code_imp: Made the Tech Tree subsystem initialise faster.
+  Zonespace27:
+  - admin: Added freed mob bans to the jobban panel.
