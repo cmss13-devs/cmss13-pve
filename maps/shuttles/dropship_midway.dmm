@@ -31,7 +31,7 @@
 /obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "dD" = (
 /turf/closed/shuttle/midway/transparent{
@@ -157,7 +157,7 @@
 /obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "mE" = (
 /obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
@@ -332,7 +332,7 @@
 /obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "yO" = (
 /turf/closed/shuttle/midway{
@@ -471,7 +471,7 @@
 /obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "HY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
