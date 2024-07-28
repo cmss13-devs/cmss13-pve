@@ -24,6 +24,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/upp_replica,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/hunting,
@@ -118,6 +119,9 @@
 
 /obj/item/weapon/gun/boltaction/sniper
 	starting_attachment_types = list(/obj/item/attachable/stock/hunting, /obj/item/attachable/scope)
+
+/obj/item/weapon/gun/boltaction/infantry
+	starting_attachment_types = list(/obj/item/attachable/stock/hunting, /obj/item/attachable/bayonet/upp_replica)
 
 /obj/item/weapon/gun/boltaction/vulture
 	name = "\improper M707 \"Vulture\" anti-materiel rifle"
