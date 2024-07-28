@@ -57,3 +57,14 @@
 	dir = NORTH
 	height = 5
 	width = 7
+
+/obj/docking_port/stationary/shipmap_elevator/one
+	name = "Vehicle Elevator One"
+
+/obj/docking_port/stationary/shipmap_elevator/two
+	name = "Vehicle Elevator Two"
+
+/obj/docking_port/stationary/shipmap_elevator/cargo
+	name = "Cargo Elevator"
+	height = 6
+	width = 8
