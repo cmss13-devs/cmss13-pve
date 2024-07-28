@@ -59,8 +59,6 @@ GLOBAL_LIST_INIT_TYPED(underwear_f, /datum/sprite_accessory/underwear, setup_und
 			name += " (Desert)"
 		if("s")
 			name += " (Snow)"
-		if("u")
-			name += " (Urban)"
 
 
 // Both
