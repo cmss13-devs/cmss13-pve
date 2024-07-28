@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Dropdown, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
+import { Dropdown, Box, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
 import { Window } from '../layouts';
 
 export const GameMaster = (props, context) => {
@@ -216,17 +216,21 @@ export const GameMasterCommunicationPanel = (props, context) => {
             }}
           />
         </Stack.Item>
-        <Stack.Item mt={1}>Communication Clarity</Stack.Item>
+        <Stack.Item mt={1}>Radio Clarity</Stack.Item>
         <Stack.Item>
           <Slider
             maxValue={100}
             minValue={0}
-            value={data.communication_clarity}
+            value={data.radio_clarity}
+            stepPixelSize={3}
             suppressFlicker={2500}
             onChange={(e, clarity) => {
-              act('set_communication_clarity', { clarity });
+              act('set_radio_clarity', { clarity });
             }}
           />
+        </Stack.Item>
+        <Stack.Item>
+          <Box fontFamily="monospace">{`"${data.radio_clarity_example}"`}</Box>
         </Stack.Item>
       </Stack>
     </Section>
