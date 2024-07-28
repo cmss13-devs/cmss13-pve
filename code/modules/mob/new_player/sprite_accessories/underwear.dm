@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT_TYPED(underwear_f, /datum/sprite_accessory/underwear, setup_und
 			if("snow")
 				selected_icon_state = "s_" + selected_icon_state
 			if("urban")
-				selected_icon_state = "u_" + selected_icon_state
+				selected_icon_state = "s_" + selected_icon_state
 	if(gender == PLURAL)
 		selected_icon_state += mob_gender == MALE ? "_m" : "_f"
 	return image(icon, selected_icon_state)
