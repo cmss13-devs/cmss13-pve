@@ -8,9 +8,9 @@
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
-#define SQUAD_MARINE_CRYO "Foxtrot"
+#define SQUAD_MARINE_CRYO "Duskmen"
 #define SQUAD_MARINE_INTEL "Intel"
-#define SQUAD_SOF "SOF"
+#define SQUAD_SOF "Raiders"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
@@ -26,19 +26,19 @@
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
 
-#define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
-#define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
-#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
-#define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
-#define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
-#define JOB_SO_UPP "UPP Platoon Commander"
+#define JOB_SQUAD_MARINE_UPP "Rifleman"
+#define JOB_SQUAD_LEADER_UPP "Platoon Sergeant"
+#define JOB_SQUAD_MEDIC_UPP "Sanitar"
+#define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
+#define JOB_SQUAD_SMARTGUN_UPP "Machinegunner"
+#define JOB_SO_UPP "Platoon Commander"
 
-#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
-#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
-#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
+#define JOB_SQUAD_TEAM_LEADER_FORECON "Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "Squad Corpsman"
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
-#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
-#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+#define JOB_SQUAD_MARINE_FORECON "Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "Smartgunner"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
@@ -151,37 +151,6 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 	L = timelockList;\
 	. = ..(L);\
 }
-
-//-------------WO roles---------------
-
-#define JOB_WO_CO "Ground Commander"
-#define JOB_WO_XO "Lieutenant Commander"
-#define JOB_WO_CHIEF_POLICE "Honor Guard Squad Leader"
-#define JOB_WO_SO "Veteran Honor Guard"
-#define JOB_WO_CREWMAN "Honor Guard Weapons Specialist"
-#define JOB_WO_POLICE "Honor Guard"
-
-#define JOB_WO_PILOT "Mortar Crew"
-
-#define JOB_WO_CHIEF_ENGINEER "Bunker Crew Master"
-#define JOB_WO_ORDNANCE_TECH "Bunker Crew"
-
-#define JOB_WO_CHIEF_REQUISITION "Bunker Quartermaster"
-#define JOB_WO_REQUISITION "Bunker Crew Logistics"
-
-#define JOB_WO_CMO "Head Surgeon"
-#define JOB_WO_DOCTOR "Field Doctor"
-#define JOB_WO_RESEARCHER "Chemist"
-
-#define JOB_WO_CORPORATE_LIAISON "Combat Reporter"
-#define JOB_WO_SYNTH "Support Synthetic"
-
-#define JOB_WO_SQUAD_MARINE "Dust Raider Squad Rifleman"
-#define JOB_WO_SQUAD_MEDIC "Dust Raider Squad Hospital Corpsman"
-#define JOB_WO_SQUAD_ENGINEER "Dust Raider Squad Combat Technician"
-#define JOB_WO_SQUAD_SMARTGUNNER "Dust Raider Squad Smartgunner"
-#define JOB_WO_SQUAD_SPECIALIST "Dust Raider Squad Weapons Specialist"
-#define JOB_WO_SQUAD_LEADER "Dust Raider Squad Leader"
 
 //------------------------------------
 
@@ -301,7 +270,7 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 //-------- CLF --------//
 #define JOB_CLF "CLF Guerilla"
-#define JOB_CLF "CLF Rifleman"
+#define JOB_CLF_SOLDIER "CLF Rifleman"
 #define JOB_CLF_ENGI "CLF Field Technician"
 #define JOB_CLF_MEDIC "CLF Field Medic"
 #define JOB_CLF_SPECIALIST "CLF Field Specialist"

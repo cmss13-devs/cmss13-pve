@@ -14786,7 +14786,7 @@
 	dir = 1
 	},
 /obj/item/clothing/head/helmet/marine/veteran/pmc,
-/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/opfor/pmc,
 /obj/item/storage/fancy/cigar,
 /turf/open/floor{
 	dir = 5;

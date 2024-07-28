@@ -258,7 +258,7 @@
 /area/shiva/interior/caves/right_spiders)
 "aaR" = (
 /obj/effect/spider/stickyweb,
-/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/opfor/marsoc,
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/caves/right_spiders)
 "aaS" = (
@@ -9641,7 +9641,7 @@
 /area/shiva/exterior/junkyard/fortbiceps)
 "ect" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/clothing/under/marine/veteran/mercenary,
+/obj/item/clothing/under/marine/opfor/mercenary,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/shiva{
 	icon_state = "floor3"
@@ -10398,7 +10398,7 @@
 /area/shiva/interior/warehouse)
 "fbI" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/clothing/under/marine/veteran/mercenary/support,
+/obj/item/clothing/under/marine/opfor/mercenary/support,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/shiva{
 	icon_state = "floor3"

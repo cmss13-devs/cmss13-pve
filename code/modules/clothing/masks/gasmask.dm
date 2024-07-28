@@ -39,7 +39,7 @@
 	item_state = "cbrn_hood"
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 /obj/item/clothing/mask/gas/pmc

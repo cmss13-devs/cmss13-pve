@@ -54,7 +54,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/opfor/pmc/commando/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -103,7 +103,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/opfor/pmc/commando/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)

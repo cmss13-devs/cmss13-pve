@@ -53,31 +53,27 @@
 	worn_state = "workwear_grey"
 
 /obj/item/clothing/under/workwear/khaki
-	name = "workwear"
 	desc = "A pair of jeans paired with a khaki workshirt."
 	icon_state = "workwear_khaki"
 	worn_state = "workwear_khaki"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/workwear/pink
-	name = "workwear"
 	desc = "A pair of jeans paired with a pink workshirt."
 	icon_state = "workwear_pink"
 	worn_state = "workwear_pink"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/workwear/alt
-	name = "workwear"
 	desc = "A pair of brown canvas workpants paired with a dark blue workshirt."
 	icon_state = "workwear_alt"
 	worn_state = "workwear_alt"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/workwear/blue
-	name = "workwear"
 	desc = "A pair of jeans paired with a light blue workshirt."
-	icon_state = "workwear_green"
-	worn_state = "workwear_green"
+	icon_state = "workwear_blue"
+	worn_state = "workwear_blue"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/workwear/cuppajoe

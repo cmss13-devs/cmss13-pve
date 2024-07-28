@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(fishing_loot_tables)
 
 /datum/fish_loot_table
 	var/list/common_fishable_atoms = list(
-		/obj/item/clothing/shoes/leather,
+		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/shoes/marine,
 	)
 	var/list/uncommon_fishable_atoms = list(

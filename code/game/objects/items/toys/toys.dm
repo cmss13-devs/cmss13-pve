@@ -624,32 +624,7 @@
 	name = "\improper XX-121 therapy plush"
 	desc = "Don't be sad! Be glad (that you're alive)!"
 	icon_state = "runner"
-	/// If the runner is wearing a beret
-	var/beret = FALSE
 
-/obj/item/toy/plush/runner/Initialize(mapload, ...)
-	. = ..()
-	if(beret)
-		update_icon()
-
-/obj/item/toy/plush/runner/attackby(obj/item/attacking_object, mob/user)
-	. = ..()
-	if(beret)
-		return
-	if(!istypestrict(attacking_object, /obj/item/clothing/head/beret/marine/mp))
-		return
-	var/beret_attack = attacking_object
-	to_chat(user, SPAN_NOTICE("You put [beret_attack] on [src]."))
-	qdel(beret_attack)
-	beret = TRUE
-	update_icon()
-
-/obj/item/toy/plush/runner/update_icon()
-	. = ..()
-	if(beret)
-		icon_state = "runner_beret"
-		return
-	icon_state = "runner"
 
 /obj/item/toy/plush/shark/alt
 	icon_state = "shark_alt"

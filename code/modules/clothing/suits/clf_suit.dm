@@ -29,7 +29,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/mercenary)
 	item_state_slots = list(WEAR_JACKET = "mercenary_heavy_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/mercenary/heavy
@@ -64,7 +64,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/mercenary)
 	item_state_slots = list(WEAR_JACKET = "mercenary_miner_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/mercenary/support
@@ -83,7 +83,7 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/freelancer)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/freelancer)
 
 //this one is for CLF
 /obj/item/clothing/suit/storage/militia

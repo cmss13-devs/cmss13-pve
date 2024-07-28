@@ -271,7 +271,7 @@
 
 	assignment = "Interstellar Human Rights Observer"
 	rank = JOB_CMB_OBS
-	skills = /datum/skills/civilian/survivor/doctor
+	skills = /datum/skills/civilian/doctor
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
 
 /datum/equipment_preset/cmb/observer/load_gear(mob/living/carbon/human/new_human)

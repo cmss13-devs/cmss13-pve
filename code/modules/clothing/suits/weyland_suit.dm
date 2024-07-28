@@ -31,7 +31,7 @@
 		/obj/item/tool/crew_monitor,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/pmc)
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light
@@ -70,7 +70,7 @@
 	name = "\improper M4 pattern PMC leader armor"
 	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
 	icon_state = "officer_armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/leader)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/pmc/leader)
 	item_state_slots = list(WEAR_JACKET = "officer_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/sniper
@@ -132,7 +132,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/commando)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/pmc/commando)
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
 	unacidable = TRUE
 
@@ -150,6 +150,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCK_KNOCKDOWN
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/commando)
+	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/pmc/commando)
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
 	unacidable = TRUE

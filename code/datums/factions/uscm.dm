@@ -152,29 +152,6 @@
 				marine_rk = "rmp"
 			if(JOB_RIOT_CHIEF)
 				marine_rk = "crmp"
-			// Whiskey Outpost
-			if(JOB_WO_CO)
-				marine_rk = "wo_co"
-			if(JOB_WO_XO)
-				marine_rk = "wo_xo"
-			if(JOB_WO_CHIEF_POLICE)
-				marine_rk = "hgsl"
-			if(JOB_WO_SO)
-				marine_rk = "vhg"
-			if(JOB_WO_CREWMAN)
-				marine_rk = "hgspec"
-			if(JOB_WO_POLICE)
-				marine_rk = "hg"
-			if(JOB_WO_CMO)
-				marine_rk = "wo_cmo"
-			if(JOB_WO_DOCTOR)
-				marine_rk = "wo_doctor"
-			if(JOB_WO_RESEARCHER)
-				marine_rk = "wo_chemist"
-			if(JOB_WO_CHIEF_REQUISITION)
-				marine_rk = "wo_ro"
-			if(JOB_WO_PILOT)
-				marine_rk = "wo_mcrew"
 			// Colonial Marshals
 			if(JOB_CMB_TL)
 				marine_rk = "mar"

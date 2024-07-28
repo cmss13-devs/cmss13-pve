@@ -250,7 +250,6 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	var/list/deleteall = list(/obj/item/clothing/mask/cigarette, \
 	/obj/item/clothing/glasses/sunglasses, \
 	/obj/item/clothing/glasses/mgoggles, \
-	/obj/item/clothing/head/beret/marine/mp, \
 	/obj/item/clothing/gloves/black, \
 	/obj/item/weapon/baton, \
 	/obj/item/weapon/gun/energy/taser, \

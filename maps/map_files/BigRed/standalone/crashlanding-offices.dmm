@@ -1449,7 +1449,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/opfor/pmc,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -1469,7 +1469,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/spawner/gibspawner/human,
 /obj/item/clothing/head/helmet/marine/veteran/pmc,
-/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/opfor/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"

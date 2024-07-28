@@ -38,11 +38,11 @@
 	name = "USCM Synthetic"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	faction = FACTION_MARINE
-	idtype = /obj/item/card/id/gold
+	idtype = /obj/item/card/id/dogtag
 	assignment = JOB_SYNTH
 	rank = "Synthetic"
 	paygrade = "SYN"
-	role_comm_title = "Syn"
+	role_comm_title = "USCM-SYN"
 
 /datum/equipment_preset/synth/uscm/load_gear(mob/living/carbon/human/new_human)
 
@@ -158,63 +158,6 @@
 
 	survivor_variant = MEDICAL_SURVIVOR
 
-/datum/equipment_preset/synth/survivor/scientist_synth
-	name = "Synthetic - Scientist Synth"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/bio_hood,
-		WEAR_FACE = /obj/item/clothing/mask/surgical,
-		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/boiler/lightblue,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/blue,
-		WEAR_IN_BACK = /obj/item/reagent_container/glass/beaker/vial/random/good,
-		WEAR_IN_BACK = /obj/item/paper/research_notes/good,
-		WEAR_JACKET = /obj/item/clothing/suit/bio_suit,
-		WEAR_WAIST = /obj/item/storage/belt/medical/lifesaver/full,
-		WEAR_HANDS = /obj/item/clothing/gloves/black,
-		WEAR_R_HAND = /obj/item/device/motiondetector,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
-	)
-
-	survivor_variant = SCIENTIST_SURVIVOR
-
-/datum/equipment_preset/synth/survivor/engineer_synth
-	name = "Synthetic - Engineer Synth"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/hardhat,
-		WEAR_BODY = /obj/item/clothing/under/boiler/cyan,
-		WEAR_BACK = /obj/item/storage/backpack/satchel,
-		WEAR_IN_BACK = /obj/item/ammo_magazine/smg/nailgun,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,
-		WEAR_IN_JACKET = /obj/item/ammo_magazine/smg/nailgun,
-		WEAR_IN_JACKET = /obj/item/ammo_magazine/smg/nailgun,
-		WEAR_J_STORE = /obj/item/weapon/gun/smg/nailgun/compact,
-		WEAR_WAIST = /obj/item/storage/belt/utility/full,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
-	)
-
-	survivor_variant = ENGINEERING_SURVIVOR
-
-/datum/equipment_preset/synth/survivor/freelancer_synth
-	name = "Synthetic - Freelancer Synth"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/welding,
-		WEAR_FACE = /obj/item/clothing/mask/rebreather/scarf,
-		WEAR_BODY = /obj/item/clothing/under/marine/veteran/freelancer,
-		WEAR_BACK = /obj/item/storage/backpack/lightpack,
-		WEAR_IN_BACK = /obj/item/tool/weldpack/minitank,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/webbing/utility_vest,
-		WEAR_IN_JACKET = /obj/item/explosive/grenade/smokebomb,
-		WEAR_WAIST = /obj/item/storage/belt/marine,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
-		WEAR_R_HAND = /obj/item/storage/pouch/flare/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/upp,
-		WEAR_L_HAND = /obj/item/storage/large_holster/katana/full
-	)
-
 /datum/equipment_preset/synth/survivor/wy/security_synth
 	name = "Synthetic - Corporate Security Synth"
 	idtype = /obj/item/card/id/silver/cl
@@ -237,7 +180,7 @@
 	equipment_to_spawn = list(
 		WEAR_HEAD = /obj/item/clothing/head/helmet/marine/veteran/pmc,
 		WEAR_L_EAR = /obj/item/device/radio/headset/distress/pmc/hvh,
-		WEAR_BODY = /obj/item/clothing/under/marine/veteran/pmc,
+		WEAR_BODY = /obj/item/clothing/under/marine/opfor/pmc,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/storage/droppouch,
 		WEAR_IN_ACCESSORY = /obj/item/explosive/grenade/flashbang,
 		WEAR_IN_ACCESSORY = /obj/item/handcuffs/zip,

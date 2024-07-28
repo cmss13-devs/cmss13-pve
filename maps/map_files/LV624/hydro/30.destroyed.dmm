@@ -208,7 +208,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/item/weapon/gun/smg/fp9000,
-/obj/item/clothing/under/marine/veteran/pmc/leader{
+/obj/item/clothing/under/marine/opfor/pmc/leader{
 	pixel_x = -7
 	},
 /turf/open/floor/plating{
@@ -237,7 +237,7 @@
 	current_rounds = 2
 	},
 /obj/effect/spawner/gibspawner/human,
-/obj/item/clothing/under/marine/veteran/pmc{
+/obj/item/clothing/under/marine/opfor/pmc{
 	pixel_x = 6;
 	pixel_y = 8
 	},
@@ -252,7 +252,7 @@
 /area/lv624/lazarus/hydroponics)
 "xF" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/clothing/under/marine/veteran/pmc{
+/obj/item/clothing/under/marine/opfor/pmc{
 	pixel_x = -7;
 	pixel_y = 9
 	},

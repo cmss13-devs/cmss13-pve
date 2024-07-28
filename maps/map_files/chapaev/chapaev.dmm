@@ -1774,7 +1774,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/clothing/under/marine/veteran/UPP/medic,
+/obj/item/clothing/under/marine/opfor/UPP/medic,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
@@ -1914,7 +1914,7 @@
 /area/golden_arrow/medical)
 "tq" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to the Chapaev by 3rd Battalion, 2nd Colonial Marines as a sign of good will. They did not complain receiving a crate of vodka in return."
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -2299,7 +2299,7 @@
 	job = "Smartgunner"
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /obj/structure/machinery/light{
 	dir = 4;
@@ -2760,7 +2760,7 @@
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
@@ -2840,7 +2840,7 @@
 	job = "Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /obj/structure/machinery/light{
 	dir = 8;
@@ -3918,7 +3918,7 @@
 	job = "Smartgunner"
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
@@ -4341,7 +4341,7 @@
 	icon_state = "cabinetdetective_locked";
 	job = "Platoon Commander"
 	},
-/obj/item/clothing/under/marine/veteran/UPP/boiler,
+/obj/item/clothing/under/marine/opfor/UPP/boiler,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4771,7 +4771,7 @@
 	job = "Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;
@@ -4859,7 +4859,7 @@
 	job = "Platoon Sergeant"
 	},
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
+/obj/item/clothing/under/marine/opfor/UPP,
 /obj/item/device/radio/headset/distress/UPP,
 /turf/open/floor/strata{
 	dir = 4;

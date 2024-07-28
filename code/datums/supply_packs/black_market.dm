@@ -663,12 +663,6 @@ USCM spare items, miscellaneous gear that's too niche and distant (or restricted
 	contains = list(/obj/item/storage/box/guncase/nsg23_marine)
 	containertype = /obj/structure/largecrate/black_market
 
-/datum/supply_packs/contraband/surplus/m3717
-	name = "surplus M37-17 pump shotgun case"
-	dollar_cost = 80
-	contains = list(/obj/item/storage/box/guncase/m3717)
-	containertype = /obj/structure/largecrate/black_market
-
 /datum/supply_packs/contraband/surplus/m1911
 	name = "surplus M1911 service pistol case"
 	dollar_cost = 10
@@ -987,15 +981,15 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 		// Elite recovered gear.
 			var/list/armor_to_pick = list(
 				// Y8 Miner (default)
-				/obj/item/clothing/under/marine/veteran/mercenary/miner,
+				/obj/item/clothing/under/marine/opfor/mercenary/miner,
 				/obj/item/clothing/suit/storage/marine/veteran/mercenary/miner,
 				/obj/item/clothing/head/helmet/marine/veteran/mercenary/miner,
 				// K12 Ceramic (Heavy-ish)
-				/obj/item/clothing/under/marine/veteran/mercenary,
+				/obj/item/clothing/under/marine/opfor/mercenary,
 				/obj/item/clothing/suit/storage/marine/veteran/mercenary,
 				/obj/item/clothing/head/helmet/marine/veteran/mercenary,
 				// Z7 Support (Support)
-				/obj/item/clothing/under/marine/veteran/mercenary,
+				/obj/item/clothing/under/marine/opfor/mercenary,
 				/obj/item/clothing/suit/storage/marine/veteran/mercenary/support,
 				/obj/item/clothing/head/helmet/marine/veteran/mercenary/support/engineer
 				// You get three random pieces. If you want to complete the set you need to keep rolling the dice!

@@ -384,7 +384,7 @@
 
 /obj/item/card/id/dogtag
 	name = "dog tag"
-	desc = "A marine dog tag."
+	desc = "A dog tag."
 	icon_state = "dogtag"
 	item_state = "dogtag"
 	pinned_on_uniform = FALSE

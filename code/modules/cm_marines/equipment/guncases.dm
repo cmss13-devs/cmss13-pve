@@ -72,7 +72,7 @@
 //------------
 /obj/item/storage/box/guncase/m41aMK1
 	name = "\improper M41A pulse rifle MK1 case"
-	desc = "A gun case containing the M41A pulse rifle MK1. It can only use proprietary MK1 magazines."
+	desc = "A gun case containing the M41A pulse rifle MK1."
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/rifle/m41aMK1, /obj/item/ammo_magazine/rifle/m41aMK1)
 
@@ -82,9 +82,9 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
 
-/obj/item/storage/box/guncase/m41aMK1AP
+/obj/item/storage/box/guncase/m41aMK1/ap
 	name = "\improper M41A pulse rifle MK1 AP case"
-	desc = "A gun case containing the M41A pulse rifle MK1 loaded with AP rounds. It can only use proprietary MK1 magazines."
+	desc = "A gun case containing the M41A pulse rifle MK1 loaded with AP rounds."
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/rifle/m41aMK1, /obj/item/ammo_magazine/rifle/m41aMK1)
 
@@ -193,19 +193,6 @@
 	new /obj/item/storage/belt/marine/m2c(src)
 
 //------------
-/obj/item/storage/box/guncase/m41a
-	name = "\improper M41A pulse rifle MK2 case"
-	desc = "A gun case containing the M41A pulse rifle MK2."
-	storage_slots = 5
-	can_hold = list(/obj/item/weapon/gun/rifle/m41a, /obj/item/ammo_magazine/rifle)
-
-/obj/item/storage/box/guncase/m41a/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/m41a(src)
-	for(var/i = 1 to 4)
-		new /obj/item/ammo_magazine/rifle(src)
-
-
-//------------
 /obj/item/storage/box/guncase/pumpshotgun
 	name = "\improper M37A2 Pump Shotgun case"
 	desc = "A gun case containing the M37A2 Pump Shotgun."
@@ -270,18 +257,6 @@
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
-
-/obj/item/storage/box/guncase/m3717
-	name = "\improper M37-17 pump shotgun case"
-	desc = "A gun case containing the M37-17 pump shotgun. Rarely seen issued to USCM vessels on the edges of inhabited space who need the extra bang for their buck (literally) the M37-17 has. Like this one! Well, if it had the budget for it."
-	storage_slots = 4
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, /obj/item/ammo_magazine/shotgun/buckshot)
-
-/obj/item/storage/box/guncase/m3717/fill_preset_inventory()
-	new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717(src)
-	new /obj/item/ammo_magazine/shotgun/buckshot(src)
-	new /obj/item/ammo_magazine/shotgun/buckshot(src)
-	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 
 /obj/item/storage/box/guncase/m1911
 	name = "\improper M1911 service pistol case"

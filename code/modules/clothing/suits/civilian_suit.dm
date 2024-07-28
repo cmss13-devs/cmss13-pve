@@ -312,11 +312,11 @@
 	icon_state = "hazard_blue"
 	item_state = "hazard_blue"
 
-/obj/item/clothing/suit/storage/hazardvest/yellow
-	name = "yellow hazard vest"
-	desc = "A yellow high-visibility vest used in work zones."
-	icon_state = "hazard_yellow"
-	item_state = "hazard_yellow"
+/obj/item/clothing/suit/storage/hazardvest/weymart
+	name = "\improper WeyMart vest"
+	desc = "A WeyMart employee vest."
+	icon_state = "hazard_weymart"
+	item_state = "hazard_weymart"
 
 /obj/item/clothing/suit/storage/hazardvest/black
 	name = "black hazard vest"

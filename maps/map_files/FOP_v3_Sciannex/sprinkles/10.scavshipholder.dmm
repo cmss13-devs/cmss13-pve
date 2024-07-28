@@ -177,7 +177,7 @@
 "mz" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/accessory/storage/webbing,
-/obj/item/clothing/under/marine/veteran/mercenary/support{
+/obj/item/clothing/under/marine/opfor/mercenary/support{
 	layer = 2.9;
 	pixel_y = 6
 	},
