@@ -12,5 +12,6 @@
         "Hive Wars",
         "Faction Clash",
         "Infection"
-    ]
+    ],
+    "weather_holder": "/datum/weather_ss_map_holder/big_red"
 }
