@@ -488,7 +488,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "hunting"
 	default_ammo = /datum/ammo/bullet/sniper/crude
-	max_rounds = 10
+	max_rounds = 5
 	gun_type = /obj/item/weapon/gun/boltaction
 	w_class = SIZE_SMALL
 
