@@ -195,10 +195,14 @@
 	unslashable = TRUE
 	unacidable = TRUE
 
+/obj/structure/prop/almayer/ship_memorial/golden_arrow
+	name = "memorial"
+	desc = "A memorial plaque dedicated to those of the Golden Arrow who have fallen in combat. It's an unfortunately long list of names."
+	icon_state = "garrow_memorial"
+
 /obj/structure/prop/almayer/ship_memorial/centcomm
 	name = "slab of remembrance"
 	desc = "A memorial to all Maintainer Team members that have retired from working on CM. No mentor names are present."
-
 
 /obj/structure/prop/almayer/ship_memorial/centcomm/admin
 	desc = "A memorial to all Admins and Moderators who have retired from CM. No mentor names are present."
@@ -353,3 +357,14 @@
 	icon_state = "ob_console"
 	dir = WEST
 	flags_atom = ON_BORDER|CONDUCT|FPRINT
+
+/obj/structure/machinery/prop/almayer/CICmap/arc
+	name = "map terminal"
+	desc = "A terminal that displays a map of the current operation location."
+	icon = 'icons/obj/vehicles/interiors/arc.dmi'
+	icon_state = "arcmap"
+	density = FALSE
+
+/obj/structure/machinery/computer/overwatch/almayer/arc
+	icon = 'icons/obj/vehicles/interiors/arc.dmi'
+	icon_state = "arcconsole"

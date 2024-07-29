@@ -1,6 +1,6 @@
 #define FALLOFF_SOUNDS 1
 
-#define FREE_CHAN_END 1016
+#define FREE_CHAN_END 1014
 #define INITIAL_SOUNDSCAPE_COOLDOWN 20
 
 #define EAR_DEAF_MUTE 1
@@ -21,6 +21,7 @@
 #define ITEM_EQUIP_VOLUME 50
 
 //Reserved channels
+#define SOUND_CHANNEL_TEST 1015
 #define SOUND_CHANNEL_NOTIFY 1016
 #define SOUND_CHANNEL_VOX    1017
 #define SOUND_CHANNEL_MUSIC 1018
@@ -87,3 +88,4 @@
 #define SCAPE_PL_ENG list('sound/soundscape/engamb1.ogg', 'sound/soundscape/engamb2.ogg', 'sound/soundscape/engamb3.ogg', 'sound/soundscape/engamb4.ogg', 'sound/soundscape/engamb5.ogg', 'sound/soundscape/engamb6.ogg', 'sound/soundscape/engamb7.ogg', )
 #define SCAPE_PL_HANGAR list('sound/soundscape/hangaramb1.ogg', 'sound/soundscape/hangaramb2.ogg', 'sound/soundscape/hangaramb3.ogg', 'sound/soundscape/hangaramb4.ogg', 'sound/soundscape/hangaramb5.ogg', 'sound/soundscape/hangaramb6.ogg', 'sound/soundscape/hangaramb7.ogg', 'sound/soundscape/hangaramb8.ogg', 'sound/soundscape/hangaramb9.ogg', 'sound/soundscape/hangaramb10.ogg', )
 #define SCAPE_PL_ARES list('sound/soundscape/mother.ogg')
+#define SCAPE_PL_AICORE list('sound/soundscape/aicore/aicore_beep.ogg', 'sound/soundscape/aicore/aicore_ident.ogg', 'sound/soundscape/aicore/aicore_rumble1.ogg', 'sound/soundscape/aicore/aicore_rumble2.ogg', 'sound/soundscape/aicore/aicore_rumble3.ogg', 'sound/soundscape/aicore/aicore_rumble4.ogg', 'sound/soundscape/aicore/aicore_rumble5.ogg', 'sound/soundscape/aicore/aicore_tone1.ogg', 'sound/soundscape/aicore/aicore_tone2.ogg', 'sound/soundscape/aicore/aicore_tone3.ogg', 'sound/soundscape/aicore/aicore_tone4.ogg', 'sound/soundscape/aicore/aicore_tone5.ogg', 'sound/soundscape/aicore/aicore_tone6.ogg', 'sound/soundscape/aicore/aicore_tone7.ogg', 'sound/soundscape/aicore/aicore_tone8.ogg', 'sound/soundscape/aicore/aicore_tone9.ogg', 'sound/soundscape/aicore/aicore_tone10.ogg', 'sound/soundscape/aicore/aicore_tone11.ogg', 'sound/soundscape/aicore/aicore_tone12.ogg', 'sound/soundscape/aicore/aicore_tone13.ogg', 'sound/soundscape/aicore/aicore_tone14.ogg', 'sound/soundscape/aicore/aicore_tone15.ogg', 'sound/soundscape/aicore/aicore_tone16.ogg', 'sound/soundscape/aicore/aicore_tone17.ogg', 'sound/soundscape/aicore/aicore_tone18.ogg', )
