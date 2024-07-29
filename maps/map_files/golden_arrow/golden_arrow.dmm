@@ -4715,7 +4715,8 @@
 "mH" = (
 /obj/docking_port/stationary/shipmap_elevator/two{
 	id = "garrow_vehicle_elevator_two_storage";
-	roundstart_template = /datum/map_template/shuttle/golden_arrow_vehicle_one
+	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicletwo;
+	name = "Vehicle Elevator Two Storage"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -6190,12 +6191,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"qR" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/motor_pool)
 "qT" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/kitchen/tray{
@@ -7505,6 +7500,15 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
+"uw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
 "ux" = (
 /obj/structure/prop{
 	name = "\improper seat-like case";
@@ -10175,11 +10179,15 @@
 	},
 /area/golden_arrow/motor_pool)
 "Bt" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
 /area/golden_arrow/hangar)
 "Bv" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -10780,6 +10788,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"Ds" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
 "Dt" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12341,15 +12356,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/cryo_cells)
-"HG" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 28
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "HH" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -12922,9 +12928,11 @@
 /area/golden_arrow/supply)
 "Jg" = (
 /obj/docking_port/stationary/shipmap_elevator/cargo{
-	id = "garrow_cargo_elevator";
+	id = "garrow_cargo_elevator_lower";
 	name = "Cargo Elevator Storage";
-	roundstart_template = /datum/map_template/shuttle/golden_arrow_cargo
+	roundstart_template = /datum/map_template/shuttle/golden_arrow/cargo;
+	elevator_network = "garrowcargo";
+	tag = "e1"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
@@ -15574,7 +15582,7 @@
 /obj/docking_port/stationary/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one_storage";
 	name = "Vehicle Elevator One Storage";
-	roundstart_template = /datum/map_template/shuttle/golden_arrow_vehicle_two
+	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -17432,6 +17440,14 @@
 	dir = 4
 	},
 /area/golden_arrow/hangar)
+"Vf" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
 "Vg" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -18610,6 +18626,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"Yc" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
 "Yd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -19393,7 +19415,9 @@
 /area/golden_arrow/prep_hallway)
 "ZU" = (
 /obj/docking_port/stationary/shipmap_elevator/cargo{
-	id = "garrow_cargo_elevator"
+	id = "garrow_cargo_elevator_upper";
+	elevator_network = "garrowcargo";
+	tag = "e1"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
@@ -27407,7 +27431,7 @@ EG
 EG
 EG
 zs
-HG
+uw
 QW
 DO
 Jm
@@ -29363,7 +29387,7 @@ Ip
 Ip
 Ip
 Pt
-qR
+Yc
 hs
 FF
 Pt
@@ -31502,9 +31526,9 @@ EG
 EG
 tb
 xa
-Bg
+Ds
 Xl
-Bt
+NB
 NF
 vP
 LP
@@ -31586,7 +31610,7 @@ vP
 vP
 vP
 LP
-xy
+Bt
 xa
 Bg
 EG
@@ -31806,7 +31830,7 @@ EG
 EG
 tb
 xa
-Bg
+Ds
 oN
 vP
 NB
@@ -31890,7 +31914,7 @@ NB
 NB
 NB
 dl
-tb
+Vf
 xa
 Bg
 EG

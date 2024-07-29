@@ -57,6 +57,7 @@
 	dir = NORTH
 	height = 5
 	width = 7
+	var/elevator_network
 
 /obj/docking_port/stationary/shipmap_elevator/one
 	name = "Vehicle Elevator One"
