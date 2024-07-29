@@ -4,6 +4,7 @@
 	var/suffix
 	var/port_id
 	var/shuttle_id = "SHOULD NEVER EXIST"
+	var/elevator_network
 
 	var/description
 	var/prerequisites
@@ -108,7 +109,6 @@
 /datum/map_template/shuttle/trijent_elevator
 	name = "Trijent Elevator"
 	shuttle_id = MOBILE_TRIJENT_ELEVATOR
-	var/elevator_network
 
 /datum/map_template/shuttle/trijent_elevator/A
 	elevator_network = "A"
@@ -134,14 +134,15 @@
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
 
-/datum/map_template/shuttle/golden_arrow_vehicle_one
+/datum/map_template/shuttle/golden_arrow/vehicleone
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
 	name = "Vehicle Elevator One"
 
-/datum/map_template/shuttle/golden_arrow_vehicle_two
+/datum/map_template/shuttle/golden_arrow/vehicletwo
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
 	name = "Vehicle Elevator Two"
 
-/datum/map_template/shuttle/golden_arrow_cargo
+/datum/map_template/shuttle/golden_arrow/cargo
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	name = "Cargo Elevator"
+	elevator_network = "garrow_cargo"

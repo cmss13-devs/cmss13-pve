@@ -36,14 +36,13 @@
 	},
 /area/shuttle/elevator1)
 "s" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	pixel_y = 32;
-	shuttleId = "garrow_cargo_elevator"
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
 	light_color = "#dae2ff";
 	light_power = 0.25
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	pixel_y = 32
 	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
