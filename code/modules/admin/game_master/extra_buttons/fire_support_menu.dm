@@ -88,6 +88,7 @@
 		user_client.click_intercept = null
 
 	fire_support_click_intercept = FALSE
+	qdel(src)
 
 ///Handles firing logic whenever the mouse is clicked, and the fire_support_click_intercept var is TRUE
 /datum/fire_support_menu/proc/InterceptClickOn(mob/user, params, atom/object)
