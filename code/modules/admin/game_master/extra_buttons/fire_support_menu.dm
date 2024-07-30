@@ -1,4 +1,3 @@
-GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 #define FIRE_SUPPORT_CLICK_INTERCEPT_ACTION "fire_support_click_intercept_action"
 
 //Various ordnance selections
