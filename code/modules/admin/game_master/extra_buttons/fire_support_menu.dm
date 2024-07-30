@@ -12,7 +12,7 @@
 	set category = "Game Master.Extras"
 	if(!check_rights(R_ADMIN))
 		return
-	GLOB.fire_support_menu.tgui_interact(mob)
+	new /datum/fire_support_menu(mob)
 
 ///The actual menu datum
 /datum/fire_support_menu
