@@ -25,6 +25,7 @@
 ///Deletes the mortar when the menu is closed so we dont make a thousand of them.
 /datum/fire_support_menu/Destroy(force, ...)
 	QDEL_NULL(abstract_mortar)
+	holder = null
 	return ..()
 
 /datum/fire_support_menu/tgui_interact(mob/user, datum/tgui/ui)
