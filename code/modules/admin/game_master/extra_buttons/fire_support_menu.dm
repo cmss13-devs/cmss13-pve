@@ -32,7 +32,6 @@
 	if(!ui)
 		ui = new(user, src, "GameMasterFireSupportMenu", "Fire Support Menu")
 		ui.open()
-	user.client?.click_intercept = src
 
 ///Input all the options for the ordnance panel. Only fires once, as the available ammo types shouldnt change. And if they do, something's very wrong
 /datum/fire_support_menu/ui_static_data(mob/user)
