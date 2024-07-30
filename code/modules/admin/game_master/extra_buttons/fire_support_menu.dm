@@ -21,6 +21,17 @@
 	var/sound_cooldown = FALSE
 	///Mortar to fire the abstract shells.
 	var/obj/structure/mortar/abstract_mortar = new()
+	var/client/holder
+
+/datum/fire_support_menu/New(user)
+	if(isclient(user))
+		holder = user
+	else
+		var/mob/mob = user
+		holder = mob.client
+
+	holder.click_intercept = src
+	tgui_interact(holder.mob)
 
 ///Deletes the mortar when the menu is closed so we dont make a thousand of them.
 /datum/fire_support_menu/Destroy(force, ...)
