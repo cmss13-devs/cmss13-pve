@@ -1,4 +1,0 @@
-author: "Doubleumc"
-delete-after: True
-changes:
-  - admin: "round start delayed by default"
