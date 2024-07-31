@@ -625,7 +625,7 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
-/obj/item/attachable/reddot/union
+/obj/item/attachable/reddot/upp
 	name = "EKP-9-M Red Dot Sight"
 	desc = "Cutting edge UPP sight with automated reticle correction for a fixed zero point. Increases accuracy significantly."
 
@@ -645,7 +645,7 @@ Defined in conflicts.dm of the #defines folder.
 	burst_scatter_mod = -1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
-/obj/item/attachable/reflex/union
+/obj/item/attachable/reflex/upp
 	name = "PK-12 Reflex Sight"
 	desc = "Reflector type gunsight compatible with most standard issue UPP firearms. Durable but the power supply is notoriously unreliable. Reduces scatter significantly and boosts accuracy slightly."
 
@@ -811,7 +811,7 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_NOTICE("Hold on there cowboy, that grip is bolted on. You are unable to modify it."))
 	return
 
-/obj/item/attachable/flashlight/grip/union
+/obj/item/attachable/flashlight/grip/upp
 	name = "RK-5A Flashlight Grip"
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
@@ -997,7 +997,7 @@ Defined in conflicts.dm of the #defines folder.
 #define ZOOM_LEVEL_2X 0
 #define ZOOM_LEVEL_4X 1
 
-/obj/item/attachable/scope/union
+/obj/item/attachable/scope/upp
 	name = "PO-M 4x Optic"
 	desc = "Old fashioned 4x scope. Sturdy, but a little unergonomic. UPP tradition. Reduces RoF and increases wield time. Major accuracy bonus when scoped."
 
@@ -1106,7 +1106,7 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
-/obj/item/attachable/scope/mini/union
+/obj/item/attachable/scope/mini/upp
 	name = "1P93 2x Optic"
 	desc = "Mild update of a 2159 UPP design. Holds zero in all conditions, antiglint grid prevents glare, but the reticle is unfortunately cluttered and busy. Reduces RoF and increases wield time, boosts accuracy while scoped."
 
@@ -3204,7 +3204,7 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 
-/obj/item/attachable/verticalgrip/union
+/obj/item/attachable/verticalgrip/upp
 	name = "RK-5 Vertical Grip"
 	desc = "Sturdy grip positioned at optimal place offers enhanced stability in rapid fire. Increases weapon size, penalizes one handed fire, improves scatter and accuracy while wielded."
 
@@ -3219,7 +3219,7 @@ Defined in conflicts.dm of the #defines folder.
 	slot = "under"
 	pixel_shift_x = 20
 
-/obj/item/attachable/angledgrip/union
+/obj/item/attachable/angledgrip/upp
 	name = "RK-9 Angled Grip"
 	desc = "Ergonomic grip decreases time for shouldering the weapon. Increases weapon size, accelerates wield speed."
 
@@ -3266,7 +3266,7 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 
-/obj/item/attachable/lasersight/union
+/obj/item/attachable/lasersight/upp
 	name = "Zvezda Laser Module"
 	desc = "Visible band 512nm green laser, compatible with NVG and IR. Bears striking resemblance to an old Weyland Yutani offering... Decreases scatter, especially onehanded, slightly boosts accuracy. "
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'

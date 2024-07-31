@@ -1302,24 +1302,24 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/union,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/union,
+		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot/union,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/verticalgrip, // Underbarrel
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/flashlight/grip/union,
+		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/lasersight,
-		/obj/item/attachable/lasersight/union,
+		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
@@ -1362,7 +1362,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1371,14 +1371,14 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/dual
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1387,8 +1387,8 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/lasersight/union,
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/sapper
@@ -1396,7 +1396,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 80
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
@@ -1417,12 +1417,12 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/union,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/union,
-		/obj/item/attachable/reddot/union,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
@@ -1441,10 +1441,10 @@
 	random_spawn_chance = 100
 	random_rail_chance = 100
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini/union,
+		/obj/item/attachable/scope/mini/upp,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
@@ -1464,20 +1464,20 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/union,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/union,
+		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot/union,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/verticalgrip, // Underbarrel
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/burstfire_assembly,
 		)
 
@@ -1500,7 +1500,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex/union,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1509,7 +1509,7 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
@@ -1524,7 +1524,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/verticalgrip/union,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 	random_spawn_chance = 0
 	random_spawn_rail = list()
