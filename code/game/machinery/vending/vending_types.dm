@@ -247,10 +247,7 @@
 /obj/structure/machinery/vending/security/colony
 	name = "\improper SecTech Police Vendor"
 	desc = "A generic police vendor."
-	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
-	icon_state = "sec"
-	icon_deny = "sec-deny"
-	req_access = list(ACCESS_MARINE_BRIG)
+	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
 		/obj/item/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
