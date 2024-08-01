@@ -9,6 +9,6 @@
 	if(!input)
 		return
 	else
-		marine_announcement(input, "[MAIN_SHIP_NAME]")
+		marine_announcement(input, "[COMMAND_ANNOUNCE]")
 		message_admins("[key_name_admin(src)] has made an admin command announcement.")
 		log_admin("[key_name_admin(src)] made an admin command announcement: [input]")
