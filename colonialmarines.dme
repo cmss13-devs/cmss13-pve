@@ -2468,6 +2468,7 @@
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
 #include "maps\map_files\LV671_Ark\LV671.dm"
+#include "void-marines\code\admin_tools.dm"
 #include "void-marines\code\factory_areas.dm"
 #include "void-marines\code\hybrisa_assets.dm"
 #include "void-marines\code\loadouts.dm"
@@ -2476,5 +2477,4 @@
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\reserve_role.dm"
 #include "void-marines\code\vendors.dm"
-#include "void-marines\code\admin_tools.dm"
 // END_INCLUDE
