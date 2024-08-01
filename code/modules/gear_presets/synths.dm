@@ -121,40 +121,16 @@
 		WEAR_R_EAR = /obj/item/device/flashlight/pen,
 		WEAR_FACE = /obj/item/clothing/mask/surgical,
 		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/medical,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/blue,
+		WEAR_BODY = /obj/item/clothing/under/medical/purple,
+		WEAR_BACK = /obj/item/storage/backpack/satchel/black,
 		WEAR_IN_BACK = /obj/item/roller/surgical,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/blue,
 		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
 		WEAR_WAIST = /obj/item/storage/belt/medical/lifesaver/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_FEET = /obj/item/clothing/shoes/white,
 	)
-
-/datum/equipment_preset/synth/survivor/emt_synth
-	name = "Synthetic - EMT Synth"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/cmcap,
-		WEAR_R_EAR = /obj/item/device/flashlight/pen,
-		WEAR_FACE = /obj/item/clothing/mask/surgical,
-		WEAR_EYES = /obj/item/clothing/glasses/hud/health,
-		WEAR_BODY = /obj/item/clothing/under/boiler,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/blue,
-		WEAR_IN_BACK = /obj/item/storage/firstaid/adv,
-		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
-		WEAR_IN_BACK = /obj/item/roller,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
-		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
-		WEAR_WAIST = /obj/item/storage/belt/medical/full,
-		WEAR_HANDS = /obj/item/clothing/gloves/latex,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
-	)
-
-	survivor_variant = MEDICAL_SURVIVOR
 
 /datum/equipment_preset/synth/survivor/wy/security_synth
 	name = "Synthetic - Corporate Security Synth"
@@ -176,6 +152,7 @@
 	equipment_to_spawn = list(
 		WEAR_L_EAR = /obj/item/device/radio/headset/distress/WY,
 		WEAR_BODY = /obj/item/clothing/under/businesswear/black,
+		WEAR_ACCESSORY = /obj/item/clothing/accessory/black,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/lockable,
 		WEAR_IN_BACK = /obj/item/paper,
 		WEAR_IN_BACK = /obj/item/paper,
@@ -184,10 +161,8 @@
 		WEAR_IN_BACK = /obj/item/tool/pen/clicky,
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
-		WEAR_HANDS = /obj/item/clothing/gloves/botanic_leather,
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 		WEAR_R_HAND = /obj/item/clipboard,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
 
 //*****************************************************************************************************/

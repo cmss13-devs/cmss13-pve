@@ -178,14 +178,15 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Welding Goggles", 12, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
 
 	list("SHOES", 0, null, null, null),
+	list("Combat Boots", 24, /obj/item/clothing/shoes/marine/knife, null, VENDOR_ITEM_REGULAR),
 	list("Shoes, Red", 12, /obj/item/clothing/shoes/red, null, VENDOR_ITEM_REGULAR),
 	list("Shoes, White", 12, /obj/item/clothing/shoes/white, null, VENDOR_ITEM_REGULAR),
 	list("Dress Shoes", 24, /obj/item/clothing/shoes/laceup, null, VENDOR_ITEM_REGULAR),
 
 	list("HEADWEAR", 0, null, null, null),
 	list("Patrol Cap, Green", 12, /obj/item/clothing/head/cmcap, null, VENDOR_ITEM_REGULAR),
-	list("Patrol Cap, Command", 12, /obj/item/clothing/head/cmcap, null, VENDOR_ITEM_REGULAR),
-	list("Patrol Cap, Khaki", 12, /obj/item/clothing/head/cmcap/req, null, VENDOR_ITEM_REGULAR),
+	list("Patrol Cap, Command", 12, /obj/item/clothing/head/cmcap/bridge, null, VENDOR_ITEM_REGULAR),
+	list("Patrol Cap, Khaki", 12, /obj/item/clothing/head/cmcap/khaki, null, VENDOR_ITEM_REGULAR),
 
 	list("HELMET", 0, null, null, null),
 	list("Marine Helmet (Mission-Specific Camo)", 12, /obj/item/clothing/head/helmet/marine, null, VENDOR_ITEM_REGULAR),
@@ -193,9 +194,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("SUIT", 0, null, null, null),
 	list("External Webbing", 12, /obj/item/clothing/suit/storage/webbing, null, VENDOR_ITEM_REGULAR),
 	list("Utility Vest", 12, /obj/item/clothing/suit/storage/webbing/utility_vest, null, VENDOR_ITEM_REGULAR),
-	list("Windbreaker, Brown", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown, null, VENDOR_ITEM_REGULAR),
-	list("Windbreaker, Grey", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_gray, null, VENDOR_ITEM_REGULAR),
-	list("Windbreaker, Green", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_green, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Brown", 12, /obj/item/clothing/suit/storage/windbreaker/brown, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Green", 12, /obj/item/clothing/suit/storage/windbreaker/green, null, VENDOR_ITEM_REGULAR),
 
 
 

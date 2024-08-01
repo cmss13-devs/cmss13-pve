@@ -64,7 +64,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_BELT)
 		if(3 , 4)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
-			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector(new_human),WEAR_IN_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector(new_human),WEAR_IN_BELT)
 
 /datum/equipment_preset/survivor/forecon/add_random_survivor_equipment(mob/living/carbon/human/new_human)
 	return

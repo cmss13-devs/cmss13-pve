@@ -281,3 +281,55 @@
 	new_human.status_flags |= STATUS_FLAGS_DEBILITATE
 	ADD_TRAIT(new_human, TRAIT_TWOBORE_TRAINING, TRAIT_SOURCE_ADMIN) //Means he can handle his gun and speak its hit lines.
 
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/zombie
+	name = "Zombie"
+	flags = EQUIPMENT_PRESET_EXTRA
+	rank = FACTION_ZOMBIE
+	languages = list("Zombie")
+	skills = null //no restrictions
+	faction = FACTION_ZOMBIE
+
+//Overloading the function to be able to spawn gear first
+/datum/equipment_preset/other/zombie/load_preset(mob/living/carbon/human/new_human, randomise = FALSE)
+	if(randomise)
+		load_name(new_human)
+	load_skills(new_human) //skills are set before equipment because of skill restrictions on certain clothes.
+	load_languages(new_human)
+	load_gear(new_human)
+	load_id(new_human)
+	load_status(new_human)
+	load_vanity(new_human)
+	load_race(new_human)//Race is loaded last, otherwise we wouldn't be able to equip gear!
+	new_human.assigned_equipment_preset = src
+	new_human.regenerate_icons()
+
+/datum/equipment_preset/other/zombie/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.gender = pick(MALE, FEMALE)
+	var/datum/preferences/A = new
+	A.randomize_appearance(new_human)
+	var/random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
+	new_human.change_real_name(new_human, random_name)
+	new_human.age = rand(21,45)
+
+/datum/equipment_preset/other/zombie/load_id(mob/living/carbon/human/new_human, client/mob_client)
+	var/obj/item/clothing/under/uniform = new_human.w_uniform
+	if(istype(uniform))
+		uniform.has_sensor = UNIFORM_HAS_SENSORS
+		uniform.sensor_faction = FACTION_COLONIST
+	new_human.job = "Zombie"
+	new_human.faction = faction
+	return ..()
+
+/datum/equipment_preset/other/zombie/load_race(mob/living/carbon/human/new_human)
+	new_human.set_species(SPECIES_HUMAN) // Set back, so that we can get our claws again
+	new_human.set_species(SPECIES_ZOMBIE)
+
+/datum/equipment_preset/other/zombie/load_gear(mob/living/carbon/human/new_human)
+	var/uniform_path = pick(/obj/item/clothing/under/boiler/cyan, /obj/item/clothing/under/boiler/darkblue, /obj/item/clothing/under/boiler/offwhite, /obj/item/clothing/under/boiler/grey, /obj/item/clothing/under/boiler/lightblue, /obj/item/clothing/under/workwear/khaki, /obj/item/clothing/under/workwear/blue)
+	new_human.equip_to_slot_or_del(new uniform_path, WEAR_BODY)
+	var/shoe_path = pick(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/laceup/brown, /obj/item/clothing/shoes/marine/civilian, /obj/item/clothing/shoes/marine/civilian/brown)
+	new_human.equip_to_slot_or_del(new shoe_path, WEAR_FEET)
+
+//*****************************************************************************************************/

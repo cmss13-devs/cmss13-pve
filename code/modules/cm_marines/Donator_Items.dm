@@ -973,7 +973,7 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
 	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform-layer/uniform_donator.dmi',
 	)
 
 //END UNIFORM TEMPLATE
