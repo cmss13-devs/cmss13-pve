@@ -133,8 +133,6 @@
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
 
-	survivor_variant = MEDICAL_SURVIVOR
-
 /datum/equipment_preset/synth/survivor/emt_synth
 	name = "Synthetic - EMT Synth"
 	equipment_to_spawn = list(
@@ -171,31 +169,6 @@
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 	)
 
-	survivor_variant = SECURITY_SURVIVOR
-
-/datum/equipment_preset/synth/survivor/wy/protection_synth
-	name = "Synthetic - Corporate Protection Synth"
-	idtype = /obj/item/card/id/pmc
-	role_comm_title = "WY Syn"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/helmet/marine/veteran/pmc,
-		WEAR_L_EAR = /obj/item/device/radio/headset/distress/pmc/hvh,
-		WEAR_BODY = /obj/item/clothing/under/marine/opfor/pmc,
-		WEAR_ACCESSORY = /obj/item/clothing/accessory/storage/droppouch,
-		WEAR_IN_ACCESSORY = /obj/item/explosive/grenade/flashbang,
-		WEAR_IN_ACCESSORY = /obj/item/handcuffs/zip,
-		WEAR_IN_ACCESSORY = /obj/item/handcuffs/zip,
-		WEAR_BACK = /obj/item/storage/backpack/lightpack,
-		WEAR_IN_BACK = /obj/item/device/binoculars,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/black,
-		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran/pmc,
-		WEAR_FEET = /obj/item/clothing/shoes/veteran/pmc/knife,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
-	)
-
-	survivor_variant = SECURITY_SURVIVOR
-
 /datum/equipment_preset/synth/survivor/wy/corporate_synth
 	name = "Synthetic - Corporate Clerical Synth"
 	idtype = /obj/item/card/id/data
@@ -217,7 +190,6 @@
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
 
-	survivor_variant = CORPORATE_SURVIVOR
 //*****************************************************************************************************/
 
 /datum/equipment_preset/synth/working_joe

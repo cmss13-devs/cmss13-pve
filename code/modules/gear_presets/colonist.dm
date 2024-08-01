@@ -38,7 +38,7 @@
 
 /datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/offwhite(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
@@ -183,7 +183,7 @@
 // Part-timers
 
 /datum/equipment_preset/survivor/hybrisa/weymart
-	name = "Survivor - Hybrisa - Civilian - Weymart Employee"
+	name = "Survivor - Colonist - Weymart Employee"
 	assignment = "Hi! My name is:"
 	skills = /datum/skills/civilian
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
@@ -207,3 +207,15 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/workwear/weymart(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/weymart(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+
+// Utility Workers
+
+/datum/equipment_preset/survivor/hybrisa/sanitation
+	name = "Prop - Colonist - Sanitation Worker"
+	assignment = "Material Reprocessing Technician"
+
+/datum/equipment_preset/survivor/hybrisa/fire_fighter
+	name = "Prop - Colonist - Firefighter"
+	assignment = "Fire Protection Specialist"
+
+// Pizza Galaxy

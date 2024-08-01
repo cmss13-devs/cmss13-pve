@@ -771,19 +771,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_item = MOB_LOCK_ON_EQUIP
 	specialty = "M45 ghillie"
 
-/obj/item/clothing/head/helmet/marine/CO
-	name = "\improper M10 pattern commanding officer helmet"
-	desc = "A special M10 Pattern Helmet worn by Commanding Officers of the USCM. It reads on the label, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'."
-	icon_state = "co_officer"
-	item_state = "co_officer"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "M10 pattern captain"
-	flags_atom = NO_SNOW_TYPE
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
-
 /obj/item/clothing/head/helmet/marine/MP
 	name = "\improper M10 pattern MP helmet"
 	desc = "A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM. Whether you're facing a crime syndicate or a mutiny, this bucket will keep your brains intact."
@@ -1238,17 +1225,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	apply_explosion_overlay()
 	cell_explosion(loc, 40, 18, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 	qdel(src)
-
-/obj/item/clothing/head/helmet/marine/reporter
-	name = "press helmet"
-	desc = "A helmet designed to make it clear that the wearer is safety aware and not looking for a fight."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_helm"
-	item_state = "wc_helm"
-	contained_sprite = TRUE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-	built_in_visors = list()
 
 /obj/item/clothing/head/helmet/marine/cbrn_hood
 	name = "\improper M3 MOPP mask"

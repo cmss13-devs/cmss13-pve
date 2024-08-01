@@ -31,7 +31,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/UPP, /obj/item/clothing/under/marine/opfor/UPP/medic, /obj/item/clothing/under/marine/opfor/UPP/engi)
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/support
 	name = "\improper UL6 personal armor"
@@ -156,7 +155,6 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/UPP, /obj/item/clothing/under/marine/opfor/UPP/medic, /obj/item/clothing/under/marine/opfor/UPP/engi)
 	allowed = list(
 		/obj/item/tank/emergency_oxygen,
 		/obj/item/device/flashlight,

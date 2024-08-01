@@ -1058,17 +1058,8 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			new /obj/item/reagent_container/food/drinks/bottle/kahlua(loc)
 			new /obj/item/reagent_container/food/drinks/bottle/rum(loc)
 			loot_message = SPAN_NOTICE("It's a bunch of finished and unfinished molotovs.")
-		if(41 to 45)
-		// Spare CLF gear!
-			new /obj/effect/essentials_set/random/clf_shoes(loc)
-			new /obj/item/clothing/under/boiler/grey(loc)
-			new /obj/effect/essentials_set/random/clf_armor(loc)
-			new /obj/effect/essentials_set/random/clf_gloves(loc)
-			new /obj/effect/essentials_set/random/clf_head(loc)
-			new /obj/effect/essentials_set/random/clf_belt(loc)
-			loot_message = SPAN_NOTICE("It's a spare set of CLF equipment. You probably shouldn't wear this...")
 		// That was the good 50%. Now it's time for the bad.
-		if(46 to 50)
+		if(41 to 50)
 		// Random junk
 			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
 			new /obj/effect/essentials_set/random/clf_bonus_item(loc)

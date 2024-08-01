@@ -74,9 +74,7 @@
 	synth_survivor_types = list(
 		/datum/equipment_preset/synth/survivor/medical_synth,
 		/datum/equipment_preset/synth/survivor/emt_synth,
-		/datum/equipment_preset/synth/survivor/scientist_synth,
-		/datum/equipment_preset/synth/survivor/engineer_synth,
-		/datum/equipment_preset/synth/survivor/freelancer_synth,
+,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,
 		/datum/equipment_preset/synth/survivor/wy/corporate_synth,

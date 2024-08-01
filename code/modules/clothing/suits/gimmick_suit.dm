@@ -8,7 +8,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/bear)
 
 /obj/item/clothing/suit/storage/marine/veteran/dutch
 	name = "\improper D2 armored vest"
@@ -23,7 +22,6 @@
 	storage_slots = 2
 	light_range = 7
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/dutch)
 
 /obj/item/clothing/suit/armor/gimmick/dutch
 	name = "armored jacket"
@@ -64,7 +62,6 @@
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	storage_slots = 2
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/van_bandolier)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,

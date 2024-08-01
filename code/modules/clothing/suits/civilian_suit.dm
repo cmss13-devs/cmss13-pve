@@ -391,9 +391,9 @@
 	desc = "A brown windbreaker."
 	icon_state = "windbreaker_brown"
 
-/obj/item/clothing/suit/storage/windbreaker/gray
-	desc = "A gray windbreaker."
-	icon_state = "windbreaker_gray"
+/obj/item/clothing/suit/storage/windbreaker/blue
+	desc = "A blue windbreaker."
+	icon_state = "windbreaker_blue"
 
 /obj/item/clothing/suit/storage/windbreaker/green
 	desc = "A green windbreaker."

@@ -15,17 +15,12 @@
 
 
 /datum/equipment_preset/contractor/load_name(mob/living/carbon/human/new_human)
-	new_human.gender = pick(60;MALE,40;FEMALE)
-	var/datum/preferences/A = new()
+	new_human.gender = pick(80;MALE,20;FEMALE)
+	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
-	var/random_name
-	random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
-	new_human.change_real_name(new_human, random_name)
-	new_human.name = new_human.real_name
-	new_human.age = rand(22,45)
-
-	var/static/list/colors = list("BLACK" = list(15, 15, 25), "BROWN" = list(102, 51, 0), "AUBURN" = list(139, 62, 19))
-	var/static/list/hair_colors = colors.Copy() + list("BLONDE" = list(197, 164, 30), "CARROT" = list(174, 69, 42))
+	var/random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
 	new_human.r_hair = hair_colors[hair_color][1]
 	new_human.g_hair = hair_colors[hair_color][2]
@@ -37,17 +32,13 @@
 	new_human.r_eyes = colors[eye_color][1]
 	new_human.g_eyes = colors[eye_color][2]
 	new_human.b_eyes = colors[eye_color][3]
-	idtype = /obj/item/card/id/data
 	if(new_human.gender == MALE)
-		new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top",)
-		new_human.f_style = pick("5 O'clock Shadow", "Shaved", "Full Beard", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+		new_human.h_style = pick("Undercut", "Partly Shaved", "Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "CIA", "CIA", "Mulder", "Mulder", "Medium Fade", "High Fade", "Coffee House Cut")
+		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
 	else
-		new_human.h_style = pick("Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
+		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "CIA", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun")
 	new_human.change_real_name(new_human, random_name)
-	new_human.age = rand(20,45)
-	new_human.r_hair = rand(15,35)
-	new_human.g_hair = rand(15,35)
-	new_human.b_hair = rand(25,45)
+	new_human.age = rand(20,50)
 
 /datum/equipment_preset/contractor/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(human_versus_human)
@@ -74,7 +65,6 @@
 	var/choice = rand(1,10)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/tshirt/gray_blu, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/socom, WEAR_WAIST)

@@ -83,8 +83,6 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/marine/opfor/freelancer)
-
 //this one is for CLF
 /obj/item/clothing/suit/storage/militia
 	name = "colonial militia hauberk"

@@ -17,7 +17,7 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE|UNIFORM_SLEEVE_CUTTABLE
 	contained_sprite = TRUE
 	///Makes it so that we can see the right name in the vendor.
 	var/specialty = "USCM"
@@ -76,14 +76,11 @@
 	icon_state = "command_jumpsuit"
 	item_state = "command_jumpsuit"
 	worn_state = "command_jumpsuit"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 	flags_atom = NO_SNOW_TYPE
 	specialty = "marine operations"
 
 /obj/item/clothing/under/marine/marsoc
-	name = "\improper USCM battle dress uniform"
-	desc = "It's a standard-issue Marine Corps battle dress uniform featuring venlar armor inserts at critical areas to protect from blades and ballistics."
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	desc = "It's a standard-issue Marine Corps battle dress uniform featuring venlar armor inserts at critical areas to protect from blades and ballistics. This one is issued to Marine Raiders."
 	icon_state = "marine_raider"
 	worn_state = "marine_raider"
 	specialty = "MARSOC uniform"
@@ -109,7 +106,8 @@
 
 /obj/item/clothing/under/marine/blues
 	name = "\improper USCM enlisted dress blues"
-	desc = "The undershirt and trousers of the legendary Marine dress blues, virtually unchanged since the 19th century. This unadorned variant is for enlisted personnel, E-1 thru E-3."
+	desc = "It's a standard-issue Marine Corps dress blues uniform offering no defensive qualities. This variant is worn by enlisted personnel, E-1 to E-3."
+	desc = "The undershirt and trousers of the legendary Marine dress blues, virtually unchanged since the 19th century."
 	icon_state = "marine_blues"
 	item_state = "marine_blues"
 	worn_state = "marine_blues"
@@ -126,7 +124,7 @@
 
 /obj/item/clothing/under/marine/blues/nco
 	name = "\improper USCM senior dress blues uniform"
-	desc = "The undershirt and trousers of the legendary Marine dress blues, virtually unchanged since the 19th century. This variant features the iconic Blood Stripe, worn by NCOs and officers."
+	desc = "It's a standard-issue Marine Corps dress blues uniform offering no defensive qualities. This variant is worn by NCOs and officers."
 	icon_state = "marine_officer_blues"
 	item_state = "marine_officer_blues"
 	worn_state = "marine_officer_blues"
@@ -154,7 +152,7 @@
 
 /obj/item/clothing/under/marine/opfor/UPP/mp
 	name = "\improper UPP Military Police fatigues"
-	desc = "A set of Military Police UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
+	desc = "It's a set of standard-issue Naval Infantry fatigues featuring venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "upp_uniform_mp"
 	worn_state = "upp_uniform_mp"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
@@ -230,15 +228,6 @@
 
 ////// Civilians /////////
 
-/obj/item/clothing/under/marine/reporter
-	name = "combat correspondent uniform"
-	desc = "A relaxed and robust uniform fit for any potential reporting needs."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_uniform"
-	worn_state = "wc_uniform"
-	contained_sprite = TRUE
-	flags_atom = NO_NAME_OVERRIDE
-
 /obj/item/clothing/under/synthetic/joe
 	name = "\improper Working Joe Uniform"
 	desc = "A cheap uniform made for Synthetic labor. Tomorrow, Together."
@@ -276,7 +265,7 @@
 	worn_state = "rmc_uniform"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	contained_sprite = TRUE
-	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
+	icon = 'icons/mob/humans/onmob/uniform-layer/uniform_commando.dmi'
 
 /obj/item/clothing/under/marine/opfor/royal_marine/tl
 	icon_state = "rmc_uniform_teaml"
