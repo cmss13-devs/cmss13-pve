@@ -24,8 +24,8 @@ const GeneralPanel = (props) => {
   );
 
   const categories = [];
-  for (let i = 0; i < phones.length; i++) {
-    let data = phones[i];
+  for (let i = 0; i < transmitters.length; i++) {
+    let data = transmitters[i];
     if (categories.includes(data.phone_category)) continue;
 
     categories.push(data.phone_category);
@@ -38,14 +38,14 @@ const GeneralPanel = (props) => {
   let dnd_tooltip = 'Do Not Disturb is DISABLED';
   let dnd_locked = 'No';
   let dnd_icon = 'volume-high';
-  if (do_not_disturb === 1) {
+  if (availability === 1) {
     dnd_tooltip = 'Do Not Disturb is ENABLED';
     dnd_icon = 'volume-xmark';
-  } else if (do_not_disturb >= 2) {
+  } else if (availability >= 2) {
     dnd_tooltip = 'Do Not Disturb is ENABLED (LOCKED)';
     dnd_locked = 'Yes';
     dnd_icon = 'volume-xmark';
-  } else if (do_not_disturb < 0) {
+  } else if (availability < 0) {
     dnd_tooltip = 'Do Not Disturb is DISABLED (LOCKED)';
     dnd_locked = 'Yes';
   }
@@ -77,7 +77,7 @@ const GeneralPanel = (props) => {
         <Stack.Item grow>
           <Section fill scrollable>
             <Tabs vertical>
-              {phones.map((val) => {
+              {transmitters.map((val) => {
                 if (
                   val.phone_category !== currentCategory ||
                   !val.phone_id.toLowerCase().match(currentSearch)
@@ -122,6 +122,7 @@ const GeneralPanel = (props) => {
             </Button>
           </Stack.Item>
         )}
+        {!!last_caller && <Stack.Item>Last Caller: {last_caller}</Stack.Item>}
         <Stack.Item>
           <Button
             color="red"
