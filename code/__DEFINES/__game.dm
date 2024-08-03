@@ -47,7 +47,6 @@ block( \
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 
-#define MAP_LV759_HYBRISA "LV-759 Hybrisa"
 #define MAP_LV671_ARK "LV-671 Ark Borealis"
 #define MAP_DESERT_DAM_RU "Trijent Dam RU"
 #define MAP_WHISKEY_OUTPOST_RU "Outpost Tango"
