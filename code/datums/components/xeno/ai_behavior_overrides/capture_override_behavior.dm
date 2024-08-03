@@ -45,7 +45,7 @@
 	if(distance > 10)
 		return FALSE
 
-	if(captee_stat == CONSCIOUS && !(HAS_TRAIT(parent_mob, TRAIT_FLOORED) && HAS_TRAIT(parent_mob, TRAIT_INCAPACITATED)))
+	if(captee_stat == CONSCIOUS && !(parent_mob.body_position == LYING_DOWN && HAS_TRAIT(parent_mob, TRAIT_INCAPACITATED)))
 		return FALSE
 
 	if(isxeno(pulledby) && pulledby != checked_xeno)
