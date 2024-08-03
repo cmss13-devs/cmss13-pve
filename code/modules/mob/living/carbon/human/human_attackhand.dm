@@ -22,7 +22,7 @@
 				return 1
 
 			// If unconcious with oxygen damage, do CPR. If dead, we do CPR
-			if(!((stat == UNCONSCIOUS || (HAS_TRAIT(src, TRAIT_FLOORED) && HAS_TRAIT(src, TRAIT_INCAPACITATED))) && getOxyLoss() > 0) && !(stat == DEAD))
+			if(!((stat == UNCONSCIOUS || (body_position == LYING_DOWN && HAS_TRAIT(src, TRAIT_INCAPACITATED))) && getOxyLoss() > 0) && !(stat == DEAD))
 				help_shake_act(attacking_mob)
 				return 1
 
