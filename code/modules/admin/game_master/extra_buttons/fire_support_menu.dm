@@ -1,4 +1,3 @@
-GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 #define FIRE_SUPPORT_CLICK_INTERCEPT_ACTION "fire_support_click_intercept_action"
 
 //Various ordnance selections
@@ -13,7 +12,7 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 	set category = "Game Master.Extras"
 	if(!check_rights(R_ADMIN))
 		return
-	GLOB.fire_support_menu.tgui_interact(mob)
+	new /datum/fire_support_menu(mob)
 
 ///The actual menu datum
 /datum/fire_support_menu
@@ -22,10 +21,22 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 	var/sound_cooldown = FALSE
 	///Mortar to fire the abstract shells.
 	var/obj/structure/mortar/abstract_mortar = new()
+	var/client/holder
+
+/datum/fire_support_menu/New(user)
+	if(isclient(user))
+		holder = user
+	else
+		var/mob/mob = user
+		holder = mob.client
+
+	holder.click_intercept = src
+	tgui_interact(holder.mob)
 
 ///Deletes the mortar when the menu is closed so we dont make a thousand of them.
 /datum/fire_support_menu/Destroy(force, ...)
 	QDEL_NULL(abstract_mortar)
+	holder = null
 	return ..()
 
 /datum/fire_support_menu/tgui_interact(mob/user, datum/tgui/ui)
@@ -33,19 +44,18 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 	if(!ui)
 		ui = new(user, src, "GameMasterFireSupportMenu", "Fire Support Menu")
 		ui.open()
-	user.client?.click_intercept = src
 
 ///Input all the options for the ordnance panel. Only fires once, as the available ammo types shouldnt change. And if they do, something's very wrong
 /datum/fire_support_menu/ui_static_data(mob/user)
 	. = ..()
 	var/list/data = list()
 
-		data["ordnance_options"] = ORDNANCE_OPTIONS
+	data["ordnance_options"] = ORDNANCE_OPTIONS
 
-		data["missile_ordnance_options"] = MISSILE_ORDNANCE
-		data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
-		data["mortar_ordnance_options"] = MORTAR_ORDNANCE
-		data["misc_ordnance_options"] = MISC_ORDNANCE
+	data["missile_ordnance_options"] = MISSILE_ORDNANCE
+	data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
+	data["mortar_ordnance_options"] = MORTAR_ORDNANCE
+	data["misc_ordnance_options"] = MISC_ORDNANCE
 
 	return data
 
@@ -78,6 +88,7 @@ GLOBAL_DATUM_INIT(fire_support_menu, /datum/fire_support_menu, new)
 		user_client.click_intercept = null
 
 	fire_support_click_intercept = FALSE
+	qdel(src)
 
 ///Handles firing logic whenever the mouse is clicked, and the fire_support_click_intercept var is TRUE
 /datum/fire_support_menu/proc/InterceptClickOn(mob/user, params, atom/object)
