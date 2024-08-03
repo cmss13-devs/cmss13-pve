@@ -371,6 +371,7 @@ var/list/roundstart_mod_verbs = list(
 		/client/proc/game_master_rename_platoon,
 		/client/proc/toggle_vehicle_blockers,
 		/client/proc/toggle_rappel_menu,
+		/client/proc/toggle_fire_support_menu,
 		admin_verbs_admin,
 		admin_verbs_ban,
 		admin_verbs_minor_event,
