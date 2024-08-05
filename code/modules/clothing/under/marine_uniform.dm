@@ -1,7 +1,6 @@
 //=========================//MARINES\\===================================//
 //=======================================================================//
 
-
 /obj/item/clothing/under/marine
 	name = "\improper USCM battle dress uniform"
 	desc = "It's a standard-issue Marine Corps battle dress uniform featuring venlar armor inserts at critical areas to protect from blades and ballistics."
