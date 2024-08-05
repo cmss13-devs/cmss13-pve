@@ -411,20 +411,6 @@
 	desc = "A crate containing one recycler, for removal of trash."
 	dir_needed = 0
 
-/obj/structure/largecrate/machine/recycler/unpack()
-	var/turf/T = get_turf(loc)
-	if(!istype(T, /turf/open))
-		return FALSE
-
-	if(parts_type)
-		new parts_type(loc, 2)
-	playsound(src, unpacking_sound, 35)
-
-	new /obj/structure/machinery/wo_recycler(loc)
-
-	qdel(src)
-	return TRUE
-
 /obj/structure/largecrate/machine/autodoc
 	name = "autodoctor machine crate (x1)"
 	desc = "A crate containing one autodoc."
