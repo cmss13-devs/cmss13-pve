@@ -1,0 +1,4 @@
+author: "Merrgear"
+delete-after: True
+changes:
+  - rscadd: "added more cigarette options in the loadout, along with a golden zippo\n:cl:"
