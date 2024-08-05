@@ -695,6 +695,7 @@
 #include "code\game\gamemodes\events.dm"
 #include "code\game\gamemodes\game_mode.dm"
 #include "code\game\gamemodes\colonialmarines\colonialmarines.dm"
+#include "code\game\gamemodes\colonialmarines\xenovsxeno.dm"
 #include "code\game\gamemodes\colonialmarines\ai\colonialmarines_ai.dm"
 #include "code\game\gamemodes\colonialmarines\ai\colonialmarines_ai_nospawn.dm"
 #include "code\game\gamemodes\events\power_failure.dm"
