@@ -88,7 +88,7 @@
 
 /datum/equipment_preset/colonist/urban/poor/load_gear(mob/living/carbon/human/new_human)
 
-	var/random_gear = rand(1,10)
+	var/random_gear = rand(1,6)
 	switch(random_gear)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/brown(new_human), WEAR_JACKET)
@@ -129,8 +129,6 @@
 	skills = /datum/skills/civilian
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
-
-	survivor_variant = CIVILIAN_SURVIVOR
 
 /datum/equipment_preset/colonist/urban/rich/load_gear(mob/living/carbon/human/new_human)
 
@@ -186,7 +184,7 @@
 	switch(random_gear)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/workwear/weymart(new_human), WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/businesswear/black(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/weymart(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 		if(2)

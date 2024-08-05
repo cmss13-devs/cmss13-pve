@@ -33,3 +33,15 @@
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	anti_hug = 10 //Lel
+
+/obj/item/clothing/head/trucker
+	name = "trucker hat"
+	desc = "It's a blue trucker hat."
+	icon_state = "truckercap_bluesoft"
+	item_state = "truckercap_blue"
+
+/obj/item/clothing/head/trucker/red
+	name = "trucker hat"
+	desc = "It's a red trucker hat."
+	icon_state = "truckercap_redsoft"
+	item_state = "truckercap_red"

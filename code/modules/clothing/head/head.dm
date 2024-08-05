@@ -23,7 +23,7 @@
 	icon_state = "band"
 	flags_inv_hide = HIDETOPHAIR
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 /obj/item/clothing/head/cmbandana/tan
@@ -36,7 +36,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "beanie_cargo"
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 /obj/item/clothing/head/beanie/green
@@ -54,7 +54,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "headband"
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 
@@ -120,14 +120,14 @@
 	icon_state = "headset"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "A comfortable green patrol cap. It offers no defensive properties."
 	icon_state = "cap"
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	var/helmet_overlays[]
 	var/flipped_cap = FALSE
 	var/list/flipping_message = list(
@@ -180,7 +180,7 @@
 	var/storage_max_w_class = SIZE_TINY
 	var/storage_max_storage_space = 4
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_marine.dmi'
 	)
 
 /obj/item/clothing/head/cmcap/Initialize(mapload, ...)
@@ -281,16 +281,6 @@
 	desc = "It's a cap, with flaps. A patch stitched across the front reads \"<b>USS ALMAYER</b>\"."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap"
-	flags_marine_hat = HAT_GARB_OVERLAY
-
-/obj/item/clothing/head/cmcap/reporter
-	name = "combat correspondent cap"
-	desc = "A faithful cap for any terrain war correspondents may find themselves in."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_flagcap"
-	item_state = "wc_flagcap"
-	contained_sprite = TRUE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmcap/boonie
@@ -549,9 +539,9 @@
 	desc = "A standard military beanie."
 	icon_state = "rmc_beanie"
 	item_state = "rmc_beanie"
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon = 'icons/mob/humans/onmob/head-layer/head_commando.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_commando.dmi'
 	)
 
 /obj/item/clothing/head/beanie/royal_marine/turban

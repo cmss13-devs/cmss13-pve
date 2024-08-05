@@ -1478,7 +1478,6 @@
 #include "code\modules\clothing\head\jobs.dm"
 #include "code\modules\clothing\head\misc.dm"
 #include "code\modules\clothing\head\misc_special.dm"
-#include "code\modules\clothing\head\soft_caps.dm"
 #include "code\modules\clothing\masks\breath.dm"
 #include "code\modules\clothing\masks\gasmask.dm"
 #include "code\modules\clothing\masks\miscellaneous.dm"
