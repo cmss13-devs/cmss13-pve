@@ -26,5 +26,5 @@ endmap
 map rover
 endmap
 
-map heyst
+map golden_arrow_classic
 endmap

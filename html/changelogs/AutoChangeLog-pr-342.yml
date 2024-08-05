@@ -1,0 +1,7 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - refactor: "complete overhaul of just about every TGUI interface"
+  - rscadd: "added parachutes"
+  - rscadd: "added holocards to the squad hud"
+  - rscadd: "falling out a dropship throws you to the surface"
