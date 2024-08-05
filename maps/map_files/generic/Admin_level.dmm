@@ -60,7 +60,6 @@
 /turf/open/floor/carpet,
 /area/adminlevel/ert_station)
 "bn" = (
-/obj/structure/closet/boxinggloves,
 /turf/open/floor/almayer{
 	icon_state = "silver"
 	},
@@ -247,10 +246,6 @@
 /area/centcom/control)
 "fu" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/item/clothing/head/collectable/tophat{
-	desc = "A top hat, placed here as a special thanks to someone often overlooked and forgotten. But who the community owes a thank you anyways.";
-	name = "Penguin"
-	},
 /turf/open/floor/wood,
 /area/centcom/living)
 "fv" = (
@@ -2125,9 +2120,6 @@
 /turf/open/floor/plating/almayer,
 /area/adminlevel/ert_station)
 "Sl" = (
-/obj/structure/machinery/cm_vending/clothing/antag{
-	name = "\improper Response Team Automated Equipment Rack"
-	},
 /turf/open/floor/almayer{
 	dir = 5;
 	icon_state = "plating"
@@ -2231,11 +2223,6 @@
 	},
 /area/adminlevel/ert_station/shuttle_dispatch)
 "Ua" = (
-/obj/structure/machinery/cm_vending/gear/antag{
-	hacked = 1;
-	name = "\improper Response Team Automated Gear Rack";
-	use_snowflake_points = 1
-	},
 /turf/open/floor/almayer{
 	dir = 5;
 	icon_state = "plating"

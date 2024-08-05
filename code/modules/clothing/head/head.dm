@@ -384,7 +384,7 @@
 	desc = "A dark cap enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 	icon_state = "cmbcap"
 	flags_armor_protection = BODY_FLAG_HEAD
@@ -404,7 +404,7 @@
 	desc = "A sturdy freelancer's cap. More protective than it seems."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 	icon_state = "freelancer_cap"
 	siemens_coefficient = 2
@@ -431,7 +431,7 @@
 	desc = "A large hood in service with some militias, meant for obscurity on the frontier. Offers some head protection due to the study fibers utilized in production."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 	icon_state = "rebel_hood"
 	siemens_coefficient = 2
@@ -480,7 +480,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	flags_inv_hide = HIDETOPHAIR
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 
 /obj/item/clothing/head/durag/black
@@ -499,7 +499,7 @@
 	icon_state = "drillhat"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 
 #undef HAT_GARB_RELAY_ICON_STATE
@@ -558,7 +558,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 
 /obj/item/clothing/head/beret/royal_marine/team_leader

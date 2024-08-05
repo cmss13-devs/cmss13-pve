@@ -976,7 +976,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_cap"
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/head-layer/head_0.dmi'
 	)
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD
