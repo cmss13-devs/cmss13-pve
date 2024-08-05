@@ -1059,15 +1059,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			new /obj/item/reagent_container/food/drinks/bottle/rum(loc)
 			loot_message = SPAN_NOTICE("It's a bunch of finished and unfinished molotovs.")
 		// That was the good 50%. Now it's time for the bad.
-		if(41 to 50)
-		// Random junk
-			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
-			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
-			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
-			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
-			new /obj/effect/essentials_set/random/clf_bonus_item(loc)
-			loot_message = SPAN_NOTICE("It's a bunch of random junk...")
-		if(51 to 70)
+		if(41 to 70)
 			new /obj/effect/spawner/random/bomb_supply(loc)
 			new /obj/effect/spawner/random/bomb_supply(loc)
 			new /obj/effect/spawner/random/toolbox(loc)
@@ -1084,7 +1076,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			var/mob/living/carbon/human/corpse = new (loc)
 			corpse.create_hud() //Need to generate hud before we can equip anything apparently...
 
-			var/corpse_type = pick(/datum/equipment_preset/corpse/clf/burst, /datum/equipment_preset/corpse/clf)
+			var/corpse_type = pick(/datum/equipment_preset/corpse/colonist, /datum/equipment_preset/corpse/prisoner)
 			arm_equipment(corpse, corpse_type, TRUE, FALSE) // I didn't choose the shitcode life, the shitcode life chose me
 
 			loot_message = SPAN_HIGHDANGER("IT'S A CORPSE!!")
