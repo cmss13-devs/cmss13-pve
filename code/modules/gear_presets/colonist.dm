@@ -58,7 +58,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/datum/equipment_preset/survivor/prisoner/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/prisoner/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/prison(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/prison(new_human), WEAR_FEET)
@@ -68,14 +68,6 @@
 	name = "Prop - Prison - Inmate, Dangerous"
 	assignment = "High Risk Inmate"
 	skills = /datum/skills/civilian/prisoner
-	flags = EQUIPMENT_PRESET_START_OF_ROUND
-	access = list(ACCESS_CIVILIAN_PUBLIC)
-
-/datum/equipment_preset/survivor/prisoner/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/prison(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/prison(new_human), WEAR_FEET)
-	..()
 
 //*****************************************************************************************************/
 /datum/equipment_preset/colonist/urban/poor
@@ -94,7 +86,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/datum/equipment_preset/survivor/hybrisa/civilian/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/urban/poor/load_gear(mob/living/carbon/human/new_human)
 
 	var/random_gear = rand(1,10)
 	switch(random_gear)
@@ -113,7 +105,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/gray(new_human), WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/blue(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/boiler/grey(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
@@ -131,16 +123,16 @@
 
 // Office Workers
 
-/datum/equipment_preset/survivor/hybrisa/civilian_office
+/datum/equipment_preset/colonist/urban/rich
 	name = "Prop - Colonist - White-collar"
 	assignment = "Class B Inhabitant"
-	skills = /datum/skills/civilian/survivor
+	skills = /datum/skills/civilian
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
 	survivor_variant = CIVILIAN_SURVIVOR
 
-/datum/equipment_preset/survivor/hybrisa/civilian_office/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/urban/rich/load_gear(mob/living/carbon/human/new_human)
 
 	var/random_gear = rand(1,6)
 	switch(random_gear)
@@ -182,14 +174,14 @@
 
 // Part-timers
 
-/datum/equipment_preset/survivor/hybrisa/weymart
+/datum/equipment_preset/colonist/weymart
 	name = "Survivor - Colonist - Weymart Employee"
 	assignment = "Hi! My name is:"
 	skills = /datum/skills/civilian
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/datum/equipment_preset/survivor/hybrisa/weymart/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/weymart/load_gear(mob/living/carbon/human/new_human)
 	var/random_gear = rand(1,3)
 	switch(random_gear)
 		if(1)
@@ -210,11 +202,11 @@
 
 // Utility Workers
 
-/datum/equipment_preset/survivor/hybrisa/sanitation
+/datum/equipment_preset/colonist/sanitation
 	name = "Prop - Colonist - Sanitation Worker"
 	assignment = "Material Reprocessing Technician"
 
-/datum/equipment_preset/survivor/hybrisa/fire_fighter
+/datum/equipment_preset/colonist/fire_fighter
 	name = "Prop - Colonist - Firefighter"
 	assignment = "Fire Protection Specialist"
 

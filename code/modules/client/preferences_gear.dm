@@ -223,50 +223,6 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/beret_green
-	display_name = "USCM beret, green"
-	path = /obj/item/clothing/head/beret/cm
-
-/datum/gear/headwear/uscm/beret_tan
-	display_name = "USCM beret, tan"
-	path = /obj/item/clothing/head/beret/cm/tan
-
-/datum/gear/headwear/uscm/beret_black
-	display_name = "USCM beret, black"
-	path = /obj/item/clothing/head/beret/cm/black
-
-/datum/gear/headwear/uscm/beret_white
-	display_name = "USCM beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
-/datum/gear/headwear/uscm/beret_alpha
-	display_name = "USCM beret, red flash"
-	path = /obj/item/clothing/head/beret/cm/alpha
-
-/datum/gear/headwear/uscm/beret_bravo
-	display_name = "USCM beret, yellow flash"
-	path = /obj/item/clothing/head/beret/cm/bravo
-
-/datum/gear/headwear/uscm/beret_charlie
-	display_name = "USCM beret, purple flash"
-	path = /obj/item/clothing/head/beret/cm/charlie
-
-/datum/gear/headwear/uscm/beret_delta
-	display_name = "USCM beret, blue flash"
-	path = /obj/item/clothing/head/beret/cm/delta
-
-/datum/gear/headwear/uscm/beret_echo
-	display_name = "USCM beret, green flash"
-	path = /obj/item/clothing/head/beret/cm/echo
-
-/datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "USCM beret, brown flash"
-	path = /obj/item/clothing/head/beret/cm/foxtrot
-
-/datum/gear/headwear/uscm/beret_intel
-	display_name = "USCM beret, black flash"
-	path = /obj/item/clothing/head/beret/cm/intel
-
 /datum/gear/headwear/uscm/boonie_olive
 	display_name = "USCM boonie hat, olive"
 	path = /obj/item/clothing/head/cmcap/boonie
@@ -1020,11 +976,6 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/clothing/shoes/marine/jungle
 	cost = 2
 
-/datum/gear/misc/brown_boots
-	display_name = "brown combat boots"
-	path = /obj/item/clothing/shoes/marine/brown
-	cost = 2
-
 /datum/gear/misc/brown_gloves
 	display_name = "brown combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown
@@ -1051,10 +1002,6 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
-
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"

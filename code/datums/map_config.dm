@@ -71,15 +71,6 @@
 
 /datum/map_config/New()
 
-	synth_survivor_types = list(
-		/datum/equipment_preset/synth/survivor/medical_synth,
-		/datum/equipment_preset/synth/survivor/emt_synth,
-,
-		/datum/equipment_preset/synth/survivor/wy/security_synth,
-		/datum/equipment_preset/synth/survivor/wy/protection_synth,
-		/datum/equipment_preset/synth/survivor/wy/corporate_synth,
-	)
-
 /proc/load_map_config(filename, default, delete_after, error_if_missing = TRUE)
 	var/datum/map_config/config = new
 	if(default)

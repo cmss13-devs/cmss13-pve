@@ -1,6 +1,6 @@
 
 /datum/equipment_preset/corpse
-	name = "Corpse"
+	name = "Corpse - Colonist - Blue-collar"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Class C Inhabitant"
 	rank = JOB_COLONIST
@@ -73,7 +73,7 @@
 	new_human.pulse = PULSE_NONE
 
 /datum/equipment_preset/corpse/load_gear(mob/living/carbon/human/new_human)
-	var/random_gear = rand(1,10)
+	var/random_gear = rand(1,6)
 	switch(random_gear)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/brown(new_human), WEAR_JACKET)
@@ -106,10 +106,9 @@
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 
 //*****************************************************************************************************/
-// Civilians
 
 /datum/equipment_preset/corpse/prisoner
-	name = "Corpse - Prisoner"
+	name = "Corpse - Prison - Inmate"
 	assignment = "Prisoner"
 
 /datum/equipment_preset/corpse/prisoner/load_gear(mob/living/carbon/human/new_human)
@@ -119,9 +118,8 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/corpse/doctor
-	name = "Corpse - Doctor"
+	name = "Corpse - Colonist - Doctor"
 	assignment = "Medical Doctor"
-	xenovictim = TRUE
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_MEDBAY)
 
 /datum/equipment_preset/corpse/doctor/load_gear(mob/living/carbon/human/new_human)
@@ -135,7 +133,6 @@
 /datum/equipment_preset/corpse/engineer
 	name = "Corpse - Engineer"
 	assignment = "Station Engineer"
-	xenovictim = TRUE
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING)
 
 /datum/equipment_preset/corpse/engineer/load_gear(mob/living/carbon/human/new_human)
@@ -150,8 +147,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet(new_human.back), WEAR_IN_BACK)
-
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		add_ice_colony_survivor_equipment(new_human)
@@ -337,10 +332,7 @@
 /datum/equipment_preset/corpse/prison_security/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/security(new_human), WEAR_BODY)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		add_ice_colony_survivor_equipment(new_human)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet(new_human), WEAR_HEAD)

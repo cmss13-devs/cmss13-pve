@@ -75,11 +75,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/staff_officer/intel/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/rto/intel(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/storage/backpack/marine/satchel/intel(src)
-	new /obj/item/device/motiondetector/intel(src)
-	new /obj/item/stack/fulton(src)
+	new /obj/item/device/motiondetector(src)
 
 /obj/structure/closet/secure_closet/staff_officer/intel/select_gamemode_equipment(gamemode)
 	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
@@ -99,10 +95,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/pilot(src)
 	new /obj/item/clothing/suit/armor/vest/pilot(src)
-
-/obj/structure/closet/secure_closet/pilot_officer/select_gamemode_equipment(gamemode)
-	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new /obj/item/clothing/mask/rebreather/scarf(src)
 
 //**********************Military Police Gear**************************/
 /obj/structure/closet/secure_closet/military_police
@@ -242,13 +234,8 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/req_officer/Initialize()
 	. = ..()
-	new /obj/item/device/radio/headset/almayer/qm(src)
 	new /obj/item/clothing/under/boiler(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/storage/belt/marine(src)
-	new /obj/item/clothing/head/cmcap/req(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/storage/backpack/marine/satchel(src)
+	new /obj/item/clothing/head/cmcap/khaki(src)
 
 /obj/structure/closet/secure_closet/cargotech
 	name = "Cargo Technician's Locker"
@@ -262,11 +249,8 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/cargotech/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/boiler(src)
-	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/clothing/gloves/yellow(src)
 	new /obj/item/clothing/head/beanie(src)
-	new /obj/item/storage/backpack/marine/satchel(src)
 	return
 
 /obj/structure/closet/secure_closet/sea

@@ -65,7 +65,6 @@
 
 /datum/equipment_preset/pmc/pmc_standard/load_gear(mob/living/carbon/human/new_human)
 
-	var/choice = rand(1,5)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/opfor/pmc, WEAR_BODY)
 	if(prob(50))

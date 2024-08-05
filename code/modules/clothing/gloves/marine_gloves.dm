@@ -54,7 +54,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/pve_mopp
 	name = "\improper M2 MOPP gloves"
@@ -82,7 +81,6 @@
 	desc = "A pair of fashionable white gloves, worn by marines in dress."
 	icon_state = "white"
 	item_state = "marine_white"
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran/souto
 	name = "\improper Souto Man gloves"
@@ -99,7 +97,6 @@
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_HARDCORE
 	unacidable = TRUE
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran/insulated/van_bandolier
 	name = "custom shooting gloves"
@@ -118,7 +115,6 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran/cbrn
 	name = "\improper M3 MOPP gloves"
