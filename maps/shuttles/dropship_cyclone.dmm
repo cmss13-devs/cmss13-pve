@@ -40,7 +40,7 @@
 /obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons{
 	name = "\improper Cyclone"
 	},
-/obj/effect/attach_point/weapon/midway/right_fore{
+/obj/effect/attach_point/weapon/midway/left_fore{
 	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
@@ -87,7 +87,8 @@
 "fy" = (
 /obj/docking_port/mobile/marine_dropship/cyclone,
 /obj/effect/attach_point/crew_weapon/midway{
-	ship_tag = "dropship_cyclone"
+	ship_tag = "dropship_cyclone";
+	attach_id = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin14"
@@ -104,6 +105,10 @@
 	},
 /area/shuttle/cyclone)
 "ha" = (
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 11;
+	ship_tag = "dropship_cyclone"
+	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "32"
 	},
@@ -111,7 +116,8 @@
 "hd" = (
 /obj/effect/attach_point/fuel/dropship2{
 	pixel_x = -32;
-	ship_tag = "dropship_cyclone"
+	ship_tag = "dropship_cyclone";
+	attach_id = 11
 	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "33"
@@ -152,7 +158,8 @@
 "jr" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	ship_tag = "dropship_cyclone";
-	dir = 8
+	dir = 8;
+	attach_id = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -264,7 +271,8 @@
 "rk" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	ship_tag = "dropship_cyclone";
-	dir = 4
+	dir = 4;
+	attach_id = 9
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -327,7 +335,7 @@
 /area/shuttle/cyclone)
 "wk" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "wA" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "35"
@@ -392,9 +400,9 @@
 /area/shuttle/cyclone)
 "Ax" = (
 /obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/cameras/dropship/two{
-	name = "\improper 'Cyclone' camera controls";
-	network = list("Cyclone","Laser Targets")
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	network = list("Cyclone","Laser Targets");
+	name = "\improper 'Cyclone' camera controls"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -467,8 +475,9 @@
 	},
 /area/shuttle/cyclone)
 "Fz" = (
-/obj/effect/attach_point/fuel/dropship2{
-	ship_tag = "dropship_cyclone"
+/obj/effect/attach_point/fuel/midway{
+	ship_tag = "dropship_cyclone";
+	attach_id = 10
 	},
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "28"
@@ -514,7 +523,6 @@
 	},
 /area/shuttle/cyclone)
 "IP" = (
-/obj/effect/attach_point/weapon/dropship2/left_wing,
 /obj/structure/shuttle/part/dropship2/transparent/lower_left_wing{
 	name = "\improper Cyclone"
 	},
@@ -569,9 +577,6 @@
 	},
 /area/shuttle/cyclone)
 "MU" = (
-/obj/structure/machinery/computer/dropship_weapons/dropship2{
-	name = "\improper 'Cyclone' weapons controls"
-	},
 /obj/structure/phone_base/rotary{
 	name = "Cyclone Telephone";
 	phone_category = "Dropship";
@@ -580,6 +585,10 @@
 	pixel_y = 16
 	},
 /obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	name = "\improper 'Cyclone' weapons controls";
+	shuttle_tag = "dropship_cyclone"
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -677,10 +686,11 @@
 	},
 /area/shuttle/cyclone)
 "Zd" = (
-/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons,
-/obj/effect/attach_point/weapon/midway/left_fore{
-	ship_tag = "dropship_cyclone";
+/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons{
 	name = "\improper Cyclone"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore{
+	ship_tag = "dropship_cyclone"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
