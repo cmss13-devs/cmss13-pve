@@ -22,7 +22,7 @@
 	if(isfacehugger(checked_xeno))
 		return FALSE
 
-	var/mob/parent_mob = parent
+	var/mob/living/parent_mob = parent
 
 	var/captee_stat = parent_mob.stat
 	var/mob/pulledby = parent_mob.pulledby
