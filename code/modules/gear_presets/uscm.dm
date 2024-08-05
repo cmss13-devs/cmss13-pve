@@ -365,7 +365,6 @@
 	paygrade = "ME7"
 
 //*****************************************************************************************************/
-// ERT members that spawn with full gear from DEFCON
 
 /datum/equipment_preset/uscm/private_equipped
 	name = "USCM Squad Rifleman (Equipped)"
@@ -751,7 +750,7 @@
 /datum/equipment_preset/uscm/marsoc
 	name = "USCM Raider"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Marine Raider"
+	assignment = "USCM Marine Raider"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "RAIDER"
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
@@ -811,7 +810,7 @@
 
 //Team Leader
 /datum/equipment_preset/uscm/marsoc/sl
-	name = "Marine Raider Team Leader (!DEATHSQUAD!)"
+	name = "USCM Marine Raider Leader"
 	assignment = JOB_MARINE_RAIDER_SL
 	rank = JOB_MARINE_RAIDER_SL
 	role_comm_title = "TL."

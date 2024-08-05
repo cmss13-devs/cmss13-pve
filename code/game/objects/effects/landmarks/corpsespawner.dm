@@ -56,14 +56,6 @@
 
 /////////////////Officers//////////////////////
 
-/obj/effect/landmark/corpsespawner/bridgeofficer
-	name = "Staff Officer"
-	equip_path = /datum/equipment_preset/corpse/bridgeofficer
-
-/obj/effect/landmark/corpsespawner/bridgeofficer/johnson
-	name = "Mr. Johnson Telovin"
-	equip_path = /datum/equipment_preset/corpse/bridgeofficer/johnson
-
 /obj/effect/landmark/corpsespawner/commander
 	name = "Commanding Officer"
 	equip_path = /datum/equipment_preset/corpse/commander
@@ -72,36 +64,7 @@
 	name = "Weyland-Yutani Corporate Security Guard"
 	equip_path = /datum/equipment_preset/corpse/wysec
 
-/obj/effect/landmark/corpsespawner/wygoon
-	name = "Weyland-Yutani Corporate Security Goon"
-	equip_path = /datum/equipment_preset/corpse/pmc/goon
-
-
 ///CM specific jobs///
-
-/obj/effect/landmark/corpsespawner/colonist //default is a colonist
-	name = "Colonist"
-	equip_path = /datum/equipment_preset/corpse/colonist
-
-/obj/effect/landmark/corpsespawner/colonist/burst
-	name = "Burst Colonist"
-	equip_path = /datum/equipment_preset/corpse/colonist/burst
-
-/obj/effect/landmark/corpsespawner/colonist/kutjevo
-	name = "Colonist Kutjevo"
-	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo
-
-/obj/effect/landmark/corpsespawner/colonist/kutjevo/burst
-	name = "Burst Colonist Kutjevo"
-	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo/burst
-
-/obj/effect/landmark/corpsespawner/colonist/random
-	name = "Colonist Random"
-	equip_path = /datum/equipment_preset/corpse/colonist/random
-
-/obj/effect/landmark/corpsespawner/colonist/random/burst
-	name = "Burst Colonist Random"
-	equip_path = /datum/equipment_preset/corpse/colonist/random/burst
 
 /obj/effect/landmark/corpsespawner/ua_riot
 	name = "UA Officer"
