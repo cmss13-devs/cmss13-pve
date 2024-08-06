@@ -1,3 +1,19 @@
 2024-07-19:
   Meatstuff882:
   - rscadd: Added an icon for special buckshot.
+2024-07-22:
+  Doubleumc:
+  - admin: Radio Clarity slider now shows an example message
+  - qol: ARC turret shots start from the center of the ARC
+2024-07-24:
+  Doubleumc:
+  - bugfix: sounds & motion detectors should be more reliable
+  - rscdel: Removed automatic end of round vote and reboot
+2024-07-25:
+  Doubleumc:
+  - code_imp: Made the Tech Tree subsystem initialise faster.
+  Zonespace27:
+  - admin: Added freed mob bans to the jobban panel.
+2024-07-31:
+  Doubleumc:
+  - admin: round start delayed by default

@@ -69,7 +69,7 @@
 
 /datum/ammo/bullet/rifle/ap/toxin/on_hit_turf(turf/T, obj/projectile/P)
 	. = ..()
-	if(T.flags_turf & TURF_ORGANIC)
+	if(T.turf_flags & TURF_ORGANIC)
 		P.damage *= organic_damage_mult
 
 /datum/ammo/bullet/rifle/ap/toxin/on_hit_obj(obj/O, obj/projectile/P)
@@ -175,7 +175,8 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.apply_effect(0.5, WEAKEN)
+		target.KnockDown(0.5) // purely for visual effect, noone actually cares
+		target.Stun(0.5)
 		target.apply_effect(2, SUPERSLOW)
 		target.apply_effect(5, SLOW)
 	else
