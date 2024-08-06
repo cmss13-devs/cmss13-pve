@@ -407,7 +407,6 @@
 						var/center_y = (bbox[4] + bbox[2]) * 0.5
 						var/size_x = bbox[3] - bbox[1] + 1
 						var/size_y = bbox[4] - bbox[2] + 1
-						var/datum/shape/rectangle/current_bb = defense.range_bounds
 						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, center_x, center_y, defense.loc.z, size_x, size_y)
 
 					return TRUE
