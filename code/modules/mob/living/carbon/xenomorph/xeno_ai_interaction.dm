@@ -127,7 +127,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 //          MOBS           //
 /////////////////////////////
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS && !(body_position == LYING_DOWN && HAS_TRAIT(src, TRAIT_INCAPACITATED))
+	return stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
 
 
 /////////////////////////////
