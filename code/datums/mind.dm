@@ -35,7 +35,7 @@
 	var/mob/old_current = current
 	if(current)
 		current.mind = null //remove ourself from our old body's mind variable
-		SSnano.nanomanager.user_transferred(current, new_character) // transfer active NanoUI instances to new user
+		nanomanager.user_transferred(current, new_character) // transfer active NanoUI instances to new user
 		SStgui.on_transfer(current, new_character) // and active TGUI instances
 
 	if(key)
