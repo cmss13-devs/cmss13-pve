@@ -128,6 +128,16 @@ export const GameMasterBehaviorPanel = (props, context) => {
           />
         </Stack.Item>
         <Stack.Item>
+          <Button.Input
+            ml={1}
+            content={data.behavior_lifespan}
+            currentValue={data.behavior_lifespan}
+            onCommit={(e, lifespan_value) => {
+              act('set_behavior_lifespan', { lifespan_value });
+            }}
+          />
+        </Stack.Item>
+        <Stack.Item>
           <Button
             selected={data.behavior_click_intercept}
             onClick={() => {
