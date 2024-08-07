@@ -408,7 +408,7 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
 	. = ..()
 
-	if(equipping_mob.back)
+	if(equipping_mob.back && !(equipping_mob.back.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE))
 		to_chat(equipping_mob, SPAN_WARNING("You can't equip [src] while wearing a backpack."))
 		return FALSE
 
@@ -424,10 +424,9 @@
 	if(slot != WEAR_BACK)
 		return
 
-
-	if(is_type_in_list(equipping_item, smartgun_back))
+	if(equipping_item.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE || is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
@@ -567,8 +566,10 @@
 
 /obj/item/clothing/suit/storage/marine/light/vest/dcc
 	name = "\improper M3-VL pattern flak vest"
-	desc = "A combination of the standard non-combat M3-VL ballistics vest and M70 flak jacket, this piece of armor has been distributed to dropship crew to keep them safe from threats external and internal..."
+	desc = "Effectively a combination of the M3-VL ballistics vest and M70 flak jacket, this armor is used by primarily by flight personnel because of its combined flak and ballistic defense and high mobility. It is also typically worn by military police officers as a result of the blunt force protection offered by the aforementioned armor layering."
 	icon_state = "VL_FLAK"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
 
 /obj/item/clothing/suit/storage/marine/light/synvest
@@ -1530,7 +1531,7 @@
 
 /obj/item/clothing/suit/storage/CMB
 	name = "\improper CMB Deputy jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's Deputy badge pinned to it. The back is enscribed with the powerful letters of 'DEPUTY' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	desc = "A polyster blue bomber jacket enforced with light ballistic weaving. It has a Marshal's Deputy badge pinned to it. The back is enscribed with the word 'DEPUTY'."
 	icon_state = "CMB_jacket"
 	item_state = "CMB_jacket"
 	blood_overlay_type = "coat"
@@ -1581,7 +1582,7 @@
 
 /obj/item/clothing/suit/storage/CMB/marshal
 	name = "\improper CMB Marshal jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	desc = "A thick and stylish black leather bomber jacket with a Marshal's badge pinned to it. The back is enscribed with the word 'MARSHAL'."
 	icon_state = "CMB_jacket_marshal"
 	item_state = "CMB_jacket_marshal"
 
