@@ -143,8 +143,8 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/storage/belt/marine/smartgunner(src)
-	new /obj/item/storage/belt/gun/smartgunner(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 
 /obj/structure/closet/secure_closet/smartgunner_forecon
@@ -161,8 +161,8 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/storage/belt/marine/smartgunner/standard(src)
-	new /obj/item/storage/belt/gun/smartgunner/standard(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 
 /obj/structure/closet/cryo/Initialize()

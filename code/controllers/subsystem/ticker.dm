@@ -8,6 +8,10 @@ SUBSYSTEM_DEF(ticker)
 
 	var/current_state = GAME_STATE_STARTUP //State of current round used by process()
 	var/force_ending = FALSE //Round was ended by admin intervention
+
+	/// If TRUE, there is no lobby phase, the game starts immediately.
+	var/start_immediately = FALSE
+
 	var/bypass_checks = FALSE //Bypass mode init checks
 	var/setup_failed = FALSE //If the setup has failed at any point
 	var/setup_started = FALSE
@@ -17,7 +21,11 @@ SUBSYSTEM_DEF(ticker)
 	var/list/login_music = null //Music played in pregame lobby
 
 	var/delay_end = FALSE //If set true, the round will not restart on it's own
+#if defined(UNIT_TESTS) //must be FALSE for unit tests else they hang indefinitely
 	var/delay_start = FALSE
+#else
+	var/delay_start = TRUE
+#endif
 	var/admin_delay_notice = "" //A message to display to anyone who tries to restart the world after a delay
 
 	var/time_left //Pre-game timer
@@ -79,6 +87,10 @@ SUBSYSTEM_DEF(ticker)
 				var/mob/new_player/player = i
 				if(player.ready) // TODO: port this  == PLAYER_READY_TO_PLAY)
 					++totalPlayersReady
+
+			if(start_immediately)
+				time_left = 0
+
 			if(time_left < 0 || delay_start)
 				return
 
@@ -101,14 +113,6 @@ SUBSYSTEM_DEF(ticker)
 				mode.declare_completion(force_ending)
 				REDIS_PUBLISH("byond.round", "type" = "round-complete")
 				flash_clients()
-				addtimer(CALLBACK(
-					SSvote,
-					/datum/controller/subsystem/vote/proc/initiate_vote,
-					"gamemode",
-					"SERVER",
-					CALLBACK(src, PROC_REF(handle_map_reboot)),
-					TRUE
-				), 3 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
@@ -152,16 +156,6 @@ SUBSYSTEM_DEF(ticker)
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
 		return FALSE
 	return TRUE
-
-/datum/controller/subsystem/ticker/proc/handle_map_reboot()
-	addtimer(CALLBACK(
-		SSvote,
-		/datum/controller/subsystem/vote/proc/initiate_vote,
-		"groundmap",
-		"SERVER",
-		CALLBACK(src, PROC_REF(Reboot)),
-		TRUE
-	), 3 SECONDS)
 
 /datum/controller/subsystem/ticker/proc/setup()
 	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
@@ -340,40 +334,6 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
 	fdel("data/mode.txt")
 	WRITE_FILE(file("data/mode.txt"), the_mode)
-
-
-/datum/controller/subsystem/ticker/proc/Reboot(reason, delay)
-	set waitfor = FALSE
-
-	if(usr && !check_rights(R_SERVER))
-		return
-
-	if(graceful)
-		to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Shutting down...")]</h3>")
-		world.Reboot(FALSE)
-		return
-
-	if(!delay)
-		delay = CONFIG_GET(number/round_end_countdown) * 10
-
-	var/skip_delay = check_rights()
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("An admin has delayed the round end."))
-		return
-
-	to_chat(world, SPAN_BOLDNOTICE("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
-
-	var/start_wait = world.time
-	sleep(delay - (world.time - start_wait))
-
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("Reboot was cancelled by an admin."))
-		return
-
-	log_game("Rebooting World. [reason]")
-	to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Rebooting...")]</h3>")
-
-	world.Reboot(TRUE)
 
 /datum/controller/subsystem/ticker/proc/create_characters()
 	if(!RoleAuthority)
