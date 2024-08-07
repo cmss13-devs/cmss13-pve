@@ -1,9 +1,9 @@
 import { useBackend } from '../backend';
-import { Dropdown, Button, Section, Slider, Collapsible, Stack, Divider } from '../components';
+import { Box, Button, Collapsible, Divider, Dropdown, Section, Slider, Stack } from '../components';
 import { Window } from '../layouts';
 
 export const GameMaster = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Window width={400} height={500}>
@@ -23,7 +23,7 @@ export const GameMaster = (props, context) => {
 };
 
 export const GameMasterSpawningPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Spawning">
@@ -35,12 +35,12 @@ export const GameMasterSpawningPanel = (props, context) => {
                 ml={1}
                 minWidth={3.5}
                 minHeight={1.5}
-                content={data.xeno_spawn_count}
                 currentValue={data.xeno_spawn_count}
                 onCommit={(e, value) => {
                   act('set_xeno_spawns', { value });
-                }}
-              />
+                }}>
+                {data.xeno_spawn_count}
+              </Button.Input>
             </Stack.Item>
             <Stack.Item>
               <Dropdown
@@ -49,13 +49,14 @@ export const GameMasterSpawningPanel = (props, context) => {
                 onSelected={(new_xeno) => {
                   act('set_selected_xeno', { new_xeno });
                 }}
+                menuWidth="10rem"
+                width="10rem"
               />
             </Stack.Item>
             <Stack.Item>
               <Dropdown
                 options={data.spawnable_hives}
                 selected={data.selected_hive}
-                width="15rem"
                 onSelected={(new_hive) => {
                   act('set_selected_hive', { new_hive });
                 }}
@@ -68,20 +69,20 @@ export const GameMasterSpawningPanel = (props, context) => {
             <Stack.Item>
               <Button.Checkbox
                 checked={data.spawn_ai}
-                content="AI"
                 onClick={() => {
                   act('xeno_spawn_ai_toggle');
-                }}
-              />
+                }}>
+                AI
+              </Button.Checkbox>
             </Stack.Item>
             <Stack.Item>
               <Button
                 selected={data.spawn_click_intercept}
-                content="Click Spawn"
                 onClick={() => {
                   act('toggle_click_spawn');
-                }}
-              />
+                }}>
+                Click Spawn
+              </Button>
             </Stack.Item>
           </Stack>
         </Stack.Item>
@@ -89,19 +90,19 @@ export const GameMasterSpawningPanel = (props, context) => {
           <Stack>
             <Stack.Item>
               <Button
-                content="Delete all xenos"
                 onClick={() => {
                   act('delete_all_xenos');
-                }}
-              />
+                }}>
+                Delete all xenos
+              </Button>
             </Stack.Item>
             <Stack.Item>
               <Button
-                content="Delete viewed xenos"
                 onClick={() => {
                   act('delete_xenos_in_view');
-                }}
-              />
+                }}>
+                Delete viewed xenos
+              </Button>
             </Stack.Item>
           </Stack>
         </Stack.Item>
@@ -111,45 +112,39 @@ export const GameMasterSpawningPanel = (props, context) => {
 };
 
 export const GameMasterBehaviorPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Special Behaviors">
       <Stack direction="column">
         <Stack.Item>
-          <Stack>
-            <Stack.Item>
-              <Dropdown
-                ml={1}
-                options={data.selectable_behaviors}
-                selected={data.selected_behavior}
-                onSelected={(new_behavior) => {
-                  act('set_selected_behavior', { new_behavior });
-                }}
-              />
-            </Stack.Item>
-            <Stack.Item>
-              <Button.Input
-                ml={1}
-                minWidth={3.0}
-                minHeight={1.5}
-                content={data.behavior_lifespan}
-                currentValue={data.behavior_lifespan}
-                onCommit={(e, lifespan_value) => {
-                  act('set_behavior_lifespan', { lifespan_value });
-                }}
-              />
-            </Stack.Item>
-          </Stack>
+          <Dropdown
+            ml={1}
+            options={data.selectable_behaviors}
+            selected={data.selected_behavior}
+            onSelected={(new_behavior) => {
+              act('set_selected_behavior', { new_behavior });
+            }}
+          />
+        </Stack.Item>
+        <Stack.Item>
+          <Button.Input
+            ml={1}
+            content={data.behavior_lifespan}
+            currentValue={data.behavior_lifespan}
+            onCommit={(e, lifespan_value) => {
+              act('set_behavior_lifespan', { lifespan_value });
+            }}
+          />
         </Stack.Item>
         <Stack.Item>
           <Button
             selected={data.behavior_click_intercept}
-            content="Click Behavior"
             onClick={() => {
               act('toggle_click_behavior');
-            }}
-          />
+            }}>
+            Click Behavior
+          </Button>
         </Stack.Item>
       </Stack>
     </Section>
@@ -157,7 +152,7 @@ export const GameMasterBehaviorPanel = (props, context) => {
 };
 
 export const GameMasterObjectivePanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Objective" mb={1}>
@@ -166,11 +161,11 @@ export const GameMasterObjectivePanel = (props, context) => {
           <Button
             ml={1}
             selected={data.objective_click_intercept}
-            content="Click Objective"
             onClick={() => {
               act('toggle_click_objective');
-            }}
-          />
+            }}>
+            Click Objective
+          </Button>
         </Stack.Item>
         {data.game_master_objectives && (
           <Stack.Item>
@@ -179,25 +174,25 @@ export const GameMasterObjectivePanel = (props, context) => {
                 {data.game_master_objectives.map((val) => {
                   if (val) {
                     return (
-                      <Stack.Item>
+                      <Stack.Item key={val.object_name}>
                         <Divider />
                         <Stack>
                           <Stack.Item align="center">
                             <Button
-                              content={val.object_name}
                               onClick={() => {
                                 act('jump_to', { val });
-                              }}
-                            />
+                              }}>
+                              {val.object_name}
+                            </Button>
                           </Stack.Item>
                           <Stack.Item>
                             <Button
-                              content="X"
                               color="bad"
                               onClick={() => {
                                 act('remove_objective', { val });
-                              }}
-                            />
+                              }}>
+                              X
+                            </Button>
                           </Stack.Item>
                           <Stack.Item grow pl={1} py={0.25} fontSize="12px">
                             {val.objective_info}
@@ -218,7 +213,7 @@ export const GameMasterObjectivePanel = (props, context) => {
 };
 
 export const GameMasterCommunicationPanel = (props, context) => {
-  const { data, act } = useBackend(context);
+  const { data, act } = useBackend();
 
   return (
     <Section title="Communication">
@@ -226,23 +221,27 @@ export const GameMasterCommunicationPanel = (props, context) => {
         <Stack.Item>
           <Button
             ml={1}
-            content="Game Master Phone"
             onClick={() => {
               act('use_game_master_phone');
-            }}
-          />
+            }}>
+            Game Master Phone
+          </Button>
         </Stack.Item>
-        <Stack.Item mt={1}>Communication Clarity</Stack.Item>
+        <Stack.Item mt={1}>Radio Clarity</Stack.Item>
         <Stack.Item>
           <Slider
             maxValue={100}
             minValue={0}
-            value={data.communication_clarity}
+            value={data.radio_clarity}
+            stepPixelSize={3}
             suppressFlicker={2500}
             onChange={(e, clarity) => {
-              act('set_communication_clarity', { clarity });
+              act('set_radio_clarity', { clarity });
             }}
           />
+        </Stack.Item>
+        <Stack.Item>
+          <Box fontFamily="monospace">{`"${data.radio_clarity_example}"`}</Box>
         </Stack.Item>
       </Stack>
     </Section>
