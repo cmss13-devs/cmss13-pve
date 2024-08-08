@@ -23,14 +23,4 @@ AddTimelock(/datum/job/command/pilot, list(
 	icon_state = "po_spawn"
 	job = /datum/job/command/pilot
 
-/datum/job/command/pilot/ai
-	total_positions = 1
-	spawn_positions = 1
-
-/datum/job/command/pilot/ai/set_spawn_positions(count)
-	return spawn_positions
-
-/datum/job/command/pilot/ai/get_total_positions(latejoin = 0)
-	return latejoin ? total_positions : spawn_positions
-
 #undef SECOND_LT_VARIANT
