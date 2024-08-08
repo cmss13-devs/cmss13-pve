@@ -2488,4 +2488,10 @@
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\special_roles.dm"
 #include "void-marines\code\vendors.dm"
+#include "void-marines\code\playable_factions\alt_roles.dm"
+#include "void-marines\code\playable_factions\areas.dm"
+#include "void-marines\code\playable_factions\fl_presets.dm"
+#include "void-marines\code\playable_factions\pmc_presets.dm"
+#include "void-marines\code\playable_factions\shuttles.dm"
+#include "void-marines\code\playable_factions\stuff.dm"
 // END_INCLUDE

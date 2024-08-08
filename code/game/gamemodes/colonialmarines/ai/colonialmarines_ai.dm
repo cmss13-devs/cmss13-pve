@@ -92,6 +92,20 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
+//RU-PVE ADDITION START
+		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_MARINE,\
+		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
+		/datum/job/command/bridge/ai/pmc = JOB_PMCPLAT_OW),\
+		/datum/squad/marine/fl = list(/datum/job/marine/standard/ai/fl = JOB_SQUAD_MARINE,\
+		/datum/job/command/bridge/ai/fl = JOB_SQUAD_RTO,\
+		/datum/job/marine/leader/ai/fl = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/fl = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai/fl = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/smartgunner/ai/fl = JOB_SQUAD_SMARTGUN),\
+//RU-PVE ADDITION ENDS
 		/datum/squad/marine/forecon = list(/datum/job/marine/standard/ai/forecon = JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
@@ -101,4 +115,6 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
+												/datum/squad/marine/pmc = ROLES_PMCPLT,\
+												/datum/squad/marine/fl = ROLES_AI_FREELANCER,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON))

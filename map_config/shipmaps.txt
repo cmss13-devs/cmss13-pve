@@ -34,3 +34,9 @@ map desert_dam_fob
 
 map golden_arrow_classic
 endmap
+
+map lead_hawk
+endmap
+
+map corsair
+endmap

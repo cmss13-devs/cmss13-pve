@@ -230,6 +230,22 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 #define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
 
+//-------- PVE Mercs and PMC's  --------//
+#define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_MERC "Freelancer"
+#define JOB_RTO_FL "Radio Jockey"
+#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat"
+#define JOB_SQUAD_LEADER_FL "Master at Arms"
+#define JOB_SQUAD_SMARTGUN_FL "Gunner"
+#define JOB_SQUAD_MEDIC_FL "Surgeon"
+#define JOB_SQUAD_RIFLEMAN_FL "Merc"
+#define JOB_PMCPLAT_OW "OVERWATCH"
+#define JOB_PMCPLAT_LEADER "Operations Leader"
+#define JOB_PMCPLAT_FTL "Team Leader"
+#define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
+#define JOB_PMCPLAT_STANDARD "Tactical Unit"
+#define JOB_PMCPLAT_MEDIC "Medical Specialist"
+
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
 #define JOB_CONTRACTOR_ST "VAIPO Mercenary"
