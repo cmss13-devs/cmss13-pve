@@ -1,0 +1,5 @@
+author: "Kitsunemitsu"
+delete-after: True
+changes:
+  - rscadd: "Added 3 more railgun types"
+  - balance: "Railgun now changes it's stats based off the altitude"
