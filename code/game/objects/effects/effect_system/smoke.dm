@@ -140,7 +140,6 @@
 	return 1*/
 
 /obj/effect/particle_effect/smoke/proc/inhalation(mob/living/carbon/creature)
-	to_chat(world, "inhalation")
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD)
 		return TRUE
 	if(isxeno(creature))
@@ -152,30 +151,23 @@
 			return TRUE
 		if(human_creature.head && CHECK_BITFIELD(human_creature.head.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
-	to_chat(world, "inhalation pass")
 
 /obj/effect/particle_effect/smoke/proc/contact(mob/living/carbon/creature)
-	to_chat(world, "contact")
 	if(!contact_affects_synths && issynth(creature))
 		return
 	contact_skin(creature) //anything that affects xenos goes in contact_skin
 	contact_eyes(creature)
-	to_chat(world, "contact pass")
 
 /obj/effect/particle_effect/smoke/proc/contact_skin(mob/living/carbon/creature)
-	to_chat(world, "contact skin")
 	if(!xeno_affecting && isxeno(creature))
-		to_chat(world, "yep that does not affect xenos")
 		return TRUE
 	if(ishuman(creature))
 		if(human_creature.w_uniform && CHECK_BITFIELD(human_creature.w_uniform.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
 		if(human_creature.wear_suit && CHECK_BITFIELD(human_creature.wear_suit.flags_inventory, COVEREYES))
 			return TRUE
-	to_chat(world, "contact skin pass")
 
 /obj/effect/particle_effect/smoke/proc/contact_eyes(mob/living/carbon/creature)
-	to_chat(world, "contact eyes")
 	if(isxeno(creature))
 		return TRUE
 	if(ishuman(creature))
@@ -189,7 +181,6 @@
 			return TRUE
 		if(human_creature.head && CHECK_BITFIELD(human_creature.head.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
-	to_chat(world, "contact eyes pass")
 
 /////////////////////////////////////////////
 // Bad smoke
@@ -421,9 +412,7 @@
 /obj/effect/particle_effect/smoke/cn20/contact_skin(mob/living/carbon/creature)
 	if(..())
 		return
-	to_chat(world, "when I finish this PR it's gonna feel so good")
 	if(isxeno(creature))
-		to_chat(world, "yep that's a xeno")
 		if(xeno_creature.interference < 4)
 			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
 		creature.apply_damage(20, BRUTE)
