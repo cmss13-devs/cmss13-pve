@@ -160,6 +160,8 @@
 	simulacrum_text_ending_good_2(human)
 
 /proc/simulacrum_text_ending_good_2(mob/living/carbon/human/human)
+	if(!GLOB.simulation_controller.next_simulation)
+		GLOB.simulation_controller.next_simulation = GLOB.simulation_controller.non_completed_simulations[1][1]
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "..."
 	text_box.player = human.client
