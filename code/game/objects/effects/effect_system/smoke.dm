@@ -255,32 +255,6 @@
 	for(var/mob/living/carbon/M in get_turf(src))
 		affect(M)
 
-/*/obj/effect/particle_effect/smoke/phosphorus/affect(mob/living/carbon/M)
-	..()
-	burn_damage = 40
-	if(ishuman(M))
-		if (M.internal != null && M.wear_mask && (M.wear_mask.flags_inventory & ALLOWINTERNALS))
-			return
-		else
-			if(prob(20))
-				M.drop_held_item()
-			M.apply_damage(1, OXY)
-			M.updatehealth()
-			if(M.coughedtime < world.time)
-				M.emote("cough")
-				M.coughedtime = world.time + next_cough
-
-		M.last_damage_data = cause_data
-
-	if(isyautja(M) || isxeno(M))
-		burn_damage *= xeno_yautja_reduction
-
-	M.burn_skin(burn_damage)
-	M.adjust_fire_stacks(applied_fire_stacks)
-	M.fire_reagent = new /datum/reagent/napalm/ut()
-	M.IgniteMob()
-	M.updatehealth()*/
-
 /obj/effect/particle_effect/smoke/phosphorus/inhalation(mob/living/carbon/creature)
 	if (..())
 		return
@@ -331,57 +305,6 @@
 	. = ..()
 	for(var/mob/living/carbon/creature in get_turf(src))
 		affect(creature)
-
-/*/obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
-	..()
-	var/mob/living/carbon/xenomorph/xeno_creature
-	var/mob/living/carbon/human/human_creature
-	var/datum/internal_organ/lungs/lungs
-	var/datum/internal_organ/eyes/eyes
-
-	if(isxeno(creature))
-		xeno_creature = creature
-	else if(ishuman(creature))
-		human_creature = creature
-		lungs = human_creature.internal_organs_by_name["lungs"]
-		eyes = human_creature.internal_organs_by_name["eyes"]
-
-	if(xeno_creature)
-		if(xeno_creature.interference < 4)
-			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
-		creature.apply_damage(20, BRUTE)
-		xeno_creature.interference = 10
-		xeno_creature.blinded = TRUE
-	else
-		creature.apply_damage(12, TOX)
-		creature.apply_damage(2, BRAIN)
-		lungs.take_damage(2)
-	if(!xeno_creature) //Eye exposure damage
-		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
-		eyes.take_damage(2)
-	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
-		creature.coughedtime = 1
-		if(prob(50))
-			creature.emote("cough")
-		else
-			creature.emote("gasp")
-		addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 1.5 SECONDS)
-	if(xeno_affecting)
-		stun_chance = 35
-	if(prob(stun_chance))
-		creature.apply_effect(1, WEAKEN)
-
-	//Topical damage (neurotoxin on exposed skin)
-	if(xeno_creature)
-		to_chat(xeno_creature, SPAN_XENODANGER("You are struggling to move, it's as if you're paralyzed!"))
-	else
-		to_chat(creature, SPAN_DANGER("Your body is going numb, almost as if paralyzed!"))
-	if(prob(60 + round(amount*15))) //Highly likely to drop items due to arms/hands seizing up
-		creature.drop_held_item()
-	if(human_creature)
-		human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
-		human_creature.recalculate_move_delay = TRUE
-	return TRUE*/
 
 /obj/effect/particle_effect/smoke/cn20/affect(mob/living/carbon/creature)
 	..()
@@ -522,39 +445,6 @@
 
 	if(creature.ally_of_hivenumber(hivenumber))
 		return
-
-	/*if(isyautja(M) && prob(75))
-		return
-	if(M.stat == DEAD)
-		return
-	if(HAS_TRAIT(M, TRAIT_NESTED) && M.status_flags & XENO_HOST)
-		return
-
-	M.last_damage_data = cause_data
-
-	M.apply_damage(3, OXY) //Basic oxyloss from "can't breathe"
-
-	if(isxeno(M))
-		M.apply_damage(gas_damage * XVX_ACID_DAMAGEMULT, BURN) //Inhalation damage
-	else
-		M.apply_damage(gas_damage, BURN) //Inhalation damage
-
-	if(M.coughedtime != 1 && !M.stat && ishuman(M)) //Coughing/gasping
-		M.coughedtime = 1
-		if(prob(50))
-			M.emote("cough")
-		else
-			M.emote("gasp")
-		addtimer(VARSET_CALLBACK(M, coughedtime, 0), 1.5 SECONDS)
-
-	//Topical damage (acid on exposed skin)
-	to_chat(M, SPAN_DANGER("Your skin feels like it is melting away!"))
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		H.apply_armoured_damage(amount*rand(15, 20), ARMOR_BIO, BURN) //Burn damage, randomizes between various parts //Amount corresponds to upgrade level, 1 to 2.5
-	else
-		M.burn_skin(5) //Failsafe for non-humans
-	M.updatehealth()*/
 
 /obj/effect/particle_effect/smoke/xeno_burn/inhalation(mob/living/carbon/creature)
 	if(..())
