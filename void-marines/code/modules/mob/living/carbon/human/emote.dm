@@ -89,6 +89,13 @@
 	message = "зовёт медика!"
 	alt_message = "кричит что-то"
 
+/datum/emote/living/carbon/human/medic/run_langchat(mob/user, group)
+	if(!ishuman_strict(user))
+		return
+
+	var/medic_message = pick("Медика!", "Док!", "Помощи!")
+	user.langchat_speech(medic_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_bolded"))
+
 /datum/emote/living/carbon/human/moan
 	key_third_person = "стонет"
 	message = "стонет."
@@ -105,6 +112,13 @@
 	message = "хмыкает от боли!"
 	alt_message = "хмычит"
 
+/datum/emote/living/carbon/human/pain/run_langchat(mob/user, group)
+	if(!ishuman_strict(user))
+		return
+
+	var/pain_message = pick("АУЧ!!", "АГХ!!", "АРГХ!!", "АЙЙ!!", "АУ!!", "УХ!")
+	user.langchat_speech(pain_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_yell"))
+
 /datum/emote/living/carbon/human/salute
 	key_third_person = "отдаёт честь"
 	message = "отдаёт честь."
@@ -113,6 +127,13 @@
 /datum/emote/living/carbon/human/scream
 	key_third_person = "кричит"
 	message = "кричит!"
+
+/datum/emote/living/carbon/human/scream/run_langchat(mob/user, group)
+	if(!ishuman_strict(user))
+		return
+
+	var/scream_message = pick("БЛЯТЬ!!!", "АГХ!!!", "АРГХ!!!", "АААА!!!", "ГА-АХХ!!!", "НА-АХ!!!", "НГ-Х!!!", "А-ЙЙ!!!")
+	user.langchat_speech(scream_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_PANIC_POP, additional_styles = list("langchat_yell"))
 
 /datum/emote/living/carbon/human/shakehead
 	message = "мотает головой."
