@@ -168,7 +168,7 @@
 		to_chat(world, "yep that does not affect xenos")
 		return TRUE
 	if(ishuman(creature))
-		if(human_creature.w_uniform && CHECK_BITFIELD(human_creature.w_uniform.flags_inventory, COVEREYES))
+		if(human_creature.w_uniform && CHECK_BITFIELD(human_creature.w_uniform.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
 		if(human_creature.wear_suit && CHECK_BITFIELD(human_creature.wear_suit.flags_inventory, COVEREYES))
 			return TRUE
@@ -497,7 +497,7 @@
 	spread_speed = 6
 	smokeranking = SMOKE_RANK_BOILER
 	contact_affects_synths = TRUE
-
+	xeno_affecting = TRUE //it affects hostile hives
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/gas_damage = 20
 
@@ -613,10 +613,11 @@
 		neuro_dose = neuro_dose*2 // Yautja get half effects
 		msg = "You resist the tingling smoke's effects!"
 		return
-	if(creature.stat == DEAD)
-		return
 	if(HAS_TRAIT(creature, TRAIT_NESTED) && creature.status_flags & XENO_HOST)
 		return
+
+
+/obj/effect/particle_effect/smoke/xeno_weak/inhalation(mob/living/carbon/creature)
 	if(ishuman(creature))
 		var/mob/living/carbon/human/H = creature
 		if(H.chem_effect_flags & CHEM_EFFECT_RESIST_NEURO)
@@ -665,13 +666,10 @@
 
 	if(isxeno(creature))
 		return
-	if(isyautja(creature) && prob(75))
-		return
-	if(creature.stat == DEAD)
-		return
 	if(HAS_TRAIT(creature, TRAIT_NESTED) && creature.status_flags & XENO_HOST)
 		return
 
+/obj/effect/particle_effect/smoke/xeno_weak_fire/inhalation(mob/living/carbon/creature)
 	var/effect_amt = round(6 + amount*6)
 
 	creature.apply_damage(9, OXY) // MUCH harsher
