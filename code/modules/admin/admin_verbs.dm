@@ -335,6 +335,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
+		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
@@ -372,6 +373,7 @@ var/list/roundstart_mod_verbs = list(
 		/client/proc/toggle_join_xeno,
 		/client/proc/game_master_rename_platoon,
 		/client/proc/toggle_vehicle_blockers,
+		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
 		/client/proc/toggle_fire_support_menu,
 		admin_verbs_admin,
