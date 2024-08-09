@@ -584,7 +584,7 @@ var/global/list/limb_types_by_name = list(
 
 	alert_overlay.layer = FLOAT_LAYER
 	alert_overlay.plane = FLOAT_PLANE
-
+	alert_overlay.underlays.Cut()
 	screen_alert.overlays += alert_overlay
 
 /mob/proc/reset_lighting_alpha()
