@@ -1,3 +1,5 @@
+/sound
+	echo = SOUND_ECHO_REVERB_OFF //disable enviroment reverb by default, soundOutput re-enables for positional sounds
 
 /datum/sound_template //Basically a sound datum, but only serves as a way to carry info to soundOutput
 	//copied sound datum vars
@@ -23,8 +25,6 @@
 	var/falloff = 1
 	///Changes the environmental reverb for all 3D sounds until another environment is specified. The default value (-1) specifies no change in environment. A numeric value from 0 to 25 specifies a set of reverb presets for the environment.
 	var/environment = -1
-	///If set to an 18-element list, this value customizes reverbration settings for this sound only.
-	var/list/echo
 
 	//custom vars
 	///The category of this sound for client volume purposes: VOLUME_SFX (Sound effects), VOLUME_AMB (Ambience and Soundscapes) and VOLUME_ADM (Admin sounds and some other stuff)
@@ -59,16 +59,40 @@
  * * channel - use this only when you want to force the sound to play on a specific channel
  * * status - combined bit flags: SOUND_MUTE, SOUND_PAUSED, SOUND_STREAM, SOUND_UPDATE
  * * falloff - max range till sound volume starts dropping as distance increases
- * * echo - customizes reverbration settings for this sound
  * * y_s_offset - vertical sound position offset
  * * x_s_offset - horizontal sound position offset
  *
  * Returns selected channel on success, FALSE on failure
  */
-/proc/playsound(atom/source, sound/soundin, vol = 100, vary = FALSE, sound_range, vol_cat = VOLUME_SFX, channel = 0, status, falloff = 1, list/echo, y_s_offset, x_s_offset)
+/proc/playsound(atom/source, sound/soundin, vol = 100, vary = FALSE, sound_range, vol_cat = VOLUME_SFX, channel = 0, status, falloff = 1, y_s_offset, x_s_offset)
 	if(isarea(source))
 		error("[source] is an area and is trying to make the sound: [soundin]")
 		return FALSE
+	var/datum/sound_template/S = new()
+
+	var/sound/SD = soundin
+	if(istype(SD))
+		S.file = SD.file
+		S.wait = SD.wait
+		S.repeat = SD.repeat
+	else
+		S.file = get_sfx(soundin)
+	S.channel = channel ? channel : get_free_channel()
+	S.status = status
+	S.falloff = falloff
+	S.volume = vol
+	S.volume_cat = vol_cat
+	S.y_s_offset = y_s_offset
+	S.x_s_offset = x_s_offset
+	if(vary != FALSE)
+		if(vary > 1)
+			S.frequency = vary
+		else
+			S.frequency = GET_RANDOM_FREQ // Same frequency for everybody
+
+	if(!sound_range)
+		sound_range = floor(0.25*vol) //if no specific range, the max range is equal to a quarter of the volume.
+	S.range = sound_range
 
 	var/turf/turf_source = get_turf(source)
 	if(!turf_source?.z)
@@ -100,7 +124,6 @@
 		template.frequency = GET_RANDOM_FREQ // Same frequency for everybody
 	template.status = status
 	template.falloff = falloff
-	template.echo = echo
 
 	template.volume_cat = vol_cat
 	template.range = sound_range || floor(0.25 * vol) //if no specific range, the max range is equal to a quarter of the volume.
@@ -147,13 +170,12 @@
  * * vol_cat - the category of this sound for client volume purposes: VOLUME_SFX (Sound effects), VOLUME_AMB (Ambience and Soundscapes), VOLUME_ADM (Admin sounds)
  * * channel - use this only when you want to force the sound to play on a specific channel
  * * status - combined bit flags: SOUND_MUTE, SOUND_PAUSED, SOUND_STREAM, SOUND_UPDATE
- * * echo - customizes reverbration settings for this sound
  * * y_s_offset - vertical sound position offset
  * * x_s_offset - horizontal sound position offset
  *
  * Returns FALSE on failure
  */
-/proc/playsound_client(client/C, sound/soundin, atom/origin, vol = 100, random_freq, vol_cat = VOLUME_SFX, channel = 0, status, list/echo, y_s_offset, x_s_offset)
+/proc/playsound_client(client/C, sound/soundin, atom/origin, vol = 100, random_freq, vol_cat = VOLUME_SFX, channel = 0, status, y_s_offset, x_s_offset)
 	if(!istype(C) || !C.soundOutput) return FALSE
 
 	var/datum/sound_template/template = new()
@@ -179,7 +201,6 @@
 	if(random_freq)
 		template.frequency = GET_RANDOM_FREQ
 	template.status = status
-	template.echo = echo
 
 	template.volume_cat = vol_cat
 	var/turf/turf_origin = get_turf(origin)
@@ -206,7 +227,7 @@
  *
  * Returns FALSE on failure
  */
-/proc/playsound_area(area/A, sound/soundin, vol = 100, channel = 0, status, vol_cat = VOLUME_SFX, list/echo, y_s_offset, x_s_offset)
+/proc/playsound_area(area/A, sound/soundin, vol = 100, channel = 0, status, vol_cat = VOLUME_SFX, y_s_offset, x_s_offset)
 	if(!isarea(A))
 		return FALSE
 
@@ -259,13 +280,12 @@
  * * soundin - sound datum ( sound() ), sound file ('mysound.ogg'), or string to get a SFX ("male_warcry")
  * * volume - the initial volume of the sound, 0 is no sound at all, 75 is loud queen screech.
  * * vol_cat - the category of this sound for client volume purposes: VOLUME_SFX (Sound effects), VOLUME_AMB (Ambience and Soundscapes), VOLUME_ADM (Admin sounds)
- * * echo - customizes reverbration settings for this sound
  * * y_s_offset - vertical sound position offset
  * * x_s_offset - horizontal sound position offset
  *
  * Returns selected channel on success, FALSE on failure
  */
-/proc/playsound_z(list/z, sound/soundin, volume = 100, vol_cat = VOLUME_SFX, echo, y_s_offset, x_s_offset)
+/proc/playsound_z(list/z, sound/soundin, volume = 100, vol_cat = VOLUME_SFX, y_s_offset, x_s_offset)
 	var/datum/sound_template/template = new()
 
 	if(istype(soundin))
@@ -286,7 +306,6 @@
 
 	template.channel = SOUND_CHANNEL_Z
 	template.volume = volume
-	template.echo = echo
 
 	template.volume_cat = vol_cat
 	template.x_s_offset = x_s_offset

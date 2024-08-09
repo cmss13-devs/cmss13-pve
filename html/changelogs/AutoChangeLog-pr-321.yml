@@ -1,0 +1,5 @@
+author: "sunofang"
+delete-after: True
+changes:
+  - rscadd: "Due to budget increases, Close Air Support now has ammo."
+  - admin: "Added a fire support menu for GM's to use."
