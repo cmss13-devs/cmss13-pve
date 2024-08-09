@@ -81,7 +81,7 @@
 
 	icon_state = null
 
-	RegisterSignal(SSdcs, COMSIG_GLOB_MOB_LOGIN, PROC_REF(add_default_image))
+	RegisterSignal(SSdcs, COMSIG_MOB_LOGIN, PROC_REF(add_default_image))
 
 	for(var/icon in GLOB.player_list)
 		add_default_image(SSdcs, icon)
