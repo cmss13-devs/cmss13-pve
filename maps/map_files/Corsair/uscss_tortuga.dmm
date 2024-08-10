@@ -1,0 +1,269 @@
+"ab" = (/obj/structure/curtain,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/space)
+"aW" = (/obj/structure/machinery/cryopod{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"ca" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"cn" = (/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
+"cO" = (/obj/effect/decal/cleanable/generic,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"dq" = (/obj/structure/surface/rack,/obj/item/clothing/shoes/sandal{pixel_y = 10},/obj/item/clothing/suit/storage/bomber/alt,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"dK" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 1},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"dN" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 5},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe3{dir = 8; layer = 1.9},/turf/open/floor/plating,/area/space)
+"dP" = (/obj/effect/landmark/start/marine/fl,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"eH" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison,/area/space)
+"eP" = (/turf/open/floor/prison{icon_state = "blue"},/area/space)
+"fe" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"fq" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 5; icon_state = "blue"},/area/space)
+"fK" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small{dir = 1},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"fQ" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 9},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 8; layer = 1.9},/turf/open/floor/plating,/area/space)
+"gg" = (/obj/structure/largecrate/random/case/double{pixel_x = -6; pixel_y = 18},/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
+"gn" = (/obj/effect/decal/cleanable/generic,/obj/structure/surface/rack,/obj/structure/prop/hybrisa/signs/high_voltage/small{pixel_x = 8; pixel_y = 31},/obj/structure/prop/hybrisa/misc/redmeter{pixel_x = -7; pixel_y = 28},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy1,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"gv" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/obj/item/tool/lighter/zippo{pixel_x = -9; pixel_y = 4},/obj/structure/machinery/computer/crew/alt{pixel_y = 13},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"gB" = (/obj/structure/surface/rack,/turf/open/floor/prison,/area/space)
+"gO" = (/obj/item/prop/magazine/dirty{pixel_x = 9; pixel_y = 16},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"gZ" = (/turf/open/floor/prison,/area/space)
+"hb" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble12{layer = 4.21; pixel_x = -1; pixel_y = 3},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"hm" = (/turf/closed/wall/strata_outpost/reinforced/hull,/area/space)
+"hI" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 1; icon_state = "darkbrowncorners2"},/area/space)
+"ic" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{dir = 4},/turf/open/floor/plating,/area/space)
+"ii" = (/turf/closed/wall/strata_outpost,/area/space)
+"iB" = (/obj/structure/window/framed/almayer/white,/turf/open/floor/plating,/area/space)
+"iI" = (/turf/open/floor/prison{dir = 1; icon_state = "darkbrowncorners2"},/area/space)
+"jM" = (/turf/open/floor/prison{dir = 1; icon_state = "darkbrown2"},/area/space)
+"ka" = (/obj/structure/surface/rack,/obj/item/clothing/head/bandana{pixel_x = -10; pixel_y = -3},/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
+"kR" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{layer = 1.9},/turf/open/floor/plating,/area/space)
+"kY" = (/turf/open/floor/prison{dir = 10; icon_state = "darkbrown2"},/area/space)
+"la" = (/obj/structure/closet/secure_closet/marine_personal{job = "Surgeon"; pixel_x = -1},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
+"lm" = (/obj/structure/machinery/cryopod{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"lr" = (/obj/effect/landmark/start/marine/fl,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"lL" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"lT" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
+"mp" = (/obj/structure/largecrate/random/barrel/red{layer = 3.1},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"ms" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/barricade/wooden,/obj/item/tool/weldingtool{pixel_y = 18},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"mL" = (/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
+"mX" = (/obj/effect/landmark/start/marine/smartgunner/fl,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"np" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison,/area/space)
+"nM" = (/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"nZ" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
+"od" = (/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"on" = (/turf/open/floor/prison{dir = 4; icon_state = "darkbrowncorners2"},/area/space)
+"oN" = (/obj/structure/machinery/light{dir = 8},/turf/open/floor/almayer{icon_state = "silver"},/area/space)
+"oO" = (/turf/open/floor/prison{dir = 4; icon_state = "blue"},/area/space)
+"pc" = (/obj/structure/surface/rack,/obj/item/clothing/shoes/sandal{pixel_y = 11},/obj/item/clothing/shoes/sandal{pixel_y = 2},/obj/item/clothing/shoes/sandal{pixel_x = 9; pixel_y = -13},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"pf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 6},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"qi" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"qj" = (/obj/structure/toilet{dir = 4},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"qk" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
+"qs" = (/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"qu" = (/obj/structure/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/golden_arrow/canteen)
+"qG" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer{dir = 6; icon_state = "silver"},/area/space)
+"qH" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison,/area/space)
+"rJ" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/item/tool/weldpack/minitank{pixel_x = 13},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"rO" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 4; icon_state = "darkbrowncorners2"},/area/space)
+"rU" = (/obj/effect/landmark/start/bridge/fl,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"sS" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 1},/turf/open/floor/prison,/area/space)
+"td" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/obj/structure/machinery/light,/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
+"ti" = (/obj/structure/surface/rack,/obj/structure/largecrate/random/secure{pixel_x = -4; pixel_y = -19},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"tk" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 8},/obj/structure/machinery/light{dir = 4},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
+"tl" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"tQ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/light{dir = 4},/turf/open/floor/almayer{icon_state = "silver"},/area/space)
+"tU" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble10{dir = 8; pixel_x = -31; pixel_y = 2},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"um" = (/turf/open/floor/prison{dir = 8; icon_state = "darkbrowncorners2"},/area/space)
+"uG" = (/obj/item/clothing/mask/cigarette/cigar/classic{pixel_x = -11; pixel_y = 14},/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"uO" = (/obj/structure/barricade/wooden,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"vS" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"vU" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"wO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 1},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"xi" = (/obj/structure/barricade/wooden{dir = 1; layer = 3.1; pixel_y = 19},/obj/item/stack/sheet/metal/med_small_stack{pixel_y = 3},/turf/open/floor/plating,/area/space)
+"xY" = (/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = 8},/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = -7},/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"yc" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 10},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{layer = 1.9},/turf/open/floor/plating,/area/space)
+"yC" = (/obj/structure/closet/secure_closet/marine_personal{job = "Master at Arms"; pixel_x = 1},/obj/structure/closet/secure_closet/marine_personal{job = "Radio Jockey"; pixel_x = 16},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
+"yN" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 8},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"zn" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/barricade/wooden{dir = 1; layer = 3.1; pixel_y = 19},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Aa" = (/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = -7},/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = 8},/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"AA" = (/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"AE" = (/obj/structure/largecrate/random/barrel/black{pixel_x = 6; pixel_y = 18},/obj/structure/largecrate/random/secure,/obj/structure/largecrate/random/mini/ammo{pixel_x = -1; pixel_y = 14},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"AJ" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
+"BE" = (/obj/structure/barricade/wooden{dir = 8; pixel_x = -3; pixel_y = 8},/obj/structure/barricade/wooden,/turf/open/floor/prison,/area/space)
+"Cf" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 10; icon_state = "blue"},/area/space)
+"CF" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
+"CQ" = (/obj/structure/girder/reinforced,/obj/structure/largecrate/random{layer = 3.1; pixel_x = 2; pixel_y = 24},/turf/open/floor/prison,/area/space)
+"Dk" = (/turf/open/space/basic,/area/space)
+"Eu" = (/obj/structure/machinery/cryopod{dir = 1},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Ex" = (/obj/structure/machinery/light/small,/turf/open/floor/prison,/area/space)
+"Ez" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/card{dir = 1; pixel_y = -10},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"EK" = (/obj/structure/barricade/wooden{dir = 1; layer = 3.1; pixel_y = 19},/obj/structure/largecrate/random/mini/small_case{layer = 3.1; pixel_x = 8; pixel_y = 7},/turf/open/floor/prison,/area/space)
+"EO" = (/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"EU" = (/obj/structure/largecrate/random,/turf/open/floor/prison,/area/space)
+"Fk" = (/turf/open/floor/almayer{icon_state = "silver"},/area/space)
+"Fr" = (/obj/structure/machinery/cryopod{dir = 1},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"FO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/case/double{pixel_x = -5; pixel_y = 9},/obj/structure/largecrate/random/case/small,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Gg" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 5},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 1; layer = 1.9},/turf/open/floor/plating,/area/space)
+"Gu" = (/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
+"Hj" = (/obj/structure/machinery/shower{pixel_y = 23},/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"HF" = (/obj/structure/largecrate/random/barrel/black{pixel_x = 5; pixel_y = 9},/obj/structure/largecrate/random/barrel/brown,/turf/open/floor/prison,/area/space)
+"HQ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
+"Ia" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "silver"},/area/space)
+"Il" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/secure,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/item/stack/rods{pixel_x = -3; pixel_y = 13},/turf/open/floor/plating,/area/space)
+"IA" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison{dir = 8; icon_state = "darkbrowncorners2"},/area/space)
+"IB" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/surface/rack{layer = 2.9},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"IS" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 4},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
+"Jt" = (/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
+"JF" = (/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
+"JG" = (/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"JY" = (/turf/open/floor/plating,/area/space)
+"Kb" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 8},/obj/item/shard{icon_state = "medium"; pixel_x = 11},/obj/item/shard/shrapnel,/turf/open/floor/plating,/area/space)
+"KC" = (/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"KV" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble10{pixel_x = -4; pixel_y = 2},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"Ld" = (/obj/structure/machinery/cryopod{dir = 4},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Le" = (/turf/open/floor/almayer{dir = 5; icon_state = "silver"},/area/space)
+"LM" = (/obj/structure/machinery/cryopod{dir = 1},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Mm" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Mu" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble12{dir = 1; pixel_x = -31; pixel_y = 3},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"MR" = (/obj/effect/landmark/start/marine/tl/ai/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Nf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Nn" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{dir = 10; icon_state = "silver"},/area/space)
+"NE" = (/obj/effect/landmark/start/marine/tl/ai/fl,/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Ov" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red,/obj/item/tool/warning_cone{pixel_y = 27},/turf/open/floor/prison,/area/space)
+"OF" = (/obj/structure/girder/displaced,/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/space)
+"PP" = (/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
+"Qf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"Qt" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/secure,/obj/structure/largecrate/random/mini/chest{layer = 3.1; pixel_x = 4; pixel_y = 16},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Qu" = (/obj/structure/window/framed/strata,/turf/open/floor/plating,/area/space)
+"QH" = (/turf/open/floor/prison{icon_state = "darkbrown2"},/area/space)
+"QY" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "darkbrown2"},/area/space)
+"Rp" = (/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/space)
+"RP" = (/obj/structure/machinery/shower{pixel_y = 23},/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"Sz" = (/obj/structure/closet/secure_closet/marine_personal{job = "Cutthroat"; pixel_x = 8},/obj/structure/closet/secure_closet/marine_personal{job = "Gunner"; pixel_x = -7},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
+"SE" = (/obj/effect/landmark/start/marine/medic/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"SU" = (/obj/effect/landmark/start/marine/smartgunner/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Tk" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"Ts" = (/turf/closed/wall/almayer/white/hull,/area/space)
+"TG" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 8},/turf/open/floor/prison,/area/space)
+"TW" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 9; icon_state = "blue"},/area/space)
+"Ud" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison{dir = 8; icon_state = "darkbrown2"},/area/space)
+"Ui" = (/turf/open/floor/prison{dir = 8; icon_state = "blue"},/area/space)
+"Uj" = (/obj/structure/curtain/red,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/space)
+"UG" = (/obj/effect/landmark/start/marine/leader/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
+"UL" = (/obj/effect/decal/cleanable/cobweb,/obj/item/clothing/shoes/sandal{pixel_x = 13; pixel_y = 13},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"Vg" = (/turf/open/floor/prison{dir = 9; icon_state = "blue"},/area/space)
+"Vq" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"VO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 8},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/obj/item/shard{icon_state = "large"; pixel_x = -8; pixel_y = 17},/turf/open/floor/plating,/area/space)
+"We" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 5},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 1; layer = 1.9},/turf/open/floor/plating,/area/space)
+"Wr" = (/obj/item/tool/warning_cone{pixel_x = 4; pixel_y = 25},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"WB" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 5},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 1; layer = 1.9},/turf/open/floor/plating,/area/space)
+"WG" = (/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
+"WI" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"WK" = (/obj/structure/machinery/door/airlock/almayer/generic/glass{dir = 2; name = "\improper Cryo Chamber"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"XY" = (/turf/open/floor/prison{dir = 8; icon_state = "darkbrown2"},/area/space)
+"Yb" = (/turf/closed/wall/almayer/white,/area/space)
+"Yd" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"Yg" = (/obj/structure/girder,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"YG" = (/obj/item/tool/wrench{pixel_x = 11; pixel_y = 17},/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/turf/open/floor/plating,/area/space)
+"YO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small{dir = 8},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"YY" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Za" = (/obj/structure/machinery/telecomms/relay/preset/tower,/turf/open/floor/almayer,/area/golden_arrow/canteen)
+"Zs" = (/obj/structure/machinery/light{dir = 8},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
+"Zy" = (/obj/effect/decal/cleanable/dirt,/obj/item/trash/crushed_cup{pixel_x = 6; pixel_y = -10},/turf/open/floor/almayer{dir = 9; icon_state = "silver"},/area/space)
+"ZA" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"ZN" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 6; icon_state = "blue"},/area/space)
+
+(1,1,1) = {"
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkiiDkDkDkiiDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkiiiiDkDkDkiiiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiiiiiiiiiDkDkDkDkDkiiiiiiiiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiDkDkDkiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiiiiiiiiiiiiiiiiiiiDkDkDkiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiAaSzSzxYiiRPiiHjiiqjgZiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiTWGuGufqiiabiiabiiiiUjiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUigZgZoOKCVgGuGuKCqkGuiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUiKCKCoOKCUinpiiiiiiiiiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUigZgZoOKCWGWGiiJYJYJYiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiCfePePZNiiyClaiiiiJYiiiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiQuqinMiiiiiiiivUWIUdiiiiJYiiJYiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiieHWIgZkYQHQHQHRpMmkYQHRpgZwOgZkYIAiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiqsTGiccacacacacafeiiYOcacacadNvSyckYumiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiodqsrJKbOvgZExgZgZgZfKgZgZgZExgZgZWBycXYJGiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiKVuOmsJYHFhmhmhmhmWGWIWGhmhmhmhmgZgZtlXYtUiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiitiFOBEhmhmJYTsTsiBWKiBTsTsJYhmhmgZtlXYiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiimpIlCQhmJYTsTsgnpcHQYYggTsTsJYhmgZtlXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiYgQtEUhmTsTsULlLAAJtYYkaAETsTshmgZtlXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiOFIBgBhmTsoNFkqGgOEzAANnIatQTshmgZtlQYiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkEKznxihmTsaWSUdPEuYbaWVqMRLMTshmgZtlgZDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiVOYGnphmTsTsSELMYbTsYbaWYdTsTshmeHQfcaiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkgZTkJYhmTslmmXlrLMYbLdZANEFrTshmgZtlgZDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiCFTkJYhmTsZscnLeAAgvAAZyIStkTshmgZtlnZiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiidKTksShmTsTsdquGYYtdcOPPEOTsTshmgZtlXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiWrTkgZhmJYTsTsrULMTsaWUGTsTsJYhmgZwOXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiqsTkgZhmhmJYTsTsTsTsTsTsTsJYhmhmgZwOXYiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiodqsTkgZgZhmhmhmhmhmhmhmhmhmhmhmgZgZwOXYJGiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiihbqsWekRgZgZqHgZgZgZgZgZgZgZqHgZgZpffQXYMuiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiIJFGgyNyNyNyNyNyNNfvSvSvSvSvSvSfQmLoniiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiihIjMjMjMjMjMjMAJTklTjMjMjMjMjMjMrOiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiDkiiiiiiiiiiiiDkiiiiiiDkDkiiDkiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkiiDkDkDkiiDkDkDkiiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkiiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkquququDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkquZaquDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkquququDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkquququDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkquququDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+"}
