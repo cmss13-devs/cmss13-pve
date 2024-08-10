@@ -2499,6 +2499,7 @@
 #include "maps\map_files\LV671_Ark\LV671.dm"
 #include "void-marines\code\admin_tools.dm"
 #include "void-marines\code\factory_areas.dm"
+#include "void-marines\code\light_change.dm"
 #include "void-marines\code\loadouts.dm"
 #include "void-marines\code\marine_roles.dm"
 #include "void-marines\code\portable_detector.dm"
