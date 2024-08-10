@@ -8,7 +8,7 @@
 	if(!check_rights(R_ADMIN))
 		return
 	var/list/lightturfs
-	var/light_str = input(usr, "Set the light power.", "Daytime Brightness", "0.3") as null|num
+	var/light_str = tgui_input_number(usr, "Set the light power.", "Daytime Brightness", 0.3, integer_only = FALSE)
 	var/daytime_color = input(usr, "Please select the color to use.", "Daytime Color") as color|null
 	var/confirm = tgui_alert(usr, "Are you sure you wish to change daytime on the map to this settings?", "Confirm", list("Yes", "No"), 1 HOURS)
 	if(confirm != "Yes")
