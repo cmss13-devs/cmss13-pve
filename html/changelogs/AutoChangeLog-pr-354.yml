@@ -1,4 +1,0 @@
-author: "Doubleumc"
-delete-after: True
-changes:
-  - bugfix: "less lag from xenos pathfinding unreachable targets"
