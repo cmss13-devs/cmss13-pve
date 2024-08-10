@@ -249,9 +249,18 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	log_debug("ASSIGNMENT: Building weighted_players list.")
 	var/list/weighted_players = list()
 	for(var/mob/new_player/cycled_unassigned in unassigned_players)
-		//1 base weight + 1 for new players + 1/per missed round
-		var/weight = 1 + (cycled_unassigned.client.get_total_human_playtime() < 5 HOURS) + get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK)
-		weighted_players[cycled_unassigned] = weight
+		var/base_weight = 1 //baseline weighting
+
+		var/new_bonus = 0
+		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
+			if(0 to 2 HOURS)
+				new_bonus = 2
+			if(2 HOURS to 5 HOURS)
+				new_bonus = 1
+
+		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
+
+		weighted_players[cycled_unassigned] = base_weight + new_bonus + streak_bonus
 
 	log_debug("ASSIGNMENT: Weighted shuffling unassigned_players list.")
 	unassigned_players.Cut()
