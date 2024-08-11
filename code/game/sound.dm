@@ -155,7 +155,7 @@
  *
  * Returns selected channel on success, FALSE on failure
  */
-/proc/playsound(atom/source, sound/soundin, vol = 100, vary, sound_range, vol_cat = VOLUME_SFX, channel, status, falloff = 1)
+/proc/playsound(atom/source, sound/soundin, vol = 100, vary, sound_range, vol_cat = VOLUME_SFX, channel, status, falloff = 1, list/echo)
 	if(!get_turf(source))
 		error("[source] has no turf and is trying to play a spatial sound: [soundin]")
 		return FALSE
@@ -188,7 +188,7 @@
 	return template.channel
 
 //This is the replacement for playsound_local. Use this for sending sounds directly to a client
-/proc/playsound_client(client/client, sound/soundin, atom/origin, vol = 100, random_freq, vol_cat = VOLUME_SFX, channel, status)
+/proc/playsound_client(client/client, sound/soundin, atom/origin, vol = 100, random_freq, vol_cat = VOLUME_SFX, channel, status, list/echo)
 	if(!istype(client))
 		error("[client] is not a client and is trying to play a client sound: [soundin]")
 		return FALSE
@@ -247,7 +247,7 @@
 
 
 /// Play sound for all on-map clients on a list of z-levels. Good for ambient sounds.
-/proc/playsound_z(list/z_values, sound/soundin, volume = 100, vol_cat = VOLUME_SFX)
+/proc/playsound_z(list/z_values, sound/soundin, volume = 100, vol_cat = VOLUME_SFX, list/echo)
 	var/datum/sound_template/template = new(soundin)
 
 	template.channel = SOUND_CHANNEL_Z
