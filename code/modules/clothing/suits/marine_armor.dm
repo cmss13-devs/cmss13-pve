@@ -468,6 +468,13 @@
 		/obj/item/storage/backpack/general_belt,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+	)
+
+	smartgun_back = list(
+		/obj/item/storage/large_holster/machete,
+		/obj/item/ammo_box,
 	)
 
 
