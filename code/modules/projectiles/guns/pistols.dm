@@ -49,7 +49,7 @@
 
 /obj/item/weapon/gun/pistol/m4a3
 	name = "\improper M4A3 service pistol"
-	desc = "The recently replaced service pistol of the USCM. Chambered in 9mm, it remains popular due to its concealability and versatility in enclosed spaces."
+	desc = "The recently replaced service pistol of the USCM. Chambered in 9mm, it remains popular due to its versatility and abundance."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m4a3"
 	item_state = "m4a3"
@@ -89,7 +89,7 @@
 
 /obj/item/weapon/gun/pistol/m4a3/custom
 	name = "\improper M4A3 custom pistol"
-	desc = "This M4A3 sports a nickel finish and faux ivory grips. This one is a slightly customized variant produced by a well known gunsmith on Gateway Station. These are commonly purchased by low level enlisted men and junior officers who have nothing better to spend their salary on. Chambered in 9mm."
+	desc = "Sporting a nickel finish and faux ivory grips, this pistol been customized by a well known gunsmith on Gateway Station. These are commonly purchased by low level enlisted men and junior officers who have nothing better to spend their salary on. Chambered in 9mm."
 	icon_state = "m4a3c"
 	item_state = "m4a3c"
 
@@ -529,9 +529,6 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
-//also comes in.... BLAPCK
-//the parent has a blueish tint, making it look best for civilian usage (colonies, marshals). this one has a black tint on its metal, making it best for military groups like VAIPO, elite mercs, etc.
-// black tinted magazines also included
 /obj/item/weapon/gun/pistol/highpower/black
 	name = "\improper HG 45 'Marina' pistol"
 	current_mag = /obj/item/ammo_magazine/pistol/highpower/black
@@ -539,10 +536,9 @@
 	item_state = "highpower_b"
 	desc = "A semi-automatic Henjin-Garcia design chambered in .45 ACP that is slowly replacing the Office of the Colonial Marshals's Spearhead revolver. Unlike its more common siblings, this variant was marketed and successfully sold in small quantities to the USCM."
 
-//unimplemented
 /obj/item/weapon/gun/pistol/highpower/tactical
 	name = "\improper HG 44 'Automag' pistol"
-	desc = "A suppressed, laser sighted, semi-automatic Henjin-Garcia design chambered in .44 magnum that was abandoned in favour of the popular HG 45 configuration chambered in .45 ACP."
+	desc = "A suppressed, laser-sighted, semi-automatic Henjin-Garcia design chambered in .44 magnum that was abandoned in favour of the popular HG 45 configuration chambered in .45 ACP."
 	current_mag = /obj/item/ammo_magazine/pistol/highpower/automag
 	icon_state = "highpower_tac"
 	item_state = "highpower_tac"
@@ -553,8 +549,8 @@
 //mod88 based off VP70 - Counterpart to M1911, offers burst and capacity ine exchange of low accuracy and damage.
 
 /obj/item/weapon/gun/pistol/vp70
-	name = "\improper VP70 combat pistol"
-	desc = "Standard issue USCM service pistol. Recently replacing the M4A3, it retains its predecessor's 9mm chambering but offers both higher magazine capacity and a 3-round burst selector."
+	name = "\improper VP70 M5 service pistol"
+	desc = "Standard issue USCM service pistol. Recently replacing the M4A3, it retains its predecessor's 9mm chambering but offers both a higher magazine capacity and a 3-round burst selector."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "88m4"
 	item_state = "88m4"

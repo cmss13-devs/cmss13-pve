@@ -701,7 +701,7 @@
 
 /obj/item/weapon/gun/revolver/cmb
 	name = "\improper CMB Spearhead autorevolver"
-	desc = "An automatic revolver chambered in .357, often loaded with hollowpoint on spaceships to prevent hull damage. Commonly issued to Colonial Marshals."
+	desc = "An automatic revolver chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
@@ -709,7 +709,7 @@
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	fire_rattle = 'sound/weapons/gun_cmb_rattle.ogg'
 	cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
 	force = 12
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
@@ -749,5 +749,5 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
-/obj/item/weapon/gun/revolver/cmb/normalpoint
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+/obj/item/weapon/gun/revolver/cmb/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint

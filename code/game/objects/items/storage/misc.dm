@@ -153,20 +153,33 @@
 	new /obj/item/ammo_magazine/pistol(src)
 
 
-/obj/item/storage/box/HG45_loadout
-	name = "HG-45 Super storage case"
-	desc = "A relatively large storage case containing a loaded HG-45 Super and two additional magazines."
+/obj/item/storage/box/HG45_civilian_loadout
+	name = "HG 45 'Aguila' storage case"
+	desc = "A relatively large storage case containing a loaded HG 45 'Aguila' and two additional magazines."
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
 
-/obj/item/storage/box/HG45_loadout/fill_preset_inventory()
+/obj/item/storage/box/HG45_civilian_loadout/fill_preset_inventory()
 	new /obj/item/weapon/gun/pistol/highpower(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 
+/obj/item/storage/box/HG45_marine_loadout
+	name = "HG 45 'Marina' storage case"
+	desc = "A relatively large storage case containing a loaded HG 45 'Marina' and two additional magazines."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+
+/obj/item/storage/box/HG45_marine_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/highpower/black(src)
+	new /obj/item/ammo_magazine/pistol/highpower/black(src)
+	new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
 /obj/item/storage/box/M1911_loadout
 	name = "M1911 storage case"

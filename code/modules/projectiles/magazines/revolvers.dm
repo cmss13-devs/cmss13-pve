@@ -79,20 +79,20 @@
 	gun_type = /obj/item/weapon/gun/revolver/small
 
 /obj/item/ammo_magazine/revolver/cmb
-	name = "\improper Spearhead hollowpoint speed loader (.357)"
-	desc = "A speedloader of 6 hollowpoint .357 bullets, issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife. Less effective against hard targets, but what're the chances of encountering those?"
-	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
-	caliber = ".357"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "cmb_hp"
-	max_rounds = 6
-	gun_type = /obj/item/weapon/gun/revolver/cmb
-
-/obj/item/ammo_magazine/revolver/cmb/normalpoint //put these in the marshal ert - ok sure :)
 	name = "\improper Spearhead speed loader (.357)"
 	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
 	default_ammo = /datum/ammo/bullet/revolver/small
+	caliber = ".357"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "cmb"
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/revolver/cmb
+
+/obj/item/ammo_magazine/revolver/cmb/hollowpoint
+	name = "\improper Spearhead speed loader (.357)"
+	desc = "A speedloader of 6 hollowpoint .357 bullets, commonly issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife."
+	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
+	icon_state = "cmb_hp"
 
 /**
  * MATEBA REVOLVER

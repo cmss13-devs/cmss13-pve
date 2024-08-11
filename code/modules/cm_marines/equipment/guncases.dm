@@ -232,13 +232,13 @@
 	new /obj/item/weapon/gun/shotgun/pump/special(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
 
-/obj/item/storage/box/guncase/mk45_automag
-	name = "\improper MK-45 Automagnum case"
-	desc = "A gun case containing a MK-45 'High-Power' Automagnum sidearm. While this weapon was rejected as a replacement for the M44 Combat Revolver, it is often back-issued to troops who prefer its powerful bullets over more common sidearms."
+/obj/item/storage/box/guncase/hg45
+	name = "\improper HG 45 pistol case"
+	desc = "A gun case containing a HG 45 pistol."
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/pistol/highpower, /obj/item/ammo_magazine/pistol/highpower)
 
-/obj/item/storage/box/guncase/mk45_automag/fill_preset_inventory()
+/obj/item/storage/box/guncase/hg45/fill_preset_inventory()
 	if(prob(30))
 		new /obj/item/weapon/gun/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)

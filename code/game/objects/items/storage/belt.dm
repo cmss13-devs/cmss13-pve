@@ -448,8 +448,8 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
-	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
-	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb(src)
+	new /obj/item/ammo_magazine/revolver/cmb(src)
 
 /obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)

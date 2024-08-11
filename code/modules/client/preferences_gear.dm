@@ -746,9 +746,14 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/box/M44_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/hg45
-	display_name = "HG-45 Super Pistol"
-	path = /obj/item/storage/box/HG45_loadout
+/datum/gear/weapon/hg45_civilian
+	display_name = "HG 45 'Aguila' Pistol"
+	path = /obj/item/storage/box/HG45_civilian_loadout
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/hg45_marine
+	display_name = "HG 45 'Marina' Pistol"
+	path = /obj/item/storage/box/HG45_marine_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
