@@ -41,7 +41,7 @@
 #define TRANSIT_REQUEST 1
 #define TRANSIT_READY 2
 
-#define SHUTTLE_TRANSIT_BORDER 8
+#define SHUTTLE_TRANSIT_BORDER 16
 
 #define PARALLAX_LOOP_TIME 25
 #define HYPERSPACE_END_TIME 5
@@ -109,6 +109,7 @@
 
 #define MOBILE_SHUTTLE_LIFEBOAT_PORT "lifeboat-port"
 #define MOBILE_SHUTTLE_LIFEBOAT_STARBOARD "lifeboat-starboard"
+#define MOBILE_SHUTTLE_LIFEBOAT_COMPACT "lifeboat-compact"
 #define MOBILE_SHUTTLE_VEHICLE_ELEVATOR "vehicle_elevator"
 
 #define DROPSHIP_MIDWAY "dropship_midway"

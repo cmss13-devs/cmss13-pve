@@ -81,6 +81,14 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	knife_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/marine/pve_mopp
+	name = "\improper M2 MOPP boots"
+	desc = "M2 MOPP boots excel at keeping viscera or other biological contaminants away from your feet."
+	icon_state = "cbrn"
+	item_state = "cbrn"
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
 	desc = "Pre-polished fancy dress shoes. You can see your reflection in them."
@@ -223,7 +231,8 @@
 /obj/item/clothing/shoes/royal_marine
 	name = "\improper L10 pattern combat boots"
 	desc = "Standard issue combat boots for combat scenarios or combat situations. Used by the three world empires royal marines commando units."
-	icon_state = "rmc_boots"
+	icon_state = "marine"
+	item_state = "marine"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_LOW
