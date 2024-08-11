@@ -1,9 +1,11 @@
 "ab" = (/obj/structure/curtain,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/space)
-"ap" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{icon_state = "darkbrown2"},/area/space)
+"ap" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/graffiti/graffiti4{pixel_y = -3},/turf/open/floor/prison{icon_state = "darkbrown2"},/area/space)
 "aW" = (/obj/structure/machinery/cryopod{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "bj" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/plating_catwalk/prison,/area/space)
 "ca" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"ce" = (/obj/structure/flora/pottedplant{icon_state = "pottedplant_21"; pixel_y = 16},/obj/structure/coatrack{icon_state = "coatrack1"; pixel_x = 12; pixel_y = 7},/obj/structure/coatrack{color = "gray"; icon_state = "coat_det"; pixel_x = 13; pixel_y = 6},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetblack,/area/space)
 "cn" = (/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
+"cK" = (/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 1},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/floorprops/grate2,/turf/open/floor/plating,/area/space)
 "cO" = (/obj/effect/decal/cleanable/generic,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "dq" = (/obj/structure/surface/rack,/obj/item/clothing/shoes/sandal{pixel_y = 10},/obj/item/clothing/suit/storage/bomber/alt,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
 "dK" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 1},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
@@ -17,7 +19,7 @@
 "fK" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small{dir = 1},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "fQ" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 9},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 8; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "gg" = (/obj/structure/largecrate/random/case/double{pixel_x = -6; pixel_y = 18},/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
-"gn" = (/obj/effect/decal/cleanable/generic,/obj/structure/surface/rack,/obj/structure/prop/hybrisa/signs/high_voltage/small{pixel_x = 8; pixel_y = 31},/obj/structure/prop/hybrisa/misc/redmeter{pixel_x = -7; pixel_y = 28},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy1,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"gn" = (/obj/effect/decal/cleanable/generic,/obj/structure/surface/rack,/obj/structure/prop/hybrisa/signs/high_voltage/small{pixel_x = 8; pixel_y = 31},/obj/structure/prop/hybrisa/misc/redmeter{name = "Hyper-bay control"; pixel_x = -7; pixel_y = 28},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy1,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
 "gv" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/obj/item/tool/lighter/zippo{pixel_x = -9; pixel_y = 4},/obj/structure/machinery/computer/crew/alt{pixel_y = 13},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "gB" = (/obj/structure/surface/rack,/turf/open/floor/prison,/area/space)
 "gO" = (/obj/item/prop/magazine/dirty{pixel_x = 9; pixel_y = 16},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
@@ -25,12 +27,14 @@
 "hb" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble12{layer = 4.21; pixel_x = -1; pixel_y = 3},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
 "hm" = (/turf/closed/wall/strata_outpost/reinforced/hull,/area/space)
 "hp" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
+"hF" = (/obj/structure/machinery/door/airlock/almayer/command{dir = 2; name = "\improper Jokey Office"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
 "hI" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 1; icon_state = "darkbrowncorners2"},/area/space)
 "ic" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{dir = 4},/turf/open/floor/plating,/area/space)
 "ii" = (/turf/closed/wall/strata_outpost,/area/space)
 "iz" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
 "iB" = (/obj/structure/window/framed/almayer/white,/turf/open/floor/plating,/area/space)
 "iI" = (/turf/open/floor/prison{dir = 1; icon_state = "darkbrowncorners2"},/area/space)
+"jH" = (/obj/item/tool/crowbar/tactical{pixel_x = -11; pixel_y = -12},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
 "jM" = (/turf/open/floor/prison{dir = 1; icon_state = "darkbrown2"},/area/space)
 "ka" = (/obj/structure/surface/rack,/obj/item/clothing/head/bandana{pixel_x = -10; pixel_y = -3},/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
 "kR" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{layer = 1.9},/turf/open/floor/plating,/area/space)
@@ -41,21 +45,27 @@
 "lt" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "darkbrown2"},/area/space)
 "lL" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
 "lT" = (/obj/structure/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
+"mf" = (/obj/structure/bed/chair{dir = 8},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "mp" = (/obj/structure/largecrate/random/barrel/red{layer = 3.1},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
 "ms" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/barricade/wooden,/obj/item/tool/weldingtool{pixel_y = 18},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
-"mL" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
+"mw" = (/obj/item/clothing/under/brown{pixel_x = 12; pixel_y = 6},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"mL" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/poster/music{pixel_x = 6; pixel_y = 30},/turf/open/floor/prison,/area/space)
 "mX" = (/obj/effect/landmark/start/marine/smartgunner/fl,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
-"np" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/structure/mirror{pixel_x = 25; pixel_y = 6},/obj/item/prop{desc = "A handful of rounds to reload on the go."; icon = 'icons/obj/items/weapons/guns/handful.dmi'; icon_state = "bullet_2"; name = "handful of pistol bullets (9mm)"; pixel_x = 12; pixel_y = 10},/obj/item/trash/crushed_cup{pixel_x = 7; pixel_y = -19},/turf/open/floor/prison,/area/space)
+"ne" = (/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
+"np" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/structure/mirror{pixel_x = 25; pixel_y = 6},/obj/item/prop{desc = "A handful of rounds to reload on the go."; icon = 'icons/obj/items/weapons/guns/handful.dmi'; icon_state = "bullet_2"; name = "handful of pistol bullets (9mm)"; pixel_x = 12; pixel_y = 10},/obj/item/trash/crushed_cup{pixel_x = 7; pixel_y = -19},/obj/item/prop/helmetgarb/prescription_bottle,/turf/open/floor/prison,/area/space)
 "nw" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "darkbrown2"},/area/space)
 "nM" = (/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
 "nZ" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/space)
 "od" = (/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
-"on" = (/turf/open/floor/prison{dir = 4; icon_state = "darkbrowncorners2"},/area/space)
-"oN" = (/obj/structure/machinery/light{dir = 8},/turf/open/floor/almayer{icon_state = "silver"},/area/space)
+"on" = (/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/power/apc/almayer{dir = 4},/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
+"ox" = (/obj/structure/machinery/camera/autoname/golden_arrow{dir = 8},/obj/item/storage/belt/utility/full{pixel_x = -11; pixel_y = 16},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"oN" = (/obj/structure/machinery/light{dir = 8},/obj/structure/machinery/disposal{density = 0; pixel_y = 15},/turf/open/floor/almayer{icon_state = "silver"},/area/space)
 "oO" = (/turf/open/floor/prison{dir = 4; icon_state = "blue"},/area/space)
+"oV" = (/obj/structure/surface/table/reinforced/prison,/obj/item/device/flashlight/lamp/green{pixel_x = -10},/obj/item/folder/black{pixel_x = 5; pixel_y = 9},/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
 "pc" = (/obj/structure/surface/rack,/obj/item/clothing/shoes/sandal{pixel_y = 11},/obj/item/clothing/shoes/sandal{pixel_y = 2},/obj/item/clothing/shoes/sandal{pixel_x = 9; pixel_y = -13},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "pf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 6},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 4; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
-"qi" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"pR" = (/obj/structure/machinery/door/airlock/almayer/maint{dir = 2; name = "\improper Power Substation"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"qi" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{name = "\improper Shower"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
 "qj" = (/obj/structure/toilet{dir = 4},/obj/structure/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/cobweb,/turf/open/floor/plating/plating_catwalk/prison,/area/space)
 "qk" = (/obj/structure/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
 "qs" = (/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
@@ -63,9 +73,12 @@
 "qG" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer{dir = 6; icon_state = "silver"},/area/space)
 "qH" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison,/area/space)
 "rJ" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/item/tool/weldpack/minitank{pixel_x = 13},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 4; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
-"rO" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 4; icon_state = "darkbrowncorners2"},/area/space)
+"rO" = (/obj/effect/decal/cleanable/dirt,/obj/structure/largecrate/random/barrel/blue{desc = "A blue storage barrel, used to store some fresh water."; name = "water barrel"; pixel_y = 14},/obj/item/frame/rack{pixel_x = 7; pixel_y = 4},/obj/item/frame/rack,/turf/open/floor/prison{dir = 8; icon_state = "blue"},/area/space)
 "rU" = (/obj/effect/landmark/start/bridge/fl,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
+"sD" = (/obj/structure/closet/secure_closet/engineering_electrical{req_one_access = null},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"sF" = (/obj/structure/prop/hybrisa/misc/graffiti/graffiti1{pixel_x = 4},/turf/open/floor/prison,/area/space)
 "sS" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 1},/turf/open/floor/prison,/area/space)
+"sZ" = (/obj/structure/machinery/photocopier{density = 0; pixel_x = -3; pixel_y = 17},/obj/item/paper{pixel_y = 24},/obj/item/photo{pixel_x = -2; pixel_y = 22},/obj/structure/filingcabinet{density = 0; icon_state = "chestdrawer"; pixel_x = 9; pixel_y = 7},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
 "td" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/obj/structure/machinery/light,/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
 "ti" = (/obj/structure/surface/rack,/obj/structure/largecrate/random/secure{pixel_x = -4; pixel_y = -19},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
 "tk" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 8},/obj/structure/machinery/light{dir = 4},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
@@ -73,13 +86,18 @@
 "tQ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/light{dir = 4},/turf/open/floor/almayer{icon_state = "silver"},/area/space)
 "tU" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble10{dir = 8; pixel_x = -31; pixel_y = 2},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
 "um" = (/turf/open/floor/prison{dir = 8; icon_state = "darkbrowncorners2"},/area/space)
+"uv" = (/obj/structure/machinery/disposal,/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "uG" = (/obj/item/clothing/mask/cigarette/cigar/classic{pixel_x = -11; pixel_y = 14},/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/space)
 "uO" = (/obj/structure/barricade/wooden,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
 "vS" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
 "vU" = (/obj/structure/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
+"wl" = (/obj/structure/machinery/power/smes/buildable,/obj/item/prop/colony/canister{pixel_x = 3; pixel_y = 16},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 4; icon_state = "darkyellowfull2"},/area/space)
 "wO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 1},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
 "xi" = (/obj/structure/barricade/wooden{dir = 1; layer = 3.1; pixel_y = 19},/obj/item/stack/sheet/metal/med_small_stack{pixel_y = 3},/turf/open/floor/plating,/area/space)
-"xY" = (/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = 8},/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = -7},/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"xk" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
+"xJ" = (/obj/structure/bed/chair/comfy/hybrisa/red{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
+"xW" = (/obj/structure/machinery/recharge_station,/obj/item/reagent_container/food/drinks/coffeecup/wy{pixel_x = -4; pixel_y = 18},/turf/open/floor/prison{dir = 4; icon_state = "darkyellowfull2"},/area/space)
+"xY" = (/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = 8},/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = -7},/obj/structure/sign/poster/marshalls{pixel_x = -6; pixel_y = 35},/obj/structure/sign/poster/pinup{pixel_x = 8; pixel_y = 30},/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
 "yc" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 10},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{layer = 1.9},/turf/open/floor/plating,/area/space)
 "yC" = (/obj/structure/closet/secure_closet/marine_personal{job = "Master at Arms"; pixel_x = 1},/obj/structure/closet/secure_closet/marine_personal{job = "Radio Jockey"; pixel_x = 16},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
 "yN" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 8},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
@@ -87,36 +105,48 @@
 "Aa" = (/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = -7},/obj/structure/closet/secure_closet/marine_personal{job = "Merc"; pixel_x = 8},/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
 "At" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
 "AA" = (/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"AC" = (/obj/structure/filingcabinet{pixel_x = 8},/obj/structure/filingcabinet{pixel_x = -8},/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "AE" = (/obj/structure/largecrate/random/barrel/black{pixel_x = 6; pixel_y = 18},/obj/structure/largecrate/random/secure,/obj/structure/largecrate/random/mini/ammo{pixel_x = -1; pixel_y = 14},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
-"AJ" = (/obj/structure/machinery/light/small,/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
+"AJ" = (/obj/structure/machinery/light/small,/obj/structure/janitorialcart{pixel_y = 3},/obj/item/tool/mop{pixel_x = -12; pixel_y = -2},/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
+"AP" = (/obj/structure/surface/table/reinforced/prison,/obj/effect/spawner/random/technology_scanner{pixel_x = 4; pixel_y = 2},/obj/item/storage/briefcase/inflatable{pixel_x = -2; pixel_y = 22},/obj/item/tool/hand_labeler{pixel_x = -2; pixel_y = -1},/turf/open/floor/prison{dir = 4; icon_state = "darkyellowfull2"},/area/space)
 "BE" = (/obj/structure/barricade/wooden{dir = 8; pixel_x = -3; pixel_y = 8},/obj/structure/barricade/wooden,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"BF" = (/obj/structure/machinery/power/smes/buildable,/turf/open/floor/prison{dir = 4; icon_state = "darkyellowfull2"},/area/space)
 "BK" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
-"Cf" = (/obj/structure/machinery/light/small{dir = 8},/obj/structure/surface/table/reinforced/prison,/turf/open/floor/prison{dir = 10; icon_state = "blue"},/area/space)
+"Cf" = (/obj/structure/machinery/light/small{dir = 8},/obj/structure/surface/table/reinforced/prison,/obj/item/ashtray/plastic{pixel_x = 6; pixel_y = 10},/obj/item/prop/helmetgarb/gunoil{pixel_x = -7; pixel_y = 10},/obj/item/clothing/head/welding{pixel_x = 7},/turf/open/floor/prison{dir = 10; icon_state = "blue"},/area/space)
 "CA" = (/obj/item/tool/wet_sign{pixel_x = 28; pixel_y = 20},/turf/open/floor/prison{icon_state = "blue"},/area/space)
 "CF" = (/obj/structure/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
 "CQ" = (/obj/structure/girder/reinforced,/obj/structure/largecrate/random{layer = 3.1; pixel_x = 2; pixel_y = 24},/turf/open/floor/prison,/area/space)
 "Dk" = (/turf/open/space/basic,/area/space)
+"Dt" = (/obj/item/storage/toolbox/electrical{pixel_x = 14; pixel_y = -3},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
+"DH" = (/obj/structure/surface/table/reinforced/prison,/obj/item/tool/pen/clicky{pixel_x = -4; pixel_y = -2},/obj/item/reagent_container/food/snacks/packaged_burrito{pixel_x = 4; pixel_y = 11},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
+"DJ" = (/obj/structure/surface/table/reinforced/prison,/obj/item/prop/magazine/book/bladerunner{pixel_x = -7; pixel_y = 9},/obj/structure/flora/pottedplant{icon_state = "pottedplant_2"; pixel_x = 5; pixel_y = 9},/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "Eu" = (/obj/structure/machinery/cryopod{dir = 1},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "Ex" = (/obj/structure/machinery/light/small,/turf/open/floor/prison,/area/space)
-"Ez" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/card{dir = 1; pixel_y = -10},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Ez" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/card{dir = 1; pixel_y = -10},/obj/item/prop/helmetgarb/spacejam_tickets{pixel_y = 12},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "EK" = (/obj/structure/barricade/wooden{dir = 1; layer = 3.1; pixel_y = 19},/obj/structure/largecrate/random/mini/small_case{layer = 3.1; pixel_x = 8; pixel_y = 7},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
-"EO" = (/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"EO" = (/obj/structure/machinery/power/apc/almayer{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
 "EU" = (/obj/structure/largecrate/random,/turf/open/floor/prison,/area/space)
+"EW" = (/obj/structure/machinery/computer/cameras/wooden_tv{desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW."; dir = 4; layer = 3.2; name = "Television set"; network = null; pixel_x = -17},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "Fk" = (/turf/open/floor/almayer{icon_state = "silver"},/area/space)
 "Fr" = (/obj/structure/machinery/cryopod{dir = 1},/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"Ft" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/med_data/laptop{dir = 8; pixel_x = 3; pixel_y = 20},/obj/structure/machinery/computer/card{dir = 8; pixel_x = 5; pixel_y = 5},/obj/structure/machinery/computer/skills{dir = 8; pixel_x = 3; pixel_y = -10},/obj/structure/phone_base/rotary/no_dnd{name = "Hotline Telephone"; phone_category = "Command"; phone_id = "Jokey Office"; pixel_x = -9; pixel_y = 16},/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
 "FO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/case/double{pixel_x = -5; pixel_y = 9},/obj/structure/largecrate/random/case/small,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
 "Gg" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 5},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 1; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "Gi" = (/obj/item/trash/cigbutt{pixel_x = 9; pixel_y = 26},/obj/item/trash/cigbutt{pixel_x = 9; pixel_y = -7},/obj/item/trash/cigbutt,/turf/open/floor/prison,/area/space)
 "Gu" = (/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
-"Hj" = (/obj/structure/machinery/shower{pixel_y = 23},/obj/structure/machinery/light/small{dir = 4},/obj/item/tool/soap{pixel_x = 7; pixel_y = 14},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"Hj" = (/obj/structure/machinery/shower{pixel_y = 23},/obj/structure/machinery/light/small{dir = 4},/obj/item/tool/soap{pixel_x = 7; pixel_y = 14},/obj/item/prop/colony/usedbandage{dir = 4; pixel_x = -3; pixel_y = -14},/obj/item/prop/colony/usedbandage{dir = 10; pixel_y = 13},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
 "Hs" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "Hz" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"HA" = (/obj/structure/surface/table/woodentable/fancy,/obj/structure/prop/hybrisa/misc/coffeestuff/coffeemachine1{pixel_x = 4; pixel_y = 12},/obj/item/reagent_container/food/drinks/bottle/wine{pixel_x = -6; pixel_y = 10},/obj/item/reagent_container/food/drinks/drinkingglass{icon_state = "shotglass"; pixel_x = 12; pixel_y = 6},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "HF" = (/obj/structure/largecrate/random/barrel/black{pixel_x = 5; pixel_y = 9},/obj/structure/largecrate/random/barrel/brown,/turf/open/floor/prison,/area/space)
 "HQ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
 "Ia" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "silver"},/area/space)
 "Il" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/secure,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/item/stack/rods{pixel_x = -3; pixel_y = 13},/turf/open/floor/plating,/area/space)
+"In" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_4"; pixel_x = 2; pixel_y = 16},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
+"Iv" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "IA" = (/obj/structure/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 8; icon_state = "darkbrowncorners2"},/area/space)
 "IB" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/surface/rack{layer = 2.9},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
+"IH" = (/obj/structure/closet/cabinet,/turf/open/floor/hybrisa/carpet/carpetblack,/area/space)
 "IS" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 4},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
 "Jt" = (/turf/open/floor/almayer{icon_state = "tcomms"},/area/space)
 "JF" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 5; icon_state = "darkbrown2"},/area/space)
@@ -130,9 +160,12 @@
 "Le" = (/turf/open/floor/almayer{dir = 5; icon_state = "silver"},/area/space)
 "Lk" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "LM" = (/obj/structure/machinery/cryopod{dir = 1},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"LO" = (/turf/open/floor/hybrisa/carpet/carpetblack,/area/space)
 "Mm" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "Mt" = (/obj/structure/machinery/light/small{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
 "Mu" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble12{dir = 1; pixel_x = -31; pixel_y = 3},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"Mx" = (/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/faxmachine/uscm/command/capt{pixel_x = -1; pixel_y = 8},/obj/item/paper_bin{pixel_x = 22; pixel_y = 11},/obj/item/reagent_container/food/drinks/coffeecup{pixel_x = -9},/obj/item/ashtray/plastic{pixel_x = -1; pixel_y = 14},/obj/item/trash/cigbutt/cigarbutt{pixel_x = 5; pixel_y = 25},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
+"MN" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_2"; pixel_y = 12},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "MR" = (/obj/effect/landmark/start/marine/tl/ai/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "Nf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{layer = 1.9},/turf/open/floor/plating,/area/space)
 "Nn" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{dir = 10; icon_state = "silver"},/area/space)
@@ -144,31 +177,38 @@
 "Ox" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "OC" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "OF" = (/obj/structure/girder/displaced,/obj/structure/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/space)
+"OY" = (/obj/structure/bookcase{icon_state = "book-5"},/obj/item/reagent_container/food/drinks/bottle/gin{pixel_x = 7; pixel_y = 19},/obj/item/reagent_container/food/drinks/bottle/kahlua{pixel_x = 4; pixel_y = 17},/obj/item/reagent_container/food/drinks/bottle/davenport{pixel_x = -7; pixel_y = 17},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "PP" = (/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
 "Qb" = (/obj/item/trash/cigbutt{pixel_x = 14},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
 "Qf" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
+"Qk" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/poster/io{pixel_x = 5; pixel_y = 29},/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
 "Qt" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/largecrate/random/secure,/obj/structure/largecrate/random/mini/chest{layer = 3.1; pixel_x = 4; pixel_y = 16},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "Qu" = (/obj/structure/window/framed/strata,/turf/open/floor/plating,/area/space)
 "QH" = (/turf/open/floor/prison{icon_state = "darkbrown2"},/area/space)
 "QY" = (/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "darkbrown2"},/area/space)
 "Rp" = (/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/space)
 "RP" = (/obj/structure/machinery/shower{pixel_y = 23},/obj/structure/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/vomit,/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"Si" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_6"; pixel_y = 12},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
 "Sz" = (/obj/structure/closet/secure_closet/marine_personal{job = "Cutthroat"; pixel_x = 8},/obj/structure/closet/secure_closet/marine_personal{job = "Gunner"; pixel_x = -7},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
 "SE" = (/obj/effect/landmark/start/marine/medic/fl,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/camera/autoname/golden_arrow{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
 "SU" = (/obj/effect/landmark/start/marine/smartgunner/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
-"SV" = (/obj/structure/largecrate/random/barrel/blue{desc = "A blue storage barrel, used to store some fresh water."; name = "water barrel"},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"SV" = (/obj/structure/machinery/washing_machine{pixel_x = 4; pixel_y = 10},/obj/structure/machinery/washing_machine{pixel_x = 4; pixel_y = 25},/obj/structure/bedsheetbin{pixel_x = -10; pixel_y = -2},/obj/item/prop/helmetgarb/rabbitsfoot{pixel_x = -1; pixel_y = 32},/obj/item/clothing/under/colonist/workwear{pixel_x = -9},/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"SW" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_3"; pixel_x = 1; pixel_y = 19},/turf/open/floor/hybrisa/wood/darkerwood,/area/space)
+"Th" = (/obj/structure/sign/poster/corporate{pixel_x = 9; pixel_y = 30},/turf/open/floor/prison{icon_state = "darkbrown2"},/area/space)
 "Tk" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
 "Ts" = (/turf/closed/wall/almayer/white/hull,/area/space)
 "TG" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
-"TW" = (/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 9; icon_state = "blue"},/area/space)
+"TW" = (/obj/structure/machinery/light/small{dir = 8},/obj/item/prop/helmetgarb/bug_spray{pixel_x = 8; pixel_y = 56},/turf/open/floor/prison{dir = 9; icon_state = "blue"},/area/space)
+"Uc" = (/obj/structure/filingcabinet{pixel_x = -8},/obj/structure/filingcabinet{pixel_x = 8},/obj/item/reagent_container/spray/cleaner{pixel_x = 9; pixel_y = 18},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "Ud" = (/obj/structure/machinery/light/small{dir = 1},/turf/open/floor/prison{dir = 8; icon_state = "darkbrown2"},/area/space)
 "Ui" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 8; icon_state = "blue"},/area/space)
 "Uj" = (/obj/structure/curtain/red,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/space)
+"UE" = (/obj/structure/machinery/power/terminal,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "UF" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "darkbrown2"},/area/space)
 "UG" = (/obj/effect/landmark/start/marine/leader/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/space)
-"UL" = (/obj/effect/decal/cleanable/cobweb,/obj/item/clothing/shoes/sandal{pixel_x = 13; pixel_y = 13},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
+"UL" = (/obj/item/clothing/shoes/sandal{pixel_x = 13; pixel_y = 13},/obj/structure/sign/nosmoking_1{pixel_y = 26},/obj/effect/decal/cleanable/cobweb,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
 "Vg" = (/turf/open/floor/prison{dir = 9; icon_state = "blue"},/area/space)
-"Vp" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
+"Vp" = (/obj/effect/decal/cleanable/dirt,/obj/item/frame/camera{desc = "The Staff Officer insisted he needed to monitor everyone at all times."; layer = 2.9; name = "broken camera"; pixel_x = -7; pixel_y = 9},/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/space)
 "Vq" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
 "Vr" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
 "VO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 8},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/obj/item/shard{icon_state = "large"; pixel_x = -8; pixel_y = 17},/turf/open/floor/plating,/area/space)
@@ -178,12 +218,14 @@
 "WB" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 5},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 1; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
 "WG" = (/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "WI" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/turf/open/floor/plating,/area/space)
-"WK" = (/obj/structure/machinery/door/airlock/almayer/generic/glass{dir = 2; name = "\improper Cryo Chamber"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"WK" = (/obj/structure/machinery/door/airlock/almayer/generic/glass{dir = 2; name = "\improper Hyper-bay"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/space)
+"XB" = (/obj/structure/machinery/power/apc/almayer{dir = 8},/obj/structure/surface/table/reinforced/prison,/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
 "XY" = (/turf/open/floor/prison{dir = 8; icon_state = "darkbrown2"},/area/space)
 "Yb" = (/turf/closed/wall/almayer/white,/area/space)
 "Yd" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/camera/autoname/golden_arrow{dir = 8},/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/space)
 "Yg" = (/obj/structure/girder,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/space)
-"Ym" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 9},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 8; layer = 1.9},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
+"Ym" = (/obj/structure/prop/hybrisa/misc/fake/wire/red{dir = 9},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe4{dir = 8; layer = 1.9},/obj/structure/prop/hybrisa/misc/floorprops/grate2,/turf/open/floor/plating,/area/space)
+"Yt" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_3"; pixel_x = -8; pixel_y = 12},/obj/effect/hybrisa/decal/trash{icon_state = "trash_3"; pixel_x = 5; pixel_y = -12},/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/hybrisa/carpet/carpetbluedeco,/area/space)
 "YG" = (/obj/item/tool/wrench{pixel_x = 11; pixel_y = 17},/obj/structure/prop/hybrisa/misc/fake/wire/yellow{dir = 10},/turf/open/floor/plating,/area/space)
 "YO" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/machinery/light/small{dir = 8},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; layer = 1.9},/turf/open/floor/plating,/area/space)
 "YY" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
@@ -191,6 +233,7 @@
 "Zs" = (/obj/structure/machinery/light{dir = 8},/turf/open/floor/almayer{dir = 1; icon_state = "silver"},/area/space)
 "Zy" = (/obj/effect/decal/cleanable/dirt,/obj/item/trash/crushed_cup{pixel_x = 6; pixel_y = -10},/turf/open/floor/almayer{dir = 9; icon_state = "silver"},/area/space)
 "ZA" = (/obj/effect/landmark/start/marine/fl,/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2{dir = 4},/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/space)
+"ZH" = (/obj/structure/machinery/power/terminal,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
 "ZN" = (/obj/structure/machinery/light/small{dir = 4},/obj/item/trash/cigbutt/cigarbutt{pixel_x = 11; pixel_y = 6},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 6; icon_state = "blue"},/area/space)
 
 (1,1,1) = {"
@@ -252,15 +295,15 @@ DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkii
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiiiiiiiiiiiiiiiiiiiDkDkDkiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiAaSzSzxYiiRPiiHjiiqjHziiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiAaSzSzxYiiRPiiHjiiqjmLiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiTWizGufqiiabiiabiiiiUjiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUiGigZoOSVVgVpGuKCqkVpiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUibjKCoOKCUinpiiiiiiiiiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiUiGigZoOSVVgVpGuKCqkoniiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiirObjKCoOmwUinpiiiiiiiiiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiNVgZHzoOQbWGNsiiJYJYJYiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiCfePCAZNiiyClaiiiiJYiiiiiiDkDkDkiiDkDkiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiQuqinMiiiiiiiivUWIUdiiiiJYiiJYiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiieHWIgZkYapQHQHRpMmUFQHRpgZevgZUFIAiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiVrTGiccacacaOCOCfeiiYOOCcacadNvSycUFumiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiieHWIgZkYapThQHRpMmUFQHRpgZevgZUFIAiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiQkTGiccacacaOCOCfeiiYOOCcacadNvSycUFumiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiodqsrJKbOvgZExgZgZgZfKHzgZHzExgZgZWBycXYJGiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiKVuOmsJYHFhmhmhmhmWGWIWGhmhmhmhmgZgZOxKutUiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiitiFOBEhmhmJYTsTsiBWKiBTsTsJYhmhmgZtlKuiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
@@ -274,17 +317,17 @@ DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiCFTk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiidKTksShmTsTsdquGYYtdcOPPEOTsTshmHztlXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiWrWggZhmJYTsTsrULMTsaWUGTsTsJYhmgZwOXYiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiqsHsgZhmhmJYTsTsTsTsTsTsTsJYhmhmHzwOXYiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiodqsTkHzHzhmhmhmhmhmhmhmhmhmhmhmgZHzevKuJGiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiihbVrWekRHzHzqHgZgZHzgZHzgZgZqHHzgZpffQXYMuiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiIJFGgyNyNyNNNyNNNNfvSvSvSvShphpYmmLoniiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiihIjMjMnwjMjMjMAJTklTltjMnwnwjMjMrOiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiDkiiiiiiiiiiiiDkiiiiiiDkDkiiDkiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiDkDkDkiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkDkDkDkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
-DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkiiDkDkDkiiDkDkDkiiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiodqsTkHzHzhmhmhmhmhmhmhmhmhmhmhmgZHzcKKuJGiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiihbVrWekRHzHzqHgZgZHzgZHzsFgZqHHzgZpffQXYMuiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiIJFGgyNyNyNNNyNNNNfvSvSvSvShphpYmHzXYiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiihIjMjMnwjMjMjMAJTklTltjMnwJFgZWIExiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiDkiiiiiiiiiiiipRiiiiiiQuQuiihFiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiAPbjxWiiuvsZoVceLOIHiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiXBjHoxiiMNYtFtmfnexkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiZHDtUEiiEWMxDHSiIvneiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiBFsDwliixkneInnexkxkiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiDkDkDkDkDkDkDkiiiiiiiiiiSWnexkxJHAOYiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
+DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkiiDkDkDkiiACDJUciiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkiiiiiiiiiiDkDkDkiiiiiiiiiiDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
 DkDkquququDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDk
