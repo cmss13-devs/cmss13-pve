@@ -48,7 +48,7 @@
 	///world.time value, to prevent COCK COCK COCK COCK
 	var/cock_cooldown = 0
 	///Delay before we can cock again, in tenths of seconds
-	var/cock_delay = 30
+	var/cock_delay = 5
 
 	/**How the bullet will behave once it leaves the gun, also used for basic bullet damage and effects, etc.
 	Ammo will be replaced on New() for things that do not use mags.**/
@@ -855,9 +855,9 @@ User can be passed as null, (a gun reloading itself for instance), so we need to
 	user.drop_inv_item_to_loc(magazine, src) //Click!
 	current_mag = magazine
 	replace_ammo(user,magazine)
-	if(!in_chamber)
+	/*if(!in_chamber)
 		ready_in_chamber()
-		cock_gun(user)
+		cock_gun(user)*/
 	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
 		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
 	if(reload_sound)
@@ -1075,7 +1075,9 @@ and you're good to go.
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
 	set waitfor = FALSE
-
+	if(!in_chamber)
+		click_empty(user)
+		return
 	if(!able_to_fire(user) || !target || !get_turf(user) || !get_turf(target))
 		return NONE
 
