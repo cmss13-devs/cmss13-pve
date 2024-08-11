@@ -115,7 +115,7 @@
 		message_admins("[usr] исключил из игры [player.ckey].")
 	else
 		player.total_enter_lock = 0
-		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Тебя вернули в игру. Теперь ты можеь попытаться зайти.")))
+		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Тебя вернули в игру. Теперь ты можешь попытаться зайти.")))
 		if(player.prefs.toggles_sound & SOUND_ADMINHELP)
 			SEND_SOUND(player, sound('sound/effects/adminhelp_new.ogg'))
 		message_admins("[usr] вернул в игру [player.ckey]. Увы и ах!")
