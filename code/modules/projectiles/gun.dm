@@ -1357,9 +1357,7 @@ and you're good to go.
 
 		flags_gun_features ^= GUN_CAN_POINTBLANK //Reset this.
 		return TRUE
-	if(!in_chamber) //did you even cock it?
-		click_empty(user)
-		return
+
 
 	if(EXECUTION_CHECK) //Execution
 		if(!able_to_fire(user)) //Can they actually use guns in the first place?
@@ -1367,11 +1365,18 @@ and you're good to go.
 		user.visible_message(SPAN_DANGER("[user] puts [src] up to [attacked_mob], steadying their aim."), SPAN_WARNING("You put [src] up to [attacked_mob], steadying your aim."),null, null, CHAT_TYPE_COMBAT_ACTION)
 		if(!do_after(user, 3 SECONDS, INTERRUPT_ALL|INTERRUPT_DIFF_INTENT, BUSY_ICON_HOSTILE))
 			return TRUE
+		if(!in_chamber) //did you even cock it?
+			click_empty(user)
+			return
 	else if(user.a_intent != INTENT_HARM) //Thwack them
 		return ..()
 
 	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_ATTACK_DEAD) && attacked_mob.stat == DEAD) // don't shoot dead people
 		return afterattack(attacked_mob, user, TRUE)
+
+	if(!in_chamber) //did you even cock it?
+		click_empty(user)
+		return
 
 	user.next_move = world.time //No click delay on PBs.
 
