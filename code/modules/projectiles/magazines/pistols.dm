@@ -62,24 +62,28 @@
 //-------------------------------------------------------
 //88M4 based off VP70
 
+
 /obj/item/ammo_magazine/pistol/vp70
-	name = "\improper 88M4 AP magazine (9mm)"
-	default_ammo = /datum/ammo/bullet/pistol/ap
+	name = "\improper VP70 Magazine (9mm)"
+	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 	icon_state = "88m4"
 	max_rounds = 19
 	gun_type = /obj/item/weapon/gun/pistol/vp70
 	ammo_band_icon = "+88m4_band"
 	ammo_band_icon_empty = "+88m4_band_e"
-	ammo_band_color = AMMO_BAND_COLOR_AP
-
-/obj/item/ammo_magazine/pistol/vp70/normalpoint // Unused
-	name = "\improper VP70 Magazine (9mm)"
-	default_ammo = /datum/ammo/bullet/pistol
-	caliber = "9mm"
 	ammo_band_color = null
 
-/obj/item/ammo_magazine/pistol/vp70/normalpoint/extended // Unused
+/obj/item/ammo_magazine/pistol/vp70/ap
+	name = "\improper VP70 AP magazine (9mm)"
+	default_ammo = /datum/ammo/bullet/pistol/ap
+	caliber = "9mm"
+	icon_state = "88m4"
+	max_rounds = 19
+	gun_type = /obj/item/weapon/gun/pistol/vp70
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/pistol/vp70/extended // Unused
 	name = "\improper 88M4 extended magazine (9mm)"
 	icon_state = "88m4_mag_ex"
 	default_ammo = /datum/ammo/bullet/pistol

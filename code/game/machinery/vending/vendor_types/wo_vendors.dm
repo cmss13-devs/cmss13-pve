@@ -93,7 +93,7 @@
 		list("M82F Flare Gun", round(scale * 5), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol/vp70/normalpoint, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", round(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 

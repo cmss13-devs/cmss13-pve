@@ -26894,15 +26894,15 @@
 /area/varadero/interior/maintenance/security)
 "syb" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
-/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/structure/machinery/light{
 	dir = 4
 	},

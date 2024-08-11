@@ -418,8 +418,8 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
 
 
 /obj/item/storage/belt/security/MP/UPP
@@ -1187,12 +1187,12 @@
 /obj/item/storage/belt/gun/m4a3/vp70/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
 
 /obj/item/storage/belt/gun/m4a3/vp70_near_empty/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to 3)
-		new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
 
 /obj/item/storage/belt/gun/m4a3/vp78/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())

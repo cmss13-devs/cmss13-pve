@@ -66,7 +66,7 @@
 		list("S&W .357 Revolver", 15, /obj/item/weapon/gun/revolver/small, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", 0, null, null, null),
-		list("VP70 Magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/vp70/normalpoint, null, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 		list("Beretta 92FS Magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/b92fs, null, VENDOR_ITEM_REGULAR),
 		list("KT-42 Magazine (.44)", 5, /obj/item/ammo_magazine/pistol/kt42, null, VENDOR_ITEM_REGULAR),
 		list("Spearhead Speed Loader (.357)", 10, /obj/item/ammo_magazine/revolver/cmb/normalpoint, VENDOR_ITEM_REGULAR),
@@ -134,7 +134,7 @@
 		list("S&W .357 Revolver", 20, /obj/item/weapon/gun/revolver/small, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", 40, /obj/item/ammo_magazine/pistol/vp70/normalpoint, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", 40, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("Beretta 92FS Magazine (9mm)", 40, /obj/item/ammo_magazine/pistol/b92fs, VENDOR_ITEM_REGULAR),
 		list("KT-42 Magazine (.44)", 40, /obj/item/ammo_magazine/pistol/kt42, VENDOR_ITEM_REGULAR),
 		list("Spearhead Speed Loader (.357)", 40, /obj/item/ammo_magazine/revolver/cmb/normalpoint, VENDOR_ITEM_REGULAR),

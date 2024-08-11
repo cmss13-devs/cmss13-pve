@@ -224,7 +224,7 @@
 		list("M39 HV Magazine (10x20mm)", round(scale * 50), /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M44 Speed Loader (.44)", round(scale * 40), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 50), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("88 Mod 4 Magazine (9mm)", round(scale * 50), /obj/item/ammo_magazine/pistol/vp70/normalpoint, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", round(scale * 50), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR-PIERCING AMMUNITION", -1, null, null),
 		list("M4RA AP Magazine (10x24mm)", round(scale * 15.7), /obj/item/ammo_magazine/rifle/m4ra/ap, VENDOR_ITEM_REGULAR),

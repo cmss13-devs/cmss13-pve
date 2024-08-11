@@ -559,7 +559,7 @@
 	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_88m4_reload.ogg'
 	unload_sound = 'sound/weapons/gun_88m4_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/pistol/vp70/normalpoint
+	current_mag = /obj/item/ammo_magazine/pistol/vp70
 	force = 8
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
