@@ -444,7 +444,9 @@ var/global/list/activated_medevac_stretchers = list()
 
 /obj/structure/bed/roller/hospital/Initialize(mapload, ...)
 	. = ..()
+/*RUCM REMOVAL // runtime because don't setup preferences to body
 	create_body()
+*/
 	update_icon()
 
 /obj/structure/bed/roller/hospital/Destroy()
