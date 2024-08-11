@@ -141,3 +141,9 @@
 		/client/proc/allow_to_join,
 		/client/proc/gm_lighting,
 	))
+
+/mob/dead/join_as_freed_mob()
+	if(usr.client.total_enter_lock)
+		to_chat(usr, SPAN_WARNING("You have BLACKLISTED from entering!"))
+		return
+	. = ..()
