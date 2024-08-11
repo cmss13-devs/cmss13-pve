@@ -290,18 +290,25 @@
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
 
 /obj/item/ammo_magazine/pistol/highpower
-	name = "\improper HG-45 Super magazine (.45)"
+	name = "\improper HG-45 'Aguila' magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"
-	max_rounds = 13
+	max_rounds = 11
 	gun_type = /obj/item/weapon/gun/pistol/highpower
 
 //comes in black, for the black variant of the highpower, better for military usage
 
 /obj/item/ammo_magazine/pistol/highpower/black
+	name = "\improper HG 45 'Marina' pistol"
 	icon_state = "highpower_b"
+
+/obj/item/ammo_magazine/pistol/highpower/automag
+	name = "\improper HG 44 'Automag' pistol"
+	icon_state = "highpower_b"
+	max_rounds = 13
+	default_ammo = /datum/ammo/bullet/revolver
 
 //-------------------------------------------------------
 /*

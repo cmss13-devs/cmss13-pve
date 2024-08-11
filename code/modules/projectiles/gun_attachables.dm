@@ -2093,9 +2093,9 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	hud_offset_mod = 2
 
-/obj/item/attachable/stock/mod88
-	name = "\improper Mod 88 burst stock"
-	desc = "Increases the fire rate and burst amount on the Mod 88. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
+/obj/item/attachable/stock/vp70
+	name = "\improper VP70 burst stock"
+	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2104,7 +2104,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 2
 	melee_mod = 5
 
-/obj/item/attachable/stock/mod88/New()
+/obj/item/attachable/stock/vp70/New()
 	..()
 	//2h
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3

@@ -124,9 +124,9 @@
 	new /obj/item/weapon/gun/pistol/clfpistol(src)
 	new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
-/obj/item/storage/box/upp //war trophy luger
+/obj/item/storage/box/upp
 	name = "Type 73 storing case"
-	desc = "A small case containing the once-standard sidearm of the UPP, the Type 73, and two additional magazines. The contained sidearm is probably looted off a dead officer or from a captured stockpile, either way this thing is worth a pretty penny."
+	desc = "A small case containing a loaded Type 73, and two additional magazines."
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE

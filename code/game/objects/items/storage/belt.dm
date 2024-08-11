@@ -1257,7 +1257,7 @@
 /obj/item/storage/belt/gun/m4a3/highpower/tactical/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/tactical())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
+		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
 
 /obj/item/storage/belt/gun/m39
 	name = "\improper M276 pattern M39 holster rig"

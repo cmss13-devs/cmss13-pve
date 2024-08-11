@@ -720,29 +720,29 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "D18 Holdout Pistol"
 	path = /obj/item/storage/box/clf
 
-/datum/gear/weapon/upppistol //ww2 war trophy luger
+/datum/gear/weapon/upppistol
 	display_name = "Type 73 Pistol"
 	path = /obj/item/storage/box/upp
 	slot = WEAR_IN_BACK
 	cost = 4
 
 /datum/gear/weapon/m4a3_custom
-	display_name = "M4A3 Custom Pistol"
+	display_name = "Custom M4A3 Pistol"
 	path = /obj/item/storage/box/M4A3_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911
-	display_name = "M1911 Service Pistol"
+	display_name = "M1911 Pistol"
 	path = /obj/item/storage/box/M1911_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44
-	display_name = "M44 Combat Revolver"
+	display_name = "M44 Revolver"
 	path = /obj/item/storage/box/M44_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44_custom_revolver
-	display_name = "M44 Custom Revolver"
+	display_name = "Custom M44 Revolver"
 	path = /obj/item/storage/box/M44_custom_loadout
 	allowed_origins = USCM_ORIGINS
 

@@ -489,8 +489,8 @@
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
 
 /obj/item/weapon/gun/pistol/highpower
-	name = "\improper HG-45 Super pistol"
-	desc = "A semi-automatic Henjin-Garcia design that is slowly replacing the Office of the Colonial Marshals Spearhead revolver. chambered in .45 ACP."
+	name = "\improper HG 45 'Aguila' pistol"
+	desc = "A semi-automatic Henjin-Garcia design chambered in .45 ACP that is slowly replacing the Office of the Colonial Marshals's Spearhead revolver."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "highpower"
 	item_state = "highpower"
@@ -533,15 +533,17 @@
 //the parent has a blueish tint, making it look best for civilian usage (colonies, marshals). this one has a black tint on its metal, making it best for military groups like VAIPO, elite mercs, etc.
 // black tinted magazines also included
 /obj/item/weapon/gun/pistol/highpower/black
+	name = "\improper HG 45 'Marina' pistol"
 	current_mag = /obj/item/ammo_magazine/pistol/highpower/black
 	icon_state = "highpower_b"
 	item_state = "highpower_b"
+	desc = "A semi-automatic Henjin-Garcia design chambered in .45 ACP that is slowly replacing the Office of the Colonial Marshals's Spearhead revolver. Unlike its more common siblings, this variant was marketed and successfully sold in small quantities to the USCM."
 
 //unimplemented
 /obj/item/weapon/gun/pistol/highpower/tactical
-	name = "\improper MK-44 SOCOM Automagnum"
-	desc = "Originally designed as a replacement for the USCM's M44 combat revolver, it was rejected at the last minute by a committee, citing its need to be cocked after every loaded magazine to be too cumbersone and antiquated. The design has recently been purchased by the Henjin-Garcia company and sold to the Colonial Marshals and other various unscrupulous armed groups. This one has a sleek, dark design."
-	current_mag = /obj/item/ammo_magazine/pistol/highpower/black
+	name = "\improper HG 44 'Automag' pistol"
+	desc = "A suppressed, laser sighted, semi-automatic Henjin-Garcia design chambered in .44 magnum that was abandoned in favour of the popular HG 45 configuration chambered in .45 ACP."
+	current_mag = /obj/item/ammo_magazine/pistol/highpower/automag
 	icon_state = "highpower_tac"
 	item_state = "highpower_tac"
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
@@ -575,7 +577,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/stock/mod88,
+		/obj/item/attachable/stock/vp70,
 	)
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()

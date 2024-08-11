@@ -411,7 +411,7 @@
 	weapon_type = /obj/item/weapon/gun/pistol/m4a3/training
 	ammo_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/structure/closet/crate/weapon/training/mod88
+/obj/structure/closet/crate/weapon/training/vp70
 	name = "training VP70 crate"
 	desc = "A crate with an VP70 pistol and nonlethal ammunition for it. Intended for use in combat exercises."
 	weapon_type = /obj/item/weapon/gun/pistol/vp70/training
