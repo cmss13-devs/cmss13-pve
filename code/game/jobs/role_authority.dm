@@ -209,6 +209,15 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	for(var/mob/new_player/M in GLOB.player_list) //Get all players who are ready.
 		if(!M.ready || M.job)
 			continue
+	// [RU-PVE-EDIT]
+		if(M.client.total_enter_lock)
+			to_chat(M, SPAN_NOTICE("You have BLACKLISTED from entering!"))
+			return
+		if(!enter_allowed)
+			if(!check_rights(, show_msg = FALSE) && M.client.enter_lock_bypass)
+				to_chat(M, SPAN_NOTICE("There is an administrative lock on entering the game!"))
+				return
+	// [/RU-PVE-EDIT]
 
 		unassigned_players += M
 
