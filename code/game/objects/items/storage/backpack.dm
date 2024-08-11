@@ -1027,7 +1027,7 @@
 		/obj/item/weapon/gun/rifle/m4ra/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
-		/obj/item/weapon/gun/pistol/mod88/training) //Ivan doesn't carry toys.
+		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.
 
 	var/list/picklist = subtypesof(/obj/item/weapon/gun) - (template_guns + bad_guns + emplacements + yautja_guns + smartguns + training_guns)
 	var/random_gun = pick(picklist)

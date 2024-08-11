@@ -491,7 +491,7 @@
 		icon_state = "[initial(icon_state)]_e"
 
 /obj/item/storage/box/kit/cryo_self_defense/fill_preset_inventory()
-	new /obj/item/weapon/gun/pistol/mod88/flashlight(src)
+	new /obj/item/weapon/gun/pistol/vp70/flashlight(src)
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, pick("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti chunks", "chicken tender"))
 

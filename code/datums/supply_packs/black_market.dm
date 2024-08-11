@@ -683,7 +683,7 @@ USCM spare items, miscellaneous gear that's too niche and distant (or restricted
 	contains = list(
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
-		/obj/item/ammo_magazine/pistol/mod88/rubber,
+		/obj/item/ammo_magazine/pistol/vp70/rubber,
 		/obj/item/ammo_magazine/rifle/rubber,
 		/obj/item/ammo_magazine/rifle/m4ra/rubber,
 		/obj/item/ammo_magazine/shotgun/beanbag,

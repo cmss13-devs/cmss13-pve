@@ -360,19 +360,19 @@
 
 //Handgun case for Military police vendor three mag , a railflashligh and the handgun.
 
-//88 Mod 4 Combat Pistol
+//VP70 Combat Pistol
 /obj/item/storage/box/guncase/mod88
-	name = "\improper 88 Mod 4 Combat Pistol case"
-	desc = "A gun case containing an 88 Mod 4 Combat Pistol."
+	name = "\improper VP70 Combat Pistol case"
+	desc = "A gun case containing an VP70 Combat Pistol."
 	storage_slots = 5
-	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/pistol/mod88, /obj/item/ammo_magazine/pistol/mod88)
+	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/pistol/vp70, /obj/item/ammo_magazine/pistol/vp70)
 
 /obj/item/storage/box/guncase/mod88/fill_preset_inventory()
 	new /obj/item/attachable/flashlight(src)
-	new /obj/item/weapon/gun/pistol/mod88(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/weapon/gun/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
 
 //M44 Combat Revolver
 /obj/item/storage/box/guncase/m44

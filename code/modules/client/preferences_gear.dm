@@ -728,17 +728,22 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "M4A3 Custom Pistol"
-	path = /obj/item/weapon/gun/pistol/m4a3/custom
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/m44_custom_revolver
-	display_name = "M44 Custom Revolver"
-	path = /obj/item/weapon/gun/revolver/m44/custom
+	path = /obj/item/storage/box/M4A3_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911
 	display_name = "M1911 Service Pistol"
 	path = /obj/item/storage/box/M1911_loadout
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/m44
+	display_name = "M44 Combat Revolver"
+	path = /obj/item/storage/box/M44_loadout
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/m44_custom_revolver
+	display_name = "M44 Custom Revolver"
+	path = /obj/item/storage/box/M44_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete

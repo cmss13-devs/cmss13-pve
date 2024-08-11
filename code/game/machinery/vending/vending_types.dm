@@ -270,7 +270,7 @@
 	products = list(
 		/obj/item/ammo_magazine/smg/m39/rubber = 20,
 		/obj/item/ammo_magazine/pistol/rubber = 20,
-		/obj/item/ammo_magazine/pistol/mod88/rubber = 20,
+		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
 		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,

@@ -62,45 +62,45 @@
 //-------------------------------------------------------
 //88M4 based off VP70
 
-/obj/item/ammo_magazine/pistol/mod88
+/obj/item/ammo_magazine/pistol/vp70
 	name = "\improper 88M4 AP magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap
 	caliber = "9mm"
 	icon_state = "88m4"
 	max_rounds = 19
-	gun_type = /obj/item/weapon/gun/pistol/mod88
+	gun_type = /obj/item/weapon/gun/pistol/vp70
 	ammo_band_icon = "+88m4_band"
 	ammo_band_icon_empty = "+88m4_band_e"
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
-/obj/item/ammo_magazine/pistol/mod88/normalpoint // Unused
-	name = "\improper 88M4 magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70/normalpoint // Unused
+	name = "\improper VP70 Magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 	ammo_band_color = null
 
-/obj/item/ammo_magazine/pistol/mod88/normalpoint/extended // Unused
+/obj/item/ammo_magazine/pistol/vp70/normalpoint/extended // Unused
 	name = "\improper 88M4 extended magazine (9mm)"
 	icon_state = "88m4_mag_ex"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 
-/obj/item/ammo_magazine/pistol/mod88/toxin
+/obj/item/ammo_magazine/pistol/vp70/toxin
 	name = "\improper 88M4 toxic magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
-/obj/item/ammo_magazine/pistol/mod88/penetrating
+/obj/item/ammo_magazine/pistol/vp70/penetrating
 	name = "\improper 88M4 wall-penetrating magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
-/obj/item/ammo_magazine/pistol/mod88/incendiary
+/obj/item/ammo_magazine/pistol/vp70/incendiary
 	name = "\improper 88M4 incendiary magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/pistol/mod88/rubber
+/obj/item/ammo_magazine/pistol/vp70/rubber
 	name = "\improper 88M4 rubber magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER

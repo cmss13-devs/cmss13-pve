@@ -27,7 +27,7 @@
 		/obj/item/attachable/burstfire_assembly,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //For easy reference.
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //For easy reference.
 	gun_category = GUN_CATEGORY_HANDGUN
 
 /obj/item/weapon/gun/pistol/Initialize(mapload, spawn_empty)
@@ -48,12 +48,13 @@
 
 /obj/item/weapon/gun/pistol/m4a3
 	name = "\improper M4A3 service pistol"
-	desc = "An M4A3 Service Pistol, once the standard issue sidearm of the Colonial Marines but has recently been replaced with the Weyland Yutani 88 Mod 4 combat pistol. Fires 9mm pistol rounds."
+	desc = "The recently replaced service pistol of the USCM. Chambered in 9mm, it remains popular due to its concealability and versatility in enclosed spaces."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m4a3"
 	item_state = "m4a3"
+	fire_sound = "88m4"
 	current_mag = /obj/item/ammo_magazine/pistol
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -103,22 +104,18 @@
 
 
 //-------------------------------------------------------
-//M4A3 45 //Inspired by the 1911
-//deprecated
 
 /obj/item/weapon/gun/pistol/m1911
 	name = "\improper M1911 service pistol"
-	desc = "A timeless classic since the first World War. Once standard issue for the USCM, now back order only. Chambered in .45 ACP. Unfortunately, due to the progression of IFF technology, M1911 .45 ACP is NOT compatible with the SU-6."
+	desc = "Despite never being an official service pistol for the USCM, its .45 ACP chambering and cultural history with the Corps keeps it a popular pistol, enough so that a large quantity are owned by the USCM."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m4a345"
 	item_state = "m4a3"
-
+	fire_sound = 'sound/weapons/gun_vp78_v2.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/m1911
-
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
-
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_config_values()
 	..()
@@ -126,10 +123,9 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
-	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
-
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/pistol/m1911/socom
 	name = "\improper M48A4 service pistol"
@@ -146,7 +142,7 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 
 /obj/item/weapon/gun/pistol/m1911/socom/equipped
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
@@ -265,13 +261,13 @@
 
 /obj/item/weapon/gun/pistol/np92
 	name = "\improper NP92 pistol"
-	desc = "The standard issue sidearm of the UPP. The NP92 is a small but powerful sidearm, well-liked by most it is issued to, although some prefer the weapon it was meant to replace, the Type 73. Takes 12 round magazines."
+	desc = "The standard issue sidearm of the UPP. Chambered in 9x18mm Makarov, The NP92 is a small versatile pistol."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "np92"
 	item_state = "np92"
 	fire_sound = "88m4"
 	current_mag = /obj/item/ammo_magazine/pistol/np92
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -301,7 +297,7 @@
 	inherent_traits = list(TRAIT_GUN_SILENCED)
 	fire_sound = "gun_silenced"
 	current_mag = /obj/item/ammo_magazine/pistol/np92/suppressed
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
@@ -317,11 +313,12 @@
 
 /obj/item/weapon/gun/pistol/t73
 	name = "\improper Type 73 pistol"
-	desc = "The Type 73 is the once-standard issue sidearm of the UPP. Replaced by the NP92 in UPP use, it remains popular with veteran UPP troops due to familiarity and extra power. Due to an extremely large amount being produced, they tend to end up in the hands of forces attempting to arm themselves on a budget. Users include the Union of Progressive Peoples, Colonial Liberation Front, and just about any mercenary or pirate group out there."
+	desc = "Once the standard issue sidearm of the UPP but replaced by the smaller NP92. Chambered with 7.62x25mm Tokarev, it remains popular with veteran UPP troops due to its extra firepower."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "tt"
 	item_state = "tt"
-	fire_sound = 'sound/weapons/gun_tt.ogg'
+	fire_sound = 'sound/weapons/gun_vp78_v2.ogg'
+//	fire_sound = 'sound/weapons/gun_tt.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/t73
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	attachable_allowed = list(
@@ -353,7 +350,7 @@
 	icon_state = "ttb"
 	item_state = "ttb"
 	current_mag = /obj/item/ammo_magazine/pistol/t73_impact
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/t73_impact,
@@ -456,7 +453,7 @@
 //-------------------------------------------------------
 //CLF HOLDOUT PISTOL
 /obj/item/weapon/gun/pistol/clfpistol
-	name = "D18 Hummingbird Pistol"
+	name = "D18 Hummingbird pistol"
 	desc = "The D18 Hummingbird Pistol was produced in the mid-2170s as a cheap and concealable firearm for CLF Sleeper Cell agents for assassinations and ambushes, and is able to be concealed in shoes and workboots."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m43"
@@ -491,12 +488,12 @@
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
 
 /obj/item/weapon/gun/pistol/highpower
-	name = "\improper MK-45 'High-Power' Automagnum"
-	desc = "Originally designed as a replacement for the USCM's M44 combat revolver, it was rejected at the last minute by a committee, citing its need to be cocked after every loaded magazine to be too cumbersone and antiquated. The design has recently been purchased by the Henjin-Garcia company, refitted for .45 ACP, and sold to the Colonial Marshals and other various unscrupulous armed groups."
+	name = "\improper HG-45 Super pistol"
+	desc = "A semi-automatic Henjin-Garcia design that is slowly replacing the Office of the Colonial Marshals Spearhead revolver. hambered in .45 ACP."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "highpower"
 	item_state = "highpower"
-	fire_sound = 'sound/weapons/gun_kt42.ogg'
+	fire_sound = 'sound/weapons/gun_vp78_v2.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/highpower
 	force = 15
 	attachable_allowed = list(
@@ -517,50 +514,18 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/burstfire_assembly,
 	)
-	/// This weapon needs to be manually racked every time a new magazine is loaded. I tried and failed to touch gun shitcode so this will do.
-	var/manually_slided = FALSE
-
-/obj/item/weapon/gun/pistol/highpower/Initialize(mapload, spawn_empty)
-	. = ..()
-	manually_slided = TRUE
-
-/obj/item/weapon/gun/pistol/highpower/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
-	if(!manually_slided)
-		click_empty()
-		to_chat(user, SPAN_DANGER("\The [src] makes a clicking noise! You need to manually rack the slide after loading in a new magazine!"))
-		return NONE
-	return ..()
-
-/obj/item/weapon/gun/pistol/highpower/unique_action(mob/user)
-	if(!manually_slided)
-		user.visible_message(SPAN_NOTICE("[user] racks \the [src]'s slide."), SPAN_NOTICE("You rack \the [src]'s slide, loading the next bullet in."))
-		manually_slided = TRUE
-		cock_gun(user, TRUE)
-		return
-	..()
-
-/obj/item/weapon/gun/pistol/highpower/cock_gun(mob/user, manual = FALSE)
-	if(manual)
-		..()
-	else return
-
-/obj/item/weapon/gun/pistol/highpower/reload(mob/user, obj/item/ammo_magazine/magazine)
-	//reset every time its reloaded
-	manually_slided = FALSE
-	..()
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 6, "rail_y" = 22, "under_x" = 20, "under_y" = 15, "stock_x" = 0, "stock_y" = 0)
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_fire_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
-	recoil = RECOIL_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 //also comes in.... BLAPCK
@@ -584,9 +549,9 @@
 //-------------------------------------------------------
 //mod88 based off VP70 - Counterpart to M1911, offers burst and capacity ine exchange of low accuracy and damage.
 
-/obj/item/weapon/gun/pistol/mod88
-	name = "\improper 88 Mod 4 combat pistol"
-	desc = "Standard issue USCM firearm. Also found in the hands of Weyland-Yutani PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst."
+/obj/item/weapon/gun/pistol/vp70
+	name = "\improper VP70 combat pistol"
+	desc = "Standard issue USCM service pistol. Recently replacing the M4A3, it retains its predecessor's 9mm chambering but offers both higher magazine capacity and a 3-round burst selector."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "88m4"
 	item_state = "88m4"
@@ -594,9 +559,9 @@
 	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_88m4_reload.ogg'
 	unload_sound = 'sound/weapons/gun_88m4_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/pistol/mod88/normalpoint
+	current_mag = /obj/item/ammo_magazine/pistol/vp70/normalpoint
 	force = 8
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/extended_barrel,
@@ -612,11 +577,11 @@
 		/obj/item/attachable/stock/mod88,
 	)
 
-/obj/item/weapon/gun/pistol/mod88/set_gun_attachment_offsets()
+/obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15)
 
 
-/obj/item/weapon/gun/pistol/mod88/set_gun_config_values()
+/obj/item/weapon/gun/pistol/vp70/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
@@ -629,11 +594,11 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
-/obj/item/weapon/gun/pistol/mod88/training
-	current_mag = /obj/item/ammo_magazine/pistol/mod88/rubber
+/obj/item/weapon/gun/pistol/vp70/training
+	current_mag = /obj/item/ammo_magazine/pistol/vp70/rubber
 
 
-/obj/item/weapon/gun/pistol/mod88/flashlight/handle_starting_attachment()
+/obj/item/weapon/gun/pistol/vp70/flashlight/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/flashlight/flashlight = new(src)
 	flashlight.Attach(src)
@@ -685,7 +650,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "vp78"
 	item_state = "vp78"
-
 	fire_sound = 'sound/weapons/gun_vp78_v2.ogg'
 	reload_sound = 'sound/weapons/gun_vp78_reload.ogg'
 	unload_sound = 'sound/weapons/gun_vp78_unload.ogg'

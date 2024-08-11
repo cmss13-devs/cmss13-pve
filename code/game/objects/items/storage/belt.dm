@@ -418,8 +418,8 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
 
 
 /obj/item/storage/belt/security/MP/UPP
@@ -1184,15 +1184,15 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 
-/obj/item/storage/belt/gun/m4a3/mod88/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+/obj/item/storage/belt/gun/m4a3/vp70/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
 
-/obj/item/storage/belt/gun/m4a3/mod88_near_empty/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+/obj/item/storage/belt/gun/m4a3/vp70_near_empty/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to 3)
-		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70/normalpoint(src)
 
 /obj/item/storage/belt/gun/m4a3/vp78/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
@@ -1582,11 +1582,11 @@
 		/obj/item/ammo_magazine/rifle/m4ra/rubber,
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
-		/obj/item/ammo_magazine/pistol/mod88/rubber) //Ivan doesn't bring children's ammo.
+		/obj/item/ammo_magazine/pistol/vp70/rubber) //Ivan doesn't bring children's ammo.
 
 	var/list/picklist = subtypesof(/obj/item/ammo_magazine) - (internal_mags + bad_mags + sentry_mags + training_mags)
 	var/random_mag = pick(picklist)
-	var/guntype = pick(subtypesof(/obj/item/weapon/gun/revolver) + subtypesof(/obj/item/weapon/gun/pistol) - list(/obj/item/weapon/gun/pistol/m4a3/training, /obj/item/weapon/gun/pistol/mod88/training))
+	var/guntype = pick(subtypesof(/obj/item/weapon/gun/revolver) + subtypesof(/obj/item/weapon/gun/pistol) - list(/obj/item/weapon/gun/pistol/m4a3/training, /obj/item/weapon/gun/pistol/vp70/training))
 	handle_item_insertion(new guntype())
 	for(var/total_storage_slots in 2 to storage_slots) //minus templates
 		new random_mag(src)
@@ -1839,7 +1839,7 @@
 
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool(src)

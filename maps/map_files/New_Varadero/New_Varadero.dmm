@@ -3754,8 +3754,8 @@
 /area/varadero/interior/hall_SE)
 "cur" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88{
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70{
 	pixel_y = -2
 	},
 /obj/structure/machinery/storm_siren{
@@ -28679,15 +28679,15 @@
 /area/varadero/interior/maintenance/security)
 "syb" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70/normalpoint,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -32044,7 +32044,7 @@
 	icon_state = "cartridge_1_1"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/plating/icefloor{
 	icon_state = "asteroidplating"
 	},

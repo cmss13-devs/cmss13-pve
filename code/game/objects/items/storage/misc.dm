@@ -138,19 +138,61 @@
 	new /obj/item/ammo_magazine/pistol/t73(src)
 	new /obj/item/ammo_magazine/pistol/t73(src)
 
-/obj/item/storage/box/M1911_loadout
-	name = "M1911 storage case"
-	desc = "A relatively large storage case containing the 1911 and additional magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
+/obj/item/storage/box/M4A3_custom_loadout
+	name = "M4A3 storage case"
+	desc = "A relatively large storage case containing a loaded M4A3 and two additional magazines."
 	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
-	
+
+/obj/item/storage/box/M4A3_custom_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/m4a3/custom(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/box/M1911_loadout
+	name = "M1911 storage case"
+	desc = "A relatively large storage case containing a loaded M1911 and two additional magazines."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+
 /obj/item/storage/box/M1911_loadout/fill_preset_inventory()
 	new /obj/item/weapon/gun/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
+
+/obj/item/storage/box/M44_loadout
+	name = "M44 storage case"
+	desc = "A relatively large storage case containing a loaded M44 revolver and two additional speedloaders."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+
+/obj/item/storage/box/M44_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/revolver/m44(src)
+	new /obj/item/ammo_magazine/revolver(src)
+	new /obj/item/ammo_magazine/revolver(src)
+
+/obj/item/storage/box/M44_custom_loadout
+	name = "M44 storage case"
+	desc = "A relatively large storage case containing a loaded M44 revolver and two additional speedloaders."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+
+/obj/item/storage/box/M44_custom_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/revolver/m44/custom(src)
+	new /obj/item/ammo_magazine/revolver(src)
+	new /obj/item/ammo_magazine/revolver(src)
 
 /obj/item/storage/box/co2_knife
 	name = "M8 cartridge bayonet packaging"
