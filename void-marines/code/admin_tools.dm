@@ -72,3 +72,72 @@
 			M.gender = FEMALE
 	M.update_hair()
 	M.update_body()
+
+//	ENTERING BYPASS and other shit. \\
+
+/client
+	var/enter_lock_bypass = 0
+	var/total_enter_lock = 0
+
+/client/proc/allow_to_join()
+	set name = "Entering Lock Bypass"
+	set category = "Game Master.Moderation"
+
+	if(!check_rights())
+		return
+	var/client/player = tgui_input_list(usr, "Выберите игрока, что сможет обойти запрет на вход.", "Allow Bypass Entering Lock", GLOB.clients)
+	if(!player.enter_lock_bypass)
+		player.enter_lock_bypass = 1
+		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Высшие силы даровали возможность тебе зайти!")))
+		if(player.prefs.toggles_sound & SOUND_ADMINHELP)
+			SEND_SOUND(player, sound('sound/effects/adminhelp_new.ogg'))
+		message_admins("[usr] Игроку [player.ckey] дали возможность зайти в игру.")
+	else
+		player.enter_lock_bypass = 0
+		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Высшие силы изъяли у тебя возможность зайти!")))
+		message_admins("[usr] У игрока [player.ckey] забрали возможность зайти в игру.")
+
+/*
+* Прок блокирующий вход игроку на раунд
+*/
+/client/proc/disallow_to_join()
+	set name = "Blacklist"
+	set category = "Game Master.Moderation"
+
+	if(!check_rights())
+		return
+	var/client/player = tgui_input_list(usr, "Выберите игрока, что будет исключен/включен.", "Blacklist", GLOB.clients)
+	if(!player.total_enter_lock)
+		player.total_enter_lock = 1
+		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Ты исключен из игры на раунд. Ты можешь только наблюдать за ходом игры, но не сможешь зайти.")))
+		if(player.prefs.toggles_sound & SOUND_ADMINHELP)
+			SEND_SOUND(player, sound('sound/effects/adminhelp_new.ogg'))
+		message_admins("[usr] исключил из игры [player.ckey].")
+	else
+		player.total_enter_lock = 0
+		to_chat(player, FONT_SIZE_BIG(SPAN_NOTICE("Тебя вернули в игру. Теперь ты можеь попытаться зайти.")))
+		if(player.prefs.toggles_sound & SOUND_ADMINHELP)
+			SEND_SOUND(player, sound('sound/effects/adminhelp_new.ogg'))
+		message_admins("[usr] вернул в игру [player.ckey]. Увы и ах!")
+
+//	var/client/player = target
+//	if(player == null)
+//	var/client/player = tgui_input_list(usr, "Выберите игрока, что будет исключен/включен.", "Blacklist", GLOB.clients)
+
+
+// Some MODULAR code \\
+
+/client/add_admin_verbs()
+	. = ..()
+	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
+		add_verb(src, /client/proc/disallow_to_join)
+		add_verb(src, /client/proc/allow_to_join)
+		add_verb(src, /client/proc/gm_lighting) //RU-PVE
+
+/client/remove_admin_verbs()
+	. = ..()
+	remove_verb(src, list(
+		/client/proc/disallow_to_join,
+		/client/proc/allow_to_join,
+		/client/proc/gm_lighting,
+	))

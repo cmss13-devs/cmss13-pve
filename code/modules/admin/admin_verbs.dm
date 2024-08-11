@@ -338,7 +338,6 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
-		add_verb(src, /client/proc/gm_lighting) //RU-PVE
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, admin_verbs_server)
@@ -377,7 +376,6 @@ var/list/roundstart_mod_verbs = list(
 		/client/proc/toggle_vehicle_blockers,
 		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
-		/client/proc/gm_lighting, //RU-PVE
 		/client/proc/toggle_fire_support_menu,
 		admin_verbs_admin,
 		admin_verbs_ban,
