@@ -1299,6 +1299,9 @@ and you're good to go.
 
 		if(active_attachable && !(active_attachable.flags_attach_features & ATTACH_PROJECTILE))
 			active_attachable.activate_attachment(src, null, TRUE)//We're not firing off a nade into our mouth.
+		if(!in_chamber) //did you even cock it?
+			click_empty(user)
+			return
 		var/obj/projectile/projectile_to_fire = load_into_chamber(user)
 		if(projectile_to_fire) //We actually have a projectile, let's move on.
 			user.visible_message(SPAN_WARNING("[user] pulls the trigger!"))
@@ -1354,6 +1357,9 @@ and you're good to go.
 
 		flags_gun_features ^= GUN_CAN_POINTBLANK //Reset this.
 		return TRUE
+	if(!in_chamber) //did you even cock it?
+		click_empty(user)
+		return
 
 	if(EXECUTION_CHECK) //Execution
 		if(!able_to_fire(user)) //Can they actually use guns in the first place?
