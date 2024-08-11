@@ -489,7 +489,7 @@
 
 /obj/item/weapon/gun/pistol/highpower
 	name = "\improper HG-45 Super pistol"
-	desc = "A semi-automatic Henjin-Garcia design that is slowly replacing the Office of the Colonial Marshals Spearhead revolver. hambered in .45 ACP."
+	desc = "A semi-automatic Henjin-Garcia design that is slowly replacing the Office of the Colonial Marshals Spearhead revolver. chambered in .45 ACP."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "highpower"
 	item_state = "highpower"

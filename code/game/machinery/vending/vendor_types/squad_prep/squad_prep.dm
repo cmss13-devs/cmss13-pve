@@ -437,10 +437,6 @@
 		list("M4A3 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
-		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70/normalpoint, VENDOR_ITEM_REGULAR),
-		list("M4A3 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),

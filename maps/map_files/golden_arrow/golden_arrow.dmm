@@ -3915,14 +3915,11 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/mod88{
-	pixel_y = -7;
-	pixel_x = -5
-	},
 /obj/item/ammo_box/magazine/m4a3{
 	pixel_y = -7;
 	pixel_x = 5
 	},
+/obj/item/ammo_box/magazine/vp70,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "oM" = (
