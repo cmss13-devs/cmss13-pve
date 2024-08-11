@@ -49,6 +49,8 @@
 	var/cock_cooldown = 0
 	///Delay before we can cock again, in tenths of seconds
 	var/cock_delay = 5
+	//it's a lot easier to give things a var than throw the code in everywhere
+	var/special_chamber = FALSE
 
 	/**How the bullet will behave once it leaves the gun, also used for basic bullet damage and effects, etc.
 	Ammo will be replaced on New() for things that do not use mags.**/
@@ -855,9 +857,9 @@ User can be passed as null, (a gun reloading itself for instance), so we need to
 	user.drop_inv_item_to_loc(magazine, src) //Click!
 	current_mag = magazine
 	replace_ammo(user,magazine)
-	/*if(!in_chamber)
+	if(!in_chamber&&special_chamber)
 		ready_in_chamber()
-		cock_gun(user)*/
+		cock_gun(user)
 	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
 		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
 	if(reload_sound)
@@ -1075,7 +1077,7 @@ and you're good to go.
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
 	set waitfor = FALSE
-	if(!in_chamber)
+	if(!in_chamber&&!special_chamber)
 		click_empty(user)
 		return
 	if(!able_to_fire(user) || !target || !get_turf(user) || !get_turf(target))
@@ -1299,7 +1301,7 @@ and you're good to go.
 
 		if(active_attachable && !(active_attachable.flags_attach_features & ATTACH_PROJECTILE))
 			active_attachable.activate_attachment(src, null, TRUE)//We're not firing off a nade into our mouth.
-		if(!in_chamber) //did you even cock it?
+		if(!in_chamber&&!special_chamber) //did you even cock it?
 			click_empty(user)
 			return
 		var/obj/projectile/projectile_to_fire = load_into_chamber(user)
@@ -1365,7 +1367,7 @@ and you're good to go.
 		user.visible_message(SPAN_DANGER("[user] puts [src] up to [attacked_mob], steadying their aim."), SPAN_WARNING("You put [src] up to [attacked_mob], steadying your aim."),null, null, CHAT_TYPE_COMBAT_ACTION)
 		if(!do_after(user, 3 SECONDS, INTERRUPT_ALL|INTERRUPT_DIFF_INTENT, BUSY_ICON_HOSTILE))
 			return TRUE
-		if(!in_chamber) //did you even cock it?
+		if(!in_chamber&&!special_chamber) //did you even cock it?
 			click_empty(user)
 			return
 	else if(user.a_intent != INTENT_HARM) //Thwack them
@@ -1374,7 +1376,7 @@ and you're good to go.
 	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_ATTACK_DEAD) && attacked_mob.stat == DEAD) // don't shoot dead people
 		return afterattack(attacked_mob, user, TRUE)
 
-	if(!in_chamber) //did you even cock it?
+	if(!in_chamber&&!special_chamber) //did you even cock it?
 		click_empty(user)
 		return
 

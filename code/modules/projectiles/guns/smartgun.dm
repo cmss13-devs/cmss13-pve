@@ -65,6 +65,7 @@
 	auto_retrieval_slot = WEAR_J_STORE
 	start_semiauto = FALSE
 	start_automatic = TRUE
+	special_chamber = TRUE
 
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
