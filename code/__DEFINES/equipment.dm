@@ -82,6 +82,10 @@
 #define ANIMATED_SURGICAL_TOOL (1<<12)
 /// Has heat source but isn't 'on fire' and thus can be stored
 #define IGNITING_ITEM (1<<13)
+/// Overrides NODROP in some cases (stripping)
+#define FORCEDROP_CONDITIONAL (1<<14)
+/// Overrides smartgunner not being able to wear backpacks
+#define SMARTGUNNER_BACKPACK_OVERRIDE (1<<15)
 //==========================================================================================
 
 
@@ -550,10 +554,10 @@ var/global/list/uniform_categories = list(
 #define PHONE_UPP_SOLDIER "Soldier"
 #define PHONE_IO "IO"
 
-#define PHONE_DO_NOT_DISTURB_FORCED 2
-#define PHONE_DO_NOT_DISTURB_ON 1
-#define PHONE_DO_NOT_DISTURB_OFF 0
-#define PHONE_DO_NOT_DISTURB_FORBIDDEN -1
+#define PHONE_DND_FORCED 2
+#define PHONE_DND_ON 1
+#define PHONE_DND_OFF 0
+#define PHONE_DND_FORBIDDEN -1
 
 #define PHONE_ON_BASE_UNIT_ICON_STATE "[initial(icon_state)]"
 #define PHONE_OFF_BASE_UNIT_ICON_STATE "[initial(icon_state)]_ear"
