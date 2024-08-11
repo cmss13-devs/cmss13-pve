@@ -290,8 +290,8 @@
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
 
 /obj/item/ammo_magazine/pistol/highpower
-	name = "\improper MK-45 Automagnum magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/highpower
+	name = "\improper HG-45 Super magazine (.45)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"

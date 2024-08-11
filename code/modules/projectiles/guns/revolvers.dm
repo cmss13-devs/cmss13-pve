@@ -288,12 +288,12 @@
 //M44 Revolver
 
 /obj/item/weapon/gun/revolver/m44
-	name = "\improper M44 revolver"
-	desc = ".44 Magnum revolver, in limited service with the USCMC for personal defense against larger xenofauna. For best results, aim carefully."
+	name = "\improper Model 12 'Point-gun' revolver"
+	desc = "A popular Grant corporation revolver for self-defense because of its seven round capacity and hard hitting .44 magnum chambering."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
-
+	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
 	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'

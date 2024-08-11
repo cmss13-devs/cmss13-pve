@@ -153,7 +153,7 @@
 	new /obj/item/ammo_magazine/pistol(src)
 
 
-/obj/item/storage/box/HG45_custom_loadout
+/obj/item/storage/box/HG45_loadout
 	name = "HG-45 Super storage case"
 	desc = "A relatively large storage case containing a loaded HG-45 Super and two additional magazines."
 	icon = 'icons/obj/items/storage.dmi'

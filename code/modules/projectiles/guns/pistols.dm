@@ -6,6 +6,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	reload_sound = 'sound/weapons/flipblade.ogg'
 	cocked_sound = 'sound/weapons/gun_pistol_cocked.ogg'
+	empty_sound = 'sound/weapons/gun_empty.ogg'
 
 	matter = list("metal" = 2000)
 	flags_equip_slot = SLOT_WAIST
@@ -27,7 +28,7 @@
 		/obj/item/attachable/burstfire_assembly,
 	)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //For easy reference.
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //For easy reference.
 	gun_category = GUN_CATEGORY_HANDGUN
 
 /obj/item/weapon/gun/pistol/Initialize(mapload, spawn_empty)
