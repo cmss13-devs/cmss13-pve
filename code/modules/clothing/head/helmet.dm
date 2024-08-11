@@ -495,6 +495,17 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		helmet_bash_cooldown = world.time + 20 SECONDS
 		return
 
+//RU-PVE ADDITION STARTS
+	if(istype(attacking_item, /obj/item/cell/apc))
+		var/obj/item/cell/apc/power_source = attacking_item
+		for(var/obj/item/device/helmet_visor/night_vision/nvg in (built_in_visors + inserted_visors))
+			if(do_after(user, 10 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				nvg.power_cell.charge += power_source.charge
+				power_source.charge = 0
+				if(nvg.power_cell.charge > nvg.power_cell.maxcharge)
+					nvg.power_cell.charge = nvg.power_cell.maxcharge
+					to_chat(user, SPAN_NOTICE("You quickly attached [power_source] to [src], reloading it's [nvg] power."))
+//RU-PVE ADDITION ENDS
 	if(istype(attacking_item, /obj/item/device/helmet_visor))
 		if(length(inserted_visors) >= max_inserted_visors)
 			to_chat(user, SPAN_NOTICE("[src] has used all of its visor attachment sockets."))
@@ -772,7 +783,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "M10 combat helmet issued to marine hospital corpsmen. Has a red cross painted on its front for attracting the injured and snipers' attentions alike."
 	icon_state = "med_helmet"
 	specialty = "M10 pattern medic"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/night_vision, new /obj/item/device/helmet_visor/medical/advanced)
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/night_vision)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 
 /obj/item/clothing/head/helmet/marine/covert
