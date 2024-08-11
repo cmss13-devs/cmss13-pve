@@ -3146,7 +3146,7 @@
 
 /obj/item/reagent_container/food/snacks/packaged_burrito
 	name = "Packaged Burrito"
-	desc = "A hard microwavable burrito. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	desc = "A hard microwavable burrito. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	icon_state = "packaged-burrito"
 	bitesize = 2
 	package = 1
@@ -3165,9 +3165,21 @@
 		package = 0
 		icon_state = "open-burrito"
 
+/obj/item/reagent_container/food/snacks/microwaved_burrito
+	name = "Microwaved Burrito"
+	desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
+	icon_state = "open-burrito"
+	bitesize = 2
+	package = 0
+
+/obj/item/reagent_container/food/snacks/microwaved_burrito/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 6)
+	reagents.add_reagent("meatprotein", 6)
+
 /obj/item/reagent_container/food/snacks/packaged_burger
 	name = "Packaged Cheeseburger"
-	desc = "A soggy microwavable burger. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	desc = "A soggy microwavable burger. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	icon_state = "burger"
 	bitesize = 3
 	package = 1
@@ -3176,6 +3188,7 @@
 	. = ..()
 	reagents.add_reagent("bread", 5)
 	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("cheese", 2)
 	reagents.add_reagent("sodiumchloride", 2)
 
 
@@ -3189,9 +3202,23 @@
 		icon_state = "hburger"
 		item_state = "burger"
 
+/obj/item/reagent_container/food/snacks/microwaved_burger
+	name = "Microwaved Cheeseburger"
+	desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
+	icon_state = "hburger"
+	bitesize = 3
+	package = 0
+
+/obj/item/reagent_container/food/snacks/packaged_burger/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 6)
+	reagents.add_reagent("meatprotein", 6)
+	reagents.add_reagent("cheese", 2)
+	reagents.add_reagent("sodiumchloride", 2)
+
 /obj/item/reagent_container/food/snacks/packaged_hdogs
 	name = "Packaged Hotdog"
-	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, so you assume its probably good to go. Packaged by the Weyland-Yutani Corporation."
+	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	icon_state = "packaged-hotdog"
 	bitesize = 2
 	package = 1
@@ -3210,6 +3237,19 @@
 		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy hotdog!"))
 		package = 0
 		icon_state = "open-hotdog"
+
+/obj/item/reagent_container/food/snacks/microwaved_hdogs
+	name = "Microwaved Hotdog"
+	desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
+	icon_state = "open-hotdog"
+	bitesize = 2
+	package = 0
+
+/obj/item/reagent_container/food/snacks/microwaved_hdogs/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 3)
+	reagents.add_reagent("meatprotein", 2)
+	reagents.add_reagent("sodiumchloride", 2)
 
 /obj/item/reagent_container/food/snacks/upp
 	name = "\improper UPP ration"

@@ -654,6 +654,24 @@
 
 //other
 
+/datum/recipe/microwaved_burrito
+	items = list(
+		/obj/item/reagent_container/food/snacks/packaged_burrito,
+	)
+	result = /obj/item/reagent_container/food/snacks/microwaved_burrito
+
+/datum/recipe/microwaved_cheeseburger
+	items = list(
+		/obj/item/reagent_container/food/snacks/packaged_burger,
+	)
+	result = /obj/item/reagent_container/food/snacks/microwaved_burger
+
+/datum/recipe/microwaved_hdogs
+	items = list(
+		/obj/item/reagent_container/food/snacks/packaged_hdogs,
+	)
+	result = /obj/item/reagent_container/food/snacks/microwaved_hdogs
+
 /datum/recipe/hotdog
 	items = list(
 		/obj/item/reagent_container/food/snacks/bun,
