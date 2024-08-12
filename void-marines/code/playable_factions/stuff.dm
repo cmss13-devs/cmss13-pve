@@ -400,6 +400,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 	name = "freelancer headset"
 	desc = "A standard headset used by colonists and truckers"
 	frequency = MERC_FREQ
+	has_hud = TRUE
 
 /obj/item/reagent_container/food/drinks/cans/soylent
 	name = "\improper Weyland-Yutani Meal Ready-to-Drink"

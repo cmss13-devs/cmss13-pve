@@ -1,8 +1,8 @@
-/datum/faction/pmc
-	name = "Private Military Company"
-	faction_tag = FACTION_PMC
+/datum/faction/lancer
+	name = "Yo-ho-ho we are pirates!"
+	faction_tag = FACTION_FREELANCER
 
-/datum/faction/pmc/modify_hud_holder(image/holder, mob/living/carbon/human/H)
+/datum/faction/lancer/modify_hud_holder(image/holder, mob/living/carbon/human/H)
 	var/hud_icon_state
 	var/obj/item/card/id/ID = H.get_idcard()
 	var/_role
@@ -11,29 +11,28 @@
 	else if(ID)
 		_role = ID.rank
 	switch(_role)
-		if(JOB_PMC_DIRECTOR, JOB_SO) //RU-PVE ADDITION
+		if(JOB_RTO_FL) //RU-PVE ADDITION
 			hud_icon_state = "sd"
-		if(JOB_PMC_LEADER, JOB_PMC_LEAD_INVEST)
-			hud_icon_state = "ld"
-		if(JOB_PMC_DOCTOR)
-			hud_icon_state = "td"
-		if(JOB_PMC_ENGINEER)
-			hud_icon_state = "ct"
-		if(JOB_PMC_MEDIC, JOB_PMC_INVESTIGATOR)
-			hud_icon_state = "md"
-		if(JOB_PMC_SYNTH)
-			hud_icon_state = "syn"
+		if(JOB_SQUAD_LEADER_FL)
+			hud_icon_state = "leader_a"
+		if(JOB_SQUAD_TEAM_LEADER_FL)
+			hud_icon_state = "tl"
+		if(JOB_SQUAD_SMARTGUN_FL)
+			hud_icon_state = "gun"
+		if(JOB_SQUAD_MEDIC_FL)
+			hud_icon_state = "med"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "pmc_[hud_icon_state]")
 
+//RU-PVE ADDITION STARTS
 	var/datum/squad/squad = H.assigned_squad
-	if(istype(squad, /datum/squad/marine/pmc))
+	if(istype(squad, /datum/squad/marine/fl))
 		var/squad_clr = H.assigned_squad.equipment_color
 		switch(GET_DEFAULT_ROLE(_role))
-			if(JOB_SQUAD_MEDIC) hud_icon_state = "med"
-			if(JOB_SQUAD_SMARTGUN) hud_icon_state = "gun"
-			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
-			if(JOB_SQUAD_LEADER) hud_icon_state = "leader_a"
+			if(JOB_SQUAD_MEDIC_FL) hud_icon_state = "med"
+			if(JOB_SQUAD_SMARTGUN_FL) hud_icon_state = "gun"
+			if(JOB_SQUAD_TEAM_LEADER_FL) hud_icon_state = "tl"
+			if(JOB_SQUAD_LEADER_FL) hud_icon_state = "leader_a"
 
 		if(!hud_icon_state) hud_icon_state = H.rank_fallback
 		if(hud_icon_state)

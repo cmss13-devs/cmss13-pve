@@ -4,7 +4,7 @@
 	chat_color = "#687a9c"
 	access = list(ACCESS_ILLEGAL_PIRATE)
 	radio_freq = MERC_FREQ
-	minimap_color = "#687a9c"
+	minimap_color = MINIMAP_SQUAD_LANCER
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
@@ -72,6 +72,7 @@
 /datum/job/marine/leader/ai/fl
 	title = JOB_SQUAD_LEADER_FL
 	gear_preset = /datum/equipment_preset/uscm/leader/fl
+	job_options = null
 
 /obj/effect/landmark/start/marine/leader/fl
 	name = JOB_SQUAD_LEADER_FL
@@ -81,6 +82,7 @@
 /datum/job/marine/medic/ai/fl
 	title = JOB_SQUAD_MEDIC_FL
 	gear_preset = /datum/equipment_preset/uscm/medic/fl
+	job_options = null
 
 /obj/effect/landmark/start/marine/medic/fl
 	name = JOB_SQUAD_MEDIC_FL
@@ -89,7 +91,8 @@
 
 /datum/job/marine/smartgunner/ai/fl
 	title = JOB_SQUAD_SMARTGUN_FL
-	gear_preset = /datum/equipment_preset/uscm/smartgunner/fl
+	gear_preset = /datum/equipment_preset/uscm/sg/fl
+	job_options = null
 
 /obj/effect/landmark/start/marine/smartgunner/fl
 	name = JOB_SQUAD_SMARTGUN_FL
@@ -99,6 +102,7 @@
 /datum/job/marine/standard/ai/fl
 	title = JOB_SQUAD_RIFLEMAN_FL
 	gear_preset = /datum/equipment_preset/uscm/pfc/fl
+	job_options = null
 
 /obj/effect/landmark/start/marine/fl
 	name = JOB_SQUAD_RIFLEMAN_FL
@@ -108,6 +112,7 @@
 /datum/job/command/bridge/ai/fl
 	title = JOB_RTO_FL
 	gear_preset = /datum/equipment_preset/uscm/rto/fl
+	job_options = null
 
 /obj/effect/landmark/start/bridge/fl
 	name = JOB_RTO_FL
@@ -118,6 +123,7 @@
 /datum/job/marine/tl/ai/fl
 	title = JOB_SQUAD_TEAM_LEADER_FL
 	gear_preset = /datum/equipment_preset/uscm/tl/fl
+	job_options = null
 
 /obj/effect/landmark/start/marine/tl/ai/fl
 	name = JOB_SQUAD_TEAM_LEADER_FL

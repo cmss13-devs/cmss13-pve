@@ -80,9 +80,9 @@
 			if(SSticker.current_state < GAME_STATE_PREGAME)
 				to_chat(src, "Game is still starting up, please wait")
 				return
-			if(!SSentity_manager.ready)
-				to_chat(src, "DB is still starting up, please wait")
-				return
+//			if(!SSentity_manager.ready)
+//				to_chat(src, "DB is still starting up, please wait")
+//				return
 			client.prefs.ShowChoices(src)
 			return 1
 
