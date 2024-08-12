@@ -301,11 +301,11 @@
 //comes in black, for the black variant of the highpower, better for military usage
 
 /obj/item/ammo_magazine/pistol/highpower/black
-	name = "\improper HG 45 'Marina' pistol"
+	name = "\improper HG 45 'Marina' magazine (.45)"
 	icon_state = "highpower_b"
 
 /obj/item/ammo_magazine/pistol/highpower/automag
-	name = "\improper HG 44 'Automag' pistol"
+	name = "\improper HG 44 'Automag' magazine (.44)"
 	icon_state = "highpower_b"
 	max_rounds = 13
 	default_ammo = /datum/ammo/bullet/revolver

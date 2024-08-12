@@ -112,7 +112,7 @@
 	pixel_y = 21
 	},
 /obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/gun/pistol/highpower/tactical,
+/obj/item/weapon/gun/pistol/highpower/automag/tactical,
 /turf/open/floor/plating,
 /area/template_noop)
 "W" = (

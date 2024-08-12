@@ -288,8 +288,8 @@
 //M44 Revolver
 
 /obj/item/weapon/gun/revolver/m44
-	name = "\improper Model 12 'Point-gun' revolver"
-	desc = "A popular Grant corporation revolver for self-defense because of its seven round capacity and hard hitting .44 magnum chambering."
+	name = "\improper M44 revolver"
+	desc = ".44 Magnum revolver, in limited service with the USCMC for personal defense against larger xenofauna. For best results, aim carefully."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
@@ -700,8 +700,8 @@
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
 /obj/item/weapon/gun/revolver/cmb
-	name = "\improper CMB Spearhead autorevolver"
-	desc = "An automatic revolver chambered in .357 commonly issued to Colonial Marshals."
+	name = "\improper Spearhead Armoury autorevolver"
+	desc = "A semi-automatic revolver chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
