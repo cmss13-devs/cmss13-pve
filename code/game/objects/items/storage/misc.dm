@@ -181,6 +181,20 @@
 	new /obj/item/ammo_magazine/pistol/highpower/black(src)
 	new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
+/obj/item/storage/box/Spearhead_loadout
+	name = "Spearhead Armoury storage case"
+	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and two additional speedloaders."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "matebacase"
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 3
+
+/obj/item/storage/box/Spearhead_loadout/fill_preset_inventory()
+	new /obj/item/weapon/gun/revolver/spearhead/black(src)
+	new /obj/item/ammo_magazine/revolver/spearhead(src)
+	new /obj/item/ammo_magazine/revolver/spearhead(src)
+
 /obj/item/storage/box/M1911_loadout
 	name = "M1911 storage case"
 	desc = "A relatively large storage case containing a loaded M1911 and two additional magazines."

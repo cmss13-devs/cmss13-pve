@@ -756,6 +756,11 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/box/HG45_marine_loadout
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/spearhead
+	display_name = "Spearhead Armoury Autorevolver"
+	path = /obj/item/storage/box/Spearhead_loadout
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak

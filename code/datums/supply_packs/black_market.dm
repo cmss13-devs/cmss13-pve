@@ -410,12 +410,12 @@ Additionally, weapons that are way too good to put in the basically-flavor black
 /datum/supply_packs/contraband/seized/cmb
 	name = "CMB Spearhead revolver (x5 magazines included)"
 	contains = list(
-		/obj/item/weapon/gun/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
+		/obj/item/weapon/gun/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
 	)
 	dollar_cost = 20
 	containertype = /obj/structure/largecrate/black_market

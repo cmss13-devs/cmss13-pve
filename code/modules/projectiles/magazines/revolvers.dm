@@ -78,7 +78,7 @@
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/small
 
-/obj/item/ammo_magazine/revolver/cmb
+/obj/item/ammo_magazine/revolver/spearhead
 	name = "\improper Spearhead speed loader (.357)"
 	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
 	default_ammo = /datum/ammo/bullet/revolver/small
@@ -86,9 +86,9 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "cmb"
 	max_rounds = 6
-	gun_type = /obj/item/weapon/gun/revolver/cmb
+	gun_type = /obj/item/weapon/gun/revolver/spearhead
 
-/obj/item/ammo_magazine/revolver/cmb/hollowpoint
+/obj/item/ammo_magazine/revolver/spearhead/hollowpoint
 	name = "\improper Spearhead speed loader (.357)"
 	desc = "A speedloader of 6 hollowpoint .357 bullets, commonly issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife."
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
@@ -205,15 +205,15 @@
 //-------------------------------------------------------
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
-/obj/item/ammo_magazine/internal/revolver/cmb
+/obj/item/ammo_magazine/internal/revolver/spearhead
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".357"
-	gun_type = /obj/item/weapon/gun/revolver/cmb
+	gun_type = /obj/item/weapon/gun/revolver/spearhead
 
-/obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
+/obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	caliber = ".357"
-	gun_type = /obj/item/weapon/gun/revolver/cmb
+	gun_type = /obj/item/weapon/gun/revolver/spearhead
 
 //-------------------------------------------------------
 //BIG GAME HUNTER'S REVOLVER

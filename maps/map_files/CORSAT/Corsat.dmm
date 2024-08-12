@@ -41809,7 +41809,7 @@
 /area/corsat/sigma/southeast/datalab)
 "gys" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/corsat{
 	icon_state = "red"
 	},
@@ -56944,10 +56944,10 @@
 /area/corsat/sigma/hangar/security)
 "rRh" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "red"

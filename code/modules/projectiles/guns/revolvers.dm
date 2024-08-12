@@ -699,7 +699,7 @@
 //-------------------------------------------------------
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
-/obj/item/weapon/gun/revolver/cmb
+/obj/item/weapon/gun/revolver/spearhead
 	name = "\improper Spearhead Armoury autorevolver"
 	desc = "A semi-automatic revolver chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
@@ -709,8 +709,8 @@
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	fire_rattle = 'sound/weapons/gun_cmb_rattle.ogg'
 	cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
-	force = 12
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead
+	force = 15
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/extended_barrel,
@@ -724,21 +724,21 @@
 		/obj/item/attachable/lasersight,
 	)
 
-/obj/item/weapon/gun/revolver/cmb/click_empty(mob/user)
+/obj/item/weapon/gun/revolver/spearhead/click_empty(mob/user)
 	if(user)
 		to_chat(user, SPAN_WARNING("<b>*click*</b>"))
 		playsound(user, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5) //5 tile range
 	else
 		playsound(src, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5)
 
-/obj/item/weapon/gun/revolver/cmb/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+/obj/item/weapon/gun/revolver/spearhead/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	playsound('sound/weapons/gun_cmb_bass.ogg') // badass shooting bass
 	return ..()
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_attachment_offsets()
+/obj/item/weapon/gun/revolver/spearhead/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_config_values()
+/obj/item/weapon/gun/revolver/spearhead/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -749,5 +749,12 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
-/obj/item/weapon/gun/revolver/cmb/hollowpoint
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
+/obj/item/weapon/gun/revolver/spearhead/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+
+/obj/item/weapon/gun/revolver/spearhead/black
+	name = "\improper Spearhead Armoury autorevolver"
+	desc = "A semi-automatic revolver chambered in .357 commonly issued to Colonial Marshals, though this version has been modified with a black metal finish."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "spearhead_black"
+	item_state = "spearhead_black"

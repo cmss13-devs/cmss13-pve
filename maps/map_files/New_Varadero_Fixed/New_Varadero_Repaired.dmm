@@ -1273,7 +1273,7 @@
 	dir = 1;
 	pixel_y = 17
 	},
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_y = 2
 	},
 /obj/item/clothing/ears/earmuffs{
@@ -23255,16 +23255,16 @@
 /area/varadero/interior/bunks)
 "qfb" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "floor3"
 	},
@@ -34783,8 +34783,8 @@
 /area/varadero/interior/electrical)
 "xRx" = (
 /obj/structure/surface/table/woodentable,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "xRF" = (
