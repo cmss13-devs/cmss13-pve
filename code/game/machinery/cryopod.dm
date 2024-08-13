@@ -410,10 +410,6 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		var/willing = null //We don't want to allow people to be forced into despawning.
 		var/mob/living/M = G.grabbed_thing
 
-		if(M.stat == DEAD) //This mob is dead
-			to_chat(user, SPAN_WARNING("[src] immediately rejects [M]. \He passed away!"))
-			return
-
 		if(isxeno(M))
 			to_chat(user, SPAN_WARNING("There is no way [src] will accept [M]!"))
 			return
