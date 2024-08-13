@@ -439,7 +439,7 @@
 //-------------------------------------------------------
 //XM43A, a cut down official carbine modification of the M41A.
 
-/obj/item/weapon/gun/rifle/m41aMK1/can_be_syringed()
+/obj/item/weapon/gun/rifle/m41aMK1/carbine
 	. = ..()
 	name = "XM43A pulse carbine"
 
