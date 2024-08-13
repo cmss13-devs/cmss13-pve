@@ -714,51 +714,48 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/weapon/m8_cartridge_bayonet
 	display_name = "M8 Cartridge Bayonet"
-	path = /obj/item/storage/box/co2_knife
+	path = /obj/item/storage/box/loadout/co2_knife
 
 /datum/gear/weapon/clfpistol
-	display_name = "D18 Holdout Pistol"
-	path = /obj/item/storage/box/clf
+	display_name = "Hummingbird Pistol"
+	path = /obj/item/storage/box/loadout/clf
 
 /datum/gear/weapon/upppistol
 	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/upp
-	slot = WEAR_IN_BACK
-	cost = 4
+	path = /obj/item/storage/box/loadout/upp
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
-	path = /obj/item/storage/box/M4A3_custom_loadout
+	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911
 	display_name = "M1911 Pistol"
-	path = /obj/item/storage/box/M1911_loadout
+	path = /obj/item/storage/box/loadout/M1911_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44
 	display_name = "M44 Revolver"
-	path = /obj/item/storage/box/M44_loadout
+	path = /obj/item/storage/box/loadout/M44_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "Custom M44 Revolver"
-	path = /obj/item/storage/box/M44_custom_loadout
+	path = /obj/item/storage/box/loadout/M44_custom_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/hg45_civilian
 	display_name = "HG 45 'Aguila' Pistol"
-	path = /obj/item/storage/box/HG45_civilian_loadout
-	allowed_origins = USCM_ORIGINS
+	path = /obj/item/storage/box/loadout/HG45_civilian_loadout
 
 /datum/gear/weapon/hg45_marine
 	display_name = "HG 45 'Marina' Pistol"
-	path = /obj/item/storage/box/HG45_marine_loadout
+	path = /obj/item/storage/box/loadout/HG45_marine_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead
 	display_name = "Spearhead Armoury Autorevolver"
-	path = /obj/item/storage/box/Spearhead_loadout
+	path = /obj/item/storage/box/loadout/Spearhead_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete

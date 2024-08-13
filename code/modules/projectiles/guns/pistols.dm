@@ -475,8 +475,8 @@
 //-------------------------------------------------------
 //CLF HOLDOUT PISTOL
 /obj/item/weapon/gun/pistol/clfpistol
-	name = "D18 Hummingbird pistol"
-	desc = "The D18 Hummingbird Pistol was produced in the mid-2170s as a cheap and concealable firearm for CLF Sleeper Cell agents for assassinations and ambushes, and is able to be concealed in shoes and workboots."
+	name = "Hummingbird pistol"
+	desc = "Chambering .50 AE catridges this gun is as compact as it could possibly be. Rumored to be designed and produced by the UPP before being distributed into UA space for arming sleeper cells with throwaway weapons capable of penetrating standard M3 pattern armor."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m43"
 	item_state = "m43"
@@ -485,10 +485,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/clfpistol
 	w_class = SIZE_TINY
 	force = 5
-	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/flashlight,
-	)
+	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
@@ -502,7 +499,9 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_5
 	scatter_unwielded = SCATTER_AMOUNT_TIER_8
 	scatter = SCATTER_AMOUNT_TIER_9
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_10
+	recoil = RECOIL_AMOUNT_TIER_2
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
 //-------------------------------------------------------
 

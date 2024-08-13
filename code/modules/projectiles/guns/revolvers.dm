@@ -700,8 +700,8 @@
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
 /obj/item/weapon/gun/revolver/spearhead
-	name = "\improper Spearhead Armoury autorevolver"
-	desc = "A semi-automatic revolver chambered in .357 commonly issued to Colonial Marshals."
+	name = "\improper Spearhead Armoury revolver"
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
@@ -754,7 +754,7 @@
 
 /obj/item/weapon/gun/revolver/spearhead/black
 	name = "\improper Spearhead Armoury autorevolver"
-	desc = "A semi-automatic revolver chambered in .357 commonly issued to Colonial Marshals, though this version has been modified with a black metal finish."
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals, though this version has been customized with a black metal finish indicating it is unlikely to be a service weapon."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead_black"
 	item_state = "spearhead_black"

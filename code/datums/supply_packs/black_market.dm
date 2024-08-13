@@ -927,13 +927,13 @@ This is where the RO can reclaim their lost honor and purchase the M44 custom, t
 
 /datum/supply_packs/contraband/deep_storage/cartridge_bayonet
 	name = "M8 Cartridge Bayonet Kit"
-	contains = list(/obj/item/storage/box/co2_knife)
+	contains = list(/obj/item/storage/box/loadout/co2_knife)
 	dollar_cost = 10
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/deep_storage/clf_holdout
 	name = "D18 Holdout Pistol"
-	contains = list(/obj/item/storage/box/clf)
+	contains = list(/obj/item/storage/box/loadout/clf)
 	dollar_cost = 10
 	crate_heat = 2
 	containertype = /obj/structure/largecrate/black_market

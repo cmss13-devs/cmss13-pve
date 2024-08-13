@@ -273,16 +273,14 @@
 //-------------------------------------------------------
 //CLF HOLDOUT PISTOL
 /obj/item/ammo_magazine/pistol/clfpistol
-	name = "D18 magazine (9mm)"
-	desc = "A small D18 magazine storing 7 9mm bullets. How is it even this small?"
-	default_ammo = /datum/ammo/bullet/pistol
-	caliber = "9mm"
+	name = "Type 18 magazine (.50)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy/super
+	caliber = ".50"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "m4a3" // placeholder
-	max_rounds = 7
+	max_rounds = 3
 	w_class = SIZE_TINY
 	gun_type = /obj/item/weapon/gun/pistol/clfpistol
-
 
 //-------------------------------------------------------
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
