@@ -1,8 +1,17 @@
-import { useBackend, useLocalState } from 'tgui/backend';
-import { Box, Button, Dropdown, Input, Section, Slider, Stack, Tabs } from 'tgui/components';
-import { Window } from 'tgui/layouts';
-import { Component, Fragment } from 'inferno';
 import { debounce } from 'common/timer';
+import { Component, useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import {
+  Box,
+  Button,
+  Dropdown,
+  Input,
+  Section,
+  Slider,
+  Stack,
+  Tabs,
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
 
 interface SoundPanelData {
   sound_list: string[];
@@ -10,7 +19,7 @@ interface SoundPanelData {
   zlevel_list: string[];
   group_list: string[];
   sound_path: string;
-  sound_category: number;
+  sound_category: string;
   sound_volume: number;
   sound_pitch: number;
   sound_duration: number;
@@ -22,8 +31,8 @@ interface SoundPanelData {
   target_group: string;
 }
 
-export const SoundPanel = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+export const SoundPanel = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { sound_list, sound_path } = data;
 
   const PAGES = [
@@ -44,10 +53,8 @@ export const SoundPanel = (props, context) => {
       component: <ServerPage />,
     },
   ];
-  const [tabIndex, setTabIndex] = useLocalState<number>(
-    context,
-    'tabIndex',
-    PAGES.findIndex((page) => page.title === 'Local')
+  const [tabIndex, setTabIndex] = useState<number>(
+    PAGES.findIndex((page) => page.title === 'Local'),
   );
 
   return (
@@ -78,7 +85,8 @@ export const SoundPanel = (props, context) => {
                         <Tabs.Tab
                           key={i}
                           selected={i === tabIndex}
-                          onClick={() => setTabIndex(i)}>
+                          onClick={() => setTabIndex(i)}
+                        >
                           {page.title}
                         </Tabs.Tab>
                       );
@@ -96,9 +104,9 @@ export const SoundPanel = (props, context) => {
 };
 
 interface ListSearchBoxProps {
-  items: string[];
-  selection: string;
-  onSelection: (value: string) => void;
+  readonly items: string[];
+  readonly selection: string;
+  readonly onSelection: (value: string) => void;
 }
 
 interface ListSearchBoxState {
@@ -158,7 +166,7 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
 
   render() {
     return (
-      <Fragment>
+      <>
         <Stack.Item grow>
           <Section fill scrollable title="File">
             {this.parsedItems
@@ -171,7 +179,6 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                 return (
                   <Button
                     color="transparent"
-                    content={item.fileName}
                     fluid
                     key={item.id}
                     my={0}
@@ -180,17 +187,20 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
                     style={{
                       animation: 'none',
                       transition: 'none',
-                    }}>
-                    <div
+                    }}
+                  >
+                    {item.fileName}
+                    <Box
+                      fontSize="0.75rem"
                       style={{
-                        'font-size': '0.75rem',
-                        opacity: 0.5,
+                        opacity: '0.5',
                         position: 'absolute',
-                        right: 0,
-                        top: 0,
-                      }}>
+                        right: '0',
+                        top: '0',
+                      }}
+                    >
                       {item.dirName}
-                    </div>
+                    </Box>
                   </Button>
                 );
               })}
@@ -204,13 +214,13 @@ class ListSearchBox extends Component<ListSearchBoxProps, ListSearchBoxState> {
             value={this.state.query}
           />
         </Stack.Item>
-      </Fragment>
+      </>
     );
   }
 }
 
-const SoundOptions = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const SoundOptions = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const {
     category_list,
     sound_path,
@@ -230,12 +240,13 @@ const SoundOptions = (props, context) => {
                 Category
               </Box>
               <Dropdown
-                noscroll
                 onSelected={(value) =>
                   act('set_sound_category', { sound_category: value })
                 }
                 options={category_list}
                 selected={sound_category}
+                menuWidth="100px"
+                width="100px"
               />
             </Stack.Item>
             <Stack.Item grow>
@@ -295,16 +306,15 @@ const SoundOptions = (props, context) => {
               <Button
                 color="good"
                 disabled={!sound_path}
-                content="Preview"
                 onClick={() => act('play_preview')}
-              />
+              >
+                Preview
+              </Button>
             </Stack.Item>
             <Stack.Item>
-              <Button
-                color="bad"
-                content="Stop"
-                onClick={() => act('stop_preview')}
-              />
+              <Button color="bad" onClick={() => act('stop_preview')}>
+                Stop
+              </Button>
             </Stack.Item>
           </Stack>
         </Stack.Item>
@@ -313,14 +323,14 @@ const SoundOptions = (props, context) => {
   );
 };
 
-const ClientPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ClientPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { target_player_desc, sound_path } = data;
 
   return (
     <Stack vertical>
       <Stack.Item>
-        <Button content="Select Client" onClick={() => act('select_client')} />
+        <Button onClick={() => act('select_client')}>Select Client</Button>
       </Stack.Item>
       <Stack.Item>
         <Box>{target_player_desc || 'N/A'}</Box>
@@ -329,16 +339,17 @@ const ClientPage = (props, context) => {
         <Button
           color="good"
           disabled={!sound_path || !target_player_desc}
-          content="Play to Client"
           onClick={() => act('play_client')}
-        />
+        >
+          Play to Client
+        </Button>
       </Stack.Item>
     </Stack>
   );
 };
 
-const LocalPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const LocalPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { target_loc_desc, sound_path, loc_click_intercept, loc_click_play } =
     data;
 
@@ -348,17 +359,19 @@ const LocalPage = (props, context) => {
         <Stack>
           <Stack.Item>
             <Button
-              selected={loc_click_intercept}
-              content="Click Target"
+              selected={!!loc_click_intercept}
               onClick={() => act('toggle_loc_click_intercept')}
-            />
+            >
+              Click Target
+            </Button>
           </Stack.Item>
           <Stack.Item>
             <Button.Checkbox
-              checked={loc_click_play}
-              content="Play on Click"
+              checked={!!loc_click_play}
               onClick={() => act('toggle_loc_click_play')}
-            />
+            >
+              Play on Click
+            </Button.Checkbox>
           </Stack.Item>
         </Stack>
       </Stack.Item>
@@ -369,16 +382,17 @@ const LocalPage = (props, context) => {
         <Button
           color="good"
           disabled={!sound_path || !target_loc_desc}
-          content="Play Locally"
           onClick={() => act('play_local')}
-        />
+        >
+          Play Locally
+        </Button>
       </Stack.Item>
     </Stack>
   );
 };
 
-const ZLevelPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ZLevelPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { zlevel_list, sound_path, target_zlevel } = data;
 
   return (
@@ -390,8 +404,8 @@ const ZLevelPage = (props, context) => {
           onSelected={(value) =>
             act('set_target_zlevel', { target_zlevel: value })
           }
+          menuWidth="180px"
           width="180px"
-          noscroll
           over
         />
       </Stack.Item>
@@ -399,16 +413,17 @@ const ZLevelPage = (props, context) => {
         <Button
           color="good"
           disabled={!sound_path || !target_zlevel}
-          content="Play to ZLevel"
           onClick={() => act('play_zlevel')}
-        />
+        >
+          Play to ZLevel
+        </Button>
       </Stack.Item>
     </Stack>
   );
 };
 
-const ServerPage = (props, context) => {
-  const { act, data } = useBackend<SoundPanelData>(context);
+const ServerPage = () => {
+  const { act, data } = useBackend<SoundPanelData>();
   const { group_list, sound_path, target_group } = data;
 
   return (
@@ -420,8 +435,8 @@ const ServerPage = (props, context) => {
           onSelected={(value) =>
             act('set_target_group', { target_group: value })
           }
+          menuWidth="80px"
           width="80px"
-          noscroll
           over
         />
       </Stack.Item>
@@ -429,9 +444,10 @@ const ServerPage = (props, context) => {
         <Button
           color="good"
           disabled={!sound_path || !target_group}
-          content="Play to Group"
           onClick={() => act('play_group')}
-        />
+        >
+          Play to Group
+        </Button>
       </Stack.Item>
     </Stack>
   );

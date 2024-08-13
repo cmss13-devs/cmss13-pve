@@ -26,7 +26,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	var/datum/component/phone/calling_phone
 
 	/// Whether or not the phone is receiving calls or not. Varies between on/off or forcibly on/off.
-	var/do_not_disturb = PHONE_DO_NOT_DISTURB_OFF
+	var/do_not_disturb = PHONE_DND_OFF
+
+	/// The Phone_ID of the last person to call this telephone.
+	var/last_caller
 
 	/// The ID of our timer to cancel an attempted call and "go to voicemail"
 	var/timeout_timer_id
@@ -247,10 +250,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	if(phone_handset.loc)
 		return FALSE
 
-	if(do_not_disturb == PHONE_DO_NOT_DISTURB_ON)
+	if(do_not_disturb == PHONE_DND_ON)
 		return FALSE
 
-	if(do_not_disturb == PHONE_DO_NOT_DISTURB_FORCED)
+	if(do_not_disturb == PHONE_DND_FORCED)
 		return FALSE
 
 	return TRUE
@@ -296,6 +299,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 /// What we do when our phone is receiving a call, called from incoming_call's call_phone()
 /datum/component/phone/proc/getting_call(datum/component/phone/incoming_call)
 	calling_phone = incoming_call
+	last_caller = incoming_call.phone_id
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_RINGING)
 	ringing_loop.start()
 
@@ -405,13 +409,13 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	hearing_mob.hear_radio(message, "says", message_language, part_a = "<span class='purple'><span class='name'>", part_b = "</span><span class='message'> ", vname = name_override, speaker = speaker, command = loudness, no_paygrade = TRUE)
 
 /// Toggles do not disturb on or off, does not handle forced or unable do_not_disturb variables
-/datum/component/phone/proc/toggle_do_not_disturb(mob/user)
+/datum/component/phone/proc/toggle_dnd(mob/user)
 	switch(do_not_disturb)
-		if(PHONE_DO_NOT_DISTURB_ON)
-			do_not_disturb = PHONE_DO_NOT_DISTURB_OFF
+		if(PHONE_DND_ON)
+			do_not_disturb = PHONE_DND_OFF
 			to_chat(user, SPAN_NOTICE("Do Not Disturb has been disabled. You can now receive calls."))
-		if(PHONE_DO_NOT_DISTURB_OFF)
-			do_not_disturb = PHONE_DO_NOT_DISTURB_ON
+		if(PHONE_DND_OFF)
+			do_not_disturb = PHONE_DND_ON
 			to_chat(user, SPAN_WARNING("Do Not Disturb has been enabled. No calls will be received."))
 		else
 			return FALSE
@@ -440,21 +444,22 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 			call_phone(ui.user, params["phone_id"])
 			return TRUE
 
-		if("toggle_do_not_disturb")
-			toggle_do_not_disturb(ui.user)
+		if("toggle_dnd")
+			toggle_dnd(ui.user)
 			return TRUE
 
 /datum/component/phone/ui_data(mob/user)
 	var/list/data = list()
 
-	data["do_not_disturb"] = do_not_disturb
+	data["availability"] = do_not_disturb
+	data["last_caller"] = last_caller
 
 	return data
 
 /datum/component/phone/ui_static_data(mob/user)
 	. = list()
 
-	.["available_phones"] = get_phones() - list(phone_id)
+	.["available_transmitters"] = get_phones() - list(phone_id)
 	var/list/phones = list()
 	for(var/datum/component/phone/cycled_phone as anything in GLOB.phones)
 		phones += list(list(
@@ -464,7 +469,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 			"phone_icon" = cycled_phone.phone_icon
 		))
 
-	.["phones"] = phones
+	.["transmitters"] = phones
 
 /datum/component/phone/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -526,10 +531,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	if(calling_phone)
 		return FALSE
 
-	if(do_not_disturb == PHONE_DO_NOT_DISTURB_ON)
+	if(do_not_disturb == PHONE_DND_ON)
 		return FALSE
 
-	if(do_not_disturb == PHONE_DO_NOT_DISTURB_FORCED)
+	if(do_not_disturb == PHONE_DND_FORCED)
 		return FALSE
 
 	return TRUE
