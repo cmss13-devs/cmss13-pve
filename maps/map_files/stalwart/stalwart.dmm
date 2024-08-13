@@ -157,16 +157,6 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/cryo_cells)
-"bg" = (
-/obj/structure/machinery/cm_vending/clothing/medic,
-/obj/structure/sign/safety/medical{
-	pixel_x = 32;
-	pixel_y = -5
-	},
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/golden_arrow/platoonprep)
 "bi" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -248,10 +238,6 @@
 	layer = 3.1
 	},
 /obj/structure/surface/rack,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
-"cd" = (
-/obj/structure/pipes/vents,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "ce" = (
@@ -1052,6 +1038,13 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/supply)
+"iE" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
 "iN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1716,13 +1709,9 @@
 	},
 /area/golden_arrow/hangar)
 "nI" = (
-/obj/structure/sign/safety/two{
-	pixel_x = -17;
-	pixel_y = 27
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/closed/wall/almayer,
 /area/golden_arrow/platoonprep)
 "nJ" = (
 /obj/structure/surface/rack,
@@ -1859,6 +1848,16 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/hangar)
+"pk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control/brbutton{
+	id = "squadarmory";
+	name = "gear locker shutter control";
+	req_one_access_txt = "19;12";
+	pixel_y = 28
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "pm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer{
@@ -2055,6 +2054,12 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
+"rg" = (
+/turf/open/floor/almayer{
+	dir = 5;
+	icon_state = "plating"
+	},
+/area/golden_arrow/synthcloset)
 "rj" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/hangar)
@@ -2330,16 +2335,6 @@
 	dir = 1
 	},
 /area/golden_arrow/hangar)
-"tH" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Corpsman";
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/shoes/marine/knife,
-/obj/item/device/radio/headset/almayer/marine,
-/obj/item/clothing/under/marine/medic,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
 "tL" = (
 /obj/structure/janitorialcart,
 /obj/item/tool/mop{
@@ -2675,6 +2670,13 @@
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"wS" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "wX" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -2834,14 +2836,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/canteen)
-"yG" = (
-/obj/structure/foamed_metal,
-/obj/item/coin/platinum{
-	name = "The First challenge coin";
-	desc = "A coin made of shiny platinum. Has number 1 engraved on both sides."
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
+"yB" = (
+/obj/structure/machinery/vending/cigarette,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "yO" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "Stalwart_Up";
@@ -2991,6 +2989,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
+"Ai" = (
+/obj/structure/reagent_dispensers/fueltank{
+	layer = 2.97
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Al" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/almayer{
@@ -3653,17 +3657,16 @@
 /area/golden_arrow/hangar)
 "Fj" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
+	job = "Platoon Corpsman";
+	has_cryo_gear = 0
 	},
+/obj/item/clothing/shoes/marine/knife,
+/obj/item/device/radio/headset/almayer/marine,
+/obj/item/clothing/under/marine/medic,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/item/clothing/under/marine/officer/bridge,
-/obj/item/clothing/shoes/dress,
-/obj/item/clothing/head/cmcap/bridge,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Fk" = (
 /turf/closed/wall/almayer/outer,
@@ -4293,13 +4296,6 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/platoonprep)
-"Lo" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_y = -23;
-	normaldoorcontrol = 4
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
 "Lp" = (
 /obj/structure/surface/rack,
 /turf/open/floor/almayer{
@@ -4369,6 +4365,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"LU" = (
+/obj/structure/machinery/cm_vending/clothing/medic,
+/obj/structure/sign/safety/medical{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
+/area/golden_arrow/platoonprep)
 "LY" = (
 /obj/structure/machinery/vending/coffee/simple,
 /turf/open/floor/almayer{
@@ -4391,9 +4401,11 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
-"Mk" = (
-/obj/structure/foamed_metal,
-/turf/open/floor/plating,
+"Mg" = (
+/obj/structure/sign/prop2{
+	pixel_y = 33
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "Mm" = (
 /turf/closed/shuttle/elevator,
@@ -4689,13 +4701,6 @@
 	icon_state = "cargo"
 	},
 /area/golden_arrow/hangar)
-"OZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
 "Pf" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	name = "\improper Synthetic Storage";
@@ -5713,6 +5718,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"Ym" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/two{
+	pixel_x = -18;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "Yn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control/brbutton{
@@ -5882,6 +5895,13 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
+"ZC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/closed/wall/almayer,
 /area/golden_arrow/platoonprep)
 "ZD" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -21923,13 +21943,13 @@ hS
 rj
 AE
 AE
-AE
 cs
 zb
 DE
 SY
 ny
 zb
+cs
 cs
 Cx
 Cx
@@ -22075,7 +22095,6 @@ hS
 hS
 AE
 RU
-RU
 cs
 ia
 DE
@@ -22083,6 +22102,7 @@ SY
 DE
 HE
 cs
+Cx
 Cx
 Cx
 UE
@@ -22227,7 +22247,6 @@ FX
 hS
 AE
 RU
-RU
 cs
 Lq
 DE
@@ -22235,6 +22254,7 @@ il
 DE
 Sa
 cs
+Cx
 Cx
 Cx
 UE
@@ -22379,7 +22399,6 @@ jY
 hS
 AE
 RU
-RU
 cs
 dX
 DE
@@ -22387,6 +22406,7 @@ HF
 DE
 DL
 cs
+Cx
 Cx
 Cx
 UE
@@ -22531,7 +22551,6 @@ jY
 jo
 AE
 RU
-RU
 cs
 DD
 DE
@@ -22539,6 +22558,7 @@ bb
 Ln
 hN
 cs
+Cx
 Cx
 Cx
 UE
@@ -22683,7 +22703,6 @@ jY
 hS
 AE
 RU
-RU
 cs
 qv
 DE
@@ -22691,6 +22710,7 @@ HF
 DE
 DL
 cs
+ot
 ot
 ot
 ot
@@ -22835,7 +22855,6 @@ jY
 HG
 AE
 RU
-yG
 cs
 kc
 SY
@@ -22843,6 +22862,7 @@ il
 kY
 Lx
 zb
+kK
 XW
 CT
 dW
@@ -22987,7 +23007,6 @@ hS
 hS
 AE
 RU
-RU
 cs
 bY
 SY
@@ -22996,6 +23015,7 @@ kY
 HY
 zb
 ce
+rg
 kg
 Pf
 ed
@@ -23139,7 +23159,6 @@ hS
 hS
 AE
 RU
-RU
 vc
 ug
 SY
@@ -23148,6 +23167,7 @@ SY
 dh
 zb
 Lj
+rg
 aT
 dW
 jD
@@ -23290,8 +23310,7 @@ hS
 hS
 Mu
 AE
-RU
-RU
+AE
 cs
 zb
 pm
@@ -23299,7 +23318,8 @@ hJ
 hJ
 zb
 zb
-kK
+dW
+rg
 kU
 dW
 qg
@@ -23440,17 +23460,17 @@ AE
 hS
 hS
 hS
-AE
-AE
-wJ
+hS
 cs
 cs
 Ie
-Kk
-YE
-Kk
+kY
+SY
+SY
+SY
+kY
 wP
-zb
+dW
 dW
 dW
 dW
@@ -23592,15 +23612,15 @@ AE
 MM
 hS
 MM
-AE
-Cx
-Cx
+Ai
 cs
 QH
+Ym
+SY
 nI
-HF
-Wp
-HF
+zb
+zb
+SY
 DE
 em
 vA
@@ -23745,14 +23765,14 @@ AE
 AE
 AE
 AE
-Cx
-Cx
 cs
 AY
 SY
-HF
+Kk
+wS
 YE
-HF
+wS
+Kk
 ny
 fN
 vA
@@ -23897,13 +23917,13 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
 cN
 SY
-HF
+iE
+wS
 Wp
+wS
 HF
 ny
 XY
@@ -24049,14 +24069,14 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
 zb
 Ie
-Kk
+HF
+wS
 YE
-Kk
+wS
+HF
 xX
 zb
 vA
@@ -24201,15 +24221,15 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
-tH
+LU
 Sf
-OZ
-cd
+HF
+wS
+Wp
+wS
+HF
 SY
-Lo
 zb
 bi
 bi
@@ -24353,14 +24373,14 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
-bg
-kY
+cs
 SY
-kY
-uy
+Kk
+wS
+YE
+wS
+Kk
 uy
 zb
 vA
@@ -24506,13 +24526,13 @@ Cx
 Cx
 Cx
 Cx
-Cx
 cs
-cs
-uy
+Mg
 kY
-SY
-kY
+ZC
+zb
+zb
+pk
 sC
 mh
 AH
@@ -24658,13 +24678,13 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
-Pl
-Qc
-ZA
-LH
+Ie
+SY
+SY
+SY
+SY
+SY
 cE
 SY
 AH
@@ -24810,14 +24830,14 @@ Cx
 Cx
 Cx
 Cx
-Cx
-Cx
 cs
-cs
-cs
-cs
-cs
-cs
+yB
+SY
+SY
+SY
+SY
+SY
+SY
 cs
 Jw
 Jw
@@ -24965,11 +24985,11 @@ ro
 ro
 ro
 ro
-Mk
-Mk
-Mk
-Mk
-Mk
+cs
+Pl
+Qc
+ZA
+LH
 UE
 mW
 iq

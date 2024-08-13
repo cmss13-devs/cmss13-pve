@@ -241,6 +241,18 @@
 
 	return ..()
 
+/obj/vehicle/multitile/van/miltruck
+	name = "M2132 Heavy Cargo Truck"
+	desc = "An uncommon vehicle in the arsenal of USCM, M2132 is a modular heavy cargo and troop transport."
+
+	icon = 'icons/obj/vehicles/miltruck.dmi'
+	icon_state = "miltruck"
+	hardpoints_allowed = list(
+		/obj/item/hardpoint/locomotion/truck,
+		/obj/item/hardpoint/locomotion/truck/treads,
+	)
+
+
 /*
 ** PRESETS SPAWNERS
 */
@@ -289,3 +301,29 @@
 
 /obj/effect/vehicle_spawner/van/fixed/load_hardpoints(obj/vehicle/multitile/van/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+/obj/effect/vehicle_spawner/truck
+	name = "Truck Spawner"
+	icon = 'icons/obj/vehicles/miltruck.dmi'
+	icon_state = "miltruck"
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/effect/vehicle_spawner/truck/Initialize()
+	. = ..()
+	spawn_vehicle()
+	qdel(src)
+
+/obj/effect/vehicle_spawner/truck/spawn_vehicle()
+	var/obj/vehicle/multitile/van/miltruck/VAN = new (loc)
+
+	load_misc(VAN)
+	load_hardpoints(VAN)
+	handle_direction(VAN)
+	VAN.update_icon()
+
+/obj/effect/vehicle_spawner/truck/load_hardpoints(obj/vehicle/multitile/van/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck)
+
+/obj/effect/vehicle_spawner/truck/treads/load_hardpoints(obj/vehicle/multitile/van/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/treads)
