@@ -45,7 +45,7 @@
 	name= "\improper service issue sunscreen"
 	desc = "A stick of service issue SPF 50 sunscreen with the Marine logo on the bottom. Nontoxic, weather-resistant, smells horrible even after it's been washed off."
 	paint_type = "sunscreen_stick"
-		icon_state = "sunscreen_stick"
+	icon_state = "sunscreen_stick"
 
 /obj/item/facepaint/attack(mob/M, mob/user)
 	if(user.a_intent == INTENT_HARM)
