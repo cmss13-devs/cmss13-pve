@@ -362,12 +362,6 @@
 	. = ..()
 	reagents.add_reagent("water", 60)
 
-/obj/item/reagent_container/food/drinks/flask/canteen/empty
-
-/obj/item/reagent_container/food/drinks/flask/canteen/empty/Initialize()
-	. = ..()
-	reagents.add_reagent(null)
-
 /obj/item/reagent_container/food/drinks/flask/detflask
 	name = "brown leather flask"
 	desc = "A flask with a leather band around the sides, often seen filled with whiskey and carried by rugged, gritty detectives."
