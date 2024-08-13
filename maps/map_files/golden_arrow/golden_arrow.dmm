@@ -12927,12 +12927,13 @@
 	},
 /area/golden_arrow/supply)
 "Jg" = (
-/obj/docking_port/stationary/shipmap_elevator/cargo{
-	id = "garrow_cargo_elevator_lower";
+/obj/docking_port/stationary/trijent_elevator{
 	name = "Cargo Elevator Storage";
+	id = "garrow_cargo_elevator_lower";
 	roundstart_template = /datum/map_template/shuttle/golden_arrow/cargo;
-	elevator_network = "garrowcargo";
-	tag = "e1"
+	airlock_area = /area/golden_arrow/supply;
+	airlock_exit = "cargoelevator";
+	width = 8
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
@@ -19414,10 +19415,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "ZU" = (
-/obj/docking_port/stationary/shipmap_elevator/cargo{
+/obj/docking_port/stationary/trijent_elevator{
+	name = "Cargo Elevator";
 	id = "garrow_cargo_elevator_upper";
-	elevator_network = "garrowcargo";
-	tag = "e1"
+	airlock_area = /area/golden_arrow/supply;
+	airlock_exit = "cargoelevator";
+	width = 8
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
