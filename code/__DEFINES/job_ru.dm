@@ -233,8 +233,8 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 //-------- PVE Mercs and PMC's  --------//
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_MERC "Freelancer"
-#define JOB_RTO_FL "Radio Jockey (1lt)"
-#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat (PltCo)"
+#define JOB_RTO_FL "Radio Jockey (RTO)"
+#define JOB_SQUAD_TEAM_LEADER_FL "Cutthroat (PltSgt)"
 #define JOB_SQUAD_LEADER_FL "Master at Arms (FTL)"
 #define JOB_SQUAD_SMARTGUN_FL "Gunner (Smartgunner)"
 #define JOB_SQUAD_MEDIC_FL "Surgeon (Corpsman)"

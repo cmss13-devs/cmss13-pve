@@ -24,7 +24,6 @@
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "pmc_[hud_icon_state]")
 
-//RU-PVE ADDITION STARTS
 	var/datum/squad/squad = H.assigned_squad
 	if(istype(squad, /datum/squad/marine/fl))
 		var/squad_clr = H.assigned_squad.equipment_color
@@ -51,4 +50,3 @@
 				var/image/IMG3 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_ftl")
 				IMG3.color = squad_clr
 				holder.overlays += IMG3
-//RU-PVE ADDITION ENDS
