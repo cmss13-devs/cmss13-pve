@@ -14,3 +14,6 @@
   - code_imp: Made the Tech Tree subsystem initialise faster.
   Zonespace27:
   - admin: Added freed mob bans to the jobban panel.
+2024-07-31:
+  Doubleumc:
+  - admin: round start delayed by default

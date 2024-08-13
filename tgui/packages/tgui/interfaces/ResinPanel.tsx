@@ -1,7 +1,7 @@
+import { BooleanLike, classes } from 'common/react';
 import { useBackend } from 'tgui/backend';
 import { Box, Button, Dropdown, Section, Stack, Tabs } from 'tgui/components';
 import { Window } from 'tgui/layouts';
-import { BooleanLike, classes } from 'common/react';
 
 interface ResinPanelData {
   structure_list: StructureEntry[];
@@ -17,8 +17,8 @@ interface StructureEntry {
   id: string;
 }
 
-export const ResinPanel = (props, context) => {
-  const { act, data } = useBackend<ResinPanelData>(context);
+export const ResinPanel = () => {
+  const { act, data } = useBackend<ResinPanelData>();
   const {
     structure_list,
     hives_list,
@@ -34,7 +34,8 @@ export const ResinPanel = (props, context) => {
       width={350}
       height={15 + structure_list.length * 80}
       title="Resin Panel"
-      theme="admin">
+      theme="admin"
+    >
       <Window.Content>
         <Section
           title="Resin"
@@ -43,10 +44,11 @@ export const ResinPanel = (props, context) => {
               <Stack.Item>
                 <Button
                   selected={build_click_intercept}
-                  content="Click Build"
                   tooltip="LMB to place, MMB to remove"
                   onClick={() => act('toggle_build_click_intercept')}
-                />
+                >
+                  Click Build
+                </Button>
               </Stack.Item>
               <Stack.Item>
                 <Dropdown
@@ -61,15 +63,15 @@ export const ResinPanel = (props, context) => {
             </Stack>
           }
           scrollable
-          fill>
+          fill
+        >
           <Tabs vertical fluid fill>
             {structure_list.map((item, index) => (
               <Tabs.Tab
                 key={index}
                 selected={item.id === selected_structure}
-                onClick={() =>
-                  act('set_selected_structure', { type: item.id })
-                }>
+                onClick={() => act('set_selected_structure', { type: item.id })}
+              >
                 <Stack align="center">
                   <Stack.Item>
                     <span

@@ -245,7 +245,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	var/auto_observe = TRUE
 
 /datum/preferences/New(client/C)
-	key_bindings = deepCopyList(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
+	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
 	macros = new(C, src)
 	if(istype(C))
 		owner = C

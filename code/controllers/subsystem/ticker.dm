@@ -21,7 +21,11 @@ SUBSYSTEM_DEF(ticker)
 	var/list/login_music = null //Music played in pregame lobby
 
 	var/delay_end = FALSE //If set true, the round will not restart on it's own
+#if defined(UNIT_TESTS) //must be FALSE for unit tests else they hang indefinitely
 	var/delay_start = FALSE
+#else
+	var/delay_start = TRUE
+#endif
 	var/admin_delay_notice = "" //A message to display to anyone who tries to restart the world after a delay
 
 	var/time_left //Pre-game timer
@@ -176,7 +180,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	mode.announce()
 	if(mode.taskbar_icon)
-		RegisterSignal(SSdcs, COMSIG_GLOB_CLIENT_LOGIN, PROC_REF(handle_mode_icon))
+		RegisterSignal(SSdcs, COMSIG_GLOB_CLIENT_LOGGED_IN, PROC_REF(handle_mode_icon))
 		set_clients_taskbar_icon(mode.taskbar_icon)
 
 	if(GLOB.perf_flags & PERF_TOGGLE_LAZYSS)

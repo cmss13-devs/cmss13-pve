@@ -29,6 +29,8 @@
 	var/automated_lz_id
 	var/automated_delay
 	var/automated_timer
+	var/datum/cas_signal/paradrop_signal
+
 
 /obj/docking_port/mobile/marine_dropship/Initialize(mapload)
 	. = ..()
@@ -42,18 +44,28 @@
 					door_control.add_door(air, "port")
 				if("aft_door")
 					door_control.add_door(air, "aft")
-			var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/hatch = air
-			if(istype(hatch))
-				hatch.linked_dropship = src
+
+	RegisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT, PROC_REF(add_equipment))
+	RegisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT, PROC_REF(remove_equipment))
 
 /obj/docking_port/mobile/marine_dropship/Destroy(force)
 	. = ..()
 	qdel(door_control)
+	UnregisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT)
+	UnregisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT)
 
 /obj/docking_port/mobile/marine_dropship/proc/send_for_flyby()
 	in_flyby = TRUE
 	var/obj/docking_port/stationary/dockedAt = get_docked()
 	SSshuttle.moveShuttle(src.id, dockedAt.id, TRUE)
+
+/obj/docking_port/mobile/marine_dropship/proc/add_equipment(obj/docking_port/mobile/marine_dropship/dropship, obj/structure/dropship_equipment/equipment)
+	SIGNAL_HANDLER
+	equipments += equipment
+
+/obj/docking_port/mobile/marine_dropship/proc/remove_equipment(obj/docking_port/mobile/marine_dropship/dropship, obj/structure/dropship_equipment/equipment)
+	SIGNAL_HANDLER
+	equipments -= equipment
 
 /obj/docking_port/mobile/marine_dropship/proc/get_door_data()
 	return door_control.get_data()
@@ -118,6 +130,9 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/midway/get_transit_path_type()
+	return /turf/open/space/transit/dropship/midway
+
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
 	id = DROPSHIP_UPP
@@ -136,13 +151,24 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
+	return /turf/open/space/transit/dropship/cyclone
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/alamo/get_transit_path_type()
+	return /turf/open/space/transit/dropship/alamo
 
 /obj/docking_port/mobile/marine_dropship/normandy
 	name = "Normandy"
 	id = DROPSHIP_NORMANDY
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/normandy/get_transit_path_type()
+	return /turf/open/space/transit/dropship/normandy
 
 /obj/docking_port/mobile/marine_dropship/check()
 	. = ..()

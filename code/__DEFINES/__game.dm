@@ -1,9 +1,3 @@
-#define RANGE_TURFS(RADIUS, CENTER) \
-block( \
-	locate(max(CENTER.x-(RADIUS),1),   max(CENTER.y-(RADIUS),1),   CENTER.z), \
-	locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
-)
-
 //Admin perms are in global.dm.
 
 /// To make it even more clear that something is a bitfield.
@@ -396,6 +390,7 @@ block( \
 #define FIRE_MISSION_WEAPON_REMOVED 8
 #define FIRE_MISSION_WEAPON_UNUSABLE 16
 #define FIRE_MISSION_WEAPON_OUT_OF_AMMO 32
+#define FIRE_MISSION_BAD_DIRECTION 64
 #define FIRE_MISSION_NOT_EXECUTABLE -1
 
 //Defines for firemission state

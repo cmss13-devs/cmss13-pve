@@ -278,8 +278,8 @@
 		return
 	..()
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock()
-	if(is_reserved_level(z))
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock(forced=FALSE)
+	if(is_reserved_level(z) && !forced)
 		return // in orbit
 	..()
 
@@ -291,6 +291,9 @@
 		return ..()
 
 	if(xeno.action_busy)
+		return
+
+	if(is_reserved_level(z)) //no prying in space even though it's funny
 		return
 
 	var/direction
