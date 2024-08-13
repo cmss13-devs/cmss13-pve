@@ -496,7 +496,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		return
 
 //RU-PVE ADDITION STARTS
-	if(istype(attacking_item, /obj/item/cell/apc))
+	if(istype(attacking_item, /obj/item/cell))
 		var/obj/item/cell/power_source = attacking_item
 		for(var/obj/item/device/helmet_visor/night_vision/nvg in (built_in_visors + inserted_visors))
 			if(do_after(user, 10 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
