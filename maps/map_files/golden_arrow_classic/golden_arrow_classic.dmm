@@ -533,7 +533,7 @@
 	pixel_x = 5;
 	pixel_y = 7
 	},
-/obj/item/storage/box/co2_knife{
+/obj/item/storage/box/loadout/co2_knife{
 	pixel_x = 3;
 	pixel_y = 13
 	},

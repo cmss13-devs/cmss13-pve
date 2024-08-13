@@ -5209,7 +5209,7 @@
 /area/golden_arrow/engineering)
 "tP" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/co2_knife{
+/obj/item/storage/box/loadout/co2_knife{
 	pixel_x = 3;
 	pixel_y = 13
 	},
