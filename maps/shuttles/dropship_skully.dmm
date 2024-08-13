@@ -29,7 +29,7 @@
 /obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
 	name = "\improper Skully"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/skully)
 "eN" = (
 /obj/structure/stairs/perspective,
@@ -292,10 +292,7 @@
 	},
 /area/shuttle/skully)
 "xn" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
-	id = "aft_door";
-	name = "\improper Skully cargo door"
-	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -426,12 +423,12 @@
 /area/shuttle/skully)
 "GF" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Hd" = (
 /obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
 	name = "\improper Skully"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/skully)
 "HT" = (
 /obj/structure/shuttle/part/dropship1/nose_front_left{
@@ -603,7 +600,7 @@
 /obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
 	name = "\improper Skully"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/skully)
 "RW" = (
 /turf/closed/shuttle/skully{
@@ -724,7 +721,7 @@
 /obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
 	name = "\improper Skully"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/skully)
 
 (1,1,1) = {"
