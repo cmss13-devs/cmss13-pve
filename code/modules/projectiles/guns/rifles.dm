@@ -436,6 +436,13 @@
 /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
 	current_mag = null
 
+//-------------------------------------------------------
+//XM43A, a cut down official carbine modification of the M41A.
+
+/obj/item/weapon/gun/rifle/m41aMK1/can_be_syringed()
+	. = ..()
+	name = "XM43A pulse carbine"
+
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
 
