@@ -8,6 +8,7 @@
 	directwired = 0  //Requires a cable directly underneath
 	unslashable = TRUE
 	unacidable = TRUE   //NOPE.jpg
+	is_on = FALSE
 	var/power_gen_percent = 0 //100,000W at full capacity
 	var/power_generation_max = 100000 //Full capacity
 	var/powernet_connection_failed = 0 //Logic checking for powernets
