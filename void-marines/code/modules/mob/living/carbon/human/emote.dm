@@ -243,11 +243,15 @@
 		if(user.gender == MALE)
 			if(default_lang == GLOB.all_languages[LANGUAGE_RUSSIAN])
 				return get_sfx("male_upp_warcry")
+			else if(default_lang == GLOB.all_languages[LANGUAGE_JAPANESE])
+				return get_sfx("male_clf_warcry")
 			else
 				return get_sfx("male_warcry")
 		if(user.gender == FEMALE)
 			if(default_lang == GLOB.all_languages[LANGUAGE_RUSSIAN])
 				return get_sfx("female_upp_warcry")
+			else if(default_lang == GLOB.all_languages[LANGUAGE_JAPANESE])
+				return get_sfx("male_clf_warcry") // ( ͡° ͜ʖ ͡°)
 			else
 				return get_sfx("female_warcry")
 
