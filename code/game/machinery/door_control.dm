@@ -2,6 +2,7 @@
 #define CONTROL_NORMAL_DOORS 1
 #define CONTROL_EMITTERS 2
 #define CONTROL_DROPSHIP 3
+#define CONTROL_VENDORS 4
 
 /obj/structure/machinery/door_control
 	name = "remote door-control"
@@ -102,6 +103,19 @@
 			else
 				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/door, close))
 
+/obj/structure/machinery/door_control/proc/handle_vendors()
+	for(var/obj/structure/machinery/cm_vending/M in machines)
+		if(!istype(M, /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep) || !istype(M, /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad) || !istype(M, /obj/structure/machinery/cm_vending/clothing/medic))
+			return
+		if(M.z == z)
+			if(M.blocked)
+				M.blocked = FALSE
+				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/cm_vending, update_icon))
+			else
+				M.blocked = TRUE
+				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/cm_vending, update_icon))
+
+
 /obj/structure/machinery/door_control/verb/push_button()
 	set name = "Push Button"
 	set category = "Object"
@@ -137,6 +151,8 @@
 			handle_pod()
 		if(CONTROL_DROPSHIP)
 			handle_dropship(id)
+		if(CONTROL_VENDORS)
+			handle_vendors()
 
 	desiredstate = !desiredstate
 	spawn(15)
@@ -233,4 +249,3 @@
 			handle_dropship(id)
 
 	desiredstate = !desiredstate
-

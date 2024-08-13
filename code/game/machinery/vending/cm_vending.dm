@@ -51,6 +51,7 @@
 	// Are points associated with this vendor tied to its instance?
 	var/instanced_vendor_points = FALSE
 	var/vend_flags = VEND_CLUTTER_PROTECTION
+	var/blocked = FALSE
 
 /*
 Explanation on stat flags:
@@ -80,6 +81,10 @@ IN_USE used for vending/denying
 	//icon_state = initial(icon_state) //shouldn't be needed but just in case
 	var/matrix/A = matrix()
 	apply_transform(A)
+
+	if(blocked)
+		icon_state = "[initial(icon_state)]_off"
+		return
 
 	if(stat & NOPOWER || stat & TIPPED_OVER) //tipping off without breaking uses "_off" sprite
 		overlays += image(icon, "[icon_state]_off")
@@ -420,6 +425,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(do_after(user, 80, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 			user.visible_message(SPAN_NOTICE("[user] rights \the [src]!"),SPAN_NOTICE("You right \the [src]!"))
 			flip_back()
+		return
+
+	if(blocked)
+		to_chat(user, SPAN_WARNING("[src] is locked"))
 		return
 
 	if(inoperable())

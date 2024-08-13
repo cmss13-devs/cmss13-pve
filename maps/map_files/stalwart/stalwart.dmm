@@ -4293,6 +4293,13 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/platoonprep)
+"Lo" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_y = -23;
+	normaldoorcontrol = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "Lp" = (
 /obj/structure/surface/rack,
 /turf/open/floor/almayer{
@@ -4596,6 +4603,11 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_y = -1;
+	normaldoorcontrol = 4;
+	pixel_x = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -24197,7 +24209,7 @@ Sf
 OZ
 cd
 SY
-SY
+Lo
 zb
 bi
 bi
