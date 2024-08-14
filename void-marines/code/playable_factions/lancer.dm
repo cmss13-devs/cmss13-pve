@@ -11,27 +11,27 @@
 	else if(ID)
 		_role = ID.rank
 	switch(_role)
-		if(JOB_RTO_FL) //RU-PVE ADDITION
+		if(JOB_SQUAD_RTO)
 			hud_icon_state = "sd"
-		if(JOB_SQUAD_LEADER_FL)
+		if(JOB_SQUAD_LEADER)
 			hud_icon_state = "leader_a"
-		if(JOB_SQUAD_TEAM_LEADER_FL)
+		if(JOB_SQUAD_TEAM_LEADER)
 			hud_icon_state = "tl"
-		if(JOB_SQUAD_SMARTGUN_FL)
+		if(JOB_SQUAD_SMARTGUN)
 			hud_icon_state = "gun"
-		if(JOB_SQUAD_MEDIC_FL)
+		if(JOB_SQUAD_MEDIC)
 			hud_icon_state = "med"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "pmc_[hud_icon_state]")
 
 	var/datum/squad/squad = H.assigned_squad
-	if(istype(squad, /datum/squad/marine/fl))
+	if(istype(squad, /datum/squad/marine/lancer))
 		var/squad_clr = H.assigned_squad.equipment_color
 		switch(GET_DEFAULT_ROLE(_role))
-			if(JOB_SQUAD_MEDIC_FL) hud_icon_state = "med"
-			if(JOB_SQUAD_SMARTGUN_FL) hud_icon_state = "gun"
-			if(JOB_SQUAD_TEAM_LEADER_FL) hud_icon_state = "tl"
-			if(JOB_SQUAD_LEADER_FL) hud_icon_state = "leader_a"
+			if(JOB_SQUAD_MEDIC) hud_icon_state = "med"
+			if(JOB_SQUAD_SMARTGUN) hud_icon_state = "gun"
+			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
+			if(JOB_SQUAD_LEADER) hud_icon_state = "leader_a"
 
 		if(!hud_icon_state) hud_icon_state = H.rank_fallback
 		if(hud_icon_state)

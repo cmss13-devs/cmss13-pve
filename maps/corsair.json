@@ -5,5 +5,5 @@
     "webmap_url": "GoldenArrow",
     "traits": [{"Marine Main Ship": true}],
     "nightmare_path": "maps/Nightmare/maps/corsair/",
-    "platoon": "/datum/squad/marine/fl"
+    "platoon": "/datum/squad/marine/lancer"
 }
