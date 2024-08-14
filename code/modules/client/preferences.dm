@@ -931,6 +931,7 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	return jobs_to_return
 
+/// Returns TRUE if any job has a priority other than NEVER, FALSE otherwise.
 /datum/preferences/proc/has_job_priorities()
 	if(!length(job_preference_list))
 		ResetJobs()
