@@ -3165,14 +3165,14 @@
 		package = 0
 		icon_state = "open-burrito"
 
-/obj/item/reagent_container/food/snacks/microwaved_burrito
+/obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
 	name = "Microwaved Burrito"
 	desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
 	icon_state = "open-burrito"
 	bitesize = 2
 	package = 0
 
-/obj/item/reagent_container/food/snacks/microwaved_burrito/Initialize()
+/obj/item/reagent_container/food/snacks/packaged_burrito/microwaved/Initialize()
 	. = ..()
 	reagents.add_reagent("bread", 6)
 	reagents.add_reagent("meatprotein", 6)
@@ -3202,14 +3202,14 @@
 		icon_state = "hburger"
 		item_state = "burger"
 
-/obj/item/reagent_container/food/snacks/microwaved_burger
+/obj/item/reagent_container/food/snacks/packaged_burger/microwaved
 	name = "Microwaved Cheeseburger"
 	desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
 	icon_state = "hburger"
 	bitesize = 3
 	package = 0
 
-/obj/item/reagent_container/food/snacks/packaged_burger/Initialize()
+/obj/item/reagent_container/food/snacks/packaged_burger/microwaved/Initialize()
 	. = ..()
 	reagents.add_reagent("bread", 6)
 	reagents.add_reagent("meatprotein", 6)
@@ -3238,14 +3238,14 @@
 		package = 0
 		icon_state = "open-hotdog"
 
-/obj/item/reagent_container/food/snacks/microwaved_hdogs
+/obj/item/reagent_container/food/snacks/packaged_hdogs/microwaved
 	name = "Microwaved Hotdog"
 	desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
 	icon_state = "open-hotdog"
 	bitesize = 2
 	package = 0
 
-/obj/item/reagent_container/food/snacks/microwaved_hdogs/Initialize()
+/obj/item/reagent_container/food/snacks/mpackaged_hdogs/microwaved/Initialize()
 	. = ..()
 	reagents.add_reagent("bread", 3)
 	reagents.add_reagent("meatprotein", 2)

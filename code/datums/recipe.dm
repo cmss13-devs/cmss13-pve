@@ -654,23 +654,23 @@
 
 //other
 
-/datum/recipe/microwaved_burrito
+/datum/recipe/packaged_burrito/microwaved
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_burrito,
 	)
-	result = /obj/item/reagent_container/food/snacks/microwaved_burrito
+	result = /obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
 
-/datum/recipe/microwaved_cheeseburger
+/datum/recipe/packaged_burger/microwaved
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_burger,
 	)
 	result = /obj/item/reagent_container/food/snacks/microwaved_burger
 
-/datum/recipe/microwaved_hdogs
+/datum/recipe/packaged_hdogs/microwaved
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_hdogs,
 	)
-	result = /obj/item/reagent_container/food/snacks/microwaved_hdogs
+	result = /obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
 
 /datum/recipe/hotdog
 	items = list(
