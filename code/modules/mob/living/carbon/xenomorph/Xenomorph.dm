@@ -253,12 +253,7 @@
 	var/pounce_distance = 0
 
 	// Life reduction variables.
-	var/life_stun_reduction = -1.5
-	var/life_knockdown_reduction = -1.5
-	var/life_knockout_reduction = -1.5
-	var/life_daze_reduction = -1.5
 	var/life_slow_reduction = -1.5
-
 
 	//////////////////////////////////////////////////////////////////
 	//
@@ -802,6 +797,11 @@
 	var/datum/mob_hud/MH = huds[MOB_HUD_XENO_INFECTION]
 	MH.add_hud_to(src, src)
 
+// Transfer any observing players over to the xeno's new body (`target`) on evolve/de-evolve.
+/mob/living/carbon/xenomorph/transfer_observers_to(atom/target)
+	for(var/mob/dead/observer/observer as anything in observers)
+		observer.clean_observe_target()
+		observer.do_observe(target)
 
 /mob/living/carbon/xenomorph/check_improved_pointing()
 	//xeno leaders get a big arrow and less cooldown
@@ -1117,8 +1117,3 @@
 	SPAN_WARNING("You squeeze and scuttle underneath [current_structure]."), max_distance = 2)
 	forceMove(current_structure.loc)
 	return TRUE
-
-/mob/living/carbon/xenomorph/knocked_down_callback()
-	. = ..()
-	if(!resting) // !resting because we dont wanna prematurely update wounds if they're just trying to rest
-		update_wounds()
