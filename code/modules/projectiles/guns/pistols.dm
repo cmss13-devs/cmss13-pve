@@ -480,7 +480,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m43"
 	item_state = "m43"
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	fire_sound = 'sound/weapons/gun_m43.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/clfpistol
 	w_class = SIZE_TINY

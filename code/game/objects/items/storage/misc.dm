@@ -118,7 +118,7 @@
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
-	storage_slots = 6
+	storage_slots = 7
 
 /obj/item/storage/box/loadout/upp
 	name = "Type 73 storing case"
