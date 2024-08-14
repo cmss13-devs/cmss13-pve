@@ -64,7 +64,7 @@
 "OS" = (/obj/effect/attach_point/fuel/rasputin{pixel_x = -32},/turf/closed/shuttle/rasputin{dir = 1; icon_state = "dwall37"},/area/shuttle/rasputin)
 "Pl" = (/obj/structure/shuttle/part/rasputin/engine,/turf/template_noop,/area/shuttle/rasputin)
 "Qj" = (/turf/closed/shuttle/rasputin{icon_state = "dwall38"},/area/shuttle/rasputin)
-"Rc" = (/obj/structure/machinery/door_control{id = "dropship_rasputin"; name = "Dropship Lockdown"; normaldoorcontrol = 3; pixel_y = -19; req_one_access_txt = "3;22"},/obj/effect/attach_point/crew_weapon/rasputin,/turf/open/shuttle/dropship{icon_state = "rasputin15"},/area/shuttle/rasputin)
+"Rc" = (/obj/structure/machinery/door_control{id = "dropship_rasputin"; name = "Dropship Lockdown"; normaldoorcontrol = 3; pixel_y = -19; req_access = list(121); req_one_access_txt = null},/obj/effect/attach_point/crew_weapon/rasputin,/turf/open/shuttle/dropship{icon_state = "rasputin15"},/area/shuttle/rasputin)
 "Rt" = (/turf/closed/shuttle/rasputin{icon_state = "dwall24"},/area/shuttle/rasputin)
 "Rv" = (/obj/structure/machinery/camera/autoname/golden_arrow/rasputin{dir = 4; icon_state = "autocam_editor"; pixel_x = -17},/turf/open/shuttle/dropship{icon_state = "rasputin3"},/area/shuttle/rasputin)
 "Rx" = (/turf/closed/shuttle/rasputin{dir = 8; icon_state = "dwall37"},/area/shuttle/rasputin)

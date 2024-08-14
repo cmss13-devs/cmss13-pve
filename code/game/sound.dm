@@ -527,6 +527,9 @@
 				S = pick('sound/voice/pred_pain1.ogg','sound/voice/pred_pain2.ogg','sound/voice/pred_pain3.ogg','sound/voice/pred_pain4.ogg','sound/voice/pred_pain5.ogg',5;'sound/voice/pred_pain_rare1.ogg')
 			if("clownstep")
 				S = pick('sound/effects/clownstep1.ogg', 'sound/effects/clownstep2.ogg')
+//RUCM START
+			if("male_clf_warcry")
+				S = pick('sound/voice/clf_warcry/warcry_male_1.ogg')
 	return S
 
 /client/proc/generate_sound_queues()

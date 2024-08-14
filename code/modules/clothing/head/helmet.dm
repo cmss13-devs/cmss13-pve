@@ -496,8 +496,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		return
 
 //RU-PVE ADDITION STARTS
-	if(istype(attacking_item, /obj/item/cell/apc))
-		var/obj/item/cell/apc/power_source = attacking_item
+	if(istype(attacking_item, /obj/item/cell))
+		var/obj/item/cell/power_source = attacking_item
+		if(power_source.charge <= 0)
+			to_chat(user, SPAN_DANGER("[power_source] is empty! You can't charge [src] visor with it!"))
+			return
 		for(var/obj/item/device/helmet_visor/night_vision/nvg in (built_in_visors + inserted_visors))
 			if(do_after(user, 10 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 				nvg.power_cell.charge += power_source.charge
