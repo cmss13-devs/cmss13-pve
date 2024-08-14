@@ -3174,8 +3174,8 @@
 
 /obj/item/reagent_container/food/snacks/packaged_burrito/microwaved/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 6)
-	reagents.add_reagent("meatprotein", 6)
+	reagents.add_reagent("bread", 1)
+	reagents.add_reagent("meatprotein", 1)
 
 /obj/item/reagent_container/food/snacks/packaged_burger
 	name = "Packaged Cheeseburger"
@@ -3211,10 +3211,8 @@
 
 /obj/item/reagent_container/food/snacks/packaged_burger/microwaved/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 6)
-	reagents.add_reagent("meatprotein", 6)
-	reagents.add_reagent("cheese", 2)
-	reagents.add_reagent("sodiumchloride", 2)
+	reagents.add_reagent("bread", 1)
+	reagents.add_reagent("meatprotein", 1)
 
 /obj/item/reagent_container/food/snacks/packaged_hdogs
 	name = "Packaged Hotdog"
@@ -3247,9 +3245,8 @@
 
 /obj/item/reagent_container/food/snacks/mpackaged_hdogs/microwaved/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 3)
-	reagents.add_reagent("meatprotein", 2)
-	reagents.add_reagent("sodiumchloride", 2)
+	reagents.add_reagent("bread", 1)
+	reagents.add_reagent("meatprotein", 1)
 
 /obj/item/reagent_container/food/snacks/upp
 	name = "\improper UPP ration"

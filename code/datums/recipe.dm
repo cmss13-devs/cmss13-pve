@@ -664,7 +664,7 @@
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_burger,
 	)
-	result = /obj/item/reagent_container/food/snacks/microwaved_burger
+	result = /obj/item/reagent_container/food/snacks/packaged_burger/microwaved
 
 /datum/recipe/packaged_hdogs/microwaved
 	items = list(
