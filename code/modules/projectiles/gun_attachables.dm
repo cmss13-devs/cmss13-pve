@@ -3353,7 +3353,10 @@ Defined in conflicts.dm of the #defines folder.
 				SEND_SIGNAL(user, COMSIG_MOB_DEPLOYED_BIPOD)
 				playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
 				accuracy_mod = HIT_ACCURACY_MULT_TIER_5
-				scatter_mod = -SCATTER_AMOUNT_TIER_10
+				if(istype(G,/obj/item/weapon/gun/rifle/lmg))
+					scatter_mod = -SCATTER_AMOUNT_TIER_6
+				else
+					scatter_mod = -SCATTER_AMOUNT_TIER_10
 				recoil_mod = -RECOIL_AMOUNT_TIER_4
 				burst_scatter_mod = -SCATTER_AMOUNT_TIER_8
 				if(istype(G,/obj/item/weapon/gun/rifle/sniper/M42A))
