@@ -210,6 +210,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		if(!M.ready || M.job)
 			continue
 
+		var/datum/preferences/prefs = M.client.prefs
+		if(prefs.alternate_option == RETURN_TO_LOBBY && !prefs.has_job_priorities()) //only try to assign players that actually want assigned
+			continue
+
 		unassigned_players += M
 
 	if(!length(unassigned_players)) //If we don't have any players, the round can't start.

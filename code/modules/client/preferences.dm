@@ -931,6 +931,17 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	return jobs_to_return
 
+/datum/preferences/proc/has_job_priorities()
+	if(!length(job_preference_list))
+		ResetJobs()
+		return FALSE
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] != NEVER_PRIORITY)
+			return TRUE
+
+	return FALSE
+
 /datum/preferences/proc/SetJobDepartment(datum/job/J, priority)
 	if(!J || priority < 0 || priority > 4)
 		return FALSE
