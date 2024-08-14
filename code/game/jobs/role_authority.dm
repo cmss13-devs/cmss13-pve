@@ -220,8 +220,28 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		unassigned_players = null
 		return
 
-	unassigned_players = shuffle(unassigned_players, 1) //Shuffle the players.
+	log_debug("ASSIGNMENT: Building player_weights list.")
+	var/list/player_weights = list()
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
+		var/base_weight = 1 //baseline weighting
 
+		var/new_bonus = 0
+		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
+			if(0 to 2 HOURS)
+				new_bonus = 2
+			if(2 HOURS to 5 HOURS)
+				new_bonus = 1
+
+		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
+
+		player_weights[cycled_unassigned] = base_weight + new_bonus + streak_bonus
+
+	log_debug("ASSIGNMENT: Weighted shuffling unassigned_players list.")
+	unassigned_players.Cut()
+	while(length(player_weights))
+		var/mob/new_player/weighted_pick = pick_weight(player_weights)
+		unassigned_players += weighted_pick
+		player_weights -= weighted_pick
 
 	// How many positions do we open based on total pop
 	for(var/i in roles_by_name)
@@ -249,29 +269,6 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 /datum/authority/branch/role/proc/assign_roles(list/roles_to_assign, list/unassigned_players)
 	if(!length(roles_to_assign) || !length(unassigned_players))
 		return
-
-	log_debug("ASSIGNMENT: Building weighted_players list.")
-	var/list/weighted_players = list()
-	for(var/mob/new_player/cycled_unassigned in unassigned_players)
-		var/base_weight = 1 //baseline weighting
-
-		var/new_bonus = 0
-		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
-			if(0 to 2 HOURS)
-				new_bonus = 2
-			if(2 HOURS to 5 HOURS)
-				new_bonus = 1
-
-		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
-
-		weighted_players[cycled_unassigned] = base_weight + new_bonus + streak_bonus
-
-	log_debug("ASSIGNMENT: Weighted shuffling unassigned_players list.")
-	unassigned_players.Cut()
-	while(length(weighted_players))
-		var/mob/new_player/weighted_pick = pick_weight(weighted_players)
-		unassigned_players += weighted_pick
-		weighted_players -= weighted_pick
 
 	log_debug("ASSIGNMENT: Starting prime priority assignments.")
 	for(var/mob/new_player/cycled_unassigned in unassigned_players)
