@@ -1,3 +1,21 @@
+/* Copyright 2020 bobbahbrown (https://github.com/bobbahbrown), watermelon914 (https://github.com/watermelon914)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ * and associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
 /**
  * Creates a TGUI input list window and returns the user's response.
  *
@@ -5,15 +23,18 @@
  * Arguments:
  * * user - The user to show the input box to.
  * * message - The content of the input box, shown in the body of the TGUI window.
- * * title - The title of the input box, shown on the top of the TGUI window.
- * * items - The options that can be chosen by the user, each string is assigned a button on the UI.
+ * * title - The title of the list input, shown on the top of the TGUI window.
+ * * buttons - The options that can be chosen by the user, each string is assigned a button on the UI.
+ * * timeout - The timeout of the alert, after which the list input will close and qdel itself. Set to zero for no timeout.
+ * * theme - The ui theme to use for the TGUI window.
  * * default - If an option is already preselected on the UI. Current values, etc.
- * * timeout - The timeout of the input box, after which the menu will close and qdel itself. Set to zero for no timeout.
+ * * ui_state - The TGUI UI state that will be returned in ui_state(). Default: always_state
  */
-/proc/tgui_input_list(mob/user, message, title = "Select", list/items, timeout = 0, theme = null, ui_state = GLOB.always_state)
+/proc/tgui_input_list(mob/user, message, title = "Select", list/buttons, timeout = 0, theme = null, default, ui_state = GLOB.always_state)
 	if (!user)
 		user = usr
-	if(!length(items))
+	if(!length(buttons))
+		stack_trace("tgui_input_list called with no buttons!")
 		return null
 	if (!istype(user))
 		if (istype(user, /client))
@@ -25,7 +46,7 @@
 	if(isnull(user.client))
 		return null
 
-	var/datum/tgui_list_input/input = new(user, message, title, items, timeout, theme, ui_state)
+	var/datum/tgui_list_input/input = new(user, message, title, buttons, timeout, theme, default, ui_state)
 	if(input.invalid)
 		qdel(input)
 		return
@@ -34,6 +55,42 @@
 	if (input)
 		. = input.choice
 		qdel(input)
+
+/**
+ * Creates an asynchronous TGUI input list window with an associated callback.
+ *
+ * This proc should be used to create inputs that invoke a callback with the user's chosen option.
+ * Arguments:
+ * * user - The user to show the input box to.
+ * * message - The content of the input box, shown in the body of the TGUI window.
+ * * title - The title of the list input, shown on the top of the TGUI window.
+ * * buttons - The options that can be chosen by the user, each string is assigned a button on the UI.
+ * * callback - The callback to be invoked when a choice is made.
+ * * timeout - The timeout of the alert, after which the list_input will close and qdel itself. Set to zero for no timeout.
+ * * theme - The ui theme to use for the TGUI window.
+ * * default - If an option is already preselected on the UI. Current values, etc.
+ * * ui_state - The TGUI UI state that will be returned in ui_state(). Default: always_state
+ */
+/proc/tgui_input_list_async(mob/user, message, title = "Select", list/buttons, datum/callback/callback, timeout = 60 SECONDS, theme = null, default, ui_state = GLOB.always_state)
+	if (!user)
+		user = usr
+	if(!length(buttons))
+		return null
+	if (!istype(user))
+		if (istype(user, /client))
+			var/client/client = user
+			user = client.mob
+		else
+			return null
+
+	if(isnull(user.client))
+		return null
+
+	var/datum/tgui_list_input/async/input = new(user, message, title, buttons, callback, timeout, theme, default, ui_state)
+	if(input.invalid)
+		qdel(input)
+		return
+	input.tgui_interact(user)
 
 /**
  * # tgui_list_input
@@ -46,10 +103,10 @@
 	var/title
 	/// The textual body of the TGUI window
 	var/message
-	/// The list of items (responses) provided on the TGUI window
-	var/list/items
+	/// The list of buttons (responses) provided on the TGUI window. These will automatically all be strings
+	var/list/buttons
 	/// Buttons (strings specifically) mapped to the actual value (e.g. a mob or a verb)
-	var/list/items_map
+	var/list/buttons_map
 	/// The button that the user has pressed, null if no selection has been made
 	var/choice
 	/// The default button to be selected
@@ -62,42 +119,43 @@
 	var/closed
 	/// The TGUI UI state that will be returned in ui_state(). Default: always_state
 	var/datum/ui_state/state
+	/// String field for the theme to use
+	var/ui_theme
 	/// Whether the tgui list input is invalid or not (i.e. due to all list entries being null)
 	var/invalid = FALSE
-	/// The theme that this UI should display
-	var/theme
 
-/datum/tgui_list_input/New(mob/user, message, title, list/items, timeout, theme, ui_state)
+/datum/tgui_list_input/New(mob/user, message, title, list/buttons, timeout, theme = null, default, ui_state)
 	src.title = title
 	src.message = message
-	src.items = list()
-	src.items_map = list()
+	src.buttons = list()
+	src.buttons_map = list()
 	src.default = default
 	src.state = ui_state
-	src.theme = theme
+	src.ui_theme = theme
 	var/list/repeat_items = list()
 	// Gets rid of illegal characters
 	var/static/regex/whitelistedWords = regex(@{"([^\u0020-\u8000]+)"})
-	for(var/i in items)
+
+	for(var/i in buttons)
 		if(!i)
 			continue
 		var/string_key = whitelistedWords.Replace("[i]", "")
 		//avoids duplicated keys E.g: when areas have the same name
 		string_key = avoid_assoc_duplicate_keys(string_key, repeat_items)
-		src.items += string_key
-		src.items_map[string_key] = i
+		src.buttons += string_key
+		src.buttons_map[string_key] = i
 
-	if(length(src.items) == 0)
+	if(length(src.buttons) == 0)
 		invalid = TRUE
 	if (timeout)
 		src.timeout = timeout
 		start_time = world.time
 		QDEL_IN(src, timeout)
 
-/datum/tgui_list_input/Destroy(force)
+/datum/tgui_list_input/Destroy(force, ...)
 	SStgui.close_uis(src)
 	state = null
-	QDEL_NULL(items)
+	buttons = null // TG QDEL_NULLs this
 	return ..()
 
 /**
@@ -106,12 +164,12 @@
  */
 /datum/tgui_list_input/proc/wait()
 	while (!choice && !closed)
-		stoplag(1)
+		stoplag(0.2 SECONDS)
 
 /datum/tgui_list_input/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ListInputModal")
+		ui = new(user, src, "ListInputWindow")
 		ui.open()
 
 /datum/tgui_list_input/ui_close(mob/user)
@@ -123,11 +181,13 @@
 
 /datum/tgui_list_input/ui_static_data(mob/user)
 	var/list/data = list()
-	data["init_value"] = default || items[1]
-	data["items"] = items
+	data["init_value"] = default || buttons[1]
+	data["items"] = buttons
+	data["large_buttons"] = FALSE // Pref?
 	data["message"] = message
+	data["swapped_buttons"] = FALSE // Pref?
 	data["title"] = title
-	data["theme"] = theme
+	data["theme"] = ui_theme
 	return data
 
 /datum/tgui_list_input/ui_data(mob/user)
@@ -136,15 +196,15 @@
 		data["timeout"] = clamp((timeout - (world.time - start_time) - 1 SECONDS) / (timeout - 1 SECONDS), 0, 1)
 	return data
 
-/datum/tgui_list_input/ui_act(action, list/params)
+/datum/tgui_list_input/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if (.)
 		return
 	switch(action)
 		if("submit")
-			if (!(params["entry"] in items))
+			if (!(params["entry"] in buttons))
 				return
-			set_choice(items_map[params["entry"]])
+			set_choice(buttons_map[params["entry"]])
 			closed = TRUE
 			SStgui.close_uis(src)
 			return TRUE
@@ -155,3 +215,32 @@
 
 /datum/tgui_list_input/proc/set_choice(choice)
 	src.choice = choice
+
+/**
+ * # async tgui_list_input
+ *
+ * An asynchronous version of tgui_list_input to be used with callbacks instead of waiting on user responses.
+ */
+/datum/tgui_list_input/async
+	/// The callback to be invoked by the tgui_modal upon having a choice made.
+	var/datum/callback/callback
+
+/datum/tgui_list_input/async/New(mob/user, message, title, list/buttons, callback, timeout, theme = null, default, ui_state)
+	..(user, title, message, buttons, timeout, theme, default)
+	src.callback = callback
+
+/datum/tgui_list_input/async/Destroy(force, ...)
+	QDEL_NULL(callback)
+	. = ..()
+
+/datum/tgui_list_input/async/ui_close(mob/user)
+	. = ..()
+	qdel(src)
+
+/datum/tgui_list_input/async/set_choice(choice)
+	. = ..()
+	if(!isnull(src.choice))
+		callback?.InvokeAsync(src.choice)
+
+/datum/tgui_list_input/async/wait()
+	return
