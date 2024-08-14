@@ -18,6 +18,33 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	max_range = 24 //So S8 users don't have their bullets magically disappaer at 22 tiles (S8 can see 24 tiles)
 
+/datum/ammo/bullet/rifle/heavy
+	name = "heavy rifle bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_4
+	accuracy = HIT_ACCURACY_TIER_3
+	shell_speed = AMMO_SPEED_TIER_6
+	effective_range_max = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+
+/datum/ammo/bullet/rifle/heavy/ap
+	name = "armor-piercing heavy rifle bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/heap
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	name = "armor-piercing heavy rifle bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+
+	damage = 70
+	penetration = ARMOR_PENETRATION_TIER_10
+
+
 /datum/ammo/bullet/rifle/holo_target
 	name = "holo-targeting rifle bullet"
 	damage = 30

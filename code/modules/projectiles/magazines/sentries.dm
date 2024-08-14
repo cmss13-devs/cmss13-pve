@@ -8,7 +8,7 @@
 	flags_magazine = NO_FLAGS //can't be refilled or emptied by hand
 	caliber = "10x28mm"
 	max_rounds = 500
-	default_ammo = /datum/ammo/bullet/turret
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = null
 
 /obj/item/ammo_magazine/sentry/dropped
@@ -20,7 +20,7 @@
 	current_rounds = 99999
 
 /obj/item/ammo_magazine/sentry/premade/dumb
-	default_ammo = /datum/ammo/bullet/turret/dumb
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 
 /obj/item/ammo_magazine/sentry/upp
 	name = "AK-500 ammo drum (7.62mm Caseless)"
