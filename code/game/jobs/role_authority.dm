@@ -236,12 +236,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 		player_weights[cycled_unassigned] = base_weight + new_bonus + streak_bonus
 
-	log_debug("ASSIGNMENT: Weighted shuffling unassigned_players list.")
-	unassigned_players.Cut()
-	while(length(player_weights))
-		var/mob/new_player/weighted_pick = pick_weight(player_weights)
-		unassigned_players += weighted_pick
-		player_weights -= weighted_pick
+	unassigned_players = shuffle_weight(unassigned_players)
 
 	// How many positions do we open based on total pop
 	for(var/i in roles_by_name)
