@@ -23,7 +23,7 @@
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
 
 	/// Sound used when firing
-	var/firing_sound = 'sound/weapons/sentry_shoot_loop_01.ogg'
+	var/firing_sound = 'sound/weapons/gun_smartgun1.ogg'
 
 	var/sentry_type = "sentry" //Used for the icon
 	display_additional_stats = TRUE
