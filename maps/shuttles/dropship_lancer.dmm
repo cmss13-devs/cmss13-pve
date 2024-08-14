@@ -271,6 +271,20 @@
 	icon_state = "stan5"
 	},
 /area/shuttle/lancers)
+"X" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/docking_port/mobile/marine_dropship/lancers,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
 "Z" = (
 /turf/closed/shuttle/ert{
 	icon_state = "rightengine_2"
@@ -365,7 +379,7 @@ I
 o
 u
 h
-h
+X
 h
 P
 F

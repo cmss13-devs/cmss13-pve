@@ -9,6 +9,7 @@
 	assignment = "Marauder"
 	rank = JOB_SQUAD_MARINE
 	skills = /datum/skills/pfc
+	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/lancer/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
@@ -27,6 +28,7 @@
 	assignment = "Machinegunner"
 	rank = JOB_SQUAD_SMARTGUN
 	skills = /datum/skills/smartgunner
+	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/lancer/smartgunner/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
@@ -45,6 +47,7 @@
 	assignment = "Radio Jokey"
 	rank = JOB_SQUAD_RTO
 	skills = /datum/skills/SL
+	minimap_icon = "rto"
 
 /datum/equipment_preset/uscm/lancer/rto/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
@@ -63,6 +66,7 @@
 	assignment = "Surgeon"
 	rank = JOB_SQUAD_MEDIC
 	skills = /datum/skills/combat_medic
+	minimap_icon = "medic"
 
 /datum/equipment_preset/uscm/lancer/med/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
@@ -81,6 +85,7 @@
 	assignment = "Bruiser"
 	rank = JOB_SQUAD_TEAM_LEADER
 	skills = /datum/skills/pmc/SL
+	minimap_icon = "tl"
 
 /datum/equipment_preset/uscm/lancer/tl/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
@@ -99,6 +104,7 @@
 	assignment = "Warlord"
 	rank = JOB_SQUAD_LEADER
 	skills = /datum/skills/pmc/SL
+	minimap_icon = "leader"
 
 /datum/equipment_preset/uscm/lancer/sl/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
