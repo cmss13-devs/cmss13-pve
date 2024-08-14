@@ -14919,7 +14919,7 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "qwG" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/clf,
+/obj/item/storage/box/loadout/clf,
 /turf/open/shuttle{
 	icon_state = "floor4"
 	},
