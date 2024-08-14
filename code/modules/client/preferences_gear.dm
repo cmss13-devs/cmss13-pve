@@ -1036,7 +1036,7 @@ var/global/list/gear_datums_by_name = list()
 	cost = 3
 
 /datum/gear/misc/sunscreen_stick
-	display_name = "USCM issue sunscreen"
+	display_name = "Service issue sunscreen"
 	path = /obj/item/facepaint/sunscreen_stick
 	cost = 1
 	allowed_origins = USCM_ORIGINS
