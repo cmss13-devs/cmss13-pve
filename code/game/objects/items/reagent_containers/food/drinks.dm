@@ -353,7 +353,7 @@
 
 /obj/item/reagent_container/food/drinks/flask/canteen
 	name = "canteen"
-	desc = "Metal ruggedized canteen, with a reasonable capacity of water. Or, y'know, other liquids."
+	desc = "You take a sip from your trusty USCM canteen..."
 	icon_state = "canteen"
 	volume = 60
 	center_of_mass = "x=17;y=8"
@@ -361,12 +361,6 @@
 /obj/item/reagent_container/food/drinks/flask/canteen/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 60)
-
-/obj/item/reagent_container/food/drinks/flask/canteen/empty
-
-/obj/item/reagent_container/food/drinks/flask/canteen/empty/Initialize()
-	. = ..()
-	reagents.add_reagent(null)
 
 /obj/item/reagent_container/food/drinks/flask/detflask
 	name = "brown leather flask"
