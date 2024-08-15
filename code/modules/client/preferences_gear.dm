@@ -1135,6 +1135,6 @@ var/global/list/gear_datums_by_name = list()
 	cost = 3
 
 /datum/gear/misc/purple_poncho
-	display_name = "Puprple Poncho"
+	display_name = "Purple Poncho"
 	path = /obj/item/clothing/accessory/poncho/purple
 	cost = 3
