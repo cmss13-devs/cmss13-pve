@@ -236,7 +236,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 		player_weights[cycled_unassigned] = base_weight + new_bonus + streak_bonus
 
-	unassigned_players = shuffle_weight(unassigned_players)
+	unassigned_players = shuffle_weight(player_weights)
 
 	// How many positions do we open based on total pop
 	for(var/i in roles_by_name)
