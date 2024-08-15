@@ -106,7 +106,7 @@
 "gC" = (/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/light/spot,/turf/open/floor/prison,/area/tortuga/bridge)
 "gF" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/structure/machinery/big_computers/computerblack/computer5,/obj/item/trash/snack_bowl{pixel_x = -6; pixel_y = 20},/turf/open/floor/plating,/area/tortuga/bridge)
 "gG" = (/obj/effect/decal/cleanable/dirt,/obj/structure/surface/table/reinforced/almayer_B,/obj/structure/machinery/faxmachine/corporate/highcom{pixel_x = -1; pixel_y = 9},/obj/item/paper_bin/uscm{pixel_x = 7; pixel_y = -2},/turf/open/floor/prison{dir = 4; icon_state = "blue"},/area/tortuga/bridge)
-"gP" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/warning_stripes{icon_state = "S"},/turf/open/floor/prison,/area/space)
+"gP" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/warning_stripes{icon_state = "S"},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "gR" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/tortuga/bridge)
 "gW" = (/obj/effect/decal/cleanable/dirt,/obj/item/storage/briefcase{pixel_y = 13},/turf/open/floor/prison{icon_state = "bright_clean2"},/area/tortuga/bridge)
 "hb" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/tortuga/bridge)
@@ -385,7 +385,7 @@
 "wj" = (/obj/item/reagent_container/food/drinks/soymilk{pixel_x = -25; pixel_y = 5},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "wl" = (/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{pixel_x = -10},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/tortuga/canteen)
 "wo" = (/obj/structure/pipes/vents/pump/on,/turf/open/floor/prison{dir = 9; icon_state = "darkbrown2"},/area/tortuga/canteen)
-"wp" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_x = 1; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"},/turf/open/floor/prison,/area/space)
+"wp" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_x = 1; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "wq" = (/obj/structure/machinery/light/spot,/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "wG" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy3{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/tortuga/hangar)
 "wI" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/plating_catwalk/prison,/area/tortuga/medical)
@@ -402,7 +402,6 @@
 "xk" = (/obj/item/tool/kitchen/knife{pixel_x = -9; pixel_y = 22},/turf/open/floor/hybrisa/tile/tilewhite,/area/tortuga/canteen)
 "xl" = (/obj/structure/surface/table/reinforced/almayer_B,/obj/item/reagent_container/food/snacks/sliceable/bread{pixel_x = -4; pixel_y = 1},/obj/item/reagent_container/food/snacks/egg{pixel_x = -7; pixel_y = 15},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/tile/tilewhite,/area/tortuga/canteen)
 "xp" = (/obj/effect/landmark/observer_start,/turf/closed/wall/almayer/white/hull,/area/tortuga/cryo)
-"xA" = (/turf/closed/wall/strata_outpost,/area/space)
 "xC" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/open/floor/prison{dir = 4; icon_state = "darkbrown2"},/area/tortuga/canteen)
 "xD" = (/turf/open/floor/prison{dir = 1; icon_state = "greenblue"},/area/tortuga/medical)
 "xG" = (/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow{pixel_x = -10},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/tortuga/canteen)
@@ -420,7 +419,7 @@
 "yv" = (/obj/structure/machinery/light/small{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/tortuga/corridor_upper)
 "yC" = (/obj/structure/bed/chair{dir = 1; pixel_y = 6},/obj/item/trash/crushed_cup{pixel_x = -13; pixel_y = -10},/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/tortuga/canteen)
 "yE" = (/turf/open/floor/plating,/area/tortuga/corridor_upper)
-"yK" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"yK" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "yM" = (/turf/open/floor/plating/plating_catwalk/prison,/area/tortuga/shower)
 "yN" = (/obj/structure/bed/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/tortuga/canteen)
 "yQ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 5; icon_state = "blue"},/area/tortuga/canteen)
@@ -436,8 +435,8 @@
 "zv" = (/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/structure/prop/hybrisa/misc/floorprops/grate2,/turf/open/floor/plating,/area/tortuga/hangar)
 "zB" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/tortuga/hangar)
 "zH" = (/turf/open/floor/hybrisa/wood/blackwood,/area/tortuga/barrack)
-"zI" = (/turf/closed/wall/almayer/outer,/area/space)
-"zJ" = (/obj/structure/machinery/cm_vending/gear/synth,/turf/open/floor/prison,/area/space)
+"zI" = (/turf/closed/wall/almayer/outer,/area/tortuga/corridor_lower)
+"zJ" = (/obj/structure/machinery/cm_vending/gear/synth,/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "zK" = (/obj/structure/surface/table/reinforced/prison,/obj/item/paper_bin{pixel_x = 6; pixel_y = 17},/turf/open/floor/prison{dir = 6; icon_state = "whitegreen"},/area/tortuga/medical)
 "zN" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/obj/structure/machinery/light,/turf/open/floor/almayer{icon_state = "tcomms"},/area/tortuga/cryo)
 "zP" = (/turf/closed/shuttle/elevator{dir = 10},/area/tortuga/lift)
@@ -461,12 +460,12 @@
 "Bn" = (/obj/structure/machinery/disposal{density = 0; pixel_x = 4; pixel_y = 14},/obj/effect/decal/cleanable/flour,/obj/structure/machinery/camera/autoname/golden_arrow{dir = 8},/turf/open/floor/hybrisa/tile/tilewhitecheckered,/area/tortuga/canteen)
 "Bo" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/light/small{dir = 8},/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/tortuga/canteen)
 "Bx" = (/obj/structure/machinery/door/airlock/almayer/medical{req_access = list(125); req_one_access = list()},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/tortuga/medical)
-"BD" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/structure/machinery/door_control{id = "synthbay"; name = "storage bay door-control"; pixel_y = -19},/turf/open/floor/prison,/area/space)
+"BD" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/structure/machinery/door_control{id = "synthbay"; name = "storage bay door-control"; pixel_y = -19},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "BE" = (/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/structure/prop/hybrisa/misc/fake/wire/red,/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/effect/decal/cleanable/dirt,/obj/structure/barricade/handrail/hybrisa/road/plastic/red{dir = 4},/obj/item/stack/sheet/metal{pixel_x = 1; pixel_y = 21},/obj/item/tool/crowbar/red{pixel_x = -8; pixel_y = 23},/turf/open/floor/plating,/area/tortuga/canteen)
 "BK" = (/obj/structure/prop/ice_colony/ground_wire{dir = 4},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{dir = 4; pixel_x = 29},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe5{dir = 4; pixel_y = -1},/obj/structure/prop/invuln/fire{icon_state = "fire"; pixel_x = 10; pixel_y = 1},/obj/effect/decal/cleanable/liquid_fuel,/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/plating,/area/tortuga/canteen)
 "BN" = (/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/camera/autoname/golden_arrow{dir = 4},/obj/effect/landmark/late_join,/obj/effect/landmark/late_join/alpha,/obj/effect/landmark/start/marine/medic/lancer,/turf/open/floor/almayer/no_build{icon_state = "plating"},/area/tortuga/cryo)
 "BP" = (/obj/structure/machinery/camera/autoname/golden_arrow{dir = 8},/obj/item/storage/belt/utility/full{pixel_x = -11; pixel_y = 16},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/tortuga/corridor_upper)
-"BR" = (/obj/structure/machinery/cm_vending/clothing/synth,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"BR" = (/obj/structure/machinery/cm_vending/clothing/synth,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "BT" = (/obj/structure/machinery/autodoc_console{dir = 1; pixel_x = -11; pixel_y = 6},/turf/open/floor/prison{dir = 8; icon_state = "greenblue"},/area/tortuga/medical)
 "BU" = (/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/tortuga/shower)
 "BW" = (/obj/structure/largecrate/random/secure{pixel_x = 6; pixel_y = 17},/obj/structure/largecrate/random/case,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/item/stack/cable_coil{pixel_x = -6; pixel_y = 2},/obj/item/storage/bible{desc = "As the legendary US Army chaplain once said, 'There are no Athiests in fancy offices'."; name = "Holy Bible"; pixel_x = 5; pixel_y = 26},/obj/structure/machinery/light/small{dir = 4},/turf/open/floor/hybrisa/tile/tilebeige,/area/tortuga/barrack)
@@ -492,7 +491,7 @@
 "Ds" = (/obj/structure/prop/hybrisa/misc/buildinggreeblies/greeble10{pixel_x = -4; pixel_y = 2},/obj/structure/blocker/invisible_wall,/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/tortuga/corridor_upper)
 "Dt" = (/turf/open/floor/almayer{icon_state = "dark_sterile"},/area/tortuga/canteen)
 "Dv" = (/obj/structure/machinery/computer/cameras/wooden_tv{desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW."; dir = 4; layer = 3.2; name = "Television set"; network = null; pixel_x = -17},/turf/open/floor/hybrisa/wood/darkerwood,/area/tortuga/jokey_office)
-"Dw" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/secure_closet/surgical{pixel_x = 30},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"Dw" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/secure_closet/surgical{pixel_x = 30},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "Dy" = (/obj/effect/decal/cleanable/dirt,/obj/structure/reagent_dispensers/beerkeg/alt_dark{anchored = 1; chemical = null; density = 0; pixel_x = -7; pixel_y = 10},/obj/item/reagent_container/food/drinks/cans/beer,/turf/open/floor/hybrisa/carpet/carpetgreen,/area/tortuga/barrack)
 "DA" = (/obj/structure/pipes/vents/scrubber/on,/turf/open/floor/prison,/area/tortuga/corridor_upper)
 "DC" = (/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/tortuga/canteen)
@@ -517,7 +516,7 @@
 "EK" = (/obj/structure/surface/table/reinforced/prison,/obj/effect/decal/cleanable/dirt,/obj/item/trash/plate{pixel_x = -6; pixel_y = 12},/turf/open/floor/hybrisa/wood/greywood,/area/tortuga/canteen)
 "EL" = (/obj/effect/landmark/late_join,/obj/effect/landmark/late_join/alpha,/obj/effect/landmark/start/marine/lancer,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/tortuga/cryo)
 "EO" = (/obj/structure/bed/chair{dir = 8; pixel_x = -5; pixel_y = 4},/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/tortuga/canteen)
-"ER" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 1},/obj/structure/closet/fireaxecabinet{pixel_y = 30},/obj/structure/surface/table/almayer,/obj/item/prop/almayer/comp_closed{pixel_y = 10},/turf/open/floor/prison,/area/space)
+"ER" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 1},/obj/structure/closet/fireaxecabinet{pixel_y = 30},/obj/structure/surface/table/almayer,/obj/item/prop/almayer/comp_closed{pixel_y = 10},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "ET" = (/obj/structure/prop/hybrisa/lattice_prop/lattice_6{layer = 6; pixel_y = 16},/turf/open/floor/prison,/area/tortuga/corridor_upper)
 "EU" = (/obj/structure/barricade/handrail{dir = 8},/obj/structure/closet/secure_closet{icon_broken = "fridgebroken"; icon_closed = "fridge"; icon_locked = "fridge1"; icon_off = "fridge1"; icon_opened = "fridgeopen"; icon_state = "fridge1"; name = "beverage fridge"; pixel_x = 2; pixel_y = 7},/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/obj/item/reagent_container/food/drinks/cans/beer,/turf/open/floor/hybrisa/tile/tilewhitecheckered,/area/tortuga/canteen)
 "EW" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "dark_sterile"},/area/tortuga/canteen)
@@ -541,7 +540,7 @@
 "Gg" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/canteen)
 "Gi" = (/obj/structure/bed/chair{dir = 1; pixel_y = 12},/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/canteen)
 "Gm" = (/obj/structure/largecrate/random/barrel/black{pixel_x = 5; pixel_y = 9},/obj/structure/largecrate/random/barrel/brown,/turf/open/floor/prison,/area/tortuga/corridor_upper)
-"Go" = (/obj/effect/decal/cleanable/dirt,/obj/structure/pipes/vents/pump{dir = 8},/obj/structure/surface/rack,/obj/item/book/manual/robotics_cyborgs{pixel_y = 4},/obj/item/tool/weldingtool/hugetank,/obj/item/tool/wirecutters,/turf/open/floor/prison,/area/space)
+"Go" = (/obj/effect/decal/cleanable/dirt,/obj/structure/pipes/vents/pump{dir = 8},/obj/structure/surface/rack,/obj/item/book/manual/robotics_cyborgs{pixel_y = 4},/obj/item/tool/weldingtool/hugetank,/obj/item/tool/wirecutters,/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "Gp" = (/obj/structure/window/framed/strata,/turf/open/floor/plating,/area/tortuga/medical)
 "Gs" = (/obj/structure/window/framed/strata,/turf/open/floor/plating,/area/tortuga/shower)
 "Gu" = (/obj/item/trash/cigbutt{layer = 3.2; pixel_x = -10; pixel_y = -5},/turf/open/floor/prison{dir = 6; icon_state = "blue"},/area/tortuga/canteen)
@@ -607,7 +606,7 @@
 "KB" = (/obj/structure/machinery/door_control{id = "cargolock"; name = "GM cargo lift control"; pixel_y = 11},/obj/structure/machinery/door_control{id = "specialcargo1"; name = "GM special cargo lock control 1"; pixel_y = 2},/obj/structure/machinery/door_control{id = "specialcargo2"; name = "GM special cargo lock control 2"; pixel_y = -7},/turf/open/floor/plating,/area/tortuga/corridor_lower)
 "KO" = (/turf/open/floor/prison{dir = 1; icon_state = "blue"},/area/tortuga/shower)
 "KV" = (/obj/structure/machinery/light/small{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 5; icon_state = "blue"},/area/tortuga/shower)
-"KX" = (/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"KX" = (/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "Lc" = (/turf/open/floor/prison{dir = 1; icon_state = "darkbrown2"},/area/tortuga/corridor_lower)
 "Ld" = (/obj/structure/curtain,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/shower)
 "Le" = (/obj/structure/curtain/red,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/shower)
@@ -678,7 +677,7 @@
 "OC" = (/obj/effect/decal/cleanable/dirt,/obj/structure/largecrate/random/barrel/blue{desc = "A blue storage barrel, used to store some fresh water."; name = "water barrel"; pixel_y = 14},/obj/item/frame/rack{pixel_x = 7; pixel_y = 4},/obj/item/frame/rack,/turf/open/floor/prison{dir = 8; icon_state = "blue"},/area/tortuga/shower)
 "OF" = (/obj/structure/pipes/vents/scrubber/on,/turf/open/floor/prison{dir = 4; icon_state = "blue"},/area/tortuga/shower)
 "OJ" = (/obj/structure/machinery/cm_vending/sorted/medical/no_access{density = 0; pixel_x = -5; pixel_y = 24},/obj/item/reagent_container/glass/minitank{pixel_x = -7; pixel_y = 4},/obj/effect/decal/cleanable/dirt,/obj/item/storage/firstaid/regular{pixel_x = -2; pixel_y = -10},/obj/effect/decal/cleanable/blood,/turf/open/floor/prison{dir = 1; icon_state = "blue_plate"},/area/tortuga/medical)
-"OL" = (/obj/structure/closet,/obj/item/maintenance_jack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"OL" = (/obj/structure/closet,/obj/item/maintenance_jack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "ON" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "tcomms"},/area/tortuga/cryo)
 "OO" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip{pixel_x = 16; pixel_y = 11},/turf/open/floor/prison{icon_state = "whitegreen"},/area/tortuga/medical)
 "OW" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2{dir = 4},/obj/effect/landmark/late_join,/obj/effect/landmark/late_join/alpha,/obj/effect/landmark/start/marine/lancer,/turf/open/floor/almayer/no_build{icon_state = "ai_floors"},/area/tortuga/cryo)
@@ -753,7 +752,7 @@
 "Tj" = (/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/light/small,/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/canteen)
 "Tk" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/strata_outpost/reinforced/hull,/area/tortuga/hangar)
 "Tp" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/plating_catwalk/prison,/area/tortuga/shower)
-"Tr" = (/obj/effect/decal/warning_stripes{icon_state = "W"},/obj/structure/pipes/standard/simple/hidden/supply{dir = 6},/turf/open/floor/prison,/area/space)
+"Tr" = (/obj/effect/decal/warning_stripes{icon_state = "W"},/obj/structure/pipes/standard/simple/hidden/supply{dir = 6},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "Tt" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/plating_catwalk/prison,/area/tortuga/corridor_lower)
 "Ty" = (/obj/structure/machinery/door/poddoor/shutters/almayer{id = "Hangar_entry_1"},/turf/open/floor/almayer/no_build{icon_state = "test_floor4"},/area/tortuga/hangar)
 "TA" = (/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/tortuga/cryo)
@@ -770,7 +769,7 @@
 "Uj" = (/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/tortuga/corridor_lower)
 "Uo" = (/obj/structure/sign/poster/propaganda{pixel_x = 13; pixel_y = 36},/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/corridor_lower)
 "Uq" = (/obj/structure/window/framed/strata,/turf/open/floor/plating,/area/tortuga/jokey_office)
-"Uv" = (/obj/structure/machinery/recharge_station,/obj/structure/machinery/light{dir = 8},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"Uv" = (/obj/structure/machinery/recharge_station,/obj/structure/machinery/light{dir = 8},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "UE" = (/obj/structure/dartboard{pixel_x = 17; pixel_y = 32},/obj/structure/sign/poster/clf{pixel_x = -7; pixel_y = 31},/turf/open/floor/prison{icon_state = "cell_stripe"},/area/tortuga/corridor_lower)
 "UF" = (/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/tortuga/corridor_lower)
 "UG" = (/obj/structure/machinery/door_display/research_cell{id = "Hangar_entry_1"; pixel_x = 1; pixel_y = 17; req_access = null},/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/tortuga/corridor_lower)
@@ -783,7 +782,7 @@
 "UW" = (/obj/structure/surface/rack,/obj/item/clothing/head/bandana{pixel_x = -10; pixel_y = -3},/turf/open/floor/almayer{dir = 8; icon_state = "silver"},/area/tortuga/cryo)
 "UX" = (/obj/structure/closet/cabinet,/obj/item/clothing/under/rank/synthetic/frontier,/obj/item/clothing/gloves/marine/techofficer,/obj/item/clothing/suit/storage/bomber/alt,/turf/open/floor/hybrisa/carpet/carpetblack,/area/tortuga/jokey_office)
 "UY" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/darkerwood,/area/tortuga/jokey_office)
-"Vb" = (/obj/structure/machinery/power/apc/almayer{dir = 1},/turf/open/floor/prison,/area/space)
+"Vb" = (/obj/structure/machinery/power/apc/almayer{dir = 1},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "Vd" = (/obj/structure/machinery/camera/autoname/golden_arrow,/turf/open/floor/prison{icon_state = "darkbrown2"},/area/tortuga/corridor_upper)
 "Ve" = (/obj/structure/prop/hybrisa/misc/fake/heavydutywire/heavy2,/turf/open/floor/almayer{dir = 4; icon_state = "silver"},/area/tortuga/cryo)
 "Vg" = (/obj/structure/prop/invuln/overhead_pipe{name = "overhead pipe"; pixel_x = -20; pixel_y = 24},/turf/open/floor/prison{dir = 6; icon_state = "darkbrown2"},/area/tortuga/corridor_upper)
@@ -801,9 +800,8 @@
 "VK" = (/turf/open/floor/plating,/area/tortuga/medical)
 "VO" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/invuln/overhead_pipe{name = "overhead pipe"; pixel_x = -20; pixel_y = 24},/obj/structure/machinery/light/spot{dir = 8},/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/tortuga/corridor_lower)
 "VQ" = (/obj/structure/surface/rack,/obj/effect/decal/cleanable/dirt,/obj/item/weapon/gun/rifle/l42a/l42B,/obj/item/weapon/gun/rifle/l42a/l42B{pixel_y = 5},/obj/item/weapon/gun/rifle/l42a/l42B{pixel_y = -5},/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/obj/item/ammo_magazine/rifle/l42a/l42B,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
-"VR" = (/turf/closed/wall/strata_outpost/reinforced/hull,/area/space)
 "VX" = (/obj/effect/decal/cleanable/dirt,/obj/structure/surface/table/reinforced/prison,/obj/structure/machinery/computer/ares_console{desc = "A console built to interface with APOLLO, allowing for 1:1 communication."; dir = 8; name = "APOLLO Interface"; pixel_y = -8},/obj/item/tool/hand_labeler{pixel_x = -8; pixel_y = 15},/obj/item/device/cassette_tape/aesthetic{pixel_x = -6; pixel_y = 8},/obj/item/device/flashlight/lamp/on{pixel_x = 7; pixel_y = 16},/obj/item/newspaper{pixel_x = -9; pixel_y = -16},/turf/open/floor/hybrisa/wood/blackwood,/area/tortuga/barrack)
-"Wb" = (/obj/structure/machinery/cm_vending/clothing/synth/snowflake,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/space)
+"Wb" = (/obj/structure/machinery/cm_vending/clothing/synth/snowflake,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "We" = (/obj/structure/pipes/vents/pump/on,/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/tortuga/corridor_lower)
 "Wg" = (/obj/structure/surface/rack,/obj/item/ammo_magazine/smg/pps43/extended,/obj/item/ammo_magazine/smg/pps43/extended,/obj/item/ammo_magazine/smg/pps43/extended,/obj/item/ammo_magazine/smg/pps43/extended,/obj/item/ammo_magazine/smg/pps43,/obj/item/ammo_magazine/smg/pps43,/obj/item/ammo_magazine/smg/pps43,/obj/item/ammo_magazine/smg/pps43,/obj/item/ammo_magazine/smg/pps43,/obj/item/ammo_magazine/smg/pps43,/obj/item/reagent_container/food/drinks/bottle/whiskey{pixel_x = 8; pixel_y = 19},/obj/item/weapon/gun/smg/pps43/lancer,/obj/item/weapon/gun/smg/pps43/lancer{pixel_y = -8},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean_marked"},/area/tortuga/corridor_lower)
 "Wi" = (/turf/open/floor/prison,/area/tortuga/canteen)
@@ -858,7 +856,7 @@
 "Yq" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/wire/yellow,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe1{layer = 1.9},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/tortuga/corridor_upper)
 "Yt" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/item/tool/weldpack/minitank{pixel_x = 13},/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 4; layer = 1.9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/tortuga/corridor_upper)
 "Yv" = (/obj/structure/prop/hybrisa/misc/floorprops/grate2,/obj/structure/prop/hybrisa/misc/fake/pipes/pipe2{dir = 8},/obj/item/shard{icon_state = "medium"; pixel_x = 11},/obj/item/shard/shrapnel,/turf/open/floor/plating,/area/tortuga/corridor_upper)
-"Yw" = (/obj/structure/machinery/computer/station_alert{dir = 8; pixel_x = 15; pixel_y = 2},/obj/item/stool,/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/prison,/area/space)
+"Yw" = (/obj/structure/machinery/computer/station_alert{dir = 8; pixel_x = 15; pixel_y = 2},/obj/item/stool,/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/prison,/area/tortuga/corridor_lower)
 "YG" = (/obj/structure/barricade/handrail/hybrisa/road/plastic/red,/obj/item/tool/warning_cone{pixel_y = 27},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/tortuga/corridor_upper)
 "YH" = (/turf/closed/wall/almayer/white,/area/tortuga/cryo)
 "YI" = (/obj/structure/machinery/light/small,/turf/open/floor/prison,/area/tortuga/corridor_upper)
@@ -952,12 +950,12 @@ ZHDkDkDkDkDkDkDkVlVlVlVlfsdHGsTGBUdHdHdHdHTWHyUcvWHJUdHJUdHJHJHJoiVlVlVlVlDkDkDk
 ZHDkDkDkDkDkDkDkVlVlVlVlGFvWUJHyAcSZULUQVdVgVpVqVrVzTIVDAcVqVEvWGFVlVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfVOVQGUWeWgSaWpWrGUWvWwRfDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkZH
 ZHDkDkDkDkDkDkDkVlVlVlGFGFWBWGWIWKWKWKWLWLWRvWXcWLWKWKXdXyXAVqXIGFGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfXMXUGUUjXYSaYdUFGUYgUFRfDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkZH
 ZHDkDkDkDkDkDkDkVlVlVlGFYkYmYtYvYGAcYIDAAcYJYOrlAcZbYIAcAcZcXAhuZsGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkZwZyZAZDZEZDZNZXzVrGcrzVJZDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlVlVlGFDslHtTyEGmNFNFNFNFsCmJvdNFNFNFNFAcAcXDMPngGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfNJNiwjwdFsoXukUFVxpKUFRfVRVRVRVRVRVRVRDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlVlVlGFGFNmnJKiNFNFglSuSuDlHEDlSuSuglNFNFAcWUMPGFGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfhWQVTtwdGUSaQzUFTtqUXGLmVRxAxAxABRzJVRDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlVlVlVlGFdFXNWlNFglSuSuhtxhONPsfbSuSuglNFAcIWIOGFVlVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfKkPIGUUjnOSanzUFGUphUFLmVRWbVbERKXDwVRDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlVlVlVlGFprwSgdNFSuSujkVeuEzbPsUWlYSuSuNFSkikhuGFVlVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfKkqUAxUjqUSaADVCGUqUUFLmVRUvgPwpyKYwVRDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlGFGFGFGFCkpidrNFSuhkdnXefleFuEkUvxvrSuNFAcWUJSGFGFGFGFVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfOdSawqUjFQOAFQUFkkSaUFLmVRzIOLTrBDGoVRDkDkDkDkDkDkDkDkDkDkDkZH
-ZHDkDkDkDkDkDkDkVlILAcAcILaFmyEvNFSuXWvgUNVFYHNXaIhwilSuNFAcXDAcILAcAcILVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfRfRfRfRfRfLmLmLmLmmidBLmLmLmLmLmLmRfRfRfCXRfVRVRDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlVlVlGFDslHtTyEGmNFNFNFNFsCmJvdNFNFNFNFAcAcXDMPngGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfNJNiwjwdFsoXukUFVxpKUFRfRfRfRfRfRfRfRfDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlVlVlGFGFNmnJKiNFNFglSuSuDlHEDlSuSuglNFNFAcWUMPGFGFVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfhWQVTtwdGUSaQzUFTtqUXGLmRfLmLmLmBRzJRfDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlVlVlVlGFdFXNWlNFglSuSuhtxhONPsfbSuSuglNFAcIWIOGFVlVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfKkPIGUUjnOSanzUFGUphUFLmRfWbVbERKXDwRfDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlVlVlVlGFprwSgdNFSuSujkVeuEzbPsUWlYSuSuNFSkikhuGFVlVlVlVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfKkqUAxUjqUSaADVCGUqUUFLmRfUvgPwpyKYwRfDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlGFGFGFGFCkpidrNFSuhkdnXefleFuEkUvxvrSuNFAcWUJSGFGFGFGFVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfOdSawqUjFQOAFQUFkkSaUFLmRfzIOLTrBDGoRfDkDkDkDkDkDkDkDkDkDkDkZH
+ZHDkDkDkDkDkDkDkVlILAcAcILaFmyEvNFSuXWvgUNVFYHNXaIhwilSuNFAcXDAcILAcAcILVlDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfRfRfRfRfRfLmLmLmLmmidBLmLmLmLmLmLmRfRfRfCXRfRfRfDkDkDkDkDkDkDkDkDkDkDkZH
 ZHDkDkDkDkDkDkDkDkGFAcAcGFckZWyvNFSuSuBNilYHxpYHNXNzSuSuNFUJLjWLGFAcAcGFDkDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfrSrSrSrSrSrSrSrSLmXxKyjtLmrSrSrSrSrSrSRfSaRfDkDkDkDkDkDkDkDkDkDkDkDkDkZH
 ZHDkDkDkDkDkDkDkDkILAcAcILTIWWdsNFSupycLELilYHXWOWwcWuSuNFOfWUrlILAcAcILDkDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfLmLmLmLmLmLmLmLmLmLmdBLmLmLmLmLmLmLmLmRfmnRfDkDkDkDkDkDkDkDkDkDkDkDkDkZH
 ZHDkDkDkDkDkDkDkDkGFGFGFGFdpWWyENFSuRMaRfpuEMEuEKhnTaKSuNFAceCaMGFGFGFGFDkDkDkDkDkDkDkDkDkDkZHDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkRfiJLfjnSxArArArLwfIobmoobbanXbgArbgbggjEiSaEiDkDkDkDkDkDkDkDkDkDkDkDkDkZH
