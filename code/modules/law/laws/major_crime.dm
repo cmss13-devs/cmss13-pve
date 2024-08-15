@@ -19,7 +19,7 @@
 
 /datum/law/major_law/contraband
 	name = "Contraband"
-	desc = "Possessing, or distributing controlled substances or unauthorized items or weapons as defined in Standard Operating Procedure or impairing, intoxicating or addictive drugs such as Mindbreaker, this does not include custom mixes or dosages of medicinal drugs."
+	desc = "Possessing, or distributing controlled substances or unauthorized items or weapons as defined in Standard Operating Procedure or impairing, intoxicating or addictive drugs such as LSD, this does not include custom mixes or dosages of medicinal drugs."
 	special_punishment = "Contraband Confiscation"
 	brig_time = 15
 

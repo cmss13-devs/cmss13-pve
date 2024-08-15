@@ -437,13 +437,13 @@
 /datum/chem_property/neutral/antihallucinogenic
 	name = PROPERTY_ANTIHALLUCINOGENIC
 	code = "AHL"
-	description = "Stabilizes perseptive abnormalities such as hallucinations caused by mindbreaker toxin."
+	description = "Stabilizes perseptive abnormalities such as those caused by hallucinogenics like LSD or certain fungi."
 	rarity = PROPERTY_COMMON
 	category = PROPERTY_TYPE_STIMULANT
 	value = 1
 
 /datum/chem_property/neutral/antihallucinogenic/process(mob/living/M, potency = 1)
-	M.reagents.remove_reagent("mindbreaker", 5)
+	M.reagents.remove_reagent("diethylamide", 5)
 	M.reagents.remove_reagent("space_drugs", 5)
 	M.hallucination = max(0, M.hallucination - POTENCY_MULTIPLIER_EXTREME * potency)
 	M.druggy = max(0, M.druggy - POTENCY_MULTIPLIER_EXTREME * potency)

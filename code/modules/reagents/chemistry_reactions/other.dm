@@ -290,10 +290,10 @@
 	required_reagents = list("carpotoxin" = 1, "cryptobiolin" = 1, "copper" = 1)
 	result_amount = 3
 
-/datum/chemical_reaction/mindbreaker
-	name = "Mindbreaker Toxin"
-	id = "mindbreaker"
-	result = "mindbreaker"
+/datum/chemical_reaction/diethylamide
+	name = "Lysergic Acid Diethylamide"
+	id = "diethylamide"
+	result = "diethylamide"
 	required_reagents = list("silicon" = 1, "hydrogen" = 1, "anti_toxin" = 1)
 	result_amount = 3
 

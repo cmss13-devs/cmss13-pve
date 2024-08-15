@@ -129,10 +129,10 @@
 	holder_mob.status_flags &= ~FAKEDEATH
 	REMOVE_TRAIT(holder_mob, TRAIT_IMMOBILIZED, FAKEDEATH_TRAIT)
 
-/datum/reagent/toxin/mindbreaker
-	name = "Mindbreaker Toxin"
-	id = "mindbreaker"
-	description = "A powerful hallucinogenic compound that is illegal under space law. Causes extreme hallucinations and is very addictive. Formerly known as LSD."
+/datum/reagent/toxin/diethylamide
+	name = "lysergic acid diethylamide"
+	id = "diethylamide"
+	description = "Lysergic acid diethylamide is a potent hallucinogenic agent which is considered nonaddictive, though potentially capable of causing permanent psychological changes."
 	reagent_state = LIQUID
 	color = "#B31008" // rgb: 139, 166, 233
 	overdose = REAGENTS_OVERDOSE

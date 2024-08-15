@@ -245,7 +245,7 @@ var/global/list/gene_tag_masks = list()   // Gene obfuscation for delicious tria
 			"rezadone",
 			"ethylredoxrazine",
 			"cyanide",
-			"mindbreaker",
+			"diethylamide",
 			"stoxin"
 			)
 
