@@ -8055,6 +8055,7 @@
 /obj/item/clothing/under/marine/officer/boiler,
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
+/obj/item/clothing/under/marine/officer/bridge,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
