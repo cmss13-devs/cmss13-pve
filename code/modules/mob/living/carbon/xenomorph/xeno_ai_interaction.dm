@@ -76,9 +76,26 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//    Poddoors/shutters    //
+//         PODDDOORS       //
 /////////////////////////////
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return INFINITY
+
+	if(unacidable)
+		return INFINITY
+
+	if(!(stat & NOPOWER))
+		return INFINITY
+
+	return DOOR_PENALTY
+
+
+/////////////////////////////
+//         SHUTTERS        //
+/////////////////////////////
+/obj/structure/machinery/door/poddoor/shutters/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
 		return INFINITY

@@ -49,7 +49,7 @@
 			operating = 0
 
 /obj/structure/machinery/door/poddoor/attack_alien(mob/living/carbon/xenomorph/X)
-	if(density && !operating && !unacidable)
+	if((stat & NOPOWER) && density && !operating && !unacidable)
 		INVOKE_ASYNC(src, PROC_REF(pry_open), X)
 		return XENO_ATTACK_ACTION
 
