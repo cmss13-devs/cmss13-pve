@@ -1113,3 +1113,28 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "M67 flak jacket"
 	path = /obj/item/clothing/accessory/flak
 	cost = 3
+
+/datum/gear/misc/green_poncho
+	display_name = "Green Poncho"
+	path = /obj/item/clothing/accessory/poncho/green
+	cost = 3
+
+/datum/gear/misc/brown_poncho
+	display_name = "Brown Poncho"
+	path = /obj/item/clothing/accessory/poncho/brown
+	cost = 3
+
+/datum/gear/misc/black_poncho
+	display_name = "Black Poncho"
+	path = /obj/item/clothing/accessory/poncho/black
+	cost = 3
+
+/datum/gear/misc/blue_poncho
+	display_name = "Blue Poncho"
+	path = /obj/item/clothing/accessory/poncho/blue
+	cost = 3
+
+/datum/gear/misc/purple_poncho
+	display_name = "Purple Poncho"
+	path = /obj/item/clothing/accessory/poncho/purple
+	cost = 3
