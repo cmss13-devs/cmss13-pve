@@ -206,18 +206,18 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	//PART II: Setting up our player variables and lists, to see if we have anyone to destribute.
 
 	unassigned_players = list()
-	for(var/mob/new_player/M in GLOB.player_list)
-		if(!M.ready || M.job) //get only players who are ready and unassigned
+	for(var/mob/new_player/player as anything in GLOB.new_player_list)
+		if(!player.ready || player.job) //get only players who are ready and unassigned
 			continue
 
-		var/datum/preferences/prefs = M.client?.prefs
+		var/datum/preferences/prefs = player.client?.prefs
 		if(!prefs) //either no client to play, or no preferences
 			continue
 
 		if(prefs.alternate_option == RETURN_TO_LOBBY && !prefs.has_job_priorities()) //only try to assign players that could possibly be assigned
 			continue
 
-		unassigned_players += M
+		unassigned_players += player
 
 	if(!length(unassigned_players)) //If we don't have any players, the round can't start.
 		unassigned_players = null
