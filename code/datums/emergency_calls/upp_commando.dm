@@ -36,19 +36,6 @@
 	var/mob/living/carbon/human/H = new(spawn_loc)
 	M.transfer_to(H, TRUE)
 
-	if(!leader && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(H.client, JOB_SQUAD_LEADER, time_required_for_job))    //First one spawned is always the leader.
-		leader = H
-		arm_equipment(H, /datum/equipment_preset/upp/commando/leader, TRUE, TRUE)
-		to_chat(H, SPAN_ROLE_HEADER("You are a Commando Team Leader of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-	else if(medics < max_medics && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(H.client, JOB_SQUAD_MEDIC, time_required_for_job))
-		medics++
-		to_chat(H, SPAN_ROLE_HEADER("You are a Commando Medic of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-		arm_equipment(H, /datum/equipment_preset/upp/commando/medic, TRUE, TRUE)
-	else
-		to_chat(H, SPAN_ROLE_HEADER("You are a Commando of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-		arm_equipment(H, /datum/equipment_preset/upp/commando, TRUE, TRUE)
-	print_backstory(H)
-
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), H, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)
 
 /datum/emergency_call/upp_commando/low_threat
@@ -62,18 +49,5 @@
 
 	var/mob/living/carbon/human/person = new(spawn_loc)
 	mind.transfer_to(person, TRUE)
-
-	if(!leader && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(person.client, JOB_SQUAD_LEADER, time_required_for_job))    //First one spawned is always the leader.
-		leader = person
-		arm_equipment(person, /datum/equipment_preset/upp/commando/leader/low_threat, TRUE, TRUE)
-		to_chat(person, SPAN_ROLE_HEADER("You are a Commando Team Leader of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-	else if(medics < max_medics && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(person.client, JOB_SQUAD_MEDIC, time_required_for_job))
-		medics++
-		to_chat(person, SPAN_ROLE_HEADER("You are a Commando Medic of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-		arm_equipment(person, /datum/equipment_preset/upp/commando/medic/low_threat, TRUE, TRUE)
-	else
-		to_chat(person, SPAN_ROLE_HEADER("You are a Commando of the Union of Progressive People, a powerful socialist state that rivals the United Americas!"))
-		arm_equipment(person, /datum/equipment_preset/upp/commando/low_threat, TRUE, TRUE)
-	print_backstory(person)
 
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), person, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)

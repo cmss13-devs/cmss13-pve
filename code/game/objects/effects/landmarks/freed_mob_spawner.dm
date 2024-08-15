@@ -22,11 +22,11 @@
 	H.free_for_ghosts()
 
 /obj/effect/landmark/freed_mob_spawner/upp_conscript
-	name = "UPP Conscript"
-	equipment_path = /datum/equipment_preset/upp/conscript
+	name = "UPP Militiaman"
+	equipment_path = /datum/equipment_preset/upp/militia
 	count_participant = TRUE
 
 /obj/effect/landmark/freed_mob_spawner/upp_soldier
 	name = "UPP Soldier"
-	equipment_path = /datum/equipment_preset/upp/soldier
+	equipment_path = /datum/equipment_preset/uscm/private_equipped/upp
 	count_participant = TRUE

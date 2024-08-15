@@ -4,16 +4,11 @@
 
 
 //UPP Enlisted
-/datum/paygrade/upp/ue0
-	paygrade = "UE0"
-	name = "Conscript"
-	pay_multiplier = 0.05
-	prefix = "Cnscr."
 
 /datum/paygrade/upp/ue1
 	paygrade = "UE1"
-	name = "Private"
-	prefix = "PVT."
+	name = "Ryadovoy"
+	prefix = "Ryad."
 
 /datum/paygrade/upp/ue2
 	paygrade = "UE2"
