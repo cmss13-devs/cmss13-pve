@@ -633,6 +633,7 @@
 	},
 /area/golden_arrow/engineering)
 "ga" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
@@ -642,31 +643,7 @@
 	name = "Vnimanie! 注意!";
 	pixel_y = 30
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/obj/item/clothing/under/marine/veteran/UPP/officer,
-/obj/item/clothing/under/marine/veteran/UPP/boiler,
-/obj/item/clothing/suit/gimmick/jason,
-/obj/item/clothing/suit/storage/snow_suit/soviet,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/distress/UPP/command,
-/obj/item/clothing/under/marine/veteran/UPP,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "gh" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -4352,7 +4329,20 @@
 	},
 /area/golden_arrow/briefing)
 "RJ" = (
-/obj/structure/closet/cabinet,
+/obj/item/clothing/suit/storage/snow_suit/soviet,
+/obj/item/clothing/suit/gimmick/jason,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_off = "cabinetdetective_broken";
+	icon_opened = "cabinetdetective_open";
+	icon_state = "cabinetdetective_locked";
+	job = "Platoon Commander"
+	},
+/obj/item/clothing/under/marine/veteran/UPP/boiler,
+/obj/item/clothing/under/marine/veteran/UPP/officer,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
