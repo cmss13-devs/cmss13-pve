@@ -446,7 +446,7 @@
 	icon_state = "xm43a"
 	item_state = "xm43a"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/under/carbine_laser)
 
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
