@@ -42,13 +42,13 @@
 /area/golden_arrow/canteen)
 "ax" = (
 /obj/structure/machinery/prop{
+	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay.";
 	icon = 'icons/obj/vehicles/tank.dmi';
 	icon_state = "tank_base";
 	layer = 3.9;
-	pixel_x = -16;
-	pixel_y = -17;
 	name = "M34A2 Longstreet Light Tank 'Lawnmower'";
-	desc = "Yeah, it got fucked up during FORECON operation in iron forests of LV-711. Literally - the trees there were too tough even for tanks: threads, transmission and even turret rotation motors are now chilling somewhere in repair bay."
+	pixel_x = -16;
+	pixel_y = -17
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer,
@@ -69,8 +69,8 @@
 /area/golden_arrow/canteen)
 "aC" = (
 /obj/structure/closet/secure_closet/smartgunner_forecon{
-	req_one_access = list();
-	req_access_txt = "14;39"
+	req_access_txt = "14;39";
+	req_one_access = list()
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
@@ -102,9 +102,9 @@
 	layer = 2.9
 	},
 /obj/structure/largecrate/random/secure{
-	pixel_y = 17;
+	layer = 5.2;
 	pixel_x = 7;
-	layer = 5.2
+	pixel_y = 17
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -172,10 +172,14 @@
 	pixel_y = 29
 	},
 /obj/structure/sign/poster/music{
-	pixel_y = 34;
+	pixel_x = 8;
+	pixel_y = 34
+	},
+/obj/structure/gun_rack/m41/recon/unloaded,
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = 15;
 	pixel_x = 8
 	},
-/obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -191,8 +195,8 @@
 "cl" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /obj/structure/sign/safety/distribution_pipes{
-	pixel_y = 8;
-	pixel_x = 32
+	pixel_x = 32;
+	pixel_y = 8
 	},
 /obj/structure/sign/safety/rewire{
 	pixel_x = 32;
@@ -241,6 +245,7 @@
 "ct" = (
 /obj/structure/surface/table/almayer,
 /obj/item/facepaint/sniper,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "cJ" = (
@@ -376,8 +381,8 @@
 "dB" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	dir = 1;
-	req_one_access_txt = "12;32";
-	name = "\improper Assistant Squad Leader"
+	name = "\improper Assistant Squad Leader";
+	req_one_access_txt = "12;32"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -467,8 +472,8 @@
 	pixel_x = -8
 	},
 /obj/item/prop/almayer/handheld1{
-	pixel_y = 12;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 12
 	},
 /obj/structure/machinery/floodlight/landing/floor{
 	layer = 2.79
@@ -503,8 +508,8 @@
 "ez" = (
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/sign/safety/commline_connection{
-	pixel_y = 29;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -621,8 +626,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/safety/food_storage{
-	pixel_y = 35;
-	pixel_x = -20
+	pixel_x = -20;
+	pixel_y = 35
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
@@ -636,13 +641,13 @@
 /area/golden_arrow/hangar)
 "fn" = (
 /obj/structure/prop{
-	name = "\improper comfy HE orbital warhead";
-	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
-	icon_state = "ob_warhead_1";
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	can_buckle = 1;
-	pixel_y = -10;
-	layer = 5.2
+	desc = "Rover barely uses it's OB cannon anyway, so this poor baby is stuck here...";
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "ob_warhead_1";
+	layer = 5.2;
+	name = "\improper comfy HE orbital warhead";
+	pixel_y = -10
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -723,8 +728,8 @@
 "fK" = (
 /obj/structure/largecrate/random,
 /obj/structure/largecrate/random{
-	pixel_y = 16;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 16
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -974,9 +979,9 @@
 	pixel_y = -15
 	},
 /obj/structure/machinery/light{
+	pixel_x = -17;
 	unacidable = 1;
-	unslashable = 1;
-	pixel_x = -17
+	unslashable = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -992,8 +997,8 @@
 "iy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/safety/commline_connection{
-	pixel_y = -29;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = -29
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1112,9 +1117,9 @@
 "jG" = (
 /obj/structure/largecrate/random/barrel/blue,
 /obj/structure/largecrate/random/barrel/green{
+	layer = 3.01;
 	pixel_x = 12;
-	pixel_y = 22;
-	layer = 3.01
+	pixel_y = 22
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -1264,8 +1269,8 @@
 "lh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_one_access_txt = "8;12;13;39";
-	req_access = list()
+	req_access = list();
+	req_one_access_txt = "8;12;13;39"
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -1289,6 +1294,10 @@
 /obj/item/folder/black_random{
 	pixel_x = -6;
 	pixel_y = 8
+	},
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = -1;
+	pixel_x = 6
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1361,8 +1370,8 @@
 /area/golden_arrow/hangar)
 "lB" = (
 /obj/structure/ladder{
-	id = "rover2";
-	height = -1
+	height = -1;
+	id = "rover2"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1388,9 +1397,9 @@
 "lN" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/item/clothing/ears/earmuffs{
-	pixel_y = 16;
 	icon_state = "earmuffs2";
-	item_state = "earmuffs2"
+	item_state = "earmuffs2";
+	pixel_y = 16
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -1432,7 +1441,19 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ml" = (
-/obj/structure/machinery/chem_master,
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/toy/plush/therapy/blue{
+	pixel_x = 6;
+	pixel_y = 9
+	},
+/obj/item/toy/plush/therapy/orange{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/item/toy/plush/therapy/red{
+	pixel_x = -7;
+	pixel_y = 2
+	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -1469,10 +1490,10 @@
 /area/golden_arrow/cryo_cells)
 "mJ" = (
 /obj/structure/largecrate,
-/obj/structure/largecrate{
-	pixel_y = 16
-	},
 /obj/structure/machinery/light,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 15
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -1530,8 +1551,8 @@
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/m94/signal,
 /obj/item/storage/box/m94/signal{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/device/binoculars/range/designator,
 /turf/open/floor/almayer{
@@ -1564,8 +1585,8 @@
 /area/golden_arrow/squad_one)
 "nH" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Hangar Lockdown Blast Door";
-	dir = 4
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -1653,9 +1674,9 @@
 	dir = 1
 	},
 /obj/structure/machinery/light{
+	pixel_x = -17;
 	unacidable = 1;
-	unslashable = 1;
-	pixel_x = -17
+	unslashable = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -1663,8 +1684,8 @@
 /area/golden_arrow/canteen)
 "ph" = (
 /obj/structure/cargo_container/lockmart/right{
-	pixel_y = 5;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = 5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -1730,8 +1751,8 @@
 /area/golden_arrow/squad_one)
 "pS" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Hangar Lockdown Blast Door";
-	dir = 4
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1830,8 +1851,8 @@
 /area/golden_arrow/squad_one)
 "qy" = (
 /obj/structure/ladder{
-	id = "rover3";
-	height = -1
+	height = -1;
+	id = "rover3"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -1918,12 +1939,12 @@
 	desc = "Nobody knows how a mannequin got aboard, but last Halloween it got dressed up as Voorhees and scared the shit out of new guy. Heh, good times.";
 	icon = 'icons/mob/humans/species/r_synthetic.dmi';
 	icon_state = "Synthetic_Template";
-	name = "mannequin";
-	indestructible = 1
+	indestructible = 1;
+	name = "mannequin"
 	},
 /obj/item/clothing/under/gimmick/jason{
-	icon = 'icons/mob/humans/onmob/uniform_1.dmi';
-	anchored = 1
+	anchored = 1;
+	icon = 'icons/mob/humans/onmob/uniform_1.dmi'
 	},
 /obj/item/clothing/suit/gimmick/jason{
 	anchored = 1
@@ -1932,16 +1953,16 @@
 	anchored = 1
 	},
 /obj/item/clothing/shoes/jackboots{
-	icon = 'icons/mob/humans/onmob/feet.dmi';
-	anchored = 1
+	anchored = 1;
+	icon = 'icons/mob/humans/onmob/feet.dmi'
 	},
 /obj/item/clothing/gloves/brown{
 	anchored = 1;
 	icon = 'icons/mob/humans/onmob/hands.dmi'
 	},
 /obj/item/weapon/sword/machete{
-	icon = 'icons/mob/humans/onmob/items_lefthand_0.dmi';
-	anchored = 1
+	anchored = 1;
+	icon = 'icons/mob/humans/onmob/items_lefthand_0.dmi'
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -2101,8 +2122,8 @@
 "sB" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/head/cmcap/boonie/tan{
-	pixel_y = -6;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = -6
 	},
 /obj/item/clothing/head/cmcap{
 	layer = 4.1;
@@ -2117,8 +2138,8 @@
 /area/golden_arrow/hangar)
 "sN" = (
 /obj/structure/anti_air_cannon{
-	pixel_y = 8;
-	pixel_x = -13
+	pixel_x = -13;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer_hull{
 	dir = 10;
@@ -2435,12 +2456,12 @@
 "wd" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/magazine/boots/n117{
-	pixel_y = 3;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 3
 	},
 /obj/item/reagent_container/food/drinks/cans/souto/lime{
-	pixel_y = 3;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 3
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2483,7 +2504,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "wx" = (
-/obj/structure/bed/chair/office/light,
+/obj/structure/bed/chair/office/dark,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -2735,8 +2756,8 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Sergeant";
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "Platoon Sergeant"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -2782,8 +2803,8 @@
 	pixel_x = -8
 	},
 /obj/item/reagent_container/food/drinks/coffee/marine{
-	pixel_y = 10;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 10
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -2804,14 +2825,30 @@
 /area/golden_arrow/dorms)
 "As" = (
 /obj/structure/closet/crate/green,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -2842,9 +2879,9 @@
 	force = 15;
 	layer = 4.1;
 	name = "Commando Huggs";
+	pixel_x = 9;
 	pixel_y = 3;
-	throwforce = 15;
-	pixel_x = 9
+	throwforce = 15
 	},
 /obj/item/clothing/head/cmcap{
 	layer = 4.1;
@@ -2871,6 +2908,8 @@
 /area/golden_arrow/cryo_cells)
 "AD" = (
 /obj/structure/closet/crate/trashcart,
+/obj/item/attachable/attached_gun/grenade/mk1,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "AF" = (
@@ -2903,8 +2942,8 @@
 	},
 /obj/item/clothing/mask/cigarette/weed,
 /obj/item/tool/lighter/zippo/gold{
-	pixel_y = -5;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -5
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3029,8 +3068,8 @@
 /area/golden_arrow/supply)
 "CO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon,
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -3075,7 +3114,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "Dx" = (
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
 	},
@@ -3157,13 +3196,13 @@
 "Ev" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
-	pixel_y = -9;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -9
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
-	pixel_y = -9;
-	pixel_x = 13
+	pixel_x = 13;
+	pixel_y = -9
 	},
 /obj/structure/curtain/red{
 	pixel_y = -21
@@ -3181,13 +3220,13 @@
 "Ey" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/prop_gun{
-	prop_gun_type = /obj/item/weapon/gun/smg/m39;
 	custom_gun_desc = "Welp. Too delicate for jungles, it seems. Nothing beats MK1.";
-	custom_gun_name = "Broken M39 submachinegun"
+	custom_gun_name = "Broken M39 submachinegun";
+	prop_gun_type = /obj/item/weapon/gun/smg/m39
 	},
 /obj/item/tool/screwdriver/tactical{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/structure/machinery/power/apc/almayer{
 	dir = 4
@@ -3201,7 +3240,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/recon/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3274,8 +3313,8 @@
 	pixel_y = 27
 	},
 /obj/structure/sign/safety/autodoc{
-	pixel_y = 27;
-	pixel_x = 13
+	pixel_x = 13;
+	pixel_y = 27
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3466,8 +3505,8 @@
 "HQ" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	dir = 1;
-	req_one_access_txt = "12;13;32";
-	name = "\improper Radio Telephone Operator"
+	name = "\improper Radio Telephone Operator";
+	req_one_access_txt = "12;13;32"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -3531,13 +3570,13 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/prop/ice_colony/tiger_rug{
-	pixel_x = -13;
-	layer = 2.5;
-	pixel_y = -15;
 	desc = "It's a rug, made from real tiger! Well, not *real* real tiger - this pelt belonged to similar-looking species, native to LV-842, that Snake Eaters ran over with their ATV. It still has some tire prints visible here and there...";
-	icon_state = "HotlineAlt";
 	dir = 4;
-	name = "moon tiger rug"
+	icon_state = "HotlineAlt";
+	layer = 2.5;
+	name = "moon tiger rug";
+	pixel_x = -13;
+	pixel_y = -15
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -3555,9 +3594,9 @@
 /area/golden_arrow/prep_hallway)
 "IM" = (
 /obj/structure/machinery/light{
+	pixel_x = -17;
 	unacidable = 1;
-	unslashable = 1;
-	pixel_x = -17
+	unslashable = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3574,9 +3613,9 @@
 /obj/structure/machinery/recharger,
 /obj/item/reagent_container/spray/cleaner,
 /obj/structure/machinery/light{
+	dir = 1;
 	unacidable = 1;
-	unslashable = 1;
-	dir = 1
+	unslashable = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
@@ -3587,8 +3626,8 @@
 	dir = 4
 	},
 /obj/item/clothing/head/headset{
-	pixel_y = 8;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3637,8 +3676,8 @@
 "JS" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/item/clothing/glasses/welding{
-	pixel_y = 8;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3647,8 +3686,8 @@
 "JV" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
-	pixel_y = 10;
-	layer = 3.01
+	layer = 3.01;
+	pixel_y = 10
 	},
 /obj/structure/machinery/conveyor{
 	dir = 8
@@ -3672,8 +3711,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Smartgunner";
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "Smartgunner"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -3730,8 +3769,8 @@
 /area/golden_arrow/canteen)
 "Kp" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_one_access_txt = "8;12;13;39";
-	req_access = list()
+	req_access = list();
+	req_one_access_txt = "8;12;13;39"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -3847,12 +3886,12 @@
 	pixel_x = 11
 	},
 /obj/structure/largecrate/random/mini/ammo{
-	pixel_y = 10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 10
 	},
 /obj/structure/largecrate/random/mini/ammo{
-	pixel_y = 10;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 10
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -4074,10 +4113,10 @@
 "NI" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /obj/structure/machinery/light{
-	unacidable = 1;
-	unslashable = 1;
+	dir = 1;
 	pixel_x = -17;
-	dir = 1
+	unacidable = 1;
+	unslashable = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4204,8 +4243,8 @@
 /area/golden_arrow/prep_hallway)
 "OU" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Sergeant";
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -4245,11 +4284,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "Pt" = (
-/obj/structure/machinery/chem_dispenser,
-/obj/item/reagent_container/glass/beaker/bluespace,
-/obj/item/storage/box/pillbottles{
-	pixel_y = 18;
-	pixel_x = -5
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 1;
+	pixel_x = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "sterile_green"
@@ -4384,8 +4422,8 @@
 	},
 /obj/structure/barricade/handrail{
 	dir = 1;
-	pixel_y = 13;
-	layer = 3.01
+	layer = 3.01;
+	pixel_y = 13
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -4538,8 +4576,8 @@
 /area/golden_arrow/hangar)
 "SR" = (
 /obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Corpsman";
-	has_cryo_gear = 0
+	has_cryo_gear = 0;
+	job = "Platoon Corpsman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/device/radio/headset/almayer/sof/survivor_forecon,
@@ -4603,8 +4641,8 @@
 /area/golden_arrow/hangar)
 "Tp" = (
 /obj/structure/ladder{
-	id = "rover1";
-	height = -1
+	height = -1;
+	id = "rover1"
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4630,7 +4668,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "Ty" = (
-/obj/structure/dropship_equipment/rappel_system,
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -4994,15 +5032,15 @@
 /obj/item/tool/kitchen/utensil/spoon{
 	desc = "Its tongs molded together after someone tried a bite of that arcturian curry.";
 	name = "melted fork";
-	pixel_y = 9;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 9
 	},
 /obj/item/tool/kitchen/tray,
 /obj/item/reagent_container/food/snacks/resin_fruit{
-	name = "arcturian curry";
 	desc = "Never let Joes cook alien cuisine. Eugh.";
-	pixel_y = 4;
-	pixel_x = 6
+	name = "arcturian curry";
+	pixel_x = 6;
+	pixel_y = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -5028,8 +5066,8 @@
 /area/golden_arrow/hangar)
 "ZC" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
-	req_one_access_txt = "8;12;13;39";
-	req_access = list()
+	req_access = list();
+	req_one_access_txt = "8;12;13;39"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -14863,7 +14901,7 @@ Kk
 wz
 rv
 Ll
-ml
+Dx
 Kk
 pB
 pB
@@ -15167,7 +15205,7 @@ Kk
 Oc
 hN
 MN
-Dx
+ml
 wD
 Cl
 Cl
