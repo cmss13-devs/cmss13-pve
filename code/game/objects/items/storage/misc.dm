@@ -169,7 +169,7 @@
 	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and additional speedloaders."
 
 /obj/item/storage/box/loadout/Spearhead_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/black())
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/spearhead(src)
 
