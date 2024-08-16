@@ -32,12 +32,15 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 		to_chat(src, SPAN_NOTICE("The platoon name should be 16 characters or less."))
 		return
 
+	do_rename_platoon(new_name, mob)
+
+/proc/do_rename_platoon(name, mob/renamer)
 	var/old_name = GLOB.main_platoon_name
 
 	var/channel = radiochannels[old_name]
 	radiochannels -= old_name
 
-	radiochannels[new_name] = channel
+	radiochannels[name] = channel
 
 	var/list/keys_to_readd = list()
 
@@ -47,17 +50,17 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 			department_radio_keys -= key
 
 	for(var/key in keys_to_readd)
-		department_radio_keys[key] = new_name
+		department_radio_keys[key] = name
 
 	ROLES_SQUAD_ALL -= old_name
-	ROLES_SQUAD_ALL += new_name
+	ROLES_SQUAD_ALL += name
 
 	var/list/copy_frozen_platoon_items = GLOB.frozen_items[old_name]
 	GLOB.frozen_items -= old_name
-	GLOB.frozen_items[new_name] = copy_frozen_platoon_items
+	GLOB.frozen_items[name] = copy_frozen_platoon_items
 
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_PLATOON_NAME_CHANGE, new_name, old_name)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_PLATOON_NAME_CHANGE, name, old_name)
 
-	log_admin("[key_name(src)] has renamed the platoon from [GLOB.main_platoon_name] to [new_name].")
+	log_admin("[key_name(renamer)] has renamed the platoon from [GLOB.main_platoon_name] to [name].")
 
-	GLOB.main_platoon_name = new_name
+	GLOB.main_platoon_name = name

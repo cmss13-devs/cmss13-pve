@@ -292,6 +292,8 @@
 	S["adaptive_zoom"] >> adaptive_zoom
 	S["tooltips"] >> tooltips
 
+	S["plat_name"] >> platoon_name
+
 	//Sanitize
 	ooccolor = sanitize_hexcolor(ooccolor, CONFIG_GET(string/ooc_color_normal))
 	lastchangelog = sanitize_text(lastchangelog, initial(lastchangelog))
@@ -357,6 +359,7 @@
 	custom_cursors = sanitize_integer(custom_cursors, FALSE, TRUE, TRUE)
 	pref_special_job_options = sanitize_islist(pref_special_job_options, list())
 	pref_job_slots = sanitize_islist(pref_job_slots, list())
+	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : initial(platoon_name)
 	vars["fps"] = fps
 
 	if(remembered_key_bindings)
@@ -481,6 +484,7 @@
 	S["no_radials_preference"] << no_radials_preference
 	S["no_radial_labels_preference"] << no_radial_labels_preference
 	S["custom_cursors"] << custom_cursors
+	S["plat_name"] << platoon_name
 
 	S.Unlock()
 
@@ -583,6 +587,7 @@
 
 	S["uplinklocation"] >> uplinklocation
 	S["exploit_record"] >> exploit_record
+	S["plat_name"] >> platoon_name
 
 	S.Unlock()
 
@@ -740,6 +745,7 @@
 
 	S["uplinklocation"] << uplinklocation
 	S["exploit_record"] << exploit_record
+	S["plat_name"] << platoon_name
 
 	S.Unlock()
 

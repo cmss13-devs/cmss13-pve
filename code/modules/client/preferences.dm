@@ -6,6 +6,7 @@
 #define MENU_MENTOR "mentor"
 #define MENU_SETTINGS "settings"
 #define MENU_SPECIAL "special"
+#define MENU_PLTCO "pltco"
 
 var/list/preferences_datums = list()
 
@@ -243,6 +244,8 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	/// If this client has auto observe enabled, used by /datum/orbit_menu
 	var/auto_observe = TRUE
+	/// Name for platoon used when spawning as LT
+	var/platoon_name = "Sun Riders"
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
@@ -307,6 +310,7 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	dat += "<center>"
 	dat += "<a[current_menu == MENU_MARINE ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_MARINE]\"><b>Human</b></a> - "
+	dat += "<a[current_menu == MENU_PLTCO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_PLTCO]\"><b>Platoon Commander</b></a> - "
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
@@ -432,6 +436,12 @@ var/const/MAX_SAVE_SLOTS = 10
 				dat += "<b>Records:</b> <a href=\"byond://?src=\ref[user];preference=records;record=1\"><b>Character Records</b></a><br>"
 
 			dat += "<b>Flavor Text:</b> <a href='byond://?src=\ref[user];preference=flavor_text;task=open'><b>[TextPreview(flavor_texts["general"], 15)]</b></a><br>"
+			dat += "</div>"
+
+		if(MENU_PLTCO)
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
+			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -1251,6 +1261,13 @@ var/const/MAX_SAVE_SLOTS = 10
 						return
 					ghost_vision_pref = choice
 
+				if("plat_name")
+					var/raw_name = input(user, "Choose your Platoon's name:", "Character Preference")  as text|null
+					if(length(raw_name) > 16 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
+						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					else
+						platoon_name = raw_name
+
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null
 					if(raw_name) // Check to ensure that the user entered text (rather than cancel.)
@@ -1994,7 +2011,6 @@ var/const/MAX_SAVE_SLOTS = 10
 
 				if("change_menu")
 					current_menu = href_list["menu"]
-
 	ShowChoices(user)
 	return 1
 
@@ -2333,3 +2349,4 @@ var/const/MAX_SAVE_SLOTS = 10
 #undef MENU_MENTOR
 #undef MENU_SETTINGS
 #undef MENU_SPECIAL
+#undef MENU_PLTCO

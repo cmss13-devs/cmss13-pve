@@ -137,7 +137,7 @@
 /datum/equipment_preset/proc/load_languages(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_languages(languages)
 
-/datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE)
+/datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE, late_join)
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)
@@ -162,6 +162,8 @@
 	new_human.assigned_equipment_preset = src
 
 	new_human.regenerate_icons()
+
+	handle_late_join(new_human, late_join)
 
 	new_human.marine_points = MARINE_TOTAL_BUY_POINTS //resetting buy points
 	new_human.marine_snowflake_points = MARINE_TOTAL_SNOWFLAKE_POINTS
@@ -380,6 +382,9 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		background.overlays += icon
 
 	return background
+
+/datum/equipment_preset/proc/handle_late_join(mob/living/carbon/human/new_human, late_join)
+	return
 
 /datum/equipment_preset/strip //For removing all equipment
 	name = "*strip*"
