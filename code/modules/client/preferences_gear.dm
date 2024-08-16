@@ -731,11 +731,6 @@ var/global/list/gear_datums_by_name = list()
 	slot = WEAR_IN_BACK
 	cost = 4
 
-/datum/gear/weapon/upppistol //looted colony revolver
-	display_name = "Spearhead Revolver"
-	path = /obj/item/storage/box/cmb
-	slot = WEAR_IN_BACK
-
 /datum/gear/weapon/m4a3_custom
 	display_name = "M4A3 Custom Pistol"
 	path = /obj/item/weapon/gun/pistol/m4a3/custom

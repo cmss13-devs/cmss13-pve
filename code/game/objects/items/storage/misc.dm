@@ -166,17 +166,3 @@
 	new /obj/item/attachable/bayonet/co2(src)
 	new /obj/item/co2_cartridge(src)
 	new /obj/item/co2_cartridge(src)
-
-/obj/item/storage/box/cmb //looted cmb
-	name = "CMB storing case"
-	desc = "Taken from an Colonial Marshall armory of a colony you previously deployed to recover, since no one was left to miss it."
-	icon = 'icons/obj/items/storage.dmi'
-	icon_state = "matebacase"
-	w_class = SIZE_LARGE
-	max_w_class = SIZE_MEDIUM
-	storage_slots = 3
-
-/obj/item/storage/box/upp/fill_preset_inventory()
-	new /obj/item/weapon/gun/revolver/cmb(src)
-	new /obj/item/ammo_magazine/revolver/cmb/hollowpoint
-	new /obj/item/ammo_magazine/revolver/cmb/hollowpoint
