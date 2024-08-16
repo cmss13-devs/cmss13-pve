@@ -708,7 +708,9 @@
 	fire_sound = null
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	fire_rattle = 'sound/weapons/gun_cmb_rattle.ogg'
-	cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
+	//cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
+	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
+	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead
 	force = 15
 	attachable_allowed = list(

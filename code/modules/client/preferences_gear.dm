@@ -753,9 +753,19 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/hg44
+	display_name = "HG 44 'Automag' Pistol"
+	path = /obj/item/storage/box/loadout/HG45_marine_loadout
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/weapon/spearhead
-	display_name = "Spearhead Armoury Autorevolver"
+	display_name = "Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/spearhead_custom
+	display_name = "Custom Spearhead Armoury Revolver"
+	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete

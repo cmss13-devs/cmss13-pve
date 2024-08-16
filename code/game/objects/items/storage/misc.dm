@@ -155,11 +155,29 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
+/obj/item/storage/box/loadout/HG44_loadout
+	name = "HG 44 'Automag' storage case"
+	desc = "A relatively large storage case containing a loaded HG 44 'Automag' and additional magazines."
+
+/obj/item/storage/box/loadout/HG44_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/automag())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
+
 /obj/item/storage/box/loadout/Spearhead_loadout
 	name = "Spearhead Armoury storage case"
 	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and additional speedloaders."
 
 /obj/item/storage/box/loadout/Spearhead_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/black())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/spearhead(src)
+
+/obj/item/storage/box/loadout/Spearhead_loadout/custom
+	name = "Spearhead Armoury storage case"
+	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and additional speedloaders."
+
+/obj/item/storage/box/loadout/Spearhead_loadout/custom/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/black())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/spearhead(src)
