@@ -16,7 +16,7 @@
 	flags_magazine = NO_FLAGS //can't be refilled or emptied by hand
 	caliber = "10x28mm"
 	max_rounds = 700
-	default_ammo = /datum/ammo/bullet/machinegun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = null
 
 
@@ -428,7 +428,7 @@
 	health = 200
 	var/health_max = 200 //Why not just give it sentry-tier health for now.
 	var/atom/target = null // required for shooting at things.
-	var/datum/ammo/bullet/machinegun/ammo = /datum/ammo/bullet/machinegun
+	var/datum/ammo/bullet/rifle/heavy/ammo = /datum/ammo/bullet/rifle/heavy
 	var/obj/projectile/in_chamber = null
 	var/locked = 0 //1 means its locked inplace (this will be for sandbag MGs)
 	var/muzzle_flash_lum = 4

@@ -46,7 +46,7 @@
 	name = "\improper smartgun ammunition box (10x28mm)"
 	desc = "A 10x28mm ammunition box. Used to refill smartgun drum magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_reg"
-	default_ammo = /datum/ammo/bullet/smartgun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	caliber = "10x28mm"
 	bullet_amount = 1000
 	max_bullet_amount = 1000

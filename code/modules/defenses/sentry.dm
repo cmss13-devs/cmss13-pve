@@ -570,7 +570,7 @@
 	name = "Modified UA-577 Gauss Turret"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
 	faction_group = null
-	ammo = new /obj/item/ammo_magazine/sentry/premade/dumb
+	ammo = new /obj/item/ammo_magazine/sentry
 
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
