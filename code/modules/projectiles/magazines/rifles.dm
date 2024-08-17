@@ -157,7 +157,7 @@
 
 /obj/item/ammo_magazine/rifle/m4ra/ext
 	name = "\improper M4RA extended magazine (10x28mm)"
-	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M4RA battle rifle. Holds an additional 10 rounds, up to 35."
+	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M4RA battle rifle. Holds an additional 10 rounds, up to 40."
 	icon_state = "m4ra_extended"
 	bonus_overlay = "m4ra_ex"
 	max_rounds = 40
@@ -190,7 +190,7 @@
 	name = "\improper M4RA depleted uranium magazine (10x28mm)"
 	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x28mm rounds for use in the M4RA-R2 battle rifle."
 	icon_state = "m4ra"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
+	default_ammo = /datum/ammo/bullet/rifle/heavy/du
 	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 

@@ -44,6 +44,25 @@
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 
+// PvE M4RA rounds - pens&does toxin to whomever gets hit by it
+/datum/ammo/bullet/rifle/heavy/du
+	name = "depleted uranium heavy rifle bullet"
+
+	damage = 60
+	accurate_range_min = 4
+	penetration = ARMOR_PENETRATION_TIER_5
+	scatter = -SCATTER_AMOUNT_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/du/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/heavy/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/toxic_buildup)
+	knockback(target, fired_proj, max_range = 2)
+
 
 /datum/ammo/bullet/rifle/holo_target
 	name = "holo-targeting rifle bullet"
@@ -212,25 +231,6 @@
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
-
-
-// PvE M4RA rounds - pens&does toxin to whomever gets hit by it
-/datum/ammo/bullet/rifle/m4ra/du
-	name = "depleted uranium bullet"
-
-	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_5
-
-/datum/ammo/bullet/rifle/m4ra/du/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
-
-/datum/ammo/bullet/rifle/m4ra/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/toxic_buildup)
-	knockback(target, fired_proj, max_range = 2)
-
 
 /datum/ammo/bullet/rifle/mar40
 	name = "heavy rifle bullet"
