@@ -761,7 +761,7 @@
 
 /obj/structure/machinery/defenses/sentry/upp
 	name = "\improper UPPA 32-H sentry gun"
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 350-round drum magazine."
 	icon_state = "upp_defense_base"
 	icon_on = "upp_defense_base"
 	icon_off = "upp_defense_base_off"
