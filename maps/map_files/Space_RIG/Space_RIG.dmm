@@ -1,0 +1,233 @@
+"ab" = (/obj/structure/largecrate/random/barrel/yellow{pixel_x = 5; pixel_y = 20},/obj/structure/largecrate/random/case/small{pixel_x = -2; pixel_y = 6},/obj/structure/largecrate/random/mini/wooden{pixel_y = 14},/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"aK" = (/obj/structure/blocker/invisible_wall,/turf/open/gm/empty,/area/space)
+"aM" = (/obj/structure/surface/table/reinforced/black,/obj/structure/showcase{density = 0; icon_state = "nboard03"; pixel_x = -21; pixel_y = -14},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"bi" = (/turf/open/floor/prison{dir = 8; icon_state = "darkyellowcorners2"},/area/space)
+"bA" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/prison{dir = 10; icon_state = "darkyellow2"},/area/space)
+"cp" = (/turf/open/floor/strata{dir = 8; icon_state = "yellow3"},/area/space)
+"cS" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator/grating,/area/space)
+"cT" = (/obj/structure/largecrate/random/secure,/obj/item/device/flashlight/lamp/on{pixel_x = 3; pixel_y = 15},/obj/item/clothing/glasses/science{pixel_y = 8},/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"df" = (/obj/structure/bed/chair{pixel_x = 8; pixel_y = 6},/turf/open/floor/strata,/area/space)
+"dK" = (/turf/open/floor/almayer{icon_state = "test_floor4"},/area/space)
+"dM" = (/turf/closed/shuttle/elevator{dir = 6},/area/space)
+"et" = (/obj/structure/stairs/perspective{dir = 8},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"eF" = (/turf/closed/shuttle/elevator/button/research,/area/space)
+"fy" = (/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/strata{icon_state = "yellow3"},/area/space)
+"fO" = (/obj/structure/closet/hydrant{pixel_y = -28},/obj/structure/largecrate/random/barrel/blue{pixel_x = -5; pixel_y = 21},/obj/structure/largecrate/random/barrel/blue{pixel_x = 21; pixel_y = 17},/obj/structure/largecrate/random/barrel/blue,/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/space)
+"fS" = (/obj/structure/bed/chair{dir = 1; pixel_x = 8; pixel_y = 2},/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/space)
+"gm" = (/turf/closed/shuttle/elevator{dir = 10},/area/space)
+"gD" = (/obj/structure/window/framed/strata/hull,/turf/open/floor/plating,/area/space)
+"gG" = (/obj/structure/machinery/door/airlock/multi_tile/elevator/research{name = "\improper Supply Elevator Hatch"},/turf/open/floor/almayer{icon_state = "test_floor4"},/area/space)
+"gJ" = (/obj/structure/closet/secure_closet{icon_broken = "fridgebroken"; icon_closed = "fridge"; icon_locked = "fridge1"; icon_off = "fridge1"; icon_opened = "fridgeopen"; icon_state = "fridge1"; name = "beverage fridge"; pixel_x = -6; pixel_y = 7; storage_capacity = 99999},/obj/structure/machinery/vending/dinnerware{pixel_x = 12; pixel_y = 7},/obj/structure/largecrate/random/mini/ammo{pixel_x = 8; pixel_y = -12},/obj/structure/sign/poster/clf{pixel_x = 10; pixel_y = 11},/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"gK" = (/obj/structure/largecrate/random/case{pixel_y = 19},/obj/structure/largecrate/random/case{pixel_y = 10},/obj/structure/largecrate/random/case,/obj/structure/largecrate/random/case{pixel_y = 21},/obj/item/device/flashlight/lamp/on{pixel_x = 1; pixel_y = 26},/turf/open/floor/strata{dir = 8; icon_state = "yellow3"},/area/space)
+"hh" = (/turf/open/space/basic,/area/space)
+"hm" = (/turf/open/floor/prison{icon_state = "cell_stripe"},/area/space)
+"hr" = (/obj/item/prop/helmetgarb/bug_spray{pixel_x = -11; pixel_y = 61},/obj/item/device/flashlight/lamp/tripod/grey{pixel_x = 16; pixel_y = -11},/turf/open/floor/prison{icon_state = "darkyellowcorners2"},/area/space)
+"hu" = (/obj/structure/dispenser/oxygen{density = 0; pixel_x = -4; pixel_y = 15},/obj/item/disk{pixel_x = 4; pixel_y = -20},/obj/item/disk{icon_state = "datadisk1"; pixel_x = 11; pixel_y = -15},/obj/item/disk{icon_state = "disk_5"; pixel_x = 9; pixel_y = -18},/obj/structure/bed/chair{dir = 8; pixel_x = -3},/turf/open/floor/strata,/area/space)
+"hF" = (/obj/structure/prop/structure_lattice{desc = "This jukebox only takes quarters and you seem to be out of them at the moment."; icon = 'icons/obj/structures/props/misc.dmi'; icon_state = "jukebox"; name = "Rockin Robin 2300 Jukebox"; pixel_x = -1},/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/space)
+"iA" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/turf/open/floor/prison{dir = 5; icon_state = "darkyellow2"},/area/space)
+"jv" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/obj/structure/bed/chair{dir = 8; pixel_y = 13},/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/space)
+"lw" = (/obj/structure/stairs/perspective{dir = 1; icon_state = "p_stair_ew_full_cap"},/obj/structure/barricade/handrail/hybrisa/road/metal,/obj/structure/prop/hybrisa/misc/machinery/screens/frame{pixel_y = -29},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"mF" = (/turf/open/floor/prison{icon_state = "floor_plate"},/area/space)
+"mN" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/obj/structure/bed/chair{pixel_x = -4; pixel_y = 13},/turf/open/floor/strata{icon_state = "yellow4"},/area/space)
+"mZ" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/space)
+"nh" = (/turf/closed/shuttle/elevator{dir = 4},/area/space)
+"oe" = (/obj/effect/hybrisa/decal/WY/WYworn{pixel_x = -16},/obj/effect/hybrisa/decal/doubleroad/lines5,/turf/open/floor/prison{icon_state = "floor_plate"},/area/space)
+"oh" = (/obj/structure/bed/chair{dir = 8; pixel_x = 9},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/turf/open/floor/prison{dir = 9; icon_state = "darkyellow2"},/area/space)
+"oj" = (/turf/open/floor/prison{icon_state = "darkyellowcorners2"},/area/space)
+"om" = (/obj/item/paper/crumpled{pixel_x = 16; pixel_y = 7},/turf/open/floor/prison{dir = 1; icon_state = "darkyellowcorners2"},/area/space)
+"oz" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/prison{dir = 1; icon_state = "darkyellow2"},/area/space)
+"oF" = (/obj/item/tool/wirecutters/tactical{pixel_x = 9},/turf/open/floor/strata,/area/space)
+"oV" = (/obj/effect/hybrisa/decal/doubleroad/lines5,/turf/open/floor/prison{icon_state = "floor_plate"},/area/space)
+"pk" = (/obj/structure/largecrate/random/case{layer = 2.9; pixel_x = -6; pixel_y = 17},/obj/structure/machinery/computer/arcade{desc = "Game about exploring deep caves as a long forgotten dwarf - Karl."; enemy_name = "Gliphid"; name = "Deep Miner 13: Karl Stories"; pixel_x = 4; pixel_y = 11; temp = "Sponsored by Deep Rock Galactic"},/obj/item/tool/extinguisher/mini{pixel_x = 12; pixel_y = -4},/obj/item/reagent_container/food/drinks/cans/beer{pixel_x = -12; pixel_y = 3},/obj/item/reagent_container/food/drinks/cans/beer{pixel_x = 1; pixel_y = 30},/turf/open/floor/strata{dir = 4; icon_state = "yellow3"},/area/space)
+"px" = (/turf/closed/wall/hybrisa/spaceport_unmeltable,/area/space)
+"pT" = (/obj/structure/window/full{color = "#ba30cc"; layer = 3; light_color = "#741b80"; light_on = 1; light_power = 0.6; light_range = 3},/obj/structure/window/full{color = "#ba30cc"; layer = 3; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 8; layer = 3; pixel_x = -2; pixel_y = 1},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 4; layer = 3; pixel_x = 2; pixel_y = 1},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; layer = 3; pixel_y = -4},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 1; layer = 3; pixel_y = 30},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 8; layer = 3; pixel_x = -2; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 4; layer = 3; pixel_x = 2; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; layer = 3; pixel_y = 24},/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"qO" = (/obj/structure/largecrate/random/case/double{pixel_x = 1; pixel_y = 16},/obj/structure/largecrate/random/case/small,/obj/item/toy/plush/yautja{pixel_x = -3; pixel_y = 9},/obj/item/tank/emergency_oxygen{pixel_x = -23; pixel_y = 10},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"ra" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/obj/structure/prop/hybrisa/misc/machinery/screens/telescreen{pixel_y = 32},/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/space)
+"rd" = (/obj/structure/pipes/standard/tank/oxygen{pixel_x = -8; pixel_y = 16; plane = -6},/obj/item/tank/oxygen/yellow{pixel_x = -22},/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"rw" = (/turf/open/floor/prison{dir = 4; icon_state = "cell_stripe"},/area/space)
+"sl" = (/obj/structure/machinery/computer/shuttle_control/ice_colony{pixel_y = 33},/obj/structure/machinery/light{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "mono"},/area/space)
+"sL" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator,/area/space)
+"tq" = (/obj/structure/largecrate/random/barrel/brown{pixel_x = 6; pixel_y = 13},/obj/structure/largecrate/random/barrel/brown,/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"ts" = (/turf/closed/wall/hybrisa/spaceport_reinforced,/area/space)
+"tQ" = (/turf/open/floor/strata{dir = 4; icon_state = "yellow3"},/area/space)
+"vm" = (/turf/open/floor/prison{dir = 8; icon_state = "cell_stripe"},/area/space)
+"vK" = (/turf/closed/shuttle/elevator{dir = 5},/area/space)
+"vV" = (/turf/closed/wall/hybrisa/spaceport,/area/space)
+"wA" = (/obj/structure/pipes/standard/tank/nitrous_oxide,/obj/structure/pipes/standard/tank/nitrous_oxide{pixel_x = 19},/obj/structure/pipes/standard/tank/nitrous_oxide{pixel_x = -20},/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"wT" = (/obj/structure/prop/ice_colony/poly_kevlon_roll{pixel_x = 11; pixel_y = 13},/obj/structure/prop/ice_colony/poly_kevlon_roll{pixel_x = 9; pixel_y = 3},/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"xy" = (/obj/structure/largecrate/random/barrel/red,/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"xA" = (/obj/structure/prop/invuln{desc = "It is slimy."; dir = 4; icon = 'icons/mob/xenos/sentinel.dmi'; icon_state = "Normal Sentinel Knocked Down"; layer = 2.5; name = "frozen creature"; pixel_x = -5; pixel_y = -4},/obj/structure/window/full{color = "#ba30cc"; layer = 3; light_color = "#741b80"; light_on = 1; light_power = 0.6; light_range = 3},/obj/structure/window/full{color = "#ba30cc"; layer = 3; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 8; layer = 3; pixel_x = -2; pixel_y = 1},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 4; layer = 3; pixel_x = 2; pixel_y = 1},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 1; layer = 3; pixel_y = 30},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 8; layer = 3; pixel_x = -2; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; dir = 4; layer = 3; pixel_x = 2; pixel_y = 28},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; layer = 3; pixel_y = -4},/obj/structure/barricade/handrail/sandstone/b{color = "#3b3b3b"; layer = 3; pixel_y = 24},/obj/item/lightstick/red/spoke/planted{pixel_x = -17; pixel_y = -5},/obj/structure/prop/hybrisa/misc/metergreen{pixel_y = -11},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"yo" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/strata{dir = 1; icon_state = "yellow3"},/area/space)
+"yB" = (/obj/structure/largecrate/random,/obj/item/stack/cable_coil/orange{pixel_x = 7; pixel_y = 10},/turf/open/floor/strata{icon_state = "yellow3"},/area/space)
+"yE" = (/obj/structure/stairs/perspective{icon_state = "p_stair_ew_full_cap"},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"zd" = (/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"zo" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/strata{dir = 8; icon_state = "yellow4"},/area/space)
+"zs" = (/obj/item/paper{pixel_x = -17},/obj/item/prop/colony/canister{pixel_x = 7; pixel_y = 23},/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = 12; pixel_y = 8},/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = -6; pixel_y = 8},/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = 3; pixel_y = 8},/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = -1; pixel_y = 20},/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = 7; pixel_y = 20},/turf/open/floor/strata{dir = 4; icon_state = "yellow3"},/area/space)
+"zG" = (/turf/open/gm/empty,/area/space)
+"zV" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/obj/structure/bed/chair{dir = 8; pixel_x = 4; pixel_y = 23},/obj/structure/bed/chair{dir = 8; pixel_x = 4; pixel_y = 13},/obj/item/tank/emergency_oxygen/engi{pixel_x = 3; pixel_y = 29},/turf/open/floor/prison{dir = 6; icon_state = "darkyellow2"},/area/space)
+"Af" = (/obj/item/reagent_container/food/drinks/cans/beer{pixel_x = -2; pixel_y = 16},/turf/open/floor/prison{icon_state = "darkyellow2"},/area/space)
+"Al" = (/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/strata{dir = 4; icon_state = "yellow4"},/area/space)
+"AQ" = (/turf/closed/shuttle/elevator,/area/space)
+"By" = (/turf/open/floor/plating,/area/space)
+"BO" = (/mob/living/silicon/robot/drone,/turf/open/floor/strata,/area/space)
+"Ca" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_2"; pixel_x = -8; pixel_y = 12},/obj/item/tool/pen/clicky{pixel_x = -9; pixel_y = 1},/turf/open/floor/strata{dir = 8; icon_state = "yellow4"},/area/space)
+"CR" = (/obj/structure/barricade/handrail/hybrisa/road/metal,/obj/item/stack/sheet/metal{pixel_x = 4; pixel_y = 18},/obj/item/stack/sheet/metal{pixel_y = 13},/turf/open/floor/strata{dir = 8; icon_state = "yellow4"},/area/space)
+"CV" = (/obj/structure/largecrate/random/barrel/black{pixel_x = -13; pixel_y = 15},/obj/structure/largecrate/random/barrel/yellow{pixel_x = 3; pixel_y = 5},/obj/structure/reagent_dispensers/beerkeg/alt_dark{anchored = 1; chemical = null; density = 0; pixel_x = -16; pixel_y = 3},/obj/structure/reagent_dispensers/beerkeg/alt_dark{anchored = 1; chemical = null; density = 0; pixel_x = -12; pixel_y = 32},/obj/structure/reagent_dispensers/beerkeg/alt{anchored = 1; pixel_y = -5},/turf/open/floor/strata{dir = 4; icon_state = "yellow3"},/area/space)
+"Dk" = (/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_y = 25; plane = -6},/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_x = -16; pixel_y = 25; plane = -6},/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_x = -20; pixel_y = 13; plane = -6},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"DE" = (/obj/structure/surface/table/reinforced/black,/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"Ec" = (/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/space)
+"EQ" = (/obj/structure/surface/table/reinforced/prison,/turf/open/floor/strata,/area/space)
+"Fb" = (/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/space)
+"FU" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator,/area/space)
+"Gb" = (/turf/open/floor/strata{dir = 4; icon_state = "floor3"},/area/space)
+"HX" = (/obj/item/stack/sheet/metal{pixel_y = 10},/obj/item/stack/sheet/metal{pixel_y = 13},/obj/item/stack/sheet/metal{pixel_y = 16},/obj/item/tank/emergency_oxygen{layer = 3.03; pixel_x = 5; pixel_y = 20},/turf/open/floor/strata{dir = 1; icon_state = "yellow4"},/area/space)
+"Im" = (/obj/structure/prop/structure_lattice{dir = 4; pixel_x = -28},/turf/closed/wall/hybrisa/spaceport_unmeltable,/area/space)
+"Iq" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/strata{icon_state = "yellow4"},/area/space)
+"Ir" = (/obj/structure/largecrate/random/secure{pixel_y = 14},/obj/structure/largecrate/random/secure,/obj/structure/largecrate/random/case{pixel_x = 1; pixel_y = 30},/obj/structure/largecrate/random/mini/chest{pixel_x = -3; pixel_y = 12},/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"It" = (/obj/structure/showcase{icon_state = "hub"; pixel_x = -10},/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/space)
+"IS" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/turf/open/floor/strata{icon_state = "yellow4"},/area/space)
+"IZ" = (/obj/structure/largecrate/random{pixel_x = -7; pixel_y = 15},/obj/structure/largecrate/random/secure{pixel_x = -17},/obj/structure/largecrate/random/barrel/red{pixel_x = 6; pixel_y = -5},/obj/structure/prop/cash_register{pixel_x = 11; pixel_y = 16},/obj/item/folder/black{pixel_x = -21; pixel_y = 9},/obj/item/folder{pixel_x = -20; pixel_y = 7},/obj/item/disk{icon_state = "datadisk5"; pixel_x = -18; pixel_y = 9},/obj/structure/prop/hybrisa/signs/barsign{alpha = 100; light_color = "#00AAFF"; light_on = 1; light_power = 4; light_range = 6; pixel_x = -12; pixel_y = 43},/obj/structure/prop/hybrisa/signs/opensign2{alpha = 100; pixel_x = -26; pixel_y = 23},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"JW" = (/obj/structure/stairs/perspective{dir = 1; icon_state = "p_stair_ew_full_cap"},/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"Kc" = (/turf/open/floor/prison{icon_state = "darkyellow2"},/area/space)
+"Kk" = (/obj/item/device/flashlight/lamp/tripod/grey{pixel_x = 16; pixel_y = -6},/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/space)
+"Kt" = (/turf/closed/shuttle/elevator{dir = 9},/area/space)
+"KK" = (/obj/structure/largecrate/random/barrel/blue,/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"KV" = (/obj/structure/machinery/light{dir = 8},/turf/open/floor/almayer{icon_state = "mono"},/area/space)
+"Lr" = (/obj/structure/surface/table/reinforced/prison,/obj/item/trash/crushed_cup{pixel_x = -9; pixel_y = -2},/obj/item/reagent_container/food/drinks/cans/beer{pixel_x = -6; pixel_y = 18},/obj/item/trash/snack_bowl{pixel_x = 6; pixel_y = 6},/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/space)
+"Lv" = (/obj/item/reagent_container/food/drinks/cans/ale{pixel_x = 2; pixel_y = -12},/obj/item/ammo_box/magazine/misc/power_cell{pixel_x = -7; pixel_y = 10},/turf/open/floor/strata{dir = 4; icon_state = "yellow3"},/area/space)
+"Ly" = (/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"Mb" = (/turf/closed/shuttle/elevator/gears,/area/space)
+"Mg" = (/turf/closed/shuttle/elevator/freight,/area/space)
+"Nd" = (/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator/grating,/area/space)
+"Nt" = (/obj/structure/machinery/light{dir = 4},/turf/open/floor/almayer{icon_state = "mono"},/area/space)
+"NN" = (/turf/open/floor/prison{dir = 4; icon_state = "darkyellowcorners2"},/area/space)
+"Ot" = (/obj/structure/bed/chair{dir = 4; pixel_x = 7; pixel_y = 23},/obj/structure/largecrate/random/secure{anchored = 1; density = 0; pixel_x = -5},/turf/open/floor/prison{dir = 8; icon_state = "darkyellow2"},/area/space)
+"Ow" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator,/area/space)
+"OA" = (/obj/structure/stairs/perspective{dir = 8},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"QA" = (/obj/structure/largecrate/random/case/small{pixel_x = -5; pixel_y = -3},/obj/structure/largecrate/random/mini/wooden{pixel_x = -3; pixel_y = 5},/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"QP" = (/obj/structure/machinery/big_computers/computerbrown/computer5{layer = 2.9; pixel_x = 4; pixel_y = 8},/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/strata{icon_state = "yellow3"},/area/space)
+"Rz" = (/obj/item/storage/toolbox/mechanical{pixel_x = -18; pixel_y = -8},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"Sj" = (/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_y = 25; plane = -6},/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_x = 13; pixel_y = 18; plane = -6},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"St" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 1; pixel_y = 12},/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/obj/structure/machinery/door_control/brbutton{pixel_x = 8; pixel_y = 19},/obj/structure/prop/hybrisa/misc/machinery/screens/frame{pixel_y = 37},/turf/open/floor/strata{dir = 1; icon_state = "yellow4"},/area/space)
+"Tc" = (/obj/structure/showcase{icon_state = "hub"; pixel_x = 9},/turf/open/floor/prison{dir = 1; icon_state = "ramptop"},/area/space)
+"UL" = (/obj/structure/pipes/standard/tank/carbon_dioxide{density = 0; desc = "A large vessel containing pressurized liquid."; name = "Pressure Tank (BEER)"; pixel_y = 25; plane = -6},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"VR" = (/obj/structure/machinery/light{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer{icon_state = "mono"},/area/space)
+"VZ" = (/obj/item/tool/pen/clicky{pixel_x = -18; pixel_y = -2},/obj/effect/hybrisa/decal/trash{icon_state = "trash_4"; pixel_x = 2; pixel_y = 16},/turf/open/floor/prison{icon_state = "darkyellow2"},/area/space)
+"Wr" = (/turf/open/floor/strata,/area/space)
+"WQ" = (/obj/effect/decal/cleanable/dirt,/turf/open/shuttle/elevator,/area/space)
+"WT" = (/obj/structure/prop/structure_lattice{dir = 4; pixel_x = -28; pixel_y = 32},/obj/structure/prop/ice_colony/dense/planter_box/hydro{density = 0; pixel_x = -34; pixel_y = -1},/obj/structure/holohoop{dir = 8; id = "basketball"; pixel_x = -30; pixel_y = 11; side = "right"},/turf/closed/wall/hybrisa/spaceport_unmeltable,/area/space)
+"Xg" = (/turf/open/floor/strata{dir = 9; icon_state = "yellow3"},/area/space)
+"Xi" = (/turf/open/shuttle/elevator/grating,/area/space)
+"XG" = (/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"XW" = (/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{pixel_x = -2; pixel_y = 21},/obj/item/tool/mop{pixel_x = -13; pixel_y = 6},/obj/item/reagent_container/glass/bucket/mopbucket{pixel_x = -7; pixel_y = -4},/turf/open/floor/strata{icon_state = "yellow1"},/area/space)
+"Yg" = (/turf/open/floor/strata{icon_state = "white_cyan2"},/area/space)
+"Yz" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/turf/open/floor/strata{dir = 8; icon_state = "yellow3"},/area/space)
+"YR" = (/turf/open/floor/strata{icon_state = "multi_tiles"},/area/space)
+"YU" = (/obj/structure/stairs/perspective{dir = 8},/obj/structure/barricade/handrail/hybrisa/road/metal,/turf/open/floor/prison{dir = 4; icon_state = "ramptop"},/area/space)
+"YW" = (/obj/item/tool/wrench{pixel_x = 26; pixel_y = -24},/obj/item/tool/wirecutters/tactical{pixel_x = 9; pixel_y = 22},/obj/item/tool/crowbar/tactical{pixel_y = 11},/obj/item/tool/screwdriver/tactical{pixel_x = 19},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"YY" = (/turf/open/floor/prison{dir = 4; icon_state = "darkyellow2"},/area/space)
+"Za" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 4; pixel_x = 2},/turf/open/floor/plating/plating_catwalk/strata,/area/space)
+"Zb" = (/obj/structure/barricade/handrail/hybrisa/road/metal{dir = 8; pixel_x = -2},/obj/item/tank/oxygen{pixel_x = -4; pixel_y = 13},/turf/open/floor/strata{icon_state = "yellow4"},/area/space)
+
+(1,1,1) = {"
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxgDgDpxpxgDgDgDpxpxgDgDpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxgDgDpxpxpxgDgDpxpxzGzGzGzGzGzGzGzGzGzGzGzGzGpxpxgDgDpxpxpxgDgDpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxgDpxzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGpxpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGaKaKmNpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgDzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGzGaKaKaKaKaKaKaKaKaKaKaKISXgxApxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxzGzGzGzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbyEIqyoyoyoyoyoyoyoyoyoXgXGXGpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbJWcpRzXGXGXGXGtqYWXGXGXGXGWrpkpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhGbGbGbXGXGXGXGXGXGXGXGGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbtstsXWwAwTIrtscTQAYRpTQPyBWrCapxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhGbGbGbXGXGXGXGXGXGXGXGGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbohtststststststststststsaKZbXGHXpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbtsozNNhuCVLySjULDkLycprdtstsaKYzXGzspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbYRYRYRtsLyzdWrtQLycpBOtQLycpabtsaKaKYzXGCRpxpxpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbYRYRYRtsLyzdoFLvIZDEDEaMqOgKgJraaKaKYzZaaKzGzGzGpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGByByByByByzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbYRYRYRtsLyzdWrojKcAfKcVZKcbihrzVaKaKYzZaaKaKzGzGzGpxhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGByByByByByByByzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbtsmZmZbAKcbiWrYYLyhmhmhmLyFbYYOAIqyoXgXGStaKzGzGzGpxhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGByByByByByByByByByzGzGzGzGzGGbGbGbGbGbGbGbGbGbtsWrWrWrtsFbWrYYrwmFmFmFvmFbYYetXGXGXGXGxyzGzGzGzGWThhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGByByByByByByByByByzGzGzGzGzGGbGbGbGbGbGbGbGbGbWrWrWrWryEFbWrYYrwoVoeoVvmFbKkYUAlfyfyfyzoaKzGzGzGImhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGByByByByByByByByByzGzGzGzGzGGbGbGbGbGbGbGbGbGbWrWrWrWrlwFbdfYYrwmFmFmFvmFbomiAaKaKaKaKaKaKzGzGzGpxhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGByByByByByByByByByzGzGzGzGzGGbGbGbGbGbGbGbGbGbWrWrWrWrtsOtEQfOKKEcEcEcLyfSLrjvaKzGzGzGzGzGzGzGpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGByByByByByByByByByzGzGzGzGzGGbGbGbGbGbGbGbGbGbWrWrWrWrtststststsTchFItpxpxpxpxpxpxpxpxpxpxpxpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGByByByByByByByGbzGzGzGzGzGGbGbGbGbGbGbGbGbGbWrWrWrWrtsByByBytststspxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGByByByByByGbGbGbzGzGzGzGGbGbGbGbGbGbGbGbGbvVWrWrWrtststststststspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGzGzGzGzGzGzGGbGbGbzGzGGbGbGbGbGbGbGbGbGbGbWrWrWrWrtsWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrWrWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxzGzGzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtsWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxzGzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtsWrWrWrWrtstspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxzGzGzGzGzGzGzGzGGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtstststststsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrvVGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbvVWrWrWrtsByByByByByBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtstststststsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtsWrWrWrWrtstspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrGbGbGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrtsWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrvVGbGbGbGbGbGbGbGbGbGbGbGbGbvVWrWrWrWrWrWrWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrGbGbGbGbGbGbGbGbGbGbGbGbGbWrWrWrWrWrWrtsWrWrWrWrWrWrpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxWrWrWrWrWrWrWrWrWrvVWrWrWrWrWrvVWrWrWrWrWrWrWrWrWrtststststststspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrtstsYgtsYgYgYgYgtsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrtsYgYgYgYgYgYgYgtsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrWrYgYgYgYgYgYgvVYgtsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxWrWrWrWrpxtstsWrWrWrtstsWrtststststststsWrtststsYgYgYgYgYgYgYgtstspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxWrWrWrWrpxpxpxWrWrWrtsWrWrWrWrtsBytsWrWrWrWrtsYgYgYgYgYgYgYgYgYgYgpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxKtnhgGdKdKdKeFvKpxtstststsWrWrWrWrtsBytsWrWrWrWrtsYgYgYgYgYgYgYgYgYgYgpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxAQVRcSXiXiXislAQpxByByBytsWrWrWrWrtsBytsWrWrWrWrtsYgYgvVYgYgYgYgYgYgYgpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxAQcSWQWQOwOwNdAQpxByByBytsWrWrWrWrtsBytsWrWrWrWrtsYgYgYgYgYgYgYgYgtstspxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxAQNdWQWQFUsLXiAQpxByByBytsWrWrWrtstsBytstsWrWrWrtststststsYgYgYgtstsBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxAQKVNdXiNdcSNtAQpxByByBytsWrWrWrtsByByBytsWrWrWrtsByByBytsYgYgYgtsByBypxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxgmMbnhnhnhMgMbdMpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhpxpxpxpxpxpxpxpxpxpxhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+"}
