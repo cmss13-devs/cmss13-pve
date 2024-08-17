@@ -89,16 +89,10 @@
 	bonus_overlay = "m41a_mk1_overlay"
 
 /obj/item/ammo_magazine/rifle/m41aMK1/rubber
-	name = "\improper M41A Less Lethal magazine"
+	name = "\improper M41A rubber magazine"
 	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm less lethal rubber bullets. Be careful, they're LESS, lethal, not NON, lethal."
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
-
-/obj/item/ammo_magazine/rifle/m41aMK1/training
-	name = "\improper M41A training magazine"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm training rounds."
-	default_ammo = /datum/ammo/bullet/rifle/rubber
-	ammo_band_color = AMMO_BAND_COLOR_TRAINING
 
 /obj/item/ammo_magazine/rifle/m41aMK1/ap
 	name = "\improper M41A AP magazine (10x24mm)"
@@ -326,27 +320,27 @@
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
-	name = "\improper Type 71 magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine for the Type 71 rifle."
-	caliber = "5.45x39mm"
+	name = "\improper Type 71 magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine for the Type 71 rifle."
+	caliber = "10x31mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/type71
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/ap
-	name = "\improper Type 71 AP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/ap
+	name = "\improper Type 71 AP magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type71/heap
-	name = "\improper Type 71 HEAP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/heap
+	name = "\improper Type 71 HEAP magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------

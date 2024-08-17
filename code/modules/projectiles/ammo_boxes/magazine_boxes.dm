@@ -60,7 +60,6 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
-
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 X 10)"
 	flags_equip_slot = SLOT_BACK
@@ -80,6 +79,16 @@
 
 /obj/item/ammo_box/magazine/mk1/heap/empty
 	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/rubber
+	name = "magazine box (Rubber M41A MK1 X 10)"
+	overlay_ammo_type = "_training"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
+
+/obj/item/ammo_box/magazine/mk1/rubber/empty
+	empty = TRUE
+
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39

@@ -398,6 +398,10 @@
 	)
 	var/list/smartgun_back = list(
 		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m37,
+		/obj/item/weapon/gun/rifle,
+		/obj/item/weapon/gun/shotgun/combat,
+		/obj/item/weapon/gun/shotgun/pump,
 	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
