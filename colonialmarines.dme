@@ -1407,6 +1407,7 @@
 #include "code\modules\admin\game_master\resin_panel.dm"
 #include "code\modules\admin\game_master\sound_panel.dm"
 #include "code\modules\admin\game_master\extra_buttons\fire_support_menu.dm"
+#include "code\modules\admin\game_master\extra_buttons\marine_announce.dm"
 #include "code\modules\admin\game_master\extra_buttons\rappel_menu.dm"
 #include "code\modules\admin\game_master\extra_buttons\rename_platoon.dm"
 #include "code\modules\admin\game_master\extra_buttons\toggle_ai_xeno_weeding.dm"

@@ -1,0 +1,4 @@
+author: "sunofang"
+delete-after: True
+changes:
+  - admin: "Spawn menu no longer populates by default, and doesnt cause you to lag."
