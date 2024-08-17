@@ -26,3 +26,37 @@
   - rscadd: 'added more cigarette options in the loadout, along with a golden zippo
 
       :cl:'
+2024-08-10:
+  Doubleumc:
+  - qol: Adds the ability to hide your action buttons
+  - bugfix: Fixed 'hidden' action buttons being shown to observing players.
+  - qol: Made any observers transfer over when a Xenomorph evolves/de-evolves.
+  - rscadd: Added 'observe' functionality to Xenomorphs, allowing observers to view
+      the target's UI.
+  - rscadd: Made observing a player also show their action buttons.
+  - spellcheck: Made observers see the marine version of CAS warnings, rather than
+      the xeno one.
+  - qol: Made open TGUI windows transfer over when a xeno player evolves.
+  - bugfix: Fixed observing a monkey/farwa/stok/etc. locking the camera onto it.
+  - bugfix: Observer minimap should no longer occasionally show wrong / no map.
+  - code_imp: environmental reverb applies more reliably and only to positional sounds
+  - bugfix: Notifications should no longer emit light.
+  - bugfix: Sprite-click shots onto Xenos are no longer affected by limb-targeting
+      penalty, because it was an accuracy debuff when there is no inherent benefit
+      to targeting Xeno limbs.
+  - rscadd: Locking down dropship's doors closes them before locking.
+  - bugfix: Fix handling of sentry_computer deletion
+  - refactor: Refactored the overlay_lighting component to better handle objects deleting
+  - bugfix: Fix putting lights in bags somereason keeping the light on
+  - refactor: sentry laptop now uses camera manager component
+  - bugfix: less lag from xenos pathfinding unreachable targets
+  - rscadd: Added GM button to toggle AI xeno weeding
+  Kitsunemitsu:
+  - rscadd: Added 3 more railgun types
+  - balance: Railgun now changes it's stats based off the altitude
+  sunofang:
+  - rscadd: Due to budget increases, Close Air Support now has ammo.
+  - admin: Added a fire support menu for GM's to use.
+2024-08-11:
+  private-tristan:
+  - balance: M56D has been buffed with more damage, accuracy, and firerate.
