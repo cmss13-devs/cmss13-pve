@@ -2666,19 +2666,6 @@
 	pixel_x = 8;
 	pixel_y = 34
 	},
-/obj/structure/gun_rack/m41/unloaded,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/sign/poster/music{
-	pixel_y = 29
-	},
-/obj/structure/sign/poster/music{
-	pixel_x = 8;
-	pixel_y = 34
-	},
 /obj/structure/gun_rack/m41/recon/unloaded,
 /obj/item/attachable/attached_gun/grenade/mk1{
 	pixel_y = 15;
@@ -3145,17 +3132,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Eg" = (
-/obj/structure/machinery/chem_dispenser,
-/obj/item/reagent_container/glass/beaker/bluespace,
-/obj/item/storage/box/pillbottles{
-	pixel_x = -5;
-	pixel_y = 18
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 1;
