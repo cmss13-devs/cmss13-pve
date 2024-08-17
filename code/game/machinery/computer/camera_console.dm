@@ -329,8 +329,4 @@
 	name = "\improper 'Tripoli' camera controls"
 	network = list(CAMERA_NET_TRIPOLI, CAMERA_NET_LASER_TARGETS)
 
-/obj/structure/machinery/computer/cameras/dropship/cherokee
-	name = "\improper 'Cherokee' camera controls"
-	network = list(CAMERA_NET_CHEROKEE, CAMERA_NET_LASER_TARGETS)
-
 #undef DEFAULT_MAP_SIZE

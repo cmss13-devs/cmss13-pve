@@ -178,18 +178,6 @@
 	dwidth = 4
 	dheight = 8
 
-/obj/docking_port/mobile/marine_dropship/cherokee
-	name = "Cherokee"
-	id = DROPSHIP_CHEROKEE
-	width = 9
-	height = 18
-
-	dwidth = 4
-	dheight = 8
-
-/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
-	return /turf/open/space/transit/dropship/cyclone
-
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -416,7 +404,3 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
-
-/datum/map_template/shuttle/cherokee
-	name = "Cherokee"
-	shuttle_id = DROPSHIP_CHEROKEE

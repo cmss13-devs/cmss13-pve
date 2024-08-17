@@ -241,12 +241,3 @@
 
 /obj/structure/shuttle/part/tripoli/transparent
 	opacity = FALSE
-
-/obj/structure/shuttle/part/cherokee
-	name = "\improper Cherokee"
-	icon = 'icons/turf/dropship2.dmi'
-	icon_state = "1"
-	opacity = TRUE
-
-/obj/structure/shuttle/part/cherokee/transparent
-	opacity = FALSE

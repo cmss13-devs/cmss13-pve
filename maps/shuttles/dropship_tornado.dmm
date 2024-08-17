@@ -117,13 +117,10 @@
 	icon_state = "p_stair_full";
 	pixel_y = 22
 	},
-/obj/structure/machinery/computer/dropship_weapons/tornado{
-	icon = 'icons/obj/structures/machinery/computer.dmi';
-	icon_state = "cameras";
-	layer = 3.1;
+/obj/structure/machinery/computer/dropship_weapons/tornado/small{
+	pixel_y = 8;
 	pixel_x = -8;
-	pixel_y = 3;
-	density = 0
+	layer = 3.1
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -237,15 +234,13 @@
 	},
 /area/shuttle/tornado)
 "uL" = (
-/obj/structure/machinery/computer/shuttle/dropship/flight{
-	icon_state = "cameras_old";
-	pixel_y = 7;
-	icon = 'icons/obj/structures/machinery/computer.dmi';
-	pixel_x = -8
-	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
 	dir = 1
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 8;
+	pixel_x = -8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"

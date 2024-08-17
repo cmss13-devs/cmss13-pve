@@ -314,14 +314,6 @@
 /turf/closed/shuttle/tripoli/transparent
 	opacity = FALSE
 
-/turf/closed/shuttle/cherokee
-	name = "\improper Cherokee"
-	icon = 'icons/turf/dropship.dmi'
-	icon_state = "1"
-
-/turf/closed/shuttle/cherokee/transparent
-	opacity = FALSE
-
 /turf/closed/shuttle/twe_dropship
 	name = "\improper UD4-UK"
 	icon = 'icons/turf/twedropship.dmi'
