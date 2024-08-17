@@ -74,6 +74,7 @@ var/const/DUT_FREQ = 1210
 var/const/CMB_FREQ = 1220
 var/const/VAI_FREQ = 1215
 var/const/RMC_FREQ = 1216
+var/const/MERC_FREQ = 1217 //RU-PVE
 
 //WY Channels (1230-1249)
 var/const/WY_FREQ = 1231

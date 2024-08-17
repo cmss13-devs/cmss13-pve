@@ -1,0 +1,9 @@
+{
+    "map_name": "USCSS Tortuga",
+    "map_path": "map_files/USCSS_Tortuga",
+    "map_file": "uscss_tortuga.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/uscss_tortuga/",
+    "platoon": "/datum/squad/marine/lancer"
+}

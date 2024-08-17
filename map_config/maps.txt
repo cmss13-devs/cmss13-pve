@@ -13,7 +13,6 @@ Format:
 endmap
 
 map lv624
-	default
 endmap
 
 map lv624_repaired
@@ -71,4 +70,26 @@ map derelict_almayer
 endmap
 
 map whiskey_outpost_v2
+endmap
+
+map lv671
+	default
+endmap
+
+map kutjevo_ru
+endmap
+
+map derelict_almayer_ru
+endmap
+
+map desert_dam_ru
+endmap
+
+map oil_depot
+endmap
+
+map lv759_hybrisa_prospera
+endmap
+
+map whiskey_outpost_ru
 endmap

@@ -167,12 +167,14 @@
 
 	user.show_speech_bubble("medic")
 
+/*RUCM CHANGE
 /datum/emote/living/carbon/human/medic/run_langchat(mob/user, group)
 	if(!ishuman_strict(user))
 		return
 
 	var/medic_message = pick("Corpsman!", "Doc!", "Help!")
 	user.langchat_speech(medic_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_bolded"))
+*/
 
 /datum/emote/living/carbon/human/moan
 	key = "moan"
@@ -213,12 +215,14 @@
 
 	user.show_speech_bubble("pain")
 
+/*RUCM CHANGE
 /datum/emote/living/carbon/human/pain/run_langchat(mob/user, group)
 	if(!ishuman_strict(user))
 		return
 
 	var/pain_message = pick("OW!!", "AGH!!", "ARGH!!", "OUCH!!", "ACK!!", "OUF!")
 	user.langchat_speech(pain_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_yell"))
+*/
 /datum/emote/living/carbon/human/salute
 	key = "salute"
 	key_third_person = "salutes"
@@ -252,12 +256,14 @@
 
 	user.show_speech_bubble("scream")
 
+/*RUCM CHANGE
 /datum/emote/living/carbon/human/scream/run_langchat(mob/user, group)
 	if(!ishuman_strict(user))
 		return
 
 	var/scream_message = pick("FUCK!!!", "AGH!!!", "ARGH!!!", "AAAA!!!", "HGH!!!", "NGHHH!!!", "NNHH!!!", "SHIT!!!")
 	user.langchat_speech(scream_message, group, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_PANIC_POP, additional_styles = list("langchat_yell"))
+*/
 
 /datum/emote/living/carbon/human/shakehead
 	key = "shakehead"
@@ -358,6 +364,7 @@
 
 	user.show_speech_bubble("warcry")
 
+/*RUCM CHANGE
 /datum/emote/living/carbon/human/warcry/get_sound(mob/living/user)
 	if(ishumansynth_strict(user))
 		if(user.gender == MALE)
@@ -370,6 +377,7 @@
 				return get_sfx("female_upp_warcry")
 			else
 				return get_sfx("female_warcry")
+*/
 
 /datum/emote/living/carbon/human/whimper
 	key = "whimper"

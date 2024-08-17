@@ -122,7 +122,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return
 
-
 /////////////////////////////
 //          MOBS           //
 /////////////////////////////

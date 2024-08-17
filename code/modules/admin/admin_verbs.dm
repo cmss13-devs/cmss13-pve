@@ -14,6 +14,7 @@ var/list/admin_verbs_default = list(
 	/client/proc/create_custom_paper,
 	/client/proc/cmd_admin_change_their_name,
 	/client/proc/cmd_admin_changekey,
+	/client/proc/editappearplayer,
 	/client/proc/cmd_admin_subtle_message,
 	/client/proc/cmd_admin_atom_narrate,
 	/client/proc/cmd_admin_xeno_report,  //Allows creation of IC reports by the Queen Mother

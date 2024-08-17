@@ -1,0 +1,473 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_y = 8;
+	layer = 3.04
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"c" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/shuttle/lancers)
+"d" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
+/area/shuttle/lancers)
+"e" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_y = -8;
+	layer = 3.01
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"f" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan25"
+	},
+/area/shuttle/lancers)
+"g" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3"
+	},
+/area/shuttle/lancers)
+"h" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"i" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat{
+	name = "docking hatch";
+	locked = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"k" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan20"
+	},
+/area/shuttle/lancers)
+"l" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan3"
+	},
+/area/shuttle/lancers)
+"m" = (
+/obj/structure/surface/rack,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"o" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"q" = (
+/obj/structure/machinery/computer/shuttle/ert/broken,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"r" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_y = 8;
+	layer = 3.02
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_y = -8;
+	layer = 3.03
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"t" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan1"
+	},
+/area/shuttle/lancers)
+"u" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"w" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan27"
+	},
+/area/shuttle/lancers)
+"x" = (
+/turf/closed/shuttle/ert,
+/area/shuttle/lancers)
+"y" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_rightengine"
+	},
+/area/shuttle/lancers)
+"z" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_1";
+	opacity = 0
+	},
+/area/shuttle/lancers)
+"A" = (
+/turf/template_noop,
+/area/space)
+"B" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan21"
+	},
+/area/shuttle/lancers)
+"D" = (
+/obj/structure/machinery/door/airlock/hybrisa/generic_solid,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/lancers)
+"E" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan8"
+	},
+/area/shuttle/lancers)
+"F" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/lancers)
+"G" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/shuttle/lancers)
+"H" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_y = 8;
+	layer = 3.02
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_y = -8;
+	layer = 3.03
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"I" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/machinery/computer/shuttle/dropship,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"J" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "stan22"
+	},
+/area/shuttle/lancers)
+"K" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_1"
+	},
+/area/shuttle/lancers)
+"L" = (
+/obj/structure/machinery/door/airlock/hybrisa/generic_solid/autoname,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/lancers)
+"N" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan9"
+	},
+/area/shuttle/lancers)
+"P" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/lancers)
+"R" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_y = -8;
+	layer = 3.01
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"S" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_leftengine"
+	},
+/area/shuttle/lancers)
+"T" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "stan23"
+	},
+/area/shuttle/lancers)
+"U" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
+	},
+/area/shuttle/lancers)
+"V" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_y = 8;
+	layer = 3.04
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"W" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan5"
+	},
+/area/shuttle/lancers)
+"X" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/docking_port/mobile/marine_dropship/lancers,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/lancers)
+"Z" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2"
+	},
+/area/shuttle/lancers)
+
+(1,1,1) = {"
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+"}
+(2,1,1) = {"
+A
+A
+A
+k
+x
+x
+x
+D
+x
+x
+x
+S
+G
+c
+z
+A
+A
+A
+"}
+(3,1,1) = {"
+A
+A
+k
+J
+R
+r
+a
+u
+m
+m
+m
+E
+x
+x
+t
+A
+A
+A
+"}
+(4,1,1) = {"
+A
+A
+B
+q
+F
+F
+F
+F
+F
+d
+u
+u
+u
+u
+i
+A
+A
+A
+"}
+(5,1,1) = {"
+A
+A
+w
+I
+o
+u
+h
+X
+h
+P
+F
+F
+F
+F
+F
+A
+A
+A
+"}
+(6,1,1) = {"
+A
+A
+B
+q
+F
+F
+F
+F
+F
+U
+u
+u
+u
+u
+u
+A
+A
+A
+"}
+(7,1,1) = {"
+A
+A
+f
+T
+e
+H
+V
+u
+m
+m
+m
+N
+W
+W
+l
+A
+A
+A
+"}
+(8,1,1) = {"
+A
+A
+A
+f
+W
+W
+W
+L
+W
+W
+W
+y
+g
+Z
+K
+A
+A
+A
+"}
+(9,1,1) = {"
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+"}
