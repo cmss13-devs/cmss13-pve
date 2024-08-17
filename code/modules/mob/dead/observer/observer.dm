@@ -32,6 +32,7 @@
 	plane = GHOST_PLANE
 	layer = ABOVE_FLY_LAYER
 	stat = DEAD
+	mob_flags = KNOWS_TECHNOLOGY
 	var/adminlarva = FALSE
 	var/ghostvision = TRUE
 	var/can_reenter_corpse
@@ -189,37 +190,38 @@
 	clean_observe_target()
 
 /// When the observer target gets a screen, our observer gets a screen minus some game screens we don't want the observer to touch
-/mob/dead/observer/proc/observe_target_screen_add(observe_target_mob_client, add_to_screen)
+/mob/dead/observer/proc/observe_target_screen_add(observe_target_mob_client, screen_add)
 	SIGNAL_HANDLER
+
+	var/static/list/excluded_types = typecacheof(list(
+		/atom/movable/screen/fullscreen,
+		/atom/movable/screen/click_catcher,
+		/atom/movable/screen/escape_menu,
+		/atom/movable/screen/buildmode,
+		/obj/effect/detector_blip,
+	))
 
 	if(!client)
 		return
 
-	if(istype(add_to_screen, /atom/movable/screen/action_button))
-		return
+	// `screen_add` can sometimes be a list, so it's safest to just handle everything as one.
+	var/list/stuff_to_add = (islist(screen_add) ? screen_add : list(screen_add))
 
-	if(istype(add_to_screen, /atom/movable/screen/fullscreen))
-		return
+	for(var/item in stuff_to_add)
+		// Ignore anything that's in `excluded_types`.
+		if(is_type_in_typecache(item, excluded_types))
+			continue
 
-	if(istype(add_to_screen, /atom/movable/screen/click_catcher))
-		return
-
-	if(istype(add_to_screen, /atom/movable/screen/escape_menu))
-		return
-
-	if(istype(add_to_screen, /obj/effect/detector_blip))
-		return
-
-	client.add_to_screen(add_to_screen)
+		client.add_to_screen(screen_add)
 
 /// When the observer target loses a screen, our observer loses it as well
-/mob/dead/observer/proc/observe_target_screen_remove(observe_target_mob_client, remove_from_screen)
+/mob/dead/observer/proc/observe_target_screen_remove(observe_target_mob_client, screen_remove)
 	SIGNAL_HANDLER
 
 	if(!client)
 		return
 
-	client.remove_from_screen(remove_from_screen)
+	client.remove_from_screen(screen_remove)
 
 /// When the observe target ghosts our observer disconnect from their screen updates
 /mob/dead/observer/proc/observe_target_ghosting(mob/observer_target_mob)
@@ -236,8 +238,9 @@
 	if(observe_target_client != new_client)
 		observe_target_client = new_client
 
-	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_ADD, PROC_REF(observe_target_screen_add))
-	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_REMOVE, PROC_REF(observe_target_screen_remove))
+	// Override the signal from any previous targets.
+	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_ADD, PROC_REF(observe_target_screen_add), TRUE)
+	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_REMOVE, PROC_REF(observe_target_screen_remove), TRUE)
 
 /// When the observe target logs in our observer connect to the new client
 /mob/dead/observer/proc/observe_target_login(mob/living/new_character)
@@ -246,8 +249,9 @@
 	if(observe_target_client != new_character.client)
 		observe_target_client = new_character.client
 
-	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_ADD, PROC_REF(observe_target_screen_add))
-	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_REMOVE, PROC_REF(observe_target_screen_remove))
+	// Override the signal from any previous targets.
+	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_ADD, PROC_REF(observe_target_screen_add), TRUE)
+	RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_REMOVE, PROC_REF(observe_target_screen_remove), TRUE)
 
 ///makes the ghost see the target hud and sets the eye at the target.
 /mob/dead/observer/proc/do_observe(atom/movable/target)
@@ -257,52 +261,28 @@
 	ManualFollow(target)
 	reset_perspective()
 
-	if(!ishuman(target) || !client.prefs?.auto_observe)
+	if(!iscarbon(target) || !client.prefs?.auto_observe)
 		return
-	var/mob/living/carbon/human/human_target = target
-
-	client.eye = human_target
-
-	if(!human_target.hud_used)
+	var/mob/living/carbon/carbon_target = target
+	if(!carbon_target.hud_used)
 		return
 
 	client.clear_screen()
-	LAZYINITLIST(human_target.observers)
-	human_target.observers |= src
-	human_target.hud_used.show_hud(human_target.hud_used.hud_version, src)
+	client.eye = carbon_target
+	observe_target_mob = carbon_target
 
-	var/list/target_contents = human_target.get_contents()
+	carbon_target.auto_observed(src)
 
-	//Handles any currently open storage containers the target is looking in when we observe
-	for(var/obj/item/storage/checked_storage in target_contents)
-		if(!(human_target in checked_storage.content_watchers))
-			continue
-
-		client.add_to_screen(checked_storage.closer)
-		client.add_to_screen(checked_storage.contents)
-
-		if(checked_storage.storage_slots)
-			client.add_to_screen(checked_storage.boxes)
-		else
-			client.add_to_screen(checked_storage.storage_start)
-			client.add_to_screen(checked_storage.storage_continue)
-			client.add_to_screen(checked_storage.storage_end)
-
-		break
-
-	observe_target_mob = human_target
+	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(observer_move_react))
 	RegisterSignal(observe_target_mob, COMSIG_PARENT_QDELETING, PROC_REF(clean_observe_target))
 	RegisterSignal(observe_target_mob, COMSIG_MOB_GHOSTIZE, PROC_REF(observe_target_ghosting))
 	RegisterSignal(observe_target_mob, COMSIG_MOB_NEW_MIND, PROC_REF(observe_target_new_mind))
 	RegisterSignal(observe_target_mob, COMSIG_MOB_LOGIN, PROC_REF(observe_target_login))
 
-	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(observer_move_react))
-
-	if(human_target.client)
-		observe_target_client = human_target.client
+	if(observe_target_mob.client)
+		observe_target_client = observe_target_mob.client
 		RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_ADD, PROC_REF(observe_target_screen_add))
 		RegisterSignal(observe_target_client, COMSIG_CLIENT_SCREEN_REMOVE, PROC_REF(observe_target_screen_remove))
-		return
 
 /mob/dead/observer/reset_perspective(atom/A)
 	if(observe_target_mob)
@@ -620,7 +600,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	mind.transfer_to(mind.original, TRUE)
-	SStgui.on_transfer(src, mind.current)
 	qdel(src)
 	return TRUE
 
@@ -758,12 +737,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!tx || !ty || !tz)
 		return
 	following = null
-	spawn(0)
-		// To stop the ghost flickering.
-		x = tx
-		y = ty
-		z = tz
-		sleep(15)
+	forceMove(locate(tx, ty, tz))
 
 /mob/dead/observer/verb/dead_teleport_mob() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
 	set category = "Ghost"
