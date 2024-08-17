@@ -776,7 +776,7 @@
 	defense_type = "UPP"
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
 	fire_delay = 1.2
-	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
+	firing_sound = 'sound/weapons/gun_type71.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 #undef SENTRY_FIREANGLE

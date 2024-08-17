@@ -23,11 +23,13 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 
 /obj/item/ammo_magazine/sentry/upp
-	name = "AK-500 ammo drum (7.62mm Caseless)"
-	desc = "An ammo drum of 7.62mm caseless rounds for the UPPA 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	name = "AK-500 ammo drum (10x31mm Caseless)"
+	desc = "An ammo drum of 10x31mm caseless rounds for the UPPA 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "sentry"
-	default_ammo = /datum/ammo/bullet/turret/upp
+	caliber = "10x31mm"
+	max_rounds = 350
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 
 /obj/item/ammo_magazine/sentry/shotgun
 	name = "12g buckshot drum"
