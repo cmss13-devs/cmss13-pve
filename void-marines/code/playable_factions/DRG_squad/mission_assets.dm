@@ -12,39 +12,46 @@
 	var/in_charged_state = FALSE //are we ready to make a blow?
 
 /obj/item/weapon/drg/pickaxe/Initialize()
+	SHOULD_CALL_PARENT(FALSE)
 	START_PROCESSING(SSobj, src)
 
 /obj/item/weapon/drg/pickaxe/update_icon()
 	if(in_charged_state)
 		icon_state = "drg_pickaxe_charged"
-	if(!in_charged_state)
+	if(!in_charged_state || charges <= 0)
 		icon_state = "drg_pickaxe"
 
 /obj/item/weapon/drg/pickaxe/process()
 	if(in_charged_state)
 		force = 170
 		update_icon()
-	if(!in_charged_state)
+	if(!in_charged_state || charges <= 0)
 		force = 85
 		update_icon()
 
 /obj/item/weapon/drg/pickaxe/attack_self(mob/user)
+	SHOULD_CALL_PARENT(FALSE)
 	if(in_charged_state)
-		in_charge_state = FALSE
+		to_chat(user, SPAN_DANGER("You cancelled [src] charged hit!"))
+		in_charged_state = FALSE
 		return TRUE
 	if(charges <= 0)
 		to_chat(user, SPAN_DANGER("[src] isn't recharged yet!"))
 		return FALSE
 	in_charged_state = TRUE
+	to_chat(user, SPAN_DANGER("You readied [src] for a charged hit!"))
 
-/obj/item/weapon/drg/pickaxe/add_charge()
+/obj/item/weapon/drg/pickaxe/proc/add_charge()
 	charges++
 
-/obj/item/weapon/drg/pickaxe/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
+/obj/item/weapon/drg/pickaxe/attack(mob/M, mob/user)
 	if(in_charged_state)
+		if(charges <= 0)
+			to_chat(user, SPAN_DANGER("[src] isn't recharged yet! You can't use it's charged hit!"))
+			return FALSE
 		charges -= 1
-		in_charged_state = FALSE
 		addtimer(CALLBACK(src, PROC_REF(add_charge)), recharge_time)
+	..()
 
 /obj/structure/surface/table/rock
 	name = "hard surface"
@@ -97,4 +104,5 @@
 /obj/structure/surface/table/rock/soft
 	name = "soft soil"
 	desc = "Much easier to dig."
+	color = "#3f3633"
 	dig_time = 5 SECONDS

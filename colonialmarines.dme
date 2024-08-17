@@ -2513,9 +2513,10 @@
 #include "void-marines\code\playable_factions\areas.dm"
 #include "void-marines\code\playable_factions\fl_mod_items.dm"
 #include "void-marines\code\playable_factions\fl_presets.dm"
-#include "void-marines\code\playable_factions\lancer.dm"
 #include "void-marines\code\playable_factions\fl_vendors.dm"
+#include "void-marines\code\playable_factions\lancer.dm"
 #include "void-marines\code\playable_factions\pmc_presets.dm"
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
+#include "void-marines\code\playable_factions\DRG_squad\mission_assets.dm"
 // END_INCLUDE
