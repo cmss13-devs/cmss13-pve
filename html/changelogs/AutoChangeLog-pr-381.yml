@@ -1,0 +1,5 @@
+author: "xDanilcusx"
+delete-after: True
+changes:
+  - bugfix: "AI can track through electrified/locked/welded doors"
+  - code_imp: "AI now doesn't swipe on poddoors and shutters, opening them instead"
