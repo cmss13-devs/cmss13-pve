@@ -1,6 +1,6 @@
 #define FALLOFF_SOUNDS 1
 
-#define FREE_CHAN_END 1016
+#define FREE_CHAN_END 1014
 #define INITIAL_SOUNDSCAPE_COOLDOWN 20
 
 #define EAR_DEAF_MUTE 1
@@ -21,6 +21,7 @@
 #define ITEM_EQUIP_VOLUME 50
 
 //Reserved channels
+#define SOUND_CHANNEL_TEST 1015
 #define SOUND_CHANNEL_NOTIFY 1016
 #define SOUND_CHANNEL_VOX    1017
 #define SOUND_CHANNEL_MUSIC 1018
@@ -59,6 +60,9 @@
 #define SOUND_ENVIRONMENT_DRUGGED 23
 #define SOUND_ENVIRONMENT_DIZZY 24
 #define SOUND_ENVIRONMENT_PSYCHOTIC 25
+
+#define SOUND_ECHO_REVERB_ON list(0, 0, 0, 0, 0, 0.0, 0, 0.25, 1.5, 1.0, 0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, 0)
+#define SOUND_ECHO_REVERB_OFF list(0, 0, -10000, -10000, 0, 0.0, 0, 0.25, 1.5, 1.0, 0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, 0) //-10000 to Room & RoomHF makes enviromental reverb effectively inaudible
 
 #define AMBIENCE_SHIP 'sound/ambience/shipambience.ogg'
 #define AMBIENCE_JUNGLE 'sound/ambience/ambienceLV624.ogg'

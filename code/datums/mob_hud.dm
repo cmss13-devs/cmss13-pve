@@ -187,7 +187,7 @@ var/list/datum/mob_hud/huds = list(
 
 //Factions
 /datum/mob_hud/faction
-	hud_icons = list(FACTION_HUD, ORDER_HUD)
+	hud_icons = list(FACTION_HUD, ORDER_HUD, HOLOCARD_HUD)
 	var/faction_to_check = FACTION_MARINE
 
 /datum/mob_hud/faction/add_to_single_hud(mob/user, mob/target)
@@ -211,7 +211,7 @@ var/list/datum/mob_hud/huds = list(
 	faction_to_check = FACTION_PMC
 
 /datum/mob_hud/faction/observer
-	hud_icons = list(FACTION_HUD, ORDER_HUD, HUNTER_CLAN)
+	hud_icons = list(FACTION_HUD, ORDER_HUD, HUNTER_CLAN, HOLOCARD_HUD)
 
 ///////// MOB PROCS //////////////////////////////:
 
@@ -755,7 +755,13 @@ var/global/image/hud_icon_hudfocus
 		holder.overlays += hud_icon_hudfocus
 	hud_list[ORDER_HUD] = holder
 
+/mob/proc/hud_set_holocard()
+	return
 
+// HOLOCARD HUD
+/mob/living/carbon/human/hud_set_holocard()
+	var/image/holder = hud_list[HOLOCARD_HUD]
+	holder.icon_state = holo_card_color ? "holo_card_[holo_card_color]" : "hudblank"
 
 // Xeno "hostile" HUD
 /mob/living/carbon/human/proc/update_xeno_hostile_hud()
