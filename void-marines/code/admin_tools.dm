@@ -35,6 +35,10 @@
 
 	// Changing appear \\
 
+	var/new_skin_color = tgui_input_list(src, "Choose your character's skin color:", "Character Preferences", GLOB.skin_color_list)
+	if(new_skin_color)
+		M.skin_color = new_skin_color
+
 	var/new_facial = input(M, "Please select facial hair color.", "Character Generation") as color
 	if(new_facial)
 		M.r_facial = hex2num(copytext(new_facial, 2, 4))
