@@ -191,7 +191,7 @@
 	if(!W)
 		return
 
-	if(W in allowed_instruments)
+	if(W.type in allowed_instruments)
 		if(do_after(user, dig_time - W.digging_buff, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			if(have_minerals)
 				new mineral_drop(loc)
