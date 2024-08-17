@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - rscadd: "Added 1 hour squad role timelocks for PltSgt, PltCo"
