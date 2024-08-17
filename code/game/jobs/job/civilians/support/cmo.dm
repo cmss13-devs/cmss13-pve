@@ -8,10 +8,6 @@
 	gear_preset = /datum/equipment_preset/uscm_ship/uscm_medical/cmo
 	entry_message_body = "You're a commissioned officer of the USCM. <a href='"+WIKI_PLACEHOLDER+"'>You have authority over everything related to Medbay and Research</a>, only able to be overriden by the XO and CO. You are in charge of medical staff, surgery, chemistry, stimulants and keeping the marines healthy overall."
 
-AddTimelock(/datum/job/civilian/professor, list(
-	JOB_MEDIC_ROLES = 10 HOURS
-))
-
 /obj/effect/landmark/start/professor
 	name = JOB_CMO
 	icon_state = "cmo_spawn"
