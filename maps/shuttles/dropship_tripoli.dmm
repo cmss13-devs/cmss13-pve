@@ -1,12 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aP" = (
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	dir = 1
+	dir = 1;
+	pixel_x = 7;
+	layer = 4.1
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/small{
 	pixel_y = 8;
-	pixel_x = -8
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -242,16 +243,15 @@
 	},
 /area/shuttle/tripoli)
 "vi" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit/two,
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
 /area/shuttle/tripoli)
 "vl" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
-	name = "\improper Tripoli rear door";
-	id = "aft_door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
+	name = "\improper Tripoli cargo door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -281,12 +281,9 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "wi" = (
-/obj/structure/bed/chair/dropship/passenger{
-	pixel_y = 15;
-	buckling_y = 15
-	},
+/obj/effect/attach_point/crew_weapon/midway,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
+	icon_state = "rasputin3"
 	},
 /area/shuttle/tripoli)
 "wy" = (
@@ -413,6 +410,10 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -470,15 +471,19 @@
 	},
 /area/shuttle/tripoli)
 "Kk" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
+/obj/structure/stairs/perspective{
 	dir = 1;
-	layer = 3.2
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	layer = 5;
+	pixel_x = 7
 	},
 /obj/structure/machinery/computer/dropship_weapons/tripoli/small{
 	pixel_y = 8;
-	pixel_x = -8;
-	layer = 3.1
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -491,8 +496,9 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "KZ" = (
+/obj/structure/bed/chair/dropship/passenger/folded,
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tripoli)
 "Ly" = (
@@ -714,9 +720,9 @@ ih
 Ac
 lv
 DG
-KZ
-KZ
-KZ
+zZ
+zZ
+zZ
 cE
 QS
 jR
@@ -732,13 +738,13 @@ dN
 aP
 Kk
 vi
+zZ
 KZ
-KZ
-wi
+zZ
 RK
 Ze
 kS
-kS
+wi
 kS
 zZ
 ed
@@ -750,9 +756,9 @@ WS
 hS
 RD
 Gt
-KZ
-KZ
-KZ
+zZ
+zZ
+zZ
 AC
 pm
 ZT

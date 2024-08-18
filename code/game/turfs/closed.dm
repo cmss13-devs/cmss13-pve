@@ -276,7 +276,7 @@
 
 /turf/closed/shuttle/midway
 	name = "\improper Midway"
-	icon = 'icons/turf/dropship.dmi'
+	icon = 'icons/turf/dropship4.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/midway/transparent
@@ -308,7 +308,7 @@
 
 /turf/closed/shuttle/tripoli
 	name = "\improper Tripoli"
-	icon = 'icons/turf/dropship2.dmi'
+	icon = 'icons/turf/dropship.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/tripoli/transparent

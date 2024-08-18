@@ -24,9 +24,14 @@
 	icon_state = "75"
 	},
 /area/shuttle/tornado)
+"et" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "77"
+	},
+/area/shuttle/tornado)
 "fJ" = (
 /obj/structure/shuttle/part/typhoon/transparent{
-	icon_state = "99"
+	icon_state = "99a"
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
@@ -49,6 +54,9 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -67,6 +75,9 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = 25
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin7"
 	},
@@ -83,11 +94,12 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "kg" = (
-/obj/structure/shuttle/part/typhoon/transparent{
-	icon_state = "65"
+/obj/structure/platform{
+	dir = 1
 	},
-/obj/effect/attach_point/weapon/tornado/right_wing,
-/turf/template_noop,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
 /area/shuttle/tornado)
 "lm" = (
 /obj/structure/machinery/light/double{
@@ -126,13 +138,16 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
 "oH" = (
 /obj/structure/shuttle/part/typhoon/transparent{
-	icon_state = "95"
+	icon_state = "95a"
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
@@ -179,9 +194,13 @@
 /area/shuttle/tornado)
 "vO" = (
 /obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "41";
+	density = 0;
+	layer = 4.2
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "61"
 	},
-/obj/effect/attach_point/weapon/tornado/left_wing,
 /turf/template_noop,
 /area/shuttle/tornado)
 "wd" = (
@@ -214,12 +233,8 @@
 	},
 /area/shuttle/tornado)
 "yk" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full";
-	can_block_movement = 0
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "89a"
 	},
 /area/shuttle/tornado)
 "yE" = (
@@ -231,9 +246,8 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "zS" = (
-/turf/closed/shuttle/typhoon{
-	icon_state = "89";
-	opacity = 0
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "89b"
 	},
 /area/shuttle/tornado)
 "Au" = (
@@ -245,6 +259,9 @@
 "Bf" = (
 /obj/structure/platform_decoration{
 	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -278,9 +295,8 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "CE" = (
-/turf/closed/shuttle/typhoon{
-	icon_state = "86";
-	opacity = 0
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "86b"
 	},
 /area/shuttle/tornado)
 "Dl" = (
@@ -295,9 +311,14 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "Eh" = (
-/obj/docking_port/mobile/marine_dropship/typhoon,
+/obj/effect/attach_point/crew_weapon/typhoon,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Fm" = (
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "86a"
 	},
 /area/shuttle/tornado)
 "FC" = (
@@ -422,9 +443,8 @@
 	},
 /area/shuttle/tornado)
 "MB" = (
-/turf/closed/shuttle/typhoon{
-	icon_state = "97";
-	opacity = 0
+/turf/closed/shuttle/typhoon/transparent{
+	icon_state = "97a"
 	},
 /area/shuttle/tornado)
 "NB" = (
@@ -446,6 +466,9 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -457,7 +480,7 @@
 /area/shuttle/tornado)
 "Ou" = (
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
+	pixel_x = 8;
 	dir = 1;
 	layer = 3.2
 	},
@@ -470,7 +493,7 @@
 	icon = 'icons/obj/structures/machinery/computer.dmi';
 	icon_state = "cameras";
 	layer = 3.1;
-	pixel_x = -8;
+	pixel_x = 8;
 	pixel_y = 3;
 	density = 0
 	},
@@ -486,6 +509,9 @@
 /obj/structure/platform{
 	dir = 8
 	},
+/obj/structure/platform{
+	dir = 4
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -495,6 +521,12 @@
 	icon_state = "28"
 	},
 /turf/template_noop,
+/area/shuttle/tornado)
+"Pq" = (
+/obj/docking_port/mobile/marine_dropship/typhoon,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/tornado)
 "Qi" = (
 /obj/structure/shuttle/part/typhoon/transparent{
@@ -559,12 +591,15 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "TF" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
-	pixel_x = 30
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "40";
+	density = 0;
+	layer = 4.2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "65"
 	},
+/turf/template_noop,
 /area/shuttle/tornado)
 "Uk" = (
 /obj/structure/shuttle/part/typhoon/transparent,
@@ -576,14 +611,6 @@
 	},
 /obj/structure/surface/table/reinforced/toc/east{
 	pixel_y = -7
-	},
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	icon_state = "toc_map";
-	layer = 2.99;
-	name = "Tactical Map Display";
-	pixel_y = 13;
-	pixel_x = -7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin6"
@@ -605,10 +632,10 @@
 	icon_state = "cameras_old";
 	pixel_y = 7;
 	icon = 'icons/obj/structures/machinery/computer.dmi';
-	pixel_x = -8
+	pixel_x = 8
 	},
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
+	pixel_x = 8;
 	dir = 1
 	},
 /turf/open/shuttle/dropship{
@@ -646,9 +673,9 @@
 /obj/structure/surface/table/reinforced/toc/west{
 	pixel_y = -7
 	},
-/obj/structure/machinery/computer/shuttle/dropship/flight/toc{
-	pixel_y = 14;
-	pixel_x = 7
+/obj/structure/machinery/prop/almayer/CICmap/arc{
+	pixel_y = 9;
+	pixel_x = -9
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -704,8 +731,8 @@ aX
 aX
 YW
 cg
+cg
 vO
-yE
 RB
 Rb
 JT
@@ -724,8 +751,8 @@ IT
 dV
 rO
 gY
+gY
 QF
-wd
 wd
 Zk
 gN
@@ -741,7 +768,7 @@ aX
 aX
 aX
 yE
-Or
+et
 Ym
 KY
 cH
@@ -760,7 +787,7 @@ uS
 FO
 oH
 CE
-wd
+Fm
 Or
 Ut
 ZD
@@ -785,12 +812,12 @@ Qs
 iz
 cH
 cH
+cH
+Pq
 Eh
-cH
-cH
 iz
-yk
-ZD
+cH
+kg
 sC
 ZD
 cH
@@ -800,8 +827,8 @@ aX
 jt
 fJ
 zS
-ZR
-Or
+yk
+et
 ix
 ZD
 ZD
@@ -821,11 +848,11 @@ aX
 aX
 aX
 IT
-Or
+et
 rN
 XO
-TF
 cH
+wP
 wP
 FC
 wP
@@ -844,8 +871,8 @@ yE
 Dl
 lA
 xq
+xq
 nM
-ZR
 ZR
 Rw
 of
@@ -864,8 +891,8 @@ aX
 aX
 Sc
 Gv
-kg
-IT
+Gv
+TF
 Qi
 Xw
 IX

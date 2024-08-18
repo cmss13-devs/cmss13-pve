@@ -1,8 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ag" = (
-/turf/closed/shuttle/cyclone{
-	icon_state = "92";
-	name = "\improper Cyclon"
+/turf/closed/shuttle/cyclone/transparent{
+	icon_state = "86b"
 	},
 /area/shuttle/cyclone)
 "aP" = (
@@ -18,7 +17,8 @@
 /area/shuttle/cyclone)
 "cj" = (
 /obj/structure/shuttle/part/dropship2/nose_front_left{
-	name = "\improper Cyclone"
+	name = "\improper Cyclone";
+	icon_state = "95a"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
@@ -72,12 +72,11 @@
 	},
 /area/shuttle/cyclone)
 "eu" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	pixel_x = -14
-	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -141,8 +140,19 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "ia" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	layer = 5;
+	pixel_x = 7
+	},
+/obj/structure/machinery/computer/dropship_weapons/cyclone/small{
+	pixel_y = 8;
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -155,9 +165,8 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "lc" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
+/obj/structure/machinery/light/double{
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -171,6 +180,10 @@
 "ml" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -236,9 +249,8 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "qj" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	pixel_x = -14
+/obj/structure/machinery/light/double{
+	dir = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -261,7 +273,8 @@
 /area/shuttle/cyclone)
 "ro" = (
 /obj/structure/shuttle/part/dropship2/nose_front_right{
-	name = "\improper Cyclone"
+	name = "\improper Cyclone";
+	icon_state = "99a"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
@@ -300,7 +313,7 @@
 /area/shuttle/cyclone)
 "vt" = (
 /turf/closed/shuttle/cyclone/transparent{
-	icon_state = "86"
+	icon_state = "86a"
 	},
 /area/shuttle/cyclone)
 "vH" = (
@@ -388,15 +401,23 @@
 /area/shuttle/cyclone)
 "Bt" = (
 /turf/closed/shuttle/cyclone/transparent{
-	icon_state = "89"
+	icon_state = "89a"
 	},
 /area/shuttle/cyclone)
 "BU" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_x = 30
+	pixel_y = 26;
+	pixel_x = 10
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -2
 	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "Cb" = (
@@ -444,12 +465,11 @@
 	},
 /area/shuttle/cyclone)
 "FD" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
-	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -502,7 +522,7 @@
 	},
 /area/shuttle/cyclone)
 "KQ" = (
-/obj/structure/bed/chair/dropship/passenger,
+/obj/structure/bed/chair/dropship/passenger/folded,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -510,17 +530,6 @@
 "KU" = (
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin8"
-	},
-/area/shuttle/cyclone)
-"MD" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_x = -30
-	},
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "MU" = (
@@ -536,8 +545,15 @@
 	},
 /area/shuttle/cyclone)
 "Pg" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 7;
+	layer = 4.1
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 8;
+	pixel_x = 7
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -598,12 +614,12 @@
 /area/shuttle/cyclone)
 "XU" = (
 /turf/closed/shuttle/cyclone/transparent{
-	icon_state = "97"
+	icon_state = "97a"
 	},
 /area/shuttle/cyclone)
 "XY" = (
-/turf/closed/shuttle/cyclone{
-	icon_state = "94"
+/turf/closed/shuttle/cyclone/transparent{
+	icon_state = "89b"
 	},
 /area/shuttle/cyclone)
 "YL" = (
@@ -665,8 +681,8 @@ wk
 wk
 xY
 Sl
+BU
 sR
-MD
 eu
 cJ
 qs
@@ -724,7 +740,7 @@ Sk
 Sk
 KU
 yP
-BU
+Sk
 Sk
 lc
 Ty

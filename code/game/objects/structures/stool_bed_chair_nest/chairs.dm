@@ -367,6 +367,10 @@
 /obj/structure/bed/chair/dropship/passenger/shuttle_chair
 	icon_state = "hotseat"
 
+/obj/structure/bed/chair/dropship/passenger/folded
+	chair_state = DROPSHIP_CHAIR_FOLDED
+	icon_state = "hotseat_new_folded"
+
 /obj/structure/bed/chair/dropship/passenger/BlockedPassDirs(atom/movable/mover, target_dir, height = 0, air_group = 0)
 	if(chair_state == DROPSHIP_CHAIR_UNFOLDED && istype(mover, /obj/vehicle/multitile) && !is_animating)
 		visible_message(SPAN_DANGER("[mover] slams into [src] and breaks it!"))

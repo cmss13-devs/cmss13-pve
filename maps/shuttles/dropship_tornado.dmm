@@ -57,11 +57,10 @@
 	},
 /area/shuttle/tornado)
 "db" = (
-/obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "65"
+/obj/structure/bed/chair/dropship/passenger/folded,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/obj/effect/attach_point/weapon/tornado/right_wing,
-/turf/template_noop,
 /area/shuttle/tornado)
 "dm" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -107,20 +106,19 @@
 	},
 /area/shuttle/tornado)
 "fr" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	dir = 1;
-	layer = 3.2
-	},
 /obj/structure/stairs/perspective{
 	dir = 1;
 	icon_state = "p_stair_full";
 	pixel_y = 22
 	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	layer = 5;
+	pixel_x = 7
+	},
 /obj/structure/machinery/computer/dropship_weapons/tornado/small{
 	pixel_y = 8;
-	pixel_x = -8;
-	layer = 3.1
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -188,8 +186,15 @@
 /area/shuttle/tornado)
 "mt" = (
 /obj/docking_port/mobile/marine_dropship/tornado,
+/obj/structure/bed/chair/dropship/passenger/folded,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"ni" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "89a";
+	opacity = 0
 	},
 /area/shuttle/tornado)
 "pv" = (
@@ -205,7 +210,7 @@
 /area/shuttle/tornado)
 "rp" = (
 /turf/closed/shuttle/dropship2/tornado{
-	icon_state = "89";
+	icon_state = "89b";
 	opacity = 0
 	},
 /area/shuttle/tornado)
@@ -235,12 +240,13 @@
 /area/shuttle/tornado)
 "uL" = (
 /obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	dir = 1
+	dir = 1;
+	pixel_x = 7;
+	layer = 4.1
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/small{
 	pixel_y = 8;
-	pixel_x = -8
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -254,7 +260,7 @@
 /area/shuttle/tornado)
 "vz" = (
 /obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "95"
+	icon_state = "95a"
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
@@ -337,9 +343,13 @@
 /area/shuttle/tornado)
 "BK" = (
 /obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "41";
+	layer = 4.2;
+	density = 0
+	},
+/obj/structure/shuttle/part/tornado/transparent{
 	icon_state = "61"
 	},
-/obj/effect/attach_point/weapon/tornado/left_wing,
 /turf/template_noop,
 /area/shuttle/tornado)
 "DX" = (
@@ -437,7 +447,7 @@
 /area/shuttle/tornado)
 "Mq" = (
 /turf/closed/shuttle/dropship2/tornado{
-	icon_state = "86";
+	icon_state = "86b";
 	opacity = 0
 	},
 /area/shuttle/tornado)
@@ -501,11 +511,28 @@
 	icon_state = "rasputin6"
 	},
 /area/shuttle/tornado)
-"Rk" = (
+"QR" = (
 /obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "99"
+	icon_state = "40";
+	density = 0;
+	layer = 4.2
+	},
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "65"
 	},
 /turf/template_noop,
+/area/shuttle/tornado)
+"Rk" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "99a"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Sa" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "86a";
+	opacity = 0
+	},
 /area/shuttle/tornado)
 "SX" = (
 /obj/structure/machinery/door/airlock/hatch/cockpit/two,
@@ -559,7 +586,7 @@
 /area/shuttle/tornado)
 "Ws" = (
 /turf/closed/shuttle/dropship2/tornado{
-	icon_state = "97";
+	icon_state = "97a";
 	opacity = 0
 	},
 /area/shuttle/tornado)
@@ -629,8 +656,8 @@ Om
 Om
 aG
 bL
+bL
 BK
-Nd
 ck
 Wv
 eU
@@ -649,8 +676,8 @@ kI
 av
 yZ
 Zi
+Zi
 sM
-Wt
 Wt
 Yg
 FD
@@ -685,7 +712,7 @@ bf
 sx
 vz
 Mq
-Wt
+Sa
 lb
 Qv
 TM
@@ -709,9 +736,9 @@ fr
 SX
 Vj
 mb
-TF
+db
 mt
-TF
+db
 mb
 Vj
 xW
@@ -725,7 +752,7 @@ Om
 Pi
 Rk
 rp
-Ym
+ni
 lb
 jP
 TM
@@ -769,8 +796,8 @@ Nd
 XL
 Tz
 NY
+NY
 bm
-Ym
 Ym
 Gl
 dW
@@ -789,8 +816,8 @@ Om
 Om
 vk
 Qf
-db
-kI
+Qf
+QR
 dm
 IZ
 zp
