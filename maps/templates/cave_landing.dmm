@@ -1,4 +1,4 @@
-"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white,/area/drg)
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "d" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "e" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white,/area/drg)
 "m" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5,/turf/open/auto_turf/sand_white,/area/drg)
