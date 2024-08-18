@@ -1,4 +1,0 @@
-author: "nauticall"
-delete-after: True
-changes:
-  - rscadd: "Added a quick \"Command Announcement\" button for Game Masters, available in the GM tab."
