@@ -554,6 +554,15 @@
 	pixel_y = 8;
 	pixel_x = 7
 	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Cyclone telephone receiver";
+	phone_id = "Cyclone"
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},

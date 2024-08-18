@@ -99,3 +99,7 @@
 	name = "rotary telephone"
 	icon_state = "rotary_phone"
 	desc = "The finger plate is a little stiff."
+
+/obj/structure/phone_base/toc
+	name = "telephone receiver"
+	icon = 'icons/obj/vehicles/interiors/movie.dmi'

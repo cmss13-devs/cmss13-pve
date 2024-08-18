@@ -486,6 +486,15 @@
 	id = "aft_door";
 	name = "\improper Midway cargo door"
 	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Midway telephone receiver";
+	phone_id = "Midway"
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},

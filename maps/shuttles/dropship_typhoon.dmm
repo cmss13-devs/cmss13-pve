@@ -612,6 +612,17 @@
 /obj/structure/surface/table/reinforced/toc/east{
 	pixel_y = -7
 	},
+/obj/structure/machinery/computer/railgun/gatling/toc{
+	pixel_y = 13;
+	pixel_x = -7
+	},
+/obj/structure/phone_base/toc{
+	pixel_y = 13;
+	pixel_x = 11;
+	phone_id = "Typhoon Overwatch";
+	phone_category = "Overwatch";
+	name = "Typhoon overwatch telephone receiver"
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin6"
 	},
@@ -637,6 +648,15 @@
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8;
 	dir = 1
+	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Typhoon telephone receiver";
+	phone_id = "Typhoon"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -676,6 +696,10 @@
 /obj/structure/machinery/prop/almayer/CICmap/arc{
 	pixel_y = 9;
 	pixel_x = -9
+	},
+/obj/structure/machinery/computer/railgun/toc{
+	pixel_y = 14;
+	pixel_x = 7
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"

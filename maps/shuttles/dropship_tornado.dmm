@@ -248,6 +248,15 @@
 	pixel_y = 8;
 	pixel_x = 7
 	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Tornado telephone receiver";
+	phone_id = "Tornado"
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
