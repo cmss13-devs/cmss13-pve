@@ -20,19 +20,22 @@
 	var/cooldown = 20 SECONDS
 	var/scanning_range = 25
 
+/obj/item/drg/scanner/proc/recharge()
+	was_used = FALSE
+
 /obj/item/drg/scanner/attack_self(mob/user)
 	SHOULD_CALL_PARENT(FALSE)
 	if(was_used)
 		to_chat(user, SPAN_DANGER("[src] still on cooldown!"))
 		return FALSE
-	var/options = tgui_input_list(usr, "Choose wanted option!", "Scanning...", search_categories)
+	var/options = tgui_input_list(user, "Choose wanted option!", "Scanning", search_categories)
 	if(!options)
 		return FALSE
 	switch(options)
 		if("allied humans")
 			var/list/humans_in_range = list()
 			var/list/closest = list()
-			for(var/mob/living/target in orange(scanning_range, src))
+			for(var/mob/living/target in orange(scanning_range, user))
 				if(target.faction == user.faction && target.stat != DEAD)
 					humans_in_range += target
 				if(!humans_in_range.len)
@@ -40,7 +43,7 @@
 					return TRUE
 				to_chat(user, SPAN_WARNING("There is [humans_in_range.len] humans in your range!"))
 			for(var/mob/living/target in humans_in_range)
-				if(get_dist(target, src) <= 8)
+				if(get_dist(target, user) <= 8)
 					closest += target
 				if(!closest.len)
 					humans_in_range.Cut()
@@ -49,11 +52,13 @@
 				to_chat(user, SPAN_WARNING("And [someone] is mostly close to you!"))
 				humans_in_range.Cut()
 				closest.Cut()
+				was_used = TRUE
+				addtimer(CALLBACK(src, PROC_REF(recharge)), cooldown)
 				return TRUE
 		if("allied robots")
 			var/list/robots_in_range = list()
 			var/list/closest = list()
-			for(var/mob/living/simple_animal/hostile/drg/target in orange(scanning_range, src))
+			for(var/mob/living/simple_animal/hostile/drg/target in orange(scanning_range, user))
 				if(target.faction == user.faction && target.stat != DEAD)
 					robots_in_range += target
 				if(!robots_in_range.len)
@@ -61,7 +66,7 @@
 					return TRUE
 				to_chat(user, SPAN_WARNING("There is atleast [robots_in_range.len] active units in your range!"))
 			for(var/mob/living/simple_animal/hostile/drg/target in robots_in_range)
-				if(get_dist(target, src) <= 8)
+				if(get_dist(target, user) <= 8)
 					closest += target
 				if(!closest.len)
 					robots_in_range.Cut()
@@ -70,6 +75,8 @@
 				to_chat(user, SPAN_WARNING("And [someone] is mostly close to you!"))
 				robots_in_range.Cut()
 				closest.Cut()
+				was_used = TRUE
+				addtimer(CALLBACK(src, PROC_REF(recharge)), cooldown)
 				return TRUE
 		if("minerals")
 			to_chat(user, SPAN_DANGER("CAN'T ACCESS THIS TOPIC RIGHT NOW"))
