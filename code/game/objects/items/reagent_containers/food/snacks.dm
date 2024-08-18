@@ -3150,6 +3150,7 @@
 	icon_state = "packaged-burrito"
 	bitesize = 2
 	package = 1
+	var/warm = 0
 
 /obj/item/reagent_container/food/snacks/packaged_burrito/Initialize()
 	. = ..()
@@ -3165,24 +3166,13 @@
 		package = 0
 		icon_state = "open-burrito"
 
-/obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
-	name = "Microwaved Burrito"
-	desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
-	icon_state = "open-burrito"
-	bitesize = 2
-	package = 0
-
-/obj/item/reagent_container/food/snacks/packaged_burrito/microwaved/Initialize()
-	. = ..()
-	reagents.add_reagent("bread", 1)
-	reagents.add_reagent("meatprotein", 1)
-
 /obj/item/reagent_container/food/snacks/packaged_burger
 	name = "Packaged Cheeseburger"
 	desc = "A soggy microwavable burger. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	icon_state = "burger"
 	bitesize = 3
 	package = 1
+	var/warm = 0
 
 /obj/item/reagent_container/food/snacks/packaged_burger/Initialize()
 	. = ..()
@@ -3202,24 +3192,13 @@
 		icon_state = "hburger"
 		item_state = "burger"
 
-/obj/item/reagent_container/food/snacks/packaged_burger/microwaved
-	name = "Microwaved Cheeseburger"
-	desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
-	icon_state = "hburger"
-	bitesize = 3
-	package = 0
-
-/obj/item/reagent_container/food/snacks/packaged_burger/microwaved/Initialize()
-	. = ..()
-	reagents.add_reagent("bread", 1)
-	reagents.add_reagent("meatprotein", 1)
-
 /obj/item/reagent_container/food/snacks/packaged_hdogs
 	name = "Packaged Hotdog"
 	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	icon_state = "packaged-hotdog"
 	bitesize = 2
 	package = 1
+	var/warm = 0
 
 /obj/item/reagent_container/food/snacks/packaged_hdogs/Initialize()
 	. = ..()
@@ -3235,18 +3214,6 @@
 		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy hotdog!"))
 		package = 0
 		icon_state = "open-hotdog"
-
-/obj/item/reagent_container/food/snacks/packaged_hdogs/microwaved
-	name = "Microwaved Hotdog"
-	desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
-	icon_state = "open-hotdog"
-	bitesize = 2
-	package = 0
-
-/obj/item/reagent_container/food/snacks/mpackaged_hdogs/microwaved/Initialize()
-	. = ..()
-	reagents.add_reagent("bread", 1)
-	reagents.add_reagent("meatprotein", 1)
 
 /obj/item/reagent_container/food/snacks/upp
 	name = "\improper UPP ration"

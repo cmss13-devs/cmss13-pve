@@ -654,23 +654,80 @@
 
 //other
 
-/datum/recipe/packaged_burrito/microwaved
+/datum/recipe/packaged_burrito/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked)
+	being_cooked.warm = 1
+	being_cooked.reagents.add_reagent("bread", 1)
+	being_cooked.reagents.add_reagent("meatprotein", 1)
+	being_cooked.name = "Warm " + being_cooked.name
+	being_cooked.desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
+
+/datum/recipe/packaged_burrito/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked = ..(container)
+	warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/packaged_burrito/warm
+	reagents = list() //Literally just stealing this from the donk pocket code with barely any understanding of what it means. Here's hoping!
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_burrito,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
+	result = /obj/item/reagent_container/food/snacks/packaged_burrito //SPECIAL
 
-/datum/recipe/packaged_burger/microwaved
+/datum/recipe/packaged_burrito/warm/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked = locate() in container
+	if(being_cooked && !being_cooked.warm)
+		warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/packaged_burger/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_burger/being_cooked)
+	being_cooked.warm = 1
+	being_cooked.reagents.add_reagent("bread", 1)
+	being_cooked.reagents.add_reagent("meatprotein", 1)
+	being_cooked.name = "Warm " + being_cooked.name
+	being_cooked.desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
+
+/datum/recipe/packaged_burger/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_burger/being_cooked = ..(container)
+	warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/packaged_burger/warm
+	reagents = list()
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_burger,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_burger/microwaved
+	result = /obj/item/reagent_container/food/snacks/packaged_burger //SPECIAL
 
-/datum/recipe/packaged_hdogs/microwaved
+/datum/recipe/packaged_burger/warm/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_burger/being_cooked = locate() in container
+	if(being_cooked && !being_cooked.warm)
+		warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/packaged_hdogs/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked)
+	being_cooked.warm = 1
+	being_cooked.reagents.add_reagent("bread", 1)
+	being_cooked.reagents.add_reagent("meatprotein", 1)
+	being_cooked.name = "Warm " + being_cooked.name
+	being_cooked.desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
+
+/datum/recipe/packaged_hdogs/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked = ..(container)
+	warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/packaged_hdogs/warm
+	reagents = list()
 	items = list(
 		/obj/item/reagent_container/food/snacks/packaged_hdogs,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_burrito/microwaved
+	result = /obj/item/reagent_container/food/snacks/packaged_hdogs //SPECIAL
+
+/datum/recipe/packaged_hdogs/warm/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked = locate() in container
+	if(being_cooked && !being_cooked.warm)
+		warm_up(being_cooked)
+	return being_cooked
 
 /datum/recipe/hotdog
 	items = list(
