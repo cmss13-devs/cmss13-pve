@@ -88,6 +88,9 @@ endmap
 map oil_depot
 endmap
 
+map drg_mineshaft
+endmap
+
 map lv759_hybrisa_prospera
 endmap
 
