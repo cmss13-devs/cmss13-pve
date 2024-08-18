@@ -521,7 +521,7 @@
 
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot/handle_rotation()
 	if(dir == NORTH)
-		layer = ABOVE_MOB_LAYE
+		layer = ABOVE_MOB_LAYER
 	else
 		layer = BELOW_MOB_LAYER
 	if(buckled_mob)
