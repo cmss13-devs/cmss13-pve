@@ -2521,4 +2521,6 @@
 #include "void-marines\code\playable_factions\stuff.dm"
 #include "void-marines\code\playable_factions\DRG_squad\mission_assets.dm"
 #include "void-marines\code\playable_factions\DRG_squad\robot_friends.dm"
+#include "void-marines\code\playable_factions\DRG_squad\gunner_shield.dm"
+#include "void-marines\code\playable_factions\DRG_squad\scout_hook.dm"
 // END_INCLUDE
