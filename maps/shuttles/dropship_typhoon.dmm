@@ -489,7 +489,7 @@
 	icon_state = "cameras";
 	layer = 3.1;
 	pixel_x = 8;
-	pixel_y = 3;
+	pixel_y = 7;
 	density = 0
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
@@ -656,6 +656,10 @@
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1;
+	pixel_x = 8
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 7;
 	pixel_x = 8
 	},
 /turf/open/shuttle/dropship{
