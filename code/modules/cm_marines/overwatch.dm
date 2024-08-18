@@ -920,6 +920,8 @@
 	icon_state = "toc"
 	bound_width = 64
 	bound_height = 32
+	layer = ABOVE_TABLE_LAYER
+	density = TRUE
 
 /obj/structure/supply_drop
 	name = "Supply Drop Pad"
