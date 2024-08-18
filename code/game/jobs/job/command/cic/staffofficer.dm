@@ -39,9 +39,8 @@
 	else
 		gear_preset = initial(gear_preset)
 
-AddTimelock(/datum/job/command/bridge, list(
-	JOB_SQUAD_LEADER = 1 HOURS,
-	JOB_HUMAN_ROLES = 15 HOURS
+OverrideTimelock(/datum/job/command/bridge, list(
+	JOB_SQUAD_ROLES = 1 HOURS
 ))
 
 /obj/effect/landmark/start/bridge

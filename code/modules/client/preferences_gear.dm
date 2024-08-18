@@ -821,6 +821,10 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Canteen"
 	path = /obj/item/reagent_container/food/drinks/flask/canteen
 
+/datum/gear/flask/canteen/empty
+	display_name = "Empty canteen"
+	path = /obj/item/reagent_container/food/drinks/flask/canteen/empty
+
 /datum/gear/flask/leather
 	display_name = "Leather flask"
 	path = /obj/item/reagent_container/food/drinks/flask/detflask
