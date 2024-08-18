@@ -175,7 +175,11 @@
 	pixel_x = 8;
 	pixel_y = 34
 	},
-/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/recon/unloaded,
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = 15;
+	pixel_x = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -241,6 +245,7 @@
 "ct" = (
 /obj/structure/surface/table/almayer,
 /obj/item/facepaint/sniper,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "cJ" = (
@@ -1290,6 +1295,10 @@
 	pixel_x = -6;
 	pixel_y = 8
 	},
+/obj/item/attachable/attached_gun/grenade/mk1{
+	pixel_y = -1;
+	pixel_x = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1481,10 +1490,10 @@
 /area/golden_arrow/cryo_cells)
 "mJ" = (
 /obj/structure/largecrate,
-/obj/structure/largecrate{
-	pixel_y = 16
-	},
 /obj/structure/machinery/light,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 15
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
 	},
@@ -2816,14 +2825,30 @@
 /area/golden_arrow/dorms)
 "As" = (
 /obj/structure/closet/crate/green,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
-/obj/item/rappel_harness,
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
+/obj/item/rappel_harness/extract{
+	shuttle_id = "dropship_cyclone"
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -2883,6 +2908,8 @@
 /area/golden_arrow/cryo_cells)
 "AD" = (
 /obj/structure/closet/crate/trashcart,
+/obj/item/attachable/attached_gun/grenade/mk1,
+/obj/item/attachable/attached_gun/grenade/mk1,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "AF" = (
@@ -3041,8 +3068,8 @@
 /area/golden_arrow/supply)
 "CO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon,
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -3213,7 +3240,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/recon/unloaded,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4641,7 +4668,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "Ty" = (
-/obj/structure/dropship_equipment/rappel_system,
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},

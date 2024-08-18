@@ -363,6 +363,13 @@
 	desc = "An armband, worn by the rookie nurses to display they are still not doctors. This one is dark red."
 	icon_state = "nurse"
 
+/obj/item/clothing/accessory/armband/mpsec
+	name = "military police armband"
+	desc = "An armband used by military police officers to denote their position."
+	icon_state = "armband_mp"
+	slot = ACCESSORY_SLOT_ARMBAND
+	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+
 //patches
 /obj/item/clothing/accessory/patch
 	name = "USCM patch"
@@ -937,3 +944,27 @@
 	icon = 'icons/obj/items/clothing/ties.dmi'
 	icon_state = "owlf_vest"
 	item_state = "owlf_vest"
+
+/obj/item/clothing/accessory/flak
+	name = "M67 flak vest"
+	desc = "An older model of flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Much comfier than its M70 successor, and can be worn under most combat armor, however, the ballistic protection leaves much to be desired."
+	icon_state = "flak"
+	item_state = "flak"
+	w_class = SIZE_MEDIUM
+	var/tucked_in = FALSE
+
+/obj/item/clothing/accessory/flak/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("You can wear it differently by <b>using it in hand</b>.")
+
+/obj/item/clothing/accessory/flak/attack_self(mob/user)
+	..()
+
+	tucked_in = !tucked_in
+	if(tucked_in)
+		icon_state = "flakslim"
+		user.visible_message(SPAN_NOTICE("[user] tucks in [src]'s sleeves."), SPAN_NOTICE("You tuck in [src]'s sleeves."))
+	else
+		icon_state = initial(icon_state)
+		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
+	item_state = icon_state

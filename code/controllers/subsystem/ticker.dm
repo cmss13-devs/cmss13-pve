@@ -21,7 +21,11 @@ SUBSYSTEM_DEF(ticker)
 	var/list/login_music = null //Music played in pregame lobby
 
 	var/delay_end = FALSE //If set true, the round will not restart on it's own
+#if defined(UNIT_TESTS) //must be FALSE for unit tests else they hang indefinitely
 	var/delay_start = FALSE
+#else
+	var/delay_start = TRUE
+#endif
 	var/admin_delay_notice = "" //A message to display to anyone who tries to restart the world after a delay
 
 	var/time_left //Pre-game timer
@@ -109,20 +113,13 @@ SUBSYSTEM_DEF(ticker)
 				mode.declare_completion(force_ending)
 				REDIS_PUBLISH("byond.round", "type" = "round-complete")
 				flash_clients()
-				addtimer(CALLBACK(
-					SSvote,
-					/datum/controller/subsystem/vote/proc/initiate_vote,
-					"gamemode",
-					"SERVER",
-					CALLBACK(src, PROC_REF(handle_map_reboot)),
-					TRUE
-				), 3 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
 /datum/controller/subsystem/ticker/proc/request_start()
 	if(current_state == GAME_STATE_PREGAME)
 		time_left = 0
+		delay_start = FALSE
 
 	// Killswitch if hanging or interrupted
 	if(SSnightmare.stat != NIGHTMARE_STATUS_DONE)
@@ -161,16 +158,6 @@ SUBSYSTEM_DEF(ticker)
 		return FALSE
 	return TRUE
 
-/datum/controller/subsystem/ticker/proc/handle_map_reboot()
-	addtimer(CALLBACK(
-		SSvote,
-		/datum/controller/subsystem/vote/proc/initiate_vote,
-		"groundmap",
-		"SERVER",
-		CALLBACK(src, PROC_REF(Reboot)),
-		TRUE
-	), 3 SECONDS)
-
 /datum/controller/subsystem/ticker/proc/setup()
 	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
 	var/init_start = world.timeofday
@@ -194,7 +181,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	mode.announce()
 	if(mode.taskbar_icon)
-		RegisterSignal(SSdcs, COMSIG_GLOB_CLIENT_LOGIN, PROC_REF(handle_mode_icon))
+		RegisterSignal(SSdcs, COMSIG_GLOB_CLIENT_LOGGED_IN, PROC_REF(handle_mode_icon))
 		set_clients_taskbar_icon(mode.taskbar_icon)
 
 	if(GLOB.perf_flags & PERF_TOGGLE_LAZYSS)
@@ -348,40 +335,6 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
 	fdel("data/mode.txt")
 	WRITE_FILE(file("data/mode.txt"), the_mode)
-
-
-/datum/controller/subsystem/ticker/proc/Reboot(reason, delay)
-	set waitfor = FALSE
-
-	if(usr && !check_rights(R_SERVER))
-		return
-
-	if(graceful)
-		to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Shutting down...")]</h3>")
-		world.Reboot(FALSE)
-		return
-
-	if(!delay)
-		delay = CONFIG_GET(number/round_end_countdown) * 10
-
-	var/skip_delay = check_rights()
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("An admin has delayed the round end."))
-		return
-
-	to_chat(world, SPAN_BOLDNOTICE("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
-
-	var/start_wait = world.time
-	sleep(delay - (world.time - start_wait))
-
-	if(delay_end && !skip_delay)
-		to_chat(world, SPAN_BOLDNOTICE("Reboot was cancelled by an admin."))
-		return
-
-	log_game("Rebooting World. [reason]")
-	to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Rebooting...")]</h3>")
-
-	world.Reboot(TRUE)
 
 /datum/controller/subsystem/ticker/proc/create_characters()
 	if(!RoleAuthority)

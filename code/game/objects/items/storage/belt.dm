@@ -406,18 +406,20 @@
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is filled with an array of small pouches, meant to carry non-lethal equipment and restraints."
-	storage_slots = 6
+	storage_slots = 8
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
 
 /obj/item/storage/belt/security/MP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/handcuffs(src)
+	new /obj/item/handcuffs(src)
+	new /obj/item/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/device/clue_scanner(src)
+	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
 
 /obj/item/storage/belt/security/MP/UPP
@@ -439,15 +441,25 @@
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
-/obj/item/storage/belt/security/MP/CMB/full/fill_preset_inventory()
+/obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/device/clue_scanner(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/handcuffs(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+
+/obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
+	new /obj/item/weapon/gun/energy/taser(src)
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/handcuffs(src)
+	new /obj/item/handcuffs(src)
+	new /obj/item/handcuffs(src)
+	new /obj/item/ammo_magazine/pistol/highpower(src)
+	new /obj/item/ammo_magazine/pistol/highpower(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
 	new /obj/item/explosive/grenade/flashbang(src)
@@ -1175,12 +1187,12 @@
 /obj/item/storage/belt/gun/m4a3/mod88/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/mod88(src)
+		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
 /obj/item/storage/belt/gun/m4a3/mod88_near_empty/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
 	for(var/i = 1 to 3)
-		new /obj/item/ammo_magazine/pistol/mod88(src)
+		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
 /obj/item/storage/belt/gun/m4a3/vp78/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
@@ -1683,6 +1695,39 @@
 	new /obj/item/ammo_magazine/pistol/hp(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
+
+#define MAXIMUM_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/gun/smartgunner/garrow
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+
+	//Keep a track of how many magazines are inside the belt.
+	var/magazines = 0
+
+/obj/item/storage/belt/gun/smartgunner/garrow/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smartgun))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more drums."))
+		return FALSE
+
+/obj/item/storage/belt/gun/smartgunner/garrow/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines++
+
+/obj/item/storage/belt/gun/smartgunner/garrow/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/gun/smartgunner/garrow/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+#undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"

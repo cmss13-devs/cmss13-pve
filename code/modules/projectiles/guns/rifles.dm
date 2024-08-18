@@ -425,6 +425,17 @@
 /obj/item/weapon/gun/rifle/m41aMK1/anchorpoint/gl
 	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
+
+/obj/item/weapon/gun/rifle/m41aMK1/forecon
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units."
+	icon_state = "reconm41amk1"
+	item_state = "reconm41amk1"
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/recon
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
+
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
+	current_mag = null
+
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
 
@@ -1291,17 +1302,24 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
@@ -1344,7 +1362,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1353,14 +1371,14 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/dual
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1369,8 +1387,8 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/lasersight,
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/sapper
@@ -1378,7 +1396,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 80
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
@@ -1399,9 +1417,12 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/reddot,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
@@ -1420,10 +1441,10 @@
 	random_spawn_chance = 100
 	random_rail_chance = 100
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
@@ -1443,15 +1464,20 @@
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/burstfire_assembly,
 		)
 
@@ -1474,7 +1500,7 @@
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
@@ -1483,7 +1509,7 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
@@ -1498,6 +1524,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 	random_spawn_chance = 0
 	random_spawn_rail = list()

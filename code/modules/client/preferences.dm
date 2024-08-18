@@ -152,8 +152,10 @@ var/const/MAX_SAVE_SLOTS = 10
 	var/g_eyes = 0 //Eye color
 	var/b_eyes = 0 //Eye color
 	var/species = "Human"    //Species datum to use.
-	var/ethnicity = "Western" // Ethnicity
-	var/body_type = "Mesomorphic (Average)" // Body Type
+	var/ethnicity = "Western" //Legacy, kept to update save files
+	var/skin_color = "Pale 2" // Skin color
+	var/body_size = "Average" // Body Size
+	var/body_type = "Lean" // Body Type
 	var/language = "None" //Secondary language
 	var/list/gear //Custom/fluff item loadout.
 	var/preferred_squad = "None"
@@ -243,7 +245,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	var/auto_observe = TRUE
 
 /datum/preferences/New(client/C)
-	key_bindings = deepCopyList(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
+	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
 	macros = new(C, src)
 	if(istype(C))
 		owner = C
@@ -308,8 +310,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
-	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-		dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
+	dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 		dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_MENTOR)
@@ -333,8 +334,9 @@ var/const/MAX_SAVE_SLOTS = 10
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>&reg;</A></h2>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'><b>[age]</b></a><br>"
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br>"
-			dat += "<b>Ethnicity:</b> <a href='?_src_=prefs;preference=ethnicity;task=input'><b>[ethnicity]</b></a><br>"
-			dat += "<b>Body Type:</b> <a href='?_src_=prefs;preference=body_type;task=input'><b>[body_type]</b></a><br>"
+			dat += "<b>Skin Color:</b> <a href='?_src_=prefs;preference=skin_color;task=input'><b>[skin_color]</b></a><br>"
+			dat += "<b>Body Size:</b> <a href='?_src_=prefs;preference=body_size;task=input'><b>[body_size]</b></a><br>"
+			dat += "<b>Body Muscularity:</b> <a href='?_src_=prefs;preference=body_type;task=input'><b>[body_type]</b></a><br>"
 			dat += "<b>Traits:</b> <a href='byond://?src=\ref[user];preference=traits;task=open'><b>Character Traits</b></a>"
 			dat += "<br>"
 
@@ -492,15 +494,12 @@ var/const/MAX_SAVE_SLOTS = 10
 			else
 				dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_SYNTHETIC)
-			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-				dat += "<div id='column1'>"
-				dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
-				dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
-				dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
-				dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
-				dat += "</div>"
-			else
-				dat += "<b>You do not have the whitelist for this role.</b>"
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
+			dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
+			dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
+			dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
+			dat += "</div>"
 		if(MENU_YAUTJA)
 			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 				dat += "<div id='column1'>"
@@ -1183,10 +1182,12 @@ var/const/MAX_SAVE_SLOTS = 10
 					real_name = character_origin.generate_human_name(gender)
 				if ("age")
 					age = rand(AGE_MIN, AGE_MAX)
-				if ("ethnicity")
-					ethnicity = random_ethnicity()
+				if ("skin_color")
+					skin_color = random_skin_color()
 				if ("body_type")
 					body_type = random_body_type()
+				if ("body_size")
+					body_size = random_body_size()
 				if ("hair")
 					r_hair = rand(0,255)
 					g_hair = rand(0,255)
@@ -1545,17 +1546,23 @@ var/const/MAX_SAVE_SLOTS = 10
 					if(new_h_gradient_style)
 						grad_style = new_h_gradient_style
 
-				if ("ethnicity")
-					var/new_ethnicity = tgui_input_list(user, "Choose your character's ethnicity:", "Character Preferences", GLOB.ethnicities_list)
+				if ("skin_color")
+					var/new_skin_color = tgui_input_list(user, "Choose your character's skin color:", "Character Preferences", GLOB.skin_color_list)
 
-					if (new_ethnicity)
-						ethnicity = new_ethnicity
+					if (new_skin_color)
+						skin_color = new_skin_color
 
 				if ("body_type")
-					var/new_body_type = tgui_input_list(user, "Choose your character's body type:", "Character Preferences", GLOB.body_types_list)
+					var/new_body_type = tgui_input_list(user, "Choose your character's body type:", "Character Preferences", GLOB.body_type_list)
 
 					if (new_body_type)
 						body_type = new_body_type
+
+				if ("body_size")
+					var/new_body_size = tgui_input_list(user, "Choose your character's body size:", "Character Preferences", GLOB.body_size_list)
+
+					if (new_body_size)
+						body_size = new_body_size
 
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair color:", "Character Preference", rgb(r_facial, g_facial, b_facial)) as color|null
@@ -2047,8 +2054,9 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	character.age = age
 	character.gender = gender
-	character.ethnicity = ethnicity
+	character.skin_color = skin_color
 	character.body_type = body_type
+	character.body_size = body_size
 
 	character.r_eyes = r_eyes
 	character.g_eyes = g_eyes
@@ -2120,15 +2128,16 @@ var/const/MAX_SAVE_SLOTS = 10
 			message_admins("[character] ([character.ckey]) has spawned with their gender as plural or neuter. Please notify coders.")
 			character.gender = MALE
 
-// Transfers the character's physical characteristics (age, gender, ethnicity, etc) to the mob
+// Transfers the character's physical characteristics (age, gender, skin color, etc) to the mob
 /datum/preferences/proc/copy_appearance_to(mob/living/carbon/human/character, safety = 0)
 	if(!istype(character))
 		return
 
 	character.age = age
 	character.gender = gender
-	character.ethnicity = ethnicity
+	character.skin_color = skin_color
 	character.body_type = body_type
+	character.body_size = body_size
 
 	character.r_eyes = r_eyes
 	character.g_eyes = g_eyes
