@@ -27,6 +27,6 @@
 	count_participant = TRUE
 
 /obj/effect/landmark/freed_mob_spawner/upp_soldier
-	name = "UPP Soldier"
-	equipment_path = /datum/equipment_preset/uscm/private_equipped/upp
+	name = "UPP Rifleman"
+	equipment_path = /datum/equipment_preset/upp/rifleman
 	count_participant = TRUE

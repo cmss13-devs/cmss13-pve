@@ -63,11 +63,10 @@
 	//Not a meme role
 	name = "UPP Colonial Militia Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
-
-	skills = /datum/skills/upp
 	assignment = "Colonial Defense Rifleman"
 	role_comm_title = "ColDef"
 	paygrade = "UE1"
+	skills = /datum/skills/pfc
 
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -78,7 +77,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 
 	//head
-	var/maybehat = prob(66) ? pick(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/ushanka, /obj/item/clothing/head/uppcap/ushanka) : null
+	var/maybehat = prob(66) ? pick(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/ushanka) : null
 	if(maybehat)
 		new_human.equip_to_slot_or_del(new maybehat, WEAR_HEAD)
 
@@ -121,7 +120,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm/private_equipped/upp
+/datum/equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_UPP_GENERAL)
@@ -134,7 +133,7 @@
 	faction = FACTION_UPP
 	skills = /datum/skills/pfc
 
-/datum/equipment_preset/uscm/private_equipped/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/rifleman/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -160,16 +159,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
-/datum/equipment_preset/uscm/private_equipped/upp/lesser_rank
+/datum/equipment_preset/upp/rifleman/lesser_rank
 	paygrade = "UE1"
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm/medic_equipped/upp
+/datum/equipment_preset/upp/sanitar
 	name = "UPP Squad Sanitar (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
-	assignment = JOB_SQUAD_MEDIC_UPP
+	assignment = "Sanitar"
 	rank = JOB_SQUAD_MEDIC_UPP
 	paygrade = "UE4"
 	role_comm_title ="SNITR"
@@ -178,7 +177,7 @@
 	faction = FACTION_UPP
 	skills = /datum/skills/combat_medic
 
-/datum/equipment_preset/uscm/medic_equipped/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/sanitar/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK) //2
@@ -217,7 +216,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm/smartgunner_equipped/upp
+/datum/equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
@@ -228,7 +227,7 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/smartgunner_equipped/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_BACK) //1.33
@@ -261,7 +260,7 @@
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
 
 //*****************************************************************************************************/
-/datum/equipment_preset/uscm/tl_equipped/upp
+/datum/equipment_preset/upp/squadlead
 	name = "UPP Squad Sergeant (Equipped)"
 	paygrade = "UE5"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
@@ -269,7 +268,7 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/tl_equipped/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/squadlead/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -297,8 +296,8 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm/leader_equipped/upp
-	name = "USCM Platoon Sergeant (Equipped)"
+/datum/equipment_preset/upp/platoonlead
+	name = "UPP Platoon Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
@@ -310,7 +309,7 @@
 
 	minimap_icon = "leader"
 
-/datum/equipment_preset/uscm/leader_equipped/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/platoonlead/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -488,10 +487,8 @@
 	var/hat = pick(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/ushanka)
 	new_human.equip_to_slot_or_del(new hat, WEAR_HEAD)
 	//body
-	var/obj/item/clothing/under/marine/veteran/UPP = new()
-	var/obj/item/clothing/accessory/storage/tool_webbing/equipped/W = new()
-	UPP.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(/obj/item/clothing/accessory/storage/tool_webbing/equipped, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/support, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/glass/bottle/tricordrazine, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon/upp, WEAR_J_STORE)
@@ -606,15 +603,15 @@
 	name = "UPP Vehicle Crewman"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = JOB_UPP_CREWMAN
+	assignment = "Crewman"
 	rank = JOB_UPP_CREWMAN
-	paygrade = "UE5"
+	paygrade = "UE3"
 	role_comm_title = "TANK"
 	minimum_age = 18
 	skills = /datum/skills/tank_crew
 
 /datum/equipment_preset/upp/tank/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/cct(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
@@ -637,7 +634,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	skills = /datum/skills/upp/combat_medic
-	assignment = JOB_UPP_LT_DOKTOR
+	assignment = "Leytenant Doktor"
 	rank = JOB_UPP_LT_DOKTOR
 	role_comm_title = "Lt. Med."
 	paygrade = "UO1"
@@ -659,10 +656,8 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap, WEAR_HEAD)
 	//body
-	var/obj/item/clothing/under/marine/veteran/UPP = new()
-	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
-	UPP.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/upp/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone, WEAR_IN_BELT)

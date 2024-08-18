@@ -13,7 +13,7 @@
 	access = get_access(ACCESS_LIST_UA)
 
 /datum/equipment_preset/cmb/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(80;MALE,20;FEMALE)
+	new_human.gender = pick(50;MALE,50;FEMALE)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
 	var/random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
