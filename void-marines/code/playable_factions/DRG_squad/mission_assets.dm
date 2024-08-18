@@ -48,27 +48,40 @@
 	COOLDOWN_DECLARE(ranged_cooldown)
 	var/projectile_to_fire = /datum/ammo/bullet/rifle
 	var/attack_range = 10
-	var/cooldown_duration = 2 SECONDS
-	var/list/possible_target = list()
+	var/cooldown_duration = 1 SECONDS
+	var/list/possible_targets = list()
 
 /mob/living/simple_animal/hostile/drg/ranged/Life(delta_time)
 	if(COOLDOWN_FINISHED(src, ranged_cooldown))
 		for(var/mob/living/target in orange(attack_range, src))
-			if(target.faction != src.faction)
-				possible_target += target
-			if(!possible_target.len)
-				return FALSE
-			var/current_target = pick(possible_target)
+			if(target.faction != src.faction && target.stat != DEAD)
+				possible_targets += target
 
-			var/datum/ammo/projectile_type = GLOB.ammo_list[projectile_to_fire]
+		if(!possible_targets.len)
+			return FALSE
+		var/current_target = pick(possible_targets)
 
-			var/obj/projectile/projectile = new /obj/projectile(loc, create_cause_data(src))
-			projectile.generate_bullet(projectile_type)
-			projectile.permutated += src
-			projectile.fire_at(current_target, src, src, projectile_type.max_range, projectile_type.shell_speed)
-			COOLDOWN_START(src, ranged_cooldown, cooldown_duration)
+		var/datum/ammo/projectile_type = GLOB.ammo_list[projectile_to_fire]
+
+		var/obj/projectile/projectile = new /obj/projectile(loc, create_cause_data(src))
+		projectile.generate_bullet(projectile_type)
+		projectile.permutated += src
+		projectile.fire_at(current_target, src, src, projectile_type.max_range, projectile_type.shell_speed)
+		possible_targets.Cut()
+		COOLDOWN_START(src, ranged_cooldown, cooldown_duration)
 
 	. = ..()
+
+/datum/ammo/bullet/rifle/explosive/bosco
+	icon_state = "bolter"
+	damage = 85
+	accurate_range = 22
+	penetration = ARMOR_PENETRATION_TIER_4
+	accuracy = HIT_ACCURACY_TIER_MAX
+	shell_speed = AMMO_SPEED_TIER_6
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+	damage_falloff = 0
+	scatter = 0
 
 /mob/living/simple_animal/hostile/drg/ranged/robert
 	name = "R-0B-ER-T"
@@ -81,8 +94,8 @@
 
 	var/lives = 2
 	var/damaged = FALSE
-	projectile_to_fire = /datum/ammo/bullet/rifle/explosive
-	cooldown_duration = 4 SECONDS
+	projectile_to_fire = /datum/ammo/bullet/rifle/explosive/bosco
+	cooldown_duration = 2 SECONDS
 
 /mob/living/simple_animal/hostile/drg/ranged/robert/Life(delta_time)
 	..()
@@ -120,7 +133,7 @@
 
 /obj/item/weapon/drg/pickaxe/process()
 	if(in_charged_state)
-		force = 170
+		force = 190
 		update_icon()
 	if(!in_charged_state || charges <= 0)
 		force = 85
@@ -188,8 +201,6 @@
 	return
 
 /obj/structure/surface/table/rock/attackby(obj/item/W, mob/user, click_data)
-	if(!W)
-		return
 
 	if(W.type in allowed_instruments)
 		if(do_after(user, dig_time - W.digging_buff, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
