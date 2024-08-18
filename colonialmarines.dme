@@ -2520,4 +2520,5 @@
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
 #include "void-marines\code\playable_factions\DRG_squad\mission_assets.dm"
+#include "void-marines\code\playable_factions\DRG_squad\robot_friends.dm"
 // END_INCLUDE

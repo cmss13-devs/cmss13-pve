@@ -1,0 +1,65 @@
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white,/area/drg)
+"d" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"e" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white,/area/drg)
+"m" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5,/turf/open/auto_turf/sand_white,/area/drg)
+"o" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite2,/turf/open/auto_turf/sand_white,/area/drg)
+"r" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = 10; pixel_y = 16},/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -4; pixel_y = -8},/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -14; pixel_y = 30},/turf/open/auto_turf/sand_white,/area/drg)
+"s" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"x" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0,/turf/open/auto_turf/sand_white,/area/drg)
+"z" = (/obj/docking_port/stationary/marine_dropship/lz1{name = "Cave"},/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"D" = (/turf/open/auto_turf/sand_white,/area/drg)
+"K" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3{pixel_x = 8; pixel_y = 12},/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/turf/open/auto_turf/sand_white,/area/drg)
+"S" = (/obj/structure/prop/hybrisa/cavedecor,/turf/open/auto_turf/sand_white,/area/drg)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaDDDDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaDDDDDDoDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaassaaaDDDDDDDxDDDDaaaaaaaaDDDDDaaaaaaaaaaaaa
+aaaaaassssDDDDDDDDDDDDDDaaaaaaaaDDDDDaaaaaaaaaaaaa
+aaaaasssssdDDdddDDDDDDDDDDDDDDDDDDDDDDDDaaaaaaaaaa
+aaaaasssssddDddddDDDDDDDDDDDDDDDDDDddddDaaaaaaaaaa
+aaaaasssdddddddddDDDDDDDDDDDDDDDDDDdddddsaaaaaaaaa
+aaaaasssdddddddddDDDDDDDDDDDDDDDDddddddddaaaaaaaaa
+aaaaaaDddddddddddDDDDDDDDDddDDDDDddddddddsaaaaaaaa
+aaaaaaDdddddddddDDDDDDDDddddddDDDDdddddddsaaaaaaaa
+aaaaaaDDddddddddDDDDDDddddddddDDDDDddddddssaaaaaaa
+aaaaaaDDDDDDdddDDDDDDdddddddddddDDDddddddddDaaaaaa
+aaaaaadDDDDDDDDDDDDDddddddddddddDDDDDddddddDaaaaaa
+aaaaaadDDDDDDDDDDDDDddddddddddddDDDDDDdddddDaaaaaa
+aaaaadddDDDDDDDDDDddddddddddddddDDDDDDddddDDDaaaaa
+aaaaadddDDDDDDDDDdddddddddddddddDDDDDDddddDDDDaaaa
+aaaaadddDDDDDDDDdddddddddddddddDDDDDDDDDddDDDDaaaa
+aaaaaddDDDDDDDDDddddddddddddddddDDDDDDDdddDDDaaaaa
+aaaaadDDDDDDDDDDddddddddddddddddDDddDDDDDDDDDaaaaa
+aaaaadDDDDDDDDddddddddddddddddddDDddDDDDDDDDDaaaaa
+aaaaaDDKDDDDDDdddddddddddddddddDDDDDDDDDDDDDDaaaaa
+aaaaaDDDmDDDDDdddddddddddddddddDDDDDDDDDDDDDDaaaaa
+aaaaaaaDDDDDDDdddddddddddddddddDDDDDDDDDDDDDDaaaaa
+aaaaaaaDDDDDDDdddddddddddddddddDDDDDDDDDDDDDDaaaaa
+aaaaaaaDDDDDDDdddddddddddddddddddDDDDDDDDDDDDaaaaa
+aaaaaaaaDDDDDDdddddddddddddddddddDDDDDDDDDDDDDaaaa
+aaaaaaaaDDDDDDDddddddddddzdddddddDDDDDDDDDDDDDDDaa
+aaaaaaaaDDDDDDDddddddddddddddddddDdddDDDDDDDDDDDaa
+aaaaaaaaDDDDDDDDdddddddddddddddddddddDDDDDDDDDDDaa
+aaaaaaDDDDDDDDDDddddddddddddddddddddddDDDDDrDDDDaa
+assaaDDDDDDDDDDDddddddddddddddddddddddDDDDDDDDDDaa
+assaaDDDDDDDDDDddddddddddddddddddddddddDDDDDDDDDaa
+aaaaaDDDDDDDDDDddddddddddddddddddddddddDDDDDDDDDaa
+aaassdddddddDDDddddddddddddddddddddddddDDDDDDDDDaa
+aaasddddddddDDddddddddddddddddddddddddDDDDdDDDdaaa
+aassdddddddddDddddddddddddddddddddddddDDDDDDDDdaaa
+aassdddddddddDDDdddddddddddddddddddddDDDDDDDdddaaa
+aasssddddddddDDDddddddddddddddddddddDDDDDDDDddDaaa
+aasssdddddddDDDDDddddddddddddddddddDDDDDDDddssaaaa
+aasssddddddddDDDDDDDdddddddddddddddDDDDDDDddsaaaaa
+aasssssddddddDDDDDDdddddddddddddDDDDDDDDDDddsaaaaa
+aaaasssdddddddDDDDDddddddddddddDDDDDDDDDaasssaaaaa
+aaaaaasssdddddDDDDDddddddddddddDeDDDDDDDaasaaaaaaa
+aaaaaaaasdddddDDDDDDDdddDdddDDDDDDDDDDDaaaaaaaaaaa
+aaaaaaaasdddddDDDDDDDDDDDdddDDDSDDDaaaaaaaaaaaaaaa
+aaaaaaaaaaaasdDDDDDDDDDDDDDDDDDDoDDaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaDDDDDaaaaaaaDDDDDDDDDDaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

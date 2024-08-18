@@ -1,102 +1,110 @@
 #define FACTION_DRG "Deep Rock Galactic"
 
-/mob/living/simple_animal/hostile/drg
-	name = "Robot"
-	desc = "An DRG Company personal automaton, used for various purposes."
-	icon = 'void-marines/icons/robots.dmi'
-	icon_state = "Detective Ball"
-	icon_dead = "gib7"
-	wander = FALSE
-	health = 500
-	maxHealth = 500
-
-	attacktext = "pokes"
-	attack_sound = null
-	friendly = "pokes"
-	faction = FACTION_DRG
-
-/mob/living/simple_animal/hostile/drg/howard
-	name = "H-0W-RD"
-	desc = "An DRG Company personal automaton. This one made for bar duty and service assistance."
-	icon = 'void-marines/icons/robots.dmi'
-	icon_state = "Howard"
-
-	health = 99999
-	maxHealth = 99999
-
-	var/list/reagents_to_choose = list("beer", "bilk", "ale", "manlydorf", "grog")
-	var/reagent_to_dispense = null
-
-/mob/living/simple_animal/hostile/drg/howard/UnarmedAttack(atom/A, proximity, click_parameters)
-	if(A == src)
-		reagent_to_dispense = tgui_input_list(usr, "Choose the drink you need!", "Reagent Selection", reagents_to_choose)
-		to_chat(usr, SPAN_DANGER("Now you will dispense [reagent_to_dispense]!"))
-		return TRUE
-	if(istype(A, /obj/item/reagent_container))
-		var/obj/item/reagent_container/target = A
-		if(target.reagents.total_volume >= target.reagents.maximum_volume)
-			to_chat(usr, SPAN_DANGER("[target] is full!"))
-			return FALSE
-		src.visible_message(SPAN_WARNING("[src] happily beeps, and then starts to pour some liquid into [target]."),
-		SPAN_NOTICE("You filled [target] with 5U of [reagent_to_dispense]."))
-		playsound(src.loc, 'sound/effects/refill.ogg', 25, 1, 3)
-		target.reagents.add_reagent(reagent_to_dispense, 5)
-		return TRUE
-	..()
-
-/mob/living/simple_animal/hostile/drg/ranged //will shoot enemies on sight, player will NOT have control over this, so make survivors the same faction!
-	COOLDOWN_DECLARE(ranged_cooldown)
-	var/projectile_to_fire = /datum/ammo/bullet/rifle
-	var/attack_range = 10
-	var/cooldown_duration = 2 SECONDS
-	var/list/possible_target = list()
-
-/mob/living/simple_animal/hostile/drg/ranged/Life(delta_time)
-	if(COOLDOWN_FINISHED(src, ranged_cooldown))
-		for(var/mob/living/target in orange(attack_range, src))
-			if(target.faction != src.faction)
-				possible_target += target
-			if(!possible_target.len)
-				return FALSE
-			var/current_target = pick(possible_target)
-
-			var/datum/ammo/projectile_type = GLOB.ammo_list[projectile_to_fire]
-
-			var/obj/projectile/projectile = new /obj/projectile(loc, create_cause_data(src))
-			projectile.generate_bullet(projectile_type)
-			projectile.permutated += src
-			projectile.fire_at(current_target, src, src, projectile_type.max_range, projectile_type.shell_speed)
-			COOLDOWN_START(src, ranged_cooldown, cooldown_duration)
-
-	. = ..()
-
-/mob/living/simple_animal/hostile/drg/ranged/robert
-	name = "R-0B-ER-T"
-	desc = "An DRG Company personal automaton. This one made for simple on-duty work."
-	icon = 'void-marines/icons/robots.dmi'
-	icon_state = "Robert"
-
-	health = 1000
-	maxHealth = 1000
-
-	var/lives = 2
-	var/damaged = FALSE
-	projectile_to_fire = /datum/ammo/bullet/rifle/explosive
-	cooldown_duration = 4 SECONDS
-
-/mob/living/simple_animal/hostile/drg/ranged/robert/Life(delta_time)
-	..()
-	if(damaged)
-		anchored = TRUE
-		icon_state = "Robert_broken"
-		next_move_slowdown = 100
-	if(health <= 50 && lives > 0)
-		health = maxHealth
-		lives -= 1
-		damaged = TRUE
+/area/drg
+	name = "Deep Caves"
+	icon = 'icons/turf/area_kutjevo.dmi'
+	icon_state = "kutjevo"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /obj/item
 	var/digging_buff = 0
+
+/obj/item/drg/scanner
+	name = "field scanner"
+	desc = "Device, used for scanning surrounding terrain."
+	icon = 'void-marines/icons/drg_tools.dmi'
+	icon_state = "scanner"
+
+	var/list/search_categories = list("allied humans", "allied robots", "minerals", "creatures", "mission objective")
+	var/was_used = FALSE
+	var/cooldown = 20 SECONDS
+	var/scanning_range = 25
+
+/obj/item/drg/scanner/attack_self(mob/user)
+	SHOULD_CALL_PARENT(FALSE)
+	if(was_used)
+		to_chat(user, SPAN_DANGER("[src] still on cooldown!"))
+		return FALSE
+	var/options = tgui_input_list(usr, "Choose wanted option!", "Scanning...", search_categories)
+	if(!options)
+		return FALSE
+	switch(options)
+		if("allied humans")
+			var/list/humans_in_range = list()
+			var/list/closest = list()
+			for(var/mob/living/target in orange(scanning_range, src))
+				if(target.faction == user.faction && target.stat != DEAD)
+					humans_in_range += target
+				if(!humans_in_range.len)
+					to_chat(user, SPAN_WARNING("There is NO humans in your range!"))
+					return TRUE
+				to_chat(user, SPAN_WARNING("There is [humans_in_range.len] humans in your range!"))
+			for(var/mob/living/target in humans_in_range)
+				if(get_dist(target, src) <= 8)
+					closest += target
+				if(!closest.len)
+					humans_in_range.Cut()
+					return TRUE
+				var/someone = pick(closest)
+				to_chat(user, SPAN_WARNING("And [someone] is mostly close to you!"))
+				humans_in_range.Cut()
+				closest.Cut()
+				return TRUE
+		if("allied robots")
+			var/list/robots_in_range = list()
+			var/list/closest = list()
+			for(var/mob/living/simple_animal/hostile/drg/target in orange(scanning_range, src))
+				if(target.faction == user.faction && target.stat != DEAD)
+					robots_in_range += target
+				if(!robots_in_range.len)
+					to_chat(user, SPAN_WARNING("There is NO active units in your range!"))
+					return TRUE
+				to_chat(user, SPAN_WARNING("There is atleast [robots_in_range.len] active units in your range!"))
+			for(var/mob/living/simple_animal/hostile/drg/target in robots_in_range)
+				if(get_dist(target, src) <= 8)
+					closest += target
+				if(!closest.len)
+					robots_in_range.Cut()
+					return TRUE
+				var/someone = pick(closest)
+				to_chat(user, SPAN_WARNING("And [someone] is mostly close to you!"))
+				robots_in_range.Cut()
+				closest.Cut()
+				return TRUE
+		if("minerals")
+			to_chat(user, SPAN_DANGER("CAN'T ACCESS THIS TOPIC RIGHT NOW"))
+			return FALSE
+		if("creatures")
+			to_chat(user, SPAN_DANGER("CAN'T ACCESS THIS TOPIC RIGHT NOW"))
+			return FALSE
+		if("mission objective")
+			to_chat(user, SPAN_DANGER("CAN'T ACCESS THIS TOPIC RIGHT NOW"))
+			return FALSE
+
+/obj/item/weapon/drg/wrench
+	name = "combat wrench"
+	desc = "An utility weapon, used by DRG miners to fix various things."
+	icon = 'void-marines/icons/drg_tools.dmi'
+	icon_state = "fixing_wrench"
+
+/obj/item/weapon/drg/wrench/afterattack(atom/A, mob/user as mob, proximity)
+	if(get_dist(src, A) > 1)
+		return FALSE
+
+	if(istype(A, /mob/living/simple_animal/hostile/drg))
+		var/mob/living/simple_animal/hostile/drg/robo_friend = A
+		if(robo_friend.damaged)
+			if(do_after(user, 10 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+				src.visible_message(SPAN_WARNING("[user] screwed some bolts on [robo_friend], making it move once again."),
+				SPAN_NOTICE("You hot-fixed [robo_friend] external damage."))
+				robo_friend.damaged = FALSE
+				robo_friend.anchored = FALSE
+				robo_friend.next_move_slowdown = 0
+				robo_friend.icon_state = "[robo_friend.base_robot_icon]"
+				return TRUE
+		to_chat(user, SPAN_DANGER("[robo_friend] in a pretty good shape already! There is no need in additional repairs!"))
+		return FALSE
 
 /obj/item/weapon/drg/pickaxe
 	name = "combat pickaxe"
@@ -120,7 +128,7 @@
 
 /obj/item/weapon/drg/pickaxe/process()
 	if(in_charged_state)
-		force = 170
+		force = 190
 		update_icon()
 	if(!in_charged_state || charges <= 0)
 		force = 85
@@ -147,6 +155,10 @@
 /obj/item/weapon/drg/pickaxe/attack(mob/M, mob/user)
 	if(in_charged_state)
 		charges -= 1
+		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
+		s.set_up(5, 1, src.loc)
+		s.start()
+		playsound(loc, 'sound/weapons/Egloves.ogg', 25, 1, 6)
 		addtimer(CALLBACK(src, PROC_REF(change_mode)), 2 SECONDS) //THIS IS THE BEST DECISION I COULD MADE, BUT ALSO THE WORST AT THE SAME TIME - PLEASE FIND BETTER WAY
 		addtimer(CALLBACK(src, PROC_REF(add_charge)), recharge_time)
 	..()
@@ -159,6 +171,7 @@
 	breakable = FALSE
 	reinforced = TRUE
 	opacity = TRUE
+	projectile_coverage = 100
 	flipped_projectile_coverage = PROJECTILE_COVERAGE_MAX
 	upright_projectile_coverage = PROJECTILE_COVERAGE_MAX
 	health = 500
@@ -178,6 +191,10 @@
 	..()
 	verbs -= /obj/structure/surface/table/verb/do_flip
 
+/obj/structure/surface/table/rock/initialize_pass_flags(datum/pass_flags_container/PF)
+	if (PF)
+		PF.flags_can_pass_all = PASS_CRUSHER_CHARGE
+
 /obj/structure/surface/table/rock/Crossed(atom/movable/O)
 	return
 
@@ -188,8 +205,6 @@
 	return
 
 /obj/structure/surface/table/rock/attackby(obj/item/W, mob/user, click_data)
-	if(!W)
-		return
 
 	if(W.type in allowed_instruments)
 		if(do_after(user, dig_time - W.digging_buff, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
