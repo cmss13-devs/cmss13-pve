@@ -896,6 +896,12 @@
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_MIDWAY
 
+/obj/structure/machinery/computer/dropship_weapons/midway
+	name = "\improper 'Midway' weapons controls"
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	shuttle_tag = DROPSHIP_MIDWAY
+
 /obj/structure/machinery/computer/dropship_weapons/midway/small
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "cameras"
@@ -925,9 +931,9 @@
 
 /obj/structure/machinery/computer/dropship_weapons/typhoon
 	name = "\improper 'Typhoon' weapons controls"
-	shuttle_tag = DROPSHIP_TYPHOON
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	shuttle_tag = DROPSHIP_TYPHOON
 
 /obj/structure/machinery/computer/dropship_weapons/typhoon/small
 	icon = 'icons/obj/structures/machinery/computer.dmi'
@@ -936,14 +942,22 @@
 
 /obj/structure/machinery/computer/dropship_weapons/tripoli
 	name = "\improper 'Tripoli' weapons controls"
-	shuttle_tag = DROPSHIP_TRIPOLI
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	shuttle_tag = DROPSHIP_TRIPOLI
 
 /obj/structure/machinery/computer/dropship_weapons/tripoli/small
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "cameras"
 	layer = WEATHER_LAYER
+
+/obj/structure/machinery/computer/dropship_weapons/dropship1
+	name = "\improper 'Alamo' weapons controls"
+	shuttle_tag = DROPSHIP_ALAMO
+
+/obj/structure/machinery/computer/dropship_weapons/dropship2
+	name = "\improper 'Normandy' weapons controls"
+	shuttle_tag = DROPSHIP_NORMANDY
 
 /obj/structure/machinery/computer/dropship_weapons/Destroy()
 	. = ..()
