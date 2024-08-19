@@ -292,8 +292,6 @@
 	S["adaptive_zoom"] >> adaptive_zoom
 	S["tooltips"] >> tooltips
 
-	S["plat_name"] >> platoon_name
-
 	//Sanitize
 	ooccolor = sanitize_hexcolor(ooccolor, CONFIG_GET(string/ooc_color_normal))
 	lastchangelog = sanitize_text(lastchangelog, initial(lastchangelog))
@@ -359,7 +357,6 @@
 	custom_cursors = sanitize_integer(custom_cursors, FALSE, TRUE, TRUE)
 	pref_special_job_options = sanitize_islist(pref_special_job_options, list())
 	pref_job_slots = sanitize_islist(pref_job_slots, list())
-	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	vars["fps"] = fps
 
 	if(remembered_key_bindings)
@@ -470,6 +467,7 @@
 	S["yautja_status"] << yautja_status
 	S["synth_status"] << synth_status
 
+
 	S["lang_chat_disabled"] << lang_chat_disabled
 	S["show_permission_errors"] << show_permission_errors
 	S["key_bindings"] << key_bindings
@@ -484,7 +482,6 @@
 	S["no_radials_preference"] << no_radials_preference
 	S["no_radial_labels_preference"] << no_radial_labels_preference
 	S["custom_cursors"] << custom_cursors
-	S["plat_name"] << platoon_name
 
 	S.Unlock()
 
@@ -587,6 +584,8 @@
 
 	S["uplinklocation"] >> uplinklocation
 	S["exploit_record"] >> exploit_record
+
+	S["ds_camo"] >> dropship_camo
 	S["plat_name"] >> platoon_name
 
 	S.Unlock()
@@ -637,6 +636,9 @@
 	backbag = sanitize_integer(backbag, 1, backbaglist.len, initial(backbag))
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
 	//b_type = sanitize_text(b_type, initial(b_type))
+
+	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
+	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -745,6 +747,8 @@
 
 	S["uplinklocation"] << uplinklocation
 	S["exploit_record"] << exploit_record
+
+	S["ds_camo"] << dropship_camo
 	S["plat_name"] << platoon_name
 
 	S.Unlock()

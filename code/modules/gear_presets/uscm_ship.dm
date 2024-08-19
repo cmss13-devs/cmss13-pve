@@ -595,7 +595,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
-	to_chat(world, "[new_human.name], [late_join ? "YES" : "NO"]")
 	if(!late_join)
 		add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
@@ -623,6 +622,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
+
+/datum/equipment_preset/uscm_ship/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
+	if(!late_join)
+		add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 	paygrade = "UO1"
