@@ -8,12 +8,13 @@
 	icon_state = "delivery"
 	item_state = "delivery"
 	antigrief_protection = FALSE
+	indestructible = TRUE
 	dangerous = TRUE
 	harmful = FALSE
 	det_time = 40
 
 	light_color = "#74e696"
-	light_power = 2
+	light_power = 3
 
 	var/obj/effect/shield/VSX
 	var/blocker_type = /obj/structure/blocker/shield
@@ -35,13 +36,41 @@
 		if(get_dist(T, src) < field_radius)
 			continue
 
-		new blocker_type(T, src)
+		/// Let's find the opposite direction
+		var/angle = get_angle(loc, T)
+		var/relative_direction = get_dir_p_cardinals(angle)
+
+		/// Corners needs to be duplicated and properly turned
+		var/additional_dir
+		switch(relative_direction)
+			if (NORTHEAST)
+				additional_dir = NORTH
+				relative_direction = EAST
+			if (SOUTHEAST)
+				additional_dir = SOUTH
+				relative_direction = EAST
+			if (SOUTHWEST)
+				additional_dir = SOUTH
+				relative_direction = WEST
+			if (NORTHWEST)
+				additional_dir = NORTH
+				relative_direction = WEST
+
+		/// Finally creating the blocker itself
+		new blocker_type(T, src, relative_direction)
+
+		/// Do we need to place a second one?
+		if(!additional_dir)
+			continue
+
+		/// If yes, place it
+		new blocker_type(T, src, additional_dir)
 
 	spawn(field_radius * 2)
 		set_light_range(field_radius+2)
 		set_light_on(TRUE)
 
-	VSX = new /obj/effect/shield(loc, field_radius, SINE_EASING|EASE_OUT, pixel_y, pixel_x, src)
+	VSX = new /obj/effect/shield(loc, field_radius, SINE_EASING|EASE_OUT, pixel_y, pixel_x)
 
 	addtimer(CALLBACK(src, PROC_REF(remove_shield)), field_duration)
 
@@ -52,7 +81,6 @@
 		QDEL_IN(src, field_radius * 2 - 1)
 		VSX.disappear(field_radius)
 
-
 /*
 	Invisible Blocker Walls, they link up with the main shield and collapse with it
 */
@@ -62,44 +90,17 @@
 	icon_state = "folding_0" // for map editing only
 	flags_atom = ON_BORDER
 	invisibility = INVISIBILITY_MAXIMUM
+	throwpass = TRUE
 	density = TRUE
 	/// The shieldgen this blocker relates to, will be destroyed along with it
 	var/obj/item/explosive/grenade/shield_generator/linked_shield
 
-/obj/structure/blocker/shield/Initialize(mapload, atom/generator, override_dir)
+/obj/structure/blocker/shield/Initialize(mapload, atom/generator, set_dir)
 	. = ..()
 	RegisterSignal(generator, COMSIG_PARENT_QDELETING, PROC_REF(collapse))
 	linked_shield = generator
 	icon_state = null
-
-	if(override_dir)
-		dir = override_dir
-		return
-
-	/// Let's face the opposite direction
-	var/angle = get_angle(generator.loc, src)
-	dir = get_dir_p_cardinals(angle)
-
-	/// Corners needs to be duplicated and properly turned
-	var/additional_dir
-	switch(dir)
-		if (NORTHEAST)
-			additional_dir = NORTH
-			dir = EAST
-		if (SOUTHEAST)
-			additional_dir = SOUTH
-			dir = EAST
-		if (SOUTHWEST)
-			additional_dir = SOUTH
-			dir = WEST
-		if (NORTHWEST)
-			additional_dir = NORTH
-			dir = WEST
-
-	addtimer(CALLBACK(src, PROC_REF(duplicate), generator, additional_dir), 1)
-
-/obj/structure/blocker/shield/proc/duplicate(generator, dir)
-	new type(loc, generator, dir)
+	dir = set_dir
 
 /obj/structure/blocker/shield/Destroy(force)
 	. = ..()
@@ -139,9 +140,8 @@
 	pixel_x = -496
 	pixel_y = -496
 
-/obj/effect/shield/Initialize(mapload, radius = 3, easing_type = SINE_EASING|EASE_OUT, y_offset, x_offset, generator)
+/obj/effect/shield/Initialize(mapload, radius = 3, easing_type = SINE_EASING|EASE_OUT, y_offset, x_offset)
 	. = ..()
-	RegisterSignal(generator, COMSIG_PARENT_QDELETING, PROC_REF(disappear))
 	if(y_offset)
 		pixel_y += y_offset
 	if(x_offset)
@@ -150,7 +150,7 @@
 	animate(src, time = radius * 2, transform=matrix().Scale((32 / 1024) * (radius + 3.5)), easing = easing_type)
 
 /obj/effect/shield/proc/disappear(radius = 3, easing_type = SINE_EASING|EASE_OUT)
-	animate(src, time = radius * 2, transform=matrix().Scale((32 / 1024) * 0.2), easing = easing_type)
+	animate(src, time = radius * 2, transform=matrix().Scale((32 / 1024) * 0.3), easing = easing_type)
 	QDEL_IN(src, radius * 2)
 	set_light_on(FALSE)
 
