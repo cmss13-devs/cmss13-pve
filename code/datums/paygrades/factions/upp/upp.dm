@@ -47,20 +47,20 @@
 	pay_multiplier = 1 //here comes the moneyyy
 
 //UPP Commandos
-/datum/paygrade/upp/uc1
-	paygrade = "UC1"
+/datum/paygrade/upp/uk1
+	paygrade = "UK1"
 	name = "Junior Kommando"
 	prefix = "JKdo."
 	pay_multiplier = 1.5
 
-/datum/paygrade/upp/uc2
-	paygrade = "UC2"
+/datum/paygrade/upp/uk2
+	paygrade = "UK2"
 	name = "2nd Kommando"
 	prefix = "2ndKdo."
 	pay_multiplier = 2
 
-/datum/paygrade/upp/uc3
-	paygrade = "UC3"
+/datum/paygrade/upp/uk3
+	paygrade = "UK3"
 	name = "1st Kommando"
 	prefix = "1stKdo."
 	pay_multiplier = 2.5
@@ -124,7 +124,7 @@
 //UPP Colonists
 
 /datum/paygrade/upp/constable
-	paygrade = "UC1"
+	paygrade = "UK1"
 	name = "Constable"
 	prefix = "Const."
 	pay_multiplier = 0.3

@@ -81,8 +81,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/hatchet, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigar/matchbook/brown, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigar/matchbook/brown, WEAR_IN_BACK)
-
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -93,7 +94,6 @@
 	var/maybejacket = prob(100) ? pick(/obj/item/clothing/suit/storage/marine/faction/UPP/jacket, /obj/item/clothing/suit/storage/marine/veteran/lamp) : null
 	if(maybejacket)
 		new_human.equip_to_slot_or_del(new maybejacket, WEAR_JACKET)
-
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp, WEAR_IN_JACKET)
@@ -110,7 +110,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/bug_spray, WEAR_IN_R_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 
 	var/random_gear = rand(1,5)
 	switch(random_gear)
@@ -542,7 +541,7 @@
 	assignment = JOB_UPP_COMMANDO
 	rank = JOB_UPP_COMMANDO
 	role_comm_title = "JKDO"
-	paygrade = "UC1"
+	paygrade = "UK1"
 	idtype = /obj/item/card/id/data
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_TSL, LANGUAGE_SPANISH, LANGUAGE_CHINESE)
 
@@ -588,7 +587,7 @@
 	assignment = JOB_UPP_COMMANDO_LEADER
 	rank = JOB_UPP_COMMANDO_LEADER
 	role_comm_title = "KDOTL"
-	paygrade = "UC3"
+	paygrade = "UK3"
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/commando/leader/load_gear(mob/living/carbon/human/new_human)
@@ -708,7 +707,7 @@
 	assignment = "People's Police Constable"
 	rank = JOB_UPP_POLICE
 	role_comm_title = "CONST"
-	paygrade = "UC1"
+	paygrade = "UK1"
 	idtype = /obj/item/card/id/data
 
 /datum/equipment_preset/upp/security/load_gear(mob/living/carbon/human/new_human)
