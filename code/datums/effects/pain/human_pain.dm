@@ -84,7 +84,8 @@
 	affected_mob.EyeBlur(2)
 	if(affected_mob.pain && affected_mob.pain.feels_pain)
 		affected_mob.TalkStutter(2)
-	affected_mob.apply_effect(2, WEAKEN)
+	affected_mob.KnockDown(2)
+	affected_mob.Stun(2)
 	if(!affected_mob.reagents || !affected_mob.reagents.has_reagent("inaprovaline"))
 		affected_mob.apply_damage(0.5, OXY)
 
