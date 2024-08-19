@@ -49,7 +49,7 @@
 	new_human.b_eyes = colors[eye_color][3]
 	if(new_human.gender == MALE)
 		new_human.h_style = pick("Undercut", "Partly Shaved", "Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "Medium Fade", "High Fade")
-		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
 	else
 		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top","Pixie Cut Left", "Pixie Cut Right", "Bun")
 	new_human.change_real_name(new_human, random_name)
