@@ -1394,6 +1394,7 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
+	storage_slots = 2
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 	time_to_unequip = 10
 	time_to_equip = 10
@@ -1404,7 +1405,7 @@
 	icon_state = "upp_coat_mp"
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service
-	name = "\improper UL4 service jacket"
+	name = "\improper UL2 service jacket"
 	desc = "A standard issue UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_officer"
 
