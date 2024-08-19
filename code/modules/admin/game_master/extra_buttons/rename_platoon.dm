@@ -64,3 +64,24 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 	log_admin("[key_name(renamer)] has renamed the platoon from [GLOB.main_platoon_name] to [name].")
 
 	GLOB.main_platoon_name = name
+
+
+/proc/change_dropship_camo(camo, mob/renamer)
+	var/icon_to_change
+
+	switch(camo)
+		if(DROPSHIP_CAMO_NAVY)
+			icon_to_change = 'icons/turf/dropship2.dmi'
+		if(DROPSHIP_CAMO_TAN)
+			icon_to_change = 'icons/turf/dropship.dmi'
+		if(DROPSHIP_CAMO_URBAN)
+			icon_to_change = 'icons/turf/dropship3.dmi'
+
+
+	for(var/turf/closed/shuttle/midway/midway_turfs in world)
+		if(istype(midway_turfs.loc, /area/shuttle/midway))
+			midway_turfs.icon = icon_to_change
+	for(var/obj/structure/shuttle/part/dropship1/midway_parts in world)
+		var/turf/turf_to_check = get_turf(midway_parts)
+		if(istype(turf_to_check.loc, /area/shuttle/midway))
+			midway_parts.icon = icon_to_change

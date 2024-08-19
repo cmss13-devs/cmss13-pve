@@ -244,8 +244,11 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	/// If this client has auto observe enabled, used by /datum/orbit_menu
 	var/auto_observe = TRUE
+
 	/// Name for platoon used when spawning as LT
 	var/platoon_name = "Sun Riders"
+	/// Dropship camo used when spawning as LT
+	var/dropship_camo = DROPSHIP_CAMO_TAN
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
@@ -441,6 +444,7 @@ var/const/MAX_SAVE_SLOTS = 10
 			dat += "<div id='column1'>"
 			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
 			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
+			dat += "<b>Dropship Camo:</b> <a href='?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -1263,6 +1267,12 @@ var/const/MAX_SAVE_SLOTS = 10
 						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 					else
 						platoon_name = raw_name
+
+				if ("dropship_camo")
+					var/new_camo = tgui_input_list(user, "Choose your platoon's dropship camo:", "Character Preferences", GLOB.dropship_camos)
+
+					if (new_camo)
+						dropship_camo = new_camo
 
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null

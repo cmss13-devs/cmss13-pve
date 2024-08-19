@@ -359,7 +359,7 @@
 	custom_cursors = sanitize_integer(custom_cursors, FALSE, TRUE, TRUE)
 	pref_special_job_options = sanitize_islist(pref_special_job_options, list())
 	pref_job_slots = sanitize_islist(pref_job_slots, list())
-	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : initial(platoon_name)
+	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	vars["fps"] = fps
 
 	if(remembered_key_bindings)
