@@ -124,7 +124,7 @@
 //UPP Colonists
 
 /datum/paygrade/upp/constable
-	paygrade = "UK1"
+	paygrade = "UC1"
 	name = "Constable"
 	prefix = "Const."
 	pay_multiplier = 0.3

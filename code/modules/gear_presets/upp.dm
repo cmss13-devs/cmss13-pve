@@ -707,7 +707,7 @@
 	assignment = "People's Police Constable"
 	rank = JOB_UPP_POLICE
 	role_comm_title = "CONST"
-	paygrade = "UK1"
+	paygrade = "UC1"
 	idtype = /obj/item/card/id/data
 
 /datum/equipment_preset/upp/security/load_gear(mob/living/carbon/human/new_human)
