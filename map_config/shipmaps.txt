@@ -30,7 +30,7 @@ map golden_arrow_RU
 endmap
 
 map desert_dam_fob
-	disabled
+endmap
 
 map golden_arrow_classic
 endmap
