@@ -44,12 +44,12 @@
 /area/lv624/lazarus/quartstorage)
 "C" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/shoes/veteran/pmc,
-/obj/item/clothing/shoes/veteran/pmc{
+/obj/item/clothing/shoes/marine/civilian,
+/obj/item/clothing/shoes/marine/civilian{
 	pixel_x = -3;
 	pixel_y = 4
 	},
-/obj/item/clothing/shoes/veteran/pmc{
+/obj/item/clothing/shoes/marine/civilian{
 	pixel_x = 4;
 	pixel_y = 3
 	},

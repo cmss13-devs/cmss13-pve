@@ -59552,7 +59552,7 @@
 	},
 /area/lv522/landing_zone_1/ceiling)
 "wHz" = (
-/obj/item/clothing/shoes/veteran/pmc{
+/obj/item/clothing/shoes/marine/civilian{
 	name = "steel toe boots"
 	},
 /obj/structure/machinery/light,

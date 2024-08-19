@@ -584,7 +584,7 @@
 	},
 /area/lv624/lazarus/hydroponics)
 "RT" = (
-/obj/item/clothing/shoes/veteran/pmc{
+/obj/item/clothing/shoes/marine/civilian{
 	armor_bio = 15;
 	armor_bomb = 5;
 	armor_bullet = 15;
