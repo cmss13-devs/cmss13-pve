@@ -53,7 +53,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m4a3"
 	item_state = "m4a3"
-	fire_sound = "88m4"
+	fire_sound = "vp70"
 	current_mag = /obj/item/ammo_magazine/pistol
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
@@ -110,12 +110,12 @@
 	name = "\improper VP70 M5 service pistol"
 	desc = "Standard issue semi-automatic USCM service pistol. Recently replacing the M4A3, it retains its predecessor's 9mm chambering but offers both a higher magazine capacity and a 3-round burst selector."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "88m4"
-	item_state = "88m4"
-	fire_sound = "88m4"
+	icon_state = "vp70"
+	item_state = "vp70"
+	fire_sound = "vp70"
 	firesound_volume = 20
-	reload_sound = 'sound/weapons/gun_88m4_reload.ogg'
-	unload_sound = 'sound/weapons/gun_88m4_unload.ogg'
+	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
+	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/vp70
 	force = 8
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
@@ -288,7 +288,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "np92"
 	item_state = "np92"
-	fire_sound = "88m4"
+	fire_sound = "vp70"
 	current_mag = /obj/item/ammo_magazine/pistol/np92
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
@@ -515,8 +515,8 @@
 	item_state = "es4"
 	fire_sound = 'sound/weapons/gun_es4.ogg'
 	firesound_volume = 20
-	reload_sound = 'sound/weapons/gun_88m4_reload.ogg'
-	unload_sound = 'sound/weapons/gun_88m4_unload.ogg'
+	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
+	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/es4
 	force = 8
 	muzzle_flash = "muzzle_flash_blue"

@@ -240,7 +240,7 @@
 	containername = "\improper shotgun flechette crate"
 	group = "Ammo"
 
-//------------------------For 88M4 ----------------
+//------------------------For vp70 ----------------
 
 /datum/supply_packs/ammo_vp70_mag_box_ap
 	name = "Magazine box (VP70, 16x mags)"

@@ -501,7 +501,7 @@
 		list("M4A3 Service Pistol", round(scale * 25), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM NONLETHAL AMMUNITION", -1, null, null),
-		list("88M4 Rubber Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol/vp70/rubber, VENDOR_ITEM_REGULAR),
+		list("VP70 Rubber Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol/vp70/rubber, VENDOR_ITEM_REGULAR),
 		list("M4A3 Rubber Magazine (9mm)", round(scale * 25), /obj/item/ammo_magazine/pistol/rubber, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", -1, null, null),

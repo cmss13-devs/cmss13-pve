@@ -405,7 +405,7 @@
 	name = "\improper PKL 'Double' Blaster"
 	desc = "Sold to civilians and private corporations, the Pflager Katsumata Series-L Blaster is a premium double barrel sidearm that can fire two rounds at the same time. Usually found in the hands of combat synths and replicants, this hand cannon is worth more than the combined price of three Emanators. Originally commissioned by the Wallace Corporation, it has since been released onto public market as a luxury firearm."
 	icon_state = "pkd_double"
-	item_state = "88m4" //placeholder
+	item_state = "vp70" //placeholder
 
 	attachable_allowed = list(
 		/obj/item/attachable/flashlight,
