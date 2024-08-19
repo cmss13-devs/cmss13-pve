@@ -2011,7 +2011,6 @@
 /area/desert_dam/building/bar/bar)
 "GY" = (
 /obj/item/trash/used_stasis_bag,
-/obj/effect/landmark/survivor_spawner/squad_leader,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin5"
 	},
