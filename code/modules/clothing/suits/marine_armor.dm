@@ -131,9 +131,8 @@
 
 /obj/item/clothing/suit/storage/marine/Destroy()
 	QDEL_NULL(light_holder)
-    QDEL_NULL(pockets) //add this line
+	QDEL_NULL(pockets)
 	return ..()
-
 /obj/item/clothing/suit/storage/marine/update_icon(mob/user)
 	var/image/I
 	armor_overlays["lamp"] = null
