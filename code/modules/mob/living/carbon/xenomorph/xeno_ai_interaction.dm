@@ -76,21 +76,32 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//    Poddoors/shutters    //
+//         PODDDOORS       //
 /////////////////////////////
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
-		return
-
-	if(!(stat & NOPOWER))
-		return
-
-	if(operating)
-		return
+		return INFINITY
 
 	if(unacidable)
-		return
+		return INFINITY
+
+	if(!(stat & NOPOWER))
+		return INFINITY
+
+	return DOOR_PENALTY
+
+
+/////////////////////////////
+//         SHUTTERS        //
+/////////////////////////////
+/obj/structure/machinery/door/poddoor/shutters/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return INFINITY
+
+	if(unacidable)
+		return INFINITY
 
 	return DOOR_PENALTY
 
@@ -104,7 +115,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return
 
 	if(locked || welded || isElectrified())
-		return INFINITY
+		return LOCKED_DOOR_PENALTY
 
 	if(isfacehugger(X))
 		return -1 // We LOVE going under doors!
