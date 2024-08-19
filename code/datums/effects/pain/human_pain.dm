@@ -58,7 +58,8 @@
 
 	var/mob/living/carbon/affected_mob = affected_atom
 	if(do_once)
-		affected_mob.apply_effect(3, WEAKEN)
+		affected_mob.KnockDown(3)
+		affected_mob.Stun(3)
 		do_once = FALSE
 
 	affected_mob.EyeBlur(2)
