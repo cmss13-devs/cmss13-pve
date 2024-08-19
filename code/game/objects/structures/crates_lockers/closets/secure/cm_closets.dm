@@ -350,7 +350,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/device/binoculars/range(src)
 	new /obj/item/clothing/suit/armor/bulletproof/badge(src)
 	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/shoes/dress(src)
+	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
 /obj/structure/closet/secure_closet/cmdcabinet

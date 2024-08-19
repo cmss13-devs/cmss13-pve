@@ -369,14 +369,7 @@
 	desc = "The crisp uniform of a Provost Officer."
 	icon_state = "provost"
 	worn_state = "provost"
-
 	specialty = "provost"
-
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/MP,
-		/obj/item/clothing/suit/armor/riot/marine,
-		/obj/item/clothing/suit/storage/jacket/marine/provost,
-	)
 
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
@@ -467,12 +460,6 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/veteran/pmc,
-		/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
-		/obj/item/clothing/suit/armor/vest/security,
-		/obj/item/clothing/suit/storage/hazardvest,
-	)
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
@@ -513,7 +500,6 @@
 	worn_state = "bear_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_NO_SENSORS
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/bear)
 
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
@@ -527,7 +513,6 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/marine/smartgunner/upp)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/boiler

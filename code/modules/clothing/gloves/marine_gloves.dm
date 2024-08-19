@@ -2,8 +2,8 @@
 //marine gloves
 
 /obj/item/clothing/gloves/marine
-	name = "marine combat gloves"
-	desc = "Standard USCMC issue combat gloves, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
+	name = "combat gloves"
+	desc = "Combat gloves, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 0
@@ -21,7 +21,7 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	var/adopts_squad_color = TRUE
+	var/adopts_squad_color = FALSE
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/hands_garb.dmi'
 
@@ -43,21 +43,18 @@
 
 /obj/item/clothing/gloves/marine/black
 	name = "marine black combat gloves"
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/brown
 	name = "marine brown combat gloves"
-	desc = "USCMC issue combat gloves, now in brown rather than black, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
+	desc = "Combat gloves, now in brown rather than black, reinforced against small sharp objects, and even insulated from electric shock. Very uncomfortable."
 	icon_state = "brown"
 	item_state = "brown"
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/medical
 	name = "marine medical combat gloves"
 	desc = "Special USCMC issue to hospital corpsmen or other field medical workers. Offers protection from shock and cuts while also improving one's grip on medical tools. Unlike the regular gloves, these are relatively comfortable to wear."
 	icon_state = "latex"
 	item_state = "lgloves"
-	adopts_squad_color = FALSE
 
 
 /obj/item/clothing/gloves/marine/officer
@@ -65,7 +62,6 @@
 	desc = "Shiny and impressive. They look expensive."
 	icon_state = "black"
 	item_state = "bgloves"
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/officer/chief
 	name = "chief officer gloves"
@@ -78,7 +74,6 @@
 	item_state = "ygloves"
 	siemens_coefficient = 0
 	permeability_coefficient = 0.01
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/techofficer/commander
 	name = "commanding officer's gloves"
@@ -112,7 +107,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/pve_mopp
 	name = "\improper M2 MOPP gloves"
@@ -133,7 +127,6 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran/upp
 	icon_state = "brown"
@@ -188,7 +181,6 @@
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_HARDCORE
 	unacidable = TRUE
-	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran/insulated/van_bandolier
 	name = "custom shooting gloves"
@@ -207,7 +199,6 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
-	adopts_squad_color = FALSE
 
 //=ROYAL MARINES=\\
 

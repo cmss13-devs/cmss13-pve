@@ -44,7 +44,7 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
-/obj/item/clothing/shoes/dress/commander{
+/obj/item/clothing/shoes/laceup{
 	pixel_y = -9
 	},
 /turf/open/floor/prison{

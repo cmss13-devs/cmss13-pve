@@ -36421,7 +36421,7 @@
 	pixel_x = -8;
 	pixel_y = 28
 	},
-/obj/item/clothing/shoes/dress{
+/obj/item/clothing/shoes/laceup{
 	pixel_y = 7
 	},
 /turf/open/floor/carpet,

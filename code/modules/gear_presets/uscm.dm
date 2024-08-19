@@ -13,13 +13,13 @@
 	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
 	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/dress)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_under = list(/obj/item/clothing/under/marine/dress)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress)
 	dress_hat = list(/obj/item/clothing/head/marine/peaked)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	var/auto_squad_name
 	///Allows the squad to be set even if spawned on admin z level
 	var/ert_squad = FALSE
@@ -397,7 +397,7 @@
 	assignment = JOB_SQUAD_SPECIALIST
 	rank = JOB_SQUAD_SPECIALIST
 	paygrade = "ME3"
-	role_comm_title = "Spc"
+	role_comm_title = "SPC"
 	skills = /datum/skills/specialist
 
 	minimap_icon = "spec"
@@ -478,6 +478,7 @@
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	role_comm_title ="SNITR"
 
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
@@ -515,7 +516,7 @@
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrade = "ME5"
-	role_comm_title = "SqSgt"
+	role_comm_title = "SQSGT"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
 
@@ -545,7 +546,7 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrade = "ME6"
-	role_comm_title = "aSL"
+	role_comm_title = "ASL"
 	skills = /datum/skills/tl/recon
 
 /datum/equipment_preset/uscm/tl/forecon/load_gear(mob/living/carbon/human/new_human)
@@ -596,7 +597,7 @@
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	role_comm_title = "PLTSGT"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -721,7 +722,7 @@
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrade = "ME7"
-	role_comm_title = "PltSgt"
+	role_comm_title = "PLTSGT"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -867,7 +868,7 @@
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
 	paygrade = "ME3"
-	role_comm_title = "ComTech"
+	role_comm_title = "COMTECH"
 	skills = /datum/skills/combat_engineer
 
 	minimap_icon = "engi"
@@ -1004,7 +1005,7 @@
 	assignment = JOB_SQUAD_SPECIALIST
 	rank = JOB_SQUAD_SPECIALIST
 	paygrade = "ME3"
-	role_comm_title = "Spc"
+	role_comm_title = "SPC"
 	skills = /datum/skills/specialist
 
 	minimap_icon = "spec"
@@ -1074,7 +1075,7 @@
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrade = "ME5"
-	role_comm_title = "SqSgt"
+	role_comm_title = "SQSGT"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
@@ -1131,7 +1132,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Marine Raider"
 	rank = JOB_MARINE_RAIDER
-	role_comm_title = "Op."
+	role_comm_title = "SOF"
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	skills = /datum/skills/commando/deathsquad
 	auto_squad_name = SQUAD_SOF
@@ -1208,7 +1209,7 @@
 	name = "Marine Raider Team Leader (!DEATHSQUAD!)"
 	assignment = JOB_MARINE_RAIDER_SL
 	rank = JOB_MARINE_RAIDER_SL
-	role_comm_title = "TL."
+	role_comm_title = "SOFTL"
 	paygrade = "MO1"
 	skills = /datum/skills/commando/deathsquad/leader
 
@@ -1235,7 +1236,7 @@
 	name = "Marine Raider Officer (!DEATHSQUAD!)"
 	assignment = JOB_MARINE_RAIDER_CMD
 	rank = JOB_MARINE_RAIDER_CMD
-	role_comm_title = "CMD."
+	role_comm_title = "SOFCMD"
 	paygrade = "MO3"
 	skills = /datum/skills/commando/deathsquad/officer
 
@@ -1291,7 +1292,7 @@
 	name = "Marine Raider Team Leader"
 	assignment = JOB_MARINE_RAIDER_SL
 	rank = JOB_MARINE_RAIDER_SL
-	role_comm_title = "TL."
+	role_comm_title = "SOFTL"
 	paygrade = "MO1"
 	skills = /datum/skills/commando/deathsquad/leader
 

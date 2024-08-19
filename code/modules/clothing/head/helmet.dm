@@ -1162,6 +1162,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS
 
+
+/obj/item/clothing/head/uppcap/boonie
+	name = "\improper UL3 UPP hat"
+	desc = "UPP headgear issued to soldiers when they're not expected to face combat, and may be requested by officers and above."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_boonie"
+
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2 UPP cap"
 	desc = "UPP civilian headgear. It's of poor quality, and isn't expected to last all that long, however for as long as it's whole, it appears quite stylish."

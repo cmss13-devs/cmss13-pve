@@ -434,7 +434,7 @@
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/black,
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran/pmc,
-		WEAR_FEET = /obj/item/clothing/shoes/veteran/pmc/knife,
+		WEAR_FEET = /obj/item/clothing/shoes/marine/rmc,
 		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
 	)
 
@@ -456,7 +456,7 @@
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/botanic_leather,
-		WEAR_FEET = /obj/item/clothing/shoes/dress,
+		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 		WEAR_R_HAND = /obj/item/clipboard,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
@@ -505,7 +505,7 @@
 
 /datum/equipment_preset/synth/working_joe/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mt(new_human), WEAR_L_EAR)

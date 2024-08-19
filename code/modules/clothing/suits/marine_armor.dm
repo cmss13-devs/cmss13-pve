@@ -92,7 +92,6 @@
 	var/flags_marine_armor = ARMOR_SQUAD_OVERLAY|ARMOR_LAMP_OVERLAY
 	var/specialty = "M3 pattern marine" //Same thing here. Give them a specialty so that they show up correctly in vendors. speciality does NOTHING if you have NO_NAME_OVERRIDE
 	w_class = SIZE_HUGE
-	uniform_restricted = list(/obj/item/clothing/under/marine)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	time_to_unequip = 20
 	time_to_equip = 20
@@ -261,7 +260,6 @@
 
 /obj/item/clothing/suit/storage/marine/rto/intel
 	name = "\improper XM4 pattern intelligence officer armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/marine/officer/intel)
 	specialty = "XM4 pattern intel"
 
 /obj/item/clothing/suit/storage/marine/rto/forecon
@@ -302,7 +300,6 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/mp)
 	specialty = "M2 pattern MP"
 	item_state_slots = list(WEAR_JACKET = "mp_armor")
 	black_market_value = 20
@@ -313,7 +310,6 @@
 	desc = "A well-crafted suit of M3 Pattern Armor typically distributed to Wardens. Useful for letting your men know who is in charge."
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
-	uniform_restricted = list(/obj/item/clothing/under/marine/warden)
 	specialty = "M3 pattern warden MP"
 	item_state_slots = list(WEAR_JACKET = "warden")
 
@@ -321,7 +317,6 @@
 	icon_state = "warrant_officer"
 	name = "\improper M3 pattern chief MP armor"
 	desc = "A well-crafted suit of M3 Pattern Armor typically distributed to Chief MPs. Useful for letting your men know who is in charge."
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/warrant)
 	specialty = "M3 pattern chief MP"
 	item_state_slots = list(WEAR_JACKET = "warrant_officer")
 	black_market_value = 30
@@ -332,7 +327,6 @@
 	icon_state = "general"
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/general)
 	specialty = "M3 pattern general"
 	item_state_slots = list(WEAR_JACKET = "general")
 	w_class = SIZE_MEDIUM
@@ -343,7 +337,6 @@
 	icon_state = "officer"
 	storage_slots = 3
 	flags_atom = null
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/rank/chief_medical_officer, /obj/item/clothing/under/marine/dress)
 	specialty = "M2 pattern officer"
 	item_state_slots = list(WEAR_JACKET = "officer")
 
@@ -358,7 +351,6 @@
 	storage_slots = 3
 	flags_atom = NO_SNOW_TYPE
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
-	uniform_restricted = list(/obj/item/clothing/under/marine, /obj/item/clothing/under/rank/qm_suit)
 	specialty = "M3 pattern captain"
 	item_state_slots = list(WEAR_JACKET = "co_officer")
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_PONCHO)
@@ -461,7 +453,6 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP, /obj/item/clothing/under/marine/veteran/UPP/medic, /obj/item/clothing/under/marine/veteran/UPP/engi)
 	allowed = list(
 		/obj/item/tank/emergency_oxygen,
 		/obj/item/device/flashlight,
@@ -504,7 +495,6 @@
 	name = "\improper M3 pattern tanker armor"
 	desc = "Armored vest sometimes worn by USCMC armor crews. More bulky than a flak vest or service jacket, but substantially improved protection should the wearer need to dismount."
 	icon_state = "tanker"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/tanker)
 	specialty = "M3 pattern tanker"
 	storage_slots = 2
 
@@ -573,7 +563,6 @@
 	time_to_unequip = 0.5 SECONDS
 	time_to_equip = 1 SECONDS
 	siemens_coefficient = 0.7
-	uniform_restricted = null
 
 /obj/item/clothing/suit/storage/marine/light/vest/dcc
 	name = "\improper M3-VL pattern flak vest"
@@ -601,7 +590,6 @@
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	time_to_unequip = 0.5 SECONDS
 	time_to_equip = 1 SECONDS
-	uniform_restricted = null
 
 /obj/item/clothing/suit/storage/marine/light/synvest/grey
 	icon_state = "VL_syn"
@@ -1083,6 +1071,26 @@
 	flags_marine_armor = ARMOR_LAMP_OVERLAY
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
 
+/obj/item/clothing/suit/storage/marine/veteran/lamp
+	name = "\improper PLU lamp rig"
+	icon_state = "lamp_rig"
+	desc = "A lightweight rig designed to support a shoulder lamp."
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST
+	flags_cold_protection = BODY_FLAG_CHEST
+	min_cold_protection_temperature = null
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	storage_slots = 1
+	time_to_unequip = 10
+	time_to_equip = 10
+
 /obj/item/clothing/suit/storage/marine/veteran/pmc
 	name = "\improper M4 pattern PMC armor"
 	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind."
@@ -1114,7 +1122,6 @@
 		/obj/item/tool/crew_monitor,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc)
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light
@@ -1154,7 +1161,6 @@
 	name = "\improper M4 pattern PMC leader armor"
 	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
 	icon_state = "officer_armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/leader)
 	item_state_slots = list(WEAR_JACKET = "officer_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/sniper
@@ -1216,7 +1222,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/commando)
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
 	unacidable = TRUE
 
@@ -1234,7 +1239,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCK_KNOCKDOWN
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/commando)
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
 	unacidable = TRUE
 
@@ -1251,7 +1255,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/bear)
 
 /obj/item/clothing/suit/storage/marine/veteran/dutch
 	name = "\improper D2 armored vest"
@@ -1266,7 +1269,6 @@
 	storage_slots = 2
 	light_range = 7
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/dutch)
 
 /obj/item/clothing/suit/storage/marine/veteran/van_bandolier
 	name = "safari jacket"
@@ -1279,7 +1281,6 @@
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	storage_slots = 2
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/van_bandolier)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -1332,7 +1333,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP, /obj/item/clothing/under/marine/veteran/UPP/medic, /obj/item/clothing/under/marine/veteran/UPP/engi)
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/support
 	name = "\improper UL6 personal armor"
@@ -1392,7 +1392,6 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	storage_slots = 3
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP/officer)
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/kapitan
 	name = "\improper UL4 senior officer jacket"
@@ -1408,39 +1407,34 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
 	storage_slots = 4
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP/officer)
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/mp
-	name = "\improper UL4 camouflaged jacket"
-	desc = "A lightweight jacket, issued to troops when they're not expected to engage in combat. Some level of shrapnel and low velocity gunfire protection is provided by para-aramid inserts, though not much."
-	icon_state = "upp_coat_mp"
-	slowdown = SLOWDOWN_ARMOR_NONE
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-	armor_melee = CLOTHING_ARMOR_LOW //wear actual armor if you go into combat
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	storage_slots = 4
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/UPP)
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket
+	name = "\improper UH4 camouflaged jacket"
+	icon_state = "upp_coat"
+	desc = "A standard issue UPP military jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = CLOTHING_ARMOR_VERYLOW
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	storage_slots = 2
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
+	time_to_unequip = 10
+	time_to_equip = 10
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/ivan
-	name = "\improper UH4 Camo Jacket"
-	desc = "An experimental heavily armored variant of the UL4 given to only the most elite units... usually."
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS|BODY_FLAG_HANDS|BODY_FLAG_FEET
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	storage_slots = 2
-
+	name = "\improper UH4-P camouflaged jacket"
+	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_mp"
 
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
@@ -1455,7 +1449,6 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/freelancer)
 
 //this one is for CLF
 /obj/item/clothing/suit/storage/militia
@@ -1479,7 +1472,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/colonist)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -1639,7 +1631,6 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
 	item_state_slots = list(WEAR_JACKET = "mercenary_heavy_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/mercenary/heavy
@@ -1674,7 +1665,6 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/mercenary)
 	item_state_slots = list(WEAR_JACKET = "mercenary_miner_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/mercenary/support
@@ -1778,7 +1768,6 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/uaac/tis)
 
 //================//UNITED AMERICAS RIOT CONTROL\\=====================\\
 //=======================================================================\\
@@ -1797,7 +1786,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT  // it's lighter
-	uniform_restricted = list(/obj/item/clothing/under/marine/ua_riot)
 	flags_atom = NO_SNOW_TYPE
 
 //==================War Correspondent==================\\
@@ -1894,7 +1882,6 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	uniform_restricted = list(/obj/item/clothing/under/marine/cbrn)
 
 /obj/item/clothing/suit/storage/marine/cbrn/advanced
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY

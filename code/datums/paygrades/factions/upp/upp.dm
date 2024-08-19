@@ -119,3 +119,12 @@
 	name = "Army General"
 	prefix = "Gen."
 	pay_multiplier = 7
+
+
+//UPP Colonists
+
+/datum/paygrade/upp/constable
+	paygrade = "UC1"
+	name = "Constable"
+	prefix = "Const."
+	pay_multiplier = 0.3

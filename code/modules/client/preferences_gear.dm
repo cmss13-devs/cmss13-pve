@@ -1061,7 +1061,7 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/misc/brown_boots
 	display_name = "brown combat boots"
-	path = /obj/item/clothing/shoes/marine/brown
+	path = /obj/item/clothing/shoes/marine/civilian/brown
 	cost = 2
 
 /datum/gear/misc/brown_gloves
