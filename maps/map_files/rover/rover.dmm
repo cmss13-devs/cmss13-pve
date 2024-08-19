@@ -4668,7 +4668,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "Ty" = (
-/obj/structure/dropship_equipment/rappel_system,
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},

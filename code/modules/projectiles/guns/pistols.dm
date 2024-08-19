@@ -236,7 +236,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "c_deagle"
 	item_state = "c_deagle"
-	base_gun_icon = "c_deagle"
 	current_mag = /obj/item/ammo_magazine/pistol/heavy/super/highimpact
 	black_market_value = 100
 
@@ -257,7 +256,6 @@
 	desc = "A Desert Eagle anodized in gold and adorned with rosewood grips. The living definition of ostentatious, it's flashy, unwieldy, tremendously heavy, and kicks like a mule. But as a symbol of power, there's nothing like it."
 	icon_state = "g_deagle"
 	item_state = "g_deagle"
-	base_gun_icon = "g_deagle"
 
 //-------------------------------------------------------
 //NP92 pistol
@@ -588,13 +586,13 @@
 	name = "\improper 88 Mod 4 combat pistol"
 	desc = "Standard issue USCM firearm. Also found in the hands of Weyland-Yutani PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "88m4"
-	item_state = "88m4"
+	icon_state = "_88m4" // to comply with css standards
+	item_state = "_88m4"
 	fire_sound = "88m4"
 	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_88m4_reload.ogg'
 	unload_sound = 'sound/weapons/gun_88m4_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/pistol/mod88
+	current_mag = /obj/item/ammo_magazine/pistol/mod88/normalpoint
 	force = 8
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	attachable_allowed = list(
@@ -626,7 +624,7 @@
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
 /obj/item/weapon/gun/pistol/mod88/training

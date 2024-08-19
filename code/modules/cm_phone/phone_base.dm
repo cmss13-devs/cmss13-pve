@@ -11,7 +11,7 @@
 	var/phone_icon
 
 	/// Whether or not the phone is receiving calls or not. Varies between on/off or forcibly on/off.
-	var/do_not_disturb = PHONE_DO_NOT_DISTURB_OFF
+	var/do_not_disturb = PHONE_DND_OFF
 
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
@@ -45,10 +45,10 @@
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/structure/phone_base/hidden
-	do_not_disturb = PHONE_DO_NOT_DISTURB_FORCED
+	do_not_disturb = PHONE_DND_FORCED
 
 /obj/structure/phone_base/no_dnd
-	do_not_disturb = PHONE_DO_NOT_DISTURB_FORBIDDEN
+	do_not_disturb = PHONE_DND_FORBIDDEN
 
 //rotary desk phones (need a touch tone handset at some point)
 /obj/structure/phone_base/rotary
@@ -57,7 +57,7 @@
 	desc = "The finger plate is a little stiff."
 
 /obj/structure/phone_base/rotary/no_dnd
-	do_not_disturb = PHONE_DO_NOT_DISTURB_FORBIDDEN
+	do_not_disturb = PHONE_DND_FORBIDDEN
 
 /obj/structure/phone_base/touchtone
 	name = "touch-tone telephone"

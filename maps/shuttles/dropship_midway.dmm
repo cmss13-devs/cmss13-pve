@@ -31,7 +31,7 @@
 /obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "dD" = (
 /turf/closed/shuttle/midway/transparent{
@@ -117,7 +117,9 @@
 	},
 /area/shuttle/midway)
 "jy" = (
-/obj/effect/attach_point/crew_weapon/midway,
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 8
+	},
 /obj/structure/machinery/light{
 	dir = 8;
 	pixel_x = -14
@@ -157,7 +159,7 @@
 /obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "mE" = (
 /obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
@@ -206,7 +208,9 @@
 	name = "\improper Midway";
 	icon_state = "105"
 	},
-/obj/effect/attach_point/electronics/midway,
+/obj/effect/attach_point/electronics/midway{
+	attach_id = 5
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "ro" = (
@@ -309,7 +313,9 @@
 	},
 /area/shuttle/midway)
 "xy" = (
-/obj/effect/attach_point/crew_weapon/midway,
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 9
+	},
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
@@ -332,7 +338,7 @@
 /obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "yO" = (
 /turf/closed/shuttle/midway{
@@ -380,7 +386,9 @@
 	},
 /area/shuttle/midway)
 "Cm" = (
-/obj/effect/attach_point/fuel/midway,
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 10
+	},
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "28"
 	},
@@ -471,7 +479,7 @@
 /obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
 	name = "\improper Midway"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/midway)
 "HY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
@@ -483,7 +491,9 @@
 	},
 /area/shuttle/midway)
 "Id" = (
-/obj/effect/attach_point/crew_weapon/midway,
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -525,7 +535,7 @@
 /area/shuttle/midway)
 "Kw" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Lr" = (
 /turf/closed/shuttle/midway{
 	icon_state = "48"
@@ -541,6 +551,16 @@
 "LZ" = (
 /obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
 	name = "\improper Midway"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Mw" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Midway";
+	icon_state = "105"
+	},
+/obj/effect/attach_point/electronics/midway{
+	attach_id = 6
 	},
 /turf/template_noop,
 /area/shuttle/midway)
@@ -666,7 +686,8 @@
 /area/shuttle/midway)
 "XH" = (
 /obj/effect/attach_point/fuel/midway{
-	pixel_x = -32
+	pixel_x = -32;
+	attach_id = 11
 	},
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "33"
@@ -796,7 +817,7 @@ Kw
 Kw
 "}
 (6,1,1) = {"
-ok
+Mw
 Pc
 go
 Gf

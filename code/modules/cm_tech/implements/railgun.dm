@@ -6,7 +6,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 
 /obj/effect/landmark/railgun_computer
 	name = "Railgun computer landmark"
-	desc = "A computer with an orange interface, it's idly blinking, awaiting a password."
+	desc = "A computer with an orange interface, it's idly blinking, awaiting a password. The higher your altitude, the faster your reload, and slower the shots hit."
 
 /obj/effect/landmark/railgun_computer/Initialize(mapload, ...)
 	. = ..()
@@ -26,6 +26,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 
 /obj/structure/machinery/computer/railgun
 	name = "railgun computer"
+	desc = "A computer with an orange interface, fires the standard railgun shells. The higher your altitude, the faster your reload, and slower the shots hit."
 
 	icon_state = "terminal"
 
@@ -36,13 +37,15 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 
 	var/max_ammo = 10
 	var/ammo = 10
-	var/ammo_recharge_time = 30 SECONDS
+	var/ammo_recharge_time = 30 SECONDS	//How long it takes to get a new shot to your ammo counter
+	var/ammo_delay = 10 SECONDS			//How long it takes to hit the earth
 
-	var/fire_cooldown = 1.5 SECONDS
+	var/fire_cooldown = 1.5 SECONDS		//Cooldown between shots
 	var/next_fire = 0
 
 	var/power = 900
 	var/range = 2
+	var/warning_color = "#0000ff"
 
 	/// Computer and Railgun can only be used if this variable is cleared
 	var/locked = TRUE
@@ -102,13 +105,13 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 		return FALSE
 
 	if(locked)
-		to_chat(H, SPAN_WARNING("Railgun Safeties are on, unable to fire!"))
+		to_chat(H, SPAN_WARNING("Safeties are on, unable to fire!"))
 		return FALSE
 
 	if(istype(T, /turf/open/space)) // No firing into space
 		return FALSE
 
-	if(protected_by_pylon(TURF_PROTECTION_OB, T))
+	if(protected_by_pylon(TURF_PROTECTION_MORTAR, T))
 		to_chat(H, SPAN_WARNING("[icon2html(src)] This area is too reinforced to fire into."))
 		return FALSE
 
@@ -149,12 +152,13 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 
 	next_fire = world.time + fire_cooldown
 
-	addtimer(CALLBACK(src, PROC_REF(recharge_ammo)), ammo_recharge_time, TIMER_UNIQUE)
+	addtimer(CALLBACK(src, PROC_REF(recharge_ammo)), ammo_recharge_time*2-GLOB.ship_alt, TIMER_UNIQUE)
 	ammo--
 
 	to_chat(H, SPAN_NOTICE("[icon2html(src)] Firing shell. [SPAN_BOLD("([ammo]/[max_ammo] shells left).")]"))
 
 	var/obj/effect/warning/railgun/warning_zone = new(T)
+	warning_zone.color = warning_color
 
 	var/image/I = image(warning_zone.icon, warning_zone.loc, warning_zone.icon_state, warning_zone.layer)
 	I.color = warning_zone.color
@@ -162,7 +166,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	H.client.images += I
 	playsound_client(H.client, 'sound/machines/railgun/railgun_shoot.ogg')
 
-	addtimer(CALLBACK(src, PROC_REF(land_shot), T, H.client, warning_zone, I), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(land_shot), T, H.client, warning_zone, I), ammo_delay*GLOB.ship_alt)
 
 /obj/structure/machinery/computer/railgun/proc/land_shot(turf/T, client/firer, obj/effect/warning/droppod/warning_zone, image/to_remove)
 	if(warning_zone)
@@ -269,3 +273,47 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 
 	return COMPONENT_TURF_ALLOW_MOVEMENT
 
+
+
+/obj/structure/machinery/computer/railgun/gatling
+	name = "orbital gatling computer"
+	desc = "The younger sister to the railgun, this one is way weaker, however, it fires significantly faster. The higher your altitude, the faster your reload, and slower the shots hit."
+	max_ammo = 100
+	ammo = 100
+	ammo_recharge_time = 1 SECONDS
+	fire_cooldown = 0.1 SECONDS
+	ammo_delay = 3 SECONDS
+	power = 50
+	range = 1
+	warning_color = "#00ff00"
+
+
+/obj/structure/machinery/computer/railgun/orbital
+	name = "orbital computer"
+	desc = "An Orbital cannon with a very long recharge time. The higher your altitude, the faster your reload, and slower the shots hit."
+	max_ammo = 1
+	ammo = 1
+	ammo_recharge_time = 1 SECONDS
+	fire_cooldown = 10 MINUTES	//So you know how long it takes betweenS
+	ammo_delay = 30 SECONDS
+	power = 1500
+	range = 15
+	warning_color = "#ff0000"
+
+/obj/structure/machinery/computer/railgun/napalm
+	name = "orbital napalm computer"
+	desc = "An Orbital cannon with a very long recharge time. The higher your altitude, the faster your reload, and slower the shots hit."
+	max_ammo = 5
+	ammo = 5
+	ammo_recharge_time = 45 SECONDS
+	ammo_delay = 5 SECONDS
+	warning_color = "#ff9100"
+
+/obj/structure/machinery/computer/railgun/napalm/land_shot(turf/T, client/firer, obj/effect/warning/droppod/warning_zone, image/to_remove)
+	if(warning_zone)
+		qdel(warning_zone)
+
+	if(firer)
+		firer.images -= to_remove
+		playsound(T, 'sound/machines/railgun/railgun_impact.ogg', sound_range = 75)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), create_cause_data("railgun", firer.mob), 5, T, BURN_TIME_TIER_5 + 5, BURN_LEVEL_TIER_2, FLAMESHAPE_DEFAULT, FIRE_VARIANT_TYPE_B)

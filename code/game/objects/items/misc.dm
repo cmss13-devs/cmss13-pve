@@ -292,6 +292,16 @@
 	new /obj/item/evidencebag(src)
 	new /obj/item/evidencebag(src)
 
+/obj/item/parachute
+	name = "parachute"
+	desc = "A surprisingly small yet bulky pack with just enough safety straps to make RnD pass health and safety. The label says the pack comes with two parachutes - main and reserve, but you doubt the pack can fit even one."
+	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon_state = "parachute_pack"
+	item_state = "parachute_pack"
+	w_class = SIZE_MASSIVE
+	flags_equip_slot = SLOT_BACK
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
+
 /obj/item/rappel_harness
 	name = "rappel harness"
 	desc = "A simple, uncomfortable rappel harness with just enough safety straps to make RnD pass health and safety. It comes with an in-built descender, but has no pouches for ammunition."
@@ -318,7 +328,7 @@
 		to_chat(user, SPAN_WARNING("No shuttle detected in lower orbit, aborting extraction."))
 		return
 
-	var/obj/structure/dropship_equipment/rappel_system/rapsys = locate() in shuttle.equipments
+	var/obj/structure/dropship_equipment/paradrop_system/rapsys = locate() in shuttle.equipments
 	if(!rapsys)
 		to_chat(user, SPAN_WARNING("No rappel system detected in shuttle, aborting extraction."))
 		return
@@ -356,7 +366,7 @@
 	H.equip_to_slot_if_possible(src, WEAR_WAIST)
 	try_extract(H)
 
-/obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/rappel_system/system)
+/obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/paradrop_system/system)
 	flick("rappel_hatch_opening", system)
 	user.pixel_x = 0
 	user.pixel_y = 0
