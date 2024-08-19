@@ -55,8 +55,6 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
 
-	idtype = /obj/item/card/id/dogtag
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/militia
@@ -412,7 +410,7 @@
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/officer, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/officer, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_IN_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/t73, WEAR_WAIST)

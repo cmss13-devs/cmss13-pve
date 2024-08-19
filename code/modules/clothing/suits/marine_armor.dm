@@ -1378,37 +1378,6 @@
 		/obj/item/ammo_magazine/pkp,
 		)
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/officer
-	name = "\improper UL4 officer jacket"
-	desc = "A lightweight jacket, issued to officers of the UPP's military. Slightly protective from incoming damage, best off with proper armor however."
-	icon_state = "upp_coat_officer"
-	slowdown = SLOWDOWN_ARMOR_NONE
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-	armor_melee = CLOTHING_ARMOR_LOW //wear actual armor if you go into combat
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	storage_slots = 3
-
-/obj/item/clothing/suit/storage/marine/faction/UPP/kapitan
-	name = "\improper UL4 senior officer jacket"
-	desc = "A lightweight jacket, issued to senior officers of the UPP's military. Made of high-quality materials, even going as far as having the ranks and insignia of the Kapitan and their Company emblazoned on the shoulders and front of the jacket. Slightly protective from incoming damage, best off with proper armor however."
-	icon_state = "upp_coat_kapitan"
-	slowdown = SLOWDOWN_ARMOR_NONE
-	armor_melee = CLOTHING_ARMOR_LOW //wear actual armor if you go into combat
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
-	storage_slots = 4
-
-
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"
 	icon_state = "upp_coat"
@@ -1421,20 +1390,24 @@
 	armor_bullet = CLOTHING_ARMOR_VERYLOW
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
+	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	storage_slots = 2
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 	time_to_unequip = 10
 	time_to_equip = 10
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp
 
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp
 	name = "\improper UH4-P camouflaged jacket"
 	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_mp"
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service
+	name = "\improper UL4 service jacket"
+	desc = "A standard issue UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_officer"
 
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
