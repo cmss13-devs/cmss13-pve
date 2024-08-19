@@ -43,7 +43,20 @@
 	var/special_ammo = 0
 	var/special_ammo_max = 0 //so we can count it or refill
 
+	var/list/fire_modes_list = list("automatic", "manual")
+
+	var/fire_mode = "automatic"
 	var/fire_disabled = FALSE
+
+/mob/living/simple_animal/hostile/drg/ranged/proc/change_fire_mode()
+	var/choose = tgui_input_list(usr, "Choose what to do!", "Weapons Control", fire_modes_list)
+	switch(choose)
+		if("automatic")
+			fire_mode = "automatic"
+			return TRUE
+		if("manual")
+			fire_mode = "manual"
+			return TRUE
 
 /mob/living/simple_animal/hostile/drg/ranged/proc/change_ammunition() //doesn't do anything by itself, used for different robo-guns
 	var/projectile = tgui_input_list(usr, "Choose wanted weapon!", "Weapons Control", weapons)
@@ -53,9 +66,29 @@
 		if("basic")
 			return TRUE
 
+/mob/living/simple_animal/hostile/drg/ranged/click(atom/A, list/mods)
+	if(get_dist(A, src) >= 3 && fire_mode == "manual")
+		if(COOLDOWN_FINISHED(src, ranged_cooldown) && !damaged && !fire_disabled)
+
+			if(using_special_ammo && special_ammo <= 0)
+				to_chat(usr, SPAN_DANGER("OUT OF SPECIAL AMMUNITION!"))
+				return FALSE
+
+			var/datum/ammo/projectile_type = GLOB.ammo_list[projectile_to_fire]
+
+			var/obj/projectile/projectile = new /obj/projectile(loc, create_cause_data(src))
+			projectile.generate_bullet(projectile_type)
+			projectile.permutated += src
+			projectile.fire_at(A, src, src, projectile_type.max_range, projectile_type.shell_speed)
+			if(using_special_ammo)
+				special_ammo -= 1
+				to_chat(usr, SPAN_DANGER("[special_ammo]/[special_ammo_max] AMMUNITION POINTS LEFT!"))
+			COOLDOWN_START(src, ranged_cooldown, cooldown_duration)
+	..()
+
 /mob/living/simple_animal/hostile/drg/ranged/UnarmedAttack(atom/A, proximity, click_parameters)
 	if(A == src)
-		var/list/options = list("Disable weapons", "Change Primary")
+		var/list/options = list("Disable Weapons", "Change Primary", "Change Mode")
 		var/choosed_thing = tgui_input_list(usr, "Choose what to do!", "Weapons Control", options)
 		if(!choosed_thing)
 			return FALSE
@@ -72,12 +105,15 @@
 			if("Change Primary")
 				change_ammunition()
 				return TRUE
+			if("Change Mode")
+				change_fire_mode()
+				return TRUE
 	..()
 
 /mob/living/simple_animal/hostile/drg/ranged/Life(delta_time)
 	..()
 
-	if(COOLDOWN_FINISHED(src, ranged_cooldown) && !damaged && !fire_disabled)
+	if(COOLDOWN_FINISHED(src, ranged_cooldown) && !damaged && !fire_disabled && fire_mode == "automatic")
 		for(var/mob/living/target in orange(attack_range, src))
 			if(target.faction != src.faction && target.stat != DEAD)
 				possible_targets += target
