@@ -3,7 +3,7 @@
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
 	languages = list(LANGUAGE_ENGLISH)
-
+	idtype = /obj/item/card/id/dogtag
 	utility_under = list(/obj/item/clothing/under/marine)
 	utility_hat = list(/obj/item/clothing/head/cmcap)
 	utility_gloves = list(/obj/item/clothing/gloves/marine)
