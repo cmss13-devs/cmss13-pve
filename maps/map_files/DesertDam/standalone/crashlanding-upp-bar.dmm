@@ -425,7 +425,6 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/obj/effect/landmark/survivor_spawner/upp_medic,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
@@ -784,7 +783,6 @@
 	},
 /area/desert_dam/building/bar/bar)
 "nB" = (
-/obj/effect/landmark/survivor_spawner/upp/soldier,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin5"
 	},
@@ -1712,7 +1710,6 @@
 	},
 /area/desert_dam/building/bar/bar)
 "Cn" = (
-/obj/effect/landmark/survivor_spawner/upp/soldier,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
@@ -2203,7 +2200,6 @@
 	},
 /area/desert_dam/exterior/valley/bar_valley_dam)
 "Lo" = (
-/obj/effect/landmark/survivor_spawner/upp/soldier,
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -2347,7 +2343,6 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/effect/landmark/survivor_spawner/upp_sapper,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
 	},
@@ -2834,7 +2829,6 @@
 /obj/item/prop/colony/usedbandage{
 	dir = 1
 	},
-/obj/effect/landmark/survivor_spawner/upp_specialist,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin5"
 	},
