@@ -79,3 +79,8 @@
 2024-08-19:
   Doubleumc:
   - bugfix: fixed WeaponStats TGUI
+2024-08-20:
+  Doubleumc:
+  - bugfix: Fixed the 88 Mod 4 pistol's holster sprite.
+  - admin: bitfields for MODE_NO_XENO_EVOLVE, MODE_HARDCORE_PERMA, and MODE_NO_JOIN_AS_XENO
+      now work
