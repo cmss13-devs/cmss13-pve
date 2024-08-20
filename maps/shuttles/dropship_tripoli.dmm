@@ -666,6 +666,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},

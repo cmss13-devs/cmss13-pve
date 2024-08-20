@@ -133,6 +133,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},

@@ -48,15 +48,9 @@
 	},
 /area/shuttle/tornado)
 "gJ" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow/typhoon{
 	dir = 8;
 	pixel_x = 24
-	},
-/obj/structure/platform_decoration{
-	dir = 4
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -99,19 +93,22 @@
 	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
+"ji" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
 "jt" = (
 /obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "102"
 	},
 /turf/template_noop,
-/area/shuttle/tornado)
-"kg" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
 /area/shuttle/tornado)
 "kY" = (
 /obj/structure/bed/chair/dropship/passenger{
@@ -367,6 +364,15 @@
 	icon_state = "70"
 	},
 /turf/template_noop,
+/area/shuttle/tornado)
+"Ih" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
 /area/shuttle/tornado)
 "Iw" = (
 /obj/structure/machinery/light/double{
@@ -840,11 +846,11 @@ yE
 et
 Ym
 KY
-cH
 Oq
 IU
 Iw
 IU
+Eh
 gx
 wd
 Zk
@@ -863,10 +869,10 @@ ZD
 ZD
 ZD
 ZD
-ZD
 IZ
 OQ
 Bf
+cH
 NB
 cH
 Kp
@@ -883,10 +889,10 @@ cH
 cH
 Wk
 iH
-Eh
 iz
 cH
-kg
+Ih
+ZD
 sC
 ZD
 Pq
@@ -903,9 +909,9 @@ ZD
 ZD
 ZD
 ZD
-ZD
 wN
 oo
+ji
 gJ
 lm
 cH
@@ -920,11 +926,11 @@ IT
 et
 rN
 XO
-cH
 kY
 wP
 FC
 wP
+Eh
 lM
 ZR
 Rw
