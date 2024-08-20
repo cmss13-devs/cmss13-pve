@@ -2519,4 +2519,5 @@
 #include "void-marines\code\playable_factions\pmc_presets.dm"
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
+#include "void-marines\code\playable_factions\faction_paygrades\freelancer.dm"
 // END_INCLUDE
