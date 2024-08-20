@@ -1,4 +1,0 @@
-author: "Doubleumc"
-delete-after: True
-changes:
-  - admin: "bitfields for MODE_NO_XENO_EVOLVE, MODE_HARDCORE_PERMA, and MODE_NO_JOIN_AS_XENO now work"
