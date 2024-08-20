@@ -4,6 +4,7 @@
 	var/suffix
 	var/port_id
 	var/shuttle_id = "SHOULD NEVER EXIST"
+	var/elevator_network
 
 	var/description
 	var/prerequisites
