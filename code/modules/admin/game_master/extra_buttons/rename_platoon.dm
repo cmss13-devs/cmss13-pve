@@ -67,21 +67,40 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 
 /proc/change_dropship_camo(camo, mob/renamer)
-	var/icon_to_change
+	var/turf_icon
+	var/cargo_icon
+	var/cockpit_icon
 
 	switch(camo)
-		if(DROPSHIP_CAMO_NAVY)
-			icon_to_change = 'icons/turf/dropship2.dmi'
 		if(DROPSHIP_CAMO_TAN)
-			icon_to_change = 'icons/turf/dropship.dmi'
+			turf_icon = 'icons/turf/dropship.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship1_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship1_pilot.dmi'
+		if(DROPSHIP_CAMO_NAVY)
+			turf_icon = 'icons/turf/dropship2.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
 		if(DROPSHIP_CAMO_URBAN)
-			icon_to_change = 'icons/turf/dropship3.dmi'
-
+			turf_icon = 'icons/turf/dropship3.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
+		if(DROPSHIP_CAMO_JUNGLE)
+			turf_icon = 'icons/turf/dropship4.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship4_pilot.dmi'
 
 	for(var/turf/closed/shuttle/midway/midway_turfs in world)
 		if(istype(midway_turfs.loc, /area/shuttle/midway))
-			midway_turfs.icon = icon_to_change
-	for(var/obj/structure/shuttle/part/dropship1/midway_parts in world)
+			midway_turfs.icon = turf_icon
+	for(var/obj/structure/shuttle/part/midway/midway_parts in world)
 		var/turf/turf_to_check = get_turf(midway_parts)
 		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			midway_parts.icon = icon_to_change
+			midway_parts.icon = turf_icon
+	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in world)
+		var/turf/turf_to_check = get_turf(cargo)
+		if(istype(turf_to_check.loc, /area/shuttle/midway))
+			cargo.icon = cargo_icon
+	for(var/obj/structure/machinery/door/airlock/hatch/cockpit/cockpit in world)
+		var/turf/turf_to_check = get_turf(cockpit)
+		if(istype(turf_to_check.loc, /area/shuttle/midway))
+			cockpit.icon = cockpit_icon

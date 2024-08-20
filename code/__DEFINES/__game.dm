@@ -557,3 +557,4 @@
 #define DROPSHIP_CAMO_TAN "Tan"
 #define DROPSHIP_CAMO_NAVY "Navy"
 #define DROPSHIP_CAMO_URBAN "Urban"
+#define DROPSHIP_CAMO_JUNGLE "Jungle"

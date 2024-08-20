@@ -248,7 +248,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	/// Name for platoon used when spawning as LT
 	var/platoon_name = "Sun Riders"
 	/// Dropship camo used when spawning as LT
-	var/dropship_camo = DROPSHIP_CAMO_TAN
+	var/dropship_camo = DROPSHIP_CAMO_JUNGLE
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys

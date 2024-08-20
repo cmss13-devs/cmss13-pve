@@ -213,7 +213,7 @@ GLOBAL_REFERENCE_LIST_INDEXED(hair_gradient_list, /datum/sprite_accessory/hair_g
 GLOBAL_REFERENCE_LIST_INDEXED(yautja_hair_styles_list, /datum/sprite_accessory/yautja_hair, name)
 	//Dropship camos
 
-GLOBAL_LIST_INIT(dropship_camos, list(DROPSHIP_CAMO_TAN, DROPSHIP_CAMO_NAVY, DROPSHIP_CAMO_URBAN))
+GLOBAL_LIST_INIT(dropship_camos, list(DROPSHIP_CAMO_TAN, DROPSHIP_CAMO_NAVY, DROPSHIP_CAMO_URBAN, DROPSHIP_CAMO_JUNGLE))
 
 	//Backpacks
 var/global/list/backbaglist = list("Backpack", "Satchel")
