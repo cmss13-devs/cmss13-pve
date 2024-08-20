@@ -1162,7 +1162,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS
 
-
 /obj/item/clothing/head/uppcap/boonie
 	name = "\improper UL3 UPP hat"
 	desc = "UPP headgear issued to soldiers when they're not expected to face combat, and may be requested by officers and above."
@@ -1188,6 +1187,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper UL3 UPP peaked cap"
 	desc = "UPP headgear issued to Kapitans and above. It is made of high-quality materials, and has the officers rank in gold placed upon the front of the cap."
 	icon_state = "upp_peaked"
+
+/obj/item/clothing/head/uppcap/peaked/police
+	name = "\improper UL3 PaP peaked cap"
+	desc = "UPP headgear issued to constables of the People's Police."
+	icon_state = "upp_peaked_police"
 
 /obj/item/clothing/head/uppcap/ushanka
 	name = "\improper UL8 UPP ushanka"

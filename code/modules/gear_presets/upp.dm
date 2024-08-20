@@ -705,9 +705,11 @@
 	rank = JOB_UPP_POLICE
 	role_comm_title = "CONST"
 	paygrade = "UC1"
-	idtype = /obj/item/card/id/data
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/security/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
@@ -715,7 +717,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/bomber/grey, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/bomber/grey/upp, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/revolver, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/UPP/full, WEAR_WAIST)

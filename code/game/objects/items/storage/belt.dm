@@ -428,11 +428,11 @@
 
 /obj/item/storage/belt/security/MP/UPP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
+	new /obj/item/ammo_magazine/revolver/upp(src)
+	new /obj/item/ammo_magazine/revolver/upp(src)
 
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"

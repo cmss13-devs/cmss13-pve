@@ -60,7 +60,7 @@
 	name = "identification holo-badge"
 	desc = "A slice of encoded compressed fiber glass. Used for identification and access control."
 	icon_state = "id"
-	item_state = "card-id"
+	item_state = "red-id"
 	var/list/access
 	var/faction = FACTION_NEUTRAL
 	var/list/faction_group
@@ -445,12 +445,12 @@
 	name = "CORSAT administration code"
 	desc = "A disk of data containing one of the CORSAT administration authentication codes necessary to lift the biohazard lockdown."
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	unacidable = 1
 
 /obj/item/card/data/prison
 	name = "prison lockdown administration code"
 	desc = "A disk of data containing one of the prison station administration authentication codes necessary to lift the security lockdown."
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	unacidable = 1
