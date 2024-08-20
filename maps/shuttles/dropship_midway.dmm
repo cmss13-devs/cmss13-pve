@@ -39,7 +39,7 @@
 /area/shuttle/midway)
 "dE" = (
 /turf/closed/shuttle/midway{
-	icon_state = "42"
+	icon_state = "36"
 	},
 /area/shuttle/midway)
 "eu" = (
