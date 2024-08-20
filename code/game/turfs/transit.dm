@@ -249,6 +249,18 @@
 	shuttle_tag = DROPSHIP_CYCLONE
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/tornado
+	shuttle_tag = DROPSHIP_TORNADO
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/typhoon
+	shuttle_tag = DROPSHIP_TYPHOON
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/tripoli
+	shuttle_tag = DROPSHIP_TRIPOLI
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 

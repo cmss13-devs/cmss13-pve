@@ -151,8 +151,32 @@
 	dwidth = 4
 	dheight = 8
 
-/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
-	return /turf/open/space/transit/dropship/cyclone
+/obj/docking_port/mobile/marine_dropship/tornado
+	name = "HLD-Tornado"
+	id = DROPSHIP_TORNADO
+	width = 11
+	height = 18
+
+	dwidth = 5
+	dheight = 9
+
+/obj/docking_port/mobile/marine_dropship/typhoon
+	name = "CMD-Typhoon"
+	id = DROPSHIP_TYPHOON
+	width = 11
+	height = 18
+
+	dwidth = 5
+	dheight = 9
+
+/obj/docking_port/mobile/marine_dropship/tripoli
+	name = "Tripoli"
+	id = DROPSHIP_TRIPOLI
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
@@ -368,3 +392,15 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/typhoon
+	name = "CMD-Typhoon"
+	shuttle_id = DROPSHIP_TYPHOON
+
+/datum/map_template/shuttle/tornado
+	name = "HLD-Tornado"
+	shuttle_id = DROPSHIP_TORNADO
+
+/datum/map_template/shuttle/tripoli
+	name = "Tripoli"
+	shuttle_id = DROPSHIP_TRIPOLI
