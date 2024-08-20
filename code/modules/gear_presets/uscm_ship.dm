@@ -575,16 +575,13 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
-/datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_VERYLOW
-
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
 	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
-
+	new_human.nutrition = NUTRITION_VERYLOW
 	if(!new_human.client)
 		return
 
@@ -622,9 +619,6 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
-
-/datum/equipment_preset/uscm_ship/so/upp/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_VERYLOW
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 	paygrade = "UO1"
