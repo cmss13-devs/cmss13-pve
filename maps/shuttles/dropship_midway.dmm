@@ -571,8 +571,8 @@
 	},
 /area/shuttle/midway)
 "PP" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit,
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/four,
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
