@@ -4,7 +4,6 @@
 	var/suffix
 	var/port_id
 	var/shuttle_id = "SHOULD NEVER EXIST"
-	var/elevator_network
 
 	var/description
 	var/prerequisites
@@ -127,14 +126,14 @@
 	elevator_network = "Requisitions"
 
 /datum/map_template/shuttle/golden_arrow/vehicleone
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
 	name = "Vehicle Elevator One"
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
 
 /datum/map_template/shuttle/golden_arrow/vehicletwo
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
 	name = "Vehicle Elevator Two"
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
 
 /datum/map_template/shuttle/golden_arrow/cargo
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	name = "Cargo Elevator"
 	elevator_network = "garrow_cargo"
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO

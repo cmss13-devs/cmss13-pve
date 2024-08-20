@@ -11320,7 +11320,7 @@
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/prep_hallway)
 "EL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14480,7 +14480,7 @@
 /turf/open/floor/almayer/edge{
 	dir = 1
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/prep_hallway)
 "Ng" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16365,7 +16365,7 @@
 /turf/open/floor/almayer/edge{
 	dir = 1
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/prep_hallway)
 "Sh" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 2;
@@ -17828,7 +17828,7 @@
 /turf/open/floor/almayer/edge{
 	dir = 1
 	},
-/area/golden_arrow/supply)
+/area/golden_arrow/prep_hallway)
 "We" = (
 /obj/structure/bed{
 	can_buckle = 0
