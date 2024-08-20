@@ -280,7 +280,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	desc = "The younger sister to the railgun, this one is way weaker, however, it fires significantly faster. The higher your altitude, the faster your reload, and slower the shots hit."
 	max_ammo = 100
 	ammo = 100
-	ammo_recharge_time = 5 SECONDS
+	ammo_recharge_time = 2 SECONDS
 	fire_cooldown = 0.1 SECONDS
 	ammo_delay = 3 SECONDS
 	power = 50

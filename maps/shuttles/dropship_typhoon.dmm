@@ -31,7 +31,8 @@
 /area/shuttle/tornado)
 "fJ" = (
 /obj/structure/shuttle/part/typhoon/transparent{
-	icon_state = "99a"
+	icon_state = "99a";
+	layer = 2.97
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
@@ -72,11 +73,13 @@
 	},
 /area/shuttle/tornado)
 "ix" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
 	pixel_y = 25
+	},
+/obj/structure/bed/chair/dropship/passenger/folded{
+	dir = 4;
+	buckling_y = 3;
+	pixel_y = 3
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin7"
@@ -85,6 +88,15 @@
 "iz" = (
 /turf/open/shuttle/dropship{
 	icon_state = "floor8"
+	},
+/area/shuttle/tornado)
+"iH" = (
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
 "jt" = (
@@ -99,6 +111,17 @@
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"kY" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
 "lm" = (
@@ -190,7 +213,7 @@
 /obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "3"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/tornado)
 "vO" = (
 /obj/structure/shuttle/part/typhoon/transparent{
@@ -397,12 +420,20 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "Kp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
 	id = "aft_door";
 	name = "\improper Typhoon cargo door"
 	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin14"
 	},
 /area/shuttle/tornado)
 "Kw" = (
@@ -438,9 +469,7 @@
 /obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "4"
 	},
-/turf/closed/shuttle/dropship2/tornado{
-	icon_state = "4"
-	},
+/turf/template_noop,
 /area/shuttle/tornado)
 "MB" = (
 /turf/closed/shuttle/typhoon/transparent{
@@ -469,6 +498,9 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
 	},
@@ -484,18 +516,14 @@
 	icon_state = "p_stair_full";
 	pixel_y = 22
 	},
-/obj/structure/machinery/computer/dropship_weapons/tornado{
-	icon = 'icons/obj/structures/machinery/computer.dmi';
-	icon_state = "cameras";
-	layer = 3.1;
-	pixel_x = 8;
-	pixel_y = 7;
-	density = 0
-	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
 	pixel_x = 8;
 	layer = 5
+	},
+/obj/structure/machinery/computer/dropship_weapons/typhoon/small{
+	pixel_x = 8;
+	pixel_y = 8
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -523,9 +551,16 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "Pq" = (
-/obj/docking_port/mobile/marine_dropship/typhoon,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
 /turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+	icon_state = "rasputin14"
 	},
 /area/shuttle/tornado)
 "Qi" = (
@@ -628,9 +663,10 @@
 	},
 /area/shuttle/tornado)
 "VM" = (
-/turf/closed/shuttle/dropship2/tornado{
+/obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "9"
 	},
+/turf/template_noop,
 /area/shuttle/tornado)
 "VV" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -638,13 +674,17 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"Xv" = (
-/obj/structure/machinery/computer/shuttle/dropship/flight{
-	icon_state = "cameras_old";
-	pixel_y = 7;
-	icon = 'icons/obj/structures/machinery/computer.dmi';
-	pixel_x = 8
+"Wk" = (
+/obj/docking_port/mobile/marine_dropship/typhoon,
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
 	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Xv" = (
 /obj/structure/phone_base{
 	dir = 4;
 	pixel_x = -19;
@@ -656,11 +696,12 @@
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1;
-	pixel_x = 8
+	pixel_x = 6;
+	pixel_y = 8
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/small{
-	pixel_y = 7;
-	pixel_x = 8
+	pixel_y = 16;
+	pixel_x = 6
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -840,15 +881,15 @@ Qs
 iz
 cH
 cH
-cH
-Pq
+Wk
+iH
 Eh
 iz
 cH
 kg
 sC
 ZD
-cH
+Pq
 aX
 "}
 (7,1,1) = {"
@@ -868,7 +909,7 @@ oo
 gJ
 lm
 cH
-cH
+Pq
 aX
 "}
 (8,1,1) = {"
@@ -880,7 +921,7 @@ et
 rN
 XO
 cH
-wP
+kY
 wP
 FC
 wP

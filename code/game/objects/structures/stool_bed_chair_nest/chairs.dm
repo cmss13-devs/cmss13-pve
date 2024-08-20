@@ -368,8 +368,11 @@
 	icon_state = "hotseat"
 
 /obj/structure/bed/chair/dropship/passenger/folded
-	chair_state = DROPSHIP_CHAIR_FOLDED
-	icon_state = "hotseat_new_folded"
+
+/obj/structure/bed/chair/dropship/passenger/folded/Initialize()
+	. = ..()
+	fold_down()
+
 
 /obj/structure/bed/chair/dropship/passenger/BlockedPassDirs(atom/movable/mover, target_dir, height = 0, air_group = 0)
 	if(chair_state == DROPSHIP_CHAIR_UNFOLDED && istype(mover, /obj/vehicle/multitile) && !is_animating)
@@ -417,7 +420,7 @@
 			chair_state = DROPSHIP_CHAIR_BROKEN
 		else
 			chair_state = DROPSHIP_CHAIR_FOLDED
-		addtimer(VARSET_CALLBACK(src, icon_state, "hotseat_new_folded"), 5) // animation length
+		addtimer(VARSET_CALLBACK(src, icon_state, "hotseat_new_folded"), 22) // animation length
 
 /obj/structure/bed/chair/dropship/passenger/shuttle_chair/fold_down(break_it = 1)
 	if(chair_state == DROPSHIP_CHAIR_UNFOLDED)

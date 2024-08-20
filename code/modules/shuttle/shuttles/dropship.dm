@@ -145,7 +145,7 @@
 /obj/docking_port/mobile/marine_dropship/cyclone
 	name = "Cyclone"
 	id = DROPSHIP_CYCLONE
-	width = 11
+	width = 9
 	height = 18
 
 	dwidth = 4
@@ -163,7 +163,7 @@
 /obj/docking_port/mobile/marine_dropship/typhoon
 	name = "CMD-Typhoon"
 	id = DROPSHIP_TYPHOON
-	width = 9
+	width = 11
 	height = 18
 
 	dwidth = 5
