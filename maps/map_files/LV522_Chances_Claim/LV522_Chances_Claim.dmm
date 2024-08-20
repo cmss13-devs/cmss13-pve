@@ -37917,7 +37917,7 @@
 /area/lv522/landing_zone_1/ceiling)
 "oVL" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/gloves/marine/insulated,
+/obj/item/clothing/gloves/marine,
 /obj/item/tool/weldingtool{
 	pixel_x = -4
 	},

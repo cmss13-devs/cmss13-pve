@@ -157,6 +157,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE1"
@@ -219,6 +220,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	paygrade = "UE3"
@@ -486,7 +488,7 @@
 		back_item = /obj/item/storage/backpack/marine/medic/upp
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
 	paygrade = "UE3"
 
@@ -541,6 +543,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
@@ -627,6 +630,7 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	paygrade = "UE6"
@@ -891,7 +895,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_R_HAND)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)

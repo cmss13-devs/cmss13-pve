@@ -80,7 +80,7 @@ everything bellow isn't used or out of place.
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/lawyer/bluejacket(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/bowlerhat(new_human), WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/fake_mustache(new_human), WEAR_FACE)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/black(new_human), WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/beer_pack(new_human.back), WEAR_IN_BACK)
 		if(3) // Botanist

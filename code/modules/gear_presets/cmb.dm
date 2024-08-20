@@ -306,7 +306,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/folder/blue, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
 	//holding
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clipboard, WEAR_L_HAND)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)
@@ -360,7 +360,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
 	//holding
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/sensor, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical, WEAR_FACE)

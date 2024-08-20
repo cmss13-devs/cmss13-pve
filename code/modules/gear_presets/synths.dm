@@ -345,7 +345,7 @@
 		WEAR_IN_BACK = /obj/item/reagent_container/food/drinks/bottle/grenadine,
 		WEAR_IN_BACK = /obj/item/reagent_container/food/drinks/bottle/rum,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/lawyer/bluejacket,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/black,
+		WEAR_HANDS = /obj/item/clothing/gloves/marine,
 		WEAR_R_HAND = /obj/item/storage/beer_pack,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,

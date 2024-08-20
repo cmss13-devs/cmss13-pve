@@ -2,7 +2,7 @@
 
 /obj/item/clothing/shoes/marine
 	name = "\improper USCM combat boots"
-	desc = "A pair of standard issue black USCM combat boots."
+	desc = "A pair of standard issue black United States Colonial Marine combat boots."
 	icon_state = "marine"
 	item_state = "marine"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
@@ -40,18 +40,24 @@
 
 /obj/item/clothing/shoes/marine/jungle
 	icon_state = "marine_jungle"
-	desc = "A pair of standard issue USCM jungle boots. Don't go walkin' slow, the devil's on the loose."
+	desc = "A pair of standard issue United States Colonial Marine jungle boots. Don't go walkin' slow, the devil's on the loose."
 
 /obj/item/clothing/shoes/marine/jungle/knife
 	knife_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
-	desc = "A pair of standard issue brown UPP Naval Infantry combat boots."
-	icon_state = "marine_brown"
+	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
+	icon_state = "marine"
 	knife_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp_knife
+	knife_type = /obj/item/attachable/bayonet/upp
+
+/obj/item/clothing/shoes/marine/upp/guard
+	name = "\improper UPP combat boots"
+	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
+	icon_state = "marine_brown"
 	knife_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/pve_mopp
@@ -64,7 +70,7 @@
 
 /obj/item/clothing/shoes/marine/rmc
 	name = "\improper RMC combat boots"
-	desc = "A pair of standard issue black RMC combat boots."
+	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
 /obj/item/clothing/shoes/marine/rmc/New()
 	..()

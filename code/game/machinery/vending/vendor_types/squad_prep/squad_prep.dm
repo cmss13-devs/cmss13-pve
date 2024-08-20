@@ -166,7 +166,7 @@
 		list("STANDARD EQUIPMENT", -1, null, null, null),
 		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp, VENDOR_ITEM_REGULAR),
 		list("UPP Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
-		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/upp, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("UM4 Pattern Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/UPP, VENDOR_ITEM_REGULAR),
 
@@ -178,8 +178,8 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("UM5 Personal Armor", round(scale * 15), /obj/item/clothing/suit/storage/marine/faction/UPP, VENDOR_ITEM_REGULAR),
-		list("UL6 Personal Light Armor", round(scale * 10), /obj/item/clothing/suit/storage/marine/faction/UPP/support, VENDOR_ITEM_REGULAR),
+		list("Type 5 carapace armor", round(scale * 15), /obj/item/clothing/suit/storage/marine/faction/UPP, VENDOR_ITEM_REGULAR),
+		list("Type 3 vest armor", round(scale * 10), /obj/item/clothing/suit/storage/marine/faction/UPP/support, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
@@ -224,7 +224,6 @@
 		list("M1A1 Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/v2, VENDOR_ITEM_REGULAR),
 		list("Prescription ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/prescription, VENDOR_ITEM_REGULAR),
 		list("Marine RPG glasses", round(scale * 10), /obj/item/clothing/glasses/regular, VENDOR_ITEM_REGULAR),
-		list("M5 Integrated Gas Mask", round(scale * 10), /obj/item/prop/helmetgarb/helmet_gasmask, VENDOR_ITEM_REGULAR),
 		list("M10 Helmet Netting", round(scale * 10), /obj/item/prop/helmetgarb/netting, VENDOR_ITEM_REGULAR),
 		list("M10 Helmet Rain Cover", round(scale * 10), /obj/item/prop/helmetgarb/raincover, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
@@ -515,12 +514,11 @@
 
 		list("CLOTHING", -1, null, null),
 		list("Cap", round(scale * 5), /obj/item/clothing/head/uppcap, VENDOR_ITEM_REGULAR),
-		list("Cap (tan)", round(scale * 5), /obj/item/clothing/head/uppcap/civi, VENDOR_ITEM_REGULAR),
 		list("Ushanka", round(scale * 5), /obj/item/clothing/head/uppcap/ushanka, VENDOR_ITEM_REGULAR),
-		list("Ushanka (tan)", round(scale * 5), /obj/item/clothing/head/uppcap/ushanka/civi, VENDOR_ITEM_REGULAR),
-		list("Beret", round(scale * 5), /obj/item/clothing/head/uppcap/beret, VENDOR_ITEM_REGULAR),
+		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
 		list("Scarf", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan, VENDOR_ITEM_REGULAR),
+		list("Scarf", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
 		list("Neck warmer", round(scale * 5), /obj/item/clothing/mask/tornscarf/green, VENDOR_ITEM_REGULAR),
 		)
 

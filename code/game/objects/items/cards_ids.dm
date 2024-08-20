@@ -27,7 +27,7 @@
 	var/function = "storage"
 	var/data = "null"
 	var/special = null
-	item_state = "card-id"
+	item_state = "red-id"
 
 /obj/item/card/data/verb/label(t as text)
 	set name = "Label Disk"
@@ -44,7 +44,7 @@
 /obj/item/card/data/clown
 	name = "\proper the coordinates to clown planet"
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	layer = OBJ_LAYER
 	level = 2
 	desc = "This card contains coordinates to the fabled Clown Planet. Handle with care."
@@ -160,6 +160,7 @@
 	name = "identification holo-lanyard"
 	desc = "A crude holo-lanyard. As cheap as they come."
 	icon_state = "lanyard"
+	item_state = "blue-id"
 
 /obj/item/card/id/silver
 	name = "identification holo-badge"

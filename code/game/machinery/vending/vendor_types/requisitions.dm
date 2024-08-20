@@ -409,7 +409,6 @@
 
 		list("GLOVES", -1, null, null),
 		list("Marine Combat Gloves", 40, /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Black Combat Gloves", 40, /obj/item/clothing/gloves/marine/black, VENDOR_ITEM_REGULAR),
 
 		list("RADIO", -1, null, null),
 		list("Alpha Squad Radio Encryption Key", 5, /obj/item/device/encryptionkey/alpha, VENDOR_ITEM_REGULAR),

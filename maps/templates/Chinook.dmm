@@ -9876,7 +9876,7 @@
 /area/adminlevel/chinook)
 "KK" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/gloves/marine/insulated,
+/obj/item/clothing/gloves/marine,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -10341,7 +10341,7 @@
 "Mv" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/tool,
-/obj/item/clothing/gloves/marine/insulated,
+/obj/item/clothing/gloves/marine,
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/cargo)
 "Mw" = (

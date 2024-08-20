@@ -1107,8 +1107,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 // UPP Are very powerful against bullets (marines) but middling against melee (xenos)
 /obj/item/clothing/head/helmet/marine/veteran/UPP
-	name = "\improper UM4 helmet"
-	desc = "Using highly skilled manufacturing techniques this UM4 helmet manages to be very resistant to ballistics damage, at the cost of its huge weight causing an extreme stress on the occupant's head that will most likely cause neck problems."
+	name = "\improper Type 5 helmet"
+	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. This instance lacks the attachable visor to properly seal the helmet, which is typically foregone in favour of better visibility."
 	icon_state = "upp_helmet"
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
@@ -1129,8 +1129,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/protection_on = TRUE
 
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
-	name = "\improper UH7 helmet"
-	desc = "Like the UM4, this helmet is very resistant to ballistic damage, but both its flaws and benefits have been doubled. The few UPP Zhergeants that have lived past age 30 have all needed to retire from terminal neck problems caused from the stress of wearing this helmet."
+	name = "\improper Type 6 helmet"
+	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design has kept it from outright replacing the Type 5, instead being utilized mostly by heavy machinegunners."
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
@@ -1168,6 +1168,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "UPP headgear issued to soldiers when they're not expected to face combat, and may be requested by officers and above."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
+
+/obj/item/clothing/head/uppcap/beret/naval
+	name = "\improper UL4 UPP Naval Infantry beret"
+	desc = "A Naval Infantry beret worn by the UPP's equivalent of the USCM. Wear it with pride."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_beret_naval"
 
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2 UPP cap"

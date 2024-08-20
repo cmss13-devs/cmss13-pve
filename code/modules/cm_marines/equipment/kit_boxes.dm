@@ -411,7 +411,7 @@
 /obj/item/storage/box/kit/mini_engineer/fill_preset_inventory()
 	new /obj/item/storage/backpack/marine/engineerpack(src)
 	new /obj/item/pamphlet/skill/engineer(src)
-	new /obj/item/clothing/gloves/marine/insulated(src)
+	new /obj/item/clothing/gloves/marine(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/storage/pouch/tools/pfc(src)

@@ -612,16 +612,19 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/officer(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/platoon, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp_knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
@@ -889,7 +892,7 @@
 	skills = /datum/skills/commander
 
 	utility_hat = list(/obj/item/clothing/head/beret/cm)
-	utility_gloves = list(/obj/item/clothing/gloves/marine/techofficer/commander)
+	utility_gloves = list(/obj/item/clothing/gloves/marine)
 	utility_extra = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/beret/cm/tan)
 
 	service_hat = list(/obj/item/clothing/head/beret/cm)
