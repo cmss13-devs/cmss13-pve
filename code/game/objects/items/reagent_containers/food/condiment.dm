@@ -236,3 +236,74 @@
 /obj/item/reagent_container/food/condiment/coldsauce/Initialize()
 	. = ..()
 	reagents.add_reagent("frostoil", 60)
+
+/obj/item/reagent_container/food/condiment/juice
+	name = "Juice Packet"
+	desc = "A small packet of dehydrated fruit-juice powder. Mix with water for a 'tasty' beverage. This one appears to be missing the label indicating what flavor it is however."
+	w_class = SIZE_TINY
+	icon_state = "monkeycubewrap"			///Placeholder until actual sprite done, remember to swap out exception on line 89 too
+	amount_per_transfer_from_this = 1
+	volume = 6
+
+/obj/item/reagent_container/food/condiment/juice/orange
+	name = "Orange Juice Packet"
+	desc = "A small packet of dehydrated orange-juice powder. Mix with water for a 'tasty' beverage."
+
+/obj/item/reagent_container/food/condiment/juice/orange/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_orange_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/apple
+	name = "Apple Juice Packet"
+	desc = "A small packet of dehydrated apple-juice powder. Mix with water for a 'tasty' beverage."
+
+/obj/item/reagent_container/food/condiment/juice/apple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_apple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/watermelon
+	name = "Watermelon Juice Packet"
+	desc = "A small packet of dehydrated watermelon-juice powder. Mix with water for a 'tasty' beverage."
+
+/obj/item/reagent_container/food/condiment/juice/watermelon/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_watermelon_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/grape
+	name = "Grape Juice Packet"
+	desc = "A small packet of dehydrated grape-juice powder. Mix with water for a 'tasty' beverage."
+
+/obj/item/reagent_container/food/condiment/juice/grape/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_grape_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/pineapple
+	name = "Pineapple Juice Packet"
+	desc = "A small packet of dehydrated pineapple-juice powder. Mix with water for a 'tasty' beverage."
+
+/obj/item/reagent_container/food/condiment/juice/pineapple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_pineapple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/egg
+	name = "Powdered Egg Packet"
+	desc = "A small packet of dehydrated egg-whites and egg-yolk powder. Mix with water for a passable alternative to the real deal."
+	icon_state = "monkeycubewrap"	///Placeholder until actual sprite done, ideally this and milk get different ones from the juices
+	volume = 10
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/egg/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_egg_powder", 12)
+
+/obj/item/reagent_container/food/condiment/juice/milk
+	name = "Dehydrated Milk Packet"
+	desc = "A small packet of dehydrated milk powder. Mix with water for a passable alternative to actual milk."
+	icon_state = "monkeycubewrap"	///Placeholder until actual sprite done
+	amount_per_transfer_from_this = 1
+	volume = 10
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/milk/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_milk_powder", 12)
