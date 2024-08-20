@@ -231,6 +231,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = "Machinegunner"
+	rank = JOB_SQUAD_SMARTGUN_UPP
 	paygrade = "UE4"
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
@@ -238,12 +239,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
+
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -278,6 +274,8 @@
 	paygrade = "UE5"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	assignment = JOB_SQUAD_TEAM_LEADER
+	rank = JOB_SQUAD_TEAM_LEADER
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	role_comm_title = "SQSGT"

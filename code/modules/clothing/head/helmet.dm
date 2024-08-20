@@ -1149,18 +1149,17 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS
+	flags_inventory = null
 
 /obj/item/clothing/head/uppcap/boonie
 	name = "\improper UL3 UPP hat"
@@ -1199,6 +1198,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "upp_ushanka"
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"
+	flags_inv_hide = HIDEEARS
 
 /obj/item/clothing/head/uppcap/ushanka/verb/flaps_up()
 	set name = "Tie Up/Down"
@@ -1226,6 +1226,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "upp_ushanka_civi"
 	item_state = "upp_ushanka_civi"
 	original_state = "upp_ushanka_civi"
+	flags_inv_hide = HIDEEARS
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"
