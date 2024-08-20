@@ -132,6 +132,12 @@
 		if(M.fire_stacks <= 0)
 			M.ExtinguishMob()
 
+/datum/reagent/water/on_mob_life(mob/living/M)
+	. = ..()
+	if(ishuman(M) && volume >= 100 && prob(25))
+		var/mob/living/carbon/human/human = M
+		human.vomit()
+
 /datum/reagent/water/holywater
 	name = "Holy Water"
 	id = "holywater"
