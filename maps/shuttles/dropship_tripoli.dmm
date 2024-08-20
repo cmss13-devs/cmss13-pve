@@ -23,10 +23,6 @@
 	},
 /area/shuttle/tripoli)
 "bN" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "22";
-	name = "\improper Tripoli"
-	},
 /turf/closed/shuttle/tripoli{
 	icon_state = "22"
 	},
