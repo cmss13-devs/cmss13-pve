@@ -22,7 +22,7 @@
 		if(JOB_SQUAD_MEDIC)
 			hud_icon_state = "med"
 	if(hud_icon_state)
-		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "pmc_[hud_icon_state]")
+		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[hud_icon_state]")
 
 	var/datum/squad/squad = H.assigned_squad
 	if(istype(squad, /datum/squad/marine/lancer))
