@@ -41,7 +41,7 @@
 	)
 	flags_atom = FPRINT|CONDUCT
 	flags_inventory = BLOCKSHARPOBJ
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROT
@@ -437,17 +437,15 @@
 	flags_atom = NO_SNOW_TYPE
 	icon_state = "8fancy"
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy
-
 /obj/item/clothing/suit/storage/marine/smartgunner/upp
-	name = "\improper Type 5-H UPP armor"
-	desc = "Experimental variant of the standard body armor of the UPP Naval Infantry, the Type 5 provides excellent defense against everything up to and including peer service rifle rounds, putting it slightly ahead of the lighter M3 pattern armor in service with the USCM. This variant has included the less popular arm plates providing total coverage as well as an experimental harness for the QYJ-72-I smartmachinegun. Another aspect of the armor is the sealed neckguard designed to work in tandem with the armor's EVA-capable helmet."
-	icon_state = "upp_armor_heavy"
+	name = "\improper 6B91-2 UPP armor"
+	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
+	icon_state = "upp_armor_support"
 	storage_slots = 1
-	slowdown = SLOWDOWN_ARMOR_HEAVY
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -1322,13 +1320,12 @@
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
 
-
 /obj/item/clothing/suit/storage/marine/faction/UPP
-	name = "\improper Type 5 UPP armor"
-	desc = "Standard body armor of the UPP Naval Infantry, the Type 5 armor system provides excellent defense against everything up to and including peer service rifle rounds, putting it slightly ahead of the lighter M3 pattern armor in service with the USCM. It lacks the fullbody coverage that would otherwise be offered by the missing arm plating. Another aspect of the armor is the sealed neckguard designed to work in tandem with the armor's EVA-capable helmet."
+	name = "\improper 6B90 pattern UPP armor"
+	desc = "Union frontline issue body armor. Part of protective complex Kuija-M, 6B90 is capable of rifle threats with new ultralight alloy plates over the vitals, while ballistic mesh inserts provide torso protection from shrapnel or ricochets. A small transmitter on the lower back supports low resolution video/audio and biotelemetry feeds for the TOC. While designed to be one size fits all, the support system proves difficult to comfortably adjust."
 	icon_state = "upp_armor"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
@@ -1337,13 +1334,30 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
+	flags_inventory = BLOCKSHARPOBJ
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/support
-	name = "\improper Type 3 UPP armor"
-	desc = "A lightweight alternative to the Type 5, the Type 3 is weaker than its heavier, modernized alternative but provides better mobility."
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy
+	name = "\improper 6B91 pattern UPP armor"
+	desc = "Union heavy armor system. Part of protective complex Kuija-M, 6B91 is an add-on kit that extends rifle grade protection along the arms, and AP protection along the chest. Because of drastically higher stamina requirements, the armor proves unpopular with most infantry, and is mostly seen in assault units or internal security forces."
+	icon_state = "upp_armor_heavy"
+	storage_slots = 3
+	flags_inventory = BLOCKSHARPOBJ
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/heavy/Initialize()
+	. = ..()
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/minigun,
+		/obj/item/ammo_magazine/pkp,
+		)
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/light
+	name = "\improper 6B72-03 pattern UPP armor"
+	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear line forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to territorial forces, and used by some spetznaz."
 	icon_state = "upp_armor_light"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_LOW
@@ -1352,29 +1366,8 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	time_to_unequip = 10
 	time_to_equip = 10
-	storage_slots = 3
-
-/obj/item/clothing/suit/storage/marine/faction/UPP/commando
-	name = "\improper UM5CU personal armor"
-	desc = "A modification of the UM5, designed for stealth operations."
-	icon_state = "upp_armor_commando"
 	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy
-	name = "\improper Type 5-H UPP armor"
-	desc = "Standard body armor of the UPP Naval Infantry, the Type 5 armor system provides excellent defense against everything up to and including peer service rifle rounds, putting it slightly ahead of the lighter M3 pattern armor in service with the USCM. This variant has included the less popular arm plates providing total coverage. Another aspect of the armor is the sealed neckguard designed to work in tandem with the armor's EVA-capable helmet."
-	icon_state = "upp_armor_heavy"
-	storage_slots = 3
-	flags_inventory = BLOCKSHARPOBJ
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy/Initialize()
-	. = ..()
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/minigun,
-		/obj/item/ammo_magazine/pkp,
-		)
+	flags_inventory = null
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"

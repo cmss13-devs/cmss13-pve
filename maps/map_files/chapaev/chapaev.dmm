@@ -1774,7 +1774,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/clothing/under/marine/veteran/UPP/medic,
+/obj/item/clothing/under/marine/veteran/UPP,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "cyan1"
