@@ -4619,38 +4619,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"aoc" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/tool/kitchen/tray{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
-	pixel_x = 12;
-	pixel_y = 18
-	},
-/obj/item/trash/plate{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/trash/plate{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
-	pixel_y = 18;
-	pixel_x = 2
-	},
-/obj/item/trash/plate{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/turf/open/space/basic,
-/area/space)
 "aof" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -6041,7 +6009,8 @@
 /obj/docking_port/stationary/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one_storage";
 	name = "Vehicle Elevator One Storage";
-	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone
+	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone;
+	elevator_network = "one"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -7704,10 +7673,6 @@
 	},
 /area/golden_arrow/hangar)
 "axt" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/medical/ointment{
 	pixel_x = 2;
@@ -13479,34 +13444,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/shared_office)
-"aNn" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/rack{
-	pixel_y = 14;
-	pixel_x = 4
-	},
-/obj/structure/reagent_dispensers/water_cooler/stacks{
-	density = 0;
-	pixel_x = -10;
-	pixel_y = 6
-	},
-/obj/item/reagent_container/food/condiment/peppermill{
-	pixel_y = 26;
-	pixel_x = 1
-	},
-/obj/item/reagent_container/food/condiment/saltshaker{
-	pixel_y = 26;
-	pixel_x = -3
-	},
-/obj/item/storage/box/drinkingglasses{
-	pixel_x = 10;
-	pixel_y = 28
-	},
-/turf/open/space/basic,
-/area/space)
 "aNp" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
@@ -14053,7 +13990,8 @@
 /area/golden_arrow/cryo_cells)
 "aPg" = (
 /obj/docking_port/stationary/shipmap_elevator/one{
-	id = "garrow_vehicle_elevator_one"
+	id = "garrow_vehicle_elevator_one";
+	elevator_network = "one"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/hangar)
@@ -15167,26 +15105,6 @@
 	dir = 8
 	},
 /area/golden_arrow/hangar)
-"aSF" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/machinery/microwave{
-	density = 0;
-	pixel_y = 9
-	},
-/obj/item/reagent_container/food/drinks/coffee/marine{
-	pixel_x = 9;
-	pixel_y = -3
-	},
-/obj/item/storage/box/donkpockets{
-	pixel_x = 4;
-	pixel_y = 22
-	},
-/obj/structure/surface/table/almayer,
-/turf/open/space/basic,
-/area/space)
 "aSG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -17932,6 +17850,22 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"fxv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_one_storage";
+	shuttleId = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
+/area/golden_arrow/motor_pool)
 "fLq" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -18585,6 +18519,21 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"mvK" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_one";
+	shuttleId = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "myB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -27755,11 +27704,11 @@ aQb
 aCB
 aDi
 aEG
-aNn
 aEG
 aEG
 aEG
-aoc
+aEG
+aEG
 add
 aRq
 aQW
@@ -28063,7 +28012,7 @@ aEG
 aEG
 aEG
 aEG
-aSF
+aEG
 aht
 ayY
 aIu
@@ -28955,7 +28904,7 @@ arN
 arN
 arN
 aQc
-aQc
+fxv
 akZ
 aUG
 aCV
@@ -34483,7 +34432,7 @@ aPU
 aPU
 aPg
 aHG
-akt
+mvK
 adz
 aNL
 acq
