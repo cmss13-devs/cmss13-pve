@@ -132,6 +132,14 @@
 	penetration = 0
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
+/datum/ammo/bullet/revolver/small/mook
+	name = "small revolver bullet"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+
+	damage = 30
+
+	penetration = 0
+
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
 

@@ -31,6 +31,19 @@
 	reload_delay = 8
 	gun_type = /obj/item/weapon/gun/m60
 
+/obj/item/ammo_magazine/m60/mook
+	name = "battered Mk70 belt box (7.62x51mm)"
+	desc = "Improvised belt box for the Mk70 GPMG reproduction."
+	caliber = "7.62x51mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "m60" //PLACEHOLDER
+
+	matter = list("metal" = 10000)
+	default_ammo = /datum/ammo/bullet/m60/mook
+	max_rounds = 100
+	reload_delay = 8
+	gun_type = /obj/item/weapon/gun/m60
+
 /obj/item/ammo_magazine/pkp
 	name = "QYJ-72 ammo box (7.62x54mmR)"
 	desc = "A 250 round box for the UPP's standard GPMG, the QYJ-72. Chambered in 7.62x54mmR."

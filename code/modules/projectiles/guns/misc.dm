@@ -158,6 +158,19 @@
 			to_chat(user, SPAN_WARNING("You can't fire [src] with the feed cover open! <b>(alt-click to close)</b>"))
 			return FALSE
 
+//M60 but BAD.
+/obj/item/weapon/gun/m60
+	name = "\improper H-G Mk70 Machine Gun"
+	desc = "Part of the Henjin-Garcia repro line, the Mk70 found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. \n<b>Alt-click to open the feed tray cover for handling reloads.</b>"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "m60"
+	item_state = "m60"
+
+	fire_sound = 'sound/weapons/gun_m60.ogg'
+	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
+	current_mag = /obj/item/ammo_magazine/m60/mook
+	flags_gun_features = GUN_CAN_POINTBLANK
+
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"

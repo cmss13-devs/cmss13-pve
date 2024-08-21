@@ -215,6 +215,11 @@
 	caliber = ".357"
 	gun_type = /obj/item/weapon/gun/revolver/cmb
 
+/obj/item/ammo_magazine/internal/revolver/cmb/mook
+	default_ammo = /datum/ammo/bullet/revolver/small/mook
+	caliber = ".357"
+	gun_type = /obj/item/weapon/gun/revolver/cmb
+
 //-------------------------------------------------------
 //BIG GAME HUNTER'S REVOLVER
 /obj/item/ammo_magazine/internal/revolver/webley

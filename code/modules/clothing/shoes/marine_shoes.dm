@@ -52,6 +52,18 @@
 /obj/item/clothing/shoes/marine/brown/knife
 	knife_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/marine/surplus
+	name = "surplus combat boots"
+	desc = "Old combat boots bought or found from... somewhere."
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = 0
+	armor_laser = 0
+	armor_energy = 0
+	armor_bomb = 0
+	armor_bio = 0
+	armor_rad = 0
+	armor_internaldamage = 0
+
 /obj/item/clothing/shoes/marine/monkey
 	name = "monkey combat boots"
 	desc = "A sturdy pair of combat boots, the reflection of the polished leather reflects your true self."

@@ -62,6 +62,19 @@
 	desc = "A scarred riot helmet covered in cobwebs. It still protects your ears."
 	icon_state = "old_riot"
 
+/obj/item/clothing/head/helmet/riot/salvaged
+	name = "riot helmet"
+	desc = "Scavenged riot helmet. It's been heavily battered, but it should still provide some class of protection."
+	icon_state = "riot"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+
 /obj/item/clothing/head/helmet/augment
 	name = "augment array"
 	desc = "A helmet with optical and cranial augments coupled to it."

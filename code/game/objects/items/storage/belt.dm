@@ -1776,16 +1776,14 @@
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 
 /obj/item/storage/belt/gun/smartgunner/clf
-	name = "\improper M802 pattern 'Freedom' smartgunner sidearm rig"
-	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a Mateba revolver. This one has the CLF logo carved over the manufacturing stamp."
+	name = "\improper ammo storage rig"
+	desc = "A pair of pouches and a holster for a sidearm."
 	can_hold = list(
 		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/m44,
-		/obj/item/weapon/gun/revolver/mateba,
+		/obj/item/weapon/gun/revolver/cmb,
 		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/revolver/mateba,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
