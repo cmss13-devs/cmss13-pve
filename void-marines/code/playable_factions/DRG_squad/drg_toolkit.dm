@@ -199,42 +199,24 @@
 
 // GRENADES //
 
-#define DECOY_PENALTY 3
-
 /obj/structure/drg/decoy
 	desc = "Just an hologram, enough to distract primitive creatures or a very hungry to women mens."
 	name = "decoy"
 	icon = 'void-marines/icons/holograms.dmi'
-	icon_state = "type1"
-	var/sprite = 1
-	health = 1000 // so xenos will not literally delete hologram from existance
+	icon_state = "type2"
+	var/work_duration = 1
 
 /obj/structure/drg/decoy/Initialize()
 	SHOULD_CALL_PARENT(FALSE)
-	icon_state = "type[sprite]"
 	addtimer(CALLBACK(src, PROC_REF(disappear)), 10 SECONDS)
 
 	AddComponent(/datum/component/ai_behavior_override/attack)
 	var/datum/component/ai_behavior_override/override = datum_components[/datum/component/ai_behavior_override/attack]
 	override.max_assigned = INFINITY
 
-/obj/structure/drg/decoy/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return
-
-	return DECOY_PENALTY
-
 /obj/structure/drg/decoy/proc/disappear()
-	alpha = 200
-	sleep(2 SECONDS)
-	alpha = 150
-	sleep(2 SECONDS)
-	alpha = 100
-	sleep(2 SECONDS)
-	alpha = 50
-	sleep(2 SECONDS)
-	qdel(src)
+	animate(work_duration, alpha = 0)
+	QDEL_IN(src, 6 SECONDS)
 
 /obj/item/explosive/grenade/drg_decoy
 	desc = "It is set to detonate in 5 seconds. It will display some random hologram, enough to distract primitive creatures or a very hungry to women mens."

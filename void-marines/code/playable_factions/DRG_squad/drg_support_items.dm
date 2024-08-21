@@ -1,7 +1,7 @@
 /*
 	Creates a forcefield which blocks everything from outside that isn't human
 */
-/obj/item/explosive/grenade/shield_generator
+/obj/item/explosive/grenade/drg_shield
 	name = "shield generator"
 	desc = "Used as a support Tool for the Gunner. It is a hand-held, disc shaped projector device that creates a forcefield."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
@@ -21,7 +21,7 @@
 	var/field_duration = 30 SECONDS
 	var/field_radius = 3
 
-/obj/item/explosive/grenade/shield_generator/prime(force)
+/obj/item/explosive/grenade/drg_shield/prime(force)
 	overlays.Cut() // Remove danger warnings
 	if(isliving(loc))
 		var/mob/living/L = loc
@@ -74,7 +74,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(remove_shield)), field_duration)
 
-/obj/item/explosive/grenade/shield_generator/proc/remove_shield()
+/obj/item/explosive/grenade/drg_shield/proc/remove_shield()
 	playsound(loc, 'sound/effects/corsat_teleporter.ogg', 150)
 	icon_state = initial(icon_state)
 	spawn(4.5 SECONDS)
@@ -93,7 +93,7 @@
 	throwpass = TRUE
 	density = TRUE
 	/// The shieldgen this blocker relates to, will be destroyed along with it
-	var/obj/item/explosive/grenade/shield_generator/linked_shield
+	var/obj/item/explosive/grenade/drg_shield/linked_shield
 
 /obj/structure/blocker/shield/Initialize(mapload, atom/generator, set_dir)
 	. = ..()
