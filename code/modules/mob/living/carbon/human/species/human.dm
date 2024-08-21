@@ -95,6 +95,16 @@
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
 
+//intended for use as enemy opposing forces
+/datum/species/human/mooks
+	name = "Human Mooks"
+	name_plural = "Human Mooks"
+	primitive = /mob/living/carbon/human/monkey
+	brute_mod = 3
+	burn_mod = 1.5
+	unarmed_type = /datum/unarmed_attack/punch
+	pain_type = /datum/pain/mook
+
 //Tougher humans, basically action movie protagonists.
 /datum/species/human/hero
 	name = "Human Hero"
