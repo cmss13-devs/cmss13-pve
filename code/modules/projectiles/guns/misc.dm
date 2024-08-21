@@ -159,7 +159,7 @@
 			return FALSE
 
 //M60 but BAD.
-/obj/item/weapon/gun/m60
+/obj/item/weapon/gun/m60/mook
 	name = "\improper H-G Mk70 Machine Gun"
 	desc = "Part of the Henjin-Garcia repro line, the Mk70 found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. \n<b>Alt-click to open the feed tray cover for handling reloads.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'

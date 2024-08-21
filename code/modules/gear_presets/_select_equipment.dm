@@ -411,8 +411,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/spawn_rebel_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/helmetpath = pick(
-		/obj/item/clothing/head/militia,
-		/obj/item/clothing/head/militia/bucket,
+		/obj/item/clothing/head/helmet/riot/salvaged,
+		/obj/item/clothing/head/CMB/mook
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/head/helmet/skullcap,
 		/obj/item/clothing/head/helmet/swat,
@@ -433,8 +433,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/leather,
-		/obj/item/clothing/shoes/combat,
-		/obj/item/clothing/shoes/swat,
+		/obj/item/clothing/shoes/combat/surplus,
 		)
 	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
 

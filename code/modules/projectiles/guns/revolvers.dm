@@ -751,3 +751,7 @@
 
 /obj/item/weapon/gun/revolver/cmb/normalpoint
 	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+
+/obj/item/weapon/gun/revolver/cmb/mook
+	desc = "A battered old Spearhead revolver."
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/mook

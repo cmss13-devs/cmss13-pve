@@ -40,7 +40,7 @@
 
 	matter = list("metal" = 10000)
 	default_ammo = /datum/ammo/bullet/m60/mook
-	max_rounds = 100
+	max_rounds = 150
 	reload_delay = 8
 	gun_type = /obj/item/weapon/gun/m60
 

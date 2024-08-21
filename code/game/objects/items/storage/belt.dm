@@ -1776,25 +1776,25 @@
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 
 /obj/item/storage/belt/gun/smartgunner/clf
-	name = "\improper ammo storage rig"
-	desc = "A pair of pouches and a holster for a sidearm."
+	name = "\improper improvised MG ammo storage rig"
+	desc = "A pair of pouches and a holster for a sidearm. Shoddily made, but it'll do for now."
 	can_hold = list(
 		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/cmb,
+		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/smartgun,
+		/obj/item/ammo_magazine/m60/mook,
 	)
 	has_gamemode_skin = TRUE
 
 /obj/item/storage/belt/gun/smartgunner/clf/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/cmb/mook())
+	new /obj/item/ammo_magazine/internal/revolver/cmb/mook(src)
+	new /obj/item/ammo_magazine/m60/mook(src)
+	new /obj/item/ammo_magazine/m60/mook(src)
+	new /obj/item/ammo_magazine/m60/mook(src)
 
 /obj/item/storage/belt/gun/smartgunner/upp
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
