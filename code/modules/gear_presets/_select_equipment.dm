@@ -433,7 +433,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/leather,
-		/obj/item/clothing/shoes/combat/surplus,
+		/obj/item/clothing/shoes/marines/surplus,
 		)
 	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
 
