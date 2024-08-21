@@ -84,3 +84,6 @@
   - bugfix: Fixed the 88 Mod 4 pistol's holster sprite.
   - admin: bitfields for MODE_NO_XENO_EVOLVE, MODE_HARDCORE_PERMA, and MODE_NO_JOIN_AS_XENO
       now work
+2024-08-21:
+  DexterDude:
+  - rscadd: Added something
