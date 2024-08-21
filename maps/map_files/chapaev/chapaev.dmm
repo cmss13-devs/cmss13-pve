@@ -2040,7 +2040,6 @@
 /obj/item/storage/belt/gun/smartgunner/upp,
 /obj/item/storage/belt/marine/smartgunner/upp,
 /obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
 /obj/item/weapon/gun/pkp/iff,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -3768,7 +3767,6 @@
 /obj/item/storage/belt/gun/smartgunner/upp,
 /obj/item/storage/belt/marine/smartgunner/upp,
 /obj/item/clothing/suit/storage/marine/smartgunner/upp,
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy,
 /obj/item/weapon/gun/pkp/iff,
 /turf/open/floor/strata{
 	icon_state = "floor2"
