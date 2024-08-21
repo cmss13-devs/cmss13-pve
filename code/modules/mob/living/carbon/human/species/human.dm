@@ -100,7 +100,7 @@
 	name = "Human Mooks"
 	name_plural = "Human Mooks"
 	primitive = /mob/living/carbon/human/monkey
-	brute_mod = 3
+	brute_mod = 2
 	burn_mod = 1.5
 	unarmed_type = /datum/unarmed_attack/punch
 	pain_type = /datum/pain/mook
