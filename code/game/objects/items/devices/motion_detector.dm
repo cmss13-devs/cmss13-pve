@@ -231,6 +231,8 @@
 		ping_count++
 		if(human_user)
 			show_blip(human_user, M)
+		for(var/mob/living/carbon/human/humans in range(1, human_user))
+			show_blip(humans, M)
 
 	for(var/mob/hologram/holo as anything in GLOB.hologram_list)
 		if(!holo.motion_sensed)
