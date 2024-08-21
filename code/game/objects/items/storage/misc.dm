@@ -146,7 +146,7 @@
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
-	
+
 /obj/item/storage/box/M1911_loadout/fill_preset_inventory()
 	new /obj/item/weapon/gun/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)

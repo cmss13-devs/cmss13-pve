@@ -1696,6 +1696,39 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 
+#define MAXIMUM_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/gun/smartgunner/garrow
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+
+	//Keep a track of how many magazines are inside the belt.
+	var/magazines = 0
+
+/obj/item/storage/belt/gun/smartgunner/garrow/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smartgun))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more drums."))
+		return FALSE
+
+/obj/item/storage/belt/gun/smartgunner/garrow/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines++
+
+/obj/item/storage/belt/gun/smartgunner/garrow/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/gun/smartgunner/garrow/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+#undef MAXIMUM_MAGAZINE_COUNT
+
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"
 	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
