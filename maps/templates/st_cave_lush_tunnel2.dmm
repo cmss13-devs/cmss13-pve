@@ -1,0 +1,68 @@
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"b" = (/obj/structure/flora/bush/ausbushes/var3/ywflowers,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"c" = (/obj/structure/flora/bush/ausbushes/var3/sunnybush,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"d" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = -6; pixel_y = 2},/obj/structure/prop/hybrisa/cavedecor/stalagmite5{pixel_x = 3; pixel_y = -10},/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"e" = (/obj/structure/flora/bush/ausbushes/var3/brflowers,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"g" = (/obj/structure/flora/jungle/alienplant1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"h" = (/turf/closed/wall/strata_ice/jungle,/area/drg)
+"i" = (/obj/structure/flora/jungle/plantbot1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"k" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"l" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"s" = (/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"u" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"v" = (/obj/structure/flora/jungle/planttop1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"w" = (/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"x" = (/obj/structure/flora/jungle/alienplant1,/obj/structure/prop/hybrisa/cavedecor/stalagmite1{pixel_x = 10; pixel_y = 14},/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"z" = (/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"A" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"B" = (/obj/structure/flora/jungle/vines,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"C" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"D" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"E" = (/obj/structure/flora/bush/ausbushes/var3/sunnybush,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"F" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"G" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"H" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"I" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"L" = (/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"N" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"P" = (/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"S" = (/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"T" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"U" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"V" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"W" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"Y" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"Z" = (/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGGGGGaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaGFGGNhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaFFGGhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaCCaFFGZhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaCCCaPGGNNhhaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaCCCWWGGGNNhaGGaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaCCaaWPGGaNNaGGaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaCCCCaaHLzGwNNaGGaaa
+aaaaWWWaaaaaaaaaaaaaaaaaaaCCCaaaHkLLGNaaGGGaa
+aaaWUPGaaaaaaaaaaaaaaaaaaaCCCaaCHHPGGVaGGYGaa
+GaaaPPYGGaaaaaaaaaaaaaaaaaCCCaCaWHPGGGaGGGGaa
+GGdaPGGGGkaaaaaaaaaaaaaaaaaCCCCaaUbGGGaGaaaaa
+GGGaaGaaaaaaaaaaaaaaaaaaaaaCCCaaaeGGGGaaaaaaa
+GGGGaaaGvGGGaaaaaaaaaaaaaaaaCCCCaPGGGGGaaaaaa
+GGGGGGGGiGGPWWaaaaaaaaaaaaaaCCFFGGGGgGGaaaaaa
+GGGGGGGGGGGPzWWaaaaaaaaaaaaaFFcFGGGGGGGaaaaaa
+GGGGGGGhhGGGbULWaaaaaaaaGGGGGGGGGGGGGGaaaaaaa
+aaGGGhhhhGGGGPLaWaaaaaaGGaahhGGGGGGGGaaaaaaaa
+aaaaGhhhhGGGGEPWWaaaaaalGaahhGGGGGGaaaaaaaaaa
+aaaaaaahhhGGGGGPPGNNNIhuGGhhhGGGGGaaaaaaCaaaa
+aaaCaaaaahGGGGGGGGGVuNNwGGhhGGGGGGaaaaaaCCCCa
+aaaCCCaCCCCaGGGGGGGGNNGGGGGGGGGGGGaaaaCCaCCCa
+aaaaCCCCCCCaGGGGGGPsNuuGGGGGGaaaaaaaCCCCCaCaa
+aaaaCCCCCaaaBFaaGPSADTDlGxGGaaaaaaaaCCCCCCaaa
+aaaaaCCCCCCaWFaaGLzHaWaNNGGaaaaaCCaaCCCCCCCCC
+aaaaaaaaCCCCWPGGkLHaaaaaaaaaaaaaCCCCCCCCCCCCC
+aaaaaaaCCCCCCeGPPaHaaaaaaaaaaaaaCCCCCaCCaCCCa
+aaaaaaaaaaaaaWWWaaaaaaaaaaaaaaaaaCCCCCCaCCCCa
+aaaaaaaaaaaaaaaWaaaaaaaaaaaaaaaaaaaCCaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

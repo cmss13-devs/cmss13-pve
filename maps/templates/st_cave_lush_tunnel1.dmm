@@ -1,0 +1,81 @@
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"b" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite2,/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = 6; pixel_y = -3},/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = -8; pixel_y = -16},/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"c" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"e" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"g" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"h" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"i" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"j" = (/obj/structure/flora/jungle/alienplant1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"k" = (/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"l" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"m" = (/obj/structure/flora/jungle/vines/light_3,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"n" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"p" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"r" = (/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"s" = (/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"t" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"v" = (/obj/structure/flora/jungle/vines/heavy,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"w" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"x" = (/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"y" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"z" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"A" = (/obj/structure/flora/bush/ausbushes/var3/brflowers,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"B" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"C" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"E" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"F" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"G" = (/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"H" = (/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"J" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5{pixel_x = -6; pixel_y = 7},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"L" = (/turf/closed/wall/strata_ice/jungle,/area/drg)
+"M" = (/obj/structure/flora/jungle/planttop1,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"N" = (/obj/structure/flora/jungle/plantbot1,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"O" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"P" = (/obj/structure/flora/bush/ausbushes/var3/ywflowers,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"R" = (/obj/structure/flora/jungle/vines/light_3,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"S" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"T" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"V" = (/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"X" = (/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"Y" = (/obj/structure/flora/bush/ausbushes/var3/sunnybush,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"Z" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+
+(1,1,1) = {"
+aaaaCCCCCCCaaaaaaaaa
+aaaasCCCCCCaaaaaaaaa
+aaaaAHRsCLlaaaaaaaaa
+aaaSSeyFplcXzTaaaaaa
+aaaSSeyyFkCOgTaaaaaa
+aaaaSSSyrnCiiiaaaaaa
+aaaaSSSyYsCiMiaaaaaa
+aaaaaSSesACiNiaaaaaa
+aaaaaaaSsCCCiTTTTaaa
+aaaaaaaakCCBaTTTTaaa
+aaaaaaaajCCCaTTTTaaa
+aaaaaaaaCCCCaTTTTTTa
+aaaaaaaCCCCCaaTTTTTa
+aaaaaaaCCCCaaaTTTTTa
+aaaaaaaCCCCaaaaTTTTa
+aaaaaaLCCCaaaaaTTTTa
+aaaaaaLcCCaaaaaaTTTa
+aaaaaaLlCaaaTTaaTTaa
+aaaaaLLltaaaTTaaaaaa
+aaaaaLvvsaaaTTTTaaaa
+aaaaatlvhSSaaTTTaaaa
+aaaCaalCHkSSaTTaaaaa
+aaaCCalCssSSSSaaaaaa
+aaCCsSwCCVsseSaTaaaa
+aaCCneaCCCnPeSSaaaaa
+aaCCskeCCbCsxkSaaaaa
+aaTiCAeGsCCssESaaaaa
+aaTiZCSenCCCCsaaaaaa
+aaTTiiCasCCCcCsaaaaa
+aTTSiisSsCCLLlCaaaaa
+aTTeSTSSCCCLLlaaaaaa
+aTTTTTSTCCCCCmaaaaaa
+aTTTTTTTiCCCCaaaaaaa
+aaTTTTTiiCCjCaaaaaaa
+aaaaaTiiiCCCCJaaaaaa
+aTTaTTiiiCCCCCaaaaaa
+aTTaaiiCCCCCCCaaaaaa
+"}

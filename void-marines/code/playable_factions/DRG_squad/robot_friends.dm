@@ -114,7 +114,7 @@
 	..()
 
 	if(COOLDOWN_FINISHED(src, ranged_cooldown) && !damaged && !fire_disabled && fire_mode == "automatic")
-		for(var/mob/living/target in orange(attack_range, src))
+		for(var/mob/living/target in view(attack_range, src))
 			if(target.faction != src.faction && target.stat != DEAD)
 				possible_targets += target
 

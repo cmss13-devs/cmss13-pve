@@ -1,0 +1,40 @@
+"a" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"c" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"d" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"e" = (/obj/effect/decal/organic_veins,/turf/open/floor/organic,/area/drg)
+"u" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"y" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"B" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"C" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = -6; pixel_y = 17},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"D" = (/turf/open/floor/organic,/area/drg)
+"F" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"G" = (/obj/item/drg/glyphid_egg,/turf/open/floor/organic,/area/drg)
+"J" = (/turf/open/floor/organic/veiny,/area/drg)
+"L" = (/obj/structure/surface/table/rock/organic/veiny,/turf/open/floor/organic,/area/drg)
+"M" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"P" = (/obj/structure/surface/table/rock/organic,/turf/open/floor/organic,/area/drg)
+"S" = (/obj/structure/surface/table/rock/organic/veiny,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"X" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+
+(1,1,1) = {"
+dddddudddddddddddddd
+ddduudddddaaaddddddd
+dduuudddddaaaaaddddd
+duuudddddaaaaMauuddd
+duudddddddddaaauuddd
+aduddddPPPdddaaduudd
+cccXddLPDPLddadduudd
+ccccFFLPDeLLdddduudd
+aCcaXFLeJDDLLddddddd
+aaccaFLDeDDLLPdddddd
+aaacaLLDDGeDePdddddd
+aaaaFLLLeDeJDLdddddd
+aaaaFLLLSDJDDPdddddd
+aaaFFFXLLLLLPPdduudd
+aaaaaacXFLLLddduuudd
+aacaFacXFFaduuuududd
+cccaaaccFaBduuduuddd
+accaddaaaaFduuuuuddd
+aaccddaaaaaauuuudddd
+aacyaaaaaaaaduuudddd
+"}

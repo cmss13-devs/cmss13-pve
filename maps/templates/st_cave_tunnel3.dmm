@@ -1,0 +1,32 @@
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"r" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = -6; pixel_y = 14},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"t" = (/obj/structure/drg/land_crystals/sugar{pixel_x = 6; pixel_y = 13},/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"v" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"B" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"C" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"E" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3{pixel_x = 6; pixel_y = 13},/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"G" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -11; pixel_y = 5},/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_y = -9},/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -19},/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"H" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"P" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"X" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaHHHaaaaaaaaaaaCCCCaaaaa
+aaaHHaaaaaaHaaaHHHHHHHHHaaaaaaaCCBBHaaaa
+aaHHHHHHaaaaaaHHHHHHHHHaaaaaaaaCBBBHHaaa
+aaHHHHHHaaaaaHHHHHHHHHHaaaaaaaCBBBEHHaaa
+aaHHHHHaaaaaaHHHHHHHHHHaaaaaaaCBBBHHHHaa
+aaaaaHHaaaaaaHHHHHHHHHHaCaaaCCCBBBHHHHaa
+aaaaaaaaaaaaaHHHHHHHHBCCCaaaCCCBBBBHHHaa
+aaaaaaaaaaaaHHHHHHHHHCCCCCCCCCCCCBBHHHHa
+aaaaaaaaaaCBGHHHHHHHHCCCCCCCCrCCCBHHHHHa
+aaaaaaaaaCCBBBvBHaaCCCCCCCCCCCCCaaaaaaaa
+aaaaaaaaaBBBBBBBBCCCCCCCCCCCCCCaaaaaaaaa
+aaaaaaaaBBBBBBBCCCCCCCaaaCCCCaaaaaaaaaaa
+aaaaaaCCBBBBBBBCCCCCaaaCaaaaaaaaaaaaaaaa
+aaaaCaCCBBBBBBCCCCtBHaCCCXCaaaaaaaaaaaaa
+aaaCCaaBBBBBCCCCCHHHHCCCCCCaaaaaaaaaaaaa
+aaaaXCHHBBBBCaaaaHHHHaaCCCaaaaaaaaaaaaaa
+aaaaCCCaBBCCPaaaaHHaaaaaaaaaaaaaaHHaaaaa
+aaaaaaaaCCCCaaaaaaaaaaaaaaaaaaaaaHHaaaaa
+"}

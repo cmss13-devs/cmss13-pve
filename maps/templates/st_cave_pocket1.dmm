@@ -1,0 +1,44 @@
+"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"i" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"k" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"v" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"B" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite1{pixel_x = 9; pixel_y = 14},/obj/structure/prop/hybrisa/cavedecor/stalagmite2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"G" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"H" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"I" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = 11; pixel_y = 15},/obj/structure/prop/hybrisa/cavedecor/stalagmite5,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"L" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"O" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"X" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaiaiiiiaaaaaaaaaa
+aaaaaaaaaaaaaaiHHHiiiiaaaaaaaa
+aaaaaaaaaaaaGGGHHHiiiiaaaGaaaa
+aaaaaaaaaaaaGGGGGHHiaaaaGGGGaa
+aaaaaaaaaaGHGGGGGGHiaaiaaGvaaa
+aaaaaaaGHHHHHHGGGGGaaaaaaGaaaa
+aaaaaaakHHHHHHGGGGGGGaaaaaaaaa
+aaaGGaGHHHHHHGGGGGGGGaaaaaaaaa
+aavGGaGHHHHGGGGGGGGGGaaaaaaaaa
+aaaHHaiHHHGGGGGGGGGGGGGGGaaaaa
+aaaiiaiHHHHHGGGGGGGGIGGGGGiiaa
+aaaaaaiiHHHHGGGGGGGGGXGGGGiiaa
+aaaaaaaiHHHHGGGGGGGGGGGGGGaiii
+aaaaaaaiHHHHHHGGGGGGGGGGGGaaii
+aaaaaaaiHHHHHHGGGGGGGGGHHGGaii
+aaaaaaGHHHHHHHGGGGGGGGGHHHGaii
+aaaaaaGGHHGGGGGGGGGGGGGGHHHaaa
+aaaaaaGGGGGGGGGGGGGGGGGGGGiaaa
+aaaaaGGGBLGGGGGGGGGGGGHHGaaaaa
+aaaaaGGGGGGGGGGGGGGGHHHHHiaaaa
+aaiiiHGGGGGGGGGGGGGHHHHiiiiaaa
+aaiiiiiGGGGGGGGGGGHHHHiiiiiaaa
+aiiiiiiiGGGGGGGGGGHHHHiiiiaaaa
+aiiiiiiiGGGGGGGGGGHHHHiiiiaaaa
+aaiiiiiaaaGGGGGGGGHHOiiiiiaaaa
+aaaaiiiaaaaaaaGGGaiiiiiiiaaaaa
+aaaaiiaaaaaaaaaaaaaaiiiiiaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
