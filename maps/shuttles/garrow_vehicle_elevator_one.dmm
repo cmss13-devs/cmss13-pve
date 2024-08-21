@@ -4,11 +4,21 @@
 /area/shuttle/vehicle_elevator)
 "o" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/docking_port/mobile/shipmap_elevator,
+/obj/docking_port/mobile/shipmap_elevator{
+	elevator_network = "one"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)
 "u" = (
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/shuttle/vehicle_elevator)
+"v" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	shuttleId = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -51,7 +61,7 @@ K
 (4,1,1) = {"
 a
 A
-A
+v
 u
 a
 "}

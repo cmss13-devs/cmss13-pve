@@ -206,6 +206,7 @@
 
 	var/datum/map_template/shuttle/roundstart_template
 	var/json_key
+	var/elevator_network
 
 /obj/docking_port/stationary/register(replace = FALSE)
 	. = ..()
@@ -381,6 +382,8 @@
 	var/crashing = FALSE
 
 	var/shuttle_flags = NONE
+
+	var/elevator_network
 
 #define WORLDMAXX_CUTOFF (world.maxx + 1)
 #define WORLDMAXY_CUTOFF (world.maxx + 1)

@@ -19,7 +19,6 @@
 
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)
 	var/datum/door_controller/aggregate/door_control
-	var/elevator_network
 
 /obj/docking_port/mobile/trijent_elevator/Initialize(mapload, ...)
 	. = ..()
@@ -46,7 +45,6 @@
 	// shutters to clear the area
 	var/airlock_area
 	var/airlock_exit
-	var/elevator_network
 
 /obj/docking_port/stationary/trijent_elevator/proc/get_doors()
 	. = list()
