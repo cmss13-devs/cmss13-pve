@@ -513,6 +513,7 @@
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/boiler
