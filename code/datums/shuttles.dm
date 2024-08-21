@@ -126,6 +126,9 @@
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
 
+/datum/map_template/shuttle/golden_arrow
+	shuttle_id = "unused"
+
 /datum/map_template/shuttle/golden_arrow/vehicleone
 	name = "Vehicle Elevator One"
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
