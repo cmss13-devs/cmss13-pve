@@ -32,7 +32,7 @@
 
 /datum/weather_event/monsoon/infinite
 	name = "Monsoon Warning (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 // Weather events for Sorokyne
 /datum/weather_event/snow/infinite
