@@ -19,7 +19,7 @@
 // Weather events for LV624
 /datum/weather_event/light_rain/infinite
 	name = "Light Rain (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/heavy_rain/infinite
 	name = "Heavy Rain (Infinite)"
