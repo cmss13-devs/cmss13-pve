@@ -5,7 +5,7 @@
 "o" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/docking_port/mobile/shipmap_elevator{
-	elevator_network = "one"
+	elevator_network = "ArrowVehicleOne"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)

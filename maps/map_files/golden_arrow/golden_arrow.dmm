@@ -928,6 +928,11 @@
 	pixel_x = -7;
 	needs_power = 0
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "acX" = (
@@ -1089,6 +1094,11 @@
 	name = "lowercargolocks";
 	needs_power = 0;
 	pixel_y = 32
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
 	},
 /turf/open/space/basic,
 /area/space)
@@ -2437,6 +2447,20 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/machinery/door_control{
+	id = "lowervehiclebay1";
+	needs_power = 0;
+	pixel_y = 11;
+	name = "lowervehiclebay1";
+	pixel_x = -4
+	},
+/obj/structure/machinery/door_control{
+	id = "lowervehiclebay2";
+	needs_power = 0;
+	pixel_y = 11;
+	name = "lowervehiclebay2";
+	pixel_x = 15
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "ahp" = (
@@ -2665,11 +2689,10 @@
 /area/golden_arrow/hangar)
 "aid" = (
 /obj/docking_port/stationary/trijent_elevator{
-	name = "Cargo Elevator";
+	name = "Cargo Elevator Upper";
 	id = "garrow_cargo_elevator_upper";
-	airlock_area = /area/golden_arrow/supply;
-	airlock_exit = "cargoelevator";
-	width = 8
+	width = 8;
+	elevator_network = "ArrowCargo"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
@@ -2849,6 +2872,10 @@
 	pixel_y = -23;
 	pixel_x = -7;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -4484,6 +4511,11 @@
 	needs_power = 0;
 	pixel_y = 32
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
 /turf/open/space/basic,
 /area/space)
 "anL" = (
@@ -5027,6 +5059,11 @@
 	pixel_y = 23;
 	pixel_x = -7;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -5733,7 +5770,9 @@
 /area/golden_arrow/platoonarmory)
 "arn" = (
 /obj/docking_port/stationary/shipmap_elevator/two{
-	id = "garrow_vehicle_elevator_two"
+	id = "garrow_vehicle_elevator_two";
+	name = "Vehicle Elevator Two Upper";
+	elevator_network = "ArrowVehicleTwo"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/hangar)
@@ -6010,7 +6049,7 @@
 	id = "garrow_vehicle_elevator_one_storage";
 	name = "Vehicle Elevator One Storage";
 	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone;
-	elevator_network = "one"
+	elevator_network = "ArrowVehicleOne"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -7388,6 +7427,11 @@
 	pixel_y = 23;
 	pixel_x = -7;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
 	},
 /turf/open/space/basic,
 /area/space)
@@ -8847,7 +8891,7 @@
 	pixel_y = -38;
 	dir = 4;
 	name = "Damaged M540 Armored Recon Carrier";
-	desc = "An M540 Armored Recon carrier, a supposedly more nimble alternative to the M577A3 APC. Evidently not nimble enough to escape from a dropship crashing into it."
+	desc = "An M540 Armored Recon carrier, a supposedly more nimble alternative to the M577A3 APC. Evidently not nimble enough to escape from a dropship crashing into it. At least it didn't get shot up."
 	},
 /obj/structure/machinery/prop{
 	icon = 'icons/obj/vehicles/arc.dmi';
@@ -8884,7 +8928,7 @@
 	dir = 4;
 	layer = 3.01;
 	name = "Damaged M540 Armored Recon Carrier";
-	desc = "An M540 Armored Recon carrier, a supposedly more nimble alternative to the M577A3 APC. Evidently not nimble enough to escape from a dropship crashing into it."
+	desc = "An M540 Armored Recon carrier, a supposedly more nimble alternative to the M577A3 APC. Evidently not nimble enough to escape from a dropship crashing into it. At least it didn't get shot up."
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer/edge/smooth/corner{
@@ -8990,6 +9034,10 @@
 	pixel_x = -7;
 	needs_power = 0
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aAA" = (
@@ -9036,7 +9084,7 @@
 /area/golden_arrow/hangar)
 "aAF" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	name = "Hangar Pad";
+	name = "Hangar Bay Aft";
 	id = "golden arrow lz2";
 	roundstart_template = null
 	},
@@ -9177,6 +9225,11 @@
 	name = "hangarlockdownnorth";
 	pixel_x = -23;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 8
 	},
 /turf/open/space/basic,
 /area/space)
@@ -11233,7 +11286,14 @@
 	pixel_y = 28;
 	name = "lowervehiclebay1"
 	},
-/turf/open/space/basic,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	color = "#E10600"
+	},
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/space)
 "aGK" = (
 /obj/effect/decal/cleanable/dirt{
@@ -11378,6 +11438,10 @@
 	pixel_y = -23;
 	pixel_x = -7;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
@@ -11693,7 +11757,13 @@
 	pixel_y = -28;
 	name = "lowervehiclebay2"
 	},
-/turf/open/space/basic,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/space)
 "aIc" = (
 /obj/structure/barricade/handrail{
@@ -12627,6 +12697,11 @@
 	name = "hangarlockdownsouth";
 	pixel_x = -23;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 8
 	},
 /turf/open/space/basic,
 /area/space)
@@ -13991,7 +14066,8 @@
 "aPg" = (
 /obj/docking_port/stationary/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one";
-	elevator_network = "one"
+	elevator_network = "ArrowVehicleOne";
+	name = "Vehicle Elevator One Upper"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/hangar)
@@ -14157,10 +14233,25 @@
 /obj/structure/prop/almayer/computers/sensor_computer2{
 	pixel_y = 15;
 	density = 0;
-	pixel_x = 4
+	pixel_x = 4;
+	layer = 2.97
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_one_storage";
+	shuttleId = "garrow_vehicle_elevator_one";
+	pixel_y = 28;
+	pixel_x = -1;
+	name = "\improper vehicle elevator one control panel"
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_two_storage";
+	shuttleId = "garrow_vehicle_elevator_two";
+	pixel_y = 28;
+	pixel_x = 14;
+	name = "\improper vehicle elevator two control panel"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
@@ -15737,6 +15828,11 @@
 	pixel_x = -7;
 	needs_power = 0
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aUL" = (
@@ -15936,9 +16032,8 @@
 	name = "Cargo Elevator Storage";
 	id = "garrow_cargo_elevator_lower";
 	roundstart_template = /datum/map_template/shuttle/golden_arrow/cargo;
-	airlock_area = /area/golden_arrow/supply;
-	airlock_exit = "cargoelevator";
-	width = 8
+	width = 8;
+	elevator_network = "ArrowCargo"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/supply)
@@ -17079,7 +17174,8 @@
 /obj/docking_port/stationary/shipmap_elevator/two{
 	id = "garrow_vehicle_elevator_two_storage";
 	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicletwo;
-	name = "Vehicle Elevator Two Storage"
+	name = "Vehicle Elevator Two Storage";
+	elevator_network = "ArrowVehicleTwo"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -17851,21 +17947,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "fxv" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
+/turf/open/floor/almayer{
+	icon_state = "mono"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	dockId = "garrow_vehicle_elevator_one_storage";
-	shuttleId = "garrow_vehicle_elevator_one"
-	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
-/area/golden_arrow/motor_pool)
+/area/space)
 "fLq" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer{
@@ -17945,6 +18030,11 @@
 	name = "cargolocksnorth";
 	needs_power = 0;
 	pixel_x = 32
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
 	},
 /turf/open/space/basic,
 /area/space)
@@ -18310,6 +18400,20 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"jJI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_two";
+	shuttleId = "garrow_vehicle_elevator_two";
+	pixel_y = 35;
+	name = "\improper vehicle elevator two control panel"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "kiL" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -18520,20 +18624,22 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "mvK" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
 /obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	dockId = "garrow_vehicle_elevator_one";
-	shuttleId = "garrow_vehicle_elevator_one"
+	pixel_y = 36;
+	pixel_x = 5;
+	shuttleId = "garrow_cargo_elevator";
+	dockId = "garrow_cargo_elevator_lower"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/lower_cargo)
 "myB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19091,6 +19197,17 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/lower_cargo)
+"sIh" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_one";
+	shuttleId = "garrow_vehicle_elevator_one";
+	pixel_y = 35;
+	name = "\improper vehicle elevator one control panel"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/golden_arrow/hangar)
 "sSt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -22059,7 +22176,7 @@ mEU
 mVN
 aHx
 aHx
-aCU
+mvK
 aTO
 ajV
 aEi
@@ -28904,7 +29021,7 @@ arN
 arN
 arN
 aQc
-fxv
+aQc
 akZ
 aUG
 aCV
@@ -29970,9 +30087,9 @@ aeQ
 aeQ
 aeQ
 aDi
-aEG
-aEG
-aEG
+fxv
+fxv
+fxv
 aDi
 aeQ
 aeQ
@@ -30123,7 +30240,7 @@ aeQ
 aeQ
 aDi
 aGJ
-aEG
+fxv
 aIb
 aDi
 aeQ
@@ -30274,9 +30391,9 @@ aDi
 aDi
 aDi
 aDi
-aEG
-aEG
-aEG
+fxv
+fxv
+fxv
 aDi
 aDi
 aDi
@@ -30425,11 +30542,11 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+aJj
+aJj
+aJj
+aJj
+aJj
 aEG
 aEG
 aEG
@@ -34272,7 +34389,7 @@ aWP
 aZP
 adz
 adz
-alu
+sIh
 asL
 aiV
 aiV
@@ -34282,7 +34399,7 @@ aiV
 aSJ
 aTv
 adz
-aTv
+jJI
 aDZ
 aoO
 aiv
@@ -34432,7 +34549,7 @@ aPU
 aPU
 aPg
 aHG
-mvK
+akt
 adz
 aNL
 acq

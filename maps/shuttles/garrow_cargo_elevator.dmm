@@ -42,7 +42,8 @@
 	light_power = 0.25
 	},
 /obj/structure/machinery/computer/shuttle/elevator_controller{
-	pixel_y = 32
+	shuttleId = "garrow_cargo_elevator";
+	pixel_y = 33
 	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
@@ -87,7 +88,9 @@
 /turf/closed/shuttle/elevator/gears,
 /area/shuttle/elevator1)
 "W" = (
-/obj/docking_port/mobile/shipmap_elevator/cargo,
+/obj/docking_port/mobile/shipmap_elevator/cargo{
+	elevator_network = "ArrowCargo"
+	},
 /turf/closed/shuttle/elevator{
 	dir = 10
 	},
