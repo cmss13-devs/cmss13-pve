@@ -37,7 +37,7 @@
 // Weather events for Sorokyne
 /datum/weather_event/snow/infinite
 	name = "Snow (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/snowstorm/infinite
 	name = "Snowstorm (Infinite)"
