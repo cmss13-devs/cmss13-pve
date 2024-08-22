@@ -6,6 +6,7 @@
 	anchored = TRUE
 	density = TRUE
 	directwired = 0  //Requires a cable directly underneath
+	is_on = FALSE
 	unslashable = TRUE
 	unacidable = TRUE   //NOPE.jpg
 	var/power_gen_percent = 0 //100,000W at full capacity
