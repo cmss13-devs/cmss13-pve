@@ -1,5 +1,11 @@
+/****************************************/
 /*
-	Creates a forcefield which blocks everything from outside that isn't human
+			Shield Generator
+*/
+/****************************************/
+
+/*
+	Creates a emporary forcefield which blocks everything from outside that isn't human
 */
 /obj/item/explosive/grenade/drg_shield
 	name = "shield generator"
@@ -9,6 +15,7 @@
 	item_state = "delivery"
 	antigrief_protection = FALSE
 	indestructible = TRUE
+	unacidable = TRUE
 	dangerous = TRUE
 	harmful = FALSE
 	det_time = 40
