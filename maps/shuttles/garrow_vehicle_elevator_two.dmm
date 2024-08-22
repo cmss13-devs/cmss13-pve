@@ -2,9 +2,19 @@
 "a" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)
+"f" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	shuttleId = "garrow_vehicle_elevator_two"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/shuttle/vehicle_elevator)
 "o" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/docking_port/mobile/shipmap_elevator/two,
+/obj/docking_port/mobile/shipmap_elevator/two{
+	elevator_network = "ArrowVehicleTwo"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)
 "u" = (
@@ -51,7 +61,7 @@ Z
 (4,1,1) = {"
 T
 u
-A
+f
 A
 Z
 "}
