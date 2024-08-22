@@ -14,9 +14,25 @@
 	faction = FACTION_DRG
 
 	var/lives = 2
+	var/max_lives = 2
 	var/damaged = FALSE
 
+
 	var/base_robot_icon = "Detective Ball"
+
+/mob/living/simple_animal/hostile/drg/get_examine_text(mob/user)
+	. = ..()
+
+	if(user == src)
+		. += SPAN_NOTICE("Your current integrity status is [100*(health/maxHealth)]%.")
+		. += SPAN_NOTICE("You can handle atleast [lives] quick repairs before full destruction.")
+	else
+		if(lives <= 0 && stat != DEAD)
+			. += SPAN_DANGER("This robo-fella looks like it will explode any time soon. It will probably not live through next fight.")
+		else if(lives <= max_lives * 0.5)
+			. += SPAN_ORANGE("This unit suffered from heavy physical damage, which cannot be fixed here!")
+		else if(lives > max_lives * 0.5)
+			. += SPAN_GREEN("It looks a lil' bit scratched, but good otherwise.")
 
 /mob/living/simple_animal/hostile/drg/Life(delta_time)
 
@@ -39,6 +55,7 @@
 	var/list/possible_targets = list()
 
 	var/list/weapons = list("basic")
+	var/weapon_choosed = "basic"
 	var/using_special_ammo = FALSE
 	var/special_ammo = 0
 	var/special_ammo_max = 0 //so we can count it or refill
@@ -47,6 +64,20 @@
 
 	var/fire_mode = "automatic"
 	var/fire_disabled = FALSE
+
+/mob/living/simple_animal/hostile/drg/ranged/get_examine_text(mob/user)
+	. = ..()
+
+	if(user == src)
+		. += SPAN_DANGER("Your current weapon is [weapon_choosed].")
+		. += SPAN_DANGER("Your weapon system currently in [fire_mode] mode.")
+
+		if(fire_disabled)
+			. += SPAN_GREEN("It's safety is ON!")
+		else if(!fire_disabled)
+			. += SPAN_DANGER("It's safety is OFF!")
+
+		. += SPAN_GREEN("Your current special ammunition supplies is: [special_ammo]/[special_ammo_max].")
 
 /mob/living/simple_animal/hostile/drg/ranged/proc/change_fire_mode()
 	var/choose = tgui_input_list(usr, "Choose what to do!", "Weapons Control", fire_modes_list)
@@ -64,9 +95,13 @@
 		return FALSE
 	switch(projectile)
 		if("basic")
+			weapon_choosed = "basic"
 			return TRUE
 
 /mob/living/simple_animal/hostile/drg/ranged/click(atom/A, list/mods)
+	. = ..()
+	if(mods["middle"] || mods["shift"] || mods["alt"] || mods["ctrl"])
+		return
 	if(get_dist(A, src) >= 3 && fire_mode == "manual")
 		if(COOLDOWN_FINISHED(src, ranged_cooldown) && !damaged && !fire_disabled)
 
@@ -84,7 +119,6 @@
 				special_ammo -= 1
 				to_chat(usr, SPAN_DANGER("[special_ammo]/[special_ammo_max] AMMUNITION POINTS LEFT!"))
 			COOLDOWN_START(src, ranged_cooldown, cooldown_duration)
-	..()
 
 /mob/living/simple_animal/hostile/drg/ranged/UnarmedAttack(atom/A, proximity, click_parameters)
 	if(A == src)
@@ -93,7 +127,7 @@
 		if(!choosed_thing)
 			return FALSE
 		switch(choosed_thing)
-			if("Disable weapons")
+			if("Disable Weapons")
 				if(!fire_disabled)
 					fire_disabled = TRUE
 					to_chat(usr, SPAN_DANGER("You disabled your weapons!"))
@@ -143,12 +177,12 @@
 /mob/living/simple_animal/hostile/drg/howard
 	name = "H-0W-RD"
 	desc = "An DRG Company personal automaton. This one made for bar duty and service assistance."
-	icon = 'void-marines/icons/robots.dmi'
 	icon_state = "Howard"
 
 	health = 99999
 	maxHealth = 99999
 	lives = 99999
+	max_lives = 99999
 
 	base_robot_icon = "Howard"
 
@@ -206,7 +240,6 @@
 /mob/living/simple_animal/hostile/drg/ranged/robert
 	name = "R-0B-ER-T"
 	desc = "An DRG Company personal automaton. This one made for simple on-duty work."
-	icon = 'void-marines/icons/robots.dmi'
 	icon_state = "Robert"
 	base_robot_icon = "Robert"
 
@@ -235,7 +268,6 @@
 /mob/living/simple_animal/hostile/drg/ranged/robert/brother
 	name = "HU-3-BERT"
 	desc = "An DRG Company personal automaton. This one made for simple on-duty work and equiped with much more dangerous equipment."
-	icon = 'void-marines/icons/robots.dmi'
 	icon_state = "Huebert"
 	base_robot_icon = "Huebert"
 
@@ -249,7 +281,8 @@
 	special_ammo = 10
 	special_ammo_max = 10
 
-	weapons = list("shotgun", "rpg")
+	weapons = list("shotgun", "rockets")
+	weapon_choosed = "shotgun"
 	projectile_to_fire = /datum/ammo/bullet/shotgun/buckshot/special/bosco_heavy
 	cooldown_duration = 3 SECONDS
 
@@ -263,9 +296,58 @@
 			projectile_to_fire = /datum/ammo/bullet/shotgun/buckshot/special/bosco_heavy
 			cooldown_duration = 3 SECONDS
 			using_special_ammo = FALSE
+			weapon_choosed = "shotgun"
 			return TRUE
-		if("rpg")
+		if("rockets")
 			projectile_to_fire = /datum/ammo/rocket
 			using_special_ammo = TRUE
 			cooldown_duration = 8 SECONDS
+			weapon_choosed = "rockets"
 			return TRUE
+
+/mob/living/simple_animal/hostile/drg/dora
+	name = "D-0-RA"
+	desc = "An DRG Company personal automaton. This one made for transporting various things AND easly traversing difficult cave terrain."
+	icon_state = "Dora"
+
+	health = 99999
+	maxHealth = 99999
+	lives = 99999
+	max_lives = 99999
+
+	base_robot_icon = "Dora"
+
+//long list of various drg minerals to store inside
+
+	//ITEM-LIKE
+	var/eggs = 0
+	var/aquarqs = 0
+	var/fossils = 0
+	var/boolo_caps = 0
+	var/apoca_flowers = 0
+	var/ebonuts = 0 //ебонат
+	var/gunks = 0
+	var/pearls = 0
+	var/jadiz = 0 //огурец
+	var/bittergems = 0
+	var/error_cubes = 0
+	var/compressed_gold = 0
+
+	//ORES
+	var/morkite = 0
+	var/dystrum = 0
+	var/hollomite = 0
+	var/bismor = 0
+	var/croppa = 0
+	var/magnite = 0
+	var/umanite = 0
+	var/phazyonite = 0
+	var/gold = 0
+	var/nitra = 0
+
+	//BEER COMPONENTS
+	var/barley_bulbs = 0
+	var/malt_stars = 0
+	var/starch_nuts = 0
+	var/yeast_cones = 0
+
