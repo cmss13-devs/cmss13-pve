@@ -14,7 +14,7 @@
 // Weather events for Chances Claim
 /datum/weather_event/light_rain/lv522/infinite
 	name = "LV522 Light Rain (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 // Weather events for LV624
 /datum/weather_event/light_rain/infinite
