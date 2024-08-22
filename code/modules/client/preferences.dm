@@ -1594,7 +1594,7 @@ var/const/MAX_SAVE_SLOTS = 10
 				if("underwear")
 					var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
 					var/old_gender = gender
-					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options)
+					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options-GLOB.underwear_restricted)
 					if(old_gender != gender)
 						return
 					if(new_underwear)
@@ -1604,7 +1604,7 @@ var/const/MAX_SAVE_SLOTS = 10
 				if("undershirt")
 					var/list/undershirt_options = gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f
 					var/old_gender = gender
-					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options)
+					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options-GLOB.undershirt_restricted)
 					if(old_gender != gender)
 						return
 					if(new_undershirt)
