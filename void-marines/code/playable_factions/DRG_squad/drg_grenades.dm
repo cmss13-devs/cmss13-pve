@@ -7,7 +7,7 @@
 /obj/item/explosive/grenade/drg_decoy
 	name = "L.U.R.E. grenade"
 	desc = "The Laser Utility Refraction Emitter (aka L.U.R.E.) is the default Throwable for the Engineer. \
-	It is a miniature projector device that creates holograms of a pretty woman, \
+	It is a miniature projector device that creates holograms of pretty woman, \
 	dancing enough to distract primitive creatures, or entertain very 'hungry' men."
 	icon_state = "flashbang2"
 	item_state = "flashbang"
@@ -39,6 +39,15 @@
 
 	QDEL_IN(src, work_duration)
 
+/obj/item/explosive/grenade/drg_decoy/ex_act(severity, explosion_direction)
+	var/msg = pick("is destroyed by the blast!", "is obliterated by the blast!", "shatters as the explosion engulfs it!", "disintegrates in the blast!", "perishes in the blast!", "is mangled into uselessness by the blast!")
+	explosion_throw(severity, explosion_direction)
+	switch(severity) // We don't wanna blast away our precious decoy, or else...
+		if(EXPLOSION_THRESHOLD_VLOW to INFINITY)
+			if(!indestructible)
+				visible_message(SPAN_DANGER(SPAN_UNDERLINE("\The [src] [msg]")))
+				deconstruct(FALSE)
+
 /*
 	Temporary hologramm which forces some amount of bugs to chew it
 */
@@ -47,9 +56,12 @@
 	name = "decoy"
 	icon = 'void-marines/icons/holograms.dmi'
 	icon_state = "type2"
-
+	indestructible = TRUE
 	unacidable = TRUE
+
 	plane = FULLSCREEN_PLANE
+	light_color = "#67cefb"
+	light_range = 1
 
 	var/animation_time = 1 SECONDS
 
@@ -58,6 +70,8 @@
 
 	pixel_x = grenade.pixel_x
 	pixel_y = grenade.pixel_y + 10
+
+	set_light_on(TRUE)
 
 	RegisterSignal(grenade, COMSIG_PARENT_QDELETING, PROC_REF(remove))
 
