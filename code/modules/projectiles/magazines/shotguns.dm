@@ -84,6 +84,26 @@ var/list/shotgun_boxes_12g = list(
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
 	icon_state = "special"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/shotgun/buckshot/heavy
+	name = "box of heavy buckshot shells"
+	desc = "A box filled with buckshot spread shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_buckshot"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/heavy
+	name = "box of heavy slug shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_slug"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
 //-------------------------------------------------------
 
 /*

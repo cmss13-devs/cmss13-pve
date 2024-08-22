@@ -27,6 +27,7 @@
 
 var/list/grenade_packets = list(
 	/obj/item/storage/box/packet/high_explosive,
+	/obj/item/storage/box/packet/high_explosive/upp,
 	/obj/item/storage/box/packet/baton_slug,
 	/obj/item/storage/box/packet/flare,
 	/obj/item/storage/box/packet/hornet,
@@ -43,7 +44,15 @@ var/list/grenade_packets = list(
 	name = "\improper HEDP grenade packet"
 	desc = "It contains three HEDP high explosive grenades."
 	icon_state = "hedp_packet"
+	storage_slots = 5
 	content_type = /obj/item/explosive/grenade/high_explosive
+
+/obj/item/storage/box/packet/high_explosive/upp
+	name = "\improper Type 6 fragmentation grenade packet"
+	desc = "It contains three Type 6 fragmentation grenades."
+	icon_state = "woodbox"
+
+	content_type = /obj/item/explosive/grenade/high_explosive/upp
 
 /obj/item/storage/box/packet/baton_slug
 	name = "\improper HIRR baton slug packet"
