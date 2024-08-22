@@ -138,6 +138,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/gas
 	display_name = "Gas mask"
 	path = /obj/item/clothing/mask/gas
+	cost = 1
 
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
