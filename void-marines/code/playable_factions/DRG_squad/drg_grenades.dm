@@ -49,8 +49,7 @@
 	icon_state = "type2"
 
 	unacidable = TRUE
-	layer = ABOVE_FLY_LAYER
-	plane = HUD_PLANE
+	plane = FULLSCREEN_PLANE
 
 	var/animation_time = 1 SECONDS
 
