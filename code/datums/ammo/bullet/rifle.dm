@@ -33,7 +33,6 @@
 	damage = 25
 	holo_stacks = 15
 
-
 /datum/ammo/bullet/rifle/explosive
 	name = "explosive 10x24 bullet"
 	damage = 25
@@ -116,7 +115,6 @@
 	stamina_damage = 15
 	shrapnel_chance = 0
 
-
 /datum/ammo/bullet/rifle/incendiary
 	name = "incendiary 10x24 bullet"
 	damage_type = BURN
@@ -149,7 +147,7 @@
 /datum/ammo/bullet/rifle/heavy/ap
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 45
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/heap
@@ -240,20 +238,12 @@
 
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_4
 
-/datum/ammo/bullet/rifle/heavy/upp/ap
+/datum/ammo/bullet/rifle/heavy/ap/upp
 	name = "armor-piercing 10x31 bullet"
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_10
 
-/datum/ammo/bullet/rifle/heavy/upp/heap
+/datum/ammo/bullet/rifle/heavy/heap/upp
 	name = "high-explosive armor-piercing 10x31 bullet"
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 65
-	penetration = ARMOR_PENETRATION_TIER_10
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 // Misc
 

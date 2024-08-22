@@ -118,7 +118,7 @@
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "10x31mm"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 
 /obj/item/ammo_box/rounds/type71/empty
 	empty = TRUE
@@ -129,7 +129,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_ap"
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp/ap
 
 /obj/item/ammo_box/rounds/type71/ap/empty
 	empty = TRUE
@@ -146,12 +146,12 @@
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/pkp
-	name = "machinegun ammunition box (7.62x54mmR)"
-	desc = "A 7.62x54mmR machinegun ammunition box. Used to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "QYJ-72 ammunition box (10x31mm)"
+	desc = "A 10x31mm machinegun ammunition box. Used to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_reg"
 	default_ammo = /datum/ammo/bullet/pkp
 	bullet_amount = 1500
 	max_bullet_amount = 1500
-	caliber = "7.62x54mmR"
+	caliber = "10x31mm"
