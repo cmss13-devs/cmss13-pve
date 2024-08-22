@@ -41,7 +41,7 @@
 
 /datum/weather_event/snowstorm/infinite
 	name = "Snowstorm (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/blizzard/infinite
 	name = "Blizzard (Infinite)"
