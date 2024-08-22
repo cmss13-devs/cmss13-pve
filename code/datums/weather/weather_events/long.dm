@@ -9,7 +9,7 @@
 
 /datum/weather_event/rock/infinite
 	name = "Rockstorm (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 // Weather events for Chances Claim
 /datum/weather_event/light_rain/lv522/infinite
