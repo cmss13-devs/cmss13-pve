@@ -2,7 +2,6 @@ GLOBAL_LIST_INIT_TYPED(underwear_m, /datum/sprite_accessory/underwear, setup_und
 GLOBAL_LIST_INIT_TYPED(underwear_f, /datum/sprite_accessory/underwear, setup_underwear(FEMALE))
 GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, setup_underwear(null, TRUE))
 
-
 /proc/setup_underwear(restricted_gender, restricted)
 	var/list/underwear_list = list()
 	for(var/underwear_type in subtypesof(/datum/sprite_accessory/underwear))
