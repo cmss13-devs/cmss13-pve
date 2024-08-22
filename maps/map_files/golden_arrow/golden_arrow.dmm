@@ -15745,22 +15745,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
-"Qa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	dockId = "garrow_vehicle_elevator_one_storage";
-	shuttleId = "garrow_vehicle_elevator_one"
-	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
-/area/golden_arrow/motor_pool)
 "Qb" = (
 /obj/structure/machinery/landinglight/ds1,
 /obj/structure/machinery/floodlight/landing/floor{
@@ -29037,7 +29021,7 @@ Uh
 Uh
 Uh
 DB
-Qa
+DB
 wj
 GT
 TN
