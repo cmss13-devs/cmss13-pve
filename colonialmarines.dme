@@ -2520,6 +2520,7 @@
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
 #include "void-marines\code\playable_factions\DRG_squad\basics.dm"
+#include "void-marines\code\playable_factions\DRG_squad\drg_grenades.dm"
 #include "void-marines\code\playable_factions\DRG_squad\drg_support_items.dm"
 #include "void-marines\code\playable_factions\DRG_squad\drg_toolkit.dm"
 #include "void-marines\code\playable_factions\DRG_squad\drg_weapons.dm"
