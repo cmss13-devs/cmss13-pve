@@ -28,7 +28,7 @@
 // Weather events for New Varadero
 /datum/weather_event/light_rain/varadero/infinite
 	name = "Tropical Storm (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/monsoon/infinite
 	name = "Monsoon Warning (Infinite)"
