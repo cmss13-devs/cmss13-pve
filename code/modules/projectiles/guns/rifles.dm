@@ -1019,6 +1019,54 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
+//mook m16. inaccurate as hell.
+
+/obj/item/weapon/gun/rifle/m16/mook
+	name = "well-worn M16"
+	desc = "Your trusty old rifle. 5,56x45mm, gas operated, select fire."
+	current_mag = /obj/item/ammo_magazine/rifle/m16/mook
+
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/m16/mook,
+		/obj/item/ammo_magazine/rifle/m16/mook/extended,
+	)
+
+	attachable_allowed = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+	)
+
+		random_spawn_chance = 42
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/extended_barrel,
+
+/obj/item/weapon/gun/rifle/m16/mook/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_3
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+
 //-------------------------------------------------------
 //XM177 carbine
 //awesome vietnam era special forces carbine version of the M16

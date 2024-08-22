@@ -585,6 +585,7 @@
 #include "code\datums\pain\pain_human.dm"
 #include "code\datums\pain\pain_human_hero.dm"
 #include "code\datums\pain\pain_monkey.dm"
+#include "code\datums\pain\pain_mook.dm"
 #include "code\datums\pain\pain_synthetic.dm"
 #include "code\datums\pain\pain_xeno.dm"
 #include "code\datums\pain\pain_yautja.dm"

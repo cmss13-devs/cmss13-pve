@@ -136,7 +136,7 @@
 	name = "small revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
 
-	damage = 30
+	damage = 25
 
 	penetration = 0
 

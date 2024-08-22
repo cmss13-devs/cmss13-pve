@@ -280,6 +280,21 @@
 	w_class = SIZE_MEDIUM
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
+/obj/item/ammo_magazine/rifle/m16/mook
+	desc = "An FMJ 5,56x45mm STANAG magazine. Holds 20 rounds."
+	desc_lore = "OOC: Pretend it holds 20. Yes, 40 is intentional."
+	default_ammo = /datum/ammo/bullet/rifle/mook
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m16/mook
+
+/obj/item/ammo_magazine/rifle/m16/mook/extended
+	desc = "An extended FMJ 5,56x45mm STANAG magazine. Holds 30 rounds."
+	desc_lore = "OOC: Pretend it holds 30. Yes, 60 is intentional."
+	max_rounds = 60
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+m16_band"
+	ammo_band_icon_empty = "+m16_band_e"
+
 //-------------------------------------------------------
 //AR10 RIFLE
 

@@ -113,6 +113,20 @@
 	stamina_damage = 15
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/rifle/mook
+	name = "rifle bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+
+	damage = 25
+	penetration = 0
+	accurate_range = 3
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	shell_speed = AMMO_SPEED_TIER_6
+	effective_range_max = 6
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+	max_range = 24 //So S8 users don't have their bullets magically disappaer at 22 tiles (S8 can see 24 tiles)
+
 /datum/ammo/bullet/rifle/incendiary
 	name = "incendiary rifle bullet"
 	damage_type = BURN

@@ -738,13 +738,6 @@
 	worn_state = "workwear_green"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/clf
-	name = "\improper Colonial Liberation Front uniform"
-	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
-	icon_state = "clf_uniform"
-	worn_state = "clf_uniform"
-	sensor_faction = FACTION_CLF
-
 /obj/item/clothing/under/colonist/prison_boiler
 	name = "\improper prisoner boiler uniform"
 	desc = "A standardised prisoner-wear boiler uniform."
@@ -784,6 +777,95 @@
 	worn_state = "wy_joliet_shopsteward"
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
+
+//==============================//MOOK\\=================================//
+//=======================================================================//
+
+/obj/item/clothing/under/colonist/mook
+	name = "colonist uniform"
+	desc = "A stylish gray-green jumpsuit - standard issue for colonists."
+	icon_state = "colonist"
+	worn_state = "colonist"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_CLF
+
+/obj/item/clothing/under/colonist/workwear
+	name = "grey workwear"
+	desc = "A pair of black slacks and a short-sleeve grey workshirt. Standard uniform for Weyland Yutani employees working in colony operations and administration."
+	icon_state = "workwear_grey"
+	worn_state = "workwear_grey"
+
+/obj/item/clothing/under/colonist/mook/workwear/khaki
+	name = "khaki workwear"
+	desc = "A pair of jeans paired with a khaki workshirt. A common pairing among blue-collar workers due to its drab look."
+	icon_state = "workwear_khaki"
+	worn_state = "workwear_khaki"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/mook/workwear/pink
+	name = "pink workwear"
+	desc = "A pair of jeans paired with a pink workshirt. Pink? Your wife might not think so, but such outlandish attire deserves questioning by corporate security. What are you, some kind of free-thinking anarchist?"
+	icon_state = "workwear_pink"
+	worn_state = "workwear_pink"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/mook/workwear/blue
+	name = "blue workwear"
+	desc = "A pair of brown canvas workpants paired with a dark blue workshirt. A common pairing among blue-collar workers."
+	icon_state = "workwear_blue"
+	worn_state = "workwear_blue"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/mook/workwear/green
+	name = "green workwear"
+	desc = "A pair of brown canvas workpants paired with a green workshirt. An common pairing among blue-collar workers."
+	icon_state = "workwear_green"
+	worn_state = "workwear_green"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/mook/prison_boiler
+	name = "\improper prisoner boiler uniform"
+	desc = "A standardised prisoner-wear boiler uniform."
+	icon_state = "prison_boiler"
+	worn_state = "prison_boiler"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/mook/ua_boiler
+	name = "\improper blue operations uniform"
+	desc = "A stylish blue jumpsuit - standard issue for UA civilian support personnel."
+	icon_state = "ua_boiler"
+	worn_state = "ua_boiler"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	has_sensor = UNIFORM_HAS_SENSORS
+
+/obj/item/clothing/under/colonist/mook/ua_civvies
+	name = "\improper UA gray utility uniform"
+	desc = "A stylish gray jumpsuit - standard issue for UA civilian support personnel."
+	icon_state = "ua_civvies"
+	worn_state = "ua_civvies"
+	has_sensor = UNIFORM_HAS_SENSORS
+
+/obj/item/clothing/under/colonist/mook/wy_davisone
+	name = "\improper UA brown utility uniform"
+	desc = "A stylish brown jumpsuit - standard issue for UA civilian support personnel."
+	icon_state = "wy_davisone"
+	worn_state = "wy_davisone"
+	has_sensor = UNIFORM_HAS_SENSORS
+
+/obj/item/clothing/under/colonist/mook/wy_joliet_shopsteward
+	name = "steward utilities"
+	desc = "A stylish brown vest and shorts - uniforms like this are often worn by clerks and shop stewards."
+	icon_state = "wy_joliet_shopsteward"
+	worn_state = "wy_joliet_shopsteward"
+	has_sensor = UNIFORM_HAS_SENSORS
 
 /obj/item/clothing/under/tshirt
 	name = "T-shirt parent object"

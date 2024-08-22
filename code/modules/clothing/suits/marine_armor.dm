@@ -1468,16 +1468,16 @@
 	)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	flags_armor_protection = BODY_FLAG_CHEST
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = 0
+	armor_bomb = CLOTHING_ARMOR_NONE
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = 0
+	armor_internaldamage = CLOTHING_ARMOR_NONE
 	storage_slots = 2
 	uniform_restricted = list(/obj/item/clothing/under/colonist)
 	allowed = list(
@@ -1510,11 +1510,11 @@
 	pockets.max_storage_space = 8
 
 /obj/item/clothing/suit/storage/militia/vest
-	name = "makeshift body armor"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant protects only the chest and abdomen."
+	name = "homemade body armor"
+	desc = "Bulletproof vest composed of hardened steel plates and some straps, rivets."
 	icon_state = "clf_2"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_armor_protection = BODY_FLAG_CHEST
+	flags_cold_protection = BODY_FLAG_CHEST
 	slowdown = 0.2
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
@@ -1528,11 +1528,11 @@
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
 /obj/item/clothing/suit/storage/militia/partial
-	name = "colonial militia partial hauberk"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This even lighter variant has some of the arm pieces removed."
+	name = "improvised body armor"
+	desc = "Provides a marginal class of protection to the wearer through a wide variety of materials. May defeat low caliber rounds."
 	icon_state = "clf_4"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARM_RIGHT
+	flags_cold_protection = BODY_FLAG_CHEST
 	slowdown = 0.2
 
 /obj/item/clothing/suit/storage/CMB

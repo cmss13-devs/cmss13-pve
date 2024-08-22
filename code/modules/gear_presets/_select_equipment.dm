@@ -390,7 +390,12 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/spawn_rebel_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/uniformpath = pick(
-		/obj/item/clothing/under/colonist/clf,
+		/obj/item/clothing/under/colonist/mook,
+		/obj/item/clothing/under/colonist/mook/workwear,
+		/obj/item/clothing/under/colonist/mook/workwear/khaki,
+		/obj/item/clothing/under/colonist/mook/workwear/pink,
+		/obj/item/clothing/under/colonist/mook/workwear/blue,
+		/obj/item/clothing/under/colonist/mook/workwear/green,
 		)
 	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
 
@@ -400,10 +405,13 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/suitpath = pick(
 		/obj/item/clothing/suit/storage/militia,
 		/obj/item/clothing/suit/storage/militia/vest,
-		/obj/item/clothing/suit/storage/militia/brace,
 		/obj/item/clothing/suit/storage/militia/partial,
-		/obj/item/clothing/suit/armor/bulletproof,
-		/obj/item/clothing/suit/armor/vest,
+		/obj/item/clothing/suit/armor/bulletproof/mook,
+		/obj/item/clothing/suit/armor/vest/mook,
+		/obj/item/clothing/suit/armor/riot/mook,
+		/obj/item/clothing/suit/storage/webbing
+		/obj/item/clothing/suit/storage/utility_vest
+		/obj/item/clothing/suit/storage/manager/mook
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 
@@ -433,7 +441,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/leather,
-		/obj/item/clothing/shoes/marines/surplus,
+		/obj/item/clothing/shoes/marine/surplus,
 		)
 	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
 
@@ -466,10 +474,10 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	if(!M) return
 
 	var/list/rebel_firearms = list(
-		/obj/item/weapon/gun/shotgun/double = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/weapon/gun/shotgun/double = /obj/item/ammo_magazine/handful/shotgun/buckshot/mook,
+		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/flechette/mook,
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot/mook,
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary/mook,
 		/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/incendiary,
 		/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
@@ -478,7 +486,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
 		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
-		/obj/item/weapon/gun/rifle/m16 = /obj/item/ammo_magazine/rifle/m16,
+		/obj/item/weapon/gun/rifle/m16 = /obj/item/ammo_magazine/rifle/m16/mook,
 		/obj/item/weapon/gun/rifle/ar10 = /obj/item/ammo_magazine/rifle/ar10,
 		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
 		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,

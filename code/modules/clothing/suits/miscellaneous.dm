@@ -517,6 +517,20 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
+/obj/item/clothing/suit/storage/manager/mook
+	name = "suit jacket"
+	desc = "A suit jacket that looks fairly spiffy. Has some pockets to hold miscellaneous items."
+	storage_slots = 2
+
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_VERYLOW //omg payday 2 reference
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+
 /obj/item/clothing/suit/storage/director
 	name = "director's jacket"
 	desc = "A jacket that belongs to someone very important. It is made of insulating material and offers minor protection from all forms of damage."

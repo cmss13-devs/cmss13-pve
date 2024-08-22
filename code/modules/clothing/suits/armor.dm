@@ -54,7 +54,22 @@
 		/obj/item/storage/belt/gun/m44,
 	)
 
-
+/obj/item/clothing/suit/armor/vest/mook
+	name = "damaged venlar vest"
+	desc = "A scavenged venlar bulletproof vest, complete with a few holes in the outer carrier and up until recently, divots in the back of the front panel."
+	icon_state = "armor"
+	item_state = "armor"
+	blood_overlay_type = "armor"
+	flags_armor_protection = BODY_FLAG_CHEST
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	slowdown = SLOWDOWN_ARMOR_LOW_MEDIUM
 
 /obj/item/clothing/suit/armor/vest/pilot
 	name = "\improper M70 flak jacket"
@@ -176,6 +191,29 @@
 	icon_state = "bulletproofbadge"
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S, ACCESSORY_SLOT_ARMOR_M)
 
+/obj/item/clothing/suit/armor/bulletproof/mook
+	name = "old bulletproof vest"
+	desc = "Used to belong to a CMB officer. The bullet hole they died with sits right where the badge was, supposedly."
+	icon_state = "bulletproof"
+	item_state = "armor"
+	blood_overlay_type = "armor"
+	flags_armor_protection = BODY_FLAG_CHEST
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	slowdown = SLOWDOWN_ARMOR_LOW_MEDIUM
+
+/obj/item/clothing/suit/armor/bulletproof/mook/bandolier
+	name = "cheap armor vest"
+	desc = "Bought from a surplus store. Even came with a bandolier for all your supplies! The clerk said it wasn't too damaged..."
+	icon_state = "bulletproofammo"
+	item_state = "bulletproofammo"
+
 /obj/item/clothing/suit/armor/riot
 	name = "riot suit"
 	desc = "A suit of armor with heavy padding to protect against melee attacks. Looks like it might impair movement."
@@ -185,6 +223,26 @@
 	slowdown = 1
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_inventory = BLOCKSHARPOBJ
+	siemens_coefficient = 0.5
+	time_to_unequip = 20
+	time_to_equip = 20
+
+/obj/item/clothing/suit/armor/riot/mook
+	name = "salvaged riot armor"
+	desc = "A set of police riot armor salvaged and crudely uparmored, then repaired time and time again."
+	icon_state = "riot"
+	item_state = "swat_suit"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
+	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_LOW
