@@ -62,10 +62,10 @@
 	desc = "A scarred riot helmet covered in cobwebs. It still protects your ears."
 	icon_state = "old_riot"
 
-/obj/item/clothing/head/helmet/riot/salvaged
+/obj/item/clothing/head/helmet/riot/mook
 	name = "riot helmet"
 	desc = "Scavenged riot helmet. It's been heavily battered, but it should still provide some class of protection."
-	icon_state = "riot"
+	icon_state = "old_riot"
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -1480,3 +1480,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
 #undef HELMET_GARB_RELAY_ICON_STATE
+
+//=============================//MOOKS\\=================================\\
+//=======================================================================\\
+
+/obj/item/clothing/head/helmet/mook
+	name = "dented helmet"
+	desc = "On the other side, there's a divot into the armored fabric that looks to have been fixed by a hammer."
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDETOPHAIR
+

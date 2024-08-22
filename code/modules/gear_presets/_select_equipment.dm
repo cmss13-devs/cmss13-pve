@@ -419,10 +419,9 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/spawn_rebel_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/helmetpath = pick(
-		/obj/item/clothing/head/helmet/riot/salvaged,
+		/obj/item/clothing/head/helmet/riot/mook,
 		/obj/item/clothing/head/CMB/mook
-		/obj/item/clothing/head/helmet,
-		/obj/item/clothing/head/helmet/skullcap,
+		/obj/item/clothing/head/helmet/mook,
 		/obj/item/clothing/head/helmet/swat,
 		/obj/item/clothing/head/hardhat,
 		/obj/item/clothing/head/welding,
