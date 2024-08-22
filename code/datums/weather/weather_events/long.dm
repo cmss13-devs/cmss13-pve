@@ -5,7 +5,7 @@
 
 /datum/weather_event/sand/infinite
 	name = "Sandstorm (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/rock/infinite
 	name = "Rockstorm (Infinite)"
