@@ -23,7 +23,7 @@
 
 /datum/weather_event/heavy_rain/infinite
 	name = "Heavy Rain (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 // Weather events for New Varadero
 /datum/weather_event/light_rain/varadero/infinite
