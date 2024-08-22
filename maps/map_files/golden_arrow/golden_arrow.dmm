@@ -11413,17 +11413,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/hangar)
-"Eu" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/kitchen/rollingpin{
-	pixel_y = 4;
-	pixel_x = -6
-	},
-/obj/item/tool/kitchen/knife{
-	pixel_x = 9
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "Ew" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14357,22 +14346,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"Mk" = (
-/obj/structure/closet/secure_closet/freezer{
-	name = "Industrial Freezer";
-	desc = "An industrial-grade deep-freezer designed to keep ingredients within 'fresh' over the course of faster-than-light travel. Might impact the taste somewhat. Don't leave the door open too long!"
-	},
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/drinks/milk,
-/obj/item/reagent_container/food/drinks/milk,
-/obj/item/storage/fancy/egg_box,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "Mm" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4
@@ -27826,7 +27799,7 @@ EG
 EG
 EG
 EG
-Mk
+zs
 TY
 QW
 DO
@@ -28130,7 +28103,7 @@ EG
 EG
 EG
 EG
-Eu
+zs
 Jt
 Iu
 Yj
