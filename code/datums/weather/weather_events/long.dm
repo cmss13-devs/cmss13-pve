@@ -1,7 +1,7 @@
 // Weather events for Big Red
 /datum/weather_event/dust/infinite
 	name = "Duststorm (Infinite)"
-	length = INFINITE
+	length = INFINITY
 
 /datum/weather_event/sand/infinite
 	name = "Sandstorm (Infinite)"
