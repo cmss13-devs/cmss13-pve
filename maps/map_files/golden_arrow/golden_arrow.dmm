@@ -8350,21 +8350,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"wh" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	dockId = "garrow_vehicle_elevator_one";
-	shuttleId = "garrow_vehicle_elevator_one"
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
 "wj" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8804,15 +8789,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "xj" = (
-/obj/docking_port/stationary/shipmap_elevator/one{
-	id = "garrow_vehicle_elevator_one";
-	elevator_network = "one"
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/docking_port/stationary/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one";
 	elevator_network = "ArrowVehicleOne";
@@ -16247,17 +16223,6 @@
 	name = "Vehicle Elevator One Storage";
 	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone;
 	elevator_network = "one"
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/docking_port/stationary/shipmap_elevator/one{
-	id = "garrow_vehicle_elevator_one_storage";
-	name = "Vehicle Elevator One Storage";
-	roundstart_template = /datum/map_template/shuttle/golden_arrow/vehicleone;
-	elevator_network = "ArrowVehicleOne"
 	},
 /turf/open/floor/almayer/empty,
 /area/golden_arrow/motor_pool)
@@ -34600,7 +34565,7 @@ UH
 UH
 xj
 Ix
-wh
+ts
 dz
 WG
 vp
