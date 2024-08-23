@@ -220,7 +220,7 @@
 	icon_state = "poster15"
 	throw_speed = SPEED_FAST
 	throw_range = 5
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_TINY
 	attack_verb = list("bashed", "whacked", "educated")
 	pickup_sound = "sound/handling/book_pickup.ogg"
 	drop_sound = "sound/handling/book_pickup.ogg"
