@@ -218,6 +218,7 @@
 
 /datum/ammo/bullet/shotgun/mook/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 6)
+
 /datum/ammo/bullet/shotgun/mook/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	to_chat(target, SPAN_HIGHDANGER("The bukcshot takes you off your feet!"))
 	target.KnockDown(0.5)
