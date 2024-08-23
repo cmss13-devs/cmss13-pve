@@ -37,7 +37,7 @@
 	projectile_coverage = 100
 	flipped_projectile_coverage = PROJECTILE_COVERAGE_MAX
 	upright_projectile_coverage = PROJECTILE_COVERAGE_MAX
-	health = 500
+	health = 200
 
 	icon = 'void-marines/icons/rocks.dmi'
 	icon_state = "rocktable"
@@ -81,6 +81,7 @@
 /obj/structure/surface/table/rock/soft
 	icon_state = "dirttable"
 	table_prefix = "dirt"
+	health = 100
 
 	name = "soft soil"
 	desc = "Much easier to dig."

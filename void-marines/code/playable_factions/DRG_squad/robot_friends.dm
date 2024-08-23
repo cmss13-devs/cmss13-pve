@@ -69,14 +69,15 @@
 	. = ..()
 
 	if(user == src)
+		. += " "
 		. += SPAN_DANGER("Your current weapon is [weapon_choosed].")
 		. += SPAN_DANGER("Your weapon system currently in [fire_mode] mode.")
-
+		. += " "
 		if(fire_disabled)
 			. += SPAN_GREEN("It's safety is ON!")
 		else if(!fire_disabled)
 			. += SPAN_DANGER("It's safety is OFF!")
-
+		. += " "
 		. += SPAN_GREEN("Your current special ammunition supplies is: [special_ammo]/[special_ammo_max].")
 
 /mob/living/simple_animal/hostile/drg/ranged/proc/change_fire_mode()
@@ -305,6 +306,9 @@
 			weapon_choosed = "rockets"
 			return TRUE
 
+GLOBAL_LIST_INIT(stored_minerals, list(/obj/item/drg/glyphid_egg = 0))
+GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg/glyphid_egg = "Glyphid eggs"))
+
 /mob/living/simple_animal/hostile/drg/dora
 	name = "D-0-RA"
 	desc = "An DRG Company personal automaton. This one made for transporting various things AND easly traversing difficult cave terrain."
@@ -317,37 +321,37 @@
 
 	base_robot_icon = "Dora"
 
-//long list of various drg minerals to store inside
+/mob/living/simple_animal/hostile/drg/dora/get_examine_text(mob/user)
+	. = ..()
+	. += " "
+	. += SPAN_LARGE(SPAN_INFO("It currently holds:"))
+	for(var/mineral in GLOB.stored_minerals)
+		var/amount = GLOB.stored_minerals[mineral]
+		if(!amount)
+			continue
+		. += SPAN_GREEN("[amount] [GLOB.minerals_to_name[mineral]].")
 
-	//ITEM-LIKE
-	var/eggs = 0
-	var/aquarqs = 0
-	var/fossils = 0
-	var/boolo_caps = 0
-	var/apoca_flowers = 0
-	var/ebonuts = 0 //ебонат
-	var/gunks = 0
-	var/pearls = 0
-	var/jadiz = 0 //огурец
-	var/bittergems = 0
-	var/error_cubes = 0
-	var/compressed_gold = 0
+/mob/living/simple_animal/hostile/drg/dora/attackby(obj/item/W, mob/user, click_data)
+	. = ..()
+	var/item_type
+	for(var/atom/A in W)
+		item_type = A.type
+		if(isnull(GLOB.stored_minerals[item_type]))
+			item_type = null
+			continue
 
-	//ORES
-	var/morkite = 0
-	var/dystrum = 0
-	var/hollomite = 0
-	var/bismor = 0
-	var/croppa = 0
-	var/magnite = 0
-	var/umanite = 0
-	var/phazyonite = 0
-	var/gold = 0
-	var/nitra = 0
+		GLOB.stored_minerals[item_type] += 1
+		user.client.remove_from_screen(A)
+		qdel(A)
 
-	//BEER COMPONENTS
-	var/barley_bulbs = 0
-	var/malt_stars = 0
-	var/starch_nuts = 0
-	var/yeast_cones = 0
+	if(item_type)
+		return
 
+	item_type = W.type
+
+	if(isnull(GLOB.stored_minerals[item_type]))
+		to_chat(user, SPAN_DANGER("M.U.L.E can't accept this!"))
+		return
+
+	GLOB.stored_minerals[item_type] += 1
+	qdel(W)
