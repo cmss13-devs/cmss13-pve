@@ -1363,7 +1363,7 @@
 /area/golden_arrow/canteen)
 "le" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1
 	},
@@ -3108,12 +3108,6 @@
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
-"yL" = (
-/obj/item/clothing/head/helmet/marine/veteran/bear{
-	anchored = 1
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/golden_arrow/platoon_sergeant)
 "yS" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/stack/sandbags/large_stack);
@@ -3610,11 +3604,11 @@
 /area/golden_arrow/supply)
 "Cy" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal
 	},
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_y = 11
 	},
@@ -6473,6 +6467,12 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
+"YE" = (
+/obj/item/clothing/head/helmet/marine/veteran/bear{
+	anchored = 1
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/platoon_sergeant)
 "YL" = (
 /obj/structure/machinery/computer/crew/alt{
 	dir = 1
@@ -12938,7 +12938,7 @@ mV
 mV
 hE
 hE
-yL
+YE
 hE
 hE
 hE
