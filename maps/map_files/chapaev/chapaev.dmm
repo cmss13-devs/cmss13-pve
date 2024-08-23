@@ -1369,7 +1369,7 @@
 /area/golden_arrow/canteen)
 "le" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy, /obj/item/ammo_magazine/shotgun/buckshot/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1
 	},
@@ -3610,11 +3610,11 @@
 /area/golden_arrow/supply)
 "Cy" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/buckshot/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal
 	},
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/buckshot/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_y = 11
 	},
