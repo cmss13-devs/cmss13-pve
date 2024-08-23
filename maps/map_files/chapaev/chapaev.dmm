@@ -1125,25 +1125,19 @@
 	can_block_movement = 0;
 	anchored = 1
 	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 11;
-	pixel_x = 10
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 12;
-	pixel_x = 6
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 7;
-	pixel_x = 6
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
-	pixel_y = 10;
-	pixel_x = 9
-	},
 /obj/item/snowball{
 	pixel_y = 9;
 	pixel_x = 5
+	},
+/obj/item/reagent_container/food/snacks/bearmeat{
+	pixel_y = 8;
+	pixel_x = 6;
+	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the NODs you traded?"
+	},
+/obj/item/reagent_container/food/snacks/bearmeat{
+	pixel_y = 14;
+	pixel_x = 6;
+	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -1369,7 +1363,7 @@
 /area/golden_arrow/canteen)
 "le" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1
 	},
@@ -3610,11 +3604,11 @@
 /area/golden_arrow/supply)
 "Cy" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal
 	},
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_y = 11
 	},
@@ -4145,6 +4139,12 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
+"GN" = (
+/obj/item/clothing/head/helmet/marine/veteran/bear{
+	anchored = 1
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/platoon_sergeant)
 "GQ" = (
 /obj/structure/machinery/recharge_station{
 	pixel_y = 13
@@ -4459,11 +4459,6 @@
 	pixel_y = 4;
 	pixel_x = -32;
 	can_block_movement = 0
-	},
-/obj/item/weapon/gun/shotgun/double/sawn{
-	pixel_x = -32;
-	pixel_y = 1;
-	anchored = 1
 	},
 /obj/structure/surface/table{
 	color = "#8B7B5B"
@@ -12943,7 +12938,7 @@ mV
 mV
 hE
 hE
-hE
+GN
 hE
 hE
 hE
