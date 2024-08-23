@@ -204,9 +204,10 @@
 	desc = "Handloaded 00 B/S. Disperses a large amount of high impact projectiles."
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/mook/spread
 
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 2
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_4
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	accurate_range = 3
+	scatter = SCATTER_AMOUNT_TIER_3
 	max_range = 10
 	damage = 40
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
@@ -217,7 +218,7 @@
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/shotgun/mook/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 6)
+	knockback(M, P, 3)
 
 /datum/ammo/bullet/shotgun/mook/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	to_chat(target, SPAN_HIGHDANGER("The bukcshot takes you off your feet!"))
@@ -238,7 +239,6 @@
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_1
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
