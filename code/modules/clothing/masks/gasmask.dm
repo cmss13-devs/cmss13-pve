@@ -32,13 +32,13 @@
 	item_state = "kutjevo_respirator"
 
 /obj/item/clothing/mask/gas/m5
-	name = "\improper M5 Standalone Gasmask"
+	name = "\improper M5 standalone gasmask"
 	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This one is the alternative variant meant for Marines not in combat kit."
 	icon_state = "m5_gasmask"
 	item_state = "m5_gasmask"
 
 /obj/item/clothing/mask/gas/upp
-	name = "\improper PMK-63 Gasmask"
+	name = "\improper PMK-63 gasmask"
 	desc = "The Union service mask issued to backline troops not prepared for combat."
 	icon_state = "upp_gasmask"
 	item_state = "upp_gasmask"
