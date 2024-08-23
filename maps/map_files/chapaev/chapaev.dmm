@@ -5369,15 +5369,6 @@
 	req_one_access_txt = "240";
 	req_access = null
 	},
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/ammo_magazine/sniper/svd/pve,
-/obj/item/weapon/gun/rifle/sniper/svd/pve{
-	current_mag = null
-	},
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
 	},
