@@ -595,11 +595,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
-	if(!late_join)
-		add_verb(new_human.client, /client/proc/commander_rename_platoon)
+	if(late_join)
+		return
 
-		do_rename_platoon(new_human.client.prefs.platoon_name)
-		change_dropship_camo(new_human.client.prefs.dropship_camo)
+	add_verb(new_human.client, /client/proc/commander_rename_platoon)
+
+	do_rename_platoon(new_human.client.prefs.platoon_name)
+	change_dropship_camo(new_human.client.prefs.dropship_camo)
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	paygrade = "MO1"

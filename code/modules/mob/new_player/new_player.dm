@@ -245,7 +245,7 @@
 	close_spawn_windows()
 
 	var/mob/living/carbon/human/character = create_character(TRUE) //creates the human and transfers vars and mind
-	RoleAuthority.equip_role(character, player_rank, late_join = TRUE)
+	RoleAuthority.equip_role(character, player_rank, _late_join = TRUE)
 	EquipCustomItems(character)
 
 	if((security_level > SEC_LEVEL_BLUE || SShijack.hijack_status) && player_rank.gets_emergency_kit)
