@@ -208,7 +208,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
 	accurate_range = 2
 	max_range = 10
-	damage = 38
+	damage = 40
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_10
 	penetration = 0
