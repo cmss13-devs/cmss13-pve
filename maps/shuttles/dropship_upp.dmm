@@ -7,6 +7,16 @@
 	icon_state = "floor2"
 	},
 /area/shuttle/ds_upp)
+"df" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
 "di" = (
 /turf/closed/shuttle/ert{
 	icon_state = "rightengine_11";
@@ -182,10 +192,28 @@
 	icon_state = "T61"
 	},
 /area/shuttle/ds_upp)
+"rr" = (
+/obj/structure/barricade/handrail/strata,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
 "rX" = (
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -205,6 +233,15 @@
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"sg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 19
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp8"
 	},
 /area/shuttle/ds_upp)
 "sC" = (
@@ -279,6 +316,10 @@
 	attach_id = 7;
 	ship_tag = "dropship_upp"
 	},
+/obj/structure/barricade/handrail/strata,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -322,14 +363,23 @@
 	dir = 8;
 	pixel_x = -14
 	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
 	},
 /area/shuttle/ds_upp)
 "Dn" = (
-/obj/structure/platform{
-	dir = 1
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -363,7 +413,9 @@
 	},
 /area/shuttle/ds_upp)
 "GR" = (
-/obj/structure/stairs,
+/obj/structure/stairs{
+	layer = 2.1
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -399,6 +451,15 @@
 	icon_state = "floor3"
 	},
 /area/shuttle/ds_upp)
+"IC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/shuttle/ds_upp)
 "Jo" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
 /obj/effect/attach_point/weapon/midway/right_fore{
@@ -417,6 +478,15 @@
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
+	},
+/area/shuttle/ds_upp)
+"LR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
 	},
 /area/shuttle/ds_upp)
 "My" = (
@@ -604,8 +674,8 @@ Jy
 Xe
 wO
 ZO
-Uw
-Uw
+LR
+LR
 Zm
 xE
 xE
@@ -631,9 +701,9 @@ ex
 jh
 JD
 HV
-nA
+df
 GR
-Zm
+sg
 xE
 xE
 lm
@@ -651,11 +721,11 @@ Fd
 Fd
 Fd
 fz
-nA
+rr
 Dn
 nA
 Cw
-nA
+sP
 sC
 "}
 (5,1,1) = {"
@@ -691,11 +761,11 @@ sP
 sP
 sP
 Sg
-nA
+rr
 Dn
-nA
+zL
 rX
-nA
+Fd
 nA
 "}
 (7,1,1) = {"
@@ -711,7 +781,7 @@ yy
 is
 Sf
 HV
-nA
+df
 GR
 hg
 Sx
@@ -724,8 +794,8 @@ Jy
 Jo
 Hk
 TG
-Uw
-Uw
+IC
+IC
 hg
 Sx
 Sx
