@@ -1096,10 +1096,6 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
 
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
-
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo

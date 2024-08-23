@@ -711,7 +711,7 @@
 	icon_state = "mealpack"
 	w_class = SIZE_SMALL
 	can_hold = list()
-	storage_slots = 7
+	storage_slots = 8
 	max_w_class = 0
 	use_sound = "rip"
 	var/isopened = 0
@@ -728,8 +728,9 @@
 	//1 in 3 chance of getting a fortune cookie
 	var/cookie = rand(1,3)
 	var/matches_type = rand(1, 5)
+	var/juice_type = rand(1, 5)
 	if(cookie == 1)
-		storage_slots = 8
+		storage_slots = 9
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, main)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, second)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, side)
@@ -749,6 +750,17 @@
 			new /obj/item/storage/fancy/cigar/matchbook/wy_gold(src)
 		if(5)
 			new /obj/item/storage/fancy/cigar/matchbook/brown(src)
+	switch(juice_type)
+		if(1)
+			new /obj/item/reagent_container/food/condiment/juice/orange(src)
+		if(2)
+			new /obj/item/reagent_container/food/condiment/juice/apple(src)
+		if(3)
+			new /obj/item/reagent_container/food/condiment/juice/watermelon(src)
+		if(4)
+			new /obj/item/reagent_container/food/condiment/juice/grape(src)
+		if(5)
+			new /obj/item/reagent_container/food/condiment/juice/pineapple(src)
 
 /obj/item/storage/box/MRE/Initialize()
 	. = ..()
@@ -761,3 +773,14 @@
 	else if(!isopened)
 		isopened = 1
 		icon_state = "mealpackopened"
+
+/obj/item/storage/box/powderedmilk
+	name = "box of powdered milk packets"
+	desc = "It has a weird stain on it."
+
+/obj/item/storage/box/powderedmilk/fill_preset_inventory()
+	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+	new /obj/item/reagent_container/food/condiment/juice/milk(src)
