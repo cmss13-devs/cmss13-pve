@@ -583,7 +583,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
-	email_type = /datum/fluff_email/almayerD
+	email_type = /datum/fluff_email/almayer/lasergun1
 	},
 /obj/item/device/flashlight/lamp/on{
 	pixel_y = 21;
