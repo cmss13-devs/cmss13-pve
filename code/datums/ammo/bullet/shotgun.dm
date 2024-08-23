@@ -199,6 +199,48 @@
 	damage = 90
 	firing_freq_offset = SOUND_FREQ_LOW
 
+/datum/ammo/bullet/shotgun/buckshot/mook
+	name = "buckshot shell"
+	desc = "Handloaded 00 B/S. Disperses a large amount of high impact projectiles."
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/mook/spread
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
+	accurate_range = 2
+	max_range = 10
+	damage = 38
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_10
+	penetration = 0
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/shotgun/mook/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 6)
+/datum/ammo/bullet/shotgun/mook/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	to_chat(target, SPAN_HIGHDANGER("The bukcshot takes you off your feet!"))
+	target.KnockDown(0.5)
+	target.apply_effect(1, SUPERSLOW)
+	target.apply_effect(3, SLOW)
+
+/datum/ammo/bullet/shotgun/buckshot/mook/spread
+	name = "additional buckshot"
+	icon_state = "buckshot"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	accurate_range = 4
+	max_range = 4
+	damage = 38
+	damage_var_low = PROJECTILE_VARIANCE_TIER_8
+	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_1
+	damage_armor_punch = 0
+	pen_armor_punch = 0
+
 /*
 					8 GAUGE SHOTGUN AMMO
 */

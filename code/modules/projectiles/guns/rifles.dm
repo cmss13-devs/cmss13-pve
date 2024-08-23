@@ -1040,8 +1040,7 @@
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/compensator,
 	)
-
-		random_spawn_chance = 42
+	random_spawn_chance = 42
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reddot/upp,
