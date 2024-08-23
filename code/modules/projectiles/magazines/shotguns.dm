@@ -104,6 +104,16 @@ var/list/shotgun_boxes_12g = list(
 	transfer_handful_amount = 4
 	max_rounds = 24
 	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath
+	name = "box of heavy dragonsbreath shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_dragon"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
 //-------------------------------------------------------
 
 /*
