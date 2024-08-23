@@ -310,8 +310,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
-	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-		dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
+	dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 		dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_MENTOR)
@@ -495,15 +494,12 @@ var/const/MAX_SAVE_SLOTS = 10
 			else
 				dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_SYNTHETIC)
-			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-				dat += "<div id='column1'>"
-				dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
-				dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
-				dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
-				dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
-				dat += "</div>"
-			else
-				dat += "<b>You do not have the whitelist for this role.</b>"
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
+			dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
+			dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
+			dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
+			dat += "</div>"
 		if(MENU_YAUTJA)
 			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 				dat += "<div id='column1'>"
