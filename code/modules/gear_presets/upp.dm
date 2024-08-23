@@ -83,22 +83,34 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare, WEAR_IN_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/territorial, WEAR_L_EAR)
+
 	//head
-	var/maybehat = prob(95) ? pick(/obj/item/clothing/head/uppcap,/obj/item/clothing/head/uppcap/boonie) : null
-	if(maybehat)
-		new_human.equip_to_slot_or_del(new maybehat, WEAR_HEAD)
-	//jacket
-	var/maybejacket = prob(100) ? pick(/obj/item/clothing/suit/storage/marine/faction/UPP/jacket, /obj/item/clothing/suit/storage/marine/veteran/lamp) : null
-	if(maybejacket)
-		new_human.equip_to_slot_or_del(new maybejacket, WEAR_JACKET)
+	var/random_hat= rand(1,3)
+	switch(random_hat)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap, WEAR_HEAD)
+		if(2 to 3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/boonie, WEAR_HEAD)
+
+	var/random_jacket= rand(1,3)
+	switch(random_jacket)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket, WEAR_JACKET)
+		if(2 to 3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/lamp, WEAR_JACKET)
+
+
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
 
-	var/maybewebbing = prob(100) ? pick(/obj/item/clothing/accessory/storage/webbing, /obj/item/clothing/accessory/storage/droppouch) : null
-	if(maybewebbing)
-		new_human.equip_to_slot_or_del(new maybewebbing, WEAR_ACCESSORY)
+	var/random_storage = rand(1,2)
+	switch(random_storage)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing, WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -476,9 +488,10 @@
 
 /datum/equipment_preset/upp/synth/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(50;MALE,50;FEMALE)
-/* 	var/datum/preferences/A = new()
+
+/* var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
-	var/random_name
+var/random_name
 	if(prob(10))
 		random_name = "[capitalize(randomly_generate_chinese_word(2))]"
 	else if(new_human.gender == MALE)

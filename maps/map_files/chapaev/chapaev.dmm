@@ -583,6 +583,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
+	email_type = /datum/fluff_email/almayer/lasergun1
 	},
 /obj/item/device/flashlight/lamp/on{
 	pixel_y = 21;
@@ -1362,7 +1363,7 @@
 /area/golden_arrow/canteen)
 "le" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1
 	},
@@ -3107,6 +3108,12 @@
 "yH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/hangar)
+"yL" = (
+/obj/item/clothing/head/helmet/marine/veteran/bear{
+	anchored = 1
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/platoon_sergeant)
 "yS" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/stack/sandbags/large_stack);
@@ -3603,11 +3610,11 @@
 /area/golden_arrow/supply)
 "Cy" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal
 	},
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/heavy/slug);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_y = 11
 	},
@@ -4138,12 +4145,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
-"GN" = (
-/obj/item/clothing/head/helmet/marine/veteran/bear{
-	anchored = 1
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/golden_arrow/platoon_sergeant)
 "GQ" = (
 /obj/structure/machinery/recharge_station{
 	pixel_y = 13
@@ -12937,7 +12938,7 @@ mV
 mV
 hE
 hE
-GN
+yL
 hE
 hE
 hE
