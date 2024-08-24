@@ -211,10 +211,12 @@
 	desc = "A gun case containing the M37A2 Pump Shotgun."
 	icon_state = "guncase_red"
 	storage_slots = 4
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs)
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs, /obj/item/storage/pouch/shotgun)
 
 /obj/item/storage/box/guncase/pumpshotgun/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
+	new /obj/item/storage/pouch/shotgun(src)
+	new /obj/item/storage/large_holster/m37(src)
 	for(var/i = 1 to 3)
 		var/random_pick = rand(1, 3)
 		switch(random_pick)
@@ -231,6 +233,8 @@
 /obj/item/storage/box/guncase/pumpshotgun/special/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump/special(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
+	new /obj/item/storage/pouch/shotgun(src)
+	new /obj/item/storage/large_holster/m37(src)
 
 /obj/item/storage/box/guncase/mk45_automag
 	name = "\improper MK-45 Automagnum case"
