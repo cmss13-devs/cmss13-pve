@@ -403,7 +403,7 @@
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "M56 combat harness")
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness")
 		name = "M56 snow combat harness"
 
 /obj/item/clothing/suit/storage/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
