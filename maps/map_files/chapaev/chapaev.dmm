@@ -350,6 +350,11 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_y = 6;
+	pixel_x = 2
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -582,7 +587,7 @@
 "eD" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/device/flashlight/lamp/on{
 	pixel_y = 21;
@@ -1430,6 +1435,7 @@
 "lP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_magazine/shotgun/slug/heavy,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -2909,9 +2915,6 @@
 	pixel_y = 10
 	},
 /obj/structure/pipes/vents/pump,
-/obj/structure/machinery/light/small{
-	invisibility = 101
-	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -4746,6 +4749,7 @@
 	pixel_x = 3
 	},
 /obj/item/ammo_magazine/shotgun/buckshot/heavy,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -15349,7 +15353,7 @@ PJ
 xD
 xD
 cv
-PJ
+xD
 gh
 cT
 tL
@@ -16428,7 +16432,7 @@ uP
 uP
 Bh
 ts
-cQ
+ts
 ts
 cQ
 HI
