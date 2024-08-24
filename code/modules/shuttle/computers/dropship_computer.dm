@@ -379,7 +379,7 @@
 			update_equipment(is_optimised, FALSE)
 			var/list/local_data = ui_data(user)
 			var/found = FALSE
-			playsound(loc, get_sfx("terminal_button"), KEYBOARD_SOUND_VOLUME, 1)
+			playsound(loc, get_sfx("terminal_button"), 5, 1)
 			for(var/destination in local_data["destinations"])
 				if(destination["id"] == dock_id)
 					found = TRUE
@@ -502,9 +502,14 @@
 	needs_power = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/toc
-	name = "midway control screen"
+	name = "dropship control screen"
 	desc = "A screen on the TOC computer for controlling the dropship linked to it."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "toc_shuttle"
 	shuttleId = DROPSHIP_MIDWAY
 	is_remote = TRUE
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/small
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "cameras_old"
+

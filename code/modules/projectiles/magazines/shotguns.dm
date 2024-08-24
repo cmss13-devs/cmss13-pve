@@ -82,6 +82,7 @@ var/list/shotgun_boxes_12g = list(
 /obj/item/ammo_magazine/shotgun/buckshot/special
 	name = "box of buckshot shells, USCM special type"
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
+	icon_state = "special"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 //-------------------------------------------------------
 
@@ -205,6 +206,7 @@ var/list/shotgun_handfuls_12g = list(
 
 /obj/item/ammo_magazine/handful/shotgun/buckshot/special
 	name = "handful of shotgun buckshot shells, USCM special type (12g)"
+	icon_state = "special_buck_5"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 
 /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary

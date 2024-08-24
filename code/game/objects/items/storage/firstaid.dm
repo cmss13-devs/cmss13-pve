@@ -536,6 +536,12 @@
 /obj/item/storage/pill_bottle/kelotane/skillless
 	skilllock = SKILL_MEDICAL_DEFAULT
 
+/obj/item/storage/pill_bottle/keloderm
+	name = "\improper Kelotane-Dermaline pill bottle"
+	icon_state = "pill_canister15"
+	pill_type_to_fill = /obj/item/reagent_container/pill/keloderm
+	maptext_label = "KD"
+
 /obj/item/storage/pill_bottle/antitox
 	name = "\improper Dylovene pill bottle"
 	icon_state = "pill_canister6"
@@ -582,6 +588,12 @@
 /obj/item/storage/pill_bottle/bicaridine/skillless
 	skilllock = SKILL_MEDICAL_DEFAULT
 
+/obj/item/storage/pill_bottle/merabica
+	name = "\improper Meralyne-Bicaridine pill bottle"
+	icon_state = "pill_canister8"
+	pill_type_to_fill = /obj/item/reagent_container/pill/merabica
+	maptext_label = "MB"
+
 /obj/item/storage/pill_bottle/dexalin
 	name = "\improper Dexalin pill bottle"
 	icon_state = "pill_canister1"
@@ -590,6 +602,12 @@
 
 /obj/item/storage/pill_bottle/dexalin/skillless
 	skilllock = SKILL_MEDICAL_DEFAULT
+
+/obj/item/storage/pill_bottle/dexalinplus
+	name = "\improper Dexalin+ pill bottle"
+	icon_state = "pill_canister13"
+	pill_type_to_fill = /obj/item/reagent_container/pill/dexalinplus
+	maptext_label = "D+"
 
 //Alkysine
 /obj/item/storage/pill_bottle/alkysine
@@ -719,6 +737,30 @@
 	pill_type_to_fill = /obj/item/reagent_container/pill/paracetamol
 	skilllock = SKILL_MEDICAL_DEFAULT
 	maptext_label = "Pc"
+
+/obj/item/storage/pill_bottle/imialk
+	name = "\improper Imidazoline-Alkysine pill bottle"
+	icon_state = "pill_canister14"
+	pill_type_to_fill = /obj/item/reagent_container/pill/imialk
+	maptext_label = "IA"
+
+/obj/item/storage/pill_bottle/iron
+	name = "\improper Iron pill bottle"
+	icon_state = "pill_canister4"
+	pill_type_to_fill = /obj/item/reagent_container/pill/iron
+	maptext_label = "FE"
+
+/obj/item/storage/pill_bottle/nitrogenwater
+	name = "\improper Nitrogen-Water pill bottle"
+	icon_state = "pill_canister12"
+	pill_type_to_fill = /obj/item/reagent_container/pill/nitrogenwater
+	maptext_label = "NW"
+
+/obj/item/storage/pill_bottle/tricord
+	name = "\improper Tricordazine pill bottle"
+	icon_state = "pill_canister"
+	pill_type_to_fill = /obj/item/reagent_container/pill/tricordrazine
+	maptext_label = "Ti"
 
 //---------PILL PACKETS---------
 /obj/item/storage/pill_bottle/packet

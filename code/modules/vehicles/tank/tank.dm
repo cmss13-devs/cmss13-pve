@@ -15,8 +15,7 @@
 
 	interior_map = /datum/map_template/interior/tank
 
-	//tank always has 2 crewmen slot reserved and 1 general slot for other roles.
-	passengers_slots = 1
+	passengers_slots = 4
 	//this is done in case VCs die inside the tank, so that someone else can come in and take them out.
 	revivable_dead_slots = 2
 	xenos_slots = 4

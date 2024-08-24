@@ -117,7 +117,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 
@@ -158,7 +158,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
 
 	// Communication stuff
-	data["communication_clarity"] = GLOB.radio_communication_clarity
+	data["radio_clarity"] = GLOB.radio_communication_clarity
+	data["radio_clarity_example"] = stars("The quick brown fox jumped over the lazy dog.", GLOB.radio_communication_clarity)
 
 	return data
 
@@ -294,7 +295,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		if("use_game_master_phone")
 			game_master_phone.attack_hand(ui.user)
 
-		if("set_communication_clarity")
+		if("set_radio_clarity")
 			var/new_clarity = text2num(params["clarity"])
 			if(!isnum(new_clarity))
 				return

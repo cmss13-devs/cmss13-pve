@@ -270,7 +270,7 @@
 /obj/item/reagent_container/food/drinks/cans/boda
 	name = "\improper Boda"
 	desc = "State regulated soda beverage. Enjoy comrades."
-	desc_lore = "Designed back in 2159, the advertising campaign for BODA started out as an attempt by the UPP to win the hearts and minds of colonists and settlers across the galaxy. Soon after, the ubiquitous cyan vendors and large supplies of the drink began to crop up in UA warehouses with seemingly no clear origin. Despite some concerns, after initial testing determined that the stored products were safe for consumption and surprisingly popular when blind-tested with focus groups, the strange surplus of BODA was authorized for usage within the UA-associated colonies. Subsequently, it enjoyed a relative popularity before falling into obscurity in the coming decades as supplies dwindled." 
+	desc_lore = "Designed back in 2159, the advertising campaign for BODA started out as an attempt by the UPP to win the hearts and minds of colonists and settlers across the galaxy. Soon after, the ubiquitous cyan vendors and large supplies of the drink began to crop up in UA warehouses with seemingly no clear origin. Despite some concerns, after initial testing determined that the stored products were safe for consumption and surprisingly popular when blind-tested with focus groups, the strange surplus of BODA was authorized for usage within the UA-associated colonies. Subsequently, it enjoyed a relative popularity before falling into obscurity in the coming decades as supplies dwindled."
 	icon_state = "boda"
 	center_of_mass = "x=16;y=10"
 
@@ -347,10 +347,6 @@
 	icon_state = "souto_diet_classic"
 	item_state = "souto_diet_classic"
 
-/obj/item/reagent_container/food/drinks/cans/souto/diet/Initialize()
-	. = ..()
-	reagents.add_reagent("water", 25)
-
 /obj/item/reagent_container/food/drinks/cans/souto/classic
 	name = "\improper Souto Classic"
 	desc = "The can boldly proclaims it to be tangerine flavored. You can't help but think that's a lie. Canned in Havana."
@@ -359,7 +355,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/classic/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_classic", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_classic", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/classic
 	name = "\improper Diet Souto"
@@ -369,7 +367,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/classic/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_classic", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_classic", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/cherry
 	name = "\improper Cherry Souto"
@@ -379,7 +379,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/cherry/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_cherry", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_cherry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cherry
 	name = "\improper Diet Cherry Souto"
@@ -389,7 +391,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cherry/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_cherry", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_cherry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/lime
 	name = "\improper Lime Souto"
@@ -399,7 +403,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/lime/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_lime", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_lime", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/lime
 	name = "\improper Diet Lime Souto"
@@ -409,7 +415,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/lime/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_lime", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_lime", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/grape
 	name = "\improper Grape Souto"
@@ -419,7 +427,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/grape/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_grape", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_grape", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/grape
 	name = "\improper Diet Grape Souto"
@@ -429,7 +439,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/grape/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_grape", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_grape", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/blue
 	name = "\improper Blue Raspberry Souto"
@@ -440,7 +452,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/blue/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_blueraspberry", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_blueraspberry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue
 	name = "\improper Diet Blue Raspberry Souto"
@@ -450,7 +464,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_blueraspberry", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_blueraspberry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/peach
 	name = "\improper Peach Souto"
@@ -460,7 +476,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/peach/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_peach", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_peach", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/peach
 	name = "\improper Diet Peach Souto"
@@ -470,7 +488,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/peach/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_peach", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_peach", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/cranberry
 	name = "\improper Cranberry Souto"
@@ -480,7 +500,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/cranberry/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_cranberry", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_cranberry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cranberry
 	name = "\improper Diet Cranberry Souto"
@@ -490,8 +512,9 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cranberry/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_cranberry", 25)
-	reagents.add_reagent("water", 25)
+	reagents.add_reagent("sucralose", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_cranberry", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/vanilla
 	name = "\improper Vanilla Souto"
@@ -511,29 +534,32 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/vanilla/Initialize()
 	. = ..()
+	reagents.add_reagent("sodawater", 25)
 	reagents.add_reagent("souto_vanilla", 25)
-	reagents.add_reagent("water", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/pineapple
 	name = "\improper Pineapple Souto"
-	desc = "This tastes like battery acid with a full cup of sugar mixed in. Canned in Havana."
+	desc = "This tastes like battery acid with a full cup of corn syrup mixed in. Canned in Havana."
 	icon_state = "souto_pineapple"
 	item_state = "souto_pineapple"
 
 /obj/item/reagent_container/food/drinks/cans/souto/pineapple/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_pineapple", 50)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_pineapple", 20)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/pineapple
 	name = "\improper Diet Pineapple Souto"
-	desc = "This tastes like battery acid with a half cup of sugar mixed in. Canned in Havana."
+	desc = "This tastes like battery acid with a full cup of sugar substitute mixed in. Canned in Havana."
 	icon_state = "souto_diet_pineapple"
 	item_state = "souto_diet_pineapple"
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/pineapple/Initialize()
 	. = ..()
-	reagents.add_reagent("souto_pineapple", 25)
-	reagents.add_reagent("water", 25)
+	reagents.add_reagent("cornsyrup", 15)
+	reagents.add_reagent("sodawater", 15)
+	reagents.add_reagent("souto_pineapple", 20)
 
 //ASPEN
 

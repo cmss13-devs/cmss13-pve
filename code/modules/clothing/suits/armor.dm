@@ -192,7 +192,6 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = HIDEJUMPSUIT
 	siemens_coefficient = 0.5
 	time_to_unequip = 20
 	time_to_equip = 20
