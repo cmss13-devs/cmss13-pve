@@ -736,41 +736,6 @@
 	reagents.add_reagent("meatprotein", 6)
 	bitesize = 2
 
-/obj/item/reagent_container/food/snacks/donkpocket
-	name = "Donk-pocket"
-	desc = "The food of choice for the seasoned traitor."
-	icon_state = "donkpocket_wr2"
-	filling_color = "#DEDEAB"
-	package = 2
-	var/warm = 0
-
-/obj/item/reagent_container/food/snacks/donkpocket/Initialize()
-	. = ..()
-	reagents.add_reagent("meatprotein", 2)
-	reagents.add_reagent("bread", 2)
-
-/obj/item/reagent_container/food/snacks/donkpocket/attack_self(mob/user)
-	..()
-
-	if(package==1)
-		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
-		to_chat(user, SPAN_NOTICE("You pull off the sleeve from the donk pocket!"))
-		package = 0
-		icon_state = "donkpocket"
-	if(package==2)
-		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
-		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the donk pocket!"))
-		package = 1
-		icon_state = "donkpocket_wr1"
-
-/obj/item/reagent_container/food/snacks/donkpocket/proc/cooltime() //Not working, derp?
-	if(warm)
-		spawn(4200)
-			if(!QDELETED(src)) //not qdel'd
-				warm = 0
-				reagents.del_reagent("tricordrazine")
-				name = "donk-pocket"
-
 /obj/item/reagent_container/food/snacks/brainburger
 	name = "brainburger"
 	desc = "A strange looking burger. It looks almost sentient."
@@ -3169,6 +3134,41 @@
 	reagents.add_reagent("vegetable", 3)
 	reagents.add_reagent("potato", 3)
 
+/obj/item/reagent_container/food/snacks/donkpocket
+	name = "Donk-pocket"
+	desc = "The food of choice for the seasoned traitor."
+	icon_state = "donkpocket_wr2"
+	filling_color = "#DEDEAB"
+	package = 2
+	var/warm = 0
+
+/obj/item/reagent_container/food/snacks/donkpocket/Initialize()
+	. = ..()
+	reagents.add_reagent("meatprotein", 2)
+	reagents.add_reagent("bread", 2)
+
+/obj/item/reagent_container/food/snacks/donkpocket/attack_self(mob/user)
+	..()
+
+	if(package==1)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the sleeve from the donk pocket!"))
+		package = 0
+		icon_state = "donkpocket"
+	if(package==2)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the donk pocket!"))
+		package = 1
+		icon_state = "donkpocket_wr1"
+
+/obj/item/reagent_container/food/snacks/donkpocket/proc/cooltime() //Not working, derp?
+	if(warm)
+		spawn(4200)
+			if(!QDELETED(src)) //not qdel'd
+				warm = 0
+				reagents.del_reagent("tricordrazine")
+				name = "donk-pocket"
+
 /obj/item/reagent_container/food/snacks/packaged_burrito
 	name = "Packaged Burrito"
 	desc = "A hard microwavable burrito. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
@@ -3190,7 +3190,7 @@
 		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy burrito!"))
 		package = 0
 		icon_state = "open-burrito"
-			package = 1
+		package = 1
 
 /obj/item/reagent_container/food/snacks/packaged_burger
 	name = "Packaged Cheeseburger"
