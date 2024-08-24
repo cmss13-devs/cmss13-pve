@@ -3,13 +3,16 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	priority = SS_PRIORITY_XENO_PATHFINDING
 	flags = SS_NO_INIT|SS_TICKER|SS_BACKGROUND
 	wait = 1
-	/// A list of mobs scheduled to process
-	var/list/datum/xeno_pathinfo/current_processing = list()
-	/// A list of paths to calculate
-	var/list/datum/xeno_pathinfo/paths_to_calculate = list()
-
-	var/list/hash_path = list()
+	/// A list of path_agents scheduled to process
+	var/list/current_processing = list()
+	/// A list of path_agents to calculate
+	var/list/paths_to_calculate = list()
+	/// Assoc list of path_agents for xenos, in the form of: xeno = path_agent
+	var/list/agent_lookup = list()
 	var/current_position = 1
+
+	/// Assoc list of paths for goals, in the form of: goal = path_search
+	var/list/path_lookup = list()
 
 /datum/controller/subsystem/xeno_pathfinding/stat_entry(msg)
 	msg = "P:[length(paths_to_calculate)]"
@@ -18,33 +21,39 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 /datum/controller/subsystem/xeno_pathfinding/fire(resumed = FALSE)
 	if(!resumed)
 		current_processing = paths_to_calculate.Copy()
+		path_lookup.Cut()
 
 	while(length(current_processing))
 		// A* Pathfinding. Uses priority queue
 		if(current_position < 1 || current_position > length(current_processing))
 			current_position = length(current_processing)
 
-		var/datum/xeno_pathinfo/current_run = current_processing[current_position]
+		var/datum/path_agent/current_run = current_processing[current_position]
 		current_position++
 
-		var/turf/target = current_run.finish
+		var/datum/path_search/current_path = path_lookup[current_run.goal]
+		if(!current_path)
+			current_path = new(current_run.goal)
+			path_lookup[current_run.goal] = current_path
 
-		var/mob/living/carbon/xenomorph/X = current_run.travelling_xeno
+		var/turf/target = current_run.origin
 
-		var/list/visited_nodes = current_run.visited_nodes
-		var/list/distances = current_run.distances
-		var/list/f_distances = current_run.f_distances
-		var/list/prev = current_run.prev
+		var/mob/living/carbon/xenomorph/X = current_run.agent
+
+		var/list/visited_nodes = current_path.visited_nodes
+		var/list/distances = current_path.distances
+		var/list/f_distances = current_path.f_distances
+		var/list/prev = current_path.prev
 
 		while(length(visited_nodes))
-			current_run.current_node = visited_nodes[visited_nodes.len]
+			current_path.current_node = visited_nodes[visited_nodes.len]
 			visited_nodes.len--
-			if(current_run.current_node == target)
+			if(current_path.current_node == target)
 				break
 
 			for(var/direction in cardinal)
-				var/turf/neighbor = get_step(current_run.current_node, direction)
-				var/distance_between = distances[current_run.current_node] * DISTANCE_PENALTY
+				var/turf/neighbor = get_step(current_path.current_node, direction)
+				var/distance_between = distances[current_path.current_node] * DISTANCE_PENALTY
 				if(isnull(distances[neighbor]))
 					if(get_dist(neighbor, X) > current_run.path_range)
 						continue
@@ -61,7 +70,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 					var/atom/A = i
 					distance_between += A.object_weight
 
-				var/list/L = LinkBlocked(X, current_run.current_node, neighbor, current_run.ignore, TRUE)
+				var/list/L = LinkBlocked(X, current_path.current_node, neighbor, current_run.ignore, TRUE)
 				L += check_special_blockers(X, neighbor)
 				if(length(L))
 					for(var/i in L)
@@ -72,7 +81,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 					distances[neighbor] = distance_between
 					var/f_distance = distance_between + ASTAR_COST_FUNCTION(neighbor)
 					f_distances[neighbor] = f_distance
-					prev[neighbor] = current_run.current_node
+					prev[neighbor] = current_path.current_node
 					if(neighbor in visited_nodes)
 						visited_nodes -= neighbor
 
@@ -118,9 +127,9 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 		var/list/path = list()
 		var/turf/current_node = target
 		while(current_node)
-			if(current_node == current_run.start)
+			path.Insert(1, current_node)
+			if(current_node == current_run.goal)
 				break
-			path += current_node
 			current_node = prev[current_node]
 
 		current_run.to_return.Invoke(path)
@@ -138,86 +147,93 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 	return pass_back
 
 /datum/controller/subsystem/xeno_pathfinding/proc/stop_calculating_path(mob/living/carbon/xenomorph/X)
-	var/datum/xeno_pathinfo/data = hash_path[X]
+	var/datum/path_agent/data = agent_lookup[X]
 	qdel(data)
 
-/datum/controller/subsystem/xeno_pathfinding/proc/calculate_path(atom/start, atom/finish, path_range, mob/living/carbon/xenomorph/travelling_xeno, datum/callback/CB, list/ignore)
-	if(!get_turf(start) || !get_turf(finish))
+/datum/controller/subsystem/xeno_pathfinding/proc/calculate_path(atom/origin, atom/goal, path_range, mob/living/carbon/xenomorph/travelling_xeno, datum/callback/CB, list/ignore)
+	if(!get_turf(origin) || !get_turf(goal))
 		return
 
-	var/datum/xeno_pathinfo/data = hash_path[travelling_xeno]
+	var/datum/path_agent/data = agent_lookup[travelling_xeno]
 	SSxeno_pathfinding.current_processing -= data
-
 
 	if(!data)
 		data = new()
-		data.RegisterSignal(travelling_xeno, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/xeno_pathinfo, qdel_wrapper))
+		data.RegisterSignal(travelling_xeno, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/path_agent, qdel_wrapper))
 
-		hash_path[travelling_xeno] = data
+		agent_lookup[travelling_xeno] = data
 		paths_to_calculate += data
 
-	data.current_node = get_turf(start)
-	data.start = data.current_node
-
-	var/turf/target = get_turf(finish)
-
-	data.finish = target
-	data.travelling_xeno = travelling_xeno
+	data.agent = travelling_xeno
+	data.origin = get_turf(origin)
+	data.goal = get_turf(goal)
 	data.to_return = CB
 	data.path_range = path_range
-	data.ignore = ignore
+	//data.ignore = ignore
 
-	data.distances[data.current_node] = 0
-	data.f_distances[data.current_node] = ASTAR_COST_FUNCTION(data.current_node)
-
-	data.visited_nodes += data.current_node
-
-/datum/xeno_pathinfo
-	var/turf/start
-	var/turf/finish
-	var/mob/living/carbon/xenomorph/travelling_xeno
+/datum/path_agent
+	var/atom/movable/agent
+	var/turf/origin
+	var/turf/goal
 	var/datum/callback/to_return
 	var/path_range
-
-	var/turf/current_node
 	var/list/ignore
+
+/datum/path_agent/proc/qdel_wrapper()
+	SIGNAL_HANDLER
+	qdel(src)
+
+/datum/path_agent/Destroy(force)
+	SSxeno_pathfinding.agent_lookup -= agent
+	SSxeno_pathfinding.paths_to_calculate -= src
+	SSxeno_pathfinding.current_processing -= src
+
+	agent = null
+	origin = null
+	goal = null
+	to_return = null
+	ignore = null
+
+	return ..()
+
+/datum/path_search
+	var/turf/goal
+	var/turf/current_node
 	var/list/visited_nodes
 	var/list/distances
 	var/list/f_distances
 	var/list/prev
 
-/datum/xeno_pathinfo/proc/qdel_wrapper()
-	SIGNAL_HANDLER
-	qdel(src)
-
-/datum/xeno_pathinfo/New()
+/datum/path_search/New(turf/goal)
 	. = ..()
-	visited_nodes = list()
+	src.goal = get_turf(goal)
+	current_node = src.goal
+
 	distances = list()
+	distances[current_node] = 0
 	f_distances = list()
+	f_distances[current_node] = 0
+	visited_nodes = list(current_node)
 	prev = list()
 
-/datum/xeno_pathinfo/Destroy(force)
-	SSxeno_pathfinding.hash_path -= travelling_xeno
-	SSxeno_pathfinding.paths_to_calculate -= src
-	SSxeno_pathfinding.current_processing -= src
+/datum/path_search/Destroy(force)
+	SSxeno_pathfinding.path_lookup -= goal
 
 	#ifdef TESTING
 	addtimer(CALLBACK(src, PROC_REF(clear_colors), distances), 5 SECONDS)
 	#endif
 
-	start = null
-	finish = null
-	travelling_xeno = null
-	to_return = null
+	goal = null
+	current_node = null
 	visited_nodes = null
 	distances = null
 	f_distances = null
 	prev = null
+
 	return ..()
 
 #ifdef TESTING
-/datum/xeno_pathinfo/proc/clear_colors(list/L)
+/datum/path_search/proc/clear_colors(list/L)
 	for(var/i in L)
 		var/turf/T = i
 		for(var/l in T)
