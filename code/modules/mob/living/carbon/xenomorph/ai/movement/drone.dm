@@ -10,6 +10,9 @@
 
 //drones expand the hive
 /datum/xeno_ai_movement/drone/ai_move_idle(delta_time)
+	if(!GLOB.ai_xeno_weeding)
+		return ..()
+
 	var/mob/living/carbon/xenomorph/idle_xeno = parent
 
 	if(idle_xeno.throwing)

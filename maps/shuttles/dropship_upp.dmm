@@ -275,7 +275,10 @@
 	},
 /area/shuttle/ds_upp)
 "xZ" = (
-/obj/effect/attach_point/crew_weapon/midway,
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7;
+	ship_tag = "dropship_upp"
+	},
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -402,10 +405,10 @@
 	ship_tag = "dropship_upp"
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Jy" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "JD" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
@@ -438,6 +441,16 @@
 "Nh" = (
 /turf/closed/shuttle/ert{
 	icon_state = "uppwall"
+	},
+/area/shuttle/ds_upp)
+"OB" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 9;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/shuttle/ds_upp)
 "PQ" = (
@@ -512,7 +525,8 @@
 /obj/structure/machinery/computer/dropship_weapons/midway{
 	name = "\improper 'Akademia Nauk' weapons controls";
 	shuttle_tag = "dropship_upp";
-	faction = "UPP"
+	faction = "UPP";
+	req_one_access = list(235,240)
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/strata{
@@ -531,10 +545,20 @@
 	ship_tag = "dropship_upp"
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Xo" = (
 /turf/closed/shuttle/ert{
 	icon_state = "T151"
+	},
+/area/shuttle/ds_upp)
+"XO" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 8;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/shuttle/ds_upp)
 "Zm" = (
@@ -600,7 +624,7 @@ xE
 xE
 AK
 he
-xZ
+XO
 nA
 HV
 ex
@@ -680,7 +704,7 @@ Sx
 Sx
 AK
 he
-xZ
+OB
 nA
 HV
 yy

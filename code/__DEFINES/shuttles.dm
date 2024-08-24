@@ -41,7 +41,7 @@
 #define TRANSIT_REQUEST 1
 #define TRANSIT_READY 2
 
-#define SHUTTLE_TRANSIT_BORDER 8
+#define SHUTTLE_TRANSIT_BORDER 16
 
 #define PARALLAX_LOOP_TIME 25
 #define HYPERSPACE_END_TIME 5
@@ -117,6 +117,9 @@
 #define DROPSHIP_NORMANDY "dropship_normandy"
 #define DROPSHIP_UPP "dropship_upp"
 #define DROPSHIP_CYCLONE "dropship_cyclone"
+#define DROPSHIP_TORNADO "dropship_tornado"
+#define DROPSHIP_TYPHOON "dropship_typhoon"
+#define DROPSHIP_TRIPOLI "dropship_tripoli"
 
 #define ALMAYER_DROPSHIP_LZ1 "almayer-hangar-lz1"
 #define ALMAYER_DROPSHIP_LZ2 "almayer-hangar-lz2"

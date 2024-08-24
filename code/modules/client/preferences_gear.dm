@@ -73,6 +73,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
+	cost = 0
 
 /datum/gear/eyewear/prescription_sunglasses
 	display_name = "Prescription sunglasses"
@@ -278,6 +279,10 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
+
+/datum/gear/headwear/uscm/cap/flap
+	display_name = "USCM flapcap"
+	path = /obj/item/clothing/head/cmcap/flap
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"
@@ -821,6 +826,10 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Canteen"
 	path = /obj/item/reagent_container/food/drinks/flask/canteen
 
+/datum/gear/flask/canteen/empty
+	display_name = "Empty canteen"
+	path = /obj/item/reagent_container/food/drinks/flask/canteen/empty
+
 /datum/gear/flask/leather
 	display_name = "Leather flask"
 	path = /obj/item/reagent_container/food/drinks/flask/detflask
@@ -966,6 +975,36 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 
+/datum/gear/smoking/pack_emeraldgreen
+	display_name = "Pack Of Emerald Greens"
+	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
+	cost = 3
+
+/datum/gear/smoking/pack_wygold
+	display_name = "Pack Of Weyland Yutani Golds"
+	path = /obj/item/storage/fancy/cigarettes/wypacket
+	cost = 3
+
+/datum/gear/smoking/pack_koorlander
+	display_name = "Pack Of Koorlander Golds"
+	path = /obj/item/storage/fancy/cigarettes/kpack
+	cost = 3
+
+/datum/gear/smoking/pack_arcturian
+	display_name = "Pack Of Arcturian Aces"
+	path = /obj/item/storage/fancy/cigarettes/arcturian_ace
+	cost = 3
+
+/datum/gear/smoking/pack_ladyfingers
+	display_name = "Pack Of Lady Fingers"
+	path = /obj/item/storage/fancy/cigarettes/lady_finger
+	cost = 3
+
+/datum/gear/smoking/pack_exec
+	display_name = "Pack Of Executive Selects"
+	path = /obj/item/storage/fancy/cigarettes/blackpack
+	cost = 4
+
 /datum/gear/smoking/weed_joint
 	display_name = "Joint of space weed"
 	path = /obj/item/clothing/mask/cigarette/weed
@@ -979,6 +1018,11 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/smoking/zippo
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
+
+/datum/gear/smoking/goldzippo
+	display_name = "Lighter, golden zippo"
+	path = /obj/item/tool/lighter/zippo/gold
+	cost = 4
 
 /datum/gear/smoking/electronic_cigarette
 	display_name = "Electronic cigarette"
@@ -1044,17 +1088,13 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/patch_uscm
 	display_name = "USCM shoulder patch"
 	path = /obj/item/clothing/accessory/patch
-	cost = 1
+	cost = 0
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
-
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
@@ -1072,4 +1112,14 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/straight_razor
 	display_name = "Cut-throat razor"
 	path = /obj/item/weapon/straight_razor
+	cost = 3
+
+/datum/gear/misc/flak
+	display_name = "M67 flak jacket"
+	path = /obj/item/clothing/accessory/flak
+	cost = 3
+
+/datum/gear/misc/servicejacket
+	display_name = "Marine Service Jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3
