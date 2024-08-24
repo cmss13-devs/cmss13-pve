@@ -516,7 +516,7 @@
 
 /obj/item/clothing/suit/storage/marine/medium/non_spec_ghillie //doesnt have sniper spec shit associated with it
 	name = "\improper M40 pattern ghillie armor"
-	desc = "An older variant of camouflage suit used by snipers and scout. While cheap to produce and easy to use, this suit of armor doesn't offer same level of stealth as newer M45 with integrated heatsink."
+	desc = "An older variant of camouflage suit used by snipers and scouts. While cheap to produce and easy to use, this suit of armor doesn't offer same level of stealth as newer M45 with integrated heatsink."
 	icon_state = "ghillie_armor"
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_marine_armor = ARMOR_LAMP_OVERLAY
