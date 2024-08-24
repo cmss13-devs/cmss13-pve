@@ -454,7 +454,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		M.job = null
 
 
-/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, _late_join)
+/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, late_join)
 	if(!istype(new_mob) || !istype(new_job))
 		return
 
@@ -482,7 +482,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		new_job.announce_entry_message(new_human, generated_account, whitelist_status) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human, whitelist_status) //Do any other thing that relates to their spawn.
 	else
-		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE, late_join = _late_join) //After we move them, we want to equip anything else they should have.
+		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE, late_join = late_join) //After we move them, we want to equip anything else they should have.
 		var/generated_account = new_job.generate_money_account(new_human)
 		new_job.announce_entry_message(new_human, generated_account) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human) //Do any other thing that relates to their spawn.
@@ -500,9 +500,9 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		if(human.assigned_squad)
 			assigned_squad = human.assigned_squad.name
 
-	if(isturf(_late_join))
-		new_human.forceMove(_late_join)
-	else if(_late_join)
+	if(isturf(late_join))
+		new_human.forceMove(late_join)
+	else if(late_join)
 		var/turf/late_join_turf
 		if(GLOB.latejoin_by_squad[assigned_squad])
 			late_join_turf = get_turf(pick(GLOB.latejoin_by_squad[assigned_squad]))

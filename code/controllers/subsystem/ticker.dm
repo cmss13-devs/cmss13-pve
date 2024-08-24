@@ -385,7 +385,7 @@ SUBSYSTEM_DEF(ticker)
 			if(player.job == JOB_CO)
 				captainless = FALSE
 			if(player.job)
-				RoleAuthority.equip_role(player, RoleAuthority.roles_by_name[player.job], _late_join = FALSE)
+				RoleAuthority.equip_role(player, RoleAuthority.roles_by_name[player.job], late_join = FALSE)
 				EquipCustomItems(player)
 			if(player.client)
 				var/client/C = player.client
