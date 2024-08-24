@@ -1260,7 +1260,7 @@
 "UB" = (/obj/structure/surface/table/almayer,/obj/item/storage/toolbox/mechanical/green{pixel_y = 6},/turf/open/floor/almayer{icon_state = "plate"},/area/golden_arrow/hangar)
 "UF" = (/obj/structure/machinery/camera/autoname/golden_arrow{dir = 4},/turf/open/floor/almayer{icon_state = "cargo_arrow"},/area/golden_arrow/hangar)
 "UH" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/structure/machinery/door/poddoor/almayer/open{dir = 8},/turf/open/floor/almayer,/area/golden_arrow/engineering)
-"UI" = (/obj/structure/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/golden_arrow/engineering)
+"UI" = (/obj/structure/machinery/power/fusion_engine{is_on = 1; name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/golden_arrow/engineering)
 "UK" = (/obj/structure/machinery/camera/autoname/golden_arrow{dir = 4},/turf/open/floor/almayer,/area/golden_arrow/prep_hallway)
 "UN" = (/obj/structure/pipes/standard/simple/hidden/supply,/obj/structure/cable/heavyduty{icon_state = "1-2"},/turf/open/floor/plating/plating_catwalk,/area/golden_arrow/prep_hallway)
 "UQ" = (/obj/structure/surface/table/almayer,/obj/structure/bedsheetbin{pixel_y = 6},/turf/open/floor/almayer,/area/golden_arrow/dorms)
