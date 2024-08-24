@@ -729,14 +729,29 @@
 /obj/item/reagent_container/food/snacks/donkpocket
 	name = "Donk-pocket"
 	desc = "The food of choice for the seasoned traitor."
-	icon_state = "donkpocket"
+	icon_state = "donkpocket_wr2"
 	filling_color = "#DEDEAB"
+	package = 2
 	var/warm = 0
 
 /obj/item/reagent_container/food/snacks/donkpocket/Initialize()
 	. = ..()
 	reagents.add_reagent("meatprotein", 2)
 	reagents.add_reagent("bread", 2)
+
+/obj/item/reagent_container/food/snacks/donkpocket/attack_self(mob/user)
+	..()
+
+	if(package==1)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the sleeve from the donk pocket!"))
+		package = 0
+		icon_state = "donkpocket"
+	if(package==2)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the donk pocket!"))
+		package = 1
+		icon_state = "donkpocket_wr1"
 
 /obj/item/reagent_container/food/snacks/donkpocket/proc/cooltime() //Not working, derp?
 	if(warm)
@@ -3165,6 +3180,7 @@
 		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the squishy burrito!"))
 		package = 0
 		icon_state = "open-burrito"
+			package = 1
 
 /obj/item/reagent_container/food/snacks/packaged_burger
 	name = "Packaged Cheeseburger"
