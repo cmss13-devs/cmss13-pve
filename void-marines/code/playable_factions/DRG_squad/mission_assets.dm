@@ -6,9 +6,13 @@
 	desc = "Crystal rocks, growing from the floor, walls, and even from cave roof."
 	icon = 'void-marines/icons/gray_crystal.dmi'
 	icon_state = "crystal_stage1"
+	anchored = TRUE
 	density = TRUE
 	opacity = FALSE
-	anchored = TRUE
+
+	light_power = 4
+	light_range = 1
+	light_on = TRUE
 
 	var/mineral_amount = 3
 	var/current_minerals
@@ -17,9 +21,7 @@
 	var/list/allowed_instruments = list(/obj/item/weapon/drg/pickaxe) //what items can be used to dig it out
 	var/mineral_type = null //loot to drop
 
-	light_power = 4
-	light_range = 1
-	light_on = TRUE
+	var/mining_sound
 
 /obj/structure/drg/land_crystals/Initialize()
 	. = ..()
@@ -39,28 +41,35 @@
 	icon_state = "crystal_stage[stage]"
 
 /obj/structure/drg/land_crystals/attackby(obj/item/W, mob/user, click_data)
-	if(W.type in allowed_instruments)
-		playsound(loc, 'sound/weapons/Genhit.ogg', 25, 1)
-		user.visible_message(SPAN_WARNING("[user] starts to dig [src] out."),
-		SPAN_NOTICE("You start digging [src] out."))
-		if(!do_after(user, 2 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-			return TRUE
-
-		current_minerals--
-		if(mineral_type)
-			new mineral_type(loc)
-
-		if(!current_minerals)
-			user.visible_message(SPAN_WARNING("[src] crumbles to dust."),
-			SPAN_NOTICE("You dug through [src]."))
-			playsound(loc, 'sound/soundscape/rocksfalling2.ogg', 100, 1)
-			qdel(src)
-			return TRUE
-
-		user.visible_message(SPAN_WARNING("[user] breaks off a chunk of [src]."),
-		SPAN_NOTICE("You break a chunk of [src]."))
-		update_icon()
+	if(!(W.type in allowed_instruments))
 		return TRUE
+
+	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
+	spawn(1 SECONDS)
+		playsound(loc, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
+
+	user.visible_message(SPAN_WARNING("[user] starts to dig [src] out."),
+	SPAN_NOTICE("You start digging [src] out."))
+	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return TRUE
+
+	current_minerals--
+	if(mineral_type)
+		new mineral_type(loc)
+
+	if(mining_sound)
+		playsound(loc, mining_sound, 25, 1)
+
+	if(!current_minerals)
+		user.visible_message(SPAN_WARNING("[src] crumbles to dust."),
+		SPAN_NOTICE("You dug through [src]."))
+		qdel(src)
+		return TRUE
+
+	user.visible_message(SPAN_WARNING("[user] breaks off a chunk of [src]."),
+	SPAN_NOTICE("You break a chunk of [src]."))
+	update_icon()
+	return TRUE
 
 /*
 	Red sugar deposits, funny addictive healing thingy
@@ -68,19 +77,11 @@
 /obj/structure/drg/land_crystals/sugar
 	name = "red sugar crystal"
 	desc = "Crystal chunk, posessing strong regenerative capabilities."
-	mineral_type = /obj/item/reagent_container/food/snacks/drg_sugar
-
-	color = "#e90505"
 	light_color = "#e90505"
+	color = "#e90505"
 
-/obj/structure/drg/land_crystals/sugar/attackby(obj/item/W, mob/user, click_data)
-	var/prev_location = loc
-	. = ..()
-	if(current_minerals)
-		playsound(prev_location, 'sound/effects/hit_on_shattered_glass.ogg', 25, 1)
-		return
-
-	playsound(prev_location, get_sfx("shatter"), 50, 1)
+	mineral_type = /obj/item/reagent_container/food/snacks/drg_sugar
+	mining_sound = 'void-marines/sound/drg/red_sugar_break.ogg'
 
 /*
 	Crystals themselves
@@ -112,10 +113,13 @@
 			pixel_x = rand(-5, 5)
 			pixel_y = rand(-5, 5)
 
-/obj/item/reagent_container/food/snacks/drg_sugar/Initialize()
-	. = ..()
 	reagents.add_reagent("rsugar", 2.5)
-	bitesize = 1.75
+	bitesize = 1.25
+
+/obj/item/reagent_container/food/snacks/attack(mob/M, mob/user)
+	. = ..()
+	if(.)
+		playsound(M.loc, 'sound/effects/glass_step.ogg', 15, 1)
 
 /*
 	Reagent
@@ -142,9 +146,9 @@
 		// organs
 		PROPERTY_ORGAN_HEALING = 10,
 		// neu
-		PROPERTY_EUPHORIC = 2, //10% chance to do the laugh
+		PROPERTY_EUPHORIC = 1, //5% chance to do the laugh
 		// neg
-		PROPERTY_ADDICTIVE = 0.5,
+		PROPERTY_ADDICTIVE = 1,
 	)
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE | REAGENT_CANNOT_OVERDOSE
 

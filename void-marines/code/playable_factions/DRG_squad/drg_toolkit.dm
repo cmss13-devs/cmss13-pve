@@ -192,7 +192,103 @@
 		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 		s.set_up(5, 1, M.loc)
 		s.start()
-		playsound(loc, 'sound/weapons/Egloves.ogg', 25, 1, 6)
+		playsound(loc, 'void-marines/sound/drg/pickaxe_special.ogg', 75, 1, 6)
 		addtimer(CALLBACK(src, PROC_REF(change_mode)), 2 SECONDS) //THIS IS THE BEST DECISION I COULD MADE, BUT ALSO THE WORST AT THE SAME TIME - PLEASE FIND BETTER WAY
 		addtimer(CALLBACK(src, PROC_REF(add_charge)), recharge_time)
 	..()
+
+// STICK //
+
+/obj/item/drg_lightstick
+	name = "blue lightstick"
+	desc = "You can stick them in the ground"
+	icon = 'icons/obj/items/lighting.dmi'
+	icon_state = "lightstick_blue0"
+	light_color = COLOUR_BLUE
+	var/s_color = "blue"
+	var/trample_chance = 30
+
+/obj/item/drg_lightstick/Initialize(mapload, ...)
+	. = ..()
+	if(!light_on)
+		set_light_range(0)
+
+/obj/item/drg_lightstick/proc/stick(turf/T, mob/user)
+	if(locate(/obj/item/drg_lightstick) in T)
+		to_chat(user, "There's already a [src] at this position!")
+		return FALSE
+
+	to_chat(user, "Now planting \the [src].")
+	if(!do_after(user, 0.5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return FALSE
+
+	user.visible_message("\blue[user.name] planted \the [src] into [T].")
+
+	set_light(2)
+	anchored = TRUE
+
+	pixel_x += rand(-5,5)
+	pixel_y += rand(-5,5)
+
+	icon_state = "lightstick_[s_color][anchored]"
+	playsound(user, 'sound/weapons/Genhit.ogg', 25, 1)
+
+	user.drop_held_item()
+	forceMove(T)
+
+	return TRUE
+
+/obj/item/drg_lightstick/proc/remove(mob/user)
+	if(user)
+		user.visible_message("[user.name] removes \the [src] from the ground.","You remove the [src] from the ground.")
+
+	set_light(0)
+	anchored = FALSE
+
+	pixel_x = 0
+	pixel_y = 0
+
+	playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
+	icon_state = "lightstick_[s_color][anchored]"
+
+/turf/open/attackby(obj/item/I, mob/user)
+	. = ..()
+	if(istype(I, /obj/item/drg_lightstick))
+		var/obj/item/drg_lightstick/L = I
+		L.stick(src, user)
+
+/obj/item/drg_lightstick/attack_self(mob/user)
+	. = ..()
+	stick(get_turf(user), user)
+
+/obj/item/drg_lightstick/attack_hand(mob/user)
+	. = ..()
+	if(!anchored)
+		return
+	remove(user)
+
+/obj/item/drg_lightstick/Crossed(mob/living/O)
+	. = ..()
+	if(islarva(O))
+		return
+
+	if(!prob(trample_chance))
+		return
+
+	remove()
+
+GLOBAL_LIST_EMPTY(dora_navpoints)
+
+/obj/item/drg_lightstick/dora
+	name = "blue marker"
+	desc = "You can stick them in the ground to path the way for Dora."
+	trample_chance = FALSE
+
+/obj/item/drg_lightstick/dora/stick(turf/T, mob/user)
+	. = ..()
+	if(.)
+		GLOB.dora_navpoints.Insert(1, T)
+
+/obj/item/drg_lightstick/dora/remove(mob/user)
+	GLOB.dora_navpoints -= get_turf(src)
+	. = ..()

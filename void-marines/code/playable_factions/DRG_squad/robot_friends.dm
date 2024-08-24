@@ -47,6 +47,14 @@
 
 	. = ..()
 
+/mob/living/simple_animal/hostile/drg/Collided(atom/movable/AM)
+	if(!AM) return
+
+	if(damaged || anchored)
+		return
+
+	..()
+
 /mob/living/simple_animal/hostile/drg/ranged //will shoot enemies on sight, player will NOT have control over this, so make survivors the same faction!
 	COOLDOWN_DECLARE(ranged_cooldown)
 	var/projectile_to_fire = /datum/ammo/bullet/rifle
@@ -313,13 +321,17 @@ GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg/glyphid_egg = "Glyphid egg
 	name = "D-0-RA"
 	desc = "An DRG Company personal automaton. This one made for transporting various things AND easly traversing difficult cave terrain."
 	icon_state = "Dora"
-
-	health = 99999
-	maxHealth = 99999
-	lives = 99999
-	max_lives = 99999
-
 	base_robot_icon = "Dora"
+
+	var/atom/move_target
+
+/mob/living/simple_animal/hostile/drg/dora/Initialize()
+	. = ..()
+	START_PROCESSING(SSfastobj, src)
+
+/mob/living/simple_animal/hostile/drg/dora/Destroy()
+	. = ..()
+	STOP_PROCESSING(SSfastobj, src)
 
 /mob/living/simple_animal/hostile/drg/dora/get_examine_text(mob/user)
 	. = ..()
@@ -332,7 +344,6 @@ GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg/glyphid_egg = "Glyphid egg
 		. += SPAN_GREEN("[amount] [GLOB.minerals_to_name[mineral]].")
 
 /mob/living/simple_animal/hostile/drg/dora/attackby(obj/item/W, mob/user, click_data)
-	. = ..()
 	var/item_type
 	for(var/atom/A in W)
 		item_type = A.type
@@ -340,18 +351,60 @@ GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg/glyphid_egg = "Glyphid egg
 			item_type = null
 			continue
 
+		if(!do_after(user, 0.2 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC))
+			return ..()
+
 		GLOB.stored_minerals[item_type] += 1
 		user.client.remove_from_screen(A)
 		qdel(A)
 
 	if(item_type)
-		return
+		return ..()
 
 	item_type = W.type
 
 	if(isnull(GLOB.stored_minerals[item_type]))
 		to_chat(user, SPAN_DANGER("M.U.L.E can't accept this!"))
-		return
+		return ..()
 
 	GLOB.stored_minerals[item_type] += 1
 	qdel(W)
+
+/mob/living/simple_animal/hostile/drg/dora/process()
+	. = ..()
+
+	/// Trying to follow last marker placed
+	var/new_target = GLOB.dora_navpoints[1]
+
+	if(!new_target)
+		return
+
+	/// Make a happy sound when new navpoint is found
+	if(new_target != move_target)
+		playsound(loc, 'void-marines/sound/drg/DoraTalk_recieved.ogg', 25, TRUE)
+
+	/// Set new target
+	move_target = new_target
+
+	/// Are we on the same plane of existance?
+	if(move_target.z != z)
+		return
+
+	if(get_dist(src, move_target) <= 1)
+		if(!anchored)
+			playsound(loc, 'void-marines/sound/drg/DoraTalk_destination.ogg', 25, TRUE)
+			anchored = TRUE // We made it to navpoint
+		return
+
+	/// Step sound
+	playsound(loc, pick('void-marines/sound/drg/DoraStep_01.ogg',
+	'void-marines/sound/drg/DoraStep_02.ogg',
+	'void-marines/sound/drg/DoraStep_03.ogg',
+	'void-marines/sound/drg/DoraStep_04.ogg'), 25, TRUE)
+
+	/// We are on the move again
+	anchored = FALSE
+	step_to(src, move_target)
+
+/mob/living/simple_animal/hostile/drg/dora/Life(delta_time)
+	return
