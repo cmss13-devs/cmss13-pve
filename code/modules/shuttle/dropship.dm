@@ -215,3 +215,47 @@
 /obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing
 	icon_state = "6"
 
+/obj/structure/shuttle/part/midway
+	name = "\improper Midway"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/midway/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/cyclone
+	name = "\improper Cyclone"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/cyclone/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tornado
+	name = "\improper Tornado"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/tornado/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/typhoon
+	name = "\improper Typhoon"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/typhoon/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tripoli
+	name = "\improper Tripoli"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/tripoli/transparent
+	opacity = FALSE

@@ -60,17 +60,26 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
-	
+
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 X 10)"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
 	overlay_content = "_reg"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
+	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
 
 /obj/item/ammo_box/magazine/mk1/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/mk1/heap
+	name = "magazine box (HEAP M41A MK1 X 10)"
+	overlay_ammo_type = "_heap"
+	overlay_content = "_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/heap/empty
+	empty = TRUE
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
@@ -345,12 +354,12 @@
 //-----------------------88M4 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/mod88
-	name = "\improper magazine box (88 Mod 4 AP x 16)"
+	name = "\improper magazine box (88 Mod 4 x 16)"
 	icon_state = "base_mod88"
 	flags_equip_slot = SLOT_BACK
-	overlay_ammo_type = "_ap"
+	overlay_ammo_type = "_reg"
 	overlay_gun_type = "_mod88"
-	overlay_content = "_ap"
+	overlay_content = "_reg"
 	num_of_magazines = 16
 	magazine_type = /obj/item/ammo_magazine/pistol/mod88
 
