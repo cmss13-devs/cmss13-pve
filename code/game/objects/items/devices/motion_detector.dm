@@ -234,7 +234,7 @@
 		apply_debuff(M)
 		ping_count++
 		if(human_user)
-			for(var/mob/living/carbon/human/show_ping_to in ping_receivers)
+			for(var/mob/living/carbon/human/show_ping_to as anything in ping_receivers)
 				show_blip(show_ping_to, M)
 
 	for(var/mob/hologram/holo as anything in GLOB.hologram_list)
