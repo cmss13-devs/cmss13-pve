@@ -567,6 +567,16 @@
 	new newegg(loc)
 	qdel(src)
 
+/obj/item/reagent_container/food/snacks/egg/dried
+	name = "reconstituted egg"
+	desc = "An egg! Or it was in another life, at least. Now it's just a sad pile of goop that might work in recipes."
+	icon_state = "honeycomb"
+	filling_color = "#FDFFD1"
+
+/obj/item/reagent_container/food/snacks/egg/dried/Initialize()
+	. = ..()
+	reagents.add_reagent("egg", 1)
+
 /obj/item/reagent_container/food/snacks/friedegg
 	name = "Fried egg"
 	desc = "A fried egg, with a touch of salt and pepper."
