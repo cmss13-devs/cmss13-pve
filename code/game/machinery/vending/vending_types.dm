@@ -259,8 +259,8 @@
 	)
 
 /obj/structure/machinery/vending/security/upp
-	name = "\improper Territorial Guard Security Vendor"
-	desc = "A standard security vendor used by UPP Territorial Guard."
+	name = "\improper People's Police Equipment Vendor"
+	desc = "A standard security vendor used by security forces of the UPP."
 	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
 		/obj/item/handcuffs = 8,
