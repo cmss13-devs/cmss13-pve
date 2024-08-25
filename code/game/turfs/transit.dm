@@ -261,6 +261,10 @@
 	shuttle_tag = DROPSHIP_TRIPOLI
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/upp
+	shuttle_tag = DROPSHIP_UPP
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 
