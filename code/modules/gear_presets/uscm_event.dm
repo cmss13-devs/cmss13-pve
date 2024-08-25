@@ -384,7 +384,7 @@
 	name = "UAAC-SOG Agent"
 	assignment = JOB_UAACSOG_AGENT
 	rank = JOB_UAACSOG_AGENT
-	paygrade = "C"
+	paygrade = "Agent"
 	role_comm_title = "SOG"
 
 /datum/equipment_preset/uscm_event/uaacsog/agent/load_gear(mob/living/carbon/human/new_human)
