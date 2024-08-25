@@ -14854,7 +14854,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
 /obj/item/reagent_container/food/snacks/cookie,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitebluefull"
@@ -15300,7 +15300,7 @@
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitebluefull"
@@ -15582,7 +15582,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/cheesewedge,
 /obj/item/reagent_container/food/snacks/chips,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/item/reagent_container/food/snacks/donut,
 /turf/open/floor{
 	dir = 5;
@@ -16062,7 +16062,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/bun,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -39856,7 +39856,7 @@
 	},
 /obj/item/ammo_magazine/shotgun/buckshot,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor/plating{
 	dir = 8;
 	icon_state = "platingdmg3"

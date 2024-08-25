@@ -13732,9 +13732,9 @@
 /area/almayer/engineering/starboard_atmos)
 "epC" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/reagent_container/food/snacks/packaged_burger,
-/obj/item/reagent_container/food/snacks/packaged_burger,
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

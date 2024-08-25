@@ -26968,7 +26968,7 @@
 /obj/structure/machinery/microwave{
 	pixel_y = 9
 	},
-/obj/item/reagent_container/food/snacks/donkpocket{
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = -5;
 	pixel_y = 17
 	},

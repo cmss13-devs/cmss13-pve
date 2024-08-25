@@ -51567,7 +51567,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
 /obj/item/reagent_container/food/snacks/cookie,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "kitchen"
@@ -51952,7 +51952,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/bun,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -52903,7 +52903,7 @@
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
 	dir = 10;
@@ -53005,7 +53005,7 @@
 /area/desert_dam/building/dorms/hallway_westwing)
 "dGD" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
 	dir = 10;

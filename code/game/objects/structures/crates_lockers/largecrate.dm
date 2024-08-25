@@ -153,7 +153,7 @@
 						/obj/item/device/multitool,
 						/obj/item/tool/crowbar,
 						/obj/item/device/flashlight,
-						/obj/item/reagent_container/food/snacks/donkpocket,
+						/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 						/obj/item/explosive/grenade/smokebomb,
 						/obj/item/circuitboard/airlock,
 						/obj/item/device/assembly/igniter,

@@ -530,7 +530,7 @@
 	pixel_y = 14
 	},
 /obj/item/trash/plate,
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
@@ -7454,7 +7454,7 @@
 	pixel_y = -13
 	},
 /obj/item/trash/ceramic_plate,
-/obj/item/reagent_container/food/snacks/packaged_burger{
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger{
 	pixel_y = 6
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -26113,7 +26113,7 @@
 /area/lv522/atmos/cargo_intake)
 "kxq" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/food/snacks/packaged_burrito,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue{
 	pixel_y = 15
 	},
@@ -46238,7 +46238,7 @@
 	pixel_y = 11
 	},
 /obj/item/trash/ceramic_plate,
-/obj/item/reagent_container/food/snacks/packaged_hdogs{
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs{
 	pixel_y = 2
 	},
 /turf/open/floor/prison{

@@ -654,80 +654,58 @@
 
 //other
 
-/datum/recipe/packaged_burrito/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked)
+/datum/recipe/donkpocket
+	items = list(
+		/obj/item/reagent_container/food/snacks/dough,
+		/obj/item/reagent_container/food/snacks/meatball,
+	)
+	result = /obj/item/reagent_container/food/snacks/microwavable/donkpocket //SPECIAL
+
+/datum/recipe/microwavesnack/proc/warm_up(obj/item/reagent_container/food/snacks/microwavable/being_cooked)
 	being_cooked.warm = 1
 	being_cooked.reagents.add_reagent("bread", 1)
 	being_cooked.reagents.add_reagent("meatprotein", 1)
 	being_cooked.name = "Warm " + being_cooked.name
-	being_cooked.desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
+	being_cooked.desc = being_cooked.warm_desc
 
-/datum/recipe/packaged_burrito/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked = ..(container)
+/datum/recipe/microwavesnack/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/microwavable/being_cooked = ..(container)
 	warm_up(being_cooked)
 	return being_cooked
 
-/datum/recipe/packaged_burrito/warm
+/datum/recipe/microwavesnack/warm/make_food(obj/container as obj)
+	var/obj/item/reagent_container/food/snacks/microwavable/being_cooked = locate() in container
+	if(being_cooked && !being_cooked.warm)
+		warm_up(being_cooked)
+	return being_cooked
+
+/datum/recipe/microwavesnack/donkpocket/warm
+	reagents = list() //This is necessary since this is a child object of the above recipe and we don't want donk pockets to need flour
+	items = list(
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+	)
+	result = /obj/item/reagent_container/food/snacks/microwavable/donkpocket //SPECIAL
+
+/datum/recipe/microwavesnack/packaged_burrito/warm
 	reagents = list() //Literally just stealing this from the donk pocket code with barely any understanding of what it means. Here's hoping!
 	items = list(
-		/obj/item/reagent_container/food/snacks/packaged_burrito,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_burrito //SPECIAL
+	result = /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito //SPECIAL
 
-/datum/recipe/packaged_burrito/warm/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_burrito/being_cooked = locate() in container
-	if(being_cooked && !being_cooked.warm)
-		warm_up(being_cooked)
-	return being_cooked
-
-/datum/recipe/packaged_burger/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_burger/being_cooked)
-	being_cooked.warm = 1
-	being_cooked.reagents.add_reagent("bread", 1)
-	being_cooked.reagents.add_reagent("meatprotein", 1)
-	being_cooked.name = "Warm " + being_cooked.name
-	being_cooked.desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
-
-/datum/recipe/packaged_burger/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_burger/being_cooked = ..(container)
-	warm_up(being_cooked)
-	return being_cooked
-
-/datum/recipe/packaged_burger/warm
+/datum/recipe/microwavesnack/packaged_burger/warm
 	reagents = list()
 	items = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_burger //SPECIAL
+	result = /obj/item/reagent_container/food/snacks/microwavable/packaged_burger //SPECIAL
 
-/datum/recipe/packaged_burger/warm/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_burger/being_cooked = locate() in container
-	if(being_cooked && !being_cooked.warm)
-		warm_up(being_cooked)
-	return being_cooked
-
-/datum/recipe/packaged_hdogs/proc/warm_up(obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked)
-	being_cooked.warm = 1
-	being_cooked.reagents.add_reagent("bread", 1)
-	being_cooked.reagents.add_reagent("meatprotein", 1)
-	being_cooked.name = "Warm " + being_cooked.name
-	being_cooked.desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
-
-/datum/recipe/packaged_hdogs/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked = ..(container)
-	warm_up(being_cooked)
-	return being_cooked
-
-/datum/recipe/packaged_hdogs/warm
+/datum/recipe/microwavesnack/packaged_hdogs/warm
 	reagents = list()
 	items = list(
-		/obj/item/reagent_container/food/snacks/packaged_hdogs,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
 	)
-	result = /obj/item/reagent_container/food/snacks/packaged_hdogs //SPECIAL
-
-/datum/recipe/packaged_hdogs/warm/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/packaged_hdogs/being_cooked = locate() in container
-	if(being_cooked && !being_cooked.warm)
-		warm_up(being_cooked)
-	return being_cooked
+	result = /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs //SPECIAL
 
 /datum/recipe/hotdog
 	items = list(
@@ -752,38 +730,6 @@
 		/obj/item/reagent_container/food/snacks/doughslice,
 	)
 	result = /obj/item/reagent_container/food/snacks/pancakes
-
-/datum/recipe/donkpocket
-	items = list(
-		/obj/item/reagent_container/food/snacks/dough,
-		/obj/item/reagent_container/food/snacks/meatball,
-	)
-	result = /obj/item/reagent_container/food/snacks/donkpocket //SPECIAL
-
-/datum/recipe/donkpocket/proc/warm_up(obj/item/reagent_container/food/snacks/donkpocket/being_cooked)
-	being_cooked.warm = 1
-	being_cooked.reagents.add_reagent("tricordrazine", 5)
-	being_cooked.bitesize = 6
-	being_cooked.name = "Warm " + being_cooked.name
-	being_cooked.cooltime()
-
-/datum/recipe/donkpocket/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/donkpocket/being_cooked = ..(container)
-	warm_up(being_cooked)
-	return being_cooked
-
-/datum/recipe/donkpocket/warm
-	reagents = list() //This is necessary since this is a child object of the above recipe and we don't want donk pockets to need flour
-	items = list(
-		/obj/item/reagent_container/food/snacks/donkpocket,
-	)
-	result = /obj/item/reagent_container/food/snacks/donkpocket //SPECIAL
-
-/datum/recipe/donkpocket/warm/make_food(obj/container as obj)
-	var/obj/item/reagent_container/food/snacks/donkpocket/being_cooked = locate() in container
-	if(being_cooked && !being_cooked.warm)
-		warm_up(being_cooked)
-	return being_cooked
 
 /datum/recipe/muffin
 	reagents = list("milk" = 5, "sugar" = 5)

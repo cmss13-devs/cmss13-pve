@@ -5530,7 +5530,7 @@
 	},
 /area/lv624/lazarus/sleep_female)
 "aBd" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/flora/pottedplant,
 /obj/structure/pipes/vents/pump,
 /turf/open/floor{
@@ -8737,15 +8737,15 @@
 	pixel_y = 30
 	},
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket{
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/reagent_container/food/snacks/donkpocket{
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "barber"

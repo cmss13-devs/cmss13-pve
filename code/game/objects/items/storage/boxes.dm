@@ -283,12 +283,12 @@
 	w_class = SIZE_MEDIUM
 
 /obj/item/storage/box/donkpockets/fill_preset_inventory()
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
 
 /obj/item/storage/box/monkeycubes
 	name = "monkey cube box"

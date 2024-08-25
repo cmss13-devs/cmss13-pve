@@ -51,9 +51,10 @@
 	product_ads = "Kepler Crisps! Try a snack that's out of this world!;Eat an EAT!"
 	icon_state = "snack"
 	products = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 12,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 12,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs =12,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs =12,
 		/obj/item/reagent_container/food/snacks/kepler_crisps = 12,
 		/obj/item/reagent_container/food/snacks/kepler_crisps/flamehot = 12,
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 12,
@@ -64,9 +65,10 @@
 	)
 
 	prices = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 5,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 5,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs = 5,
 		/obj/item/reagent_container/food/snacks/kepler_crisps = 3,
 		/obj/item/reagent_container/food/snacks/kepler_crisps/flamehot = 5,
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 3,
@@ -81,9 +83,10 @@
 	product_slogans = ""
 	product_ads = ""
 	products = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 40,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 40,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs = 40,
 	)
 
 /obj/structure/machinery/vending/cola
