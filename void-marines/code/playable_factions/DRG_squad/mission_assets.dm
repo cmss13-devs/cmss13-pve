@@ -116,7 +116,7 @@
 	reagents.add_reagent("rsugar", 2.5)
 	bitesize = 1.25
 
-/obj/item/reagent_container/food/snacks/attack(mob/M, mob/user)
+/obj/item/reagent_container/food/snacks/drg_sugar/attack(mob/M, mob/user)
 	. = ..()
 	if(.)
 		playsound(M.loc, 'sound/effects/glass_step.ogg', 15, 1)
