@@ -1285,6 +1285,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"eM" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/rollingpin{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/obj/item/tool/kitchen/knife{
+	pixel_x = 9
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "eN" = (
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
@@ -3644,10 +3657,26 @@
 	},
 /area/golden_arrow/hangar)
 "nD" = (
+/obj/structure/surface/rack{
+	pixel_y = 14;
+	pixel_x = 4
+	},
 /obj/structure/reagent_dispensers/water_cooler/stacks{
 	density = 0;
 	pixel_x = -10;
 	pixel_y = 6
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_y = 26;
+	pixel_x = 1
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_y = 26;
+	pixel_x = -3
+	},
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = 10;
+	pixel_y = 28
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -6992,23 +7021,22 @@
 	},
 /area/golden_arrow/cryo_cells)
 "AV" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/kitchen/tray{
-	pixel_x = -5;
-	pixel_y = 6
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
 	},
-/obj/item/trash/plate{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/trash/plate{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/trash/plate{
-	pixel_x = -4;
-	pixel_y = 9
-	},
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -7535,9 +7563,6 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Dn" = (
-/obj/structure/surface/rack{
-	pixel_y = 19
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/medical/ointment{
 	pixel_x = 2;
@@ -8018,17 +8043,29 @@
 /area/golden_arrow/prep_hallway)
 "Fl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
-	pixel_x = 7;
-	pixel_y = 14
+/obj/item/tool/kitchen/tray{
+	pixel_x = -3;
+	pixel_y = 3
 	},
-/obj/item/paper_bin{
-	pixel_x = -7;
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_x = 12;
+	pixel_y = 18
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/trash/plate{
+	pixel_x = -3;
 	pixel_y = 5
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/tabasco{
-	pixel_x = 6;
-	pixel_y = 6
+	pixel_y = 18;
+	pixel_x = 2
+	},
+/obj/item/trash/plate{
+	pixel_x = -4;
+	pixel_y = 7
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -21955,12 +21992,12 @@ EG
 EG
 EG
 Wh
-Nz
+nD
 HF
 rQ
 HF
 Fl
-og
+AV
 og
 CM
 Bf
@@ -22111,8 +22148,8 @@ fl
 HF
 rQ
 HF
-AV
-og
+HF
+HF
 og
 Va
 TB
@@ -22263,8 +22300,8 @@ zG
 aA
 vN
 nW
-nD
-og
+Nz
+eM
 og
 Dq
 Ms
@@ -22417,7 +22454,7 @@ Ir
 Ir
 Ir
 Ir
-Vi
+og
 og
 Hv
 Iz
