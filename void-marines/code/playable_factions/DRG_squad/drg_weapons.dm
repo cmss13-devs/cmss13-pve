@@ -150,16 +150,19 @@
 /obj/item/weapon/gun/drg/leadstorm/process(mob/user)
 	if(!overheated)
 		if(heat_stored > 0)
-			heat_stored -= 1
+			heat_stored -= 4
 
-	if(heat_stored >= overheat_on)
+	if(heat_stored >= overheat_on && !overheated)
 		to_chat(user, SPAN_LARGE(SPAN_DANGER("STOPS DUE TO INTENSE HEAT!")))
+		playsound(loc, 'sound/effects/acid_sizzle4.ogg', 25, TRUE)
+		add_filter("heat_inner", 1, list("type" = "blur", "size" = 1))
+		add_filter("heat_outer", 1, list("type" = "outline", "color" = "#e75d00", "size" = 1))
 		overheated = TRUE
 
 /obj/item/weapon/gun/drg/leadstorm/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_SG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
-	scatter = SCATTER_AMOUNT_TIER_9
+	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_NONE
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
@@ -184,6 +187,8 @@
 		SPAN_NOTICE("You open [src] batteries, giving them some time to cool."), null, 4, CHAT_TYPE_COMBAT_ACTION)
 		overheated = FALSE
 		heat_stored -= 100
+		remove_filter("heat_outer")
+		remove_filter("heat_inner")
 
 /obj/item/weapon/gun/drg/leadstorm/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	if(overheated)
@@ -194,7 +199,7 @@
 	. = ..()
 
 /obj/item/ammo_magazine/rifle/drg/leadstorm
-	name = "\improper 'Lead Storm' magazine (20mm)"
+	name = "\improper 'Lead Storm' drum (20mm)"
 	desc = "A 20mm heavy minigun magazine."
 	caliber = "20mm"
 	icon = 'void-marines/icons/drg_weapons.dmi'
