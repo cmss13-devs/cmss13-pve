@@ -117,6 +117,9 @@
 #define DROPSHIP_NORMANDY "dropship_normandy"
 #define DROPSHIP_UPP "dropship_upp"
 #define DROPSHIP_CYCLONE "dropship_cyclone"
+#define DROPSHIP_TORNADO "dropship_tornado"
+#define DROPSHIP_TYPHOON "dropship_typhoon"
+#define DROPSHIP_TRIPOLI "dropship_tripoli"
 
 #define DROPSHIP_RASPUTIN "dropship_rasputin" //RU-PVE
 #define DROPSHIP_LANCER "dropship_lancer" //RU-PVE

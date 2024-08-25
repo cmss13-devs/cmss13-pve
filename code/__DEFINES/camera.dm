@@ -8,6 +8,10 @@
 #define CAMERA_NET_NORMANDY "Normandy"
 #define CAMERA_NET_MIDWAY "Midway"
 #define CAMERA_NET_RASPUTIN "Rasputin"
+#define CAMERA_NET_CYCLONE "Cyclone"
+#define CAMERA_NET_TORNADO "Tornado"
+#define CAMERA_NET_TYPHOON "Typhoon"
+#define CAMERA_NET_TRIPOLI "Tripoli"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
 
