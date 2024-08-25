@@ -90,3 +90,17 @@
 2024-08-22:
   BonniePandora:
   - maptweak: Expanded the galley of the Golden Arrow.
+2024-08-24:
+  BonniePandora:
+  - rscadd: Added various condiment packets of powedered juices, milk & egg to the
+      code
+  - rscadd: Added corresponding reactions for the new powdered substances where needed
+  - rscadd: Sprites for the condiment packets, some taken from Bay, others edited
+      by me from Bay sprites
+  - qol: MRE's now contain a juice packet alongside their typical contents
+  - maptweak: Replaces the magic freezer and it's perishable contents with a locker
+      full of the non-perishable replacements
+  DexterDude:
+  - rscadd: Added something
+  private-tristan:
+  - rscadd: ports TG strip menu
