@@ -60,9 +60,6 @@ var/global/players_preassigned = 0
 											/datum/job/antag,
 											/datum/job/special,
 											/datum/job/special/provost,
-											/datum/job/special/uaac,
-											/datum/job/special/uaac/tis,
-											/datum/job/special/uscm,
 											/datum/job/command/tank_crew //Rip VC
 											)
 	var/squads_all[] = typesof(/datum/squad) - /datum/squad

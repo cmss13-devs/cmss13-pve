@@ -143,9 +143,9 @@
 				marine_rk = "pvm"
 				border_rk = "command"
 			// TIS
-			if(JOB_TIS_IO)
+			if(JOB_UAACSOG_IO)
 				marine_rk = "tisio"
-			if(JOB_TIS_SA)
+			if(JOB_UAACSOG_AGENT)
 				marine_rk = "tissa"
 			// Riot MPs
 			if(JOB_RIOT)

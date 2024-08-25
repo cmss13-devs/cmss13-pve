@@ -369,73 +369,68 @@
 
 /*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_event/uaac/tis
-	name = "UAAC-TIS"
+/datum/equipment_preset/uscm_event/uaacsog
+	name = "UAAC-SOG"
 
-	idtype = /obj/item/card/id/provost
-	skills = /datum/skills/provost
+	idtype = /obj/item/card/id
+	skills = /datum/skills/intel
+	flags = EQUIPMENT_PRESET_EXTRA
 
-/datum/equipment_preset/uscm_event/uaac/tis/New()
+/datum/equipment_preset/uscm_event/uaacsog/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
-/datum/equipment_preset/uscm_event/uaac/tis/io
-	name = "UAAC-TIS Intelligence Officer (NO2)"
-	minimum_age = 25
-	skills = /datum/skills/intel
+/datum/equipment_preset/uscm_event/uaacsog/agent
+	name = "UAAC-SOG Agent"
+	assignment = JOB_UAACSOG_AGENT
+	rank = JOB_UAACSOG_AGENT
+	paygrade = "C"
+	role_comm_title = "SOG"
 
-	assignment = JOB_TIS_IO
-	rank = "UAAC-TIS Intelligence Officer"
-	paygrade = "NO2"
-	role_comm_title = "TIS-IO"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-/datum/equipment_preset/uscm_event/uaac/tis/io/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/sec
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/security
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/highcom(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/io(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
+/datum/equipment_preset/uscm_event/uaacsog/agent/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/tshirt/gray_blu(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/bomber/grey(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	if(new_human.disabilities & NEARSIGHTED)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/prescription(new_human), WEAR_EYES)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular/hipster(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/folder(new_human), WEAR_IN_L_STORE)
 
-/datum/equipment_preset/uscm_event/uaac/tis/sa
-	name = "UAAC-TIS Special Agent (NO5)"
-	minimum_age = 30
-	skills = /datum/skills/general
+/datum/equipment_preset/uscm_event/uaacsog/agent/undercover
+	name = "UAAC-SOG Agent (Undercover)"
+	assignment = "Authorized Personnel"
+	rank = "Authorized Personnel"
+	paygrade = "C"
+	role_comm_title = "Gst."
 
-	assignment = JOB_TIS_SA
-	rank = "UAAC-TIS Special Agent"
-	paygrade = "NO5"
-	role_comm_title = "TIS-SA"
-	flags = EQUIPMENT_PRESET_EXTRA
+/datum/equipment_preset/uscm_event/uaacsog/intelligence
+	name = "UAAC-SOG Intelligence Officer"
+	assignment = JOB_UAACSOG_IO
+	rank = JOB_UAACSOG_IO
+	paygrade = "MO3"
+	role_comm_title = "SOG-IO"
 
-/datum/equipment_preset/uscm_event/uaac/tis/sa/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/sec
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/security
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/highcom(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis(new_human), WEAR_BODY)
+/datum/equipment_preset/uscm_event/uaacsog/intelligence/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/general/impact(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/sa(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/prescription(new_human), WEAR_EYES)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/mp/tis(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mateba(new_human), WEAR_R_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/mod88(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/folder(new_human), WEAR_IN_L_STORE)
 
 /*****************************************************************************************************/
 

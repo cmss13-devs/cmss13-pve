@@ -34,6 +34,11 @@
 	. = ..()
 	icon_state = "folder_black[pick("_red", "_green", "_blue", "_yellow", "_white")]"
 
+/obj/item/folder/has_paper/Initialize()
+	. = ..()
+	for(var/i in 1 to rand(3, 5))
+		new /obj/item/paper(src)
+
 /obj/item/folder/Initialize()
 	. = ..()
 	if(updateicon)
