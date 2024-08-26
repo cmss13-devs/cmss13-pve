@@ -52,6 +52,15 @@
 	desc = "The standard M10 combat helmet is already water-resistant at depths of up to 10 meters. This makes the top potentially water-proof. At least it's something."
 	icon_state = "raincover"
 
+/obj/item/prop/helmetgarb/camocover
+	name = "camocover"
+	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
+	icon_state = "camocover"
+
+/obj/item/prop/helmetgarb/camocover/Initialize(mapload, ...)
+	. = ..()
+	select_gamemode_skin(/obj/item/prop/helmetgarb/camocover)
+
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"
 	desc = "Lucky for you, but not the rabbit, didn't really do it much good."
