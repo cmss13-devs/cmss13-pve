@@ -46,6 +46,16 @@
 
 	syllables = list("al", "an", "bi", "vye", "vo", "go", "dye", "yel", "en", "yer", "yet", "ka", "ko", "la", "ly", "lo", "l", "na", "nye", "ny", "no", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "rye", "ro", "st", "ta", "tye", "to", "t", "at", "bil", "vyer", "yego", "yeny", "yenn", "yest", "kak", "ln", "ova", "ogo", "oro", "ost", "oto", "pry", "pro", "sta", "stv", "tor", "chto", "eto", "rus", "nar", "arya", "mol")
 
+/datum/language/patois
+	name = LANGUAGE_RUSPATOIS
+	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
+	speech_verb = "says"
+	color = "ruspatois"
+	key = "9"
+
+
+	syllables = list("al", "an", "vye", "vo", "go", "dye", "yel", "en", "yer", "es", "ha", "he", "hi", "in", "is", "it", "le", "me", "nd", "ne", "ng", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "to", "ve", "wa", "all", "and", "are", "but", "ent", "era", "ere", "eve", "for", "had", "hat", "hen", "her", "hin", "his", "ing", "ion", "ith", "pry", "pro", "sta", "stv", "tor", "chto", "ter", "tha", "the", "thi", "tio", "uld", "ver", "was", "wit", "you")
+
 /datum/language/german
 	name = LANGUAGE_GERMAN
 	desc = "Standard High-German, a language spoken mostly in Central Europe, and by German immigrants elsewhere."
@@ -113,7 +123,7 @@
 	ask_verb = "chimpers"
 	exclaim_verb = "screeches"
 	color = "monkey"
-	key = "9"
+	key = null
 
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH
@@ -209,5 +219,5 @@
 	ask_verb = "resonates"
 	exclaim_verb = "resonates"
 	color = "tajaran"
-	key = "7"
+	key = "8"
 	flags = RESTRICTED|HIVEMIND
