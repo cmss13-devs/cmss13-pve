@@ -1,5 +1,7 @@
 #define FACTION_DRG "Deep Rock Galactic"
 
+GLOBAL_LIST_EMPTY(marked_creatures)
+
 /area/drg
 	name = "Deep Caves"
 	icon = 'icons/turf/area_kutjevo.dmi'
@@ -14,14 +16,19 @@
 
 /mob
 	var/marked_creature = FALSE
+	var/additional_mark_time = 0
 
 /mob/proc/mark_mob()
 	marked_creature = TRUE
 	src.add_filter("mark_on", 1, list("type" = "outline", "color" = "#fc0303", "size" = 1))
-	addtimer(CALLBACK(src, PROC_REF(remove_mark)), 20 SECONDS)
+	GLOB.marked_creatures += src
+	addtimer(CALLBACK(src, PROC_REF(remove_mark)), 20 SECONDS + additional_mark_time)
 
 /mob/proc/remove_mark()
+	if(additional_mark_time > 0)
+		additional_mark_time = 0
 	src.remove_filter("mark_on")
+	GLOB.marked_creatures -= src
 	marked_creature = FALSE
 
 // ROCKS AND MINERALS //

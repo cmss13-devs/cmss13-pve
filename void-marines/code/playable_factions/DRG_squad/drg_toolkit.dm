@@ -35,29 +35,35 @@
 
 		if("allied humans")
 			var/list/humans_in_range = list()
-			var/list/closest = list()
+			for(var/mob/living/target as anything in GLOB.living_mob_list)
+				if(get_dist(user, target) > scanning_range)
+					continue
 
-			for(var/mob/living/target in orange(scanning_range, user))
-				if(target.faction == user.faction && target.stat != DEAD)
-					humans_in_range += target
-				if(!humans_in_range.len)
-					to_chat(user, SPAN_ORANGE("There is NO humans in your range!"))
-					return TRUE
-				to_chat(user, SPAN_GREEN("There is [humans_in_range.len] humans in your range!"))
+				if(target.faction != user.faction || target.stat == DEAD)
+					continue
 
-			for(var/mob/living/target in humans_in_range)
-				if(get_dist(target, user) <= 8)
-					closest += target
-				if(!closest.len)
-					humans_in_range.Cut()
-					return TRUE
-				var/mob/living/simple_animal/hostile/drg/someone = pick(closest)
-				to_chat(user, SPAN_GREEN("And [someone] is mostly close to you! Located on [someone.x] by X and [someone.y] by Y. (Yours coordinates is [user.x]-X and [user.y]-Y)"))
-				humans_in_range.Cut()
-				closest.Cut()
-				was_used = TRUE
-				addtimer(CALLBACK(src, PROC_REF(recharge)), cooldown)
+				humans_in_range += target
+
+			if(!humans_in_range.len)
+				to_chat(user, SPAN_ORANGE("There is NO allies in your range!"))
 				return TRUE
+
+			to_chat(user, SPAN_GREEN("There is [humans_in_range.len] humans in your range!"))
+
+			var/closest
+			var/closest_dist = INFINITY
+			for(var/target in humans_in_range)
+				var/dist = get_dist(user, target)
+				if(dist >= closest_dist)
+					continue
+
+				closest_dist = dist
+				closest = target
+
+			to_chat(user, SPAN_GREEN("And [closest] is mostly close to you! Approximately [get_dist(user, closest)] rocks far on [dir2text(get_dir(user, closest))]. "))
+			addtimer(CALLBACK(src, PROC_REF(recharge)), cooldown)
+			was_used = TRUE
+			return TRUE
 
 		if("allied robots")
 			var/list/robots_in_range = list()
@@ -86,21 +92,13 @@
 				return TRUE
 
 		if("marked creature")
-			var/list/creatures_to_find = list()
-
-			for(var/mob/living/target in orange(scanning_range, user))
-				if(target.marked_creature)
-					creatures_to_find += target
-
-			if(!creatures_to_find.len)
-				to_chat(user, SPAN_ORANGE("There is NO targets in your range!"))
+			if(!GLOB.marked_creatures.len)
+				to_chat(user, SPAN_ORANGE("There is NO targets to find!"))
 				return FALSE
-			var/mob/living/main_interest = tgui_input_list(usr, "Choose your target!", "Creature Search", creatures_to_find)
+			var/mob/main_interest = tgui_input_list(usr, "Choose your target!", "Creature Search", GLOB.marked_creatures)
 			if(!main_interest)
 				return FALSE
-			var/distance = get_dist(main_interest, user)
-			to_chat(user, SPAN_GREEN("Your choosed target currently at [main_interest.x]-X and [main_interest.y]-Y, which is [distance] meters from your location!"))
-			creatures_to_find.Cut()
+			to_chat(user, SPAN_GREEN("Your choosed target approximately [get_dist(user, main_interest)] rocks far on [dir2text(get_dir(user, main_interest))]!"))
 			was_used = TRUE
 			addtimer(CALLBACK(src, PROC_REF(recharge)), cooldown)
 			return TRUE
@@ -199,7 +197,7 @@
 
 // STICK //
 
-/obj/item/drg_lightstick
+/obj/item/drg/lightstick
 	name = "blue lightstick"
 	desc = "You can stick them in the ground"
 	icon = 'icons/obj/items/lighting.dmi'
@@ -208,13 +206,13 @@
 	var/s_color = "blue"
 	var/trample_chance = 30
 
-/obj/item/drg_lightstick/Initialize(mapload, ...)
+/obj/item/drg/lightstick/Initialize(mapload, ...)
 	. = ..()
 	if(!light_on)
 		set_light_range(0)
 
-/obj/item/drg_lightstick/proc/stick(turf/T, mob/user)
-	if(locate(/obj/item/drg_lightstick) in T)
+/obj/item/drg/lightstick/proc/stick(turf/T, mob/user)
+	if(locate(/obj/item/drg/lightstick) in T)
 		to_chat(user, "There's already a [src] at this position!")
 		return FALSE
 
@@ -238,7 +236,7 @@
 
 	return TRUE
 
-/obj/item/drg_lightstick/proc/remove(mob/user)
+/obj/item/drg/lightstick/proc/remove(mob/user)
 	if(user)
 		user.visible_message("[user.name] removes \the [src] from the ground.","You remove the [src] from the ground.")
 
@@ -253,42 +251,44 @@
 
 /turf/open/attackby(obj/item/I, mob/user)
 	. = ..()
-	if(istype(I, /obj/item/drg_lightstick))
-		var/obj/item/drg_lightstick/L = I
+	if(istype(I, /obj/item/drg/lightstick))
+		var/obj/item/drg/lightstick/L = I
 		L.stick(src, user)
 
-/obj/item/drg_lightstick/attack_self(mob/user)
+/obj/item/drg/lightstick/attack_self(mob/user)
 	. = ..()
 	stick(get_turf(user), user)
 
-/obj/item/drg_lightstick/attack_hand(mob/user)
+/obj/item/drg/lightstick/attack_hand(mob/user)
 	. = ..()
 	if(!anchored)
 		return
 	remove(user)
 
-/obj/item/drg_lightstick/Crossed(mob/living/O)
+/obj/item/drg/lightstick/Crossed(mob/living/O)
 	. = ..()
-	if(islarva(O))
+	if(!prob(trample_chance))
 		return
 
-	if(!prob(trample_chance))
+	if(islarva(O))
 		return
 
 	remove()
 
 GLOBAL_LIST_EMPTY(dora_navpoints)
 
-/obj/item/drg_lightstick/dora
+/obj/item/drg/lightstick/dora
 	name = "blue marker"
 	desc = "You can stick them in the ground to path the way for Dora."
 	trample_chance = FALSE
 
-/obj/item/drg_lightstick/dora/stick(turf/T, mob/user)
+/obj/item/drg/lightstick/dora/stick(turf/T, mob/user)
 	. = ..()
-	if(.)
-		GLOB.dora_navpoints.Insert(1, T)
+	if(!.)
+		return
 
-/obj/item/drg_lightstick/dora/remove(mob/user)
+	GLOB.dora_navpoints.Insert(1, T)
+
+/obj/item/drg/lightstick/dora/remove(mob/user)
 	GLOB.dora_navpoints -= get_turf(src)
 	. = ..()
