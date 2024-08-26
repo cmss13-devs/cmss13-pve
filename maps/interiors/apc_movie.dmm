@@ -34,7 +34,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_3"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "d" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -52,7 +52,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "e" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "wheel_front_top_2";
@@ -85,7 +85,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "j" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -103,7 +103,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "l" = (
 /obj/structure/machinery/prop/almayer/CICmap{
 	density = 0;
@@ -123,7 +123,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_4"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "n" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "corner_inverse_L";
@@ -166,7 +166,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_3"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "v" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8;
@@ -183,7 +183,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "w" = (
 /obj/effect/landmark/interior/spawn/interior_camera{
 	dir = 5;
@@ -207,7 +207,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "x" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "wall";
@@ -244,7 +244,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_3"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "A" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -257,12 +257,12 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "B" = (
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_3"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "C" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "door_big_right";
@@ -302,7 +302,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "G" = (
 /obj/structure/gun_rack/m41{
 	pixel_y = 22;
@@ -311,7 +311,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "H" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "corner_inverse_R";
@@ -382,7 +382,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_4"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "O" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "front_2";
@@ -427,7 +427,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_1_4"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "U" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "front_wheel_R";
@@ -457,7 +457,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_2"
 	},
-/area/vehicle/apc/movie)
+/area/interior/vehicle/apc/movie)
 "Y" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "rear_2"

@@ -25,18 +25,14 @@
 	name = "\improper CMD APC interior"
 	icon_state = "apc_cmd"
 
-/area/vehicle/apc/movie
+/area/interior/vehicle/apc/movie
 	name = "\improper M557A3 APC interior"
 	icon_state = "apc_movie"
-
-/area/vehicle/apc/arc
-	name = "\improper M540 ARC interior"
-	icon_state = "arc"
 
 /area/interior/vehicle/van
 	name = "van interior"
 	icon_state = "van"
 
 /area/interior/vehicle/arc
-	name = "\improper ARC interior"
+	name = "\improper M540 ARC interior"
 	icon_state = "arc"
