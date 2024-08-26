@@ -18,9 +18,7 @@
 	pixel_y = 16;
 	pixel_x = 6
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "bN" = (
 /turf/closed/shuttle/tripoli{
@@ -28,9 +26,7 @@
 	},
 /area/shuttle/tripoli)
 "ca" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
-	},
+/turf/open/shuttle/dropship/light_grey_top_right,
 /area/shuttle/tripoli)
 "cD" = (
 /turf/closed/shuttle/tripoli{
@@ -46,9 +42,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "dN" = (
 /turf/closed/shuttle/tripoli/transparent{
@@ -104,9 +98,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "iU" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_right,
 /area/shuttle/tripoli)
 "jC" = (
 /obj/effect/decal/warning_stripes{
@@ -125,14 +117,10 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "kS" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "lj" = (
 /obj/structure/shuttle/part/tripoli{
@@ -181,9 +169,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "pm" = (
 /obj/structure/platform_decoration{
@@ -196,9 +182,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "pw" = (
 /turf/closed/shuttle/tripoli{
@@ -229,9 +213,7 @@
 	},
 /area/shuttle/tripoli)
 "ri" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/shuttle/tripoli)
 "sb" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
@@ -246,9 +228,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "sD" = (
 /turf/closed/shuttle/tripoli{
@@ -263,9 +243,7 @@
 "vi" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/structure/machinery/door/airlock/hatch/cockpit,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "vl" = (
 /obj/effect/decal/warning_stripes{
@@ -295,9 +273,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "vJ" = (
 /obj/structure/shuttle/part/tripoli{
@@ -308,9 +284,7 @@
 /area/shuttle/tripoli)
 "wi" = (
 /obj/effect/attach_point/crew_weapon/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "wy" = (
 /obj/structure/shuttle/part/tripoli{
@@ -353,9 +327,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "zt" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
-	},
+/turf/open/shuttle/dropship/light_grey_top_left,
 /area/shuttle/tripoli)
 "zC" = (
 /turf/closed/shuttle/tripoli{
@@ -375,9 +347,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "zZ" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Ac" = (
 /turf/closed/shuttle/tripoli/transparent{
@@ -393,9 +363,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Cb" = (
 /obj/structure/shuttle/part/tripoli{
@@ -445,9 +413,7 @@
 	pixel_y = 26;
 	pixel_x = -10
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "EM" = (
 /turf/closed/shuttle/tripoli{
@@ -489,17 +455,13 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Kg" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Kk" = (
 /obj/structure/stairs/perspective{
@@ -516,9 +478,7 @@
 	pixel_x = 8;
 	layer = 5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "KU" = (
 /obj/structure/shuttle/part/tripoli{
@@ -531,9 +491,7 @@
 	pixel_y = 8;
 	buckling_y = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Ly" = (
 /turf/closed/shuttle/tripoli{
@@ -544,9 +502,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/tripoli{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "NV" = (
 /turf/closed/shuttle/tripoli{
@@ -590,9 +546,7 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "RD" = (
 /turf/closed/shuttle/tripoli/transparent{
@@ -602,9 +556,7 @@
 "RK" = (
 /obj/effect/attach_point/crew_weapon/tripoli,
 /obj/docking_port/mobile/marine_dropship/tripoli,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Sr" = (
 /turf/closed/shuttle/tripoli{
@@ -629,9 +581,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "UI" = (
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/shuttle/tripoli)
 "VP" = (
 /turf/closed/shuttle/tripoli{
@@ -663,9 +613,7 @@
 	pixel_y = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Zf" = (
 /turf/closed/shuttle/tripoli{
@@ -676,9 +624,7 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "ZW" = (
 /turf/closed/shuttle/tripoli{

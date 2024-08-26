@@ -159,6 +159,10 @@
 #define TRAIT_DAZED "dazed"
 /// Apply this to identify a mob as merged with weeds
 #define TRAIT_MERGED_WITH_WEEDS "merged_with_weeds"
+/// Apply this to identify a mob as temporarily muted
+#define TRAIT_TEMPORARILY_MUTED "temporarily_muted"
+/// Mob wont get hit by stray projectiles
+#define TRAIT_NO_STRAY "trait_no_stray"
 
 // SPECIES TRAITS
 /// Knowledge of Yautja technology
@@ -169,7 +173,7 @@
 #define TRAIT_FOREIGN_BIO "t_foreign_bio"
 /// Eye color changes on intent. (G1 Synths and WJs)
 #define TRAIT_INTENT_EYES "t_intent_eyes"
-/// Masked synthetic biology. Basic medHUDs will percieve the mob as human. (Infiltrator Synths)
+/// Masked synthetic biology. Basic medHUDs will perceive the mob as human. (Infiltrator Synths)
 #define TRAIT_INFILTRATOR_SYNTH "t_infiltrator_synth"
 /// Makes it impossible to strip the inventory of this mob.
 #define TRAIT_UNSTRIPPABLE "t_unstrippable"
@@ -177,7 +181,11 @@
 // HIVE TRAITS
 /// If the Hive is a Xenonid Hive
 #define TRAIT_XENONID "t_xenonid"
-/// If the Hive delays round end (this is overriden for some hives). Does not occur naturally. Must be applied in events.
+/// if the xeno's connection to the hivemind is cut
+#define TRAIT_HIVEMIND_INTERFERENCE "t_interference"
+/// If the hive or xeno can use objects.
+#define TRAIT_OPPOSABLE_THUMBS "t_thumbs"
+/// If the Hive delays round end (this is overridden for some hives). Does not occur naturally. Must be applied in events.
 #define TRAIT_NO_HIVE_DELAY "t_no_hive_delay"
 /// If the Hive uses it's colors on the mobs. Does not occur naturally, excepting the Mutated hive.
 #define TRAIT_NO_COLOR "t_no_color"
@@ -223,8 +231,18 @@
 #define TRAIT_HARDCORE "t_hardcore"
 /// If the mob is able to use the vulture rifle or spotting scope
 #define TRAIT_VULTURE_USER "t_vulture_user"
+/// If the mob is currently loading a tutorial
+#define TRAIT_IN_TUTORIAL "t_in_tutorial"
 /// If the mob is cloaked in any form
 #define TRAIT_CLOAKED "t_cloaked"
+/// If the mob claimed a specialist set from a vendor
+#define TRAIT_SPEC_VENDOR "t_spec_vendor"
+/// If the mob claimed a specialist set from a kit
+#define TRAIT_SPEC_KIT "t_spec_kit"
+/// What spec set the mob has claimed, if any
+#define TRAIT_SPEC(spec_type) "t_spec_[spec_type]"
+/// If the mob won't drop items held in face slot when downed
+#define TRAIT_IRON_TEETH "t_iron_teeth"
 
 // -- ability traits --
 /// Xenos with this trait cannot have plasma transfered to them
@@ -261,7 +279,10 @@
 
 #define TRAIT_GUN_BIPODDED "t_gun_bipodded"
 
-#define TRAIT_GUN_LIGHT_DEACTIVATED "t_gun_light_deactivated"
+#define TRAIT_GUN_LIGHT_FORCE_DEACTIVATED "t_gun_light_deactivated"
+
+/// If this ID belongs to an ERT member
+#define TRAIT_ERT_ID "ert_id"
 
 // Miscellaneous item traits.
 // Do NOT bloat this category, if needed make a new category (like shoe traits, xeno item traits...)
@@ -299,6 +320,9 @@ GLOBAL_LIST_INIT(mob_traits, list(
 	TRAIT_REAGENT_SCANNER,
 	TRAIT_ABILITY_BURROWED,
 	TRAIT_VULTURE_USER,
+	TRAIT_IN_TUTORIAL,
+	TRAIT_SPEC_KIT,
+	TRAIT_SPEC_VENDOR,
 ))
 
 /*
@@ -338,12 +362,16 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_CANNOT_EAT" = TRAIT_CANNOT_EAT,
 		"TRAIT_VULTURE_USER" = TRAIT_VULTURE_USER,
 		"TRAIT_CLOAKED" = TRAIT_CLOAKED,
+		"TRAIT_SPEC_KIT" = TRAIT_SPEC_KIT,
+		"TRAIT_SPEC_VENDOR" = TRAIT_SPEC_VENDOR,
 	),
 //	/mob/living/carbon/human = list(
 //	),
 	/mob/living/carbon/xenomorph = list(
 		"TRAIT_ABILITY_NO_PLASMA_TRANSFER" = TRAIT_ABILITY_NO_PLASMA_TRANSFER,
 		"TRAIT_ABILITY_OVIPOSITOR" = TRAIT_ABILITY_OVIPOSITOR,
+		"TRAIT_OPPOSABLE_THUMBS" = TRAIT_OPPOSABLE_THUMBS,
+		"TRAIT_INTERFERENCE" = TRAIT_HIVEMIND_INTERFERENCE,
 	),
 	/datum/hive_status = list(
 		"TRAIT_XENONID" = TRAIT_XENONID,
@@ -408,6 +436,8 @@ GLOBAL_LIST(trait_name_map)
 #define TRAIT_SOURCE_JOB "t_s_job"
 ///Status trait forced by staff
 #define TRAIT_SOURCE_ADMIN "t_s_admin"
+/// Status trait coming from a tutorial
+#define TRAIT_SOURCE_TUTORIAL "t_s_tutorials"
 ///Status trait coming from equipment
 #define TRAIT_SOURCE_EQUIPMENT(slot) "t_s_equipment_[slot]"
 ///Status trait coming from skill
@@ -417,10 +447,16 @@ GLOBAL_LIST(trait_name_map)
 ///Status trait coming from ability
 #define TRAIT_SOURCE_ABILITY(ability) "t_s_ability_[ability]"
 #define TRAIT_SOURCE_LIMB(limb) "t_s_limb_[limb]"
+///Status trait coming from temporary_mute
+#define TRAIT_SOURCE_TEMPORARY_MUTE "t_s_temporary_mute"
 ///Status trait forced by the xeno action charge
 #define TRAIT_SOURCE_XENO_ACTION_CHARGE "t_s_xeno_action_charge"
+///Status trait coming from hivemind interference
+#define TRAIT_SOURCE_HIVEMIND_INTERFERENCE "t_s_hivemind_interference"
 ///Status trait coming from a xeno nest
 #define XENO_NEST_TRAIT "xeno_nest"
+///Status trait from a generic throw by xeno abilities
+#define XENO_THROW_TRAIT "xeno_throw_trait"
 //-- structure traits --
 ///Status trait coming from being flipped or unflipped.
 #define TRAIT_SOURCE_FLIP_TABLE "t_s_flip_table"

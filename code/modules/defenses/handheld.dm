@@ -111,7 +111,8 @@
 /obj/item/defenses/handheld/sentry/get_upgrade_list()
 	. = list(
 		"Shotgun Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "Shotgun uac_sentry_handheld"),
-		"Mini-Sentry Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "Mini uac_sentry_handheld")
+		"Mini-Sentry Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state = "Mini uac_sentry_handheld"),
+		"Omni-Sentry Upgrade" = image(icon = 'icons/obj/structures/machinery/defenses/sentry.dmi', icon_state="Normal uac_sentry_handheld")
 	)
 
 /obj/item/defenses/handheld/sentry/upgrade_string_to_type(upgrade_string)
@@ -120,6 +121,12 @@
 			return /obj/item/defenses/handheld/sentry/shotgun
 		if("Mini-Sentry Upgrade")
 			return /obj/item/defenses/handheld/sentry/mini
+
+/obj/item/defenses/handheld/sentry/dmr
+	name = "handheld UA 725-D sniper sentry"
+	icon_state = "DMR uac_sentry_handheld"
+	deployment_time = 2 SECONDS
+	defense_type = /obj/structure/machinery/defenses/sentry/dmr
 
 /obj/item/defenses/handheld/sentry/shotgun
 	name = "handheld UA 12-G shotgun sentry"
@@ -282,4 +289,19 @@
 	deployment_time = 2 SECONDS
 	defense_type = /obj/structure/machinery/defenses/planted_flag/range
 
+/obj/item/defenses/handheld/planted_flag/wy
+	name = "handheld WY planted flag"
+	desc = "A compact version of the Weyland-Yutani defenses. Designed for deployment in the field."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "WY planted_flag_handheld"
+	deployment_time = 3 SECONDS
+	defense_type = /obj/structure/machinery/defenses/planted_flag/wy
+
+/obj/item/defenses/handheld/planted_flag/upp
+	name = "handheld UPP planted flag"
+	desc = "A compact version of the UPP defenses. Designed for deployment in the field."
+	icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi'
+	icon_state = "UPP planted_flag_handheld"
+	deployment_time = 5 SECONDS
+	defense_type = /obj/structure/machinery/defenses/planted_flag/upp
 

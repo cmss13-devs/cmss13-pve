@@ -21,11 +21,16 @@
 /datum/ammo/bullet/rifle/holo_target
 	name = "holo-targeting rifle bullet"
 	damage = 30
+	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 10
+	/// modifies the default cap limit of 100 by this amount
+	var/bonus_damage_cap_increase = 0
+	/// multiplies the default drain of 5 holo stacks per second by this amount
+	var/stack_loss_multiplier = 1
 
-/datum/ammo/bullet/rifle/holo_target/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/rifle/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
 	. = ..()
-	M.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time)
+	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
 /datum/ammo/bullet/rifle/holo_target/hunting
 	name = "holo-targeting hunting bullet"
@@ -65,7 +70,7 @@
 
 /datum/ammo/bullet/rifle/ap/toxin/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()
-	M.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, acid_per_hit)
 
 /datum/ammo/bullet/rifle/ap/toxin/on_hit_turf(turf/T, obj/projectile/P)
 	. = ..()
@@ -169,7 +174,7 @@
 	shell_speed = AMMO_SPEED_TIER_6
 
 /datum/ammo/bullet/rifle/m4ra/impact/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 32) // Can knockback basically at max range
+	knockback(M, P, 32) // Can knockback basically at max range max range is 24 tiles...
 
 /datum/ammo/bullet/rifle/m4ra/impact/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))

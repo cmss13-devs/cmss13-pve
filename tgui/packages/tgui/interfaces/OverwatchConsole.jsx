@@ -104,7 +104,7 @@ const SquadPanel = (props) => {
             Supply Drop
           </Tabs.Tab>
         )}
-        {!!data.can_launch_bombardments && (
+        {!!data.can_launch_obs && (
           <Tabs.Tab
             selected={category === 'ob'}
             icon="bomb"
@@ -119,9 +119,7 @@ const SquadPanel = (props) => {
       </Tabs>
       {category === 'monitor' && <SquadMonitor />}
       {category === 'supply' && data.can_launch_crates && <SupplyDrop />}
-      {category === 'ob' && data.can_launch_bombardments && (
-        <OrbitalBombardment />
-      )}
+      {category === 'ob' && data.can_launch_obs && <OrbitalBombardment />}
     </>
   );
 };

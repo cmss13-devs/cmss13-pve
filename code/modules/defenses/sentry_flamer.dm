@@ -1,10 +1,10 @@
 /obj/structure/machinery/defenses/sentry/flamer
-	name = "\improper UA 42-F sentry flamer"
+	name = "\improper UA 42-F Sentry Flamer"
 	icon = 'icons/obj/structures/machinery/defenses/flamer.dmi'
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with a special flamer and a 100 liters fuel tank."
 	fire_delay = 30
 	ammo = new /obj/item/ammo_magazine/sentry_flamer
-	sentry_type = "flamer"
+	sentry_type = "uac_flamer"
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer
 	health = 200
 	health_max = 200
@@ -13,12 +13,12 @@
 
 	choice_categories = list(
 		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
-		SENTRY_CATEGORY_IFF = list(FACTION_USCM, FACTION_WEYLAND, FACTION_HUMAN),
+		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
 	)
 
 	selected_categories = list(
 		SENTRY_CATEGORY_ROF = ROF_SINGLE,
-		SENTRY_CATEGORY_IFF = FACTION_USCM,
+		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
 /obj/structure/machinery/defenses/sentry/flamer/handle_rof(level)

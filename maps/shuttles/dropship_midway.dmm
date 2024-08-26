@@ -11,9 +11,7 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "bs" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
-	},
+/turf/open/shuttle/dropship/light_grey_top_left,
 /area/shuttle/midway)
 "dr" = (
 /obj/structure/bed/chair/dropship/passenger{
@@ -22,9 +20,7 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "dB" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -87,26 +83,20 @@
 	},
 /area/shuttle/midway)
 "im" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/shuttle/midway)
 "iv" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "je" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "jy" = (
 /obj/structure/bed/chair/dropship/passenger{
@@ -120,23 +110,17 @@
 	pixel_y = 27;
 	pixel_x = -2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "jW" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "kC" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "ls" = (
 /turf/closed/shuttle/midway/transparent{
@@ -171,18 +155,14 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "mR" = (
 /obj/structure/bed/chair/dropship/passenger/folded{
 	pixel_y = 8;
 	buckling_y = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "od" = (
 /turf/closed/shuttle/midway/transparent{
@@ -246,9 +226,7 @@
 	},
 /area/shuttle/midway)
 "vJ" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
-	},
+/turf/open/shuttle/dropship/light_grey_bottom_right,
 /area/shuttle/midway)
 "vN" = (
 /turf/closed/shuttle/midway/transparent{
@@ -273,9 +251,7 @@
 	pixel_y = 26;
 	pixel_x = -10
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "ym" = (
 /turf/closed/shuttle/midway{
@@ -337,9 +313,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Cm" = (
 /obj/effect/attach_point/fuel/midway{
@@ -375,9 +349,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "DH" = (
 /obj/effect/decal/warning_stripes{
@@ -416,9 +388,7 @@
 	name = "Midway telephone receiver";
 	phone_id = "Midway"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Fu" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -433,9 +403,7 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "Gh" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
-	},
+/turf/open/shuttle/dropship/light_grey_top_right,
 /area/shuttle/midway)
 "Go" = (
 /obj/structure/stairs/perspective{
@@ -452,9 +420,7 @@
 	pixel_x = 8;
 	layer = 5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Hj" = (
 /turf/closed/shuttle/midway{
@@ -487,9 +453,7 @@
 /obj/effect/attach_point/crew_weapon/midway{
 	attach_id = 7
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Ji" = (
 /turf/closed/shuttle/midway{
@@ -515,9 +479,7 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Kw" = (
 /turf/template_noop,
@@ -556,14 +518,10 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "ME" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Pc" = (
 /turf/closed/shuttle/midway/transparent{
@@ -573,9 +531,7 @@
 "PP" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/structure/machinery/door/airlock/hatch/cockpit/four,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Qk" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -590,18 +546,14 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "Rm" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	attach_id = 7
 	},
 /obj/docking_port/mobile/marine_dropship/midway,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "SZ" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -617,9 +569,7 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "UI" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -639,9 +589,7 @@
 	},
 /area/shuttle/midway)
 "WN" = (
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
-	},
+/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/shuttle/midway)
 "XH" = (
 /obj/effect/attach_point/fuel/midway{

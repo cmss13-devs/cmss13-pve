@@ -26,7 +26,7 @@
 	. = ..()
 
 	RegisterSignal(parent, COMSIG_XENO_HANDLE_AI_SHOT, PROC_REF(stop_lurking))
-	RegisterSignal(parent, COMSIG_XENO_HANDLE_CRIT, PROC_REF(stop_lurking))
+	RegisterSignal(parent, COMSIG_XENO_ENTER_CRIT, PROC_REF(stop_lurking))
 	RegisterSignal(parent, COMSIG_XENO_USED_POUNCE, PROC_REF(stop_lurking))
 
 	addtimer(CALLBACK(src, PROC_REF(check_annoyance)), AI_CHECK_ANNOYANCE_COOLDOWN, TIMER_UNIQUE|TIMER_LOOP|TIMER_DELETE_ME)

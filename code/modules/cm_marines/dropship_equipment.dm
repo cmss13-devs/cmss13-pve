@@ -288,6 +288,8 @@
 		deployed_turret.linked_cam.network = list(CAMERA_NET_ALAMO)
 	else if (linked_shuttle.id == DROPSHIP_NORMANDY)
 		deployed_turret.linked_cam.network = list(CAMERA_NET_NORMANDY)
+	else if (linked_shuttle.id == DROPSHIP_SAIPAN)
+		deployed_turret.linked_cam.network = list(CAMERA_NET_SAIPAN)
 
 
 /obj/structure/dropship_equipment/sentry_holder/proc/undeploy_sentry()
@@ -721,9 +723,7 @@
 
 	ammo_accuracy_range /= 2 //buff for basically pointblanking the ground
 
-	var/list/possible_turfs = list()
-	for(var/turf/TU in range(ammo_accuracy_range, target_turf))
-		possible_turfs += TU
+	var/list/possible_turfs = RANGE_TURFS(ammo_accuracy_range, target_turf)
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user
@@ -861,7 +861,7 @@
 
 /obj/structure/dropship_equipment/medevac_system/proc/get_targets()
 	. = list()
-	for(var/obj/structure/bed/medevac_stretcher/MS in activated_medevac_stretchers)
+	for(var/obj/structure/bed/medevac_stretcher/MS in GLOB.activated_medevac_stretchers)
 		var/area/AR = get_area(MS)
 		var/evaccee_name
 		var/evaccee_triagecard_color
@@ -1202,7 +1202,7 @@
 
 /obj/structure/dropship_equipment/fulton_system/proc/get_targets()
 	. = list()
-	for(var/obj/item/stack/fulton/F in deployed_fultons)
+	for(var/obj/item/stack/fulton/F in GLOB.deployed_fultons)
 		var/recovery_object
 		if(F.attached_atom)
 			recovery_object = F.attached_atom.name
@@ -1434,9 +1434,7 @@
 
 	ammo_accuracy_range /= 2 //buff for basically pointblanking the ground
 
-	var/list/possible_turfs = list()
-	for(var/turf/TU in range(ammo_accuracy_range, target_turf))
-		possible_turfs += TU
+	var/list/possible_turfs = RANGE_TURFS(ammo_accuracy_range, target_turf)
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user

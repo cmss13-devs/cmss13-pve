@@ -20,9 +20,7 @@
 	dir = 1;
 	pixel_x = 8
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/vehicle/tank)
 "f" = (
 /obj/structure/interior_wall/tank{
@@ -97,9 +95,7 @@
 	pixel_x = 14;
 	pixel_y = -21
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/vehicle/tank)
 "v" = (
 /obj/structure/interior_wall/tank{
@@ -130,9 +126,7 @@
 	icon_state = "prop_aev2";
 	layer = 3
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_1_1"
-	},
+/turf/open/shuttle/vehicle/floor_3_1_1,
 /area/vehicle/tank)
 "D" = (
 /obj/structure/interior_wall/tank{
@@ -154,9 +148,7 @@
 	layer = 2.9;
 	pixel_x = -7
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/vehicle/tank)
 "H" = (
 /obj/structure/interior_wall/tank{
@@ -193,9 +185,7 @@
 	pixel_y = -10;
 	pixel_x = -7
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/vehicle/tank)
 "T" = (
 /obj/structure/interior_wall/tank{
@@ -236,9 +226,7 @@
 	pixel_x = 8;
 	pixel_y = 12
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/vehicle/tank)
 
 (1,1,1) = {"

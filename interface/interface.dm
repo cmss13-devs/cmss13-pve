@@ -50,11 +50,11 @@
 	set name = "Github"
 	set desc = "View our github!."
 	set hidden = TRUE
-
-	if(tgui_alert(src, "This will open the GitHub in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
+	if(!usr)
 		return
+	var/datum/tgui_bug_report_form/report = new(usr)
 
-	src << link(CONFIG_GET(string/githuburl))
+	report.tgui_interact(usr)
 	return
 
 /client/verb/set_fps()

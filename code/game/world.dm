@@ -1,10 +1,8 @@
 
-var/world_view_size = 7
-var/lobby_view_size = 16
+GLOBAL_VAR_INIT(world_view_size, 7)
+GLOBAL_VAR_INIT(lobby_view_size, 16)
 
-var/internal_tick_usage = 0
-
-var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
+GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 /world
 	mob = /mob/new_player
 	turf = /turf/open/space/basic
@@ -18,7 +16,6 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
-	internal_tick_usage = 0.2 * world.tick_lag
 	hub_password = "kMZy3U5jJHSiBQjr"
 
 #ifdef BYOND_TRACY
@@ -49,8 +46,6 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 	LoadBans()
 	load_motd()
 	load_tm_message()
-	load_mode()
-	loadShuttleInfoDatums()
 	populate_gear_list()
 	initialize_global_regex()
 
@@ -67,8 +62,8 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 	// Only do offline sleeping when the server isn't running unit tests or hosting a local dev test
 	sleep_offline = (!running_tests && !testing_locally)
 
-	if(!RoleAuthority)
-		RoleAuthority = new /datum/authority/branch/role()
+	if(!GLOB.RoleAuthority)
+		GLOB.RoleAuthority = new /datum/authority/branch/role()
 		to_world(SPAN_DANGER("\b Job setup complete"))
 
 	initiate_minimap_icons()
@@ -95,14 +90,10 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 	GLOB.obfs_x = rand(-500, 500) //A number between -100 and 100
 	GLOB.obfs_y = rand(-500, 500) //A number between -100 and 100
 
-	spawn(3000) //so we aren't adding to the round-start lag
-		if(CONFIG_GET(flag/ToRban))
-			ToRban_autoupdate()
-
 	// If the server's configured for local testing, get everything set up ASAP.
 	// Shamelessly stolen from the test manager's host_tests() proc
 	if(testing_locally)
-		master_mode = "Extended"
+		GLOB.master_mode = "Extended"
 
 		// Wait for the game ticker to initialize
 		while(!SSticker.initialized)
@@ -111,9 +102,6 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 		// Start the game ASAP
 		SSticker.request_start()
 	return
-
-var/world_topic_spam_protect_ip = "0.0.0.0"
-var/world_topic_spam_protect_time = world.timeofday
 
 /proc/start_logging()
 	GLOB.round_id = SSentity_manager.round.id
@@ -126,7 +114,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		GLOB.log_directory += "[replacetext(time_stamp(), ":", ".")]"
 
 	runtime_logging_ready = TRUE // Setting up logging now, so disabling early logging
-	#ifndef UNIT_TESTS
+	#if !defined(UNIT_TESTS) && !defined(AUTOWIKI)
 	world.log = file("[GLOB.log_directory]/dd.log")
 	#endif
 	backfill_runtime_log()
@@ -141,7 +129,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	GLOB.round_stats = "[GLOB.log_directory]/round_stats.log"
 	GLOB.scheduler_stats = "[GLOB.log_directory]/round_scheduler_stats.log"
 	GLOB.mapping_log = "[GLOB.log_directory]/mapping.log"
-	GLOB.mutator_logs = "[GLOB.log_directory]/mutator_logs.log"
+	GLOB.strain_logs = "[GLOB.log_directory]/strain_logs.log"
 
 	start_log(GLOB.tgui_log)
 	start_log(GLOB.world_href_log)
@@ -151,7 +139,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	start_log(GLOB.round_stats)
 	start_log(GLOB.scheduler_stats)
 	start_log(GLOB.mapping_log)
-	start_log(GLOB.mutator_logs)
+	start_log(GLOB.strain_logs)
 
 	if(fexists(GLOB.config_error_log))
 		fcopy(GLOB.config_error_log, "[GLOB.log_directory]/config_error.log")
@@ -260,44 +248,29 @@ var/world_topic_spam_protect_time = world.timeofday
 		shutdown()
 
 /world/proc/send_tgs_restart()
-	if(CONFIG_GET(string/new_round_alert_channel) && CONFIG_GET(string/new_round_alert_role_id))
-		if(round_statistics)
-			send2chat("[round_statistics.round_name][GLOB.round_id ? " (Round [GLOB.round_id])" : ""] completed!", CONFIG_GET(string/new_round_alert_channel))
-		if(SSmapping.next_map_configs)
-			var/datum/map_config/next_map = SSmapping.next_map_configs[GROUND_MAP]
-			if(next_map)
-				send2chat("<@&[CONFIG_GET(string/new_round_alert_role_id)]> Restarting! Next map is [next_map.map_name]", CONFIG_GET(string/new_round_alert_channel))
-		else
-			send2chat("<@&[CONFIG_GET(string/new_round_alert_role_id)]> Restarting!", CONFIG_GET(string/new_round_alert_channel))
-	return
+	if(!CONFIG_GET(string/new_round_alert_channel))
+		return
+
+	if(!GLOB.round_statistics)
+		return
+
+	send2chat(new /datum/tgs_message_content("[GLOB.round_statistics.round_name][GLOB.round_id ? " (Round [GLOB.round_id])" : ""] completed!"), CONFIG_GET(string/new_round_alert_channel))
 
 /world/proc/send_reboot_sound()
-	var/reboot_sound = SAFEPICK(reboot_sfx)
+	var/reboot_sound = SAFEPICK(GLOB.reboot_sfx)
 	if(reboot_sound)
 		var/sound/reboot_sound_ref = sound(reboot_sound)
 		for(var/client/client as anything in GLOB.clients)
 			if(client?.prefs.toggles_sound & SOUND_REBOOT)
 				SEND_SOUND(client, reboot_sound_ref)
 
-/world/proc/load_mode()
-	var/list/Lines = file2list("data/mode.txt")
-	if(Lines.len)
-		if(Lines[1])
-			master_mode = Lines[1]
-			log_misc("Saved mode is '[master_mode]'")
-
-/world/proc/save_mode(the_mode)
-	var/F = file("data/mode.txt")
-	fdel(F)
-	F << the_mode
-
 /world/proc/load_motd()
-	join_motd = file2text("config/motd.txt")
+	GLOB.join_motd = file2text("config/motd.txt")
 
 /world/proc/load_tm_message()
 	var/datum/getrev/revdata = GLOB.revdata
-	if(revdata.testmerge.len)
-		current_tms = revdata.GetTestMergeInfo()
+	if(length(revdata.testmerge))
+		GLOB.current_tms = revdata.GetTestMergeInfo()
 
 /world/proc/update_status()
 	//Note: Hub content is limited to 254 characters, including limited HTML/CSS.
@@ -312,32 +285,10 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	world.status = s
 
-#define FAILED_DB_CONNECTION_CUTOFF 1
-var/failed_db_connections = 0
-var/failed_old_db_connections = 0
-
-// /hook/startup/proc/connectDB()
-// if(!setup_database_connection())
-// world.log << "Your server failed to establish a connection with the feedback database."
-// else
-// world.log << "Feedback database connection established."
-// return 1
-
-var/datum/BSQL_Connection/connection
-/proc/setup_database_connection()
-
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF) //If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
-		return 0
-
-
-	return .
-
 /proc/set_global_view(view_size)
-	world_view_size = view_size
+	GLOB.world_view_size = view_size
 	for(var/client/c in GLOB.clients)
-		c.view = world_view_size
-
-#undef FAILED_DB_CONNECTION_CUTOFF
+		c.view = GLOB.world_view_size
 
 /proc/give_image_to_client(obj/O, icon_text)
 	var/image/I = image(null, O)
@@ -381,9 +332,7 @@ var/datum/BSQL_Connection/connection
 	if(!map_load_z_cutoff)
 		return
 //	var/area/global_area = GLOB.areas_by_type[world.area] // We're guaranteed to be touching the global area, so we'll just do this
-//	var/list/to_add = block(
-//		locate(old_max + 1, 1, 1),
-//		locate(maxx, maxy, map_load_z_cutoff))
+//	var/list/to_add = block(old_max + 1, 1, 1, maxx, maxy, map_load_z_cutoff)
 //	global_area.contained_turfs += to_add
 
 /world/proc/increase_max_y(new_maxy, map_load_z_cutoff = maxz)
@@ -394,9 +343,7 @@ var/datum/BSQL_Connection/connection
 	if(!map_load_z_cutoff)
 		return
 //	var/area/global_area = GLOB.areas_by_type[world.area] // We're guarenteed to be touching the global area, so we'll just do this
-//	var/list/to_add = block(
-//		locate(1, old_maxy + 1, 1),
-//		locate(maxx, maxy, map_load_z_cutoff))
+//	var/list/to_add = block(1, old_maxy + 1, 1, maxx, maxy, map_load_z_cutoff)
 //	global_area.contained_turfs += to_add
 
 /world/proc/incrementMaxZ()
