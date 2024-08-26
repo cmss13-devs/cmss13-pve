@@ -957,7 +957,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/pfc
 	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/tutorial_rifleman/load_gear(mob/living/carbon/human/new_human)

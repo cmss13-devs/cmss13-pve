@@ -240,7 +240,6 @@
 		return
 
 	if(istype(O, ammo))
-		var/obj/item/ammo_magazine/M = O
 		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED) || user.action_busy)
 			return
 

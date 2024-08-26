@@ -143,7 +143,7 @@
 /obj/item/storage/box/M1911_loadout
 	name = "M1911 storage case"
 	desc = "A relatively large storage case containing the 1911 and additional magazines. Purchased by enlisted or aspiring PMCs looking to carry a timeless classic"
-	icon = 'icons/obj/items/storage.dmi'
+	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "matebacase"
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM

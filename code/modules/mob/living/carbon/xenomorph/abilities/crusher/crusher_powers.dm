@@ -146,21 +146,6 @@
 			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are crushed as [xeno_owner] stomps on you!"))
 			continue
 
-		var/distance_to_target = get_dist(carbon_in_range, xeno_owner)
-
-		to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You fall as [xeno_owner] knocks you off balance!"))
-		shake_camera(carbon_in_range, (6 - distance_to_target), 2)
-
-		var/weaken_time = 2.5 - (distance_to_target / 2)
-
-		carbon_in_range.apply_effect(weaken_time, WEAKEN)
-
-		if(distance_to_target == 0)
-			carbon_in_range.apply_armoured_damage(damage, ARMOR_MELEE, BRUTE)
-			carbon_in_range.last_damage_data = create_cause_data(xeno_owner.caste_type, xeno_owner)
-			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are crushed as [xeno_owner] stomps on you!"))
-			continue
-
 		if(distance_to_target <= 2)
 			INVOKE_ASYNC(xeno_owner, TYPE_PROC_REF(/mob/living/carbon/xenomorph, throw_carbon), carbon_in_range, get_dir(xeno_owner, carbon_in_range), (6 - (distance_to_target * 2)), FALSE)
 			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are flung by [xeno_owner] from the force of its crashing weight!"))

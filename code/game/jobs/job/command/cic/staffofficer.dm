@@ -73,8 +73,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	GLOB.marine_leaders[JOB_SO] = M
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
-/datum/job/command/bridge/ai/proc/cleanup_leader_candidate(mob/M)
-	SIGNAL_HANDLER
+/datum/job/command/bridge/ai/cleanup_leader_candidate(mob/M)
 	GLOB.marine_leaders -= JOB_SO
 
 /datum/job/command/bridge/ai/upp
