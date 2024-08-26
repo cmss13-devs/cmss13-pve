@@ -1,6 +1,6 @@
 // SCOUT ASSAULT RIFLE //
 
-/obj/item/weapon/gun/drg/deepcoregk2
+/obj/item/weapon/gun/drg/scout_assault
 	name = "DeepCore GK2"
 	desc = "A dependable, hefty weapon. Usually not the first choice of proper Dwarves, but the combination of heft, weight, and satisfying boom makes it worthwhile all the same."
 
@@ -22,7 +22,7 @@
 	flags_atom = NOBLOODY|CONDUCT
 	flags_item = TWOHANDED
 
-	current_mag = /obj/item/ammo_magazine/rifle/drg/deepcoregk2
+	current_mag = /obj/item/ammo_magazine/rifle/drg/scout_assault
 
 	fire_sound = 'void-marines/sound/drg/scout_smg_twoshot.wav'
 	reload_sound = 'void-marines/sound/drg/scout_smg_reload.wav'
@@ -37,11 +37,11 @@
 
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/drg/deepcoregk2/Initialize(mapload, spawn_empty)
+/obj/item/weapon/gun/drg/scout_assault/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
 
-/obj/item/weapon/gun/drg/deepcoregk2/set_gun_config_values()
+/obj/item/weapon/gun/drg/scout_assault/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
@@ -53,7 +53,7 @@
 	recoil = RECOIL_OFF
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
-/obj/item/ammo_magazine/rifle/drg/deepcoregk2
+/obj/item/ammo_magazine/rifle/drg/scout_assault
 	name = "\improper DeepCore GK2 magazine (10x24mm)"
 	desc = "A 10x24mm assault rifle magazine."
 	caliber = "10x24mm"
@@ -61,17 +61,17 @@
 	icon_state = "deepcoregk2_mag"
 	item_state = "generic_mag"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle/drg/deepcoregk2
+	default_ammo = /datum/ammo/bullet/rifle/drg/scout_assault
 	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/drg/deepcoregk2
+	gun_type = /obj/item/weapon/gun/drg/scout_assault
 
-/obj/item/ammo_magazine/rifle/drg/deepcoregk2/marker
+/obj/item/ammo_magazine/rifle/drg/scout_assault/marker
 	name = "\improper DeepCore GK2 marker magazine (10x24mm)"
 	desc = "A 10x24mm assault rifle magazine, fit with little spy-bugs."
-	default_ammo = /datum/ammo/bullet/rifle/drg/deepcoregk2/marker
+	default_ammo = /datum/ammo/bullet/rifle/drg/scout_assault/marker
 	icon_state = "deepcoregk2_marker_mag"
 
-/datum/ammo/bullet/rifle/drg/deepcoregk2
+/datum/ammo/bullet/rifle/drg/scout_assault
 	name = "rifle bullet"
 
 	damage = 35
@@ -83,17 +83,18 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_1
 	max_range = 30
 
-/datum/ammo/bullet/rifle/drg/deepcoregk2/marker
+/datum/ammo/bullet/rifle/drg/scout_assault/marker
 	damage = 15
 
-/datum/ammo/bullet/rifle/drg/deepcoregk2/marker/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/rifle/drg/scout_assault/marker/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()
 	if(!M.marked_creature)
+		M.additional_mark_time += 100 SECONDS
 		M.mark_mob()
 
 // GUNNER MINIGUN //
 
-/obj/item/weapon/gun/drg/leadstorm
+/obj/item/weapon/gun/drg/gunner_minigun
 	name = "'Lead Storm' Powered Minigun"
 	desc = "What's more effective than bullets? A whole LOT of bullets. With a fire rate of more than 3 500 rounds per minute, the Minigun remains a mainstay of any heavy engagement."
 
@@ -115,7 +116,7 @@
 	flags_atom = NOBLOODY|CONDUCT
 	flags_item = TWOHANDED
 
-	current_mag = /obj/item/ammo_magazine/rifle/drg/leadstorm
+	current_mag = /obj/item/ammo_magazine/rifle/drg/gunner_minigun
 
 	fire_sound = 'void-marines/sound/drg/minigun_shots.wav'
 	reload_sound = 'void-marines/sound/drg/scout_smg_reload.wav'
@@ -130,36 +131,68 @@
 	gun_category = GUN_CATEGORY_HEAVY
 
 	start_automatic = TRUE
+	cock_delay = 4 SECONDS // Cooling batteries
 
 	var/heat_stored = 0 //how much we have currently
-	var/overheat_on = 1000 //how much we need to overheat
+	var/heat_max = 1000 //how much we need to overheat
+
+	var/heat_gain = 5 //how much heat we gain per shot
 	var/overheated = FALSE
 
-/obj/item/weapon/gun/drg/leadstorm/get_examine_text(mob/user)
+	var/heat_loss = 40 //how much heat we lose per second
+	var/cooldown_delay = 4 SECONDS //time it takes for minigun to start radiate heat by itself
+
+/obj/item/weapon/gun/drg/gunner_minigun/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(current_mag && current_mag.current_rounds > 0)
+		load_into_chamber()
+	START_PROCESSING(SSfastobj, src)
+
+/obj/item/weapon/gun/drg/gunner_minigun/Destroy()
+	. = ..()
+	STOP_PROCESSING(SSfastobj, src)
+
+/obj/item/weapon/gun/drg/gunner_minigun/get_examine_text(mob/user)
 	. = ..()
 	var/dat = ""
-	dat += SPAN_ORANGE("CURRENT HEAT: [heat_stored]/[overheat_on].")
-	if(dat)
-		. += dat
+	dat += SPAN_ORANGE("CURRENT HEAT: [heat_stored / heat_max * 100]/100.")
+	. += dat
 
-/obj/item/weapon/gun/drg/leadstorm/Initialize(mapload, spawn_empty)
-	. = ..()
-	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
-	START_PROCESSING(SSobj, src)
+/obj/item/weapon/gun/drg/gunner_minigun/process(mob/user)
+	var/cool_delay = last_fired + cooldown_delay
+	if(world.time > cool_delay && !overheated)
+		heat_stored = max(heat_stored - heat_loss / 2, 0)
+	handle_heat_effects()
 
-/obj/item/weapon/gun/drg/leadstorm/process(mob/user)
-	if(!overheated)
-		if(heat_stored > 0)
-			heat_stored -= 4
+/obj/item/weapon/gun/drg/gunner_minigun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
+	if(overheated)
+		to_chat(user, SPAN_LARGE(SPAN_DANGER("COOL IT DOWN!")))
+		return
 
-	if(heat_stored >= overheat_on && !overheated)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER("STOPS DUE TO INTENSE HEAT!")))
+	heat_stored = min(heat_stored + heat_gain, heat_max)
+	handle_heat_effects()
+
+	if(heat_stored >= heat_max)
+		to_chat(user, SPAN_LARGE(SPAN_DANGER("MINIGUN STOPS DUE TO INTENSE HEAT!")))
 		playsound(loc, 'sound/effects/acid_sizzle4.ogg', 25, TRUE)
-		add_filter("heat_inner", 1, list("type" = "blur", "size" = 1))
-		add_filter("heat_outer", 1, list("type" = "outline", "color" = "#e75d00", "size" = 1))
 		overheated = TRUE
+		return
 
-/obj/item/weapon/gun/drg/leadstorm/set_gun_config_values()
+	. = ..()
+
+/obj/item/weapon/gun/drg/gunner_minigun/proc/handle_heat_effects()
+	var/heat_coeff = heat_stored / heat_max
+	if(!heat_coeff)
+		remove_filter("heat_outer")
+		remove_filter("heat_inner")
+		color = COLOR_WHITE
+		return
+
+	add_filter("heat_outer", 1, list("type" = "outline", "color" = "#e75d00", "size" = 0.1 * heat_coeff))
+	add_filter("heat_inner", 1, list("type" = "blur", "size" = heat_coeff))
+	color = rgb(255 - 25 * heat_coeff, 255 - 165 * heat_coeff, 255 - 255 * heat_coeff)
+
+/obj/item/weapon/gun/drg/gunner_minigun/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_SG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -168,49 +201,45 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
 	recoil = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/drg/leadstorm/unique_action(mob/user)
+/obj/item/weapon/gun/drg/gunner_minigun/unique_action(mob/user)
 	cock(user)
 
-/obj/item/weapon/gun/drg/leadstorm/cock(mob/user)
+/obj/item/weapon/gun/drg/gunner_minigun/cock(mob/user)
+	if(!overheated)
+		to_chat(user, SPAN_DANGER("[src] in a pretty good state! You don't need to cool it manually!"))
+		return
+
 	if(cock_cooldown > world.time)
 		return
-	if(heat_stored < 500 && !overheated)
-		to_chat(user, SPAN_DANGER("[src] in a pretty good state! You don't need to cool it!"))
+
+	cock_cooldown = world.time + cock_delay
+
+	if(!do_after(user, cock_delay, INTERRUPT_INCAPACITATED, BUSY_ICON_GENERIC))
+		to_chat(user, SPAN_DANGER("Your [src] cooling was interrupted!"))
 		return
 
-	if(do_after(user, 4 SECONDS, INTERRUPT_INCAPACITATED, BUSY_ICON_GENERIC))
+	user.visible_message(SPAN_NOTICE("[user] opens [src] batteries, giving them some time to cool."),
+	SPAN_NOTICE("You open [src] batteries, giving them some time to cool."), null, 4, CHAT_TYPE_COMBAT_ACTION)
 
-		cock_cooldown = world.time + cock_delay
-		playsound(user, cocked_sound, 25, TRUE)
+	heat_stored -= 100
+	overheated = FALSE
 
-		user.visible_message(SPAN_NOTICE("[user] opens [src] batteries, giving them some time to cool."),
-		SPAN_NOTICE("You open [src] batteries, giving them some time to cool."), null, 4, CHAT_TYPE_COMBAT_ACTION)
-		overheated = FALSE
-		heat_stored -= 100
-		remove_filter("heat_outer")
-		remove_filter("heat_inner")
+	playsound(user, cocked_sound, 25, TRUE)
+	handle_heat_effects()
 
-/obj/item/weapon/gun/drg/leadstorm/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	if(overheated)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER("COOL IT DOWN!")))
-		return
-
-	heat_stored += 5
-	. = ..()
-
-/obj/item/ammo_magazine/rifle/drg/leadstorm
+/obj/item/ammo_magazine/rifle/drg/gunner_minigun
 	name = "\improper 'Lead Storm' drum (20mm)"
-	desc = "A 20mm heavy minigun magazine."
+	desc = "A 20mm heavy minigun drum magazine."
 	caliber = "20mm"
 	icon = 'void-marines/icons/drg_weapons.dmi'
 	icon_state = "leadstorm_mag"
 	item_state = "generic_mag"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle/drg/leadstorm
+	default_ammo = /datum/ammo/bullet/rifle/drg/gunner_minigun
 	max_rounds = 2400
-	gun_type = /obj/item/weapon/gun/drg/leadstorm
+	gun_type = /obj/item/weapon/gun/drg/gunner_minigun
 
-/datum/ammo/bullet/rifle/drg/leadstorm
+/datum/ammo/bullet/rifle/drg/gunner_minigun
 	name = "minigun bullet"
 
 	damage = 65
