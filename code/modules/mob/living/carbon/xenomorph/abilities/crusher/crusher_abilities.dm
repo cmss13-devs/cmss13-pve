@@ -137,11 +137,6 @@
 	if(body_position == LYING_DOWN)
 		handle_movement(xeno)
 
-/datum/action/xeno_action/onclick/charger_charge/proc/handle_position_change(mob/living/carbon/xenomorph/xeno, body_position)
-	SIGNAL_HANDLER
-	if(body_position == LYING_DOWN)
-		handle_movement(xeno)
-
 /datum/action/xeno_action/onclick/charger_charge/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
 	if(!DT_PROB(ai_prob_chance, delta_time) || !isnull(charge_dir) || processing_xeno.action_busy)
 		return
@@ -195,7 +190,7 @@
 
 		var/cardinal_dir_to_potential_charge_turf = get_cardinal_dir(processing_xeno, potential_charge_turf)
 
-		var/list/turf/turfs_to_check = getline2(xeno_turf, get_angle_target_turf(xeno_turf, cardinal_dir_to_potential_charge_turf, MINIMUM_CHARGE_DISTANCE), FALSE)
+		var/list/turf/turfs_to_check = get_line(xeno_turf, get_angle_target_turf(xeno_turf, cardinal_dir_to_potential_charge_turf, MINIMUM_CHARGE_DISTANCE), FALSE)
 
 		var/blocked = FALSE
 		var/turf/previous_turf = xeno_turf
@@ -315,7 +310,7 @@
 			shake_camera(hit_human, 4, 2)
 			if(hit_human.buckled)
 				hit_human.buckled.unbuckle()
-			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
+			INVOKE_ASYNC(xeno, TYPE_PROC_REF(/mob/living/carbon/xenomorph, throw_carbon), hit_human, get_dir(xeno, hit_human), 1, FALSE)
 			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
 			hit_human.take_overall_armored_damage(momentum * 4)
 			hit_human.apply_effect(0.5, WEAKEN)

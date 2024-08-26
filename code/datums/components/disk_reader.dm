@@ -1,7 +1,7 @@
 /datum/component/disk_reader
 	dupe_mode = COMPONENT_DUPE_UNIQUE
 	/// Ref to the inserted disk
-	var/obj/item/disk/objective/disk
+	//var/obj/item/disk/objective/disk
 
 /datum/component/disk_reader/Initialize()
 	. = ..()
@@ -14,10 +14,10 @@
 
 /datum/component/disk_reader/RegisterWithParent()
 	..()
-	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, PROC_REF(on_disk_insert))
+	//RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, PROC_REF(on_disk_insert))
 	RegisterSignal(parent, COMSIG_PARENT_QDELETING, PROC_REF(handle_qdel))
-	RegisterSignal(parent, COMSIG_INTEL_DISK_COMPLETED, PROC_REF(on_disk_complete))
-	RegisterSignal(parent, COMSIG_INTEL_DISK_LOST_POWER, PROC_REF(on_power_lost))
+	//RegisterSignal(parent, COMSIG_INTEL_DISK_COMPLETED, PROC_REF(on_disk_complete))
+	//RegisterSignal(parent, COMSIG_INTEL_DISK_LOST_POWER, PROC_REF(on_power_lost))
 
 /datum/component/disk_reader/UnregisterFromParent()
 	..()
@@ -25,8 +25,9 @@
 
 /datum/component/disk_reader/proc/handle_qdel()
 	SIGNAL_HANDLER
-	QDEL_NULL(disk)
+	//QDEL_NULL(disk)
 
+/*
 /datum/component/disk_reader/proc/on_disk_insert(datum/source, obj/item/disk/objective/potential_disk, mob/living/inserter, params)
 	SIGNAL_HANDLER
 
@@ -85,3 +86,4 @@
 	SSobjectives.stop_processing_objective(src)
 	disk.forceMove(get_turf(atom_parent))
 	disk = null
+*/

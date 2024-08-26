@@ -266,8 +266,10 @@
 			return /datum/equipment_preset/uscm_ship/xo
 		if(JOB_AUXILIARY_OFFICER)
 			return /datum/equipment_preset/uscm_ship/auxiliary_officer
+		/*
 		if(JOB_INTEL)
 			return /datum/equipment_preset/uscm/intel/full
+		*/
 		if(JOB_CAS_PILOT)
 			return /datum/equipment_preset/uscm_ship/gp/full
 		if(JOB_TANK_CREW)

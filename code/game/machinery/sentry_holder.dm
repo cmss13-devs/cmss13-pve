@@ -91,7 +91,7 @@
 	deployed_turret.pixel_y = 0
 
 	deployed_turret.start_processing()
-	deployed_turret.setup_target_acquisition()
+	deployed_turret.set_range()
 
 /obj/structure/machinery/sentry_holder/proc/undeploy_sentry()
 	if(!deployed_turret)
@@ -102,7 +102,7 @@
 	deployed_turret.forceMove(src)
 	deployed_turret.turned_on = FALSE
 	deployed_turret.stop_processing()
-	deployed_turret.unsetup_target_acquisition()
+	deployed_turret.unset_range()
 	pixel_x = ox
 	pixel_y = oy
 	icon_state = "[base_icon_state]_installed"

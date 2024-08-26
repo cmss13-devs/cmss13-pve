@@ -373,8 +373,8 @@
 		if(!istype(marine.wear_id, /obj/item/card/id))
 			continue
 
-		var/obj/item/card/id/marine_card = marine.wear_id
-		var/datum/weakref/marine_card_registered = marine.wear_id.registered_ref
+		var/obj/item/card/id/marine_card = marine.get_idcard()
+		var/datum/weakref/marine_card_registered = marine_card.registered_ref
 
 		if(!istype(marine_card_registered))
 			continue
@@ -547,7 +547,7 @@
 		if(JOB_SQUAD_MARINE)
 			assignment = JOB_SQUAD_MARINE
 			num_riflemen++
-			var/squad_number = (Ceiling(num_riflemen / 2) > 2) ? pick(1, 2) : Ceiling(num_riflemen / 2)
+			var/squad_number = (ceil(num_riflemen / 2) > 2) ? pick(1, 2) : ceil(num_riflemen / 2)
 			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_ENGI)
 			assignment = JOB_SQUAD_ENGI
@@ -805,11 +805,12 @@
 	H.hud_set_squad()
 
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
-	if(H.wear_id)
+	var/obj/item/card/id/id = H.get_idcard()
+	if(id)
 		if(fireteam == "SQ1")
-			H.wear_id.access += squad_one_access
+			id.access += squad_one_access
 		if(fireteam == "SQ2")
-			H.wear_id.access += squad_two_access
+			id.access += squad_two_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Sergeant" in cycled_headset.tracking_options))
@@ -831,8 +832,9 @@
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were unassigned from [ft].")))
 	H.hud_set_squad()
 
-	if(H.wear_id)
-		H.wear_id.access.Remove(squad_one_access, squad_two_access)
+	var/obj/item/card/id/id = H.get_idcard()
+	if(id)
+		id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Platoon Sergeant" in cycled_headset.tracking_options))

@@ -235,7 +235,7 @@
 
 	pouncing_xeno.add_temp_pass_flags(PASS_OVER_THROW_MOB)
 
-	for(var/i in getline2(pouncing_xeno, pouncing_xeno.current_target, FALSE))
+	for(var/i in get_line(pouncing_xeno, pouncing_xeno.current_target, FALSE))
 		var/turf/new_turf = i
 		if(LinkBlocked(pouncing_xeno, last_turf, new_turf, list(pouncing_xeno.current_target, pouncing_xeno)))
 			clear = FALSE

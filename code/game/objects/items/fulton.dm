@@ -171,11 +171,13 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 	attached_atom.anchored = FALSE
 	playsound(attached_atom.loc,'sound/effects/bamf.ogg', 50, 1)
 
+	/*
 	if(GLOB.intel_system)
 		if (!LAZYISIN(GLOB.failed_fultons, attached_atom))
 			//Giving marines an objective to retrieve that fulton (so they'd know what they lost and where)
 			var/datum/cm_objective/retrieve_item/fulton/objective = new /datum/cm_objective/retrieve_item/fulton(attached_atom)
 			GLOB.intel_system.store_single_objective(objective)
+	*/
 
 	qdel(reservation)
 	qdel(src)

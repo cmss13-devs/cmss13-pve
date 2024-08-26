@@ -76,3 +76,67 @@
 	cell_explosion(loc, 10, 10, null, create_cause_data("sentry explosion", owner_mob))
 	if(!QDELETED(src))
 		qdel(src)
+
+/obj/structure/machinery/defenses/sentry/flamer/wy
+	name = "WY 406-FE2 Smart Sentry"
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
+	health = 300
+	health_max = 300
+	fire_delay = 2 SECONDS
+	disassemble_time = 5 SECONDS
+	hack_time = 25 SECONDS
+	ammo = new /obj/item/ammo_magazine/sentry_flamer/wy
+	sentry_type = "wy_flamer"
+	sentry_range = 6
+	omni_directional = TRUE
+	handheld_type = /obj/item/defenses/handheld/sentry/flamer/wy
+	selected_categories = list(
+		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
+/obj/structure/machinery/defenses/sentry/flamer/wy/destroyed_action()
+	visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] starts spitting out sparks and smoke!")]")
+	playsound(loc, 'sound/mecha/critdestrsyndi.ogg', 25, 1)
+	for(var/i = 1 to 6)
+		setDir(pick(NORTH, EAST, SOUTH, WEST))
+		sleep(2)
+
+	if(ammo.current_rounds != 0)
+		var/datum/reagent/napalm/sticky/sticky_napalm = new()
+		new /obj/flamer_fire(loc, create_cause_data("sentry explosion", owner_mob), sticky_napalm, 2)
+	cell_explosion(loc, 10, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("sentry explosion", owner_mob))
+	if(!QDELETED(src))
+		qdel(src)
+
+
+/obj/structure/machinery/defenses/sentry/flamer/upp
+	name = "UPP SDS-R5 Sentry Flamer"
+	icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi'
+	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the UPP."
+	health = 300
+	health_max = 300
+	fire_delay = 1 SECONDS
+	disassemble_time = 5 SECONDS
+	ammo = new /obj/item/ammo_magazine/sentry_flamer/upp
+	sentry_type = "upp_flamer"
+	handheld_type = /obj/item/defenses/handheld/sentry/flamer/upp
+	selected_categories = list(
+		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+
+/obj/structure/machinery/defenses/sentry/flamer/upp/destroyed_action()
+	visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] starts spitting out sparks and smoke!")]")
+	playsound(loc, 'sound/mecha/critdestrsyndi.ogg', 25, 1)
+	for(var/i = 1 to 6)
+		setDir(pick(NORTH, EAST, SOUTH, WEST))
+		sleep(2)
+
+	if(ammo.current_rounds != 0)
+		var/datum/reagent/napalm/gel/gel_napalm = new()
+		new /obj/flamer_fire(loc, create_cause_data("sentry explosion", owner_mob), gel_napalm, 2)
+	cell_explosion(loc, 10, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("sentry explosion", owner_mob))
+	if(!QDELETED(src))
+		qdel(src)

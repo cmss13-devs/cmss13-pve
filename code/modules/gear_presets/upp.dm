@@ -491,7 +491,7 @@
 		list("HANDHELD DEFENSE (CHOOSE 1)", 0, null, null, null),
 		list("UPP Planted Flag", 0, /obj/item/defenses/handheld/planted_flag/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 		list("UPP SDS-R5 Sentry Flamer", 0, /obj/item/defenses/handheld/sentry/flamer/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
-		list("UPP SDS-R3 Sentry Gun", 0, /obj/item/defenses/handheld/sentry/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("UPPA 32-H sentry gun", 0, /obj/item/defenses/handheld/sentry/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("ENGINEERING SUPPLIES", 0, null, null, null),
 		list("Airlock Circuit Board", 2, /obj/item/circuitboard/airlock, null, VENDOR_ITEM_REGULAR),

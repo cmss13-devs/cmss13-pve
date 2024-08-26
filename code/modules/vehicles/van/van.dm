@@ -166,7 +166,7 @@
 		var/mob/M = I
 		M.client.images -= normal_image
 
-	QDEL_NULL(lighting_holder)
+	QDEL_NULL(light_holder)
 
 	return ..()
 

@@ -543,15 +543,6 @@ Make sure their actual health updates immediately.*/
 	amount *= 2 / 3
 	return ..()
 
-/mob/living/carbon/xenomorph/proc/handle_interference()
-	if(interference)
-		interference = max(interference-2, 0)
-
-	if(observed_xeno && observed_xeno.interference)
-		overwatch(observed_xeno,TRUE)
-
-	return interference
-
 /mob/living/carbon/xenomorph/handle_slowed()
 	if(slowed)
 		adjust_effect(life_slow_reduction, SLOW, EFFECT_FLAG_LIFE)

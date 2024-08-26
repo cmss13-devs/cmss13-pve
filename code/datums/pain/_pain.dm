@@ -194,7 +194,6 @@
 				activate_horrible()
 
 	if(new_level >= PAIN_LEVEL_SEVERE && feels_pain)
-		RegisterSignal(source_mob, COMSIG_MOB_DRAGGED, PROC_REF(oxyloss_drag), override = TRUE)
 		RegisterSignal(source_mob, COMSIG_MOB_DEVOURED, PROC_REF(handle_devour), override = TRUE)
 
 	last_level = new_level

@@ -122,7 +122,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 20 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
+	//addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
 
 	return ..()
 
@@ -189,6 +189,7 @@
 	droppod.drop_time = 0
 	droppod.launch(target)
 
+/*
 ///Creates an OB warning at each LZ to warn of the miasma and then spawns the miasma
 /datum/game_mode/colonialmarines/proc/start_lz_hazards()
 	if(SSobjectives.first_drop_complete)
@@ -196,6 +197,7 @@
 	INVOKE_ASYNC(src, PROC_REF(warn_lz_hazard), locate(/obj/structure/machinery/computer/shuttle/dropship/flight/lz1))
 	INVOKE_ASYNC(src, PROC_REF(warn_lz_hazard), locate(/obj/structure/machinery/computer/shuttle/dropship/flight/lz2))
 	addtimer(CALLBACK(src, PROC_REF(spawn_lz_hazards)), OB_TRAVEL_TIMING + 1 SECONDS)
+*/
 
 ///Creates an OB warning at each LZ to warn of the incoming miasma
 /datum/game_mode/colonialmarines/proc/warn_lz_hazard(lz)

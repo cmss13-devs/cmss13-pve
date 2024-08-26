@@ -309,6 +309,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/toggle_iff_pkp/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	if(!ishuman(owner))
 		return

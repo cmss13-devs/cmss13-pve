@@ -306,7 +306,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		return
 
 	for(var/gear_name in new_human.client.prefs.gear)
-		var/datum/gear/current_gear = gear_datums_by_name[gear_name]
+		var/datum/gear/current_gear = GLOB.gear_datums_by_name[gear_name]
 		if(current_gear)
 			if(current_gear.allowed_roles && !(assignment in current_gear.allowed_roles))
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Role"))
@@ -317,7 +317,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			new current_gear.path(closet_to_spawn_in)
 
 	//Gives ranks to the ranked
-	var/current_rank = paygrade
+	var/current_rank = paygrades[1]
 	var/obj/item/card/id/I = new_human.get_idcard()
 	if(I)
 		current_rank = I.paygrade

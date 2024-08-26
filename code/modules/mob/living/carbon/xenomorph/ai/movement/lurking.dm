@@ -92,7 +92,7 @@
 			break
 
 		for(var/turf/closed/touching_turf in orange(1, potential_home))
-			if(get_dir(potential_home, touching_turf) in diagonals)
+			if(get_dir(potential_home, touching_turf) in GLOB.diagonals)
 				continue
 
 			preferred = TRUE
@@ -243,7 +243,7 @@
 
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(lurking_parent_moved))
 
-	var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_xeno_action_by_type(lurking_xeno, /datum/action/xeno_action/activable/pounce/lurker)
+	var/datum/action/xeno_action/activable/pounce/lurker/LPA = get_action(lurking_xeno, /datum/action/xeno_action/activable/pounce/lurker)
 	if(LPA && istype(LPA))
 		LPA.knockdown = TRUE
 		LPA.freeze_self = TRUE

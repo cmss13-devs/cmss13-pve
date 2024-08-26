@@ -162,7 +162,7 @@
 			continue
 
 		if(distance_to_target <= 2)
-			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), carbon_in_range, xeno_owner, get_dir(xeno_owner, carbon_in_range), (6 - (distance_to_target * 2)), FALSE)
+			INVOKE_ASYNC(xeno_owner, TYPE_PROC_REF(/mob/living/carbon/xenomorph, throw_carbon), carbon_in_range, get_dir(xeno_owner, carbon_in_range), (6 - (distance_to_target * 2)), FALSE)
 			to_chat(carbon_in_range, SPAN_XENOHIGHDANGER("You are flung by [xeno_owner] from the force of its crashing weight!"))
 			continue
 

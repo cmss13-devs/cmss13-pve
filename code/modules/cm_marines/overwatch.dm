@@ -458,7 +458,7 @@
 			change_lead(user, params["ref"])
 
 		if("award_medal")
-			print_medal(user, src)
+			open_medal_panel(user, src)
 			return
 
 		if("insubordination")

@@ -85,12 +85,6 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	var/mob/living/carbon/human/human_mob = target_mob
 	return human_mob.holo_card_color
 
-/datum/health_scan/proc/get_holo_card_color(mob/living/target_mob)
-	if(!ishuman(target_mob))
-		return
-	var/mob/living/carbon/human/human_mob = target_mob
-	return human_mob.holo_card_color
-
 /datum/health_scan/proc/get_health_value(mob/living/target_mob)
 	if(!(target_mob.status_flags & FAKEDEATH))
 		return target_mob.health

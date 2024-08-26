@@ -452,7 +452,7 @@
 	health = 150
 	light_range = 6
 	light_on = TRUE
-	light_color = LIGHT_COLOUR_FIRE
+	light_color = LIGHT_COLOR_FIRE
 	unslashable = TRUE
 	/// What obj this becomes when it gets to its next stage of construction / ignition
 	var/frame_type

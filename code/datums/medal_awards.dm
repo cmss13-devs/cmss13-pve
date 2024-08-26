@@ -278,7 +278,7 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 		user.visible_message("ERROR: ID card not registered for [user.real_name] in USCM registry. Potential medal fraud detected.")
 		return
 
-	if(!(FACTION_USCM in user.faction_group))
+	if(!(FACTION_MARINE in user.faction_group))
 		to_chat(user, SPAN_WARNING("Medals only available for USCM personnel."))
 		return
 

@@ -133,7 +133,7 @@
 			var/obj/item/explosive/plastic/P = I
 			if(P.active)
 				continue
-		if(istype(I, /obj/item/phone))
+		if(istype(I, /obj/item/handset))
 			continue
 		var/item_size = ceil(I.w_class / 2)
 		if(stored_units + item_size > storage_capacity)

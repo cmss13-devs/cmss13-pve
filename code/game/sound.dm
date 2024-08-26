@@ -215,7 +215,7 @@
  *
  * Returns FALSE on failure
  */
-/proc/playsound_area(area/A, sound/soundin, vol = 100, channel = 0, status, vol_cat = VOLUME_SFX, y_s_offset, x_s_offset)
+/proc/playsound_area(area/A, sound/soundin, vol = 100, channel = 0, status, vol_cat = VOLUME_SFX, list/echo, y_s_offset, x_s_offset)
 	if(!isarea(A))
 		return FALSE
 
@@ -277,7 +277,7 @@
  *
  * Returns selected channel on success, FALSE on failure
  */
-/proc/playsound_z(z, soundin, volume = 100, vol_cat = VOLUME_SFX, echo, y_s_offset, x_s_offset)
+/proc/playsound_z(list/z, sound/soundin, volume = 100, vol_cat = VOLUME_SFX, echo, y_s_offset, x_s_offset)
 	var/datum/sound_template/template = new()
 
 	if(istype(soundin))

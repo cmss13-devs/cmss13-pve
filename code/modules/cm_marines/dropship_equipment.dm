@@ -281,7 +281,7 @@
 			step(M, get_dir(src,deployed_turret))
 
 	deployed_turret.start_processing()
-	deployed_turret.setup_target_acquisition()
+	deployed_turret.set_range()
 
 	deployed_turret.linked_cam = new(deployed_turret.loc, "[capitalize_first_letters(ship_base.name)] [capitalize_first_letters(name)]")
 	if (linked_shuttle.id == DROPSHIP_ALAMO)
@@ -301,7 +301,7 @@
 	deployed_turret.forceMove(src)
 	deployed_turret.turned_on = FALSE
 	deployed_turret.stop_processing()
-	deployed_turret.unsetup_target_acquisition()
+	deployed_turret.unset_range()
 	icon_state = "sentry_system_installed"
 	QDEL_NULL(deployed_turret.linked_cam)
 
@@ -1316,7 +1316,7 @@
 	color = "#17d17a"
 
 /obj/structure/dropship_equipment/paradrop_system/attack_hand(mob/living/carbon/human/user)
-	var/datum/cas_iff_group/cas_group = cas_groups[FACTION_MARINE]
+	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[FACTION_MARINE]
 	var/list/targets = cas_group.cas_signals
 
 	if(!LAZYLEN(targets))

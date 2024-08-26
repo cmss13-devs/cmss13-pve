@@ -400,7 +400,7 @@
 	UnregisterSignal(source, COMSIG_TURF_ENTERED)
 	stage = TUTORIAL_REQS_LINE_STAGE_ATTACHIES
 	var/list/request = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel)
-	spawn_agent(request)
+	INVOKE_ASYNC(src, PROC_REF(spawn_agent), request)
 
 /datum/tutorial/marine/reqs_line/proc/continue_stage_gearbox()
 	TUTORIAL_ATOM_FROM_TRACKING(/obj/structure/machinery/cm_vending/sorted/attachments/blend/tutorial, attachies_vendor)

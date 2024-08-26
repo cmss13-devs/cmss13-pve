@@ -597,14 +597,14 @@
 /obj/effect/landmark/rappel/New()
 	. = ..()
 	signal = new(src)
-	signal.target_id = ++cas_tracking_id_increment
+	signal.target_id = ++GLOB.cas_tracking_id_increment
 	name = "Rappel Point #[signal.target_id]"
 	signal.name = name
-	cas_groups[FACTION_MARINE].add_signal(signal)
+	GLOB.cas_groups[FACTION_MARINE].add_signal(signal)
 
 /obj/effect/landmark/rappel/Destroy()
 	if(signal)
-		cas_groups[FACTION_MARINE].remove_signal(signal)
+		GLOB.cas_groups[FACTION_MARINE].remove_signal(signal)
 		QDEL_NULL(signal)
 	return ..()
 

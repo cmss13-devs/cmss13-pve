@@ -78,15 +78,15 @@
 
 	if(turned_on)
 		start_processing()
-		setup_target_acquisition()
+		set_range()
 	update_icon()
-	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(unsetup_target_acquisition))
+	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(unset_range))
 
 /obj/structure/machinery/defenses/sentry/Destroy() //Clear these for safety's sake.
 	targets = null
 	other_targets = null
 	target = null
-	watching_turfs = null
+	QDEL_NULL(range_bounds)
 	QDEL_NULL(spark_system)
 	QDEL_NULL(ammo)
 	stop_processing()
@@ -97,9 +97,9 @@
 		stop_processing()
 		return
 
-	if(!watching_turfs)
-		setup_target_acquisition()
-
+	if(!range_bounds)
+		set_range()
+	targets = SSquadtree.players_in_range(range_bounds, z, QTREE_SCAN_MOBS | QTREE_EXCLUDE_OBSERVER)
 	if(!targets)
 		return FALSE
 
@@ -109,19 +109,10 @@
 	get_target(target)
 	return TRUE
 
-/obj/structure/machinery/defenses/sentry/proc/setup_target_acquisition()
-	set_watched_turfs()
-
-	for(var/turf/watched_turf as anything in watching_turfs)
-		RegisterSignal(watched_turf, COMSIG_TURF_ENTERED, PROC_REF(add_entering_target))
-		for(var/mob/living/living_target in watched_turf)
-			add_to_targets(living_target)
-
-/obj/structure/machinery/defenses/sentry/proc/set_watched_turfs()
+/obj/structure/machinery/defenses/sentry/proc/set_range()
 	if(omni_directional)
 		range_bounds = SQUARE(x, y, 8)
 		return
-
 	switch(dir)
 		if(EAST)
 			range_bounds = SQUARE(x + 4, y, 7)
@@ -132,14 +123,10 @@
 		if(SOUTH)
 			range_bounds = SQUARE(x, y - 4, 7)
 
-/obj/structure/machinery/defenses/sentry/proc/unsetup_target_acquisition()
+/obj/structure/machinery/defenses/sentry/proc/unset_range()
 	SIGNAL_HANDLER
-	for(var/turf/watched_turf as anything in watching_turfs)
-		UnregisterSignal(watched_turf, COMSIG_TURF_ENTERED)
-	watching_turfs = null
-	for(var/atom/temp_target in targets)
-		UnregisterSignal(temp_target, COMSIG_MOVABLE_TURF_ENTERED)
-	targets = list()
+	if(range_bounds)
+		QDEL_NULL(range_bounds)
 
 /obj/structure/machinery/defenses/sentry/update_icon()
 	..()
@@ -216,13 +203,13 @@
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] hums to life and emits several beeps.")]")
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: '[start_up_message]'")]")
 	start_processing()
-	setup_target_acquisition()
+	set_range()
 
 /obj/structure/machinery/defenses/sentry/power_off_action()
 	set_light(0)
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] powers down and goes silent.")]")
 	stop_processing()
-	unsetup_target_acquisition()
+	unset_range()
 
 /obj/structure/machinery/defenses/sentry/attackby(obj/item/O, mob/user)
 	if(QDELETED(O) || QDELETED(user))
@@ -831,6 +818,61 @@
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
 
+/obj/structure/machinery/defenses/sentry/wy
+	name = "WY 202-GMA1 Smart Sentry"
+	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	sentry_type = "wy_sentry"
+	fire_delay = 2 SECONDS
+	health = 350
+	health_max = 350
+	damage_mult = 3.5
+	disassemble_time = 5 SECONDS
+	hack_time = 25 SECONDS
+	sentry_range = 6
+	omni_directional = TRUE
+	handheld_type = /obj/item/defenses/handheld/sentry/wy
+	ammo = new /obj/item/ammo_magazine/sentry/wy
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
+/obj/structure/machinery/defenses/sentry/mini/wy
+	name = "WY 14-GRA2 Mini Sentry"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	sentry_type = "wy_sentry"
+	fire_delay = 0.08 SECONDS
+	health = 200
+	health_max = 200
+	damage_mult = 0.3
+	disassemble_time = 2 SECONDS
+	hack_time = 25 SECONDS
+	handheld_type = /obj/item/defenses/handheld/sentry/wy/mini
+	ammo = new /obj/item/ammo_magazine/sentry/wy/mini
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
+/obj/structure/machinery/defenses/sentry/dmr/wy
+	name = "WY 2-ADT-A3 Heavy Sentry"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."
+	defense_type = "Heavy"
+	icon = 'icons/obj/structures/machinery/defenses/wy_heavy.dmi'
+	sentry_type = "wy_sentry"
+	fire_delay = 4 SECONDS
+	health = 600
+	health_max = 600
+	damage_mult = 5
+	disassemble_time = 10 SECONDS
+	hack_time = 25 SECONDS
+	sentry_range = 8
+	handheld_type = /obj/item/defenses/handheld/sentry/wy
+	ammo = new /obj/item/ammo_magazine/sentry/wy
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
 /obj/structure/machinery/defenses/sentry/upp
 	name = "\improper UPPA 32-H sentry gun"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
@@ -838,7 +880,7 @@
 	icon_on = "upp_defense_base"
 	icon_off = "upp_defense_base_off"
 	choice_categories = list(
-		SENTRY_CATEGORY_IFF = list(FACTION_UPP, FACTION_HUMAN),
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
 	)
 
 	selected_categories = list(
@@ -850,6 +892,17 @@
 	fire_delay = 1.2
 	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
+
+/obj/structure/machinery/defenses/sentry/upp/light
+	name = "UPP SDS-R8 Light Sentry"
+	defense_type = "Light"
+	fire_delay = 0.3 SECONDS
+	health = 200
+	health_max = 200
+	disassemble_time = 2 SECONDS
+	sentry_range = 3
+	omni_directional = TRUE
+	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

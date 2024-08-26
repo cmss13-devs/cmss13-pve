@@ -9,7 +9,7 @@
 	new_human.gender = pick(75;MALE,25;FEMALE)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
+	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
 	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
@@ -606,11 +606,11 @@
 	idtype = /obj/item/card/id/silver
 	assignment = JOB_SO
 	rank = JOB_SO
-	paygrade = "MO2"
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PltCo"
 	minimum_age = 25
 	skills = /datum/skills/SO
-	minimap_icon = list("cic" = MINIMAP_ICON_COLOR_SILVER)
+	minimap_icon = list("cic" = COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
@@ -641,12 +641,12 @@
 	add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
-	paygrade = "MO1"
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
-	paygrade = "UO2"
+	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
@@ -663,7 +663,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-	paygrade = "UO1"
+	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

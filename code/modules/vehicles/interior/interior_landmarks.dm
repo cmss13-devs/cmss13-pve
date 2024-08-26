@@ -242,7 +242,7 @@
 	icon_state = "wall_phone"
 
 /obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/phone_base/phone = new(loc)
+	var/obj/structure/phone_base/Phone = new(loc)
 
 	Phone.icon = icon
 	Phone.icon_state = icon_state

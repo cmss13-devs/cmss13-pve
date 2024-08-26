@@ -34,23 +34,23 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 	var/old_name = GLOB.main_platoon_name
 
-	var/channel = radiochannels[old_name]
-	radiochannels -= old_name
+	var/channel = GLOB.radiochannels[old_name]
+	GLOB.radiochannels -= old_name
 
-	radiochannels[new_name] = channel
+	GLOB.radiochannels[new_name] = channel
 
 	var/list/keys_to_readd = list()
 
-	for(var/key in department_radio_keys)
-		if(department_radio_keys[key] == old_name)
+	for(var/key in GLOB.department_radio_keys)
+		if(GLOB.department_radio_keys[key] == old_name)
 			keys_to_readd += key
-			department_radio_keys -= key
+			GLOB.department_radio_keys -= key
 
 	for(var/key in keys_to_readd)
-		department_radio_keys[key] = new_name
+		GLOB.department_radio_keys[key] = new_name
 
-	ROLES_SQUAD_ALL -= old_name
-	ROLES_SQUAD_ALL += new_name
+	GLOB.ROLES_SQUAD_ALL -= old_name
+	GLOB.ROLES_SQUAD_ALL += new_name
 
 	var/list/copy_frozen_platoon_items = GLOB.frozen_items[old_name]
 	GLOB.frozen_items -= old_name
