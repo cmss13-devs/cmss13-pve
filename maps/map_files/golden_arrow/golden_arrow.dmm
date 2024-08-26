@@ -7011,15 +7011,18 @@
 	},
 /area/golden_arrow/cryo_cells)
 "AV" = (
-/obj/structure/closet/secure_closet/freezer{
-	name = "Industrial Freezer";
-	desc = "An industrial-grade deep-freezer designed to keep ingredients within 'fresh' over the course of faster-than-light travel. Might impact the taste somewhat. Don't leave the door open too long!"
-	},
 /obj/item/reagent_container/food/condiment/sugar,
 /obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/drinks/milk,
-/obj/item/reagent_container/food/drinks/milk,
-/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
+	},
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,

@@ -240,6 +240,8 @@
 /obj/item/storage/box/guncase/shotgunpump/special/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
+	new /obj/item/storage/pouch/shotgun(src)
+	new /obj/item/storage/large_holster/m37(src)
 
 /obj/item/storage/box/guncase/mk45_automag
 	name = "\improper MK-45 Automagnum case"
