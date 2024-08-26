@@ -118,6 +118,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/pfc/upp
@@ -136,6 +137,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/pfc/forecon
@@ -152,6 +154,7 @@
 
 
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
@@ -180,6 +183,7 @@
 
 
 /datum/equipment_preset/uscm/sg/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/sg/upp
@@ -200,6 +204,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/sg/forecon
@@ -215,6 +220,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/forecon/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
@@ -257,6 +263,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/rto/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
@@ -451,6 +458,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/medic/upp
@@ -470,6 +478,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/medic/forecon
@@ -486,6 +495,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/forecon/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
@@ -595,6 +605,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/leader/upp
@@ -613,6 +624,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/leader/forecon
@@ -629,6 +641,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/

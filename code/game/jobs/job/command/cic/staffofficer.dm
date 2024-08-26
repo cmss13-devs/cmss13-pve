@@ -71,7 +71,6 @@ OverrideTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
 	GLOB.marine_leaders[JOB_SO] = M
-	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
 /datum/job/command/bridge/ai/cleanup_leader_candidate(mob/M)
 	GLOB.marine_leaders -= JOB_SO

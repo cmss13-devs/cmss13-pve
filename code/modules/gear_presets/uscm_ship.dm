@@ -641,6 +641,7 @@
 	add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm_ship/so/upp
@@ -663,6 +664,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/

@@ -127,10 +127,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Face wrap, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan
 
-/datum/gear/mask/face_wrap_intel
-	display_name = "Face wrap, black"
-	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
-
 /datum/gear/mask/face_wrap_bravo
 	display_name = "Face wrap, yellow"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
@@ -624,7 +620,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 1
 
 /datum/gear/cassettes/pop4
-	display_name = "Blue Cassette"
+	display_name = "Pink Cassette"
 	path = /obj/item/device/cassette_tape/pop4
 	cost = 1
 
