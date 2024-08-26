@@ -86,7 +86,7 @@
 			to_chat(user, SPAN_INFO("Use [SPAN_HELPFUL("HELP")] intent to put a pulled object or creature into the vehicle without getting inside yourself."))
 			handle_player_entrance(user)
 			return
-
+/*
 	if(istype(O, /obj/item/device/motiondetector))
 		if(!interior)
 			to_chat(user, SPAN_WARNING("It appears that [O] cannot establish borders of space inside \the [src]. (PLEASE, TELL A DEV, SOMETHING BROKE)"))
@@ -126,7 +126,7 @@
 			playsound(user, 'sound/items/detector.ogg', 60, FALSE, 7, 2)
 			to_chat(user, SPAN_WARNING("\The [MD] can't pick up any signatures, so the vehicle should be empty. In theory."))
 		return
-
+*/
 	if(user.a_intent != INTENT_HARM)
 		handle_player_entrance(user)
 		return

@@ -1,5 +1,5 @@
 /obj/item/device/motiondetector/intel
-	name = "data detector"
+/*	name = "data detector"
 	desc = "A device that detects objects that may be useful for intel gathering. You can switch modes with Alt+Click."
 	icon_state = "datadetector"
 	item_state = "data_detector"
@@ -83,4 +83,4 @@
 		playsound(loc, 'sound/items/tick.ogg', 60, 0, 7, 2)
 	else
 		playsound(loc, 'sound/items/detector.ogg', 50, 0, 7, 2)
-	scanning = FALSE
+	scanning = FALSE*/

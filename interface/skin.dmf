@@ -154,6 +154,73 @@ menu "menu"
 		category = "Volume"
 		saved-params = "is-checked"
 
+window "detectorwindow"
+	elem "detectorwindow"
+		type = MAIN
+		pos = 281,0
+		size = 256x256
+		anchor1 = none
+		anchor2 = none
+		font-family = ""
+		font-size = 0
+		font-style = ""
+		text-color = #000000
+		background-color = none
+		is-visible = false
+		is-disabled = false
+		is-transparent = false
+		is-default = false
+		border = none
+		drop-zone = false
+		right-click = false
+		saved-params = "pos;is-minimized;is-maximized"
+		on-size = ""
+		title = ""
+		titlebar = true
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = true
+		is-pane = false
+		is-minimized = false
+		is-maximized = false
+		can-scroll = none
+		icon = ""
+		image = ""
+		image-mode = stretch
+		transparent-color = none
+		alpha = 255
+		macro = ""
+		menu = ""
+		on-close = ""
+	elem "detector"
+		type = MAP
+		pos = 0,0
+		size = 256x256
+		anchor1 = 0,0
+		anchor2 = 100,100
+		font-family = ""
+		font-size = 0
+		font-style = ""
+		text-color = none
+		background-color = none
+		is-visible = true
+		is-disabled = false
+		is-transparent = false
+		is-default = false
+		border = none
+		drop-zone = true
+		right-click = false
+		saved-params = "icon-size"
+		on-size = ""
+		icon-size = 0
+		text-mode = false
+		letterbox = true
+		zoom = 0
+		on-show = ""
+		on-hide = ""
+		style = ""
+
 
 window "mainwindow"
 	elem "mainwindow"

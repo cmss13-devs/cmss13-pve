@@ -144,7 +144,7 @@
 
 /obj/item/device/motiondetector/internal
 	name = "internal motion detector"
-	detector_range = 7 //yeah no offscreen bs with this
+//	detector_range = 7 //yeah no offscreen bs with this
 
 	var/obj/structure/machinery/defenses/bell_tower/md/linked_tower
 
@@ -169,7 +169,7 @@
 	md = new(src)
 	md.linked_tower = src
 	md.iff_signal = LAZYACCESS(faction_group, 1)
-	md.toggle_active(null, FALSE)
+//	md.toggle_active(null, FALSE)
 
 	if(!md.iff_signal)
 		md.iff_signal = FACTION_MARINE
