@@ -152,7 +152,7 @@
 
 /datum/ammo/bullet/rifle/heavy/heap
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	name = "armor-piercing 10x28 bullet"
+	name = "high explosive armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
