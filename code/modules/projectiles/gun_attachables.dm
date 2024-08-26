@@ -545,6 +545,16 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "silenced_smartgun"
 	gun_traits = list(TRAIT_GUN_SILENCED)
 
+/obj/item/attachable/uppsmartbarrel
+	name = "smartgun barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "dp_88"
+	desc = "The very end of the DP-88 smart gun, featuring a compensator. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 10
+	pixel_shift_y = 17
+	hud_offset_mod = -4
 // Mateba barrels
 
 /obj/item/attachable/mateba
