@@ -5,7 +5,7 @@
 /****************************************/
 
 /*
-	Creates a emporary forcefield which blocks everything from outside that isn't human
+	Creates a temporary forcefield which blocks everything from outside that isn't human
 */
 /obj/item/explosive/grenade/drg_shield
 	name = "shield generator"
@@ -184,3 +184,84 @@
 			return WEST
 		else
 			return NORTH
+
+/****************************************/
+/*
+		TELEPORTATION STATIONS
+*/
+/****************************************/
+
+/*
+	Allowing dwarves to quickly jump out from the hotspot or right into it
+*/
+
+GLOBAL_LIST_EMPTY(telepads)
+
+/obj/item/drg/teleport
+	name = "teleportation pad"
+	desc = "Long-range teleportation pad, used in pair with special DRG Company scanners."
+	light_color = COLOUR_BLUE
+	var/s_color = "blue"
+
+/obj/item/drg/teleport/Initialize(mapload, ...)
+	. = ..()
+	if(!light_on)
+		set_light_range(0)
+
+/obj/item/drg/teleport/proc/stick(turf/T, mob/user)
+	if(locate(/obj/item/drg/teleport) in T)
+		to_chat(user, "There's already a [src] at this position!")
+		return FALSE
+
+	to_chat(user, "Now deploying \the [src].")
+	if(!do_after(user, 10 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return FALSE
+
+	name = input(usr, "Please enter the name of an new teleportation point.", "Name") as text|null
+	user.visible_message("\blue[user.name] successfully deployed teleportation pad on [T].")
+
+	set_light(2)
+	anchored = TRUE
+
+	icon_state = null //REPLACE
+	playsound(user, 'sound/weapons/Genhit.ogg', 25, 1)
+
+	user.drop_held_item()
+	forceMove(T)
+
+	GLOB.telepads += T
+
+	return TRUE
+
+/obj/item/drg/teleport/proc/remove(mob/user)
+
+	GLOB.telepads -= get_turf(src)
+
+	if(user)
+		user.visible_message("[user.name] starts to disabling teleportation pad.","You removing telepad from the ground.")
+
+		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			return FALSE
+
+	set_light(0)
+	anchored = FALSE
+
+	playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
+	icon_state = null //REPLACE
+	name = initial(name)
+
+/turf/open/attackby(obj/item/I, mob/user)
+	. = ..()
+	if(istype(I, /obj/item/drg/teleport))
+		var/obj/item/drg/teleport/L = I
+		L.stick(src, user)
+
+/obj/item/drg/teleport/attack_self(mob/user)
+	. = ..()
+	stick(get_turf(user), user)
+
+/obj/item/drg/teleport/attack_hand(mob/user)
+	. = ..()
+	if(!anchored)
+		return
+	remove(user)
