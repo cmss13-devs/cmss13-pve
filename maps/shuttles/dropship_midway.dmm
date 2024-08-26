@@ -317,7 +317,8 @@
 /area/shuttle/midway)
 "Cm" = (
 /obj/effect/attach_point/fuel/midway{
-	attach_id = 10
+	attach_id = 10;
+	dir = 1
 	},
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "28"
@@ -594,7 +595,8 @@
 "XH" = (
 /obj/effect/attach_point/fuel/midway{
 	pixel_x = -32;
-	attach_id = 11
+	attach_id = 11;
+	dir = 1
 	},
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "33"
