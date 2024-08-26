@@ -154,26 +154,30 @@
 
 /obj/item/weapon/gun/drg/gunner_minigun/get_examine_text(mob/user)
 	. = ..()
-	var/dat = ""
-	dat += SPAN_ORANGE("CURRENT HEAT: [heat_stored / heat_max * 100]/100.")
-	. += dat
+	. += SPAN_ORANGE("CURRENT HEAT: [heat_stored / heat_max * 100]/100.")
 
 /obj/item/weapon/gun/drg/gunner_minigun/process(mob/user)
 	var/cool_delay = last_fired + cooldown_delay
 	if(world.time > cool_delay && !overheated)
 		heat_stored = max(heat_stored - heat_loss / 2, 0)
+
 	handle_heat_effects()
+
+	if(ismob(loc))
+		var/mob/M = loc
+		M.update_inv_l_hand()
+		M.update_inv_r_hand()
 
 /obj/item/weapon/gun/drg/gunner_minigun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	if(overheated)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER("COOL IT DOWN!")))
+		to_chat(user, SPAN_LARGE(SPAN_DANGER(SPAN_BOLD("COOL IT DOWN!"))))
 		return
 
 	heat_stored = min(heat_stored + heat_gain, heat_max)
 	handle_heat_effects()
 
 	if(heat_stored >= heat_max)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER("MINIGUN STOPS DUE TO INTENSE HEAT!")))
+		to_chat(user, SPAN_LARGE(SPAN_DANGER(SPAN_BOLD("MINIGUN STOPS DUE TO INTENSE HEAT!"))))
 		playsound(loc, 'sound/effects/acid_sizzle4.ogg', 25, TRUE)
 		overheated = TRUE
 		return
@@ -188,9 +192,9 @@
 		color = COLOR_WHITE
 		return
 
-	add_filter("heat_outer", 1, list("type" = "outline", "color" = "#e75d00", "size" = 0.1 * heat_coeff))
-	add_filter("heat_inner", 1, list("type" = "blur", "size" = heat_coeff))
-	color = rgb(255 - 25 * heat_coeff, 255 - 165 * heat_coeff, 255 - 255 * heat_coeff)
+	add_filter("heat_outer", 1, list("type" = "outline", "color" = "#ff5a00", "size" = 0.1 * heat_coeff))
+	add_filter("heat_inner", 1, list("type" = "blur", "size" = heat_coeff - 0.4))
+	color = rgb(255, 255 - 130 * heat_coeff, 255 - 200 * heat_coeff)
 
 /obj/item/weapon/gun/drg/gunner_minigun/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_SG)
@@ -206,7 +210,7 @@
 
 /obj/item/weapon/gun/drg/gunner_minigun/cock(mob/user)
 	if(!overheated)
-		to_chat(user, SPAN_DANGER("[src] in a pretty good state! You don't need to cool it manually!"))
+		to_chat(user, SPAN_DANGER("[src] in a somewhat good state! You don't need to cool it manually!"))
 		return
 
 	if(cock_cooldown > world.time)
