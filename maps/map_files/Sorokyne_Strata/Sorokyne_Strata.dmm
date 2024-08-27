@@ -20799,6 +20799,11 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/ag/interior/outpost/gen/bball/nest)
+"lzI" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/bed/medevac_stretcher,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/strata/ug/exterior/jungle/deep/carplake_center)
 "lAc" = (
 /turf/closed/wall/wood,
 /area/strata/ag/interior/restricted)
@@ -26174,6 +26179,12 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/ag/interior/outpost/gen/bball/nest)
+"qHt" = (
+/mob/living/simple_animal/hostile/carp{
+	desc = "You think this might be Glubs's son."
+	},
+/turf/open/gm/dirt,
+/area/strata/ug/exterior/jungle/deep/carplake_center)
 "qHC" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/strata/red1,
@@ -71373,7 +71384,7 @@ bDH
 cwD
 cuM
 cuM
-caw
+lzI
 cuM
 cuM
 cwD
@@ -72348,7 +72359,7 @@ cwD
 cwD
 cwD
 mmF
-cwD
+qHt
 cwD
 cwD
 cuM

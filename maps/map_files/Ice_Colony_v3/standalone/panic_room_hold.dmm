@@ -196,7 +196,6 @@
 "iS" = (
 /obj/structure/filingcabinet,
 /obj/item/paper/research_notes,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "iZ" = (
@@ -252,7 +251,6 @@
 	dir = 1;
 	flipped = 1
 	},
-/obj/structure/machinery/computer/objective,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "kT" = (
@@ -265,7 +263,6 @@
 	pixel_x = -24
 	},
 /obj/structure/filingcabinet/chestdrawer,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "lq" = (
@@ -358,8 +355,6 @@
 /area/shiva/interior/colony/s_admin)
 "oY" = (
 /obj/structure/closet/crate/secure/weyland,
-/obj/effect/landmark/objective_landmark/science,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "pz" = (
@@ -372,7 +367,6 @@
 /area/shiva/interior/colony/s_admin)
 "pG" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "pQ" = (
@@ -380,7 +374,6 @@
 /area/shiva/exterior/junkyard)
 "pS" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "pV" = (
@@ -397,17 +390,6 @@
 "qU" = (
 /obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/shiva/bluefull,
-/area/shiva/interior/colony/s_admin)
-"rB" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
-/obj/structure/window/reinforced/tinted,
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/paper_bin,
-/obj/item/tool/pen/blue,
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "rM" = (
 /obj/structure/barricade/wooden{
@@ -537,7 +519,6 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
-/obj/effect/landmark/objective_landmark/far,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "uP" = (
@@ -566,7 +547,6 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "vs" = (
@@ -907,7 +887,6 @@
 /area/shiva/interior/colony/s_admin)
 "GJ" = (
 /obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "GQ" = (
@@ -922,7 +901,6 @@
 /area/shiva/interior/colony/s_admin)
 "Hf" = (
 /obj/structure/closet/secure_closet/security,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "Hp" = (
@@ -1063,7 +1041,6 @@
 /area/shiva/interior/colony/botany)
 "Mi" = (
 /obj/structure/surface/table,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "MG" = (
@@ -1124,7 +1101,6 @@
 "Pb" = (
 /obj/structure/filingcabinet,
 /obj/item/paper/research_notes,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "Py" = (
@@ -1335,7 +1311,6 @@
 /area/shiva/interior/colony/s_admin)
 "VX" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/effect/landmark/good_item,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
@@ -1575,7 +1550,7 @@ xa
 dF
 tk
 Kp
-rB
+XP
 qU
 ce
 ul

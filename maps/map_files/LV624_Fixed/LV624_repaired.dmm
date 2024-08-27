@@ -301,7 +301,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "axM" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /obj/structure/lattice{
 	layer = 2.9
 	},
@@ -487,7 +487,7 @@
 /obj/structure/lattice{
 	layer = 2.9
 	},
-/obj/structure/machinery/power/geothermal{
+/obj/structure/machinery/power/reactor/colony{
 	fail_rate = 5
 	},
 /obj/structure/platform,
@@ -2192,7 +2192,7 @@
 /area/lv624/ground/caves/west_caves)
 "cSd" = (
 /obj/structure/largecrate,
-/obj/structure/prop/mech/mech_parts/part/gygax_armor{
+/obj/structure/prop/mech/parts/gygax_armor{
 	layer = 1
 	},
 /turf/open/floor/plating/platebot,
@@ -4968,7 +4968,7 @@
 /obj/structure/lattice{
 	layer = 2.9
 	},
-/obj/structure/machinery/power/geothermal{
+/obj/structure/machinery/power/reactor/colony{
 	fail_rate = 5
 	},
 /turf/open/floor/plating/warnplate,
@@ -5154,7 +5154,7 @@
 /obj/structure/lattice{
 	layer = 2.9
 	},
-/obj/structure/machinery/power/geothermal{
+/obj/structure/machinery/power/reactor/colony{
 	fail_rate = 5
 	},
 /turf/open/floor/plating/warnplate/east,
@@ -7287,7 +7287,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
 "jkQ" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /obj/structure/lattice{
 	layer = 2.9
 	},
@@ -8881,7 +8881,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
 "lth" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /obj/structure/lattice{
 	layer = 2.9
 	},
@@ -10636,7 +10636,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/machinery/power/geothermal{
+/obj/structure/machinery/power/reactor/colony{
 	fail_rate = 5
 	},
 /turf/open/floor/plating/warnplate/west,
@@ -11783,7 +11783,7 @@
 /turf/open/gm/dirt/desert3,
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
 "pls" = (
-/obj/structure/prop/mech/mech_parts/part/gygax_torso,
+/obj/structure/prop/mech/parts/gygax_torso,
 /turf/open/floor/vault2,
 /area/lv624/lazarus/robotics)
 "plL" = (
@@ -17035,7 +17035,7 @@
 /turf/open/floor/whiteblue/north,
 /area/lv624/lazarus/medbay)
 "vVE" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/engineering)
 "vWv" = (
@@ -18202,7 +18202,7 @@
 /obj/structure/lattice{
 	layer = 2.9
 	},
-/obj/structure/machinery/power/geothermal{
+/obj/structure/machinery/power/reactor/colony{
 	fail_rate = 5
 	},
 /obj/item/clothing/head/hardhat/orange{
@@ -18650,7 +18650,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/lv624/ground/caves/north_central_caves)
 "yhG" = (
-/obj/structure/prop/mech/mech_parts/chassis/gygax,
+/obj/structure/prop/mech/parts/chassis/gygax,
 /turf/open/floor/vault2/west,
 /area/lv624/lazarus/robotics)
 "yid" = (

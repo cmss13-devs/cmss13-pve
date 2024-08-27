@@ -80,7 +80,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/synthcloset)
 "aS" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
@@ -2191,9 +2191,6 @@
 "xj" = (
 /obj/structure/closet/fireaxecabinet{
 	pixel_x = -32
-	},
-/obj/item/book/manual/robotics_cyborgs{
-	pixel_y = 8
 	},
 /obj/item/tool/wirecutters,
 /obj/item/tool/weldingtool/hugetank,

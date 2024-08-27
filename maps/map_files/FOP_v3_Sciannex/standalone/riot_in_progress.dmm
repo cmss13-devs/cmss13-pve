@@ -201,7 +201,6 @@
 /area/fiorina/station/security)
 "iK" = (
 /obj/structure/filingcabinet,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "jb" = (
@@ -615,7 +614,6 @@
 	pixel_x = -3;
 	pixel_y = 16
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "xW" = (
@@ -965,7 +963,6 @@
 "OA" = (
 /obj/item/implanter/compressed,
 /obj/structure/safe,
-/obj/effect/landmark/objective_landmark/science,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "OE" = (
@@ -1168,10 +1165,6 @@
 /obj/item/handset{
 	pixel_y = 7
 	},
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/station/security)
-"WW" = (
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "Xj" = (
@@ -1515,7 +1508,7 @@ Bd
 tl
 Zi
 bO
-WW
+FH
 Pt
 vq
 BJ

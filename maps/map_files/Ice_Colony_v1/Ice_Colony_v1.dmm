@@ -1048,10 +1048,6 @@
 /area/ice_colony/surface/clinic/treatment)
 "bRH" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_rcd,
-/obj/item/ammo_rcd,
-/obj/item/ammo_rcd,
-/obj/item/ammo_rcd,
 /turf/open/floor/dark,
 /area/ice_colony/surface/storage_unit/research)
 "bRL" = (
@@ -6755,7 +6751,7 @@
 /turf/open/floor/darkbluecorners2,
 /area/ice_colony/underground/command/center)
 "ndN" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
 "neP" = (
@@ -11562,7 +11558,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/dorms)
 "vIg" = (
-/obj/structure/machinery/power/geothermal,
+/obj/structure/machinery/power/reactor/colony,
 /turf/open/floor/plating,
 /area/ice_colony/surface/engineering/generator)
 "vIP" = (

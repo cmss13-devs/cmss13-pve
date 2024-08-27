@@ -516,7 +516,7 @@
 	pixel_x = 7;
 	pixel_y = 12
 	},
-/obj/item/tool/soap/nanotrasen{
+/obj/item/tool/soap/weyland_yutani{
 	pixel_x = -7;
 	pixel_y = 6
 	},
@@ -7653,9 +7653,6 @@
 	dir = 8
 	},
 /obj/structure/surface/rack,
-/obj/item/book/manual/robotics_cyborgs{
-	pixel_y = 4
-	},
 /obj/item/tool/weldingtool/hugetank,
 /obj/item/tool/wirecutters,
 /turf/open/floor/almayer,
@@ -11133,7 +11130,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "UI" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,

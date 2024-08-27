@@ -5132,7 +5132,6 @@
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/dorms)
 "cAB" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
 /obj/structure/coatrack{
 	pixel_x = -8;
 	pixel_y = 16

@@ -471,10 +471,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
-"Do" = (
-/obj/structure/closet/crate/trashcart,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
 "DF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/good_item,
@@ -745,7 +741,7 @@ zb
 DF
 av
 ai
-Do
+av
 hQ
 Ow
 hQ

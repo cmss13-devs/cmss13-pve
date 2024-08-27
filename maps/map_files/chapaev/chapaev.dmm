@@ -77,7 +77,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
 "aS" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 2"
 	},
 /turf/open/floor/strata/floor3/east,
@@ -2129,7 +2129,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "Ce" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
@@ -2503,9 +2503,6 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "Gj" = (
-/obj/item/book/manual/robotics_cyborgs{
-	pixel_y = 8
-	},
 /obj/item/tool/wirecutters,
 /obj/item/tool/weldingtool/hugetank,
 /obj/structure/surface/rack,
@@ -4025,7 +4022,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "ZN" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 5"
 	},
 /turf/open/floor/strata/floor3/east,

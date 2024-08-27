@@ -149,7 +149,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/prep_hallway)
 "aS" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
@@ -3198,9 +3198,6 @@
 "wN" = (
 /obj/structure/closet/fireaxecabinet{
 	pixel_x = -32
-	},
-/obj/item/book/manual/robotics_cyborgs{
-	pixel_y = 8
 	},
 /obj/item/tool/wirecutters,
 /obj/item/tool/weldingtool/hugetank,

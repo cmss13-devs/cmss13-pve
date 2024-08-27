@@ -2638,7 +2638,7 @@
 /turf/open/floor/prison/bluefull,
 /area/fiorina/station/power_ring)
 "bYR" = (
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -5266,7 +5266,7 @@
 /obj/structure/monorail{
 	name = "launch track"
 	},
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -15777,7 +15777,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/disco)
 "mlS" = (
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -20255,7 +20255,7 @@
 /turf/open/floor/prison,
 /area/fiorina/station/power_ring)
 "pGh" = (
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -22957,7 +22957,7 @@
 /turf/open/floor/prison/sterile_white/southwest,
 /area/fiorina/tumor/ice_lab)
 "rRx" = (
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -24913,7 +24913,7 @@
 /turf/open/floor/prison/darkbrown2/north,
 /area/fiorina/tumor/aux_engi)
 "ttf" = (
-/obj/structure/machinery/door/poddoor/almayer{
+/obj/structure/machinery/door/poddoor/almayer/locked{
 	indestructible = 1;
 	name = "launch bay door"
 	},
@@ -26232,6 +26232,7 @@
 /obj/structure/closet/crate/bravo,
 /obj/item/stack/sheet/metal/medium_stack,
 /obj/item/stack/sheet/metal/medium_stack,
+/obj/item/fuel_cell,
 /obj/item/stack/sheet/plasteel,
 /turf/open/floor/prison/bluefull,
 /area/fiorina/station/power_ring)

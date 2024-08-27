@@ -7952,9 +7952,6 @@
 /obj/effect/decal/cleanable/cobweb{
 	dir = 8
 	},
-/obj/item/book/manual/robotics_cyborgs{
-	pixel_y = 8
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/synthcloset)
 "dhT" = (

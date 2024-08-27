@@ -1,0 +1,3 @@
+/obj/item/book/manual/robotics_cyborgs : @DELETE
+/obj/item/tool/soap/nanotrasen : /obj/item/tool/soap/weyland_yutani{@OLD}
+/obj/item/ammo_rcd : @DELETE
