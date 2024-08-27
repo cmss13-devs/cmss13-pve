@@ -2691,8 +2691,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
-	icon_state = "grenade-mk1"
-	attach_icon = "grenade-mk1_a"
+	icon_state = "grenade"
+	attach_icon = "grenade"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
@@ -2861,11 +2861,21 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 0
 	max_rounds = 5
 	max_range = 10
-	attachment_firing_delay = 30
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/m120
+	name = "\improper PN/c 30mm underslung grenade launcher"
+	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, three round tube, chambers one."
+	icon_state = "grenade-mk1"
+	attach_icon = "grenade-mk1_a"
+	current_rounds = 0
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
