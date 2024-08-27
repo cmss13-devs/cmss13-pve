@@ -86,7 +86,7 @@
 		to_chat(user, SPAN_NOTICE(" You transfer [trans] units of the condiment to [target]."))
 
 /obj/item/reagent_container/food/condiment/on_reagent_change()
-	if(icon_state == "saltshakersmall" || icon_state == "peppermillsmall" || icon_state == "hotsauce_cholula" || icon_state == "hotsauce_franks" || icon_state == "hotsauce_sriracha" || icon_state == "hotsauce_tabasco" || icon_state == "coldsauce_cole")
+	if(icon_state == "saltshakersmall" || icon_state == "peppermillsmall" || icon_state == "hotsauce_cholula" || icon_state == "hotsauce_franks" || icon_state == "hotsauce_sriracha" || icon_state == "hotsauce_tabasco" || icon_state == "coldsauce_cole" || icon_state == "eggpowder" || icon_state == "milkpowder" || icon_state == "bjpowder" || icon_state == "ojpowder" || icon_state == "ajpowder" || icon_state == "wjpowder" || icon_state == "gjpowder" || icon_state == "pjpowder")
 		return
 	if(reagents.reagent_list.len > 0)
 		switch(reagents.get_master_reagent_id())
@@ -236,3 +236,79 @@
 /obj/item/reagent_container/food/condiment/coldsauce/Initialize()
 	. = ..()
 	reagents.add_reagent("frostoil", 60)
+
+/obj/item/reagent_container/food/condiment/juice
+	name = "Juice Packet"
+	desc = "A small packet of dehydrated fruit-juice powder. Mix with water for a 'tasty' beverage. This one appears to be missing the label indicating what flavor it is however."
+	w_class = SIZE_TINY
+	icon_state = "bjpowder"
+	amount_per_transfer_from_this = 1
+	volume = 6
+
+/obj/item/reagent_container/food/condiment/juice/orange
+	name = "Orange Juice Packet"
+	desc = "A small packet of dehydrated orange-juice powder. Mix with water for a 'tasty' beverage."
+	icon_state = "ojpowder"
+
+/obj/item/reagent_container/food/condiment/juice/orange/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_orange_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/apple
+	name = "Apple Juice Packet"
+	desc = "A small packet of dehydrated apple-juice powder. Mix with water for a 'tasty' beverage."
+	icon_state = "ajpowder"
+
+/obj/item/reagent_container/food/condiment/juice/apple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_apple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/watermelon
+	name = "Watermelon Juice Packet"
+	desc = "A small packet of dehydrated watermelon-juice powder. Mix with water for a 'tasty' beverage."
+	icon_state = "wjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/watermelon/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_watermelon_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/grape
+	name = "Grape Juice Packet"
+	desc = "A small packet of dehydrated grape-juice powder. Mix with water for a 'tasty' beverage."
+	icon_state = "gjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/grape/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_grape_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/pineapple
+	name = "Pineapple Juice Packet"
+	desc = "A small packet of dehydrated pineapple-juice powder. Mix with water for a 'tasty' beverage."
+	icon_state = "pjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/pineapple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_pineapple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/egg
+	name = "Powdered Egg Packet"
+	desc = "A small packet of dehydrated egg-whites and egg-yolk powder. Mix with water for a passable alternative to the real deal."
+	icon_state = "eggpowder"
+	volume = 12
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/egg/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_egg_powder", 12)
+
+/obj/item/reagent_container/food/condiment/juice/milk
+	name = "Dehydrated Milk Packet"
+	desc = "A small packet of dehydrated milk powder. Mix with water for a passable alternative to actual milk."
+	icon_state = "milkpowder"
+	amount_per_transfer_from_this = 1
+	volume = 12
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/milk/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_milk_powder", 12)

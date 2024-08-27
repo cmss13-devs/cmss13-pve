@@ -73,6 +73,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
+	cost = 0
 
 /datum/gear/eyewear/prescription_sunglasses
 	display_name = "Prescription sunglasses"
@@ -137,6 +138,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/gas
 	display_name = "Gas mask"
 	path = /obj/item/clothing/mask/gas
+	cost = 1
 
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
@@ -278,6 +280,10 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
+
+/datum/gear/headwear/uscm/cap/flap
+	display_name = "USCM flapcap"
+	path = /obj/item/clothing/head/cmcap/flap
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"
@@ -821,6 +827,10 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Canteen"
 	path = /obj/item/reagent_container/food/drinks/flask/canteen
 
+/datum/gear/flask/canteen/empty
+	display_name = "Empty canteen"
+	path = /obj/item/reagent_container/food/drinks/flask/canteen/empty
+
 /datum/gear/flask/leather
 	display_name = "Leather flask"
 	path = /obj/item/reagent_container/food/drinks/flask/detflask
@@ -1079,17 +1089,13 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/patch_uscm
 	display_name = "USCM shoulder patch"
 	path = /obj/item/clothing/accessory/patch
-	cost = 1
+	cost = 0
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
-
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
@@ -1112,4 +1118,9 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/flak
 	display_name = "M67 flak jacket"
 	path = /obj/item/clothing/accessory/flak
+	cost = 3
+
+/datum/gear/misc/servicejacket
+	display_name = "Marine Service Jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3

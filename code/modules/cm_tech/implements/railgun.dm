@@ -280,7 +280,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	desc = "The younger sister to the railgun, this one is way weaker, however, it fires significantly faster. The higher your altitude, the faster your reload, and slower the shots hit."
 	max_ammo = 100
 	ammo = 100
-	ammo_recharge_time = 1 SECONDS
+	ammo_recharge_time = 2 SECONDS
 	fire_cooldown = 0.1 SECONDS
 	ammo_delay = 3 SECONDS
 	power = 50
@@ -293,12 +293,13 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	desc = "An Orbital cannon with a very long recharge time. The higher your altitude, the faster your reload, and slower the shots hit."
 	max_ammo = 1
 	ammo = 1
-	ammo_recharge_time = 1 SECONDS
+	ammo_recharge_time = 5 SECONDS
 	fire_cooldown = 10 MINUTES	//So you know how long it takes betweenS
 	ammo_delay = 30 SECONDS
 	power = 1500
 	range = 15
 	warning_color = "#ff0000"
+
 
 /obj/structure/machinery/computer/railgun/napalm
 	name = "orbital napalm computer"
@@ -317,3 +318,11 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 		firer.images -= to_remove
 		playsound(T, 'sound/machines/railgun/railgun_impact.ogg', sound_range = 75)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), create_cause_data("railgun", firer.mob), 5, T, BURN_TIME_TIER_5 + 5, BURN_LEVEL_TIER_2, FLAMESHAPE_DEFAULT, FIRE_VARIANT_TYPE_B)
+
+/obj/structure/machinery/computer/railgun/toc
+	name = "railgun computer screen"
+	icon_state = "toc_railgun"
+
+/obj/structure/machinery/computer/railgun/gatling/toc
+	name = "gatling-gun computer screen"
+	icon_state = "toc_railcannon"
