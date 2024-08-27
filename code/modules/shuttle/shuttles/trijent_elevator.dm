@@ -19,7 +19,6 @@
 
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)
 	var/datum/door_controller/aggregate/door_control
-	var/elevator_network
 
 /obj/docking_port/mobile/trijent_elevator/Initialize(mapload, ...)
 	. = ..()
@@ -27,6 +26,8 @@
 	door_control.label = "elevator"
 	for(var/area/shuttle_area in shuttle_areas)
 		for(var/obj/structure/machinery/door/door in shuttle_area)
+			if(istype(door, /obj/structure/machinery/door/poddoor/filler_object)) //poddoor filler was sneaking in
+				continue
 			door_control.add_door(door, door.id)
 
 /obj/docking_port/mobile/trijent_elevator/Destroy(force, ...)
@@ -37,12 +38,6 @@
 	. = ..()
 	door_control.control_doors("force-lock-launch", "all", force=TRUE)
 
-/obj/docking_port/mobile/trijent_elevator/linkup(datum/map_template/shuttle/template, obj/docking_port/stationary/dock)
-	..()
-	var/datum/map_template/shuttle/trijent_elevator/elev = template
-	elevator_network = elev.elevator_network
-	log_debug("Adding network [elev.elevator_network] to [id]")
-
 /obj/docking_port/stationary/trijent_elevator
 	dir=NORTH
 	width=7
@@ -50,7 +45,6 @@
 	// shutters to clear the area
 	var/airlock_area
 	var/airlock_exit
-	var/elevator_network
 
 /obj/docking_port/stationary/trijent_elevator/proc/get_doors()
 	. = list()

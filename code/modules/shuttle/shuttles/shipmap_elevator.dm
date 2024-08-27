@@ -17,6 +17,9 @@
 	var/list/railings = list()
 	var/list/gears = list()
 
+/obj/docking_port/mobile/shipmap_elevator/get_transit_path_type()
+	return /turf/closed/wall/almayer/outer
+
 /obj/docking_port/mobile/shipmap_elevator/register()
 	. = ..()
 	for(var/obj/structure/machinery/gear/G in machines)

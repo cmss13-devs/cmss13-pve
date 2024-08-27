@@ -99,3 +99,19 @@
 /area/golden_arrow/supplydrop
 	name = "\improper Supply Drop Bay"
 	icon_state = "astronavigation"
+
+
+/area/golden_arrow/cargo_shuttle
+	name = "\improper cargo_shuttle"
+	icon_state = "lifeboat"
+
+/area/golden_arrow/cargo_shuttle/elevator
+	name = "\improper Cargo Elevator"
+	unlimited_power = TRUE
+	requires_power = FALSE
+
+/area/golden_arrow/cargo_shuttle/lower
+	name = "\improper Cargo Elevator Lower Level"
+
+/area/golden_arrow/cargo_shuttle/upper
+	name = "\improper Cargo Elevator Upper Level"
