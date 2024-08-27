@@ -298,6 +298,10 @@
 		/obj/structure/machinery/door/airlock,
 	)
 
+/obj/structure/machinery/door/poddoor/almayer/LateInitialize()
+	. = ..()
+	relativewall_neighbours()
+
 /obj/structure/machinery/door/poddoor/almayer/open
 	density = FALSE
 
