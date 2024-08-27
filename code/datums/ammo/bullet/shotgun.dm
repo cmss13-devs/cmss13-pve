@@ -316,13 +316,7 @@
 	damage = 60
 	accurate_range = 4
 	max_range = 6
-	bonus_projectiles_type = list(
-		/datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/spread,/datum/ammo/bullet/shotgun/heavy/buckshot/spread)
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
-	damage_var_low = PROJECTILE_VARIANCE_TIER_8
-	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/spread
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/set_bullet_traits()
 	. = ..()
