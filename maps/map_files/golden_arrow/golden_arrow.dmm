@@ -13168,6 +13168,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow"
 	},
+/turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/cryo_cells)
 "aMK" = (
 /obj/structure/surface/table/almayer,
