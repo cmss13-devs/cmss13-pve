@@ -206,7 +206,6 @@
 
 	var/datum/map_template/shuttle/roundstart_template
 	var/json_key
-	var/elevator_network
 
 /obj/docking_port/stationary/register(replace = FALSE)
 	. = ..()
