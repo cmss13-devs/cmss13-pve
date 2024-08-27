@@ -138,6 +138,7 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/mask/gas
 	display_name = "Gas mask"
 	path = /obj/item/clothing/mask/gas
+	cost = 1
 
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
@@ -1095,10 +1096,6 @@ var/global/list/gear_datums_by_name = list()
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
-
-/datum/gear/misc/patch_uscm/falcon
-	display_name = "Falling Falcons shoulder patch"
-	path = /obj/item/clothing/accessory/patch/falcon
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
