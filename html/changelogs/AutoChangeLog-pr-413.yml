@@ -1,5 +1,0 @@
-author: "Max-023"
-delete-after: True
-changes:
-  - rscadd: "Helmet cover item, added to the squad prep vendor"
-  - imageadd: "Helmet cover sprites"
