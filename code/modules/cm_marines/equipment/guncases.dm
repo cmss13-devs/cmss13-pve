@@ -207,8 +207,8 @@
 
 //------------
 /obj/item/storage/box/guncase/shotguncombat
-	name = "\improper MK221 tactical shotgun case"
-	desc = "A gun case containing an unloaded MK221 tactical shotgun, two boxes of 12 gauge buckshot, and one box of 12 gauge slug."
+	name = "\improper M120 tactical shotgun case"
+	desc = "A gun case containing an unloaded M120 tactical shotgun, two boxes of 12 gauge buckshot, and one box of 12 gauge slug."
 	icon_state = "guncase"
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/shotgun/combat, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)

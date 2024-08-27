@@ -1727,8 +1727,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 
 /obj/item/attachable/stock/shotgun
-	name = "\improper M37 wooden stock"
-	desc = "A non-standard heavy wooden stock for the M37 Shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
+	name = "\improper Ithaca 37 wooden stock"
+	desc = "A standard wooden stock for the Ithaca pump-action shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
 	icon_state = "stock"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -1824,8 +1824,8 @@ Defined in conflicts.dm of the #defines folder.
 	// Doesn't give any stat additions due to the gun already having really good ones, and this is unremovable from the gun itself
 
 /obj/item/attachable/stock/tactical
-	name = "\improper MK221 tactical stock"
-	desc = "A metal stock made for the MK221 tactical shotgun."
+	name = "\improper M120 tactical stock"
+	desc = "A metal stock made for the M120 tactical shotgun."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -1858,6 +1858,33 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
+
+/obj/item/attachable/stock/type23/wood
+	name = "\improper KS-29 wooden stock"
+	desc = "A standard heavy wooden stock for the KS-29 riot shotgun. Allegedly makes a pretty good club in a fight too."
+	slot = "stock"
+	icon_state = "type23_wood"
+	wield_delay_mod = WIELD_DELAY_FAST
+	pixel_shift_x = 32
+	pixel_shift_y = 15
+	hud_offset_mod = 6 //*Very* long sprite.
+	flags_attach_features = NO_FLAGS
+
+/obj/item/attachable/stock/type23/wood/New()
+	..()
+	//it makes stuff much better when two-handed
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	recoil_mod = -RECOIL_AMOUNT_TIER_4
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	//it makes stuff much worse when one handed
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+	//but at the same time you are slow when 2 handed
+	aim_speed_mod = CONFIG_GET(number/slowdown_med)
+
+	matter = list("wood" = 2000)
 
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
@@ -2664,8 +2691,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
-	icon_state = "grenade"
-	attach_icon = "grenade_a"
+	icon_state = "grenade-mk1"
+	attach_icon = "grenade-mk1_a"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3

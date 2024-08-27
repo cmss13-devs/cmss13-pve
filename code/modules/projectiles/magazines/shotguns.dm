@@ -70,15 +70,6 @@ var/list/shotgun_boxes_12g = list(
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 	handful_state = "beanbag_slug"
 
-/obj/item/ammo_magazine/shotgun/beanbag/riot
-	name = "box of RC beanbag slugs"
-	desc = "A box filled with beanbag shotgun shells used for non-lethal crowd control. Riot Control use only."
-	icon_state = "beanbag"
-	item_state = "beanbag"
-	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	handful_state = "beanbag_slug"
-	caliber = "20g"
-
 /obj/item/ammo_magazine/shotgun/buckshot/special
 	name = "box of buckshot shells, USCM special type"
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
@@ -124,38 +115,20 @@ also doesn't really matter. You can only reload them with handfuls.
 	max_rounds = 6
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
-	caliber = "20g"
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+	current_rounds = 7
 
 /obj/item/ammo_magazine/internal/shotgun/marsoc
 	caliber = "12g"
 	max_rounds = 7
+	current_rounds = 7
 
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 
-/obj/item/ammo_magazine/internal/shotgun/buckshot
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
-
 /obj/item/ammo_magazine/internal/shotgun/type23
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
 	caliber = "8g"
 	max_rounds = 4
-
-/obj/item/ammo_magazine/internal/shotgun/type23/slug
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
-
-/obj/item/ammo_magazine/internal/shotgun/type23/flechette
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
-
-/obj/item/ammo_magazine/internal/shotgun/type23/dragonsbreath
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
-
-/obj/item/ammo_magazine/internal/shotgun/type23/beanbag
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
-
-/obj/item/ammo_magazine/internal/shotgun/type23/special
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
 
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
