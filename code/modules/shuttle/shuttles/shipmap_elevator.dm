@@ -58,6 +58,9 @@
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	area_type = /area/shuttle/elevator1
 
+/obj/docking_port/stationary/shipmap_elevator/visible_message()
+	return
+
 /obj/docking_port/stationary/shipmap_elevator
 	dir = NORTH
 	height = 5
