@@ -13169,7 +13169,7 @@
 	icon_state = "cargo_arrow"
 	},
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/cryo_cells)
+/area/golden_arrow/supply)
 "aMK" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/tableflag/uscm{
