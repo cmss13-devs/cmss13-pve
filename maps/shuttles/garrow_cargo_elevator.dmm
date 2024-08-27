@@ -36,14 +36,14 @@
 	},
 /area/shuttle/elevator1)
 "s" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	pixel_y = 32;
-	shuttleId = "garrow_cargo_elevator"
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
 	light_color = "#dae2ff";
 	light_power = 0.25
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	pixel_y = 32;
+	shuttleId = "garrow_cargo_elevator"
 	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
@@ -61,8 +61,14 @@
 /turf/open/shuttle/elevator,
 /area/shuttle/elevator1)
 "E" = (
-/obj/structure/machinery/door/airlock/multi_tile/elevator/research{
-	name = "\improper Supply Elevator Hatch"
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/pivot{
+	base_icon_state = "hatch";
+	icon_state = "hatch1";
+	openspeed = 22;
+	name = "\improper Elevator Hatch";
+	dir = 4;
+	unacidable = 1;
+	id = "north"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -88,7 +94,9 @@
 /turf/closed/shuttle/elevator/gears,
 /area/shuttle/elevator1)
 "W" = (
-/obj/docking_port/mobile/shipmap_elevator/cargo,
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/cargo{
+	elevator_network = "ArrowCargo"
+	},
 /turf/closed/shuttle/elevator{
 	dir = 10
 	},

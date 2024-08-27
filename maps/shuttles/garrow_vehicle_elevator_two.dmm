@@ -4,7 +4,7 @@
 /area/shuttle/vehicle_elevator)
 "o" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/docking_port/mobile/shipmap_elevator/two,
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/two,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)
 "u" = (

@@ -1,4 +1,4 @@
-/obj/docking_port/mobile/shipmap_elevator
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator
 	name = "Vehicle Elevator One"
 	height = 5
 	width = 7
@@ -16,11 +16,12 @@
 	ambience_flight = null
 	var/list/railings = list()
 	var/list/gears = list()
+	area_type = /area/shuttle/vehicle_elevator
 
-/obj/docking_port/mobile/shipmap_elevator/get_transit_path_type()
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/get_transit_path_type()
 	return /turf/closed/wall/almayer/outer
 
-/obj/docking_port/mobile/shipmap_elevator/register()
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/register()
 	. = ..()
 	for(var/obj/structure/machinery/gear/G in machines)
 		if(G.id == id)
@@ -29,12 +30,12 @@
 		if(R.id == id)
 			railings += R
 
-/obj/docking_port/mobile/shipmap_elevator/on_ignition()
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/on_ignition()
 	for(var/i in gears)
 		var/obj/structure/machinery/gear/G = i
 		G.start_moving()
 
-/obj/docking_port/mobile/shipmap_elevator/set_idle()
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/set_idle()
 	..()
 	for(var/i in gears)
 		var/obj/structure/machinery/gear/G = i
@@ -46,28 +47,29 @@
 		else
 			INVOKE_ASYNC(R, TYPE_PROC_REF(/obj/structure/machinery/door, close))
 
-/obj/docking_port/mobile/shipmap_elevator/two
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/two
 	name = "Vehicle Elevator Two"
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
 
-/obj/docking_port/mobile/shipmap_elevator/cargo
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/cargo
 	name = "Cargo Elevator"
 	height = 6
 	width = 8
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
+	area_type = /area/shuttle/elevator1
 
 /obj/docking_port/stationary/shipmap_elevator
 	dir = NORTH
 	height = 5
 	width = 7
 
-/obj/docking_port/stationary/shipmap_elevator/one
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/one
 	name = "Vehicle Elevator One"
 
-/obj/docking_port/stationary/shipmap_elevator/two
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/two
 	name = "Vehicle Elevator Two"
 
-/obj/docking_port/stationary/shipmap_elevator/cargo
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo
 	name = "Cargo Elevator"
 	height = 6
 	width = 8
