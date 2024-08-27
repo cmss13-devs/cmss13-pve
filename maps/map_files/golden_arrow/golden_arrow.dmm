@@ -402,7 +402,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "abz" = (
 /obj/structure/machinery/sleep_console{
 	dir = 4;
@@ -1025,7 +1025,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "adz" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
@@ -1178,7 +1178,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "adU" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2485,7 +2485,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "ahH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4096,7 +4096,7 @@
 	icon_state = "blackcorner";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "amA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -4155,7 +4155,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "amI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -4375,10 +4375,11 @@
 /obj/docking_port/stationary/trijent_elevator/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one";
 	elevator_network = "ArrowVehicleOne";
-	name = "Vehicle Elevator One Upper"
+	name = "Vehicle Elevator One Upper";
+	airlock_area = /area/golden_arrow/vehicle_shuttle/upper
 	},
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "ans" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -5285,7 +5286,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "apZ" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -5368,7 +5369,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aqk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -5598,7 +5599,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aqS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -5671,7 +5672,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "arc" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -5771,7 +5772,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "arp" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -6430,7 +6431,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "atk" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -6442,7 +6443,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "atm" = (
 /turf/open/floor/almayer/edge{
 	dir = 9
@@ -7196,7 +7197,7 @@
 	icon_state = "black";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "avU" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -7777,7 +7778,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "axD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7919,7 +7920,7 @@
 /turf/open/floor/almayer{
 	icon_state = "blackcorner"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "axU" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -8029,7 +8030,7 @@
 	icon_state = "black";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "ayl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -8644,7 +8645,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "azL" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer{
@@ -8998,7 +8999,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aAA" = (
 /obj/structure/platform{
 	dir = 8;
@@ -9487,7 +9488,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aBN" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 2;
@@ -9676,7 +9677,7 @@
 /turf/open/floor/almayer{
 	icon_state = "blackcorner"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aCt" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10606,7 +10607,7 @@
 	icon_state = "blackcorner";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aEX" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -11410,7 +11411,7 @@
 /turf/open/floor/almayer{
 	icon_state = "black"
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aHn" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -11539,7 +11540,7 @@
 	icon_state = "black";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aHM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -11866,7 +11867,7 @@
 	icon_state = "blackcorner";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -11898,7 +11899,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aIT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -13254,7 +13255,7 @@
 	icon_state = "black";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aMY" = (
 /obj/structure/machinery/cm_vending/gear/medic_chemical,
 /turf/open/floor/almayer{
@@ -13303,7 +13304,7 @@
 	icon_state = "blackcorner";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aNf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -14613,7 +14614,7 @@
 	icon_state = "blackcorner";
 	dir = 4
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aRq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -14688,10 +14689,11 @@
 /obj/docking_port/stationary/trijent_elevator/shipmap_elevator/two{
 	id = "garrow_vehicle_elevator_two";
 	name = "Vehicle Elevator Two Upper";
-	elevator_network = "ArrowVehicleTwo"
+	elevator_network = "ArrowVehicleTwo";
+	airlock_area = /area/golden_arrow/vehicle_shuttle/two/upper
 	},
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_two,
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aRz" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -14862,7 +14864,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aRX" = (
 /obj/structure/machinery/door/poddoor/railing,
 /obj/item/tool/warning_cone,
@@ -14881,7 +14883,7 @@
 	icon_state = "black";
 	dir = 1
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "aSd" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/motor_pool)
@@ -16109,7 +16111,7 @@
 	icon_state = "blackcorner";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aVT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -16415,7 +16417,7 @@
 /area/golden_arrow/cryo_cells)
 "aWX" = (
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_two,
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "aWZ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17411,7 +17413,7 @@
 	icon_state = "black";
 	dir = 8
 	},
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/two/upper)
 "baN" = (
 /turf/open/floor/almayer/aicore,
 /area/golden_arrow/ai_interface)
@@ -19459,7 +19461,7 @@
 /area/golden_arrow/supply)
 "srv" = (
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
-/area/golden_arrow/hangar)
+/area/golden_arrow/vehicle_shuttle/upper)
 "srO" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27

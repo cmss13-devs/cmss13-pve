@@ -43,12 +43,6 @@
 	for(var/i in gears)
 		var/obj/structure/machinery/gear/G = i
 		G.stop_moving()
-	for(var/i in railings)
-		var/obj/structure/machinery/door/poddoor/railing/R = i
-		if(R.density)
-			INVOKE_ASYNC(R, TYPE_PROC_REF(/obj/structure/machinery/door, open))
-		else
-			INVOKE_ASYNC(R, TYPE_PROC_REF(/obj/structure/machinery/door, close))
 
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/two
 	name = "Vehicle Elevator Two"

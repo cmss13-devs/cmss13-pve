@@ -119,6 +119,12 @@
 /area/golden_arrow/vehicle_shuttle
 	name = "\improper Vehicle Elevator One"
 
+/area/golden_arrow/vehicle_shuttle/upper
+	name = "\improper Vehicle Elevator One Upper"
+
 /area/golden_arrow/vehicle_shuttle/two
 	name = "\improper Vehicle Elevator Two"
+
+/area/golden_arrow/vehicle_shuttle/two/upper
+	name = "\improper Vehicle Elevator Two Upper"
 
