@@ -16,7 +16,7 @@
 	ambience_flight = null
 	var/list/railings = list()
 	var/list/gears = list()
-	area_type = /area/shuttle/vehicle_elevator
+	area_type = /area/golden_arrow/vehicle_shuttle
 
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/get_transit_path_type()
 	return /turf/closed/wall/almayer/outer
@@ -50,13 +50,14 @@
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/two
 	name = "Vehicle Elevator Two"
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
+	area_type = /area/golden_arrow/vehicle_shuttle/two
 
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/cargo
 	name = "Cargo Elevator"
 	height = 6
 	width = 8
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
-	area_type = /area/shuttle/elevator1
+	area_type = /area/golden_arrow/cargo_shuttle/elevator
 
 /obj/docking_port/stationary/shipmap_elevator/visible_message()
 	return

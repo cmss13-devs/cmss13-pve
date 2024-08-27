@@ -115,3 +115,10 @@
 
 /area/golden_arrow/cargo_shuttle/upper
 	name = "\improper Cargo Elevator Upper Level"
+
+/area/golden_arrow/vehicle_shuttle
+	name = "\improper Vehicle Elevator One"
+
+/area/golden_arrow/vehicle_shuttle/two
+	name = "\improper Vehicle Elevator Two"
+

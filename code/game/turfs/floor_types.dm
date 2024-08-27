@@ -301,6 +301,34 @@
 		for(var/obj/effect/decal/cleanable/C in contents) //for the off chance of someone bleeding mid=flight
 			qdel(C)
 
+/turf/open/floor/almayer/empty/golden_arrow
+	desc = "You can see the elevator down there. It's a pretty long fall though..."
+	var/area_type = /area/golden_arrow/cargo_shuttle/elevator
+
+/turf/open/floor/almayer/empty/golden_arrow/enter_depths(atom/movable/AM)
+	if(AM.anchored)
+		return
+	if(AM.throwing == 0 && istype(get_turf(AM), type))
+		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
+
+	var/list/area_turfs = get_area_turfs(area_type)
+	for(var/turf/turf in area_turfs)
+		if(turf.density)
+			area_turfs -= turf
+
+	AM.forceMove(pick(area_turfs))
+	if(ishuman(AM))
+		var/mob/living/carbon/human/human = AM
+		human.KnockDown(3)
+		human.take_limb_damage(30)
+		playsound(human, "punch", rand(20, 70), TRUE)
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one
+	area_type = /area/golden_arrow/vehicle_shuttle
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_two
+	area_type = /area/golden_arrow/vehicle_shuttle/two
+
 //Others
 /turf/open/floor/almayer/uscm
 	icon_state = "logo_c"

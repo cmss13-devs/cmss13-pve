@@ -47,7 +47,7 @@
 	airlock_exit = "north";
 	airlock_area = /area/golden_arrow/cargo_shuttle/upper
 	},
-/turf/open/floor/almayer/empty,
+/turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
@@ -4377,7 +4377,7 @@
 	elevator_network = "ArrowVehicleOne";
 	name = "Vehicle Elevator One Upper"
 	},
-/turf/open/floor/almayer/empty,
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
 /area/golden_arrow/hangar)
 "ans" = (
 /obj/effect/decal/warning_stripes{
@@ -14690,7 +14690,7 @@
 	name = "Vehicle Elevator Two Upper";
 	elevator_network = "ArrowVehicleTwo"
 	},
-/turf/open/floor/almayer/empty,
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_two,
 /area/golden_arrow/hangar)
 "aRz" = (
 /obj/structure/machinery/shower{
@@ -14771,7 +14771,7 @@
 	},
 /area/golden_arrow/medical)
 "aRJ" = (
-/turf/open/floor/almayer/empty,
+/turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
 "aRK" = (
 /obj/effect/decal/warning_stripes{
@@ -16414,7 +16414,7 @@
 	},
 /area/golden_arrow/cryo_cells)
 "aWX" = (
-/turf/open/floor/almayer/empty,
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_two,
 /area/golden_arrow/hangar)
 "aWZ" = (
 /obj/effect/decal/cleanable/dirt{
@@ -19457,6 +19457,9 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/supply)
+"srv" = (
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
+/area/golden_arrow/hangar)
 "srO" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27
@@ -34832,10 +34835,10 @@ adz
 adz
 aXP
 aAz
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
 anr
 aSa
 ajG
@@ -34984,11 +34987,11 @@ adz
 adz
 aUB
 aAz
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 aSa
 aKa
 adz
@@ -35136,11 +35139,11 @@ adz
 adz
 aKQ
 aAz
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 aSa
 aGb
 adz
@@ -35288,11 +35291,11 @@ adz
 adz
 aCU
 aby
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 aRW
 aKa
 adz
@@ -35440,11 +35443,11 @@ aEG
 adz
 anv
 aHl
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 ahF
 aKa
 adz
@@ -35592,11 +35595,11 @@ aEG
 adz
 aKa
 aHl
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 aIS
 aKa
 adz
@@ -35744,11 +35747,11 @@ aEG
 adz
 aKu
 aHl
-aWX
-aWX
-aWX
-aWX
-aWX
+srv
+srv
+srv
+srv
+srv
 atk
 ajG
 adz
