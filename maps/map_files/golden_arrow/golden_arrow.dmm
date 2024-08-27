@@ -13168,11 +13168,26 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/area/golden_arrow/cryo_cells)
+"AV" = (
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
 	},
-/obj/structure/machinery/power/apc/almayer{
-	dir = 8
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/supply)
