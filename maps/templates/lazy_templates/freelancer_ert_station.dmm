@@ -1027,7 +1027,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station)
 "XN" = (
-/obj/structure/transmitter/hidden{
+/obj/structure/phone_base/hidden{
 	dir = 8;
 	name = "Station Telephone";
 	phone_id = "Unknown Signal";
