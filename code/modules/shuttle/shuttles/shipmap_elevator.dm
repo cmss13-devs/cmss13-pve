@@ -10,8 +10,8 @@
 	callTime = 5 SECONDS
 	ignitionTime = 1 SECONDS
 
-	ignition_sound = null
-	landing_sound = 'sound/machines/asrs_raising.ogg'
+	ignition_sound = 'sound/machines/asrs_raising.ogg'
+	landing_sound = null
 	ambience_idle = null
 	ambience_flight = null
 	var/list/railings = list()
@@ -35,8 +35,8 @@
 		var/obj/structure/machinery/gear/G = i
 		G.start_moving()
 	var/obj/docking_port/stationary/dropzone = destination
-	playsound(dropzone.return_center_turf(), landing_sound, 60, 0)
-	playsound(return_center_turf(), landing_sound, 60, 0)
+	playsound(dropzone.return_center_turf(), ignition_sound, 60, 0)
+	playsound(return_center_turf(), ignition_sound, 60, 0)
 
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/set_idle()
 	..()
