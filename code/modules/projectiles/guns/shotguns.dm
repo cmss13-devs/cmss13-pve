@@ -154,7 +154,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		current_mag.chamber_position--
 		return in_chamber
 
-
 /obj/item/weapon/gun/shotgun/ready_in_chamber()
 	return ready_shotgun_tube()
 

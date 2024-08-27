@@ -116,7 +116,7 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	current_rounds = 7
+	current_rounds = 6
 
 /obj/item/ammo_magazine/internal/shotgun/marsoc
 	caliber = "12g"
