@@ -368,13 +368,12 @@ const SquadMonitor = (props) => {
 
   let determine_status_color = (status) => {
     let conscious = status.includes('Conscious');
-    let incapacitated = status.includes('Incapacitated');
     let unconscious = status.includes('Unconscious');
 
     let state_color = 'red';
     if (conscious) {
       state_color = 'green';
-    } else if (incapacitated || unconscious) {
+    } else if (unconscious) {
       state_color = 'yellow';
     }
     return state_color;

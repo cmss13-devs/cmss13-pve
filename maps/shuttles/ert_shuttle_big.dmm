@@ -438,13 +438,13 @@
 /area/shuttle/ert)
 "yU" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/vp70{
+/obj/item/weapon/gun/pistol/mod88{
 	pixel_y = 4
 	},
-/obj/item/ammo_magazine/pistol/vp70{
+/obj/item/ammo_magazine/pistol/mod88/normalpoint{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/pistol/vp70{
+/obj/item/ammo_magazine/pistol/mod88/normalpoint{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,

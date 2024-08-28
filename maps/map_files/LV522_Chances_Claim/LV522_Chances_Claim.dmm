@@ -3707,7 +3707,7 @@
 /area/lv522/outdoors/colony_streets/north_east_street)
 "bSa" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -4112,8 +4112,8 @@
 "cbm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "cbv" = (
@@ -5914,7 +5914,7 @@
 /turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "cZx" = (
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
 	},
@@ -14967,7 +14967,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "hwB" = (
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /obj/item/clothing/head/soft/sec,
 /obj/structure/curtain/medical,
 /turf/open/floor/strata/white_cyan3/east,
@@ -24869,8 +24869,8 @@
 /area/lv522/indoors/a_block/bridges/op_centre)
 "mgm" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -31612,7 +31612,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "pni" = (
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/kitchen/glass)
 "pnE" = (
@@ -39052,7 +39052,7 @@
 	},
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/a_block/bridges/op_centre)
 "sEF" = (

@@ -1033,7 +1033,7 @@
 	dir = 1;
 	pixel_y = 17
 	},
-/obj/item/weapon/gun/revolver/spearhead{
+/obj/item/weapon/gun/revolver/cmb{
 	pixel_y = 2
 	},
 /obj/item/clothing/ears/earmuffs{
@@ -2840,8 +2840,8 @@
 /area/varadero/interior/hall_SE)
 "cur" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/vp70,
-/obj/item/weapon/gun/pistol/vp70{
+/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/mod88{
 	pixel_y = -2
 	},
 /obj/structure/machinery/storm_siren{
@@ -18804,16 +18804,16 @@
 /area/varadero/interior/bunks)
 "qfb" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead{
+/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/spearhead{
+/obj/item/ammo_magazine/revolver/cmb{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/cargo)
 "qfr" = (
@@ -21756,15 +21756,15 @@
 /area/varadero/interior/maintenance/security)
 "syb" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
-/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -24336,7 +24336,7 @@
 /turf/open/floor/shiva/yellow/southwest,
 /area/varadero/interior/technical_storage)
 "uMQ" = (
-/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/mod88,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/caves)
 "uNh" = (
@@ -28158,8 +28158,8 @@
 /area/varadero/interior/electrical)
 "xRx" = (
 /obj/structure/surface/table/woodentable,
-/obj/item/weapon/gun/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "xRF" = (

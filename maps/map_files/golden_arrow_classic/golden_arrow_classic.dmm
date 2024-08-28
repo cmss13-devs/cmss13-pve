@@ -439,7 +439,7 @@
 	pixel_x = 5;
 	pixel_y = 7
 	},
-/obj/item/storage/box/loadout/co2_knife{
+/obj/item/storage/box/co2_knife{
 	pixel_x = 3;
 	pixel_y = 13
 	},
@@ -506,7 +506,7 @@
 /area/golden_arrow/prep_hallway)
 "cV" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/shotguncombat,
+/obj/item/storage/box/guncase/pumpshotgun/special,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "cZ" = (
@@ -4119,7 +4119,7 @@
 	name = "spent snailshot";
 	layer = 2.7
 	},
-/obj/item/storage/box/guncase/shotguncombat,
+/obj/item/storage/box/guncase/pumpshotgun/special,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "Dl" = (
@@ -5183,6 +5183,7 @@
 "Kp" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
 	pixel_y = 10;
 	pixel_x = 3
 	},
@@ -5922,7 +5923,9 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "Pm" = (
-/obj/structure/largecrate/supply/explosives/grenades/less,
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case"
+	},
 /obj/structure/largecrate/supply/motiondetectors{
 	pixel_y = 10
 	},

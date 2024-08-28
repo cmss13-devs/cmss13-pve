@@ -1,5 +1,0 @@
-author: "Merrgear"
-delete-after: True
-changes:
-  - qol: "made crit less boring"
-  - code_imp: "changed the crit code to not knock you unconcious\n:cl:"

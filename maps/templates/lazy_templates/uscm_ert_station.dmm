@@ -3200,7 +3200,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "KX" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/weapon/gun/pistol/vp70/training,
+/obj/item/weapon/gun/pistol/mod88/training,
 /turf/open/floor/almayer/red/north,
 /area/adminlevel/ert_station/uscm_station)
 "KY" = (

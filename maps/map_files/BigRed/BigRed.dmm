@@ -4191,7 +4191,7 @@
 "bLD" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpsespawner/security/marshal,
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /turf/open/mars_cave/mars_cave_2,
 /area/bigredv2/caves/mining)
 "bLF" = (
@@ -8906,7 +8906,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/vault2/west,
 /area/bigredv2/outside/marshal_office)
 "fCt" = (
@@ -9649,7 +9649,7 @@
 /turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/nw)
 "gja" = (
-/obj/item/ammo_magazine/shotgun/beanbag,
+/obj/item/ammo_magazine/shotgun/beanbag/riot,
 /turf/open/mars_cave/mars_cave_17,
 /area/bigredv2/caves_research)
 "gjN" = (
@@ -13228,8 +13228,8 @@
 /area/bigredv2/outside/lz2_south_cas)
 "jct" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/vp70,
-/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/mod88,
 /turf/open/floor/redcorner/west,
 /area/bigredv2/outside/admin_building)
 "jcw" = (
@@ -15596,7 +15596,7 @@
 /area/bigred/ground/garage_workshop)
 "lcy" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/vault2/west,
 /area/bigredv2/outside/marshal_office)
 "lda" = (
@@ -22692,7 +22692,7 @@
 	},
 /obj/structure/closet/cabinet,
 /obj/item/disk/nuclear,
-/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/mod88,
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/wood,
 /area/bigredv2/caves/eta/living)
@@ -23398,7 +23398,7 @@
 /area/bigredv2/outside/medical)
 "rLl" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
 /turf/open/floor/vault2/west,
 /area/bigredv2/outside/marshal_office)
 "rLM" = (

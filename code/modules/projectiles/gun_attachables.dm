@@ -1760,8 +1760,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 
 /obj/item/attachable/stock/shotgun
-	name = "\improper Ithaca 37 wooden stock"
-	desc = "A standard wooden stock for the Ithaca pump-action shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
+	name = "\improper M37 wooden stock"
+	desc = "A non-standard heavy wooden stock for the M37 Shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
 	icon_state = "stock"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -1869,8 +1869,8 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
 
 /obj/item/attachable/stock/tactical
-	name = "\improper M120 tactical stock"
-	desc = "A metal stock made for the M120 tactical shotgun."
+	name = "\improper MK221 tactical stock"
+	desc = "A metal stock made for the MK221 tactical shotgun."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -1903,33 +1903,6 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
-
-/obj/item/attachable/stock/type23/wood
-	name = "\improper KS-29 wooden stock"
-	desc = "A standard heavy wooden stock for the KS-29 riot shotgun. Allegedly makes a pretty good club in a fight too."
-	slot = "stock"
-	icon_state = "type23_wood"
-	wield_delay_mod = WIELD_DELAY_FAST
-	pixel_shift_x = 32
-	pixel_shift_y = 15
-	hud_offset_mod = 6 //*Very* long sprite.
-	flags_attach_features = NO_FLAGS
-
-/obj/item/attachable/stock/type23/wood/New()
-	..()
-	//it makes stuff much better when two-handed
-	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
-	recoil_mod = -RECOIL_AMOUNT_TIER_4
-	scatter_mod = -SCATTER_AMOUNT_TIER_8
-	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
-	//it makes stuff much worse when one handed
-	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
-	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
-	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
-	//but at the same time you are slow when 2 handed
-	aim_speed_mod = CONFIG_GET(number/slowdown_med)
-
-	matter = list("wood" = 2000)
 
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
@@ -2216,9 +2189,9 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
-/obj/item/attachable/stock/vp70
-	name = "\improper VP70 burst stock"
-	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
+/obj/item/attachable/stock/mod88
+	name = "\improper Mod 88 burst stock"
+	desc = "Increases the fire rate and burst amount on the Mod 88. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2227,7 +2200,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 2
 	melee_mod = 5
 
-/obj/item/attachable/stock/vp70/New()
+/obj/item/attachable/stock/mod88/New()
 	..()
 	//2h
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
@@ -2801,7 +2774,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
 	icon_state = "grenade"
-	attach_icon = "grenade"
+	attach_icon = "grenade_a"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
@@ -2970,21 +2943,11 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 0
 	max_rounds = 5
 	max_range = 10
-	attachment_firing_delay = 15
+	attachment_firing_delay = 30
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
-
-/obj/item/attachable/attached_gun/grenade/m120
-	name = "\improper PN/c 30mm underslung grenade launcher"
-	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, three round tube, chambers one."
-	icon_state = "grenade-mk1"
-	attach_icon = "grenade-mk1_a"
-	current_rounds = 0
-	max_rounds = 3
-	max_range = 10
-	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
