@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - code_imp: "changed slotting - new players and players that got skipped previous rounds have a higher chance to get a slot"
