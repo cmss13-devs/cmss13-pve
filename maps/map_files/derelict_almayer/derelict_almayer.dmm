@@ -16807,7 +16807,6 @@
 /area/almayer/maint/hull/lower/l_f_p)
 "grA" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/firedoor/border_only/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -26258,9 +26257,6 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/light{
-	dir = 1
-	},
 /obj/structure/surface/table/almayer,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/almayer/sterile_green_side/north,
@@ -30070,16 +30066,6 @@
 	},
 /turf/open/floor/almayer/red/east,
 /area/almayer/shipboard/brig/warden_office)
-"lkB" = (
-/obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
-/turf/open/floor/plating,
-/area/almayer/living/briefing)
 "lkC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/clothing/glasses/welding{
@@ -34002,12 +33988,6 @@
 	icon_state = "24"
 	},
 /area/almayer/hallways/hangar)
-"mTw" = (
-/obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/turf/open/floor/plating,
-/area/almayer/squads/req)
 "mTB" = (
 /turf/open/floor/almayer/silvercorner/north,
 /area/almayer/command/computerlab)
@@ -49181,7 +49161,6 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer,
-/obj/structure/machinery/door/firedoor/border_only/almayer,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "sEc" = (
@@ -54282,7 +54261,6 @@
 /turf/open/floor/almayer,
 /area/almayer/living/numbertwobunks)
 "uCx" = (
-/obj/structure/machinery/floodlight,
 /obj/structure/machinery/floodlight,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering)
@@ -91335,7 +91313,7 @@ pRc
 geS
 tlw
 crH
-lkB
+rkk
 xIe
 qOc
 ewy
@@ -99215,11 +99193,11 @@ sdA
 wBZ
 qHo
 mEI
-mTw
-mTw
+fqC
+fqC
 sDZ
 grA
-mTw
+fqC
 mEI
 mEI
 aBw
