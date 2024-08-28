@@ -325,13 +325,11 @@ const ObservableContent = () => {
       />
       <ObservableSection color="good" section={survivors} title="Survivors" />
       <ObservableSection
-        searchQuery={searchQuery}
         color="average"
         section={ert_members}
         title="ERT Members"
       />
       <ObservableSection
-        searchQuery={searchQuery}
         color="light-grey"
         section={synthetics}
         title="Synthetics"
