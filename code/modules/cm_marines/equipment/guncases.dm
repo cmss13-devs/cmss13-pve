@@ -72,7 +72,7 @@
 //------------
 /obj/item/storage/box/guncase/m41aMK1
 	name = "\improper M41A pulse rifle MK1 case"
-	desc = "A gun case containing a M41A pulse rifle MK1. It can only use proprietary MK1 magazines."
+	desc = "A gun case containing a loaded M41A pulse rifle MK1 and two additional magazines."
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/rifle/m41aMK1, /obj/item/ammo_magazine/rifle/m41aMK1)
 
@@ -84,7 +84,7 @@
 
 /obj/item/storage/box/guncase/m41aMK1AP
 	name = "\improper M41A pulse rifle MK1 AP case"
-	desc = "A gun case containing a M41A pulse rifle MK1 loaded with AP rounds. It can only use proprietary MK1 magazines."
+	desc = "A gun case containing a M41A pulse rifle MK1 loaded with AP rounds and two additional magazines."
 	storage_slots = 3
 	can_hold = list(/obj/item/weapon/gun/rifle/m41aMK1, /obj/item/ammo_magazine/rifle/m41aMK1)
 
@@ -206,32 +206,39 @@
 
 
 //------------
-/obj/item/storage/box/guncase/pumpshotgun
-	name = "\improper M37A2 Pump Shotgun case"
-	desc = "A gun case containing a M37A2 Pump Shotgun."
-	icon_state = "guncase_red"
-	storage_slots = 4
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/flechette, /obj/item/ammo_magazine/shotgun/slugs, /obj/item/storage/pouch/shotgun)
+/obj/item/storage/box/guncase/shotguncombat
+	name = "\improper M120 tactical shotgun case"
+	desc = "A gun case containing an unloaded M120 tactical shotgun, two boxes of 12 gauge buckshot, and one box of 12 gauge slug."
+	icon_state = "guncase"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/shotgun/combat, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
 
-/obj/item/storage/box/guncase/pumpshotgun/fill_preset_inventory()
+/obj/item/storage/box/guncase/shotguncombat/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/combat(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/shotgun/slugs(src)
+
+/obj/item/storage/box/guncase/shotgunpump
+	name = "\improper Ithaca 37 pump-action shotgun case"
+	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun, a box of 12 gauge buckshot, and a box of 12 gauge slugs."
+	icon_state = "matebacase"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
+
+/obj/item/storage/box/guncase/shotgunpump/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
-	new /obj/item/storage/pouch/shotgun(src)
-	new /obj/item/storage/large_holster/m37(src)
-	for(var/i = 1 to 3)
-		var/random_pick = rand(1, 3)
-		switch(random_pick)
-			if(1)
-				new /obj/item/ammo_magazine/shotgun/buckshot(src)
-			if(2)
-				new /obj/item/ammo_magazine/shotgun/flechette(src)
-			if(3)
-				new /obj/item/ammo_magazine/shotgun/slugs(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/shotgun/slugs(src)
 
-/obj/item/storage/box/guncase/pumpshotgun/special
+
+/obj/item/storage/box/guncase/shotgunpump/special
+	name = "\improper Ithaca 37 pump-action shotgun case"
+	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun and one box of 12 gauge USCM Special buckshot."
+	icon_state = "matebacase"
 	storage_slots = 2
 
-/obj/item/storage/box/guncase/pumpshotgun/special/fill_preset_inventory()
-	new /obj/item/weapon/gun/shotgun/pump/special(src)
+/obj/item/storage/box/guncase/shotgunpump/special/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot/special(src)
 	new /obj/item/storage/pouch/shotgun(src)
 	new /obj/item/storage/large_holster/m37(src)
@@ -251,14 +258,6 @@
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
-	else
-		new /obj/item/weapon/gun/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
 
 /obj/item/storage/box/guncase/nsg23_marine
