@@ -179,7 +179,7 @@ window "detectorwindow"
 		titlebar = true
 		statusbar = false
 		can-close = false
-		can-minimize = false
+		can-minimize = true
 		can-resize = true
 		is-pane = false
 		is-minimized = false
@@ -188,6 +188,7 @@ window "detectorwindow"
 		icon = ""
 		image = ""
 		image-mode = stretch
+		keep-aspect = false
 		transparent-color = none
 		alpha = 255
 		macro = ""
