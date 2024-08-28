@@ -542,7 +542,7 @@ BSQL_PROTECT_DATUM(/datum/entity/player)
 	player_data.save()
 	player_data.sync()
 
-/datum/entity/player/proc/check_ban(computer_id, address, is_telemetry, is_telemetry)
+/datum/entity/player/proc/check_ban(computer_id, address, is_telemetry)
 	. = list()
 
 	var/list/datum/view_record/stickyban/all_stickies = SSstickyban.check_for_sticky_ban(ckey, address, computer_id)
