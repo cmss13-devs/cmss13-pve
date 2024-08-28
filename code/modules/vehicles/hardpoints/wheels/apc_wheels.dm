@@ -23,4 +23,4 @@
 
 	icon_state = "tires"
 	disp_icon = "arc"
-	disp_icon_state = "wheels"
+	disp_icon_state = "arc_wheels"

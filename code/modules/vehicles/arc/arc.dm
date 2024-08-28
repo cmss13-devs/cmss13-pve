@@ -244,6 +244,7 @@
 /*
 ** PRESETS SPAWNERS
 */
+/*
 /obj/effect/vehicle_spawner/arc
 	name = "ARC Transport Spawner"
 	icon = 'icons/obj/vehicles/apc.dmi'
@@ -268,3 +269,4 @@
 	vehicle.add_hardpoint(new /obj/item/hardpoint/locomotion/arc_wheels)
 	vehicle.add_hardpoint(new /obj/item/hardpoint/primary/arc_sentry)
 	vehicle.add_hardpoint(new /obj/item/hardpoint/support/arc_antenna)
+*/
