@@ -51,6 +51,6 @@ jobs:
         git commit -m "Automatic changelog compile [ci skip]" -a || true
     - name: "Push"
       if: steps.value_holder.outputs.ACTIONS_ENABLED
-      uses: ad-m/github-push-action@campaign
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
