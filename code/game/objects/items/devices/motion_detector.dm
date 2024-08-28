@@ -78,7 +78,7 @@
 
 	disable_sound = !disable_sound
 
-	to_chat(user, SPAN_NOTICE("You [disable_sound ? "disable" : "enable"] [src] tracking sound."))
+	to_chat(user, SPAN_NOTICE("You [disable_sound ? "disable" : "enable"] [src] ping sound."))
 	update_icon()
 
 	playsound(usr,'sound/machines/click.ogg', 15, TRUE)
@@ -126,9 +126,9 @@
 	playsound(src.loc, 'sound/items/detector_turn_off.ogg', 30)
 	to_chat(user, SPAN_NOTICE("You deactivate \the [src]."))
 
-	var/client_to_use = user.client ? user.client : last_client
+	var/client/client_to_use = user.client ? user.client : last_client
 	winshow(client_to_use, "detectorwindow", FALSE)
-	client_to_use -= detector_image
+	client_to_use.screen -= detector_image
 
 	user.current_detector = null
 	last_client = null
@@ -187,7 +187,7 @@
 		user.client.screen += B // Add it to the radar
 
 		B.pixel_x = (L.x - user.x) * 4 - 4 // Move blip in the right position on the radar (multiplied by the icon dimensions)
-		B.pixel_y = (L.y - user.y) * 4 - 4 //-4 is a slight offset south and west
+		B.pixel_y = (L.y - user.y) * 4 - 4 // -4 is a slight offset south and west
 
 		B.screen_loc = "detector:3:[B.pixel_x],3:[B.pixel_y]" // Make it appear on the radar map
 		flick("blip", B)
