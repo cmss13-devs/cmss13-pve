@@ -169,6 +169,7 @@
 /obj/item/defenses/handheld/sentry/upp/light
 	name = "handheld UPP SDS-R8 light sentry"
 	desc = "A compact version of the UPP defense sentry SDS-R7. Designed for deployment in the field."
+	icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi'
 	icon_state = "Light upp_sentry_handheld"
 	defense_type = /obj/structure/machinery/defenses/sentry/upp/light
 	deployment_time = 2 SECONDS
