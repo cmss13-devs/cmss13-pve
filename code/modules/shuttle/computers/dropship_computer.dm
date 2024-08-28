@@ -1,6 +1,6 @@
 /obj/structure/machinery/computer/shuttle/dropship/flight
-	name = "dropship navigation computer"
-	desc = "A flight computer that can be used for autopilot or long-range flights."
+	name = "dropship flight console"
+	desc = "The multi-purpose display cluster of a dropship. Integrates information from avionics to radioelectronic battle state into a combined battlefield picture. With it, it's possible to fly alone, though difficult. This station also has backup fire control authority."
 	icon = 'icons/obj/structures/machinery/shuttle-parts.dmi'
 	icon_state = "console"
 	unacidable = TRUE
@@ -306,7 +306,7 @@
 		.["target_destination"] = shuttle.in_flyby? "Flyby" : shuttle.destination.name
 
 	.["door_status"] = is_remote ? list() : shuttle.get_door_data()
-	.["has_flyby_skill"] = skillcheck(user, SKILL_PILOT, SKILL_PILOT_EXPERT)
+	.["has_flyby_skill"] = skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED)
 
 	// Launch Alarm Variables
 	.["playing_launch_announcement_alarm"] = shuttle.playing_launch_announcement_alarm
@@ -363,7 +363,7 @@
 
 			var/dock_id = params["target"]
 			if(dock_id == DROPSHIP_FLYBY_ID)
-				if(!skillcheck(user, SKILL_PILOT, SKILL_PILOT_EXPERT))
+				if(!skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED))
 					to_chat(user, SPAN_WARNING("You don't have the skill to perform a flyby."))
 					return FALSE
 				update_equipment(is_optimised, TRUE)
@@ -465,7 +465,7 @@
 				shuttle.setTimer(DROPSHIP_WARMUP_TIME)
 		if("play_launch_announcement_alarm")
 			if (shuttle.mode != SHUTTLE_IDLE && shuttle.mode != SHUTTLE_RECHARGING)
-				to_chat(usr, SPAN_WARNING("The Launch Announcement Alarm is designed to tell people that you're going to take off soon."))
+				to_chat(usr, SPAN_WARNING("The launch warning alarm is only for alerting people to a takeoff."))
 				return
 			shuttle.alarm_sound_loop.start()
 			shuttle.playing_launch_announcement_alarm = TRUE
