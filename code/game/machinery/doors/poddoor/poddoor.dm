@@ -6,11 +6,12 @@
 	var/base_icon_state = "pdoor"
 	id = 1
 	dir = NORTH
-	unslashable = TRUE
 	health = 0
 	layer = PODDOOR_CLOSED_LAYER
 	open_layer = PODDOOR_OPEN_LAYER
 	closed_layer = PODDOOR_CLOSED_LAYER
+	///How many tiles the shutter occupies
+	var/shutter_length = 1
 
 /obj/structure/machinery/door/poddoor/Initialize()
 	. = ..()
@@ -52,6 +53,9 @@
 		return XENO_ATTACK_ACTION
 
 /obj/structure/machinery/door/poddoor/proc/pry_open(mob/living/carbon/xenomorph/X, time = 4 SECONDS)
+	if(X.action_busy)
+		return
+
 	X.visible_message(SPAN_DANGER("[X] begins prying [src] open."),\
 	SPAN_XENONOTICE("You start prying [src] open."), max_distance = 3)
 
@@ -113,5 +117,4 @@
 	name = ""
 	icon = null
 	icon_state = ""
-	unslashable = TRUE
 	unacidable = TRUE
