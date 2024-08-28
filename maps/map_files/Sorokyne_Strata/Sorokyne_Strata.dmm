@@ -29245,7 +29245,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/strata/ug/interior/jungle/deep/tearlake)
 "dMw" = (
-/obj/structure/cargo_container/wy/left,
+/obj/structure/cargo_container/ferret/left,
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/marsh)
 "dNq" = (
@@ -33874,7 +33874,7 @@
 /turf/open/asphalt/cement,
 /area/strata/ag/interior/tcomms)
 "lrO" = (
-/obj/structure/cargo_container/wy/mid,
+/obj/structure/cargo_container/ferret/mid,
 /turf/open/auto_turf/ice/layer0,
 /area/strata/ag/exterior/marsh)
 "lsz" = (
@@ -35388,7 +35388,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/marsh/center)
 "nSQ" = (
-/obj/structure/cargo_container/wy/right,
+/obj/structure/cargo_container/ferret/right,
 /turf/open/auto_turf/ice/layer0,
 /area/strata/ag/exterior/marsh)
 "nST" = (
