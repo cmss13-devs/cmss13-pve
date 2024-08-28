@@ -88,6 +88,31 @@
 	},
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
+"fP" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/largecrate/random/case/small{
+	pixel_y = 5
+	},
+/obj/item/storage/backpack/lightpack,
+/obj/item/storage/backpack/lightpack,
+/obj/item/storage/backpack/lightpack,
+/obj/item/storage/box/bodybags{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/turf/open/floor/almayer/plate,
+/area/shuttle/ert)
+"fX" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras{
+	network = list("Military","Almayer");
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/shuttle/ert)
 "gN" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -438,13 +463,13 @@
 /area/shuttle/ert)
 "yU" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/mod88{
+/obj/item/weapon/gun/pistol/vp70{
 	pixel_y = 4
 	},
-/obj/item/ammo_magazine/pistol/mod88/normalpoint{
+/obj/item/ammo_magazine/pistol/vp70{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/pistol/mod88/normalpoint{
+/obj/item/ammo_magazine/pistol/vp70{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
@@ -504,6 +529,19 @@
 	dir = 1
 	},
 /turf/open/floor/plating/almayer,
+/area/shuttle/ert)
+"Ca" = (
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic,
+/obj/item/clothing/mask/breath/medical,
+/turf/open/floor/almayer/plate,
+/area/shuttle/ert)
+"Cd" = (
+/obj/structure/machinery/door/window/westright{
+	dir = 4
+	},
+/obj/item/tool/soap,
+/turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "Cw" = (
 /obj/effect/decal/warning_stripes{
@@ -689,6 +727,20 @@
 	name = "Crew Bunks"
 	},
 /turf/open/floor/plating/almayer,
+/area/shuttle/ert)
+"PB" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/wy_mre,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "PE" = (
 /turf/closed/wall/almayer/white/hull,

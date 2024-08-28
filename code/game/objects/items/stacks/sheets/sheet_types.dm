@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		)), \
 	null, \
 	new/datum/stack_recipe_list("empty ammo boxes",list( \
-		new/datum/stack_recipe("empty magazine box (88 Mod 4 AP)", /obj/item/ammo_box/magazine/mod88/empty), \
+		new/datum/stack_recipe("empty magazine box (VP70)", /obj/item/ammo_box/magazine/vp70/empty), \
 		new/datum/stack_recipe("empty magazine box (SU-6)", /obj/item/ammo_box/magazine/su6/empty), \
 		new/datum/stack_recipe("empty magazine box (VP78)", /obj/item/ammo_box/magazine/vp78/empty), \
 		null, \

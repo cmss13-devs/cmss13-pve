@@ -26,6 +26,10 @@
 /obj/item/prop/alien/hugger,
 /turf/open/floor/carpet,
 /area/template_noop)
+"s" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/wood,
+/area/template_noop)
 "t" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/box/matches{
@@ -49,6 +53,14 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/carpet,
 /area/template_noop)
+"z" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/wood,
+/area/template_noop)
 "A" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/carpet,
@@ -56,9 +68,14 @@
 "E" = (
 /turf/open/floor/wood,
 /area/template_noop)
-"G" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/wood,
+"I" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/weapon/gun/pistol/highpower/automag/tactical,
+/turf/open/floor/plating,
 /area/template_noop)
 "K" = (
 /obj/structure/bed/chair{
@@ -96,15 +113,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating,
 /area/template_noop)
-"U" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/gun/pistol/highpower/tactical,
-/turf/open/floor/plating,
-/area/template_noop)
 "W" = (
 /obj/structure/machinery/door/airlock/almayer/command{
 	dir = 2;
@@ -112,14 +120,6 @@
 	req_access = null
 	},
 /turf/open/floor/plating/prison,
-/area/template_noop)
-"X" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/machinery/power/apc/power/west,
-/turf/open/floor/wood,
 /area/template_noop)
 "Z" = (
 /obj/item/device/flashlight/lamp/candelabra,
@@ -138,7 +138,7 @@ L
 (2,1,1) = {"
 a
 a
-X
+z
 E
 E
 x
@@ -168,7 +168,7 @@ y
 c
 T
 O
-G
+s
 x
 "}
 (6,1,1) = {"
@@ -192,7 +192,7 @@ x
 (8,1,1) = {"
 a
 a
-U
+I
 e
 t
 x
