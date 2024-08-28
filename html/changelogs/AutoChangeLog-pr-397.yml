@@ -1,0 +1,5 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Water now helps you regen blood."
+  - rscadd: "Vomiting now removes some reagents, helping negate OD effects."

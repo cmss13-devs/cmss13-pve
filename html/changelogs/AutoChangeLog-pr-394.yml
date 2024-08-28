@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - code_imp: "AI caches valid targets for better performance"

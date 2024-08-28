@@ -1333,7 +1333,7 @@
 /area/strata/ag/interior/restricted/devroom)
 "amW" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -9749,7 +9749,7 @@
 /turf/open/floor/greengrid,
 /area/strata/ag/interior/outpost/engi)
 "bVT" = (
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -16362,7 +16362,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/ug/interior/outpost/jung/dorms/med2)
 "hoq" = (
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -20559,12 +20559,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/canteen)
 "loQ" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/strata/floor3/east,
 /area/strata/ag/interior/tcomms)
@@ -22324,7 +22324,7 @@
 /area/strata/ag/interior/outpost/engi)
 "njt" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -22907,7 +22907,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -23135,7 +23135,7 @@
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "nWI" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -24680,7 +24680,7 @@
 /area/strata/ag/interior/outpost/canteen)
 "ppk" = (
 /obj/structure/bed/nest,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -24702,7 +24702,7 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib2"
 	},
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -25563,7 +25563,7 @@
 /turf/open/floor/strata/red1,
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "qdI" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/paths/southresearch)
 "qdW" = (
@@ -29163,7 +29163,7 @@
 /area/strata/ag/interior/outpost/engi/drome)
 "tzF" = (
 /obj/structure/bed/nest,
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -32005,7 +32005,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/engi)
 "wgu" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/paths/southresearch)
 "wgA" = (

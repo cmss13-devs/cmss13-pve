@@ -7209,9 +7209,9 @@
 "dhM" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -7452,9 +7452,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/red/west,
@@ -11250,7 +11250,7 @@
 /area/corsat/gamma/rnr/library)
 "ftg" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
 "fti" = (
@@ -16062,16 +16062,16 @@
 /turf/open/floor/corsat/omega,
 /area/corsat/omega/hallways)
 "hQw" = (
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/sigma/south/security)
 "hQT" = (
@@ -24933,9 +24933,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/red/north,
@@ -31031,12 +31031,12 @@
 /area/corsat/omega/complex)
 "pUn" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/gamma/security/armory)
 "pUq" = (
@@ -32701,10 +32701,10 @@
 /area/corsat/omega/containment)
 "qLp" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/omega/hangar/security)
 "qLv" = (
@@ -32891,9 +32891,9 @@
 "qPr" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -35402,9 +35402,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/plate,
@@ -37614,9 +37614,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/red,
@@ -37649,12 +37649,12 @@
 /area/corsat/gamma/hangar/arrivals)
 "tle" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat/red/north,
 /area/corsat/gamma/security/armory)
 "tlg" = (
@@ -37775,7 +37775,7 @@
 /area/corsat/sigma/south/offices)
 "top" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/corsat/red,
 /area/corsat/omega/hangar/security)
 "toq" = (
@@ -40430,9 +40430,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/redcorner/west,
@@ -44257,9 +44257,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat/red/northeast,

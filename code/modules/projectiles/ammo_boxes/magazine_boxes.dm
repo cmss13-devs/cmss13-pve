@@ -373,19 +373,19 @@
 /obj/item/ammo_box/magazine/su6/empty
 	empty = TRUE
 
-//-----------------------88M4 Pistol Mag Box-----------------------
+//-----------------------VP70 Pistol Mag Box-----------------------
 
-/obj/item/ammo_box/magazine/mod88
-	name = "magazine box (88 Mod 4 AP x 16)"
+/obj/item/ammo_box/magazine/vp70
+	name = "magazine box (VP70 x 16)"
 	icon_state = "base_mod88"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
 	overlay_gun_type = "_mod88"
 	overlay_content = "_reg"
 	num_of_magazines = 16
-	magazine_type = /obj/item/ammo_magazine/pistol/mod88
+	magazine_type = /obj/item/ammo_magazine/pistol/vp70
 
-/obj/item/ammo_box/magazine/mod88/empty
+/obj/item/ammo_box/magazine/vp70/empty
 	empty = TRUE
 
 //-----------------------VP78 Pistol Mag Box-----------------------
@@ -645,7 +645,7 @@
 	overlay_gun_type = "_357"
 	overlay_content = "_speed"
 	num_of_magazines = 12
-	magazine_type = /obj/item/ammo_magazine/revolver/cmb
+	magazine_type = /obj/item/ammo_magazine/revolver/spearhead
 
 /obj/item/ammo_box/magazine/spearhead/empty
 	empty = TRUE
@@ -653,7 +653,7 @@
 /obj/item/ammo_box/magazine/spearhead/normalpoint
 	name = "speed loaders box (Spearhead x 12)"
 	overlay_ammo_type = "_357_reg"
-	magazine_type = /obj/item/ammo_magazine/revolver/cmb/normalpoint
+	magazine_type = /obj/item/ammo_magazine/revolver/spearhead
 
 /obj/item/ammo_box/magazine/spearhead/normalpoint/empty
 	empty = TRUE

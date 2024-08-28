@@ -156,7 +156,7 @@
 	max_bullet_amount = 1500
 	caliber = "7.62x54mmR"
 
-//----------------9mm Pistol Ammunition Boxes (for mod88, M4A3 pistols)------------------
+//----------------9mm Pistol Ammunition Boxes (for M4A3 pistols)------------------
 
 /obj/item/ammo_box/rounds/pistol
 	name = "\improper pistol ammunition box (9mm)"
@@ -171,7 +171,7 @@
 
 /obj/item/ammo_box/rounds/pistol/ap
 	name = "\improper pistol ammunition box (9mm AP)"
-	desc = "A 9mm armor-piercing ammunition box. Used to refill mod88 and M4A3 magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 9mm armor-piercing ammunition box. Used to refill M4A3 magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_ap"
 	default_ammo = /datum/ammo/bullet/pistol/ap
 

@@ -5715,7 +5715,7 @@
 /turf/open/asphalt,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "bkG" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/interior/wood/alt,
 /area/desert_dam/building/security/marshals_office)
@@ -8291,13 +8291,13 @@
 /area/desert_dam/building/security/armory)
 "bYq" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -21910,7 +21910,7 @@
 /area/desert_dam/exterior/river/riverside_east)
 "hlT" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison/darkredfull2,
 /area/desert_dam/interior/lab_northeast/east_lab_security_armory)
 "hlY" = (
@@ -32514,7 +32514,7 @@
 /area/shuttle/trijent_shuttle/lz2)
 "nEP" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison/darkredfull2,
 /area/desert_dam/building/security/armory)
 "nFf" = (
@@ -40845,7 +40845,7 @@
 /area/desert_dam/building/hydroponics/hydroponics)
 "sMD" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/prison/darkredfull2,
 /area/desert_dam/interior/lab_northeast/east_lab_security_armory)
 "sMF" = (

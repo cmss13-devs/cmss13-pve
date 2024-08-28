@@ -2053,7 +2053,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23/pve,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "AW" = (
@@ -3615,7 +3615,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23/pve,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "VH" = (

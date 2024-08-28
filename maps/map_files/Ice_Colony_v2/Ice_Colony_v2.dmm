@@ -7543,8 +7543,8 @@
 /area/ice_colony/underground/security/detective)
 "bCc" = (
 /obj/structure/surface/table/woodentable,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/wood,
 /area/ice_colony/underground/security/marshal)
 "bCd" = (
@@ -11829,7 +11829,7 @@
 /turf/open/floor/white,
 /area/ice_colony/underground/medical/lobby)
 "fvK" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/dark2,
 /area/ice_colony/surface/command/control/office)
@@ -14186,8 +14186,8 @@
 /area/ice_colony/surface/command/checkpoint)
 "iuX" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -24229,13 +24229,13 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},

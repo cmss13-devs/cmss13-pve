@@ -109,10 +109,10 @@
 	description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen. It is a vital component to all known forms of organic life, even though it provides no calories or organic nutrients. It is also an effective solvent and can be used for cleaning."
 	reagent_state = LIQUID
 	color = "#0064C8" // rgb: 0, 100, 200
-	custom_metabolism = AMOUNT_PER_TIME(1, 200 SECONDS)
 	chemclass = CHEM_CLASS_BASIC
 	chemfiresupp = TRUE
 	intensitymod = -3
+	properties = list(PROPERTY_HEMOGENIC = 1)
 
 /datum/reagent/water/reaction_turf(turf/T, volume)
 	if(!istype(T)) return
@@ -131,6 +131,12 @@
 		M.adjust_fire_stacks(-(volume / 10))
 		if(M.fire_stacks <= 0)
 			M.ExtinguishMob()
+
+/datum/reagent/water/on_mob_life(mob/living/M)
+	. = ..()
+	if(ishuman(M) && volume >= 100 && prob(25))
+		var/mob/living/carbon/human/human = M
+		human.vomit()
 
 /datum/reagent/water/holywater
 	name = "Holy Water"

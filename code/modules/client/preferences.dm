@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	"whitefull"
 ))
 
-#define MAX_SAVE_SLOTS 10
+#define MAX_SAVE_SLOTS 20
 
 /datum/preferences
 	var/client/owner
@@ -948,6 +948,18 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	return jobs_to_return
 
+/// Returns TRUE if any job has a priority other than NEVER, FALSE otherwise.
+/datum/preferences/proc/has_job_priorities()
+	if(!length(job_preference_list))
+		ResetJobs()
+		return FALSE
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] != NEVER_PRIORITY)
+			return TRUE
+
+	return FALSE
+
 /datum/preferences/proc/SetJobDepartment(datum/job/J, priority)
 	if(!J || priority < 0 || priority > 4)
 		return FALSE
@@ -1624,7 +1636,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				if("underwear")
 					var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
 					var/old_gender = gender
-					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options)
+					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options-GLOB.underwear_restricted)
 					if(old_gender != gender)
 						return
 					if(new_underwear)
@@ -1634,7 +1646,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				if("undershirt")
 					var/list/undershirt_options = gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f
 					var/old_gender = gender
-					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options)
+					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options-GLOB.undershirt_restricted)
 					if(old_gender != gender)
 						return
 					if(new_undershirt)

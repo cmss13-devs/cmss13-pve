@@ -1287,8 +1287,8 @@
 /area/shiva/interior/colony/research_hab)
 "anP" = (
 /obj/structure/surface/table/woodentable,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/medseceng)
 "anZ" = (
@@ -4944,8 +4944,8 @@
 /area/shiva/exterior/cp_lz2)
 "cGG" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -6125,7 +6125,7 @@
 /area/shiva/interior/colony/botany)
 "egt" = (
 /obj/structure/surface/table,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/shiva/purplefull/west,
 /area/shiva/interior/lz2_habs)
 "egB" = (
@@ -8775,7 +8775,7 @@
 /turf/open/floor/shiva/yellowfull/west,
 /area/shiva/interior/colony/medseceng)
 "hsJ" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/lz2_habs)
 "hsN" = (
@@ -12194,13 +12194,13 @@
 /area/shiva/exterior/valley)
 "ldO" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -12288,13 +12288,13 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -17960,8 +17960,8 @@
 /area/shiva/interior/warehouse)
 "rxj" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -20403,7 +20403,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/shiva/exterior/junkyard)
 "uee" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/auto_turf/snow/layer0,
 /area/shiva/exterior/cp_lz2)
 "ueD" = (
@@ -23107,7 +23107,7 @@
 /turf/open/floor/shiva/green/north,
 /area/shiva/interior/colony/botany)
 "xCd" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva/purplefull/west,
 /area/shiva/interior/lz2_habs)
 "xCT" = (
