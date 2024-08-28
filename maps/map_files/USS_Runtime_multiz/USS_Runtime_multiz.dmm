@@ -67,19 +67,6 @@
 /obj/effect/landmark/start/crew_chief,
 /turf/open/floor/almayer/plating,
 /area/event)
-"s" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/effect/step_trigger/teleporter_vector{
-	name = "runtime_down";
-	vector_z = -1
-	},
-/turf/open/floor/almayer/plating,
-/area/event)
 "u" = (
 /obj/effect/landmark/start/requisition,
 /turf/open/floor/almayer/plating,
@@ -641,7 +628,7 @@ a
 F
 R
 R
-s
+R
 m
 m
 F
