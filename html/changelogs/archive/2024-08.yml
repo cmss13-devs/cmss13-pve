@@ -104,3 +104,14 @@
   - rscadd: Added something
   private-tristan:
   - rscadd: ports TG strip menu
+2024-08-26:
+  sunofang:
+  - admin: Added infinite weather options.
+2024-08-27:
+  Max-023:
+  - rscadd: Helmet cover item, added to the squad prep vendor
+  - imageadd: Helmet cover sprites
+  Meatstuff882:
+  - rscadd: 'The utility vendor now has knives in it.
+
+      :cl:'
