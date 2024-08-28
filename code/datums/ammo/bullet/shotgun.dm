@@ -265,7 +265,7 @@
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.KnockDown(2)
 			living_mob.Stun(2)
-			living_mob.Slow(2)
+			living_mob.Slow(6)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
@@ -286,7 +286,7 @@
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.KnockDown(2)
 			living_mob.Stun(2)
-			living_mob.Slow(2)
+			living_mob.Slow(6)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
