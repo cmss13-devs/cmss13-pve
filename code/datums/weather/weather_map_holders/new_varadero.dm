@@ -5,7 +5,7 @@
 	no_weather_turf_icon_state = "strata_clearsky"
 
 	potential_weather_events = list(
-		/datum/weather_event/light_rain,
+		/datum/weather_event/light_rain/varadero,
 		/datum/weather_event/monsoon,
 	)
 

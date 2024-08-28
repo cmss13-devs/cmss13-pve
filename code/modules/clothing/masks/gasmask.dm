@@ -1,7 +1,7 @@
 
 /obj/item/clothing/mask/gas
 	name = "gas mask"
-	desc = "A face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
+	desc = "A civilian grade, face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
 	icon_state = "gas_alt"
 	flags_inventory = COVERMOUTH | COVEREYES | ALLOWINTERNALS | BLOCKGASEFFECT | ALLOWREBREATH | ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDELOWHAIR
@@ -30,6 +30,18 @@
 	desc = "A respirator worn on the face that filters out harmful air particles often present in the air of Kutjevo."
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
+
+/obj/item/clothing/mask/gas/m5
+	name = "\improper M5 standalone gasmask"
+	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This one is the alternative variant meant for Marines not in combat kit."
+	icon_state = "m5_gasmask"
+	item_state = "m5_gasmask"
+
+/obj/item/clothing/mask/gas/upp
+	name = "\improper PMK-63 gasmask"
+	desc = "The Union service mask issued to backline troops not prepared for combat."
+	icon_state = "upp_gasmask"
+	item_state = "upp_gasmask"
 
 /obj/item/clothing/mask/gas/pve_mopp
 	name = "\improper M2 MOPP mask"
