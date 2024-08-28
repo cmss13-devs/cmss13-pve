@@ -645,7 +645,7 @@
 	overlay_gun_type = "_357"
 	overlay_content = "_speed"
 	num_of_magazines = 12
-	magazine_type = /obj/item/ammo_magazine/revolver/cmb
+	magazine_type = /obj/item/ammo_magazine/revolver/spearhead
 
 /obj/item/ammo_box/magazine/spearhead/empty
 	empty = TRUE
@@ -653,7 +653,7 @@
 /obj/item/ammo_box/magazine/spearhead/normalpoint
 	name = "speed loaders box (Spearhead x 12)"
 	overlay_ammo_type = "_357_reg"
-	magazine_type = /obj/item/ammo_magazine/revolver/cmb/normalpoint
+	magazine_type = /obj/item/ammo_magazine/revolver/spearhead
 
 /obj/item/ammo_box/magazine/spearhead/normalpoint/empty
 	empty = TRUE
