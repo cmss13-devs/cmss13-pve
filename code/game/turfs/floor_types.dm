@@ -671,6 +671,30 @@
 /turf/open/floor/almayer/sterile_green_side/northwest
 	dir = NORTHWEST
 
+/turf/open/floor/almayer/black
+	icon_state = "black"
+
+/turf/open/floor/almayer/black/north
+	dir = NORTH
+
+/turf/open/floor/almayer/blackcorner
+	icon_state = "blackcorner"
+
+/turf/open/floor/almayer/blackcorner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/black/east
+	dir = EAST
+
+/turf/open/floor/almayer/blackcorner/east
+	dir = EAST
+
+/turf/open/floor/almayer/black/west
+	dir = WEST
+
+/turf/open/floor/almayer/blackcorner/west
+	dir = WEST
+
 /turf/open/floor/almayer/ai_floors
 	icon_state = "ai_floors"
 
@@ -845,11 +869,11 @@
 	icon_state = "logo_c"
 	name = "\improper USCM Logo"
 
+/turf/open/floor/almayer/uscm/north
+	dir = NORTH
+
 /turf/open/floor/almayer/uscm/directional
 	icon_state = "logo_directional"
-
-/turf/open/floor/almayer/uscm/directional/up_down
-	icon_state = "logo_directional1"
 
 /turf/open/floor/almayer/uscm/directional/southwest
 	dir = SOUTHWEST
@@ -876,6 +900,30 @@
 	dir = WEST
 
 /turf/open/floor/almayer/uscm/directional/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/uscm/directional/up_down
+	icon_state = "logo_directional1"
+
+/turf/open/floor/almayer/uscm/directional/up_down/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/uscm/directional/up_down/north
+	dir = NORTH
+
+/turf/open/floor/almayer/uscm/directional/up_down/east
+	dir = EAST
+
+/turf/open/floor/almayer/uscm/directional/up_down/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/uscm/directional/up_down/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/uscm/directional/up_down/west
+	dir = WEST
+
+/turf/open/floor/almayer/uscm/directional/up_down/northwest
 	dir = NORTHWEST
 
 /turf/open/floor/almayer/no_build
@@ -1044,6 +1092,9 @@
 
 /turf/open/floor/almayer_hull/outerhull_dir/northwest
 	dir = NORTHWEST
+
+/turf/open/floor/almayer_hull/blackfull
+	icon_state = "blackfull"
 
 
 

@@ -741,9 +741,7 @@
 	name = "cable";
 	pixel_x = 21
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "cO" = (
 /obj/structure/machinery/shower{
@@ -1067,10 +1065,7 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/prep_hallway)
 "es" = (
-/turf/open/floor/almayer/uscm{
-	dir = 5;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/northeast,
 /area/golden_arrow/hangar)
 "et" = (
 /obj/structure/cable/heavyduty{
@@ -1174,9 +1169,7 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner,
 /area/golden_arrow/hangar)
 "eP" = (
 /obj/structure/machinery/light{
@@ -1474,10 +1467,7 @@
 	dir = 4;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "gm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1619,10 +1609,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "gK" = (
 /obj/effect/decal/warning_stripes{
@@ -1996,10 +1983,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "io" = (
-/turf/open/floor/almayer/uscm{
-	dir = 8;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/hangar)
 "ip" = (
 /obj/structure/surface/table/almayer,
@@ -2127,10 +2111,7 @@
 	pixel_x = 1;
 	pixel_y = 1
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner/east,
 /area/golden_arrow/hangar)
 "iW" = (
 /obj/structure/window/framed/almayer,
@@ -2504,9 +2485,7 @@
 	name = "cable";
 	pixel_x = 5
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "kl" = (
 /obj/structure/shuttle/part/dropship1/nose_front_right{
@@ -2778,9 +2757,7 @@
 	dir = 2;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "lw" = (
 /obj/structure/disposalpipe/segment{
@@ -2815,10 +2792,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "lH" = (
 /obj/structure/pipes/vents/pump{
@@ -2828,9 +2802,7 @@
 	dir = 2;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "lJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3337,10 +3309,7 @@
 /area/golden_arrow/engineering)
 "nK" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/uscm{
-	dir = 1;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/north,
 /area/golden_arrow/hangar)
 "nM" = (
 /obj/effect/decal/warning_stripes{
@@ -3413,9 +3382,7 @@
 /obj/item/prop/almayer/box{
 	pixel_y = 17
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "od" = (
 /obj/structure/machinery/power/apc/almayer/north,
@@ -3716,10 +3683,7 @@
 	id = "apcbayrailing1"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/west,
 /area/golden_arrow/hangar)
 "pu" = (
 /obj/structure/surface/table/almayer,
@@ -3840,10 +3804,7 @@
 	dir = 8;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/west,
 /area/golden_arrow/hangar)
 "pU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -3867,10 +3828,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "qh" = (
 /obj/effect/decal/warning_stripes{
@@ -4118,10 +4076,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "rA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4250,9 +4205,7 @@
 	dir = 2;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "sg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4284,10 +4237,7 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner/north,
 /area/golden_arrow/hangar)
 "sn" = (
 /obj/structure/machinery/floodlight/landing/floor{
@@ -4385,10 +4335,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "sH" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
@@ -4823,10 +4770,7 @@
 	dir = 8;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/west,
 /area/golden_arrow/hangar)
 "uh" = (
 /turf/closed/wall/almayer/outer,
@@ -4915,10 +4859,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "uy" = (
 /obj/structure/surface/table/almayer,
@@ -4954,9 +4895,7 @@
 	pixel_x = 3;
 	pixel_y = -7
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "uD" = (
 /obj/effect/decal/warning_stripes{
@@ -5195,9 +5134,7 @@
 	dir = 2;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "vq" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -5566,10 +5503,7 @@
 	dir = 4;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "wQ" = (
 /turf/open/floor/almayer,
@@ -5653,9 +5587,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "xs" = (
-/turf/open/floor/almayer/uscm{
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down,
 /area/golden_arrow/hangar)
 "xy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5808,10 +5740,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "yr" = (
 /obj/effect/decal/warning_stripes{
@@ -5940,10 +5869,7 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "zg" = (
-/turf/open/floor/almayer/uscm{
-	dir = 4;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/east,
 /area/golden_arrow/hangar)
 "zj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6142,9 +6068,7 @@
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "Af" = (
 /obj/effect/decal/warning_stripes{
@@ -6461,10 +6385,7 @@
 	dir = 8;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/west,
 /area/golden_arrow/hangar)
 "BC" = (
 /obj/structure/flora/pottedplant{
@@ -6585,9 +6506,7 @@
 	dir = 2;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "Ch" = (
 /obj/effect/decal/siding{
@@ -6688,10 +6607,7 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner/north,
 /area/golden_arrow/hangar)
 "CG" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
@@ -6700,9 +6616,7 @@
 /area/golden_arrow/engineering)
 "CI" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/uscm{
-	dir = 1
-	},
+/turf/open/floor/almayer/uscm/north,
 /area/golden_arrow/hangar)
 "CJ" = (
 /obj/structure/barricade/handrail{
@@ -6992,10 +6906,7 @@
 	dir = 4;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "DV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -7151,10 +7062,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "EK" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -8025,10 +7933,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "Iq" = (
-/turf/open/floor/almayer/uscm{
-	dir = 9;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/northwest,
 /area/golden_arrow/hangar)
 "Ir" = (
 /turf/closed/wall/almayer,
@@ -8075,10 +7980,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "IA" = (
-/turf/open/floor/almayer/uscm{
-	dir = 6;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/southeast,
 /area/golden_arrow/hangar)
 "IB" = (
 /obj/structure/machinery/power/apc/almayer/north,
@@ -8405,10 +8307,7 @@
 	dir = 8;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/west,
 /area/golden_arrow/hangar)
 "JW" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -9097,9 +8996,7 @@
 	pixel_x = 5;
 	pixel_y = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/golden_arrow/hangar)
 "MM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9117,10 +9014,7 @@
 	dir = 4;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "MQ" = (
 /obj/structure/bed/chair,
@@ -9213,10 +9107,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "Ni" = (
-/turf/open/floor/almayer/uscm{
-	dir = 10;
-	icon_state = "logo_directional1"
-	},
+/turf/open/floor/almayer/uscm/directional/up_down/southwest,
 /area/golden_arrow/hangar)
 "No" = (
 /obj/effect/attach_point/fuel/midway{
@@ -10302,10 +10193,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/north,
 /area/golden_arrow/hangar)
 "Rz" = (
 /obj/structure/machinery/shower{
@@ -10683,9 +10571,7 @@
 	dir = 2;
 	id = "apcbayrailing1"
 	},
-/turf/open/floor/almayer{
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black,
 /area/golden_arrow/hangar)
 "SY" = (
 /obj/structure/machinery/power/apc/almayer/west,
@@ -10967,10 +10853,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner/west,
 /area/golden_arrow/hangar)
 "Uj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11044,10 +10927,7 @@
 	dir = 4;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "Uu" = (
 /obj/structure/machinery/gear{
@@ -11060,9 +10940,7 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner,
 /area/golden_arrow/hangar)
 "Uw" = (
 /obj/structure/machinery/autolathe,
@@ -12182,10 +12060,7 @@
 	dir = 4;
 	id = "apcbayrailing2"
 	},
-/turf/open/floor/almayer{
-	dir = 4;
-	icon_state = "black"
-	},
+/turf/open/floor/almayer/black/east,
 /area/golden_arrow/hangar)
 "YP" = (
 /obj/effect/decal/warning_stripes{
@@ -12505,10 +12380,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/turf/open/floor/almayer{
-	dir = 8;
-	icon_state = "blackcorner"
-	},
+/turf/open/floor/almayer/blackcorner/west,
 /area/golden_arrow/hangar)
 "ZT" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,

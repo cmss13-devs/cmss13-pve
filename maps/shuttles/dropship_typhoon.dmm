@@ -398,9 +398,7 @@
 	name = "\improper Typhoon cargo door";
 	id = "aft_door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/tornado)
 "Kw" = (
 /obj/structure/shuttle/part/typhoon/transparent{
@@ -516,9 +514,7 @@
 	icon_state = "N";
 	pixel_y = -1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/tornado)
 "Qi" = (
 /obj/structure/shuttle/part/typhoon/transparent{

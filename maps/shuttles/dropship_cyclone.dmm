@@ -86,9 +86,7 @@
 	icon_state = "N";
 	pixel_y = -1
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/cyclone)
 "gn" = (
 /obj/docking_port/mobile/marine_dropship/cyclone,
@@ -358,9 +356,7 @@
 	id = "aft_door";
 	name = "\improper Cyclone cargo door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin14"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/cyclone)
 "Ax" = (
 /obj/structure/shuttle/part/dropship2/lower_right_wall{

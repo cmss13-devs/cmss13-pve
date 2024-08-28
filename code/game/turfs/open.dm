@@ -1266,6 +1266,9 @@
 /turf/open/shuttle/dropship/can_surgery/light_grey_middle
 	icon_state = "rasputin13"
 
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right
+	icon_state = "rasputin14"
+
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down
 	icon_state = "rasputin15"
 
@@ -1457,8 +1460,14 @@
 /turf/open/shuttle/vehicle/floor_1_2
 	icon_state = "floor_1_2"
 
+/turf/open/shuttle/vehicle/floor_1_3
+	icon_state = "floor_1_3"
+
 /turf/open/shuttle/vehicle/floor_1_3_3
 	icon_state = "floor_1_3_3"
+
+/turf/open/shuttle/vehicle/floor_1_4
+	icon_state = "floor_1_4"
 
 /turf/open/shuttle/vehicle/floor_1_5
 	icon_state = "floor_1_5"
@@ -1474,6 +1483,9 @@
 
 /turf/open/shuttle/vehicle/floor_1_9
 	icon_state = "floor_1_9"
+
+/turf/open/shuttle/vehicle/floor_2
+	icon_state = "floor_2"
 
 /turf/open/shuttle/vehicle/floor_3
 	icon_state = "floor_3"

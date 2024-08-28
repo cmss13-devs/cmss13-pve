@@ -31,9 +31,7 @@
 	pixel_y = 12;
 	pixel_x = 7
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_3"
-	},
+/turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "d" = (
 /obj/structure/bed/chair/vehicle{
@@ -49,9 +47,7 @@
 	pixel_x = 2;
 	pixel_y = -13
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "e" = (
 /obj/structure/interior_wall/apc{
@@ -82,9 +78,7 @@
 	pixel_y = -11;
 	layer = 4
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "j" = (
 /obj/structure/bed/chair/vehicle{
@@ -100,9 +94,7 @@
 	pixel_x = -7;
 	pixel_y = -11
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "l" = (
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -120,9 +112,7 @@
 	pixel_y = 11;
 	pixel_x = 11
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_4"
-	},
+/turf/open/shuttle/vehicle/floor_1_4,
 /area/interior/vehicle/apc/movie)
 "n" = (
 /obj/structure/interior_wall/apc{
@@ -163,9 +153,7 @@
 	pixel_y = 19;
 	pixel_x = 16
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_3"
-	},
+/turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "v" = (
 /obj/structure/bed/chair/vehicle{
@@ -180,9 +168,7 @@
 	pixel_y = 31;
 	layer = 2.9
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "w" = (
 /obj/effect/landmark/interior/spawn/interior_camera{
@@ -204,9 +190,7 @@
 	pixel_x = -8;
 	density = 0
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "x" = (
 /obj/structure/interior_wall/apc{
@@ -241,9 +225,7 @@
 	name = "Right APC door";
 	tag = "right rear"
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_3"
-	},
+/turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "A" = (
 /obj/structure/bed/chair/vehicle{
@@ -254,14 +236,10 @@
 	dir = 1;
 	pixel_x = -8
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "B" = (
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_3"
-	},
+/turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "C" = (
 /obj/structure/interior_wall/apc{
@@ -299,18 +277,14 @@
 	pixel_y = 30;
 	pixel_x = -8
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "G" = (
 /obj/structure/gun_rack/m41{
 	pixel_y = 22;
 	density = 0
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "H" = (
 /obj/structure/interior_wall/apc{
@@ -379,9 +353,7 @@
 /turf/open/void/vehicle,
 /area/space)
 "N" = (
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_4"
-	},
+/turf/open/shuttle/vehicle/floor_1_4,
 /area/interior/vehicle/apc/movie)
 "O" = (
 /obj/structure/interior_wall/apc{
@@ -424,9 +396,7 @@
 	name = "Right APC door";
 	tag = "right front"
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_1_4"
-	},
+/turf/open/shuttle/vehicle/floor_1_4,
 /area/interior/vehicle/apc/movie)
 "U" = (
 /obj/structure/interior_wall/apc{
@@ -454,9 +424,7 @@
 	buckling_y = 16;
 	pixel_y = 16
 	},
-/turf/open/shuttle/vehicle{
-	icon_state = "floor_2"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "Y" = (
 /obj/structure/interior_wall/apc{

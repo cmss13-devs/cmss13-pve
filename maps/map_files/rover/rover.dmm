@@ -956,9 +956,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "jF" = (
-/turf/open/floor/almayer_hull{
-	icon_state = "blackfull"
-	},
+/turf/open/floor/almayer_hull/blackfull,
 /area/space)
 "jG" = (
 /obj/structure/largecrate/random/barrel/blue,
