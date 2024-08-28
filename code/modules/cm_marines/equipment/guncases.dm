@@ -24,7 +24,7 @@
 //------------
 /obj/item/storage/box/guncase/vp78
 	name = "\improper VP78 pistol case"
-	desc = "A gun case containing the VP78. Comes with two magazines."
+	desc = "A gun case containing a VP78. Comes with two magazines."
 	can_hold = list(/obj/item/weapon/gun/pistol/vp78, /obj/item/ammo_magazine/pistol/vp78)
 	storage_slots = 3
 
@@ -36,7 +36,7 @@
 //------------
 /obj/item/storage/box/guncase/smartpistol
 	name = "\improper SU-6 pistol case"
-	desc = "A gun case containing the SU-6 smart pistol. Comes with a full belt holster."
+	desc = "A gun case containing a SU-6 smart pistol. Comes with a full belt holster."
 	can_hold = list(/obj/item/storage/belt/gun/smartpistol, /obj/item/weapon/gun/pistol/smart, /obj/item/ammo_magazine/pistol/smart)
 	storage_slots = 2
 
@@ -195,7 +195,7 @@
 //------------
 /obj/item/storage/box/guncase/m41a
 	name = "\improper M41A pulse rifle MK2 case"
-	desc = "A gun case containing the M41A pulse rifle MK2."
+	desc = "A gun case containing a M41A pulse rifle MK2."
 	storage_slots = 5
 	can_hold = list(/obj/item/weapon/gun/rifle/m41a, /obj/item/ammo_magazine/rifle)
 
@@ -243,13 +243,14 @@
 	new /obj/item/storage/pouch/shotgun(src)
 	new /obj/item/storage/large_holster/m37(src)
 
-/obj/item/storage/box/guncase/mk45_automag
-	name = "\improper MK-45 Automagnum case"
-	desc = "A gun case containing a MK-45 'High-Power' Automagnum sidearm. While this weapon was rejected as a replacement for the M44 Combat Revolver, it is often back-issued to troops who prefer its powerful bullets over more common sidearms."
+/obj/item/storage/box/guncase/hg45
+	name = "\improper HG 45 pistol case"
+	desc = "A gun case containing a HG 45 pistol."
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/pistol/highpower, /obj/item/ammo_magazine/pistol/highpower)
 
-/obj/item/storage/box/guncase/mk45_automag/fill_preset_inventory()
+/obj/item/storage/box/guncase/hg45/fill_preset_inventory()
+	if(prob(30))
 		new /obj/item/weapon/gun/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
 		new /obj/item/ammo_magazine/pistol/highpower(src)
@@ -261,7 +262,7 @@
 
 /obj/item/storage/box/guncase/nsg23_marine
 	name = "\improper NSG-23 assault rifle case"
-	desc = "A gun case containing the NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
+	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
 
@@ -275,7 +276,7 @@
 
 /obj/item/storage/box/guncase/m3717
 	name = "\improper M37-17 pump shotgun case"
-	desc = "A gun case containing the M37-17 pump shotgun. Rarely seen issued to USCM vessels on the edges of inhabited space who need the extra bang for their buck (literally) the M37-17 has. Like this one! Well, if it had the budget for it."
+	desc = "A gun case containing a M37-17 pump shotgun. Rarely seen issued to USCM vessels on the edges of inhabited space who need the extra bang for their buck (literally) the M37-17 has. Like this one! Well, if it had the budget for it."
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, /obj/item/ammo_magazine/shotgun/buckshot)
 
@@ -362,24 +363,24 @@
 
 //Handgun case for Military police vendor three mag , a railflashligh and the handgun.
 
-//88 Mod 4 Combat Pistol
-/obj/item/storage/box/guncase/mod88
-	name = "\improper 88 Mod 4 Combat Pistol case"
-	desc = "A gun case containing an 88 Mod 4 Combat Pistol."
+//VP70 Combat Pistol
+/obj/item/storage/box/guncase/vp70
+	name = "\improper VP70 Combat Pistol case"
+	desc = "A gun case containing a VP70 Combat Pistol."
 	storage_slots = 5
-	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/pistol/mod88, /obj/item/ammo_magazine/pistol/mod88)
+	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/pistol/vp70, /obj/item/ammo_magazine/pistol/vp70)
 
-/obj/item/storage/box/guncase/mod88/fill_preset_inventory()
+/obj/item/storage/box/guncase/vp70/fill_preset_inventory()
 	new /obj/item/attachable/flashlight(src)
-	new /obj/item/weapon/gun/pistol/mod88(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/weapon/gun/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
 
 //M44 Combat Revolver
 /obj/item/storage/box/guncase/m44
 	name = "\improper M44 Combat Revolver case"
-	desc = "A gun case containing an M44 Combat Revolver loaded with marksman ammo."
+	desc = "A gun case containing a M44 Combat Revolver loaded with marksman ammo."
 	storage_slots = 5
 	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/revolver/m44, /obj/item/ammo_magazine/revolver)
 
@@ -393,7 +394,7 @@
 //M4A3 Service Pistol
 /obj/item/storage/box/guncase/m4a3
 	name = "\improper M4A3 Service Pistol case"
-	desc = "A gun case containing an M4A3 Service Pistol."
+	desc = "A gun case containing a M4A3 Service Pistol."
 	storage_slots = 5
 	can_hold = list(/obj/item/attachable/flashlight, /obj/item/weapon/gun/pistol/m4a3, /obj/item/ammo_magazine/pistol)
 
