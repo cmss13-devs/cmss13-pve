@@ -44,11 +44,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Changelogs"
-          git pull origin master
+          git pull origin campaign
           git add html/changelogs/archive
           git commit -m "Automatic changelog compile [ci skip]" -a || true
       - name: "Push"
         if: steps.value_holder.outputs.ACTIONS_ENABLED
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@campaign
         with:
           github_token: ${{ secrets.BOT_TOKEN_CM || secrets.GITHUB_TOKEN }}

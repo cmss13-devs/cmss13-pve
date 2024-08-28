@@ -2,7 +2,7 @@ name: "Update Changelog"
 on:
   push:
     branches:
-      - master
+      - campaign
 
 jobs:
   update-changelog:
@@ -44,13 +44,13 @@ jobs:
     - name: Commit
       if: steps.value_holder.outputs.ACTIONS_ENABLED
       run: |
-        git pull origin master
+        git pull origin campaign
         git config --local user.email "action@github.com"
         git config --local user.name "Changelogs"
         git add html/changelogs/archive
         git commit -m "Automatic changelog compile [ci skip]" -a || true
     - name: "Push"
       if: steps.value_holder.outputs.ACTIONS_ENABLED
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@campaign
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
