@@ -225,6 +225,9 @@
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
 
+/obj/structure/shuttle/part/midway/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor assembly."
+
 /obj/structure/shuttle/part/midway/gunpod_prop
 	name = "\improper Midway"
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
@@ -241,6 +244,9 @@
 /obj/structure/shuttle/part/cyclone/transparent
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
+
+/obj/structure/shuttle/part/cyclone/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor assembly."
 
 /obj/structure/shuttle/part/cyclone/gunpod_prop
 	name = "\improper Cyclone"
@@ -259,6 +265,9 @@
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
 
+/obj/structure/shuttle/part/tornado/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor assembly."
+
 /obj/structure/shuttle/part/tornado/gunpod_prop
 	name = "\improper Tornado"
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin mounted gunpod containing the GAU-11"
@@ -276,6 +285,9 @@
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
 
+/obj/structure/shuttle/part/typhoon/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor assembly."
+
 /obj/structure/shuttle/part/typhoon/gunpod_prop
 	name = "\improper Typhoon"
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin mounted gunpod containing the GAU-11"
@@ -292,6 +304,9 @@
 /obj/structure/shuttle/part/tripoli/transparent
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
+
+/obj/structure/shuttle/part/tripoli/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor assembly."
 
 /obj/structure/shuttle/part/tripoli/gunpod_prop
 	name = "\improper Tripoli"
