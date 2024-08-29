@@ -4321,11 +4321,11 @@
 /area/strata/ag/interior/dorms/canteen)
 "anr" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/type23,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -10148,7 +10148,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/obj/item/weapon/gun/shotgun/type23/pve,
+/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata{
 	icon_state = "white_cyan1"
 	},
@@ -24899,11 +24899,11 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/item/weapon/gun/shotgun/type23,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
+/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
@@ -34113,10 +34113,10 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
-/obj/item/weapon/gun/shotgun/type23,
-/obj/item/weapon/gun/shotgun/type23,
-/obj/item/weapon/gun/shotgun/type23,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp,
+/obj/item/weapon/gun/shotgun/type23/riot,
+/obj/item/weapon/gun/shotgun/type23/riot,
+/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata{
 	icon_state = "red1"
 	},
