@@ -446,7 +446,37 @@
 	icon_state = "xm43a"
 	item_state = "xm43a"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/under/carbine_laser)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/lasersight/carbine)
+	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
+	wield_delay = WIELD_DELAY_MIN
+	attachable_allowed = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+	)
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/lasersight/carbine/S = new(src)
+	S.hidden = FALSE
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_7
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
+	current_mag = null
 
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun

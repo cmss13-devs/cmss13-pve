@@ -3303,6 +3303,12 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 
+/obj/item/attachable/lasersight/carbine
+	name = "XM43A carbine underbarrel laser module"
+	desc = "What in god's name is this doing off the gun?"
+	icon_state = "lasersight"
+	attach_icon = "carbine_laser_a"
+
 /obj/item/attachable/lasersight/upp
 	name = "Zvezda Laser Module"
 	desc = "Visible band 512nm green laser, compatible with NVG and IR. Bears striking resemblance to an old Weyland Yutani offering... Decreases scatter, especially onehanded, slightly boosts accuracy. "
