@@ -46,8 +46,6 @@
 	var/rounds = 0
 	///Indicates whether the M56D will come with its folding mount already attached
 	var/has_mount = FALSE
-	///The distance this has to be away from other m56d_hmg and m56d_post to be placed.
-	var/defense_check_range = 5
 
 /obj/item/device/m56d_gun/Initialize(mapload, ...)
 	. = ..()
@@ -88,10 +86,7 @@
 
 /obj/item/device/m56d_gun/attack_self(mob/user)
 	..()
-	for(var/obj/structure/machinery/machine in urange(defense_check_range, loc))
-		if(istype(machine, /obj/structure/machinery/m56d_hmg) || istype(machine, /obj/structure/machinery/m56d_post))
-			to_chat(user, SPAN_WARNING("This is too close to [machine]!"))
-			return
+
 	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return
 	if(!has_mount)
@@ -132,10 +127,6 @@
 
 	if(!do_after(user, 1 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		return
-	for(var/obj/structure/machinery/machine in urange(defense_check_range, loc))
-		if(istype(machine, /obj/structure/machinery/m56d_hmg) || istype(machine, /obj/structure/machinery/m56d_post))
-			to_chat(user, SPAN_WARNING("This is too close to [machine]!"))
-			return
 
 	var/obj/structure/machinery/m56d_post/post = new(user.loc)
 	post.setDir(user.dir) // Make sure we face the right direction
@@ -324,10 +315,6 @@
 
 	if(istype(O,/obj/item/device/m56d_gun)) //lets mount the MG onto the mount.
 		var/obj/item/device/m56d_gun/MG = O
-		for(var/obj/structure/machinery/machine in urange(MG.defense_check_range, loc, TRUE))
-			if(istype(machine, /obj/structure/machinery/m56d_hmg) || istype(machine, /obj/structure/machinery/m56d_post))
-				to_chat(user, SPAN_WARNING("This is too close to [machine]!"))
-				return
 		if(!anchored)
 			to_chat(user, SPAN_WARNING("[src] must be anchored! Use a screwdriver!"))
 			return
