@@ -459,7 +459,7 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
-/obj/item/storage/pouch/magazine/pistol/pmc_mod88/fill_preset_inventory()
+/obj/item/storage/pouch/magazine/pistol/pmc_vp70/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp70(src)
 

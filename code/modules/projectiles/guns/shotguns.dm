@@ -395,7 +395,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_4
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
-	//damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 

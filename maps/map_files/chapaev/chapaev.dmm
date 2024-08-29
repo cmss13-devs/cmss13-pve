@@ -3693,6 +3693,18 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
+"CS" = (
+/obj/item/paper{
+	icon_state = "paper_words";
+	info = "you fucktards should clean your boots because lieutenant kotov made me scrub the deck clean with a toothbrush when i fucked up (wasnt my fault too) and BOY was it dirty. fuck you all though. know my struggles.";
+	name = "scribbled note";
+	pixel_y = 22
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/supply)
 "CU" = (
 /obj/structure/gun_rack/type71/unloaded,
 /obj/structure/machinery/light/double{
@@ -16891,7 +16903,7 @@ aZ
 jT
 jT
 CK
-Li
+CS
 kh
 vN
 vN
