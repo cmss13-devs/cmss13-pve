@@ -174,9 +174,7 @@
 	},
 /area/shuttle/tornado)
 "hE" = (
-/obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/tornado/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/tornado)
 "jP" = (

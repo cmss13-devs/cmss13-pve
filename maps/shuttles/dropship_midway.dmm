@@ -215,10 +215,6 @@
 	},
 /area/shuttle/midway)
 "tf" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = -10
-	},
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "97a"
 	},
@@ -528,9 +524,7 @@
 	},
 /area/shuttle/midway)
 "LY" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/midway/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/midway)
 "LZ" = (

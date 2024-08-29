@@ -276,6 +276,13 @@
 	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
 	opacity = FALSE
 
+/obj/structure/shuttle/part/typhoon/gunpod_prop
+	name = "\improper Typhoon"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin mounted gunpod containing the GAU-11"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "101a"
+	opacity = TRUE
+
 /obj/structure/shuttle/part/tripoli
 	name = "\improper Tripoli"
 	icon = 'icons/turf/dropship.dmi'
