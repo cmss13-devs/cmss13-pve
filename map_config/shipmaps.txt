@@ -43,3 +43,6 @@ endmap
 
 map tortuga
 endmap
+
+map golden_arrow_forecon
+endmap
