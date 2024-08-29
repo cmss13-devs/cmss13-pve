@@ -130,6 +130,7 @@
 	. = ..()
 	clear_lz_hazards() // This shouldn't normally do anything, but is here just in case
 
+	/*
 	// Assumption: Shuttle origin is its center
 	// Assumption: dwidth is atleast 2 and dheight is atleast 4 otherwise there will be overlap
 	var/list/options = list()
@@ -140,7 +141,6 @@
 	var/right = marine_dropship.x + marine_dropship.dwidth + 2
 	var/z = marine_dropship.z
 
-	/*
 	// Bottom left
 	options += get_valid_sentry_turfs(left, bottom, z, width=5, height=2, structures_to_ignore=structures_to_break)
 	options += get_valid_sentry_turfs(left, bottom + 2, z, width=2, height=6, structures_to_ignore=structures_to_break)
