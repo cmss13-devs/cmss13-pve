@@ -334,9 +334,7 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yA" = (
-/obj/structure/shuttle/part/cyclone/transparent{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/cyclone/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yP" = (
