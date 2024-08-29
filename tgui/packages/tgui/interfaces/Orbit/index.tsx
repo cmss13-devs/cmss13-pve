@@ -1,23 +1,44 @@
 import { filter, sortBy } from 'common/collections';
-import { flow } from 'common/fp';
-import { capitalizeFirst, multiline } from 'common/string';
-import { useBackend, useLocalState } from 'tgui/backend';
-import { Box, Button, Collapsible, ColorBox, Icon, Input, LabeledList, Section, Stack } from 'tgui/components';
+import { capitalizeFirst } from 'common/string';
+import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import {
+  Button,
+  Collapsible,
+  ColorBox,
+  Icon,
+  Image,
+  Input,
+  LabeledList,
+  Section,
+  Stack,
+} from 'tgui/components';
 import { Window } from 'tgui/layouts';
-import { getDisplayName, isJobOrNameMatch, getHealthColor } from './helpers';
+
+import {
+  getDisplayName,
+  getHealthColor,
+  getMostRelevant,
+  isJobOrNameMatch,
+} from './helpers';
 import type { Observable, OrbitData } from './types';
 
-export const Orbit = (props, context) => {
+export const Orbit = (props) => {
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
   return (
     <Window title="Orbit" width={500} height={700}>
       <Window.Content scrollable>
         <Stack fill vertical>
           <Stack.Item>
-            <ObservableSearch />
+            <ObservableSearch
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
           </Stack.Item>
           <Stack.Item mt={0.2} grow>
             <Section fill>
-              <ObservableContent />
+              <ObservableContent searchQuery={searchQuery} />
             </Section>
           </Stack.Item>
         </Stack>
@@ -27,39 +48,28 @@ export const Orbit = (props, context) => {
 };
 
 /** Controls filtering out the list of observables via search */
-const ObservableSearch = (props, context) => {
-  const { act, data } = useBackend<OrbitData>(context);
+const ObservableSearch = (props: {
+  readonly searchQuery: string;
+  readonly setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const { act, data } = useBackend<OrbitData>();
+  const { searchQuery, setSearchQuery } = props;
   const { humans = [], marines = [], survivors = [], xenos = [] } = data;
 
   let auto_observe = data.auto_observe;
 
-  const [autoObserve, setAutoObserve] = useLocalState<boolean>(
-    context,
-    'autoObserve',
-    auto_observe ? true : false
-  );
-  const [searchQuery, setSearchQuery] = useLocalState<string>(
-    context,
-    'searchQuery',
-    ''
-  );
-
   /** Gets a list of Observables, then filters the most relevant to orbit */
   const orbitMostRelevant = (searchQuery: string) => {
-    /** Returns the most orbited observable that matches the search. */
-    const mostRelevant: Observable = flow([
-      // Filters out anything that doesn't match search
-      filter<Observable>((observable) =>
-        isJobOrNameMatch(observable, searchQuery)
-      ),
-      // Sorts descending by orbiters
-      sortBy<Observable>((observable) => -(observable.orbiters || 0)),
-      // Makes a single Observables list for an easy search
-    ])([humans, marines, survivors, xenos].flat())[0];
+    const mostRelevant = getMostRelevant(searchQuery, [
+      humans,
+      marines,
+      survivors,
+      xenos,
+    ]);
+
     if (mostRelevant !== undefined) {
       act('orbit', {
         ref: mostRelevant.ref,
-        auto_observe: autoObserve,
       });
     }
   };
@@ -74,8 +84,8 @@ const ObservableSearch = (props, context) => {
           <Input
             autoFocus
             fluid
-            onEnter={(e, value) => orbitMostRelevant(value)}
-            onInput={(e) => setSearchQuery(e.target.value)}
+            onEnter={(event, value) => orbitMostRelevant(value)}
+            onInput={(event, value) => setSearchQuery(value)}
             placeholder="Search..."
             value={searchQuery}
           />
@@ -83,11 +93,10 @@ const ObservableSearch = (props, context) => {
         <Stack.Divider />
         <Stack.Item>
           <Button
-            color={autoObserve ? 'good' : 'transparent'}
-            icon={autoObserve ? 'toggle-on' : 'toggle-off'}
+            color={auto_observe ? 'good' : 'transparent'}
+            icon={auto_observe ? 'toggle-on' : 'toggle-off'}
             onClick={() => act('toggle_auto_observe')}
-            tooltip={multiline`Toggle Auto-Observe. When active, you'll
-            see the UI / full inventory of whoever you're orbiting. Neat!`}
+            tooltip={`Toggle Full Observe. When active, you'll see the UI / full inventory of whoever you're orbiting. Neat!`}
             tooltipPosition="bottom-start"
           />
         </Stack.Item>
@@ -110,8 +119,9 @@ const ObservableSearch = (props, context) => {
  * Renders a scrollable section replete with subsections for each
  * observable group.
  */
-const ObservableContent = (props, context) => {
-  const { data } = useBackend<OrbitData>(context);
+const ObservableContent = (props: { readonly searchQuery: string }) => {
+  const { data } = useBackend<OrbitData>();
+  const { searchQuery } = props;
   const {
     humans = [],
     marines = [],
@@ -131,28 +141,84 @@ const ObservableContent = (props, context) => {
 
   return (
     <Stack vertical>
-      <ObservableSection color="blue" section={marines} title="Marines" />
-      <ObservableSection color="teal" section={humans} title="Humans" />
-      <ObservableSection color="xeno" section={xenos} title="Xenomorphs" />
-      <ObservableSection color="good" section={survivors} title="Survivors" />
       <ObservableSection
+        searchQuery={searchQuery}
+        color="blue"
+        section={marines}
+        title="Marines"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        color="teal"
+        section={humans}
+        title="Humans"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        color="xeno"
+        section={xenos}
+        title="Xenomorphs"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        color="good"
+        section={survivors}
+        title="Survivors"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
         color="average"
         section={ert_members}
         title="ERT Members"
       />
       <ObservableSection
+        searchQuery={searchQuery}
         color="light-grey"
         section={synthetics}
         title="Synthetics"
       />
-      <ObservableSection color="green" section={predators} title="Predators" />
-      <ObservableSection color="olive" section={escaped} title="Escaped" />
-      <ObservableSection section={vehicles} title="Vehicles" />
-      <ObservableSection section={animals} title="Animals" />
-      <ObservableSection section={dead} title="Dead" />
-      <ObservableSection section={ghosts} title="Ghosts" />
-      <ObservableSection section={misc} title="Misc" />
-      <ObservableSection section={npcs} title="NPCs" />
+      <ObservableSection
+        searchQuery={searchQuery}
+        color="green"
+        section={predators}
+        title="Predators"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        color="olive"
+        section={escaped}
+        title="Escaped"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={vehicles}
+        title="Vehicles"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={animals}
+        title="Animals"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={dead}
+        title="Dead"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={ghosts}
+        title="Ghosts"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={misc}
+        title="Misc"
+      />
+      <ObservableSection
+        searchQuery={searchQuery}
+        section={npcs}
+        title="NPCs"
+      />
     </Stack>
   );
 };
@@ -161,29 +227,26 @@ const ObservableContent = (props, context) => {
  * Displays a collapsible with a map of observable items.
  * Filters the results if there is a provided search query.
  */
-const ObservableSection = (
-  props: {
-    color?: string;
-    section: Array<Observable>;
-    title: string;
-  },
-  context
-) => {
-  const { color, section = [], title } = props;
+const ObservableSection = (props: {
+  readonly color?: string;
+  readonly section: Array<Observable>;
+  readonly title: string;
+  readonly searchQuery: string;
+}) => {
+  const { color, section = [], title, searchQuery } = props;
+
   if (!section.length) {
     return null;
   }
-  const [searchQuery] = useLocalState<string>(context, 'searchQuery', '');
-  const filteredSection: Array<Observable> = flow([
-    filter<Observable>((observable) =>
-      isJobOrNameMatch(observable, searchQuery)
-    ),
-    sortBy<Observable>((observable) =>
+
+  const filteredSection = sortBy(
+    filter(section, (observable) => isJobOrNameMatch(observable, searchQuery)),
+    (observable) =>
       getDisplayName(observable.full_name, observable.nickname)
         .replace(/^"/, '')
-        .toLowerCase()
-    ),
-  ])(section);
+        .toLowerCase(),
+  );
+
   if (!filteredSection.length) {
     return null;
   }
@@ -194,7 +257,8 @@ const ObservableSection = (
         bold
         color={color ?? 'grey'}
         open={!!color}
-        title={title + ` - (${filteredSection.length})`}>
+        title={title + ` - (${filteredSection.length})`}
+      >
         {filteredSection.map((poi, index) => {
           return <ObservableItem color={color} item={poi} key={index} />;
         })}
@@ -204,35 +268,31 @@ const ObservableSection = (
 };
 
 /** Renders an observable button that has tooltip info for living Observables*/
-const ObservableItem = (
-  props: { color?: string; item: Observable },
-  context
-) => {
-  const { act } = useBackend<OrbitData>(context);
+const ObservableItem = (props: {
+  readonly color?: string;
+  readonly item: Observable;
+}) => {
+  const { act } = useBackend<OrbitData>();
   const { color, item } = props;
   const { health, icon, full_name, nickname, orbiters, ref, background_color } =
     item;
 
-  const [autoObserve] = useLocalState<boolean>(context, 'autoObserve', false);
+  const displayHealth = typeof health === 'number';
 
   return (
     <Button
       color={'transparent'}
       style={{
-        'border-color': color ? '#2185d0' : 'grey',
-        'border-style': 'solid',
-        'border-width': '1px',
-        'color': color ? 'white' : 'grey',
+        borderColor: color ? '#2185d0' : 'grey',
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        color: color ? 'white' : 'grey',
       }}
       onClick={() => act('orbit', { ref: ref })}
-      tooltip={!!health && <ObservableTooltip item={item} />}
-      tooltipPosition="bottom-start">
-      {!!health && (
-        <ColorBox
-          color={getHealthColor(health)}
-          style={{ 'margin-right': '0.5em' }}
-        />
-      )}
+      tooltip={displayHealth && <ObservableTooltip item={item} />}
+      tooltipPosition="bottom-start"
+    >
+      {displayHealth && <ColorBox color={getHealthColor(health)} mr="0.5em" />}
       {capitalizeFirst(getDisplayName(full_name, nickname))}
       {!!orbiters && (
         <>
@@ -246,7 +306,7 @@ const ObservableItem = (
 };
 
 /** Displays some info on the mob as a tooltip. */
-const ObservableTooltip = (props: { item: Observable }) => {
+const ObservableTooltip = (props: { readonly item: Observable }) => {
   const {
     item: { caste, health, job, full_name, icon, background_color },
   } = props;
@@ -281,14 +341,11 @@ const ObservableTooltip = (props: { item: Observable }) => {
 };
 
 /** Generates a small icon for buttons based on ICONMAP */
-const ObservableIcon = (
-  props: {
-    icon: Observable['icon'];
-    background_color: Observable['background_color'];
-  },
-  context
-) => {
-  const { data } = useBackend<OrbitData>(context);
+const ObservableIcon = (props: {
+  readonly icon: Observable['icon'];
+  readonly background_color: Observable['background_color'];
+}) => {
+  const { data } = useBackend<OrbitData>();
   const { icons = [] } = data;
   const { icon, background_color } = props;
   if (!icon || !icons[icon]) {
@@ -296,15 +353,14 @@ const ObservableIcon = (
   }
 
   return (
-    <Box
-      as="img"
+    <Image
       mr={1.3}
       src={`data:image/jpeg;base64,${icons[icon]}`}
+      fixBlur
+      verticalAlign="middle"
+      backgroundColor={background_color ? background_color : undefined}
       style={{
         transform: 'scale(2) translatey(-1px)',
-        '-ms-interpolation-mode': 'nearest-neighbor',
-        'background-color': background_color ? background_color : null,
-        'vertical-align': 'middle',
       }}
     />
   );

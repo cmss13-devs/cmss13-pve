@@ -1381,7 +1381,7 @@
 	dir = 1;
 	pixel_y = 17
 	},
-/obj/item/weapon/gun/revolver/cmb{
+/obj/item/weapon/gun/revolver/spearhead{
 	pixel_y = 2
 	},
 /obj/item/clothing/ears/earmuffs{
@@ -1838,9 +1838,7 @@
 /area/varadero/interior/hall_N)
 "bhU" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
@@ -3756,8 +3754,8 @@
 /area/varadero/interior/hall_SE)
 "cur" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88{
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70{
 	pixel_y = -2
 	},
 /obj/structure/machinery/storm_siren{
@@ -4750,7 +4748,7 @@
 	},
 /area/varadero/interior/hall_NW)
 "dcM" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/north_research)
 "dda" = (
@@ -10520,9 +10518,7 @@
 /area/varadero/interior/security)
 "gRU" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
@@ -13553,9 +13549,7 @@
 /area/varadero/interior/administration)
 "iWX" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/eastbeach)
@@ -14364,7 +14358,7 @@
 	},
 /area/varadero/interior/records)
 "jvF" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "multi_tiles"
 	},
@@ -14375,7 +14369,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "jwy" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "purple"
 	},
@@ -19007,9 +19001,7 @@
 /area/varadero/interior/cargo)
 "mtp" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/plating/icefloor{
 	icon_state = "asteroidplating"
@@ -19121,9 +19113,7 @@
 /area/varadero/interior/hall_SE)
 "mvO" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/shiva{
 	dir = 1;
@@ -19646,9 +19636,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/shiva{
 	dir = 1;
@@ -24844,16 +24832,16 @@
 /area/varadero/interior/hall_SE)
 "qfb" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "floor3"
 	},
@@ -26639,7 +26627,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "purple"
 	},
@@ -28691,30 +28679,15 @@
 /area/varadero/interior/maintenance/security)
 "syb" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -32071,7 +32044,7 @@
 	icon_state = "cartridge_1_1"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/plating/icefloor{
 	icon_state = "asteroidplating"
 	},
@@ -37095,8 +37068,8 @@
 /area/varadero/interior/electrical)
 "xRx" = (
 /obj/structure/surface/table/woodentable,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "xRF" = (

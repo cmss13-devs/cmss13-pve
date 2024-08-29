@@ -74,7 +74,10 @@ var/list/reboot_sfx = file2list("config/reboot_sfx.txt")
 	initiate_minimap_icons()
 
 	change_tick_lag(CONFIG_GET(number/ticklag))
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+
+	// As of byond 515.1637 time2text now treats 0 like it does negative numbers so the hour is wrong
+	// We could instead use world.timezone but IMO better to not assume lummox will keep time2text in parity with it
+	GLOB.timezoneOffset = text2num(time2text(10,"hh")) * 36000
 
 	Master.Initialize(10, FALSE, TRUE)
 
@@ -137,6 +140,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	GLOB.world_runtime_log = "[GLOB.log_directory]/runtime.log"
 	GLOB.round_stats = "[GLOB.log_directory]/round_stats.log"
 	GLOB.scheduler_stats = "[GLOB.log_directory]/round_scheduler_stats.log"
+	GLOB.mapping_log = "[GLOB.log_directory]/mapping.log"
 	GLOB.mutator_logs = "[GLOB.log_directory]/mutator_logs.log"
 
 	start_log(GLOB.tgui_log)
@@ -146,6 +150,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	start_log(GLOB.world_runtime_log)
 	start_log(GLOB.round_stats)
 	start_log(GLOB.scheduler_stats)
+	start_log(GLOB.mapping_log)
 	start_log(GLOB.mutator_logs)
 
 	if(fexists(GLOB.config_error_log))
@@ -363,9 +368,39 @@ var/datum/BSQL_Connection/connection
 /world/proc/on_tickrate_change()
 	SStimer.reset_buckets()
 
+/**
+ * Handles incresing the world's maxx var and intializing the new turfs and assigning them to the global area.
+ * If map_load_z_cutoff is passed in, it will only load turfs up to that z level, inclusive.
+ * This is because maploading will handle the turfs it loads itself.
+ */
+/world/proc/increase_max_x(new_maxx, map_load_z_cutoff = maxz)
+	if(new_maxx <= maxx)
+		return
+//	var/old_max = world.maxx
+	maxx = new_maxx
+	if(!map_load_z_cutoff)
+		return
+//	var/area/global_area = GLOB.areas_by_type[world.area] // We're guaranteed to be touching the global area, so we'll just do this
+//	var/list/to_add = block(
+//		locate(old_max + 1, 1, 1),
+//		locate(maxx, maxy, map_load_z_cutoff))
+//	global_area.contained_turfs += to_add
+
+/world/proc/increase_max_y(new_maxy, map_load_z_cutoff = maxz)
+	if(new_maxy <= maxy)
+		return
+//	var/old_maxy = maxy
+	maxy = new_maxy
+	if(!map_load_z_cutoff)
+		return
+//	var/area/global_area = GLOB.areas_by_type[world.area] // We're guarenteed to be touching the global area, so we'll just do this
+//	var/list/to_add = block(
+//		locate(1, old_maxy + 1, 1),
+//		locate(maxx, maxy, map_load_z_cutoff))
+//	global_area.contained_turfs += to_add
+
 /world/proc/incrementMaxZ()
 	maxz++
-	//SSmobs.MaxZChanged()
 
 /** For initializing and starting byond-tracy when BYOND_TRACY is defined
  * byond-tracy is a useful profiling tool that allows the user to view the CPU usage and execution time of procs as they run.

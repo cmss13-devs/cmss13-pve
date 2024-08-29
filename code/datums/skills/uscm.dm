@@ -8,12 +8,25 @@ United States Colonial Marines
 	name = "Private"
 	//same as default
 
+/datum/skills/pfc/recon
+	name = "Recon Private"
+	skills = list(SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED)
+
 /datum/skills/combat_medic
 	name = "Combat Medic"
 	skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
 		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+	)
+
+/datum/skills/combat_medic/recon
+	name = "Recon Medic"
+	skills = list(
+		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
+		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 	)
 
 /datum/skills/combat_engineer
@@ -31,6 +44,16 @@ United States Colonial Marines
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 	)
+
+/datum/skills/smartgunner/recon
+	name = "Recon Smartgunner"
+	skills = list(
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
+	)
+
+
 
 /datum/skills/specialist
 	name = "Squad Weapons Specialist"
@@ -50,6 +73,15 @@ United States Colonial Marines
 		SKILL_JTAC = SKILL_JTAC_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 	)
+
+/datum/skills/tl/recon
+	name = "Recon Fireteam Leader"
+	skills = list(
+		SKILL_JTAC = SKILL_JTAC_TRAINED,
+		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
+	)
+
 
 /datum/skills/SL
 	name = "Squad Leader"
@@ -278,6 +310,7 @@ COMMAND STAFF
 		SKILL_INTEL = SKILL_INTEL_TRAINED,
 		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
 		SKILL_PILOT = SKILL_PILOT_EXPERT,
+		SKILL_NAVIGATIONS = SKILL_NAVIGATIONS_TRAINED,
 	)
 
 /datum/skills/SEA

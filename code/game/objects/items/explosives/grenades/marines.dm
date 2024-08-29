@@ -484,7 +484,7 @@
 	/// The typepath of the nerve gas
 	var/nerve_gas_type = /datum/effect_system/smoke_spread/cn20
 	/// The radius the gas will reach
-	var/nerve_gas_radius = 2
+	var/nerve_gas_radius = 4
 
 /obj/item/explosive/grenade/nerve_gas/Initialize(mapload, ...)
 	. = ..()
@@ -504,6 +504,38 @@
 /obj/item/explosive/grenade/nerve_gas/xeno
 	name = "\improper CN20-X canister grenade"
 	nerve_gas_type = /datum/effect_system/smoke_spread/cn20/xeno
+
+/*
+//================================================
+			LSD Gas Grenades
+//================================================
+*/
+/obj/item/explosive/grenade/LSD
+	name = "\improper ALD-91 canister grenade"
+	desc = "A canister grenade of nonlethal LSD gas. It is set to detonate in 4 seconds."
+	icon_state = "flashbang2"//temp icon
+	det_time = 40
+	item_state = "grenade_phos_clf"//temp icon
+	underslug_launchable = FALSE
+	harmful = TRUE
+	antigrief_protection = FALSE
+	var/datum/effect_system/smoke_spread/LSD/LSD_gas
+	var/LSD_gas_radius = 4
+
+/obj/item/explosive/grenade/LSD/Initialize()
+	. = ..() //if it ain't broke don't fix it
+	LSD_gas = new /datum/effect_system/smoke_spread/LSD
+	LSD_gas.attach(src)
+
+/obj/item/explosive/grenade/LSD/Destroy()
+	QDEL_NULL(LSD_gas)
+	return ..()
+
+/obj/item/explosive/grenade/LSD/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
+	LSD_gas.start()
+	qdel(src)
 
 /*
 //================================================

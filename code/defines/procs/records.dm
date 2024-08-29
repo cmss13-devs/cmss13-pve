@@ -6,7 +6,7 @@
 	G.fields["real_rank"] = "Unassigned"
 	G.fields["sex"] = "Male"
 	G.fields["age"] = "Unknown"
-	G.fields["ethnicity"] = "Unknown"
+	G.fields["skin_color"] = "Unknown"
 	G.fields["p_stat"] = "Active"
 	G.fields["m_stat"] = "Stable"
 	G.fields["species"] = "Human"

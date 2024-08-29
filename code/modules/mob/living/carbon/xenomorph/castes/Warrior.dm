@@ -95,7 +95,9 @@
 
 		if(should_neckgrab && L.mob_size < MOB_SIZE_BIG)
 			L.drop_held_items()
-			L.apply_effect(get_xeno_stun_duration(L, 2), WEAKEN)
+			var/duration = get_xeno_stun_duration(L, 2)
+			L.KnockDown(duration)
+			L.Stun(duration)
 			L.pulledby = src
 			visible_message(SPAN_XENOWARNING("\The [src] grabs [L] by the throat!"), \
 			SPAN_XENOWARNING("You grab [L] by the throat!"))

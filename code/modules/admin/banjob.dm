@@ -146,6 +146,12 @@ WARNING!*/
 	else
 		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Emergency Response Team;jobban4=\ref[M]'>Emergency Response Team</a></td>"
 
+	//Freed Mobs
+	if(jobban_isbanned(M, "Freed Mob", P) || isbanned_dept)
+		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'><font color=red>Freed Mob</font></a></td>"
+	else
+		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'>Freed Mob</a></td>"
+
 	//Survivor
 	if(jobban_isbanned(M, "Survivor", P) || isbanned_dept)
 		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Survivor;jobban4=\ref[M]'><font color=red>Survivor</font></a></td>"

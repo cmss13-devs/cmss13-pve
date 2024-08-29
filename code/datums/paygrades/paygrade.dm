@@ -52,6 +52,9 @@ GLOBAL_LIST_INIT(co_paygrades, list(
 	"MO6C",
 	"MO5",
 	"MO4",
+))
+
+GLOBAL_LIST_INIT(platco_paygrades, list(
 	"MO3",
 	"MO2",
 	"MO1",

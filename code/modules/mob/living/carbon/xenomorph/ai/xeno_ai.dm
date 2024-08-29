@@ -8,7 +8,6 @@
 
 	var/ai_move_delay = 0
 	var/path_update_period = (0.5 SECONDS)
-	var/no_path_found = FALSE
 	var/ai_range = 16
 	var/max_travel_distance = 24
 
@@ -24,9 +23,6 @@
 
 	/// The actual cooldown declaration for forceful retargeting, reference forced_retarget_time for time in between checks
 	COOLDOWN_DECLARE(forced_retarget_cooldown)
-
-	/// Amount of times no path found has occured
-	var/no_path_found_amount = 0
 
 	/// The time interval between calculating new paths if we cannot find a path
 	var/no_path_found_period = (2.5 SECONDS)
@@ -162,21 +158,11 @@
 /mob/living/carbon/xenomorph/proc/set_path(list/path)
 	current_path = path
 	if(!path)
-		no_path_found = TRUE
+		COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
 
 /mob/living/carbon/xenomorph/proc/move_to_next_turf(turf/T, max_range = ai_range)
 	if(!T)
 		return FALSE
-
-	if(no_path_found)
-
-		if(no_path_found_amount > 0)
-			COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
-		no_path_found = FALSE
-		no_path_found_amount++
-		return FALSE
-
-	no_path_found_amount = 0
 
 	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
 		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
@@ -249,14 +235,10 @@
 	var/atom/movable/closest_target
 	var/smallest_distance = INFINITY
 
-	for(var/mob/living/carbon/potential_target as anything in GLOB.alive_mob_list)
-		if(!istype(potential_target))
-			continue
+	var/list/valid_targets = SSxeno_ai.get_valid_targets(src)
 
+	for(var/atom/movable/potential_target as anything in valid_targets)
 		if(z != potential_target.z)
-			continue
-
-		if(!potential_target.ai_can_target(src))
 			continue
 
 		var/distance = get_dist(src, potential_target)
@@ -270,59 +252,6 @@
 			continue
 
 		closest_target = potential_target
-		smallest_distance = distance
-
-	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
-		if(z != potential_vehicle_target.z)
-			continue
-
-		var/distance = get_dist(src, potential_vehicle_target)
-
-		if(distance > ai_range)
-			continue
-
-		if(potential_vehicle_target.health <= 0)
-			continue
-
-		var/multitile_faction = potential_vehicle_target.vehicle_faction
-		if(hive.faction_is_ally(multitile_faction))
-			continue
-
-		var/skip_vehicle
-		var/list/interior_living_mobs = potential_vehicle_target.interior.get_passengers()
-		for(var/mob/living/carbon/human/human_mob in interior_living_mobs)
-			if(!human_mob.ai_can_target(src))
-				continue
-
-			skip_vehicle = FALSE
-			break
-
-		if(skip_vehicle)
-			continue
-
-		viable_targets += potential_vehicle_target
-
-		if(smallest_distance <= distance)
-			continue
-
-		closest_target = potential_vehicle_target
-		smallest_distance = distance
-
-	for(var/obj/structure/machinery/defenses/potential_defense_target as anything in GLOB.all_active_defenses)
-		if(z != potential_defense_target.z)
-			continue
-
-		var/distance = get_dist(src, potential_defense_target)
-
-		if(distance > ai_range)
-			continue
-
-		viable_targets += potential_defense_target
-
-		if(smallest_distance <= distance)
-			continue
-
-		closest_target = potential_defense_target
 		smallest_distance = distance
 
 	var/extra_check_distance = round(smallest_distance * EXTRA_CHECK_DISTANCE_MULTIPLIER)

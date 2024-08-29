@@ -492,7 +492,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 
 	unwield(user)
 	pull_time = world.time + wield_delay
-	if(user.dazed)
+	if(HAS_TRAIT(user, TRAIT_DAZED))
 		pull_time += 3
 	guaranteed_delay_time = world.time + WEAPON_GUARANTEED_DELAY
 
@@ -608,14 +608,13 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 		gun_recoil = recoil_buildup
 
 	var/penetration = 0
-	var/armor_punch = 0
 	var/accuracy = 0
 	var/min_accuracy = 0
 	var/max_range = 0
+	var/effective_range = 0
 	var/scatter = 0
 	var/list/damage_armor_profile_xeno = list()
 	var/list/damage_armor_profile_marine = list()
-	var/list/damage_armor_profile_armorbreak = list()
 	var/list/damage_armor_profile_headers = list()
 
 	var/datum/ammo/in_ammo
@@ -638,35 +637,26 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 		falloff = in_ammo.damage_falloff * damage_falloff_mult
 
 		penetration = in_ammo.penetration
-		armor_punch = in_ammo.damage_armor_punch
 
 		accuracy = in_ammo.accurate_range
 
 		min_accuracy = in_ammo.accurate_range_min
 
 		max_range = in_ammo.max_range
+		effective_range = in_ammo.effective_range_max
 		scatter = in_ammo.scatter
 
 		for(var/i = 0; i<=CODEX_ARMOR_MAX; i+=CODEX_ARMOR_STEP)
 			damage_armor_profile_headers.Add(i)
-			damage_armor_profile_marine.Add(round(armor_damage_reduction(GLOB.marine_ranged_stats, damage, i, penetration)))
-			damage_armor_profile_xeno.Add(round(armor_damage_reduction(GLOB.xeno_ranged_stats, damage, i, penetration)))
-			if(!GLOB.xeno_general.armor_ignore_integrity)
-				if(i != 0)
-					damage_armor_profile_armorbreak.Add("[round(armor_break_calculation(GLOB.xeno_ranged_stats, damage, i, penetration, in_ammo.pen_armor_punch, armor_punch)/i)]%")
-				else
-					damage_armor_profile_armorbreak.Add("N/A")
+			damage_armor_profile_marine.Add(floor(armor_damage_reduction(GLOB.marine_ranged_stats, damage, i, penetration)))
+			damage_armor_profile_xeno.Add(floor(armor_damage_reduction(GLOB.xeno_ranged_stats, damage, i, penetration)))
 
 	var/rpm = max(fire_delay, 1)
 	var/burst_rpm = max((fire_delay * 1.5 + (burst_amount - 1) * burst_delay)/max(burst_amount, 1), 0.0001)
 
 	// weapon info
 
-	data["icon"] = SSassets.transport.get_asset_url("no_name.png")
-
-	if(SSassets.cache["[base_gun_icon].png"])
-		data["icon"] = SSassets.transport.get_asset_url("[base_gun_icon].png")
-
+	data["icon"] = base_gun_icon
 	data["name"] = name
 	data["desc"] = desc
 	data["two_handed_only"] = (flags_gun_features & GUN_WIELDED_FIRING_ONLY)
@@ -688,19 +678,18 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 	data["damage"] = damage
 	data["falloff"] = falloff
 	data["total_projectile_amount"] = bonus_projectile_amount+1
-	data["armor_punch"] = armor_punch
 	data["penetration"] = penetration
 	data["accuracy"] = accuracy * accuracy_mult
 	data["unwielded_accuracy"] = accuracy * accuracy_mult_unwielded
 	data["min_accuracy"] = min_accuracy
 	data["max_range"] = max_range
+	data["effective_range"] = effective_range
 
 	// damage table data
 
 	data["damage_armor_profile_headers"] = damage_armor_profile_headers
 	data["damage_armor_profile_marine"] = damage_armor_profile_marine
 	data["damage_armor_profile_xeno"] = damage_armor_profile_xeno
-	data["damage_armor_profile_armorbreak"] = damage_armor_profile_armorbreak
 
 	return data
 
@@ -715,10 +704,10 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 	data["damage_max"] = 100
 	data["accuracy_max"] = 32
 	data["range_max"] = 32
+	data["effective_range_max"] = EFFECTIVE_RANGE_MAX_TIER_4
 	data["falloff_max"] = DAMAGE_FALLOFF_TIER_1
 	data["penetration_max"] = ARMOR_PENETRATION_TIER_10
 	data["punch_max"] = 5
-	data["glob_armourbreak"] = GLOB.xeno_general.armor_ignore_integrity
 	data["automatic"] = (GUN_FIREMODE_AUTOMATIC in gun_firemode_list)
 	data["auto_only"] = ((length(gun_firemode_list) == 1) && (GUN_FIREMODE_AUTOMATIC in gun_firemode_list))
 
@@ -726,8 +715,8 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 
 /obj/item/weapon/gun/ui_assets(mob/user)
 	. = ..() || list()
-	. += get_asset_datum(/datum/asset/simple/firemodes)
-	//. += get_asset_datum(/datum/asset/spritesheet/gun_lineart)
+	. += get_asset_datum(/datum/asset/spritesheet/gun_lineart_modes)
+	. += get_asset_datum(/datum/asset/spritesheet/gun_lineart)
 
 // END TGUI \\
 
@@ -758,7 +747,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 	slowdown = initial(slowdown) + aim_slowdown
 	place_offhand(user, initial(name))
 	wield_time = world.time + wield_delay
-	if(user.dazed)
+	if(HAS_TRAIT(user, TRAIT_DAZED))
 		wield_time += 5
 	guaranteed_delay_time = world.time + WEAPON_GUARANTEED_DELAY
 	//slower or faster wield delay depending on skill.
@@ -1454,7 +1443,7 @@ and you're good to go.
 		if(projectile_to_fire.ammo.bonus_projectiles_amount)
 			var/obj/projectile/BP
 			for(var/i in 1 to projectile_to_fire.ammo.bonus_projectiles_amount)
-				BP = new /obj/projectile(attacked_mob.loc, create_cause_data(initial(name), user))
+				BP = new /obj/projectile(null, create_cause_data(initial(name), user))
 				BP.generate_bullet(GLOB.ammo_list[projectile_to_fire.ammo.bonus_projectiles_type], 0, NO_FLAGS)
 				BP.accuracy = round(BP.accuracy * projectile_to_fire.accuracy/initial(projectile_to_fire.accuracy)) //Modifies accuracy of pellets per fire_bonus_projectiles.
 				BP.damage *= damage_buff

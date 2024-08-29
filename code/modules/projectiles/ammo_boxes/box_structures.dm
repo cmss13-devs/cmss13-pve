@@ -131,7 +131,7 @@
 		to_chat(user, SPAN_DANGER("It's on fire and might explode!"))
 		return
 	if(!item_box.handfuls)
-		if(istypestrict(W,item_box.magazine_type))
+		if(istypestrict(W,item_box.magazine_type) || is_type_in_list(W, item_box.allowed_magazines))
 			if(istype(W, /obj/item/storage/box/m94))
 				var/obj/item/storage/box/m94/flare_pack = W
 				if(flare_pack.contents.len < flare_pack.max_storage_space)
