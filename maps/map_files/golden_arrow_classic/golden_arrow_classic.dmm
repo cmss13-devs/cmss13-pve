@@ -1274,9 +1274,7 @@
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/prep_hallway)
 "jx" = (
-/obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case"
-	},
+/obj/structure/largecrate/supply/explosives/grenades/less,
 /obj/structure/largecrate/supply/motiondetectors{
 	pixel_y = 10
 	},
@@ -1614,7 +1612,7 @@
 /area/golden_arrow/medical)
 "lr" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/pumpshotgun/special,
+/obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "lt" = (
@@ -7525,7 +7523,6 @@
 "Zi" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	pixel_y = 10;
 	pixel_x = 3
 	},
@@ -7539,7 +7536,7 @@
 	name = "spent snailshot";
 	layer = 2.7
 	},
-/obj/item/storage/box/guncase/pumpshotgun/special,
+/obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "Zn" = (
