@@ -450,6 +450,10 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 	wield_delay = WIELD_DELAY_MIN
 	attachable_allowed = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/stock/rifle,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/lasersight/carbine,
 	)
