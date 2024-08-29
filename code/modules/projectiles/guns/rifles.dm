@@ -440,7 +440,7 @@
 //XM43A, a cut down official carbine modification of the M41A. Y'know,  a space XM177 or whatever.
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine
-	. = ..()
+. = ..()
 	name = "XM43A pulse carbine"
 	desc = "Pulse action 10x24mm caseless carbine, semi-experimental. Exchanges the firepower of a grenade launcher and some modularity for handling."
 	icon_state = "xm43a"
