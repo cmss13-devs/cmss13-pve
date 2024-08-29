@@ -1,6 +1,6 @@
 /obj/structure/machinery/computer/dropship_weapons
-	name = "abstract dropship weapons controls"
-	desc = "A computer to manage equipment, weapons and simulations installed on the dropship."
+	name = "abstract dropship fire control"
+	desc = "The rear console of a dropship; primarily intended to operate weapons and radioelectronic battle actions by the weapons officer. Also contains a set of redundant flight controls. The sensor fusion display informs the pilot of everything the aircraft picks up, fed through a powerful logic driver."
 	density = TRUE
 	icon = 'icons/obj/structures/machinery/shuttle-parts.dmi'
 	icon_state = "consoleright"
