@@ -2512,6 +2512,7 @@
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\special_roles.dm"
 #include "void-marines\code\vendors.dm"
+#include "void-marines\code\loadout_presets\rednecks.dm"
 #include "void-marines\code\modules\mob\living\carbon\human\emote.dm"
 #include "void-marines\code\playable_factions\alt_roles.dm"
 #include "void-marines\code\playable_factions\areas.dm"
