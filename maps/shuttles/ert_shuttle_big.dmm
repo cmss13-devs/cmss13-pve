@@ -105,14 +105,6 @@
 /obj/item/device/radio,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
-"fX" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/cameras{
-	network = list("Military","Almayer");
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/shuttle/ert)
 "gN" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -176,23 +168,6 @@
 /obj/structure/bed,
 /obj/item/bedsheet/rd,
 /turf/open/floor/wood,
-/area/shuttle/ert)
-"kR" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/largecrate/random/case/small{
-	pixel_y = 5
-	},
-/obj/item/storage/backpack/lightpack,
-/obj/item/storage/backpack/lightpack,
-/obj/item/storage/backpack/lightpack,
-/obj/item/storage/box/bodybags{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "lp" = (
 /obj/effect/decal/warning_stripes{
@@ -530,12 +505,6 @@
 	},
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
-"Ca" = (
-/obj/structure/machinery/optable,
-/obj/item/tank/anesthetic,
-/obj/item/clothing/mask/breath/medical,
-/turf/open/floor/almayer/plate,
-/area/shuttle/ert)
 "Cd" = (
 /obj/structure/machinery/door/window/westright{
 	dir = 4
@@ -728,20 +697,6 @@
 	},
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
-"PB" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
-/obj/item/tool/pen,
-/obj/item/tool/pen,
-/obj/item/tool/pen,
-/turf/open/floor/almayer/plate,
-/area/shuttle/ert)
 "PE" = (
 /turf/closed/wall/almayer/white/hull,
 /area/shuttle/ert)
@@ -902,13 +857,6 @@
 /obj/structure/surface/rack,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/device/radio,
-/turf/open/floor/almayer/plate,
-/area/shuttle/ert)
-"Ze" = (
-/obj/structure/machinery/door/window/westright{
-	dir = 4
-	},
-/obj/item/tool/soap,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "Zw" = (
@@ -1307,7 +1255,7 @@ rv
 Qp
 vN
 Ml
-Ze
+Cd
 Ml
 rv
 VV
@@ -1379,7 +1327,7 @@ hZ
 TO
 Nc
 Ml
-kR
+fP
 iJ
 ph
 PE

@@ -857,16 +857,8 @@
 "ea" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/shotgunpump{
-	pixel_y = 17
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_y = 6;
-	pixel_x = -4
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_y = 6;
-	pixel_x = 6
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
@@ -1028,6 +1020,7 @@
 "eU" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
 	pixel_y = 10
 	},
 /obj/item/ammo_box/magazine/mk1{
@@ -4501,6 +4494,7 @@
 	},
 /obj/item/defenses/handheld/sentry,
 /obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
 	layer = 3.1;
 	pixel_x = 20;
 	pixel_y = 10
@@ -6198,9 +6192,6 @@
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/rifle/m4ra/pve{
-	pixel_y = 8
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "AC" = (
@@ -10449,12 +10440,14 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Sr" = (
+/obj/item/storage/box/guncase/pumpshotgun/special{
+	pixel_y = 4
+	},
 /obj/item/storage/box/guncase/flamer/special{
 	layer = 3.1;
 	pixel_y = 10
 	},
 /obj/structure/surface/rack,
-/obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "Ss" = (
