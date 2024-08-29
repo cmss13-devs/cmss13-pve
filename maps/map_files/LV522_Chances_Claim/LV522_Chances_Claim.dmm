@@ -3511,7 +3511,7 @@
 /area/lv522/indoors/a_block/security)
 "bSa" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -3542,7 +3542,7 @@
 	},
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/shiva{
 	icon_state = "radiator_tile2"
 	},
@@ -4306,7 +4306,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
 "ckT" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
 	},
@@ -22691,8 +22691,8 @@
 "jmd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/prison{
 	icon_state = "darkredfull2"
 	},
@@ -38900,7 +38900,7 @@
 	},
 /area/lv522/landing_zone_1)
 "pni" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/kitchen/glass)
 "pnj" = (
@@ -43194,7 +43194,7 @@
 	},
 /area/lv522/atmos/command_centre)
 "qPu" = (
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/item/clothing/head/soft/sec,
 /obj/structure/curtain/medical,
 /turf/open/floor/strata{
@@ -60611,8 +60611,8 @@
 /area/lv522/indoors/c_block/mining)
 "xbj" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
 	icon_state = "darkredfull2"
