@@ -1,6 +1,6 @@
 /obj/structure/machinery/computer/shuttle/dropship/flight
-	name = "dropship flight console"
-	desc = "The multi-purpose display cluster of a dropship. Integrates information from avionics to radioelectronic battle state into a combined battlefield picture. With it, it's possible to fly alone, though difficult. This station also has backup fire control authority."
+	name = "dropship navigation computer"
+	desc = "A flight computer that can be used for autopilot or long-range flights."
 	icon = 'icons/obj/structures/machinery/shuttle-parts.dmi'
 	icon_state = "console"
 	unacidable = TRUE
