@@ -457,14 +457,6 @@
 		/obj/item/attachable/lasersight/carbine,
 	)
 
-/obj/item/weapon/gun/rifle/m41aMK1/carbine/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/lasersight/carbine/S = new(src)
-	S.hidden = FALSE
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
