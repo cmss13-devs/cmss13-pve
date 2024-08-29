@@ -1,4 +1,5 @@
 import { map } from 'common/collections';
+import { classes } from 'common/react';
 
 import { useBackend } from '../backend';
 import { Box, Divider, Flex, ProgressBar, Section, Table } from '../components';
@@ -68,7 +69,7 @@ const GeneralInfo = (props) => {
         <Flex.Item align="center">
           <Box height="5px" />
           <Box align="center">
-            <img src={resolveAsset(icon)} />
+            <span className={classes(['Icon', 'gunlineart96x96', `${icon}`])} />
           </Box>
           <Box height="5px" />
         </Flex.Item>
@@ -78,25 +79,33 @@ const GeneralInfo = (props) => {
         <Flex.Item align="center">
           <Flex direction="row">
             <Flex.Item>
-              {!auto_only ? (
-                <img src={resolveAsset('single.png')} />
-              ) : (
-                <img src={resolveAsset('disabled_single.png')} />
-              )}
+              <span
+                className={classes([
+                  'Icon',
+                  'gunlineartmodes96x32',
+                  `${!auto_only ? 'single' : 'disabled_single'}`,
+                ])}
+              />
             </Flex.Item>
             <Flex.Item>
-              {!auto_only && burst_amount > 1 ? (
-                <img src={resolveAsset('burst.png')} />
-              ) : (
-                <img src={resolveAsset('disabled_burst.png')} />
-              )}
+              <span
+                className={classes([
+                  'Icon',
+                  'gunlineartmodes96x32',
+                  `${
+                    !auto_only && burst_amount > 1 ? 'burst' : 'disabled_burst'
+                  }`,
+                ])}
+              />
             </Flex.Item>
             <Flex.Item>
-              {automatic ? (
-                <img src={resolveAsset('auto.png')} />
-              ) : (
-                <img src={resolveAsset('disabled_automatic.png')} />
-              )}
+              <span
+                className={classes([
+                  'Icon',
+                  'gunlineartmodes96x32',
+                  `${automatic ? 'auto' : 'disabled_automatic'}`,
+                ])}
+              />
             </Flex.Item>
           </Flex>
         </Flex.Item>
@@ -272,11 +281,25 @@ const Accuracy = (props) => {
 
 const Range = (props) => {
   const { data } = useBackend();
-  const { max_range, range_max, falloff, falloff_max } = data;
+  const {
+    max_range,
+    range_max,
+    falloff,
+    falloff_max,
+    effective_range,
+    effective_range_max,
+  } = data;
   return (
     <>
       <ProgressBar value={max_range / range_max} ranges={RedGreenRange}>
         Max range: {max_range} / {range_max}
+      </ProgressBar>
+      <Box height="5px" />
+      <ProgressBar
+        value={effective_range / effective_range_max}
+        ranges={RedGreenRange}
+      >
+        Effective range: {effective_range}
       </ProgressBar>
       <Box height="5px" />
       <ProgressBar value={falloff / falloff_max} ranges={GreedRedRange}>
@@ -289,16 +312,13 @@ const Range = (props) => {
 
 const ArmourPen = (props) => {
   const { data } = useBackend();
-  const { penetration, penetration_max, armor_punch, punch_max } = data;
+  const { penetration, penetration_max } = data;
   return (
     <>
       <ProgressBar value={penetration / penetration_max} ranges={RedGreenRange}>
         Armour penetration: {penetration} / {penetration_max}
       </ProgressBar>
       <Box height="5px" />
-      <ProgressBar value={armor_punch / punch_max} ranges={RedGreenRange}>
-        Armour punch: {armor_punch} / {punch_max}
-      </ProgressBar>
     </>
   );
 };
@@ -308,9 +328,7 @@ const DamageTable = (props) => {
   const {
     damage_armor_profile_marine,
     damage_armor_profile_xeno,
-    damage_armor_profile_armorbreak,
     damage_armor_profile_headers,
-    glob_armourbreak,
   } = data;
   return (
     <Section title="Damage table">
@@ -337,14 +355,6 @@ const DamageTable = (props) => {
             <Table.Cell key={i}>{entry}</Table.Cell>
           ))}
         </Table.Row>
-        {!glob_armourbreak ? (
-          <Table.Row>
-            <Table.Cell textAlign="left">Armor break</Table.Cell>
-            {map(damage_armor_profile_armorbreak, (entry, i) => (
-              <Table.Cell key={i}>{entry}</Table.Cell>
-            ))}
-          </Table.Row>
-        ) : null}
       </Table>
     </Section>
   );
