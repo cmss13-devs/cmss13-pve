@@ -1027,7 +1027,9 @@
 /area/golden_arrow/prep_hallway)
 "eU" = (
 /obj/structure/largecrate/supply/motiondetectors,
-/obj/structure/largecrate/supply/explosives/grenades/lesspixel_y = 10},
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	pixel_y = 10
+	},
 /obj/item/ammo_box/magazine/mk1{
 	layer = 3.1;
 	pixel_x = -2;
