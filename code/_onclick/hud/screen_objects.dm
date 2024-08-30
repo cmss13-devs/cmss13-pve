@@ -496,9 +496,21 @@
 /atom/movable/screen/squad_leader_locator/clicked(mob/living/carbon/human/user, mods)
 	if(!istype(user))
 		return
+
+	///The object which we're using the tracking options from.
+	var/obj/item/device/tracker_object
+
 	var/obj/item/device/radio/headset/earpiece = user.get_type_in_ears(/obj/item/device/radio/headset)
-	var/has_access = earpiece.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece.frequency)
-	if(!istype(earpiece) || !earpiece.has_hud || !has_access)
+	var/has_access = earpiece?.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece?.frequency)
+	if(istype(earpiece) && earpiece.has_hud && has_access)
+		tracker_object = earpiece
+
+	//visor is the 2nd pick
+	var/obj/item/device/helmet_visor/visor = locate() in user.head
+	if(visor?.has_tracker && !tracker_object)
+		tracker_object = visor
+
+	if(!tracker_object)
 		to_chat(user, SPAN_WARNING("Unauthorized access detected."))
 		return
 	if(mods["shift"])
@@ -506,7 +518,7 @@
 		to_chat(user, SPAN_NOTICE("You are currently at: <b>[current_area.name]</b>."))
 		return
 	else if(mods["alt"])
-		earpiece.switch_tracker_target()
+		tracker_object.switch_tracker_target()
 		return
 	if(user.get_active_hand())
 		return

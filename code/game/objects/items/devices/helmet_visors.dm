@@ -20,6 +20,20 @@
 	///The overlay name for when our visor is active, in 'icons/mob/humans/onmob/helmet_garb.dmi'
 	var/helmet_overlay = "hud_sight_right"
 
+	///Whether the visor allows tracking squad members or not.
+	var/has_tracker = TRUE
+
+	///Default tracking options for the visor.
+	var/list/tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+		)
+
+	///The target that we are currently tracking.
+	var/locate_setting = TRACKER_SL
+
 /obj/item/device/helmet_visor/Destroy(force)
 	if(!istype(loc, /obj/item/clothing/head/helmet/marine))
 		return ..()
@@ -64,10 +78,21 @@
 	var/datum/mob_hud/current_mob_hud = huds[hud_type]
 	current_mob_hud.add_hud_to(user, attached_helmet)
 
+	if(has_tracker && user.mind && user.assigned_squad && user.hud_used && user.hud_used.locate_leader)
+		user.show_hud_tracker()
+
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	var/datum/mob_hud/current_mob_hud = huds[hud_type]
 	current_mob_hud.remove_hud_from(user, attached_helmet)
+
+	if(has_tracker && user.hud_used && user.hud_used.locate_leader)
+		//if we have a headset that also lets us track targets, do not hide the HUD.
+		var/obj/item/device/radio/headset/earpiece = user.get_type_in_ears(/obj/item/device/radio/headset)
+		var/has_access = earpiece?.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece.frequency)
+		if(istype(earpiece) && earpiece.has_hud && has_access)
+			return
+		user.hide_hud_tracker()
 
 /// Called by /obj/item/clothing/head/helmet/marine/get_examine_text(mob/user) to get extra examine text for this visor
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
@@ -85,6 +110,22 @@
 	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_USCM, MOB_HUD_MEDICAL_ADVANCED)
 
+/obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = huds[type]
+		current_mob_hud.add_hud_to(user, attached_helmet)
+
+/obj/item/device/helmet_visor/medical/advanced/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = huds[type]
+		current_mob_hud.remove_hud_from(user, attached_helmet)
+
+/obj/item/device/helmet_visor/medical/advanced/process(delta_time)
+	return PROCESS_KILL
 /obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
@@ -172,6 +213,7 @@
 	hud_type = null
 	action_icon_string = "blank_hud_sight_down"
 	helmet_overlay = "weld_visor"
+	has_tracker = FALSE
 
 /obj/item/device/helmet_visor/welding_visor/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	attached_helmet.vision_impair = VISION_IMPAIR_MAX
