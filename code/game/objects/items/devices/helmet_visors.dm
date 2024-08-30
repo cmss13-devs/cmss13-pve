@@ -126,22 +126,6 @@
 
 /obj/item/device/helmet_visor/medical/advanced/process(delta_time)
 	return PROCESS_KILL
-/obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = huds[type]
-		current_mob_hud.add_hud_to(user, attached_helmet)
-
-/obj/item/device/helmet_visor/medical/advanced/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = huds[type]
-		current_mob_hud.remove_hud_from(user, attached_helmet)
-
-/obj/item/device/helmet_visor/medical/advanced/process(delta_time)
-	return PROCESS_KILL
 
 /obj/item/device/helmet_visor/medical/advanced/can_toggle(mob/living/carbon/human/user)
 	. = ..()
