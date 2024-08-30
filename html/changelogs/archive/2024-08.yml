@@ -115,3 +115,18 @@
   - rscadd: 'The utility vendor now has knives in it.
 
       :cl:'
+2024-08-29:
+  AndroBetel:
+  - rscadd: Water now helps you regen blood.
+  - rscadd: Vomiting now removes some reagents, helping negate OD effects.
+  - balance: Vulture no longer has minimum range requirements to hit bugs.
+  - rscadd: Adds restricted underwear.
+  Doubleumc:
+  - code_imp: changed slotting - new players and players that got skipped previous
+      rounds have a higher chance to get a slot
+  - code_imp: AI caches valid targets for better performance
+  Merrgear:
+  - qol: made crit less boring
+  - code_imp: 'changed the crit code to not knock you unconcious
+
+      :cl:'
