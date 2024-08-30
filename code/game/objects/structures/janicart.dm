@@ -1,6 +1,6 @@
 /obj/structure/janitorialcart
 	name = "janitorial cart"
-	desc = "The ultimate in janitorial carts! Has space for water, mops, signs, trash bags, and more!"
+	desc = "A blue janitorial cart that has space for water, mops, signs, and trash bags."
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cart_blue"
 	anchored = FALSE
@@ -16,6 +16,9 @@
 	var/obj/item/reagent_container/glass/bucket/janibucket/mybucket
 	var/signs = 0 //maximum capacity hardcoded below
 
+/obj/structure/janitorialcart
+	desc = "A brown janitorial cart that has space for water, mops, signs, and trash bags."
+	icon_state = "cart_brown"
 
 /obj/structure/janitorialcart/New()
 	..()
@@ -188,5 +191,3 @@
 	qdel(src)
 	return XENO_ATTACK_ACTION
 
-/obj/structure/janitorialcart/brown
-	icon_state = "cart_brown"
