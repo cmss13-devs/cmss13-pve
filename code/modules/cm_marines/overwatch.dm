@@ -218,6 +218,9 @@
 				if(DEAD)
 					mob_state = "Dead"
 
+			if(mob_state == "Conscious" && (locate(/datum/effects/crit) in marine_human.effects_list))
+				mob_state = "Incapacitated"
+
 			if(!istype(marine_human.head, /obj/item/clothing/head/helmet/marine))
 				has_helmet = FALSE
 
