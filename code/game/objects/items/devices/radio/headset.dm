@@ -580,7 +580,7 @@
 	volume = RADIO_VOLUME_CRITICAL
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CO
-	has_hud = TRUE
+	has_hud = FALSE
 
 	inbuilt_tracking_options = list(
 		"Commanding Officer" = TRACKER_CO,
@@ -876,7 +876,7 @@
 	frequency = PMC_FREQ
 	icon_state = "pmc_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl)
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_PMC
 
 	misc_tracking = TRUE
@@ -891,7 +891,7 @@
 	frequency = CBRN_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 	ignore_z = TRUE
-	has_hud = TRUE
+	has_hud = FALSE
 
 /obj/item/device/radio/headset/distress/pmc/hvh
 	desc = "A special headset used by corporate personnel. Channels are as follows: :o - colony."
@@ -940,7 +940,7 @@
 	desc = "A special headset used by UPP military. To access the colony channel, use :o."
 	frequency = UPP_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_UPP
 	minimap_type = MINIMAP_FLAG_UPP
 
@@ -980,7 +980,7 @@
 	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel use :o."
 	frequency = CLF_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_CLF
 
 /obj/item/device/radio/headset/distress/CLF/cct
@@ -1011,7 +1011,7 @@
 	frequency = VAI_FREQ
 	icon_state = "vai_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/contractor)
-	has_hud = TRUE
+	has_hud = FALSE
 
 /obj/item/device/radio/headset/distress/royal_marine
 	name = "Royal Marine Headset"
@@ -1019,7 +1019,7 @@
 	frequency = RMC_FREQ
 	icon_state = "vai_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_TWE
 	volume = RADIO_VOLUME_IMPORTANT
 
@@ -1030,7 +1030,7 @@
 	frequency = CMB_FREQ
 	icon_state = "cmb_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_USCM
 
 /obj/item/device/radio/headset/distress/CMB/limited
@@ -1075,7 +1075,7 @@
 	frequency = SOF_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/soc/forecon)
 	volume = RADIO_VOLUME_QUIET
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_USCM
 
 /obj/item/device/radio/headset/almayer/mcom/vc
@@ -1092,5 +1092,5 @@
 	initial_keys = list(/obj/item/device/encryptionkey/upp)
 	volume = RADIO_VOLUME_QUIET
 	ignore_z = FALSE
-	has_hud = TRUE
+	has_hud = FALSE
 	hud_type = MOB_HUD_FACTION_UPP
