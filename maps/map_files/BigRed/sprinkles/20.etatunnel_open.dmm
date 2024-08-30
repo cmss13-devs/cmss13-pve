@@ -374,7 +374,7 @@
 /area/bigredv2/outside/lz2_south_cas)
 "Jy" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = -5;
 	pixel_y = 17

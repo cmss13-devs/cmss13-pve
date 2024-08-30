@@ -179,7 +179,6 @@
 "aaF" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony{
 	dir = 1;
-	locked = 0;
 	name = "CORSAT Armory";
 	req_access_txt = "101"
 	},
@@ -372,12 +371,12 @@
 /area/corsat/gamma/hangar)
 "abn" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "red"
@@ -1006,12 +1005,12 @@
 /area/corsat/gamma/hangar/checkpoint)
 "adc" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "red"
@@ -2354,7 +2353,6 @@
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	damage_cap = 4000;
 	dir = 1;
-	locked = 0;
 	name = "\improper Emergency Access";
 	req_access_txt = "100";
 	req_one_access = null
@@ -5915,7 +5913,6 @@
 "arv" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	damage_cap = 4000;
-	locked = 0;
 	name = "\improper Emergency Access";
 	req_access_txt = "100";
 	req_one_access = null
@@ -9026,9 +9023,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -11310,16 +11307,16 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/residential/researcher)
 "aGc" = (
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "red"
@@ -13784,9 +13781,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -19093,9 +19090,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -19114,9 +19111,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -21865,8 +21862,7 @@
 /area/corsat/gamma/engineering)
 "bij" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/corsat/gamma/biodome)
@@ -28911,9 +28907,9 @@
 "bDd" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -28948,9 +28944,9 @@
 "bDk" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -29004,7 +29000,6 @@
 /area/corsat/omega/checkpoint)
 "bDv" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	locked = 0;
 	name = "Security Armory";
 	req_access_txt = "101"
 	},
@@ -30454,8 +30449,7 @@
 /area/corsat/gamma/airlock/control)
 "bJE" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /turf/open/mars,
 /area/corsat/sigma/biodome)
@@ -34240,8 +34234,7 @@
 /area/corsat/sigma/airlock/control)
 "bVD" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /turf/open/floor{
 	dir = 1;
@@ -35490,7 +35483,6 @@
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	dir = 1;
 	name = "Weapons Development";
-	req_access = null;
 	req_one_access_txt = "103"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -35817,8 +35809,7 @@
 /area/corsat/omega/control)
 "caS" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /turf/open/floor/plating,
 /area/corsat/sigma/biodome/testgrounds)
@@ -37885,8 +37876,7 @@
 /area/corsat/omega/hallways)
 "dFb" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/corsat/gamma/biodome)
@@ -41819,7 +41809,7 @@
 /area/corsat/sigma/southeast/datalab)
 "gys" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/corsat{
 	icon_state = "red"
 	},
@@ -43628,9 +43618,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -48492,7 +48482,6 @@
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	dir = 1;
 	name = "Teleportation Lab";
-	req_access = null;
 	req_one_access_txt = "103"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -49119,8 +49108,7 @@
 /area/corsat/omega/airlocknorth/id)
 "lUY" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0
+	name = "Floodlight"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/snow/layer3,
@@ -51006,7 +50994,6 @@
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	dir = 1;
 	name = "Teleportation Chamber";
-	req_access = null;
 	req_one_access_txt = "101;103"
 	},
 /turf/open/floor/corsat{
@@ -56957,10 +56944,10 @@
 /area/corsat/sigma/hangar/security)
 "rRh" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "red"
@@ -58930,9 +58917,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -59403,7 +59390,7 @@
 /area/corsat/gamma/hallwaysouth)
 "tFs" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "red"
@@ -61765,7 +61752,6 @@
 "vqF" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	damage_cap = 4000;
-	locked = 0;
 	name = "\improper Emergency Access";
 	req_access_txt = "100";
 	req_one_access = null

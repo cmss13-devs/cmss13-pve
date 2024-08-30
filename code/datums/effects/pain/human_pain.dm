@@ -58,7 +58,8 @@
 
 	var/mob/living/carbon/affected_mob = affected_atom
 	if(do_once)
-		affected_mob.apply_effect(3, PARALYZE)
+		affected_mob.KnockDown(3)
+		affected_mob.Stun(3)
 		do_once = FALSE
 
 	affected_mob.EyeBlur(2)
@@ -83,7 +84,8 @@
 	affected_mob.EyeBlur(2)
 	if(affected_mob.pain && affected_mob.pain.feels_pain)
 		affected_mob.TalkStutter(2)
-	affected_mob.apply_effect(2, PARALYZE)
+	affected_mob.KnockDown(2)
+	affected_mob.Stun(2)
 	if(!affected_mob.reagents || !affected_mob.reagents.has_reagent("inaprovaline"))
 		affected_mob.apply_damage(0.5, OXY)
 

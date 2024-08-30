@@ -53,3 +53,5 @@ GLOBAL_VAR(xeno_queue_candidate_count)
 GLOBAL_VAR(obfs_x)
 /// A number between -500 and 500.
 GLOBAL_VAR(obfs_y)
+
+GLOBAL_VAR_INIT(ai_xeno_weeding, TRUE)

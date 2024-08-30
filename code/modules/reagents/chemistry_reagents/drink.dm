@@ -151,6 +151,17 @@
 	description = "Made in the modern day with proper pomegranate substitute. Who uses real fruit, anyways?"
 	color = "#FF004F" // rgb: 255, 0, 79
 
+/datum/reagent/drink/pineapplejuice
+	name = "Pineapple Juice"
+	id = "pineapplejuice"
+	description = "Refreshingly citric, with a pleasant flavor."
+	color = "#FFC000" // rgb: 255, 192, 0
+
+/datum/reagent/drink/applejuice
+	name = "Apple Juice"
+	id = "applejuice"
+	description = "The pleasantly sweet taste of apples, now in liquid form."
+	color = "#f59a40" // rgb: 245, 154, 64
 
 
 //MILK//
@@ -555,8 +566,7 @@
 /datum/reagent/neurotoxin/on_mob_life(mob/living/carbon/M)
 	. = ..()
 	if(!.) return
-	if(!HAS_TRAIT(src, TRAIT_FLOORED))
-		M.apply_effect(5, WEAKEN)
+	M.KnockDown(5)
 	if(!data) data = 1
 	data++
 	M.dizziness +=6

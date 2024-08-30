@@ -13,8 +13,6 @@
 	health = 2000
 	firing_arc = 120
 
-	origins = list(0, -2)
-
 	allowed_seat = VEHICLE_DRIVER
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
