@@ -2,7 +2,7 @@
 	name = "janitorial cart"
 	desc = "The ultimate in janitorial carts! Has space for water, mops, signs, trash bags, and more!"
 	icon = 'icons/obj/janitor.dmi'
-	icon_state = "cart"
+	icon_state = "cart_blue"
 	anchored = FALSE
 	density = TRUE
 	drag_delay = 1
@@ -188,3 +188,5 @@
 	qdel(src)
 	return XENO_ATTACK_ACTION
 
+/obj/structure/janitorialcart/brown
+	icon_state = "cart_brown"
