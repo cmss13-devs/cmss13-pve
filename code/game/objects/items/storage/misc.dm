@@ -166,7 +166,7 @@
 
 /obj/item/storage/box/loadout/Spearhead_loadout
 	name = "Spearhead Armoury storage case"
-	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and additional speedloaders."
+	desc = "A relatively large storage case containing a loaded Spearhead Armoury revolver and additional speedloaders."
 
 /obj/item/storage/box/loadout/Spearhead_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead())
@@ -175,7 +175,7 @@
 
 /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	name = "Spearhead Armoury storage case"
-	desc = "A relatively large storage case containing a loaded Spearhead Armoury autorevolver and additional speedloaders."
+	desc = "A relatively large storage case containing a loaded Spearhead Armoury revolver and additional speedloaders."
 
 /obj/item/storage/box/loadout/Spearhead_loadout/custom/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/black())
