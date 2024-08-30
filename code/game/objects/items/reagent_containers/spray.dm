@@ -3,7 +3,7 @@
 	desc = "A spray bottle, with an unscrewable top."
 	icon = 'icons/obj/items/spray.dmi'
 	icon_state = "spray"
-	item_state = "cleaner"
+	item_state = "spray"
 	flags_atom = OPENCONTAINER|FPRINT
 	flags_item = NOBLUDGEON
 	flags_equip_slot = SLOT_WAIST
