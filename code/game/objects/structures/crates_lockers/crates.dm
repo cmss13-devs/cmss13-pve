@@ -411,11 +411,11 @@
 	weapon_type = /obj/item/weapon/gun/pistol/m4a3/training
 	ammo_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/structure/closet/crate/weapon/training/mod88
-	name = "training 88 mod 4 crate"
-	desc = "A crate with an 88 mod 4 pistol and nonlethal ammunition for it. Intended for use in combat exercises."
-	weapon_type = /obj/item/weapon/gun/pistol/mod88/training
-	ammo_type = /obj/item/ammo_magazine/pistol/mod88/rubber
+/obj/structure/closet/crate/weapon/training/vp70
+	name = "training VP70 crate"
+	desc = "A crate with an VP70 pistol and nonlethal ammunition for it. Intended for use in combat exercises."
+	weapon_type = /obj/item/weapon/gun/pistol/vp70/training
+	ammo_type = /obj/item/ammo_magazine/pistol/vp70/rubber
 
 /obj/structure/closet/crate/weapon/training/grenade
 	name = "rubber pellet M15 grenades crate"

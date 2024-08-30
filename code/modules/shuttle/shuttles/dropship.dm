@@ -142,6 +142,9 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/upp/get_transit_path_type()
+	return /turf/open/space/transit/dropship/upp
+
 /obj/docking_port/mobile/marine_dropship/cyclone
 	name = "Cyclone"
 	id = DROPSHIP_CYCLONE
@@ -150,6 +153,9 @@
 
 	dwidth = 4
 	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
+	return /turf/open/space/transit/dropship/cyclone
 
 /obj/docking_port/mobile/marine_dropship/tornado
 	name = "HLD-Tornado"
@@ -160,6 +166,9 @@
 	dwidth = 5
 	dheight = 9
 
+/obj/docking_port/mobile/marine_dropship/tornado/get_transit_path_type()
+	return /turf/open/space/transit/dropship/tornado
+
 /obj/docking_port/mobile/marine_dropship/typhoon
 	name = "CMD-Typhoon"
 	id = DROPSHIP_TYPHOON
@@ -169,6 +178,9 @@
 	dwidth = 5
 	dheight = 9
 
+/obj/docking_port/mobile/marine_dropship/typhoon/get_transit_path_type()
+	return /turf/open/space/transit/dropship/typhoon
+
 /obj/docking_port/mobile/marine_dropship/tripoli
 	name = "Tripoli"
 	id = DROPSHIP_TRIPOLI
@@ -177,6 +189,9 @@
 
 	dwidth = 4
 	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/tripoli/get_transit_path_type()
+	return /turf/open/space/transit/dropship/tripoli
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"

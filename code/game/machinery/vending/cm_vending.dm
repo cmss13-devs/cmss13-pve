@@ -1012,7 +1012,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 //---helper glob data
 GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
-		/obj/item/ammo_box/magazine/mod88/empty = /obj/item/ammo_box/magazine/mod88,
+		/obj/item/ammo_box/magazine/vp70/empty = /obj/item/ammo_box/magazine/vp70,
 		/obj/item/ammo_box/magazine/m4a3/empty = /obj/item/ammo_box/magazine/m4a3,
 		/obj/item/ammo_box/magazine/m4a3/ap/empty = /obj/item/ammo_box/magazine/m4a3/ap,
 		/obj/item/ammo_box/magazine/m4a3/hp/empty = /obj/item/ammo_box/magazine/m4a3/hp,
