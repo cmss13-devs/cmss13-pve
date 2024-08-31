@@ -371,12 +371,12 @@
 /area/corsat/gamma/hangar)
 "abn" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "red"
@@ -1005,12 +1005,12 @@
 /area/corsat/gamma/hangar/checkpoint)
 "adc" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 1;
 	icon_state = "red"
@@ -9023,9 +9023,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -11307,16 +11307,16 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/residential/researcher)
 "aGc" = (
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 9;
 	icon_state = "red"
@@ -13781,9 +13781,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -19090,9 +19090,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -19111,9 +19111,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -28907,9 +28907,9 @@
 "bDd" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -28944,9 +28944,9 @@
 "bDk" = (
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /obj/structure/closet/secure_closet/security,
@@ -41809,7 +41809,7 @@
 /area/corsat/sigma/southeast/datalab)
 "gys" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/corsat{
 	icon_state = "red"
 	},
@@ -43618,9 +43618,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -56944,10 +56944,10 @@
 /area/corsat/sigma/hangar/security)
 "rRh" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/corsat{
 	dir = 6;
 	icon_state = "red"
@@ -58917,9 +58917,9 @@
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
-/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /obj/item/storage/pouch/general/medium,
 /obj/item/storage/pouch/pistol,
 /turf/open/floor/corsat{
@@ -59390,7 +59390,7 @@
 /area/corsat/gamma/hallwaysouth)
 "tFs" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/corsat{
 	dir = 8;
 	icon_state = "red"
