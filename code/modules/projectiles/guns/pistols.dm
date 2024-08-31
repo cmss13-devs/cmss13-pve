@@ -363,7 +363,7 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
 /obj/item/weapon/gun/pistol/t73/leader
@@ -403,7 +403,7 @@
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 //-------------------------------------------------------
 //KT-42 //Inspired by the .44 Auto Mag pistol

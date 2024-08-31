@@ -158,6 +158,7 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	paygrade = "UE1"
@@ -221,6 +222,7 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	paygrade = "UE3"
@@ -489,6 +491,8 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
 	paygrade = "UE3"
 
@@ -543,6 +547,7 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
@@ -630,6 +635,7 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	paygrade = "UE6"

@@ -1397,3 +1397,12 @@
 
 /obj/item/storage/pouch/machete/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
+
+/obj/item/storage/pouch/etool
+	name = "etool pouch"
+	desc = "A pouch designed to carry the Type 50 entrenching tool."
+	icon_state = "entrench"
+	max_w_class = SIZE_SMALL
+	can_hold = /obj/item/tool/shovel/etool
+	storage_slots = null
+	max_storage_space = 2

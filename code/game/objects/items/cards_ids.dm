@@ -382,26 +382,23 @@
 	..()
 
 
-
 /obj/item/card/id/dogtag
 	name = "dog tag"
-	desc = "A marine dog tag."
+	desc = "A dog tag."
 	icon_state = "dogtag"
 	item_state = "dogtag"
 	pinned_on_uniform = FALSE
 	var/dogtag_taken = FALSE
 	card_name = "dog tags"
 
-
 /obj/item/card/id/dogtag/get_examine_text(mob/user)
 	. = ..()
 	if(ishuman(user))
 		. += SPAN_NOTICE("It reads \"[registered_name] - [assignment] - [blood_type]\"")
 
-
 /obj/item/dogtag
 	name = "information dog tag"
-	desc = "A fallen marine's information dog tag."
+	desc = "A fallen serviceman's information dog tag."
 	icon_state = "dogtag_taken"
 	icon = 'icons/obj/items/card.dmi'
 	w_class = SIZE_TINY

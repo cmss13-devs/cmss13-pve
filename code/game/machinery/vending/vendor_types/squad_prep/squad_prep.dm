@@ -172,9 +172,8 @@
 
 		list("WEBBINGS", -1, null, null),
 		list("Brown Webbing Vest", round(scale * 2), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
-		list("Black Webbing Vest", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
 		list("Webbing", round(scale * 2), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", round(max(1,(scale * 2))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
@@ -183,7 +182,6 @@
 		list("6B72-03 pattern vest", round(scale * 10), /obj/item/clothing/suit/storage/marine/faction/UPP/light, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
-		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
 		list("UPP Satchel", round(scale * 15), /obj/item/storage/backpack/lightpack/upp, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED BACKPACKS", -1, null, null),
@@ -206,6 +204,7 @@
 		list("Medium General Pouch", round(scale * 15), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
 		list("Pistol Magazine Pouch", round(scale * 15), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", round(scale * 15), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("Type 50 E-Tool Pouch", round(scale * 15), /obj/item/storage/pouch/etool, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED POUCHES", -1, null, null, null),
 		list("Construction Pouch", round(scale * 1.25), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
@@ -460,7 +459,7 @@
 		list("MRE", round(scale * 15), /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
-		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
+		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etoolupp/folded, VENDOR_ITEM_REGULAR),
 		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
 		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
 		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),

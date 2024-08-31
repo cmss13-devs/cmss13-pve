@@ -202,18 +202,17 @@
 	throwforce = 3
 
 
-
-
 // Entrenching tool.
 /obj/item/tool/shovel/etool
-	name = "entrenching tool"
-	desc = "Used to dig holes and bash heads in. Folds in to fit in small spaces."
+	name = "USCM M61 entrenching tool"
+	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "etool"
 	item_state = "etool"
 	force = 30
 	throwforce = 2
 	w_class = SIZE_LARGE
+	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	dirt_overlay = "etool_overlay"
 	dirt_amt_per_dig = 5
@@ -234,7 +233,7 @@
 	folded = !folded
 	if(folded)
 		w_class = SIZE_SMALL
-		force = 2
+		force = 5
 	else
 		w_class = SIZE_LARGE
 		force = 30
@@ -243,6 +242,51 @@
 /obj/item/tool/shovel/etool/folded
 	folded = TRUE
 	w_class = SIZE_SMALL
-	force = 2
+	force = 5
 	icon_state = "etool_c"
 	item_state = "etool_c"
+	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/tool/shovel/etoolupp
+	name = "Type 50 entrenching tool"
+	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
+	icon = 'icons/obj/items/marine-items.dmi'
+	icon_state = "etoolupp"
+	item_state = "etoolupp"
+	force = 30
+	throwforce = 2
+	w_class = SIZE_LARGE
+	hitsound = 'sound/weapons/bladeslice.ogg'
+
+	dirt_overlay = "etoolupp_overlay"
+	dirt_amt_per_dig = 5
+	shovelspeed = 50
+
+/obj/item/tool/shovel/etoolupp/update_icon()
+	if(folded)
+		icon_state = "etoolupp_c"
+		item_state = "etoolupp_c"
+	else
+		icon_state = "etoolupp"
+		item_state = "etoolupp"
+	..()
+
+/obj/item/tool/shovel/etoolupp/attack_self(mob/user as mob)
+	folded = !folded
+	if(folded)
+		w_class = SIZE_SMALL
+		force = 5
+		hitsound = 'sound/weapons/genhit3.ogg'
+	else
+		w_class = SIZE_LARGE
+		force = 30
+		hitsound = 'sound/weapons/bladeslice.ogg'
+	..()
+
+/obj/item/tool/shovel/etoolupp/folded
+	folded = TRUE
+	w_class = SIZE_SMALL
+	force = 5
+	icon_state = "etoolupp_c"
+	item_state = "etoolupp_c"
+	hitsound = 'sound/weapons/genhit3.ogg'

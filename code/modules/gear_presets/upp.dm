@@ -2,7 +2,7 @@
 	name = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/dogtag/upp
 	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/New()
@@ -54,6 +54,7 @@
 		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top","Pixie Cut Left", "Pixie Cut Right", "Bun")
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 
 //*****************************************************************************************************/
 
@@ -71,6 +72,7 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/ushanka, WEAR_HEAD)
+	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -103,7 +105,14 @@
 
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/random_uniform = rand(1,2)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
 	var/random_storage = rand(1,2)
 	switch(random_storage)
@@ -116,6 +125,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/compass, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etoolupp/folded, WEAR_IN_R_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard, WEAR_FEET)
 
