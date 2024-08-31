@@ -1,3 +1,32 @@
+
+// DRILLER FLAMETHROWER //
+
+/obj/item/weapon/gun/flamer/drg_driller_flamer
+	name = "\improper CRSPR Flamethrower"
+	desc = "The CRSPR Flamethrower is the Driller's default primary weapon. It is a combat-ready flamethrower which gets its fuel from large tanks inserted into a cage on the side."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m240"
+	item_state = "m240"
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+
+	force = MELEE_FORCE_NORMAL
+	flags_atom = FPRINT|NOBLOODY|CONDUCT
+
+	attachable_allowed = list()
+
+/obj/item/weapon/gun/flamer/drg_driller_flamer/gun_safety_handle(mob/user)
+	to_chat(user, SPAN_NOTICE("You [SPAN_BOLD(flags_gun_features & GUN_TRIGGER_SAFETY ? "extinguish" : "ignite")] the pilot lights."))
+	playsound(user,'sound/weapons/handling/flamer_ignition.ogg', 25, 1)
+	update_icon()
+
+/obj/item/weapon/gun/flamer/drg_driller_flamer/get_fire_sound()
+	var/list/fire_sounds = list(
+							'sound/weapons/gun_flamethrower1.ogg',
+							'sound/weapons/gun_flamethrower2.ogg',
+							'sound/weapons/gun_flamethrower3.ogg')
+	return pick(fire_sounds)
+
 // ENGINEER SHOTGUN //
 
 /obj/item/weapon/gun/drg_engineer_shotgun
