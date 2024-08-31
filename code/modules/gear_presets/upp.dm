@@ -2,7 +2,7 @@
 	name = FACTION_UPP
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
-	idtype = /obj/item/card/id/dogtag/upp
+	idtype = /obj/item/card/id/dogtag
 	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/New()
