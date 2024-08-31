@@ -755,7 +755,7 @@
 	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
 
 /obj/item/weapon/gun/revolver/spearhead/black
-	name = "\improper Spearhead Armoury autorevolver"
+	name = "\improper Spearhead Armoury revolver"
 	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals, though this version has been customized with a black metal finish indicating it is unlikely to be a service weapon."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead_black"
