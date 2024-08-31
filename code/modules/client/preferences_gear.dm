@@ -1146,7 +1146,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/dogtags
 	display_name = "Attachable Dogtags"
 	path = /obj/item/clothing/accessory/dogtags
-	cost = 1
+	cost = 0
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
