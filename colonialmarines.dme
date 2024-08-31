@@ -2528,4 +2528,5 @@
 #include "void-marines\wh40k\code\astartes\classes.dm"
 #include "void-marines\wh40k\code\astartes\quotes.dm"
 #include "void-marines\wh40k\code\astartes\weapon.dm"
+#include "void-marines\wh40k\maps\empty.dmm"
 // END_INCLUDE
