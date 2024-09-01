@@ -125,6 +125,6 @@
 
 /datum/paygrade/upp/constable
 	paygrade = "UC1"
-	name = "Constable"
-	prefix = "Const."
+	name = "Militsya"
+	prefix = "Milit."
 	pay_multiplier = 0.3

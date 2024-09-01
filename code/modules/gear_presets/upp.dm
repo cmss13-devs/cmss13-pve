@@ -725,12 +725,12 @@ var/random_name
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot, WEAR_FACE)
 
 /datum/equipment_preset/upp/security
-	name = "UPP People's Police Constable"
+	name = "(WIP) UPP People's Police Militiaman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/upp/military_police
-	assignment = "People's Police Constable"
+	assignment = "People's Police Militiaman"
 	rank = JOB_UPP_POLICE
-	role_comm_title = "CONST"
+	role_comm_title = "MILTSY"
 	paygrade = "UC1"
 	idtype = /obj/item/card/id/silver
 
