@@ -1,0 +1,5 @@
+author: "ChaplainMaximum"
+delete-after: True
+changes:
+  - rscadd: "Добавил Голден Арроу"
+  - bugfix: "Юху! Воркфлоу работает!!!"
