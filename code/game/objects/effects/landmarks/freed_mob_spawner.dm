@@ -21,12 +21,3 @@
 	arm_equipment(H, equipment_path, TRUE, count_participant)
 	H.free_for_ghosts()
 
-/obj/effect/landmark/freed_mob_spawner/upp_conscript
-	name = "UPP Militiaman"
-	equipment_path = /datum/equipment_preset/upp/militia
-	count_participant = TRUE
-
-/obj/effect/landmark/freed_mob_spawner/upp_soldier
-	name = "UPP Rifleman"
-	equipment_path = /datum/equipment_preset/upp/rifleman
-	count_participant = TRUE

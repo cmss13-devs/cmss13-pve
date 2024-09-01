@@ -102,8 +102,6 @@
 		if(2 to 3)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/lamp, WEAR_JACKET)
 
-
-
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
 	var/random_uniform = rand(1,2)
@@ -724,7 +722,7 @@ var/random_name
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot, WEAR_FACE)
 
-/datum/equipment_preset/upp/security
+/* /datum/equipment_preset/upp/security
 	name = "(WIP) UPP People's Police Militiaman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/upp/military_police
@@ -753,6 +751,4 @@ var/random_name
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_IN_R_STORE)
-
-
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_IN_R_STORE) */
