@@ -762,7 +762,7 @@
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
 
-/obj/item/weapon/gun/smartgun/upp
+/* /obj/item/weapon/gun/smartgun/upp
 	name = "\improper DP-88 smartgun"
 	desc = "The UPP's answer to the M56. Largely replacing the QZ"
 	current_mag = /obj/item/ammo_magazine/pkp
@@ -778,3 +778,4 @@
 /obj/item/weapon/gun/smartgun/rmc/Initialize(mapload, ...)
 	. = ..()
 	MD.iff_signal = FACTION_UPP
+ */
