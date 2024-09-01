@@ -8,13 +8,15 @@
 
 	brute_mod = 0.7
 	burn_mod = 0.7
-
+	flags = NO_POISON|NO_NEURO|SPECIAL_BONEBREAK|NO_SHRAPNEL|HAS_HARDCRIT
 	unarmed_type = /datum/unarmed_attack/punch/astartes
 	icon_template = 'void-marines/wh40k/icons/species/r_template_tall.dmi'
 	icobase = 'void-marines/wh40k/icons/species/r_astartes.dmi'
 	deform = 'void-marines/wh40k/icons/species/r_astartes.dmi'
 	eye_icon_location = 'void-marines/wh40k/icons/species/astartes_face.dmi'
 	slowdown = -0.3 //Increased move speed
+	pain_type = /datum/pain/yautja
+	stamina_type = /datum/stamina/none
 	total_health = 200
 	darksight = 5
 	special_body_types = FALSE
@@ -58,13 +60,12 @@
 
 
 /datum/equipment_preset/astartes
-	name = "Ultramarine"
-	idtype = null //No IDs for Yautja!
+	name = "Ultramarine Tactical Brother"
+	idtype = null
 	languages = list(LANGUAGE_ENGLISH)
-	rank = "Battle Brother"
 	faction = FACTION_USCM
 	uses_special_name = TRUE
-	skills = /datum/skills/yautja/warrior
+	skills = /datum/skills/commando/deathsquad
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
 /datum/equipment_preset/astartes/load_race(mob/living/carbon/human/new_human, client/mob_client)
@@ -74,43 +75,8 @@
 /datum/equipment_preset/astartes/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/astartes, WEAR_BACK)
-/*	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
-
-	//face
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/marsoc, WEAR_FACE)
-*/
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/astartes/apothecary)
-/*
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/sof, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_HELMET)
-*/
-	//uniform
-	var/obj/item/clothing/under/marine/veteran/marsoc/M = new()
-	var/obj/item/clothing/accessory/storage/black_vest/W = new()
-	M.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(M, WEAR_BODY)
-	for(var/i in 1 to W.hold.storage_slots)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
-	//jacket
-	var/obj/item/clothing/suit/storage/marine/sof/armor = new()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/astartes, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/astartes, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/astartes/bodysuit, WEAR_BODY)
+	var/obj/item/clothing/suit/armor/astartes/armor = new
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
-	for(var/i in 1 to armor.storage_slots)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/xm40/heap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/xm40, WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/marsoc, WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)

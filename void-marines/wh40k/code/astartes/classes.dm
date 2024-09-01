@@ -31,7 +31,16 @@
 
 // --- Apothecary --- \\
 
-/obj/item/clothing/suit/armor/astartes/apothecary
+/obj/item/storage/backpack/satchel/astartes/apothecary/verb/togglenarthecium(mob/user)
+	set name = "Activate Narthecium"
+	set category = "Narthecium"
+	set src in user
+
+	if(user.stat)
+		return
+
+	to_chat(usr,"You activate the chainsaw on your narthecium, getting ready to cut through armor and bone.")
+	user.put_in_hands(new /obj/item/weapon/sword/warhammer/narthecium(user))
 
 /obj/item/weapon/sword/warhammer/narthecium
 	name = "Apothecary's Narthecium"
@@ -39,7 +48,7 @@
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
 	icon_state = "hypogauntlet_on" // Does not spin. I have no clue why.
 	item_state = "hypogauntlet_on"
-
+/*
 	var/list/images
 	var/obj/item/reagent_container/hypospray/hyro
 	var/list/items_medical = list()
@@ -92,8 +101,8 @@
 		to_chat(user, SPAN_GREEN("Help intent for Injector"))
 		to_chat(user, SPAN_ORANGE("Grab intent for Surgery tool"))
 */
+
+*/
 /obj/item/weapon/sword/warhammer/narthecium/dropped() /// This should not exist on its own
 	..()
-//	QDEL_IN(src, 0)
-
-
+	QDEL_IN(src, 0)

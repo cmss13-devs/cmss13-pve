@@ -4,8 +4,8 @@
 	name = "Astartes Mark VII Power Armour"
 	icon = 'void-marines/wh40k/icons/astartes/suits.dmi'
 	item_icons = list(WEAR_JACKET = 'void-marines/wh40k/icons/astartes/suits.dmi')
-	icon_state = "umpowerarmor"
-	item_state = "umpowerarmor"
+	icon_state = "ultrasuit"
+	item_state = "ultrasuit"
 // 	canremove = 0
 	unacidable = 1
 	fire_intensity_resistance = BURN_LEVEL_TIER_1
@@ -223,16 +223,15 @@
 
 /obj/item/clothing/suit/armor/astartes/apothecary
 	name = "Astartes Mark VII Power Armour"
-	desc = "The Holy armour of the Emperor's chosen, This one bears the symbol of his position, Apothecary of the XIIIth Chapter, Ultramarines."
-	icon_state = "ultrapoth"
-	item_state = "ultrapoth"
+	desc = "The Holy armour of the Emperor's chosens."
+	icon_state = "apohelm"
+	item_state = "apohelm"
 
 /obj/item/storage/backpack/satchel/astartes/apothecary
 	name = "Astartes Mark VII Medipack"
 	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been upgraded with additional spotlight and surgical arms to serve medical purposes."
 	icon_state = "salpack"
 	item_state = "salpack"
-
 
 /obj/item/clothing/suit/armor/astartes/apothecary/bloodraven
 	name = "Astartes Mark VII Power Armour"
