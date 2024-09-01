@@ -4,27 +4,48 @@
 /obj/item/weapon/gun/flamer/drg_driller_flamer
 	name = "\improper CRSPR Flamethrower"
 	desc = "The CRSPR Flamethrower is the Driller's default primary weapon. It is a combat-ready flamethrower which gets its fuel from large tanks inserted into a cage on the side."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "m240"
-	item_state = "m240"
-	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
-	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	icon = 'void-marines/icons/drg_weapons.dmi'
+	icon_state = "crspr"
+	item_state = "crspr_inhand"
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/icons/drg_weapons.dmi',
+		WEAR_R_HAND = 'void-marines/icons/drg_weapons.dmi'
+		)
 
 	force = MELEE_FORCE_NORMAL
 	flags_atom = FPRINT|NOBLOODY|CONDUCT
+
+	unload_sound = 'void-marines/sound/drg/FlameThrowerReloadC_1.ogg'
+	reload_sound = 'void-marines/sound/drg/FlameThrowerReloadB_1.ogg'
 
 	attachable_allowed = list()
 
 /obj/item/weapon/gun/flamer/drg_driller_flamer/gun_safety_handle(mob/user)
 	to_chat(user, SPAN_NOTICE("You [SPAN_BOLD(flags_gun_features & GUN_TRIGGER_SAFETY ? "extinguish" : "ignite")] the pilot lights."))
-	playsound(user,'sound/weapons/handling/flamer_ignition.ogg', 25, 1)
+	playsound(user, 'void-marines/sound/drg/FlameThrowerFireTailCombinedA_1.ogg', 25, 1)
 	update_icon()
+
+/obj/item/weapon/gun/flamer/drg_driller_flamer/update_icon()
+	..()
+
+	// Have to redo this here because we don't want the empty sprite when the tank is empty (just when it's not in the gun)
+	var/new_icon_state = base_gun_icon
+	if(has_empty_icon && !current_mag)
+		new_icon_state += "_e"
+	icon_state = new_icon_state
+
+	if(!(flags_gun_features & GUN_TRIGGER_SAFETY))
+		var/image/I = image('icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi', src, "+lit")
+		I.pixel_x -= 1
+		I.pixel_y -= 3
+		overlays += I
 
 /obj/item/weapon/gun/flamer/drg_driller_flamer/get_fire_sound()
 	var/list/fire_sounds = list(
-							'sound/weapons/gun_flamethrower1.ogg',
-							'sound/weapons/gun_flamethrower2.ogg',
-							'sound/weapons/gun_flamethrower3.ogg')
+							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_1.ogg',
+							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_2.ogg',
+							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_3.ogg',
+							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_4.ogg')
 	return pick(fire_sounds)
 
 // ENGINEER SHOTGUN //
@@ -47,7 +68,7 @@
 
 	current_mag = /obj/item/ammo_magazine/drg_engineer_shotgun
 
-	fire_sound = 'sound/weapons/gun_shotgun.ogg'
+	fire_sound = 'void-marines/sound/drg/CombatShotgunCombinedA_03.ogg'
 	reload_sound = 'void-marines/sound/drg/scout_smg_reload.wav'
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
@@ -80,14 +101,14 @@
 	attachable_offset = list("stock_x" = 11, "stock_y" = 15)
 
 /obj/item/ammo_magazine/drg_engineer_shotgun
-	name = "\improper 'Warthog' drum (12g)"
+	name = "\improper 'Warthog' buckshot drum (12g)"
 	desc = "A 12g automatic shotgun drum magazine."
 //	icon = 'void-marines/icons/drg_weapons.dmi'
 	icon_state = "m56d_drum" // TODO: make an icon
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
 	gun_type = /obj/item/weapon/gun/drg_engineer_shotgun
-	max_rounds = 10
+	max_rounds = 12
 	w_class = SIZE_MEDIUM
 	handful_state = "buckshot_shell"
 	transfer_handful_amount = 5
@@ -106,6 +127,11 @@
 			C.update_inv_l_hand()
 	if(ammo_band_color && ammo_band_icon)
 		update_ammo_band()
+
+/obj/item/ammo_magazine/drg_engineer_shotgun/slug
+	name = "\improper 'Warthog' slug drum (12g)"
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+	handful_state = "slug_shell"
 
 /obj/item/attachable/stock/drg_engineer_shotgun
 	name = "\improper 'Warthog' skeletal stock"
