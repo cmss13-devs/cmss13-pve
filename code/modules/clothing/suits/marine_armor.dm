@@ -56,7 +56,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
-	storage_slots = 3
+	storage_slots = 0
 	siemens_coefficient = 0.7
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	allowed = list(
@@ -79,7 +79,7 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PONCHO)
 
 	light_power = 3
 	light_range = 4
