@@ -13,6 +13,7 @@
 	icon_template = 'void-marines/wh40k/icons/species/r_template_tall.dmi'
 	icobase = 'void-marines/wh40k/icons/species/r_astartes.dmi'
 	deform = 'void-marines/wh40k/icons/species/r_astartes.dmi'
+	eye_icon_location = 'void-marines/wh40k/icons/species/astartes_face.dmi'
 	slowdown = -0.3 //Increased move speed
 	total_health = 200
 	darksight = 5
@@ -41,6 +42,9 @@
 		/mob/living/carbon/human/proc/astaxenos
 	)
 
+/datum/species
+	var/eye_icon_location = 'icons/mob/humans/onmob/human_face.dmi'
+
 /mob/living/carbon/human/astartes
 	gender = MALE
 	blood_volume = 860
@@ -51,6 +55,7 @@
 
 /datum/unarmed_attack/punch/astartes
 	damage = 25
+
 
 /datum/equipment_preset/astartes
 	name = "Ultramarine"
@@ -69,7 +74,7 @@
 /datum/equipment_preset/astartes/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/astartes, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
+/*	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/super, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus, WEAR_IN_BACK)
@@ -81,11 +86,13 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/marsoc, WEAR_FACE)
-
+*/
 	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/astartes/apothecary)
+/*
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/sof, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_HELMET)
-
+*/
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/marsoc/M = new()
 	var/obj/item/clothing/accessory/storage/black_vest/W = new()

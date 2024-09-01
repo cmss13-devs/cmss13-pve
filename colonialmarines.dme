@@ -2523,12 +2523,11 @@
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
 #include "void-marines\code\playable_factions\faction_paygrades\freelancer.dm"
-#include "void-marines\wh40k\code\sewers.dm"
 #include "void-marines\wh40k\code\shit.dm"
+#include "void-marines\wh40k\code\trenches.dm"
 #include "void-marines\wh40k\code\astartes\armour.dm"
 #include "void-marines\wh40k\code\astartes\astartes.dm"
 #include "void-marines\wh40k\code\astartes\classes.dm"
 #include "void-marines\wh40k\code\astartes\quotes.dm"
 #include "void-marines\wh40k\code\astartes\weapon.dm"
-#include "void-marines\wh40k\maps\empty.dmm"
 // END_INCLUDE

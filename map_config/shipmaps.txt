@@ -43,3 +43,6 @@ endmap
 
 map tortuga
 endmap
+
+map tempestbreaker
+endmap
