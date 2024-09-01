@@ -93,3 +93,6 @@ endmap
 
 map whiskey_outpost_ru
 endmap
+
+map forge_defence
+endmap
