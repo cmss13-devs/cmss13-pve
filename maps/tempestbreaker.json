@@ -1,0 +1,8 @@
+{
+    "map_name": "Warhammer 40k",
+    "map_path": "map_files/tempestbreaker",
+    "map_file": "tempestbreaker.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow_classic_RU/"
+}
