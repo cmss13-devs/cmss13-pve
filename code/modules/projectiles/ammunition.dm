@@ -323,7 +323,7 @@ Turn() or Shift() as there is virtually no overhead. ~N
 	var/max_casings = 16
 	var/current_icon = 0
 	var/number_of_states = 10 //How many variations of this item there are.
-	garbage = TRUE
+	garbage = FALSE
 
 /obj/item/ammo_casing/Initialize()
 	. = ..()

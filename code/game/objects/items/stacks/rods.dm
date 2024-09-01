@@ -13,7 +13,7 @@
 	max_amount = 60
 	attack_verb = list("hit", "bludgeoned", "whacked")
 	stack_id = "metal rod"
-	garbage = TRUE
+	garbage = FALSE
 	var/sheet_path = /obj/item/stack/sheet/metal
 	var/used_per_sheet = 4
 

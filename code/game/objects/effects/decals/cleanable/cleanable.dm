@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(cleanable_decal_cache)
 	 */
 	var/cleaned_up = FALSE
 
-	garbage = TRUE
+	garbage = FALSE
 
 /obj/effect/decal/cleanable/Initialize(mapload, ...)
 	. = ..()

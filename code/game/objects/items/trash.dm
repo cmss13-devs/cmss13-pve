@@ -5,7 +5,7 @@
 	icon = 'icons/obj/items/trash.dmi'
 	w_class = SIZE_SMALL
 	desc = "This is rubbish."
-	garbage = TRUE
+	garbage = FALSE
 
 //////////////
 ///Wrappers///

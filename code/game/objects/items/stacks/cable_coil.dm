@@ -271,7 +271,7 @@
 
 /obj/item/stack/cable_coil/cut
 	item_state = "coil2"
-	garbage = TRUE
+	garbage = FALSE
 
 /obj/item/stack/cable_coil/cut/Initialize()
 	. = ..()

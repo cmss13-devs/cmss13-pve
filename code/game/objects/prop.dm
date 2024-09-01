@@ -9,7 +9,7 @@
 	item_state = ""
 	desc = "A Rexim RXF-M5 EVA pistol compressed down into a laptop! Also known as the Laz-top. Part of a line of discreet assassination weapons developed for Greater Argentina and the United States covert programs respectively."
 	w_class = SIZE_SMALL
-	garbage = TRUE
+	garbage = FALSE
 
 /obj/item/prop/geiger_counter
 	name = "geiger counter"
@@ -298,5 +298,15 @@
 	icon_state = "sheet-scrap"
 	item_state = ""
 	desc = "A rusty piece of scrap metal."
-	w_class = SIZE_MASSIVE
-	garbage = TRUE
+	w_class = SIZE_MEDIUM
+
+/obj/item/prop/rock
+	name = "rock"
+	icon = 'icons/obj/items/plush.dmi'
+	icon_state = "rock"
+	item_state = ""
+	force = 30
+	throwforce = 25
+	desc = "The most ancient of tools."
+	w_class = SIZE_TINY
+	hitsound = 'sound/weapons/genhit3.ogg'
