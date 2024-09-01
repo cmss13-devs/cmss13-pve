@@ -576,3 +576,14 @@
 	signal.linked_cam = new(loc, name)
 	cas_groups[FACTION_MARINE].add_signal(signal)
 	anchored = TRUE
+
+/obj/item/device/flashlight/tnr
+	name = "TNR shoulder lamp"
+	desc = "A dismounted TNR shoulder lamp."
+	icon = 'icons/obj/items/lighting.dmi'
+	icon_state = "tnr"
+	item_state = "tnr"
+	w_class = SIZE_MEDIUM
+	flags_equip_slot = null
+	raillight_compatible = 0
+
