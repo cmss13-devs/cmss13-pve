@@ -1,8 +1,9 @@
 {
-    "map_name": "Forge Defence",
-    "map_path": "map_files/forge_defence",
-    "map_file": "forge_defence.dmm",
-    "webmap_url": "Trijent",
+    "map_name": "Forge 347",
+    "map_path": "map_files/forge_defense",
+    "map_file": "forge_defense.dmm",
+    "webmap_url": "OilDepot",
+    "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera",
     "survivor_types": [
         "/datum/equipment_preset/survivor/doctor/trijent",
         "/datum/equipment_preset/survivor/roughneck",
@@ -23,14 +24,14 @@
         580,
         0.0
     ],
-    "map_item_type": "/obj/item/map/desert_dam",
-    "announce_text": "We've lost contact with Weyland-Yutani's extra-solar colony, \"Trijent Dam\", on the planet \"Raijin.\" The ###SHIPNAME### has been dispatched to assist.",
+    "map_item_type": "/obj/item/map/whiskey_outpost_map",
+    "announce_text": "Our forces need help on Forge World L-347!",
     "monkey_types": [
         "stok"
     ],
     "traits": [{ "Ground": true }],
-    "nightmare_path": "maps/Nightmare/maps/DesertDam/",
-    "camouflage": "desert",
+    "nightmare_path": "maps/Nightmare/maps/forge_defense/",
+    "camouflage": "urban",
     "gamemodes": [
         "Distress Signal",
         "Infection"
