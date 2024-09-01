@@ -34,7 +34,7 @@
 /obj/item/storage/backpack/satchel/astartes/apothecary/verb/togglenarthecium(mob/user)
 	set name = "Activate Narthecium"
 	set category = "Narthecium"
-	set src in user
+	set src in usr
 
 	if(user.stat)
 		return
