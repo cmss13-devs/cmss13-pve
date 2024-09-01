@@ -1,0 +1,26 @@
+"a" = (/turf/template_noop,/area/space)
+"b" = (/obj/structure/machinery/prop/almayer/CICmap/yautja{faction = "Astartes"; minimap_type = 2; pixel_y = 11},/obj/structure/surface/table/reinforced/black,/turf/open/floor/corsat{icon_state = "marked"},/area/shuttle/ert)
+"k" = (/obj/structure/machinery/door/poddoor/almayer/blended/open{id = "droppodast"},/turf/open/floor/hybrisa/metal/stripe_red{dir = 4},/area/shuttle/ert)
+"s" = (/obj/structure/bed/chair/hunter{dir = 4},/turf/open/floor/hybrisa/metal/grated,/area/shuttle/ert)
+"u" = (/turf/open/hybrisa/dropship/dropship3,/area/shuttle/ert)
+"A" = (/turf/open/hybrisa/dropship/dropship1,/area/shuttle/ert)
+"B" = (/obj/structure/machinery/door/poddoor/almayer/blended/open{id = "droppodast"},/turf/open/floor/hybrisa/metal/stripe_red{dir = 1},/area/shuttle/ert)
+"F" = (/obj/structure/machinery/door/poddoor/almayer/blended/open{id = "droppodast"},/turf/open/floor/hybrisa/metal/stripe_red{dir = 8},/area/shuttle/ert)
+"H" = (/obj/structure/bed/chair/hunter{dir = 8},/obj/structure/machinery/door_control{id = "droppodast"; name = "Hangar Access"; pixel_y = -19},/turf/open/floor/hybrisa/metal/grated,/area/shuttle/ert)
+"I" = (/obj/structure/bed/chair/hunter{dir = 1},/turf/open/floor/hybrisa/metal/grated{dir = 4},/area/shuttle/ert)
+"K" = (/turf/open/hybrisa/dropship/dropship2,/area/shuttle/ert)
+"Q" = (/obj/structure/bed/chair/hunter,/turf/open/floor/hybrisa/metal/grated{dir = 4},/area/shuttle/ert)
+"S" = (/obj/structure/machinery/door/poddoor/almayer/blended/open{id = "droppodast"},/turf/open/floor/hybrisa/metal/stripe_red,/area/shuttle/ert)
+"U" = (/obj/structure/bed/chair/hunter{dir = 8},/turf/open/floor/hybrisa/metal/grated,/area/shuttle/ert)
+"X" = (/turf/closed/wall/almayer,/area/shuttle/ert)
+"Z" = (/turf/open/hybrisa/dropship/dropship4,/area/shuttle/ert)
+
+(1,1,1) = {"
+aaXBXaa
+XXXQXXX
+aXsAUXa
+aFubZka
+aXsKHXa
+XXXIXXX
+aaXSXaa
+"}
