@@ -35,9 +35,10 @@
 /obj/item/explosive/grenade/high_explosive/drg_engineer_launcher
 	name = "heavy-duty 40mm grenade"
 	desc = "High explosive direct-hit munitions."
-	icon_state = "grenade_m74_airburst_f"
-	item_state = "grenade_m74_airburst_f_active"
-	explosion_power = 100
+	icon_state = "grenade_40mm_he"
+	item_state = "grenade_40mm_he_active"
+	explosion_falloff = 35
+	explosion_power = 150
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 
