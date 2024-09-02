@@ -8,7 +8,7 @@
 	throwforce = 0
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
-	garbage = FALSE
+	garbage = TRUE
 
 /obj/item/bananapeel/Crossed(AM as mob|obj)
 	if (iscarbon(AM))

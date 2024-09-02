@@ -21,7 +21,7 @@
 	var/bloodcolor //Used for gibbed humans.
 	icon = 'icons/landmarks.dmi'
 	icon_state = "landmark_gibs"
-	garbage = FALSE
+	garbage = TRUE
 	var/list/viruses
 	var/mob/living/ml
 

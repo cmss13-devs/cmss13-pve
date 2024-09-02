@@ -97,7 +97,7 @@
 /obj/effect/decal/cleanable/cobweb2/dynamic
 	alpha = 80
 	appearance_flags = RESET_ALPHA | TILE_BOUND | PIXEL_SCALE
-	garbage = FALSE
+	garbage = TRUE
 /obj/effect/decal/cleanable/cobweb2/dynamic/Initialize(mapload, targetdir, webscale = 1.0)
 	alpha += round(webscale * 120)
 	var/angle = dir2angle(targetdir)

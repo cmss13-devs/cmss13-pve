@@ -389,7 +389,7 @@
 
 	var/datum/action/item_action/activation
 	var/obj/item/attached_item
-	garbage = FALSE
+	garbage = TRUE
 
 /obj/item/clothing/glasses/mgoggles/prescription
 	name = "prescription marine ballistic goggles"

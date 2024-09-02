@@ -9,7 +9,6 @@
 	item_state = ""
 	desc = "A Rexim RXF-M5 EVA pistol compressed down into a laptop! Also known as the Laz-top. Part of a line of discreet assassination weapons developed for Greater Argentina and the United States covert programs respectively."
 	w_class = SIZE_SMALL
-	garbage = FALSE
 
 /obj/item/prop/geiger_counter
 	name = "geiger counter"

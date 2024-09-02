@@ -4,7 +4,7 @@
 	icon = 'icons/obj/items/helmet_garb.dmi'
 	icon_state = null
 	w_class = SIZE_TINY
-	garbage = FALSE
+	garbage = TRUE
 
 /obj/item/prop/helmetgarb/Initialize(mapload, ...)
 	. = ..()
@@ -102,7 +102,7 @@
 	desc = "USCM standard M2 Night vision goggles for military operations. Requires a battery in order to work"
 	icon_state = "nvg"
 	gender = PLURAL
-	garbage = FALSE
+	garbage = TRUE
 	w_class = SIZE_MEDIUM
 
 	var/nvg_maxhealth = 125
@@ -457,7 +457,7 @@
 	name = "old M2 night vision goggles"
 	desc = "This pair has been gutted of all electronics and therefore not working. But hey, they make you feel tacticool, and that's all that matters, right?"
 	shape = NVG_SHAPE_COSMETIC
-	garbage = FALSE
+	garbage = TRUE
 
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
