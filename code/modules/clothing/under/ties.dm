@@ -989,3 +989,9 @@
 	icon_state = "skull"
 	item_state = "skull"
 	slot = ACCESSORY_SLOT_PAINT
+
+/obj/item/clothing/accessory/storage/webbing/m3
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbing"
+	hold = /obj/item/storage/internal/accessory/webbing

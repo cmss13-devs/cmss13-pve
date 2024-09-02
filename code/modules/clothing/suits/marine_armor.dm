@@ -219,11 +219,6 @@
 			M.visible_message(SPAN_DANGER("Your programming prevents you from wearing this!"))
 			return 0
 
-/obj/item/clothing/suit/storage/marine/padless
-	name = "M3 pattern padless marine armor"
-	icon_state = "1"
-	specialty = "M3 pattern padless marine"
-
 /obj/item/clothing/suit/storage/marine/padless_lines
 	name = "M3 pattern ridged marine armor"
 	icon_state = "2"
