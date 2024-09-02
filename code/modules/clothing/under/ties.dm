@@ -968,3 +968,24 @@
 		icon_state = initial(icon_state)
 		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
 	item_state = icon_state
+
+/obj/item/clothing/accessory/paint
+	name = "camouflage paint"
+	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
+	icon_state = "blacksg"
+	item_state = "blacksg"
+	slot = ACCESSORY_SLOT_SGPAINT
+
+/obj/item/clothing/accessory/pads
+	name = "\improper M3 Shoulder Pads"
+	desc = "A set shoulder pads attachable to the M3 armor set worn by the USCM."
+	icon_state = "pads"
+	item_state = "pads"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/paint/skull
+	name = "skull armor paint"
+	desc = "A set of paint tones to etch a skull into a Marine's armor."
+	icon_state = "skull"
+	item_state = "skull"
+	slot = ACCESSORY_SLOT_PAINT

@@ -79,7 +79,7 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PONCHO)
 
 	light_power = 3
 	light_range = 4
@@ -229,14 +229,9 @@
 	icon_state = "2"
 	specialty = "M3 pattern ridged marine"
 
-/obj/item/clothing/suit/storage/marine/skull
-	name = "M3 pattern skull marine armor"
-	icon_state = "3"
-	specialty = "M3 pattern skull marine"
-
 /obj/item/clothing/suit/storage/marine/smooth
 	name = "M3 pattern smooth marine armor"
-	icon_state = "4"
+	icon_state = "3"
 	specialty = "M3 pattern smooth marine"
 
 /obj/item/clothing/suit/storage/marine/rto
@@ -389,6 +384,7 @@
 	var/list/smartgun_back = list(
 		/obj/item/storage/large_holster/machete,
 	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PONCHO)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
