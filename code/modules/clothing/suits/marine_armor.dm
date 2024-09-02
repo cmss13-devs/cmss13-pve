@@ -219,34 +219,24 @@
 			M.visible_message(SPAN_DANGER("Your programming prevents you from wearing this!"))
 			return 0
 
-/obj/item/clothing/suit/storage/marine/padded
-	name = "M3 pattern padded marine armor"
-	icon_state = "1"
-	specialty = "M3 pattern padded marine"
-
 /obj/item/clothing/suit/storage/marine/padless
 	name = "M3 pattern padless marine armor"
-	icon_state = "2"
+	icon_state = "1"
 	specialty = "M3 pattern padless marine"
 
 /obj/item/clothing/suit/storage/marine/padless_lines
 	name = "M3 pattern ridged marine armor"
-	icon_state = "3"
+	icon_state = "2"
 	specialty = "M3 pattern ridged marine"
-
-/obj/item/clothing/suit/storage/marine/carrier
-	name = "M3 pattern carrier marine armor"
-	icon_state = "4"
-	specialty = "M3 pattern carrier marine"
 
 /obj/item/clothing/suit/storage/marine/skull
 	name = "M3 pattern skull marine armor"
-	icon_state = "5"
+	icon_state = "3"
 	specialty = "M3 pattern skull marine"
 
 /obj/item/clothing/suit/storage/marine/smooth
 	name = "M3 pattern smooth marine armor"
-	icon_state = "6"
+	icon_state = "4"
 	specialty = "M3 pattern smooth marine"
 
 /obj/item/clothing/suit/storage/marine/rto
