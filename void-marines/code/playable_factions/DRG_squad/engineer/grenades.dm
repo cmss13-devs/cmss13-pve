@@ -4,7 +4,7 @@
 */
 /****************************************/
 
-/obj/item/explosive/grenade/drg_decoy
+/obj/item/explosive/grenade/drg_engineer_decoy
 	name = "L.U.R.E. grenade"
 	desc = "The Laser Utility Refraction Emitter (aka L.U.R.E.) is the default Throwable for the Engineer. \
 	It is a miniature projector device that creates holograms of pretty woman, \
@@ -20,7 +20,7 @@
 	var/work_duration = 16 SECONDS
 	var/max_attracted = 10
 
-/obj/item/explosive/grenade/drg_decoy/prime()
+/obj/item/explosive/grenade/drg_engineer_decoy/prime()
 	. = ..()
 
 	if(!isturf(loc))
@@ -39,7 +39,7 @@
 
 	QDEL_IN(src, work_duration)
 
-/obj/item/explosive/grenade/drg_decoy/ex_act(severity, explosion_direction)
+/obj/item/explosive/grenade/drg_engineer_decoy/ex_act(severity, explosion_direction)
 	var/msg = pick("is destroyed by the blast!", "is obliterated by the blast!", "shatters as the explosion engulfs it!", "disintegrates in the blast!", "perishes in the blast!", "is mangled into uselessness by the blast!")
 	explosion_throw(severity, explosion_direction)
 	switch(severity) // We don't wanna blast away our precious decoy, or else...
