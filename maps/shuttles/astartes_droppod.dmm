@@ -1,5 +1,6 @@
 "a" = (/turf/template_noop,/area/space)
-"b" = (/obj/structure/machinery/prop/almayer/CICmap/yautja{faction = "Astartes"; minimap_type = 2; pixel_y = 11},/obj/structure/surface/table/reinforced/black,/turf/open/floor/corsat{icon_state = "marked"},/area/shuttle/ert)
+"b" = (/obj/structure/machinery/prop/almayer/CICmap/yautja{faction = "Astartes"; minimap_type = 2; pixel_y = 11},/obj/structure/surface/table/reinforced/black,/obj/docking_port/mobile/marine_dropship/astartes_drop,/turf/open/floor/corsat{icon_state = "marked"},/area/shuttle/ert)
+"i" = (/obj/structure/bed/chair/hunter{dir = 4},/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control/astartes_drop{pixel_y = 19},/turf/open/floor/hybrisa/metal/grated,/area/shuttle/ert)
 "k" = (/obj/structure/machinery/door/poddoor/almayer/blended/open{id = "droppodast"},/turf/open/floor/hybrisa/metal/stripe_red{dir = 4},/area/shuttle/ert)
 "s" = (/obj/structure/bed/chair/hunter{dir = 4},/turf/open/floor/hybrisa/metal/grated,/area/shuttle/ert)
 "u" = (/turf/open/hybrisa/dropship/dropship3,/area/shuttle/ert)
@@ -18,7 +19,7 @@
 (1,1,1) = {"
 aaXBXaa
 XXXQXXX
-aXsAUXa
+aXiAUXa
 aFubZka
 aXsKHXa
 XXXIXXX
