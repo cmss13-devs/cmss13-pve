@@ -236,6 +236,49 @@
 /obj/structure/cargo_container/upp/mk6/right
 	icon_state = "mk6_r"
 
+/obj/structure/cargo_container/uscm
+	name = "United States Colonial Marines Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one belongs to the UA's United States Marine Corps."
+
+/obj/structure/cargo_container/uscm/sanfran/left
+	icon_state = "uscm1_l"
+
+/obj/structure/cargo_container/uscm/sanfran/mid
+	icon_state = "uscm1_m"
+
+/obj/structure/cargo_container/uscm/borodino/left
+	icon_state = "uscm2_l"
+
+/obj/structure/cargo_container/uscm/borodino/mid
+	icon_state = "uscm2_m"
+
+/obj/structure/cargo_container/uscm/tartarus/left
+	icon_state = "uscm3_l"
+
+/obj/structure/cargo_container/uscm/tartarus/mid
+	icon_state = "uscm3_m"
+
+/obj/structure/cargo_container/uscm/chinook/left
+	icon_state = "uscm4_l"
+
+/obj/structure/cargo_container/uscm/chinook/mid
+	icon_state = "uscm4_m"
+
+/obj/structure/cargo_container/uscm/crestus/left
+	icon_state = "uscm5_l"
+
+/obj/structure/cargo_container/uscm/crestus/mid
+	icon_state = "uscm5_m"
+
+/obj/structure/cargo_container/uscm/micor/left
+	icon_state = "uscm6_l"
+
+/obj/structure/cargo_container/uscm/mid
+	icon_state = "uscm_m"
+
+/obj/structure/cargo_container/uscm/right
+	icon_state = "uscm_r"
+
 /obj/structure/cargo_container/attack_hand(mob/user as mob)
 
 	playsound(loc, 'sound/effects/clang.ogg', 25, 1)
