@@ -16,7 +16,7 @@
 	dangerous = TRUE
 	harmful = FALSE
 
-	var/decoy_type = /obj/effect/drg/hologramm
+	var/decoy_type = /obj/effect/drg_hologramm
 	var/work_duration = 16 SECONDS
 	var/max_attracted = 10
 
@@ -51,9 +51,9 @@
 /*
 	Temporary hologramm which forces some amount of bugs to chew it
 */
-/obj/effect/drg/hologramm
-	desc = "Just a fancy hologram, enough to distract a primitive creature, such as tired miners."
+/obj/effect/drg_hologramm
 	name = "decoy"
+	desc = "Just a fancy hologram, enough to distract a primitive creature, such as tired miners."
 	icon = 'void-marines/icons/holograms.dmi'
 	icon_state = "type2"
 	indestructible = TRUE
@@ -65,7 +65,7 @@
 
 	var/animation_time = 1 SECONDS
 
-/obj/effect/drg/hologramm/Initialize(mapload, atom/grenade, max_attracted, duration)
+/obj/effect/drg_hologramm/Initialize(mapload, atom/grenade, max_attracted, duration)
 	. = ..()
 
 	pixel_x = grenade.pixel_x
@@ -81,11 +81,11 @@
 
 	addtimer(CALLBACK(src, PROC_REF(disappear)), duration - animation_time)
 
-/obj/effect/drg/hologramm/proc/disappear()
+/obj/effect/drg_hologramm/proc/disappear()
 	sleep(animation_disappear(src, animation_time))
 	qdel(src)
 
-/obj/effect/drg/hologramm/proc/remove()
+/obj/effect/drg_hologramm/proc/remove()
 	SIGNAL_HANDLER
 	qdel(src)
 
