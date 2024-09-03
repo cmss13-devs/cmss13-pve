@@ -2136,3 +2136,13 @@
 /obj/item/clothing/suit/marine/heavy/smooth
 	icon_state = "H3"
 	armor_variation = 0
+
+/obj/item/clothing/suit/marine/leader
+	name = "\improper B12 pattern marine armor"
+	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
+	icon_state = "7"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	specialty = "B12 pattern marine"
