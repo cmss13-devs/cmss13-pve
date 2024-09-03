@@ -249,7 +249,7 @@
 				return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(RoleAuthority.roles_whitelist, owner)]"]
 			return /datum/equipment_preset/uscm_ship/commander
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so
+			return /datum/equipment_preset/uscm_ship/so/equipped
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
 		if(JOB_AUXILIARY_OFFICER)
