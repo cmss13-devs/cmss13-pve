@@ -1921,6 +1921,7 @@
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	time_to_unequip = 20
 	time_to_equip = 20
+	drag_unequip = TRUE
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
@@ -1965,6 +1966,22 @@
 	else armor_overlays["lamp"] = null
 	if(user) user.update_inv_wear_suit()
 
+/obj/item/clothing/suit/marine/MouseDrop(obj/over_object as obj)
+	if (ishuman(usr))
+		//makes sure that the clothing is equipped so that we can't drag it into our hand from miles away.
+		if ((flags_item & NODROP) || loc != usr)
+			return
+
+		if (!usr.is_mob_incapacitated() && !(usr.buckled))
+			if(over_object)
+				switch(over_object.name)
+					if("r_hand")
+						if(usr.drop_inv_item_on_ground(src))
+							usr.put_in_r_hand(src)
+					if("l_hand")
+						if(usr.drop_inv_item_on_ground(src))
+							usr.put_in_l_hand(src)
+				add_fingerprint(usr)
 
 /obj/item/clothing/suit/marine/post_vendor_spawn_hook(mob/living/carbon/human/user) //used for randomizing/selecting a variant for armors.
 	var/new_look //used for the icon_state text replacement.
