@@ -81,7 +81,7 @@
 		list("M3 Pattern Magazine Webbing", round(scale * 2), /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Shotgun Shell Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/webbing/m3/shotgun, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern M40 Webbing", round(scale * 1.25), /obj/item/clothing/accessory/storage/black_vest/m3/m40, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Small Pouch Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/black_vest/small, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Small Pouch Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/black_vest/m3, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
@@ -246,7 +246,7 @@
 		list("M3 Pattern Magazine Webbing", round(scale * 2), /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Shotgun Shell Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/webbing/m3/shotgun, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern M40 Webbing", round(scale * 1.25), /obj/item/clothing/accessory/storage/black_vest/m3/m40, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Small Pouch Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/black_vest/small, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Small Pouch Webbing", round(scale * 0.5), /obj/item/clothing/accessory/storage/black_vest/m3, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 

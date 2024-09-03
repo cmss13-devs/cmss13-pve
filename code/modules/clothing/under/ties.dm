@@ -525,6 +525,92 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 
+/obj/item/storage/internal/accessory/webbing/m3
+
+/obj/item/storage/internal/accessory/webbing/m3/generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/rifle/extended,
+		/obj/item/ammo_magazine/rifle/incendiary,
+		/obj/item/ammo_magazine/rifle/explosive,
+		/obj/item/ammo_magazine/rifle/heap,
+		/obj/item/ammo_magazine/rifle/ap,
+		/obj/item/ammo_magazine/rifle/le,
+		/obj/item/ammo_magazine/rifle/penetrating,
+		/obj/item/ammo_magazine/rifle/toxin,
+		/obj/item/ammo_magazine/rifle/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/training,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m4ra/ap,
+		/obj/item/ammo_magazine/rifle/m4ra/ext,
+		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m4ra/heap,
+		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
+		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/pve
+	)
+
+/obj/item/storage/internal/accessory/webbing/m3/mag
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/rifle/extended,
+		/obj/item/ammo_magazine/rifle/incendiary,
+		/obj/item/ammo_magazine/rifle/explosive,
+		/obj/item/ammo_magazine/rifle/heap,
+		/obj/item/ammo_magazine/rifle/ap,
+		/obj/item/ammo_magazine/rifle/le,
+		/obj/item/ammo_magazine/rifle/penetrating,
+		/obj/item/ammo_magazine/rifle/toxin,
+		/obj/item/ammo_magazine/rifle/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/training,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m4ra/ap,
+		/obj/item/ammo_magazine/rifle/m4ra/ext,
+		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m4ra/heap,
+		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
+		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/pve
+	)
+
+/obj/item/storage/internal/accessory/webbing/m3/shotgun
+	can_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
+	)
+
 /obj/item/clothing/accessory/storage/webbing
 	name = "webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
@@ -539,6 +625,33 @@
 
 /obj/item/storage/internal/accessory/black_vest
 	storage_slots = 5
+
+/obj/item/storage/internal/accessory/black_vest/m3
+
+/obj/item/storage/internal/accessory/black_vest/m3/generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
+	)
+
+/obj/item/storage/internal/accessory/black_vest/m3/m40
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton
+	)
 
 /obj/item/clothing/accessory/storage/black_vest
 	name = "black webbing vest"
@@ -991,119 +1104,31 @@
 	slot = ACCESSORY_SLOT_PAINT
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag
-	name = "\improper M3 Pattern Webbing"
+	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing
-	var/can_hold = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/explosive,
-		/obj/item/ammo_magazine/rifle/heap,
-		/obj/item/ammo_magazine/rifle/ap,
-		/obj/item/ammo_magazine/rifle/le,
-		/obj/item/ammo_magazine/rifle/penetrating,
-		/obj/item/ammo_magazine/rifle/toxin,
-		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1,
-		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1/training,
-		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
-		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
-		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
-		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
-		/obj/item/ammo_magazine/rifle/m4ra,
-		/obj/item/ammo_magazine/rifle/m4ra/ap,
-		/obj/item/ammo_magazine/rifle/m4ra/ext,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/heap,
-		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
-		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve
-	)
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
-	name = "\improper M3 Pattern Webbing"
+	name = "\improper M3 Pattern Shell Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/webbing
-	var/can_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/custom_color,
-		/obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
-	)
+	hold = /obj/item/storage/internal/accessory/webbing/m3/shotgun
 
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbing"
-	hold = /obj/item/storage/internal/accessory/webbing
-	var/cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/custom_color,
-		/obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/explosive,
-		/obj/item/ammo_magazine/rifle/heap,
-		/obj/item/ammo_magazine/rifle/ap,
-		/obj/item/ammo_magazine/rifle/le,
-		/obj/item/ammo_magazine/rifle/penetrating,
-		/obj/item/ammo_magazine/rifle/toxin,
-		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1,
-		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1/training,
-		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
-		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
-		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
-		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
-		/obj/item/ammo_magazine/rifle/m4ra,
-		/obj/item/ammo_magazine/rifle/m4ra/ap,
-		/obj/item/ammo_magazine/rifle/m4ra/ext,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/heap,
-		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
-		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve
-	)
+	hold = /obj/item/storage/internal/accessory/webbing/m3/generic
 
 /obj/item/clothing/accessory/storage/black_vest/m3/m40
-	name = "\improper M3 Pattern Webbing"
+	name = "\improper M3 Pattern Grenade Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingm40"
-	hold = /obj/item/storage/internal/accessory/webbing
-	var/storage_slots = 6
-	var/can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
-		/obj/item/explosive/grenade/slug/baton
-	)
+	hold = /obj/item/storage/internal/accessory/black_vest/m3/m40
 
-/obj/item/clothing/accessory/storage/black_vest/small
-	name = "\improper M3 Pattern Webbing"
+/obj/item/clothing/accessory/storage/black_vest/m3
+	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/webbing
+	hold = /obj/item/storage/internal/accessory/black_vest/m3/generic
