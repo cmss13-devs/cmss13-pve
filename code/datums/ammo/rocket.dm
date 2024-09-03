@@ -144,6 +144,9 @@
 /datum/ammo/rocket/ap/tank_towlauncher
 	max_range = 8
 
+/datum/ammo/rocket/ap/tank_towlauncher/aa
+	max_range = 16
+
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
