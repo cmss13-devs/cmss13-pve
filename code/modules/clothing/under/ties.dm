@@ -1120,6 +1120,7 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3/generic
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/black_vest/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
@@ -1132,3 +1133,4 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3/generic
+	slot = ACCESSORY_SLOT_M3UTILITY
