@@ -995,3 +995,27 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/webbing/m3/shotgun
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingshotgun"
+	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/black_vest/small
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingsmall"
+	hold = /obj/item/storage/internal/accessory/webbing
