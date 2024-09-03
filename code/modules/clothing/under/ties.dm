@@ -564,7 +564,7 @@
 		/obj/item/ammo_magazine/rifle/m4ra/heap,
 		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
 		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve
+		/obj/item/ammo_magazine/rifle/m4ra/pve,
 	)
 
 /obj/item/storage/internal/accessory/webbing/m3/mag
@@ -595,7 +595,7 @@
 		/obj/item/ammo_magazine/rifle/m4ra/heap,
 		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
 		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve
+		/obj/item/ammo_magazine/rifle/m4ra/pve,
 	)
 
 /obj/item/storage/internal/accessory/webbing/m3/shotgun
@@ -608,7 +608,7 @@
 		/obj/item/ammo_magazine/handful/shotgun/custom_color,
 		/obj/item/ammo_magazine/handful/shotgun/flechette,
 		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -638,7 +638,7 @@
 		/obj/item/ammo_magazine/handful/shotgun/custom_color,
 		/obj/item/ammo_magazine/handful/shotgun/flechette,
 		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
 	)
 
 /obj/item/storage/internal/accessory/black_vest/m3/m40
@@ -650,7 +650,7 @@
 		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
 		/obj/item/explosive/grenade/high_explosive/frag,
 		/obj/item/explosive/grenade/phosphorus/weak,
-		/obj/item/explosive/grenade/slug/baton
+		/obj/item/explosive/grenade/slug/baton,
 	)
 
 /obj/item/clothing/accessory/storage/black_vest
