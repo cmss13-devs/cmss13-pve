@@ -510,28 +510,12 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	storage_slots = 2
 
-/obj/item/clothing/suit/storage/marine/light/padded
-	icon_state = "L1"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/light/padless
+/obj/item/clothing/suit/storage/marine/light/padless_lines
 	icon_state = "L2"
 	armor_variation = 0
 
-/obj/item/clothing/suit/storage/marine/light/padless_lines
-	icon_state = "L3"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/light/carrier
-	icon_state = "L4"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/light/skull
-	icon_state = "L5"
-	armor_variation = 0
-
 /obj/item/clothing/suit/storage/marine/light/smooth
-	icon_state = "L6"
+	icon_state = "L3"
 	armor_variation = 0
 
 /obj/item/clothing/suit/storage/marine/light/standard
@@ -620,28 +604,12 @@
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
-/obj/item/clothing/suit/storage/marine/heavy/padded
+/obj/item/clothing/suit/storage/marine/heavy/padless_lines
 	icon_state = "H1"
 	armor_variation = 0
 
-/obj/item/clothing/suit/storage/marine/heavy/padless
-	icon_state = "H2"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/heavy/padless_lines
-	icon_state = "H3"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/heavy/carrier
-	icon_state = "H4"
-	armor_variation = 0
-
-/obj/item/clothing/suit/storage/marine/heavy/skull
-	icon_state = "H5"
-	armor_variation = 0
-
 /obj/item/clothing/suit/storage/marine/heavy/smooth
-	icon_state = "H6"
+	icon_state = "H2"
 	armor_variation = 0
 
 //===========================//SPECIALIST\\================================\\
@@ -2113,10 +2081,6 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-
-/obj/item/clothing/suit/marine/light/padless
-	icon_state = "L1"
-	armor_variation = 0
 
 /obj/item/clothing/suit/marine/light/padless_lines
 	icon_state = "L2"
