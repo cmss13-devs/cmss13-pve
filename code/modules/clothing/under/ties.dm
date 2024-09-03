@@ -993,19 +993,7 @@
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbing"
-	hold = /obj/item/storage/internal/accessory/webbing
-
-/obj/item/clothing/accessory/storage/webbing/m3/mag
-	name = "\improper M3 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing
-
-/obj/item/clothing/accessory/storage/webbing/m3/m40
-	name = "\improper M3 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/webbing
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
@@ -1013,6 +1001,39 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingshotgun"
 	hold = /obj/item/storage/internal/accessory/webbing
+	var/can_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot
+	)
+
+/obj/item/clothing/accessory/storage/black_vest/m3
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbing"
+	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/black_vest/m3/m40
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/webbing
+	var/storage_slots = 6
+	var/can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton
+	)
 
 /obj/item/clothing/accessory/storage/black_vest/small
 	name = "\improper M3 Pattern Webbing"
