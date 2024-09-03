@@ -186,6 +186,66 @@
 	required_reagents = list("hot_ramen" = 6, "hotsauce" = 1)
 	result_amount = 6
 
+/datum/chemical_reaction/banana		//WHO DIDN'T MAKE ALL THE JUICES SUBTYPES OF A PARENT ONE AAAAAA
+	name = "Banana Juice"
+	id = "banana"
+	result = "banana"
+	required_reagents = list("dehydrated_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/orangejuice
+	name = "Orange Juice"
+	id = "orangejuice"
+	result = "orangejuice"
+	required_reagents = list("dehydrated_orange_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/applejuice
+	name = "Apple Juice"
+	id = "applejuice"
+	result = "applejuice"
+	required_reagents = list("dehydrated_apple_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/watermelonjuice
+	name = "Watermelon Juice"
+	id = "watermelonjuice"
+	result = "watermelonjuice"
+	required_reagents = list("dehydrated_watermelon_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/grapejuice
+	name = "Grape Juice"
+	id = "grapejuice"
+	result = "grapejuice"
+	required_reagents = list("dehydrated_grape_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/pineapplejuice
+	name = "Pineapple Juice"
+	id = "pineapplejuice"
+	result = "pineapplejuice"
+	required_reagents = list("dehydrated_pineapple_juice" = 1, "water" = 5)
+	result_amount = 5
+
+/datum/chemical_reaction/egg
+	name = "Rehydrated Egg Product"
+	id = "egg"
+	result = "egg"
+	required_reagents = list("dehydrated_egg_powder" = 1, "water" = 5)
+	result_amount = 1
+
+/datum/chemical_reaction/egg/on_reaction(datum/reagents/holder, created_volume)
+	var/location = get_turf(holder.my_atom)
+	new /obj/item/reagent_container/food/snacks/egg/dried(location)
+
+/datum/chemical_reaction/milk
+	name = "Rehydrated Milk"
+	id = "milk"
+	result = "milk"
+	required_reagents = list("dehydrated_milk_powder" = 1, "water" = 5)
+	result_amount = 5
+
 
 //*****************************************************************************************************/
 //******************************************Cocktails**************************************************/

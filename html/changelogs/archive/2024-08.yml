@@ -60,3 +60,73 @@
 2024-08-11:
   private-tristan:
   - balance: M56D has been buffed with more damage, accuracy, and firerate.
+2024-08-18:
+  BonniePandora:
+  - rscadd: Adds a Golden-Arrow specific sub-set of the smartgunners sidearm belt
+  - rscadd: Adds the above to the corresponding lockers, both on the standard & FORECON
+      smartgunner ones
+  Doubleumc:
+  - rscadd: Added 1 hour squad role timelocks for PltSgt, PltCo
+  - admin: '"Start Round" can start a delayed round'
+  nauticall:
+  - rscadd: Added a quick "Command Announcement" button for Game Masters, available
+      in the GM tab.
+  sunofang:
+  - admin: Spawn menu no longer populates by default, and doesnt cause you to lag.
+  xDanilcusx:
+  - bugfix: AI can track through electrified/locked/welded doors
+  - code_imp: AI now doesn't swipe on poddoors and shutters, opening them instead
+2024-08-19:
+  Doubleumc:
+  - bugfix: fixed WeaponStats TGUI
+2024-08-20:
+  Doubleumc:
+  - bugfix: Fixed the 88 Mod 4 pistol's holster sprite.
+  - admin: bitfields for MODE_NO_XENO_EVOLVE, MODE_HARDCORE_PERMA, and MODE_NO_JOIN_AS_XENO
+      now work
+2024-08-21:
+  DexterDude:
+  - rscadd: Added something
+2024-08-22:
+  BonniePandora:
+  - maptweak: Expanded the galley of the Golden Arrow.
+2024-08-24:
+  BonniePandora:
+  - rscadd: Added various condiment packets of powedered juices, milk & egg to the
+      code
+  - rscadd: Added corresponding reactions for the new powdered substances where needed
+  - rscadd: Sprites for the condiment packets, some taken from Bay, others edited
+      by me from Bay sprites
+  - qol: MRE's now contain a juice packet alongside their typical contents
+  - maptweak: Replaces the magic freezer and it's perishable contents with a locker
+      full of the non-perishable replacements
+  DexterDude:
+  - rscadd: Added something
+  private-tristan:
+  - rscadd: ports TG strip menu
+2024-08-26:
+  sunofang:
+  - admin: Added infinite weather options.
+2024-08-27:
+  Max-023:
+  - rscadd: Helmet cover item, added to the squad prep vendor
+  - imageadd: Helmet cover sprites
+  Meatstuff882:
+  - rscadd: 'The utility vendor now has knives in it.
+
+      :cl:'
+2024-08-29:
+  AndroBetel:
+  - rscadd: Water now helps you regen blood.
+  - rscadd: Vomiting now removes some reagents, helping negate OD effects.
+  - balance: Vulture no longer has minimum range requirements to hit bugs.
+  - rscadd: Adds restricted underwear.
+  Doubleumc:
+  - code_imp: changed slotting - new players and players that got skipped previous
+      rounds have a higher chance to get a slot
+  - code_imp: AI caches valid targets for better performance
+  Merrgear:
+  - qol: made crit less boring
+  - code_imp: 'changed the crit code to not knock you unconcious
+
+      :cl:'

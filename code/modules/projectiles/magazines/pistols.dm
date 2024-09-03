@@ -60,48 +60,52 @@
 
 
 //-------------------------------------------------------
-//88M4 based off VP70
+//vp70 based off VP70
 
-/obj/item/ammo_magazine/pistol/mod88
-	name = "\improper 88M4 AP magazine (9mm)"
-	default_ammo = /datum/ammo/bullet/pistol/ap
-	caliber = "9mm"
-	icon_state = "88m4"
-	max_rounds = 19
-	gun_type = /obj/item/weapon/gun/pistol/mod88
-	ammo_band_icon = "+88m4_band"
-	ammo_band_icon_empty = "+88m4_band_e"
-	ammo_band_color = AMMO_BAND_COLOR_AP
 
-/obj/item/ammo_magazine/pistol/mod88/normalpoint // Unused
-	name = "\improper 88M4 magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70
+	name = "\improper VP70 Magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
+	icon_state = "vp70"
+	max_rounds = 19
+	gun_type = /obj/item/weapon/gun/pistol/vp70
+	ammo_band_icon = "+vp70_band"
+	ammo_band_icon_empty = "+vp70_band_e"
 	ammo_band_color = null
 
-/obj/item/ammo_magazine/pistol/mod88/normalpoint/extended // Unused
-	name = "\improper 88M4 extended magazine (9mm)"
-	icon_state = "88m4_mag_ex"
+/obj/item/ammo_magazine/pistol/vp70/ap
+	name = "\improper VP70 AP magazine (9mm)"
+	default_ammo = /datum/ammo/bullet/pistol/ap
+	caliber = "9mm"
+	icon_state = "vp70"
+	max_rounds = 19
+	gun_type = /obj/item/weapon/gun/pistol/vp70
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/pistol/vp70/extended // Unused
+	name = "\improper vp70 extended magazine (9mm)"
+	icon_state = "vp70_mag_ex"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 
-/obj/item/ammo_magazine/pistol/mod88/toxin
-	name = "\improper 88M4 toxic magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70/toxin
+	name = "\improper vp70 toxic magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
-/obj/item/ammo_magazine/pistol/mod88/penetrating
-	name = "\improper 88M4 wall-penetrating magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70/penetrating
+	name = "\improper vp70 wall-penetrating magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
-/obj/item/ammo_magazine/pistol/mod88/incendiary
-	name = "\improper 88M4 incendiary magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70/incendiary
+	name = "\improper vp70 incendiary magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/pistol/mod88/rubber
-	name = "\improper 88M4 rubber magazine (9mm)"
+/obj/item/ammo_magazine/pistol/vp70/rubber
+	name = "\improper vp70 rubber magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
@@ -269,16 +273,14 @@
 //-------------------------------------------------------
 //CLF HOLDOUT PISTOL
 /obj/item/ammo_magazine/pistol/clfpistol
-	name = "D18 magazine (9mm)"
-	desc = "A small D18 magazine storing 7 9mm bullets. How is it even this small?"
-	default_ammo = /datum/ammo/bullet/pistol
-	caliber = "9mm"
+	name = "Type 18 magazine (.50)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy/super
+	caliber = ".50"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "m4a3" // placeholder
-	max_rounds = 7
+	max_rounds = 3
 	w_class = SIZE_TINY
 	gun_type = /obj/item/weapon/gun/pistol/clfpistol
-
 
 //-------------------------------------------------------
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
@@ -286,18 +288,25 @@
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
 
 /obj/item/ammo_magazine/pistol/highpower
-	name = "\improper MK-45 Automagnum magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/highpower
+	name = "\improper HG-45 'Aguila' magazine (.45)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"
-	max_rounds = 13
+	max_rounds = 11
 	gun_type = /obj/item/weapon/gun/pistol/highpower
 
 //comes in black, for the black variant of the highpower, better for military usage
 
 /obj/item/ammo_magazine/pistol/highpower/black
+	name = "\improper HG 45 'Marina' magazine (.45)"
 	icon_state = "highpower_b"
+
+/obj/item/ammo_magazine/pistol/highpower/automag
+	name = "\improper HG 44 'Automag' magazine (.44)"
+	icon_state = "highpower_b"
+	max_rounds = 13
+	default_ammo = /datum/ammo/bullet/revolver
 
 //-------------------------------------------------------
 /*
@@ -310,7 +319,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	default_ammo = /datum/ammo/bullet/pistol/squash
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
-	icon_state = "88m4" //PLACEHOLDER
+	icon_state = "vp70" //PLACEHOLDER
 	max_rounds = 50
 	gun_type = /obj/item/weapon/gun/pistol/auto9
 

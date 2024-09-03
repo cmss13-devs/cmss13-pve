@@ -418,8 +418,8 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
-	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
 
 
 /obj/item/storage/belt/security/MP/UPP
@@ -448,8 +448,8 @@
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
 	new /obj/item/handcuffs(src)
-	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
-	new /obj/item/ammo_magazine/revolver/cmb/normalpoint(src)
+	new /obj/item/ammo_magazine/revolver/spearhead(src)
+	new /obj/item/ammo_magazine/revolver/spearhead(src)
 
 /obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
@@ -1184,15 +1184,15 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 
-/obj/item/storage/belt/gun/m4a3/mod88/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+/obj/item/storage/belt/gun/m4a3/vp70/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
 
-/obj/item/storage/belt/gun/m4a3/mod88_near_empty/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+/obj/item/storage/belt/gun/m4a3/vp70_near_empty/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	for(var/i = 1 to 3)
-		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
 
 /obj/item/storage/belt/gun/m4a3/vp78/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
@@ -1254,10 +1254,15 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/highpower/black(src)
 
-/obj/item/storage/belt/gun/m4a3/highpower/tactical/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/tactical())
+/obj/item/storage/belt/gun/m4a3/highpower/automag/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/automag())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
+		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
+
+/obj/item/storage/belt/gun/m4a3/highpower/automag/tactical/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/automag/tactical())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
 
 /obj/item/storage/belt/gun/m39
 	name = "\improper M276 pattern M39 holster rig"
@@ -1582,11 +1587,11 @@
 		/obj/item/ammo_magazine/rifle/m4ra/rubber,
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
-		/obj/item/ammo_magazine/pistol/mod88/rubber) //Ivan doesn't bring children's ammo.
+		/obj/item/ammo_magazine/pistol/vp70/rubber) //Ivan doesn't bring children's ammo.
 
 	var/list/picklist = subtypesof(/obj/item/ammo_magazine) - (internal_mags + bad_mags + sentry_mags + training_mags)
 	var/random_mag = pick(picklist)
-	var/guntype = pick(subtypesof(/obj/item/weapon/gun/revolver) + subtypesof(/obj/item/weapon/gun/pistol) - list(/obj/item/weapon/gun/pistol/m4a3/training, /obj/item/weapon/gun/pistol/mod88/training))
+	var/guntype = pick(subtypesof(/obj/item/weapon/gun/revolver) + subtypesof(/obj/item/weapon/gun/pistol) - list(/obj/item/weapon/gun/pistol/m4a3/training, /obj/item/weapon/gun/pistol/vp70/training))
 	handle_item_insertion(new guntype())
 	for(var/total_storage_slots in 2 to storage_slots) //minus templates
 		new random_mag(src)
@@ -1695,6 +1700,39 @@
 	new /obj/item/ammo_magazine/pistol/hp(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
+
+#define MAXIMUM_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/gun/smartgunner/garrow
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+
+	//Keep a track of how many magazines are inside the belt.
+	var/magazines = 0
+
+/obj/item/storage/belt/gun/smartgunner/garrow/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smartgun))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more drums."))
+		return FALSE
+
+/obj/item/storage/belt/gun/smartgunner/garrow/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines++
+
+/obj/item/storage/belt/gun/smartgunner/garrow/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/gun/smartgunner/garrow/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/smartgun))
+		magazines--
+
+#undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"
@@ -1839,7 +1877,7 @@
 
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool(src)

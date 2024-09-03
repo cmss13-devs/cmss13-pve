@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	"whitefull"
 ))
 
-var/const/MAX_SAVE_SLOTS = 10
+var/const/MAX_SAVE_SLOTS = 20
 
 /datum/preferences
 	var/client/owner
@@ -310,8 +310,7 @@ var/const/MAX_SAVE_SLOTS = 10
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
-	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-		dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
+	dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 		dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_MENTOR)
@@ -495,15 +494,12 @@ var/const/MAX_SAVE_SLOTS = 10
 			else
 				dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_SYNTHETIC)
-			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-				dat += "<div id='column1'>"
-				dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
-				dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
-				dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
-				dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
-				dat += "</div>"
-			else
-				dat += "<b>You do not have the whitelist for this role.</b>"
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
+			dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
+			dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
+			dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
+			dat += "</div>"
 		if(MENU_YAUTJA)
 			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
 				dat += "<div id='column1'>"
@@ -930,6 +926,18 @@ var/const/MAX_SAVE_SLOTS = 10
 			jobs_to_return += job
 
 	return jobs_to_return
+
+/// Returns TRUE if any job has a priority other than NEVER, FALSE otherwise.
+/datum/preferences/proc/has_job_priorities()
+	if(!length(job_preference_list))
+		ResetJobs()
+		return FALSE
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] != NEVER_PRIORITY)
+			return TRUE
+
+	return FALSE
 
 /datum/preferences/proc/SetJobDepartment(datum/job/J, priority)
 	if(!J || priority < 0 || priority > 4)
@@ -1598,7 +1606,7 @@ var/const/MAX_SAVE_SLOTS = 10
 				if("underwear")
 					var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
 					var/old_gender = gender
-					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options)
+					var/new_underwear = tgui_input_list(user, "Choose your character's underwear:", "Character Preference", underwear_options-GLOB.underwear_restricted)
 					if(old_gender != gender)
 						return
 					if(new_underwear)
@@ -1608,7 +1616,7 @@ var/const/MAX_SAVE_SLOTS = 10
 				if("undershirt")
 					var/list/undershirt_options = gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f
 					var/old_gender = gender
-					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options)
+					var/new_undershirt = tgui_input_list(user, "Choose your character's undershirt:", "Character Preference", undershirt_options-GLOB.undershirt_restricted)
 					if(old_gender != gender)
 						return
 					if(new_undershirt)
