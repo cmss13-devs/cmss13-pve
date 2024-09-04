@@ -1110,10 +1110,6 @@
 /area/golden_arrow/platoonprep)
 "eF" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/co2_knife{
-	pixel_x = 3;
-	pixel_y = 13
-	},
 /obj/item/ammo_box/magazine/misc/flares/empty{
 	pixel_x = -14;
 	pixel_y = 16
@@ -1441,12 +1437,13 @@
 "gi" = (
 /obj/structure/largecrate/supply/ammo{
 	fill_from_loc = 1;
-	name = "sentry crate"
+	name = "knight crate"
 	},
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01
+/obj/item/weapon/shield/riot/metal/hefa,
+/obj/item/weapon/sword/hefa{
+	force = 200;
+	name = "awakened HEFA sword"
 	},
-/obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "gj" = (
@@ -2018,6 +2015,11 @@
 "jr" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/bible/hefa,
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 14;
+	pixel_x = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "js" = (
@@ -2944,6 +2946,10 @@
 	pixel_y = 13
 	},
 /obj/item/storage/bible/hefa,
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "nu" = (
@@ -3918,9 +3924,6 @@
 /obj/item/storage/box/nade_box/frag,
 /obj/item/storage/box/nade_box/frag,
 /obj/item/storage/box/nade_box/frag,
-/obj/item/storage/box/guncase/pumpshotgun/special{
-	pixel_y = 4
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "rA" = (
@@ -4843,6 +4846,19 @@
 "vR" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/candle/lit/infinite,
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 3;
+	pixel_x = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "vY" = (
@@ -6115,6 +6131,18 @@
 	pixel_x = 2;
 	pixel_y = 14
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -13;
+	pixel_y = -7
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -1;
+	pixel_x = 10
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "BA" = (
@@ -6409,6 +6437,11 @@
 /obj/item/trash/plate{
 	pixel_x = -3
 	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = -3;
+	pixel_x = -5
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "CQ" = (
@@ -6599,6 +6632,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"DN" = (
+/obj/item/trash/candle{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
 "DO" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -6963,10 +7003,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"FB" = (
-/obj/item/weapon/shield/riot/metal,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
 "FE" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
@@ -7472,12 +7508,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "HY" = (
-/obj/effect/spawner/prop_gun/anti_tank{
-	anchored = 1;
-	custom_gun_desc = "Has an unusually high number of tally marks on it's stock...";
-	custom_gun_name = "\improper ceremonial M79 grenade launcher";
-	prop_gun_type = /obj/item/weapon/gun/launcher/grenade/m81/m79
-	},
+/obj/item/weapon/gun/launcher/grenade/m81/m79,
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/briefing)
 "HZ" = (
@@ -7897,6 +7928,19 @@
 	},
 /obj/item/trash/plate{
 	pixel_x = -3
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 8
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	name = "wafer";
+	pixel_y = 3;
+	pixel_x = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -8359,6 +8403,13 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 6
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -1;
+	pixel_x = 10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 19
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
@@ -9596,6 +9647,11 @@
 "Sy" = (
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/item/device/flashlight/lantern{
+	on = 1;
+	pixel_y = 5;
+	pixel_x = -2
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -20234,7 +20290,7 @@ Wh
 vm
 cd
 vm
-FB
+vm
 vm
 vm
 lg
@@ -21307,7 +21363,7 @@ wZ
 aa
 mT
 SX
-uT
+DN
 AB
 LI
 dU

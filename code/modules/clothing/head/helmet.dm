@@ -1396,6 +1396,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	cell_explosion(loc, 40, 18, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 	qdel(src)
 
+/obj/item/clothing/head/helmet/marine/specialist/hefa/marine
+	icon_state = "marine_hefa_helmet"
+	item_state = "marine_hefa_helmet"
+
 /obj/item/clothing/head/helmet/marine/reporter
 	name = "press helmet"
 	desc = "A helmet designed to make it clear that the wearer is safety aware and not looking for a fight."
