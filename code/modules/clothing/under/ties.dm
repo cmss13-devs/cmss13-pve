@@ -1096,6 +1096,13 @@
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
 
+/obj/item/clothing/accessory/pads/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
+
 /obj/item/clothing/accessory/paint/skull
 	name = "skull armor paint"
 	desc = "A set of paint tones to etch a skull into a Marine's armor."

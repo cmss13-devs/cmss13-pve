@@ -1915,6 +1915,7 @@
 		/obj/item/storage/belt/gun/m39,
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
 	light_power = 3
 	light_range = 4
