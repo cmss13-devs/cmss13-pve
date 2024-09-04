@@ -525,6 +525,92 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 
+/obj/item/storage/internal/accessory/webbing/m3
+
+/obj/item/storage/internal/accessory/webbing/m3/generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/rifle/extended,
+		/obj/item/ammo_magazine/rifle/incendiary,
+		/obj/item/ammo_magazine/rifle/explosive,
+		/obj/item/ammo_magazine/rifle/heap,
+		/obj/item/ammo_magazine/rifle/ap,
+		/obj/item/ammo_magazine/rifle/le,
+		/obj/item/ammo_magazine/rifle/penetrating,
+		/obj/item/ammo_magazine/rifle/toxin,
+		/obj/item/ammo_magazine/rifle/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/training,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m4ra/ap,
+		/obj/item/ammo_magazine/rifle/m4ra/ext,
+		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m4ra/heap,
+		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
+		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/pve,
+	)
+
+/obj/item/storage/internal/accessory/webbing/m3/mag
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/rifle/extended,
+		/obj/item/ammo_magazine/rifle/incendiary,
+		/obj/item/ammo_magazine/rifle/explosive,
+		/obj/item/ammo_magazine/rifle/heap,
+		/obj/item/ammo_magazine/rifle/ap,
+		/obj/item/ammo_magazine/rifle/le,
+		/obj/item/ammo_magazine/rifle/penetrating,
+		/obj/item/ammo_magazine/rifle/toxin,
+		/obj/item/ammo_magazine/rifle/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/training,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m4ra/ap,
+		/obj/item/ammo_magazine/rifle/m4ra/ext,
+		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m4ra/heap,
+		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
+		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/pve,
+	)
+
+/obj/item/storage/internal/accessory/webbing/m3/shotgun
+	can_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
+	)
+
 /obj/item/clothing/accessory/storage/webbing
 	name = "webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
@@ -539,6 +625,33 @@
 
 /obj/item/storage/internal/accessory/black_vest
 	storage_slots = 5
+
+/obj/item/storage/internal/accessory/black_vest/m3
+
+/obj/item/storage/internal/accessory/black_vest/m3/generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
+		/obj/item/ammo_magazine/handful/shotgun/custom_color,
+		/obj/item/ammo_magazine/handful/shotgun/flechette,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag,
+		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
+	)
+
+/obj/item/storage/internal/accessory/black_vest/m3/m40
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton,
+	)
 
 /obj/item/clothing/accessory/storage/black_vest
 	name = "black webbing vest"
@@ -791,7 +904,7 @@
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
 	icon_state = "holster"
-	slot = ACCESSORY_SLOT_UTILITY
+	slot = ACCESSORY_SLOT_HOLSTER
 	high_visibility = TRUE
 	hold = /obj/item/storage/internal/accessory/holster
 
@@ -968,3 +1081,69 @@
 		icon_state = initial(icon_state)
 		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
 	item_state = icon_state
+
+/obj/item/clothing/accessory/paint
+	name = "camouflage paint"
+	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
+	icon_state = "blacksg"
+	item_state = "blacksg"
+	slot = ACCESSORY_SLOT_SGPAINT
+
+/obj/item/clothing/accessory/pads
+	name = "\improper M3 Shoulder Pads"
+	desc = "A set shoulder pads attachable to the M3 armor set worn by the USCM."
+	icon_state = "pads"
+	item_state = "pads"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/paint/skull
+	name = "skull armor paint"
+	desc = "A set of paint tones to etch a skull into a Marine's armor."
+	icon_state = "skull"
+	item_state = "skull"
+	slot = ACCESSORY_SLOT_PAINT
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
+
+/obj/item/clothing/accessory/storage/webbing/m3/shotgun
+	name = "\improper M3 Pattern Shell Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingshotgun"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/shotgun
+
+/obj/item/clothing/accessory/storage/webbing/m3
+	name = "\improper M3 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbing"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/generic
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
+/obj/item/clothing/accessory/storage/black_vest/m3/m40
+	name = "\improper M3 Pattern Grenade Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3/m40
+
+/obj/item/clothing/accessory/storage/black_vest/m3
+	name = "\improper M3 Pattern Small Pouch Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingsmall"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3/generic
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/black_vest/m3/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+

@@ -1151,3 +1151,13 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Marine Service Jacket"
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3
+
+/datum/gear/misc/paint_sg
+	display_name = "Black Smartgun Harness Paint"
+	path = /obj/item/clothing/accessory/paint
+	cost = 0
+
+/datum/gear/misc/paint_skull
+	display_name = "M3 Pattern Skull Paint"
+	path = /obj/item/clothing/accessory/paint/skull
+	cost = 0
