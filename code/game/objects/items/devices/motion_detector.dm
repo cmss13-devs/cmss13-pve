@@ -217,6 +217,10 @@
 
 	range_bounds.set_shape(cur_turf.x, cur_turf.y, detector_range * 2)
 
+	var/list/ping_receivers = list()
+	for(var/mob/living/carbon/human/humans in range(1, human_user))
+		ping_receivers += humans
+
 	var/list/ping_candidates = SSquadtree.players_in_range(range_bounds, cur_turf.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
 
 	for(var/A in ping_candidates)
@@ -230,7 +234,8 @@
 		apply_debuff(M)
 		ping_count++
 		if(human_user)
-			show_blip(human_user, M)
+			for(var/mob/living/carbon/human/show_ping_to as anything in ping_receivers)
+				show_blip(show_ping_to, M)
 
 	for(var/mob/hologram/holo as anything in GLOB.hologram_list)
 		if(!holo.motion_sensed)
