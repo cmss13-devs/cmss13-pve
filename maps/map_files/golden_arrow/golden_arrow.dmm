@@ -1878,6 +1878,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "afP" = (
+/obj/structure/ship_ammo/rocket/napalm{
+	pixel_y = 10
+	},
 /obj/structure/ship_ammo/rocket/napalm,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -1955,7 +1958,7 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
 "aga" = (
-/obj/structure/window/framed/almayer,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -3605,16 +3608,17 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "akZ" = (
-/obj/structure/ship_ammo/minirocket,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/ship_ammo/minirocket{
-	pixel_y = 9;
-	layer = 3.1
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 8
+	},
+/obj/structure/ship_ammo/heavygun{
+	layer = 3.01
 	},
 /turf/open/floor/almayer{
 	dir = 10;
@@ -3699,8 +3703,11 @@
 	},
 /area/golden_arrow/hangar)
 "alp" = (
-/obj/structure/ship_ammo/rocket/widowmaker,
 /obj/effect/decal/cleanable/cobweb,
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_y = 13
+	},
+/obj/structure/ship_ammo/rocket/widowmaker,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -4514,6 +4521,9 @@
 	},
 /area/golden_arrow/cryo_cells)
 "anE" = (
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_y = 13
+	},
 /obj/structure/ship_ammo/rocket/widowmaker,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -5312,9 +5322,6 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aqb" = (
-/obj/structure/barricade/handrail{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -8280,6 +8287,9 @@
 	},
 /area/golden_arrow/motor_pool)
 "ayN" = (
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_y = 13
+	},
 /obj/structure/ship_ammo/rocket/widowmaker,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -11067,14 +11077,22 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
-/obj/item/storage/box/guncase/pumpshotgun/special{
-	pixel_y = 4
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_x = -5;
+	pixel_y = 11
 	},
-/obj/item/storage/box/guncase/flamer/special{
-	pixel_y = 10;
-	layer = 3.1
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_x = -5;
+	pixel_y = 2
 	},
-/obj/structure/surface/rack,
+/obj/item/ammo_magazine/shotgun{
+	pixel_x = 12;
+	pixel_y = 9
+	},
+/obj/item/ammo_magazine/shotgun{
+	pixel_x = 12
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -12723,9 +12741,6 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aLp" = (
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -14824,10 +14839,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "aRR" = (
@@ -15186,6 +15197,7 @@
 	dir = 4;
 	pixel_x = 21
 	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -17529,6 +17541,19 @@
 	icon_state = "mono"
 	},
 /area/golden_arrow/motor_pool)
+"bEj" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_y = -29
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = 14;
+	pixel_y = -29
+	},
+/turf/open/floor/almayer{
+	dir = 8;
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/hangar)
 "bMl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -17913,6 +17938,13 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/engineering)
+"eZR" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/flamer/fuel{
+	pixel_y = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "fbw" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -18671,6 +18703,14 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
+"moW" = (
+/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "mpf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -19424,6 +19464,15 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/supply)
+"rZR" = (
+/obj/structure/gun_rack/mk221{
+	pixel_x = -11
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "sgG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -19772,6 +19821,18 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/supplydrop)
+"vRh" = (
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 8
+	},
+/obj/structure/ship_ammo/heavygun{
+	layer = 3.01
+	},
+/turf/open/floor/almayer{
+	dir = 10;
+	icon_state = "cargo"
+	},
+/area/golden_arrow/hangar)
 "vYW" = (
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
@@ -19848,6 +19909,21 @@
 	dir = 9
 	},
 /area/golden_arrow/platoonarmory)
+"wPI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 8
+	},
+/obj/structure/ship_ammo/heavygun{
+	layer = 3.01
+	},
+/turf/open/floor/almayer{
+	dir = 10;
+	icon_state = "cargo"
+	},
+/area/golden_arrow/hangar)
 "wRv" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer{
@@ -29039,7 +29115,7 @@ aEG
 aEG
 aEG
 aHZ
-afk
+aga
 aSv
 gjM
 aXY
@@ -29191,11 +29267,11 @@ aEG
 aEG
 aEG
 aHZ
-afk
+rZR
 aSv
 aZV
 adl
-aga
+abk
 arh
 aYg
 aXl
@@ -29343,11 +29419,11 @@ aEG
 aEG
 aEG
 aHZ
-abk
-aJr
+moW
+aHj
 aRQ
 adl
-aga
+eZR
 arh
 abU
 aJr
@@ -29378,7 +29454,7 @@ aEf
 aWl
 aEf
 akb
-aEf
+aDz
 aWl
 aDz
 adz
@@ -29669,11 +29745,11 @@ adz
 ayX
 adz
 ajM
-arN
+vRh
 aVD
-aoA
+wPI
 aVD
-arN
+vRh
 ajI
 adz
 ayX
@@ -29799,7 +29875,7 @@ aEG
 aEG
 aEG
 aHZ
-aGm
+afk
 aHj
 aXJ
 aOt
@@ -29821,11 +29897,11 @@ adz
 ayX
 adz
 aza
-arN
+vRh
 aVD
 akZ
 aWl
-arN
+vRh
 acR
 adz
 ayX
@@ -30423,7 +30499,7 @@ ajH
 aey
 asm
 agY
-aFU
+bEj
 adz
 adz
 adz
