@@ -334,9 +334,7 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yA" = (
-/obj/structure/shuttle/part/cyclone/transparent{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/cyclone/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/cyclone)
 "yP" = (
@@ -364,7 +362,7 @@
 	},
 /area/shuttle/cyclone)
 "zL" = (
-/obj/structure/shuttle/part/cyclone/transparent{
+/obj/structure/shuttle/part/cyclone/transparent/nosecone{
 	icon_state = "102"
 	},
 /turf/template_noop,
@@ -578,7 +576,7 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "RR" = (
-/obj/structure/shuttle/part/cyclone/transparent{
+/obj/structure/shuttle/part/cyclone/transparent/nosecone{
 	icon_state = "100"
 	},
 /turf/template_noop,

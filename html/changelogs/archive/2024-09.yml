@@ -1,0 +1,7 @@
+2024-09-04:
+  AndroBetel:
+  - rscadd: MD blips now show up for humans in 1 tile radius from MD user.
+  Max-023:
+  - rscadd: on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors
+  - rscdel: on Sorokyne, removed USCM Galley Vendors
+  - bugfix: on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts

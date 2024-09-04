@@ -16,8 +16,10 @@
 	randomize_hair_color("facial")
 	randomize_eyes_color()
 	randomize_skin_color()
-	underwear = gender == MALE ? pick(GLOB.underwear_m) : pick(GLOB.underwear_f)
-	undershirt = gender == MALE ? pick(GLOB.undershirt_m) : pick(GLOB.undershirt_f)
+	var/list/undershirt_options = gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f
+	undershirt = pick(undershirt_options-GLOB.undershirt_restricted)
+	var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
+	underwear = pick(underwear_options-GLOB.underwear_restricted)
 	backbag = 2
 	age = rand(AGE_MIN,AGE_MAX)
 	if(H)
@@ -249,7 +251,7 @@
 				return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(RoleAuthority.roles_whitelist, owner)]"]
 			return /datum/equipment_preset/uscm_ship/commander
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so
+			return /datum/equipment_preset/uscm_ship/so/equipped
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
 		if(JOB_AUXILIARY_OFFICER)
