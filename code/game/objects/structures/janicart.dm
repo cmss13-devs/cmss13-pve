@@ -16,7 +16,7 @@
 	var/obj/item/reagent_container/glass/bucket/janibucket/mybucket
 	var/signs = 0 //maximum capacity hardcoded below
 
-/obj/structure/janitorialcart
+/obj/structure/janitorialcart/brown
 	desc = "A brown janitorial cart that has space for water, mops, signs, and trash bags."
 	icon_state = "cart_brown"
 
