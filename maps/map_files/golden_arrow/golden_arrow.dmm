@@ -8090,6 +8090,7 @@
 /obj/item/clothing/under/marine/officer/boiler,
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
+/obj/item/clothing/under/marine/officer/bridge,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -9827,6 +9828,14 @@
 	},
 /obj/structure/surface/rack,
 /obj/item/storage/box/guncase/shotguncombat,
+/obj/item/ammo_box/magazine/m4a3{
+	layer = 3;
+	pixel_y = -5;
+	pixel_x = -2
+	},
+/obj/item/ammo_box/magazine/vp70{
+	layer = 3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "LQ" = (
