@@ -5,6 +5,7 @@
 	icon_state = null
 	w_class = SIZE_TINY
 	garbage = TRUE
+
 /obj/item/prop/helmetgarb/Initialize(mapload, ...)
 	. = ..()
 	if(garbage)
