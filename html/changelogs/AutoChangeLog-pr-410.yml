@@ -1,0 +1,6 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - rscadd: "on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors"
+  - rscdel: "on Sorokyne, removed USCM Galley Vendors"
+  - bugfix: "on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts"
