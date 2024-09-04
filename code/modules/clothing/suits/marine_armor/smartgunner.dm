@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/storage/marine/smartgunner
 	name = "\improper M56 combat harness"
-	desc = "Lightweight vest composed of ballistic micromesh and a ceramic composite chestplate. Also contains the computers, straps, and bracing required for operating the M56 Smartgun itself."
+	desc = "Lightweight vest composed of ballistic micromesh and a ceramic composite chestplate for practical protection, as well as the computers, straps, and armature required for operating the M56 Smartgun itself."
 	icon_state = "8"
 	item_state = "armor"
 	armor_laser = CLOTHING_ARMOR_LOW
