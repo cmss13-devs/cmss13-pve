@@ -293,14 +293,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
-
+	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
 	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
 
 	current_mag = /obj/item/ammo_magazine/internal/revolver/m44
 	force = 8
-	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
@@ -405,7 +405,7 @@
 	name = "\improper PKL 'Double' Blaster"
 	desc = "Sold to civilians and private corporations, the Pflager Katsumata Series-L Blaster is a premium double barrel sidearm that can fire two rounds at the same time. Usually found in the hands of combat synths and replicants, this hand cannon is worth more than the combined price of three Emanators. Originally commissioned by the Wallace Corporation, it has since been released onto public market as a luxury firearm."
 	icon_state = "pkd_double"
-	item_state = "88m4" //placeholder
+	item_state = "vp70" //placeholder
 
 	attachable_allowed = list(
 		/obj/item/attachable/flashlight,
@@ -699,18 +699,20 @@
 //-------------------------------------------------------
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
-/obj/item/weapon/gun/revolver/cmb
-	name = "\improper CMB Spearhead autorevolver"
-	desc = "An automatic revolver chambered in .357, often loaded with hollowpoint on spaceships to prevent hull damage. Commonly issued to Colonial Marshals."
+/obj/item/weapon/gun/revolver/spearhead
+	name = "\improper Spearhead Armoury revolver"
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
 	fire_sound = null
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	fire_rattle = 'sound/weapons/gun_cmb_rattle.ogg'
-	cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
-	force = 12
+	//cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
+	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
+	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead
+	force = 15
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/extended_barrel,
@@ -724,21 +726,21 @@
 		/obj/item/attachable/lasersight,
 	)
 
-/obj/item/weapon/gun/revolver/cmb/click_empty(mob/user)
+/obj/item/weapon/gun/revolver/spearhead/click_empty(mob/user)
 	if(user)
 		to_chat(user, SPAN_WARNING("<b>*click*</b>"))
 		playsound(user, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5) //5 tile range
 	else
 		playsound(src, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5)
 
-/obj/item/weapon/gun/revolver/cmb/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+/obj/item/weapon/gun/revolver/spearhead/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	playsound('sound/weapons/gun_cmb_bass.ogg') // badass shooting bass
 	return ..()
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_attachment_offsets()
+/obj/item/weapon/gun/revolver/spearhead/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_config_values()
+/obj/item/weapon/gun/revolver/spearhead/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -749,5 +751,12 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
-/obj/item/weapon/gun/revolver/cmb/normalpoint
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+/obj/item/weapon/gun/revolver/spearhead/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+
+/obj/item/weapon/gun/revolver/spearhead/black
+	name = "\improper Spearhead Armoury revolver"
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals, though this version has been customized with a black metal finish indicating it is unlikely to be a service weapon."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "spearhead_black"
+	item_state = "spearhead_black"

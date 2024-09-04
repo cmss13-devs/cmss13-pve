@@ -35,7 +35,7 @@
 
 	// Changing appear \\
 
-	var/new_skin_color = tgui_input_list(src, "Choose your character's skin color:", "Character Preferences", GLOB.skin_color_list)
+	var/new_skin_color = tgui_input_list(M, "Choose your character's skin color:", "Character Preferences", GLOB.skin_color_list)
 	if(new_skin_color)
 		M.skin_color = new_skin_color
 

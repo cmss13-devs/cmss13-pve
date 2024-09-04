@@ -11,6 +11,7 @@
 	icon_state = "off-0"
 	desc = "A Westingland S-52 Fusion Reactor.  Takes fuels cells and converts them to power for the ship.  Also produces a large amount of heat."
 	directwired = 0  //Requires a cable directly underneath
+	is_on = FALSE
 	unslashable = TRUE
 	unacidable = TRUE   //NOPE.jpg
 	anchored = TRUE

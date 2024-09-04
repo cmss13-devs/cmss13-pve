@@ -1,6 +1,6 @@
 /datum/equipment_preset/uscm/lancer
 	name = "Freelancer Marauder"
-	paygrade = "Freelancer Marauder"
+	paygrade = "Freelancer"
 	role_comm_title = "FL"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP)
 	faction_group = list(FACTION_FREELANCER)
@@ -20,9 +20,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/freelancer(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
+	new_human.hud_set_squad()
+
 /datum/equipment_preset/uscm/lancer/smartgunner
 	name = "Freelancer Machinegunner"
-	paygrade = "Freelancer Gunner"
+	paygrade = "Freelancer"
 	role_comm_title = "MG"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_SMARTGUNNER)
 	assignment = "Machinegunner"
@@ -41,7 +43,7 @@
 
 /datum/equipment_preset/uscm/lancer/rto
 	name = "Radio Jockey"
-	paygrade = "Freelancer Jokey"
+	paygrade = "Freelancer"
 	role_comm_title = "RJ"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_CO)
 	assignment = "Radio Jokey"
@@ -60,7 +62,7 @@
 
 /datum/equipment_preset/uscm/lancer/med
 	name = "Freelancer Surgeon"
-	paygrade = "Freelancer Medic"
+	paygrade = "Freelancer"
 	role_comm_title = "Srg"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_MEDICAL)
 	assignment = "Surgeon"
@@ -71,7 +73,7 @@
 /datum/equipment_preset/uscm/lancer/med/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine/medic/upp
+		back_item = /obj/item/storage/backpack/marine/medic
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/freelancer(new_human), WEAR_BODY)
@@ -79,7 +81,7 @@
 
 /datum/equipment_preset/uscm/lancer/tl
 	name = "Freelancer Bruiser"
-	paygrade = "Freelancer Standard"
+	paygrade = "Freelancer"
 	role_comm_title = "Bruiser"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_TEAMLEAD)
 	assignment = "Bruiser"
@@ -98,7 +100,7 @@
 
 /datum/equipment_preset/uscm/lancer/sl
 	name = "Freelancer Warlord"
-	paygrade = "Freelancer Leader"
+	paygrade = "Freelancer"
 	role_comm_title = "Warlord"
 	access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_ILLEGAL_PIRATE_PREP, ACCESS_ILLEGAL_PIRATE_SENIOR_LEAD)
 	assignment = "Warlord"

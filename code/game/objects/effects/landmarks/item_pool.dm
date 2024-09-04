@@ -41,3 +41,7 @@
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot
 	icon_state = "ipool_bubshot"
 	type_to_spawn = /obj/item/ammo_magazine/shotgun/buckshot
+
+/obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp
+	icon_state = "ipool_bubshot"
+	type_to_spawn = /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot

@@ -13,11 +13,6 @@
 
 	job_options = list(SECOND_LT_VARIANT = "2ndLt")
 
-// Dropship Roles is both PO and DCC combined to not force people to backtrack
-AddTimelock(/datum/job/command/pilot, list(
-	JOB_DROPSHIP_ROLES = 2 HOURS
-))
-
 /obj/effect/landmark/start/pilot
 	name = JOB_PILOT
 	icon_state = "po_spawn"

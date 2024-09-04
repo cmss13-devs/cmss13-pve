@@ -2,7 +2,7 @@ name: "Update Changelog"
 on:
   push:
     branches:
-      - master
+      - campaign
 
 jobs:
   update-changelog:
@@ -44,7 +44,7 @@ jobs:
     - name: Commit
       if: steps.value_holder.outputs.ACTIONS_ENABLED
       run: |
-        git pull origin master
+        git pull origin campaign
         git config --local user.email "action@github.com"
         git config --local user.name "Changelogs"
         git add html/changelogs/archive

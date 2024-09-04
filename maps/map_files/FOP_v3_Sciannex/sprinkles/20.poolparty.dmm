@@ -1357,7 +1357,7 @@
 	pixel_y = -2
 	},
 /obj/item/weapon/gun/pistol/heavy,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/wood,
 /area/template_noop)
 "We" = (

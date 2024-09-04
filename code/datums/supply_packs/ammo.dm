@@ -240,16 +240,16 @@
 	containername = "\improper shotgun flechette crate"
 	group = "Ammo"
 
-//------------------------For 88M4 ----------------
+//------------------------For vp70 ----------------
 
-/datum/supply_packs/ammo_mod88_mag_box_ap
-	name = "Magazine box (88 Mod 4 AP, 16x mags)"
+/datum/supply_packs/ammo_vp70_mag_box_ap
+	name = "Magazine box (VP70, 16x mags)"
 	contains = list(
-		/obj/item/ammo_box/magazine/mod88,
+		/obj/item/ammo_box/magazine/vp70,
 	)
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper 88 Mod 4 AP magazines crate"
+	containername = "\improper VP70 magazines crate"
 	group = "Ammo"
 
 //------------------------Special or non common magazines----------------

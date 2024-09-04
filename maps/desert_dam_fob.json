@@ -4,5 +4,6 @@
     "map_file": "Desert_Dam_FOB.dmm",
     "webmap_url": "GoldenArrow",
     "traits": [{"Marine Main Ship": true}],
-    "nightmare_path": "maps/Nightmare/maps/Desert_Dam_FOB/"
+    "nightmare_path": "maps/Nightmare/maps/Desert_Dam_FOB/",
+    "platoon": "/datum/squad/marine/alpha"
 }
