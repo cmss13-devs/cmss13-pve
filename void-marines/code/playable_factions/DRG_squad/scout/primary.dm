@@ -16,8 +16,6 @@
 		WEAR_R_HAND = 'void-marines/icons/drg_weapons.dmi'
 		)
 
-	pickup_sound = "gunequip"
-	drop_sound = "gunrustle"
 	pickupvol = 7
 	dropvol = 15
 
