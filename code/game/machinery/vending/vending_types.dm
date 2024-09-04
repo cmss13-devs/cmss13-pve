@@ -287,7 +287,7 @@
 	desc = "A standard security vendor used by security forces of the UPP."
 	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
+		/obj/item/restraint/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/device/flashlight = 4,
 		/obj/item/storage/belt/security/MP/UPP = 4,
