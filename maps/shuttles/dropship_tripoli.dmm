@@ -320,7 +320,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "wL" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/tripoli/transparent/nosecone{
 	icon_state = "100"
 	},
 /turf/template_noop,
@@ -347,9 +347,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "yF" = (
-/obj/structure/shuttle/part/tripoli{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/tripoli/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/tripoli)
 "zt" = (
@@ -461,7 +459,7 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "Fq" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/tripoli/transparent/nosecone{
 	icon_state = "102"
 	},
 /turf/template_noop,

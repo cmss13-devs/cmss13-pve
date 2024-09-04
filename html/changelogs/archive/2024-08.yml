@@ -104,9 +104,29 @@
   - rscadd: Added something
   private-tristan:
   - rscadd: ports TG strip menu
+2024-08-26:
+  sunofang:
+  - admin: Added infinite weather options.
+2024-08-27:
+  Max-023:
+  - rscadd: Helmet cover item, added to the squad prep vendor
+  - imageadd: Helmet cover sprites
+  Meatstuff882:
+  - rscadd: 'The utility vendor now has knives in it.
+
+      :cl:'
 2024-08-29:
-  ChaplainMaximum:
-  - rscadd: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0413\u043E\u043B\u0434\u0435\
-      \u043D \u0410\u0440\u0440\u043E\u0443"
-  - bugfix: "\u042E\u0445\u0443! \u0412\u043E\u0440\u043A\u0444\u043B\u043E\u0443\
-      \ \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442!!!"
+  AndroBetel:
+  - rscadd: Water now helps you regen blood.
+  - rscadd: Vomiting now removes some reagents, helping negate OD effects.
+  - balance: Vulture no longer has minimum range requirements to hit bugs.
+  - rscadd: Adds restricted underwear.
+  Doubleumc:
+  - code_imp: changed slotting - new players and players that got skipped previous
+      rounds have a higher chance to get a slot
+  - code_imp: AI caches valid targets for better performance
+  Merrgear:
+  - qol: made crit less boring
+  - code_imp: 'changed the crit code to not knock you unconcious
+
+      :cl:'

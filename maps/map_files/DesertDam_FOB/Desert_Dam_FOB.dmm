@@ -40,6 +40,7 @@
 "dn" = (/turf/open/desert/dirt,/area/desert_dam/exterior/rock)
 "dq" = (/obj/effect/landmark/static_comms/net_two,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "ds" = (/obj/effect/decal/cleanable/liquid_fuel,/turf/open/asphalt,/area/desert_dam/building/warehouse/loading)
+"dv" = (/obj/structure/prop/wooden_cross{pixel_x = -16; pixel_y = 20},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "dA" = (/obj/effect/decal/warning_stripes{icon_state = "S"},/obj/structure/sign/poster{desc = "One of those hot, tanned babes back the beaches of good ol' Earth."; icon_state = "poster12"; name = "Beach Babe Pinup"; pixel_x = 28; pixel_y = 5; serial_number = 12},/turf/open/floor/prison{icon_state = "bright_clean2"},/area/desert_dam/building/warehouse/warehouse)
 "dC" = (/obj/structure/machinery/door/airlock/almayer/maint/colony{needs_power = 0; use_power = 0},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/desert_dam/building/warehouse/warehouse)
 "dH" = (/obj/structure/platform{dir = 8},/turf/open/desert/dirt{dir = 10; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_cargo)
@@ -57,6 +58,7 @@
 "eZ" = (/turf/open/asphalt{icon_state = "tile"},/area/desert_dam/exterior/valley/valley_cargo)
 "fa" = (/obj/structure/disposalpipe/segment,/turf/open/floor/prison{dir = 8; icon_state = "sterile_white"},/area/desert_dam/building/warehouse/breakroom)
 "fk" = (/obj/structure/surface/rack,/obj/item/weapon/gun/rifle/ar10,/obj/item/ammo_magazine/rifle/ar10{pixel_x = -5},/obj/item/ammo_magazine/rifle/ar10{pixel_x = -5},/obj/item/ammo_magazine/rifle/ar10{pixel_x = -5},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
+"fl" = (/obj/structure/prop/wooden_cross,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "fr" = (/obj/structure/machinery/conveyor{dir = 8; id = "cargo_container"},/obj/effect/decal/warning_stripes{icon_state = "S"},/turf/open/floor/plating,/area/desert_dam/exterior/valley/valley_cargo)
 "fs" = (/obj/effect/decal/cleanable/generic,/turf/open/floor/prison{dir = 8; icon_state = "sterile_white"},/area/desert_dam/building/warehouse/breakroom)
 "fy" = (/obj/effect/decal/sand_overlay/sand1,/obj/effect/decal/warning_stripes{icon_state = "W"},/turf/open/floor/plating,/area/desert_dam/exterior/valley/valley_cargo)
@@ -74,7 +76,7 @@
 "gH" = (/obj/item/device/flashlight/lamp/tripod,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "gN" = (/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,/turf/open/floor/prison{icon_state = "darkbrown2"},/area/desert_dam/building/warehouse/warehouse)
 "gV" = (/obj/item/stool,/turf/open/floor/plating,/area/desert_dam/building/warehouse/loading)
-"gY" = (/obj/structure/surface/rack,/obj/item/weapon/gun/revolver/cmb,/obj/item/ammo_magazine/revolver/cmb/normalpoint{pixel_y = -9},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
+"gY" = (/obj/structure/surface/rack,/obj/item/weapon/gun/revolver/spearhead,/obj/item/ammo_magazine/revolver/spearhead/hollowpoint{pixel_y = -9},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
 "hj" = (/obj/structure/surface/table,/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control/rasputin{dir = 4},/turf/open/floor/prison{dir = 8; icon_state = "darkbrown2"},/area/desert_dam/landing/console2)
 "hl" = (/obj/structure/platform{dir = 8},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "hn" = (/obj/effect/decal/sand_overlay/sand1{dir = 8},/obj/structure/barricade/wooden{dir = 4},/turf/open/asphalt{icon_state = "tile"},/area/desert_dam/exterior/valley/valley_cargo)
@@ -82,6 +84,7 @@
 "ht" = (/obj/structure/machinery/conveyor{dir = 8; id = "cargo_container"},/obj/effect/decal/warning_stripes{icon_state = "N"},/obj/effect/decal/warning_stripes{icon_state = "S"},/turf/open/floor/plating,/area/desert_dam/building/warehouse/loading)
 "hv" = (/obj/structure/flora/grass/tallgrass/desert/corner{dir = 1},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "hy" = (/obj/structure/disposalpipe/segment,/turf/open/asphalt,/area/desert_dam/exterior/valley/valley_cargo)
+"hA" = (/obj/structure/prop/wooden_cross{pixel_y = 24},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "hG" = (/obj/structure/machinery/iv_drip,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{icon_state = "darkyellow2"},/area/desert_dam/building/warehouse/breakroom)
 "hI" = (/obj/structure/pipes/standard/simple/hidden/green,/obj/effect/decal/warning_stripes{icon_state = "S"},/obj/structure/desertdam/decals/road_stop{dir = 4; icon_state = "stop_decal5"},/turf/open/asphalt,/area/desert_dam/building/warehouse/loading)
 "hJ" = (/obj/effect/decal/sand_overlay/sand1{dir = 1},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached1"},/area/desert_dam/exterior/landing_pad_two)
@@ -126,7 +129,7 @@
 "kz" = (/obj/structure/machinery/landinglight/ds2,/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached14"},/area/desert_dam/exterior/landing_pad_two)
 "kE" = (/obj/structure/machinery/landinglight/ds2,/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached12"},/area/desert_dam/exterior/landing_pad_two)
 "kS" = (/obj/effect/decal/cleanable/cobweb{dir = 8},/obj/item/notepad,/obj/item/maintenance_jack,/obj/structure/closet,/obj/item/tool/pen{pixel_x = -5; pixel_y = 4},/obj/item/device/camera,/obj/item/device/camera_film,/obj/item/storage/photo_album,/turf/open/floor/almayer{icon_state = "plate"},/area/golden_arrow/prep_hallway)
-"kT" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/crate/secure/gear,/obj/item/clothing/head/helmet/marine/fluff/sas_juggernaut{armor_bomb = 50; armor_bullet = 30; armor_melee = 40},/obj/item/clothing/suit/storage/marine/fluff/sas_juggernaut{armor_bomb = 50; armor_bullet = 30; armor_melee = 40},/obj/item/weapon/gun/shotgun/pump/special,/obj/item/ammo_magazine/shotgun/buckshot/special,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/warehouse)
+"kT" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/crate/secure/gear,/obj/item/clothing/head/helmet/marine/fluff/sas_juggernaut{armor_bomb = 50; armor_bullet = 30; armor_melee = 40},/obj/item/clothing/suit/storage/marine/fluff/sas_juggernaut{armor_bomb = 50; armor_bullet = 30; armor_melee = 40},/obj/item/weapon/gun/shotgun/pump,/obj/item/ammo_magazine/shotgun/buckshot/special,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/warehouse)
 "kV" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
 "kZ" = (/turf/open/asphalt,/area/desert_dam/building/warehouse/loading)
 "lk" = (/obj/effect/decal/warning_stripes{icon_state = "N"},/obj/effect/decal/warning_stripes{icon_state = "W"},/obj/effect/decal/cleanable/dirt,/turf/closed/wall/wood,/area/desert_dam/building/warehouse/warehouse)
@@ -167,6 +170,7 @@
 "oz" = (/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached12"},/area/desert_dam/exterior/valley/valley_cargo)
 "oH" = (/obj/structure/surface/table/woodentable,/obj/item/device/flashlight/lamp/green,/turf/open/floor/carpet,/area/desert_dam/building/warehouse/breakroom)
 "oI" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison{dir = 8; icon_state = "sterile_white"},/area/desert_dam/building/warehouse/breakroom)
+"oJ" = (/obj/structure/prop/wooden_cross,/turf/open/desert/dirt{icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_cargo)
 "oO" = (/obj/structure/machinery/power/terminal{dir = 4},/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
 "oP" = (/obj/structure/machinery/landinglight/ds2{dir = 8},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached2"},/area/desert_dam/exterior/landing_pad_two)
 "oU" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/warehouse)
@@ -441,7 +445,7 @@
 "JS" = (/obj/structure/machinery/light{dir = 4},/turf/open/floor/prison{icon_state = "bright_clean2"},/area/desert_dam/building/warehouse/breakroom)
 "JV" = (/obj/structure/machinery/landinglight/ds2/delaythree{dir = 8},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached3"},/area/desert_dam/exterior/landing_pad_two)
 "Kc" = (/obj/vehicle/train/cargo/trolley,/turf/open/asphalt,/area/desert_dam/building/warehouse/loading)
-"Kf" = (/obj/structure/surface/rack,/obj/item/weapon/gun/shotgun/pump/special{pixel_y = 3},/obj/item/weapon/gun/shotgun/pump/special{pixel_y = -7},/obj/item/attachable/stock/shotgun,/obj/item/weapon/gun/smg/m39{pixel_y = -2},/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/desert_dam/building/warehouse/warehouse)
+"Kf" = (/obj/structure/surface/rack,/obj/item/weapon/gun/shotgun/pump{pixel_y = 3},/obj/item/weapon/gun/shotgun/pump{pixel_y = -7},/obj/item/attachable/stock/shotgun,/obj/item/weapon/gun/smg/m39{pixel_y = -2},/turf/open/floor/prison{dir = 1; icon_state = "cell_stripe"},/area/desert_dam/building/warehouse/warehouse)
 "Ki" = (/obj/structure/surface/rack,/obj/item/stack/sheet/metal,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/loading)
 "Kn" = (/obj/structure/desertdam/decals/road_edge{icon_state = "road_edge_decal4"},/obj/effect/decal/sand_overlay/sand1/corner1{dir = 1},/turf/open/asphalt,/area/desert_dam/exterior/valley/valley_cargo)
 "Ks" = (/obj/structure/prop/dam/boulder/boulder3,/turf/open/desert/dirt{dir = 5; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_cargo)
@@ -513,6 +517,7 @@
 "Rj" = (/obj/effect/decal/sand_overlay/sand1{dir = 8},/obj/structure/barricade/wooden{dir = 8},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached1"},/area/desert_dam/exterior/valley/valley_cargo)
 "Rn" = (/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached1"},/area/desert_dam/exterior/landing_pad_two)
 "Rt" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/liquid_fuel,/turf/open/floor/prison{dir = 10; icon_state = "bright_clean"},/area/desert_dam/building/warehouse/warehouse)
+"RA" = (/obj/item/clothing/head/helmet/marine/fluff/devilzhand{pixel_x = 16; pixel_y = 9},/obj/item/prop/colony/proptag{pixel_x = 16; pixel_y = -8},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "RN" = (/obj/structure/bed/stool,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_cargo)
 "RQ" = (/obj/structure/machinery/landinglight/ds2{dir = 4},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached1"},/area/desert_dam/exterior/landing_pad_two)
 "RU" = (/obj/structure/pipes/vents/pump{dir = 8},/obj/structure/machinery/power/apc/almayer{dir = 1},/obj/effect/decal/warning_stripes{icon_state = "W"; pixel_x = -1; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/almayer,/area/golden_arrow/prep_hallway)
@@ -670,11 +675,11 @@ wLwLwLwaaUaUaUsvRQbjbjbjbjbjbjbjbjbjbjbjUFRnGqqFYqaWQHDlCrIMVrCpIaCpuEBHTqaZBHBH
 wLwLwLwaaUaUaUsvAobjbjbjbjbjbjbjbjbjbjbjpARnGqpPpPovfyivivaFuiUQUQqBOYKzAOKzDaKzKzcduiZgqGvdaAUsAczPtJAcAcYtAcYtYtkeYtAcUsvVYtYtXmwLwLwLwLwLwL
 wLwLwLJJaUaUaUCQaiTyVZBBhWPNOIJqXXTyVZBBaiQiGqpPpPUxylXvXvXvuiuiuiuiuiuiuiuiuiuiuiuiuiNeNemZaAFicBDAXajGDAEGXCnYAckeAcAcFiwqOJoeXmwLwLwLwLwLwL
 wLwLwaaUaUaUaUHIyQElElyWGxYPYPYPBFzqElElyQyWGqqFYqUxaUaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLNengaAFiVXzokZzozoFNUKnYYtXqAcYtFiYtYtYtXmwLwLwLwLwLwL
-wLwLwaaUaUaUseKnryryryryrhpPTnpPHsryryryryryrhpPpPUxaUaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLNengaAFiVXkZzozokZgeyiOBYtmZAcYtFioegYKiMdwLwLwLwLwLwL
-wLwLPyvxaUaUzgpPjkpPpPjkpPpPjkpPpPjkpPpPjkpPpPjkpPUxaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLNeZSZgrNVXkZzozodsbumzYtYtmZAcYtFiMdMdMdMdwLwLwLwLwLwL
-wLuGVSJJaUaUzgpPsxpPpPsxpPpPsxpPpPsxpPpPsxpPpPsxpPUxaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLNeNeNeNeNeNeNeNeNeNeNeNeNeNeNeMdMdMdwLwLwLwLwLwLwLwLwL
-wLwLPyvxaUaUIfizizizizizizizizizizizizizizizizizizjlaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOVOVOVOVOVOVOVOVOVOVO
-wLwLwLPyKsaUaUaUaUaUaUaUaUqDYEVvUNcVnlVvLJUNcVaUcVaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOxBRUYkVOIsIsUIIsIsVO
+wLwLwahAaUaUseKnryryryryrhpPTnpPHsryryryryryrhpPpPUxaUaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLNengaAFiVXkZzozokZgeyiOBYtmZAcYtFioegYKiMdwLwLwLwLwLwL
+wLwLPyvxRAdvzgpPjkpPpPjkpPpPjkpPpPjkpPpPjkpPpPjkpPUxaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLNeZSZgrNVXkZzozodsbumzYtYtmZAcYtFiMdMdMdMdwLwLwLwLwLwL
+wLuGVSJJflaUzgpPsxpPpPsxpPpPsxpPpPsxpPpPsxpPpPsxpPUxaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLNeNeNeNeNeNeNeNeNeNeNeNeNeNeNeMdMdMdwLwLwLwLwLwLwLwLwL
+wLwLoJvxaUaUIfizizizizizizizizizizizizizizizizizizjlaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOVOVOVOVOVOVOVOVOVOVO
+wLwLwLPyKsflaUaUaUaUaUaUaUqDYEVvUNcVnlVvLJUNcVaUcVaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOxBRUYkVOIsIsUIIsIsVO
 wLwLwLuGwaaUaUaUaUaUCSaUaUVvLJzTeSNtcVqdhveSMPCSaUaUaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOqmHmdVlEIsioioioIsVO
 wLwLwLwLPytevxcsaUaUaUaUcVqdhveSMPaUaUaUnlcVaUAAaUaUwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOpFMJQEVOKIioioioilVO
 wLwLwLwLwLwLPytetevxaUaUSrvxnlaUaUaUaUaUaUSrtetetewLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLwLVOuPvSFeVOIsioioioIsVO
