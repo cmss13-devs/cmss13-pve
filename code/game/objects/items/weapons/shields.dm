@@ -123,7 +123,7 @@
 	readied_block = 60
 
 /obj/item/weapon/shield/riot/metal/hefa
-	name = "decorated metal shield.
+	name = "decorated metal shield."
 	desc = "A simple metal shield painted with HEFA grenade image."
 	icon_state = "hefashield"
 	item_state = "hefashield"

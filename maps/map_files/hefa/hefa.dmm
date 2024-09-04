@@ -6,10 +6,30 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"ad" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
 "ae" = (
 /obj/effect/decal/hefa_cult_decals/d32,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"af" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonprep)
 "ah" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -78,11 +98,6 @@
 /obj/item/prop/almayer/flight_recorder{
 	pixel_x = -8;
 	pixel_y = 9
-	},
-/obj/item/reagent_container/food/drinks/coffee/marine{
-	layer = 3.11;
-	pixel_x = 7;
-	pixel_y = 15
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -381,6 +396,10 @@
 /area/golden_arrow/cryo_cells)
 "bL" = (
 /obj/structure/closet/secure_closet/platoon_sergeant,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -473,10 +492,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "ce" = (
-/obj/structure/machinery/vending/walkman{
-	density = 0;
-	pixel_x = 10;
-	pixel_y = 21
+/obj/item/device/flashlight/lantern{
+	on = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -541,6 +558,11 @@
 	pixel_x = 3;
 	pixel_y = 10
 	},
+/obj/item/ammo_box/magazine/mk1{
+	layer = 3.1;
+	pixel_x = 3;
+	pixel_y = 14
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "cA" = (
@@ -590,9 +612,6 @@
 	icon_state = "NW-out";
 	layer = 2.5;
 	pixel_y = 1
-	},
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 4
 	},
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -662,7 +681,6 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/effect/decal/strata_decals/grime/grime3,
 /obj/structure/largecrate/supply/ammo{
 	fill_from_loc = 1;
 	name = "materials crate"
@@ -905,9 +923,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "dY" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 8
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
@@ -941,6 +956,10 @@
 /obj/structure/surface/table/almayer,
 /obj/item/weapon/gun/rifle/m4ra/pve{
 	pixel_y = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 2;
+	pixel_x = 7
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -990,6 +1009,11 @@
 	pixel_x = 14;
 	pixel_y = -26
 	},
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag{
+	pixel_y = 10;
+	pixel_x = -1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "es" = (
@@ -1019,6 +1043,14 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
 	req_access = list();
 	req_one_access_txt = "8;12;39;40"
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 7
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 18;
+	pixel_x = -5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -1094,6 +1126,10 @@
 /area/golden_arrow/platoonprep)
 "eG" = (
 /obj/structure/surface/table/almayer,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -5;
+	pixel_x = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "eH" = (
@@ -1193,6 +1229,10 @@
 	pixel_y = 9
 	},
 /obj/item/toy/plush/therapy/random_color,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 5;
+	pixel_x = 5
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1202,14 +1242,6 @@
 	icon_state = "S"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "dark_sterile"
-	},
-/area/golden_arrow/cryo_cells)
-"fl" = (
-/obj/effect/decal/strata_decals/grime/grime2{
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -1289,6 +1321,16 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonprep)
+"fG" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "4";
+	pixel_y = 10;
+	pixel_x = 3
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
 "fH" = (
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -1482,6 +1524,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"gB" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/explosive/grenade/high_explosive/frag,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "gF" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -1764,14 +1815,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/cryo_cells)
-"ik" = (
-/obj/effect/decal/strata_decals/grime/grime3,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/prep_hallway)
 "io" = (
 /turf/open/floor/almayer{
 	allow_construction = 0;
@@ -1799,7 +1842,6 @@
 	dir = 8
 	},
 /obj/item/trash/burger,
-/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -2044,6 +2086,13 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "2";
+	pixel_x = 7;
+	pixel_y = 36
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "jL" = (
@@ -2081,6 +2130,9 @@
 /area/golden_arrow/cryo_cells)
 "jO" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -2116,9 +2168,9 @@
 	req_access = list();
 	req_one_access_txt = "8;12;39;40"
 	},
-/obj/item/reagent_container/food/drinks/cans/souto/lime{
-	pixel_x = 10;
-	pixel_y = 21
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 18;
+	pixel_x = -5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -2198,17 +2250,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"ks" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 4
+"kr" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "4";
+	pixel_y = 10;
+	pixel_x = 3
 	},
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonprep)
 "kw" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -2340,6 +2391,37 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"lr" = (
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 5
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -13;
+	pixel_x = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 2;
+	pixel_x = -10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 10;
+	pixel_x = 10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 2;
+	pixel_x = 7
+	},
+/obj/item/trash/candle{
+	pixel_x = -3
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -5;
+	pixel_y = -7
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/prep_hallway)
 "lt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -2751,12 +2833,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "mU" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 1
-	},
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 1
-	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
@@ -3116,6 +3192,26 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"ow" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 8
+	},
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "4";
+	pixel_y = 3
+	},
+/obj/effect/decal/hefa_cult_decals/d32,
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/platoon_commander_rooms)
 "oy" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -3146,6 +3242,16 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
+"oF" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
 "oI" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	job = "Platoon Sergeant";
@@ -3231,6 +3337,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"oX" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
 "oZ" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -3418,6 +3534,14 @@
 	pixel_x = 6;
 	pixel_y = -3
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 1
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 5
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "pD" = (
@@ -3502,6 +3626,17 @@
 	pixel_x = -10;
 	pixel_y = 8
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 5
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -10;
+	pixel_y = 16
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "pZ" = (
@@ -3554,6 +3689,46 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"qn" = (
+/obj/item/trash/candle{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -1
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -10;
+	pixel_x = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -13;
+	pixel_y = -7
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 3;
+	pixel_y = 10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -1;
+	pixel_x = 10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -10;
+	pixel_y = 11
+	},
+/obj/item/explosive/grenade/high_explosive/frag{
+	pixel_y = 5;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/golden_arrow/prep_hallway)
 "qq" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	layer = 4;
@@ -3626,6 +3801,14 @@
 	icon_state = "plating"
 	},
 /area/golden_arrow/engineering)
+"qP" = (
+/obj/item/device/flashlight/lantern{
+	on = 1;
+	pixel_x = -1;
+	pixel_y = -5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "qQ" = (
 /obj/structure/reagent_dispensers/fueltank{
 	layer = 2.97
@@ -3729,27 +3912,17 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "rt" = (
+/obj/structure/surface/rack,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
 /obj/item/storage/box/guncase/pumpshotgun/special{
 	pixel_y = 4
 	},
-/obj/item/storage/box/guncase/flamer/special{
-	layer = 3.1;
-	pixel_y = 10
-	},
-/obj/structure/surface/rack,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"ry" = (
-/obj/effect/decal/strata_decals/grime/grime2{
-	dir = 8
-	},
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
 "rA" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -3860,6 +4033,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/item/device/flashlight/lantern{
+	on = 1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4023,6 +4199,16 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
+"sZ" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "3";
+	pixel_y = 5;
+	pixel_x = -3
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
 "tb" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/barricade/handrail{
@@ -4041,6 +4227,10 @@
 	pixel_x = 11;
 	pixel_y = 2
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = -1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "tc" = (
@@ -4048,6 +4238,10 @@
 	name = "squad one sergeant locker";
 	req_access_txt = "32;39";
 	req_one_access = list()
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = -1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -4141,6 +4335,18 @@
 /area/golden_arrow/hangar)
 "tJ" = (
 /obj/structure/surface/table/almayer,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 17;
+	pixel_x = -10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 18;
+	pixel_x = 5
+	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
 	},
@@ -4193,7 +4399,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "tZ" = (
-/obj/effect/decal/strata_decals/grime/grime2,
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1;
 	lighting = 0
@@ -4407,6 +4612,9 @@
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/suit/storage/jacket/marine/service{
 	pixel_x = 11
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -4632,6 +4840,11 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"vR" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/candle/lit/infinite,
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "vY" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -4690,6 +4903,14 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/bedsheetbin{
 	pixel_y = 14
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -5;
+	pixel_x = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -7;
+	pixel_x = 12
 	},
 /turf/open/floor/almayer{
 	icon_state = "dark_sterile"
@@ -4759,9 +4980,6 @@
 	},
 /area/golden_arrow/cryo_cells)
 "wo" = (
-/obj/effect/decal/strata_decals/grime/grime2{
-	dir = 8
-	},
 /obj/structure/largecrate/random/secure,
 /obj/structure/machinery/light,
 /turf/open/floor/almayer{
@@ -4932,6 +5150,16 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"xc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/item/storage/bible/hefa{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "xh" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/gunoil{
@@ -4989,6 +5217,14 @@
 	name = "hangar blast door control";
 	pixel_y = 28;
 	req_one_access_txt = "19;12"
+	},
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag{
+	pixel_x = -15
+	},
+/obj/item/storage/box/nade_box/frag{
+	pixel_y = 10;
+	pixel_x = -6
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -5435,6 +5671,14 @@
 	req_access_txt = "14;39";
 	req_one_access = list()
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = -2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 18;
+	pixel_x = 2
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -5451,6 +5695,11 @@
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_x = -3;
 	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/mk1{
+	layer = 3.1;
+	pixel_x = -2;
+	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -5778,6 +6027,16 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"Bj" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "2";
+	pixel_x = 7;
+	pixel_y = 36
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
 "Bl" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -5972,6 +6231,15 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
+"BX" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "Ca" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -6205,15 +6473,18 @@
 /area/golden_arrow/hangar)
 "Dn" = (
 /obj/structure/largecrate/supply/motiondetectors,
-/obj/structure/largecrate/supply/explosives/grenades/less{
+/obj/structure/largecrate/supply/explosives{
 	icon_state = "case";
-	pixel_y = 10
+	pixel_y = 10;
+	fill_from_loc = 1;
+	name = "\improper M40 HEFA grenade case (LOTS)"
 	},
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_x = -2;
-	pixel_y = 14
-	},
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "Dp" = (
@@ -6343,6 +6614,9 @@
 	pixel_x = 11;
 	pixel_y = 7
 	},
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "DR" = (
@@ -6448,23 +6722,6 @@
 "En" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
-"Er" = (
-/obj/structure/largecrate/supply/ammo{
-	fill_from_loc = 1;
-	name = "sentry crate"
-	},
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01
-	},
-/obj/item/defenses/handheld/sentry,
-/obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
-	layer = 3.1;
-	pixel_x = 20;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "Eu" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/roller{
@@ -6486,6 +6743,27 @@
 /obj/item/tool/warning_cone,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"Ex" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "2"
+	},
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "4";
+	pixel_y = 10;
+	pixel_x = 2
+	},
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6;
+	icon_state = "2";
+	pixel_x = 7
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/medical)
 "Ez" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/almayer,
@@ -6648,6 +6926,10 @@
 	req_access_txt = "32;40";
 	req_one_access = list()
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = -4
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6674,17 +6956,6 @@
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"Fu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
-	},
-/obj/effect/decal/strata_decals/grime/grime2{
-	dir = 8
-	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
 "Fx" = (
 /obj/structure/machinery/autolathe,
 /obj/item/stack/sheet/mineral/phoron/small_stack{
@@ -6692,6 +6963,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"FB" = (
+/obj/item/weapon/shield/riot/metal,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "FE" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
@@ -6857,17 +7132,6 @@
 	pixel_y = 1
 	},
 /obj/structure/pipes/vents/pump,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/hangar)
-"Gz" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 8
-	},
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7113,13 +7377,6 @@
 	icon_state = "cargo_arrow"
 	},
 /area/golden_arrow/hangar)
-"HE" = (
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 2;
-	pixel_y = -6
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "HF" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7151,6 +7408,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"HM" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_access = list();
+	req_one_access_txt = "8;12;39;40"
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "HN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -7195,6 +7463,11 @@
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+	},
+/obj/item/device/flashlight/lantern{
+	on = 1;
+	pixel_y = 15;
+	pixel_x = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -7351,10 +7624,19 @@
 /area/golden_arrow/dorms)
 "ID" = (
 /obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoonprep)
+"IE" = (
+/obj/effect/decal/hefa_cult_decals/d96,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/cryo_cells)
 "IG" = (
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8;
@@ -7443,9 +7725,10 @@
 /area/golden_arrow/cryo_cells)
 "IT" = (
 /obj/structure/machinery/vending/dinnerware,
-/obj/item/ashtray/glass{
-	pixel_x = -3;
-	pixel_y = 13
+/obj/item/device/flashlight/lantern{
+	on = 1;
+	pixel_y = 22;
+	pixel_x = -2
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -7606,17 +7889,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
-"JG" = (
-/obj/structure/bed{
-	can_buckle = 0;
-	desc = "A lightweight support lattice.";
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "latticefull";
-	layer = 2.1;
-	name = "lattice"
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "JJ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
@@ -7676,6 +7948,7 @@
 	pixel_x = 5;
 	pixel_y = 14
 	},
+/obj/item/storage/bible/hefa,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "JU" = (
@@ -7874,14 +8147,6 @@
 	icon_state = "dark_sterile"
 	},
 /area/golden_arrow/medical)
-"KJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/strata_decals/grime/grime3,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "KK" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -8300,11 +8565,43 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoonprep)
 "Nx" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 8
-	},
 /obj/structure/sign/safety/storage{
 	pixel_x = 33
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 5
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -8;
+	pixel_x = -3
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = -10;
+	pixel_y = 11
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 2;
+	pixel_x = -10
+	},
+/obj/item/trash/candle{
+	pixel_x = 12;
+	pixel_y = 13
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -13;
+	pixel_x = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -1;
+	pixel_x = 10
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
@@ -8641,11 +8938,22 @@
 /area/golden_arrow/hangar)
 "Pc" = (
 /obj/structure/largecrate/supply/motiondetectors,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_x = -12;
-	pixel_y = 14
+/obj/structure/largecrate/supply/explosives{
+	icon_state = "case";
+	pixel_y = 10;
+	fill_from_loc = 1;
+	name = "\improper M40 HEFA grenade case (LOTS)"
 	},
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
+/obj/item/storage/box/nade_box/frag,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "Pj" = (
@@ -8706,7 +9014,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "PD" = (
-/obj/effect/decal/strata_decals/grime/grime1,
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
@@ -8754,6 +9061,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "PR" = (
@@ -8767,6 +9078,16 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/briefing)
+"PU" = (
+/obj/item/tool/candle/lit/infinite,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/golden_arrow/medical)
 "PX" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8840,12 +9161,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Qr" = (
-/obj/structure/machinery/atm{
-	pixel_y = 26
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/dorms)
 "Qt" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -9080,6 +9395,18 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"Rs" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -5;
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "Rt" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -9104,10 +9431,6 @@
 /area/golden_arrow/hangar)
 "RB" = (
 /obj/structure/surface/table/almayer,
-/obj/item/prop/colony/game{
-	pixel_x = 15;
-	pixel_y = 10
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "RC" = (
@@ -9347,7 +9670,6 @@
 	pixel_x = 3;
 	pixel_y = 19
 	},
-/obj/effect/decal/strata_decals/grime/grime2,
 /obj/item/tool/mop{
 	pixel_x = -10;
 	pixel_y = 20
@@ -9467,6 +9789,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/platoonprep)
+"Tn" = (
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "Tq" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "apcbayrailing2"
@@ -9519,9 +9847,6 @@
 /area/golden_arrow/medical)
 "Tx" = (
 /obj/structure/machinery/door/poddoor/railing,
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 1
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -9745,6 +10070,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"Ux" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	layer = 4;
+	plane = -6
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoon_commander_rooms)
 "UB" = (
 /obj/structure/sign/safety/galley{
 	pixel_y = 28
@@ -9753,6 +10085,14 @@
 	name = "hypersleep semiotic";
 	pixel_x = 15;
 	pixel_y = 28
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -13;
+	pixel_x = -10
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -10;
+	pixel_x = 3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -10020,6 +10360,9 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "Wi" = (
@@ -10130,6 +10473,39 @@
 	pixel_x = -20;
 	pixel_y = 7
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -3
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 7;
+	pixel_x = -7
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -5;
+	pixel_x = 12
+	},
+/obj/item/trash/candle{
+	pixel_x = -3
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -8;
+	pixel_x = -3
+	},
+/obj/item/trash/candle{
+	pixel_x = 12;
+	pixel_y = 13
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/explosive/grenade/high_explosive/frag{
+	pixel_x = -5
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo_arrow"
 	},
@@ -10168,16 +10544,6 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/hangar)
-"WP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/strata_decals/grime/grime1,
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "WQ" = (
 /obj/structure/cable/heavyduty{
@@ -10324,11 +10690,21 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"Xv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/item/storage/bible/hefa{
+	pixel_x = -13;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "Xw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/obj/effect/decal/strata_decals/grime/grime2,
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
@@ -10444,8 +10820,18 @@
 /area/golden_arrow/dorms)
 "XZ" = (
 /obj/structure/surface/table/almayer,
-/obj/item/toy/deck/uno,
 /obj/structure/disposalpipe/segment,
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = 15;
+	pixel_x = 12
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 3
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "Yc" = (
@@ -10495,10 +10881,6 @@
 	dir = 10
 	},
 /area/golden_arrow/supply)
-"Yr" = (
-/obj/effect/decal/strata_decals/grime/grime3,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "Yu" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -10565,6 +10947,20 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
+"YJ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_y = -5;
+	pixel_x = 8
+	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 13;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "YK" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/barricade/handrail{
@@ -10670,14 +11066,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/cryo_cells)
-"Zn" = (
-/obj/structure/dartboard{
-	layer = 3.2;
-	pixel_y = 41
-	},
-/obj/structure/bed/chair,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "Zo" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -10777,6 +11165,11 @@
 	layer = 3.5;
 	pixel_y = 15
 	},
+/obj/item/tool/candle/lit/infinite{
+	pixel_x = 3;
+	pixel_y = 23;
+	layer = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "ZH" = (
@@ -10792,14 +11185,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
-"ZP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/strata_decals/grime/grime2,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "ZT" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -15752,7 +16137,7 @@ BP
 Qm
 wb
 Xh
-Qr
+Pp
 fM
 yc
 oc
@@ -16212,7 +16597,7 @@ SD
 Nr
 TH
 Pp
-Zo
+BX
 Zo
 dD
 Oc
@@ -17106,7 +17491,7 @@ Jr
 Jr
 En
 wg
-fl
+fH
 Lm
 eB
 eB
@@ -17127,7 +17512,7 @@ Za
 yP
 yP
 Za
-ik
+yP
 YT
 nK
 BS
@@ -17417,7 +17802,7 @@ Ar
 Dp
 HJ
 GY
-eG
+Rs
 HJ
 Kg
 Dp
@@ -17581,7 +17966,7 @@ eB
 aQ
 Hv
 Tw
-bC
+PU
 FG
 pW
 oC
@@ -17873,14 +18258,14 @@ AH
 Dp
 HJ
 GY
-eG
+vR
 HJ
 Kg
 Zl
 EQ
 eB
 UB
-DU
+YJ
 Hv
 vt
 Hv
@@ -18938,7 +19323,7 @@ En
 tJ
 fH
 Ij
-fH
+IE
 xk
 eB
 eB
@@ -19089,7 +19474,7 @@ Jr
 En
 fH
 fH
-Ij
+gB
 fH
 wn
 eB
@@ -19402,7 +19787,7 @@ eB
 eh
 aQ
 Ol
-zH
+Ex
 zH
 zH
 Kb
@@ -19553,7 +19938,7 @@ SF
 eB
 Hv
 aQ
-fr
+Xv
 WE
 nO
 IG
@@ -19692,7 +20077,7 @@ Nv
 Nv
 sB
 sB
-Sa
+kr
 sB
 sB
 Sa
@@ -19701,12 +20086,12 @@ sB
 sB
 sB
 Sa
-Sa
+af
 Sa
 wT
 aQ
 fr
-kT
+lr
 nO
 XU
 wz
@@ -19849,16 +20234,16 @@ Wh
 vm
 cd
 vm
-vm
+FB
 vm
 vm
 lg
-vm
+Tn
 Sa
 zw
 aQ
-fr
-kT
+xc
+qn
 nO
 XU
 wz
@@ -19987,9 +20372,9 @@ WV
 WV
 WV
 WV
+fG
 WV
-WV
-WV
+ad
 WV
 WV
 HY
@@ -20162,7 +20547,7 @@ Rt
 rh
 DB
 ix
-Vb
+ow
 Vb
 Vb
 As
@@ -20303,7 +20688,7 @@ QL
 Sa
 jX
 gM
-ex
+HM
 gM
 ex
 Sa
@@ -20466,7 +20851,7 @@ PH
 rh
 Bp
 Hv
-wZ
+Ux
 gm
 Vb
 Vb
@@ -20766,7 +21151,7 @@ XJ
 vm
 bk
 vm
-wZ
+Ux
 nv
 nv
 GF
@@ -20897,12 +21282,12 @@ Jr
 Jr
 WV
 WV
+Bj
 WV
 WV
 WV
 WV
-WV
-tW
+oF
 tW
 tW
 Du
@@ -21663,9 +22048,9 @@ Jr
 Jr
 Xb
 Cl
-Cl
+oX
 WQ
-Nb
+qP
 Ta
 Nb
 JN
@@ -21822,7 +22207,7 @@ Ta
 Nb
 Vt
 sU
-Er
+gi
 Em
 cN
 Ai
@@ -21997,7 +22382,7 @@ TF
 kQ
 nw
 kQ
-WP
+Kc
 nB
 cA
 nB
@@ -22273,7 +22658,7 @@ Xb
 Xb
 ei
 vk
-KJ
+EA
 QZ
 EA
 Is
@@ -22429,7 +22814,7 @@ UV
 Tv
 UV
 hJ
-Cl
+sZ
 Em
 Em
 kQ
@@ -22926,7 +23311,7 @@ GC
 mf
 mf
 mu
-ks
+wy
 yx
 xF
 vq
@@ -23027,7 +23412,7 @@ Jr
 kQ
 eA
 eA
-Yr
+eA
 eA
 dQ
 eA
@@ -23372,8 +23757,8 @@ Qy
 Qy
 Qy
 uv
-HE
-JG
+eA
+eA
 eA
 TC
 Qy
@@ -23635,7 +24020,7 @@ ug
 rB
 eA
 mJ
-Zn
+Yx
 eA
 eA
 eA
@@ -24272,7 +24657,7 @@ wi
 wi
 wi
 ZT
-ZP
+EC
 cA
 io
 Cr
@@ -26230,7 +26615,7 @@ xy
 kS
 kS
 ph
-ry
+rD
 fI
 rD
 Ei
@@ -26243,7 +26628,7 @@ ph
 Cn
 Ip
 rD
-Fu
+Ei
 kS
 kS
 xy
@@ -26260,7 +26645,7 @@ xy
 kS
 kS
 ph
-Gz
+rD
 fI
 rD
 Ei
