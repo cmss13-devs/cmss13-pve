@@ -78,15 +78,15 @@
 
 /obj/item/weapon/gun/drg_gunner_minigun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	if(overheated)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER(SPAN_BOLD("COOL IT DOWN!"))))
+		balloon_alert(src, "*overheated*")
 		return
 
 	heat_stored = min(heat_stored + heat_gain, heat_max)
 	handle_heat_effects()
 
 	if(heat_stored >= heat_max)
-		to_chat(user, SPAN_LARGE(SPAN_DANGER(SPAN_BOLD("MINIGUN STOPS DUE TO INTENSE HEAT!"))))
 		playsound(loc, 'sound/effects/acid_sizzle4.ogg', 25, TRUE)
+		balloon_alert_to_viewers("*minigun overheats!*")
 		overheated = TRUE
 		return
 
@@ -95,13 +95,13 @@
 /obj/item/weapon/gun/drg_gunner_minigun/proc/handle_heat_effects()
 	var/heat_coeff = heat_stored / heat_max
 	if(!heat_coeff)
-		remove_filter("heat_outer")
-		remove_filter("heat_inner")
+		remove_filter("heat_outline")
+		remove_filter("heat_blur")
 		color = COLOR_WHITE
 		return
 
-	add_filter("heat_outer", 1, list("type" = "outline", "color" = "#ff5a00", "size" = 0.1 * heat_coeff))
-	add_filter("heat_inner", 1, list("type" = "blur", "size" = heat_coeff - 0.4))
+	add_filter("heat_outline", 1, list("type" = "outline", "color" = "#ff5a00", "size" = 0.1 * heat_coeff))
+	add_filter("heat_blur", 1, list("type" = "blur", "size" = heat_coeff - 0.4))
 	color = rgb(255, 255 - 130 * heat_coeff, 255 - 200 * heat_coeff)
 
 /obj/item/weapon/gun/drg_gunner_minigun/set_gun_config_values()
@@ -109,33 +109,36 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_NONE
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
 	recoil = RECOIL_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/drg_gunner_minigun/unique_action(mob/user)
-	cock(user)
-
-/obj/item/weapon/gun/drg_gunner_minigun/cock(mob/user)
 	if(!overheated)
-		to_chat(user, SPAN_DANGER("[src] in a somewhat good state! You don't need to cool it manually!"))
+		to_chat(user, SPAN_DANGER("[src] is already in a somewhat good state!"))
 		return
 
 	if(cock_cooldown > world.time)
 		return
 
+	cock(user)
+
+/obj/item/weapon/gun/drg_gunner_minigun/cock(mob/user)
+	balloon_alert_to_viewers("*tries to release batteries*")
 	cock_cooldown = world.time + cock_delay
 
 	if(!do_after(user, cock_delay, INTERRUPT_INCAPACITATED, BUSY_ICON_GENERIC))
-		to_chat(user, SPAN_DANGER("Your [src] cooling was interrupted!"))
+		to_chat(user, SPAN_DANGER("[src] cooling process was interrupted!"))
+		balloon_alert_to_viewers("*cooling was interrupted!*")
 		return
 
 	user.visible_message(SPAN_NOTICE("[user] opens [src] batteries, giving them some time to cool."),
-	SPAN_NOTICE("You open [src] batteries, giving them some time to cool."), null, 4, CHAT_TYPE_COMBAT_ACTION)
+	SPAN_NOTICE("You open [src] batteries, giving them some time to cool."), null, 4, CHAT_TYPE_WEAPON_USE)
 
-	heat_stored -= 100
+	heat_stored -= heat_max / 10
 	overheated = FALSE
 
+	playsound(loc, 'sound/effects/acid_sizzle4.ogg', 25, TRUE)
 	playsound(user, cocked_sound, 25, TRUE)
+
 	handle_heat_effects()
 
 /*
@@ -158,7 +161,7 @@
 /datum/ammo/bullet/drg_gunner_minigun
 	name = "minigun bullet"
 
-	damage = 65
+	damage = 80
 	penetration = ARMOR_PENETRATION_TIER_8
 	accurate_range = 18
 	accuracy = HIT_ACCURACY_TIER_10
