@@ -218,6 +218,9 @@
 				if(DEAD)
 					mob_state = "Dead"
 
+			if(mob_state == "Conscious" && (locate(/datum/effects/crit) in marine_human.effects_list))
+				mob_state = "Incapacitated"
+
 			if(!istype(marine_human.head, /obj/item/clothing/head/helmet/marine))
 				has_helmet = FALSE
 
@@ -920,6 +923,8 @@
 	icon_state = "toc"
 	bound_width = 64
 	bound_height = 32
+	layer = ABOVE_TABLE_LAYER
+	density = TRUE
 
 /obj/structure/supply_drop
 	name = "Supply Drop Pad"

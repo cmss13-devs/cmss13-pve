@@ -1,5 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - rscadd: "Adds a Golden-Arrow specific sub-set of the smartgunners sidearm belt"
-  - rscadd: "Adds the above to the corresponding lockers, both on the standard & FORECON smartgunner ones"

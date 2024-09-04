@@ -1087,7 +1087,7 @@
 "wV" = (/obj/structure/machinery/door/airlock/almayer/marine/requisitions{dir = 8; name = "\improper Supply Depo"; no_panel = 1; not_weldable = 1; req_one_access = list()},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/supply)
 "wW" = (/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/gm/river/desert/shallow_edge,/area/whiskey_outpost/outside/river/east)
 "wX" = (/obj/structure/machinery/m56d_hmg/mg_turret{dir = 4; icon_state = "towergun"},/turf/open/floor/plating/plating_catwalk/prison,/area/whiskey_outpost/inside/bunker)
-"wY" = (/obj/structure/surface/rack,/obj/item/weapon/gun/shotgun/combat/riot,/obj/item/weapon/gun/shotgun/pump/special{pixel_y = -7},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker)
+"wY" = (/obj/structure/surface/rack,/obj/item/weapon/gun/shotgun/combat/riot,/obj/item/weapon/gun/shotgun/pump{pixel_y = -7},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker)
 "wZ" = (/obj/structure/disposalpipe/segment,/obj/structure/machinery/light/small{dir = 4},/turf/open/floor{dir = 4; icon_state = "asteroidwarning"},/area/whiskey_outpost/outside/north/platform)
 "xa" = (/obj/structure/machinery/light/small{dir = 4},/obj/structure/surface/rack,/obj/item/ammo_box/magazine/m39/ext{pixel_y = 4},/obj/item/ammo_box/magazine/m39/ext{pixel_y = -3},/turf/open/floor/prison{icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker)
 "xb" = (/turf/closed/wall/r_wall/unmeltable,/area/whiskey_outpost/outside/north/beach)

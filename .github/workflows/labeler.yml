@@ -17,7 +17,7 @@ jobs:
       - name: Get The Script
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |
-          wget "https://raw.githubusercontent.com/${{ github.repository }}/master/.github/add_labels.py"
+          wget "https://raw.githubusercontent.com/${{ github.repository }}/campaign/.github/add_labels.py"
       - name: Set up Python
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         uses: actions/setup-python@v3

@@ -144,6 +144,43 @@
 	return null
 
 /**
+ * Shuffles a provided list based on the weight of each element.
+ *
+ * Higher weight elements have a higher probability of being picked and tend to appear earlier in the list.
+ * Unweighted elements are never picked and are discarded.
+ *
+ * Arguments:
+ * * list_to_pick - assoc list in the form of: element = weight
+ *
+ * Returns list of shuffled weighted elements
+ */
+/proc/shuffle_weight(list/list_to_pick)
+	list_to_pick = list_to_pick.Copy() //not inplace
+
+	var/total_weight = 0
+	for(var/item in list_to_pick)
+		if(list_to_pick[item])
+			total_weight += list_to_pick[item]
+		else
+			list_to_pick -= item //discard unweighted
+
+	var/list_to_return = list()
+
+	while(length(list_to_pick))
+		var/target_weight = rand(1, total_weight)
+		for(var/item in list_to_pick)
+			var/item_weight = list_to_pick[item]
+			target_weight -= item_weight
+
+			if(target_weight <= 0)
+				list_to_return += item
+				list_to_pick -= item
+				total_weight -= item_weight
+				break
+
+	return list_to_return
+
+/**
  * Removes any null entries from the list
  * Returns TRUE if the list had nulls, FALSE otherwise
 **/

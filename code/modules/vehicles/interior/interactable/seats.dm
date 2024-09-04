@@ -487,3 +487,54 @@
 	name = "passenger seat"
 	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
 	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit
+	name = "cockpit seat"
+	desc = "A sturdy metal chair with a brace that lowers over your body. Holds you in place during high altitude drops."
+	icon_state = "vehicle_seat"
+	can_rotate = FALSE
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/afterbuckle(mob/M)
+	if(buckled_mob)
+		if(buckled_mob != M)
+			return
+		icon_state = initial(icon_state) + "_buckled"
+		overlays += chairbar
+
+		if(buckle_offset_x != 0)
+			mob_old_x = M.pixel_x
+			M.pixel_x = buckle_offset_x
+		if(buckle_offset_y != 0)
+			mob_old_y = M.pixel_y
+			M.pixel_y = buckle_offset_y
+
+		ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, BUCKLED_TRAIT)
+	else
+		icon_state = initial(icon_state)
+		overlays -= chairbar
+
+		if(buckle_offset_x != 0)
+			M.pixel_x = mob_old_x
+			mob_old_x = 0
+		if(buckle_offset_y != 0)
+			M.pixel_y = mob_old_y
+			mob_old_y = 0
+
+		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
+
+	handle_rotation()
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot
+	name = "pilot seat"
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot/handle_rotation()
+	if(dir == NORTH)
+		layer = ABOVE_MOB_LAYER
+	else
+		layer = BELOW_MOB_LAYER
+	if(buckled_mob)
+		buckled_mob.setDir(dir)
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
+	name = "co-pilot seat"
+

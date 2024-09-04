@@ -153,13 +153,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null), //forecon loves their pistols
-		list("88 Mod 4 Combat Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/mod88, VENDOR_ITEM_REGULAR),
 		list("VP78 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("ES4 electrostatic pistol", round(scale * 3), /obj/item/weapon/gun/pistol/es4, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("88M4 AP Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/mod88, VENDOR_ITEM_REGULAR),
 		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("ES4 Stun Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol/es4, VENDOR_ITEM_REGULAR),
 
@@ -292,7 +290,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/pve
 	name = "\improper M11-PMC helmet"
-	icon_state = "pmc_helmet"
+	icon = 'void-marines/merge-resolve/cm_hats.dmi'
+	icon_state = "pmc_inventory"
+	item_state = "pmc_worn"
+	item_icons = list(
+		WEAR_HEAD = 'void-marines/merge-resolve/cm_hats.dmi',
+	)
+	item_state_slots = list(WEAR_HEAD = "pmc_worn")
 	desc = "An aftermarket helmet worn by PMC groups. A more comfortable M11, covered by a sterilized white antibacterial layer. It's a shockingly useful feature after a firefight."
 
 /obj/item/defenses/handheld/sentry/wy

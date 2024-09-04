@@ -276,7 +276,7 @@
 
 /turf/closed/shuttle/midway
 	name = "\improper Midway"
-	icon = 'icons/turf/dropship.dmi'
+	icon = 'icons/turf/dropship4.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/midway/transparent
@@ -288,6 +288,30 @@
 	icon_state = "1"
 
 /turf/closed/shuttle/cyclone/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/typhoon
+	name = "\improper Typhoon"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/typhoon/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/tornado
+	name = "\improper Tornado"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/tornado/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/tripoli
+	name = "\improper Tripoli"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/tripoli/transparent
 	opacity = FALSE
 
 /turf/closed/shuttle/twe_dropship
@@ -404,9 +428,9 @@
 /turf/closed/shuttle/dropship2/WY/HorizonRunner
 	name = "\improper WY-LWI Horizon Runner HR-150"
 	desc = "The WY-LWI Horizon Runner HR-150, a collaborative creation of Lunnar-Welsun Industries and Weyland-Yutani. This small dropship is designed for short-range commercial transport."
-	icon = 'icons/turf/dropship4.dmi'
+	icon = 'icons/turf/dropship5.dmi'
 
 /turf/closed/shuttle/dropship2/WY/StarGlider
 	name = "\improper WY-LWI StarGlider SG-200"
 	desc = "The WY-LWI StarGlider SG-200, a product of the collaborative ingenuity between Weyland Yutani and Lunnar-Welsun Industries, This small dropship is designed for short-range commercial transport."
-	icon = 'icons/turf/dropship4.dmi'
+	icon = 'icons/turf/dropship5.dmi'
