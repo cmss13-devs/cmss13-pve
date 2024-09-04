@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "MD blips now show up for humans in 1 tile radius from MD user."

@@ -258,6 +258,20 @@
 		/obj/item/tape/regulation = 5,
 	)
 
+/obj/structure/machinery/vending/security/upp
+	name = "\improper People's Police Equipment Vendor"
+	desc = "A standard security vendor used by security forces of the UPP."
+	req_access = list(ACCESS_CIVILIAN_BRIG)
+	products = list(
+		/obj/item/handcuffs = 8,
+		/obj/item/reagent_container/spray/pepper = 4,
+		/obj/item/device/flashlight = 4,
+		/obj/item/storage/belt/security/MP/UPP = 4,
+		/obj/item/device/flash = 5,
+		/obj/item/storage/box/evidence = 6,
+		/obj/item/tape/regulation = 5,
+	)
+
 /obj/structure/machinery/vending/sea
 	name = "\improper SeaTech"
 	desc = "An equipment vendor designed to save lives"
@@ -270,7 +284,7 @@
 	products = list(
 		/obj/item/ammo_magazine/smg/m39/rubber = 20,
 		/obj/item/ammo_magazine/pistol/rubber = 20,
-		/obj/item/ammo_magazine/pistol/mod88/rubber = 20,
+		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
 		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,
