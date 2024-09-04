@@ -10,6 +10,7 @@
 	desc = "A Rexim RXF-M5 EVA pistol compressed down into a laptop! Also known as the Laz-top. Part of a line of discreet assassination weapons developed for Greater Argentina and the United States covert programs respectively."
 	w_class = SIZE_SMALL
 	garbage = TRUE
+
 /obj/item/prop/geiger_counter
 	name = "geiger counter"
 	desc = "A geiger counter measures the radiation it receives. This type automatically records and transfers any information it reads, provided it has a battery, with no user input required beyond being enabled."
