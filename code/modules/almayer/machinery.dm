@@ -353,3 +353,14 @@
 	icon_state = "ob_console"
 	dir = WEST
 	flags_atom = ON_BORDER|CONDUCT|FPRINT
+
+/obj/structure/machinery/prop/almayer/CICmap/arc
+	name = "map terminal"
+	desc = "A terminal that displays a map of the current operation location."
+	icon = 'icons/obj/vehicles/interiors/arc.dmi'
+	icon_state = "arcmap"
+	density = FALSE
+
+/obj/structure/machinery/computer/overwatch/almayer/arc
+	icon = 'icons/obj/vehicles/interiors/arc.dmi'
+	icon_state = "arcconsole"

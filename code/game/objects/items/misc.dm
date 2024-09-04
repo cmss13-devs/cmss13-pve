@@ -56,13 +56,13 @@
 	..()
 	if(!gripped)
 		user.visible_message(SPAN_NOTICE("[user] grips [src] tightly."), SPAN_NOTICE("You grip [src] tightly."))
-		flags_item |= NODROP
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
 		ADD_TRAIT(user, TRAIT_HOLDS_CANE, TRAIT_SOURCE_ITEM)
 		user.AddComponent(/datum/component/footstep, 6, 35, 4, 1, "cane_step")
 		gripped = TRUE
 	else
 		user.visible_message(SPAN_NOTICE("[user] loosens \his grip on [src]."), SPAN_NOTICE("You loosen your grip on [src]."))
-		flags_item &= ~NODROP
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 		REMOVE_TRAIT(user, TRAIT_HOLDS_CANE, TRAIT_SOURCE_ITEM)
 		// Ideally, this would be something like a component added onto every mob that prioritizes certain sounds, such as stomping over canes.
 		var/component = user.GetComponent(/datum/component/footstep)
@@ -292,6 +292,16 @@
 	new /obj/item/evidencebag(src)
 	new /obj/item/evidencebag(src)
 
+/obj/item/parachute
+	name = "parachute"
+	desc = "A surprisingly small yet bulky pack with just enough safety straps to make RnD pass health and safety. The label says the pack comes with two parachutes - main and reserve, but you doubt the pack can fit even one."
+	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon_state = "parachute_pack"
+	item_state = "parachute_pack"
+	w_class = SIZE_MASSIVE
+	flags_equip_slot = SLOT_BACK
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
+
 /obj/item/rappel_harness
 	name = "rappel harness"
 	desc = "A simple, uncomfortable rappel harness with just enough safety straps to make RnD pass health and safety. It comes with an in-built descender, but has no pouches for ammunition."
@@ -305,7 +315,7 @@
 	name = "dual purpose rappel-fulton harness"
 	desc = "A fulton Surface To Air Recovery System (STARS). Special latch/hook assembly allows for aircraft on flyby equipped with a rappel system to pick up the attached item or person. The complex assembly of venlar rigging and secured buckles takes some time to set up though."
 	icon_state = "rappel_harness_adv"
-	var/shuttle_id = DROPSHIP_MIDWAY
+	var/shuttle_id
 	actions_types = list(/datum/action/item_action/STARS)
 
 /obj/item/rappel_harness/extract/proc/try_extract(mob/living/carbon/human/user)
@@ -318,7 +328,7 @@
 		to_chat(user, SPAN_WARNING("No shuttle detected in lower orbit, aborting extraction."))
 		return
 
-	var/obj/structure/dropship_equipment/rappel_system/rapsys = locate() in shuttle.equipments
+	var/obj/structure/dropship_equipment/paradrop_system/rapsys = locate() in shuttle.equipments
 	if(!rapsys)
 		to_chat(user, SPAN_WARNING("No rappel system detected in shuttle, aborting extraction."))
 		return
@@ -356,7 +366,7 @@
 	H.equip_to_slot_if_possible(src, WEAR_WAIST)
 	try_extract(H)
 
-/obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/rappel_system/system)
+/obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/paradrop_system/system)
 	flick("rappel_hatch_opening", system)
 	user.pixel_x = 0
 	user.pixel_y = 0
@@ -393,3 +403,24 @@
 		return
 
 	harness.try_extract(H)
+
+/obj/item/rappel_harness/extract/midway
+	shuttle_id = DROPSHIP_MIDWAY
+
+/obj/item/rappel_harness/extract/cyclone
+	shuttle_id = DROPSHIP_CYCLONE
+
+/obj/item/rappel_harness/extract/typhoon
+	shuttle_id = DROPSHIP_TYPHOON
+
+/obj/item/rappel_harness/extract/tornado
+	shuttle_id = DROPSHIP_TORNADO
+
+/obj/item/rappel_harness/extract/tripoli
+	shuttle_id = DROPSHIP_TRIPOLI
+
+/obj/item/rappel_harness/extract/alamo
+	shuttle_id = DROPSHIP_ALAMO
+
+/obj/item/rappel_harness/extract/normandy
+	shuttle_id = DROPSHIP_NORMANDY
