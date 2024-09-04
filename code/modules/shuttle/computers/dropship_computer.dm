@@ -259,8 +259,8 @@
 	hijack.fire()
 	GLOB.alt_ctrl_disabled = TRUE
 
-	marine_announcement("Unscheduled dropship departure detected from operational area. Hijack likely. Shutting down autopilot.", "Dropship Alert", 'sound/AI/hijack.ogg', logging = ARES_LOG_SECURITY)
-	log_ares_flight("Unknown", "Unscheduled dropship departure detected from operational area. Hijack likely. Shutting down autopilot.")
+	marine_announcement("Unknown fault in remote flight control. Resolving as possible hijack. Marking dropship as possibly hostile and disconnecting from sensor matrix.", "Dropship Alert", 'sound/misc/notice2.ogg', logging = ARES_LOG_SECURITY)
+	log_ares_flight("Unknown", "Unknown fault in remote flight control. Resolving as possible hijack. Marking dropship as possibly hostile and disconnecting from sensor matrix.")
 
 	var/mob/living/carbon/xenomorph/xeno = user
 	var/hivenumber = XENO_HIVE_NORMAL
@@ -306,7 +306,7 @@
 		.["target_destination"] = shuttle.in_flyby? "Flyby" : shuttle.destination.name
 
 	.["door_status"] = is_remote ? list() : shuttle.get_door_data()
-	.["has_flyby_skill"] = skillcheck(user, SKILL_PILOT, SKILL_PILOT_EXPERT)
+	.["has_flyby_skill"] = skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED)
 
 	// Launch Alarm Variables
 	.["playing_launch_announcement_alarm"] = shuttle.playing_launch_announcement_alarm
@@ -363,7 +363,7 @@
 
 			var/dock_id = params["target"]
 			if(dock_id == DROPSHIP_FLYBY_ID)
-				if(!skillcheck(user, SKILL_PILOT, SKILL_PILOT_EXPERT))
+				if(!skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED))
 					to_chat(user, SPAN_WARNING("You don't have the skill to perform a flyby."))
 					return FALSE
 				update_equipment(is_optimised, TRUE)
@@ -465,7 +465,7 @@
 				shuttle.setTimer(DROPSHIP_WARMUP_TIME)
 		if("play_launch_announcement_alarm")
 			if (shuttle.mode != SHUTTLE_IDLE && shuttle.mode != SHUTTLE_RECHARGING)
-				to_chat(usr, SPAN_WARNING("The Launch Announcement Alarm is designed to tell people that you're going to take off soon."))
+				to_chat(usr, SPAN_WARNING("The launch warning alarm is only for alerting people to a takeoff."))
 				return
 			shuttle.alarm_sound_loop.start()
 			shuttle.playing_launch_announcement_alarm = TRUE
@@ -503,7 +503,7 @@
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/toc
 	name = "dropship control screen"
-	desc = "A screen on the TOC computer for controlling the dropship linked to it."
+	desc = "A screen on the TOC computer for controlling the dropship linked to it. Has an abbreviated version of the flight controls and data."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "toc_shuttle"
 	shuttleId = DROPSHIP_MIDWAY

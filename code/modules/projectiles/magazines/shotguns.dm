@@ -24,7 +24,7 @@ var/list/shotgun_boxes_12g = list(
 	caliber = "12g"
 	gun_type = /obj/item/weapon/gun/shotgun
 	max_rounds = 25 // Real shotgun boxes are usually 5 or 25 rounds. This works with the new system, five handfuls.
-	w_class = SIZE_LARGE // Can't throw it in your pocket, friend.
+	w_class = SIZE_MEDIUM // Can't throw it in your pocket, friend.
 	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_HANDFUL_BOX
 	handful_state = "slug_shell"
 	transfer_handful_amount = 5
@@ -70,15 +70,6 @@ var/list/shotgun_boxes_12g = list(
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 	handful_state = "beanbag_slug"
 
-/obj/item/ammo_magazine/shotgun/beanbag/riot
-	name = "box of RC beanbag slugs"
-	desc = "A box filled with beanbag shotgun shells used for non-lethal crowd control. Riot Control use only."
-	icon_state = "beanbag"
-	item_state = "beanbag"
-	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	handful_state = "beanbag_slug"
-	caliber = "20g"
-
 /obj/item/ammo_magazine/shotgun/buckshot/special
 	name = "box of buckshot shells, USCM special type"
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
@@ -91,12 +82,14 @@ Generic internal magazine. All shotguns will use this or a variation with differ
 Since all shotguns share ammo types, the gun path is going to be the same for all of them. And it
 also doesn't really matter. You can only reload them with handfuls.
 */
+
 /obj/item/ammo_magazine/internal/shotgun
 	name = "shotgun tube"
 	desc = "An internal magazine. It is not supposed to be seen or removed."
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
-	max_rounds = 9
+	max_rounds = 4
+	current_rounds = 0
 	chamber_closed = 0
 
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
@@ -117,35 +110,25 @@ also doesn't really matter. You can only reload them with handfuls.
 	caliber = "2 bore"
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
 
+/obj/item/ammo_magazine/internal/shotgun/combat
+	caliber = "12g"
+	max_rounds = 6
+
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
-	caliber = "20g"
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/marsoc
+	caliber = "12g"
+	max_rounds = 7
+	current_rounds = 7
 
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 
-/obj/item/ammo_magazine/internal/shotgun/buckshot
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
-
 /obj/item/ammo_magazine/internal/shotgun/type23
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
 	caliber = "8g"
 	max_rounds = 4
-
-/obj/item/ammo_magazine/internal/shotgun/type23/slug
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
-
-/obj/item/ammo_magazine/internal/shotgun/type23/flechette
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
-
-/obj/item/ammo_magazine/internal/shotgun/type23/dragonsbreath
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
-
-/obj/item/ammo_magazine/internal/shotgun/type23/beanbag
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
-
-/obj/item/ammo_magazine/internal/shotgun/type23/special
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/special
 
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
@@ -153,9 +136,6 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
-
-/obj/item/ammo_magazine/internal/shotgun/special
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 
 //-------------------------------------------------------
 
