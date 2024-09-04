@@ -862,6 +862,7 @@
 	nutrition -= 40
 	apply_damage(-3, TOX)
 	addtimer(VARSET_CALLBACK(src, lastpuke, FALSE), 35 SECONDS)
+	reagents.remove_any(rand(15, 30))
 
 /mob/living/carbon/human/proc/get_visible_gender()
 	if(wear_suit && wear_suit.flags_inv_hide & HIDEJUMPSUIT && ((head && head.flags_inv_hide & HIDEMASK) || wear_mask))

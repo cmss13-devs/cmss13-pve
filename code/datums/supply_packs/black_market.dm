@@ -151,7 +151,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 					new /obj/item/ammo_magazine/smg/mac15(src)
 					new /obj/item/ammo_magazine/smg/mac15(src)
 		if(4) //upp
-			new /obj/item/weapon/gun/shotgun/type23/riot_control(src)
+			new /obj/item/weapon/gun/shotgun/type23/riot(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
@@ -410,12 +410,12 @@ Additionally, weapons that are way too good to put in the basically-flavor black
 /datum/supply_packs/contraband/seized/cmb
 	name = "CMB Spearhead revolver (x5 magazines included)"
 	contains = list(
-		/obj/item/weapon/gun/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/ammo_magazine/revolver/cmb,
+		/obj/item/weapon/gun/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/ammo_magazine/revolver/spearhead,
 	)
 	dollar_cost = 20
 	containertype = /obj/structure/largecrate/black_market
@@ -683,7 +683,7 @@ USCM spare items, miscellaneous gear that's too niche and distant (or restricted
 	contains = list(
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
-		/obj/item/ammo_magazine/pistol/mod88/rubber,
+		/obj/item/ammo_magazine/pistol/vp70/rubber,
 		/obj/item/ammo_magazine/rifle/rubber,
 		/obj/item/ammo_magazine/rifle/m4ra/rubber,
 		/obj/item/ammo_magazine/shotgun/beanbag,
@@ -694,9 +694,9 @@ USCM spare items, miscellaneous gear that's too niche and distant (or restricted
 /* - Misc. USCM weaponry - */
 
 /datum/supply_packs/contraband/surplus/mk45_automag
-	name = "surplus MK-45 Automagnum case"
+	name = "surplus HG 45 case"
 	dollar_cost = 35
-	contains = list(/obj/item/storage/box/guncase/mk45_automag)
+	contains = list(/obj/item/storage/box/guncase/hg45)
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/surplus/nsg23_marine
@@ -927,13 +927,13 @@ This is where the RO can reclaim their lost honor and purchase the M44 custom, t
 
 /datum/supply_packs/contraband/deep_storage/cartridge_bayonet
 	name = "M8 Cartridge Bayonet Kit"
-	contains = list(/obj/item/storage/box/co2_knife)
+	contains = list(/obj/item/storage/box/loadout/co2_knife)
 	dollar_cost = 10
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/deep_storage/clf_holdout
 	name = "D18 Holdout Pistol"
-	contains = list(/obj/item/storage/box/clf)
+	contains = list(/obj/item/storage/box/loadout/clf)
 	dollar_cost = 10
 	crate_heat = 2
 	containertype = /obj/structure/largecrate/black_market

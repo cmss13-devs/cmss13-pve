@@ -541,7 +541,6 @@
 	},
 /obj/item/defenses/handheld/sentry,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	layer = 3.1;
 	pixel_x = 20;
 	pixel_y = 10
@@ -2294,7 +2293,6 @@
 "iF" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	pixel_y = 10
 	},
 /obj/item/ammo_box/magazine/mk1{
@@ -3608,6 +3606,9 @@
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/item/ammo_magazine/rifle/m4ra/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/rifle/m4ra/pve{
+	pixel_y = 8
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -3937,17 +3938,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
-"oK" = (
-/obj/item/storage/box/guncase/pumpshotgun/special{
-	pixel_y = 4
-	},
-/obj/item/storage/box/guncase/flamer/special{
-	layer = 3.1;
-	pixel_y = 10
-	},
-/obj/structure/surface/rack,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "oM" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -5235,7 +5225,7 @@
 /area/golden_arrow/engineering)
 "tP" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/co2_knife{
+/obj/item/storage/box/loadout/co2_knife{
 	pixel_x = 3;
 	pixel_y = 13
 	},
@@ -8007,8 +7997,16 @@
 "Fe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/m4ra/pve{
-	pixel_y = 8
+/obj/item/storage/box/guncase/shotgunpump{
+	pixel_y = 17
+	},
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_y = 6;
+	pixel_x = -4
+	},
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_y = 6;
+	pixel_x = 6
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -8092,6 +8090,7 @@
 /obj/item/clothing/under/marine/officer/boiler,
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
+/obj/item/clothing/under/marine/officer/bridge,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -9822,6 +9821,23 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"LP" = (
+/obj/item/storage/box/guncase/flamer/special{
+	layer = 3.1;
+	pixel_y = 10
+	},
+/obj/structure/surface/rack,
+/obj/item/storage/box/guncase/shotguncombat,
+/obj/item/ammo_box/magazine/m4a3{
+	layer = 3;
+	pixel_y = -5;
+	pixel_x = -2
+	},
+/obj/item/ammo_box/magazine/vp70{
+	layer = 3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "LQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -24263,7 +24279,7 @@ EG
 EG
 EG
 HZ
-oK
+LP
 NU
 pI
 Ot
@@ -25175,7 +25191,7 @@ EG
 EG
 EG
 HZ
-oK
+LP
 pd
 Jx
 Ot

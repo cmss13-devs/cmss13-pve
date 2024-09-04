@@ -160,6 +160,7 @@
 		turn_off(user)
 		return
 
+
 	for(var/blip in blips)
 		user.client.screen -= blip
 		qdel(blip)
