@@ -472,7 +472,7 @@
 
 	is_on = FALSE
 	power_generation_max = 100000 //100,000W at full capacity
-	original_fail_rate = 10
+	original_fail_rate = 0
 
 #undef BUILDSTATE_FUNCTIONAL
 #undef BUILDSTATE_DAMAGE_WELD
