@@ -17,7 +17,7 @@
 	var/amount = 3
 	var/drying_time = 30 SECONDS
 	var/dry_start_time // If this dries, track the dry start time for footstep drying
-	garbage = TRUE // Keep for atmosphere
+	garbage = FALSE // Keep for atmosphere
 
 /obj/effect/decal/cleanable/blood/Destroy()
 	for(var/datum/disease/D in viruses)
