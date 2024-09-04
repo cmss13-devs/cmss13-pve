@@ -15,6 +15,7 @@
 		WEAR_R_HAND = 'void-marines/icons/drg_weapons.dmi'
 		)
 	flags_equip_slot = SLOT_BACK
+	force = MELEE_FORCE_WEAK
 	preload = /obj/item/explosive/grenade/high_explosive/drg_engineer_launcher
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
