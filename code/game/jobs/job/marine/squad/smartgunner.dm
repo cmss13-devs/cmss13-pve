@@ -84,6 +84,11 @@
 	gear_preset = /datum/equipment_preset/uscm/sg/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/lesser_rank
 
+/datum/job/marine/smartgunner/ai/hefa
+	title = "Militant"
+	gear_preset = /datum/equipment_preset/uscm/sg/hefa
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/hefa
+
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
@@ -93,6 +98,11 @@
 	name = JOB_SQUAD_SMARTGUN_FORECON
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
+
+/obj/effect/landmark/start/marine/smartgunner/hefa
+	name = "Militant"
+	job = /datum/job/marine/smartgunner/ai/hefa
+	squad = SQUAD_HEFA
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT

@@ -73,10 +73,19 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	gear_preset = /datum/equipment_preset/uscm_ship/so/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 
+/datum/job/command/bridge/ai/hefa
+	title = "Magister"
+	gear_preset = /datum/equipment_preset/uscm_ship/so/hefa
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/hefa
+
 /obj/effect/landmark/start/bridge/upp
 	name = JOB_SO_UPP
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
+
+/obj/effect/landmark/start/bridge/hefa
+	name = "Magister"
+	job = /datum/job/command/bridge/ai/hefa
 
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT

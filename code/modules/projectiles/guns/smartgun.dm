@@ -761,3 +761,10 @@
 	name = "XM56E smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
+
+/obj/item/weapon/gun/smartgun/hefa
+	name = "\improper modified smartgun"
+	desc = "This smartgun was modified to turn all fired bullets into nasty shrapnel. Damn."
+	ammo_primary = /datum/ammo/bullet/shrapnel/hefa //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/shrapnel/metal/hefa ///Toggled ammo type
+	starting_attachment_types = list(/obj/item/attachable/smartbarrel/hefa)

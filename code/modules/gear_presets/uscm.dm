@@ -102,8 +102,8 @@
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
-	paygrade = "ME2"
-	role_comm_title = "RFN"
+	paygrade = "H-OR"
+	role_comm_title = "HEFA"
 	skills = /datum/skills/pfc
 
 	minimap_icon = "private"

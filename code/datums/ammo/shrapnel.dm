@@ -155,3 +155,22 @@
 	damage = 1 // ALL DAMAGE IS IN dropship_ammo SO WE CAN DEAL DAMAGE TO RESTING MOBS, these will still remain however so that we can get cause_data and status effects.
 	penetration = ARMOR_PENETRATION_TIER_8
 	accuracy = HIT_ACCURACY_TIER_MAX
+
+/datum/ammo/bullet/shrapnel/hefa
+	penetration = ARMOR_PENETRATION_TIER_1
+
+	bonus_projectiles_type = /datum/ammo/bullet/shrapnel/spread
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+
+/datum/ammo/bullet/shrapnel/spread
+	scatter = SCATTER_AMOUNT_TIER_5
+	damage = 10
+	penetration = 0
+
+/datum/ammo/bullet/shrapnel/spread/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator) //NOT used on New(), applied to the projectiles.
+	. = ..()
+	generated_projectile.apply_bullet_trait(/datum/element/bullet_trait_iff, list(FACTION_USCM, FACTION_HEFA))
+
+/datum/ammo/bullet/shrapnel/metal/hefa
+	penetration = ARMOR_PENETRATION_TIER_9
+	shell_speed = AMMO_SPEED_TIER_2

@@ -1400,6 +1400,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "marine_hefa_helmet"
 	item_state = "marine_hefa_helmet"
 
+/obj/item/clothing/head/helmet/marine/specialist/hefa/crown
+	name = "\improper HEFA crown"
+	specialty = "HEFA crown"
+	desc = "A holy relic of your order, only Magister is allowed to wear this Crown."
+	icon_state = "hefa_crown"
+	item_state = "hefa_crown"
+	flags_inv_hide = NO_FLAGS
+
 /obj/item/clothing/head/helmet/marine/reporter
 	name = "press helmet"
 	desc = "A helmet designed to make it clear that the wearer is safety aware and not looking for a fight."

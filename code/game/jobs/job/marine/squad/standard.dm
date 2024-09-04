@@ -77,6 +77,11 @@
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
 
+/datum/job/marine/standard/ai/hefa
+	title = "Knight"
+	gear_preset = /datum/equipment_preset/uscm/pfc/hefa
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/hefa
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
@@ -91,6 +96,11 @@
 	name = JOB_SQUAD_RTO
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
+
+/obj/effect/landmark/start/marine/hefa
+	name = "Knight"
+	squad = SQUAD_HEFA
+	job = /datum/job/marine/standard/ai/hefa
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

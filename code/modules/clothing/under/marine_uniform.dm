@@ -51,6 +51,12 @@
 /obj/item/clothing/under/marine/standard
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/under/marine/hefa
+	name = "HEFA uniform"
+	desc = "It has been reinforced against shrapnel and explosions."
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
 	desc = "Standard-issue Marine hospital corpsman fatigues with venlar armor inserts at critical areas to protect from blades and ballistics."

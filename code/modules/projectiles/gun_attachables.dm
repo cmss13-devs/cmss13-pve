@@ -545,6 +545,9 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "silenced_smartgun"
 	gun_traits = list(TRAIT_GUN_SILENCED)
 
+/obj/item/attachable/smartbarrel/hefa
+	icon_state = "hefa_barrel"
+
 // Mateba barrels
 
 /obj/item/attachable/mateba

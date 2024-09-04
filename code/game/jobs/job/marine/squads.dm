@@ -159,6 +159,16 @@
 	minimap_color = "#32CD32"
 	usable = TRUE
 
+/datum/squad/marine/hefa
+	name = SQUAD_HEFA
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = HEFA_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#ffc32d"
+	chat_color = "#ffe650"
+	minimap_color = "#ffc32d"
+	usable = TRUE
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

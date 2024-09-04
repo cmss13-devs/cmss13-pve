@@ -593,6 +593,11 @@
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	frequency = ALPHA_FREQ
 
+/obj/item/device/radio/headset/almayer/marine/hefa
+	name = "order radio headset"
+	desc = "A standard marine radio headset, slightly modified. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	frequency = HEFA_FREQ
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"

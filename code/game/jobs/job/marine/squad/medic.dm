@@ -86,6 +86,11 @@
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/forecon/lesser_rank
 
+/datum/job/marine/medic/ai/hefa
+	title = "Hospitalier"
+	gear_preset = /datum/equipment_preset/uscm/medic/hefa
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/hefa
+
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP
 	squad = SQUAD_UPP
@@ -95,6 +100,11 @@
 	name = JOB_SQUAD_MEDIC_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
+
+/obj/effect/landmark/start/marine/medic/hefa
+	name = "Hospitalier"
+	squad = SQUAD_HEFA
+	job = /datum/job/marine/medic/ai/hefa
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT

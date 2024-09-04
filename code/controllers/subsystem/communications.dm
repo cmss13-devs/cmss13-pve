@@ -129,6 +129,7 @@ var/const/CHARLIE_FREQ = 1493
 var/const/DELTA_FREQ = 1494
 var/const/ECHO_FREQ = 1495
 var/const/CRYO_FREQ = 1496
+var/const/HEFA_FREQ = 1497
 
 //Civilian channels
 var/const/COLONY_FREQ = 1469
@@ -164,6 +165,7 @@ var/list/radiochannels = list(
 	SQUAD_MARINE_CRYO = CRYO_FREQ,
 	SQUAD_SOF = SOF_FREQ,
 	SQUAD_CBRN = CBRN_FREQ,
+	SQUAD_HEFA = HEFA_FREQ,
 
 	RADIO_CHANNEL_ALAMO = DS1_FREQ,
 	RADIO_CHANNEL_NORMANDY = DS2_FREQ,
@@ -269,6 +271,7 @@ SUBSYSTEM_DEF(radio)
 		"[HC_FREQ]" = "hcradio",
 		"[PVST_FREQ]" = "pvstradio",
 		"[COLONY_FREQ]" = "deptradio",
+		"[HEFA_FREQ]" = "bravoradio",
 	)
 
 /datum/controller/subsystem/radio/proc/add_object(obj/device as obj, new_frequency as num, filter = null as text|null)

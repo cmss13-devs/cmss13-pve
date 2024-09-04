@@ -51,6 +51,10 @@
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
 
+/datum/job/marine/tl/ai/hefa
+	title = "Prior"
+	gear_preset = /datum/equipment_preset/uscm/tl/hefa
+
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
@@ -60,5 +64,10 @@
 	name = JOB_SQUAD_TEAM_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
+
+/obj/effect/landmark/start/marine/tl/hefa
+	name = "Prior"
+	squad = SQUAD_HEFA
+	job = /datum/job/marine/tl/ai/hefa
 
 #undef SGT_VARIANT

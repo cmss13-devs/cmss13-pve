@@ -18,6 +18,13 @@
 					NP = "Mr. "
 				else
 					NP = "Mx. " //inclusivity win!
+			if(P.prefix == "Knight")
+				if(gender && gender == FEMALE)
+					NP = "Sister "
+				else if(gender && gender == MALE)
+					NP = "Brother "
+				else
+					NP = "Sibling " //inclusivity win!
 		return NP
 	else
 		if(!P)//For custom admin-made paygrades to not cause runtimes.

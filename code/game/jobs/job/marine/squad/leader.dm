@@ -65,6 +65,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 
+/datum/job/marine/leader/ai/hefa
+	title = "Comandor"
+	gear_preset = /datum/equipment_preset/uscm/leader/hefa
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/hefa
+
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
@@ -74,6 +79,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
+
+/obj/effect/landmark/start/marine/leader/hefa
+	name = "Comandor"
+	squad = SQUAD_HEFA
+	job = /datum/job/marine/leader/ai/hefa
 
 #undef SSGT_VARIANT
 #undef GYSGT_VARIANT

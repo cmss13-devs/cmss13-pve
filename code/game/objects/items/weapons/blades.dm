@@ -98,6 +98,7 @@
 	sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
 	apply_explosion_overlay()
 	cell_explosion(epicenter, 40, 18, EXPLOSION_FALLOFF_SHAPE_LINEAR, user.dir, cause_data)
+	target.gib()
 	qdel(src)
 
 /obj/item/weapon/sword/katana
