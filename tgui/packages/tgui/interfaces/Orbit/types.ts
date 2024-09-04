@@ -26,6 +26,7 @@ export type OrbitData = {
   vehicles: Observable[];
   escaped: Observable[];
   icons?: string[];
+  main_platoon_name: string;
 };
 
 export type Observable = {
@@ -59,5 +60,8 @@ export const buildSquadObservable: (
   };
 };
 
-export type splitter = (members: Array<Observable>) => Array<SquadObservable>;
+export type splitter = (
+  members: Array<Observable>,
+  platoon: string | undefined,
+) => Array<SquadObservable>;
 export type groupSorter = (a: Observable, b: Observable) => number;

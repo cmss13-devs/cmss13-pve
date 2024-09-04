@@ -205,6 +205,8 @@
 	data["escaped"] = escaped
 	data["icons"] = GLOB.minimap_icons
 
+	data["main_platoon_name"] = GLOB.main_platoon_name
+
 	return data
 
 /datum/orbit_menu/ui_assets(mob/user)

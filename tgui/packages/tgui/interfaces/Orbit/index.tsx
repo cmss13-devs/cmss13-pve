@@ -152,7 +152,8 @@ const xenoSplitter = (members: Array<Observable>) => {
   return squads;
 };
 
-const marineSplitter = (members: Array<Observable>) => {
+const marineSplitter = (members: Array<Observable>, platoon: string) => {
+  const mainPlatoon: Array<Observable> = [];
   const alphaSquad: Array<Observable> = [];
   const bravoSquad: Array<Observable> = [];
   const charlieSquad: Array<Observable> = [];
@@ -165,7 +166,9 @@ const marineSplitter = (members: Array<Observable>) => {
   const other: Array<Observable> = [];
 
   members.forEach((x) => {
-    if (x.job?.includes('Alpha')) {
+    if (x.job?.includes(platoon)) {
+      mainPlatoon.push(x);
+    } else if (x.job?.includes('Alpha')) {
       alphaSquad.push(x);
     } else if (x.job?.includes('Bravo')) {
       bravoSquad.push(x);
@@ -189,6 +192,7 @@ const marineSplitter = (members: Array<Observable>) => {
   });
 
   const squads = [
+    buildSquadObservable(platoon, 'blue', mainPlatoon),
     buildSquadObservable('Alpha', 'red', alphaSquad),
     buildSquadObservable('Bravo', 'yellow', bravoSquad),
     buildSquadObservable('Charlie', 'purple', charlieSquad),
@@ -227,6 +231,7 @@ const GroupedObservable = (props: {
   readonly section: Array<Observable>;
   readonly title: string;
   readonly splitter: splitter;
+  readonly platoon?: string;
   readonly sorter?: groupSorter;
 }) => {
   const { color, section = [], title } = props;
@@ -249,7 +254,7 @@ const GroupedObservable = (props: {
     return null;
   }
 
-  const squads = props.splitter(filteredSection);
+  const squads = props.splitter(filteredSection, props.platoon);
 
   return (
     <Stack.Item>
@@ -305,6 +310,7 @@ const ObservableContent = () => {
     npcs = [],
     vehicles = [],
     escaped = [],
+    main_platoon_name,
   } = data;
 
   return (
@@ -314,6 +320,7 @@ const ObservableContent = () => {
         section={marines}
         title="Marines"
         splitter={marineSplitter}
+        platoon={main_platoon_name}
         sorter={marineSort}
       />
       <ObservableSection color="teal" section={humans} title="Humans" />
