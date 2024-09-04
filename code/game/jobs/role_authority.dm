@@ -210,12 +210,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		if(!player.ready || player.job) //get only players who are ready and unassigned
 			continue
 	// [RU-PVE-EDIT]
-		if(M.client.total_enter_lock)
-			to_chat(M, SPAN_NOTICE("You have BLACKLISTED from entering!"))
+		if(player.client.total_enter_lock)
+			to_chat(player, SPAN_NOTICE("You have BLACKLISTED from entering!"))
 			return
 		if(!enter_allowed)
-			if(!check_rights(, show_msg = FALSE) && M.client.enter_lock_bypass)
-				to_chat(M, SPAN_NOTICE("There is an administrative lock on entering the game!"))
+			if(!check_rights(, show_msg = FALSE) && player.client.enter_lock_bypass)
+				to_chat(player, SPAN_NOTICE("There is an administrative lock on entering the game!"))
 				return
 	// [/RU-PVE-EDIT]
 

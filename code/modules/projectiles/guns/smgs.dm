@@ -696,10 +696,13 @@
 /obj/item/weapon/gun/smg/p90
 	name = "\improper FN P90 submachinegun"
 	desc = "The FN P90 submachine gun. An archaic design, but still widely used by corporate and mercenary groups, sometimes seen in the hands of civilian populations. This weapon only accepts 5.7×28mm rounds."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'void-marines/merge-resolve/guns.dmi'
 	icon_state = "p90"
 	item_state = "p90"
-
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/merge-resolve/guns_l.dmi',
+		WEAR_R_HAND = 'void-marines/merge-resolve/guns_r.dmi'
+		)
 	fire_sound = 'sound/weapons/p90.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/p90
 	attachable_allowed = list(
