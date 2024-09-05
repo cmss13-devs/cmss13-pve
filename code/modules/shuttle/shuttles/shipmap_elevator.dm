@@ -38,7 +38,7 @@
 	playsound(dropzone.return_center_turf(), ignition_sound, 60, 0)
 	playsound(return_center_turf(), ignition_sound, 60, 0)
 
-/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/set_idle()
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/on_prearrival()
 	..()
 	for(var/i in gears)
 		var/obj/structure/machinery/gear/G = i
