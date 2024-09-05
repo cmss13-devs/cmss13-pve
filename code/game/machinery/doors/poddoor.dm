@@ -316,6 +316,10 @@
 /obj/structure/machinery/door/poddoor/almayer/blended/white/open
 	density = FALSE
 
+/obj/structure/machinery/door/poddoor/almayer/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, relativewall_neighbours)), 10)
+
 /obj/structure/machinery/door/poddoor/almayer/blended/aicore
 	icon_state = "aidoor1"
 	base_icon_state = "aidoor"
