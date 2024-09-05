@@ -31,7 +31,7 @@
 	icon_state = "upperengineering"
 
 /area/golden_arrow/briefing
-	name = "\improper Briefing Area"
+	name = "\improper Assembly Room"
 	icon_state = "briefing"
 
 /area/golden_arrow/dorms
@@ -81,3 +81,50 @@
 /area/golden_arrow/platoonarmory
 	name = "\improper Platoon Armory"
 	icon_state = "alpha"
+
+/area/golden_arrow/ai_interface
+	name = "\improper Human AI Interface"
+	icon_state = "airoom"
+	soundscape_playlist = SCAPE_PL_AICORE
+	soundscape_interval = 7
+
+/area/golden_arrow/motor_pool
+	name = "\improper Motor Pool"
+	icon_state = "workshop"
+
+/area/golden_arrow/lower_cargo
+	name = "\improper Lower Cargo Bays"
+	icon_state = "req"
+
+/area/golden_arrow/supplydrop
+	name = "\improper Supply Drop Bay"
+	icon_state = "astronavigation"
+
+
+/area/golden_arrow/cargo_shuttle
+	name = "\improper cargo_shuttle"
+	icon_state = "lifeboat"
+
+/area/golden_arrow/cargo_shuttle/elevator
+	name = "\improper Cargo Elevator"
+	unlimited_power = TRUE
+	requires_power = FALSE
+
+/area/golden_arrow/cargo_shuttle/lower
+	name = "\improper Cargo Elevator Lower Level"
+
+/area/golden_arrow/cargo_shuttle/upper
+	name = "\improper Cargo Elevator Upper Level"
+
+/area/golden_arrow/vehicle_shuttle
+	name = "\improper Vehicle Elevator One"
+
+/area/golden_arrow/vehicle_shuttle/upper
+	name = "\improper Vehicle Elevator One Upper"
+
+/area/golden_arrow/vehicle_shuttle/two
+	name = "\improper Vehicle Elevator Two"
+
+/area/golden_arrow/vehicle_shuttle/two/upper
+	name = "\improper Vehicle Elevator Two Upper"
+
