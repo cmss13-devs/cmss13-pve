@@ -910,7 +910,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
 "adl" = (
-/turf/open/floor/almayer/edge/smooth,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/platoonarmory)
 "adn" = (
 /obj/effect/decal/strata_decals/grime/grime2{
@@ -1957,7 +1959,9 @@
 	pixel_y = 3
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/platoonarmory)
 "agb" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
@@ -5309,7 +5313,7 @@
 	light_power = 0.5;
 	pixel_y = 10
 	},
-/turf/open/floor/almayer/edge/smooth{
+/turf/open/floor/almayer/edge{
 	dir = 4
 	},
 /area/golden_arrow/platoonarmory)
@@ -5699,9 +5703,7 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "arh" = (
-/turf/open/floor/almayer/edge/smooth{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge,
 /area/golden_arrow/platoonarmory)
 "ari" = (
 /obj/structure/sink{
@@ -5746,7 +5748,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/platoonarmory)
 "arn" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6740,7 +6744,9 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/strata_decals/grime/grime3,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/platoonarmory)
 "aus" = (
 /obj/effect/decal/cleanable/dirt{
@@ -9052,9 +9058,6 @@
 	dir = 4
 	},
 /area/golden_arrow/motor_pool)
-"aAF" = (
-/turf/open/floor/almayer/edge/smooth/corner,
-/area/golden_arrow/platoonarmory)
 "aAG" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -9994,7 +9997,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/smooth,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/platoonarmory)
 "aDh" = (
 /turf/closed/wall/almayer/outer,
@@ -11994,7 +11999,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/platoonarmory)
 "aIY" = (
 /obj/structure/machinery/door_control{
@@ -12352,8 +12359,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 1
+/turf/open/floor/almayer/edge{
+	dir = 4
 	},
 /area/golden_arrow/platoonarmory)
 "aJY" = (
@@ -12755,7 +12762,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
+/turf/open/floor/almayer/edge{
 	dir = 8
 	},
 /area/golden_arrow/platoonarmory)
@@ -12765,14 +12772,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
-"aLp" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
-/area/golden_arrow/platoonarmory)
 "aLs" = (
 /obj/structure/platform{
 	dir = 1
@@ -16799,14 +16798,6 @@
 	dir = 1
 	},
 /area/golden_arrow/cryo_cells)
-"aXY" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 4
-	},
-/area/golden_arrow/platoonarmory)
 "aYb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17994,7 +17985,9 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/platoonarmory)
 "fbw" = (
 /turf/closed/wall/almayer/outer,
@@ -29175,7 +29168,7 @@ aHZ
 dzT
 aSv
 gjM
-aXY
+aJX
 aqb
 aJX
 aqk
@@ -29783,8 +29776,8 @@ aHZ
 afk
 agS
 wDL
-aAF
-aLp
+awQ
+aLk
 aLk
 uoJ
 aSG
