@@ -2200,7 +2200,7 @@
 "agS" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad Two Weapons Locker";
+	name = "\improper Weapons Locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -5313,6 +5313,9 @@
 	light_power = 0.5;
 	pixel_y = 10
 	},
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
 /turf/open/floor/almayer/edge{
 	dir = 4
 	},
@@ -8097,18 +8100,6 @@
 	dir = 1
 	},
 /area/golden_arrow/dorms)
-"ayq" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad Two Equipment Locker";
-	id = "squadarmory"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/platoonarmory)
 "ayr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -10236,7 +10227,7 @@
 /area/golden_arrow/motor_pool)
 "aDW" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad One Equipment Locker";
+	name = "\improper Equipment Locker";
 	id = "squadarmory"
 	},
 /turf/open/floor/almayer{
@@ -10708,14 +10699,12 @@
 	},
 /area/golden_arrow/motor_pool)
 "aFd" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
@@ -11343,7 +11332,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad One Equipment Locker";
+	name = "\improper Equipment Locker";
 	id = "squadarmory"
 	},
 /turf/open/floor/almayer{
@@ -11433,19 +11422,6 @@
 	dir = 1
 	},
 /area/golden_arrow/briefing)
-"aHj" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad Two Weapons Locker";
-	id = "squadarmory";
-	pixel_y = -4
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/platoonarmory)
 "aHk" = (
 /obj/structure/surface/table/almayer,
 /obj/item/toy/deck/uno,
@@ -12450,9 +12426,8 @@
 	},
 /area/golden_arrow/hangar)
 "aKj" = (
-/obj/structure/pipes/vents/pump,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad Two Weapons Locker";
+	name = "\improper Weapons Locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -12772,6 +12747,17 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"aLp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge{
+	dir = 8
+	},
+/area/golden_arrow/platoonarmory)
 "aLs" = (
 /obj/structure/platform{
 	dir = 1
@@ -14333,14 +14319,12 @@
 	},
 /area/golden_arrow/cryo_cells)
 "aQe" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 8
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
@@ -14456,7 +14440,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "aQL" = (
@@ -15048,7 +15034,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad One Weapons Locker";
+	name = "\improper Weapons Locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -15119,15 +15105,6 @@
 	dir = 8
 	},
 /area/golden_arrow/hangar)
-"aSG" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad Two Equipment Locker";
-	id = "squadarmory"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/platoonarmory)
 "aSI" = (
 /obj/structure/largecrate/random/case/double{
 	pixel_y = 5;
@@ -15404,7 +15381,7 @@
 	pixel_x = -18
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad One Weapons Locker";
+	name = "\improper Weapons Locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -16548,21 +16525,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/medical)
-"aXl" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/vents/scrubber{
-	dir = 1
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Squad One Equipment Locker";
-	id = "squadarmory"
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
-/area/golden_arrow/platoonarmory)
 "aXq" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/tool/warning_cone{
@@ -16820,15 +16782,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aYg" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/platoonarmory)
 "aYh" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -29323,8 +29276,8 @@ aZV
 adl
 abk
 arh
-aYg
-aXl
+aRQ
+aGY
 avX
 ado
 arP
@@ -29470,13 +29423,13 @@ aEG
 aEG
 aHZ
 moW
-aHj
+aSv
 aRQ
 adl
 eZR
 arh
 aRQ
-ayq
+aGY
 gSr
 akb
 aEy
@@ -29628,7 +29581,7 @@ aDg
 aga
 arh
 aoI
-aSG
+aDW
 aoG
 akb
 aej
@@ -29777,10 +29730,10 @@ afk
 agS
 wDL
 awQ
-aLk
+aLp
 aLk
 uoJ
-aSG
+aDW
 aSr
 akb
 adz
@@ -29926,13 +29879,13 @@ aEG
 aEG
 aHZ
 afk
-aHj
+aSv
 aXJ
 aOt
 aQe
 aOt
 amI
-ayq
+aGY
 aJM
 akb
 aqa
