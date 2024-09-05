@@ -94,6 +94,7 @@
 /datum/map_template/shuttle/trijent_elevator
 	name = "Trijent Elevator"
 	shuttle_id = MOBILE_TRIJENT_ELEVATOR
+	var/elevator_network
 
 /datum/map_template/shuttle/trijent_elevator/A
 	elevator_network = "A"
