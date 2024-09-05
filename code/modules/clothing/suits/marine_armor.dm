@@ -1959,6 +1959,8 @@
 	update_icon()
 
 	light_holder = new(src)
+	var/obj/item/clothing/accessory/pads/pads = new()
+	src.attach_accessory(null, pads, TRUE)
 
 /obj/item/clothing/suit/marine/Destroy()
 	QDEL_NULL(light_holder)
