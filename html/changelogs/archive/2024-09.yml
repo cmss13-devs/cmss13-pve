@@ -5,3 +5,6 @@
   - rscadd: on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors
   - rscdel: on Sorokyne, removed USCM Galley Vendors
   - bugfix: on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts
+2024-09-05:
+  BonniePandora:
+  - qol: Toolbelts can now carry the high-capacity blowtorch
