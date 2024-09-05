@@ -376,7 +376,7 @@
 
 /obj/item/clothing/suit/storage/marine/smartgunner
 	name = "\improper M56 combat harness"
-	desc = "Lightweight vest composed of ballistic micromesh and a ceramic composite chestplate. Also contains the computers, straps, and bracing required for operating the M56 Smartgun itself."
+	desc = "Lightweight vest composed of ballistic micromesh and a ceramic composite chestplate for practical protection, as well as the computers, straps, and armature required for operating the M56 Smartgun itself."
 	icon_state = "8"
 	item_state = "armor"
 	armor_laser = CLOTHING_ARMOR_LOW
@@ -440,6 +440,10 @@
 
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
 	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/suit/storage/marine/smartgunner/black
+	flags_atom = NO_SNOW_TYPE
+	icon_state = "8fancy"
 
 /obj/item/clothing/suit/storage/marine/smartgunner/upp
 	name = "\improper UH7-I heavy plated harness"
@@ -509,6 +513,16 @@
 
 /obj/item/clothing/suit/storage/marine/medium
 	armor_variation = 6
+
+/obj/item/clothing/suit/storage/marine/medium/non_spec_ghillie //doesnt have sniper spec shit associated with it
+	name = "\improper M40 pattern ghillie armor"
+	desc = "An older variant of camouflage suit used by snipers and scouts. While cheap to produce and easy to use, this suit of armor doesn't offer same level of stealth as newer M45 with integrated heatsink."
+	icon_state = "ghillie_armor"
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	specialty = "M40 pattern ghillie"
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/marine/light
 	name = "\improper M3-L pattern light armor"

@@ -222,7 +222,7 @@ var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
 		)), \
 	null, \
 	new/datum/stack_recipe_list("empty ammo boxes",list( \
-		new/datum/stack_recipe("empty magazine box (88 Mod 4 AP)", /obj/item/ammo_box/magazine/mod88/empty), \
+		new/datum/stack_recipe("empty magazine box (VP70)", /obj/item/ammo_box/magazine/vp70/empty), \
 		new/datum/stack_recipe("empty magazine box (M4A3)", /obj/item/ammo_box/magazine/m4a3/empty), \
 		new/datum/stack_recipe("empty magazine box (M4A3 AP)", /obj/item/ammo_box/magazine/m4a3/ap/empty), \
 		new/datum/stack_recipe("empty magazine box (M4A3 HP)", /obj/item/ammo_box/magazine/m4a3/hp/empty), \
