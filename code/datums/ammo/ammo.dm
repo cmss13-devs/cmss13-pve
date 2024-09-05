@@ -120,11 +120,11 @@
 	return
 
 /datum/ammo/proc/on_hit_turf(turf/T, obj/projectile/P) //Special effects when hitting dense turfs.
-	SHOULD_NOT_SLEEP(TRUE)
+//	SHOULD_NOT_SLEEP(TRUE)
 	return
 
 /datum/ammo/proc/on_hit_mob(mob/M, obj/projectile/P, mob/user) //Special effects when hitting mobs.
-	SHOULD_NOT_SLEEP(TRUE)
+//	SHOULD_NOT_SLEEP(TRUE)
 	return
 
 ///Special effects when pointblanking mobs. Ultimately called from /living/attackby(). Return TRUE to end the PB attempt.
@@ -132,7 +132,7 @@
 	return
 
 /datum/ammo/proc/on_hit_obj(obj/O, obj/projectile/P) //Special effects when hitting objects.
-	SHOULD_NOT_SLEEP(TRUE)
+//	SHOULD_NOT_SLEEP(TRUE)
 	return
 
 /datum/ammo/proc/on_near_target(turf/T, obj/projectile/P) //Special effects when passing near something. Range of things that triggers it is controlled by other ammo flags.
