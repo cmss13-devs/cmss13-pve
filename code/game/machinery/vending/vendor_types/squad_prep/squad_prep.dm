@@ -91,7 +91,6 @@
 		list("M3 Pattern Smooth Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/smooth, VENDOR_ITEM_REGULAR),
 		list("M3-EOD Pattern Heavy Armor", round(scale * 10), /obj/item/clothing/suit/marine/heavy, VENDOR_ITEM_REGULAR),
 		list("M3-L Pattern Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/light, VENDOR_ITEM_REGULAR),
-		list("M3 Shoulder Pads", round(scale * 15), /obj/item/clothing/accessory/pads, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
@@ -253,7 +252,6 @@
 		list("ARMOR", -1, null, null),
 		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
 		list("M3-L Pattern Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/light/standard, VENDOR_ITEM_REGULAR),
-		list("M3 Shoulder Pads", round(scale * 10), /obj/item/clothing/accessory/pads, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/standard, VENDOR_ITEM_REGULAR),
