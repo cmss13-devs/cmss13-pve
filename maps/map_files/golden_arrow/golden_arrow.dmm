@@ -201,7 +201,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cargo_container/hd/mid,
+/obj/structure/cargo_container/hd/mid{
+	opacity = 0
+	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
 	},
@@ -420,7 +422,8 @@
 	layer = 2.52
 	},
 /obj/structure/cargo_container/kelland/right{
-	pixel_y = 9
+	pixel_y = 9;
+	opacity = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -1953,7 +1956,7 @@
 /obj/item/ammo_box/magazine/vp70{
 	pixel_y = 3
 	},
-/obj/structure/surface/table/reinforced/black,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -4998,7 +5001,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cargo_container/hd/right,
+/obj/structure/cargo_container/hd/right{
+	opacity = 0
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "api" = (
@@ -5301,7 +5306,8 @@
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
 	light_color = "#dae2ff";
-	light_power = 0.5
+	light_power = 0.5;
+	pixel_y = 10
 	},
 /turf/open/floor/almayer/edge/smooth{
 	dir = 4
@@ -9581,7 +9587,8 @@
 /area/golden_arrow/cryo_cells)
 "aBY" = (
 /obj/structure/cargo_container/kelland/left{
-	pixel_y = 9
+	pixel_y = 9;
+	opacity = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -11111,7 +11118,7 @@
 	pixel_x = 12;
 	pixel_y = 2
 	},
-/obj/structure/surface/table/reinforced/black,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -14518,12 +14525,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aQU" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Prep Lockers";
-	dir = 1
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1;
+	name = "\improper Prep Lockers"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -15874,7 +15881,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cargo_container/hd/left,
+/obj/structure/cargo_container/hd/left{
+	opacity = 0
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "aVf" = (
@@ -17803,10 +17812,10 @@
 /obj/item/ammo_box/magazine/vp70{
 	pixel_y = 3
 	},
-/obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/power/apc/almayer{
 	dir = 1
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dLD" = (
@@ -17978,12 +17987,13 @@
 /obj/item/storage/box/guncase/flamer/fuel{
 	pixel_y = 8
 	},
-/obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
 	light_color = "#dae2ff";
-	light_power = 0.5
+	light_power = 0.5;
+	pixel_y = 10
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
