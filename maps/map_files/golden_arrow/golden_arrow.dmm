@@ -534,18 +534,6 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/hangar)
-"abU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/platoonarmory)
 "abV" = (
 /turf/open/floor/almayer/uscm{
 	icon_state = "logo_directional1";
@@ -1958,7 +1946,14 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
 "aga" = (
-/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 11;
+	pixel_x = -7
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 3
+	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -2707,24 +2702,24 @@
 	},
 /area/golden_arrow/dorms)
 "ail" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Prep Lockers"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Prep Lockers"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonprep)
 "aiq" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Prep Lockers"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Prep Lockers"
+	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
 	},
@@ -3294,12 +3289,6 @@
 	dir = 1
 	},
 /area/golden_arrow/hangar)
-"aka" = (
-/obj/effect/landmark/nightmare{
-	insert_tag = "dorms"
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/cryo_cells)
 "akb" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/hangar)
@@ -4041,9 +4030,8 @@
 /obj/structure/ladder{
 	id = "enginorth"
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff"
+/obj/structure/sign/safety/maint{
+	pixel_x = -17
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -5224,6 +5212,12 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = -14
+	},
 /turf/open/floor/almayer/edge{
 	dir = 1
 	},
@@ -5303,6 +5297,11 @@
 "aqb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/edge/smooth{
 	dir = 4
@@ -7684,10 +7683,29 @@
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice1";
-	pixel_x = 16;
-	pixel_y = -15
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = 12
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
@@ -7781,16 +7799,23 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 12
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -8471,7 +8496,8 @@
 "azr" = (
 /obj/item/hardpoint/primary/arc_frontalcannon{
 	pixel_y = -15;
-	pixel_x = -4
+	pixel_x = -4;
+	anchored = 1
 	},
 /turf/open/floor/almayer/edge/smooth/corner{
 	dir = 1
@@ -8506,11 +8532,11 @@
 	},
 /area/golden_arrow/cryo_cells)
 "azw" = (
-/obj/structure/window/framed/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
 /area/golden_arrow/platoonprep)
 "azx" = (
@@ -8701,14 +8727,21 @@
 	},
 /area/golden_arrow/cryo_cells)
 "azU" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = 6
 	},
 /turf/open/floor/almayer/edge{
 	dir = 1
@@ -9358,9 +9391,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aBx" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Cryo Bay"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -9368,6 +9398,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Hypersleep Bay"
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"
@@ -9780,15 +9813,17 @@
 /area/golden_arrow/prep_hallway)
 "aCM" = (
 /obj/structure/closet/firecloset,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 12
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = 6
 	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
@@ -10255,6 +10290,19 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = -14
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1;
+	pixel_x = -14;
 	dir = 1
 	},
 /turf/open/floor/almayer/edge,
@@ -11047,22 +11095,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
-/obj/structure/surface/table/almayer,
 /obj/item/ammo_magazine/shotgun/buckshot{
 	pixel_x = -5;
-	pixel_y = 11
+	pixel_y = 13
 	},
 /obj/item/ammo_magazine/shotgun/buckshot{
 	pixel_x = -5;
-	pixel_y = 2
+	pixel_y = 4
 	},
 /obj/item/ammo_magazine/shotgun{
 	pixel_x = 12;
-	pixel_y = 9
+	pixel_y = 11
 	},
 /obj/item/ammo_magazine/shotgun{
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 2
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -11735,6 +11784,9 @@
 /obj/structure/ladder{
 	id = "engisouth"
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = -17
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aIw" = (
@@ -12113,12 +12165,6 @@
 	dir = 1
 	},
 /area/golden_arrow/prep_hallway)
-"aJr" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/platoonarmory)
 "aJs" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/roller{
@@ -12485,12 +12531,14 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/power/apc/almayer{
-	dir = 1
-	},
 /obj/structure/cable{
 	icon_state = "0-8";
 	layer = 2.36
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/edge{
 	dir = 1
@@ -12805,12 +12853,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/sign/safety/ladder{
-	pixel_x = -17;
-	pixel_y = -15
-	},
-/obj/structure/sign/safety/maint{
-	pixel_x = -17
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer{
 	dir = 4;
@@ -12968,6 +13013,12 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22;
+	pixel_x = -14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -13999,10 +14050,6 @@
 /obj/structure/sign/safety/ammunition{
 	pixel_y = -26
 	},
-/obj/structure/sign/safety/one{
-	pixel_x = 14;
-	pixel_y = -26
-	},
 /turf/open/floor/almayer/edge{
 	dir = 10
 	},
@@ -14608,12 +14655,12 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/sign/safety/two{
-	pixel_x = 14;
-	pixel_y = -26
-	},
 /obj/structure/sign/safety/ammunition{
 	pixel_y = -26
+	},
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/platoonarmory)
@@ -15799,6 +15846,12 @@
 /area/golden_arrow/cryo_cells)
 "aVa" = (
 /obj/structure/closet/emcloset,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22;
+	pixel_x = -14
+	},
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -17743,6 +17796,19 @@
 	dir = 4
 	},
 /area/golden_arrow/engineering)
+"dzT" = (
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 11
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 3
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17909,9 +17975,14 @@
 	},
 /area/golden_arrow/engineering)
 "eZR" = (
-/obj/structure/surface/table/almayer,
 /obj/item/storage/box/guncase/flamer/fuel{
 	pixel_y = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -18083,6 +18154,12 @@
 	icon_state = "plate"
 	},
 /area/golden_arrow/supplydrop)
+"gSr" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "hbu" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25304,7 +25381,7 @@ adt
 aYH
 aYH
 azq
-aka
+aog
 aDd
 aeA
 aHp
@@ -29085,7 +29162,7 @@ aEG
 aEG
 aEG
 aHZ
-aga
+dzT
 aSv
 gjM
 aXY
@@ -29395,9 +29472,9 @@ aRQ
 adl
 eZR
 arh
-abU
-aJr
-abk
+aRQ
+ayq
+gSr
 akb
 aEy
 azW
