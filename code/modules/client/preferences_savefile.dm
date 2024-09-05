@@ -514,6 +514,7 @@
 	//Character
 	S["OOC_Notes"] >> metadata
 	S["real_name"] >> real_name
+	S["nickname"] >> nickname
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"] >> gender
@@ -673,6 +674,7 @@
 	//Character
 	S["OOC_Notes"] << metadata
 	S["real_name"] << real_name
+	S["nickname"] << nickname
 	S["name_is_always_random"] << be_random_name
 	S["body_is_always_random"] << be_random_body
 	S["gender"] << gender
