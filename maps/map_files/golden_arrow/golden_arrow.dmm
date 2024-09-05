@@ -4696,27 +4696,6 @@
 	icon_state = "test_floor4"
 	},
 /area/golden_arrow/platoonarmory)
-"aof" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "garrow_elevator_lower"
-	},
-/obj/structure/machinery/door_control{
-	pixel_x = -22;
-	pixel_y = 11;
-	id = "garrow_elevator_lower"
-	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
-/area/golden_arrow/cargo_shuttle/lower)
 "aog" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
@@ -5689,11 +5668,6 @@
 	icon_state = "cargo_arrow";
 	dir = 1
 	},
-/obj/structure/machinery/door_control{
-	pixel_x = -22;
-	pixel_y = 11;
-	id = "garrow_elevator_upper"
-	},
 /turf/open/floor/almayer/edge{
 	dir = 1
 	},
@@ -6018,10 +5992,6 @@
 /area/golden_arrow/hangar)
 "arO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/medical/ointment{
-	pixel_x = 2;
-	pixel_y = 34
-	},
 /turf/open/floor/almayer/edge/smooth{
 	dir = 10
 	},
@@ -22094,7 +22064,7 @@ aPb
 aho
 aMI
 aps
-aof
+azo
 cGQ
 cGQ
 cGQ
