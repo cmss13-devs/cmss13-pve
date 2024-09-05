@@ -117,6 +117,7 @@ var/const/MAX_SAVE_SLOTS = 20
 
 	//character preferences
 	var/real_name //our character's name
+	var/nickname //the nickname for the saveslot
 	var/be_random_name = FALSE //whether we are a random name every round
 	var/human_name_ban = FALSE
 
@@ -327,6 +328,8 @@ var/const/MAX_SAVE_SLOTS = 20
 			dat += "<h1><u><b>Name:</b></u> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'><b>[real_name]</b></a>"
 			dat += "<a href='?_src_=prefs;preference=name;task=random'>&reg</A></h1>"
+			dat += "<u><b>Slot nickame:</b></u> "
+			dat += "<a href='?_src_=prefs;preference=nickname;task=input'><b>[nickname ? "[nickname]" : "---"]</b></a><br> "
 			dat += "<b>Always Pick Random Name:</b> <a href='?_src_=prefs;preference=rand_name'><b>[be_random_name ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Always Pick Random Appearance:</b> <a href='?_src_=prefs;preference=rand_body'><b>[be_random_body ? "Yes" : "No"]</b></a><br><br>"
 
@@ -1245,6 +1248,15 @@ var/const/MAX_SAVE_SLOTS = 20
 							real_name = new_name
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+
+				if("nickname")
+					var/raw_name = input(user, "Choose a nickname or identifier for this character slot. This is not an in-character nickname:", "Character Preference")  as text|null
+					if (raw_name) // Check to ensure that the user entered text (rather than cancel.)
+						var/new_name = reject_bad_name(raw_name)
+						if(new_name)
+							nickname = new_name
+						else
+							to_chat(user, "<font color='red'>Invalid name. Your slot name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
 				if("xeno_vision_level_pref")
 					var/static/list/vision_level_choices = list(XENO_VISION_LEVEL_NO_NVG, XENO_VISION_LEVEL_MID_NVG, XENO_VISION_LEVEL_FULL_NVG)
@@ -2224,10 +2236,11 @@ var/const/MAX_SAVE_SLOTS = 20
 		for(var/i=1, i<=MAX_SAVE_SLOTS, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
+			S["nickname"] >> nickname
 			if(!name) name = "Character[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
-			dat += "<a href='?_src_=prefs;preference=changeslot;num=[i];'>[name]</a><br>"
+			dat += "<a href='?_src_=prefs;preference=changeslot;num=[i];'>[name] ([nickname])</a><br>"
 
 	dat += "<hr>"
 	dat += "<a href='byond://?src=\ref[user];preference=close_load_dialog'>Close</a><br>"
