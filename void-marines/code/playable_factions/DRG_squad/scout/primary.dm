@@ -16,13 +16,9 @@
 		WEAR_R_HAND = 'void-marines/icons/drg_weapons.dmi'
 		)
 
-	pickupvol = 7
-	dropvol = 15
-
 	w_class = SIZE_LARGE
 	force = MELEE_FORCE_NORMAL
 	flags_atom = NOBLOODY|CONDUCT
-	flags_item = TWOHANDED
 
 	current_mag = /obj/item/ammo_magazine/rifle/drg_scout_assault
 
