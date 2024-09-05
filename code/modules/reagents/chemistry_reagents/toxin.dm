@@ -129,7 +129,7 @@
 	holder_mob.status_flags &= ~FAKEDEATH
 	REMOVE_TRAIT(holder_mob, TRAIT_IMMOBILIZED, FAKEDEATH_TRAIT)
 
-/datum/reagent/toxin/diethylamide
+/datum/reagent/toxin/lsd
 	name = "lysergic acid diethylamide"
 	id = "diethylamide"
 	description = "Lysergic acid diethylamide is a potent hallucinogenic agent which is considered nonaddictive, though potentially capable of causing permanent psychological changes."
