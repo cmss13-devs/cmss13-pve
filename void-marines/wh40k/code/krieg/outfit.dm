@@ -7,6 +7,10 @@
 	skills = /datum/skills/pfc
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
+/datum/equipment_preset/krieg/load_name(mob/living/carbon/human/new_human, randomise)
+	var/new_name = "Guardsman [rand(1, 9)]-[rand(1, 9)]-[rand(1, 9)]" // 4-8-3, 9-1-1, 1-2-3 etc.
+	new_human.change_real_name(new_human, new_name)
+
 /datum/equipment_preset/krieg/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/krieger, WEAR_BACK)
