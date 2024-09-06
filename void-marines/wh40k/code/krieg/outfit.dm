@@ -8,8 +8,14 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
 /datum/equipment_preset/krieg/load_name(mob/living/carbon/human/new_human, randomise)
-	var/new_name = "Guardsman [rand(1, 9)]-[rand(1, 9)]-[rand(1, 9)]" // 4-8-3, 9-1-1, 1-2-3 etc.
+	. = ..()
+	var/new_name = "Guardsman [rand(1, 9)]-[rand(1, 9)]-[rand(1, 9)]-[rand(1, 9)]" // 4-8-3, 9-1-1, 1-2-3 etc.
 	new_human.change_real_name(new_human, new_name)
+	new_human.h_style = "Crewcut"
+	new_human.f_style = "Shaved"
+
+	new_human.update_hair()
+	new_human.update_body()
 
 /datum/equipment_preset/krieg/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -86,9 +92,15 @@
 
 /datum/equipment_preset/krieg/commissar
 	name = "Commissar"
+	skills = /datum/skills/SO
 
 /datum/equipment_preset/krieg/commissar/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
-	editappearplayer(new_human)
+	new_human.gender = pick(60;MALE,40;FEMALE)
+	var/datum/preferences/A = new()
+	A.randomize_appearance(new_human)
+	var/random_name = capitalize(pick(new_human.gender == MALE ? first_names_male : first_names_female)) + " " + capitalize(pick(last_names))
+	new_human.change_real_name(new_human, random_name)
+	new_human.age = rand(21,45)
 
 /datum/equipment_preset/krieg/commissar/load_gear(mob/living/carbon/human/new_human)
 	//back

@@ -8,7 +8,7 @@
 	item_state = "etool"
 	force = MELEE_FORCE_STRONG
 	throwforce = 2
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 
 	dirt_overlay = "etool_overlay"
 	dirt_amt_per_dig = 5

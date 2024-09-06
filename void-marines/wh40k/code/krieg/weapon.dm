@@ -17,7 +17,7 @@
 	unload_sound = 'void-marines/wh40k/sounds/weapons/smg_magout.ogg'
 	cocked_sound = null
 
-	muzzle_flash = "muzzle_las-w"
+	muzzle_flash = "muzzle_las"
 	muzzle_flash_icon = 'void-marines/wh40k/icons/weapon/projectiles.dmi'
 	muzzle_flash_lum = 4
 	muzzle_flash_color = "#ff3333"
@@ -45,7 +45,7 @@
 	transfer_handful_amount = 0
 	default_ammo = /datum/ammo/bullet/rifle/laser
 	max_rounds = 45
-	gun_type = /obj/item/weapon/gun/warhammer/lucius
+	gun_type = /obj/item/weapon/gun/lasgun/lucius
 
 /datum/ammo/bullet/rifle/laser
 	name = "lasbolt"
