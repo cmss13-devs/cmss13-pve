@@ -206,27 +206,55 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	//PART II: Setting up our player variables and lists, to see if we have anyone to destribute.
 
 	unassigned_players = list()
-	for(var/mob/new_player/M in GLOB.player_list) //Get all players who are ready.
-		if(!M.ready || M.job)
+	for(var/mob/new_player/player as anything in GLOB.new_player_list)
+		if(!player.ready || player.job) //get only players who are ready and unassigned
 			continue
 	// [RU-PVE-EDIT]
-		if(M.client.total_enter_lock)
-			to_chat(M, SPAN_NOTICE("You have BLACKLISTED from entering!"))
+		if(player.client.total_enter_lock)
+			to_chat(player, SPAN_NOTICE("You have BLACKLISTED from entering!"))
 			return
 		if(!enter_allowed)
-			if(!check_rights(, show_msg = FALSE) && M.client.enter_lock_bypass)
-				to_chat(M, SPAN_NOTICE("There is an administrative lock on entering the game!"))
+			if(!check_rights(, show_msg = FALSE) && player.client.enter_lock_bypass)
+				to_chat(player, SPAN_NOTICE("There is an administrative lock on entering the game!"))
 				return
 	// [/RU-PVE-EDIT]
 
-		unassigned_players += M
+		var/datum/preferences/prefs = player.client?.prefs
+		if(!prefs) //either no client to play, or no preferences
+			continue
+
+		if(prefs.alternate_option == RETURN_TO_LOBBY && !prefs.has_job_priorities()) //only try to assign players that could possibly be assigned
+			continue
+
+		unassigned_players += player
 
 	if(!length(unassigned_players)) //If we don't have any players, the round can't start.
 		unassigned_players = null
 		return
 
-	unassigned_players = shuffle(unassigned_players, 1) //Shuffle the players.
+	var/list/player_weights = list()
+	var/debug_total_weight = 0
+	for(var/mob/new_player/cycled_unassigned as anything in unassigned_players)
+		var/base_weight = 1 //baseline weighting
 
+		var/new_bonus = 0
+		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
+			if(0 to 2 HOURS)
+				new_bonus = 2
+			if(2 HOURS to 5 HOURS)
+				new_bonus = 1
+
+		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
+
+		player_weights[cycled_unassigned] = base_weight + new_bonus + streak_bonus
+		debug_total_weight += player_weights[cycled_unassigned]
+	log_debug("ASSIGNMENT: player_weights generated with [length(player_weights)] players and [debug_total_weight] total weight.")
+
+	unassigned_players = shuffle_weight(player_weights)
+	var/list/debug_weight_order = list()
+	for(var/mob/new_player/cycled_unassigned as anything in unassigned_players)
+		debug_weight_order += player_weights[cycled_unassigned]
+	log_debug("ASSIGNMENT: unassigned_players by entry weight: ([debug_weight_order.Join(", ")])")
 
 	// How many positions do we open based on total pop
 	for(var/i in roles_by_name)
@@ -256,11 +284,11 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		return
 
 	log_debug("ASSIGNMENT: Starting prime priority assignments.")
-	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
 		assign_role_to_player_by_priority(cycled_unassigned, roles_to_assign, unassigned_players, PRIME_PRIORITY)
 
 	log_debug("ASSIGNMENT: Starting regular priority assignments.")
-	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
 		var/player_assigned_job = FALSE
 
 		for(var/priority in HIGH_PRIORITY to LOW_PRIORITY)
@@ -273,20 +301,17 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			break
 
 		if(!player_assigned_job)
-			log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be assigned a job based on preferences and roles to assign. Attempting alternate options.")
-
 			switch(cycled_unassigned.client.prefs.alternate_option)
 				if(GET_RANDOM_JOB)
-					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for random job alternate option. Finding random job.")
 					var/iterator = 0
 					while((cycled_unassigned in unassigned_players) || iterator >= 5)
 						iterator++
 						var/random_job_name = pick(roles_to_assign)
 						var/datum/job/random_job = roles_to_assign[random_job_name]
-						log_debug("ASSIGNMENT: [cycled_unassigned] is attempting to be assigned to [random_job_name].")
 
 						if(assign_role(cycled_unassigned, random_job))
 							log_debug("ASSIGNMENT: We have randomly assigned [random_job_name] to [cycled_unassigned]")
+							cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 							unassigned_players -= cycled_unassigned
 
 							if(random_job.spawn_positions != -1 && random_job.current_positions >= random_job.spawn_positions)
@@ -297,10 +322,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be randomly assigned a job. Something has gone wrong.")
 
 				if(BE_MARINE)
-					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for marine alternate option. Checking if slot is available.")
 					var/datum/job/marine_job = GET_MAPPED_ROLE(JOB_SQUAD_MARINE)
 					if(assign_role(cycled_unassigned, marine_job))
 						log_debug("ASSIGNMENT: We have assigned [marine_job.title] to [cycled_unassigned] via alternate option.")
+						cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 						unassigned_players -= cycled_unassigned
 
 						if(marine_job.spawn_positions != -1 && marine_job.current_positions >= marine_job.spawn_positions)
@@ -314,22 +339,22 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 					cycled_unassigned.ready = 0
 
 	log_debug("ASSIGNMENT: Assignment complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
+		cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 1)
 
 	return roles_to_assign
 
 /datum/authority/branch/role/proc/assign_role_to_player_by_priority(mob/new_player/cycled_unassigned, list/roles_to_assign, list/unassigned_players, priority)
-	log_debug("ASSIGNMENT: We have started cycled through priority [priority] for [cycled_unassigned].")
-	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(priority))
+	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client.prefs.get_jobs_by_priority(priority))
 	var/player_assigned_job = FALSE
 
 	for(var/job_name in wanted_jobs_by_name)
-		log_debug("ASSIGNMENT: We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned].")
 		if(job_name in roles_to_assign)
-			log_debug("ASSIGNMENT: We have found [job_name] in roles to assign for [cycled_unassigned].")
 			var/datum/job/actual_job = roles_to_assign[job_name]
 
 			if(assign_role(cycled_unassigned, actual_job))
-				log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned].")
+				log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned] at priority [priority].")
+				cycled_unassigned.client.player_data?.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 				unassigned_players -= cycled_unassigned
 
 				if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
@@ -340,10 +365,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 				break
 
 	if(player_assigned_job)
-		log_debug("ASSIGNMENT: [cycled_unassigned] has been assigned a job.")
 		return player_assigned_job
 
-	log_debug("ASSIGNMENT: [cycled_unassigned] did not get a job at priority [priority].")
 	return player_assigned_job
 
 /**
