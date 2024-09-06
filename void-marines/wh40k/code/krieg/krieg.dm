@@ -166,19 +166,49 @@
 	item_state = "r_suit"
 	worn_state = "r_suit"
 
-/obj/item/clothing/head/helmet/krieghelmet/commissar
+/obj/item/clothing/head/helmet/commissar
 	name = "Commissar's Peaked Cap"
 	desc = "The fearsome and charismatic peaked cap of a Imperial Guard Commissar, Striking dreads to the lowly Guardsmen and the ever-watching heretics."
 	icon_state = "Commissar4Hat"
 	item_state = "Commissar4Hat"
+	icon = 'void-marines/wh40k/icons/krieg/icons/hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'void-marines/wh40k/icons/krieg/head.dmi'
+	)
 
-/obj/item/clothing/suit/armor/storage/krieger/commissar
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+
+/obj/item/clothing/suit/armor/storage/commissar
 	name = "Commissar's Trenchcoat"
 	desc = "The Commissar's magnificent, charismatic that strikes dreads and fears into the mind of lowly Imperial Guardsmen and heretics alike. Plated in Caraspace, giving it much more protection than average Guardsman."
 	icon_state = "Commissar4"
 	item_state = "Commissar4"
+	icon ='void-marines/wh40k/icons/krieg/icons/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'void-marines/wh40k/icons/krieg/suit.dmi'
+	)
 
-/obj/item/clothing/suit/armor/storage/krieger/commissar/krieg
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+
+/obj/item/clothing/suit/armor/storage/commissar/krieg
 	name = "Commissar's Breastplate"
 	desc = "The Commissar's iconic coat, this out tailored to match more of the uniform theme of the Officers of Krieg. Though the Krieg Guardsmen don't fear you, the others certainly will."
 	icon_state = "Kriegissarplate"
@@ -190,85 +220,17 @@
 	icon_state = "commask"
 	item_state = "commask"
 
-/obj/item/clothing/head/helmet/krieghelmet/commissar/krieg
+/obj/item/clothing/head/helmet/commissar/krieg
 	name = "Commissar's Peaked Cap"
 	desc = "The fearsome and charismatic peaked cap of a Imperial Guard Commissar, Striking dreads to the lowly Guardsmen and the ever-watching heretics."
 	icon_state = "KriegissarHat"
 	item_state = "KriegissarHat"
 
 /obj/item/clothing/under/rank/krieg_uniform/commissar
-	name = "commissar's Dress Uniform"
+	name = "Commissar's Dress Uniform"
 	desc = "More standard uniform of the Commissars of the Officio Prefectus, just with some Krieg emblems on them in an attempt to similate."
 	icon_state = "kriegissar"
 	item_state = "kriegissar_s"
 	worn_state = "kriegissar_s"
 
-/*
-/obj/item/clothing/suit/armor/storage/krieger/commissar/krieg
-/obj/item/clothing/mask/gas/krieg/commissar
-/obj/item/clothing/head/helmet/krieghelmet/commissar/krieg
-*/
 // --- LUCIUS --- \\
-
-/obj/item/weapon/gun/warhammer/lucius
-	name = "Lucius-pattern Lasgun"
-	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
-	icon_state = "luciuslas"
-	item_state = "lasgun"
-	item_icons = list(
-		WEAR_L_HAND = 'void-marines/wh40k/icons/lefthand_guns.dmi',
-		WEAR_R_HAND = 'void-marines/wh40k/icons/righthand_guns.dmi'
-	)
-
-	w_class = SIZE_LARGE
-	current_mag = /obj/item/ammo_magazine/rifle/lascell
-	fire_sound = 'void-marines/wh40k/sounds/weapons/lasgun2.ogg'
-
-	aim_slowdown = SLOWDOWN_ADS_RIFLE
-	flags_gun_features = GUN_AMMO_COUNTER|GUN_ANTIQUE
-	gun_category = GUN_CATEGORY_RIFLE
-
-/obj/item/weapon/gun/warhammer/lucius/set_gun_config_values()
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
-	scatter = SCATTER_AMOUNT_NONE
-	burst_scatter_mult = SCATTER_AMOUNT_NONE
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
-	recoil = RECOIL_OFF
-
-
-/obj/item/ammo_magazine/rifle/lascell
-	name = "\improper lasgun guncell"
-	desc = "An guncell for lasgun."
-	caliber = "energy"
-	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
-	icon_state = "lasmag_100"
-	w_class = SIZE_SMALL
-	default_ammo = /datum/ammo/bullet/rifle/laser
-	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/warhammer/lucius
-
-/datum/ammo/bullet/rifle/laser
-	name = "lasbolt"
-	icon = 'void-marines/wh40k/icons/weapon/projectiles.dmi'
-	icon_state = "lasbolt"
-
-	damage_type = BURN
-	flags_ammo_behavior = AMMO_ENERGY
-	shrapnel_chance = 0
-	damage = 45
-	accurate_range = 24
-	penetration = ARMOR_PENETRATION_TIER_10
-	accuracy = HIT_ACCURACY_TIER_10
-	scatter = SCATTER_AMOUNT_NONE
-	shell_speed = AMMO_SPEED_TIER_6
-	penetration = 25
-	effective_range_max = 15
-	damage_falloff = DAMAGE_FALLOFF_TIER_1
-	max_range = 30
-
-/obj/item/weapon/gun/shotgun/pump/kriegshotgun
-	name = "Lucius Pattern Shotgun"
-	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
-	icon_state = "kriegshotgun_loaded"
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/special

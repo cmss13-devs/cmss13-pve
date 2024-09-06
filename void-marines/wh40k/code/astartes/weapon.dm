@@ -1,4 +1,4 @@
-/obj/item/weapon/sword/warhammer
+/obj/item/weapon/sword/chainsword
 	name = "Drusian Pattern Chainsword"
 	desc = "A chainsword, likely belonging to an NCO or higher rank in the Astra Militarium. Under the golden eagle it reads 'For the Throne'"
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
@@ -20,7 +20,7 @@
 
 
 
-/obj/item/weapon/sword/warhammer/astartes
+/obj/item/weapon/sword/chainsword/astartes
 	name = "Mars Pattern Chainsword"
 	desc = "A beautifully crafted Chainsword encrusted in gold, made on Mars especially for Astartes. That's why it's the size of a man. "
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
@@ -30,7 +30,7 @@
 	throwforce = MELEE_FORCE_NORMAL
 	attack_speed = 3
 
-/obj/item/weapon/sword/warhammer/astartes/pickup(mob/user, silent)
+/obj/item/weapon/sword/chainsword/astartes/pickup(mob/user, silent)
 	. = ..()
 	var/mob/living/carbon/human/human = user
 	if(!human.species == SPECIES_ASTARTES)
@@ -39,21 +39,22 @@
 	else
 		attack_speed = 3
 
-/obj/item/weapon/sword/warhammer/power
+/obj/item/weapon/sword/powersword
 	name = "Helios Pattern Power Sword"
 	desc = "A adamantium sword with a void shield generator inside of it, the void shield will cut through almost anything that it touches when its on, so make sure you don't cut yourself."
 	item_state = "commissword"
 	icon_state = "powersword"
 	force = MELEE_FORCE_STRONG
+	hitsound = 'sound/weapons/wristblades_hit.ogg'
 	var/activated = 0
 	var/activated_force = MELEE_FORCE_VERY_STRONG
 	attack_speed = 7
 
-/obj/item/weapon/sword/warhammer/power/attack_self(mob/user)
+/obj/item/weapon/sword/powersword/attack_self(mob/user)
 	. = ..()
 	activation()
 
-/obj/item/weapon/sword/warhammer/power/proc/activation(mob/user)
+/obj/item/weapon/sword/powersword/proc/activation(mob/user)
 	var/action = "activate"
 	if(activated)
 		force = activated_force
@@ -66,7 +67,7 @@
 		icon_state = initial(icon_state)
 	visible_message(SPAN_DANGER("\The [user] [action] \his \the [src] "), max_distance = COMBAT_MESSAGE_RANGE)
 
-/obj/item/weapon/sword/warhammer/power/astartes
+/obj/item/weapon/sword/powersword/astartes
 	name = "Ingelldina Pattern Power Sword"
 	desc = "A adamantium sword with a voidshield generator inside of it, this one is very long and heavy, clearly having been made for one of the sons of the emperor."
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
@@ -75,7 +76,7 @@
 
 // Long Range
 
-/obj/item/weapon/gun/warhammer/bolter
+/obj/item/weapon/gun/bolter
 	name = "Locke-pattern Bolter"
 	desc = "The Locke Pattern Bolter, designed for Adeptus Arbites personnel when heavier firepower are required. Can also be found in hands of Astra Militarum officers, veterans and Commissar, Though relatively uncommon. It is a human-sized Bolter, Thus it's very popular among the troops and the lucky ones who get their hands on one of these bad boy."
 	icon = 'void-marines/wh40k/icons/weapon/projectile.dmi'
@@ -91,7 +92,7 @@
 
 	flags_atom = FPRINT|NOBLOODY|CONDUCT
 
-	current_mag = /obj/item/ammo_magazine/warhammer/bolter
+	current_mag = /obj/item/ammo_magazine/bolter
 	caliber = ".75"
 
 	fire_sound = 'void-marines/wh40k/sounds/weapons/loudbolt2.ogg'
@@ -105,7 +106,7 @@
 
 	start_semiauto = TRUE
 
-/obj/item/weapon/gun/warhammer/bolter/set_gun_config_values()
+/obj/item/weapon/gun/bolter/set_gun_config_values()
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_fire_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -117,14 +118,14 @@
 	recoil = RECOIL_OFF
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
-/obj/item/ammo_magazine/warhammer/bolter
+/obj/item/ammo_magazine/bolter
 	name = "\improper Bolter Magazine (.75)"
 	caliber = ".75"
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
 	icon_state = "bolterbigmag"
 	default_ammo = /datum/ammo/bullet/rifle/bolter
 	max_rounds = 24
-	gun_type = /obj/item/weapon/gun/warhammer/bolter
+	gun_type = /obj/item/weapon/gun/bolter
 
 /datum/ammo/bullet/rifle/bolter
 	name = ".75 bolt"
@@ -137,15 +138,16 @@
 	max_range = 30
 	penetration = ARMOR_PENETRATION_TIER_3
 
-/obj/item/weapon/gun/warhammer/bolter/pistol
+/obj/item/weapon/gun/bolter/pistol
 	name = "\improper Locke-pattern Boltpistol"
 	icon_state = "gboltpistol"
 	item_state = "bpistol"
-	current_mag = /obj/item/ammo_magazine/warhammer/bolter/pistol
+	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
+	current_mag = /obj/item/ammo_magazine/bolter/pistol
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_ONE_HAND_WIELDED|GUN_CAN_POINTBLANK
 	gun_category = GUN_CATEGORY_SMG
 
-/obj/item/weapon/gun/warhammer/bolter/pistol/set_gun_config_values()
+/obj/item/weapon/gun/bolter/pistol/set_gun_config_values()
 	set_burst_amount(BURST_AMOUNT_TIER_2)
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -154,20 +156,20 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil = RECOIL_OFF
 
-/obj/item/ammo_magazine/warhammer/bolter/pistol
+/obj/item/ammo_magazine/bolter/pistol
 	name = "\improper Boltpistol Magazine (.75)"
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
 	icon_state = "boltersmallmag"
 	max_rounds = 8
 
-/obj/item/weapon/gun/warhammer/bolter/astartes
+/obj/item/weapon/gun/bolter/astartes
 	name = "Godwyn Mark Vb Pattern Bolter"
 	desc = "The Adeptus Astartes's legendary and destructive Bolter"
 	icon_state = "ultrabolter"
 	item_state = "bolter"
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/warhammer/bolter/astartes/set_gun_config_values()
+/obj/item/weapon/gun/bolter/astartes/set_gun_config_values()
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_fire_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
@@ -179,14 +181,14 @@
 	recoil = RECOIL_OFF
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
-/obj/item/weapon/gun/warhammer/bolter/heavy
+/obj/item/weapon/gun/bolter/heavy
 	name = "Godwyn Mark Vb Pattern Heavy Bolter"
 	desc = "\"Don't run, or you'll die fatigued\""
 	caliber = ".998"
 	icon_state = "hbolter"
 	item_state = "hbolter"
 
-	current_mag = /obj/item/ammo_magazine/warhammer/bolter/heavy
+	current_mag = /obj/item/ammo_magazine/bolter/heavy
 
 	fire_sound = 'void-marines/wh40k/sounds/weapons/loudbolt.ogg'
 
@@ -196,7 +198,7 @@
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_WIELDED_FIRING_ONLY|GUN_ANTIQUE|GUN_CAN_POINTBLANK
 
 
-/obj/item/weapon/gun/warhammer/bolter/heavy/set_gun_config_values()
+/obj/item/weapon/gun/bolter/heavy/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_9
@@ -207,14 +209,14 @@
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
-/obj/item/ammo_magazine/warhammer/bolter/heavy
+/obj/item/ammo_magazine/bolter/heavy
 	name = "\improper Heavy Bolter Magazine (.998)"
 	caliber = ".998"
 	icon = 'void-marines/wh40k/icons/weapon/ammo.dmi'
 	icon_state = "bolty"
 	default_ammo = /datum/ammo/bullet/rifle/bolter/heavy
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/warhammer/bolter/heavy
+	gun_type = /obj/item/weapon/gun/bolter/heavy
 
 /datum/ammo/bullet/rifle/bolter/heavy
 	name = ".998 bolt"
@@ -232,7 +234,6 @@
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
 	icon_state = "sheath"
 	flags_equip_slot = SLOT_BACK|SLOT_WAIST
-//	var/delmis
 
 /obj/item/storage/large_holster/warhammer/update_icon()
 	if(length(contents))

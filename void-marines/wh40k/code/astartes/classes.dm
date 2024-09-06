@@ -42,7 +42,7 @@
 	to_chat(usr,"You activate the chainsaw on your narthecium, getting ready to cut through armor and bone.")
 	user.put_in_hands(new /obj/item/weapon/sword/warhammer/narthecium(user))
 
-/obj/item/weapon/sword/warhammer/narthecium
+/obj/item/weapon/sword/chainsword/narthecium
 	name = "Apothecary's Narthecium"
 	desc = "The standard issued narthecium of the apothecaries, powered by a internal promethium generator. It requires to be toggled."
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
