@@ -8,3 +8,6 @@
 2024-09-05:
   BonniePandora:
   - qol: Toolbelts can now carry the high-capacity blowtorch
+2024-09-06:
+  Max-023:
+  - bugfix: SG Belt hold list modified to accept all revolvers
