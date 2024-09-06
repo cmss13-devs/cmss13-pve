@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - admin: "removed King from GM panel spawner"
