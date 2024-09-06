@@ -1,0 +1,4 @@
+author: "Noname995"
+delete-after: True
+changes:
+  - rscadd: "Added king with changed abilities and AI to use abilities, new event boss or end game tool for GMs."
