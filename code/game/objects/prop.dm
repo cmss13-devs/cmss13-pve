@@ -291,3 +291,22 @@
 /obj/item/prop/magazine/boots/n055
 	name = "Boots!: Issue No.55"
 	desc = "The only official USCM magazine, the headline reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.'"
+
+/obj/item/prop/scrap
+	name = "scrap metal"
+	icon = 'icons/obj/items/fishing_atoms.dmi'
+	icon_state = "sheet-scrap"
+	item_state = ""
+	desc = "A rusty piece of scrap metal."
+	w_class = SIZE_MEDIUM
+
+/obj/item/prop/rock
+	name = "rock"
+	icon = 'icons/obj/items/plush.dmi'
+	icon_state = "rock"
+	item_state = ""
+	force = 30
+	throwforce = 25
+	desc = "The most ancient of tools."
+	w_class = SIZE_TINY
+	hitsound = 'sound/weapons/genhit3.ogg'

@@ -180,7 +180,22 @@
 /turf/open/floor/plating/plating_catwalk/shiva
 	icon = 'icons/turf/floors/ice_colony/shiva_floor.dmi'
 
+/turf/open/floor/plating/plating_catwalk/aicore
+	icon = 'icons/turf/floors/aicore.dmi'
+	icon_state = "ai_plating_catwalk"
 
+/turf/open/floor/plating/plating_catwalk/aicore/update_icon()
+	. = ..()
+	if(covered)
+		overlays += image(icon, src, "ai_catwalk", CATWALK_LAYER)
+
+/turf/open/floor/plating/plating_catwalk/aicore/white
+	icon_state = "w_ai_plating_catwalk"
+
+/turf/open/floor/plating/plating_catwalk/aicore/white/update_icon()
+	. = ..()
+	if(covered)
+		overlays += image(icon, src, "w_ai_catwalk", CATWALK_LAYER)
 
 /turf/open/floor/plating/ironsand
 	name = "Iron Sand"
@@ -202,6 +217,21 @@
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "default"
 	plating_type = /turf/open/floor/plating/almayer
+
+/turf/open/floor/almayer/edge
+	icon_state = "floor_edge"
+
+/turf/open/floor/almayer/edge/smooth
+	icon_state = "floor_edge_smooth"
+
+/turf/open/floor/almayer/edge/smooth/corner
+	icon_state = "floor_edge_smooth_corner"
+
+/turf/open/floor/almayer/edge/smooth/endcap_right
+	icon_state = "floor_edge_smooth2"
+
+/turf/open/floor/almayer/edge/smooth/endcap_left
+	icon_state = "floor_edge_smooth3"
 
 /// Admin level thunderdome floor. Doesn't get damaged by explosions and such for pristine testing
 /turf/open/floor/tdome
@@ -271,6 +301,34 @@
 		for(var/obj/effect/decal/cleanable/C in contents) //for the off chance of someone bleeding mid=flight
 			qdel(C)
 
+/turf/open/floor/almayer/empty/golden_arrow
+	desc = "You can see the elevator down there. It's a pretty long fall though..."
+	var/area_type = /area/golden_arrow/cargo_shuttle/elevator
+
+/turf/open/floor/almayer/empty/golden_arrow/enter_depths(atom/movable/AM)
+	if(AM.anchored)
+		return
+	if(AM.throwing == 0 && istype(get_turf(AM), type))
+		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
+
+	var/list/area_turfs = get_area_turfs(area_type)
+	for(var/turf/turf in area_turfs)
+		if(turf.density)
+			area_turfs -= turf
+
+	AM.forceMove(pick(area_turfs))
+	if(ishuman(AM))
+		var/mob/living/carbon/human/human = AM
+		human.KnockDown(3)
+		human.take_limb_damage(30)
+		playsound(human, "punch", rand(20, 70), TRUE)
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one
+	area_type = /area/golden_arrow/vehicle_shuttle
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_two
+	area_type = /area/golden_arrow/vehicle_shuttle/two
+
 //Others
 /turf/open/floor/almayer/uscm
 	icon_state = "logo_c"
@@ -283,6 +341,27 @@
 	icon_state = "logo_directional1"
 
 /turf/open/floor/almayer/no_build
+	allow_construction = FALSE
+	hull_floor = TRUE
+
+/turf/open/floor/almayer/aicore
+	icon = 'icons/turf/floors/aicore.dmi'
+	icon_state = "ai_floor1"
+
+/turf/open/floor/almayer/aicore/glowing
+	icon_state = "ai_floor2"
+	light_color = "#d69c46"
+	light_range = 2
+
+/turf/open/floor/almayer/aicore/glowing/Initialize(mapload, ...)
+	. = ..()
+	set_light_on(TRUE)
+
+/turf/open/floor/almayer/aicore/no_build
+	allow_construction = FALSE
+	hull_floor = TRUE
+
+/turf/open/floor/almayer/aicore/glowing/no_build
 	allow_construction = FALSE
 	hull_floor = TRUE
 
