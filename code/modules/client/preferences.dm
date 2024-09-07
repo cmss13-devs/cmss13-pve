@@ -328,7 +328,7 @@ var/const/MAX_SAVE_SLOTS = 20
 			dat += "<h1><u><b>Name:</b></u> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'><b>[real_name]</b></a>"
 			dat += "<a href='?_src_=prefs;preference=name;task=random'>&reg</A></h1>"
-			dat += "<u><b>Slot nickame:</b></u> "
+			dat += "<u><b>Slot label:</b></u> "
 			dat += "<a href='?_src_=prefs;preference=slot_label;task=input'><b>[slot_label ? "[slot_label]" : "---"]</b></a><br> "
 			dat += "<b>Always Pick Random Name:</b> <a href='?_src_=prefs;preference=rand_name'><b>[be_random_name ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Always Pick Random Appearance:</b> <a href='?_src_=prefs;preference=rand_body'><b>[be_random_body ? "Yes" : "No"]</b></a><br><br>"
