@@ -17,6 +17,9 @@ map almayer
 endmap
 
 map golden_arrow
+endmap
+
+map palisade
 	default
 endmap
 

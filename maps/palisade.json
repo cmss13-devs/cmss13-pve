@@ -1,0 +1,9 @@
+{
+    "map_name": "USS Palisade",
+    "map_path": "map_files/Palisade",
+    "map_file": "Palisade.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow/",
+    "platoon": "/datum/squad/marine/alpha"
+}
