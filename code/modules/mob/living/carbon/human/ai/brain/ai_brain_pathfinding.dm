@@ -1,0 +1,94 @@
+/datum/human_ai_brain
+	var/ai_move_delay = 0
+	var/list/current_path
+	var/turf/current_target_turf
+	var/path_update_period = (0.5 SECONDS)
+	var/no_path_found = FALSE
+	var/max_travel_distance = 24
+	var/next_path_generation = 0
+	/// Amount of times no path found has occured
+	var/no_path_found_amount = 0
+	var/ai_timeout_time = 0
+	var/ai_timeout_period = 2 SECONDS
+
+	/// The time interval between calculating new paths if we cannot find a path
+	var/no_path_found_period = (2.5 SECONDS)
+
+	/// Cooldown declaration for delaying finding a new path if no path was found
+	COOLDOWN_DECLARE(no_path_found_cooldown)
+
+/datum/human_ai_brain/proc/can_move_and_apply_move_delay()
+	// Unable to move, try next time.
+	if(ai_move_delay > world.time || !(tied_human.mobility_flags & MOBILITY_MOVE) || tied_human.is_mob_incapacitated(TRUE) || (tied_human.body_position != STANDING_UP && !tied_human.can_crawl) || tied_human.anchored)
+		return FALSE
+
+	ai_move_delay = world.time + tied_human.move_delay
+	if(tied_human.recalculate_move_delay)
+		ai_move_delay = world.time + tied_human.movement_delay()
+	if(tied_human.next_move_slowdown)
+		ai_move_delay += tied_human.next_move_slowdown
+		tied_human.next_move_slowdown = 0
+	return TRUE
+
+/datum/human_ai_brain/proc/move_to_next_turf(turf/T, max_range = ai_range)
+	if(!T)
+		return FALSE
+
+	if(no_path_found)
+		if(no_path_found_amount > 0)
+			COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
+		no_path_found = FALSE
+		no_path_found_amount++
+		return FALSE
+
+	no_path_found_amount = 0
+
+	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
+		if(!CALCULATING_PATH(tied_human) || current_target_turf != T)
+			SSpathfinding.calculate_path(tied_human, T, max_range, tied_human, CALLBACK(src, PROC_REF(set_path)), list(tied_human, current_target))
+			current_target_turf = T
+		next_path_generation = world.time + path_update_period
+
+	if(CALCULATING_PATH(tied_human))
+		return TRUE
+
+	// No possible path to target.
+	if(!current_path && get_dist(T, tied_human) > 0)
+		return FALSE
+
+	// We've reached our destination
+	if(!length(current_path) || get_dist(T, tied_human) <= 0)
+		current_path = null
+		return TRUE
+
+	var/turf/next_turf = current_path[length(current_path)]
+	// We've somehow deviated from our current path. Generate next path whenever possible.
+	if(get_dist(next_turf, tied_human) > 1)
+		current_path = null
+		return TRUE
+
+	// Unable to move, try next time.
+	if(!can_move_and_apply_move_delay())
+		return TRUE
+
+	var/list/L = LinkBlocked(tied_human, tied_human.loc, next_turf, list(tied_human, current_target), TRUE)
+	L += SSpathfinding.check_special_blockers(tied_human, next_turf)
+	for(var/a in L)
+		var/atom/A = a
+		if(A.xeno_ai_obstacle(tied_human, get_dir(tied_human.loc, next_turf)) == INFINITY)
+			return FALSE
+		//INVOKE_ASYNC(A, TYPE_PROC_REF(/atom, xeno_ai_act), tied_human)
+	var/successful_move = tied_human.Move(next_turf, get_dir(tied_human, next_turf))
+	if(successful_move)
+		ai_timeout_time = world.time
+		current_path.len--
+
+	if(ai_timeout_time < world.time - ai_timeout_period)
+		return FALSE
+
+	return TRUE
+
+/datum/human_ai_brain/proc/set_path(list/path)
+	current_path = path
+	if(!path)
+		no_path_found = TRUE

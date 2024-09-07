@@ -1,4 +1,4 @@
-#define XENO_CALCULATING_PATH(X) (X in SSxeno_pathfinding.hash_path)
+#define CALCULATING_PATH(X) (X in SSpathfinding.hash_path)
 
 #define DIRECTION_CHANGE_PENALTY 2
 #define NO_WEED_PENALTY 2

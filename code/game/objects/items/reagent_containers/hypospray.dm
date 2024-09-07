@@ -13,7 +13,7 @@
 	possible_transfer_amounts = list(3, 5, 10, 15, 30)
 	flags_atom = FPRINT|OPENCONTAINER
 	flags_equip_slot = SLOT_WAIST
-	flags_item = NOBLUDGEON
+	flags_item = NOBLUDGEON|HEALING_ITEM
 	matter = list("plastic" = 1250, "glass" = 250)
 	transparent = TRUE
 	var/skilllock = SKILL_MEDICAL_TRAINED

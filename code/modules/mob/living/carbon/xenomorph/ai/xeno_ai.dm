@@ -47,7 +47,7 @@
 	if(distance > max_travel_distance)
 		return
 
-	SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
+	SSpathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)
@@ -179,12 +179,12 @@
 	no_path_found_amount = 0
 
 	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
-		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
-			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
+		if(!CALCULATING_PATH(src) || current_target_turf != T)
+			SSpathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
 		next_path_generation = world.time + path_update_period
 
-	if(XENO_CALCULATING_PATH(src))
+	if(CALCULATING_PATH(src))
 		return TRUE
 
 	// No possible path to target.
@@ -207,7 +207,7 @@
 
 	var/turf/next_turf = current_path[current_path.len]
 	var/list/L = LinkBlocked(src, loc, next_turf, list(src, current_target), TRUE)
-	L += SSxeno_pathfinding.check_special_blockers(src, next_turf)
+	L += SSpathfinding.check_special_blockers(src, next_turf)
 	for(var/a in L)
 		var/atom/A = a
 		if(A.xeno_ai_obstacle(src, get_dir(loc, next_turf)) == INFINITY)

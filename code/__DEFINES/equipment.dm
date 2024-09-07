@@ -82,6 +82,10 @@
 #define ANIMATED_SURGICAL_TOOL (1<<12)
 /// Has heat source but isn't 'on fire' and thus can be stored
 #define IGNITING_ITEM (1<<13)
+/// This item is classified as a healing item for the sake of human AI
+#define HEALING_ITEM (1<<14)
+/// This item is classified as ammunition for the sake of human AI
+#define AMMUNITION_ITEM (1<<15)
 //==========================================================================================
 
 

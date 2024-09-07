@@ -12,7 +12,7 @@
 	name = "\improper M40 HEDP grenade"
 	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenades alongside the M40 HEFA. Capable of being loaded in the M92 Launcher, or thrown by hand."
 	icon_state = "grenade"
-	det_time = 40
+	det_time = 100 // zonenote
 	item_state = "grenade_hedp"
 	dangerous = TRUE
 	underslug_launchable = TRUE

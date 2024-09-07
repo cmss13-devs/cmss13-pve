@@ -2008,3 +2008,8 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 /// Getter for gun_user
 /obj/item/weapon/gun/proc/get_gun_user()
 	return gun_user
+
+/// Getter for target
+/obj/item/weapon/gun/proc/get_target()
+	RETURN_TYPE(/atom)
+	return target

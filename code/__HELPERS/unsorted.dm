@@ -51,8 +51,8 @@
 #define format_frequency(f) "[round(f / 10)].[f % 10]"
 
 #define reverse_direction(direction) ( \
-											( dir & (NORTH|SOUTH) ? ~dir & (NORTH|SOUTH) : 0 ) | \
-											( dir & (EAST|WEST) ? ~dir & (EAST|WEST) : 0 ) \
+											( direction & (NORTH|SOUTH) ? ~direction & (NORTH|SOUTH) : 0 ) | \
+											( direction & (EAST|WEST) ? ~direction & (EAST|WEST) : 0 ) \
 										)
 
 // The sane, counter-clockwise angle to turn to get from /direction/ A to /direction/ B
@@ -2141,3 +2141,30 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 
 		if(NORTHWEST)
 			return list(NORTHWEST, NORTH, WEST)
+
+/// Makes a given dir cardinal. If the dir is non-cardinal, it will return both cardinal directions that make up the direction. Else, it will be a single-entry list returned.
+/proc/make_dir_cardinal(direction)
+	switch(direction)
+		if(NORTH)
+			return list(NORTH)
+
+		if(EAST)
+			return list(EAST)
+
+		if(SOUTH)
+			return list(SOUTH)
+
+		if(WEST)
+			return list(WEST)
+
+		if(NORTHEAST)
+			return list(NORTH, EAST)
+
+		if(SOUTHEAST)
+			return list(EAST, SOUTH)
+
+		if(SOUTHWEST)
+			return list(SOUTH, WEST)
+
+		if(NORTHWEST)
+			return list(NORTH, WEST)
