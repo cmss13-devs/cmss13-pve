@@ -398,7 +398,7 @@
 
 /obj/item/dogtag
 	name = "information dog tag"
-	desc = "A fallen serviceman's information dog tag."
+	desc = "A fallen servicemember's information dog tag."
 	icon_state = "dogtag_taken"
 	icon = 'icons/obj/items/card.dmi'
 	w_class = SIZE_TINY
