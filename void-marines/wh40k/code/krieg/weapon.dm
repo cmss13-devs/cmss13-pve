@@ -66,6 +66,8 @@
 	effective_range_max = 15
 	damage_falloff = DAMAGE_FALLOFF_TIER_1
 	max_range = 30
+	var/light_range = 2
+	var/light_color = 3
 
 /obj/item/weapon/gun/shotgun/pump/kriegshotgun
 	name = "Lucius Pattern Shotgun"
@@ -83,3 +85,32 @@
 	max_rounds = 7
 	current_rounds = 0
 	chamber_closed = 0
+/*
+// /datum/element/bullet_trait_penetrating
+
+// Making lasbolt shine!
+
+/datum/ammo
+	var/projectile_light_range = null
+	var/projectile_light_color = null
+
+
+/datum/ammo/proc/lumination()
+	if(isnull(projectile_light_color), isnull(projectile_light_range))
+		return // If something in that - is null, then we got nothing to do
+	var/prev_light = light_range
+	if(!light_on && (light_range <= projectile_light_range))
+		set_light_color(projectile_light_color)
+		set_light_range(projectile_light_range)
+		set_light_on(TRUE)
+// 		addtimer(CALLBACK(src, PROC_REF(reset_light_range), prev_light), 0.5 SECONDS)
+
+/// called by
+/*
+/obj/item/weapon/gun/proc/reset_light_range(lightrange)
+	set_light_range(lightrange)
+	if(lightrange <= 0)
+		set_light_on(FALSE)
+
+*/
+*/

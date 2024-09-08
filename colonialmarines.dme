@@ -2534,6 +2534,7 @@
 #include "void-marines\wh40k\code\astartes\armour.dm"
 #include "void-marines\wh40k\code\astartes\astartes.dm"
 #include "void-marines\wh40k\code\astartes\classes.dm"
+#include "void-marines\wh40k\code\astartes\outfit.dm"
 #include "void-marines\wh40k\code\astartes\quotes.dm"
 #include "void-marines\wh40k\code\astartes\weapon.dm"
 #include "void-marines\wh40k\code\krieg\krieg.dm"

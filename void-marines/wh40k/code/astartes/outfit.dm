@@ -1,6 +1,6 @@
 
 /datum/equipment_preset/astartes
-	name = "Ultramarine Tactical Brother"
+	name = " Astartes | Ultramarine Tactical Brother"
 	idtype = null
 	languages = list(LANGUAGE_ENGLISH)
 	faction = FACTION_USCM
@@ -27,7 +27,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/bolter, WEAR_IN_BACK)
 
 /datum/equipment_preset/astartes/bloodraven
-	name = "Blood Raven Tactical Brother"
+	name = " Astartes | Blood Raven Tactical Brother"
 
 /datum/equipment_preset/astartes/bloodraven/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -44,7 +44,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/bolter, WEAR_IN_BACK)
 
 /datum/equipment_preset/astartes/ravenguard
-	name = "Raven Guard Tactical Brother"
+	name = " Astartes | Raven Guard Tactical Brother"
 
 /datum/equipment_preset/astartes/ravenguard/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -61,7 +61,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/bolter, WEAR_IN_BACK)
 
 /datum/equipment_preset/astartes/salamander
-	name = "Salamanders Tactical Brother"
+	name = " Astartes | Salamanders Tactical Brother"
 
 /datum/equipment_preset/astartes/salamander/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -78,13 +78,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/bolter, WEAR_IN_BACK)
 
 /datum/equipment_preset/astartes/sergeant
-	name = "Ultramarine Sergeant"
+	name = " Astartes | Ultramarine Sergeant"
 
 /datum/equipment_preset/astartes/sergeant/load_gear(mob/living/carbon/human/new_human)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/astartes/sergeant, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/astartes, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/astartes/sergeant, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/astartes/sergeant, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/astartes, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/astartes/bodysuit, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/astartes/sergeant, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/bolter/astartes, WEAR_R_HAND)

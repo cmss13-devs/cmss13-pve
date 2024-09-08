@@ -89,6 +89,36 @@
 	item_state = "ultrapack"
 	max_storage_space = 20
 
+/obj/item/storage/backpack/astartes/ravenguard
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XIXth Chapter, Raven Guards."
+	icon_state = "ravpack"
+	item_state = "ravpack"
+
+/obj/item/storage/backpack/astartes/bloodraven
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the IXth Chapter, Blood Angels."
+	icon_state = "bravpack"
+	item_state = "bravpack"
+
+/obj/item/storage/backpack/astartes/salamander
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XVIIIth Chapter, Salamanders."
+	icon_state = "salpack"
+	item_state = "salpack"
+
+/obj/item/storage/backpack/astartes/apothecary
+	name = "Astartes Mark VII Medipack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been upgraded with additional spotlight and surgical arms to serve medical purposes."
+	icon_state = "apothpack"
+	item_state = "apothpack"
+
+/obj/item/storage/backpack/astartes/techmarine
+	name = "Astartes Mark VII Servo-Harness"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been equipped with additional Servo-Arms to serve engineering purposes."
+	icon_state = "techpack"
+	item_state = "techpack"
+
 // --- EXTRA --- \\
 
 /obj/item/clothing/under/astartes/bodysuit
@@ -168,7 +198,7 @@
 	icon_state = "salhelm"
 	item_state = "salhelm"
 
-/obj/item/clothing/shoes/astartes/sallys
+/obj/item/clothing/shoes/astartes/salamander
 	name = "Astartes Mark VII Combat Boots"
 	desc = "Boots of the Emperor's Space Marine, This one is painted in the colour scheme of the XVIIIh chapter, the Salamanders."
 	icon_state = "sl_boots"
