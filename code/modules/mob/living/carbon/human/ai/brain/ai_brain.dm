@@ -25,12 +25,14 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/list/ongoing_actions = list()
 
 	/// List of semi-permanent "order" action datums. These do not expire
-	var/list/ongoing_orders = list()
+	//var/list/ongoing_orders = list()
+	var/datum/ongoing_action/order/ongoing_order
 
 	var/list/detection_turfs = list()
 
 	var/in_combat = FALSE
 	var/combat_decay_time = 30 SECONDS
+	var/squad_covering = FALSE
 
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
@@ -51,6 +53,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	set_primary_weapon(null)
 	current_target = null
 	target_floor = null
+	ongoing_order = null
 	GLOB.human_ai_brains -= src
 	return ..()
 
@@ -58,6 +61,13 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(tied_human.is_mob_incapacitated())
 		end_gun_fire()
 		return
+
+	var/order_return
+	if(can_process_order())
+		order_return = ongoing_order.trigger_action(src)
+
+	if(!in_combat && !currently_busy && (order_return != ONGOING_ACTION_UNFINISHED))
+		approach_squad_leader()
 
 	for(var/datum/ongoing_action/action as anything in ongoing_actions)
 		var/retval = action.trigger_action()
@@ -73,7 +83,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	// Might be wise to move these off tick and instead make them signal-based
 	nade_throwback(things_around)
 	item_search(things_around)
-	bullet_detect(things_around)
+	//bullet_detect(things_around)
 
 	if(!currently_busy && healing_start_check())
 		currently_busy = TRUE
@@ -184,20 +194,16 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	return FALSE
 
-/datum/human_ai_brain/proc/add_ongoing_order(datum/ongoing_action/ref)
+/datum/human_ai_brain/proc/set_ongoing_order(datum/ongoing_action/ref)
+	if(!ref)
+		return
+
 	if(!ref.order)
 		stack_trace("Action of [ref.type] was attempted to be added as an order.")
-	ongoing_orders += ref
+	ongoing_order = ref
 
 /datum/human_ai_brain/proc/has_ongoing_order(path)
-	if(!ispath(path))
-		return FALSE
-
-	for(var/datum/ongoing_action/action as anything in ongoing_orders)
-		if(istype(action, path))
-			return TRUE
-
-	return FALSE
+	return istype(ongoing_order, path)
 
 /datum/human_ai_brain/proc/bullet_detect(list/things_nearby)
 	var/obj/projectile/bullet = locate(/obj/projectile) in things_nearby
@@ -208,106 +214,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		var/mob/firer = bullet.firer
 		if(!in_cover && !faction_check(firer)) // If it's our own bullets, we don't need to be alarmed
 			locate_cover(bullet, bullet.dir)
-
-/datum/human_ai_brain/proc/locate_cover(obj/projectile/bullet, projectile_dir)
-	if(!COOLDOWN_FINISHED(src, cover_search_cooldown))
-		return
-	COOLDOWN_START(src, cover_search_cooldown, 15 SECONDS)
-	var/list/turf_dict = list()
-	if(!recursive_turf_cover_scan(get_turf(tied_human), turf_dict, reverse_direction(projectile_dir)))
-		var/shortest_cover_dist = 50
-		var/turf/shortest_cover_turf
-		var/atom/cover_atom
-		var/list/cardinal_bullet_dirs = make_dir_cardinal(projectile_dir)
-		var/list/inverse_cardinal_bullet_dirs = list()
-		for(var/dir in cardinal_bullet_dirs)
-			inverse_cardinal_bullet_dirs += reverse_direction(dir)
-		var/list/view_contents = view(7, tied_human)
-		for(var/obj/structure/barricade/cade in view_contents)
-			if(cade.dir in inverse_cardinal_bullet_dirs)
-				var/dist = get_dist(tied_human, cade)
-				if(dist < shortest_cover_dist)
-					shortest_cover_dist = dist
-					shortest_cover_turf = get_turf(cade)
-					cover_atom = cade
-		if(shortest_cover_turf)
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_cover, shortest_cover_turf, cover_atom, FALSE)
-			return
-		for(var/turf/closed/wall in view_contents)
-			for(var/dir in cardinal_bullet_dirs)
-				var/turf/open/maybe_cover = get_step(wall, dir)
-				if(!istype(maybe_cover))
-					continue
-				if(bullet.firer in viewers(world.view, maybe_cover))
-					continue
-				var/dist = get_dist(tied_human, maybe_cover)
-				if(dist < shortest_cover_dist)
-					shortest_cover_dist = dist
-					shortest_cover_turf = maybe_cover
-					cover_atom = wall
-		if(shortest_cover_turf)
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_cover, shortest_cover_turf, cover_atom, TRUE)
-			return
-
-
-	else
-		var/highest_cover_value = turf_dict[turf_dict[1]]
-		var/turf/highest_cover_turf
-		for(var/turf/turf as anything in turf_dict)
-#ifdef TESTING
-			turf.maptext = "<h2>[turf_dict[turf]]</h2>"
-#endif
-			if(turf_dict[turf] > highest_cover_value)
-				highest_cover_value = turf_dict[turf]
-				highest_cover_turf = turf
-		if(!highest_cover_turf)
-			return // damn
-#ifdef TESTING
-		to_chat(world, "highest_cover_value: [highest_cover_value], turf coords: [highest_cover_turf.x], [highest_cover_turf.y], [highest_cover_turf.z]")
-		addtimer(CALLBACK(src, PROC_REF(clear_cover_value_debug), turf_dict), 60 SECONDS)
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_inside_cover, highest_cover_turf)
-
-/datum/human_ai_brain/proc/clear_cover_value_debug(list/turf_list)
-	for(var/turf/T as anything in turf_list)
-		T.maptext = null
-
-#else
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_inside_cover, highest_cover_turf)
-#endif
-
-/datum/human_ai_brain/proc/recursive_turf_cover_scan(turf/scan_turf, list/turf_dict, cover_dir)
-	if(length(turf_dict) > 128)
-		return FALSE // abort if the room is too large
-	//if(istype(scan_turf, /turf/closed))
-	//	return TRUE // abort if we're a wall
-	if(scan_turf in turf_dict)
-		return TRUE // abort if we've already been scanned
-	turf_dict[scan_turf] = 0
-	var/obj/structure/barricade/cade = locate() in scan_turf.contents
-	if(cade?.dir in get_related_directions(cover_dir))
-		turf_dict[scan_turf] += 5
-	var/obj/item/explosive/mine/mine = locate() in scan_turf.contents
-	if(mine)
-		if(!faction_check(mine.iff_signal))
-			turf_dict[scan_turf] -= 50
-		else
-			turf_dict[scan_turf] -= 2 // even if it's our mine, we don't really want to stand on it
-	for(var/obj/thing in scan_turf.contents)
-		if(thing.density && !istype(thing, /obj/structure/barricade))
-			turf_dict[scan_turf] -= 1000 // If it has something dense on it, don't bother
-	for(var/cardinal in GLOB.cardinals)
-		var/turf/nearby_turf = get_step(scan_turf, cardinal)
-		if(!nearby_turf)
-			continue
-		var/obj/structure/reagent_dispensers/fueltank/tank = locate() in nearby_turf.contents
-		if(tank)
-			turf_dict[scan_turf] -= 10 // ideally not near any highly explosive fuel tanks if we can help it
-		if(istype(nearby_turf, /turf/closed))
-			turf_dict[scan_turf] += 2 // Near a wall is a bit safer
-			continue
-		if(!recursive_turf_cover_scan(nearby_turf, turf_dict, cover_dir))
-			return FALSE
-	return TRUE
 
 /datum/human_ai_brain/proc/faction_check(mob/target)
 	return target?.faction == tied_human.faction
@@ -334,9 +240,10 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(istype(entering, /obj/projectile))
 		var/obj/projectile/bullet = entering
 		if(ismob(bullet.firer))
-			if(!in_cover && !faction_check(bullet.firer)) // If it's our own bullets, we don't need to be alarmed
+			if(!in_cover && !squad_covering && !faction_check(bullet.firer)) // If it's our own bullets, we don't need to be alarmed
 				enter_combat()
-				locate_cover(bullet, bullet.dir)
+				if(!primary_weapon)
+					locate_cover(bullet, bullet.dir) // Zonenote: cover is fucked and needs work, so it's limited to only unarmed combatants
 
 /datum/human_ai_brain/proc/on_move(atom/movable/mover, atom/oldloc, direction)
 	setup_detection_radius()
@@ -349,3 +256,12 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/exit_combat()
 	in_combat = FALSE
+
+/datum/human_ai_brain/proc/can_process_order()
+	if(!ongoing_order)
+		return FALSE
+
+	if(!ongoing_order.can_perform_in_combat && in_combat)
+		return FALSE
+
+	return TRUE

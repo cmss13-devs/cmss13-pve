@@ -159,7 +159,7 @@
 		bolt.recent_cycle = world.time
 		bolt.unique_action(tied_human)
 		bolt.recent_cycle = world.time
-	if(!primary_weapon.in_chamber)
+	if(!primary_weapon.in_chamber || !friendly_check())
 		end_gun_fire()
 		return
 
@@ -167,6 +167,23 @@
 	enter_combat()
 	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire))
 	primary_weapon.start_fire(object = current_target, bypass_checks = TRUE)
+
+/datum/human_ai_brain/proc/friendly_check()
+	var/list/turf_list = getline2(get_turf(tied_human), get_turf(current_target))
+	for(var/turf/tile in turf_list)
+		if(istype(tile, /turf/closed))
+			return TRUE
+
+		for(var/mob/living/carbon/human/possible_friendly in tile)
+			if(tied_human == possible_friendly)
+				continue
+
+			if(possible_friendly.body_position == LYING_DOWN)
+				continue
+
+			if(faction_check(possible_friendly))
+				return FALSE
+	return TRUE
 
 /datum/human_ai_brain/proc/on_gun_fire(datum/source, obj/item/weapon/gun/fired)
 	SIGNAL_HANDLER
@@ -195,7 +212,7 @@
 		end_gun_fire()
 		return
 
-	if(QDELETED(current_target))
+	if(QDELETED(current_target) || !friendly_check())
 		end_gun_fire()
 		return
 
@@ -230,7 +247,8 @@
 
 /datum/human_ai_brain/proc/end_gun_fire()
 	primary_weapon?.set_target(null)
-	UnregisterSignal(current_target, COMSIG_PARENT_QDELETING)
+	if(current_target)
+		UnregisterSignal(current_target, COMSIG_PARENT_QDELETING)
 	UnregisterSignal(tied_human, COMSIG_MOB_FIRED_GUN)
 	current_target = null
 	currently_busy = FALSE

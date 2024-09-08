@@ -9,3 +9,5 @@
 #define ONGOING_ACTION_UNFINISHED_BLOCK "unfinished_block"
 
 #define ADD_ONGOING_ACTION(brain, path, arguments...) brain:_add_ongoing_action(path, ##arguments)
+
+#define HUMAN_AI_MAX_PATHFINDING_RANGE 45

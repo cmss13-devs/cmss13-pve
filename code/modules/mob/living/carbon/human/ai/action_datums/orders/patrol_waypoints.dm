@@ -17,8 +17,8 @@
 	current_waypoint_target = null
 	return ..()
 
-/datum/ongoing_action/order/patrol_waypoints/trigger_action(datum)
-	if(waiting || QDELETED(current_waypoint_target) || !isturf(current_waypoint_target))
+/datum/ongoing_action/order/patrol_waypoints/trigger_action(datum/human_ai_brain/brain)
+	if(waiting || QDELETED(current_waypoint_target) || !isturf(current_waypoint_target)) // Since this one order applies to the entire squad, everyone stops approaching when one arrives
 		return ONGOING_ACTION_COMPLETED
 
 	if(get_dist(current_waypoint_target, brain.tied_human) > 1)
@@ -27,8 +27,9 @@
 
 		if(get_dist(current_waypoint_target, brain.tied_human) > 1)
 			return ONGOING_ACTION_UNFINISHED
-	waiting = TRUE
-	addtimer(CALLBACK(src, PROC_REF(set_next_waypoint)), time_at_waypoint)
+	if(brain.is_squad_leader)
+		waiting = TRUE
+		addtimer(CALLBACK(src, PROC_REF(set_next_waypoint)), time_at_waypoint)
 	return ONGOING_ACTION_COMPLETED
 
 /datum/ongoing_action/order/patrol_waypoints/proc/set_next_waypoint()
@@ -63,7 +64,12 @@
 	var/list/turf/waypoint_list = list()
 	while(TRUE)
 		if(tgui_input_list(usr, "Press Enter to save the turf you are on to the patrol datum. Press Cancel to finalize.", "Save Turf", list("Enter", "Cancel")) == "Enter")
-			waypoint_list += get_turf(usr)
+			var/turf/user_turf = get_turf(usr)
+			var/dist = length(waypoint_list) ? get_dist(waypoint_list[length(waypoint_list)], user_turf) : 0
+			if(length(waypoint_list) && (dist > HUMAN_AI_MAX_PATHFINDING_RANGE))
+				to_chat(usr, SPAN_WARNING("This waypoint is too far from the previous one. Maximum distance is [HUMAN_AI_MAX_PATHFINDING_RANGE] while this node's was [dist]."))
+				continue
+			waypoint_list += user_turf
 			continue
 		break
 

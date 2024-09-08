@@ -6,9 +6,11 @@ import { classes, BooleanLike } from 'common/react';
 
 type Squad = {
   id: number;
-  orders: string;
+  order: string;
   members: string;
   ref: string;
+  primary_order: string;
+  squad_leader: string;
 };
 
 type AIHuman = {
@@ -37,14 +39,27 @@ type BackendContext = {
 
 const AIContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>(context);
-  const [categoryIndex, setCategoryIndex] = useLocalState(
+  const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
     context,
-    'category_index',
-    'Farewell'
+    'squad_assignment_mode',
+    false
+  );
+  const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
+    context,
+    'order_assignment_mode',
+    false
   );
   return (
     <Stack fill vertical>
       <div>
+        <div
+          style={{
+            'float': 'left',
+            'display': 'inline-block',
+            'padding-right': '6px',
+          }}>
+          <Button content="Refresh" onClick={() => act('refresh')} />
+        </div>
         <div
           style={{
             'float': 'left',
@@ -59,7 +74,29 @@ const AIContext = (props, context) => {
             'display': 'inline-block',
             'padding-right': '6px',
           }}>
-          <Button content="New Squad" onClick={() => act('create_squad')} />
+          <Button
+            content="Squad Assignment Mode"
+            onClick={() => {
+              setSquadAssignmentMode(!squadAssignmentMode);
+              setOrderAssignmentMode(false);
+            }}
+            color={squadAssignmentMode ? 'green' : 'red'}
+          />
+        </div>
+        <div
+          style={{
+            'float': 'left',
+            'display': 'inline-block',
+            'padding-right': '6px',
+          }}>
+          <Button
+            content="Order Assignment Mode"
+            onClick={() => {
+              setSquadAssignmentMode(false);
+              setOrderAssignmentMode(!orderAssignmentMode);
+            }}
+            color={orderAssignmentMode ? 'green' : 'red'}
+          />
         </div>
       </div>
       <Divider />
@@ -88,6 +125,16 @@ const CreatedOrder = (props) => {
   const order: Order = props.order;
   const context: BackendContext = props.context;
   const { data, act } = useBackend<BackendContext>(context);
+  const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
+    context,
+    'order_assignment_mode',
+    false
+  );
+  const [selectedSquad, setSelectedSquad] = useLocalState(
+    context,
+    'selected_squad',
+    -1
+  );
   return (
     <div
       style={{
@@ -96,15 +143,37 @@ const CreatedOrder = (props) => {
         'padding-right': '6px',
       }}>
       <Section title={`${order.name}`}>
-        <Button
-          content="VV"
-          tooltip={order.ref}
-          onClick={() =>
-            act('view_variables', {
-              ref: order.ref,
-            })
-          }
-        />
+        {orderAssignmentMode ? (
+          <>
+            <Button
+              content="Assign"
+              tooltip="Assign order to selected squad"
+              onClick={() =>
+                act('assign_order', {
+                  order: order.ref,
+                  squad: selectedSquad,
+                })
+              }
+              color="green"
+              disabled={selectedSquad === -1}
+              style={{
+                'float': 'left',
+              }}
+            />
+            <br />
+            <br />
+          </>
+        ) : (
+          <Button
+            content="VV"
+            tooltip={order.ref}
+            onClick={() =>
+              act('view_variables', {
+                ref: order.ref,
+              })
+            }
+          />
+        )}
         {order.data[0].map((data_name, i) => (
           <div>
             {data_name}: {order.data[1][i]}
@@ -118,7 +187,18 @@ const CreatedOrder = (props) => {
 const HumanAIReadout = (props) => {
   const human: AIHuman = props.human;
   const context: BackendContext = props.context;
+  const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
+    context,
+    'squad_assignment_mode',
+    false
+  );
+  const [selectedSquad, setSelectedSquad] = useLocalState(
+    context,
+    'selected_squad',
+    -1
+  );
   const { data, act } = useBackend<BackendContext>(context);
+  const gottenSquad: Squad = data.squads[selectedSquad];
   return (
     <div
       style={{
@@ -128,37 +208,81 @@ const HumanAIReadout = (props) => {
       }}>
       <Section title={`${human.name}`}>
         <div>
-          <Button
-            content="VV (H)"
-            tooltip={human.ref}
-            onClick={() =>
-              act('view_variables', {
-                ref: human.ref,
-              })
-            }
-            style={{
-              'float': 'left',
-            }}
-          />
-          <Button
-            content="VV (B)"
-            tooltip={human.brain_ref}
-            onClick={() =>
-              act('view_variables', {
-                ref: human.brain_ref,
-              })
-            }
-            style={{
-              'float': 'left',
-            }}
-          />
+          {squadAssignmentMode ? (
+            <>
+              <Button
+                content="Assign"
+                tooltip="Assign AI to selected squad"
+                onClick={() =>
+                  act('assign_to_squad', {
+                    ai: human.brain_ref,
+                    squad: selectedSquad,
+                  })
+                }
+                color="green"
+                disabled={
+                  selectedSquad === -1 || human.squad_id == selectedSquad
+                }
+                style={{
+                  'float': 'left',
+                }}
+              />
+              <Button
+                content="SL"
+                tooltip="Set this AI to be the squad leader of its squad."
+                onClick={() =>
+                  act('assign_sl', {
+                    ai: human.brain_ref,
+                    squad: selectedSquad,
+                  })
+                }
+                color={
+                  gottenSquad !== undefined &&
+                  gottenSquad.squad_leader == human.name
+                    ? 'green'
+                    : 'red'
+                }
+                disabled={selectedSquad === human.squad_id ? false : true}
+                style={{
+                  'float': 'left',
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <Button
+                content="VV (H)"
+                tooltip={human.ref}
+                onClick={() =>
+                  act('view_variables', {
+                    ref: human.ref,
+                  })
+                }
+                style={{
+                  'float': 'left',
+                }}
+              />
+              <Button
+                content="VV (B)"
+                tooltip={human.brain_ref}
+                onClick={() =>
+                  act('view_variables', {
+                    ref: human.brain_ref,
+                  })
+                }
+                style={{
+                  'float': 'left',
+                }}
+              />
+            </>
+          )}
         </div>
         <br />
         <br />
         Health: {human.health}% <br />
         Faction: {human.faction} <br />
         In Combat: {human.in_combat} <br />
-        Squad #: {human.squad} <br />
+        Squad #: {human.squad_id} <br />
         Loc: {human.loc[0]}, {human.loc[1]}, {human.loc[2]}
       </Section>
     </div>
@@ -169,6 +293,21 @@ const SquadReadout = (props) => {
   const squad: Squad = props.squad;
   const context: BackendContext = props.context;
   const { data, act } = useBackend<BackendContext>(context);
+  const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
+    context,
+    'squad_assignment_mode',
+    false
+  );
+  const [selectedSquad, setSelectedSquad] = useLocalState(
+    context,
+    'selected_squad',
+    -1
+  );
+  const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
+    context,
+    'order_assignment_mode',
+    false
+  );
   return (
     <div
       style={{
@@ -177,19 +316,29 @@ const SquadReadout = (props) => {
         'padding-right': '6px',
       }}>
       <Section title={`${squad.id}`}>
-        <Button
-          content="VV"
-          tooltip={squad.ref}
-          onClick={() =>
-            act('view_variables', {
-              ref: squad.ref,
-            })
-          }
-        />
+        {squadAssignmentMode || orderAssignmentMode ? (
+          <Button
+            content="Select"
+            tooltip={squad.ref}
+            onClick={() => setSelectedSquad(squad.id)}
+            color={squad.id === selectedSquad ? 'green' : 'red'}
+          />
+        ) : (
+          <Button
+            content="VV"
+            tooltip={squad.ref}
+            onClick={() =>
+              act('view_variables', {
+                ref: squad.ref,
+              })
+            }
+          />
+        )}
         <br />
         <br />
         Members: {squad.members} <br />
-        Orders: {squad.orders}
+        Order: {squad.order} <br />
+        Squad Leader: {squad.squad_leader}
       </Section>
     </div>
   );

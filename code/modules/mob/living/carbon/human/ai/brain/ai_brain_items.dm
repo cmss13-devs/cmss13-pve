@@ -45,7 +45,7 @@
 
 	storage_object.remove_from_storage(object_ref, tied_human)
 	equipped_items_original_loc[object_ref] = object_loc
-	RegisterSignal(object_ref, COMSIG_ITEM_DROPPED, PROC_REF(on_equipment_dropped))
+	RegisterSignal(object_ref, COMSIG_ITEM_DROPPED, PROC_REF(on_equipment_dropped), override = TRUE)
 
 /datum/human_ai_brain/proc/store_item(obj/item/object_ref, object_loc)
 	if(object_ref.loc != tied_human)
@@ -95,12 +95,15 @@
 		appraise_inventory(FALSE, FALSE, FALSE, FALSE)
 
 /datum/human_ai_brain/proc/recalculate_containers()
-	container_refs = list(
-		"belt" = tied_human.belt,
-		"backpack" = tied_human.back,
-		"left_pocket" = tied_human.l_store,
-		"right_pocket" = tied_human.r_store,
-	)
+	container_refs = list()
+	if(isstorage(tied_human.belt))
+		container_refs["belt"] = tied_human.belt
+	if(isstorage(tied_human.back))
+		container_refs["backpack"] = tied_human.back
+	if(isstorage(tied_human.l_store))
+		container_refs["left_pocket"] = tied_human.l_store
+	if(isstorage(tied_human.r_store))
+		container_refs["right_pocket"] = tied_human.r_store
 
 /// Currently doesn't support recursive storage
 /datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE)
@@ -252,7 +255,7 @@
 		if(is_type_in_list(primary_weapon, appraisal.gun_types))
 			gun_data = appraisal
 			break
-			
+
 	if(!gun_data)
 		gun_data = default
 

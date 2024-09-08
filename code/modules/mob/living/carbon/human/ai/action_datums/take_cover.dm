@@ -28,5 +28,5 @@
 
 	brain.in_cover = TRUE
 	brain.hard_cover = hard_cover
-	brain.RegisterSignal(cover_atom, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/human_ai_brain, on_cover_destroyed))
+	brain.RegisterSignal(cover_atom, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/human_ai_brain, on_cover_destroyed), TRUE)
 	return ONGOING_ACTION_COMPLETED

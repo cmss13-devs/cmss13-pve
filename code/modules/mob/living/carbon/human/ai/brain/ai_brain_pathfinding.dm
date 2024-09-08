@@ -4,7 +4,7 @@
 	var/turf/current_target_turf
 	var/path_update_period = (0.5 SECONDS)
 	var/no_path_found = FALSE
-	var/max_travel_distance = 24
+	var/max_travel_distance = HUMAN_AI_MAX_PATHFINDING_RANGE
 	var/next_path_generation = 0
 	/// Amount of times no path found has occured
 	var/no_path_found_amount = 0
@@ -30,7 +30,7 @@
 		tied_human.next_move_slowdown = 0
 	return TRUE
 
-/datum/human_ai_brain/proc/move_to_next_turf(turf/T, max_range = ai_range)
+/datum/human_ai_brain/proc/move_to_next_turf(turf/T, max_range = max_travel_distance)
 	if(!T)
 		return FALSE
 

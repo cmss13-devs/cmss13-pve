@@ -74,7 +74,8 @@ var/list/admin_verbs_default = list(
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
 	/datum/admins/proc/create_human_ai_patrol,
-	/datum/admins/proc/open_human_ai_management_panel,
+	/client/proc/open_human_ai_management_panel,
+	/client/proc/create_human_ai,
 	)
 
 var/list/admin_verbs_admin = list(

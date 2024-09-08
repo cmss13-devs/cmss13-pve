@@ -50,16 +50,14 @@
 	data["squads"] = list()
 	for(var/datum/human_ai_squad/squad as anything in SShuman_ai.squads)
 		var/list/name_list = list()
-		var/list/order_list = list()
 		for(var/datum/human_ai_brain/brain as anything in squad.ai_in_squad)
 			name_list += brain.tied_human?.real_name
-		for(var/datum/ongoing_action/order/order as anything in squad.assigned_orders)
-			order_list += order.name
 		data["squads"] += list(list(
 			"id" = squad.id,
 			"members" = english_list(name_list),
-			"orders" = english_list(order_list),
+			"order" = squad.assigned_order?.name,
 			"ref" = REF(squad),
+			"squad_leader" = squad.squad_leader?.tied_human?.real_name,
 		))
 
 	return data
@@ -80,33 +78,64 @@
 
 			ui.user.client?.debug_variables(gotten_ref)
 			return TRUE
+
 		if("create_squad")
 			SShuman_ai.create_new_squad()
 			update_static_data(usr, ui)
 			return TRUE
+
 		if("assign_to_squad")
 			if(!params["squad"] || !params["ai"])
 				return
 
-			var/datum/human_ai_brain/brain = params["ai"]
-			brain.add_to_squad(params["squad"])
+			var/datum/brain = locate(params["ai"])
+			brain:add_to_squad(params["squad"])
 			update_static_data(usr, ui)
 			return TRUE
+
 		if("assign_order")
 			if(!params["squad"] || !params["order"])
 				return
 
-			var/datum/human_ai_squad/squad = SShuman_ai.get_squad(params["squad"])
-			squad.add_order(locate(params["order"]))
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			squad.set_order(locate(params["order"]))
 			update_static_data(usr, ui)
 			return TRUE
 
-/datum/admins/proc/open_human_ai_management_panel()
+		if("assign_sl")
+			if(!params["squad"] || !params["ai"])
+				return
+
+			var/datum/brain = locate(params["ai"])
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			squad.set_squad_leader(brain)
+			update_static_data(usr, ui)
+			return TRUE
+
+		if("refresh")
+			update_static_data(usr, ui)
+			return TRUE
+
+/client/proc/open_human_ai_management_panel()
 	set name = "Human AI Management Panel"
 	set category = "Debug.HumanAI"
 
 	if(!check_rights(R_DEBUG))
 		return
 
-	var/datum/human_ai_management_menu/ui = new(usr)
-	ui.ui_interact(usr)
+	if(human_ai_menu)
+		human_ai_menu.ui_interact(mob)
+		return
+
+	human_ai_menu = new /datum/human_ai_management_menu(src)
+
+/client/proc/create_human_ai()
+	set name = "Create Human AI"
+	set category = "Debug.HumanAI"
+
+	if(!check_rights(R_DEBUG))
+		return
+
+	var/mob/living/carbon/human/ai/ai_human = new()
+	cmd_admin_dress_human(ai_human)
+	ai_human.forceMove(get_turf(mob))
