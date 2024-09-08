@@ -743,6 +743,21 @@
 /turf/open/floor/almayer/test_floor5
 	icon_state = "test_floor5"
 
+/turf/open/floor/almayer/edge
+	icon_state = "floor_edge"
+
+/turf/open/floor/almayer/edge/smooth
+	icon_state = "floor_edge_smooth"
+
+/turf/open/floor/almayer/edge/smooth/corner
+	icon_state = "floor_edge_smooth_corner"
+
+/turf/open/floor/almayer/edge/smooth/endcap_right
+	icon_state = "floor_edge_smooth2"
+
+/turf/open/floor/almayer/edge/smooth/endcap_left
+	icon_state = "floor_edge_smooth3"
+
 /// Admin level thunderdome floor. Doesn't get damaged by explosions and such for pristine testing
 /turf/open/floor/tdome
 	icon = 'icons/turf/almayer.dmi'
@@ -863,6 +878,34 @@
 
 /turf/open/floor/almayer/empty/vehicle_bay/get_depths_turfs()
 	return SSshuttle.vehicle_elevator.return_turfs()
+
+/turf/open/floor/almayer/empty/golden_arrow
+	desc = "You can see the elevator down there. It's a pretty long fall though..."
+	var/area_type = /area/golden_arrow/cargo_shuttle/elevator
+
+/turf/open/floor/almayer/empty/golden_arrow/enter_depths(atom/movable/AM)
+	if(AM.anchored)
+		return
+	if(AM.throwing == 0 && istype(get_turf(AM), type))
+		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
+
+	var/list/area_turfs = get_area_turfs(area_type)
+	for(var/turf/turf in area_turfs)
+		if(turf.density)
+			area_turfs -= turf
+
+	AM.forceMove(pick(area_turfs))
+	if(ishuman(AM))
+		var/mob/living/carbon/human/human = AM
+		human.KnockDown(3)
+		human.take_limb_damage(30)
+		playsound(human, "punch", rand(20, 70), TRUE)
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one
+	area_type = /area/golden_arrow/vehicle_shuttle
+
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_two
+	area_type = /area/golden_arrow/vehicle_shuttle/two
 
 //Others
 /turf/open/floor/almayer/uscm

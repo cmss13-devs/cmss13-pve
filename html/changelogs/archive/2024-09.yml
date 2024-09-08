@@ -5,3 +5,16 @@
   - rscadd: on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors
   - rscdel: on Sorokyne, removed USCM Galley Vendors
   - bugfix: on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts
+2024-09-05:
+  BonniePandora:
+  - qol: Toolbelts can now carry the high-capacity blowtorch
+2024-09-06:
+  Max-023:
+  - bugfix: SG Belt hold list modified to accept all revolvers
+2024-09-07:
+  Doubleumc:
+  - admin: removed King from GM panel spawner
+  - bugfix: fixed galley changes being reverted
+  Noname995:
+  - rscadd: Added king with changed abilities and AI to use abilities, new event boss
+      or end game tool for GMs.
