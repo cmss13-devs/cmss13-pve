@@ -167,7 +167,8 @@
 		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp, VENDOR_ITEM_REGULAR),
 		list("UPP Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("UM4 Pattern Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
+		list("6b82 Combat Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/UPP/naval, VENDOR_ITEM_REGULAR),
+		list("6b82 Combat Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/UPP/naval/alt, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/UPP, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),

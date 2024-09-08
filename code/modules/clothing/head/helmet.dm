@@ -1122,8 +1122,28 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
+/obj/item/clothing/head/helmet/marine/veteran/UPP/naval
+	name = "\improper 6b82 combat helmet"
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic shell comprised of three seperate plates that can be detached from their regular liner and attached to an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
+	icon_state = "upp_helmet_naval"
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
-/* /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
+/obj/item/clothing/head/helmet/marine/veteran/UPP/naval/alt
+	name = "\improper 6b82 combat helmet"
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic shell comprised of three seperate plates that can be detached from their regular liner and attached to an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
+	icon_state = "upp_helmet_naval_alt"
+
+
+/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
 	name = "\improper 6B79 helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design has kept it from outright replacing the Type 5, instead being utilized mostly by heavy machinegunners."
 	icon_state = "upp_helmet_heavy"
@@ -1132,7 +1152,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_HIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS */
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 
 /obj/item/clothing/head/uppcap
 	name = "\improper UL2 cap"
