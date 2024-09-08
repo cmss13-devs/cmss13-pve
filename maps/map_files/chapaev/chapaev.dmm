@@ -1436,6 +1436,13 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_magazine/shotgun/slug/heavy,
 /obj/item/weapon/gun/shotgun/type23,
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
+	pixel_y = 9;
+	pixel_x = -4
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = 3
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -3320,11 +3327,9 @@
 	pixel_x = 5;
 	pixel_y = 10
 	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 3;
-	pixel_x = -3
-	},
 /obj/structure/machinery/light/double,
+/obj/item/storage/box/guncase/flamer/special,
+/obj/item/storage/box/guncase/flamer/special,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4762,6 +4767,7 @@
 	},
 /obj/item/ammo_magazine/shotgun/buckshot/heavy,
 /obj/item/weapon/gun/shotgun/type23,
+/obj/item/ammo_magazine/shotgun/slug/heavy,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -6025,14 +6031,9 @@
 /area/golden_arrow/canteen)
 "VE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 9;
-	pixel_x = -4
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = 3
-	},
 /obj/structure/machinery/light/double,
+/obj/item/storage/box/guncase/flamer/special,
+/obj/item/storage/box/guncase/flamer/special,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
