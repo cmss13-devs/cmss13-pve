@@ -121,6 +121,7 @@
 #define DROPSHIP_TYPHOON "dropship_typhoon"
 #define DROPSHIP_TRIPOLI "dropship_tripoli"
 
+#define DROPSHIP_TINCAN "dropship_tincan" //RU-PVE
 #define DROPSHIP_RASPUTIN "dropship_rasputin" //RU-PVE
 #define DROPPOD_ASTARTES "astartes_droppod" //RU-PVE
 #define DROPSHIP_LANCER "dropship_lancer" //RU-PVE
