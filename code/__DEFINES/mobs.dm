@@ -1,3 +1,6 @@
+/// Multiplier for Stun/KD/KO/etc durations in new backend, due to old system being based on life ticks
+#define GLOBAL_STATUS_MULTIPLIER 20 // each in-code unit is worth 20ds of duration
+
 #define HEALTH_THRESHOLD_DEAD -200
 #define HEALTH_THRESHOLD_CRIT -50
 
@@ -44,9 +47,7 @@
 
 //disabilities
 #define NEARSIGHTED (1<<0)
-#define EPILEPSY (1<<1)
-#define COUGHING (1<<2)
-#define TOURETTES (1<<3)
+
 #define NERVOUS (1<<4)
 #define OPIATE_RECEPTOR_DEFICIENCY (1<<5)
 //=================================================
@@ -448,3 +449,11 @@ var/list/default_xeno_onmob_icons = list(
 #define MOBILITY_FLAGS_CARBON_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_REST | MOBILITY_LIEDOWN)
 #define MOBILITY_FLAGS_REST_CAPABLE_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_REST | MOBILITY_LIEDOWN)
 
+/// Sleeps for X and will perform return if A is qdeleted or a dead mob.
+#define SLEEP_CHECK_DEATH(X, A) \
+	sleep(X); \
+	if(QDELETED(A)) return; \
+	if(ismob(A)) { \
+		var/mob/sleep_check_death_mob = A; \
+		if(sleep_check_death_mob.stat == DEAD) return; \
+	}

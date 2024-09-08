@@ -99,19 +99,32 @@
 	. = ..()
 	if(. != new_value)
 		update_icons() // Snowflake handler for xeno resting icons
+		update_wounds()
 
 /mob/living/carbon/xenomorph/on_floored_start()
 	. = ..()
 	update_icons()
+	update_wounds()
 /mob/living/carbon/xenomorph/on_floored_end()
 	. = ..()
 	update_icons()
+	update_wounds()
 /mob/living/carbon/xenomorph/on_incapacitated_trait_gain()
 	. = ..()
 	update_icons()
+	update_wounds()
 /mob/living/carbon/xenomorph/on_incapacitated_trait_loss()
 	. = ..()
 	update_icons()
+	update_wounds()
+/mob/living/carbon/xenomorph/on_knockedout_trait_gain()
+	. = ..()
+	update_icons()
+	update_wounds()
+/mob/living/carbon/xenomorph/on_knockedout_trait_loss()
+	. = ..()
+	update_icons()
+	update_wounds()
 
 /* ^^^^^^^^^^^^^^ End Icon updates */
 
@@ -259,10 +272,10 @@
 	apply_overlay(X_SUIT_LAYER)
 	addtimer(CALLBACK(src, PROC_REF(remove_overlay), X_SUIT_LAYER), 2 SECONDS)
 
-/mob/living/carbon/xenomorph/proc/create_shield(duration = 10)
+/mob/living/carbon/xenomorph/proc/create_shield(duration = 10, icon_state)
 	remove_suit_layer()
 
-	overlays_standing[X_SUIT_LAYER] = image("icon"='icons/mob/xenos/overlay_effects64x64.dmi', "icon_state" = "shield2")
+	overlays_standing[X_SUIT_LAYER] = image("icon"='icons/mob/xenos/overlay_effects64x64.dmi', "icon_state" = icon_state)
 	apply_overlay(X_SUIT_LAYER)
 	addtimer(CALLBACK(src, PROC_REF(remove_overlay), X_SUIT_LAYER), duration)
 

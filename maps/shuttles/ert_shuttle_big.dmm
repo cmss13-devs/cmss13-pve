@@ -22,15 +22,11 @@
 /area/shuttle/ert)
 "cx" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/pistol/mod88{
+/obj/item/weapon/gun/pistol/vp70{
 	pixel_y = 4
 	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = 5
-	},
+/obj/item/ammo_magazine/pistol/vp70,
+/obj/item/ammo_magazine/pistol/vp70,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

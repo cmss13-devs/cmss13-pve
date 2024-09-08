@@ -261,10 +261,6 @@
 
 	move_delay = .
 
-
-/mob/living/carbon/xenomorph/show_inv(mob/user)
-	return
-
 /mob/living/carbon/xenomorph/proc/pounced_mob(mob/living/L)
 	// This should only be called back by a mob that has pounce, so no need to check
 	var/datum/action/xeno_action/activable/pounce/pounceAction = get_xeno_action_by_type(src, /datum/action/xeno_action/activable/pounce)
@@ -284,7 +280,8 @@
 			if(H.check_shields(15, "the pounce")) //Human shield block.
 				visible_message(SPAN_DANGER("[src] slams into [H]!"),
 					SPAN_XENODANGER("You slam into [H]!"), null, 5)
-				apply_effect(1, WEAKEN)
+				KnockDown(1)
+				Stun(1)
 				throwing = FALSE //Reset throwing manually.
 				playsound(H, "bonk", 75, FALSE) //bonk
 				return
@@ -299,13 +296,15 @@
 				else if(prob(75)) //Body slam the fuck out of xenos jumping at your front.
 					visible_message(SPAN_DANGER("[H] body slams [src]!"),
 						SPAN_XENODANGER("[H] body slams you!"), null, 5)
-					apply_effect(3, WEAKEN)
+					KnockDown(3)
+					Stun(3)
 					throwing = FALSE
 					return
 			if(issynth(H) && prob(80))
 				visible_message(SPAN_DANGER("[H] withstands being pounced and slams down [src]!"),
 					SPAN_XENODANGER("[H] throws you down after withstanding the pounce!"), null, 5)
-				apply_effect(3.5, WEAKEN)
+				KnockDown(3.5)
+				Stun(3.5)
 				throwing = FALSE
 				return
 
@@ -313,7 +312,8 @@
 	visible_message(SPAN_DANGER("[src] [pounceAction.ability_name] onto [M]!"), SPAN_XENODANGER("You [pounceAction.ability_name] onto [M]!"), null, 5)
 
 	if (pounceAction.knockdown)
-		M.apply_effect(pounceAction.knockdown_duration, WEAKEN)
+		M.KnockDown(pounceAction.knockdown_duration)
+		M.Stun(pounceAction.knockdown_duration) // To replicate legacy behavior. Otherwise M39 Armbrace users for example can still shoot
 		step_to(src, M)
 
 	if (pounceAction.freeze_self)
@@ -684,8 +684,10 @@
 			return "Moderate"
 		if(3 to 3.9)
 			return "Strong"
-		if(4 to INFINITY)
+		if(4 to 4.9)
 			return "Very Strong"
+		if(4.9 to INFINITY)
+			return "Overwhelming"
 
 /mob/living/carbon/xenomorph/proc/start_tracking_resin_mark(obj/effect/alien/resin/marker/target)
 	if(!target)

@@ -72,9 +72,13 @@
 #define COMSIG_MOB_PRE_CLICK "mob_pre_click"
 	#define COMPONENT_INTERRUPT_CLICK (1<<0)
 
-///from base of /mob/Login(): ()
+/// From base of /mob/Login(), called when a client logs into this mob: ()
+/// Not to be confused with [COMSIG_MOB_LOGGED_IN]
 #define COMSIG_MOB_LOGIN "mob_login"
-///from base of /mob/Logout(): ()
+/// From base of /mob/Login(), called after a client logs into this mob: ()
+/// Not to be confused with [COMSIG_MOB_LOGIN]
+#define COMSIG_MOB_LOGGED_IN "mob_logged_in"
+/// From base of /mob/Logout(): ()
 #define COMSIG_MOB_LOGOUT "mob_logout"
 
 //from /mob/proc/on_deafness_gain()
@@ -94,6 +98,9 @@
 
 #define COMSIG_MOB_MOVE_OR_LOOK "mob_move_or_look"
 	#define COMPONENT_OVERRIDE_MOB_MOVE_OR_LOOK (1<<0)
+
+///from rejuv
+#define COMSIG_LIVING_POST_FULLY_HEAL "living_post_fully_heal"
 
 ///from /mob/living/emote(): ()
 #define COMSIG_MOB_EMOTE "mob_emote"

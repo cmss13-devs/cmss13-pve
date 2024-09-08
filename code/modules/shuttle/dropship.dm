@@ -215,3 +215,102 @@
 /obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing
 	icon_state = "6"
 
+/obj/structure/shuttle/part/midway
+	name = "\improper Midway"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/midway/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/midway/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/midway/gunpod_prop
+	name = "\improper Midway"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/cyclone
+	name = "\improper Cyclone"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/cyclone/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/cyclone/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/cyclone/gunpod_prop
+	name = "\improper Cyclone"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tornado
+	name = "\improper Tornado"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/tornado/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tornado/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/tornado/gunpod_prop
+	name = "\improper Tornado"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/typhoon
+	name = "\improper Typhoon"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/typhoon/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/typhoon/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/typhoon/gunpod_prop
+	name = "\improper Typhoon"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tripoli
+	name = "\improper Tripoli"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/tripoli/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/tripoli/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/tripoli/gunpod_prop
+	name = "\improper Tripoli"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "101a"
+	opacity = FALSE
