@@ -1,5 +1,16 @@
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, LabeledList, NoticeBox, ProgressBar, Section, Dimmer, Stack, Tabs, Divider } from '../components';
+import {
+  Box,
+  Button,
+  LabeledList,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Dimmer,
+  Stack,
+  Tabs,
+  Divider,
+} from '../components';
 import { Window } from '../layouts';
 import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 import { classes, BooleanLike } from 'common/react';
@@ -41,12 +52,10 @@ const AIContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>(context);
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
     context,
-    'squad_assignment_mode',
     false
   );
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
     context,
-    'order_assignment_mode',
     false
   );
   return (
@@ -54,26 +63,29 @@ const AIContext = (props, context) => {
       <div>
         <div
           style={{
-            'float': 'left',
-            'display': 'inline-block',
+            float: 'left',
+            display: 'inline-block',
             'padding-right': '6px',
-          }}>
+          }}
+        >
           <Button content="Refresh" onClick={() => act('refresh')} />
         </div>
         <div
           style={{
-            'float': 'left',
-            'display': 'inline-block',
+            float: 'left',
+            display: 'inline-block',
             'padding-right': '6px',
-          }}>
+          }}
+        >
           <Button content="New Squad" onClick={() => act('create_squad')} />
         </div>
         <div
           style={{
-            'float': 'left',
-            'display': 'inline-block',
+            float: 'left',
+            display: 'inline-block',
             'padding-right': '6px',
-          }}>
+          }}
+        >
           <Button
             content="Squad Assignment Mode"
             onClick={() => {
@@ -85,10 +97,11 @@ const AIContext = (props, context) => {
         </div>
         <div
           style={{
-            'float': 'left',
-            'display': 'inline-block',
+            float: 'left',
+            display: 'inline-block',
             'padding-right': '6px',
-          }}>
+          }}
+        >
           <Button
             content="Order Assignment Mode"
             onClick={() => {
@@ -138,10 +151,11 @@ const CreatedOrder = (props) => {
   return (
     <div
       style={{
-        'float': 'left',
-        'display': 'inline-block',
+        float: 'left',
+        display: 'inline-block',
         'padding-right': '6px',
-      }}>
+      }}
+    >
       <Section title={`${order.name}`}>
         {orderAssignmentMode ? (
           <>
@@ -157,7 +171,7 @@ const CreatedOrder = (props) => {
               color="green"
               disabled={selectedSquad === -1}
               style={{
-                'float': 'left',
+                float: 'left',
               }}
             />
             <br />
@@ -202,10 +216,11 @@ const HumanAIReadout = (props) => {
   return (
     <div
       style={{
-        'float': 'left',
-        'display': 'inline-block',
+        float: 'left',
+        display: 'inline-block',
         'padding-right': '6px',
-      }}>
+      }}
+    >
       <Section title={`${human.name}`}>
         <div>
           {squadAssignmentMode ? (
@@ -224,7 +239,7 @@ const HumanAIReadout = (props) => {
                   selectedSquad === -1 || human.squad_id == selectedSquad
                 }
                 style={{
-                  'float': 'left',
+                  float: 'left',
                 }}
               />
               <Button
@@ -244,7 +259,7 @@ const HumanAIReadout = (props) => {
                 }
                 disabled={selectedSquad === human.squad_id ? false : true}
                 style={{
-                  'float': 'left',
+                  float: 'left',
                 }}
               />
             </>
@@ -259,7 +274,7 @@ const HumanAIReadout = (props) => {
                   })
                 }
                 style={{
-                  'float': 'left',
+                  float: 'left',
                 }}
               />
               <Button
@@ -271,7 +286,7 @@ const HumanAIReadout = (props) => {
                   })
                 }
                 style={{
-                  'float': 'left',
+                  float: 'left',
                 }}
               />
             </>
@@ -311,10 +326,11 @@ const SquadReadout = (props) => {
   return (
     <div
       style={{
-        'float': 'left',
-        'display': 'inline-block',
+        float: 'left',
+        display: 'inline-block',
         'padding-right': '6px',
-      }}>
+      }}
+    >
       <Section title={`${squad.id}`}>
         {squadAssignmentMode || orderAssignmentMode ? (
           <Button

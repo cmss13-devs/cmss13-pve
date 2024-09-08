@@ -14,13 +14,6 @@
 /datum/human_ai_management_menu/ui_data(mob/user)
 	var/list/data = list()
 
-	//data["on_cooldown"] = !COOLDOWN_FINISHED(src, panel_emote_cooldown)
-
-	return data
-
-/datum/human_ai_management_menu/ui_static_data(mob/user)
-	var/list/data = list()
-
 	data["orders"] = list()
 	for(var/datum/ongoing_action/order as anything in SShuman_ai.existing_orders)
 		data["orders"] += list(list(
@@ -62,6 +55,11 @@
 
 	return data
 
+/datum/human_ai_management_menu/ui_static_data(mob/user)
+	var/list/data = list()
+
+	return data
+
 /datum/human_ai_management_menu/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
@@ -81,7 +79,7 @@
 
 		if("create_squad")
 			SShuman_ai.create_new_squad()
-			update_static_data(usr, ui)
+			//update_static_data(usr, ui)
 			return TRUE
 
 		if("assign_to_squad")
@@ -90,7 +88,7 @@
 
 			var/datum/brain = locate(params["ai"])
 			brain:add_to_squad(params["squad"])
-			update_static_data(usr, ui)
+			//update_static_data(usr, ui)
 			return TRUE
 
 		if("assign_order")
@@ -99,7 +97,7 @@
 
 			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
 			squad.set_order(locate(params["order"]))
-			update_static_data(usr, ui)
+			//update_static_data(usr, ui)
 			return TRUE
 
 		if("assign_sl")
@@ -109,11 +107,11 @@
 			var/datum/brain = locate(params["ai"])
 			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
 			squad.set_squad_leader(brain)
-			update_static_data(usr, ui)
+			//update_static_data(usr, ui)
 			return TRUE
 
 		if("refresh")
-			update_static_data(usr, ui)
+			//update_static_data(usr, ui)
 			return TRUE
 
 /client/proc/open_human_ai_management_panel()
