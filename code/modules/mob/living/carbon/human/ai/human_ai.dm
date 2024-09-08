@@ -23,6 +23,10 @@ GLOBAL_LIST_EMPTY(ai_humans)
 		//INVOKE_ASYNC(src)
 
 /mob/living/carbon/human/Destroy(force)
+	if(ai_brain)
+		GLOB.ai_humans -= src
+	else
+		GLOB.non_ai_humans -= src
 	QDEL_NULL(ai_brain)
 	return ..()
 
