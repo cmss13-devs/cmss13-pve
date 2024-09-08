@@ -70,8 +70,8 @@ OverrideTimelock(/datum/job/command/bridge, list(
 
 /datum/job/command/bridge/ai/upp
 	title = JOB_SO_UPP
-	gear_preset = /datum/equipment_preset/uscm_ship/so/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+	gear_preset = /datum/equipment_preset/uscm_ship/so/upp/equipped
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp
 
 /obj/effect/landmark/start/bridge/upp
 	name = JOB_SO_UPP
