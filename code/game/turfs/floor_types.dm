@@ -758,6 +758,75 @@
 /turf/open/floor/almayer/edge/smooth/endcap_left
 	icon_state = "floor_edge_smooth3"
 
+/turf/open/floor/almayer/edge/smooth/corner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/edge/smooth/corner/east
+	dir = EAST
+
+/turf/open/floor/almayer/edge/smooth/corner/west
+	dir = WEST
+
+/turf/open/floor/almayer/edge/smooth/endcap_left/north
+	dir = NORTH
+
+/turf/open/floor/almayer/edge/smooth/endcap_left/east
+	dir = EAST
+
+/turf/open/floor/almayer/edge/smooth/endcap_left/west
+	dir = WEST
+
+/turf/open/floor/almayer/edge/smooth/endcap_right/north
+	dir = NORTH
+
+/turf/open/floor/almayer/edge/smooth/endcap_right/east
+	dir = EAST
+
+/turf/open/floor/almayer/edge/smooth/endcap_right/west
+	dir = WEST
+
+/turf/open/floor/almayer/edge/smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/edge/smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/edge/smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/edge/smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/edge/smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/edge/smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/edge/smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/edge/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/edge/north
+	dir = NORTH
+
+/turf/open/floor/almayer/edge/east
+	dir = EAST
+
+/turf/open/floor/almayer/edge/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/edge/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/edge/west
+	dir = WEST
+
+/turf/open/floor/almayer/edge/northwest
+	dir = NORTHWEST
+
 /// Admin level thunderdome floor. Doesn't get damaged by explosions and such for pristine testing
 /turf/open/floor/tdome
 	icon = 'icons/turf/almayer.dmi'

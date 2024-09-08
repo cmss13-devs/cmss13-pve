@@ -10,9 +10,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "b" = (
 /obj/structure/platform{
@@ -86,9 +84,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/briefing)
 "i" = (
 /obj/structure/cable{
@@ -118,9 +114,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "k" = (
 /turf/closed/wall/almayer/outer,
@@ -146,9 +140,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "o" = (
 /obj/structure/bed/chair{
@@ -222,9 +214,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
 "y" = (
 /obj/structure/bed/chair{
@@ -246,9 +236,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "A" = (
 /obj/effect/decal/warning_stripes{
@@ -259,9 +247,7 @@
 	dir = 8;
 	pixel_x = -16
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
 "B" = (
 /obj/effect/decal/warning_stripes{
@@ -271,9 +257,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/briefing)
 "C" = (
 /obj/structure/platform_decoration{
@@ -310,9 +294,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "G" = (
 /obj/effect/decal/warning_stripes{
@@ -323,9 +305,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/briefing)
 "J" = (
 /obj/effect/decal/cleanable/dirt{
@@ -351,9 +331,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/north,
 /area/golden_arrow/briefing)
 "M" = (
 /obj/effect/decal/cleanable/dirt{
@@ -390,9 +368,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_left{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
 /area/golden_arrow/briefing)
 "S" = (
 /obj/structure/platform{

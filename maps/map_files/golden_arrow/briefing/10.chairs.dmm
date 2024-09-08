@@ -37,9 +37,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "e" = (
 /turf/closed/wall/almayer/outer,
@@ -59,9 +57,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/briefing)
 "g" = (
 /obj/effect/decal/warning_stripes{
@@ -73,9 +69,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "h" = (
 /obj/structure/platform{
@@ -94,9 +88,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
 "j" = (
 /obj/structure/cable{
@@ -177,9 +169,7 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "p" = (
 /obj/structure/cable{
@@ -204,9 +194,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_left{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
 /area/golden_arrow/briefing)
 "u" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -228,9 +216,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "y" = (
 /obj/effect/decal/warning_stripes{
@@ -244,9 +230,7 @@
 	pixel_x = -10;
 	pixel_y = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/briefing)
 "A" = (
 /obj/structure/machinery/power/apc/almayer/north,
@@ -305,9 +289,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/briefing)
 "I" = (
 /obj/structure/platform{
@@ -357,9 +339,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "S" = (
 /obj/effect/decal/warning_stripes{
@@ -384,9 +364,7 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/north,
 /area/golden_arrow/briefing)
 "T" = (
 /obj/effect/decal/warning_stripes{
@@ -397,9 +375,7 @@
 	dir = 8;
 	pixel_x = -16
 	},
-/turf/open/floor/almayer/edge/smooth{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
 "U" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
