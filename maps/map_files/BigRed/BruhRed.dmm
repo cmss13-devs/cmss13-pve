@@ -80,7 +80,7 @@
 /turf/closed/wall/solaris/rock,
 /area/bigredv2/caves)
 "aap" = (
-/obj/structure/closet/firecloset/full,
+/obj/vehicle/train/cargo/trolley,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
 "aaq" = (
@@ -290,7 +290,13 @@
 /area/bigredv2/outside/telecomm)
 "aba" = (
 /obj/structure/surface/table,
-/obj/item/device/flash,
+/obj/item/device/flash{
+	pixel_y = 14
+	},
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Lambda Labs";
+	phone_id = "Xenobiology"
+	},
 /turf/open/floor{
 	icon_state = "dark"
 	},
@@ -1357,11 +1363,26 @@
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
 "aex" = (
-/obj/structure/closet/crate/freezer/rations,
-/turf/open/floor/plating,
+/obj/structure/surface/rack,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/bigredv2/caves/lambda/xenobiology)
 "aey" = (
+/obj/structure/surface/rack,
 /obj/item/weapon/gun/energy/taser,
+/obj/item/weapon/gun/energy/taser{
+	pixel_y = 14
+	},
+/obj/item/weapon/gun/energy/taser,
+/obj/item/weapon/gun/energy/taser,
+/obj/item/weapon/gun/energy/taser,
+/obj/item/weapon/gun/energy/taser{
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/energy/taser{
+	pixel_y = 9
+	},
 /turf/open/floor{
 	icon_state = "dark"
 	},
@@ -1514,10 +1535,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
-"aeV" = (
-/obj/structure/closet/crate/radiation,
-/turf/open/floor/plating,
-/area/bigredv2/caves/lambda/xenobiology)
 "aeW" = (
 /turf/open/mars,
 /area/bigredv2/outside/space_port)
@@ -1534,12 +1551,6 @@
 	icon_state = "asteroidwarning"
 	},
 /area/bigredv2/outside/w)
-"aeZ" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "afb" = (
 /obj/structure/machinery/computer/telecomms/traffic{
 	req_one_access_txt = "19;200"
@@ -1700,12 +1711,10 @@
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/research)
 "afA" = (
-/obj/structure/largecrate/random,
-/turf/open/floor/plating,
-/area/bigredv2/caves/lambda/xenobiology)
-"afB" = (
-/obj/structure/machinery/smartfridge/chemistry,
-/turf/open/floor/plating,
+/obj/structure/closet/secure_closet/guncabinet/riot_control,
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/bigredv2/caves/lambda/xenobiology)
 "afC" = (
 /turf/open/floor{
@@ -1893,15 +1902,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/breakroom)
-"age" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony{
-	dir = 1;
-	name = "\improper Lambda Lab Storage"
-	},
-/turf/open/floor{
-	icon_state = "delivery"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "agf" = (
 /obj/structure/machinery/vending/snack,
 /obj/structure/machinery/light/small{
@@ -2174,13 +2174,12 @@
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "agT" = (
-/obj/structure/sign/safety/chem_lab{
-	pixel_x = 8;
-	pixel_y = 32
+/obj/structure/machinery/door/airlock/glass_security/colony{
+	dir = 2;
+	name = "\improper colony security door"
 	},
 /turf/open/floor{
-	dir = 1;
-	icon_state = "darkpurple2"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "agU" = (
@@ -2410,7 +2409,6 @@
 	pixel_y = -32
 	},
 /obj/structure/machinery/light,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor{
 	icon_state = "darkpurple2"
 	},
@@ -2972,19 +2970,12 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"ajs" = (
-/obj/structure/machinery/light,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "ajt" = (
-/obj/structure/bed/stool,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
+/obj/structure/surface/rack,
+/obj/item/tool/pickaxe,
+/obj/item/tool/pickaxe,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "aju" = (
 /obj/structure/surface/table,
 /turf/open/floor{
@@ -2998,9 +2989,11 @@
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "ajw" = (
-/obj/structure/closet/toolcloset,
-/turf/open/floor/plating,
-/area/bigredv2/outside/space_port)
+/turf/open/floor{
+	dir = 4;
+	icon_state = "darkgreen2"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "ajx" = (
 /turf/open/floor{
 	dir = 1;
@@ -3176,21 +3169,18 @@
 /turf/open/floor/plating,
 /area/bigredv2/caves/lambda/xenobiology)
 "ajV" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/colony{
-	name = "\improper Lambda Lab Break Room"
-	},
-/turf/open/floor{
-	icon_state = "delivery"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
+/obj/structure/closet/crate/miningcar,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "ajW" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
+/obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor{
-	icon_state = "delivery"
+/turf/open/floor/prison{
+	dir = 8;
+	icon_state = "rampbottom"
 	},
-/area/bigredv2/caves/lambda/xenobiology)
+/area/bigredv2/outside/space_port)
 "ajX" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -3383,18 +3373,32 @@
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akD" = (
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/pistol/b92fs{
+	name = "\improper Muleta Super 9";
+	desc = "A 9x19mm handgun, semiautomatic. After the largescale pirating of old action movies, handguns like these became popular on the Frontier.";
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/pistol/b92fs{
+	name = "\improper Muleta Super 9";
+	desc = "A 9x19mm handgun, semiautomatic. After the largescale pirating of old action movies, handguns like these became popular on the Frontier.";
+	pixel_y = 8
+	},
+/obj/item/weapon/gun/pistol/b92fs{
+	name = "\improper Muleta Super 9";
+	desc = "A 9x19mm handgun, semiautomatic. After the largescale pirating of old action movies, handguns like these became popular on the Frontier.";
+	pixel_y = -1
+	},
+/obj/item/weapon/gun/pistol/b92fs{
+	name = "\improper Muleta Super 9";
+	desc = "A 9x19mm handgun, semiautomatic. After the largescale pirating of old action movies, handguns like these became popular on the Frontier.";
+	pixel_y = -6
 	},
 /turf/open/floor{
-	dir = 8;
-	icon_state = "darkpurple2"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akE" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 1
-	},
 /turf/open/floor{
 	dir = 4;
 	icon_state = "darkpurple2"
@@ -3539,13 +3543,12 @@
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "ale" = (
-/obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkpurple2"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
+/obj/structure/surface/rack,
+/obj/item/tool/pickaxe/jackhammer,
+/obj/item/tool/pickaxe/jackhammer,
+/obj/item/tool/pickaxe/jackhammer,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "alf" = (
 /turf/open/floor{
 	dir = 8;
@@ -3782,18 +3785,12 @@
 	icon_state = "whitepurplefull"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"alR" = (
-/obj/effect/landmark/monkey_spawn,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "alS" = (
-/obj/effect/decal/cleanable/vomit,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
+/obj/structure/surface/rack,
+/obj/item/tool/pickaxe/drill,
+/obj/item/tool/pickaxe/drill,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "alT" = (
 /obj/structure/surface/table/woodentable,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -21657,10 +21654,6 @@
 	icon_state = "mars_cave_16"
 	},
 /area/bigredv2/outside/s)
-"bvv" = (
-/obj/structure/surface/rack,
-/turf/open/floor/plating,
-/area/bigredv2/outside/space_port)
 "bvw" = (
 /obj/effect/landmark/yautja_teleport,
 /turf/open/mars_cave{
@@ -27547,7 +27540,8 @@
 /area/bigredv2/outside/admin_building)
 "fSY" = (
 /obj/structure/machinery/door/airlock/glass_security/colony{
-	dir = 2
+	dir = 2;
+	name = "\improper colony security door"
 	},
 /turf/open/floor{
 	dir = 1;
@@ -28613,7 +28607,7 @@
 /obj/structure/surface/table,
 /obj/structure/machinery/door/window/northleft{
 	dir = 1;
-	pixel_y = 16
+	pixel_y = 13
 	},
 /obj/structure/machinery/door/window/eastleft{
 	req_access_txt = "8";
@@ -33301,7 +33295,10 @@
 /turf/open/floor/plating,
 /area/bigredv2/caves_virology)
 "ozQ" = (
-/obj/structure/machinery/vending/coffee,
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor{
 	dir = 1;
 	icon_state = "asteroidfloor"
@@ -33332,7 +33329,9 @@
 	},
 /area/bigredv2/outside/admin_building)
 "oEJ" = (
-/obj/structure/machinery/vending/snack,
+/obj/structure/machinery/vending/snack{
+	pixel_x = -6
+	},
 /turf/open/floor{
 	dir = 1;
 	icon_state = "asteroidfloor"
@@ -35174,11 +35173,12 @@
 	},
 /area/bigredv2/outside/filtration_plant)
 "rqa" = (
-/obj/structure/tunnel{
-	id = "hole4"
+/obj/structure/machinery/door/airlock/glass_security/colony{
+	dir = 8;
+	name = "\improper armory security door"
 	},
 /turf/open/floor{
-	icon_state = "whitepurplefull"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "rqv" = (
@@ -38357,15 +38357,6 @@
 	icon_state = "darkblue2"
 	},
 /area/bigredv2/caves/eta/research)
-"vvi" = (
-/obj/effect/landmark/nightmare{
-	insert_tag = "lz1containers"
-	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "asteroidwarning"
-	},
-/area/bigredv2/outside/space_port)
 "vvj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -39511,8 +39502,16 @@
 	},
 /area/bigredv2/outside/bar)
 "wXT" = (
-/obj/structure/closet/crate/internals,
-/turf/open/floor/plating,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/fancy{
+	desc = "Stores the little ammunition the security team is issued.";
+	name = "ammunition locker"
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/bigredv2/caves/lambda/xenobiology)
 "wYf" = (
 /obj/structure/surface/table,
@@ -48722,9 +48721,9 @@ acK
 lmg
 acK
 acK
+lmg
 acK
-acK
-acK
+lmg
 acK
 acK
 aaj
@@ -48940,8 +48939,8 @@ acK
 acK
 acK
 acK
-acK
-acK
+lmg
+lmg
 acK
 acK
 aaj
@@ -77907,11 +77906,11 @@ tQw
 tQw
 aao
 aao
-aao
-aao
+gNH
+gNH
 adZ
 adZ
-agc
+adZ
 agc
 agc
 adZ
@@ -78125,9 +78124,9 @@ tQw
 aao
 aao
 adZ
-adZ
-adZ
-adZ
+aey
+akD
+aex
 adZ
 aCy
 ahB
@@ -78342,10 +78341,10 @@ afE
 aSn
 aao
 adZ
-aev
-aev
-aev
-age
+mGp
+agc
+agc
+adZ
 agQ
 ahC
 ain
@@ -78560,8 +78559,8 @@ aSn
 aao
 adZ
 wXT
-aeV
-aev
+agc
+afA
 adZ
 agQ
 ahD
@@ -78776,8 +78775,8 @@ afE
 aSn
 aao
 adZ
-aex
-aex
+agc
+agc
 afA
 adZ
 agS
@@ -78993,11 +78992,11 @@ afE
 aSn
 aao
 ajp
+rqa
 adZ
 adZ
-afB
 adZ
-agT
+agQ
 ahF
 adZ
 aao
@@ -79210,7 +79209,7 @@ aae
 aae
 amU
 ajp
-aey
+agc
 agc
 agc
 agc
@@ -79439,7 +79438,7 @@ tVp
 adZ
 aky
 alb
-alQ
+alc
 alc
 alc
 alc
@@ -79637,7 +79636,7 @@ aae
 aae
 aae
 aae
-agV
+ajW
 agV
 agV
 aod
@@ -79647,7 +79646,7 @@ fSY
 agc
 agc
 agc
-agc
+adZ
 agc
 agc
 agc
@@ -79862,18 +79861,18 @@ bew
 acK
 ajp
 aeA
-aeZ
 agc
 agc
+agT
 agc
-ajv
+agc
 agc
 tVp
 tVp
 adZ
 aeE
-rqa
-alR
+alc
+alc
 alc
 alc
 alQ
@@ -80090,8 +80089,8 @@ tVp
 adZ
 akB
 alc
-alS
-alQ
+alc
+alc
 alc
 anV
 aoI
@@ -80288,7 +80287,7 @@ afC
 aLn
 aae
 aae
-aaf
+abZ
 aaf
 aaf
 aae
@@ -80519,7 +80518,7 @@ ajp
 agc
 agc
 ajp
-anv
+agc
 agc
 adZ
 afd
@@ -80738,9 +80737,9 @@ agc
 ajp
 ajp
 ajp
-ajV
-akD
-ale
+agc
+anv
+agc
 alU
 alU
 alU
@@ -80939,7 +80938,7 @@ abj
 aae
 aae
 aae
-aaf
+abZ
 aaf
 aaf
 aaf
@@ -80955,11 +80954,11 @@ agc
 agc
 aiT
 agc
-ajW
+agc
+agc
+agc
 akE
-akE
-akE
-amQ
+ajw
 anu
 amQ
 aoL
@@ -81375,7 +81374,7 @@ aaf
 aae
 aaf
 aaf
-aaf
+abP
 aaf
 aaf
 aTv
@@ -81387,10 +81386,10 @@ agc
 agc
 agc
 agc
+ajp
 agc
 agc
 agc
-mGp
 agc
 agc
 agc
@@ -81604,8 +81603,8 @@ agc
 agc
 agc
 agc
-agc
-ajs
+ajp
+ajp
 agc
 agc
 agc
@@ -81822,8 +81821,8 @@ bPy
 bPy
 aiq
 agc
-ajt
-agc
+ajp
+ajp
 agc
 agc
 alk
@@ -82039,8 +82038,8 @@ agc
 agc
 agc
 agc
-aju
 agc
+ajp
 agc
 agc
 alk
@@ -82256,9 +82255,9 @@ agc
 agc
 agc
 agc
-ajt
 agc
-mGp
+ajp
+agc
 agc
 agc
 agc
@@ -82473,8 +82472,8 @@ agc
 agc
 agc
 agc
-ajv
 agc
+ajp
 agc
 alk
 alY
@@ -82691,7 +82690,7 @@ agc
 agc
 agc
 agc
-agc
+ajp
 agc
 agc
 agc
@@ -82908,7 +82907,7 @@ agc
 agc
 agc
 agc
-agc
+ajp
 tVp
 tVp
 tVp
@@ -83125,7 +83124,7 @@ agc
 agc
 agc
 agc
-agc
+ajp
 tVp
 tVp
 tVp
@@ -83342,7 +83341,7 @@ agc
 agc
 agc
 agc
-agc
+ajp
 tVp
 tVp
 tVp
@@ -86147,7 +86146,7 @@ pOE
 pOE
 aam
 aam
-vvi
+aam
 aam
 aam
 mOZ
@@ -86357,9 +86356,9 @@ aah
 aah
 aah
 aah
-aah
-aah
-aah
+alh
+alh
+alh
 aah
 aah
 aah
@@ -86572,11 +86571,11 @@ aah
 dkb
 aah
 aah
-abu
 aah
 aah
-aah
-aah
+alh
+alh
+alh
 aah
 aah
 aah
@@ -86787,16 +86786,16 @@ aah
 elV
 aah
 aah
-aah
-aah
-abv
-aah
+aap
 aah
 aah
 aah
+alh
+alh
+alh
 aah
 aah
-aah
+alS
 aah
 aah
 aah
@@ -87004,16 +87003,16 @@ aah
 aah
 aah
 aah
+ajV
 aah
 aah
-abv
 aah
 alh
 bjP
 alh
 aah
 aah
-aah
+ale
 aah
 aah
 aah
@@ -87211,7 +87210,8 @@ aaa
 aab
 aSn
 aSn
-aae
+aSn
+aSn
 aah
 aah
 aah
@@ -87223,14 +87223,13 @@ aah
 aah
 aah
 aah
-abv
-aah
-alh
-alh
-alh
 aah
 aah
 aah
+aah
+aah
+aah
+ajt
 aah
 aah
 aah
@@ -87428,7 +87427,9 @@ aaa
 aab
 aSn
 aSn
-aae
+aSn
+aSn
+aSn
 aah
 aah
 aah
@@ -87440,11 +87441,9 @@ aah
 aah
 aah
 aah
-abw
 aah
-alh
-alh
-alh
+aah
+aah
 aah
 dkb
 aah
@@ -87645,23 +87644,23 @@ aaa
 aab
 aSn
 aSn
-aae
-aae
-aah
-aah
-aah
+aSn
+aSn
+aSn
+aSn
+aSn
 aah
 dkb
 aah
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
 aah
 aah
 aah
-aah
-aah
-aah
-alh
-alh
-alh
 aah
 aah
 aah
@@ -87862,8 +87861,24 @@ aaa
 aab
 aSn
 aSn
-aae
-aae
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aah
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aah
+aSn
+aSn
+aSn
 aah
 aah
 aah
@@ -87871,23 +87886,7 @@ aah
 aah
 aah
 aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aae
+aSn
 aao
 aao
 aao
@@ -88080,31 +88079,31 @@ aab
 aSn
 aSn
 aSn
-aae
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
 aah
 aah
-aae
 aah
 aah
-aae
+aSn
 aah
 aah
-aae
-aap
-aap
-aae
-aah
-aah
-aae
-aap
-aap
-aae
-aah
-aah
-aae
-ajw
-bvv
-aae
+aSn
 aao
 aao
 aao
@@ -88297,31 +88296,31 @@ aab
 aSn
 aSn
 aSn
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aSn
+aah
+aah
+aSn
+aah
+aah
+aSn
+aSn
+aSn
+aSn
 aao
 aao
 aao
@@ -89186,7 +89185,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aej
 aaa
 aaa
 aaa
