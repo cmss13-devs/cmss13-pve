@@ -103,7 +103,6 @@
 
 /obj/structure/closet/secure_closet/squad_sergeant/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/rto(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 

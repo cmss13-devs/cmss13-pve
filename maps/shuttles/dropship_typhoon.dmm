@@ -105,7 +105,7 @@
 	},
 /area/shuttle/tornado)
 "jt" = (
-/obj/structure/shuttle/part/typhoon/transparent{
+/obj/structure/shuttle/part/typhoon/transparent/nosecone{
 	icon_state = "102"
 	},
 /turf/template_noop,
@@ -172,9 +172,7 @@
 /turf/template_noop,
 /area/shuttle/tornado)
 "qa" = (
-/obj/structure/shuttle/part/typhoon/transparent{
-	icon_state = "101"
-	},
+/obj/structure/shuttle/part/typhoon/gunpod_prop,
 /turf/template_noop,
 /area/shuttle/tornado)
 "rb" = (
@@ -354,7 +352,7 @@
 	},
 /area/shuttle/tornado)
 "FO" = (
-/obj/structure/shuttle/part/typhoon/transparent{
+/obj/structure/shuttle/part/typhoon/transparent/nosecone{
 	icon_state = "100"
 	},
 /turf/template_noop,

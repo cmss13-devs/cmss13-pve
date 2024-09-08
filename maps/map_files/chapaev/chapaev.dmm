@@ -4342,6 +4342,7 @@
 	job = "Platoon Commander"
 	},
 /obj/item/clothing/under/marine/veteran/UPP/boiler,
+/obj/item/clothing/under/marine/veteran/UPP/officer,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
