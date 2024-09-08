@@ -71,6 +71,11 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_mod_say, /* alternate way of typing asay, no different than cmd_admin_say  */
 	/client/proc/staffwho,
 	/client/proc/cmd_admin_tacmaps_panel,
+	/datum/admins/proc/toggle_ai,
+	/datum/admins/proc/toggle_human_ai,
+	/datum/admins/proc/create_human_ai_patrol,
+	/client/proc/open_human_ai_management_panel,
+	/client/proc/create_human_ai,
 	)
 
 var/list/admin_verbs_admin = list(

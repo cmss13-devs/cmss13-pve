@@ -86,6 +86,10 @@
 #define FORCEDROP_CONDITIONAL (1<<14)
 /// Overrides smartgunner not being able to wear backpacks
 #define SMARTGUNNER_BACKPACK_OVERRIDE (1<<15)
+/// This item is classified as a healing item for the sake of human AI
+#define HEALING_ITEM (1<<16)
+/// This item is classified as ammunition for the sake of human AI
+#define AMMUNITION_ITEM (1<<17)
 //==========================================================================================
 
 

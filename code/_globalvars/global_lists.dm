@@ -113,9 +113,9 @@ GLOBAL_REFERENCE_LIST_INDEXED(xeno_datum_list, /datum/caste_datum, caste_type)
 
 //Chem Stuff
 var/global/list/chemical_reactions_filtered_list //List of all /datum/chemical_reaction datums filtered by reaction components. Used during chemical reactions
-var/global/list/chemical_reactions_list //List of all /datum/chemical_reaction datums indexed by reaction id. Used to search for the result instead of the components.
-var/global/list/chemical_reagents_list //List of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
-var/global/list/chemical_properties_list //List of all /datum/chem_property datums indexed by property name
+var/global/list/datum/chemical_reaction/chemical_reactions_list //List of all /datum/chemical_reaction datums indexed by reaction id. Used to search for the result instead of the components.
+var/global/list/datum/reagent/chemical_reagents_list //List of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
+var/global/list/datum/chem_property/chemical_properties_list //List of all /datum/chem_property datums indexed by property name
 //List of all id's from classed /datum/reagent datums indexed by class or tier. Used by chemistry generator and chem spawners.
 var/global/list/list/chemical_gen_classes_list = list("C" = list(),"C1" = list(),"C2" = list(),"C3" = list(),"C4" = list(),"C5" = list(),"C6" = list(),"T1" = list(),"T2" = list(),"T3" = list(),"T4" = list(),"tau" = list())
 //properties generated in chemicals, helps to make sure the same property doesn't show up 10 times

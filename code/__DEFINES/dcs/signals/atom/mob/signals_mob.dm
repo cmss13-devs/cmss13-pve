@@ -138,3 +138,5 @@
 
 /// Cancels all running cloaking effects on target
 #define COMSIG_MOB_EFFECT_CLOAK_CANCEL "mob_effect_cloak_cancel"
+
+#define COMSIG_MOB_DROP_ITEM "mob_drop_item"

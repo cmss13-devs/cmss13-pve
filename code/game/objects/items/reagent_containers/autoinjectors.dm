@@ -73,6 +73,20 @@
 	..()
 	update_icon()
 
+/obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user)
+	if(!uses_left)
+		return FALSE
+
+	if((user.reagents.get_reagent_amount(chemname) + amount_per_transfer_from_this) > (chemical_reagents_list[chemname].overdose))
+		return FALSE
+
+	if(skilllock != SKILL_MEDICAL_TRAINED && !skillcheck(user, SKILL_MEDICAL, skilllock))
+		return FALSE
+
+	return TRUE
+
+/obj/item/reagent_container/hypospray/autoinjector/ai_use(mob/living/carbon/human/user)
+	attack(user, user)
 
 /obj/item/reagent_container/hypospray/autoinjector/tricord
 	name = "tricordrazine autoinjector"
@@ -116,6 +130,11 @@
 	volume = 3
 	display_maptext = TRUE
 	maptext_label = "D+"
+
+/obj/item/reagent_container/hypospray/autoinjector/dexalinp/ai_can_use(mob/living/carbon/human/user)
+	if(user.reagents.get_reagent_amount(chemname))
+		return FALSE
+	return ..()
 
 /obj/item/reagent_container/hypospray/autoinjector/chloralhydrate
 	name = "anesthetic autoinjector"
@@ -292,6 +311,23 @@
 	chemname = "tramadol"
 	desc = "An auto-injector loaded with a small amount of painkiller for marines to self-administer."
 	icon_state = "tramadol"
+
+/obj/item/reagent_container/hypospray/autoinjector/dylovene
+	name = "dylovene autoinjector"
+	chemname = "dylovene"
+	desc = "An autoinjector loaded with 3 uses of Dylovene, a general-use anti-toxin."
+	amount_per_transfer_from_this = LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
+	volume = (LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
+	display_maptext = TRUE
+	maptext_label = "Dy"
+
+/obj/item/reagent_container/hypospray/autoinjector/dylovene/skillless
+	name = "dylovene EZ autoinjector"
+	desc = "An EZ autoinjector loaded with 3 uses of Dylovene, a general-use anti-toxin. Doesn't require any training to use."
+	icon_state = "emptyskill"
+	item_state = "emptyskill"
+	skilllock = SKILL_MEDICAL_DEFAULT
+
 
 /obj/item/reagent_container/hypospray/autoinjector/empty
 	name = "autoinjector (C-T)"

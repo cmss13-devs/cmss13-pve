@@ -106,6 +106,8 @@
 	if(!. || !I)
 		return FALSE
 
+	var/slot
+
 	if(I == wear_suit)
 		if(s_store && !(s_store.flags_equip_slot & SLOT_SUIT_STORE))
 			drop_inv_item_on_ground(s_store)
@@ -117,6 +119,7 @@
 		if(I.flags_inv_hide & HIDEJUMPSUIT)
 			update_inv_w_uniform()
 		update_inv_wear_suit()
+		slot = SLOT_OCLOTHING
 	else if(I == w_uniform)
 		if(r_store)
 			drop_inv_item_on_ground(r_store)
@@ -127,6 +130,7 @@
 		w_uniform = null
 		update_suit_sensors()
 		update_inv_w_uniform()
+		slot = SLOT_ICLOTHING
 	else if(I == head)
 		var/updatename = 0
 		if(head.flags_inv_hide & HIDEFACE)
@@ -144,43 +148,54 @@
 			update_inv_glasses()
 		update_tint()
 		update_inv_head()
+		slot = SLOT_HEAD
 	else if (I == gloves)
 		gloves = null
 		update_inv_gloves()
+		slot = SLOT_HANDS
 	else if (I == glasses)
 		glasses = null
 		update_tint()
 		update_glass_vision(I)
 		update_inv_glasses()
+		slot = SLOT_EYES
 	else if (I == wear_l_ear)
 		wear_l_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == wear_r_ear)
 		wear_r_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == shoes)
 		shoes = null
 		update_inv_shoes()
+		slot = SLOT_FEET
 	else if (I == belt)
 		belt = null
 		update_inv_belt()
+		slot = SLOT_WAIST
 	else if (I == wear_id)
 		wear_id = null
 		sec_hud_set_ID()
 		hud_set_squad()
 		update_inv_wear_id()
 		name = get_visible_name()
+		slot = SLOT_ID
 	else if (I == r_store)
 		r_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == l_store)
 		l_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == s_store)
 		s_store = null
 		update_inv_s_store()
+		slot = SLOT_SUIT_STORE
 
-
+	SEND_SIGNAL(src, COMSIG_HUMAN_UNEQUIPPED_ITEM, I, slot)
 
 
 /mob/living/carbon/human/wear_mask_update(obj/item/I, equipping)
@@ -490,7 +505,7 @@
 	return ..()
 
 /mob/living/carbon/human/proc/get_strip_delay(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	/// Default delay
+	/*/// Default delay
 	var/target_delay = HUMAN_STRIP_DELAY
 	/// Multiplier for how quickly the user can strip things.
 	var/user_speed = user.get_skill_duration_multiplier(SKILL_CQC)
@@ -502,7 +517,8 @@
 		target_delay += (target_skills * 2)
 
 	/// Final result is overall delay * speed multiplier
-	return target_delay * user_speed
+	return target_delay * user_speed*/
+	return 0 // zonenote
 
 /mob/living/carbon/human/drop_inv_item_on_ground(obj/item/I, nomoveupdate, force)
 	remember_dropped_object(I)
