@@ -43,17 +43,18 @@
 	icon_state = "lasmag_100"
 	w_class = SIZE_SMALL
 	transfer_handful_amount = 0
-	default_ammo = /datum/ammo/bullet/rifle/laser
+	default_ammo = /datum/ammo/energy/lasgun
 	max_rounds = 45
 	gun_type = /obj/item/weapon/gun/lasgun/lucius
 
-/datum/ammo/bullet/rifle/laser
+/datum/ammo/energy/lasgun
 	name = "lasbolt"
 	icon = 'void-marines/wh40k/icons/weapon/projectiles.dmi'
 	icon_state = "lasbolt"
 
+	sound_hit = 'void-marines/wh40k/sounds/weapons/energy_meat1.ogg'
 	damage_type = BURN
-	flags_ammo_behavior = AMMO_ENERGY
+	flags_ammo_behavior = AMMO_LASER
 	shrapnel_chance = 0
 	damage = 45
 	accurate_range = 24
