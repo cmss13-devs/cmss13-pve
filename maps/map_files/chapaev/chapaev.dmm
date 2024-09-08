@@ -2686,7 +2686,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23/pve,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -4342,6 +4342,7 @@
 	job = "Platoon Commander"
 	},
 /obj/item/clothing/under/marine/veteran/UPP/boiler,
+/obj/item/clothing/under/marine/veteran/UPP/officer,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4735,7 +4736,7 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot/special,
-/obj/item/weapon/gun/shotgun/type23/pve,
+/obj/item/weapon/gun/shotgun/type23,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},

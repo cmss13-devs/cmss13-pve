@@ -1662,7 +1662,7 @@
 /area/bigredv2/outside/marshal_office)
 "afo" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "vault"
@@ -1670,7 +1670,7 @@
 /area/bigredv2/outside/marshal_office)
 "afp" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "vault"
@@ -1681,7 +1681,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "vault"
@@ -24149,7 +24149,7 @@
 	},
 /obj/structure/closet/cabinet,
 /obj/item/disk/nuclear,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor{
 	icon_state = "wood"
@@ -24760,8 +24760,8 @@
 /area/bigredv2/caves_se)
 "bMa" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/mod88,
-/obj/item/weapon/gun/pistol/mod88,
+/obj/item/weapon/gun/pistol/vp70,
+/obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "redcorner"
@@ -31566,7 +31566,7 @@
 "miD" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpsespawner/security/marshal,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/mars_cave{
 	icon_state = "mars_cave_2"
 	},
@@ -38204,7 +38204,7 @@
 	},
 /area/bigredv2/caves_north)
 "vBy" = (
-/obj/item/ammo_magazine/shotgun/beanbag/riot,
+/obj/item/ammo_magazine/shotgun/beanbag,
 /turf/open/mars_cave{
 	icon_state = "mars_cave_17"
 	},

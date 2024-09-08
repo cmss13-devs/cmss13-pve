@@ -4609,14 +4609,14 @@
 /area/desert_dam/interior/lab_northeast/east_lab_security_armory)
 "anS" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor/prison{
 	icon_state = "darkredfull2"
 	},
 /area/desert_dam/interior/lab_northeast/east_lab_security_armory)
 "anT" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison{
 	icon_state = "darkredfull2"
 	},
@@ -19966,7 +19966,7 @@
 /turf/open/asphalt,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "bkG" = (
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/interior/wood/alt,
 /area/desert_dam/building/security/marshals_office)
@@ -31817,13 +31817,13 @@
 /area/desert_dam/building/security/armory)
 "bYq" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb{
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -43409,7 +43409,7 @@
 /area/desert_dam/building/security/armory)
 "cJv" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
 /turf/open/floor/prison{
 	icon_state = "darkredfull2"
 	},
