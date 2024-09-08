@@ -216,9 +216,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "mf" = (
 /obj/structure/barricade/handrail{
@@ -244,9 +242,7 @@
 	name = "General Listening Channel";
 	pixel_y = -29
 	},
-/obj/structure/machinery/power/apc/almayer{
-	dir = 8
-	},
+/obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/cable{
 	icon_state = "0-4";
 	layer = 2.36
@@ -492,9 +488,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "vF" = (
 /turf/closed/wall/almayer,
@@ -717,9 +711,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "Nu" = (
 /obj/structure/bed{
@@ -748,9 +740,7 @@
 	name = "\improper Dorms";
 	dir = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "NN" = (
 /obj/structure/surface/table/almayer,

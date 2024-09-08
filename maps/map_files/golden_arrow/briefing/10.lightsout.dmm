@@ -155,9 +155,7 @@
 	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "p" = (
 /obj/structure/bed/chair{
@@ -167,17 +165,13 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "q" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "r" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 1
-	},
+/obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/cable{
 	icon_state = "0-8";
 	layer = 2.36
@@ -191,9 +185,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "t" = (
 /obj/effect/decal/cleanable/dirt{
@@ -223,9 +215,7 @@
 	pixel_x = -24;
 	on = 0
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "x" = (
 /obj/effect/decal/warning_stripes{
@@ -243,9 +233,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "z" = (
 /obj/structure/pipes/vents/scrubber{
@@ -307,9 +295,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "F" = (
 /obj/effect/decal/cleanable/dirt{
@@ -432,9 +418,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "Z" = (
 /obj/structure/surface/table/almayer,
