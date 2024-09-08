@@ -523,12 +523,6 @@
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/officer
-	name = "\improper UPP Officer fatigues"
-	desc = "A set of Officer UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
-	icon_state = "upp_uniform_officer"
-	worn_state = "upp_uniform_officer"
-
 /obj/item/clothing/under/marine/veteran/UPP/civi1
 	name = "\improper UPP Civilian-style Orange overalls"
 	desc = "A set of Civilian-style Orange Overalls with a dark tan undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given out to those who work laborious jobs."
