@@ -217,7 +217,6 @@
 
 		list("MASK", -1, null, null, null),
 		list("PMK-63 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/upp, VENDOR_ITEM_REGULAR),
-		list("PMK-63N Integrated Gas Mask", round(scale * 10), /obj/item/prop/helmetgarb/helmet_gasmask/upp, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
 		list("Rebreather", round(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 

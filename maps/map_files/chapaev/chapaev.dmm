@@ -220,13 +220,13 @@
 	pixel_y = 13
 	},
 /obj/item/bedsheet/brown{
-	pixel_y = 13;
-	color = "#8B9490"
-	},
-/obj/item/bedsheet/brown{
 	layer = 3.4;
 	color = "#8B9490";
 	anchored = 1
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13;
+	color = "#8B9490"
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -1510,6 +1510,16 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/prep_hallway)
+"mD" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/effect/landmark/start/bridge/upp,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/golden_arrow/cryo_cells)
 "mN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/condiment/saltshaker{
@@ -3130,13 +3140,18 @@
 	stuff = list(/obj/item/stack/sandbags/large_stack);
 	parts_type = /obj/item/stack/sheet/metal
 	},
-/obj/item/folded_tent/big,
-/obj/item/folded_tent/big{
-	pixel_y = 5;
-	pixel_x = -3
-	},
 /obj/structure/machinery/light/small{
 	dir = 1
+	},
+/obj/item/folded_tent/big{
+	desc = "A standard Tent. This one is just a bigger, general purpose version. Unfold in a suitable location for maximum FOB vibes. Mess Tech not included. ENTRANCE TO THE SOUTH.";
+	name = "folded Big Tent"
+	},
+/obj/item/folded_tent/big{
+	pixel_y = 5;
+	pixel_x = -3;
+	name = "folded Big Tent";
+	desc = "A standard Tent. This one is just a bigger, general purpose version. Unfold in a suitable location for maximum FOB vibes. Mess Tech not included. ENTRANCE TO THE SOUTH."
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -4080,13 +4095,13 @@
 	pixel_y = 13
 	},
 /obj/item/bedsheet/brown{
+	pixel_y = 13;
+	color = "#8B9490"
+	},
+/obj/item/bedsheet/brown{
 	layer = 3.4;
 	color = "#8B9490";
 	anchored = 1
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13;
-	color = "#8B9490"
 	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -6373,16 +6388,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/dorms)
-"Xv" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/effect/landmark/start/bridge/upp,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/cryo_cells)
 "XL" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -14033,7 +14038,7 @@ uE
 CM
 ab
 zT
-FS
+bt
 Nz
 Yo
 IS
@@ -14185,9 +14190,9 @@ VE
 CM
 Cf
 Qr
-bt
+FS
 oH
-bt
+FS
 IS
 mV
 mV
@@ -14489,7 +14494,7 @@ Qj
 CM
 Ag
 ZM
-bt
+FS
 pH
 kq
 CM
@@ -14641,9 +14646,9 @@ NU
 CM
 CM
 oH
-bt
+FS
 pH
-bt
+FS
 CM
 fJ
 CM
@@ -14945,9 +14950,9 @@ bK
 kl
 CM
 oH
-bt
+FS
 oH
-bt
+FS
 CM
 BE
 ns
@@ -15097,7 +15102,7 @@ mB
 CO
 CM
 dS
-bt
+FS
 EW
 my
 iO
@@ -15710,7 +15715,7 @@ ce
 Zb
 xe
 Ez
-Xv
+mD
 sp
 cR
 us

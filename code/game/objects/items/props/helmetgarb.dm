@@ -529,11 +529,6 @@
 	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
 	helmet_item.flags_inv_hide &= ~(HIDEFACE)
 
-/obj/item/prop/helmetgarb/helmet_gasmask/upp
-	name = "\improper PMK-63N integrated gasmask"
-	desc = "The frontline variant of the PMK-63 produced to be compatible with in service helmets."
-	icon_state = "helmet_uppgasmask"
-
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"
 	desc = "It is a length of barbed wire that's had most of the sharp points filed down so that it is safe to handle."
