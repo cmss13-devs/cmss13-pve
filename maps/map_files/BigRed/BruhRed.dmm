@@ -1434,13 +1434,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/telecomm)
-"aeE" = (
-/obj/structure/surface/table/reinforced,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "aeF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -1509,16 +1502,6 @@
 	icon_state = "wood"
 	},
 /area/bigredv2/outside/marshal_office)
-"aeQ" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "aeS" = (
 /obj/structure/closet/crate/freezer,
 /turf/open/floor{
@@ -1568,14 +1551,6 @@
 "afd" = (
 /obj/structure/window/framed/solaris/reinforced,
 /turf/open/floor/plating,
-/area/bigredv2/caves/lambda/xenobiology)
-"aff" = (
-/obj/effect/decal/cleanable/mucus,
-/obj/structure/surface/table,
-/obj/effect/landmark/monkey_spawn,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
 /area/bigredv2/caves/lambda/xenobiology)
 "afg" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -1703,8 +1678,7 @@
 "afy" = (
 /obj/structure/surface/table/reinforced,
 /turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "afz" = (
@@ -2988,12 +2962,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"ajw" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkgreen2"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "ajx" = (
 /turf/open/floor{
 	dir = 1;
@@ -3345,16 +3313,14 @@
 	dir = 1
 	},
 /turf/open/floor{
-	dir = 9;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akz" = (
 /obj/structure/bookcase/manuals/research_and_development,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akA" = (
@@ -3368,8 +3334,7 @@
 /obj/structure/surface/table/reinforced,
 /obj/structure/xenoautopsy,
 /turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akD" = (
@@ -3396,12 +3361,6 @@
 	},
 /turf/open/floor{
 	icon_state = "dark"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"akE" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkpurple2"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "akF" = (
@@ -3516,32 +3475,6 @@
 	icon_state = "mars_cave_16"
 	},
 /area/bigredv2/caves_north)
-"ala" = (
-/turf/open/floor{
-	dir = 9;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alb" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whitepurplecorner"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alc" = (
-/turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"ald" = (
-/obj/structure/surface/table/reinforced,
-/obj/item/book/manual/research_and_development,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "ale" = (
 /obj/structure/surface/rack,
 /obj/item/tool/pickaxe/jackhammer,
@@ -3755,34 +3688,6 @@
 /turf/open/floor/plating{
 	dir = 1;
 	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alN" = (
-/turf/open/floor/plating{
-	dir = 1;
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alO" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
-/turf/open/floor/plating{
-	dir = 5;
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alP" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "warnwhite"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"alQ" = (
-/obj/effect/landmark/monkey_spawn,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "alS" = (
@@ -4087,38 +3992,10 @@
 	icon_state = "warnplate"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"amL" = (
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"amM" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4
-	},
-/turf/open/floor/plating{
-	dir = 6;
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "amN" = (
 /obj/item/stool,
 /turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"amO" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"amP" = (
-/obj/structure/machinery/door/airlock/almayer/research/glass/colony{
-	name = "\improper Lambda Lab Xenobiology"
-	},
-/turf/open/floor{
-	icon_state = "delivery"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "amQ" = (
@@ -4126,8 +4003,7 @@
 	dir = 1
 	},
 /turf/open/floor{
-	dir = 4;
-	icon_state = "darkgreen2"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "amR" = (
@@ -4308,15 +4184,6 @@
 "anp" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/nw/ceiling)
-"anq" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "ans" = (
 /obj/structure/surface/table,
 /obj/item/storage/box/gloves,
@@ -4467,20 +4334,10 @@
 	icon_state = "warnplate"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
-"anR" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4
-	},
-/turf/open/floor/plating{
-	dir = 5;
-	icon_state = "warnplate"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "anS" = (
 /obj/item/tool/warning_cone,
 /turf/open/floor{
-	dir = 8;
-	icon_state = "warnwhite"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "anT" = (
@@ -4497,7 +4354,7 @@
 "anV" = (
 /obj/item/reagent_container/spray/pepper,
 /turf/open/floor{
-	icon_state = "whitepurplefull"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "anW" = (
@@ -4735,20 +4592,11 @@
 "aoH" = (
 /turf/closed/wall/solaris,
 /area/bigredv2/outside/general_store)
-"aoI" = (
-/obj/item/tool/surgery/scalpel/laser/advanced,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood/gibs/limb,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
 "aoJ" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/XenoBio/Resin,
 /turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "aoK" = (
@@ -5010,22 +4858,7 @@
 	pixel_y = -25
 	},
 /turf/open/floor{
-	dir = 10;
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"apw" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitepurplecorner"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"apx" = (
-/obj/effect/decal/cleanable/blood/gibs/xeno/core,
-/obj/item/shard,
-/obj/effect/landmark/monkey_spawn,
-/turf/open/floor{
-	icon_state = "whitepurplefull"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "apy" = (
@@ -5243,8 +5076,7 @@
 	dir = 1
 	},
 /turf/open/floor{
-	dir = 10;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "aqe" = (
@@ -5254,39 +5086,13 @@
 	dir = 1
 	},
 /turf/open/floor{
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "aqf" = (
-/obj/effect/decal/cleanable/blood,
-/obj/structure/xenoautopsy/tank/broken,
-/obj/effect/decal/cleanable/blood/gibs/xeno/body,
 /obj/effect/decal/warning_stripes,
 /turf/open/floor{
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"aqg" = (
-/obj/structure/xenoautopsy/tank/alien,
-/obj/effect/decal/warning_stripes,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "whitepurple"
-	},
-/area/bigredv2/caves/lambda/xenobiology)
-"aqh" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/light,
-/obj/structure/xenoautopsy/tank/hugger,
-/obj/effect/decal/warning_stripes,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor{
-	dir = 6;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "aqi" = (
@@ -24641,6 +24447,13 @@
 	icon_state = "asteroidfloor"
 	},
 /area/bigredv2/outside/lz2_south_cas)
+"bIf" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/item/tool/warning_cone,
+/turf/open/floor{
+	icon_state = "asteroidplating"
+	},
+/area/bigredv2/outside/space_port)
 "bII" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -24904,6 +24717,15 @@
 "cdA" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/lz2_west_cas)
+"ceb" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/largecrate,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves_lambda)
 "cec" = (
 /obj/structure/bed,
 /obj/item/toy/plush/farwa,
@@ -25204,6 +25026,12 @@
 	icon_state = "darkyellow2"
 	},
 /area/bigredv2/outside/engineering)
+"cEh" = (
+/obj/structure/largecrate/supply/supplies/water,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves_lambda)
 "cGQ" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor{
@@ -28260,8 +28088,7 @@
 	phone_id = "Xenobiology"
 	},
 /turf/open/floor{
-	dir = 4;
-	icon_state = "whitepurple"
+	icon_state = "dark"
 	},
 /area/bigredv2/caves/lambda/xenobiology)
 "hag" = (
@@ -30903,6 +30730,13 @@
 	icon_state = "darkyellow2"
 	},
 /area/bigredv2/outside/filtration_plant)
+"kWs" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor{
+	dir = 1;
+	icon_state = "asteroidfloor"
+	},
+/area/bigredv2/outside/space_port)
 "kWA" = (
 /obj/structure/toilet{
 	pixel_y = 8
@@ -31003,6 +30837,14 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/caves/mining)
+"lhI" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves_lambda)
 "llD" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -32061,6 +31903,10 @@
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor,
 /area/bigredv2/caves)
+"mSj" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "mSn" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor{
@@ -32672,6 +32518,12 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"nOx" = (
+/obj/structure/window/framed/solaris/reinforced,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves_lambda)
 "nPu" = (
 /turf/open/floor{
 	icon_state = "darkyellow2"
@@ -37542,6 +37394,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
 /area/bigred/ground/garage_workshop)
+"upI" = (
+/obj/structure/catwalk,
+/obj/item/tool/warning_cone,
+/turf/open/floor/plating,
+/area/bigredv2/outside/space_port)
 "upV" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -38808,6 +38665,13 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/filtration_plant)
+"waq" = (
+/obj/structure/janitorialcart,
+/obj/item/tool/mop,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/bigredv2/caves/lambda/xenobiology)
 "waJ" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -39017,12 +38881,6 @@
 	icon_state = "darkyellow2"
 	},
 /area/bigredv2/outside/engineering)
-"wrz" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/mars_cave{
-	icon_state = "mars_cave_11"
-	},
-/area/bigredv2/caves_lambda)
 "wrS" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 8
@@ -40542,6 +40400,12 @@
 	icon_state = "platingdmg3"
 	},
 /area/bigredv2/caves/mining)
+"ylx" = (
+/obj/item/weapon/gun/shotgun/pump,
+/turf/open/mars_cave{
+	icon_state = "mars_cave_2"
+	},
+/area/bigredv2/caves_lambda)
 "ymi" = (
 /obj/item/tool/wet_sign,
 /turf/open/floor/plating{
@@ -76166,7 +76030,7 @@ aao
 tQw
 tQw
 tQw
-tQw
+ylx
 tQw
 aao
 aao
@@ -78569,7 +78433,7 @@ adZ
 adZ
 adZ
 adZ
-adZ
+agc
 alM
 amK
 adZ
@@ -78783,13 +78647,13 @@ agS
 ahE
 adZ
 aao
-aao
-aao
-aao
-adZ
-alN
-amL
-adZ
+tVp
+tVp
+tVp
+agc
+agc
+agc
+agc
 anQ
 amK
 adZ
@@ -79001,16 +78865,16 @@ ahF
 adZ
 aao
 tVp
-aao
-adZ
-adZ
-alO
-amM
-adZ
-anR
-amM
-adZ
-adZ
+tVp
+agc
+agc
+agc
+agc
+agc
+agc
+agc
+agc
+agc
 aqc
 ahv
 ajd
@@ -79218,16 +79082,16 @@ ahG
 agc
 tVp
 tVp
-adZ
-adZ
-ala
-alP
-alP
-anq
-anS
+agc
+agc
+agc
+agc
+agc
+agc
+agc
 anS
 apv
-adZ
+agc
 adZ
 aqc
 asr
@@ -79435,15 +79299,15 @@ agc
 agc
 tVp
 tVp
-adZ
+agc
 aky
-alb
-alc
-alc
-alc
-alc
-alQ
-apw
+agc
+agc
+agc
+agc
+agc
+agc
+agc
 aqd
 adZ
 arI
@@ -79652,15 +79516,15 @@ agc
 agc
 tVp
 tVp
-adZ
+agc
 akz
-alc
-alc
+agc
+agc
 amN
-aff
-alc
-alc
-alc
+agc
+agc
+agc
+agc
 aqe
 adZ
 amk
@@ -79869,15 +79733,15 @@ agc
 agc
 tVp
 tVp
-adZ
-aeE
-alc
-alc
-alc
-alc
-alQ
-alc
-apx
+agc
+afy
+agc
+agc
+agc
+agc
+agc
+agc
+agc
 aqf
 adZ
 aao
@@ -80086,16 +79950,16 @@ agc
 ajp
 agc
 tVp
-adZ
+agc
 akB
-alc
-alc
-alc
-alc
+agc
+agc
+agc
+agc
 anV
-aoI
-alc
-aqg
+agc
+agc
+aqf
 adZ
 aao
 amk
@@ -80303,16 +80167,16 @@ agc
 ajp
 agc
 agc
-adZ
-aeQ
-ald
+agc
+mGp
+agc
 gZv
-amO
+agc
 afy
-amO
+agc
 aoJ
 afy
-aqh
+ajv
 adZ
 amk
 amk
@@ -80520,15 +80384,15 @@ agc
 ajp
 agc
 agc
-adZ
-afd
-afd
-afd
-amP
-adZ
-amP
-afd
-afd
+agc
+agc
+aev
+agc
+agc
+agc
+agc
+agc
+agc
 afd
 adZ
 amk
@@ -80740,10 +80604,10 @@ ajp
 agc
 anv
 agc
-alU
-alU
-alU
-alU
+agc
+agc
+agc
+agc
 alU
 alU
 aqi
@@ -80957,8 +80821,8 @@ agc
 agc
 agc
 agc
-akE
-ajw
+agc
+agc
 anu
 amQ
 aoL
@@ -82030,7 +81894,7 @@ aaf
 aaf
 aTv
 arK
-tIq
+lhI
 aiR
 agc
 agc
@@ -82681,7 +82545,7 @@ aaf
 aaf
 aTv
 arK
-tIq
+lhI
 aiR
 ahb
 aju
@@ -83135,7 +82999,7 @@ tVp
 aao
 jgW
 gXp
-eFh
+tQw
 tQw
 tQw
 amY
@@ -83332,7 +83196,7 @@ aaf
 aaf
 aTv
 arK
-tIq
+lhI
 aiR
 vAs
 agk
@@ -83348,11 +83212,11 @@ tVp
 tIq
 tIq
 tIq
-tIq
+arK
 gXp
 tQw
 tQw
-wrz
+tQw
 tQw
 tQw
 amk
@@ -83565,10 +83429,10 @@ tVp
 tIq
 tIq
 tIq
-tIq
+nOx
 tQw
 tQw
-sNQ
+tQw
 tQw
 tQw
 tQw
@@ -83769,7 +83633,7 @@ arK
 tIq
 tIq
 agc
-agc
+waq
 ajp
 agc
 agc
@@ -83782,14 +83646,14 @@ tIq
 tIq
 tIq
 tIq
-tIq
-tQw
-eFh
+nOx
 tQw
 tQw
-aao
-aao
-aao
+tQw
+tQw
+wbp
+wbp
+aaj
 aao
 aao
 aao
@@ -83983,7 +83847,7 @@ aaf
 aaf
 aTv
 arK
-tIq
+ceb
 tIq
 tIq
 tIq
@@ -83999,14 +83863,14 @@ tIq
 tIq
 tIq
 tIq
-tIq
+nOx
 tQw
-eFh
-aao
-aao
-aao
-aao
-aao
+tQw
+wbp
+wbp
+wbp
+wbp
+aaj
 aao
 aao
 aao
@@ -84200,7 +84064,7 @@ aaf
 aaf
 aTv
 arK
-tIq
+cEh
 tIq
 tIq
 tIq
@@ -84216,12 +84080,12 @@ tIq
 tIq
 tIq
 tIq
-tIq
+arK
 tQw
-sNQ
-aao
-aao
-aao
+tQw
+wbp
+wbp
+wbp
 aao
 aao
 aao
@@ -84426,19 +84290,19 @@ arK
 arK
 aTv
 aTv
-xFZ
+arK
+arK
+arK
+nOx
+nOx
+nOx
+arK
+arK
 tQw
-tQw
-tQw
-tQw
-tQw
-tQw
-tQw
-eFh
-aao
-aao
-aao
-aao
+wbp
+wbp
+wbp
+aaj
 aao
 aao
 aao
@@ -84651,9 +84515,9 @@ tQw
 tQw
 tQw
 tQw
-sNQ
-aao
-aao
+tQw
+wbp
+aaj
 aao
 aao
 aao
@@ -84867,10 +84731,10 @@ tQw
 wQC
 tQw
 xFZ
-sNQ
-aao
-aao
-aao
+tQw
+wbp
+wbp
+aaj
 aao
 aao
 aao
@@ -85083,11 +84947,11 @@ tQw
 tQw
 tQw
 tQw
-aao
-aao
-aao
-aao
-aao
+wbp
+wbp
+wbp
+wbp
+aaj
 aao
 aao
 aao
@@ -85300,9 +85164,9 @@ aao
 aao
 aao
 aao
-aao
-aao
-aao
+wbp
+wbp
+wbp
 aao
 aao
 aao
@@ -86149,7 +86013,7 @@ aam
 aam
 aam
 aam
-mOZ
+bIf
 aaf
 aTv
 aTv
@@ -86366,7 +86230,7 @@ aah
 aah
 aah
 aah
-aaf
+kWs
 aaf
 arK
 aTv
@@ -86559,31 +86423,31 @@ aaa
 aab
 aSn
 aae
+mSj
+mSj
+mSj
 aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-dkb
-aah
-aah
-aah
-aah
-alh
-alh
-alh
-aah
+mSj
+mSj
+mSj
 aah
 aah
 dkb
 aah
 aah
-aah
-aaf
+mSj
+mSj
+upI
+alh
+alh
+mSj
+mSj
+mSj
+dkb
+mSj
+mSj
+mSj
+kWs
 ozQ
 arK
 arK

@@ -1248,6 +1248,17 @@ can cause issues with ammo types getting mixed up during the burst.
 	if(shotgun == src)
 		swap_tube(usr)
 
+//lore accurate Ithaca37. :P
+/obj/item/weapon/gun/shotgun/pump/colony
+	name = "Defriender 12 shotgun"
+	desc = "Part of the old Mustang Metalworks Colony line back from when the frontier was setting out. Marketed as a long term, reliable twelve gauge clone. 4+1 capacity."
+	attachable_allowed = list(
+		/obj/item/attachable/stock/shotgun,
+	)
+
+/obj/item/weapon/gun/shotgun/pump/colony/set_gun_config_values()
+	scatter = SCATTER_AMOUNT_TIER_8
+
 //SHOTGUN FROM ISOLATION
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb
