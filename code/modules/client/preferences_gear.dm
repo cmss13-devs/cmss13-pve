@@ -779,12 +779,6 @@ var/global/list/gear_datums_by_name = list()
 	path = /obj/item/storage/large_holster/machete/arnold/weak
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/m37
-	display_name = "M37 Shotgun"
-	path = /obj/item/storage/box/guncase/shotgunpump
-	allowed_origins = USCM_ORIGINS
-	cost = 6
-
 /datum/gear/drink
 	category = "Canned drinks"
 

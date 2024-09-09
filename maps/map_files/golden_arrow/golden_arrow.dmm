@@ -7453,6 +7453,7 @@
 /obj/item/weapon/gun/rifle/m4ra/pve{
 	pixel_y = 8
 	},
+/obj/item/storage/box/guncase/shotgunpump,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
