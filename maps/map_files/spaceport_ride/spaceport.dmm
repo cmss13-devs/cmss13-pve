@@ -1,211 +1,589 @@
-"a" = (/turf/closed/wall/rock/orange{color = "black"},/area/space)
-"b" = (/turf/open/gm/empty,/area/space)
-"k" = (/turf/open/hybrisa/street/sidewalkfull,/area/space)
-"l" = (/turf/closed/shuttle{dir = 1; icon_state = "pwall"},/area/space)
-"m" = (/turf/open/hybrisa/street/asphalt,/area/space)
-"D" = (/turf/closed/wall/hybrisa/colony/reinforced/hull,/area/space)
-"K" = (/turf/closed/wall/hybrisa/colony/reinforced,/area/space)
-"S" = (/turf/open/floor/plating,/area/space)
+"ae" = (/turf/open/floor/hybrisa/metal/darkblackmetal1,/area/space)
+"aj" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3; pixel_x = -3; pixel_y = 16},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"am" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/largecrate/random{pixel_x = -4},/obj/structure/largecrate/random{layer = 4.2; pixel_x = -4; pixel_y = 17},/turf/open/hybrisa/street/cement3,/area/space)
+"aw" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"aD" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/sandbags{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"aT" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/cargo_container/hybrisa/containersextended/blueleft,/turf/open/hybrisa/street/cement3,/area/space)
+"bb" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/sandbags{dir = 1},/turf/open/hybrisa/street/cement3,/area/space)
+"bd" = (/obj/structure/barricade/handrail/hybrisa/handrail{dir = 8; layer = 3.1},/turf/open/hybrisa/street/sidewalk{dir = 4},/area/space)
+"bf" = (/obj/structure/bed/bedroll{dir = 5; pixel_x = -12; pixel_y = 16},/obj/structure/bed/bedroll{dir = 9; layer = 4},/obj/item/paper/crumpled{pixel_x = -21; pixel_y = 3},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"bo" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/sandbags/wired{dir = 8},/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"bF" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/xeno,/obj/structure/machinery/iv_drip,/turf/open/hybrisa/street/cement1,/area/space)
+"bG" = (/obj/structure/bed/chair/wood/normal{pixel_x = -17},/obj/effect/hybrisa/decal/trash{icon_state = "trash_13"; pixel_y = 12},/turf/open/floor/plating,/area/space)
+"bO" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/obj/structure/prop/dam/truck/damaged{pixel_x = 8; pixel_y = -5},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"bQ" = (/turf/open/hybrisa/street/sidewalkcorner{dir = 1},/area/space)
+"cb" = (/obj/structure/girder/displaced,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"cc" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"cj" = (/obj/item/stack/sheet/wood{pixel_x = 12; pixel_y = 1},/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"cv" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/girder/displaced,/turf/open/hybrisa/street/cement3,/area/space)
+"cw" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/barricade/wooden,/turf/open/hybrisa/street/cement3,/area/space)
+"cy" = (/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/hybrisa/street/sidewalk,/area/space)
+"cz" = (/obj/item/shard{icon_state = "medium"},/obj/item/stack/rods{pixel_x = 13; pixel_y = -3},/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"cH" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"cJ" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"cQ" = (/obj/effect/decal/cleanable/blood,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"cS" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/hybrisa/street/cement3,/area/space)
+"cT" = (/turf/open/hybrisa/street/sidewalk{dir = 6},/area/space)
+"cW" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/largecrate/random/barrel/black{pixel_x = 3; pixel_y = 7},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"dd" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/obj/structure/bed/chair/wood/normal{pixel_x = 2},/obj/structure/barricade/wooden{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"dp" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/obj/effect/decal/cleanable/dirt,/obj/effect/hybrisa/decal/trash{icon_state = "trash_7"; pixel_y = 12},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"dx" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"dB" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"dD" = (/obj/structure/barricade/wooden{dir = 8},/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"dJ" = (/obj/effect/decal/cleanable/ash,/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"dN" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"dR" = (/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"dT" = (/turf/open/floor/hybrisa/metal/zbrownfloor_corner{dir = 1},/area/space)
+"dX" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
+"eb" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/xeno,/turf/open/hybrisa/street/cement3,/area/space)
+"el" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"eq" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 4},/obj/structure/cargo_container/hybrisa/containersextended/redright,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"eB" = (/obj/structure/bed/chair/wood/normal{pixel_x = -17},/obj/structure/bed/chair/wood/normal{pixel_x = -2},/obj/structure/barricade/wooden{dir = 4},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"eF" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated,/area/space)
+"eK" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"eL" = (/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"eM" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"eV" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 4},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"fb" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/hybrisa/street/sidewalk,/area/space)
+"fi" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"fp" = (/obj/item/stack/sheet/wood,/turf/open/hybrisa/street/cement1,/area/space)
+"fG" = (/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 4},/area/space)
+"fI" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"fP" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"ge" = (/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"gq" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"gD" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 8},/area/space)
+"gX" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/item/shard{icon_state = "medium"},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"gY" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/obj/effect/decal/cleanable/generic,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"ha" = (/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"hd" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/gibspawner/xeno,/turf/open/hybrisa/street/asphalt,/area/space)
+"hp" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/gibspawner/human,/turf/open/hybrisa/street/cement3,/area/space)
+"hr" = (/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"hB" = (/obj/structure/closet/bodybag{pixel_x = -16; pixel_y = 28},/obj/structure/closet/bodybag{pixel_y = 15},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"hF" = (/obj/structure/barricade/sandbags/wired{dir = 1},/turf/open/hybrisa/street/cement3,/area/space)
+"hG" = (/obj/structure/machinery/iv_drip,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"hJ" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_9"; pixel_x = -8; pixel_y = 12},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"hK" = (/obj/docking_port/stationary/marine_dropship/lz1{name = "Deployment Zone"},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"hX" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/wooden{dir = 4},/turf/open/hybrisa/street/cement3,/area/space)
+"it" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"iE" = (/obj/structure/barricade/sandbags{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"iG" = (/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 9},/area/space)
+"iJ" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 8},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"iX" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/effect/spawner/gibspawner/xeno,/turf/open/hybrisa/street/cement3,/area/space)
+"jb" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/blood,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement1,/area/space)
+"jo" = (/turf/closed/shuttle{dir = 1; icon_state = "pwall"},/area/space)
+"jK" = (/turf/open/hybrisa/street/sidewalkcorner{dir = 4},/area/space)
+"jU" = (/obj/item/stack/sheet/wood{pixel_x = 12; pixel_y = -7},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"jY" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"ka" = (/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/gibspawner/human,/turf/open/hybrisa/street/cement1,/area/space)
+"kf" = (/obj/effect/decal/cleanable/dirt,/obj/structure/barricade/handrail/hybrisa/handrail{dir = 1; layer = 3.1; pixel_y = 17},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"kq" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/obj/structure/barricade/wooden{dir = 8},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"kt" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"ku" = (/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/gibspawner/xeno,/turf/open/floor/hybrisa/metal/grated{dir = 8},/area/space)
+"kC" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/structure/cargo_container/hybrisa/containersextended/blueright,/turf/open/hybrisa/street/cement3,/area/space)
+"kI" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/greywood,/area/space)
+"kM" = (/obj/structure/bed/chair/wood/wings{dir = 8; pixel_x = -7; pixel_y = 22},/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"kR" = (/obj/structure/prop/brazier/frame,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"kW" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/obj/effect/decal/cleanable/blood/oil,/turf/open/hybrisa/street/cement3,/area/space)
+"le" = (/obj/structure/platform_decoration/strata/metal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"lh" = (/obj/structure/bed/chair/wood/normal,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"li" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"lt" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_14"; pixel_y = 12},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"lB" = (/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/turf/open/hybrisa/street/cement3,/area/space)
+"lD" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"lE" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"lK" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/ash,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"lT" = (/obj/structure/barricade/wooden,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"lU" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/girder/displaced,/turf/open/hybrisa/street/cement3,/area/space)
+"mc" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/cargo_container/hybrisa/containersextended/redleft,/turf/open/hybrisa/street/cement3,/area/space)
+"mg" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/obj/structure/bed/chair/wood/normal{pixel_x = 2},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"mh" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/strata/metal{dir = 1},/turf/open/floor/hybrisa/wood/greywood,/area/space)
+"ml" = (/obj/structure/prop/brazier{density = 0; pixel_x = 16},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"mn" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"mw" = (/obj/structure/barricade/sandbags/wired{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/asphalt,/area/space)
+"mx" = (/obj/item/stack/rods,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"mA" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"mP" = (/obj/structure/platform/strata/metal{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"na" = (/obj/structure/platform_decoration/strata/metal{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"nr" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3; pixel_x = -10; pixel_y = 20},/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/hybrisa/street/asphalt,/area/space)
+"nz" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/turf/open/hybrisa/street/cement1,/area/space)
+"nO" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"nR" = (/obj/effect/decal/cleanable/ash,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"nT" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/obj/structure/bed/chair/wood/normal{pixel_x = 2},/obj/structure/barricade/wooden{dir = 8},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"oa" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/obj/structure/barricade/wooden{dir = 4},/turf/open/hybrisa/street/cement3,/area/space)
+"oe" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"ol" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"oy" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/darkblackmetal1,/area/space)
+"oF" = (/obj/structure/platform_decoration/strata/metal,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"oH" = (/obj/effect/decal/cleanable/blood,/obj/effect/spawner/gibspawner/xeno,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"pf" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_4"},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"pm" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"po" = (/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"pv" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/sandbags{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"px" = (/obj/structure/barricade/wooden{dir = 8},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"pD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement1,/area/space)
+"pI" = (/obj/structure/barricade/handrail/hybrisa/handrail{dir = 1; layer = 3.1; pixel_y = 17},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"pP" = (/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 1},/area/space)
+"pS" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/girder/displaced,/turf/open/hybrisa/street/cement3,/area/space)
+"pW" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalkcorner{dir = 1},/area/space)
+"pY" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{icon_state = "platingdmg1"},/area/space)
+"pZ" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/item/shard{icon_state = "medium"},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"qf" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/girder,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"qh" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 4},/obj/structure/platform/hybrisa/metalplatform2,/turf/open/gm/empty,/area/space)
+"qk" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 4},/area/space)
+"qI" = (/obj/structure/barricade/sandbags/wired{dir = 1},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"qT" = (/turf/open/floor/prison,/area/space)
+"rb" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"rw" = (/obj/item/stack/rods{pixel_y = -14},/turf/open/floor/plating,/area/space)
+"rI" = (/obj/structure/barricade/sandbags/wired{dir = 1},/obj/structure/barricade/sandbags/wired{dir = 4},/turf/open/hybrisa/street/asphalt,/area/space)
+"rN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/bodybag,/obj/effect/decal/cleanable/blood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"rZ" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 6},/area/space)
+"sq" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
+"su" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"sD" = (/obj/structure/window/framed/hybrisa/colony/reinforced,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/space)
+"sN" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"sS" = (/obj/structure/largecrate/random/secure,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"sW" = (/obj/structure/bed/bedroll,/obj/item/book/manual{pixel_x = 8; pixel_y = 12},/obj/item/paper/crumpled,/obj/item/paper/crumpled/bloody{pixel_x = 7; pixel_y = -9},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"sY" = (/obj/structure/prop/brazier,/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"tf" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"tt" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/girder,/turf/open/hybrisa/street/cement3,/area/space)
+"tz" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 8},/obj/structure/barricade/wooden{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"tE" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/m56d_hmg/auto{dir = 1; fold_time = 900; name = "\improper Stationary Autogun"; overheat_threshold = 80},/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"tS" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"tT" = (/obj/structure/largecrate/random/barrel/green{layer = 4.2; pixel_x = 9; pixel_y = 14},/obj/structure/largecrate/random/barrel/green{layer = 4.3; pixel_x = -8; pixel_y = 6},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"ub" = (/obj/structure/warhammer/statue/three{layer = 4; pixel_y = 12},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"uw" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"uG" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"uW" = (/obj/structure/bed/roller{pixel_x = 13; pixel_y = 12},/obj/structure/bed/roller,/obj/structure/closet/bodybag,/obj/effect/decal/cleanable/blood,/obj/structure/machinery/iv_drip{pixel_x = -9; pixel_y = 25},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"vr" = (/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"vw" = (/turf/open/floor/hybrisa/metal/grated,/area/space)
+"vP" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/turf/open/hybrisa/street/cement3,/area/space)
+"vQ" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"wa" = (/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"wb" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"wj" = (/obj/structure/bed/bedroll{pixel_y = 13},/obj/structure/bed/bedroll,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"wO" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/turf/open/hybrisa/street/cement1,/area/space)
+"wP" = (/turf/open/hybrisa/street/sidewalk{dir = 10},/area/space)
+"wW" = (/obj/structure/girder/displaced,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"xf" = (/obj/structure/barricade/sandbags{dir = 1},/turf/open/hybrisa/street/cement3,/area/space)
+"xq" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"xw" = (/obj/structure/barricade/sandbags/wired{dir = 8},/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"xC" = (/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"xF" = (/obj/structure/bed/chair/wood/wings{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"xH" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/barricade/wooden,/turf/open/hybrisa/street/cement3,/area/space)
+"xL" = (/obj/structure/girder/displaced,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"xQ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/zbrownfloor_corner{dir = 8},/area/space)
+"xU" = (/turf/open/hybrisa/street/cement1,/area/space)
+"xZ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/oil/streak,/obj/effect/decal/cleanable/blood/oil/streak,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"ya" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 8},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"yg" = (/turf/open/hybrisa/street/asphalt,/area/space)
+"yh" = (/obj/structure/barricade/handrail/hybrisa/handrail{dir = 4; layer = 3.1},/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"yl" = (/obj/item/stack/rods{pixel_x = 22; pixel_y = -25},/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"yu" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/wooden{dir = 4},/turf/open/hybrisa/street/sidewalkcorner{dir = 1},/area/space)
+"yB" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"za" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/barricade/sandbags/wired{dir = 1},/obj/structure/barricade/sandbags/wired{dir = 4},/turf/open/hybrisa/street/cement3,/area/space)
+"zn" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/largecrate/random/case/double{pixel_y = 10},/obj/structure/largecrate/random/case/double,/turf/open/hybrisa/street/cement3,/area/space)
+"zr" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"zJ" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/cement3,/area/space)
+"zZ" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"Aa" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"Ab" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"Ao" = (/obj/structure/barricade/wooden{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"Aq" = (/turf/open/hybrisa/street/cement3,/area/space)
+"AJ" = (/turf/open/floor/plating{icon_state = "platingdmg1"},/area/space)
+"Bc" = (/obj/structure/platform/strata/metal{dir = 4},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Bf" = (/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"Bj" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 1},/obj/structure/platform/hybrisa/metalplatform2{dir = 8},/turf/open/gm/empty,/area/space)
+"Bl" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/zbrownfloor_full,/area/space)
+"Bm" = (/turf/open/hybrisa/street/sidewalk{dir = 4},/area/space)
+"Bw" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/effect/decal/cleanable/blood/xeno,/turf/open/hybrisa/street/cement3,/area/space)
+"By" = (/obj/effect/decal/cleanable/dirt,/obj/effect/hybrisa/decal/trash{icon_state = "trash_2"},/turf/open/hybrisa/street/asphalt,/area/space)
+"BD" = (/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/cement3,/area/space)
+"BJ" = (/obj/effect/decal/cleanable/generic,/turf/open/hybrisa/street/cement1,/area/space)
+"BR" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"BS" = (/obj/item/book/manual{pixel_x = -9},/obj/item/paper{pixel_x = 11; pixel_y = -8},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Ck" = (/obj/effect/decal/cleanable/blood/xeno,/obj/effect/decal/cleanable/blood/xeno,/turf/open/hybrisa/street/cement3,/area/space)
+"Co" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/obj/item/weapon/gun/bolter/pistol{pixel_x = -15; pixel_y = 10},/turf/open/hybrisa/street/cement1,/area/space)
+"Cu" = (/obj/structure/platform/strata/metal{dir = 8},/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"CB" = (/obj/structure/platform_decoration/strata/metal{dir = 4},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"CD" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/obj/structure/bed/chair/wood/normal{pixel_x = 2},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"CH" = (/obj/structure/platform/strata/metal{dir = 8},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"CL" = (/obj/structure/surface/table/reinforced/prison{color = "#6b675e"},/obj/item/map/current_map{pixel_x = -6; pixel_y = 9},/obj/item/device/binoculars/civ{pixel_x = 6; pixel_y = 5},/turf/open/hybrisa/street/cement3,/area/space)
+"CM" = (/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/sidewalk{dir = 9},/area/space)
+"CS" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 1},/obj/structure/platform/hybrisa/metalplatform2{dir = 4},/turf/open/gm/empty,/area/space)
+"CW" = (/obj/effect/decal/cleanable/dirt,/obj/structure/machinery/iv_drip{pixel_x = 6; pixel_y = 24},/obj/item/stack/medical/bruise_pack{pixel_y = -19},/turf/open/hybrisa/street/cement1,/area/space)
+"Db" = (/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"Dd" = (/obj/structure/barricade/wooden{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"Dm" = (/obj/structure/platform/hybrisa/metalplatform2,/obj/structure/platform/hybrisa/metalplatform2{dir = 8},/turf/open/gm/empty,/area/space)
+"Do" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"Dr" = (/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 8},/area/space)
+"Ds" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"DR" = (/obj/structure/bed/chair/wood/normal,/turf/open/floor/plating,/area/space)
+"DW" = (/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3; pixel_x = 14; pixel_y = -20},/turf/open/hybrisa/street/asphalt,/area/space)
+"DY" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"},/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"Ee" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalk,/area/space)
+"Eg" = (/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"Ek" = (/obj/structure/bed/chair/wood/normal{pixel_x = -17},/turf/open/floor/plating,/area/space)
+"En" = (/obj/structure/platform_decoration/strata/metal{dir = 8},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Eq" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 9},/area/space)
+"Ex" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/effect/decal/cleanable/blood,/turf/open/hybrisa/street/cement1,/area/space)
+"EK" = (/obj/item/shard{icon_state = "medium"},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"EO" = (/turf/open/hybrisa/street/sidewalk{dir = 9},/area/space)
+"EQ" = (/obj/item/stack/sheet/wood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"EW" = (/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"Fa" = (/turf/open/floor/hybrisa/metal/grated{dir = 8},/area/space)
+"Fg" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/girder/reinforced,/turf/open/hybrisa/street/cement3,/area/space)
+"Fj" = (/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3; pixel_x = -11; pixel_y = 11},/turf/open/hybrisa/street/asphalt,/area/space)
+"Fl" = (/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 5},/area/space)
+"Fn" = (/obj/structure/warhammer/statue/saint/unknown_guardsman{layer = 4},/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"Fs" = (/turf/open/hybrisa/street/sidewalkcorner,/area/space)
+"FM" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"FN" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/obj/structure/bed/chair/wood/normal{pixel_x = 2},/obj/item/shard{icon_state = "medium"; pixel_x = -19; pixel_y = -11},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"FQ" = (/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement1,/area/space)
+"FY" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/bodybag{pixel_x = 9; pixel_y = 27},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Gc" = (/obj/structure/barricade/sandbags{dir = 4},/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement3,/area/space)
+"Gf" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk,/area/space)
+"Gh" = (/turf/open/floor/plating,/area/space)
+"Gm" = (/obj/structure/warhammer/fireplace{pixel_y = 13},/obj/item/stack/sheet/wood{pixel_x = 7; pixel_y = -15},/obj/item/stack/sheet/wood{pixel_x = 24; pixel_y = -2},/obj/item/stack/sheet/wood{pixel_y = -4},/obj/item/stack/sheet/wood,/obj/item/paper{pixel_x = 23; pixel_y = -14},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Go" = (/obj/item/stack/rods{pixel_x = 16},/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"Gp" = (/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"Gs" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Gx" = (/obj/structure/barricade/sandbags{dir = 1},/obj/structure/barricade/sandbags{dir = 4},/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"Gz" = (/turf/closed/wall/hybrisa/colony/reinforced,/area/space)
+"GH" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/asphalt,/area/space)
+"GK" = (/obj/item/tool/kitchen/knife/butcher,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"GO" = (/obj/structure/barricade/sandbags/wired{dir = 4},/turf/open/hybrisa/street/cement3,/area/space)
+"HD" = (/obj/structure/closet/bodybag{pixel_y = 20},/obj/structure/closet/bodybag{pixel_y = 11},/obj/structure/closet/bodybag,/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/blood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"HE" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/girder/displaced,/turf/open/hybrisa/street/cement3,/area/space)
+"HK" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/blood,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"Ib" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/darkblackmetal1,/area/space)
+"Id" = (/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/gibspawner/human,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Ie" = (/obj/structure/girder/reinforced,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Ig" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_15"; pixel_y = 14},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Im" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"IA" = (/turf/open/hybrisa/street/sidewalkcorner{dir = 8},/area/space)
+"IB" = (/obj/effect/decal/cleanable/dirt,/obj/item/weapon/sword/chainsword{pixel_x = -15; pixel_y = 34},/turf/open/hybrisa/street/cement1,/area/space)
+"IC" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/turf/open/hybrisa/street/cement3,/area/space)
+"ID" = (/obj/structure/window/framed/hybrisa/colony/reinforced,/turf/open/floor/plating,/area/space)
+"IK" = (/obj/structure/girder/displaced,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Jf" = (/obj/effect/decal/cleanable/dirt,/obj/item/ammo_magazine/m2c{pixel_x = 16; pixel_y = 7},/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/asphalt,/area/space)
+"JJ" = (/obj/effect/decal/cleanable/blood,/turf/open/hybrisa/street/cement1,/area/space)
+"JP" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/obj/effect/spawner/gibspawner/xeno,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"JZ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 4},/area/space)
+"Ka" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement1,/area/space)
+"Kp" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/effect/decal/cleanable/dirt,/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement3,/area/space)
+"Kr" = (/turf/open/floor/hybrisa/metal/zbrownfloor_full,/area/space)
+"Kz" = (/obj/structure/girder/reinforced,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"KF" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/obj/structure/girder/reinforced,/turf/open/hybrisa/street/cement3,/area/space)
+"KN" = (/obj/effect/decal/cleanable/dirt,/obj/item/shard{icon_state = "medium"},/turf/open/hybrisa/street/cement1,/area/space)
+"KW" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/space)
+"KY" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/vomit,/obj/structure/bed/portable_surgery{pixel_y = 17},/obj/item/storage/pill_bottle/packet/bicaridine{pixel_x = 23; pixel_y = 1},/turf/open/hybrisa/street/cement1,/area/space)
+"Lb" = (/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3},/turf/open/hybrisa/street/asphalt,/area/space)
+"Ld" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/strata/metal{dir = 1},/turf/open/floor/hybrisa/wood/greywood,/area/space)
+"Le" = (/obj/item/ammo_casing/bullet,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/underground_unweedable,/area/space)
+"Ll" = (/obj/structure/barricade/sandbags/wired{dir = 1},/turf/open/hybrisa/street/asphalt,/area/space)
+"Lx" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"LA" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"LQ" = (/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"LU" = (/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"LX" = (/obj/structure/barricade/wooden{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"Mg" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"Mq" = (/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid{req_one_access = null},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"MX" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 4},/area/space)
+"Nb" = (/obj/structure/barricade/sandbags{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement3,/area/space)
+"Np" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/turf/open/hybrisa/street/cement1,/area/space)
+"NV" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/obj/item/tool/shovel/krieg{pixel_x = 9; pixel_y = 21},/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"NZ" = (/obj/structure/girder,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Od" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/girder/displaced,/turf/open/hybrisa/street/cement3,/area/space)
+"Oe" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Oi" = (/obj/item/stack/sheet/wood{pixel_x = 9; pixel_y = 28},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"Ol" = (/obj/item/shard{icon_state = "medium"; pixel_x = -12; pixel_y = -23},/obj/structure/girder/reinforced,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Om" = (/obj/structure/bed/roller,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Ou" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/open/hybrisa/street/cement3,/area/space)
+"OJ" = (/obj/structure/warhammer/statue/four,/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 5},/area/space)
+"OL" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"OV" = (/turf/open/hybrisa/street/sidewalk,/area/space)
+"Pb" = (/obj/structure/prop/brazier{density = 0; pixel_x = 16},/obj/structure/platform/strata/metal,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"Pl" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/effect/spawner/gibspawner/xeno,/turf/open/hybrisa/street/cement3,/area/space)
+"Pm" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"Pt" = (/obj/structure/window_frame/hybrisa/colony/reinforced,/turf/open/floor/plating,/area/space)
+"Pu" = (/obj/structure/platform/hybrisa/metalplatform2,/turf/open/gm/empty,/area/space)
+"Pz" = (/obj/structure/platform/hybrisa/metalplatform6,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"PA" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/girder/reinforced,/turf/open/hybrisa/street/cement3,/area/space)
+"PB" = (/obj/item/paper{pixel_y = 10},/obj/item/paper{pixel_x = 7},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"PE" = (/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"PK" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/hybrisa/colony/reinforced,/area/space)
+"PL" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"PR" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"Qa" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 8},/turf/open/gm/empty,/area/space)
+"Qd" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/largecrate/random/case/double{pixel_x = -1; pixel_y = 14},/obj/structure/largecrate/random/case/small{pixel_x = 2},/obj/structure/largecrate/random/mini{pixel_x = -1; pixel_y = 7},/turf/open/hybrisa/street/cement3,/area/space)
+"Qf" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/xeno,/turf/open/hybrisa/street/cement1,/area/space)
+"Qi" = (/obj/structure/platform_decoration/strata/metal{dir = 1},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Qr" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/girder/displaced,/obj/structure/largecrate/random/mini/med{pixel_x = 9; pixel_y = 7},/turf/open/hybrisa/street/cement3,/area/space)
+"Qs" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/barricade/wooden,/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"Qv" = (/obj/structure/bed/bedroll,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"Qy" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalkfull,/area/space)
+"QE" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"QG" = (/obj/structure/warhammer/statue/saint/broken,/turf/open/floor/plating/plating_catwalk/prison,/area/space)
+"QJ" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"QP" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/item/stack/sheet/wood{pixel_x = 14; pixel_y = 8},/turf/open/hybrisa/street/cement1,/area/space)
+"QX" = (/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/turf/open/floor/hybrisa/metal/grated{dir = 8},/area/space)
+"RC" = (/obj/item/stack/rods{pixel_x = -17; pixel_y = 12},/turf/open/floor/plating,/area/space)
+"RG" = (/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"RR" = (/obj/structure/barricade/wooden,/obj/structure/closet/bodybag{pixel_y = 30},/obj/structure/closet/bodybag{pixel_x = 3; pixel_y = 21},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"RT" = (/obj/item/stack/sheet/wood{pixel_x = -42; pixel_y = 12},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Sa" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 4},/turf/open/gm/empty,/area/space)
+"Sf" = (/obj/structure/barricade/sandbags{dir = 1},/turf/open/hybrisa/street/asphalt,/area/space)
+"Sh" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{dir = 8; icon_state = "platingdmg3"},/area/space)
+"Su" = (/obj/effect/decal/cleanable/dirt,/obj/item/weapon/gun/lasgun/lucius{pixel_y = -21},/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"Sy" = (/obj/structure/warhammer/statue/four,/turf/open/floor/hybrisa/metal/zbrownfloor1{dir = 9},/area/space)
+"SC" = (/obj/structure/bed/chair/wood/normal{pixel_x = 17},/turf/open/floor/plating,/area/space)
+"SG" = (/obj/structure/bed/chair/wood/normal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"SP" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/girder/reinforced,/turf/open/hybrisa/street/cement3,/area/space)
+"Td" = (/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"Te" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/obj/structure/surface/table/reinforced/prison{color = "#6b675e"},/obj/item/weapon/gun/shotgun/pump/kriegshotgun{pixel_y = 13},/turf/open/hybrisa/street/cement3,/area/space)
+"Tj" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/turf/open/hybrisa/street/sidewalk{dir = 9},/area/space)
+"Ts" = (/obj/structure/platform/hybrisa/metalplatform6{dir = 4},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"Tw" = (/obj/effect/hybrisa/decal/trash{icon_state = "trash_17"; pixel_x = -8; pixel_y = 12},/turf/open/floor/hybrisa/metal/grated{dir = 1},/area/space)
+"TE" = (/obj/structure/platform/hybrisa/metalplatform2{dir = 1},/turf/open/gm/empty,/area/space)
+"TI" = (/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"TO" = (/obj/structure/barricade/sandbags/wired{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"TX" = (/turf/open/hybrisa/street/sidewalk{dir = 5},/area/space)
+"Ue" = (/obj/item/ammo_magazine/rifle/lascell{pixel_x = 19},/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"Uj" = (/obj/structure/bed/chair/wood/wings{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/carpet/carpetreddeco,/area/space)
+"UE" = (/obj/structure/stairs{color = "#a6aeab"; dir = 4},/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/greywood,/area/space)
+"UF" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/hybrisa/metalplatform6,/obj/structure/girder,/turf/open/hybrisa/street/cement3,/area/space)
+"UJ" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"UK" = (/obj/structure/barricade/wooden,/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/blood,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"UN" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 1},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#4e4e4e"},/area/space)
+"Vb" = (/turf/open/floor/hybrisa/metal/zbrownfloor_corner,/area/space)
+"Ve" = (/obj/structure/barricade/wooden{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"Vm" = (/obj/structure/platform/strata/metal{dir = 4},/obj/structure/platform/strata/metal,/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"Vu" = (/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/asphalt,/area/space)
+"VE" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/platform/hybrisa/metalplatform6{dir = 8},/obj/structure/barricade/wooden{dir = 1; pixel_y = 7},/obj/item/ammo_casing/bullet,/turf/open/hybrisa/street/cement1,/area/space)
+"VG" = (/turf/open/gm/empty,/area/space)
+"VH" = (/obj/structure/stairs{color = "#a6aeab"; dir = 8},/obj/structure/platform/hybrisa/metalplatform6{dir = 1},/obj/structure/girder/reinforced,/turf/open/hybrisa/street/cement3,/area/space)
+"Wn" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/space)
+"Wu" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/girder,/turf/open/hybrisa/street/cement3,/area/space)
+"Wz" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/obj/structure/largecrate/random{layer = 3.2; pixel_x = 7; pixel_y = 24},/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"WA" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/bodybag{pixel_y = 17},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"WL" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/effect/decal/cleanable/dirt,/obj/structure/prop/hybrisa/misc/fire/fire2{color = "#FF7700"; icon = 'icons/effects/fire.dmi'; icon_state = "dynamic_2"; layer = 5.3; pixel_x = -11; pixel_y = 21},/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"WV" = (/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"XD" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/obj/structure/barricade/wooden{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/cement3,/area/space)
+"XU" = (/turf/closed/wall/hybrisa/colony/reinforced/hull,/area/space)
+"XV" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalkcorner{dir = 1},/area/space)
+"XZ" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/structure/platform_decoration/kutjevo/rock{color = "#777777"; dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"Ye" = (/obj/structure/platform/hybrisa/metalplatform6,/obj/effect/decal/cleanable/dirt,/turf/open/hybrisa/street/sidewalk{dir = 1},/area/space)
+"Yk" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/hybrisa/colony/reinforced/hull,/area/space)
+"YG" = (/obj/structure/barricade/sandbags{dir = 1},/obj/structure/barricade/sandbags/wired{dir = 8},/turf/open/hybrisa/street/asphalt,/area/space)
+"YI" = (/obj/structure/bed/chair/wood/normal{pixel_x = -17},/obj/structure/bed/chair/wood/normal{pixel_x = -2},/turf/open/floor/hybrisa/wood/blackwood,/area/space)
+"YJ" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/zbrownfloor_corner{dir = 4},/area/space)
+"YQ" = (/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
+"YR" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/hybrisa/metal/grated,/area/space)
+"YZ" = (/obj/structure/platform_decoration/hybrisa/metalplatformdeco6,/turf/open/hybrisa/street/sidewalk{dir = 8},/area/space)
+"Ze" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating{icon_state = "platingdmg1"},/area/space)
+"ZD" = (/obj/structure/stairs{color = "#a6aeab"; dir = 1},/turf/open/hybrisa/street/cement3,/area/space)
+"ZV" = (/obj/structure/platform/kutjevo/rock{color = "#777777"},/obj/structure/platform/kutjevo/rock{color = "#777777"; dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/sand_white/layer1{color = "#777777"},/area/space)
 
 (1,1,1) = {"
-llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkmmmmkbbbbbbbbbbbbbbl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbbbkkkkkkkkkkkkmmmmkkkkkkkkkkkkkkkl
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbbkkkkkkkkkkkkkkmmmmkkkkkkkkkkkkDDDD
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbkkkkkkkkkkkkkkkmmmmkkkkkkkkkkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbbkkkmmmmmmmmmmmmmmmmmmmmmmmmmkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkkmmmmmmmmmmmmmmmmmmmmmmmmmmkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkmmmmmmmmmmmmmmmmmmmmmmmmmmmkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkmmmmmmmmmmmmmmmmmmmmmmmmmmmkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkmmmmmkkkkkkkkkkkkkkkkkkkkkkkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkmmmmkKKKSSSSSSSSSSSSSSSSKKKkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmmkKKKSSSSSSSSSSSSSSSSKKKkkkDDDD
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmmkKKKSSSSSSSSSSSSSSSSKKKkkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmmkSSSSSSSSSSSSSSSSSSSSSSkkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmmkSSSSSSSSSSSSSSSSSSSSSSkkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkSSSSSSSSSSSSSSSSSSSSSSkkkkkDD
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKKKKKKSKKSSSSKKSKKSKSKKkkkDDa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSKSKKSSSSKKSKSSSSSKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSKSSSSSSSSSSKSSSSSKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSKSSSSSSSSSSKSSSSSKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSKSKKKSSKKSSKKKKKSSSKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSKSSSSSSSSSSSSSSSSSSKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKKKKSSSSSSSSSSSSSSKKKKKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKkkSSSSSSSSSSSSSSSSkkKKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKkkSSSSSSSSSSSSSSSSkkKKkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbkkkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmmmbbbbbbbbbbmmmmmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmmbbbbbbbbbbbmmmmmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmmbbbbbbbbbbmmmmmmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmbbbbbbbbbbmmmmmmmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkDaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbkkkkkkkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkDDa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkkDD
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkSSSSSSSSSSSSSSSSkkkkkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKkkSSSSSSSSSSSSSSSSkkKKkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKKkkSSSSSSSSSSSSSSSSkkKKkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkkkkkKSSSSSSSSSSSSSSKkkkkkkkkka
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSKKSSSSSSSSSSSSSSKKKKKkkDDDD
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSSSSSSSSSSSSSSKSSSKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSKKKKKKKSSKKKKKSKSSSKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSKSSSSSSSSSSKSSSSSKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSSSSSSSSSSSSKSSSSSKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkmmmmkKSSSSSKSSSSSSSSSSKSSSSSKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkkkkkKKKKKKKSSSSSSSSSSKKKKKKKkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkkkkkkkkkkkKKKKKKKKKKKKkkkkkkkkDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkkkkkkkkkkkkkkkkkkkkkkkkDDDDDDDDaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkkDDDDDDDDDDDDDDDDDDDDkkkDaaaaaaaaaa
-lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkbbbbbbbbbbbbbbbbbbkDDaaaaaaaaaaaaaaaaaaDDkkDaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaDaaaaaaaaaaaaaaaaaaaaDaaDaaaaaaaaaa
+jojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojojo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrXUhrygygygyghrXUhrhrhrhrhrhrhrhrhrhrhrhrhrjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGTETETETETETETETETETETETETETECSbdygygygygyhBjTETETETETETETETETETETETETEjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGXUBmygygygygWVXUVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGXUBmygygygygWVXUVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGXUXUBmygygygygWVXUXUVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGXUBmygygygygWVXUVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGXUBmygygygygWVXUVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGSabdygygygygyhQaVGVGVGVGVGVGVGVGVGVGVGVGVGjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGPuPuPuPuPuPuPuPuPuPuqhbdygygygygyhDmPuPuPuPuPuPuPuPuPuPuPuPuPujo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGpIpIpIpIpIpIpIpIpIpIXUBmygygygygWVXUpIpIpIpIpIpIkfkfpIpIpIpIpIjo
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrhrhroeoehrhrhrhrpfhroeLAMXVuygygygWVhrhrhrgedNcJdXoeoehrhrXUXUXUXU
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrhrjKOVGfOVOVOVGfGfGfOVOVGfrZygygygygwPOVOVcygqliajzZccIAhrhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrjKcTygVuVuygygygygygygygVuVuygygygVuygVuyggeOLTdUNeLyarbsqhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrjKcTygygygVuVuVuLlSfGxygGpygygygygygVuygygygygGhOLAaDYDsWVhrhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrqkVuVuLbygLbFjygxwtEGHGHhdVuygygygygygygVuByygGhGhdBWLZeWVhrhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrqkVuVuygVuDWLbygYGJfiEHKGHmwrIygygygygygygygygVuygygVuVusqpooeXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrBmVuVuygLbnrCMBfboJPcQlKwbdppvBfbOWzcWBfFMmxTIxLUJBfYeBfXVLAhrYkLQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGjKcTygVuygLbEqGzGzGzcSBwZDZDzJGzGzOdKFGzGzxHcwZDZDzJGzGzGzsNhrhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygVuygyglDGzGzPKhpZDZDPlzJGzGzaTkCGzGzSPWuXDvPzJGzGzGzQshroeXUXUXUXU
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygVuGHVuVulDGzGzGzqINbAqxfhFTexZQXQXcbGOlBEgOumnWnGzGzGzqfpxoehrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygVuVuVuVutzttVHznLXczhaLeCkCLDbFnhanRTOAqhahahaDdPAQdmceqpxhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygVuygVuVuAopSpSFgdDdJkRzrebAqoHhahaDbGcAqhasYhaktoalUamtTpxhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmVuygVuygTjyucvUFcvVekWiXBDKpPLNVFakugYBDbbaDzaICsShXQrHEkqfPhrhrhrXUXU
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmVuygGHVulDGzGzGzGzGzGzGzubGzGzVENpQfjbGzGzubGzGzIDGzIDGzGzsNhrhrXUXULQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGMXVuygygyglDGzGhGhGhGhGhPKTwGzGzQPExnzwOGzPKsuGzGhGhGhGhGhGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygGHVulDGzGhGhGhGhGhGzDbbFpDkafpxUFQCWKYGKGzGhGhGhGhGhGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygAJyguwGzGhGhGhGhGhGzEWBJJJKaKNCoIBxUxUEWGzGhGhGhGhGhGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmVuVuBRgelDGzGhGhGhGzGhGzGzGzMqLUGzGzMqLUGzGzGzGzGzGhGhGhGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmGhxqeKcclDGzGhGhGhGzrNIdWAGseMPBGmeMltLUwjLUeMLUGhGhGhGhGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmgeOLPmPRccGzGzGzGzGzLUHDLUFYQvUjBSsWkMaweMLUuWLUGzGzGzGzGzsNhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygQJyBYQmAAbAbQyGzRRGzGzhBxChJbfxFxCxCOmGzGzUKGzdxAbAbAbeVhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygnOZVXZGzGzhrgXIDLxGzGzGhxCSuQElEolGohGGzGzIKIDsNhrGzGzhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygAJtSGzGzhruGPteMCDSGbGOiUemlLUxCrwCDSGeBIeIDsNhrGzGzhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmVuVuygGhWVhrhrhruGPteMFNlhGhZexCGhLUolxCCDSGeBKzIDsNhrhrhrhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygWVhrjKOVEeGzEKeMEQRTGhGhGhsqLUeMsqGhjUdRGzfbOVIAhrhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGOVOVcTygygygygWVjKcTeLpmGzlTmgSGYIGhgeGhGhGhGhgeDRYIlTGzfieLwPIAhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrygygygygygygVGVGVGVGVGVGVGVGVGVGygygygygygygygygWVBmRGwapmIDIKddSGYIGhsqpYhKsqsqdXSGeBIgIDvQeLeLWVhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrygygygygygVGVGVGVGVGVGVGVGVGVGVGygygygygygygygygWVBmeLRGMgIDNZnTLUGhGhGhImGhGhsqSCSGYILUPtpZRGwaWVhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrygygygygygVGVGVGVGVGVGVGVGVGVGygygygygygygygygygWVBmwaeLMgIDIKnTSGYIgeGhGhGhGhsqOeSGYIIKIDelRGwaWVhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrygygygygVGVGVGVGVGVGVGVGVGVGygygygygygygygygygygWVBmwawapmIDwWddlhRCGhxCsqShylxCCDSGeBOlIDelwaeLWVhrhrhrXULQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGTITITITITITITXygygygygWVFsTXwatfGzPECDlhEkxCxCsqZexCxCmglhYIPEGzelwaEObQhrhrhrXUXULQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygWVhrFsTITsGzeMeMlevrvrvrPbcjvrvrvrnaeMeMGzfITIbQhrhrhrhrhrXUXU
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygWVhrhrhruGGheMoFVmiGGzpPpPpPpPGzFlCuQieMsDsNhrhrhrhrhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygWVGzGzhruGPtleVmSyYJKreFYRvweFKrdTOJCuQiIDsNhrGzGzhrhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygWVGzGzhruGIDBcGzGzKWoyqTqTqTDoaeqTGzGzCHIDsNhrGzGzhrhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygygYZPzPzPzjYGzBcGzGzxQaeKWQGitKWaeVbGzGzmPGzcHPzPzPzfPhrhrhrhrLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGzGzEnLdLdgDIbqTKWKWqTaefGmhmhCBGzGzGzGzGzsNhrXUXUXUXU
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGhGhlekIkIDrBlvwvweFvwBlJZUEUEQiGzGhGhGhGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGhGzGzGzGzGzGzGzGhGhGzGzGzGzGzGhGzGhGhGhGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGhGhGhGzGhGhGhGhGhGhGhGhGhGhGzGhGhGhGhGhGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGhGhGhGhGhGhGhGhGhGhGhGhGhGhGzGhGhGhGhGhGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGBmygygygyglDGzGhGhGhGhGhGzGhGhGhGhGhGhGhGhGhGhGzGhGhGhGhGhGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGFsTITITITIpWGzGzGzGzGzGzGzGhGhGhGhGhGhGhGhGhGhGzGzGzGzGzGzGzsNhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrhrhrhrhriJAbAbAbAbAbQyGzGzGzGzGzGzGzGzGzGzGzGzdxAbAbAbAbAbeVhrXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrhrhrhrhrhrhrhrhrhrhriJAbAbAbAbAbAbAbAbAbAbAbAbeVXUXUXUXUXUXUXUXULQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrhrXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUXUhrhrhrXULQLQLQLQLQLQLQLQLQLQ
+johrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGVGhrXUXULQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQXUXUhrhrXULQLQLQLQLQLQLQLQLQLQ
+LQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQXULQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQLQXULQLQXULQLQLQLQLQLQLQLQLQLQ
 "}
