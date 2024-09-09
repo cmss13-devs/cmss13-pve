@@ -23,3 +23,8 @@
 		spawn_rebel_rifle(new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/clf/soldier/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
+	. = ..()
+	if(new_human.ai_brain)
+		new_human.ai_brain.appraise_inventory()
