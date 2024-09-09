@@ -140,7 +140,7 @@
 
 //------------
 /obj/item/storage/box/guncase/flamer
-	name = "\improper M240 incinerator case"
+	name = "\improper M240A1 incinerator case"
 	desc = "A gun case containing a M240A1 incinerator unit. It does come loaded, but you'll still have to find extra tanks as you go."
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/flamer, /obj/item/ammo_magazine/flamer_tank, /obj/item/attachable/attached_gun/extinguisher)
@@ -158,6 +158,21 @@
 	new /obj/item/weapon/gun/flamer(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
+
+/obj/item/storage/box/guncase/flamer/fuel
+	name = "\improper M240A1 fuel case"
+	desc = "A case containing four fuel canisters for the M240A1 incinerator unit."
+	icon_state = "fuelbox"
+	storage_slots = 6
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank)
+
+/obj/item/storage/box/guncase/flamer/fuel/fill_preset_inventory()
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
+	new /obj/item/ammo_magazine/flamer_tank(src)
 
 //------------
 /obj/item/storage/box/guncase/m56d
