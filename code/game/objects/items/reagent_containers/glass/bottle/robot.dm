@@ -10,6 +10,7 @@
 	name = "internal inaprovaline bottle"
 	desc = "A small bottle. Contains inaprovaline - used to stabilize patients."
 	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle16"
 	reagent = "inaprovaline"
 
 /obj/item/reagent_container/glass/bottle/robot/inaprovaline/Initialize()
@@ -22,6 +23,7 @@
 	name = "internal anti-toxin bottle"
 	desc = "A small bottle of Anti-toxins. Counters poisons, and repairs damage, a wonder drug."
 	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle17"
 	reagent = "anti_toxin"
 
 /obj/item/reagent_container/glass/bottle/robot/antitoxin/Initialize()

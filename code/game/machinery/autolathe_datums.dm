@@ -409,7 +409,7 @@
 	path = /obj/item/reagent_container/blood
 
 /datum/autolathe/recipe/medilathe/bluespace
-	name = "high-capacity beaker"
+	name = "bluespace beaker"
 	path = /obj/item/reagent_container/glass/beaker/bluespace
 
 /datum/autolathe/recipe/medilathe/bonesetter
