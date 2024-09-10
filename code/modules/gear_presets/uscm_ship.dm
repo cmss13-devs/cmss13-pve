@@ -562,7 +562,6 @@
 /datum/equipment_preset/uscm_ship/so
 	name = "USCM Platoon Commander (PltCo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-
 	idtype = /obj/item/card/id/dogtag
 	assignment = JOB_SO
 	rank = JOB_SO
