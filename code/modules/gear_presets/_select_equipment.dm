@@ -137,7 +137,7 @@
 /datum/equipment_preset/proc/load_languages(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_languages(languages)
 
-/datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE)
+/datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE, late_join)
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)
@@ -162,6 +162,8 @@
 	new_human.assigned_equipment_preset = src
 
 	new_human.regenerate_icons()
+
+	handle_late_join(new_human, late_join)
 
 	new_human.marine_points = MARINE_TOTAL_BUY_POINTS //resetting buy points
 	new_human.marine_snowflake_points = MARINE_TOTAL_SNOWFLAKE_POINTS
@@ -380,6 +382,9 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		background.overlays += icon
 
 	return background
+
+/datum/equipment_preset/proc/handle_late_join(mob/living/carbon/human/new_human, late_join)
+	return
 
 /datum/equipment_preset/strip //For removing all equipment
 	name = "*strip*"
@@ -893,8 +898,8 @@ var/list/rebel_rifles = list(
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/b92fs(new_human), WEAR_IN_BACK)
 
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/spearhead(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/spearhead(new_human), WEAR_IN_BACK)
 
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower(new_human), WEAR_IN_BACK)
@@ -1050,20 +1055,11 @@ var/list/rebel_rifles = list(
 	)
 
 /datum/equipment_preset/proc/load_upp_shotgun(mob/living/carbon/human/new_human)
-	var/random_shotgun = rand(1,3)
-	switch(random_shotgun)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23/breacher, WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_L_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_R_STORE)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23/breacher/slug, WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavyslug, WEAR_L_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavyslug, WEAR_R_STORE)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23/breacher/flechette, WEAR_J_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavyflechette, WEAR_L_STORE)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavyflechette, WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_R_STORE)
+
 
 /datum/equipment_preset/proc/add_upp_weapon(mob/living/carbon/human/new_human)
 	var/random_gun = rand(1,5)

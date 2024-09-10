@@ -1208,15 +1208,15 @@
 	pixel_y = 30
 	},
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket{
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/reagent_container/food/snacks/donkpocket{
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "barber"
@@ -1363,7 +1363,7 @@
 /area/lv624/lazarus/engineering)
 "byy" = (
 /obj/structure/closet,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	dir = 9;
 	icon_state = "purple"
@@ -5136,7 +5136,7 @@
 /area/lv624/ground/jungle/east_jungle)
 "fIy" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/packaged_burrito,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
 /turf/open/floor{
 	icon_state = "bar"
 	},
@@ -8137,7 +8137,7 @@
 /area/lv624/lazarus/corporate_dome)
 "iMe" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor{
 	icon_state = "bar"
 	},
@@ -14919,7 +14919,7 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "qwG" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/clf,
+/obj/item/storage/box/loadout/clf,
 /turf/open/shuttle{
 	icon_state = "floor4"
 	},
@@ -17585,10 +17585,10 @@
 	dir = 4
 	},
 /obj/structure/surface/table,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "red"
@@ -19048,10 +19048,10 @@
 	},
 /obj/structure/surface/table,
 /obj/item/clothing/ears/earmuffs,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/weapon/gun/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
-/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/weapon/gun/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/ammo_magazine/revolver/spearhead,
 /turf/open/floor{
 	dir = 9;
 	icon_state = "red"

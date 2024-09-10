@@ -3,7 +3,7 @@
 	desc = "A spray bottle, with an unscrewable top."
 	icon = 'icons/obj/items/spray.dmi'
 	icon_state = "spray"
-	item_state = "cleaner"
+	item_state = "spray"
 	flags_atom = OPENCONTAINER|FPRINT
 	flags_item = NOBLUDGEON
 	flags_equip_slot = SLOT_WAIST
@@ -104,8 +104,8 @@
 
 //space cleaner
 /obj/item/reagent_container/spray/cleaner
-	name = "space cleaner"
-	desc = "BLAM!-brand non-foaming space cleaner!"
+	name = "cleaning bottle"
+	desc = "A blue spray bottle containing a foamless cleaning agent."
 	icon_state = "cleaner"
 
 /obj/item/reagent_container/spray/cleaner/drone
@@ -113,9 +113,16 @@
 	desc = "BLAM!-brand non-foaming space cleaner!"
 	volume = 50
 
+/obj/item/reagent_container/spray/cleaner/alt
+	name = "cleaning bottle"
+	desc = "A brownish-tan spray bottle containing a foamless cleaning agent."
+	icon_state = "cleaner_alt"
+	item_state = "cleaner_alt"
+
 /obj/item/reagent_container/spray/cleaner/Initialize()
 	. = ..()
 	reagents.add_reagent("cleaner", src.volume)
+
 //pepperspray
 /obj/item/reagent_container/spray/pepper
 	name = "pepperspray"

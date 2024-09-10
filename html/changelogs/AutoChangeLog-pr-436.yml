@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Adds a new 'nickname' for character slots"
+  - ui: "adjusted the character setup menu to have a field for the above"

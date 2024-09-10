@@ -919,6 +919,16 @@
 	E.source = initial(name)
 	qdel(src)
 
+/obj/effect/alien/resin/king_cocoon
+	name = "alien cocoon"
+	desc = "A large pulsating cocoon."
+	icon = 'icons/obj/structures/alien/xenoKingHatchery.dmi'
+	icon_state = "growing" // I wanna to set hatching/hatched state on MMB game panel soon
+	health = 4000
+	pixel_x = -48
+	pixel_y = -64
+	density = TRUE
+	plane = FLOOR_PLANE
 
 /datum/automata_cell/acid
 	neighbor_type = NEIGHBORS_NONE

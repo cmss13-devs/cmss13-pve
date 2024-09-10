@@ -97,9 +97,8 @@
 
 /client/MouseDrop(datum/over_object, datum/src_location, over_location, src_control, over_control, params)
 	. = ..()
+	if(over_object)
+		SEND_SIGNAL(over_object, COMSIG_ATOM_DROP_ON, src_location, src)
 
 	if(src_location)
 		SEND_SIGNAL(src_location, COMSIG_ATOM_DROPPED_ON, over_object, src)
-
-	if(over_object)
-		SEND_SIGNAL(over_object, COMSIG_ATOM_DROP_ON, src_location, src)

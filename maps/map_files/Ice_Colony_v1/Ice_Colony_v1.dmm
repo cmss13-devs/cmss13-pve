@@ -6131,7 +6131,7 @@
 /area/ice_colony/underground/engineering/substation)
 "iVo" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor{
 	icon_state = "darkgreen2"
 	},

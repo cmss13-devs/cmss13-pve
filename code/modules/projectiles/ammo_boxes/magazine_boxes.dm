@@ -60,7 +60,6 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
-
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 X 10)"
 	flags_equip_slot = SLOT_BACK
@@ -80,6 +79,16 @@
 
 /obj/item/ammo_box/magazine/mk1/heap/empty
 	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/rubber
+	name = "magazine box (Rubber M41A MK1 X 10)"
+	overlay_ammo_type = "_training"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
+
+/obj/item/ammo_box/magazine/mk1/rubber/empty
+	empty = TRUE
+
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
@@ -351,19 +360,19 @@
 /obj/item/ammo_box/magazine/su6/empty
 	empty = TRUE
 
-//-----------------------88M4 Pistol Mag Box-----------------------
+//-----------------------VP70 Pistol Mag Box-----------------------
 
-/obj/item/ammo_box/magazine/mod88
-	name = "\improper magazine box (88 Mod 4 x 16)"
+/obj/item/ammo_box/magazine/vp70
+	name = "\improper magazine box (VP70 x 16)"
 	icon_state = "base_mod88"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
 	overlay_gun_type = "_mod88"
 	overlay_content = "_reg"
 	num_of_magazines = 16
-	magazine_type = /obj/item/ammo_magazine/pistol/mod88
+	magazine_type = /obj/item/ammo_magazine/pistol/vp70
 
-/obj/item/ammo_box/magazine/mod88/empty
+/obj/item/ammo_box/magazine/vp70/empty
 	empty = TRUE
 
 //-----------------------VP78 Pistol Mag Box-----------------------

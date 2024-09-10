@@ -3144,7 +3144,7 @@
 	},
 /area/fiorina/oob)
 "bOK" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -12926,7 +12926,7 @@
 	},
 /area/fiorina/tumor/civres)
 "hSH" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/plating/prison,
 /area/fiorina/station/civres_blue)
 "hSL" = (
@@ -36051,7 +36051,7 @@
 	},
 /area/fiorina/station/disco)
 "wlp" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/prison{
 	dir = 9;
 	icon_state = "greenfull"
@@ -37298,7 +37298,7 @@
 	},
 /area/fiorina/station/security)
 "xcf" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},

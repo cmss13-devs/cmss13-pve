@@ -46,7 +46,7 @@
 	name = "\improper smartgun ammunition box (10x28mm)"
 	desc = "A 10x28mm ammunition box. Used to refill smartgun drum magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_reg"
-	default_ammo = /datum/ammo/bullet/smartgun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	caliber = "10x28mm"
 	bullet_amount = 1000
 	max_bullet_amount = 1000
@@ -109,49 +109,49 @@
 /obj/item/ammo_box/rounds/smg/heap/empty
 	empty = TRUE
 
-//----------------5.45x39mm Ammunition Boxes (for UPP Type71 family)------------------
+//----------------10x31mm Ammunition Boxes (for UPP Type71 family)------------------
 
 /obj/item/ammo_box/rounds/type71
-	name = "\improper rifle ammunition box (5.45x39mm)"
-	desc = "A 5.45x39mm ammunition box. Used to refill Type71 magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (10x31mm)"
+	desc = "A 10x31mm ammunition box. Used to refill Type71 magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
-	caliber = "5.45x39mm"
-	default_ammo = /datum/ammo/bullet/rifle
+	caliber = "10x31mm"
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 
 /obj/item/ammo_box/rounds/type71/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/type71/ap
-	name = "\improper rifle ammunition box (5.45x39mm AP)"
-	desc = "A 5.45x39mm armor-piercing ammunition box. Used to refill Type71 AP magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (10x31mm AP)"
+	desc = "A 10x31mm armor-piercing ammunition box. Used to refill Type71 AP magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_ap"
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/heavy/ap/upp
 
 /obj/item/ammo_box/rounds/type71/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/type71/heap
-	name = "rifle ammunition box (5.45x39mm HEAP)"
-	desc = "A 5.45x39mm high-explosive armor-piercing ammunition box. Used to refill Type71 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "rifle ammunition box (10x31mm HEAP)"
+	desc = "A 10x31mm high-explosive armor-piercing ammunition box. Used to refill Type71 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_heap"
-	default_ammo = /datum/ammo/bullet/rifle/type71/heap
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/upp
 
 /obj/item/ammo_box/rounds/type71/heap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/pkp
-	name = "machinegun ammunition box (7.62x54mmR)"
-	desc = "A 7.62x54mmR machinegun ammunition box. Used to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "large rifle ammunition box (10x31mm)"
+	desc = "A 10x31mm machinegun ammunition box. Used to mostly to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_reg"
-	default_ammo = /datum/ammo/bullet/pkp
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 	bullet_amount = 1500
 	max_bullet_amount = 1500
-	caliber = "7.62x54mmR"
+	caliber = "10x31mm"
