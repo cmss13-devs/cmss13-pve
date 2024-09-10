@@ -5529,15 +5529,6 @@
 	icon_state = "purple"
 	},
 /area/lv624/lazarus/sleep_female)
-"aBd" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
-/obj/structure/flora/pottedplant,
-/obj/structure/pipes/vents/pump,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "purple"
-	},
-/area/lv624/lazarus/sleep_female)
 "aBf" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -8727,25 +8718,6 @@
 	pixel_y = 22
 	},
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "barber"
-	},
-/area/lv624/lazarus/kitchen)
-"aNW" = (
-/obj/structure/sink/kitchen{
-	pixel_y = 30
-	},
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/reagent_container/food/snacks/donkpocket{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/reagent_container/food/snacks/donkpocket,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "barber"
@@ -13190,6 +13162,25 @@
 "dGG" = (
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/lv624/ground/river/central_river)
+"dGN" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 30
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "barber"
+	},
+/area/lv624/lazarus/kitchen)
 "dGQ" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -17225,17 +17216,6 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/jungle/north_east_jungle)
-"lSt" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/item/clothing/shoes/laceup,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/lv624/lazarus/corporate_dome)
 "lSA" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 9
@@ -19072,6 +19052,17 @@
 "pci" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/lv624/ground/barrens/east_barrens)
+"pcn" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/item/clothing/shoes/laceup,
+/turf/open/floor{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/lv624/lazarus/corporate_dome)
 "pcu" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_west,
@@ -20613,6 +20604,15 @@
 	icon_state = "vault"
 	},
 /area/lv624/ground/barrens/north_east_barrens/ceiling)
+"sdd" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/obj/structure/flora/pottedplant,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor{
+	dir = 9;
+	icon_state = "purple"
+	},
+/area/lv624/lazarus/sleep_female)
 "sdh" = (
 /obj/structure/barricade/sandbags/wired,
 /turf/open/floor/wood,
@@ -37589,7 +37589,7 @@ laY
 cPV
 xEt
 xgE
-lSt
+pcn
 lNe
 nUI
 tWw
@@ -52416,7 +52416,7 @@ aIl
 aLp
 aLp
 aLp
-aNW
+dGN
 aNZ
 aNZ
 aNZ
@@ -53078,7 +53078,7 @@ fjM
 fjM
 azw
 azw
-aBd
+sdd
 aBE
 aBE
 btY

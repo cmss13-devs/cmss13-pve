@@ -14594,22 +14594,6 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/admin_building)
-"aPW" = (
-/obj/structure/coatrack{
-	pixel_x = -5;
-	pixel_y = 13
-	},
-/obj/item/clothing/shoes/laceup{
-	pixel_y = -13
-	},
-/obj/item/clothing/under/suit_jacket/trainee{
-	pixel_x = -6;
-	pixel_y = 15
-	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/admin_building)
 "aPX" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/tool/lighter/zippo,
@@ -14850,16 +14834,6 @@
 	icon_state = "mars_dirt_6"
 	},
 /area/bigredv2/outside/w)
-"aQH" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/chips,
-/obj/item/reagent_container/food/snacks/cookie,
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
-	},
-/area/bigredv2/outside/general_store)
 "aQI" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/thirteenloko,
@@ -15293,19 +15267,6 @@
 	icon_state = "whitebluefull"
 	},
 /area/bigredv2/outside/general_store)
-"aRL" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
-	},
-/area/bigredv2/outside/general_store)
 "aRM" = (
 /obj/effect/landmark/crap_item,
 /turf/open/floor,
@@ -15573,17 +15534,6 @@
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
-	},
-/area/bigredv2/outside/general_store)
-"aSD" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/cheesewedge,
-/obj/item/reagent_container/food/snacks/chips,
-/obj/item/reagent_container/food/snacks/donkpocket,
-/obj/item/reagent_container/food/snacks/donut,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitebluefull"
@@ -16052,19 +16002,6 @@
 /obj/item/reagent_container/food/snacks/bun,
 /obj/structure/machinery/light{
 	dir = 4
-	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whitebluefull"
-	},
-/area/bigredv2/outside/general_store)
-"aTN" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/bun,
-/obj/item/reagent_container/food/snacks/donkpocket,
-/obj/structure/machinery/light{
-	dir = 8
 	},
 /turf/open/floor{
 	dir = 5;
@@ -26822,6 +26759,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/mars,
 /area/bigredv2/outside/filtration_plant)
+"eWx" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/chips,
+/obj/item/reagent_container/food/snacks/cookie,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/general_store)
 "eWL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/head/welding,
@@ -28759,6 +28706,19 @@
 	icon_state = "darkyellow2"
 	},
 /area/bigredv2/outside/engineering)
+"hYl" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/general_store)
 "hYt" = (
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
@@ -35718,6 +35678,19 @@
 	icon_state = "mars_cave_2"
 	},
 /area/bigredv2/outside/filtration_cave_cas)
+"snn" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/candy,
+/obj/item/reagent_container/food/snacks/bun,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/general_store)
 "snD" = (
 /obj/structure/surface/table,
 /obj/item/storage/pill_bottle/spaceacillin,
@@ -36106,6 +36079,21 @@
 	icon_state = "mars_cave_5"
 	},
 /area/bigredv2/caves_se)
+"sIQ" = (
+/obj/structure/closet,
+/obj/item/explosive/grenade/high_explosive/frag,
+/obj/item/ore{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/shotgun/buckshot,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "platingdmg3"
+	},
+/area/bigredv2/caves/mining)
 "sIY" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor{
@@ -36248,6 +36236,17 @@
 	icon_state = "darkyellow2"
 	},
 /area/bigredv2/outside/filtration_plant)
+"sUt" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/chips,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/obj/item/reagent_container/food/snacks/donut,
+/turf/open/floor{
+	dir = 5;
+	icon_state = "whitebluefull"
+	},
+/area/bigredv2/outside/general_store)
 "sUD" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -38799,6 +38798,22 @@
 	icon_state = "dark"
 	},
 /area/bigredv2/outside/filtration_plant)
+"wsR" = (
+/obj/structure/coatrack{
+	pixel_x = -5;
+	pixel_y = 13
+	},
+/obj/item/clothing/shoes/laceup{
+	pixel_y = -13
+	},
+/obj/item/clothing/under/suit_jacket/trainee{
+	pixel_x = -6;
+	pixel_y = 15
+	},
+/turf/open/floor{
+	icon_state = "wood"
+	},
+/area/bigredv2/outside/admin_building)
 "wtj" = (
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
@@ -39842,21 +39857,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/gun/pistol/holdout,
 /obj/structure/machinery/light,
-/turf/open/floor/plating{
-	dir = 8;
-	icon_state = "platingdmg3"
-	},
-/area/bigredv2/caves/mining)
-"xMT" = (
-/obj/structure/closet,
-/obj/item/explosive/grenade/high_explosive/frag,
-/obj/item/ore{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/ammo_magazine/shotgun/buckshot,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/reagent_container/food/snacks/packaged_burger,
 /turf/open/floor/plating{
 	dir = 8;
 	icon_state = "platingdmg3"
@@ -46728,7 +46728,7 @@ aao
 aao
 aao
 uHQ
-xMT
+sIQ
 wtj
 wtj
 mBo
@@ -49686,9 +49686,9 @@ apt
 aNk
 aOw
 aPw
-aQH
+eWx
 aRK
-aSD
+sUt
 aTM
 aUS
 aNo
@@ -50121,9 +50121,9 @@ aNl
 aOy
 aGT
 aPy
-aRL
+hYl
 aSE
-aTN
+snn
 aUU
 aNo
 aWs
@@ -62054,7 +62054,7 @@ aMc
 apC
 aNO
 aOO
-aPW
+wsR
 aof
 bdm
 aOO

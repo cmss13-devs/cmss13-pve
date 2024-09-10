@@ -6,6 +6,7 @@
 #define MENU_MENTOR "mentor"
 #define MENU_SETTINGS "settings"
 #define MENU_SPECIAL "special"
+#define MENU_PLTCO "pltco"
 
 var/list/preferences_datums = list()
 
@@ -117,6 +118,7 @@ var/const/MAX_SAVE_SLOTS = 20
 
 	//character preferences
 	var/real_name //our character's name
+	var/slot_label //the nickname for the saveslot
 	var/be_random_name = FALSE //whether we are a random name every round
 	var/human_name_ban = FALSE
 
@@ -244,6 +246,11 @@ var/const/MAX_SAVE_SLOTS = 20
 	/// If this client has auto observe enabled, used by /datum/orbit_menu
 	var/auto_observe = TRUE
 
+	/// Name for platoon used when spawning as LT
+	var/platoon_name = "Sun Riders"
+	/// Dropship camo used when spawning as LT
+	var/dropship_camo = DROPSHIP_CAMO_JUNGLE
+
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
 	macros = new(C, src)
@@ -307,6 +314,7 @@ var/const/MAX_SAVE_SLOTS = 20
 
 	dat += "<center>"
 	dat += "<a[current_menu == MENU_MARINE ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_MARINE]\"><b>Human</b></a> - "
+	dat += "<a[current_menu == MENU_PLTCO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_PLTCO]\"><b>Platoon Commander</b></a> - "
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
@@ -327,6 +335,8 @@ var/const/MAX_SAVE_SLOTS = 20
 			dat += "<h1><u><b>Name:</b></u> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'><b>[real_name]</b></a>"
 			dat += "<a href='?_src_=prefs;preference=name;task=random'>&reg</A></h1>"
+			dat += "<u><b>Slot label:</b></u> "
+			dat += "<a href='?_src_=prefs;preference=slot_label;task=input'><b>[slot_label ? "[slot_label]" : "---"]</b></a><br> "
 			dat += "<b>Always Pick Random Name:</b> <a href='?_src_=prefs;preference=rand_name'><b>[be_random_name ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Always Pick Random Appearance:</b> <a href='?_src_=prefs;preference=rand_body'><b>[be_random_body ? "Yes" : "No"]</b></a><br><br>"
 
@@ -431,6 +441,13 @@ var/const/MAX_SAVE_SLOTS = 20
 				dat += "<b>Records:</b> <a href=\"byond://?src=\ref[user];preference=records;record=1\"><b>Character Records</b></a><br>"
 
 			dat += "<b>Flavor Text:</b> <a href='byond://?src=\ref[user];preference=flavor_text;task=open'><b>[TextPreview(flavor_texts["general"], 15)]</b></a><br>"
+			dat += "</div>"
+
+		if(MENU_PLTCO)
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
+			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
+			dat += "<b>Dropship Camo:</b> <a href='?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -1246,6 +1263,15 @@ var/const/MAX_SAVE_SLOTS = 20
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 
+				if("slot_label")
+					var/raw_name = input(user, "Choose a short label or identifier for this character slot. This is not an in-character nickname:", "Character Preference")  as text|null
+					if (raw_name) // Check to ensure that the user entered text (rather than cancel.)
+						var/new_name = reject_bad_name(raw_name)
+						if(new_name)
+							slot_label = new_name
+						else
+							to_chat(user, "<font color='red'>Invalid name. Your slot name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+
 				if("xeno_vision_level_pref")
 					var/static/list/vision_level_choices = list(XENO_VISION_LEVEL_NO_NVG, XENO_VISION_LEVEL_MID_NVG, XENO_VISION_LEVEL_FULL_NVG)
 					var/choice = tgui_input_list(user, "Choose your default xeno vision level", "Vision level", vision_level_choices, theme="hive_status")
@@ -1258,6 +1284,19 @@ var/const/MAX_SAVE_SLOTS = 20
 					if(!choice)
 						return
 					ghost_vision_pref = choice
+
+				if("plat_name")
+					var/raw_name = input(user, "Choose your Platoon's name:", "Character Preference")  as text|null
+					if(length(raw_name) > 16 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
+						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					else
+						platoon_name = raw_name
+
+				if ("dropship_camo")
+					var/new_camo = tgui_input_list(user, "Choose your platoon's dropship camo:", "Character Preferences", GLOB.dropship_camos)
+
+					if (new_camo)
+						dropship_camo = new_camo
 
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null
@@ -2002,7 +2041,6 @@ var/const/MAX_SAVE_SLOTS = 20
 
 				if("change_menu")
 					current_menu = href_list["menu"]
-
 	ShowChoices(user)
 	return 1
 
@@ -2224,10 +2262,11 @@ var/const/MAX_SAVE_SLOTS = 20
 		for(var/i=1, i<=MAX_SAVE_SLOTS, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
+			S["slot_label"] >> slot_label
 			if(!name) name = "Character[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
-			dat += "<a href='?_src_=prefs;preference=changeslot;num=[i];'>[name]</a><br>"
+			dat += "<a href='?_src_=prefs;preference=changeslot;num=[i];'>[name] ([slot_label])</a><br>"
 
 	dat += "<hr>"
 	dat += "<a href='byond://?src=\ref[user];preference=close_load_dialog'>Close</a><br>"
@@ -2341,3 +2380,4 @@ var/const/MAX_SAVE_SLOTS = 20
 #undef MENU_MENTOR
 #undef MENU_SETTINGS
 #undef MENU_SPECIAL
+#undef MENU_PLTCO

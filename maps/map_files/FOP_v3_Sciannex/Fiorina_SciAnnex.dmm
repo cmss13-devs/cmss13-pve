@@ -1054,6 +1054,12 @@
 	name = "astroturf"
 	},
 /area/fiorina/station/civres_blue)
+"aBz" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/fiorina/station/civres_blue)
 "aBJ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/book/manual/chef_recipes{
@@ -3143,12 +3149,6 @@
 	opacity = 0
 	},
 /area/fiorina/oob)
-"bOK" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor/corsat{
-	icon_state = "squares"
-	},
-/area/fiorina/station/civres_blue)
 "bPf" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -9782,6 +9782,12 @@
 	icon_state = "darkbrown2"
 	},
 /area/fiorina/tumor/aux_engi)
+"fVS" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/fiorina/station/transit_hub)
 "fWc" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -12925,10 +12931,6 @@
 	icon_state = "floor_plate"
 	},
 /area/fiorina/tumor/civres)
-"hSH" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor/plating/prison,
-/area/fiorina/station/civres_blue)
 "hSL" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	icon_state = "2"
@@ -20455,6 +20457,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison,
 /area/fiorina/station/central_ring)
+"muj" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor/plating/prison,
+/area/fiorina/station/civres_blue)
 "muB" = (
 /obj/effect/landmark/corpsespawner/ua_riot/burst,
 /turf/open/floor/prison{
@@ -21628,6 +21634,10 @@
 	icon_state = "redfull"
 	},
 /area/fiorina/station/security)
+"ndV" = (
+/obj/item/clothing/shoes/laceup,
+/turf/open/space,
+/area/fiorina/oob)
 "ndZ" = (
 /obj/structure/machinery/constructable_frame{
 	icon_state = "box_1"
@@ -25928,6 +25938,13 @@
 /obj/item/weapon/wirerod,
 /turf/open/floor/plating/prison,
 /area/fiorina/tumor/fiberbush)
+"pSs" = (
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
+/turf/open/floor/prison{
+	dir = 9;
+	icon_state = "greenfull"
+	},
+/area/fiorina/station/transit_hub)
 "pSJ" = (
 /turf/open/floor/wood,
 /area/fiorina/maintenance)
@@ -36050,13 +36067,6 @@
 	icon_state = "cell_stripe"
 	},
 /area/fiorina/station/disco)
-"wlp" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "greenfull"
-	},
-/area/fiorina/station/transit_hub)
 "wly" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/fiorina/lz/near_lzII)
@@ -37297,12 +37307,6 @@
 	icon_state = "platingdmg2"
 	},
 /area/fiorina/station/security)
-"xcf" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/fiorina/station/transit_hub)
 "xck" = (
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -38766,10 +38770,6 @@
 	icon_state = "kitchen"
 	},
 /area/fiorina/station/power_ring)
-"xWc" = (
-/obj/item/clothing/shoes/laceup,
-/turf/open/space,
-/area/fiorina/oob)
 "xWp" = (
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/prison{
@@ -52463,7 +52463,7 @@ bfZ
 bfZ
 bfZ
 vsc
-hSH
+muj
 apf
 vsc
 hyz
@@ -56665,7 +56665,7 @@ lwK
 oKV
 rBs
 aVU
-bOK
+aBz
 rBs
 khu
 apf
@@ -58219,7 +58219,7 @@ feY
 bnA
 qNw
 fUF
-xcf
+fVS
 jiW
 rol
 okv
@@ -59284,7 +59284,7 @@ jiW
 rol
 okv
 rol
-wlp
+pSs
 emU
 wrR
 wrR
@@ -74427,7 +74427,7 @@ bQM
 bQM
 bQM
 bQM
-xWc
+ndV
 bQM
 bQM
 cZq

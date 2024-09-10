@@ -397,6 +397,7 @@
 
 
 /obj/structure/bed/chair/dropship/passenger/afterbuckle()
+	. = ..()
 	if(buckled_mob)
 		icon_state = initial(icon_state) + "_buckled"
 		overlays += chairbar

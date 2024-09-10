@@ -20561,7 +20561,7 @@
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/strata/ag/exterior/marsh/center)
 "brM" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/strata/ag/exterior/marsh/center)
 "brP" = (
@@ -40255,7 +40255,7 @@
 	},
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "vsL" = (
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/strata{
 	dir = 10;
 	icon_state = "multi_tiles"

@@ -293,8 +293,8 @@ var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
 		new/datum/stack_recipe("empty magazine box (Type71)", /obj/item/ammo_box/magazine/type71/empty), \
 		new/datum/stack_recipe("empty magazine box (Type71 AP)", /obj/item/ammo_box/magazine/type71/ap/empty), \
 		null, \
-		new/datum/stack_recipe("empty rifle ammo box (5.45x39mm)", /obj/item/ammo_box/rounds/type71/empty), \
-		new/datum/stack_recipe("empty rifle ammo box (5.45x39mm AP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (10x31mm)", /obj/item/ammo_box/rounds/type71/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (10x31mm AP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
 
 
 		)) \

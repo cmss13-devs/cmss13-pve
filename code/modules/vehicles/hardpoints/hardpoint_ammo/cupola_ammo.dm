@@ -1,11 +1,11 @@
 /obj/item/ammo_magazine/hardpoint/m56_cupola
 	name = "M56 Cupola Magazine"
 	desc = "A secondary armament MG magazine"
-	caliber = "10x28mm" //Correlates to smartguns
+	caliber = "10x28mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
-	default_ammo = /datum/ammo/bullet/smartgun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	max_rounds = 1000
 	gun_type = /obj/item/hardpoint/secondary/m56cupola
 

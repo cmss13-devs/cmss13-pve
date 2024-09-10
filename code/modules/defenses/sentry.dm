@@ -23,7 +23,7 @@
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
 
 	/// Sound used when firing
-	var/firing_sound = 'sound/weapons/sentry_shoot_loop_01.ogg'
+	var/firing_sound = 'sound/weapons/gun_smartgun1.ogg'
 
 	var/sentry_type = "sentry" //Used for the icon
 	display_additional_stats = TRUE
@@ -570,7 +570,7 @@
 	name = "Modified UA-577 Gauss Turret"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
 	faction_group = null
-	ammo = new /obj/item/ammo_magazine/sentry/premade/dumb
+	ammo = new /obj/item/ammo_magazine/sentry
 
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
@@ -761,7 +761,7 @@
 
 /obj/structure/machinery/defenses/sentry/upp
 	name = "\improper UPPA 32-H sentry gun"
-	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 500-round drum magazine."
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 350-round drum magazine."
 	icon_state = "upp_defense_base"
 	icon_on = "upp_defense_base"
 	icon_off = "upp_defense_base_off"
@@ -776,7 +776,7 @@
 	defense_type = "UPP"
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
 	fire_delay = 1.2
-	firing_sound = 'sound/weapons/gun_m56d_auto.ogg'
+	firing_sound = 'sound/weapons/gun_type71.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 #undef SENTRY_FIREANGLE
