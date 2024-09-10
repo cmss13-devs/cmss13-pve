@@ -13,6 +13,7 @@ GLOBAL_LIST_EMPTY(fishing_loot_tables)
 		/obj/item/reagent_container/food/snacks/fishable/crab
 	)
 	var/list/rare_fishable_atoms = list(
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
 		/obj/item/coin/silver
 	)
 	var/list/ultra_rare_fishable_atoms = list(
