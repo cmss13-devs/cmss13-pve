@@ -661,9 +661,6 @@
 	do_rename_platoon(new_human.client.prefs.platoon_name)
 	change_dropship_camo(new_human.client.prefs.dropship_camo)
 
-/datum/equipment_preset/uscm_ship/so/lesser_rank
-	paygrade = "MO1"
-
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
@@ -697,9 +694,6 @@
 /datum/equipment_preset/uscm_ship/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(!late_join)
 		add_verb(new_human.client, /client/proc/commander_rename_platoon)
-
-/datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-	paygrade = "UO1"
 
 //*****************************************************************************************************/
 
