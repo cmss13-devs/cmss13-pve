@@ -20,6 +20,7 @@ GLOBAL_LIST_EMPTY(ai_humans)
 		GLOB.ai_humans += src
 		ai_brain = new(src)
 		create_hud()
+		a_intent = INTENT_DISARM
 		//INVOKE_ASYNC(src)
 
 /mob/living/carbon/human/Destroy(force)
