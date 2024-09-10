@@ -2,6 +2,8 @@
 	name = "IRO Paygrade"
 	pay_multiplier = 1
 
+//The mooks
+
 /datum/paygrade/spooks/civilian
 	paygrade = "C"
 	name = "Contractor"
@@ -42,6 +44,8 @@
 	pay_multiplier = 1
 	ranking = 5
 
+//Lower-Echelon Officers
+
 /datum/paygrade/spooks/lead
 	paygrade = "IA-3"
 	name = "Station Chief"
@@ -49,11 +53,46 @@
 	pay_multiplier = 2.75
 	ranking = 6
 
-//Event/special-showing ranks
-
-/datum/paygrade/spooks/bigboss	//Thrown together to cover contingency scenarios where a bigger boss is needing to show up
+/datum/paygrade/spooks/boss
 	paygrade = "IA-4"
-	name = "Sector Overseer"
-	prefix = "Ovrsr."
+	name = "Senior Supervisor"
+	prefix = "Ssv."
 	pay_multiplier = 3.5
 	ranking = 7
+
+/datum/paygrade/spooks/bigboss
+	paygrade = "IA-5"
+	name = "Chief Special Agent"
+	prefix = "Csa."
+	pay_multiplier = 4
+	ranking = 8
+
+//Upper-Echelon Officers
+
+/datum/paygrade/spooks/biggerboss
+	paygrade = "IA-6"
+	name = "Chief of Staff"
+	prefix = "COS."
+	pay_multiplier = 4.5
+	ranking = 9
+
+/datum/paygrade/spooks/hr
+	paygrade = "IA-6HR"
+	name = "Public Affairs Officer"
+	prefix = "PAO."
+	pay_multiplier = 4.5
+	ranking = 10
+
+/datum/paygrade/spooks/gigaboss
+	paygrade = "IA-7D"
+	name = "Deputy Director"
+	prefix = "DDI."
+	pay_multiplier = 5
+	ranking = 11
+
+/datum/paygrade/spooks/biggestboss
+	paygrade = "IA-7"
+	name = "Executive Director"
+	prefix = "EXD."
+	pay_multiplier = 6
+	ranking = 12
