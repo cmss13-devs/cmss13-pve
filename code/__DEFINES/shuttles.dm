@@ -136,11 +136,13 @@
 #define ESCAPE_SHUTTLE_WEST "escape_shuttle_w"
 #define ESCAPE_SHUTTLE_NORTH "escape_shuttle_n"
 #define ESCAPE_SHUTTLE_SOUTH "escape_shuttle_s"
+#define ESCAPE_SHUTTLE_BREACH "breacher_shuttle"
 
 #define ESCAPE_SHUTTLE_WEST_PREFIX "escape_shuttle_w"
 #define ESCAPE_SHUTTLE_EAST_PREFIX "escape_shuttle_e"
 #define ESCAPE_SHUTTLE_NORTH_PREFIX "escape_shuttle_n"
 #define ESCAPE_SHUTTLE_SOUTH_PREFIX "escape_shuttle_s"
+#define ESCAPE_SHUTTLE_BREACH_PREFIX "breacher_shuttle"
 
 #define ESCAPE_SHUTTLE_DOCK_PREFIX "almayer-hangar-escape-shuttle-"
 
