@@ -16,7 +16,7 @@
 	flags_magazine = NO_FLAGS //can't be refilled or emptied by hand
 	caliber = "10x28mm"
 	max_rounds = 700
-	default_ammo = /datum/ammo/bullet/machinegun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = null
 
 
@@ -411,7 +411,7 @@
 // The actual Machinegun itself, going to borrow some stuff from current sentry code to make sure it functions. Also because they're similiar.
 /obj/structure/machinery/m56d_hmg
 	name = "\improper M56D heavy machine gun"
-	desc = "A deployable, heavy machine gun. While it is capable of taking the same rounds as the M56, it fires specialized tungsten rounds for increased armor penetration.<br>Drag its sprite onto yourself to man it. Ctrl-click it to cycle through firemodes."
+	desc = "A deployable, heavy machine gun. While it is capable of taking the same rounds as the M56..<br>Drag its sprite onto yourself to man it. Ctrl-click it to cycle through firemodes."
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56D"
 	anchored = TRUE
@@ -428,7 +428,7 @@
 	health = 200
 	var/health_max = 200 //Why not just give it sentry-tier health for now.
 	var/atom/target = null // required for shooting at things.
-	var/datum/ammo/bullet/machinegun/ammo = /datum/ammo/bullet/machinegun
+	var/datum/ammo/bullet/rifle/heavy/ammo = /datum/ammo/bullet/rifle/heavy
 	var/obj/projectile/in_chamber = null
 	var/locked = 0 //1 means its locked inplace (this will be for sandbag MGs)
 	var/muzzle_flash_lum = 4
@@ -437,7 +437,7 @@
 	var/zoom = 0 // 0 is it doesn't zoom, 1 is that it zooms.
 	var/damage_state = M56D_DMG_NONE
 
-	var/gun_noise = 'sound/weapons/gun_rifle.ogg' // Variations for gun noises for M56D, M56DE, the auto one, uses a different set of sounds. emergency_cooling
+	var/gun_noise = 'sound/weapons/gun_smartgun1.ogg' // Variations for gun noises for M56D, M56DE, the auto one, uses a different set of sounds. emergency_cooling
 	var/empty_alarm = 'sound/weapons/smg_empty_alarm.ogg'
 
 	// Muzzle Flash Offsets
@@ -455,11 +455,11 @@
 	var/user_old_y = 0
 
 	/// How much time should pass in between full auto shots, slightly higher than burst due to click delay and similar things that slow firing down
-	var/fire_delay = 0.3 SECONDS
+	var/fire_delay = FIRE_DELAY_TIER_SG
 	/// How much time should pass in between burst fire shots
 	var/burst_fire_delay = 0.2 SECONDS
 	/// How many rounds are fired per burst
-	var/burst_amount = 3
+	var/burst_amount = 4
 	/// How many rounds have been fired in the current burst/auto
 	var/shots_fired = 0
 	/// What firemode the gun is currently in
@@ -471,7 +471,7 @@
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	/// A multiplier for how slow this gun should fire in automatic as opposed to burst. 1 is normal, 1.2 is 20% slower, 0.8 is 20% faster, etc.
-	var/autofire_slow_mult = 0.7
+	var/autofire_slow_mult = 0.8
 	/// If the gun is currently burst firing
 	VAR_PROTECTED/burst_firing = FALSE
 	/// If the gun should display its ammo count
