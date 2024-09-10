@@ -178,7 +178,7 @@
 	))
 
 /datum/ammo/bullet/rifle/heavy/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/toxic_buildup)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup)
 	knockback(target, fired_proj, max_range = 2)
 
 // Custom Specialist M4RA rounds
