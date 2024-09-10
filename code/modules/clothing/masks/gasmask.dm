@@ -38,7 +38,7 @@
 	item_state = "m5_gasmask"
 
 /obj/item/clothing/mask/gas/upp
-	name = "\improper PMK-63 gasmask"
+	name = "\improper ShMB/4 gasmask"
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB

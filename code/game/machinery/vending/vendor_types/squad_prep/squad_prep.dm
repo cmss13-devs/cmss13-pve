@@ -216,8 +216,7 @@
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("PMK-63 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/upp, VENDOR_ITEM_REGULAR),
-		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
+		list("ShMB/4 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/upp, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
