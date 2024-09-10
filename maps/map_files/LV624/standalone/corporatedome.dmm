@@ -183,12 +183,12 @@
 /area/lv624/lazarus/corporate_dome)
 "iF" = (
 /obj/structure/closet/crate/secure/weyland,
-/obj/item/reagent_container/food/snacks/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/packaged_burrito,
-/obj/item/reagent_container/food/snacks/packaged_burrito,
-/obj/item/reagent_container/food/snacks/packaged_burger,
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor/whitebluecorner/west,
 /area/lv624/lazarus/corporate_dome)
 "iT" = (

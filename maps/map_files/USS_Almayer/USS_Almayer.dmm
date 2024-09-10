@@ -61576,7 +61576,7 @@
 /obj/structure/machinery/microwave{
 	pixel_y = 9
 	},
-/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor/almayer/plate,
 /area/almayer/living/briefing)
 "vLU" = (
