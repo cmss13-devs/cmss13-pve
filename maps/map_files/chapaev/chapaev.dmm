@@ -1194,9 +1194,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -4759,9 +4759,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -5522,9 +5522,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -5582,7 +5582,6 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/distress/UPP,
-/obj/item/reagent_container/food/drinks/bottle/vodka,
 /obj/item/weapon/butterfly,
 /turf/open/floor/strata{
 	dir = 4;
@@ -6186,9 +6185,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/upp,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -6505,7 +6504,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/structure/machinery/light/small,
+/obj/structure/machinery/light/double,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
