@@ -1,6 +1,6 @@
 "ay" = (/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "aZ" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer0,/area/drg)
-"be" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"be" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "bx" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
 "cN" = (/obj/structure/flora/grass/tallgrass/jungle/corner{dir = 6},/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "cV" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
@@ -20,7 +20,7 @@
 "wK" = (/turf/open/auto_turf/strata_grass/layer0,/area/drg)
 "wS" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
 "xJ" = (/turf/open/auto_turf/strata_grass/layer1,/area/drg)
-"xU" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
+"xU" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "yi" = (/obj/structure/flora/grass/tallgrass/jungle/corner{dir = 5},/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "Ag" = (/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "Cl" = (/obj/structure/drg/land_crystals/sugar{pixel_x = 8; pixel_y = 13},/turf/open/auto_turf/sand_white/layer1,/area/drg)
@@ -44,7 +44,7 @@
 "PM" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
 "PV" = (/turf/open/gm/river,/area/drg)
 "QG" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
-"RS" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"RS" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "Sg" = (/obj/structure/flora/grass/tallgrass/jungle,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "SR" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3{pixel_x = 6; pixel_y = 14},/obj/structure/prop/hybrisa/cavedecor/stalagmite5,/obj/structure/prop/hybrisa/cavedecor/stalagmite1{pixel_x = 6; pixel_y = -18},/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "TJ" = (/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
@@ -55,7 +55,7 @@
 "VQ" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "WO" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer1,/area/drg)
 "WQ" = (/obj/structure/flora/jungle/alienplant1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"XA" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
+"XA" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/strata_grass/layer0,/area/drg)
 
 (1,1,1) = {"
 bebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebe

@@ -41,7 +41,7 @@
 	icon_state = "crystal_stage[stage]"
 
 /obj/structure/drg/land_crystals/attackby(obj/item/W, mob/user, click_data)
-	if(!(W.type in allowed_instruments))
+	if(!W.digspeed_mod)
 		return TRUE
 
 	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
@@ -63,7 +63,7 @@
 	if(!current_minerals)
 		user.visible_message(SPAN_WARNING("[src] crumbles to dust."),
 		SPAN_NOTICE("You dug through [src]."))
-		qdel(src)
+		QDEL_NULL(src)
 		return TRUE
 
 	user.visible_message(SPAN_WARNING("[user] breaks off a chunk of [src]."),
@@ -159,18 +159,23 @@
 
 // EGG-HUNT STUFF //
 
-/obj/structure/surface/table/rock/organic
+/turf/closed/wall/drg_rock/organic
 	icon_state = "meatnormaltable"
-	table_prefix = "meatnormal"
+	icon_prefix = "meatnormal"
 
 	color = "#ffffff"
 	name = "organic mass"
 	desc = "This is...flesh?"
 	dig_time = 5 SECONDS
 
-/obj/structure/surface/table/rock/organic/veiny
+	turf_flags = TURF_ORGANIC // meaty
+
+/turf/closed/wall/drg_rock/organic/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
+	take_damage(dam)
+
+/turf/closed/wall/drg_rock/organic/veiny
 	icon_state = "meatnormal2table"
-	table_prefix = "meatnormal2"
+	icon_prefix = "meatnormal2"
 
 /obj/effect/decal/organic_veins
 	icon = 'void-marines/icons/glyphid_egg.dmi'
@@ -179,18 +184,18 @@
 	name = "strange red vines"
 
 /turf/open/floor/organic
-	icon = 'void-marines/icons/glyphid_egg.dmi'
-	icon_state = "default"
 	name = "organic mass"
 	desc = "This is...flesh?"
+	icon = 'void-marines/icons/glyphid_egg.dmi'
+	icon_state = "default"
 	plating_type = /turf/open/auto_turf/sand_white/layer0
 
 /turf/open/floor/organic/veiny
 	icon_state = "eyes"
 
 /obj/item/drg/glyphid_egg
-	icon = 'void-marines/icons/glyphid_egg.dmi'
-	icon_state = "egg"
 	name = "strange egg"
 	desc = "An strange alien egg, used for pretty simple things - like cooking omlet"
+	icon = 'void-marines/icons/glyphid_egg.dmi'
+	icon_state = "egg"
 	w_class = SIZE_LARGE

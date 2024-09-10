@@ -263,10 +263,10 @@
 
 /mob/living/simple_animal/hostile/drg/ranged/robert/UnarmedAttack(atom/A, proximity, click_parameters)
 
-	if(istype(A, /obj/structure/surface/table/rock))
-		var/obj/structure/surface/table/rock/target = A
+	if(istype(A, /turf/closed/wall/drg_rock))
+		var/turf/closed/wall/drg_rock/target = A
 		if(do_after(src, target.dig_time - miner_buff, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-			if(target.have_minerals)
+			if(target.mineral_drop)
 				new target.mineral_drop(target.loc)
 			src.visible_message(SPAN_WARNING("[target] crumbles to dust."),
 			SPAN_NOTICE("You dug through [target]."))

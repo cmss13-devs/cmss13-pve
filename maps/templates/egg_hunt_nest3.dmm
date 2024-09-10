@@ -1,4 +1,4 @@
-"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"a" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "d" = (/obj/structure/drg/land_crystals/sugar,/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "j" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "l" = (/turf/open/floor/organic/veiny,/area/drg)
@@ -8,12 +8,12 @@
 "F" = (/turf/open/floor/organic,/area/drg)
 "I" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "J" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"L" = (/obj/structure/surface/table/rock/organic/veiny,/turf/open/floor/organic,/area/drg)
-"Q" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"L" = (/turf/closed/wall/drg_rock/organic/veiny,/turf/open/floor/organic,/area/drg)
+"Q" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "S" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "T" = (/obj/item/drg/glyphid_egg,/turf/open/floor/organic,/area/drg)
 "V" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -6; pixel_y = 16},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"W" = (/obj/structure/surface/table/rock/organic,/turf/open/floor/organic,/area/drg)
+"W" = (/turf/closed/wall/drg_rock/organic,/turf/open/floor/organic,/area/drg)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

@@ -1,5 +1,5 @@
-"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"i" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"a" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"i" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "k" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite3,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "v" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "B" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite1{pixel_x = 9; pixel_y = 14},/obj/structure/prop/hybrisa/cavedecor/stalagmite2,/turf/open/auto_turf/sand_white/layer1,/area/drg)

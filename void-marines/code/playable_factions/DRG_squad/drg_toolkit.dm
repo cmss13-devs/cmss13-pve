@@ -147,6 +147,7 @@
 	var/recharge_time = 20 SECONDS //how long it takes after charged hit to refill energy
 	var/in_charged_state = FALSE //are we ready to make a blow?
 	w_class = SIZE_MEDIUM
+	digspeed_mod = 1 // base speed
 
 /obj/item/weapon/drg/pickaxe/Initialize()
 	SHOULD_CALL_PARENT(FALSE)

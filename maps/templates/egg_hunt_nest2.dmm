@@ -1,8 +1,8 @@
-"a" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"a" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "b" = (/turf/open/floor/organic/veiny,/area/drg)
 "e" = (/obj/structure/drg/land_crystals/sugar,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "h" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = 6},/turf/open/auto_turf/sand_white/layer0,/area/drg)
-"n" = (/obj/structure/surface/table/rock/organic/veiny,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"n" = (/turf/closed/wall/drg_rock/organic/veiny,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "r" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "t" = (/obj/effect/decal/organic_veins,/turf/open/floor/organic,/area/drg)
 "u" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer0,/area/drg)
@@ -10,12 +10,12 @@
 "z" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "C" = (/obj/item/drg/glyphid_egg,/turf/open/floor/organic,/area/drg)
 "G" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"I" = (/obj/structure/surface/table/rock/organic/veiny,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"I" = (/turf/closed/wall/drg_rock/organic/veiny,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "L" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "M" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = 3; pixel_y = 17},/obj/structure/prop/hybrisa/cavedecor/stalagmite2{pixel_x = -10; pixel_y = 1},/obj/structure/prop/hybrisa/cavedecor/stalagmite5{pixel_x = 6; pixel_y = -9},/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"P" = (/obj/structure/surface/table/rock/organic,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"P" = (/turf/closed/wall/drg_rock/organic,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "R" = (/turf/open/floor/organic,/area/drg)
-"S" = (/obj/structure/surface/table/rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"S" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 
 (1,1,1) = {"
 SSSSSSSSSSSSSSSSSSSSSSSSSaaaaa
