@@ -314,8 +314,8 @@
 			weapon_choosed = "rockets"
 			return TRUE
 
-GLOBAL_LIST_INIT(stored_minerals, list(/obj/item/drg/glyphid_egg = 0))
-GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg/glyphid_egg = "Glyphid eggs"))
+GLOBAL_LIST_INIT(stored_minerals, list(/obj/item/drg_glyphid_egg = 0))
+GLOBAL_LIST_INIT(minerals_to_name, list(/obj/item/drg_glyphid_egg = "Glyphid eggs"))
 
 /mob/living/simple_animal/hostile/drg/dora
 	name = "D-0-RA"

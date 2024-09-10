@@ -1,7 +1,7 @@
 
 // GROUND MINERALS //
 
-/obj/structure/drg/land_crystals
+/obj/structure/land_crystals
 	name = "land ore"
 	desc = "Crystal rocks, growing from the floor, walls, and even from cave roof."
 	icon = 'void-marines/icons/gray_crystal.dmi'
@@ -17,18 +17,16 @@
 	var/mineral_amount = 3
 	var/current_minerals
 
-	//pretty same to rocks code
-	var/list/allowed_instruments = list(/obj/item/weapon/drg/pickaxe) //what items can be used to dig it out
-	var/mineral_type = null //loot to drop
+	var/mineral_drop = null //loot to drop
 
 	var/mining_sound
 
-/obj/structure/drg/land_crystals/Initialize()
+/obj/structure/land_crystals/Initialize()
 	. = ..()
 	current_minerals = rand(1, mineral_amount)
 	update_icon()
 
-/obj/structure/drg/land_crystals/update_icon()
+/obj/structure/land_crystals/update_icon()
 	. = ..()
 	var/stage
 	if(current_minerals > mineral_amount * 0.66)
@@ -40,25 +38,31 @@
 
 	icon_state = "crystal_stage[stage]"
 
-/obj/structure/drg/land_crystals/attackby(obj/item/W, mob/user, click_data)
+/obj/structure/land_crystals/attackby(obj/item/W, mob/user, click_data)
+	if(user.action_busy)
+		return TRUE
+
 	if(!W.digspeed_mod)
 		return TRUE
 
-	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
-	spawn(1 SECONDS)
-		playsound(loc, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
+	user.visible_message(SPAN_WARNING("[user] starts to mine [src] out."),
+	SPAN_NOTICE("You start mining [src] out."))
 
-	user.visible_message(SPAN_WARNING("[user] starts to dig [src] out."),
-	SPAN_NOTICE("You start digging [src] out."))
-	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
+	if(!do_after(user, 1 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		return TRUE
 
-	current_minerals--
-	if(mineral_type)
-		new mineral_type(loc)
+	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
+	if(!do_after(user, 1 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return TRUE
 
+	playsound(loc, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
 	if(mining_sound)
 		playsound(loc, mining_sound, 25, 1)
+
+	current_minerals--
+	if(mineral_drop)
+		new mineral_drop(loc)
 
 	if(!current_minerals)
 		user.visible_message(SPAN_WARNING("[src] crumbles to dust."),
@@ -74,13 +78,13 @@
 /*
 	Red sugar deposits, funny addictive healing thingy
 */
-/obj/structure/drg/land_crystals/sugar
+/obj/structure/land_crystals/sugar
 	name = "red sugar crystal"
 	desc = "Crystal chunk, posessing strong regenerative capabilities."
 	light_color = "#e90505"
 	color = "#e90505"
 
-	mineral_type = /obj/item/reagent_container/food/snacks/drg_sugar
+	mineral_drop = /obj/item/reagent_container/food/snacks/drg_sugar
 	mining_sound = 'void-marines/sound/drg/red_sugar_break.ogg'
 
 /*
@@ -193,7 +197,7 @@
 /turf/open/floor/organic/veiny
 	icon_state = "eyes"
 
-/obj/item/drg/glyphid_egg
+/obj/item/drg_glyphid_egg
 	name = "strange egg"
 	desc = "An strange alien egg, used for pretty simple things - like cooking omlet"
 	icon = 'void-marines/icons/glyphid_egg.dmi'

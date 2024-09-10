@@ -8,7 +8,7 @@
 "C" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = -6; pixel_y = 17},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "D" = (/turf/open/floor/organic,/area/drg)
 "F" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"G" = (/obj/item/drg/glyphid_egg,/turf/open/floor/organic,/area/drg)
+"G" = (/obj/item/drg_glyphid_egg,/turf/open/floor/organic,/area/drg)
 "J" = (/turf/open/floor/organic/veiny,/area/drg)
 "L" = (/turf/closed/wall/drg_rock/organic/veiny,/turf/open/floor/organic,/area/drg)
 "M" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)

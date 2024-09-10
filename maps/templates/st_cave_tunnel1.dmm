@@ -3,7 +3,7 @@
 "p" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "u" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = 6; pixel_y = -8},/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "G" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5{pixel_x = -10; pixel_y = 13},/obj/structure/prop/hybrisa/cavedecor/stalagmite2{pixel_y = 9},/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"L" = (/obj/structure/drg/land_crystals/sugar{pixel_x = -11; pixel_y = 11},/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"L" = (/obj/structure/land_crystals/sugar{pixel_x = -11; pixel_y = 11},/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "R" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite0{pixel_x = 8; pixel_y = 13},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "V" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite1{pixel_x = -14; pixel_y = -7},/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "W" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)

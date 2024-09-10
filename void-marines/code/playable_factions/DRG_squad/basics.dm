@@ -47,8 +47,10 @@ GLOBAL_LIST_EMPTY(marked_creatures)
 	damage_cap = HEALTH_ROCK
 	repair_materials = list()
 
-	var/dig_time = 10 SECONDS // how long it will take - also can be decreased by instruments stats
+	var/dig_time = 10 SECONDS // how long it will take - can also be modified by instruments stats
 	var/mineral_drop = null // loot to drop
+
+	var/mining_sound = 'sound/soundscape/rocksfalling2.ogg'
 
 	var/floor_types = list(/turf/open/auto_turf/sand_white/layer0, /turf/open/auto_turf/sand_white/layer1)
 
@@ -66,23 +68,31 @@ GLOBAL_LIST_EMPTY(marked_creatures)
 		var/mob/living/carbon/xenomorph/user_as_xenomorph = user
 		user_as_xenomorph.do_nesting_host(attacker_grab.grabbed_thing, src)
 
+	if(user.action_busy)
+		return TRUE
+
 	if(!W.digspeed_mod)
-		return
+		return TRUE
+
+	user.visible_message(SPAN_WARNING("[user] starts to dig [src] out."),
+	SPAN_NOTICE("You start digging [src] out."))
+
+	var/half_timer = dig_time * W.digspeed_mod / 2
+
+	playsound(src, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
+	if(!do_after(user, half_timer, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return TRUE
 
 	playsound(src, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
+	if(!do_after(user, half_timer, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		return TRUE
 
-	var/timer = dig_time * W.digspeed_mod
-	spawn(timer / 2)
-		playsound(src, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
-
-	if(!do_after(user, timer, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-		return
+	playsound(src, 'void-marines/sound/drg/standart_pickaxe_1.ogg', 25, 1)
+	if(mining_sound)
+		playsound(loc, mining_sound, 100, 1)
 
 	if(mineral_drop)
 		new mineral_drop(loc)
-
-	playsound(src, 'void-marines/sound/drg/standart_pickaxe_2.ogg', 25, 1)
-	playsound(src, 'sound/soundscape/rocksfalling2.ogg', 100, 1)
 
 	user.visible_message(SPAN_WARNING("[src] crumbles to dust."),
 	SPAN_NOTICE("You dug through [src]."))

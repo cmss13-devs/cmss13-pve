@@ -2,7 +2,7 @@
 "y" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite2,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "z" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite5{pixel_x = -12; pixel_y = 12},/obj/structure/prop/hybrisa/cavedecor/stalagmite4,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "A" = (/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"E" = (/obj/structure/drg/land_crystals/sugar,/turf/open/auto_turf/sand_white/layer0,/area/drg)
+"E" = (/obj/structure/land_crystals/sugar,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "I" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "J" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "U" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer1,/area/drg)

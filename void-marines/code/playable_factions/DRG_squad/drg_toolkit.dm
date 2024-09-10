@@ -1,6 +1,6 @@
 // SCANNER //
 
-/obj/item/drg/scanner
+/obj/item/drg_scanner
 	name = "field scanner"
 	desc = "Device, used for scanning surrounding terrain."
 	icon = 'void-marines/icons/drg_tools.dmi'
@@ -12,7 +12,7 @@
 	var/scanning_range = 35
 	w_class = SIZE_MEDIUM
 
-/obj/item/drg/scanner/afterattack(atom/A, mob/user as mob, proximity)
+/obj/item/drg_scanner/afterattack(atom/A, mob/user as mob, proximity)
 	if(get_dist(src, A) > 1)
 		return FALSE
 
@@ -20,10 +20,10 @@
 		var/obj/target = A
 		to_chat(user, SPAN_PURPLE("[target.lore]"))
 
-/obj/item/drg/scanner/proc/recharge()
+/obj/item/drg_scanner/proc/recharge()
 	was_used = FALSE
 
-/obj/item/drg/scanner/attack_self(mob/user)
+/obj/item/drg_scanner/attack_self(mob/user)
 	SHOULD_CALL_PARENT(FALSE)
 	if(was_used)
 		to_chat(user, SPAN_DANGER("[src] still on cooldown!"))
@@ -109,14 +109,14 @@
 
 // WRENCH //
 
-/obj/item/weapon/drg/wrench
+/obj/item/weapon/drg_wrench
 	name = "combat wrench"
 	desc = "An utility weapon, used by DRG miners to fix various things."
 	icon = 'void-marines/icons/drg_tools.dmi'
 	icon_state = "fixing_wrench"
 	w_class = SIZE_MEDIUM
 
-/obj/item/weapon/drg/wrench/afterattack(atom/A, mob/user as mob, proximity)
+/obj/item/weapon/drg_wrench/afterattack(atom/A, mob/user as mob, proximity)
 	if(get_dist(src, A) > 1)
 		return FALSE
 
@@ -137,7 +137,7 @@
 
 // PICKAXE //
 
-/obj/item/weapon/drg/pickaxe
+/obj/item/weapon/drg_pickaxe
 	name = "combat pickaxe"
 	desc = "An utility weapon, used by DRG miners not only to dig minerals, but also protect themselves."
 	icon = 'void-marines/icons/drg_tools.dmi'
@@ -149,17 +149,17 @@
 	w_class = SIZE_MEDIUM
 	digspeed_mod = 1 // base speed
 
-/obj/item/weapon/drg/pickaxe/Initialize()
+/obj/item/weapon/drg_pickaxe/Initialize()
 	SHOULD_CALL_PARENT(FALSE)
 	START_PROCESSING(SSobj, src)
 
-/obj/item/weapon/drg/pickaxe/update_icon()
+/obj/item/weapon/drg_pickaxe/update_icon()
 	if(in_charged_state)
 		icon_state = "drg_pickaxe_charged"
 	if(!in_charged_state || charges <= 0)
 		icon_state = "drg_pickaxe"
 
-/obj/item/weapon/drg/pickaxe/process()
+/obj/item/weapon/drg_pickaxe/process()
 	if(in_charged_state)
 		force = 190
 		update_icon()
@@ -167,7 +167,7 @@
 		force = 85
 		update_icon()
 
-/obj/item/weapon/drg/pickaxe/attack_self(mob/user)
+/obj/item/weapon/drg_pickaxe/attack_self(mob/user)
 	SHOULD_CALL_PARENT(FALSE)
 	if(in_charged_state)
 		to_chat(user, SPAN_DANGER("You cancelled [src] charged hit!"))
@@ -179,13 +179,13 @@
 	in_charged_state = TRUE
 	to_chat(user, SPAN_PURPLE("You prepared [src] for a charged hit!"))
 
-/obj/item/weapon/drg/pickaxe/proc/add_charge()
+/obj/item/weapon/drg_pickaxe/proc/add_charge()
 	charges++
 
-/obj/item/weapon/drg/pickaxe/proc/change_mode() //ffs remove this
+/obj/item/weapon/drg_pickaxe/proc/change_mode() //ffs remove this
 	in_charged_state = FALSE
 
-/obj/item/weapon/drg/pickaxe/attack(mob/M, mob/user)
+/obj/item/weapon/drg_pickaxe/attack(mob/M, mob/user)
 	if(in_charged_state)
 		charges -= 1
 		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
@@ -198,7 +198,7 @@
 
 // STICK //
 
-/obj/item/drg/lightstick
+/obj/item/drg_lightstick
 	name = "blue lightstick"
 	desc = "You can stick them in the ground"
 	icon = 'icons/obj/items/lighting.dmi'
@@ -207,13 +207,13 @@
 	var/s_color = "blue"
 	var/trample_chance = 30
 
-/obj/item/drg/lightstick/Initialize(mapload, ...)
+/obj/item/drg_lightstick/Initialize(mapload, ...)
 	. = ..()
 	if(!light_on)
 		set_light_range(0)
 
-/obj/item/drg/lightstick/proc/stick(turf/T, mob/user)
-	if(locate(/obj/item/drg/lightstick) in T)
+/obj/item/drg_lightstick/proc/stick(turf/T, mob/user)
+	if(locate(/obj/item/drg_lightstick) in T)
 		to_chat(user, "There's already a [src] at this position!")
 		return FALSE
 
@@ -237,7 +237,7 @@
 
 	return TRUE
 
-/obj/item/drg/lightstick/proc/remove(mob/user)
+/obj/item/drg_lightstick/proc/remove(mob/user)
 	if(user)
 		user.visible_message("[user.name] removes \the [src] from the ground.","You remove the [src] from the ground.")
 
@@ -252,21 +252,21 @@
 
 /turf/open/attackby(obj/item/I, mob/user)
 	. = ..()
-	if(istype(I, /obj/item/drg/lightstick))
-		var/obj/item/drg/lightstick/L = I
+	if(istype(I, /obj/item/drg_lightstick))
+		var/obj/item/drg_lightstick/L = I
 		L.stick(src, user)
 
-/obj/item/drg/lightstick/attack_self(mob/user)
+/obj/item/drg_lightstick/attack_self(mob/user)
 	. = ..()
 	stick(get_turf(user), user)
 
-/obj/item/drg/lightstick/attack_hand(mob/user)
+/obj/item/drg_lightstick/attack_hand(mob/user)
 	. = ..()
 	if(!anchored)
 		return
 	remove(user)
 
-/obj/item/drg/lightstick/Crossed(mob/living/O)
+/obj/item/drg_lightstick/Crossed(mob/living/O)
 	. = ..()
 	if(!prob(trample_chance))
 		return
@@ -278,18 +278,18 @@
 
 GLOBAL_LIST_EMPTY(dora_navpoints)
 
-/obj/item/drg/lightstick/dora
+/obj/item/drg_lightstick/dora
 	name = "blue marker"
 	desc = "You can stick them in the ground to path the way for Dora."
 	trample_chance = FALSE
 
-/obj/item/drg/lightstick/dora/stick(turf/T, mob/user)
+/obj/item/drg_lightstick/dora/stick(turf/T, mob/user)
 	. = ..()
 	if(!.)
 		return
 
 	GLOB.dora_navpoints.Insert(1, T)
 
-/obj/item/drg/lightstick/dora/remove(mob/user)
+/obj/item/drg_lightstick/dora/remove(mob/user)
 	GLOB.dora_navpoints -= get_turf(src)
 	. = ..()

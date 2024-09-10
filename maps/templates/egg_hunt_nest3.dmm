@@ -1,5 +1,5 @@
 "a" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer1,/area/drg)
-"d" = (/obj/structure/drg/land_crystals/sugar,/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
+"d" = (/obj/structure/land_crystals/sugar,/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "j" = (/obj/effect/decal/organic_veins,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "l" = (/turf/open/floor/organic/veiny,/area/drg)
 "p" = (/turf/open/auto_turf/sand_white/layer0,/area/drg)
@@ -11,7 +11,7 @@
 "L" = (/turf/closed/wall/drg_rock/organic/veiny,/turf/open/floor/organic,/area/drg)
 "Q" = (/turf/closed/wall/drg_rock,/turf/open/auto_turf/sand_white/layer0,/area/drg)
 "S" = (/obj/structure/tunnel,/turf/open/auto_turf/sand_white/layer0,/area/drg)
-"T" = (/obj/item/drg/glyphid_egg,/turf/open/floor/organic,/area/drg)
+"T" = (/obj/item/drg_glyphid_egg,/turf/open/floor/organic,/area/drg)
 "V" = (/obj/structure/prop/hybrisa/cavedecor/stalagmite4{pixel_x = -6; pixel_y = 16},/obj/structure/prop/hybrisa/cavedecor/stalagmite1,/turf/open/auto_turf/sand_white/layer1,/area/drg)
 "W" = (/turf/closed/wall/drg_rock/organic,/turf/open/floor/organic,/area/drg)
 
