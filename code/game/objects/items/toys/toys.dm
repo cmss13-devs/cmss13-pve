@@ -318,6 +318,11 @@
 	desc = "Mini-Mecha action figure! Collect them all! 11/11."
 	icon_state = "phazonprize"
 
+/obj/item/toy/prize/apc
+	name = "toy APC"
+	desc = "Limited edition APC action figure."
+	icon_state = "apctoy"
+
 /obj/item/toy/inflatable_duck
 	name = "inflatable duck"
 	desc = "No bother to sink or swim when you can just float!"

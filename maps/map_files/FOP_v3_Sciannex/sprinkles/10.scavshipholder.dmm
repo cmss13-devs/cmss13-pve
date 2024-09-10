@@ -343,11 +343,11 @@
 /area/template_noop)
 "Cc" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry/premade/dumb{
+/obj/item/ammo_magazine/sentry{
 	pixel_x = -11;
 	pixel_y = 3
 	},
-/obj/item/ammo_magazine/sentry/premade/dumb{
+/obj/item/ammo_magazine/sentry{
 	pixel_x = 6;
 	pixel_y = 3
 	},
