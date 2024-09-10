@@ -183,7 +183,7 @@
 		if (istype(contents_item, /obj/item/reagent_container/food/snacks/meat)) //any meat
 			items_measures[display_name] = "slab of meat"
 			items_measures_p[display_name] = "slabs of meat"
-		if (istype(contents_item, /obj/item/reagent_container/food/snacks/donkpocket))
+		if (istype(contents_item, /obj/item/reagent_container/food/snacks/microwavable/donkpocket))
 			display_name = "Turnovers"
 			items_measures[display_name] = "turnover"
 			items_measures_p[display_name] = "turnovers"

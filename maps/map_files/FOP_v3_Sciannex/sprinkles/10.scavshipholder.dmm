@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aB" = (
+/obj/structure/barricade/metal/wired{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/template_noop)
 "aE" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -12,6 +18,10 @@
 	icon_state = "stan20"
 	},
 /area/template_noop)
+"bb" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/almayer/plate,
+/area/template_noop)
 "bh" = (
 /turf/closed/wall/strata_ice/jungle{
 	desc = "It is made of Fiberbush(tm). It contains asbestos.";
@@ -24,22 +34,16 @@
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
-"cn" = (
-/obj/structure/inflatable,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"cT" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	pixel_x = -11;
+"cP" = (
+/obj/structure/prop/structure_lattice{
+	dir = 4
+	},
+/obj/structure/prop/structure_lattice{
+	dir = 4;
+	layer = 3.1;
 	pixel_y = 10
 	},
-/obj/structure/surface/table/reinforced/prison,
-/obj/effect/spawner/random/toolbox,
-/obj/item/clothing/head/soft/ferret{
-	pixel_y = 7
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "fN" = (
 /obj/structure/largecrate/random/barrel{
@@ -56,38 +60,37 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
-"gc" = (
-/obj/item/tool/wet_sign,
-/turf/open/floor/almayer/plate,
-/area/template_noop)
 "gi" = (
 /obj/structure/girder/displaced,
 /turf/open/floor/plating/prison,
 /area/template_noop)
-"he" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
-	},
-/turf/open/organic/grass/astroturf,
-/area/template_noop)
-"hF" = (
-/obj/structure/largecrate/random/barrel/red,
+"gw" = (
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/almayer/plate,
 /area/template_noop)
-"hG" = (
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/almayer,
+"hh" = (
+/turf/open/floor/almayer/plate,
 /area/template_noop)
-"il" = (
-/obj/structure/prop/structure_lattice{
-	dir = 4
-	},
-/obj/structure/prop/structure_lattice{
-	dir = 4;
-	layer = 3.1;
+"iv" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/small{
+	dir = 8;
+	pixel_x = -11;
 	pixel_y = 10
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/device/healthanalyzer{
+	pixel_y = -9
+	},
+/turf/open/floor/almayer/plate,
+/area/template_noop)
+"iJ" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/almayer/plate,
 /area/template_noop)
 "iU" = (
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -97,6 +100,10 @@
 	icon_state = "rightengine_1";
 	opacity = 0
 	},
+/area/template_noop)
+"ks" = (
+/obj/structure/machinery/door/airlock/prison_hatch/autoname,
+/turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "lI" = (
 /obj/structure/largecrate/random/barrel{
@@ -143,8 +150,16 @@
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
+"np" = (
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/almayer/plate,
+/area/template_noop)
 "nF" = (
 /turf/closed/shuttle/ert,
+/area/template_noop)
+"nO" = (
+/obj/structure/bed/chair/dropship/pilot,
+/turf/open/floor/almayer/plate,
 /area/template_noop)
 "oh" = (
 /turf/open/floor/plating/prison,
@@ -181,6 +196,34 @@
 	icon_state = "stan22"
 	},
 /area/template_noop)
+"rg" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 10
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 8;
+	pixel_x = -9
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = -3;
+	pixel_x = -9
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = -3;
+	pixel_x = 7
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 7;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/template_noop)
 "rv" = (
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
@@ -192,27 +235,8 @@
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
-"rW" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	pixel_x = -11;
-	pixel_y = 10
-	},
-/obj/structure/largecrate/supply/weapons/pistols,
-/turf/open/floor/almayer/plate,
-/area/template_noop)
-"si" = (
-/obj/structure/bed/chair/dropship/pilot,
-/turf/open/floor/almayer/plate,
-/area/template_noop)
 "tp" = (
 /turf/open/floor/almayer,
-/area/template_noop)
-"tC" = (
-/obj/structure/barricade/metal/wired{
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
 /area/template_noop)
 "tD" = (
 /obj/structure/lattice,
@@ -225,22 +249,31 @@
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
-"vh" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	pixel_x = -11;
-	pixel_y = 10
-	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = 3;
-	pixel_y = 5
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/device/healthanalyzer{
-	pixel_y = -9
+"ut" = (
+/obj/item/tool/wet_sign,
+/turf/open/floor/almayer/plate,
+/area/template_noop)
+"va" = (
+/obj/structure/machinery/light/small,
+/obj/structure/machinery/defenses/sentry/premade/dumb{
+	dir = 4
 	},
 /turf/open/floor/almayer/plate,
+/area/template_noop)
+"vf" = (
+/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"vH" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/sentry{
+	pixel_x = -11;
+	pixel_y = 3
+	},
+/obj/item/ammo_magazine/sentry{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer,
 /area/template_noop)
 "wO" = (
 /turf/closed/shuttle/ert{
@@ -269,37 +302,43 @@
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
+"ys" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/template_noop)
 "yv" = (
 /obj/structure/sign/poster{
 	pixel_y = 30
 	},
 /turf/open/floor/almayer,
 /area/template_noop)
-"yD" = (
-/obj/structure/barricade/sandbags/wired{
-	dir = 8
+"Bm" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 10
 	},
+/obj/structure/largecrate/supply/weapons/pistols,
 /turf/open/floor/almayer/plate,
-/area/template_noop)
-"Ac" = (
-/turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "BC" = (
 /turf/closed/shuttle/ert{
 	icon_state = "stan9"
 	},
 /area/template_noop)
-"Cc" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/sentry/premade/dumb{
-	pixel_x = -11;
-	pixel_y = 3
+"BV" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 11;
+	pixel_y = 10
 	},
-/obj/item/ammo_magazine/sentry/premade/dumb{
-	pixel_x = 6;
-	pixel_y = 3
+/obj/structure/sign/poster/safety{
+	pixel_y = 29;
+	pixel_x = 5
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/template_noop)
 "CG" = (
 /obj/structure/sign/poster/clf{
@@ -307,14 +346,6 @@
 	pixel_x = -2
 	},
 /turf/open/floor/almayer,
-/area/template_noop)
-"CL" = (
-/obj/structure/flora/bush/ausbushes/ausbush{
-	desc = "Fiberbush(tm) infestations have been the leading cause in asbestos related deaths in spacecraft for 3 years in a row now.";
-	icon_state = "fullgrass_2";
-	name = "Fiberbush(tm) tubers"
-	},
-/turf/open/organic/grass/astroturf,
 /area/template_noop)
 "CM" = (
 /turf/closed/shuttle/ert{
@@ -332,20 +363,6 @@
 	icon_state = "leftengine_3";
 	opacity = 0
 	},
-/area/template_noop)
-"Fx" = (
-/obj/structure/barricade/metal/wired{
-	dir = 4
-	},
-/obj/item/tool/pen/blue{
-	pixel_x = -15;
-	pixel_y = 2
-	},
-/turf/open/floor/almayer/plate,
-/area/template_noop)
-"Ge" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname,
-/turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "Hb" = (
 /obj/structure/machinery/light/small{
@@ -369,12 +386,14 @@
 /obj/structure/sign/safety/bulkhead_door,
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/template_noop)
-"Iv" = (
-/obj/structure/largecrate/random/barrel/blue,
-/turf/open/floor/almayer/plate,
-/area/template_noop)
-"IU" = (
-/obj/structure/largecrate/random/barrel/yellow,
+"IC" = (
+/obj/structure/barricade/metal/wired{
+	dir = 4
+	},
+/obj/item/tool/pen/blue{
+	pixel_x = -15;
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/plate,
 /area/template_noop)
 "Jg" = (
@@ -416,12 +435,23 @@
 	icon_state = "stan2"
 	},
 /area/template_noop)
-"KO" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname,
-/turf/open/floor/almayer/plating/northeast,
-/area/template_noop)
 "Ld" = (
 /turf/open/space,
+/area/template_noop)
+"Lp" = (
+/obj/structure/largecrate/random/barrel{
+	pixel_x = -6;
+	pixel_y = 21
+	},
+/obj/structure/largecrate/random/barrel{
+	pixel_x = 12;
+	pixel_y = 17
+	},
+/obj/structure/largecrate/random/barrel{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
 /area/template_noop)
 "Lz" = (
 /obj/structure/prop/invuln/fire{
@@ -436,20 +466,9 @@
 	icon_state = "stan23"
 	},
 /area/template_noop)
-"MB" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	pixel_x = 11;
-	pixel_y = 10
-	},
-/obj/structure/sign/poster/safety{
-	pixel_y = 29;
-	pixel_x = 5
-	},
-/turf/open/floor/almayer/plate,
-/area/template_noop)
-"Ni" = (
-/turf/open/organic/grass/astroturf,
+"Ne" = (
+/obj/structure/inflatable,
+/turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "Nm" = (
 /obj/structure/prop/invuln/fire{
@@ -459,30 +478,8 @@
 	icon_state = "stan23"
 	},
 /area/template_noop)
-"NR" = (
-/obj/structure/machinery/light/small,
-/obj/structure/machinery/defenses/sentry/premade/dumb{
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/template_noop)
 "NV" = (
 /turf/closed/wall/mineral/bone_resin,
-/area/template_noop)
-"Ox" = (
-/obj/structure/largecrate/random/barrel{
-	pixel_x = -6;
-	pixel_y = 21
-	},
-/obj/structure/largecrate/random/barrel{
-	pixel_x = 12;
-	pixel_y = 17
-	},
-/obj/structure/largecrate/random/barrel{
-	pixel_x = -7;
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/plate,
 /area/template_noop)
 "ON" = (
 /turf/closed/shuttle/ert{
@@ -500,33 +497,20 @@
 /obj/structure/barricade/metal/wired,
 /turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
-"Qz" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	pixel_x = -11;
-	pixel_y = 10
+"Pt" = (
+/obj/structure/flora/bush/ausbushes/ausbush{
+	desc = "Fiberbush(tm) infestations have been the leading cause in asbestos related deaths in spacecraft for 3 years in a row now.";
+	icon_state = "fullgrass_2";
+	name = "Fiberbush(tm) tubers"
 	},
-/obj/structure/largecrate/random/mini/ammo{
-	pixel_y = 8;
-	pixel_x = -9
-	},
-/obj/structure/largecrate/random/mini/ammo{
-	pixel_y = -3;
-	pixel_x = -9
-	},
-/obj/structure/largecrate/random/mini/ammo{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/obj/structure/largecrate/random/mini/ammo{
-	pixel_y = -3;
-	pixel_x = 7
-	},
-/obj/structure/largecrate/random/mini/ammo{
-	pixel_y = 7;
-	pixel_x = -1
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/organic/grass/astroturf,
+/area/template_noop)
+"Rr" = (
+/turf/open/organic/grass/astroturf,
+/area/template_noop)
+"RR" = (
+/obj/structure/machinery/door/airlock/prison_hatch/autoname,
+/turf/open/floor/almayer/plating/northeast,
 /area/template_noop)
 "Sh" = (
 /obj/structure/machinery/light/small{
@@ -544,12 +528,6 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/template_noop)
-"Ug" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname{
-	dir = 1
-	},
-/turf/open/floor/almayer/plate,
 /area/template_noop)
 "Uh" = (
 /turf/closed/shuttle/ert{
@@ -569,7 +547,17 @@
 "Vh" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/template_noop)
-"Vn" = (
+"Vs" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 10
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/effect/spawner/random/toolbox,
+/obj/item/clothing/head/soft/ferret{
+	pixel_y = 7
+	},
 /turf/open/floor/almayer/plate,
 /area/template_noop)
 "VD" = (
@@ -580,6 +568,12 @@
 	pixel_y = 30
 	},
 /turf/open/floor/almayer,
+/area/template_noop)
+"VR" = (
+/obj/structure/machinery/door/airlock/prison_hatch/autoname{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
 /area/template_noop)
 "VW" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -610,10 +604,6 @@
 	opacity = 0
 	},
 /area/template_noop)
-"Wf" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/almayer/plate,
-/area/template_noop)
 "Wt" = (
 /turf/closed/shuttle/ert{
 	icon_state = "stan_rightengine"
@@ -633,6 +623,12 @@
 /obj/structure/largecrate/random/barrel/white,
 /turf/open/floor/plating/prison,
 /area/template_noop)
+"XK" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/organic/grass/astroturf,
+/area/template_noop)
 "Yj" = (
 /turf/closed/shuttle/ert{
 	icon_state = "stan_r_w"
@@ -646,6 +642,10 @@
 	pixel_x = -11
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/template_noop)
+"ZH" = (
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/almayer,
 /area/template_noop)
 
 (1,1,1) = {"
@@ -682,10 +682,10 @@ tD
 Ld
 DS
 aE
-Cc
+vH
 ON
-Ox
-Qz
+Lp
+rg
 KG
 Ld
 Ld
@@ -706,7 +706,7 @@ Ld
 DS
 Ki
 tp
-Ug
+VR
 fN
 lI
 UQ
@@ -728,7 +728,7 @@ nF
 Yj
 qI
 oH
-gc
+ut
 xS
 UJ
 UJ
@@ -746,18 +746,18 @@ NV
 NV
 aN
 qI
-vh
-hF
+iv
+bb
 ON
-rW
-Vn
+Bm
+hh
 tp
 ON
-Iv
-cT
+np
+Vs
 ON
-yD
-IU
+ys
+iJ
 Ia
 wO
 EW
@@ -768,19 +768,19 @@ NV
 NV
 aN
 qI
-si
+nO
 pw
 oH
 ON
 yv
 oH
-Vn
+hh
 KC
 oH
 oH
 KC
 oH
-Vn
+hh
 BC
 Wt
 Wd
@@ -795,15 +795,15 @@ oH
 tp
 tp
 ON
-Vn
+hh
 xW
-hG
+ZH
 ON
 VD
 Ky
 ON
 tp
-Vn
+hh
 KG
 NV
 NV
@@ -816,17 +816,17 @@ rv
 tZ
 oH
 oH
-Vn
+hh
 ON
 YV
 mz
-Vn
+hh
 xS
 UJ
 UJ
 qI
 CG
-NR
+va
 KG
 NV
 NV
@@ -837,19 +837,19 @@ WN
 xR
 Nm
 bw
-Vn
+hh
 tp
 tp
 KC
-tC
+aB
 ST
 OP
-Ug
+VR
 tp
 tp
 Hb
 Jv
-tC
+aB
 KG
 NV
 NV
@@ -860,13 +860,13 @@ NV
 NV
 WN
 LG
-MB
+BV
 oH
 oH
 ON
-Fx
+IC
 pV
-tC
+aB
 ON
 Sh
 oH
@@ -884,18 +884,18 @@ NV
 NV
 WN
 LG
-Wf
+gw
 BC
 HH
-KO
+RR
 xR
-KO
+RR
 HH
 LG
-Vn
-tC
-tC
-Vn
+hh
+aB
+aB
+hh
 BC
 Wt
 Wd
@@ -909,15 +909,15 @@ NV
 WN
 xR
 Uh
-cn
+Ne
 iU
-Ac
+vf
 iU
-cn
+Ne
 WN
 xR
-KO
-KO
+RR
+RR
 xR
 Uh
 NV
@@ -931,34 +931,34 @@ NV
 NV
 NV
 NV
-il
-cn
+cP
+Ne
 JA
-Ac
+vf
 iU
-cn
-il
+Ne
+cP
 oh
 oh
 oh
 oh
-il
+cP
 NV
 NV
 NV
 "}
 (14,1,1) = {"
-CL
+Pt
 NV
-Ni
-he
-Ni
-Ac
-Ac
+Rr
+XK
+Rr
+vf
+vf
 Iu
-Ge
+ks
 Vh
-Ge
+ks
 Iu
 Xm
 oh

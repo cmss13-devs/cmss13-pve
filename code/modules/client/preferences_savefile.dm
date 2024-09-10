@@ -483,6 +483,7 @@
 	S["yautja_status"] << yautja_status
 	S["synth_status"] << synth_status
 
+
 	S["lang_chat_disabled"] << lang_chat_disabled
 	S["show_permission_errors"] << show_permission_errors
 	S["key_bindings"] << key_bindings
@@ -530,6 +531,7 @@
 	//Character
 	S["OOC_Notes"] >> metadata
 	S["real_name"] >> real_name
+	S["slot_label"] >> slot_label
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"] >> gender
@@ -604,6 +606,9 @@
 	S["completed_tutorials"] >> tutorial_string
 	tutorial_savestring_to_list(tutorial_string)
 
+	S["ds_camo"] >> dropship_camo
+	S["plat_name"] >> platoon_name
+
 	S.Unlock()
 
 	//Sanitize
@@ -653,6 +658,9 @@
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
 	//b_type = sanitize_text(b_type, initial(b_type))
 
+	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
+	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
+
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
 		ResetJobs()
@@ -693,6 +701,7 @@
 	//Character
 	S["OOC_Notes"] << metadata
 	S["real_name"] << real_name
+	S["slot_label"] << slot_label
 	S["name_is_always_random"] << be_random_name
 	S["body_is_always_random"] << be_random_body
 	S["gender"] << gender
@@ -762,6 +771,9 @@
 	S["exploit_record"] << exploit_record
 
 	S["completed_tutorials"] << tutorial_list_to_savestring()
+
+	S["ds_camo"] << dropship_camo
+	S["plat_name"] << platoon_name
 
 	S.Unlock()
 
