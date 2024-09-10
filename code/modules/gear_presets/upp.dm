@@ -736,6 +736,14 @@ var/random_name
 /datum/equipment_preset/upp/colonist/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = null
+	var/random_civilian_satchel= rand(1,3)
+	switch(random_civilian_satchel)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BODY)
 
 	var/random_civilian_uniform= rand(1,9)
 	switch(random_civilian_uniform)
@@ -793,3 +801,6 @@ var/random_name
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
