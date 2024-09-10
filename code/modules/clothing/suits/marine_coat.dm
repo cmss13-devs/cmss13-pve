@@ -369,10 +369,3 @@
 	icon_state = "jacket_grey"
 	item_state = "jacket_grey"
 	has_buttons = FALSE
-
-/obj/item/clothing/suit/storage/jacket/marine/bomber/grey/upp
-	name = "People's Police bomber jacket"
-	desc = "A blue-grey bomber jacket worn by People's Police constables."
-	icon_state = "jacket_grey"
-	item_state = "jacket_grey"
-	has_buttons = FALSE

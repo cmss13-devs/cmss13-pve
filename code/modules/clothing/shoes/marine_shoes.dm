@@ -48,14 +48,12 @@
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
-	icon_state = "marine"
 	knife_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp_knife
 	knife_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp/guard
-	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"
 	knife_type = /obj/item/attachable/bayonet/upp
@@ -82,16 +80,16 @@
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
-	desc = "A pair of black boots not so dissimilar from USCM combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+	desc = "A pair of black boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 	knife_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
-	desc = "A pair of brown boots not so dissimilar from UPP combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+	desc = "A pair of brown boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
 /obj/item/clothing/shoes/marine/joe
 	name = "biohazard boots"
-	desc = "A pair of biohazard boots. Tomorrow, Together."
+	desc = "A pair of utilitarian biohazard boots."
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH

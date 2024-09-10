@@ -1399,8 +1399,8 @@
 	new /obj/item/weapon/sword/machete(src)
 
 /obj/item/storage/pouch/etool
-	name = "etool pouch"
-	desc = "A pouch designed to carry the Type 50 entrenching tool."
+	name = "Type 50 entrenching tool pouch"
+	desc = "A pouch designed to carry the Type 50 entrenching tool. Sadly, not good for much else."
 	icon_state = "entrench"
 	max_w_class = SIZE_SMALL
 	can_hold = /obj/item/tool/shovel/etool

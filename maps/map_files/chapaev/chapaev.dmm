@@ -1150,6 +1150,10 @@
 	pixel_x = 6;
 	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
 	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -1424,6 +1428,26 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/hangar)
+"ly" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/weapon/dart,
+/obj/item/weapon/dart,
+/obj/item/weapon/dart{
+	pixel_y = 4;
+	pixel_x = -5
+	},
+/obj/item/weapon/dart/green,
+/obj/item/weapon/dart/green{
+	pixel_y = -5
+	},
+/obj/item/weapon/dart/green{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/canteen)
 "lE" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata{
@@ -4847,6 +4871,7 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/item/dartboard,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -5435,25 +5460,11 @@
 /area/golden_arrow/dorms)
 "QK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = 17;
-	pixel_y = 5
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 14;
+	pixel_x = -3
 	},
-/obj/item/weapon/dart,
-/obj/item/weapon/dart,
-/obj/item/weapon/dart{
-	pixel_y = 4;
-	pixel_x = -5
-	},
-/obj/item/weapon/dart/green,
-/obj/item/weapon/dart/green{
-	pixel_y = -5
-	},
-/obj/item/weapon/dart/green{
-	pixel_y = 9;
-	pixel_x = 5
-	},
-/obj/item/dartboard,
+/obj/item/ammo_box/magazine/t73,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -6466,18 +6477,11 @@
 /area/golden_arrow/cryo_cells)
 "Yz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/facepaint/black{
-	pixel_x = -7;
-	pixel_y = 9
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 14;
+	pixel_x = -3
 	},
-/obj/item/facepaint/green{
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/obj/item/folded_tent/big{
-	name = "folded Big Tent";
-	desc = "A standard Tent. This one is just a bigger, general purpose version. Unfold in a suitable location for maximum FOB vibes. Mess Tech not included. ENTRANCE TO THE SOUTH."
-	},
+/obj/item/ammo_box/magazine/t73,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -15391,7 +15395,7 @@ Zv
 af
 DK
 rA
-Wp
+ly
 nO
 EA
 Ul

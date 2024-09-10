@@ -120,13 +120,21 @@
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 7
 
-/obj/item/storage/box/loadout/upp
+/obj/item/storage/box/loadout/t73
 	name = "Type 73 storing case"
 	desc = "A small case containing a loaded Type 73, and additional magazines."
-/obj/item/storage/box/loadout/upp/fill_preset_inventory()
+/obj/item/storage/box/loadout/t73/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/t73(src)
+
+/obj/item/storage/box/loadout/zhnk72
+	name = "ZHNK-72 storing case"
+	desc = "A small case containing a loaded ZHNK-72, and additional speedloaders."
+/obj/item/storage/box/loadout/zhnk72/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/upp(src)
 
 /obj/item/storage/box/loadout/M4A3_custom_loadout
 	name = "M4A3 storage case"

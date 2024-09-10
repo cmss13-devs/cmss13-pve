@@ -1108,7 +1108,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
-// UPP Are very powerful against bullets (marines) but middling against melee (xenos)
 /obj/item/clothing/head/helmet/marine/veteran/UPP
 	name = "\improper 6B75 helmet"
 	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
@@ -1125,23 +1124,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
 /obj/item/clothing/head/helmet/marine/veteran/UPP/naval
-	name = "\improper 6b82 combat helmet"
-	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic shell comprised of three seperate plates that can be detached from their regular liner and attached to an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
+	name = "\improper 6B82 helmet"
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates that can adjusted in size due to the liner system and worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
 	icon_state = "upp_helmet_naval"
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	clothing_traits = list(TRAIT_EAR_PROTECTION)
-	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
-	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
 /obj/item/clothing/head/helmet/marine/veteran/UPP/naval/alt
-	name = "\improper 6b82 combat helmet"
-	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic shell comprised of three seperate plates that can be detached from their regular liner and attached to an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates that can adjusted in size due to the liner system and worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
 
 
