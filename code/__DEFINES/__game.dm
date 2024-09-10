@@ -553,3 +553,9 @@
 #define PERF_TOGGLE_SHUTTLES (1<<3)
 /// Disables loading Techwebs and additional Z-Levels
 #define PERF_TOGGLE_TECHWEBS (1<<4)
+
+/// Dropship Camos
+#define DROPSHIP_CAMO_TAN "Tan"
+#define DROPSHIP_CAMO_NAVY "Navy"
+#define DROPSHIP_CAMO_URBAN "Urban"
+#define DROPSHIP_CAMO_JUNGLE "Jungle"

@@ -286,12 +286,12 @@
 		human.job = title //TODO Why is this a mob variable at all?
 
 		if(gear_preset_whitelist[job_whitelist])
-			arm_equipment(human, gear_preset_whitelist[job_whitelist], FALSE, TRUE)
+			arm_equipment(human, gear_preset_whitelist[job_whitelist], FALSE, TRUE, late_join = FALSE)
 			var/generated_account = generate_money_account(human)
 			announce_entry_message(human, generated_account, whitelist_status) //Tell them their spawn info.
 			generate_entry_conditions(human, whitelist_status) //Do any other thing that relates to their spawn.
 		else
-			arm_equipment(human, gear_preset, FALSE, TRUE) //After we move them, we want to equip anything else they should have.
+			arm_equipment(human, gear_preset, FALSE, TRUE, FALSE) //After we move them, we want to equip anything else they should have.
 			var/generated_account = generate_money_account(human)
 			announce_entry_message(human, generated_account) //Tell them their spawn info.
 			generate_entry_conditions(human) //Do any other thing that relates to their spawn.
