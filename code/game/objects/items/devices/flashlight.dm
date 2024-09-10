@@ -9,7 +9,7 @@
 	flags_equip_slot = SLOT_WAIST
 
 	matter = list("metal" = 50,"glass" = 20)
-
+	light_color = "#dae2ff"
 	light_range = 5
 	light_power = 1
 	ground_offset_x = 2
@@ -32,8 +32,10 @@
 	. = ..()
 	if(on)
 		icon_state = "[initial(icon_state)]-on"
+		item_state = "[initial(item_state)]-on"
 	else
 		icon_state = initial(icon_state)
+		item_state = initial(item_state)
 
 /obj/item/device/flashlight/animation_spin(speed = 5, loop_amount = -1, clockwise = TRUE, sections = 3, angular_offset = 0, pixel_fuzz = 0)
 	clockwise = pick(TRUE, FALSE)
@@ -576,3 +578,14 @@
 	signal.linked_cam = new(loc, name)
 	cas_groups[FACTION_MARINE].add_signal(signal)
 	anchored = TRUE
+
+/obj/item/device/flashlight/tnr
+	name = "TNR shoulder lamp"
+	desc = "A dismounted TNR shoulder lamp."
+	icon = 'icons/obj/items/lighting.dmi'
+	icon_state = "tnr"
+	item_state = "tnr"
+	w_class = SIZE_MEDIUM
+	flags_equip_slot = null
+	raillight_compatible = 0
+
