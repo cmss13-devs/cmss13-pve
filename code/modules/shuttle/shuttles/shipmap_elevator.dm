@@ -88,7 +88,7 @@
 	width = 2
 	var/load_post_roundstart = FALSE
 
-/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/hangar/Initialize()
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/hangar/Initialize(mapload, ...)
 	. = ..()
 	if(load_post_roundstart)
 		load_roundstart()
