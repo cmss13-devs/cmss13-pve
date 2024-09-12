@@ -8,10 +8,13 @@
 /area/golden_arrow/hangar_shuttle)
 "Z" = (
 /obj/structure/machinery/computer/shuttle/elevator_controller/console{
-	pixel_y = 16;
-	layer = 4
+	pixel_y = 14;
+	layer = 4;
+	pixel_x = -1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/plating/plating_catwalk{
+	icon_state = "plating_catwalk_elevator"
+	},
 /area/golden_arrow/hangar_shuttle)
 
 (1,1,1) = {"
