@@ -52,7 +52,6 @@
 	overlays.Cut()
 
 	for(var/obj/item/reagent_container/food/snacks/O in ingredients)
-
 		i++
 		if(i == 1)
 			fullname += "[O.name]"

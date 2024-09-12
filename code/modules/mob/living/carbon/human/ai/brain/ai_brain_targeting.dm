@@ -119,7 +119,7 @@
 	if(!shoot_to_kill && target.stat == UNCONSCIOUS)
 		return FALSE
 
-	if(target.faction == tied_human.faction)
+	if(faction_check(target))
 		return FALSE
 
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)
