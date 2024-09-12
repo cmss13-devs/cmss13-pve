@@ -1959,6 +1959,10 @@
 	pixel_y = 3
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/flamertank{
+	pixel_x = -11;
+	pixel_y = 2
+	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
 	},
@@ -17942,6 +17946,9 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/flamertank{
+	pixel_x = -7
+	},
 /turf/open/floor/almayer{
 	icon_state = "mono"
 	},
