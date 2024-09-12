@@ -2,7 +2,7 @@
 
 /datum/human_ai_management_menu/New()
 
-/datum/human_ai_management_menu/proc/ui_interact(mob/user, datum/tgui/ui)
+/datum/human_ai_management_menu/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "HumanAIManager")
@@ -122,7 +122,7 @@
 		return
 
 	if(human_ai_menu)
-		human_ai_menu.ui_interact(mob)
+		human_ai_menu.tgui_interact(mob)
 		return
 
 	human_ai_menu = new /datum/human_ai_management_menu(src)

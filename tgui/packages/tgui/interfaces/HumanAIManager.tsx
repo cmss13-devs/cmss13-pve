@@ -49,13 +49,13 @@ type BackendContext = {
 };
 
 const AIContext = (props, context) => {
-  const { data, act } = useBackend<BackendContext>(context);
+  const { data, act } = useBackend<BackendContext>();
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
-    context,
+    'squad_assignment_mode',
     false
   );
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
-    context,
+    'order_assignment_mode',
     false
   );
   return (
@@ -137,14 +137,12 @@ const AIContext = (props, context) => {
 const CreatedOrder = (props) => {
   const order: Order = props.order;
   const context: BackendContext = props.context;
-  const { data, act } = useBackend<BackendContext>(context);
+  const { data, act } = useBackend<BackendContext>();
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
-    context,
     'order_assignment_mode',
     false
   );
   const [selectedSquad, setSelectedSquad] = useLocalState(
-    context,
     'selected_squad',
     -1
   );
@@ -202,16 +200,14 @@ const HumanAIReadout = (props) => {
   const human: AIHuman = props.human;
   const context: BackendContext = props.context;
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
-    context,
     'squad_assignment_mode',
     false
   );
   const [selectedSquad, setSelectedSquad] = useLocalState(
-    context,
     'selected_squad',
     -1
   );
-  const { data, act } = useBackend<BackendContext>(context);
+  const { data, act } = useBackend<BackendContext>();
   const gottenSquad: Squad = data.squads[selectedSquad];
   return (
     <div
@@ -307,19 +303,16 @@ const HumanAIReadout = (props) => {
 const SquadReadout = (props) => {
   const squad: Squad = props.squad;
   const context: BackendContext = props.context;
-  const { data, act } = useBackend<BackendContext>(context);
+  const { data, act } = useBackend<BackendContext>();
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
-    context,
     'squad_assignment_mode',
     false
   );
   const [selectedSquad, setSelectedSquad] = useLocalState(
-    context,
     'selected_squad',
     -1
   );
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
-    context,
     'order_assignment_mode',
     false
   );

@@ -2,7 +2,6 @@
 SUBSYSTEM_DEF(human_ai)
 	name = "Human AI"
 	priority = SS_PRIORITY_HUMAN_AI
-	flags = SS_NO_INIT
 	wait = 0.2 SECONDS
 	/// A list of mobs scheduled to process
 	var/list/mob/living/carbon/human/ai/current_run = list()
@@ -20,6 +19,14 @@ SUBSYSTEM_DEF(human_ai)
 
 	/// List of all existing orders
 	var/list/datum/ongoing_action/existing_orders = list()
+
+	var/list/human_ai_factions = list()
+
+/datum/controller/subsystem/human_ai/Initialize()
+	for(var/faction_path in subtypesof(/datum/human_ai_faction))
+		var/datum/human_ai_faction/faction_obj = new faction_path
+		human_ai_factions[faction_obj.faction] = faction_obj
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/human_ai/stat_entry(msg)
 	msg = "P:[length(GLOB.human_ai_brains)]"

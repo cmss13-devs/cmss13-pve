@@ -10,7 +10,7 @@
 	/// Ref to the last turf that the AI shot at
 	var/turf/open/target_floor
 	/// If TRUE, the AI is allowed to establish overwatches
-	var/overwatch_allowed = TRUE
+	var/overwatch_allowed = FALSE
 	/// List of overwatched turfs
 	var/list/turf/open/overwatch_turfs = list()
 
@@ -119,7 +119,7 @@
 	if(!shoot_to_kill && target.stat == UNCONSCIOUS)
 		return FALSE
 
-	if(target.faction == tied_human.faction)
+	if(faction_check(target))
 		return FALSE
 
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)

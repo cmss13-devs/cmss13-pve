@@ -25,14 +25,18 @@
 	ai_in_squad += adding
 
 	adding.set_ongoing_order(assigned_order)
+	RegisterSignal(adding.tied_human, COMSIG_MOB_DEATH, PROC_REF(on_squad_member_death))
+	RegisterSignal(adding, COMSIG_PARENT_QDELETING, PROC_REF(on_squad_member_delete))
 
 /datum/human_ai_squad/proc/remove_from_squad(datum/human_ai_brain/removing)
 	if(removing == squad_leader)
-		squad_leader = null
+		set_squad_leader(null)
 	removing.ongoing_order = null
 	removing.squad_id = null
 	removing.is_squad_leader = FALSE
 	ai_in_squad -= removing
+	UnregisterSignal(removing?.tied_human, COMSIG_MOB_DEATH)
+	UnregisterSignal(removing, COMSIG_PARENT_QDELETING)
 
 /datum/human_ai_squad/proc/set_order(datum/ongoing_action/order)
 	assigned_order = order
@@ -43,7 +47,29 @@
 	if(squad_leader)
 		squad_leader.is_squad_leader = FALSE
 	squad_leader = new_leader
-	new_leader.is_squad_leader = TRUE
+	if(squad_leader)
+		new_leader.is_squad_leader = TRUE
+
+/datum/human_ai_squad/proc/on_squad_member_death(mob/living/carbon/human/dead_mob)
+	SIGNAL_HANDLER
+
+	if(istype(dead_mob, /mob/living/carbon/human/ai))
+		var/mob/living/carbon/human/ai/dead_squddie = dead_mob
+		if(squad_leader == dead_squddie.ai_brain)
+			set_squad_leader(null)
+
+	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
+		if(squaddie.tied_human.is_mob_incapacitated())
+			continue
+
+		squaddie.on_squad_member_death(dead_mob)
+
+/datum/human_ai_squad/proc/on_squad_member_delete(datum/human_ai_brain/deleting)
+	SIGNAL_HANDLER
+
+	remove_from_squad(deleting)
+
+
 
 /datum/human_ai_brain
 	/// Numeric ID of the squad this AI is in, if any
