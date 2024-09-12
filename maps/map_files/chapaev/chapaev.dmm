@@ -413,7 +413,8 @@
 	pixel_x = 17
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
 "cW" = (
@@ -1425,7 +1426,8 @@
 	pixel_x = 17
 	},
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
 "ly" = (
@@ -1590,23 +1592,19 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/structure/bed/bedroll{
-	buckle_lying = null;
-	can_buckle = 0;
-	color = "#3F575B";
+/obj/item/roller/bedroll{
 	desc = "A mechanic's mat.";
-	foldabletype = null;
-	name = "floor mat";
-	pixel_y = -4
+	color = "#3F575B";
+	name = "gym mat";
+	pixel_y = -2;
+	pixel_x = 3
 	},
-/obj/structure/bed/bedroll{
-	buckle_lying = null;
-	can_buckle = 0;
-	color = "#3F575B";
+/obj/item/roller/bedroll{
 	desc = "A mechanic's mat.";
-	foldabletype = null;
-	name = "floor mat";
-	pixel_y = 5
+	color = "#3F575B";
+	name = "gym mat";
+	pixel_y = 7;
+	pixel_x = -6
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -1661,7 +1659,8 @@
 	},
 /obj/item/trash/cigbutt/bcigbutt,
 /turf/open/floor/strata{
-	icon_state = "floor2"
+	dir = 4;
+	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
 "nq" = (
@@ -4487,19 +4486,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/medical)
-"Jr" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/bodybag/tarp/reactive,
-/obj/item/tool/wrench{
-	pixel_y = 9
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/hangar)
 "Jt" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5996,11 +5982,6 @@
 	icon_state = "floor3"
 	},
 /area/golden_arrow/hangar)
-"UM" = (
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/hangar)
 "UO" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6286,6 +6267,9 @@
 /obj/item/prop/almayer/comp_closed{
 	pixel_x = -3;
 	pixel_y = 4
+	},
+/obj/item/tool/wrench{
+	pixel_y = 16
 	},
 /turf/open/floor/strata{
 	dir = 6;
@@ -17193,11 +17177,11 @@ oB
 iF
 Jf
 BV
-UM
-UM
-UM
+Jf
+Jf
+Jf
 yH
-Jr
+Uv
 WW
 Ip
 Ip
