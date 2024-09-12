@@ -1736,7 +1736,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "afy" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -1976,7 +1976,7 @@
 	icon_state = "SW-out"
 	},
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_hangar_elevator"
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3877,7 +3877,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "alS" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -6141,10 +6141,13 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_hangar_elevator"
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
+	},
+/obj/effect/landmark/nightmare{
+	insert_tag = "hangar"
 	},
 /turf/open/floor/almayer/edge/smooth/corner{
 	dir = 1
@@ -8327,8 +8330,14 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/supply)
 "ayS" = (
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/hangar{
+	id = "garrow_hangar_elevator_down";
+	elevator_network = "ArrowHangar";
+	name = "Engineering";
+	airlock_area = /area/golden_arrow/hangar_shuttle/lower
+	},
 /turf/open/floor/plating,
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "ayU" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12124,7 +12133,7 @@
 	pixel_y = 1
 	},
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_hangar_elevator"
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -15201,7 +15210,6 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer{
 	icon_state = "cargo"
 	},
@@ -15318,7 +15326,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "aTu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -16477,7 +16485,7 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
+	id = "garrow_hangar_elevator"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16872,7 +16880,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "aYu" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -17930,7 +17938,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "eZR" = (
 /obj/item/storage/box/guncase/flamer/fuel{
 	pixel_y = 8
@@ -18179,7 +18187,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "hwm" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -18535,6 +18543,9 @@
 "kQO" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supplydrop)
+"lgm" = (
+/turf/open/floor/plating,
+/area/golden_arrow/hangar_shuttle/lower)
 "lov" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18775,7 +18786,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "mHX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -19155,7 +19166,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "pRt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -19256,7 +19267,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "qds" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -19614,7 +19625,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "txJ" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Six Blast Door";
@@ -20021,7 +20032,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "xOB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20047,7 +20058,7 @@
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
-/area/golden_arrow/engineering)
+/area/golden_arrow/hangar_shuttle/lower)
 "xXR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -25586,8 +25597,8 @@ wAd
 oTo
 fWu
 hhQ
-ayS
-ayS
+lgm
+lgm
 ayS
 afx
 fWu
@@ -25738,9 +25749,9 @@ bPy
 kQO
 fWu
 pPt
-ayS
-ayS
-ayS
+lgm
+lgm
+lgm
 qcH
 fWu
 ngb

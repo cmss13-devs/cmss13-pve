@@ -128,3 +128,11 @@
 /area/golden_arrow/vehicle_shuttle/two/upper
 	name = "\improper Vehicle Elevator Two Upper"
 
+/area/golden_arrow/hangar_shuttle
+	name = "\improper Hangar Elevator"
+
+/area/golden_arrow/hangar_shuttle/upper
+	name = "\improper Hangar Elevator Upper"
+
+/area/golden_arrow/hangar_shuttle/lower
+	name = "\improper Hangar Elevator Lower"

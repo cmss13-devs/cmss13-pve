@@ -141,6 +141,10 @@
 
 /datum/map_template/shuttle/trijent_elevator/golden_arrow/cargo
 	name = "Cargo Elevator"
-	elevator_network = "garrow_cargo"
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	elevator_network = "ArrowCargo"
+
+/datum/map_template/shuttle/trijent_elevator/golden_arrow/hangar
+	name = "Hangar Elevator"
+	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_HANGAR
+	elevator_network = "ArrowHangar"

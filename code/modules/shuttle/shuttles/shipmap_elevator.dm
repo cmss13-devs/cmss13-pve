@@ -56,6 +56,13 @@
 	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	area_type = /area/golden_arrow/cargo_shuttle/elevator
 
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/hangar
+	name = "Hangar Elevator"
+	id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_HANGAR
+	height = 3
+	width = 2
+	area_type = /area/golden_arrow/hangar_shuttle
+
 /obj/docking_port/stationary/shipmap_elevator/visible_message()
 	return
 
@@ -74,3 +81,14 @@
 	name = "Cargo Elevator"
 	height = 6
 	width = 8
+
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/hangar
+	name = "Hangar Elevator"
+	height = 3
+	width = 2
+	var/load_post_roundstart = FALSE
+
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/hangar/Initialize()
+	. = ..()
+	if(load_post_roundstart)
+		load_roundstart()

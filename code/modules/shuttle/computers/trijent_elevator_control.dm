@@ -121,3 +121,9 @@
 		if("button-push")
 			playsound(loc, get_sfx("terminal_button"), KEYBOARD_SOUND_VOLUME * 2, 1)
 			return FALSE
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/console
+	icon_state = "elevator_console"
+	dir = NORTH
+	flags_atom = ON_BORDER
+	density = TRUE

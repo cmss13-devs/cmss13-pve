@@ -329,6 +329,9 @@
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_two
 	area_type = /area/golden_arrow/vehicle_shuttle/two
 
+/turf/open/floor/almayer/empty/golden_arrow/hangar
+	area_type = /area/golden_arrow/hangar_shuttle
+
 //Others
 /turf/open/floor/almayer/uscm
 	icon_state = "logo_c"
