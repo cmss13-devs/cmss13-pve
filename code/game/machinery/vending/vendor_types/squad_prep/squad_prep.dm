@@ -127,6 +127,7 @@
 		list("Large Pistol Magazine Pouch", round(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch", round(scale * 1.25), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+		list("Incinerator Fuel Tank Pouch", round(scale * 1.25), /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
 		list("M5 Standalone Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
