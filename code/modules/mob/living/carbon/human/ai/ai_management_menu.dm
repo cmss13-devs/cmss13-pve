@@ -135,5 +135,7 @@
 		return
 
 	var/mob/living/carbon/human/ai/ai_human = new()
-	cmd_admin_dress_human(ai_human)
+	if(!cmd_admin_dress_human(ai_human))
+		qdel(ai_human)
+		return
 	ai_human.forceMove(get_turf(mob))
