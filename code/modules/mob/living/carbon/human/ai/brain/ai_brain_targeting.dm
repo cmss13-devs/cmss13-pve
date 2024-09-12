@@ -244,6 +244,7 @@
 		addtimer(CALLBACK(primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, current_target, null, null, null, TRUE), primary_weapon.get_fire_delay())
 
 	target_floor = get_turf(current_target)
+	tied_human.face_atom(target_floor)
 
 /datum/human_ai_brain/proc/end_gun_fire()
 	primary_weapon?.set_target(null)
