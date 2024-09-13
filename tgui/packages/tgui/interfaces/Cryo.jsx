@@ -40,6 +40,11 @@ export const Cryo = () => {
 
 const CryoContent = (props) => {
   const { act, data } = useBackend();
+
+  let soundicon = 'volume-high';
+  if (!data.notify) {
+    soundicon = 'volume-xmark';
+  }
   return (
     <>
       <Section title="Occupant">
