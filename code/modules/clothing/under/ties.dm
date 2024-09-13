@@ -561,85 +561,17 @@
 /obj/item/storage/internal/accessory/webbing/m3/generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/custom_color,
-		/obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
 		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/explosive,
-		/obj/item/ammo_magazine/rifle/heap,
-		/obj/item/ammo_magazine/rifle/ap,
-		/obj/item/ammo_magazine/rifle/le,
-		/obj/item/ammo_magazine/rifle/penetrating,
-		/obj/item/ammo_magazine/rifle/toxin,
-		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1,
-		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1/training,
-		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
-		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
-		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
-		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
-		/obj/item/ammo_magazine/rifle/m4ra,
-		/obj/item/ammo_magazine/rifle/m4ra/ap,
-		/obj/item/ammo_magazine/rifle/m4ra/ext,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/heap,
-		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
-		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve,
 	)
 
 /obj/item/storage/internal/accessory/webbing/m3/mag
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/explosive,
-		/obj/item/ammo_magazine/rifle/heap,
-		/obj/item/ammo_magazine/rifle/ap,
-		/obj/item/ammo_magazine/rifle/le,
-		/obj/item/ammo_magazine/rifle/penetrating,
-		/obj/item/ammo_magazine/rifle/toxin,
-		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1,
-		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
-		/obj/item/ammo_magazine/rifle/m41aMK1/training,
-		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
-		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
-		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
-		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
-		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
-		/obj/item/ammo_magazine/rifle/m4ra,
-		/obj/item/ammo_magazine/rifle/m4ra/ap,
-		/obj/item/ammo_magazine/rifle/m4ra/ext,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/heap,
-		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
-		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
-		/obj/item/ammo_magazine/rifle/m4ra/pve,
 	)
 
 /obj/item/storage/internal/accessory/webbing/m3/shotgun
 	can_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/custom_color,
-		/obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -662,14 +594,6 @@
 /obj/item/storage/internal/accessory/black_vest/m3/generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
-		/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-		/obj/item/ammo_magazine/handful/shotgun/custom_color,
-		/obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag,
-		/obj/item/ammo_magazine/handful/shotgun/beanbag/riot,
 	)
 
 /obj/item/storage/internal/accessory/black_vest/m3/m40
