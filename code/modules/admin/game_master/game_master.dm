@@ -342,7 +342,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					qdel(object)
 				return TRUE
 
-			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
+			var/spawning_xeno_type = GLOB.RoleAuthority.get_caste_by_text(selected_xeno)
 
 			if(!spawning_xeno_type)
 				to_chat(user, SPAN_NOTICE(SPAN_BOLD("Unable to find xeno type by name: [selected_xeno]")))

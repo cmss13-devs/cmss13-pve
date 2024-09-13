@@ -1,16 +1,21 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ah" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
 "aA" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/floor/prison,
+/area/template_noop)
+"aU" = (
+/obj/structure/bed/chair/comfy,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/landmark/corpsespawner/engineer,
+/turf/open/floor/prison/darkpurple2,
+/area/template_noop)
+"bh" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/landmark/corpsespawner/prisoner,
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "da" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
@@ -22,10 +27,21 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"fi" = (
-/turf/open/floor/prison{
-	icon_state = "darkpurple2"
+"dM" = (
+/obj/structure/machinery/door/airlock/prison_hatch/autoname,
+/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"ew" = (
+/obj/structure/prop/dam/crane,
+/turf/open/floor/prison/floor_marked/west,
+/area/template_noop)
+"gd" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
 	},
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "gB" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -40,20 +56,83 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"hT" = (
+"hy" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/faxmachine,
+/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"hI" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
+	dir = 4;
+	icon_state = "commb";
+	layer = 4
+	},
+/obj/item/reagent_container/food/drinks/cans/dr_gibb{
+	pixel_y = 10
+	},
+/turf/open/floor/prison/darkpurple2/north,
+/area/template_noop)
+"ic" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/newspaper,
+/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"jx" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 13
+	},
+/obj/structure/machinery/computer3/server/rack,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"jF" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
+	dir = 4;
+	icon_state = "commb"
+	},
+/turf/open/floor/prison/darkpurple2/southeast,
+/area/template_noop)
+"kx" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkpurple2"
-	},
+/turf/open/floor/prison/darkpurple2/north,
 /area/template_noop)
-"jh" = (
-/obj/item/trash/pistachios,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+"kU" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/plating/prison,
 /area/template_noop)
-"ji" = (
+"na" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison,
+/area/template_noop)
+"nr" = (
+/turf/open/floor/prison/darkpurple2,
+/area/template_noop)
+"nD" = (
+/obj/item/trash/chunk,
+/turf/open/floor/prison/floor_marked/west,
+/area/template_noop)
+"nV" = (
+/turf/open/floor/prison/darkpurple2/southwest,
+/area/template_noop)
+"oy" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison/darkpurple2/northwest,
+/area/template_noop)
+"pf" = (
+/turf/open/floor/prison/floor_marked/west,
+/area/template_noop)
+"pl" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"pF" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
@@ -64,209 +143,65 @@
 	pixel_y = 18;
 	desc = "Wait, why won't it work with my computer?"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"kU" = (
+"qt" = (
+/turf/open/floor/prison/cell_stripe/east,
+/area/template_noop)
+"qE" = (
 /obj/structure/machinery/deployable/barrier,
-/turf/open/floor/plating/prison,
+/turf/open/floor/prison/darkpurple2/southwest,
 /area/template_noop)
-"lm" = (
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"mN" = (
-/obj/structure/machinery/computer3/server/rack,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"na" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison,
-/area/template_noop)
-"np" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/communications{
-	dir = 4;
-	icon_state = "commb";
-	layer = 4
-	},
-/obj/item/reagent_container/food/drinks/cans/dr_gibb{
-	pixel_y = 10
-	},
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"nZ" = (
-/obj/structure/machinery/deployable/barrier,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
-"pq" = (
-/obj/structure/prop/dam/crane,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "floor_marked"
-	},
-/area/template_noop)
-"sl" = (
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"sF" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/communications{
-	dir = 8;
-	icon_state = "commb"
-	},
-/obj/item/device/encryptionkey/WY{
-	pixel_x = 4;
-	pixel_y = -8
-	},
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "floor_marked"
-	},
-/area/template_noop)
-"tg" = (
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"tn" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "floor_marked"
-	},
-/area/template_noop)
-"tH" = (
-/turf/open/floor/prison{
-	dir = 1;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"uf" = (
+"rk" = (
 /obj/structure/bed/chair{
-	dir = 4
+	dir = 8
+	},
+/turf/open/floor/prison/darkpurple2/northeast,
+/area/template_noop)
+"sV" = (
+/obj/structure/computer3frame,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"uj" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/prison/cell_stripe/east,
+/area/template_noop)
+"vn" = (
+/obj/structure/bed/chair{
+	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "floor_marked"
-	},
+/obj/effect/landmark/corpsespawner/prisoner,
+/turf/open/floor/prison/darkpurple2/west,
 /area/template_noop)
-"ur" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/faxmachine,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
-"uD" = (
-/obj/item/trash/wy_chips_pepper,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"uO" = (
-/obj/item/stock_parts/manipulator/pico,
-/turf/open/floor/prison{
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"va" = (
+"xP" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "darkpurple2"
-	},
+/turf/open/floor/prison/darkpurple2/east,
 /area/template_noop)
-"wj" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "darkpurple2"
-	},
+"yx" = (
+/obj/item/trash/wy_chips_pepper,
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"xH" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+"yO" = (
+/obj/item/stock_parts/manipulator/pico,
+/turf/open/floor/prison/darkpurple2,
 /area/template_noop)
 "yS" = (
 /turf/closed/wall/prison,
 /area/template_noop)
-"zv" = (
+"Cu" = (
 /obj/structure/bed/chair{
-	dir = 8
+	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"zL" = (
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
-"CE" = (
-/obj/structure/machinery/deployable/barrier,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"CO" = (
-/turf/open/floor/prison{
-	dir = 9;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"CV" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/communications{
-	dir = 8;
-	icon_state = "commb"
-	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"DF" = (
-/obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/floor/prison{
-	icon_state = "darkpurple2"
-	},
+/turf/open/floor/prison/floor_marked/west,
 /area/template_noop)
-"DV" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = -3
-	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+"Dd" = (
+/turf/open/floor/prison/darkpurple2/north,
 /area/template_noop)
 "El" = (
 /obj/structure/bed/chair{
@@ -274,32 +209,21 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"Ep" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
 "Fp" = (
 /turf/open/floor/prison,
 /area/template_noop)
-"Ft" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+"HL" = (
+/turf/open/floor/prison/darkpurple2/northeast,
 /area/template_noop)
-"Jv" = (
-/obj/item/trash/chunk,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "floor_marked"
-	},
+"Ij" = (
+/obj/item/trash/pistachios,
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"Kd" = (
+"Jf" = (
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/prison/darkpurple2,
+/area/template_noop)
+"Ka" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4;
 	health = 300
@@ -309,56 +233,75 @@
 	layer = 3.1;
 	pixel_y = 10
 	},
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/template_noop)
-"Mn" = (
-/obj/structure/machinery/light/double/blue{
+"Kt" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
 	dir = 8;
-	pixel_x = -10;
-	pixel_y = 13
+	icon_state = "commb"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
+/obj/item/device/encryptionkey/WY{
+	pixel_x = 4;
+	pixel_y = -8
 	},
+/turf/open/floor/prison/floor_marked/west,
 /area/template_noop)
-"MZ" = (
+"Li" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/landmark/corpsespawner/ua_riot/burst,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"Lx" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/chips,
+/turf/open/floor/prison/darkpurple2/northeast,
+/area/template_noop)
+"LH" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb";
-	layer = 2.99
+	layer = 4
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "darkpurple2"
+/obj/item/reagent_container/food/drinks/cans/souto/blue{
+	pixel_x = 8;
+	pixel_y = 16
 	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"Ng" = (
-/obj/structure/machinery/deployable/barrier,
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"Ot" = (
+"LI" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/communications{
-	dir = 4;
+	dir = 8;
 	icon_state = "commb"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"Oy" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/trash/chips,
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "darkpurple2"
+"MN" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
 	},
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"Nd" = (
+/obj/structure/machinery/computer3/server/rack,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"NA" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"OC" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = -3
+	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "OG" = (
 /turf/closed/wall/mineral/bone_resin,
@@ -368,6 +311,16 @@
 	dir = 8
 	},
 /turf/open/floor/prison,
+/area/template_noop)
+"OT" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"Pw" = (
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "Qw" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -381,86 +334,39 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"QB" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"QF" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/newspaper,
-/turf/open/floor/prison{
-	icon_state = "floor_plate"
-	},
-/area/template_noop)
-"QG" = (
-/turf/open/floor/prison{
-	dir = 5;
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"Rd" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "darkpurple2"
-	},
+"RC" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/prison/darkpurple2/southeast,
 /area/template_noop)
 "RW" = (
 /turf/open/floor/bluegrid,
 /area/template_noop)
-"Ss" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "darkpurple2"
-	},
+"RX" = (
+/turf/open/floor/prison/darkpurple2/southeast,
 /area/template_noop)
-"SF" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/communications{
-	dir = 8;
-	icon_state = "commb";
-	layer = 4
-	},
-/obj/item/reagent_container/food/drinks/cans/souto/blue{
-	pixel_x = 8;
-	pixel_y = 16
-	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+"Sk" = (
+/turf/open/floor/prison/floor_plate,
 /area/template_noop)
-"Tl" = (
-/obj/structure/computer3frame,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"TI" = (
+"Tb" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
-"Vc" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
+"TR" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/prison/darkpurplefull2,
+/area/template_noop)
+"UK" = (
+/turf/open/floor/prison/darkpurple2/northwest,
+/area/template_noop)
+"Vu" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
+	dir = 4;
+	icon_state = "commb"
 	},
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
+/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "VZ" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -474,34 +380,18 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"Wu" = (
+"Wa" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/communications{
-	dir = 4;
-	icon_state = "commb"
+	dir = 8;
+	icon_state = "commb";
+	layer = 2.99
 	},
-/turf/open/floor/prison{
-	dir = 6;
-	icon_state = "darkpurple2"
-	},
+/turf/open/floor/prison/darkpurple2/southwest,
 /area/template_noop)
-"WV" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
-/area/template_noop)
-"XD" = (
+"Xb" = (
 /obj/structure/machinery/deployable/barrier,
-/turf/open/floor/prison{
-	icon_state = "darkpurple2"
-	},
-/area/template_noop)
-"Yj" = (
-/obj/structure/bed/chair/comfy,
-/turf/open/floor/prison{
-	icon_state = "darkpurple2"
-	},
+/turf/open/floor/prison/darkpurple2,
 /area/template_noop)
 "Za" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -510,36 +400,17 @@
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"Zj" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = 13
-	},
-/obj/structure/machinery/computer3/server/rack,
-/turf/open/floor/prison{
-	icon_state = "darkpurplefull2"
-	},
-/area/template_noop)
-"Zn" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/deployable/barrier,
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
-/area/template_noop)
 
 (1,1,1) = {"
 da
 yS
 yS
 yS
-Kd
+Ka
 kU
-nZ
+NA
 kU
-Kd
+Ka
 yS
 yS
 yS
@@ -547,148 +418,148 @@ yS
 "}
 (2,1,1) = {"
 yS
-mN
-lm
-jh
-lm
-lm
-lm
-lm
-zL
-zL
-Mn
-ur
-QF
+Nd
+Pw
+Ij
+Pw
+Pw
+Pw
+Pw
+Sk
+Sk
+pl
+hy
+ic
 "}
 (3,1,1) = {"
 yS
-Vc
+MN
 Fp
-lm
-va
-Ft
+Pw
+xP
+OT
 El
-xH
-uf
-tn
-lm
-tn
-pq
+Li
+Cu
+pf
+Pw
+pf
+ew
 "}
 (4,1,1) = {"
 yS
-Tl
-lm
-wj
+sV
+Pw
+oy
 VZ
-MZ
-SF
-CV
-sF
-Jv
-lm
-tn
-tn
+Wa
+LH
+LI
+Kt
+nD
+Pw
+pf
+pf
 "}
 (5,1,1) = {"
 yS
-lm
-fi
+Pw
+nr
 Za
 RW
 RW
 RW
 RW
 RW
-WV
-lm
-WV
-Zn
+qt
+Pw
+qt
+uj
 "}
 (6,1,1) = {"
 yS
-tg
-Yj
+TR
+Jf
 Qw
 RW
 RW
 RW
 RW
 RW
-Ss
+nV
 Fp
-CO
-CE
+UK
+qE
 "}
 (7,1,1) = {"
 kU
-lm
-DF
+Pw
+aU
 dv
 RW
 RW
 RW
 RW
 RW
-fi
+nr
 Fp
-tH
-XD
+Dd
+Xb
 "}
 (8,1,1) = {"
-Kd
-lm
-uO
+Ka
+Pw
+yO
 na
 RW
 RW
 RW
 RW
 RW
-fi
+nr
 aA
-tH
-XD
+Dd
+Xb
 "}
 (9,1,1) = {"
-Kd
-lm
-lm
-Oy
+Ka
+Pw
+Pw
+Lx
 gB
-Wu
-ji
-Ot
-np
-fi
+jF
+pF
+Vu
+hI
+nr
 Fp
-hT
-XD
+kx
+Xb
 "}
 (10,1,1) = {"
 yS
-QB
+gd
 Fp
-lm
-Rd
-TI
+Pw
+vn
+Tb
 OH
-zv
-ah
-sl
+bh
+rk
+RX
 OG
-QG
-Ng
+HL
+RC
 "}
 (11,1,1) = {"
 yS
-Zj
-tg
-lm
-lm
-DV
-lm
-uD
+jx
+TR
+Pw
+Pw
+OC
+Pw
+yx
 OG
 OG
 OG
@@ -698,9 +569,9 @@ OG
 (12,1,1) = {"
 da
 da
-Ep
-Ep
-Ep
+dM
+dM
+dM
 yS
 da
 OG

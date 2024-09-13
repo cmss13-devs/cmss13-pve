@@ -24,7 +24,7 @@
 			return
 
 		if(get_dist(home_turf, idle_xeno) <= 0)
-			var/datum/action/xeno_action/onclick/plant_weeds/plant_weed_action = get_xeno_action_by_type(parent, /datum/action/xeno_action/onclick/plant_weeds)
+			var/datum/action/xeno_action/onclick/plant_weeds/plant_weed_action = get_action(parent, /datum/action/xeno_action/onclick/plant_weeds)
 			INVOKE_ASYNC(plant_weed_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/plant_weeds, use_ability_wrapper))
 			home_turf = null
 			return
