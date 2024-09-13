@@ -211,7 +211,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Medical Scrubs, Olive", 12, /obj/item/clothing/under/rank/medical/olive, null, VENDOR_ITEM_REGULAR),
 	list("Medical Scrubs, Grey", 12, /obj/item/clothing/under/rank/medical/grey, null, VENDOR_ITEM_REGULAR),
 	list("Medical Scrubs, White", 12, /obj/item/clothing/under/rank/medical, null, VENDOR_ITEM_REGULAR),
-	list("USCM Service Uniform", 12, /obj/item/clothing/under/marine/officer/bridge, null, VENDOR_ITEM_REGULAR),
+	list("USCM Service Uniform, Tan", 12, /obj/item/clothing/under/marine/officer/bridge, null, VENDOR_ITEM_REGULAR),
+	list("USCM Service Uniform, White", 12, /obj/item/clothing/under/marine/dress, null, VENDOR_ITEM_REGULAR),
 	list("USCM Flightsuit", 12, /obj/item/clothing/under/rank/synthetic/flight, null, VENDOR_ITEM_REGULAR),
 	list("USCM Vehicle Crewman Uniform", 12, /obj/item/clothing/under/marine/officer/tanker, null, VENDOR_ITEM_REGULAR),	//PVE_addition
 	list("USCM Engineers Uniform", 12, /obj/item/clothing/under/marine/engineer/standard, null, VENDOR_ITEM_REGULAR),
@@ -231,6 +232,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Grey Utilities", 12, /obj/item/clothing/under/rank/synthetic/utility/yellow, null, VENDOR_ITEM_REGULAR),
 	list("Grey Utilities and Blue Jeans", 12, /obj/item/clothing/under/rank/synthetic/utility/red, null, VENDOR_ITEM_REGULAR),
 	list("Blue Utilities and Brown Jeans", 12, /obj/item/clothing/under/rank/synthetic/utility/blue, null, VENDOR_ITEM_REGULAR),
+	list("White Service Uniform", 12, /obj/item/clothing/under/colonist/white_service, null, VENDOR_ITEM_REGULAR),
 	list("Steward Clothes", 12, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, null, VENDOR_ITEM_REGULAR),
 	list("Red Dress Skirt", 12, /obj/item/clothing/under/blackskirt, null, VENDOR_ITEM_REGULAR),
 	list("Blue Suit Pants", 12, /obj/item/clothing/under/liaison_suit/blue, null, VENDOR_ITEM_REGULAR),
@@ -266,6 +268,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Beret, Red", 12, /obj/item/clothing/head/beret/cm/red, null, VENDOR_ITEM_REGULAR),
 	list("Beret, Standard", 12, /obj/item/clothing/head/beret/cm, null, VENDOR_ITEM_REGULAR),
 	list("Beret, Tan", 12, /obj/item/clothing/head/beret/cm/tan, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Green", 12, /obj/item/clothing/head/beret/cm, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 	list("Beret, Black", 12, /obj/item/clothing/head/beret/cm/black, null, VENDOR_ITEM_REGULAR),
 	list("Beret, White", 12, /obj/item/clothing/head/beret/cm/white, null, VENDOR_ITEM_REGULAR),
 	list("Surgical Cap, Blue", 12, /obj/item/clothing/head/surgery/blue, null, VENDOR_ITEM_REGULAR),
@@ -335,7 +338,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Windbreaker, Exploration", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant, null, VENDOR_ITEM_REGULAR),
 	list("Labcoat", 12, /obj/item/clothing/suit/storage/labcoat, null, VENDOR_ITEM_REGULAR),
 	list("Labcoat, Researcher", 12, /obj/item/clothing/suit/storage/labcoat/researcher, null, VENDOR_ITEM_REGULAR),
-	list("Quartermaster Jacket", 12, /obj/item/clothing/suit/storage/RO, null, VENDOR_ITEM_REGULAR),
+	list("Quartermaster Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/RO, null, VENDOR_ITEM_REGULAR),
 	list("Bio Suit", 12, /obj/item/clothing/suit/storage/synthbio, null, VENDOR_ITEM_REGULAR),
 	list("Black Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/black, null, VENDOR_ITEM_REGULAR),
 	list("Brown Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/brown, null, VENDOR_ITEM_REGULAR),
@@ -406,27 +409,29 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	req_access = list(ACCESS_MARINE_SYNTH)
 	vendor_role = list(JOB_SYNTH)
 
-/obj/structure/machinery/cm_vending/own_points/experimental_tools/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/coin/marine/synth))
-		if(user.drop_inv_item_to_loc(W, src))
+/obj/structure/machinery/cm_vending/own_points/experimental_tools/redeem_token(obj/item/coin/marine/token, mob/user)
+	if(token.token_type == VEND_TOKEN_SYNTH)
+		if(user.drop_inv_item_to_loc(token, src))
 			available_points = 30
 			available_points_to_display = available_points
-			to_chat(user, SPAN_NOTICE("You insert \the [W] into \the [src]."))
-			return
+			to_chat(user, SPAN_NOTICE("You insert \the [token] into \the [src]."))
+			return TRUE
 	return ..()
 
 /obj/structure/machinery/cm_vending/own_points/experimental_tools/get_listed_products(mob/user)
-	return list(
-		list("Autocompressor", 15, /obj/item/clothing/suit/auto_cpr, null, VENDOR_ITEM_REGULAR),
-		list("Backpack Firefighting Watertank", 15, /obj/item/reagent_container/glass/watertank/atmos, null, VENDOR_ITEM_REGULAR),
-		list("Breaching Hammer", 15, /obj/item/weapon/twohanded/breacher/synth, null, VENDOR_ITEM_REGULAR),
-		list("Compact Nailgun kit", 15, /obj/effect/essentials_set/cnailgun, null, VENDOR_ITEM_REGULAR),
-		list("Crew Monitor", 15, /obj/item/tool/crew_monitor, null, VENDOR_ITEM_REGULAR),
-		list("Experimental Meson Goggles", 15, /obj/item/clothing/glasses/night/experimental_mesons, null, VENDOR_ITEM_REGULAR),
-		list("Maintenance Jack", 15, /obj/item/maintenance_jack, null, VENDOR_ITEM_REGULAR),
-		list("Portable Dialysis Machine", 15, /obj/item/tool/portadialysis, null, VENDOR_ITEM_REGULAR),
-		list("Telescopic Baton", 15, /obj/item/weapon/telebaton, null, VENDOR_ITEM_REGULAR),
-	)
+	return GLOB.cm_vending_synth_tools
+
+GLOBAL_LIST_INIT(cm_vending_synth_tools, list(
+	list("Autocompressor", 15, /obj/item/clothing/suit/auto_cpr, null, VENDOR_ITEM_REGULAR),
+	list("Backpack Firefighting Watertank", 15, /obj/item/reagent_container/glass/watertank/atmos, null, VENDOR_ITEM_REGULAR),
+	list("Breaching Hammer", 15, /obj/item/weapon/twohanded/breacher/synth, null, VENDOR_ITEM_REGULAR),
+	list("Compact Nailgun kit", 15, /obj/effect/essentials_set/cnailgun, null, VENDOR_ITEM_REGULAR),
+	list("Crew Monitor", 15, /obj/item/tool/crew_monitor, null, VENDOR_ITEM_REGULAR),
+	list("Experimental Meson Goggles", 15, /obj/item/clothing/glasses/night/experimental_mesons, null, VENDOR_ITEM_REGULAR),
+	list("Maintenance Jack", 15, /obj/item/maintenance_jack, null, VENDOR_ITEM_REGULAR),
+	list("Portable Dialysis Machine", 15, /obj/item/tool/portadialysis, null, VENDOR_ITEM_REGULAR),
+	list("Telescopic Baton", 15, /obj/item/weapon/telebaton, null, VENDOR_ITEM_REGULAR),
+))
 
 //------------EXPERIMENTAL TOOL KITS---------------
 /obj/effect/essentials_set/cnailgun

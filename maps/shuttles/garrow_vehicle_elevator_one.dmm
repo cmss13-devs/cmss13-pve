@@ -1,0 +1,74 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"o" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"A" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"K" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"T" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+
+(1,1,1) = {"
+K
+a
+a
+a
+o
+"}
+(2,1,1) = {"
+T
+u
+A
+A
+a
+"}
+(3,1,1) = {"
+a
+A
+A
+A
+K
+"}
+(4,1,1) = {"
+a
+A
+A
+u
+a
+"}
+(5,1,1) = {"
+a
+u
+u
+u
+a
+"}
+(6,1,1) = {"
+a
+A
+u
+u
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+"}
