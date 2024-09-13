@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	if(!currently_busy && primary_weapon && current_target && !currently_firing && COOLDOWN_FINISHED(src, fire_overload_cooldown) && primary_weapon.has_ammunition())
 		currently_busy = TRUE
-		var/target_futile = HAS_TRAIT(current_target, TRAIT_INCAPACITATED)
+		var/target_futile = current_target.is_mob_incapacitated()
 		if(get_dist(tied_human, current_target) > gun_data.optimal_range || target_futile)
 			if(!has_ongoing_action(/datum/ongoing_action/approach_target) && !in_cover)
 				var/walk_distance = target_futile ? gun_data.minimum_range : gun_data.optimal_range
