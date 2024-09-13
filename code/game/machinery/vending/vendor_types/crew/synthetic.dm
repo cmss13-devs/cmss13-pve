@@ -39,9 +39,9 @@
 		list("Roller Bed", 4, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
 //		list("Stasis Bag", 6, /obj/item/bodybag/cryobag, null, VENDOR_ITEM_REGULAR),	//PVE_removal, keeping it in-line with what corpsman gets and what wey-med offers
 		list("MS-11 Smart Refill Tank", 6, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
-		list("Blood", 5, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR),
-		list("Surgical Bed", 10, /obj/structure/bed/portable_surgery, null, VENDOR_ITEM_REGULAR),
-		list("Surgical Kit", 30, /obj/item/storage/surgical_tray, null, VENDOR_ITEM_REGULAR),
+//		list("Blood", 5, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR), //PVE_removal, not needed with how few medically-trained crew are about
+//		list("Surgical Bed", 10, /obj/structure/bed/portable_surgery, null, VENDOR_ITEM_REGULAR),	//PVE_removal, already get one, rarely if not never more than one synth spawned
+//		list("Surgical Kit", 30, /obj/item/storage/surgical_tray, null, VENDOR_ITEM_REGULAR),	//PVE_removal, already get one, rarely if not never more than one synth spawned
 
 		list("Pillbottle (Bicaridine)", 5, /obj/item/storage/pill_bottle/bicaridine, null, VENDOR_ITEM_RECOMMENDED),
 		list("Pillbottle (Dexalin)", 5, /obj/item/storage/pill_bottle/dexalin, null, VENDOR_ITEM_REGULAR),
@@ -178,14 +178,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Pressurized Reagent Canister Pouch (Revival Mix - Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_tricord, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Pressurized Reagent Canister Pouch (Revival Mix - Peridaxon)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_peri, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+//		list("Pressurized Reagent Canister Pouch (Revival Mix - Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_tricord, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),	//PVE_removal, we can't rez so revival mix is a pointless thing to offer
+//		list("Pressurized Reagent Canister Pouch (Revival Mix - Peridaxon)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_peri, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),	//PVE_removal, we can't rez so revival mix is a pointless thing to offer
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 //		list("Pressurized Reagent Canister Pouch (EMPTY)", 0, /obj/item/storage/pouch/pressurized_reagent_canister, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),	//PVE_removal, no big reagent tanks to fill this from, no point offering it
 		list("Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Machete Pouch (Full)", 0, /obj/item/storage/pouch/machete/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-
-//PVE_removal, we can't rez so revival mix is a pointless thing to offer
 
 		list("MASK", 0, null, null, null),
 		list("Sterile mask", 0, /obj/item/clothing/mask/surgical, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR)
