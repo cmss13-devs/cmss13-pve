@@ -89,16 +89,10 @@
 	bonus_overlay = "m41a_mk1_overlay"
 
 /obj/item/ammo_magazine/rifle/m41aMK1/rubber
-	name = "\improper M41A Less Lethal magazine"
+	name = "\improper M41A rubber magazine"
 	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm less lethal rubber bullets. Be careful, they're LESS, lethal, not NON, lethal."
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
-
-/obj/item/ammo_magazine/rifle/m41aMK1/training
-	name = "\improper M41A training magazine"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm training rounds."
-	default_ammo = /datum/ammo/bullet/rifle/rubber
-	ammo_band_color = AMMO_BAND_COLOR_TRAINING
 
 /obj/item/ammo_magazine/rifle/m41aMK1/ap
 	name = "\improper M41A AP magazine (10x24mm)"
@@ -138,59 +132,59 @@
 //M4RA, l42 reskin, same stats as before but different, lore friendly, shell.
 
 /obj/item/ammo_magazine/rifle/m4ra
-	name = "\improper M4RA magazine (10x24mm)"
-	desc = "A magazine of standard 10x24mm rounds for use in the M4RA battle rifle."
+	name = "\improper M4RA magazine (10x28mm)"
+	desc = "A magazine of standard 10x28mm rounds for use in the M4RA battle rifle."
 	icon_state = "m4ra"
-	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 25
+	caliber = "10x28mm"
+	default_ammo = /datum/ammo/bullet/rifle/heavy
+	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m4ra
 	ammo_band_icon = "+m4ra_band"
 	ammo_band_icon_empty = "+m4ra_band_e"
 
 /obj/item/ammo_magazine/rifle/m4ra/ap
-	name = "\improper M4RA armor-piercing magazine (10x24mm)"
-	desc = "A magazine of armor-piercing 10x24mm rounds for use in the M4RA battle rifle."
-	default_ammo = /datum/ammo/bullet/rifle/ap
-	max_rounds = 25
+	name = "\improper M4RA armor-piercing magazine (10x28mm)"
+	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M4RA battle rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/ap
+	max_rounds = 30
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/m4ra/ext
-	name = "\improper M4RA extended magazine (10x24mm)"
-	desc = "A magazine of armor-piercing 10x24mm rounds for use in the M4RA battle rifle. Holds an additional 10 rounds, up to 35."
+	name = "\improper M4RA extended magazine (10x28mm)"
+	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M4RA battle rifle. Holds an additional 10 rounds, up to 40."
 	icon_state = "m4ra_extended"
 	bonus_overlay = "m4ra_ex"
-	max_rounds = 35
+	max_rounds = 40
 
 /obj/item/ammo_magazine/rifle/m4ra/rubber
-	name = "M4RA rubber magazine (10x24mm)"
-	desc = "A magazine of less than lethal rubber 10x24mm rounds for use in the M4RA battle rifle."
+	name = "M4RA rubber magazine (10x28mm)"
+	desc = "A magazine of less than lethal rubber 10x28mm rounds for use in the M4RA battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/rifle/m4ra/heap
-	name = "\improper M4RA high-explosive armor-piercing magazine (10x24mm)"
-	desc = "A magazine of high explosive armor piercing 10x24mm rounds for use in the M4RA battle rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heap
+	name = "\improper M4RA high-explosive armor-piercing magazine (10x28mm)"
+	desc = "A magazine of high explosive armor piercing 10x28mm rounds for use in the M4RA battle rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/m4ra/penetrating
-	name = "\improper M4RA wall-penetrating magazine (10x24mm)"
-	desc = "A magazine of wall-penetrating 10x24mm rounds for use in the M4RA battle rifle."
+	name = "\improper M4RA wall-penetrating magazine (10x28mm)"
+	desc = "A magazine of wall-penetrating 10x28mm rounds for use in the M4RA battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/rifle/m4ra/incendiary
-	name = "\improper M4RA incendiary magazine (10x24mm)"
-	desc = "A magazine of incendiary 10x24mm rounds for use in the M4RA battle rifle."
+	name = "\improper M4RA incendiary magazine (10x28mm)"
+	desc = "A magazine of incendiary 10x28mm rounds for use in the M4RA battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/rifle/m4ra/pve
-	name = "\improper M4RA depleted uranium magazine (10x24mm)"
-	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
+	name = "\improper M4RA depleted uranium magazine (10x28mm)"
+	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x28mm rounds for use in the M4RA-R2 battle rifle."
 	icon_state = "m4ra"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
-	max_rounds = 30
+	default_ammo = /datum/ammo/bullet/rifle/heavy/du
 	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
@@ -326,27 +320,27 @@
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
-	name = "\improper Type 71 magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine for the Type 71 rifle."
-	caliber = "5.45x39mm"
+	name = "\improper Type 71 magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine for the Type 71 rifle."
+	caliber = "10x31mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/type71
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/ap
-	name = "\improper Type 71 AP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/ap
+	name = "\improper Type 71 AP magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/ap/upp
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type71/heap
-	name = "\improper Type 71 HEAP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/heap
+	name = "\improper Type 71 HEAP magazine (10x31mm)"
+	desc = "A 10x31mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/upp
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------

@@ -54,7 +54,7 @@
 	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/nutriment/grown/vegetable
-	name = "Vegetable"
+	name = "Vegetables"
 	id = "vegetable"
 	description = "Some sort of vegetable."
 	flags = REAGENT_NO_GENERATION

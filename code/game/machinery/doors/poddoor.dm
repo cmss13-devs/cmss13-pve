@@ -298,6 +298,7 @@
 		/obj/structure/machinery/door/airlock,
 	)
 
+
 /obj/structure/machinery/door/poddoor/almayer/open
 	density = FALSE
 
@@ -318,6 +319,20 @@
 /obj/structure/machinery/door/poddoor/almayer/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, relativewall_neighbours)), 10)
+
+/obj/structure/machinery/door/poddoor/almayer/blended/aicore
+	icon_state = "aidoor1"
+	base_icon_state = "aidoor"
+
+/obj/structure/machinery/door/poddoor/almayer/blended/aicore/open
+	density = FALSE
+
+/obj/structure/machinery/door/poddoor/almayer/blended/white_aicore
+	icon_state = "w_aidoor1"
+	base_icon_state = "w_aidoor"
+
+/obj/structure/machinery/door/poddoor/almayer/blended/white_aicore/open
+	density = FALSE
 
 /obj/structure/machinery/door/poddoor/almayer/locked
 	unacidable = TRUE

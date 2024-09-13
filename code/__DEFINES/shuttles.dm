@@ -121,6 +121,7 @@
 #define DROPSHIP_TYPHOON "dropship_typhoon"
 #define DROPSHIP_TRIPOLI "dropship_tripoli"
 
+#define DROPSHIP_TINCAN "dropship_tincan" //RU-PVE
 #define DROPSHIP_RASPUTIN "dropship_rasputin" //RU-PVE
 #define DROPSHIP_LANCER "dropship_lancer" //RU-PVE
 #define DROPSHIP_PMC "dropship_pmc" //RU-PVE
@@ -147,3 +148,7 @@
 #define ESCAPE_SHUTTLE_SOUTH_PREFIX "escape_shuttle_s"
 
 #define ESCAPE_SHUTTLE_DOCK_PREFIX "almayer-hangar-escape-shuttle-"
+
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE "garrow_vehicle_elevator_one"
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO "garrow_vehicle_elevator_two"
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO "garrow_cargo_elevator"
