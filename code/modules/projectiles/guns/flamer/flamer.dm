@@ -253,6 +253,9 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank/EX
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_WIELDED_FIRING_ONLY
 
+/obj/item/weapon/gun/flamer/unloaded
+	current_mag = null
+
 /obj/item/weapon/gun/flamer/deathsquad/nolock
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY
 

@@ -88,6 +88,7 @@
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version lacks any combat functionality, and is commonly used by engineers to transport important tools."
 	icon_state = "utilitybelt"
 	item_state = "utility"
+	max_w_class = SIZE_MEDIUM
 	can_hold = list(
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
@@ -1685,7 +1686,7 @@
 		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,

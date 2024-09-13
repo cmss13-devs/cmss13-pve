@@ -13639,7 +13639,7 @@
 /area/ice_colony/exterior/surface/clearing/south)
 "aNs" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
