@@ -89,7 +89,7 @@
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
 	gender = NEUTER
-	desc = "A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain."
+	desc = "A headset and goggles system for the M56 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
@@ -151,7 +151,7 @@
 		far_sight = FALSE
 		if(user)
 			if(user.client)
-				user.client.change_view(world_view_size, src)
+				user.client.change_view(GLOB.world_view_size, src)
 		STOP_PROCESSING(SSobj, src)
 
 	var/datum/action/item_action/m56_goggles/far_sight/FT = locate(/datum/action/item_action/m56_goggles/far_sight) in actions
@@ -185,6 +185,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/m56_goggles/far_sight/action_activate()
+	. = ..()
 	if(target)
 		var/obj/item/clothing/glasses/night/m56_goggles/G = target
 		G.set_far_sight(owner, !G.far_sight)

@@ -1,0 +1,2 @@
+/area/almayer/shipboard/brig/main_office : /area/almayer/shipboard/brig/warden_office{@OLD}
+/area/almayer/shipboard/brig/surgery : /area/almayer/shipboard/brig/medical{@OLD}

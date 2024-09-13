@@ -51,7 +51,7 @@ SUBSYSTEM_DEF(xeno_pathfinding)
 			if(current_path.current_node == target)
 				break
 
-			for(var/direction in cardinal)
+			for(var/direction in GLOB.cardinals)
 				var/turf/neighbor = get_step(current_path.current_node, direction)
 				var/distance_between = distances[current_path.current_node] * DISTANCE_PENALTY
 				if(isnull(distances[neighbor]))

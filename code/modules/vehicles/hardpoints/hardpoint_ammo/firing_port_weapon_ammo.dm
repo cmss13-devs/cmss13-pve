@@ -5,7 +5,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
-	default_ammo = /datum/ammo/bullet/smartgun/m56_fpw
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	max_rounds = 75
 	gun_type = /obj/item/hardpoint/special/firing_port_weapon
 

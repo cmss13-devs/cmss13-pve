@@ -3,7 +3,7 @@
 	desc = "A spray bottle, with an unscrewable top."
 	icon = 'icons/obj/items/spray.dmi'
 	icon_state = "spray"
-	item_state = "cleaner"
+	item_state = "spray"
 	flags_atom = OPENCONTAINER|FPRINT
 	flags_item = NOBLUDGEON
 	flags_equip_slot = SLOT_WAIST
@@ -15,17 +15,18 @@
 	possible_transfer_amounts = list(5,10) //Set to null instead of list, if there is only one.
 	matter = list("plastic" = 500)
 	transparent = TRUE
-	var/spray_size = 3
-	var/list/spray_sizes = list(1,3)
-	var/safety = FALSE
 	volume = 250
+	has_set_transfer_action = FALSE
+	///How many tiles the spray will move
+	var/spray_size = 3
+	/// The spray_size based on the transfer amount
+	var/list/spray_sizes = list(1,3)
+	/// Whether you can spray the bottle
+	var/safety = FALSE
+	/// The world.time it was last used
 	var/last_use = 1
+	/// The delay between uses
 	var/use_delay = 0.5 SECONDS
-
-
-/obj/item/reagent_container/spray/Initialize()
-	. = ..()
-	verbs -= /obj/item/reagent_container/verb/set_APTFT
 
 /obj/item/reagent_container/spray/afterattack(atom/A, mob/user, proximity)
 	//this is what you get for using afterattack() TODO: make is so this is only called if attackby() returns 0 or something
@@ -87,7 +88,7 @@
 
 /obj/item/reagent_container/spray/get_examine_text(mob/user)
 	. = ..()
-	. += "[round(reagents.total_volume)] units left."
+	. += "[floor(reagents.total_volume)] units left."
 
 /obj/item/reagent_container/spray/verb/empty()
 
@@ -104,8 +105,8 @@
 
 //space cleaner
 /obj/item/reagent_container/spray/cleaner
-	name = "space cleaner"
-	desc = "BLAM!-brand non-foaming space cleaner!"
+	name = "cleaning bottle"
+	desc = "A blue spray bottle containing a foamless cleaning agent."
 	icon_state = "cleaner"
 
 /obj/item/reagent_container/spray/cleaner/drone
@@ -113,9 +114,16 @@
 	desc = "BLAM!-brand non-foaming space cleaner!"
 	volume = 50
 
+/obj/item/reagent_container/spray/cleaner/alt
+	name = "cleaning bottle"
+	desc = "A brownish-tan spray bottle containing a foamless cleaning agent."
+	icon_state = "cleaner_alt"
+	item_state = "cleaner_alt"
+
 /obj/item/reagent_container/spray/cleaner/Initialize()
 	. = ..()
 	reagents.add_reagent("cleaner", src.volume)
+
 //pepperspray
 /obj/item/reagent_container/spray/pepper
 	name = "pepperspray"
@@ -190,7 +198,7 @@
 	var/turf/T2 = get_step(T,turn(direction, -90))
 	var/list/the_targets = list(T,T1,T2)
 
-	for(var/i=1, i<=Sprays.len, i++)
+	for(var/i=1, i<=length(Sprays), i++)
 		spawn()
 			var/obj/effect/decal/chempuff/D = Sprays[i]
 			if(!D) continue

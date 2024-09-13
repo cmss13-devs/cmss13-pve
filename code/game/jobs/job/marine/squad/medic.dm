@@ -15,7 +15,7 @@
 	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
 
 /datum/job/marine/medic/set_spawn_positions(count)
-	for(var/datum/squad/sq in RoleAuthority.squads)
+	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 		if(sq)
 			sq.max_medics = medic_slot_formula(count)
 
@@ -28,7 +28,7 @@
 		total_positions_so_far = slots
 
 	if(latejoin)
-		for(var/datum/squad/sq in RoleAuthority.squads)
+		for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 			if(sq)
 				sq.max_medics = slots
 
