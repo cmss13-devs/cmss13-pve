@@ -10,9 +10,7 @@
 	layer = 2.99;
 	pixel_x = 3
 	},
-/turf/open/floor/almayer/edge{
-	dir = 5
-	},
+/turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/dorms)
 "bV" = (
 /obj/effect/decal/cleanable/dirt{
@@ -62,9 +60,7 @@
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
-/turf/open/floor/almayer/edge{
-	dir = 6
-	},
+/turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/dorms)
 "eP" = (
 /turf/open/floor/almayer,
@@ -76,9 +72,7 @@
 /obj/structure/machinery/atm{
 	pixel_y = 26
 	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "gv" = (
 /obj/structure/barricade/handrail{
@@ -125,9 +119,7 @@
 /obj/item/clothing/mask/cigarette/weed{
 	pixel_y = -3
 	},
-/turf/open/floor/almayer/edge{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/west,
 /area/golden_arrow/dorms)
 "hx" = (
 /obj/structure/bed{
@@ -144,9 +136,7 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge{
-	dir = 10
-	},
+/turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "iA" = (
 /obj/structure/barricade/handrail{
@@ -203,9 +193,7 @@
 	layer = 2.52
 	},
 /obj/item/prop/magazine/dirty/torn/alt,
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "lT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -230,9 +218,7 @@
 	pixel_y = 44
 	},
 /obj/item/trash/barcardine,
-/turf/open/floor/almayer/edge{
-	dir = 9
-	},
+/turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/dorms)
 "nw" = (
 /obj/structure/bed{
@@ -250,9 +236,7 @@
 	pixel_y = 13
 	},
 /obj/item/storage/beer_pack,
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "nO" = (
 /obj/effect/decal/cleanable/dirt{
@@ -306,9 +290,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "rL" = (
 /obj/effect/decal/cleanable/dirt{
@@ -330,9 +312,7 @@
 	desc = "Beer's misunderstood cousin.";
 	name = "\improper Weyland-Yutani IPA"
 	},
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "sa" = (
 /obj/structure/barricade/handrail{
@@ -355,9 +335,7 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "so" = (
 /obj/structure/bed{
@@ -377,9 +355,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "sP" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -430,9 +406,7 @@
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge{
-	dir = 9
-	},
+/turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/dorms)
 "wz" = (
 /obj/structure/bed{
@@ -449,9 +423,7 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge{
-	dir = 9
-	},
+/turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/dorms)
 "xF" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -480,9 +452,7 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge{
-	dir = 6
-	},
+/turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/dorms)
 "AM" = (
 /obj/effect/decal/cleanable/dirt{
@@ -492,9 +462,7 @@
 	pixel_y = -10;
 	pixel_x = 6
 	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "Bx" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -506,9 +474,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "BN" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -529,9 +495,7 @@
 	pixel_y = -15
 	},
 /obj/effect/decal/cleanable/vomit,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "CD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -573,9 +537,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge{
-	dir = 10
-	},
+/turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "Hs" = (
 /obj/effect/decal/cleanable/dirt{
@@ -586,16 +548,12 @@
 	name = "General Listening Channel";
 	pixel_y = -29
 	},
-/obj/structure/machinery/power/apc/almayer{
-	dir = 8
-	},
+/obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/cable{
 	icon_state = "0-4";
 	layer = 2.36
 	},
-/turf/open/floor/almayer/edge{
-	dir = 10
-	},
+/turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "Jx" = (
 /obj/structure/surface/table/almayer,
@@ -625,9 +583,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet,
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "Ma" = (
 /obj/structure/surface/rack,
@@ -635,9 +591,7 @@
 	layer = 2.52
 	},
 /obj/item/clothing/under/marine/officer/boiler,
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "Mv" = (
 /obj/structure/machinery/alarm/almayer{
@@ -664,18 +618,14 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "Nu" = (
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
 /obj/effect/decal/strata_decals/grime/grime3,
-/turf/open/floor/almayer/edge{
-	dir = 8
-	},
+/turf/open/floor/almayer/edge/west,
 /area/golden_arrow/dorms)
 "Ok" = (
 /obj/structure/bed/chair,
@@ -728,9 +678,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge{
-	dir = 5
-	},
+/turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/dorms)
 "RH" = (
 /obj/structure/bed/chair,
@@ -759,9 +707,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge{
-	dir = 4
-	},
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "VL" = (
 /obj/structure/bed/chair{
@@ -774,9 +720,7 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/turf/open/floor/almayer/edge{
-	dir = 10
-	},
+/turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "Wm" = (
 /obj/structure/surface/table/almayer,
@@ -811,9 +755,7 @@
 	pixel_y = 14;
 	pixel_x = 9
 	},
-/turf/open/floor/almayer/edge{
-	dir = 1
-	},
+/turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "Yb" = (
 /obj/item/trash/popcorn,

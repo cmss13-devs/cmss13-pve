@@ -153,6 +153,10 @@
 					M.apply_damage(20)
 					health -= 50
 
+			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slammed against [src] by [key_name(user)]</font>")
+			user.attack_log += text("\[[time_stamp()]\] <font color='red'>slammed [key_name(M)] against [src]</font>")
+			msg_admin_attack("[key_name(user)] slammed [key_name(M)] against [src] at [get_area_name(M)]", M.loc.x, M.loc.y, M.loc.z)
+
 			healthcheck(1, 1, M) //The person thrown into the window literally shattered it
 		return
 
@@ -171,9 +175,9 @@
 	else
 		switch(W.damtype)
 			if("fire")
-				health -= W.force
+				health -= W.force * W.demolition_mod
 			if("brute")
-				health -= W.force * 0.1
+				health -= W.force * W.demolition_mod * 0.1
 		healthcheck(1, 1, user, W)
 		..()
 
@@ -210,7 +214,7 @@
 //This proc is used to update the icons of nearby windows.
 /obj/structure/fence/proc/update_nearby_icons()
 	update_icon()
-	for(var/direction in cardinal)
+	for(var/direction in GLOB.cardinals)
 		for(var/obj/structure/fence/W in get_step(src, direction))
 			W.update_icon()
 
@@ -231,6 +235,6 @@
 
 /obj/structure/fence/fire_act(exposed_temperature, exposed_volume)
 	if(exposed_temperature > T0C + 800)
-		health -= round(exposed_volume / 100)
+		health -= floor(exposed_volume / 100)
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()

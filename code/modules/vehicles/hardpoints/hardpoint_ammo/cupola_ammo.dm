@@ -6,7 +6,7 @@
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/rifle/heavy
-	max_rounds = 1000
+	max_rounds = 500
 	gun_type = /obj/item/hardpoint/secondary/m56cupola
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/update_icon()
