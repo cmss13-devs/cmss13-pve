@@ -26,7 +26,7 @@
 			continue
 		valid_hairstyles[hairstyle] = GLOB.hair_styles_list[hairstyle]
 
-	if(valid_hairstyles.len)
+	if(length(valid_hairstyles))
 		h_style = pick(valid_hairstyles)
 
 	return h_style
@@ -48,14 +48,16 @@
 			continue
 		valid_facialhairstyles[facialhairstyle] = GLOB.facial_hair_styles_list[facialhairstyle]
 
-	if(valid_facialhairstyles.len)
+	if(length(valid_facialhairstyles))
 		f_style = pick(valid_facialhairstyles)
 
 		return f_style
 
 /proc/random_name(gender, species = "Human")
-	if(gender==FEMALE) return capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
-	else return capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+	if(gender==FEMALE)
+		return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	else
+		return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
 
 /proc/has_species(mob/M, species)
 	if(!M || !istype(M,/mob/living/carbon/human))
@@ -74,6 +76,7 @@
 /mob/proc/change_real_name(mob/M, new_name)
 	if(!new_name)
 		return FALSE
+	var/old_name = M.real_name
 
 	M.real_name = new_name
 	M.name = new_name
@@ -84,6 +87,7 @@
 	// If we are humans, we need to update our voice as well
 	M.change_mob_voice(new_name)
 
+	SEND_SIGNAL(src, COMSIG_MOB_REAL_NAME_CHANGED, old_name, new_name)
 	return TRUE
 
 /mob/proc/change_mind_name(new_mind_name)

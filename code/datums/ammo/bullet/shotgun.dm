@@ -11,28 +11,30 @@
 	name = "shotgun slug"
 	handful_state = "slug_shell"
 
-	accurate_range = 6
-	max_range = 8
-	damage = 70
-	penetration = ARMOR_PENETRATION_TIER_4
+	accurate_range = 7
+	max_range = 14
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_6
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
 	handful_state = "slug_shell"
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 6)
+	knockback(M, P, 8)
 
 /datum/ammo/bullet/shotgun/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
-		target.Stun(0.5)
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(3, SLOW)
+		target.KnockDown(3.5)
+		target.Stun(3.5)
+		target.Slow(5)
 	else
 		if(!isyautja(living_mob)) //Not predators.
-			living_mob.apply_effect(1, SUPERSLOW)
-			living_mob.apply_effect(2, SLOW)
+			living_mob.KnockDown(2)
+			living_mob.Stun(2)
+			living_mob.Superslow(5)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
@@ -42,11 +44,9 @@
 	handful_state = "beanbag_slug"
 	icon_state = "beanbag"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
-	sound_override = 'sound/weapons/gun_shotgun_riot.ogg'
-
 	max_range = 12
 	shrapnel_chance = 0
-	damage = 0
+	damage = 20
 	stamina_damage = 45
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_3
@@ -127,18 +127,35 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 4
-	max_range = 4
-	damage = 65
-	damage_var_low = PROJECTILE_VARIANCE_TIER_8
-	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	accurate_range = 7
+	max_range = 9
+	damage = 50
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_7
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	handful_state = "buckshot_shell"
 	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(2.5)
+		target.Stun(2.5)
+		target.Slow(4)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(3)
+			living_mob.Stun(3)
+			living_mob.Slow(5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary
 	name = "incendiary buckshot shell"
@@ -178,8 +195,8 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 4
-	max_range = 4
-	damage = 65
+	max_range = 6
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -190,6 +207,23 @@
 
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
+
+/datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shotgun/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(2.5)
+		target.Stun(2.5)
+		target.Slow(4)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(3)
+			living_mob.Stun(3)
+			living_mob.Slow(5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/spread/special
 	name = "additional buckshot, USCM special type"
@@ -209,23 +243,52 @@
 	handful_state = "heavy_buckshot"
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
-	accurate_range = 3
-	max_range = 3
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
+	accurate_range = 8
+	max_range = 10
 	damage = 75
-	penetration = 0
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+	knockback(M,P,5)
+/datum/ammo/bullet/shotgun/heavy/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(5)
+		target.Stun(5)
+		target.Slow(8)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(2)
+			living_mob.Stun(2)
+			living_mob.Slow(6)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	name = "additional heavy buckshot"
-	max_range = 4
+	max_range = 7
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
+
+/datum/ammo/bullet/shotgun/heavy/buckshot/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(5)
+		target.Stun(5)
+		target.Slow(8)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(2)
+			living_mob.Stun(2)
+			living_mob.Slow(6)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/special
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
@@ -251,8 +314,8 @@
 	multiple_handful_name = TRUE
 	damage_type = BURN
 	damage = 60
-	accurate_range = 3
-	max_range = 4
+	accurate_range = 4
+	max_range = 6
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/spread
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/set_bullet_traits()
@@ -264,9 +327,7 @@
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/spread
 	name = "additional dragon's breath"
 	bonus_projectiles_amount = 0
-	accurate_range = 4
-	max_range = 5 //make use of the ablaze property
-	shell_speed = AMMO_SPEED_TIER_4 // so they hit before the main shell stuns
+	shell_speed = AMMO_SPEED_TIER_4
 
 
 /datum/ammo/bullet/shotgun/heavy/slug
@@ -274,26 +335,26 @@
 	handful_state = "heavy_slug"
 
 	accurate_range = 7
-	max_range = 8
-	damage = 90 //ouch.
-	penetration = ARMOR_PENETRATION_TIER_6
+	max_range = 17
+	damage = 120 //ouch.
+	penetration = ARMOR_PENETRATION_TIER_9
 	damage_armor_punch = 2
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 7)
+	knockback(M, P, 8)
 
 /datum/ammo/bullet/shotgun/heavy/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
-		target.Stun(0.5)
-		target.apply_effect(2, SUPERSLOW)
-		target.apply_effect(5, SLOW)
+		target.KnockDown(7)
+		target.Stun(7)
+		target.Slow(10)
 	else
 		if(!isyautja(living_mob)) //Not predators.
-			living_mob.apply_effect(1, SUPERSLOW)
-			living_mob.apply_effect(2, SLOW)
+			living_mob.KnockDown(8)
+			living_mob.Stun(8)
+			living_mob.Superslow(15)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
@@ -303,14 +364,13 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	handful_state = "heavy_beanbag"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
-	sound_override = 'sound/weapons/gun_shotgun_riot.ogg'
 
 	max_range = 7
 	shrapnel_chance = 0
-	damage = 0
+	damage = 25
 	stamina_damage = 100
-	accuracy = HIT_ACCURACY_TIER_2
-	shell_speed = AMMO_SPEED_TIER_2
+	accuracy = HIT_ACCURACY_TIER_6
+	shell_speed = 3
 
 /datum/ammo/bullet/shotgun/heavy/beanbag/on_hit_mob(mob/M, obj/projectile/P)
 	if(!M || M == P.firer)
@@ -346,6 +406,32 @@
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_4
+
+/*
+					16 GAUGE SHOTGUN AMMO
+*/
+
+/datum/ammo/bullet/shotgun/light/breaching
+	name = "light breaching shell"
+	icon_state = "flechette"
+	handful_state = "breaching_shell"
+	multiple_handful_name = TRUE
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/light/breaching/spread
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	damage = 55
+	max_range = 5
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+	penetration = ARMOR_PENETRATION_TIER_1
+
+/datum/ammo/bullet/shotgun/light/breaching/spread
+	name = "additional light breaching fragments"
+	bonus_projectiles_amount = 0
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_3
+	damage = 10
 
 //Enormous shell for Van Bandolier's superheavy double-barreled hunting gun.
 /datum/ammo/bullet/shotgun/twobore
