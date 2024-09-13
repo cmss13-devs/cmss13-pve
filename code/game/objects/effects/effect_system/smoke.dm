@@ -204,51 +204,6 @@
 	for(var/mob/living/carbon/affected_mob in get_turf(src))
 		affect(affected_mob)
 
-/obj/effect/particle_effect/smoke/bad/affect(mob/living/carbon/affected_mob)
-	. = ..()
-	if(!.)
-		return FALSE
-	if(affected_mob.internal != null && affected_mob.wear_mask && (affected_mob.wear_mask.flags_inventory & ALLOWINTERNALS))
-		return FALSE
-	if(issynth(affected_mob))
-		return FALSE
-
-	if(prob(20))
-		affected_mob.drop_held_item()
-	affected_mob.apply_damage(1, OXY)
-
-	if(affected_mob.coughedtime < world.time && !affected_mob.stat)
-		affected_mob.coughedtime = world.time + 2 SECONDS
-		if(ishuman(affected_mob)) //Humans only to avoid issues
-			affected_mob.emote("cough")
-	return TRUE
-
-/////////////////////////////////////////////
-// Miasma smoke (for LZs)
-/////////////////////////////////////////////
-
-/obj/effect/particle_effect/smoke/miasma
-	name = "CN20-X miasma"
-	amount = 1
-	time_to_live = INFINITY
-	smokeranking = SMOKE_RANK_MAX
-	opacity = FALSE
-	alpha = 75
-	color = "#301934"
-	/// How much damage to deal per affect()
-	var/burn_damage = 4
-	/// Multiplier to burn_damage for xenos and yautja
-	var/xeno_yautja_multiplier = 3
-	/// Time required for damage to actually apply
-	var/active_time
-
-/obj/effect/particle_effect/smoke/miasma/Initialize(mapload, oldamount, datum/cause_data/new_cause_data)
-	. = ..()
-	// Mimic dispersal without actually doing spread logic
-	alpha = 0
-	active_time = world.time + 6 SECONDS
-	addtimer(VARSET_CALLBACK(src, alpha, initial(alpha)), rand(1, 6) SECONDS)
-
 /obj/effect/particle_effect/smoke/bad/inhalation(mob/living/carbon/creature)
 	if (..())
 		return
