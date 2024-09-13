@@ -1,8 +1,8 @@
 
 
 //global vars
-var/obj/structure/orbital_cannon/almayer_orbital_cannon
-var/list/ob_type_fuel_requirements
+GLOBAL_DATUM(almayer_orbital_cannon, /obj/structure/orbital_cannon)
+GLOBAL_LIST(ob_type_fuel_requirements)
 
 /obj/structure/orbital_cannon
 	name = "\improper Orbital Cannon"
@@ -31,16 +31,16 @@ var/list/ob_type_fuel_requirements
 
 /obj/structure/orbital_cannon/New()
 	..()
-	if(!almayer_orbital_cannon)
-		almayer_orbital_cannon = src
+	if(!GLOB.almayer_orbital_cannon)
+		GLOB.almayer_orbital_cannon = src
 
-	if(!ob_type_fuel_requirements)
-		ob_type_fuel_requirements = list()
+	if(!GLOB.ob_type_fuel_requirements)
+		GLOB.ob_type_fuel_requirements = list()
 		var/list/L = list(4,5,6)
 		var/amt
 		for(var/i=1 to 3)
 			amt = pick_n_take(L)
-			ob_type_fuel_requirements += amt
+			GLOB.ob_type_fuel_requirements += amt
 
 	var/turf/T = locate(x+1,y+2,z)
 	var/obj/structure/orbital_tray/O = new(T)
@@ -49,9 +49,9 @@ var/list/ob_type_fuel_requirements
 
 /obj/structure/orbital_cannon/Destroy()
 	QDEL_NULL(tray)
-	if(almayer_orbital_cannon == src)
-		almayer_orbital_cannon = null
-		message_admins("Reference to almayer_orbital_cannon is lost!")
+	if(GLOB.almayer_orbital_cannon == src)
+		GLOB.almayer_orbital_cannon = null
+		message_admins("Reference to GLOB.almayer_orbital_cannon is lost!")
 	return ..()
 
 /obj/structure/orbital_cannon/ex_act()
@@ -83,15 +83,15 @@ var/list/ob_type_fuel_requirements
 
 	if(!tray.warhead)
 		if(user)
-			to_chat(user, "no warhead in the tray, loading operation cancelled.")
+			to_chat(user, SPAN_WARNING("No warhead in the tray, loading operation cancelled."))
 		return
 
 	if(tray.fuel_amt < 1)
-		to_chat(user, "no solid fuel in the tray, loading operation cancelled.")
+		to_chat(user, SPAN_WARNING("No solid fuel in the tray, loading operation cancelled."))
 		return
 
 	if(loaded_tray)
-		to_chat(user, "Tray is already loaded.")
+		to_chat(user, SPAN_WARNING("Tray is already loaded."))
 		return
 
 	tray.forceMove(src)
@@ -185,23 +185,25 @@ var/list/ob_type_fuel_requirements
 	chambered_tray = TRUE
 	var/misfuel = get_misfuel_amount()
 	var/message = "[key_name(user)] chambered the Orbital Bombardment cannon."
+	var/ares_message = "Shell chambered."
 	if(misfuel)
 		message += " It is misfueled by [misfuel] units!"
+		ares_message += " Fuel imbalance detected!"
 	message_admins(message, x, y, z)
+	log_ares_bombardment(user, lowertext(tray.warhead.name), ares_message)
 
 	update_icon()
 
-/var/global/list/orbital_cannon_cancellation = new
-
+GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 
 /obj/structure/orbital_cannon/proc/get_misfuel_amount()
 	switch(tray.warhead.warhead_kind)
 		if("explosive")
-			return abs(ob_type_fuel_requirements[1] - tray.fuel_amt)
+			return abs(GLOB.ob_type_fuel_requirements[1] - tray.fuel_amt)
 		if("incendiary")
-			return abs(ob_type_fuel_requirements[2] - tray.fuel_amt)
+			return abs(GLOB.ob_type_fuel_requirements[2] - tray.fuel_amt)
 		if("cluster")
-			return abs(ob_type_fuel_requirements[3] - tray.fuel_amt)
+			return abs(GLOB.ob_type_fuel_requirements[3] - tray.fuel_amt)
 	return 0
 
 /obj/structure/orbital_cannon/proc/fire_ob_cannon(turf/T, mob/user, squad_behalf)
@@ -226,8 +228,8 @@ var/list/ob_type_fuel_requirements
 	var/area/area = get_area(T)
 	var/off_x = (inaccurate_fuel + 1) * round(rand(-3,3), 1)
 	var/off_y = (inaccurate_fuel + 1) * round(rand(-3,3), 1)
-	var/target_x = Clamp(T.x + off_x, 1, world.maxx)
-	var/target_y = Clamp(T.y + off_y, 1, world.maxy)
+	var/target_x = clamp(T.x + off_x, 1, world.maxx)
+	var/target_y = clamp(T.y + off_y, 1, world.maxy)
 	var/turf/target = locate(target_x, target_y, T.z)
 	var/area/target_area = get_area(target)
 
@@ -392,7 +394,7 @@ var/list/ob_type_fuel_requirements
 	playsound(target, 'sound/weapons/gun_orbital_travel.ogg', 100, 1, 75)
 
 	var/cancellation_token = rand(0,32000)
-	orbital_cannon_cancellation["[cancellation_token]"] = src
+	GLOB.orbital_cannon_cancellation["[cancellation_token]"] = src
 	message_admins(FONT_SIZE_XL("<A HREF='?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];admincancelob=1;cancellation=[cancellation_token]'>CLICK TO CANCEL THIS OB</a>"))
 
 	var/relative_dir
@@ -400,7 +402,7 @@ var/list/ob_type_fuel_requirements
 		if(get_turf(M) == target)
 			relative_dir = 0
 		else
-			relative_dir = get_dir(M, target)
+			relative_dir = Get_Compass_Dir(M, target)
 		M.show_message( \
 			SPAN_HIGHDANGER("The sky erupts into flames [SPAN_UNDERLINE(relative_dir ? ("to the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_VISIBLE, \
 			SPAN_HIGHDANGER("You hear a very loud sound coming from above to the [SPAN_UNDERLINE(relative_dir ? ("to the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_AUDIBLE \
@@ -411,7 +413,7 @@ var/list/ob_type_fuel_requirements
 		if(get_turf(M) == target)
 			relative_dir = 0
 		else
-			relative_dir = get_dir(M, target)
+			relative_dir = Get_Compass_Dir(M, target)
 		M.show_message( \
 			SPAN_HIGHDANGER("The sky roars louder [SPAN_UNDERLINE(relative_dir ? ("to the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_VISIBLE, \
 			SPAN_HIGHDANGER("The sound becomes louder [SPAN_UNDERLINE(relative_dir ? ("to the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_AUDIBLE \
@@ -425,9 +427,9 @@ var/list/ob_type_fuel_requirements
 		)
 	sleep(OB_TRAVEL_TIMING/3)
 
-	if(orbital_cannon_cancellation["[cancellation_token]"]) // the cancelling notification is in the topic
+	if(GLOB.orbital_cannon_cancellation["[cancellation_token]"]) // the cancelling notification is in the topic
 		target.ceiling_debris_check(5)
-		orbital_cannon_cancellation["[cancellation_token]"] = null
+		GLOB.orbital_cannon_cancellation["[cancellation_token]"] = null
 		return TRUE
 	return FALSE
 
@@ -513,15 +515,13 @@ var/list/ob_type_fuel_requirements
 	var/distance = 18
 	var/fire_level = 70
 	var/burn_level = 80
-	var/fire_color = null
+	var/fire_color = LIGHT_COLOR_CYAN
 	var/fire_type = "white"
 
 /obj/structure/ob_ammo/warhead/incendiary/warhead_impact(turf/target)
 	. = ..()
 	if (!.)
 		return
-	if(fire_color)
-		fire_type = "dynamic"
 
 	new /obj/effect/overlay/temp/blinking_laser (target)
 	sleep(10)
@@ -557,10 +557,7 @@ var/list/ob_type_fuel_requirements
 	set waitfor = 0
 
 	var/range_num = 12
-	var/list/turf_list = list()
-
-	for(var/turf/T in range(range_num, target))
-		turf_list += T
+	var/list/turf_list = RANGE_TURFS(range_num, target)
 
 	for(var/i = 1 to total_amount)
 		for(var/k = 1 to instant_amount)
@@ -630,33 +627,33 @@ var/list/ob_type_fuel_requirements
 /obj/structure/machinery/computer/orbital_cannon_console/ui_static_data(mob/user)
 	var/list/data = list()
 
-	data["hefuel"] = ob_type_fuel_requirements[1]
-	data["incfuel"] = ob_type_fuel_requirements[2]
-	data["clusterfuel"] = ob_type_fuel_requirements[3]
+	data["hefuel"] = GLOB.ob_type_fuel_requirements[1]
+	data["incfuel"] = GLOB.ob_type_fuel_requirements[2]
+	data["clusterfuel"] = GLOB.ob_type_fuel_requirements[3]
 
-	data["linkedcannon"] = almayer_orbital_cannon
-	data["linkedtray"] = almayer_orbital_cannon.tray
+	data["linkedcannon"] = GLOB.almayer_orbital_cannon
+	data["linkedtray"] = GLOB.almayer_orbital_cannon.tray
 
 	return data
 
 /obj/structure/machinery/computer/orbital_cannon_console/ui_data(mob/user)
 	var/list/data = list()
 
-	data["loadedtray"] = almayer_orbital_cannon.loaded_tray
-	data["chamberedtray"] = almayer_orbital_cannon.chambered_tray
+	data["loadedtray"] = GLOB.almayer_orbital_cannon.loaded_tray
+	data["chamberedtray"] = GLOB.almayer_orbital_cannon.chambered_tray
 
 	var/warhead_name = null
-	if(almayer_orbital_cannon.tray.warhead)
-		warhead_name = almayer_orbital_cannon.tray.warhead.name
+	if(GLOB.almayer_orbital_cannon.tray.warhead)
+		warhead_name = GLOB.almayer_orbital_cannon.tray.warhead.name
 
 	data["warhead"] = warhead_name
-	data["fuel"] = almayer_orbital_cannon.tray.fuel_amt
+	data["fuel"] = GLOB.almayer_orbital_cannon.tray.fuel_amt
 
 	data["worldtime"] = world.time
-	data["nextchambertime"] = almayer_orbital_cannon.ob_chambering_cooldown
-	data["chamber_cooldown"] = almayer_orbital_cannon.chamber_cooldown_time
+	data["nextchambertime"] = GLOB.almayer_orbital_cannon.ob_chambering_cooldown
+	data["chamber_cooldown"] = GLOB.almayer_orbital_cannon.chamber_cooldown_time
 
-	data["disabled"] = almayer_orbital_cannon.is_disabled
+	data["disabled"] = GLOB.almayer_orbital_cannon.is_disabled
 
 	return data
 
@@ -667,15 +664,15 @@ var/list/ob_type_fuel_requirements
 
 	switch(action)
 		if("load_tray")
-			almayer_orbital_cannon.load_tray(usr)
+			GLOB.almayer_orbital_cannon.load_tray(usr)
 			. = TRUE
 
 		if("unload_tray")
-			almayer_orbital_cannon.unload_tray(usr)
+			GLOB.almayer_orbital_cannon.unload_tray(usr)
 			. = TRUE
 
 		if("chamber_tray")
-			almayer_orbital_cannon.chamber_payload(usr)
+			GLOB.almayer_orbital_cannon.chamber_payload(usr)
 			. = TRUE
 
 	add_fingerprint(usr)
@@ -684,9 +681,8 @@ var/list/ob_type_fuel_requirements
 	if(..())
 		return
 
-	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 		to_chat(user, SPAN_WARNING("You have no idea how to use that console."))
 		return TRUE
 
 	tgui_interact(user)
-

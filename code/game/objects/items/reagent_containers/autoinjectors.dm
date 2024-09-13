@@ -33,7 +33,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/proc/update_uses_left()
 	var/UL = reagents.total_volume / amount_per_transfer_from_this
-	UL = round(UL) == UL ? UL : round(UL) + 1
+	UL = floor(UL) == UL ? UL : floor(UL) + 1
 	uses_left = UL
 
 /obj/item/reagent_container/hypospray/autoinjector/attack(mob/M, mob/user)
@@ -148,6 +148,12 @@
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
 
+/obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless/one_use
+	desc = "An EZ autoinjector loaded with 1 use of Tramadol, a weak but effective painkiller for normal wounds. Doesn't require any training to use."
+	volume = 15
+	amount_per_transfer_from_this = 15
+	uses_left = 1
+
 /obj/item/reagent_container/hypospray/autoinjector/oxycodone
 	name = "oxycodone autoinjector (EXTREME PAINKILLER)"
 	chemname = "oxycodone"
@@ -173,6 +179,12 @@
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
 
+/obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless/one_use
+	desc = "An EZ autoinjector loaded with 1 use of Kelotane, a common burn medicine. Doesn't require any training to use."
+	volume = 15
+	amount_per_transfer_from_this = 15
+	uses_left = 1
+
 /obj/item/reagent_container/hypospray/autoinjector/bicaridine
 	name = "bicaridine autoinjector"
 	chemname = "bicaridine"
@@ -188,6 +200,12 @@
 	icon_state = "emptyskill"
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
+
+/obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless/one_use
+	desc = "An EZ autoinjector loaded with 1 use of Bicaridine, a common brute and circulatory damage medicine.  Doesn't require any training to use."
+	volume = 15
+	amount_per_transfer_from_this = 15
+	uses_left = 1
 
 /obj/item/reagent_container/hypospray/autoinjector/inaprovaline
 	name = "inaprovaline autoinjector"
@@ -280,7 +298,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/skillless/get_examine_text(mob/user)
 	. = ..()
-	if(reagents && reagents.reagent_list.len)
+	if(reagents && length(reagents.reagent_list))
 		. += SPAN_NOTICE("It is currently loaded.")
 	else if(!uses_left)
 		. += SPAN_NOTICE("It is spent.")
