@@ -78,7 +78,7 @@
 						if(istype(I,/obj/item/stack/sheet))
 							recipe.resources[material] = I.matter[material] //Doesn't take more if it's just a sheet or something. Get what you put in.
 						else
-							recipe.resources[material] = floor(I.matter[material]*1.25) // More expensive to produce than they are to recycle.
+							recipe.resources[material] = round(I.matter[material]*1.25) // More expensive to produce than they are to recycle.
 			QDEL_NULL(I)
 
 	//Create parts for lathe.
@@ -106,7 +106,7 @@
 /obj/structure/machinery/autolathe/ui_data(mob/user)
 	var/list/data = list()
 
-	if(length(queue))
+	if(queue.len)
 		var/list/queue_list = list()
 		var/i = 0
 		for(var/params in queue)
@@ -119,7 +119,7 @@
 	else
 		data["queued"] = null
 
-	if(length(currently_making_data))
+	if(currently_making_data.len)
 		data["currently_making"] = currently_making_data
 	else
 		data["currently_making"] = null
@@ -129,7 +129,7 @@
 
 	var/list/wire_descriptions = get_wire_descriptions()
 	var/list/panel_wires = list()
-	for(var/wire = 1 to length(wire_descriptions))
+	for(var/wire = 1 to wire_descriptions.len)
 		panel_wires += list(list("desc" = wire_descriptions[wire], "cut" = isWireCut(wire)))
 
 	data["electrical"] = list(
@@ -164,7 +164,7 @@
 	switch(action)
 		if("cancel")
 			var/index = params["index"]
-			if(index < 1 || index > length(queue))
+			if(index < 1 || index > queue.len)
 				return
 
 			var/list/to_del = queue[index]
@@ -198,7 +198,7 @@
 			if(!initial(make_loc))
 				make_loc = get_step(loc, get_dir(src,usr))
 
-			if(index > 0 && index <= length(recipes))
+			if(index > 0 && index <= recipes.len)
 				making = recipes[index]
 
 			//Exploit detection, not sure if necessary after rewrite.
@@ -224,7 +224,7 @@
 		if("cutwire")
 			if(!panel_open)
 				return FALSE
-			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 				to_chat(usr, SPAN_WARNING("You don't understand anything about this wiring..."))
 				return FALSE
 			var/obj/item/held_item = usr.get_held_item()
@@ -238,7 +238,7 @@
 		if("fixwire")
 			if(!panel_open)
 				return FALSE
-			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 				to_chat(usr, SPAN_WARNING("You don't understand anything about this wiring..."))
 				return FALSE
 			var/obj/item/held_item = usr.get_held_item()
@@ -251,7 +251,7 @@
 		if("pulsewire")
 			if(!panel_open)
 				return FALSE
-			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+			if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 				to_chat(usr, SPAN_WARNING("You don't understand anything about this wiring..."))
 				return FALSE
 			var/obj/item/held_item = usr.get_held_item()
@@ -269,7 +269,7 @@
 
 /obj/structure/machinery/autolathe/attackby(obj/item/O as obj, mob/user as mob)
 	if(HAS_TRAIT(O, TRAIT_TOOL_SCREWDRIVER))
-		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 			to_chat(user, SPAN_WARNING("You are not trained to dismantle machines..."))
 			return
 		panel_open = !panel_open
@@ -339,7 +339,7 @@
 
 	if(istype(eating,/obj/item/stack))
 		var/obj/item/stack/stack = eating
-		stack.use(max(1,floor(total_used/mass_per_sheet))) // Always use at least 1 to prevent infinite materials.
+		stack.use(max(1,round(total_used/mass_per_sheet))) // Always use at least 1 to prevent infinite materials.
 	else if(user.temp_drop_inv_item(O))
 		qdel(O)
 
@@ -358,7 +358,7 @@
 		storage_capacity[material] = tot_rating  * 30000
 
 /obj/structure/machinery/autolathe/proc/try_queue(mob/living/carbon/human/user, datum/autolathe/recipe/making, turf/make_loc, multiplier = 1)
-	if(length(queue) >= queue_max)
+	if(queue.len >= queue_max)
 		to_chat(usr, SPAN_DANGER("The [name] has queued the maximum number of operations. Please wait for completion of current operation."))
 		return AUTOLATHE_FAILED
 
@@ -392,7 +392,7 @@
 
 	busy = TRUE
 
-	while (length(queue))
+	while (queue.len)
 		print_params = queue[1]
 		queue -= list(print_params)
 		print_item(arglist(print_params))
@@ -419,16 +419,11 @@
 	)
 	SStgui.update_uis(src)
 
-	//Print speed based on w_class.
-	var/obj/item/item = making.path
-	var/size = initial(item.w_class)
-	var/print_speed = clamp(size, 2, 5) SECONDS
-
 	//Fancy autolathe animation.
 	icon_state = "[base_state]_n"
 
 	playsound(src, 'sound/machines/print.ogg', 25)
-	sleep(print_speed)
+	sleep(5 SECONDS)
 	playsound(src, 'sound/machines/print_off.ogg', 25)
 	icon_state = "[base_state]"
 
@@ -526,7 +521,7 @@
 
 		max_print_amt = -1
 
-		if(!LAZYLEN(R.resources))
+		if(!R.resources || !R.resources.len)
 			print_data["materials"] = "No resources required"
 		else
 			//Make sure it's buildable and list requires resources.
@@ -535,7 +530,7 @@
 					print_data["can_make"] = FALSE
 					max_print_amt = 0
 				else
-					print_amt = floor(projected_stored_material[material]/R.resources[material])
+					print_amt = round(projected_stored_material[material]/R.resources[material])
 
 				if(print_data["can_make"] && max_print_amt < 0 || max_print_amt > print_amt)
 					max_print_amt = print_amt
@@ -586,7 +581,7 @@
 	stored_material =  list("metal" = 56250, "plastic" = 20000) //15 metal and 10 plastic sheets
 
 /obj/structure/machinery/autolathe/armylathe/attack_hand(mob/user)
-	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 		to_chat(user, SPAN_WARNING("You have no idea how to operate the [name]."))
 		return FALSE
 	. = ..()

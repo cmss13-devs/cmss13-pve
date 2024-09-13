@@ -67,14 +67,15 @@
 	if(!.) return
 	var/list/datum/nmnode/pickables = choices.Copy()
 	for(var/datum/nmnode/node as anything in pickables)
-		pickables[node] = isnum(node.raw["weight"]) ? node.raw["weight"] : 1
+		if(isnum(node.raw["weight"]))
+			pickables[node] = node.raw["weight"]
 	var/list/datum/nmnode/picked = list()
 	var/remaining = src.amount
 #if defined(UNIT_TESTS)
 	remaining = length(pickables) // Force all to be picked for testing (this could potentially make false positives though)
 #endif
 	while(length(pickables) && remaining > 0)
-		var/datum/nmnode/node = pick_weight(pickables)
+		var/datum/nmnode/node = pickweight(pickables)
 		remaining--
 		pickables -= node
 		picked += node

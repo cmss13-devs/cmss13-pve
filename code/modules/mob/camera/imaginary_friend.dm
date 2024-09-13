@@ -150,21 +150,21 @@
 	var/datum/mob_hud/hud
 	switch(hud_choice)
 		if("Medical HUD")
-			hud = GLOB.huds[MOB_HUD_MEDICAL_OBSERVER]
+			hud = huds[MOB_HUD_MEDICAL_OBSERVER]
 		if("Security HUD")
-			hud = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
+			hud = huds[MOB_HUD_SECURITY_ADVANCED]
 		if("Squad HUD")
-			hud = GLOB.huds[MOB_HUD_FACTION_OBSERVER]
+			hud = huds[MOB_HUD_FACTION_OBSERVER]
 		if("Xeno Status HUD")
-			hud = GLOB.huds[MOB_HUD_XENO_STATUS]
+			hud = huds[MOB_HUD_XENO_STATUS]
 		if("Faction UPP HUD")
-			hud = GLOB.huds[MOB_HUD_FACTION_UPP]
+			hud = huds[MOB_HUD_FACTION_UPP]
 		if("Faction Wey-Yu HUD")
-			hud = GLOB.huds[MOB_HUD_FACTION_WY]
+			hud = huds[MOB_HUD_FACTION_WY]
 		if("Faction TWE HUD")
-			hud = GLOB.huds[MOB_HUD_FACTION_TWE]
+			hud = huds[MOB_HUD_FACTION_TWE]
 		if("Faction CLF HUD")
-			hud = GLOB.huds[MOB_HUD_FACTION_CLF]
+			hud = huds[MOB_HUD_FACTION_CLF]
 
 	if(hud_choice in current_huds)
 		hud.remove_hud_from(src, src)
@@ -280,7 +280,6 @@
 	action_icon_state = "joinmob"
 
 /datum/action/innate/imaginary_orbit/action_activate()
-	. = ..()
 	var/mob/camera/imaginary_friend/friend = owner
 	friend.recall()
 
@@ -289,7 +288,6 @@
 	action_icon_state = "hidemob"
 
 /datum/action/innate/imaginary_hide/action_activate()
-	. = ..()
 	var/mob/camera/imaginary_friend/friend = owner
 	if(friend.hidden)
 		friend.hidden = FALSE

@@ -75,8 +75,6 @@
 
 	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
 	playsound(src, 'sound/voice/king_background.ogg', 100, TRUE, 30, falloff = 5)
-	if(!get_turf(src)) //autowiki compat, spawns in nullspace
-		return
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)

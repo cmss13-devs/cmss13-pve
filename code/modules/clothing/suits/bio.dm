@@ -51,7 +51,7 @@
 	item_state = "bio_suit"
 	allowed = list(
 		/obj/item/weapon/baton,
-		/obj/item/restraint/handcuffs,
+		/obj/item/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 

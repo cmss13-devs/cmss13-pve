@@ -167,7 +167,7 @@
 	if(!faction)
 		return UI_CLOSE
 
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
+	var/datum/cas_iff_group/cas_group = cas_groups[faction]
 	if(!cas_group)
 		return UI_CLOSE
 
@@ -313,9 +313,9 @@
 					var/obj/structure/dropship_equipment/sentry_holder/sentry = equipment
 					var/obj/structure/machinery/defenses/sentry/defense = sentry.deployed_turret
 					if(defense.has_camera)
-						defense.set_range()
+						defense.setup_target_acquisition()
 						camera_area_equipment = sentry
-						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, defense.range_bounds, defense.loc.z)
+						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, defense.loc.x, defense.loc.y, defense.loc.z, 11, 11)
 				return TRUE
 
 		if("clear-camera")
@@ -521,7 +521,7 @@
 	if(!target_ref)
 		return
 
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
+	var/datum/cas_iff_group/cas_group = cas_groups[faction]
 	for(var/datum/cas_signal/sig in cas_group.cas_signals)
 		if(sig.target_id == target_ref)
 			if(valid_only && !sig.valid_signal())
@@ -581,8 +581,8 @@
 	for(var/datum/cas_fire_mission_record/firerec as anything in editing_firemission.records)
 		var/gimbal = firerec.get_offsets()
 		var/ammo = firerec.get_ammo()
-		var/offsets = new /list(length(firerec.offsets))
-		for(var/idx = 1; idx < length(firerec.offsets); idx++)
+		var/offsets = new /list(firerec.offsets.len)
+		for(var/idx = 1; idx < firerec.offsets.len; idx++)
 			offsets[idx] = firerec.offsets[idx] == null ? "-" : firerec.offsets[idx]
 			. += list(
 				"name" = sanitize(copytext(firerec.weapon.name, 1, 50)),
@@ -619,10 +619,9 @@
 
 /obj/structure/machinery/computer/dropship_weapons/proc/get_targets()
 	. = list()
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
+	var/datum/cas_iff_group/cas_group = cas_groups[faction]
 	for(var/datum/cas_signal/LT as anything in cas_group.cas_signals)
-		var/obj/object = LT.signal_loc
-		if(!istype(LT) || !LT.valid_signal() || !is_ground_level(object.z))
+		if(!istype(LT) || !LT.valid_signal())
 			continue
 		var/area/laser_area = get_area(LT.signal_loc)
 		. += list(
@@ -675,7 +674,7 @@
 		to_chat(weapon_operator, SPAN_WARNING("[DEW] just fired, wait for it to cool down."))
 		return FALSE
 
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
+	var/datum/cas_iff_group/cas_group = cas_groups[faction]
 
 	if(!cas_group)
 		return FALSE//broken group. No fighting
@@ -738,7 +737,7 @@
 	if(!skillcheck(weapon_operator, SKILL_PILOT, SKILL_PILOT_TRAINED)) //only pilots can fire dropship weapons.
 		to_chat(weapon_operator, SPAN_WARNING("A screen with graphics and walls of physics and engineering values open, you immediately force it closed."))
 		return FALSE
-	if(firemission_tag > length(firemission_envelope.missions))
+	if(firemission_tag > firemission_envelope.missions.len)
 		to_chat(weapon_operator, SPAN_WARNING("Fire Mission ID corrupted or already deleted."))
 		return FALSE
 	if(selected_firemission == firemission_envelope.missions[firemission_tag])
@@ -757,7 +756,7 @@
 	if(firemission_envelope.stat > FIRE_MISSION_STATE_IN_TRANSIT && firemission_envelope.stat < FIRE_MISSION_STATE_COOLDOWN)
 		to_chat(weapon_operator, SPAN_WARNING("Fire Mission already underway."))
 		return FALSE
-	if(firemission_tag > length(firemission_envelope.missions))
+	if(firemission_tag > firemission_envelope.missions.len)
 		to_chat(weapon_operator, SPAN_WARNING("Fire Mission ID corrupted or deleted."))
 		return FALSE
 	if(selected_firemission == firemission_envelope.missions[firemission_tag])
@@ -789,7 +788,7 @@
 	if(dropship.mode != SHUTTLE_CALL)
 		to_chat(weapons_operator, SPAN_WARNING("Shuttle has to be in orbit."))
 		return FALSE
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
+	var/datum/cas_iff_group/cas_group = cas_groups[faction]
 	var/datum/cas_signal/cas_sig
 	for(var/X in cas_group.cas_signals)
 		var/datum/cas_signal/LT = X
@@ -891,12 +890,6 @@
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_NORMANDY
 
-/obj/structure/machinery/computer/dropship_weapons/dropship3
-	name = "\improper 'Saipan' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
-	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
-	shuttle_tag = DROPSHIP_SAIPAN
-
 /obj/structure/machinery/computer/dropship_weapons/midway
 	name = "\improper 'Midway' weapons controls"
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
@@ -951,6 +944,14 @@
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "cameras"
 	density = FALSE
+
+/obj/structure/machinery/computer/dropship_weapons/dropship1
+	name = "\improper 'Alamo' weapons controls"
+	shuttle_tag = DROPSHIP_ALAMO
+
+/obj/structure/machinery/computer/dropship_weapons/dropship2
+	name = "\improper 'Normandy' weapons controls"
+	shuttle_tag = DROPSHIP_NORMANDY
 
 /obj/structure/machinery/computer/dropship_weapons/Destroy()
 	. = ..()

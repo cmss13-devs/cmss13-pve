@@ -49,7 +49,8 @@
 	if(LAZYACCESS(modifiers, LEFT_CLICK)) //rectangular
 		if(LAZYACCESS(modifiers, CTRL_CLICK))
 			var/list/deletion_area = block(get_turf(cornerA),get_turf(cornerB))
-			for(var/turf/T as anything in deletion_area)
+			for(var/deleted_turfs in deletion_area)
+				var/turf/T = deleted_turfs
 				for(var/atom/movable/AM in T)
 					qdel(AM)
 				T.ScrapeAway(INFINITY, CHANGETURF_DEFER_CHANGE)
@@ -58,7 +59,7 @@
 				var/choice = alert("Your selected area is [selection_size] tiles! Continue?", "Large Fill Confirmation", CONFIRM_YES, CONFIRM_NO)
 				if(choice != CONFIRM_YES)
 					return
-			for(var/turf/T as anything in deletion_area)
+			for(var/turf/T in block(get_turf(cornerA),get_turf(cornerB)))
 				if(ispath(objholder,/turf))
 					T = T.ChangeTurf(objholder)
 					T.setDir(BM.build_dir)

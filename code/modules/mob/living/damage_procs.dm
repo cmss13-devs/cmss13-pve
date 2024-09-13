@@ -97,8 +97,6 @@
 			EyeBlur(effect)
 		if(DROWSY)
 			drowsyness = max(drowsyness, effect)
-		if(ROOT)
-			Root(effect)
 	updatehealth()
 	return TRUE
 
@@ -132,8 +130,6 @@
 			AdjustEyeBlur(effect)
 		if(DROWSY)
 			drowsyness = POSITIVE(drowsyness + effect)
-		if(ROOT)
-			AdjustRoot(effect)
 	updatehealth()
 	return TRUE
 
@@ -164,26 +160,15 @@
 			SetEyeBlur(effect)
 		if(DROWSY)
 			drowsyness = POSITIVE(effect)
-		if(ROOT)
-			SetRoot(effect)
 	updatehealth()
 	return TRUE
 
-/mob/living/proc/apply_effects(stun = 0, weaken = 0, paralyze = 0, irradiate = 0, stutter = 0, eyeblur = 0, drowsy = 0, agony = 0, root = 0)
-	if(stun)
-		apply_effect(stun, STUN)
-	if(weaken)
-		apply_effect(weaken, WEAKEN)
-	if(paralyze)
-		apply_effect(paralyze, PARALYZE)
-	if(stutter)
-		apply_effect(stutter, STUTTER)
-	if(eyeblur)
-		apply_effect(eyeblur, EYE_BLUR)
-	if(drowsy)
-		apply_effect(drowsy, DROWSY)
-	if(agony)
-		apply_effect(agony, AGONY)
-	if(root)
-		apply_effect(root, ROOT)
+/mob/living/proc/apply_effects(stun = 0, weaken = 0, paralyze = 0, irradiate = 0, stutter = 0, eyeblur = 0, drowsy = 0, agony = 0)
+	if(stun) apply_effect(stun, STUN)
+	if(weaken) apply_effect(weaken, WEAKEN)
+	if(paralyze) apply_effect(paralyze, PARALYZE)
+	if(stutter) apply_effect(stutter, STUTTER)
+	if(eyeblur) apply_effect(eyeblur, EYE_BLUR)
+	if(drowsy) apply_effect(drowsy, DROWSY)
+	if(agony) apply_effect(agony, AGONY)
 	return 1

@@ -5,11 +5,10 @@
 	w_class = SIZE_TINY
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_FACE
-	actions_types = list(/datum/action/item_action/toggle/use)
+	actions_types = list(/datum/action/item_action)
 
 	var/volume = 60
-	var/spam_cooldown_time = 10 SECONDS
-	COOLDOWN_DECLARE(spam_cooldown)
+	var/spamcheck = 0
 
 /obj/item/device/whistle/attack_self(mob/user)
 	..()
@@ -29,17 +28,17 @@
 		..()
 
 /obj/item/device/whistle/proc/whistle_playsound(mob/user)
-	if(!COOLDOWN_FINISHED(src, spam_cooldown))
-		to_chat(user, SPAN_DANGER("You are out of breath after using [src]! Wait [COOLDOWN_SECONDSLEFT(src, spam_cooldown)] second\s."))
+	if (spamcheck)
 		return
 
 	user.visible_message(SPAN_WARNING("[user] blows into [src]!"))
 	playsound(get_turf(src), 'sound/items/whistle.ogg', volume, 1, vary = 0)
 
-	COOLDOWN_START(src, spam_cooldown, spam_cooldown_time)
+	spamcheck = 1
+	addtimer(VARSET_CALLBACK(src, spamcheck, FALSE), 3 SECONDS)
 
 /obj/item/device/whistle/MouseDrop(obj/over_object)
-	if(ishuman(usr))
+	if(ishuman(usr) || isrobot(usr))
 
 		if(!usr.is_mob_restrained() && !usr.stat && usr.wear_mask == src)
 			switch(over_object.name)
@@ -50,6 +49,7 @@
 					if(usr.drop_inv_item_on_ground(src))
 						usr.put_in_l_hand(src)
 			add_fingerprint(usr)
+
 
 /obj/item/device/hailer
 	name = "hailer"

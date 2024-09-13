@@ -21,7 +21,7 @@
 		to_chat(user, SPAN_DANGER("\The [src] cannot be applied to [M]!"))
 		return 1
 
-	if(!ishuman(user))
+	if(!ishuman(user) && !isrobot(user))
 		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return 1
 
@@ -94,9 +94,6 @@
 			else
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
-
-/obj/item/stack/medical/bruise_pack/two
-	amount = 2
 
 /obj/item/stack/medical/ointment
 	name = "ointment"

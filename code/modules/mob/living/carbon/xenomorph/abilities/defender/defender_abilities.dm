@@ -18,14 +18,7 @@
 	macro_path = /datum/action/xeno_action/verb/verb_headbutt
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_2
-	xeno_cooldown = 4 SECONDS
-
-	var/base_damage = 30
-	var/usable_while_fortified = FALSE
-
-/datum/action/xeno_action/activable/headbutt/steel_crest
-	base_damage = 37.5
-	usable_while_fortified = TRUE
+	xeno_cooldown = 40
 
 /datum/action/xeno_action/onclick/tail_sweep
 	name = "Tail Sweep"
@@ -35,7 +28,7 @@
 	action_type = XENO_ACTION_ACTIVATE
 	ability_primacy = XENO_PRIMARY_ACTION_3
 	plasma_cost = 10
-	xeno_cooldown = 11 SECONDS
+	xeno_cooldown = 110
 
 /datum/action/xeno_action/activable/fortify
 	name = "Fortify"
@@ -48,9 +41,8 @@
 
 	/// Extra armor when fortified and facing bullets.
 	var/frontal_armor = 5
-
-/datum/action/xeno_action/activable/fortify/steel_crest
-	frontal_armor = 15
+	/// Extra armor when steelcrest, fortified, and facing bullets.
+	var/steelcrest_frontal_armor = 15
 
 /datum/action/xeno_action/activable/tail_stab/slam
 	name = "Tail Slam"

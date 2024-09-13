@@ -16,21 +16,21 @@
 	//Generate stats
 	if(!id) //So we can initiate a new datum without generating it
 		return
-	if(!GLOB.chemical_reagents_list[id])
+	if(!chemical_reagents_list[id])
 		generate_name()
 		generate_stats()
-		GLOB.chemical_reagents_list[id] = src
-	make_alike(GLOB.chemical_reagents_list[id])
+		chemical_reagents_list[id] = src
+	make_alike(chemical_reagents_list[id])
 	recalculate_variables()
 
 /datum/chemical_reaction/generated/New()
 	//Generate recipe
 	if(!id) //So we can initiate a new datum without generating it
 		return
-	if(!GLOB.chemical_reactions_list[id])
+	if(!chemical_reactions_list[id])
 		generate_recipe()
-		GLOB.chemical_reactions_list[id] = src
-	make_alike(GLOB.chemical_reactions_list[id])
+		chemical_reactions_list[id] = src
+	make_alike(chemical_reactions_list[id])
 
 /////////Tier 1
 /datum/chemical_reaction/generated/alpha

@@ -45,12 +45,15 @@
 	var/list/turfs = new/list()
 	var/rsq = radius * (radius+0.5)
 
-	for(var/turf/T as anything in RANGE_TURFS(radius, centerturf))
+	for(var/turf/T in range(radius, centerturf))
 		var/dx = T.x - centerturf.x
 		var/dy = T.y - centerturf.y
 		if(dx*dx + dy*dy <= rsq)
 			turfs += T
 	return turfs
+
+
+//var/debug_mob = 0
 
 // Will recursively loop through an atom's contents and check for mobs, then it will loop through every atom in that atom's contents.
 // It will keep doing this until it checks every content possible. This will fix any problems with mobs, that are inside objects,
@@ -58,7 +61,7 @@
 
 /proc/recursive_mob_check(atom/O, list/L = list(), recursion_limit = 3, client_check = 1, sight_check = 1, include_radio = 1)
 
-	//debug_mob += length(O.contents)
+	//debug_mob += O.contents.len
 	if(!recursion_limit)
 		return L
 	for(var/atom/A in O.contents)
@@ -151,6 +154,16 @@
 	var/list/speaker_coverage = list()
 	for(var/obj/item/device/radio/R in radios)
 		if(R)
+			//Cyborg checks. Receiving message uses a bit of cyborg's charge.
+			var/obj/item/device/radio/borg/BR = R
+			if(istype(BR) && BR.myborg)
+				var/mob/living/silicon/robot/borg = BR.myborg
+				var/datum/robot_component/CO = borg.get_component("radio")
+				if(!CO)
+					continue //No radio component (Shouldn't happen)
+				if(!borg.is_component_functioning("radio") || !borg.cell_use_power(CO.active_usage))
+					continue //No power.
+
 			var/turf/speaker = get_turf(R)
 			if(speaker)
 				for(var/turf/T in hear(R.canhear_range,speaker))
@@ -190,7 +203,7 @@
 		if(X1<X2)
 			b+=m
 		while(X1!=X2 || Y1!=Y2)
-			if(floor(m*X1+b-Y1))
+			if(round(m*X1+b-Y1))
 				Y1+=signY //Line exits tile vertically
 			else
 				X1+=signX //Line exits tile horizontally
@@ -235,7 +248,7 @@
  * * hive - The hive we're filling a slot for to check if the player is banished
  * * sorted - Whether to sort by larva_queue_time (default TRUE) or leave unsorted
  */
-/proc/get_alien_candidates(datum/hive_status/hive = null, sorted = TRUE, abomination = FALSE)
+/proc/get_alien_candidates(datum/hive_status/hive = null, sorted = TRUE)
 	var/list/candidates = list()
 
 	for(var/mob/dead/observer/cur_obs as anything in GLOB.observer_list)
@@ -263,7 +276,7 @@
 			continue
 
 		// Mods with larva protection cannot be drafted
-		if(check_client_rights(cur_obs.client, R_MOD, FALSE) && cur_obs.admin_larva_protection)
+		if((cur_obs.client.admin_holder && (cur_obs.client.admin_holder.rights & R_MOD)) && !cur_obs.adminlarva)
 			continue
 
 		if(hive)
@@ -273,11 +286,6 @@
 					banished = TRUE
 					break
 			if(banished)
-				continue
-
-		if(abomination)
-			if(!(/datum/tutorial/xenomorph/abomination::tutorial_id in cur_obs.client.prefs.completed_tutorials))
-				to_chat(cur_obs, SPAN_BOLDNOTICE("You were passed over for playing as an Abomination because you have not completed its tutorial."))
 				continue
 
 		candidates += cur_obs
@@ -299,7 +307,7 @@
  * * cache_only - Whether to not actually send a to_chat message and instead only update larva_queue_cached_message
  */
 /proc/message_alien_candidates(list/candidates, dequeued, cache_only = FALSE)
-	for(var/i in (1 + dequeued) to length(candidates))
+	for(var/i in (1 + dequeued) to candidates.len)
 		var/mob/dead/observer/cur_obs = candidates[i]
 
 		// Generate the messages

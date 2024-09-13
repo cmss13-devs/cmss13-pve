@@ -6,15 +6,13 @@
 	anchored = TRUE
 	density = FALSE
 	unslashable = TRUE
-	var/obj/item/tool/extinguisher/has_extinguisher
+	var/obj/item/tool/extinguisher/has_extinguisher = new/obj/item/tool/extinguisher
 	var/opened = 0
 	var/base_icon
 
 /obj/structure/extinguisher_cabinet/Initialize()
 	. = ..()
 	base_icon = initial(icon_state)
-	has_extinguisher = new /obj/item/tool/extinguisher()
-	has_extinguisher.forceMove(src)
 
 /obj/structure/extinguisher_cabinet/lifeboat
 	name = "extinguisher cabinet"
@@ -24,13 +22,15 @@
 /obj/structure/extinguisher_cabinet/alt
 	icon_state = "extinguisher_alt"
 
-/obj/structure/extinguisher_cabinet/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/tool/extinguisher))
+/obj/structure/extinguisher_cabinet/attackby(obj/item/O, mob/user)
+	if(isrobot(user))
+		return
+	if(istype(O, /obj/item/tool/extinguisher))
 		if(!has_extinguisher && opened)
 			user.drop_held_item()
-			item.forceMove(src)
-			has_extinguisher = item
-			to_chat(user, SPAN_NOTICE("You place [item] in [src]."))
+			contents += O
+			has_extinguisher = O
+			to_chat(user, SPAN_NOTICE("You place [O] in [src]."))
 		else
 			opened = !opened
 	else
@@ -39,11 +39,14 @@
 
 
 /obj/structure/extinguisher_cabinet/attack_hand(mob/user)
+	if(isrobot(user))
+		return
+
 	if(has_extinguisher)
 		user.put_in_hands(has_extinguisher)
 		to_chat(user, SPAN_NOTICE("You take [has_extinguisher] from [src]."))
 		has_extinguisher = null
-		opened = TRUE
+		opened = 1
 	else
 		opened = !opened
 	update_icon()

@@ -37,7 +37,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "e" = (
 /turf/closed/wall/almayer/outer,
@@ -57,7 +59,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/corner/west,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "g" = (
 /obj/effect/decal/warning_stripes{
@@ -69,7 +73,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "h" = (
 /obj/structure/platform{
@@ -88,7 +94,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer/edge/smooth/east,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "j" = (
 /obj/structure/cable{
@@ -130,7 +138,9 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "m" = (
 /obj/structure/surface/table/almayer,
@@ -169,7 +179,9 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "p" = (
 /obj/structure/cable{
@@ -194,16 +206,22 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/turf/open/floor/almayer/edge/smooth/endcap_left{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "u" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "v" = (
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "x" = (
 /obj/structure/pipes/vents/scrubber{
@@ -216,7 +234,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "y" = (
 /obj/effect/decal/warning_stripes{
@@ -230,10 +250,14 @@
 	pixel_x = -10;
 	pixel_y = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner/east,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "A" = (
-/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
 /obj/structure/cable{
 	icon_state = "0-8";
 	layer = 2.36
@@ -259,7 +283,9 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "D" = (
 /obj/item/reagent_container/glass/rag,
@@ -289,7 +315,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner/north,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "I" = (
 /obj/structure/platform{
@@ -326,7 +354,9 @@
 /obj/structure/machinery/light_switch{
 	pixel_x = -24
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "Q" = (
 /turf/closed/wall/almayer,
@@ -339,7 +369,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "S" = (
 /obj/effect/decal/warning_stripes{
@@ -364,7 +396,9 @@
 	pixel_y = 6;
 	layer = 3.02
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/north,
+/turf/open/floor/almayer/edge/smooth/endcap_right{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "T" = (
 /obj/effect/decal/warning_stripes{
@@ -375,13 +409,17 @@
 	dir = 8;
 	pixel_x = -16
 	},
-/turf/open/floor/almayer/edge/smooth/east,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "U" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "V" = (
 /obj/structure/surface/table/almayer,
@@ -410,7 +448,9 @@
 "X" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/reagent_container/glass/rag,
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "Y" = (
 /obj/structure/platform_decoration{

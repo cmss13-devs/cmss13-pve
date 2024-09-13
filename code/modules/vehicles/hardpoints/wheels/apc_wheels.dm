@@ -1,5 +1,5 @@
 /obj/item/hardpoint/locomotion/apc_wheels
-	name = "\improper APC Wheels"
+	name = "APC Wheels"
 	desc = "Integral to the movement of the APC."
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 
@@ -23,4 +23,4 @@
 
 	icon_state = "tires"
 	disp_icon = "arc"
-	disp_icon_state = "arc_wheels"
+	disp_icon_state = "wheels"

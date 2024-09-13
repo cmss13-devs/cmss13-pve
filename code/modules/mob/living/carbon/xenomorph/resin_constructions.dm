@@ -191,7 +191,7 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 		return FALSE
 
 	var/wall_support = FALSE
-	for(var/D in GLOB.cardinals)
+	for(var/D in cardinal)
 		var/turf/CT = get_step(T, D)
 		if(CT)
 			if(CT.density)
@@ -336,11 +336,11 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 	construction_name = "thick resin membrane"
 	build_path = /obj/structure/alien/movable_wall/membrane/thick
 
-// Remote Weed Nodes for originally coded for Resin Whisperers
+// Remote Resin Nodes for originally coded for Resin Whisperers
 /datum/resin_construction/resin_obj/resin_node
-	name = "Weed Node"
+	name = "Resin Node"
 	desc = "Channel energy to spread our influence."
-	construction_name = "weed node"
+	construction_name = "resin node"
 	cost = (XENO_RESIN_MEMBRANE_THICK_COST * 2) // 3x the cost of a thick membrane. At the time of coding that is 95*2 = 190
 
 	build_path = /obj/effect/alien/weeds/node

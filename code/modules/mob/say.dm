@@ -69,7 +69,7 @@
 		return
 
 	if(!src.client.admin_holder || !(client.admin_holder.rights & R_MOD))
-		if(!GLOB.dsay_allowed)
+		if(!dsay_allowed)
 			to_chat(src, SPAN_DANGER("Deadchat is globally muted"))
 			return
 
@@ -119,6 +119,8 @@
 		if(!other)
 			return 1
 		if(other.universal_speak)
+			return 1
+		if(isAI(src))
 			return 1
 		if (istype(other, src.type) || istype(src, other.type))
 			return 1
@@ -175,7 +177,7 @@ for it but just ignore it.
 
 	if(length(message) >= 2)
 		var/channel_prefix = copytext(message, 1 ,3)
-		return GLOB.department_radio_keys[channel_prefix]
+		return department_radio_keys[channel_prefix]
 
 	return null
 

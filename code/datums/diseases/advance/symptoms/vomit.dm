@@ -3,7 +3,7 @@
 
 Vomiting
 
-	Very Very Noticeable.
+	Very Very Noticable.
 	Decreases resistance.
 	Doesn't increase stage speed.
 	Little transmittable.
@@ -51,7 +51,7 @@ Bonus
 
 Vomiting Blood
 
-	Very Very Noticeable.
+	Very Very Noticable.
 	Decreases resistance.
 	Decreases stage speed.
 	Little transmittable.

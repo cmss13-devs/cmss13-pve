@@ -95,11 +95,11 @@
 	return ..()
 
 /obj/effect/decal/mecha_wreckage/gygax
-	name = "MAX wreckage"
+	name = "Gygax wreckage"
 	icon_state = "gygax-broken"
 
 /obj/effect/decal/mecha_wreckage/gygax/dark
-	name = "Dark MAX wreckage"
+	name = "Dark Gygax wreckage"
 	icon_state = "darkgygax-broken"
 
 /obj/effect/decal/mecha_wreckage/marauder
@@ -116,7 +116,7 @@
 	icon_state = "seraph-broken"
 
 /obj/effect/decal/mecha_wreckage/ripley
-	name = "P-1000 wreckage"
+	name = "Ripley wreckage"
 	icon_state = "ripley-broken"
 
 /obj/effect/decal/mecha_wreckage/ripley/firefighter
@@ -124,11 +124,11 @@
 	icon_state = "firefighter-broken"
 
 /obj/effect/decal/mecha_wreckage/ripley/deathripley
-	name = "Death-P-1000 wreckage"
+	name = "Death-Ripley wreckage"
 	icon_state = "deathripley-broken"
 
 /obj/effect/decal/mecha_wreckage/durand
-	name = "MOX wreckage"
+	name = "Durand wreckage"
 	icon_state = "durand-broken"
 
 /obj/effect/decal/mecha_wreckage/phazon
@@ -136,7 +136,7 @@
 	icon_state = "phazon-broken"
 
 /obj/effect/decal/mecha_wreckage/odysseus
-	name = "Alice wreckage"
+	name = "Odysseus wreckage"
 	icon_state = "odysseus-broken"
 
 /obj/effect/decal/mecha_wreckage/hoverpod

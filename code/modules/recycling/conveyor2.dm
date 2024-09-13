@@ -101,6 +101,7 @@
 
 // attack with item, place item on conveyor
 /obj/structure/machinery/conveyor/attackby(obj/item/I, mob/user)
+	if(isrobot(user)) return //Carn: fix for borgs dropping their modules on conveyor belts
 	var/obj/item/grab/G = I
 	if(istype(G)) // handle grabbed mob
 		if(ismob(G.grabbed_thing))
@@ -196,7 +197,7 @@
 /obj/structure/machinery/conveyor_switch/LateInitialize()
 	. = ..()
 	conveyors = list()
-	for(var/obj/structure/machinery/conveyor/C in GLOB.machines)
+	for(var/obj/structure/machinery/conveyor/C in machines)
 		if(C.id == id)
 			conveyors += C
 	start_processing()
@@ -245,7 +246,7 @@
 	update()
 
 	// find any switches with same id as this one, and set their positions to match us
-	for(var/obj/structure/machinery/conveyor_switch/S in GLOB.machines)
+	for(var/obj/structure/machinery/conveyor_switch/S in machines)
 		if(S.id == src.id)
 			S.position = position
 			S.update()
@@ -265,7 +266,7 @@
 	update()
 
 	// find any switches with same id as this one, and set their positions to match us
-	for(var/obj/structure/machinery/conveyor_switch/S in GLOB.machines)
+	for(var/obj/structure/machinery/conveyor_switch/S in machines)
 		if(S.id == src.id)
 			S.position = position
 			S.update()

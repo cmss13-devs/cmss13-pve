@@ -2,6 +2,14 @@
 	ERT Shuttles
 */
 
+#define ERT_SHUTTLE_DEFAULT_RECHARGE 90 SECONDS
+
+#define ADMIN_LANDING_PAD_1 "base-ert1"
+#define ADMIN_LANDING_PAD_2 "base-ert2"
+#define ADMIN_LANDING_PAD_3 "base-ert3"
+#define ADMIN_LANDING_PAD_4 "base-ert4"
+#define ADMIN_LANDING_PAD_5 "base-ert5"
+
 // Base ERT Shuttle
 /obj/docking_port/mobile/emergency_response
 	name = "ERT Shuttle"
@@ -13,8 +21,6 @@
 	rechargeTime = ERT_SHUTTLE_DEFAULT_RECHARGE // 90s cooldown to recharge
 	var/list/doors = list()
 	var/list/external_doors = list()
-	var/datum/emergency_call/distress_beacon
-	var/list/local_landmarks = list()
 
 /obj/docking_port/mobile/emergency_response/Initialize(mapload)
 	. = ..(mapload)
@@ -25,33 +31,10 @@
 			air.breakable = FALSE
 			air.indestructible = TRUE
 			air.unacidable = TRUE
-	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
 
 /obj/docking_port/mobile/emergency_response/enterTransit()
 	control_doors("force-lock-launch", force = TRUE, external_only = TRUE)
-	UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
 	..()
-
-/obj/docking_port/mobile/emergency_response/register()
-	. = ..()
-
-	for(var/turf/current_turf as anything in return_turfs())
-		for(var/obj/effect/landmark/landmark in current_turf.GetAllContents())
-			LAZYADD(local_landmarks[landmark.type], landmark)
-
-/obj/docking_port/mobile/emergency_response/initiate_docking(obj/docking_port/stationary/new_dock, movement_direction, force)
-	. = ..()
-	if(. != DOCKING_SUCCESS)
-		return
-
-	if(!is_mainship_level(z))
-		return
-
-	if(!distress_beacon || !distress_beacon.home_base)
-		return
-
-	var/obj/structure/machinery/computer/shuttle/ert/console = getControlConsole()
-	console.must_launch_home = TRUE
 
 /obj/docking_port/mobile/emergency_response/proc/control_doors(action, force = FALSE, external_only = FALSE)
 	var/list/door_list = doors
@@ -94,10 +77,10 @@
 	air.lock()
 	air.safe = 1
 
-/obj/docking_port/mobile/emergency_response/proc/on_dir_change(datum/source, old_dir, new_dir)
-	SIGNAL_HANDLER
+/obj/docking_port/mobile/emergency_response/setDir(newdir)
+	. = ..()
 	for(var/obj/structure/machinery/door/shuttle_door in doors)
-		shuttle_door.handle_multidoor(old_dir, new_dir)
+		shuttle_door.handle_multidoor()
 
 // ERT Shuttle 1
 /obj/docking_port/mobile/emergency_response/ert1
@@ -169,7 +152,6 @@
 	port_direction = NORTH
 	width = 17
 	height = 29
-	dwidth = 8
 	var/port_door
 	var/starboard_door
 
@@ -200,19 +182,12 @@
 	width  = 7
 	height = 13
 	var/is_external = FALSE
-	var/lockdown_on_land = FALSE
 
 /obj/docking_port/stationary/emergency_response/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
 	if(istype(arriving_shuttle, /obj/docking_port/mobile/emergency_response))
 		var/obj/docking_port/mobile/emergency_response/ert = arriving_shuttle
 		ert.control_doors("unlock", force = FALSE)
-
-	if(lockdown_on_land)
-		var/obj/structure/machinery/computer/shuttle/ert/console = arriving_shuttle.getControlConsole()
-		console.disable()
-		console.mission_accomplished = TRUE
-		lockdown_on_land = FALSE
 
 /obj/docking_port/stationary/emergency_response/port1
 	name = "Almayer starboard landing pad"
@@ -279,7 +254,7 @@
 	width  = 17
 	height = 29
 	airlock_id = "s_umbilical"
-	airlock_area = /area/almayer/hallways/lower/port_umbilical
+	airlock_area = /area/almayer/hallways/port_umbilical
 
 /obj/docking_port/stationary/emergency_response/external/hangar_starboard
 	name = "Almayer hanger starboard external airlock"
@@ -288,7 +263,7 @@
 	width  = 17
 	height = 29
 	airlock_id = "n_umbilical"
-	airlock_area = /area/almayer/hallways/lower/starboard_umbilical
+	airlock_area = /area/almayer/hallways/starboard_umbilical
 
 // These are docking ports not on the almayer
 /obj/docking_port/stationary/emergency_response/idle_port1
@@ -335,24 +310,24 @@
 
 /datum/map_template/shuttle/response_ert
 	name = "Response Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT1
+	shuttle_id = "ert_response_shuttle"
 
 /datum/map_template/shuttle/pmc_ert
 	name = "PMC Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT2
+	shuttle_id = "ert_pmc_shuttle"
 
 /datum/map_template/shuttle/upp_ert
 	name = "UPP Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT3
+	shuttle_id = "ert_upp_shuttle"
 
 /datum/map_template/shuttle/twe_ert
 	name = "TWE Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT4
+	shuttle_id = "ert_twe_shuttle"
 
 /datum/map_template/shuttle/small_ert
 	name = "Rescue Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT_SMALL
+	shuttle_id = "ert_small_shuttle_north"
 
 /datum/map_template/shuttle/big_ert
 	name = "Boarding Shuttle"
-	shuttle_id = MOBILE_SHUTTLE_ID_ERT_BIG
+	shuttle_id = "ert_shuttle_big"

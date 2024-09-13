@@ -126,7 +126,9 @@
 	name = "personal desktop";
 	pixel_y = 3
 	},
-/turf/open/floor/almayer/edge/northwest,
+/turf/open/floor/almayer/edge{
+	dir = 9
+	},
 /area/golden_arrow/dorms)
 "fG" = (
 /obj/structure/barricade/handrail{
@@ -186,7 +188,9 @@
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
-/turf/open/floor/almayer/edge/southeast,
+/turf/open/floor/almayer/edge{
+	dir = 6
+	},
 /area/golden_arrow/dorms)
 "jy" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -212,7 +216,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/dorms)
 "mf" = (
 /obj/structure/barricade/handrail{
@@ -225,7 +231,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/northeast,
+/turf/open/floor/almayer/edge{
+	dir = 5
+	},
 /area/golden_arrow/dorms)
 "mj" = (
 /obj/effect/decal/cleanable/dirt{
@@ -236,12 +244,16 @@
 	name = "General Listening Channel";
 	pixel_y = -29
 	},
-/obj/structure/machinery/power/apc/almayer/west,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 8
+	},
 /obj/structure/cable{
 	icon_state = "0-4";
 	layer = 2.36
 	},
-/turf/open/floor/almayer/edge/southwest,
+/turf/open/floor/almayer/edge{
+	dir = 10
+	},
 /area/golden_arrow/dorms)
 "mm" = (
 /obj/effect/decal/cleanable/dirt{
@@ -250,7 +262,9 @@
 /obj/structure/machinery/atm{
 	pixel_y = 26
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "mu" = (
 /obj/structure/bed/chair{
@@ -279,7 +293,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "nP" = (
 /obj/structure/surface/table/almayer,
@@ -296,7 +312,9 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/almayer/edge/west,
+/turf/open/floor/almayer/edge{
+	dir = 8
+	},
 /area/golden_arrow/dorms)
 "oc" = (
 /obj/structure/bed/chair{
@@ -365,7 +383,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
 /area/golden_arrow/dorms)
 "rZ" = (
 /obj/structure/bed{
@@ -382,7 +402,9 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "sO" = (
 /obj/structure/barricade/handrail{
@@ -405,7 +427,9 @@
 	pixel_y = 12;
 	pixel_x = 5
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
 /area/golden_arrow/dorms)
 "tq" = (
 /obj/effect/decal/cleanable/dirt{
@@ -419,7 +443,9 @@
 	pixel_y = 14;
 	pixel_x = 9
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "tz" = (
 /obj/effect/decal/cleanable/dirt{
@@ -466,7 +492,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/dorms)
 "vF" = (
 /turf/closed/wall/almayer,
@@ -491,7 +519,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
 /area/golden_arrow/dorms)
 "xm" = (
 /turf/open/floor/almayer,
@@ -522,7 +552,9 @@
 	pixel_y = 44
 	},
 /obj/item/trash/barcardine,
-/turf/open/floor/almayer/edge/northwest,
+/turf/open/floor/almayer/edge{
+	dir = 9
+	},
 /area/golden_arrow/dorms)
 "zg" = (
 /obj/effect/decal/cleanable/dirt{
@@ -559,7 +591,9 @@
 	layer = 3.5;
 	pixel_y = 15
 	},
-/turf/open/floor/almayer/edge/northeast,
+/turf/open/floor/almayer/edge{
+	dir = 5
+	},
 /area/golden_arrow/dorms)
 "CR" = (
 /obj/effect/decal/cleanable/dirt{
@@ -608,7 +642,9 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge/southeast,
+/turf/open/floor/almayer/edge{
+	dir = 6
+	},
 /area/golden_arrow/dorms)
 "Eb" = (
 /obj/item/prop/magazine/book/starshiptroopers{
@@ -625,7 +661,9 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet,
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "Gi" = (
 /obj/structure/bed{
@@ -642,7 +680,9 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge/northwest,
+/turf/open/floor/almayer/edge{
+	dir = 9
+	},
 /area/golden_arrow/dorms)
 "Hv" = (
 /obj/effect/decal/cleanable/dirt{
@@ -652,7 +692,9 @@
 	pixel_y = -10;
 	pixel_x = 6
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
 /area/golden_arrow/dorms)
 "IO" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -675,7 +717,9 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/dorms)
 "Nu" = (
 /obj/structure/bed{
@@ -692,7 +736,9 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge/southwest,
+/turf/open/floor/almayer/edge{
+	dir = 10
+	},
 /area/golden_arrow/dorms)
 "NK" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -702,7 +748,9 @@
 	name = "\improper Dorms";
 	dir = 1
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/dorms)
 "NN" = (
 /obj/structure/surface/table/almayer,
@@ -740,7 +788,9 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/turf/open/floor/almayer/edge/southwest,
+/turf/open/floor/almayer/edge{
+	dir = 10
+	},
 /area/golden_arrow/dorms)
 "Sh" = (
 /obj/structure/barricade/handrail{
@@ -763,7 +813,9 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "SL" = (
 /obj/structure/machinery/alarm/almayer{
@@ -790,7 +842,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "SM" = (
 /obj/structure/barricade/handrail{
@@ -801,7 +855,9 @@
 	dir = 4;
 	pixel_y = 12
 	},
-/turf/open/floor/almayer/edge/west,
+/turf/open/floor/almayer/edge{
+	dir = 8
+	},
 /area/golden_arrow/dorms)
 "To" = (
 /obj/structure/surface/rack,
@@ -809,7 +865,9 @@
 	layer = 2.52
 	},
 /obj/item/clothing/under/marine/officer/boiler,
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge{
+	dir = 1
+	},
 /area/golden_arrow/dorms)
 "Wu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -821,7 +879,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge{
+	dir = 4
+	},
 /area/golden_arrow/dorms)
 "XT" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -836,7 +896,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/southwest,
+/turf/open/floor/almayer/edge{
+	dir = 10
+	},
 /area/golden_arrow/dorms)
 "ZE" = (
 /obj/structure/barricade/handrail{

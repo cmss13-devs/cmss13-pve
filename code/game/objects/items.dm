@@ -4,7 +4,6 @@
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 	layer = ITEM_LAYER
 	light_system = MOVABLE_LIGHT
-	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	/// this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/image/blood_overlay = null
 	var/randpixel = 6
@@ -23,8 +22,6 @@
 	var/attack_speed = 11  //+3, Adds up to 10.  Added an extra 4 removed from /mob/proc/do_click()
 	///Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/list/attack_verb
-	/// A multiplier to an object's force when used against a stucture.
-	var/demolition_mod = 1
 
 	health = null
 
@@ -164,9 +161,6 @@
 	/// How much to offset the item randomly either way alongside Y visually
 	var/ground_offset_y = 0
 
-	/// Special storages this item prioritizes
-	var/list/preferred_storage
-
 /obj/item/Initialize(mapload, ...)
 	. = ..()
 
@@ -248,9 +242,9 @@ cases. Override_icon_state should be a list.*/
 	var/new_icon_state
 	var/new_protection
 	var/new_item_state
-	if(LAZYLEN(override_icon_state))
+	if(override_icon_state && override_icon_state.len)
 		new_icon_state = override_icon_state[SSmapping.configs[GROUND_MAP].map_name]
-	if(LAZYLEN(override_protection))
+	if(override_protection && override_protection.len)
 		new_protection = override_protection[SSmapping.configs[GROUND_MAP].map_name]
 	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
 		if("snow")
@@ -281,7 +275,7 @@ cases. Override_icon_state should be a list.*/
 			size = "huge"
 		if(SIZE_MASSIVE)
 			size = "massive"
-	. += "[p_are() == "are" ? "These are " : "This is a "][blood_color ? blood_color != COLOR_OIL ? "bloody " : "oil-stained " : ""][icon2html(src, user)][src.name]. [p_they(TRUE)] [p_are()] a [size] item."
+	. += "This is a [blood_color ? blood_color != "#030303" ? "bloody " : "oil-stained " : ""][icon2html(src, user)][src.name]. It is a [size] item."
 	if(desc)
 		. += desc
 	if(desc_lore)
@@ -370,7 +364,6 @@ cases. Override_icon_state should be a list.*/
 		qdel(src)
 
 	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
-	SEND_SIGNAL(user, COMSIG_MOB_ITEM_DROPPED, src)
 	if(drop_sound && (src.loc?.z))
 		playsound(src, drop_sound, dropvol, drop_vary)
 	src.do_drop_animation(user)
@@ -465,8 +458,6 @@ cases. Override_icon_state should be a list.*/
 
 	if(item.flags_equip_slot & slotdefine2slotbit(slot))
 		if(is_type_in_list(item, uniform_restricted))
-			if(light_on)
-				turn_light(toggle_on = FALSE)
 			user.drop_inv_item_on_ground(src)
 			to_chat(user, SPAN_NOTICE("You drop \the [src] to the ground while unequipping \the [item]."))
 
@@ -672,13 +663,13 @@ cases. Override_icon_state should be a list.*/
 			if(WEAR_HANDCUFFS)
 				if(human.handcuffed)
 					return FALSE
-				if(!istype(src, /obj/item/restraint))
+				if(!istype(src, /obj/item/handcuffs))
 					return FALSE
 				return TRUE
 			if(WEAR_LEGCUFFS)
 				if(human.legcuffed)
 					return FALSE
-				if(!istype(src, /obj/item/restraint))
+				if(!istype(src, /obj/item/legcuffs))
 					return FALSE
 				return TRUE
 			if(WEAR_IN_ACCESSORY)
@@ -717,7 +708,7 @@ cases. Override_icon_state should be a list.*/
 			if(WEAR_IN_SHOES)
 				if(human.shoes && istype(human.shoes, /obj/item/clothing/shoes))
 					var/obj/item/clothing/shoes/shoes = human.shoes
-					if(shoes.can_be_inserted(src))
+					if(shoes.attempt_insert_item(human, src))
 						return TRUE
 				return FALSE
 			if(WEAR_IN_SCABBARD)
@@ -804,7 +795,7 @@ cases. Override_icon_state should be a list.*/
 
 
 /obj/item/proc/showoff(mob/user)
-	var/list/viewers = get_mobs_in_view(GLOB.world_view_size, user)
+	var/list/viewers = get_mobs_in_view(world_view_size, user)
 	user.langchat_speech("holds up [src].", viewers, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_small", "emote"))
 	for (var/mob/M in viewers)
 		M.show_message("[user] holds up [src]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Take a closer look.</a>", SHOW_MESSAGE_VISIBLE)
@@ -859,7 +850,7 @@ cases. Override_icon_state should be a list.*/
 	UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
 	//General reset in case anything goes wrong, the view will always reset to default unless zooming in.
 	if(user.client)
-		user.client.change_view(GLOB.world_view_size, src)
+		user.client.change_view(world_view_size, src)
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 

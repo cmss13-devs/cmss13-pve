@@ -178,6 +178,9 @@
 
 	add_fingerprint(usr)
 
+/obj/structure/ladder/attack_robot(mob/user as mob)
+	return attack_hand(user)
+
 /obj/structure/ladder/ex_act(severity)
 	return
 
@@ -259,8 +262,11 @@
 
 /obj/structure/ladder/fragile_almayer/Initialize()
 	. = ..()
-	if(is_mainship_level(z))
-		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(deconstruct))
+	GLOB.hijack_bustable_ladders += src
+
+/obj/structure/ladder/fragile_almayer/Destroy()
+	GLOB.hijack_bustable_ladders -= src
+	return ..()
 
 /obj/structure/ladder/fragile_almayer/deconstruct()
 	new /obj/structure/prop/broken_ladder(loc)

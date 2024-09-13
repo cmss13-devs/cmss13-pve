@@ -51,7 +51,7 @@
 
 	moving_status = SHUTTLE_WARMUP
 	if(transit_optimized)
-		recharging = floor(recharge_time * SHUTTLE_OPTIMIZE_FACTOR_RECHARGE) //Optimized flight plan means less recharge time
+		recharging = round(recharge_time * SHUTTLE_OPTIMIZE_FACTOR_RECHARGE) //Optimized flight plan means less recharge time
 	else
 		recharging = recharge_time //Prevent the shuttle from moving again until it finishes recharging
 	spawn(warmup_time)
@@ -218,11 +218,11 @@
 		if(iselevator)
 			if(istype(T,/turf/open/space))
 				if(is_mainship_level(T.z))
-					T.ChangeTurf(/turf/open/floor/almayer/empty/requisitions)
+					new /turf/open/floor/almayer/empty(T)
 				else
-					T.ChangeTurf(/turf/open/gm/empty)
+					new /turf/open/gm/empty(T)
 		else if(istype(T,/turf/open/space))
-			T.ChangeTurf(/turf/open/floor/plating)
+			new /turf/open/floor/plating(T)
 
 	return
 

@@ -58,7 +58,11 @@
 	. = ..()
 	if(!.)
 		return
-	for(var/turf/place as anything in block(.[MAP_MINX], .[MAP_MINY], .[MAP_MINZ], .[MAP_MAXX], .[MAP_MAXY], .[MAP_MAXZ]))
+	var/list/turfs = block( locate(.[MAP_MINX], .[MAP_MINY], .[MAP_MINZ]),
+							locate(.[MAP_MAXX], .[MAP_MAXY], .[MAP_MAXZ]))
+	for(var/i in 1 to turfs.len)
+		var/turf/place = turfs[i]
+
 		// ================== CM Change ==================
 		// We perform atom initialization of the docking_ports BEFORE skipping space,
 		// because our lifeboats have their corners as object props and still
@@ -121,12 +125,6 @@
 
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
-
-/datum/map_template/shuttle/trijent_elevator/post_load(obj/docking_port/mobile/M)
-	. = ..()
-	var/obj/docking_port/mobile/trijent_elevator/elev = M
-	elev.elevator_network = elevator_network
-	log_debug("Adding network [elevator_network] to [M.id]")
 
 /datum/map_template/shuttle/trijent_elevator/golden_arrow
 	shuttle_id = "unused"

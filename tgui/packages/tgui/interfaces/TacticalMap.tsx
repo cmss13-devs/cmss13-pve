@@ -23,7 +23,7 @@ interface TacMapProps {
   svgData: any;
   canViewTacmap: boolean;
   canDraw: boolean;
-  isxeno: boolean;
+  isXeno: boolean;
   canViewCanvas: boolean;
   newCanvasFlatImage: string;
   oldCanvasFlatImage: string;
@@ -33,7 +33,7 @@ interface TacMapProps {
   mapRef: string;
   currentMenu: string;
   lastUpdateTime: any;
-  canvasCooldownDuration: any;
+  nextCanvasTime: any;
   canvasCooldown: any;
   exportedTacMapImage: any;
   tacmapReady: boolean;
@@ -111,7 +111,7 @@ export const TacticalMap = (props) => {
     <Window
       width={700}
       height={850}
-      theme={data.isxeno ? 'hive_status' : 'crtblue'}
+      theme={data.isXeno ? 'hive_status' : 'crtblue'}
     >
       <Window.Content>
         <Section
@@ -131,7 +131,7 @@ export const TacticalMap = (props) => {
                   return (
                     <Tabs.Tab
                       key={i}
-                      color={data.isxeno ? 'purple' : 'blue'}
+                      color={data.isXeno ? 'purple' : 'blue'}
                       selected={i === pageIndex}
                       icon={page.icon}
                       onClick={() =>
@@ -198,7 +198,7 @@ const OldMapPanel = (props) => {
 const DrawMapPanel = (props) => {
   const { data, act } = useBackend<TacMapProps>();
 
-  const timeLeftPct = data.canvasCooldown / data.canvasCooldownDuration;
+  const timeLeftPct = data.canvasCooldown / data.nextCanvasTime;
   const canUpdate = data.canvasCooldown <= 0 && !data.updatedCanvas;
 
   const handleTacMapExport = (image: any) => {

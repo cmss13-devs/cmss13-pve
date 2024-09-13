@@ -98,7 +98,7 @@
 		var/turf/T = get_turf(R)
 		if (!T)
 			continue
-		if(should_block_game_interaction(T))
+		if(is_admin_level(T.z))
 			continue
 		var/tmpname = T.loc.name
 		if(areaindex[tmpname])
@@ -118,7 +118,7 @@
 					continue
 			var/turf/T = get_turf(M)
 			if(T) continue
-			if(should_block_game_interaction(T)) continue
+			if(is_admin_level(T.z)) continue
 			var/tmpname = M.real_name
 			if(areaindex[tmpname])
 				tmpname = "[tmpname] ([++areaindex[tmpname]])"

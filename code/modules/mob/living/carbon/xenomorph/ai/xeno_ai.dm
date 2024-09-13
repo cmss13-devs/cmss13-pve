@@ -311,7 +311,7 @@
 	SSxeno_ai.remove_ai(src)
 
 /mob/living/carbon/xenomorph/proc/get_multitile_turfs_to_check()
-	var/angle = Get_Angle(current_target, src)
+	var/angle = get_angle(current_target, src)
 	var/turf/base_turf = current_target.locs[1]
 
 	switch(angle)

@@ -25,7 +25,9 @@
 	},
 /area/shuttle/lifeboat)
 "fc" = (
-/turf/open/shuttle/escapepod/floor8,
+/turf/open/shuttle/escapepod{
+	icon_state = "floor8"
+	},
 /area/shuttle/lifeboat)
 "fh" = (
 /turf/closed/shuttle/lifeboat{
@@ -65,14 +67,18 @@
 	},
 /area/shuttle/lifeboat)
 "hF" = (
-/turf/open/shuttle/lifeboat/plate,
+/turf/open/shuttle/lifeboat{
+	icon_state = "plate"
+	},
 /area/shuttle/lifeboat)
 "hK" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat{
 	id = "Boat3-D1";
 	throw_dir = 1
 	},
-/turf/open/shuttle/lifeboat/test_floor4,
+/turf/open/shuttle/lifeboat{
+	icon_state = "test_floor4"
+	},
 /area/shuttle/lifeboat)
 "iA" = (
 /obj/structure/bed/chair/dropship/passenger/shuttle_chair{
@@ -121,7 +127,9 @@
 	id = "Boat3-D2";
 	throw_dir = 2
 	},
-/turf/open/shuttle/lifeboat/test_floor4,
+/turf/open/shuttle/lifeboat{
+	icon_state = "test_floor4"
+	},
 /area/shuttle/lifeboat)
 "pS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -131,7 +139,9 @@
 /turf/open/shuttle/lifeboat,
 /area/shuttle/lifeboat)
 "pV" = (
-/turf/open/shuttle/lifeboat/test_floor4,
+/turf/open/shuttle/lifeboat{
+	icon_state = "test_floor4"
+	},
 /area/shuttle/lifeboat)
 "qO" = (
 /turf/closed/shuttle/lifeboat/transparent{
@@ -275,7 +285,9 @@
 /turf/closed/shuttle/lifeboat/transparent,
 /area/shuttle/lifeboat)
 "Js" = (
-/turf/open/shuttle/lifeboat/plating_striped,
+/turf/open/shuttle/lifeboat{
+	icon_state = "plating_striped"
+	},
 /area/shuttle/lifeboat)
 "Kb" = (
 /turf/closed/shuttle/lifeboat/transparent{
@@ -385,7 +397,10 @@
 /turf/template_noop,
 /area/shuttle/lifeboat)
 "Yb" = (
-/turf/open/shuttle/lifeboat/plating_striped/north,
+/turf/open/shuttle/lifeboat{
+	dir = 1;
+	icon_state = "plating_striped"
+	},
 /area/shuttle/lifeboat)
 "Yf" = (
 /obj/structure/prop/invuln/dropship_parts/lifeboat{

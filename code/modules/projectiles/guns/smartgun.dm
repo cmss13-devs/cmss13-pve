@@ -145,8 +145,7 @@
 /obj/item/weapon/gun/smartgun/attackby(obj/item/attacking_object, mob/user)
 	if(istype(attacking_object, /obj/item/smartgun_battery))
 		var/obj/item/smartgun_battery/new_cell = attacking_object
-		visible_message(SPAN_NOTICE("[user] swaps out the power cell in [src]."),
-			SPAN_NOTICE("You swap out the power cell in [src] and drop the old one."))
+		visible_message("[user] swaps out the power cell in the [src].","You swap out the power cell in the [src] and drop the old one.")
 		to_chat(user, SPAN_NOTICE("The new cell contains: [new_cell.power_cell.charge] power."))
 		battery.update_icon()
 		battery.forceMove(get_turf(user))
@@ -179,7 +178,6 @@
 //---ability actions--\\
 
 /datum/action/item_action/smartgun/action_activate()
-	. = ..()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	if(!ishuman(owner))
 		return
@@ -502,9 +500,9 @@
 			if((angledegree*2) > angle_list[angle])
 				continue
 
-		path = get_line(user, M)
+		path = getline2(user, M)
 
-		if(length(path))
+		if(path.len)
 			var/blocked = FALSE
 			for(T in path)
 				if(T.density || T.opacity)
@@ -527,9 +525,9 @@
 			else
 				conscious_targets += M
 
-	if(length(conscious_targets))
+	if(conscious_targets.len)
 		. = pick(conscious_targets)
-	else if(length(unconscious_targets))
+	else if(unconscious_targets.len)
 		. = pick(unconscious_targets)
 
 /obj/item/weapon/gun/smartgun/proc/process_shot(mob/living/user, warned)
@@ -598,7 +596,6 @@
 // ID lock action \\
 
 /datum/action/item_action/co_sg/action_activate()
-	. = ..()
 	var/obj/item/weapon/gun/smartgun/co/protag_gun = holder_item
 	if(!ishuman(owner))
 		return
@@ -719,7 +716,7 @@
 	requires_harness = FALSE
 
 /obj/item/smartgun_battery
-	name = "\improper DV9 smartgun battery"
+	name = "smartgun DV9 battery"
 	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC smartgunners often guard them jealously."
 
 	icon = 'icons/obj/structures/machinery/power.dmi'

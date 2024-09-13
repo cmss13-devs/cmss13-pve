@@ -15,7 +15,7 @@
 	var/list/req_component_names = null
 	var/state = CONSTRUCTION_STATE_BEGIN
 	var/required_skill = SKILL_CONSTRUCTION_ENGI
-	var/required_dismantle_skill = SKILL_ENGINEER_TRAINED
+	var/required_dismantle_skill = SKILL_ENGINEER_ENGI
 
 /obj/structure/machinery/constructable_frame/Initialize(mapload, ...)
 	. = ..()
@@ -124,7 +124,7 @@
 				state = CONSTRUCTION_STATE_BEGIN
 				circuit.forceMove(loc)
 				circuit = null
-				if(length(components) == 0)
+				if(components.len == 0)
 					to_chat(user, SPAN_NOTICE("You remove the circuit board."))
 				else
 					to_chat(user, SPAN_NOTICE("You remove the circuit board and other components."))

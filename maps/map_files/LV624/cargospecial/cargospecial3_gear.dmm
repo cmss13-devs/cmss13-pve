@@ -1,5 +1,48 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"d" = (
+"a" = (
+/obj/structure/surface/rack,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/lv624/lazarus/quartstorage)
+"f" = (
+/obj/structure/surface/rack,
+/obj/item/tool/shovel/etool{
+	pixel_x = 6
+	},
+/obj/item/tool/shovel/etool{
+	pixel_x = -6
+	},
+/obj/item/tool/shovel/etool,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/lv624/lazarus/quartstorage)
+"i" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/metal{
+	amount = 30;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/lv624/lazarus/quartstorage)
+"A" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/accessory/storage/black_vest/brown_vest,
+/obj/item/clothing/accessory/storage/black_vest/brown_vest,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/lv624/lazarus/quartstorage)
+"C" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/shoes/marine/civilian,
 /obj/item/clothing/shoes/marine/civilian{
@@ -12,9 +55,35 @@
 	},
 /obj/item/poster,
 /obj/item/clothing/glasses/sunglasses,
-/turf/open/floor/vault2/west,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
 /area/lv624/lazarus/quartstorage)
-"n" = (
+"E" = (
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
+"J" = (
+/obj/structure/surface/rack,
+/obj/item/stack/folding_barricade,
+/obj/item/facepaint/skull,
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/lv624/lazarus/quartstorage)
+"R" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/wo_supplies/storage/webbing,
+/obj/effect/landmark/wo_supplies/storage/webbing,
+/obj/effect/landmark/wo_supplies/storage/webbing,
+/obj/item/poster,
+/obj/item/clothing/glasses/sunglasses,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/lv624/lazarus/quartstorage)
+"V" = (
 /obj/structure/surface/rack,
 /obj/item/stack/folding_barricade,
 /obj/item/stack/folding_barricade,
@@ -22,77 +91,28 @@
 /obj/item/explosive/grenade/high_explosive/frag{
 	pixel_x = 6
 	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/quartstorage)
-"r" = (
-/obj/structure/surface/rack,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/quartstorage)
-"u" = (
-/obj/structure/surface/rack,
-/obj/item/tool/shovel/etool{
-	pixel_x = 6
+/turf/open/floor{
+	icon_state = "dark"
 	},
-/obj/item/tool/shovel/etool{
-	pixel_x = -6
-	},
-/obj/item/tool/shovel/etool,
-/turf/open/floor/dark,
-/area/lv624/lazarus/quartstorage)
-"D" = (
-/obj/structure/surface/rack,
-/obj/item/stack/folding_barricade,
-/obj/item/facepaint/skull,
-/turf/open/floor/dark,
-/area/lv624/lazarus/quartstorage)
-"E" = (
-/turf/open/floor/vault,
-/area/lv624/lazarus/quartstorage)
-"I" = (
-/obj/structure/surface/rack,
-/obj/item/stack/sheet/metal{
-	amount = 50
-	},
-/obj/item/stack/sheet/metal{
-	amount = 30;
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/quartstorage)
-"P" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/accessory/storage/black_vest/brown_vest,
-/obj/item/clothing/accessory/storage/black_vest/brown_vest,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/quartstorage)
-"Y" = (
-/obj/structure/surface/rack,
-/obj/effect/landmark/wo_supplies/storage/webbing,
-/obj/effect/landmark/wo_supplies/storage/webbing,
-/obj/effect/landmark/wo_supplies/storage/webbing,
-/obj/item/poster,
-/obj/item/clothing/glasses/sunglasses,
-/turf/open/floor/vault2/west,
 /area/lv624/lazarus/quartstorage)
 
 (1,1,1) = {"
-Y
+R
 E
-r
+a
 "}
 (2,1,1) = {"
-P
+A
 E
-d
+C
 "}
 (3,1,1) = {"
-I
+i
 E
-u
+f
 "}
 (4,1,1) = {"
-n
+V
 E
-D
+J
 "}

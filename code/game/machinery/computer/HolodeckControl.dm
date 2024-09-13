@@ -14,12 +14,6 @@
 /turf/open/floor/holofloor/attackby(obj/item/W as obj, mob/user as mob)
 	return
 
-/turf/open/floor/holofloor/cult
-	icon_state = "cult"
-
-/turf/open/floor/holofloor/cult/south
-	dir = SOUTH
-
 /turf/open/floor/holofloor/grass
 	name = "lush grass"
 	icon_state = "grass1"
@@ -28,7 +22,7 @@
 	. = ..()
 	icon_state = "grass[pick("1","2","3","4")]"
 	update_icon()
-	for(var/direction in GLOB.cardinals)
+	for(var/direction in cardinal)
 		if(istype(get_step(src, direction), /turf/open/floor))
 			var/turf/open/floor/FF = get_step(src,direction)
 			FF.update_icon() //so siding get updated properly
@@ -81,6 +75,9 @@
 
 	if (HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		to_chat(user, "It's a holotable!  There are no bolts!")
+		return
+
+	if(isborg(user))
 		return
 
 	..()
@@ -154,19 +151,19 @@
 				return
 			M.forceMove(loc)
 			M.apply_effect(5, WEAKEN)
-			for(var/obj/structure/machinery/scoreboard/X in GLOB.machines)
+			for(var/obj/structure/machinery/scoreboard/X in machines)
 				if(X.id == id)
 					X.score(side, 3)// 3 points for dunking a mob
 					// no break, to update multiple scoreboards
-			visible_message(SPAN_DANGER("[user] dunks [M] into [src]!"))
+			visible_message(SPAN_DANGER("[user] dunks [M] into the [src]!"))
 		return
 	else if (istype(W, /obj/item) && get_dist(src,user)<2)
 		user.drop_inv_item_to_loc(W, loc)
-		for(var/obj/structure/machinery/scoreboard/X in GLOB.machines)
+		for(var/obj/structure/machinery/scoreboard/X in machines)
 			if(X.id == id)
 				X.score(side)
 				// no break, to update multiple scoreboards
-		visible_message(SPAN_NOTICE("[user] dunks [W] into [src]!"))
+		visible_message(SPAN_NOTICE("[user] dunks [W] into the [src]!"))
 		return
 
 /obj/structure/holohoop/BlockedPassDirs(atom/movable/mover, target_dir)
@@ -176,7 +173,7 @@
 			return BLOCKED_MOVEMENT
 		if(prob(50))
 			I.forceMove(src.loc)
-			for(var/obj/structure/machinery/scoreboard/X in GLOB.machines)
+			for(var/obj/structure/machinery/scoreboard/X in machines)
 				if(X.id == id)
 					X.score(side)
 					// no break, to update multiple scoreboards

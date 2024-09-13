@@ -109,8 +109,10 @@
 	containername = "M42A Incendiary Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
+//XM42B - Disabled during testing per request.
+/*
 /datum/supply_packs/ammo_amr_marksman
-	name = "XM43E1 anti-materiel rifle marksman magazines crate (x5)"
+	name = "XM42B anti-materiel rifle marksman magazines crate (x5)"
 	contains = list(
 		/obj/item/ammo_magazine/sniper/anti_materiel,
 		/obj/item/ammo_magazine/sniper/anti_materiel,
@@ -120,9 +122,9 @@
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "XM43E1 Marksman Magazine Crate"
-	group = "Weapons Specialist Ammo"
-
+	containername = "XM42B Anti-Materiel Magazine Crate"
+	group = "Specialist Ammo"
+*/
 //M4RA
 
 /datum/supply_packs/ammo_scout_mix
@@ -155,8 +157,10 @@
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_incendiary
-	name = "M4RA Scout Incendiary Magazine Crate (x3)"
+	name = "M4RA Scout Incendiary Magazine Crate (x5)"
 	contains = list(
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
@@ -167,8 +171,10 @@
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_impact
-	name = "M4RA Scout Impact Magazine Crate (x3)"
+	name = "M4RA Scout Impact Magazine Crate (x5)"
 	contains = list(
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
 		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,

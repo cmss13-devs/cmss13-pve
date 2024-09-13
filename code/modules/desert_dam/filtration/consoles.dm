@@ -1,4 +1,4 @@
-GLOBAL_VAR_INIT(river_activated, FALSE)
+var/global/river_activated = FALSE
 
 /obj/structure/machinery/filtration/console
 	name = "console"
@@ -62,7 +62,7 @@ GLOBAL_VAR_INIT(river_activated, FALSE)
 /obj/structure/machinery/filtration/console/ui_data(mob/user)
 	var/list/data = list()
 
-	data["filt_on"] = GLOB.river_activated
+	data["filt_on"] = river_activated
 
 	return data
 
@@ -73,7 +73,7 @@ GLOBAL_VAR_INIT(river_activated, FALSE)
 
 	switch(action)
 		if("activate_filt")
-			GLOB.river_activated = TRUE
+			river_activated = TRUE
 
 /obj/structure/machinery/filtration/console/attack_hand(mob/user)
 	. = ..()

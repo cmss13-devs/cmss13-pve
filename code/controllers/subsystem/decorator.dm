@@ -1,4 +1,4 @@
-// our atom declaration should not be hardcoded for this SS existence.
+// our atom declaration should not be hardcoded for this SS existance.
 // if this subsystem is deleted, stuff still works
 // That's why we define this here
 /atom/proc/Decorate(deferable = FALSE)
@@ -29,21 +29,19 @@ SUBSYSTEM_DEF(decorator)
 	var/list/datum/weakref/currentrun = list()
 
 /datum/controller/subsystem/decorator/Initialize()
-	var/list/all_decors = typesof(/datum/decorator) - list(/datum/decorator) - typesof(/datum/decorator/manual) - typesof(/datum/decorator/gamemode)
+	var/list/all_decors = typesof(/datum/decorator) - list(/datum/decorator) - typesof(/datum/decorator/manual)
 	for(var/decor_type in all_decors)
 		var/datum/decorator/decor = new decor_type()
 		if(!decor.is_active_decor())
 			continue
 		var/list/applicable_types = decor.get_decor_types()
-		if(!LAZYLEN(applicable_types))
+		if(!applicable_types || !applicable_types.len)
 			continue
 		active_decorators |= decor
 		for(var/app_type in applicable_types)
 			if(!registered_decorators[app_type])
 				registered_decorators[app_type] = list()
 			registered_decorators[app_type] += decor
-
-	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP, PROC_REF(handle_mode_specific))
 
 	for(var/i in registered_decorators)
 		registered_decorators[i] = sortDecorators(registered_decorators[i])
@@ -66,30 +64,12 @@ SUBSYSTEM_DEF(decorator)
 		currentrun = swap
 
 	while(length(currentrun))
-		var/datum/weakref/ref = currentrun[length(currentrun)]
+		var/datum/weakref/ref = currentrun[currentrun.len]
 		currentrun.len--
 		var/atom/A = ref?.resolve()
 		if(A) A.Decorate(deferable = FALSE)
 		if(MC_TICK_CHECK)
 			return
-
-/datum/controller/subsystem/decorator/proc/handle_mode_specific()
-	SIGNAL_HANDLER
-
-	for(var/decorator_type in typesof(/datum/decorator/gamemode))
-		var/datum/decorator/gamemode/gamemode_decorator = new decorator_type()
-
-		if(!istype(SSticker.mode, gamemode_decorator.gamemode))
-			continue
-
-		var/applicable_types = gamemode_decorator.get_decor_types()
-		if(!length(applicable_types))
-			continue
-
-		active_decorators |= gamemode_decorator
-
-		for(var/applicable_type in applicable_types)
-			LAZYADD(registered_decorators[applicable_type], gamemode_decorator)
 
 /datum/controller/subsystem/decorator/proc/add_decorator(decor_type, ...)
 	var/list/arguments = list()
@@ -100,7 +80,7 @@ SUBSYSTEM_DEF(decorator)
 	// DECORATOR IS ENABLED FORCEFULLY
 
 	var/list/applicable_types = decor.get_decor_types()
-	if(!LAZYLEN(applicable_types))
+	if(!applicable_types || !applicable_types.len)
 		return
 	active_decorators |= decor
 	for(var/app_type in applicable_types)
@@ -120,7 +100,7 @@ SUBSYSTEM_DEF(decorator)
 
 /datum/controller/subsystem/decorator/stat_entry(msg)
 	if(registered_decorators && decoratable)
-		msg = "D:[length(registered_decorators)],P:[length(decoratable)]"
+		msg = "D:[registered_decorators.len],P:[decoratable.len]"
 	return ..()
 
 /datum/controller/subsystem/decorator/proc/decorate(atom/o)
@@ -138,25 +118,25 @@ SUBSYSTEM_DEF(decorator)
 /datum/controller/subsystem/decorator/proc/sortDecorators(list/datum/decorator/L)
 	if(!istype(L))
 		return null
-	if(length(L) < 2)
+	if(L.len < 2)
 		return L
-	var/middle = length(L) / 2 + 1
+	var/middle = L.len / 2 + 1
 	return mergeDecoratorLists(sortDecorators(L.Copy(0, middle)), sortDecorators(L.Copy(middle)))
 
 /datum/controller/subsystem/decorator/proc/mergeDecoratorLists(list/datum/decorator/L, list/datum/decorator/R)
 	var/Li=1
 	var/Ri=1
 	var/list/result = new()
-	while(Li <= length(L) && Ri <= length(R))
+	while(Li <= L.len && Ri <= R.len)
 		if(sorttext(L[Li].priority, R[Ri].priority) < 1)
 			// Works around list += list2 merging lists; it's not pretty but it works
 			result += "temp item"
-			result[length(result)] = R[Ri++]
+			result[result.len] = R[Ri++]
 		else
 			result += "temp item"
-			result[length(result)] = L[Li++]
+			result[result.len] = L[Li++]
 
-	if(Li <= length(L))
+	if(Li <= L.len)
 		return (result + L.Copy(Li, 0))
 	return (result + R.Copy(Ri, 0))
 

@@ -134,7 +134,7 @@
 					return
 				stored_item = object
 				mobber.drop_inv_item_to_loc(object, src)
-				to_chat(mobber, SPAN_NOTICE("You slide [object] into [src]."))
+				to_chat(mobber, SPAN_NOTICE("You slide the [object] into [src]."))
 				playsound(mobber, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
 				update_icon()
 				break
@@ -164,7 +164,7 @@
 	desc = "A debug item for research."
 
 /obj/item/moneybag
-	icon = 'icons/obj/items/storage/bags.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	name = "Money bag"
 	icon_state = "moneybag"
 	force = 10
@@ -178,7 +178,7 @@
 /obj/item/evidencebag
 	name = "evidence bag"
 	desc = "An empty evidence bag."
-	icon = 'icons/obj/items/storage/bags.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "evidenceobj"
 	item_state = ""
 	w_class = SIZE_SMALL
@@ -224,7 +224,7 @@
 		to_chat(user, SPAN_NOTICE("[I] won't fit in [src]."))
 		return
 
-	if(length(contents))
+	if(contents.len)
 		to_chat(user, SPAN_NOTICE("[src] already has something inside it."))
 		return
 
@@ -257,7 +257,7 @@
 /obj/item/evidencebag/attack_self(mob/user)
 	..()
 
-	if(length(contents))
+	if(contents.len)
 		var/obj/item/I = contents[1]
 		user.visible_message("[user] takes [I] out of [src]", "You take [I] out of [src].",\
 		"You hear someone rustle around in a plastic bag, and remove something.")

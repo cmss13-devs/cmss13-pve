@@ -3,11 +3,17 @@
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/nw)
 "c" = (
-/turf/open/floor/plating/warnplate/north,
+/turf/open/floor/plating{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/bigredv2/outside/nw)
 "d" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/plating/warnplate/north,
+/turf/open/floor/plating{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/bigredv2/outside/nw)
 "e" = (
 /obj/structure/largecrate/random/barrel/red,
@@ -15,7 +21,8 @@
 /area/bigredv2/outside/nw)
 "f" = (
 /obj/structure/machinery/light{
-	dir = 1
+	dir = 1;
+	icon_state = "tube1"
 	},
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/plating,
@@ -29,8 +36,12 @@
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
 "i" = (
-/turf/closed/wall/solaris/reinforced,
-/area/bigredv2/outside/telecomm/warehouse)
+/obj/structure/machinery/light{
+	dir = 1;
+	icon_state = "tube1"
+	},
+/turf/open/floor/plating,
+/area/bigredv2/outside/nw)
 "j" = (
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
@@ -47,24 +58,33 @@
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
 "n" = (
-/turf/open/floor/plating/warnplate/west,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/bigredv2/outside/nw)
 "p" = (
 /obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
+	dir = 4;
+	layer = 2.4
 	},
-/turf/open/floor/plating/warnplate/west,
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/bigredv2/outside/nw)
 "q" = (
 /obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
+	dir = 4;
+	layer = 2.4
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
 "r" = (
 /obj/effect/landmark/hunter_primary,
 /obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
+	dir = 4;
+	layer = 2.4
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
@@ -74,7 +94,9 @@
 /area/bigredv2/outside/nw)
 "u" = (
 /obj/structure/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
@@ -108,60 +130,6 @@
 /obj/structure/machinery/light,
 /turf/open/floor/plating,
 /area/bigredv2/outside/nw)
-"D" = (
-/obj/effect/landmark/static_comms/net_one,
-/turf/open/floor/bcircuit,
-/area/bigredv2/outside/telecomm/warehouse)
-"H" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/plating/warnplate/southwest,
-/area/bigredv2/outside/telecomm/warehouse)
-"K" = (
-/turf/open/floor/bcircuit,
-/area/bigredv2/outside/telecomm/warehouse)
-"O" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/plating/warnplate/west,
-/area/bigredv2/outside/telecomm/warehouse)
-"S" = (
-/obj/structure/machinery/power/apc/no_power/north,
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5;
-	pixel_x = -1
-	},
-/turf/open/floor/plating/warnplate/east,
-/area/bigredv2/outside/telecomm/warehouse)
-"T" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/turf/open/floor/plating/warnplate/southeast,
-/area/bigredv2/outside/telecomm/warehouse)
-"V" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/plating/warnplate,
-/area/bigredv2/outside/telecomm/warehouse)
-"Z" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5;
-	pixel_x = -1
-	},
-/turf/open/floor/plating/warnplate/east,
-/area/bigredv2/outside/telecomm/warehouse)
 
 (1,1,1) = {"
 b
@@ -176,10 +144,10 @@ b
 b
 "}
 (2,1,1) = {"
-i
-O
-O
-H
+b
+e
+j
+j
 q
 j
 u
@@ -188,10 +156,10 @@ j
 b
 "}
 (3,1,1) = {"
-i
-K
-D
-V
+b
+f
+j
+j
 q
 j
 v
@@ -200,10 +168,10 @@ y
 b
 "}
 (4,1,1) = {"
-i
-K
-K
-V
+b
+g
+m
+j
 q
 j
 j
@@ -212,30 +180,6 @@ j
 b
 "}
 (5,1,1) = {"
-i
-S
-Z
-T
-q
-j
-j
-j
-j
-b
-"}
-(6,1,1) = {"
-b
-g
-m
-j
-r
-j
-v
-w
-y
-b
-"}
-(7,1,1) = {"
 b
 h
 m
@@ -247,9 +191,33 @@ j
 j
 b
 "}
+(6,1,1) = {"
+b
+g
+j
+j
+r
+j
+v
+w
+y
+b
+"}
+(7,1,1) = {"
+b
+g
+j
+j
+q
+j
+j
+j
+j
+b
+"}
 (8,1,1) = {"
 b
-f
+i
 j
 j
 q
@@ -333,7 +301,7 @@ b
 "}
 (15,1,1) = {"
 b
-e
+j
 j
 j
 q

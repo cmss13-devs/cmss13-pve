@@ -110,10 +110,6 @@
 		if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
 			to_chat(user, SPAN_WARNING("You need a stronger blowtorch!"))
 			return
-		for(var/obj/object in loc)
-			if(object.density)
-				to_chat(user, SPAN_WARNING("[object] is blocking you from welding [src] together!"))
-				return
 		if(do_after(user,30, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			if(QDELETED(src))
 				return
@@ -336,8 +332,9 @@
 	if(P.ammo.damage_type == BURN)
 		dmg = P.damage
 	else
-		dmg = floor(P.damage * 0.5)
+		dmg = round(P.damage * 0.5)
 	if(dmg)
+		health -= dmg
 		take_damage(dmg)
 		bullet_ping(P)
 	if(health <= 0)
@@ -345,9 +342,7 @@
 	return TRUE
 
 /obj/structure/girder/proc/take_damage(damage)
-	health -= damage
-	if(health <= -100)
-		qdel(src)
+	health = max(health - damage, 0)
 	if(health <= 0)
 		update_state()
 
@@ -361,11 +356,10 @@
 	update_state()
 
 /obj/structure/girder/proc/update_state()
-	if(health <= 0 && density)
+	if (health <= 0)
 		icon_state = "[icon_state]_damaged"
 		density = FALSE
-
-	else if(health > 0 && !density)
+	else
 		var/underscore_position =  findtext(icon_state,"_")
 		var/new_state = copytext(icon_state, 1, underscore_position)
 		icon_state = new_state

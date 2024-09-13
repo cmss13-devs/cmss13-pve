@@ -1,15 +1,15 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
+"a" = (
 /turf/closed/wall/r_wall/prison,
 /area/template_noop)
-"ab" = (
+"b" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison,
 /area/template_noop)
-"ac" = (
+"c" = (
 /turf/open/floor/prison,
 /area/template_noop)
-"ad" = (
+"d" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
@@ -18,29 +18,10 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"ae" = (
+"e" = (
 /turf/closed/wall/prison,
 /area/template_noop)
-"af" = (
-/obj/structure/closet/secure_closet/security_empty,
-/obj/item/clothing/accessory/storage/holster,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"ag" = (
-/obj/item/stack/folding_barricade,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"ah" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
-	dir = 1;
-	req_one_access = null
-	},
-/turf/open/floor/plating/prison,
-/area/template_noop)
-"ai" = (
+"i" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
 	dir = 1;
 	req_access = null;
@@ -48,16 +29,7 @@
 	},
 /turf/open/floor/plating/prison,
 /area/template_noop)
-"aj" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/clothing/shoes/laceup{
-	pixel_y = -9
-	},
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"ak" = (
+"k" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
@@ -68,18 +40,18 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"al" = (
+"l" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
-/obj/item/clothing/shoes/dress/commander{
+/obj/item/clothing/shoes/laceup{
 	pixel_y = -9
 	},
 /turf/open/floor/prison{
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"am" = (
+"m" = (
 /obj/structure/closet/secure_closet/security_empty,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -89,43 +61,29 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"an" = (
+"n" = (
 /obj/item/stack/folding_barricade,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"ao" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/clothing/under/color/orange,
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"ap" = (
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aq" = (
-/obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/prison,
-/area/template_noop)
-"ar" = (
+"r" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/prison{
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"as" = (
+"s" = (
 /obj/structure/machinery/power/apc{
 	dir = 4
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"at" = (
+"t" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/prison,
 /area/template_noop)
-"au" = (
+"u" = (
 /obj/structure/closet/secure_closet/security_empty,
 /obj/item/clothing/accessory/storage/holster,
 /obj/structure/window/reinforced{
@@ -135,11 +93,11 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"av" = (
+"v" = (
 /obj/item/clothing/under/color/orange,
 /turf/open/floor/prison,
 /area/template_noop)
-"aw" = (
+"w" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
@@ -148,16 +106,16 @@
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"ax" = (
+"x" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison,
 /area/template_noop)
-"ay" = (
+"y" = (
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"az" = (
+"z" = (
 /obj/item/clothing/shoes/black{
 	pixel_x = -1;
 	pixel_y = -17
@@ -165,16 +123,7 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/prison,
 /area/template_noop)
-"aA" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/clothing/shoes/galoshes{
-	pixel_y = -6
-	},
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aB" = (
+"B" = (
 /obj/item/tool/kitchen/knife{
 	pixel_x = -7;
 	pixel_y = -15
@@ -183,46 +132,32 @@
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"aC" = (
+"C" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	pixel_y = 21
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"aD" = (
+"D" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/prison,
 /area/template_noop)
-"aE" = (
+"E" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/prison,
 /area/template_noop)
-"aF" = (
+"F" = (
 /obj/item/prop/helmetgarb/riot_shield,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"aG" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/clothing/shoes/black{
-	pixel_x = 2;
-	pixel_y = -9
-	},
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aH" = (
-/obj/structure/reagent_dispensers/water_cooler,
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aI" = (
+"I" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
@@ -231,54 +166,27 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"aJ" = (
+"J" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/open/floor/prison,
 /area/template_noop)
-"aK" = (
+"K" = (
 /obj/item/clothing/under/color/orange,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"aL" = (
+"L" = (
 /obj/structure/window/framed/prison/reinforced,
 /turf/open/floor/prison,
 /area/template_noop)
-"aM" = (
-/obj/structure/closet/secure_closet/security_empty,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/storage/box/flashbangs,
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aN" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/effect/spawner/random/gun/pistol/lowchance,
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aO" = (
-/obj/item/clothing/under/color/orange,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aP" = (
-/obj/item/frame/rack,
-/turf/open/floor/prison/redfull,
-/area/template_noop)
-"aQ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aR" = (
+"R" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/r_wall/prison,
 /area/template_noop)
-"aS" = (
+"S" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/flora/pottedplant{
 	pixel_y = 9
@@ -286,21 +194,16 @@
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/prison,
 /area/template_noop)
-"aT" = (
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aU" = (
+"U" = (
 /obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison{
 	icon_state = "floor_plate"
 	},
 /area/template_noop)
-"aV" = (
+"V" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/template_noop)
-"aW" = (
+"W" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null
 	},
@@ -312,118 +215,104 @@
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"aX" = (
+"X" = (
 /obj/item/frame/rack,
 /turf/open/floor/prison{
 	icon_state = "redfull"
 	},
 /area/template_noop)
-"aY" = (
-/obj/item/tool/kitchen/knife{
-	pixel_x = -7;
-	pixel_y = -15
-	},
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aZ" = (
+"Z" = (
 /obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/template_noop)
-"UA" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
 
 (1,1,1) = {"
-aq
-aS
-aa
-aa
-aR
-aa
-aa
-aC
+s
+S
+a
+a
+R
+a
+a
+C
 "}
 (2,1,1) = {"
-aa
-aa
-aa
-aN
-ao
-aA
-aa
-aa
+a
+a
+a
+I
+d
+k
+a
+a
 "}
 (3,1,1) = {"
-ag
-aO
-ap
-aY
-ap
-ap
-aP
-aa
+n
+K
+y
+B
+y
+y
+X
+a
 "}
 (4,1,1) = {"
-aD
-az
-aN
-ao
-aH
-ac
-aP
-aa
+D
+z
+I
+d
+r
+c
+X
+a
 "}
 (5,1,1) = {"
-aZ
-ab
-aJ
-aE
-aN
-av
-aP
-aa
+Z
+b
+J
+E
+I
+v
+X
+a
 "}
 (6,1,1) = {"
-aL
-aL
-aV
-at
-aj
-ac
-aa
-ae
+L
+L
+V
+t
+l
+c
+a
+e
 "}
 (7,1,1) = {"
-UA
-aQ
-ah
-av
-ax
-av
-ah
-ap
+w
+U
+i
+v
+x
+v
+i
+y
 "}
 (8,1,1) = {"
-ap
-aT
-aV
-ao
-aG
-aN
-aa
-af
+y
+F
+V
+d
+W
+I
+a
+u
 "}
 (9,1,1) = {"
-aV
-aV
-aV
-aa
-aV
-aV
-aa
-aM
+V
+V
+V
+a
+V
+V
+a
+m
 "}

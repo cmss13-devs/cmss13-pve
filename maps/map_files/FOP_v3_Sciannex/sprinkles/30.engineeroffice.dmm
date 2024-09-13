@@ -2,26 +2,41 @@
 "a" = (
 /turf/closed/wall/prison,
 /area/template_noop)
-"b" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = -3
-	},
-/obj/item/storage/backpack/marine/engineerpack/satchel,
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"c" = (
-/obj/item/storage/firstaid/regular/empty{
-	pixel_x = 14
-	},
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
 "e" = (
 /turf/open/floor/plating/prison,
 /area/template_noop)
-"g" = (
+"h" = (
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/template_noop)
+"k" = (
+/obj/structure/sign/poster/hero/voteno{
+	pixel_y = 29
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/template_noop)
+"n" = (
+/obj/structure/machinery/power/apc,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
+/area/template_noop)
+"o" = (
+/turf/closed/wall/mineral/bone_resin,
+/area/template_noop)
+"s" = (
+/turf/open/floor/prison{
+	dir = 9;
+	icon_state = "greenfull"
+	},
+/area/template_noop)
+"t" = (
 /obj/structure/filingcabinet{
 	pixel_x = 8;
 	pixel_y = 4
@@ -30,39 +45,26 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/pamphlet/engineer,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
 /area/template_noop)
-"m" = (
+"x" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/microwave{
-	icon_state = "mwo";
-	pixel_y = 6
+/obj/item/cell/super{
+	pixel_y = 12
 	},
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"o" = (
-/turf/closed/wall/mineral/bone_resin,
-/area/template_noop)
-"q" = (
-/obj/structure/sign/poster/hero/voteno{
-	pixel_y = 29
+/obj/item/cell/super,
+/obj/item/storage/pill_bottle/happy{
+	layer = 2.8;
+	pixel_y = -7
 	},
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"r" = (
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"w" = (
-/obj/structure/closet/secure_closet/freezer/fridge/groceries,
-/obj/structure/machinery/light/double/blue{
+/turf/open/floor/prison{
 	dir = 4;
-	pixel_x = 10;
-	pixel_y = -3
+	icon_state = "greenfull"
 	},
-/turf/open/floor/prison/greenfull/east,
 /area/template_noop)
-"y" = (
+"z" = (
 /obj/structure/coatrack,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -74,35 +76,38 @@
 	pixel_x = -2;
 	pixel_y = 13
 	},
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"A" = (
-/obj/structure/filingcabinet{
-	pixel_x = 8;
-	pixel_y = 4
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
 	},
-/obj/structure/filingcabinet{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/turf/open/floor/prison/floor_plate,
 /area/template_noop)
-"C" = (
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/prison/greenfull/east,
-/area/template_noop)
-"G" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/head/beret/eng{
-	pixel_x = 5;
-	pixel_y = 3
+"D" = (
+/obj/structure/closet/secure_closet/freezer/fridge/groceries,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = -3
 	},
-/obj/item/book/manual/engineering_guide{
-	pixel_x = -4
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
 	},
-/turf/open/floor/prison/greenfull/east,
 /area/template_noop)
-"K" = (
+"E" = (
+/obj/structure/machinery/photocopier,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = -3
+	},
+/obj/item/paper{
+	desc = "The image appears to be someone's backside, the page number is labled as 259."
+	},
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/template_noop)
+"F" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/toolbox/electrical{
 	pixel_x = -1;
@@ -121,13 +126,21 @@
 /obj/item/weapon/butterfly{
 	pixel_x = 17
 	},
-/turf/open/floor/prison/greenfull/east,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
 /area/template_noop)
-"M" = (
-/turf/open/floor/prison/greenfull/northwest,
-/area/template_noop)
-"P" = (
-/turf/open/floor/prison/floor_plate,
+"O" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/microwave{
+	icon_state = "mwo";
+	pixel_y = 6
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
 /area/template_noop)
 "Q" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -136,29 +149,60 @@
 	},
 /turf/open/floor/plating/prison,
 /area/template_noop)
-"R" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/cell/super{
-	pixel_y = 12
+"S" = (
+/obj/item/storage/firstaid/regular/empty{
+	pixel_x = 14
 	},
-/obj/item/cell/super,
-/obj/item/storage/pill_bottle/happy{
-	layer = 2.8;
-	pixel_y = -7
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
 	},
-/turf/open/floor/prison/greenfull/east,
 /area/template_noop)
-"W" = (
-/obj/structure/machinery/photocopier,
+"T" = (
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/template_noop)
+"V" = (
+/obj/structure/filingcabinet{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/pamphlet/engineer,
+/turf/open/floor/prison{
+	icon_state = "floor_plate"
+	},
+/area/template_noop)
+"X" = (
+/obj/structure/closet/secure_closet/engineering_electrical,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	pixel_x = 10;
 	pixel_y = -3
 	},
-/obj/item/paper{
-	desc = "The image appears to be someone's backside, the page number is labled as 259."
+/obj/item/storage/backpack/marine/engineerpack/satchel,
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
 	},
-/turf/open/floor/prison/floor_plate,
+/area/template_noop)
+"Z" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/head/beret/eng{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/book/manual/engineering_guide{
+	pixel_x = -4
+	},
+/turf/open/floor/prison{
+	dir = 4;
+	icon_state = "greenfull"
+	},
 /area/template_noop)
 
 (1,1,1) = {"
@@ -172,20 +216,20 @@ a
 "}
 (2,1,1) = {"
 Q
-r
-C
+h
+n
 a
-K
-c
+F
+S
 Q
 "}
 (3,1,1) = {"
 a
-m
-w
+O
+D
 a
-R
-y
+x
+z
 a
 "}
 (4,1,1) = {"
@@ -199,20 +243,20 @@ a
 "}
 (5,1,1) = {"
 Q
-r
-G
+h
+Z
 a
-g
-r
+V
+h
 Q
 "}
 (6,1,1) = {"
 a
-q
-b
+k
+X
 a
-A
-W
+t
+E
 a
 "}
 (7,1,1) = {"
@@ -234,11 +278,11 @@ e
 e
 "}
 (9,1,1) = {"
-P
+T
 o
-P
-M
-M
-M
-M
+T
+s
+s
+s
+s
 "}

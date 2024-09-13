@@ -54,8 +54,8 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
-	GLOB.last_mob_gid++
-	gid = GLOB.last_mob_gid
+	last_mob_gid++
+	gid = last_mob_gid
 
 	GLOB.mob_list += src
 	if(stat == DEAD)
@@ -431,7 +431,6 @@
 
 /mob/proc/swap_hand()
 	hand = !hand
-	SEND_SIGNAL(src, COMSIG_MOB_SWAPPED_HAND)
 
 //attempt to pull/grab something. Returns true upon success.
 /mob/proc/start_pulling(atom/movable/AM, lunge, no_msg)
@@ -470,9 +469,6 @@
 		if(!M.can_be_pulled_by(src))
 			return
 	else if(istype(AM, /obj))
-		if(recently_grabbed > world.time)
-			return FALSE
-		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
 
 	if(!QDELETED(AM.pulledby) && !QDELETED(M))
@@ -693,7 +689,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 // facing verbs
 /mob/proc/canface()
-	if(client?.moving) return 0
+	if(client && client.moving) return 0
 	if(stat==2) return 0
 	if(anchored) return 0
 	if(monkeyizing) return 0
@@ -760,7 +756,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	recalculate_move_delay = TRUE
 
 	if(usr.stat)
-		to_chat(usr, "You are unconscious and cannot do that!")
+		to_chat(usr, "You are unconcious and cannot do that!")
 		return
 
 	if(usr.is_mob_restrained())
@@ -802,7 +798,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	else
 		visible_message(SPAN_WARNING("<b>[usr] rips [selection] out of [src]'s body.</b>"),SPAN_WARNING("<b>[usr] rips [selection] out of your body.</b>"), null, 5)
 
-	if(length(valid_objects) == 1) //Yanking out last object - removing verb.
+	if(valid_objects.len == 1) //Yanking out last object - removing verb.
 		remove_verb(src, /mob/proc/yank_out_object)
 
 	if(ishuman(src))
@@ -983,7 +979,6 @@ note dizziness decrements automatically in the mob's Life() proc.
 /// Adds this list to the output to the stat browser
 /mob/proc/get_status_tab_items()
 	. = list()
-	SEND_SIGNAL(src, COMSIG_MOB_GET_STATUS_TAB_ITEMS, .)
 
 /mob/proc/get_role_name()
 	return
@@ -1051,14 +1046,3 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 /mob/proc/update_stat()
 	return
-
-/// Send src back to the lobby as a `/mob/new_player()`
-/mob/proc/send_to_lobby()
-	var/mob/new_player/new_player = new
-
-	if(!mind)
-		mind_initialize()
-
-	mind.transfer_to(new_player)
-
-	qdel(src)

@@ -89,7 +89,7 @@
 					return
 
 				var/list/tempnetwork = splittext(input, ",")
-				if(length(tempnetwork) < 1)
+				if(tempnetwork.len < 1)
 					to_chat(usr, "No network found please hang up and try your call again.")
 					return
 
@@ -103,7 +103,12 @@
 				C.assembly = src
 
 				C.auto_turn()
+
 				C.network = uniquelist(tempnetwork)
+				tempnetwork = difflist(C.network,RESTRICTED_CAMERA_NETWORKS)
+				if(!tempnetwork.len)//Camera isn't on any open network - remove its chunk from AI visibility.
+					cameranet.removeCamera(C)
+
 				C.c_tag = input
 
 				for(var/i = 5; i >= 0; i -= 1)
@@ -133,7 +138,7 @@
 		return
 
 	// Taking out upgrades
-	else if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR) && length(upgrades))
+	else if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR) && upgrades.len)
 		var/obj/U = locate(/obj) in upgrades
 		if(U)
 			to_chat(user, "You unattach an upgrade from the assembly.")
@@ -162,7 +167,7 @@
 		to_chat(user, SPAN_WARNING("\The [WT] needs to be on!"))
 		return 0
 
-	to_chat(user, SPAN_NOTICE("You start to weld [src].."))
+	to_chat(user, SPAN_NOTICE("You start to weld the [src].."))
 	playsound(src.loc, 'sound/items/Welder.ogg', 25, 1)
 	WT.eyecheck(user)
 	if(do_after(user, 20, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
