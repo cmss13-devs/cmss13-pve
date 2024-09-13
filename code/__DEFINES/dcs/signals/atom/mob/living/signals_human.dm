@@ -68,6 +68,9 @@
 /// From /mob/living/carbon/human/proc/get_flags_cold_protection()
 #define COMSIG_HUMAN_COLD_PROTECTION_APPLY_MODIFIERS "human_cold_protection_apply_modifiers"
 
+/// From /obj/item/proc/dig_out_shrapnel() : ()
+#define COMSIG_HUMAN_SHRAPNEL_REMOVED "human_shrapnel_removed"
+
 /// From /mob/living/carbon/human/UnarmedAttack()
 #define COMSIG_HUMAN_BEFORE_ATTACK_HAND "human_before_attack_hand"
 	#define COMPONENT_CANCEL_HUMAN_ATTACK_HAND (1<<0)

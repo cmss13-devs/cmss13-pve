@@ -1,5 +1,0 @@
-author: "AndroBetel"
-delete-after: True
-changes:
-  - qol: "Added platoon commander prefs"
-  - rscadd: "Added dropship camo, chosen by PLTCO"
