@@ -251,17 +251,6 @@
 	roundstart = FALSE
 	locked = TRUE
 
-/datum/squad/marine/forecon
-	name = SQUAD_FORECON
-	equipment_color = "#32CD32"
-	chat_color = "#32CD32"
-	radio_freq = FORECON_FREQ
-	minimap_color = "#32CD32"
-
-	active = FALSE
-	roundstart = FALSE
-	locked = TRUE
-
 /datum/squad/marine/solardevils
 	name = SQUAD_SOLAR
 	equipment_color = "#5a2c2c"
