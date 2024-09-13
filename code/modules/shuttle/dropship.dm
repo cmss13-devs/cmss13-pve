@@ -233,7 +233,7 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship4.dmi'
 	icon_state = "101a"
-	opacity = TRUE
+	opacity = FALSE
 
 /obj/structure/shuttle/part/cyclone
 	name = "\improper Cyclone"
@@ -253,7 +253,7 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship2.dmi'
 	icon_state = "101a"
-	opacity = TRUE
+	opacity = FALSE
 
 /obj/structure/shuttle/part/tornado
 	name = "\improper Tornado"
@@ -273,7 +273,7 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship3.dmi'
 	icon_state = "101a"
-	opacity = TRUE
+	opacity = FALSE
 
 /obj/structure/shuttle/part/typhoon
 	name = "\improper Typhoon"
@@ -293,7 +293,7 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship3.dmi'
 	icon_state = "101a"
-	opacity = TRUE
+	opacity = FALSE
 
 /obj/structure/shuttle/part/tripoli
 	name = "\improper Tripoli"
@@ -313,4 +313,4 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship.dmi'
 	icon_state = "101a"
-	opacity = TRUE
+	opacity = FALSE

@@ -736,26 +736,6 @@
 	reagents.add_reagent("meatprotein", 6)
 	bitesize = 2
 
-/obj/item/reagent_container/food/snacks/donkpocket
-	name = "Donk-pocket"
-	desc = "The food of choice for the seasoned traitor."
-	icon_state = "donkpocket"
-	filling_color = "#DEDEAB"
-	var/warm = 0
-
-/obj/item/reagent_container/food/snacks/donkpocket/Initialize()
-	. = ..()
-	reagents.add_reagent("meatprotein", 2)
-	reagents.add_reagent("bread", 2)
-
-/obj/item/reagent_container/food/snacks/donkpocket/proc/cooltime() //Not working, derp?
-	if(warm)
-		spawn(4200)
-			if(!QDELETED(src)) //not qdel'd
-				warm = 0
-				reagents.del_reagent("tricordrazine")
-				name = "donk-pocket"
-
 /obj/item/reagent_container/food/snacks/brainburger
 	name = "brainburger"
 	desc = "A strange looking burger. It looks almost sentient."
@@ -3194,19 +3174,67 @@
 	reagents.add_reagent("vegetable", 3)
 	reagents.add_reagent("potato", 3)
 
-/obj/item/reagent_container/food/snacks/packaged_burrito
+/obj/item/reagent_container/food/snacks/microwavable
+	name = "Microwavable snack"
+	desc = "Some food you could microwave. It won't be tastier if you do, though."
+	var/warm_desc = "Some microwaved food."
+	icon_state = "donkpocket"
+	bitesize = 3
+	var/warm = 0
+
+/obj/item/reagent_container/food/snacks/microwavable/proc/cooltime() //Not working, derp?
+	if(warm)
+		spawn(4200)
+			if(!QDELETED(src)) //not qdel'd
+				warm = 0
+				reagents.del_reagent("bread", 1)
+				reagents.del_reagent("meatprotein", 1)
+				name = name
+
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket
+	name = "Donk-pocket"
+	desc = "The food of choice for the seasoned traitor. Packaged by the Weyland-Yutani Corporation."
+	warm_desc = "The food of choice for the seasoned traitor. Warmed unevenly and rock hard."
+	icon_state = "donkpocket_wr2"
+	filling_color = "#DEDEAB"
+	package = 2
+
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket/Initialize()
+	. = ..()
+	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("tomatojuice", 2)
+	reagents.add_reagent("cheese", 2)
+
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket/attack_self(mob/user)
+	..()
+
+	if(package==1) // this one comes first, otherwise it will run package==2 and THEN package==1 in succession
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the sleeve from the donk pocket!"))
+		package = 0
+		icon_state = "donkpocket"
+	if(package==2)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull off the wrapping from the donk pocket!"))
+		package = 1
+		icon_state = "donkpocket_wr1"
+
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito
 	name = "Packaged Burrito"
-	desc = "A hard microwavable burrito. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	desc = "A hard microwavable burrito. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
+	warm_desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
 	icon_state = "packaged-burrito"
-	bitesize = 2
 	package = 1
 
-/obj/item/reagent_container/food/snacks/packaged_burrito/Initialize()
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 5)
-	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("bread", 4)
+	reagents.add_reagent("meatprotein", 4)
+	reagents.add_reagent("vegetable", 2)
+	reagents.add_reagent("cheese", 2)
 
-/obj/item/reagent_container/food/snacks/packaged_burrito/attack_self(mob/user)
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito/attack_self(mob/user)
 	..()
 
 	if(package)
@@ -3215,21 +3243,22 @@
 		package = 0
 		icon_state = "open-burrito"
 
-/obj/item/reagent_container/food/snacks/packaged_burger
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger
 	name = "Packaged Cheeseburger"
-	desc = "A soggy microwavable burger. There's no time given for how long to cook it. Packaged by the Weyland-Yutani Corporation."
+	desc = "A soggy microwavable burger. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
+	warm_desc = "A soggy microwaved burger. It's not any less soggy then it was before, it's just hot now."
 	icon_state = "burger"
-	bitesize = 3
 	package = 1
 
-/obj/item/reagent_container/food/snacks/packaged_burger/Initialize()
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger/Initialize()
 	. = ..()
 	reagents.add_reagent("bread", 5)
 	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("cheese", 2)
 	reagents.add_reagent("sodiumchloride", 2)
 
 
-/obj/item/reagent_container/food/snacks/packaged_burger/attack_self(mob/user)
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger/attack_self(mob/user)
 	..()
 
 	if(package)
@@ -3239,20 +3268,21 @@
 		icon_state = "hburger"
 		item_state = "burger"
 
-/obj/item/reagent_container/food/snacks/packaged_hdogs
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs
 	name = "Packaged Hotdog"
-	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, so you assume its probably good to go. Packaged by the Weyland-Yutani Corporation."
+	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
+	warm_desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
 	icon_state = "packaged-hotdog"
-	bitesize = 2
 	package = 1
 
-/obj/item/reagent_container/food/snacks/packaged_hdogs/Initialize()
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 2)
-	reagents.add_reagent("meatprotein", 1)
+	reagents.add_reagent("bread", 5)
+	reagents.add_reagent("meatprotein", 5)
+	reagents.add_reagent("ketchup", 2)
 	reagents.add_reagent("sodiumchloride", 2)
 
-/obj/item/reagent_container/food/snacks/packaged_hdogs/attack_self(mob/user)
+/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs/attack_self(mob/user)
 	..()
 
 	if(package)

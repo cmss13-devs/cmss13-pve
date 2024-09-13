@@ -450,3 +450,11 @@ var/list/default_xeno_onmob_icons = list(
 #define MOBILITY_FLAGS_CARBON_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_REST | MOBILITY_LIEDOWN)
 #define MOBILITY_FLAGS_REST_CAPABLE_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_REST | MOBILITY_LIEDOWN)
 
+/// Sleeps for X and will perform return if A is qdeleted or a dead mob.
+#define SLEEP_CHECK_DEATH(X, A) \
+	sleep(X); \
+	if(QDELETED(A)) return; \
+	if(ismob(A)) { \
+		var/mob/sleep_check_death_mob = A; \
+		if(sleep_check_death_mob.stat == DEAD) return; \
+	}

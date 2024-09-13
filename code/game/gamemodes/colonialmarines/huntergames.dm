@@ -66,7 +66,7 @@
 \
 								75; /obj/item/stack/medical/bruise_pack, \
 								75; /obj/item/stack/medical/ointment, \
-								75; /obj/item/reagent_container/food/snacks/donkpocket, \
+								75; /obj/item/reagent_container/food/snacks/microwavable/donkpocket, \
 \
 								100; /obj/item/cell/high, \
 								100; /obj/item/tool/wirecutters, \

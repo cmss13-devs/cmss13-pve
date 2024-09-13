@@ -10,3 +10,29 @@
   - rscadd: on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors
   - rscdel: on Sorokyne, removed USCM Galley Vendors
   - bugfix: on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts
+2024-09-05:
+  BonniePandora:
+  - qol: Toolbelts can now carry the high-capacity blowtorch
+2024-09-06:
+  Max-023:
+  - bugfix: SG Belt hold list modified to accept all revolvers
+2024-09-07:
+  Doubleumc:
+  - admin: removed King from GM panel spawner
+  - bugfix: fixed galley changes being reverted
+  Noname995:
+  - rscadd: Added king with changed abilities and AI to use abilities, new event boss
+      or end game tool for GMs.
+2024-09-11:
+  AndroBetel:
+  - qol: Added platoon commander prefs
+  - rscadd: Added dropship camo, chosen by PLTCO
+  BonniePandora:
+  - qol: Adds a new 'nickname' for character slots
+  - ui: adjusted the character setup menu to have a field for the above
+  Meatstuff882:
+  - rscadd: Added Microwaved Burritos, Cheeseburgers, and Hot Dogs, and recipes for
+      these items.
+  - balance: 'Packaged food has more nutrition.
+
+      :cl:'
