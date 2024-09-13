@@ -9,15 +9,13 @@
 
 	listed_products = list(
 		list("ENGINEER SUPPLIES", 0, null, null, null),
-		list("Airlock Circuit Board", 1, /obj/item/circuitboard/airlock, null, VENDOR_ITEM_REGULAR),	//PVE_adjustment, limited electronics vendors aboard, should help mitigate synths pilfering the existing kit
-		list("APC Circuit Board", 1, /obj/item/circuitboard/apc, null, VENDOR_ITEM_REGULAR),	//PVE_adjustment, limited electronics vendors aboard, should help mitigate synths pilfering the existing kit
+		list("Airlock Circuit Board", 1, /obj/item/circuitboard/airlock, null, VENDOR_ITEM_REGULAR),
+		list("APC Circuit Board", 1, /obj/item/circuitboard/apc, null, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool", 2, /obj/item/tool/shovel/etool, null, VENDOR_ITEM_REGULAR),
-		list("High-Capacity Power Cell", 2, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),	//PVE_adjustment, limited electronics vendors aboard, should help mitigate synths pilfering the existing kit
-//		list("Light Replacer", 2, /obj/item/device/lightreplacer, null, VENDOR_ITEM_REGULAR),	//PVE_removal, Seriously? Who even uses these things
+		list("High-Capacity Power Cell", 2, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),
 		list("Metal x10", 5, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_REGULAR),
-//		list("Multitool", 4, /obj/item/device/multitool, null, VENDOR_ITEM_REGULAR),		//PVE_removal, Synths get spawned with a full toolbelt already, points-trap
 		list("Plasteel x10", 7, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_REGULAR),
-		list("Sandbags x25", 5, /obj/item/stack/sandbags_empty/half, null, VENDOR_ITEM_REGULAR),	//PVE_adjustment, make them a bit more viable of a pick?
+		list("Sandbags x25", 5, /obj/item/stack/sandbags_empty/half, null, VENDOR_ITEM_REGULAR),
 		list("Plastic Explosive", 3, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
 		list("ES-11 Mobile Fuel Canister", 4, /obj/item/tool/weldpack/minitank, null, VENDOR_ITEM_REGULAR),
 		list("Engineer Kit", 1, /obj/item/storage/toolkit/empty, null, VENDOR_ITEM_REGULAR),
@@ -34,14 +32,9 @@
 		list("MEDICAL SUPPLIES", 0, null, null, null),
 		list("Burn Kit", 2, /obj/item/stack/medical/advanced/ointment, null, VENDOR_ITEM_REGULAR),
 		list("Trauma Kit", 2, /obj/item/stack/medical/advanced/bruise_pack, null, VENDOR_ITEM_REGULAR),
-//		list("Medevac Bed", 6, /obj/item/roller/medevac, null, VENDOR_ITEM_REGULAR),	//PVE_removal, never seen the medevac system in use during my entire playtime here, about as useful as the intel system stuff
 		list("Medical Splints", 1, /obj/item/stack/medical/splint, null, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", 4, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
-//		list("Stasis Bag", 6, /obj/item/bodybag/cryobag, null, VENDOR_ITEM_REGULAR),	//PVE_removal, keeping it in-line with what corpsman gets and what wey-med offers
 		list("MS-11 Smart Refill Tank", 6, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
-//		list("Blood", 5, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR), //PVE_removal, not needed with how few medically-trained crew are about
-//		list("Surgical Bed", 10, /obj/structure/bed/portable_surgery, null, VENDOR_ITEM_REGULAR),	//PVE_removal, already get one, rarely if not never more than one synth spawned
-//		list("Surgical Kit", 30, /obj/item/storage/surgical_tray, null, VENDOR_ITEM_REGULAR),	//PVE_removal, already get one, rarely if not never more than one synth spawned
 
 		list("Pillbottle (Bicaridine)", 5, /obj/item/storage/pill_bottle/bicaridine, null, VENDOR_ITEM_RECOMMENDED),
 		list("Pillbottle (Dexalin)", 5, /obj/item/storage/pill_bottle/dexalin, null, VENDOR_ITEM_REGULAR),
@@ -59,10 +52,6 @@
 		list("Injector (Tramadol)", 1, /obj/item/reagent_container/hypospray/autoinjector/tramadol, null, VENDOR_ITEM_REGULAR),
 		list("Injector (Tricord)", 1, /obj/item/reagent_container/hypospray/autoinjector/tricord, null, VENDOR_ITEM_REGULAR),
 
-//		list("Autoinjector (C-S) (EMPTY)", 1, /obj/item/reagent_container/hypospray/autoinjector/empty/small, null, VENDOR_ITEM_REGULAR),	//PVE_removal, no BIG reagent tanks to fill the empty reagent pouch with, so these are useless
-//		list("Autoinjector (C-M) (EMPTY)", 2, /obj/item/reagent_container/hypospray/autoinjector/empty/medium, null, VENDOR_ITEM_REGULAR),	//PVE_removal
-//		list("Autoinjector (C-L) (EMPTY)", 4, /obj/item/reagent_container/hypospray/autoinjector/empty/large, null, VENDOR_ITEM_REGULAR),	//PVE_removal
-
 		list("Health Analyzer", 4, /obj/item/device/healthanalyzer, null, VENDOR_ITEM_REGULAR),
 		list("Surgical Line", 4, /obj/item/tool/surgery/surgical_line, null, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", 4, /obj/item/tool/surgery/synthgraft, null, VENDOR_ITEM_REGULAR),
@@ -71,9 +60,7 @@
 		list("Binoculars", 5,/obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
 		list("Rangefinder", 8, /obj/item/device/binoculars/range, null,  VENDOR_ITEM_REGULAR),
 		list("Laser Designator", 12, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_RECOMMENDED),
-//		list("Data Detector", 5, /obj/item/device/motiondetector/intel, null, VENDOR_ITEM_REGULAR),	//PVE_removal, intel system not in use on PVE
 		list("Flashlight", 1, /obj/item/device/flashlight, null, VENDOR_ITEM_RECOMMENDED),
-//		list("Fulton Recovery Device", 5, /obj/item/stack/fulton, null, VENDOR_ITEM_REGULAR),	//PVE_removal, fulton system isn't in use on PVE
 		list("Motion Detector", 5, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
 		list("Space Cleaner", 2, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
@@ -85,22 +72,21 @@
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
-		list("EXPERIMENTAL EQUIPMENT (CHOOSE 1)", 0, null, null, null),	//PVE_tweak, in lieu of having the actual experimental tool vendor, can pick ONE from a limited selection of kit
-//		list("Experimental Tool Vendor Token", 0, /obj/item/coin/marine/synth, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),	//PVE_removal, not needed if they're only getting one tool
-		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher/synth, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR), //PVE_addition, list of available items subject to change
-		list("Compact Nailgun kit", 0, /obj/effect/essentials_set/cnailgun, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Crew Monitor", 0, /obj/item/tool/crew_monitor, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Maintenance Jack", 0, /obj/item/maintenance_jack, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),	//PVE_addition
-		list("Portable Dialysis Machine", 0, /obj/item/tool/portadialysis, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Telescopic Baton", 0, /obj/item/weapon/telebaton, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),	//PVE_addition
+		list("EXPERIMENTAL EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher/synth, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Compact Nailgun kit", 0, /obj/effect/essentials_set/cnailgun, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Crew Monitor", 0, /obj/item/tool/crew_monitor, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Maintenance Jack", 0, /obj/item/maintenance_jack, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
+		list("Portable Dialysis Machine", 0, /obj/item/tool/portadialysis, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Telescopic Baton", 0, /obj/item/weapon/telebaton, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
-		list("RESTRICTED MEDICATION (CHOOSE 1)", 0, null, null, null),	//PVE_tweak, not gonna give them access to the chem-vendor, instead they can pick ONE bottle of fancy meds. Discussion with corpsman hoped for, ideally they grab a med-type the medic hasn't picked.
-		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Pill Bottle (Meralyne-Bicardine)", 0, /obj/item/storage/pill_bottle/merabica, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Pill Bottle (Kelotane-Dermaline)", 0, /obj/item/storage/pill_bottle/keloderm, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Pill Bottle (Nitrogen-Water)", 0, /obj/item/storage/pill_bottle/nitrogenwater, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Pill Bottle (Dexalin+)", 0, /obj/item/storage/pill_bottle/dexalinplus, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
-		list("Pill Bottle (Iron)", 0, /obj/item/storage/pill_bottle/iron, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),	//PVE_addition
+		list("RESTRICTED MEDICATION (CHOOSE 1)", 0, null, null, null),
+		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Meralyne-Bicardine)", 0, /obj/item/storage/pill_bottle/merabica, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane-Dermaline)", 0, /obj/item/storage/pill_bottle/keloderm, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Nitrogen-Water)", 0, /obj/item/storage/pill_bottle/nitrogenwater, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin+)", 0, /obj/item/storage/pill_bottle/dexalinplus, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Iron)", 0, /obj/item/storage/pill_bottle/iron, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
 
 		list("RADIO (TAKE ALL)", 0, null, null, null),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/mcom/synth, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
@@ -140,7 +126,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("M3A1 Pattern Synthetic Utility Vest (UA Snow)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/snow, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 		list("M3A1 Pattern Synthetic Utility Vest (UA Desert)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/desert, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 		list("M3-VL Pattern Ballistics Vest", 0, /obj/item/clothing/suit/storage/marine/light/vest, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-//		list("Shoulder-lamp Rig", 0, /obj/item/clothing/suit/storage/marine/veteran/lamp, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR)	//PVE_addition, commented out until the UPP overhaul's merged else I suspect it'll throw errors
+//		list("Shoulder-lamp Rig", 0, /obj/item/clothing/suit/storage/marine/veteran/lamp, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR)	//Commented out until the UPP overhaul's merged else it'll throw errors
 
 		list("GLOVES (CHOOSE 1)", 0, null, null, null),
 		list("Insulated Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_RECOMMENDED),
@@ -148,12 +134,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Latex Gloves", 0, /obj/item/clothing/gloves/latex, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-//		list("Smartpack, Blue", 0, /obj/item/storage/backpack/marine/smartpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_removal, powergaming shitheads in shambles when their funny pack no longer available...
-//		list("Smartpack, Green", 0, /obj/item/storage/backpack/marine/smartpack/green, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_removal
-//		list("Smartpack, Tan", 0, /obj/item/storage/backpack/marine/smartpack/tan, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_removal
-//		list("Smartpack, White", 0, /obj/item/storage/backpack/marine/smartpack/white, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_removal
-//		list("Smartpack, Black", 0, /obj/item/storage/backpack/marine/smartpack/black, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_removal
-		list("Tactical IMP Rucksack", 0, /obj/item/storage/backpack/marine/marsoc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),	//PVE_addition, alternative to the logi backpack, same capacity just has a darker sprite
+		list("Tactical IMP Rucksack", 0, /obj/item/storage/backpack/marine/marsoc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Logistics IMP Backpack", 0, /obj/item/storage/backpack/marine/satchel/big, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Expedition Chestrig", 0, /obj/item/storage/backpack/marine/satchel/intel/chestrig, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 
@@ -178,10 +159,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-//		list("Pressurized Reagent Canister Pouch (Revival Mix - Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_tricord, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),	//PVE_removal, we can't rez so revival mix is a pointless thing to offer
-//		list("Pressurized Reagent Canister Pouch (Revival Mix - Peridaxon)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/revival_peri, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),	//PVE_removal, we can't rez so revival mix is a pointless thing to offer
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-//		list("Pressurized Reagent Canister Pouch (EMPTY)", 0, /obj/item/storage/pouch/pressurized_reagent_canister, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),	//PVE_removal, no big reagent tanks to fill this from, no point offering it
 		list("Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Machete Pouch (Full)", 0, /obj/item/storage/pouch/machete/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
@@ -212,7 +190,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("USCM Service Uniform, Tan", 12, /obj/item/clothing/under/marine/officer/bridge, null, VENDOR_ITEM_REGULAR),
 	list("USCM Service Uniform, White", 12, /obj/item/clothing/under/marine/dress, null, VENDOR_ITEM_REGULAR),
 	list("USCM Flightsuit", 12, /obj/item/clothing/under/rank/synthetic/flight, null, VENDOR_ITEM_REGULAR),
-	list("USCM Vehicle Crewman Uniform", 12, /obj/item/clothing/under/marine/officer/tanker, null, VENDOR_ITEM_REGULAR),	//PVE_addition
+	list("USCM Vehicle Crewman Uniform", 12, /obj/item/clothing/under/marine/officer/tanker, null, VENDOR_ITEM_REGULAR),
 	list("USCM Engineers Uniform", 12, /obj/item/clothing/under/marine/engineer/standard, null, VENDOR_ITEM_REGULAR),
 	list("USCM Engineers Uniform (Darker)", 12, /obj/item/clothing/under/marine/engineer/darker, null, VENDOR_ITEM_REGULAR),
 	list("USCM Engineering Officers Uniform", 12, /obj/item/clothing/under/marine/officer/engi, null, VENDOR_ITEM_REGULAR),
@@ -288,8 +266,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Marine Helmet (Snow)", 12, /obj/item/clothing/head/helmet/marine/snow, null, VENDOR_ITEM_REGULAR),
 	list("Marine Helmet (Desert)", 12, /obj/item/clothing/head/helmet/marine/desert, null, VENDOR_ITEM_REGULAR),
 	list("Technician Helmet", 12, /obj/item/clothing/head/helmet/marine/tech, null, VENDOR_ITEM_REGULAR),
-	list("Pilot Helmet", 12, /obj/item/clothing/head/helmet/marine/pilot, null, VENDOR_ITEM_REGULAR),	//PVE_addition
-	list("Crewman Helmet", 12, /obj/item/clothing/head/helmet/marine/tech/tanker, null, VENDOR_ITEM_REGULAR),	//PVE_addition
+	list("Pilot Helmet", 12, /obj/item/clothing/head/helmet/marine/pilot, null, VENDOR_ITEM_REGULAR),
+	list("Crewman Helmet", 12, /obj/item/clothing/head/helmet/marine/tech/tanker, null, VENDOR_ITEM_REGULAR),
 	list("Corpsman Helmet", 12, /obj/item/clothing/head/helmet/marine/medic, null, VENDOR_ITEM_REGULAR),
 	list("White Corpsman Helmet", 12, /obj/item/clothing/head/helmet/marine/medic/white, null, VENDOR_ITEM_REGULAR),
 	list("Attachable Helmet Shield", 12, /obj/item/prop/helmetgarb/riot_shield, null, VENDOR_ITEM_REGULAR),
@@ -327,8 +305,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Synthetic's Snow Suit", 12, /obj/item/clothing/suit/storage/snow_suit/synth, null, VENDOR_ITEM_REGULAR),
 	list("USCM Service Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/service, null, VENDOR_ITEM_REGULAR),
 	list("USCM MP Service Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/service/mp, null, VENDOR_ITEM_REGULAR),
-	list("USCM Light Flak Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/pilot, null, VENDOR_ITEM_REGULAR),	//PVE_addition
-	list("USCM Vehicle Crewman Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/service/tanker, null, VENDOR_ITEM_REGULAR),	//PVE_addition
+	list("USCM Light Flak Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/pilot, null, VENDOR_ITEM_REGULAR),
+	list("USCM Vehicle Crewman Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/service/tanker, null, VENDOR_ITEM_REGULAR),
 	list("Windbreaker, Brown", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown, null, VENDOR_ITEM_REGULAR),
 	list("Windbreaker, Grey", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_gray, null, VENDOR_ITEM_REGULAR),
 	list("Windbreaker, Green", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_green, null, VENDOR_ITEM_REGULAR),
