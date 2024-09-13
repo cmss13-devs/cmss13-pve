@@ -36,3 +36,20 @@
   - balance: 'Packaged food has more nutrition.
 
       :cl:'
+2024-09-13:
+  Doubleumc:
+  - code_imp: updated to main CM as of 8-25
+  - ui: updated to PvP orbit menu, gained more sections
+  - qol: APCs are now emissive
+  - rscadd: Added toggle fullscreen hotkey, default F11
+  - maptweak: new map lints against stacked structures, bad dir var edits, var edits
+      from open turfs
+  - rscadd: added plantable flags
+  - rscadd: added W-Y sentries and additional UPP sentries
+  - refactor: splits storage.dmi into multiple files, also moved some icons around
+      for organization
+  - rscadd: Added a tutorial system for various roles (and just general information),
+      find it in the lobby screen.
+  - rscadd: framework for new ert stations ported from https://github.com/tgstation/tgstation/pull/71785,
+      by ZephyrTFA
+  - code_imp: missing lineart error is now a lint
