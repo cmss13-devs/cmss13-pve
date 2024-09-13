@@ -131,7 +131,7 @@
 	arm_equipment(M, dresscode, FALSE, count_participant)
 	if(!no_logs)
 		message_admins("[key_name_admin(usr)] changed the equipment of [key_name_admin(M)] to [dresscode].")
-	return
+	return TRUE
 
 /client/proc/cmd_admin_dress_all()
 	set category = "Debug"

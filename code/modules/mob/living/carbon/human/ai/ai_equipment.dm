@@ -16,6 +16,15 @@
 
 	//new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full/random(new_human), WEAR_WAIST)
 	//new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb(new_human), WEAR_BACK)
+
+	//new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	//new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_BELT)
+	//new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer(new_human), WEAR_BACK)
+
+	//new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	//new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/anti_tank(new_human), WEAR_IN_BELT)
+	//new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/anti_tank(new_human), WEAR_R_HAND)
+
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
 	if(prob(50))
 		spawn_rebel_smg(new_human)
@@ -23,3 +32,7 @@
 		spawn_rebel_rifle(new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/clf/soldier/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
+	. = ..()
+	new_human.ai_brain?.appraise_inventory()
