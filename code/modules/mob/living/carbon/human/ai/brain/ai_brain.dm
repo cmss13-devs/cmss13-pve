@@ -92,9 +92,11 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	if(!currently_busy && primary_weapon && current_target && !currently_firing && COOLDOWN_FINISHED(src, fire_overload_cooldown) && primary_weapon.has_ammunition())
 		currently_busy = TRUE
-		if(get_dist(tied_human, current_target) > gun_data.maximum_range)
+		var/target_futile = HAS_TRAIT(current_target, TRAIT_INCAPACITATED)
+		if(get_dist(tied_human, current_target) > gun_data.optimal_range || target_futile)
 			if(!has_ongoing_action(/datum/ongoing_action/approach_target) && !in_cover)
-				ADD_ONGOING_ACTION(src, /datum/ongoing_action/approach_target, current_target, gun_data.maximum_range)
+				var/walk_distance = target_futile ? gun_data.minimum_range : gun_data.optimal_range
+				ADD_ONGOING_ACTION(src, /datum/ongoing_action/approach_target, current_target, walk_distance)
 		attack_target()
 
 	if(!currently_busy && healing_start_check())
@@ -294,6 +296,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(firer?.faction in neutral_factions)
 		on_neutral_faction_betray(firer.faction)
 
+	if(!faction_check(firer))
+		current_target = firer
 
 /datum/human_ai_brain/proc/on_neutral_faction_betray(faction)
 	if(!tied_human.faction)
