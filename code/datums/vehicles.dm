@@ -34,6 +34,10 @@
 	name = "ARC"
 	interior_id = "arc"
 
+/datum/map_template/interior/fancy_locker
+	name = "Fancy Locker"
+	interior_id = "fancylocker"
+
 /datum/map_template/interior/tank
 	name = "Tank"
 	interior_id = "tank"
@@ -45,7 +49,3 @@
 /datum/map_template/interior/van
 	name = "Van"
 	interior_id = "van"
-
-/datum/map_template/interior/arc
-	name = "ARC"
-	interior_id = "arc"

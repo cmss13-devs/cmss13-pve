@@ -7,7 +7,7 @@ to null does not delete the object itself. Thank you.
 
 */
 
-GLOBAL_LIST_INIT(diseases, typesof(/datum/disease) - /datum/disease)
+var/list/diseases = typesof(/datum/disease) - /datum/disease
 
 
 /datum/disease
@@ -121,11 +121,10 @@ GLOBAL_LIST_INIT(diseases, typesof(/datum/disease) - /datum/disease)
 		check_range = 1 // everything else, like infect-on-contact things, only infect things on top of it
 
 	if(isturf(source.loc))
-		FOR_DOVIEW(var/mob/living/carbon/victim, check_range, source, HIDE_INVISIBLE_OBSERVER)
+		for(var/mob/living/carbon/victim in oview(check_range, source))
 			if(isturf(victim.loc))
 				if(AStar(source.loc, victim.loc, /turf/proc/AdjacentTurfs, /turf/proc/Distance, check_range))
 					victim.contract_disease(src, 0, 1, force_spread)
-		FOR_DOVIEW_END
 
 	return
 

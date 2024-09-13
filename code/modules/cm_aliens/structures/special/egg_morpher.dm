@@ -44,9 +44,6 @@
 	. = ..()
 	if(isxeno(user) || isobserver(user))
 		. += "It has [stored_huggers] facehuggers within, with [huggers_to_grow] more to grow (reserved: [huggers_reserved])."
-	if(isobserver(user))
-		var/current_hugger_count = linked_hive.get_current_playable_facehugger_count();
-		. += "There are currently [SPAN_NOTICE("[current_hugger_count]")] facehuggers in the hive. The hive can support a total of [SPAN_NOTICE("[linked_hive.playable_hugger_limit]")] facehuggers at present."
 
 /obj/effect/alien/resin/special/eggmorph/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/grab))
@@ -150,7 +147,7 @@
 				if(isitem(A))
 					var/obj/item/item = A
 					if(item.is_objective && item.unacidable)
-						item.forceMove(get_step(loc, pick(GLOB.alldirs)))
+						item.forceMove(get_step(loc, pick(alldirs)))
 						item.mouse_opacity = initial(item.mouse_opacity)
 
 			QDEL_NULL(captured_mob)
@@ -193,8 +190,7 @@
 	if(stored_huggers)
 		to_chat(M, SPAN_XENONOTICE("You retrieve a child."))
 		stored_huggers = max(0, stored_huggers - 1)
-		var/obj/item/clothing/mask/facehugger/hugger = new(loc, linked_hive.hivenumber)
-		SEND_SIGNAL(M, COMSIG_XENO_TAKE_HUGGER_FROM_MORPHER, hugger)
+		new /obj/item/clothing/mask/facehugger(loc, linked_hive.hivenumber)
 		return XENO_NONCOMBAT_ACTION
 	..()
 

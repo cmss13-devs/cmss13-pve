@@ -32,10 +32,10 @@
 					return "[skin_color]_[limb_name]_[get_gender_name(gender)]"
 				if("groin")
 					return "[skin_color]_[limb_name]_[body_type]_[get_gender_name(gender)]"
-
 		switch(limb_name)
 			if("synthetic head")
 				return "head_[get_gender_name(gender)]"
+
 			if("r_arm")
 				return "[skin_color]_right_arm"
 			if("right arm")
@@ -68,7 +68,6 @@
 				return "[skin_color]_left_foot"
 			if("left foot")
 				return "[skin_color]_left_foot"
-
 			else
 				message_admins("DEBUG: Something called get_limb_icon_name() incorrectly, they use the name [limb_name]")
 				return null
@@ -209,18 +208,18 @@
 	return FALSE
 
 
-/mob/living/carbon/human/is_mob_restrained(check_grab = TRUE)
+/mob/living/carbon/human/is_mob_restrained(check_grab = 1)
 	if(check_grab && pulledby && pulledby.grab_level >= GRAB_AGGRESSIVE)
-		return TRUE
+		return 1
 	if (handcuffed)
-		return TRUE
+		return 1
 	if (istype(wear_suit, /obj/item/clothing/suit/straight_jacket))
-		return TRUE
+		return 1
 
 	if (HAS_TRAIT(src, TRAIT_NESTED))
 		return TRUE
 
-	return FALSE
+	return 0
 
 /mob/living/carbon/human/proc/disable_special_flags()
 	status_flags |= CANPUSH
@@ -362,7 +361,7 @@
 
 /mob/living/carbon/human/proc/has_foreign_object()
 	for(var/obj/limb/L in limbs)
-		if(LAZYLEN(L.implants) > 0)
+		if(L.implants && L.implants.len > 0)
 			return TRUE
 	for(var/obj/item/alien_embryo/A in contents)
 		return TRUE

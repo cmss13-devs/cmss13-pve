@@ -136,6 +136,11 @@
 	path = /obj/item/circuitboard/apc
 	category = AUTOLATHE_CATEGORY_ENGINEERING
 
+/datum/autolathe/recipe/rcd_ammo
+	name = "matter cartridge"
+	path = /obj/item/ammo_rcd
+	category = AUTOLATHE_CATEGORY_ENGINEERING
+
 /datum/autolathe/recipe/table_parts
 	name = "table parts"
 	path = /obj/item/frame/table
@@ -264,7 +269,7 @@
 
 /datum/autolathe/recipe/handcuffs
 	name = "handcuffs"
-	path = /obj/item/restraint/handcuffs
+	path = /obj/item/handcuffs
 	hidden = TRUE
 	category = AUTOLATHE_CATEGORY_GENERAL
 
@@ -324,11 +329,6 @@
 /datum/autolathe/recipe/armylathe/large_flamer_tank
 	name = "Custom M240-T Fuel Tank"
 	path = /obj/item/ammo_magazine/flamer_tank/custom/large
-	category = AUTOLATHE_CATEGORY_EXPLOSIVES
-
-/datum/autolathe/recipe/armylathe/smoke_tank
-	name = "Custom M240A1 Smoke Tank"
-	path = /obj/item/ammo_magazine/flamer_tank/smoke
 	category = AUTOLATHE_CATEGORY_EXPLOSIVES
 
 //Medilathe recipes
@@ -415,6 +415,10 @@
 /datum/autolathe/recipe/medilathe/bonesetter
 	name = "bonesetter"
 	path = /obj/item/tool/surgery/bonesetter
+
+/datum/autolathe/recipe/medilathe/bonegel
+	name = "bone gel"
+	path = /obj/item/tool/surgery/bonegel
 
 /datum/autolathe/recipe/medilathe/fixovein
 	name = "FixOVein"

@@ -207,7 +207,7 @@
 	if(seed.nutrient_consumption > 0 && nutrilevel > 0 && prob(25))
 		nutrilevel -= max(0,seed.nutrient_consumption * HYDRO_SPEED_MULTIPLIER)
 	if(seed.water_consumption > 0 && waterlevel > 0  && prob(25))
-		waterlevel -= floor(max(0,(seed.water_consumption * HYDRO_WATER_CONSUMPTION_MULTIPLIER) * HYDRO_SPEED_MULTIPLIER))
+		waterlevel -= round(max(0,(seed.water_consumption * HYDRO_WATER_CONSUMPTION_MULTIPLIER) * HYDRO_SPEED_MULTIPLIER))
 
 	// Make sure the plant is not starving or thirsty. Adequate
 	// water and nutrients will cause a plant to become healthier.
@@ -226,7 +226,7 @@
 	// Toxin levels beyond the plant's tolerance cause damage, but
 	// toxins are sucked up each tick and slowly reduce over time.
 	if(toxins > 0)
-		var/toxin_uptake = max(1,floor(toxins/10))
+		var/toxin_uptake = max(1,round(toxins/10))
 		if(toxins > seed.toxins_tolerance)
 			plant_health -= toxin_uptake
 		toxins -= toxin_uptake
@@ -262,7 +262,7 @@
 		pestlevel = 0
 
 	// If enough time (in cycles, not ticks) has passed since the plant was harvested, we're ready to harvest again.
-	else if(LAZYLEN(seed.products) && age > seed.production && (age - lastproduce) > seed.production && (!harvest && !dead))
+	else if(seed.products && seed.products.len && age > seed.production && (age - lastproduce) > seed.production && (!harvest && !dead))
 		harvest = 1
 		lastproduce = age
 
@@ -319,7 +319,7 @@
 
 		// Water dilutes toxin level.
 		if(water_added > 0)
-			toxins -= floor(water_added/4)
+			toxins -= round(water_added/4)
 
 	temp_chem_holder.reagents.clear_reagents()
 	check_level_sanity()
@@ -359,7 +359,7 @@
 	if(!user || !dead) return
 
 	if(closed_system)
-		to_chat(user, SPAN_WARNING("You can't remove the dead plant while the lid is shut."))
+		to_chat(user, "You can't remove the dead plant while the lid is shut.")
 		return
 
 	seed = null
@@ -369,9 +369,10 @@
 	yield_mod = 0
 	mutation_mod = 0
 
-	to_chat(user, SPAN_NOTICE("You remove the dead plant from [src]."))
+	to_chat(user, "You remove the dead plant from the [src].")
 	check_level_sanity()
 	update_icon()
+	return
 
 //Refreshes the icon and sets the luminosity
 /obj/structure/machinery/portable_atmospherics/hydroponics/update_icon()
@@ -390,7 +391,7 @@
 			overlays += "[seed.plant_icon]-harvest"
 		else if(age < seed.maturation)
 
-			var/t_growthstate = floor(age/seed.maturation * seed.growth_stages)
+			var/t_growthstate = round(age/seed.maturation * seed.growth_stages)
 			overlays += "[seed.plant_icon]-grow[t_growthstate]"
 			lastproduce = age
 		else
@@ -414,7 +415,7 @@
 	// Update bioluminescence.
 	if(seed)
 		if(seed.biolum)
-			set_light(floor(seed.potency/10))
+			set_light(round(seed.potency/10))
 			return
 
 	set_light(0)
@@ -425,7 +426,7 @@
 
 	//Remove the seed if something is already planted.
 	if(seed) seed = null
-	seed = GLOB.seed_types[pick(list("mushrooms","plumphelmet","harebells","poppies","grass","weeds"))]
+	seed = seed_types[pick(list("mushrooms","plumphelmet","harebells","poppies","grass","weeds"))]
 	if(!seed) return //Weed does not exist, someone fucked up.
 
 	dead = 0
@@ -448,14 +449,14 @@
 		return
 
 	// Check if we should even bother working on the current seed datum.
-	if(LAZYLEN(seed.mutants) && severity > 1)
+	if(seed.mutants && seed.mutants.len && severity > 1)
 		mutate_species()
 		return
 
 	// We need to make sure we're not modifying one of the global seed datums.
 	// If it's not in the global list, then no products of the line have been
 	// harvested yet and it's safe to assume it's restricted to this tray.
-	if(!isnull(GLOB.seed_types[seed.name]))
+	if(!isnull(seed_types[seed.name]))
 		seed = seed.diverge()
 	seed.mutate(severity,get_turf(src))
 
@@ -480,8 +481,8 @@
 
 	var/previous_plant = seed.display_name
 	var/newseed = seed.get_mutant_variant()
-	if(newseed in GLOB.seed_types)
-		seed = GLOB.seed_types[newseed]
+	if(newseed in seed_types)
+		seed = seed_types[newseed]
 	else
 		return
 
@@ -577,7 +578,7 @@
 				dead = 0
 				age = 1
 				//Snowflakey, maybe move this to the seed datum
-				plant_health = (istype(S, /obj/item/seeds/cutting) ? floor(seed.endurance/rand(2,5)) : seed.endurance)
+				plant_health = (istype(S, /obj/item/seeds/cutting) ? round(seed.endurance/rand(2,5)) : seed.endurance)
 
 				lastcycle = world.time
 
@@ -592,7 +593,7 @@
 	else if (istype(O, /obj/item/tool/minihoe))  // The minihoe
 
 		if(weedlevel > 0)
-			user.visible_message(SPAN_DANGER("[user] starts uprooting the weeds."), SPAN_DANGER("You remove the weeds from [src]."))
+			user.visible_message(SPAN_DANGER("[user] starts uprooting the weeds."), SPAN_DANGER("You remove the weeds from the [src]."))
 			weedlevel = 0
 			update_icon()
 		else

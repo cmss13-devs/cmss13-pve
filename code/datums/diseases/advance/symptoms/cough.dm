@@ -3,7 +3,7 @@
 
 Coughing
 
-	Noticeable.
+	Noticable.
 	Little Resistance.
 	Doesn't increase stage speed much.
 	Transmittable.

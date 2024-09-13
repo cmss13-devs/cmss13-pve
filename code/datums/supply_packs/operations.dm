@@ -10,17 +10,30 @@
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/warhead/incendiary,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/warhead/incendiary,
 	)
 
 	name = "OB Incendiary Crate"
 	cost = 0
 	containertype = /obj/structure/closet/crate/secure/ob
-	containername = "OB Ammo Crate (Incendiary)"
+	containername = "OB Ammo Crate (Incendiary x2)"
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null
 
 /datum/supply_packs/ob_explosive
 	contains = list(
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/warhead/explosive,
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/ob_fuel,
@@ -32,12 +45,19 @@
 	name = "OB HE Crate"
 	cost = 0
 	containertype = /obj/structure/closet/crate/secure/ob
-	containername = "OB Ammo Crate (HE)"
+	containername = "OB Ammo Crate (HE x2)"
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null
 
 /datum/supply_packs/ob_cluster
 	contains = list(
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/ob_fuel,
+		/obj/structure/ob_ammo/warhead/cluster,
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/ob_fuel,
 		/obj/structure/ob_ammo/ob_fuel,
@@ -49,9 +69,10 @@
 	name = "OB Cluster Crate"
 	cost = 0
 	containertype = /obj/structure/closet/crate/secure/ob
-	containername = "OB Ammo Crate (Cluster)"
+	containername = "OB Ammo Crate (Cluster x2)"
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null
 
 /datum/supply_packs/telecommsparts
 	name = "Replacement Telecommunications Parts"
@@ -78,6 +99,7 @@
 	containertype = /obj/structure/machinery/nuclearbomb
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null
 
 /datum/supply_packs/technuclearbomb
 	name = "Encrypted Operational Nuke"
@@ -85,17 +107,19 @@
 	containertype = /obj/structure/machinery/nuclearbomb/tech
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null
 
 /datum/supply_packs/spec_kits
 	name = "Weapons Specialist Kits"
 	contains = list(
-		/obj/item/spec_kit/rifleman,
-		/obj/item/spec_kit/rifleman,
-		/obj/item/spec_kit/rifleman,
-		/obj/item/spec_kit/rifleman,
+		/obj/item/spec_kit/asrs,
+		/obj/item/spec_kit/asrs,
+		/obj/item/spec_kit/asrs,
+		/obj/item/spec_kit/asrs,
 	)
 	cost = 0
 	containertype = /obj/structure/closet/crate/supply
 	containername = "weapons specialist kits crate"
 	buyable = 0
 	group = "Operations"
+	iteration_needed = null

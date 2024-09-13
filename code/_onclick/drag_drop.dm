@@ -7,7 +7,6 @@
 */
 /atom/MouseDrop(atom/over)
 	if(!usr || !over) return
-
 	if(!Adjacent(usr) || !over.Adjacent(usr)) return // should stop you from dragging through windows
 
 	spawn(0)

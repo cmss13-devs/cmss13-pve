@@ -1,5 +1,4 @@
-/datum/admins/var/static/create_mob_html = null
-
+/var/create_mob_html = null
 /datum/admins/proc/create_mob(mob/user)
 	if (!create_mob_html)
 		var/mobjs = null
@@ -8,4 +7,4 @@
 		create_mob_html = replacetext(create_mob_html, "null /* object types */", "\"[mobjs]\"")
 		create_mob_html = replacetext(create_mob_html, "/* href token */", RawHrefToken(forceGlobal = TRUE))
 
-	show_browser(user, replacetext(create_mob_html, "/* ref src */", "\ref[src]"), "Create Mob", "create_mob", "size=450x525")
+	show_browser(user, replacetext(create_mob_html, "/* ref src */", "\ref[src]"), "Create Mob", "create_mob", "size=425x475")

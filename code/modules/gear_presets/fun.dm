@@ -82,7 +82,7 @@
 	idtype = /obj/item/card/id/gold
 	assignment = "Shrapnelsworn"
 	rank = "Brother of the Order"
-	paygrades = list("Ser" = JOB_PLAYTIME_TIER_0)
+	paygrade = "Ser"
 	role_comm_title = "OHEFA"
 
 	skills = /datum/skills/specialist
@@ -240,7 +240,7 @@
 
 /datum/equipment_preset/fun/santa
 	name = "Fun - Santa"
-	paygrades = list(PAY_SHORT_CDNM = JOB_PLAYTIME_TIER_0)
+	paygrade = "C"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/everything
 	faction = FACTION_MARINE
@@ -289,7 +289,6 @@
 /datum/equipment_preset/upp/ivan
 	name = "Fun - Ivan"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/everything
 	assignment = "UPP Armsmaster"
 	rank = "UPP Armsmaster"
@@ -328,7 +327,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/ivanberet, WEAR_HEAD)
 	//limb
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/ivan, WEAR_WAIST)
@@ -339,7 +338,7 @@
 
 /datum/equipment_preset/fun/van_bandolier
 	name = "Fun - Big Game Hunter"
-	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
+	paygrade = "CCMO"
 	uses_special_name = TRUE
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/everything
@@ -434,14 +433,14 @@
 	new_human.age = rand(1, 40)
 
 /datum/equipment_preset/fun/monkey/proc/get_random_name(mob/living/carbon/human/new_human)
-	return pick(GLOB.monkey_names)
+	return pick(monkey_names)
 
 /datum/equipment_preset/fun/monkey/marine
 	name = "Fun - Monkey Marine"
 
 	assignment = "Monkey Marine"
 	rank = "Monkey Marine"
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+	paygrade = "ME2"
 
 /datum/equipment_preset/fun/monkey/marine/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
@@ -458,10 +457,10 @@
 
 	assignment = "Monkey Soldier"
 	rank = "Monkey Soldier"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE1"
 
 /datum/equipment_preset/fun/monkey/soldier/get_random_name(mob/living/carbon/human/new_human)
-	return new_human.gender == MALE ? pick(GLOB.first_names_male_upp) : pick(GLOB.first_names_female_upp)
+	return new_human.gender == MALE ? pick(first_names_male_upp) : pick(first_names_female_upp)
 
 /datum/equipment_preset/fun/monkey/soldier/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)

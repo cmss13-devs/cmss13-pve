@@ -8,7 +8,7 @@
 	unarmed_type = /datum/unarmed_attack/punch/synthetic
 	pain_type = /datum/pain/synthetic
 	stamina_type = /datum/stamina/none
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG)
 	rarity_value = 2
 	insulated = TRUE
 
@@ -61,7 +61,7 @@
 	name = SYNTH_GEN_ONE
 	uses_skin_color = FALSE
 	special_body_types = FALSE
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES)
 
 	hair_color = "#000000"
 	icobase = 'icons/mob/humans/species/r_synthetic.dmi'
@@ -77,8 +77,9 @@
 	name_plural = "Colonial Synthetics"
 	uses_skin_color = TRUE
 	special_body_types = TRUE
+	brute_mod = 0.8
 	burn_mod = 0.8
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG)
 
 	pain_type = /datum/pain/synthetic/colonial
 	rarity_value = 1.5
@@ -88,13 +89,12 @@
 /datum/species/synthetic/colonial/colonial_gen_two
 	name = SYNTH_COLONY_GEN_TWO
 	uses_skin_color = FALSE //2nd gen uses generic human look
-	special_body_types = FALSE
 
 /datum/species/synthetic/colonial/colonial_gen_one
 	name = SYNTH_COLONY_GEN_ONE
 	uses_skin_color = FALSE
 	special_body_types = FALSE
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES)
 	//sets colonial_gen_one synth's hair to black
 	hair_color = "#000000"
 	//sets colonial_gen_one synth's icon to WJ sprite
@@ -107,7 +107,7 @@
 	name_plural = "Combat Synthetics"
 	uses_skin_color = FALSE
 	special_body_types = FALSE
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES)
 
 	brute_mod = 0.5
 	burn_mod = 0.5 //made for combat
@@ -128,7 +128,7 @@
 	name = SYNTH_INFILTRATOR
 	name_plural = "Infiltrator Synthetics"
 	uses_skin_color = TRUE
-	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INFILTRATOR_SYNTH, TRAIT_IRON_TEETH)
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INFILTRATOR_SYNTH)
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/human
 

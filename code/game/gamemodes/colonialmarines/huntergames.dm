@@ -66,7 +66,7 @@
 \
 								75; /obj/item/stack/medical/bruise_pack, \
 								75; /obj/item/stack/medical/ointment, \
-								75; /obj/item/reagent_container/food/snacks/microwavable/donkpocket, \
+								75; /obj/item/reagent_container/food/snacks/donkpocket, \
 \
 								100; /obj/item/cell/high, \
 								100; /obj/item/tool/wirecutters, \
@@ -82,6 +82,8 @@
 								75; /obj/item/clothing/gloves/brown, \
 								100; /obj/item/clothing/suit/storage/CMB \
 								)
+
+var/waiting_for_drop_votes = 0
 
 //Digging through this is a pain. I'm leaving it mostly alone until a full rework takes place.
 
@@ -102,8 +104,6 @@
 
 	var/ticks_passed = 0
 	var/drops_disabled = 0
-
-	var/waiting_for_drop_votes = FALSE
 
 	votable = FALSE // borkeds
 	taskbar_icon = 'icons/taskbar/gml_hgames.png'
@@ -212,10 +212,10 @@
 	var/mob/living/carbon/human/H
 	var/turf/picked
 
-	if(length(GLOB.hunter_primaries))
+	if(GLOB.hunter_primaries.len)
 		picked = get_turf(pick_n_take(GLOB.hunter_primaries))
 	else
-		if(length(GLOB.hunter_secondaries))
+		if(GLOB.hunter_secondaries.len)
 			picked = get_turf(pick_n_take(GLOB.hunter_secondaries))
 		else
 			message_admins("There were no spawn points available for a contestant.")
@@ -226,7 +226,7 @@
 
 	if(istype(M,/mob/living/carbon/human)) //somehow?
 		H = M
-		if(length(H.contents))
+		if(H.contents.len)
 			for(var/obj/item/I in H.contents)
 				qdel(I)
 		H.forceMove(picked)
@@ -234,7 +234,7 @@
 		H = new(picked)
 
 	H.key = M.key
-	if(H.client) H.client.change_view(GLOB.world_view_size)
+	if(H.client) H.client.change_view(world_view_size)
 
 	if(!H.mind)
 		H.mind = new(H.key)
@@ -315,7 +315,7 @@
 			last_drop = world.time
 			waiting_for_drop_votes = 1
 			sleep(600)
-			if(!length(supply_votes))
+			if(!supply_votes.len)
 				to_world(SPAN_ROUNDBODY("Nobody got anything! .. weird."))
 				waiting_for_drop_votes = 0
 				supply_votes = list()
@@ -394,8 +394,8 @@
 //Announces the end of the game with all relevant information stated//
 //////////////////////////////////////////////////////////////////////
 /datum/game_mode/huntergames/declare_completion()
-	if(GLOB.round_statistics)
-		GLOB.round_statistics.track_round_end()
+	if(round_statistics)
+		round_statistics.track_round_end()
 	var/mob/living/carbon/winner = null
 
 	for(var/mob/living/carbon/human/Q in GLOB.alive_mob_list)
@@ -416,12 +416,12 @@
 		to_world("<FONT size = 3><B>There was a winner, but they died before they could receive the prize!! Bummer.</B></FONT>")
 		world << 'sound/misc/sadtrombone.ogg'
 
-	if(GLOB.round_statistics)
-		GLOB.round_statistics.game_mode = name
-		GLOB.round_statistics.round_length = world.time
-		GLOB.round_statistics.end_round_player_population = count_humans()
+	if(round_statistics)
+		round_statistics.game_mode = name
+		round_statistics.round_length = world.time
+		round_statistics.end_round_player_population = count_humans()
 
-		GLOB.round_statistics.log_round_statistics()
+		round_statistics.log_round_statistics()
 
 
 	return 1

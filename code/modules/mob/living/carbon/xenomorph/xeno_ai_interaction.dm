@@ -76,32 +76,21 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//         PODDDOORS       //
+//    Poddoors/shutters    //
 /////////////////////////////
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
-		return INFINITY
-
-	if(unacidable)
-		return INFINITY
+		return
 
 	if(!(stat & NOPOWER))
-		return INFINITY
+		return
 
-	return DOOR_PENALTY
-
-
-/////////////////////////////
-//         SHUTTERS        //
-/////////////////////////////
-/obj/structure/machinery/door/poddoor/shutters/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return INFINITY
+	if(operating)
+		return
 
 	if(unacidable)
-		return INFINITY
+		return
 
 	return DOOR_PENALTY
 
@@ -115,7 +104,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return
 
 	if(locked || welded || isElectrified())
-		return LOCKED_DOOR_PENALTY
+		return INFINITY
 
 	if(isfacehugger(X))
 		return -1 // We LOVE going under doors!
@@ -138,7 +127,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 //          MOBS           //
 /////////////////////////////
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
+	return stat == CONSCIOUS
 
 
 /////////////////////////////

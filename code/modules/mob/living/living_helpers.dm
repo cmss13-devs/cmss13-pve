@@ -23,7 +23,7 @@
 		return
 
 	if(!direction)
-		direction = pick(GLOB.alldirs)
+		direction = pick(alldirs)
 
 	var/turf/target_turf = get_turf(src)
 	var/turf/temporary_turf = get_turf(src)

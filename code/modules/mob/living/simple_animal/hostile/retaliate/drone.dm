@@ -175,45 +175,44 @@
 	spark.holder = null
 	var/obj/loot
 
-	var/list/reachable_atoms = dview(7, src)
 	//shards
 	loot = new /obj/item/shard(loc)
-	step_to(loot, get_turf(pick(reachable_atoms)))
+	step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(75))
 		loot = new /obj/item/shard(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(50))
 		loot = new /obj/item/shard(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(25))
 		loot = new /obj/item/shard(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 
 	//rods
 	loot = new /obj/item/stack/rods(loc)
-	step_to(loot, get_turf(pick(reachable_atoms)))
+	step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(75))
 		loot = new /obj/item/stack/rods(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(50))
 		loot = new /obj/item/stack/rods(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(25))
 		loot = new /obj/item/stack/rods(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 
 	//plasteel
 	loot = new /obj/item/stack/sheet/plasteel(loc)
-	step_to(loot, get_turf(pick(reachable_atoms)))
+	step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(75))
 		loot = new /obj/item/stack/sheet/plasteel(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(50))
 		loot = new /obj/item/stack/sheet/plasteel(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 	if(prob(25))
 		loot = new /obj/item/stack/sheet/plasteel(loc)
-		step_to(loot, get_turf(pick(reachable_atoms)))
+		step_to(loot, get_turf(pick(view(7, src))))
 
 	return ..()
 

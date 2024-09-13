@@ -11,9 +11,9 @@
 	var/cost = 0 // By default an action has no cost -> will be utilized by skill actions/xeno actions
 	var/action_flags = 0 // Check out __game.dm for flags
 	/// Whether the action is hidden from its owner
-	var/hidden = FALSE //Preserve action state while preventing mob from using action
-	///Hide the action from the owner without preventing them from using it (incase of keybind listen_signal)
-	var/player_hidden = FALSE
+	/// Useful for when you want to preserve action state while preventing
+	/// a mob from using said action
+	var/hidden = FALSE
 	var/unique = TRUE
 	/// A signal on the mob that will cause the action to activate
 	var/listen_signal
@@ -43,9 +43,7 @@
 	return
 
 /datum/action/proc/action_activate()
-	SHOULD_CALL_PARENT(TRUE)
-
-	SEND_SIGNAL(src, COMSIG_ACTION_ACTIVATED)
+	return
 
 /// handler for when a keybind signal is received by the action, calls the action_activate proc asynchronous
 /datum/action/proc/keybind_activation()
@@ -160,10 +158,6 @@
 	hidden = FALSE
 	L.update_action_buttons()
 
-/proc/get_action(mob/action_mob, action_path)
-	for(var/datum/action/action in action_mob.actions)
-		if(istype(action, action_path))
-			return action
 
 /datum/action/item_action
 	name = "Use item"
@@ -187,13 +181,16 @@
 	holder_item = null
 	return ..()
 
+/datum/action/item_action/action_activate()
+	if(target)
+		var/obj/item/I = target
+		I.ui_action_click(owner, holder_item)
+
 /datum/action/item_action/can_use_action()
 	if(ishuman(owner) && !owner.is_mob_incapacitated())
 		var/mob/living/carbon/human/human = owner
 		if(human.body_position == STANDING_UP)
 			return TRUE
-	if((HAS_TRAIT(owner, TRAIT_OPPOSABLE_THUMBS)) && !owner.is_mob_incapacitated())
-		return TRUE
 
 /datum/action/item_action/update_button_icon()
 	button.overlays.Cut()
@@ -205,17 +202,6 @@
 /datum/action/item_action/toggle/New(Target)
 	..()
 	name = "Toggle [target]"
-	button.name = name
-
-/datum/action/item_action/toggle/action_activate()
-	. = ..()
-	if(target)
-		var/obj/item/I = target
-		I.ui_action_click(owner, holder_item)
-
-/datum/action/item_action/toggle/use/New(target)
-	. = ..()
-	name = "Use [target]"
 	button.name = name
 
 //This is the proc used to update all the action buttons.
@@ -241,7 +227,7 @@
 			var/atom/movable/screen/action_button/B = A.button
 			if(reload_screen)
 				client.add_to_screen(B)
-			if(A.hidden || A.player_hidden)
+			if(A.hidden)
 				B.screen_loc = null
 				continue
 			button_number++

@@ -8,8 +8,7 @@
 		qdel(src)
 		return FALSE
 
-	affected_mob.KnockDown(3)
-	affected_mob.Stun(3)
+	affected_mob.apply_effect(3, PARALYZE)
 	if(!affected_mob.reagents || !affected_mob.reagents.has_reagent("inaprovaline"))
 		affected_mob.apply_damage(1, OXY)
 

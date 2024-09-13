@@ -87,6 +87,11 @@ DOCUMENTATION ON HOW TO ADD A NEW SHUTTLE: Fourkhan, 6/7/19
 
 */
 
+var/global/list/s_info = null
+
+/proc/loadShuttleInfoDatums()
+	s_info = list()
+	return 1
 
 
 /proc/get_shuttle_turfs(turf/ref, list/L)
@@ -107,7 +112,7 @@ DOCUMENTATION ON HOW TO ADD A NEW SHUTTLE: Fourkhan, 6/7/19
 /proc/rotate_shuttle_turfs(list/L, deg = 0)
 
 	if((deg % 90) != 0) return //Not a right or straight angle, don't do anything
-	if(!istype(L) || !length(L)) return null
+	if(!istype(L) || !L.len) return null
 
 	var/i //iterator
 	var/x //Placeholder while we do math
@@ -123,8 +128,8 @@ DOCUMENTATION ON HOW TO ADD A NEW SHUTTLE: Fourkhan, 6/7/19
 		y = C.y_pos
 		C1.x_pos = x*cos(deg) + y*sin(deg)
 		C1.y_pos = y*cos(deg) - x*sin(deg)
-		C1.x_pos = round(C.x_pos, 1) //Sometimes you get very close to the right number but off by around 1e-15 and I want integers dammit
-		C1.y_pos = round(C.y_pos, 1)
+		C1.x_pos = roundNearest(C.x_pos) //Sometimes you get very close to the right number but off by around 1e-15 and I want integers dammit
+		C1.y_pos = roundNearest(C.y_pos)
 		toReturn += i
 		toReturn[i] = C1
 

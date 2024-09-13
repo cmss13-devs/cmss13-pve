@@ -47,6 +47,18 @@ Global river status var, maybe
 Each var depends on others
 
 
+var/global/riverend_west = 0
+var/global/riverend_north = 0
+var/global/river_central = 0
+var/global/cannal = 0
+var/global/dam_underpass = 0
+var/global/south_river = 0
+var/global/south_filtration = 0
+var/global/east_river = 0
+var/global/east_filtration = 0
+var/global/south_riverstart = 0
+var/global/east_riverstart = 0
+
 /proc/filtration_check()
 	if(east_filtration)
 
@@ -207,7 +219,7 @@ Each var depends on others
 	if(dispersing || !toxic)
 		return
 
-	for(var/direction in GLOB.alldirs)
+	for(var/direction in alldirs)
 		if(direction == from_dir) continue //doesn't check backwards
 
 		var/effective_spread_delay
@@ -291,7 +303,7 @@ Each var depends on others
 	//var/area/A = get_area(src)
 	//A.ambience_exterior = 'sound/ambience/ambiatm1.ogg'
 
-	for(var/obj/structure/machinery/dispersal_initiator/M in GLOB.machines)
+	for(var/obj/structure/machinery/dispersal_initiator/M in machines)
 		if (M.id == src.id)
 			M.initiate()
 

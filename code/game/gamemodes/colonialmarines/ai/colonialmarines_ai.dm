@@ -37,18 +37,18 @@
 	squad_limit += MAIN_SHIP_PLATOON
 	for(var/i in squad_limit)
 		role_mappings = GLOB.platoon_to_jobs[i]
-	GLOB.RoleAuthority.reset_roles()
-	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
+	RoleAuthority.reset_roles()
+	for(var/datum/squad/sq in RoleAuthority.squads)
 		if(sq.type in squad_limit)
 			GLOB.main_platoon_name = sq.name
 			GLOB.main_platoon_initial_name = sq.name
 
 
-	for(var/datum/squad/squad in GLOB.RoleAuthority.squads)
+	for(var/datum/squad/squad in RoleAuthority.squads)
 		if(squad.type in squad_limit)
 			continue
-		GLOB.RoleAuthority.squads -= squad
-		GLOB.RoleAuthority.squads_by_type -= squad.type
+		RoleAuthority.squads -= squad
+		RoleAuthority.squads_by_type -= squad.type
 
 
 	. = ..()

@@ -7,7 +7,6 @@
 	//ambience = list('figuresomethingout.ogg')
 	icon_state = "kutjevo"
 	can_build_special = TRUE //T-Comms structure
-	powernet_name = "ground"
 	temperature = 308.7 //kelvin, 35c, 95f
 	minimap_color = MINIMAP_AREA_ENGI
 
@@ -66,10 +65,6 @@
 
 /area/kutjevo/exterior/lz_river
 	name = "Kutjevo - Power Station River"
-	icon_state = "lz_river"
-
-/area/kutjevo/exterior/spring
-	name = "Kutjevo - Southern Spring"
 	icon_state = "lz_river"
 
 /area/kutjevo/exterior/scrubland
@@ -204,14 +199,12 @@
 	icon_state = "Colony_int"
 	ceiling = CEILING_METAL
 	is_resin_allowed = FALSE
-	is_landing_zone = TRUE
 
 /area/kutjevo/interior/complex/Northwest_Flight_Control
 	name =  "Kutjevo Complex - Northwest Flight Control Room"
 	icon_state = "Colony_int"
 	ceiling = CEILING_METAL
 	is_resin_allowed = FALSE
-	is_landing_zone = TRUE
 
 /area/kutjevo/interior/complex/Northwest_Security_Checkpoint
 	name = "Kutjevo Complex - Northwest Security Checkpoint"
@@ -219,7 +212,6 @@
 	ceiling = CEILING_METAL
 	is_resin_allowed = FALSE
 	minimap_color = MINIMAP_AREA_SEC
-	is_landing_zone = TRUE
 
 //Out buildings + foremans
 /area/kutjevo/interior/power

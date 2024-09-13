@@ -1,5 +1,5 @@
-GLOBAL_LIST_EMPTY(gear_datums_by_category)
-GLOBAL_LIST_EMPTY(gear_datums_by_name)
+var/global/list/gear_datums_by_category = list()
+var/global/list/gear_datums_by_name = list()
 
 /proc/populate_gear_list()
 	var/datum/gear/G
@@ -10,11 +10,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 		if(!G.category)
 			log_debug("Improper gear datum: [gear_type].")
 			continue
-		if(G.display_name in GLOB.gear_datums_by_name)
+		if(G.display_name in gear_datums_by_name)
 			log_debug("Duplicate gear datum name: [G.display_name].")
 			continue
-		LAZYSET(GLOB.gear_datums_by_category[G.category], "[G.display_name] [G.cost == 1 ? "(1 point)" : "([G.cost] points)"]", G)
-		GLOB.gear_datums_by_name[G.display_name] = G
+		LAZYSET(gear_datums_by_category[G.category], "[G.display_name] [G.cost == 1 ? "(1 point)" : "([G.cost] points)"]", G)
+		gear_datums_by_name[G.display_name] = G
 
 /datum/gear
 	var/display_name  // Name/index.
@@ -58,25 +58,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Ballistic goggles, black"
 	path = /obj/item/clothing/glasses/mgoggles/black
 
-/datum/gear/eyewear/goggles_black/prescription
-	display_name = "Prescription ballistic goggles, black"
-	path = /obj/item/clothing/glasses/mgoggles/black/prescription
-
 /datum/gear/eyewear/goggles_orange
 	display_name = "Ballistic goggles, orange"
 	path = /obj/item/clothing/glasses/mgoggles/orange
 
-/datum/gear/eyewear/goggles_orange/prescription
-	display_name = "Prescription ballistic goggles, orange"
-	path = /obj/item/clothing/glasses/mgoggles/orange/prescription
-
 /datum/gear/eyewear/goggles2
 	display_name = "Ballistic goggles, M1A1"
 	path = /obj/item/clothing/glasses/mgoggles/v2
-
-/datum/gear/eyewear/goggles2/prescription
-	display_name = "Prescription ballistic goggles, M1A1"
-	path = /obj/item/clothing/glasses/mgoggles/v2/prescription
 
 /datum/gear/eyewear/bimex_shades
 	display_name = "BiMex personal shades"
@@ -85,7 +73,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
-	cost = 0
 
 /datum/gear/eyewear/prescription_sunglasses
 	display_name = "Prescription sunglasses"
@@ -127,6 +114,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Face wrap, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan
 
+/datum/gear/mask/face_wrap_intel
+	display_name = "Face wrap, black"
+	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/intel
+
 /datum/gear/mask/face_wrap_bravo
 	display_name = "Face wrap, yellow"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/bravo
@@ -146,7 +137,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/mask/gas
 	display_name = "Gas mask"
 	path = /obj/item/clothing/mask/gas
-	cost = 1
 
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
@@ -190,14 +180,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/mask/uscm/skull_balaclava_blue
 	display_name = "USCM balaclava, blue skull"
 	path = /obj/item/clothing/mask/rebreather/skull
-	cost = 4 //same as skull facepaint
-	slot = WEAR_FACE
+	cost = 4
 
 /datum/gear/mask/uscm/skull_balaclava_black
 	display_name = "USCM balaclava, black skull"
 	path = /obj/item/clothing/mask/rebreather/skull/black
 	cost = 4
-	slot = WEAR_FACE
 
 /datum/gear/headwear
 	category = "Headwear"
@@ -237,7 +225,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/headwear/uscm/beret_green
 	display_name = "USCM beret, green"
-	path = /obj/item/clothing/head/beret/cm/green
+	path = /obj/item/clothing/head/beret/cm
 
 /datum/gear/headwear/uscm/beret_tan
 	display_name = "USCM beret, tan"
@@ -290,10 +278,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
-
-/datum/gear/headwear/uscm/cap/flap
-	display_name = "USCM flapcap"
-	path = /obj/item/clothing/head/cmcap/flap
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"
@@ -432,7 +416,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/prop/helmetgarb/trimmed_wire
 
 /datum/gear/helmet_garb/bullet_pipe
-	display_name = "10x99mm XM43E1 casing pipe"
+	display_name = "10x99mm XM42B casing pipe"
 	path = /obj/item/prop/helmetgarb/bullet_pipe
 	allowed_origins = USCM_ORIGINS
 
@@ -573,10 +557,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Card, Uno Reverse - yellow"
 	path = /obj/item/toy/handcard/uno_reverse_yellow
 
-/datum/gear/toy/card/trading_card
-	display_name = "Card, random WeyYu Trading"
-	path = /obj/item/toy/trading_card
-
 /datum/gear/toy/deck
 	display_name = "Deck of cards, regular"
 	path = /obj/item/toy/deck
@@ -584,10 +564,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/deck/uno
 	display_name = "Deck of cards, Uno"
 	path = /obj/item/toy/deck/uno
-
-/datum/gear/toy/trading_card
-	display_name = "Trading Card Packet"
-	path = /obj/item/storage/fancy/trading_card
 
 /datum/gear/toy/d6
 	display_name = "Die, 6 sides"
@@ -620,7 +596,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 1
 
 /datum/gear/cassettes/pop4
-	display_name = "Pink Cassette"
+	display_name = "Blue Cassette"
 	path = /obj/item/device/cassette_tape/pop4
 	cost = 1
 
@@ -661,10 +637,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/crayon
 	display_name = "Crayon"
 	path = /obj/item/toy/crayon/rainbow
-
-/datum/gear/toy/pride
-	display_name = "Box of Prideful Crayons"
-	path = /obj/item/storage/box/pride
 
 /datum/gear/plush
 	category = "Plushies"
@@ -742,58 +714,31 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/m8_cartridge_bayonet
 	display_name = "M8 Cartridge Bayonet"
-	path = /obj/item/storage/box/loadout/co2_knife
+	path = /obj/item/storage/box/co2_knife
 
 /datum/gear/weapon/clfpistol
-	display_name = "Hummingbird Pistol"
-	path = /obj/item/storage/box/loadout/clf
+	display_name = "D18 Holdout Pistol"
+	path = /obj/item/storage/box/clf
 
-/datum/gear/weapon/upppistol
+/datum/gear/weapon/upppistol //ww2 war trophy luger
 	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/loadout/upp
+	path = /obj/item/storage/box/upp
+	slot = WEAR_IN_BACK
+	cost = 4
 
 /datum/gear/weapon/m4a3_custom
-	display_name = "Custom M4A3 Pistol"
-	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/m1911
-	display_name = "M1911 Pistol"
-	path = /obj/item/storage/box/loadout/M1911_loadout
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/m44
-	display_name = "M44 Revolver"
-	path = /obj/item/storage/box/loadout/M44_loadout
+	display_name = "M4A3 Custom Pistol"
+	path = /obj/item/weapon/gun/pistol/m4a3/custom
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44_custom_revolver
-	display_name = "Custom M44 Revolver"
-	path = /obj/item/storage/box/loadout/M44_custom_loadout
+	display_name = "M44 Custom Revolver"
+	path = /obj/item/weapon/gun/revolver/m44/custom
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/hg45_civilian
-	display_name = "HG 45 'Aguila' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_civilian_loadout
-
-/datum/gear/weapon/hg45_marine
-	display_name = "HG 45 'Marina' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_marine_loadout
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/hg44
-	display_name = "HG 44 'Automag' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_marine_loadout
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/spearhead
-	display_name = "Spearhead Armoury Revolver"
-	path = /obj/item/storage/box/loadout/Spearhead_loadout
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/weapon/spearhead_custom
-	display_name = "Custom Spearhead Armoury Revolver"
-	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
+/datum/gear/weapon/m1911
+	display_name = "M1911 Service Pistol"
+	path = /obj/item/storage/box/M1911_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
@@ -876,10 +821,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Canteen"
 	path = /obj/item/reagent_container/food/drinks/flask/canteen
 
-/datum/gear/flask/canteen/empty
-	display_name = "Empty canteen"
-	path = /obj/item/reagent_container/food/drinks/flask/canteen/empty
-
 /datum/gear/flask/leather
 	display_name = "Leather flask"
 	path = /obj/item/reagent_container/food/drinks/flask/detflask
@@ -957,15 +898,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged/burrito
 	display_name = "Packaged burrito"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito
+	path = /obj/item/reagent_container/food/snacks/packaged_burrito
 
 /datum/gear/snack_packaged/cheeseburger
 	display_name = "Packaged cheeseburger"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burger
+	path = /obj/item/reagent_container/food/snacks/packaged_burger
 
 /datum/gear/snack_packaged/hotdog
 	display_name = "Packaged hotdog"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs
+	path = /obj/item/reagent_container/food/snacks/packaged_hdogs
 
 /datum/gear/snack_packaged/chips_pepper
 	display_name = "W-Y Pepper Chips"
@@ -1069,14 +1010,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
 
-/datum/gear/smoking/zippo/black
-	display_name = "Black lighter, zippo"
-	path = /obj/item/tool/lighter/zippo/black
-
-/datum/gear/smoking/zippo/blue
-	display_name = "Blue lighter, zippo"
-	path = /obj/item/tool/lighter/zippo/blue
-
 /datum/gear/smoking/goldzippo
 	display_name = "Lighter, golden zippo"
 	path = /obj/item/tool/lighter/zippo/gold
@@ -1143,23 +1076,20 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 1 //The cadmium poisoning pays for the discounted cost longterm
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/dogtags
-	display_name = "Attachable Dogtags"
-	path = /obj/item/clothing/accessory/dogtags
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = USCM_ORIGINS
-
 /datum/gear/misc/patch_uscm
 	display_name = "USCM shoulder patch"
 	path = /obj/item/clothing/accessory/patch
-	cost = 0
+	cost = 1
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
+
+/datum/gear/misc/patch_uscm/falcon
+	display_name = "Falling Falcons shoulder patch"
+	path = /obj/item/clothing/accessory/patch/falcon
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
@@ -1182,9 +1112,4 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/flak
 	display_name = "M67 flak jacket"
 	path = /obj/item/clothing/accessory/flak
-	cost = 3
-
-/datum/gear/misc/servicejacket
-	display_name = "Marine Service Jacket"
-	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3

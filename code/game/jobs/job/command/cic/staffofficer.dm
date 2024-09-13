@@ -30,17 +30,8 @@
 		total_positions_so_far = positions
 	return positions
 
-
-/datum/job/command/bridge/generate_entry_conditions(mob/living/M, whitelist_status)
-	. = ..()
-	if(!islist(GLOB.marine_leaders[JOB_SO]))
-		GLOB.marine_leaders[JOB_SO] = list()
-	GLOB.marine_leaders[JOB_SO] += M
-	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
-
-/datum/job/command/bridge/proc/cleanup_leader_candidate(mob/M)
-	SIGNAL_HANDLER
-	GLOB.marine_leaders[JOB_SO] -= M
+/datum/job/command/bridge/generate_entry_message(mob/living/carbon/human/H)
+	return ..()
 
 /datum/job/command/bridge/handle_job_options(option)
 	if(option != FIRST_LT_VARIANT)
@@ -48,8 +39,9 @@
 	else
 		gear_preset = initial(gear_preset)
 
-OverrideTimelock(/datum/job/command/bridge, list(
-	JOB_SQUAD_ROLES = 1 HOURS
+AddTimelock(/datum/job/command/bridge, list(
+	JOB_SQUAD_LEADER = 1 HOURS,
+	JOB_HUMAN_ROLES = 15 HOURS
 ))
 
 /obj/effect/landmark/start/bridge
@@ -71,8 +63,10 @@ OverrideTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
 	GLOB.marine_leaders[JOB_SO] = M
+	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
-/datum/job/command/bridge/ai/cleanup_leader_candidate(mob/M)
+/datum/job/command/bridge/ai/proc/cleanup_leader_candidate(mob/M)
+	SIGNAL_HANDLER
 	GLOB.marine_leaders -= JOB_SO
 
 /datum/job/command/bridge/ai/upp

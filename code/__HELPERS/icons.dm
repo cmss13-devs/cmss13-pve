@@ -14,7 +14,8 @@ CHANGING ICONS
 
 Several new procs have been added to the /icon datum to simplify working with icons. To use them,
 remember you first need to setup an /icon var like so:
-	var/icon/my_icon = new('iconfile.dmi')
+
+var/icon/my_icon = new('iconfile.dmi')
 
 icon/ChangeOpacity(amount = 1)
 	A very common operation in DM is to try to make an icon more or less transparent. Making an icon more
@@ -332,7 +333,7 @@ world
 /proc/getFlatIcon(image/appearance, defdir, deficon, defstate, defblend, start = TRUE, no_anim = FALSE, appearance_flags = FALSE)
 	// Loop through the underlays, then overlays, sorting them into the layers list
 	#define PROCESS_OVERLAYS_OR_UNDERLAYS(flat, process, base_layer) \
-		for (var/i in 1 to length(process)) { \
+		for (var/i in 1 to process.len) { \
 			var/image/current = process[i]; \
 			if (!current) { \
 				continue; \
@@ -347,7 +348,7 @@ world
 				} \
 				current_layer = base_layer + appearance.layer + current_layer / 1000; \
 			} \
-			for (var/index_to_compare_to in 1 to length(layers)) { \
+			for (var/index_to_compare_to in 1 to layers.len) { \
 				var/compare_to = layers[index_to_compare_to]; \
 				if (current_layer < layers[compare_to]) { \
 					layers.Insert(index_to_compare_to, current); \
@@ -403,7 +404,7 @@ world
 
 	var/curblend = appearance.blend_mode || defblend
 
-	if(length(appearance.overlays) || length(appearance.underlays))
+	if(appearance.overlays.len || appearance.underlays.len)
 		var/icon/flat = icon(flat_template)
 		// Layers will be a sorted list of icons/overlays, based on the order in which they are displayed
 		var/list/layers = list()
@@ -548,23 +549,23 @@ world
 	if (!value) return color
 
 	var/list/RGB = ReadRGB(color)
-	RGB[1] = clamp(RGB[1]+value,0,255)
-	RGB[2] = clamp(RGB[2]+value,0,255)
-	RGB[3] = clamp(RGB[3]+value,0,255)
+	RGB[1] = Clamp(RGB[1]+value,0,255)
+	RGB[2] = Clamp(RGB[2]+value,0,255)
+	RGB[3] = Clamp(RGB[3]+value,0,255)
 	return rgb(RGB[1],RGB[2],RGB[3])
 
 /proc/sort_atoms_by_layer(list/atoms)
 	// Comb sort icons based on levels
 	var/list/result = atoms.Copy()
-	var/gap = length(result)
+	var/gap = result.len
 	var/swapped = 1
 	while (gap > 1 || swapped)
 		swapped = 0
 		if(gap > 1)
-			gap = floor(gap / 1.3) // 1.3 is the emperic comb sort coefficient
+			gap = round(gap / 1.3) // 1.3 is the emperic comb sort coefficient
 		if(gap < 1)
 			gap = 1
-		for(var/i = 1; gap + i <= length(result); i++)
+		for(var/i = 1; gap + i <= result.len; i++)
 			var/atom/l = result[i] //Fucking hate
 			var/atom/r = result[gap+i] //how lists work here
 			if(l.layer > r.layer) //no "result[i].layer" for me

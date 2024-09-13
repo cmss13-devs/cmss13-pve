@@ -11,11 +11,11 @@
 	health = 0
 
 /obj/structure/machinery/weather_siren/Initialize()
-	GLOB.weather_notify_objects += src
+	weather_notify_objects += src
 	return ..()
 
 /obj/structure/machinery/weather_siren/Destroy()
-	GLOB.weather_notify_objects -= src
+	weather_notify_objects -= src
 	. = ..()
 
 /obj/structure/machinery/weather_siren/power_change()

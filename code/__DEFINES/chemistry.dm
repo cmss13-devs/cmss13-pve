@@ -2,10 +2,8 @@
  * Chemistry defines
  */
 
-/// Amount of bottle icon variations in total
-#define BOTTLE_ICON_CHOICES 4
 /// Amount of random icon variations for pills in total
-#define PILL_ICON_CHOICES 22
+#define PILL_ICON_CHOICES 21
 /* Pill icon classes to generate mappings for */
 #define PILL_ICON_CLASSES list("bica", "kelo", "dex", "para", "tram", "atox", "tox", "inap", "peri", "spac", "drug", "stim", "alky", "imi", "qc", "tric", "psych", "oxy")
 
@@ -189,7 +187,6 @@
 #define PROPERTY_NEUROSHIELDING "neuroshielding"
 #define PROPERTY_ANTIADDICTIVE "anti-addictive"
 #define PROPERTY_ADDICTIVE "addictive"
-#define PROPERTY_ENCEPHALOPHRASIVE "encephalophrasive"
 //Legendary, only in gen_tier 3+
 #define PROPERTY_HYPERGENETIC "hypergenetic"
 #define PROPERTY_BOOSTING "boosting"

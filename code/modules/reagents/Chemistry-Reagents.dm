@@ -19,7 +19,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/datum/reagents/holder = null
 	var/reagent_state = SOLID
 	var/data = 0 //Scratchpad for random chemicals to do their own thing TODO: unify this somehow?
-	var/list/data_properties = list("blood_type" = null, "blood_color" = "#A10808", "viruses" = null, "resistances" = null) //mostly for viruses...
+	var/list/data_properties = list("blood_type" = null, "blood_colour" = "#A10808", "viruses" = null, "resistances" = null) //mostly for viruses...
 	var/volume = 0
 	var/nutriment_factor = 0
 	var/custom_metabolism = REAGENTS_METABOLISM
@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/overdose_dam = 1//Handeled by heart damage
 	var/spray_warning = FALSE //whether spraying that reagent creates an admin message.
 	//var/list/viruses = list()
-	var/color = COLOR_BLACK //(does not support alpha channels - yet!)
+	var/color = "#000000" // rgb: 0, 0, 0 (does not support alpha channels - yet!)
 	var/datum/weakref/last_source_mob
 	// For explosions
 	var/explosive = FALSE
@@ -83,42 +83,43 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	for(var/datum/chem_property/P in properties)
 		P.post_update_reagent()
 
-/datum/reagent/proc/reaction_mob(mob/M, method=TOUCH, volume, permeable) //By default we have a chance to transfer some
-	if(!istype(M, /mob/living))
-		return FALSE
+/datum/reagent/proc/reaction_mob(mob/M, method=TOUCH, volume) //By default we have a chance to transfer some
+	if(!istype(M, /mob/living)) return 0
 	var/datum/reagent/self = src
 	src = null   //of the reagent to the mob on TOUCHING it.
 
 	if(self.holder) //for catching rare runtimes
-		if(method == TOUCH && permeable && !istype(self.holder.my_atom, /obj/effect/particle_effect/smoke/chem))
+		if(!istype(self.holder.my_atom, /obj/effect/particle_effect/smoke/chem))
 			// If the chemicals are in a smoke cloud, do not try to let the chemicals "penetrate" into the mob's system (balance station 13) -- Doohl
-			var/chance = 1
-			var/block = FALSE
 
-			for(var/obj/item/clothing/clothing in M.get_equipped_items())
-				if(clothing.permeability_coefficient < chance)
-					chance = clothing.permeability_coefficient
-				if(istype(clothing, /obj/item/clothing/suit/bio_suit))
-					// bio suits are just about completely fool-proof - Doohl
-					// kind of a hacky way of making bio suits more resistant to chemicals but w/e
-					if(prob(75))
-						block = TRUE
+			if(method == TOUCH)
 
-				if(istype(clothing, /obj/item/clothing/head/bio_hood))
-					if(prob(75))
-						block = TRUE
+				var/chance = 1
+				var/block  = 0
 
-			chance *= 100
+				for(var/obj/item/clothing/C in M.get_equipped_items())
+					if(C.permeability_coefficient < chance) chance = C.permeability_coefficient
+					if(istype(C, /obj/item/clothing/suit/bio_suit))
+						// bio suits are just about completely fool-proof - Doohl
+						// kind of a hacky way of making bio suits more resistant to chemicals but w/e
+						if(prob(75))
+							block = 1
 
-			if(prob(chance) && !block)
-				if(M.reagents)
-					M.reagents.add_reagent(self.id, self.volume * 0.5)
+					if(istype(C, /obj/item/clothing/head/bio_hood))
+						if(prob(75))
+							block = 1
 
-		for(var/datum/chem_property/property in self.properties)
-			var/potency = property.level * 0.5
-			property.reaction_mob(M, method, volume, potency)
+				chance = chance * 100
 
-	return TRUE
+				if(prob(chance) && !block)
+					if(M.reagents)
+						M.reagents.add_reagent(self.id,self.volume/2)
+		for(var/datum/chem_property/P in self.properties)
+			var/potency = P.level * 0.5
+			P.reaction_mob(M, method, volume, potency)
+
+
+	return 1
 
 /datum/reagent/proc/reaction_obj(obj/O, volume)
 	for(var/datum/chem_property/P in properties)
@@ -151,9 +152,6 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	handle_processing(M, mods, delta_time)
 	holder.remove_reagent(id, custom_metabolism * delta_time)
 
-	if(!holder)
-		return FALSE
-
 	return TRUE
 
 //Pre-processing
@@ -182,17 +180,14 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		if(potency <= 0)
 			continue
 		P.process(M, potency, delta_time)
+		if(flags & REAGENT_CANNOT_OVERDOSE)
+			continue
 		if(overdose && volume > overdose)
-			if(flags & REAGENT_CANNOT_OVERDOSE)
-				var/ammount_overdosed = volume - overdose
-				holder.remove_reagent(id, ammount_overdosed)
-				holder.add_reagent("sugar", ammount_overdosed)
-			else
-				P.process_overdose(M, potency, delta_time)
-				if(overdose_critical && volume > overdose_critical)
-					P.process_critical(M, potency, delta_time)
-				var/overdose_message = "[istype(src, /datum/reagent/generated) ? "custom chemical" : initial(name)] overdose"
-				M.last_damage_data = create_cause_data(overdose_message, last_source_mob?.resolve())
+			P.process_overdose(M, potency, delta_time)
+			if(overdose_critical && volume > overdose_critical)
+				P.process_critical(M, potency, delta_time)
+			var/overdose_message = "[istype(src, /datum/reagent/generated) ? "custom chemical" : initial(name)] overdose"
+			M.last_damage_data = create_cause_data(overdose_message, last_source_mob?.resolve())
 
 	if(mods[REAGENT_PURGE])
 		holder.remove_all_type(/datum/reagent,mods[REAGENT_PURGE] * delta_time)
@@ -272,37 +267,37 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	if(chemclass && !(flags & REAGENT_NO_GENERATION))
 		switch(chemclass)
 			if(CHEM_CLASS_BASIC)
-				GLOB.chemical_gen_classes_list["C1"] += id
+				chemical_gen_classes_list["C1"] += id
 			if(CHEM_CLASS_COMMON)
-				GLOB.chemical_gen_classes_list["C2"] += id
+				chemical_gen_classes_list["C2"] += id
 			if(CHEM_CLASS_UNCOMMON)
-				GLOB.chemical_gen_classes_list["C3"] += id
+				chemical_gen_classes_list["C3"] += id
 			if(CHEM_CLASS_RARE)
-				GLOB.chemical_gen_classes_list["C4"] += id
+				chemical_gen_classes_list["C4"] += id
 			if(CHEM_CLASS_SPECIAL)
-				GLOB.chemical_gen_classes_list["C5"] += id
-				GLOB.chemical_data.add_chemical_objective(src)
+				chemical_gen_classes_list["C5"] += id
+				chemical_data.add_chemical_objective(src)
 			if(CHEM_CLASS_ULTRA)
-				GLOB.chemical_gen_classes_list["C6"] += id
-				GLOB.chemical_data.add_chemical_objective(src)
-		GLOB.chemical_gen_classes_list["C"] += id
+				chemical_gen_classes_list["C6"] += id
+				chemical_data.add_chemical_objective(src)
+		chemical_gen_classes_list["C"] += id
 	if(gen_tier)
 		switch(gen_tier)
 			if(1)
-				GLOB.chemical_gen_classes_list["T1"] += id
+				chemical_gen_classes_list["T1"] += id
 			if(2)
-				GLOB.chemical_gen_classes_list["T2"] += id
+				chemical_gen_classes_list["T2"] += id
 			if(3)
-				GLOB.chemical_gen_classes_list["T3"] += id
+				chemical_gen_classes_list["T3"] += id
 			if(4)
-				GLOB.chemical_gen_classes_list["T4"] += id
+				chemical_gen_classes_list["T4"] += id
 			if(5)
-				GLOB.chemical_gen_classes_list["T5"] += id
+				chemical_gen_classes_list["T5"] += id
 
 
 /datum/reagent/proc/properties_to_datums()
 #ifdef UNIT_TESTS
-	if(!GLOB.chemical_properties_list)
+	if(!chemical_properties_list)
 		CRASH("Chemistry reagents are not set up!")
 #endif
 
@@ -311,7 +306,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		if(istype(prop, /datum/chem_property))
 			new_properties += prop
 			continue
-		var/datum/chem_property/chem = GLOB.chemical_properties_list[prop]
+		var/datum/chem_property/chem = chemical_properties_list[prop]
 		if(chem)
 			chem = new chem.type()
 			chem.level = properties[prop]
@@ -346,7 +341,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 			R = new P.type()
 			break
 		i++
-		if(i > length(properties))
+		if(i > properties.len)
 			return FALSE
 	R.level = new_level
 	R.holder = src

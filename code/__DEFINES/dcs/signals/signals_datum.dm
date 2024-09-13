@@ -34,8 +34,6 @@
 #define COMSIG_ACTION_HIDDEN "action_hidden"
 /// From base of /datum/action/proc/unhide_from(): (mob/owner)
 #define COMSIG_ACTION_UNHIDDEN "action_unhidden"
-/// From base of /datum/action/proc/action_activate() : ()
-#define COMSIG_ACTION_ACTIVATED "action_activated"
 
 ///from /datum/component/bonus_damage_stack
 #define COMSIG_BONUS_DAMAGE "bonus_damage"
@@ -66,9 +64,6 @@
 
 // from /proc/update_living_queens() : /mob/living/carbon/xenomorph/queen
 #define COMSIG_HIVE_NEW_QUEEN "hive_new_queen"
-
-/// Fired on the lazy template datum when the template is finished loading. (list/loaded_atom_movables, list/loaded_turfs, list/loaded_areas)
-#define COMSIG_LAZY_TEMPLATE_LOADED "lazy_template_loaded"
 
 /// From /datum/game_master_submenu/vents/proc/setup_ambush()
 #define COMSIG_GAME_MASTER_AMBUSH_SET "game_master_ambush_set"

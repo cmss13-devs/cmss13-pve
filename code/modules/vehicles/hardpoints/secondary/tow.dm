@@ -1,5 +1,5 @@
 /obj/item/hardpoint/secondary/towlauncher
-	name = "\improper TOW Launcher"
+	name = "TOW Launcher"
 	desc = "A secondary weapon for tanks that shoots rockets"
 
 	icon_state = "tow_launcher"

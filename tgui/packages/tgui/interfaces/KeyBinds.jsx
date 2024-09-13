@@ -33,7 +33,7 @@ const getAllKeybinds = (glob_keybinds) => {
 
 export const KeyBinds = (props) => {
   const { act, data } = useBackend();
-  const { player_keybinds, glob_keybinds, byond_keymap } = data;
+  const { glob_keybinds } = data;
 
   const [selectedTab, setSelectedTab] = useState('ALL');
   const [searchTerm, setSearchTerm] = useState('');
@@ -68,44 +68,13 @@ export const KeyBinds = (props) => {
             >
               <Flex direction="column">
                 <Flex.Item>
-                  <Flex align="baseline" mt="5px">
-                    <Flex.Item grow>
-                      <Input
-                        value={searchTerm}
-                        onInput={(_, value) => setSearchTerm(value)}
-                        placeholder="Search..."
-                        fluid
-                      />
-                    </Flex.Item>
-                    <Flex.Item>
-                      <ButtonKeybind
-                        tooltip="Search by key"
-                        tooltipPosition="bottom-start"
-                        icon="keyboard"
-                        onFinish={(keysDown) => {
-                          // The key(s) pressed by the user, byond-ified.
-                          const targetKey = keysDown
-                            .map((k) => byond_keymap[k] || k)
-                            .join('+');
-                          // targetKey's entry in player_keybinds.
-                          const targetEntry = player_keybinds[targetKey];
-                          if (!targetEntry) {
-                            return;
-                          }
-                          // If a keybind was found, scroll to the first match currently rendered.
-                          for (let i = 0; i < targetEntry.length; i++) {
-                            const element = document.getElementById(
-                              targetEntry[i],
-                            );
-                            if (element) {
-                              element.scrollIntoView();
-                              break;
-                            }
-                          }
-                        }}
-                      />
-                    </Flex.Item>
-                  </Flex>
+                  <Box height="5px" />
+                  <Input
+                    value={searchTerm}
+                    onInput={(_, value) => setSearchTerm(value)}
+                    placeholder="Search..."
+                    fluid
+                  />
                 </Flex.Item>
                 <Flex.Item>
                   <Box height="5px" />
@@ -179,11 +148,11 @@ const KeybindsDropdown = (props) => {
 export const KeybindElement = (props) => {
   const { act, data } = useBackend();
   const { keybind } = props;
-  const { player_keybinds } = data;
+  const { keybinds } = data;
 
   const currentBoundKeys = [];
 
-  for (const [key, value] of Object.entries(player_keybinds)) {
+  for (const [key, value] of Object.entries(keybinds)) {
     for (let i = 0; i < value.length; i++) {
       if (value[i] === keybind.name) {
         currentBoundKeys.push(key);
@@ -193,7 +162,7 @@ export const KeybindElement = (props) => {
   }
 
   return (
-    <Flex id={keybind.name} mt={1}>
+    <Flex mt={1}>
       <Flex.Item basis="30%">
         <Box fontSize="115%" color="label" textAlign="center">
           {keybind.full_name}
@@ -298,10 +267,6 @@ export class ButtonKeybind extends Component {
     // Prevents repeating
     if (keysDown[pressedKey] && e.type === 'keydown') {
       return;
-    }
-
-    if (KEY_CODE_TO_BYOND[pressedKey]) {
-      pressedKey = KEY_CODE_TO_BYOND[pressedKey];
     }
 
     if (e.keyCode >= 96 && e.keyCode <= 105) {

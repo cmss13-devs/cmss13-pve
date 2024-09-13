@@ -18,8 +18,6 @@
 
 	update_Login_details()
 
-	SEND_SIGNAL(src, COMSIG_MOB_LOGIN)
-
 	client.images = null
 	client.screen = null //remove hud items just in case
 	if(!hud_used)
@@ -60,6 +58,6 @@
 
 	client.init_verbs()
 
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_LOGGED_IN, src)
-	SEND_SIGNAL(client, COMSIG_CLIENT_MOB_LOGGED_IN, src)
-	SEND_SIGNAL(src, COMSIG_MOB_LOGGED_IN)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_LOGIN, src)
+	SEND_SIGNAL(client, COMSIG_CLIENT_MOB_LOGIN, src)
+	SEND_SIGNAL(src, COMSIG_MOB_LOGIN)

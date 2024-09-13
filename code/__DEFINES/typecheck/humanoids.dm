@@ -14,8 +14,7 @@
 #define isSEA(A) (ishuman(A) && A.job == "Senior Enlisted Advisor")
 #define issynth(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic))
 #define iscolonysynthetic(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial))
-#define isworkingjoe(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/working_joe))
-#define ishazardjoe(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/working_joe/hazard))
+#define isworkingjoe(A) (iscolonysynthetic(A) && A.job == JOB_WORKING_JOE)
 #define isinfiltratorsynthetic(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/infiltrator))
 
 //Specic group checks, use instead of typechecks (but use traits instead)

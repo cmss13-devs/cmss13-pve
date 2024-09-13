@@ -140,7 +140,6 @@ Implant Specifics:<BR>"}
 	var/elevel = "Localized Limb"
 	var/phrase = "supercalifragilisticexpialidocious"
 	icon_state = "implant_evil"
-	flags_atom = USES_HEARING
 
 /obj/item/implant/explosive/get_data()
 	var/dat = {"

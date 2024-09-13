@@ -154,9 +154,9 @@
 
 	else if (istype(value, /list))
 		var/list/L = value
-		html += "[name] = /list ([length(L)])"
+		html += "[name] = /list ([L.len])"
 
-		if (length(L) > 0 && !(name == "underlays" || name == "overlays" || name == "vars" || length(L) > 500))
+		if (L.len > 0 && !(name == "underlays" || name == "overlays" || name == "vars" || L.len > 500))
 			// not sure if this is completely right...
 			html += "<ul>"
 			var/index = 1
