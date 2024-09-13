@@ -143,6 +143,8 @@
 	else
 		user.track_shot(initial(name))
 		unleash_flame(target, user)
+		current_mag.current_rounds = current_mag.get_ammo_percent()
+		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src) // required by human AI
 		return AUTOFIRE_CONTINUE
 	return NONE
 
