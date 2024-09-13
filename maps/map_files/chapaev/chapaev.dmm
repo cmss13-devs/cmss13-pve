@@ -72,11 +72,6 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata{
 	icon_state = "floor2"
@@ -447,11 +442,6 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/small,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/south,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -691,11 +681,6 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
@@ -1411,11 +1396,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
 "kG" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/space/basic,
 /area/space)
@@ -1465,11 +1445,6 @@
 /turf/open/floor/plating,
 /area/golden_arrow/supply)
 "lf" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 5"
 	},
@@ -2553,7 +2528,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "sV" = (
-/obj/structure/machinery/power/fusion_engine{
+/obj/structure/machinery/power/reactor{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
@@ -2968,11 +2943,6 @@
 	layer = 3.1;
 	name = "\improper materials storage bin"
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/strata{
 	dir = 4;
@@ -3027,11 +2997,6 @@
 	pixel_x = -8;
 	pixel_y = 16;
 	can_block_movement = 0
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata{
@@ -5835,11 +5800,6 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
@@ -5920,11 +5880,6 @@
 	},
 /area/golden_arrow/briefing)
 "YJ" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/reactor{
 	name = "\improper S-52 fusion reactor 2"
 	},
