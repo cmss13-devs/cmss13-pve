@@ -1,6 +1,6 @@
 /datum/equipment_preset/upp
 	name = FACTION_UPP
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
 	idtype = /obj/item/card/id/dogtag
 	origin_override = ORIGIN_UPP
@@ -10,7 +10,7 @@
 	access = get_access(ACCESS_LIST_UPP_ALL) //ACCESS_COME_BACK_TO_ME
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
+	new_human.gender = pick(60;MALE,40;FEMALE)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -21,19 +21,23 @@
 		if(prob(40))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
-			first_name = "[pick(first_names_male_upp)]"
+			first_name = "[pick(GLOB.first_names_male_upp)]"
+		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
 	else
 		if(prob(40))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
-			first_name = "[pick(first_names_female_upp)]"
+			first_name = "[pick(GLOB.first_names_female_upp)]"
 	//surname
 	if(prob(35))
 		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
 	else
-		last_name = "[pick(last_names_upp)]"
+		last_name = "[pick(GLOB.last_names_upp)]"
 	//put them together
 	random_name = "[first_name] [last_name]"
+
+	new_human.change_real_name(new_human, random_name)
+	new_human.age = rand(17,35)
 	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
 	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
@@ -64,7 +68,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "People's Territorial Guard Rifleman"
 	role_comm_title = "PTG-RFN"
-	paygrade = "UE1"
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/pfc
 
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
@@ -148,7 +152,7 @@
 	access = list(ACCESS_UPP_GENERAL)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
-	paygrade = "UE2"
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
 	role_comm_title = "RFN"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -190,8 +194,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
-/datum/equipment_preset/upp/rifleman/lesser_rank
-	paygrade = "UE1"
 
 //*****************************************************************************************************/
 
@@ -201,7 +203,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = "Sanitar"
 	rank = JOB_SQUAD_MEDIC_UPP
-	paygrade = "UE4"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title ="SNITR"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -261,7 +263,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 	assignment = "Machinegunner"
 	rank = JOB_SQUAD_SMARTGUN_UPP
-	paygrade = "UE4"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -300,7 +302,7 @@
 /datum/equipment_preset/upp/squadlead
 	name = "UPP Squad Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrade = "UE5"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	assignment = JOB_SQUAD_TEAM_LEADER
@@ -346,9 +348,9 @@
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
-	paygrade = "UE7"
+	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_1)
 	role_comm_title = "PLTSGT"
-	minimum_age = 27
+	minimum_age = 25
 	skills = /datum/skills/SL
 
 	minimap_icon = "leader"
@@ -391,7 +393,7 @@
 	assignment = JOB_UPP_POLICE
 	rank = JOB_UPP_POLICE
 	role_comm_title = "MP"
-	paygrade = "UE6"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
 
 /datum/equipment_preset/upp/military_police/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -422,7 +424,7 @@
 	assignment = JOB_UPP_LT_OFFICER
 	rank = JOB_UPP_LT_OFFICER
 	role_comm_title = "LT"
-	paygrade = "UO1"
+	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -453,14 +455,14 @@
 	assignment = JOB_UPP_SRLT_OFFICER
 	rank = JOB_UPP_SRLT_OFFICER
 	role_comm_title = "SRLT"
-	paygrade = "UO2"
+	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/officer/kapitan
 	name = "UPP Kapitan"
 	assignment = JOB_UPP_KPT_OFFICER
 	rank = JOB_UPP_KPT_OFFICER
 	role_comm_title = "KPT"
-	paygrade = "UO3"
+	paygrades = list(PAY_SHORT_UO3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/kapitan
 
 /datum/equipment_preset/upp/officer/major
@@ -468,7 +470,7 @@
 	assignment = JOB_UPP_MAY_OFFICER
 	rank = JOB_UPP_MAY_OFFICER
 	role_comm_title = "MAY"
-	paygrade = "UO4"
+	paygrades = list(PAY_SHORT_UO4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/commander
 
 /datum/equipment_preset/upp/officer/lt_kolonel
@@ -476,7 +478,7 @@
 	assignment = JOB_UPP_LTKOL_OFFICER
 	rank = JOB_UPP_LTKOL_OFFICER
 	role_comm_title = "LTKOL"
-	paygrade = "UO5"
+	paygrades = list(PAY_SHORT_UO5 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/commander
 
 /datum/equipment_preset/upp/officer/kolonel
@@ -484,7 +486,7 @@
 	assignment = JOB_UPP_KOL_OFFICER
 	rank = JOB_UPP_KOL_OFFICER
 	role_comm_title = "KOL"
-	paygrade = "UO6"
+	paygrades = list(PAY_SHORT_UO6 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/commander
 
 
@@ -499,7 +501,7 @@
 	skills = /datum/skills/synthetic
 	assignment = JOB_UPP_COMBAT_SYNTH
 	rank = JOB_UPP_COMBAT_SYNTH
-	paygrade = "SYN"
+	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/upp/synth/load_name(mob/living/carbon/human/new_human, randomise)
@@ -565,7 +567,7 @@ var/random_name
 	assignment = JOB_UPP_COMMANDO
 	rank = JOB_UPP_COMMANDO
 	role_comm_title = "JKDO"
-	paygrade = "UK1"
+	paygrades = list(PAY_SHORT_UK1 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/data
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_TSL, LANGUAGE_SPANISH, LANGUAGE_CHINESE)
 
@@ -596,8 +598,8 @@ var/random_name
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_L_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
 
 	spawn_weapon(/obj/item/weapon/gun/rifle/type71/carbine/commando, /obj/item/ammo_magazine/rifle/type71, new_human, 0, 8)
 
@@ -611,7 +613,7 @@ var/random_name
 	assignment = JOB_UPP_COMMANDO_LEADER
 	rank = JOB_UPP_COMMANDO_LEADER
 	role_comm_title = "KDOTL"
-	paygrade = "UK3"
+	paygrades = list(PAY_SHORT_UK3 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/commando/leader/load_gear(mob/living/carbon/human/new_human)
@@ -638,9 +640,9 @@ var/random_name
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/C4, WEAR_L_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/handcuffs, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
 
 	spawn_weapon(/obj/item/weapon/gun/rifle/type71/carbine/commando, /obj/item/ammo_magazine/rifle/type71, new_human, 0, 7)
 
@@ -652,7 +654,7 @@ var/random_name
 
 	assignment = "Crewman"
 	rank = JOB_UPP_CREWMAN
-	paygrade = "UE3"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_1)
 	role_comm_title = "CRMN"
 	minimum_age = 18
 	skills = /datum/skills/tank_crew
@@ -684,7 +686,7 @@ var/random_name
 	assignment = "Leytenant Doktor"
 	rank = JOB_UPP_LT_DOKTOR
 	role_comm_title = "LTDOK"
-	paygrade = "UO1"
+	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/doctor/load_gear(mob/living/carbon/human/new_human)
 	//back

@@ -13,7 +13,7 @@
 		ACCESS_CIVILIAN_LOGISTICS,
 	)
 
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)

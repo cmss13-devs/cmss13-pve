@@ -7,7 +7,7 @@
 //UPP Enlisted
 
 /datum/paygrade/upp/ue1
-	paygrade = "UE1"
+	paygrade = PAY_SHORT_UE1
 	name = "Ryadovoy"
 	prefix = "Ryad."
 
@@ -42,7 +42,7 @@
 	pay_multiplier = 0.9
 
 /datum/paygrade/upp/ue7
-	paygrade = "UE7"
+	paygrade = PAY_SHORT_UE7
 	name = "Starshina"
 	prefix = "Strsh."
 	pay_multiplier = 1 //here comes the moneyyy

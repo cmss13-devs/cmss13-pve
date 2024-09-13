@@ -8983,7 +8983,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "gFD" = (
-/obj/item/clothing/shoes/marine/upp/knife,
+/obj/item/clothing/shoes/marine/upp,
 /turf/open/floor/prison,
 /area/fiorina/station/lowsec)
 "gFV" = (

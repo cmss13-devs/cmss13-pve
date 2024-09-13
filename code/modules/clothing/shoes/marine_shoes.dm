@@ -19,14 +19,22 @@
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROT
 	siemens_coefficient = 0.7
 	var/armor_stage = 0
-	items_allowed = list(/obj/item/attachable/bayonet, /obj/item/weapon/throwing_knife, /obj/item/weapon/gun/pistol/holdout, /obj/item/weapon/gun/pistol/clfpistol, /obj/item/tool/screwdriver, /obj/item/tool/surgery/scalpel, /obj/item/weapon/straight_razor)
-	var/knife_type
+	allowed_items_typecache = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/throwing_knife,
+		/obj/item/weapon/gun/pistol/holdout,
+		/obj/item/weapon/gun/pistol/clfpistol,
+		/obj/item/tool/screwdriver,
+		/obj/item/tool/surgery/scalpel,
+		/obj/item/weapon/straight_razor,
+	)
+	drop_sound = "armorequip"
 
-/obj/item/clothing/shoes/marine/Initialize(mapload, ...)
-	. = ..()
-	if(knife_type)
-		stored_item = new knife_type(src)
-	update_icon()
+/obj/item/clothing/shoes/marine/update_icon()
+	if(stored_item)
+		icon_state = "[initial(icon_state)]-1"
+	else
+		icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/update_icon()
 	if(stored_item && !armor_stage)
@@ -36,27 +44,27 @@
 			icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/knife
-	knife_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/jungle
 	icon_state = "marine_jungle"
 	desc = "A pair of standard issue United States Colonial Marine jungle boots. Don't go walkin' slow, the devil's on the loose."
 
 /obj/item/clothing/shoes/marine/jungle/knife
-	knife_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
-	knife_type = /obj/item/attachable/bayonet/upp
+	spawn_item_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp_knife
-	knife_type = /obj/item/attachable/bayonet/upp
+	spawn_item_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp/guard
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"
-	knife_type = /obj/item/attachable/bayonet/upp
+	spawn_item_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
@@ -81,7 +89,7 @@
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
 	desc = "A pair of black boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
-	knife_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
@@ -95,7 +103,7 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	knife_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/mopp
 	name = "\improper M3 MOPP boots"
@@ -108,3 +116,9 @@
 	flags_heat_protection = BODY_FLAG_FEET
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/shoes/stompers
+	name = "Reebok Stompers"
+	desc = "A pair of sneakers designed to elicit a morale boosting response within anyone that witnesses them."
+	icon_state = "stompers"
+	flags_inventory = NOSLIPPING

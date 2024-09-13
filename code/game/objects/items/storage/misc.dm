@@ -55,7 +55,7 @@
  */
 
 /obj/item/storage/mateba_case
-	icon = 'icons/obj/items/storage.dmi'
+	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "matebacase"
 	name = "mateba customization kit case"
 	desc = "A wooden case used for storing the tools and parts needed to customize a Mateba revolver. Comes with three barrel lengths and the necessary key to swap them out."
@@ -114,9 +114,9 @@
 /obj/item/storage/box/loadout
 	name = "storage case"
 	desc = "A wooden case that fits a pistol and a number of magazines."
-	icon = 'icons/obj/items/storage.dmi'
+	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "matebacase"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 7
 
