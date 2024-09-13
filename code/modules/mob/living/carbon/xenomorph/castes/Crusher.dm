@@ -14,7 +14,6 @@
 	speed = XENO_SPEED_TIER_4
 	heal_standing = 0.66
 
-	available_strains = list(/datum/xeno_strain/charger)
 	behavior_delegate_type = /datum/behavior_delegate/crusher_charger
 
 	minimum_evolve_time = 15 MINUTES
@@ -54,7 +53,7 @@
 	base_pixel_y = -16
 
 	rebounds = FALSE // no more fucking pinball crooshers
-	organ_value = 3000
+
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/onclick/regurgitate,
@@ -68,13 +67,11 @@
 	)
 
 	claw_type = CLAW_TYPE_VERY_SHARP
+	mutation_icon_state = CRUSHER_NORMAL
+	mutation_type = CRUSHER_CHARGER
 
 	icon_xeno = 'icons/mob/xenos/crusher.dmi'
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
-
-	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
-	weed_food_states = list("Crusher_1","Crusher_2","Crusher_3")
-	weed_food_states_flipped = list("Crusher_1","Crusher_2","Crusher_3")
 
 	ai_range = 24
 	forced_retarget_time = (3 SECONDS)
@@ -87,8 +84,6 @@
 	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "metalbang")
 
 	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
-	if(!get_turf(src)) //autowiki compat, spawns in nullspace
-		return
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)
@@ -107,21 +102,21 @@
 	//Barricade collision
 	else if (istype(target, /obj/structure/barricade))
 		var/obj/structure/barricade/B = target
-		visible_message(SPAN_DANGER("[src] rams into [B] and skids to a halt!"), SPAN_XENOWARNING("We ram into [B] and skid to a halt!"))
+		visible_message(SPAN_DANGER("[src] rams into [B] and skids to a halt!"), SPAN_XENOWARNING("You ram into [B] and skid to a halt!"))
 
 		B.Collided(src)
 		. =  FALSE
 
 	else if (istype(target, /obj/vehicle/multitile))
 		var/obj/vehicle/multitile/M = target
-		visible_message(SPAN_DANGER("[src] rams into [M] and skids to a halt!"), SPAN_XENOWARNING("We ram into [M] and skid to a halt!"))
+		visible_message(SPAN_DANGER("[src] rams into [M] and skids to a halt!"), SPAN_XENOWARNING("You ram into [M] and skid to a halt!"))
 
 		M.Collided(src)
 		. = FALSE
 
 	else if (istype(target, /obj/structure/machinery/m56d_hmg))
 		var/obj/structure/machinery/m56d_hmg/HMG = target
-		visible_message(SPAN_DANGER("[src] rams [HMG]!"), SPAN_XENODANGER("We ram [HMG]!"))
+		visible_message(SPAN_DANGER("[src] rams [HMG]!"), SPAN_XENODANGER("You ram [HMG]!"))
 		playsound(loc, "punch", 25, 1)
 		HMG.CrusherImpact()
 		. =  FALSE
@@ -158,7 +153,7 @@
 
 	else if (istype(target, /obj/structure/machinery/defenses))
 		var/obj/structure/machinery/defenses/DF = target
-		visible_message(SPAN_DANGER("[src] rams [DF]!"), SPAN_XENODANGER("We ram [DF]!"))
+		visible_message(SPAN_DANGER("[src] rams [DF]!"), SPAN_XENODANGER("You ram [DF]!"))
 
 		if (!DF.unacidable)
 			playsound(loc, "punch", 25, 1)
@@ -174,7 +169,7 @@
 		if (V.unslashable)
 			. = FALSE
 		else
-			visible_message(SPAN_DANGER("[src] smashes straight into [V]!"), SPAN_XENODANGER("We smash straight into [V]!"))
+			visible_message(SPAN_DANGER("[src] smashes straight into [V]!"), SPAN_XENODANGER("You smash straight into [V]!"))
 			playsound(loc, "punch", 25, 1)
 			V.tip_over()
 
@@ -191,7 +186,7 @@
 		if (V.unslashable)
 			. = FALSE
 		else
-			visible_message(SPAN_DANGER("[src] smashes straight into [V]!"), SPAN_XENODANGER("We smash straight into [V]!"))
+			visible_message(SPAN_DANGER("[src] smashes straight into [V]!"), SPAN_XENODANGER("You smash straight into [V]!"))
 			playsound(loc, "punch", 25, 1)
 			V.tip_over()
 
@@ -210,8 +205,8 @@
 			if (O.unacidable)
 				. = FALSE
 			else if (O.anchored)
-				visible_message(SPAN_DANGER("[src] crushes [O]!"), SPAN_XENODANGER("We crush [O]!"))
-				if(length(O.contents)) //Hopefully won't auto-delete things inside crushed stuff.
+				visible_message(SPAN_DANGER("[src] crushes [O]!"), SPAN_XENODANGER("You crush [O]!"))
+				if(O.contents.len) //Hopefully won't auto-delete things inside crushed stuff.
 					var/turf/T = get_turf(src)
 					for(var/atom/movable/S in T.contents) S.forceMove(T)
 
@@ -221,7 +216,7 @@
 			else
 				if(O.buckled_mob)
 					O.unbuckle()
-				visible_message(SPAN_WARNING("[src] knocks [O] aside!"), SPAN_XENOWARNING("We knock [O] aside.")) //Canisters, crates etc. go flying.
+				visible_message(SPAN_WARNING("[src] knocks [O] aside!"), SPAN_XENOWARNING("You knock [O] aside.")) //Canisters, crates etc. go flying.
 				playsound(loc, "punch", 25, 1)
 
 				var/impact_range = 2
@@ -288,11 +283,11 @@
 
 		H.apply_armoured_damage(get_xeno_damage_slash(H, damage), ARMOR_MELEE, BRUTE, bound_xeno.zone_selected)
 
-	var/datum/action/xeno_action/activable/pounce/crusher_charge/cAction = get_action(bound_xeno, /datum/action/xeno_action/activable/pounce/crusher_charge)
+	var/datum/action/xeno_action/activable/pounce/crusher_charge/cAction = get_xeno_action_by_type(bound_xeno, /datum/action/xeno_action/activable/pounce/crusher_charge)
 	if (!cAction.action_cooldown_check())
 		cAction.reduce_cooldown(cdr_amount)
 
-	var/datum/action/xeno_action/onclick/crusher_shield/sAction = get_action(bound_xeno, /datum/action/xeno_action/onclick/crusher_shield)
+	var/datum/action/xeno_action/onclick/crusher_shield/sAction = get_xeno_action_by_type(bound_xeno, /datum/action/xeno_action/onclick/crusher_shield)
 	if (!sAction.action_cooldown_check())
 		sAction.reduce_cooldown(base_cdr_amount)
 
@@ -307,5 +302,5 @@
 
 /datum/behavior_delegate/crusher_base/on_update_icons()
 	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && bound_xeno.body_position == STANDING_UP)
-		bound_xeno.icon_state = "[bound_xeno.get_strain_icon()] Crusher Charging"
+		bound_xeno.icon_state = "[bound_xeno.mutation_icon_state || bound_xeno.mutation_type] Crusher Charging"
 		return TRUE

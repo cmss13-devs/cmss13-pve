@@ -39,10 +39,10 @@
 	. = ..()
 	if(.)
 		//chance to go crazy and start wacking stuff
-		if(!length(enemies) && prob(1))
+		if(!enemies.len && prob(1))
 			Retaliate()
 
-		if(length(enemies) && prob(10))
+		if(enemies.len && prob(10))
 			enemies = list()
 			LoseTarget()
 			src.visible_message(SPAN_NOTICE("[src] calms down."))
@@ -83,7 +83,7 @@
 		user.visible_message(SPAN_NOTICE("[user] milks [src] using \the [O]."))
 		var/transfered = udder.trans_id_to(G, "milk", rand(5,10))
 		if(G.reagents.total_volume >= G.volume)
-			to_chat(user, SPAN_DANGER("[O] is full."))
+			to_chat(user, SPAN_DANGER("The [O] is full."))
 		if(!transfered)
 			to_chat(user, SPAN_DANGER("The udder is dry. Wait a bit longer..."))
 	else
@@ -209,8 +209,8 @@
 			new /mob/living/simple_animal/chicken(src.loc)
 			qdel(src)
 
-GLOBAL_VAR_INIT(MAX_CHICKENS, 50)
-GLOBAL_VAR_INIT(chicken_count, 0)
+var/const/MAX_CHICKENS = 50
+var/global/chicken_count = 0
 
 /mob/living/simple_animal/chicken
 	name = "\improper chicken"
@@ -244,7 +244,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	icon_dead = "chicken_[body_color]_dead"
 	pixel_x = rand(-6, 6)
 	pixel_y = rand(0, 10)
-	GLOB.chicken_count++
+	chicken_count++
 
 /mob/living/simple_animal/chicken/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -253,7 +253,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 
 /mob/living/simple_animal/chicken/death()
 	..()
-	GLOB.chicken_count--
+	chicken_count--
 	if(last_damage_data)
 		var/mob/user = last_damage_data.resolve_mob()
 		if(user)
@@ -282,7 +282,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 		var/obj/item/reagent_container/food/snacks/egg/E = new(get_turf(src))
 		E.pixel_x = rand(-6,6)
 		E.pixel_y = rand(-6,6)
-		if(GLOB.chicken_count < GLOB.MAX_CHICKENS && prob(10))
+		if(chicken_count < MAX_CHICKENS && prob(10))
 			START_PROCESSING(SSobj, E)
 
 /obj/item/reagent_container/food/snacks/egg/var/amount_grown = 0

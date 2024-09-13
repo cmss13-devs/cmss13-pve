@@ -54,9 +54,7 @@ export const getMostRelevant = (
 };
 
 /** Returns the display color for certain health percentages */
-export const getHealthColor = (health?: number) => {
-  if (!health) return 'bad';
-
+export const getHealthColor = (health: number) => {
   switch (true) {
     case health > HEALTH.Good:
       return 'good';

@@ -1,7 +1,6 @@
 /obj/item/storage/surgical_tray
 	name = "surgical tray"
 	desc = "A small metallic tray covered in sterile tarp. Intended to store surgical tools in a neat and clean fashion."
-	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "surgical_tray"
 	flags_atom = FPRINT|CONDUCT
 	w_class = SIZE_LARGE //Should not fit in backpacks
@@ -35,7 +34,7 @@
 	new /obj/item/tool/surgery/synthgraft(src)
 
 /obj/item/storage/surgical_tray/update_icon()
-	if(!length(contents))
+	if(!contents.len)
 		icon_state = "surgical_tray_e"
 	else
 		icon_state = "surgical_tray"

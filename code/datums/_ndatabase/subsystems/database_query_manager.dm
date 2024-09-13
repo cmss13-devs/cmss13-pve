@@ -19,7 +19,8 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-GLOBAL_REAL(SSdatabase, /datum/controller/subsystem/database_query_manager)
+var/datum/controller/subsystem/database_query_manager/SSdatabase
+
 /datum/controller/subsystem/database_query_manager
 	name   = "Database QM"
 	wait   = 1
@@ -62,7 +63,7 @@ GLOBAL_REAL(SSdatabase, /datum/controller/subsystem/database_query_manager)
 
 /datum/controller/subsystem/database_query_manager/stat_entry(msg)
 	var/text = (connection && connection.status == DB_CONNECTION_READY) ? ("READY") : ("PREPPING")
-	msg = "[text], AQ:[length(queries_active)]; SQ:[length(queries_standby)]; P:[length(queries_current)]; C:[in_callback]"
+	msg = "[text], AQ:[queries_active.len]; SQ:[queries_standby.len]; P:[queries_current.len]; C:[in_callback]"
 	return ..()
 
 /datum/controller/subsystem/database_query_manager/fire(resumed = FALSE)

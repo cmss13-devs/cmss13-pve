@@ -120,7 +120,6 @@
 	dir = SOUTH
 	valid_directions = list(SOUTH)
 	density = TRUE
-	layer = OBJ_LAYER
 	var/actual_icon_state = "air"
 
 /obj/structure/pipes/standard/tank/New()

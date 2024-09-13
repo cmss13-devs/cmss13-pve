@@ -27,14 +27,14 @@
 	default_ammo = /datum/ammo/bullet/sniper/flak
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
-//XM43E1 Magazine
+//M42B Magazine
 /obj/item/ammo_magazine/sniper/anti_materiel
-	name = "\improper XM43E1 marksman magazine (10x99mm)"
-	desc = "A magazine of caseless 10x99mm anti-materiel rounds, capable of penetrating through most infantry-level materiel. Depending on what you hit, it might even have enough energy to wound anything behind the target."
+	name = "\improper XM42B marksman magazine (10x99mm)"
+	desc = "A magazine of caseless 10x99mm anti-materiel rounds."
 	max_rounds = 8
 	caliber = "10x99mm"
 	default_ammo = /datum/ammo/bullet/sniper/anti_materiel
-	gun_type = /obj/item/weapon/gun/rifle/sniper/XM43E1
+	gun_type = /obj/item/weapon/gun/rifle/sniper/XM42B
 
 //M42C magazine
 
@@ -258,18 +258,12 @@
 			user.put_in_hands(fuel)
 			fuel = null
 		update_icon()
+		desc = initial(desc) + "\n Contains[fuel?" fuel":""] [warhead?" and warhead":""]."
 		return
 	. = ..()
 
-/obj/item/ammo_magazine/rocket/custom/get_examine_text(mob/user)
-	. = ..()
-	if(fuel)
-		. += SPAN_NOTICE("Contains fuel.")
-	if(warhead)
-		. += SPAN_NOTICE("Contains a warhead.")
-
 /obj/item/ammo_magazine/rocket/custom/attackby(obj/item/W as obj, mob/user as mob)
-	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 		to_chat(user, SPAN_WARNING("You do not know how to tinker with [name]."))
 		return
 	if(current_rounds <= 0)
@@ -294,6 +288,7 @@
 			W.forceMove(src)
 			fuel = W
 			to_chat(user, SPAN_DANGER("You add [W] to [name]."))
+			desc = initial(desc) + "\n Contains[fuel?" fuel":""] [warhead?" and warhead":""]."
 			playsound(loc, 'sound/items/Screwdriver2.ogg', 25, 0, 6)
 	else if(istype(W,/obj/item/explosive/warhead/rocket) && !locked)
 		if(warhead)
@@ -307,6 +302,7 @@
 		W.forceMove(src)
 		warhead = W
 		to_chat(user, SPAN_DANGER("You add [W] to [name]."))
+		desc = initial(desc) + "\n Contains[fuel?" fuel":""] [warhead?" and warhead":""]."
 		playsound(loc, 'sound/items/Screwdriver2.ogg', 25, 0, 6)
 	update_icon()
 

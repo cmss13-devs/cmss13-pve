@@ -25,7 +25,8 @@
 	var/list/turf/valid_turfs = list()
 	var/list/ground_levels = SSmapping.levels_by_trait(ZTRAIT_GROUND)
 	for(var/ground_z in ground_levels)
-		for(var/turf/open/turf in Z_TURFS(ground_z))
+		var/list/turf/all_turfs = block(locate(1, 1, ground_z), locate(world.maxx, world.maxy, ground_z))
+		for(var/turf/open/turf in all_turfs)
 			if(turf.is_groundmap_turf)
 				var/valid = TRUE
 				for(var/atom/movable/movable as anything in turf.contents)
@@ -41,7 +42,11 @@
 		if(!length(valid_turfs))
 			break
 		var/turf/considered_turf = pick(valid_turfs)
-		var/list/turf/denied_turfs = RANGE_TURFS(exclusion_range, considered_turf)
+		var/x_min = max(1, considered_turf.x - exclusion_range)
+		var/y_min = max(1, considered_turf.y - exclusion_range)
+		var/x_max = min(world.maxx, considered_turf.x + exclusion_range)
+		var/y_max = min(world.maxy, considered_turf.y + exclusion_range)
+		var/list/turf/denied_turfs = block(locate(x_min, y_min, considered_turf.z), locate(x_max, y_max, considered_turf.z))
 		valid_turfs -= denied_turfs
 		picked_turfs += considered_turf
 
@@ -85,7 +90,7 @@
 
 		// Skip this if this corner is result of a door connection (mostly for Almayer shutters)
 		var/valid = TRUE
-		for(var/a_cardinal in GLOB.cardinals)
+		for(var/a_cardinal in cardinal)
 			var/cardinal_dir = diag & a_cardinal
 			if(!a_cardinal) // We check cardinals contributing to that diagonal
 				continue

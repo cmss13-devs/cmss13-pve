@@ -43,11 +43,10 @@
 		add_pmcs = FALSE
 	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
 
-/obj/item/device/cotablet/attack_self(mob/living/carbon/human/user as mob)
+/obj/item/device/cotablet/attack_self(mob/user as mob)
 	..()
 
-	var/obj/item/card/id/card = user.get_idcard()
-	if(allowed(user) && card?.check_biometrics(user))
+	if(src.allowed(user))
 		tgui_interact(user)
 	else
 		to_chat(user, SPAN_DANGER("Access denied."))
@@ -64,7 +63,7 @@
 /obj/item/device/cotablet/ui_data(mob/user)
 	var/list/data = list()
 
-	data["alert_level"] = GLOB.security_level
+	data["alert_level"] = security_level
 	data["evac_status"] = SShijack.evac_status
 	data["endtime"] = announcement_cooldown
 	data["distresstime"] = distress_cooldown
@@ -92,79 +91,79 @@
 	. = ..()
 	if(.)
 		return
-	var/mob/user = ui.user
+
 	switch(action)
 		if("announce")
-			if(user.client.prefs.muted & MUTE_IC)
-				to_chat(user, SPAN_DANGER("You cannot send Announcements (muted)."))
+			if(usr.client.prefs.muted & MUTE_IC)
+				to_chat(usr, SPAN_DANGER("You cannot send Announcements (muted)."))
 				return
 
 			if(!COOLDOWN_FINISHED(src, announcement_cooldown))
-				to_chat(user, SPAN_WARNING("Please wait [COOLDOWN_TIMELEFT(src, announcement_cooldown)/10] second\s before making your next announcement."))
+				to_chat(usr, SPAN_WARNING("Please wait [COOLDOWN_TIMELEFT(src, announcement_cooldown)/10] second\s before making your next announcement."))
 				return FALSE
 
-			var/input = stripped_multiline_input(user, "Please write a message to announce to the [MAIN_SHIP_NAME]'s crew and all groundside personnel.", "Priority Announcement", "")
-			if(!input || !COOLDOWN_FINISHED(src, announcement_cooldown) || !(user in dview(1, src)))
+			var/input = stripped_multiline_input(usr, "Please write a message to announce to the [MAIN_SHIP_NAME]'s crew and all groundside personnel.", "Priority Announcement", "")
+			if(!input || !COOLDOWN_FINISHED(src, announcement_cooldown) || !(usr in view(1, src)))
 				return FALSE
 
 			var/signed = null
-			if(ishuman(user))
-				var/mob/living/carbon/human/human_user = user
-				var/obj/item/card/id/id = human_user.get_idcard()
-				if(id)
-					var/paygrade = get_paygrades(id.paygrade, FALSE, human_user.gender)
+			if(ishuman(usr))
+				var/mob/living/carbon/human/H = usr
+				var/obj/item/card/id/id = H.wear_id
+				if(istype(id))
+					var/paygrade = get_paygrades(id.paygrade, FALSE, H.gender)
 					signed = "[paygrade] [id.registered_name]"
 
 			marine_announcement(input, announcement_title, faction_to_display = announcement_faction, add_PMCs = add_pmcs, signature = signed)
-			message_admins("[key_name(user)] has made a command announcement.")
-			log_announcement("[key_name(user)] has announced the following: [input]")
+			message_admins("[key_name(usr)] has made a command announcement.")
+			log_announcement("[key_name(usr)] has announced the following: [input]")
 			COOLDOWN_START(src, announcement_cooldown, cooldown_between_messages)
 			. = TRUE
 
 		if("award")
 			if(announcement_faction != FACTION_MARINE)
 				return
-			open_medal_panel(user, src)
+			print_medal(usr, src)
 			. = TRUE
 
 		if("mapview")
-			tacmap.tgui_interact(user)
+			tacmap.tgui_interact(usr)
 			. = TRUE
 
 		if("evacuation_start")
 			if(announcement_faction != FACTION_MARINE)
 				return
 
-			if(GLOB.security_level < SEC_LEVEL_RED)
-				to_chat(user, SPAN_WARNING("The ship must be under red alert in order to enact evacuation procedures."))
+			if(security_level < SEC_LEVEL_RED)
+				to_chat(usr, SPAN_WARNING("The ship must be under red alert in order to enact evacuation procedures."))
 				return FALSE
 
 			if(SShijack.evac_admin_denied)
-				to_chat(user, SPAN_WARNING("The USCM has placed a lock on deploying the evacuation pods."))
+				to_chat(usr, SPAN_WARNING("The USCM has placed a lock on deploying the evacuation pods."))
 				return FALSE
 
 			if(!SShijack.initiate_evacuation())
-				to_chat(user, SPAN_WARNING("You are unable to initiate an evacuation procedure right now!"))
+				to_chat(usr, SPAN_WARNING("You are unable to initiate an evacuation procedure right now!"))
 				return FALSE
 
-			log_game("[key_name(user)] has called for an emergency evacuation.")
-			message_admins("[key_name_admin(user)] has called for an emergency evacuation.")
-			log_ares_security("Initiate Evacuation", "Called for an emergency evacuation.", user)
+			log_game("[key_name(usr)] has called for an emergency evacuation.")
+			message_admins("[key_name_admin(usr)] has called for an emergency evacuation.")
+			log_ares_security("Initiate Evacuation", "[usr] has called for an emergency evacuation.")
 			. = TRUE
 
 		if("distress")
 			if(!SSticker.mode)
 				return FALSE //Not a game mode?
 
-			if(GLOB.security_level == SEC_LEVEL_DELTA)
-				to_chat(user, SPAN_WARNING("The ship is already undergoing self destruct procedures!"))
+			if(security_level == SEC_LEVEL_DELTA)
+				to_chat(usr, SPAN_WARNING("The ship is already undergoing self destruct procedures!"))
 				return FALSE
 
 			for(var/client/C in GLOB.admins)
 				if((R_ADMIN|R_MOD) & C.admin_holder.rights)
 					playsound_client(C,'sound/effects/sos-morse-code.ogg',10)
-			SSticker.mode.request_ert(user)
-			to_chat(user, SPAN_NOTICE("A distress beacon request has been sent to USCM Central Command."))
+			SSticker.mode.request_ert(usr)
+			to_chat(usr, SPAN_NOTICE("A distress beacon request has been sent to USCM Central Command."))
 			COOLDOWN_START(src, distress_cooldown, COOLDOWN_COMM_REQUEST)
 			return TRUE
 
@@ -177,15 +176,3 @@
 	announcement_faction = FACTION_PMC
 
 	minimap_type = MINIMAP_FLAG_PMC
-
-/obj/item/device/cotablet/upp
-
-	desc = "A special device used by field UPP commanders."
-
-	tablet_name = "UPP Field Commander's Tablet"
-
-	announcement_title = UPP_COMMAND_ANNOUNCE
-	announcement_faction = FACTION_UPP
-	req_access = list(ACCESS_UPP_LEADERSHIP)
-
-	minimap_type = MINIMAP_FLAG_UPP

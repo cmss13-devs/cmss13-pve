@@ -1,67 +1,4 @@
-/obj/item/restraint
-	/// SLOT_HANDS or SLOT_LEGS, for handcuffs or legcuffs
-	var/target_zone = SLOT_HANDS
-	/// How long to break out
-	var/breakouttime = 1 MINUTES
-	/// determines if handcuffs will be deleted on removal
-	var/single_use = 0
-	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
-	/// how many deciseconds it takes to cuff someone
-	var/cuff_delay = 4 SECONDS
-	/// If can be applied to people manually
-	var/manual = TRUE
-
-/obj/item/restraint/attack(mob/living/carbon/attacked_carbon, mob/user)
-	if(!istype(attacked_carbon) || !manual)
-		return ..()
-	if (!ishuman(user))
-		to_chat(user, SPAN_DANGER("You don't have the dexterity to do this!"))
-		return
-	switch(target_zone)
-		if(SLOT_HANDS)
-			if(!attacked_carbon.handcuffed)
-				place_handcuffs(attacked_carbon, user)
-		if(SLOT_LEGS)
-			if(!attacked_carbon.legcuffed)
-				apply_legcuffs(attacked_carbon, user)
-
-/obj/item/restraint/proc/place_handcuffs(mob/living/carbon/target, mob/user)
-	playsound(src.loc, cuff_sound, 25, 1, 4)
-
-	if(user.action_busy)
-		return
-
-	if(ishuman(target))
-		var/mob/living/carbon/human/human_mob = target
-
-		if(!human_mob.has_limb_for_slot(WEAR_HANDCUFFS))
-			to_chat(user, SPAN_DANGER("\The [human_mob] needs at least two wrists before you can cuff them together!"))
-			return
-
-		human_mob.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been handcuffed (attempt) by [key_name(user)]</font>")
-		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to handcuff [key_name(human_mob)]</font>")
-		msg_admin_attack("[key_name(user)] attempted to handcuff [key_name(human_mob)] in [get_area(src)] ([loc.x],[loc.y],[loc.z]).", loc.x, loc.y, loc.z)
-
-		user.visible_message(SPAN_NOTICE("[user] tries to put [src] on [human_mob]."))
-		if(do_after(user, cuff_delay, INTERRUPT_MOVED, BUSY_ICON_HOSTILE, human_mob, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-			if(src == user.get_active_hand() && !human_mob.handcuffed && Adjacent(user))
-				if(iscarbon(human_mob))
-					if(istype(human_mob.buckled, /obj/structure/bed/roller))
-						to_chat(user, SPAN_DANGER("You cannot handcuff someone who is buckled onto a roller bed."))
-						return
-				if(human_mob.has_limb_for_slot(WEAR_HANDCUFFS))
-					user.drop_inv_item_on_ground(src)
-					human_mob.equip_to_slot_if_possible(src, WEAR_HANDCUFFS, 1, 0, 1, 1)
-					user.count_niche_stat(STATISTICS_NICHE_HANDCUFF)
-
-	else if(ismonkey(target))
-		user.visible_message(SPAN_NOTICE("[user] tries to put [src] on [target]."))
-		if(do_after(user, 30, INTERRUPT_MOVED, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-			if(src == user.get_active_hand() && !target.handcuffed && Adjacent(user))
-				user.drop_inv_item_on_ground(src)
-				target.equip_to_slot_if_possible(src, WEAR_HANDCUFFS, 1, 0, 1, 1)
-
-/obj/item/restraint/handcuffs
+/obj/item/handcuffs
 	name = "handcuffs"
 	desc = "Use this to keep prisoners in line."
 	gender = PLURAL
@@ -75,7 +12,24 @@
 	throw_range = 5
 	matter = list("metal" = 500)
 
-/obj/item/restraint/handcuffs/get_mob_overlay(mob/user_mob, slot)
+	var/dispenser = 0
+	var/breakouttime = 1 MINUTES
+	/// determines if handcuffs will be deleted on removal
+	var/single_use = 0
+	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
+	/// how many deciseconds it takes to cuff someone
+	var/cuff_delay = 4 SECONDS
+
+/obj/item/handcuffs/attack(mob/living/carbon/C, mob/user)
+	if(!istype(C))
+		return ..()
+	if (!istype(user, /mob/living/carbon/human))
+		to_chat(user, SPAN_DANGER("You don't have the dexterity to do this!"))
+		return
+	if(!C.handcuffed)
+		place_handcuffs(C, user)
+
+/obj/item/handcuffs/get_mob_overlay(mob/user_mob, slot)
 	var/image/ret = ..()
 
 	var/image/handcuffs = overlay_image('icons/mob/mob.dmi', "handcuff1", color, RESET_COLOR)
@@ -83,80 +37,88 @@
 
 	return ret
 
-/obj/item/restraint/handcuffs/zip
+/obj/item/handcuffs/proc/place_handcuffs(mob/living/carbon/target, mob/user)
+	playsound(src.loc, cuff_sound, 25, 1, 4)
+
+	if(user.action_busy)
+		return
+
+	if (ishuman(target))
+		var/mob/living/carbon/human/H = target
+
+		if (!H.has_limb_for_slot(WEAR_HANDCUFFS))
+			to_chat(user, SPAN_DANGER("\The [H] needs at least two wrists before you can cuff them together!"))
+			return
+
+		H.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been handcuffed (attempt) by [key_name(user)]</font>")
+		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to handcuff [key_name(H)]</font>")
+		msg_admin_attack("[key_name(user)] attempted to handcuff [key_name(H)] in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
+
+		user.visible_message(SPAN_NOTICE("[user] tries to put [src] on [H]."))
+		if(do_after(user, cuff_delay, INTERRUPT_MOVED, BUSY_ICON_HOSTILE, H, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+			if(src == user.get_active_hand() && !H.handcuffed && Adjacent(user))
+				if(iscarbon(H))
+					if(istype(H.buckled, /obj/structure/bed/roller))
+						to_chat(user, SPAN_DANGER("You cannot handcuff someone who is buckled onto a roller bed."))
+						return
+				if(H.has_limb_for_slot(WEAR_HANDCUFFS))
+					user.drop_inv_item_on_ground(src)
+					H.equip_to_slot_if_possible(src, WEAR_HANDCUFFS, 1, 0, 1, 1)
+					user.count_niche_stat(STATISTICS_NICHE_HANDCUFF)
+
+	else if (ismonkey(target))
+		user.visible_message(SPAN_NOTICE("[user] tries to put [src] on [target]."))
+		if(do_after(user, 30, INTERRUPT_MOVED, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+			if(src == user.get_active_hand() && !target.handcuffed && Adjacent(user))
+				user.drop_inv_item_on_ground(src)
+				target.equip_to_slot_if_possible(src, WEAR_HANDCUFFS, 1, 0, 1, 1)
+
+
+/obj/item/handcuffs/zip
 	name = "zip cuffs"
 	desc = "Single-use plastic zip tie handcuffs."
 	w_class = SIZE_TINY
 	icon_state = "cuff_zip"
-	breakouttime = 60 SECONDS
+	breakouttime = 600 //Deciseconds = 60s
 	cuff_sound = 'sound/weapons/cablecuff.ogg'
 	cuff_delay = 20
 
-/obj/item/restraint/handcuffs/zip/place_handcuffs(mob/living/carbon/target, mob/user)
+/obj/item/handcuffs/zip/place_handcuffs(mob/living/carbon/target, mob/user)
 	..()
 	flags_item |= DELONDROP
 
-/obj/item/restraint/adjustable/verb/adjust_restraints()
-	set category = "Object"
-	set name = "Adjust Restraints"
-	set desc = "Adjust the restraint size for wrists or ankles."
-	set src = usr.contents
-
-	if(!ishuman(usr))
-		return FALSE
-
-	if(usr.is_mob_incapacitated())
-		to_chat(usr, "Not right now.")
-		return FALSE
-
-	switch(target_zone)
-		if(SLOT_HANDS)
-			target_zone = SLOT_LEGS
-			to_chat(usr, SPAN_NOTICE("[src] has been adjusted to tie around a subject's ankles."))
-		if(SLOT_LEGS)
-			target_zone = SLOT_HANDS
-			to_chat(usr, SPAN_NOTICE("[src] has been adjusted to tie around a subject's wrists."))
-
-/obj/item/restraint/adjustable/get_examine_text(mob/user)
-	. = ..()
-	switch(target_zone)
-		if(SLOT_HANDS)
-			. += SPAN_RED("Sized for human hands.")
-		if(SLOT_LEGS)
-			. += SPAN_RED("Sized for human ankles.")
-
-/obj/item/restraint/adjustable/cable
+/obj/item/handcuffs/cable
 	name = "cable restraints"
 	desc = "Looks like some cables tied together. Could be used to tie something up."
 	icon_state = "cuff_white"
-	breakouttime = 30 SECONDS
+	breakouttime = 300 //Deciseconds = 30s
 	cuff_sound = 'sound/weapons/cablecuff.ogg'
 
-/obj/item/restraint/adjustable/cable/red
+/obj/item/handcuffs/cable/red
 	color = "#DD0000"
 
-/obj/item/restraint/adjustable/cable/yellow
+/obj/item/handcuffs/cable/yellow
 	color = "#DDDD00"
 
-/obj/item/restraint/adjustable/cable/blue
+/obj/item/handcuffs/cable/blue
 	color = "#0000DD"
 
-/obj/item/restraint/adjustable/cable/green
+/obj/item/handcuffs/cable/green
 	color = "#00DD00"
 
-/obj/item/restraint/adjustable/cable/pink
+/obj/item/handcuffs/cable/pink
 	color = "#DD00DD"
 
-/obj/item/restraint/adjustable/cable/orange
+/obj/item/handcuffs/cable/orange
 	color = "#DD8800"
 
-/obj/item/restraint/adjustable/cable/cyan
+/obj/item/handcuffs/cable/cyan
 	color = "#00DDDD"
 
-/obj/item/restraint/adjustable/cable/white
+/obj/item/handcuffs/cable/white
 	color = "#FFFFFF"
 
-/obj/item/restraint/adjustable/cable/attackby(obj/item/I, mob/user as mob)
+/obj/item/handcuffs/cable/attackby(obj/item/I, mob/user as mob)
 	..()
 	if(istype(I, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = I
@@ -168,30 +130,34 @@
 			qdel(src)
 			update_icon(user)
 
-/obj/item/restraint/handcuffs/cyborg/attack(mob/living/carbon/carbon_mob as mob, mob/user as mob)
-	if(!carbon_mob.handcuffed)
-		var/turf/p_loc = user.loc
-		var/turf/p_loc_m = carbon_mob.loc
-		playsound(loc, cuff_sound, 25, 1, 4)
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to put handcuffs on [carbon_mob]!</B>"))
 
-		if(ishuman(carbon_mob))
-			var/mob/living/carbon/human/human_mob = carbon_mob
-			if (!human_mob.has_limb_for_slot(WEAR_HANDCUFFS))
-				to_chat(user, SPAN_DANGER("\The [human_mob] needs at least two wrists before you can cuff them together!"))
+/obj/item/handcuffs/cyborg
+	dispenser = 1
+
+/obj/item/handcuffs/cyborg/attack(mob/living/carbon/C as mob, mob/user as mob)
+	if(!C.handcuffed)
+		var/turf/p_loc = user.loc
+		var/turf/p_loc_m = C.loc
+		playsound(src.loc, cuff_sound, 25, 1, 4)
+		user.visible_message(SPAN_DANGER("<B>[user] is trying to put handcuffs on [C]!</B>"))
+
+		if (ishuman(C))
+			var/mob/living/carbon/human/H = C
+			if (!H.has_limb_for_slot(WEAR_HANDCUFFS))
+				to_chat(user, SPAN_DANGER("\The [H] needs at least two wrists before you can cuff them together!"))
 				return
 
 		spawn(30)
-			if(!carbon_mob) return
-			if(p_loc == user.loc && p_loc_m == carbon_mob.loc)
-				carbon_mob.handcuffed = new /obj/item/restraint/handcuffs(carbon_mob)
-				carbon_mob.handcuff_update()
+			if(!C) return
+			if(p_loc == user.loc && p_loc_m == C.loc)
+				C.handcuffed = new /obj/item/handcuffs(C)
+				C.handcuff_update()
 
 
 
 
 
-/obj/item/xeno_restraints
+/obj/item/restraints
 	name = "xeno restraints"
 	desc = "Use this to hold xenomorphic creatures safely."
 	gender = PLURAL
@@ -205,9 +171,10 @@
 	throw_range = 5
 	matter = list("metal" = 500)
 
+	var/dispenser = 0
 	var/breakouttime = 2 MINUTES
 
-/obj/item/xeno_restraints/attack(mob/living/carbon/C as mob, mob/user as mob)
+/obj/item/restraints/attack(mob/living/carbon/C as mob, mob/user as mob)
 	if(!istype(C, /mob/living/carbon/xenomorph))
 		to_chat(user, SPAN_DANGER("The cuffs do not fit!"))
 		return
@@ -220,7 +187,7 @@
 		spawn(30)
 			if(!C) return
 			if(p_loc == user.loc && p_loc_m == C.loc)
-				C.handcuffed = new /obj/item/xeno_restraints(C)
+				C.handcuffed = new /obj/item/restraints(C)
 				C.handcuff_update()
 				C.visible_message(SPAN_DANGER("[C] has been successfully restrained by [user]!"))
 				qdel(src)

@@ -286,11 +286,9 @@ export class Changelog extends Component {
                   <Box ml={3}>
                     <Table>
                       {changes.map((change) => {
-                        const changeKey = Object.keys(change)[0];
-                        const changeType =
-                          changeTypes[changeKey] || changeTypes['unknown'];
+                        const changeType = Object.keys(change)[0];
                         return (
-                          <Table.Row key={changeKey + change[changeKey]}>
+                          <Table.Row key={changeType + change[changeType]}>
                             <Table.Cell
                               className={classes([
                                 'Changelog__Cell',
@@ -308,7 +306,7 @@ export class Changelog extends Component {
                               </Tooltip>
                             </Table.Cell>
                             <Table.Cell className="Changelog__Cell">
-                              {change[changeKey]}
+                              {change[changeType]}
                             </Table.Cell>
                           </Table.Row>
                         );

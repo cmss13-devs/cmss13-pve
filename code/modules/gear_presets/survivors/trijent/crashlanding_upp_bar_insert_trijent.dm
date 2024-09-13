@@ -2,7 +2,7 @@
 //crashlanding-upp-bar.dmm map.
 /datum/equipment_preset/survivor/upp
 	name = "Survivor - UPP"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE1"
 	origin_override = ORIGIN_UPP
 	rank = JOB_SURVIVOR
 	skills = /datum/skills/military/survivor/upp_private
@@ -25,9 +25,8 @@
 		if(2)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp (new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp_knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/five_slot(new_human), WEAR_BACK)
@@ -40,7 +39,7 @@
 //crashlanding-upp-bar.dmm
 /datum/equipment_preset/survivor/upp/soldier
 	name = "Survivor - UPP Soldier"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
+	paygrade = "UE2"
 	assignment = JOB_UPP
 	rank = JOB_UPP
 	skills = /datum/skills/military/survivor/upp_private
@@ -61,12 +60,11 @@
 	spawn_random_upp_belt(new_human)
 
 	..()
-
 // /obj/effect/landmark/survivor_spawner/upp_sapper
 //crashlanding-upp-bar.dmm
 /datum/equipment_preset/survivor/upp/sapper
 	name = "Survivor - UPP Sapper"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE3"
 	assignment = JOB_UPP_ENGI
 	rank = JOB_UPP_ENGI
 	skills = /datum/skills/military/survivor/upp_sapper
@@ -94,7 +92,7 @@
 //crashlanding-upp-bar.dmm
 /datum/equipment_preset/survivor/upp/medic
 	name = "Survivor - UPP Medic"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE3"
 	assignment = JOB_UPP_MEDIC
 	rank = JOB_UPP_MEDIC
 	skills = /datum/skills/military/survivor/upp_medic
@@ -126,7 +124,7 @@
 	name = "Survivor - UPP Specialist"
 	assignment = JOB_UPP_SPECIALIST
 	rank = JOB_UPP_SPECIALIST
-	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE4"
 	skills = /datum/skills/military/survivor/upp_spec
 
 /datum/equipment_preset/survivor/upp/specialist/load_gear(mob/living/carbon/human/new_human)
@@ -145,7 +143,7 @@
 // /obj/effect/landmark/survivor_spawner/squad_leader
 /datum/equipment_preset/survivor/upp/squad_leader
 	name = "Survivor - UPP Squad Leader"
-	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+	paygrade = "UE5"
 	assignment = JOB_UPP_LEADER
 	rank = JOB_UPP_LEADER
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH,  LANGUAGE_GERMAN,  LANGUAGE_CHINESE)
@@ -173,7 +171,7 @@
 	faction = FACTION_UPP
 	faction_group = list(FACTION_UPP, FACTION_SURVIVOR)
 	skills = /datum/skills/colonial_synthetic
-	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
+	paygrade = "SYN"
 	idtype = /obj/item/card/id/dogtag
 	role_comm_title = "173/RECON Syn"
 
@@ -200,8 +198,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/upp/partial, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/airborne, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/uppsynth, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/synth/full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)

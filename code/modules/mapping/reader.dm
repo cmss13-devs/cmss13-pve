@@ -355,7 +355,10 @@
 //			SSmapping.build_area_turfs(z_index)
 
 	if(!no_changeturf)
-		for(var/turf/T as anything in block(bounds[MAP_MINX], bounds[MAP_MINY], bounds[MAP_MINZ], bounds[MAP_MAXX], bounds[MAP_MAXY], bounds[MAP_MAXZ]))
+		var/list/turfs = block(
+			locate(bounds[MAP_MINX], bounds[MAP_MINY], bounds[MAP_MINZ]),
+			locate(bounds[MAP_MAXX], bounds[MAP_MAXY], bounds[MAP_MAXZ]))
+		for(var/turf/T as anything in turfs)
 			//we do this after we load everything in. if we don't, we'll have weird atmos bugs regarding atmos adjacent turfs
 			T.AfterChange(CHANGETURF_IGNORE_AIR)
 
@@ -609,7 +612,7 @@
 
 		// We're gonna skip all the entries above the upper x, or maxx if cropMap is set
 		var/x_target = line_len - key_len + 1
-		var/x_step_count = ceil(x_target / key_len)
+		var/x_step_count = ROUND_UP(x_target / key_len)
 		var/final_x = relative_x + (x_step_count - 1)
 		var/x_delta_with = x_upper
 		if(crop_map)
@@ -795,8 +798,8 @@ GLOBAL_LIST_EMPTY(map_model_default)
 		// We can skip calling this proc every time we see XXX
 		if(!set_space \
 			&& no_changeturf \
-			&& length(members_attributes) == 2 \
-			&& length(members) == 2 \
+			&& members_attributes.len == 2 \
+			&& members.len == 2 \
 			&& members_attributes[1] == default_list \
 			&& members_attributes[2] == default_list \
 			&& members[2] == world.area \
@@ -878,8 +881,8 @@ GLOBAL_LIST_EMPTY(map_model_default)
 		// We can skip calling this proc every time we see XXX
 		if(!set_space \
 			&& no_changeturf \
-			&& length(members) == 2 \
-			&& length(members_attributes) == 2 \
+			&& members.len == 2 \
+			&& members_attributes.len == 2 \
 			&& length(members_attributes[1]) == 0 \
 			&& length(members_attributes[2]) == 0 \
 			&& (world.area in members) \
@@ -911,7 +914,7 @@ GLOBAL_LIST_EMPTY(map_model_default)
 
 	//The next part of the code assumes there's ALWAYS an /area AND a /turf on a given tile
 	//first instance the /area and remove it from the members list
-	index = length(members)
+	index = members.len
 	var/area/old_area
 	if(members[index] != /area/template_noop)
 		if(members_attributes[index] != default_list)

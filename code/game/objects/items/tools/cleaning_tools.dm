@@ -99,15 +99,13 @@
 	desc = "This cone is trying to warn you of something!"
 	icon_state = "cone"
 	icon = 'icons/obj/janitor.dmi'
-	item_icons = 'icons/mob/humans/onmob/head_0.dmi'
 	force = 1
 	throwforce = 3
 	throw_speed = SPEED_FAST
 	throw_range = 5
 	w_class = SIZE_SMALL
 	attack_verb = list("warned", "cautioned", "smashed")
-	flags_equip_slot = SLOT_HEAD
-	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+
 
 
 
@@ -152,7 +150,7 @@
 		return
 	..()
 
-/obj/item/tool/soap/weyland_yutani
+/obj/item/tool/soap/nanotrasen
 	desc = "A Weyland-Yutani brand bar of soap. Smells of phoron."
 	icon_state = "soapnt"
 

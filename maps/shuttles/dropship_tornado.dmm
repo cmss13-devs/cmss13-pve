@@ -5,6 +5,11 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
+"av" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "75"
+	},
+/area/shuttle/tornado)
 "aw" = (
 /obj/structure/shuttle/part/tornado{
 	icon_state = "5"
@@ -17,21 +22,28 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"aO" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/tornado)
 "bf" = (
 /obj/structure/shuttle/part/typhoon/transparent{
 	icon_state = "3"
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"bE" = (
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
+"bm" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "64"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/tornado)
+"bp" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/tornado)
 "bL" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -39,29 +51,13 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"cg" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "30"
-	},
-/area/shuttle/tornado)
 "ck" = (
 /obj/structure/shuttle/part/tornado/transparent{
 	icon_state = "35"
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"cx" = (
-/obj/structure/machinery/light/double{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"cP" = (
-/obj/structure/shuttle/part/tornado/gunpod_prop,
-/turf/template_noop,
-/area/shuttle/tornado)
-"cW" = (
+"cX" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full";
 	can_block_movement = 0
@@ -69,7 +65,18 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"db" = (
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/tornado)
 "dm" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -77,36 +84,10 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"du" = (
-/obj/structure/phone_base{
-	dir = 4;
-	pixel_x = -19;
-	pixel_y = 12;
-	layer = 3.1;
-	phone_category = "Dropship";
-	name = "Tornado telephone receiver";
-	phone_id = "Tornado"
+"dW" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "25"
 	},
-/obj/structure/machinery/computer/shuttle/dropship/flight/small{
-	pixel_y = 16;
-	pixel_x = 6
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
-	dir = 1;
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"dR" = (
-/obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "28"
-	},
-/obj/effect/attach_point/fuel/tornado{
-	layer = 3.1;
-	dir = 1
-	},
-/turf/template_noop,
 /area/shuttle/tornado)
 "eg" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -132,9 +113,40 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"gB" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "18"
+"fj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	id = "aft_door";
+	name = "\improper Tornado cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/tornado)
+"fr" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	layer = 5;
+	pixel_x = 8
+	},
+/obj/structure/machinery/computer/dropship_weapons/tornado/small{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
 "gJ" = (
@@ -153,22 +165,21 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"iJ" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/tornado)
-"jH" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "89a";
-	opacity = 0
+"hB" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
-"jK" = (
-/obj/effect/attach_point/crew_weapon/tornado,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+"hE" = (
+/obj/structure/shuttle/part/tornado/gunpod_prop,
+/turf/template_noop,
 /area/shuttle/tornado)
-"kf" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "48"
+"jP" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
 	},
 /area/shuttle/tornado)
 "kI" = (
@@ -179,15 +190,9 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"lA" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"lE" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "73"
+"lb" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "77"
 	},
 /area/shuttle/tornado)
 "lM" = (
@@ -196,29 +201,29 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"mp" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
+"mb" = (
+/obj/effect/attach_point/crew_weapon/tornado,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tornado)
-"mN" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "86a";
+"mt" = (
+/obj/docking_port/mobile/marine_dropship/tornado,
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"ni" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "89a";
 	opacity = 0
 	},
 /area/shuttle/tornado)
-"mU" = (
-/obj/structure/shuttle/part/tornado/transparent{
-	icon_state = "32"
-	},
-/obj/effect/attach_point/fuel/tornado{
-	layer = 3.1;
-	dir = 1
-	},
-/turf/template_noop,
-/area/shuttle/tornado)
-"qq" = (
+"oB" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
@@ -230,7 +235,14 @@
 	pixel_y = 27;
 	pixel_x = -2
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"pv" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
 /area/shuttle/tornado)
 "qF" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -238,60 +250,57 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"rA" = (
-/obj/structure/shuttle/part/tornado/transparent/nosecone{
-	icon_state = "102"
-	},
-/turf/template_noop,
-/area/shuttle/tornado)
-"tv" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "47"
-	},
-/area/shuttle/tornado)
-"tD" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"ui" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/tornado)
-"uE" = (
-/obj/structure/machinery/light/double{
-	dir = 8;
-	pixel_y = -5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"uI" = (
-/turf/closed/shuttle/dropship3/tornado{
+"rp" = (
+/turf/closed/shuttle/dropship2/tornado{
 	icon_state = "89b";
 	opacity = 0
 	},
 /area/shuttle/tornado)
-"vc" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "97a";
-	opacity = 0
+"sx" = (
+/obj/structure/shuttle/part/tornado/transparent/nosecone{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"sM" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "62"
 	},
 /area/shuttle/tornado)
-"vh" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "72"
+"uk" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "47"
+	},
+/area/shuttle/tornado)
+"uG" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"uL" = (
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Tornado telephone receiver";
+	phone_id = "Tornado"
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
 "vk" = (
@@ -300,26 +309,11 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"vm" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "64"
-	},
-/area/shuttle/tornado)
 "vz" = (
 /obj/structure/shuttle/part/tornado/transparent{
 	icon_state = "95a"
 	},
 /turf/template_noop,
-/area/shuttle/tornado)
-"vQ" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = -10
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tornado)
 "vU" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -333,20 +327,48 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"xo" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "77"
+"xj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
 	},
 /area/shuttle/tornado)
-"yF" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
-	pixel_y = 32
+"xr" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
 	},
-/turf/open/shuttle/dropship/light_grey_top_left,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/tornado)
-"zn" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "104"
+"xW" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"yQ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "76"
+	},
+/area/shuttle/tornado)
+"yZ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "72"
 	},
 /area/shuttle/tornado)
 "zp" = (
@@ -355,9 +377,10 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"AL" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "75"
+"zQ" = (
+/obj/effect/attach_point/crew_weapon/tornado,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
 	},
 /area/shuttle/tornado)
 "Bf" = (
@@ -366,17 +389,10 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"BF" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "76"
+"Bx" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
 	},
-/area/shuttle/tornado)
-"BH" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/structure/machinery/door/airlock/hatch/cockpit/three{
-	dir = 1
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tornado)
 "BK" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -389,54 +405,84 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"FE" = (
+"DX" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "28"
+	},
+/obj/effect/attach_point/fuel/tornado{
+	layer = 3.1
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"EQ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "103"
+	},
+/area/shuttle/tornado)
+"Fv" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "48"
+	},
+/area/shuttle/tornado)
+"FD" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "24"
+	},
+/area/shuttle/tornado)
+"FW" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Gl" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "31"
+	},
+/area/shuttle/tornado)
+"HH" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"HN" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"IN" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"FI" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "25"
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
-"FY" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"Hy" = (
-/obj/structure/shuttle/part/tornado/transparent/nosecone{
-	icon_state = "100"
+"IZ" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "32"
+	},
+/obj/effect/attach_point/fuel/tornado{
+	layer = 3.1
 	},
 /turf/template_noop,
-/area/shuttle/tornado)
-"Iy" = (
-/obj/docking_port/mobile/marine_dropship/tornado,
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"IU" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_full";
-	pixel_y = 22
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
-	dir = 1;
-	layer = 5;
-	pixel_x = 8
-	},
-/obj/structure/machinery/computer/dropship_weapons/tornado/small{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tornado)
 "Jt" = (
 /obj/structure/shuttle/part/typhoon/transparent{
@@ -444,47 +490,19 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"JI" = (
+"KB" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"KY" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "24"
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
-"Lu" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full";
-	can_block_movement = 0
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"LA" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "62"
-	},
-/area/shuttle/tornado)
-"LI" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"LQ" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "69"
-	},
-/area/shuttle/tornado)
-"Nc" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "67"
+"Mq" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "86b";
+	opacity = 0
 	},
 /area/shuttle/tornado)
 "Nd" = (
@@ -495,10 +513,15 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
+"NY" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "69"
+	},
+/area/shuttle/tornado)
 "Om" = (
 /turf/template_noop,
 /area/space)
-"OX" = (
+"Pb" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
@@ -506,15 +529,15 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"Po" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/tornado)
-"Pw" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "19"
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
+/area/shuttle/tornado)
+"Pi" = (
+/obj/structure/shuttle/part/tornado/transparent/nosecone{
+	icon_state = "102"
+	},
+/turf/template_noop,
 /area/shuttle/tornado)
 "Py" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -534,8 +557,13 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"Qi" = (
-/turf/open/shuttle/dropship/light_grey_top_right,
+"Qv" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
+	pixel_y = 32
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
 /area/shuttle/tornado)
 "QR" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -554,38 +582,32 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"Rm" = (
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tornado)
-"RK" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "103"
-	},
-/area/shuttle/tornado)
-"Sd" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "86b";
+"Sa" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "86a";
 	opacity = 0
 	},
 /area/shuttle/tornado)
-"Sf" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "83"
+"SX" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/tornado)
-"SM" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full";
-	can_block_movement = 0
+"Tz" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "73"
 	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tornado)
-"Ti" = (
-/turf/closed/shuttle/dropship3/tornado{
-	icon_state = "31"
+"TF" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"TM" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
 	},
 /area/shuttle/tornado)
 "TN" = (
@@ -594,9 +616,38 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"UT" = (
-/obj/effect/attach_point/crew_weapon/tornado,
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+"UF" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "104"
+	},
+/area/shuttle/tornado)
+"Vb" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Vj" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/tornado)
+"Ws" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "97a";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"Wt" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "18"
+	},
 /area/shuttle/tornado)
 "Wv" = (
 /obj/structure/shuttle/part/tornado/transparent{
@@ -610,20 +661,25 @@
 	},
 /turf/template_noop,
 /area/shuttle/tornado)
-"Ys" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
+"XL" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "83"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
+/area/shuttle/tornado)
+"Yg" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "30"
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3{
-	id = "aft_door";
-	name = "\improper Tornado cargo door"
+/area/shuttle/tornado)
+"Ym" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "19"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/tornado)
+"Zi" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "67"
+	},
 /area/shuttle/tornado)
 
 (1,1,1) = {"
@@ -637,7 +693,7 @@ Om
 Om
 kI
 qF
-dR
+DX
 TN
 et
 Om
@@ -671,14 +727,14 @@ Om
 Om
 Om
 kI
-AL
-vh
-Nc
-Nc
-LA
-gB
-cg
-KY
+av
+yZ
+Zi
+Zi
+sM
+Wt
+Yg
+FD
 Jt
 Nd
 Wv
@@ -691,79 +747,79 @@ Om
 Om
 Om
 Nd
-BF
-qq
-FE
-LI
-tD
-LI
-FE
-LI
-tv
-gB
-cg
-KY
-RK
+yQ
+oB
+xr
+HN
+FW
+HN
+xr
+HN
+uk
+Wt
+Yg
+FD
+EQ
 bf
 "}
 (5,1,1) = {"
-Hy
+sx
 vz
-Sd
-mN
-xo
-yF
-FY
-FY
-FY
-FY
-FY
-Po
-cW
-lA
-uE
-Rm
-Ys
+Mq
+Sa
+lb
+Qv
+TM
+TM
+TM
+TM
+TM
+pv
+cX
+hB
+IN
+TF
+fj
 Om
 "}
 (6,1,1) = {"
-cP
-vc
-du
-IU
-BH
-aO
-jK
-bE
-Iy
-bE
-jK
-aO
-Lu
-FY
-UT
-FY
-ui
+hE
+Ws
+uL
+fr
+SX
+Vj
+mb
+db
+mt
+db
+mb
+Vj
+xW
+TM
+zQ
+TM
+xj
 Om
 "}
 (7,1,1) = {"
-rA
+Pi
 Rk
-uI
-jH
-xo
-Qi
-FY
-FY
-FY
-FY
-FY
-iJ
-SM
-OX
-cx
-Rm
-ui
+rp
+ni
+lb
+jP
+TM
+TM
+TM
+TM
+TM
+Bx
+HH
+Pb
+KB
+TF
+xj
 Om
 "}
 (8,1,1) = {"
@@ -771,19 +827,19 @@ Om
 Om
 Om
 kI
-BF
-vQ
-JI
-mp
-mp
-mp
-JI
-mp
-kf
-Pw
-Ti
-FI
-zn
+yQ
+bp
+Vb
+uG
+uG
+uG
+Vb
+uG
+Fv
+Ym
+Gl
+dW
+UF
 eq
 "}
 (9,1,1) = {"
@@ -791,14 +847,14 @@ Om
 Om
 Om
 Nd
-Sf
-lE
-LQ
-LQ
-vm
-Pw
-Ti
-FI
+XL
+Tz
+NY
+NY
+bm
+Ym
+Gl
+dW
 lM
 kI
 Qe
@@ -817,7 +873,7 @@ Qf
 Qf
 QR
 dm
-mU
+IZ
 zp
 vU
 Nd

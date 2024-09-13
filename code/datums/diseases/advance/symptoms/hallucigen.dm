@@ -3,7 +3,7 @@
 
 Hallucigen
 
-	Very noticeable.
+	Very noticable.
 	Lowers resistance considerably.
 	Decreases stage speed.
 	Reduced transmittable.

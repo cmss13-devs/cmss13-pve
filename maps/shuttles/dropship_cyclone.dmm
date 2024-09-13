@@ -4,35 +4,11 @@
 	icon_state = "86b"
 	},
 /area/shuttle/cyclone)
-"aD" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = 10
-	},
-/obj/structure/extinguisher_cabinet/lifeboat{
-	pixel_y = 27;
-	pixel_x = -2
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
 "aP" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "3"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
-"aX" = (
-/obj/structure/shuttle/part/cyclone/transparent/nosecone{
-	icon_state = "102"
-	},
-/turf/template_noop,
-/area/shuttle/cyclone)
-"ba" = (
-/obj/docking_port/mobile/marine_dropship/cyclone,
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/shuttle/cyclone)
 "bw" = (
 /obj/structure/shuttle/part/cyclone/transparent{
@@ -47,26 +23,26 @@
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
-"cR" = (
-/turf/closed/shuttle/cyclone/transparent{
-	icon_state = "39"
-	},
-/area/shuttle/cyclone)
-"cW" = (
+"cm" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/obj/structure/machinery/light/double{
-	dir = 4
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
-"dx" = (
-/obj/effect/attach_point/fuel/cyclone{
-	dir = 1
+"cy" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8
 	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/cyclone)
+"cR" = (
 /turf/closed/shuttle/cyclone/transparent{
-	icon_state = "32"
+	icon_state = "39"
 	},
 /area/shuttle/cyclone)
 "dN" = (
@@ -74,17 +50,16 @@
 	icon_state = "42"
 	},
 /area/shuttle/cyclone)
-"ef" = (
+"eu" = (
 /obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"el" = (
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"eQ" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
 "eT" = (
 /obj/structure/shuttle/part/cyclone/transparent,
@@ -108,15 +83,30 @@
 /obj/effect/attach_point/electronics/cyclone,
 /turf/template_noop,
 /area/shuttle/cyclone)
-"fF" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/cyclone)
-"gx" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
-	dir = 4;
-	pixel_x = -23
+"fV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/cyclone)
+"gn" = (
+/obj/docking_port/mobile/marine_dropship/cyclone,
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/cyclone)
+"ha" = (
+/obj/effect/attach_point/fuel/cyclone,
+/turf/closed/shuttle/cyclone/transparent{
+	icon_state = "32"
+	},
 /area/shuttle/cyclone)
 "hd" = (
 /turf/closed/shuttle/cyclone/transparent{
@@ -141,57 +131,7 @@
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
-"iO" = (
-/obj/structure/shuttle/part/cyclone/transparent{
-	icon_state = "8"
-	},
-/turf/template_noop,
-/area/shuttle/cyclone)
-"lm" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"lV" = (
-/turf/closed/shuttle/cyclone{
-	icon_state = "18"
-	},
-/area/shuttle/cyclone)
-"mI" = (
-/turf/closed/shuttle/cyclone{
-	icon_state = "67"
-	},
-/area/shuttle/cyclone)
-"mO" = (
-/obj/structure/shuttle/part/cyclone/transparent{
-	icon_state = "71"
-	},
-/turf/template_noop,
-/area/shuttle/cyclone)
-"nQ" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
-	dir = 8;
-	pixel_x = 23
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"ob" = (
-/obj/structure/stairs/perspective,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"od" = (
-/turf/closed/shuttle/cyclone/transparent{
-	icon_state = "23"
-	},
-/area/shuttle/cyclone)
-"oP" = (
+"ia" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
 	icon_state = "p_stair_full";
@@ -206,13 +146,79 @@
 	pixel_x = 8;
 	layer = 5
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
-"oZ" = (
-/obj/structure/shuttle/part/cyclone/transparent/nosecone{
-	icon_state = "100"
+"iO" = (
+/obj/structure/shuttle/part/cyclone/transparent{
+	icon_state = "8"
 	},
 /turf/template_noop,
+/area/shuttle/cyclone)
+"lc" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/cyclone)
+"lV" = (
+/turf/closed/shuttle/cyclone{
+	icon_state = "18"
+	},
+/area/shuttle/cyclone)
+"ml" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
+"mI" = (
+/turf/closed/shuttle/cyclone{
+	icon_state = "67"
+	},
+/area/shuttle/cyclone)
+"mO" = (
+/obj/structure/shuttle/part/cyclone/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/cyclone)
+"nj" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/cyclone)
+"nH" = (
+/obj/structure/stairs/perspective,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
+"od" = (
+/turf/closed/shuttle/cyclone/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/cyclone)
+"oX" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
 "pb" = (
 /turf/closed/shuttle/cyclone{
@@ -228,21 +234,18 @@
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
-"py" = (
-/turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/cyclone)
 "pz" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "66"
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
-"pJ" = (
-/obj/effect/attach_point/fuel/cyclone{
-	dir = 1
+"qj" = (
+/obj/structure/machinery/light/double{
+	dir = 8
 	},
-/turf/closed/shuttle/cyclone/transparent{
-	icon_state = "28"
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
 	},
 /area/shuttle/cyclone)
 "qs" = (
@@ -259,9 +262,6 @@
 /turf/closed/shuttle/cyclone{
 	icon_state = "48"
 	},
-/area/shuttle/cyclone)
-"rf" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/shuttle/cyclone)
 "ro" = (
 /obj/structure/shuttle/part/cyclone/transparent{
@@ -284,15 +284,13 @@
 	icon_state = "37"
 	},
 /area/shuttle/cyclone)
-"ta" = (
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
+"sR" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"tu" = (
-/turf/open/shuttle/dropship/light_grey_top_right,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
 "tU" = (
 /turf/closed/shuttle/cyclone{
@@ -328,27 +326,6 @@
 	icon_state = "35"
 	},
 /area/shuttle/cyclone)
-"xD" = (
-/obj/structure/machinery/computer/shuttle/dropship/flight/small{
-	pixel_y = 16;
-	pixel_x = 6
-	},
-/obj/structure/phone_base{
-	dir = 4;
-	pixel_x = -19;
-	pixel_y = 12;
-	layer = 3.1;
-	phone_category = "Dropship";
-	name = "Cyclone telephone receiver";
-	phone_id = "Cyclone"
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
-	dir = 1;
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
 "xY" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "85"
@@ -356,27 +333,23 @@
 /obj/effect/attach_point/weapon/cyclone/left_fore,
 /turf/template_noop,
 /area/shuttle/cyclone)
-"yy" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit/two{
-	dir = 1
+"yA" = (
+/obj/structure/shuttle/part/cyclone/gunpod_prop,
+/turf/template_noop,
+/area/shuttle/cyclone)
+"yP" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4
 	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
 /area/shuttle/cyclone)
 "zz" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "80"
 	},
-/area/shuttle/cyclone)
-"zC" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = -10
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "zG" = (
 /turf/closed/shuttle/cyclone{
@@ -386,6 +359,29 @@
 "zH" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "38"
+	},
+/area/shuttle/cyclone)
+"zL" = (
+/obj/structure/shuttle/part/cyclone/transparent/nosecone{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/cyclone)
+"Ak" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	id = "aft_door";
+	name = "\improper Cyclone cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
 	},
 /area/shuttle/cyclone)
 "Ax" = (
@@ -407,8 +403,21 @@
 	icon_state = "89a"
 	},
 /area/shuttle/cyclone)
-"BI" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
+"BU" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 10
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -2
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
 "Cb" = (
 /obj/structure/shuttle/part/cyclone/transparent{
@@ -434,20 +443,40 @@
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
-"Ea" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
+"Dl" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
+	dir = 4;
+	pixel_x = -23
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/cyclone)
 "EP" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "75"
+	},
+/area/shuttle/cyclone)
+"Fz" = (
+/obj/effect/attach_point/fuel/cyclone,
+/turf/closed/shuttle/cyclone/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/cyclone)
+"FD" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
+"FV" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
 	},
 /area/shuttle/cyclone)
 "GE" = (
@@ -465,11 +494,12 @@
 	icon_state = "69"
 	},
 /area/shuttle/cyclone)
-"HS" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
+"Iz" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "IP" = (
 /obj/structure/shuttle/part/cyclone/transparent{
@@ -489,6 +519,20 @@
 	icon_state = "81"
 	},
 /area/shuttle/cyclone)
+"KQ" = (
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
+"KU" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
+	},
+/area/shuttle/cyclone)
 "MU" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "84"
@@ -496,27 +540,33 @@
 /obj/effect/attach_point/electronics/cyclone,
 /turf/template_noop,
 /area/shuttle/cyclone)
-"NS" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 4
+"Ob" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
-"Oi" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
+"Pg" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 16;
+	pixel_x = 6
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Cyclone telephone receiver";
+	phone_id = "Cyclone"
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
-	id = "aft_door";
-	name = "\improper Cyclone cargo door"
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/cyclone)
 "QN" = (
 /obj/structure/shuttle/part/cyclone/transparent{
@@ -525,19 +575,25 @@
 /obj/effect/attach_point/weapon/cyclone/right_wing,
 /turf/template_noop,
 /area/shuttle/cyclone)
-"QS" = (
-/obj/structure/machinery/light/double{
-	dir = 8
+"RR" = (
+/obj/structure/shuttle/part/cyclone/transparent/nosecone{
+	icon_state = "100"
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
-"Rj" = (
-/obj/structure/shuttle/part/cyclone/gunpod_prop,
 /turf/template_noop,
+/area/shuttle/cyclone)
+"Sk" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
 /area/shuttle/cyclone)
 "Sl" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "77"
+	},
+/area/shuttle/cyclone)
+"Ty" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
 "Uo" = (
@@ -545,12 +601,10 @@
 	icon_state = "64"
 	},
 /area/shuttle/cyclone)
-"VV" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 8
+"Vu" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "Wr" = (
 /turf/closed/shuttle/cyclone/transparent{
@@ -566,12 +620,6 @@
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "22"
 	},
-/area/shuttle/cyclone)
-"XH" = (
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "XU" = (
 /turf/closed/shuttle/cyclone/transparent{
@@ -612,7 +660,7 @@ IP
 wk
 fo
 vH
-pJ
+Fz
 Wv
 Da
 wk
@@ -642,10 +690,10 @@ wk
 wk
 xY
 Sl
-aD
-HS
-lm
-HS
+BU
+sR
+eu
+sR
 qs
 YL
 fr
@@ -655,56 +703,56 @@ Cf
 aP
 "}
 (4,1,1) = {"
-oZ
+RR
 cj
 ag
 vt
 ZU
-py
-eQ
-eQ
-BI
-VV
-eQ
-gx
-QS
-Oi
+nj
+Sk
+Sk
+Vu
+cy
+Sk
+Dl
+qj
+Ak
 wk
 wk
 "}
 (5,1,1) = {"
-Rj
+yA
 XU
-xD
-oP
-yy
-rf
-ta
-ta
-ba
-ob
-el
-el
-el
-Ea
+Pg
+ia
+Iz
+FV
+KQ
+KQ
+gn
+nH
+Ty
+Ty
+Ty
+fV
 wk
 wk
 "}
 (6,1,1) = {"
-aX
+zL
 ro
 XY
 Bt
 zz
-tu
-eQ
-eQ
-fF
-NS
-eQ
-eQ
-XH
-Ea
+Ob
+Sk
+Sk
+KU
+yP
+Sk
+Sk
+lc
+fV
 wk
 wk
 "}
@@ -714,10 +762,10 @@ wk
 wk
 bw
 Kv
-zC
-nQ
-cW
-ef
+ml
+oX
+FD
+cm
 qX
 sA
 zG
@@ -738,7 +786,7 @@ Uo
 GE
 Ax
 zH
-dx
+ha
 Wr
 Da
 wk

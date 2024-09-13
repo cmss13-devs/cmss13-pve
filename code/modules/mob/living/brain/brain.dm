@@ -22,7 +22,17 @@
 	. = ..()
 
 /mob/living/brain/say_understands(mob/other)//Goddamn is this hackish, but this say code is so odd
-	if (isSilicon(other))
+	if (isAI(other))
+		if(!(container && istype(container, /obj/item/device/mmi)))
+			return 0
+		else
+			return 1
+	if (istype(other, /mob/living/silicon/decoy))
+		if(!(container && istype(container, /obj/item/device/mmi)))
+			return 0
+		else
+			return 1
+	if (isrobot(other))
 		if(!(container && istype(container, /obj/item/device/mmi)))
 			return 0
 		else
@@ -57,5 +67,5 @@
 	set desc = "Relinquish your sentience and visit the land of the past."
 
 	if(mind && mind.player_entity)
-		mind.player_entity.update_panel_data(GLOB.round_statistics)
+		mind.player_entity.update_panel_data(round_statistics)
 	ghostize(TRUE)

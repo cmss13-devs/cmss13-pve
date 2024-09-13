@@ -3,7 +3,6 @@
 	action_icon_state = "ghost"
 
 /datum/action/ghost/action_activate()
-	. = ..()
 	if(!owner.client)
 		return
 
@@ -22,9 +21,6 @@
 
 	INVOKE_ASYNC(src, PROC_REF(remove_from), user)
 
-/datum/action/ghost/xeno
-	action_icon_state = "ghost_xeno"
-
 /datum/action/join_ert
 	name = "Join ERT"
 	action_icon_state = "join_ert"
@@ -39,7 +35,6 @@
 	qdel(src)
 
 /datum/action/join_ert/action_activate()
-	. = ..()
 	if(!owner.client)
 		return
 
@@ -52,7 +47,6 @@
 	listen_signal = COMSIG_KB_OBSERVER_JOIN_PREDATOR
 
 /datum/action/join_predator/action_activate()
-	. = ..()
 	var/mob/dead/observer/activator = owner
 	activator.join_as_yautja()
 
@@ -61,7 +55,6 @@
 	action_icon_state = "view_crew_manifest"
 
 /datum/action/observer_action/view_crew_manifest/action_activate()
-	. = ..()
 	show_browser(owner, GLOB.data_core.get_manifest(), "Crew Manifest", "manifest", "size=450x750")
 
 /datum/action/observer_action/view_hive_status
@@ -69,7 +62,6 @@
 	action_icon_state = "view_hive_status"
 
 /datum/action/observer_action/view_hive_status/action_activate()
-	. = ..()
 	var/mob/dead/observer/activator = owner
 	activator.hive_status()
 
@@ -79,7 +71,6 @@
 	listen_signal = COMSIG_KB_OBSERVER_JOIN_XENO
 
 /datum/action/observer_action/join_xeno/action_activate()
-	. = ..()
 	if(!owner.client)
 		return
 
@@ -96,7 +87,6 @@
 	listen_signal = COMSIG_KB_OBSERVER_JOIN_LESSER_DRONE
 
 /datum/action/observer_action/join_lesser_drone/action_activate()
-	. = ..()
 	if(!owner.client)
 		return
 

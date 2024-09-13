@@ -4,31 +4,27 @@
 	icon_state = "34"
 	},
 /area/shuttle/midway)
-"aP" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "bm" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "21"
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"cK" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 7
+"bs" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
-"dd" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
+"dr" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/midway)
 "dB" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -52,22 +48,11 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"eS" = (
-/obj/effect/attach_point/fuel/midway{
-	pixel_x = -32;
-	attach_id = 11;
-	dir = 1
+"go" = (
+/obj/structure/shuttle/part/midway/transparent/nosecone{
+	icon_state = "102"
 	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "33"
-	},
-/area/shuttle/midway)
-"fF" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/template_noop,
 /area/shuttle/midway)
 "gw" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -101,15 +86,57 @@
 	icon_state = "27"
 	},
 /area/shuttle/midway)
-"kL" = (
+"im" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
+/area/shuttle/midway)
+"iv" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"je" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"jy" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
-	pixel_x = -10
+	pixel_x = 10
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -2
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"jW" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"kC" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/midway)
 "ls" = (
 /turf/closed/shuttle/midway/transparent{
@@ -127,12 +154,6 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"mA" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "mE" = (
 /obj/structure/shuttle/part/midway/transparent,
 /turf/template_noop,
@@ -143,31 +164,30 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"od" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "89b"
+"mL" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
 	},
 /area/shuttle/midway)
-"oy" = (
+"mR" = (
 /obj/structure/bed/chair/dropship/passenger/folded{
 	pixel_y = 8;
 	buckling_y = 8
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"oB" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
-/obj/structure/machinery/light/double{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
-"oG" = (
-/obj/structure/shuttle/part/midway/gunpod_prop,
-/turf/template_noop,
+"od" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "89b"
+	},
 /area/shuttle/midway)
 "ro" = (
 /turf/closed/shuttle/midway/transparent{
@@ -194,6 +214,11 @@
 	icon_state = "31"
 	},
 /area/shuttle/midway)
+"tf" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "97a"
+	},
+/area/shuttle/midway)
 "ti" = (
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "86b"
@@ -205,38 +230,9 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"tT" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "ul" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "40"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"us" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
-	id = "aft_door"
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/midway)
-"ut" = (
-/obj/structure/shuttle/part/midway/transparent/nosecone{
-	icon_state = "102"
 	},
 /turf/template_noop,
 /area/shuttle/midway)
@@ -245,22 +241,10 @@
 	icon_state = "89a"
 	},
 /area/shuttle/midway)
-"vD" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_full";
-	pixel_y = 22
+"vJ" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
 	},
-/obj/structure/machinery/computer/dropship_weapons/midway/small{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
-	dir = 1;
-	pixel_x = 8;
-	layer = 5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "vN" = (
 /turf/closed/shuttle/midway/transparent{
@@ -277,6 +261,18 @@
 	icon_state = "62"
 	},
 /area/shuttle/midway)
+"xy" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
 "ym" = (
 /turf/closed/shuttle/midway{
 	icon_state = "69"
@@ -286,12 +282,6 @@
 /turf/closed/shuttle/midway{
 	icon_state = "54"
 	},
-/area/shuttle/midway)
-"yH" = (
-/obj/structure/shuttle/part/midway/transparent/nosecone{
-	icon_state = "100"
-	},
-/turf/template_noop,
 /area/shuttle/midway)
 "yN" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -311,26 +301,12 @@
 	icon_state = "23"
 	},
 /area/shuttle/midway)
-"zG" = (
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Aa" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/structure/machinery/door/airlock/hatch/cockpit/four,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "Aw" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "91"
 	},
 /obj/effect/attach_point/electronics/midway,
 /turf/template_noop,
-/area/shuttle/midway)
-"Bk" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/shuttle/midway)
 "Bn" = (
 /turf/closed/shuttle/midway{
@@ -353,19 +329,27 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"Ci" = (
-/turf/open/shuttle/dropship/light_grey_top_left,
+"Cc" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
 /area/shuttle/midway)
-"CX" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
+"Cm" = (
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 10
 	},
-/obj/structure/platform{
-	dir = 8
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "28"
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"Cr" = (
+/obj/structure/shuttle/part/midway/transparent/nosecone{
+	icon_state = "100"
+	},
+/turf/template_noop,
 /area/shuttle/midway)
 "Db" = (
 /turf/closed/shuttle/midway/transparent{
@@ -378,176 +362,38 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"DO" = (
-/obj/structure/machinery/light{
+"Ds" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
 	dir = 4;
-	pixel_x = 14
+	layer = 2.7
 	},
-/obj/structure/machinery/light/double{
-	dir = 4
+/obj/structure/platform{
+	dir = 8
 	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"DH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
 /area/shuttle/midway)
 "Ed" = (
 /turf/closed/shuttle/midway{
 	icon_state = "25"
 	},
 /area/shuttle/midway)
-"Fd" = (
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Fu" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "74"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"Gf" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "99a"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"Gk" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = 10
-	},
-/obj/structure/extinguisher_cabinet/lifeboat{
-	pixel_y = 27;
-	pixel_x = -2
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Hj" = (
-/turf/closed/shuttle/midway{
-	icon_state = "75"
-	},
-/area/shuttle/midway)
-"Hz" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "3"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"Ji" = (
-/turf/closed/shuttle/midway{
-	icon_state = "64"
-	},
-/area/shuttle/midway)
-"Jn" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Jq" = (
-/turf/closed/shuttle/midway{
-	icon_state = "72"
-	},
-/area/shuttle/midway)
-"Ks" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "71"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"Kw" = (
-/turf/template_noop,
-/area/template_noop)
-"Ln" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 7
-	},
-/obj/docking_port/mobile/marine_dropship/midway,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Lr" = (
-/turf/closed/shuttle/midway{
-	icon_state = "48"
-	},
-/area/shuttle/midway)
-"LZ" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "84"
-	},
-/obj/effect/attach_point/electronics/midway,
-/turf/template_noop,
-/area/shuttle/midway)
-"Mw" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "85"
-	},
-/obj/effect/attach_point/weapon/midway/left_fore,
-/turf/template_noop,
-/area/shuttle/midway)
-"NK" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Pc" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "78"
-	},
-/area/shuttle/midway)
-"PG" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "97a"
-	},
-/area/shuttle/midway)
-"PW" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
-"Qk" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "15"
-	},
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "40"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"SZ" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "5"
-	},
-/turf/template_noop,
-/area/shuttle/midway)
-"Tf" = (
-/obj/effect/attach_point/fuel/midway{
-	attach_id = 10;
-	dir = 1
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "28"
-	},
-/area/shuttle/midway)
-"TE" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/midway)
-"Uj" = (
-/turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/midway)
-"UI" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "90"
-	},
-/obj/effect/attach_point/weapon/midway/right_fore,
-/turf/template_noop,
-/area/shuttle/midway)
-"Vi" = (
+"EN" = (
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1;
 	pixel_x = 6;
@@ -566,7 +412,215 @@
 	name = "Midway telephone receiver";
 	phone_id = "Midway"
 	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"Fu" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "74"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Gf" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "99a"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Gh" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/midway)
+"Go" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/computer/dropship_weapons/midway/small{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	pixel_x = 8;
+	layer = 5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"Hj" = (
+/turf/closed/shuttle/midway{
+	icon_state = "75"
+	},
+/area/shuttle/midway)
+"Hz" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "3"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"HY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
+	id = "aft_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/midway)
+"Id" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"Ji" = (
+/turf/closed/shuttle/midway{
+	icon_state = "64"
+	},
+/area/shuttle/midway)
+"Jq" = (
+/turf/closed/shuttle/midway{
+	icon_state = "72"
+	},
+/area/shuttle/midway)
+"Ks" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Kv" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"Kw" = (
+/turf/template_noop,
+/area/template_noop)
+"Lr" = (
+/turf/closed/shuttle/midway{
+	icon_state = "48"
+	},
+/area/shuttle/midway)
+"LY" = (
+/obj/structure/shuttle/part/midway/gunpod_prop,
+/turf/template_noop,
+/area/shuttle/midway)
+"LZ" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "84"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/midway)
+"Mw" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "85"
+	},
+/obj/effect/attach_point/weapon/midway/left_fore,
+/turf/template_noop,
+/area/shuttle/midway)
+"Mz" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"ME" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"Pc" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "78"
+	},
+/area/shuttle/midway)
+"PP" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/four,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"Qk" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "15"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"QK" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/midway)
+"Rm" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/obj/docking_port/mobile/marine_dropship/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"SZ" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "5"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Tl" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/midway)
+"UI" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "90"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore,
+/turf/template_noop,
 /area/shuttle/midway)
 "Vu" = (
 /turf/closed/shuttle/midway{
@@ -578,19 +632,19 @@
 	icon_state = "73"
 	},
 /area/shuttle/midway)
-"WF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
+"WN" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/midway)
-"XS" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+"XH" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32;
+	attach_id = 11
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "33"
+	},
 /area/shuttle/midway)
 "Yr" = (
 /turf/closed/shuttle/midway{
@@ -626,7 +680,7 @@ yO
 Kw
 ul
 af
-Tf
+Cm
 dD
 BU
 Kw
@@ -656,10 +710,10 @@ Kw
 Kw
 Mw
 Yr
-Gk
-mA
-tT
-mA
+jy
+Cc
+dr
+Cc
 BI
 dE
 Bn
@@ -669,56 +723,56 @@ dB
 Hz
 "}
 (4,1,1) = {"
-yH
+Cr
 hL
 ti
 vN
 Pc
-Ci
-XS
-TE
-CX
-NK
-XS
-Jn
-zG
-us
+bs
+jW
+im
+Ds
+mL
+jW
+je
+QK
+HY
 Kw
 Kw
 "}
 (5,1,1) = {"
-oG
-PG
-Vi
-vD
-Aa
-Bk
-oy
-Bk
-Ln
-fF
-Fd
-cK
-Fd
-WF
+LY
+tf
+EN
+Go
+PP
+WN
+mR
+WN
+Rm
+kC
+ME
+Id
+ME
+DH
 Kw
 Kw
 "}
 (6,1,1) = {"
-ut
+go
 Gf
 od
 ux
 ro
-Uj
-XS
-dd
-aP
-NK
-XS
-XS
-DO
-WF
+Gh
+jW
+vJ
+Mz
+mL
+jW
+jW
+Kv
+DH
 Kw
 Kw
 "}
@@ -728,10 +782,10 @@ Kw
 Kw
 UI
 rq
-kL
-PW
-oB
-PW
+xy
+iv
+Tl
+iv
 Lr
 yB
 sl
@@ -770,7 +824,7 @@ hO
 Kw
 mG
 ZZ
-eS
+XH
 if
 bm
 Kw

@@ -72,18 +72,21 @@
 	// by default, vis_contents is inherited from the turf that was here before
 	vis_contents.Cut()
 
-	GLOB.turfs += src
-
+	turfs += src
+	if(is_ground_level(z))
+		z1turfs += src
 
 	assemble_baseturfs()
 
 	levelupdate()
 
-	pass_flags = GLOB.pass_flags_cache[type]
+	visibilityChanged()
+
+	pass_flags = pass_flags_cache[type]
 	if (isnull(pass_flags))
 		pass_flags = new()
 		initialize_pass_flags(pass_flags)
-		GLOB.pass_flags_cache[type] = pass_flags
+		pass_flags_cache[type] = pass_flags
 	else
 		initialize_pass_flags()
 
@@ -100,6 +103,11 @@
 
 	if(opacity)
 		directional_opacity = ALL_CARDINALS
+
+	//Get area light
+	var/area/A = loc
+	if(A?.lighting_effect)
+		overlays += A.lighting_effect
 
 	return INITIALIZE_HINT_NORMAL
 
@@ -120,6 +128,7 @@
 		for(var/I in B.vars)
 			B.vars[I] = null
 		return
+	visibilityChanged()
 	flags_atom &= ~INITIALIZED
 	..()
 
@@ -370,7 +379,7 @@
 		next_target = initial(current_target.baseturfs)
 
 	baseturfs = new_baseturfs
-	created_baseturf_lists[new_baseturfs[length(new_baseturfs)]] = new_baseturfs.Copy()
+	created_baseturf_lists[new_baseturfs[new_baseturfs.len]] = new_baseturfs.Copy()
 	return new_baseturfs
 
 // Creates a new turf
@@ -456,14 +465,14 @@
 		return
 	if(length(baseturfs))
 		var/list/new_baseturfs = baseturfs.Copy()
-		var/turf_type = new_baseturfs[max(1, length(new_baseturfs) - amount + 1)]
+		var/turf_type = new_baseturfs[max(1, new_baseturfs.len - amount + 1)]
 		while(ispath(turf_type, /turf/baseturf_skipover))
 			amount++
-			if(amount > length(new_baseturfs))
+			if(amount > new_baseturfs.len)
 				CRASH("The bottomost baseturf of a turf is a skipover [src]([type])")
-			turf_type = new_baseturfs[max(1, length(new_baseturfs) - amount + 1)]
-		new_baseturfs.len -= min(amount, length(new_baseturfs) - 1) // No removing the very bottom
-		if(length(new_baseturfs) == 1)
+			turf_type = new_baseturfs[max(1, new_baseturfs.len - amount + 1)]
+		new_baseturfs.len -= min(amount, new_baseturfs.len - 1) // No removing the very bottom
+		if(new_baseturfs.len == 1)
 			new_baseturfs = new_baseturfs[1]
 		return ChangeTurf(turf_type, new_baseturfs, flags)
 
@@ -478,20 +487,18 @@
 
 /turf/proc/AdjacentTurfs()
 	var/L[] = new()
-	FOR_DOVIEW(var/turf/t, 1, src, HIDE_INVISIBLE_OBSERVER)
+	for(var/turf/t in oview(src,1))
 		if(!t.density)
 			if(!LinkBlocked(src, t) && !TurfBlockedNonWindow(t))
 				L.Add(t)
-	FOR_DOVIEW_END
 	return L
 
 /turf/proc/AdjacentTurfsSpace()
 	var/L[] = new()
-	FOR_DOVIEW(var/turf/t, 1, src, HIDE_INVISIBLE_OBSERVER)
+	for(var/turf/t in oview(src,1))
 		if(!t.density)
 			if(!LinkBlocked(src, t) && !TurfBlockedNonWindow(t))
 				L.Add(t)
-	FOR_DOVIEW_END
 	return L
 
 /turf/proc/Distance(turf/t)
@@ -518,10 +525,10 @@
 		return
 
 	var/amount = size
-	var/spread = floor(sqrt(size)*1.5)
+	var/spread = round(sqrt(size)*1.5)
 
 	var/list/turfs = list()
-	for(var/turf/open/floor/F in range(spread, src))
+	for(var/turf/open/floor/F in range(src,spread))
 		turfs += F
 
 	switch(A.ceiling)
@@ -776,9 +783,9 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	insert_self_into_baseturfs()
 	var/turf/change_type
 	if(length(new_baseturfs))
-		change_type = new_baseturfs[length(new_baseturfs)]
+		change_type = new_baseturfs[new_baseturfs.len]
 		new_baseturfs.len--
-		if(length(new_baseturfs))
+		if(new_baseturfs.len)
 			baseturfs += new_baseturfs
 	else
 		change_type = new_baseturfs
@@ -819,7 +826,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	var/static/list/ignored_atoms = typecacheof(list(/mob/dead, /obj/effect/landmark, /obj/docking_port))
 	var/list/removable_contents = typecache_filter_list_reverse(GetAllContentsIgnoring(ignore_typecache), ignored_atoms)
 	removable_contents -= src
-	for(var/i in 1 to length(removable_contents))
+	for(var/i in 1 to removable_contents.len)
 		var/thing = removable_contents[i]
 		qdel(thing, force=TRUE)
 
@@ -836,9 +843,9 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(depth)
 		var/list/target_baseturfs
 		if(length(copytarget.baseturfs))
-			// with default inputs this would be Copy(clamp(2, -INFINITY, length(baseturfs)))
+			// with default inputs this would be Copy(clamp(2, -INFINITY, baseturfs.len))
 			// Don't forget a lower index is lower in the baseturfs stack, the bottom is baseturfs[1]
-			target_baseturfs = copytarget.baseturfs.Copy(clamp(1 + ignore_bottom, 1 + length(copytarget.baseturfs) - depth, length(copytarget.baseturfs)))
+			target_baseturfs = copytarget.baseturfs.Copy(clamp(1 + ignore_bottom, 1 + copytarget.baseturfs.len - depth, copytarget.baseturfs.len))
 		else if(!ignore_bottom)
 			target_baseturfs = list(copytarget.baseturfs)
 		if(target_baseturfs)

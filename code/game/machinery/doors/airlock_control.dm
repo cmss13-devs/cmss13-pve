@@ -128,12 +128,10 @@
 	if(!forced)
 		send_status()
 
-
 /obj/structure/machinery/door/airlock/close(forced)
 	. = ..()
 	if(!forced)
 		send_status()
-
 
 /obj/structure/machinery/door/airlock/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)

@@ -23,6 +23,7 @@
 			// If not detecting with motion camera...
 
 /obj/structure/machinery/camera/proc/newTarget(mob/target)
+	if (isAI(target)) return 0
 	if (detectTime == 0)
 		detectTime = world.time // start the clock
 	if (!(target in motionTargets))
@@ -32,12 +33,15 @@
 /obj/structure/machinery/camera/proc/lostTarget(mob/target)
 	if (target in motionTargets)
 		motionTargets -= target
-	if (length(motionTargets) == 0)
+	if (motionTargets.len == 0)
 		cancelAlarm()
 
 /obj/structure/machinery/camera/proc/cancelAlarm()
 	if (!status || (stat & NOPOWER))
 		return 0
+	if (detectTime == -1)
+		for (var/mob/living/silicon/aiPlayer in ai_mob_list)
+			aiPlayer.cancelAlarm("Motion", get_area(src), src)
 	detectTime = 0
 	return 1
 
@@ -45,5 +49,7 @@
 	if (!status || (stat & NOPOWER))
 		return 0
 	if (!detectTime) return 0
+	for (var/mob/living/silicon/aiPlayer in ai_mob_list)
+		aiPlayer.triggerAlarm("Motion", get_area(src), list(src), src)
 	detectTime = -1
 	return 1

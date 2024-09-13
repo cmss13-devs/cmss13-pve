@@ -1,23 +1,19 @@
 /datum/emote/living/carbon/human/synthetic/working_joe/quip
 	category = JOE_EMOTE_CATEGORY_QUIP
 
-/datum/emote/living/carbon/human/synthetic/working_joe/quip/alwaysknow // THE FUNNY LINE
+/datum/emote/living/carbon/human/synthetic/working_joe/quip/alwaysknow
 	key = "alwaysknow"
 	key_third_person = "workingjoe"
 	sound = 'sound/voice/joe/alwaysknow.ogg'
-	haz_sound = 'sound/voice/joe/alwaysknow_haz.ogg'
 	say_message = "You always know a Working Joe."
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
-	joe_flag = WORKING_JOE_EMOTE|HAZARD_JOE_EMOTE
 
 /datum/emote/living/carbon/human/synthetic/working_joe/quip/awful_mess
 	key = "awful"
 	key_third_person = "mess"
 	sound = 'sound/voice/joe/awful.ogg'
-	haz_sound = 'sound/voice/joe/awful_haz.ogg'
 	say_message = "Tut, tut. What an awful mess."
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
-	joe_flag = WORKING_JOE_EMOTE|HAZARD_JOE_EMOTE
 
 /datum/emote/living/carbon/human/synthetic/working_joe/quip/inexpensive
 	key = "inexpensive"
@@ -48,13 +44,6 @@
 	sound = 'sound/voice/joe/seegson_behind.ogg'
 	say_message = "With Seegson, there is someone behind you, helping you every single step of the way."
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
-
-/datum/emote/living/carbon/human/synthetic/working_joe/quip/seegson_tomorrow
-	key = "seegsontomorrow"
-	haz_sound = 'sound/voice/joe/tomorrow_together_haz.ogg'
-	say_message = "Seegson; tomorrow, together."
-	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
-	joe_flag = HAZARD_JOE_EMOTE
 
 /datum/emote/living/carbon/human/synthetic/working_joe/quip/seegson_standards
 	key = "seegsonstandards"

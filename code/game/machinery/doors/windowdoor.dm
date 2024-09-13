@@ -15,7 +15,7 @@
 /obj/structure/machinery/door/window/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(update_icon)), 1)
-	if (LAZYLEN(src.req_access))
+	if (src.req_access && src.req_access.len)
 		src.icon_state = "[src.icon_state]"
 		src.base_state = src.icon_state
 
@@ -105,9 +105,9 @@
 			ae = new/obj/item/circuitboard/airlock( src.loc )
 			if(!src.req_access)
 				src.check_access()
-			if(length(src.req_access))
+			if(src.req_access.len)
 				ae.conf_access = src.req_access
-			else if (LAZYLEN(src.req_one_access))
+			else if (src.req_one_access && src.req_one_access.len)
 				ae.conf_access = src.req_one_access
 				ae.one_access = 1
 		else
@@ -125,7 +125,7 @@
 /obj/structure/machinery/door/window/bullet_act(obj/projectile/Proj)
 	bullet_ping(Proj)
 	if(Proj.ammo.damage)
-		take_damage(floor(Proj.ammo.damage / 2))
+		take_damage(round(Proj.ammo.damage / 2))
 		if(Proj.ammo.damage_type == BRUTE)
 			playsound(src.loc, 'sound/effects/Glasshit.ogg', 25, 1)
 	return 1
@@ -189,9 +189,9 @@
 				ae = new/obj/item/circuitboard/airlock( src.loc )
 				if(!src.req_access)
 					src.check_access()
-				if(length(src.req_access))
+				if(src.req_access.len)
 					ae.conf_access = src.req_access
-				else if (length(src.req_one_access))
+				else if (src.req_one_access.len)
 					ae.conf_access = src.req_one_access
 					ae.one_access = 1
 			else
@@ -295,12 +295,12 @@
 
 /obj/structure/machinery/door/window/ultra/Initialize(mapload, ...)
 	. = ..()
-	if(is_mainship_level(z))
-		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(impact))
+	GLOB.hijack_deletable_windows += src
+
+/obj/structure/machinery/door/window/ultra/Destroy()
+	GLOB.hijack_deletable_windows -= src
+	return ..()
 
 // No damage taken.
 /obj/structure/machinery/door/window/ultra/attackby(obj/item/I, mob/user)
 	return try_to_activate_door(user)
-
-/obj/structure/machinery/door/window/ultra/proc/impact()
-	qdel(src)

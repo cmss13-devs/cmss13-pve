@@ -1,98 +1,71 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/open/auto_turf/snow/layer0,
-/area/shiva/exterior/cp_lz2)
-"b" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	density = 0;
-	dir = 2;
-	id = "sslz_shutters";
-	name = "\improper Landing Zone Shutters"
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/shiva/exterior/lz2_fortress)
-"g" = (
-/turf/open/auto_turf/snow/layer2,
-/area/shiva/exterior/cp_lz2)
-"h" = (
-/obj/structure/machinery/door_control{
-	id = "sslz_shutters";
-	pixel_x = -22
-	},
-/turf/open/floor/shiva/radiator_tile,
-/area/shiva/exterior/lz2_fortress)
-"j" = (
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"l" = (
 /turf/closed/wall/shiva/prefabricated/reinforced/hull,
 /area/shiva/exterior/lz2_fortress)
-"r" = (
-/turf/open/auto_turf/snow/layer4,
-/area/shiva/exterior/cp_lz2)
-"t" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	density = 0;
-	dir = 2;
-	id = "slz_shutters";
-	name = "\improper Landing Zone Shutters"
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/shiva/exterior/lz2_fortress)
-"u" = (
-/obj/structure/machinery/door_control{
-	id = "sslz_shutters";
-	pixel_x = 25
-	},
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"v" = (
-/obj/item/lightstick/red/spoke/planted{
-	layer = 3.1;
-	pixel_x = -13;
-	pixel_y = 25
-	},
-/turf/open/auto_turf/snow/layer1,
-/area/shiva/exterior/cp_lz2)
-"w" = (
-/obj/structure/machinery/door_control{
-	id = "slz_shutters";
-	pixel_x = -22
-	},
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"A" = (
-/turf/open/floor/shiva/multi_tiles/north,
-/area/shiva/exterior/lz2_fortress)
-"E" = (
-/obj/structure/foamed_metal,
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"H" = (
-/obj/structure/machinery/door_control{
-	id = "sslz_shutters";
-	pixel_x = 25
-	},
-/turf/open/floor/shiva/radiator_tile,
-/area/shiva/exterior/lz2_fortress)
-"K" = (
-/obj/item/lightstick/red/spoke/planted{
-	pixel_x = 12;
-	pixel_y = 25
-	},
-/turf/open/floor/shiva/radiator_tile,
-/area/shiva/exterior/lz2_fortress)
-"L" = (
+"f" = (
 /obj/structure/machinery/door_control{
 	id = "slz_shutters";
 	pixel_x = -7
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced/hull,
 /area/shiva/exterior/lz2_fortress)
-"M" = (
-/turf/open/floor/shiva/floor3,
+"i" = (
+/obj/structure/machinery/door_control{
+	id = "slz_shutters";
+	pixel_x = -22
+	},
+/turf/open/floor/shiva{
+	dir = 1
+	},
 /area/shiva/exterior/lz2_fortress)
-"O" = (
+"j" = (
+/turf/open/floor/shiva{
+	dir = 1
+	},
+/area/shiva/exterior/lz2_fortress)
+"l" = (
+/turf/open/floor/shiva{
+	dir = 1;
+	icon_state = "multi_tiles"
+	},
+/area/shiva/exterior/lz2_fortress)
+"m" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/shiva{
+	dir = 1
+	},
+/area/shiva/exterior/lz2_fortress)
+"o" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 12;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/snow/layer1,
+/area/shiva/exterior/cp_lz2)
+"q" = (
+/obj/structure/machinery/door_control{
+	id = "sslz_shutters";
+	pixel_x = -22
+	},
+/turf/open/floor/shiva{
+	icon_state = "radiator_tile"
+	},
+/area/shiva/exterior/lz2_fortress)
+"r" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	density = 0;
+	dir = 2;
+	id = "sslz_shutters";
+	name = "\improper Landing Zone Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/shiva/exterior/lz2_fortress)
+"t" = (
+/turf/open/floor/shiva{
+	icon_state = "floor3"
+	},
+/area/shiva/exterior/lz2_fortress)
+"w" = (
 /obj/item/lightstick/red/spoke/planted{
 	layer = 3.1;
 	pixel_x = -13;
@@ -102,100 +75,150 @@
 	id = "slz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva/radiator_tile,
+/turf/open/floor/shiva{
+	icon_state = "radiator_tile"
+	},
 /area/shiva/exterior/lz2_fortress)
-"X" = (
+"z" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	density = 0;
+	dir = 2;
+	id = "slz_shutters";
+	name = "\improper Landing Zone Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/shiva/exterior/lz2_fortress)
+"B" = (
+/turf/open/auto_turf/snow/layer0,
+/area/shiva/exterior/cp_lz2)
+"F" = (
 /obj/item/lightstick/red/spoke/planted{
-	pixel_x = 12;
+	layer = 3.1;
+	pixel_x = -13;
 	pixel_y = 25
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/shiva/exterior/cp_lz2)
-"Z" = (
+"I" = (
+/turf/open/auto_turf/snow/layer4,
+/area/shiva/exterior/cp_lz2)
+"J" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 12;
+	pixel_y = 25
+	},
+/turf/open/floor/shiva{
+	icon_state = "radiator_tile"
+	},
+/area/shiva/exterior/lz2_fortress)
+"Q" = (
 /obj/structure/machinery/door_control{
 	id = "sslz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva/north,
+/turf/open/floor/shiva{
+	dir = 1
+	},
+/area/shiva/exterior/lz2_fortress)
+"T" = (
+/obj/structure/machinery/door_control{
+	id = "sslz_shutters";
+	pixel_x = 25
+	},
+/turf/open/floor/shiva{
+	icon_state = "radiator_tile"
+	},
+/area/shiva/exterior/lz2_fortress)
+"V" = (
+/turf/open/auto_turf/snow/layer2,
+/area/shiva/exterior/cp_lz2)
+"Z" = (
+/obj/structure/machinery/door_control{
+	id = "sslz_shutters";
+	pixel_x = 25
+	},
+/turf/open/floor/shiva{
+	dir = 1
+	},
 /area/shiva/exterior/lz2_fortress)
 
 (1,1,1) = {"
 j
-l
-l
-l
-l
-l
-l
-r
+a
+a
+a
+a
+a
+a
+I
 "}
 (2,1,1) = {"
 j
-l
-l
-l
-l
-l
-l
-r
+a
+a
+a
+a
+a
+a
+I
 "}
 (3,1,1) = {"
 j
-O
-t
 w
-Z
-b
-h
-v
+z
+i
+Q
+r
+q
+F
 "}
 (4,1,1) = {"
-M
-A
 t
+l
+z
 j
 j
-b
-A
-a
+r
+l
+B
 "}
 (5,1,1) = {"
-M
-A
 t
+l
+z
 j
 j
-b
-A
-a
+r
+l
+B
 "}
 (6,1,1) = {"
 j
-K
-t
+J
+z
 j
-u
-b
-H
-X
+Z
+r
+T
+o
 "}
 (7,1,1) = {"
 j
-L
-l
-L
-l
-l
-l
-g
+f
+a
+f
+a
+a
+a
+V
 "}
 (8,1,1) = {"
-E
-l
-l
-l
-l
-l
-l
-g
+m
+a
+a
+a
+a
+a
+a
+V
 "}

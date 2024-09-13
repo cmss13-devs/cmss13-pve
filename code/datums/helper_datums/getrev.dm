@@ -41,15 +41,13 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 	return msg.Join("\n")
 
 /datum/getrev/proc/GetTestMergeInfo(header = TRUE)
-	if(!length(testmerge))
+	if(!testmerge.len)
 		return ""
 	. = header ? "The following pull requests are currently test merged:<br>" : ""
 	for(var/line in testmerge)
 		var/datum/tgs_revision_information/test_merge/tm = line
 		var/cm = tm.head_commit
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
-		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.admin_holder))
-			continue
 		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a><br>"
 
 /client/verb/showrevinfo()
@@ -70,7 +68,7 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 	var/pc = revdata.originmastercommit
 	if(pc)
 		msg += "Master commit: <a href=\"[CONFIG_GET(string/githuburl)]/commit/[pc]\">[pc]</a>"
-	if(length(revdata.testmerge))
+	if(revdata.testmerge.len)
 		msg += revdata.GetTestMergeInfo()
 	if(revdata.commit && revdata.commit != revdata.originmastercommit)
 		msg += "Local commit: [revdata.commit]"

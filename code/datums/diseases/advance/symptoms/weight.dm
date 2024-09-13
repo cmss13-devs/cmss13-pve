@@ -3,7 +3,7 @@
 
 Weight Gain
 
-	Very Very Noticeable.
+	Very Very Noticable.
 	Decreases resistance.
 	Decreases stage speed.
 	Reduced transmittable.
@@ -43,7 +43,7 @@ Bonus
 
 Weight Loss
 
-	Very Very Noticeable.
+	Very Very Noticable.
 	Decreases resistance.
 	Decreases stage speed.
 	Reduced Transmittable.
@@ -84,7 +84,7 @@ Bonus
 
 Weight Even
 
-	Very Noticeable.
+	Very Noticable.
 	Decreases resistance.
 	Decreases stage speed.
 	Reduced transmittable.

@@ -1,43 +1,157 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"ab" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 5
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"ac" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 1
+	},
+/area/desert_dam/exterior/river/riverside_east)
 "ad" = (
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/deep,
-/area/desert_dam/exterior/river/riverside_east)
-"ae" = (
-/obj/structure/platform{
-	dir = 4
+/turf/open/gm/river/desert/shallow_corner{
+	icon_state = "shallow_c";
+	dir = 8
 	},
+/area/desert_dam/exterior/river/riverside_east)
+"af" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/desert_shore1{
+	icon_state = "shore1";
+	dir = 1
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"ag" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached1"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"ah" = (
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 1;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_s"
+	},
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"ai" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aj" = (
+/obj/effect/decal/sand_overlay/sand1/corner1,
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"ak" = (
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_s"
+	},
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached9"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"al" = (
+/obj/effect/decal/sand_overlay/sand1/corner1{
+	dir = 4;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_c"
+	},
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"an" = (
+/obj/structure/platform_decoration{
+	dir = 8;
+	icon_state = "platform_deco"
+	},
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"ap" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/deep/covered,
+/area/desert_dam/exterior/river/riverside_east)
+"aq" = (
+/turf/open/asphalt/cement_sunbleached,
+/area/desert_dam/exterior/valley/valley_medical)
+"ar" = (
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_s"
+	},
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached1"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"as" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/structure/platform,
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached14"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"at" = (
 /obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river/riverside_east)
-"ai" = (
-/turf/open/desert/dirt,
-/area/desert_dam/exterior/valley/valley_bridge)
-"aj" = (
-/turf/closed/wall/rock/orange,
-/area/desert_dam/exterior/rock)
-"an" = (
-/obj/structure/platform{
-	dir = 4
+"au" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached3"
 	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/deep,
-/area/desert_dam/exterior/river/riverside_east)
+/area/desert_dam/exterior/valley/valley_medical)
 "av" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /obj/effect/blocker/toxic_water/Group_2,
-/obj/structure/platform{
-	dir = 4
+/turf/open/desert/desert_shore/shore_corner2{
+	icon_state = "shore_corner2";
+	dir = 8
 	},
-/turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
-"aw" = (
+"ax" = (
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/desert/desert_shore/shore_corner2{
+	icon_state = "shore_corner2";
+	dir = 8
+	},
 /area/desert_dam/exterior/river/riverside_east)
 "ay" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached1"
+	},
+/area/desert_dam/exterior/valley/valley_medical)
+"az" = (
 /obj/structure/platform{
 	dir = 1
 	},
@@ -47,529 +161,528 @@
 	},
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_east)
-"aC" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/obj/structure/platform{
-	dir = 4
+"aA" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached15"
 	},
-/turf/open/gm/river/desert/deep,
-/area/desert_dam/exterior/river/riverside_east)
+/area/desert_dam/exterior/valley/valley_bridge)
 "aD" = (
+/obj/structure/platform,
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_corner/covered,
-/area/desert_dam/exterior/river/riverside_east)
-"aI" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/gm/river/desert/deep,
-/area/desert_dam/exterior/river/riverside_east)
-"aJ" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_corner,
-/area/desert_dam/exterior/river/riverside_east)
-"aM" = (
 /obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
-"aN" = (
+"aE" = (
+/obj/structure/platform{
+	dir = 1
+	},
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_corner2,
+/turf/open/desert/desert_shore/shore_edge1{
+	icon_state = "shore_edge1";
+	dir = 4
+	},
 /area/desert_dam/exterior/river/riverside_east)
-"aO" = (
+"aF" = (
+/obj/structure/platform_decoration{
+	icon_state = "platform_deco";
+	dir = 4
+	},
 /obj/effect/blocker/toxic_water/Group_2,
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow,
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 8
+	},
 /area/desert_dam/exterior/river/riverside_east)
-"aP" = (
+"aG" = (
+/obj/structure/platform_decoration,
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aH" = (
+/obj/structure/platform,
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_edge,
+/area/desert_dam/exterior/river/riverside_east)
+"aI" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/shore_corner2{
+	icon_state = "shore_corner2";
+	dir = 1
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aJ" = (
+/turf/closed/wall/rock/orange,
+/area/desert_dam/exterior/rock)
+"aK" = (
 /obj/structure/platform_decoration,
 /obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
-"aQ" = (
-/obj/structure/platform,
+"aM" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/shore_corner2{
+	icon_state = "shore_corner2";
+	dir = 1
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aN" = (
+/obj/structure/platform_decoration{
+	icon_state = "platform_deco";
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 9
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aO" = (
+/turf/open/desert/dirt,
+/area/desert_dam/exterior/valley/valley_bridge)
+"aP" = (
+/obj/structure/platform{
+	dir = 1
+	},
 /obj/effect/blocker/toxic_water/Group_2,
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/gm/river/desert/deep,
+/area/desert_dam/exterior/river/riverside_east)
+"aQ" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
 "aR" = (
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/covered,
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 1
+	},
 /area/desert_dam/exterior/river/riverside_east)
 "aS" = (
 /obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_corner{
+	icon_state = "shallow_c";
+	dir = 1
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"aT" = (
+/obj/effect/blocker/toxic_water/Group_2,
 /obj/structure/platform,
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge,
-/area/desert_dam/exterior/river/riverside_east)
-"aT" = (
-/obj/structure/platform,
-/obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_east)
 "aU" = (
-/obj/structure/platform,
 /obj/effect/blocker/toxic_water/Group_2,
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/gm/river/desert/shallow_edge/covered,
 /area/desert_dam/exterior/river/riverside_east)
 "aV" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_edge1,
-/area/desert_dam/exterior/river/riverside_east)
-"aW" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/desert_shore1,
-/area/desert_dam/exterior/river/riverside_east)
-"aX" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/desert_shore1,
-/area/desert_dam/exterior/river/riverside_east)
-"bf" = (
-/turf/open/asphalt/cement_sunbleached,
-/area/desert_dam/exterior/valley/valley_medical)
-"bm" = (
-/obj/structure/platform,
-/turf/open/asphalt/cement_sunbleached,
-/area/desert_dam/exterior/valley/valley_medical)
-"jl" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
-/area/desert_dam/exterior/valley/valley_bridge)
-"lx" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_corner/north,
-/area/desert_dam/exterior/river/riverside_east)
-"mC" = (
-/obj/effect/decal/sand_overlay/sand1/corner1{
-	dir = 1
-	},
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_bridge)
-"nC" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"oh" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/covered/east,
-/area/desert_dam/exterior/river/riverside_east)
-"sW" = (
-/obj/effect/decal/sand_overlay/sand1{
-	dir = 8
-	},
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
-/area/desert_dam/exterior/valley/valley_medical)
-"tk" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_corner2/west,
-/area/desert_dam/exterior/river/riverside_east)
-"uu" = (
-/obj/effect/decal/sand_overlay/sand1/corner1,
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_medical)
-"wh" = (
-/obj/structure/platform_decoration,
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"wZ" = (
-/obj/structure/stairs{
-	dir = 8
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
-/area/desert_dam/exterior/valley/valley_medical)
-"xf" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
-/area/desert_dam/exterior/valley/valley_bridge)
-"xU" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/gm/river/desert/shallow_edge/north,
-/area/desert_dam/exterior/river/riverside_east)
-"zv" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
-/area/desert_dam/exterior/valley/valley_bridge)
-"EQ" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
-/area/desert_dam/exterior/valley/valley_medical)
-"FF" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
-/area/desert_dam/exterior/valley/valley_medical)
-"GJ" = (
-/obj/structure/platform,
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"GY" = (
-/obj/effect/decal/sand_overlay/sand1/corner1{
-	dir = 4
-	},
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_bridge)
-"HC" = (
-/obj/effect/decal/sand_overlay/sand1{
-	dir = 1
-	},
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_bridge)
-"HJ" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
-/area/desert_dam/exterior/valley/valley_medical)
-"Iw" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/north,
-/area/desert_dam/exterior/river/riverside_east)
-"Ko" = (
-/obj/effect/decal/sand_overlay/sand1{
-	dir = 8
-	},
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
-/area/desert_dam/exterior/valley/valley_medical)
-"Kz" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_corner/west,
-/area/desert_dam/exterior/river/riverside_east)
-"KC" = (
 /obj/structure/platform_decoration{
-	dir = 1
-	},
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"KG" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_corner2/west,
-/area/desert_dam/exterior/river/riverside_east)
-"LQ" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
-/area/desert_dam/exterior/valley/valley_bridge)
-"Mv" = (
-/obj/structure/platform_decoration{
-	dir = 8
+	dir = 8;
+	icon_state = "platform_deco"
 	},
 /obj/effect/blocker/toxic_water/Group_2,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_east)
-"MU" = (
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"NM" = (
-/obj/effect/decal/sand_overlay/sand1{
-	dir = 8
+"aW" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached4"
 	},
-/turf/open/asphalt/tile,
+/area/desert_dam/exterior/valley/valley_medical)
+"aX" = (
+/obj/effect/decal/sand_overlay/sand1/corner1{
+	dir = 1;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_c"
+	},
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
 /area/desert_dam/exterior/valley/valley_bridge)
-"OH" = (
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_medical)
-"OV" = (
-/obj/structure/platform_decoration{
-	dir = 4
+"aY" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached14"
 	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"aZ" = (
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/gm/river/desert/shallow_corner/covered,
 /area/desert_dam/exterior/river/riverside_east)
-"Pb" = (
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
-/area/desert_dam/exterior/valley/valley_medical)
-"PN" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/southwest,
-/area/desert_dam/exterior/river/riverside_east)
-"Qx" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/west,
-/area/desert_dam/exterior/river/riverside_east)
-"Rp" = (
-/obj/structure/stairs{
-	dir = 8
-	},
+"ba" = (
 /obj/structure/platform,
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/desert/shallow_edge,
+/area/desert_dam/exterior/river/riverside_east)
+"bc" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/deep,
+/area/desert_dam/exterior/river/riverside_east)
+"bd" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/gm/river/desert/deep,
+/area/desert_dam/exterior/river/riverside_east)
+"be" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_corner,
+/area/desert_dam/exterior/river/riverside_east)
+"bf" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/desert/deep,
+/area/desert_dam/exterior/river/riverside_east)
+"bg" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_edge{
+	icon_state = "shallow_edge";
+	dir = 10
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"bh" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/shore_corner2,
+/area/desert_dam/exterior/river/riverside_east)
+"bi" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow,
+/area/desert_dam/exterior/river/riverside_east)
+"bj" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/gm/river/desert/shallow_edge,
+/area/desert_dam/exterior/river/riverside_east)
+"bk" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/shore_edge1,
+/area/desert_dam/exterior/river/riverside_east)
+"bl" = (
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/desert_shore1,
+/area/desert_dam/exterior/river/riverside_east)
+"bm" = (
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"bn" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached2"
+	},
 /area/desert_dam/exterior/valley/valley_medical)
-"SS" = (
+"bo" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/blocker/toxic_water/Group_2,
+/turf/open/desert/desert_shore/desert_shore1,
+/area/desert_dam/exterior/river/riverside_east)
+"bp" = (
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached3"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"bq" = (
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"br" = (
+/obj/structure/platform,
+/turf/open/asphalt/cement_sunbleached,
+/area/desert_dam/exterior/valley/valley_medical)
+"bs" = (
+/obj/structure/platform,
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"bu" = (
+/obj/structure/platform_decoration{
+	icon_state = "platform_deco";
+	dir = 1
+	},
+/turf/open/desert/dirt{
+	icon_state = "dirt2"
+	},
+/area/desert_dam/exterior/river/riverside_east)
+"bw" = (
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8;
+	icon = 'icons/turf/overlays.dmi';
+	icon_state = "sand1_s"
+	},
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/desert_dam/exterior/valley/valley_bridge)
+"by" = (
 /obj/structure/stairs{
 	dir = 1
 	},
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached3"
+	},
 /area/desert_dam/exterior/valley/valley_medical)
-"Tn" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/desert_shore1/north,
-/area/desert_dam/exterior/river/riverside_east)
-"Tx" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/desert/dirt/dirt2,
-/area/desert_dam/exterior/river/riverside_east)
-"TI" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_edge1/east,
-/area/desert_dam/exterior/river/riverside_east)
-"TN" = (
-/turf/open/asphalt/tile,
-/area/desert_dam/exterior/valley/valley_bridge)
-"TT" = (
-/obj/structure/platform{
+"bz" = (
+/obj/structure/stairs{
 	dir = 1
 	},
 /obj/structure/platform{
-	dir = 8
+	dir = 4
 	},
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_corner2/north,
-/area/desert_dam/exterior/river/riverside_east)
-"TY" = (
-/obj/effect/blocker/toxic_water/Group_2,
-/turf/open/gm/river/desert/shallow_edge/northeast,
-/area/desert_dam/exterior/river/riverside_east)
-"Ze" = (
-/obj/structure/platform{
-	dir = 1
+/turf/open/asphalt/cement_sunbleached{
+	icon_state = "cement_sunbleached1"
 	},
+/area/desert_dam/exterior/valley/valley_medical)
+"bA" = (
 /obj/effect/blocker/toxic_water/Group_2,
-/turf/open/desert/desert_shore/shore_corner2/north,
+/turf/open/gm/river/desert/shallow_edge/covered{
+	dir = 4
+	},
 /area/desert_dam/exterior/river/riverside_east)
 
 (1,1,1) = {"
-TN
-Ze
-Iw
+bm
+aM
+aR
+bc
+bc
+bc
 ad
-ad
-ad
-Kz
-PN
-aN
-aV
-MU
-GJ
-OH
+bg
+bh
+bk
+bq
+bs
+aa
 "}
 (2,1,1) = {"
-TT
-OV
-lx
-ad
-ad
-ad
-ad
-aM
-aO
-aW
-MU
-GJ
-OH
+aI
+aN
+aS
+bc
+bc
+bc
+bc
+bj
+bi
+bl
+bq
+bs
+aa
 "}
 (3,1,1) = {"
-Qx
-lx
+aF
+aS
+bc
+bc
+bc
+bc
+bc
 ad
-ad
-ad
-ad
-ad
-Kz
-PN
-aW
-MU
-GJ
-OH
+bg
+bl
+bq
+bs
+aa
 "}
 (4,1,1) = {"
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-aM
-aW
-MU
-GJ
-OH
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bj
+bl
+bq
+bs
+aa
 "}
 (5,1,1) = {"
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-aM
-aW
-MU
-KC
-SS
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+bj
+bl
+bq
+bu
+by
 "}
 (6,1,1) = {"
-ae
+be
+aQ
+aV
+bc
+bc
+bc
+bc
+bc
+aK
+bo
 an
-Mv
-ad
-ad
-ad
-ad
-ad
-aP
-aX
-Tx
-wh
-HJ
+aG
+bz
 "}
 (7,1,1) = {"
-TN
-TN
-av
-aC
-aC
-aC
-aC
-aC
-aQ
-OH
-wZ
-Rp
-OH
+bm
+bm
+aP
+bf
+bf
+bf
+bf
+bf
+ba
+aa
+bn
+as
+aa
 "}
 (8,1,1) = {"
-xf
-zv
-aw
-aw
-aw
-aw
-aw
-aw
-aR
-Pb
-bf
-bm
-OH
+bp
+aY
+ap
+ap
+ap
+ap
+ap
+ap
+aU
+au
+aq
+br
+aa
 "}
 (9,1,1) = {"
-LQ
-jl
-oh
-aD
-aw
-aw
-aw
-aw
-aR
-EQ
-bf
-bm
-OH
+ag
+aA
+bA
+aZ
+ap
+ap
+ap
+ap
+aU
+ay
+aq
+br
+aa
 "}
 (10,1,1) = {"
-NM
-GY
-ay
-xU
-aI
-aI
-aI
-aI
-aS
-OH
-FF
-bm
-OH
+bw
+al
+az
+ac
+bd
+bd
+bd
+bd
+aT
+aa
+aW
+br
+aa
 "}
 (11,1,1) = {"
-ai
-HC
-KG
-TY
-aJ
-ad
-ad
-ad
-aT
-OH
-FF
-bf
-Pb
+aO
+ah
+av
+ab
+at
+bc
+bc
+bc
+aH
+aa
+aW
+aq
+au
 "}
 (12,1,1) = {"
-aj
-mC
-TI
-tk
-Iw
-ad
-ad
-ad
-aU
-OH
-FF
-bf
-bf
+aJ
+aX
+aE
+ax
+aR
+bc
+bc
+bc
+aD
+aa
+aW
+aq
+aq
 "}
 (13,1,1) = {"
-aj
-TN
-nC
-Tn
-Iw
-ad
-ad
-ad
-aT
-OH
-FF
-bf
-bf
+aJ
+bm
+ai
+af
+aR
+bc
+bc
+bc
+aH
+aa
+aW
+aq
+aq
 "}
 (14,1,1) = {"
+aJ
+bm
+ai
+af
+aR
+bc
+bc
+bc
+aH
 aj
-TN
-nC
-Tn
-Iw
-ad
-ad
-ad
-aT
-uu
-sW
-Ko
-Ko
+ak
+ar
+ar
 "}

@@ -81,7 +81,7 @@
 		junction = 0
 		if(anchored)
 			var/turf/TU
-			for(var/dirn in GLOB.cardinals)
+			for(var/dirn in cardinal)
 				TU = get_step(src, dirn)
 				var/obj/structure/window/W = locate() in TU
 				if(W && W.anchored && W.density && W.legacy_full) //Only counts anchored, non-destroyed, legacy full-tile windows.
@@ -247,10 +247,6 @@
 					if(!not_damageable) //Impossible to destroy
 						health -= 50
 
-			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slammed against [src] by [key_name(user)]</font>")
-			user.attack_log += text("\[[time_stamp()]\] <font color='red'>slammed [key_name(M)] against [src]</font>")
-			msg_admin_attack("[key_name(user)] slammed [key_name(M)] against [src] at [get_area_name(M)]", M.loc.x, M.loc.y, M.loc.z)
-
 			healthcheck(1, 1, 1, M) //The person thrown into the window literally shattered it
 		return
 
@@ -290,7 +286,7 @@
 		to_chat(user, (state ? SPAN_NOTICE("You have pried the window into the frame.") : SPAN_NOTICE("You have pried the window out of the frame.")))
 	else
 		if(!not_damageable) //Impossible to destroy
-			health -= W.force * W.demolition_mod
+			health -= W.force
 			if(health <= 7  && !reinf && !static_frame && !not_deconstructable)
 				anchored = FALSE
 				update_nearby_icons()
@@ -357,14 +353,14 @@
 //This proc is used to update the icons of nearby windows.
 /obj/structure/window/proc/update_nearby_icons()
 	update_icon()
-	for(var/direction in GLOB.cardinals)
+	for(var/direction in cardinal)
 		for(var/obj/structure/window/W in get_step(src, direction))
 			W.update_icon()
 
 /obj/structure/window/fire_act(exposed_temperature, exposed_volume)
 	if(exposed_temperature > T0C + 800)
 		if(!not_damageable)
-			health -= floor(exposed_volume / 100)
+			health -= round(exposed_volume / 100)
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()
 
@@ -377,7 +373,7 @@
 
 /obj/structure/window/phoronbasic/fire_act(exposed_temperature, exposed_volume)
 	if(exposed_temperature > T0C + 32000)
-		health -= floor(exposed_volume / 1000)
+		health -= round(exposed_volume / 1000)
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()
 
@@ -459,8 +455,11 @@
 
 /obj/structure/window/reinforced/ultra/Initialize()
 	. = ..()
-	if(is_mainship_level(z))
-		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(deconstruct))
+	GLOB.hijack_bustable_windows += src
+
+/obj/structure/window/reinforced/ultra/Destroy()
+	GLOB.hijack_bustable_windows -= src
+	return ..()
 
 /obj/structure/window/reinforced/full
 	flags_atom = FPRINT
@@ -586,9 +585,11 @@
 
 /obj/structure/window/framed/almayer/hull/hijack_bustable/Initialize()
 	. = ..()
-	if(is_mainship_level(z))
-		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(deconstruct))
+	GLOB.hijack_bustable_windows += src
 
+/obj/structure/window/framed/almayer/hull/hijack_bustable/Destroy()
+	GLOB.hijack_bustable_windows -= src
+	return ..()
 /obj/structure/window/framed/almayer/white
 	icon_state = "white_rwindow0"
 	basestate = "white_rwindow"
@@ -621,28 +622,6 @@
 	icon_state = "w_ai_rwindow0"
 	basestate = "w_ai_rwindow"
 	window_frame = /obj/structure/window_frame/almayer/aicore/white
-
-/obj/structure/window/framed/almayer/aicore/black
-	icon_state = "alm_ai_rwindow0"
-	basestate = "alm_ai_rwindow"
-	window_frame = /obj/structure/window_frame/almayer/aicore/black
-
-/obj/structure/window/framed/almayer/aicore/hull/black
-	icon_state = "alm_ai_rwindow0"
-	basestate = "alm_ai_rwindow"
-	window_frame = /obj/structure/window_frame/almayer/aicore/black
-	not_damageable = TRUE
-	not_deconstructable = TRUE
-	unslashable = TRUE
-	unacidable = TRUE
-	health = 1000000 //Failsafe, shouldn't matter
-
-/obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable //I exist to explode after hijack, that is all.
-
-/obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable/Initialize()
-	. = ..()
-	if(is_mainship_level(z))
-		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(deconstruct))
 
 /obj/structure/window/framed/almayer/aicore/white/hull
 	name = "hull window"
@@ -914,7 +893,7 @@
 		return
 
 	triggered = TRUE
-	for(var/direction in GLOB.cardinals)
+	for(var/direction in cardinal)
 		if(direction == from_dir)
 			continue //doesn't check backwards
 		for(var/obj/structure/window/framed/prison/reinforced/hull/W in get_step(src,direction) )
@@ -1007,7 +986,7 @@
 		return
 
 	triggered = 1
-	for(var/direction in GLOB.cardinals)
+	for(var/direction in cardinal)
 		if(direction == from_dir)
 			continue //doesn't check backwards
 

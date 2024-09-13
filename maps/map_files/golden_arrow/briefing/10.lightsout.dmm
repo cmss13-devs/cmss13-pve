@@ -10,7 +10,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "b" = (
 /obj/structure/platform{
@@ -84,7 +86,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/corner/west,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "i" = (
 /obj/structure/cable{
@@ -114,7 +118,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "k" = (
 /turf/closed/wall/almayer/outer,
@@ -140,14 +146,18 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "o" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "p" = (
 /obj/structure/bed/chair{
@@ -157,13 +167,17 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "q" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "r" = (
-/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
 /obj/structure/cable{
 	icon_state = "0-8";
 	layer = 2.36
@@ -177,7 +191,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "t" = (
 /obj/effect/decal/cleanable/dirt{
@@ -207,14 +223,18 @@
 	pixel_x = -24;
 	on = 0
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "x" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer/edge/smooth/east,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "y" = (
 /obj/structure/bed/chair{
@@ -223,7 +243,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "z" = (
 /obj/structure/pipes/vents/scrubber{
@@ -236,7 +258,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "A" = (
 /obj/effect/decal/warning_stripes{
@@ -247,7 +271,9 @@
 	dir = 8;
 	pixel_x = -16
 	},
-/turf/open/floor/almayer/edge/smooth/east,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "B" = (
 /obj/effect/decal/warning_stripes{
@@ -257,7 +283,9 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/floor/almayer/edge/smooth/corner/east,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 4
+	},
 /area/golden_arrow/briefing)
 "C" = (
 /obj/structure/platform_decoration{
@@ -279,7 +307,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "F" = (
 /obj/effect/decal/cleanable/dirt{
@@ -294,7 +324,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
 /area/golden_arrow/briefing)
 "G" = (
 /obj/effect/decal/warning_stripes{
@@ -305,7 +337,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/edge/smooth/corner/north,
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "J" = (
 /obj/effect/decal/cleanable/dirt{
@@ -331,7 +365,9 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/north,
+/turf/open/floor/almayer/edge/smooth/endcap_right{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "M" = (
 /obj/effect/decal/cleanable/dirt{
@@ -368,7 +404,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/turf/open/floor/almayer/edge/smooth/endcap_left{
+	dir = 1
+	},
 /area/golden_arrow/briefing)
 "S" = (
 /obj/structure/platform{
@@ -394,7 +432,9 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
 /area/golden_arrow/briefing)
 "Z" = (
 /obj/structure/surface/table/almayer,

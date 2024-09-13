@@ -1,4 +1,7 @@
 // Door open and close constants
+/var/const
+	CLOSED = 2
+
 #define FIREDOOR_MAX_PRESSURE_DIFF 25 // kPa
 #define FIREDOOR_MAX_TEMP 50 // °C
 #define FIREDOOR_MIN_TEMP 0
@@ -54,7 +57,7 @@
 	A.all_doors.Add(src)
 	areas_added = list(A)
 
-	for(var/direction in GLOB.cardinals)
+	for(var/direction in cardinal)
 		A = get_area(get_step(src,direction))
 		if(istype(A) && !(A in areas_added))
 			A.all_doors.Add(src)
@@ -75,7 +78,7 @@
 		. += SPAN_WARNING("WARNING: Current pressure differential is [pdiff]kPa! Opening door may result in injury!")
 
 	. += "<b>Sensor readings:</b>"
-	for(var/index = 1; index <= length(tile_info); index++)
+	for(var/index = 1; index <= tile_info.len; index++)
 		var/o = "&nbsp;&nbsp;"
 		switch(index)
 			if(1)
@@ -101,10 +104,10 @@
 		o += "[pressure]kPa</span></li>"
 		. += o
 
-	if(islist(users_to_open) && length(users_to_open))
+	if(islist(users_to_open) && users_to_open.len)
 		var/users_to_open_string = users_to_open[1]
-		if(length(users_to_open) >= 2)
-			for(var/i = 2 to length(users_to_open))
+		if(users_to_open.len >= 2)
+			for(var/i = 2 to users_to_open.len)
 				users_to_open_string += ", [users_to_open[i]]"
 		. += "These people have opened \the [src] during an alert: [users_to_open_string]."
 
@@ -274,8 +277,8 @@
 			overlays += "palert"
 		if(dir_alerts)
 			for(var/d=1;d<=4;d++)
-				var/cdir = GLOB.cardinals[d]
-				for(var/i=1;i<=length(ALERT_STATES);i++)
+				var/cdir = cardinal[d]
+				for(var/i=1;i<=ALERT_STATES.len;i++)
 					if(dir_alerts[d] & (1<<(i-1)))
 						overlays += new/icon(icon,"alert_[ALERT_STATES[i]]", dir=cdir)
 	else

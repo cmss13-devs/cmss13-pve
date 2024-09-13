@@ -107,7 +107,9 @@
 ///returns turfs within our projected rectangle in no particular order
 /obj/docking_port/proc/return_turfs()
 	var/list/L = return_coords()
-	return block(L[1], L[2], z, L[3], L[4], z)
+	var/turf/T0 = locate(L[1],L[2],z)
+	var/turf/T1 = locate(L[3],L[4],z)
+	return block(T0,T1)
 
 /obj/docking_port/proc/return_center_turf()
 	var/list/L = return_coords()
@@ -123,8 +125,8 @@
 		if(EAST)
 			cos = 0
 			sin = -1
-	var/_x = L[1] + (floor(width/2))*cos - (floor(height/2))*sin
-	var/_y = L[2] + (floor(width/2))*sin + (floor(height/2))*cos
+	var/_x = L[1] + (round(width/2))*cos - (round(height/2))*sin
+	var/_y = L[2] + (round(width/2))*sin + (round(height/2))*cos
 	return locate(_x, _y, z)
 
 //returns turfs within our projected rectangle in a specific order.
@@ -159,7 +161,9 @@
 //Debug proc used to highlight bounding area
 /obj/docking_port/proc/highlight(_color)
 	var/list/L = return_coords()
-	for(var/turf/T as anything in block(L[1], L[2], z, L[3], L[4], z))
+	var/turf/T0 = locate(L[1],L[2],z)
+	var/turf/T1 = locate(L[3],L[4],z)
+	for(var/turf/T in block(T0,T1))
 		T.color = _color
 		T.maptext = null
 	if(_color)
@@ -469,13 +473,13 @@
 	. = ..()
 
 	if(!id)
-		id = "[length(SSshuttle.mobile)]"
+		id = "[SSshuttle.mobile.len]"
 	if(name == "shuttle")
-		name = "shuttle[length(SSshuttle.mobile)]"
+		name = "shuttle[SSshuttle.mobile.len]"
 
 	shuttle_areas = list()
 	var/list/all_turfs = return_ordered_turfs(x, y, z, dir)
-	for(var/i in 1 to length(all_turfs))
+	for(var/i in 1 to all_turfs.len)
 		var/turf/curT = all_turfs[i]
 		var/area/cur_area = get_area(curT)
 		if(istype(cur_area, area_type))
@@ -693,7 +697,7 @@
 	if(!underlying_area)
 		underlying_area = new underlying_area_type(null)
 
-	for(var/i in 1 to length(old_turfs))
+	for(var/i in 1 to old_turfs.len)
 		var/turf/oldT = old_turfs[i]
 		if(!oldT || !istype(oldT.loc, area_type))
 			continue
@@ -706,7 +710,7 @@
 		var/list/baseturf_cache = oldT.baseturfs
 		for(var/k in 1 to length(baseturf_cache))
 			if(ispath(baseturf_cache[k], /turf/baseturf_skipover/shuttle))
-				oldT.ScrapeAway(length(baseturf_cache) - k + 1)
+				oldT.ScrapeAway(baseturf_cache.len - k + 1)
 				break
 
 	qdel(src, force=TRUE)
@@ -745,7 +749,7 @@
 
 	var/list/ripple_turfs = list()
 
-	for(var/i in 1 to length(L0))
+	for(var/i in 1 to L0.len)
 		var/turf/T0 = L0[i]
 		var/turf/T1 = L1[i]
 		if(!T0 || !T1)
@@ -791,10 +795,6 @@
 			else if(error)
 				setTimer(20)
 				return
-			if(mode == SHUTTLE_CRASHED)
-				destination = null
-				timer = 0
-				return
 			if(rechargeTime)
 				set_mode(SHUTTLE_RECHARGING)
 				destination = null
@@ -813,13 +813,11 @@
 				setTimer(callTime * engine_coeff())
 				enterTransit()
 				return
-		if(SHUTTLE_CRASHED)
-			return
 
 	set_idle()
 
 /obj/docking_port/mobile/proc/check_effects()
-	if(!length(ripples))
+	if(!ripples.len)
 		if((mode == SHUTTLE_PREARRIVAL))
 			var/tl = timeLeft(1)
 			if(tl <= SHUTTLE_RIPPLE_TIME)

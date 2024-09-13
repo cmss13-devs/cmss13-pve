@@ -28,8 +28,7 @@
 	name = "synthetic meat"
 	desc = "A synthetic slab of flesh."
 
-/// Meat made from synthetics. Slightly toxic
-/obj/item/reagent_container/food/snacks/meat/synthmeat/synthflesh
+/obj/item/reagent_container/food/snacks/meat/synthmeat/synthflesh //meat made from synthetics. Slightly toxic
 	name = "synthetic flesh"
 	desc = "A slab of artificial, inorganic 'flesh' that resembles human meat. Probably came from a synth."
 	icon_state = "synthmeat"
@@ -58,15 +57,8 @@
 
 /obj/item/reagent_container/food/snacks/meat/xenomeat/Initialize()
 	. = ..()
-	reagents.add_reagent("xenoblood", 6)
+	reagents.add_reagent("xenoblood", 3)
 	src.bitesize = 6
-
-/obj/item/reagent_container/food/snacks/meat/xenomeat/processed
-	desc = "A slab of acrid smelling meat. This one has been processed to remove acid."
-
-/obj/item/reagent_container/food/snacks/meat/xenomeat/processed/Initialize()
-	. = ..()
-	reagents.remove_reagent("xenoblood", 6)
 
 //fishable atoms meat
 // todo: rewrite this into a procgen'ed item when gutting fish? May be incompatible with recipe code if done that way and not hardcoded.

@@ -26,10 +26,14 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/cargo_shuttle/elevator)
 "q" = (
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/cargo_shuttle/elevator)
 "s" = (
 /obj/structure/machinery/light/small/blue{
@@ -41,7 +45,9 @@
 	pixel_y = 32;
 	shuttleId = "garrow_cargo_elevator"
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/cargo_shuttle/elevator)
 "t" = (
 /obj/effect/decal/cleanable/dirt,
@@ -64,7 +70,9 @@
 	unacidable = 1;
 	id = "north"
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
 /area/golden_arrow/cargo_shuttle/elevator)
 "H" = (
 /turf/open/shuttle/elevator/grating,
@@ -78,7 +86,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer{
+	icon_state = "mono"
+	},
 /area/golden_arrow/cargo_shuttle/elevator)
 "T" = (
 /turf/closed/shuttle/elevator/gears,

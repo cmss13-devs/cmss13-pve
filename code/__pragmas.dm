@@ -21,7 +21,6 @@
 #pragma InvalidOverride error
 #pragma DanglingVarType error
 #pragma MissingInterpolatedExpression error
-#pragma InvalidIndexOperation error
 
 //3000-3999
 #pragma EmptyBlock error

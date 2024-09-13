@@ -2,106 +2,96 @@
 	name = "PMC Paygrade"
 	fprefix = "PMC."
 	pay_multiplier = 2.5 // they have money. but they sold their soul to the company. is it really worth it
-	default_faction = FACTION_PMC
 
 //Standard PMCs
 /datum/paygrade/pmc/standard
-	paygrade = PAY_SHORT_PMC_OP
+	paygrade = "PMC-OP"
 	name = "Operator"
 	prefix = "OPR."
 
 /datum/paygrade/pmc/enforcer
-	paygrade = PAY_SHORT_PMC_EN
+	paygrade = "PMC-EN"
 	name = "Enforcer"
 	prefix = "ENF."
 	pay_multiplier = 2.6
 
 //PMC Field Specialists
 /datum/paygrade/pmc/vehicle
-	paygrade = PAY_SHORT_PMC_VS
+	paygrade = "PMC-VS"
 	name = "Vehicle Specialist"
-	prefix = "SPV."
+	prefix = "CRW."
 	pay_multiplier = 2.8
 
 /datum/paygrade/pmc/support
-	paygrade = PAY_SHORT_PMC_SS
+	paygrade = "PMC-SS"
 	name = "Support Specialist"
 	prefix = "SPS."
 	pay_multiplier = 2.8
 
 /datum/paygrade/pmc/medic
-	paygrade = PAY_SHORT_PMC_MS
+	paygrade = "PMC-MS"
 	name = "Medical Specialist"
 	prefix = "SPM."
 	pay_multiplier = 2.8
 
 /datum/paygrade/pmc/spec
-	paygrade = PAY_SHORT_PMC_WS
+	paygrade = "PMC-WS"
 	name = "Weapon Specialist"
 	prefix = "SPW."
 	pay_multiplier = 3
 
 /datum/paygrade/pmc/handler
-	paygrade = PAY_SHORT_PMC_XS
+	paygrade = "PMC-XS"
 	name = "Xeno Specialist"
 	prefix = "SPX."
-	pay_multiplier = 4
-	officer_grade = GRADE_OFFICER
-
-//PMC Support Staff
-/datum/paygrade/pmc/doctor
-	paygrade = PAY_SHORT_PMC_DOC
-	name = "Trauma Surgeon"
-	prefix = "Dr."
-	pay_multiplier = 4
-	officer_grade = GRADE_OFFICER
-
-/datum/paygrade/pmc/engineer
-	paygrade = PAY_SHORT_PMC_TEC
-	name = "Corporate Technician"
-	prefix = "TEC."
 	pay_multiplier = 4
 
 //PMC Elite
 /datum/paygrade/pmc/elite
-	paygrade = PAY_SHORT_PMC_ELR
+	paygrade = "PMC-ELR"
 	name = "Elite Responder"
 	prefix = "ELR."
 	pay_multiplier = 4
-	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/pmc/medic/elite
-	paygrade = PAY_SHORT_PMC_ELM
+	paygrade = "PMC-ELM"
 	name = "Elite Medic"
 	prefix = "ELM."
 	pay_multiplier = 4.5
-	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/pmc/spec/elite
-	paygrade = PAY_SHORT_PMC_ELG
+	paygrade = "PMC-ELG"
 	name = "Elite Gunner"
 	prefix = "ELG."
 	pay_multiplier = 5
-	officer_grade = GRADE_OFFICER
 
 //PMC Command
 /datum/paygrade/pmc/teamlead
-	paygrade = PAY_SHORT_PMC_TL
+	paygrade = "PMC-TL"
 	name = "Team Leader"
 	prefix = "TML."
 	pay_multiplier = 3.5
-	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/pmc/elitelead
-	paygrade = PAY_SHORT_PMC_ETL
+	paygrade = "PMC-ETL"
 	name = "Elite Team Leader"
 	prefix = "ETML."
 	pay_multiplier = 5.5
-	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/pmc/doctor
+	paygrade = "PMC-DOC"
+	name = "Trauma Surgeon"
+	prefix = "TRI."
+	pay_multiplier = 4
+
+/datum/paygrade/pmc/engineer
+	paygrade = "PMC-TECH"
+	name = "Corporate Technician"
+	prefix = "TEC."
+	pay_multiplier = 4
 
 /datum/paygrade/pmc/director
-	paygrade = PAY_SHORT_PMC_DIR
+	paygrade = "PMC-DIR"
 	name = "Site Director"
 	prefix = "DIR."
 	pay_multiplier = 10 //it's a corpo director. money is what they care about.
-	officer_grade = GRADE_FLAG

@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import { useBackend, useSharedState } from '../backend';
 import {
   Box,
@@ -41,13 +39,7 @@ interface AutomatedControl {
   ground_lz: null | string;
 }
 
-type ShuttleRef = {
-  name: string;
-  id: string;
-};
-
 interface DropshipNavigationProps extends NavigationProps {
-  shuttle_id: string;
   door_status: Array<DoorStatus>;
   has_flight_optimisation?: 0 | 1;
   is_flight_optimised?: 0 | 1;
@@ -56,9 +48,8 @@ interface DropshipNavigationProps extends NavigationProps {
   primary_lz?: string;
   automated_control: AutomatedControl;
   has_flyby_skill: 0 | 1;
+
   playing_launch_announcement_alarm: boolean;
-  can_change_shuttle: 0 | 1;
-  alternative_shuttles: Array<ShuttleRef>;
 }
 
 const DropshipDoorControl = () => {
@@ -257,7 +248,7 @@ export const TouchdownCooldown = () => {
   );
 };
 
-const AutopilotConfig = () => {
+const AutopilotConfig = (props) => {
   const { data, act } = useBackend<DropshipNavigationProps>();
   const [automatedHangar, setAutomatedHangar] = useSharedState<
     string | undefined
@@ -336,7 +327,6 @@ const StopLaunchAnnouncementAlarm = () => {
       icon="ban"
       onClick={() => {
         act('stop_playing_launch_announcement_alarm');
-        act('button-push');
       }}
     >
       Stop Alarm
@@ -351,7 +341,6 @@ const PlayLaunchAnnouncementAlarm = () => {
       icon="rocket"
       onClick={() => {
         act('play_launch_announcement_alarm');
-        act('button-push');
       }}
     >
       Start Alarm
@@ -360,7 +349,11 @@ const PlayLaunchAnnouncementAlarm = () => {
 };
 
 const LaunchAnnouncementAlarm = () => {
-  const { data } = useBackend<DropshipNavigationProps>();
+  const { data, act } = useBackend<DropshipNavigationProps>();
+  const [siteselection, setSiteSelection] = useSharedState<string | undefined>(
+    'target_site',
+    undefined,
+  );
   return (
     <Section
       title="Launch Announcement Alarm"
@@ -375,78 +368,12 @@ const LaunchAnnouncementAlarm = () => {
   );
 };
 
-const DropshipButton = (props: {
-  readonly shipId: string;
-  readonly shipName: string;
-  readonly disable: boolean;
-  readonly onClick: () => void;
-}) => {
-  const { act, data } = useBackend<DropshipNavigationProps>();
-  const match = props.shipId === data.shuttle_id;
-
-  return (
-    <Button
-      disabled={match || props.disable}
-      onClick={() => {
-        act('change_shuttle', { new_shuttle: props.shipId });
-        act('button-push');
-        props.onClick();
-      }}
-    >
-      {match && '['}
-      {props.shipName}
-      {match && ']'}
-    </Button>
-  );
-};
-
-const DropshipSelector = () => {
-  const { data } = useBackend<DropshipNavigationProps>();
-  const [refreshTimeout, setRefreshTimeout] = useState<
-    NodeJS.Timeout | undefined
-  >(undefined);
-
-  useEffect(() => {
-    if (refreshTimeout) {
-      return () => clearTimeout(refreshTimeout);
-    }
-    return () => {};
-  }, [refreshTimeout]);
-
-  return (
-    <Section title="Select Dropship">
-      <Stack>
-        {data.alternative_shuttles
-          .sort((a, b) => a.id.localeCompare(b.id))
-          .map((x) => (
-            <DropshipButton
-              key={x.id}
-              shipId={x.id}
-              shipName={x.name}
-              disable={refreshTimeout !== undefined}
-              onClick={() => {
-                const freeze = setTimeout(
-                  () => setRefreshTimeout(undefined),
-                  2000,
-                );
-                setRefreshTimeout(freeze);
-              }}
-            />
-          ))}
-      </Stack>
-    </Section>
-  );
-};
-
-const RenderScreen = () => {
+const RenderScreen = (props) => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
-      {data.alternative_shuttles.length > 0 && <DropshipSelector />}
+      {data.can_set_automated === 1 && <AutopilotConfig />}
       {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
-      {data.shuttle_mode === 'idle' && data.can_set_automated === 1 && (
-        <AutopilotConfig />
-      )}
       {data.shuttle_mode === 'igniting' && <LaunchCountdown />}
       {data.shuttle_mode === 'pre-arrival' && <TouchdownCooldown />}
       {data.shuttle_mode === 'recharging' && <ShuttleRecharge />}
@@ -457,27 +384,18 @@ const RenderScreen = () => {
         <DropshipDestinationSelection />
       )}
       {data.door_status.length > 0 && <DropshipDoorControl />}
-      {data.alternative_shuttles.length === 0 && <LaunchAnnouncementAlarm />}
+      {<LaunchAnnouncementAlarm />}
     </>
   );
 };
 
-const DropshipDisabledScreen = () => {
-  const { data } = useBackend<DropshipNavigationProps>();
-  return (
-    <>
-      {data.alternative_shuttles.length > 0 && <DropshipSelector />}
-      <DisabledScreen />
-    </>
-  );
-};
-
-export const DropshipFlightControl = () => {
+export const DropshipFlightControl = (props) => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Window theme="crtgreen" height={500} width={700}>
-      <Window.Content className="NavigationMenu" scrollable>
-        {data.is_disabled === 0 ? <RenderScreen /> : <DropshipDisabledScreen />}
+      <Window.Content className="NavigationMenu">
+        {data.is_disabled === 1 && <DisabledScreen />}
+        {data.is_disabled === 0 && <RenderScreen />}
       </Window.Content>
     </Window>
   );

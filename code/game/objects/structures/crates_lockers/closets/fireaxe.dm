@@ -21,7 +21,7 @@
 	if(fireaxe)
 		hasaxe = 1
 
-	if (src.locked)
+	if (isrobot(usr) || src.locked)
 		if(HAS_TRAIT(O, TRAIT_TOOL_MULTITOOL))
 			to_chat(user, SPAN_DANGER("Resetting circuitry..."))
 			playsound(user, 'sound/machines/lockreset.ogg', 25, 1)
@@ -140,7 +140,7 @@
 	set name = "Open/Close"
 	set category = "Object"
 
-	if (src.locked || src.smashed)
+	if (isrobot(usr) || src.locked || src.smashed)
 		if(src.locked)
 			to_chat(usr, SPAN_DANGER("The cabinet won't budge!"))
 		else if(src.smashed)
@@ -153,6 +153,9 @@
 /obj/structure/closet/fireaxecabinet/verb/remove_fire_axe()
 	set name = "Remove Fire Axe"
 	set category = "Object"
+
+	if (isrobot(usr))
+		return
 
 	if (istype(usr, /mob/living/carbon/xenomorph))
 		return
