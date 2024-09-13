@@ -11,7 +11,7 @@ When a round starts, the roles are assigned based on the round, from another lis
 by name can be kept for things like job bans, while the round may add or remove roles as needed.If you need to equip a mob for a job, always
 use roles_by_path as it is an accurate account of every specific role path (with specific equipment).
 */
-var/global/datum/authority/branch/role/RoleAuthority
+GLOBAL_DATUM(RoleAuthority, /datum/authority/branch/role)
 
 #define GET_RANDOM_JOB 0
 #define BE_MARINE 1
@@ -25,11 +25,10 @@ var/global/datum/authority/branch/role/RoleAuthority
 
 #define SHIPSIDE_ROLE_WEIGHT 0.25
 
-var/global/players_preassigned = 0
-
+GLOBAL_VAR_INIT(players_preassigned, 0)
 
 /proc/guest_jobbans(job)
-	return (job in ROLES_COMMAND)
+	return (job in GLOB.ROLES_COMMAND)
 
 /datum/authority/branch/role
 	var/name = "Role Authority"
@@ -37,7 +36,6 @@ var/global/players_preassigned = 0
 	var/list/roles_by_path //Master list generated when role aithority is created, listing every role by path, including variable roles. Great for manually equipping with.
 	var/list/roles_by_name //Master list generated when role authority is created, listing every default role by name, including those that may not be regularly selected.
 	var/list/roles_for_mode //Derived list of roles only for the game mode, generated when the round starts.
-	var/list/roles_whitelist //Associated list of lists, by ckey. Checks to see if a person is whitelisted for a specific role.
 	var/list/castes_by_path //Master list generated when role aithority is created, listing every caste by path.
 	var/list/castes_by_name //Master list generated when role authority is created, listing every default caste by name.
 
@@ -63,7 +61,6 @@ var/global/players_preassigned = 0
 											/datum/job/special/uaac,
 											/datum/job/special/uaac/tis,
 											/datum/job/special/uscm,
-											/datum/job/command/tank_crew //Rip VC
 											)
 	var/squads_all[] = typesof(/datum/squad) - /datum/squad
 	var/castes_all[] = subtypesof(/datum/caste_datum)
@@ -117,57 +114,6 @@ var/global/players_preassigned = 0
 		squads += S
 		squads_by_type[S.type] = S
 
-	load_whitelist()
-
-
-/datum/authority/branch/role/proc/load_whitelist(filename = "config/role_whitelist.txt")
-	var/L[] = file2list(filename)
-	var/P[]
-	var/W[] = new //We want a temporary whitelist list, in case we need to reload.
-
-	var/i
-	var/r
-	var/ckey
-	var/role
-	roles_whitelist = list()
-	for(i in L)
-		if(!i) continue
-		i = trim(i)
-		if(!length(i)) continue
-		else if (copytext(i, 1, 2) == "#") continue
-
-		P = splittext(i, "+")
-		if(!P.len) continue
-		ckey = ckey(P[1]) //Converting their key to canonical form. ckey() does this by stripping all spaces, underscores and converting to lower case.
-
-		role = NO_FLAGS
-		r = 1
-		while(++r <= P.len)
-			switch(ckey(P[r]))
-				if("yautja") 						role |= WHITELIST_YAUTJA
-				if("yautjalegacy") 					role |= WHITELIST_YAUTJA_LEGACY
-				if("yautjacouncil")					role |= WHITELIST_YAUTJA_COUNCIL
-				if("yautjacouncillegacy")			role |= WHITELIST_YAUTJA_COUNCIL_LEGACY
-				if("yautjaleader")					role |= WHITELIST_YAUTJA_LEADER
-				if("commander") 					role |= WHITELIST_COMMANDER
-				if("commandercouncil")				role |= WHITELIST_COMMANDER_COUNCIL
-				if("commandercouncillegacy")		role |= WHITELIST_COMMANDER_COUNCIL_LEGACY
-				if("commanderleader")				role |= WHITELIST_COMMANDER_LEADER
-				if("workingjoe")					role |= WHITELIST_JOE
-				if("synthetic") 					role |= (WHITELIST_SYNTHETIC|WHITELIST_JOE)
-				if("syntheticcouncil")				role |= WHITELIST_SYNTHETIC_COUNCIL
-				if("syntheticcouncillegacy")		role |= WHITELIST_SYNTHETIC_COUNCIL_LEGACY
-				if("syntheticleader")				role |= WHITELIST_SYNTHETIC_LEADER
-				if("advisor")						role |= WHITELIST_MENTOR
-				if("allgeneral")					role |= WHITELISTS_GENERAL
-				if("allcouncil")					role |= (WHITELISTS_COUNCIL|WHITELISTS_GENERAL)
-				if("alllegacycouncil")				role |= (WHITELISTS_LEGACY_COUNCIL|WHITELISTS_GENERAL)
-				if("everything", "allleader") 		role |= WHITELIST_EVERYTHING
-
-		W[ckey] = role
-
-	roles_whitelist = W
-
 //#undef FACTION_TO_JOIN
 
 /*
@@ -206,18 +152,46 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	//PART II: Setting up our player variables and lists, to see if we have anyone to destribute.
 
 	unassigned_players = list()
-	for(var/mob/new_player/M in GLOB.player_list) //Get all players who are ready.
-		if(!M.ready || M.job)
+	for(var/mob/new_player/player as anything in GLOB.new_player_list)
+		if(!player.ready || player.job) //get only players who are ready and unassigned
 			continue
 
-		unassigned_players += M
+		var/datum/preferences/prefs = player.client?.prefs
+		if(!prefs) //either no client to play, or no preferences
+			continue
+
+		if(prefs.alternate_option == RETURN_TO_LOBBY && !prefs.has_job_priorities()) //only try to assign players that could possibly be assigned
+			continue
+
+		unassigned_players += player
 
 	if(!length(unassigned_players)) //If we don't have any players, the round can't start.
 		unassigned_players = null
 		return
 
-	unassigned_players = shuffle(unassigned_players, 1) //Shuffle the players.
+	var/list/player_weights = list()
+	var/debug_total_weight = 0
+	for(var/mob/new_player/cycled_unassigned as anything in unassigned_players)
+		var/base_weight = 1 //baseline weighting
 
+		var/new_bonus = 0
+		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
+			if(0 to 2 HOURS)
+				new_bonus = 2
+			if(2 HOURS to 5 HOURS)
+				new_bonus = 1
+
+		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
+
+		player_weights[cycled_unassigned] = base_weight + new_bonus + streak_bonus
+		debug_total_weight += player_weights[cycled_unassigned]
+	log_debug("ASSIGNMENT: player_weights generated with [length(player_weights)] players and [debug_total_weight] total weight.")
+
+	unassigned_players = shuffle_weight(player_weights)
+	var/list/debug_weight_order = list()
+	for(var/mob/new_player/cycled_unassigned as anything in unassigned_players)
+		debug_weight_order += player_weights[cycled_unassigned]
+	log_debug("ASSIGNMENT: unassigned_players by entry weight: ([debug_weight_order.Join(", ")])")
 
 	// How many positions do we open based on total pop
 	for(var/i in roles_by_name)
@@ -247,11 +221,11 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		return
 
 	log_debug("ASSIGNMENT: Starting prime priority assignments.")
-	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
 		assign_role_to_player_by_priority(cycled_unassigned, roles_to_assign, unassigned_players, PRIME_PRIORITY)
 
 	log_debug("ASSIGNMENT: Starting regular priority assignments.")
-	for(var/mob/new_player/cycled_unassigned in shuffle(unassigned_players))
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
 		var/player_assigned_job = FALSE
 
 		for(var/priority in HIGH_PRIORITY to LOW_PRIORITY)
@@ -264,20 +238,17 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			break
 
 		if(!player_assigned_job)
-			log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be assigned a job based on preferences and roles to assign. Attempting alternate options.")
-
 			switch(cycled_unassigned.client.prefs.alternate_option)
 				if(GET_RANDOM_JOB)
-					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for random job alternate option. Finding random job.")
 					var/iterator = 0
 					while((cycled_unassigned in unassigned_players) || iterator >= 5)
 						iterator++
 						var/random_job_name = pick(roles_to_assign)
 						var/datum/job/random_job = roles_to_assign[random_job_name]
-						log_debug("ASSIGNMENT: [cycled_unassigned] is attempting to be assigned to [random_job_name].")
 
 						if(assign_role(cycled_unassigned, random_job))
 							log_debug("ASSIGNMENT: We have randomly assigned [random_job_name] to [cycled_unassigned]")
+							cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 							unassigned_players -= cycled_unassigned
 
 							if(random_job.spawn_positions != -1 && random_job.current_positions >= random_job.spawn_positions)
@@ -288,10 +259,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						log_debug("ASSIGNMENT: [cycled_unassigned] was unable to be randomly assigned a job. Something has gone wrong.")
 
 				if(BE_MARINE)
-					log_debug("ASSIGNMENT: [cycled_unassigned] has opted for marine alternate option. Checking if slot is available.")
 					var/datum/job/marine_job = GET_MAPPED_ROLE(JOB_SQUAD_MARINE)
 					if(assign_role(cycled_unassigned, marine_job))
 						log_debug("ASSIGNMENT: We have assigned [marine_job.title] to [cycled_unassigned] via alternate option.")
+						cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 						unassigned_players -= cycled_unassigned
 
 						if(marine_job.spawn_positions != -1 && marine_job.current_positions >= marine_job.spawn_positions)
@@ -305,22 +276,22 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 					cycled_unassigned.ready = 0
 
 	log_debug("ASSIGNMENT: Assignment complete. Players unassigned: [length(unassigned_players)] Jobs unassigned: [length(roles_to_assign)]")
+	for(var/mob/new_player/cycled_unassigned in unassigned_players)
+		cycled_unassigned.client.player_data.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 1)
 
 	return roles_to_assign
 
 /datum/authority/branch/role/proc/assign_role_to_player_by_priority(mob/new_player/cycled_unassigned, list/roles_to_assign, list/unassigned_players, priority)
-	log_debug("ASSIGNMENT: We have started cycled through priority [priority] for [cycled_unassigned].")
-	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client?.prefs?.get_jobs_by_priority(priority))
+	var/wanted_jobs_by_name = shuffle(cycled_unassigned.client.prefs.get_jobs_by_priority(priority))
 	var/player_assigned_job = FALSE
 
 	for(var/job_name in wanted_jobs_by_name)
-		log_debug("ASSIGNMENT: We are cycling through wanted jobs and are at [job_name] for [cycled_unassigned].")
 		if(job_name in roles_to_assign)
-			log_debug("ASSIGNMENT: We have found [job_name] in roles to assign for [cycled_unassigned].")
 			var/datum/job/actual_job = roles_to_assign[job_name]
 
 			if(assign_role(cycled_unassigned, actual_job))
-				log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned].")
+				log_debug("ASSIGNMENT: We have assigned [job_name] to [cycled_unassigned] at priority [priority].")
+				cycled_unassigned.client.player_data?.adjust_stat(PLAYER_STAT_UNASSIGNED_ROUND_STREAK, STAT_CATEGORY_MISC, 0, TRUE)
 				unassigned_players -= cycled_unassigned
 
 				if(actual_job.spawn_positions != -1 && actual_job.current_positions >= actual_job.spawn_positions)
@@ -331,10 +302,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 				break
 
 	if(player_assigned_job)
-		log_debug("ASSIGNMENT: [cycled_unassigned] has been assigned a job.")
 		return player_assigned_job
 
-	log_debug("ASSIGNMENT: [cycled_unassigned] did not get a job at priority [priority].")
 	return player_assigned_job
 
 /**
@@ -344,9 +313,11 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 * survivors and the number of roundstart Squad Rifleman slots.
 */
 /datum/authority/branch/role/proc/calculate_role_weight(datum/job/J)
-	if(ROLES_MARINES.Find(J.title))
+	if(!J)
+		return 0
+	if(GLOB.ROLES_MARINES.Find(J.title))
 		return 1
-	if(ROLES_XENO.Find(J.title))
+	if(GLOB.ROLES_XENO.Find(J.title))
 		return 1
 	if(J.title == JOB_SURVIVOR)
 		return 1
@@ -366,7 +337,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		return FALSE
 	if(!J.can_play_role(M.client))
 		return FALSE
-	if(J.flags_startup_parameters & ROLE_WHITELISTED && !(roles_whitelist[M.ckey] & J.flags_whitelist))
+	if(!J.check_whitelist_status(M))
 		return FALSE
 	if(J.total_positions != -1 && J.get_total_positions(latejoin) <= J.current_positions)
 		return FALSE
@@ -389,9 +360,9 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 //here is the main reason this proc exists - to remove freed squad jobs from squad,
 //so latejoining person ends in the squad which's job was freed and not random one
 	var/datum/squad/sq = null
-	if(job_squad_roles.Find(J.title))
+	if(GLOB.job_squad_roles.Find(J.title))
 		var/list/squad_list = list()
-		for(sq in RoleAuthority.squads)
+		for(sq in GLOB.RoleAuthority.squads)
 			if(sq.usable)
 				squad_list += sq
 		sq = null
@@ -454,7 +425,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		M.job = null
 
 
-/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, turf/late_join)
+/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, late_join)
 	if(!istype(new_mob) || !istype(new_job))
 		return
 
@@ -469,7 +440,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		new_job.handle_job_options(new_human.client.prefs.pref_special_job_options[new_job.title])
 
 	var/job_whitelist = new_job.title
-	var/whitelist_status = new_job.get_whitelist_status(roles_whitelist, new_human.client)
+	var/whitelist_status = new_job.get_whitelist_status(new_human.client)
 
 	if(whitelist_status)
 		job_whitelist = "[new_job.title][whitelist_status]"
@@ -477,12 +448,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	new_human.job = new_job.title //TODO Why is this a mob variable at all?
 
 	if(new_job.gear_preset_whitelist[job_whitelist])
-		arm_equipment(new_human, new_job.gear_preset_whitelist[job_whitelist], FALSE, TRUE)
+		arm_equipment(new_human, new_job.gear_preset_whitelist[job_whitelist], FALSE, TRUE, late_join = late_join)
 		var/generated_account = new_job.generate_money_account(new_human)
 		new_job.announce_entry_message(new_human, generated_account, whitelist_status) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human, whitelist_status) //Do any other thing that relates to their spawn.
 	else
-		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE) //After we move them, we want to equip anything else they should have.
+		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE, late_join = late_join) //After we move them, we want to equip anything else they should have.
 		var/generated_account = new_job.generate_money_account(new_human)
 		new_job.announce_entry_message(new_human, generated_account) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human) //Do any other thing that relates to their spawn.
@@ -490,7 +461,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(new_job.flags_startup_parameters & ROLE_ADD_TO_SQUAD) //Are we a muhreen? Randomize our squad. This should go AFTER IDs. //TODO Robust this later.
 		randomize_squad(new_human)
 
-	if(Check_WO() && job_squad_roles.Find(GET_DEFAULT_ROLE(new_human.job))) //activates self setting proc for marine headsets for WO
+	if(Check_WO() && GLOB.job_squad_roles.Find(GET_DEFAULT_ROLE(new_human.job))) //activates self setting proc for marine headsets for WO
 		var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
 		WO.self_set_headset(new_human)
 
@@ -537,7 +508,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 //Find which squad has the least population. If all 4 squads are equal it should just use a random one
 /datum/authority/branch/role/proc/get_lowest_squad(mob/living/carbon/human/H)
-	if(!squads.len) //Something went wrong, our squads aren't set up.
+	if(!length(squads)) //Something went wrong, our squads aren't set up.
 		to_world("Warning, something messed up in get_lowest_squad(). No squads set up!")
 		return null
 
@@ -546,7 +517,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	var/list/squads_copy = squads.Copy()
 	var/list/mixed_squads = list()
 
-	for(var/i= 1 to squads_copy.len)
+	for(var/i= 1 to length(squads_copy))
 		var/datum/squad/S = pick_n_take(squads_copy)
 		if (S.roundstart && S.usable && S.faction == H.faction && S.name != "Root")
 			mixed_squads += S
@@ -590,7 +561,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	if(!H)
 		return
 
-	if(!squads.len)
+	if(!length(squads))
 		to_chat(H, "Something went wrong with your squad randomizer! Tell a coder!")
 		return //Shit, where's our squad data
 
@@ -601,7 +572,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	var/list/squads_copy = squads.Copy()
 	var/list/mixed_squads = list()
 	// The following code removes non useable squads from the lists of squads we assign marines too.
-	for(var/i= 1 to squads_copy.len)
+	for(var/i= 1 to length(squads_copy))
 		var/datum/squad/S = pick_n_take(squads_copy)
 		if (S.roundstart && S.usable && S.faction == H.faction && S.name != "Root")
 			mixed_squads += S
@@ -773,6 +744,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_KING)
+			M = /mob/living/carbon/xenomorph/king
 	return M
 
 
@@ -780,7 +753,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	var/found_desired = FALSE
 	var/found_limit = FALSE
 
-	for(var/status in whitelist_hierarchy)
+	for(var/status in GLOB.whitelist_hierarchy)
 		if(status == desired_status)
 			found_desired = TRUE
 			break

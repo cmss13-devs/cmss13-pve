@@ -104,7 +104,7 @@ const SquadPanel = (props) => {
             Supply Drop
           </Tabs.Tab>
         )}
-        {!!data.can_launch_bombardments && (
+        {!!data.can_launch_obs && (
           <Tabs.Tab
             selected={category === 'ob'}
             icon="bomb"
@@ -119,9 +119,7 @@ const SquadPanel = (props) => {
       </Tabs>
       {category === 'monitor' && <SquadMonitor />}
       {category === 'supply' && data.can_launch_crates && <SupplyDrop />}
-      {category === 'ob' && data.can_launch_bombardments && (
-        <OrbitalBombardment />
-      )}
+      {category === 'ob' && data.can_launch_obs && <OrbitalBombardment />}
     </>
   );
 };
@@ -370,12 +368,13 @@ const SquadMonitor = (props) => {
 
   let determine_status_color = (status) => {
     let conscious = status.includes('Conscious');
+    let incapacitated = status.includes('Incapacitated');
     let unconscious = status.includes('Unconscious');
 
     let state_color = 'red';
     if (conscious) {
       state_color = 'green';
-    } else if (unconscious) {
+    } else if (incapacitated || unconscious) {
       state_color = 'yellow';
     }
     return state_color;

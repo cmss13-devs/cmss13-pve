@@ -56,13 +56,13 @@
 	..()
 	if(!gripped)
 		user.visible_message(SPAN_NOTICE("[user] grips [src] tightly."), SPAN_NOTICE("You grip [src] tightly."))
-		flags_item |= NODROP
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
 		ADD_TRAIT(user, TRAIT_HOLDS_CANE, TRAIT_SOURCE_ITEM)
 		user.AddComponent(/datum/component/footstep, 6, 35, 4, 1, "cane_step")
 		gripped = TRUE
 	else
 		user.visible_message(SPAN_NOTICE("[user] loosens \his grip on [src]."), SPAN_NOTICE("You loosen your grip on [src]."))
-		flags_item &= ~NODROP
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 		REMOVE_TRAIT(user, TRAIT_HOLDS_CANE, TRAIT_SOURCE_ITEM)
 		// Ideally, this would be something like a component added onto every mob that prioritizes certain sounds, such as stomping over canes.
 		var/component = user.GetComponent(/datum/component/footstep)
@@ -134,7 +134,7 @@
 					return
 				stored_item = object
 				mobber.drop_inv_item_to_loc(object, src)
-				to_chat(mobber, SPAN_NOTICE("You slide the [object] into [src]."))
+				to_chat(mobber, SPAN_NOTICE("You slide [object] into [src]."))
 				playsound(mobber, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
 				update_icon()
 				break
@@ -164,7 +164,7 @@
 	desc = "A debug item for research."
 
 /obj/item/moneybag
-	icon = 'icons/obj/items/storage.dmi'
+	icon = 'icons/obj/items/storage/bags.dmi'
 	name = "Money bag"
 	icon_state = "moneybag"
 	force = 10
@@ -178,7 +178,7 @@
 /obj/item/evidencebag
 	name = "evidence bag"
 	desc = "An empty evidence bag."
-	icon = 'icons/obj/items/storage.dmi'
+	icon = 'icons/obj/items/storage/bags.dmi'
 	icon_state = "evidenceobj"
 	item_state = ""
 	w_class = SIZE_SMALL
@@ -224,7 +224,7 @@
 		to_chat(user, SPAN_NOTICE("[I] won't fit in [src]."))
 		return
 
-	if(contents.len)
+	if(length(contents))
 		to_chat(user, SPAN_NOTICE("[src] already has something inside it."))
 		return
 
@@ -257,7 +257,7 @@
 /obj/item/evidencebag/attack_self(mob/user)
 	..()
 
-	if(contents.len)
+	if(length(contents))
 		var/obj/item/I = contents[1]
 		user.visible_message("[user] takes [I] out of [src]", "You take [I] out of [src].",\
 		"You hear someone rustle around in a plastic bag, and remove something.")
@@ -315,7 +315,7 @@
 	name = "dual purpose rappel-fulton harness"
 	desc = "A fulton Surface To Air Recovery System (STARS). Special latch/hook assembly allows for aircraft on flyby equipped with a rappel system to pick up the attached item or person. The complex assembly of venlar rigging and secured buckles takes some time to set up though."
 	icon_state = "rappel_harness_adv"
-	var/shuttle_id = DROPSHIP_MIDWAY
+	var/shuttle_id
 	actions_types = list(/datum/action/item_action/STARS)
 
 /obj/item/rappel_harness/extract/proc/try_extract(mob/living/carbon/human/user)
@@ -403,3 +403,24 @@
 		return
 
 	harness.try_extract(H)
+
+/obj/item/rappel_harness/extract/midway
+	shuttle_id = DROPSHIP_MIDWAY
+
+/obj/item/rappel_harness/extract/cyclone
+	shuttle_id = DROPSHIP_CYCLONE
+
+/obj/item/rappel_harness/extract/typhoon
+	shuttle_id = DROPSHIP_TYPHOON
+
+/obj/item/rappel_harness/extract/tornado
+	shuttle_id = DROPSHIP_TORNADO
+
+/obj/item/rappel_harness/extract/tripoli
+	shuttle_id = DROPSHIP_TRIPOLI
+
+/obj/item/rappel_harness/extract/alamo
+	shuttle_id = DROPSHIP_ALAMO
+
+/obj/item/rappel_harness/extract/normandy
+	shuttle_id = DROPSHIP_NORMANDY
