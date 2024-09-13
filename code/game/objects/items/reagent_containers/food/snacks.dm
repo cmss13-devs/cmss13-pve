@@ -21,6 +21,7 @@
 	//Placeholder for effect that trigger on eating that aren't tied to reagents.
 /obj/item/reagent_container/food/snacks/proc/On_Consume(mob/M)
 	SEND_SIGNAL(src, COMSIG_SNACK_EATEN, M)
+	SEND_SIGNAL(M, COMSIG_MOB_EATEN_SNACK, src)
 	if(!usr) return
 
 	if(!reagents.total_volume)
@@ -42,7 +43,7 @@
 	..()
 
 	if (world.time <= user.next_move)
-		return
+		return FALSE
 	attack(user, user, "head")//zone does not matter
 	user.next_move += attack_speed
 
@@ -51,24 +52,30 @@
 		to_chat(user, SPAN_DANGER("None of [src] left, oh no!"))
 		M.drop_inv_item_on_ground(src) //so icons update :[
 		qdel(src)
-		return 0
+		return FALSE
 
 	if(package)
-		to_chat(M, SPAN_WARNING("How do you expect to eat this with the package still on?"))
-		return 0
+		if(user.a_intent == INTENT_HARM)
+			return ..() // chunk box gaming
+
+		if(user == M)
+			to_chat(M, SPAN_WARNING("How do you expect to eat this with the package still on?"))
+		else
+			to_chat(M, SPAN_WARNING("[user] made an endearing attempt to force feed you a snack with the packaging still on."))
+		return FALSE
 
 	if(istype(M, /mob/living/carbon))
 		var/mob/living/carbon/C = M
 		var/fullness = M.nutrition + (M.reagents.get_reagent_amount("nutriment") * 25)
 		if(fullness > NUTRITION_HIGH && world.time < C.overeat_cooldown)
 			to_chat(user, SPAN_WARNING("[user == M ? "You" : "They"] don't feel like eating more right now."))
-			return
+			return FALSE
 		if(issynth(C))
 			fullness = 200 //Synths never get full
 
 		if(HAS_TRAIT(M, TRAIT_CANNOT_EAT)) //Do not feed the Working Joes
 			to_chat(user, SPAN_DANGER("[user == M ? "You are" : "[M] is"] unable to eat!"))
-			return
+			return FALSE
 
 		if(fullness > NUTRITION_HIGH)
 			C.overeat_cooldown = world.time + OVEREAT_TIME
@@ -135,9 +142,9 @@
 					reagents.trans_to_ingest(M, reagents.total_volume)
 				bitecount++
 				On_Consume(M)
-			return 1
+			return TRUE
 
-	return 0
+	return FALSE
 
 /obj/item/reagent_container/food/snacks/afterattack(obj/target, mob/user, proximity)
 	return ..()
@@ -220,7 +227,7 @@
 			SPAN_NOTICE("[user] crudely slices \the [src] with [W]!"), \
 			SPAN_NOTICE("You crudely slice \the [src] with your [W]!") \
 		)
-		slices_lost = rand(1,max(1,round(slices_num/2)))
+		slices_lost = rand(1,max(1,floor(slices_num/2)))
 	var/reagents_per_slice = reagents.total_volume/slices_num
 	for(var/i=1 to (slices_num-slices_lost))
 		var/obj/slice = new slice_path (src.loc)
@@ -232,10 +239,10 @@
 	if(isanimal(M))
 		if(iscorgi(M))
 			if(bitecount == 0 || prob(50))
-				M.emote("nibbles away at the [src]")
+				M.emote("nibbles away at [src]")
 			bitecount++
 			if(bitecount >= 5)
-				var/sattisfaction_text = pick("burps from enjoyment", "yaps for more", "woofs twice", "looks at the area where the [src] was")
+				var/sattisfaction_text = pick("burps from enjoyment", "yaps for more", "woofs twice", "looks at the area where [src] was")
 				if(sattisfaction_text)
 					M.emote("[sattisfaction_text]")
 				qdel(src)
@@ -517,7 +524,7 @@
 /obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype( W, /obj/item/toy/crayon ))
 		var/obj/item/toy/crayon/C = W
-		var/clr = C.colourName
+		var/clr = C.colorName
 
 		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
 			to_chat(usr, SPAN_NOTICE(" The egg refuses to take on this color!"))
@@ -593,7 +600,7 @@
 	name = "Boiled egg"
 	desc = "A hard-boiled egg."
 	icon_state = "egg"
-	filling_color = "#FFFFFF"
+	filling_color = COLOR_WHITE
 
 /obj/item/reagent_container/food/snacks/boiledegg/Initialize()
 	. = ..()
@@ -665,8 +672,16 @@
 /obj/item/reagent_container/food/snacks/carpmeat/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 3)
-	reagents.add_reagent("carpotoxin", 3)
+	reagents.add_reagent("carpotoxin", 6)
 	src.bitesize = 6
+
+/obj/item/reagent_container/food/snacks/carpmeat/processed
+	name = "processed carp fillet"
+	desc = "A fillet of spess carp meat. This one has been processed to remove carpotoxin."
+
+/obj/item/reagent_container/food/snacks/carpmeat/processed/Initialize()
+	. = ..()
+	reagents.remove_reagent("carpotoxin", 6)
 
 /obj/item/reagent_container/food/snacks/fishfingers
 	name = "Fish Fingers"
@@ -677,7 +692,6 @@
 /obj/item/reagent_container/food/snacks/fishfingers/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 4)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/hugemushroomslice
@@ -806,7 +820,6 @@
 	. = ..()
 	reagents.add_reagent("bread", 3)
 	reagents.add_reagent("fish", 3)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/tofuburger
@@ -833,13 +846,6 @@
 	reagents.add_reagent("iron", 3)
 	bitesize = 2
 
-/// Vanilla roburger - the nanites turn people into cyborgs
-/obj/item/reagent_container/food/snacks/roburger/unsafe
-/obj/item/reagent_container/food/snacks/roburger/unsafe/Initialize(mapload, ...)
-	. = ..()
-	if(prob(5))
-		reagents.add_reagent("nanites", 2)
-
 /obj/item/reagent_container/food/snacks/roburgerbig
 	name = "roburger"
 	desc = "This massive patty looks like poison. Beep."
@@ -849,7 +855,6 @@
 
 /obj/item/reagent_container/food/snacks/roburgerbig/Initialize()
 	. = ..()
-	reagents.add_reagent("nanites", 100)
 	bitesize = 0.1
 
 /obj/item/reagent_container/food/snacks/xenoburger
@@ -862,14 +867,13 @@
 	. = ..()
 	reagents.add_reagent("bread", 3)
 	reagents.add_reagent("meatprotein", 3)
-	reagents.add_reagent("xenoblood", 3)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/clownburger
 	name = "Clown Burger"
 	desc = "This tastes funny..."
 	icon_state = "clownburger"
-	filling_color = "#FF00FF"
+	filling_color = COLOR_MAGENTA
 
 /obj/item/reagent_container/food/snacks/clownburger/Initialize()
 	. = ..()
@@ -885,7 +889,7 @@
 	name = "Mime Burger"
 	desc = "Its taste defies language."
 	icon_state = "mimeburger"
-	filling_color = "#FFFFFF"
+	filling_color = COLOR_WHITE
 
 /obj/item/reagent_container/food/snacks/mimeburger/Initialize()
 	. = ..()
@@ -1082,7 +1086,6 @@
 	. = ..()
 	reagents.add_reagent("bread", 4)
 	reagents.add_reagent("meatprotein", 2)
-	reagents.add_reagent("xenoblood", 4)
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/wingfangchu
@@ -1096,7 +1099,6 @@
 	. = ..()
 	reagents.add_reagent("soysauce", 4)
 	reagents.add_reagent("meatprotein", 4)
-	reagents.add_reagent("xenoblood", 4)
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/human/kabob
@@ -1145,7 +1147,6 @@
 /obj/item/reagent_container/food/snacks/cubancarp/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 6)
-	reagents.add_reagent("carpotoxin", 3)
 	reagents.add_reagent("hotsauce", 3)
 	bitesize = 3
 
@@ -1372,7 +1373,7 @@
 	name = "Tomato soup"
 	desc = "Smells like copper"
 	icon_state = "tomatosoup"
-	filling_color = "#FF0000"
+	filling_color = COLOR_RED
 
 /obj/item/reagent_container/food/snacks/bloodsoup/Initialize()
 	. = ..()
@@ -1702,7 +1703,6 @@
 /obj/item/reagent_container/food/snacks/fishandchips/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 6)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/sandwich
@@ -2132,7 +2132,7 @@
 	desc = "A tasty dessert that won't make it through a metal detector."
 	icon_state = "gappletart"
 	trash = /obj/item/trash/plate
-	filling_color = "#FFFF00"
+	filling_color = COLOR_YELLOW
 
 /obj/item/reagent_container/food/snacks/appletart/Initialize()
 	. = ..()
@@ -2184,7 +2184,6 @@
 	reagents.add_reagent("bread", 10)
 	reagents.add_reagent("meatprotein", 10)
 	reagents.add_reagent("cheese", 10)
-	reagents.add_reagent("xenoblood", 10)
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/xenomeatbreadslice
@@ -2761,10 +2760,10 @@
 	// Set appropriate description
 	if( open && pizza )
 		desc = "A box suited for pizzas. It appears to have a [pizza.name] inside."
-	else if( boxes.len > 0 )
-		desc = "A pile of boxes suited for pizzas. There appears to be [boxes.len + 1] boxes in the pile."
+	else if( length(boxes) > 0 )
+		desc = "A pile of boxes suited for pizzas. There appears to be [length(boxes) + 1] boxes in the pile."
 
-		var/obj/item/pizzabox/topbox = boxes[boxes.len]
+		var/obj/item/pizzabox/topbox = boxes[length(boxes)]
 		var/toptag = topbox.boxtag
 		if( toptag != "" )
 			desc = "[desc] The box on top has a tag, it reads: '[toptag]'."
@@ -2790,8 +2789,8 @@
 	else
 		// Stupid code because byondcode sucks
 		var/doimgtag = 0
-		if( boxes.len > 0 )
-			var/obj/item/pizzabox/topbox = boxes[boxes.len]
+		if( length(boxes) > 0 )
+			var/obj/item/pizzabox/topbox = boxes[length(boxes)]
 			if( topbox.boxtag != "" )
 				doimgtag = 1
 		else
@@ -2800,27 +2799,27 @@
 
 		if( doimgtag )
 			var/image/tagimg = image("food.dmi", icon_state = "pizzabox_tag")
-			tagimg.pixel_y = boxes.len * 3
+			tagimg.pixel_y = length(boxes) * 3
 			overlays += tagimg
 
-	icon_state = "pizzabox[boxes.len+1]"
+	icon_state = "pizzabox[length(boxes)+1]"
 
 /obj/item/pizzabox/attack_hand( mob/user as mob )
 
 	if( open && pizza )
 		user.put_in_hands( pizza )
 
-		to_chat(user, SPAN_DANGER("You take the [src.pizza] out of the [src]."))
+		to_chat(user, SPAN_DANGER("You take the [src.pizza] out of [src]."))
 		src.pizza = null
 		update_icon()
 		return
 
-	if( boxes.len > 0 )
+	if( length(boxes) > 0 )
 		if( user.get_inactive_hand() != src )
 			..()
 			return
 
-		var/obj/item/pizzabox/box = boxes[boxes.len]
+		var/obj/item/pizzabox/box = boxes[length(boxes)]
 		boxes -= box
 
 		user.put_in_hands( box )
@@ -2853,7 +2852,7 @@
 			for(var/obj/item/pizzabox/i in box.boxes)
 				boxestoadd += i
 
-			if( (boxes.len+1) + boxestoadd.len <= 5 )
+			if( (length(boxes)+1) + length(boxestoadd) <= 5 )
 				user.drop_inv_item_to_loc(box, src)
 				box.boxes = list() // Clear the box boxes so we don't have boxes inside boxes. - Xzibit
 				src.boxes.Add( boxestoadd )
@@ -2861,11 +2860,11 @@
 				box.update_icon()
 				update_icon()
 
-				to_chat(user, SPAN_DANGER("You put the [box] ontop of the [src]!"))
+				to_chat(user, SPAN_DANGER("You put [box] ontop of [src]!"))
 			else
 				to_chat(user, SPAN_DANGER("The stack is too high!"))
 		else
-			to_chat(user, SPAN_DANGER("Close the [box] first!"))
+			to_chat(user, SPAN_DANGER("Close [box] first!"))
 
 		return
 
@@ -2877,9 +2876,9 @@
 
 			update_icon()
 
-			to_chat(user, SPAN_DANGER("You put the [I] in the [src]!"))
+			to_chat(user, SPAN_DANGER("You put [I] in [src]!"))
 		else
-			to_chat(user, SPAN_DANGER("You try to push the [I] through the lid but it doesn't work!"))
+			to_chat(user, SPAN_DANGER("You try to push [I] through the lid but it doesn't work!"))
 		return
 
 	if( istype(I, /obj/item/tool/pen/) )
@@ -2890,8 +2889,8 @@
 		var/t = stripped_input(user,"Enter what you want to add to the tag:", "Write", "", 30)
 
 		var/obj/item/pizzabox/boxtotagto = src
-		if( boxes.len > 0 )
-			boxtotagto = boxes[boxes.len]
+		if( length(boxes) > 0 )
+			boxtotagto = boxes[length(boxes)]
 
 		boxtotagto.boxtag = "[boxtotagto.boxtag][t]"
 		playsound(src, "paper_writing", 15, TRUE)
@@ -3226,6 +3225,7 @@
 	warm_desc = "A hard microwaved burrito. Molten on the outside, barely cooked on the inside."
 	icon_state = "packaged-burrito"
 	package = 1
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 
 /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito/Initialize()
 	. = ..()
@@ -3273,6 +3273,7 @@
 	desc = "A singular squishy, room temperature, hot dog. There's no time given for how long to cook it, but you can try microwaving it anyways. Packaged by the Weyland-Yutani Corporation."
 	warm_desc = "A singular squishy, steaming, hot dog. The casing seems to have burst, and the bun is dried out."
 	icon_state = "packaged-hotdog"
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 	package = 1
 
 /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs/Initialize()
@@ -3393,8 +3394,11 @@
 	name = "CHUNK box"
 	desc = "A bar of \"The <b>CHUNK</b>\" brand chocolate. <i>\"The densest chocolate permitted to exist according to federal law. We are legally required to ask you not to use this blunt object for anything other than nutrition.\"</i>"
 	icon_state = "chunk"
-	force = 15 //LEGAL LIMIT OF CHOCOLATE
+	hitsound = "swing_hit"
+	force = 15
 	throwforce = 10
+	attack_speed = 10
+	demolition_mod = 0.3
 	bitesize = 2
 	wrapper = /obj/item/trash/chunk
 
@@ -3408,8 +3412,7 @@
 	desc = "A 'crate', as the marketing called it, of \"The <b>HUNK</b>\" brand chocolate. An early version of the CHUNK box, the HUNK bar was hit by a class action lawsuit and forced to go into bankruptcy and get bought out by the Company when hundreds of customers had their teeth crack from simply attempting to eat the bar."
 	icon_state = "hunk"
 	w_class = SIZE_MEDIUM
-	hitsound = "swing_hit"
-	force = 35 //ILLEGAL LIMIT OF CHOCOLATE
+	force = 35
 	throwforce = 50
 	bitesize = 20
 	wrapper = /obj/item/trash/chunk/hunk

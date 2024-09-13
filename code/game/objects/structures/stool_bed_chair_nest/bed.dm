@@ -20,6 +20,7 @@
 	var/buildstackamount = 1
 	var/foldabletype //To fold into an item (e.g. roller bed item)
 	var/buckling_y = 0 //pixel y shift to give to the buckled mob.
+	var/buckling_x = 0 //pixel x shift to give to the buckled mob.
 	var/obj/structure/closet/bodybag/buckled_bodybag
 	var/accepts_bodybag = FALSE //Whether you can buckle bodybags to this bed
 	var/base_bed_icon //Used by beds that change sprite when something is buckled to them
@@ -60,11 +61,15 @@
 	if(. && buckled_mob == M)
 		M.pixel_y = buckling_y
 		M.old_y = buckling_y
+		M.pixel_x = buckling_x
+		M.old_x = buckling_x
 		if(base_bed_icon)
 			density = TRUE
 	else
 		M.pixel_y = initial(buckled_mob.pixel_y)
 		M.old_y = initial(buckled_mob.pixel_y)
+		M.pixel_x = initial(buckled_mob.pixel_x)
+		M.old_x = initial(buckled_mob.pixel_x)
 		if(base_bed_icon)
 			density = FALSE
 
@@ -161,11 +166,14 @@
 		if(ismob(G.grabbed_thing))
 			var/mob/M = G.grabbed_thing
 			var/atom/blocker = LinkBlocked(user, user.loc, loc)
+			if(!Adjacent(M))
+				visible_message(SPAN_DANGER("[M] is too far to place onto [src]."))
+				return FALSE
 			if(blocker)
 				to_chat(user, SPAN_WARNING("\The [blocker] is in the way!"))
-			else
-				to_chat(user, SPAN_NOTICE("You place [M] on [src]."))
-				M.forceMove(loc)
+				return FALSE
+			to_chat(user, SPAN_NOTICE("You place [M] on [src]."))
+			M.forceMove(loc)
 		return TRUE
 
 	else
@@ -310,7 +318,7 @@
 //////////////////////////////////////////////
 
 //List of all activated medevac stretchers
-var/global/list/activated_medevac_stretchers = list()
+GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 
 /obj/structure/bed/medevac_stretcher
 	name = "medevac stretcher"
@@ -329,7 +337,7 @@ var/global/list/activated_medevac_stretchers = list()
 /obj/structure/bed/medevac_stretcher/Destroy()
 	if(stretcher_activated)
 		stretcher_activated = FALSE
-		activated_medevac_stretchers -= src
+		GLOB.activated_medevac_stretchers -= src
 		if(linked_medevac)
 			linked_medevac.linked_stretcher = null
 			linked_medevac = null
@@ -375,7 +383,7 @@ var/global/list/activated_medevac_stretchers = list()
 
 	if(stretcher_activated)
 		stretcher_activated = FALSE
-		activated_medevac_stretchers -= src
+		GLOB.activated_medevac_stretchers -= src
 		if(linked_medevac)
 			linked_medevac.linked_stretcher = null
 			linked_medevac = null
@@ -393,7 +401,7 @@ var/global/list/activated_medevac_stretchers = list()
 			return
 
 		stretcher_activated = TRUE
-		activated_medevac_stretchers += src
+		GLOB.activated_medevac_stretchers += src
 		to_chat(user, SPAN_NOTICE("You activate [src]'s beacon."))
 		update_icon()
 
@@ -420,6 +428,8 @@ var/global/list/activated_medevac_stretchers = list()
 	buckling_y = 0
 	foldabletype = /obj/item/roller/bedroll
 	accepts_bodybag = FALSE
+	debris = null
+	buildstacktype = null
 
 /obj/item/roller/bedroll
 	name = "folded bedroll"

@@ -242,18 +242,18 @@
 	icon_state = "wall_phone"
 
 /obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/phone_base/phone = new(loc)
+	var/obj/structure/phone_base/Phone = new(loc)
 
-	phone.icon = icon
-	phone.icon_state = icon_state
-	phone.layer = layer
-	phone.setDir(dir)
-	phone.alpha = alpha
-	phone.update_icon()
-	phone.pixel_x = pixel_x
-	phone.pixel_y = pixel_y
-	phone.phone_category = "Vehicles"
-	phone.phone_id = I.exterior.name
+	Phone.icon = icon
+	Phone.icon_state = icon_state
+	Phone.layer = layer
+	Phone.setDir(dir)
+	Phone.alpha = alpha
+	Phone.update_icon()
+	Phone.pixel_x = pixel_x
+	Phone.pixel_y = pixel_y
+	Phone.phone_category = "Vehicles"
+	Phone.phone_id = replacetext(Phone.phone_id, "\improper", "") // this has to be done because phone IDs need to be the same as their display name (\improper doesn't display, obviously)
 
 	qdel(src)
 
@@ -294,6 +294,7 @@
 	V.vehicle = I.exterior
 	V.pixel_x = pixel_x
 	V.pixel_y = pixel_y
+	V.layer = layer
 	V.alpha = alpha
 	V.layer = layer
 	V.update_icon()
@@ -314,6 +315,7 @@
 	V.vehicle = I.exterior
 	V.pixel_x = pixel_x
 	V.pixel_y = pixel_y
+	V.layer = layer
 	V.alpha = alpha
 
 	qdel(src)

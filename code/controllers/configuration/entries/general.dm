@@ -476,8 +476,6 @@ This maintains a list of ip addresses that are able to bypass topic filtering.
 
 /datum/config_entry/flag/respawn
 
-/datum/config_entry/flag/ToRban
-
 /datum/config_entry/flag/ooc_country_flags
 
 /datum/config_entry/flag/record_rounds
@@ -621,6 +619,17 @@ This maintains a list of ip addresses that are able to bypass topic filtering.
 
 /datum/config_entry/flag/auto_profile
 
+/// Relay Ping Browser configuration
+/datum/config_entry/keyed_list/connection_relay_ping
+	splitter = "|"
+	key_mode = KEY_MODE_TEXT_UNALTERED
+	value_mode = VALUE_MODE_TEXT
+
+/datum/config_entry/keyed_list/connection_relay_con
+	splitter = "|"
+	key_mode = KEY_MODE_TEXT_UNALTERED
+	value_mode = VALUE_MODE_TEXT
+
 /datum/config_entry/number/client_warn_version
 	default = null
 	min_val = 500
@@ -638,9 +647,17 @@ This maintains a list of ip addresses that are able to bypass topic filtering.
 	default = null
 	min_val = 500
 
-/datum/config_entry/string/client_error_message
-	default = "Your version of BYOND is too old, may have issues, and is blocked from accessing this server."
-
 /datum/config_entry/number/client_error_build
 	default = null
 	min_val = 0
+
+/datum/config_entry/string/client_error_message
+	default = "Your version of BYOND is too old, may have issues, and is blocked from accessing this server."
+
+// GitHub API, used for anonymous bug report handling.
+/datum/config_entry/string/github_app_api
+	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
+
+/datum/config_entry/string/repo_name
+
+/datum/config_entry/string/org
