@@ -116,7 +116,7 @@
 
 	tried_reload = FALSE // We don't really need to do this in a smart way
 	if(belt)
-		if(!istype(tied_human.belt, /obj/item/storage/belt))
+		if(!istype(tied_human.belt, /obj/item/storage)) // belts can be backpacks, don't ask
 			return
 
 		for(var/id in equipment_map)
