@@ -140,32 +140,21 @@
 		primary_weapon.wield_time = world.time
 		primary_weapon.pull_time = world.time
 
+	tied_human.face_atom(current_target)
+
 	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
 		currently_busy = FALSE
 		return
 
 	primary_weapon.set_target(current_target)
-	ensure_primary_hand(primary_weapon)
-	if(primary_weapon.flags_item & TWOHANDED && !(primary_weapon.flags_item & WIELDED))
-		primary_weapon.wield(tied_human)
-		sleep(max(primary_weapon.wield_delay, short_action_delay * action_delay_mult))
-	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump) && !primary_weapon.in_chamber)
-		var/obj/item/weapon/gun/shotgun/pump/shotgun = primary_weapon
-		shotgun.pump_shotgun(tied_human)
-		shotgun.recent_pump = world.time
-	else if(istype(primary_weapon, /obj/item/weapon/gun/boltaction) && !primary_weapon.in_chamber)
-		var/obj/item/weapon/gun/boltaction/bolt = primary_weapon
-		bolt.unique_action(tied_human)
-		bolt.recent_cycle = world.time
-		bolt.unique_action(tied_human)
-		bolt.recent_cycle = world.time
-	if(!primary_weapon.in_chamber || !friendly_check())
+	gun_data.before_fire(primary_weapon, tied_human, src)
+	if(!primary_weapon.current_mag || !primary_weapon.current_mag.current_rounds || !friendly_check())
 		end_gun_fire()
 		return
 
 	currently_firing = TRUE
 	enter_combat()
-	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire))
+	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire), TRUE)
 	primary_weapon.start_fire(object = current_target, bypass_checks = TRUE)
 
 /datum/human_ai_brain/proc/friendly_check()
@@ -216,7 +205,7 @@
 		end_gun_fire()
 		return
 
-	if(primary_weapon.current_mag?.current_rounds <= 0)
+	if(primary_weapon.current_mag?.current_rounds <= 1) // bullet removal comes after comsig is triggered
 		end_gun_fire()
 		return
 
