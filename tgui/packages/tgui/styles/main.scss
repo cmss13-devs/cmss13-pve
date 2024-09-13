@@ -56,10 +56,12 @@
 @include meta.load-css('./interfaces/CrtPanel.scss');
 @include meta.load-css('./interfaces/ChooseResin.scss');
 @include meta.load-css('./interfaces/CameraConsole.scss');
+@include meta.load-css('./interfaces/BugReportForm.scss');
 @include meta.load-css('./interfaces/DropshipWeapons.scss');
 @include meta.load-css('./interfaces/ElevatorControl.scss');
 @include meta.load-css('./interfaces/ExperimentConfigure.scss');
 @include meta.load-css('./interfaces/MarkMenu.scss');
+@include meta.load-css('./interfaces/MedalsViewer.scss');
 @include meta.load-css('./interfaces/NavigationShuttle.scss');
 @include meta.load-css('./interfaces/NuclearBomb.scss');
 @include meta.load-css('./interfaces/Paper.scss');
@@ -80,6 +82,7 @@
 @include meta.load-css('./interfaces/common/Dpad.scss');
 @include meta.load-css('./interfaces/common/ElectricalPanel.scss');
 @include meta.load-css('./interfaces/TacticalMap.scss');
+@include meta.load-css('./interfaces/StripMenu.scss');
 
 // Layouts
 @include meta.load-css('./layouts/Layout.scss');

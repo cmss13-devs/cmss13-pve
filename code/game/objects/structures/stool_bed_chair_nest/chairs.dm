@@ -7,6 +7,8 @@
 	desc = "A rectangular metallic frame sitting on four legs with a back panel. Designed to fit the sitting position, more or less comfortably."
 	icon_state = "chair"
 	buckle_lying = 0
+	var/north_layer = FLY_LAYER
+	var/non_north_layer = OBJ_LAYER
 	var/propelled = FALSE //Check for fire-extinguisher-driven chairs
 	var/can_rotate = TRUE
 	var/picked_up_item = /obj/item/weapon/twohanded/folded_metal_chair
@@ -25,10 +27,10 @@
 	flags_can_pass_all_temp = PASS_OVER
 
 /obj/structure/bed/chair/handle_rotation() //Making this into a separate proc so office chairs can call it on Move()
-	if(src.dir == NORTH)
-		src.layer = FLY_LAYER
+	if(dir == NORTH)
+		layer = north_layer
 	else
-		src.layer = OBJ_LAYER
+		layer = non_north_layer
 	if(buckled_mob)
 		buckled_mob.setDir(dir)
 
@@ -150,7 +152,7 @@
 		stacked_size--
 		update_overlays()
 
-		var/list/candidate_target_turfs = range(round(stacked_size/2), starting_turf)
+		var/list/candidate_target_turfs = range(floor(stacked_size/2), starting_turf)
 		candidate_target_turfs -= starting_turf
 		var/turf/target_turf = candidate_target_turfs[rand(1, length(candidate_target_turfs))]
 
@@ -256,6 +258,10 @@
 	hit_bed_sound = 'sound/weapons/bladeslice.ogg'
 	debris = list()
 	picked_up_item = null
+
+/obj/structure/bed/chair/comfy/arc
+	non_north_layer = BELOW_OBJ_LAYER
+	layer = BELOW_OBJ_LAYER
 
 /obj/structure/bed/chair/comfy/orange
 	icon_state = "comfychair_orange"
@@ -367,6 +373,13 @@
 /obj/structure/bed/chair/dropship/passenger/shuttle_chair
 	icon_state = "hotseat"
 
+/obj/structure/bed/chair/dropship/passenger/folded
+
+/obj/structure/bed/chair/dropship/passenger/folded/Initialize()
+	. = ..()
+	fold_down()
+
+
 /obj/structure/bed/chair/dropship/passenger/BlockedPassDirs(atom/movable/mover, target_dir, height = 0, air_group = 0)
 	if(chair_state == DROPSHIP_CHAIR_UNFOLDED && istype(mover, /obj/vehicle/multitile) && !is_animating)
 		visible_message(SPAN_DANGER("[mover] slams into [src] and breaks it!"))
@@ -390,6 +403,7 @@
 
 
 /obj/structure/bed/chair/dropship/passenger/afterbuckle()
+	. = ..()
 	if(buckled_mob)
 		icon_state = initial(icon_state) + "_buckled"
 		overlays += chairbar
@@ -413,7 +427,7 @@
 			chair_state = DROPSHIP_CHAIR_BROKEN
 		else
 			chair_state = DROPSHIP_CHAIR_FOLDED
-		addtimer(VARSET_CALLBACK(src, icon_state, "hotseat_new_folded"), 5) // animation length
+		addtimer(VARSET_CALLBACK(src, icon_state, "hotseat_new_folded"), 22) // animation length
 
 /obj/structure/bed/chair/dropship/passenger/shuttle_chair/fold_down(break_it = 1)
 	if(chair_state == DROPSHIP_CHAIR_UNFOLDED)
