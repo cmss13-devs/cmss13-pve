@@ -60,35 +60,6 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/mk1
-	name = "magazine box (M41A MK1 X 10)"
-	flags_equip_slot = SLOT_BACK
-	overlay_ammo_type = "_reg"
-	overlay_content = "_reg"
-	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
-	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
-
-/obj/item/ammo_box/magazine/mk1/empty
-	empty = TRUE
-
-/obj/item/ammo_box/magazine/mk1/heap
-	name = "magazine box (HEAP M41A MK1 X 10)"
-	overlay_ammo_type = "_heap"
-	overlay_content = "_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
-
-/obj/item/ammo_box/magazine/mk1/heap/empty
-	empty = TRUE
-
-/obj/item/ammo_box/magazine/mk1/rubber
-	name = "magazine box (Rubber M41A MK1 X 10)"
-	overlay_ammo_type = "_training"
-	overlay_content = "_reg"
-	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
-
-/obj/item/ammo_box/magazine/mk1/rubber/empty
-	empty = TRUE
-
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
@@ -584,24 +555,42 @@
 //-----------------------M41A MK1 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/mk1
-	name = "magazine box (M41A MK1 x 8)"
+	name = "magazine box (M41A MK1 x 10)"
 	overlay_ammo_type = "_reg_mk1"
 	overlay_gun_type = "_mk1"
 	overlay_content = "_reg"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
-	num_of_magazines = 8
+	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
 
 /obj/item/ammo_box/magazine/mk1/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/ap
-	name = "magazine box (M41A MK1 AP x 8)"
+	name = "magazine box (M41A MK1 AP x 10)"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_ap_mk1"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/ammo_box/magazine/mk1/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/heap
+	name = "magazine box (HEAP M41A MK1 X 10)"
+	overlay_ammo_type = "_heap_mk1"
+	overlay_content = "_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/rubber
+	name = "magazine box (Rubber M41A MK1 X 10)"
+	overlay_ammo_type = "_rubber_mk1"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
+
+/obj/item/ammo_box/magazine/mk1/rubber/empty
 	empty = TRUE
 
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
