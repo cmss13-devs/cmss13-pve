@@ -1,8 +1,0 @@
-{
-    "map_name": "USS Golden Arrow RU (Classic)",
-    "map_path": "map_files/golden_arrow_classic_RU",
-    "map_file": "golden_arrow_RU.dmm",
-    "webmap_url": "GoldenArrow",
-    "traits": [{"Marine Main Ship": true}],
-    "nightmare_path": "maps/Nightmare/maps/golden_arrow_classic_RU/"
-}
