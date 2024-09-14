@@ -535,7 +535,7 @@
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_pap"
 	worn_state = "upp_uniform_pap"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/civi1
 	name = "\improper UPP Civilian-style Orange overalls"

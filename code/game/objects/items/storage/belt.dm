@@ -465,8 +465,6 @@
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/handful,
-		/obj/item/reagent_container/food/snacks/donut/normal,
-		/obj/item/reagent_container/food/snacks/donut/jelly,
 		/obj/item/weapon/baton,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/tool/lighter/zippo,
@@ -474,7 +472,6 @@
 		/obj/item/clothing/glasses/hud/security,
 		/obj/item/device/flashlight,
 		/obj/item/device/radio/headset,
-		/obj/item/weapon,
 		/obj/item/device/clue_scanner,
 	)
 
@@ -529,6 +526,7 @@
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
 	new /obj/item/ammo_magazine/pistol/np92(src)
 	new /obj/item/ammo_magazine/pistol/np92(src)
 
