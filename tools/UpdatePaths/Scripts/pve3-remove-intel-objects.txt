@@ -1,0 +1,8 @@
+/obj/effect/landmark/objective_landmark/@SUBTYPES : @DELETE
+/obj/structure/machinery/computer/objective : @DELETE
+/obj/structure/machinery/computer/view_objectives : @DELETE
+/obj/structure/machinery/computer/intel : @DELETE
+/obj/structure/machinery/computer/disk_reader : @DELETE
+/obj/structure/machinery/cm_vending/clothing/intelligence_officer : @DELETE
+/obj/structure/machinery/cm_vending/gear/intelligence_officer : @DELETE
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/intelligence_officer : @DELETE
