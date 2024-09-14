@@ -537,7 +537,7 @@
 
 /obj/item/clothing/suit/marine
 	name = "\improper M3 pattern marine armor"
-	desc = "Standard USCMC issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp. \nHas some extra pouches on the sides for storage."
+	desc = "Standard USCMC issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "1"
 	item_state = "marine_armor" //Make unique states for Officer & Intel armors.
@@ -748,7 +748,7 @@
 
 /obj/item/clothing/suit/marine/light
 	name = "\improper M3-L pattern light armor"
-	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed."
+	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for less weight."
 	specialty = "\improper M3-L pattern light"
 	icon_state = "L1"
 	armor_variation = 6
@@ -814,7 +814,7 @@
 
 /obj/item/clothing/suit/marine/rto/forecon
 	name = "\improper M3-R pattern recon armor"
-	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a leather pouch strapped to it for limited storage. Issued exclusively to FORECON units."
+	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued exclusively to FORECON units."
 	icon_state = "forecon"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
