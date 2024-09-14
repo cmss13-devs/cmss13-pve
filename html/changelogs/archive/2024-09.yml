@@ -1,0 +1,50 @@
+2024-09-04:
+  AndroBetel:
+  - rscadd: MD blips now show up for humans in 1 tile radius from MD user.
+  Max-023:
+  - rscadd: on Sorokyne, UPP 'Territorial Guard' vendor to replace USCM MP Vendors
+  - rscdel: on Sorokyne, removed USCM Galley Vendors
+  - bugfix: on Sorokyne, Replaces USCM/CMB guns, ammunition, and belts with UPP counterparts
+2024-09-05:
+  BonniePandora:
+  - qol: Toolbelts can now carry the high-capacity blowtorch
+2024-09-06:
+  Max-023:
+  - bugfix: SG Belt hold list modified to accept all revolvers
+2024-09-07:
+  Doubleumc:
+  - admin: removed King from GM panel spawner
+  - bugfix: fixed galley changes being reverted
+  Noname995:
+  - rscadd: Added king with changed abilities and AI to use abilities, new event boss
+      or end game tool for GMs.
+2024-09-11:
+  AndroBetel:
+  - qol: Added platoon commander prefs
+  - rscadd: Added dropship camo, chosen by PLTCO
+  BonniePandora:
+  - qol: Adds a new 'nickname' for character slots
+  - ui: adjusted the character setup menu to have a field for the above
+  Meatstuff882:
+  - rscadd: Added Microwaved Burritos, Cheeseburgers, and Hot Dogs, and recipes for
+      these items.
+  - balance: 'Packaged food has more nutrition.
+
+      :cl:'
+2024-09-14:
+  Doubleumc:
+  - code_imp: updated to main CM as of 8-25
+  - ui: updated to PvP orbit menu, gained more sections
+  - qol: APCs are now emissive
+  - rscadd: Added toggle fullscreen hotkey, default F11
+  - maptweak: new map lints against stacked structures, bad dir var edits, var edits
+      from open turfs
+  - rscadd: added plantable flags
+  - rscadd: added W-Y sentries and additional UPP sentries
+  - refactor: splits storage.dmi into multiple files, also moved some icons around
+      for organization
+  - rscadd: Added a tutorial system for various roles (and just general information),
+      find it in the lobby screen.
+  - rscadd: framework for new ert stations ported from https://github.com/tgstation/tgstation/pull/71785,
+      by ZephyrTFA
+  - code_imp: missing lineart error is now a lint
