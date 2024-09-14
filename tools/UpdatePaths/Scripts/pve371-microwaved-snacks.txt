@@ -1,0 +1,4 @@
+/obj/item/reagent_container/food/snacks/donkpocket : /obj/item/reagent_container/food/snacks/microwavable/donkpocket{@OLD}
+/obj/item/reagent_container/food/snacks/packaged_burger : /obj/item/reagent_container/food/snacks/microwavable/packaged_burger{@OLD}
+/obj/item/reagent_container/food/snacks/packaged_burrito : /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito{@OLD}
+/obj/item/reagent_container/food/snacks/packaged_hdogs : /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs{@OLD}
