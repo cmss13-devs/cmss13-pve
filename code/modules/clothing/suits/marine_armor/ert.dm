@@ -334,7 +334,10 @@
 	desc = "A standard issue UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_officer"
 
-
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap
+	name = "\improper PaP uniform jacket"
+	desc = "A standard issue People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_pap"
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
 

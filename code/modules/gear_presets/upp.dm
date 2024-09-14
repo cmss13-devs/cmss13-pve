@@ -731,13 +731,14 @@ var/random_name
 	name = "UPP Colonist"
 	idtype = /obj/item/card/id/data
 	assignment = "Grazhdanin"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
 /datum/equipment_preset/upp/colonist/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = null
+	new_human.undershirt = "undershirt"
 	var/random_civilian_satchel= rand(1,3)
 	switch(random_civilian_satchel)
 		if(1)
@@ -806,3 +807,30 @@ var/random_name
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+
+/datum/equipment_preset/upp/security
+	name = "UPP People's Police Militsiya"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/cmb
+	assignment = "People's Police Militsiya"
+	role_comm_title = "MILTSY"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id/silver
+
+/datum/equipment_preset/upp/security/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/pap, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/UPP/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)

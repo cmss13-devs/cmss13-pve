@@ -530,6 +530,13 @@
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
+/obj/item/clothing/under/marine/veteran/UPP/pap
+	name = "\improper PaP service uniform"
+	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
+	icon_state = "upp_uniform_pap"
+	worn_state = "upp_uniform_pap"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
 /obj/item/clothing/under/marine/veteran/UPP/civi1
 	name = "\improper UPP Civilian-style Orange overalls"
 	desc = "A set of Civilian-style Orange Overalls with a dark tan undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given out to those who work laborious jobs."
