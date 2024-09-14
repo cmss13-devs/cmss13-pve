@@ -38,7 +38,7 @@
 	if(reagents.total_volume && (icon_state == "bottle-1" || icon_state == "bottle-2" || icon_state == "bottle-3" || icon_state == "bottle-4"))
 		var/image/filling = image('icons/obj/items/reagentfillings.dmi', src, "[icon_state]10")
 
-		var/percent = round((reagents.total_volume / volume) * 100)
+		var/percent = floor((reagents.total_volume / volume) * 100)
 		switch(percent)
 			if(0 to 9) filling.icon_state = "[icon_state]--10"
 			if(10 to 24) filling.icon_state = "[icon_state]-10"
@@ -428,3 +428,13 @@
 /obj/item/reagent_container/glass/bottle/tricordrazine/Initialize()
 	. = ..()
 	reagents.add_reagent("tricordrazine", 60)
+
+/obj/item/reagent_container/glass/bottle/epinephrine
+	name = "\improper Epinephrine bottle"
+	desc = "A small bottle. Contains epinephrine - Used to increase a patients arterial blood pressure, amongst other actions, to assist in cardiopulmonary resuscitation." //"I can't lie to you about your odds of a successful resuscitation, but you have my sympathies"
+	volume = 60
+
+/obj/item/reagent_container/glass/bottle/epinephrine/Initialize()
+	. = ..()
+	reagents.add_reagent("adrenaline", 60)
+	update_icon()

@@ -42,7 +42,7 @@
 	var/has_openbolt_icon = TRUE
 
 /obj/item/weapon/gun/boltaction/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 5, "rail_y" = 18, "under_x" = 25, "under_y" = 14, "stock_x" = 18, "stock_y" = 10)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 5, "rail_y" = 18, "under_x" = 25, "under_y" = 14, "stock_x" = 20, "stock_y" = 9)
 
 /obj/item/weapon/gun/boltaction/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -129,7 +129,7 @@
 
 		The 'pitter-patter' of 'rain' that the crews heard was in fact multiple rifles failing to penetrate through the vehicle's external armor. Once a number of the anti-materiel rifles were examined, it was deemed a high priority to produce a Corps version. In the process, the rifles were designed for a higher calibre then that of the rebel versions, so the M707 would be capable of penetrating the light vehicle armor of their UPP peers in the event of another Dog War or Tientsin."}
 
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi' // overriden with camos
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi' // overridden with camos
 	icon_state = "vulture"
 	item_state = "vulture"
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
@@ -218,7 +218,7 @@
 		return .
 
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(user), fire_message_range) - user)
-		var/relative_dir = get_dir(current_mob, user)
+		var/relative_dir = Get_Compass_Dir(current_mob, user)
 		var/final_dir = dir2text(relative_dir)
 		to_chat(current_mob, SPAN_HIGHDANGER("You hear a massive boom coming from [final_dir ? "the [final_dir]" : "nearby"]!"))
 		if(current_mob.client)
@@ -282,4 +282,10 @@
 
 
 /obj/item/weapon/gun/boltaction/vulture/skillless
+	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/vulture/holo_target
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/vulture/holo_target
+
+/obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
