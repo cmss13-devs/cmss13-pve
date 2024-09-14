@@ -212,9 +212,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "bu" = (
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "bx" = (
@@ -1371,9 +1369,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
 "kJ" = (
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -2130,9 +2126,7 @@
 	},
 /area/golden_arrow/engineering)
 "qJ" = (
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "qL" = (
@@ -2228,9 +2222,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "rl" = (
-/obj/structure/machinery/power/apc/almayer/west{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "rt" = (
@@ -2748,9 +2740,7 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/engineering)
 "vc" = (
-/obj/structure/machinery/power/apc/almayer/south{
-	pixel_y = 0
-	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "vp" = (
@@ -2912,9 +2902,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "wh" = (
-/obj/structure/machinery/power/apc/almayer/west{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -3736,9 +3724,7 @@
 /area/golden_arrow/squad_one)
 "CD" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "CJ" = (
@@ -4886,9 +4872,7 @@
 	},
 /area/golden_arrow/dorms)
 "Py" = (
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -5568,9 +5552,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "VY" = (
@@ -5787,9 +5769,7 @@
 /area/golden_arrow/briefing)
 "Yc" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/power/apc/almayer/east{
-	pixel_x = 0
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "Yf" = (
@@ -5863,7 +5843,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/machinery/power/apc/almayer,
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
