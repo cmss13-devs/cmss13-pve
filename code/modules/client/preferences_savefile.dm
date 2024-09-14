@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 25
+#define SAVEFILE_VERSION_MAX 26
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -11,8 +11,8 @@
 //if a file was updated, return 1
 /datum/preferences/proc/savefile_update(savefile/S)
 	if(!isnum(savefile_version) || savefile_version < SAVEFILE_VERSION_MIN) //lazily delete everything + additional files so they can be saved in the new format
-		for(var/ckey in preferences_datums)
-			var/datum/preferences/D = preferences_datums[ckey]
+		for(var/ckey in GLOB.preferences_datums)
+			var/datum/preferences/D = GLOB.preferences_datums[ckey]
 			if(D == src)
 				var/delpath = "data/player_saves/[copytext(ckey,1,2)]/[ckey]/"
 				if(delpath && fexists(delpath))
@@ -57,9 +57,8 @@
 	if(savefile_version < 17) //remove omniglots
 		var/list/language_traits = list()
 		S["traits"] >> language_traits
-		if(language_traits)
-			if(language_traits.len > 1)
-				language_traits = null
+		if(LAZYLEN(language_traits) > 1)
+			language_traits = null
 		S["traits"] << language_traits
 
 	if(savefile_version < 18) // adds ambient occlusion by default
@@ -157,6 +156,15 @@
 				skin_color = "tan3"
 		S["skin_color"] << skin_color
 
+	if(savefile_version < 26) // adds fax machine sounds on by default & renemes nanotrasen to wy
+		var/sound_toggles
+		S["toggles_sound"] >> sound_toggles
+		sound_toggles |= (SOUND_FAX_MACHINE)
+		S["toggles_sound"] << sound_toggles
+		var/relation
+		S["nanotrasen_relation"] >> relation
+		S["weyland_yutani_relation"] << relation
+
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
 
@@ -229,6 +237,8 @@
 	S["UI_style_alpha"] >> UI_style_alpha
 	S["item_animation_pref_level"] >> item_animation_pref_level
 	S["pain_overlay_pref_level"] >> pain_overlay_pref_level
+	S["flash_overlay_pref"] >> flash_overlay_pref
+	S["crit_overlay_pref"] >> crit_overlay_pref
 	S["stylesheet"] >> stylesheet
 	S["window_skin"] >> window_skin
 	S["fps"] >> fps
@@ -273,11 +283,6 @@
 	S["co_affiliation"] >> affiliation
 	S["yautja_status"] >> yautja_status
 	S["synth_status"] >> synth_status
-	S["key_bindings"] >> key_bindings
-	check_keybindings()
-
-	var/list/remembered_key_bindings
-	S["remembered_key_bindings"] >> remembered_key_bindings
 
 	S["lang_chat_disabled"] >> lang_chat_disabled
 	S["show_permission_errors"] >> show_permission_errors
@@ -291,6 +296,10 @@
 	S["autofit_viewport"] >> auto_fit_viewport
 	S["adaptive_zoom"] >> adaptive_zoom
 	S["tooltips"] >> tooltips
+	S["key_bindings"] >> key_bindings
+
+	var/list/remembered_key_bindings
+	S["remembered_key_bindings"] >> remembered_key_bindings
 
 	//Sanitize
 	ooccolor = sanitize_hexcolor(ooccolor, CONFIG_GET(string/ooc_color_normal))
@@ -313,6 +322,8 @@
 	UI_style_alpha = sanitize_integer(UI_style_alpha, 0, 255, initial(UI_style_alpha))
 	item_animation_pref_level = sanitize_integer(item_animation_pref_level, SHOW_ITEM_ANIMATIONS_NONE, SHOW_ITEM_ANIMATIONS_ALL, SHOW_ITEM_ANIMATIONS_ALL)
 	pain_overlay_pref_level = sanitize_integer(pain_overlay_pref_level, PAIN_OVERLAY_BLURRY, PAIN_OVERLAY_LEGACY, PAIN_OVERLAY_BLURRY)
+	flash_overlay_pref = sanitize_integer(flash_overlay_pref, FLASH_OVERLAY_WHITE, FLASH_OVERLAY_DARK)
+	crit_overlay_pref = sanitize_integer(crit_overlay_pref, CRIT_OVERLAY_WHITE, CRIT_OVERLAY_DARK)
 	window_skin = sanitize_integer(window_skin, 0, SHORT_REAL_LIMIT, initial(window_skin))
 	ghost_vision_pref = sanitize_inlist(ghost_vision_pref, list(GHOST_VISION_LEVEL_NO_NVG, GHOST_VISION_LEVEL_MID_NVG, GHOST_VISION_LEVEL_FULL_NVG), GHOST_VISION_LEVEL_MID_NVG)
 	ghost_orbit = sanitize_inlist(ghost_orbit, GLOB.ghost_orbits, initial(ghost_orbit))
@@ -346,11 +357,11 @@
 	predator_h_style = sanitize_inlist(predator_h_style, GLOB.yautja_hair_styles_list, initial(predator_h_style))
 	predator_skin_color = sanitize_inlist(predator_skin_color, PRED_SKIN_COLOR, initial(predator_skin_color))
 	predator_flavor_text = predator_flavor_text ? sanitize_text(predator_flavor_text, initial(predator_flavor_text)) : initial(predator_flavor_text)
-	commander_status = sanitize_inlist(commander_status, whitelist_hierarchy, initial(commander_status))
+	commander_status = sanitize_inlist(commander_status, GLOB.whitelist_hierarchy, initial(commander_status))
 	commander_sidearm   = sanitize_inlist(commander_sidearm, (CO_GUNS + COUNCIL_CO_GUNS), initial(commander_sidearm))
 	affiliation = sanitize_inlist(affiliation, FACTION_ALLEGIANCE_USCM_COMMANDER, initial(affiliation))
-	yautja_status = sanitize_inlist(yautja_status, whitelist_hierarchy + list("Elder"), initial(yautja_status))
-	synth_status = sanitize_inlist(synth_status, whitelist_hierarchy, initial(synth_status))
+	yautja_status = sanitize_inlist(yautja_status, GLOB.whitelist_hierarchy + list("Elder"), initial(yautja_status))
+	synth_status = sanitize_inlist(synth_status, GLOB.whitelist_hierarchy, initial(synth_status))
 	key_bindings = sanitize_keybindings(key_bindings)
 	remembered_key_bindings = sanitize_islist(remembered_key_bindings, null)
 	hotkeys = sanitize_integer(hotkeys, FALSE, TRUE, TRUE)
@@ -358,6 +369,9 @@
 	pref_special_job_options = sanitize_islist(pref_special_job_options, list())
 	pref_job_slots = sanitize_islist(pref_job_slots, list())
 	vars["fps"] = fps
+
+	check_keybindings()
+	S["key_bindings"] << key_bindings
 
 	if(remembered_key_bindings)
 		for(var/i in GLOB.keybindings_by_name)
@@ -409,6 +423,8 @@
 	S["tgui_say"] << tgui_say
 	S["item_animation_pref_level"] << item_animation_pref_level
 	S["pain_overlay_pref_level"] << pain_overlay_pref_level
+	S["flash_overlay_pref"] << flash_overlay_pref
+	S["crit_overlay_pref"] << crit_overlay_pref
 	S["stylesheet"] << stylesheet
 	S["be_special"] << be_special
 	S["default_slot"] << default_slot
@@ -467,6 +483,7 @@
 	S["yautja_status"] << yautja_status
 	S["synth_status"] << synth_status
 
+
 	S["lang_chat_disabled"] << lang_chat_disabled
 	S["show_permission_errors"] << show_permission_errors
 	S["key_bindings"] << key_bindings
@@ -514,6 +531,7 @@
 	//Character
 	S["OOC_Notes"] >> metadata
 	S["real_name"] >> real_name
+	S["slot_label"] >> slot_label
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"] >> gender
@@ -578,11 +596,18 @@
 
 	S["preferred_squad"] >> preferred_squad
 	S["preferred_armor"] >> preferred_armor
-	S["nanotrasen_relation"] >> nanotrasen_relation
+	S["weyland_yutani_relation"] >> weyland_yutani_relation
 	//S["skin_style"] >> skin_style
 
 	S["uplinklocation"] >> uplinklocation
 	S["exploit_record"] >> exploit_record
+
+	var/tutorial_string = ""
+	S["completed_tutorials"] >> tutorial_string
+	tutorial_savestring_to_list(tutorial_string)
+
+	S["ds_camo"] >> dropship_camo
+	S["plat_name"] >> platoon_name
 
 	S.Unlock()
 
@@ -592,7 +617,7 @@
 
 	if(isnull(language)) language = "None"
 	if(isnull(spawnpoint)) spawnpoint = "Arrivals Shuttle"
-	if(isnull(nanotrasen_relation)) nanotrasen_relation = initial(nanotrasen_relation)
+	if(isnull(weyland_yutani_relation)) weyland_yutani_relation = initial(weyland_yutani_relation)
 	if(!real_name) real_name = random_name(gender)
 	be_random_name = sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body = sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
@@ -629,9 +654,12 @@
 	b_eyes = sanitize_integer(b_eyes, 0, 255, initial(b_eyes))
 	underwear = sanitize_inlist(underwear, gender == MALE ? GLOB.underwear_m : GLOB.underwear_f, initial(underwear))
 	undershirt = sanitize_inlist(undershirt, gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f, initial(undershirt))
-	backbag = sanitize_integer(backbag, 1, backbaglist.len, initial(backbag))
+	backbag = sanitize_integer(backbag, 1, length(GLOB.backbaglist), initial(backbag))
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
 	//b_type = sanitize_text(b_type, initial(b_type))
+
+	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
+	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -673,6 +701,7 @@
 	//Character
 	S["OOC_Notes"] << metadata
 	S["real_name"] << real_name
+	S["slot_label"] << slot_label
 	S["name_is_always_random"] << be_random_name
 	S["body_is_always_random"] << be_random_body
 	S["gender"] << gender
@@ -733,13 +762,18 @@
 	S["religion"] << religion
 	S["traits"] << traits
 
-	S["nanotrasen_relation"] << nanotrasen_relation
+	S["weyland_yutani_relation"] << weyland_yutani_relation
 	S["preferred_squad"] << preferred_squad
 	S["preferred_armor"] << preferred_armor
 	//S["skin_style"] << skin_style
 
 	S["uplinklocation"] << uplinklocation
 	S["exploit_record"] << exploit_record
+
+	S["completed_tutorials"] << tutorial_list_to_savestring()
+
+	S["ds_camo"] << dropship_camo
+	S["plat_name"] << platoon_name
 
 	S.Unlock()
 
@@ -771,7 +805,7 @@
 					addedbind = TRUE
 		if(!addedbind)
 			notadded += kb
-	save_preferences()
+
 	if(length(notadded))
 		addtimer(CALLBACK(src, PROC_REF(announce_conflict), notadded), 5 SECONDS)
 

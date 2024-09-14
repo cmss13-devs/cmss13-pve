@@ -24,7 +24,7 @@
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 		/obj/item/storage/belt/gun/m4a3,
@@ -88,6 +88,16 @@
 	has_buttons = TRUE
 	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "pilot_alt"
+
+/obj/item/clothing/suit/storage/jacket/marine/RO
+	name = "quartermaster jacket"
+	desc = "A green jacket worn by USCM personnel. The back has the flag of the United Americas on it."
+	icon_state = "RO_jacket"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/service/mp
 	name = "military police service jacket"
@@ -243,6 +253,11 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR)
 
+/obj/item/clothing/suit/storage/jacket/marine/provost/chief
+	name = "\improper Provost Command Jacket"
+	desc = "A crisp jacket with the Provost sigil."
+	icon_state = "provostci_jacket"
+
 /obj/item/clothing/suit/storage/jacket/marine/provost/coat
 	name = "\improper Provost Coat"
 	desc = "The crisp coat of a Provost Officer."
@@ -278,15 +293,29 @@
 	icon_state = "o_jacket"
 	item_state = "o_jacket"
 
-//==================War Correspondent==================\\
+//==================Combat Correspondent==================\\
 
 /obj/item/clothing/suit/storage/jacket/marine/reporter
 	name = "combat correspondent jacket"
 	desc = "A jacket for the most fashionable war correspondents."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_suit"
-	item_state = "wc_suit"
-	contained_sprite = TRUE
+	icon_state = "cc_brown"
+	item_state = "cc_brown"
+	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/green
+	icon_state = "cc_green"
+	item_state = "cc_green"
+
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/black
+	icon_state = "cc_black"
+	item_state = "cc_black"
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/blue
+	icon_state = "cc_blue"
+	item_state = "cc_blue"
+
 
 //==================Corporate Liaison==================\\
 
@@ -295,8 +324,8 @@
 	desc = "A casual brown vest."
 	icon_state = "vest_brown"
 	item_state = "vest_brown"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/vest/tan
 	name = "tan vest"
@@ -317,8 +346,8 @@
 	desc = "A khaki suit jacket."
 	icon_state = "corporate_ivy"
 	item_state = "corporate_ivy"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/formal
 	name = "formal suit jacket"
@@ -353,8 +382,8 @@
 	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."
 	icon_state = "jacket_khaki"
 	item_state = "jacket_khaki"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/bomber/red
 	name = "red bomber jacket"
