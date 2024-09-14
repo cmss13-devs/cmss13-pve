@@ -1,12 +1,6 @@
 //////////////////////////////////////////////////////////////
 //Mounted MG, Replacment for the current jury rig code.
 
-//Adds a coin for engi vendors
-/obj/item/coin/marine/engineer
-	name = "marine engineer support token"
-	desc = "Insert this into an engineer vendor in order to access a support weapon."
-	icon_state = "coin_platinum"
-
 // First thing we need is the ammo drum for this thing.
 /obj/item/ammo_magazine/m56d
 	name = "M56D drum magazine (10x28mm Caseless)"
@@ -16,7 +10,7 @@
 	flags_magazine = NO_FLAGS //can't be refilled or emptied by hand
 	caliber = "10x28mm"
 	max_rounds = 700
-	default_ammo = /datum/ammo/bullet/machinegun
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = null
 
 
@@ -48,8 +42,10 @@
 	flags_equip_slot = SLOT_BACK
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56D_gun_e"
-	var/rounds = 0 // How many rounds are in the weapon. This is useful if we break down our guns.
-	var/has_mount = FALSE // Indicates whether the M56D will come with its folding mount already attached
+	///How many rounds are in the weapon. This is useful if we break down our guns.
+	var/rounds = 0
+	///Indicates whether the M56D will come with its folding mount already attached
+	var/has_mount = FALSE
 
 /obj/item/device/m56d_gun/Initialize(mapload, ...)
 	. = ..()
@@ -72,7 +68,7 @@
 	return
 
 /obj/item/device/m56d_gun/attackby(obj/item/O as obj, mob/user as mob)
-	if(!ishuman(user))
+	if(!ishuman(user) || !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return
 
 	if(QDELETED(O))
@@ -91,7 +87,7 @@
 /obj/item/device/m56d_gun/attack_self(mob/user)
 	..()
 
-	if(!ishuman(user))
+	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return
 	if(!has_mount)
 		return
@@ -132,14 +128,15 @@
 	if(!do_after(user, 1 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		return
 
-	var/obj/structure/machinery/m56d_post/M = new /obj/structure/machinery/m56d_post(user.loc)
-	M.setDir(user.dir) // Make sure we face the right direction
-	M.gun_rounds = src.rounds //Inherit the amount of ammo we had.
-	M.gun_mounted = TRUE
-	M.anchored = TRUE
-	M.update_icon()
-	transfer_label_component(M)
-	to_chat(user, SPAN_NOTICE("You deploy \the [src]."))
+	var/obj/structure/machinery/m56d_post/post = new(user.loc)
+	post.setDir(user.dir) // Make sure we face the right direction
+	post.gun_rounds = rounds
+	post.gun_mounted = TRUE
+	post.gun_health = health // retain damage
+	post.anchored = TRUE
+	post.update_icon()
+	transfer_label_component(post)
+	to_chat(user, SPAN_NOTICE("You deploy [src]."))
 	qdel(src)
 
 
@@ -182,7 +179,7 @@
 /obj/item/device/m56d_post/attack_self(mob/user)
 	..()
 
-	if(!ishuman(usr))
+	if(!ishuman(usr) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return
 	if(SSinterior.in_interior(user))
 		to_chat(usr, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
@@ -218,8 +215,8 @@
 		return
 
 	to_chat(user, SPAN_NOTICE("You deploy \the [src]."))
-	var/obj/structure/machinery/m56d_post/M = new /obj/structure/machinery/m56d_post(user.loc)
-	transfer_label_component(M)
+	var/obj/structure/machinery/m56d_post/post = new(user.loc)
+	transfer_label_component(post)
 	qdel(src)
 
 
@@ -233,8 +230,12 @@
 	density = TRUE
 	layer = ABOVE_MOB_LAYER
 	projectile_coverage = PROJECTILE_COVERAGE_LOW
-	var/gun_mounted = FALSE //Has the gun been mounted?
-	var/gun_rounds = 0 //Did the gun come with any ammo?
+	///Whether a gun is mounted
+	var/gun_mounted = FALSE
+	///Ammo amount of the mounted gun
+	var/gun_rounds = 0
+	///Health of the mounted gun
+	var/gun_health = 0
 	health = 50
 
 /obj/structure/machinery/m56d_post/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -286,9 +287,9 @@
 	return XENO_ATTACK_ACTION
 
 /obj/structure/machinery/m56d_post/MouseDrop(over_object, src_location, over_location) //Drag the tripod onto you to fold it.
-	if(!ishuman(usr))
+	var/mob/living/carbon/user = usr //this is us
+	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return
-	var/mob/living/carbon/human/user = usr //this is us
 	if(over_object == user && in_range(src, user))
 		if(anchored && gun_mounted)
 			to_chat(user, SPAN_WARNING("\The [src] can't be folded while there's an unsecured gun mounted on it. Either complete the assembly or take the gun off with a crowbar."))
@@ -297,12 +298,13 @@
 			to_chat(user, SPAN_WARNING("\The [src] can't be folded while screwed to the floor. Unscrew it first."))
 			return
 		to_chat(user, SPAN_NOTICE("You fold [src]."))
-		var/obj/item/device/m56d_post/P = new(loc)
-		user.put_in_hands(P)
+		var/obj/item/device/m56d_post/post = new(loc)
+		transfer_label_component(post)
+		user.put_in_hands(post)
 		qdel(src)
 
 /obj/structure/machinery/m56d_post/attackby(obj/item/O, mob/user)
-	if(!ishuman(user)) //first make sure theres no funkiness
+	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS)) //first make sure theres no funkiness
 		return
 
 	if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH)) //rotate the mount
@@ -322,6 +324,8 @@
 			user.visible_message(SPAN_NOTICE("[user] installs [MG] into place."),SPAN_NOTICE("You install [MG] into place."))
 			gun_mounted = 1
 			gun_rounds = MG.rounds
+			gun_health = MG.health
+			MG.transfer_label_component(src)
 			update_icon()
 			user.temp_drop_inv_item(MG)
 			qdel(MG)
@@ -334,12 +338,19 @@
 		to_chat(user, "You begin dismounting [src]'s gun...")
 		if(do_after(user, 30 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD) && gun_mounted)
 			playsound(src.loc, 'sound/items/Crowbar.ogg', 25, 1)
-			user.visible_message(SPAN_NOTICE("[user] removes [src]'s gun."),SPAN_NOTICE("You remove [src]'s gun."))
-			var/obj/item/device/m56d_gun/G = new(loc)
-			G.rounds = gun_rounds
-			G.update_icon()
+			user.visible_message(SPAN_NOTICE("[user] removes [src]'s gun."), SPAN_NOTICE("You remove [src]'s gun."))
+			var/obj/item/device/m56d_gun/HMG = new(loc)
+			HMG.rounds = gun_rounds
+			if(gun_health)
+				HMG.health = gun_health
+			HMG.update_icon()
+			transfer_label_component(HMG)
+			var/datum/component/label/label = GetComponent(/datum/component/label)
+			if(label)
+				label.remove_label()
 			gun_mounted = FALSE
 			gun_rounds = 0
+			gun_health = 0
 			update_icon()
 		return
 
@@ -380,13 +391,16 @@
 			var/disassemble_time = 30
 			if(do_after(user, disassemble_time * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 				playsound(src.loc, 'sound/items/Deconstruct.ogg', 25, 1)
-				user.visible_message(SPAN_NOTICE("[user] screws the M56D into the mount."),SPAN_NOTICE("You finalize the M56D heavy machine gun."))
-				var/obj/structure/machinery/m56d_hmg/G = new(src.loc) //Here comes our new turret.
-				transfer_label_component(G)
-				G.visible_message("[icon2html(G, viewers(src))] <B>\The [G] is now complete!</B>") //finished it for everyone to
-				G.setDir(dir) //make sure we face the right direction
-				G.rounds = src.gun_rounds //Inherent the amount of ammo we had.
-				G.update_icon()
+				user.visible_message(SPAN_NOTICE("[user] screws the M56D into the mount."), SPAN_NOTICE("You finalize the M56D heavy machine gun."))
+				var/obj/structure/machinery/m56d_hmg/HMG = new(loc)
+				transfer_label_component(HMG)
+				HMG.visible_message("[icon2html(HMG, viewers(src))] <B>\The [HMG] is now complete!</B>")
+				HMG.setDir(dir)
+				HMG.rounds = gun_rounds
+				if(gun_health)
+					HMG.health = gun_health
+					HMG.update_damage_state()
+				HMG.update_icon()
 				qdel(src)
 		else
 			if(anchored)
@@ -411,7 +425,7 @@
 // The actual Machinegun itself, going to borrow some stuff from current sentry code to make sure it functions. Also because they're similiar.
 /obj/structure/machinery/m56d_hmg
 	name = "\improper M56D heavy machine gun"
-	desc = "A deployable, heavy machine gun. While it is capable of taking the same rounds as the M56, it fires specialized tungsten rounds for increased armor penetration.<br>Drag its sprite onto yourself to man it. Ctrl-click it to cycle through firemodes."
+	desc = "A deployable, heavy machine gun. While it is capable of taking the same rounds as the M56..<br>Drag its sprite onto yourself to man it. Ctrl-click it to cycle through firemodes."
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56D"
 	anchored = TRUE
@@ -428,7 +442,7 @@
 	health = 200
 	var/health_max = 200 //Why not just give it sentry-tier health for now.
 	var/atom/target = null // required for shooting at things.
-	var/datum/ammo/bullet/machinegun/ammo = /datum/ammo/bullet/machinegun
+	var/datum/ammo/bullet/rifle/heavy/ammo = /datum/ammo/bullet/rifle/heavy
 	var/obj/projectile/in_chamber = null
 	var/locked = 0 //1 means its locked inplace (this will be for sandbag MGs)
 	var/muzzle_flash_lum = 4
@@ -437,7 +451,7 @@
 	var/zoom = 0 // 0 is it doesn't zoom, 1 is that it zooms.
 	var/damage_state = M56D_DMG_NONE
 
-	var/gun_noise = 'sound/weapons/gun_rifle.ogg' // Variations for gun noises for M56D, M56DE, the auto one, uses a different set of sounds. emergency_cooling
+	var/gun_noise = 'sound/weapons/gun_smartgun1.ogg' // Variations for gun noises for M56D, M56DE, the auto one, uses a different set of sounds. emergency_cooling
 	var/empty_alarm = 'sound/weapons/smg_empty_alarm.ogg'
 
 	// Muzzle Flash Offsets
@@ -455,11 +469,11 @@
 	var/user_old_y = 0
 
 	/// How much time should pass in between full auto shots, slightly higher than burst due to click delay and similar things that slow firing down
-	var/fire_delay = 0.3 SECONDS
+	var/fire_delay = FIRE_DELAY_TIER_SG
 	/// How much time should pass in between burst fire shots
 	var/burst_fire_delay = 0.2 SECONDS
 	/// How many rounds are fired per burst
-	var/burst_amount = 3
+	var/burst_amount = 4
 	/// How many rounds have been fired in the current burst/auto
 	var/shots_fired = 0
 	/// What firemode the gun is currently in
@@ -467,11 +481,10 @@
 	/// What firemodes this gun has
 	var/static/list/gun_firemodes = list(
 		GUN_FIREMODE_SEMIAUTO,
-		GUN_FIREMODE_BURSTFIRE,
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	/// A multiplier for how slow this gun should fire in automatic as opposed to burst. 1 is normal, 1.2 is 20% slower, 0.8 is 20% faster, etc.
-	var/autofire_slow_mult = 0.7
+	var/autofire_slow_mult = 0.8
 	/// If the gun is currently burst firing
 	VAR_PROTECTED/burst_firing = FALSE
 	/// If the gun should display its ammo count
@@ -525,7 +538,7 @@
 
 /obj/structure/machinery/m56d_hmg/get_examine_text(mob/user) //Let us see how much ammo we got in this thing.
 	. = ..()
-	if(ishuman(user))
+	if(ishuman(user) || HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		if(rounds)
 			. += SPAN_NOTICE("It has [rounds] round\s out of [rounds_max].")
 		else
@@ -544,7 +557,7 @@
 	return
 
 /obj/structure/machinery/m56d_hmg/attackby(obj/item/O as obj, mob/user as mob) //This will be how we take it apart.
-	if(!ishuman(user))
+	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return ..()
 
 	if(QDELETED(O))
@@ -556,7 +569,7 @@
 			return
 		else
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
-			user.visible_message("[user] rotates \the [src].","You rotate \the [src].")
+			user.visible_message("[user] rotates [src].", "You rotate [src].")
 			setDir(turn(dir, -90))
 			if(operator)
 				update_pixels(operator)
@@ -570,14 +583,15 @@
 
 			var/disassemble_time = 30
 			if(do_after(user, disassemble_time * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				user.visible_message(SPAN_NOTICE(" [user] disassembles [src]! "),SPAN_NOTICE(" You disassemble [src]!"))
+				user.visible_message(SPAN_NOTICE("[user] disassembles [src]!"), SPAN_NOTICE("You disassemble [src]!"))
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 25, 1)
-				var/obj/item/device/m56d_gun/HMG = new(src.loc) //Here we generate our disassembled mg.
+				var/obj/item/device/m56d_gun/HMG = new(loc)
 				transfer_label_component(HMG)
-				HMG.rounds = src.rounds //Inherent the amount of ammo we had.
+				HMG.rounds = rounds
 				HMG.has_mount = TRUE
+				HMG.health = health
 				HMG.update_icon()
-				qdel(src) //Now we clean up the constructed gun.
+				qdel(src)
 				return
 
 	if(istype(O, /obj/item/ammo_magazine/m56d)) // RELOADING DOCTOR FREEMAN.
@@ -589,7 +603,7 @@
 			if(user.action_busy) return
 			if(!do_after(user, 25 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 				return
-		user.visible_message(SPAN_NOTICE("[user] loads [src]! "),SPAN_NOTICE("You load [src]!"))
+		user.visible_message(SPAN_NOTICE("[user] loads [src]!"), SPAN_NOTICE("You load [src]!"))
 		playsound(loc, 'sound/weapons/gun_minigun_cocked.ogg', 25, 1)
 		if(rounds)
 			var/obj/item/ammo_magazine/m56d/D = new(user.loc)
@@ -620,7 +634,7 @@
 			if(do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, src))
 				user.visible_message(SPAN_NOTICE("[user] repairs some damage on [src]."), \
 					SPAN_NOTICE("You repair [src]."))
-				update_health(-round(health_max*0.2))
+				update_health(-floor(health_max*0.2))
 				playsound(src.loc, 'sound/items/Welder2.ogg', 25, 1)
 		else
 			to_chat(user, SPAN_WARNING("You need more fuel in [WT] to repair damage to [src]."))
@@ -632,10 +646,10 @@
 	if(health <= 0)
 		var/destroyed = rand(0,1) //Ammo cooks off or something. Who knows.
 		playsound(src.loc, 'sound/items/Welder2.ogg', 25, 1)
-		if(!destroyed) new /obj/structure/machinery/m56d_post(loc)
-		else
+		if(!destroyed)
 			var/obj/item/device/m56d_gun/HMG = new(loc)
-			HMG.rounds = src.rounds //Inherent the amount of ammo we had.
+			transfer_label_component(HMG)
+			HMG.rounds = rounds
 		qdel(src)
 		return
 
@@ -654,7 +668,7 @@
 	operator.unset_interaction()
 
 /obj/structure/machinery/m56d_hmg/proc/update_damage_state()
-	var/health_percent = round(health/health_max * 100)
+	var/health_percent = floor(health/health_max * 100)
 	switch(health_percent)
 		if(0 to 25) damage_state = M56D_DMG_HEAVY
 		if(25 to 50) damage_state = M56D_DMG_MODERATE
@@ -664,19 +678,21 @@
 /obj/structure/machinery/m56d_hmg/bullet_act(obj/projectile/P) //Nope.
 	bullet_ping(P)
 	visible_message(SPAN_WARNING("[src] is hit by the [P.name]!"))
-	update_health(round(P.damage / 10)) //Universal low damage to what amounts to a post with a gun.
+	update_health(floor(P.damage / 10)) //Universal low damage to what amounts to a post with a gun.
 	return 1
 
-/obj/structure/machinery/m56d_hmg/attack_alien(mob/living/carbon/xenomorph/M) // Those Ayy lmaos.
-	if(islarva(M))
+/obj/structure/machinery/m56d_hmg/attack_alien(mob/living/carbon/xenomorph/xeno) // Those Ayy lmaos.
+	if(islarva(xeno))
 		return //Larvae can't do shit
-
-	M.visible_message(SPAN_DANGER("[M] has slashed [src]!"),
+	if(xeno.IsAdvancedToolUser() && xeno.a_intent == INTENT_HELP)
+		try_mount_gun(xeno)
+		return XENO_NO_DELAY_ACTION
+	xeno.visible_message(SPAN_DANGER("[xeno] has slashed [src]!"),
 	SPAN_DANGER("You slash [src]!"))
-	M.animation_attack_on(src)
-	M.flick_attack_overlay(src, "slash")
+	xeno.animation_attack_on(src)
+	xeno.flick_attack_overlay(src, "slash")
 	playsound(loc, "alien_claw_metal", 25)
-	update_health(rand(M.melee_damage_lower,M.melee_damage_upper))
+	update_health(rand(xeno.melee_damage_lower,xeno.melee_damage_upper))
 	return XENO_ATTACK_ACTION
 
 /obj/structure/machinery/m56d_hmg/proc/load_into_chamber()
@@ -706,9 +722,12 @@
 	if(!istype(in_chamber, /obj/projectile))
 		return
 
-	var/angle = get_angle(T, U)
+	var/angle = Get_Angle(T, U)
 
 	if((dir == NORTH) && (angle > 180) && (abs(360 - angle) > shoot_degree)) // If north and shooting to the left, we do some extra math
+		return
+
+	if((dir == NORTH) && (angle < 180) && (angle > shoot_degree))
 		return
 
 	else if((dir != NORTH) && (abs(angle - dir2angle(dir)) > shoot_degree))
@@ -812,83 +831,120 @@
 	I.flick_overlay(src, 3)
 
 /obj/structure/machinery/m56d_hmg/MouseDrop(over_object, src_location, over_location) //Drag the MG to us to man it.
-	if(!ishuman(usr))
+	// If the gun sprite wasn't dragged onto the user, or the user isn't adjacent.
+	if(over_object != usr || !in_range(src, usr))
 		return
-	var/mob/living/carbon/human/user = usr //this is us
+	// If the user is already manning the gun.
+	if(operator == usr)
+		// Exit the gun.
+		usr.unset_interaction()
+	else
+		// Try to man the gun
+		try_mount_gun(usr)
 
-	var/user_turf = get_turf(user)
+/obj/structure/machinery/m56d_hmg/proc/try_mount_gun(mob/living/carbon/user)
+	// If the user isn't a human.
+	if(!istype(user))
+		return
+	// If the user is unconscious or dead.
+	if(user.stat)
+		return
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!human.allow_gun_usage)
+			to_chat(user, SPAN_WARNING("You aren't allowed to use firearms!"))
+			return
+	// If the user isn't actually allowed to use guns.
+	else if (!HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
+		to_chat(user, SPAN_WARNING("You don't know what to do with [src]!"))
+		return
 
-	for(var/opp_dir in reverse_nearby_direction(src.dir))
-		if(get_step(src, opp_dir) == user_turf) //Players must be behind, or left or right of that back tile
-			src.add_fingerprint(usr)
-			if((over_object == user && (in_range(src, user) || locate(src) in user))) //Make sure its on ourselves
-				if(user.interactee == src)
-					user.unset_interaction()
-					user.visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("[user] lets go of \the [src].")]", SPAN_NOTICE("You let go of \the [src]."))
-					return
-				if(operator) //If there is already a operator then they're manning it.
-					if(operator.interactee == null)
-						operator = null //this shouldn't happen, but just in case
-					else
-						to_chat(user, "Someone's already controlling it.")
-						return
-				else
-					if(user.interactee) //Make sure we're not manning two guns at once, tentacle arms.
-						to_chat(user, "You're already manning something!")
-						return
-					if(user.get_active_hand() != null)
-						to_chat(user, SPAN_WARNING("You need a free hand to man \the [src]."))
+	// If the user is invisible.
+	if(user.alpha <= 60)
+		to_chat(user, SPAN_WARNING("You can't use [src] while cloaked!"))
+		return
 
-					if(!user.allow_gun_usage)
-						to_chat(user, SPAN_WARNING("You aren't allowed to use firearms!"))
-						return
-					else
-						ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
-						user.set_interaction(src)
-						give_action(user, /datum/action/human_action/mg_exit)
+	// Make sure we're not manning two guns at once, tentacle arms.
+	if(user.interactee)
+		to_chat(user, SPAN_WARNING("You're already manning something!"))
+		return
 
+	// Check the directions opposite of where the gun is facing.
+	var/found_user = FALSE
+	var/turf/user_turf = get_turf(user)
+	for(var/opposite_dir in reverse_nearby_direction(src.dir))
+		if(get_step(src, opposite_dir) == user_turf)
+			found_user = TRUE
+			break
+	// If the user isn't standing behind or on top of the gun.
+	if(!found_user && user_turf != get_turf(src))
+		to_chat(user, SPAN_WARNING("You are too far from the handles to man [src]!"))
+		return
+
+	// If there's already someone manning it.
+	if(operator)
+		// This shouldn't happen, but just in case.
+		if(operator.interactee == null)
+			operator = null
 		else
-			to_chat(usr, SPAN_NOTICE("You are too far from the handles to man [src]!"))
+			to_chat(user, SPAN_WARNING("Someone's already controlling [src]!"))
+			return
+
+	// If both hands aren't empty.
+	if(user.get_active_hand() || user.get_inactive_hand())
+		to_chat(user, SPAN_WARNING("You need both hands free to grab the handles!"))
+		return
+
+	// Man the gun!
+	user.set_interaction(src)
 
 /obj/structure/machinery/m56d_hmg/on_set_interaction(mob/user)
-	RegisterSignal(user, list(COMSIG_MOB_MG_EXIT, COMSIG_MOB_RESISTED, COMSIG_MOB_DEATH, COMSIG_LIVING_SET_BODY_POSITION), PROC_REF(exit_interaction))
-	flags_atom |= RELAY_CLICK
+	ADD_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
+	give_action(user, /datum/action/human_action/mg_exit)
+	user.forceMove(src.loc)
+	user.setDir(dir)
+	user.reset_view(src)
 	user.status_flags |= IMMOBILE_ACTION
-	user.visible_message(SPAN_NOTICE("[user] mans \the [src]."),SPAN_NOTICE("You man \the [src], locked and loaded!"))
+	user.visible_message(SPAN_NOTICE("[user] mans [src]."), SPAN_NOTICE("You man [src], locked and loaded!"))
+	user_old_x = user.pixel_x
+	user_old_y = user.pixel_y
+	update_pixels(user)
+
+	RegisterSignal(user, list(COMSIG_MOB_MG_EXIT, COMSIG_MOB_RESISTED, COMSIG_MOB_DEATH, COMSIG_LIVING_SET_BODY_POSITION), PROC_REF(exit_interaction))
 	RegisterSignal(user, COMSIG_MOB_MOUSEDOWN, PROC_REF(start_fire))
 	RegisterSignal(user, COMSIG_MOB_MOUSEDRAG, PROC_REF(change_target))
 	RegisterSignal(user, COMSIG_MOB_MOUSEUP, PROC_REF(stop_fire))
-	user.forceMove(src.loc)
-	user.setDir(dir)
-	user_old_x = user.pixel_x
-	user_old_y = user.pixel_y
-	user.reset_view(src)
-	update_pixels(user)
-	operator = user
 
-/obj/structure/machinery/m56d_hmg/on_unset_interaction(mob/living/user)
-	flags_atom &= ~RELAY_CLICK
-	SEND_SIGNAL(src, COMSIG_GUN_INTERRUPT_FIRE)
-	user.status_flags &= ~IMMOBILE_ACTION
-	user.visible_message(SPAN_NOTICE("[user] lets go of \the [src]."),SPAN_NOTICE("You let go of \the [src], letting the gun rest."))
+	operator = user
+	flags_atom |= RELAY_CLICK
+
+/obj/structure/machinery/m56d_hmg/on_unset_interaction(mob/user)
 	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, INTERACTION_TRAIT)
-	UnregisterSignal(user, list(COMSIG_MOB_MOUSEUP, COMSIG_MOB_MOUSEDOWN, COMSIG_MOB_MOUSEDRAG))
-	user.reset_view(null)
-	user.remove_temp_pass_flags(PASS_MOB_THRU) // this is necessary because being knocked over while using the gun makes you incorporeal
+	remove_action(user, /datum/action/human_action/mg_exit)
 	user.Move(get_step(src, reverse_direction(src.dir)))
 	user.setDir(dir) //set the direction of the player to the direction the gun is facing
+	user.reset_view(null)
+	user.status_flags &= ~IMMOBILE_ACTION
+	user.visible_message(SPAN_NOTICE("[user] lets go of [src]."), SPAN_NOTICE("You let go of [src], letting the gun rest."))
 	user_old_x = 0 //reset our x
 	user_old_y = 0 //reset our y
 	update_pixels(user, FALSE)
-	if(operator == user) //We have no operator now
-		operator = null
-	remove_action(user, /datum/action/human_action/mg_exit)
+	user.remove_temp_pass_flags(PASS_MOB_THRU) // this is necessary because being knocked over while using the gun makes you incorporeal
+
+	SEND_SIGNAL(src, COMSIG_GUN_INTERRUPT_FIRE)
 	UnregisterSignal(user, list(
 		COMSIG_MOB_MG_EXIT,
 		COMSIG_MOB_RESISTED,
 		COMSIG_MOB_DEATH,
 		COMSIG_LIVING_SET_BODY_POSITION,
+		COMSIG_MOB_MOUSEUP,
+		COMSIG_MOB_MOUSEDOWN,
+		COMSIG_MOB_MOUSEDRAG,
 	))
+
+	if(operator == user) //We have no operator now
+		operator = null
+	flags_atom &= ~RELAY_CLICK
 
 
 /obj/structure/machinery/m56d_hmg/proc/update_pixels(mob/user, mounting = TRUE)
@@ -922,7 +978,7 @@
 		animate(user, pixel_x=diff_x, pixel_y=diff_y, 0.4 SECONDS)
 	else
 		if(user.client)
-			user.client.change_view(world_view_size)
+			user.client.change_view(GLOB.world_view_size)
 			user.client.pixel_x = 0
 			user.client.pixel_y = 0
 		animate(user, pixel_x=user_old_x, pixel_y=user_old_y, 4, 1)
@@ -949,6 +1005,7 @@
 		to_chat(operator, SPAN_HIGHDANGER("You are knocked off the gun by the sheer force of the ram!"))
 		operator.unset_interaction()
 		operator.apply_effect(3, WEAKEN)
+		operator.emote("pain")
 
 /// Getter for burst_firing
 /obj/structure/machinery/m56d_hmg/proc/get_burst_firing()
@@ -1098,6 +1155,19 @@
 	projectile_coverage = PROJECTILE_COVERAGE_HIGH
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	zoom = 1
+	ammo = /datum/ammo/bullet/machinegun/doorgun
+
+/obj/structure/machinery/m56d_hmg/mg_turret/update_health(amount) //Negative values restores health.
+	health -= amount
+	if(health <= 0)
+		playsound(src.loc, 'sound/items/Welder2.ogg', 25, 1)
+		qdel(src)
+		return
+
+	if(health > health_max)
+		health = health_max
+	update_damage_state()
+	update_icon()
 
 /obj/structure/machinery/m56d_hmg/mg_turret/dropship
 	name = "\improper scoped M56D heavy machine gun"
