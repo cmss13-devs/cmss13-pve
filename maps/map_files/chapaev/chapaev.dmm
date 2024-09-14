@@ -31,9 +31,7 @@
 /area/golden_arrow/dorms)
 "ae" = (
 /obj/structure/machinery/power/smes/buildable,
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "ai" = (
 /obj/structure/ladder{
@@ -129,10 +127,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
 "aT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1139,9 +1134,7 @@
 /area/golden_arrow/prep_hallway)
 "jA" = (
 /obj/structure/machinery/disposal,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
 "jB" = (
 /obj/structure/machinery/light/small{
@@ -1223,9 +1216,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/power/smes/buildable,
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "ks" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1258,9 +1249,7 @@
 /area/golden_arrow/supply)
 "kJ" = (
 /obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "kL" = (
 /turf/open/floor/strata/multi_tiles/west,
@@ -2330,10 +2319,7 @@
 	color = "#8B9490";
 	name = "\improper Canteen"
 	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
 "tu" = (
 /obj/structure/surface/table/almayer{
@@ -2613,9 +2599,7 @@
 	dir = 4;
 	light_color = "#832121"
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "wb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2901,10 +2885,7 @@
 /area/golden_arrow/supply)
 "yt" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/supply)
 "yv" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2953,10 +2934,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
 "yM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3466,9 +3444,7 @@
 /obj/item/clothing/mask/gas/upp,
 /obj/item/clothing/mask/gas/upp,
 /obj/item/clothing/mask/gas/upp,
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
 "DD" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3499,10 +3475,7 @@
 	color = "#8B9490";
 	name = "\improper Canteen"
 	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
 "Ea" = (
 /obj/structure/disposalpipe/segment,
@@ -4332,9 +4305,7 @@
 	light_color = "#832121";
 	dir = 8
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "NU" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -4875,10 +4846,7 @@
 	req_one_access_txt = "240;241";
 	req_access = list()
 	},
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
 "Uo" = (
 /obj/structure/cargo_container/horizontal/blue/middle{
@@ -5064,9 +5032,7 @@
 	dir = 8;
 	name = "ship-grade camera"
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "Wb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
