@@ -896,9 +896,9 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cmb
 	assignment = "People's Police Militsiya"
+	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MILTSY"
 	access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_GENERAL)
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/police/load_gear(mob/living/carbon/human/new_human)

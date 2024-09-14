@@ -141,8 +141,8 @@
 
 //UPP Colonists
 
-/datum/paygrade/upp/constable
-	paygrade = "UC1"
-	name = "Militsya"
+/datum/paygrade/upp/militsiya
+	paygrade = PAY_SHORT_UC1
+	name = "Militsiya"
 	prefix = "Milit."
 	pay_multiplier = 0.3

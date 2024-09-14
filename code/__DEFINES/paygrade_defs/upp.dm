@@ -63,3 +63,6 @@
 
 /// UO9, Army General
 #define PAY_SHORT_UO9 "UO9"
+
+/// UC1, Militsiya
+#define PAY_SHORT_UC1 "UC1"

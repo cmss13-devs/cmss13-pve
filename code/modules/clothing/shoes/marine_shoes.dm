@@ -89,7 +89,6 @@
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
 	desc = "A pair of black boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
-	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
@@ -103,7 +102,6 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/mopp
 	name = "\improper M3 MOPP boots"

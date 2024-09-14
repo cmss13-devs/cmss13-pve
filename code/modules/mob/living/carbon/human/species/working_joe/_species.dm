@@ -16,7 +16,7 @@
 /datum/species/synthetic/colonial/working_joe/hazard
 	name = SYNTH_HAZARD_JOE //TECHNICALLY the proper name would be Hazard Working Joes, but we will stick with Hazard Joe for now
 	name_plural = "Hazard Joes"
-	emote_panel_type = /datum/joe_emote_panel/hazard
+	emote_panel_type = /datum/joe_emote_panel
 
 /datum/species/synthetic/colonial/working_joe/handle_post_spawn(mob/living/carbon/human/joe)
 	. = ..()

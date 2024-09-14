@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_UPP_MED = UPP_MED_FREQ,
 	RADIO_CHANNEL_UPP_CCT = UPP_CCT_FREQ,
 	RADIO_CHANNEL_UPP_KDO = UPP_KDO_FREQ,
-	RADIO_CHANNEL_UPP_KDO = UPP_GRD_FREQ,
+	RADIO_CHANNEL_UPP_GRD = UPP_GRD_FREQ,
 
 	RADIO_CHANNEL_CLF_GEN = CLF_FREQ,
 	RADIO_CHANNEL_CLF_CMD = CLF_CMD_FREQ,
@@ -297,6 +297,7 @@ SUBSYSTEM_DEF(radio)
 		"[UPP_MED_FREQ]" = "opformed",
 		"[UPP_CCT_FREQ]" = "opforcct",
 		"[UPP_KDO_FREQ]" = "opforspe",
+		"[UPP_GRD_FREQ]" = "opforgrd",
 		"[CLF_FREQ]" = "clfradio",
 		"[CLF_CMD_FREQ]" = "opforcmd",
 		"[CLF_ENGI_FREQ]" = "opforeng",

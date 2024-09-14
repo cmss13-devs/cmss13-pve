@@ -2469,7 +2469,9 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/engineering)
 "vc" = (
-/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/machinery/power/apc/almayer/south{
+	layer = 5
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "vp" = (
@@ -5285,7 +5287,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/machinery/power/apc/almayer/south{
+	layer = 5
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/briefing)
 "YU" = (
