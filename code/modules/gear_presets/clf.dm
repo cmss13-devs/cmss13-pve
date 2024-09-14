@@ -76,6 +76,7 @@
 		spawn_rebel_rifle(new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.set_species("Human Mook")
 
 /datum/equipment_preset/clf/soldier/get_antag_clothing_equipment()
 	return list(
