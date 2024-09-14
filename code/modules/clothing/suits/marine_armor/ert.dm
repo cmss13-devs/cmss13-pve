@@ -306,7 +306,7 @@
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"
 	icon_state = "upp_coat"
-	desc = "A standard issue UPP military jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	desc = "Military jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
@@ -326,17 +326,17 @@
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp
 	name = "\improper UH4-P camouflaged jacket"
-	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_mp"
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service
-	name = "\improper UL2 service jacket"
-	desc = "A standard issue UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	name = "\improper UL2 coldweather service jacket"
+	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_officer"
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap
 	name = "\improper PaP uniform jacket"
-	desc = "A standard issue People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
