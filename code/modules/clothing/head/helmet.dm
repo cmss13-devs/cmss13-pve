@@ -307,6 +307,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/family_photo = "family_photo",
 	/obj/item/prop/helmetgarb/compass = "compass",
 	/obj/item/prop/helmetgarb/bug_spray = "bug_spray",
+	/obj/item/prop/helmetgarb/cat_ears = "kitty_coded",
 
 	// MISC
 	/obj/item/tool/pen = "helmet_pen_black",
