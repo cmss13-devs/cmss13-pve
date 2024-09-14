@@ -73,3 +73,65 @@
 
 /obj/structure/warhammer/statue/saint/unknown_guardsman
 	icon_state = "statue_guardsmen"
+
+/obj/structure/warhammer/statue/angel
+	icon = 'void-marines/wh40k/icons/spookystatues.dmi'
+	icon_state = "AngelRight"
+
+/obj/structure/warhammer/statue/angel/left
+	icon_state = "AngelLeft"
+
+/obj/structure/warhammer/statue/guardian
+	icon = 'void-marines/wh40k/icons/spookystatues.dmi'
+	icon_state = "defender"
+
+/obj/effect/floor_decal/newcorner/crater_big
+	icon = 'void-marines/wh40k/icons/trenches_turfs.dmi'
+	icon_state = "l1"
+
+/obj/effect/floor_decal/newcorner/crater_small
+	icon = 'void-marines/wh40k/icons/trenches_turfs.dmi'
+	icon_state = "crater"
+
+// Candle
+
+/obj/item/tool/candle/church
+	icon = 'void-marines/wh40k/icons/candle.dmi'
+	icon_state = "church_candle"
+	wax = 6000
+
+/obj/item/tool/candle/church/New()
+	wax = rand(6000, 7000) // Enough for 27-33 minutes. 30 minutes on average.
+	..()
+
+/obj/item/tool/candle/church/update_icon()
+	icon_state = "[icon_state][heat_source ? "_lit" : ""]"
+
+/obj/item/tool/candle/church/dinner
+	icon_state = "dinner_candle"
+
+/obj/item/tool/candle/church/tiny
+	icon_state = "tiny_candle"
+
+// Arty
+
+/obj/structure/artillery
+	name = "artillery"
+	icon = 'void-marines/wh40k/icons/cannon.dmi'
+	icon_state = "modern_cannon"
+
+/obj/item/shell
+	name = "high-explosive shell"
+	desc = "High-Explosive shell, used in Artillery."
+	icon = 'void-marines/wh40k/icons/cannon_ball.dmi'
+	icon_state = "shellHE"
+
+/obj/item/shell/phosphex
+	name = "phosphex shell"
+	icon_state = "shell_phosgen"
+	desc = "The phosphex shell is filled with a terrible chemical mixture of white phosphorus, powerful acids and poisons, which when detonated creates pools of sickly green flame, poisoning and corroding everything that can bear its heat, and leaving a patch of land where nothing living will grow for years an area of land where nothing living will grow for years."
+
+/obj/item/shell/gas
+	name = "inferno shell"
+	desc = "This heavy incendiary shell is filled with promethium gel and has a fucelline explosive core, spreading the flaming mixture over a larger area."
+	icon_state = "shell_xb"
