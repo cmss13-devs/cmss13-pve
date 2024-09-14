@@ -96,15 +96,27 @@
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
+	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_FLAVOR
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = SKILL_SPEC_SMARTGUN
+	var/obj/structure/machinery/camera/camera
 
 	var/far_sight = FALSE
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
 
+/obj/item/clothing/glasses/night/m56_goggles/Initialize(mapload)
+	. = ..()
+	camera = new /obj/structure/machinery/camera/overwatch
+
+/obj/item/clothing/glasses/night/m56_goggles/equipped(mob/living/carbon/human/mob, slot)
+	if(camera)
+		camera.c_tag = mob.name
+	..()
+
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
+	QDEL_NULL(camera)
 	linked_smartgun = null
 	disable_far_sight()
 	return ..()

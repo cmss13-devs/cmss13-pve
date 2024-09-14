@@ -159,6 +159,8 @@
 #define BLOCK_KNOCKDOWN (1<<11)
 /// Whether wearing this suit grants you the ability to fire a smartgun
 #define SMARTGUN_HARNESS (1<<12)
+///Whether wearing this headset grants you the ability to use the IFF targetting system of the smartgun
+#define SMARTGUN_OPTIC (1<<13)
 
 //SUITS AND HELMETS====================================================================================
 
