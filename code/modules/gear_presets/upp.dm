@@ -863,10 +863,11 @@ var/random_name
 	skills = /datum/skills/cmb
 	assignment = "People's Police Militsiya"
 	role_comm_title = "MILTSY"
+	access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_GENERAL)
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/silver
 
-/datum/equipment_preset/upp/security/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/police/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)

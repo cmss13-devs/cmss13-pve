@@ -125,6 +125,17 @@ GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 	transfer_handful_amount = 4
 	max_rounds = 24
 	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/beanbag/heavy
+	name = "box of heavy beanbag shells"
+	desc = "A box filled with beanbag slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_beanbag"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
 //-------------------------------------------------------
 
 /*

@@ -400,16 +400,36 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
 
-/obj/item/weapon/gun/shotgun/type23/riot
+/obj/item/weapon/gun/shotgun/pump/type23
 	name = "\improper KS-29 riot shotgun"
 	desc = "A contemporary semi-automatic design based off of the KS-23, a Soviet-era riot shotgun chambered in 6 gauge shells. Like its Naval Infantry sibling, it is downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_wood"
 	item_state = "type23_wood"
+	fire_sound = 'sound/weapons/gun_type23.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	attachable_allowed = list(
+		/obj/item/attachable/stock/type23/wood,
+		)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_equip_slot = SLOT_BACK
+	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
-/obj/item/weapon/gun/shotgun/type23/riot/set_gun_attachment_offsets()
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15)
+
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_4
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+
 
 //-------------------------------------------------------
 //DOUBLE SHOTTY
