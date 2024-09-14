@@ -9,14 +9,10 @@
 /area/golden_arrow/vehicle_shuttle)
 "u" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/vehicle_shuttle)
 "A" = (
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/vehicle_shuttle)
 "K" = (
 /obj/effect/decal/cleanable/dirt,
