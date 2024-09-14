@@ -77,7 +77,9 @@
 	if(!uses_left)
 		return FALSE
 
-	if((user.reagents.get_reagent_amount(chemname) + amount_per_transfer_from_this) > (chemical_reagents_list[chemname].overdose))
+	var/datum/reagent/reagent_datum = GLOB.chemical_reagents_list[chemname]
+
+	if((user.reagents.get_reagent_amount(chemname) + amount_per_transfer_from_this) > (reagent_datum.overdose))
 		return FALSE
 
 	if(skilllock != SKILL_MEDICAL_TRAINED && !skillcheck(user, SKILL_MEDICAL, skilllock))

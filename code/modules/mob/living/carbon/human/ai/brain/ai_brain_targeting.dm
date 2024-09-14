@@ -158,7 +158,7 @@
 	primary_weapon.start_fire(object = current_target, bypass_checks = TRUE)
 
 /datum/human_ai_brain/proc/friendly_check()
-	var/list/turf_list = getline2(get_turf(tied_human), get_turf(current_target))
+	var/list/turf_list = get_line(get_turf(tied_human), get_turf(current_target))
 	for(var/turf/tile in turf_list)
 		if(istype(tile, /turf/closed))
 			return TRUE

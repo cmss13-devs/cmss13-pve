@@ -36,7 +36,7 @@
 
 
 /datum/human_ai_faction/uscm
-	faction = FACTION_USCM
+	faction = FACTION_MARINE
 	friendly_factions = list(
 		FACTION_COLONIST,
 		FACTION_TWE,
@@ -57,7 +57,7 @@
 	neutral_factions = list(
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
-		FACTION_USCM,
+		FACTION_MARINE,
 		FACTION_MERCENARY,
 		FACTION_TWE,
 	)
@@ -72,7 +72,6 @@
 	neutral_factions = list(
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
-		FACTION_USCM,
 		FACTION_MERCENARY,
 	)
 
