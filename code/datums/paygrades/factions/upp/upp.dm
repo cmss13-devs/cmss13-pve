@@ -45,7 +45,7 @@
 	paygrade = PAY_SHORT_UE7
 	name = "Starshina"
 	prefix = "Strsh."
-	pay_multiplier = 1 //here comes the moneyyy
+	pay_multiplier = 1
 
 //UPP Commandos
 /datum/paygrade/upp/uk1
