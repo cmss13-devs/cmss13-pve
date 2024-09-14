@@ -632,3 +632,9 @@
 	icon = 'icons/obj/items/spray.dmi'
 	icon_state = "pestspray"
 	w_class = SIZE_SMALL
+
+/obj/item/prop/helmetgarb/cat_ears
+	name = "'tactical' cat ears'"
+	desc = "A set of magnetic cat-ears capable of being mounted onto a helmet. You're either brave, stupid or really like getting beaten up if you wear these around the barracks."
+	icon_state = "kitty_coded"
+	w_class = SIZE_SMALL
