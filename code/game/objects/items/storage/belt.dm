@@ -527,10 +527,10 @@
 	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/ammo_magazine/pistol/np92(src)
 	new /obj/item/ammo_magazine/pistol/np92(src)
-	new	/obj/item/weapon/gun/pistol/np92(src)
 
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
