@@ -173,7 +173,7 @@
 	if(ishuman(creature))
 		if(human_creature.w_uniform && CHECK_BITFIELD(human_creature.w_uniform.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
-		if(human_creature.wear_suit && CHECK_BITFIELD(human_creature.wear_suit.flags_inventory, COVEREYES))
+		if(human_creature.wear_suit && CHECK_BITFIELD(human_creature.wear_suit.flags_inventory, BLOCKGASEFFECT))
 			return TRUE
 
 /obj/effect/particle_effect/smoke/proc/contact_eyes(mob/living/carbon/creature)
