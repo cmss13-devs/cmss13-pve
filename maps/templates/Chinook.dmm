@@ -3585,18 +3585,6 @@
 	icon_state = "stan23"
 	},
 /area/adminlevel/chinook/shuttle/unpowered)
-"axM" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/machinery/door_control{
-	id = "chinookreq";
-	name = "Requisitions Lockdown";
-	req_one_access_txt = "1;21"
-	},
-/obj/structure/surface/table/reinforced/black,
-/turf/open/floor/almayer,
-/area/adminlevel/chinook/cargo)
 "axN" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
@@ -7459,6 +7447,11 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /obj/structure/surface/table/reinforced/almayer_blend,
+/obj/structure/machinery/door_control{
+	id = "chinookreq";
+	name = "Requisitions Lockdown";
+	req_one_access_txt = "1;21"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/chinook/cargo)
 "aUk" = (
@@ -9453,6 +9446,10 @@
 	},
 /turf/open/floor/almayer/silver/north,
 /area/adminlevel/chinook)
+"gFc" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/almayer,
+/area/adminlevel/chinook/cargo)
 "gGK" = (
 /obj/structure/machinery/cm_vending/sorted/boozeomat,
 /turf/open/floor/kutjevo/plate,
@@ -23947,7 +23944,7 @@ aGo
 azg
 aGo
 aVq
-aVq
+gFc
 aVq
 aVq
 aiQ
@@ -24073,7 +24070,7 @@ amP
 aJM
 azv
 aJM
-axM
+amP
 aVD
 aVq
 aGo
