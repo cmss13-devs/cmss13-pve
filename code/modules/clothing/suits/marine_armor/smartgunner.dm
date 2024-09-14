@@ -23,7 +23,7 @@
 		/obj/item/device/walkman,
 	)
 	var/list/smartgun_back = list(
-		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/machete/smartgunner,
 	)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()

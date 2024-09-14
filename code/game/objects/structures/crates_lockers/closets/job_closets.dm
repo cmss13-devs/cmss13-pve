@@ -130,6 +130,7 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner(src)
 
 /obj/structure/closet/secure_closet/smartgunner_forecon
 	name = "smartgunner locker"
