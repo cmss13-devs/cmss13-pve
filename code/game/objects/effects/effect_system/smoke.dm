@@ -344,10 +344,8 @@
 	if(..())
 		return
 	if(isxeno(creature))
-		if(xeno_creature.interference < 4)
-			to_chat(xeno_creature, SPAN_XENOHIGHDANGER("Your awareness dims to a small area!"))
 		creature.apply_damage(20, BRUTE)
-		xeno_creature.interference = 10
+		xeno_creature.AddComponent(/datum/component/status_effect/interference, 10, 10)
 		xeno_creature.blinded = TRUE
 
 /obj/effect/particle_effect/smoke/cn20/contact_eyes(mob/living/carbon/creature)
