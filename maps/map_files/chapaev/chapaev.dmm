@@ -65,18 +65,6 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
-"av" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/golden_arrow/medical)
 "ax" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -224,7 +212,9 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "bu" = (
-/obj/structure/machinery/power/apc/almayer/east,
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "bx" = (
@@ -442,7 +432,6 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/small,
-/obj/structure/machinery/power/apc/almayer/south,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -509,8 +498,10 @@
 /obj/item/stack/sandbags_empty/half,
 /obj/item/stack/sandbags_empty/half,
 /obj/item/stack/sandbags_empty/half,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -564,10 +555,6 @@
 "ei" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/squad_one)
-"eq" = (
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "et" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -676,14 +663,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
-"fp" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/prep_hallway)
 "fq" = (
 /obj/effect/landmark/observer_start,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -862,15 +841,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/medical)
-"gj" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_sergeant)
 "gt" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
@@ -881,8 +851,10 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -968,12 +940,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"hf" = (
-/obj/structure/machinery/power/apc/almayer/south,
-/turf/open/floor/strata{
-	icon_state = "multi_tiles"
-	},
-/area/golden_arrow/synthcloset)
 "hk" = (
 /obj/structure/machinery/cryopod{
 	dir = 1
@@ -1061,8 +1027,10 @@
 	pixel_y = 6
 	},
 /obj/structure/closet/crate/construction,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -1383,6 +1351,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"ky" = (
+/obj/structure/closet/crate/miningcar{
+	layer = 3.1;
+	name = "\improper materials storage bin"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/supply)
 "kz" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -1395,11 +1370,10 @@
 /obj/structure/machinery/conveyor,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
-"kG" = (
-/obj/structure/machinery/power/apc/almayer/south,
-/turf/open/space/basic,
-/area/space)
 "kJ" = (
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -1444,12 +1418,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/supply)
-"lf" = (
-/obj/structure/machinery/power/reactor{
-	name = "\improper S-52 fusion reactor 5"
-	},
-/turf/open/space/basic,
-/area/space)
 "li" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -1592,9 +1560,11 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
 "ms" = (
@@ -1624,8 +1594,10 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -1728,9 +1700,11 @@
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
 "nG" = (
@@ -1930,10 +1904,8 @@
 /turf/open/floor/plating,
 /area/golden_arrow/canteen)
 "pi" = (
-/obj/structure/machinery/power/apc/almayer,
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	icon_state = "floor2"
 	},
 /area/golden_arrow/engineering)
 "pn" = (
@@ -2044,29 +2016,12 @@
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"qa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/engineering)
 "qi" = (
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/medical)
-"qo" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/power/apc/almayer,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/hangar)
 "qq" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -2167,12 +2122,19 @@
 	},
 /area/golden_arrow/hangar)
 "qF" = (
-/obj/structure/machinery/autolathe,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
+"qJ" = (
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "qL" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/magazine/book{
@@ -2264,6 +2226,12 @@
 	name = "\improper Other Sections"
 	},
 /turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
+"rl" = (
+/obj/structure/machinery/power/apc/almayer/west{
+	pixel_x = 0
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "rt" = (
 /turf/open/floor/strata/floor3/east,
@@ -2680,9 +2648,11 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "ug" = (
+/obj/structure/machinery/power/apc/almayer/north{
+	pixel_y = 0
+	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	icon_state = "floor2"
 	},
 /area/golden_arrow/engineering)
 "uh" = (
@@ -2777,6 +2747,12 @@
 "vb" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/engineering)
+"vc" = (
+/obj/structure/machinery/power/apc/almayer/south{
+	pixel_y = 0
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/cryo_cells)
 "vp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2936,14 +2912,9 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "wh" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 8
+/obj/structure/machinery/power/apc/almayer/west{
+	pixel_x = 0
 	},
-/obj/structure/closet/crate/miningcar{
-	layer = 3.1;
-	name = "\improper materials storage bin"
-	},
-/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "floor3"
@@ -2998,7 +2969,6 @@
 	pixel_y = 16;
 	can_block_movement = 0
 	},
-/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
 	},
@@ -3764,6 +3734,13 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/squad_one)
+"CD" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/prep_hallway)
 "CJ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/shower{
@@ -4081,8 +4058,10 @@
 /area/golden_arrow/medical)
 "GF" = (
 /obj/structure/closet/firecloset/full,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -4114,8 +4093,7 @@
 "GU" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	icon_state = "floor2"
 	},
 /area/golden_arrow/engineering)
 "GY" = (
@@ -4260,9 +4238,11 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
 /turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
 "Io" = (
@@ -4828,17 +4808,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"Om" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/engineering)
 "On" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4916,6 +4885,14 @@
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/dorms)
+"Py" = (
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/golden_arrow/medical)
 "PA" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -5176,8 +5153,7 @@
 	pixel_y = -23
 	},
 /turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
+	icon_state = "floor2"
 	},
 /area/golden_arrow/engineering)
 "Sp" = (
@@ -5221,10 +5197,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"SD" = (
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/dorms)
 "SL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -5331,10 +5303,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
-"TO" = (
-/obj/structure/machinery/power/apc/almayer/west,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/cryo_cells)
 "TR" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -5600,12 +5568,17 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "VY" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
 /turf/open/floor/strata{
-	dir = 6;
 	icon_state = "multi_tiles"
 	},
 /area/golden_arrow/engineering)
@@ -5638,6 +5611,17 @@
 /obj/item/ammo_magazine/shotgun/slug/heavy,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
+"Wf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/power/apc/almayer/north{
+	pixel_y = 0
+	},
+/turf/open/floor/strata{
+	icon_state = "multi_tiles"
+	},
+/area/golden_arrow/platoon_sergeant)
 "Wi" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -5721,6 +5705,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"Xh" = (
+/obj/structure/machinery/power/apc/almayer/north{
+	pixel_y = 0
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/dorms)
 "Xj" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -5796,11 +5786,10 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "Yc" = (
-/obj/structure/machinery/power/apc/almayer{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/power/apc/almayer/east,
+/obj/structure/machinery/power/apc/almayer/east{
+	pixel_x = 0
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "Yf" = (
@@ -5871,20 +5860,14 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "YI" = (
-/obj/structure/machinery/power/apc/almayer/south,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/machinery/power/apc/almayer,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
 /area/golden_arrow/briefing)
-"YJ" = (
-/obj/structure/machinery/power/reactor{
-	name = "\improper S-52 fusion reactor 2"
-	},
-/turf/open/space/basic,
-/area/space)
 "YU" = (
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
@@ -5919,15 +5902,6 @@
 	icon_state = "floor2"
 	},
 /area/golden_arrow/synthcloset)
-"Zm" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/golden_arrow/engineering)
 "Zs" = (
 /obj/structure/machinery/computer/overwatch/almayer{
 	density = 1;
@@ -13811,11 +13785,11 @@ Kt
 wo
 qw
 ww
-IT
+Wf
 Kw
 kz
 sB
-gj
+tG
 NU
 tm
 CV
@@ -14264,8 +14238,8 @@ bW
 yi
 il
 OC
+CD
 pq
-fp
 pq
 pq
 yE
@@ -14280,7 +14254,7 @@ ST
 kL
 Kk
 CM
-is
+Xh
 gF
 is
 gF
@@ -14402,14 +14376,14 @@ wq
 wq
 wq
 wq
-qo
+WG
 yH
 Pn
 os
 Zs
 lU
 dm
-eq
+lU
 kJ
 os
 jA
@@ -14434,7 +14408,7 @@ Ou
 CM
 uc
 gF
-SD
+is
 Rr
 iO
 iO
@@ -14734,7 +14708,7 @@ vr
 zg
 Fu
 iO
-TO
+ON
 AS
 vO
 oA
@@ -15066,9 +15040,9 @@ mV
 mV
 mV
 mV
-kG
 mV
-lf
+mV
+mV
 mV
 mV
 mV
@@ -15082,9 +15056,9 @@ jG
 mk
 qF
 vb
-ug
-ug
-ug
+pi
+pi
+pi
 pi
 vb
 sV
@@ -15230,14 +15204,14 @@ mV
 mV
 mV
 jG
-wO
-Zm
-Zm
+pi
+pi
+pi
 vb
-ug
+pi
 GU
 iZ
-ug
+pi
 vb
 wO
 Ri
@@ -15346,7 +15320,7 @@ pC
 CJ
 rX
 CJ
-ON
+vc
 iO
 hk
 bs
@@ -15382,14 +15356,14 @@ mV
 mV
 mV
 oj
-wO
+pi
 ai
 Kc
 iT
-ug
+pi
 Kc
 nS
-ug
+pi
 aF
 wO
 wO
@@ -15480,7 +15454,7 @@ oc
 cT
 cT
 EU
-vG
+qJ
 Hv
 qL
 Vb
@@ -15534,12 +15508,12 @@ mV
 mV
 mV
 jG
-wO
-qa
-Om
+pi
+pi
+GU
 vb
-ug
-ug
+pi
+pi
 CW
 Sj
 vb
@@ -15676,7 +15650,7 @@ mV
 mV
 mV
 mV
-YJ
+mV
 mV
 mV
 mV
@@ -15691,9 +15665,9 @@ If
 nD
 vb
 ug
-ug
-ug
-ug
+pi
+pi
+pi
 vb
 sV
 vZ
@@ -15784,7 +15758,7 @@ jm
 ZS
 QZ
 ZS
-ZS
+rl
 Yu
 ZS
 ZS
@@ -16543,7 +16517,7 @@ gI
 wV
 sL
 wz
-hf
+je
 wV
 Et
 vC
@@ -16561,7 +16535,7 @@ tc
 OJ
 vN
 im
-Ra
+ky
 Ra
 Ra
 Wz
@@ -16700,9 +16674,9 @@ wV
 po
 lR
 hT
-vC
+Py
 tU
-av
+lR
 Bf
 CK
 ge
