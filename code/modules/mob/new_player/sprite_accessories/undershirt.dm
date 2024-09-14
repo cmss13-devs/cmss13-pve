@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	gender = NEUTER
 	restricted = TRUE
 
-/datum/sprite_accessory/undershirt/telnyashka/territorial
+/datum/sprite_accessory/undershirt/telnyashka/interior
 	name = "Interior Forces Telnyashka"
 	icon_state = "telnyashka_red"
 	gender = NEUTER

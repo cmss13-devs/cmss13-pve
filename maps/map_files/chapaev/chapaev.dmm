@@ -2640,9 +2640,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "ug" = (
-/obj/structure/machinery/power/apc/almayer/north{
-	pixel_y = 0
-	},
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata{
 	icon_state = "floor2"
 	},
@@ -5597,9 +5595,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/power/apc/almayer/north{
-	pixel_y = 0
-	},
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata{
 	icon_state = "multi_tiles"
 	},
@@ -5688,9 +5684,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "Xh" = (
-/obj/structure/machinery/power/apc/almayer/north{
-	pixel_y = 0
-	},
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "Xj" = (
