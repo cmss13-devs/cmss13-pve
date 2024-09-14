@@ -1211,14 +1211,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
-"kh" = (
-/obj/item/weapon/gun/shotgun/pump/type23,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/weapon/gun/shotgun/pump/type23,
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "kp" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -13446,7 +13438,7 @@ vp
 vp
 Jf
 Jf
-kh
+Jf
 yH
 Al
 by
