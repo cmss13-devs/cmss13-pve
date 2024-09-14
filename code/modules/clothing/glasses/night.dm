@@ -108,7 +108,7 @@
 
 /obj/item/clothing/glasses/night/m56_goggles/Initialize(mapload)
 	. = ..()
-	camera = new /obj/structure/machinery/camera/overwatch
+	camera = new /obj/structure/machinery/camera/overwatch(src)
 
 /obj/item/clothing/glasses/night/m56_goggles/equipped(mob/living/carbon/human/mob, slot)
 	if(camera)
