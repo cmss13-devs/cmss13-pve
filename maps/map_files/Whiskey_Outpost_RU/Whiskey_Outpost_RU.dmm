@@ -827,7 +827,7 @@
 "rv" = (/obj/structure/disposalpipe/segment,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/engineering)
 "rw" = (/turf/open/desert/rock/corner1{dir = 8},/area/whiskey_outpost/outside/lane/two_north)
 "rx" = (/obj/structure/bed/chair{dir = 8},/turf/open/floor/prison{icon_state = "darkbrownfull2"},/area/whiskey_outpost/inside/bunker/bunker/front)
-"ry" = (/obj/structure/surface/table/reinforced/prison,/obj/item/reagent_container/food/drinks/cans/souto/cranberry{pixel_x = 10; pixel_y = 14},/obj/item/trash/plate,/obj/item/reagent_container/food/snacks/packaged_burger,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
+"ry" = (/obj/structure/surface/table/reinforced/prison,/obj/item/reagent_container/food/drinks/cans/souto/cranberry{pixel_x = 10; pixel_y = 14},/obj/item/trash/plate,/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
 "rz" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/open/floor{dir = 8; icon_state = "asteroidwarning"},/area/whiskey_outpost)
 "rA" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/outside/north/platform)
 "rB" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker)
@@ -1553,7 +1553,7 @@
 "Ha" = (/obj/structure/machinery/washing_machine,/obj/item/reagent_container/food/drinks/cans/beer{pixel_x = 4; pixel_y = 12},/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/inside/bunker/bunker/front)
 "Hb" = (/obj/structure/largecrate/black_market/poncho,/turf/open/floor/prison{dir = 10; icon_state = "floor_marked"},/area/whiskey_outpost/outside/south/far)
 "Hc" = (/obj/structure/cargo_container/grant/right,/turf/open/floor/plating,/area/whiskey_outpost/outside/north/northeast)
-"Hd" = (/obj/structure/surface/table/reinforced/prison,/obj/item/reagent_container/food/snacks/packaged_burrito,/obj/item/reagent_container/food/drinks/cans/souto/diet/blue{pixel_y = 15},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
+"Hd" = (/obj/structure/surface/table/reinforced/prison,/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,/obj/item/reagent_container/food/drinks/cans/souto/diet/blue{pixel_y = 15},/obj/effect/decal/cleanable/dirt,/turf/open/floor/prison,/area/whiskey_outpost/inside/bunker/bunker/front)
 "He" = (/turf/open/mars_cave{icon_state = "mars_cave_17"},/area/whiskey_outpost/inside/caves/caverns/east)
 "Hf" = (/obj/structure/machinery/washing_machine,/turf/open/floor{dir = 1; icon_state = "asteroidfloor"},/area/whiskey_outpost/inside/bunker/bunker/front)
 "Hg" = (/obj/structure/machinery/colony_floodlight,/turf/open/desert/dirt,/area/whiskey_outpost/outside/north/northwest)
@@ -2302,7 +2302,7 @@
 "WY" = (/obj/structure/barricade/metal/wired,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/four)
 "WZ" = (/obj/structure/disposalpipe/sortjunction{dir = 4; sortType = "Pillbox Beer"},/turf/open/desert/dirt,/area/whiskey_outpost/outside/north)
 "Xa" = (/obj/structure/pipes/vents/pump,/obj/effect/decal/cleanable/dirt,/turf/open/floor/carpet,/area/whiskey_outpost/inside/bunker/bunker/front)
-"Xb" = (/obj/effect/vehicle_spawner/apc_cmd/decrepit{dir = 8},/turf/open/floor/plating,/area/whiskey_outpost/inside/bunker/bunker/front)
+"Xb" = (/obj/effect/decal/cleanable/dirt,/obj/effect/vehicle_spawner/apc_movie/decrepit{dir = 8},/turf/open/floor/plating,/area/whiskey_outpost/inside/bunker/bunker/front)
 "Xc" = (/obj/structure/flora/tree/joshua,/turf/open/desert/rock/edge1{dir = 6},/area/whiskey_outpost/outside/lane/two_south)
 "Xd" = (/turf/open/desert/rock/corner1{dir = 4},/area/whiskey_outpost/outside/lane/two_south)
 "Xe" = (/obj/structure/barricade/plasteel/wired,/turf/open/floor/prison{dir = 10; icon_state = "floor_plate"},/area/whiskey_outpost/inside/bunker/pillbox/four)
@@ -2600,7 +2600,7 @@ mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzmTmTmTTsTsTsTsTsTsTsTsTsTsTsTsksCFSsEmrxGrOhNuFfteNuOKcURsksZFMYMYMYMYVzWepmSNWeYQAdjrvUgqnUjrYQWeTsTsdvTsTsTsmTmTFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzmTmTmTTsTsTsgKpUTsTsTsTsTsTsTskstDWrEDjxfDLAtelNQuNuNuNuteRFelMYNCMYMYVzTsTsTsWeYQLbgqgqLbBEjrYQWhTsTsTsTsTsmTmTmTmTFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmTmTTsTsTsTKfQTsTsTsTsTsTsTsksanWrEmRECpdXNuteteNuNuNuteRFZTMYMYyiMYVzTsTsTsWeYQJWTukuLbjrQnzTWhUaTsTsTsTsmTmTmTmTFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
-mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmTmTTsTsTsTsdvTsTsTsTsTsTsfgksvsWrLXEmKjcjteNuXbteteNuNuRFZFMYMYMYMYVzfQTsTsWeVWZuVWVWYOYOYOYOWeTsTsTsTsTsmTmTmTmTmTFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
+mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmTmTTsTsTsTsdvTsTsTsTsTsTsfgksvsWrLXEmKjcjteNuNuXbteNuNuRFZFMYMYMYMYVzfQTsTsWeVWZuVWVWYOYOYOYOWeTsTsTsTsTsmTmTmTmTmTFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmTmTVEVETsTsTsTsTsTscHfgbJpbksUMWrLXjxfDLANuNuteteNuNuteRFZFMYMYMYMYVzTsTsTsWerhrhrhrhrhrhrhrhWeTsTsTsTsTsmTmTmTFuFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzWzmTmTVEVEVEVETsTsTsTsfgpbMYMYksWUSsLXEljlujlTteplNuNuNuteRFZFMYMYMYkeVzTsfeTsWeLVLVLVLVLVLVLVLVWeTsTsTsTsTsmTmTFuFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT
 mTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTWzWzWzmTmTWzWzWzmTmTVEVEVEVEVEVEVETsTsZFMYMYMYUcLXSsLXLXLuZMNuNutXwryJteEpksZFMYMYMYMYVzTsTsTsaYjKMYMYMYMYMYlzNghGTsTsTsTsTsYGmTFuFuFuFuFuFumTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmTmT

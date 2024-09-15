@@ -2235,7 +2235,7 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m4ra_barrel/New()
+/* /obj/item/attachable/m4ra_barrel/New()
 	..()
 	select_gamemode_skin(type)
 
@@ -2248,7 +2248,7 @@ Defined in conflicts.dm of the #defines folder.
 		if("desert")
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
 
 /obj/item/attachable/m4ra_barrel_custom
 	name = "custom M4RA barrel"

@@ -935,15 +935,15 @@ var/global/list/gear_datums_by_name = list()
 
 /datum/gear/snack_packaged/burrito
 	display_name = "Packaged burrito"
-	path = /obj/item/reagent_container/food/snacks/packaged_burrito
+	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito
 
 /datum/gear/snack_packaged/cheeseburger
 	display_name = "Packaged cheeseburger"
-	path = /obj/item/reagent_container/food/snacks/packaged_burger
+	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burger
 
 /datum/gear/snack_packaged/hotdog
 	display_name = "Packaged hotdog"
-	path = /obj/item/reagent_container/food/snacks/packaged_hdogs
+	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs
 
 /datum/gear/snack_packaged/chips_pepper
 	display_name = "W-Y Pepper Chips"

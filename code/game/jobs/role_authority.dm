@@ -486,7 +486,7 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		M.job = null
 
 
-/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, turf/late_join)
+/datum/authority/branch/role/proc/equip_role(mob/living/new_mob, datum/job/new_job, late_join)
 	if(!istype(new_mob) || !istype(new_job))
 		return
 
@@ -509,12 +509,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	new_human.job = new_job.title //TODO Why is this a mob variable at all?
 
 	if(new_job.gear_preset_whitelist[job_whitelist])
-		arm_equipment(new_human, new_job.gear_preset_whitelist[job_whitelist], FALSE, TRUE)
+		arm_equipment(new_human, new_job.gear_preset_whitelist[job_whitelist], FALSE, TRUE, late_join = late_join)
 		var/generated_account = new_job.generate_money_account(new_human)
 		new_job.announce_entry_message(new_human, generated_account, whitelist_status) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human, whitelist_status) //Do any other thing that relates to their spawn.
 	else
-		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE) //After we move them, we want to equip anything else they should have.
+		arm_equipment(new_human, new_job.gear_preset, FALSE, TRUE, late_join = late_join) //After we move them, we want to equip anything else they should have.
 		var/generated_account = new_job.generate_money_account(new_human)
 		new_job.announce_entry_message(new_human, generated_account) //Tell them their spawn info.
 		new_job.generate_entry_conditions(new_human) //Do any other thing that relates to their spawn.
@@ -805,6 +805,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_KING)
+			M = /mob/living/carbon/xenomorph/king
 	return M
 
 
