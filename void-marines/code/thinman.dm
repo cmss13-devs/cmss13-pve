@@ -1,4 +1,6 @@
 /datum/species/human/thin_man
+	name = "Human Man"
+	name_plural = "Human Man"
 	group = SPECIES_THIN_MAN
 	brute_mod = 1.25
 	burn_mod = 1.25
@@ -30,9 +32,6 @@
 	H.f_style = "Shaved"
 	H.h_style = "Mulder"
 	return ..()
-
-/datum/species/human/thin_man/get_bodytype(mob/living/carbon/human/H)
-	return SPECIES_THIN_MAN
 
 /datum/species/human/thin_man/handle_death(mob/living/carbon/human/H)
 	create_shrapnel(get_turf(H), 22, , , /datum/ammo/xeno/acid/prae_nade, create_cause_data("acid splatter", H))
