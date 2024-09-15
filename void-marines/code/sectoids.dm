@@ -77,7 +77,7 @@
 
 /obj/item/weapon/gun/energy/laz_uzi/sectoid/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	. = ..()
-	if(. && user.species != SPECIES_SECTOID && user.species != SPECIES_THIN_MAN)
+	if(. && !istype(user.species, /datum/species/sectoid) && !istype(user.species, /datum/species/human/thin_man))
 		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
 		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
 		if(!QDELETED(src))
@@ -109,7 +109,7 @@
 
 /obj/item/weapon/gun/energy/rxfm5_eva/sectoid/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	. = ..()
-	if(. && user.species != SPECIES_SECTOID && user.species != SPECIES_THIN_MAN)
+	if(. && !istype(user.species, /datum/species/sectoid) && !istype(user.species, /datum/species/human/thin_man))
 		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
 		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
 		if(!QDELETED(src))
