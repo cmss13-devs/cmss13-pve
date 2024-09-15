@@ -5,6 +5,7 @@
 	icon_state = "m41a"
 	density = TRUE
 	var/allowed_type
+	var/populate_type
 	var/max_stored = 5
 	var/initial_stored = 5
 
@@ -17,7 +18,7 @@
 	if(initial_stored)
 		var/i = 0
 		while(i < initial_stored)
-			contents += new allowed_type(src)
+			contents += new populate_type(src)
 			i++
 	update_icon()
 
@@ -47,6 +48,10 @@
 
 /obj/structure/gun_rack/m41
 	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1
+
+/obj/structure/gun_rack/m41/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/unloaded
 
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
@@ -54,6 +59,10 @@
 	max_stored = 6
 	initial_stored = 6
 	allowed_type = /obj/item/weapon/gun/rifle/type71
+	populate_type = /obj/item/weapon/gun/rifle/type71
+
+/obj/structure/gun_rack/type71/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/type71/unloaded
 
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
@@ -75,3 +84,31 @@
 	max_stored = 2
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/boyars_dualcannon
+
+/obj/structure/gun_rack/m41/recon
+	icon_state = "m41arecon"
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon
+
+/obj/structure/gun_rack/m41/recon/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
+
+/obj/structure/gun_rack/flamer
+	name = "M240A1 incinerator rack"
+	icon_state = "m240"
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M240A1 incinerators. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/flamer
+	populate_type = /obj/item/weapon/gun/flamer
+
+/obj/structure/gun_rack/flamer/unloaded
+	populate_type = /obj/item/weapon/gun/flamer/unloaded
+
+/obj/structure/gun_rack/mk221
+	name = "M120 shotgun rack"
+	icon_state = "mk221"
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M120 tactical shotguns. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/shotgun/combat
+	populate_type = /obj/item/weapon/gun/shotgun/combat

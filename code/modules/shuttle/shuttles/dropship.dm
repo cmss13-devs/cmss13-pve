@@ -29,6 +29,8 @@
 	var/automated_lz_id
 	var/automated_delay
 	var/automated_timer
+	var/datum/cas_signal/paradrop_signal
+
 
 /obj/docking_port/mobile/marine_dropship/Initialize(mapload)
 	. = ..()
@@ -46,14 +48,27 @@
 			if(istype(hatch))
 				hatch.linked_dropship = src
 
+	RegisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT, PROC_REF(add_equipment))
+	RegisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT, PROC_REF(remove_equipment))
+
 /obj/docking_port/mobile/marine_dropship/Destroy(force)
 	. = ..()
 	qdel(door_control)
+	UnregisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT)
+	UnregisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT)
 
 /obj/docking_port/mobile/marine_dropship/proc/send_for_flyby()
 	in_flyby = TRUE
 	var/obj/docking_port/stationary/dockedAt = get_docked()
 	SSshuttle.moveShuttle(src.id, dockedAt.id, TRUE)
+
+/obj/docking_port/mobile/marine_dropship/proc/add_equipment(obj/docking_port/mobile/marine_dropship/dropship, obj/structure/dropship_equipment/equipment)
+	SIGNAL_HANDLER
+	equipments += equipment
+
+/obj/docking_port/mobile/marine_dropship/proc/remove_equipment(obj/docking_port/mobile/marine_dropship/dropship, obj/structure/dropship_equipment/equipment)
+	SIGNAL_HANDLER
+	equipments -= equipment
 
 /obj/docking_port/mobile/marine_dropship/proc/get_door_data()
 	return door_control.get_data()
@@ -70,10 +85,12 @@
 					door_control.add_door(air, "port")
 				if("aft_door")
 					door_control.add_door(air, "aft")
+	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
 
 /obj/docking_port/mobile/marine_dropship/Destroy(force)
 	. = ..()
 	qdel(door_control)
+	UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
 
 /obj/docking_port/mobile/marine_dropship/proc/control_doors(action, direction, force, asynchronous = TRUE)
 	// its been locked down by the queen
@@ -109,6 +126,12 @@
 			set_security_level(SEC_LEVEL_RED)
 			return
 
+/obj/docking_port/mobile/marine_dropship/proc/on_dir_change(datum/source, old_dir, new_dir)
+	SIGNAL_HANDLER
+	for(var/place in shuttle_areas)
+		for(var/obj/structure/machinery/door/air in place)
+			air.handle_multidoor(old_dir, new_dir)
+
 /obj/docking_port/mobile/marine_dropship/midway
 	name = "Midway"
 	id = DROPSHIP_MIDWAY
@@ -117,6 +140,9 @@
 
 	dwidth = 4
 	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/midway/get_transit_path_type()
+	return /turf/open/space/transit/dropship/midway
 
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
@@ -127,6 +153,9 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/upp/get_transit_path_type()
+	return /turf/open/space/transit/dropship/upp
+
 /obj/docking_port/mobile/marine_dropship/cyclone
 	name = "Cyclone"
 	id = DROPSHIP_CYCLONE
@@ -136,13 +165,68 @@
 	dwidth = 4
 	dheight = 8
 
+/obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
+	return /turf/open/space/transit/dropship/cyclone
+
+/obj/docking_port/mobile/marine_dropship/tornado
+	name = "HLD-Tornado"
+	id = DROPSHIP_TORNADO
+	width = 11
+	height = 18
+
+	dwidth = 5
+	dheight = 9
+
+/obj/docking_port/mobile/marine_dropship/tornado/get_transit_path_type()
+	return /turf/open/space/transit/dropship/tornado
+
+/obj/docking_port/mobile/marine_dropship/typhoon
+	name = "CMD-Typhoon"
+	id = DROPSHIP_TYPHOON
+	width = 11
+	height = 18
+
+	dwidth = 5
+	dheight = 9
+
+/obj/docking_port/mobile/marine_dropship/typhoon/get_transit_path_type()
+	return /turf/open/space/transit/dropship/typhoon
+
+/obj/docking_port/mobile/marine_dropship/tripoli
+	name = "Tripoli"
+	id = DROPSHIP_TRIPOLI
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/tripoli/get_transit_path_type()
+	return /turf/open/space/transit/dropship/tripoli
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/alamo/get_transit_path_type()
+	return /turf/open/space/transit/dropship/alamo
 
 /obj/docking_port/mobile/marine_dropship/normandy
 	name = "Normandy"
 	id = DROPSHIP_NORMANDY
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/normandy/get_transit_path_type()
+	return /turf/open/space/transit/dropship/normandy
+
+/obj/docking_port/mobile/marine_dropship/saipan
+	name = "Saipan"
+	id = DROPSHIP_SAIPAN
+	preferred_direction = SOUTH // If you are changing this, please update the dir of the path below as well
+
+/obj/docking_port/mobile/marine_dropship/saipan/get_transit_path_type()
+	return /turf/open/space/transit/dropship/saipan
 
 /obj/docking_port/mobile/marine_dropship/check()
 	. = ..()
@@ -309,7 +393,7 @@
 
 /obj/docking_port/stationary/marine_dropship/crash_site/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
-	arriving_shuttle.mode = SHUTTLE_CRASHED
+	arriving_shuttle.set_mode(SHUTTLE_CRASHED)
 	for(var/mob/living/carbon/affected_mob in (GLOB.alive_human_list + GLOB.living_xeno_list)) //knock down mobs
 		if(affected_mob.z != z)
 			continue
@@ -322,6 +406,7 @@
 			affected_mob.apply_effect(3, WEAKEN)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_HIJACK_LANDED)
 
 /datum/map_template/shuttle/midway
 	name = "Midway"
@@ -335,6 +420,10 @@
 	name = "Normandy"
 	shuttle_id = DROPSHIP_NORMANDY
 
+/datum/map_template/shuttle/saipan
+	name = "Saipan"
+	shuttle_id = DROPSHIP_SAIPAN
+
 /datum/map_template/shuttle/upp
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
@@ -342,3 +431,15 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/typhoon
+	name = "CMD-Typhoon"
+	shuttle_id = DROPSHIP_TYPHOON
+
+/datum/map_template/shuttle/tornado
+	name = "HLD-Tornado"
+	shuttle_id = DROPSHIP_TORNADO
+
+/datum/map_template/shuttle/tripoli
+	name = "Tripoli"
+	shuttle_id = DROPSHIP_TRIPOLI

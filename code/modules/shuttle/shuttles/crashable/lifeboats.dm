@@ -40,13 +40,25 @@
 	preferred_direction = EAST
 	port_direction = EAST
 
+/obj/docking_port/mobile/crashable/lifeboat/compact
+	name = "compact lifeboat"
+	id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT
+	preferred_direction = EAST
+	port_direction = EAST
+	width = 20
+
 /obj/docking_port/mobile/crashable/lifeboat/evac_launch()
+	if (status == LIFEBOAT_LOCKED)
+		return
+
 	. = ..()
 
 	available = FALSE
 	set_mode(SHUTTLE_IGNITING)
 	on_ignition()
 	setTimer(ignitionTime)
+	alarm_sound_loop.stop()
+	playing_launch_announcement_alarm = FALSE
 
 /obj/docking_port/mobile/crashable/lifeboat/crash_check()
 	. = ..()
@@ -100,6 +112,8 @@
 
 /obj/docking_port/stationary/lifeboat_dock/proc/close_dock()
 	var/obj/docking_port/mobile/crashable/lifeboat/docked_shuttle = get_docked()
+	if(docked_shuttle.status == LIFEBOAT_LOCKED)
+		return
 	if(docked_shuttle)
 		for(var/obj/structure/machinery/door/airlock/multi_tile/door in docked_shuttle.doors)
 			INVOKE_ASYNC(door, TYPE_PROC_REF(/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat, close_and_lock))
@@ -123,6 +137,14 @@
 	id = "almayer-lifeboat2"
 	roundstart_template = /datum/map_template/shuttle/lifeboat_starboard
 
+/// compact dock
+/obj/docking_port/stationary/lifeboat_dock/compact
+	name = "Compact Lifeboat Docking Port"
+	dir = NORTH
+	width  = 20
+	id = "compact-lifeboat"
+	roundstart_template = /datum/map_template/shuttle/lifeboat_compact
+
 /obj/docking_port/stationary/lifeboat_dock/Initialize(mapload)
 	. = ..()
 	GLOB.lifeboat_almayer_docks += src
@@ -143,3 +165,8 @@
 /datum/map_template/shuttle/lifeboat_starboard
 	name = "Starboard door lifeboat"
 	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_STARBOARD
+
+/// Starboard-door lifeboat, bow east
+/datum/map_template/shuttle/lifeboat_compact
+	name = "Compact lifeboat"
+	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT

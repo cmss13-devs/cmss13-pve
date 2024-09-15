@@ -1,0 +1,163 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/shuttle/elevator,
+/area/golden_arrow/cargo_shuttle/elevator)
+"e" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/golden_arrow/cargo_shuttle/elevator)
+"i" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/golden_arrow/cargo_shuttle/elevator)
+"m" = (
+/turf/closed/shuttle/elevator/button/research,
+/area/golden_arrow/cargo_shuttle/elevator)
+"n" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/golden_arrow/cargo_shuttle/elevator)
+"o" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cargo_shuttle/elevator)
+"q" = (
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/cargo_shuttle/elevator)
+"s" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	pixel_y = 32;
+	shuttleId = "garrow_cargo_elevator"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cargo_shuttle/elevator)
+"t" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/shuttle/elevator/grating,
+/area/golden_arrow/cargo_shuttle/elevator)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/shuttle/elevator,
+/area/golden_arrow/cargo_shuttle/elevator)
+"A" = (
+/turf/open/shuttle/elevator,
+/area/golden_arrow/cargo_shuttle/elevator)
+"E" = (
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/pivot{
+	base_icon_state = "hatch";
+	icon_state = "hatch1";
+	openspeed = 22;
+	name = "\improper Elevator Hatch";
+	dir = 4;
+	unacidable = 1;
+	id = "north"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/cargo_shuttle/elevator)
+"H" = (
+/turf/open/shuttle/elevator/grating,
+/area/golden_arrow/cargo_shuttle/elevator)
+"R" = (
+/turf/closed/shuttle/elevator/freight,
+/area/golden_arrow/cargo_shuttle/elevator)
+"S" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cargo_shuttle/elevator)
+"T" = (
+/turf/closed/shuttle/elevator/gears,
+/area/golden_arrow/cargo_shuttle/elevator)
+"W" = (
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator/cargo{
+	elevator_network = "ArrowCargo"
+	},
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/golden_arrow/cargo_shuttle/elevator)
+"X" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/golden_arrow/cargo_shuttle/elevator)
+
+(1,1,1) = {"
+X
+a
+a
+a
+a
+W
+"}
+(2,1,1) = {"
+i
+S
+t
+t
+S
+T
+"}
+(3,1,1) = {"
+E
+t
+A
+u
+t
+i
+"}
+(4,1,1) = {"
+q
+H
+A
+A
+H
+i
+"}
+(5,1,1) = {"
+q
+H
+A
+u
+H
+i
+"}
+(6,1,1) = {"
+q
+H
+A
+u
+t
+R
+"}
+(7,1,1) = {"
+m
+s
+t
+H
+o
+T
+"}
+(8,1,1) = {"
+e
+a
+a
+a
+a
+n
+"}

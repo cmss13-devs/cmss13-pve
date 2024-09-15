@@ -11,6 +11,10 @@
 	has_sensor = UNIFORM_NO_SENSORS
 	displays_id = 0
 
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
 //JASON
 /obj/item/clothing/under/gimmick/jason
 	name = "dirty work attire"
@@ -129,7 +133,7 @@
 
 /obj/item/clothing/head/helmet/gimmick/robocop
 	name = "polished metal helm"
-	desc = "The impersonal face of the law. Constructed from titanium and laminated with kevlar."
+	desc = "The impersonal face of the law. Titanium alloy frame backed with ballistic polymer layers."
 	icon_state = "robocop_helmet"
 	item_state = "robocop_helmet"
 	armor_melee = CLOTHING_ARMOR_HIGH
@@ -146,7 +150,7 @@
 
 /obj/item/clothing/suit/armor/gimmick/robocop
 	name = "polished metal armor"
-	desc = "Clean and well maintained, unlike the ugly streets of Detroit. Constructed from titanium and laminated with kevlar."
+	desc = "Clean and well maintained, unlike the ugly streets of Detroit. Titanium alloy shell, molybdenum armor plating backed with ballistic polymer."
 	icon_state = "robocop_armor"
 	item_state = "robocop_armor"
 	slowdown = 1

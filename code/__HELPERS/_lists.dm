@@ -103,7 +103,7 @@
 /proc/bitfield_to_list(bitfield = 0, list/wordlist)
 	var/list/return_list = list()
 	if(islist(wordlist))
-		var/max = min(wordlist.len, 24)
+		var/max = min(length(wordlist), 24)
 		var/bit = 1
 		for(var/i in 1 to max)
 			if(bitfield & bit)
@@ -128,30 +128,73 @@
  * You should only pass integers in.
  */
 /proc/pick_weight(list/list_to_pick)
+	if(length(list_to_pick) == 0)
+		return null
+
 	var/total = 0
-	var/item
-	for(item in list_to_pick)
+	for(var/item in list_to_pick)
 		if(!list_to_pick[item])
 			list_to_pick[item] = 0
 		total += list_to_pick[item]
 
-	total = rand(0, total)
-	for(item in list_to_pick)
-		total -= list_to_pick[item]
-		if(total <= 0 && list_to_pick[item])
+	total = rand(1, total)
+	for(var/item in list_to_pick)
+		var/item_weight = list_to_pick[item]
+		if(item_weight == 0)
+			continue
+
+		total -= item_weight
+		if(total <= 0)
 			return item
 
 	return null
+
+/**
+ * Shuffles a provided list based on the weight of each element.
+ *
+ * Higher weight elements have a higher probability of being picked and tend to appear earlier in the list.
+ * Unweighted elements are never picked and are discarded.
+ *
+ * Arguments:
+ * * list_to_pick - assoc list in the form of: element = weight
+ *
+ * Returns list of shuffled weighted elements
+ */
+/proc/shuffle_weight(list/list_to_pick)
+	list_to_pick = list_to_pick.Copy() //not inplace
+
+	var/total_weight = 0
+	for(var/item in list_to_pick)
+		if(list_to_pick[item])
+			total_weight += list_to_pick[item]
+		else
+			list_to_pick -= item //discard unweighted
+
+	var/list_to_return = list()
+
+	while(length(list_to_pick))
+		var/target_weight = rand(1, total_weight)
+		for(var/item in list_to_pick)
+			var/item_weight = list_to_pick[item]
+			target_weight -= item_weight
+
+			if(target_weight <= 0)
+				list_to_return += item
+				list_to_pick -= item
+				total_weight -= item_weight
+				break
+
+	return list_to_return
 
 /**
  * Removes any null entries from the list
  * Returns TRUE if the list had nulls, FALSE otherwise
 **/
 /proc/list_clear_nulls(list/list_to_clear)
-	var/start_len = list_to_clear.len
+	var/start_len = length(list_to_clear)
 	var/list/new_list = new(start_len)
 	list_to_clear -= new_list
-	return list_to_clear.len < start_len
+	return length(list_to_clear) < start_len
 
 ///Return a list with no duplicate entries
 /proc/unique_list(list/inserted_list)
@@ -174,5 +217,6 @@
 	if(!inserted_list)
 		return
 
-	for(var/i in 1 to inserted_list.len - 1)
-		inserted_list.Swap(i, rand(i, inserted_list.len))
+	for(var/i in 1 to length(inserted_list) - 1)
+		inserted_list.Swap(i, rand(i, length(inserted_list)))
+

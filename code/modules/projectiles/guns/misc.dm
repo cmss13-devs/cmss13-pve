@@ -63,8 +63,8 @@
 
 //M60
 /obj/item/weapon/gun/m60
-	name = "\improper M60 General Purpose Machine Gun"
-	desc = "The M60. The Pig. The Action Hero's wet dream. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	name = "\improper H-G Mk70 Machine Gun"
+	desc = "Part of the Henjin-Garcia repro line, the Mk70 found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. \n<b>Alt-click to open the feed tray cover for handling reloads.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
@@ -83,6 +83,7 @@
 	starting_attachment_types = list(
 		/obj/item/attachable/m60barrel,
 		/obj/item/attachable/bipod/m60,
+		/obj/item/attachable/stock/m60,
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
@@ -95,7 +96,7 @@
 		load_into_chamber()
 
 /obj/item/weapon/gun/m60/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 16,"rail_x" = 0, "rail_y" = 0, "under_x" = 39, "under_y" = 7, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 16, "rail_x" = 0, "rail_y" = 0, "under_x" = 27, "under_y" = 12, "stock_x" = 10, "stock_y" = 14)
 
 
 /obj/item/weapon/gun/m60/set_gun_config_values()
@@ -147,9 +148,9 @@
 /obj/item/weapon/gun/m60/update_icon()
 	. = ..()
 	if(cover_open)
-		overlays += "+[base_gun_icon]_cover_open"
+		overlays += image("+[base_gun_icon]_cover_open", pixel_x = -2, pixel_y = 8)
 	else
-		overlays += "+[base_gun_icon]_cover_closed"
+		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = -10, pixel_y = 0)
 
 /obj/item/weapon/gun/m60/able_to_fire(mob/living/user)
 	. = ..()
@@ -161,7 +162,7 @@
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"
-	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 7.62x54mmR, it fires a hard-hitting cartridge with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x31mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "qjy72"
 	item_state = "qjy72"
@@ -212,14 +213,14 @@
 
 /obj/item/weapon/gun/pkp/set_gun_config_values()
 	..()
-	fire_delay = FIRE_DELAY_TIER_10
-	burst_amount = BURST_AMOUNT_TIER_6
-	burst_delay = FIRE_DELAY_TIER_9
+	fire_delay = FIRE_DELAY_TIER_LMG
+	burst_amount = BURST_AMOUNT_TIER_4
+	burst_delay = FIRE_DELAY_TIER_LMG
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
-	fa_max_scatter = SCATTER_AMOUNT_TIER_8
+	fa_max_scatter = SCATTER_AMOUNT_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_10
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_10
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
@@ -272,13 +273,26 @@
 			return FALSE
 	if(!skillcheck(user, SKILL_FIREARMS, SKILL_FIREARMS_TRAINED))
 		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return 0
+		return FALSE
 
 /obj/item/weapon/gun/pkp/iff
 	name = "\improper QYJ-72-I General Purpose Machine Gun"
 	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
+	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	var/iff_enabled = TRUE
+	var/requires_harness = TRUE
+
+/obj/item/weapon/gun/pkp/iff/able_to_fire(mob/living/user)
+	. = ..()
+	if(.)
+		if(!ishuman(user))
+			return FALSE
+		var/mob/living/carbon/human/H = user
+		if(requires_harness)
+			if(!H.wear_suit || !(H.wear_suit.flags_inventory & SMARTGUN_HARNESS))
+				balloon_alert(user, "harness required")
+				return FALSE
 
 /obj/item/weapon/gun/pkp/iff/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
@@ -295,6 +309,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/toggle_iff_pkp/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	if(!ishuman(owner))
 		return

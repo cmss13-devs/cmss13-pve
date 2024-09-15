@@ -74,7 +74,7 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 
 /obj/structure/flora/proc/spread_fire()
 	SIGNAL_HANDLER
-	for(var/D in cardinal) //Spread fire
+	for(var/D in GLOB.cardinals) //Spread fire
 		var/turf/T = get_step(src.loc, D)
 		if(T)
 			for(var/obj/structure/flora/F in T)
@@ -706,15 +706,15 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 						var/new_slowdown = H.next_move_slowdown + rand(4,7)
 						H.next_move_slowdown = new_slowdown
 						if(prob(10))
-							to_chat(H, SPAN_WARNING("It is very hard to move trough this [src]..."))
+							to_chat(H, SPAN_WARNING("It is very hard to move through this [src]..."))
 					if(8 to 9)
 						var/new_slowdown = H.next_move_slowdown + rand(8,11)
 						H.next_move_slowdown = new_slowdown
-						to_chat(H, SPAN_WARNING("You got tangeled in [src]!"))
+						to_chat(H, SPAN_WARNING("You got tangled in [src]!"))
 					if(10)
 						var/new_slowdown = H.next_move_slowdown + rand(12,20)
 						H.next_move_slowdown = new_slowdown
-						to_chat(H, SPAN_WARNING("You got completely tangeled in [src]! Oh boy..."))
+						to_chat(H, SPAN_WARNING("You got completely tangled in [src]! Oh boy..."))
 
 /obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/user as mob)
 	//hatchets and shiet can clear away undergrowth
@@ -724,9 +724,9 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 			damage = rand(8,18)
 		if(indestructable)
 			//this bush marks the edge of the map, you can't destroy it
-			to_chat(user, SPAN_DANGER("You flail away at the undergrowth, but it's too thick here."))
+			to_chat(user, SPAN_DANGER("You chop at the undergrowth, but it's too thick here."))
 		else
-			user.visible_message(SPAN_DANGER("[user] flails away at the  [src] with [I]."),SPAN_DANGER("You flail away at the [src] with [I]."))
+			user.visible_message(SPAN_DANGER("[user] chops at [src] with [I]."), SPAN_DANGER("You chop at [src] with [I]."))
 			playsound(src.loc, 'sound/effects/vegetation_hit.ogg', 25, 1)
 			health -= damage
 			if(health < 0)
@@ -759,4 +759,3 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	desc = "Looks like some of that fruit might be edible."
 	icon_tag = "plant"
 	variations  = 7
-

@@ -38,8 +38,15 @@
 /obj/item/clothing/gloves/marine/insulated
 	name = "marine insulated gloves"
 	desc = "These gloves will protect the wearer from electric shock."
-	icon_state = "lightbrown"
-	item_state = "lightbrowngloves"
+	icon_state = "insulated"
+	item_state = "insulated"
+	siemens_coefficient = 0
+
+/obj/item/clothing/gloves/marine/insulated/black
+	name = "marine insulated black gloves"
+	desc = "These marine gloves will protect the wearer from electric shocks and shrapnal. Standard issue for properly-equipped Marines."
+	icon_state = "black"
+	item_state = "black"
 
 /obj/item/clothing/gloves/marine/black
 	name = "marine black combat gloves"
@@ -113,6 +120,12 @@
 	unacidable = TRUE
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	adopts_squad_color = FALSE
+
+/obj/item/clothing/gloves/marine/pve_mopp
+	name = "\improper M2 MOPP gloves"
+	desc = "M2 MOPP gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these."
+	icon_state = "cbrn"
+	item_state = "cbrn"
 
 /obj/item/clothing/gloves/marine/veteran
 	name = "armored gloves"

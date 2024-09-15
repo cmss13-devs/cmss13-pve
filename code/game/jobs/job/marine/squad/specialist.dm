@@ -23,15 +23,16 @@
 		total_positions_so_far = positions
 	return positions
 
+/datum/job/marine/specialist/on_cryo(mob/living/carbon/human/cryoing)
+	var/specialist_set = get_specialist_set(cryoing)
+	if(isnull(specialist_set))
+		return
+	GLOB.specialist_set_datums[specialist_set].refund_set(cryoing)
 
 /datum/job/marine/specialist/whiskey
 	title = JOB_WO_SQUAD_SPECIALIST
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/wo/marine/spec
-
-AddTimelock(/datum/job/marine/specialist, list(
-	JOB_SQUAD_ROLES = 5 HOURS
-))
 
 /obj/effect/landmark/start/marine/spec
 	name = JOB_SQUAD_SPECIALIST

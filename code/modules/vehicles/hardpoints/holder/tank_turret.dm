@@ -1,5 +1,5 @@
 /obj/item/hardpoint/holder/tank_turret
-	name = "M34A2-A Multipurpose Turret"
+	name = "\improper M34A2-A Multipurpose Turret"
 	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt flare deployment system."
 
 	icon = 'icons/obj/vehicles/tank.dmi'
@@ -67,6 +67,12 @@
 	burst_delay = 1.0 SECONDS
 	extra_delay = 5.0 SECONDS
 
+/obj/item/hardpoint/holder/tank_turret/set_bullet_traits()
+	..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+
 /obj/item/hardpoint/holder/tank_turret/update_icon()
 	var/broken = (health <= 0)
 	icon_state = "tank_turret_[broken]"
@@ -119,7 +125,7 @@
 
 	data += list(list( // turret smokescreen data
 		"name" = "M34A2-A Turret Smoke Screen",
-		"health" = health <= 0 ? null : round(get_integrity_percent()),
+		"health" = health <= 0 ? null : floor(get_integrity_percent()),
 		"uses_ammo" = TRUE,
 		"current_rounds" = ammo.current_rounds / 2,
 		"max_rounds"= ammo.max_rounds / 2,
@@ -212,8 +218,3 @@
 		target = L
 
 	return ..()
-
-/obj/item/hardpoint/holder/tank_turret/get_origin_turf()
-	var/origin_turf = ..()
-	origin_turf = get_step(get_step(origin_turf, owner.dir), owner.dir) //this should get us tile in front of tank to prevent grenade being stuck under us.
-	return origin_turf
