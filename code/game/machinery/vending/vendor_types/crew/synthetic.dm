@@ -33,16 +33,17 @@
 		list("Burn Kit", 2, /obj/item/stack/medical/advanced/ointment, null, VENDOR_ITEM_REGULAR),
 		list("Trauma Kit", 2, /obj/item/stack/medical/advanced/bruise_pack, null, VENDOR_ITEM_REGULAR),
 		list("Medical Splints", 1, /obj/item/stack/medical/splint, null, VENDOR_ITEM_REGULAR),
-		list("Roller Bed", 4, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
-		list("MS-11 Smart Refill Tank", 6, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
+		list("Roller Bed", 3, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
+		list("MS-11 Smart Refill Tank", 4, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
 
-		list("Pillbottle (Bicaridine)", 5, /obj/item/storage/pill_bottle/bicaridine, null, VENDOR_ITEM_RECOMMENDED),
+		list("Pillbottle (Bicaridine)", 5, /obj/item/storage/pill_bottle/bicaridine, null, VENDOR_ITEM_REGULAR),
 		list("Pillbottle (Dexalin)", 5, /obj/item/storage/pill_bottle/dexalin, null, VENDOR_ITEM_REGULAR),
 		list("Pillbottle (Dylovene)", 5, /obj/item/storage/pill_bottle/antitox, null, VENDOR_ITEM_REGULAR),
 		list("Pillbottle (Inaprovaline)", 5, /obj/item/storage/pill_bottle/inaprovaline, null, VENDOR_ITEM_REGULAR),
-		list("Pillbottle (Kelotane)", 5, /obj/item/storage/pill_bottle/kelotane, null, VENDOR_ITEM_RECOMMENDED),
+		list("Pillbottle (Kelotane)", 5, /obj/item/storage/pill_bottle/kelotane, null, VENDOR_ITEM_REGULAR),
 		list("Pillbottle (Peridaxon)", 5, /obj/item/storage/pill_bottle/peridaxon, null, VENDOR_ITEM_REGULAR),
-		list("Pillbottle (Tramadol)", 5, /obj/item/storage/pill_bottle/tramadol, null, VENDOR_ITEM_RECOMMENDED),
+		list("Pillbottle (Tramadol)", 5, /obj/item/storage/pill_bottle/tramadol, null, VENDOR_ITEM_REGULAR),
+		list("Pillbottle (Imidazoline-Alkysine)", 10, /obj/item/storage/pill_bottle/imialk, null, VENDOR_ITEM_RECOMMENDED),
 
 		list("Injector (Bicaridine)", 1, /obj/item/reagent_container/hypospray/autoinjector/bicaridine, null, VENDOR_ITEM_REGULAR),
 		list("Injector (Dexalin+)", 1, /obj/item/reagent_container/hypospray/autoinjector/dexalinp, null, VENDOR_ITEM_REGULAR),
@@ -52,20 +53,19 @@
 		list("Injector (Tramadol)", 1, /obj/item/reagent_container/hypospray/autoinjector/tramadol, null, VENDOR_ITEM_REGULAR),
 		list("Injector (Tricord)", 1, /obj/item/reagent_container/hypospray/autoinjector/tricord, null, VENDOR_ITEM_REGULAR),
 
-		list("Health Analyzer", 4, /obj/item/device/healthanalyzer, null, VENDOR_ITEM_REGULAR),
-		list("Surgical Line", 4, /obj/item/tool/surgery/surgical_line, null, VENDOR_ITEM_REGULAR),
-		list("Synth-Graft", 4, /obj/item/tool/surgery/synthgraft, null, VENDOR_ITEM_REGULAR),
+		list("Health Analyzer", 2, /obj/item/device/healthanalyzer, null, VENDOR_ITEM_REGULAR),
+		list("Surgical Line", 3, /obj/item/tool/surgery/surgical_line, null, VENDOR_ITEM_REGULAR),
+		list("Synth-Graft", 3, /obj/item/tool/surgery/synthgraft, null, VENDOR_ITEM_REGULAR),
 
 		list("OTHER SUPPLIES", 0, null, null, null),
 		list("Binoculars", 5,/obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
 		list("Rangefinder", 8, /obj/item/device/binoculars/range, null,  VENDOR_ITEM_REGULAR),
 		list("Laser Designator", 12, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_RECOMMENDED),
 		list("Flashlight", 1, /obj/item/device/flashlight, null, VENDOR_ITEM_RECOMMENDED),
-		list("Motion Detector", 5, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
-		list("Space Cleaner", 2, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
-		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
-		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
-		list("Stethoscope", 2, /obj/item/clothing/accessory/stethoscope, null, VENDOR_ITEM_REGULAR)
+		list("Motion Detector", 3, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
+		list("Space Cleaner", 1, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
+		list("Whistle", 2, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR)
 
 	)
 
@@ -79,14 +79,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Maintenance Jack", 0, /obj/item/maintenance_jack, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 		list("Portable Dialysis Machine", 0, /obj/item/tool/portadialysis, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Telescopic Baton", 0, /obj/item/weapon/telebaton, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-
-		list("RESTRICTED MEDICATION (CHOOSE 1)", 0, null, null, null),
-		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Meralyne-Bicardine)", 0, /obj/item/storage/pill_bottle/merabica, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Kelotane-Dermaline)", 0, /obj/item/storage/pill_bottle/keloderm, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Nitrogen-Water)", 0, /obj/item/storage/pill_bottle/nitrogenwater, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Dexalin+)", 0, /obj/item/storage/pill_bottle/dexalinplus, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Iron)", 0, /obj/item/storage/pill_bottle/iron, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_REGULAR),
 
 		list("RADIO (TAKE ALL)", 0, null, null, null),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/mcom/synth, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
