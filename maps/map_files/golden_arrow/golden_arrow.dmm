@@ -6579,9 +6579,7 @@
 	pixel_y = 9
 	},
 /obj/item/storage/box/guncase/shotgunpump,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
 /turf/open/floor/almayer/plate,
