@@ -1,0 +1,5 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - rscadd: "Scabbard and pouch added to the M37 kitbox"
+  - rscadd: "Kitbox now in the armory like it was intended"
