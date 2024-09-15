@@ -1,0 +1,142 @@
+"ax" = (/obj/structure/flora/grass/desert/lightgrass_3,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"aJ" = (/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"bA" = (/obj/structure/computer3frame,/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"cg" = (/obj/effect/decal/sand_overlay/sand1{dir = 4},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"cO" = (/turf/open/desert/dirt{dir = 6; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"cX" = (/obj/structure/prop/hybrisa/xenobiology/small/offempty,/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"dr" = (/turf/open/desert/dirt{dir = 8; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"dT" = (/turf/open/desert/dirt{icon_state = "dirt2"},/area/desert_dam/interior/caves/temple)
+"ef" = (/turf/open/desert/dirt{dir = 5; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"eI" = (/obj/structure/flora/bush/desert/cactus{icon_state = "cactus_4"},/turf/open/desert/dirt,/area/desert_dam/interior/caves/central_caves)
+"fQ" = (/turf/open/desert/excavation/component7{dir = 1},/area/desert_dam/exterior/valley/valley_crashsite)
+"hb" = (/turf/open/gm/river/desert/shallow,/area/desert_dam/exterior/valley/valley_crashsite)
+"hB" = (/obj/structure/machinery/light/double/blue{dir = 4},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"hU" = (/obj/effect/decal/sand_overlay/sand1{dir = 1},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"is" = (/obj/structure/surface/rack{color = "#6b675e"; layer = 2.79},/obj/item/weapon/gun/energy/laz_uzi/sectoid{pixel_y = 7},/obj/item/weapon/gun/energy/laz_uzi/sectoid,/obj/item/weapon/gun/energy/laz_uzi/sectoid{pixel_y = 7},/obj/item/weapon/gun/energy/laz_uzi/sectoid{pixel_y = 7},/obj/item/weapon/gun/energy/laz_uzi/sectoid,/obj/item/weapon/gun/energy/laz_uzi/sectoid,/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"iX" = (/obj/effect/decal/sand_overlay/sand1/corner1{dir = 4},/turf/open/desert/excavation/component6{dir = 4},/area/desert_dam/exterior/valley/valley_crashsite)
+"jp" = (/obj/effect/decal/sand_overlay/sand1,/turf/open/desert/excavation/component7{dir = 5},/area/desert_dam/exterior/valley/valley_crashsite)
+"jP" = (/turf/open/desert/excavation/component7{dir = 4},/area/desert_dam/exterior/valley/valley_crashsite)
+"kr" = (/turf/open/desert/dirt{dir = 1; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"kt" = (/turf/open/desert/desert_shore/desert_shore1,/area/desert_dam/exterior/valley/valley_crashsite)
+"lK" = (/turf/open/desert/rock/deep/transition{dir = 5},/area/desert_dam/interior/caves/temple)
+"lL" = (/turf/open/desert/excavation/component6,/area/desert_dam/exterior/valley/valley_crashsite)
+"mJ" = (/turf/open/desert/dirt{dir = 8; icon_state = "desert_transition_corner1"},/area/desert_dam/interior/caves/central_caves)
+"nm" = (/turf/open/desert/dirt{dir = 4; icon_state = "desert_transition_corner1"},/area/desert_dam/interior/caves/temple)
+"oR" = (/turf/closed/wall/sulaco,/area/adminlevel/ert_station{name = "Strange ship"})
+"qc" = (/obj/structure/bed/chair/hunter,/turf/open/floor/light/white,/area/adminlevel/ert_station{name = "Strange ship"})
+"qV" = (/turf/open/desert/dirt{dir = 4; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"qY" = (/turf/closed/wall/rock/orange,/area/desert_dam/exterior/rock)
+"rX" = (/turf/open/desert/dirt{dir = 5; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"sa" = (/obj/structure/surface/rack{color = "#6b675e"; layer = 2.79},/obj/item/explosive/grenade/nerve_gas,/obj/item/explosive/grenade/nerve_gas{pixel_x = 5},/obj/item/explosive/grenade/nerve_gas{pixel_x = -5},/obj/item/explosive/grenade/nerve_gas,/obj/item/explosive/grenade/nerve_gas{pixel_x = -5},/obj/item/explosive/grenade/nerve_gas{pixel_x = 5},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"ss" = (/obj/structure/surface/rack{color = "#6b675e"; layer = 2.79},/obj/item/explosive/grenade/empgrenade,/obj/item/explosive/grenade/empgrenade{pixel_x = -7},/obj/item/explosive/grenade/empgrenade{pixel_x = 7},/obj/item/explosive/grenade/empgrenade,/obj/item/explosive/grenade/empgrenade{pixel_x = -7},/obj/item/explosive/grenade/empgrenade{pixel_x = 7},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner{desc = "Hmm..."; name = "\improper alien helmet"},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"sZ" = (/obj/structure/machinery/telecomms/relay/preset/centcom,/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"tb" = (/turf/open/desert/desert_shore/shore_edge1{dir = 8},/area/desert_dam/exterior/valley/valley_crashsite)
+"tl" = (/obj/structure/machinery/door_control{id = "xcom"; name = "Checkpoint Lockdown"; pixel_x = -23},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"tO" = (/turf/open/desert/dirt{dir = 1; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"vr" = (/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"vA" = (/obj/structure/machinery/big_computers/computerblack/computer1,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"vP" = (/obj/structure/machinery/light/double/blue{dir = 1},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"wi" = (/obj/effect/decal/sand_overlay/sand1/corner1,/turf/open/desert/excavation/component6{dir = 5},/area/desert_dam/exterior/valley/valley_crashsite)
+"wu" = (/obj/effect/decal/sand_overlay/sand1{dir = 5},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"xc" = (/obj/structure/surface/rack,/obj/item/device/flashlight/lantern,/turf/open/desert/rock,/area/desert_dam/interior/caves/central_caves)
+"xf" = (/turf/open/desert/rock,/area/desert_dam/interior/caves/central_caves)
+"xS" = (/turf/open/desert/desert_shore/shore_edge1,/area/desert_dam/exterior/valley/valley_crashsite)
+"yh" = (/turf/open/desert/dirt{dir = 4; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"yB" = (/turf/open/desert/excavation/component6{dir = 10},/area/desert_dam/exterior/valley/valley_crashsite)
+"yJ" = (/turf/open/desert/desert_shore/shore_edge1{dir = 4},/area/desert_dam/exterior/valley/valley_crashsite)
+"zX" = (/turf/open/desert/dirt{icon_state = "rock1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Ac" = (/turf/open/desert/dirt{dir = 6; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Am" = (/obj/structure/flora/grass/desert/lightgrass_2,/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"Ax" = (/turf/open/desert/dirt{icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Bl" = (/turf/open/desert/dirt{dir = 10; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Cf" = (/obj/structure/prop/dam/boulder/boulder2,/turf/open/desert/dirt{dir = 5; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"CC" = (/obj/structure/prop/dam/large_boulder/boulder2,/turf/open/desert/dirt,/area/desert_dam/interior/caves/central_caves)
+"CR" = (/obj/effect/decal/sand_overlay/sand1{dir = 6},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"Db" = (/turf/open/desert/desert_shore/shore_corner2{dir = 4},/area/desert_dam/exterior/valley/valley_crashsite)
+"Dg" = (/obj/structure/surface/rack,/obj/item/tool/pickaxe,/turf/open/desert/rock,/area/desert_dam/interior/caves/central_caves)
+"DA" = (/turf/open/desert/rock,/area/desert_dam/interior/caves/temple)
+"DK" = (/obj/structure/machinery/big_computers/computerblack/computer5,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"DY" = (/turf/open/desert/dirt{icon_state = "desert_transition_corner1"},/area/desert_dam/interior/caves/central_caves)
+"EG" = (/turf/open/floor/light/white,/area/adminlevel/ert_station{name = "Strange ship"})
+"Fl" = (/turf/open/desert/dirt{dir = 1; icon_state = "desert_transition_corner1"},/area/desert_dam/interior/caves/central_caves)
+"Fr" = (/turf/open/desert/dirt{icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Gi" = (/obj/effect/decal/sand_overlay/sand1/corner1{dir = 4},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"Hi" = (/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"HZ" = (/turf/open/desert/desert_shore/desert_shore1{dir = 4},/area/desert_dam/exterior/valley/valley_crashsite)
+"IR" = (/obj/structure/bed/chair/hunter{dir = 4},/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"Je" = (/turf/open/desert/excavation/component6{dir = 8},/area/desert_dam/exterior/valley/valley_crashsite)
+"JD" = (/obj/effect/decal/sand_overlay/sand1{dir = 5},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached9"},/area/desert_dam/exterior/valley/valley_crashsite)
+"JY" = (/turf/open/desert/dirt{dir = 1; icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Kn" = (/obj/effect/decal/sand_overlay/sand1{dir = 10},/turf/open/desert/excavation/component7{dir = 6},/area/desert_dam/exterior/valley/valley_crashsite)
+"KF" = (/obj/structure/prop/hybrisa/xenobiology/small/offempty,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"KQ" = (/obj/structure/machinery/telecomms/bus/preset_cent,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"Lf" = (/obj/effect/decal/sand_overlay/sand1{dir = 8},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"LP" = (/obj/structure/machinery/prop/almayer/CICmap/yautja,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"Mk" = (/turf/open/desert/excavation/component6{dir = 6},/area/desert_dam/exterior/valley/valley_crashsite)
+"Mt" = (/obj/effect/decal/sand_overlay/sand1{dir = 9},/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"MF" = (/obj/structure/machinery/door/poddoor/almayer{dir = 4; id = "xcom"},/turf/open/floor/light/white,/area/adminlevel/ert_station{name = "Strange ship"})
+"Nh" = (/obj/effect/decal/sand_overlay/sand1/corner1{dir = 1},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"NZ" = (/turf/open/desert/rock/deep/transition{dir = 8},/area/desert_dam/interior/caves/temple)
+"OI" = (/obj/effect/decal/sand_overlay/sand1/corner1{dir = 8},/turf/closed/shuttle{dir = 1; icon_state = "pwall"},/area/desert_dam/exterior/rock)
+"Pp" = (/turf/open/desert/excavation/component6{dir = 1},/area/desert_dam/exterior/valley/valley_crashsite)
+"Pv" = (/obj/effect/decal/sand_overlay/sand1{dir = 6},/turf/open/asphalt/cement_sunbleached{icon_state = "cement_sunbleached15"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Qf" = (/turf/open/desert/dirt,/area/desert_dam/interior/caves/central_caves)
+"Qv" = (/obj/structure/surface/rack{color = "#6b675e"; layer = 2.79},/obj/item/weapon/gun/energy/rxfm5_eva/sectoid{pixel_y = 8},/obj/item/weapon/gun/energy/rxfm5_eva/sectoid,/obj/item/weapon/gun/energy/rxfm5_eva/sectoid{pixel_y = -8},/obj/item/weapon/gun/energy/rxfm5_eva/sectoid{pixel_y = 8},/obj/item/weapon/gun/energy/rxfm5_eva/sectoid,/obj/item/weapon/gun/energy/rxfm5_eva/sectoid{pixel_y = -8},/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"Qw" = (/obj/effect/decal/sand_overlay/sand1{dir = 4},/turf/open/desert/excavation/component7,/area/desert_dam/exterior/valley/valley_crashsite)
+"QF" = (/turf/closed/shuttle{dir = 1; icon_state = "pwall"},/area/desert_dam/exterior/rock)
+"RK" = (/obj/effect/decal/sand_overlay/sand1/corner1{dir = 8},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"RM" = (/turf/open/floor/almayer_hull,/area/adminlevel/ert_station{name = "Strange ship"})
+"RP" = (/turf/open/desert/dirt{dir = 9; icon_state = "desert_transition_edge1"},/area/desert_dam/interior/caves/central_caves)
+"Sw" = (/turf/open/desert/dirt{dir = 8; icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"SL" = (/obj/structure/machinery/big_computers/computerblack/computer4,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"Tg" = (/obj/effect/decal/sand_overlay/sand1/corner1,/turf/open/desert/dirt{dir = 1; icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Tj" = (/obj/structure/machinery/light/double/blue,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"TN" = (/obj/structure/machinery/big_computers/computerblack/computer3,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"Ua" = (/obj/structure/bed/chair/hunter{dir = 1},/turf/open/floor/light/white,/area/adminlevel/ert_station{name = "Strange ship"})
+"Ue" = (/obj/structure/flora/bush/desert{icon_state = "tree_3"},/turf/open/desert/dirt,/area/desert_dam/exterior/valley/valley_crashsite)
+"UM" = (/obj/structure/machinery/colony_floodlight,/turf/open/desert/dirt,/area/desert_dam/interior/caves/central_caves)
+"Wq" = (/turf/open/desert/desert_shore/desert_shore1{dir = 1},/area/desert_dam/exterior/valley/valley_crashsite)
+"Wz" = (/turf/open/desert/excavation/component7{dir = 8},/area/desert_dam/exterior/valley/valley_crashsite)
+"Xf" = (/obj/effect/decal/sand_overlay/sand1,/turf/open/desert/excavation/component7{dir = 10},/area/desert_dam/exterior/valley/valley_crashsite)
+"XK" = (/turf/open/desert/dirt{dir = 9; icon_state = "desert_transition_edge1"},/area/desert_dam/exterior/valley/valley_crashsite)
+"Zo" = (/obj/structure/machinery/computer/WYresearch,/turf/open/floor/engine,/area/adminlevel/ert_station{name = "Strange ship"})
+"ZA" = (/obj/effect/decal/sand_overlay/sand1,/turf/open/desert/rock,/area/desert_dam/exterior/valley/valley_crashsite)
+"ZS" = (/turf/open/desert/dirt{dir = 4; icon_state = "desert_transition_corner1"},/area/desert_dam/exterior/valley/valley_crashsite)
+
+(1,1,1) = {"
+qYqYqYtOCfQfQfQfUMQfQfQfQfQfQfQfQfQfqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYqYxfqVQfQfQfQfQfQfQfQfeIQfQfQfQfqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYxfFlcOQfQfQfQfQfCCQfQfQfQfQfQfqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYxfxfDYefQfQfQfQfQfRPtOefRPtOefRPqYDgxcqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+xfxfxfxfDYefQfRPtOtOmJxfDYmJxfDYmJxfxfxfxfqYqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+xfxfxfxfxfDYtOmJxfxfxfqYxfxfxfxfxfxfxfxfxfxfqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYqYxfxfxfxfxfxfxfxfqYqYxfxfxfxfxfxfxfxfxfDADADADAqYqYDADADADADAqYqYqYQF
+qYqYqYqYqYaJaJaJaJaJaJaJqYxfxfxfxfxfxfxfxfxfDADADADADADADADADADADADAqYqYQF
+qYqYqYqYqYqYaJaJaJaJaJaJqYqYxfxfxfxfxfxfxfxfoRoRoRDADADADADAoRDADADADAqYQF
+qYqYqYqYqYqYqYaJaJaJzXzXqYqYqYqYxfxfxfxfoRoRoRoRoRoRDADADADAoRoRDADADAqYQF
+qYqYqYqYqYqYWqyJaJzXzXzXqYqYqYqYqYxfxfxfDADAoRoRoRoRoRoRoRoRoRoRDADADAqYQF
+qYqYqYqYhbhbhbHZzXzXzXzXqYqYqYqYqYxfxfDADAoRoRRMRMRMRMRMRMRMoRoRDADADAqYQF
+qYqYqYqYhbhbDbtbzXzXzXzXqYqYqYqYqYqYqYDAoRoRRMRMbAsZoRcXbARMRMoRoRDADAqYQF
+qYqYhbhbDbkttbzXzXzXzXqYqYqYqYqYqYqYlKoRoRRMRMEGvrvrvPvrvrEGRMRMoRoRDAqYQF
+qYxSktkttbTgAxAxAxZSaJaJaJDADADADADANZoRQvRMRMvrRMRMRMRMRMRMRMRMRMoRDAqYQF
+AxAxAxAxAxAcHiHiHidraJaJaJDADADADADAoRoRisRMoRvrRMRMoRoRRMRMRMoRoRoRoRqYQF
+HiHiHiHiHiHiHiHiHidraJaJaJDADADADADAoRoRoRtlvPvrhBoRoRKFvrvrvrvADKKQoRqYQF
+HiMthUwuHiHiHiNhHidraJaJaJDADADADADAMFvrMFRMRMRMvrssoRoRvrEGEGUaEGvroRqYOI
+NhcgaJGihUwuHiHiHidraJaJaJDADADADADAMFoRMFRMRMRMRMvrvroRvrLPvrvrIRZooRqYQF
+JDcgaJlLPpiXwuHiHidraJaJaJDADADADADAMFvrMFRMRMRMvrsaoRoRvrEGEGqcEGvroRqYQF
+PvcgJeMkyBwiCRHiHidraJaJaJDADADADADAoRoRoRvrTjvrhBoRoRKFvrvrvrTNSLKQoRqYQF
+RKQwfQjPWzLfHiHiHidrzXaJqYqYqYqYqYDAoRoRQvRMoRvrRMRMoRoRRMRMRMoRoRoRoRqYQF
+HiKnXfjpZACRHiHiHidraJqYqYqYqYqYDADADAoRisRMRMvrRMRMRMRMRMRMRMRMRMoRDAqYQF
+HiHiHiHiHiHiHiHiqYqYqYqYqYqYqYNZDADADAoRoRRMRMEGvrvrTjvrvrEGRMRMoRoRDAqYQF
+HiHiHiXKkrkrkrqYqYqYDADADADAqYDADADADADAoRoRRMRMbAsZoRcXbARMRMoRoRDADAqYQF
+qYXKkrSwaJaJaJqYqYaJDADADADADADADADADADADAoRoRRMRMRMRMRMRMRMoRoRDADADAqYQF
+qYqYqYqYaJaJqYqYaJaJDADADADADADADADADADADADAoRoRoRoRoRoRoRoRoRoRDADADAqYQF
+qYqYqYqYqYJYqYZSaJaJDADADADADADADADADADAoRoRoRoRoRoRDADADADAoRoRDADAqYqYQF
+BlAxAxAxAxAcHidraJaJDADADADADADADADADADADADAoRoRoRDADADADADAoRDADADAqYqYQF
+HiHiHiXKrXHiHidraJaJDADADADAqYDADADADADADADADADADADADADADADADADADAqYqYqYQF
+HiHiHidrFrrXHiBlAxAxnmDADAqYqYqYqYDADADADADADADADAqYqYqYDADAqYqYqYqYqYqYQF
+qYHiHiqYqYyhHiaxAmXKqYqYqYqYqYqYDADADADADADADADADAqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYqYqYqYqYyhUeXKSwqYqYqYqYqYdTdTDADADADADADAqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYqYqYqYqYqYqYqYqYqYqYqYqYdTDAdTdTDADADADADAqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+qYqYqYqYqYqYqYqYqYqYqYqYqYqYdTdTdTdTdTdTdTdTqYqYqYqYqYqYqYqYqYqYqYqYqYqYQF
+"}
