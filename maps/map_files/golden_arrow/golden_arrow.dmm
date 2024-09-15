@@ -6575,9 +6575,7 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/m4ra/pve{
-	pixel_y = 8
-	},
+/obj/item/weapon/gun/rifle/m4ra/pve,
 /obj/item/storage/box/guncase/shotgunpump,
 /turf/open/floor/almayer{
 	icon_state = "plate"
