@@ -1118,6 +1118,13 @@
 	item_state = "skull"
 	slot = ACCESSORY_SLOT_PAINT
 
+/obj/item/clothing/accessory/paint/heart
+	name = "heart armor paint"
+	desc = "A set of paint tones to etch a heart into a Marine's armor."
+	icon_state = "heart"
+	item_state = "heart"
+	slot = ACCESSORY_SLOT_PAINT
+
 /obj/item/clothing/accessory/storage/webbing/m3/mag
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."

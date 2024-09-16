@@ -1198,3 +1198,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M3 Pattern Skull Paint"
 	path = /obj/item/clothing/accessory/paint/skull
 	cost = 0
+
+/datum/gear/misc/paint_heart
+	display_name = "M3 Pattern Heart Paint"
+	path = /obj/item/clothing/accessory/paint/heart
+	cost = 0
