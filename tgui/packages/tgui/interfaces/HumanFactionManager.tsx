@@ -99,7 +99,7 @@ const ExistingFaction = (props) => {
             content="Add"
             onClick={() =>
               act('add_friendly_faction', {
-                faction: faction,
+                faction: faction.name,
               })
             }
             style={{
@@ -110,7 +110,7 @@ const ExistingFaction = (props) => {
             content="Remove"
             onClick={() =>
               act('remove_friendly_faction', {
-                faction: faction,
+                faction: faction.name,
               })
             }
             style={{
@@ -126,7 +126,7 @@ const ExistingFaction = (props) => {
             content="Add"
             onClick={() =>
               act('add_neutral_faction', {
-                faction: faction,
+                faction: faction.name,
               })
             }
             style={{
@@ -137,7 +137,7 @@ const ExistingFaction = (props) => {
             content="Remove"
             onClick={() =>
               act('remove_neutral_faction', {
-                faction: faction,
+                faction: faction.name,
               })
             }
             style={{

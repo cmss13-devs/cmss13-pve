@@ -235,7 +235,7 @@
 
 	if(dropped == primary_weapon)
 		set_primary_weapon(null)
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, dropped)
+		ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup/pickup_primary, dropped)
 	for(var/slot in container_refs)
 		if(container_refs[slot] == dropped)
 			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket")

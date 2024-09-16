@@ -109,7 +109,7 @@
 				return
 
 			var/datum/human_ai_faction/faction_obj = SShuman_ai.human_ai_factions[gotten_faction]
-			var/gotten_input = tgui_input_list(ui.user, "Set which faction being neutral to [gotten_faction]?", "Add Neutral Faction", (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) - faction_obj.get_neutral_factions())
+			var/gotten_input = tgui_input_list(ui.user, "Set which faction being neutral to [gotten_faction]?", "Add Neutral Faction", (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) - faction_obj.get_neutral_factions() - faction_obj.faction)
 			if(!gotten_input)
 				return
 
@@ -124,7 +124,7 @@
 				return
 
 			var/datum/human_ai_faction/faction_obj = SShuman_ai.human_ai_factions[gotten_faction]
-			var/gotten_input = tgui_input_list(ui.user, "Set which faction being friendly to [gotten_faction]?", "Add Friendly Faction", (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) - faction_obj.get_friendly_factions())
+			var/gotten_input = tgui_input_list(ui.user, "Set which faction being friendly to [gotten_faction]?", "Add Friendly Faction", (FACTION_LIST_HUMANOID + FACTION_LIST_XENOMORPH) - faction_obj.get_friendly_factions() - faction_obj.faction)
 			if(!gotten_input)
 				return
 
