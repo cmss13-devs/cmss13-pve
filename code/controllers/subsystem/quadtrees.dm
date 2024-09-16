@@ -24,17 +24,17 @@ SUBSYSTEM_DEF(quadtree)
 	if(!resumed)
 		player_feed = GLOB.mob_list.Copy()
 		cur_quadtrees = new_quadtrees.Copy()
-		if(new_quadtrees.len < world.maxz)
+		if(length(new_quadtrees) < world.maxz)
 			new_quadtrees.len = world.maxz
 		for(var/i in 1 to world.maxz)
 			new_quadtrees[i] = QTREE(RECT(world.maxx/2,world.maxy/2, world.maxx, world.maxy), i)
 
 	while(length(player_feed))
-		var/mob/mob_found = player_feed[player_feed.len]
+		var/mob/mob_found = player_feed[length(player_feed)]
 		player_feed.len--
 		if(!mob_found) continue
 		var/turf/T = get_turf(mob_found)
-		if(!T?.z || new_quadtrees.len < T.z)
+		if(!T?.z || length(new_quadtrees) < T.z)
 			continue
 		var/datum/coords/qtplayer/p_coords = new
 		p_coords.player = mob_found
@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(quadtree)
 	var/list/players = list()
 	if(!cur_quadtrees)
 		return players
-	if(z_level && cur_quadtrees.len >= z_level)
+	if(z_level && length(cur_quadtrees) >= z_level)
 		var/datum/quadtree/Q = cur_quadtrees[z_level]
 		if(!Q)
 			return players
