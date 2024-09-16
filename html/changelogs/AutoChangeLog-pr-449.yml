@@ -1,0 +1,10 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds a limited selection of experimental tools to the synth's gear vendor, with the ability to pick a single item"
+  - rscadd: "Adds IA to the list of pill bottles available at twice the cost of the rest"
+  - rscadd: "Adds new clothing options to the snowflake vendor, both ones upstream added and a few others besides them"
+  - balance: "Adjustments to several items costs in the auxillary gear-vendor"
+  - rscdel: "Removed some of the more gamer-y things from the synths vendors, along with the more useless/unneeded items"
+  - qol: "Adjusts points-cost of some engineering supplies. Metal & Plasteel costs are unchanged"
+  - bugfix: "replaces CO/XO headset in vendor with synth's proper one"

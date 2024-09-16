@@ -6576,8 +6576,9 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/item/weapon/gun/rifle/m4ra/pve{
-	pixel_y = 8
+	pixel_y = 9
 	},
+/obj/item/storage/box/guncase/shotgunpump,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -15970,6 +15971,8 @@
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
 	},
+/obj/structure/surface/table/almayer,
+/obj/item/tool/crowbar,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "hbu" = (
