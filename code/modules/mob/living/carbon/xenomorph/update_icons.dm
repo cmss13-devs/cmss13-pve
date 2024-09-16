@@ -41,7 +41,7 @@
 			Q.queen_standing_icon = icon_xeno
 			Q.queen_ovipositor_icon = 'icons/mob/xenos/ovipositor.dmi'
 
-	var/mutation_caste_state = "[mutation_type] [caste.caste_type]"
+	var/mutation_caste_state = "[get_strain_icon()] [caste.caste_type]"
 	if(!walking_state_cache[mutation_caste_state])
 		var/cache_walking_state = FALSE
 		for(var/state in icon_states(icon))
@@ -64,7 +64,7 @@
 	if(behavior_delegate?.on_update_icons())
 		return
 
-	var/mutation_caste_state = "[mutation_icon_state || mutation_type] [caste.caste_type]"
+	var/mutation_caste_state = "[get_strain_icon()] [caste.caste_type]"
 	if(stat == DEAD)
 		icon_state = "[mutation_caste_state] Dead"
 		if(!(icon_state in icon_states(icon_xeno)))
@@ -90,7 +90,6 @@
 	update_inv_r_hand()
 	update_inv_l_hand()
 	update_inv_back()
-	update_inv_resource()
 	update_icons()
 
 /* CRUTCH ZONE - Update icons when relevant status happen - Ideally do this properly and for everything, then kill update_icons() someday */
@@ -149,7 +148,12 @@
 		var/t_state = r_hand.item_state
 		if(!t_state)
 			t_state = r_hand.icon_state
-		overlays_standing[X_R_HAND_LAYER] = r_hand.get_mob_overlay(src, WEAR_R_HAND)
+		/*Move inhand image to the center of the sprite. Strictly speaking this should probably be like monkey get_offset_overlay_image() and tailor item icon
+		positions to the hands of the xeno, but outside of special occasions xenos can't really pick items up and this tends to look better than human default.*/
+		var/image/inhand_image = r_hand.get_mob_overlay(src, WEAR_R_HAND)
+		inhand_image.pixel_x = xeno_inhand_item_offset
+		overlays_standing[X_R_HAND_LAYER] = inhand_image
+
 		apply_overlay(X_R_HAND_LAYER)
 
 /mob/living/carbon/xenomorph/update_inv_l_hand()
@@ -162,7 +166,13 @@
 		var/t_state = l_hand.item_state
 		if(!t_state)
 			t_state = l_hand.icon_state
-		overlays_standing[X_L_HAND_LAYER] = l_hand.get_mob_overlay(src, WEAR_L_HAND)
+
+		/*Move inhand image overlay to the center of the sprite. Strictly speaking this should probably be like monkey get_offset_overlay_image() and tailor item icon
+		positions to the hands of the xeno, but outside of special occasions xenos can't really pick items up and this tends to look better than human default.*/
+		var/image/inhand_image = l_hand.get_mob_overlay(src, WEAR_L_HAND)
+		inhand_image.pixel_x = xeno_inhand_item_offset
+		overlays_standing[X_L_HAND_LAYER] = inhand_image
+
 		apply_overlay(X_L_HAND_LAYER)
 
 /mob/living/carbon/xenomorph/update_inv_back()
@@ -190,12 +200,6 @@
 	backpack_icon_holder.layer = -X_BACK_LAYER
 	if(dir == NORTH && (back.flags_item & ITEM_OVERRIDE_NORTHFACE))
 		backpack_icon_holder.layer = -X_BACK_FRONT_LAYER
-
-/mob/living/carbon/xenomorph/proc/update_inv_resource()
-	remove_overlay(X_RESOURCE_LAYER)
-	if(crystal_stored)
-		overlays_standing[X_RESOURCE_LAYER] = image("icon" = icon, "icon_state" = "[caste_type]_resources", "layer" =-X_RESOURCE_LAYER)
-		apply_overlay(X_RESOURCE_LAYER)
 
 /mob/living/carbon/xenomorph/update_inv_legcuffed()
 	remove_overlay(X_LEGCUFF_LAYER)
@@ -272,10 +276,10 @@
 	apply_overlay(X_SUIT_LAYER)
 	addtimer(CALLBACK(src, PROC_REF(remove_overlay), X_SUIT_LAYER), 2 SECONDS)
 
-/mob/living/carbon/xenomorph/proc/create_shield(duration = 10)
+/mob/living/carbon/xenomorph/proc/create_shield(duration = 10, icon_state)
 	remove_suit_layer()
 
-	overlays_standing[X_SUIT_LAYER] = image("icon"='icons/mob/xenos/overlay_effects64x64.dmi', "icon_state" = "shield2")
+	overlays_standing[X_SUIT_LAYER] = image("icon"='icons/mob/xenos/overlay_effects64x64.dmi', "icon_state" = icon_state)
 	apply_overlay(X_SUIT_LAYER)
 	addtimer(CALLBACK(src, PROC_REF(remove_overlay), X_SUIT_LAYER), duration)
 
@@ -323,8 +327,7 @@
 		return
 
 	var/health_threshold
-	wound_icon_holder.layer = layer + 0.01
-	health_threshold = max(CEILING((health * 4) / (maxHealth), 1), 0) //From 0 to 4, in 25% chunks
+	health_threshold = max(ceil((health * 4) / (maxHealth)), 0) //From 0 to 4, in 25% chunks
 	if(health > HEALTH_THRESHOLD_DEAD)
 		if(health_threshold > 3)
 			wound_icon_holder.icon_state = "none"
@@ -337,11 +340,12 @@
 			wound_icon_holder.icon_state = "[caste.caste_type]_walk_[health_threshold]"
 		else
 			wound_icon_holder.icon_state = handle_special_wound_states(health_threshold)
-
+	if(organ_removed)
+		wound_icon_holder.icon_state = "[caste.caste_type]_dissection"
 
 ///Used to display the xeno wounds/backpacks without rapidly switching overlays
 /atom/movable/vis_obj
-	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR
+	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
 	appearance_flags = RESET_COLOR
 
 /atom/movable/vis_obj/xeno_wounds
@@ -350,7 +354,7 @@
 /atom/movable/vis_obj/xeno_pack/Initialize(mapload, mob/living/carbon/source)
 	. = ..()
 	if(source)
-		icon = default_xeno_onmob_icons[source.type]
+		icon = GLOB.default_xeno_onmob_icons[source.type]
 
 //Xeno Overlays Indexes//////////
 #undef X_BACK_LAYER

@@ -228,6 +228,7 @@ a.popt {
 .looc,
 .adminooc,
 .admin,
+.niche,
 .medal,
 .yell {
   font-weight: bold;
@@ -286,6 +287,11 @@ em {
 }
 
 .admin {
+  color: #5975da;
+  font-weight: bold;
+}
+
+.niche {
   color: #5975da;
   font-weight: bold;
 }
@@ -434,9 +440,9 @@ em {
   font-weight: bold;
 }
 
-.minorannounce {
+.bigannounce {
   font-weight: bold;
-  font-size: 185%;
+  font-size: 115%;
 }
 
 .greenannounce {
@@ -974,10 +980,6 @@ em {
   color: #844300;
 }
 
-.sentryradio {
-  color: #844300;
-}
-
 .medradio {
   color: #008160;
 }
@@ -1036,6 +1038,26 @@ em {
 
 .echoradio {
   color: #3eb489;
+}
+
+.opforcmd {
+  color: #68bcec;
+}
+
+.opformed {
+  color: #52c724;
+}
+
+.opforeng {
+  color: #e9812d;
+}
+
+.opforcct {
+  color: #ec3018;
+}
+
+.opforspe {
+  color: #7221cf;
 }
 
 .medium {
@@ -1123,7 +1145,7 @@ em {
 
 .xenoboldnotice {
   color: #51a16c;
-  font-style: italic;
+  font-weight: bold;
 }
 
 .xenowarning {
@@ -1427,6 +1449,14 @@ em {
   animation: glitch 0.5s infinite;
 }
 
+.psy_talk {
+  color: #c400aa;
+  font-weight: bold;
+
+  /*Animation*/
+  animation: psy_glitch 0.5s infinite;
+}
+
 /*Keyframes*/
 
 @keyframes glitch {
@@ -1447,6 +1477,28 @@ em {
 
   100% {
     color: #830000;
+    transform: translate(1px, 1px);
+  }
+}
+
+@keyframes psy_glitch {
+  25% {
+    color: #c400aa;
+    transform: translate(-2px, -1px);
+  }
+
+  50% {
+    color: #91007d;
+    transform: translate(1px, -2px);
+  }
+
+  75% {
+    color: #750066;
+    transform: translate(-1px, 2px);
+  }
+
+  100% {
+    color: #7c016c;
     transform: translate(1px, 1px);
   }
 }

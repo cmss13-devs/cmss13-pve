@@ -91,3 +91,24 @@
 
 /obj/structure/gun_rack/m41/recon/unloaded
 	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
+
+/obj/structure/gun_rack/flamer
+	name = "M240A1 incinerator rack"
+	icon_state = "m240"
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M240A1 incinerators. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/flamer
+	populate_type = /obj/item/weapon/gun/flamer
+
+/obj/structure/gun_rack/flamer/unloaded
+	populate_type = /obj/item/weapon/gun/flamer/unloaded
+
+/obj/structure/gun_rack/mk221
+	name = "M120 shotgun rack"
+	icon_state = "mk221"
+	desc = "ARMAT-produced gun rack for storage of long guns. While initial model was supposed to be extremely modifiable, USCM comissioned racks with fixed slots which only fit M120 tactical shotguns. Some say they were cheaper, and some say the main reason was marine's ability to easily break anything more complex than a tungsten ball."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/shotgun/combat
+	populate_type = /obj/item/weapon/gun/shotgun/combat

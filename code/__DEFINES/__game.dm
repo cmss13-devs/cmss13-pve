@@ -83,6 +83,8 @@
 #define SEE_INVISIBLE_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 #define INVISIBILITY_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 
+#define HIDE_INVISIBLE_OBSERVER 59 // define for when we want to hide all observer mobs.
+
 #define INVISIBILITY_OBSERVER 60
 #define SEE_INVISIBLE_OBSERVER 60
 
@@ -107,6 +109,8 @@
 #define SOUND_ADMIN_MEME (1<<6)
 #define SOUND_ADMIN_ATMOSPHERIC (1<<7)
 #define SOUND_ARES_MESSAGE (1<<8)
+#define SOUND_OBSERVER_ANNOUNCEMENTS (1<<9)
+#define SOUND_FAX_MACHINE (1<<10)
 
 //toggles_chat
 #define CHAT_OOC (1<<0)
@@ -123,6 +127,7 @@
 #define CHAT_FFATTACKLOGS (1<<11)
 #define CHAT_GHOSTHIVEMIND (1<<12)
 #define CHAT_NICHELOGS (1<<13)
+#define CHAT_LISTENINGBUG (1<<14)
 
 //toggles_ghost
 #define GHOST_HEALTH_SCAN  (1<<0)
@@ -150,6 +155,7 @@
 //toggles_admin
 /// Splits admin tabs in Statpanel
 #define SPLIT_ADMIN_TABS (1<<0)
+#define ADMIN_STEALTHMODE (1<<1)
 
 //=================================================
 
@@ -159,7 +165,7 @@
 
 #define TOGGLES_LANGCHAT_DEFAULT (LANGCHAT_SEE_EMOTES)
 
-#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC)
+#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC|SOUND_OBSERVER_ANNOUNCEMENTS|SOUND_FAX_MACHINE)
 
 #define TOGGLES_FLASHING_DEFAULT (FLASH_ROUNDSTART|FLASH_ROUNDEND|FLASH_CORPSEREVIVE|FLASH_ADMINPM|FLASH_UNNEST)
 
@@ -280,7 +286,7 @@
 
 // Helpers
 /// Only use the CEILING_PROTECTION_TIER_X defines for `protection_level`
-#define CEILING_IS_PROTECTED(ceiling, protection_level) (ceiling >= protection_level)
+#define CEILING_IS_PROTECTED(ceiling, protection_level) ((ceiling) >= (protection_level))
 
 // Default font settings
 #define FONT_SIZE "5pt"
@@ -376,6 +382,7 @@
 #define WALL_DEVWALL "devwall"
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
+#define WALL_AICORE "aiwall"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
@@ -533,7 +540,7 @@
 /// `amount` - The number to get per time
 /// `time` - The time period in which to gain this amount
 /// To be used with delta_time. Multiplied by 10 to convert from deciseconds to seconds
-#define AMOUNT_PER_TIME(amount, time) ((amount / (time))*10)
+#define AMOUNT_PER_TIME(amount, time) (((amount) / (time))*10)
 
 // Local message mode. Used to decide wheter message should be dispatched on the radio.
 #define MESSAGE_MODE_LOCAL 1
@@ -552,3 +559,9 @@
 #define PERF_TOGGLE_SHUTTLES (1<<3)
 /// Disables loading Techwebs and additional Z-Levels
 #define PERF_TOGGLE_TECHWEBS (1<<4)
+
+/// Dropship Camos
+#define DROPSHIP_CAMO_TAN "Tan"
+#define DROPSHIP_CAMO_NAVY "Navy"
+#define DROPSHIP_CAMO_URBAN "Urban"
+#define DROPSHIP_CAMO_JUNGLE "Jungle"

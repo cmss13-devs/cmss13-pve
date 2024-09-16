@@ -1,0 +1,4 @@
+[
+    { "type": "map_variations",   "landmark": "briefing",       "path": "briefing/",        "chance": 0 },
+    { "type": "map_variations",   "landmark": "dorms",          "path": "dorms/",           "chance": 0 }
+]

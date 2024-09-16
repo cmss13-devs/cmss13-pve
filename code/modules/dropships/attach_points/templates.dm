@@ -82,6 +82,47 @@
 	transverse  =  3
 	long    =  0
 
+/obj/effect/attach_point/weapon/dropship3
+	ship_tag = DROPSHIP_SAIPAN
+
+/obj/effect/attach_point/weapon/dropship3/left_wing
+	name = "port wing weapon attach point"
+	icon_state = "equip_base_l_wing"
+	attach_id = 1
+	dir = WEST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  = -3
+	long    =  0
+
+/obj/effect/attach_point/weapon/dropship3/left_fore
+	name = "port fore weapon attach point"
+	attach_id = 2
+	dir = NORTH
+	firing_arc_min = -6
+	firing_arc_max =  0
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/dropship3/right_fore
+	name = "starboard fore weapon attach point"
+	attach_id = 3
+	dir = NORTH
+	firing_arc_min =  0
+	firing_arc_max =  6
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/dropship3/right_wing
+	name = "starboard wing weapon attach point"
+	icon_state = "equip_base_r_wing";
+	attach_id = 4
+	dir = EAST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  =  3
+	long    =  0
+
 // MIDWAY
 /obj/effect/attach_point/weapon/midway
 	ship_tag = DROPSHIP_MIDWAY
@@ -301,8 +342,20 @@
 /obj/effect/attach_point/crew_weapon/dropship1
 	ship_tag = DROPSHIP_ALAMO
 
+/obj/effect/attach_point/crew_weapon/dropship1/floor
+	plane = FLOOR_PLANE
+
 /obj/effect/attach_point/crew_weapon/dropship2
 	ship_tag = DROPSHIP_NORMANDY
+
+/obj/effect/attach_point/crew_weapon/dropship2/floor
+	plane = FLOOR_PLANE
+
+/obj/effect/attach_point/crew_weapon/dropship3
+	ship_tag = DROPSHIP_SAIPAN
+
+/obj/effect/attach_point/crew_weapon/dropship3/floor
+	plane = FLOOR_PLANE
 
 /obj/effect/attach_point/crew_weapon/midway
 	ship_tag = DROPSHIP_MIDWAY
@@ -331,6 +384,9 @@
 /obj/effect/attach_point/electronics/dropship2
 	ship_tag = DROPSHIP_NORMANDY
 
+/obj/effect/attach_point/electronics/dropship3
+	ship_tag = DROPSHIP_SAIPAN
+
 /obj/effect/attach_point/electronics/midway
 	ship_tag = DROPSHIP_MIDWAY
 
@@ -357,6 +413,10 @@
 /obj/effect/attach_point/fuel/dropship2
 	ship_tag = DROPSHIP_NORMANDY
 
+/obj/effect/attach_point/fuel/dropship3
+	ship_tag = DROPSHIP_SAIPAN
+
+
 /obj/effect/attach_point/fuel/midway
 	ship_tag = DROPSHIP_MIDWAY
 
@@ -380,6 +440,9 @@
 
 /obj/effect/attach_point/computer/dropship2
 	ship_tag = DROPSHIP_NORMANDY
+
+/obj/effect/attach_point/computer/dropship3
+	ship_tag = DROPSHIP_SAIPAN
 
 /obj/effect/attach_point/computer/midway
 	ship_tag = DROPSHIP_MIDWAY
