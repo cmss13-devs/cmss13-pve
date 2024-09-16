@@ -711,6 +711,42 @@
 	worn_state = "workwear_green"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
+/obj/item/clothing/under/colonist/boilersuit
+	name = "light-blue boilersuit"
+	desc = "A light-blue boilersuit."
+	icon_state = "boilersuit_lightblue"
+	worn_state = "boilersuit_lightblue"
+
+/obj/item/clothing/under/colonist/boilersuit/darkblue
+	name = "dark-blue boilersuit"
+	desc = "A dark-blue boilersuit."
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
+
+/obj/item/clothing/under/colonist/boilersuit/khaki
+	name = "khaki boilersuit"
+	desc = "A khaki boilersuit."
+	icon_state = "boilersuit_khaki"
+	worn_state = "boilersuit_khaki"
+
+/obj/item/clothing/under/colonist/boilersuit/white
+	name = "white boilersuit"
+	desc = "An off-white boilersuit."
+	icon_state = "boilersuit_white"
+	worn_state = "boilersuit_white"
+
+/obj/item/clothing/under/colonist/boilersuit/cyan
+	name = "cyan boilersuit"
+	desc = "A cyan boilersuit."
+	icon_state = "boilersuit_cyan"
+	worn_state = "boilersuit_cyan"
+
+/obj/item/clothing/under/colonist/boilersuit/grey
+	name = "grey boilersuit"
+	desc = "A grey boilersuit."
+	icon_state = "boilersuit_steel"
+	worn_state = "boilersuit_steel"
+
 /obj/item/clothing/under/colonist/clf
 	name = "\improper Colonial Liberation Front uniform"
 	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."

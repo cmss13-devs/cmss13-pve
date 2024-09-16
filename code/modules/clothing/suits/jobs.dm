@@ -477,6 +477,16 @@
 	desc = "A green windbreaker."
 	icon_state = "windbreaker_green"
 
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
+	name = "blue windbreaker"
+	desc = "A blue windbreaker."
+	icon_state = "windbreaker_blue"
+
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow
+	name = "yellow windbreaker"
+	desc = "A yellow windbreaker."
+	icon_state = "windbreaker_yellow"
+
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr
 	name = "first responder windbreaker"
 	desc = "A brown windbreaker with reflective strips commonly worn by first responders."

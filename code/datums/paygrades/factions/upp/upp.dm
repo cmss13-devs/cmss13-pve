@@ -143,6 +143,6 @@
 
 /datum/paygrade/upp/militsiya
 	paygrade = PAY_SHORT_UC1
-	name = "Militsiya"
+	name = "Militsioner"
 	prefix = "Milit."
 	pay_multiplier = 0.3
