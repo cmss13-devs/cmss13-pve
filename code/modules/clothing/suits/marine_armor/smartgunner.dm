@@ -25,7 +25,7 @@
 	var/list/smartgun_back = list(
 		/obj/item/storage/large_holster/machete,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_PONCHO)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
