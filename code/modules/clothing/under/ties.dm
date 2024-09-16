@@ -1097,6 +1097,19 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+/obj/item/clothing/accessory/pads/bracers
+	name = "\improper M3 Arm Bracers"
+	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCM."
+	icon_state = "bracers"
+	item_state = "bracers"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/pads/neckguard
+	name = "\improper M3 Neck Guard"
+	desc = "An attachable neck guard option for the M3 armor set worn by the USCM."
+	icon_state = "neckguard"
+	item_state = "neckguard"
+	slot = ACCESSORY_SLOT_DECORNECK
 
 /obj/item/clothing/accessory/paint/skull
 	name = "skull armor paint"
