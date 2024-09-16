@@ -569,9 +569,9 @@
 		/obj/item/ammo_magazine/rifle,
 	)
 
-/obj/item/storage/internal/accessory/webbing/m3/shotgun
+/obj/item/storage/internal/accessory/black_vest/m3/shotgun
 	can_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/handful,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -1128,7 +1128,7 @@
 	name = "\improper M3 Pattern Shell Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/shotgun
+	hold = /obj/item/storage/internal/accessory/black_vest/m3/shotgun
 
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
