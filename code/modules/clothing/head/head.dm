@@ -187,7 +187,7 @@
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
-	desc = "Service issue patrol cap. Has no protective qualities, but it's light and comfy. Also useful for smartgunners to keep their HMS unobstructed."
+	desc = "Service issue patrol cap with a retaining band. No protective qualities or tactical relay complex, but it's light and comfy."
 	icon_state = "cap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	var/helmet_overlays[]
