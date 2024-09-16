@@ -280,11 +280,11 @@
 		list("M3 Pattern Shotgun Shell Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/shotgun, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern M40 Webbing", 2, /obj/item/clothing/accessory/storage/black_vest/m3/m40, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Small Pouch Webbing", 2, /obj/item/clothing/accessory/storage/black_vest/m3, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 2, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 3, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/storage/marine/rto/forecon, VENDOR_ITEM_REGULAR),
 		list("M3-L Pattern Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/light/standard, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
