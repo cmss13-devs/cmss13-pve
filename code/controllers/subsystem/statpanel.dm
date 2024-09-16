@@ -108,7 +108,7 @@ SUBSYSTEM_DEF(statpanels)
 
 	target.stat_panel.send_message("update_stat", list(
 		"global_data" = global_data,
-		//"ping_str" = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
+		//"ping_str" = "Ping: [floor(target.lastping, 1)]ms (Average: [floor(target.avgping, 1)]ms)",
 		"other_str" = target.mob?.get_status_tab_items(),
 	))
 
@@ -197,7 +197,7 @@ SUBSYSTEM_DEF(statpanels)
 /datum/controller/subsystem/statpanels/proc/generate_mc_data()
 	mc_data = list(
 		list("CPU:", world.cpu),
-		list("Instances:", "[num2text(world.contents.len, 10)]"),
+		list("Instances:", "[num2text(length(world.contents), 10)]"),
 		list("World Time:", "[world.time]"),
 		list("Globals:", GLOB.stat_entry(), "\ref[GLOB]"),
 		list("[config]:", config.stat_entry(), "\ref[config]"),

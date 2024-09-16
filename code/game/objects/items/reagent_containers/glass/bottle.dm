@@ -38,7 +38,7 @@
 	if(reagents.total_volume && (icon_state == "bottle-1" || icon_state == "bottle-2" || icon_state == "bottle-3" || icon_state == "bottle-4"))
 		var/image/filling = image('icons/obj/items/reagentfillings.dmi', src, "[icon_state]10")
 
-		var/percent = round((reagents.total_volume / volume) * 100)
+		var/percent = floor((reagents.total_volume / volume) * 100)
 		switch(percent)
 			if(0 to 9) filling.icon_state = "[icon_state]--10"
 			if(10 to 24) filling.icon_state = "[icon_state]-10"
@@ -115,7 +115,7 @@
 
 /obj/item/reagent_container/glass/bottle/tricordrazine
 	name = "\improper Tricordrazine bottle"
-	desc = "A small glossy bottle full of tricordrazine, a drug that slowly treats brute and burn damage."
+	desc = "A small glossy bottle full of tricordrazine, a drug that slowly treats minor injuries of all kinds."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle18"
 	volume = 180
@@ -428,4 +428,3 @@
 /obj/item/reagent_container/glass/bottle/frostoil/Initialize()
 	. = ..()
 	reagents.add_reagent("frostoil", 150)
-
