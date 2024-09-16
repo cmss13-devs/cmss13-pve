@@ -751,7 +751,7 @@
 	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for less weight."
 	specialty = "\improper M3-L pattern light"
 	icon_state = "L1"
-	armor_variation = 6
+	armor_variation = 3
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
@@ -776,7 +776,7 @@
 	desc = "M3 armor vest with a rheological liner behind the chestplate, additional armor over the limbs to improve protection ballistic and blast protections. \nMarginal improvement in other areas, and the mass of the extra plates degrades agility, especially in null-gee."
 	specialty = "\improper M3-H pattern"
 	icon_state = "H1"
-	armor_variation = 6
+	armor_variation = 3
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
@@ -785,10 +785,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-
-/obj/item/clothing/suit/marine/heavy/padless
-	icon_state = "H1"
-	armor_variation = 0
 
 /obj/item/clothing/suit/marine/heavy/padless_lines
 	icon_state = "H2"

@@ -672,14 +672,14 @@
 //------------ESSENTIAL SETS---------------
 /obj/effect/essentials_set/random/uscm_light_armor
 	spawned_gear_list = list(
-		/obj/item/clothing/suit/storage/marine/light/padless_lines,
-		/obj/item/clothing/suit/storage/marine/light/smooth,
+		/obj/item/clothing/suit/marine/light/padless_lines,
+		/obj/item/clothing/suit/marine/light/smooth,
 	)
 
 /obj/effect/essentials_set/random/uscm_heavy_armor
 	spawned_gear_list = list(
-		/obj/item/clothing/suit/storage/marine/heavy/padless_lines,
-		/obj/item/clothing/suit/storage/marine/heavy/smooth,
+		/obj/item/clothing/suit/marine/heavy/padless_lines,
+		/obj/item/clothing/suit/marine/heavy/smooth,
 	)
 
 //------------MARINE CIVILIAN CLOTHING---------------
