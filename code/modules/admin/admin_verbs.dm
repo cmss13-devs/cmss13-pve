@@ -76,6 +76,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/toggle_human_ai,
 	/datum/admins/proc/create_human_ai_patrol,
 	/client/proc/open_human_ai_management_panel,
+	/client/proc/open_human_faction_management_panel,
 	/client/proc/create_human_ai,
 	/client/proc/other_records,
 	))

@@ -126,6 +126,7 @@
 		return
 
 	human_ai_menu = new /datum/human_ai_management_menu(src)
+	human_ai_menu.tgui_interact(mob)
 
 /client/proc/create_human_ai()
 	set name = "Create Human AI"

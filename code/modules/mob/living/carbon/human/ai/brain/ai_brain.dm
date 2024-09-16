@@ -307,5 +307,5 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(!our_faction)
 		return
 
-	our_faction.neutral_factions -= faction
+	our_faction.remove_neutral_faction(faction)
 	our_faction.reapply_faction_data()

@@ -1,13 +1,13 @@
 /datum/human_ai_faction
 	var/faction = FACTION_NEUTRAL
-	var/shoot_to_kill = TRUE
+	VAR_PROTECTED/shoot_to_kill = TRUE
 
-	var/list/in_combat_lines = list()
-	var/list/exit_combat_lines = list()
-	var/list/squad_member_death_lines = list()
+	VAR_PROTECTED/list/in_combat_lines = list()
+	VAR_PROTECTED/list/exit_combat_lines = list()
+	VAR_PROTECTED/list/squad_member_death_lines = list()
 
-	var/list/friendly_factions = list()
-	var/list/neutral_factions = list()
+	VAR_PROTECTED/list/friendly_factions = list()
+	VAR_PROTECTED/list/neutral_factions = list()
 
 /datum/human_ai_faction/proc/apply_faction_data(datum/human_ai_brain/brain)
 	if(length(in_combat_lines))
@@ -27,6 +27,47 @@
 	for(var/datum/human_ai_brain/brain in GLOB.human_ai_brains)
 		if(brain.tied_human?.faction == faction)
 			apply_faction_data(brain)
+
+/datum/human_ai_faction/proc/add_friendly_faction(faction)
+	if(faction in friendly_factions)
+		return
+	friendly_factions += faction
+	if(faction in neutral_factions)
+		neutral_factions -= faction
+	reapply_faction_data()
+
+/datum/human_ai_faction/proc/add_neutral_faction(faction)
+	if(faction in neutral_factions)
+		return
+	neutral_factions += faction
+	if(faction in friendly_factions)
+		friendly_factions -= faction
+	reapply_faction_data()
+
+/datum/human_ai_faction/proc/remove_friendly_faction(faction)
+	if(!(faction in friendly_factions))
+		return
+	friendly_factions -= faction
+	reapply_faction_data()
+
+/datum/human_ai_faction/proc/remove_neutral_faction(faction)
+	if(!(faction in neutral_factions))
+		return
+	neutral_factions -= faction
+	reapply_faction_data()
+
+/datum/human_ai_faction/proc/get_friendly_factions()
+	return friendly_factions
+
+/datum/human_ai_faction/proc/get_neutral_factions()
+	return neutral_factions
+
+/datum/human_ai_faction/proc/set_shoot_to_kill(new_kill = TRUE)
+	shoot_to_kill = new_kill
+	reapply_faction_data()
+
+/datum/human_ai_faction/proc/get_shoot_to_kill()
+	return shoot_to_kill
 
 /datum/human_ai_faction/clf
 	faction = FACTION_CLF
