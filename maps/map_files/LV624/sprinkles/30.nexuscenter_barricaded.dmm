@@ -1,350 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"ab" = (
-/obj/structure/barricade/wooden{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"ac" = (
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
 "ad" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/item/stack/sheet/metal,
 /turf/open/floor/grass,
 /area/lv624/lazarus/main_hall)
-"ae" = (
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
-/area/lv624/lazarus/main_hall)
-"af" = (
-/obj/item/stack/sheet/metal,
-/obj/item/stack/sheet/metal,
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/main_hall)
-"ag" = (
-/obj/structure/flora/pottedplant,
-/obj/structure/machinery/light/spot{
-	dir = 1
-	},
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"ah" = (
-/obj/structure/machinery/vending/snack,
-/obj/item/stack/sheet/metal{
-	amount = 30;
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "whiteblue"
-	},
-/area/lv624/lazarus/main_hall)
-"ai" = (
-/obj/item/stack/sheet/metal,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"aj" = (
-/obj/item/stack/sheet/wood,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"ak" = (
-/obj/item/frame/table,
-/obj/item/ammo_magazine/smg/mp27,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"al" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"am" = (
-/obj/effect/landmark/good_item,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"an" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"ap" = (
-/obj/item/weapon/twohanded/fireaxe,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aq" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
-/area/lv624/lazarus/main_hall)
-"ar" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged3"
-	},
-/area/lv624/lazarus/main_hall)
-"as" = (
-/obj/item/limb/arm/l_arm,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"at" = (
-/obj/effect/decal/cleanable/vomit,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"au" = (
-/obj/structure/surface/table{
-	dir = 4;
-	flipped = 1
-	},
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"av" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/main_hall)
-"aw" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/effect/landmark/xeno_hive_spawn,
-/obj/effect/landmark/ert_spawns/groundside_xeno,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"ax" = (
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"ay" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"az" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"aA" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/obj/structure/barricade/wooden,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aB" = (
-/obj/structure/flora/pottedplant,
-/obj/structure/barricade/wooden,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aC" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
 "aD" = (
 /obj/effect/landmark/corpsespawner/engineer,
 /turf/open/floor,
-/area/lv624/lazarus/main_hall)
-"aE" = (
-/obj/item/trash/chips,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aF" = (
-/obj/item/limb/foot/r_foot,
-/obj/structure/surface/table{
-	dir = 8;
-	flipped = 1
-	},
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aG" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/limb/arm/l_arm,
-/obj/item/frame/table,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aH" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/item/frame/table,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
-/area/lv624/lazarus/main_hall)
-"aI" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/frame/table,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aJ" = (
-/obj/item/limb/hand/r_hand,
-/obj/structure/surface/table{
-	dir = 4;
-	flipped = 1
-	},
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aK" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aL" = (
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"aM" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"aN" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"aO" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aP" = (
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aQ" = (
-/obj/item/weapon/gun/smg/mp27,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged3"
-	},
-/area/lv624/lazarus/main_hall)
-"aR" = (
-/obj/item/limb/foot/r_foot,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
 /area/lv624/lazarus/main_hall)
 "aS" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -352,43 +15,6 @@
 /obj/item/frame/table,
 /obj/item/ammo_casing,
 /turf/open/floor,
-/area/lv624/lazarus/main_hall)
-"aT" = (
-/obj/item/ammo_magazine/smg/mp27,
-/obj/item/ammo_magazine/smg/mp27,
-/obj/item/ammo_magazine/smg/mp27,
-/turf/open/floor{
-	icon_state = "wall_thermite"
-	},
-/area/lv624/lazarus/main_hall)
-"aU" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
-/area/lv624/lazarus/main_hall)
-"aV" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aW" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"aX" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
 /area/lv624/lazarus/main_hall)
 "aY" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -408,55 +34,6 @@
 	},
 /turf/open/floor,
 /area/lv624/lazarus/main_hall)
-"ba" = (
-/obj/structure/barricade/metal{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"bb" = (
-/obj/item/frame/table,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/main_hall)
-"bc" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/surface/table{
-	flipped = 1
-	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bd" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"be" = (
-/obj/item/stack/barbed_wire,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"bf" = (
-/obj/structure/barricade/metal{
-	dir = 4
-	},
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
 "bg" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -464,261 +41,16 @@
 /obj/item/ammo_casing,
 /turf/open/floor,
 /area/lv624/lazarus/main_hall)
-"bh" = (
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/item/frame/table,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bi" = (
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"bj" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor{
-	icon_state = "whitegreencorner"
-	},
-/area/lv624/lazarus/main_hall)
 "bk" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/structure/surface/table,
 /turf/open/floor/grass,
 /area/lv624/lazarus/main_hall)
-"bl" = (
-/obj/structure/surface/table,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitegreencorner"
-	},
-/area/lv624/lazarus/main_hall)
-"bm" = (
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
 "bn" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/item/ammo_casing,
 /turf/closed/wall/mineral/gold,
-/area/lv624/lazarus/main_hall)
-"bo" = (
-/obj/item/stack/barbed_wire,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"bp" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/limb/foot/l_foot,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bq" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor{
-	icon_state = "damaged4"
-	},
-/area/lv624/lazarus/main_hall)
-"br" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/surface/table{
-	dir = 4;
-	flipped = 1
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bs" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"bt" = (
-/obj/item/weapon/gun/smg/mp27,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bu" = (
-/obj/item/stack/barbed_wire,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"bv" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"bw" = (
-/obj/structure/barricade/metal{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
-/area/lv624/lazarus/main_hall)
-"bx" = (
-/turf/open/floor{
-	icon_state = "wall_thermite"
-	},
-/area/lv624/lazarus/main_hall)
-"by" = (
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellow"
-	},
-/area/lv624/lazarus/main_hall)
-"bz" = (
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"bA" = (
-/obj/item/tool/crowbar,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/surface/table{
-	dir = 8;
-	flipped = 1
-	},
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bB" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/limb/foot/l_foot,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"bC" = (
-/obj/effect/decal/cleanable/blood{
-	pixel_y = 12
-	},
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/item/limb/hand/l_hand,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"bD" = (
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/item/weapon/gun/pistol/highpower,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/main_hall)
-"bE" = (
-/obj/effect/landmark/corpsespawner/chef,
-/obj/structure/surface/table{
-	dir = 4;
-	flipped = 1
-	},
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bF" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
-/area/lv624/lazarus/main_hall)
-"bG" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched2"
-	},
-/area/lv624/lazarus/main_hall)
-"bH" = (
-/obj/structure/barricade/wooden,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowcorner"
-	},
-/area/lv624/lazarus/main_hall)
-"bI" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_magazine/smg/mp27,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged2"
-	},
-/area/lv624/lazarus/main_hall)
-"bJ" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/surface/table{
-	flipped = 1
-	},
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
-/area/lv624/lazarus/main_hall)
-"bK" = (
-/turf/open/floor{
-	icon_state = "platingdmg3"
-	},
 /area/lv624/lazarus/main_hall)
 "bL" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -739,296 +71,574 @@
 /obj/item/ammo_casing,
 /turf/open/floor,
 /area/lv624/lazarus/main_hall)
-"bN" = (
+"dE" = (
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/item/limb/foot/l_foot,
 /obj/item/ammo_casing,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whiteyellowcorner"
-	},
+/turf/open/floor/floorscorched1,
 /area/lv624/lazarus/main_hall)
-"bO" = (
-/obj/effect/landmark/good_item,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+"dQ" = (
+/obj/structure/machinery/vending/cigarette/colony,
+/turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
-"bP" = (
-/obj/effect/decal/cleanable/blood/splatter,
+"ef" = (
 /obj/structure/barricade/wooden{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/damaged2,
 /area/lv624/lazarus/main_hall)
-"bQ" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"bR" = (
+"eI" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/item/ammo_magazine/smg/mp27,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"bS" = (
+"fz" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"fU" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/item/ammo_casing,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/whiteyellowcorner/north,
 /area/lv624/lazarus/main_hall)
-"bT" = (
-/obj/item/weapon/gun/smg/mp27,
+"gY" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"hC" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/limb/arm/l_arm,
+/obj/item/frame/table,
+/obj/effect/decal/cleanable/blood/splatter,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "floorscorched1"
-	},
+/obj/item/ammo_casing,
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"bU" = (
+"hL" = (
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"if" = (
+/turf/open/floor/whitegreencorner/west,
+/area/lv624/lazarus/main_hall)
+"is" = (
+/obj/item/tool/crowbar,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/surface/table{
+	dir = 8;
+	flipped = 1
+	},
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"jk" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/surface/table{
+	flipped = 1
+	},
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"jp" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/cult,
+/area/lv624/lazarus/kitchen)
+"ju" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Nexus Dome Chapel"
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/chapel)
+"jz" = (
+/obj/structure/barricade/metal{
+	dir = 4
+	},
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"kt" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"kA" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/limb/foot/l_foot,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"kF" = (
+/obj/item/limb/foot/r_foot,
+/obj/structure/surface/table{
+	dir = 8;
+	flipped = 1
+	},
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"kJ" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"kM" = (
+/obj/structure/machinery/vending/cola,
+/turf/open/floor/whiteblue/southwest,
+/area/lv624/lazarus/main_hall)
+"kT" = (
+/obj/item/limb/hand/r_hand,
+/obj/structure/surface/table{
+	dir = 4;
+	flipped = 1
+	},
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"lu" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/frame/table,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"lH" = (
+/obj/item/ammo_magazine/smg/mp27,
+/obj/item/ammo_magazine/smg/mp27,
+/obj/item/ammo_magazine/smg/mp27,
+/turf/open/floor/wall_thermite,
+/area/lv624/lazarus/main_hall)
+"lI" = (
+/obj/item/reagent_container/glass/bucket/mopbucket,
+/obj/item/tool/mop,
+/obj/item/tool/mop,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"lO" = (
+/obj/structure/surface/table,
+/turf/open/floor/whitegreencorner/west,
+/area/lv624/lazarus/main_hall)
+"mx" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"mI" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/whitegreen,
+/area/lv624/lazarus/main_hall)
+"no" = (
+/obj/item/limb/foot/r_foot,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"nM" = (
+/obj/item/stack/sheet/metal,
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/floor/platingdmg3,
+/area/lv624/lazarus/main_hall)
+"nP" = (
+/turf/open/floor/whiteyellowcorner/west,
+/area/lv624/lazarus/main_hall)
+"oh" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/item/frame/table,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"oj" = (
+/obj/item/stack/barbed_wire,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"os" = (
+/turf/open/floor/whiteyellow/west,
+/area/lv624/lazarus/main_hall)
+"oC" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/cult,
+/area/lv624/lazarus/canteen)
+"pC" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"pY" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
+	name = "\improper Nexus Dome Canteen"
+	},
+/turf/open/floor/barber/west,
+/area/lv624/lazarus/kitchen)
+"qo" = (
 /obj/item/trash/raisins,
 /obj/structure/barricade/wooden{
 	dir = 8
 	},
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"bV" = (
+"qs" = (
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"ra" = (
+/obj/item/weapon/gun/smg/mp27,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"rz" = (
+/obj/structure/barricade/wooden{
+	dir = 1
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"rS" = (
+/obj/effect/landmark/corpsespawner/chef,
+/obj/structure/surface/table{
+	dir = 4;
+	flipped = 1
+	},
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"sB" = (
+/obj/item/trash/chips,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"sH" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"sJ" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/weapon/gun/pistol/highpower,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/platingdmg3,
+/area/lv624/lazarus/main_hall)
+"sM" = (
+/obj/structure/surface/table,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"sZ" = (
+/obj/structure/flora/pottedplant,
+/obj/structure/machinery/light/spot{
+	dir = 1
+	},
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"tt" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/obj/effect/decal/cleanable/blood/splatter,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "whitegreen"
-	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"bW" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
+"ub" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/obj/structure/barricade/wooden,
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "damaged5"
-	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"bX" = (
-/obj/effect/landmark/good_item,
+"uI" = (
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
+"ve" = (
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/surface/table{
+	flipped = 1
+	},
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"vH" = (
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"vS" = (
 /obj/item/ammo_casing,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/whiteyellow/east,
 /area/lv624/lazarus/main_hall)
-"zt" = (
-/turf/open/floor{
-	icon_state = "white"
-	},
+"vZ" = (
+/obj/item/weapon/gun/smg/mp27,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged3,
 /area/lv624/lazarus/main_hall)
-"zv" = (
-/obj/item/trash/cheesie,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"BB" = (
-/obj/effect/decal/cleanable/vomit,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Cw" = (
-/turf/open/floor{
-	icon_state = "whitegreencorner"
-	},
-/area/lv624/lazarus/main_hall)
-"Cy" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitegreencorner"
-	},
-/area/lv624/lazarus/main_hall)
-"DY" = (
-/turf/closed/wall,
-/area/lv624/lazarus/quart)
-"Ft" = (
-/obj/structure/pipes/standard/simple/hidden/cyan,
-/turf/open/floor/grass,
-/area/lv624/lazarus/main_hall)
-"Fu" = (
+"xr" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	density = 0;
 	icon_state = "door_open";
 	name = "\improper Nexus Cargo Storage"
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/whiteyellowfull/east,
 /area/lv624/lazarus/quart)
+"xC" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"yh" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/whiteblue/southeast,
+/area/lv624/lazarus/main_hall)
+"yT" = (
+/obj/structure/machinery/vending/snack,
+/obj/item/stack/sheet/metal{
+	amount = 30;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/whiteblue/northeast,
+/area/lv624/lazarus/main_hall)
+"za" = (
+/obj/item/weapon/twohanded/fireaxe,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"zd" = (
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"zh" = (
+/obj/structure/barricade/wooden,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowcorner/east,
+/area/lv624/lazarus/main_hall)
+"zH" = (
+/obj/item/weapon/gun/smg/mp27,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
+"An" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"BM" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"Cn" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"Dc" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/effect/landmark/xeno_hive_spawn,
+/obj/effect/landmark/ert_spawns/groundside_xeno,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"DY" = (
+/turf/closed/wall,
+/area/lv624/lazarus/quart)
+"DZ" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"EA" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_magazine/smg/mp27,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"EJ" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/surface/table{
+	dir = 4;
+	flipped = 1
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"EN" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"EX" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
+"Fn" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"Fp" = (
+/obj/effect/landmark/good_item,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"Ft" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/grass,
+/area/lv624/lazarus/main_hall)
 "Fz" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/lv624/lazarus/chapel)
+"FH" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
 "FT" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/grass,
 /area/lv624/lazarus/main_hall)
+"Ge" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
 "Gs" = (
 /turf/closed/wall,
 /area/lv624/lazarus/chapel)
-"He" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "whiteblue"
+"Hh" = (
+/obj/structure/barricade/wooden{
+	dir = 8
 	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"Hf" = (
+"Hn" = (
+/obj/structure/barricade/metal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"Hx" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"HC" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/whiteyellowfull/east,
+/area/lv624/lazarus/main_hall)
+"HQ" = (
+/obj/item/stack/sheet/wood,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"HV" = (
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"Io" = (
 /obj/structure/flora/pottedplant,
 /obj/structure/machinery/light/spot{
 	dir = 1
 	},
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"HH" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Nexus Dome Chapel"
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
+"IU" = (
+/turf/open/floor/white,
 /area/lv624/lazarus/chapel)
-"HI" = (
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/chapel)
-"HJ" = (
-/obj/structure/flora/pottedplant,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Ie" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Ii" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Il" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Ir" = (
-/obj/structure/machinery/atm{
-	name = "Automatic Teller Machine";
-	pixel_y = 30
-	},
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"IY" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whiteyellowcorner"
-	},
-/area/lv624/lazarus/main_hall)
-"Jf" = (
+"Jw" = (
+/obj/item/limb/arm/l_arm,
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
 /area/lv624/lazarus/main_hall)
-"JH" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whiteyellow"
-	},
+"Jz" = (
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
 /area/lv624/lazarus/main_hall)
-"JK" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "whiteyellowcorner"
+"JI" = (
+/obj/effect/decal/cleanable/vomit,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"JM" = (
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"Kj" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"Kp" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/frame/table,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"KG" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/barricade/wooden{
+	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "KQ" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/lv624/lazarus/security)
+"Li" = (
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "Ll" = (
 /turf/closed/wall/r_wall,
 /area/lv624/lazarus/security)
-"Ln" = (
-/obj/item/reagent_container/glass/bucket/mopbucket,
-/obj/item/tool/mop,
-/obj/item/tool/mop,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
 "Lp" = (
 /turf/closed/wall,
 /area/lv624/lazarus/canteen)
-"Lq" = (
-/obj/structure/window/framed/colony/reinforced,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/canteen)
-"Me" = (
-/obj/structure/machinery/vending/cola,
-/turf/open/floor{
-	dir = 10;
-	icon_state = "whiteblue"
-	},
-/area/lv624/lazarus/main_hall)
-"Mf" = (
-/obj/structure/flora/pottedplant,
-/obj/structure/machinery/light/spot,
-/turf/open/floor{
-	icon_state = "white"
-	},
-/area/lv624/lazarus/main_hall)
-"Mi" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/lv624/lazarus/main_hall)
 "Nk" = (
 /turf/closed/wall,
 /area/lv624/lazarus/kitchen)
@@ -1039,12 +649,11 @@
 	},
 /turf/open/floor,
 /area/lv624/lazarus/security)
-"NU" = (
-/obj/structure/window/framed/colony/reinforced,
-/turf/open/floor{
-	icon_state = "cult"
-	},
-/area/lv624/lazarus/kitchen)
+"NX" = (
+/obj/structure/flora/pottedplant,
+/obj/structure/machinery/light/spot,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "OK" = (
 /turf/template_noop,
 /area/template_noop)
@@ -1053,27 +662,161 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/grass,
 /area/lv624/lazarus/main_hall)
-"ON" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper Nexus Dome Canteen"
+"OR" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
+"PD" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"Qy" = (
+/obj/structure/barricade/metal{
+	dir = 4
 	},
-/turf/open/floor{
-	dir = 8;
-	icon_state = "barber"
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"Qz" = (
+/turf/open/floor/whiteyellowcorner/north,
+/area/lv624/lazarus/main_hall)
+"QG" = (
+/obj/item/stack/barbed_wire,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"QO" = (
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged3,
+/area/lv624/lazarus/main_hall)
+"QS" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/damaged5,
+/area/lv624/lazarus/main_hall)
+"RV" = (
+/obj/effect/landmark/good_item,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"Sn" = (
+/obj/item/stack/barbed_wire,
+/turf/open/floor/damaged2,
+/area/lv624/lazarus/main_hall)
+"SF" = (
+/obj/structure/machinery/atm{
+	name = "Automatic Teller Machine";
+	pixel_y = 30
 	},
-/area/lv624/lazarus/kitchen)
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"SN" = (
+/obj/item/trash/cheesie,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"SS" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched2,
+/area/lv624/lazarus/main_hall)
+"Tc" = (
+/obj/item/frame/table,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/platingdmg3,
+/area/lv624/lazarus/main_hall)
+"Td" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/platingdmg3,
+/area/lv624/lazarus/main_hall)
+"Th" = (
+/obj/effect/decal/cleanable/blood{
+	pixel_y = 12
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/item/limb/hand/l_hand,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/floorscorched1,
+/area/lv624/lazarus/main_hall)
+"Ue" = (
+/turf/open/floor/platingdmg3,
+/area/lv624/lazarus/main_hall)
+"Vr" = (
+/turf/open/floor/damaged4,
+/area/lv624/lazarus/main_hall)
+"Wg" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"Ww" = (
+/turf/open/floor/wall_thermite,
+/area/lv624/lazarus/main_hall)
+"WF" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"XF" = (
+/obj/item/frame/table,
+/obj/item/ammo_magazine/smg/mp27,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"XJ" = (
+/obj/effect/landmark/good_item,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"XQ" = (
+/obj/structure/surface/table{
+	dir = 4;
+	flipped = 1
+	},
+/obj/effect/landmark/crap_item,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"YO" = (
+/turf/open/floor/whitegreencorner,
+/area/lv624/lazarus/main_hall)
+"Zb" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/whitegreencorner,
+/area/lv624/lazarus/main_hall)
+"ZE" = (
+/obj/structure/flora/pottedplant,
+/obj/structure/barricade/wooden,
+/obj/item/ammo_casing,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 
 (1,1,1) = {"
 OK
 OK
 OK
 OK
-HH
-zt
-IY
-JH
-JK
-ae
+ju
+zd
+nP
+os
+Qz
+Vr
 KQ
 OK
 OK
@@ -1085,12 +828,12 @@ OK
 OK
 OK
 OK
-HI
-zt
-zt
-aa
-ac
-zt
+IU
+zd
+zd
+vH
+JM
+zd
 KQ
 OK
 OK
@@ -1103,11 +846,11 @@ OK
 Gs
 Gs
 Gs
-aV
-aM
-bb
-aK
-aV
+sM
+ef
+Tc
+Hh
+sM
 Ll
 KQ
 Ll
@@ -1118,15 +861,15 @@ OK
 OK
 OK
 Gs
-He
-HJ
-ac
-aN
-ac
-bq
-aW
-HJ
-Me
+dQ
+Hx
+JM
+Kj
+JM
+DZ
+fz
+Hx
+kM
 KQ
 OK
 OK
@@ -1135,168 +878,168 @@ OK
 Fz
 Fz
 Gs
-Hf
-ar
-aC
-aQ
-av
-ar
-bH
-bO
-Mf
+Io
+QO
+QS
+vZ
+Td
+QO
+zh
+Fp
+NX
 Ll
 NT
 KQ
 "}
 (6,1,1) = {"
-zt
-ae
-ab
-ak
-as
-aE
-aR
+zd
+Vr
+rz
+XF
+Jw
+sB
+no
 bg
-bz
-bI
-bP
-bU
-aW
-zt
-Ie
+HV
+EA
+KG
+qo
+fz
+zd
+gY
 "}
 (7,1,1) = {"
-aa
-ac
-ab
-al
-at
-aF
+vH
+JM
+rz
+xC
+JI
+kF
 aS
-bh
-bA
-bJ
-aP
-bd
-aV
-zt
-bK
+lu
+is
+jk
+Li
+kJ
+sM
+zd
+Ue
 "}
 (8,1,1) = {"
-Cw
-ai
-aj
-am
-av
-aG
-aU
-bi
-bB
+YO
+PD
+HQ
+XJ
+Td
+hC
+BM
+Ge
+dE
 aZ
-av
-al
-bj
-Cw
-Cw
+Td
+xC
+Zb
+YO
+YO
 "}
 (9,1,1) = {"
 FT
 Ft
 ad
-an
-aw
-aH
-aX
+Fn
+Dc
+oh
+EX
 bn
-bC
+Th
 bL
-bQ
-bV
+tt
+mI
 bk
 Ft
 OM
 "}
 (10,1,1) = {"
-Cy
-ae
-af
-ap
-ax
-aI
-aT
-bp
-bD
+if
+Vr
+nM
+za
+Jz
+Kp
+lH
+kA
+sJ
 bM
-bm
-bW
-bl
-bK
-Cy
+qs
+sH
+lO
+Ue
+if
 "}
 (11,1,1) = {"
-zt
-aa
-ab
-aq
-ay
-aJ
+zd
+vH
+rz
+EN
+SS
+kT
 aY
-br
-bE
-bc
-bR
-bX
-aW
-BB
-zt
+EJ
+rS
+ve
+eI
+RV
+fz
+hL
+zd
 "}
 (12,1,1) = {"
-ac
-zt
-ab
-zv
-az
-aP
-bd
-bs
-bx
-bz
-bS
-aP
-aW
-zt
-zt
+JM
+zd
+rz
+SN
+FH
+Li
+kJ
+mx
+Ww
+HV
+Wg
+Li
+fz
+zd
+zd
 "}
 (13,1,1) = {"
-Fu
+xr
 DY
 DY
-ag
-aA
-aO
+sZ
+ub
+kt
 aD
-bt
-bF
-bN
-bT
-Mf
+ra
+OR
+fU
+zH
+NX
 Nk
-NU
-ON
+jp
+pY
 "}
 (14,1,1) = {"
 OK
 OK
 DY
-ah
-aB
-aL
-Jf
-bu
-bG
-bm
-Ln
-Mi
+yT
+ZE
+uI
+HC
+oj
+pC
+qs
+lI
+yh
 Nk
 OK
 OK
@@ -1307,11 +1050,11 @@ OK
 DY
 DY
 DY
-Il
-be
-bv
-bo
-Il
+Cn
+QG
+An
+Sn
+Cn
 Lp
 Lp
 Lp
@@ -1324,12 +1067,12 @@ OK
 OK
 OK
 DY
-au
-bf
-bw
-ba
-au
-Lq
+XQ
+jz
+Hn
+Qy
+XQ
+oC
 OK
 OK
 OK
@@ -1341,12 +1084,12 @@ OK
 OK
 OK
 DY
-Ir
-ac
-by
-aa
-Ii
-Lq
+SF
+JM
+vS
+vH
+WF
+oC
 OK
 OK
 OK

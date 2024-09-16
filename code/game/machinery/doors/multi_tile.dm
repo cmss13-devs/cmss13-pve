@@ -243,6 +243,7 @@
 	var/queen_pryable = TRUE
 	var/obj/docking_port/mobile/marine_dropship/linked_dropship
 
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ex_act(severity)
 	return
 
@@ -261,14 +262,14 @@
 		var/datum/door_controller/single/control = linked_dropship.door_control.door_controllers[direction]
 		if (control.status != SHUTTLE_DOOR_BROKEN)
 			return ..()
-		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED) && !skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED))
 			to_chat(user, SPAN_WARNING("You don't seem to understand how to restore a remote connection to [src]."))
 			return
 		if(user.action_busy)
 			return
 
 		to_chat(user, SPAN_WARNING("You begin to restore the remote connection to [src]."))
-		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
+		if(!do_after(user, (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED) ? 5 SECONDS : 8 SECONDS), INTERRUPT_ALL, BUSY_ICON_BUILD))
 			to_chat(user, SPAN_WARNING("You fail to restore a remote connection to [src]."))
 			return
 		unlock(TRUE)
@@ -317,7 +318,6 @@
 		if(control)
 			control.status = SHUTTLE_DOOR_BROKEN
 		unlock(TRUE)
-		open(1)
 		open(TRUE)
 		lock(TRUE)
 
@@ -329,6 +329,10 @@
 	name = "\improper Normandy cargo door"
 	icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3
+	name = "\improper Saipan cargo door"
+	icon = 'icons/obj/structures/doors/dropship3_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside
 	width = 2
 
@@ -336,12 +340,20 @@
 	name = "\improper Alamo crew hatch"
 	icon = 'icons/obj/structures/doors/dropship1_side2.dmi'
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
-	name = "\improper Midway crew hatch"
-
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2
 	name = "\improper Normandy crew hatch"
 	icon = 'icons/obj/structures/doors/dropship2_side2.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds3
+	name = "\improper Saipan crew hatch"
+	icon = 'icons/obj/structures/doors/dropship3_side2.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4
+	name = "\improper Midway cargo door"
+	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
+	name = "\improper Midway crew hatch"
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
 	name = "\improper Cyclone crew hatch"
@@ -633,4 +645,3 @@
 	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
 	opacity = FALSE
 	glass = TRUE
-

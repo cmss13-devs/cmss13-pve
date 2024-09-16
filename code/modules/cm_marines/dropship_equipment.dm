@@ -281,13 +281,15 @@
 			step(M, get_dir(src,deployed_turret))
 
 	deployed_turret.start_processing()
-	deployed_turret.setup_target_acquisition()
+	deployed_turret.set_range()
 
 	deployed_turret.linked_cam = new(deployed_turret.loc, "[capitalize_first_letters(ship_base.name)] [capitalize_first_letters(name)]")
 	if (linked_shuttle.id == DROPSHIP_ALAMO)
 		deployed_turret.linked_cam.network = list(CAMERA_NET_ALAMO)
 	else if (linked_shuttle.id == DROPSHIP_NORMANDY)
 		deployed_turret.linked_cam.network = list(CAMERA_NET_NORMANDY)
+	else if (linked_shuttle.id == DROPSHIP_SAIPAN)
+		deployed_turret.linked_cam.network = list(CAMERA_NET_SAIPAN)
 
 
 /obj/structure/dropship_equipment/sentry_holder/proc/undeploy_sentry()
@@ -299,7 +301,7 @@
 	deployed_turret.forceMove(src)
 	deployed_turret.turned_on = FALSE
 	deployed_turret.stop_processing()
-	deployed_turret.unsetup_target_acquisition()
+	deployed_turret.unset_range()
 	icon_state = "sentry_system_installed"
 	QDEL_NULL(deployed_turret.linked_cam)
 
@@ -721,9 +723,7 @@
 
 	ammo_accuracy_range /= 2 //buff for basically pointblanking the ground
 
-	var/list/possible_turfs = list()
-	for(var/turf/TU in range(ammo_accuracy_range, target_turf))
-		possible_turfs += TU
+	var/list/possible_turfs = RANGE_TURFS(ammo_accuracy_range, target_turf)
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user
@@ -861,7 +861,7 @@
 
 /obj/structure/dropship_equipment/medevac_system/proc/get_targets()
 	. = list()
-	for(var/obj/structure/bed/medevac_stretcher/MS in activated_medevac_stretchers)
+	for(var/obj/structure/bed/medevac_stretcher/MS in GLOB.activated_medevac_stretchers)
 		var/area/AR = get_area(MS)
 		var/evaccee_name
 		var/evaccee_triagecard_color
@@ -1202,7 +1202,7 @@
 
 /obj/structure/dropship_equipment/fulton_system/proc/get_targets()
 	. = list()
-	for(var/obj/item/stack/fulton/F in deployed_fultons)
+	for(var/obj/item/stack/fulton/F in GLOB.deployed_fultons)
 		var/recovery_object
 		if(F.attached_atom)
 			recovery_object = F.attached_atom.name
@@ -1316,7 +1316,7 @@
 	color = "#17d17a"
 
 /obj/structure/dropship_equipment/paradrop_system/attack_hand(mob/living/carbon/human/user)
-	var/datum/cas_iff_group/cas_group = cas_groups[FACTION_MARINE]
+	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[FACTION_MARINE]
 	var/list/targets = cas_group.cas_signals
 
 	if(!LAZYLEN(targets))
@@ -1434,9 +1434,7 @@
 
 	ammo_accuracy_range /= 2 //buff for basically pointblanking the ground
 
-	var/list/possible_turfs = list()
-	for(var/turf/TU in range(ammo_accuracy_range, target_turf))
-		possible_turfs += TU
+	var/list/possible_turfs = RANGE_TURFS(ammo_accuracy_range, target_turf)
 	var/turf/impact = pick(possible_turfs)
 	sleep(3)
 	SA.source_mob = user

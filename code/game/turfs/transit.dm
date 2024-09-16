@@ -138,6 +138,12 @@
 	clear_active_explosives()
 	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_SOURCE_DROPSHIP_INTERACTION)
 	ADD_TRAIT(src, TRAIT_UNDENSE, TRAIT_SOURCE_DROPSHIP_INTERACTION)
+	ADD_TRAIT(src, TRAIT_NO_STRAY, TRAIT_SOURCE_DROPSHIP_INTERACTION)
+	RegisterSignal(src, COMSIG_MOVABLE_FORCEMOVE_PRE_CROSSED, PROC_REF(cancel_cross))
+	RegisterSignal(src, list(
+		COMSIG_LIVING_FLAMER_FLAMED,
+		COMSIG_LIVING_PREIGNITION
+	), PROC_REF(cancel_fire))
 	var/image/cables = image('icons/obj/structures/droppod_32x64.dmi', src, "chute_cables_static")
 	overlays += cables
 	var/image/chute = image('icons/obj/structures/droppod_64x64.dmi', src, "chute_static")
@@ -163,8 +169,18 @@
 		return
 	REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_SOURCE_DROPSHIP_INTERACTION)
 	REMOVE_TRAIT(src, TRAIT_UNDENSE, TRAIT_SOURCE_DROPSHIP_INTERACTION)
+	REMOVE_TRAIT(src, TRAIT_NO_STRAY, TRAIT_SOURCE_DROPSHIP_INTERACTION)
+	UnregisterSignal(src, list(
+		COMSIG_MOVABLE_FORCEMOVE_PRE_CROSSED,
+		COMSIG_LIVING_FLAMER_FLAMED,
+		COMSIG_LIVING_PREIGNITION
+	))
 	overlays -= cables
 	overlays -= chute
+	for(var/atom/movable/atom in loc)
+		if(atom == src)
+			continue
+		atom.Cross(src)
 
 /atom/movable/proc/clear_active_explosives()
 	for(var/obj/item/explosive/explosive in contents)
@@ -232,6 +248,13 @@
 		death(last_damage_data)
 	status_flags |= PERMANENTLY_DEAD
 
+/atom/movable/proc/cancel_cross()
+	SIGNAL_HANDLER
+	return COMPONENT_IGNORE_CROSS
+
+/atom/movable/proc/cancel_fire()
+	SIGNAL_HANDLER
+	return COMPONENT_NO_BURN
 
 /turf/open/space/transit/dropship/alamo
 	shuttle_tag = DROPSHIP_ALAMO
@@ -241,12 +264,32 @@
 	shuttle_tag = DROPSHIP_NORMANDY
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/saipan
+	shuttle_tag = DROPSHIP_SAIPAN
+	dir = SOUTH
+
 /turf/open/space/transit/dropship/midway
 	shuttle_tag = DROPSHIP_MIDWAY
 	dir = SOUTH
 
 /turf/open/space/transit/dropship/cyclone
 	shuttle_tag = DROPSHIP_CYCLONE
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/tornado
+	shuttle_tag = DROPSHIP_TORNADO
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/typhoon
+	shuttle_tag = DROPSHIP_TYPHOON
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/tripoli
+	shuttle_tag = DROPSHIP_TRIPOLI
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/upp
+	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
 /turf/open/space/transit/south
