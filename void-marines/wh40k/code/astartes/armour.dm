@@ -254,14 +254,14 @@
 /obj/item/clothing/suit/armor/astartes/apothecary
 	name = "Astartes Mark VII Power Armour"
 	desc = "The Holy armour of the Emperor's chosens."
-	icon_state = "apohelm"
-	item_state = "apohelm"
+	icon_state = "ultrapoth"
+	item_state = "ultrapoth"
 
 /obj/item/storage/backpack/satchel/astartes/apothecary
 	name = "Astartes Mark VII Medipack"
 	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been upgraded with additional spotlight and surgical arms to serve medical purposes."
-	icon_state = "salpack"
-	item_state = "salpack"
+	icon_state = "apohelm"
+	item_state = "apohelm"
 
 /obj/item/clothing/suit/armor/astartes/apothecary/bloodraven
 	name = "Astartes Mark VII Power Armour"
