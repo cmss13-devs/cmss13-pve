@@ -1079,7 +1079,7 @@
 	access = null
 	idtype = /obj/item/card/id/lanyard
 
-/datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/prisoner/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
