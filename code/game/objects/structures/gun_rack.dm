@@ -8,6 +8,7 @@
 	var/populate_type
 	var/max_stored = 5
 	var/initial_stored = 5
+	var/locked = FALSE
 
 /obj/structure/gun_rack/Initialize()
 	. = ..()
@@ -23,12 +24,19 @@
 	update_icon()
 
 /obj/structure/gun_rack/attackby(obj/item/O, mob/user)
+	if(locked)
+		to_chat(user, SPAN_WARNING("[src] is locked down!"))
+		return
+
 	if(istype(O, allowed_type) && contents.len < max_stored)
 		user.drop_inv_item_to_loc(O, src)
 		contents += O
 		update_icon()
 
 /obj/structure/gun_rack/attack_hand(mob/living/user)
+	if(locked)
+		to_chat(user, SPAN_WARNING("[src] is locked down!"))
+		return
 	if(!contents.len)
 		to_chat(user, SPAN_WARNING("[src] is empty."))
 		return
@@ -38,6 +46,9 @@
 	user.put_in_hands(stored_obj)
 	to_chat(user, SPAN_NOTICE("You grab [stored_obj] from [src]."))
 	playsound(src, "gunequip", 25, TRUE)
+
+	SEND_SIGNAL(src, COMSIG_GUNRACK_ITEM_TAKEN)
+
 	update_icon()
 
 /obj/structure/gun_rack/update_icon()

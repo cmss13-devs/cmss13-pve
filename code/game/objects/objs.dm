@@ -323,6 +323,8 @@
 		src.buckled_mob = target
 		src.add_fingerprint(user)
 		afterbuckle(target)
+		SEND_SIGNAL(user, COMSIG_MOB_BUCKLED, src)
+		//SEND_SIGNAL(src, COMSIG_ON_MOB_BUCKLED)
 		return TRUE
 
 /obj/proc/send_buckling_message(mob/M, mob/user)

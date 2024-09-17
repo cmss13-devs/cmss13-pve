@@ -25,6 +25,23 @@
 		list("W-Y Flask", 5, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
 
+/obj/structure/machinery/cm_vending/sorted/marine_food/empty/populate_product_list(scale)
+	listed_products = list(
+		list("PREPARED MEALS", -1, null, null),
+		list("USCM Prepared Meal (Chicken)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal5, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Cornbread)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal1, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pasta)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal3, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pizza)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal4, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pork)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal2, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Tofu)", 0, /obj/item/reagent_container/food/snacks/mre_pack/meal6, VENDOR_ITEM_REGULAR),
+		list("USCM Protein Bar", 0, /obj/item/reagent_container/food/snacks/protein_pack, VENDOR_ITEM_REGULAR),
+		list("FLASKS", -1, null, null),
+		list("Canteen", 0, /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+		list("Metal Flask", 0, /obj/item/reagent_container/food/drinks/flask, VENDOR_ITEM_REGULAR),
+		list("USCM Flask", 0, /obj/item/reagent_container/food/drinks/flask/marine, VENDOR_ITEM_REGULAR),
+		list("W-Y Flask", 0, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
+	)
+
 /obj/structure/machinery/cm_vending/sorted/marine_food/tutorial
 	hackable = FALSE
 	wrenchable = FALSE
@@ -46,6 +63,29 @@
 		list("USCM Flask", 0, /obj/item/reagent_container/food/drinks/flask/marine, VENDOR_ITEM_REGULAR),
 		list("W-Y Flask", 0, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/tutorial/pve
+	req_access = list()
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/tutorial/pve/populate_product_list(scale)
+	listed_products = list(
+		list("PREPARED MEALS", -1, null, null),
+		list("USCM Prepared Meal (Chicken)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal5, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Cornbread)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal1, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pasta)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal3, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pizza)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal4, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Pork)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal2, VENDOR_ITEM_REGULAR),
+		list("USCM Prepared Meal (Tofu)", 1, /obj/item/reagent_container/food/snacks/mre_pack/meal6, VENDOR_ITEM_REGULAR),
+		list("USCM Protein Bar", 5, /obj/item/reagent_container/food/snacks/protein_pack, VENDOR_ITEM_RECOMMENDED),
+		list("FLASKS", -1, null, null),
+		list("Canteen", 0, /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+		list("Metal Flask", 0, /obj/item/reagent_container/food/drinks/flask, VENDOR_ITEM_REGULAR),
+		list("USCM Flask", 0, /obj/item/reagent_container/food/drinks/flask/marine, VENDOR_ITEM_REGULAR),
+		list("W-Y Flask", 0, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
+	)
+
+
+
 //------------BOOZE-O-MAT VENDOR---------------
 
 /obj/structure/machinery/cm_vending/sorted/boozeomat

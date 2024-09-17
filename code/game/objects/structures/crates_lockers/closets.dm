@@ -105,6 +105,7 @@
 	update_icon()
 	playsound(src.loc, open_sound, 15, 1)
 	density = FALSE
+	SEND_SIGNAL(src, COMSIG_CLOSET_OPEN)
 	return TRUE
 
 /obj/structure/closet/proc/close()
