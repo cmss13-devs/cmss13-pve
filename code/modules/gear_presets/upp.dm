@@ -1070,3 +1070,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
+/datum/equipment_preset/upp/prisoner
+	name = "UPP Prisoner"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Inmate"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = null
+	idtype = /obj/item/card/id/lanyard
+
+/datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/workwear(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
