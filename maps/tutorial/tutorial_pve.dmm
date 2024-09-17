@@ -1541,7 +1541,7 @@
 /area/misc/tutorial)
 "qz" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = list());
+	req_one_access_txt = list();
 	req_access = list(998)
 	},
 /turf/open/floor/almayer,
