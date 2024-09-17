@@ -1022,7 +1022,7 @@
 	assignment = "Operations Technician"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
-	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_COMMAND)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
