@@ -5,10 +5,6 @@
 	idtype = /obj/item/card/id/dogtag
 	origin_override = ORIGIN_UPP
 
-/datum/equipment_preset/upp/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_UPP_ALL) //ACCESS_COME_BACK_TO_ME
-
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
 	var/datum/preferences/A = new()
@@ -52,10 +48,10 @@
 	new_human.g_eyes = colors[eye_color][2]
 	new_human.b_eyes = colors[eye_color][3]
 	if(new_human.gender == MALE)
-		new_human.h_style = pick("Undercut", "Partly Shaved", "Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "Medium Fade", "High Fade")
+		new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
 		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
 	else
-		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top","Pixie Cut Left", "Pixie Cut Right", "Bun")
+		new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 
 //*****************************************************************************************************/
 
@@ -67,6 +63,7 @@
 	role_comm_title = "PTG-RFN"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/pfc
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 
@@ -146,15 +143,12 @@
 /datum/equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	access = list(ACCESS_UPP_GENERAL)
 	assignment = JOB_SQUAD_MARINE
+	role_comm_title = "RFN"
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
-	role_comm_title = "RFN"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
-	faction_group = list(FACTION_UPP)
-	faction = FACTION_UPP
 	skills = /datum/skills/pfc
+	access = list(ACCESS_UPP_GENERAL)
 
 /datum/equipment_preset/upp/rifleman/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -191,21 +185,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
-
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/sanitar
 	name = "UPP Squad Sanitar (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = "Sanitar"
+	role_comm_title ="SNITR"
 	rank = JOB_SQUAD_MEDIC_UPP
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title ="SNITR"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
-	faction_group = list(FACTION_UPP)
-	faction = FACTION_UPP
 	skills = /datum/skills/combat_medic
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/sanitar/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -252,19 +244,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = "Machinegunner"
+	role_comm_title = "MG"
 	rank = JOB_SQUAD_SMARTGUN_UPP
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "MG"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
-	faction_group = list(FACTION_UPP)
-	faction = FACTION_UPP
+	skills = /datum/skills/smartgunner
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
 /datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
 
@@ -283,9 +275,6 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/green, WEAR_FACE)
-
 	//body
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_JACKET)
@@ -295,13 +284,14 @@
 	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 //*****************************************************************************************************/
 /datum/equipment_preset/upp/squadlead
 	name = "UPP Squad Sergeant (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	faction_group = list(FACTION_UPP)
@@ -341,15 +331,13 @@
 /datum/equipment_preset/upp/platoonlead
 	name = "UPP Platoon Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	assignment = JOB_SQUAD_LEADER
+	role_comm_title = "PLTSGT"
 	rank = JOB_SQUAD_LEADER
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_1)
-	role_comm_title = "PLTSGT"
-	minimum_age = 25
 	skills = /datum/skills/SL
-
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 	minimap_icon = "leader"
 
 /datum/equipment_preset/upp/platoonlead/load_gear(mob/living/carbon/human/new_human)
@@ -385,12 +373,12 @@
 /datum/equipment_preset/upp/military_police
 	name = "UPP Military Police"
 	flags = EQUIPMENT_PRESET_EXTRA
-
-	skills = /datum/skills/upp/military_police
 	assignment = JOB_UPP_POLICE
-	rank = JOB_UPP_POLICE
 	role_comm_title = "MP"
+	rank = JOB_UPP_POLICE
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
+	skills = /datum/skills/upp/military_police
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/military_police/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -417,9 +405,10 @@
 
 	skills = /datum/skills/upp/officer
 	assignment = JOB_UPP_LT_OFFICER
-	rank = JOB_UPP_LT_OFFICER
 	role_comm_title = "LT"
+	rank = JOB_UPP_LT_OFFICER
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -445,42 +434,39 @@
 /datum/equipment_preset/upp/officer/senior
 	name = "UPP Senior Lieutenant"
 	assignment = JOB_UPP_SRLT_OFFICER
-	rank = JOB_UPP_SRLT_OFFICER
 	role_comm_title = "SRLT"
+	rank = JOB_UPP_SRLT_OFFICER
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/officer/kapitan
 	name = "UPP Kapitan"
 	assignment = JOB_UPP_KPT_OFFICER
-	rank = JOB_UPP_KPT_OFFICER
 	role_comm_title = "KPT"
+	rank = JOB_UPP_KPT_OFFICER
 	paygrades = list(PAY_SHORT_UO3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/kapitan
 
 /datum/equipment_preset/upp/officer/major
 	name = "UPP Major"
 	assignment = JOB_UPP_MAY_OFFICER
-	rank = JOB_UPP_MAY_OFFICER
 	role_comm_title = "MAY"
+	rank = JOB_UPP_MAY_OFFICER
 	paygrades = list(PAY_SHORT_UO4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/commander
 
 /datum/equipment_preset/upp/officer/lt_kolonel
 	name = "UPP Leytenant Kolonel"
 	assignment = JOB_UPP_LTKOL_OFFICER
-	rank = JOB_UPP_LTKOL_OFFICER
 	role_comm_title = "LTKOL"
+	rank = JOB_UPP_LTKOL_OFFICER
 	paygrades = list(PAY_SHORT_UO5 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/upp/commander
 
 /datum/equipment_preset/upp/officer/kolonel
 	name = "UPP Kolonel"
 	assignment = JOB_UPP_KOL_OFFICER
-	rank = JOB_UPP_KOL_OFFICER
 	role_comm_title = "KOL"
+	rank = JOB_UPP_KOL_OFFICER
 	paygrades = list(PAY_SHORT_UO6 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/upp/commander
-
 
 //*****************************************************************************************************/
 
@@ -677,13 +663,12 @@
 /datum/equipment_preset/upp/tank
 	name = "UPP Vehicle Crewman"
 	flags = EQUIPMENT_PRESET_EXTRA
-
 	assignment = "Crewman"
+	role_comm_title = "CRMN"
 	rank = JOB_UPP_CREWMAN
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_1)
-	role_comm_title = "CRMN"
-	minimum_age = 18
 	skills = /datum/skills/tank_crew
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_ENGINEERING)
 
 /datum/equipment_preset/upp/tank/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
@@ -704,15 +689,15 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/upp/doctor
+/datum/equipment_preset/upp/mildoctor
 	name = "UPP Military Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
-
-	skills = /datum/skills/upp/combat_medic
 	assignment = "Leytenant Doktor"
-	rank = JOB_UPP_LT_DOKTOR
 	role_comm_title = "LTDOK"
+	rank = JOB_UPP_LT_DOKTOR
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/doctor
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_RESEARCH, ACCESS_CLF_LEADERSHIP, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/doctor/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -749,18 +734,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/foxtrot, WEAR_FACE)
-
-
 /datum/equipment_preset/upp/colonist
 	name = "UPP Civilian"
-	idtype = /obj/item/card/id/data
 	assignment = "Grazhdanin"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC)
+	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/colonist/load_gear(mob/living/carbon/human/new_human)
 
@@ -805,7 +786,7 @@
 		if(3)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate(new_human), WEAR_JACKET)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/windbreaker_gray(new_human), WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow(new_human), WEAR_JACKET)
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown(new_human), WEAR_JACKET)
 		if(6)
@@ -840,12 +821,12 @@
 
 /datum/equipment_preset/upp/researcher
 	name = "UPP Civilian Researcher"
-	idtype = /obj/item/card/id/data
 	assignment = "Ministry of Education Research Associate"
 	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/researcher
-	access = list(ACCESS_CIVILIAN_RESEARCH)
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH)
+	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/researcher/load_gear(mob/living/carbon/human/new_human)
 
@@ -901,14 +882,171 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
 
+/datum/equipment_preset/upp/doctor
+
+	name = "UPP Civilian Doctor"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Ministry of Health Medical Doctor"
+	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
+	idtype = /obj/item/card/id
+
+/datum/equipment_preset/upp/doctor/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	var/random_civilian_satchel= rand(1,3)
+	switch(random_civilian_satchel)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+
+	var/random_professional_uniform= rand(1,3)
+	switch(random_professional_uniform)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blue(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
+
+	var/random_tie= rand(1,6)
+	switch(random_tie)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/green(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/purple(new_human), WEAR_ACCESSORY)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
+
+	var/random_professional_shoe = rand(1,2)
+	switch(random_professional_shoe)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+
+/datum/equipment_preset/upp/admin
+	name = "UPP Civilian Administrator"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Administrator"
+	role_comm_title = "ADMIN"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id
+
+/datum/equipment_preset/upp/admin/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+
+/datum/equipment_preset/upp/cargo
+	name = "UPP Civilian Logistics Worker"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Logistical Technician"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS)
+	idtype = /obj/item/card/id
+
+/datum/equipment_preset/upp/cargo/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+
+	var/random_boilersuit= rand(1,3)
+	switch(random_boilersuit)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey(new_human), WEAR_BODY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(new_human), WEAR_JACKET)
+
+	var/random_worker_shoe = rand(1,5)
+	switch(random_worker_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/upp/engineer
+	name = "UPP Civilian Engineer"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Maintenance Technician"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/MT
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_ENGINEERING)
+	idtype = /obj/item/card/id
+
+/datum/equipment_preset/upp/engineer/load_gear(mob/living/carbon/human/new_human)
+
+	var/random_boilersuit= rand(1,3)
+	switch(random_boilersuit)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey(new_human), WEAR_BODY)
+
+	var/random_worker_shoe = rand(1,5)
+	switch(random_worker_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/upp/operations
+	name = "UPP Civilian Operations Technician"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Operations Technician"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id
+
+/datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/workwear(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+
 /datum/equipment_preset/upp/police
 	name = "UPP People's Armed Police Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/cmb
 	assignment = "People's Armed Police Militsioner"
-	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MILTSY"
-	access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_GENERAL)
+	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/cmb
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/police/load_gear(mob/living/carbon/human/new_human)
