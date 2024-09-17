@@ -879,9 +879,6 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
-
 /datum/equipment_preset/upp/doctor
 
 	name = "UPP Civilian Doctor"
@@ -935,9 +932,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
 
 /datum/equipment_preset/upp/admin
 	name = "UPP Civilian Administrator"
@@ -1076,7 +1070,7 @@
 	assignment = "Inmate"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
-	access = null
+	access = list(null)
 	idtype = /obj/item/card/id/lanyard
 
 /datum/equipment_preset/upp/prisoner/load_gear(mob/living/carbon/human/new_human)
