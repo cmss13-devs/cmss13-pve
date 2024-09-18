@@ -630,7 +630,14 @@
 	initial_keys = list(/obj/item/device/encryptionkey/mcom/ai)
 	volume = RADIO_VOLUME_CRITICAL
 
-/obj/item/device/radio/headset/almayer/marine
+/obj/item/device/radio/headset/almayer/marine/solardevils
+	name = "marine radio headset"
+	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	icon_state = "generic_headset"
+	item_state = "headset"
+	frequency = ALPHA_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -642,6 +649,16 @@
 		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
 		)
 	frequency = ALPHA_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon
+	name = "USCM SOF headset"
+	desc = "Issued exclusively to Marine Raiders and members of the USCM's Force Reconnaissance."
+	frequency = SOF_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/soc/forecon)
+	volume = RADIO_VOLUME_QUIET
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE
+
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha

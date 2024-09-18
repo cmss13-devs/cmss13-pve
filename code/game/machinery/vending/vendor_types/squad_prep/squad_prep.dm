@@ -105,7 +105,7 @@
 		list("Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Brown Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Marine Black Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine/black, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer, VENDOR_ITEM_REGULAR),
+		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Marine Helmet", floor(scale * 15), /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
@@ -272,7 +272,7 @@
 		list("USCM Uniform", round(scale * 15), /obj/item/clothing/under/marine/standard, VENDOR_ITEM_REGULAR),
 		list("Marine Black Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Brown Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/sof/survivor_forecon, VENDOR_ITEM_REGULAR),
+		list("Marine Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils/forecon, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("M3 Pattern Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
