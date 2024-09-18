@@ -1130,6 +1130,13 @@
 	item_state = "medic"
 	slot = ACCESSORY_SLOT_PAINT
 
+/obj/item/clothing/accessory/paint/uaflag
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
+	icon_state = "uaflag"
+	item_state = "uaflag"
+	slot = ACCESSORY_SLOT_PAINT
+
 /obj/item/clothing/accessory/storage/webbing/m3/mag
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."

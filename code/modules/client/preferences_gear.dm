@@ -1203,3 +1203,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M3 Pattern Heart Paint"
 	path = /obj/item/clothing/accessory/paint/heart
 	cost = 0
+
+/datum/gear/misc/uaflag
+	display_name = "M3 Pattern Flag Paint"
+	path = /obj/item/clothing/accessory/paint/uaflag
+	cost = 0
