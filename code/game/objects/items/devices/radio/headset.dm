@@ -515,6 +515,7 @@
 /obj/item/device/radio/headset/almayer/marine/mp_honor
 	name = "marine honor guard radio headset"
 	desc = "This is used by members of the marine honor guard. Channels are as follows: :p - military police, :v - marine command. :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
+	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "sec_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/mmpo)
 	volume = RADIO_VOLUME_RAISED
