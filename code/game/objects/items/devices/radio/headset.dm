@@ -10,6 +10,7 @@
 	subspace_transmission = 1
 	canhear_range = 0 // can't hear headsets from very far away
 
+
 	flags_equip_slot = SLOT_EAR
 	inherent_traits = list(TRAIT_ITEM_EAR_EXCLUSIVE)
 	var/translate_apollo = FALSE
@@ -631,6 +632,14 @@
 /obj/item/device/radio/headset/almayer/marine
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_override = 'icons/mob/humans/onmob/head_1.dmi'
+	icon_state = "uscm_headset"
+	item_state = "uscm_headset"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/head_1.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
+		)
 	frequency = ALPHA_FREQ
 
 //############################## ALPHA ###############################

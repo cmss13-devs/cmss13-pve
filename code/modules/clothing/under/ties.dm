@@ -569,7 +569,7 @@
 		/obj/item/ammo_magazine/rifle,
 	)
 
-/obj/item/storage/internal/accessory/black_vest/m3/shotgun
+/obj/item/storage/internal/accessory/black_vest/m3shotgun
 	can_hold = list(
 		/obj/item/ammo_magazine/handful,
 	)
@@ -589,14 +589,12 @@
 /obj/item/storage/internal/accessory/black_vest
 	storage_slots = 5
 
-/obj/item/storage/internal/accessory/black_vest/m3
-
-/obj/item/storage/internal/accessory/black_vest/m3/generic
+/obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
 	)
 
-/obj/item/storage/internal/accessory/black_vest/m3/m40
+/obj/item/storage/internal/accessory/black_vest/m3grenade
 	storage_slots = 6
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
@@ -1142,7 +1140,7 @@
 	name = "\improper M3 Pattern Shell Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3/shotgun
+	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
 
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
@@ -1161,13 +1159,13 @@
 	name = "\improper M3 Pattern Grenade Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3/m40
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
 /obj/item/clothing/accessory/storage/black_vest/m3
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3/generic
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/black_vest/m3/Initialize(mapload)
