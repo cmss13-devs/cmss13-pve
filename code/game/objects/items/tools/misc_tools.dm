@@ -58,10 +58,10 @@
 	if(isturf(A))
 		to_chat(user, SPAN_WARNING("The label won't stick to that."))
 		return
-	if(istype(A, /obj/item/storage/pill_bottle))		
+	if(istype(A, /obj/item/storage/pill_bottle))
 		var/obj/item/storage/pill_bottle/target_pill_bottle = A
 		target_pill_bottle.choose_color(user)
-	
+
 	if(!label || !length(label))
 		remove_label(A, user)
 		return
@@ -245,7 +245,6 @@
 
 /obj/item/tool/pen/clicky
 	desc = "It's a WY brand extra clicky black ink pen."
-	name = "WY pen"
 	clicky = TRUE
 
 /obj/item/tool/pen/blue
@@ -254,7 +253,6 @@
 
 /obj/item/tool/pen/blue/clicky
 	desc = "It's a WY brand extra clicky blue ink pen."
-	name = "WY blue pen"
 	clicky = TRUE
 
 /obj/item/tool/pen/red
@@ -263,7 +261,6 @@
 
 /obj/item/tool/pen/red/clicky
 	desc = "It's a WY brand extra clicky red ink pen."
-	name = "WY red pen"
 	clicky = TRUE
 
 /obj/item/tool/pen/green
@@ -272,7 +269,6 @@
 
 /obj/item/tool/pen/green/clicky
 	desc = "It's a WY brand extra clicky green ink pen."
-	name = "WY green pen"
 	clicky = TRUE
 
 /obj/item/tool/pen/invisible

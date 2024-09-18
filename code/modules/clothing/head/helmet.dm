@@ -1243,8 +1243,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/uppcap/peaked/police
 	name = "\improper UL3 PaP peaked cap"
-	desc = "Standard issue peaked cap of the People's Police."
+	desc = "Standard issue peaked cap of the People's Armed Police."
 	icon_state = "upp_peaked_police"
+
+/obj/item/clothing/head/uppcap/peaked/mss
+	name = "\improper UL3 MSS peaked cap"
+	desc = "Standard issue peaked cap of the Ministry of Space Security."
+	icon_state = "upp_peaked_mss"
 
 /obj/item/clothing/head/uppcap/ushanka
 	name = "\improper UL2 ushanka"

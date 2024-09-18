@@ -338,6 +338,11 @@
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mss
+	name = "\improper MSS uniform jacket"
+	desc = "A Ministry of Space Security service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
+	icon_state = "upp_coat_mss"
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
 
