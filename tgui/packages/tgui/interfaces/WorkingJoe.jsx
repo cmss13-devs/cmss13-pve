@@ -19,8 +19,13 @@ export const WorkingJoe = (props) => {
   const { current_menu } = data;
   const PageComponent = PAGES[current_menu]();
 
+  let themecolor = 'crtblue';
+  if (current_menu === 'core_security_gas') {
+    themecolor = 'crtred';
+  }
+
   return (
-    <Window theme="crtblue" width={950} height={725}>
+    <Window theme={themecolor} width={950} height={725}>
       <Window.Content scrollable>
         <PageComponent />
       </Window.Content>
@@ -66,11 +71,21 @@ const Login = (props) => {
 
 const MainMenu = (props) => {
   const { data, act } = useBackend();
-  const { logged_in, access_text, last_page, current_menu, access_level } =
-    data;
+  const {
+    logged_in,
+    access_text,
+    last_page,
+    current_menu,
+    access_level,
+    notify_sounds,
+  } = data;
   let can_request_access = 'Yes';
   if (access_level > 2) {
     can_request_access = 'No';
+  }
+  let soundicon = 'volume-high';
+  if (!notify_sounds) {
+    soundicon = 'volume-xmark';
   }
 
   return (
@@ -89,10 +104,16 @@ const MainMenu = (props) => {
             <Button
               icon="house"
               ml="auto"
-              mr="1rem"
               tooltip="Navigation Menu"
               onClick={() => act('home')}
               disabled={current_menu === 'main'}
+            />
+            <Button
+              icon={soundicon}
+              ml="auto"
+              mr="1rem"
+              tooltip="Mute/Un-Mute notifcation sounds."
+              onClick={() => act('toggle_sound')}
             />
           </Box>
 

@@ -905,6 +905,9 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit/two
 	icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
 
+/obj/structure/machinery/door/airlock/hatch/cockpit/three
+	icon = 'icons/obj/structures/doors/dropship3_pilot.dmi'
+
 /obj/structure/machinery/door/airlock/hatch/cockpit/four
 	icon = 'icons/obj/structures/doors/dropship4_pilot.dmi'
 

@@ -70,10 +70,7 @@
 		return ""
 	return "[CONFIG_GET(string/wikiarticleurl)]/[replacetext(title, " ", "_")]"
 
-/datum/job/proc/get_whitelist_status(list/roles_whitelist, client/player)
-	if(!roles_whitelist)
-		return FALSE
-
+/datum/job/proc/get_whitelist_status(client/player)
 	return WHITELIST_NORMAL
 
 /datum/timelock
@@ -162,7 +159,7 @@
 	if(!gear_preset)
 		return ""
 	if(GLOB.gear_path_presets_list[gear_preset])
-		return GLOB.gear_path_presets_list[gear_preset].paygrade
+		return GLOB.gear_path_presets_list[gear_preset].paygrades[1]
 	return ""
 
 /datum/job/proc/get_comm_title()
@@ -183,7 +180,7 @@
 	var/datum/money_account/generated_account
 	//Give them an account in the database.
 	if(!(flags_startup_parameters & ROLE_NO_ACCOUNT))
-		var/obj/item/card/id/card = account_user.wear_id
+		var/obj/item/card/id/card = account_user.get_idcard()
 		var/user_has_preexisting_account = account_user.mind?.initial_account
 		if(card && !user_has_preexisting_account)
 			var/datum/paygrade/account_paygrade = GLOB.paygrades[card.paygrade]
@@ -195,7 +192,7 @@
 				remembered_info += "<b>Your account pin is:</b> [generated_account.remote_access_pin]<br>"
 				remembered_info += "<b>Your account funds are:</b> $[generated_account.money]<br>"
 
-				if(generated_account.transaction_log.len)
+				if(length(generated_account.transaction_log))
 					var/datum/transaction/T = generated_account.transaction_log[1]
 					remembered_info += "<b>Your account was created:</b> [T.time], [T.date] at [T.source_terminal]<br>"
 				account_user.mind.store_memory(remembered_info)
@@ -241,32 +238,10 @@
 	if(!istype(NP))
 		return
 
-	NP.spawning = TRUE
-	NP.close_spawn_windows()
-
 	var/mob/living/carbon/human/new_character = new(NP.loc)
 	new_character.lastarea = get_area(NP.loc)
 
-	NP.client.prefs.copy_all_to(new_character, title)
-
-	if (NP.client.prefs.be_random_body)
-		var/datum/preferences/TP = new()
-		TP.randomize_appearance(new_character)
-
-	new_character.job = NP.job
-	new_character.name = NP.real_name
-	new_character.voice = NP.real_name
-
-	if(NP.mind)
-		NP.mind_initialize()
-		NP.mind.transfer_to(new_character, TRUE)
-		NP.mind.setup_human_stats()
-
-	// Update the character icons
-	// This is done in set_species when the mob is created as well, but
-	INVOKE_ASYNC(new_character, TYPE_PROC_REF(/mob/living/carbon/human, regenerate_icons))
-	INVOKE_ASYNC(new_character, TYPE_PROC_REF(/mob/living/carbon/human, update_body), 1, 0)
-	INVOKE_ASYNC(new_character, TYPE_PROC_REF(/mob/living/carbon/human, update_hair))
+	setup_human(new_character, NP)
 
 	return new_character
 
@@ -278,7 +253,7 @@
 		var/mob/living/carbon/human/human = M
 
 		var/job_whitelist = title
-		var/whitelist_status = get_whitelist_status(RoleAuthority.roles_whitelist, human.client)
+		var/whitelist_status = get_whitelist_status(human.client)
 
 		if(whitelist_status)
 			job_whitelist = "[title][whitelist_status]"
@@ -286,20 +261,20 @@
 		human.job = title //TODO Why is this a mob variable at all?
 
 		if(gear_preset_whitelist[job_whitelist])
-			arm_equipment(human, gear_preset_whitelist[job_whitelist], FALSE, TRUE)
+			arm_equipment(human, gear_preset_whitelist[job_whitelist], FALSE, TRUE, late_join = FALSE)
 			var/generated_account = generate_money_account(human)
 			announce_entry_message(human, generated_account, whitelist_status) //Tell them their spawn info.
 			generate_entry_conditions(human, whitelist_status) //Do any other thing that relates to their spawn.
 		else
-			arm_equipment(human, gear_preset, FALSE, TRUE) //After we move them, we want to equip anything else they should have.
+			arm_equipment(human, gear_preset, FALSE, TRUE, FALSE) //After we move them, we want to equip anything else they should have.
 			var/generated_account = generate_money_account(human)
 			announce_entry_message(human, generated_account) //Tell them their spawn info.
 			generate_entry_conditions(human) //Do any other thing that relates to their spawn.
 
 		if(flags_startup_parameters & ROLE_ADD_TO_SQUAD) //Are we a muhreen? Randomize our squad. This should go AFTER IDs. //TODO Robust this later.
-			RoleAuthority.randomize_squad(human)
+			GLOB.RoleAuthority.randomize_squad(human)
 
-		if(Check_WO() && job_squad_roles.Find(GET_DEFAULT_ROLE(human.job))) //activates self setting proc for marine headsets for WO
+		if(Check_WO() && GLOB.job_squad_roles.Find(GET_DEFAULT_ROLE(human.job))) //activates self setting proc for marine headsets for WO
 			var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
 			WO.self_set_headset(human)
 
@@ -340,3 +315,14 @@
 /// Intended to be overwritten to handle any requirements for specific job variations that can be selected
 /datum/job/proc/filter_job_option(mob/job_applicant)
 	return job_options
+
+/datum/job/proc/check_whitelist_status(mob/user)
+	if(!(flags_startup_parameters & ROLE_WHITELISTED))
+		return TRUE
+
+	if(user.client.check_whitelist_status(flags_whitelist))
+		return TRUE
+
+/// Called when the job owner enters deep cryogenic storage
+/datum/job/proc/on_cryo(mob/living/carbon/human/cryoing)
+	return
