@@ -521,7 +521,6 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/boiler
 	name = "\improper UPP operations boilersuit"
@@ -537,11 +536,12 @@
 	worn_state = "upp_uniform_pap"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/pap/mss
-	name = "\improper MSS service uniform"
+/obj/item/clothing/under/marine/veteran/UPP/service
+	name = "\improper UPP service uniform"
 	desc = "A pair of brown-green slacks coupled with a green shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
-	icon_state = "upp_uniform_mss"
-	worn_state = "upp_uniform_mss"
+	icon_state = "upp_uniform_service"
+	worn_state = "upp_uniform_service"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/civi1
 	name = "\improper UPP Civilian-style Orange overalls"

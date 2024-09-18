@@ -310,6 +310,7 @@
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_VERYLOW
 	armor_bullet = CLOTHING_ARMOR_VERYLOW
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -329,20 +330,12 @@
 	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_mp"
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service
-	name = "\improper UL2 coldweather service jacket"
-	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
-	icon_state = "upp_coat_officer"
-
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mss
-	name = "\improper MSS uniform jacket"
-	desc = "A Ministry of Space Security service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
-	icon_state = "upp_coat_mss"
+
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
 

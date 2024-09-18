@@ -398,3 +398,20 @@
 	icon_state = "jacket_grey"
 	item_state = "jacket_grey"
 	has_buttons = FALSE
+
+//==================UPP==================\\
+
+/obj/item/clothing/suit/storage/jacket/marine/upp
+	name = "\improper UPP service uniform jacket"
+	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_service"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/mss
+	name = "\improper MSS uniform jacket"
+	desc = "A Ministry of Space Security service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_mss"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/coldweather
+	name = "\improper UL2 coldweather service jacket"
+	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
+	icon_state = "upp_coat_officer"

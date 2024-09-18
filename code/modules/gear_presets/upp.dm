@@ -127,16 +127,23 @@
 
 	var/random_gear = rand(1,5)
 	switch(random_gear)
-		if(1 to 4)
+		if(1 to 2)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
-		if(5)
+		if(3 to 4)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_JACKET)
 
 //*****************************************************************************************************/
 
@@ -409,26 +416,28 @@
 	rank = JOB_UPP_LT_OFFICER
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/megaphone, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked, WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/service, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/service, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/upp, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/t73, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
 /datum/equipment_preset/upp/officer/senior
@@ -1081,11 +1090,11 @@
 
 /datum/equipment_preset/upp/police/mss
 	name = "UPP MSS Agent"
-	assignment = "Ministry of Space Security Agent"
-	role_comm_title = "MSS-AGNT"
+	assignment = "Ministry of Space Security Operative"
+	role_comm_title = "MSS-OP"
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/cmb
-	access = list(ACCESS_LIST_COLONIAL_ALL, ACCESS_LIST_UPP_ALL, ACCESS_LIST_UPP_PLATOON)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/police/mss/load_gear(mob/living/carbon/human/new_human)
@@ -1096,13 +1105,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/pap/mss, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/service, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92(new_human), WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mss, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/upp/mss, WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
