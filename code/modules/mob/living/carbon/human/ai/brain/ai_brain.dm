@@ -161,7 +161,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		location_loop:
 			for(var/turf/location as anything in directions)
 				if(location)
-					var/list/turf/path = getline2(tied_human, location, include_from_atom = FALSE)
+					var/list/turf/path = get_line(tied_human, location, include_start_atom = FALSE)
 					for(var/turf/possible_blocker as anything in path)
 						if(possible_blocker.density)
 							continue location_loop
@@ -307,5 +307,5 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(!our_faction)
 		return
 
-	our_faction.neutral_factions -= faction
+	our_faction.remove_neutral_faction(faction)
 	our_faction.reapply_faction_data()

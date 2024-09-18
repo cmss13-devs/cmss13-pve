@@ -1,19 +1,7 @@
 import { useBackend, useLocalState } from '../backend';
-import {
-  Box,
-  Button,
-  LabeledList,
-  NoticeBox,
-  ProgressBar,
-  Section,
-  Dimmer,
-  Stack,
-  Tabs,
-  Divider,
-} from '../components';
+import { Button, Section, Stack, Divider } from '../components';
 import { Window } from '../layouts';
-import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
-import { classes, BooleanLike } from 'common/react';
+import { BooleanLike } from 'common/react';
 
 type Squad = {
   id: number;
@@ -52,11 +40,11 @@ const AIContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>();
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
     'squad_assignment_mode',
-    false
+    false,
   );
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
     'order_assignment_mode',
-    false
+    false,
   );
   return (
     <Stack fill vertical>
@@ -115,19 +103,19 @@ const AIContext = (props, context) => {
       <Divider />
       <div>
         {data.orders.map((order) => (
-          <CreatedOrder order={order} context={context} id={order.ref} />
+          <CreatedOrder order={order} id={order.ref} />
         ))}
       </div>
       <Divider />
       <div>
         {data.ai_humans.map((human) => (
-          <HumanAIReadout human={human} context={context} id={human.ref} />
+          <HumanAIReadout human={human} id={human.ref} />
         ))}
       </div>
       <Divider />
       <div>
         {data.squads.map((squad) => (
-          <SquadReadout squad={squad} context={context} id={squad.ref} />
+          <SquadReadout squad={squad} id={squad.ref} />
         ))}
       </div>
     </Stack>
@@ -140,12 +128,9 @@ const CreatedOrder = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
     'order_assignment_mode',
-    false
+    false,
   );
-  const [selectedSquad, setSelectedSquad] = useLocalState(
-    'selected_squad',
-    -1
-  );
+  const [selectedSquad, setSelectedSquad] = useLocalState('selected_squad', -1);
   return (
     <div
       style={{
@@ -201,12 +186,9 @@ const HumanAIReadout = (props) => {
   const context: BackendContext = props.context;
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
     'squad_assignment_mode',
-    false
+    false,
   );
-  const [selectedSquad, setSelectedSquad] = useLocalState(
-    'selected_squad',
-    -1
-  );
+  const [selectedSquad, setSelectedSquad] = useLocalState('selected_squad', -1);
   const { data, act } = useBackend<BackendContext>();
   const gottenSquad: Squad = data.squads[selectedSquad];
   return (
@@ -306,15 +288,12 @@ const SquadReadout = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const [squadAssignmentMode, setSquadAssignmentMode] = useLocalState(
     'squad_assignment_mode',
-    false
+    false,
   );
-  const [selectedSquad, setSelectedSquad] = useLocalState(
-    'selected_squad',
-    -1
-  );
+  const [selectedSquad, setSelectedSquad] = useLocalState('selected_squad', -1);
   const [orderAssignmentMode, setOrderAssignmentMode] = useLocalState(
     'order_assignment_mode',
-    false
+    false,
   );
   return (
     <div
