@@ -123,8 +123,8 @@
 		list("M3 Pattern Smooth Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/smooth, VENDOR_ITEM_REGULAR),
 		list("M3-EOD Pattern Heavy Armor", round(scale * 10), /obj/item/clothing/suit/marine/heavy, VENDOR_ITEM_REGULAR),
 		list("M3-L Pattern Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/light, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Neck Brace", round(scale * 10), /obj/item/clothing/accessory/pads/bracers, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Arm Bracers", round(scale * 15), /obj/item/clothing/accessory/pads/neckguard, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Arm Bracers", round(scale * 10), /obj/item/clothing/accessory/pads/bracers, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Neck Brace", round(scale * 15), /obj/item/clothing/accessory/pads/neckguard, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", floor(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
