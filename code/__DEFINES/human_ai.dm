@@ -3,7 +3,7 @@
 #define HUMAN_AI_GRENADES "grenades"
 
 #define AI_ACTION_APPROACH /datum/ongoing_action/approach_target
-#define AI_ACTION_APPROACH_C /datum/ongoing_action/approach_target/carefully
+#define AI_ACTION_APPROACH_CAREFUL /datum/ongoing_action/approach_target/carefully
 #define AI_ACTION_RETREAT /datum/ongoing_action/retreat_from_target
 #define AI_ACTION_PICKUP /datum/ongoing_action/item_pickup
 #define AI_ACTION_PICKUP_GUN /datum/ongoing_action/item_pickup/pickup_primary

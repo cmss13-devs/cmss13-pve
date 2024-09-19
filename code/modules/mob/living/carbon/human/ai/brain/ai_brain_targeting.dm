@@ -213,12 +213,12 @@
 
 	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
 		end_gun_fire()
-		if(!in_cover)
-			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_C, current_target, 0)
+		if(grenading_allowed)
+			throw_grenade_cover()
 		else if(overwatch_allowed)
 			establish_overwatch()
-		else if(grenading_allowed)
-			throw_grenade_cover()
+		else if(!in_cover)
+			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, current_target, 0)
 		return
 
 	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump))

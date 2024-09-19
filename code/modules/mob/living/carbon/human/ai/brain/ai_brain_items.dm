@@ -65,9 +65,6 @@
 		if(slot_type)
 			equipment_map[slot_type][object_ref] = object_loc
 
-	appraise_inventory()
-
-
 /// Whenever an item is deleted, purge it from anywhere it may be stored in here
 /datum/human_ai_brain/proc/on_item_delete(obj/item/source, force)
 	SIGNAL_HANDLER
