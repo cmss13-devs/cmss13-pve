@@ -298,6 +298,9 @@
 		underlays -= gun_underlay
 		gun_underlay = null
 
+/obj/item/storage/pouch/pistol/alt
+		icon_state = "pistol_alt"
+
 ///CO pouch. This pouch can hold only 1 of each type of item: 1 sidearm, 1 pair of binoculars, 1 CO tablet
 /obj/item/storage/pouch/pistol/command
 	name = "command pouch"

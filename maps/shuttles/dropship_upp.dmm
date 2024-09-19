@@ -33,22 +33,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
-"fN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -9
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -12
-	},
-/turf/open/floor/strata/floor3/east,
-/area/shuttle/ds_upp)
 "hg" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp9"
@@ -71,7 +55,7 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/turf/open/floor/strata/floor2,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "kt" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -80,7 +64,7 @@
 	pixel_x = 23;
 	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "ld" = (
 /obj/effect/attach_point/weapon/midway/left_wing{
@@ -107,7 +91,7 @@
 	dir = 1
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "nZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -116,7 +100,7 @@
 	pixel_x = -23;
 	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "pv" = (
 /turf/closed/shuttle/ert{
@@ -161,7 +145,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
 	id = "aft_door"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "wO" = (
 /turf/closed/shuttle/ert{
@@ -179,7 +163,7 @@
 	dir = 8;
 	pixel_x = -14
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "xE" = (
 /turf/closed/shuttle/ert{
@@ -202,6 +186,9 @@
 	icon_state = "upp21"
 	},
 /area/shuttle/ds_upp)
+"BD" = (
+/turf/open/floor/strata/grey_multi_tiles,
+/area/shuttle/ds_upp)
 "BT" = (
 /turf/closed/shuttle/ert{
 	icon_state = "rightengine_2";
@@ -213,7 +200,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = 30
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "DG" = (
 /turf/closed/shuttle/ert{
@@ -404,7 +391,7 @@
 	pixel_x = -6;
 	pixel_y = -16
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "Sn" = (
 /obj/effect/decal/warning_stripes{
@@ -424,7 +411,7 @@
 /area/shuttle/ds_upp)
 "Th" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "TG" = (
 /turf/closed/shuttle/ert{
@@ -467,7 +454,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "Xe" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
@@ -503,7 +490,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "Zh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -511,7 +498,7 @@
 	dir = 4;
 	pixel_x = 14
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "Zm" = (
 /turf/closed/shuttle/ert{
@@ -638,7 +625,7 @@ HB
 Js
 ey
 Yn
-fN
+hS
 hS
 hS
 hS
@@ -648,7 +635,7 @@ cS
 um
 TO
 si
-Yn
+BD
 "}
 (7,1,1) = {"
 Hk
