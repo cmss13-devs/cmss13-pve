@@ -67,7 +67,7 @@
 	user.client.color = "#E0FFFF"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE
+	user.face_mouse = TRUE
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
