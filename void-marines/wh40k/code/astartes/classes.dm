@@ -46,13 +46,13 @@
 	name = "Apothecary's Narthecium"
 	desc = "The standard issued narthecium of the apothecaries, powered by a internal promethium generator. It requires to be toggled."
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
-	icon_state = "hypogauntlet_on" // Does not spin. I have no clue why.
+	icon_state = "hypogauntlet_on"
 	item_state = "hypogauntlet_on"
-/*
-	var/list/images
-	var/obj/item/reagent_container/hypospray/hyro
-	var/list/items_medical = list()
-	var/list/paths_medical = list(
+
+	var/list/images = list()
+	var/list/items = list()
+	var/list/paths = list(
+		/obj/item/reagent_container/hypospray,
 		/obj/item/tool/surgery/scalpel/laser/advanced,
 		/obj/item/tool/surgery/hemostat,
 		/obj/item/tool/surgery/retractor,
@@ -63,46 +63,40 @@
 		/obj/item/tool/surgery/cautery
 	)
 
-/obj/item/weapon/sword/warhammer/narthecium/New(loc, ...)
+/obj/item/weapon/sword/chainsword/narthecium/Initialize()
 	. = ..()
-	hyro = new(src)
+	for(var/path in paths)
+		var/obj/item/I = new path (src)
+		items += I
+		var/image/img = image(icon = I.icon, icon_state = I.icon_state)
+		img.name = I.name
+		images[I] = img
 
-/obj/item/weapon/sword/warhammer/narthecium/attack_self(mob/user)
+/obj/item/weapon/sword/chainsword/narthecium/attack_self(mob/user)
 	. = ..()
 	if(user.r_hand && user.l_hand)
 		to_chat(user, SPAN_DANGER("Your hands are full."))
 		return
 
-// Injector
-/*
-	if(user.a_intent == INTENT_HELP)
-		user.put_in_active_hand(hyro)
-		return
-*/
+	var/slot = user.get_inactive_hand()
+	if(slot == user.r_hand)
+		slot = WEAR_R_HAND
+	else
+		slot = WEAR_L_HAND
+
 //	if(user.a_intent == INTENT_GRAB)
-	for(var/medtool in paths_medical)
-		var/obj/item/I = new medtool (src)
-		items_medical += I
-		var/image/img = image(icon = I.icon, icon_state = I.item_state)
-		img.name = I.name
-		images[I] = img
+	var/obj/item = show_radial_menu(user, src, images, radius = 50, require_near = TRUE)
+	if(isnull(item) || !src)
+		return
+	if(user.equip_to_slot_if_possible(item, slot))
+		items -= item
 
-	var/obj/item = show_radial_menu(user, src, images, radius = 30, require_near = TRUE)
-	if(item)
-		var/item_type = item.type
-		. = new item_type(user)
-
-	for(item in items_medical)
-		qdel(item)
-	images.Cut()
-	items_medical.Cut()
 /*
 	else
 		to_chat(user, SPAN_GREEN("Help intent for Injector"))
 		to_chat(user, SPAN_ORANGE("Grab intent for Surgery tool"))
 */
 
-*/
 /obj/item/weapon/sword/warhammer/narthecium/dropped() /// This should not exist on its own
 	..()
 	QDEL_IN(src, 0)
