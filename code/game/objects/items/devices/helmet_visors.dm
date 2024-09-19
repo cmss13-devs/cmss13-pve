@@ -66,6 +66,8 @@
 	user.client.mouse_pointer_icon = 'icons/effects/cursors/aim_reticle.dmi'
 	user.client.color = "#E0FFFF"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+	user.face_mouse = FALSE
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
@@ -74,6 +76,8 @@
 	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+	user.face_mouse = FALSE
 
 /// Called by /obj/item/clothing/head/helmet/marine/get_examine_text(mob/user) to get extra examine text for this visor
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()

@@ -727,8 +727,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			iterator++
 
 	for(var/obj/item/device/helmet_visor/new_visor in total_visors)
-		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
-			continue
 
 		if(!new_visor.can_toggle(user))
 			continue

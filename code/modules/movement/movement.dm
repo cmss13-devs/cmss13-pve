@@ -64,8 +64,15 @@
 	var/old_dir = dir
 
 	. = ..()
+
 	if (flags_atom & DIRLOCK)
 		setDir(old_dir)
+
+	else if(ismob(src))
+		var/mob/mob = src
+		if(mob.face_mouse)
+			setDir(old_dir)
+
 	else if(old_dir != direct)
 		setDir(direct)
 	l_move_time = world.time
