@@ -5,6 +5,7 @@
 	var/list/equipment_map = list(
 		HUMAN_AI_HEALTHITEMS = list(),
 		HUMAN_AI_AMMUNITION = list(),
+		HUMAN_AI_GRENADES = list(),
 	)
 
 	var/list/container_refs = list(
@@ -20,6 +21,8 @@
 		WEAR_L_STORE,
 		WEAR_R_STORE,
 	)
+
+	var/static/important_storage_slots_bitflag = SLOT_BACK | SLOT_WAIST | SLOT_STORE
 
 /datum/human_ai_brain/proc/get_object_from_loc(object_loc)
 	RETURN_TYPE(/obj/item/storage)
@@ -44,10 +47,11 @@
 	var/obj/item/storage/storage_object = get_object_from_loc(object_loc)
 
 	storage_object.remove_from_storage(object_ref, tied_human)
+	tied_human.put_in_active_hand(object_ref)
 	equipped_items_original_loc[object_ref] = object_loc
 	RegisterSignal(object_ref, COMSIG_ITEM_DROPPED, PROC_REF(on_equipment_dropped), override = TRUE)
 
-/datum/human_ai_brain/proc/store_item(obj/item/object_ref, object_loc)
+/datum/human_ai_brain/proc/store_item(obj/item/object_ref, object_loc, slot_type)
 	if(object_ref.loc != tied_human)
 		return
 
@@ -58,6 +62,8 @@
 	else if(object_loc) // we assume that we've already checked if something will fit or not
 		var/obj/item/storage/storage_item = container_refs[object_loc]
 		storage_item.attempt_item_insertion(object_ref, FALSE, tied_human)
+		if(slot_type)
+			equipment_map[slot_type][object_ref] = object_loc
 
 	appraise_inventory()
 
@@ -89,9 +95,9 @@
 /datum/human_ai_brain/proc/on_item_unequip(datum/source, obj/item/equipment, slot)
 	SIGNAL_HANDLER
 
-	if((slot in important_storage_slots) && istype(equipment, /obj/item/storage))
+	if((important_storage_slots_bitflag & slot) && istype(equipment, /obj/item/storage))
 		recalculate_containers()
-		appraise_inventory(slot == WEAR_WAIST, slot == WEAR_BACK, slot == WEAR_L_STORE, slot == WEAR_R_STORE)
+		appraise_inventory(slot == SLOT_WAIST, slot == SLOT_BACK, slot == SLOT_STORE, slot == SLOT_STORE)
 
 	if(isgun(equipment))
 		appraise_inventory(FALSE, FALSE, FALSE, FALSE)
@@ -112,14 +118,12 @@
 	if(previous_faction != tied_human.faction)
 		previous_faction = tied_human.faction
 		var/datum/human_ai_faction/our_faction = SShuman_ai.human_ai_factions[tied_human.faction]
-		if(!our_faction)
-			return
-		our_faction.apply_faction_data(src)
+		our_faction?.apply_faction_data(src)
 
 	tried_reload = FALSE // We don't really need to do this in a smart way
 	if(belt)
 		if(!istype(tied_human.belt, /obj/item/storage)) // belts can be backpacks, don't ask
-			return
+			goto back_statement
 
 		for(var/id in equipment_map)
 			for(var/obj/item/item as anything in equipment_map[id])
@@ -132,70 +136,75 @@
 		for(var/obj/item/inv_item as anything in tied_human.belt)
 			RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
 			if(inv_item.flags_item & HEALING_ITEM)
-				// only trauma kits and similar for now for ease of development
 				equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "belt"
 			else if(inv_item.flags_item & AMMUNITION_ITEM)
 				equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "belt"
+			else if(inv_item.flags_item & GRENADE_ITEM)
+				equipment_map[HUMAN_AI_GRENADES][inv_item] = "belt"
+	back_statement:
+		if(back)
+			if(!istype(tied_human.back, /obj/item/storage/backpack))
+				goto l_pocket_statement
 
-	if(back)
-		if(!istype(tied_human.back, /obj/item/storage/backpack))
-			return
+			for(var/id in equipment_map)
+				for(var/obj/item/item as anything in equipment_map[id])
+					if(equipment_map[id][item] != "backpack")
+						continue
 
-		for(var/id in equipment_map)
-			for(var/obj/item/item as anything in equipment_map[id])
-				if(equipment_map[id][item] != "backpack")
-					continue
+					equipment_map[id] -= item
 
-				equipment_map[id] -= item
+			RegisterSignal(tied_human.back, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+			for(var/obj/item/inv_item as anything in tied_human.back)
+				RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+				if(inv_item.flags_item & HEALING_ITEM)
+					equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "backpack"
+				else if(inv_item.flags_item & AMMUNITION_ITEM)
+					equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "backpack"
+				else if(inv_item.flags_item & GRENADE_ITEM)
+					equipment_map[HUMAN_AI_GRENADES][inv_item] = "backpack"
+	l_pocket_statement:
+		if(pocket_l)
+			if(!istype(tied_human.l_store, /obj/item/storage/pouch))
+				goto r_pocket_statement
 
-		RegisterSignal(tied_human.back, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-		for(var/obj/item/inv_item as anything in tied_human.back)
-			RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			if(inv_item.flags_item & HEALING_ITEM)
-				// only trauma kits and similar for now for ease of development
-				equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "backpack"
-			else if(inv_item.flags_item & AMMUNITION_ITEM)
-				equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "backpack"
+			for(var/id in equipment_map)
+				for(var/obj/item/item as anything in equipment_map[id])
+					if(equipment_map[id][item] != "left_pocket")
+						continue
 
-	if(pocket_l)
-		if(!istype(tied_human.l_store, /obj/item/storage/pouch))
-			return
+					equipment_map[id] -= item
 
-		for(var/id in equipment_map)
-			for(var/obj/item/item as anything in equipment_map[id])
-				if(equipment_map[id][item] != "left_pocket")
-					continue
+			RegisterSignal(tied_human.l_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+			for(var/obj/item/inv_item as anything in tied_human.l_store)
+				RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+				if(inv_item.flags_item & HEALING_ITEM)
+					equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "left_pocket"
+				else if(inv_item.flags_item & AMMUNITION_ITEM)
+					equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "left_pocket"
+				else if(inv_item.flags_item & GRENADE_ITEM)
+					equipment_map[HUMAN_AI_GRENADES][inv_item] = "left_pocket"
+	r_pocket_statement:
+		if(pocket_r)
+			if(!istype(tied_human.r_store, /obj/item/storage/pouch))
+				return
 
-				equipment_map[id] -= item
+			for(var/id in equipment_map)
+				for(var/obj/item/item as anything in equipment_map[id])
+					if(equipment_map[id][item] != "right_pocket")
+						continue
 
-		RegisterSignal(tied_human.l_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-		for(var/obj/item/inv_item as anything in tied_human.l_store)
-			RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			if(inv_item.flags_item & HEALING_ITEM)
-				// only trauma kits and similar for now for ease of development
-				equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "left_pocket"
-			else if(inv_item.flags_item & AMMUNITION_ITEM)
-				equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "left_pocket"
+					equipment_map[id] -= item
 
-	if(pocket_r)
-		if(!istype(tied_human.r_store, /obj/item/storage/pouch))
-			return
-
-		for(var/id in equipment_map)
-			for(var/obj/item/item as anything in equipment_map[id])
-				if(equipment_map[id][item] != "right_pocket")
-					continue
-
-				equipment_map[id] -= item
-
-		RegisterSignal(tied_human.r_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-		for(var/obj/item/inv_item as anything in tied_human.r_store)
-			RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			if(inv_item.flags_item & HEALING_ITEM)
-				// only trauma kits and similar for now for ease of development
-				equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "right_pocket"
-			else if(inv_item.flags_item & AMMUNITION_ITEM)
-				equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "right_pocket"
+			RegisterSignal(tied_human.r_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+			for(var/obj/item/inv_item as anything in tied_human.r_store)
+				RegisterSignal(inv_item, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+				if(inv_item.flags_item & HEALING_ITEM)
+					// only trauma kits and similar for now for ease of development
+					equipment_map[HUMAN_AI_HEALTHITEMS][inv_item] = "right_pocket"
+				else if(inv_item.flags_item & AMMUNITION_ITEM)
+					equipment_map[HUMAN_AI_AMMUNITION][inv_item] = "right_pocket"
+				else if(inv_item.flags_item & GRENADE_ITEM)
+					equipment_map[HUMAN_AI_GRENADES][inv_item] = "right_pocket"
 
 /datum/human_ai_brain/proc/clear_main_hand()
 	var/obj/item/active_hand = tied_human.get_active_hand()
@@ -269,39 +278,51 @@
 		gun_data = default
 
 /datum/human_ai_brain/proc/item_search(list/things_around)
-	for(var/obj/item/thing in things_around)
-		if(!isturf(thing.loc))
-			continue
-
-		if(!primary_weapon && isgun(thing))
-			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
-			break
-
-		if(istype(thing, /obj/item/storage/belt) && !container_refs["belt"])
-			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
-			break
-
-		if(istype(thing, /obj/item/storage/backpack) && !container_refs["backpack"])
-			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
-			break
-
-		if(istype(thing, /obj/item/storage/pouch) && (!container_refs["left_pocket"] || !container_refs["right_pocket"]))
-			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
-			break
-
-		var/storage_spot = storage_has_room(thing)
-		if(!storage_spot || !thing.ai_can_use(tied_human))
-			continue
-
-		if(is_type_in_list(thing, all_medical_items))
-			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
-			break
-
-		else if(primary_weapon && istype(thing, /obj/item/ammo_magazine))
-			var/obj/item/ammo_magazine/mag = thing
-			if(istype(mag, /obj/item/ammo_magazine/handful))
+	search_loop:
+		for(var/obj/item/thing in things_around)
+			if(!isturf(thing.loc))
 				continue
-			if(istype(primary_weapon, mag.gun_type))
+
+			if(!primary_weapon && isgun(thing))
+				var/obj/item/weapon/gun/thing_gun = thing
+				for(var/datum/firearm_appraisal/appraisal as anything in GLOB.firearm_appraisals)
+					if(is_type_in_list(thing_gun, appraisal.gun_types))
+						if(appraisal.disposable && thing_gun.current_mag?.current_rounds <= 0)
+							continue search_loop
+						break
+
 				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 				break
+
+			if(istype(thing, /obj/item/storage/belt) && !container_refs["belt"])
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
+				break
+
+			if(istype(thing, /obj/item/storage/backpack) && !container_refs["backpack"])
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
+				break
+
+			if(istype(thing, /obj/item/storage/pouch) && (!container_refs["left_pocket"] || !container_refs["right_pocket"]))
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
+				break
+
+			var/storage_spot = storage_has_room(thing)
+			if(!storage_spot || !thing.ai_can_use(tied_human))
+				continue
+
+			if(is_type_in_list(thing, all_medical_items))
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
+				break
+
+			else if(primary_weapon && istype(thing, /obj/item/ammo_magazine))
+				var/obj/item/ammo_magazine/mag = thing
+				if(istype(primary_weapon, mag.gun_type))
+					ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
+					break
+
+			else if(istype(thing, /obj/item/explosive/grenade))
+				var/obj/item/explosive/grenade/nade = thing
+				if(nade.active)
+					continue
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 

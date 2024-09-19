@@ -94,6 +94,8 @@
 #define HEALING_ITEM (1<<16)
 /// This item is classified as ammunition for the sake of human AI
 #define AMMUNITION_ITEM (1<<17)
+/// This item is classified as a grenade for the sake of human AI
+#define GRENADE_ITEM (1<<18)
 //==========================================================================================
 
 

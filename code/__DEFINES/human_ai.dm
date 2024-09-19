@@ -1,5 +1,6 @@
 #define HUMAN_AI_HEALTHITEMS "health"
 #define HUMAN_AI_AMMUNITION "ammo"
+#define HUMAN_AI_GRENADES "grenades"
 
 #define AI_ACTION_APPROACH /datum/ongoing_action/approach_target
 #define AI_ACTION_APPROACH_C /datum/ongoing_action/approach_target/carefully

@@ -81,4 +81,9 @@
 			return mag
 
 /datum/human_ai_brain/proc/should_reload_primary()
-	return (primary_weapon?.current_mag?.current_rounds <= 0 && !primary_weapon?.in_chamber)
+	if(gun_data?.disposable)
+		return FALSE
+
+	if(primary_weapon?.current_mag.current_rounds > 0 || primary_weapon?.in_chamber)
+		return TRUE
+	return FALSE
