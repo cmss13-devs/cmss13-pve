@@ -301,13 +301,13 @@
 	attack_target()
 
 /datum/human_ai_brain/proc/throw_grenade_cover()
-	if(!target_floor || has_ongoing_action(/datum/ongoing_action/throw_grenade))
+	if(!target_floor || has_ongoing_action(AI_ACTION_NADE))
 		return
 
 	var/obj/item/explosive/grenade/nade = locate() in equipment_map[HUMAN_AI_GRENADES]
 	if(!nade)
 		return
 
-	ADD_ONGOING_ACTION(src, /datum/ongoing_action/throw_grenade, nade, target_floor)
+	ADD_ONGOING_ACTION(src, AI_ACTION_NADE, nade, target_floor)
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
