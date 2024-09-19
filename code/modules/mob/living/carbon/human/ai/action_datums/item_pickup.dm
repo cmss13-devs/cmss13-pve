@@ -63,7 +63,6 @@
 		var/obj/item/ammo_magazine/mag = to_pickup
 		if(istype(brain.primary_weapon, mag.gun_type))
 			brain.tied_human.put_in_hands(to_pickup, TRUE)
-
 			brain.store_item(to_pickup, storage_spot, HUMAN_AI_AMMUNITION)
 		return ONGOING_ACTION_COMPLETED
 
