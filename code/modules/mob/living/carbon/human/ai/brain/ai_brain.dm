@@ -133,7 +133,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		tied_human.swap_hand()
 
 /datum/human_ai_brain/proc/nade_throwback(list/things_around)
-	if(has_ongoing_action(AI_ACTION_TROWBACK))
+	if(has_ongoing_action(AI_ACTION_THROWBACK))
 		return
 
 	var/turf/place_to_throw
@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		return
 
 	throw_back_nade:
-		ADD_ONGOING_ACTION(src, AI_ACTION_TROWBACK, throw_nade, place_to_throw)
+		ADD_ONGOING_ACTION(src, AI_ACTION_THROWBACK, throw_nade, place_to_throw)
 
 /// Use ADD_ONGOING_ACTION() macro instead of calling this directly
 /datum/human_ai_brain/proc/_add_ongoing_action(datum/ongoing_action/path, ...)
