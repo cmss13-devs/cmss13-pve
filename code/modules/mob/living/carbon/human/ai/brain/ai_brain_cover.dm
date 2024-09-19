@@ -117,7 +117,7 @@
 					shortest_cover_turf = get_turf(cade)
 					cover_atom = cade
 	if(shortest_cover_turf)
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_cover, shortest_cover_turf, cover_atom, FALSE)
+		ADD_ONGOING_ACTION(src, AI_ACTION_COVER, shortest_cover_turf, cover_atom, FALSE)
 		if(!from_squad)
 			squad_cover_processing(FALSE, view_contents - shortest_cover_turf)
 		else
@@ -140,7 +140,7 @@
 					shortest_cover_turf = maybe_cover
 					cover_atom = wall
 	if(shortest_cover_turf)
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_cover, shortest_cover_turf, cover_atom, TRUE)
+		ADD_ONGOING_ACTION(src, AI_ACTION_COVER, shortest_cover_turf, cover_atom, TRUE)
 		if(!from_squad)
 			squad_cover_processing(FALSE, view_contents - shortest_cover_turf)
 
@@ -164,7 +164,7 @@
 #ifdef TESTING
 	to_chat(world, "highest_cover_value: [highest_cover_value], turf coords: [highest_cover_turf.x], [highest_cover_turf.y], [highest_cover_turf.z]")
 	addtimer(CALLBACK(src, PROC_REF(clear_cover_value_debug), turf_dict), 60 SECONDS)
-	ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_inside_cover, highest_cover_turf)
+	ADD_ONGOING_ACTION(src, AI_ACTION_COVER_I, highest_cover_turf)
 	if(!from_squad)
 		squad_cover_processing(TRUE, turf_dict - highest_cover_turf)
 	else
@@ -175,9 +175,9 @@
 		T.maptext = null
 
 #else
-	ADD_ONGOING_ACTION(src, /datum/ongoing_action/take_inside_cover, highest_cover_turf)
+	ADD_ONGOING_ACTION(src, AI_ACTION_COVER_I, highest_cover_turf)
 	if(!from_squad)
-		squad_cover_processing(TRUE, view_contents - highest_cover_turf)
+		squad_cover_processing(TRUE, turf_dict - highest_cover_turf)
 	else
 		squad_covering = FALSE
 #endif

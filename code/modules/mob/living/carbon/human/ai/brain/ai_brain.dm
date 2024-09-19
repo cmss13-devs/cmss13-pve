@@ -90,14 +90,22 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	item_search(things_around)
 	//bullet_detect(things_around)
 
-	if(!currently_busy && primary_weapon && current_target && !currently_firing && COOLDOWN_FINISHED(src, fire_overload_cooldown) && primary_weapon.has_ammunition())
-		currently_busy = TRUE
-		var/target_futile = current_target.is_mob_incapacitated()
-		if(get_dist(tied_human, current_target) > gun_data.optimal_range || target_futile)
-			if(!has_ongoing_action(/datum/ongoing_action/approach_target) && !in_cover)
-				var/walk_distance = target_futile ? gun_data.minimum_range : gun_data.optimal_range
-				ADD_ONGOING_ACTION(src, /datum/ongoing_action/approach_target, current_target, walk_distance)
-		attack_target()
+	if(primary_weapon && current_target)
+		if(!has_ongoing_action(AI_ACTION_APPROACH) && !has_ongoing_action(AI_ACTION_RETREAT))
+			var/target_futile = current_target.is_mob_incapacitated()
+			var/distance = get_dist(tied_human, current_target)
+			if(distance > gun_data.optimal_range || target_futile)
+				if(!in_cover)
+					var/walk_distance = target_futile ? gun_data.minimum_range : gun_data.optimal_range
+					ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH, current_target, walk_distance)
+
+			else if(distance < gun_data.optimal_range)
+				var/walk_distance = in_cover ? gun_data.minimum_range : gun_data.optimal_range
+				ADD_ONGOING_ACTION(src, AI_ACTION_RETREAT, current_target, walk_distance)
+
+		if(!currently_busy && !currently_firing && COOLDOWN_FINISHED(src, fire_overload_cooldown))
+			currently_busy = TRUE
+			attack_target()
 
 	if(!currently_busy && healing_start_check())
 		currently_busy = TRUE
@@ -124,7 +132,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		tied_human.swap_hand()
 
 /datum/human_ai_brain/proc/nade_throwback(list/things_around)
-	if(has_ongoing_action(/datum/ongoing_action/throw_back_nade))
+	if(has_ongoing_action(AI_ACTION_TROWBACK))
 		return
 
 	var/turf/place_to_throw
@@ -183,7 +191,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		return
 
 	throw_back_nade:
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/throw_back_nade, throw_nade, place_to_throw)
+		ADD_ONGOING_ACTION(src, AI_ACTION_TROWBACK, throw_nade, place_to_throw)
 
 /// Use ADD_ONGOING_ACTION() macro instead of calling this directly
 /datum/human_ai_brain/proc/_add_ongoing_action(datum/ongoing_action/path, ...)

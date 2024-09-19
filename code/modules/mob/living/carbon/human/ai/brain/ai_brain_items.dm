@@ -59,6 +59,8 @@
 		var/obj/item/storage/storage_item = container_refs[object_loc]
 		storage_item.attempt_item_insertion(object_ref, FALSE, tied_human)
 
+	appraise_inventory()
+
 
 /// Whenever an item is deleted, purge it from anywhere it may be stored in here
 /datum/human_ai_brain/proc/on_item_delete(obj/item/source, force)
@@ -235,7 +237,7 @@
 
 	if(dropped == primary_weapon)
 		set_primary_weapon(null)
-		ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup/pickup_primary, dropped)
+		ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP_GUN, dropped)
 	for(var/slot in container_refs)
 		if(container_refs[slot] == dropped)
 			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket")
@@ -272,19 +274,19 @@
 			continue
 
 		if(!primary_weapon && isgun(thing))
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 			break
 
 		if(istype(thing, /obj/item/storage/belt) && !container_refs["belt"])
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 			break
 
 		if(istype(thing, /obj/item/storage/backpack) && !container_refs["backpack"])
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 			break
 
 		if(istype(thing, /obj/item/storage/pouch) && (!container_refs["left_pocket"] || !container_refs["right_pocket"]))
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 			break
 
 		var/storage_spot = storage_has_room(thing)
@@ -292,12 +294,14 @@
 			continue
 
 		if(is_type_in_list(thing, all_medical_items))
-			ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+			ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 			break
 
 		else if(primary_weapon && istype(thing, /obj/item/ammo_magazine))
 			var/obj/item/ammo_magazine/mag = thing
+			if(istype(mag, /obj/item/ammo_magazine/handful))
+				continue
 			if(istype(primary_weapon, mag.gun_type))
-				ADD_ONGOING_ACTION(src, /datum/ongoing_action/item_pickup, thing)
+				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 				break
 
