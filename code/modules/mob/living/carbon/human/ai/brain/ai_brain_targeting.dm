@@ -150,7 +150,7 @@
 
 	primary_weapon.set_target(current_target)
 	gun_data.before_fire(primary_weapon, tied_human, src)
-	if(!primary_weapon.current_mag || !primary_weapon.current_mag.current_rounds || !friendly_check())
+	if((!primary_weapon?.current_mag.current_rounds && !primary_weapon.in_chamber) || !friendly_check())
 		end_gun_fire()
 		return
 
@@ -199,15 +199,19 @@
 		end_gun_fire()
 		return
 
-	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
-		end_gun_fire()
-		return
-
 	if(QDELETED(current_target) || !friendly_check())
 		end_gun_fire()
 		return
 
-	if(primary_weapon.current_mag?.current_rounds <= 1) // bullet removal comes after comsig is triggered
+	if(primary_weapon.current_mag?.current_rounds <= 1 && !primary_weapon.in_chamber) // bullet removal comes after comsig is triggered
+		end_gun_fire()
+		return
+
+	if(!(current_target in viewers(world.view, tied_human)))
+		if(!in_cover)
+			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_C, current_target, 0)
+		else if(overwatch_allowed)
+			establish_overwatch()
 		end_gun_fire()
 		if(gun_data?.disposable)
 			var/obj/item/gun = primary_weapon
@@ -215,7 +219,7 @@
 			tied_human.drop_held_item(gun)
 		return
 
-	if(!(current_target in viewers(world.view, tied_human)))
+	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
 		end_gun_fire()
 		if(overwatch_allowed)
 			establish_overwatch()

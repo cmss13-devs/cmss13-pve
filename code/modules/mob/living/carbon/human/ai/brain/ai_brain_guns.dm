@@ -84,6 +84,6 @@
 	if(gun_data?.disposable)
 		return FALSE
 
-	if(primary_weapon?.current_mag?.current_rounds <= 0)
+	if(primary_weapon?.current_mag.current_rounds > 0 || primary_weapon?.in_chamber)
 		return TRUE
 	return FALSE

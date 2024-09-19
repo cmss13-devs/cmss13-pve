@@ -8,8 +8,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 
 /datum/firearm_appraisal
 	/// Minimum engagement range with weapon type
-	var/minimum_range = 1
-	/// Optimal engagement range, try to approach if further than this
+	var/minimum_range = 2
+	/// Optimal engagement range, try to stay at this distance
 	var/optimal_range = 6
 	/// Maximum engagement range, stop firing at this distance
 	var/maximum_range = 9
@@ -42,14 +42,15 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 
 /datum/firearm_appraisal/smg
 	burst_amount_max = 10
+	minimum_range = 1
 	optimal_range = 5
-	maximum_range = 7
 	gun_types = list(
 		/obj/item/weapon/gun/smg,
 	)
 
 /datum/firearm_appraisal/shotgun
 	burst_amount_max = 2
+	minimum_range = 1
 	optimal_range = 1 // point-blank our beloved
 	maximum_range = 3
 	gun_types = list(
