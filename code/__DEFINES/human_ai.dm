@@ -1,5 +1,6 @@
 #define HUMAN_AI_HEALTHITEMS "health"
 #define HUMAN_AI_AMMUNITION "ammo"
+#define HUMAN_AI_GRENADES "grenades"
 
 /// Action is completed, delete this and move onto the next ongoing action
 #define ONGOING_ACTION_COMPLETED "completed"

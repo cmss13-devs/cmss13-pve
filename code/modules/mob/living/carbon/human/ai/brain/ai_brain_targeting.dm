@@ -11,6 +11,8 @@
 	var/turf/open/target_floor
 	/// If TRUE, the AI is allowed to establish overwatches
 	var/overwatch_allowed = FALSE
+	/// If TRUE, the AI will throw grenades at enemies who enter cover
+	var/grenading_allowed = TRUE
 	/// List of overwatched turfs
 	var/list/turf/open/overwatch_turfs = list()
 
@@ -207,12 +209,18 @@
 
 	if(primary_weapon.current_mag?.current_rounds <= 1) // bullet removal comes after comsig is triggered
 		end_gun_fire()
+		if(gun_data?.disposable)
+			var/obj/item/gun = primary_weapon
+			set_primary_weapon(null)
+			tied_human.drop_held_item(gun)
 		return
 
 	if(!(current_target in viewers(world.view, tied_human)))
 		end_gun_fire()
 		if(overwatch_allowed)
 			establish_overwatch()
+		else if(grenading_allowed)
+			throw_grenade_cover()
 		return
 
 	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump))
@@ -293,5 +301,15 @@
 	clear_overwatch()
 	current_target = entering
 	attack_target()
+
+/datum/human_ai_brain/proc/throw_grenade_cover()
+	if(!target_floor || has_ongoing_action(/datum/ongoing_action/throw_grenade))
+		return
+
+	var/obj/item/explosive/grenade/nade = locate() in equipment_map[HUMAN_AI_GRENADES]
+	if(!nade)
+		return
+
+	ADD_ONGOING_ACTION(src, /datum/ongoing_action/throw_grenade, nade, target_floor)
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER

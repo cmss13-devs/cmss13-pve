@@ -17,6 +17,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	var/burst_amount_max = 8
 	/// List of types that set the human AI to this appraisal type
 	var/list/gun_types = list()
+	/// If TRUE, this gun is disposable and isn't worth trying to reload
+	var/disposable = FALSE
 
 /// List of things we do before our next fire based on weapon type
 /datum/firearm_appraisal/proc/before_fire(obj/item/weapon/gun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
@@ -30,6 +32,12 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	burst_amount_max = 8
 	gun_types = list(
 		/obj/item/weapon/gun/rifle,
+	)
+
+/datum/firearm_appraisal/smartgun
+	burst_amount_max = 18
+	gun_types = list(
+		/obj/item/weapon/gun/smartgun,
 	)
 
 /datum/firearm_appraisal/smg
@@ -88,5 +96,12 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	minimum_range = 5
 	optimal_range = 6
 	gun_types = list(
-		/obj/item/weapon/gun/launcher/rocket,
+		/obj/item/weapon/gun/launcher/rocket/anti_tank,
 	)
+	disposable = TRUE
+
+/datum/firearm_appraisal/rpg/multi_use
+	gun_types = list(
+		/obj/item/weapon/gun/launcher/rocket
+	)
+	disposable = TRUE

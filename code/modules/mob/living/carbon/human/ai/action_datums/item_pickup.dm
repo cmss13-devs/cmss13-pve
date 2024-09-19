@@ -55,11 +55,22 @@
 		return ONGOING_ACTION_COMPLETED
 
 	if(is_type_in_list(to_pickup, brain.all_medical_items))
-		brain.store_item(to_pickup, storage_spot)
+		brain.tied_human.put_in_hands(to_pickup, TRUE)
+		brain.store_item(to_pickup, storage_spot, HUMAN_AI_HEALTHITEMS)
 		return ONGOING_ACTION_COMPLETED
 
 	if(brain.primary_weapon && istype(to_pickup, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/mag = to_pickup
 		if(istype(brain.primary_weapon, mag.gun_type))
-			brain.store_item(to_pickup, storage_spot)
+			brain.tied_human.put_in_hands(to_pickup, TRUE)
+			brain.store_item(to_pickup, storage_spot, HUMAN_AI_AMMUNITION)
 		return ONGOING_ACTION_COMPLETED
+
+	if(istype(to_pickup, /obj/item/explosive/grenade))
+		var/obj/item/explosive/grenade/nade = to_pickup
+		if(!nade.active)
+			brain.tied_human.put_in_hands(to_pickup, TRUE)
+			brain.store_item(to_pickup, storage_spot, HUMAN_AI_GRENADES)
+		return ONGOING_ACTION_COMPLETED
+
+	return ONGOING_ACTION_COMPLETED

@@ -102,11 +102,15 @@
 	. = ..()
 
 /mob/living/carbon/human/u_equip(obj/item/I, atom/newloc, nomoveupdate, force)
+	var/slot
+	if(I)
+		if(I == back)
+			slot = SLOT_BACK
+		else if(I == wear_mask)
+			slot = SLOT_FACE
 	. = ..()
 	if(!. || !I)
 		return FALSE
-
-	var/slot
 
 	if(I == wear_suit)
 		if(s_store && !(s_store.flags_equip_slot & SLOT_SUIT_STORE))

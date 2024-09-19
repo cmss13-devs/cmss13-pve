@@ -60,6 +60,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	target_floor = null
 	ongoing_order = null
 	GLOB.human_ai_brains -= src
+	gun_data = null
 	return ..()
 
 /datum/human_ai_brain/process(delta_time)
