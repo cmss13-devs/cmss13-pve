@@ -197,7 +197,7 @@
 		log_debug("Ambush game master submenu unable to find turf of referenced atom. Referenced atom: [referenced_atom]")
 		return
 
-	var/xeno_type = RoleAuthority.get_caste_by_text(spawning_xeno_name)
+	var/xeno_type = GLOB.RoleAuthority.get_caste_by_text(spawning_xeno_name)
 
 	if(!xeno_type)
 		log_debug("Ambush game master submenu unable to find xeno type. Xeno type name: [spawning_xeno_name]")

@@ -19,11 +19,11 @@
 		return ..()
 	else if(istype(target,/obj/item/reagent_container/food/snacks/grown))
 		var/obj/item/reagent_container/food/snacks/grown/G = target
-		grown_seed = seed_types[G.plantname]
+		grown_seed = GLOB.seed_types[G.plantname]
 		grown_reagents = G.reagents
 	else if(istype(target,/obj/item/grown))
 		var/obj/item/grown/G = target
-		grown_seed = seed_types[G.plantname]
+		grown_seed = GLOB.seed_types[G.plantname]
 		grown_reagents = G.reagents
 	else if(istype(target,/obj/item/seeds))
 		var/obj/item/seeds/S = target
@@ -48,7 +48,7 @@
 	dat += "<tr><td><b>Potency</b></td><td>[grown_seed.potency]</td></tr>"
 	dat += "</table>"
 
-	if(grown_reagents && grown_reagents.reagent_list && grown_reagents.reagent_list.len)
+	if(grown_reagents && LAZYLEN(grown_reagents.reagent_list))
 		dat += "<h2>Reagent Data</h2>"
 		dat += "<br>This sample contains: "
 		for(var/datum/reagent/R in grown_reagents.reagent_list)
@@ -64,8 +64,8 @@
 	else if(grown_seed.immutable > 0)
 		dat += "This plant does not possess genetics that are alterable.<br>"
 
-	if(grown_seed.products && grown_seed.products.len)
-		dat += "The mature plant will produce [grown_seed.products.len == 1 ? "fruit" : "[grown_seed.products.len] varieties of fruit"].<br>"
+	if(LAZYLEN(grown_seed.products))
+		dat += "The mature plant will produce [length(grown_seed.products) == 1 ? "fruit" : "[length(grown_seed.products)] varieties of fruit"].<br>"
 
 	if(grown_seed.requires_nutrients)
 		if(grown_seed.nutrient_consumption < 0.05)
@@ -83,7 +83,7 @@
 		else
 			dat += "It requires a stable supply of water.<br>"
 
-	if(grown_seed.mutants && grown_seed.mutants.len)
+	if(LAZYLEN(grown_seed.mutants))
 		dat += "It exhibits a high degree of potential subspecies shift.<br>"
 
 	dat += "It thrives in a temperature of [grown_seed.ideal_heat] Kelvin."
@@ -138,9 +138,9 @@
 		dat += "<br>It will periodically alter the local temperature by [grown_seed.alter_temp] degrees Kelvin."
 
 	if(grown_seed.biolum)
-		dat += "<br>It is [grown_seed.biolum_colour ? "<font color='[grown_seed.biolum_colour]'>bio-luminescent</font>" : "bio-luminescent"]."
+		dat += "<br>It is [grown_seed.biolum_color ? "<font color='[grown_seed.biolum_color]'>bio-luminescent</font>" : "bio-luminescent"]."
 	if(grown_seed.flowers)
-		dat += "<br>It has [grown_seed.flower_colour ? "<font color='[grown_seed.flower_colour]'>flowers</font>" : "flowers"]."
+		dat += "<br>It has [grown_seed.flower_color ? "<font color='[grown_seed.flower_color]'>flowers</font>" : "flowers"]."
 
 	if(dat)
 		show_browser(user, dat, "Plant Analysis", "plant_analyzer")

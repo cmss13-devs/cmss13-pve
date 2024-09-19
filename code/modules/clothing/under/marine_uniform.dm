@@ -17,6 +17,7 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	drop_sound = "armorequip"
 	///Makes it so that we can see the right name in the vendor.
 	var/specialty = "USCM"
 	///List of map variants that use sleeve rolling on something else, like snow uniforms rolling the collar, and therefore shouldn't hide patches etc when rolled.
@@ -385,6 +386,12 @@
 	desc = "The crisp uniform of a senior member of the Provost Office."
 	icon_state = "provost_tml"
 	worn_state = "provost_tml"
+
+/obj/item/clothing/under/marine/mp/provost/chief
+	name = "\improper Provost Command Uniform"
+	desc = "The crisp uniform of a commanding member of the Provost Office."
+	icon_state = "provost_ci"
+	worn_state = "provost_ci"
 
 /obj/item/clothing/under/marine/mp/provost/marshal
 	name = "\improper Provost Marshal Uniform"
@@ -777,6 +784,14 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
 
+/obj/item/clothing/under/colonist/white_service
+	name = "white service uniform"
+	desc = "A white dress shirt and tie with sleek pants. Standard clothing for anyone on professional business."
+	icon_state = "CO_service"
+	worn_state = "CO_service"
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_MARINE
+
 /obj/item/clothing/under/colonist/wy_joliet_shopsteward
 	name = "steward utilities"
 	desc = "A stylish brown vest and shorts - uniforms like this are often worn by clerks and shop stewards."
@@ -797,6 +812,7 @@
 	displays_id = FALSE
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
+
 /obj/item/clothing/under/tshirt/gray_blu
 	name = "gray T-shirt and jeans"
 	desc = "A comfortable gray T-shirt and blue jeans."
@@ -859,7 +875,7 @@
 	worn_state = "liaison_formal"
 
 /obj/item/clothing/under/liaison_suit/suspenders
-	name = "liaison's attire"
+	name = "liaison's suspenders"
 	desc = "A collared shirt, complimented by a pair of suspenders. Worn by Weyland-Yutani employees who ask the tough questions. Smells faintly of cigars and bad acting."
 	icon_state = "liaison_suspenders"
 	worn_state = "liaison_suspenders"
@@ -881,6 +897,12 @@
 	desc = "A pair of khaki slacks paired with a light blue button-down shirt. A popular look with those in the corporate world that conduct the majority of their business from country clubs."
 	icon_state = "corporate_ivy"
 	worn_state = "corporate_ivy"
+
+/obj/item/clothing/under/liaison_suit/orange
+	name = "orange outfit"
+	desc = "A pair of black pants paired with a very Wey-Yu orange shirt. A popular look with those in the corporate world that conduct the majority of their business from Weyland Yutani offices."
+	icon_state = "corporate_orange"
+	worn_state = "corporate_orange"
 
 /obj/item/clothing/under/liaison_suit/corporate_formal
 	name = "white suit pants"
@@ -909,11 +931,24 @@
 /obj/item/clothing/under/marine/reporter
 	name = "combat correspondent uniform"
 	desc = "A relaxed and robust uniform fit for any potential reporting needs."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_uniform"
-	worn_state = "wc_uniform"
-	contained_sprite = TRUE
-	flags_atom = NO_NAME_OVERRIDE
+	icon_state = "cc_white"
+	worn_state = "cc_white"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
+/obj/item/clothing/under/marine/reporter/black
+	icon_state = "cc_black"
+	worn_state = "cc_black"
+
+/obj/item/clothing/under/marine/reporter/orange
+	icon_state = "cc_orange"
+	worn_state = "cc_orange"
+
+/obj/item/clothing/under/marine/reporter/red
+	icon_state = "cc_red"
+	worn_state = "cc_red"
 
 /obj/item/clothing/under/twe_suit
 	name = "representative's fine suit"
@@ -1004,6 +1039,31 @@
 	desc = "A cheap uniform made for Synthetic labor. Tomorrow, Together."
 	icon_state = "working_joe"
 	worn_state = "working_joe"
+	flags_item = NO_CRYO_STORE
+	var/obj/structure/machinery/camera/camera
+
+/obj/item/clothing/under/rank/synthetic/joe/Initialize()
+	. = ..()
+	camera = new /obj/structure/machinery/camera/autoname/almayer/containment/ares(src)
+
+/obj/item/clothing/under/rank/synthetic/joe/Destroy()
+	QDEL_NULL(camera)
+	return ..()
+
+/obj/item/clothing/under/rank/synthetic/joe/equipped(mob/living/carbon/human/mob, slot)
+	if(camera)
+		camera.c_tag = mob.name
+	..()
+
+/obj/item/clothing/under/rank/synthetic/joe/dropped(mob/living/carbon/human/mob)
+	if(camera)
+		camera.c_tag = "3RR0R"
+	..()
+
+/obj/item/clothing/under/rank/synthetic/joe/get_examine_text(mob/user)
+	. = ..()
+	if(camera)
+		. += SPAN_ORANGE("There is a small camera mounted to the front.")
 
 /obj/item/clothing/under/rank/synthetic/joe/engi
 	name = "\improper Working Joe Hazardous Uniform"
@@ -1064,7 +1124,7 @@
 
 /obj/item/clothing/under/marine/cbrn //CBRN MOPP suit
 	name = "\improper M3 MOPP suit"
-	desc = "M3 MOPP suits are specially designed and engineered to protect the wearer from unshielded exposure to any Chemical, Biological, Radiological, or Nuclear (CBRN) threats in the field. Despite somewhat resembling commonplace synthetic rubber HAZMAT suits, the Venlar composition provides a significantly more dense and durable baseline material, allowing for modifications without the loss of its air-tight nature. The wearer’s comfort has been significantly taken into consideration, with the suit providing sufficient freedom of movement for even delicate maneuvers and movements once it is donned. As the sealed environment retains many issues from the past, measures have been taken to significantly reduce the suit's passive heat absorption and increase internal absorbance through linings, as well as the capability to fully integrate with external cooling, air cycling, and other life support systems. Strips of M11 detector paper are included with each suit, designed to be slotted into the dominant arm of the wearer’s protective suit, the non-dominant wrist, and then back to the knee, providing at-a-glance warning signs across alternating sides of the body while working. The arm and knee markers are intended to be on the user's dominant The papers change color upon contact with harmful chemical agents, displaying a clear white initially and turning red when activated. The suit has a recommended lifespan of twenty-four hours once contact with a toxic environment is made, but depending on the severity this can be shortened to eight hours or less. Beyond that point, the accuracy of the detector papers deteriorates significantly, as does the protection of the suit itself."
+	desc = "M3 MOPP suits are specially designed and engineered to protect the wearer from unshielded exposure to any Chemical, Biological, Radiological, or Nuclear (CBRN) threats in the field. The suit has a recommended lifespan of twenty-four hours once contact with a toxic environment is made, but depending on the severity this can be shortened to eight hours or less."
 	desc_lore = "Since the outbreak of the New Earth Plague in 2157 and the subsequent Interstellar Commerce Commission (ICC) sanctioned decontamination of the colony and its 40 million inhabitants, the abandoned colony has been left under a strict quarantine blockade to prevent any potential scavengers from spreading what’s left of the highly-durable airborne flesh-eating bacteria. Following those events, the three major superpowers have been investing heavily in the development and procurement of CBRN equipment, in no small part due to the extensive damage that the plague and other similar bioweapons could do. The \"Marine 70\" upgrade package and the launch of the M3 pattern armor series saw the first M3-M prototypes approved for CBRN usage."
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	icon_state = "cbrn"
@@ -1205,6 +1265,7 @@
 	button.overlays += button_overlay
 
 /datum/action/item_action/specialist/toggle_cbrn_hood/action_activate()
+	. = ..()
 	var/obj/item/clothing/under/marine/cbrn/armor = holder_item
 	if(!istype(armor))
 		return
