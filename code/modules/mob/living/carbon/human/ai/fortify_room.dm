@@ -30,7 +30,7 @@
 		to_chat(src, SPAN_NOTICE("Room too large to fully fortify. Capped at [length(turf_list)]."))
 
 /proc/recursive_turf_room_fortify(turf/scan_turf, list/turf_list, cade_type, folding_cade_type)
-	if(length(turf_list) > 256)
+	if(length(turf_list) > 195) // We're choosing 195 because 200 is the BYOND recursion limit so we're just playing it safe
 		return FALSE // abort if the room is too large
 	if(istype(scan_turf, /turf/closed))
 		return TRUE // abort if we're a wall
