@@ -671,12 +671,7 @@
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
 	desc = "This is used by Alpha squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "alpha_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	frequency = ALPHA_FREQ //default frequency is alpha squad channel, not PUB_FREQ
 
 /obj/item/device/radio/headset/almayer/marine/alpha/lead
@@ -705,12 +700,7 @@
 /obj/item/device/radio/headset/almayer/marine/bravo
 	name = "marine bravo radio headset"
 	desc = "This is used by Bravo squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "bravo_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	frequency = BRAVO_FREQ
 
 /obj/item/device/radio/headset/almayer/marine/bravo/lead
@@ -739,13 +729,8 @@
 /obj/item/device/radio/headset/almayer/marine/charlie
 	name = "marine charlie radio headset"
 	desc = "This is used by Charlie squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "charlie_headset"
 	frequency = CHARLIE_FREQ
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 
 /obj/item/device/radio/headset/almayer/marine/charlie/lead
 	name = "marine charlie leader radio headset"
@@ -773,12 +758,7 @@
 /obj/item/device/radio/headset/almayer/marine/delta
 	name = "marine delta radio headset"
 	desc = "This is used by Delta squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "delta_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	frequency = DELTA_FREQ
 
 /obj/item/device/radio/headset/almayer/marine/delta/lead
@@ -807,12 +787,7 @@
 /obj/item/device/radio/headset/almayer/marine/echo
 	name = "marine echo radio headset"
 	desc = "This is used by Echo squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "echo_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	frequency = ECHO_FREQ
 
 /obj/item/device/radio/headset/almayer/marine/echo/lead
@@ -842,12 +817,7 @@
 /obj/item/device/radio/headset/almayer/marine/cryo
 	name = "marine foxtrot radio headset"
 	desc = "This is used by Foxtrot squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "cryo_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	frequency = CRYO_FREQ
 
 /obj/item/device/radio/headset/almayer/marine/cryo/lead
@@ -875,12 +845,7 @@
 /obj/item/device/radio/headset/almayer/marine/mortar
 	name = "mortar crew radio headset"
 	desc = "This is used by the dust raider's bunker mortar crew to get feedback on how good the hits of that 80mm rain turned out. Comes with access to the engineering channel with :e, JTAC for coordinating with :j, Intel with :t, and request more shells supply with :u - this ain't Winchester Outpost!"
-	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "ce_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	initial_keys = list(/obj/item/device/encryptionkey/mortar)
 	volume = RADIO_VOLUME_RAISED
 
