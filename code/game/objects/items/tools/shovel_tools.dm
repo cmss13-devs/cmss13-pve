@@ -205,7 +205,7 @@
 // Entrenching tool.
 /obj/item/tool/shovel/etool
 	name = "USCM M61 entrenching tool"
-	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
+	desc = "A marine's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "etool"
 	item_state = "etool"
