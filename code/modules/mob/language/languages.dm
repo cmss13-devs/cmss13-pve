@@ -53,7 +53,7 @@
 	color = "ruspatois"
 	key = "9"
 
-syllables = list("che", "de", "da", "yo", "ti", "ion", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "yu", "suy", "des", "mo", "ven", "vo", "ro", "ko", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "kar", "su", "tuy", "sino", "kon", "men", "ma", "kal", "dro", "pag", "li")
+	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
 
 /datum/language/german
 	name = LANGUAGE_GERMAN
