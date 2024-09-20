@@ -99,6 +99,16 @@
 	if(isliving(mob))
 		living_mob = mob
 
+		// RU PVE ADDITION BEGIN - PIXEL_SHIFT
+
+	if(mob.shifting)
+		mob.pixel_shift(direct)
+		return FALSE
+	else if(mob.is_shifted)
+		mob.unpixel_shift()
+
+	//RU PVE END
+
 	if(world.time < next_movement)
 		return
 	if(living_mob && living_mob.body_position == LYING_DOWN && mob.crawling)
