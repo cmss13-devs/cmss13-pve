@@ -1203,19 +1203,19 @@
 /obj/item/clothing/accessory/storage/webbing/m3/recon
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingmag"
+	icon_state = "m3rwebbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3/mag/recon
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingmag"
+	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingmag"
+	icon_state = "m3rwebbingmshotgun"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
