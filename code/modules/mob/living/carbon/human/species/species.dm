@@ -401,7 +401,7 @@
 
 /datum/species/proc/get_offset_overlay_image(spritesheet, mob_icon, mob_state, color, slot)
 	// If we don't actually need to offset this, don't bother with any of the generation/caching.
-	if(!spritesheet && equip_adjust.len && equip_adjust[slot] && LAZYLEN(equip_adjust[slot]))
+	if(!spritesheet && length(equip_adjust) && equip_adjust[slot] && LAZYLEN(equip_adjust[slot]))
 
 		// Check the cache for previously made icons.
 		var/image_key = "[mob_icon]-[mob_state]-[color]"
@@ -479,7 +479,7 @@
 /datum/species/proc/handle_blood_splatter(mob/living/carbon/human/human, splatter_dir)
 	var/color_override
 	if(human.special_blood)
-		var/datum/reagent/D = chemical_reagents_list[human.special_blood]
+		var/datum/reagent/D = GLOB.chemical_reagents_list[human.special_blood]
 		if(D)
 			color_override = D.color
 

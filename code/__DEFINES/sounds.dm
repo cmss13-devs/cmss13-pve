@@ -32,6 +32,28 @@
 #define SOUND_CHANNEL_LOBBY 1023
 #define SOUND_CHANNEL_Z 1024
 
+
+//default byond sound echo list index positions.
+//ECHO_DIRECT and ECHO_ROOM are the only two that actually appear to do anything, and represent the dry and wet channels of the environment effects, respectively.
+#define ECHO_DIRECT 1
+#define ECHO_DIRECTHF 2
+#define ECHO_ROOM 3
+#define ECHO_ROOMHF 4
+#define ECHO_OBSTRUCTION 5
+#define ECHO_OBSTRUCTIONLFRATIO 6
+#define ECHO_OCCLUSION 7
+#define ECHO_OCCLUSIONLFRATIO 8
+#define ECHO_OCCLUSIONROOMRATIO 9
+#define ECHO_OCCLUSIONDIRECTRATIO 10
+#define ECHO_EXCLUSION 11
+#define ECHO_EXCLUSIONLFRATIO 12
+#define ECHO_OUTSIDEVOLUMEHF 13
+#define ECHO_DOPPLERFACTOR 14
+#define ECHO_ROLLOFFFACTOR 15
+#define ECHO_ROOMROLLOFFFACTOR 16
+#define ECHO_AIRABSORPTIONFACTOR 17
+#define ECHO_FLAGS 18
+
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1
 #define SOUND_ENVIRONMENT_GENERIC 0
@@ -110,3 +132,4 @@
 #define SCAPE_PL_LV759_DEEPCAVES list('sound/soundscape/lv759/outdoors/deepcave1.ogg','sound/soundscape/lv759/outdoors/deepcave2.ogg')
 #define SCAPE_PL_LV759_CAVES list('sound/soundscape/lv759/outdoors/windy_caverns_1.ogg','sound/soundscape/lv759/outdoors/windy_caverns_2.ogg','sound/soundscape/lv759/outdoors/windy_caverns_3.ogg',)
 #define SCAPE_PL_LV759_PLATEAU_OUTDOORS list('sound/soundscape/lv759/outdoors/derelict_plateau_1.ogg','sound/soundscape/lv759/outdoors/derelict_plateau_2.ogg',)
+#define SCAPE_PL_AICORE list('sound/soundscape/aicore/aicore_beep.ogg', 'sound/soundscape/aicore/aicore_ident.ogg', 'sound/soundscape/aicore/aicore_rumble1.ogg', 'sound/soundscape/aicore/aicore_rumble2.ogg', 'sound/soundscape/aicore/aicore_rumble3.ogg', 'sound/soundscape/aicore/aicore_rumble4.ogg', 'sound/soundscape/aicore/aicore_rumble5.ogg', 'sound/soundscape/aicore/aicore_tone1.ogg', 'sound/soundscape/aicore/aicore_tone2.ogg', 'sound/soundscape/aicore/aicore_tone3.ogg', 'sound/soundscape/aicore/aicore_tone4.ogg', 'sound/soundscape/aicore/aicore_tone5.ogg', 'sound/soundscape/aicore/aicore_tone6.ogg', 'sound/soundscape/aicore/aicore_tone7.ogg', 'sound/soundscape/aicore/aicore_tone8.ogg', 'sound/soundscape/aicore/aicore_tone9.ogg', 'sound/soundscape/aicore/aicore_tone10.ogg', 'sound/soundscape/aicore/aicore_tone11.ogg', 'sound/soundscape/aicore/aicore_tone12.ogg', 'sound/soundscape/aicore/aicore_tone13.ogg', 'sound/soundscape/aicore/aicore_tone14.ogg', 'sound/soundscape/aicore/aicore_tone15.ogg', 'sound/soundscape/aicore/aicore_tone16.ogg', 'sound/soundscape/aicore/aicore_tone17.ogg', 'sound/soundscape/aicore/aicore_tone18.ogg', )
