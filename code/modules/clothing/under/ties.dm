@@ -625,6 +625,21 @@
 		/obj/item/explosive/grenade/slug/baton,
 	)
 
+/obj/item/storage/internal/accessory/black_vest/m56
+	storage_slots = 3
+
+/obj/item/storage/internal/accessory/black_vest/m56/grenade
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton,
+	)
+
 /obj/item/clothing/accessory/storage/black_vest
 	name = "black webbing vest"
 	desc = "Robust black synthcotton vest with lots of pockets to hold whatever you need, but cannot hold in hands."
@@ -1128,6 +1143,13 @@
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
+/obj/item/clothing/accessory/pads/m56
+	name = "\improper M3 Shin Guards"
+	desc = "A set shinguards usually shipped with M3 pattern armor, though this set has been repurposed."
+	icon_state = "shinguard"
+	item_state = "shinguard"
+	slot = ACCESSORY_SLOT_SGDECOR
+
 /obj/item/clothing/accessory/paint/skull
 	name = "skull armor paint"
 	desc = "A set of paint tones to etch a skull into a Marine's armor."
@@ -1168,6 +1190,18 @@
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type)
 	update_icon()
+
+/obj/item/clothing/accessory/storage/webbing/m56
+	name = "\improper M56 Harness Clip-on Pouch"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m56pouch"
+	hold = /obj/item/storage/internal/accessory/black_vest/m56
+
+/obj/item/clothing/accessory/storage/webbing/m56/grenade
+	name = "\improper M56 Harness Grenade Band"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m56grenade"
+	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag
 	name = "\improper M3 Pattern Magazine Webbing"

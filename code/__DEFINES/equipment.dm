@@ -471,6 +471,7 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 #define ACCESSORY_SLOT_MEDAL "Medal"
 #define ACCESSORY_SLOT_PONCHO "Ponchos"
 #define ACCESSORY_SLOT_HOLSTER "Holster"
+#define ACCESSORY_SLOT_SGDECOR "SG Decor"
 #define ACCESSORY_SLOT_SGPAINT "SG Paint"
 #define ACCESSORY_SLOT_PAINT "Paint"
 #define ACCESSORY_SLOT_M3UTILITY "M3 Utility"
