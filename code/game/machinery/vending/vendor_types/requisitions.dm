@@ -274,8 +274,8 @@
 		list("M41AE2 Holo Target floors (10x24mm)", floor(scale * 2), /obj/item/ammo_magazine/rifle/lmg/holo_target, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED FIREARM AMMUNITION", -1, null, null),
-		list("VP78 Magazine", floor(scale * 11.2), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
-		list("SU-6 Smartpistol Magazine (.45)", floor(scale * 12,8), /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
+		list("VP78 Magazine", 11, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("SU-6 Smartpistol Magazine (.45)", 13, /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator Tank", floor(scale * 3), /obj/item/ammo_magazine/flamer_tank, VENDOR_ITEM_REGULAR),
 		list("M41AE2 Box Magazine (10x24mm)", floor(scale * 3), /obj/item/ammo_magazine/rifle/lmg, VENDOR_ITEM_REGULAR),
 		list("M41A MK1 Magazine (10x24mm)", floor(scale * 4.5), /obj/item/ammo_magazine/rifle/m41aMK1, VENDOR_ITEM_REGULAR),

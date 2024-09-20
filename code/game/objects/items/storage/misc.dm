@@ -31,8 +31,8 @@
 	open = !open
 	update_icon()
 	if(!length(contents))
-			..()
-	return
+		..()
+		return
 
 /obj/item/storage/donut_box/update_icon()
 	overlays.Cut()
