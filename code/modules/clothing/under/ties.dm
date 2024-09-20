@@ -1215,7 +1215,7 @@
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingmshotgun"
+	icon_state = "m3rwebbingshotgun"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
