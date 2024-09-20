@@ -282,7 +282,7 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/storage/rto/forecon, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/standard, VENDOR_ITEM_REGULAR),

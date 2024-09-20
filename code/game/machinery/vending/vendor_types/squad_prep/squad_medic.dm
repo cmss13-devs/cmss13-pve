@@ -345,12 +345,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("M3-R Pattern Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon, VENDOR_ITEM_REGULAR),
-		list("M3-R Pattern Shotgun Shell Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, VENDOR_ITEM_REGULAR),
-		list("M3-R Pattern M40 Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, VENDOR_ITEM_REGULAR),
-		list("M3-R Pattern Corpsman Webbing", 2, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 3, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Shotgun Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern M40 Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Corpsman Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/medic/forecon
