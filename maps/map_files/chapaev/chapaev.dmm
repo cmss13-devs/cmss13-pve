@@ -1061,7 +1061,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Sub-level Maintenance";
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
@@ -1072,7 +1073,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	dir = 1;
 	color = "#8B9490";
-	name = "\improper Bunk Room"
+	name = "\improper Bunk Room";
+	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor2,
@@ -1623,7 +1625,8 @@
 	},
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
-	name = "\improper Briefing Room"
+	name = "\improper Briefing Room";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -1780,7 +1783,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	name = "squad sergeant locker";
-	job = "Squad Sergeant"
+	req_access_txt = "244;237"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
@@ -2072,7 +2075,8 @@
 "rH" = (
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
-	name = "\improper Briefing Room"
+	name = "\improper Briefing Room";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -2328,7 +2332,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	dir = 1;
 	color = "#8B9490";
-	name = "\improper Canteen"
+	name = "\improper Canteen";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
@@ -2464,7 +2469,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Latrine";
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "241"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -2706,10 +2712,6 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/briefing)
 "wF" = (
-/obj/structure/closet/secure_closet{
-	name = "machinegunner locker";
-	req_access_txt = "243;238"
-	},
 /obj/item/weapon/gun/pkp/iff{
 	current_mag = null
 	},
@@ -2722,6 +2724,10 @@
 /obj/item/ammo_magazine/pkp,
 /obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;238"
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_two)
 "wI" = (
@@ -2892,7 +2898,8 @@
 "yl" = (
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
-	name = "\improper Sanitation Storage"
+	name = "\improper Sanitation Storage";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/supply)
@@ -2906,7 +2913,8 @@
 	},
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
-	name = "\improper Canteen"
+	name = "\improper Canteen";
+	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3045,7 +3053,8 @@
 	},
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
-	name = "\improper Infirmary"
+	name = "\improper Infirmary";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/medical)
@@ -3119,7 +3128,7 @@
 	color = "#8B9490";
 	name = "\improper Platoon Medic Office";
 	dir = 1;
-	req_one_access_txt = "231"
+	req_one_access_txt = "231;242"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
@@ -3361,10 +3370,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "Cv" = (
-/obj/structure/closet/secure_closet{
-	name = "machinegunner locker";
-	req_access_txt = "243;237"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -3375,6 +3380,10 @@
 /obj/item/ammo_magazine/pkp,
 /obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;237"
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
 "CD" = (
@@ -3478,7 +3487,7 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Platoon Commander's Office";
-	req_access = list(241)
+	req_one_access_txt = "241"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -3487,7 +3496,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	dir = 1;
 	color = "#8B9490";
-	name = "\improper Canteen"
+	name = "\improper Canteen";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
@@ -4458,7 +4468,7 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Platoon Medic Office";
-	req_one_access_txt = "231"
+	req_one_access_txt = "231;242"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -4861,8 +4871,7 @@
 	dir = 1;
 	color = "#8B9490";
 	name = "\improper Platoon Commander's Office";
-	req_one_access_txt = "240;241";
-	req_access = list()
+	req_one_access_txt = "240;241"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4892,7 +4901,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	name = "squad sergeant locker";
-	job = "Squad Sergeant"
+	req_access_txt = "244;238"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_two)
@@ -5144,7 +5153,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	dir = 1;
 	color = "#8B9490";
-	name = "\improper Locker Room"
+	name = "\improper Locker Room";
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -5203,7 +5213,7 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Platoon Commander's Office";
-	req_access = list(241)
+	req_one_access_txt = "241"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5244,7 +5254,8 @@
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
 	name = "\improper Maintenance Access";
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "230"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
