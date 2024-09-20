@@ -289,3 +289,15 @@
 	repair_materials = list("metal" = 0.3, "plasteel" = 0.45)
 
 	linkable = FALSE
+
+/obj/structure/barricade/plasteel/metal/wired/New()
+	can_wire = FALSE
+	is_wired = TRUE
+	climbable = FALSE
+	update_icon()
+	return ..()
+
+/obj/structure/barricade/plasteel/metal/wired/initialize_pass_flags(datum/pass_flags_container/PF)
+	..()
+	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB

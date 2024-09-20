@@ -56,7 +56,7 @@
 
 /datum/admins/proc/create_human_ai_patrol()
 	set name = "Create Human AI Patrol Waypoints"
-	set category = "Debug.HumanAI"
+	set category = "Game Master.HumanAI"
 
 	if(!check_rights(R_DEBUG))
 		return
