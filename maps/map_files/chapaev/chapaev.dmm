@@ -498,6 +498,12 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/squad_one)
+"eb" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_y = 32
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/dorms)
 "ed" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -752,9 +758,9 @@
 "gc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/np92{
-	pixel_y = 14;
-	pixel_x = -3
+	pixel_y = 10
 	},
+/obj/item/ammo_box/magazine/type73,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "gd" = (
@@ -1540,12 +1546,14 @@
 	layer = 3.6;
 	name = "Polkovnik Obnimashkin";
 	pixel_x = 1;
-	pixel_y = 26
+	pixel_y = 26;
+	anchored = 1
 	},
 /obj/item/clothing/head/uppcap/ushanka{
 	layer = 3.6;
 	pixel_x = 1;
-	pixel_y = 30
+	pixel_y = 30;
+	anchored = 1
 	},
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -1760,10 +1768,6 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "py" = (
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;238"
-	},
 /obj/item/clothing/accessory/armband,
 /obj/item/device/whistle,
 /obj/item/device/binoculars/range/designator,
@@ -1773,6 +1777,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	job = "Squad Sergeant"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
@@ -1830,7 +1838,9 @@
 	phone_id = "Sanitar's Office";
 	pixel_y = 35
 	},
-/obj/structure/machinery/iv_drip,
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -32
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "qi" = (
@@ -2129,7 +2139,8 @@
 /obj/structure/bookcase{
 	density = 0;
 	icon_state = "book-5";
-	pixel_y = 18
+	pixel_y = 18;
+	can_block_movement = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_sergeant)
@@ -3454,6 +3465,7 @@
 	pixel_y = 14;
 	pixel_x = -3
 	},
+/obj/item/ammo_box/magazine/type73,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "DH" = (
@@ -4100,7 +4112,8 @@
 /area/golden_arrow/supply)
 "Lk" = (
 /obj/structure/machinery/power/reactor{
-	name = "\improper S-52 fusion reactor 17"
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -4349,6 +4362,12 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
+"Ox" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = 32
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/platoon_sergeant)
 "OC" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -4419,10 +4438,10 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
+/obj/item/storage/pouch/cassette,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 7
 	},
-/obj/item/storage/pouch/cassette,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "PO" = (
@@ -4430,10 +4449,6 @@
 /area/golden_arrow/platoon_sergeant)
 "PP" = (
 /obj/structure/closet,
-/obj/item/clothing/head/uppcap/civi{
-	pixel_x = 8;
-	pixel_y = 8
-	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "PV" = (
@@ -4572,9 +4587,6 @@
 /area/golden_arrow/briefing)
 "Rr" = (
 /obj/structure/closet,
-/obj/item/clothing/head/uppcap/ushanka/civi{
-	pixel_y = 6
-	},
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -4690,6 +4702,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"SJ" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/medical)
 "SL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -4859,10 +4875,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Ur" = (
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;238"
-	},
 /obj/item/clothing/accessory/armband,
 /obj/item/device/whistle,
 /obj/item/device/binoculars/range/designator,
@@ -4877,6 +4889,10 @@
 	icon_state = "lattice1";
 	pixel_x = 16;
 	pixel_y = -15
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	job = "Squad Sergeant"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_two)
@@ -13206,7 +13222,7 @@ Wf
 Kw
 kz
 sB
-tG
+Ox
 NU
 tm
 CV
@@ -13367,7 +13383,7 @@ NU
 NU
 CM
 CM
-is
+eb
 gF
 pD
 gF
@@ -15944,7 +15960,7 @@ GI
 vC
 Kg
 Rf
-vC
+SJ
 vC
 rz
 CK

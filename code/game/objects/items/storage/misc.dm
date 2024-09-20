@@ -30,8 +30,8 @@
 	to_chat(user, message)
 	open = !open
 	update_icon()
-	if(!contents.len)
-		..()
+	if(!length(contents))
+			..()
 	return
 
 /obj/item/storage/donut_box/update_icon()
@@ -100,7 +100,7 @@
 		new /obj/item/reagent_container/food/drinks/cans/aspen(src)
 
 /obj/item/storage/beer_pack/update_icon()
-	if(contents.len == 1)
+	if(length(contents) == 1)
 		var/turf/T = get_turf(src)
 		var/obj/item/reagent_container/food/drinks/cans/aspen/B = new(T)
 		if(ishuman(loc))
@@ -109,7 +109,7 @@
 			H.put_in_inactive_hand(B)
 		qdel(src)
 	else
-		icon_state = "6_pack_[contents.len]"
+		icon_state = "6_pack_[length(contents)]"
 
 /obj/item/storage/box/loadout
 	name = "storage case"
