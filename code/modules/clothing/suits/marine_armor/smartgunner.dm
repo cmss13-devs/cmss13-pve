@@ -23,7 +23,7 @@
 		/obj/item/device/walkman,
 	)
 	var/list/smartgun_back = list(
-		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/machete/smartgunner,
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
 
@@ -145,9 +145,11 @@
 		/obj/item/device/walkman,
 	)
 	var/list/smartgun_back = list(
-		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/machete/smartgunner,
+		/obj/item/storage/belt/gun/smartgunner,
+		/obj/item/weapon/gun/smartgun,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()

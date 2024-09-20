@@ -1146,8 +1146,8 @@
 /obj/item/clothing/accessory/pads/m56
 	name = "\improper M3 Shin Guards"
 	desc = "A set shinguards usually shipped with M3 pattern armor, though this set has been repurposed."
-	icon_state = "shinguard"
-	item_state = "shinguard"
+	icon_state = "shinguards"
+	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_SGDECOR
 
 /obj/item/clothing/accessory/paint/skull
@@ -1196,6 +1196,13 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m56pouch"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56
+	slot = ACCESSORY_SLOT_M56UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m56/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
 
 /obj/item/clothing/accessory/storage/webbing/m56/grenade
 	name = "\improper M56 Harness Grenade Band"
