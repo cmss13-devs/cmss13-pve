@@ -569,10 +569,19 @@
 		/obj/item/ammo_magazine/rifle,
 	)
 
+/obj/item/storage/internal/accessory/webbing/m3/mag/recon
+	storage_slots = 4
+
 /obj/item/storage/internal/accessory/black_vest/m3shotgun
 	can_hold = list(
 		/obj/item/ammo_magazine/handful,
 	)
+
+/obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
+	storage_slots = 7
+
+/obj/item/storage/internal/accessory/black_vest/m3grenade/recon
+	storage_slots = 10
 
 /obj/item/clothing/accessory/storage/webbing
 	name = "webbing"
@@ -592,6 +601,16 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
+	)
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/storage/surgical_case/regular,
+		/obj/item/reagent_container/blood,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/device/healthanalyzer,
 	)
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade
@@ -1137,18 +1156,6 @@
 	item_state = "uaflag"
 	slot = ACCESSORY_SLOT_PAINT
 
-/obj/item/clothing/accessory/storage/webbing/m3/mag
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
-
-/obj/item/clothing/accessory/storage/webbing/m3/shotgun
-	name = "\improper M3 Pattern Shell Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
-
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
@@ -1162,11 +1169,17 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-/obj/item/clothing/accessory/storage/black_vest/m3/m40
-	name = "\improper M3 Pattern Grenade Webbing"
+/obj/item/clothing/accessory/storage/webbing/m3/mag
+	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
+	icon_state = "m3webbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
+
+/obj/item/clothing/accessory/storage/webbing/m3/shotgun
+	name = "\improper M3 Pattern Shell Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingshotgun"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
 
 /obj/item/clothing/accessory/storage/black_vest/m3
 	name = "\improper M3 Pattern Small Pouch Webbing"
@@ -1181,3 +1194,32 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+/obj/item/clothing/accessory/storage/black_vest/m3/m40
+	name = "\improper M3 Pattern Grenade Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag/recon
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/m40
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingmag"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingmag"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic
+	name = "\improper M3 Pattern Corpsman Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingmedic"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
