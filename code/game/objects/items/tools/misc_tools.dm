@@ -244,7 +244,7 @@
 			obj_target.renamedByPlayer = FALSE
 
 /obj/item/tool/pen/clicky
-	desc = "It's a WY brand extra clicky black ink pen."
+	desc = "It's an extra clicky black ink pen."
 	clicky = TRUE
 
 /obj/item/tool/pen/blue
@@ -252,7 +252,7 @@
 	pen_color = "blue"
 
 /obj/item/tool/pen/blue/clicky
-	desc = "It's a WY brand extra clicky blue ink pen."
+	desc = "It's an extra clicky blue ink pen."
 	clicky = TRUE
 
 /obj/item/tool/pen/red
@@ -260,7 +260,7 @@
 	pen_color = "red"
 
 /obj/item/tool/pen/red/clicky
-	desc = "It's a WY brand extra clicky red ink pen."
+	desc = "It's an extra clicky red ink pen."
 	clicky = TRUE
 
 /obj/item/tool/pen/green
@@ -268,7 +268,7 @@
 	pen_color = "green"
 
 /obj/item/tool/pen/green/clicky
-	desc = "It's a WY brand extra clicky green ink pen."
+	desc = "It's an extra clicky green ink pen."
 	clicky = TRUE
 
 /obj/item/tool/pen/invisible

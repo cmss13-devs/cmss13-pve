@@ -236,7 +236,7 @@
 		list("Shotgun Shell Pouch", round(scale * 15), /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
 		list("Medium General Pouch", round(scale * 15), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
 		list("Pistol Magazine Pouch", round(scale * 15), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("Pistol Pouch", round(scale * 15), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("Pistol Pouch", round(scale * 15), /obj/item/storage/pouch/pistol/alt, VENDOR_ITEM_REGULAR),
 		list("Type 50 E-Tool Pouch", round(scale * 15), /obj/item/storage/pouch/etool, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED POUCHES", -1, null, null, null),
