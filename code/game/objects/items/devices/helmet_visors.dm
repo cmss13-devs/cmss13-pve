@@ -64,7 +64,7 @@
 	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
 	current_mob_hud.add_hud_to(user, attached_helmet)
 	user.client.mouse_pointer_icon = 'icons/effects/cursors/aim_reticle.dmi'
-	user.client.color = "#E0FFFF"
+	user.client.color = "#F9D7C3"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
 	user.face_mouse = TRUE
