@@ -344,7 +344,7 @@
 	. = ..()
 
 	user.client.mouse_pointer_icon = 'icons/effects/cursors/aim_reticle.dmi'
-	user.client.color = "#F9D7C3"
+	user.client.color = "#FDE8D9"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
 	user.face_mouse = TRUE
