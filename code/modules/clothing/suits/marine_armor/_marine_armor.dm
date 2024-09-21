@@ -533,8 +533,104 @@
 	icon_state = "H3"
 	armor_variation = 0
 
-//Customizable M3s, lack internal storage but make up in modularity
+//===========================//SPECIALIST\\================================\\
+//=======================================================================\\
 
+/obj/item/clothing/suit/storage/marine/specialist
+	name = "\improper B18 defensive armor"
+	desc = "A heavy, rugged set of armor plates for when you really, really need to not die horribly. Slows you down though.\nComes with two tricord injectors in each arm guard."
+	icon_state = "xarmor"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	storage_slots = 2
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	specialty = "B18 defensive"
+	unacidable = TRUE
+	var/injections = 4
+
+/obj/item/clothing/suit/storage/marine/specialist/verb/inject()
+	set name = "Create Injector"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return 0
+
+	if(!injections)
+		to_chat(usr, "Your armor is all out of injectors.")
+		return 0
+
+	if(usr.get_active_hand())
+		to_chat(usr, "Your active hand must be empty.")
+		return 0
+
+	to_chat(usr, "You feel a faint hiss and an injector drops into your hand.")
+	var/obj/item/reagent_container/hypospray/autoinjector/skillless/O = new(usr)
+	usr.put_in_active_hand(O)
+	injections--
+	playsound(src,'sound/machines/click.ogg', 15, 1)
+	return
+
+/obj/item/clothing/suit/storage/marine/M3G
+	name = "\improper M3-G4 grenadier armor"
+	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM Grenadiers."
+	icon_state = "grenadier"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	specialty = "M3-G4 grenadier"
+	unacidable = TRUE
+	light_range = 5
+
+/obj/item/clothing/suit/storage/marine/M3T
+	name = "\improper M3-T light armor"
+	desc = "A custom set of M3 armor designed for users of long-ranged explosive weaponry."
+	icon_state = "demolitionist"
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	specialty = "M3-T light"
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	unacidable = TRUE
+
+/obj/item/clothing/suit/storage/marine/M3S
+	name = "\improper M3-S light armor"
+	desc = "A custom set of M3 armor designed for USCM Scouts."
+	icon_state = "scout_armor"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	specialty = "M3-S light"
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	unacidable = TRUE
+
+//==================Combat Correspondent==================\\
+
+/obj/item/clothing/suit/storage/marine/light/reporter
+	name = "press body armor"
+	desc = "Body armor used by war correspondents in battles and wars across the universe."
+	icon_state = "cc_armor"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+//===========================//CUSTOM ARMOR\\================================\\
+//=======================================================================\\
+//base armor, copies everything from the storage armor for the same traits
 /obj/item/clothing/suit/marine
 	name = "\improper M3 pattern marine armor"
 	desc = "Standard USCMC issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
@@ -734,7 +830,7 @@
 			M.visible_message(SPAN_DANGER("Your programming prevents you from wearing this!"))
 			return 0
 
-/obj/item/clothing/suit/marine/padless_lines
+/obj/item/clothing/suit/marine/lines
 	name = "M3 pattern ridged marine armor"
 	icon_state = "2"
 	specialty = "M3 pattern ridged marine"
@@ -745,13 +841,13 @@
 	specialty = "M3 pattern smooth marine"
 
 /obj/item/clothing/suit/marine/pads
-
+//same as the base armor, but this time has the shoulder pads
 /obj/item/clothing/suit/marine/pads/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/pads/pads = new()
 	src.attach_accessory(null, pads, TRUE)
 
-/obj/item/clothing/suit/marine/pads/padless_lines
+/obj/item/clothing/suit/marine/pads/lines
 	name = "M3 pattern ridged marine armor"
 	icon_state = "2"
 	specialty = "M3 pattern ridged marine"
@@ -777,6 +873,16 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
+/obj/item/clothing/suit/marine/light/lines
+	name = "M3 pattern ridged marine armor"
+	icon_state = "L2"
+	armor_variation = 0
+
+/obj/item/clothing/suit/marine/light/smooth
+	name = "M3 pattern smooth marine armor"
+	icon_state = "L3"
+	armor_variation = 0
+
 /obj/item/clothing/suit/marine/light/pads
 
 /obj/item/clothing/suit/marine/light/pads/Initialize(mapload)
@@ -784,7 +890,7 @@
 	var/obj/item/clothing/accessory/pads/pads = new()
 	src.attach_accessory(null, pads, TRUE)
 
-/obj/item/clothing/suit/marine/light/pads/padless_lines
+/obj/item/clothing/suit/marine/light/pads/lines
 	name = "M3 pattern ridged marine armor"
 	icon_state = "L2"
 	armor_variation = 0
@@ -812,6 +918,16 @@
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
+/obj/item/clothing/suit/marine/heavy/lines
+	name = "M3 pattern ridged marine armor"
+	icon_state = "L2"
+	armor_variation = 0
+
+/obj/item/clothing/suit/marine/heavy/smooth
+	name = "M3 pattern smooth marine armor"
+	icon_state = "L3"
+	armor_variation = 0
+
 /obj/item/clothing/suit/marine/heavy/pads
 
 /obj/item/clothing/suit/marine/heavy/pads/Initialize(mapload)
@@ -819,7 +935,7 @@
 	var/obj/item/clothing/accessory/pads/pads = new()
 	src.attach_accessory(null, pads, TRUE)
 
-/obj/item/clothing/suit/marine/heavy/pads/padless_lines
+/obj/item/clothing/suit/marine/heavy/pads/lines
 	name = "M3 pattern ridged marine armor"
 	icon_state = "L2"
 	armor_variation = 0
@@ -858,99 +974,4 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "B12 pattern marine"
-
-//===========================//SPECIALIST\\================================\\
-//=======================================================================\\
-
-/obj/item/clothing/suit/storage/marine/specialist
-	name = "\improper B18 defensive armor"
-	desc = "A heavy, rugged set of armor plates for when you really, really need to not die horribly. Slows you down though.\nComes with two tricord injectors in each arm guard."
-	icon_state = "xarmor"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 2
-	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	slowdown = SLOWDOWN_ARMOR_HEAVY
-	specialty = "B18 defensive"
-	unacidable = TRUE
-	var/injections = 4
-
-/obj/item/clothing/suit/storage/marine/specialist/verb/inject()
-	set name = "Create Injector"
-	set category = "Object"
-	set src in usr
-
-	if(usr.is_mob_incapacitated())
-		return 0
-
-	if(!injections)
-		to_chat(usr, "Your armor is all out of injectors.")
-		return 0
-
-	if(usr.get_active_hand())
-		to_chat(usr, "Your active hand must be empty.")
-		return 0
-
-	to_chat(usr, "You feel a faint hiss and an injector drops into your hand.")
-	var/obj/item/reagent_container/hypospray/autoinjector/skillless/O = new(usr)
-	usr.put_in_active_hand(O)
-	injections--
-	playsound(src,'sound/machines/click.ogg', 15, 1)
-	return
-
-/obj/item/clothing/suit/storage/marine/M3G
-	name = "\improper M3-G4 grenadier armor"
-	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM Grenadiers."
-	icon_state = "grenadier"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	slowdown = SLOWDOWN_ARMOR_HEAVY
-	specialty = "M3-G4 grenadier"
-	unacidable = TRUE
-	light_range = 5
-
-/obj/item/clothing/suit/storage/marine/M3T
-	name = "\improper M3-T light armor"
-	desc = "A custom set of M3 armor designed for users of long-ranged explosive weaponry."
-	icon_state = "demolitionist"
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	specialty = "M3-T light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	unacidable = TRUE
-
-/obj/item/clothing/suit/storage/marine/M3S
-	name = "\improper M3-S light armor"
-	desc = "A custom set of M3 armor designed for USCM Scouts."
-	icon_state = "scout_armor"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	specialty = "M3-S light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	unacidable = TRUE
-
-//==================Combat Correspondent==================\\
-
-/obj/item/clothing/suit/storage/marine/light/reporter
-	name = "press body armor"
-	desc = "Body armor used by war correspondents in battles and wars across the universe."
-	icon_state = "cc_armor"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 

@@ -409,7 +409,7 @@
 		list("ARMOR", -1, null, null),
 		list("M10 Pattern Marine Helmet", 0, /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Marine Armor", 0, /obj/item/clothing/suit/marine, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Ridged Marine Armor", 0, /obj/item/clothing/suit/marine/padless_lines, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Ridged Marine Armor", 0, /obj/item/clothing/suit/marine/lines, VENDOR_ITEM_REGULAR),
 		list("M3-EOD Pattern Heavy Armor", 0, /obj/item/clothing/suit/marine/heavy, VENDOR_ITEM_REGULAR),
 		list("M3-L Pattern Light Armor", 0, /obj/item/clothing/suit/marine/light, VENDOR_ITEM_REGULAR),
 

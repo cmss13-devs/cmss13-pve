@@ -556,33 +556,6 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 
-/obj/item/storage/internal/accessory/webbing/m3
-
-/obj/item/storage/internal/accessory/webbing/m3/generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/rifle,
-	)
-
-/obj/item/storage/internal/accessory/webbing/m3/mag
-	can_hold = list(
-		/obj/item/ammo_magazine/rifle,
-	)
-
-/obj/item/storage/internal/accessory/webbing/m3/mag/recon
-	storage_slots = 4
-
-/obj/item/storage/internal/accessory/black_vest/m3shotgun
-	can_hold = list(
-		/obj/item/ammo_magazine/handful,
-	)
-
-/obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-	storage_slots = 7
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-	storage_slots = 10
-
 /obj/item/clothing/accessory/storage/webbing
 	name = "webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
@@ -597,48 +570,6 @@
 
 /obj/item/storage/internal/accessory/black_vest
 	storage_slots = 5
-
-/obj/item/storage/internal/accessory/black_vest/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-	)
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/recon
-	storage_slots = 6
-	can_hold = list(
-		/obj/item/storage/surgical_case/regular,
-		/obj/item/reagent_container/blood,
-		/obj/item/tool/surgery/surgical_line,
-		/obj/item/tool/surgery/synthgraft,
-		/obj/item/device/healthanalyzer,
-	)
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 6
-	can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
-		/obj/item/explosive/grenade/slug/baton,
-	)
-
-/obj/item/storage/internal/accessory/black_vest/m56
-	storage_slots = 3
-
-/obj/item/storage/internal/accessory/black_vest/m56/grenade
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
-		/obj/item/explosive/grenade/slug/baton,
-	)
 
 /obj/item/clothing/accessory/storage/black_vest
 	name = "black webbing vest"
@@ -1191,6 +1122,97 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+/obj/item/storage/internal/accessory/webbing/m3
+
+/obj/item/storage/internal/accessory/webbing/m3/generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/rifle,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
+
+/obj/item/storage/internal/accessory/webbing/m3/mag
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/shotgun
+	name = "\improper M3 Pattern Shell Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingshotgun"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
+
+/obj/item/storage/internal/accessory/black_vest/m3shotgun
+	can_hold = list(
+		/obj/item/ammo_magazine/handful,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small
+	name = "\improper M3 Pattern Small Pouch Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingsmall"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/black_vest/m3generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40
+	name = "\improper M3 Pattern Grenade Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbing"
+	hold = /obj/item/storage/internal/accessory/webbing/m3/mag/recon
+
+/obj/item/storage/internal/accessory/webbing/m3/mag/recon
+	storage_slots = 4
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/m40
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3grenade/recon
+	storage_slots = 10
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
+	name = "\improper M3 Pattern Magazine Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingshotgun"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
+	storage_slots = 7
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic
+	name = "\improper M3 Pattern Corpsman Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	icon_state = "m3rwebbingmedic"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/storage/surgical_case/regular,
+		/obj/item/reagent_container/blood,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/device/healthanalyzer,
+	)
+
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper M56 Harness Clip-on Pouch"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
@@ -1204,63 +1226,35 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+/obj/item/storage/internal/accessory/black_vest/m56
+	storage_slots = 3
+
 /obj/item/clothing/accessory/storage/webbing/m56/grenade
 	name = "\improper M56 Harness Grenade Band"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m56grenade"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
-/obj/item/clothing/accessory/storage/webbing/m3/mag
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
+/obj/item/storage/internal/accessory/black_vest/m3grenade
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton,
+	)
 
-/obj/item/clothing/accessory/storage/webbing/m3/shotgun
-	name = "\improper M3 Pattern Shell Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
-
-/obj/item/clothing/accessory/storage/black_vest/m3
-	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/clothing/accessory/storage/black_vest/m3/Initialize(mapload)
-	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-	update_icon()
-
-/obj/item/clothing/accessory/storage/black_vest/m3/m40
-	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3webbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/mag/recon
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/m40
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/medic
-	name = "\improper M3 Pattern Corpsman Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
-	icon_state = "m3rwebbingmedic"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+/obj/item/storage/internal/accessory/black_vest/m56/grenade
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton,
+	)
