@@ -1057,14 +1057,14 @@
 
 /obj/item/clothing/accessory/pads/bracers
 	name = "\improper M3 Arm Bracers"
-	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCM."
+	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCMC."
 	icon_state = "bracers"
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
 /obj/item/clothing/accessory/pads/neckguard
 	name = "\improper M3 Neck Guard"
-	desc = "An attachable neck guard option for the M3 armor set worn by the USCM."
+	desc = "An attachable neck guard option for the M3 armor set worn by the USCMC."
 	icon_state = "neckguard"
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
@@ -1114,7 +1114,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to the M3 Pattern Marine armor standard for the USCMC. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -1134,7 +1134,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag
 	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	desc = "A variant of the M3 Pattern webbing that features pouches for pulse rifle magazines."
 	icon_state = "m3webbingmag"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag
 
@@ -1145,7 +1145,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
 	name = "\improper M3 Pattern Shell Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	desc = "A slightly modified variant of the M3 Pattern grenade webbing, fitted for 12 gauge shotgun shells."
 	icon_state = "m3webbingshotgun"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
 
@@ -1156,7 +1156,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/small
 	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -1168,12 +1168,12 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
 /obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 6
+	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/incendiary,
@@ -1185,8 +1185,8 @@
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper M3-R Pattern Magazine Webbing"
+	desc = "A set of magazine webbing made in an alternative configuration for standard M3 Pattern armor. This one is exclusively issued to Force Reconnoissance units."
 	icon_state = "m3rwebbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
 
@@ -1194,8 +1194,8 @@
 	storage_slots = 4
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper M3-R Pattern Grenade Webbing"
+	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
 	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
@@ -1203,8 +1203,8 @@
 	storage_slots = 10
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper M3-R Pattern Shell Webbing"
+	desc = "A modified variant of the M3-R Pattern grenade webbing for FORECON units, this one accepting 12 gauge."
 	icon_state = "m3rwebbingshotgun"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
 
@@ -1212,8 +1212,8 @@
 	storage_slots = 7
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
-	name = "\improper M3 Pattern Corpsman Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper M3-R Pattern Corpsman Webbing"
+	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 
@@ -1228,8 +1228,8 @@
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m56
-	name = "\improper M56 Harness Clip-on Pouch"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper Clip-on Pouch"
+	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."
 	icon_state = "m56pouch"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56
 	slot = ACCESSORY_SLOT_M56UTILITY
@@ -1244,8 +1244,8 @@
 	storage_slots = 3
 
 /obj/item/clothing/accessory/storage/webbing/m56/grenade
-	name = "\improper M56 Harness Grenade Band"
-	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
+	name = "\improper Clip-on Grenade Band"
+	desc = "A sturdy mess of synth-leather band designed to store a few grenades for M56 weapon operators."
 	icon_state = "m56grenade"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
 
