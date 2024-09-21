@@ -61,8 +61,9 @@
 
 /// Called by toggle_visor() to activate the visor's effects
 /obj/item/device/helmet_visor/proc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
-	current_mob_hud.add_hud_to(user, attached_helmet)
+	if(isnull(GLOB.huds[hud_type]?.hudusers[user]))
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+		current_mob_hud.add_hud_to(user, attached_helmet)
 	user.client.mouse_pointer_icon = 'icons/effects/cursors/aim_reticle.dmi'
 	user.client.color = "#F9D7C3"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
@@ -71,8 +72,9 @@
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
-	current_mob_hud.remove_hud_from(user, attached_helmet)
+	if(!isnull(GLOB.huds[hud_type]?.hudusers[user]))
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+		current_mob_hud.remove_hud_from(user, attached_helmet)
 	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
@@ -343,3 +345,26 @@
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
+
+/obj/item/device/helmet_visor/sight
+	name = "sight optic"
+	desc = "A standard M10 pattern helmet optic that grants its user point and shoot capabilities and provides tactical squad HUD display."
+
+/obj/item/device/helmet_visor/sight/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.mouse_pointer_icon = 'icons/effects/cursors/aim_reticle.dmi'
+	user.client.color = "#F9D7C3"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+	user.face_mouse = TRUE
+
+
+/obj/item/device/helmet_visor/sight/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+	user.face_mouse = FALSE

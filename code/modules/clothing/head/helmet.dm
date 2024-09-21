@@ -406,7 +406,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/helmet_overlay_icon = 'icons/mob/humans/onmob/head_1.dmi'
 
 	///Any visors built into the helmet
-	var/list/built_in_visors = list(new /obj/item/device/helmet_visor)
+	var/list/built_in_visors = list(new /obj/item/device/helmet_visor/sight)
 
 	///Any visors that have been added into the helmet
 	var/list/inserted_visors = list()
@@ -706,11 +706,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 				if(length(total_visors) > iterator)
 					var/obj/item/device/helmet_visor/next_visor = total_visors[iterator + 1]
 
-					if(!isnull(GLOB.huds[next_visor.hud_type]?.hudusers[user]))
-						iterator++
-						skipped_hud = TRUE
-						continue
-
 					if(!next_visor.can_toggle(user))
 						iterator++
 						skipped_hud = TRUE
@@ -772,7 +767,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A modified M10 marine helmet for ComTechs. Features a toggleable welding screen for eye protection."
 	icon_state = "tech_helmet"
 	specialty = "M10 technician"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/welding_visor)
+	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/welding_visor)
 
 /obj/item/clothing/head/helmet/marine/grey
 	desc = "A standard M10 Pattern Helmet. This one has not had a camouflage pattern applied to it yet. There is a built-in camera on the right side."
@@ -806,14 +801,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M50 tanker"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/welding_visor/tanker)
+	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/welding_visor/tanker)
 
 /obj/item/clothing/head/helmet/marine/medic
 	name = "\improper M10 corpsman helmet"
 	desc = "M10 combat helmet issued to marine hospital corpsmen. Has a red cross painted on its front for attracting the injured and snipers' attentions alike."
 	icon_state = "med_helmet"
 	specialty = "M10 pattern medic"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
+	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/medical/advanced)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 
 /obj/item/clothing/head/helmet/marine/medic/white
@@ -963,7 +958,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M10 pattern captain"
 	flags_atom = NO_SNOW_TYPE
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
+	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
 
 /obj/item/clothing/head/helmet/marine/MP
 	name = "\improper M10 pattern MP helmet"
@@ -987,7 +982,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "helmet"
 	item_state = "helmet"
 	specialty = "M10 pattern officer"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
+	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/medical/advanced)
 
 /obj/item/clothing/head/helmet/marine/mp/provost/marshal
 	name = "\improper Provost Marshal Cap"
