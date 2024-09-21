@@ -308,7 +308,7 @@
 	. = ..()
 	if(!on)
 		return UI_CLOSE
-	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+	if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 		return UI_UPDATE
 
 
@@ -383,7 +383,7 @@
 	. = ..()
 	if(.)
 		return
-	if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+	if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 		to_chat(usr, SPAN_WARNING("You are not authorised to configure the sentry."))
 		return
 	if(params["index"])
@@ -401,14 +401,8 @@
 					playsound(src, get_sfx("terminal_button"), 25, FALSE)
 					var/obj/structure/machinery/defenses/sentry/defense = sentry
 					if (defense.has_camera)
-						defense.set_watched_turfs()
-						var/list/turf/visible_turfs = defense.watching_turfs
-						var/list/bbox = get_bbox_of_atoms(visible_turfs)
-						var/center_x = (bbox[3] + bbox[1]) * 0.5
-						var/center_y = (bbox[4] + bbox[2]) * 0.5
-						var/size_x = bbox[3] - bbox[1] + 1
-						var/size_y = bbox[4] - bbox[2] + 1
-						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, center_x, center_y, defense.loc.z, size_x, size_y)
+						defense.set_range()
+						SEND_SIGNAL(src, COMSIG_CAMERA_SET_AREA, defense.range_bounds, defense.loc.z)
 
 					return TRUE
 				if("ping")

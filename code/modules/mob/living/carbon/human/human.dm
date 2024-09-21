@@ -13,7 +13,7 @@
 	create_reagents(1000)
 	if(!real_name || !name)
 		change_real_name(src, "unknown")
-
+	AddElement(/datum/element/strippable, GLOB.strippable_human_items, TYPE_PROC_REF(/mob/living/carbon/human, should_strip))
 	. = ..()
 
 	prev_gender = gender // Debug for plural genders
@@ -106,7 +106,7 @@
 		. += "Primary LZ: [SSticker.mode.active_lz.loc.loc.name]"
 
 	if(faction == FACTION_MARINE & !isnull(SSticker) && !isnull(SSticker.mode))
-		. += "Operation Name: [round_statistics.round_name]"
+		. += "Operation Name: [GLOB.round_statistics.round_name]"
 
 	if(assigned_squad)
 		if(assigned_squad.overwatch_officer)
@@ -115,7 +115,7 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in ROLES_USCM)
+	if(job in GLOB.ROLES_USCM)
 		. += ""
 		. += "<a href='?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
@@ -133,7 +133,7 @@
 			. += "Self Destruct Status: [SShijack.get_sd_eta()]"
 
 /mob/living/carbon/human/ex_act(severity, direction, datum/cause_data/cause_data)
-	if(body_position == LYING_DOWN)
+	if(body_position == LYING_DOWN && direction)
 		severity *= EXPLOSION_PRONE_MULTIPLIER
 
 
@@ -171,12 +171,12 @@
 	var/knockdown_minus_armor = min(knockdown_value * bomb_armor_mult, 1 SECONDS)
 	var/obj/item/item1 = get_active_hand()
 	var/obj/item/item2 = get_inactive_hand()
-	apply_effect(round(knockdown_minus_armor), WEAKEN)
-	apply_effect(round(knockdown_minus_armor), STUN) // Remove this to let people crawl after an explosion. Funny but perhaps not desirable.
+	apply_effect(floor(knockdown_minus_armor), WEAKEN)
+	apply_effect(floor(knockdown_minus_armor), STUN) // Remove this to let people crawl after an explosion. Funny but perhaps not desirable.
 	var/knockout_value = damage * 0.1
 	var/knockout_minus_armor = min(knockout_value * bomb_armor_mult * 0.5, 0.5 SECONDS) // the KO time is halved from the knockdown timer. basically same stun time, you just spend less time KO'd.
-	apply_effect(round(knockout_minus_armor), PARALYZE)
-	apply_effect(round(knockout_minus_armor) * 2, DAZE)
+	apply_effect(floor(knockout_minus_armor), PARALYZE)
+	apply_effect(floor(knockout_minus_armor) * 2, DAZE)
 	explosion_throw(severity, direction)
 
 	if(item1 && isturf(item1.loc))
@@ -270,48 +270,12 @@
 					return TRUE
 	return FALSE
 
+/**
+ * Handles any storage containers that the human is looking inside when auto-observed.
+ */
+/mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
+	. = ..()
 
-
-/mob/living/carbon/human/show_inv(mob/living/user)
-	if(ismaintdrone(user))
-		return
-	var/obj/item/clothing/under/suit = null
-	if(istype(w_uniform, /obj/item/clothing/under))
-		suit = w_uniform
-
-	user.set_interaction(src)
-	var/dat = {"
-	<B><HR><FONT size=3>[name]</FONT></B>
-	<BR><HR>
-	<BR><B>(Exo)Suit:</B> <A href='?src=\ref[src];item=[WEAR_JACKET]'>[(wear_suit ? wear_suit : "Nothing")]</A>
-	<BR><B>Suit Storage:</B> <A href='?src=\ref[src];item=[WEAR_J_STORE]'>[(s_store ? s_store : "Nothing")]</A> [((istype(wear_mask, /obj/item/clothing/mask) && istype(s_store, /obj/item/tank) && !( internal )) ? " <A href='?src=\ref[src];internal=1'>Set Internal</A>" : "")]
-	<BR><B>Back:</B> <A href='?src=\ref[src];item=[WEAR_BACK]'>[(back ? back : "Nothing")]</A> [((istype(wear_mask, /obj/item/clothing/mask) && istype(back, /obj/item/tank) && !( internal )) ? " <A href='?src=\ref[src];internal=1'>Set Internal</A>" : "")]
-	<BR><B>Head(Mask):</B> <A href='?src=\ref[src];item=[WEAR_FACE]'>[(wear_mask ? wear_mask : "Nothing")]</A>
-	<BR><B>Left Hand:</B> <A href='?src=\ref[src];item=[WEAR_L_HAND]'>[(l_hand ? l_hand  : "Nothing")]</A>
-	<BR><B>Right Hand:</B> <A href='?src=\ref[src];item=[WEAR_R_HAND]'>[(r_hand ? r_hand : "Nothing")]</A>
-	<BR><B>Gloves:</B> <A href='?src=\ref[src];item=[WEAR_HANDS]'>[(gloves ? gloves : "Nothing")]</A>
-	<BR><B>Eyes:</B> <A href='?src=\ref[src];item=[WEAR_EYES]'>[(glasses ? glasses : "Nothing")]</A>
-	<BR><B>Left Ear:</B> <A href='?src=\ref[src];item=[WEAR_L_EAR]'>[(wear_l_ear ? wear_l_ear : "Nothing")]</A>
-	<BR><B>Right Ear:</B> <A href='?src=\ref[src];item=[WEAR_R_EAR]'>[(wear_r_ear ? wear_r_ear : "Nothing")]</A>
-	<BR><B>Head:</B> <A href='?src=\ref[src];item=[WEAR_HEAD]'>[(head ? head : "Nothing")]</A>
-	<BR><B>Shoes:</B> <A href='?src=\ref[src];item=[WEAR_FEET]'>[(shoes ? shoes : "Nothing")]</A>
-	<BR><B>Belt:</B> <A href='?src=\ref[src];item=[WEAR_WAIST]'>[(belt ? belt : "Nothing")]</A> [((istype(wear_mask, /obj/item/clothing/mask) && istype(belt, /obj/item/tank) && !internal) ? " <A href='?src=\ref[src];internal=1'>Set Internal</A>" : "")]
-	<BR><B>Uniform:</B> <A href='?src=\ref[src];item=[WEAR_BODY]'>[(w_uniform ? w_uniform : "Nothing")]</A> [(suit) ? ((suit.has_sensor == UNIFORM_HAS_SENSORS) ? " <A href='?src=\ref[src];sensor=1'>Sensors</A>" : "") : null]
-	<BR><B>ID:</B> <A href='?src=\ref[src];item=[WEAR_ID]'>[(wear_id ? wear_id : "Nothing")]</A>
-	<BR><B>Left Pocket:</B> <A href='?src=\ref[src];item=[WEAR_L_STORE]'>[(l_store ? l_store : "Nothing")]</A>
-	<BR><B>Right Pocket:</B> <A href='?src=\ref[src];item=[WEAR_R_STORE]'>[(r_store ? r_store : "Nothing")]</A>
-	<BR>
-	[handcuffed ? "<BR><A href='?src=\ref[src];item=[WEAR_HANDCUFFS]'>Handcuffed</A>" : ""]
-	[legcuffed ? "<BR><A href='?src=\ref[src];item=[WEAR_LEGCUFFS]'>Legcuffed</A>" : ""]
-	[suit && LAZYLEN(suit.accessories) ? "<BR><A href='?src=\ref[src];tie=1'>Remove Accessory</A>" : ""]
-	[internal ? "<BR><A href='?src=\ref[src];internal=1'>Remove Internal</A>" : ""]
-	[istype(wear_id, /obj/item/card/id/dogtag) ? "<BR><A href='?src=\ref[src];item=id'>Retrieve Info Tag</A>" : ""]
-	<BR><A href='?src=\ref[src];splints=1'>Remove Splints</A>
-	<BR>
-	<BR><A href='?src=\ref[user];refresh=1'>Refresh</A>
-	<BR><A href='?src=\ref[user];mach_close=mob[name]'>Close</A>
-	<BR>"}
-	show_browser(user, dat, name, "mob[name]")
 
 /**
  * Handles any storage containers that the human is looking inside when auto-observed.
@@ -391,10 +355,10 @@
 		return "[face_name] (as [id_name])"
 	return face_name
 
-//Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when polyacided or when updating a human's name variable
+//Returns "Unknown" if facially unidentifiable and real_name if not. Useful for setting name when headless or when updating a human's name variable
 /mob/living/carbon/human/proc/get_face_name()
 	var/obj/limb/head/head = get_limb("head")
-	if(!head || head.disfigured || (head.status & LIMB_DESTROYED) || !real_name) //disfigured. use id-name if possible
+	if(!head || (head.status & LIMB_DESTROYED) || !real_name) //unidentifiable. use id-name if possible
 		return "Unknown"
 	return real_name
 
@@ -428,9 +392,6 @@
 
 
 /mob/living/carbon/human/Topic(href, href_list)
-	if(href_list["refresh"])
-		if(interactee&&(in_range(src, usr)))
-			show_inv(interactee)
 
 	if(href_list["mach_close"])
 		var/t1 = text("window=[]", href_list["mach_close"])
@@ -474,76 +435,6 @@
 				else
 					what = usr.get_active_hand()
 					usr.stripPanelEquip(what,src,slot)
-
-	if(href_list["internal"])
-
-		if(!usr.action_busy && !usr.is_mob_incapacitated() && Adjacent(usr))
-			attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(usr)]</font>")
-			usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
-			if(internal)
-				usr.visible_message(SPAN_DANGER("<B>[usr] is trying to disable [src]'s internals</B>"), null, null, 3)
-			else
-				usr.visible_message(SPAN_DANGER("<B>[usr] is trying to enable [src]'s internals.</B>"), null, null, 3)
-
-			if(do_after(usr, POCKET_STRIP_DELAY, INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-				if(internal)
-					internal.add_fingerprint(usr)
-					internal = null
-					visible_message("[src] is no longer running on internals.", null, null, 1)
-				else
-					if(istype(wear_mask, /obj/item/clothing/mask))
-						if(istype(back, /obj/item/tank))
-							internal = back
-						else if(istype(s_store, /obj/item/tank))
-							internal = s_store
-						else if(istype(belt, /obj/item/tank))
-							internal = belt
-						if(internal)
-							visible_message(SPAN_NOTICE("[src] is now running on internals."), null, null, 1)
-							internal.add_fingerprint(usr)
-
-				// Update strip window
-				if(usr.interactee == src && Adjacent(usr))
-					show_inv(usr)
-
-
-	if(href_list["splints"])
-		if(!usr.action_busy && !usr.is_mob_incapacitated() && Adjacent(usr))
-			if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) && (stat == DEAD || health < HEALTH_THRESHOLD_CRIT) && !get_target_lock(usr.faction_group))
-				to_chat(usr, SPAN_WARNING("You can't strip a crit or dead member of another faction!"))
-				return
-			attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their splints removed by [key_name(usr)]</font>")
-			usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to remove [key_name(src)]'s' splints </font>")
-			remove_splints(usr)
-
-	if(href_list["tie"])
-		if(!usr.action_busy && !usr.is_mob_incapacitated() && Adjacent(usr))
-			if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) && (stat == DEAD || health < HEALTH_THRESHOLD_CRIT) && !get_target_lock(usr.faction_group))
-				to_chat(usr, SPAN_WARNING("You can't strip a crit or dead member of another faction!"))
-				return
-			if(w_uniform && istype(w_uniform, /obj/item/clothing))
-				var/obj/item/clothing/under/U = w_uniform
-				if(!LAZYLEN(U.accessories))
-					return FALSE
-				var/obj/item/clothing/accessory/A = LAZYACCESS(U.accessories, 1)
-				if(LAZYLEN(U.accessories) > 1)
-					A = tgui_input_list(usr, "Select an accessory to remove from [U]", "Remove accessory", U.accessories)
-				if(!istype(A))
-					return
-				attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their accessory ([A]) removed by [key_name(usr)]</font>")
-				usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to remove [key_name(src)]'s' accessory ([A])</font>")
-				if(istype(A, /obj/item/clothing/accessory/holobadge) || istype(A, /obj/item/clothing/accessory/medal))
-					visible_message(SPAN_DANGER("<B>[usr] tears off \the [A] from [src]'s [U]!</B>"), null, null, 5)
-					if(U == w_uniform)
-						U.remove_accessory(usr, A)
-				else
-					if(HAS_TRAIT(src, TRAIT_UNSTRIPPABLE) && !is_mob_incapacitated()) //Can't strip the unstrippable!
-						to_chat(usr, SPAN_DANGER("[src] has an unbreakable grip on their equipment!"))
-						return
-					visible_message(SPAN_DANGER("<B>[usr] is trying to take off \a [A] from [src]'s [U]!</B>"), null, null, 5)
-					if(do_after(usr, get_strip_delay(usr, src), INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-						if(U == w_uniform)
-							U.remove_accessory(usr, A)
 
 	if(href_list["sensor"])
 		if(!usr.action_busy && !usr.is_mob_incapacitated() && Adjacent(usr))
@@ -668,16 +559,12 @@
 					var/t1 = copytext(trim(strip_html(input("Your name and time will be added to this new comment.", "Add a comment", null, null)  as message)), 1, MAX_MESSAGE_LEN)
 					if(!(t1) || usr.stat || usr.is_mob_restrained())
 						return
-					var/created_at = text("[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]", time2text(world.realtime, "MMM DD"), time2text(world.time, "[worldtime2text()]:ss"), game_year)
+					var/created_at = text("[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]", time2text(world.realtime, "MMM DD"), time2text(world.time, "[worldtime2text()]:ss"), GLOB.game_year)
 					var/new_comment = list("entry" = t1, "created_by" = list("name" = "", "rank" = ""), "deleted_by" = null, "deleted_at" = null, "created_at" = created_at)
 					if(istype(usr,/mob/living/carbon/human))
 						var/mob/living/carbon/human/U = usr
 						new_comment["created_by"]["name"] = U.get_authentification_name()
 						new_comment["created_by"]["rank"] = U.get_assignment()
-					else if(istype(usr,/mob/living/silicon/robot))
-						var/mob/living/silicon/robot/U = usr
-						new_comment["created_by"]["name"] = U.name
-						new_comment["created_by"]["rank"] = "[U.modtype] [U.braintype]"
 					if(!islist(R.fields["comments"]))
 						R.fields["comments"] = list("1" = new_comment)
 					else
@@ -711,9 +598,6 @@
 										spawn()
 											if(istype(usr,/mob/living/carbon/human))
 												var/mob/living/carbon/human/U = usr
-												U.handle_regular_hud_updates()
-											if(istype(usr,/mob/living/silicon/robot))
-												var/mob/living/silicon/robot/U = usr
 												U.handle_regular_hud_updates()
 
 			if(!modified)
@@ -797,10 +681,7 @@
 										counter++
 									if(istype(usr,/mob/living/carbon/human))
 										var/mob/living/carbon/human/U = usr
-										R.fields[text("com_[counter]")] = text("Made by [U.get_authentification_name()] ([U.get_assignment()]) on [time2text(world.realtime, "DDD MMM DD hh:mm:ss")], [game_year]<BR>[t1]")
-									if(istype(usr,/mob/living/silicon/robot))
-										var/mob/living/silicon/robot/U = usr
-										R.fields[text("com_[counter]")] = text("Made by [U.name] ([U.modtype] [U.braintype]) on [time2text(world.realtime, "DDD MMM DD hh:mm:ss")], [game_year]<BR>[t1]")
+										R.fields[text("com_[counter]")] = text("Made by [U.get_authentification_name()] ([U.get_assignment()]) on [time2text(world.realtime, "DDD MMM DD hh:mm:ss")], [GLOB.game_year]<BR>[t1]")
 
 	if(href_list["medholocard"])
 		change_holo_card(usr)
@@ -978,6 +859,7 @@
 	nutrition -= 40
 	apply_damage(-3, TOX)
 	addtimer(VARSET_CALLBACK(src, lastpuke, FALSE), 35 SECONDS)
+	reagents.remove_any(rand(15, 30))
 
 /mob/living/carbon/human/proc/get_visible_gender()
 	if(wear_suit && wear_suit.flags_inv_hide & HIDEJUMPSUIT && ((head && head.flags_inv_hide & HIDEMASK) || wear_mask))
@@ -988,9 +870,6 @@
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")
-	else
-		h.disfigured = 0
-	name = get_visible_name()
 
 	if(species && !(species.flags & NO_BLOOD))
 		restore_blood()
@@ -1027,6 +906,11 @@
 
 	..()
 
+/// Returns whether this person has a broken heart but is otherwise revivable
+/mob/living/carbon/human/proc/is_heart_broken()
+	var/datum/internal_organ/heart/heart = internal_organs_by_name["heart"]
+	return heart && heart.organ_status >= ORGAN_BROKEN && check_tod() && is_revivable(ignore_heart = TRUE)
+
 /mob/living/carbon/human/proc/is_lung_ruptured()
 	var/datum/internal_organ/lungs/L = internal_organs_by_name["lungs"]
 	return L && L.organ_status >= ORGAN_BRUISED
@@ -1037,7 +921,6 @@
 	if(L && !L.organ_status >= ORGAN_BRUISED)
 		src.custom_pain("You feel a stabbing pain in your chest!", 1)
 		L.damage = L.min_bruised_damage
-
 
 /mob/living/carbon/human/get_visible_implants(class = 0)
 	var/list/visible_objects = list()
@@ -1081,8 +964,8 @@
 
 	if(self)
 		var/list/L = get_broken_limbs() - list("chest","head","groin")
-		if(L.len > 0)
-			msg += "Your [english_list(L)] [L.len > 1 ? "are" : "is"] broken\n"
+		if(length(L) > 0)
+			msg += "Your [english_list(L)] [length(L) > 1 ? "are" : "is"] broken\n"
 	to_chat(usr,SPAN_NOTICE("You [self ? "take a moment to analyze yourself":"start analyzing [src]"]"))
 	if(toxloss > 20)
 		msg += "[self ? "Your" : "Their"] skin is slightly green\n"
@@ -1114,13 +997,13 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in ROLES_USCM)
+	if(job in GLOB.ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
 
-/mob/living/carbon/human/proc/set_species(new_species, default_colour)
+/mob/living/carbon/human/proc/set_species(new_species, default_color)
 	if(!new_species)
 		new_species = "Human"
 
@@ -1154,7 +1037,7 @@
 
 	species.create_organs(src)
 
-	if(species.base_color && default_colour)
+	if(species.base_color && default_color)
 		//Apply color.
 		r_skin = hex2num(copytext(species.base_color,2,4))
 		g_skin = hex2num(copytext(species.base_color,4,6))
@@ -1278,7 +1161,7 @@
 			else if(C.z != src.z || get_dist(src,C) < 1)
 				hud_used.locate_leader.icon_state = "trackondirect_lz"
 			else
-				hud_used.locate_leader.setDir(get_dir(src,C))
+				hud_used.locate_leader.setDir(Get_Compass_Dir(src,C))
 				hud_used.locate_leader.icon_state = "trackon_lz"
 			return
 		if(TRACKER_FTL)
@@ -1295,14 +1178,19 @@
 		if(TRACKER_PLTCO)
 			H = GLOB.marine_leaders[JOB_SO]
 			tracking_suffix = "_co"
+		if(TRACKER_CMP)
+			var/datum/job/command/warrant/cmp_job = GLOB.RoleAuthority.roles_for_mode[JOB_CHIEF_POLICE]
+			if(cmp_job?.active_cmp)
+				H = cmp_job.active_cmp
+			tracking_suffix = "_cmp"
 		if(TRACKER_CL)
-			var/datum/job/civilian/liaison/liaison_job = RoleAuthority.roles_for_mode[JOB_CORPORATE_LIAISON]
+			var/datum/job/civilian/liaison/liaison_job = GLOB.RoleAuthority.roles_for_mode[JOB_CORPORATE_LIAISON]
 			if(liaison_job?.active_liaison)
 				H = liaison_job.active_liaison
 			tracking_suffix = "_cl"
 		else
 			if(tracker_setting in squad_leader_trackers)
-				var/datum/squad/S = RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
+				var/datum/squad/S = GLOB.RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
 				H = S.squad_leader
 				tracking_suffix = tracker_setting
 
@@ -1319,11 +1207,11 @@
 	if(tracking_atom.z != src.z || get_dist(src, tracking_atom) < 1 || src == tracking_atom)
 		hud_used.locate_leader.icon_state = "trackondirect[tracking_suffix]"
 	else
-		hud_used.locate_leader.setDir(get_dir(src, tracking_atom))
+		hud_used.locate_leader.setDir(Get_Compass_Dir(src, tracking_atom))
 		hud_used.locate_leader.icon_state = "trackon[tracking_suffix]"
 
 /mob/living/carbon/proc/locate_nearest_nuke()
-	if(!bomb_set) return
+	if(!GLOB.bomb_set) return
 	var/obj/structure/machinery/nuclearbomb/N
 	for(var/obj/structure/machinery/nuclearbomb/bomb in world)
 		if(!istype(N) || N.z != src.z )
@@ -1337,7 +1225,7 @@
 	if(get_dist(src,N) < 1)
 		hud_used.locate_nuke.icon_state = "nuke_trackondirect"
 	else
-		hud_used.locate_nuke.setDir(get_dir(src,N))
+		hud_used.locate_nuke.setDir(Get_Compass_Dir(src,N))
 		hud_used.locate_nuke.icon_state = "nuke_trackon"
 
 
@@ -1403,35 +1291,34 @@
 
 /mob/living/carbon/human/verb/remove_your_splints()
 	set name = "Remove Your Splints"
-	set category = "Object"
+	set category = "IC"
 
 	remove_splints()
 
 // target = person whose splints are being removed
-// source = person removing the splints
-/mob/living/carbon/human/proc/remove_splints(mob/living/carbon/human/source)
-	var/mob/living/carbon/human/HT = src
-	var/mob/living/carbon/human/HS = source
+// user = person removing the splints
+/mob/living/carbon/human/proc/remove_splints(mob/living/carbon/human/user)
+	var/mob/living/carbon/human/target = src
 
-	if(!istype(HS))
-		HS = src
-	if(!istype(HS) || !istype(HT))
+	if(!istype(user))
+		user = src
+	if(!istype(user) || !istype(target))
 		return
 
 	var/cur_hand = "l_hand"
-	if(!HS.hand)
+	if(!user.hand)
 		cur_hand = "r_hand"
 
-	if(!HS.action_busy)
+	if(!user.action_busy)
 		var/list/obj/limb/to_splint = list()
 		var/same_arm_side = FALSE // If you are trying to splint yourself, need opposite hand to splint an arm/hand
-		if(HS.get_limb(cur_hand).status & LIMB_DESTROYED)
-			to_chat(HS, SPAN_WARNING("You cannot remove splints without a hand."))
+		if(user.get_limb(cur_hand).status & LIMB_DESTROYED)
+			to_chat(user, SPAN_WARNING("You cannot remove splints without a hand."))
 			return
 		for(var/bodypart in list("l_leg","r_leg","l_arm","r_arm","r_hand","l_hand","r_foot","l_foot","chest","head","groin"))
-			var/obj/limb/l = HT.get_limb(bodypart)
+			var/obj/limb/l = target.get_limb(bodypart)
 			if(l && (l.status & LIMB_SPLINTED))
-				if(HS == HT)
+				if(user == target)
 					if((bodypart in list("l_arm", "l_hand")) && (cur_hand == "l_hand"))
 						same_arm_side = TRUE
 						continue
@@ -1441,44 +1328,46 @@
 				to_splint.Add(l)
 
 		var/msg = "" // Have to use this because there are issues with the to_chat macros and text macros and quotation marks
-		if(to_splint.len)
-			if(do_after(HS, HUMAN_STRIP_DELAY * HS.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_ALL, BUSY_ICON_GENERIC, HT, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+		if(length(to_splint))
+			if(do_after(user, HUMAN_STRIP_DELAY * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_ALL, BUSY_ICON_GENERIC, target, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
 				var/can_reach_splints = TRUE
 				var/amount_removed = 0
 				if(wear_suit && istype(wear_suit,/obj/item/clothing/suit/space))
-					var/obj/item/clothing/suit/space/suit = HT.wear_suit
-					if(suit.supporting_limbs && suit.supporting_limbs.len)
-						msg = "[HS == HT ? "your":"\proper [HT]'s"]"
-						to_chat(HS, SPAN_WARNING("You cannot remove the splints, [msg] [suit] is supporting some of the breaks."))
+					var/obj/item/clothing/suit/space/suit = target.wear_suit
+					if(LAZYLEN(suit.supporting_limbs))
+						msg = "[user == target ? "your":"\proper [target]'s"]"
+						to_chat(user, SPAN_WARNING("You cannot remove the splints, [msg] [suit] is supporting some of the breaks."))
 						can_reach_splints = FALSE
 				if(can_reach_splints)
-					var/obj/item/stack/W = new /obj/item/stack/medical/splint(HS.loc)
-					W.amount = 0 //we checked that we have at least one bodypart splinted, so we can create it no prob. Also we need amount to be 0
-					W.add_fingerprint(HS)
-					for(var/obj/limb/l in to_splint)
+					var/obj/item/stack/medical/splint/new_splint = new(user.loc)
+					new_splint.amount = 0 //we checked that we have at least one bodypart splinted, so we can create it no prob. Also we need amount to be 0
+					new_splint.add_fingerprint(user)
+					for(var/obj/limb/cur_limb in to_splint)
 						amount_removed++
-						l.status &= ~LIMB_SPLINTED
+						cur_limb.status &= ~LIMB_SPLINTED
 						pain.recalculate_pain()
-						if(l.status & LIMB_SPLINTED_INDESTRUCTIBLE)
-							new /obj/item/stack/medical/splint/nano(HS.loc, 1)
-							l.status &= ~LIMB_SPLINTED_INDESTRUCTIBLE
-						else if(!W.add(1))
-							W = new /obj/item/stack/medical/splint(HS.loc)//old stack is dropped, time for new one
-							W.amount = 0
-							W.add_fingerprint(HS)
-							W.add(1)
-					msg = "[HS == HT ? "their own":"\proper [HT]'s"]"
-					HT.visible_message(SPAN_NOTICE("[HS] removes [msg] [amount_removed>1 ? "splints":"splint"]."), \
+						if(cur_limb.status & LIMB_SPLINTED_INDESTRUCTIBLE)
+							new /obj/item/stack/medical/splint/nano(user.loc, 1)
+							cur_limb.status &= ~LIMB_SPLINTED_INDESTRUCTIBLE
+						else if(!new_splint.add(1))
+							new_splint = new(user.loc)//old stack is dropped, time for new one
+							new_splint.amount = 0
+							new_splint.add_fingerprint(user)
+							new_splint.add(1)
+					if(new_splint.amount == 0)
+						qdel(new_splint) //we only removed nano splints
+					msg = "[user == target ? "their own":"\proper [target]'s"]"
+					target.visible_message(SPAN_NOTICE("[user] removes [msg] [amount_removed>1 ? "splints":"splint"]."), \
 						SPAN_NOTICE("Your [amount_removed>1 ? "splints are":"splint is"] removed."))
-					HT.update_med_icon()
+					target.update_med_icon()
 			else
-				msg = "[HS == HT ? "your":"\proper [HT]'s"]"
-				to_chat(HS, SPAN_NOTICE("You stop trying to remove [msg] splints."))
+				msg = "[user == target ? "your":"\proper [target]'s"]"
+				to_chat(user, SPAN_NOTICE("You stop trying to remove [msg] splints."))
 		else
 			if(same_arm_side)
-				to_chat(HS, SPAN_WARNING("You need to use the opposite hand to remove the splints on your arm and hand!"))
+				to_chat(user, SPAN_WARNING("You need to use the opposite hand to remove the splints on your arm and hand!"))
 			else
-				to_chat(HS, SPAN_WARNING("There are no splints to remove."))
+				to_chat(user, SPAN_WARNING("There are no splints to remove."))
 
 /mob/living/carbon/human/yautja/Initialize(mapload)
 	. = ..(mapload, new_species = "Yautja")
@@ -1621,7 +1510,7 @@
 			QDEL_NULL(legcuffed)
 			handcuff_update()
 	else
-		var/displaytime = max(1, round(breakouttime / 600)) //Minutes
+		var/displaytime = max(1, floor(breakouttime / 600)) //Minutes
 		to_chat(src, SPAN_WARNING("You attempt to remove [restraint]. (This will take around [displaytime] minute(s) and you need to stand still)"))
 		for(var/mob/O in viewers(src))
 			O.show_message(SPAN_DANGER("<B>[usr] attempts to remove [restraint]!</B>"), 1)
@@ -1707,6 +1596,31 @@
 	if(dizziness > 100 && !is_dizzy)
 		INVOKE_ASYNC(src, PROC_REF(dizzy_process))
 
+/proc/setup_human(mob/living/carbon/human/target, mob/new_player/new_player, is_late_join = FALSE)
+	new_player.spawning = TRUE
+	new_player.close_spawn_windows()
+	new_player.client.prefs.copy_all_to(target, new_player.job, is_late_join)
+
+	if(new_player.client.prefs.be_random_body)
+		var/datum/preferences/rand_prefs = new()
+		rand_prefs.randomize_appearance(target)
+
+	target.job = new_player.job
+	target.name = new_player.real_name
+	target.voice = new_player.real_name
+
+	if(new_player.mind)
+		new_player.mind_initialize()
+		new_player.mind.transfer_to(target, TRUE)
+		new_player.mind.setup_human_stats()
+
+	target.sec_hud_set_ID()
+	target.hud_set_squad()
+
+	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, regenerate_icons))
+	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_body), 1, 0)
+	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_hair))
+
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
 		var/obj/item/item = A
@@ -1714,3 +1628,18 @@
 			item.showoff(src)
 			return TRUE
 	return ..()
+
+/mob/living/carbon/human/on_knockedout_trait_gain(datum/source)
+	. = ..()
+
+	update_execute_hud()
+
+	return .
+
+/mob/living/carbon/human/on_knockedout_trait_loss(datum/source)
+	. = ..()
+
+	update_execute_hud()
+
+	return .
+

@@ -1,5 +1,5 @@
 /obj/item/hardpoint/primary/minigun
-	name = "LTAA-AP Minigun"
+	name = "\improper LTAA-AP Minigun"
 	desc = "A primary weapon for tanks that spews bullets"
 
 	icon_state = "ltaaap_minigun"
@@ -79,10 +79,10 @@
 		spin_stage -= delta_stage / spindown_time
 	else
 		return
-	spin_stage = Clamp(spin_stage, 1, stage_rate_len)
+	spin_stage = clamp(spin_stage, 1, stage_rate_len)
 
-	var/old_stage_rate = stage_rate[Floor(old_spin_stage)]
-	var/new_stage_rate = stage_rate[Floor(spin_stage)]
+	var/old_stage_rate = stage_rate[floor(old_spin_stage)]
+	var/new_stage_rate = stage_rate[floor(spin_stage)]
 
 	if(old_stage_rate != new_stage_rate)
 		stage_delay_mult = 1 / new_stage_rate

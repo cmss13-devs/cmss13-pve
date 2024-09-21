@@ -1,11 +1,14 @@
 GLOBAL_LIST_INIT_TYPED(underwear_m, /datum/sprite_accessory/underwear, setup_underwear(MALE))
 GLOBAL_LIST_INIT_TYPED(underwear_f, /datum/sprite_accessory/underwear, setup_underwear(FEMALE))
+GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, setup_underwear(null, TRUE))
 
-/proc/setup_underwear(restricted_gender)
+/proc/setup_underwear(restricted_gender, restricted)
 	var/list/underwear_list = list()
 	for(var/underwear_type in subtypesof(/datum/sprite_accessory/underwear))
 		var/datum/sprite_accessory/underwear/underwear_datum = new underwear_type
 		if(restricted_gender && underwear_datum.gender != restricted_gender && (underwear_datum.gender == MALE || underwear_datum.gender == FEMALE))
+			continue
+		if(restricted && !underwear_datum.restricted)
 			continue
 		if(underwear_datum.camo_conforming)
 			underwear_list["[underwear_datum.name] (Camo Conforming)"] = underwear_datum
@@ -28,6 +31,7 @@ GLOBAL_LIST_INIT_TYPED(underwear_f, /datum/sprite_accessory/underwear, setup_und
 /datum/sprite_accessory/underwear
 	icon = 'icons/mob/humans/underwear.dmi'
 	var/camo_conforming = FALSE
+	var/restricted = FALSE
 
 /datum/sprite_accessory/underwear/proc/get_image(mob_gender)
 	var/selected_icon_state = icon_state

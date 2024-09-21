@@ -53,12 +53,29 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/carpet,
 /area/template_noop)
+"z" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/wood,
+/area/template_noop)
 "A" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/carpet,
 /area/template_noop)
 "E" = (
 /turf/open/floor/wood,
+/area/template_noop)
+"I" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/weapon/gun/pistol/highpower/automag/tactical,
+/turf/open/floor/plating,
 /area/template_noop)
 "K" = (
 /obj/structure/bed/chair{
@@ -87,16 +104,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/carpet,
 /area/template_noop)
-"S" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/machinery/power/apc{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/template_noop)
 "T" = (
 /obj/effect/landmark/corpsespawner/prison_security,
 /obj/item/clothing/head/helmet/warden{
@@ -104,15 +111,6 @@
 	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating,
-/area/template_noop)
-"U" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/gun/pistol/highpower/tactical,
 /turf/open/floor/plating,
 /area/template_noop)
 "W" = (
@@ -140,7 +138,7 @@ L
 (2,1,1) = {"
 a
 a
-S
+z
 E
 E
 x
@@ -194,7 +192,7 @@ x
 (8,1,1) = {"
 a
 a
-U
+I
 e
 t
 x
