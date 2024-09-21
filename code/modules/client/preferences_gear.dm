@@ -441,6 +441,29 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/prop/helmetgarb/chaplain_patch
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/armor
+	category = "Armor Cosmetics"
+
+/datum/gear/armor/paint_sg
+	display_name = "Black Smartgun Harness Paint"
+	path = /obj/item/clothing/accessory/paint/sg
+	cost = 0
+
+/datum/gear/armor/paint_skull
+	display_name = "M3 Pattern Skull Paint"
+	path = /obj/item/clothing/accessory/paint
+	cost = 0
+
+/datum/gear/armor/paint_heart
+	display_name = "M3 Pattern Heart Paint"
+	path = /obj/item/clothing/accessory/paint/heart
+	cost = 0
+
+/datum/gear/armor/uaflag
+	display_name = "M3 Pattern Flag Paint"
+	path = /obj/item/clothing/accessory/paint/uaflag
+	cost = 0
+
 /datum/gear/paperwork
 	category = "Paperwork"
 
@@ -1188,23 +1211,3 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Marine Service Jacket"
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3
-
-/datum/gear/misc/paint_sg
-	display_name = "Black Smartgun Harness Paint"
-	path = /obj/item/clothing/accessory/paint
-	cost = 0
-
-/datum/gear/misc/paint_skull
-	display_name = "M3 Pattern Skull Paint"
-	path = /obj/item/clothing/accessory/paint/skull
-	cost = 0
-
-/datum/gear/misc/paint_heart
-	display_name = "M3 Pattern Heart Paint"
-	path = /obj/item/clothing/accessory/paint/heart
-	cost = 0
-
-/datum/gear/misc/uaflag
-	display_name = "M3 Pattern Flag Paint"
-	path = /obj/item/clothing/accessory/paint/uaflag
-	cost = 0

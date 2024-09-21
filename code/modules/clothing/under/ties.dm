@@ -1040,12 +1040,7 @@
 		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
 	item_state = icon_state
 
-/obj/item/clothing/accessory/paint
-	name = "camouflage paint"
-	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
-	icon_state = "blacksg"
-	item_state = "blacksg"
-	slot = ACCESSORY_SLOT_SGPAINT
+//===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
 	name = "\improper M3 Shoulder Pads"
@@ -1081,7 +1076,9 @@
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_SGDECOR
 
-/obj/item/clothing/accessory/paint/skull
+//===========================//CUSTOM ARMOR PAINT\\================================\\
+
+/obj/item/clothing/accessory/paint
 	name = "skull armor paint"
 	desc = "A set of paint tones to etch a skull into a Marine's armor."
 	icon_state = "skull"
@@ -1093,27 +1090,33 @@
 	desc = "A set of paint tones to etch a heart into a Marine's armor."
 	icon_state = "heart"
 	item_state = "heart"
-	slot = ACCESSORY_SLOT_PAINT
 
 /obj/item/clothing/accessory/paint/medic
 	name = "cross armor paint"
 	desc = "A set of paint tones to etch a red cross into a Marine's armor."
 	icon_state = "medic"
 	item_state = "medic"
-	slot = ACCESSORY_SLOT_PAINT
 
 /obj/item/clothing/accessory/paint/uaflag
 	name = "cross armor paint"
 	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
 	icon_state = "uaflag"
 	item_state = "uaflag"
-	slot = ACCESSORY_SLOT_PAINT
+
+/obj/item/clothing/accessory/paint/sg
+	name = "camouflage paint"
+	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
+	icon_state = "blacksg"
+	item_state = "blacksg"
+	slot = ACCESSORY_SLOT_SGPAINT
+
+//===========================//CUSTOM ARMOR WEBBING\\================================\\
 
 /obj/item/clothing/accessory/storage/webbing/m3
 	name = "\improper M3 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/generic
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
@@ -1122,9 +1125,8 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-/obj/item/storage/internal/accessory/webbing/m3
 
-/obj/item/storage/internal/accessory/webbing/m3/generic
+/obj/item/storage/internal/accessory/webbing/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
 		/obj/item/ammo_magazine/rifle,
@@ -1134,9 +1136,9 @@
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/mag
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag
 
-/obj/item/storage/internal/accessory/webbing/m3/mag
+/obj/item/storage/internal/accessory/webbing/m3mag
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
 	)
@@ -1170,13 +1172,25 @@
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
+/obj/item/storage/internal/accessory/black_vest/m3grenade
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/explosive/grenade/high_explosive,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
+		/obj/item/explosive/grenade/high_explosive/frag,
+		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/slug/baton,
+	)
+
 /obj/item/clothing/accessory/storage/webbing/m3/recon
 	name = "\improper M3 Pattern Magazine Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m3rwebbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3/mag/recon
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
 
-/obj/item/storage/internal/accessory/webbing/m3/mag/recon
+/obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
@@ -1234,18 +1248,6 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "m56grenade"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 6
-	can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
-		/obj/item/explosive/grenade/slug/baton,
-	)
 
 /obj/item/storage/internal/accessory/black_vest/m56/grenade
 	storage_slots = 4
