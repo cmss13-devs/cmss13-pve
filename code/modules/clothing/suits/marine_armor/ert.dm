@@ -288,7 +288,7 @@
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/light
 	name = "\improper 6B72-03 pattern UPP armor"
-	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear line forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to territorial forces, and used by some spetznaz."
+	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear line forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz."
 	icon_state = "upp_armor_light"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
@@ -302,6 +302,12 @@
 	time_to_equip = 10
 	storage_slots = 2
 	flags_inventory = null
+
+/obj/item/clothing/suit/storage/marine/faction/UPP/light/pap
+	name = "\improper 6B72-03 pattern UPP armor"
+	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear line forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz. This set lacks additional leg guards."
+	icon_state = "upp_armor_pap"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"

@@ -1,9 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aA" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
 "cO" = (
 /obj/structure/machinery/door/airlock/dropship_hatch/upp{
 	id = "port_door"
 	},
-/turf/open/floor/strata/floor2,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "cS" = (
 /obj/structure/platform/mineral{
@@ -18,7 +29,7 @@
 	pixel_x = 12;
 	pixel_y = 29
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "di" = (
 /turf/closed/shuttle/ert{
@@ -33,6 +44,24 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
+"eE" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"ft" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
 "hg" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp9"
@@ -44,27 +73,35 @@
 	pixel_x = -9
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -12
+	icon_state = "E"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "iN" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"jZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "kt" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
 	pixel_x = 23;
 	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "ld" = (
 /obj/effect/attach_point/weapon/midway/left_wing{
@@ -79,7 +116,11 @@
 	dir = 1;
 	pixel_y = 11
 	},
-/turf/open/floor/strata/floor2,
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "lm" = (
 /turf/closed/shuttle/ert{
@@ -90,17 +131,19 @@
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "nZ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
 	pixel_x = -23;
 	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "pv" = (
 /turf/closed/shuttle/ert{
@@ -129,10 +172,9 @@
 	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -15
+	icon_state = "W"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "um" = (
 /obj/effect/decal/warning_stripes{
@@ -142,10 +184,15 @@
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "wi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1;
+	pixel_x = -1
+	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
 	id = "aft_door"
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "wO" = (
 /turf/closed/shuttle/ert{
@@ -158,12 +205,15 @@
 	},
 /area/shuttle/ds_upp)
 "xv" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light{
 	dir = 8;
 	pixel_x = -14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "xE" = (
 /turf/closed/shuttle/ert{
@@ -175,11 +225,14 @@
 	attach_id = 7;
 	ship_tag = "dropship_upp"
 	},
-/obj/structure/barricade/handrail/strata,
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/turf/open/floor/strata/floor3/east,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "AK" = (
 /turf/closed/shuttle/ert{
@@ -187,7 +240,11 @@
 	},
 /area/shuttle/ds_upp)
 "BD" = (
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "BT" = (
 /turf/closed/shuttle/ert{
@@ -196,11 +253,14 @@
 	},
 /area/shuttle/ds_upp)
 "CV" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = 30
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "DG" = (
 /turf/closed/shuttle/ert{
@@ -208,12 +268,12 @@
 	opacity = 0
 	},
 /area/shuttle/ds_upp)
-"DR" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/upp{
-	dir = 8;
-	id = "starboard_door"
+"Fc" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
 	},
-/turf/open/floor/strata/floor2,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Fz" = (
 /turf/closed/shuttle/ert{
@@ -226,7 +286,14 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/strata/floor2,
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"FG" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "FY" = (
 /obj/structure/stairs{
@@ -275,6 +342,12 @@
 	icon_state = "upp3"
 	},
 /area/shuttle/ds_upp)
+"IK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
 "Jo" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
 /obj/effect/attach_point/weapon/midway/right_fore{
@@ -282,9 +355,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"Js" = (
-/turf/open/floor/strata/floor2,
-/area/shuttle/ds_upp)
 "Jy" = (
 /turf/template_noop,
 /area/template_noop)
@@ -294,7 +364,18 @@
 	pixel_x = -13;
 	pixel_y = 29
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"Ko" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "Kv" = (
 /obj/structure/bed/chair/vehicle{
@@ -312,16 +393,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/turf/open/floor/strata/floor2,
-/area/shuttle/ds_upp)
-"LP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_x = 19
-	},
-/turf/closed/shuttle/ert{
-	icon_state = "upp8"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "LW" = (
 /obj/structure/machinery/light{
@@ -333,10 +405,9 @@
 	pixel_x = -9
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -12
+	icon_state = "E"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "MF" = (
 /turf/closed/shuttle/ert{
@@ -350,14 +421,14 @@
 /area/shuttle/ds_upp)
 "Ou" = (
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp,
-/turf/open/floor/strata/floor2,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "OE" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	attach_id = 8;
 	ship_tag = "dropship_upp"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "PQ" = (
 /obj/effect/attach_point/weapon/midway/right_wing{
@@ -382,7 +453,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "RX" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
@@ -391,7 +461,7 @@
 	pixel_x = -6;
 	pixel_y = -16
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "Sn" = (
 /obj/effect/decal/warning_stripes{
@@ -402,7 +472,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata/floor3/east,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "Sx" = (
 /turf/closed/shuttle/ert{
@@ -410,8 +481,10 @@
 	},
 /area/shuttle/ds_upp)
 "Th" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"Tq" = (
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "TG" = (
 /turf/closed/shuttle/ert{
@@ -428,17 +501,16 @@
 	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -15
+	icon_state = "W"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Wy" = (
 /obj/effect/attach_point/crew_weapon/midway{
 	attach_id = 9;
 	ship_tag = "dropship_upp"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "Xb" = (
 /obj/effect/decal/warning_stripes{
@@ -449,12 +521,11 @@
 	icon_state = "S";
 	pixel_x = -5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Xe" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
@@ -469,11 +540,13 @@
 	},
 /area/shuttle/ds_upp)
 "XE" = (
-/obj/structure/barricade/handrail/strata,
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "Ya" = (
 /obj/effect/decal/warning_stripes{
@@ -486,19 +559,25 @@
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "YJ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_x = -30
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Zh" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light{
 	dir = 4;
 	pixel_x = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Zm" = (
 /turf/closed/shuttle/ert{
@@ -565,14 +644,14 @@ AK
 lf
 OE
 Yn
-Th
+Tq
 nZ
 xv
 YJ
-Th
+eE
 Gn
 FY
-LP
+Zm
 xE
 xE
 lm
@@ -580,19 +659,19 @@ lm
 (4,1,1) = {"
 AK
 Qk
-xv
+FG
 HB
-Js
+Th
 Ya
 um
-si
-si
-si
-si
+ft
+ft
+ft
+ft
 cU
 XE
 cS
-Yn
+jZ
 LW
 hS
 wi
@@ -615,24 +694,24 @@ cS
 Th
 Th
 Th
-Th
+Yn
 "}
 (6,1,1) = {"
 AK
 rr
 RX
 HB
-Js
+Th
 ey
 Yn
-hS
-hS
-hS
-hS
+aA
+aA
+aA
+aA
 JN
 XE
 cS
-um
+IK
 TO
 si
 BD
@@ -642,14 +721,14 @@ Hk
 Sx
 Sx
 AK
-lf
+Ko
 Wy
 Yn
-Th
+Tq
 kt
 Zh
 CV
-Th
+Fc
 Gn
 FY
 hg
@@ -683,8 +762,8 @@ Jy
 Jy
 Jy
 PQ
-DR
-DR
+cO
+cO
 xc
 Fz
 di

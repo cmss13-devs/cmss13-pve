@@ -1002,6 +1002,7 @@
 /datum/equipment_preset/upp/admin
 	name = "UPP Civilian Administrator"
 	flags = EQUIPMENT_PRESET_EXTRA
+	faction = list(FACTION_COLONIST, FACTION_UPP)
 	assignment = "Administrator"
 	role_comm_title = "ADMIN"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -1123,6 +1124,7 @@
 /datum/equipment_preset/upp/police
 	name = "UPP People's Armed Police Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
+	faction = list(FACTION_COLONIST, FACTION_UPP)
 	assignment = "People's Armed Police Militsioner"
 	role_comm_title = "MILTSY"
 	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
@@ -1154,6 +1156,7 @@
 /datum/equipment_preset/upp/police/riot
 	name = "UPP People's Armed Police Officer - Riot"
 	flags = EQUIPMENT_PRESET_EXTRA
+	faction = list(FACTION_COLONIST, FACTION_UPP)
 	assignment = "People's Armed Police Militsioner"
 	role_comm_title = "MILTSY"
 	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
@@ -1166,7 +1169,6 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
@@ -1184,7 +1186,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lead, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/light/pap, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/UPP/full, WEAR_WAIST)
 	//limbs

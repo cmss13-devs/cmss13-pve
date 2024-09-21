@@ -8,17 +8,21 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "c" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
-/area/shuttle/ert)
-"d" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "e" = (
 /obj/docking_port/mobile/emergency_response/ert3,
@@ -26,6 +30,16 @@
 	icon_state = "leftengine_1";
 	opacity = 0
 	},
+/area/shuttle/ert)
+"f" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "g" = (
 /turf/closed/shuttle/ert{
@@ -45,7 +59,7 @@
 	attach_id = 9;
 	ship_tag = "dropship_upp"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "l" = (
 /turf/closed/shuttle/ert{
@@ -63,12 +77,11 @@
 	icon_state = "W";
 	layer = 3.3
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 9;
 	dir = 8
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "p" = (
 /turf/closed/shuttle/ert{
@@ -90,7 +103,16 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
-/turf/open/floor/strata/floor3/east,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/ert)
+"t" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "u" = (
 /turf/closed/shuttle/ert{
@@ -126,20 +148,25 @@
 	},
 /area/shuttle/ert)
 "B" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/strata{
 	layer = 3.5
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "C" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/gun_rack/type71,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"D" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "E" = (
 /turf/closed/shuttle/ert{
@@ -153,12 +180,11 @@
 	},
 /area/shuttle/ert)
 "H" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random/barrel/red{
 	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
 	anchored = 1
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "I" = (
 /turf/closed/shuttle/ert{
@@ -166,7 +192,6 @@
 	},
 /area/shuttle/ert)
 "J" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/supply/ammo/type71{
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1;
@@ -179,14 +204,32 @@
 	pixel_x = 3;
 	anchored = 1
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "K" = (
 /turf/template_noop,
 /area/template_noop)
+"L" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"M" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
 "O" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
@@ -201,26 +244,22 @@
 	icon_state = "upp16"
 	},
 /area/shuttle/ert)
-"S" = (
-/turf/closed/shuttle/ert{
-	icon_state = "uppwall"
-	},
-/area/shuttle/ert)
 "T" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 1
+	icon_state = "S"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "U" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "V" = (
 /turf/closed/shuttle/ert{
@@ -249,12 +288,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair/vehicle{
 	dir = 4;
 	pixel_x = -9
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 
 (1,1,1) = {"
@@ -297,8 +335,8 @@ i
 i
 i
 i
-d
-w
+L
+L
 T
 Y
 "}
@@ -306,15 +344,15 @@ Y
 I
 X
 W
+D
 w
-w
-S
-S
-S
 k
-d
 w
-T
+w
+k
+i
+i
+t
 w
 "}
 (5,1,1) = {"
@@ -327,9 +365,9 @@ i
 i
 i
 i
-d
-w
-T
+M
+M
+f
 w
 "}
 (6,1,1) = {"
