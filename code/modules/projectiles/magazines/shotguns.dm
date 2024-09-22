@@ -193,6 +193,8 @@ also doesn't really matter. You can only reload them with handfuls.
 	max_rounds = 5
 
 /obj/item/ammo_magazine/internal/shotgun/type23
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+
 	caliber = "8g"
 	max_rounds = 4
 
