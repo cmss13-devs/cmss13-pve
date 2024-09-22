@@ -53,6 +53,9 @@
 /obj/structure/gun_rack/m41/unloaded
 	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/unloaded
 
+/obj/structure/gun_rack/m41/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
 	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
@@ -63,6 +66,9 @@
 
 /obj/structure/gun_rack/type71/unloaded
 	populate_type = /obj/item/weapon/gun/rifle/type71/unloaded
+
+/obj/structure/gun_rack/type71/empty
+	initial_stored = 0
 
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
@@ -104,6 +110,9 @@
 /obj/structure/gun_rack/flamer/unloaded
 	populate_type = /obj/item/weapon/gun/flamer/unloaded
 
+/obj/structure/gun_rack/flamer/unloaded
+	initial_stored = 0
+
 /obj/structure/gun_rack/mk221
 	name = "M120 shotgun rack"
 	icon_state = "mk221"
@@ -112,3 +121,6 @@
 	initial_stored = 2
 	allowed_type = /obj/item/weapon/gun/shotgun/combat
 	populate_type = /obj/item/weapon/gun/shotgun/combat
+
+/obj/structure/gun_rack/mk221/empty
+	initial_stored = 0
