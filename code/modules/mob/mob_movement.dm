@@ -99,7 +99,7 @@
 	if(isliving(mob))
 		living_mob = mob
 
-		// RU PVE ADDITION BEGIN - PIXEL_SHIFT
+	// RU PVE ADDITION BEGIN - PIXEL_SHIFT
 
 	if(mob.shifting)
 		mob.pixel_shift(direct)
