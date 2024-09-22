@@ -28,7 +28,7 @@
 	pixel_y = 19;
 	layer = 2.9
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_3_10_1{
 	icon_state = "floor_3_10_1"
 	},
 /area/vehicle/apc/aa)
@@ -46,7 +46,7 @@
 	pixel_x = 2;
 	pixel_y = -13
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
@@ -79,7 +79,7 @@
 	pixel_y = -11;
 	layer = 4
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
@@ -98,7 +98,7 @@
 /obj/structure/interior_viewport/terminal{
 	pixel_y = 12
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_4{
 	icon_state = "floor_1_4"
 	},
 /area/vehicle/apc/aa)
@@ -147,7 +147,7 @@
 	pixel_x = 4;
 	pixel_y = 16
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_4{
 	icon_state = "floor_1_4"
 	},
 /area/vehicle/apc/aa)
@@ -171,7 +171,7 @@
 	pixel_y = 1;
 	density = 0
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
@@ -208,7 +208,7 @@
 	name = "Right APC door";
 	tag = "right rear"
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_3{
 	icon_state = "floor_1_3"
 	},
 /area/vehicle/apc/aa)
@@ -221,12 +221,12 @@
 	dir = 1;
 	pixel_x = -8
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
 "B" = (
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_3{
 	icon_state = "floor_1_3"
 	},
 /area/vehicle/apc/aa)
@@ -258,7 +258,7 @@
 	pixel_y = 30;
 	pixel_x = 8
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
@@ -329,7 +329,7 @@
 /turf/open/void/vehicle,
 /area/space)
 "N" = (
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_4{
 	icon_state = "floor_1_4"
 	},
 /area/vehicle/apc/aa)
@@ -374,7 +374,7 @@
 	name = "Right APC door";
 	tag = "right front"
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_1_4{
 	icon_state = "floor_1_4"
 	},
 /area/vehicle/apc/aa)
@@ -404,7 +404,7 @@
 	buckling_y = 16;
 	pixel_y = 16
 	},
-/turf/open/shuttle/vehicle{
+/turf/open/shuttle/vehicle/floor_2{
 	icon_state = "floor_2"
 	},
 /area/vehicle/apc/aa)
