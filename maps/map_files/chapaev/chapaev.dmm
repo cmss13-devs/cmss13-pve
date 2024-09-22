@@ -1795,7 +1795,7 @@
 /obj/item/device/binoculars/range/designator,
 /obj/item/device/whistle,
 /obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/accessory/patch/upp/platoon,
+/obj/item/clothing/accessory/patch/upp/naval,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -3898,7 +3898,7 @@
 	},
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP/boiler,
-/obj/item/clothing/accessory/patch/upp/platoon,
+/obj/item/clothing/accessory/patch/upp/naval,
 /obj/item/clothing/accessory/patch/upp,
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/distress/UPP,

@@ -22,7 +22,7 @@
 	icon_state = "W";
 	layer = 3.3
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "e" = (
 /obj/docking_port/mobile/emergency_response/ert3,
@@ -106,7 +106,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "t" = (
 /obj/effect/decal/warning_stripes{
@@ -166,7 +166,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "E" = (
 /turf/closed/shuttle/ert{
@@ -268,10 +268,10 @@
 	},
 /area/shuttle/ert)
 "W" = (
-/obj/structure/bed/chair/dropship/pilot{
+/obj/structure/bed/chair/vehicle{
 	dir = 1
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "X" = (
 /obj/structure/blocker/invisible_wall,

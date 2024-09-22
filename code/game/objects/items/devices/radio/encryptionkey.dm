@@ -318,7 +318,7 @@
 
 /obj/item/device/encryptionkey/upp/kdo
 	name = "\improper UPP Kommando Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_UPP_KDO = TRUE, RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_CCT = TRUE)
+	channels = list(RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_KDO = TRUE, RADIO_CHANNEL_UPP_CCT = TRUE)
 
 /obj/item/device/encryptionkey/upp/command
 	name = "\improper UPP Command Radio Encryption Key"

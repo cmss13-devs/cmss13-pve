@@ -4,10 +4,10 @@
 /// UE,
 #define PAY_SHORT_UEC "UEC"
 
-/// UE1, Private
+/// UE1, Ryadovoy
 #define PAY_SHORT_UE1 "UE1"
 
-/// UE2, Private First Class
+/// UE2, Efreitor
 #define PAY_SHORT_UE2 "UE2"
 
 /// UE3, Korporal

@@ -1529,7 +1529,7 @@
 	fire_sound = "gun_silenced"
 	wield_delay = 0 //Ends up being .5 seconds due to scope
 	inherent_traits = list(TRAIT_GUN_SILENCED)
-	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
+	current_mag = /obj/item/ammo_magazine/rifle/type71
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/verticalgrip/upp,

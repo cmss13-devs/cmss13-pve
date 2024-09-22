@@ -286,6 +286,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	. = ..()
 	if(in_chamber) . += "It has a chambered round."
 
+/obj/item/weapon/gun/shotgun/combat/loaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/loaded
 
 /obj/item/weapon/gun/shotgun/combat/riot
 	name = "\improper M120/R tactical shotgun"
@@ -399,6 +401,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
+/obj/item/weapon/gun/shotgun/type23
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/loaded
 
 /obj/item/weapon/gun/shotgun/pump/type23
 	name = "\improper KS-29 riot shotgun"
@@ -428,7 +432,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-
+/obj/item/weapon/gun/shotgun/pump/type23
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/loaded
 //-------------------------------------------------------
 //DOUBLE SHOTTY
 
@@ -1125,6 +1130,9 @@ can cause issues with ammo types getting mixed up during the burst.
 		to_chat(user, SPAN_WARNING("You release the locking mechanism on [src]."))
 		pumped = FALSE
 	return ..()
+
+/obj/item/weapon/gun/shotgun/pump
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/loaded
 
 //-------------------------------------------------------
 

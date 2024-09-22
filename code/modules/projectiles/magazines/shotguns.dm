@@ -153,8 +153,10 @@ also doesn't really matter. You can only reload them with handfuls.
 	current_rounds = 0
 	chamber_closed = 0
 
+/obj/item/ammo_magazine/internal/shotgun/loaded
+	current_rounds = 4
+
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 2
 	chamber_closed = 1 //Starts out with a closed tube.
 
@@ -162,7 +164,6 @@ also doesn't really matter. You can only reload them with handfuls.
 	default_ammo = /datum/ammo/bullet/revolver/marksman
 	max_rounds = 6
 	caliber = ".44"
-
 /obj/item/ammo_magazine/internal/shotgun/double/mou53
 	default_ammo = /datum/ammo/bullet/shotgun/flechette
 	max_rounds = 3
@@ -174,6 +175,10 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/combat
 	caliber = "12g"
 	max_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/loaded
+
+	current_rounds = 6
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
@@ -191,6 +196,8 @@ also doesn't really matter. You can only reload them with handfuls.
 	caliber = "8g"
 	max_rounds = 4
 
+/obj/item/ammo_magazine/internal/shotgun/type23/loaded
+	current_rounds = 4
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4
