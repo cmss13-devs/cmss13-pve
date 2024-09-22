@@ -467,8 +467,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/light/pap, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/UPP/full, WEAR_WAIST)
 	//limbs
@@ -671,7 +673,7 @@
 	name = "UPP Reconnaissance Commando"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/commando
-	assignment = "Reconnaissance Commando"
+	assignment = "Reconnaissance Commando Frogman"
 	rank = JOB_UPP_COMMANDO
 	role_comm_title = "RECON"
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
@@ -729,7 +731,7 @@
 /datum/equipment_preset/upp/commando/leader
 	name = "UPP Reconnaissance Commando Leader"
 	skills = /datum/skills/commando/leader
-	assignment = "Reconnaissance Commando Leader"
+	assignment = "Lead Reconnaissance Commando Frogman"
 	rank = JOB_UPP_COMMANDO_LEADER
 	role_comm_title = "RECON-TL"
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
@@ -1203,9 +1205,10 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+
 
 /datum/equipment_preset/upp/police/riot
 	name = "UPP People's Armed Police Officer - Riot"
