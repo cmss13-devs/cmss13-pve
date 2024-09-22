@@ -746,15 +746,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
-	path = /obj/item/storage/box/loadout/clf
+	path = /obj/item/storage/box/loadout/CLF_loadout
 
 /datum/gear/weapon/t73
 	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/loadout/t73
+	path = /obj/item/storage/box/loadout/T73_loadout
 
 /datum/gear/weapon/zhnk72
 	display_name = "ZHNK-72 Revolver"
-	path = /obj/item/storage/box/loadout/zhnk72
+	path = /obj/item/storage/box/loadout/ZHNK72_loadout
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
