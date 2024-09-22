@@ -1,0 +1,9 @@
+/obj/item/book/manual/robotics_cyborgs : @DELETE
+/obj/item/book/manual/engineering_particle_accelerator : @DELETE
+/obj/item/device/camera/siliconcam : @DELETE
+/obj/item/tool/soap/nanotrasen : /obj/item/tool/soap/weyland_yutani{@OLD}
+/obj/item/ammo_rcd : @DELETE
+/area/almayer/command/corporateliason : /area/almayer/command/corporateliaison{@OLD}
+/area/almayer/hallways/upper/stern_hallway : /area/almayer/hallways/upper/aft_hallway{@OLD}
+/obj/structure/machinery/cm_vending/clothing/staff_officer_armory : /obj/structure/machinery/cm_vending/gear/staff_officer_armory{@OLD}
+/obj/structure/reagent_dispensers/oxygentank : /obj/structure/reagent_dispensers/fueltank/oxygentank{@OLD}

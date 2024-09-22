@@ -2,6 +2,29 @@
 	name = "prop"
 	desc = "Some kind of prop."
 
+/// A prop that acts as a replacement for another item, mimicking their looks.
+/// Mainly used in Reqs Tutorial to provide the full item selections without side effects.
+/obj/item/prop/replacer
+	/// The type that this object is taking the place of
+	var/original_type
+
+/obj/item/prop/replacer/Initialize(mapload, obj/original_type)
+	if(!original_type)
+		return INITIALIZE_HINT_QDEL
+	. = ..()
+	src.original_type = original_type
+	var/obj/created_type = new original_type // Instancing this for the sake of assigning its appearance to the prop and nothing else
+	name = initial(original_type.name)
+	icon = initial(original_type.icon)
+	icon_state = initial(original_type.icon_state)
+	desc = initial(original_type.desc)
+	if(ispath(original_type, /obj/item))
+		var/obj/item/item_type = original_type
+		item_state = initial(item_type.item_state)
+
+	appearance = created_type.appearance
+	qdel(created_type)
+
 /obj/item/prop/laz_top
 	name = "lazertop"
 	icon = 'icons/obj/structures/props/server_equipment.dmi'
@@ -145,6 +168,18 @@
 	desc = "A ThinkPad Systems Game-Bro Handheld (TSGBH, shortened). It can play chess, checkers, tri-d chess, and it also runs Byond! Except this one is out of batteries."
 	icon_state = "game_kit"
 	icon = 'icons/obj/items/items.dmi'
+
+/obj/item/prop/gripper
+	name = "magnetic gripper"
+	desc = "A simple grasping tool for synthetic assets."
+	icon_state = "gripper"
+	icon = 'icons/obj/items/devices.dmi'
+
+/obj/item/prop/matter_decompiler
+	name = "matter decompiler"
+	desc = "Eating trash, bits of glass, or other debris will replenish your stores."
+	icon_state = "decompiler"
+	icon = 'icons/obj/items/devices.dmi'
 
 /// Xeno-specific props
 
@@ -291,3 +326,22 @@
 /obj/item/prop/magazine/boots/n055
 	name = "Boots!: Issue No.55"
 	desc = "The only official USCM magazine, the headline reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.'"
+
+/obj/item/prop/scrap
+	name = "scrap metal"
+	icon = 'icons/obj/items/fishing_atoms.dmi'
+	icon_state = "sheet-scrap"
+	item_state = ""
+	desc = "A rusty piece of scrap metal."
+	w_class = SIZE_MEDIUM
+
+/obj/item/prop/rock
+	name = "rock"
+	icon = 'icons/obj/items/plush.dmi'
+	icon_state = "rock"
+	item_state = ""
+	force = 30
+	throwforce = 25
+	desc = "The most ancient of tools."
+	w_class = SIZE_TINY
+	hitsound = 'sound/weapons/genhit3.ogg'
