@@ -29,7 +29,7 @@
 	layer = 2.9
 	},
 /turf/open/shuttle/vehicle/floor_3_10_1,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "d" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -45,7 +45,7 @@
 	pixel_y = -13
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "e" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "wheel_front_top_2";
@@ -76,7 +76,7 @@
 	layer = 4
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "j" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "aa_back_1";
@@ -93,7 +93,7 @@
 	pixel_y = 12
 	},
 /turf/open/shuttle/vehicle/floor_1_4,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "o" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "rear_1"
@@ -140,7 +140,7 @@
 	pixel_y = 16
 	},
 /turf/open/shuttle/vehicle/floor_1_4,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "w" = (
 /obj/effect/landmark/interior/spawn/interior_camera{
 	dir = 5;
@@ -162,7 +162,7 @@
 	density = 0
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "x" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "wall";
@@ -197,7 +197,7 @@
 	tag = "right rear"
 	},
 /turf/open/shuttle/vehicle/floor_1_3,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "A" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -208,10 +208,10 @@
 	pixel_x = -8
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "B" = (
 /turf/open/shuttle/vehicle/floor_1_3,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "C" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "door_big_right";
@@ -241,7 +241,7 @@
 	pixel_x = 8
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "H" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "corner_inverse_R";
@@ -310,7 +310,7 @@
 /area/space)
 "N" = (
 /turf/open/shuttle/vehicle/floor_1_4,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "O" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "front_2";
@@ -353,7 +353,7 @@
 	tag = "right front"
 	},
 /turf/open/shuttle/vehicle/floor_1_4,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "U" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "front_wheel_R";
@@ -381,7 +381,7 @@
 	pixel_y = 16
 	},
 /turf/open/shuttle/vehicle/floor_2,
-/area/vehicle/apc/aa)
+/area/vehicle/apc/movie/aa)
 "Y" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "rear_2"
