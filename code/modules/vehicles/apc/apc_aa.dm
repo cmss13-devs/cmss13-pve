@@ -1,14 +1,6 @@
-/obj/vehicle/multitile/apc/aa
+/obj/vehicle/multitile/apc/movie/aa
 	name = "M579 Aerial-Defence System Carrier"
 	desc = "A modification to the venerable M577 Armored Personnel Carrier, equipped with weapons systems tailored to target airborne threats. Comes with limited passenger capacity, entrance on the right."
-
-	icon = 'icons/obj/vehicles/movieapc.dmi'
-	icon_state = "apc_base_movie"
-	pixel_x = -64
-	pixel_y = -64
-
-	bound_width = 96
-	bound_height = 96
 
 	interior_map = /datum/map_template/interior/apc_aa
 
@@ -21,22 +13,8 @@
 
 	passengers_slots = 10
 
-	entrances = list(
-		"right rear" = list(-2, 1),
-		"right front" = list(-2, 0)
-	)
 
-	seats = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-	)
-
-	active_hp = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-	)
-
-/obj/vehicle/multitile/apc/aa/add_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/apc/movie/aa/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	add_verb(M.client, list(
@@ -59,7 +37,7 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/apc/aa/remove_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/apc/movie/aa/remove_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	remove_verb(M.client, list(
@@ -83,7 +61,7 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/apc/aa/initialize_cameras(change_tag = FALSE)
+/obj/vehicle/multitile/apc/movie/aa/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
@@ -95,8 +73,8 @@
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 
-/obj/vehicle/multitile/apc/aa/set_muzzle_offsets(obj/item/hardpoint/HP)
-	//sets muzzle flash offsets for APC weapons as appropriate for the movie APC
+/obj/vehicle/multitile/apc/movie/aa/set_muzzle_offsets(obj/item/hardpoint/HP)
+	//sets muzzle flash offsets for APC weapons as appropriate for the movie APC, may need adjustment for AA weapons
 	switch(HP.slot)
 		if(HDPT_PRIMARY) //quadcannons
 			HP.muzzle_flash_pos = list(
@@ -138,7 +116,7 @@
 
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/apc_aa/spawn_vehicle()
-	var/obj/vehicle/multitile/apc/aa/APC = new (loc)
+	var/obj/vehicle/multitile/apc/movie/aa/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)
@@ -146,12 +124,12 @@
 	APC.update_icon()
 
 //PRESET: only wheels installed
-/obj/effect/vehicle_spawner/apc_aa/plain/load_hardpoints(obj/vehicle/multitile/apc/aa/V)
+/obj/effect/vehicle_spawner/apc_aa/plain/load_hardpoints(obj/vehicle/multitile/apc/movie/aa/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
 
 //PRESET: default hardpoints, destroyed
 /obj/effect/vehicle_spawner/apc_aa/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/apc/aa/APC = new (loc)
+	var/obj/vehicle/multitile/apc/movie/aa/APC = new (loc)
 
 	load_misc(APC)
 	load_hardpoints(APC)
@@ -159,14 +137,14 @@
 	load_damage(APC)
 	APC.update_icon()
 
-/obj/effect/vehicle_spawner/apc_aa/decrepit/load_hardpoints(obj/vehicle/multitile/apc/aa/V)
+/obj/effect/vehicle_spawner/apc_aa/decrepit/load_hardpoints(obj/vehicle/multitile/apc/movie/aa/V)
 	V.add_hardpoint(new /obj/item/hardpoint/primary/aa_quadcannon)
 	V.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher/aa)
 	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
 
 //PRESET: default hardpoints
-/obj/effect/vehicle_spawner/apc_aa/fixed/load_hardpoints(obj/vehicle/multitile/apc/aa/V)
+/obj/effect/vehicle_spawner/apc_aa/fixed/load_hardpoints(obj/vehicle/multitile/apc/movie/aa/V)
 	V.add_hardpoint(new /obj/item/hardpoint/primary/aa_quadcannon)
 	V.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher/aa)
 	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
