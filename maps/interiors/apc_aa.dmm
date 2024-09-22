@@ -28,9 +28,7 @@
 	pixel_y = 19;
 	layer = 2.9
 	},
-/turf/open/shuttle/vehicle/floor_3_10_1{
-	icon_state = "floor_3_10_1"
-	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
 /area/vehicle/apc/aa)
 "d" = (
 /obj/structure/bed/chair/vehicle{
