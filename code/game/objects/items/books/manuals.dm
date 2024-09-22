@@ -276,7 +276,7 @@
 
 /obj/item/book/manual/chef_recipes
 	name = "Chef Recipes"
-	icon_state = "cooked_white"
+	icon_state = "book_white"
 	author = "Victoria Ponsonby"
 	title = "Chef Recipes"
 
