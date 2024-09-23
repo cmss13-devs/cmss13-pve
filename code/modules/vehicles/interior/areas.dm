@@ -29,7 +29,7 @@
 	name = "\improper M577A3 APC interior"
 	icon_state = "apc_movie"
 
-/area/vehicle/apc/movie/aa
+/area/interior/vehicle/apc/movie/aa
 	name = "\improper M579 ADS-C interior"
 	icon_state = "apc_aa"
 
