@@ -47,7 +47,7 @@
 	pay_multiplier = 1.8
 
 /datum/paygrade/army/e5
-	paygrade = PAY_SHORT_ME5
+	paygrade = PAY_SHORT_AE5
 	name = "Sergeant"
 	prefix = "Sgt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e5
@@ -55,7 +55,7 @@
 	pay_multiplier = 2
 
 /datum/paygrade/army/e6
-	paygrade = PAY_SHORT_ME6
+	paygrade = PAY_SHORT_AE6
 	name = "Staff Sergeant"
 	prefix = "SSgt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e6
@@ -63,7 +63,7 @@
 	pay_multiplier = 2.2
 
 /datum/paygrade/army/e7
-	paygrade = PAY_SHORT_ME7
+	paygrade = PAY_SHORT_AE7
 	name = "Sergeant First Class"
 	prefix = "SFC."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e7
@@ -71,7 +71,7 @@
 	pay_multiplier = 2.4
 
 /datum/paygrade/army/e8
-	paygrade = PAY_SHORT_ME8
+	paygrade = PAY_SHORT_AE8
 	name = "Master Sergeant"
 	prefix = "MSgt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e8
@@ -79,7 +79,7 @@
 	pay_multiplier = 2.5
 
 /datum/paygrade/army/e8e
-	paygrade = PAY_SHORT_ME8E
+	paygrade = PAY_SHORT_AE8E
 	name = "First Sergeant"
 	prefix = "1Sgt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e8e
@@ -87,7 +87,7 @@
 	pay_multiplier = 2.5
 
 /datum/paygrade/army/e9
-	paygrade = PAY_SHORT_ME9
+	paygrade = PAY_SHORT_AE9
 	name = "Sergeant Major"
 	prefix = "SgtMaj."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e9
@@ -95,7 +95,7 @@
 	pay_multiplier = 2.75
 
 /datum/paygrade/army/e9e
-	paygrade = PAY_SHORT_ME9E
+	paygrade = PAY_SHORT_AE9E
 	name = "Command Sergeant Major"
 	prefix = "CSMJ."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e9e
