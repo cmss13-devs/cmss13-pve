@@ -309,7 +309,7 @@
 
 /obj/item/prop/magazine/book/warisaracket
 	name = "War is a Racket"
-	desc = "A book critical of the United States Marine Corps by Marine Corps legend, Major General Smedley Butler. In short, the book outlines the function which the historical Marine Corps had in establishing and enforcing American global hegemony. Good thing its critiques have no application contemporarily. Right?"
+	desc = "A book critical of the United States Marine Corps by Marine Corps legend, Major General Smedley Butler. In short, the book outlines the function which the historical Marine Corps had in establishing and enforcing American global hegemony. Good thing its critiques have no contemporary application. Right?"
 
 /obj/item/prop/magazine/book/littleredbook
 	name = "Quotations from Chairman Mao Tse-tung"
