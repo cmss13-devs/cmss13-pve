@@ -150,11 +150,17 @@ also doesn't really matter. You can only reload them with handfuls.
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
 	max_rounds = 4
-	current_rounds = 0
+	current_rounds = 4
 	chamber_closed = 0
 
-/obj/item/ammo_magazine/internal/shotgun/loaded
-	current_rounds = 4
+/obj/item/ammo_magazine/internal/shotgun/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
 	max_rounds = 2
@@ -175,14 +181,16 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/combat
 	caliber = "12g"
 	max_rounds = 6
-
-/obj/item/ammo_magazine/internal/shotgun/combat/loaded
-
 	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/marsoc
 	caliber = "12g"
@@ -193,16 +201,32 @@ also doesn't really matter. You can only reload them with handfuls.
 	max_rounds = 5
 
 /obj/item/ammo_magazine/internal/shotgun/type23
-	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
-
 	caliber = "8g"
 	max_rounds = 4
-
-/obj/item/ammo_magazine/internal/shotgun/type23/loaded
 	current_rounds = 4
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+
+/obj/item/ammo_magazine/internal/shotgun/type23/slug
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+
+/obj/item/ammo_magazine/internal/shotgun/type23/riot
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	current_rounds = 0
+
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4
+	current_rounds = 4
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5

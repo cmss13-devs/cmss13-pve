@@ -145,7 +145,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_IN_JACKET)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot, WEAR_L_HAND)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/rifleman
@@ -723,7 +722,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
 //*****************************************************************************************************/
@@ -1058,7 +1057,8 @@
 /datum/equipment_preset/upp/admin
 	name = "UPP Civilian Administrator"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = list(FACTION_COLONIST, FACTION_UPP)
+	faction = FACTION_COLONIST
+	faction_group = FACTION_LIST_UPP_COLONY
 	assignment = "Administrator"
 	role_comm_title = "ADMIN"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -1180,7 +1180,8 @@
 /datum/equipment_preset/upp/police
 	name = "UPP People's Armed Police Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = list(FACTION_COLONIST, FACTION_UPP)
+	faction = FACTION_COLONIST
+	faction_group = FACTION_LIST_UPP_COLONY
 	assignment = "People's Armed Police Militsioner"
 	role_comm_title = "MILTSY"
 	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
@@ -1212,14 +1213,6 @@
 
 /datum/equipment_preset/upp/police/riot
 	name = "UPP People's Armed Police Officer - Riot"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = list(FACTION_COLONIST, FACTION_UPP)
-	assignment = "People's Armed Police Militsioner"
-	role_comm_title = "MILTSY"
-	paygrades = list(PAY_SHORT_UC1 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/cmb
-	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
-	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/police/riot/load_gear(mob/living/carbon/human/new_human)
 
@@ -1253,8 +1246,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23, WEAR_R_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/riot, WEAR_R_HAND)
 
 /datum/equipment_preset/upp/prisoner
 	name = "UPP Prisoner"

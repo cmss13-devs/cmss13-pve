@@ -151,7 +151,7 @@
 /obj/structure/barricade/handrail/strata{
 	layer = 3.5
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "C" = (
 /obj/effect/decal/warning_stripes{
@@ -188,7 +188,8 @@
 /area/shuttle/ert)
 "I" = (
 /turf/closed/shuttle/ert{
-	icon_state = "upp27"
+	icon_state = "upp27";
+	opacity = 0
 	},
 /area/shuttle/ert)
 "J" = (
@@ -268,8 +269,9 @@
 	},
 /area/shuttle/ert)
 "W" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 1
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)

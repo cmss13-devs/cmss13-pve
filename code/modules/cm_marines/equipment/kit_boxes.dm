@@ -527,7 +527,7 @@
 	new /obj/item/storage/pill_bottle/packet/oxycodone(src)
 	new /obj/item/storage/pill_bottle/packet/kelotane(src)
 	new /obj/item/storage/pill_bottle/packet/bicaridine(src)
-	new /obj/item/weapon/gun/shotgun/combat/guard(src)
+	new /obj/item/weapon/gun/shotgun/combat(src)
 	new /obj/item/storage/pouch/general/large(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)

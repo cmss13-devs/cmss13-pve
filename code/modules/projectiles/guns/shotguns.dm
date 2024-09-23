@@ -286,26 +286,14 @@ can cause issues with ammo types getting mixed up during the burst.
 	. = ..()
 	if(in_chamber) . += "It has a chambered round."
 
-/obj/item/weapon/gun/shotgun/combat/loaded
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/loaded
+/obj/item/weapon/gun/shotgun/combat/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+
+/obj/item/weapon/gun/shotgun/combat/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/slug
 
 /obj/item/weapon/gun/shotgun/combat/riot
-	name = "\improper M120/R tactical shotgun"
-	icon_state = "mp220"
-	item_state = "mp220"
-	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. This one comes with a blue steel finish to denote its function as a riot shotgun. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/riot
-
-/obj/item/weapon/gun/shotgun/combat/guard
-	desc = "The Weyland-Yutani M120 Shotgun, a semi-automatic shotgun with a quick fire rate. Equipped with a red handle to signify its use with Military Police Honor Guards."
-	icon_state = "mp221"
-	item_state = "mp221"
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
-
-/obj/item/weapon/gun/shotgun/combat/covert
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 
 //SOF MK210, an earlier developmental variant of the MK211 tactical used by USCM SOF.
 /obj/item/weapon/gun/shotgun/combat/marsoc
@@ -401,8 +389,14 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/shotgun/type23
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/loaded
+/obj/item/weapon/gun/shotgun/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+
+/obj/item/weapon/gun/shotgun/type23/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+
+/obj/item/weapon/gun/shotgun/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
 
 /obj/item/weapon/gun/shotgun/pump/type23
 	name = "\improper KS-29 riot shotgun"
@@ -432,8 +426,15 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/shotgun/pump/type23
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/loaded
+/obj/item/weapon/gun/shotgun/pump/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+
+/obj/item/weapon/gun/shotgun/pump/type23/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+
+/obj/item/weapon/gun/shotgun/pump/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
+
 //-------------------------------------------------------
 //DOUBLE SHOTTY
 
@@ -1132,7 +1133,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	return ..()
 
 /obj/item/weapon/gun/shotgun/pump
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/loaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun
 
 //-------------------------------------------------------
 

@@ -120,18 +120,12 @@
 	dir = 8;
 	can_buckle = 1
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "lm" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp1"
 	},
-/area/shuttle/ds_upp)
-"lS" = (
-/obj/structure/bed/chair/dropship/pilot{
-	dir = 1
-	},
-/turf/open/floor/strata/grey_multi_tiles,
 /area/shuttle/ds_upp)
 "nZ" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
@@ -231,8 +225,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "AK" = (
 /turf/closed/shuttle/ert{
@@ -292,6 +285,14 @@
 /obj/structure/machinery/light{
 	dir = 8;
 	pixel_x = -14
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
@@ -375,7 +376,7 @@
 	dir = 4;
 	can_buckle = 1
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Kv" = (
 /obj/structure/bed/chair/vehicle{
@@ -448,7 +449,9 @@
 	pixel_y = 32;
 	name = "Akademia Nauk Telephone";
 	phone_category = "Dropship";
-	phone_id = "Akademia Nauk"
+	phone_id = "Akademia Nauk";
+	networks_receive = list("UPP");
+	networks_transmit = list("UPP")
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
@@ -461,6 +464,14 @@
 	pixel_x = -6;
 	pixel_y = -16
 	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "Sn" = (
@@ -472,8 +483,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	network = list("Chapaev","Akademia Nauk")
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Sx" = (
 /turf/closed/shuttle/ert{
@@ -679,7 +689,7 @@ wi
 (5,1,1) = {"
 HB
 GH
-lS
+Th
 Ou
 iN
 Kv

@@ -534,6 +534,8 @@
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_pap"
 	worn_state = "upp_uniform_pap"
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_LIST_UPP_COLONY
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/marine/veteran/UPP/service
@@ -542,30 +544,6 @@
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-
-/obj/item/clothing/under/marine/veteran/UPP/civi1
-	name = "\improper UPP Civilian-style Orange overalls"
-	desc = "A set of Civilian-style Orange Overalls with a dark tan undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given out to those who work laborious jobs."
-	icon_state = "upp_uniform_civi1"
-	worn_state = "upp_uniform_civi1"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi2
-	name = "\improper UPP Civilian-style tan overalls"
-	desc = "A set of Civilian-style Tan Overalls with a Blue undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given to those who work laborious jobs."
-	icon_state = "upp_uniform_civi2"
-	worn_state = "upp_uniform_civi2"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi3
-	name = "\improper UPP Civilian-style shirt and pants"
-	desc = "A set of Civilian-style tan shirt and jeans. The material, while poor, is comfortable enough to be worn during all periods of the day."
-	icon_state = "upp_uniform_civi3"
-	worn_state = "upp_uniform_civi3"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi4
-	name = "\improper UPP Civilian-style Vest and pants"
-	desc = "A set of Civilian-style Brown vest and orange pants. The material is surprisingly decent, something not often worn by the civilians of the UPP for two reasons: They typically can't afford such clothing, and if they can, it paints a target on their back."
-	icon_state = "upp_uniform_civi4"
-	worn_state = "upp_uniform_civi4"
 
 //=========================//Freelancer\\================================\\
 
