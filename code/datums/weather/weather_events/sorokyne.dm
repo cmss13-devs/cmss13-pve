@@ -3,7 +3,6 @@
 	name = "Snow"
 	display_name = "Snow"
 	length = 10 MINUTES
-	//fullscreen_type = /atom/movable/screen/fullscreen/weather/low
 	turf_overlay_icon_state = "strata_snowing"
 
 	effect_message = "You feel the icy winds chill you!"
