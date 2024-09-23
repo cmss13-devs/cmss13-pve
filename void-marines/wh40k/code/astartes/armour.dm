@@ -254,8 +254,8 @@
 /obj/item/clothing/suit/armor/astartes/apothecary
 	name = "Astartes Mark VII Power Armour"
 	desc = "The Holy armour of the Emperor's chosens."
-	icon_state = "apohelm"
-	item_state = "apohelm"
+	icon_state = "ultrapoth"
+	item_state = "ultrapoth"
 
 /obj/item/storage/backpack/satchel/astartes/apothecary
 	name = "Astartes Mark VII Medipack"
@@ -280,6 +280,12 @@
 	desc = "The Holy armour of the Emperor's chosen, This one bears the symbol of his position, Apothecary of the XIXth Chapter, Raven Guards."
 	icon_state = "ravapoth"
 	item_state = "ravapoth"
+
+/obj/item/clothing/head/helmet/astartes/apothecary
+	name = "Astartes Mark VII Helmet"
+	desc = "The vigilant helmet of the Astartes Apothecary, Painted in white and upgraded with genescanner and integrated scanner."
+	icon_state = "apohelm"
+	item_state = "apohelm"
 
 /obj/item/clothing/head/helmet/astartes/apothecary/ravenguard
 	name = "Astartes Mark VI Helmet"
