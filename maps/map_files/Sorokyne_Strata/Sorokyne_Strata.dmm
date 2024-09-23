@@ -10474,7 +10474,7 @@
 /area/strata/ag/interior/administration)
 "cfX" = (
 /obj/structure/largecrate/random,
-/obj/item/storage/belt/marine/upp/sapper,
+/obj/item/storage/belt/marine/upp/full,
 /turf/open/asphalt/cement,
 /area/strata/ag/exterior/research_decks)
 "cfZ" = (

@@ -164,11 +164,13 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
 	max_rounds = 2
+	current_rounds = 0
 	chamber_closed = 1 //Starts out with a closed tube.
 
 /obj/item/ammo_magazine/internal/shotgun/double/cane
 	default_ammo = /datum/ammo/bullet/revolver/marksman
 	max_rounds = 6
+	current_rounds = 6
 	caliber = ".44"
 /obj/item/ammo_magazine/internal/shotgun/double/mou53
 	default_ammo = /datum/ammo/bullet/shotgun/flechette
@@ -176,6 +178,8 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/double/twobore //Van Bandolier's superheavy double-barreled hunting rifle.
 	caliber = "2 bore"
+	max_rounds = 2
+	current_rounds = 0
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
 
 /obj/item/ammo_magazine/internal/shotgun/combat
