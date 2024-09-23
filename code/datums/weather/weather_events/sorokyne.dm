@@ -31,7 +31,6 @@
 	name = "Blizzard"
 	display_name = "Blizzard"
 	length = 4 MINUTES
-	//fullscreen_type = /atom/movable/screen/fullscreen/weather/high
 	turf_overlay_icon_state = "strata_blizzard"
 
 	effect_message = "You feel the winds of the blizzard sap all the warmth from your body!"
