@@ -7,7 +7,7 @@
 // ENLISTED PAYGRADES
 
 /datum/paygrade/army/e1
-	paygrade = PAY_SHORT_ME1
+	paygrade = PAY_SHORT_AE1
 	name = "Private"
 	prefix = "Pvt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e1
@@ -15,7 +15,7 @@
 	pay_multiplier = 1.4
 
 /datum/paygrade/army/e2
-	paygrade = PAY_SHORT_ME2
+	paygrade = PAY_SHORT_AE2
 	name = "Private"
 	prefix = "Pvt."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e2
@@ -23,7 +23,7 @@
 	pay_multiplier = 1.5
 
 /datum/paygrade/army/e3
-	paygrade = PAY_SHORT_ME3
+	paygrade = PAY_SHORT_AE3
 	name = "Private First Class"
 	prefix = "PFC."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e3
@@ -31,7 +31,7 @@
 	pay_multiplier = 1.6
 
 /datum/paygrade/army/e4
-	paygrade = PAY_SHORT_ME4
+	paygrade = PAY_SHORT_AE4
 	name = "Corporal"
 	prefix = "Cpl."
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e4
