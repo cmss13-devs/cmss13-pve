@@ -15,7 +15,7 @@
 #define PAY_SHORT_AE4 "AE4"
 
 /// AE4E, Specialist
-#define PAY_SHORT_AE4 "AE4E"
+#define PAY_SHORT_AE4E "AE4E"
 
 /// AE5, Sergeant
 #define PAY_SHORT_AE5 "AE5"
