@@ -110,7 +110,7 @@
 /obj/structure/gun_rack/flamer/unloaded
 	populate_type = /obj/item/weapon/gun/flamer/unloaded
 
-/obj/structure/gun_rack/flamer/unloaded
+/obj/structure/gun_rack/flamer/empty
 	initial_stored = 0
 
 /obj/structure/gun_rack/mk221
