@@ -17,7 +17,6 @@
 	name = "Snowstorm"
 	display_name = "Snowstorm"
 	length = 6 MINUTES
-	//fullscreen_type = /atom/movable/screen/fullscreen/weather/medium
 	turf_overlay_icon_state = "strata_storm"
 
 	effect_message = "You feel the icy winds of the snowstorm chill you to the bone!"
