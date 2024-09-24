@@ -247,6 +247,12 @@
 			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket")
 			break
 
+	for(var/id in equipment_map)
+		for(var/obj/item/item_ref as anything in equipment_map[id])
+			if(item_ref == dropped)
+				equipment_map[id] -= item_ref
+				return
+
 /datum/human_ai_brain/proc/set_primary_weapon(obj/item/weapon/gun/new_gun)
 	if(primary_weapon)
 		UnregisterSignal(primary_weapon, COMSIG_PARENT_QDELETING)

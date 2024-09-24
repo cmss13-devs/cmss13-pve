@@ -26,7 +26,7 @@
 
 	//X.do_click(src, "", list())
 
-	brain.unholster_primary()
+	brain.unholster_primary() // this should eventually have support for melee weapons
 	//brain.ensure_primary_hand(brain.primary_weapon)
 	brain.tied_human.do_click(target, "", list())
 
