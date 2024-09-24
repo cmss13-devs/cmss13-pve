@@ -21,6 +21,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// How far the AI will chuck a nade if they can't find an enemy to throw it back at
 	var/nade_direction_throw = 4
 
+	/// How long we will ignore max fire distance after shot from afar
+	var/return_fire_duration = 5 SECONDS
+
 	/// List of current action datums
 	var/list/ongoing_actions = list()
 
@@ -92,6 +95,10 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	item_search(things_around)
 	//bullet_detect(things_around)
 
+	if(!currently_busy && should_reload_primary())
+		currently_busy = TRUE
+		reload_primary()
+
 	if(primary_weapon && current_target)
 		if(!has_ongoing_action(AI_ACTION_APPROACH) && !has_ongoing_action(AI_ACTION_RETREAT))
 			var/target_futile = current_target.is_mob_incapacitated()
@@ -112,10 +119,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(!currently_busy && healing_start_check())
 		currently_busy = TRUE
 		start_healing()
-
-	if(!currently_busy && should_reload_primary())
-		currently_busy = TRUE
-		reload_primary()
 
 	if(!currently_busy && !current_target && primary_weapon)
 		current_target = get_target(view_distance)
@@ -289,6 +292,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/exit_combat()
 	if(in_combat)
 		say_exit_combat_line()
+		holster_primary()
 	in_combat = FALSE
 
 /datum/human_ai_brain/proc/can_process_order()
@@ -302,11 +306,17 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/on_shot(datum/source, damage_result, ammo_flags, obj/projectile/bullet)
 	SIGNAL_HANDLER
+
 	var/mob/firer = bullet.firer
 	if(firer?.faction in neutral_factions)
 		on_neutral_faction_betray(firer.faction)
 
+	if(primary_weapon?.ammo.max_range <= get_dist(tied_human, firer))
+		COOLDOWN_START(src, return_fire, return_fire_duration)
+
 	if(!faction_check(firer))
+		if(current_target != firer)
+			end_gun_fire()
 		current_target = firer
 
 /datum/human_ai_brain/proc/on_neutral_faction_betray(faction)

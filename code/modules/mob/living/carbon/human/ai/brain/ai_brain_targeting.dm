@@ -16,6 +16,8 @@
 	/// List of overwatched turfs
 	var/list/turf/open/overwatch_turfs = list()
 
+	COOLDOWN_DECLARE(return_fire)
+
 /datum/human_ai_brain/proc/get_target(range)
 	var/list/viable_targets = list()
 	var/atom/movable/closest_target
@@ -144,13 +146,13 @@
 
 	tied_human.face_atom(current_target)
 
-	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
+	if(get_dist(tied_human, current_target) > gun_data.maximum_range && COOLDOWN_FINISHED(src, return_fire))
 		currently_busy = FALSE
 		return
 
 	primary_weapon.set_target(current_target)
 	gun_data.before_fire(primary_weapon, tied_human, src)
-	if((!primary_weapon?.current_mag.current_rounds && !primary_weapon.in_chamber) || !friendly_check())
+	if((!primary_weapon?.current_mag?.current_rounds && !primary_weapon?.in_chamber) || !friendly_check())
 		end_gun_fire()
 		return
 
@@ -203,7 +205,7 @@
 		end_gun_fire()
 		return
 
-	if(primary_weapon.current_mag?.current_rounds <= 1 && !primary_weapon.in_chamber) // bullet removal comes after comsig is triggered
+	if(primary_weapon.current_mag?.current_rounds <= 0 && !primary_weapon.in_chamber) // bullet removal comes after comsig is triggered
 		end_gun_fire()
 		if(gun_data?.disposable)
 			var/obj/item/gun = primary_weapon
@@ -211,14 +213,21 @@
 			tied_human.drop_held_item(gun)
 		return
 
-	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
-		end_gun_fire()
-		if(grenading_allowed)
+	if(!(current_target in viewers(view_distance, tied_human)))
+		if(COOLDOWN_FINISHED(src, return_fire))
+			end_gun_fire()
+		if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
 			throw_grenade_cover()
-		else if(overwatch_allowed)
+			return
+		if(overwatch_allowed)
 			establish_overwatch()
-		else if(!in_cover)
-			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, current_target, 0)
+			return
+
+	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
+		if(COOLDOWN_FINISHED(src, return_fire))
+			end_gun_fire()
+		if(!in_cover) // Doing this independently from viewers() check so we don't chase enemy if it's hid just around the corner. Might move it back
+			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, target_floor, 0)
 		return
 
 	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump))

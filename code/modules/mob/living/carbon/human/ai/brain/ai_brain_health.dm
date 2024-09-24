@@ -78,6 +78,7 @@
 		if(!brute_heal)
 			goto bleed
 
+		end_gun_fire()
 		holster_primary()
 		equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, brute_heal)
 		sleep(short_action_delay)

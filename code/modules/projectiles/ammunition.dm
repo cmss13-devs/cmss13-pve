@@ -253,6 +253,7 @@ bullets/shells. ~N
 	max_rounds = 5 // For shotguns, though this will be determined by the handful type when generated.
 	flags_atom = FPRINT|CONDUCT
 	flags_magazine = AMMUNITION_HANDFUL
+	flags_human_ai = null
 	attack_speed = 3 // should make reloading less painful
 
 /obj/item/ammo_magazine/handful/Initialize(mapload, spawn_empty)

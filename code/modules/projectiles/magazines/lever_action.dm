@@ -92,6 +92,7 @@ Handfuls of lever_action rounds. For spawning directly on mobs in roundstart, ER
 	gun_type = /obj/item/weapon/gun/lever_action
 	handful_state = "lever_action_bullet"
 	transfer_handful_amount = 9
+	flags_human_ai = AMMUNITION_ITEM
 
 /obj/item/ammo_magazine/handful/lever_action/training
 	name = "handful of blanks (45-70)"

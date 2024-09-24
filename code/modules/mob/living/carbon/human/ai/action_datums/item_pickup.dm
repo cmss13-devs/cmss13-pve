@@ -21,7 +21,10 @@
 		if(get_dist(to_pickup, brain.tied_human) > 1)
 			return ONGOING_ACTION_UNFINISHED
 
-	if(!brain.primary_weapon && isgun(to_pickup))
+	if(brain.primary_weapon)
+		brain.primary_weapon.unwield(brain.tied_human)
+
+	else if(isgun(to_pickup))
 		brain.tied_human.put_in_hands(to_pickup, TRUE)
 		var/obj/item/weapon/gun/primary = to_pickup
 		// We do the three below lines to make it so that the AI can immediately pick up a gun and open fire. This ensures that we don't need to account for this possibility when firing.
