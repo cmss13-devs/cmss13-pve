@@ -634,7 +634,7 @@
 
 /datum/equipment_preset/synth/working_joe/engi
 	name = "Synthetic - Hazmat Joe"
-	joe_type = SYNTH_WORKING_JOE
+	joe_type = SYNTH_HAZARD_JOE
 
 /datum/equipment_preset/synth/working_joe/engi/load_gear(mob/living/carbon/human/new_human)
 	var/choice = rand(1,2)
