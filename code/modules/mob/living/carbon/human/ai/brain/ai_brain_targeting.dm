@@ -146,7 +146,7 @@
 
 	tied_human.face_atom(current_target)
 
-	if(get_dist(tied_human, current_target) > gun_data.maximum_range && COOLDOWN_FINISHED(src, return_fire))
+	if((get_dist(tied_human, current_target) > gun_data.maximum_range) && COOLDOWN_FINISHED(src, return_fire))
 		currently_busy = FALSE
 		return
 
