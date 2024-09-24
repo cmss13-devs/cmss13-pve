@@ -348,7 +348,7 @@
 	)
 	storage_flags = STORAGE_FLAGS_BOX|STORAGE_CLICK_GATHER|STORAGE_QUICK_GATHER
 	storage_slots = null
-	flags_item = parent_type::flags_item | HEALING_ITEM
+	flags_human_ai = HEALING_ITEM
 	use_sound = "pillbottle"
 	max_storage_space = 16
 	var/skilllock = SKILL_MEDICAL_MEDIC

@@ -75,9 +75,9 @@
 	L += SSpathfinding.check_special_blockers(tied_human, next_turf)
 	for(var/a in L)
 		var/atom/A = a
-		if(A.xeno_ai_obstacle(tied_human, get_dir(tied_human.loc, next_turf)) == INFINITY)
+		if(A.human_ai_obstacle(tied_human, src, get_dir(tied_human.loc, next_turf)) == INFINITY)
 			return FALSE
-		//INVOKE_ASYNC(A, TYPE_PROC_REF(/atom, xeno_ai_act), tied_human)
+		INVOKE_ASYNC(A, TYPE_PROC_REF(/atom, human_ai_act), tied_human, src)
 	var/successful_move = tied_human.Move(next_turf, get_dir(tied_human, next_turf))
 	if(successful_move)
 		ai_timeout_time = world.time

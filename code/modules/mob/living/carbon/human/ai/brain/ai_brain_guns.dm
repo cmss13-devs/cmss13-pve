@@ -1,5 +1,6 @@
 /datum/human_ai_brain
 	var/obj/item/weapon/gun/primary_weapon
+	//var/obj/item/weapon/primary_melee
 	/// Currently firing a gun
 	var/currently_firing = FALSE
 	/// Appraisal datum
@@ -14,6 +15,7 @@
 /datum/human_ai_brain/proc/unholster_primary()
 	if(tied_human.l_hand == primary_weapon || tied_human.r_hand == primary_weapon)
 		return
+
 	if(tied_human.get_active_hand())
 		tied_human.drop_held_item(tied_human.get_active_hand())
 
@@ -81,9 +83,12 @@
 			return mag
 
 /datum/human_ai_brain/proc/should_reload_primary()
-	if(gun_data?.disposable)
+	if(!primary_weapon || gun_data?.disposable)
 		return FALSE
 
-	if(primary_weapon?.current_mag.current_rounds > 0 || primary_weapon?.in_chamber)
+	if(!primary_weapon.current_mag)
 		return TRUE
-	return FALSE
+
+	if(primary_weapon.current_mag.current_rounds > 0 || primary_weapon?.in_chamber)
+		return FALSE
+	return TRUE

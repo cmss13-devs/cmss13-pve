@@ -1,6 +1,7 @@
 #define HUMAN_AI_HEALTHITEMS "health"
 #define HUMAN_AI_AMMUNITION "ammo"
 #define HUMAN_AI_GRENADES "grenades"
+#define HUMAN_AI_TOOLS "tools"
 
 #define AI_ACTION_APPROACH /datum/ongoing_action/approach_target
 #define AI_ACTION_APPROACH_CAREFUL /datum/ongoing_action/approach_target/carefully
@@ -11,6 +12,7 @@
 #define AI_ACTION_COVER_I /datum/ongoing_action/take_inside_cover
 #define AI_ACTION_THROWBACK /datum/ongoing_action/throw_back_nade
 #define AI_ACTION_NADE /datum/ongoing_action/throw_grenade
+#define AI_ACTION_MELEE_ATOM /datum/ongoing_action/melee_atom
 
 /// Action is completed, delete this and move onto the next ongoing action
 #define ONGOING_ACTION_COMPLETED "completed"

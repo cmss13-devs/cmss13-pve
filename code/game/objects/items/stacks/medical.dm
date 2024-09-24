@@ -8,7 +8,7 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
 	attack_speed = 3
-	flags_item = parent_type::flags_item | HEALING_ITEM
+	flags_human_ai = HEALING_ITEM
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/alien = FALSE

@@ -12,7 +12,7 @@ They're all essentially identical when it comes to getting the job done.
 	var/bonus_overlay = null //Sprite pointer in ammo.dmi to an overlay to add to the gun, for extended mags, box mags, and so on
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
-	flags_item = parent_type::flags_item | AMMUNITION_ITEM
+	flags_human_ai = AMMUNITION_ITEM
 	matter = list("metal" = 1000)
 	//Low.
 	throwforce = 2

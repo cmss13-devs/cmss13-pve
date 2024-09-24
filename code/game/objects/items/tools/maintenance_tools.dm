@@ -479,6 +479,9 @@
 	pry_capable = IS_PRY_CAPABLE_CROWBAR
 	preferred_storage = list(/obj/item/clothing/accessory/storage/tool_webbing = WEAR_ACCESSORY)
 
+/obj/item/tool/crowbar/ai_can_use(mob/living/carbon/human/user)
+	return TRUE
+
 /obj/item/tool/crowbar/red
 	icon = 'icons/obj/items/items.dmi'
 	icon_state = "red_crowbar"

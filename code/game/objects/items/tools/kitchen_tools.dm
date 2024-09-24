@@ -134,6 +134,7 @@
 	matter = list("metal" = 12000)
 
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	flags_human_ai = MELEE_WEAPON_ITEM | TOOL_ITEM
 
 /*
  * Plastic Pizza Cutter

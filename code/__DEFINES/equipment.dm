@@ -90,12 +90,6 @@
 #define FORCEDROP_CONDITIONAL (1<<14)
 /// Overrides smartgunner not being able to wear backpacks
 #define SMARTGUNNER_BACKPACK_OVERRIDE (1<<15)
-/// This item is classified as a healing item for the sake of human AI
-#define HEALING_ITEM (1<<16)
-/// This item is classified as ammunition for the sake of human AI
-#define AMMUNITION_ITEM (1<<17)
-/// This item is classified as a grenade for the sake of human AI
-#define GRENADE_ITEM (1<<18)
 //==========================================================================================
 
 
@@ -572,3 +566,15 @@ GLOBAL_LIST_INIT(uniform_categories, list(
 #define PHONE_ON_BASE_UNIT_ICON_STATE "[initial(icon_state)]"
 #define PHONE_OFF_BASE_UNIT_ICON_STATE "[initial(icon_state)]_ear"
 #define PHONE_RINGING_ICON_STATE "[initial(icon_state)]_ring"
+
+// Human AI flags
+/// This item is classified as a healing item for the sake of human AI
+#define HEALING_ITEM (1<<0)
+/// This item is classified as ammunition for the sake of human AI
+#define AMMUNITION_ITEM (1<<1)
+/// This item is classified as a grenade for the sake of human AI
+#define GRENADE_ITEM (1<<2)
+/// This item is classified as a tool for the sake of human AI
+#define TOOL_ITEM (1<<3)
+/// This item is classified as a melee weapon for the sake of human AI
+#define MELEE_WEAPON_ITEM (1<<4)

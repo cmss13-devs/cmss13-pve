@@ -61,6 +61,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	ongoing_order = null
 	GLOB.human_ai_brains -= src
 	gun_data = null
+	//primary_melee = null
 	return ..()
 
 /datum/human_ai_brain/process(delta_time)

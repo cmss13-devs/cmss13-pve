@@ -73,4 +73,9 @@
 			brain.store_item(to_pickup, storage_spot, HUMAN_AI_GRENADES)
 		return ONGOING_ACTION_COMPLETED
 
+	if(to_pickup.flags_human_ai & TOOL_ITEM)
+		brain.tied_human.put_in_hands(to_pickup, TRUE)
+		brain.store_item(to_pickup, storage_spot, HUMAN_AI_TOOLS)
+		return ONGOING_ACTION_COMPLETED
+
 	return ONGOING_ACTION_COMPLETED

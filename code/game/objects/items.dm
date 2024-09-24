@@ -65,6 +65,8 @@
 	flags_atom = FPRINT
 	/// flags for item stuff that isn't clothing/equipping specific.
 	var/flags_item = NO_FLAGS
+	/// flags for human AI to determine what this item does
+	var/flags_human_ai = NO_FLAGS
 	/// This is used to determine on which slots an item can fit.
 	var/flags_equip_slot = NO_FLAGS
 

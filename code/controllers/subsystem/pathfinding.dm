@@ -35,7 +35,7 @@ SUBSYSTEM_DEF(pathfinding)
 		var/list/prev = current_run.prev
 
 		while(length(visited_nodes))
-			current_run.current_node = visited_nodes[visited_nodes.len]
+			current_run.current_node = visited_nodes[length(visited_nodes)]
 			visited_nodes.len--
 			if(current_run.current_node == target)
 				break
@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(pathfinding)
 				if(direction != get_dir(prev[neighbor], neighbor))
 					distance_between += DIRECTION_CHANGE_PENALTY
 
-				if(!neighbor.weeds)
+				if(isxeno(current_run.agent) && !neighbor.weeds)
 					distance_between += NO_WEED_PENALTY
 
 				for(var/i in neighbor)
@@ -62,8 +62,12 @@ SUBSYSTEM_DEF(pathfinding)
 				var/list/L = LinkBlocked(current_run.agent, current_run.current_node, neighbor, current_run.ignore, TRUE)
 				L += check_special_blockers(current_run.agent, neighbor)
 				if(length(L))
-					for(var/atom/A as anything in L)
-						distance_between += A.xeno_ai_obstacle(current_run.agent, direction, target)
+					if(isxeno(current_run.agent))
+						for(var/atom/A as anything in L)
+							distance_between += A.xeno_ai_obstacle(current_run.agent, direction, target)
+					else
+						for(var/atom/A as anything in L)
+							distance_between += A.human_ai_obstacle(current_run.agent, current_run.agent:ai_brain, direction, target) // zonenote unfuck me later
 
 				if(distance_between < distances[neighbor])
 					distances[neighbor] = distance_between
@@ -126,7 +130,7 @@ SUBSYSTEM_DEF(pathfinding)
 /datum/controller/subsystem/pathfinding/proc/check_special_blockers(mob/agent, turf/checking_turf)
 	var/list/pass_back = list()
 
-	for(var/spec_blocker in XENO_AI_SPECIAL_BLOCKERS)
+	for(var/spec_blocker in AI_SPECIAL_BLOCKERS)
 		pass_back += istype(checking_turf, spec_blocker) ? checking_turf : list()
 
 		for(var/atom/checked_atom as anything in checking_turf)

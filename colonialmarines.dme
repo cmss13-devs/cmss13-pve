@@ -1982,6 +1982,8 @@
 #include "code\modules\mob\living\carbon\human\ai\ai_management_menu.dm"
 #include "code\modules\mob\living\carbon\human\ai\faction_management_panel.dm"
 #include "code\modules\mob\living\carbon\human\ai\fortify_room.dm"
+#include "code\modules\mob\living\carbon\human\ai\human_ai_interaction.dm"
+#include "code\modules\mob\living\carbon\human\ai\action_datums\melee_atom.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\pickup_primary.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\throw_grenade.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\approach_target_carefully.dm"

@@ -38,6 +38,11 @@ GLOBAL_LIST_EMPTY(ai_humans)
 
 /mob/living/carbon/human/ai
 	has_ai = TRUE
+	mob_flags = AI_CONTROLLED
+
+/mob/living/carbon/human/ai/set_species(new_species, default_color)
+	. = ..()
+	mob_flags |= AI_CONTROLLED
 
 /obj/item/storage/backpack/satchel/ai
 	name = "satchel"
