@@ -67,7 +67,7 @@
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
