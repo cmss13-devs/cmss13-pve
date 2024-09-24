@@ -33,7 +33,7 @@
 /datum/paygrade/navy/e4
 	paygrade = PAY_SHORT_NE4
 	name = "Petty Officer 3rd Class"
-	prefix = "PO1."
+	prefix = "PO3."
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e4
 	ranking = 3
 	pay_multiplier = 2.3
@@ -99,7 +99,7 @@
 /datum/paygrade/navy/w1
 	paygrade = PAY_SHORT_NW1
 	name = "Warrant Officer"
-	prefix = "WO."
+	prefix = "WO1."
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/w1
 	ranking = 11
 	pay_multiplier = 3.1	//Pay on par with E7 to begin with
@@ -107,7 +107,7 @@
 /datum/paygrade/navy/w2
 	paygrade = PAY_SHORT_NW2
 	name = "Chief Warrant Officer 2"
-	prefix = "CWO."
+	prefix = "CWO2."
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/w2
 	ranking = 12
 	pay_multiplier = 3.2
