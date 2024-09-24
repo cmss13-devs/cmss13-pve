@@ -135,7 +135,7 @@
 	desc = "A small case containing a loaded ZHNK-72, and additional speedloaders."
 	can_hold = list(/obj/item/weapon/gun/revolver/upp, /obj/item/ammo_magazine/revolver/upp)
 
-/obj/item/storage/box/loadout/zhnk72/fill_preset_inventory()
+/obj/item/storage/box/loadout/ZHNK72_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/upp(src)
