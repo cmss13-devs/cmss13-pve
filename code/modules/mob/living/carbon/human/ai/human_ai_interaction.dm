@@ -95,13 +95,6 @@
 
 
 /////////////////////////////
-//          MOBS           //
-/////////////////////////////
-/mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
-
-
-/////////////////////////////
 //         HUMANS         //
 /////////////////////////////
 /mob/living/carbon/human/human_ai_obstacle(mob/living/carbon/human/human_ai, datum/human_ai_brain/brain, direction, turf/target)
