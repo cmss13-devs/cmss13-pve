@@ -169,7 +169,7 @@
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Rifleman")
 
 /obj/item/pamphlet/skill/specialization/comtech
-	name = "Com-Tech HUD-Chip"
+	name = "Combat Technician HUD-Chip"
 	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has highlights of engineering colors."
 	icon_state = "hudchip_engi"
 
@@ -211,7 +211,7 @@
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Ammo Bearer")
 
 /obj/item/pamphlet/skill/specialization/sharpshooter
-	name = "Sharpshooter HUD-Chip"
+	name = "Designated Marksman HUD-Chip"
 	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has color highlights reminiscent of firing-range mats."
 	icon_state = "hudchip_sharpshooter"
 
