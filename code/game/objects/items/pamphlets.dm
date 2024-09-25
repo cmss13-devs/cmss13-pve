@@ -179,8 +179,8 @@
 	user.hud_set_squad()
 
 	var/obj/item/card/id/ID = user.get_idcard()
-	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "ComTech")
-	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "ComTech")
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Combat Technician")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Combat Technician")
 
 /obj/item/pamphlet/skill/specialization/rto
 	name = "Radio Telephone Operator HUD-Chip"
@@ -221,8 +221,8 @@
 	user.hud_set_squad()
 
 	var/obj/item/card/id/ID = user.get_idcard()
-	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Sharpshooter")
-	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Sharpshooter")
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Designated Marksman")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Designated Marksman")
 
 // Language pamphlets
 
