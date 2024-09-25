@@ -261,6 +261,8 @@
 		list("SqSgt", "hudsquad_tl"),
 		list("PltSgt", "hudsquad_leader"),
 		list("RTO", "hudsquad_rto"),
+		list("brr", "hudsquad_brr"),
+		list("shrp", "hudsquad_shrp")
 	)
 
 	for(var/datum/squad/marine/squad in GLOB.RoleAuthority.squads)

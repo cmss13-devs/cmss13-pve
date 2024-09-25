@@ -878,6 +878,19 @@
 		isopened = TRUE
 		icon_state = "mealpackopened"
 
+/obj/item/storage/box/hudchips
+	name = "box of HUD-chips"
+	desc = "A box of PDT-adjusting chips for riflemen to represent their chosen specialty amongst the platoon."
+	storage_slots = 4
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/pamphlet/skill/specialization)
+
+/obj/item/storage/box/pride/fill_preset_inventory()
+	new /obj/item/pamphlet/skill/specialization/comtech(src)
+	new /obj/item/pamphlet/skill/specialization/rto(src)
+	new /obj/item/pamphlet/skill/specialization/ammobearer(src)
+	new /obj/item/pamphlet/skill/specialization/sharpshooter(src)
+
 //food boxes for storage in bulk
 
 //meat
