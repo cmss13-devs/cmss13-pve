@@ -7,7 +7,6 @@
 	max_health = XENO_HEALTH_TIER_2
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
-	crystal_max = XENO_CRYSTAL_LOW
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
@@ -41,7 +40,6 @@
 	acid_blood_damage = 35 /// Strong acid blood. Should be a define in the future.
 	acid_blood_spatter = TRUE /// Testing variable, means that their blood can melt objects in the environment. Primarily barricades.
 
-	mutation_type = SOLDIER_NORMAL
 	icon_xeno = 'icons/mob/xenos/soldier.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
 
@@ -98,10 +96,6 @@
 	if(!length(GLOB.ai_hives)) ///We check for this first. If there is a hive, we want to make sure the aliens drag people there.
 		aggression_cur = AGGRESSION_NO_HIVE ///If we do not have a hive, bump up aggression to go lethal instead.
 		aggression_min = AGGRESSION_NO_HIVE
-
-	/// This is so stupid. Mutators are set inline with new, and are not created on Initialize(). However, pull_multiplier is then overriden by the personal mutator pull_multiplier on Initialize() with recalculate_actions().
-	mutators.pull_multiplier = initial(pull_multiplier)
-	pull_multiplier = mutators.pull_multiplier
 
 /mob/living/carbon/xenomorph/soldier/apply_damage(damage = 0, damagetype = BRUTE, def_zone = null, used_weapon = null, sharp = 0, edge = 0, force = FALSE)
 	. = ..() //It will take the previous arguments.
