@@ -175,7 +175,7 @@
 
 /obj/item/pamphlet/skill/specialization/comtech/on_use(mob/living/carbon/human/user)
 	. = ..()
-	user.rank_fallback = "Eng"
+	user.rank_fallback = "pfceng"
 	user.hud_set_squad()
 
 	var/obj/item/card/id/ID = user.get_idcard()
@@ -189,7 +189,7 @@
 
 /obj/item/pamphlet/skill/specialization/rto/on_use(mob/living/carbon/human/user)
 	. = ..()
-	user.rank_fallback = "RTO"
+	user.rank_fallback = "pfcrto"
 	user.hud_set_squad()
 
 	var/obj/item/card/id/ID = user.get_idcard()
