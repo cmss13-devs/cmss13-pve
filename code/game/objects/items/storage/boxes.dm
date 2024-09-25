@@ -885,7 +885,7 @@
 	w_class = SIZE_MEDIUM
 	can_hold = list(/obj/item/pamphlet/skill/specialization)
 
-/obj/item/storage/box/pride/fill_preset_inventory()
+/obj/item/storage/box/hudchips/fill_preset_inventory()
 	new /obj/item/pamphlet/skill/specialization/comtech(src)
 	new /obj/item/pamphlet/skill/specialization/rto(src)
 	new /obj/item/pamphlet/skill/specialization/ammobearer(src)
