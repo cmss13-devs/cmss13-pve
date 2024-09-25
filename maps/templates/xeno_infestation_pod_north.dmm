@@ -1,0 +1,41 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"f" = (/obj/effect/alien/resin/sticky/thin,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"p" = (/obj/effect/alien/weeds/node,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"q" = (/obj/effect/alien/weeds/node,/turf/open/ice{color = "#797979"},/area/template_noop)
+"r" = (/turf/open/ice{color = "#797979"},/area/template_noop)
+"s" = (/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"B" = (/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"H" = (/turf/closed/wall/mineral/bone_resin,/area/template_noop)
+"I" = (/obj/effect/alien/resin/king_cocoon{pixel_y = -47},/turf/open/ice{color = "#797979"},/area/template_noop)
+"J" = (/obj/effect/alien/resin/acid_pillar/strong,/turf/open/ice{color = "#797979"},/area/template_noop)
+"L" = (/obj/effect/alien/weeds/node,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"R" = (/obj/effect/alien/resin/sticky/thin,/turf/open/ice{color = "#797979"},/area/template_noop)
+"S" = (/obj/effect/alien/egg,/turf/open/ice{color = "#797979"},/area/template_noop)
+"T" = (/obj/effect/xenomorph/boiler_bombard,/turf/template_noop,/area/template_noop)
+"U" = (/obj/effect/alien/resin/shield_pillar,/turf/open/ice{color = "#797979"},/area/template_noop)
+"Y" = (/obj/effect/alien/resin/sticky/thin,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaHHaa
+aaaaaHHHHaHHHHa
+aaHHHHHHHHHHHHH
+aHHHrrRqrSHHaHH
+HHRUSHSrHrHHaaH
+HHSqRHHrrrHHaaa
+HHSRRrHrIrrHHaa
+aHHHHRSrrqrHHaa
+aaaHHrRrHSRrHaa
+HHaaHRqHHHHRHaa
+HaaaHSrJHHHrHaa
+HHaHHHSRrUrSHaa
+HHHHHrSrRqrHHaa
+aHHHrrRRRrrHaaa
+aHsrRLrRsHHHHHa
+HHrHrJrYSHHHHHH
+HHrRYrrrrRYHHHH
+HHrrrRsYqrRBHHH
+HfqfHrBfRsBfBHT
+TBBBHBBfJrHBpBT
+TTBHHHHBfHHHBTa
+aTTHHHHpHHHHHTa
+"}
