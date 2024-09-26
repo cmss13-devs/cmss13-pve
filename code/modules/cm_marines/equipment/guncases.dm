@@ -158,21 +158,141 @@
 	new /obj/item/weapon/gun/flamer(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
+//------------ heavy cases
 
-/obj/item/storage/box/guncase/flamer/fuel
-	name = "\improper M240A1 fuel case"
-	desc = "A case containing four fuel canisters for the M240A1 incinerator unit."
-	icon_state = "fuelbox"
+/obj/item/storage/box/guncase/heavy
+	name = "heavy gun case"
+	desc = "You shouldn't be seeing this."
+	icon_state = null
+	use_sound = "toolbox"
+	var/move_delay_mult = 2
+
+/obj/item/storage/box/guncase/heavy/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/storage/box/guncase/heavy/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/storage/box/guncase/heavy) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/storage/box/guncase/heavy/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+
+
+/obj/item/storage/box/guncase/heavy/sentry
+	name = "\improper UA 571-C sentry gun case"
+	desc = "A gun case containing the UA 571-C sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry, /obj/item/ammo_magazine/sentry, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/device/sentry_computer(src)
+
+/obj/item/storage/box/guncase/heavy/sentry/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "case_lid_open")
+	else
+		overlays += image(src.icon, "sentrycase_lid")
+		return
+	if(locate(/obj/item/defenses/handheld/sentry) in src.contents)
+		overlays += image(src.icon, "+sentry")
+	if(locate(/obj/item/ammo_magazine/sentry) in src.contents)
+		overlays += image(src.icon, "+sentrymag")
+	if(locate(/obj/item/device/sentry_computer) in src.contents)
+		overlays += image(src.icon, "+sentrycomp")
+
+/obj/item/storage/box/guncase/heavy/motiondetectors
+	name = "\improper motion detectors case"
+	desc = "A case containing four individual handheld motion detectors."
+	icon_state = "mdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/fill_preset_inventory()
+	new /obj/item/device/motiondetector(src)
+	new /obj/item/device/motiondetector(src)
+	new /obj/item/device/motiondetector(src)
+	new /obj/item/device/motiondetector(src)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "case_lid_open")
+	else
+		overlays += image(src.icon, "mdcase_lid")
+		return
+
+	if(length(src.contents) >= storage_slots)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(src.contents) >= storage_slots * 0.75)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 6
+		overlays += source_image
+	if(length(src.contents) >= storage_slots * 0.5)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 12
+		overlays += source_image
+	if(length(src.contents) >= storage_slots * 0.25)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 18
+		overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/fuel
+	name = "\improper M240A1 fuel canister case"
+	desc = "A heavy case containing six fuel canisters for the M240A1 incinerator unit."
+	icon_state = "fuelcase"
 	storage_slots = 6
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank)
 
-/obj/item/storage/box/guncase/flamer/fuel/fill_preset_inventory()
+/obj/item/storage/box/guncase/heavy/fuel/fill_preset_inventory()
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
+
+/obj/item/storage/box/guncase/heavy/fuel/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "case_lid_open")
+	else
+		overlays += image(src.icon, "fuelcase_lid")
+		return
+
+	if(length(src.contents) >= 1)
+		var/image/source_image = image(src.icon, "+fuel_bottom")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(src.contents) >= 2)
+		var/image/source_image = image(src.icon, "+fuel_bottom")
+		source_image.pixel_x = 8
+		overlays += source_image
+	if(length(src.contents) >= 3)
+		var/image/source_image = image(src.icon, "+fuel_bottom")
+		source_image.pixel_x = 16
+		overlays += source_image
+	if(length(src.contents) >= 4)
+		var/image/source_image = image(src.icon, "+fuel")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(src.contents) >= 5)
+		var/image/source_image = image(src.icon, "+fuel")
+		source_image.pixel_x = 8
+		overlays += source_image
+	if(length(src.contents) >= 6)
+		var/image/source_image = image(src.icon, "+fuel")
+		source_image.pixel_x = 16
+		overlays += source_image
 
 //------------
 /obj/item/storage/box/guncase/m56d
