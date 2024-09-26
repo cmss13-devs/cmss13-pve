@@ -60,7 +60,7 @@
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "sandbag_pile"
 	item_state = "sandbag_pile"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	force = 9
 	throwforce = 15
 	throw_speed = SPEED_VERY_FAST
@@ -70,7 +70,7 @@
 	stack_id = "sandbags"
 
 /obj/item/stack/sandbags/large_stack
-	amount = 25
+	amount = 35
 
 /obj/item/stack/sandbags/small_stack
 	amount = 5
