@@ -20,7 +20,7 @@
 /obj/effect/hangar_airlock/outer
 	name = "hangar outer airlock"
 	icon_state = "outer"
-	layer = 1.98 //under UNDER_TURF_LAYER
+	layer = 1.97 //under under UNDER_TURF_LAYER
 
 /obj/effect/hangar_airlock/outer/proc/open()
 	icon_state = "outer_open"
@@ -34,3 +34,15 @@
 /obj/effect/hangar_airlock/half_tile
 	icon = 'icons/effects/half_tiles.dmi'
 	icon_state = "hangar_airlock_tile"
+
+/obj/effect/hangar_airlock/height_mask
+	icon_state = "height_mask"
+	layer = 1.98 // under UNDER_TURF_LAYER
+	alpha = 80
+
+/obj/effect/hangar_airlock/dropship_height_mask
+	icon_state = "dropship_height_mask"
+	layer = 5
+
+/obj/effect/hangar_airlock/dropship_height_mask/proc/darken()
+	alpha = 80

@@ -8,6 +8,7 @@ SUBSYSTEM_DEF(fz_transitions)
 	priority = SS_PRIORITY_FZ_TRANSITIONS
 	init_order = SS_INIT_FZ_TRANSITIONS
 	flags = SS_KEEP_TIMING
+	var/list/selective_update = list(/obj/effect/projector = 1, /obj/effect/projector/bay_one = 1, /obj/effect/projector/bay_two = 1)
 
 /datum/controller/subsystem/fz_transitions/stat_entry(msg)
 	msg = "P:[length(GLOB.projectors)]|C:[length(GLOB.clones)]|T:[length(GLOB.clones_t)]"
@@ -24,13 +25,12 @@ SUBSYSTEM_DEF(fz_transitions)
 			GLOB.projectors -= P
 			continue
 		if(!P.loc.clone)
-			P.loc.create_clone(P.vector_x, P.vector_y, P.vector_z)
-
+			P.loc.create_clone(P.vector_x, P.vector_y, P.vector_z, P.mask_layer, P.modify_turf, P)
 		if(P.loc.contents)
 			for(var/atom/movable/O in P.loc.contents)
 				if(!istype(O, /obj/effect/projector) && !istype(O, /mob/dead/observer) && !istype(O, /obj/structure/stairs) && !istype(O, /obj/structure/catwalk) && O.type != /atom/movable/clone)
 					if(!O.clone) //Create a clone if it's on a projector
-						O.create_clone_movable(P.vector_x, P.vector_y, P.vector_z)
+						O.create_clone_movable(P)
 					else
 						O.clone.proj_x = P.vector_x //Make sure projection is correct
 						O.clone.proj_y = P.vector_y
@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(fz_transitions)
 		if(C.mstr == null || !istype(C.mstr.loc, /turf))
 			C.mstr.destroy_clone() //Kill clone if master has been destroyed or picked up
 		else
-			if(C != C.mstr)
+			if(C != C.mstr && selective_update[C.proj])
 				C.mstr.update_clone() //NOTE: Clone updates are also forced by player movement to reduce latency
 
 	for(var/atom/T in GLOB.clones_t)
