@@ -65,12 +65,12 @@
 	throwforce = 15
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
-	max_amount = 25
+	max_amount = 35
 	attack_verb = list("hit", "bludgeoned", "whacked")
 	stack_id = "sandbags"
 
 /obj/item/stack/sandbags/large_stack
-	amount = 35
+	amount = 50
 
 /obj/item/stack/sandbags/small_stack
 	amount = 5
