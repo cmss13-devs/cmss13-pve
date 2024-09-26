@@ -275,13 +275,12 @@
 	return src.mstr.bullet_act(P)
 /////////////////////
 
-/atom/movable/proc/create_clone_movable(projector)
-	var/obj/effect/projector/P = projector
+/atom/movable/proc/create_clone_movable(obj/effect/projector/P)
 	var/atom/movable/clone/C = new /atom/movable/clone(src.loc)
 	C.density = FALSE
-	C.proj_x = P.shift_x
-	C.proj_y = P.shift_y
-	C.proj_z = P.shift_z
+	C.proj_x = P.vector_x
+	C.proj_y = P.vector_y
+	C.proj_z = P.vector_z
 	if(P.mask_layer)
 		C.proj_base_layer = P.mask_layer-0.5
 	C.proj_plane = P.movables_projection_plane

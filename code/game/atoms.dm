@@ -416,13 +416,14 @@ Parameters are passed from New.
 	var/proj_x = 0
 	var/proj_y = 0
 	var/proj_z = 0
+	var/obj/effect/projector/proj = null
 
-/atom/proc/create_clone(shift_x, shift_y, shift_z, mask_layer, modify_turf) //NOTE: Use only for turfs, otherwise use create_clone_movable
+/atom/proc/create_clone(obj/effect/projector/P) //NOTE: Use only for turfs, otherwise use create_clone_movable
 	var/turf/T = null
-	T = locate(src.x + P.shift_x, src.y + P.shift_y, src.z + P.shift_z)
+	T = locate(src.x + P.vector_x, src.y + P.vector_y, src.z + P.vector_z)
 
 	if(!P.modify_turf)
-		T = new /obj/effect(T)
+		T = new /atom/clone(T)
 		T.plane = -7
 
 	T.appearance = src.appearance
@@ -433,6 +434,7 @@ Parameters are passed from New.
 
 	GLOB.clones_t.Add(src)
 	src.clone = T
+	proj = P
 
 // EFFECTS
 /atom/proc/extinguish_acid()

@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(fz_transitions)
 			GLOB.projectors -= P
 			continue
 		if(!P.loc.clone)
-			P.loc.create_clone(P.vector_x, P.vector_y, P.vector_z, P.mask_layer, P.modify_turf, P)
+			P.loc.create_clone(P)
 		if(P.loc.contents)
 			for(var/atom/movable/O in P.loc.contents)
 				if(!istype(O, /obj/effect/projector) && !istype(O, /mob/dead/observer) && !istype(O, /obj/structure/stairs) && !istype(O, /obj/structure/catwalk) && O.type != /atom/movable/clone)
@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(fz_transitions)
 		if(C.mstr == null || !istype(C.mstr.loc, /turf))
 			C.mstr.destroy_clone() //Kill clone if master has been destroyed or picked up
 		else
-			if(C != C.mstr && selective_update[C.proj])
+			if(C != C.mstr && selective_update[C.proj.type])
 				C.mstr.update_clone() //NOTE: Clone updates are also forced by player movement to reduce latency
 
 	for(var/atom/T in GLOB.clones_t)

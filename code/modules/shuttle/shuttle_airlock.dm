@@ -46,3 +46,19 @@
 
 /obj/effect/hangar_airlock/dropship_height_mask/proc/darken()
 	alpha = 80
+
+/turf/open/floor/hangar_airlock
+	layer = 1.5
+
+/turf/open/floor/hangar_airlock/outer
+	name = "space"
+	icon = 'icons/turf/floors/space.dmi'
+	icon_state = "0"
+
+/turf/open/floor/hangar_airlock/outer/Initialize(mapload, ...)
+	. = ..()
+	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
+
+/turf/open/floor/hangar_airlock/inner
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "plate"

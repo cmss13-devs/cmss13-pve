@@ -408,6 +408,27 @@
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_HIJACK_LANDED)
 
+/obj/docking_port/stationary/marine_dropship/airlock/lower
+
+/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_one
+	name = "Golden Arrow Hangar Airlock 1 Lower"
+	id = GOLDEN_ARROW_A1_L
+
+/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_two
+	name = "Golden Arrow Hangar Airlock 2 Lower"
+	id = GOLDEN_ARROW_A2_L
+
+/obj/docking_port/stationary/marine_dropship/airlock/upper
+
+/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_one
+	name = "Golden Arrow Hanagar Airlock 1 Upper"
+	id = GOLDEN_ARROW_A2_U
+	roundstart_template = /datum/map_template/shuttle/midway
+
+/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_two
+	name = "Golden Arrow Hangar Airlock 2 Upper"
+	id = GOLDEN_ARROW_A2_U
+
 /datum/map_template/shuttle/midway
 	name = "Midway"
 	shuttle_id = DROPSHIP_MIDWAY

@@ -17,18 +17,18 @@
 // defined so we can deselect their firing for performance and also so we can spawn them in after/before dropships interact with projectors
 /obj/effect/projector/bay_one
 	name = "Bay One"
-	vector_x = 45
-	vector_y -61
+	vector_x = 52
+	vector_y = -60
 	mask_layer = 2
-	movables_projection_lane = -7
-	var/modify_turf = FALSE
+	movables_projection_plane = -7
+	modify_turf = FALSE
 	projected_mouse_opacity = 0
 
 /obj/effect/projector/bay_two
 	name = "Bay Two"
-	vector_x = 45
-	vector_y -60
+	vector_x = 52
+	vector_y = -60
 	mask_layer = 2
-	movables_projection_lane = -7
-	var/modify_turf = FALSE
+	movables_projection_plane = -7
+	modify_turf = FALSE
 	projected_mouse_opacity = 0
