@@ -318,7 +318,7 @@
 
 /obj/item/prop/magazine/book/communistmanifesto
 	name = "Communist Manifesto"
-	desc ="The bare minimum in communist reading."
+	desc = "The bare minimum in communist reading."
 
 /obj/item/prop/magazine/book/inframaterialism
 	name = "A Brief Look at Infra-Materialism"
