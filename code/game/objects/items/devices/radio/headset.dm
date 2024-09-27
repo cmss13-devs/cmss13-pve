@@ -614,7 +614,7 @@
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_SL,
+		"Platoon Sergeant" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
