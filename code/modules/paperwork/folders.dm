@@ -29,6 +29,7 @@
 /obj/item/folder/green
 	desc = "A green folder."
 	icon_state = "folder_green"
+
 /obj/item/folder/black_random
 	desc = "A black folder. It is decorated with stripes."
 	icon_state = "folder_black_green"
