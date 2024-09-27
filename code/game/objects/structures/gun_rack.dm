@@ -88,7 +88,7 @@
 /obj/structure/gun_rack/apc/frontal/aa
 	name = "vertical-launch-system ammo storage compartment"
 	icon_state = "boyars"
-	desc = "A small compartment that stores ammunition for the vehicle's VLS-array ."
+	desc = "A small compartment that stores ammunition for the vehicle's VLS-array."
 	max_stored = 2
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/towlauncher/aa
