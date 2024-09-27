@@ -218,14 +218,21 @@
 	dirt_amt_per_dig = 5
 	shovelspeed = 50
 
+/obj/item/tool/shovel/etool/Initialize()
+	. = ..()
+	update_icon()
+	if(folded)
+		w_class = SIZE_SMALL
+		force = 5
+		hitsound = 'sound/weapons/genhit3.ogg'
 
 /obj/item/tool/shovel/etool/update_icon()
 	if(folded)
-		icon_state = "etool_c"
-		item_state = "etool_c"
+		icon_state = "[initial(icon_state)]_c"
+		item_state = "[initial(item_state)]_c"
 	else
-		icon_state = "etool"
-		item_state = "etool"
+		icon_state = initial(icon_state)
+		item_state = initial(item_state)
 	..()
 
 
@@ -234,59 +241,23 @@
 	if(folded)
 		w_class = SIZE_SMALL
 		force = 5
-	else
-		w_class = SIZE_LARGE
-		force = 30
-	..()
-
-/obj/item/tool/shovel/etool/folded
-	folded = TRUE
-	w_class = SIZE_SMALL
-	force = 5
-	icon_state = "etool_c"
-	item_state = "etool_c"
-	hitsound = 'sound/weapons/genhit3.ogg'
-
-/obj/item/tool/shovel/etoolupp
-	name = "Type 50 entrenching tool"
-	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
-	icon = 'icons/obj/items/marine-items.dmi'
-	icon_state = "etoolupp"
-	item_state = "etoolupp"
-	force = 30
-	throwforce = 2
-	w_class = SIZE_LARGE
-	hitsound = 'sound/weapons/bladeslice.ogg'
-
-	dirt_overlay = "etoolupp_overlay"
-	dirt_amt_per_dig = 5
-	shovelspeed = 50
-
-/obj/item/tool/shovel/etoolupp/update_icon()
-	if(folded)
-		icon_state = "etoolupp_c"
-		item_state = "etoolupp_c"
-	else
-		icon_state = "etoolupp"
-		item_state = "etoolupp"
-	..()
-
-/obj/item/tool/shovel/etoolupp/attack_self(mob/user as mob)
-	folded = !folded
-	if(folded)
-		w_class = SIZE_SMALL
-		force = 5
 		hitsound = 'sound/weapons/genhit3.ogg'
 	else
 		w_class = SIZE_LARGE
 		force = 30
-		hitsound = 'sound/weapons/bladeslice.ogg'
+		hitsound = initial(hitsound)
 	..()
 
-/obj/item/tool/shovel/etoolupp/folded
+/obj/item/tool/shovel/etool/folded
 	folded = TRUE
-	w_class = SIZE_SMALL
-	force = 5
-	icon_state = "etoolupp_c"
-	item_state = "etoolupp_c"
-	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/tool/shovel/etool/upp
+	name = "Type 50 entrenching tool"
+	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
+	icon_state = "etoolupp"
+	item_state = "etoolupp"
+	dirt_overlay = "etoolupp_overlay"
+
+/obj/item/tool/shovel/etool/upp/folded
+	folded = TRUE
+

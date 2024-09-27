@@ -493,7 +493,7 @@
 		list("MRE", round(scale * 15), /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
-		list("Type 50 Entrenching Tool", round(scale * 2), /obj/item/tool/shovel/etoolupp/folded, VENDOR_ITEM_REGULAR),
+		list("Type 50 Entrenching Tool", round(scale * 2), /obj/item/tool/shovel/etool/upp/folded, VENDOR_ITEM_REGULAR),
 		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver/tactical, VENDOR_ITEM_REGULAR),
 		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters/tactical, VENDOR_ITEM_REGULAR),
 		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
