@@ -30,9 +30,9 @@
 	switch(HP.slot)
 		if(HDPT_PRIMARY) //quadcannons
 			HP.muzzle_flash_pos = list(
-				"1" = list(8, -20),
-				"2" = list(25, 31),
-				"4" = list(-7, 27),
+				"1" = list(10, -33),
+				"2" = list(28, 28),
+				"4" = list(-10, 26),
 				"8" = list(37, 9)
 			)
 		if(HDPT_SECONDARY) //frontmissiles
