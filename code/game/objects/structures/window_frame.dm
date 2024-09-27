@@ -174,6 +174,21 @@
 	basestate = "white_window"
 	window_type = /obj/structure/window/framed/almayer/white
 
+/obj/structure/window_frame/almayer/aicore
+	icon_state = "ai_window0_frame"
+	basestate = "ai_window"
+	window_type = /obj/structure/window/framed/almayer/aicore
+
+/obj/structure/window_frame/almayer/aicore/white
+	icon_state = "w_ai_window0_frame"
+	basestate = "w_ai_window"
+	window_type = /obj/structure/window/framed/almayer/aicore/white
+
+/obj/structure/window_frame/almayer/aicore/black
+	icon_state = "alm_window0_frame"
+	basestate = "alm_window"
+	window_type = /obj/structure/window/framed/almayer/aicore/black
+
 /obj/structure/window_frame/almayer/requisitions/attackby(obj/item/W, mob/living/user)
 	if(istype(W, sheet_type))
 		to_chat(user, SPAN_WARNING("You can't repair this window."))
@@ -261,6 +276,12 @@
 	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
 	icon_state = "shiva_window0_frame"
 	basestate = "shiva_window"
+
+/obj/structure/window_frame/prefab
+	name = "poly-kevlon window frame"
+	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
+	icon_state = "prefab_window0_frame"
+	basestate = "prefab_window"
 
 //Solaris frames
 

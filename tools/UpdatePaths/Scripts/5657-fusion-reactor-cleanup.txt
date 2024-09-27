@@ -1,0 +1,3 @@
+/obj/item/fuelCell : /obj/item/fuel_cell{@OLD}
+/obj/structure/machinery/power/fusion_engine : /obj/structure/machinery/power/reactor{@OLD}
+/obj/structure/machinery/power/geothermal : /obj/structure/machinery/power/reactor/colony{@OLD}

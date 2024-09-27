@@ -10,7 +10,7 @@
 		var/list/T = list()
 		for(var/turf/open/O in range(1))
 			T += O
-		if(supply.len)
+		if(length(supply))
 			for(var/s in supply)
 				var/amount = supply[s]
 				for(var/i = 1, i <= amount, i++)
@@ -93,7 +93,7 @@
 
 /obj/structure/largecrate/supply/Initialize()
 	. = ..()
-	if(supplies.len)
+	if(length(supplies))
 		for(var/s in supplies)
 			var/amount = supplies[s]
 			for(var/i = 1, i <= amount, i++)
@@ -160,6 +160,9 @@
 	name = "\improper M41A magazine case (x20)"
 	desc = "An ammunition case containing 20 M41A MK1 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/m41aMK1 = 20)
+
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon
+	supplies = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon = 20)
 
 /obj/structure/largecrate/supply/ammo/m41a_box
 	name = "\improper M41A ammunition box case (x4)"

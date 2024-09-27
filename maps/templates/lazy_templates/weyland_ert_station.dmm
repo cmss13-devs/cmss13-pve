@@ -1,0 +1,4816 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/shower{
+	pixel_y = 21
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"af" = (
+/obj/structure/closet/emcloset,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/yellowcorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"aw" = (
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"aB" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat/redcorner,
+/area/adminlevel/ert_station/weyland_station)
+"aE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"aF" = (
+/turf/open/floor/corsat/greencorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"aG" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/computer/emails{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"aQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
+	},
+/obj/structure/closet/emcloset{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/structure/closet/firecloset/full{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 15
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat/whitecorner,
+/area/adminlevel/ert_station/weyland_station)
+"aS" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/whitetancorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"aU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat/white,
+/area/adminlevel/ert_station/weyland_station)
+"ba" = (
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"bn" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/adminlevel/ert_station/weyland_station)
+"bs" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/almayer/tcomms,
+/area/adminlevel/ert_station/weyland_station)
+"bv" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"bx" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door_control{
+	id = "WY_aft_medbay";
+	name = "Aft Medbay Shutters";
+	pixel_x = -7;
+	pixel_y = 9;
+	req_access_txt = "1"
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"bH" = (
+/obj/structure/machinery/sleep_console,
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"bO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/green,
+/turf/open/floor/corsat/white/west,
+/area/adminlevel/ert_station/weyland_station)
+"bP" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/greencorner,
+/area/adminlevel/ert_station/weyland_station)
+"bQ" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"bW" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"bZ" = (
+/obj/structure/pipes/standard/tank/oxygen,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"ce" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"cg" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"ch" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	dir = 1;
+	name = "Barracks"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"cj" = (
+/obj/item/weapon/gun/shotgun/combat{
+	pixel_y = 9
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/weapon/gun/shotgun/combat{
+	pixel_y = -6
+	},
+/obj/item/weapon/gun/shotgun/combat{
+	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"cB" = (
+/obj/structure/bed/chair,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"cI" = (
+/obj/structure/morgue,
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"dg" = (
+/turf/open/floor/corsat/arrow_east,
+/area/adminlevel/ert_station/weyland_station)
+"du" = (
+/turf/open/floor/corsat/bluecorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"dv" = (
+/turf/open/floor/corsat/greencorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"dx" = (
+/obj/structure/window/framed/corsat/indestructible/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_aft_medbay";
+	name = "\improper Aft Medbay Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"dK" = (
+/obj/item/ashtray/bronze{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/trash/cigbutt/cigarbutt{
+	pixel_x = 10;
+	pixel_y = 15
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/blue/west,
+/area/adminlevel/ert_station/weyland_station)
+"dN" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"dQ" = (
+/turf/open/floor/corsat/yellow/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"dU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"dW" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper,
+/obj/item/tool/pen,
+/obj/item/tool/pen{
+	pixel_y = 3
+	},
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"dY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"et" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden/green,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"ev" = (
+/obj/structure/machinery/portable_atmospherics/powered/pump,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"ey" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/milosoup{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"eK" = (
+/turf/open/floor/corsat/brown/west,
+/area/adminlevel/ert_station/weyland_station)
+"eU" = (
+/turf/open/floor/corsat/blue/west,
+/area/adminlevel/ert_station/weyland_station)
+"eW" = (
+/turf/open/floor/corsat/red/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"eY" = (
+/obj/structure/showcase{
+	icon_state = "relay";
+	name = "Telecommunication Relay"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"fl" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_10"
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"fm" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/brown/west,
+/area/adminlevel/ert_station/weyland_station)
+"fn" = (
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	pixel_x = 8
+	},
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"fr" = (
+/obj/structure/window/reinforced/toughened,
+/obj/structure/closet/crate/ammo,
+/turf/open/floor/corsat/browncorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"fs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out"
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat/whitecorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"fx" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/meatsteak{
+	pixel_y = -2
+	},
+/obj/item/ashtray/bronze{
+	pixel_x = 7;
+	pixel_y = 9
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"fJ" = (
+/turf/open/floor/corsat/brown/east,
+/area/adminlevel/ert_station/weyland_station)
+"fL" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/browncorner,
+/area/adminlevel/ert_station/weyland_station)
+"fM" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/microwave{
+	pixel_y = 4
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"fN" = (
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"fR" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"fS" = (
+/obj/structure/closet/coffin,
+/turf/open/floor/corsat/green/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"fV" = (
+/obj/structure/bed/chair/wheelchair,
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"fX" = (
+/turf/closed/wall/r_wall/biodome,
+/area/adminlevel/ert_station/weyland_station)
+"gc" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/weyland_station)
+"gn" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/corsat/yellow,
+/area/adminlevel/ert_station/weyland_station)
+"gp" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"gr" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/brown/north,
+/area/adminlevel/ert_station/weyland_station)
+"gt" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	name = "\improper Fridge"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"gu" = (
+/turf/open/floor/corsat/brown/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"gy" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/arrow_east,
+/area/adminlevel/ert_station/weyland_station)
+"gF" = (
+/obj/structure/largecrate/random/barrel/green,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"gI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/weapon/gun/smg/m39/elite,
+/obj/item/weapon/gun/smg/m39/elite{
+	pixel_y = -8
+	},
+/obj/item/weapon/gun/smg/m39/elite{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"gM" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/corsat/darkgreencorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"gO" = (
+/obj/structure/bed,
+/obj/structure/window/reinforced/toughened{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/item/bedsheet/orange,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"gV" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"hg" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"hj" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"hq" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/structure/machinery/light/small/built{
+	dir = 4
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"hx" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"hB" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/processor{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"hU" = (
+/turf/open/floor/corsat/whitetancorner,
+/area/adminlevel/ert_station/weyland_station)
+"ie" = (
+/obj/structure/surface/rack,
+/obj/item/storage/fancy/vials/random,
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"ih" = (
+/obj/structure/closet/secure_closet/brig{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/closet/secure_closet/brig{
+	density = 0;
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"ij" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"ir" = (
+/turf/open/floor/corsat/greencorner,
+/area/adminlevel/ert_station/weyland_station)
+"iw" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin{
+	pixel_y = 10
+	},
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = 16;
+	pixel_y = 20
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"iy" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/obj/effect/spawner/random/goggles/lowchance,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"iQ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/firstaid/rad{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"iR" = (
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/belt/medical/lifesaver/full,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"iX" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 1
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = -4
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"jd" = (
+/obj/structure/surface/rack,
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"je" = (
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	density = 0;
+	pixel_x = -9;
+	pixel_y = 19
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"jp" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"jt" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/red/west,
+/area/adminlevel/ert_station/weyland_station)
+"jA" = (
+/obj/structure/bedsheetbin,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"jG" = (
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"jI" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"jM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/gloves{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/masks,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"jN" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Barracks"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"jS" = (
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"jT" = (
+/obj/structure/bed/chair/comfy/orange,
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"kb" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/redcorner,
+/area/adminlevel/ert_station/weyland_station)
+"kf" = (
+/obj/structure/machinery/chem_dispenser,
+/obj/item/reagent_container/glass/beaker/bluespace,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"kh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"kw" = (
+/turf/open/floor/corsat/yellow,
+/area/adminlevel/ert_station/weyland_station)
+"kB" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/browncorner,
+/area/adminlevel/ert_station/weyland_station)
+"kL" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/structure/machinery/light/small,
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"kO" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_center_medbay_or";
+	name = "\improper Central Medbay Operation Room Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"kT" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"kY" = (
+/obj/structure/machinery/door/airlock/almayer/security/colony{
+	dir = 1;
+	name = "\improper Brig Cell 2"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"lb" = (
+/turf/open/floor/corsat/arrow_west,
+/area/adminlevel/ert_station/weyland_station)
+"lc" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"le" = (
+/obj/structure/window/framed/corsat/cell/security,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"lf" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"lj" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"lk" = (
+/obj/structure/machinery/sleep_console{
+	dir = 1
+	},
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"lq" = (
+/obj/structure/bed{
+	icon_state = "psychbed"
+	},
+/obj/item/bedsheet/rd,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"lQ" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
+	name = "Morgue";
+	req_one_access = null
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"lW" = (
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"lY" = (
+/obj/structure/window/framed/corsat/indestructible,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"lZ" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/obj/effect/spawner/random/facepaint,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"mf" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"mg" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"mk" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/red/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"mm" = (
+/obj/structure/surface/rack,
+/obj/item/storage/pill_bottle/inaprovaline{
+	pixel_x = 7
+	},
+/obj/item/storage/pill_bottle/dexalin,
+/obj/item/storage/pill_bottle/antitox{
+	pixel_x = -5
+	},
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"mr" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/browncorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"mw" = (
+/turf/open/floor/corsat/yellowcorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"mz" = (
+/obj/structure/closet/secure_closet/surgical{
+	pixel_y = 30
+	},
+/obj/item/reagent_container/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door_control{
+	id = "WY_center_medbay_or";
+	name = "Center Medbay Operation Room Shutters";
+	pixel_x = -7;
+	pixel_y = 9;
+	req_access_txt = "1"
+	},
+/turf/open/floor/corsat/darkgreen/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"mC" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"mD" = (
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_x = 1;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"mK" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"mL" = (
+/turf/open/floor/corsat/brown/north,
+/area/adminlevel/ert_station/weyland_station)
+"mO" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"mR" = (
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/redcorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"mS" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat/blue/west,
+/area/adminlevel/ert_station/weyland_station)
+"mZ" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/antag_guns{
+	hacked = 1;
+	name = "\improper Response Team Automated Guns Rack";
+	use_power = 0;
+	use_snowflake_points = 1
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"nc" = (
+/obj/structure/machinery/autolathe/full,
+/turf/open/floor/corsat/yellow/west,
+/area/adminlevel/ert_station/weyland_station)
+"nd" = (
+/obj/item/roller,
+/obj/item/roller,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"nn" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"no" = (
+/obj/structure/machinery/medical_pod/autodoc/unskilled{
+	dir = 1
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/green/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"nK" = (
+/obj/item/device/defibrillator/upgraded,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/darkgreen/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"nL" = (
+/turf/open/floor/corsat/omega,
+/area/adminlevel/ert_station/weyland_station)
+"nR" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/greencorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"nU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"oj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"ov" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"ox" = (
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/corsat/yellow/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"oy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/theta,
+/area/adminlevel/ert_station/weyland_station)
+"oA" = (
+/obj/structure/machinery/vending/cola,
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"oK" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage/antag,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"oM" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_aft_medbay";
+	name = "\improper Aft Medbay Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"pk" = (
+/turf/open/floor/corsat/red/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"pC" = (
+/turf/open/floor/corsat/bluecorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"pG" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/machinery/door/window{
+	dir = 8
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"pO" = (
+/obj/structure/machinery/power/smes,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"pZ" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/redcorner,
+/area/adminlevel/ert_station/weyland_station)
+"qg" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat/darkgreencorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"qi" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden/green,
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"qj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"qp" = (
+/turf/open/floor/corsat/blue/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"qN" = (
+/obj/item/device/defibrillator/upgraded,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door_control{
+	id = "WY_center_medbay";
+	name = "Center Medbay Shutters";
+	pixel_x = -7;
+	pixel_y = 9;
+	req_access_txt = "1"
+	},
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"qQ" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"rj" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/corsat/red/west,
+/area/adminlevel/ert_station/weyland_station)
+"ro" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"rt" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/red/east,
+/area/adminlevel/ert_station/weyland_station)
+"rG" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"rH" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"rP" = (
+/obj/structure/bed/chair/comfy/orange,
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/blue/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"sa" = (
+/turf/open/floor/corsat/browncorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"si" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"sj" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"sn" = (
+/obj/structure/machinery/vending/snack,
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"sr" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin/wy,
+/obj/item/tool/pen/clicky,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"ss" = (
+/obj/structure/bed,
+/obj/structure/window/reinforced/toughened{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/window/reinforced/toughened{
+	dir = 8
+	},
+/obj/item/bedsheet/orange,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"st" = (
+/obj/structure/machinery/body_scanconsole,
+/obj/structure/machinery/autodoc_console{
+	dir = 1
+	},
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"su" = (
+/obj/structure/bed/chair/office/light,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"sx" = (
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/corsat/yellow/north,
+/area/adminlevel/ert_station/weyland_station)
+"sA" = (
+/obj/structure/machinery/blackbox_recorder,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"sH" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/computer/emails{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"sJ" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"sM" = (
+/obj/structure/machinery/vending/snack,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"sO" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"sX" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_center_medbay";
+	name = "\improper Central Medbay Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"sZ" = (
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_x = -1;
+	pixel_y = 13
+	},
+/obj/item/tool/mop,
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/yellow/west,
+/area/adminlevel/ert_station/weyland_station)
+"tb" = (
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 29
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"tf" = (
+/obj/structure/closet/coffin,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"tj" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/chem_dispenser/soda{
+	density = 0;
+	pixel_y = 22
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"tR" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"tV" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/corsat/red/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"tW" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/computer3/laptop/secure_data,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"ue" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"uj" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"uP" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/gibber{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"uQ" = (
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"vk" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_x = 1;
+	pixel_y = 23
+	},
+/turf/open/floor/corsat/damaged1,
+/area/adminlevel/ert_station/weyland_station)
+"vl" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"vq" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"vs" = (
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"vu" = (
+/turf/open/floor/corsat/browncorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"vz" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"vD" = (
+/obj/structure/closet/crate/medical,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"vN" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"vS" = (
+/obj/item/clothing/suit/chef/classic,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/head/chefhat,
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"vY" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/yellowcorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"wl" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/structure/machinery/light/small,
+/turf/open/floor/corsat/retrosquareslight,
+/area/adminlevel/ert_station/weyland_station)
+"wt" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"wI" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 1;
+	name = "\improper Toilet"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"wJ" = (
+/turf/open/floor/corsat/bluecorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"wK" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"wL" = (
+/obj/structure/bed/sofa/south/white/right,
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"wM" = (
+/turf/open/floor/corsat/yellow/west,
+/area/adminlevel/ert_station/weyland_station)
+"xf" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"xk" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/tool/lighter/zippo/gold,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"xl" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"xp" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/redcorner,
+/area/adminlevel/ert_station/weyland_station)
+"xr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5
+	},
+/obj/structure/closet/emcloset{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/structure/closet/firecloset/full{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 15
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat/whitecorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"xC" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Telecomms"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"xH" = (
+/obj/structure/showcase{
+	icon_state = "broadcast receiver";
+	name = "Subspace Receiver"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"xK" = (
+/obj/structure/machinery/autolathe/full,
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/yellow/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"xQ" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"xS" = (
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"xV" = (
+/obj/structure/largecrate/supply/medicine/blood,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/green/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"xZ" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/device/flashlight/lamp/green,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"yc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"yk" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"yr" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/stamp/internalaffairs{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/paper_bin/wy,
+/obj/item/tool/pen,
+/obj/item/device/flashlight/lamp{
+	pixel_x = 5;
+	pixel_y = 13
+	},
+/turf/open/floor/corsat/blue/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"yD" = (
+/obj/structure/bed{
+	icon_state = "psychbed"
+	},
+/obj/item/bedsheet/orange,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"zg" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	req_access = null
+	},
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"zk" = (
+/obj/structure/machinery/cm_vending/clothing/antag{
+	name = "\improper Response Team Automated Equipment Rack"
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"zr" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/turf/open/floor/corsat/brown/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"zB" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/corsat/red/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"zD" = (
+/obj/structure/surface/rack,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"zJ" = (
+/obj/structure/machinery/shower{
+	pixel_y = 21
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"zW" = (
+/obj/structure/bed/chair/comfy/orange{
+	dir = 4
+	},
+/turf/open/floor/corsat/blue/west,
+/area/adminlevel/ert_station/weyland_station)
+"zX" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/brown,
+/area/adminlevel/ert_station/weyland_station)
+"zZ" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = null
+	},
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"Aa" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat/theta,
+/area/adminlevel/ert_station/weyland_station)
+"Ab" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"Aj" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/corsat/green/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"An" = (
+/obj/structure/bed,
+/obj/item/bedsheet/medical,
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"Ar" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/item/tool/wet_sign,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"Aw" = (
+/obj/structure/machinery/door/airlock/almayer/medical/colony,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"AC" = (
+/obj/structure/showcase{
+	icon_state = "processor";
+	name = "Processor Unit"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"AE" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Dormitories"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/squareswood/north,
+/area/adminlevel/ert_station/weyland_station)
+"AN" = (
+/obj/structure/machinery/blackbox_recorder,
+/turf/open/floor/corsat/blue/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"AP" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"AR" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Bp" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_aft_medbay";
+	name = "\improper Aft Medbay Shutters"
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"Br" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/whitetan/north,
+/area/adminlevel/ert_station/weyland_station)
+"BT" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Cc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = -30
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"Ce" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Cf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Ci" = (
+/obj/structure/reagent_dispensers/beerkeg{
+	density = 0
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Co" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Cp" = (
+/obj/structure/machinery/cm_vending/gear/antag{
+	hacked = 1;
+	name = "\improper Response Team Automated Gear Rack";
+	use_snowflake_points = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Cv" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Cx" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"CJ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"CP" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/corsat/green/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"CQ" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"CZ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Toxicity & Poison Treatment"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_aft_medbay";
+	name = "\improper Aft Medbay Shutters"
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"Dc" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/redcorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"Di" = (
+/obj/structure/closet/crate,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"Dq" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/communications{
+	dir = 8
+	},
+/turf/open/floor/corsat/blue/east,
+/area/adminlevel/ert_station/weyland_station)
+"Dt" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Du" = (
+/turf/open/floor/corsat/yellowcorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"DB" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/corsat/yellow/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"DE" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/browncorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"DF" = (
+/obj/structure/bookcase{
+	icon_state = "book-5"
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"DG" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 15
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"DH" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/ashtray/glass,
+/obj/item/trash/cigbutt/cigarbutt{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = 16;
+	pixel_y = 21
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"DI" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"DJ" = (
+/turf/open/floor/corsat/red/west,
+/area/adminlevel/ert_station/weyland_station)
+"DM" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_center_medbay";
+	name = "\improper Central Medbay Shutters"
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"DR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/weldingtool,
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"DT" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/folder/black,
+/obj/item/tool/pen/blue,
+/obj/structure/machinery/light/double,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"DU" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/clothing/suit/storage/hazardvest/blue,
+/turf/open/floor/corsat/yellow/west,
+/area/adminlevel/ert_station/weyland_station)
+"Ed" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/whitetan/east,
+/area/adminlevel/ert_station/weyland_station)
+"Ej" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Cryogenics"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Ep" = (
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Et" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/closet/l3closet/virology,
+/turf/open/floor/corsat/green/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"Ew" = (
+/obj/structure/showcase{
+	icon_state = "bus"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"EE" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"EL" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"EO" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"ES" = (
+/obj/docking_port/stationary/emergency_response/idle_port2,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Fa" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/kitchen/tray,
+/obj/item/tool/kitchen/knife{
+	pixel_x = 3
+	},
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = -8
+	},
+/obj/item/tool/kitchen/rollingpin,
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Fc" = (
+/obj/structure/closet/emcloset{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/structure/closet/firecloset/full{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 15
+	},
+/turf/open/floor/corsat/red/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"Fd" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/redcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"Fr" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin{
+	pixel_y = 10
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Fx" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"Fy" = (
+/obj/structure/bed/roller,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"FM" = (
+/turf/open/floor/corsat/greencorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"FP" = (
+/obj/structure/machinery/power/apc/antag{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"FS" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/redcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"FX" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"FY" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/brown/east,
+/area/adminlevel/ert_station/weyland_station)
+"FZ" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Ga" = (
+/obj/structure/bed/chair/comfy/orange{
+	dir = 1
+	},
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"Gd" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Gn" = (
+/obj/structure/bed/roller,
+/turf/open/floor/corsat/green/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"Gr" = (
+/turf/open/floor/corsat/brown,
+/area/adminlevel/ert_station/weyland_station)
+"Gt" = (
+/obj/structure/closet/firecloset/full,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/yellowcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"Gw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/white/east,
+/area/adminlevel/ert_station/weyland_station)
+"Gy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white,
+/area/adminlevel/ert_station/weyland_station)
+"GB" = (
+/obj/structure/target,
+/turf/open/floor/corsat/theta,
+/area/adminlevel/ert_station/weyland_station)
+"GT" = (
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Ha" = (
+/obj/structure/machinery/bioprinter{
+	stored_metal = 1000
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/darkgreen/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"He" = (
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Hj" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -11
+	},
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/turf/open/floor/corsat/darkgreen/west,
+/area/adminlevel/ert_station/weyland_station)
+"Ht" = (
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"HA" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"HB" = (
+/obj/structure/largecrate/supply/weapons/flamers,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"HD" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/bluecorner,
+/area/adminlevel/ert_station/weyland_station)
+"HE" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"HN" = (
+/obj/structure/bed{
+	icon_state = "psychbed"
+	},
+/obj/item/bedsheet/captain,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"HQ" = (
+/turf/open/floor/corsat/yellowcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"HS" = (
+/obj/structure/machinery/cryopod/right{
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"HT" = (
+/turf/open/floor/corsat/whitetancorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"HU" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 1
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = -4
+	},
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"Ir" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"Iu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/white/east,
+/area/adminlevel/ert_station/weyland_station)
+"ID" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"IG" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"IM" = (
+/obj/structure/surface/table,
+/obj/item/storage/box/wy_mre,
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"Jf" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Bathroom"
+	},
+/turf/open/floor/corsat/squareswood/north,
+/area/adminlevel/ert_station/weyland_station)
+"Jl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"Jn" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/sigma,
+/area/adminlevel/ert_station/weyland_station)
+"Ju" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/door_control{
+	id = "WY_meeting";
+	name = "Meeting Room Shutters";
+	pixel_x = -7;
+	pixel_y = 9;
+	req_access_txt = "1"
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Jw" = (
+/obj/structure/closet/cabinet,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"JB" = (
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic,
+/turf/open/floor/corsat/darkgreen/north,
+/area/adminlevel/ert_station/weyland_station)
+"JE" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluecorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"JH" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/red/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"JI" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"JJ" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/chem_dispenser/soda/beer{
+	density = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Ka" = (
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"Kb" = (
+/turf/open/floor/corsat/whitetancorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"Kj" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/toy/deck{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat/red/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"Kl" = (
+/obj/structure/machinery/door/airlock/almayer/security/colony{
+	dir = 1;
+	name = "\improper Brig Cell 3"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Km" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"Ky" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1;
+	name = "\improper Meeting Room"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/turf/open/floor/corsat/sigma,
+/area/adminlevel/ert_station/weyland_station)
+"KO" = (
+/turf/open/floor/corsat/green/west,
+/area/adminlevel/ert_station/weyland_station)
+"KW" = (
+/obj/structure/window/framed/corsat/indestructible/security,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Lg" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m39/ap{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/ap,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Lh" = (
+/turf/open/floor/corsat/whitetan/east,
+/area/adminlevel/ert_station/weyland_station)
+"Li" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/adminlevel/ert_station/weyland_station)
+"Ll" = (
+/obj/structure/bed,
+/obj/item/bedsheet/medical,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/green/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"Lo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/closet/medical_wall{
+	pixel_x = 30
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/white/west,
+/area/adminlevel/ert_station/weyland_station)
+"Lp" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/brown/east,
+/area/adminlevel/ert_station/weyland_station)
+"LB" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"LE" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/reagent_container/food/drinks/shaker,
+/obj/structure/machinery/light/double,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"LF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"LJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat/white/east,
+/area/adminlevel/ert_station/weyland_station)
+"LN" = (
+/obj/structure/pipes/standard/cap/hidden,
+/obj/structure/machinery/cryo_cell{
+	layer = 3.20
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"LY" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"Md" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/theta,
+/area/adminlevel/ert_station/weyland_station)
+"Mh" = (
+/obj/structure/bed/roller,
+/turf/open/floor/corsat/darkgreen,
+/area/adminlevel/ert_station/weyland_station)
+"Mi" = (
+/turf/open/floor/almayer/tcomms,
+/area/adminlevel/ert_station/weyland_station)
+"Mr" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1;
+	name = "\improper Meeting Room"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/sigma,
+/area/adminlevel/ert_station/weyland_station)
+"Mu" = (
+/obj/structure/surface/rack,
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/bicaridine{
+	pixel_x = 5
+	},
+/obj/item/storage/pill_bottle/kelotane{
+	pixel_x = -7
+	},
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"MX" = (
+/turf/open/floor/corsat/whitetan/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"MY" = (
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/corsat/yellow,
+/area/adminlevel/ert_station/weyland_station)
+"Nb" = (
+/obj/structure/closet/medical_wall{
+	pixel_x = -30
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Nd" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_center_medbay_or";
+	name = "\improper Central Medbay Operation Room Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Nw" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 5
+	},
+/turf/open/floor/corsat/greencorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"NR" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Ob" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage/antag,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Oh" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/brown/west,
+/area/adminlevel/ert_station/weyland_station)
+"Ok" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"Op" = (
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"Oz" = (
+/obj/structure/closet/crate/internals,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"OA" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"OF" = (
+/obj/structure/bed/sofa/south/white/left,
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"OH" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/corsat/green/east,
+/area/adminlevel/ert_station/weyland_station)
+"OI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/gloves/yellow,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"OM" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/redcorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"OQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/weyland_station)
+"OZ" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/turf/open/floor/corsat/sigma,
+/area/adminlevel/ert_station/weyland_station)
+"Pk" = (
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Pm" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/red/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"PD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"PF" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"PO" = (
+/obj/structure/machinery/photocopier,
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/blue/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"PP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/white/west,
+/area/adminlevel/ert_station/weyland_station)
+"PS" = (
+/turf/open/floor/corsat/theta,
+/area/adminlevel/ert_station/weyland_station)
+"PY" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"Qi" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Ql" = (
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_x = 1;
+	pixel_y = 21
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Qu" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/toy/deck,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/red/north,
+/area/adminlevel/ert_station/weyland_station)
+"QC" = (
+/obj/structure/bed{
+	icon_state = "abed"
+	},
+/obj/structure/machinery/light/small/built{
+	dir = 4
+	},
+/turf/open/floor/corsat/red/northeast,
+/area/adminlevel/ert_station/weyland_station)
+"QD" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/trash/plate{
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_y = 4
+	},
+/obj/item/trash/plate{
+	pixel_y = 6
+	},
+/obj/item/trash/plate{
+	pixel_y = 8
+	},
+/obj/item/trash/plate{
+	pixel_y = 10
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"QE" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"QM" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/green,
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"QS" = (
+/obj/structure/morgue,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"QT" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/adminlevel/ert_station/weyland_station)
+"QV" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 18
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"QX" = (
+/obj/structure/pipes/unary/freezer{
+	icon_state = "freezer_1"
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/greencorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"QY" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/redcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"QZ" = (
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"Rk" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/browncorner,
+/area/adminlevel/ert_station/weyland_station)
+"RC" = (
+/turf/open/floor/corsat/browncorner,
+/area/adminlevel/ert_station/weyland_station)
+"RL" = (
+/obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY_meeting";
+	name = "\improper Meeting Room Shutters"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/weyland_station)
+"RO" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/turf/open/floor/corsat/brown,
+/area/adminlevel/ert_station/weyland_station)
+"RS" = (
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/redcorner,
+/area/adminlevel/ert_station/weyland_station)
+"RY" = (
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/mask/surgical,
+/obj/item/clothing/mask/surgical,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/darkgreen/north,
+/area/adminlevel/ert_station/weyland_station)
+"Sd" = (
+/turf/open/floor/corsat/redcorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"Sg" = (
+/obj/structure/showcase{
+	icon_state = "hub";
+	name = "Telecommunication Hub"
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Sl" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/yellow/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"Sm" = (
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Sq" = (
+/obj/structure/machinery/cryopod/right{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"SB" = (
+/obj/item/tool/weldpack{
+	pixel_x = 5
+	},
+/obj/structure/surface/rack,
+/obj/item/tool/weldpack{
+	pixel_x = -2
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"SF" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"SG" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/taperecorder,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"SM" = (
+/obj/structure/machinery/vending/cigarette/colony,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"SN" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/turf/open/floor/corsat/yellow/north,
+/area/adminlevel/ert_station/weyland_station)
+"SP" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/effect/spawner/random/facepaint,
+/turf/open/floor/corsat/bluecorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"Tc" = (
+/turf/open/floor/corsat/yellowcorner,
+/area/adminlevel/ert_station/weyland_station)
+"Tp" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 9
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"TA" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"TD" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/weyland_station)
+"TG" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"TH" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/yellow/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"TI" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/faxmachine/corporate,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Uf" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluecorner,
+/area/adminlevel/ert_station/weyland_station)
+"Ul" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Laundry Room"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Uq" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/almayer/tcomms,
+/area/adminlevel/ert_station/weyland_station)
+"Uw" = (
+/obj/structure/closet/crate/ammo/alt/flame,
+/turf/open/floor/corsat/brown/west,
+/area/adminlevel/ert_station/weyland_station)
+"Ux" = (
+/turf/open/space/basic,
+/area/space)
+"Uz" = (
+/obj/structure/machinery/shower{
+	pixel_y = 21
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/damaged1,
+/area/adminlevel/ert_station/weyland_station)
+"UA" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/phone_base/rotary{
+	do_not_disturb = 2;
+	name = "Weyland-Yutani Station CiC";
+	phone_category = "W-Y";
+	phone_id = "W-Y Station CiC"
+	},
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"UL" = (
+/turf/open/floor/corsat/redcorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"UN" = (
+/turf/open/floor/corsat/blue/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"UQ" = (
+/obj/structure/closet/secure_closet/chemical{
+	req_access_txt = "100"
+	},
+/turf/open/floor/corsat/green,
+/area/adminlevel/ert_station/weyland_station)
+"Va" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/closet/l3closet/virology,
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"Vf" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/bluecorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"Vn" = (
+/obj/structure/machinery/vending/dinnerware,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/sterileplate,
+/area/adminlevel/ert_station/weyland_station)
+"Vr" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/green/west,
+/area/adminlevel/ert_station/weyland_station)
+"Vv" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/recharger,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"VB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/corsat/whitecorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"VC" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/corsat/yellow/east,
+/area/adminlevel/ert_station/weyland_station)
+"VJ" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"VL" = (
+/obj/vehicle/powerloader/ft{
+	dir = 4
+	},
+/turf/open/floor/corsat/cargo,
+/area/adminlevel/ert_station/weyland_station)
+"VM" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"VN" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/phone_base/rotary{
+	do_not_disturb = 2;
+	name = "Weyland-Yutani Station Meeting Room";
+	phone_category = "W-Y";
+	phone_id = "W-Y Station Meeting Room"
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"VP" = (
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage/antag,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"VS" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"We" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 30
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/white,
+/area/adminlevel/ert_station/weyland_station)
+"Wg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Wn" = (
+/obj/structure/machinery/light/double,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/red,
+/area/adminlevel/ert_station/weyland_station)
+"Ww" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/morgue,
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"Wy" = (
+/obj/structure/machinery/chem_master,
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"Wz" = (
+/turf/open/floor/corsat/blue/north,
+/area/adminlevel/ert_station/weyland_station)
+"WB" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/firstaid/adv,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"WD" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_10";
+	pixel_y = 19
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"WS" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/plasteel{
+	amount = 10
+	},
+/obj/item/stack/sheet/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/yellow/west,
+/area/adminlevel/ert_station/weyland_station)
+"Xa" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Medical & Surgery"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY_center_medbay";
+	name = "\improper Central Medbay Shutters"
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"Xb" = (
+/obj/structure/surface/table,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"Xj" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper,
+/obj/item/tool/pen,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Xm" = (
+/obj/structure/morgue,
+/turf/open/floor/corsat/green/northwest,
+/area/adminlevel/ert_station/weyland_station)
+"Xx" = (
+/obj/structure/coatrack{
+	pixel_y = 21
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"XG" = (
+/obj/structure/pipes/standard/manifold/visible,
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/weyland_station)
+"XI" = (
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 32
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat/greencorner/east,
+/area/adminlevel/ert_station/weyland_station)
+"XL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
+	name = "Engineering"
+	},
+/turf/open/floor/corsat/marked,
+/area/adminlevel/ert_station/weyland_station)
+"XW" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/folder/black,
+/turf/open/floor/corsat/blue/east,
+/area/adminlevel/ert_station/weyland_station)
+"Yb" = (
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"Yd" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/weyland_station)
+"Yg" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/green/west,
+/area/adminlevel/ert_station/weyland_station)
+"Yo" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat/whitetan,
+/area/adminlevel/ert_station/weyland_station)
+"Yu" = (
+/turf/open/floor/corsat/redcorner/north,
+/area/adminlevel/ert_station/weyland_station)
+"Yw" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/blue,
+/area/adminlevel/ert_station/weyland_station)
+"YA" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat/greencorner/west,
+/area/adminlevel/ert_station/weyland_station)
+"YB" = (
+/obj/structure/machinery/photocopier{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/wood/ship,
+/area/adminlevel/ert_station/weyland_station)
+"YG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/item/tool/wet_sign,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat/white/north,
+/area/adminlevel/ert_station/weyland_station)
+"YR" = (
+/obj/structure/surface/table,
+/obj/item/ashtray/glass,
+/obj/item/trash/cigbutt/cigarbutt{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/tan/north,
+/area/adminlevel/ert_station/weyland_station)
+"YV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/white/west,
+/area/adminlevel/ert_station/weyland_station)
+"YX" = (
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access{
+	req_access = null
+	},
+/turf/open/floor/corsat/green/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"Ze" = (
+/obj/structure/bed/chair/comfy/orange{
+	dir = 1
+	},
+/turf/open/floor/corsat/blue/southwest,
+/area/adminlevel/ert_station/weyland_station)
+"Zj" = (
+/obj/structure/pipes/standard/cap/hidden,
+/obj/structure/machinery/cryo_cell{
+	layer = 3.20
+	},
+/turf/open/floor/corsat/green/north,
+/area/adminlevel/ert_station/weyland_station)
+"Zp" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/turf/open/floor/corsat/brown/east,
+/area/adminlevel/ert_station/weyland_station)
+"Zv" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat/brown,
+/area/adminlevel/ert_station/weyland_station)
+"ZJ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/double/blue,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/damaged1,
+/area/adminlevel/ert_station/weyland_station)
+
+(1,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(2,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(3,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+QT
+lY
+lY
+lY
+QT
+QT
+QT
+lY
+lY
+lY
+QT
+QT
+QT
+lY
+lY
+lY
+QT
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(4,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+QT
+lY
+lY
+QT
+QT
+aQ
+LJ
+Gw
+Gw
+Gw
+Iu
+Gw
+Gw
+Gw
+Gw
+Gw
+Iu
+Gw
+Gw
+Gw
+LJ
+fs
+QT
+QT
+lY
+lY
+QT
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(5,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+rP
+dK
+mS
+Ze
+fX
+Gy
+vz
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+vz
+oj
+fX
+WS
+nc
+DU
+xK
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(6,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+QT
+QT
+jT
+UA
+SG
+Ga
+fX
+Gy
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+ES
+QZ
+Ar
+XL
+GT
+jS
+GT
+kw
+QT
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(7,1,1) = {"
+Ux
+QT
+lY
+lY
+QT
+UN
+wJ
+GT
+hx
+fN
+fX
+Gy
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+PD
+bW
+uj
+jI
+vl
+mw
+dQ
+QT
+lY
+lY
+QT
+Ux
+Ux
+"}
+(8,1,1) = {"
+Ux
+QT
+AN
+zW
+eU
+wJ
+nU
+uj
+EO
+fN
+fX
+Gy
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+aE
+fX
+Gt
+GT
+yk
+GT
+mw
+wM
+wM
+TH
+QT
+Ux
+Ux
+"}
+(9,1,1) = {"
+Ux
+QT
+yr
+Dq
+XW
+du
+Uf
+SP
+QE
+pC
+fX
+We
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+Cc
+fX
+sx
+Tc
+dN
+VC
+HQ
+SB
+oK
+kw
+lY
+Ux
+Ux
+"}
+(10,1,1) = {"
+Ux
+QT
+fX
+fX
+fX
+wK
+ba
+fX
+dU
+hg
+fX
+Gy
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+aE
+fX
+af
+MY
+JI
+VL
+SN
+Ob
+VP
+kw
+lY
+Ux
+Ux
+"}
+(11,1,1) = {"
+Ux
+KW
+Kj
+eW
+le
+Wz
+Yw
+fX
+JE
+GT
+jS
+Gy
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+oj
+XL
+GT
+MY
+HA
+dg
+SN
+OI
+lj
+gn
+lY
+Ux
+Ux
+"}
+(12,1,1) = {"
+Ux
+KW
+QC
+Pm
+kY
+EL
+TA
+fX
+TG
+uj
+jI
+aU
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+YG
+bW
+uj
+vY
+sZ
+wM
+Du
+ev
+DR
+kw
+lY
+Ux
+Ux
+"}
+(13,1,1) = {"
+Ux
+QT
+fX
+fX
+fX
+ih
+Yw
+fX
+Ok
+HD
+fX
+Gy
+Gd
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+QZ
+Gd
+oj
+fX
+tb
+HQ
+GT
+Tc
+cg
+FP
+Ab
+Sl
+QT
+Ux
+Ux
+"}
+(14,1,1) = {"
+Ux
+KW
+JH
+mk
+Kl
+EL
+xf
+fX
+Vf
+pC
+fX
+xr
+bO
+PP
+YV
+Lo
+PP
+PP
+PP
+YV
+PP
+PP
+PP
+Lo
+YV
+PP
+bO
+VB
+fX
+fX
+DB
+ce
+ox
+fX
+fX
+fX
+fX
+QT
+Ux
+Ux
+"}
+(15,1,1) = {"
+Ux
+KW
+QC
+pk
+le
+qp
+PO
+fX
+dU
+hg
+fX
+fX
+Li
+lb
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+dg
+bn
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+Xm
+KO
+cI
+QT
+Ux
+Ux
+"}
+(16,1,1) = {"
+QT
+QT
+fX
+fX
+fX
+fX
+fX
+fX
+sj
+Ka
+fX
+fX
+dU
+hg
+fX
+mz
+Hj
+Ha
+fX
+fX
+zg
+Nb
+YX
+fX
+fX
+aw
+gp
+fX
+fX
+fX
+jd
+KO
+Fx
+vN
+Op
+GT
+OA
+QT
+QT
+Ux
+"}
+(17,1,1) = {"
+lY
+kL
+fX
+Jw
+aG
+Yb
+fX
+aS
+sj
+hU
+fX
+UL
+EE
+aB
+fX
+JB
+GT
+Mh
+Nd
+zZ
+FM
+GT
+aF
+nd
+fX
+UL
+EE
+aB
+oM
+LN
+Nw
+GT
+bH
+vN
+QS
+hx
+aF
+Ww
+dx
+Ux
+"}
+(18,1,1) = {"
+QT
+vk
+Jf
+He
+AR
+mg
+AE
+LB
+qi
+AP
+fX
+PF
+GT
+Wn
+fX
+RY
+mO
+qg
+Nd
+kf
+GT
+Yd
+GT
+iR
+fX
+vs
+GT
+LY
+oM
+bZ
+XG
+Yd
+lk
+vN
+Op
+QE
+GT
+uQ
+dx
+Ux
+"}
+(19,1,1) = {"
+lY
+ue
+fX
+yD
+xZ
+zD
+fX
+HT
+IG
+Yo
+fX
+vs
+Cx
+wt
+fX
+nK
+gM
+QE
+Nd
+Wy
+GT
+QE
+jS
+UQ
+fX
+vs
+Cx
+wt
+oM
+Zj
+XG
+rG
+Ir
+vN
+tf
+QE
+ir
+fS
+dx
+Ux
+"}
+(20,1,1) = {"
+QT
+fX
+fX
+fX
+fX
+fX
+fX
+Br
+Xb
+nn
+fX
+vs
+GT
+LY
+fX
+kO
+kO
+Aw
+fX
+qN
+GT
+QE
+jS
+YA
+fX
+Dc
+GT
+mR
+fX
+QX
+Tp
+Md
+uQ
+fX
+vN
+lQ
+vN
+fX
+QT
+Ux
+"}
+(21,1,1) = {"
+lY
+si
+fX
+Jw
+sr
+xk
+fX
+Kb
+Xb
+ey
+fX
+sn
+GT
+LY
+fX
+vq
+KO
+Vr
+Yg
+FM
+GT
+QE
+PS
+GT
+Xa
+GT
+nL
+QE
+CZ
+GT
+jS
+QE
+aF
+Yg
+FM
+QE
+uQ
+fX
+QT
+Ux
+"}
+(22,1,1) = {"
+QT
+vk
+Jf
+He
+AR
+mg
+AE
+LB
+kT
+VS
+fX
+dW
+GT
+LY
+fX
+st
+GT
+Aa
+uj
+jI
+jI
+mC
+uj
+uj
+DM
+uj
+uj
+et
+Bp
+uj
+jI
+et
+bP
+fR
+fR
+nR
+aF
+Va
+dx
+Ux
+"}
+(23,1,1) = {"
+lY
+wl
+fX
+HN
+xZ
+Yb
+fX
+HT
+IG
+Yo
+fX
+Qu
+GT
+Wn
+fX
+no
+dv
+GT
+GT
+GT
+GT
+GT
+ir
+fV
+fX
+FS
+GT
+RS
+fX
+XI
+PS
+QE
+sJ
+WB
+bx
+cB
+jS
+ie
+dx
+Ux
+"}
+(24,1,1) = {"
+QT
+fX
+fX
+fX
+fX
+fX
+fX
+Br
+Xb
+fx
+fX
+OF
+Cx
+wt
+fX
+fX
+Ll
+OH
+An
+Fy
+OH
+lW
+Gn
+fX
+fX
+vs
+Cx
+wt
+oM
+Oz
+GT
+rG
+sJ
+rH
+jM
+cB
+jS
+Mu
+dx
+Ux
+"}
+(25,1,1) = {"
+lY
+kL
+fX
+Jw
+aG
+Yb
+fX
+Kb
+Xb
+mK
+fX
+wL
+nL
+OM
+zB
+fX
+sX
+sX
+sX
+fX
+sX
+sX
+sX
+fX
+Fc
+Yu
+jS
+Di
+oM
+vD
+GT
+yk
+sJ
+iQ
+Vv
+cB
+jS
+mm
+dx
+Ux
+"}
+(26,1,1) = {"
+QT
+vk
+Jf
+He
+AR
+mg
+AE
+LB
+QM
+jp
+fX
+oA
+GT
+QE
+Sd
+rj
+DJ
+DJ
+DJ
+jt
+DJ
+DJ
+DJ
+rj
+Yu
+GT
+nU
+gF
+oM
+xV
+dv
+GT
+aF
+KO
+KO
+FM
+ir
+Et
+dx
+Ux
+"}
+(27,1,1) = {"
+lY
+ue
+fX
+lq
+xZ
+DF
+fX
+HT
+IG
+Yo
+fX
+DI
+GT
+PY
+kb
+Fd
+ij
+uj
+kb
+rt
+QY
+uj
+ij
+pZ
+QY
+uj
+EO
+xQ
+fX
+fX
+Aj
+fn
+fn
+fn
+OH
+lW
+CP
+fX
+QT
+Ux
+"}
+(28,1,1) = {"
+QT
+fX
+fX
+fX
+fX
+fX
+fX
+Br
+YR
+nn
+fX
+PF
+xl
+xp
+tV
+fX
+Jn
+Ky
+RL
+RL
+RL
+OZ
+Mr
+fX
+fX
+jS
+ch
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+QT
+Ux
+"}
+(29,1,1) = {"
+lY
+si
+fX
+Jw
+tW
+Xj
+fX
+Kb
+Xb
+IM
+fX
+vs
+SF
+xS
+fX
+fX
+NR
+He
+fl
+TI
+fl
+He
+Pk
+fX
+fX
+GT
+Rk
+Lp
+fJ
+fJ
+vu
+sa
+fm
+Uw
+fr
+zk
+Cp
+mZ
+QT
+Ux
+"}
+(30,1,1) = {"
+QT
+vk
+Jf
+He
+AR
+mg
+AE
+VM
+Km
+VS
+fX
+fX
+Ul
+fX
+fX
+Xx
+VJ
+He
+He
+He
+He
+He
+VJ
+SM
+fX
+jS
+Zv
+HB
+cj
+iX
+gr
+ij
+gy
+fL
+Zp
+Zp
+Zp
+Zp
+lY
+Ux
+"}
+(31,1,1) = {"
+lY
+wl
+fX
+lq
+xZ
+DF
+fX
+Ed
+Lh
+MX
+fX
+jA
+QE
+GT
+tR
+QV
+He
+ro
+ro
+ro
+ro
+ro
+VJ
+sM
+fX
+GT
+zX
+Lg
+gI
+HU
+mL
+rG
+GB
+Gr
+gO
+FX
+iy
+FX
+lY
+Ux
+"}
+(32,1,1) = {"
+QT
+QT
+fX
+fX
+fX
+fX
+fX
+pG
+QD
+LE
+fX
+DG
+FZ
+GT
+BT
+YB
+He
+Yb
+DH
+Yb
+Fr
+iw
+VJ
+bv
+fX
+Ql
+mr
+Oh
+eK
+eK
+DE
+QE
+RC
+zr
+Zp
+Zp
+FY
+QT
+QT
+Ux
+"}
+(33,1,1) = {"
+Ux
+QT
+JJ
+Ep
+Ep
+Ep
+Ep
+Qi
+Ep
+Sm
+fX
+fX
+fX
+fX
+BT
+WD
+He
+Yb
+VN
+aG
+Ju
+Yb
+VJ
+sA
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+CQ
+Gr
+gO
+lZ
+FX
+RO
+lY
+Ux
+Ux
+"}
+(34,1,1) = {"
+Ux
+QT
+tj
+lf
+Co
+Co
+Co
+mf
+Ce
+fM
+fX
+xH
+bs
+eY
+BT
+je
+He
+sO
+sO
+sO
+sO
+sO
+su
+sH
+fX
+zJ
+OQ
+OQ
+TD
+jN
+Dt
+kB
+gu
+fJ
+fJ
+fJ
+vu
+lY
+Ux
+Ux
+"}
+(35,1,1) = {"
+Ux
+QT
+QT
+vS
+Fa
+uP
+hB
+Vn
+Qi
+Ci
+fX
+pO
+Mi
+Ew
+fX
+Cv
+He
+He
+He
+HE
+He
+He
+He
+DT
+fX
+aa
+jG
+jG
+kh
+jS
+GT
+Gr
+ss
+FX
+FX
+lc
+QT
+QT
+Ux
+Ux
+"}
+(36,1,1) = {"
+Ux
+Ux
+QT
+lY
+lY
+lY
+lY
+QT
+gt
+fX
+fX
+Sg
+Mi
+AC
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+fX
+Uz
+jG
+jG
+ZJ
+fX
+fX
+fX
+QT
+lY
+lY
+lY
+QT
+Ux
+Ux
+Ux
+"}
+(37,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+ov
+Ep
+fX
+Sg
+Mi
+Yd
+xC
+Cf
+qj
+oy
+Wg
+qj
+Wg
+oy
+qj
+Wg
+Ej
+kh
+jG
+jG
+hj
+wI
+gV
+bQ
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(38,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+hq
+qQ
+fX
+AC
+Uq
+ID
+jI
+yc
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+dY
+CJ
+gc
+gc
+Jl
+fX
+mD
+ue
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(39,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+Ht
+Sq
+HS
+Ht
+Sq
+Ht
+Sq
+HS
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}
+(40,1,1) = {"
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+QT
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+Ux
+"}

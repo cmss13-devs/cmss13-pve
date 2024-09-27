@@ -22,8 +22,15 @@
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
 	dir = 4
 	},
-/turf/open/floor,
-/area/vehicle/apc/arc)
+/obj/structure/gun_rack/apc/frontal{
+	desc = "A small compartment that stores ammunition for the ARC's 'Bleihagel RE-RE850 Frontal Rotary Cannon'.";
+	pixel_y = 6;
+	pixel_x = 2;
+	layer = 2.9;
+	density = 0
+	},
+/turf/open/floor/almayer,
+/area/interior/vehicle/arc)
 "G" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
@@ -34,26 +41,39 @@
 	dir = 1
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "H" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 4;
 	layer = 3.1;
 	pixel_y = 5
 	},
-/turf/open/floor,
-/area/vehicle/apc/arc)
+/obj/structure/machinery/prop/almayer/CICmap/arc{
+	pixel_x = 16
+	},
+/obj/structure/machinery/computer/overwatch/almayer/arc{
+	pixel_y = 5;
+	pixel_x = 20
+	},
+/turf/open/floor/almayer,
+/area/interior/vehicle/arc)
 "I" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
-	pixel_x = 8;
-	pixel_y = 4;
+	pixel_x = -16;
+	pixel_y = 11;
 	layer = 2.9
 	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	icon = 'icons/obj/vehicles/interiors/arc.dmi';
+	icon_state = "arcloader";
+	pixel_y = 13;
+	pixel_x = 7
+	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "N" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 50;
@@ -63,7 +83,7 @@
 	pixel_y = -10
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "X" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
@@ -72,11 +92,10 @@
 	pixel_x = 8
 	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
-	pixel_y = 14;
-	pixel_x = -8
+	pixel_y = 16
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 
 (1,1,1) = {"
 a

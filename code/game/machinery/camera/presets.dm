@@ -70,21 +70,7 @@
 // AUTONAME
 
 /obj/structure/machinery/camera/autoname
-	var/number = 0 //camera number in area
-
-//This camera type automatically sets it's name to whatever the area that it's in is called.
-/obj/structure/machinery/camera/autoname/Initialize(mapload, ...)
-	. = ..()
-	number = 1
-	var/area/A = get_area(src)
-	if(A)
-		for(var/obj/structure/machinery/camera/autoname/C in machines)
-			if(C == src) continue
-			var/area/CA = get_area(C)
-			if(CA.type == A.type)
-				if(C.number)
-					number = max(number, C.number+1)
-		c_tag = "[A.name] #[number]"
+	autoname = TRUE
 
 //cameras installed inside the dropships, accessible via both cockpit monitor and Almayer camera computers
 /obj/structure/machinery/camera/autoname/almayer/dropship_one
@@ -92,6 +78,9 @@
 
 /obj/structure/machinery/camera/autoname/almayer/dropship_two
 	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_NORMANDY)
+
+/obj/structure/machinery/camera/autoname/almayer/dropship_three
+	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_RESEARCH)
 
 /obj/structure/machinery/camera/autoname/almayer
 	name = "military-grade camera"
@@ -111,7 +100,11 @@
 
 /obj/structure/machinery/camera/autoname/almayer/containment/ares
 	name = "ares core camera"
-	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_ARES)
+	network = list(CAMERA_NET_ARES)
+
+/obj/structure/machinery/camera/autoname/almayer/brig
+	name = "brig camera"
+	network = list(CAMERA_NET_BRIG)
 
 /obj/structure/machinery/camera/autoname/golden_arrow
 	name = "military-grade camera"
@@ -119,6 +112,18 @@
 
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_CYCLONE)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TORNADO)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/typhoon
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TYPHOON)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/tripoli
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TRIPOLI)
 
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.
