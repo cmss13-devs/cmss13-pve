@@ -406,28 +406,12 @@ var/global/list/datum/map_template/holoscene_templates = list()
 	for(var/obj/holo_obj in holographic_objs)
 		holo_obj.alpha *= 0.8 //give holodeck objs a slight transparency
 
-/obj/structure/machinery/computer/HolodeckControl/proc/toggleGravity(area/A)
-	if(world.time < (last_gravity_change + 25))
-		audible_message("<b>ERROR. Recalibrating gravity field.</b>")
-		return
-
-	last_gravity_change = world.time
-	active = 1
-
-	if(A.has_gravity)
-		A.gravitychange(FALSE)
-	else
-		A.gravitychange(TRUE)
-
 /obj/structure/machinery/computer/HolodeckControl/proc/emergencyShutdown()
 	//Get rid of any items
 	for(var/item in holographic_objs)
 		derez(item)
 	//Turn it back to the regular non-holographic room
 	loadIdProgram()
-
-	if(!linkedholodeck.has_gravity)
-		linkedholodeck.gravitychange(TRUE)
 
 	active = 0
 	current_scene = null

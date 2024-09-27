@@ -17,8 +17,7 @@
 		qdel(TH)
 
 	user.visible_message(SPAN_NOTICE("<b>[user]</b> points \his wand at <b>[gamer]</b>, removing \his hits."))
-	gamer.knocked_down = 0
-	gamer.knocked_down_callback()
+	gamer.SetKnockDown(0)
 
 /obj/item/device/megaphone/squad
 	name = "squadphone"
@@ -36,7 +35,7 @@
 	var/mob/living/carbon/human/human = target
 
 	var/list/squads = list()
-	for(var/datum/squad/S in RoleAuthority.squads)
+	for(var/datum/squad/S in GLOB.RoleAuthority.squads)
 		squads[S.name] = S
 
 	user.visible_message(SPAN_NOTICE("<b>[user]</b> aims \his \the [src] at <b>[human]</b>"))

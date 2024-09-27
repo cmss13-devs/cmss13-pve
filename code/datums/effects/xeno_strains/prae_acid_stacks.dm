@@ -93,4 +93,4 @@
 	if (hit_count == max_hits)
 		to_chat(H, SPAN_XENODANGER("You feel paralyzed!"))
 		H.emote("pain")
-		H.knocked_down = 999
+		H.KnockDown(999)

@@ -529,8 +529,8 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
 					var/leader = assigned_squad.squad_leader
 					var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = marine_armor.squad_overlay_state)
-					if(leader == src)
-						squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "sql-armor")
+					//if(leader == src)
+						//squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "sql-armor")
 					squad_overlay.layer = -SUIT_SQUAD_LAYER
 					squad_overlay.alpha = assigned_squad.armor_alpha
 					squad_overlay.color = assigned_squad.equipment_color
