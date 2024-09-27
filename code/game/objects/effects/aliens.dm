@@ -347,6 +347,11 @@
 		if(B && !B.unacidable) acid_t = B
 		else
 			for(var/obj/O in loc) //Find the first thing.
+					if(istype(O, /obj/vehicle/multitile))
+						var/obj/vehicle/multitile/acid_vehicle = O
+						acid_vehicle.take_damage_type(100 / src.acid_delay, "acid", src)
+						visible_message(SPAN_XENOWARNING("\the [acid_vehicle] is burnt by the strong acid blood!"))
+						continue //We just damaged it, to not break proc would completely melt the vehicle.
 				if(O.unacidable || istype(O, /obj/effect)) continue //Not unacidable things or effects. Don't want to melt xenogibs.
 				acid_t = O
 				break
