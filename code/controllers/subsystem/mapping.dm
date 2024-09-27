@@ -272,6 +272,16 @@ SUBSYSTEM_DEF(mapping)
 
 	preloadShuttleTemplates()
 	preload_tent_templates()
+	preloadHolodeckTemplates()
+
+/datum/controller/subsystem/mapping/proc/preloadHolodeckTemplates()
+	for(var/item in subtypesof(/datum/map_template/holoscene))
+		var/datum/map_template/holoscene/holoscene_type = item
+		if(!(initial(holoscene_type.mappath)))
+			continue
+		var/datum/map_template/holoscene/S = new holoscene_type()
+		holoscene_templates[S.id()] = S
+		map_templates[S.id()] = S
 
 /proc/generateMapList(filename)
 	. = list()

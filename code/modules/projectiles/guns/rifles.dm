@@ -434,10 +434,11 @@
 	. = ..()
 	if(!squad_color)
 		to_chat(user, SPAN_WARNING("Swipe your dogtags in order to imprint squad information."))
-		return
+		return FALSE
 
 /obj/item/weapon/gun/rifle/m41aMK1/tournament/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, reflex = 0, dual_wield = 0)
 	projectile_to_fire.color = squad_color
+	projectile_to_fire.hit_effect_color = squad_color
 	..()
 
 /obj/item/weapon/gun/rifle/m41aMK1/tournament/attackby(obj/item/I, mob/user)

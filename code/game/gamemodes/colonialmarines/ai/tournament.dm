@@ -19,4 +19,4 @@
 	toggleable_flags = MODE_NO_JOIN_AS_XENO|MODE_HARDCORE_PERMA
 
 /datum/game_mode/tournament/get_roles_list()
-	return ROLES_AI
+	return GLOB.ROLES_AI-JOB_SO

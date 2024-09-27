@@ -8,7 +8,7 @@
 	spawn_positions = 4
 	allow_additional = 1
 	scaled = 1
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm/sg
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are a specialized automatic rifleman.</a> Your task is to provide heavy weapons support for your squad.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"

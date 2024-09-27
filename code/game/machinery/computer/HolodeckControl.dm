@@ -1,16 +1,5 @@
-/obj/structure/machinery/computer/HolodeckControl
-	name = "Holodeck Control Computer"
-	desc = "A computer used to control a nearby holodeck."
-	icon_state = "holocontrol"
-	var/area/linkedholodeck = null
-	var/area/target = null
-	var/active = 0
-	var/list/holographic_items = list()
-	var/damaged = 0
-	var/last_change = 0
-
 // Holographic Items!
-
+var/global/list/datum/map_template/holoscene_templates = list()
 /turf/open/floor/holofloor/attackby(obj/item/W as obj, mob/user as mob)
 	return
 
@@ -41,15 +30,6 @@
 
 /turf/open/floor/holofloor/grass/make_plating()
 	return
-
-
-
-
-
-
-
-
-
 
 /obj/structure/surface/table/holotable
 	name = "table"
@@ -269,3 +249,196 @@
 	if (HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		to_chat(user, "It's a holorack!  You can't unwrench it!")
 		return
+
+/obj/structure/machinery/computer/HolodeckControl
+	name = "holodeck control console"
+	desc = "A computer used to control a nearby holodeck."
+	icon_state = "gravitycomp"
+
+	var/area/linkedholodeck = null
+	var/area/target = null
+	var/active = 0
+	var/list/holographic_objs = list()
+	var/list/holographic_mobs = list()
+	var/damaged = 0
+	var/safety_disabled = 0
+	var/mob/last_to_emag = null
+	var/last_change = 0
+	var/last_gravity_change = 0
+	var/turf/open/spawn_point = null
+	var/datum/map_template/holoscene/current_scene = null
+	var/list/supported_programs = list( \
+	"emptycourt", \
+	"beach",	\
+	"boxingcourt",	\
+	"basketball",	\
+	)
+	var/list/restricted_programs = list("Wildlife Simulation" = "wildlifecarp")// "Atmospheric Burn Simulation" = "burntest", - no, Dave
+
+/obj/structure/machinery/computer/HolodeckControl/attack_hand(mob/user)
+	linkedholodeck = locate(/area/almayer/holodeck)
+	var/id_to_load = tgui_input_list(usr,"Select ID:", "IDs", supported_programs)
+	if(!id_to_load)
+		return
+	if(holoscene_templates.Find(id_to_load))
+		loadIdProgram(id_to_load)
+
+//	interact(user)
+/*
+/obj/structure/machinery/computer/HolodeckControl/ui_interact(mob/user)
+	var/dat
+
+	dat += ""
+	dat += "<HR>Current Loaded Programs:<BR>"
+	for(var/prog in supported_programs)
+		if(prog == "Empty")
+			continue
+		dat += "<A href='?src=\ref[src];program=[supported_programs[prog]]'>([prog])</A><BR>"
+
+	dat += "<BR>"
+	dat += "<A href='?src=\ref[src];program=turnoff'>(Turn Off)</A><BR>"
+
+	dat += "<BR>"
+	dat += "Please ensure that only holographic weapons are used in the holodeck if a combat simulation has been loaded.<BR>"
+
+	if(linkedholodeck.has_gravity)
+		dat += "Gravity is <A class='green' href='?src=\ref[src];gravity=1'>ON</A><BR>"
+	else
+		dat += "Gravity is <A class='blue' href='?src=\ref[src];gravity=1'>OFF</A><BR>"
+
+	var/datum/browser/popup = new(user, "computer", "Holodeck Control System", 400, 500)
+	popup.set_content(dat)
+	popup.open()
+
+
+/obj/structure/machinery/computer/HolodeckControl/Topic(href, href_list)
+	. = ..()
+	if(!.)
+		return
+
+	if(href_list["program"])
+		var/prog = href_list["program"]
+		if(holoscene_templates.Find(prog))
+			loadIdProgram(prog)
+
+	else if(href_list["gravity"])
+		toggleGravity(linkedholodeck)
+
+	updateUsrDialog()
+*/
+/obj/structure/machinery/computer/HolodeckControl/LateInitialize()
+	linkedholodeck = locate(/area/almayer/holodeck)
+
+//This could all be done better, but it works for now.
+/obj/structure/machinery/computer/HolodeckControl/Destroy()
+	emergencyShutdown()
+	return ..()
+
+/obj/structure/machinery/computer/HolodeckControl/emp_act(severity)
+	emergencyShutdown()
+	..()
+
+
+/obj/structure/machinery/computer/HolodeckControl/ex_act(severity)
+	emergencyShutdown()
+	..()
+
+
+/obj/structure/machinery/computer/HolodeckControl/process()
+	for(var/item in holographic_objs) // do this first, to make sure people don't take items out when power is down.
+		if(!(get_turf(item) in linkedholodeck))
+			derez(item, 0)
+
+	if(!..())
+		return
+
+/obj/structure/machinery/computer/HolodeckControl/proc/derez(obj/obj , silent = 1)
+	holographic_objs.Remove(obj)
+
+	if(obj == null)
+		return
+
+	if(isobj(obj))
+		var/mob/M = obj.loc
+		if(ismob(M))
+			M.update_icons()	//so their overlays update
+
+	if(!silent)
+		var/obj/oldobj = obj
+		visible_message("The [oldobj.name] fades away!")
+	qdel(obj)
+
+/obj/structure/machinery/computer/HolodeckControl/proc/loadIdProgram(id = "turnoff")
+	if(id == "turnoff" && ((current_scene && id == current_scene.holoscene_id) || !current_scene))
+		return
+	if(id in restricted_programs && !safety_disabled) return
+	current_scene = holoscene_templates[id]
+	loadProgram()
+
+/obj/structure/machinery/computer/HolodeckControl/proc/loadProgram()
+	set waitfor = FALSE
+	if(world.time < (last_change + 25))
+		audible_message("<b>ERROR. Recalibrating projection apparatus.</b>")
+		return
+
+	last_change = world.time
+	active = 1
+
+	for(var/item in holographic_objs)
+		derez(item)
+
+	for(var/obj/effect/decal/cleanable/blood/B in linkedholodeck)
+		qdel(B)
+
+	if(!spawn_point)
+		var/obj/effect/landmark/L = locate()
+		if(!L)
+			return
+
+		if(L.name == "Holodeck Base")
+			spawn_point = get_turf(L)
+		else
+			return
+
+	holographic_objs = current_scene.load(spawn_point, FALSE, TRUE)
+	linkedholodeck = spawn_point.loc
+
+	for(var/obj/holo_obj in holographic_objs)
+		holo_obj.alpha *= 0.8 //give holodeck objs a slight transparency
+
+/obj/structure/machinery/computer/HolodeckControl/proc/toggleGravity(area/A)
+	if(world.time < (last_gravity_change + 25))
+		audible_message("<b>ERROR. Recalibrating gravity field.</b>")
+		return
+
+	last_gravity_change = world.time
+	active = 1
+
+	if(A.has_gravity)
+		A.gravitychange(FALSE)
+	else
+		A.gravitychange(TRUE)
+
+/obj/structure/machinery/computer/HolodeckControl/proc/emergencyShutdown()
+	//Get rid of any items
+	for(var/item in holographic_objs)
+		derez(item)
+	//Turn it back to the regular non-holographic room
+	loadIdProgram()
+
+	if(!linkedholodeck.has_gravity)
+		linkedholodeck.gravitychange(TRUE)
+
+	active = 0
+	current_scene = null
+
+/obj/structure/machinery/computer/HolodeckControl/horizontal
+	supported_programs = list( \
+	"Empty Court" = "emptycourt", \
+	"Beach" = "beach",	\
+	"Desert" = "desert",	\
+	"Space" = "space",	\
+	"Snow Field" = "snowfield",	\
+	"Meeting Hall" = "meetinghall",	\
+	"Theatre" = "theatre", \
+	)
