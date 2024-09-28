@@ -49,7 +49,6 @@
 				"4" = list(-5, 10),
 				"8" = list(37, 24)
 			)
-	return ..()
 
 /*
 ** PRESETS SPAWNERS

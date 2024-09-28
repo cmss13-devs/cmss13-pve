@@ -22,7 +22,8 @@
 "c" = (
 /obj/structure/prop/vehicle/sensor_equipment{
 	name = "Sensor Apparatus Nexus";
-	desc = "This machinery collects and analyzes data from the M579 ADS-C's sensors cluster and then feeds the results to the onboard gunner station. Better not touch it."
+	desc = "This machinery collects and analyzes data from the M579 ADS-C's sensors cluster and then feeds the results to the onboard gunner station. Better not touch it.";
+	density = 1
 	},
 /obj/structure/vehicle_locker/movie{
 	pixel_y = 19;
@@ -89,7 +90,7 @@
 /obj/structure/surface/table/reinforced/toc/west{
 	pixel_y = -7
 	},
-/obj/structure/interior_viewport/terminal{
+/obj/effect/landmark/interior/spawn/interior_viewport/terminal{
 	pixel_y = 12
 	},
 /turf/open/shuttle/vehicle/floor_1_4,
