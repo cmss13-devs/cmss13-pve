@@ -277,10 +277,10 @@
 
 //books
 /obj/item/prop/magazine/book
-	name = "generic prop book"
-	desc = "some generic hardcover book, probably sucked"
+	name = "book"
+	desc = "A generic hardcore novel. Really boring. Probably. Too bored to read."
 	icon = 'icons/obj/items/books.dmi'
-	icon_state = "bookSpaceLaw"
+	icon_state = "book_blue"
 
 /obj/item/prop/magazine/book/spacebeast
 	name = "\improper Space Beast, by Robert Morse"
@@ -301,6 +301,28 @@
 /obj/item/prop/magazine/book/theartofwar
 	name = "The Art of War"
 	desc = "A treatise on war written by Sun Tzu a great general, strategist, and philosopher from ancient Earth. This book is on the Commandant of the United States Colonial Marine Corps reading list and most officers can be found in possession of a copy. Most officers who've read it claim to know a little bit more about fighting than most enlisted but results may vary. "
+
+/obj/item/prop/magazine/book/uppbooklet
+	name = "UPP Party Doctrine Booklet"
+	desc = "A booklet provided to every single citizen of the Union of Progressive Peoples. The first page is stamped with the Party's insignia followed by a emphatic dedication to the working class; past, present, and future. Aside from being an easily digestible summary of the collective ideology of the Union, the booklet provides you with an outline of the Union's history and a good chunk is dedicated to listing and summarizing each of the Union's many member states."
+	icon_state = "book_upp"
+
+/obj/item/prop/magazine/book/warisaracket
+	name = "War is a Racket"
+	desc = "A book critical of the United States Marine Corps by Marine Corps legend, Major General Smedley Butler. In short, the book outlines the function which the historical Marine Corps had in establishing and enforcing American global hegemony. Good thing its critiques have no contemporary application. Right?"
+
+/obj/item/prop/magazine/book/littleredbook
+	name = "Quotations from Chairman Mao Tse-tung"
+	desc = "A tiny red book that fits in the palm of your hand. While not required reading, it provides the reader with easy access to- as the name implies- Quotations from Chairman Mao Tse-tung."
+	icon_state = "littleredbook"
+
+/obj/item/prop/magazine/book/communistmanifesto
+	name = "Communist Manifesto"
+	desc = "The bare minimum in communist reading."
+
+/obj/item/prop/magazine/book/inframaterialism
+	name = "A Brief Look at Infra-Materialism"
+	desc = "A concise introduction to the esoteric communist theory of infra-materialism by Ignus Nilsen."
 
 //boots magazine
 /obj/item/prop/magazine/boots
