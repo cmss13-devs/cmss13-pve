@@ -1,10 +1,8 @@
 #define SPECIES_SECTOID "Sectoid"
-#define SPECIES_THIN_MAN "Thin Man"
 
 /datum/species/sectoid
 	group = SPECIES_SECTOID
-	name = "Sectoid"
-	name_plural = "Sectoids"
+	name = SPECIES_SECTOID
 	icobase = 'void-marines/icons/r_sectoid.dmi'
 	deform = 'void-marines/icons/r_sectoid.dmi'
 	blood_mask = 'icons/effects/monkey_blood.dmi'
@@ -28,7 +26,6 @@
 		TRAIT_YAUTJA_TECH,
 		TRAIT_FOREIGN_BIO,
 	)
-	darksight = 5
 	blood_color = COLOR_ORANGE
 	uses_skin_color = FALSE
 
@@ -45,6 +42,10 @@
 
 /datum/species/sectoid/handle_post_spawn(mob/living/carbon/human/H)
 	H.set_languages(list(LANGUAGE_YAUTJA))
+
+	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	H.update_sight()
+
 	return ..()
 
 /datum/species/sectoid/get_bodytype(mob/living/carbon/human/H)
@@ -57,60 +58,40 @@
 /mob/living/carbon/human/sectoid/Initialize(mapload)
 	. = ..(mapload, new_species = "Sectoid")
 
-/obj/item/weapon/gun/energy/laz_uzi/sectoid
-	name = "weapon of unknown design"
-	desc = "A strange alien weapon."
-	icon = 'void-marines/icons/energy64.dmi'
-	icon_state = "ter"
-	item_state = "ter"
+//////////////////////////////////////
+/*				EQUIP				*/
+//////////////////////////////////////
+/datum/equipment_preset/sectoid
+	name = "XCOM - Sectoid"
+	assignment = "Civilian"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
-	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/energy_left_1.dmi',
-		WEAR_R_HAND = 'void-marines/icons/energy_right_1.dmi'
-		)
+	languages = list(LANGUAGE_YAUTJA)
 
-	muzzle_flash = "muzzle_laser"
-	gun_category = GUN_CATEGORY_SMG
-	flags_equip_slot = SLOT_WAIST
-	charge_cost = 100
-	charge_icon = "ter_e"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_COLONIST
+	rank = JOB_COLONIST
+	faction = "Alien"
+	languages = list()
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+	skills = /datum/skills/clf
+	idtype = null
 
-/obj/item/weapon/gun/energy/laz_uzi/sectoid/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	. = ..()
-	if(. && !istype(user.species, /datum/species/sectoid) && !istype(user.species, /datum/species/human/thin_man))
-		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
-		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
-		if(!QDELETED(src))
-			qdel(src)
+/datum/equipment_preset/sectoid/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.set_species(SPECIES_SECTOID)
+	if(!mob_client)
+		mob_client = new_human.client
 
-/obj/item/weapon/gun/energy/rxfm5_eva/sectoid
-	name = "weapon of unknown design"
-	desc = "A strange alien weapon."
-	icon = 'void-marines/icons/energy64.dmi'
-	icon_state = "tep"
-	item_state = "tep"
+/datum/equipment_preset/sectoid/pistol
+	name = "XCOM - Sectoid (Pistol)"
 
-	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/energy_left_1.dmi',
-		WEAR_R_HAND = 'void-marines/icons/energy_right_1.dmi'
-		)
+/datum/equipment_preset/sectoid/pistol/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/rxfm5_eva/alien(new_human), WEAR_R_HAND)
+	..()
 
-	muzzle_flash = "muzzle_laser"
-	fire_sound = 'sound/weapons/Laser4.ogg'
+/datum/equipment_preset/sectoid/rifle
+	name = "XCOM - Sectoid (Submachinegun)"
 
-	attachable_allowed = list()
-	starting_attachment_types = list()
-
-	has_charge_meter = FALSE
-	charge_icon = "tep_e"
-
-/obj/item/weapon/gun/energy/rxfm5_eva/sectoid/update_icon()
-	return
-
-/obj/item/weapon/gun/energy/rxfm5_eva/sectoid/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	. = ..()
-	if(. && !istype(user.species, /datum/species/sectoid) && !istype(user.species, /datum/species/human/thin_man))
-		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
-		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
-		if(!QDELETED(src))
-			qdel(src)
+/datum/equipment_preset/sectoid/rifle/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/laz_uzi/alien(new_human), WEAR_R_HAND)
+	..()
