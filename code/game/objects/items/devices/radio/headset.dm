@@ -610,7 +610,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/cmpcom/synth)
 	volume = RADIO_VOLUME_CRITICAL
 	misc_tracking = TRUE
-	locate_setting = TRACKER_PLTCO
+	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
