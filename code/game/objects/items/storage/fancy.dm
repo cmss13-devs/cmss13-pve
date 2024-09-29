@@ -212,15 +212,15 @@
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
 /obj/item/storage/fancy/cigarettes/spirit
-	name = "\improper Turquoise American Spirit Packet"
-	desc = "A pack of turquoise American Spirit cigarettes."
+	name = "\improper American Spirit Turquoise Packet"
+	desc = "A pack of turquoise American Spirit cigarettes, for that strong full-bodied flavour you know and love."
 	icon_state = "naspacket"
 	item_state = "naspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette
 
 /obj/item/storage/fancy/cigarettes/spirit/yellow
-	name = "\improper Yellow American Spirit Packet"
-	desc = "A pack of yellow American Spirit cigarettes."
+	name = "\improper American Spirit Yellow Packet"
+	desc = "A pack of yellow American Spirit cigarettes, for that mellow flavour you know and love."
 	icon_state = "y_naspacket"
 	item_state = "y_naspacket"
 
