@@ -51,21 +51,21 @@
 
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)
-	if(!length(in_combat_lines) || !prob(chance))
+	if(!length(in_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
 	tied_human.say(pick(in_combat_lines))
 
 /datum/human_ai_brain/proc/say_exit_combat_line(chance = exit_combat_line_chance)
-	if(!length(exit_combat_lines) || !prob(chance))
+	if(!length(exit_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
 	tied_human.say(pick(exit_combat_lines))
 
 /datum/human_ai_brain/proc/on_squad_member_death(mob/living/carbon/human/dead_member)
-	if(!length(squad_member_death_lines) || !prob(squad_member_death_line_chance))
+	if(!length(squad_member_death_lines) || !prob(squad_member_death_line_chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
 	tied_human.say(pick(squad_member_death_lines))
 
 /datum/human_ai_brain/proc/say_grenade_thrown_line(chance = grenade_thrown_line_chance)
-	if(!length(grenade_thrown_lines) || !prob(chance))
+	if(!length(grenade_thrown_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
 	tied_human.say(pick(grenade_thrown_lines))
