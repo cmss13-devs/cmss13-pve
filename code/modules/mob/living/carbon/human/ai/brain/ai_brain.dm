@@ -224,6 +224,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/has_ongoing_order(path)
 	return istype(ongoing_order, path)
 
+/datum/human_ai_brain/proc/clear_ongoing_order()
+	ongoing_order = null
+
 /// Returns TRUE if the target is friendly/neutral to us
 /datum/human_ai_brain/proc/faction_check(mob/target)
 	if(!target)

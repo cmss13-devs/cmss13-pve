@@ -56,15 +56,6 @@ const AIContext = (props, context) => {
             'padding-right': '6px',
           }}
         >
-          <Button content="Refresh" onClick={() => act('refresh')} />
-        </div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            'padding-right': '6px',
-          }}
-        >
           <Button content="New Squad" onClick={() => act('create_squad')} />
         </div>
         <div
@@ -157,19 +148,43 @@ const CreatedOrder = (props) => {
                 float: 'left',
               }}
             />
+            <Button.Confirm
+              color="red"
+              confirmContent="Confirm?"
+              onClick={() =>
+                act('delete_object', {
+                  ref: order.ref,
+                })
+              }
+            >
+              Del
+            </Button.Confirm>
             <br />
             <br />
           </>
         ) : (
-          <Button
-            content="VV"
-            tooltip={order.ref}
-            onClick={() =>
-              act('view_variables', {
-                ref: order.ref,
-              })
-            }
-          />
+          <>
+            <Button
+              content="VV"
+              tooltip={order.ref}
+              onClick={() =>
+                act('view_variables', {
+                  ref: order.ref,
+                })
+              }
+            />
+            <Button.Confirm
+              color="red"
+              confirmContent="Confirm?"
+              onClick={() =>
+                act('delete_object', {
+                  ref: order.ref,
+                })
+              }
+            >
+              Del
+            </Button.Confirm>
+          </>
         )}
         {order.data[0].map((data_name, i) => (
           <div>
@@ -267,6 +282,20 @@ const HumanAIReadout = (props) => {
                   float: 'left',
                 }}
               />
+              <Button.Confirm
+                color="red"
+                confirmContent="Confirm?"
+                onClick={() => {
+                  act('delete_object', {
+                    ref: human.brain_ref,
+                  });
+                  act('delete_object', {
+                    ref: human.ref,
+                  });
+                }}
+              >
+                Del
+              </Button.Confirm>
             </>
           )}
         </div>
@@ -322,6 +351,17 @@ const SquadReadout = (props) => {
             }
           />
         )}
+        <Button.Confirm
+          color="red"
+          confirmContent="Confirm?"
+          onClick={() =>
+            act('delete_object', {
+              ref: squad.ref,
+            })
+          }
+        >
+          Del
+        </Button.Confirm>
         <br />
         <br />
         Members: {squad.members} <br />

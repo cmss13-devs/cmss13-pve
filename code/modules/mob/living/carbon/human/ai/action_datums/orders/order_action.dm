@@ -4,3 +4,7 @@
 
 /datum/ongoing_action/order/New(list/arguments)
 	return
+
+/datum/ongoing_action/order/Destroy(force, ...)
+	SShuman_ai.existing_orders -= src
+	return ..()

@@ -13,6 +13,8 @@
 	id = SShuman_ai.highest_squad_id
 
 /datum/human_ai_squad/Destroy(force, ...)
+	for(var/datum/human_ai_brain/brain as anything in ai_in_squad)
+		remove_from_squad(brain)
 	SShuman_ai.squads -= src
 	squad_leader = null
 	return ..()
@@ -40,6 +42,7 @@
 
 /datum/human_ai_squad/proc/set_order(datum/ongoing_action/order)
 	assigned_order = order
+	RegisterSignal(order, COMSIG_PARENT_QDELETING, PROC_REF(on_order_delete))
 	for(var/datum/human_ai_brain/brain as anything in ai_in_squad)
 		brain.set_ongoing_order(order)
 
@@ -69,7 +72,13 @@
 
 	remove_from_squad(deleting)
 
+/datum/human_ai_squad/proc/on_order_delete(datum/source, force)
+	SIGNAL_HANDLER
 
+	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
+		squaddie.clear_ongoing_order()
+
+	assigned_order = null
 
 /datum/human_ai_brain
 	/// Numeric ID of the squad this AI is in, if any

@@ -110,8 +110,12 @@
 			//update_static_data(usr, ui)
 			return TRUE
 
-		if("refresh")
-			//update_static_data(usr, ui)
+		if("delete_object") // This UI is fully GM-only so I'm not worried about someone abusing this
+			if(!params["ref"])
+				return
+
+			var/datum/ref_to_del = locate(params["ref"])
+			qdel(ref_to_del)
 			return TRUE
 
 /client/proc/open_human_ai_management_panel()
