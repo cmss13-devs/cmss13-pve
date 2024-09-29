@@ -93,7 +93,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	// Might be wise to move these off tick and instead make them signal-based
 	nade_throwback(things_around)
 	item_search(things_around)
-	//bullet_detect(things_around)
 
 	if(!currently_busy && should_reload_primary())
 		currently_busy = TRUE
@@ -116,7 +115,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 			currently_busy = TRUE
 			attack_target()
 
-	if(!currently_busy && healing_start_check())
+	if(!currently_busy && !in_combat && healing_start_check())
 		currently_busy = TRUE
 		start_healing()
 
@@ -224,16 +223,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/has_ongoing_order(path)
 	return istype(ongoing_order, path)
-
-/datum/human_ai_brain/proc/bullet_detect(list/things_nearby)
-	var/obj/projectile/bullet = locate(/obj/projectile) in things_nearby
-	if(!bullet)
-		return
-
-	if(ismob(bullet.firer))
-		var/mob/firer = bullet.firer
-		if(!in_cover && !faction_check(firer)) // If it's our own bullets, we don't need to be alarmed
-			locate_cover(bullet, bullet.dir)
 
 /// Returns TRUE if the target is friendly/neutral to us
 /datum/human_ai_brain/proc/faction_check(mob/target)

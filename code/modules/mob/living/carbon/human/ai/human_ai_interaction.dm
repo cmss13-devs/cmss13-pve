@@ -4,6 +4,7 @@
 	return INFINITY
 
 /atom/proc/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	ai_human.do_click(src, "", list())
 	return TRUE
 
 
@@ -29,6 +30,11 @@
 
 	return ..()
 
+/obj/structure/barricade/plasteel/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	if(!closed) // this means it's closed
+		ai_human.do_click(src, "", list())
+
+	return TRUE
 
 /////////////////////////////
 //       MINERAL DOOR      //
@@ -71,14 +77,20 @@
 
 	return INFINITY
 
-/obj/structure/machinery/door/poddoor/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+/obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	if(locked || welded || isElectrified())
+		return
+
 	. = ..()
+
+	if(!(stat & NOPOWER) || !brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR))
+		return
+
 	brain.holster_primary()
 	var/obj/item/crowbar = brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR)
 	brain.equip_item_from_equipment_map(HUMAN_AI_TOOLS, crowbar)
 	attackby(crowbar, ai_human)
 	brain.store_item(crowbar, brain.storage_has_room(crowbar), HUMAN_AI_TOOLS)
-
 
 /////////////////////////////
 //         AIRLOCK         //
@@ -93,6 +105,20 @@
 
 	return DOOR_PENALTY
 
+/obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	if(locked || welded || isElectrified())
+		return
+
+	. = ..()
+
+	if(!(stat & NOPOWER))
+		return
+
+	brain.holster_primary()
+	var/obj/item/crowbar = brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR)
+	brain.equip_item_from_equipment_map(HUMAN_AI_TOOLS, crowbar)
+	attackby(crowbar, ai_human)
+	brain.store_item(crowbar, brain.storage_has_room(crowbar), HUMAN_AI_TOOLS)
 
 /////////////////////////////
 //         HUMANS         //

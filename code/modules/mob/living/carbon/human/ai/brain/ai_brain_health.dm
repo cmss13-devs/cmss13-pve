@@ -79,6 +79,7 @@
 			goto bleed
 
 		end_gun_fire()
+		currently_busy = TRUE
 		holster_primary()
 		equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, brute_heal)
 		sleep(short_action_delay)
@@ -102,6 +103,7 @@
 				goto bone
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bleed_heal)
 			sleep(short_action_delay)
@@ -126,6 +128,7 @@
 				goto fire
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bone_heal)
 			sleep(short_action_delay)
@@ -149,6 +152,7 @@
 				goto pain
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, burn_heal)
 			sleep(short_action_delay)
@@ -173,6 +177,7 @@
 				goto tox
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, painkiller)
 			sleep(short_action_delay)
@@ -196,6 +201,7 @@
 				goto oxy
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, tox_heal)
 			sleep(short_action_delay)
@@ -218,6 +224,7 @@
 				return
 
 			end_gun_fire()
+			currently_busy = TRUE
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, oxy_heal)
 			sleep(short_action_delay)
