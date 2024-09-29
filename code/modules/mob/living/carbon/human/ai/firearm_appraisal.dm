@@ -102,6 +102,6 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 
 /datum/firearm_appraisal/rpg/multi_use
 	gun_types = list(
-		/obj/item/weapon/gun/launcher/rocket
+		/obj/item/weapon/gun/launcher/rocket,
 	)
 	disposable = FALSE
