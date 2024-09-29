@@ -23,10 +23,15 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 /// List of things we do before our next fire based on weapon type
 /datum/firearm_appraisal/proc/before_fire(obj/item/weapon/gun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
 	SHOULD_CALL_PARENT(TRUE) // Every weapon can be twohanded
+
 	AI.ensure_primary_hand(firearm)
 	if((firearm.flags_item & TWOHANDED) && !(firearm.flags_item & WIELDED))
 		firearm.wield(user)
 		sleep(max(firearm.wield_delay, AI.short_action_delay * AI.action_delay_mult))
+
+	if(firearm.flags_gun_features & GUN_TRIGGER_SAFETY)
+		firearm.flags_gun_features ^= GUN_TRIGGER_SAFETY
+		firearm.gun_safety_handle(user)
 
 /datum/firearm_appraisal/rifle
 	burst_amount_max = 8
@@ -85,12 +90,6 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/flamer,
 	)
-
-/datum/firearm_appraisal/flamer/before_fire(obj/item/weapon/gun/flamer/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
-	. = ..()
-	if(firearm.flags_gun_features & GUN_TRIGGER_SAFETY)
-		firearm.flags_gun_features ^= GUN_TRIGGER_SAFETY
-		firearm.gun_safety_handle(user)
 
 /datum/firearm_appraisal/rpg
 	minimum_range = 5
