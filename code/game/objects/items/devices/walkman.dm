@@ -1,7 +1,7 @@
 
 
 /obj/item/device/walkman
-	name = "Seegson C-Series Magnetic Tape Recorder"
+	name = "Seegson C-Series magnetic tape recorder"
 	desc = "A classic-style portable audio recorder used to record or play music and audio tapes. Now when you go EVA you can bring your country jams with you!"
 	icon = 'icons/obj/items/walkman.dmi'
 	icon_state = "walkman"
