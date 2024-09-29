@@ -1024,6 +1024,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
+	cost = 0
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
@@ -1053,6 +1054,16 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/pack_exec
 	display_name = "Pack Of Executive Selects"
 	path = /obj/item/storage/fancy/cigarettes/blackpack
+	cost = 4
+
+/datum/gear/smoking/spirit
+	display_name = "Pack Of American Spirit, Turquoise"
+	path = /obj/item/storage/fancy/cigarettes/spirit
+	cost = 4
+
+/datum/gear/smoking/spirit_yellow
+	display_name = "Pack Of American Spirit, Yellow"
+	path = /obj/item/storage/fancy/cigarettes/spirit/yellow
 	cost = 4
 
 /datum/gear/smoking/weed_joint
