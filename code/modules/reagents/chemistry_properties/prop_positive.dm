@@ -36,10 +36,10 @@
 		M.heal_limb_damage(0, potency * POTENCY_MULTIPLIER_LOW)
 
 /datum/chem_property/positive/anticorrosive/process_overdose(mob/living/M, potency = 1, delta_time)
-	M.apply_damages(0.5 * potency * delta_time, 0, 0.5 * potency * delta_time) //Mixed brute/tox damage
+	M.apply_damages(0, 0, 0.75 * potency * delta_time) //Mixed tox damage
 
 /datum/chem_property/positive/anticorrosive/process_critical(mob/living/M, potency = 1)
-	M.apply_damages(POTENCY_MULTIPLIER_VHIGH*potency, 0, POTENCY_MULTIPLIER_VHIGH*potency) //Massive brute/tox damage
+	M.apply_damages(0, 0, POTENCY_MULTIPLIER_VHIGH * potency) //Massive brute/tox damage
 
 /datum/chem_property/positive/neogenetic
 	name = PROPERTY_NEOGENETIC
@@ -56,10 +56,10 @@
 		M.heal_limb_damage(potency * POTENCY_MULTIPLIER_LOW, 0)
 
 /datum/chem_property/positive/neogenetic/process_overdose(mob/living/M, potency = 1, delta_time)
-	M.apply_damage(0.5 * potency * delta_time, BURN)
+	M.apply_damage(0.5 * potency * delta_time, TOX)
 
 /datum/chem_property/positive/neogenetic/process_critical(mob/living/M, potency = 1)
-	M.apply_damages(0, POTENCY_MULTIPLIER_VHIGH * potency, POTENCY_MULTIPLIER_MEDIUM * potency)
+	M.apply_damages(0, 0, POTENCY_MULTIPLIER_MEDIUM * potency)
 
 /datum/chem_property/positive/neogenetic/reaction_mob(mob/M, method=TOUCH, volume, potency)
 	if(!isxeno(M))
@@ -123,7 +123,7 @@
 	M.apply_damage(potency, TOX)
 
 /datum/chem_property/positive/hemogenic/process_critical(mob/living/M, potency = 1)
-	M.nutrition = max(M.nutrition - POTENCY_MULTIPLIER_VHIGH*potency, 0)
+	M.nutrition = max(M.nutrition - POTENCY_MULTIPLIER_VHIGH * potency, 0)
 
 /datum/chem_property/positive/hemogenic/proc/handle_nutrition_loss(mob/living/M, potency = 1, delta_time)
 	M.nutrition = max(M.nutrition - potency, 0)
@@ -153,12 +153,10 @@
 	effected_human.chem_effect_flags &= CHEM_EFFECT_NO_BLEEDING
 
 /datum/chem_property/positive/hemostatic/process_overdose(mob/living/affected_mob, potency = 1)
-	affected_mob.apply_damage(potency, BRUTE)
+	affected_mob.apply_damage(potency, TOX)
 
 /datum/chem_property/positive/hemostatic/process_critical(mob/living/affected_mob, potency = 1)
-	affected_mob.apply_damage(potency * 9, BRUTE)
-	affected_mob.apply_damage(potency * 9, BURN)
-	affected_mob.apply_damage(potency * 9, TOX)
+	affected_mob.apply_damage(potency * 18, TOX)
 
 /datum/chem_property/positive/nervestimulating
 	name = PROPERTY_NERVESTIMULATING
@@ -185,7 +183,7 @@
 	M.apply_damage(POTENCY_MULTIPLIER_MEDIUM*potency, TOX)
 
 /datum/chem_property/positive/nervestimulating/process_critical(mob/living/M, potency = 1)
-	M.apply_damages(potency, potency, POTENCY_MULTIPLIER_HIGH*potency)
+	M.apply_damages(0, 0, POTENCY_MULTIPLIER_VHIGH * potency)
 
 /datum/chem_property/positive/nervestimulating/reaction_mob(mob/M, method=TOUCH, volume, potency)
 	if(isxeno_human(M) && potency > POTENCY_MAX_TIER_1) //can stim on touch at level 7+
@@ -523,10 +521,10 @@
 	H.chem_effect_flags |= CHEM_EFFECT_ORGAN_STASIS
 
 /datum/chem_property/positive/organstabilize/process_overdose(mob/living/M, potency = 1, delta_time)
-	M.apply_damage(0.5 * potency * delta_time, BRUTE)
+	M.apply_damage(0.5 * potency * delta_time, TOX)
 
 /datum/chem_property/positive/organstabilize/process_critical(mob/living/M, potency = 1)
-	M.apply_damages(POTENCY_MULTIPLIER_HIGH * potency, POTENCY_MULTIPLIER_HIGH * potency, POTENCY_MULTIPLIER_HIGH * potency)
+	M.apply_damages(0, 0, POTENCY_MULTIPLIER_HIGH * potency + 10)
 
 /datum/chem_property/positive/electrogenetic
 	name = PROPERTY_ELECTROGENETIC
@@ -981,7 +979,7 @@
 	M.apply_damage(POTENCY_MULTIPLIER_LOW * potency, TOX) //Mixed brute/tox damage
 
 /datum/chem_property/positive/oxygenating/process_critical(mob/living/M, potency = 1)
-	M.apply_damages(potency, 0, POTENCY_MULTIPLIER_MEDIUM * potency) //Massive brute/tox damage
+	M.apply_damages(0, 0, POTENCY_MULTIPLIER_HIGH * potency) //Massive brute/tox damage
 
 /datum/chem_property/positive/anticarcinogenic
 	name = PROPERTY_ANTICARCINOGENIC
