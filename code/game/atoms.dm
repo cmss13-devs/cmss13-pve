@@ -422,19 +422,29 @@ Parameters are passed from New.
 	var/turf/T = null
 	T = locate(src.x + P.vector_x, src.y + P.vector_y, src.z + P.vector_z)
 
-	if(!P.modify_turf)
-		T = new /atom/clone(T)
-		T.plane = -7
+	if(P.modify_turf)
+		T.appearance = src.appearance
+		T.setDir(src.dir)
 
-	T.appearance = src.appearance
-	T.setDir(src.dir)
+		if(P.mask_layer)
+			T.layer = ((P.mask_layer-0.5)+(src.layer/10))
 
-	if(P.mask_layer)
-		T.layer = ((P.mask_layer-0.5)+(src.layer/10))
+		GLOB.clones_t.Add(src)
+		src.clone = T
+	else
+		var/atom/movable/clone/facsimile_T = new /atom/movable/clone(T)
 
-	GLOB.clones_t.Add(src)
-	src.clone = T
-	proj = P
+		facsimile_T.proj = P
+		facsimile_T.appearance = src.appearance
+		facsimile_T.setDir(src.dir)
+
+		if(P.mask_layer)
+			facsimile_T.layer = ((P.mask_layer-0.5)+(src.layer/10))
+		facsimile_T.plane = -7
+
+		GLOB.clones_t.Add(src)
+		src.clone = facsimile_T
+		facsimile_T.mstr = src
 
 // EFFECTS
 /atom/proc/extinguish_acid()

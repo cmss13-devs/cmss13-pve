@@ -127,11 +127,11 @@
 
 #define GOLDEN_ARROW_LZ "golden arrow lz"
 
-#define GOLDEN_ARROW_A1_L
-#define GOLDEN_ARROW_A2_L
+#define GOLDEN_ARROW_A1_L "golden-arrow-airlock-1-lower"
+#define GOLDEN_ARROW_A2_L "golden-arrow-airlock-2-lower"
 
-#define GOLDEN_ARROW_A1_U
-#define GOLDEN_ARROW_A2_U
+#define GOLDEN_ARROW_A1_U "golden-arrow-airlock-1-upper"
+#define GOLDEN_ARROW_A2_U "golden-arrow-airlock-2-upper"
 
 #define DROPSHIP_FLYBY_ID "special_flight"
 #define DROPSHIP_LZ1 "dropship-lz1"

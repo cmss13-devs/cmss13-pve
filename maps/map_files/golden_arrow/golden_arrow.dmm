@@ -2026,10 +2026,8 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/supply)
 "ahp" = (
-/obj/docking_port/stationary/marine_dropship{
-	name = "Hangar Bay 2 Lower"
-	},
 /obj/effect/projector/bay_two,
+/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_two,
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aht" = (
@@ -8175,14 +8173,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "aCr" = (
-/obj/item/stack/catwalk{
-	pixel_x = 4
+/obj/effect/projector/bay_two,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
-/obj/item/stack/catwalk{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aCs" = (
 /obj/structure/machinery/gear{
@@ -9148,7 +9144,7 @@
 /obj/effect/hangar_airlock/outer{
 	pixel_x = -64;
 	pixel_y = -64;
-	layer = 1.98
+	layer = 1.95
 	},
 /obj/effect/hangar_airlock/half_tile{
 	dir = 1;
@@ -13348,10 +13344,8 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
 "aUX" = (
-/obj/docking_port/stationary/marine_dropship{
-	name = "Hangar Bay 1 Lower"
-	},
 /obj/effect/projector/bay_one,
+/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_one,
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aUY" = (
@@ -13489,14 +13483,9 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "aVx" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/stack/catwalk{
-	pixel_x = 2;
-	pixel_y = -9
-	},
-/turf/open/floor/almayer/plate,
+/obj/effect/projector/bay_two,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aVy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -14556,7 +14545,9 @@
 /area/golden_arrow/hangar)
 "aZD" = (
 /obj/effect/hangar_airlock/outline,
-/obj/effect/hangar_airlock/inner,
+/obj/effect/hangar_airlock/inner{
+	layer = 1.95
+	},
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
 	light_color = "#dae2ff"
@@ -14841,9 +14832,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock Two"
-	},
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "bZF" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
@@ -14999,9 +14988,12 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
 "cYz" = (
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock Two"
+/obj/effect/projector/bay_two,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff"
 	},
+/turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "dhC" = (
 /turf/open/floor/almayer/edge/east,
@@ -15170,6 +15162,11 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/supply)
+"ePf" = (
+/obj/effect/projector/bay_one,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/hangar_airlock/outer,
+/area/golden_arrow/hangar)
 "eTc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -15455,9 +15452,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding2"
 	},
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock Two"
-	},
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "hxJ" = (
 /turf/closed/wall/almayer/outer,
@@ -15520,12 +15515,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "icW" = (
-/obj/docking_port/stationary/marine_dropship{
-	name = "Hangar Bay 2 Upper"
-	},
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock Two"
-	},
+/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_two,
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "idK" = (
 /obj/structure/barricade/handrail,
@@ -15775,12 +15766,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "krq" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	name = "Hangar Bay 1 Upper"
-	},
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock One"
-	},
+/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_one,
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "kuE" = (
 /turf/open/floor/almayer/plate{
@@ -16503,6 +16490,14 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"pYl" = (
+/obj/effect/projector/bay_two,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/hangar_airlock/outer,
+/area/golden_arrow/hangar)
 "pYL" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
@@ -16636,6 +16631,23 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"reV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/stack/catwalk{
+	pixel_x = 4
+	},
+/obj/item/stack/catwalk{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/stack/catwalk{
+	pixel_x = 2;
+	pixel_y = -9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "rmN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -16925,10 +16937,16 @@
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
-"tLo" = (
-/turf/open/floor/hangar_airlock/inner{
-	name = "Hangar Airlock One"
+"tFK" = (
+/obj/effect/projector/bay_one,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff"
 	},
+/turf/open/floor/hangar_airlock/outer,
+/area/golden_arrow/hangar)
+"tLo" = (
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "tTk" = (
 /obj/structure/machinery/computer/ares_console{
@@ -16950,6 +16968,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/golden_arrow/ai_interface)
+"tXa" = (
+/obj/effect/projector/bay_one,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/hangar_airlock/outer,
+/area/golden_arrow/hangar)
 "uel" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -17116,7 +17142,7 @@
 	layer = 2
 	},
 /obj/effect/hangar_airlock/inner{
-	layer = 1.98
+	layer = 1.95
 	},
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
@@ -17142,6 +17168,14 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"wzO" = (
+/obj/effect/projector/bay_one,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/hangar_airlock/outer,
+/area/golden_arrow/hangar)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -17304,7 +17338,7 @@
 /obj/effect/hangar_airlock/outer{
 	pixel_x = -64;
 	pixel_y = -64;
-	layer = 1.98
+	layer = 1.95
 	},
 /obj/effect/projector/bay_two,
 /turf/open/floor/hangar_airlock/outer,
@@ -23595,21 +23629,21 @@ adz
 anz
 adz
 aOH
+wzO
+azr
+azr
+azr
+wzO
 azr
 azr
 azr
 azr
 azr
+wzO
 azr
 azr
 azr
-azr
-azr
-azr
-azr
-azr
-azr
-azr
+wzO
 amk
 adz
 anz
@@ -23625,21 +23659,21 @@ adz
 anz
 adz
 ast
+aCr
+aOq
+aOq
+aOq
+aCr
 aOq
 aOq
 aOq
 aOq
 aOq
+aCr
 aOq
 aOq
 aOq
-aOq
-aOq
-aOq
-aOq
-aOq
-aOq
-aOq
+aCr
 uxh
 adz
 anz
@@ -24048,6 +24082,7 @@ aEG
 aEG
 adz
 adz
+tFK
 azr
 azr
 azr
@@ -24067,8 +24102,7 @@ azr
 azr
 azr
 azr
-azr
-azr
+ePf
 adz
 adz
 opj
@@ -24078,6 +24112,7 @@ abD
 alz
 adz
 adz
+cYz
 aOq
 aOq
 aOq
@@ -24097,8 +24132,7 @@ aOq
 aOq
 aOq
 aOq
-aOq
-aOq
+aVx
 adz
 adz
 aEG
@@ -24656,6 +24690,7 @@ aEG
 aEG
 adz
 adz
+tFK
 azr
 azr
 azr
@@ -24675,8 +24710,7 @@ azr
 azr
 azr
 azr
-azr
-azr
+ePf
 adz
 adz
 aqP
@@ -24686,6 +24720,7 @@ ach
 aqP
 adz
 adz
+cYz
 aOq
 aOq
 aOq
@@ -24705,8 +24740,7 @@ aOq
 aOq
 aOq
 aOq
-aOq
-aOq
+aVx
 adz
 adz
 aEG
@@ -25115,21 +25149,21 @@ adz
 anz
 adz
 fBD
+tXa
+azr
+azr
+azr
+tXa
 azr
 azr
 azr
 azr
 azr
+tXa
 azr
 azr
 azr
-azr
-azr
-azr
-azr
-azr
-azr
-azr
+tXa
 ijb
 adz
 adz
@@ -25145,21 +25179,21 @@ adz
 anz
 adz
 adx
+pYl
+aOq
+aOq
+aOq
+pYl
 aOq
 aOq
 aOq
 aOq
 aOq
+pYl
 aOq
 aOq
 aOq
-aOq
-aOq
-aOq
-aOq
-aOq
-aOq
-aOq
+pYl
 azp
 adz
 adz
@@ -31410,15 +31444,15 @@ aKa
 aKa
 aKa
 alu
-alu
-aKa
-aKa
-aKa
 aJe
-alu
+aKa
+aKa
 aKa
 alu
 alu
+aKa
+alu
+aJe
 aKa
 alu
 alu
@@ -31440,15 +31474,15 @@ alu
 alu
 alu
 alu
-aKa
+iLQ
 alu
 alu
 alu
-aJe
+alu
 alu
 aKa
 aKa
-aKa
+iLQ
 alu
 alu
 alu
@@ -31587,24 +31621,24 @@ aMz
 aos
 alu
 ile
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 bUP
 ile
 alu
@@ -31738,26 +31772,26 @@ aWa
 aHu
 aos
 aKa
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 hxk
 azz
 acB
@@ -31890,27 +31924,27 @@ aUD
 aUD
 apJ
 aKa
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 als
 aHP
 aPw
@@ -32042,27 +32076,27 @@ abR
 aVD
 aOY
 aKa
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 aKa
 acB
 abf
@@ -32194,27 +32228,27 @@ awT
 abR
 aJj
 alu
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 alu
 aiG
 aRe
@@ -32346,27 +32380,27 @@ aHb
 abR
 aJj
 aJe
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 icW
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 aJe
 aiG
 aRe
@@ -32485,7 +32519,7 @@ tLo
 tLo
 tLo
 tLo
-cYz
+tLo
 tLo
 tLo
 tLo
@@ -32498,27 +32532,27 @@ alx
 abR
 aOY
 alu
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 alu
 acB
 aRe
@@ -32650,27 +32684,27 @@ abR
 aVD
 aFG
 alu
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 alu
 acB
 aSK
@@ -32802,27 +32836,27 @@ aHI
 aHI
 awq
 alu
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 aKa
 aGU
 azD
@@ -32954,26 +32988,26 @@ aWa
 aWa
 aos
 aKa
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 bUP
 alu
 acB
@@ -33107,25 +33141,25 @@ aHu
 aos
 alu
 ile
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
-cYz
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
+tLo
 gwS
 alu
 acB
@@ -33233,16 +33267,16 @@ alu
 aKa
 aKa
 alu
-aVx
-aCr
 aKa
-alu
-alu
 aJe
+reV
+alu
+alu
+alu
 alu
 aKa
 aKa
-alu
+aJe
 alu
 aKa
 alu
@@ -33264,15 +33298,15 @@ aKa
 alu
 aKa
 alu
+aJe
 alu
-alu
-alu
-alu
-iLQ
 alu
 alu
 aKa
 alu
+alu
+aKa
+aJe
 alu
 alu
 aVj

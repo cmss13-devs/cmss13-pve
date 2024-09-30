@@ -409,16 +409,17 @@
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_HIJACK_LANDED)
 
 /obj/docking_port/stationary/marine_dropship/airlock/lower
+	var/airlock_projector_type = /obj/effect/projector
 
 /obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_one
 	name = "Golden Arrow Hangar Airlock 1 Lower"
 	id = GOLDEN_ARROW_A1_L
+	airlock_projector_type = /obj/effect/projector/bay_one
 
 /obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_two
 	name = "Golden Arrow Hangar Airlock 2 Lower"
 	id = GOLDEN_ARROW_A2_L
-
-/obj/docking_port/stationary/marine_dropship/airlock/upper
+	airlock_projector_type = /obj/effect/projector/bay_two
 
 /obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_one
 	name = "Golden Arrow Hanagar Airlock 1 Upper"

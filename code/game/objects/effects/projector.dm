@@ -11,24 +11,31 @@
 	var/movables_projection_plane = -6 //necessary to change when making a movable go under a turf (whose plane is -7)
 	var/modify_turf = TRUE
 	var/projected_mouse_opacity = 1
+	var/is_light_projecting = TRUE
 	icon = 'icons/landmarks.dmi'
 	icon_state = "projector"//for map editor
+
+/obj/effect/projector/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	return TRUE
+	// we don't want projectors moving
 
 // defined so we can deselect their firing for performance and also so we can spawn them in after/before dropships interact with projectors
 /obj/effect/projector/bay_one
 	name = "Bay One"
 	vector_x = 52
 	vector_y = -60
-	mask_layer = 2
+	mask_layer = 1.9
 	movables_projection_plane = -7
 	modify_turf = FALSE
 	projected_mouse_opacity = 0
+	is_light_projecting = FALSE
 
 /obj/effect/projector/bay_two
 	name = "Bay Two"
 	vector_x = 52
 	vector_y = -60
-	mask_layer = 2
+	mask_layer = 1.9
 	movables_projection_plane = -7
 	modify_turf = FALSE
 	projected_mouse_opacity = 0
+	is_light_projecting = FALSE

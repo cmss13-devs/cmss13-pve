@@ -247,6 +247,7 @@
 	var/proj_base_layer = null
 	var/proj_plane = -6
 	var/proj_mouse_opacity = 1
+	var/is_light_projecting = FALSE
 	var/obj/effect/projector/proj = null
 	unacidable = TRUE
 
@@ -273,6 +274,15 @@
 
 /atom/movable/clone/bullet_act(obj/projectile/P)
 	return src.mstr.bullet_act(P)
+
+/atom/movable/clone/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	return TRUE
+	// at least for how we're using them for airlocks, we don't want clones moving
+
+/atom/movable/clone/Destroy(force)
+	if(!force)
+		return QDEL_HINT_LETMELIVE
+	. = ..()
 /////////////////////
 
 /atom/movable/proc/create_clone_movable(obj/effect/projector/P)
@@ -285,6 +295,8 @@
 		C.proj_base_layer = P.mask_layer-0.5
 	C.proj_plane = P.movables_projection_plane
 	C.proj_mouse_opacity = P.projected_mouse_opacity
+	C.is_light_projecting = P.is_light_projecting
+	message_admins("clone is light projecting: [C.is_light_projecting], projector is light projecting: [P.is_light_projecting]")
 
 	GLOB.clones.Add(C)
 	C.mstr = src //Link clone and master
@@ -312,17 +324,19 @@
 	clone.mouse_opacity = clone.proj_mouse_opacity
 
 	////////////////////
-
-	if(light) //Clone lighting
-		if(!clone.light)
-			clone.set_light(luminosity) //Create clone light
+	if(clone.is_light_projecting)
+		if(light) //Clone lighting
+			if(!clone.light)
+				clone.set_light(luminosity) //Create clone light
+		else
+			if(clone.light)
+				clone.set_light(0) //Kill clone light
 	else
-		if(clone.light)
-			clone.set_light(0) //Kill clone light
+
 
 /atom/movable/proc/destroy_clone()
 	GLOB.clones.Remove(src.clone)
-	qdel(src.clone)
+	qdel(src.clone, TRUE)
 	src.clone = null
 
 /**
