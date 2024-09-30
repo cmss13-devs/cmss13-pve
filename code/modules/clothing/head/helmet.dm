@@ -264,6 +264,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/glasses/eyepatch = "eyepatch",
 	/obj/item/clothing/glasses/regular/hipster = "persc-glasses",
 
+	//GASMASK
+	/obj/item/clothing/mask/gas/m5 = HELMET_GARB_RELAY_ICON_STATE,
+
 	// WALKMAN AND CASSETTES
 	/obj/item/device/walkman = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/device/cassette_tape/pop1 = "cassette_blue",
