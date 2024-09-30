@@ -33,6 +33,13 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		firearm.flags_gun_features ^= GUN_TRIGGER_SAFETY
 		firearm.gun_safety_handle(user)
 
+/datum/firearm_appraisal/sniper
+	maximum_range = 30
+	burst_amount_max = 1
+	gun_types = list(
+		/obj/item/weapon/gun/rifle/sniper,
+	)
+
 /datum/firearm_appraisal/rifle
 	burst_amount_max = 8
 	gun_types = list(
@@ -69,6 +76,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	firearm.unique_action(user)
 
 /datum/firearm_appraisal/boltaction
+	maximum_range = 30
+	burst_amount_max = 1
 	gun_types = list(
 		/obj/item/weapon/gun/boltaction,
 	)
@@ -78,9 +87,9 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	if(firearm.in_chamber)
 		return
 	firearm.unique_action(user)
-	firearm.recent_cycle = world.time
+	firearm.recent_cycle = world.time - firearm.bolt_delay
 	firearm.unique_action(user)
-	firearm.recent_cycle = world.time
+	firearm.recent_cycle = world.time - firearm.bolt_delay
 
 /datum/firearm_appraisal/flamer
 	burst_amount_max = 1

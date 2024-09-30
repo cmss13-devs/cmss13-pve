@@ -9,13 +9,14 @@
 	var/mob/living/current_target
 	/// Ref to the last turf that the AI shot at
 	var/turf/open/target_floor
-	/// If TRUE, the AI is allowed to establish overwatches
-	var/overwatch_allowed = FALSE
 	/// If TRUE, the AI will throw grenades at enemies who enter cover
 	var/grenading_allowed = TRUE
 	/// List of overwatched turfs
 	var/list/turf/open/overwatch_turfs = list()
+	/// If TRUE, we care about the target being in view after shooting at them. If not, then we only do a line check instead
+	var/requires_vision = TRUE
 
+	var/allowed_return_fire = TRUE
 	COOLDOWN_DECLARE(return_fire)
 
 /datum/human_ai_brain/proc/get_target(range)
@@ -213,14 +214,25 @@
 			tied_human.drop_held_item(gun)
 		return
 
-	if(!(current_target in viewers(view_distance, tied_human)))
+	if(requires_vision)
+		if(!(current_target in viewers(view_distance, tied_human)))
+			if(COOLDOWN_FINISHED(src, return_fire))
+				end_gun_fire()
+				return
+
+			if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
+				end_gun_fire()
+				throw_grenade_cover()
+				return
+
+	else if(locate(/turf/closed) in get_line(tied_human, current_target))
 		if(COOLDOWN_FINISHED(src, return_fire))
 			end_gun_fire()
-		if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
-			throw_grenade_cover()
 			return
-		if(overwatch_allowed)
-			establish_overwatch()
+
+		if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
+			end_gun_fire()
+			throw_grenade_cover()
 			return
 
 	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
@@ -241,7 +253,7 @@
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), bolt.bolt_delay + 1)
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
 
-	if(primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
+	else if(primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
 		rounds_burst_fired++
 
 	else if(primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
@@ -259,55 +271,6 @@
 	currently_busy = FALSE
 	currently_firing = FALSE
 	rounds_burst_fired = 0
-
-/// If a target moves behind cover, the AI will overwatch the tiles around where the target was last scene.
-/// If they step on a visible overwatched tile, the AI immediately opens fire. The AI discards all overwatches when moving.
-/datum/human_ai_brain/proc/establish_overwatch()
-	if(!target_floor)
-		return
-
-#ifdef TESTING
-	to_chat(world, "[tied_human.name] has established new overwatch at [target_floor.x], [target_floor.y], [target_floor.z].")
-#endif
-	if(length(overwatch_turfs)) // for now, only 1 overwatch at a time
-		clear_overwatch()
-
-	for(var/turf/open/floor in range(2, target_floor)) // everything within 2 tiles of the center gets marked
-		RegisterSignal(floor, COMSIG_TURF_ENTERED, PROC_REF(on_overwatch_turf_enter))
-		overwatch_turfs += floor
-#ifdef TESTING
-		floor.color = "#aca43a"
-#endif
-
-/datum/human_ai_brain/proc/clear_overwatch()
-	for(var/turf/open/floor as anything in overwatch_turfs)
-		UnregisterSignal(floor, COMSIG_TURF_ENTERED)
-#ifdef TESTING
-		floor.color = null
-#endif
-
-#ifdef TESTING
-	if(length(overwatch_turfs))
-		to_chat(world, "[tied_human.name] has cleared existing overwatch.")
-#endif
-	overwatch_turfs.Cut()
-
-/datum/human_ai_brain/proc/on_overwatch_turf_enter(datum/source, atom/movable/entering)
-	SIGNAL_HANDLER
-
-	if(currently_firing || currently_busy)
-		clear_overwatch()
-		return
-
-	if(!can_target(entering))
-		return
-
-	if(!(entering in viewers(world.view, tied_human)))
-		return
-
-	clear_overwatch()
-	current_target = entering
-	attack_target()
 
 /datum/human_ai_brain/proc/throw_grenade_cover()
 	if(!target_floor || has_ongoing_action(AI_ACTION_NADE))

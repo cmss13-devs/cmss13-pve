@@ -18,7 +18,7 @@
 	return ..()
 
 /datum/ongoing_action/order/patrol_waypoints/trigger_action(datum/human_ai_brain/brain)
-	if(waiting || QDELETED(current_waypoint_target) || !isturf(current_waypoint_target)) // Since this one order applies to the entire squad, everyone stops approaching when one arrives
+	if(waiting || QDELETED(current_waypoint_target) || !isturf(current_waypoint_target))
 		return ONGOING_ACTION_COMPLETED
 
 	if(get_dist(current_waypoint_target, brain.tied_human) > 1)

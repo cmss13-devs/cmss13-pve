@@ -16,6 +16,9 @@
 
 	data["orders"] = list()
 	for(var/datum/ongoing_action/order as anything in SShuman_ai.existing_orders)
+		if(!order.should_display)
+			continue
+
 		data["orders"] += list(list(
 			"name" = order.name,
 			"type" = order.type,
@@ -38,6 +41,7 @@
 			"brain_ref" = REF(brain),
 			"in_combat" = brain.in_combat,
 			"squad_id" = brain.squad_id,
+			"can_assign_squad" = brain.can_assign_squad,
 		))
 
 	data["squads"] = list()
@@ -79,16 +83,17 @@
 
 		if("create_squad")
 			SShuman_ai.create_new_squad()
-			//update_static_data(usr, ui)
 			return TRUE
 
 		if("assign_to_squad")
 			if(!params["squad"] || !params["ai"])
 				return
 
-			var/datum/brain = locate(params["ai"])
-			brain:add_to_squad(params["squad"])
-			//update_static_data(usr, ui)
+			var/datum/human_ai_brain/brain = locate(params["ai"])
+			if(!brain.can_assign_squad)
+				return TRUE
+
+			brain.add_to_squad(params["squad"])
 			return TRUE
 
 		if("assign_order")
@@ -97,7 +102,6 @@
 
 			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
 			squad.set_order(locate(params["order"]))
-			//update_static_data(usr, ui)
 			return TRUE
 
 		if("assign_sl")
@@ -107,7 +111,6 @@
 			var/datum/brain = locate(params["ai"])
 			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
 			squad.set_squad_leader(brain)
-			//update_static_data(usr, ui)
 			return TRUE
 
 		if("delete_object") // This UI is fully GM-only so I'm not worried about someone abusing this
@@ -140,7 +143,7 @@
 		return
 
 	var/mob/living/carbon/human/ai/ai_human = new()
-	if(!cmd_admin_dress_human(ai_human))
+	if(!cmd_admin_dress_human(ai_human, randomize = TRUE))
 		qdel(ai_human)
 		return
 	ai_human.forceMove(get_turf(mob))

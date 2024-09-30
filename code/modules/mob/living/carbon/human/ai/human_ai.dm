@@ -12,8 +12,8 @@ GLOBAL_LIST_EMPTY(ai_humans)
 	if(!ai)
 		GLOB.non_ai_humans += src
 	else
-		real_name = random_name(gender, "Human")
-		name = real_name
+		//real_name = random_name(gender, "Human")
+		//name = real_name
 		//var/datum/preferences/prefs = new
 		//prefs.randomize_appearance(src)
 		//qdel(prefs)
@@ -30,11 +30,6 @@ GLOBAL_LIST_EMPTY(ai_humans)
 		GLOB.non_ai_humans -= src
 	QDEL_NULL(ai_brain)
 	return ..()
-
-/mob/living/carbon/human/proc/process_ai()
-	SHOULD_CALL_PARENT(TRUE)
-	if(client)
-		return FALSE
 
 /mob/living/carbon/human/ai
 	has_ai = TRUE

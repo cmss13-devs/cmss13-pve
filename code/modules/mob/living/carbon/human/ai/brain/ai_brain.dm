@@ -40,6 +40,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/list/friendly_factions = list()
 	var/list/neutral_factions = list()
 	var/previous_faction
+	/// If false, cannot be assigned to a squad
+	var/can_assign_squad = TRUE
+	var/allowed_approach_retreat = TRUE
 
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
@@ -99,7 +102,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		reload_primary()
 
 	if(primary_weapon && current_target)
-		if(!has_ongoing_action(AI_ACTION_APPROACH) && !has_ongoing_action(AI_ACTION_RETREAT))
+		if(allowed_approach_retreat && !has_ongoing_action(AI_ACTION_APPROACH) && !has_ongoing_action(AI_ACTION_RETREAT))
 			var/target_futile = current_target.is_mob_incapacitated()
 			var/distance = get_dist(tied_human, current_target)
 			if(distance > gun_data.optimal_range || target_futile)
@@ -303,7 +306,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(firer?.faction in neutral_factions)
 		on_neutral_faction_betray(firer.faction)
 
-	if(primary_weapon?.ammo.max_range <= get_dist(tied_human, firer))
+	if(allowed_return_fire && (primary_weapon?.ammo.max_range <= get_dist(tied_human, firer)))
 		COOLDOWN_START(src, return_fire, return_fire_duration)
 
 	if(!faction_check(firer))

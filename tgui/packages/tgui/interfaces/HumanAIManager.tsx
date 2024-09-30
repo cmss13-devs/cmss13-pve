@@ -21,6 +21,7 @@ type AIHuman = {
   brain_ref: string;
   in_combat: BooleanLike;
   squad_id: number;
+  can_assign_squad: BooleanLike;
 };
 
 type Order = {
@@ -229,7 +230,9 @@ const HumanAIReadout = (props) => {
                 }
                 color="green"
                 disabled={
-                  selectedSquad === -1 || human.squad_id == selectedSquad
+                  selectedSquad === -1 ||
+                  human.squad_id == selectedSquad ||
+                  !human.can_assign_squad
                 }
                 style={{
                   float: 'left',

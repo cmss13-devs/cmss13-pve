@@ -1990,6 +1990,7 @@
 #include "code\modules\mob\living\carbon\human\ai\action_datums\retreat_from_target.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\orders\order_action.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\orders\patrol_waypoints.dm"
+#include "code\modules\mob\living\carbon\human\ai\action_datums\orders\sniper_nest.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_communication.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_factions.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_squad.dm"
