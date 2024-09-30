@@ -783,7 +783,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_marine_loadout
+	path = /obj/item/storage/box/loadout/HG44_loadout
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead
