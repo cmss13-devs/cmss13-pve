@@ -786,17 +786,6 @@
 		var/datum/mob_hud/hud = GLOB.huds[hud_to_add]
 		hud.add_hud_to(new_human, new_human)
 
-	var/list/actions_to_add = subtypesof(/datum/action/human_action/activable/cult)
-
-	if(istype(new_human.wear_suit, /obj/item/clothing/suit/cultist_hoodie) || istype(new_human.head, /obj/item/clothing/head/cultist_hood))
-		actions_to_add -= /datum/action/human_action/activable/cult/obtain_equipment
-
-	for(var/action_to_add in actions_to_add)
-		give_action(new_human, action_to_add)
-
-	new_human.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-	new_human.update_sight()
-
 /datum/equipment_preset/other/xeno_cultist/leader
 	name = "Cultist - Xeno Cultist Leader"
 	uses_special_name = TRUE
@@ -820,6 +809,8 @@
 	for(var/type in types)
 		give_action(new_human, type)
 
+	new_human.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+	new_human.update_sight()
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/professor_dummy
