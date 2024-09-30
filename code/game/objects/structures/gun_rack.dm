@@ -91,6 +91,22 @@
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/boyars_dualcannon
 
+/obj/structure/gun_rack/apc/frontal/aa
+	name = "vertical-launch-system ammo storage compartment"
+	icon_state = "boyars"
+	desc = "A small compartment that stores ammunition for the vehicle's VLS-array."
+	max_stored = 2
+	initial_stored = 0
+	allowed_type = /obj/item/ammo_magazine/hardpoint/towlauncher/aa
+
+/obj/structure/gun_rack/apc/boyars/aa
+	name = "anti-air cannon ammo storage compartment"
+	icon_state = "frontal"
+	desc = "A small compartment that stores ammunition for the vehicle's 'Bleihagel RE-RE965 Aerial-Defence System'."
+	max_stored = 2
+	initial_stored = 0
+	allowed_type = /obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon
+
 /obj/structure/gun_rack/m41/recon
 	icon_state = "m41arecon"
 	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/forecon
