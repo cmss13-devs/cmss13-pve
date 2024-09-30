@@ -664,8 +664,6 @@
 	backbag = sanitize_integer(backbag, 1, length(GLOB.backbaglist), initial(backbag))
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
 	//b_type = sanitize_text(b_type, initial(b_type))
-	var/old_pref_armor
-	S["preferred_armor"] >> old_pref_armor
 
 	if(!(old_pref_armor in GLOB.armor_style_list))
 		preferred_armor = "Random"
