@@ -605,6 +605,11 @@
 		/obj/item/toy/plush/shark,
 		/obj/item/toy/plush/moth,
 		/obj/item/toy/plush/rock,
+		/obj/item/toy/plush/otter,
+		/obj/item/toy/plush/fox,
+		/obj/item/toy/plush/kitten,
+		/obj/item/toy/plush/box,
+		/obj/item/toy/plush/carp,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(
