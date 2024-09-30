@@ -149,6 +149,12 @@
 /datum/ammo/rocket/ap/tank_towlauncher
 	max_range = 8
 
+/datum/ammo/rocket/ap/tank_towlauncher/aa
+	name = "anti-air missile"
+	damage = 200
+	max_range = 16
+	shell_speed = AMMO_SPEED_TIER_5
+
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
