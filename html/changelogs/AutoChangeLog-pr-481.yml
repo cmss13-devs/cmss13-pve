@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "USCM Synth headsets no longer cluttered up with all the PVP tracking options, now they can track PVE relevant options only, with the Platoon sergeant being the default option."
