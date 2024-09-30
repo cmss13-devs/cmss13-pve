@@ -32,10 +32,35 @@
 	item_state = "kutjevo_respirator"
 
 /obj/item/clothing/mask/gas/m5
-	name = "\improper M5 standalone gasmask"
-	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This one is the alternative variant meant for Marines not in combat kit."
-	icon_state = "m5_gasmask"
-	item_state = "m5_gasmask"
+	name = "\improper M5 gasmask"
+	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear."
+	icon_state = "m5"
+	item_state = "m5"
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+
+/obj/item/clothing/mask/gas/m5/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory |= BLOCKGASEFFECT
+	helmet_item.flags_inv_hide |= HIDEFACE
+
+/obj/item/clothing/mask/gas/m5/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
+	helmet_item.flags_inv_hide &= ~(HIDEFACE)
 
 /obj/item/clothing/mask/gas/upp
 	name = "\improper PMK-63 gasmask"
