@@ -664,9 +664,6 @@
 	backbag = sanitize_integer(backbag, 1, length(GLOB.backbaglist), initial(backbag))
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
 	//b_type = sanitize_text(b_type, initial(b_type))
-
-	if(!(old_pref_armor in GLOB.armor_style_list))
-		preferred_armor = "Random"
 	S["preferred_armor"] << preferred_armor
 
 	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
