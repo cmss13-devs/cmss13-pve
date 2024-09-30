@@ -1,8 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - rscadd: "added the M579 ADS-C vehicle"
-  - rscadd: "added the new weapons, ammo, ammo-storage and viewport console for the above"
-  - bugfix: "fixed a typo in the vehicles.dm file whilst I was at it"
-  - imageadd: "new turf icon added for ADS-C interior"
-  - mapadd: "added new interior for the M579"

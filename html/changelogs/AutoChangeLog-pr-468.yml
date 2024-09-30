@@ -1,5 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - rscadd: "Adds paygrades of the US Army, along with their rank-pins"
-  - code_imp: "Changed paygrades of the USASF to actually have paygrade values"
