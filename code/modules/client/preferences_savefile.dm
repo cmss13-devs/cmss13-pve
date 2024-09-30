@@ -667,7 +667,7 @@
 	var/old_pref_armor
 	S["preferred_armor"] >> old_pref_armor
 
-	if(!old_pref_armor in GLOB.armor_style_list)
+	if(!(old_pref_armor in GLOB.armor_style_list))
 		preferred_armor = "Random"
 	S["preferred_armor"] << preferred_armor
 
