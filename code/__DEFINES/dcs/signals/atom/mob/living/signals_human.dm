@@ -80,3 +80,9 @@
 
 /// From /obj/item/restraint/proc/place_handcuffs() : ()
 #define COMSIG_HUMAN_HANDCUFFED "human_handcuffed"
+
+/// From /mob/living/carbon/human/proc/set_species() : (new_species)
+#define COMSIG_HUMAN_SET_SPECIES "human_set_species"
+
+/// From /mob/living/carbon/human/proc/get_human_ai_brain() : (datum/human_ai_brain/out_brain)
+#define COMSIG_HUMAN_GET_AI_BRAIN "human_get_ai_brain"

@@ -96,7 +96,7 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/bruise_pack/ai_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		if(QDELETED(src))
 			return
@@ -104,7 +104,7 @@
 		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
 			user.zone_selected = limb.name
 			attack(user, user)
-			sleep(user.ai_brain.short_action_delay)
+			sleep(ai_brain.short_action_delay)
 
 /obj/item/stack/medical/bruise_pack/two
 	amount = 2
@@ -204,7 +204,7 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
 			return TRUE
@@ -217,7 +217,7 @@
 				return TRUE
 	return FALSE
 
-/obj/item/stack/medical/advanced/bruise_pack/ai_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/advanced/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		if(QDELETED(src))
 			return
@@ -225,7 +225,7 @@
 		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
 			user.zone_selected = limb.name
 			attack(user, user)
-			sleep(user.ai_brain.short_action_delay)
+			sleep(ai_brain.short_action_delay)
 			continue
 
 		for(var/datum/wound/wound in limb.wounds)
@@ -238,7 +238,7 @@
 			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
 				user.zone_selected = limb.name
 				attack(user, user)
-				sleep(user.ai_brain.short_action_delay)
+				sleep(ai_brain.short_action_delay)
 
 /obj/item/stack/medical/advanced/bruise_pack/predator
 	name = "mending herbs"
@@ -309,7 +309,7 @@
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		for(var/datum/wound/wound in limb.wounds)
 			if(wound.internal || wound.damage_type == BRUTE)
@@ -319,7 +319,7 @@
 				return TRUE
 	return FALSE
 
-/obj/item/stack/medical/advanced/ointment/ai_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/advanced/ointment/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		for(var/datum/wound/wound in limb.wounds)
 			if(wound.internal || wound.damage_type == BRUTE)
@@ -331,7 +331,7 @@
 			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
 				user.zone_selected = limb.name
 				attack(user, user)
-				sleep(user.ai_brain.short_action_delay)
+				sleep(ai_brain.short_action_delay)
 
 /obj/item/stack/medical/splint
 	name = "medical splints"
@@ -392,7 +392,7 @@
 			playsound(user, 'sound/handling/splint1.ogg', 25, 1, 2)
 
 
-/obj/item/stack/medical/splint/ai_use(mob/living/carbon/human/user)
+/obj/item/stack/medical/splint/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	for(var/obj/limb/limb as anything in user.limbs)
 		if(QDELETED(src))
 			return
@@ -400,5 +400,5 @@
 		if(limb.is_broken())
 			user.zone_selected = limb.name
 			attack(user, user)
-			sleep(user.ai_brain.short_action_delay)
+			sleep(ai_brain.short_action_delay)
 			continue

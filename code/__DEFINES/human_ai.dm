@@ -24,3 +24,5 @@
 #define ADD_ONGOING_ACTION(brain, path, arguments...) brain:_add_ongoing_action(path, ##arguments)
 
 #define HUMAN_AI_MAX_PATHFINDING_RANGE 45
+
+GLOBAL_LIST_EMPTY(ai_humans)

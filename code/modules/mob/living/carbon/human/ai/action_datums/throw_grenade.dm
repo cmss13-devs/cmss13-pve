@@ -27,5 +27,5 @@
 	sleep(brain.short_action_delay * brain.action_delay_mult)
 	if(QDELETED(throwing) || (throwing.loc != brain.tied_human))
 		return ONGOING_ACTION_COMPLETED
-	throwing.ai_use(brain.tied_human, target_turf)
+	throwing.ai_use(brain.tied_human, brain, target_turf)
 	return ONGOING_ACTION_COMPLETED

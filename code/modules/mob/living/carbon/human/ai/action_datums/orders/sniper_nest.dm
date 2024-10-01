@@ -126,14 +126,15 @@
 	if(!home_turf || !target_turf)
 		return
 
-	var/mob/living/carbon/human/ai/ai_human = new()
+	var/mob/living/carbon/human/ai_human = new()
+	var/datum/component/human_ai/ai_comp = ai_human.AddComponent(/datum/component/human_ai)
 	var/chosen_equipment_name = tgui_input_list(usr, "Select sniper equipment.", "Sniper Equipment", sniper_equipment_presets)
 	if(!chosen_equipment_name)
 		qdel(ai_human)
 		return
 	arm_equipment(ai_human, sniper_equipment_presets[chosen_equipment_name], TRUE)
 	ai_human.forceMove(home_turf)
-	ai_human.ai_brain.set_ongoing_order(new /datum/ongoing_action/order/sniper_nest(list(ai_human.ai_brain, home_turf, target_turf)))
+	ai_comp.ai_brain.set_ongoing_order(new /datum/ongoing_action/order/sniper_nest(list(ai_comp.ai_brain, home_turf, target_turf)))
 
 	to_chat(usr, SPAN_NOTICE("Sniper has been created."))
 

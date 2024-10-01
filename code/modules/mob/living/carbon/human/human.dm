@@ -1066,6 +1066,8 @@
 	default_lighting_alpha = species.default_lighting_alpha
 	update_sight()
 
+	SEND_SIGNAL(src, COMSIG_HUMAN_SET_SPECIES, new_species)
+
 	if(species)
 		return TRUE
 	else

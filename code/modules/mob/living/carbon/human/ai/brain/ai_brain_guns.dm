@@ -79,7 +79,7 @@
 
 /datum/human_ai_brain/proc/primary_ammo_search()
 	for(var/obj/item/ammo_magazine/mag as anything in equipment_map[HUMAN_AI_AMMUNITION])
-		if(istype(primary_weapon, mag.gun_type) && mag.ai_can_use(tied_human))
+		if(istype(primary_weapon, mag.gun_type) && mag.ai_can_use(tied_human, src))
 			return mag
 
 /datum/human_ai_brain/proc/should_reload_primary()

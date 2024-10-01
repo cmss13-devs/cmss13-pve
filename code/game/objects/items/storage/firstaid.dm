@@ -514,8 +514,10 @@
 /obj/item/storage/pill_bottle/proc/error_idlock(mob/user)
 	to_chat(user, SPAN_WARNING("It must have some kind of ID lock..."))
 
-/obj/item/storage/pill_bottle/ai_can_use(mob/living/carbon/human/user)
-	if(!length(contents) || !COOLDOWN_FINISHED(user.ai_brain, pill_use_cooldown))
+/obj/item/storage/pill_bottle/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	ai_brain.appraise_inventory()
+
+	if(!length(contents) || !COOLDOWN_FINISHED(ai_brain, pill_use_cooldown))
 		return FALSE
 
 	if(skilllock && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
@@ -523,12 +525,12 @@
 
 	return TRUE
 
-/obj/item/storage/pill_bottle/ai_use(mob/living/carbon/human/user)
+/obj/item/storage/pill_bottle/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	var/obj/item/pill = contents[1]
 	if(user.put_in_active_hand(pill))
 		remove_from_storage(pill, user)
 		pill.attack(user, user)
-		COOLDOWN_START(user.ai_brain, pill_use_cooldown, 10 SECONDS)
+		COOLDOWN_START(ai_brain, pill_use_cooldown, 10 SECONDS)
 
 /obj/item/storage/pill_bottle/proc/choose_color(mob/user)
 	if(!user)

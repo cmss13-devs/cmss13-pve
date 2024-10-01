@@ -142,7 +142,8 @@
 	if(!check_rights(R_DEBUG))
 		return
 
-	var/mob/living/carbon/human/ai/ai_human = new()
+	var/mob/living/carbon/human/ai_human = new()
+	ai_human.AddComponent(/datum/component/human_ai)
 	if(!cmd_admin_dress_human(ai_human, randomize = TRUE))
 		qdel(ai_human)
 		return

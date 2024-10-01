@@ -73,7 +73,7 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user)
+/obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	if(!uses_left)
 		return FALSE
 
@@ -87,7 +87,7 @@
 
 	return TRUE
 
-/obj/item/reagent_container/hypospray/autoinjector/ai_use(mob/living/carbon/human/user)
+/obj/item/reagent_container/hypospray/autoinjector/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	attack(user, user)
 
 /obj/item/reagent_container/hypospray/autoinjector/tricord
@@ -133,7 +133,7 @@
 	display_maptext = TRUE
 	maptext_label = "D+"
 
-/obj/item/reagent_container/hypospray/autoinjector/dexalinp/ai_can_use(mob/living/carbon/human/user)
+/obj/item/reagent_container/hypospray/autoinjector/dexalinp/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	if(user.reagents.get_reagent_amount(chemname))
 		return FALSE
 	return ..()

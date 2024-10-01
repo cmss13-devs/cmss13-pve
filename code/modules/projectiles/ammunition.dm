@@ -192,7 +192,7 @@ They're all essentially identical when it comes to getting the job done.
 	default_ammo = source.default_ammo
 	gun_type = source.gun_type
 
-/obj/item/ammo_magazine/ai_can_use(mob/living/carbon/human/user)
+/obj/item/ammo_magazine/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	if(current_rounds <= 0)
 		return FALSE
 

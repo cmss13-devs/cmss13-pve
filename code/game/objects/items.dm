@@ -1099,8 +1099,8 @@ cases. Override_icon_state should be a list.*/
 /obj/item/proc/hands_swapped(mob/living/carbon/swapper_of_hands)
 	return
 
-/obj/item/proc/ai_use(mob/living/carbon/human/user)
+/obj/item/proc/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return
 
-/obj/item/proc/ai_can_use(mob/living/carbon/human/user)
+/obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return FALSE

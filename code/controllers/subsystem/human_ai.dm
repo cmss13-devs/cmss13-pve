@@ -4,7 +4,7 @@ SUBSYSTEM_DEF(human_ai)
 	priority = SS_PRIORITY_HUMAN_AI
 	wait = 0.2 SECONDS
 	/// A list of mobs scheduled to process
-	var/list/mob/living/carbon/human/ai/current_run = list()
+	var/list/mob/living/carbon/human/current_run = list()
 
 	var/ai_kill = FALSE
 

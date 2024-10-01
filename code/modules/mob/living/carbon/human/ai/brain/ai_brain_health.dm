@@ -71,7 +71,7 @@
 	if(tied_human.getBruteLoss() > damage_problem_threshold)
 		var/obj/item/brute_heal
 		for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-			if(is_type_in_list(heal_item, brute_heal_items) && heal_item.ai_can_use(tied_human))
+			if(is_type_in_list(heal_item, brute_heal_items) && heal_item.ai_can_use(tied_human, src))
 				brute_heal = heal_item
 				break
 
@@ -83,7 +83,7 @@
 		holster_primary()
 		equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, brute_heal)
 		sleep(short_action_delay)
-		brute_heal.ai_use(tied_human)
+		brute_heal.ai_use(tied_human, src)
 		sleep(short_action_delay)
 		if(!QDELETED(brute_heal))
 			store_item(brute_heal)
@@ -95,7 +95,7 @@
 		if(tied_human.is_bleeding())
 			var/obj/item/bleed_heal
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, bleed_heal_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, bleed_heal_items) && heal_item.ai_can_use(tied_human, src))
 					bleed_heal = heal_item
 					break
 
@@ -107,7 +107,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bleed_heal)
 			sleep(short_action_delay)
-			bleed_heal.ai_use(tied_human)
+			bleed_heal.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(bleed_heal))
 				store_item(bleed_heal)
@@ -120,7 +120,7 @@
 		if(tied_human.has_broken_limbs())
 			var/obj/item/bone_heal
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, bonebreak_heal_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, bonebreak_heal_items) && heal_item.ai_can_use(tied_human, src))
 					bone_heal = heal_item
 					break
 
@@ -132,7 +132,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bone_heal)
 			sleep(short_action_delay)
-			bone_heal.ai_use(tied_human)
+			bone_heal.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(bone_heal))
 				store_item(bone_heal)
@@ -144,7 +144,7 @@
 		if(tied_human.getFireLoss() > damage_problem_threshold)
 			var/obj/item/burn_heal
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, burn_heal_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, burn_heal_items) && heal_item.ai_can_use(tied_human, src))
 					burn_heal = heal_item
 					break
 
@@ -156,7 +156,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, burn_heal)
 			sleep(short_action_delay)
-			burn_heal.ai_use(tied_human)
+			burn_heal.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(burn_heal))
 				store_item(burn_heal)
@@ -169,7 +169,7 @@
 		if(tied_human.pain.get_pain_percentage() > pain_percentage_threshold)
 			var/obj/item/painkiller
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, painkiller_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, painkiller_items) && heal_item.ai_can_use(tied_human, src))
 					painkiller = heal_item
 					break
 
@@ -181,7 +181,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, painkiller)
 			sleep(short_action_delay)
-			painkiller.ai_use(tied_human)
+			painkiller.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(painkiller))
 				store_item(painkiller)
@@ -193,7 +193,7 @@
 		if(tied_human.getToxLoss() > damage_problem_threshold)
 			var/obj/item/tox_heal
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, tox_heal_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, tox_heal_items) && heal_item.ai_can_use(tied_human, src))
 					tox_heal = heal_item
 					break
 
@@ -205,7 +205,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, tox_heal)
 			sleep(short_action_delay)
-			tox_heal.ai_use(tied_human)
+			tox_heal.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(tox_heal))
 				store_item(tox_heal)
@@ -217,7 +217,7 @@
 		if(tied_human.getOxyLoss() > damage_problem_threshold)
 			var/obj/item/oxy_heal
 			for(var/obj/item/heal_item as anything in equipment_map[HUMAN_AI_HEALTHITEMS])
-				if(is_type_in_list(heal_item, oxy_heal_items) && heal_item.ai_can_use(tied_human))
+				if(is_type_in_list(heal_item, oxy_heal_items) && heal_item.ai_can_use(tied_human, src))
 					oxy_heal = heal_item
 
 			if(!oxy_heal)
@@ -228,7 +228,7 @@
 			holster_primary()
 			equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, oxy_heal)
 			sleep(short_action_delay)
-			oxy_heal.ai_use(tied_human)
+			oxy_heal.ai_use(tied_human, src)
 			sleep(short_action_delay)
 			if(!QDELETED(oxy_heal))
 				store_item(oxy_heal)

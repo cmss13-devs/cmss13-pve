@@ -56,10 +56,9 @@
 /datum/human_ai_squad/proc/on_squad_member_death(mob/living/carbon/human/dead_mob)
 	SIGNAL_HANDLER
 
-	if(istype(dead_mob, /mob/living/carbon/human/ai))
-		var/mob/living/carbon/human/ai/dead_squddie = dead_mob
-		if(squad_leader == dead_squddie.ai_brain)
-			set_squad_leader(null)
+	var/datum/human_ai_brain/brain = dead_mob.get_ai_brain()
+	if(brain && (squad_leader == brain))
+		set_squad_leader(null)
 
 	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
 		if(squaddie.tied_human.is_mob_incapacitated())

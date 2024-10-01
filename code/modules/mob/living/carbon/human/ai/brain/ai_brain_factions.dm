@@ -92,6 +92,7 @@
 		FACTION_CONTRACTOR,
 		FACTION_UPP,
 		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
 	)
 
 /datum/human_ai_faction/upp
@@ -105,6 +106,7 @@
 		FACTION_MARINE,
 		FACTION_MERCENARY,
 		FACTION_TWE,
+		FACTION_SURVIVOR,
 	)
 	in_combat_lines = list( // zonenote: tweak these. They're entirely the stereotype of "communist russkie" when we can do better than that. also languages
 		"For the UPP!",
@@ -149,6 +151,7 @@
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
 	)
 
 /datum/human_ai_faction/wy_deathsquad

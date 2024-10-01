@@ -35,7 +35,11 @@
 
 /datum/equipment_preset/clf/soldier/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
 	. = ..()
-	new_human.ai_brain?.appraise_inventory()
+	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
+	if(!ai_brain)
+		return
+
+	ai_brain.appraise_inventory()
 
 /datum/equipment_preset/clf/specialist/ai
 	name = "CLF Specialist (AI)"
@@ -71,7 +75,11 @@
 
 /datum/equipment_preset/clf/specialist/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
 	. = ..()
-	new_human.ai_brain?.appraise_inventory()
+	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
+	if(!ai_brain)
+		return
+
+	ai_brain.appraise_inventory()
 
 
 /datum/equipment_preset/clf/sniper
@@ -102,4 +110,8 @@
 
 /datum/equipment_preset/clf/sniper/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
 	. = ..()
-	new_human.ai_brain?.appraise_inventory()
+	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
+	if(!ai_brain)
+		return
+
+	ai_brain.appraise_inventory()

@@ -321,7 +321,7 @@
 				break
 
 			var/storage_spot = storage_has_room(thing)
-			if(!storage_spot || !thing.ai_can_use(tied_human))
+			if(!storage_spot || !thing.ai_can_use(tied_human, src))
 				continue
 
 			if(is_type_in_list(thing, all_medical_items))

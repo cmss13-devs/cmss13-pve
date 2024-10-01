@@ -54,7 +54,7 @@
 		return ONGOING_ACTION_COMPLETED
 
 	var/storage_spot = brain.storage_has_room(to_pickup)
-	if(!storage_spot || !to_pickup.ai_can_use(brain.tied_human))
+	if(!storage_spot || !to_pickup.ai_can_use(brain.tied_human, brain))
 		return ONGOING_ACTION_COMPLETED
 
 	if(is_type_in_list(to_pickup, brain.all_medical_items))
