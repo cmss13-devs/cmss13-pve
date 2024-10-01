@@ -77,3 +77,6 @@
 /// From /mob/living/carbon/human/UnarmedAttack()
 #define COMSIG_HUMAN_BEFORE_ATTACK_HAND "human_before_attack_hand"
 	#define COMPONENT_CANCEL_HUMAN_ATTACK_HAND (1<<0)
+
+/// From /obj/item/restraint/proc/place_handcuffs() : ()
+#define COMSIG_HUMAN_HANDCUFFED "human_handcuffed"

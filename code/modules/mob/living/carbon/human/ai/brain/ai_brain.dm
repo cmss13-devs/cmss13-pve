@@ -54,6 +54,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	RegisterSignal(tied_human, COMSIG_MOB_DROP_ITEM, PROC_REF(on_item_drop))
 	RegisterSignal(tied_human, COMSIG_MOVABLE_MOVED, PROC_REF(on_move))
 	RegisterSignal(tied_human, COMSIG_HUMAN_BULLET_ACT, PROC_REF(on_shot))
+	RegisterSignal(tied_human, COMSIG_HUMAN_HANDCUFFED, PROC_REF(on_handcuffed))
 	if(!length(all_medical_items))
 		all_medical_items = brute_heal_items + burn_heal_items + tox_heal_items + oxy_heal_items + bleed_heal_items + bonebreak_heal_items + painkiller_items
 	GLOB.human_ai_brains += src
@@ -324,3 +325,11 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	our_faction.remove_neutral_faction(faction)
 	our_faction.reapply_faction_data()
+
+/datum/human_ai_brain/proc/on_handcuffed(datum/source)
+	SIGNAL_HANDLER
+
+	if((tied_human.stat >= DEAD) || tied_human.client)
+		return
+
+	message_admins("AI human [tied_human.real_name] has been handcuffed while alive or unconscious.", tied_human.x, tied_human.y, tied_human.z)
