@@ -247,7 +247,6 @@
 	var/proj_base_layer = null
 	var/proj_plane = -6
 	var/proj_mouse_opacity = 1
-	var/is_light_projecting = FALSE
 	var/obj/effect/projector/proj = null
 	unacidable = TRUE
 
@@ -295,8 +294,6 @@
 		C.proj_base_layer = P.mask_layer-0.5
 	C.proj_plane = P.movables_projection_plane
 	C.proj_mouse_opacity = P.projected_mouse_opacity
-	C.is_light_projecting = P.is_light_projecting
-	message_admins("clone is light projecting: [C.is_light_projecting], projector is light projecting: [P.is_light_projecting]")
 
 	GLOB.clones.Add(C)
 	C.mstr = src //Link clone and master
@@ -324,14 +321,12 @@
 	clone.mouse_opacity = clone.proj_mouse_opacity
 
 	////////////////////
-	if(clone.is_light_projecting)
-		if(light) //Clone lighting
-			if(!clone.light)
-				clone.set_light(luminosity) //Create clone light
-		else
-			if(clone.light)
-				clone.set_light(0) //Kill clone light
+	if(light) //Clone lighting
+		if(!clone.light)
+			clone.set_light(luminosity) //Create clone light
 	else
+		if(clone.light)
+			clone.set_light(0) //Kill clone light
 
 
 /atom/movable/proc/destroy_clone()

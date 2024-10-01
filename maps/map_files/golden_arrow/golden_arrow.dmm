@@ -9143,8 +9143,7 @@
 "aFx" = (
 /obj/effect/hangar_airlock/outer{
 	pixel_x = -64;
-	pixel_y = -64;
-	layer = 1.95
+	pixel_y = -64
 	},
 /obj/effect/hangar_airlock/half_tile{
 	dir = 1;
@@ -10180,10 +10179,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "aJe" = (
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
+/obj/structure/machinery/floodlight/landing,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aJf" = (
@@ -14545,13 +14541,8 @@
 /area/golden_arrow/hangar)
 "aZD" = (
 /obj/effect/hangar_airlock/outline,
-/obj/effect/hangar_airlock/inner{
-	layer = 1.95
-	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
+/obj/effect/hangar_airlock/inner,
+/obj/structure/machinery/floodlight/landing,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aZG" = (
@@ -14832,6 +14823,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "bZF" = (
@@ -15452,6 +15444,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding2"
 	},
+/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "hxJ" = (
@@ -15516,6 +15509,7 @@
 /area/golden_arrow/supply)
 "icW" = (
 /obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_two,
+/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "idK" = (
@@ -15558,10 +15552,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
+/obj/structure/machinery/floodlight/landing,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "iRi" = (
@@ -15767,6 +15758,7 @@
 /area/golden_arrow/supply)
 "krq" = (
 /obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_one,
+/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "kuE" = (
@@ -16946,6 +16938,7 @@
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "tLo" = (
+/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "tTk" = (
@@ -17141,13 +17134,8 @@
 /obj/effect/hangar_airlock/outline{
 	layer = 2
 	},
-/obj/effect/hangar_airlock/inner{
-	layer = 1.95
-	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
+/obj/effect/hangar_airlock/inner,
+/obj/structure/machinery/floodlight/landing,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "wnq" = (
@@ -17337,8 +17325,7 @@
 	},
 /obj/effect/hangar_airlock/outer{
 	pixel_x = -64;
-	pixel_y = -64;
-	layer = 1.95
+	pixel_y = -64
 	},
 /obj/effect/projector/bay_two,
 /turf/open/floor/hangar_airlock/outer,
@@ -31444,15 +31431,15 @@ aKa
 aKa
 aKa
 alu
+alu
+aKa
+aKa
+aKa
 aJe
-aKa
-aKa
-aKa
-alu
 alu
 aKa
 alu
-aJe
+alu
 aKa
 alu
 alu
@@ -31474,15 +31461,15 @@ alu
 alu
 alu
 alu
-iLQ
+aKa
 alu
 alu
 alu
-alu
+aJe
 alu
 aKa
 aKa
-iLQ
+alu
 alu
 alu
 alu
@@ -32349,7 +32336,7 @@ aMz
 ajZ
 aFf
 aOQ
-aJe
+alu
 tLo
 tLo
 tLo
@@ -32371,7 +32358,7 @@ tLo
 tLo
 tLo
 tLo
-aJe
+alu
 aUM
 abR
 aFz
@@ -32379,7 +32366,7 @@ ala
 aHb
 abR
 aJj
-aJe
+alu
 tLo
 tLo
 tLo
@@ -32401,7 +32388,7 @@ tLo
 tLo
 tLo
 tLo
-aJe
+alu
 aiG
 aRe
 agv
@@ -33268,15 +33255,15 @@ aKa
 aKa
 alu
 aKa
-aJe
+alu
 reV
 alu
 alu
-alu
-alu
-aKa
-aKa
 aJe
+alu
+aKa
+aKa
+alu
 alu
 aKa
 alu
@@ -33298,15 +33285,15 @@ aKa
 alu
 aKa
 alu
-aJe
 alu
+alu
+alu
+alu
+iLQ
 alu
 alu
 aKa
 alu
-alu
-aKa
-aJe
 alu
 alu
 aVj

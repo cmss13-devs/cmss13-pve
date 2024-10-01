@@ -80,6 +80,8 @@
 	wrenchable = FALSE
 	toggleable = FALSE
 	turned_on = TRUE
+	light_power = 2
+	on_light_range = 10
 
 /obj/structure/machinery/floodlight/landing/floor
 	icon_state = "floor_flood_1"

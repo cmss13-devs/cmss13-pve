@@ -434,10 +434,14 @@ Parameters are passed from New.
 	else
 		var/atom/movable/clone/facsimile_T = new /atom/movable/clone(T)
 
-		facsimile_T.proj = P
 		facsimile_T.appearance = src.appearance
-		facsimile_T.setDir(src.dir)
 
+		// we don't want a projected lighting underlay (especially when this generates at roundstart) to duplicate over the real turf's lighting (not a very sound way of doing it, but the only one plausible it seems like.)
+		facsimile_T.underlays -= facsimile_T.underlays[1]
+		// spider webs and etcetra may be an issue
+		facsimile_T.overlays = list()
+
+		facsimile_T.setDir(src.dir)
 		if(P.mask_layer)
 			facsimile_T.layer = ((P.mask_layer-0.5)+(src.layer/10))
 		facsimile_T.plane = -7
@@ -445,6 +449,7 @@ Parameters are passed from New.
 		GLOB.clones_t.Add(src)
 		src.clone = facsimile_T
 		facsimile_T.mstr = src
+		facsimile_T.proj = P
 
 // EFFECTS
 /atom/proc/extinguish_acid()

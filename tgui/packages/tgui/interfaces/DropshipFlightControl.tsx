@@ -49,6 +49,7 @@ type ShuttleRef = {
 interface DropshipNavigationProps extends NavigationProps {
   shuttle_id: string;
   door_status: Array<DoorStatus>;
+  is_dropship_airlocked?: 0 | 1;
   has_flight_optimisation?: 0 | 1;
   is_flight_optimised?: 0 | 1;
   can_fly_by?: 0 | 1;
@@ -472,12 +473,30 @@ const DropshipDisabledScreen = () => {
   );
 };
 
+const DropshipAirlockScreen = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
+  return (
+    <>
+      {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
+      {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
+    </>
+  );
+};
+
 export const DropshipFlightControl = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Window theme="crtgreen" height={500} width={700}>
       <Window.Content className="NavigationMenu" scrollable>
-        {data.is_disabled === 0 ? <RenderScreen /> : <DropshipDisabledScreen />}
+        {data.is_disabled === 0 ? (
+          data.is_dropship_airlocked === 0 ? (
+            <RenderScreen />
+          ) : (
+            <DropshipAirlockScreen />
+          )
+        ) : (
+          <DropshipDisabledScreen />
+        )}
       </Window.Content>
     </Window>
   );

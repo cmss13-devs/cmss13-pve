@@ -5,11 +5,12 @@
 	indestructible = TRUE
 	unacidable = TRUE
 	mouse_opacity = FALSE
+	anchored = TRUE
 
 /obj/effect/hangar_airlock/inner
 	name = "hangar inner airlock"
 	icon_state = "inner"
-	layer = UNDER_TURF_LAYER
+	layer = 1.95
 
 /obj/effect/hangar_airlock/inner/proc/open()
 	icon_state = "inner_open"
@@ -20,7 +21,7 @@
 /obj/effect/hangar_airlock/outer
 	name = "hangar outer airlock"
 	icon_state = "outer"
-	layer = 1.97 //under under UNDER_TURF_LAYER
+	layer = 1.95
 
 /obj/effect/hangar_airlock/outer/proc/open()
 	icon_state = "outer_open"
@@ -36,21 +37,14 @@
 	icon_state = "hangar_airlock_tile"
 
 /obj/effect/hangar_airlock/height_mask
-	icon_state = "height_mask"
-	layer = 1.98 // under UNDER_TURF_LAYER
-	alpha = 80
-
-/obj/effect/hangar_airlock/dropship_height_mask
-	icon_state = "dropship_height_mask"
-	layer = 5
-
-/obj/effect/hangar_airlock/dropship_height_mask/proc/darken()
+	icon = 'icons/effects/view_blocker.dmi'
+	icon_state = "blocker"
+	layer = 1.92
 	alpha = 80
 
 /turf/open/floor/hangar_airlock
 	layer = 1.5
 	var/open = FALSE
-
 
 /turf/open/floor/hangar_airlock/outer
 	name = "Hangar Outer Airlock"
