@@ -557,7 +557,7 @@
 /datum/equipment_preset/upp/synth
 	name = "UPP Support Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	languages = list(ALL_SYNTH_LANGUAGES_UPP)
+	languages = ALL_SYNTH_LANGUAGES_UPP
 	skills = /datum/skills/synthetic
 	assignment = "Support Synthetic"
 	rank = JOB_UPP_SUPPORT_SYNTH
