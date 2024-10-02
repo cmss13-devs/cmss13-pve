@@ -502,36 +502,6 @@
 	desc = "The complimentary, but sold separate face shield associated with the RC6 riot helmet."
 	icon_state = "helmet_riot_shield"
 
-
-/obj/item/prop/helmetgarb/helmet_gasmask
-	name = "\improper M5 integrated gasmask"
-	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. While the program failed, these rarely do."
-	icon_state = "helmet_gasmask"
-
-/obj/item/prop/helmetgarb/helmet_gasmask/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory |= BLOCKGASEFFECT
-	helmet_item.flags_inv_hide |= HIDEFACE
-
-/obj/item/prop/helmetgarb/helmet_gasmask/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
-	helmet_item.flags_inv_hide &= ~(HIDEFACE)
-
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"
 	desc = "It is a length of barbed wire that's had most of the sharp points filed down so that it is safe to handle."

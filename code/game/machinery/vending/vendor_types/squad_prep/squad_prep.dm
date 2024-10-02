@@ -161,8 +161,7 @@
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("M5 Standalone Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
-		list("M5 Integrated Gas Mask", floor(scale * 10), /obj/item/prop/helmetgarb/helmet_gasmask, VENDOR_ITEM_REGULAR),
+		list("M5 Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Rebreather", floor(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
@@ -313,7 +312,7 @@
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("M5 Standalone Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
+		list("M5 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Rebreather", round(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 

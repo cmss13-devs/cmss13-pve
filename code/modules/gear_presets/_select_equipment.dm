@@ -503,10 +503,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 
 	var/list/rebel_firearms = list(
 		/obj/item/weapon/gun/shotgun/double = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/flechette,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
-		/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 		/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
@@ -536,9 +534,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/attachable/bayonet/upp = null,
 		/obj/item/explosive/grenade/custom/ied = null,
 		/obj/item/explosive/grenade/custom/ied = null,
-		/obj/item/explosive/grenade/custom/ied_incendiary = null,
-		/obj/item/reagent_container/spray/pepper = null,
-		/obj/item/reagent_container/spray/pepper = null,
 		/obj/item/clothing/accessory/storage/webbing = null,
 		/obj/item/clothing/accessory/storage/webbing = null,
 		/obj/item/storage/belt/marine = null,
@@ -560,12 +555,10 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/explosive/grenade/smokebomb = null,
 		/obj/item/explosive/grenade/smokebomb = null,
 		/obj/item/explosive/grenade/smokebomb = null,
-		/obj/item/explosive/grenade/phosphorus/upp = null,
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
 		/obj/item/storage/box/MRE = null,
-		/obj/item/clothing/glasses/night/m42_night_goggles/upp = null,
 		/obj/item/storage/box/handcuffs = null,
 		/obj/item/storage/pill_bottle/happy = null,
 		/obj/item/weapon/twohanded/fireaxe = null,
@@ -598,10 +591,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 
 GLOBAL_LIST_INIT(rebel_shotguns, list(
 	/obj/item/weapon/gun/shotgun/double = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-	/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/flechette,
-	/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
-	/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
-	/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/incendiary,
+	/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 	/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/buckshot
 	))
 

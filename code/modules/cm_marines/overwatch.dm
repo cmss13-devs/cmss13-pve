@@ -40,7 +40,8 @@
 /obj/structure/machinery/computer/overwatch/Initialize()
 	. = ..()
 
-	if (faction == FACTION_MARINE)
+	var/datum/squad/main_squad_path = MAIN_SHIP_PLATOON
+	if (faction == main_squad_path::faction)
 		tacmap = new /datum/tacmap/drawing(src, minimap_type)
 	else
 		tacmap = new(src, minimap_type) // Non-drawing version
