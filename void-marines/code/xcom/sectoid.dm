@@ -14,7 +14,7 @@
 	burn_mod = 1.5
 	mob_flags = KNOWS_TECHNOLOGY
 	pain_type = /datum/pain/human_hero
-	unarmed_type = /datum/unarmed_attack/claws/strong
+	unarmed_type = /datum/unarmed_attack/claws
 	secondary_unarmed_type = /datum/unarmed_attack
 	death_message = "lets out a faint scream as it collapses and stops moving..."
 	knock_down_reduction = 0.5
@@ -22,25 +22,25 @@
 	gibbed_anim = "gibbed-m"
 	dusted_anim = "dust-m"
 	inherent_verbs = list(
-		/mob/living/proc/ventcrawl,
 		/mob/living/proc/hide,
 	)
 	mob_inherent_traits = list(
 		TRAIT_EMOTE_CD_EXEMPT,
 		TRAIT_YAUTJA_TECH,
 		TRAIT_FOREIGN_BIO,
+		TRAIT_CRAWLER,
 	)
 	blood_color = COLOR_ORANGE
 	uses_skin_color = FALSE
 
 /datum/species/sectoid/New()
 	equip_adjust = list(
-		WEAR_R_HAND = list("[NORTH]" = list("x" = 1, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 3, "y" = -5), "[WEST]" = list("x" = -3, "y" = -5)),
-		WEAR_L_HAND = list("[NORTH]" = list("x" = -1, "y" = 5), "[EAST]" = list("x" = 3, "y" = 5), "[SOUTH]" = list("x" = 3, "y" = 5), "[WEST]" = list("x" = -3, "y" = 5)),
+		WEAR_R_HAND = list("[NORTH]" = list("x" = 2, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 0, "y" = -9), "[WEST]" = list("x" = -3, "y" = -5)),
+		WEAR_L_HAND = list("[NORTH]" = list("x" = -2, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 0, "y" = -9), "[WEST]" = list("x" = -3, "y" = -5)),
 		WEAR_WAIST = list("[NORTH]" = list("x" = 0, "y" = 3), "[EAST]" = list("x" = 0, "y" = 3), "[SOUTH]" = list("x" = 0, "y" = 3), "[WEST]" = list("x" = 0, "y" = 3)),
-		WEAR_FEET = list("[NORTH]" = list("x" = 0, "y" = 7), "[EAST]" = list("x" = -1, "y" = 7), "[SOUTH]" = list("x" = 0, "y" = 7), "[WEST]" = list("x" = 1, "y" = 7)),
-		WEAR_HEAD = list("[NORTH]" = list("x" = 2, "y" = -3), "[EAST]" = list("x" = 0, "y" = -5), "[SOUTH]" = list("x" = 2, "y" = -3), "[WEST]" = list("x" = 0, "y" = -5)),
-		WEAR_FACE = list("[NORTH]" = list("x" = 0, "y" = 0), "[EAST]" = list("x" = -1, "y" = 0), "[SOUTH]" = list("x" = 0, "y" = 0), "[WEST]" = list("x" = 1, "y" = 0))
+		WEAR_FEET = list("[NORTH]" = list("x" = 0, "y" = 0), "[EAST]" = list("x" = 0, "y" = 0), "[SOUTH]" = list("x" = 0, "y" = 0), "[WEST]" = list("x" = 0, "y" = 0)),
+		WEAR_HEAD = list("[NORTH]" = list("x" = 1, "y" = -4), "[EAST]" = list("x" = 0, "y" = -4), "[SOUTH]" = list("x" = 1, "y" = -4), "[WEST]" = list("x" = 0, "y" = -4)),
+		WEAR_FACE = list("[NORTH]" = list("x" = 1, "y" = -4), "[EAST]" = list("x" = 0, "y" = -4), "[SOUTH]" = list("x" = 1, "y" = -4), "[WEST]" = list("x" = 0, "y" = -4))
 	)
 	..()
 
@@ -81,6 +81,13 @@
 	new_human.set_species(SPECIES_SECTOID)
 	if(!mob_client)
 		mob_client = new_human.client
+
+/datum/equipment_preset/sectoid/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, generate_sectoid_name(new_human))
+	new_human.gender = PLURAL
+
+/datum/equipment_preset/sectoid/load_age(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.age = rand(1,999)
 
 /datum/equipment_preset/sectoid/pistol
 	name = "XCOM - Sectoid (Pistol)"

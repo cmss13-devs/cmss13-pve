@@ -16,14 +16,12 @@
 	knock_down_reduction = 0.5
 	stun_reduction = 0.5
 	slowdown = -0.25
-	inherent_verbs = list(
-		/mob/living/proc/ventcrawl,
-	)
 	mob_inherent_traits = list(
 		TRAIT_EMOTE_CD_EXEMPT,
 		TRAIT_YAUTJA_TECH,
 		TRAIT_FOREIGN_BIO,
-        TRAIT_DEXTROUS,
+		TRAIT_DEXTROUS,
+		TRAIT_CRAWLER,
     )
 	blood_color = BLOOD_COLOR_YAUTJA
 	uses_skin_color = FALSE
@@ -37,6 +35,7 @@
 	H.f_style = "Shaved"
 	H.h_style = "Mulder"
 
+	RegisterSignal(H, COMSIG_LIVING_CLIMB_STRUCTURE, PROC_REF(handle_climbing))
 	give_action(H, /datum/action/human_action/activable/acid_spit)
 
 	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
@@ -44,10 +43,14 @@
 
 	return ..()
 
+/datum/species/human/thin_man/proc/handle_climbing(mob/living/M, list/climbdata)
+	SIGNAL_HANDLER
+	climbdata["climb_delay"] *= 0.5
+
 /datum/species/human/thin_man/handle_death(mob/living/carbon/human/H, gibbed)
 	create_shrapnel(get_turf(H), 64, , , /datum/ammo/xeno/acid, create_cause_data("acid splatter", H))
 	if(!gibbed)
-		playsound(H.loc, 'sound/voice/joe/death_normal.ogg', 25, FALSE)
+		playsound(H.loc, 'sound/voice/joe/death_normal.ogg', 75, FALSE)
 	return ..()
 
 //////////////////////////////////////
@@ -61,15 +64,15 @@
 	cooldown = 18 SECONDS
 
 /datum/action/human_action/activable/acid_spit/use_ability(atom/A)
-	if(!can_use_action())
+	var/mob/living/carbon/human/X = owner
+	if(!can_use_action() || !action_cooldown_check() || !isturf(X.loc))
 		return
 
-	var/mob/living/carbon/human/X = owner
 	if(!do_after(X, 0.5 SECONDS, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 		to_chat(X, SPAN_XENODANGER("You cancel your acid spit."))
 		return
 
-	if(!can_use_action())
+	if(!can_use_action() || !action_cooldown_check() || !isturf(X.loc))
 		return
 
 	enter_cooldown()
@@ -100,8 +103,8 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_YAUTJA)
 
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_COLONIST
-	rank = JOB_COLONIST
+	assignment = "IRO Agent"
+	rank = "IRO Agent"
 	faction = "Alien"
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 	skills = /datum/skills/spy
@@ -109,15 +112,20 @@
 
 /datum/equipment_preset/thinman/load_race(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_species(SPECIES_THIN_MAN)
-	new_human.gender = MALE
 	if(!mob_client)
 		mob_client = new_human.client
 
 /datum/equipment_preset/thinman/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
 	. = ..()
 
+	new_human.gender = MALE
+
 	new_human.f_style = "Shaved"
 	new_human.h_style = "Mulder"
+
+	new_human.r_hair = 0
+	new_human.g_hair = 0
+	new_human.b_hair = 0
 
 /datum/equipment_preset/thinman/load_gear(mob/living/carbon/human/new_human)
 
