@@ -1,5 +1,8 @@
 #define SPECIES_THIN_MAN "Thin Human"
 
+/mob/living/carbon/human/thin_man/Initialize(mapload)
+	. = ..(mapload, new_species = name)
+
 /datum/species/human/thin_man
 	group = SPECIES_HUMAN // to be like a human guy
 	name = SPECIES_THIN_MAN
@@ -28,6 +31,7 @@
 
 /datum/species/human/thin_man/handle_post_spawn(mob/living/carbon/human/H)
 	H.set_languages(list(LANGUAGE_ENGLISH, LANGUAGE_YAUTJA))
+	H.universal_understand = TRUE
 
 	H.gender = MALE
 	H.f_style = "Shaved"
@@ -46,9 +50,6 @@
 		playsound(H.loc, 'sound/voice/joe/death_normal.ogg', 25, FALSE)
 	return ..()
 
-/mob/living/carbon/human/thin_man/Initialize(mapload)
-	. = ..(mapload, new_species = "Thin Man")
-
 //////////////////////////////////////
 /*				ABILITIES			*/
 //////////////////////////////////////
@@ -57,10 +58,7 @@
 	icon_file = 'icons/mob/hud/actions_xeno.dmi'
 	action_icon_state = "acid_spray_cone"
 
-/datum/action/human_action/activable/acid_spit/can_use_action()
-	var/mob/living/carbon/human/H = owner
-	if(istype(H) && !H.is_mob_incapacitated() && !HAS_TRAIT(H, TRAIT_DAZED) && cooldown < world.time)
-		return TRUE
+	cooldown = 18 SECONDS
 
 /datum/action/human_action/activable/acid_spit/use_ability(atom/A)
 	if(!can_use_action())
@@ -74,7 +72,7 @@
 	if(!can_use_action())
 		return
 
-	cooldown = world.time + 18 SECONDS
+	enter_cooldown()
 
 	to_chat(X, SPAN_XENOWARNING("You lob a compressed ball of acid into the air!"))
 	playsound(X.loc, get_sfx("acid_spit"), 25, 1)
@@ -99,13 +97,12 @@
 	assignment = "Civilian"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
-	languages = list(LANGUAGE_YAUTJA)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_YAUTJA)
 
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_COLONIST
 	rank = JOB_COLONIST
 	faction = "Alien"
-	languages = list()
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 	skills = /datum/skills/spy
 	idtype = /obj/item/card/id/lanyard

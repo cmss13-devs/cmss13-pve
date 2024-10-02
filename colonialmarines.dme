@@ -2533,7 +2533,10 @@
 #include "void-marines\code\playable_factions\shuttles.dm"
 #include "void-marines\code\playable_factions\stuff.dm"
 #include "void-marines\code\playable_factions\faction_paygrades\freelancer.dm"
-#include "void-marines\code\xcom\sectoids.dm"
+#include "void-marines\code\xcom\floater.dm"
+#include "void-marines\code\xcom\muton.dm"
+#include "void-marines\code\xcom\sectoid.dm"
+#include "void-marines\code\xcom\sectoid_commander.dm"
 #include "void-marines\code\xcom\thinman.dm"
 #include "void-marines\code\xcom\weapons.dm"
 // END_INCLUDE

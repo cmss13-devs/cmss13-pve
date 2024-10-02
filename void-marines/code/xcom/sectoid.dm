@@ -1,10 +1,14 @@
 #define SPECIES_SECTOID "Sectoid"
 
+/mob/living/carbon/human/sectoid/Initialize(mapload, new_species)
+	. = ..(mapload, new_species = name)
+
 /datum/species/sectoid
 	group = SPECIES_SECTOID
 	name = SPECIES_SECTOID
 	icobase = 'void-marines/icons/r_sectoid.dmi'
 	deform = 'void-marines/icons/r_sectoid.dmi'
+	eyes = "blank_s"
 	blood_mask = 'icons/effects/monkey_blood.dmi'
 	brute_mod = 1.5
 	burn_mod = 1.5
@@ -42,21 +46,18 @@
 
 /datum/species/sectoid/handle_post_spawn(mob/living/carbon/human/H)
 	H.set_languages(list(LANGUAGE_YAUTJA))
+	H.universal_understand = TRUE
+
+	H.gender = PLURAL
 
 	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	H.update_sight()
 
 	return ..()
 
-/datum/species/sectoid/get_bodytype(mob/living/carbon/human/H)
-	return SPECIES_SECTOID
-
 /datum/species/sectoid/handle_on_fire(humanoidmob)
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
-
-/mob/living/carbon/human/sectoid/Initialize(mapload)
-	. = ..(mapload, new_species = "Sectoid")
 
 //////////////////////////////////////
 /*				EQUIP				*/
@@ -72,7 +73,6 @@
 	assignment = JOB_COLONIST
 	rank = JOB_COLONIST
 	faction = "Alien"
-	languages = list()
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 	skills = /datum/skills/clf
 	idtype = null
