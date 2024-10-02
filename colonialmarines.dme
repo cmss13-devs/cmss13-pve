@@ -2535,6 +2535,7 @@
 #include "void-marines\code\playable_factions\faction_paygrades\freelancer.dm"
 #include "void-marines\code\xcom\floater.dm"
 #include "void-marines\code\xcom\muton.dm"
+#include "void-marines\code\xcom\random_names.dm"
 #include "void-marines\code\xcom\sectoid.dm"
 #include "void-marines\code\xcom\sectoid_commander.dm"
 #include "void-marines\code\xcom\thinman.dm"

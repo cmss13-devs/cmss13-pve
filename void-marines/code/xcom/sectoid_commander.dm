@@ -5,9 +5,15 @@
 
 /datum/species/sectoid/commander
 	name = SPECIES_SECTOID_COMMANDER
-	inherent_verbs = list()
 	brute_mod = 1.25
 	burn_mod = 1.25
+	inherent_verbs = list()
+	mob_inherent_traits = list(
+		TRAIT_EMOTE_CD_EXEMPT,
+		TRAIT_YAUTJA_TECH,
+		TRAIT_FOREIGN_BIO,
+		TRAIT_LEADERSHIP,
+	)
 
 /datum/species/sectoid/commander/handle_post_spawn(mob/living/carbon/human/H)
 	. = ..()
@@ -26,24 +32,23 @@
 	var/radius = 4
 
 /datum/action/human_action/activable/mindfray/use_ability(atom/A)
-	if(!can_use_action())
+	if(!can_use_action() || !action_cooldown_check())
 		return
 
 	var/turf/T = get_turf(A)
 	var/mob/living/carbon/human/X = owner
 
 	to_chat(X, SPAN_XENODANGER("You start channeling your psychic energy towards [A]..."))
-	playsound(X.loc, 'sound/voice/deep_alien_screech.ogg', 25)
+	playsound(X.loc, 'sound/voice/deep_alien_screech.ogg', 50)
 
 	if(!do_after(X, 2 SECONDS, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 		to_chat(X, SPAN_XENODANGER("You stop channeling your psychic energy."))
 		return
 
-	if(!can_use_action())
+	if(!can_use_action() || !action_cooldown_check())
 		return
 
 	enter_cooldown()
-	playsound(T, 'sound/effects/metalscrape.ogg', 100)
 
 	var/list/turfs_around = RANGE_TURFS(radius, T)
 	for(var/i in 1 to rand(3,5))
@@ -54,6 +59,9 @@
 		s.start()
 
 		turfs_around -= t
+
+	playsound(T, 'sound/effects/metalscrape.ogg', 200)
+	new /obj/effect/temp_visual/psi_eye(T)
 
 	var/i = 0
 	var/effect = rand(1,4)
@@ -89,21 +97,44 @@
 				if(4)
 					if(!C.get_active_hand())
 						C?:holster_verb()
-					var/turf/target = get_random_turf_in_range(C, 5, 5)
-					C?.client?.MouseDown(target, target, TRUE, "left")
+					var/turf/target = get_random_turf_in_range(C, 3, 2)
+					spawn(2)
+						C?.client?.MouseDown(target, target, TRUE, "left")
 
 	return ..()
 
 /datum/action/human_action/activable/mindfray/proc/remove_hallucinations(mob/living/L)
 	L.hallucination = 0
 
+/obj/effect/temp_visual/psi_eye
+	icon = 'void-marines/icons/eye.dmi'
+	icon_state = "eye_open"
+	layer = WEATHER_LAYER
+	randomdir = FALSE
+	duration = 2.1 SECONDS
+	alpha = 200
+
+/obj/effect/temp_visual/psi_eye/Initialize(mapload)
+	. = ..()
+	flick("eye_opening", src)
+	addtimer(CALLBACK(src, PROC_REF(explode)), duration - 1 SECONDS)
+	transform = matrix().Scale(2)
+
+/obj/effect/temp_visual/psi_eye/proc/explode()
+	flick("eye_explode", src)
+
 //////////////////////////////////////
 /*				EQUIP				*/
 //////////////////////////////////////
 /datum/equipment_preset/sectoid/pistol/commander
 	name = "XCOM - Sectoid Commander"
+	skills = /datum/skills/clf/leader
 
 /datum/equipment_preset/sectoid/pistol/commander/load_race(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_species(SPECIES_SECTOID_COMMANDER)
 	if(!mob_client)
 		mob_client = new_human.client
+
+/datum/equipment_preset/sectoid/pistol/commander/load_name(mob/living/carbon/human/new_human, randomise)
+	. = ..()
+	new_human.change_real_name(new_human, "𒁏 " + new_human.real_name)
