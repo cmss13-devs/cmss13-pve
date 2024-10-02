@@ -60,6 +60,10 @@ interface DropshipNavigationProps extends NavigationProps {
   playing_launch_announcement_alarm: boolean;
   can_change_shuttle: 0 | 1;
   alternative_shuttles: Array<ShuttleRef>;
+  playing_airlock_alarm: 0 | 1;
+  opened_upper_airlock: 0 | 1;
+  lowered_dropship: 0 | 1;
+  opened_lower_airlock: 0 | 1;
 }
 
 const DropshipDoorControl = () => {
@@ -376,6 +380,160 @@ const LaunchAnnouncementAlarm = () => {
   );
 };
 
+const EnableCautionAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="rocket"
+      onClick={() => {
+        act('enable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Enable Airlock Caution Alarm
+    </Button>
+  );
+};
+
+const DisableCautionAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="ban"
+      onClick={() => {
+        act('disable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Disable Airlock Caution Alarm
+    </Button>
+  );
+};
+
+const OpenUpperAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-closed"
+      onClick={() => {
+        act('enable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Open Upper Airlock
+    </Button>
+  );
+};
+
+const CloseUpperAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-open"
+      onClick={() => {
+        act('disable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Close Upper Airlock
+    </Button>
+  );
+};
+
+const RaiseDropship = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="arrow-up"
+      onClick={() => {
+        act('enable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Raise Dropship
+    </Button>
+  );
+};
+
+const LowerDropship = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="arrow-down"
+      onClick={() => {
+        act('disable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Lower Dropship
+    </Button>
+  );
+};
+
+const OpenLowerAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-closed"
+      onClick={() => {
+        act('enable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Open Lower Airlock
+    </Button>
+  );
+};
+
+const CloseLowerAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-open"
+      onClick={() => {
+        act('disable_airlock_alarm');
+        act('button-push');
+      }}
+    >
+      Close Lower Airlock
+    </Button>
+  );
+};
+
+const DropshipAirlockSelect = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
+  return (
+    <Section title="Dropship Airlock Control">
+      <Stack vertical grow>
+        <Stack.Item>
+          {!data.playing_airlock_alarm ? (
+            <EnableCautionAlarm />
+          ) : (
+            <DisableCautionAlarm />
+          )}
+        </Stack.Item>
+        <Stack.Item>
+          {!data.opened_upper_airlock ? (
+            <OpenUpperAirlock />
+          ) : (
+            <CloseUpperAirlock />
+          )}
+        </Stack.Item>
+        <Stack.Item>
+          {!data.lowered_dropship ? <LowerDropship /> : <RaiseDropship />}
+        </Stack.Item>
+        <Stack.Item>
+          {!data.opened_lower_airlock ? (
+            <OpenLowerAirlock />
+          ) : (
+            <CloseLowerAirlock />
+          )}
+        </Stack.Item>
+      </Stack>
+    </Section>
+  );
+};
+
 const DropshipButton = (props: {
   readonly shipId: string;
   readonly shipName: string;
@@ -443,6 +601,7 @@ const RenderScreen = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
+      {data.is_dropship_airlocked == 1 && <DropshipAirlockSelect />}
       {data.alternative_shuttles.length > 0 && <DropshipSelector />}
       {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
       {data.shuttle_mode === 'idle' && data.can_set_automated === 1 && (
@@ -473,30 +632,12 @@ const DropshipDisabledScreen = () => {
   );
 };
 
-const DropshipAirlockScreen = () => {
-  const { data } = useBackend<DropshipNavigationProps>();
-  return (
-    <>
-      {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
-      {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
-    </>
-  );
-};
-
 export const DropshipFlightControl = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Window theme="crtgreen" height={500} width={700}>
       <Window.Content className="NavigationMenu" scrollable>
-        {data.is_disabled === 0 ? (
-          data.is_dropship_airlocked === 0 ? (
-            <RenderScreen />
-          ) : (
-            <DropshipAirlockScreen />
-          )
-        ) : (
-          <DropshipDisabledScreen />
-        )}
+        {data.is_disabled === 0 ? <RenderScreen /> : <DropshipDisabledScreen />}
       </Window.Content>
     </Window>
   );

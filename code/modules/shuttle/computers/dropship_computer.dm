@@ -371,6 +371,7 @@
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/ui_data(mob/user)
 	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(shuttleId)
+	var/obj/docking_port/stationary/marine_dropship/docked_port = shuttle?.get_docked()
 	. = list()
 	.["shuttle_id"] = shuttle?.id
 	.["shuttle_mode"] = shuttle?.mode
@@ -407,6 +408,19 @@
 				"error" = FALSE
 			)
 		)
+
+	if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock))
+		.["is_dropship_airlocked"] = TRUE
+		var/obj/docking_port/stationary/marine_dropship/airlock/upper/active_airlock_dock = docked_port
+		if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock/lower))
+			var/obj/docking_port/stationary/marine_dropship/airlock/lower/lower_airlock = docked_port
+			active_airlock_dock = lower_airlock.link_to_upper
+		.["playing_airlock_alarm"] = active_airlock_dock.playing_airlock_alarm
+		.["opened_upper_airlock"] = active_airlock_dock.opened_upper_airlock
+		.["lowered_dropship"] = active_airlock_dock.lowered_dropship
+		.["opened_lower_airlock"] = active_airlock_dock.opened_lower_airlock
+	else
+		.["is_dropship_airlocked"] = FALSE
 
 	for(var/obj/docking_port/stationary/dock in compatible_landing_zones)
 		var/dock_reserved = FALSE
