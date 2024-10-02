@@ -1,0 +1,42 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"k" = (/obj/effect/alien/resin/sticky/thin,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"n" = (/turf/closed/wall/mineral/bone_resin,/area/template_noop)
+"o" = (/obj/effect/alien/weeds/node,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"p" = (/obj/effect/alien/egg,/obj/effect/alien/resin/sticky/thin,/turf/open/ice{color = "#797979"},/area/template_noop)
+"s" = (/turf/open/ice{color = "#797979"},/area/template_noop)
+"z" = (/obj/effect/alien/egg,/turf/open/ice{color = "#797979"},/area/template_noop)
+"A" = (/obj/effect/alien/resin/shield_pillar,/turf/open/ice{color = "#797979"},/area/template_noop)
+"B" = (/obj/effect/xenomorph/boiler_bombard,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"C" = (/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"D" = (/obj/effect/alien/resin/sticky/thin,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"E" = (/obj/effect/alien/resin/acid_pillar/strong,/turf/open/ice{color = "#797979"},/area/template_noop)
+"O" = (/obj/effect/alien/weeds/node,/turf/open/ice{color = "#797979"},/area/template_noop)
+"P" = (/obj/effect/alien/resin/king_cocoon{pixel_y = -47},/turf/open/ice{color = "#797979"},/area/template_noop)
+"S" = (/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"V" = (/obj/effect/xenomorph/boiler_bombard,/turf/template_noop,/area/template_noop)
+"Y" = (/obj/effect/alien/resin/sticky/thin,/turf/open/ice{color = "#797979"},/area/template_noop)
+
+(1,1,1) = {"
+VVnCCnnnVnnVVVV
+VCoCCnnnnnnoCVa
+anCDsCnnnnDCnnn
+nnnSOksYnDBCnnn
+nnnssskYSYCnnnn
+nnsSnEsYkOSnnaa
+annsnsSAssnnnaa
+nnnssYOYYEnnnna
+nnnnsssYssnnnna
+annnnzYYOznnnaa
+aannnzYzYnnnaaa
+aannnnzYYznnaaa
+aaaaannOsYznnna
+anaannnzzzsssna
+nnaannnnpzOPsna
+naannnnnnnsssna
+naannnnannnnnna
+nnnnnnaaannnnna
+nnnnnaaannnaaaa
+annnnaaannnaaaa
+annnaaaaannaaaa
+aaaaaaaaaannaaa
+"}

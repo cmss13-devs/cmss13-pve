@@ -4,7 +4,7 @@
 	assignment = JOB_COLONIST
 	rank = JOB_COLONIST
 	faction = FACTION_COLONIST
-	languages = list()
+	languages = list(LANGUAGE_ENGLISH)
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 	skills = /datum/skills/clf
 	idtype = /obj/item/card/id/lanyard

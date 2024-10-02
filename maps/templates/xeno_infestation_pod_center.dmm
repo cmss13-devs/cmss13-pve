@@ -1,0 +1,35 @@
+"a" = (/obj/effect/xenomorph/boiler_bombard,/turf/template_noop,/area/template_noop)
+"b" = (/obj/effect/alien/resin/king_cocoon{pixel_y = -47},/turf/open/ice{color = "#797979"},/area/template_noop)
+"f" = (/obj/effect/alien/resin/acid_pillar,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"j" = (/obj/effect/xenomorph/boiler_bombard,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"l" = (/turf/closed/wall/mineral/bone_resin,/area/template_noop)
+"p" = (/turf/open/ice{color = "#797979"},/area/template_noop)
+"t" = (/turf/template_noop,/area/template_noop)
+"y" = (/obj/effect/alien/weeds/node,/obj/effect/xenomorph/boiler_bombard,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"z" = (/obj/effect/alien/egg,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"D" = (/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"F" = (/obj/effect/alien/resin/acid_pillar,/turf/open/ice{color = "#797979"},/area/template_noop)
+"M" = (/obj/effect/alien/egg,/turf/open/ice{color = "#797979"},/area/template_noop)
+"P" = (/obj/effect/alien/resin/acid_pillar,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"Q" = (/obj/effect/alien/weeds/node,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"V" = (/obj/effect/alien/weeds/node,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"W" = (/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"Y" = (/obj/effect/alien/weeds/node,/turf/open/ice{color = "#797979"},/area/template_noop)
+
+(1,1,1) = {"
+tlllltaattatttt
+lltlltaaaatttlt
+alttllllallatll
+ttatallPjllaatl
+ttaalllypllaall
+aaQWllMppllllll
+aaWWlWppzplllat
+aaljWYppYDlllaa
+tallFMpbppMQlat
+lalllMMppfWjaaa
+ltallpVMlllaatt
+ltllljllllllatt
+llllQWllttllata
+lllltalltttlltt
+allttaalttttltt
+"}

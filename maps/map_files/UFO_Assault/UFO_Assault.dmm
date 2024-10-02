@@ -1,0 +1,502 @@
+"aa" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform_decoration/kutjevo/rock{color = "#555555"; dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"ap" = (/obj/structure/prop/rock/black_ground{pixel_x = -14; pixel_y = 10},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"ar" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"aD" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"aS" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"aY" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"ba" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"bc" = (/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"bd" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"bh" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock3"},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"br" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"bH" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"bK" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"cj" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"ck" = (/obj/structure/prop/rock/black_ground{pixel_x = -15; pixel_y = 8},/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"cr" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"cs" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"cw" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"cx" = (/turf/closed/wall/sulaco,/area/space)
+"cC" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"cI" = (/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"cL" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"cU" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"cY" = (/obj/structure/prop/rock/black_ground{pixel_x = 5; pixel_y = 17},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"cZ" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = 4; pixel_y = 37},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = 4; pixel_y = 10},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -10; pixel_y = 21},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -3; pixel_y = 5},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"ds" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"dz" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"dC" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"dE" = (/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -4; pixel_y = -3},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"dF" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/prop/rock/black_ground/dense{pixel_x = 6; pixel_y = 3},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"dK" = (/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = 7; pixel_y = 21},/obj/structure/flora/bush/ausbushes/var3/stalkybush{pixel_x = -2; pixel_y = 6},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"dL" = (/obj/structure/prop/rock/black_ground/dense,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"dN" = (/obj/structure/prop/rock/black_ground/dense{pixel_x = 13; pixel_y = -4},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"dP" = (/obj/docking_port/stationary/marine_dropship/lz1{name = "Deep Jungles"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"dZ" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"ea" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/prop/rock/black_ground{pixel_x = -3; pixel_y = 13},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"ep" = (/obj/structure/prop/rock/black_ground{pixel_x = 19; pixel_y = 37},/obj/structure/prop/rock/black_ground{pixel_y = -18},/obj/structure/prop/rock/black_ground{pixel_x = 6},/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"eA" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"eC" = (/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"eF" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"eP" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"eQ" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"eZ" = (/obj/structure/stairs/perspective{color = "#745122"; dir = 8; icon_state = "p_stair_full"},/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"fd" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"fh" = (/obj/structure/flora/bush/ausbushes/var3/leafybush,/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"fi" = (/turf/closed/shuttle/ert{icon_state = "leftengine_3"; opacity = 0},/area/space)
+"fk" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/ppflowers,/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"fu" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"fw" = (/turf/closed/shuttle/ert{icon_state = "rightengine_3"; opacity = 0},/area/space)
+"fB" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2,/area/space)
+"fS" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"gv" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"gT" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_y = 15},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"gV" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -7; pixel_y = 11},/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = 5},/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -4; pixel_y = -8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"gZ" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"hh" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"hm" = (/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"hn" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"hx" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"hU" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"hY" = (/turf/closed/shuttle/ert{icon_state = "rightengine_2"; opacity = 0},/area/space)
+"ip" = (/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_x = 9; pixel_y = 19},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"iq" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"it" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"iw" = (/obj/structure/flora/jungle/plantbot1,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"iy" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 15; pixel_y = 17},/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"iC" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"iD" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"iF" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"iH" = (/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"iI" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/stairs/perspective{color = "#745122"; dir = 8; icon_state = "p_stair_full"},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"iO" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 15; pixel_y = 5},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"iQ" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -12; pixel_y = 14},/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = 5; pixel_y = 5},/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -31; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"iS" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"jg" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"jr" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/stairs/perspective{color = "#745122"; dir = 1; icon_state = "p_stair_full"},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"ju" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"jD" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"jU" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"kl" = (/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_x = 9; pixel_y = 16},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"ko" = (/obj/structure/flora/bush/ausbushes/var3/stalkybush{pixel_x = 4; pixel_y = -4},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"ku" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 12; pixel_y = 18},/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -2; pixel_y = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"kC" = (/obj/structure/stairs/perspective{color = "#745122"; dir = 8; icon_state = "p_stair_full"},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"kD" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock4"},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"kE" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 11; pixel_y = 16},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"kG" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"kH" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"kO" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"kR" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"kZ" = (/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"lk" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"lp" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"lB" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"lH" = (/obj/structure/stairs/perspective{color = "#745122"; dir = 1; icon_state = "p_stair_full"},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"lI" = (/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 4; pixel_y = 14},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"mf" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"mh" = (/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"mo" = (/obj/structure/platform/kutjevo/rock,/turf/closed/wall/strata_ice/jungle{color = "#969696"},/area/space)
+"mq" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock3"; pixel_x = -3; pixel_y = 15},/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock4"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"mx" = (/obj/structure/prop/rock/black_ground,/obj/structure/prop/rock/black_ground/dense{pixel_x = 9; pixel_y = -12},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"mD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"mE" = (/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -16; pixel_y = -9},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"mJ" = (/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"mM" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"mO" = (/obj/structure/platform/kutjevo/rock,/obj/structure/stairs/perspective{color = "#745122"; dir = 8; icon_state = "p_stair_full"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"mT" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"nj" = (/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"np" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock1"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"ns" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = 6; pixel_y = 16},/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"ny" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"nz" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 10; pixel_y = 20},/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"nB" = (/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"nR" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"nT" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/stairs/perspective{color = "#745122"; dir = 1; icon_state = "p_stair_full"},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"nW" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"oy" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"oz" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"oG" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/sulaco,/area/space)
+"oK" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"pc" = (/obj/structure/prop/rock/black_ground{pixel_x = -10; pixel_y = 8},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"po" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"pp" = (/obj/structure/prop/rock/black_ground/dense{pixel_x = 6; pixel_y = 20},/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock1"; pixel_x = -8},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"pr" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"pz" = (/obj/structure/prop/rock/black_ground{pixel_y = 16},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"pF" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"pL" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -10; pixel_y = -8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"pT" = (/obj/structure/flora/jungle/planttop1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"pU" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 17; pixel_y = 16},/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"pW" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/gm/dirt2,/area/space)
+"qv" = (/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"qQ" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"qS" = (/obj/structure/prop/rock/black_ground,/turf/open/gm/dirt2,/area/space)
+"qU" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"qW" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"rb" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"rh" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"rj" = (/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"ru" = (/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"rv" = (/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"rz" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"rI" = (/turf/closed/wall/strata_ice/jungle{color = "#969696"},/area/space)
+"rK" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"rP" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"rT" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"rU" = (/turf/closed/shuttle/ert{icon_state = "leftengine_1"; opacity = 0},/area/space)
+"sB" = (/obj/structure/prop/rock/black_ground{pixel_y = 16},/obj/structure/prop/rock/black_ground/dense{pixel_x = -16},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"sG" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2,/area/space)
+"sI" = (/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"sQ" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 26},/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 10; pixel_y = -16},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"sW" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"sZ" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 13; pixel_y = 12},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"tl" = (/obj/structure/prop/rock/black_ground{pixel_y = 16},/obj/structure/prop/rock/black_ground{pixel_x = 23; pixel_y = 3},/obj/structure/prop/rock/black_ground/dense,/turf/open/gm/dirt2,/area/space)
+"tr" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"tx" = (/obj/structure/prop/rock/black_ground/dense,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"tA" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"tB" = (/obj/structure/prop/rock/black_ground{pixel_x = -17; pixel_y = 5},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"tG" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"tN" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -7; pixel_y = -22},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"tS" = (/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -10; pixel_y = 14},/obj/structure/flora/bush/ausbushes/reedbush,/obj/structure/flora/bush/ausbushes/var3/stalkybush{pixel_x = -2; pixel_y = -4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"tU" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"tY" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 6; pixel_y = 15},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"uc" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"ug" = (/obj/structure/prop/rock/black_ground/dense,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"uo" = (/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"uA" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -12},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"uH" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"uO" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"vm" = (/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"},/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"vq" = (/obj/structure/flora/jungle/alienplant1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"vz" = (/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = 5; pixel_y = 21},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -20; pixel_y = 11},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -12},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"vS" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"vV" = (/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"wg" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock3"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"wk" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"wn" = (/obj/structure/flora/jungle/vines/light_3,/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"ws" = (/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2,/area/space)
+"wz" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 11; pixel_y = -14},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"wZ" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_y = 10},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"xa" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"xp" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock3"},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"xq" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"xr" = (/obj/structure/platform/kutjevo/rock,/obj/structure/prop/invuln/pipe_water{pixel_x = 19; pixel_y = 6},/obj/structure/prop/invuln/pipe_water{pixel_x = 15; pixel_y = 6},/obj/structure/prop/invuln/pipe_water{pixel_x = 10; pixel_y = 8},/obj/structure/prop/invuln/pipe_water{pixel_x = 15; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{pixel_x = 4; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{pixel_x = 1; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{pixel_x = 7; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{pixel_x = 17; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = 5; pixel_y = 5},/obj/structure/prop/invuln/pipe_water{dir = 8; name = "water"; pixel_x = -7; pixel_y = 6},/obj/structure/prop/invuln/pipe_water{dir = 8; name = "water"; pixel_x = -1; pixel_y = 6},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = 23; pixel_y = 5},/obj/structure/platform/kutjevo/rock{color = "#555555"; dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_y = 5},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"xH" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"xK" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/stalkybush,/obj/structure/flora/jungle/vines/light_3,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"xM" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock2"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"yg" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = -14; pixel_y = -14},/turf/open/gm/dirt2,/area/space)
+"yp" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"yq" = (/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"yr" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 6; pixel_y = 14},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2,/area/space)
+"ys" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"yC" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"yL" = (/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -10; pixel_y = 10},/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"yM" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletreesmall.dmi'; icon_state = "tree6complet"; pixel_x = -33},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"zm" = (/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -26; pixel_y = 14},/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = 3; pixel_y = 18},/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -15},/obj/structure/flora/bush/ausbushes/grassybush{pixel_y = -6},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"zy" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/obj/structure/flora/bush/ausbushes/reedbush,/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"zz" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"zQ" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/ppflowers{pixel_x = -6; pixel_y = 6},/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"zU" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"zV" = (/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 7; pixel_y = 15},/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Af" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Aj" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 21; pixel_y = 18},/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Aq" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Au" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Av" = (/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"AA" = (/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"AY" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Bl" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Bp" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"Bs" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/prop/rock/black_ground{pixel_x = -6; pixel_y = -7},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"BM" = (/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"BW" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"BX" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Ca" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Cd" = (/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Cf" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Cl" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Cp" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Cq" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -29; pixel_y = 6},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"CD" = (/obj/structure/prop/rock/black_ground{pixel_x = 19},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"CK" = (/obj/structure/prop/rock/black_ground{pixel_x = -10; pixel_y = 12},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"CR" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 18; pixel_y = 13},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Dw" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"DC" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"DK" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_y = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"DL" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -34; pixel_y = 11},/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"DS" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 7; pixel_y = 18},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"DT" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Eh" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"Ey" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"EI" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletreesmall.dmi'; icon_state = "tree6complet"; pixel_x = -33},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"ET" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Fc" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Fe" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/jungle/vines/light_2,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Fj" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Fu" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"FH" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Gd" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Ge" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Gj" = (/obj/structure/stairs/perspective{color = "#745122"; icon_state = "p_stair_full"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Gy" = (/turf/closed/shuttle/ert{icon_state = "leftengine_2"; opacity = 0},/area/space)
+"GH" = (/obj/structure/platform/kutjevo/rock,/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"GM" = (/obj/structure/prop/rock/black_ground{pixel_x = 8; pixel_y = 18},/obj/structure/prop/rock/black_ground,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"GT" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"GZ" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"Ha" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"He" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Hn" = (/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"Hu" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Hv" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Hx" = (/obj/structure/flora/jungle/vines/light_2,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"HP" = (/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = 9; pixel_y = 21},/obj/structure/flora/bush/ausbushes/grassybush{pixel_x = -10; pixel_y = 4},/obj/structure/flora/bush/ausbushes/grassybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"HR" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Ij" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"Il" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"It" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"IS" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"IY" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Je" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Ji" = (/obj/structure/flora/bush/ausbushes/grassybush{pixel_y = 15},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Jj" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Jl" = (/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"Ju" = (/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"JA" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"JI" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock3"},/obj/structure/prop/rock/black_ground{pixel_x = 11; pixel_y = 18},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"JT" = (/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Ka" = (/obj/structure/prop/hybrisa/misc/fire{pixel_x = 1; pixel_y = -5},/turf/closed/shuttle/ert{icon_state = "rightengine_1"; opacity = 0},/area/space)
+"Kd" = (/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"Kz" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"KF" = (/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"KM" = (/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -7; pixel_y = -15},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -6; pixel_y = -9},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -7; pixel_y = -9},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -6; pixel_y = -12},/obj/structure/platform/kutjevo/rock{color = "#555555"; dir = 8},/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -3; pixel_y = -5},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -3; pixel_y = -8},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"KR" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"Lc" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"Ld" = (/obj/structure/prop/rock/black_ground{pixel_x = -12; pixel_y = 11},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"Lq" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock4"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Lr" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock1"},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"Lz" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"LC" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"LL" = (/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"LR" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Md" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_x = 9; pixel_y = 18},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Mn" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Mq" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -9; pixel_y = 11},/obj/structure/flora/jungle/vines/heavy,/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Mt" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"My" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/stairs/perspective{color = "#745122"; icon_state = "p_stair_full"},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"MA" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"MH" = (/obj/structure/prop/rock/black_ground,/obj/structure/prop/rock/black_ground{pixel_x = -15; pixel_y = -15},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"MI" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"MZ" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/jungle/plantbot1,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Nf" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 11; pixel_y = 18},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Nk" = (/turf/open/floor/plating,/area/space)
+"Ns" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"NA" = (/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"NE" = (/obj/structure/flora/jungle/vines/light_3,/obj/structure/flora/jungle/vines/light_1,/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"NL" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock2"},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"NM" = (/obj/structure/flora/jungle/vines/light_1,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"NT" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = 3; pixel_y = 15},/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"Ob" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"On" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Oq" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = -13; pixel_y = 8},/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"Ox" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"OC" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush,/obj/structure/flora/bush/ausbushes/ppflowers{pixel_x = 17; pixel_y = -21},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"OI" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"OK" = (/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"OM" = (/obj/structure/prop/rock/black_ground{pixel_x = 11; pixel_y = 8},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"OQ" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"OV" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Pi" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_x = -17; pixel_y = 20},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Pq" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Pr" = (/obj/structure/stairs/perspective{color = "#745122"; icon_state = "p_stair_full"},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Px" = (/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"PH" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"PP" = (/obj/structure/platform/kutjevo/rock{color = "#555555"; dir = 8},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -7; pixel_y = 13},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -6; pixel_y = 6},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -6},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -5; pixel_y = -9},/obj/structure/prop/invuln/pipe_water{dir = 4; name = "water"; pixel_x = -6; pixel_y = -17},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"PY" = (/obj/structure/stairs/perspective{color = "#745122"; icon_state = "p_stair_full"},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Qj" = (/obj/structure/prop/rock/black_ground,/obj/structure/prop/rock/black_ground{pixel_x = 8; pixel_y = -14},/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"Qq" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Qs" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock1"},/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"QG" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"QN" = (/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"QS" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"Rh" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 2; pixel_y = 12},/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 8},/obj/structure/flora/bush/ausbushes/grassybush{icon_state = "sunnybush_1"; pixel_x = 14; pixel_y = -9},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Rn" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletreesmall.dmi'; icon_state = "tree6complet"; pixel_x = -33},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"RG" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -28; pixel_y = -27},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"RJ" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock2"},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"RO" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/prop/rock/black_ground/dense,/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"RR" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Sk" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Sn" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"SA" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -6; pixel_y = 5},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"SC" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"SG" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"SZ" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Th" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/jungle/planttop1,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"Tu" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"TG" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/closed/wall/strata_ice/jungle{color = "#969696"},/area/space)
+"TI" = (/turf/open/auto_turf/sand_white/layer1,/area/space)
+"TU" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"TW" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"TX" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Ue" = (/obj/structure/stairs/perspective{color = "#745122"; dir = 8; icon_state = "p_stair_full"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Ug" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"Um" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/jungle/vines/light_3,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Us" = (/obj/structure/platform_decoration/kutjevo/rock,/obj/structure/flora/jungle/alienplant1,/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = -10; pixel_y = -16},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"UE" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/flora/bush/ausbushes/reedbush{pixel_x = 3; pixel_y = 17},/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"UL" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"UP" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2,/area/space)
+"Vq" = (/obj/structure/platform_decoration/kutjevo/rock,/obj/structure/platform_decoration/kutjevo/rock{dir = 1},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"Vv" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+"VA" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock4"},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"VK" = (/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -18; pixel_y = -4},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"VL" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 17; pixel_y = 25},/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = -13; pixel_y = 6},/obj/structure/flora/bush/ausbushes/var3/leafybush,/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"VM" = (/obj/structure/platform/kutjevo/rock,/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"VW" = (/obj/structure/prop/hybrisa/misc/fire{pixel_x = -2; pixel_y = -5},/turf/closed/shuttle/ert{icon_state = "leftengine_1"; opacity = 0},/area/space)
+"Wa" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/stalkybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Wd" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/stairs/perspective{color = "#745122"; icon_state = "p_stair_full"},/turf/open/auto_turf/sand_white/layer1{color = "#47433b"},/area/space)
+"Wv" = (/obj/structure/flora/tree{icon = 'void-marines/icons/jungletree.dmi'; icon_state = "tree1_complete"; pixel_x = -48; pixel_y = -15},/turf/closed/wall/rock/orange{color = "black"},/area/space)
+"Wz" = (/turf/open/gm/dirt2,/area/space)
+"Xd" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"Xs" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Xt" = (/obj/structure/platform/kutjevo/rock{dir = 8},/obj/structure/platform/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0_mud,/area/space)
+"Xu" = (/obj/structure/platform/kutjevo/rock{dir = 1},/obj/structure/platform/kutjevo/rock{dir = 4},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"Xx" = (/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"XG" = (/obj/structure/platform/kutjevo/rock,/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 2; pixel_y = 17},/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 8; pixel_y = 3},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"XI" = (/obj/structure/prop/hybrisa/misc/fire{pixel_y = -5},/turf/closed/shuttle/ert{icon_state = "rightengine_1"; opacity = 0},/area/space)
+"XX" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 12; pixel_y = 22},/obj/structure/flora/bush/ausbushes/var3/leafybush,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Yi" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/var3/leafybush{pixel_x = 15; pixel_y = 7},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Yk" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"Yn" = (/obj/structure/platform/kutjevo/rock{dir = 8},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Yo" = (/obj/structure/platform_decoration/kutjevo/rock{dir = 8},/turf/open/gm/river/desert{color = "#869981"},/area/space)
+"YC" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes{icon = 'void-marines/icons/largejungleflora.dmi'; icon_state = "bush1"; pixel_x = -5; pixel_y = 6},/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"YG" = (/obj/structure/prop/rock/black_ground{pixel_x = 7; pixel_y = -11},/obj/structure/prop/rock/black_ground,/turf/open/auto_turf/sand_white/layer1,/area/space)
+"YR" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer0,/area/space)
+"YT" = (/obj/structure/platform/kutjevo/rock{dir = 4},/obj/structure/platform/kutjevo/rock,/turf/open/gm/river/desert{color = "#5d6659"},/area/space)
+"YW" = (/obj/structure/platform_decoration/kutjevo/rock,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"YY" = (/obj/structure/flora/bush/ausbushes/var3/sparsegrass,/obj/structure/flora/bush/ausbushes/ppflowers,/turf/open/auto_turf/strata_grass/layer1,/area/space)
+"Zb" = (/obj/structure/platform/kutjevo/rock{dir = 1},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Zj" = (/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"},/obj/structure/prop/invuln/fire{icon_state = "dynamic_4"; pixel_x = -8; pixel_y = -13},/obj/effect/decal/cleanable/dirt,/turf/open/gm/dirt2{color = "#747068"},/area/space)
+"Zq" = (/obj/effect/decal/cleanable/dirt,/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"Zv" = (/obj/structure/prop/rock/black_ground{icon = 'void-marines/icons/jungleflora.dmi'; icon_state = "rock2"},/turf/open/auto_turf/strata_grass/layer0_mud_alt,/area/space)
+"ZX" = (/obj/structure/flora/jungle/vines/heavy,/turf/open/auto_turf/sand_white/layer1{color = "#747068"},/area/space)
+
+(1,1,1) = {"
+HnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHn
+HnOKOKOKOKOKOKOKOKOKOKKdKdKdeAqvqvqvqvYnOKOKLLLLLLLLLLLLLLWzyqAAAAwsrvrvyqWzZqyqrvWzWzLLLLLLyqyqAAAAAAAAyqyqyqyqOKOKOKOKOKOKLLLLLLLLLLLLLLLLLLLLLLHnHnHnHnHnHnHn
+HnOKOKOKOKOKOKOKOKOKOKOKKdKdeAqvqvqvqvYnOKOKOKLLLLLLLLLLYkLLWzwsiHrvrvcxcxyqrvrvyqWzLLOKyqyqyqAAAAAAyqyqyqyqOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLLLLLLLHntrHnWvHnRnHn
+HnOKOKOKOKOKOKOKOKOKOKKdKdGZQGqvqvqvqvYnOKOKOKOKOKLLLLLLmhwsiHiHWzcxcxcxcxcxcxrvWzOKSnAAyqyqAAAAAAAAyqyqLLOKOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLLLHnHnHnHnHnHnHn
+HnOKLLLLOKOKOKOKKdKdKdKdKdeAqvqvqvqvqvYnOKOKOKOKOKOKLLLLWziHoKrvcxcxcxcxcxcxcxcxrvrvwsyqZqyqyqyqyqyqAALLLLLLLLOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLLLHnLrbhHnHnHnHn
+HnLLLLLLOKOKOKKdKdKdKdKdKdeAqvqvqvqvmTGTOKOKOKOKOKOKLLLLrvoKMIcxcxcxcxcxcxcxcxcxcxrviHyqZqAAAAyqyqOKOKLLLLLLLLOKOKOKOKOKOKLLLLLLOKOKLLLLLLLLLLLLOKHnRJkDHnHnHnHn
+HnOKLLOKOKLLOKOKLLLLKdKdKdeAqvqvqvmTGTOKOKOKLLOKOKOKOKLLrviHrvcxcxcxcxcxcxcxcxcxcxrvoKfBZqyqyqAAOKOKOKLLLLLLLLOKOKOKOKOKOKLLLLLLOKOKOKLLLLLLLLLLOKHnHnHnHnHnHnHn
+HnOKOKOKOKLLLLOKLLKdKdKdKdTUKFdCqvYnOKOKOKLLLLLLLLOKOKCdoKrvcxcxcxcxcxcxcxcxcxcxcxcxwsoKyqyqyqyqOKOKOKLLLLLLLLLLOKOKOKOKLLLLLLOKOKOKOKLLLLLLLLOKOKOKLLLLOKLLLLHn
+HnLLOKOKOKLLLLLLLLKdKdKdKdKdKdeAqvYnOKOKLLLLLLLLLLCdCdfBfBrvcxcxcxNkNkNkNkNkNkcxcxcxiHfBZqAAAAOKOKOKOKOKOKLLLLLLLLOKOKLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKLLOKLLLLHn
+HnLLOKOKOKLLLLLLLLLLKdKdKdKdKdeAqvYnLLLLLLLLLLLLLLLLCdwswsrvcxcxNkNkNkNkNkNkNkNkcxcxrvwskOPxAALLOKOKLLOKOKLLLLLLLLOKOKLLLLLLLLOKOKOKLLLLLLLLLLLLOKOKOKOKOKLLLLHn
+HnLLOKOKOKOKLLLLLLLLKdKdKdKdKdeAqvYnLLLLLLLLLLLLLLOKOKWzWzcxcxcxNkNkNkNkNkNkNkNkcxcxcxWzyqAAPxOKOKLLLLOKOKLLLLOKOKOKOKLLLLLLLLLLOKOKOKOKOKLLLLLLLLLLOKOKOKLLLLHn
+HnLLLLLLOKOKOKOKLLLLKdKdKdKdKdeAOxSZLLLLLLLLLLLLOKOKcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxAAOKOKLLLLLLOKOKOKOKOKOKOKLLLLLLLLLLOKOKOKOKOKLLLLLLLLLLOKOKOKOKLLHn
+HnLLLLLLLLOKOKOKOKLLLLKdKdKdKdmTSZLLLLLLLLLLOKOKOKcxcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxOKOKOKLLLLOKOKOKOKOKOKLLLLLLLLLLLLOKOKOKOKOKOKLLLLLLOKOKOKOKOKLLHn
+HnLLLLLLLLLLLLOKOKOKOKOKOKKdKdqWLLLLLLLLLLOKOKOKcxcxcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxcxOKOKOKOKOKOKOKOKOKLLLLLLOKOKOKLLOKOKOKOKOKOKOKOKLLLLOKOKOKOKOKHn
+HnLLLLLLLLLLOKOKOKOKOKOKOKOKKdqWLLLLLLLLLLLLLLcxcxcxcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxcxcxOKOKOKLLLLOKOKOKOKLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnLLLLLLLLLLOKOKOKOKOKOKOKOKKdqWLLLLLLLLLLLLOKcxcxcxcxcxcxcxcxcxcxNkNkNkNkNkNkcxcxcxcxcxcxcxcxcxcxOKOKLLLLLLOKOKOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLLLOKHn
+HnLLLLLLLLOKOKOKOKOKOKOKOKOKKdqWLLLLLLLLLLLLwscxcxcxNkNkNkNkNkcxNkNkNkNkNkNkNkNkcxNkNkNkNkNkcxcxcxOKOKOKLLLLLLLLOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLOKHn
+HnLLLLOKOKOKOKOKOKOKOKOKOKOKKdzzTuLLLLLLLLLLwscxcxcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxcxcxwsOKOKLLLLLLLLOKOKOKOKLLLLLLOKOKOKOKOKLLOKOKOKOKOKLLLLLLOKOKHn
+HnLLOKOKOKOKOKOKOKOKOKOKOKOKKdKdqWLLLLLLOKWziHrvcxcxNkNkNkNkNkcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxcxZqiHOKLLLLLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKLLLLOKOKOKOKLLLLLLLLLLHn
+HnOKOKOKOKOKOKOKLLOKOKOKOKKdKdKdYnOKOKOKOKxarvGMWzcxNkNkNkNkNkcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxrviHWzOKLLLLLLLLLLLLLLLLOKOKOKOKOKOKOKOKLLLLLLLLOKOKOKOKOKOKOKLLHn
+HnOKOKOKOKOKOKOKLLLLLLOKOKKdKdKdYnOKOKOKOKfBZqiHdLcxNkNkNkNkNkcxNkNkNkNkNkNkNkNkcxNkNkNkNkNkcxwsrvwsLLLLLLLLLLLLLLLLLLOKOKOKOKOKOKOKOKLLLLLLLLOKOKOKOKOKOKOKOKHn
+HnOKOKOKOKOKLLLLLLLLLLOKOKKdKdKdYnOKOKOKOKwswsrvcxcxcxcxNkcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxcxyqyqLLLLLLLLLLOKLLOKOKOKOKOKOKOKOKOKLLLLLLLLOKOKOKOKOKOKOKOKLLHn
+HnOKOKOKOKOKLLLLLLLLLLLLLLKdKdKdYnOKOKOKOKWzrvcxcxcxcxNkNkNkNkcxNkNkNkNkNkNkNkNkcxNkNkNkNkcxcxcxcxrviHmhLLOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLOKOKOKOKOKOKOKLLLLHn
+HnOKOKOKOKOKLLLLLLLLLLLLLLKdKdKdYnOKOKOKrvoKrvcxcxcxcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxyqoKiHWzOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKLLLLLLLLLLLLLLLLKdKdYnOKOKOKrvUPcxcxcxcxcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxcxoKiHOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKLLLLLLLLLLLLLLLLKdKdYnOKLLmhWziHcxcxcxcxcxcxcxNkNkcxNkNkcxcxcxcxNkNkcxNkNkcxcxcxNkNkcxcxZqiHWzWzLLLLOKOKOKOKOKLLLLLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLHn
+HnOKOKOKOKLLLLLLLLLLLLLLOKOKKdKdqWLLmhWzWzyqcxcxNkNkNkcxcxNkNkcxNkNkNkcxcxNkNkNkcxNkNkcxcxcxNkNkcxcxyqrvrvrvLLLLOKOKOKOKOKOKOKLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLLLHn
+HnOKOKOKLLLLLLLLLLLLLLLLKdKdKdKdqWLLCdxaWzcxcxcxNkNkNkcxcxNkNkcxNkNkNkcxcxNkNkNkcxNkNkcxcxcxNkNkcxcxcxyqiHWzLLOKOKOKOKOKOKOKOKLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKLLLLLLLLLLKdKdKdKdKdqWmhOKOKcxcxcxcxNkNkNkcxcxNkNkcxNkNkNkcxcxNkNkNkcxNkNkcxcxcxNkNkcxcxcxcxrvOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLLLHn
+HnOKOKOKOKLLLLLLLLLLKdKdKdKdKdOxSZcxcxcxcxcxcxcxcxNkcxcxcxNkNkcxNkNkNkcxcxNkNkNkcxNkNkcxcxcxNkNkcxcxcxcxcxoGoGOKOKLLLLOKOKOKOKOKOKLLLLOKOKOKOKLLLLLLLLLLLLLLLLHn
+HnOKOKOKOKLLLLLLLLLLKdKdKdOxtUSZLLWzcxcxcxNkNkNkNkNkNkcxcxNkNkcxNkNkcxcxcxcxNkNkcxNkNkcxcxNkNkNkNkNkNkcxcxcxCdOKLLLLLLOKOKOKOKOKOKLLLLOKOKOKOKLLLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKOKOKKdKdKdKdOxSZOKOKOKWzcxcxcxNkNkNkNkNkNkcxNkNkNkcxNkNkNkNkNkNkNkNkcxNkNkNkcxNkNkNkNkNkNkcxcxcxLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKOKOKKdKdKdKdqWLLLLLLOKOKcxcxcxNkNkNkNkNkNkNkNkNkNkcxNkNkNkNkNkNkNkNkcxNkNkNkNkNkNkNkNkNkNkcxcxcxwsLLLLLLLLOKOKOKOKOKOKOKOKOKLLOKOKOKLLLLLLLLLLLLLLHn
+HnOKOKOKOKOKOKOKKdKdKdKdYnOKOKOKfBrvrvcxcxNkNkNkNkNkNkNkNkNkcxcxNkNkNkNkNkNkNkNkcxcxNkNkNkNkNkNkNkNkNkcxcxWzYkLLLLLLOKOKOKOKOKOKOKOKOKOKLLLLLLOKOKOKOKLLLLLLLLHn
+HnOKOKOKOKOKOKOKOKKdKdKdqWOKOKOKCdiHiHcxcxNkNkNkNkNkNkcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxNkNkNkNkNkNkcxcxwsfBCdOKOKOKOKOKOKOKLLLLLLOKOKLLLLLLOKOKOKOKOKLLLLLLHn
+HnOKOKOKOKOKOKOKLLKdKdKdqWLLOKOKOKrviHcxcxcxNkNkNkNkNkcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxNkNkNkNkNkcxcxcxrviHxaOKOKOKOKOKLLLLLLLLLLOKOKOKLLLLOKOKOKOKOKOKLLLLHn
+HnOKOKOKOKOKOKOKLLLLKdKdqWLLOKOKOKOKrvcxficxcxcxcxcxcxcxNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxfwcxoKiHOKOKOKLLLLLLLLLLLLOKOKOKOKOKOKLLOKLLLLLLOKOKLLLLHn
+HnOKOKOKOKOKOKLLLLOKOKKdqWLLLLOKOKOKwscxGycxcxcxcxcxcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxcxcxcxcxhYcxiHwsOKOKLLLLLLLLLLLLOKOKOKOKOKOKOKOKOKLLLLLLOKOKLLLLHn
+HnOKOKOKOKOKOKOKOKOKLLKdqWLLLLLLLLmhWzoGVWcxcxcxcxcxcxcxcxcxcxcxNkNkNkNkNkNkNkNkcxcxcxcxcxcxcxcxcxcxcxKacxMnCdOKLLLLLLLLLLLLOKOKOKOKOKOKLLLLLLLLLLLLOKOKOKOKLLHn
+HnOKOKOKOKLLLLLLOKOKOKKdqWLLLLLLLLYkmhMApWcxcxcxcxcxfifwcxcxcxcxcxcxNkNkNkNkcxcxcxcxcxcxfifwcxcxcxcxcxsGoKPxCdOKLLLLLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLLLLLOKOKOKHn
+HnOKOKLLLLLLLLLLOKOKOKKdqWLLLLLLYkmhmhLLdzcxcxcxcxcxGyhYcxcxcxZqoGrvrvrviHoKrvcxrvcxcxcxGyhYcxcxcxcxcxjDMnZqwsOKLLLLLLLLLLLLLLLLOKOKOKOKOKLLLLLLLLLLLLLLOKOKOKHn
+HnOKOKLLLLLLLLLLLLOKKdKdYnLLLLLLLLLLmhsZdzZqcxcxcxcxrUKacxyqrvMIoKiHrvoKiHoKoKrvrviHyqcxVWXIcxcxcxcxyqMnPxSnfBOKOKLLLLLLLLLLLLLLOKOKOKOKOKOKOKOKLLLLLLLLLLOKOKHn
+HnOKOKLLLLLLLLLLLLKdKdKdzzTuLLLLLLLLOKmhpWiHWzcxrvdzrvpWWzfBrvyqiHoKiHrviHiHiHiHyqWziHWzwzjDWzyqcxrvdzdzPxCRprOKOKOKLLLLLLLLLLOKOKLLOKOKOKOKOKOKOKOKLLLLLLOKOKHn
+HnOKOKLLLLLLLLLLLLKdKdKdKdzzHuHuEyjUMAmhMAWzrvcxdzrvsGwsdzsGWziHrvZqrvrvrvrvrviHyqtlwsjDpWnzdzdzrvfuObsGucOKiOOKOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLOKOKHn
+HnOKOKLLLLLLLLLLLLOKKdKdKdKdKdKdKdYnmhLLrvfurvyqFjygwspWZjdzwsiHrvuciHiHrviHrvZqpzWzAAAAsGfBdzdzyqrvfBjDAACdprOKOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLOKOKHn
+HnOKOKLLLLLLLLLLLLLLLLKdKdKdOKKdKdYnCdOKrvfuWzWzOqdzwspWiHrvwsrvWzZqrviHiHiHWzyqAAyqFjAAsGSndzWzWzrvWzsGyqcwYkLLLLLLOKOKOKOKOKOKLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKOKLLLLLLLLLLLLLLLLLLOKKdKdYnCdOKiHoKrvAAWzdzQjpWiHNTMnWzWzAAPxiHiHyqwsZqyqFjgZyqwsjDgZyqZqZqwssGyqLLLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKOKLLLLLLLLLLLLLLLLLLLLOKKdYnOKOKwsoKrvAAWzqSWzdziHFjgZWzWzyqPxrvyqPxyqyqyqZqDSZqpWgZwsWzSnSnwsrvyqYkLLLLLLLLLLLLOKOKLLLLLLLLLLLLLLLLOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKOKOKOKLLLLOKLLLLLLLLLLOKKdYnOKOKCdiHrvAAAApWyrdzrvgZmhWzwsOKAArvWzYkyqLLyqZqPxKzgZdzZqFjyqyqyqWzLLYkLLLLLLLLLLLLOKLLLLLLLLLLLLLLLLLLOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKOKOKOKOKOKOKLLLLLLLLOKKdKdYnOKCdOKOKrvWzFjpWgZPxAAyqmhOKwsOKPxOKWzSnPxLLLLLLPxNftYrvWzucPxyqyqyqLLLLLLLLLLLLOKOKOKLLLLLLLLLLLLLLLLLLOKOKLLLLLLLLLLOKLLHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKOKOKKdmTGTOKOKOKOKWzwsgZyqsGwssBLLLLCdWzOKOKOKOKucSnLLLLmhAAAAFjpWiHucPxAAyqyqLLLLLLLLLLLLLLOKOKOKOKLLLLLLLLLLLLOKOKOKLLLLLLLLLLOKLLHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKKdKdKdYnOKOKOKOKOKOKwsyqOKWzWzjDLLLLxaWzLLLLOKOKCdSnyqLLmhyquoFjdzWzucucAAyqyqLLLLOKLLLLLLLLOKOKOKOKOKLLLLLLLLLLOKLLLLLLLLLLLLOKYWHuHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKKdKdKdhUTuLLOKOKOKOKfBOKOKOKdZZqLLOKOIOKLLLLLLLLCdZqOKOKCdCdLLyqrvepZqSnPxAAAAOKOKOKOKOKOKOKOKLLOKOKOKLLLLLLLLOKOKOKLLYRHuHuHuEypFqvHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKKdKdKdKdhUTuLLOKOKOKCdOKOKOKdZCdOKOKxaOKOKLLLLLLOKCdOKOKCdCdOKyqrvrvZqZqPxAAAAAALLLLLLOKOKLLLLLLLLOKOKOKOKOKOKOKOKLLLLcrqvqvqvqvqvqvHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKOKKdKdKdKdqWLLOKOKOKOKOKOKLLOKOKOKOKCdOKOKOKLLLLOKOKLLLLmhLLLLLLWzyqyqZqSnyqAAAALLLLLLOKOKLLLLOKOKOKOKLLLLOKOKOKOKLLLLcrqvqvqvqvrTKFHn
+HnOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLKdKdqWLLLLLLLLOKOKLLOKOKOKOKOKOKOKOKOKOKYWEyEyHuHumDLLLLLLyqyqyqyqyqyqyqyqLLLLLLOKOKOKOKLLOKOKOKLLLLOKOKOKOKOKYWAuqvqvqvrTjuKdHn
+HnOKOKOKOKOKOKOKOKLLLLOKOKOKOKLLLLKdhUHuHuHuTuOKOKLLLLLLLLOKYWEyEyEyEyEypFqvqvqvqvHRTuLLyqyqyqAAyqyqyqyqAALLLLLLOKOKOKOKOKOKOKOKLLLLOKOKOKOKOKbrqvqvrTKFjuKdKdHn
+HnOKOKOKOKOKOKLLLLLLLLOKOKOKOKOKLLKdKdKdKdKdYnOKLLLLLLLLLLYWAuqvqvqvqvqvqvqvqvrTKFKFHRTuyqyqAAAAyqyqyqyqAALLLLLLOKLLLLOKOKOKLLOKLLLLLLLLLLOKOKbrqvqvhhKdKdKdKdHn
+HnOKOKLLLLLLLLLLLLLLOKOKOKOKOKOKOKLLKdKdKdKdzzEyEyEyEyEyEypFKFKFKFKFKFKFdCqvqvhhKdKdKdmfyqAAAAAAAAyqyqyqyqLLLLOKOKLLLLOKOKLLOKOKOKLLLLLLLLOKOKbrqvqvhhKdKdKdrIHn
+HnOKOKLLLLLLLLLLLLLLOKOKLLOKOKOKOKOKOKKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdeAqvrTnyKdKdKdmfyqAALLyqAAAAyqyqyqyqyqLLLLLLOKOKLLLLLLOKLLLLLLLLLLOKOKbrqvqvhhKdrIrIrIHn
+HnOKOKLLLLLLLLOKOKOKOKOKLLLLOKOKOKOKOKKdKdKdKdKdKdKdKdKdKdKdOKrIrIrIKdKdTUKFnyKdKdOKKdmfyqAAAALLAAAAAAyqyqyqyqLLLLLLOKLLLLLLLLOKLLLLLLLLLLOKOKHaxHqvhhKdKdrIrIHn
+HnOKLLLLLLLLOKOKOKLLLLLLLLLLRRJjOKOKOKOKKdKdKdOKLLLLLLLLLLOKrIrIrIrIKdKdKdKdKdKdOKOKOKQSyqyqAALLLLyqAAyqyqyqyqLLOKOKOKLLLLYREyEyHuHuHuHuEyEyEyEyIYKFjuKdKdrIrIHn
+HnOKLLLLLLLLOKOKOKLLLLLLLLRRtGYoJjOKOKOKOKLLLLLLLLLLLLLLOKrIrIrIrIrIrIrIrIKdKdKdOKOKOKOKOKAAyqOKyqyqAAyqyqyqyqLLLLOKOKLLYRIYKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdLLrIHn
+HnOKLLLLOKOKOKOKOKLLLLOKTXNseCeCrKJjLLLLLLLLLLLLLLLLAAyqyqyqyqyqyqAAAArIOKOKOKOKOKOKOKOKOKAAyqAAAAAAAAyqyqaYEyHuEyEyEyEypFKdKdKdKdKdKdrIrIrIKdKdKdOKKdKdKdLLrIHn
+HnOKOKLLOKOKOKOKOKOKOKOKfSeCeCXxGeYTLLLLLLLLAAAAyqAAyqyqyqyqyqyqyqyqAArIrIOKOKOKOKOKLLOKOKOKAAAAAAyqyqyqyqLzKdKdKdKdKdKdKdKdKdKdKdrIrIrILLOKOKOKOKLLLLKdKdLLLLHn
+HnOKOKOKOKOKOKOKOKOKOKOKkRnWeCXxgvOKOKLLLLAAAAAAyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqOKLLOKLLLLyqyqAAyqyqyqyqyqyqLzKdKdOKOKOKKdKdKdKdKdOKLLrIrIOKOKOKOKOKOKOKKdLLLLLLHn
+HnOKOKOKOKOKOKOKOKOKLLLLLLLRcUNAOnOKOKAAAAAAAAyqyqyqyqyqyqyqyqyqyqyqyqAAAAyqyqAAyqyqLLLLyqyqyqyqyqyqyqyqOKePLLLLLLOKOKOKKdKdKdOKOKOKOKOKOKOKOKLLLLLLOKOKOKYWHuHn
+HnOKOKOKOKOKOKOKOKOKLLLLLLOKOKOKOKOKAAyqyqyqyqyqyqyqyqAAAAAAAAyqyqyqyqyqAAAAAAyqyqyqyqyqyqyqyqyqyqyqyqyqrIrILLLLOKOKOKOKOKLLLLLLOKOKOKOKOKOKLLLLYREyEyEyEypFKdHn
+HnOKOKOKOKOKOKOKOKOKLLLLLLLLrIrIrIyqyqyqyqyqyqyqyqyqAAAAAAAAAAAAyqyqyqyqyqAAAAyqyqyqyqyqyqyqyqyqyqyqyqyqrIrILLLLOKrIrIrIOKLLLLLLTXsWOKOKOKOKOKYWbHKdKdKdKdKdKdHn
+HnOKOKOKOKOKOKOKOKOKLLLLrIrIrIrIyqyqyqyqyqyqyqyqyqAAAArIrIrILLAAOKyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqOKLLLLLLLLLLLLrIrIrILLLLLLfSeCuHuHXuOKOKbrKdKdKdKdKdKdKdHn
+HnOKOKOKOKOKOKLLLLLLLLLLrIrIrIyqyqyqyqyqyqyqyqAAAAOKLLrIrIOKOKOKOKOKyqyqyqyqyqyqAAAAyqyqyqyqyqyqyqOKOKOKOKLLrILLLLLLOKrIrILLLLLLkRNAeCeCoyLLLLcrKdKdqvqvKdKdKdHn
+HnOKLLLLLLOKrILLrILLLLLLrIrIyqyqyqyqyqyqyqyqAArIrILLrIrIrIOKOKOKOKLLLLOKOKOKyqyqyqAAAAAAyqyqyqAAAAAAOKOKOKrIrILLLLOKOKrIOKOKLLLLLLLLFueCcsLLLLcrKdKdozrTqvKdKdHn
+HnOKLLLLLLLLrIrIrILLLLLLLLyqyqyqyqyqyqyqyqyqAAOKrIrIrILLLLLLrIrIOKLLLLLLLLyqyqyqAAAAAAAAyqyqAAAAAAOKOKOKrIrIrIrIrIrIOKOKOKOKLLLLLLRReCBpLLLLLLcrKdKdMyWdqvKdKdHn
+HnrIOKLLLLLLLLrIrIrILLLLLLyqyqyqAAAAyqOKOKOKLLLLLLrIrILLLLLLrIrIAAOKAAAAyqyqyqAAAAAAAAAAyqyqAAAALLOKOKOKrIrIrIrIrIrIOKOKOKOKOKOKRRXxgvLLLLLLLLartULCQGcrqvqvKdHn
+HnrIrILLLLLLLLrIrILLLLAAyqyqyqAAAAAAyqyqOKOKLLLLLLLLLLLLLLAAAALLAAAAAAyqyqyqyqAAAAAAAAAAAAAAAALLLLLLOKOKrIrIrIrIrILLOKOKOKOKOKOKbaBMlpLLLLLLLLLLOKOKLLhhKdKdKdHn
+HnrIrIrILLLLLLLLrILLLLAAyqyqAAAAAAyqyqyqOKOKTXnRsWLLLLLLLLAAAAAAAAAAAAyqyqyqyqAAAAyqyqAAAAAAAALLLLLLLLOKOKrIrIrILLLLLLOKOKOKOKOKOKOKLLLLLLLLRRJjOKOKLLarXsXstUHn
+HnrIrIrIrILLLLLLLLLLAAAAyqAAAAAAyqyqyqOKRRcjtGeCitsWLLLLAAAAAAAAyqyqyqyqyqyqyqAAOKOKOKLLAALLLLLLLLOKOKOKOKOKrIrIOKOKOKLLOKOKYWEyEyEyHuHuTuLLbagvOKLLLLLLLLLLOKHn
+HnrIrIrIrILLLLLLLLAAyqyqyqAAAAAAyqyqOKOKHvXxeCeCeCBWLLLLAAAAAAyqyqyqyqLLLLOKOKOKOKLLLLLLLLLLLLLLOKOKLLLLOKOKOKOKOKOKYWEyEyjUbrqvtxqvqvqvYnOKOKiFOKLLLLLLLLOKOKHn
+HnrIrIrIrILLLLLLAAAAyqyqyqyqyqyqyqOKOKRRtGXxeCeCeCBWLLOKAAyqyqyqyqyqOKOKOKOKOKOKOKLLLLLLLLkHLLLLOKOKLLLLOKYWEyEyEyEyAuKFckDTAuqvqvqvqvqvYnOKOKOKOKOKOKOKOKOKOKHn
+HnrIrIrIrIrIOKOKAAAAyqyqyqyqyqOKOKOKRRtGXxeCeCeCFHkGOKyqyqyqyqyqyqOKOKOKRRJjLLLLOKTXnRuHuHpoLLOKOKOKOKYWEyAurIrIKdKdKdKdKRKFKFKFdCkZqvqvHRHuTuOKOKOKYWEyEyEyjUHn
+HnrIkuOKrIrIrIAAyqyqyqyqyqyqyqOKRRcjtGeCeCeCeCTIBWOKOKyqyqyqyqyqOKOKOKOKzUYTOKOKTXNseCIlBMOnOKOKOKYWEyAurIrIrIKdKdLLLLKdKdKdKdKdeAqvMHqvqvqvHRjUOKYWAurIrIrIDTHn
+HnqQqQOKcIrIAAAAyqyqyqyqyqAArIOKFueCeCeCeCeCeCTIBWOKOKyqyqyqyqyqOKOKOKOKOKOKOKOKFueCeCgvLLLLOKOKYWAurIrIrIrIKdKdKdLLLLLLKdKdKdKdKRKFKFKFKFdCqvDTEyAurIrIrIrIrIHn
+HngTOKdEOKOKOKAAAAyqyqyqyqAAOKOKfSeCeCeCeCeCIlcUkGOKrIyqyqyqyqyqyqAAOKOKLLrIrIOKFuXxGeOnOKLLYWEypFhhrIrIrIrIKdLLjgLLruLLLLLLKdKdKdKdKdKdKdKRKFnyrIrIrIrIrIrIrIHn
+HnOKEIqQOKOKOKLLAAyqyqyqyqAAyqOKkRnWTIeCeCeCoyOKOKOKrIrIyqyqyqyqyqAAOKOKrIrIrIOKFuGeOnOKOKOKbrqvqvhhKdrIrIKdLLjgLLLLLLLLgVLLiQLLLLLLKdKdKdKdKdKdKdrIrIrIrIrIrIHn
+HnrIrIOKOKOKOKLLyqyqyqyqAAAAAAOKOKLRcUcUcUNAcsOKOKrIrIrIrIyqyqAAAAAAyqrIrIrILLOKbaPqOKOKOKYWpFqvrTnyKdrIrIKdfdjgtALLLLLLLLnpLLLLLLLLLLLLKdKdKdKdKdrIrIrIrIrIrIHn
+HnrIrIOKOKOKtALLLLyqyqyqAAAAAAyqOKOKOKOKOKOKOKOKOKrIrILLrIyqyqyqAAAAyqrIrILLLLOKOKSCOKOKOKbrqvrTnyKdrIrIrIKdLLjgLLLLLLOKLLLLWaOKtALLLLLLLLLLjgtAKdKdKdrIrIrIKdHn
+HnrPEyEyEyjULLLLyMyqyqyqyqyqAAAAAAAAOKYWEyEyjUOKrTEyEyTurIyqyqyqAAAAAAyqrIrILLOKOKOKOKvVOKbrqvhhrIrIrIZXwkKdLLLLLLLLOKOKjgjgrIrILLyMLLLLLLLLLLjgjgKdKdKdKdrIKdHn
+HnqvkZqvqvPHLLjgLLLLyqyqyqyqAAAAAAAAAAbrKdKdnTlHjrKdKdmfyqAAyqyqAAAAAAAAOKrIOKOKOKOKOKLLLLcrqvearIrIwkqULLCqLLLLLLOKOKOKOKqQrIrILLLLLLLLLLLLVKjgjglIKdKdOKKdKdHn
+HnKFKFdCqvHRTuLLLLruLLLLLLyqyqAAAAAAAAcCCaKdQSKdEhqvDCGdAAAAyqyqyqyqAALLOKOKOKOKOKOKOKLLLLarxHhhrIKdKdhmbdLLLLnjLLLLOKOKOKLLLLLLLLLLLLLLLLtALLjgLLLLjgnBLLOKKdHn
+HnKdKddFKFKFiSLLRGLLLLjgLLLLyqyqAAAAyqyqLzqvKdKdCpZbGdAAAAyqyqyqyqAAAArIOKEIOKOKOKOKOKOKLLLLarQqKdKdLLLLHxDwrILLLLOKOKOKLLLLLLLLOKOKOKOKLLLLLLLLLLLLyMLLOKOKKdHn
+HnKdKdKdKdKdzzTujgpUfkLLLLtAyqyqyqAAyqyqLzKdCpZbuOAAyqAAAAyqyqyqyqAAAArIrIOKClOKLLLLOKOKLLLLLLbrKdLLLLLLUmrjNLLLzVLLOKClLLLLLLOKOKOKOKOKOKOKOKOKLLLLLLLLLLOKClHn
+HnKdKdOKzmKdKdhUOQTIJTLLvVLLrIyqyqyqyqyqcCZbuOyqAAAAAAAAyqyqyqyqAAyqrIrIrIVAOKOKLLLLLLOKOKOKLLbrKdKdyMLLDwbdxKfdrILLtAOKLLLLOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLyMLLHn
+HnKdOKqQOKOKKdKdfSYGTILLISrIrIOKOKyqyqyqyqyqyqyqyqAAAAAAyqyqyqrIrIrIrIrIOKOKOKOKOKtALLrIOKOKOKHaQqKdKdLLLLAvrhrIrILLLLOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLLLNLHn
+HncIOKmJOKKdKdKdUETITITIrIrIOKOKrIyqyqyqyqyqyqyqyqAAULBlMtyqOKrIrIrIrILLLLTXsWOKOKLLyMLLLLOKOKqQiDQqKdKdLLvmrIrIrILLLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLLLLLHn
+HnqQOKKdKdKdlkuHKMeCTITIrIrIrILLOKyqyqyqyqyqaYrbrbBlJAKdYnOKOKOKrIrILLLLpTfSYoXuOKqQLLLLLLLLOKOKsQmMQqKdKdLLrIrILLOKLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLLLHn
+HnEIOKKdKdLchxxqPPXxvzNMrIrIrIrIyqyqyqyqyqAAQNKdKdKdqvKdwZOKClOKLLrILLOKiwFueCYoXuOKLLqQLLHPClOKqQqQbrKdKdLLLLLLOKOKLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKKdKdKdxraaBMyCTIItrIrIyqyqyqyqAAAAAAQNKdKdqvEhLCGTcIOKOKLLLLLLOKlkNseCtSoyClnsYYLLLLrIrIOKqQbrKdKdLLOKOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKLLKdKdKdKdKdThTIDwrjrIyqyqyqAAAAaYBlSGKdKdkZqvklOKOKqQLLLLLLOKlkNseCeCeCoyOKwgmJLLLLrIrIOKYWAuKdKdLLOKOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKqQLLLLKdKdJlKdMZOMwnbdJeyqyqAAULBlSGKdKdKdqvqvqvOKOKOKLLOKLLOKDLhnzyeCeCeCoyOKOKcLLLrIrIOKOKbrKdKdKdLLOKOKOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnLLLLRhAjjgVKLLKdKdfSrIrIAYyqyqAAAAQNKdKdKdKdKdKdqvqvOKOKOKOKYWBXjUOKOKhnxqeCUscsOKLLLLLLrIOKYWEypFKdKdKdLLLLjgOKLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKLLjgLLLLLLKdKdqWrIrIrIaSyqAAULSGKdKdKdKdKdqvqvOKEIOKLLYRpFKdhUTuqQOKhnVqcsOKsILLrIrIrIOKbrrTnyKdKdLLyMLLLLLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKClLLLLLqOKKdrIrIrIrIyqyqAAJILzKdKdKdKdKdqvqvqQOKYYqQLLcrKdqvKdhUjUOKqQXdOKEIOKOKcIOKYCOKbrhhKdKdjgpLLLKdjgLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKOKyMruKdKdKdrIrIrIrIyqyqAAAAQNKdKdKdKdCKqvqvxMqQLLLLLLcrqvqvqvKdYnClqQqQOKOKOKOKqQlBEyEypFhhKdKdjgjgLLKdfdjgjgLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnOKOKqQKdKdKdKdGZrIrIrIrIyqyqAAAAiCAqCaKdJlKdKdqvOKLLLLLLLLypKdKdqvKdYnOKOKOKOKOKYYVLDKpFqvqvtxhhKdKdLLKdozKdKdjgtALLKdLLLLOKOKOKOKOKOKOKOKdPOKOKOKOKOKOKOKOKHn
+HnOKqQOKOKePVvLCQGLLrIrIrIyqyqyqAAyqyqcCZbETKdKdqvKFTuLLrIrImMtUQqqvmTGTOKOKOKClOKfhiqqvqvqvrTKFjuKdKdLLKdXtMtKdKdKdxpKdKdLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnjgXXOKOKqvKdqQOKmJLLrIAAyqyqmxyqyqyqyqyqcCETKdKdKdPHLLrIrIOKnpartUGTqQOKAAAAOKOKbrqvqvqvqvhhKdKdKdeQLLKdJlmfKdKdKdyqKdKdUgKdLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnqQjgLLOKqvqvOKOKOKOKipAAAAAAyqyqyqyqyqyqyqcCAqAqZbuOAALLEIOKLLmELLLLClyqyqyqAAAAbrkZrTKFKFjuKdtNOKOKuArIKdysyqyqKdyqyqyqQNKdKdOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnLLLLnjUgaDdCqvYYOKOKOKAAAAAAAAAAyqyqyqyqyqyqyqAAJuAAAAAAAAOKLLruLLyqyqyqyqyqyqAAQNqvROKdKdKdrIOKOKLLOKOKKdysTWyqaYyqyqULSGKdKdOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnLLVKLLKdKdbKozqQkEqQrIrIOKyqAAAAyqyqyqyqyqyqyqAAAAAAAAAAAAAAyqyqyqyqyqyqyqyqyqAAiCAqQqKdKdrIrIOKLLtAOKLLKdysPrGjPYaYmoSGKdKdnpLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnKdmqLLLLJlKdzzEySkrIrIrInRsWAAAAAAAAAAyqyqyqyqyqAAAAAAyqyqyqyqyqyqAAAAAAZvyqyqyqyqAAQNKdKdrIrIrIOKKdKdKdDCAqGdyqcCCaKdKdKdLLLLLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnKdKdruLLLLKdKdKdrIrIrIrIdKBWOKLLAAAAAAyqyqyqyqyqAAAAAAyqyqyqyqyqyqyqAAAAAAAAAAAAyqAAQNKdKdKdrIrIKdKdDCAqGdAAAAyqyqQNKdJljgjgVKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnKdKdKdKdKdKdKdKdrIrIkoXxNAkGtALLLLrIULrbrbMtyqyqyqyqyqyqyqyqyquoyqyqyqAAAAAAAAAAuoyqLzKdKdKdKdKdDCAqGdAAapyqyqyqyqiCCaKdKdWaLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKHn
+HnLCBsdNKdKdGZLCLCrIrITIoyLLnpLLLLLLbdcrKdKdmfyqZvyqyqyqyqyqyqyqyqyqcYyqyqyqAAAAAAyqyqeFAqCaKdKdDCGdAAAAyqyqyqyqyqyqAAQNKdKdKdLLOKOKOKOKOKOKOKOKOKOKOKOKOKOKLLHn
+HnqvEhLCLCLCQGqvqvqvrIrIcZLLvqLLLLbcvSbrKdugXtTWyqyqyqyqyqaYBlBlBlMtLLLLLLyqyqyqyqyqyqcCeZdsAqiIGdAAyqyqyqyqyqyqyqyqyqQNKdKdugrIOKOKOKOKOKOKOKOKOKOKOKOKOKLLjgHn
+HnqvqvqvqvqvqvqvppqvCfOKOKOKLLLLrjrIFcbrKdKdKdXtBlTWuoyqAAQNKdtBKdHRTurIrILLyqyqyqyqyqyqkCMtyqUeyqyqyqyqyqyquoyqyqULGHSGKdKdrIrIbcOKOKOKOKOKOKOKOKOKOKOKOKLLLLHn
+HnqvqvqvqvqvqvmTtUtUGTOKOKOKOKLLbdrIqQHaLCqvKdKdKdXtTWULBlSGKdqvKdKdqWrIrIrIyqyqyqyqyqAfrbrbrbmOQsyquoyqyqyqyqULBlSGKdKdKdrIrIbdLLOKOKOKOKOKOKOKOKOKOKOKLLLLOKHn
+HnqvqvqvqvqvqvYnOKqQOKcIOKqQLLLLrIrIOKOKClqvqvqvKdKdXtSGKdKdKdqvKdKdDTMqrIrIrIyqyqaYrbJAKdKdKdKdrzMtyqrIaYrbrbSGKdKdKdKdrIrIrIrjNEOKOKOKOKOKOKOKOKOKOKLLLqqQOKHn
+HnqvqvqvCDqvqvqWOKOKEIqQOCPiqQrIrIrIeQyLOKJiqvqvqvKdKdKdKdKdLdqvqvKdKdFeFcTGSAXGEybHKdJlKdrurILLKdVMrbrbJAKdKdKdKdLqrIrIrIrIrIrIbdDwLLOKOKOKOKLLLLLLLLLLjgiyYYHn
+HnqvqvpcqvqvOxSZLLsIOKcLqQClOKLLrIrIrIVAOKYiqQOKqvqvqvKdKdugqvqvqvqvqvHevSzQqvqvqvIjugKdKdKdtAjgLLKdKdKdKdKdrIrIrIrIrIrIrIrIrIrIrIbdMdLLLLLLLLLLLLLLyMnpOKqQOVHn
+HnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHnHn
+"}

@@ -1,0 +1,35 @@
+"a" = (/turf/closed/wall/mineral/bone_resin,/area/template_noop)
+"e" = (/turf/open/ice{color = "#797979"},/area/template_noop)
+"h" = (/obj/effect/alien/resin/sticky/thin,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"i" = (/obj/effect/alien/weeds/node,/turf/open/ice{color = "#797979"},/area/template_noop)
+"m" = (/obj/effect/alien/resin/sticky/thin,/obj/effect/alien/resin/shield_pillar,/turf/open/ice{color = "#797979"},/area/template_noop)
+"p" = (/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"r" = (/obj/effect/alien/resin/acid_pillar/strong,/turf/open/ice{color = "#797979"},/area/template_noop)
+"u" = (/obj/effect/alien/resin/sticky/thin,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"v" = (/obj/effect/alien/resin/king_cocoon{pixel_y = -47},/turf/open/ice{color = "#797979"},/area/template_noop)
+"D" = (/obj/effect/alien/egg,/turf/open/ice{color = "#797979"},/area/template_noop)
+"G" = (/turf/template_noop,/area/template_noop)
+"H" = (/obj/effect/xenomorph/boiler_bombard,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"K" = (/obj/effect/alien/resin/sticky/thin,/turf/open/ice{color = "#797979"},/area/template_noop)
+"R" = (/obj/effect/xenomorph/boiler_bombard,/turf/template_noop,/area/template_noop)
+"S" = (/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+"V" = (/obj/effect/alien/weeds/node,/obj/effect/xenomorph/boiler_bombard,/turf/open/ice{color = "#797979"},/area/template_noop)
+"W" = (/obj/effect/alien/resin/sticky/thin,/obj/effect/xenomorph/boiler_bombard,/mob/living/carbon/xenomorph/drone,/turf/open/ice{color = "#797979"},/area/template_noop)
+
+(1,1,1) = {"
+aapRRaaaaaGGGGGGGGGGGG
+aapVpaaraaaGGGGGGGaaGG
+aaaauHKKKaaaGGGGGaaaaa
+RRaaaaiheaaaaGGGaaaaGG
+GRGaaaSKKiDaaaGGaaaGGG
+aaRGaeKhmeeeaaGGaaaGGG
+uaaaaSeKKeDKDaaaaaaGGG
+uWpuSiDeeKDDKDiaaaaGGG
+VupSaaaDDeieeDaaaGGGGG
+aapSaaaaDeeveaaGGGGGGG
+GaraaGGaaaDeeaaGGGGGGG
+GaaaGGGaaaaaaaaaGGGGGG
+aaaaGGGGaaGGGGGaaaGGGG
+aaaaGGGaaGGGGGaaaGGGGG
+aaGGGGaaaGGGaaaaaGGGGG
+"}
