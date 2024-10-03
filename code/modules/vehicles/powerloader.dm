@@ -13,12 +13,19 @@
 	maxhealth = 200
 	pixel_x = -16
 	pixel_y = -2
+	light_system = HYBRID_LIGHT
+	light_power = 8
+	light_range = 0
+	light_color = LIGHT_COLOR_ORANGE
+	light_mask_type = /atom/movable/lighting_mask/rotating_conical
+	light_pixel_y = 10
 	var/base_state = "powerloader"
 	var/open_state = "powerloader_open"
 	var/overlay_state = "powerloader_overlay"
 	var/wreckage = /obj/structure/powerloader_wreckage
 	var/obj/item/powerloader_clamp/PC_left
 	var/obj/item/powerloader_clamp/PC_right
+	var/light_range_on = 4
 
 //--------------------GENERAL PROCS-----------------
 
@@ -92,6 +99,7 @@
 		if(do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && dir == olddir && loc == oldloc && buckled_mob == old_buckled_mob)
 			manual_unbuckle(user)
 			playsound(loc, 'sound/mecha/powerloader_unbuckle.ogg', 25)
+			set_light(0)
 
 /obj/vehicle/powerloader/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/powerloader_clamp))
@@ -99,6 +107,7 @@
 		if(PC.linked_powerloader == src)
 			unbuckle() //clicking the powerloader with its own clamp unbuckles the pilot.
 			playsound(loc, 'sound/mecha/powerloader_unbuckle.ogg', 25)
+			set_light(0)
 			return 1
 	. = ..()
 
@@ -120,6 +129,7 @@
 	. = ..()
 	overlays.Cut()
 	playsound(loc, 'sound/mecha/powerloader_buckle.ogg', 25)
+	set_light(light_range_on,2)
 	if(.)
 		icon_state = base_state
 		overlays += image(icon_state = overlay_state, layer = MOB_LAYER + 0.1)

@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	name = "hypersleep chamber"
 	desc = "A large automated capsule with LED displays intended to put anyone inside into 'hypersleep', a form of non-cryogenic statis used on most ships, linked to a long-term hypersleep bay on a lower level."
 	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	density = TRUE
 	anchored = TRUE
 
@@ -361,7 +361,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 			GLOB.data_core.general -= G
 			qdel(G)
 
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	set_light(0)
 
 	if(occupant.key)
@@ -500,7 +500,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		return
 	mob.forceMove(src)
 	occupant = mob
-	icon_state = "body_scanner_closed"
+	icon_state = "hypersleep_closed"
 	set_light(2)
 	time_entered = world.time
 	start_processing()
@@ -523,7 +523,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	occupant.forceMove(get_turf(src))
 	occupant = null
 	stop_processing()
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	set_light(0)
 	playsound(src, 'sound/machines/pod_open.ogg', 30)
 	SEND_SIGNAL(src, COMSIG_CRYOPOD_GO_OUT)
@@ -558,7 +558,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		return
 	mob.forceMove(src)
 	occupant = mob
-	icon_state = "body_scanner_closed"
+	icon_state = "hypersleep_closed"
 	set_light(2)
 	time_entered = world.time
 	if(del_them)
@@ -571,7 +571,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		var/mob/living/carbon/human/man = occupant
 		man.species.handle_cryo(man)
 
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	set_light(0)
 
 

@@ -2068,14 +2068,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -3090,7 +3082,8 @@
 "akL" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
-	pixel_y = 13
+	pixel_y = 13;
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -4121,14 +4114,6 @@
 /area/golden_arrow/prep_hallway)
 "aoc" = (
 /obj/structure/fence,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "First Platoon Ready Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "squadblastdoor"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -8008,7 +7993,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aAK" = (
-/obj/structure/machinery/cryopod,
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aAO" = (
@@ -15411,6 +15398,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/synthcloset)
+"bMs" = (
+/obj/structure/prop/almayer/ai_wallmonitor/west,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "bPy" = (
 /obj/structure/platform{
 	dir = 1
@@ -15436,6 +15427,17 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"bUF" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "First Platoon Ready Bay Blast Door";
+	closed_layer = 3.3;
+	layer = 3.3;
+	open_layer = 3.3;
+	id = "squadblastdoor"
+	},
+/turf/open/space/basic,
+/area/space)
 "bZF" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
 	pixel_y = 19;
@@ -15810,8 +15812,12 @@
 	layer = 2.52
 	},
 /obj/item/reagent_container/glass/bucket/janibucket{
-	pixel_y = 15;
+	pixel_y = 5;
 	pixel_x = -7
+	},
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list();
+	pixel_y = 23
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -15885,7 +15891,6 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "gwS" = (
-/obj/structure/machinery/recharge_station,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -15897,6 +15902,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/prop/invuln/joey/normal,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "gNW" = (
@@ -16241,7 +16247,6 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "kjn" = (
-/obj/structure/machinery/recharge_station,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -16253,6 +16258,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/structure/prop/invuln/joey/normal,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "knD" = (
@@ -16428,6 +16434,10 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
+"lXR" = (
+/obj/structure/prop/almayer/ai_wallmonitor/east,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "lYO" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -16565,6 +16575,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"nex" = (
+/obj/structure/blocker/invisible_wall/directional{
+	layer = 2
+	},
+/turf/open/floor/almayer/aicore,
+/area/golden_arrow/ai_interface)
 "ngb" = (
 /obj/structure/machinery/recharge_station,
 /obj/effect/decal/cleanable/dirt{
@@ -16647,7 +16663,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
 /area/golden_arrow/supply)
 "nEI" = (
 /obj/structure/platform{
@@ -17211,7 +17227,8 @@
 /area/golden_arrow/supply)
 "sse" = (
 /obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/almayer/aicore/glowing,
+/obj/item/toy/prize/apc,
+/turf/open/floor/almayer/aicore,
 /area/golden_arrow/ai_interface)
 "svL" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -17308,15 +17325,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"tDZ" = (
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
-	req_one_access = list()
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
 "tEH" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17325,22 +17333,16 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
 "tTk" = (
-/obj/structure/machinery/computer/ares_console{
-	pixel_y = 16;
-	layer = 4.12
-	},
-/obj/structure/surface/table/reinforced/aicore{
-	layer = 4.11;
-	pixel_y = 8;
-	density = 0
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/bed/chair/comfy/ares{
-	dir = 1;
-	layer = 4.13
+/obj/structure/machinery/computer/ares_console/large{
+	pixel_x = -16;
+	pixel_y = -8
+	},
+/obj/structure/bed/chair/comfy/ai_interface{
+	buckling_y = 4
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/golden_arrow/ai_interface)
@@ -17408,6 +17410,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
+"uPo" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/joey/normal,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/engineering)
 "uPX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17443,6 +17458,10 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
+"vzH" = (
+/obj/structure/prop/almayer/ai_wallmonitor,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "vCJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17581,13 +17600,6 @@
 "wSf" = (
 /turf/open/space/basic,
 /area/golden_arrow/supply)
-"xiW" = (
-/obj/structure/barricade/handrail{
-	pixel_y = -2;
-	layer = 2.9
-	},
-/turf/open/floor/almayer/aicore,
-/area/golden_arrow/ai_interface)
 "xlL" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -22183,7 +22195,7 @@ aYv
 aYv
 aYv
 aYv
-tDZ
+adI
 fKv
 dij
 bnm
@@ -22873,13 +22885,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
 aEG
 aEG
 aEG
@@ -23049,19 +23061,19 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
 rRA
 rRA
 rRA
 rRA
 rRA
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+aIC
+aIC
+aIC
+aIC
+aIC
 aYv
 aqi
 pLu
@@ -23226,11 +23238,11 @@ aEG
 aEG
 aEG
 aEG
-aEG
+rRA
 rRA
 rRA
 onj
-onj
+bMs
 onj
 rRA
 rRA
@@ -23401,9 +23413,9 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
 rRA
 onj
 baN
@@ -23578,12 +23590,12 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
 rRA
 sse
-xiW
+rRA
+rRA
+vzH
+nex
 tTk
 duL
 duL
@@ -23755,9 +23767,9 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
 rRA
 onj
 baN
@@ -23934,11 +23946,11 @@ aEG
 aEG
 aEG
 aEG
-aEG
+rRA
 rRA
 rRA
 onj
-onj
+lXR
 onj
 rRA
 rRA
@@ -24111,19 +24123,19 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
 rRA
 rRA
 rRA
 rRA
 rRA
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+aIC
+aIC
+aIC
+aIC
+aIC
 kQO
 nBM
 lPH
@@ -24289,13 +24301,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
 aEG
 aEG
 aEG
@@ -24492,7 +24504,7 @@ two
 aTs
 alR
 aIC
-ngb
+uPo
 mpM
 hcq
 aWo
@@ -29480,7 +29492,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+bUF
 aEG
 aEG
 aEG
