@@ -557,7 +557,7 @@
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 x 10)"
 	overlay_ammo_type = "_reg_mk1"
-	overlay_gun_type = "_mk1"
+	overlay_gun_type = "_m41"
 	overlay_content = "_reg"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
 	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)

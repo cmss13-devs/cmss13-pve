@@ -180,6 +180,32 @@
 	rank_short = PAY_SHORT_NE9C
 	icon_state = "ranks_snco"
 
+//WARRANT OFFICERS
+/obj/item/clothing/accessory/ranks/navy/w1
+	name = "rank boards"
+	rank_short = PAY_SHORT_NW1
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/navy/w2
+	name = "rank boards"
+	rank_short = PAY_SHORT_NW2
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/navy/w3
+	name = "rank boards"
+	rank_short = PAY_SHORT_NW3
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/navy/w4
+	name = "rank boards"
+	rank_short = PAY_SHORT_NW4
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/navy/w5
+	name = "rank boards"
+	rank_short = PAY_SHORT_NW5
+	icon_state = "ranks_officer"
+
 //OFFICERS
 /obj/item/clothing/accessory/ranks/navy/o1
 	name = "rank boards"
@@ -244,6 +270,151 @@
 /obj/item/clothing/accessory/ranks/navy/o10c
 	name = "rank boards"
 	rank_short = PAY_SHORT_NO10C
+	icon_state = "ranks_flagofficer"
+
+/*################################################
+################ ARMY  #####################
+################################################*/
+//ENLISTED
+/obj/item/clothing/accessory/ranks/army/e1
+	rank_short = PAY_SHORT_AE1
+
+/obj/item/clothing/accessory/ranks/army/e2
+	rank_short = PAY_SHORT_AE2
+
+/obj/item/clothing/accessory/ranks/army/e3
+	rank_short = PAY_SHORT_AE3
+
+/obj/item/clothing/accessory/ranks/army/e4
+	rank_short = PAY_SHORT_AE4
+	icon_state = "ranks_nco"
+
+/obj/item/clothing/accessory/ranks/army/e4e
+	rank_short = PAY_SHORT_AE4E
+	icon_state = "ranks_nco"
+
+/obj/item/clothing/accessory/ranks/army/e5
+	rank_short = PAY_SHORT_AE5
+	icon_state = "ranks_nco"
+
+/obj/item/clothing/accessory/ranks/army/e6
+	rank_short = PAY_SHORT_AE6
+	icon_state = "ranks_nco"
+
+/obj/item/clothing/accessory/ranks/army/e7
+	rank_short = PAY_SHORT_AE7
+	icon_state = "ranks_snco"
+
+/obj/item/clothing/accessory/ranks/army/e8
+	rank_short = PAY_SHORT_AE8
+	icon_state = "ranks_snco"
+
+/obj/item/clothing/accessory/ranks/army/e8e
+	rank_short = PAY_SHORT_AE8E
+	icon_state = "ranks_snco"
+
+/obj/item/clothing/accessory/ranks/army/e9
+	rank_short = PAY_SHORT_AE9
+	icon_state = "ranks_snco"
+
+/obj/item/clothing/accessory/ranks/army/e9e
+	rank_short = PAY_SHORT_AE9E
+	icon_state = "ranks_snco"
+
+/obj/item/clothing/accessory/ranks/army/e9c
+	rank_short = PAY_SHORT_AE9C
+	icon_state = "ranks_snco"
+
+//WARRANT OFFICERS
+/obj/item/clothing/accessory/ranks/army/w1
+	name = "rank boards"
+	rank_short = PAY_SHORT_AW1
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/w2
+	name = "rank boards"
+	rank_short = PAY_SHORT_AW2
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/w3
+	name = "rank boards"
+	rank_short = PAY_SHORT_AW3
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/w4
+	name = "rank boards"
+	rank_short = PAY_SHORT_AW4
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/w5
+	name = "rank boards"
+	rank_short = PAY_SHORT_AW5
+	icon_state = "ranks_officer"
+
+//OFFICERS
+/obj/item/clothing/accessory/ranks/army/o1
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO1
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/o2
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO2
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/o3
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO3
+	icon_state = "ranks_officer"
+
+/obj/item/clothing/accessory/ranks/army/o4
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO4
+	icon_state = "ranks_seniorofficer"
+
+/obj/item/clothing/accessory/ranks/army/o5
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO5
+	icon_state = "ranks_seniorofficer"
+
+/obj/item/clothing/accessory/ranks/army/o6
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO6
+	icon_state = "ranks_seniorofficer"
+
+/obj/item/clothing/accessory/ranks/army/o6e
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO6E
+	icon_state = "ranks_seniorofficer"
+
+/obj/item/clothing/accessory/ranks/army/o6c
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO6C
+	icon_state = "ranks_seniorofficer"
+
+/obj/item/clothing/accessory/ranks/army/o7
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO7
+	icon_state = "ranks_flagofficer"
+
+/obj/item/clothing/accessory/ranks/army/o8
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO8
+	icon_state = "ranks_flagofficer"
+
+/obj/item/clothing/accessory/ranks/army/o9
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO9
+	icon_state = "ranks_flagofficer"
+
+/obj/item/clothing/accessory/ranks/army/o10
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO10
+	icon_state = "ranks_flagofficer"
+
+/obj/item/clothing/accessory/ranks/army/o10c
+	name = "rank boards"
+	rank_short = PAY_SHORT_AO10C
 	icon_state = "ranks_flagofficer"
 
 /*################################################

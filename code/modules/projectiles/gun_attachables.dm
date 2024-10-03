@@ -1172,6 +1172,11 @@ Defined in conflicts.dm of the #defines folder.
 	select_gamemode_skin(type)
 	attach_icon = icon_state
 
+/obj/item/attachable/scope/mini/sadar
+	name = "M83A2 SADAR sight assembly"
+	desc = "SADAR sight system."
+	zoom_offset = 3
+
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
