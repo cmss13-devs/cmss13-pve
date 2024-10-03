@@ -660,39 +660,17 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
-/obj/item/rappel_harness/extract{
-	ship_tag = "dropship_upp"
-	},
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "fy" = (
@@ -5476,9 +5454,7 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/structure/dropship_equipment/paradrop_system{
-	ship_tag = "dropship_upp"
-	},
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "YF" = (
