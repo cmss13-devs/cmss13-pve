@@ -161,7 +161,7 @@
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("M5 Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
+		list("M5 Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Rebreather", floor(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
@@ -247,7 +247,7 @@
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("ShMB/4 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/upp, VENDOR_ITEM_REGULAR),
+		list("ShMB/4 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/military/upp, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
@@ -312,7 +312,7 @@
 		list("Sling Pouch", round(scale * 1.25), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
-		list("M5 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/m5, VENDOR_ITEM_REGULAR),
+		list("M5 Gas Mask", round(scale * 15), /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", round(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Rebreather", round(scale * 10), /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 

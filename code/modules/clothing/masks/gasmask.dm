@@ -31,14 +31,14 @@
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
 
-/obj/item/clothing/mask/gas/m5
+/obj/item/clothing/mask/gas/military
 	name = "\improper M5 gasmask"
 	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear."
 	icon_state = "m5"
 	item_state = "m5"
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 
-/obj/item/clothing/mask/gas/m5/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
+/obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
 	if(!istype(helmet_internal_inventory))
 		return
@@ -50,7 +50,7 @@
 	helmet_item.flags_inventory |= BLOCKGASEFFECT
 	helmet_item.flags_inv_hide |= HIDEFACE
 
-/obj/item/clothing/mask/gas/m5/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
+/obj/item/clothing/mask/gas/military/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
 	if(!istype(helmet_internal_inventory))
 		return
@@ -62,37 +62,13 @@
 	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
 	helmet_item.flags_inv_hide &= ~(HIDEFACE)
 
-/obj/item/clothing/mask/gas/upp
+/obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 	icon_state = "pfb"
 	item_state = "pfb"
-
-/obj/item/clothing/mask/gas/upp/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory |= BLOCKGASEFFECT
-	helmet_item.flags_inv_hide |= HIDEFACE
-
-/obj/item/clothing/mask/gas/upp/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
-	helmet_item.flags_inv_hide &= ~(HIDEFACE)
 
 /obj/item/clothing/mask/gas/pve_mopp
 	name = "\improper M2 MOPP mask"

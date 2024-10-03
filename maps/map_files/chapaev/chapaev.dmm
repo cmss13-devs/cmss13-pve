@@ -479,11 +479,11 @@
 	color = "#8B9490";
 	pixel_x = -3
 	},
-/obj/item/clothing/mask/gas/upp{
+/obj/item/clothing/mask/gas/military/upp{
 	pixel_x = -7;
 	pixel_y = 2
 	},
-/obj/item/clothing/mask/gas/upp{
+/obj/item/clothing/mask/gas/military/upp{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -2040,9 +2040,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "rk" = (
@@ -3522,9 +3522,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
 "DD" = (
@@ -4721,9 +4721,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "RF" = (
@@ -4974,9 +4974,9 @@
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
 /obj/item/tank/emergency_oxygen/double,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
-/obj/item/clothing/mask/gas/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/supply)
 "Ud" = (
