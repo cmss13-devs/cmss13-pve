@@ -277,6 +277,12 @@
 	icon_state = "shiva_window0_frame"
 	basestate = "shiva_window"
 
+/obj/structure/window_frame/prefab
+	name = "poly-kevlon window frame"
+	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
+	icon_state = "prefab_window0_frame"
+	basestate = "prefab_window"
+
 //Solaris frames
 
 /obj/structure/window_frame/solaris
