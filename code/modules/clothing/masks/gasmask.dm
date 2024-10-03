@@ -37,6 +37,7 @@
 	icon_state = "m5"
 	item_state = "m5"
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 
 /obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
@@ -65,8 +66,6 @@
 /obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
-	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 	icon_state = "pfb"
 	item_state = "pfb"
 
