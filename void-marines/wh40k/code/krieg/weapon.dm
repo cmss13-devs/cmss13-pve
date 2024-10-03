@@ -42,7 +42,7 @@
 	icon = 'void-marines/wh40k/icons/weapon/guardpower_gear_32xOBJ.dmi'
 	icon_state = "lasmag_100"
 	w_class = SIZE_SMALL
-	transfer_handful_amount = 0
+	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS
 	default_ammo = /datum/ammo/energy/lasgun
 	max_rounds = 45
 	gun_type = /obj/item/weapon/gun/lasgun/lucius

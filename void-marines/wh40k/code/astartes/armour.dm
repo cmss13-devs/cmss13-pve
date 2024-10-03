@@ -325,10 +325,3 @@
 	desc = "The advanced helmet of the Astartes Techmarine, Comes with the distinct red colour and advanced scanning system to detect, locate and repair inconsistency in machinery and Astartes holy armour."
 	icon_state = "techhelm"
 	item_state = "techhelm"
-
-/obj/item/storage/backpack/astartes/techpack
-	name = "Astartes Mark VII Servo-Harness"
-	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been equipped with additional Servo-Arms to serve engineering purposes."
-	icon_state = "techpack"
-	item_state = "techpack"
-
