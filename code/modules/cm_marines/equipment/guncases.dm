@@ -244,6 +244,9 @@
 	new /obj/item/weapon/gun/shotgun/pump(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 	new /obj/item/ammo_magazine/shotgun/slugs(src)
+	new /obj/item/storage/pouch/shotgun(src)
+	new /obj/item/storage/large_holster/m37(src)
+	new /obj/item/attachable/stock/shotgun(src)
 
 
 /obj/item/storage/box/guncase/shotgunpump/special
