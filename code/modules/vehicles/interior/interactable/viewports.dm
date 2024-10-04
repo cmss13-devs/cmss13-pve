@@ -34,3 +34,9 @@
 	icon = 'icons/obj/vehicles/interiors/van.dmi'
 	icon_state = "windshield_viewport_top"
 	alpha = 80
+
+//anti-air APC's interior console
+/obj/structure/interior_viewport/terminal
+	name = "External Cameras Terminal"
+	desc = "A terminal hooked up to the various sensors of the M579 ADS-C, featuring plenty of flashing buttons and whooping alarms alongside a more rudimentary external-view system."
+	icon_state = "viewport_terminal"
