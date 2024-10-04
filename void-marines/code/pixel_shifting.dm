@@ -32,6 +32,7 @@
 	if(.)
 		return
 	var/mob/M = user.mob
+	M.density = 0
 	M.shifting = FALSE
 	return TRUE
 
@@ -44,6 +45,7 @@
 		is_shifted = FALSE
 		pixel_x = 0
 		pixel_y = 0
+		density = 1
 
 /mob/proc/pixel_shift(direction)
 	return
