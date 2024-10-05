@@ -3445,3 +3445,76 @@
 			reagents.add_reagent("nutriment", 2)
 			reagents.add_reagent("sugar", 2)
 			reagents.add_reagent("coco", 1)
+
+// ---- Canteen Food ----
+
+//mains
+/obj/item/reagent_container/food/snacks/canteen
+	name = "Canteen food"
+	desc = "What the hell is this? You shouldn't be seeing this."
+	icon = 'icons/obj/items/food_canteen.dmi'
+
+/obj/item/reagent_container/food/snacks/canteen/main
+	name = "Canteen main dish"
+	bitesize = 1
+
+
+/obj/item/reagent_container/food/snacks/canteen/main/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 9)
+
+/obj/item/reagent_container/food/snacks/canteen/main/soylent
+	name = "NestleCo NutriGo(TM)"
+	desc = "A large heap of highly processed slop made of soy, lentils, and planton. It's the core ingredient to all food made in NestleCo AutoChefs. This plain flavor quite simply has no flavor at all."
+	icon_state = "soylent"
+	w_class = SIZE_MEDIUM
+
+/obj/item/reagent_container/food/snacks/canteen/main/soylent/green
+	name = "NestleCo Vegi-Flavored NutriGo(TM)"
+	desc = "A large heap of highly processed slop made of soy, lentils, and plankton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all plant-based imitation foods. Somehow despite being made of plants, it only almost tastes as good as an expired salad."
+	icon_state = "soylent_green"
+
+/obj/item/reagent_container/food/snacks/canteen/main/soylent/red
+	name = "NestleCo Meat-Flavored NutriGo(TM)"
+	desc = "A large heap of highly processed slop made of soy, lentils, and plankton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all meat-based imitation foods. One of the furthest things from real meat you could possibly get, flavor included."
+	icon_state = "soylent_red"
+
+/obj/item/reagent_container/food/snacks/canteen/main/soylent/yellow
+	name = "NestleCo Grain-Flavored NutriGo(TM)"
+	desc = "A large heap of highly processed slop made of soy, lentils, and plankton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all grain-based imitation food. Unremarkable, tastes terrible, and only vaguely tastes like it might possibly be grain."
+	icon_state = "soylent_yellow"
+
+//sides
+
+/obj/item/reagent_container/food/snacks/canteen/side
+	name = "Canteen side dish"
+	bitesize = 1
+
+
+/obj/item/reagent_container/food/snacks/canteen/side/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 5)
+
+/obj/item/reagent_container/food/snacks/canteen/side/soylent
+	name = "NestleCo NutriGo(TM)"
+	desc = "A small pile of highly processed slop made of soy, lentils, and planton. It's the core ingredient to all food made in NestleCo AutoChefs. This plain flavor quite simply has no flavor at all."
+	icon_state = "soylent_s"
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/snacks/canteen/side/soylent/green
+	name = "NestleCo Vegi-Flavored NutriGo(TM)"
+	desc = "A small pile of highly processed slop made of soy, lentils, and planton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all plant-based imitation foods. Somehow despite being made of plants, it only almost tastes as good as an expired salad."
+	icon_state = "soylent_green_s"
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/snacks/canteen/side/soylent/red
+	name = "NestleCo Meat-Flavored NutriGo(TM)"
+	desc = "A small pile of highly processed slop made of soy, lentils, and planton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all meat-based imitation foods. One of the furthest things from real meat you could possibly get, flavor included."
+	icon_state = "soylent_red_s"
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/snacks/canteen/side/soylent/yellow
+	name = "NestleCo Grain-Flavored NutriGo(TM)"
+	desc = "A small pile of highly processed slop made of soy, lentils, and planton. It's the core ingredient to all food made in NestleCo AutoChefs, this one being the main ingredient of all grain-based imitation food. Unremarkable, tastes terrible, and only vaguely tastes like it might possibly be grain."
+	icon_state = "soylent_yellow_s"
+	w_class = SIZE_SMALL

@@ -331,6 +331,37 @@
 		"absinthe",
 	)
 
+/obj/structure/machinery/chem_dispenser/canteen
+	name = "NestleCo AutoDrink"
+	desc = "A NestleCo AutoDrink dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
+	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
+	icon_state = "drink"
+	ui_title = "NestleCo AutoDrink Dispenser W-A3"
+	dispensable_reagents = list(
+		"water",
+		"coffee",
+		"cream",
+		"tea",
+		"milk",
+		"soymilk",
+		"orangejuice",
+		"limejuice",
+		"watermelonjuice",
+		"tomatojuice",
+		"carrotjuice",
+		"berryjuice",
+		"grapejuice",
+		"lemonjuice",
+	)
+
+/obj/structure/machinery/chem_dispenser/canteen/update_icon()
+	. = ..()
+	overlays.Cut()
+	if(beaker)
+		overlays += "+beaker"
+		if(!inoperable())
+			overlays += "+onlight"
+
 #undef DISPENSER_UNHACKABLE
 #undef DISPENSER_NOT_HACKED
 #undef DISPENSER_HACKED

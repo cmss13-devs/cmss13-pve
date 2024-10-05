@@ -1128,12 +1128,17 @@
 	COOLDOWN_DECLARE(damage_delay)
 	/// list of quip emotes, taken from Working Joe
 	var/static/list/quips = list(
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/alwaysknow_damaged,
+		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/hello,
 		/datum/emote/living/carbon/human/synthetic/working_joe/quip/not_liking,
 		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/how_can_i_help,
 		/datum/emote/living/carbon/human/synthetic/working_joe/farewell/day_never_done,
-		/datum/emote/living/carbon/human/synthetic/working_joe/farewell/required_by_apollo,
-		/datum/emote/living/carbon/human/synthetic/working_joe/warning/safety_breach
+		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/been_looking_for_you,
+		/datum/emote/living/carbon/human/synthetic/working_joe/question/lost,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/alwaysknow,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/talk_to_seegson,
+		/datum/emote/living/carbon/human/synthetic/working_joe/restricted_area/interloper,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/seegson_quality,
+		/datum/emote/living/carbon/human/synthetic/working_joe/task_update/with_you_shortly
 	)
 	/// list of voicelines to use when damaged
 	var/static/list/damaged = list(
@@ -1197,26 +1202,3 @@
 	name = "Working Joe"
 	desc = "A Seegson-brand Working Joe, stored in the synthetic maintenance station to be called upon whenever you need. If only you had the keys."
 	icon_state = "joe"
-
-	quips = list(
-		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/hello,
-		/datum/emote/living/carbon/human/synthetic/working_joe/quip/not_liking,
-		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/how_can_i_help,
-		/datum/emote/living/carbon/human/synthetic/working_joe/farewell/day_never_done,
-		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/been_looking_for_you
-		/datum/emote/living/carbon/human/synthetic/working_joe/question/lost
-		/datum/emote/living/carbon/human/synthetic/working_joe/quip/alwaysknow
-		/datum/emote/living/carbon/human/synthetic/working_joe/quip/talk_to_seegson
-		/datum/emote/living/carbon/human/synthetic/working_joe/restricted_area/interloper
-		/datum/emote/living/carbon/human/synthetic/working_joe/quip/seegson_quality
-		/datum/emote/living/carbon/human/synthetic/working_joe/task_update/with_you_shortly
-	)
-	/// list of voicelines to use when damaged
-	damaged = list(
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/damage,
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/that_stings,
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/irresponsible,
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/this_is_futile,
-		/datum/emote/living/carbon/human/synthetic/working_joe/warning/hysterical,
-		/datum/emote/living/carbon/human/synthetic/working_joe/warning/patience
-	)
