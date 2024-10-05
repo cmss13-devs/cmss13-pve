@@ -39,28 +39,6 @@ GLOBAL_LIST_INIT(co_paygrades, list(
 	PAY_SHORT_AO4
 ))
 
-GLOBAL_LIST_INIT(highcom_paygrades, list(
-	"PvI",
-	"AO7",
-	"NO7",
-	"MO7",
-	"AO8",
-	"NO8",
-	"MO8",
-	"AO9",
-	"NO9",
-	"MO9",
-	"AO10",
-	"NO10",
-	"MO10",
-	"AO10C",
-	"NO10C",
-	"MO10C",
-	"PvO8",
-	"PvO9",
-	"PvCM"
-))
-
 /datum/paygrade/New()
 	. = ..()
 	switch(default_faction)
@@ -84,7 +62,7 @@ GLOBAL_LIST_INIT(highcom_paygrades, list(
 				.[pg_id] = new PG
 
 GLOBAL_LIST_INIT(platco_paygrades, list(
-	"MO3",
-	"MO2",
-	"MO1",
+	PAY_SHORT_MO3,
+	PAY_SHORT_MO2,
+	PAY_SHORT_MO1,
 ))
