@@ -77,7 +77,7 @@
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
-	job_options = list("Lance Corporal" = "LCpl", "Corporal" = "Cpl", "Sergeant" = "Sgt")
+	job_options = list("Corporal" = "Cpl", "Sergeant" = "Sgt")
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP

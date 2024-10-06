@@ -75,7 +75,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/forecon
-	job_options = list("Lance Corporal" = "LCpl", "Corporal" = "Cpl", "Sergeant" = "Sgt")
+	job_options = list("Corporal" = "Cpl", "Sergeant" = "Sgt")
 
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP

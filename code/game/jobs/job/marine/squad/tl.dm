@@ -51,7 +51,7 @@
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
-	job_options = list("Staff Sergeant" = "SSgt", "Gunnery Sergeant" = "GySgt")
+	job_options = list("Sergeant" = "Sgt", "Staff Sergeant" = "SSgt")
 
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP

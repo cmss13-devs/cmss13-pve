@@ -56,7 +56,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
-	job_options = list("Master Sergeant" = "MSgt", "Master Gunnery Sergeant" = "MGySgt")
+	job_options = list("Gunnery Sergeant" = "GySgt", "Master Sergeant" = "MSgt")
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
