@@ -61,9 +61,9 @@ interface DropshipNavigationProps extends NavigationProps {
   can_change_shuttle: 0 | 1;
   alternative_shuttles: Array<ShuttleRef>;
   playing_airlock_alarm: 0 | 1;
-  opened_upper_airlock: 0 | 1;
+  opened_inner_airlock: 0 | 1;
   lowered_dropship: 0 | 1;
-  opened_lower_airlock: 0 | 1;
+  opened_outer_airlock: 0 | 1;
 }
 
 const DropshipDoorControl = () => {
@@ -384,9 +384,9 @@ const EnableCautionAlarm = () => {
   const { act } = useBackend<NavigationProps>();
   return (
     <Button
-      icon="rocket"
+      icon="triangle-exclamation"
       onClick={() => {
-        act('enable_airlock_alarm');
+        act('airlock_alarm');
         act('button-push');
       }}
     >
@@ -401,7 +401,7 @@ const DisableCautionAlarm = () => {
     <Button
       icon="ban"
       onClick={() => {
-        act('disable_airlock_alarm');
+        act('airlock_alarm');
         act('button-push');
       }}
     >
@@ -410,32 +410,32 @@ const DisableCautionAlarm = () => {
   );
 };
 
-const OpenUpperAirlock = () => {
-  const { act } = useBackend<NavigationProps>();
-  return (
-    <Button
-      icon="door-closed"
-      onClick={() => {
-        act('enable_airlock_alarm');
-        act('button-push');
-      }}
-    >
-      Open Upper Airlock
-    </Button>
-  );
-};
-
-const CloseUpperAirlock = () => {
+const OpenInnerAirlock = () => {
   const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="door-open"
       onClick={() => {
-        act('disable_airlock_alarm');
+        act('inner_airlock');
         act('button-push');
       }}
     >
-      Close Upper Airlock
+      Open Inner Airlock
+    </Button>
+  );
+};
+
+const CloseInnerAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-close"
+      onClick={() => {
+        act('inner_airlock');
+        act('button-push');
+      }}
+    >
+      Close Inner Airlock
     </Button>
   );
 };
@@ -446,7 +446,7 @@ const RaiseDropship = () => {
     <Button
       icon="arrow-up"
       onClick={() => {
-        act('enable_airlock_alarm');
+        act('airlock_dropship');
         act('button-push');
       }}
     >
@@ -461,7 +461,7 @@ const LowerDropship = () => {
     <Button
       icon="arrow-down"
       onClick={() => {
-        act('disable_airlock_alarm');
+        act('airlock_dropship');
         act('button-push');
       }}
     >
@@ -470,32 +470,32 @@ const LowerDropship = () => {
   );
 };
 
-const OpenLowerAirlock = () => {
-  const { act } = useBackend<NavigationProps>();
-  return (
-    <Button
-      icon="door-closed"
-      onClick={() => {
-        act('enable_airlock_alarm');
-        act('button-push');
-      }}
-    >
-      Open Lower Airlock
-    </Button>
-  );
-};
-
-const CloseLowerAirlock = () => {
+const OpenOuterAirlock = () => {
   const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="door-open"
       onClick={() => {
-        act('disable_airlock_alarm');
+        act('outer_airlock');
         act('button-push');
       }}
     >
-      Close Lower Airlock
+      Open Outer Airlock
+    </Button>
+  );
+};
+
+const CloseOuterAirlock = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="door-close"
+      onClick={() => {
+        act('outer_airlock');
+        act('button-push');
+      }}
+    >
+      Close Outer Airlock
     </Button>
   );
 };
@@ -504,7 +504,7 @@ const DropshipAirlockSelect = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Section title="Dropship Airlock Control">
-      <Stack vertical grow>
+      <Stack vertical className="DestinationSelector">
         <Stack.Item>
           {!data.playing_airlock_alarm ? (
             <EnableCautionAlarm />
@@ -513,20 +513,20 @@ const DropshipAirlockSelect = () => {
           )}
         </Stack.Item>
         <Stack.Item>
-          {!data.opened_upper_airlock ? (
-            <OpenUpperAirlock />
+          {!data.opened_inner_airlock ? (
+            <OpenInnerAirlock />
           ) : (
-            <CloseUpperAirlock />
+            <CloseInnerAirlock />
           )}
         </Stack.Item>
         <Stack.Item>
           {!data.lowered_dropship ? <LowerDropship /> : <RaiseDropship />}
         </Stack.Item>
         <Stack.Item>
-          {!data.opened_lower_airlock ? (
-            <OpenLowerAirlock />
+          {!data.opened_outer_airlock ? (
+            <OpenOuterAirlock />
           ) : (
-            <CloseLowerAirlock />
+            <CloseOuterAirlock />
           )}
         </Stack.Item>
       </Stack>

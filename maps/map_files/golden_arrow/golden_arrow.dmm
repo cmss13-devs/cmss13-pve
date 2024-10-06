@@ -2027,7 +2027,7 @@
 /area/golden_arrow/supply)
 "ahp" = (
 /obj/effect/projector/bay_two,
-/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_two,
+/obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_two,
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aht" = (
@@ -9911,9 +9911,20 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aIm" = (
-/turf/closed/wall/almayer/outer{
-	layer = 1.99
+/obj/effect/hangar_airlock/outline{
+	layer = 2;
+	pixel_x = -64;
+	pixel_y = -64
 	},
+/obj/effect/hangar_airlock/inner{
+	pixel_x = -64;
+	pixel_y = -64
+	},
+/obj/effect/hangar_airlock/height_mask{
+	pixel_x = -64;
+	pixel_y = -64
+	},
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "aIn" = (
 /turf/open/floor/almayer/edge/north,
@@ -10179,7 +10190,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "aJe" = (
-/obj/structure/machinery/floodlight/landing,
+/obj/structure/machinery/floodlight/landing{
+	mouse_opacity = 0;
+	alpha = 0
+	},
+/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_two,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aJf" = (
@@ -13341,7 +13356,7 @@
 /area/golden_arrow/hangar)
 "aUX" = (
 /obj/effect/projector/bay_one,
-/obj/docking_port/stationary/marine_dropship/airlock/lower/golden_arrow_one,
+/obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_one,
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "aUY" = (
@@ -14540,10 +14555,20 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aZD" = (
-/obj/effect/hangar_airlock/outline,
-/obj/effect/hangar_airlock/inner,
-/obj/structure/machinery/floodlight/landing,
-/turf/open/floor/almayer/plate,
+/obj/effect/hangar_airlock/inner{
+	pixel_x = -64;
+	pixel_y = -64
+	},
+/obj/effect/hangar_airlock/outline{
+	layer = 2;
+	pixel_x = -64;
+	pixel_y = -64
+	},
+/obj/effect/hangar_airlock/height_mask{
+	pixel_x = -64;
+	pixel_y = -64
+	},
+/turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "aZG" = (
 /obj/effect/decal/cleanable/dirt{
@@ -14823,7 +14848,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "bZF" = (
@@ -15444,7 +15468,6 @@
 /obj/effect/decal/siding{
 	icon_state = "siding2"
 	},
-/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "hxJ" = (
@@ -15508,8 +15531,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "icW" = (
-/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_two,
-/obj/effect/hangar_airlock/height_mask,
+/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "idK" = (
@@ -15548,13 +15570,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"iLQ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/floodlight/landing,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "iRi" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -15757,8 +15772,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "krq" = (
-/obj/docking_port/stationary/marine_dropship/airlock/upper/golden_arrow_one,
-/obj/effect/hangar_airlock/height_mask,
+/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "kuE" = (
@@ -16657,6 +16671,14 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
+"rpz" = (
+/obj/structure/machinery/floodlight/landing{
+	mouse_opacity = 0;
+	alpha = 0
+	},
+/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "rqE" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -16938,7 +16960,6 @@
 /turf/open/floor/hangar_airlock/outer,
 /area/golden_arrow/hangar)
 "tLo" = (
-/obj/effect/hangar_airlock/height_mask,
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "tTk" = (
@@ -17130,14 +17151,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
-"wic" = (
-/obj/effect/hangar_airlock/outline{
-	layer = 2
-	},
-/obj/effect/hangar_airlock/inner,
-/obj/structure/machinery/floodlight/landing,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "wnq" = (
 /obj/structure/sign/safety/hazard{
 	pixel_y = -25
@@ -23460,8 +23473,8 @@ aEG
 aEG
 aEG
 adz
-adz
 amQ
+adz
 adz
 adz
 adz
@@ -23482,7 +23495,7 @@ adz
 adz
 adz
 adz
-aIm
+amQ
 adz
 aqP
 aUL
@@ -23490,8 +23503,8 @@ apn
 aPE
 aMA
 adz
-adz
 tik
+adz
 adz
 adz
 adz
@@ -23511,8 +23524,8 @@ adz
 adz
 adz
 adz
-tik
 adz
+tik
 adz
 aEG
 aEG
@@ -23634,7 +23647,7 @@ wzO
 amk
 adz
 anz
-amQ
+adz
 adz
 aDZ
 awl
@@ -25284,8 +25297,8 @@ aEG
 aEG
 aEG
 adz
-adz
 amQ
+adz
 adz
 adz
 adz
@@ -25314,8 +25327,8 @@ ano
 adk
 aBV
 adz
-adz
 tik
+adz
 adz
 adz
 adz
@@ -25335,8 +25348,8 @@ adz
 adz
 adz
 adz
-tik
 adz
+tik
 adz
 aEG
 aEG
@@ -31424,7 +31437,7 @@ aWl
 ajZ
 aCt
 aOQ
-aJe
+rpz
 alu
 alu
 aKa
@@ -31435,7 +31448,7 @@ alu
 aKa
 aKa
 aKa
-aJe
+rpz
 alu
 aKa
 alu
@@ -31446,7 +31459,7 @@ alu
 alu
 alu
 alu
-wic
+rpz
 acB
 aWa
 aWa
@@ -31476,7 +31489,7 @@ alu
 alu
 aKa
 alu
-aZD
+aJe
 acB
 aRe
 agv
@@ -31748,7 +31761,7 @@ tLo
 tLo
 tLo
 tLo
-tLo
+aIm
 tLo
 alu
 aiG
@@ -31778,7 +31791,7 @@ tLo
 tLo
 tLo
 tLo
-tLo
+aZD
 hxk
 azz
 acB
@@ -33248,7 +33261,7 @@ awc
 ajc
 aFf
 aOQ
-aJe
+rpz
 alu
 alu
 aKa
@@ -33259,7 +33272,7 @@ alu
 reV
 alu
 alu
-aJe
+rpz
 alu
 aKa
 aKa
@@ -33270,7 +33283,7 @@ alu
 alu
 alu
 alu
-aJe
+rpz
 acB
 aWa
 aWa
@@ -33289,7 +33302,7 @@ alu
 alu
 alu
 alu
-iLQ
+aJe
 alu
 alu
 aKa

@@ -80,7 +80,7 @@
 	wrenchable = FALSE
 	toggleable = FALSE
 	turned_on = TRUE
-	light_power = 2
+	light_power = 1
 	on_light_range = 10
 
 /obj/structure/machinery/floodlight/landing/floor
@@ -91,3 +91,19 @@
 /obj/structure/machinery/floodlight/landing/floor/update_icon()
 	. = ..()
 	icon_state = "floor_flood0[light_on]"
+
+/obj/structure/machinery/floodlight/landing/airlock
+
+	var/hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner
+
+/obj/structure/machinery/floodlight/landing/airlock/Initialize(mapload, ...)
+	. = ..()
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/hangar_dock = locate(hangar_dock_path)
+	if(hangar_dock)
+		hangar_dock.floodlights += src
+
+/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one
+	hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
+
+/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_two
+	hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two

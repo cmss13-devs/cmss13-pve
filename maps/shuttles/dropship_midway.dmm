@@ -439,8 +439,7 @@
 /area/shuttle/midway)
 "Jn" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23
+	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -656,8 +655,8 @@ Kw
 Mw
 Yr
 Gk
-mA
 tT
+mA
 mA
 BI
 dE
@@ -679,8 +678,8 @@ TE
 CX
 NK
 XS
-Jn
 zG
+XS
 us
 Kw
 Kw
@@ -714,9 +713,9 @@ XS
 dd
 aP
 NK
-XS
-XS
+Jn
 DO
+XS
 WF
 Kw
 Kw
@@ -728,8 +727,8 @@ Kw
 UI
 rq
 kL
-PW
 oB
+PW
 PW
 Lr
 yB
