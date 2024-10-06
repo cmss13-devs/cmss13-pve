@@ -14,7 +14,7 @@
 	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCpl", CPL_VARIANT = "Cpl")
 
 /datum/job/marine/medic/set_spawn_positions(count)
-	for(var/datum/squad/sq in RoleAuthority.squads)
+	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 		if(sq)
 			sq.max_medics = medic_slot_formula(count)
 
@@ -27,7 +27,7 @@
 		total_positions_so_far = slots
 
 	if(latejoin)
-		for(var/datum/squad/sq in RoleAuthority.squads)
+		for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 			if(sq)
 				sq.max_medics = slots
 
@@ -37,11 +37,6 @@
 	title = JOB_WO_SQUAD_MEDIC
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/wo/marine/medic
-
-AddTimelock(/datum/job/marine/medic, list(
-	JOB_MEDIC_ROLES = 1 HOURS,
-	JOB_SQUAD_ROLES = 1 HOURS
-))
 
 /obj/effect/landmark/start/marine/medic
 	name = JOB_SQUAD_MEDIC

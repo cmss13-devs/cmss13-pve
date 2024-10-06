@@ -30,7 +30,7 @@
 	density = 0
 	},
 /turf/open/floor/almayer,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "G" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
@@ -41,7 +41,7 @@
 	dir = 1
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "H" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 4;
@@ -56,7 +56,7 @@
 	pixel_x = 20
 	},
 /turf/open/floor/almayer,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "I" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
@@ -73,7 +73,7 @@
 	pixel_x = 7
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "N" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 50;
@@ -83,7 +83,7 @@
 	pixel_y = -10
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 "X" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
@@ -95,7 +95,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor,
-/area/vehicle/apc/arc)
+/area/interior/vehicle/arc)
 
 (1,1,1) = {"
 a

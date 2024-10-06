@@ -31,7 +31,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/pixel_shift_y = 16 //Uses the bottom left corner of the item.
 
 	flags_atom =  FPRINT|CONDUCT
-	matter = list("metal" = 2000)
+	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
 	var/slot = null //"muzzle", "rail", "under", "stock", "special"
@@ -250,7 +250,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/suppressor
 	name = "suppressor"
-	desc = "A small tube with exhaust ports to expel noise and gas.\n Does not completely silence a weapon, but does make it much quieter and a little more accurate and stable at the cost of slightly reduced damage."
+	desc = "Small muzzle device that reduces flash and noise with special internal geometry.\n Reduces noise of the shot, increases accuracy and stability, but penalizes damage marginally."
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "suppressor"
 	slot = "muzzle"
@@ -278,7 +278,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "The standard-issue bayonet of the Colonial Marines. You can slide this knife into your boots, or attach it to the end of a rifle."
+	desc = "USCMC standard issue combat knife. Can be put into boot holster or affixed to the bayonet lug of a rifle. Can also be used to extract shrapnel..."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
 	throwforce = MELEE_FORCE_NORMAL
@@ -344,6 +344,10 @@ Defined in conflicts.dm of the #defines folder.
 	throw_range = 7
 	pry_delay = 1 SECONDS
 
+/obj/item/attachable/bayonet/van_bandolier
+	name = "\improper Fairbairn-Sykes fighting knife"
+	desc = "This isn't for dressing game or performing camp chores. It's almost certainly not an original. Almost."
+
 /obj/item/attachable/bayonet/co2/update_icon()
 	icon_state = "co2_knife[filled ? "-f" : ""]"
 	attach_icon = "co2_bayonet[filled ? "-f" : ""]_a"
@@ -352,16 +356,16 @@ Defined in conflicts.dm of the #defines folder.
 	if(istype(W, /obj/item/co2_cartridge))
 		if(!filled)
 			filled = TRUE
-			user.visible_message(SPAN_NOTICE("[user] slots a CO2 cartridge into [src]. A second later, \he apparently looks dismayed."), SPAN_WARNING("You slot a fresh CO2 cartridge into [src] and snap the slot cover into place. Only then do you realize \the [W]'s valve broke inside \the [src]. Fuck."))
+			user.visible_message(SPAN_NOTICE("[user] slots a CO2 cartridge into [src]. A second later, \he apparently looks dismayed."), SPAN_WARNING("You slot a fresh CO2 cartridge into [src] and snap the slot cover into place. Only then do you realize [W]'s valve broke inside [src]. Fuck."))
 			playsound(src, 'sound/machines/click.ogg')
 			qdel(W)
 			update_icon()
 			return
 		else
-			user.visible_message(SPAN_WARNING("[user] fiddles with \the [src]. \He looks frustrated."), SPAN_NOTICE("No way man! You can't seem to pry the existing container out of \the [src]... try a screwdriver?"))
+			user.visible_message(SPAN_WARNING("[user] fiddles with [src]. \He looks frustrated."), SPAN_NOTICE("No way man! You can't seem to pry the existing container out of [src]... try a screwdriver?"))
 			return
 	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
-		user.visible_message(SPAN_WARNING("[user] screws with \the [src], using \a [W]. \He looks very frustrated."), SPAN_NOTICE("You try to pry the cartridge out of the [src], but it's stuck damn deep. Piece of junk..."))
+		user.visible_message(SPAN_WARNING("[user] screws with [src], using \a [W]. \He looks very frustrated."), SPAN_NOTICE("You try to pry the cartridge out of [src], but it's stuck damn deep. Piece of junk..."))
 		return
 	..()
 
@@ -375,7 +379,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
-	desc = "The lengthened barrel speeds up and stabilizes the bullet, increasing velocity and accuracy."
+	desc = "Longer barrel reduces unburnt powder, improving muzzle velocity and accuracy."
 	slot = "muzzle"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "ebarrel"
@@ -452,7 +456,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/f90_dmr_barrel
 	name = "f90 barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "aug_dmr_barrel_a"
 	attach_icon = "aug_dmr_barrel_a"
 	slot = "muzzle"
@@ -463,7 +467,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/f90_shotgun_barrel
 	name = "f90 barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "aug_mkey_barrel_a"
 	attach_icon = "aug_mkey_barrel_a"
 	slot = "muzzle"
@@ -474,7 +478,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/l56a2_smartgun
 	name = "l56a2 barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "magsg_barrel_a"
 	attach_icon = "magsg_barrel_a"
 	slot = "muzzle"
@@ -493,6 +497,20 @@ Defined in conflicts.dm of the #defines folder.
 	hud_offset_mod = -3
 
 /obj/item/attachable/sniperbarrel/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+
+/obj/item/attachable/pmc_sniperbarrel
+	name = "sniper barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "pmc_sniperbarrel"
+	desc = "A heavy barrel. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -3
+
+/obj/item/attachable/pmc_sniperbarrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
@@ -613,8 +631,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/reddot
 	name = "S5 red-dot sight"
-	desc = "An ARMAT S5 red-dot sight. A zero-magnification optic that offers faster, and more accurate target acquisition."
-	desc_lore = "An all-weather collimator sight, designated as the AN/PVQ-64 Dot Sight. Equipped with a sunshade to increase clarity in bright conditions and resist weathering. Compact and efficient, a marvel of military design, until you realize that this is actually just an off-the-shelf design that got a military designation slapped on."
+	desc = "An ARMAT S5 red-dot, type designated as the AN/PVQ-62 Dot Sight. Zero-magnification optic equipped with a sunshade, for better clarity under bright conditions and weather resistance. Unobtrusive and compact, increases wielded accuracy."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "reddot"
 	attach_icon = "reddot_a"
@@ -626,10 +643,13 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
+/obj/item/attachable/reddot/upp
+	name = "EKP-9-M Red Dot Sight"
+	desc = "Cutting edge UPP sight with automated reticle correction for a fixed zero point. Increases accuracy significantly."
+
 /obj/item/attachable/reflex
 	name = "S6 reflex sight"
-	desc = "An ARMAT S6 reflex sight. A zero-magnification alternative to iron sights with a more open optic window when compared to the S5 red-dot. Helps to reduce scatter during automated fire."
-	desc_lore = "A simple folding reflex sight designated as the AN/PVG-72 Reflex Sight, compatible with most rail systems. Bulky and built to last, it can link with military HUDs for limited point-of-aim calculations."
+	desc = "An ARMAT S6 reflex sight, type designated as the AN/PVG-72 Reflex. Zero-magnification alternative to irons, decreases scatter during burst fire. Can link with mil-HUDs for a limited CCIP."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "reflex"
 	attach_icon = "reflex_a"
@@ -643,10 +663,13 @@ Defined in conflicts.dm of the #defines folder.
 	burst_scatter_mod = -1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 
+/obj/item/attachable/reflex/upp
+	name = "PK-12 Reflex Sight"
+	desc = "Reflector type gunsight compatible with most standard issue UPP firearms. Durable but the power supply is notoriously unreliable. Reduces scatter significantly and boosts accuracy slightly."
 
 /obj/item/attachable/flashlight
 	name = "rail flashlight"
-	desc = "A flashlight, for rails, on guns. Can be toggled on and off. A better light source than standard M3 pattern armor lights."
+	desc = "Railmounted flashlight. Pretty generic. Surprisingly high intensity, as it's a better light source than the suit lamps of most armor systems."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "flashlight"
 	attach_icon = "flashlight_a"
@@ -806,6 +829,10 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_NOTICE("Hold on there cowboy, that grip is bolted on. You are unable to modify it."))
 	return
 
+/obj/item/attachable/flashlight/grip/upp
+	name = "RK-5A Flashlight Grip"
+	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
+
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
 	name = "VP78 Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
@@ -899,8 +926,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "sniperscope"
 	attach_icon = "sniperscope_a"
-	desc = "An ARMAT S8 telescopic eye piece. Fixed at 4x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
-	desc_lore = "An intermediate-power Armat scope designated as the AN/PVQ-31 4x Optic. Fairly basic, but both durable and functional... enough. 780 meters is about as far as one can push the 10x24mm cartridge, really."
+	desc = "An ARMAT S8 scope, type designation AN/PVQ-31. Fixed 4x zoom, reduces fire rate and increases wield time but increases accuracy while scoped."
 	slot = "rail"
 	aim_speed_mod = SLOWDOWN_ADS_SCOPE //Extra slowdown when wielded
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -989,6 +1015,10 @@ Defined in conflicts.dm of the #defines folder.
 #define ZOOM_LEVEL_2X 0
 #define ZOOM_LEVEL_4X 1
 
+/obj/item/attachable/scope/upp
+	name = "PO-M 4x Optic"
+	desc = "Old fashioned 4x scope. Sturdy, but a little unergonomic. UPP tradition. Reduces RoF and increases wield time. Major accuracy bonus when scoped."
+
 /obj/item/attachable/scope/variable_zoom
 	name = "S10 variable zoom telescopic scope"
 	desc = "An ARMAT S10 telescopic eye piece. Can be switched between 2x zoom, which allows the user to move while scoped in, and 4x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
@@ -1042,6 +1072,7 @@ Defined in conflicts.dm of the #defines folder.
 	button.name = name
 
 /datum/action/item_action/toggle_zoom_level/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/G = holder_item
 	var/obj/item/attachable/scope/variable_zoom/S = G.attachments["rail"]
 	S.toggle_zoom_level()
@@ -1071,8 +1102,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "S4 2x telescopic mini-scope"
 	icon_state = "miniscope"
 	attach_icon = "miniscope_a"
-	desc = "An ARMAT S4 telescoping eye piece. Fixed at a modest 2x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
-	desc_lore = "A light-duty optic, designated as the AN/PVQ-45 2x Optic. Suited towards short to medium-range engagements. Users are advised to zero it often, as the first mass-production batch had a tendency to drift in one direction or another with sustained use."
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed. \nZero often, first production batch suffered from drifting under heavy use and some of them might be in circulation still."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
@@ -1095,6 +1125,10 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
+/obj/item/attachable/scope/mini/upp
+	name = "1P93 2x Optic"
+	desc = "Mild update of a 2159 UPP design. Holds zero in all conditions, antiglint grid prevents glare, but the reticle is unfortunately cluttered and busy. Reduces RoF and increases wield time, boosts accuracy while scoped."
+
 /obj/item/attachable/scope/mini/flaregun
 	wield_delay_mod = 0
 	dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
@@ -1116,11 +1150,11 @@ Defined in conflicts.dm of the #defines folder.
 	name = "2x hunting mini-scope"
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
-	desc = "This civilian-grade scope is a common sight on hunting rifles due to its cheap price and great optics. Fixed at a modest 2x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."
+	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
-	desc = "An ARMAT S4 telescoping eye piece, custom-tuned by W-Y scientists to be as ergonomic as possible."
+	desc = "An ARMAT S4 telescoping eye piece, revised by W-Y scientists to be much more ergonomic."
 	icon_state = "miniscope_nsg23"
 	attach_icon = "miniscope_nsg23_a"
 	zoom_offset = 7
@@ -1128,7 +1162,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
-	desc = "An ARMAT XS-9 optical interface. Unlike a traditional scope, this rail-mounted device features no telescoping lens. Instead, the firearm's onboard targeting system relays data directly to the optic for the system operator to reference in realtime."
+	desc = "An ARMAT XS-9 optical interface, type designation XAN/PVG-90. Computer controlled 2x magnification with electronic fire control system, interfacing with the rifle's sensors to provide near perfect shooting accuracy... In theory."
 	icon_state = "boomslang-scope"
 	zoom_offset = 7
 	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
@@ -1138,12 +1172,16 @@ Defined in conflicts.dm of the #defines folder.
 	select_gamemode_skin(type)
 	attach_icon = icon_state
 
+/obj/item/attachable/scope/mini/sadar
+	name = "M83A2 SADAR sight assembly"
+	desc = "SADAR sight system."
+	zoom_offset = 3
+
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
 	attach_icon = "iffbarrel_a"
-	desc = "An experimental B8 Smart-Scope. Based on the technologies used in the Smart Gun by ARMAT, this sight has integrated IFF systems. It can only attach to the M4RA Battle Rifle and M44 Combat Revolver."
-	desc_lore = "An experimental fire-control optic capable of linking into compatible IFF systems on certain weapons, designated the XAN/PVG-110 Smart Scope. Currently programmed for usage with the M4RA battle rifle and M44 Combat Revolver, due to their relatively lower rates of fire. Experimental technology developed by Armat, who have assured that all previously reported issues with false-negative IFF recognitions have been solved. Make sure to check the sight after every op, just in case."
+	desc = "An experimental B8 Smart-Scope, type designation XAN/PVG-110. Limited automated IFF trigger interlock system allows for use with the M44 Combat Revolver and M4RA Battle Rifle. Reduces damage due to the momentary trigger delay."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
@@ -1259,6 +1297,19 @@ Defined in conflicts.dm of the #defines folder.
 	QDEL_NULL(scope_element)
 	return ..()
 
+/obj/item/attachable/vulture_scope/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+
 /obj/item/attachable/vulture_scope/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -1290,7 +1341,7 @@ Defined in conflicts.dm of the #defines folder.
 	switch(action)
 		if("adjust_dir")
 			var/direction = params["offset_dir"]
-			if(!(direction in alldirs) || !scoping || !scope_user)
+			if(!(direction in GLOB.alldirs) || !scoping || !scope_user)
 				return
 
 			var/mob/scoper = scope_user.resolve()
@@ -1307,7 +1358,7 @@ Defined in conflicts.dm of the #defines folder.
 
 		if("adjust_position")
 			var/direction = params["position_dir"]
-			if(!(direction in alldirs) || !scoping || !scope_user)
+			if(!(direction in GLOB.alldirs) || !scoping || !scope_user)
 				return
 
 			var/mob/scoper = scope_user.resolve()
@@ -1374,7 +1425,7 @@ Defined in conflicts.dm of the #defines folder.
 	return TRUE
 
 /obj/item/attachable/vulture_scope/proc/get_offset_dirs()
-	var/list/possible_dirs = alldirs.Copy()
+	var/list/possible_dirs = GLOB.alldirs.Copy()
 	if(scope_offset_x >= scope_drift_max)
 		possible_dirs -= list(NORTHEAST, EAST, SOUTHEAST)
 	else if(scope_offset_x <= -scope_drift_max)
@@ -1391,7 +1442,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/vulture_scope/proc/get_adjust_dirs()
 	if(!scoping)
 		return list()
-	var/list/possible_dirs = alldirs.Copy()
+	var/list/possible_dirs = GLOB.alldirs.Copy()
 	var/turf/current_turf = get_turf(src)
 	var/turf/scope_tile = locate(scope_x, scope_y, current_turf.z)
 	var/mob/scoper = scope_user.resolve()
@@ -1575,7 +1626,7 @@ Defined in conflicts.dm of the #defines folder.
 	scoper.clear_fullscreen("vulture")
 	scoper.client.remove_from_screen(scope_element)
 	scoper.see_in_dark -= darkness_view
-	scoper.lighting_alpha = 127
+	scoper.lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	scoper.sync_lighting_plane_alpha()
 	QDEL_NULL(scope_element)
 	recalculate_scope_pos()
@@ -1649,6 +1700,7 @@ Defined in conflicts.dm of the #defines folder.
 /datum/action/item_action/vulture
 
 /datum/action/item_action/vulture/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/gun_holder = holder_item
 	var/obj/item/attachable/vulture_scope/scope = gun_holder.attachments["rail"]
 	if(!istype(scope))
@@ -1713,8 +1765,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 
 /obj/item/attachable/stock/shotgun
-	name = "\improper M37 wooden stock"
-	desc = "A non-standard heavy wooden stock for the M37 Shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
+	name = "\improper Ithaca 37 wooden stock"
+	desc = "A standard wooden stock for the Ithaca pump-action shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
 	icon_state = "stock"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -1735,8 +1787,6 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 	//but at the same time you are slow when 2 handed
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
-
-	matter = list("wood" = 2000)
 
 	select_gamemode_skin(type)
 
@@ -1786,7 +1836,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/xm88
 	name = "\improper XM88 padded stock"
-	desc = "A specially made compound polymer stock reinforced with aluminum rods and thick rubber padding to shield the user from recoil. Fitted specifically for the XM88 Heavy Rifle."
+	desc = "A polymer framed alloy reinforced stock for the XM88 antimateriel rifle. Helps manage recoil."
 	icon_state = "boomslang-stock"
 	wield_delay_mod = WIELD_DELAY_NORMAL
 	hud_offset_mod = 6
@@ -1802,6 +1852,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/vulture
 	name = "\improper M707 heavy stock"
 	icon_state = "vulture_stock"
+	attach_icon = "vulture_stock"
 	hud_offset_mod = 3
 
 /obj/item/attachable/stock/vulture/Initialize(mapload, ...)
@@ -1809,9 +1860,22 @@ Defined in conflicts.dm of the #defines folder.
 	select_gamemode_skin(type)
 	// Doesn't give any stat additions due to the gun already having really good ones, and this is unremovable from the gun itself
 
+/obj/item/attachable/stock/vulture/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+
 /obj/item/attachable/stock/tactical
-	name = "\improper MK221 tactical stock"
-	desc = "A metal stock made for the MK221 tactical shotgun."
+	name = "\improper M120 tactical stock"
+	desc = "A metal stock made for the M120 tactical shotgun."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -1844,6 +1908,33 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
+
+/obj/item/attachable/stock/type23/wood
+	name = "\improper KS-29 wooden stock"
+	desc = "A standard heavy wooden stock for the KS-29 riot shotgun. Allegedly makes a pretty good club in a fight too."
+	slot = "stock"
+	icon_state = "type23_wood"
+	wield_delay_mod = WIELD_DELAY_FAST
+	pixel_shift_x = 32
+	pixel_shift_y = 15
+	hud_offset_mod = 6 //*Very* long sprite.
+	flags_attach_features = NO_FLAGS
+
+/obj/item/attachable/stock/type23/wood/New()
+	..()
+	//it makes stuff much better when two-handed
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	recoil_mod = -RECOIL_AMOUNT_TIER_4
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	//it makes stuff much worse when one handed
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+	//but at the same time you are slow when 2 handed
+	aim_speed_mod = CONFIG_GET(number/slowdown_med)
+
+	matter = list("wood" = 2000)
 
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
@@ -1942,8 +2033,8 @@ Defined in conflicts.dm of the #defines folder.
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
 /obj/item/attachable/stock/rifle/collapsible
-	name = "\improper M41A folding stock"
-	desc = "The standard back end of any gun starting with \"M41\". Compatible with the M41A series, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Also enhances the thwacking of things with the stock-end of the rifle."
+	name = "\improper M41A extendable stock"
+	desc = "The M41A's standard polymer extendable stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
 	slot = "stock"
 	melee_mod = 5
 	size_mod = 1
@@ -2093,9 +2184,46 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	hud_offset_mod = 2
 
-/obj/item/attachable/stock/mod88
-	name = "\improper Mod 88 burst stock"
-	desc = "Increases the fire rate and burst amount on the Mod 88. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
+/obj/item/attachable/stock/xm51
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 breaching shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. Integrated mechanisms inside the stock allow use of a devastating two-shot burst. This comes at a cost of the gun becoming too unwieldy to holster, worse handling and mobility."
+	icon_state = "xm51_stock"
+	attach_icon = "xm51_stock_a"
+	wield_delay_mod = WIELD_DELAY_FAST
+	hud_offset_mod = 3
+	melee_mod = 10
+
+/obj/item/attachable/stock/xm51/Initialize(mapload, ...)
+	. = ..()
+	select_gamemode_skin(type)
+	//it makes stuff much better when two-handed
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	recoil_mod = -RECOIL_AMOUNT_TIER_4
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
+	//and allows for burst-fire
+	burst_mod = BURST_AMOUNT_TIER_2
+	//but it makes stuff much worse when one handed
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_5
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_6
+	//and makes you slower
+	aim_speed_mod = CONFIG_GET(number/slowdown_med)
+
+/obj/item/attachable/stock/xm51/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+
+/obj/item/attachable/stock/vp70
+	name = "\improper VP70 burst stock"
+	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2104,7 +2232,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 2
 	melee_mod = 5
 
-/obj/item/attachable/stock/mod88/New()
+/obj/item/attachable/stock/vp70/New()
 	..()
 	//2h
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
@@ -2185,7 +2313,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/m4ra_barrel
 	name = "M4RA barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "m4ra_barrel"
 	attach_icon = "m4ra_barrel"
 	slot = "special"
@@ -2194,7 +2322,7 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m4ra_barrel/New()
+/* /obj/item/attachable/m4ra_barrel/New()
 	..()
 	select_gamemode_skin(type)
 
@@ -2207,11 +2335,11 @@ Defined in conflicts.dm of the #defines folder.
 		if("desert")
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
 
 /obj/item/attachable/m4ra_barrel_custom
 	name = "custom M4RA barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "m4ra_custom_barrel"
 	attach_icon = "m4ra_custom_barrel"
 	slot = "special"
@@ -2242,7 +2370,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 	icon_state = "hjra_breech"
 	attach_icon = "hjra_breech"
@@ -2254,7 +2382,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/pkpbarrel
 	name = "QYJ-72 Barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "uppmg_barrel"
 	attach_icon = "uppmg_barrel"
@@ -2266,7 +2394,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/pkpstock
 	name = "QYJ-72 Stock"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 	icon_state = "uppmg_stock"
 	attach_icon = "uppmg_stock"
@@ -2278,7 +2406,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/type88_barrel
 	name = "Type-88 Barrel"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "type88_barrel"
 	attach_icon = "type88_barrel"
@@ -2290,7 +2418,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/type73suppressor
 	name = "Type 73 Integrated Suppressor"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "type73_suppressor"
 	attach_icon = "type73_suppressor"
@@ -2302,7 +2430,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/type71
 	name = "Type 71 Stock"
-	desc = "This isn't supposed to be seperated from the gun, how'd this happen?"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 	icon_state = "type71_stock"
 	attach_icon = "type71_stock"
@@ -2314,6 +2442,33 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/type71/New()
 	..()
+
+/obj/item/attachable/stock/m60
+	name = "M60 stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "m60_stock"
+	attach_icon = "m60_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
+
+/obj/item/attachable/stock/ppsh
+	name = "PPSh-17b stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "ppsh17b_stock"
+	attach_icon = "ppsh17b_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 10
+	size_mod = 0
+
+
 
 /obj/item/attachable/stock/smg
 	name = "submachinegun stock"
@@ -2431,7 +2586,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/smg/collapsible/brace/apply_on_weapon(obj/item/weapon/gun/G)
 	if(stock_activated)
-		G.flags_item |= NODROP
+		G.flags_item |= NODROP|FORCEDROP_CONDITIONAL
 		accuracy_mod = -HIT_ACCURACY_MULT_TIER_3
 		scatter_mod = SCATTER_AMOUNT_TIER_8
 		recoil_mod = RECOIL_AMOUNT_TIER_2 //Hurts pretty bad if it's wielded.
@@ -2442,7 +2597,7 @@ Defined in conflicts.dm of the #defines folder.
 		icon_state = "smg_brace_on"
 		attach_icon = "smg_brace_a_on"
 	else
-		G.flags_item &= ~NODROP
+		G.flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 		accuracy_mod = 0
 		scatter_mod = 0
 		recoil_mod = 0
@@ -2651,7 +2806,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
 	icon_state = "grenade"
-	attach_icon = "grenade_a"
+	attach_icon = "grenade"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
@@ -2813,18 +2968,28 @@ Defined in conflicts.dm of the #defines folder.
 
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
-	name = "\improper MK1 underslung grenade launcher"
-	desc = "An older version of the classic underslung grenade launcher. Can store five grenades, and fire them farther, but fires them slower."
+	name = "\improper PN 30mm underslung grenade launcher"
+	desc = "Standard pump action underslung grenade launcher. Fits the M41A, four round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
 	current_rounds = 0
 	max_rounds = 5
 	max_range = 10
-	attachment_firing_delay = 30
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/m120
+	name = "\improper PN/c 30mm underslung grenade launcher"
+	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, three round tube, chambers one."
+	icon_state = "grenade-mk1"
+	attach_icon = "grenade-mk1_a"
+	current_rounds = 0
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
@@ -2908,7 +3073,7 @@ Defined in conflicts.dm of the #defines folder.
 			current_rounds += transfered_rounds
 			FT.current_rounds -= transfered_rounds
 
-			var/amount_of_reagents = FT.reagents.reagent_list.len
+			var/amount_of_reagents = length(FT.reagents.reagent_list)
 			var/amount_removed_per_reagent = transfered_rounds / amount_of_reagents
 			for(var/datum/reagent/R in FT.reagents.reagent_list)
 				R.volume -= amount_removed_per_reagent
@@ -2938,7 +3103,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/flamer/proc/unleash_flame(atom/target, mob/living/user)
 	set waitfor = 0
-	var/list/turf/turfs = getline2(user,target)
+	var/list/turf/turfs = get_line(user,target)
 	var/distance = 0
 	var/turf/prev_T
 	var/stop_at_turf = FALSE
@@ -3003,7 +3168,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper U7 underbarrel shotgun"
 	icon_state = "masterkey"
 	attach_icon = "masterkey_a"
-	desc = "An ARMAT U7 tactical shotgun. Attaches to the underbarrel of most weapons. Only capable of loading up to five buckshot shells. Specialized for breaching into buildings."
+	desc = "An ARMAT U7 tactical shotgun. Attaches to the underbarrel of most weapons. Only capable of loading up to five buckshot shells. Specialized for breaching into buildings, shorter barrel reduces actual damage."
 	w_class = SIZE_MEDIUM
 	max_rounds = 5
 	current_rounds = 5
@@ -3050,7 +3215,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "HME-12 underbarrel extinguisher"
 	icon_state = "extinguisher"
 	attach_icon = "extinguisher_a"
-	desc = "A Taiho-Technologies HME-12 underbarrel extinguisher. Attaches to the underbarrel of most weapons. Point at flame before applying pressure."
+	desc = "A Taiho-Technologies HME-12 underbarrel extinguisher, a miniaturization of a complex used by firefighters. Attaches to the underbarrel of most weapons, point at fire to remove fire."
 	w_class = SIZE_MEDIUM
 	slot = "under"
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_WEAPON|ATTACH_MELEE
@@ -3154,21 +3319,29 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_WARNING("\The [gun] doesn't have enough fuel to launch a projectile!"))
 		return
 
+	if(istype(flamer_reagent, /datum/reagent/foaming_agent/stabilized))
+		to_chat(user, SPAN_WARNING("This chemical will clog the nozzle!"))
+		return
+
+	if(istype(gun.current_mag, /obj/item/ammo_magazine/flamer_tank/smoke)) // you can't fire smoke like a projectile!
+		to_chat(user, SPAN_WARNING("[src] can't be used with this fuel tank!"))
+		return
+
 	gun.last_fired = world.time
 	gun.current_mag.reagents.remove_reagent(flamer_reagent.id, FLAME_REAGENT_USE_AMOUNT * fuel_per_projectile)
 
 	var/obj/projectile/P = new(src, create_cause_data(initial(name), user, src))
 	var/datum/ammo/flamethrower/ammo_datum = new projectile_type
-	ammo_datum.flamer_reagent_type = flamer_reagent.type
+	ammo_datum.flamer_reagent_id = flamer_reagent.id
 	P.generate_bullet(ammo_datum)
 	P.icon_state = "naptha_ball"
-	P.color = flamer_reagent.color
+	P.color = flamer_reagent.burncolor
 	P.hit_effect_color = flamer_reagent.burncolor
 	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
 	var/turf/user_turf = get_turf(user)
 	playsound(user_turf, pick(fire_sounds), 50, TRUE)
 
-	to_chat(user, SPAN_WARNING("The gauge reads: <b>[round(gun.current_mag.get_ammo_percent())]</b>% fuel remaining!"))
+	to_chat(user, SPAN_WARNING("The gauge reads: <b>[floor(gun.current_mag.get_ammo_percent())]</b>% fuel remaining!"))
 
 /obj/item/attachable/verticalgrip
 	name = "vertical grip"
@@ -3190,6 +3363,10 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 
+/obj/item/attachable/verticalgrip/upp
+	name = "RK-5 Vertical Grip"
+	desc = "Sturdy grip positioned at optimal place offers enhanced stability in rapid fire. Increases weapon size, penalizes one handed fire, improves scatter and accuracy while wielded."
+
 /obj/item/attachable/angledgrip
 	name = "angled grip"
 	desc = "An angled foregrip that improves weapon ergonomics resulting in faster wielding time. \nHowever, it also increases weapon size."
@@ -3200,6 +3377,10 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 1
 	slot = "under"
 	pixel_shift_x = 20
+
+/obj/item/attachable/angledgrip/upp
+	name = "RK-9 Angled Grip"
+	desc = "Ergonomic grip decreases time for shouldering the weapon. Increases weapon size, accelerates wield speed."
 
 /obj/item/attachable/gyro
 	name = "gyroscopic stabilizer"
@@ -3228,8 +3409,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/lasersight
 	name = "laser sight"
-	desc = "A laser sight that attaches to the underside of most weapons. Increases accuracy and decreases scatter, especially while one-handed."
-	desc_lore = "A standard visible-band laser module designated as the AN/PEQ-42 Laser Sight. Can be mounted onto any firearm that has a lower rail large enough to accommodate it."
+	desc = "Standard issue visible-band underbarrel laser module, type designation AN/PEQ-42. Increases accuracy and decreases scatter, especially while one-handed. Also improves handling on the move."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "lasersight_a"
@@ -3245,6 +3425,14 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 
+/obj/item/attachable/lasersight/upp
+	name = "Zvezda Laser Module"
+	desc = "Visible band 512nm green laser, compatible with NVG and IR. Bears striking resemblance to an old Weyland Yutani offering... Decreases scatter, especially onehanded, slightly boosts accuracy. "
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "lasersight_upp"
+	attach_icon = "lasersight_upp_a"
+	pixel_shift_x = 15
+	pixel_shift_y = 18
 
 /obj/item/attachable/bipod
 	name = "bipod"
@@ -3261,6 +3449,10 @@ Defined in conflicts.dm of the #defines folder.
 	var/bipod_deployed = FALSE
 	/// If this should anchor the user while in use
 	var/heavy_bipod = FALSE
+	// Are switching to full auto when deploying the bipod
+	var/full_auto_switch = FALSE
+	// Store our old firemode so we can switch to it when undeploying the bipod
+	var/old_firemode = null
 
 /obj/item/attachable/bipod/New()
 	..()
@@ -3271,16 +3463,33 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 
-/obj/item/attachable/bipod/Attach(obj/item/weapon/gun/G)
+/obj/item/attachable/bipod/Attach(obj/item/weapon/gun/gun, mob/user)
 	..()
 
-	RegisterSignal(G, COMSIG_ITEM_DROPPED, PROC_REF(handle_drop))
+	if((GUN_FIREMODE_AUTOMATIC in gun.gun_firemode_list) || (gun.flags_gun_features & GUN_SUPPORT_PLATFORM))
+		var/given_action = FALSE
+		if(user && (gun == user.l_hand || gun == user.r_hand))
+			give_action(user, /datum/action/item_action/bipod/toggle_full_auto_switch, src, gun)
+			given_action = TRUE
+		if(!given_action)
+			new /datum/action/item_action/bipod/toggle_full_auto_switch(src, gun)
+
+	RegisterSignal(gun, COMSIG_ITEM_DROPPED, PROC_REF(handle_drop))
 
 /obj/item/attachable/bipod/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
 	UnregisterSignal(detaching_gub, COMSIG_ITEM_DROPPED)
 
+	//clear out anything related to full auto switching
+	full_auto_switch = FALSE
+	old_firemode = null
+	for(var/item_action in detaching_gub.actions)
+		var/datum/action/item_action/bipod/toggle_full_auto_switch/target_action = item_action
+		if(target_action.target == src)
+			qdel(item_action)
+			break
+
 	if(bipod_deployed)
-		undeploy_bipod(detaching_gub)
+		undeploy_bipod(detaching_gub, user)
 	..()
 
 /obj/item/attachable/bipod/update_icon()
@@ -3294,60 +3503,62 @@ Defined in conflicts.dm of the #defines folder.
 	if(istype(loc, /obj/item/weapon/gun))
 		var/obj/item/weapon/gun/gun = loc
 		gun.update_attachable(slot)
-		for(var/datum/action/A as anything in gun.actions)
-			A.update_button_icon()
+		for(var/datum/action/item_action as anything in gun.actions)
+			if(!istype(item_action, /datum/action/item_action/bipod/toggle_full_auto_switch))
+				item_action.update_button_icon()
 
-/obj/item/attachable/bipod/proc/handle_drop(obj/item/weapon/gun/G, mob/living/carbon/human/user)
+/obj/item/attachable/bipod/proc/handle_drop(obj/item/weapon/gun/gun, mob/living/carbon/human/user)
 	SIGNAL_HANDLER
 
 	UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
 
 	if(bipod_deployed)
-		undeploy_bipod(G)
+		undeploy_bipod(gun, user)
 		user.apply_effect(1, SUPERSLOW)
 		user.apply_effect(2, SLOW)
 
-/obj/item/attachable/bipod/proc/undeploy_bipod(obj/item/weapon/gun/G)
-	REMOVE_TRAIT(G, TRAIT_GUN_BIPODDED, "attached_bipod")
+/obj/item/attachable/bipod/proc/undeploy_bipod(obj/item/weapon/gun/gun, mob/user)
+	REMOVE_TRAIT(gun, TRAIT_GUN_BIPODDED, "attached_bipod")
 	bipod_deployed = FALSE
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
 	delay_mod = FIRE_DELAY_TIER_12
-	G.recalculate_attachment_bonuses()
-	G.stop_fire()
-	var/mob/living/user
-	if(isliving(G.loc))
-		user = G.loc
-		SEND_SIGNAL(user, COMSIG_MOB_UNDEPLOYED_BIPOD)
-		UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
+	//if we are no longer on full auto, don't bother switching back to the old firemode
+	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
+		gun.do_toggle_firemode(user, null, old_firemode)
 
-	if(G.flags_gun_features & GUN_SUPPORT_PLATFORM)
-		G.remove_firemode(GUN_FIREMODE_AUTOMATIC)
+	gun.recalculate_attachment_bonuses()
+	gun.stop_fire()
+	SEND_SIGNAL(user, COMSIG_MOB_UNDEPLOYED_BIPOD)
+	UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
+
+	if(gun.flags_gun_features & GUN_SUPPORT_PLATFORM)
+		gun.remove_firemode(GUN_FIREMODE_AUTOMATIC)
 
 	if(heavy_bipod)
 		user.anchored = FALSE
 
-	if(!QDELETED(G))
+	if(!QDELETED(gun))
 		playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
 		update_icon()
 
-/obj/item/attachable/bipod/activate_attachment(obj/item/weapon/gun/G,mob/living/user, turn_off)
+/obj/item/attachable/bipod/activate_attachment(obj/item/weapon/gun/gun, mob/living/user, turn_off)
 	if(turn_off)
 		if(bipod_deployed)
-			undeploy_bipod(G)
+			undeploy_bipod(gun, user)
 	else
-		var/obj/support = check_bipod_support(G, user)
+		var/obj/support = check_bipod_support(gun, user)
 		if(!support&&!bipod_deployed)
 			to_chat(user, SPAN_NOTICE("You start deploying [src] on the ground."))
-			if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, G,INTERRUPT_DIFF_LOC))
+			if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, gun, INTERRUPT_DIFF_LOC))
 				return FALSE
 
 		bipod_deployed = !bipod_deployed
 		if(user)
 			if(bipod_deployed)
-				ADD_TRAIT(G, TRAIT_GUN_BIPODDED, "attached_bipod")
+				ADD_TRAIT(gun, TRAIT_GUN_BIPODDED, "attached_bipod")
 				to_chat(user, SPAN_NOTICE("You deploy [src] [support ? "on [support]" : "on the ground"]."))
 				SEND_SIGNAL(user, COMSIG_MOB_DEPLOYED_BIPOD)
 				playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
@@ -3355,25 +3566,29 @@ Defined in conflicts.dm of the #defines folder.
 				scatter_mod = -SCATTER_AMOUNT_TIER_10
 				recoil_mod = -RECOIL_AMOUNT_TIER_4
 				burst_scatter_mod = -SCATTER_AMOUNT_TIER_8
-				if(istype(G,/obj/item/weapon/gun/rifle/sniper/M42A))
+				if(istype(gun, /obj/item/weapon/gun/rifle/sniper/M42A))
 					delay_mod = -FIRE_DELAY_TIER_7
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
-				G.recalculate_attachment_bonuses()
-				G.stop_fire()
+				gun.recalculate_attachment_bonuses()
+				gun.stop_fire()
 
 				initial_mob_dir = user.dir
 				RegisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK, PROC_REF(handle_mob_move_or_look))
 
-				if(G.flags_gun_features & GUN_SUPPORT_PLATFORM)
-					G.add_firemode(GUN_FIREMODE_AUTOMATIC)
+				if(gun.flags_gun_features & GUN_SUPPORT_PLATFORM)
+					gun.add_firemode(GUN_FIREMODE_AUTOMATIC)
 
 				if(heavy_bipod)
 					user.anchored = TRUE
 
+				old_firemode = gun.gun_firemode
+				if(full_auto_switch && gun.gun_firemode != GUN_FIREMODE_AUTOMATIC)
+					gun.do_toggle_firemode(user, null, GUN_FIREMODE_AUTOMATIC)
+
 			else
 				to_chat(user, SPAN_NOTICE("You retract [src]."))
-				undeploy_bipod(G)
+				undeploy_bipod(gun, user)
 
 	update_icon()
 
@@ -3390,10 +3605,10 @@ Defined in conflicts.dm of the #defines folder.
 
 
 //when user fires the gun, we check if they have something to support the gun's bipod.
-/obj/item/attachable/proc/check_bipod_support(obj/item/weapon/gun/G, mob/living/user)
+/obj/item/attachable/proc/check_bipod_support(obj/item/weapon/gun/gun, mob/living/user)
 	return 0
 
-/obj/item/attachable/bipod/check_bipod_support(obj/item/weapon/gun/G, mob/living/user)
+/obj/item/attachable/bipod/check_bipod_support(obj/item/weapon/gun/gun, mob/living/user)
 	var/turf/T = get_turf(user)
 	for(var/obj/O in T)
 		if(O.throwpass && O.density && O.dir == user.dir && O.flags_atom & ON_BORDER)
@@ -3404,6 +3619,32 @@ Defined in conflicts.dm of the #defines folder.
 		if(O2.throwpass && O2.density)
 			return O2
 	return 0
+
+//item actions for handling deployment to full auto.
+/datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Full Auto Switch"
+	action_icon_state = "full_auto_switch"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/bipod/toggle_full_auto_switch/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/holder_gun = holder_item
+	var/obj/item/attachable/bipod/attached_bipod = holder_gun.attachments["under"]
+
+	attached_bipod.full_auto_switch = !attached_bipod.full_auto_switch
+	to_chat(owner, SPAN_NOTICE("[icon2html(holder_gun, owner)] You will [attached_bipod.full_auto_switch? "<B>start</b>" : "<B>stop</b>"] switching to full auto when deploying the bipod."))
+	playsound(owner, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
+
+	if(attached_bipod.full_auto_switch)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 
 /obj/item/attachable/bipod/m60
@@ -3420,6 +3661,23 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "bipod_m60"
 	attach_icon = "vulture_bipod"
 	heavy_bipod = TRUE
+
+/obj/item/attachable/bipod/vulture/Initialize(mapload, ...)
+	. = ..()
+	select_gamemode_skin(type)
+
+/obj/item/attachable/bipod/vulture/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
 
 /obj/item/attachable/burstfire_assembly
 	name = "burst fire assembly"
@@ -3449,4 +3707,3 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
-
