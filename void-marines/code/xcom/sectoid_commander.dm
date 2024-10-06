@@ -1,7 +1,7 @@
 #define SPECIES_SECTOID_COMMANDER "Sectoid Commander"
 
-/mob/living/carbon/human/sectoid/commander/Initialize(mapload)
-	. = ..(mapload)
+/mob/living/carbon/human/sectoid/commander/Initialize(mapload, new_species = SPECIES_SECTOID_COMMANDER)
+	. = ..(mapload, new_species)
 
 /datum/species/sectoid/commander
 	name = SPECIES_SECTOID_COMMANDER
@@ -18,7 +18,7 @@
 /datum/species/sectoid/commander/handle_post_spawn(mob/living/carbon/human/H)
 	. = ..()
 	give_action(H, /datum/action/human_action/activable/mindfray)
-	H.color = COLOUR_SILVER
+	H.color = "#8787A0"
 
 //////////////////////////////////////
 /*				ABILITIES			*/
@@ -28,7 +28,7 @@
 	icon_file = 'icons/mob/hud/actions_xeno.dmi'
 	action_icon_state = "place_queen_beacon"
 
-	cooldown = 45 SECONDS
+	cooldown = 30 SECONDS
 	var/radius = 4
 
 /datum/action/human_action/activable/mindfray/use_ability(atom/A)
@@ -39,9 +39,9 @@
 	var/mob/living/carbon/human/X = owner
 
 	to_chat(X, SPAN_XENODANGER("You start channeling your psychic energy towards [A]..."))
-	playsound(X.loc, 'sound/voice/deep_alien_screech.ogg', 50)
+	playsound(X.loc, 'void-marines/sound/xcom_aliens/sectoid/MindFray.SoundNodeWave_0000009c.ogg', 75)
 
-	if(!do_after(X, 2 SECONDS, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
+	if(!do_after(X, 1.5 SECONDS, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 		to_chat(X, SPAN_XENODANGER("You stop channeling your psychic energy."))
 		return
 
@@ -60,7 +60,7 @@
 
 		turfs_around -= t
 
-	playsound(T, 'sound/effects/metalscrape.ogg', 200)
+	playsound(T, 'void-marines/sound/xcom_aliens/sectoid/SectoidPossessed.SoundNodeWave_0000009c.ogg', 200)
 	new /obj/effect/temp_visual/psi_eye(T)
 
 	var/i = 0
@@ -72,7 +72,8 @@
 		if(HAS_TRAIT(C, TRAIT_FOREIGN_BIO))
 			continue
 
-		to_chat(C, SPAN_XENOWARNING("Ты чувствуешь чьё-то присутствие в своей голове..."))
+		to_chat(C, SPAN_XENOQUEEN("Ты чувствуешь чьё-то присутствие в своей голове..."))
+		new /datum/effects/xeno_slow(C, X, , , 2 SECONDS)
 
 		i += rand(1, 3)
 		spawn(i)
@@ -89,17 +90,20 @@
 				if(2)
 					addtimer(CALLBACK(src, PROC_REF(remove_hallucinations), C), rand(20 SECONDS, 35 SECONDS))
 					C.hallucination = 1500
+					C.confused = 15
 					C.druggy = 20
 				if(3)
 					C.set_movement_intent(MOVE_INTENT_WALK)
 					C.set_resting(TRUE, TRUE, TRUE)
 					C.spin(35, 2)
 				if(4)
-					if(!C.get_active_hand())
-						C?:holster_verb()
-					var/turf/target = get_random_turf_in_range(C, 3, 2)
-					spawn(2)
-						C?.client?.MouseDown(target, target, TRUE, "left")
+					if(C.client)
+						if(!C.get_active_hand())
+							C?:holster_verb()
+						for(var/shots in 1 to rand(1, 15))
+							var/turf/target = get_random_turf_in_range(C, 7, 6)
+							spawn(1)
+								C.client.MouseDown(target, target, TRUE, "left")
 
 	return ..()
 

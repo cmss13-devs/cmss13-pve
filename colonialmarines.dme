@@ -2540,4 +2540,5 @@
 #include "void-marines\code\xcom\sectoid_commander.dm"
 #include "void-marines\code\xcom\thinman.dm"
 #include "void-marines\code\xcom\weapons.dm"
+#include "void-marines\code\xcom\~emote_override.dm"
 // END_INCLUDE

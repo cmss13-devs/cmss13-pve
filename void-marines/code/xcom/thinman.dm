@@ -1,7 +1,7 @@
 #define SPECIES_THIN_MAN "Thin Human"
 
-/mob/living/carbon/human/thin_man/Initialize(mapload)
-	. = ..(mapload, new_species = name)
+/mob/living/carbon/human/thin_man/Initialize(mapload, new_species = SPECIES_THIN_MAN)
+	. = ..(mapload, new_species)
 
 /datum/species/human/thin_man
 	group = SPECIES_HUMAN // to be like a human guy
@@ -9,7 +9,7 @@
 	brute_mod = 1.5
 	burn_mod = 0.75
 	mob_flags = KNOWS_TECHNOLOGY|NO_POISON|NO_NEURO
-	pain_type = /datum/pain/human_hero
+	pain_type = /datum/pain/xeno
 	unarmed_type = /datum/unarmed_attack/claws/strong
 	secondary_unarmed_type = /datum/unarmed_attack
 	death_message = "lets out a faint scream as it collapses and stops moving..."
@@ -23,6 +23,7 @@
 		TRAIT_DEXTROUS,
 		TRAIT_CRAWLER,
     )
+	default_lighting_alpha = LIGHTING_PLANE_ALPHA_YAUTJA
 	blood_color = BLOOD_COLOR_YAUTJA
 	uses_skin_color = FALSE
 	hair_color = "#000000"
@@ -38,20 +39,23 @@
 	RegisterSignal(H, COMSIG_LIVING_CLIMB_STRUCTURE, PROC_REF(handle_climbing))
 	give_action(H, /datum/action/human_action/activable/acid_spit)
 
-	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_YAUTJA
 	H.update_sight()
 
 	return ..()
 
 /datum/species/human/thin_man/proc/handle_climbing(mob/living/M, list/climbdata)
 	SIGNAL_HANDLER
-	climbdata["climb_delay"] *= 0.5
+	climbdata["climb_delay"] *= 0.1
 
 /datum/species/human/thin_man/handle_death(mob/living/carbon/human/H, gibbed)
+	. = ..()
+
+	playsound(H, 'void-marines/sound/xcom_aliens/thinmen/ThinManStopPossess.SoundNodeWave_0000009c.ogg', 75, TRUE)
 	create_shrapnel(get_turf(H), 64, , , /datum/ammo/xeno/acid, create_cause_data("acid splatter", H))
+
 	if(!gibbed)
-		playsound(H.loc, 'sound/voice/joe/death_normal.ogg', 75, FALSE)
-	return ..()
+		H.gib()
 
 //////////////////////////////////////
 /*				ABILITIES			*/
@@ -65,6 +69,9 @@
 
 /datum/action/human_action/activable/acid_spit/use_ability(atom/A)
 	var/mob/living/carbon/human/X = owner
+	if(get_dist(X, A) < 1)
+		return
+
 	if(!can_use_action() || !action_cooldown_check() || !isturf(X.loc))
 		return
 
@@ -78,18 +85,19 @@
 	enter_cooldown()
 
 	to_chat(X, SPAN_XENOWARNING("You lob a compressed ball of acid into the air!"))
-	playsound(X.loc, get_sfx("acid_spit"), 25, 1)
+	playsound(X.loc, pick('void-marines/sound/xcom_aliens/thinmen/ThinManHurt01.SoundNodeWave_0000009c.ogg', 'void-marines/sound/xcom_aliens/thinmen/ThinManHurt02.SoundNodeWave_0000009c.ogg', ), 75, 1)
 
 	var/obj/projectile/proj = new (get_turf(X), create_cause_data("Thinman Acid", X))
 	proj.generate_bullet(GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid/small])
 	proj.permutated += X
 	proj.def_zone = X.get_limbzone_target()
 
-	proj.fire_at(A, X, X, 8, 0.8)
+	proj.fire_at(A, X, X, 8, 1.5)
 
 	return ..()
 
 /datum/ammo/xeno/boiler_gas/acid/small
+	icon_state = "boiler_railgun"
 	smokerange = 2
 
 //////////////////////////////////////
@@ -132,7 +140,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/detective_synth_uniform/alt(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/black(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/prescription(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/handcuffs(new_human), WEAR_R_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/rxfm5_eva/alien(new_human), WEAR_L_STORE)
 
