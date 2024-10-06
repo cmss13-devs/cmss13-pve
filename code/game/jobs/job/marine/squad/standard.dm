@@ -55,7 +55,7 @@
 /datum/job/marine/standard/ai/upp
 	title = JOB_SQUAD_MARINE_UPP
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
-	job_options = list("Private" = "PVT", "Efreitor" = "Efr")
+	job_options = list("Ryadovoy" = "Ryad", "Efreitor" = "Efr")
 
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON

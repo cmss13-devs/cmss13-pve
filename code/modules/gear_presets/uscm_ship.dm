@@ -616,9 +616,10 @@
 
 /datum/equipment_preset/uscm_ship/so/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
 
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()

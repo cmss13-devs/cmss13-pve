@@ -13,8 +13,8 @@
 
 /datum/paygrade/upp/ue1
 	paygrade = PAY_SHORT_UE1
-	name = "Private"
-	prefix = "PVT."
+	name = "Ryadovoy"
+	prefix = "Ryad."
 
 /datum/paygrade/upp/ue2
 	paygrade = PAY_SHORT_UE2

@@ -113,9 +113,11 @@
 
 /datum/equipment_preset/uscm/pfc/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[name])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
+
 
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
@@ -124,12 +126,6 @@
 	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
-
-/datum/equipment_preset/uscm/pfc/upp/load_rank(mob/living/carbon/human/rankee)
-	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
-
-	return paygrade
 
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
@@ -153,9 +149,11 @@
 
 /datum/equipment_preset/uscm/sg/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
+
 
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
@@ -365,9 +363,11 @@
 
 /datum/equipment_preset/uscm/medic/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
+
 
 /datum/equipment_preset/uscm/medic/upp
 	name = "UPP Sanitar"
@@ -399,9 +399,11 @@
 
 /datum/equipment_preset/uscm/tl/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
+
 
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
@@ -469,9 +471,11 @@
 
 /datum/equipment_preset/uscm/leader/load_rank(mob/living/carbon/human/rankee)
 	if(rankee?.client?.prefs?.pref_special_job_options[name])
-		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[name])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
 
-	return paygrade
+	..()
+
 
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
