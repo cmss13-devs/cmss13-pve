@@ -116,7 +116,7 @@
 	if(open_inner_airlock)
 		omnibus_airlock_transition("inner", 1, inner_airlock_turfs, inner_airlock, 50)
 	else
-		omnibus_airlock_transition("inner", 1, inner_airlock_turfs, inner_airlock, 50)
+		omnibus_airlock_transition("inner", 0, inner_airlock_turfs, inner_airlock, 50)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height()
@@ -138,7 +138,7 @@
 	if(open_outer_airlock)
 		omnibus_airlock_transition("outer", 1, outer_airlock_turfs, outer_airlock, 30)
 	else
-		omnibus_airlock_transition("outer", 1, outer_airlock_turfs, outer_airlock, 30)
+		omnibus_airlock_transition("outer", 0, outer_airlock_turfs, outer_airlock, 30)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
