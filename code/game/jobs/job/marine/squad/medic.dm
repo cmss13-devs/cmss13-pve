@@ -1,4 +1,4 @@
-
+#define PFC_VARIANT "Private First Class"
 #define LCPL_VARIANT "Lance Corporal"
 #define CPL_VARIANT "Corporal"
 
@@ -9,10 +9,9 @@
 	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/medic
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You tend the wounds of your squad mates</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters.<br><b>You remember that you've stored your personal gear and uniform are located in your medical office.</b>"
 
-	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCpl", CPL_VARIANT = "Cpl")
 
 /datum/job/marine/medic/set_spawn_positions(count)
 	for(var/datum/squad/sq in RoleAuthority.squads)
@@ -33,12 +32,6 @@
 				sq.max_medics = slots
 
 	return (slots*4)
-
-/datum/job/marine/medic/handle_job_options(option)
-	if(option != CPL_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
-		gear_preset = initial(gear_preset)
 
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
@@ -84,12 +77,12 @@ AddTimelock(/datum/job/marine/medic, list(
 /datum/job/marine/medic/ai/upp
 	title = JOB_SQUAD_MEDIC_UPP
 	gear_preset = /datum/equipment_preset/uscm/medic/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/lesser_rank
+	job_options = list("Korporal" = "Kpl", "Junior Serzhant" = "JrSzht")
 
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/forecon/lesser_rank
+	job_options = list("Lance Corporal" = "LCpl", "Corporal" = "Cpl", "Sergeant" = "Sgt")
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP

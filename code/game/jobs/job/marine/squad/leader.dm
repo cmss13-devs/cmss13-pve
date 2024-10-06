@@ -9,16 +9,9 @@
 	supervisors = "the acting commanding officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/leader
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your entire platoon.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(GYSGT_VARIANT = "GYSGT", SSGT_VARIANT = "SSGT")
-
-/datum/job/marine/leader/handle_job_options(option)
-	if(option != GYSGT_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
-		gear_preset = initial(gear_preset)
+	job_options = list(GYSGT_VARIANT = "GySgt", SSGT_VARIANT = "SSgt")
 
 /datum/job/marine/leader/whiskey
 	title = JOB_WO_SQUAD_LEADER
@@ -58,12 +51,12 @@ AddTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/upp
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	job_options = list("Master Serzhant" = "MSzh", "Starshina" = "Strsh")
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
+	job_options = list("Master Sergeant" = "MSgt", "Master Gunnery Sergeant" = "MGySgt")
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP

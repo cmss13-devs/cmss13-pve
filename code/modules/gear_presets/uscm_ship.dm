@@ -549,6 +549,12 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
+/datum/equipment_preset/uscm_ship/so/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
+
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
 	access = get_access(access_list)
@@ -576,9 +582,6 @@
 
 	add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
-/datum/equipment_preset/uscm_ship/so/lesser_rank
-	paygrade = "MO1"
-
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
@@ -597,9 +600,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
-
-/datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-	paygrade = "UO1"
 
 //*****************************************************************************************************/
 

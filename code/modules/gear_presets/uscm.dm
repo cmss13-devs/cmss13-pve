@@ -64,7 +64,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
-	name = "USCM Squad Rifleman"
+	name = JOB_SQUAD_MARINE
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP)
@@ -75,6 +75,12 @@
 	skills = /datum/skills/pfc
 
 	minimap_icon = "private"
+
+/datum/equipment_preset/uscm/pfc/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[name])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
 
 /datum/equipment_preset/uscm/pfc/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
@@ -99,9 +105,6 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 
-/datum/equipment_preset/uscm/pfc/lesser_rank
-	paygrade = "ME1"
-
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
 	paygrade = "UE2"
@@ -110,15 +113,19 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/pfc/upp/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
+
+
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/lightpack/upp
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-/datum/equipment_preset/uscm/pfc/upp/lesser_rank
-	paygrade = "UE1"
 
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
@@ -132,14 +139,10 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-
-/datum/equipment_preset/uscm/pfc/forecon/lesser_rank
-	paygrade = "ME2"
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
-	name = "USCM Squad Smartgunner"
+	name = JOB_SQUAD_SMARTGUN
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
@@ -158,6 +161,12 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
+/datum/equipment_preset/uscm/sg/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
+
 /datum/equipment_preset/uscm/sg/cryo
 	name = "USCM Cryo Squad Smartgunner"
 	auto_squad_name = SQUAD_MARINE_CRYO
@@ -165,9 +174,6 @@
 /datum/equipment_preset/uscm/sg/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
-
-/datum/equipment_preset/uscm/sg/lesser_rank
-	paygrade = "ME3"
 
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
@@ -185,10 +191,6 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-/datum/equipment_preset/uscm/sg/upp/lesser_rank
-	paygrade = "UE3"
-
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
 	paygrade = "ME5"
@@ -201,13 +203,10 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-/datum/equipment_preset/uscm/sg/forecon/lesser_rank
-	paygrade = "ME4"
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg/full
-	name = "USCM Squad Smartgunner"
+	name = "USCM Squad Smartgunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm/sg/full/load_gear(mob/living/carbon/human/new_human)
@@ -242,9 +241,6 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-/datum/equipment_preset/uscm/rto/lesser_rank
-	paygrade = "ME3"
 
 //*****************************************************************************************************/
 
@@ -426,6 +422,12 @@
 
 	utility_under = list(/obj/item/clothing/under/marine/medic)
 
+/datum/equipment_preset/uscm/medic/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
+
 /datum/equipment_preset/uscm/medic/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel/medic
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
@@ -440,9 +442,6 @@
 /datum/equipment_preset/uscm/medic/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/med(new_human), WEAR_L_EAR)
-
-/datum/equipment_preset/uscm/medic/lesser_rank
-	paygrade = "ME3"
 
 /datum/equipment_preset/uscm/medic/upp
 	name = "UPP Sanitar"
@@ -460,9 +459,6 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-/datum/equipment_preset/uscm/medic/upp/lesser_rank
-	paygrade = "UE3"
-
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
 	assignment = "Squad Corpsman"
@@ -476,13 +472,10 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-/datum/equipment_preset/uscm/medic/forecon/lesser_rank
-	paygrade = "ME4"
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Squad Sergeant"
+	name = "USCM Squad Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
@@ -500,6 +493,12 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
+/datum/equipment_preset/uscm/tl/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+
+	return paygrade
+
 /datum/equipment_preset/uscm/tl/cryo
 	name = "USCM Cryo Squad Sergeant"
 	auto_squad_name = SQUAD_MARINE_CRYO
@@ -509,7 +508,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/tl(new_human), WEAR_L_EAR)
 
 /datum/equipment_preset/uscm/tl/upp
-	name = "UPP Squad Sergeant"
+	name = "UPP Squad Leader"
 	paygrade = "UE5"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -584,6 +583,12 @@
 
 	minimap_icon = "leader"
 
+/datum/equipment_preset/uscm/leader/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[name])
+		paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[name])
+
+	return paygrade
+
 /datum/equipment_preset/uscm/leader/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
@@ -598,9 +603,6 @@
 /datum/equipment_preset/uscm/leader/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo/lead(new_human), WEAR_L_EAR)
-
-/datum/equipment_preset/uscm/leader/lesser_rank
-	paygrade = "ME6"
 
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
@@ -617,9 +619,6 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
-/datum/equipment_preset/uscm/leader/upp/lesser_rank
-	paygrade = "UE6"
-
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
 	assignment = "Squad Leader"
@@ -632,9 +631,6 @@
 		back_item = /obj/item/storage/backpack/marine/standard
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-/datum/equipment_preset/uscm/leader/forecon/lesser_rank
-	paygrade = "ME7"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

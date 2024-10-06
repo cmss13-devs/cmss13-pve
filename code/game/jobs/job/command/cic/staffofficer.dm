@@ -10,7 +10,6 @@
 	scaled = FALSE
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/so
-	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to conduct the briefing for the platoon, monitor the operation, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and supported by your Company Command.<br>They will give your orders VIA the telephone in your office once they are ready.<br><b>You remember that you've stored your personal gear are located in your personal quarters.</b><br>Your job involves heavy roleplay and requires you to behave like an officer and to stay in character at all times."
 
 	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")
@@ -32,12 +31,6 @@
 
 /datum/job/command/bridge/generate_entry_message(mob/living/carbon/human/H)
 	return ..()
-
-/datum/job/command/bridge/handle_job_options(option)
-	if(option != FIRST_LT_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
-		gear_preset = initial(gear_preset)
 
 AddTimelock(/datum/job/command/bridge, list(
 	JOB_SQUAD_LEADER = 1 HOURS,
@@ -72,7 +65,6 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/upp
 	title = JOB_SO_UPP
 	gear_preset = /datum/equipment_preset/uscm_ship/so/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 
 /obj/effect/landmark/start/bridge/upp
 	name = JOB_SO_UPP

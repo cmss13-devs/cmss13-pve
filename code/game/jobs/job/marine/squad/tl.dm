@@ -1,4 +1,4 @@
-
+#define CPL_VARIANT "Corporal"
 #define SGT_VARIANT "Sergeant"
 
 /datum/job/marine/tl
@@ -10,7 +10,7 @@
 	gear_preset = /datum/equipment_preset/uscm/tl
 	entry_message_body = "You are the <a href='"+WIKI_PLACEHOLDER+"'>Squad Leader.</a> Your task is leading the designated squad and utilize available ordnance. If the platoon leader dies, you are expected to lead in their place.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(SGT_VARIANT = "SGT")
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
 
 /datum/job/marine/tl/generate_entry_conditions(mob/living/carbon/human/spawning_human)
 	. = ..()
@@ -48,12 +48,14 @@ AddTimelock(/datum/job/marine/tl, list(
 /datum/job/marine/tl/ai/upp
 	title = JOB_SQUAD_TEAM_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/tl/upp
+	job_options = list("Junior Serzhant" = "JrSzh", "Serzhant" = "Szh")
 
 /datum/job/marine/tl/ai/forecon
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
+	job_options = list("Staff Sergeant" = "SSgt", "Gunnery Sergeant" = "GySgt")
 
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
