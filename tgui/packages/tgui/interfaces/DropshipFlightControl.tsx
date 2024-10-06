@@ -429,7 +429,7 @@ const CloseInnerAirlock = () => {
   const { act } = useBackend<NavigationProps>();
   return (
     <Button
-      icon="door-close"
+      icon="door-closed"
       onClick={() => {
         act('inner_airlock');
         act('button-push');
@@ -489,7 +489,7 @@ const CloseOuterAirlock = () => {
   const { act } = useBackend<NavigationProps>();
   return (
     <Button
-      icon="door-close"
+      icon="door-closed"
       onClick={() => {
         act('outer_airlock');
         act('button-push');

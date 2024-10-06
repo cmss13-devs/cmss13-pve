@@ -38,14 +38,15 @@
 		if(istype(T, /turf/open/floor/hangar_airlock/inner))
 			inner_airlock_turfs += T
 			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
-			if(istype(T.contents[1],/atom/movable/clone))
-				continue
-			// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
-			for(var/A in T.contents)
-				if(istype(A, /obj/effect/hangar_airlock/inner))
-					inner_airlock = A
-				if(istype(A, /obj/effect/hangar_airlock/height_mask))
-					height_mask_effect = A
+			if(T.contents.len >= 1)
+				if(istype(T.contents[1],/atom/movable/clone))
+					continue
+				// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
+				for(var/A in T.contents)
+					if(istype(A, /obj/effect/hangar_airlock/inner))
+						inner_airlock = A
+					if(istype(A, /obj/effect/hangar_airlock/height_mask))
+						height_mask_effect = A
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_outer_airlock_turfs()
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
@@ -55,25 +56,27 @@
 		if(istype(T, /turf/open/floor/hangar_airlock))
 			outer_airlock_turfs += T
 			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
-			if(istype(T.contents[1],/atom/movable/clone))
-				continue
-			// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
-			for(var/A in T.contents)
-				if(istype(A, /obj/effect/hangar_airlock/outer))
-					outer_airlock = A
+			if(T.contents.len >= 1)
+				if(istype(T.contents[1],/atom/movable/clone))
+					continue
+				// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
+				for(var/A in T.contents)
+					if(istype(A, /obj/effect/hangar_airlock/outer))
+						outer_airlock = A
 
-/obj/docking_port/stationary/marine_dropship/airlock/proc/omnibus_airlock_transition(airlock_type, transition_type, airlock_turfs, end_decisecond)
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond)
 	var/deciseconds
-	icon_state = "[airlock_type]_[transition_type]_0s"
+	var/transition = open ? "open" : "close"
+	airlock.icon_state = "[airlock_type]_[transition]_0s"
 	sleep(1 DECISECONDS)
 	for(deciseconds=1, deciseconds<end_decisecond, deciseconds++)
 		if(!(deciseconds % 10))
-			icon_state = "[airlock_type]_[transition_type]_[deciseconds/10]"
+			airlock.icon_state = "[airlock_type]_[transition]_[deciseconds/10]s"
 		for(var/turf/open/floor/hangar_airlock/T in airlock_turfs)
 			if(deciseconds == T.frame_threshold)
-				T.open = TRUE
+				T.open = open
 		sleep(1 DECISECONDS)
-	icon_state = "[airlock_type]_[transition_type]_static"
+	airlock.icon_state = "[airlock_type]_[transition]_static"
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_airlock_alarm()
 	processing = TRUE
@@ -111,9 +114,9 @@
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
 	if(open_inner_airlock)
-		omnibus_airlock_transition("inner", "open", inner_airlock_turfs, 50)
+		omnibus_airlock_transition("inner", 1, inner_airlock_turfs, inner_airlock, 50)
 	else
-		omnibus_airlock_transition("inner", "close", inner_airlock_turfs, 50)
+		omnibus_airlock_transition("inner", 1, inner_airlock_turfs, inner_airlock, 50)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height()
@@ -133,9 +136,9 @@
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
 	if(open_outer_airlock)
-		omnibus_airlock_transition("outer", "open", outer_airlock_turfs, 30)
+		omnibus_airlock_transition("outer", 1, outer_airlock_turfs, outer_airlock, 30)
 	else
-		omnibus_airlock_transition("outer", "close", outer_airlock_turfs, 30)
+		omnibus_airlock_transition("outer", 1, outer_airlock_turfs, outer_airlock, 30)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
@@ -158,7 +161,7 @@
 
 /obj/effect/hangar_airlock/inner
 	name = "hangar inner airlock"
-	icon_state = "inner"
+	icon_state = "inner_close_static"
 	layer = 1.95
 
 /obj/effect/hangar_airlock/inner/proc/open()
@@ -188,7 +191,7 @@
 
 /obj/effect/hangar_airlock/outer
 	name = "hangar outer airlock"
-	icon_state = "outer"
+	icon_state = "outer_close_static"
 	layer = 1.95
 
 /obj/effect/hangar_airlock/outer/proc/open()
@@ -223,8 +226,7 @@
 
 /turf/open/floor/hangar_airlock
 	layer = 1.5
-	// to tie the turf opening and the airlock animation together, the frame on which a tile can be considered 'open' has to be done manually.
-	// Bear in mind, the open_frame_threshold should be a multiple of the pixel_movement_rate otherwise it may be overstepped.
+	// to tie the turf opening and the airlock animation together, the frame on which a tile can be considered 'open' or 'closed' has to be done manually.
 	var/frame_threshold = null
 	var/open = FALSE
 
