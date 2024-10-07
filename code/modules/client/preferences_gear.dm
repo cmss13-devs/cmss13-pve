@@ -699,6 +699,26 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Rock plush"
 	path = /obj/item/toy/plush/rock
 
+/datum/gear/plush/otter
+	display_name = "Otter plush"
+	path = /obj/item/toy/plush/otter
+
+/datum/gear/plush/fox
+	display_name = "Fox plush"
+	path = /obj/item/toy/plush/fox
+
+/datum/gear/plush/kitten
+	display_name = "Kitten plush"
+	path = /obj/item/toy/plush/kitten
+
+/datum/gear/plush/box
+	display_name = "Box plush"
+	path = /obj/item/toy/plush/box
+
+/datum/gear/plush/carp
+	display_name = "Carp plush"
+	path = /obj/item/toy/plush/carp
+
 /datum/gear/plush/therapy
 	display_name = "Therapy plush"
 	path = /obj/item/toy/plush/therapy
