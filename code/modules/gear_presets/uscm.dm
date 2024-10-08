@@ -96,7 +96,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
-	name = "USCM Squad Rifleman"
+	name = JOB_SQUAD_MARINE
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP)
@@ -107,12 +107,17 @@
 	skills = /datum/skills/pfc
 
 	minimap_icon = "private"
+
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/pfc/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/pfc/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[name])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
@@ -122,23 +127,15 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/pfc/upp/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc/recon
 
-/datum/equipment_preset/uscm/pfc/forecon/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
-	name = "USCM Squad Smartgunner"
+	name = JOB_SQUAD_SMARTGUN
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
@@ -149,12 +146,14 @@
 	skills = /datum/skills/smartgunner
 
 	minimap_icon = "smartgunner"
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/sg/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/sg/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
@@ -166,18 +165,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/sg/upp/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/smartgunner/recon
-
-/datum/equipment_preset/uscm/sg/forecon/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 
@@ -193,10 +184,6 @@
 	skills = /datum/skills/pfc
 
 	minimap_icon = "rto"
-
-/datum/equipment_preset/uscm/rto/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 
@@ -374,9 +361,13 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/medic/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/medic/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 
 /datum/equipment_preset/uscm/medic/upp
 	name = "UPP Sanitar"
@@ -387,26 +378,17 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/medic/upp/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
 	assignment = "Squad Corpsman"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/combat_medic/recon
 
-/datum/equipment_preset/uscm/medic/forecon/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Squad Sergeant"
+	name = "USCM Squad Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
@@ -414,6 +396,14 @@
 	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
+
+/datum/equipment_preset/uscm/tl/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
@@ -479,9 +469,13 @@
 
 	minimap_icon = "leader"
 
-/datum/equipment_preset/uscm/leader/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/leader/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[name])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
@@ -491,19 +485,12 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
-/datum/equipment_preset/uscm/leader/upp/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
 	assignment = "Squad Leader"
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SL"
 
-/datum/equipment_preset/uscm/leader/forecon/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
