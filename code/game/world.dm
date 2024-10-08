@@ -1,5 +1,5 @@
 
-GLOBAL_VAR_INIT(world_view_size, 7)
+GLOBAL_VAR_INIT(world_view_size, 10)
 GLOBAL_VAR_INIT(lobby_view_size, 16)
 
 GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 	mob = /mob/new_player
 	turf = /turf/open/space/basic
 	area = /area/space
-	view = "15x15"
+	view = "21x21"
 	cache_lifespan = 0 //stops player uploaded stuff from being kept in the rsc past the current session
 	hub = "Exadv1.spacestation13"
 
