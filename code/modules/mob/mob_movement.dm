@@ -1,3 +1,6 @@
+#define GLOBAL_MOVEMENT_MODIFIER 1.25
+#define NEXT_MOVEMENT(input) next_movement = world.time + ((input) * GLOBAL_MOVEMENT_MODIFIER)
+
 /client/North()
 	..()
 
@@ -103,13 +106,13 @@
 	next_move_dir_add = 0
 	next_move_dir_sub = 0
 
-	next_movement = world.time + world.tick_lag
+	NEXT_MOVEMENT(world.tick_lag)
 
 	if(!direct)
 		return FALSE
 
 	if(mob.control_object)
-		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL
+		NEXT_MOVEMENT(MINIMAL_MOVEMENT_INTERVAL)
 		return Move_object(direct)
 
 	if(mob.noclip)
@@ -122,15 +125,15 @@
 				mob.x++
 			if(WEST)
 				mob.x--
-		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL
+		NEXT_MOVEMENT(MINIMAL_MOVEMENT_INTERVAL)
 		return
 
 	if(isobserver(mob)) //Ghosts are snowflakes unfortunately
-		next_movement = world.time + move_delay
+		NEXT_MOVEMENT(move_delay)
 		return mob.Move(n, direct)
 
 	if(SEND_SIGNAL(mob, COMSIG_CLIENT_MOB_MOVE, n, direct) & COMPONENT_OVERRIDE_MOVE)
-		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL
+		NEXT_MOVEMENT(MINIMAL_MOVEMENT_INTERVAL)
 		return
 
 	if(!isliving(mob))
@@ -159,7 +162,7 @@
 			return
 
 	if(SEND_SIGNAL(mob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direct, direct) & COMPONENT_OVERRIDE_MOB_MOVE_OR_LOOK)
-		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL
+		NEXT_MOVEMENT(MINIMAL_MOVEMENT_INTERVAL)
 		return
 
 	if(!mob.z)//Inside an object, tell it we moved
@@ -176,7 +179,7 @@
 			mob.next_move_slowdown = 0
 
 		mob.cur_speed = clamp(10/(move_delay + 0.5), MIN_SPEED, MAX_SPEED)
-		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL // We pre-set this now for the crawling case. If crawling do_after fails, next_movement would be set after the attempt end instead of now.
+		NEXT_MOVEMENT(MINIMAL_MOVEMENT_INTERVAL) // We pre-set this now for the crawling case. If crawling do_after fails, next_movement would be set after the attempt end instead of now.
 
 		//Try to crawl first
 		if(living_mob && living_mob.body_position == LYING_DOWN)
@@ -215,7 +218,7 @@
 				mob.update_clone()
 		mob.move_intentionally = FALSE
 		moving = FALSE
-		next_movement = world.time + move_delay
+		NEXT_MOVEMENT(move_delay)
 	return
 
 ///Process_Spacemove
@@ -301,3 +304,5 @@
 
 	prob_slip = floor(prob_slip)
 	return(prob_slip)
+
+#undef GLOBAL_MOVEMENT_MODIFIER
