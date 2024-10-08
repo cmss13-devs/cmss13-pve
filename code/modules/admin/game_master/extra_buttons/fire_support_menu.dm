@@ -30,7 +30,6 @@
 		var/mob/mob = user
 		holder = mob.client
 
-	holder.click_intercept = src
 	tgui_interact(holder.mob)
 
 ///Deletes the mortar when the menu is closed so we dont make a thousand of them.
@@ -69,11 +68,15 @@
 
 	return data
 
-/datum/fire_support_menu/ui_act(action, params)
+/datum/fire_support_menu/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	switch(action)
 		if("toggle_click_fire_support")
 			fire_support_click_intercept = !fire_support_click_intercept
+			if(fire_support_click_intercept)
+				LAZYOR(ui.user.client.click_intercepts, src)
+			else
+				LAZYREMOVE(ui.user.client.click_intercepts, src)
 			return
 		if("set_selected_ordnance")
 			selected_ordnance = params["ordnance"]
@@ -83,9 +86,7 @@
 	return UI_INTERACTIVE
 
 /datum/fire_support_menu/ui_close(mob/user)
-	var/client/user_client = user.client
-	if(user_client?.click_intercept == src)
-		user_client.click_intercept = null
+	LAZYREMOVE(user.client.click_intercepts, src)
 
 	fire_support_click_intercept = FALSE
 	qdel(src)
