@@ -441,6 +441,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/prop/helmetgarb/chaplain_patch
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/helmet_garb/cat_ears
+	display_name = "'Tactical' cat ears"
+	path = /obj/item/prop/helmetgarb/cat_ears
+
 /datum/gear/paperwork
 	category = "Paperwork"
 
