@@ -5,7 +5,7 @@
 /datum/paygrade/civilian/civilian
 	paygrade = PAY_SHORT_CIV
 	name = "Civilian"
-	prefix = "C"
+	prefix = null
 
 /datum/paygrade/civilian/nurse
 	paygrade = PAY_SHORT_CNUR

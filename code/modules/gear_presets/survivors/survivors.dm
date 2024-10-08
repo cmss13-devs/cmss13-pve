@@ -78,7 +78,7 @@
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/shoes/black,
-		/obj/item/clothing/shoes/marine/corporate,
+		/obj/item/clothing/shoes/marine/civilian,
 	)
 	dress_hat = list(
 		/obj/item/clothing/head/fedora,
@@ -285,7 +285,7 @@ Standart Survivors :	/datum/equipment_preset/survivor/scientist,
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
 	add_survivor_weapon_security(new_human)
 	add_ice_colony_survivor_equipment(new_human)
@@ -512,4 +512,3 @@ Everything bellow is a parent used as a base for one or multiple maps.
 	add_survivor_weapon_security(new_human)
 	add_ice_colony_survivor_equipment(new_human)
 	..()
-
