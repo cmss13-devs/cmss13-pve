@@ -1,5 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - imageadd: "Ported giant spider sprites from polaris"
-  - imagedel: "Axed the old ones present in the .dmi"
