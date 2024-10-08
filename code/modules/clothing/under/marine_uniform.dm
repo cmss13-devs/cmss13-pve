@@ -1279,3 +1279,36 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
+
+
+/obj/item/clothing/under/marine/officer/ce/navy
+	name = "engineering duty officer uniform"
+	desc = "The uniform of an engineering duty officer in the USASF. Specially treated for hazardous conditions work, high density layers provide some level of radiation protection."
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	icon_state = "d_uscmboiler"
+	worn_state = "d_uscmboiler"
+	specialty = "chief engineer"
+	flags_atom = NO_SNOW_TYPE
+	item_state_slots = list(WEAR_BODY = "d_uscmboiler")
+
+/obj/item/clothing/under/marine/officer/engi/navy
+	name = "ship-crew uniform"
+	desc = "The uniform of an aerospace force crewman. Specially treated for hazardous materials handing and hostile conditions."
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	icon_state = "mt_jumpsuit"
+	worn_state = "mt_jumpsuit"
+	specialty = "engineer"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_atom = NO_SNOW_TYPE
+	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
+
+/obj/item/clothing/under/marine/officer/engi/OT/navy
+	name = "damage-control team uniform"
+	desc = "The uniform of an aerospace force crewman. Specially treated for hazardous materials handing and hostile conditions. This one has the color-flashes of a member of the ship damage-control teams on it."
+	icon_state = "ot_jumpsuit"
+	worn_state = "ot_jumpsuit"
+	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
+
