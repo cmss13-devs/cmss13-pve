@@ -1,7 +1,7 @@
 //------------CANTEEN MRE VENDOR---------------
 /obj/structure/machinery/cm_vending/sorted/marine_food
-	name = "\improper ColMarTech Food Vendor"
-	desc = "USCM Food Vendor, containing standard military Prepared Meals."
+	name = "\improper Shipborne Auto-Chef"
+	desc = "A robotic food preparation complex, dispensing meals from a list of options. After some few decades of subjective time, the fact that it can put together edible food from ship stores is a miracle. A second miracle would be making it consistently tasty..."
 	icon_state = "marine_food"
 	hackable = TRUE
 	unacidable = FALSE
@@ -11,13 +11,13 @@
 /obj/structure/machinery/cm_vending/sorted/marine_food/populate_product_list(scale)
 	listed_products = list(
 		list("PREPARED MEALS", -1, null, null),
-		list("USCM Prepared Meal (Chicken)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal5, VENDOR_ITEM_REGULAR),
-		list("USCM Prepared Meal (Cornbread)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal1, VENDOR_ITEM_REGULAR),
-		list("USCM Prepared Meal (Pasta)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal3, VENDOR_ITEM_REGULAR),
-		list("USCM Prepared Meal (Pizza)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal4, VENDOR_ITEM_REGULAR),
-		list("USCM Prepared Meal (Pork)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal2, VENDOR_ITEM_REGULAR),
-		list("USCM Prepared Meal (Tofu)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal6, VENDOR_ITEM_REGULAR),
-		list("USCM Protein Bar", 50, /obj/item/reagent_container/food/snacks/protein_pack, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Chicken)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal5, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Cornbread)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal1, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Pasta)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal3, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Pizza)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal4, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Pork)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal2, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Tofu)", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal6, VENDOR_ITEM_REGULAR),
+		list("Protein Bar", 50, /obj/item/reagent_container/food/snacks/protein_pack, VENDOR_ITEM_REGULAR),
 		list("FLASKS", -1, null, null),
 		list("Canteen", 10, /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		list("Metal Flask", 10, /obj/item/reagent_container/food/drinks/flask, VENDOR_ITEM_REGULAR),
