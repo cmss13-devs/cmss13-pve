@@ -291,6 +291,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
 
+/datum/gear/headwear/uscm/cap/sulaco
+	display_name = "USS Sulaco cap"
+	path = /obj/item/clothing/head/sulacocap
+	cost = 0
+
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
 	path = /obj/item/clothing/head/cmcap/flap

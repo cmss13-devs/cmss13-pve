@@ -198,6 +198,20 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/sulacocap
+	name = "uss sulaco cap"
+	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Sulaco. While it only protects from the sun, it's much more comfortable than a helmet."
+	icon_state = "sulacocap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	var/helmet_overlays[]
+	var/flipped_cap = FALSE
+	var/list/flipping_message = list(
+		"flipped" = "You spin the hat backwards! You look like a tool.",
+		"unflipped" = "You spin the hat back forwards. That's better."
+		)
+	var/base_cap_icon
+	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
+
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
