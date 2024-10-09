@@ -533,7 +533,7 @@
 
 /obj/item/clothing/suit/storage/marine/light/recon
 	name = "M3-R pattern light armor"
-	desc = "Special issue light armor for forward econnaissance Marines. Offers similar protection as M3 armor but none of the slowdown."
+	desc = "Special issue light armor for forward reconnaissance Marines. Offers similar protection as M3 armor but none of the slowdown."
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -682,5 +682,19 @@
 	name = "press body armor"
 	desc = "Body armor used by war correspondents in battles and wars across the universe."
 	icon_state = "cc_armor"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+
+//==================USASF & ARMY==================\\
+
+/obj/item/clothing/suit/storage/marine/light/recon/navy
+	icon_state = "io"
+	armor_variation = 0
+	name = "\improper M4 pattern naval-deployment armor"
+	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet nimble, with room for all your pouches."
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	storage_slots = 3
+	specialty = "M4 pattern marine"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 

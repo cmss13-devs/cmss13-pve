@@ -35,7 +35,6 @@
 
 /datum/equipment_preset/usasf/
 	name = "USASF Sailor"
-	assignment = "Crewman"
 	rank = JOB_NAVY_CREWMAN
 	assignment = JOB_NAVY_CREWMAN
 	///Gives the sailors their radios
@@ -46,7 +45,7 @@
 
 /datum/equipment_preset/usasf/crew
 	name = "USASF Crewman"
-	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Crew"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/rmc
@@ -54,10 +53,10 @@
 /datum/equipment_preset/usasf/crew/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi/navy, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather/generic, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_L_STORE)
 
 /datum/equipment_preset/usasf/crew/snipe
 	name = "USASF Damage-Control Crewman"
@@ -68,19 +67,64 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	..()
+
+/datum/equipment_preset/usasf/crew/flight
+	name = "USASF Flight-Deck Crewman (Red)"
+	assignment = JOB_NAVY_SKITTLE
+	rank = JOB_NAVY_SKITTLE
+	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Flt"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pilot, WEAR_HEAD)
+	..()
+
+/datum/equipment_preset/usasf/crew/flightgreen
+	name = "USASF Flight-Deck Crewman (green)"
+	role_comm_title = "Mnt"
+
+/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
+	..()
+
+/datum/equipment_preset/usasf/crew/flightpurple
+	name = "USASF Flight-Deck Crewman (purple)"
+	role_comm_title = "Fuel"
+
+/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
+	..()
+
+/datum/equipment_preset/usasf/crew/flightwhite
+	name = "USASF Flight-Deck Crewman (white)"
+	role_comm_title = "Sfty"
+
+/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
+	..()
+
+/datum/equipment_preset/usasf/crew/flightblue
+	name = "USASF Flight-Deck Crewman (blue)"
+	role_comm_title = "Hndl"
+
+/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
 	..()
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/usasf/corpsman
 	name = "USASF Hospital Corpsman"
-
 	assignment = JOB_NAVY_MEDIC
 	rank = JOB_NAVY_MEDIC
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HM"
 	skills = /datum/skills/nurse
 
@@ -102,7 +146,9 @@
 
 /datum/equipment_preset/usasf/engi
 	name = "USASF Engineering Technician"
-	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0, PAY_SHORT_NE6 = JOB_PLAYTIME_TIER_1)
+	assignment = JOB_NAVY_ENGI
+	rank = JOB_NAVY_ENGI
+	paygrades = list(PAY_SHORT_NE6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Tech"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/rmc
@@ -120,3 +166,45 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/usasf/helljumper
+	name = "USASF Para-Rescue Support Technician"
+	assignment = JOB_NAVY_PARA_TECH
+	rank = JOB_NAVY_PARA_TECH
+	paygrades = list(PAY_SHORT_NE8 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ParaTech"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/rmc
+
+/datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech/tanker/para, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/drop_green/equipped, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/medical, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/dutch/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/recon/navy, WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/parachute, WEAR_BACK)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/usasf/jtac
+	name = "USASF Orbital Fire-Support Liason Officer"
+	assignment = JOB_NAVY_JTAC
+	rank = JOB_NAVY_JTAC
+	paygrades = list(PAY_SHORT_NO2)
+	role_comm_title = "JFO"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/rmc

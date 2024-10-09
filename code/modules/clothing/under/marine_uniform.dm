@@ -1280,12 +1280,14 @@
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
 
+//=USASF & ARMY=\\
 
 /obj/item/clothing/under/marine/officer/ce/navy
-	name = "engineering duty officer uniform"
-	desc = "The uniform of an engineering duty officer in the USASF. Specially treated for hazardous conditions work, high density layers provide some level of radiation protection."
+	name = "duty officer uniform"
+	desc = "The uniform of a duty officer in the USASF. Specially treated for hazardous conditions work, high density layers provide some level of radiation protection."
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	icon_state = "d_uscmboiler"
 	worn_state = "d_uscmboiler"
 	specialty = "chief engineer"
@@ -1317,3 +1319,7 @@
 	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
 	icon_state = "ua_boiler"
 	worn_state = "ua_boiler"
+
+/obj/item/clothing/under/marine/officer/pilot/flight/para
+	name = "para-rescue technician flightsuit"
+	desc = "A flightsuit worn by the elite para-rescue forces of the USASF, with all the necessary straps and rigging for supporting the sheer balls these servicemen have. Looks badass."

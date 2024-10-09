@@ -90,7 +90,7 @@
 
 /obj/item/clothing/shoes/marine/UAAF
 	name = "combat boots"
-	desc = "Standard issue armored boots for combat scenarios or general work duties."
+	desc = "Standard issue armored boots for combat scenarios or general work duties. Once polished to a mirror sheen, rough work has somewhat worn the veneer."
 	icon_state = "jackboots"
 	item_state = "jackboots"
 
