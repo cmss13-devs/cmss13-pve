@@ -88,6 +88,15 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/marine/UAAF
+	name = "combat boots"
+	desc = "Standard issue armored boots for combat scenarios or general work duties."
+	icon_state = "jackboots"
+	item_state = "jackboots"
+
+/obj/item/clothing/shoes/marine/UAAF/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
 	desc = "Pre-polished fancy dress shoes. You can see your reflection in them."

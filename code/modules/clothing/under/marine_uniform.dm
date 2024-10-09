@@ -1312,3 +1312,8 @@
 	worn_state = "ot_jumpsuit"
 	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
 
+/obj/item/clothing/under/marine/officer/engi/navy/tech
+	name = "engineering technician uniform"
+	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
+	icon_state = "ua_boiler"
+	worn_state = "ua_boiler"
