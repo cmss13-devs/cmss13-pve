@@ -1,9 +1,10 @@
 //------------CANTEEN MRE VENDOR---------------
 /obj/structure/machinery/cm_vending/sorted/marine_food
-	name = "\improper ColMarTech Food Vendor"
-	desc = "USCM Food Vendor, containing standard military Prepared Meals."
-	icon_state = "marine_food"
-	hackable = TRUE
+	"\improper NestleCo AutoChef"
+	desc = "An autochef food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need. Inedible-looking sludge is passed through a variety of heaters, re-shapers, and solidifiers before being artificially flavored to create something that looks and tastes mostly edible."
+	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
+	icon_state = "food"
+	hackable = FALSE
 	unacidable = FALSE
 	unslashable = FALSE
 	wrenchable = TRUE
