@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(co_paygrades, list(
 				.[pg_id] = new PG
 
 GLOBAL_LIST_INIT(platco_paygrades, list(
-	"MO3",
-	"MO2",
-	"MO1",
+	PAY_SHORT_MO3,
+	PAY_SHORT_MO2,
+	PAY_SHORT_MO1,
 ))
