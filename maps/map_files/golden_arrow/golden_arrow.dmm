@@ -727,7 +727,13 @@
 /obj/effect/landmark/start/bridge,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/east,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "acX" = (
 /obj/structure/sign/safety/galley{
@@ -1226,10 +1232,6 @@
 	pixel_y = 26;
 	pixel_x = -3
 	},
-/obj/item/storage/box/drinkingglasses{
-	pixel_x = 10;
-	pixel_y = 28
-	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aeH" = (
@@ -1508,8 +1510,8 @@
 	pixel_x = -8;
 	pixel_y = 28
 	},
-/obj/structure/machinery/computer/ares_console{
-	pixel_y = 2
+/obj/structure/machinery/prop/almayer/computer/PC{
+	pixel_y = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1715,13 +1717,6 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
 "aga" = (
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11;
-	pixel_x = -7
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
@@ -2063,8 +2058,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	pixel_y = 6
+/obj/item/paper{
+	pixel_y = 5;
+	pixel_x = -4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
@@ -2075,6 +2071,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
 	name = "First Platoon Ready Bay Blast Door";
@@ -2082,9 +2081,6 @@
 	layer = 3.3;
 	open_layer = 3.3;
 	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	layer = 1.9
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -2220,13 +2216,6 @@
 /area/golden_arrow/medical)
 "ahK" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/plate{
-	pixel_y = 13;
-	pixel_x = 4
-	},
-/obj/item/trash/plate{
-	pixel_x = -3
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "ahR" = (
@@ -2687,30 +2676,34 @@
 /turf/open/floor/almayer/edge/smooth/endcap_right/east,
 /area/golden_arrow/cryo_cells)
 "ajq" = (
-/obj/structure/closet/secure_closet{
-	icon_broken = "fridgebroken";
-	icon_closed = "fridge";
-	icon_locked = "fridge1";
-	icon_off = "fridge1";
-	icon_opened = "fridgeopen";
-	icon_state = "fridge1";
-	name = "beverage fridge"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/canteen_tray{
+	pixel_y = 8
 	},
-/obj/item/reagent_container/food/drinks/bottle/orangejuice{
+/obj/item/storage/canteen_tray{
+	pixel_y = 10
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 12
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 14
+	},
+/obj/structure/vehicle_locker/cabinet/utensils{
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -7
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_y = 2
+	},
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
 	pixel_x = 8;
-	pixel_y = -7
+	pixel_y = 27
 	},
-/obj/item/reagent_container/food/drinks/bottle/orangejuice{
-	pixel_y = -1
-	},
-/obj/item/reagent_container/food/drinks/bottle/orangejuice{
-	pixel_y = -4;
-	pixel_x = -2
-	},
-/obj/item/reagent_container/food/drinks/bottle/orangejuice{
-	pixel_y = -9
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_right/east,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ajr" = (
 /obj/structure/bed/chair/office/light{
@@ -2866,6 +2859,11 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
@@ -3097,7 +3095,8 @@
 "akL" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
-	pixel_y = 13
+	pixel_y = 13;
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -3450,10 +3449,6 @@
 /obj/item/prop/tableflag/uscm{
 	pixel_x = -8;
 	pixel_y = -2
-	},
-/obj/item/paper_bin/uscm{
-	pixel_x = 5;
-	pixel_y = 6
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4014,12 +4009,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "anJ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/trash/plate{
-	pixel_y = 4;
-	pixel_x = -4
+/obj/structure/machinery/cryopod{
+	dir = 1
 	},
-/turf/open/floor/almayer,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "anL" = (
 /obj/effect/decal/warning_stripes{
@@ -4128,6 +4134,9 @@
 /area/golden_arrow/prep_hallway)
 "aoc" = (
 /obj/structure/fence,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
 	name = "First Platoon Ready Bay Blast Door";
@@ -4135,9 +4144,6 @@
 	layer = 3.3;
 	open_layer = 3.3;
 	id = "squadblastdoor"
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	layer = 1.9
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
@@ -4169,8 +4175,14 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/supply)
 "aop" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin/uscm{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/tool/pen{
+	pixel_x = -8;
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4267,6 +4279,9 @@
 	dir = 8;
 	name = "ship-grade camera"
 	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21"
+	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
 "aoA" = (
@@ -4305,23 +4320,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
-"aoG" = (
-/obj/structure/largecrate/supply/ammo{
-	name = "sentry crate";
-	fill_from_loc = 1
-	},
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01
-	},
-/obj/item/defenses/handheld/sentry,
-/obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
-	pixel_y = 10;
-	pixel_x = 20;
-	layer = 3.1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "aoI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -4600,6 +4598,10 @@
 "apM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/photocopier{
+	pixel_y = 15;
+	density = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/shared_office)
@@ -5056,18 +5058,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/plate{
-	pixel_y = 8;
-	pixel_x = 7
-	},
-/obj/item/reagent_container/food/condiment/saltshaker{
-	pixel_x = -4;
-	pixel_y = 13
-	},
-/obj/item/reagent_container/food/snacks/protein_pack{
-	pixel_y = 9;
-	pixel_x = 3
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "arl" = (
@@ -5200,7 +5190,7 @@
 	},
 /obj/structure/machinery/prop{
 	icon = 'icons/obj/vehicles/arc.dmi';
-	icon_state = "frontalcannon_1";
+	icon_state = "autocannon_1";
 	pixel_x = -31;
 	pixel_y = -38;
 	dir = 4;
@@ -5218,7 +5208,7 @@
 	},
 /obj/structure/machinery/prop{
 	icon = 'icons/obj/vehicles/arc.dmi';
-	icon_state = "wheels_1";
+	icon_state = "arc_wheels_1";
 	pixel_x = -31;
 	pixel_y = -38;
 	dir = 4;
@@ -5406,17 +5396,8 @@
 	name = "overwatch receiver";
 	phone_category = "Overwatch"
 	},
-/obj/structure/machinery/computer/ares_console{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = 2
-	},
-/obj/item/tool/pen{
-	pixel_x = -8;
-	pixel_y = -11
-	},
 /obj/structure/machinery/door_control{
-	pixel_y = -11;
+	pixel_y = 10;
 	pixel_x = 6;
 	id = "squadarmory";
 	name = "gear lockers door-control"
@@ -5518,19 +5499,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
-"asD" = (
-/obj/structure/largecrate/supply/motiondetectors,
-/obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
-	pixel_y = 10
-	},
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 14;
-	pixel_x = -2
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "asE" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -5554,7 +5522,7 @@
 /obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/southeast,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "asL" = (
 /obj/effect/decal/cleanable/dirt{
@@ -6209,29 +6177,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"avr" = (
-/obj/item/reagent_container/food/drinks/milk{
-	pixel_y = 10
-	},
-/obj/item/reagent_container/food/drinks/milk{
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/obj/item/reagent_container/food/drinks/milk{
-	pixel_x = 5
-	},
-/obj/item/reagent_container/food/drinks/milk,
-/obj/structure/closet/secure_closet{
-	icon_broken = "fridgebroken";
-	icon_closed = "fridge";
-	icon_locked = "fridge1";
-	icon_off = "fridge1";
-	icon_opened = "fridgeopen";
-	icon_state = "fridge1";
-	name = "beverage fridge"
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/west,
-/area/golden_arrow/cryo_cells)
 "avs" = (
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/platoonarmory)
@@ -6373,17 +6318,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"avX" = (
-/obj/structure/largecrate/supply/ammo{
-	name = "sentry crate";
-	fill_from_loc = 1
-	},
-/obj/item/ammo_magazine/sentry{
-	layer = 3.01
-	},
-/obj/item/defenses/handheld/sentry,
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "avY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -6950,7 +6884,7 @@
 /obj/effect/landmark/start/marine/smartgunner/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "axM" = (
 /obj/structure/machinery/light/double/blue{
@@ -7227,6 +7161,11 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "ayA" = (
@@ -7465,7 +7404,7 @@
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/southeast,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "azi" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7949,6 +7888,9 @@
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_y = 10
 	},
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 13
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "aAv" = (
@@ -8056,7 +7998,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aAK" = (
-/obj/structure/machinery/cryopod,
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aAO" = (
@@ -8332,17 +8276,14 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "aBD" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
 	name = "dip cup";
 	pixel_x = 5;
-	pixel_y = 7
+	pixel_y = 25
 	},
-/turf/open/floor/almayer,
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aBE" = (
 /obj/structure/disposalpipe/segment{
@@ -8629,17 +8570,6 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
-	},
-/obj/item/storage/fancy/cigarettes/lucky_strikes{
-	pixel_x = -7;
-	pixel_y = 9
-	},
-/obj/item/prop/magazine/dirty{
-	icon_state = "poster3";
-	pixel_y = 7;
-	pixel_x = 3;
-	name = "Playboy Magazine: Issue March 2182";
-	desc = "A copy of Playboy magazine. On the cover is photo of guitarist Sadie Summers, with the headline 'Sadie Summers tells ALL'. The article itself focuses on Sadie's many carnal exploits while on tour as well as her very public brawl at an LA nightclub that occured two years prior to the date of this issue. Flipping through the magazine you see article titles such as 'Jungle Mercenary: Life as an Ex-UPP commando', 'The whys and hows of choosing synthetic girls'."
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -8980,9 +8910,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/storage/toolbox/mechanical/green{
-	pixel_y = 10
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aDJ" = (
@@ -9148,10 +9075,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aEi" = (
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_x = -30;
-	pixel_y = 31
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -9160,7 +9083,7 @@
 	pixel_x = -3;
 	pixel_y = 13
 	},
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/cryo_cells)
 "aEl" = (
 /obj/structure/cable/heavyduty{
@@ -9340,10 +9263,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aEI" = (
-/obj/effect/landmark/start/marine/leader/alpha,
+/obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/northeast,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aEK" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -9569,7 +9492,7 @@
 /obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/northeast,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aFz" = (
 /turf/open/floor/almayer/uscm/directional/up_down/west,
@@ -9705,13 +9628,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/sign/safety/bathunisex{
-	pixel_y = 28
-	},
-/obj/structure/sign/safety/water{
-	pixel_x = 15;
-	pixel_y = 28
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -9789,25 +9705,26 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aGl" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop{
-	icon = 'icons/obj/items/paper.dmi';
-	icon_state = "newspaper";
-	name = "The Marine Corps Gazette";
-	desc = "An issue of The Marine Corps Gazette, the official newspaper of the United States Colonial Marines.";
-	pixel_y = -2;
-	pixel_x = -1
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/item/reagent_container/food/condiment/peppermill{
-	pixel_x = 1;
-	pixel_y = 12
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1
 	},
-/turf/open/floor/almayer,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/item/ammo_magazine/shotgun/buckshot{
 	pixel_x = -5;
-	pixel_y = 13
+	pixel_y = 13;
+	layer = 3.01
 	},
 /obj/item/ammo_magazine/shotgun/buckshot{
 	pixel_x = -5;
@@ -9815,7 +9732,8 @@
 	},
 /obj/item/ammo_magazine/shotgun{
 	pixel_x = 12;
-	pixel_y = 11
+	pixel_y = 11;
+	layer = 3.01
 	},
 /obj/item/ammo_magazine/shotgun{
 	pixel_x = 12;
@@ -10235,13 +10153,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHQ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_x = -30;
+	pixel_y = 31
 	},
-/turf/open/floor/almayer/edge/smooth/corner/west,
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
 /area/golden_arrow/cryo_cells)
 "aHR" = (
 /obj/effect/decal/warning_stripes{
@@ -10503,7 +10422,8 @@
 "aIQ" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	pixel_y = 20
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
@@ -10684,6 +10604,13 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/item/paper/crumpled{
+	pixel_y = 17;
+	pixel_x = 10
+	},
+/obj/item/paper/crumpled{
+	pixel_y = 17
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "aJl" = (
@@ -10808,14 +10735,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"aJM" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
-	pixel_x = 3;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "aJN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -10842,14 +10761,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
-"aJR" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
-	pixel_x = -3;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "aJS" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -11000,10 +10911,25 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aKr" = (
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/east,
+/obj/structure/machinery/cryopod{
+	layer = 3.1;
+	pixel_y = 13;
+	dir = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aKs" = (
 /obj/structure/bed/chair{
@@ -11423,34 +11349,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/golden_arrow/supply)
-"aLT" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/largecrate/supply/ammo{
-	pixel_y = 11;
-	name = "smoke grenades case";
-	fill_from_loc = 1
-	},
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "aLV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -12363,9 +12261,6 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
 	},
-/obj/structure/sign/safety/ammunition{
-	pixel_y = -26
-	},
 /turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/platoonarmory)
 "aPt" = (
@@ -12627,13 +12522,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aQh" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/bible{
-	desc = "As the legendary US Army chaplain once said, 'There are no Athiests in fancy offices'.";
-	name = "Holy Bible";
-	pixel_x = -5;
-	pixel_y = 4
-	},
 /obj/item/device/flashlight/lamp/on{
 	pixel_y = 14;
 	pixel_x = 5
@@ -12648,6 +12536,24 @@
 	pixel_x = 1;
 	randpixel = 0
 	},
+/obj/item/paper_bin{
+	pixel_y = 9;
+	pixel_x = -8
+	},
+/obj/item/tool/pen{
+	pixel_x = -25;
+	pixel_y = 6
+	},
+/obj/item/paper/crumpled{
+	layer = 2.7;
+	pixel_y = -9
+	},
+/obj/item/paper/crumpled{
+	layer = 2.7;
+	pixel_y = -10;
+	pixel_x = 5
+	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "aQk" = (
@@ -12739,7 +12645,13 @@
 /obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/east,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aQR" = (
 /obj/structure/bed/chair{
@@ -12881,10 +12793,6 @@
 	pixel_x = -11;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/cmcap{
-	pixel_x = 1;
-	pixel_y = -3
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aRp" = (
@@ -12909,12 +12817,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/sign/safety/ammunition{
-	pixel_y = -26
-	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
-	light_power = 0.5
+	light_power = 0.5;
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/platoonarmory)
@@ -13213,11 +13119,21 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aSr" = (
-/obj/structure/largecrate/supply/motiondetectors,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 14;
-	pixel_x = -12
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/blue{
+	pixel_y = -1
+	},
+/obj/item/storage/box/nade_box{
+	pixel_y = 15;
+	layer = 3.2;
+	pixel_x = -4
+	},
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_y = 2;
+	pixel_x = -3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -13363,6 +13279,11 @@
 	name = "hangarlockdownwest";
 	pixel_x = -23;
 	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 8
 	},
 /turf/open/space/basic,
 /area/space)
@@ -13919,6 +13840,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
 "aUX" = (
@@ -14023,16 +13947,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aVp" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/item/reagent_container/food/drinks/cans/souto/lime{
-	pixel_y = 21;
-	pixel_x = 10
-	},
+/obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
+/area/golden_arrow/engineering)
 "aVq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14336,14 +14256,28 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 25
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 28
+	},
+/obj/structure/sign/safety/water{
+	pixel_x = 15;
+	pixel_y = 28
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
@@ -14760,15 +14694,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"aXX" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/almayer/edge/smooth/corner/north,
-/area/golden_arrow/cryo_cells)
 "aYb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14843,7 +14768,7 @@
 	dir = 8
 	},
 /obj/effect/spawner/prop_gun/m41aMK1{
-	pixel_y = -3;
+	pixel_y = 3;
 	pixel_x = 6
 	},
 /turf/open/floor/almayer,
@@ -15463,6 +15388,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/synthcloset)
+"bMs" = (
+/obj/structure/prop/almayer/ai_wallmonitor/west,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "bPy" = (
 /obj/structure/platform{
 	dir = 1
@@ -15488,6 +15417,27 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"bUF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = 11
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "bZF" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
 	pixel_y = 19;
@@ -15655,12 +15605,12 @@
 /area/golden_arrow/engineering)
 "dzT" = (
 /obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11
+	pixel_y = 11;
+	layer = 2.98
 	},
 /obj/item/ammo_box/magazine/vp70{
 	pixel_y = 3
 	},
-/obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -15805,9 +15755,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
 "eZR" = (
-/obj/item/storage/box/guncase/flamer/fuel{
-	pixel_y = 8
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
 	light_color = "#dae2ff";
@@ -15865,8 +15812,12 @@
 	layer = 2.52
 	},
 /obj/item/reagent_container/glass/bucket/janibucket{
-	pixel_y = 15;
+	pixel_y = 5;
 	pixel_x = -7
+	},
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list();
+	pixel_y = 23
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -15879,6 +15830,50 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"fSy" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/canteen_tray{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 12;
+	pixel_x = -7
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 14;
+	pixel_x = -7
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 8;
+	pixel_x = 13
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 12;
+	pixel_x = 13
+	},
+/obj/item/storage/canteen_tray{
+	pixel_y = 14;
+	pixel_x = 13
+	},
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_y = 27;
+	pixel_x = -8
+	},
+/obj/structure/vehicle_locker/cabinet/cups/flip{
+	pixel_x = 7;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "fWu" = (
 /turf/closed/wall/almayer/outer{
 	blend_objects = list(/obj/structure/window_frame,/obj/structure/window/framed)
@@ -15940,7 +15935,6 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "gwS" = (
-/obj/structure/machinery/recharge_station,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -15952,6 +15946,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/prop/invuln/joey/normal,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "gNW" = (
@@ -15967,11 +15962,20 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supplydrop)
 "gSr" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 3
 	},
-/obj/structure/surface/table/almayer,
-/obj/item/tool/crowbar,
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 11;
+	pixel_x = -7;
+	layer = 2.98
+	},
+/obj/item/ammo_box/magazine/mk1{
+	pixel_y = 12;
+	pixel_x = 16;
+	layer = 2.98
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "hbu" = (
@@ -16047,7 +16051,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	dir = 1
+	dir = 1;
+	req_access = null;
+	req_one_access_txt = "90;91;92"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
@@ -16127,6 +16133,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/machinery/computer/working_joe{
+	layer = 3.3;
+	pixel_y = 21
+	},
+/obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "iRi" = (
@@ -16287,7 +16298,6 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "kjn" = (
-/obj/structure/machinery/recharge_station,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -16299,6 +16309,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/structure/prop/invuln/joey/normal,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "knD" = (
@@ -16322,6 +16333,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"kBG" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/nade_box{
+	pixel_y = 13;
+	layer = 3.2
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry,
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "kDp" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16461,6 +16485,10 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
+"lXR" = (
+/obj/structure/prop/almayer/ai_wallmonitor/east,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "lYO" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -16598,6 +16626,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"nex" = (
+/obj/structure/blocker/invisible_wall/directional{
+	layer = 2
+	},
+/turf/open/floor/almayer/aicore,
+/area/golden_arrow/ai_interface)
 "ngb" = (
 /obj/structure/machinery/recharge_station,
 /obj/effect/decal/cleanable/dirt{
@@ -16628,18 +16662,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/almayer,
-/area/golden_arrow/engineering)
-"nuK" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
-	dir = 1;
-	name = "\improper Human AI Interface Access"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "nxj" = (
 /obj/structure/pipes/vents/pump{
@@ -16680,7 +16704,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer/edge/smooth/north,
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
 /area/golden_arrow/supply)
 "nEI" = (
 /obj/structure/platform{
@@ -16762,6 +16786,15 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"ouD" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	pixel_y = 20
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "oxf" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -17244,7 +17277,8 @@
 /area/golden_arrow/supply)
 "sse" = (
 /obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/almayer/aicore/glowing,
+/obj/item/toy/prize/apc,
+/turf/open/floor/almayer/aicore,
 /area/golden_arrow/ai_interface)
 "svL" = (
 /obj/structure/machinery/door/poddoor/almayer{
@@ -17341,15 +17375,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"tDZ" = (
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
-	req_one_access = list()
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
 "tEH" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17358,22 +17383,16 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
 "tTk" = (
-/obj/structure/machinery/computer/ares_console{
-	pixel_y = 16;
-	layer = 4.12
-	},
-/obj/structure/surface/table/reinforced/aicore{
-	layer = 4.11;
-	pixel_y = 8;
-	density = 0
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/bed/chair/comfy/ares{
-	dir = 1;
-	layer = 4.13
+/obj/structure/machinery/computer/ares_console/large{
+	pixel_x = -16;
+	pixel_y = -8
+	},
+/obj/structure/bed/chair/comfy/ai_interface{
+	buckling_y = 4
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/golden_arrow/ai_interface)
@@ -17416,6 +17435,18 @@
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/platoonarmory)
+"uwt" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large{
+	layer = 2.98;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "uEm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17429,6 +17460,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
+"uPo" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/joey/normal,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/engineering)
 "uPX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17464,6 +17508,10 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
+"vzH" = (
+/obj/structure/prop/almayer/ai_wallmonitor,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "vCJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17503,6 +17551,13 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
+"vNW" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/blue{
+	pixel_y = -1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "vRh" = (
 /obj/structure/ship_ammo/heavygun{
 	pixel_y = 8
@@ -17593,15 +17648,11 @@
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
 "wSf" = (
-/turf/open/space/basic,
-/area/golden_arrow/supply)
-"xiW" = (
-/obj/structure/barricade/handrail{
-	pixel_y = -2;
-	layer = 2.9
-	},
-/turf/open/floor/almayer/aicore,
-/area/golden_arrow/ai_interface)
+/obj/effect/landmark/start/bridge,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "xlL" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -17717,6 +17768,31 @@
 /area/golden_arrow/supply)
 
 (1,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -18019,8 +18095,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (3,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -18323,8 +18449,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (5,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -18492,6 +18668,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 ahl
 ahl
@@ -18629,6 +18830,31 @@ aEG
 aEG
 "}
 (7,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -18796,6 +19022,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 gNW
 xTf
@@ -18933,6 +19184,31 @@ aEG
 aEG
 "}
 (9,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -19100,6 +19376,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 qds
 xTf
@@ -19237,6 +19538,31 @@ aEG
 aEG
 "}
 (11,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -19404,6 +19730,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 ahl
 lve
@@ -19541,6 +19892,31 @@ aEG
 aEG
 "}
 (13,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -19703,6 +20079,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 ahl
 ahl
@@ -19845,6 +20246,31 @@ aEG
 aEG
 "}
 (15,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -20007,6 +20433,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 avc
 cqk
 avc
@@ -20149,6 +20600,31 @@ aEG
 aEG
 "}
 (17,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -20316,6 +20792,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 lNj
 ahl
 eyx
@@ -20382,13 +20883,13 @@ aEG
 aWh
 auV
 aAK
-akL
+aKr
 aAK
 akL
 aqy
 aAK
 akL
-aAK
+anJ
 akL
 awI
 azx
@@ -20453,6 +20954,31 @@ aEG
 aEG
 "}
 (19,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -20533,13 +21059,13 @@ aEG
 aEG
 aWh
 aEZ
-aEI
+asK
 aQQ
-acV
+wSf
 asK
 aAU
+asK
 aEI
-aQQ
 acV
 asK
 aPL
@@ -20547,12 +21073,12 @@ amP
 arD
 aFy
 axL
-aKr
+azh
 azh
 abh
 aFy
 axL
-aKr
+azh
 azh
 aUY
 aWh
@@ -20605,6 +21131,31 @@ aEG
 aEG
 "}
 (20,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -20686,13 +21237,13 @@ aEG
 aWh
 aWw
 abW
-acb
+bUF
 acb
 abW
 aAt
 abW
 acb
-acb
+bUF
 ahi
 aiL
 adA
@@ -20757,6 +21308,31 @@ aEG
 aEG
 "}
 (21,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -20924,6 +21500,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 jSb
 vve
@@ -21061,6 +21662,31 @@ aEG
 aEG
 "}
 (23,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -21228,6 +21854,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 ahl
 lAv
 bcc
@@ -21365,6 +22016,31 @@ aEG
 aEG
 "}
 (25,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -21534,20 +22210,45 @@ aEG
 aEG
 aEG
 aEG
-wSf
-wSf
-wSf
-wSf
-wSf
-wSf
-wSf
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aYv
 aYv
 aYv
 aYv
 aYv
 aYv
-tDZ
+adI
 fKv
 dij
 bnm
@@ -21669,6 +22370,31 @@ aEG
 aEG
 "}
 (27,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -21845,6 +22571,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aYv
 aYv
 aDJ
@@ -21973,6 +22724,31 @@ aEG
 aEG
 "}
 (29,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -22149,6 +22925,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+aEG
+aEG
+aEG
+aEG
+aEG
 aYv
 kwe
 aCy
@@ -22211,7 +23012,7 @@ ajR
 aog
 aog
 aog
-ave
+aGl
 ayz
 aog
 aog
@@ -22290,17 +23091,42 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rRA
 rRA
 rRA
 rRA
 rRA
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+aIC
+aIC
+aIC
+aIC
+aIC
 aYv
 aqi
 pLu
@@ -22441,10 +23267,35 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
 rRA
 rRA
 onj
-onj
+bMs
 onj
 rRA
 rRA
@@ -22593,6 +23444,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
+rRA
+rRA
 rRA
 onj
 baN
@@ -22661,11 +23537,11 @@ afI
 aHF
 aHd
 aog
-arr
+fSy
 azv
 aNp
 aKk
-anJ
+ahK
 aNn
 aAs
 agh
@@ -22745,9 +23621,34 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rRA
 sse
-xiW
+rRA
+rRA
+vzH
+nex
 tTk
 duL
 duL
@@ -22756,7 +23657,7 @@ hCn
 sgG
 sgG
 sgG
-nuK
+hCn
 nrp
 anm
 anm
@@ -22813,7 +23714,7 @@ afI
 aHF
 aHd
 aog
-arr
+ajq
 asL
 aBk
 aKk
@@ -22897,6 +23798,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
+rRA
+rRA
 rRA
 onj
 baN
@@ -22909,7 +23835,7 @@ brg
 nEI
 brg
 aIC
-anm
+aVp
 kQO
 kQO
 dNn
@@ -23049,10 +23975,35 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
 rRA
 rRA
 onj
-onj
+lXR
 onj
 rRA
 rRA
@@ -23117,11 +24068,11 @@ aEG
 aEG
 aEG
 aWh
-avr
-aHQ
+arr
+asS
 aLz
 aKk
-aBD
+aCB
 aQm
 ahS
 aBd
@@ -23202,17 +24153,42 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rRA
 rRA
 rRA
 rRA
 rRA
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
+aIC
+aIC
+aIC
+aIC
+aIC
 kQO
 nBM
 lPH
@@ -23269,8 +24245,8 @@ aEG
 aEG
 aEG
 aWh
-ajq
-aXX
+aBD
+asS
 aLz
 aLz
 aBk
@@ -23365,6 +24341,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+rRA
+aEG
+aEG
+aEG
+aEG
+aEG
 kQO
 kiT
 vFy
@@ -23421,7 +24422,7 @@ aEG
 aEG
 aEG
 aWh
-aIQ
+ouD
 aqB
 avE
 aKd
@@ -23517,6 +24518,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 kQO
 kQO
 kQO
@@ -23531,7 +24557,7 @@ two
 aTs
 alR
 aIC
-ngb
+uPo
 mpM
 hcq
 aWo
@@ -23576,7 +24602,7 @@ aWh
 arr
 alD
 aBk
-aGl
+ahK
 aZr
 arj
 aBk
@@ -23671,6 +24697,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 kQO
 kQO
 kQO
@@ -23725,7 +24776,7 @@ aEG
 aEG
 aEG
 aWh
-arr
+aog
 alD
 ave
 anG
@@ -23821,6 +24872,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 adz
 adz
@@ -23878,7 +24954,7 @@ aEG
 aEG
 aWh
 aog
-azT
+aHQ
 aBk
 aBk
 aEY
@@ -23949,6 +25025,31 @@ aEG
 aEG
 "}
 (42,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -24125,6 +25226,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ayX
 ayX
@@ -24253,6 +25379,31 @@ aEG
 aEG
 "}
 (44,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -24429,6 +25580,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ayX
 ayX
@@ -24557,6 +25733,31 @@ aEG
 aEG
 "}
 (46,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -24733,6 +25934,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ayX
 ayX
@@ -24861,6 +26087,31 @@ aEG
 aEG
 "}
 (48,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -25037,6 +26288,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ayX
 ayX
@@ -25165,6 +26441,31 @@ aEG
 aEG
 "}
 (50,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -25341,6 +26642,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ayX
 ayX
@@ -25469,6 +26795,31 @@ aEG
 aEG
 "}
 (52,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -25645,6 +26996,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 adz
 adz
@@ -25701,7 +27077,7 @@ aHV
 aPv
 aYI
 aIr
-aVp
+aQF
 afO
 aQF
 afO
@@ -25773,6 +27149,31 @@ aEG
 aEG
 "}
 (54,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -25957,6 +27358,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 eEG
 oZQ
@@ -26077,6 +27503,31 @@ aEG
 aEG
 "}
 (56,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -26261,6 +27712,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 eEG
 oZQ
@@ -26381,6 +27857,31 @@ aEG
 aEG
 "}
 (58,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -26559,6 +28060,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 axS
 axS
@@ -26613,8 +28139,8 @@ aOt
 aFd
 aOt
 aBa
-aDW
-aJR
+abk
+abk
 ado
 ahj
 alG
@@ -26711,6 +28237,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rQj
 lYO
 dVU
@@ -26766,7 +28317,7 @@ aqb
 aJX
 aqk
 aGY
-asD
+uwt
 ado
 aQh
 aJk
@@ -26863,6 +28414,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rQj
 lYO
 dVU
@@ -26918,7 +28494,7 @@ abk
 arh
 aRQ
 aGY
-avX
+aSr
 ado
 arP
 arP
@@ -27015,6 +28591,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 rQj
 lYO
 dVU
@@ -27079,7 +28680,7 @@ acZ
 ayC
 acP
 aEM
-aLT
+akt
 adz
 ayX
 adz
@@ -27167,6 +28768,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 axS
 axS
@@ -27222,7 +28848,7 @@ aga
 arh
 aoI
 aDW
-aoG
+vNW
 akb
 aej
 aum
@@ -27327,6 +28953,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 aJD
 jHV
@@ -27374,7 +29025,7 @@ aLp
 aLk
 uoJ
 aDW
-aSr
+kBG
 akb
 adz
 aNm
@@ -27479,6 +29130,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 eEG
 aPq
@@ -27525,8 +29201,8 @@ aOt
 aQe
 aOt
 amI
-aGY
-aJM
+abk
+abk
 akb
 aqa
 aiz
@@ -27597,6 +29273,31 @@ aEG
 aEG
 "}
 (66,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -27783,6 +29484,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 mvk
 oZQ
@@ -27901,6 +29627,31 @@ aEG
 aEG
 "}
 (68,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -28087,6 +29838,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 mvk
 oZQ
@@ -28205,6 +29981,31 @@ aEG
 aEG
 "}
 (70,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -28391,6 +30192,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 axS
 axS
 axS
@@ -28509,6 +30335,31 @@ aEG
 aEG
 "}
 (72,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -28722,6 +30573,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 axH
 aeQ
@@ -28813,6 +30689,31 @@ aEG
 aEG
 "}
 (74,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -29026,6 +30927,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aMP
 akg
@@ -29117,6 +31043,31 @@ aEG
 aEG
 "}
 (76,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -29330,6 +31281,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aRf
 axH
@@ -29421,6 +31397,31 @@ aEG
 aEG
 "}
 (78,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -29629,6 +31630,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 atb
 axa
 aBg
@@ -29725,6 +31751,31 @@ aEG
 aEG
 "}
 (80,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -29933,6 +31984,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 atb
 axa
 avM
@@ -30029,6 +32105,31 @@ aEG
 aEG
 "}
 (82,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -30237,6 +32338,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 atb
 axa
 aBg
@@ -30389,6 +32515,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 adz
 adz
@@ -30485,6 +32636,31 @@ aEG
 aEG
 "}
 (85,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -30698,6 +32874,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 ahI
 aiu
@@ -30789,6 +32990,31 @@ aEG
 aEG
 "}
 (87,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -31002,6 +33228,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aVF
 aKD
@@ -31154,6 +33405,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 axH
 axH
@@ -31245,6 +33521,31 @@ aEG
 aEG
 "}
 (90,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -31464,6 +33765,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aez
 aWa
@@ -31616,6 +33942,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 adz
 aKa
@@ -31701,6 +34052,31 @@ aEG
 aEG
 "}
 (93,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -31927,6 +34303,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aTV
 aTV
@@ -32079,6 +34480,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aey
 aey
@@ -32157,6 +34583,31 @@ aEG
 aEG
 "}
 (96,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -32392,6 +34843,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aEf
 aBg
@@ -32461,6 +34937,31 @@ aEG
 aEG
 "}
 (98,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -32696,6 +35197,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 akC
 aBg
@@ -32848,6 +35374,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aAp
 aEa
@@ -32917,6 +35468,31 @@ aEG
 aEG
 "}
 (101,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -33161,6 +35737,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 anv
 aHl
@@ -33221,6 +35822,31 @@ aEG
 aEG
 "}
 (103,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -33465,6 +36091,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aKu
 aHl
@@ -33525,6 +36176,31 @@ aEG
 aEG
 "}
 (105,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -33769,6 +36445,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 adz
 aco
 alu
@@ -33829,6 +36530,31 @@ aEG
 aEG
 "}
 (107,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -34131,8 +36857,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (109,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -34435,8 +37211,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (111,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -34739,8 +37565,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (113,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -35043,8 +37919,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (115,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -35347,8 +38273,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (117,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -35651,8 +38627,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (119,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -35955,8 +38981,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (121,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -36259,8 +39335,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (123,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -36563,8 +39689,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (125,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -36867,8 +40043,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (127,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -37171,8 +40397,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (129,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -37475,8 +40751,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (131,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -37779,8 +41105,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (133,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -38083,8 +41459,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (135,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -38387,8 +41813,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (137,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -38691,8 +42167,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (139,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -38995,8 +42521,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (141,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -39299,8 +42875,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (143,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -39603,8 +43229,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (145,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -39907,8 +43583,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (147,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -40211,6 +43937,31 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (149,1,1) = {"
 aEG
@@ -40363,8 +44114,58 @@ aEG
 aEG
 aEG
 aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 "}
 (150,1,1) = {"
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG

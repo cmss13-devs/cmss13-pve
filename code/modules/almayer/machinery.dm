@@ -300,9 +300,25 @@
 /obj/structure/prop/almayer/cannon_cable_connector/bullet_act()
 	return
 
+/obj/structure/prop/almayer/ai_wallmonitor
+	name = "AI interface wall monitor"
+	desc = "A monitor embedded into the wall, providing detailed readouts of various different systems."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "ai_wallmonitor"
+	density = FALSE
+	pixel_y = 32
+	layer = ABOVE_OBJ_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
+/obj/structure/prop/almayer/ai_wallmonitor/east
+	icon_state = "ai_wallmonitor_e"
+	pixel_x = 32
+	pixel_y = 0
 
-
+/obj/structure/prop/almayer/ai_wallmonitor/west
+	icon_state = "ai_wallmonitor_w"
+	pixel_x = -32
+	pixel_y = 0
 
 
 
