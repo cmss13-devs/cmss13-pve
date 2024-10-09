@@ -1232,10 +1232,6 @@
 	pixel_y = 26;
 	pixel_x = -3
 	},
-/obj/item/storage/box/drinkingglasses{
-	pixel_x = 10;
-	pixel_y = 28
-	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aeH" = (
@@ -1514,8 +1510,8 @@
 	pixel_x = -8;
 	pixel_y = 28
 	},
-/obj/structure/machinery/computer/ares_console{
-	pixel_y = 2
+/obj/structure/machinery/prop/almayer/computer/PC{
+	pixel_y = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -2219,10 +2215,8 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "ahK" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "ahR" = (
 /obj/effect/decal/cleanable/dirt{
@@ -2699,16 +2693,15 @@
 	pixel_x = -7;
 	pixel_y = 27
 	},
-/obj/structure/vehicle_locker/cabinet/utensils{
-	pixel_x = 8;
-	pixel_y = 27;
-	icon_state = "cabinet2"
-	},
 /obj/item/reagent_container/food/condiment/saltshaker{
 	pixel_x = -7
 	},
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_y = 2
+	},
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 8;
+	pixel_y = 27
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -3457,10 +3450,6 @@
 	pixel_x = -8;
 	pixel_y = -2
 	},
-/obj/item/paper_bin/uscm{
-	pixel_x = 5;
-	pixel_y = 6
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "ama" = (
@@ -4020,14 +4009,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "anJ" = (
-/obj/structure/machinery/cm_vending/sorted/pve_food,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
-	name = "dip cup";
-	pixel_x = 5;
-	pixel_y = 25
+/obj/structure/machinery/cryopod{
+	dir = 1
 	},
-/turf/open/floor/almayer/plate,
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "anL" = (
 /obj/effect/decal/warning_stripes{
@@ -4177,8 +4175,14 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/supply)
 "aop" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin/uscm{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/tool/pen{
+	pixel_x = -8;
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4274,6 +4278,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera"
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21"
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5098,7 +5105,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "arr" = (
-/obj/structure/machinery/cm_vending/sorted/pve_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ars" = (
@@ -5389,17 +5396,8 @@
 	name = "overwatch receiver";
 	phone_category = "Overwatch"
 	},
-/obj/structure/machinery/computer/ares_console{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = 2
-	},
-/obj/item/tool/pen{
-	pixel_x = -8;
-	pixel_y = -11
-	},
 /obj/structure/machinery/door_control{
-	pixel_y = -11;
+	pixel_y = 10;
 	pixel_x = 6;
 	id = "squadarmory";
 	name = "gear lockers door-control"
@@ -7403,20 +7401,10 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "azh" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = -1
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_3";
-	pixel_y = 22
-	},
-/turf/open/floor/almayer/mono,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "azi" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7900,6 +7888,9 @@
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_y = 10
 	},
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 13
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "aAv" = (
@@ -8285,23 +8276,14 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "aBD" = (
-/obj/structure/machinery/cryopod{
-	dir = 1
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
+	name = "dip cup";
+	pixel_x = 5;
+	pixel_y = 25
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8;
-	pixel_x = -10
-	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aBE" = (
 /obj/structure/disposalpipe/segment{
@@ -8928,9 +8910,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/storage/toolbox/mechanical/green{
-	pixel_y = 10
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aDJ" = (
@@ -9284,7 +9263,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aEI" = (
-/obj/effect/landmark/start/bridge,
+/obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
@@ -9726,8 +9705,20 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aGl" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/item/ammo_magazine/shotgun/buckshot{
@@ -10429,12 +10420,12 @@
 /turf/open/floor/almayer/blackcorner/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
-/obj/structure/machinery/cm_vending/sorted/pve_food,
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff";
 	pixel_y = 20
 	},
+/obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aIR" = (
@@ -10920,9 +10911,24 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aKr" = (
-/obj/effect/landmark/start/marine/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
+/obj/structure/machinery/cryopod{
+	layer = 3.1;
+	pixel_y = 13;
+	dir = 1
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = -10
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aKs" = (
@@ -11343,34 +11349,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/golden_arrow/supply)
-"aLT" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/largecrate/supply/ammo{
-	pixel_y = 11;
-	name = "smoke grenades case";
-	fill_from_loc = 1
-	},
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/obj/item/explosive/grenade/smokebomb,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "aLV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -13862,6 +13840,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
 "aUX" = (
@@ -13966,26 +13947,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aVp" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8;
-	pixel_x = 11
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/obj/effect/step_trigger/ares_alert/access_control,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
 "aVq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15451,10 +15418,10 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "bUF" = (
-/obj/structure/machinery/cryopod{
-	layer = 3.1;
-	pixel_y = 13;
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -15467,9 +15434,9 @@
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8;
-	pixel_x = -10
+	pixel_x = 11
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "bZF" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
@@ -15901,10 +15868,9 @@
 	pixel_y = 27;
 	pixel_x = -8
 	},
-/obj/structure/vehicle_locker/cabinet/cups{
-	pixel_y = 27;
+/obj/structure/vehicle_locker/cabinet/cups/flip{
 	pixel_x = 7;
-	icon_state = "cabinet2"
+	pixel_y = 27
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -16085,7 +16051,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	dir = 1
+	dir = 1;
+	req_access = null;
+	req_one_access_txt = "90;91;92"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
@@ -16604,13 +16572,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
-"mFS" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/step_trigger/ares_alert/access_control,
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
 "mGo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16703,17 +16664,6 @@
 	},
 /obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/almayer,
-/area/golden_arrow/engineering)
-"nuK" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/blended{
-	id = "ARES StairsUpper";
-	name = "AI interface access"
-	},
-/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "nxj" = (
 /obj/structure/pipes/vents/pump{
@@ -17698,8 +17648,11 @@
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
 "wSf" = (
-/turf/open/space/basic,
-/area/golden_arrow/supply)
+/obj/effect/landmark/start/bridge,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "xlL" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -20930,13 +20883,13 @@ aEG
 aWh
 auV
 aAK
-bUF
+aKr
 aAK
 akL
 aqy
 aAK
 akL
-aBD
+anJ
 akL
 awI
 azx
@@ -21108,11 +21061,11 @@ aWh
 aEZ
 asK
 aQQ
-aEI
+wSf
 asK
 aAU
 asK
-ahK
+aEI
 acV
 asK
 aPL
@@ -21120,13 +21073,13 @@ amP
 arD
 aFy
 axL
-aKr
-aKr
+azh
+azh
 abh
 aFy
 axL
-aKr
-aKr
+azh
+azh
 aUY
 aWh
 aEG
@@ -21284,13 +21237,13 @@ aEG
 aWh
 aWw
 abW
-aVp
+bUF
 acb
 abW
 aAt
 abW
 acb
-aVp
+bUF
 ahi
 aiL
 adA
@@ -22282,13 +22235,13 @@ aEG
 aEG
 aEG
 aEG
-wSf
-wSf
-wSf
-wSf
-wSf
-wSf
-wSf
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aYv
 aYv
 aYv
@@ -23059,7 +23012,7 @@ ajR
 aog
 aog
 aog
-azh
+aGl
 ayz
 aog
 aog
@@ -23588,7 +23541,7 @@ fSy
 azv
 aNp
 aKk
-aGl
+ahK
 aNn
 aAs
 agh
@@ -23704,7 +23657,7 @@ hCn
 sgG
 sgG
 sgG
-nuK
+hCn
 nrp
 anm
 anm
@@ -23765,7 +23718,7 @@ ajq
 asL
 aBk
 aKk
-aGl
+ahK
 aLw
 ahS
 axK
@@ -23882,7 +23835,7 @@ brg
 nEI
 brg
 aIC
-mFS
+aVp
 kQO
 kQO
 dNn
@@ -24292,7 +24245,7 @@ aEG
 aEG
 aEG
 aWh
-anJ
+aBD
 asS
 aLz
 aLz
@@ -24649,7 +24602,7 @@ aWh
 arr
 alD
 aBk
-aGl
+ahK
 aZr
 arj
 aBk
@@ -28727,7 +28680,7 @@ acZ
 ayC
 acP
 aEM
-aLT
+akt
 adz
 ayX
 adz

@@ -1,6 +1,6 @@
 //------------CANTEEN MRE VENDOR---------------
 /obj/structure/machinery/cm_vending/sorted/marine_food
-	"\improper NestleCo AutoChef"
+	name = "\improper NestleCo AutoChef"
 	desc = "An autochef food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need. Inedible-looking sludge is passed through a variety of heaters, re-shapers, and solidifiers before being artificially flavored to create something that looks and tastes mostly edible."
 	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
 	icon_state = "food"

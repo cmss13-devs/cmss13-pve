@@ -308,11 +308,39 @@
 
 /obj/structure/vehicle_locker/cabinet/cups/Initialize()
 	. = ..()
-	new /obj/item/bedsheet(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+
+/obj/structure/vehicle_locker/cabinet/cups/flip
+	icon_state = "cabinet2"
 
 /obj/structure/vehicle_locker/cabinet/utensils
 	name = "utensils cabinet"
 
 /obj/structure/vehicle_locker/cabinet/utensils/Initialize()
 	. = ..()
-	new /obj/item/bedsheet(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+	new /obj/item/tool/kitchen/utensil/fork(container)
+
+/obj/structure/vehicle_locker/cabinet/utensils/flip
+	icon_state = "cabinet2"

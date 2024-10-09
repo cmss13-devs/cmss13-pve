@@ -337,6 +337,9 @@
 	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
 	icon_state = "drink"
 	ui_title = "NestleCo AutoDrink Dispenser W-A3"
+	req_skill = null
+	req_skill_level = null
+	wrenchable = FALSE
 	dispensable_reagents = list(
 		"water",
 		"coffee",
