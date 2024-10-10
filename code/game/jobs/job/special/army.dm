@@ -1,8 +1,6 @@
 /datum/job/trooper/standard
 	title = JOB_ARMY_TROOPER
-	supervisors = "the acting platoon leader"
-	total_positions = -1
-	spawn_positions = -1
+	supervisors = "the ranking Army member present"
 	gear_preset = /datum/equipment_preset/uscm/pfc
 
 /datum/job/trooper/standard/on_config_load()

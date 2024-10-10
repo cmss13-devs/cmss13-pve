@@ -1164,8 +1164,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/navy
 	name = "\improper USASF Radio Telephone Pack"
-	desc = "A heavy-duty pack, used for telecommunications between orbitting warships and their forward observers."
+	desc = "A heavy-duty pack, used for telecommunications between orbiting warships and their forward observers."
+	networks_receive = list(FACTION_MARINE, FACTION_NAVY)
+	networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
 
-	var/phone_category = PHONE_MARINE
-	var/list/networks_receive = list(FACTION_MARINE, FACTION_NAVY)
-	var/list/networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
+/obj/item/storage/backpack/marine/satchel/rto/army
+	name = "\improper US Army Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
+	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
+	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)

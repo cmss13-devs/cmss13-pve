@@ -38,7 +38,7 @@
 	rank = JOB_NAVY_CREWMAN
 	assignment = JOB_NAVY_CREWMAN
 	///Gives the sailors their radios
-	var/headset_type = /obj/item/device/radio/headset/distress/USASF
+	var/headset_type = /obj/item/device/radio/headset/distress/USASF/limited
 	idtype = /obj/item/card/id/dogtag
 
 //*****************************************************************************************************/
@@ -98,7 +98,7 @@
 	name = "USASF Flight-Deck Crewman (purple)"
 	role_comm_title = "Fuel"
 
-/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/usasf/crew/flightpurple/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
 	..()
 
@@ -106,7 +106,7 @@
 	name = "USASF Flight-Deck Crewman (white)"
 	role_comm_title = "Sfty"
 
-/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/usasf/crew/flightwhite/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
 	..()
 
@@ -114,7 +114,7 @@
 	name = "USASF Flight-Deck Crewman (blue)"
 	role_comm_title = "Hndl"
 
-/datum/equipment_preset/usasf/crew/flightgreen/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/usasf/crew/flightblue/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
 	..()
 
@@ -186,7 +186,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/medical, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/dutch/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/recon/navy, WEAR_JACKET)

@@ -374,6 +374,11 @@
 	icon_state = "eng_key"
 	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE)
 
+/obj/item/device/encryptionkey/usasf/limited
+	name = "\improper USASF Radio Encryption Key"
+	icon_state = "eng_key"
+	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = FALSE)
+
 /obj/item/device/encryptionkey/usasf/command
 	name = "\improper USASF Command Radio Encryption Key"
 	icon_state = "binary_key"
@@ -383,6 +388,11 @@
 	name = "\improper US Army Radio Encryption Key"
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE)
+
+/obj/item/device/encryptionkey/army/limited
+	name = "\improper US Army Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = FALSE)
 
 /obj/item/device/encryptionkey/army/command
 	name = "\improper US Army Command Radio Encryption Key"

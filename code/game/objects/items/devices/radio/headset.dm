@@ -1136,14 +1136,17 @@
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
 
+/obj/item/device/radio/headset/distress/USASF/limited
+	name = "\improper USASF Earpiece"
+	desc = "A sleek headset used by members of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable. Featured channels include: ; - USASF, :o - Colony, :g - public."
+	icon_state = "nav_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/usasf/limited)
+
 /obj/item/device/radio/headset/distress/USASF/command
 	name = "\improper USASF Officer Earpiece"
 	desc = "A sleek headset used by officers of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable, this one has a reinforced brace. Featured channels include: ; - USASF, :o - Colony, :g - public, :v - marine command, :J - JTAC."
-	frequency = ASF_FREQ
 	icon_state = "navcom_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/usasf/command)
-	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
 
 /obj/item/device/radio/headset/distress/army
 	name = "\improper USASF Earpiece"
