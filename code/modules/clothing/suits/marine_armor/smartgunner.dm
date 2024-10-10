@@ -149,6 +149,7 @@
 		/obj/item/weapon/gun/smartgun,
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
