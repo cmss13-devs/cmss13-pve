@@ -435,6 +435,16 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
 	icon_state = "navalpatch"
 
+/obj/item/clothing/accessory/patch/usasf
+	name = "USASF patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Aerospace Force."
+	icon_state = "usasfpatch"
+
+/obj/item/clothing/accessory/patch
+	name = "US Army patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Army."
+	icon_state = "armypatch"
+
 //misc
 
 /obj/item/clothing/accessory/dogtags

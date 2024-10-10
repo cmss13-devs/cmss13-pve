@@ -56,7 +56,9 @@
 	permeability_coefficient = 0.9
 	siemens_coefficient = 0.9
 
-
+/obj/item/clothing/gloves/botanic_leather/generic
+	desc = "These thick leather gloves are ideally suited for those who work with heavy machinery and require steady grip."
+	name = "rigger's gloves"
 
 /obj/item/clothing/gloves/boxing
 	name = "boxing gloves"
