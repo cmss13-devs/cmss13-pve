@@ -16,8 +16,8 @@
 	evolves_to = list(XENO_CASTE_QUEEN, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD) //Add more here separated by commas
 	deevolves_to = list("Drone")
 
-	tackle_min = 2
-	tackle_max = 4
+	tackle_min = 3
+	tackle_max = 5
 
 	minimap_icon = "warrior"
 
