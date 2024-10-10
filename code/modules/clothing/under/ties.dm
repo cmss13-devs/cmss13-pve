@@ -440,7 +440,7 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Aerospace Force."
 	icon_state = "usasfpatch"
 
-/obj/item/clothing/accessory/patch
+/obj/item/clothing/accessory/patch/army
 	name = "US Army patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Army."
 	icon_state = "armypatch"

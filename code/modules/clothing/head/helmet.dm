@@ -1534,3 +1534,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/helmet/marine/rto/army
+	name = "\improper M12 pattern helmet"
+	desc = "Despite it failing to be procured by the USCMC, the Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
