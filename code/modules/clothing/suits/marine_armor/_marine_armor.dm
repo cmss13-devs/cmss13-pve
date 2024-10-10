@@ -698,3 +698,10 @@
 	specialty = "M4 pattern marine"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/storage/marine/medium/rto/army
+	name = "\improper M4 pattern trooper armor"
+	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
