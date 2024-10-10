@@ -1141,6 +1141,7 @@
 /obj/item/storage/internal/accessory/webbing/m3mag
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg/m39,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun

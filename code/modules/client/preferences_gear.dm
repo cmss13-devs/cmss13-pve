@@ -292,9 +292,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap
 
 /datum/gear/headwear/uscm/cap/sulaco
-	display_name = "USS Sulaco cap"
+	display_name = "USS Golden Arrow cap"
 	path = /obj/item/clothing/head/sulacocap
-	cost = 0
+	cost = 1
 
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
