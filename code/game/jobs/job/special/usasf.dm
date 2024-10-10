@@ -10,18 +10,18 @@
 /datum/job/seaman/skittle
 	title = JOB_NAVY_SKITTLE
 	gear_preset = /datum/equipment_preset/usasf/crew/flight
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flightgreen
+	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/green
 
 /datum/job/seaman/skittle/on_config_load()
 	entry_message_body = "You are a part of the flight-deck operations crew aboard a USASF vessel, working to prepare and keep aerospace craft in fighting condition. Hoo-yah!"
 	return ..()
 
 /datum/job/seaman/skittle/purpwhite
-	gear_preset = /datum/equipment_preset/usasf/crew/flightpurple
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flightwhite
+	gear_preset = /datum/equipment_preset/usasf/crew/flight/purple
+	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/white
 
 /datum/job/seaman/skittle/blue
-	gear_preset = /datum/equipment_preset/usasf/crew/flightblue
+	gear_preset = /datum/equipment_preset/usasf/crew/flight/blue
 
 /datum/job/seaman/medic
 	title = JOB_NAVY_MEDIC
@@ -56,3 +56,20 @@
 	entry_message_body = "Often deployed alongside ground forces such as the Colonial Marines or Army, your job is to coordinate fire support from up on high onto concentrations of enemy forces. Hoo-yah!"
 	entry_message_end = "This role will likely require coordination with the gamemaster(s) to represent called-in fire-support, ahelp should you have further questions for them."
 	return ..()
+
+/datum/job/seaman/officer
+	title = JOB_NAVY_SO
+	gear_preset = /datum/equipment_preset/usasf/officer
+	gear_preset_secondary = /datum/equipment_preset/usasf/officer/lesser_rank
+
+/datum/job/seaman/flightboss
+	title = JOB_NAVY_FLIGHT_BOSS
+	gear_preset = /datum/equipment_preset/usasf/flightboss
+
+/datum/job/seaman/chief_engineer
+	title = JOB_NAVY_CHIEF_ENGINEER
+	gear_preset = /datum/equipment_preset/usasf/chief_engineer
+
+/datum/job/seaman/CO
+	title = JOB_NAVY_CO
+	gear_preset = /datum/equipment_preset/usasf/CO

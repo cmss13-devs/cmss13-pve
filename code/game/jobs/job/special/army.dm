@@ -6,3 +6,5 @@
 /datum/job/trooper/standard/on_config_load()
 	entry_message_body = "You are a rank-and-file Soldier of your standing army, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Hoo-ah!"
 	return ..()
+
+//Early WIP for army stuff, still got to do them.
