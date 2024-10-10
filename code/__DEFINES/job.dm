@@ -199,8 +199,6 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ARMY_NCO "Army Fireteam Lead"
 #define JOB_ARMY_SNCO "Army Squad Leader"
 #define JOB_ARMY_LT "Army Lieutenant"
-#define JOB_ARMY_WO "Army Warrant Officer"
-#define JOB_ARMY_INTEL "Army Intelligence Officer"
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
@@ -212,8 +210,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_NAVY_SYNTH "USASF Support Synthetic"
 #define JOB_NAVY_CHIEF_ENGINEER "USASF Engineering Duty Officer"
 #define JOB_NAVY_FLIGHT_BOSS "USASF Flight-Deck Officer"
-#define JOB_NAVY_SO "USASF Bridge Officer"
-#define JOB_NAVY_XO "USASF Executive Officer"
+#define JOB_NAVY_SO "USASF Duty Officer"
 #define JOB_NAVY_CO "USASF Commanding Officer"
 
 //-------- PMC --------//
