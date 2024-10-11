@@ -121,8 +121,6 @@
 		list("M3 Pattern Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Ridged Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads/lines, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Smooth Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads/smooth, VENDOR_ITEM_REGULAR),
-		list("M3-EOD Pattern Heavy Armor", round(scale * 10), /obj/item/clothing/suit/marine/heavy/pads, VENDOR_ITEM_REGULAR),
-		list("M3-L Pattern Light Armor", round(scale * 10), /obj/item/clothing/suit/marine/light/pads, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Arm Bracers", round(scale * 10), /obj/item/clothing/accessory/pads/bracers, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Neck Brace", round(scale * 15), /obj/item/clothing/accessory/pads/neckguard, VENDOR_ITEM_REGULAR),
 
