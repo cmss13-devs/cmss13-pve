@@ -117,11 +117,3 @@
 						uniform.valid_accessory_slots += ACCESSORY_SLOT_UTILITY
 						break
 			qdel(temp_uniform)
-
-/obj/item/clothing/suit/storage/marine/medium/rto/intel/army
-	name = "\improper XM4 pattern trooper armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/standard/army)
-	desc = "Tougher than steel, quieter than whispers, the XM4 Experimental Armor provides capable protection combined with an experimental integrated motion tracker. When worn, uniform accessories such as webbing cannot be attached due to the motion sensors occupying the clips."
-	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives within the USCMC, along with members of the US Army whose duties may detract from situational awareness on the frontlines, such as medics & field officers."
-	storage_slots = 5
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE

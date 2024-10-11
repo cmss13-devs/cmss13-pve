@@ -51,9 +51,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
@@ -85,9 +86,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
@@ -101,7 +104,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/engikit/full, WEAR_R_STORE)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, WEAR_BACK)
 
 /datum/equipment_preset/usa/medic
 	name = "Army Combat Medical Technician"
@@ -120,11 +123,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/intel/army, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 
@@ -152,6 +160,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
@@ -187,6 +196,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
@@ -216,29 +226,29 @@
 
 /datum/equipment_preset/usa/lt/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/intel/army, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flash, WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/usa/lt/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"

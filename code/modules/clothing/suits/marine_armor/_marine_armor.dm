@@ -687,21 +687,14 @@
 
 //==================USASF & ARMY==================\\
 
-/obj/item/clothing/suit/storage/marine/light/recon/navy
-	icon_state = "io"
-	armor_variation = 0
+/obj/item/clothing/suit/storage/marine/medium/rto/navy
 	name = "\improper M4 pattern naval-deployment armor"
-	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet nimble, with room for all your pouches."
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	storage_slots = 3
-	specialty = "M4 pattern marine"
+	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches."
+	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/medium/rto/army
 	name = "\improper M4 pattern trooper armor"
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUM
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 

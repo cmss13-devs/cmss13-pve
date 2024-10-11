@@ -124,7 +124,7 @@
 	role_comm_title = "HM"
 	skills = /datum/skills/corpsman
 
-/datum/equipment_preset/uscm_ship/uscm_medical/nurse/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm_ship/corpsman/nurse/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -134,6 +134,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_BACK)
@@ -185,9 +186,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/recon/navy, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/navy, WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
@@ -220,9 +222,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/recon/navy, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/navy, WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
@@ -322,7 +325,7 @@
 
 /datum/equipment_preset/usasf/CO/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/ce/navy, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/marine/peaked/captain/black, WEAR_HEAD)
@@ -330,7 +333,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber, WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/heavy/co, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_L_STORE)
 
 /datum/equipment_preset/usasf/CO/lesser_rank

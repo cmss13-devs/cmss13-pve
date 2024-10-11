@@ -645,6 +645,11 @@
 	clothing_traits = list(TRAIT_BIMEX)
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/sunglasses/big/orange
+	name = "\improper shooting shades"
+	desc = "An expensive pair of BiMex-made orange tinted sunglasses. Produced especially for members of the US Army."
+	icon_state = "bigorangesunglasses"
+	item_state = "bigorangesunglasses"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"
