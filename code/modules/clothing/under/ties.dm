@@ -441,7 +441,7 @@
 	icon_state = "usasfpatch"
 
 /obj/item/clothing/accessory/patch/usasf/helljumper
-	name = "USASF patch"
+	name = "Para-Rescue patch"
 	desc = "A fire-resistant shoulder patch, worn by the absolute badasses of the USASF 7th Para-Rescue Battalion. Feet first into hell!"
 	icon_state = "helljumperpatch"
 
@@ -451,8 +451,8 @@
 	icon_state = "armypatch"
 
 /obj/item/clothing/accessory/patch/army/infantry
-	name = "Army Infantry"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 3rd Infantry Division."
+	name = "Army Infantry patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 1st Cavalry Division."
 	icon_state = "infantrypatch"
 
 //misc
