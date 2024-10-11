@@ -1331,3 +1331,9 @@
 	desc = "Forward-observation work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/light/recon/navy)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/standard/army
+	name = "\improper army combat uniform"
+	desc = "Standard-issue Army uniform, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/army, )
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
