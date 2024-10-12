@@ -1,7 +1,7 @@
 #define SPECIES_SECTOID "Sectoid"
 
-/mob/living/carbon/human/sectoid/Initialize(mapload, new_species)
-	. = ..(mapload, new_species = name)
+/mob/living/carbon/human/sectoid/Initialize(mapload, new_species = SPECIES_SECTOID)
+	. = ..(mapload, new_species)
 
 /datum/species/sectoid
 	group = SPECIES_SECTOID
@@ -13,7 +13,7 @@
 	brute_mod = 1.5
 	burn_mod = 1.5
 	mob_flags = KNOWS_TECHNOLOGY
-	pain_type = /datum/pain/human_hero
+	pain_type = /datum/pain/xeno
 	unarmed_type = /datum/unarmed_attack/claws
 	secondary_unarmed_type = /datum/unarmed_attack
 	death_message = "lets out a faint scream as it collapses and stops moving..."
@@ -30,13 +30,16 @@
 		TRAIT_FOREIGN_BIO,
 		TRAIT_CRAWLER,
 	)
+	default_lighting_alpha = LIGHTING_PLANE_ALPHA_YAUTJA
 	blood_color = COLOR_ORANGE
 	uses_skin_color = FALSE
+	speech_sounds = list('void-marines/sound/xcom_aliens/sectoid/SectoidSeesHuman01a.SoundNodeWave_0000009c.ogg', 'void-marines/sound/xcom_aliens/sectoid/SectoidSeesHuman02a.SoundNodeWave_0000009c.ogg', 'void-marines/sound/xcom_aliens/sectoid/SectoidSeesHuman03a.SoundNodeWave_0000009c.ogg')
+	speech_chance = 100
 
 /datum/species/sectoid/New()
 	equip_adjust = list(
-		WEAR_R_HAND = list("[NORTH]" = list("x" = 2, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 0, "y" = -9), "[WEST]" = list("x" = -3, "y" = -5)),
-		WEAR_L_HAND = list("[NORTH]" = list("x" = -2, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 0, "y" = -9), "[WEST]" = list("x" = -3, "y" = -5)),
+		WEAR_R_HAND = list("[NORTH]" = list("x" = 1, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = 2, "y" = -8), "[WEST]" = list("x" = -3, "y" = -5)),
+		WEAR_L_HAND = list("[NORTH]" = list("x" = 0, "y" = -5), "[EAST]" = list("x" = 3, "y" = -5), "[SOUTH]" = list("x" = -1, "y" = -8), "[WEST]" = list("x" = -3, "y" = -5)),
 		WEAR_WAIST = list("[NORTH]" = list("x" = 0, "y" = 3), "[EAST]" = list("x" = 0, "y" = 3), "[SOUTH]" = list("x" = 0, "y" = 3), "[WEST]" = list("x" = 0, "y" = 3)),
 		WEAR_FEET = list("[NORTH]" = list("x" = 0, "y" = 0), "[EAST]" = list("x" = 0, "y" = 0), "[SOUTH]" = list("x" = 0, "y" = 0), "[WEST]" = list("x" = 0, "y" = 0)),
 		WEAR_HEAD = list("[NORTH]" = list("x" = 1, "y" = -4), "[EAST]" = list("x" = 0, "y" = -4), "[SOUTH]" = list("x" = 1, "y" = -4), "[WEST]" = list("x" = 0, "y" = -4)),
@@ -49,11 +52,20 @@
 	H.universal_understand = TRUE
 
 	H.gender = PLURAL
+	H.color = "#E6E6FF"
 
-	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	H.default_lighting_alpha = LIGHTING_PLANE_ALPHA_YAUTJA
 	H.update_sight()
 
 	return ..()
+
+/datum/species/sectoid/handle_death(mob/living/carbon/human/H, gibbed)
+	. = ..()
+	playsound(H, 'void-marines/sound/xcom_aliens/sectoid/SectoidBrainFry.SoundNodeWave_0000009c.ogg', 75, TRUE)
+	if(!gibbed)
+		var/obj/limb/head = H.get_limb("head")
+		head.droplimb(FALSE, TRUE)
+		QDEL_NULL(head)
 
 /datum/species/sectoid/handle_on_fire(humanoidmob)
 	. = ..()

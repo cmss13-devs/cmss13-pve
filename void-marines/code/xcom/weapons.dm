@@ -11,21 +11,25 @@
 		WEAR_R_HAND = 'void-marines/icons/energy_right_1.dmi'
 		)
 
-	muzzle_flash = "muzzle_laser"
+	charge_cost = 25
+	charge_icon = ""
+
 	gun_category = GUN_CATEGORY_SMG
 	flags_equip_slot = SLOT_WAIST
-	charge_cost = 50
-	charge_icon = "ter_e"
 
 /obj/item/weapon/gun/energy/laz_uzi/alien/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	. = ..()
-	if(. && !HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
-		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
 		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
+		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
 		if(!QDELETED(src))
 			qdel(src)
+		return NONE
+	. = ..()
 
 // pistol
+/datum/ammo/energy/rxfm_eva // OVERRIDE
+	flags_ammo_behavior = AMMO_ENERGY
+
 /obj/item/weapon/gun/energy/rxfm5_eva/alien
 	name = "weapon of unknown design"
 	desc = "A strange alien weapon."
@@ -38,25 +42,30 @@
 		WEAR_R_HAND = 'void-marines/icons/energy_right_1.dmi'
 		)
 
+	w_class = SIZE_SMALL
+
 	muzzle_flash = "muzzle_laser"
 	fire_sound = 'sound/weapons/Laser4.ogg'
 
 	attachable_allowed = list()
 	starting_attachment_types = list()
 
-	has_charge_meter = FALSE
-	charge_icon = "tep_e"
+	charge_cost = 150
+	charge_icon = ""
 
-	w_class = SIZE_SMALL
+	flags_item = null
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 /obj/item/weapon/gun/energy/rxfm5_eva/alien/update_icon()
+	icon_state = "tep"
 	item_state = "tep"
 	return
 
 /obj/item/weapon/gun/energy/rxfm5_eva/alien/handle_fire(atom/target, mob/living/carbon/human/user, params, reflex, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	. = ..()
-	if(. && !HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"), SPAN_DANGER("[src] explodes right in the hands of [user]!"))
 		cell_explosion(get_turf(src), 30, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("weapon explosion", user))
-		visible_message(SPAN_DANGER("[src] explodes right in the hands of [user]!"))
 		if(!QDELETED(src))
 			qdel(src)
+		return NONE
+	. = ..()
