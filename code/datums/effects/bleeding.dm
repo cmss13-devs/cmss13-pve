@@ -113,6 +113,9 @@
 				return FALSE
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
+	if(prob(10))
+		affected_mob.add_splatter_floor(get_turf(affected_mob), null, null, pick(GLOB.alldirs), limb)
+		affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*50, 0)
 	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss, 0)
 
 	return TRUE
