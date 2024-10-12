@@ -53,24 +53,24 @@
 		if(NORTH)
 			if(!canface())
 				return FALSE
-			if(pixel_y <= 16)
+			if(pixel_y <= 32)
 				pixel_y++
 				is_shifted = TRUE
 		if(EAST)
 			if(!canface())
 				return FALSE
-			if(pixel_x <= 16)
+			if(pixel_x <= 32)
 				pixel_x++
 				is_shifted = TRUE
 		if(SOUTH)
 			if(!canface())
 				return FALSE
-			if(pixel_y >= -16)
+			if(pixel_y >= -32)
 				pixel_y--
 				is_shifted = TRUE
 		if(WEST)
 			if(!canface())
 				return FALSE
-			if(pixel_x >= -16)
+			if(pixel_x >= -32)
 				pixel_x--
 				is_shifted = TRUE
