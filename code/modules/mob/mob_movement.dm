@@ -129,7 +129,8 @@
 		return
 
 	if(isobserver(mob)) //Ghosts are snowflakes unfortunately
-		NEXT_MOVEMENT(move_delay)
+		next_movement = world.time + move_delay
+		//NEXT_MOVEMENT(move_delay) //slowing down ghosts is unnecessary
 		return mob.Move(n, direct)
 
 	if(SEND_SIGNAL(mob, COMSIG_CLIENT_MOB_MOVE, n, direct) & COMPONENT_OVERRIDE_MOVE)
