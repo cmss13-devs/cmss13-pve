@@ -16,3 +16,6 @@
   - qol: M41 MK1 and NSG 23 magazine boxes can be carried on the back slot
   Max-023:
   - bugfix: Fixes green balaclava sprite
+2024-10-13:
+  Doubleumc:
+  - rscdel: removed time-based rankups from PFCs

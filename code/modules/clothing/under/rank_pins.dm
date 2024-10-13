@@ -92,19 +92,16 @@
 
 //OFFICERS
 /obj/item/clothing/accessory/ranks/marine/o1
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO1
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o1"
 
 /obj/item/clothing/accessory/ranks/marine/o2
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO2
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o2"
 
 /obj/item/clothing/accessory/ranks/marine/o3
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO3
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o3"
 
 /obj/item/clothing/accessory/ranks/marine/o4
 	name = "rank boards"

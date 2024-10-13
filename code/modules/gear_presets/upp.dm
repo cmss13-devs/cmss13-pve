@@ -68,7 +68,7 @@
 	assignment = JOB_UPP
 	rank = JOB_UPP
 	role_comm_title = "Sol"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/soldier/load_gear(mob/living/carbon/human/new_human)
 	//face
