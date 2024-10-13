@@ -14850,13 +14850,6 @@
 	},
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
-"kBD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/explosive/grenade/high_explosive/frag{
-	desc = "High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in the M92 Launcher, or thrown by hand. This one seems to have weird insciptions all over it. You can barely make out 'PrAIs3 thE H3f@ G0d'"
-	},
-/turf/open/floor/plating/platingdmg3/west,
-/area/bigredv2/caves/mining)
 "kBE" = (
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/floor/plating,
@@ -15510,11 +15503,6 @@
 "kZa" = (
 /turf/open/floor/asteroidwarning/northeast,
 /area/bigredv2/outside/e)
-"kZG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/bible/hefa,
-/turf/open/floor/plating,
-/area/bigredv2/caves/mining)
 "kZO" = (
 /obj/structure/bookcase{
 	icon_state = "book-5"
@@ -36043,7 +36031,7 @@ iLV
 qux
 xXY
 ffg
-kBD
+ffg
 ffg
 pKg
 cfT
@@ -36477,7 +36465,7 @@ qhk
 cVd
 nZC
 xfP
-kZG
+cVd
 ffg
 bJf
 cfT
