@@ -2516,6 +2516,7 @@
 #include "void-marines\code\light_change.dm"
 #include "void-marines\code\loadouts.dm"
 #include "void-marines\code\marine_roles.dm"
+#include "void-marines\code\pixel_shifting.dm"
 #include "void-marines\code\portable_detector.dm"
 #include "void-marines\code\rasputin.dm"
 #include "void-marines\code\special_roles.dm"
