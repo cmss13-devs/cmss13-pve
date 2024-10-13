@@ -434,12 +434,18 @@
 	addtimer(CALLBACK(src, PROC_REF(autoclick), user, A, params), 0.1)
 #endif
 
-/client/MouseMove(atom/object, location, control, params)
-	if(!keys_held["V"])
-		return
+/client/var/mouse_params
+/client/var/cursor_view_panning = FALSE
 
-	var/list/modifiers = params2list(params)
-	var/screen_loc = modifiers["screen-loc"]
+/client/MouseMove(atom/object, location, control, params)
+	mouse_params = params
+
+	if(cursor_view_panning)
+		cursor_view_pan()
+
+/client/proc/cursor_view_pan()
+	var/list/modifiers = params2list(mouse_params)
+	var/screen_loc = modifiers[SCREEN_LOC]
 
 	// "x,y"
 	var/list/screen_coords = splittext(screen_loc, ",")
