@@ -123,6 +123,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			M.count_niche_stat(STATISTICS_NICHE_DESTRUCTION_DOORS, 1)
 			SEND_SIGNAL(M, COMSIG_MOB_DESTROY_AIRLOCK, src)
 		to_chat(loc, SPAN_DANGER("[src] blows apart!"))
+		new /obj/structure/airlock_assembly
 		deconstruct(FALSE)
 		playsound(src, 'sound/effects/metal_crash.ogg', 25, 1)
 		return TRUE
@@ -133,12 +134,14 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 /obj/structure/machinery/door/airlock/deconstruct(disassembled = TRUE)
 	if(!disassembled)
 		if(width == 1)
+			new /obj/structure/airlock_assembly(loc)
 			new /obj/item/stack/rods(loc)
 			new /obj/item/stack/cable_coil/cut(loc)
 			new /obj/effect/spawner/gibspawner/robot(loc)
 			new /obj/effect/decal/cleanable/blood/oil(loc)
 		else // big airlock, big debris
 			for(var/turf/DT in locs) // locs = covered by airlock bounding box
+				new /obj/structure/airlock_assembly(loc)
 				new /obj/item/stack/rods(DT)
 				new /obj/item/stack/cable_coil/cut(DT)
 				new /obj/effect/spawner/gibspawner/robot(DT)
