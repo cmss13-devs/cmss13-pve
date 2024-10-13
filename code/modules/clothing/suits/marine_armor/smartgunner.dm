@@ -154,9 +154,9 @@
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
-		name = "M56 snow combat harness"
+		name = "\improper M56 snow combat harness"
 	else
-		name = "M56 combat harness"
+		name = "\improper M56 combat harness"
 	//select_gamemode_skin(type)
 
 	var/obj/item/clothing/accessory/pads/m56/m56 = new()
