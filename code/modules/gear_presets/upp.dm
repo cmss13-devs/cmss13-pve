@@ -153,7 +153,7 @@
 	assignment = JOB_SQUAD_MARINE
 	role_comm_title = "RFN"
 	rank = JOB_SQUAD_MARINE
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
 
