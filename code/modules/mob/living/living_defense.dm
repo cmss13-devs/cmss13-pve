@@ -203,7 +203,6 @@
 //Mobs on Fire end
 
 /mob/living/proc/handle_weather(delta_time = 1)
-	var/starting_weather_type = current_weather_effect_type
 	var/area/area = get_area(src)
 	// Check if we're supposed to be something affected by weather
 	if(!SSweather.weather_event_instance || !SSweather.map_holder.should_affect_area(area))
