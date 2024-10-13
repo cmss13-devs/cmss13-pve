@@ -646,8 +646,8 @@
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big/orange
-	name = "\improper shooting shades"
-	desc = "An expensive pair of BiMex-made orange tinted sunglasses. Produced especially for members of the US Army."
+	name = "\improper BiMex shooting shades"
+	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
 	icon_state = "bigorangesunglasses"
 	item_state = "bigorangesunglasses"
 
