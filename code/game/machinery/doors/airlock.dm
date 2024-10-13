@@ -141,7 +141,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			new /obj/effect/decal/cleanable/blood/oil(loc)
 		else // big airlock, big debris
 			for(var/turf/DT in locs) // locs = covered by airlock bounding box
-				new /obj/structure/airlock_assembly(loc)
+				new /obj/structure/airlock_assembly(DT)
 				new /obj/item/stack/rods(DT)
 				new /obj/item/stack/cable_coil/cut(DT)
 				new /obj/effect/spawner/gibspawner/robot(DT)
