@@ -295,6 +295,14 @@
 	to_chat(usr, SPAN_WARNING("You cannot unload \the [src]!"))
 	return
 
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/sadar/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+
 //folded version of the sadar
 /obj/item/prop/folded_anti_tank_sadar
 	name = "\improper M83 SADAR (folded)"

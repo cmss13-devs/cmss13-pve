@@ -1,10 +1,11 @@
 // Paygrade shorthand defines, to allow clearer designation.
 
-// USCM NAVY
+// USASF, the evolution of the USN & USAF, still considered Naval for the branch prefix
+
 /// NE1, Seaman Recruit
 #define PAY_SHORT_NE1 "NE1"
 
-/// NE2M, Seaman Apprentice
+/// NE2, Seaman Apprentice
 #define PAY_SHORT_NE2 "NE2"
 
 /// NE3, Seaman
@@ -17,7 +18,7 @@
 #define PAY_SHORT_NE5 "NE5"
 
 /// NE6, Petty Officer 1st Class
-#define PAY_SHORT_NE6 "N36"
+#define PAY_SHORT_NE6 "NE6"
 
 /// NE7, Chief Petty Officer
 #define PAY_SHORT_NE7 "NE7"
@@ -33,6 +34,21 @@
 
 /// NE9C, Command Master Chief Petty Officer
 #define PAY_SHORT_NE9C "NE9C"
+
+/// NW1, Warrant Officer 1
+#define PAY_SHORT_NW1 "NW1"
+
+/// NW1, Chief Warrant Officer 2
+#define PAY_SHORT_NW2 "NCW2"
+
+/// NW1, Chief Warrant Officer 3
+#define PAY_SHORT_NW3 "NCW3"
+
+/// NW1, Chief Warrant Officer 4
+#define PAY_SHORT_NW4 "NCW4"
+
+/// NW1, Chief Warrant Officer 5
+#define PAY_SHORT_NW5 "NCW5"
 
 /// NO1, Ensign
 #define PAY_SHORT_NO1 "NO1"

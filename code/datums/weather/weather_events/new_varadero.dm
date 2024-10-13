@@ -12,7 +12,6 @@
 	name = "Monsoon Warning"
 	display_name = "Monsoon Warning"
 	length = 6 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/high
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 115
