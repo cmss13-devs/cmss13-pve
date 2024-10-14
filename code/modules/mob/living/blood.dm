@@ -272,7 +272,7 @@
 					if(!sprayed_with_blood.body_position == LYING_DOWN)
 						sprayed_with_blood.add_mob_blood(src)
 						//if(rand_zone() == "head")
-						to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!."))
+						to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
 						sprayed_with_blood.apply_effect(9, EYE_BLUR)
 						break
 
