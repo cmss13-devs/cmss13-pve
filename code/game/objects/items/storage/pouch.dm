@@ -897,11 +897,11 @@
 		new /obj/item/reagent_container/hypospray/autoinjector/empty/medic(src)
 	update_icon()
 
-/obj/item/storage/pouch/pressurized_reagent_canister/proc/fill_with(ragent)
-	inner.reagents.add_reagent(ragent, inner.volume)
+/obj/item/storage/pouch/pressurized_reagent_canister/proc/fill_with(reagent)
+	inner.reagents.add_reagent(reagent, inner.volume)
 	if(length(contents) > 0)
 		var/obj/item/reagent_container/hypospray/autoinjector/empty/A = contents[1]
-		A.reagents.add_reagent(ragent, A.volume)
+		A.reagents.add_reagent(reagent, A.volume)
 		A.update_uses_left()
 		A.update_icon()
 	update_icon()
