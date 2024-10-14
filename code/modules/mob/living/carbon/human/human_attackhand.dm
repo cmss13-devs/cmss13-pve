@@ -306,6 +306,10 @@
 			postscript += " <b>(NANOSPLINTED)</b>"
 		else if(org.status & LIMB_SPLINTED)
 			postscript += " <b>(SPLINTED)</b>"
+		for(var/datum/effects/bleeding/internal/I in org.bleeding_effects_list)
+			postscript += " <b>pulsatile bleeding</b> "
+			if(I.has_been_bandaged)
+				postscript += " <b>(PACKED)</b> "
 
 		if(postscript)
 			limb_message += "\t My [org.display_name] is [SPAN_WARNING("[english_list(status, final_comma_text = ",")].[postscript]")]"
