@@ -82,9 +82,9 @@
 		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
 			if(!I.has_been_bandaged)
 				user.affected_message(M,
-					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>."),
-					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>."),
-					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name]."))
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <br>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <br>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <br>slowing the bleeding.</b>"))
 				I.has_been_bandaged = TRUE
 
 
@@ -187,9 +187,9 @@
 		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
 			if(!I.has_been_bandaged)
 				user.affected_message(M,
-					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>."),
-					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>."),
-					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name]."))
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <br>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <br>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <br>slowing the bleeding.</b>"))
 				I.has_been_bandaged = TRUE
 
 		switch(affecting.bandage(TRUE))
