@@ -307,7 +307,7 @@
 		else if(org.status & LIMB_SPLINTED)
 			postscript += " <b>(SPLINTED)</b>"
 		for(var/datum/effects/bleeding/internal/I in org.bleeding_effects_list)
-			postscript += " <b>pulsatile bleeding</b> "
+			postscript += " <b>It is bleeding pulsatilely.</b> "
 			if(I.has_been_bandaged)
 				postscript += " <b>(PACKED)</b> "
 

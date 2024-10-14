@@ -327,16 +327,17 @@
 						break
 
 			//var/obj/effect/decal/cleanable/blood/blood_spraying
-			var/obj/limb/spraying_limb = get_limb(limb)
-			var/obj/effect/decal/cleanable/blood/splatter/blood_spraying = new /obj/effect/decal/cleanable/blood/splatter(T, b_color = species.blood_color)
+			var/b_color = species.blood_color
+			var/obj/limb/O = limb
+			var/obj/effect/decal/cleanable/blood/splatter/blood_spraying = new /obj/effect/decal/cleanable/blood/splatter(T, b_color)
 			blood_spraying.icon_state = "squirt"
 			blood_spraying.dir = spray_dir
 			blood_spraying.pixel_x = rand(-2,2)
 			blood_spraying.pixel_y = rand(-2,2)
 			playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
 			src.visible_message(\
-				SPAN_WARNING("You see a gush of blood spray from [src]!"),
-				SPAN_HIGHDANGER("Blood sprays from your [spraying_limb.name]!"),
+				SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
+				SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 				SPAN_HIGHDANGER("You hear something spray violently!"))
 
 			//blood_spraying = new /obj/effect/decal/cleanable/blood/splatter(T, b_color)

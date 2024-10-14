@@ -114,12 +114,13 @@
 				return FALSE
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
+	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.75, 0)
+	//to_chat(src, SPAN_HIGHDANGER("Blood weeps from your [nameof(limb)]!"))
 	if(prob(10))
 		if(!src.has_been_bandaged) //If Arterial has been packed, only remove blood passively and slowly
-			affected_mob.spray_blood(get_turf(affected_mob), pick(GLOB.alldirs), limb)
+			affected_mob.spray_blood(get_turf(affected_mob), pick(GLOB.alldirs), src.limb)
 			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*30*(affected_mob.blood_volume/BLOOD_VOLUME_NORMAL), 0)
-	//to_chat(src, SPAN_HIGHDANGER("Blood weeps from your [nameof(limb)]!"))
- 	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.75, 0)
+
 
 	return TRUE
 
