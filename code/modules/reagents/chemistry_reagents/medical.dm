@@ -144,7 +144,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_ANTIHALLUCINOGENIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 3, PROPERTY_ANTIHALLUCINOGENIC = 2)
 
 /datum/reagent/medical/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
