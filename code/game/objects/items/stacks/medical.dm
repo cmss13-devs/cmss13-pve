@@ -80,7 +80,6 @@
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
 		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
-			to_world(I.limb)
 			if(!I.has_been_bandaged)
 				user.affected_message(M,
 					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>."),
@@ -184,6 +183,15 @@
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				user.affected_message(M,
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>."),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>."),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name]."))
+				I.has_been_bandaged = TRUE
+
 		switch(affecting.bandage(TRUE))
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
