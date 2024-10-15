@@ -215,6 +215,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/storage/fancy/cigarettes/lady_finger = "helmet_cig_lf",
 	/obj/item/storage/fancy/cigarettes/blackpack = "helmet_cig_blackpack",
 	/obj/item/storage/fancy/cigarettes/arcturian_ace = "helmet_cig_aapack",
+	/obj/item/storage/fancy/cigarettes/spirit = "helmet_cig_naspack",
+	/obj/item/storage/fancy/cigarettes/spirit/yellow = "helmet_cig_y_naspack",
 	/obj/item/storage/fancy/cigarettes/lucky_strikes_4 = "hat_cig_ls_mre",
 	/obj/item/storage/fancy/cigar/matchbook = "helmet_matches_mre",
 	/obj/item/clothing/mask/cigarette/cigar = "helmet_cig_cig",
@@ -261,6 +263,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/glasses/sunglasses/sechud = "sechud",
 	/obj/item/clothing/glasses/eyepatch = "eyepatch",
 	/obj/item/clothing/glasses/regular/hipster = "persc-glasses",
+
+	//GASMASK
+	/obj/item/clothing/mask/gas/m5 = HELMET_GARB_RELAY_ICON_STATE,
 
 	// WALKMAN AND CASSETTES
 	/obj/item/device/walkman = HELMET_GARB_RELAY_ICON_STATE,
