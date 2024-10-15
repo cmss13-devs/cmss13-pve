@@ -387,7 +387,7 @@
 	desc = "A small bottle. Contains Peridaxon - Used by lazy doctors to temporarily halt the effects of internal organ damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle4"
-	volume = 60
+	volume = 180
 	amount_per_transfer_from_this = 60
 
 /obj/item/reagent_container/glass/bottle/peridaxon/Initialize()
@@ -399,7 +399,7 @@
 	desc = "A small bottle. Contains Tramadol - Used as a basic painkiller."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle1"
-	volume = 60
+	volume = 180
 	amount_per_transfer_from_this = 60
 
 /obj/item/reagent_container/glass/bottle/tramadol/Initialize()
@@ -411,7 +411,7 @@
 	desc = "A small bottle. Contains Oxycodone - Used as an Extreme Painkiller.  ILLEGAL TO DISTRIBUTE."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle2"
-	volume = 60
+	volume = 180
 	amount_per_transfer_from_this = 60
 
 /obj/item/reagent_container/glass/bottle/oxycodone/Initialize()
@@ -423,7 +423,7 @@
 	desc = "A small bottle. Contains tricordrazine - A weak but catch-all medicine for treating all sorts of damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle18"
-	volume = 60
+	volume = 180
 
 /obj/item/reagent_container/glass/bottle/tricordrazine/Initialize()
 	. = ..()
@@ -432,7 +432,7 @@
 /obj/item/reagent_container/glass/bottle/epinephrine
 	name = "\improper Epinephrine bottle"
 	desc = "A small bottle. Contains epinephrine - Used to increase a patients arterial blood pressure, amongst other actions, to assist in cardiopulmonary resuscitation." //"I can't lie to you about your odds of a successful resuscitation, but you have my sympathies"
-	volume = 60
+	volume = 180
 
 /obj/item/reagent_container/glass/bottle/epinephrine/Initialize()
 	. = ..()
