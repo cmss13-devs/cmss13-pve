@@ -131,9 +131,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return
 
-	if(locked || welded || isElectrified())
-		return LOCKED_DOOR_PENALTY
-
 	if(isfacehugger(X))
 		return -1 // We LOVE going under doors!
 
