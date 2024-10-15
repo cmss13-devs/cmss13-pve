@@ -12156,13 +12156,8 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /obj/structure/largecrate/supply/ammo{
 	name = "materials crate";
-	fill_from_loc = 1
-	},
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/plasteel{
-	amount = 40;
-	pixel_x = 7;
-	pixel_y = 6
+	fill_from_loc = 1;
+	desc = "A hefty wooden crate. The label says 'Golden Arrow mistakenly provided excessive fortification materials. Please make-do with standard Sandbags from now on' "
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
