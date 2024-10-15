@@ -265,6 +265,8 @@
 		/obj/item/reagent_container/glass/bottle/oxycodone,
 		/obj/item/reagent_container/glass/bottle/peridaxon,
 		/obj/item/reagent_container/glass/bottle/tramadol,
+		/obj/item/reagent_container/glass/bottle/tricordrazine,
+
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/Destroy()
@@ -495,6 +497,7 @@
 		list("Bottle (Oxycodone)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/oxycodone, VENDOR_ITEM_REGULAR),
 		list("Bottle (Peridaxon)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/peridaxon, VENDOR_ITEM_REGULAR),
 		list("Bottle (Tramadol)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tramadol, VENDOR_ITEM_REGULAR),
+		list("Bottle (Tricordrazine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tricordrazine, VENDOR_ITEM_REGULAR)
 
 		list("PILL BOTTLES", -1, null, null),
 		list("Pill Bottle (Bicaridine)", floor(scale * 4), /obj/item/storage/pill_bottle/bicaridine, VENDOR_ITEM_REGULAR),

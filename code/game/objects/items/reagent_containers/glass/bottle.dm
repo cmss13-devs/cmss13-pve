@@ -9,7 +9,7 @@
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5, 10, 15, 25, 30, 40, 60)
 	flags_atom = FPRINT|OPENCONTAINER
-	volume = 60
+	volume = 180
 	attack_speed = 4
 
 /obj/item/reagent_container/glass/bottle/on_reagent_change()
@@ -64,7 +64,7 @@
 
 /obj/item/reagent_container/glass/bottle/inaprovaline/Initialize()
 	. = ..()
-	reagents.add_reagent("inaprovaline", 60)
+	reagents.add_reagent("inaprovaline", 180)
 
 /obj/item/reagent_container/glass/bottle/kelotane
 	name = "\improper Kelotane bottle"
@@ -75,7 +75,7 @@
 
 /obj/item/reagent_container/glass/bottle/kelotane/Initialize()
 	. = ..()
-	reagents.add_reagent("kelotane", 60)
+	reagents.add_reagent("kelotane", 180)
 
 /obj/item/reagent_container/glass/bottle/dexalin
 	name = "\improper Dexalin bottle"
@@ -86,7 +86,7 @@
 
 /obj/item/reagent_container/glass/bottle/dexalin/Initialize()
 	. = ..()
-	reagents.add_reagent("dexalin", 60)
+	reagents.add_reagent("dexalin", 180)
 
 /obj/item/reagent_container/glass/bottle/spaceacillin
 	name = "\improper Spaceacillin bottle"
@@ -97,7 +97,7 @@
 
 /obj/item/reagent_container/glass/bottle/spaceacillin/Initialize()
 	. = ..()
-	reagents.add_reagent("spaceacillin", 60)
+	reagents.add_reagent("spaceacillin", 180)
 
 /obj/item/reagent_container/glass/bottle/toxin
 	name = "toxin bottle"
@@ -107,7 +107,7 @@
 
 /obj/item/reagent_container/glass/bottle/toxin/Initialize()
 	. = ..()
-	reagents.add_reagent("toxin", 60)
+	reagents.add_reagent("toxin", 180)
 
 /obj/item/reagent_container/glass/bottle/cyanide
 	name = "cyanide bottle"
@@ -117,7 +117,7 @@
 
 /obj/item/reagent_container/glass/bottle/cyanide/Initialize()
 	. = ..()
-	reagents.add_reagent("cyanide", 60)
+	reagents.add_reagent("cyanide", 180)
 
 /obj/item/reagent_container/glass/bottle/stoxin
 	name = "Soporific bottle"
@@ -128,7 +128,7 @@
 
 /obj/item/reagent_container/glass/bottle/stoxin/Initialize()
 	. = ..()
-	reagents.add_reagent("stoxin", 60)
+	reagents.add_reagent("stoxin", 180)
 
 /obj/item/reagent_container/glass/bottle/chloralhydrate
 	name = "chloral hydrate bottle"
@@ -138,7 +138,7 @@
 
 /obj/item/reagent_container/glass/bottle/chloralhydrate/Initialize()
 	. = ..()
-	reagents.add_reagent("chloralhydrate", 30) //Intentionally low since it is so strong. Still enough to knock someone out.
+	reagents.add_reagent("chloralhydrate", 60) //Intentionally low since it is so strong. Still enough to knock someone out.
 
 /obj/item/reagent_container/glass/bottle/antitoxin
 	name = "\improper Dylovene bottle"
@@ -149,7 +149,7 @@
 
 /obj/item/reagent_container/glass/bottle/antitoxin/Initialize()
 	. = ..()
-	reagents.add_reagent("anti_toxin", 60)
+	reagents.add_reagent("anti_toxin", 180)
 
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"
@@ -159,7 +159,7 @@
 
 /obj/item/reagent_container/glass/bottle/mutagen/Initialize()
 	. = ..()
-	reagents.add_reagent("mutagen", 60)
+	reagents.add_reagent("mutagen", 180)
 
 /obj/item/reagent_container/glass/bottle/ammonia
 	name = "ammonia bottle"
@@ -169,7 +169,7 @@
 
 /obj/item/reagent_container/glass/bottle/ammonia/Initialize()
 	. = ..()
-	reagents.add_reagent("ammonia", 60)
+	reagents.add_reagent("ammonia", 180)
 
 /obj/item/reagent_container/glass/bottle/diethylamine
 	name = "diethylamine bottle"
@@ -179,7 +179,7 @@
 
 /obj/item/reagent_container/glass/bottle/diethylamine/Initialize()
 	. = ..()
-	reagents.add_reagent("diethylamine", 60)
+	reagents.add_reagent("diethylamine", 180)
 
 /obj/item/reagent_container/glass/bottle/flu_virion
 	name = "flu virion culture bottle"
@@ -380,7 +380,7 @@
 
 /obj/item/reagent_container/glass/bottle/bicaridine/Initialize()
 	. = ..()
-	reagents.add_reagent("bicaridine", 60)
+	reagents.add_reagent("bicaridine", 180)
 
 /obj/item/reagent_container/glass/bottle/peridaxon
 	name = "\improper Peridaxon bottle"
@@ -392,7 +392,7 @@
 
 /obj/item/reagent_container/glass/bottle/peridaxon/Initialize()
 	. = ..()
-	reagents.add_reagent("peridaxon", 60)
+	reagents.add_reagent("peridaxon", 180)
 
 /obj/item/reagent_container/glass/bottle/tramadol
 	name = "\improper Tramadol bottle"
@@ -404,7 +404,7 @@
 
 /obj/item/reagent_container/glass/bottle/tramadol/Initialize()
 	. = ..()
-	reagents.add_reagent("tramadol", 60)
+	reagents.add_reagent("tramadol", 180)
 
 /obj/item/reagent_container/glass/bottle/oxycodone
 	name = "\improper Oxycodone bottle"
@@ -416,7 +416,7 @@
 
 /obj/item/reagent_container/glass/bottle/oxycodone/Initialize()
 	. = ..()
-	reagents.add_reagent("oxycodone", 60)
+	reagents.add_reagent("oxycodone", 180)
 
 /obj/item/reagent_container/glass/bottle/tricordrazine
 	name = "\improper Tricordrazine bottle"
@@ -427,7 +427,7 @@
 
 /obj/item/reagent_container/glass/bottle/tricordrazine/Initialize()
 	. = ..()
-	reagents.add_reagent("tricordrazine", 60)
+	reagents.add_reagent("tricordrazine", 180)
 
 /obj/item/reagent_container/glass/bottle/epinephrine
 	name = "\improper Epinephrine bottle"
@@ -436,5 +436,5 @@
 
 /obj/item/reagent_container/glass/bottle/epinephrine/Initialize()
 	. = ..()
-	reagents.add_reagent("adrenaline", 60)
+	reagents.add_reagent("adrenaline", 180)
 	update_icon()
