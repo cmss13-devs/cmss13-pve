@@ -4,7 +4,7 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_3
 	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_3
-	max_health = XENO_HEALTH_TIER_2
+	max_health = XENO_HEALTH_TIER_RUNNER
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
@@ -16,8 +16,8 @@
 	evolves_to = list(XENO_CASTE_QUEEN, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD) //Add more here separated by commas
 	deevolves_to = list("Drone")
 
-	tackle_min = 3
-	tackle_max = 5
+	tackle_min = 2
+	tackle_max = 4
 
 	minimap_icon = "warrior"
 
