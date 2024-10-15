@@ -71,12 +71,6 @@
 	return FALSE
 
 /obj/structure/airlock_assembly/handle_tail_stab(mob/living/carbon/xenomorph/xeno)
-	if(isElectrified() && arePowerSystemsOn())
-		var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
-		sparks.set_up(5, 1, src)
-		sparks.start()
-		xeno.KnockDown(1)
-		xeno.Stun(1)
 
 	playsound(src, 'sound/effects/metalhit.ogg', 50, TRUE)
 	xeno.visible_message(SPAN_XENOWARNING("\The [xeno] strikes \the [src] with its tail!"), SPAN_XENOWARNING("You strike \the [src] with your tail!"))
