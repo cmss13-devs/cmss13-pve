@@ -578,7 +578,7 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	addtimer(CALLBACK(src, PROC_REF(handle_ob_shake), loc), 1 SECONDS)
 
 /obj/structure/ob_ammo/warhead/nerve
-	name = "\improper chemical orbital warhead (CN-20)"
+	name = "\improper 'Weteye' Chemical Weapon Warhead (CN-20)"
 	warhead_kind = "nerve"
 	icon_state = "ob_warhead_2"
 	shake_frequency = 1
