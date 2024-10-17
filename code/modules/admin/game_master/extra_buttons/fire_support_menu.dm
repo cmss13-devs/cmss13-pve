@@ -110,7 +110,7 @@
 
 			if("CN-20 Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
-				var/obj/structure/ship_ammo/rocket/banshee/ammo/nerve = new()
+				var/obj/structure/ship_ammo/rocket/banshee/nerve/ammo = new()
 
 				handle_dropship_ordnance(target_turf, ammo)
 
