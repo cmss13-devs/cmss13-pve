@@ -242,7 +242,7 @@
 				return TRUE
 
 			if("Nerve Gas OB")
-				var/obj/structure/ob_ammo/warhead/nerve /ammo= new()
+				var/obj/structure/ob_ammo/warhead/nerve/ammo= new()
 
 				handle_orbital_ordnance(target_turf, ammo)
 				return TRUE
