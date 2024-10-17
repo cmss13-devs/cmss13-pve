@@ -604,7 +604,7 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	sleep(clear_delay)
 	spawn(5)
 		var/datum/effect_system/smoke_spread/cn20/nerve_gas = new/datum/effect_system/smoke_spread/cn20()
-		nerve_gas.set_up(20,0,impact,15)
+		nerve_gas.set_up(20,0,target,15)
 		nerve_gas.start()
 		color = "#80c7e4"
 	qdel(src)
