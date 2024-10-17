@@ -584,7 +584,7 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	shake_frequency = 1
 	max_shake_factor = 8
 	max_knockdown_time = 3
-	var/clear_power = 1200
+	var/clear_power = 200
 	var/clear_falloff = 400
 	var/clear_delay = 3
 	var/fire_color = LIGHT_COLOR_CYAN
@@ -599,14 +599,14 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	sleep(10)
 	var/datum/cause_data/cause_data = create_cause_data(initial(name), source_mob)
 	cell_explosion(target, clear_power, clear_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data) //break shit around
+		spawn(5)
+			var/datum/effect_system/smoke_spread/cn20/nerve_gas = new/datum/effect_system/smoke_spread/cn20()
+			nerve_gas.set_up(8,0,impact,15)
+			nerve_gas.start()
+			color = "#80c7e4" //This won't do anything I don't think but fuck it fuck FS code this is annoying i'm hacking it together
 	handle_ob_shake(target)
 
 	sleep(clear_delay)
-	spawn(5)
-		var/datum/effect_system/smoke_spread/cn20/nerve_gas = new/datum/effect_system/smoke_spread/cn20()
-		nerve_gas.set_up(20,0,target,15)
-		nerve_gas.start()
-		color = "#80c7e4"
 	qdel(src)
 
 

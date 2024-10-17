@@ -113,10 +113,11 @@
 				var/obj/structure/ship_ammo/rocket/banshee/nerve/ammo = new()
 
 				handle_dropship_ordnance(target_turf, ammo)
+				spawn(5)
+					var/datum/effect_system/smoke_spread/cn20/nerve_gas = new/datum/effect_system/smoke_spread/cn20()
 					nerve_gas.set_up(8,0,target_turf,15)
 					nerve_gas.start()
 					color = "#80c7e4"
-
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
 
@@ -248,10 +249,12 @@
 				var/obj/structure/ob_ammo/warhead/nerve/ammo= new()
 
 				handle_orbital_ordnance(target_turf, ammo)
+					spawn(5)
+						var/datum/effect_system/smoke_spread/cn20/nerve_gas = new/datum/effect_system/smoke_spread/cn20()
+						nerve_gas.set_up(20,0,target_turf,15)
+						nerve_gas.start()
+						color = "#80c7e4"
 				return TRUE
-					nerve_gas.set_up(20,0,target_turf,15)
-					nerve_gas.start()
-					color = "#80c7e4"
 
 			//Mortar Shelling
 			if("High Explosive Shell")
