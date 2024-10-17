@@ -113,6 +113,9 @@
 				var/obj/structure/ship_ammo/rocket/banshee/nerve/ammo = new()
 
 				handle_dropship_ordnance(target_turf, ammo)
+					nerve_gas.set_up(8,0,target_turf,15)
+					nerve_gas.start()
+					color = "#80c7e4"
 
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
@@ -246,6 +249,9 @@
 
 				handle_orbital_ordnance(target_turf, ammo)
 				return TRUE
+					nerve_gas.set_up(20,0,target_turf,15)
+					nerve_gas.start()
+					color = "#80c7e4"
 
 			//Mortar Shelling
 			if("High Explosive Shell")
