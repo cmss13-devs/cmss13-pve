@@ -1,10 +1,11 @@
 #define FIRE_SUPPORT_CLICK_INTERCEPT_ACTION "fire_support_click_intercept_action"
 
 //Various ordnance selections
-#define ORDNANCE_OPTIONS list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive", "Incendiary", "Fragmentation", "Flare")
+#define ORDNANCE_OPTIONS list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive","Nerve Gas OB", "Incendiary", "Fragmentation", "Flare",  "Nerve Gas Mortar")
 #define MISSILE_ORDNANCE list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
-#define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB", "Nerve Gas OB")
-#define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell", "Nerve Gas Shell")
+#define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
+#define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
+#define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21")
 
 /client/proc/toggle_fire_support_menu()
@@ -55,6 +56,7 @@
 	data["missile_ordnance_options"] = MISSILE_ORDNANCE
 	data["orbital_ordnance_options"] = ORBITAL_ORDNANCE
 	data["mortar_ordnance_options"] = MORTAR_ORDNANCE
+	data["chemical_ordnance_options"] = CHEMICAL_ORDNANCE
 	data["misc_ordnance_options"] = MISC_ORDNANCE
 
 	return data
@@ -270,6 +272,14 @@
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
 
+			if("Nerve Gas Shell")
+				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
+				var/obj/item/mortar_shell/nerve/ammo = new()
+
+				abstract_mortar.handle_shell(target_turf, ammo)
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				return TRUE
+
 			if("Flare Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/item/mortar_shell/flare/ammo = new()
@@ -304,4 +314,5 @@
 #undef ORBITAL_ORDNANCE
 #undef MORTAR_ORDNANCE
 #undef MISC_ORDNANCE
+#undef CHEMICAL_ORDNANCE
 #undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION
