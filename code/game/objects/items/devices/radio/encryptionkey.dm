@@ -372,29 +372,39 @@
 /obj/item/device/encryptionkey/usasf
 	name = "\improper USASF Radio Encryption Key"
 	icon_state = "eng_key"
-	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE)
+	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE)
 
-/obj/item/device/encryptionkey/usasf/limited
+/obj/item/device/encryptionkey/usasf/attache
 	name = "\improper USASF Radio Encryption Key"
 	icon_state = "eng_key"
-	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = FALSE)
+	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COLONY = TRUE, SQUAD_MARINE_1 = TRUE)
 
 /obj/item/device/encryptionkey/usasf/command
 	name = "\improper USASF Command Radio Encryption Key"
 	icon_state = "binary_key"
-	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE, RADIO_CHANNEL_JTAC = TRUE)
+	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_JTAC = TRUE)
+
+/obj/item/device/encryptionkey/usasf/command/attache
+	name = "\improper USASF Command Radio Encryption Key"
+	icon_state = "binary_key"
+	channels = list(RADIO_CHANNEL_USASF = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_JTAC = TRUE, SQUAD_MARINE_1 = TRUE)
 
 /obj/item/device/encryptionkey/army
 	name = "\improper US Army Radio Encryption Key"
 	icon_state = "stripped_key"
-	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE)
+	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE)
 
-/obj/item/device/encryptionkey/army/limited
+/obj/item/device/encryptionkey/army/attache
 	name = "\improper US Army Radio Encryption Key"
 	icon_state = "stripped_key"
-	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = FALSE)
+	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COLONY = TRUE, SQUAD_MARINE_1 = TRUE)
 
 /obj/item/device/encryptionkey/army/command
 	name = "\improper US Army Command Radio Encryption Key"
 	icon_state = "sec_key"
-	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_ALMAYER = TRUE, RADIO_CHANNEL_JTAC = TRUE)
+	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_JTAC = TRUE)
+
+/obj/item/device/encryptionkey/army/command/attache
+	name = "\improper US Army Command Radio Encryption Key"
+	icon_state = "sec_key"
+	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_JTAC = TRUE, SQUAD_MARINE_1 = TRUE)

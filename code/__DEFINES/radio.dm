@@ -37,6 +37,8 @@
 #define RADIO_CHANNEL_REQ "Req"
 #define RADIO_CHANNEL_SENTRY "Sentry Network"
 #define RADIO_CHANNEL_SPECIAL "special"
+#define RADIO_CHANNEL_USASF "USASF"
+#define RADIO_CHANNEL_US_ARMY "US Army"
 
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
@@ -71,8 +73,6 @@
 #define RADIO_CHANNEL_VAI "VAI"
 #define RADIO_CHANNEL_CMB "CMB"
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
-#define RADIO_CHANNEL_USASF "USASF"
-#define RADIO_CHANNEL_ARMY "US Army"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 

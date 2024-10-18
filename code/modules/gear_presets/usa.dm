@@ -5,7 +5,7 @@
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the soldiers their radios
-	var/headset_type = /obj/item/device/radio/headset/distress/army/limited
+	var/headset_type = /obj/item/device/radio/headset/distress/army
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usa/load_name(mob/living/carbon/human/new_human, randomise)

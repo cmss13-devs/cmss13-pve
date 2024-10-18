@@ -5,7 +5,7 @@
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
-	var/headset_type = /obj/item/device/radio/headset/distress/USASF/limited
+	var/headset_type = /obj/item/device/radio/headset/distress/USASF
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/load_name(mob/living/carbon/human/new_human, randomise)
@@ -173,7 +173,7 @@
 	skills = /datum/skills/para_tech
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech/tanker/para, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather, WEAR_FACE)
@@ -210,7 +210,7 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/usasf/jtac/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/intel/navy, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/navy, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
@@ -218,6 +218,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/UAAF/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
