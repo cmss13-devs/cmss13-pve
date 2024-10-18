@@ -13,7 +13,7 @@
 	name = "airlock assembly"
 	icon = 'icons/obj/structures/doors/airlock_assembly.dmi'
 	icon_state = "door_as_0"
-	anchored = FALSE
+	anchored = TRUE
 	density = TRUE
 	var/state = STATE_STANDARD
 	var/base_icon_state = ""
