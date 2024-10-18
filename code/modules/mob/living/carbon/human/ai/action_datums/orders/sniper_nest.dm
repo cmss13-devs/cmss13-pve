@@ -90,6 +90,7 @@
 		return
 
 	sniper_brain.current_target = entering
+	sniper_brain.RegisterSignal(entering, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/datum/human_ai_brain, on_target_delete), TRUE)
 	sniper_brain.attack_target()
 
 

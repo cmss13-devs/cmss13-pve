@@ -527,10 +527,11 @@
 
 /obj/item/storage/pill_bottle/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	var/obj/item/pill = contents[1]
+	user.swap_hand()
 	if(user.put_in_active_hand(pill))
 		remove_from_storage(pill, user)
 		pill.attack(user, user)
-		COOLDOWN_START(ai_brain, pill_use_cooldown, 10 SECONDS)
+		COOLDOWN_START(ai_brain, pill_use_cooldown, 20 SECONDS)
 
 /obj/item/storage/pill_bottle/proc/choose_color(mob/user)
 	if(!user)

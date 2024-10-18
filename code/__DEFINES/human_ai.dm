@@ -9,7 +9,6 @@
 #define AI_ACTION_PICKUP /datum/ongoing_action/item_pickup
 #define AI_ACTION_PICKUP_GUN /datum/ongoing_action/item_pickup/pickup_primary
 #define AI_ACTION_COVER /datum/ongoing_action/take_cover
-#define AI_ACTION_COVER_I /datum/ongoing_action/take_inside_cover
 #define AI_ACTION_THROWBACK /datum/ongoing_action/throw_back_nade
 #define AI_ACTION_NADE /datum/ongoing_action/throw_grenade
 #define AI_ACTION_MELEE_ATOM /datum/ongoing_action/melee_atom

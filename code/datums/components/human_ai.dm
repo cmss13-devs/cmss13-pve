@@ -34,7 +34,7 @@
 	SIGNAL_HANDLER
 
 	GLOB.ai_humans -= ai_human
-	ai_brain.tied_human = null
+	ai_brain?.tied_human = null
 	QDEL_NULL(ai_brain)
 	ai_human = null
 

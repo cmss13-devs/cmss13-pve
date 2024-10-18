@@ -1,3 +1,10 @@
+/// Every AI with a preset should appraise inventory on spawn
+/datum/equipment_preset/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
+	. = ..()
+	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
+	if(ai_brain)
+		ai_brain.appraise_inventory()
+
 /datum/equipment_preset/clf/soldier/ai
 	name = "CLF Soldier (AI)"
 
@@ -33,14 +40,6 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
-/datum/equipment_preset/clf/soldier/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
-	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
-	if(!ai_brain)
-		return
-
-	ai_brain.appraise_inventory()
-
 /datum/equipment_preset/clf/specialist/ai
 	name = "CLF Specialist (AI)"
 
@@ -73,15 +72,6 @@
 
 	new_human.put_in_active_hand(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable(new_human))
 
-/datum/equipment_preset/clf/specialist/ai/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
-	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
-	if(!ai_brain)
-		return
-
-	ai_brain.appraise_inventory()
-
-
 /datum/equipment_preset/clf/sniper
 	name = "CLF Sniper (AI)"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -107,11 +97,3 @@
 	new_human.put_in_active_hand(new /obj/item/weapon/gun/boltaction(new_human))
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
-
-/datum/equipment_preset/clf/sniper/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
-	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
-	if(!ai_brain)
-		return
-
-	ai_brain.appraise_inventory()

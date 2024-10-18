@@ -110,7 +110,6 @@ SUBSYSTEM_DEF(pathfinding)
 				var/atom/A = l
 				A.color = "#[red][green]00"
 			T.color = "#[red][green]00"
-			T.maptext = distance
 		#endif
 
 		if(!prev[target])
@@ -227,5 +226,4 @@ SUBSYSTEM_DEF(pathfinding)
 			var/atom/A = l
 			A.color = null
 		T.color = null
-		T.maptext = null
 #endif

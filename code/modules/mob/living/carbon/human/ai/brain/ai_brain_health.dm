@@ -221,6 +221,7 @@
 					oxy_heal = heal_item
 
 			if(!oxy_heal)
+				currently_busy = FALSE
 				return
 
 			end_gun_fire()

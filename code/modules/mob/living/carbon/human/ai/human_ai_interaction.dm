@@ -129,13 +129,14 @@
 
 	return HUMAN_PENALTY
 
-/*/mob/living/carbon/human/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(status_flags & GODMODE)
-		return
-
-	. = ..()
-*/
-
+/mob/living/carbon/human/human_ai_act(mob/living/carbon/human/human_ai, datum/human_ai_brain/brain)
+	if(brain.faction_check(src))
+		var/try_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP)
+		human_ai.a_intent = try_intent
+		a_intent = try_intent
+		brain.end_gun_fire()
+		return TRUE
+	return ..()
 
 /////////////////////////////
 //          XENOS          //

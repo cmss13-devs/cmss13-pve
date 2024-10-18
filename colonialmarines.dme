@@ -1995,7 +1995,6 @@
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_communication.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_factions.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_squad.dm"
-#include "code\modules\mob\living\carbon\human\ai\action_datums\take_inside_cover.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_cover.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\take_cover.dm"
 #include "code\modules\mob\living\carbon\human\ai\firearm_appraisal.dm"

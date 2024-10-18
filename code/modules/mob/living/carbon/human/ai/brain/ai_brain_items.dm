@@ -90,7 +90,7 @@
 		recalculate_containers()
 		appraise_inventory(slot == WEAR_WAIST, slot == WEAR_BACK, slot == WEAR_L_STORE, slot == WEAR_R_STORE)
 
-	if(!primary_weapon && isgun(equipment))
+	if((!primary_weapon || (primary_weapon?.w_class < equipment.w_class)) && isgun(equipment))
 		set_primary_weapon(equipment)
 
 /datum/human_ai_brain/proc/on_item_unequip(datum/source, obj/item/equipment, slot)
@@ -232,7 +232,7 @@
 /datum/human_ai_brain/proc/on_item_pickup(datum/source, obj/item/picked_up)
 	SIGNAL_HANDLER
 
-	if(!primary_weapon && isgun(picked_up))
+	if((!primary_weapon || (primary_weapon.w_class < picked_up.w_class)) && isgun(picked_up))
 		set_primary_weapon(picked_up)
 
 /datum/human_ai_brain/proc/on_item_drop(datum/source, obj/item/dropped)
@@ -328,13 +328,13 @@
 				ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 				break
 
-			if(primary_weapon && istype(thing, /obj/item/ammo_magazine))
+			if((thing.flags_human_ai & AMMUNITION_ITEM) && primary_weapon)
 				var/obj/item/ammo_magazine/mag = thing
 				if(istype(primary_weapon, mag.gun_type))
 					ADD_ONGOING_ACTION(src, AI_ACTION_PICKUP, thing)
 					break
 
-			if(istype(thing, /obj/item/explosive/grenade))
+			if(thing.flags_human_ai & GRENADE_ITEM)
 				var/obj/item/explosive/grenade/nade = thing
 				if(nade.active)
 					continue

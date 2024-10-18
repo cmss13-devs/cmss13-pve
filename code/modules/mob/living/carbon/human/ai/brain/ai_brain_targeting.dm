@@ -34,7 +34,7 @@
 		if(!can_target(potential_target))
 			continue
 
-		if(!(potential_target in viewers(tied_human))) // for now, only consider targets in view
+		if(!(tied_human in viewers(potential_target))) // for now, only consider targets in view
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
@@ -121,7 +121,7 @@
 	if(target.stat == DEAD)
 		return FALSE
 
-	if(!shoot_to_kill && target.stat == UNCONSCIOUS)
+	if(!shoot_to_kill && (target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in target.effects_list)))
 		return FALSE
 
 	if(faction_check(target))
@@ -136,22 +136,24 @@
 	set waitfor = FALSE
 
 	if(!current_target)
-		currently_busy = FALSE
 		return
+
+	currently_busy = TRUE
 
 	if(!(primary_weapon in tied_human.get_hands()))
 		unholster_primary()
-		primary_weapon.guaranteed_delay_time = world.time
-		primary_weapon.wield_time = world.time
-		primary_weapon.pull_time = world.time
+		primary_weapon?.guaranteed_delay_time = world.time
+		primary_weapon?.wield_time = world.time
+		primary_weapon?.pull_time = world.time
 
 	tied_human.face_atom(current_target)
+	tied_human.a_intent = INTENT_HARM
 
 	if((get_dist(tied_human, current_target) > gun_data.maximum_range) && COOLDOWN_FINISHED(src, return_fire))
 		currently_busy = FALSE
 		return
 
-	primary_weapon.set_target(current_target)
+	primary_weapon?.set_target(current_target)
 	gun_data.before_fire(primary_weapon, tied_human, src)
 	if((!primary_weapon?.current_mag?.current_rounds && !primary_weapon?.in_chamber) || !friendly_check())
 		end_gun_fire()
@@ -160,7 +162,7 @@
 	currently_firing = TRUE
 	enter_combat()
 	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire), TRUE)
-	primary_weapon.start_fire(object = current_target, bypass_checks = TRUE)
+	primary_weapon?.start_fire(object = current_target, bypass_checks = TRUE)
 
 /datum/human_ai_brain/proc/friendly_check()
 	var/list/turf_list = get_line(get_turf(tied_human), get_turf(current_target))
@@ -182,19 +184,20 @@
 /datum/human_ai_brain/proc/on_gun_fire(datum/source, obj/item/weapon/gun/fired)
 	SIGNAL_HANDLER
 
-	//var/atom/target = primary_weapon.get_target()
 	if(QDELETED(current_target))
 		end_gun_fire()
+		current_target = null
 		return
 
 	if(ismob(current_target))
-		//var/mob/targeted_mob = target
 		if(current_target.stat == DEAD)
 			end_gun_fire()
+			current_target = null
 			return
 
-		else if(current_target.stat == UNCONSCIOUS && !shoot_to_kill)
+		else if(!shoot_to_kill && (current_target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in current_target.effects_list)))
 			end_gun_fire()
+			current_target = null
 			return
 
 	if(rounds_burst_fired > gun_data.burst_amount_max)
@@ -202,8 +205,9 @@
 		end_gun_fire()
 		return
 
-	if(QDELETED(current_target) || !friendly_check())
+	if(!friendly_check())
 		end_gun_fire()
+		current_target = null
 		return
 
 	if(primary_weapon.current_mag?.current_rounds <= 0 && !primary_weapon.in_chamber) // bullet removal comes after comsig is triggered
@@ -218,28 +222,30 @@
 		if(!(current_target in viewers(view_distance, tied_human)))
 			if(COOLDOWN_FINISHED(src, return_fire))
 				end_gun_fire()
-				return
+				current_target = null
 
 			if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
 				end_gun_fire()
 				throw_grenade_cover()
+				current_target = null
 				return
+
+			if(!current_cover && !length(ongoing_actions))
+				ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, target_floor, 0)
 
 	else if(locate(/turf/closed) in get_line(tied_human, current_target))
 		if(COOLDOWN_FINISHED(src, return_fire))
 			end_gun_fire()
-			return
+			current_target = null
 
 		if(grenading_allowed && length(equipment_map[HUMAN_AI_GRENADES]))
 			end_gun_fire()
 			throw_grenade_cover()
+			current_target = null
 			return
 
-	if(get_dist(tied_human, current_target) > gun_data.maximum_range)
-		if(COOLDOWN_FINISHED(src, return_fire))
-			end_gun_fire()
-		if(!in_cover) // Doing this independently from viewers() check so we don't chase enemy if it's hid just around the corner. Might move it back
-			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, target_floor, 0)
+	if(COOLDOWN_FINISHED(src, return_fire) && get_dist(tied_human, current_target) > gun_data.maximum_range)
+		end_gun_fire()
 		return
 
 	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump))
@@ -259,6 +265,7 @@
 	else if(primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
 		addtimer(CALLBACK(primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, current_target, null, null, null, TRUE), primary_weapon.get_fire_delay())
 
+	tied_human.a_intent = INTENT_HARM
 	target_floor = get_turf(current_target)
 	tied_human.face_atom(target_floor)
 
@@ -267,7 +274,6 @@
 	if(current_target)
 		UnregisterSignal(current_target, COMSIG_PARENT_QDELETING)
 	UnregisterSignal(tied_human, COMSIG_MOB_FIRED_GUN)
-	current_target = null
 	currently_busy = FALSE
 	currently_firing = FALSE
 	rounds_burst_fired = 0

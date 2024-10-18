@@ -61,6 +61,9 @@
 		set_squad_leader(null)
 
 	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
+		if(squaddie?.tied_human.client)
+			continue
+
 		if(squaddie.tied_human.is_mob_incapacitated())
 			continue
 

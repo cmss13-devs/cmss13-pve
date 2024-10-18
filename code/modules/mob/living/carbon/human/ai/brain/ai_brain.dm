@@ -34,8 +34,11 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/list/detection_turfs = list()
 
 	var/in_combat = FALSE
-	var/combat_decay_time = 30 SECONDS
+	var/combat_decay_time_min = 15 SECONDS
+	var/combat_decay_time_max = 30 SECONDS
 	var/squad_covering = FALSE
+
+	var/peek_cover_chance = 35
 
 	var/list/friendly_factions = list()
 	var/list/neutral_factions = list()
@@ -52,6 +55,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	RegisterSignal(tied_human, COMSIG_HUMAN_UNEQUIPPED_ITEM, PROC_REF(on_item_unequip))
 	RegisterSignal(tied_human, COMSIG_MOB_PICKUP_ITEM, PROC_REF(on_item_pickup))
 	RegisterSignal(tied_human, COMSIG_MOB_DROP_ITEM, PROC_REF(on_item_drop))
+	RegisterSignal(tied_human, COMSIG_MOB_DEATH, PROC_REF(reset_ai_state))
 	RegisterSignal(tied_human, COMSIG_MOVABLE_MOVED, PROC_REF(on_move))
 	RegisterSignal(tied_human, COMSIG_HUMAN_BULLET_ACT, PROC_REF(on_shot))
 	RegisterSignal(tied_human, COMSIG_HUMAN_HANDCUFFED, PROC_REF(on_handcuffed))
@@ -62,19 +66,35 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	setup_detection_radius()
 
 /datum/human_ai_brain/Destroy(force, ...)
+	GLOB.human_ai_brains -= src
 	tied_human = null
+
+	reset_ai_state()
+
+	return ..()
+
+/datum/human_ai_brain/proc/reset_ai_state()
 	set_primary_weapon(null)
-	current_target = null
+	end_gun_fire()
+	end_cover()
+	//primary_melee = null
+
+	gun_data = null
 	target_floor = null
 	ongoing_order = null
-	GLOB.human_ai_brains -= src
-	gun_data = null
-	//primary_melee = null
-	return ..()
+	current_target = null
+
+	currently_reloading = FALSE
+
+	for(var/action in ongoing_actions)
+		qdel(action)
+
+	ongoing_actions.Cut()
 
 /datum/human_ai_brain/process(delta_time)
 	if(tied_human.is_mob_incapacitated())
 		end_gun_fire()
+		current_target = null
 		return
 
 	var/order_return
@@ -99,34 +119,31 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	nade_throwback(things_around)
 	item_search(things_around)
 
-	if(!currently_busy && should_reload_primary())
-		currently_busy = TRUE
+	if(!currently_busy && !currently_reloading && should_reload_primary())
 		reload_primary()
 
 	if(primary_weapon && current_target)
-		if(allowed_approach_retreat && !has_ongoing_action(AI_ACTION_APPROACH) && !has_ongoing_action(AI_ACTION_RETREAT))
+		if(allowed_approach_retreat && !length(ongoing_actions))
 			var/target_futile = current_target.is_mob_incapacitated()
 			var/distance = get_dist(tied_human, current_target)
 			if(distance > gun_data.optimal_range || target_futile)
-				if(!in_cover)
+				if(!current_cover)
 					var/walk_distance = target_futile ? gun_data.minimum_range : gun_data.optimal_range
 					ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH, current_target, walk_distance)
 
 			else if(distance < gun_data.optimal_range)
-				var/walk_distance = in_cover ? gun_data.minimum_range : gun_data.optimal_range
+				var/walk_distance = current_cover ? gun_data.minimum_range : gun_data.optimal_range
 				ADD_ONGOING_ACTION(src, AI_ACTION_RETREAT, current_target, walk_distance)
 
-		if(!currently_busy && !currently_firing && COOLDOWN_FINISHED(src, fire_overload_cooldown))
-			currently_busy = TRUE
+		if(!currently_busy && !currently_firing && !currently_reloading && COOLDOWN_FINISHED(src, fire_overload_cooldown))
 			attack_target()
-
-	if(!currently_busy && !in_combat && healing_start_check())
-		currently_busy = TRUE
-		start_healing()
 
 	if(!currently_busy && !current_target && primary_weapon)
 		current_target = get_target(view_distance)
-		RegisterSignal(current_target, COMSIG_PARENT_QDELETING, PROC_REF(on_target_delete))
+		RegisterSignal(current_target, COMSIG_PARENT_QDELETING, PROC_REF(on_target_delete), TRUE)
+
+	if(!currently_busy && !in_combat && healing_start_check())
+		start_healing()
 
 /datum/human_ai_brain/proc/on_human_delete(datum/source, force)
 	SIGNAL_HANDLER
@@ -134,6 +151,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/on_target_delete(datum/source, force)
 	SIGNAL_HANDLER
+	end_gun_fire()
 	current_target = null
 
 /datum/human_ai_brain/proc/ensure_primary_hand(obj/item/held_item)
@@ -264,32 +282,62 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/on_detection_turf_enter(datum/source, atom/movable/entering)
 	SIGNAL_HANDLER
+	if(tied_human.client)
+		return
+
 	if(entering == tied_human)
 		return
 
 	if(istype(entering, /obj/projectile))
 		var/obj/projectile/bullet = entering
 		if(ismob(bullet.firer))
-			if(!in_cover && !squad_covering && !faction_check(bullet.firer)) // If it's our own bullets, we don't need to be alarmed
+			if(!current_cover && !squad_covering && !faction_check(bullet.firer)) // If it's our own bullets, we don't need to be alarmed
+				if(!has_ongoing_order(/datum/ongoing_action/order/sniper_nest))
+					try_cover(bullet)
 				enter_combat()
-				if(!primary_weapon)
-					locate_cover(bullet, bullet.dir) // Zonenote: cover is fucked and needs work, so it's limited to only unarmed combatants
 
 /datum/human_ai_brain/proc/on_move(atom/movable/mover, atom/oldloc, direction)
 	setup_detection_radius()
+	if(in_cover)
+		end_cover()
 
 /datum/human_ai_brain/proc/enter_combat()
 	SIGNAL_HANDLER
+	if(squad_id) // call for help
+		var/datum/human_ai_squad/squad = SShuman_ai.squad_id_dict["[squad_id]"]
+		for(var/datum/human_ai_brain/squaddie as anything in squad.ai_in_squad)
+			if(squaddie.current_target)
+				continue
+			if(get_dist(squaddie.tied_human, tied_human) > squaddie.view_distance)
+				continue
+			if(!squaddie.can_target(current_target))
+				continue
+			squaddie.current_target = current_target
+			squaddie.RegisterSignal(current_target, COMSIG_PARENT_QDELETING, PROC_REF(on_target_delete), TRUE)
+
+	if(tied_human.client)
+		return
 
 	if(!in_combat)
 		say_in_combat_line()
 	in_combat = TRUE
-	addtimer(CALLBACK(src, PROC_REF(exit_combat)), combat_decay_time, TIMER_UNIQUE | TIMER_OVERRIDE)
+	addtimer(CALLBACK(src, PROC_REF(exit_combat)), rand(combat_decay_time_min, combat_decay_time_max), TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
 
 /datum/human_ai_brain/proc/exit_combat()
+	if(tied_human.client)
+		return
+
 	if(in_combat)
+		tied_human.a_intent = INTENT_DISARM
+		current_target = null
 		say_exit_combat_line()
 		holster_primary()
+
+	if(current_cover)
+		if(prob(peek_cover_chance))
+			ADD_ONGOING_ACTION(src, AI_ACTION_APPROACH_CAREFUL, target_floor, 1)
+		end_cover()
+
 	in_combat = FALSE
 
 /datum/human_ai_brain/proc/can_process_order()
@@ -303,18 +351,25 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 /datum/human_ai_brain/proc/on_shot(datum/source, damage_result, ammo_flags, obj/projectile/bullet)
 	SIGNAL_HANDLER
+	if(tied_human.client)
+		return
 
 	var/mob/firer = bullet.firer
 	if(firer?.faction in neutral_factions)
 		on_neutral_faction_betray(firer.faction)
 
-	if(allowed_return_fire && (primary_weapon?.ammo.max_range <= get_dist(tied_human, firer)))
+	if(allowed_return_fire && (get_dist(tied_human, firer) > view_distance) && (primary_weapon?.ammo.max_range > view_distance))
 		COOLDOWN_START(src, return_fire, return_fire_duration)
 
 	if(!faction_check(firer))
 		if(current_target != firer)
 			end_gun_fire()
 		current_target = firer
+		RegisterSignal(firer, COMSIG_PARENT_QDELETING, PROC_REF(on_target_delete), TRUE)
+		if(!current_cover)
+			try_cover(bullet)
+		else if(in_cover)
+			on_shot_inside_cover(bullet)
 
 /datum/human_ai_brain/proc/on_neutral_faction_betray(faction)
 	if(!tied_human.faction)
@@ -346,4 +401,5 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	var/list/out_brain = list()
 	SEND_SIGNAL(src, COMSIG_HUMAN_GET_AI_BRAIN, out_brain)
-	return out_brain[1]
+	if(length(out_brain))
+		return out_brain[1]

@@ -1762,6 +1762,28 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 		if(NORTHWEST)
 			return list(NORTH, WEST)
 
+//straight directions get priority over diagonal directions in edge cases
+/proc/angle2dir4ai(angle)
+	switch(angle) // 80/10 degrees diagonals/cardinals respectively
+		if (40 to 50)
+			return NORTHEAST
+		if (130 to 140)
+			return SOUTHEAST
+		if (220 to 230)
+			return SOUTHWEST
+		if (310 to 320)
+			return NORTHWEST
+		if (0 to 40)
+			return NORTH
+		if (50 to 130)
+			return EAST
+		if (140 to 220)
+			return SOUTH
+		if (230 to 310)
+			return WEST
+		else
+			return NORTH
+
 /// Returns TRUE if the target is somewhere that the game should not interact with if possible
 /// In this case, admin Zs and tutorial areas
 /proc/should_block_game_interaction(atom/target)
