@@ -530,6 +530,31 @@
 	desc = "It says it is a plush on the tag, at least."
 	icon_state = "rock"
 
+/obj/item/toy/plush/otter
+	name = "otter plush"
+	desc = "A perfectly sized snuggable river weasel plush. Keep away from Clams."
+	icon_state = "otter"
+
+/obj/item/toy/plush/fox
+	name = "fox plush"
+	desc = "What does the fox say? Well, this one says nothing on account of it being a stuffed toy."
+	icon_state = "fox"
+
+/obj/item/toy/plush/kitten
+	name = "kitten plush"
+	desc = "A plushie of a cute kitten. Sadly, this one won't purr like the real thing."
+	icon_state = "kbitty"
+
+/obj/item/toy/plush/box
+	name = "box plush"
+	desc = "A toy box plushie, it holds cotton."
+	icon_state = "box"
+
+/obj/item/toy/plush/carp
+	name = "carp plush"
+	desc = "A stuffed toy that resembles a mythological space carp."
+	icon_state = "carp"
+
 /obj/item/toy/plush/therapy
 	name = "therapy plush"
 	desc = "A therapeutic toy to assist marines in recovering from mental and behavioral disorders after experiencing the trauma of battles."
@@ -580,6 +605,11 @@
 		/obj/item/toy/plush/shark,
 		/obj/item/toy/plush/moth,
 		/obj/item/toy/plush/rock,
+		/obj/item/toy/plush/otter,
+		/obj/item/toy/plush/fox,
+		/obj/item/toy/plush/kitten,
+		/obj/item/toy/plush/box,
+		/obj/item/toy/plush/carp,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(

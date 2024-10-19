@@ -1186,6 +1186,7 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/stack/tile,
 		/obj/item/tool/shovel/etool,
+		/obj/item/stack/sandbags,
 		/obj/item/stack/sandbags_empty,
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/gun/smg/nailgun/compact,
@@ -1396,7 +1397,7 @@
 	var/base_icon_state = "cassette_pouch"
 	w_class = SIZE_SMALL
 	can_hold = list(/obj/item/device/cassette_tape, /obj/item/tape/regulation)
-	storage_slots = 3
+	storage_slots = 5
 
 /obj/item/storage/pouch/cassette/update_icon()
 	underlays.Cut()
