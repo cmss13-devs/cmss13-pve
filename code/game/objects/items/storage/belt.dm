@@ -1970,28 +1970,6 @@
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 
-/obj/item/storage/belt/gun/smartgunner/clf
-	name = "\improper M802 pattern 'Freedom' smartgunner sidearm rig"
-	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a Mateba revolver. This one has the CLF logo carved over the manufacturing stamp."
-	can_hold = list(
-		/obj/item/device/flashlight/flare,
-		/obj/item/weapon/gun/flare,
-		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/revolver/mateba,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/smartgun,
-	)
-	has_gamemode_skin = TRUE
-
-/obj/item/storage/belt/gun/smartgunner/clf/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-
 /obj/item/storage/belt/gun/smartgunner/upp
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
