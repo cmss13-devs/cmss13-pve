@@ -435,10 +435,14 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/suitpath = pick(
 		/obj/item/clothing/suit/storage/militia,
 		/obj/item/clothing/suit/storage/militia/vest,
-		/obj/item/clothing/suit/storage/militia/partial,
+		/obj/item/clothing/suit/storage/militia/knockoff,
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest,
-		/obj/item/clothing/suit/storage/CMB
+		/obj/item/clothing/suit/storage/CMB,
+		/obj/item/clothing/suit/storage/webbing
+		/obj/item/clothing/suit/storage/utility_vest
+		/obj/item/clothing/suit/storage/bomber
+		/obj/item/clothing/suit/storage/bomber/alt
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 
