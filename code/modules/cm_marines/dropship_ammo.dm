@@ -168,7 +168,10 @@
 	for(var/i = 1 to ammo_used_per_firing)
 		sleep(1)
 		var/turf/impact_tile = pick(turf_list)
-		var/datum/cause_data/cause_data = create_cause_data(fired_from.name, source_mob)
+		var/reason = "A dropship cannon"
+		if(fired_from)
+		reason = fired_from?.name
+		var/datum/cause_data/cause_data = create_cause_data(reason, source_mob)
 		impact_tile.ex_act(EXPLOSION_THRESHOLD_VLOW, pick(GLOB.alldirs), cause_data)
 		create_shrapnel(impact_tile,1,0,0,shrapnel_type,cause_data,FALSE,100) //simulates a bullet
 		for(var/atom/movable/explosion_effect in impact_tile)
@@ -246,7 +249,10 @@
 	for(var/i=1 to 16) //This is how many tiles within that area of effect will be randomly ignited
 		var/turf/U = pick(turf_list)
 		turf_list -= U
-		fire_spread_recur(U, create_cause_data(fired_from.name, source_mob), 1, null, 5, 75, "#EE6515")//Very, very intense, but goes out very quick
+		var/reason = "A dropship laser"
+		if(fired_from)
+		reason = fired_from?.name
+		fire_spread_recur(U, create_cause_data(reason, source_mob), 1, null, 5, 75, "#EE6515")//Very, very intense, but goes out very quick
 
 	if(!ammo_count && !QDELETED(src))
 		qdel(src) //deleted after last laser beam is fired and impact the ground.
