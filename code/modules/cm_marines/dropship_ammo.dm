@@ -168,7 +168,7 @@
 	for(var/i = 1 to ammo_used_per_firing)
 		sleep(1)
 		var/turf/impact_tile = pick(turf_list)
-		var/reason = "A dropship cannon"
+		var/reason = "A dropship cannon" //Shoutout to Drathek for giving me this, much less hacky and terrible, solution to what's up. They a real one
 		if(fired_from)
 		reason = fired_from?.name
 		var/datum/cause_data/cause_data = create_cause_data(reason, source_mob)
@@ -249,7 +249,7 @@
 	for(var/i=1 to 16) //This is how many tiles within that area of effect will be randomly ignited
 		var/turf/U = pick(turf_list)
 		turf_list -= U
-		var/reason = "A dropship laser"
+		var/reason = "A dropship laser" //Shoutout to Drathek for giving me this, much less hacky and terrible, solution to what's up. They a real one
 		if(fired_from)
 		reason = fired_from?.name
 		fire_spread_recur(U, create_cause_data(reason, source_mob), 1, null, 5, 75, "#EE6515")//Very, very intense, but goes out very quick
