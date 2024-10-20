@@ -7289,6 +7289,10 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
 "ayH" = (
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_y = 19;
+	pixel_x = 9
+	},
 /turf/open/floor/almayer/edge/smooth/northeast,
 /area/golden_arrow/platoonprep)
 "ayI" = (
