@@ -9936,10 +9936,6 @@
 	pixel_x = -64;
 	pixel_y = -64
 	},
-/obj/effect/hangar_airlock/height_mask{
-	pixel_x = -64;
-	pixel_y = -64
-	},
 /turf/open/floor/hangar_airlock/inner{
 	frame_threshold = 33
 	},
@@ -14587,10 +14583,6 @@
 	},
 /obj/effect/hangar_airlock/outline{
 	layer = 2;
-	pixel_x = -64;
-	pixel_y = -64
-	},
-/obj/effect/hangar_airlock/height_mask{
 	pixel_x = -64;
 	pixel_y = -64
 	},

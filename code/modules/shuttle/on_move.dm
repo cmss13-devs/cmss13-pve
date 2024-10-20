@@ -47,6 +47,8 @@ All ShuttleMove procs go here
 						qdel(src.clone, TRUE)
 						src.clone = null
 					continue
+				if(istype(thing, /obj/effect/hangar_airlock))
+					continue
 				if(istype(thing, /obj/structure/machinery/landinglight))
 					continue
 				if(istype(thing, /obj/docking_port))

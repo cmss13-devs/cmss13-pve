@@ -598,8 +598,8 @@
 			if(active_airlock_dock.processing)
 				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
 				return FALSE
-			if(active_airlock_dock.open_outer_airlock)
-				to_chat(usr, SPAN_WARNING("The airlock caution alarm cannot be activated while the outer airlock is open."))
+			if(active_airlock_dock.open_outer_airlock || active_airlock_dock.open_inner_airlock)
+				to_chat(usr, SPAN_WARNING("The airlock caution alarm cannot be engaged while an airlock is open."))
 				return FALSE
 			active_airlock_dock.playing_airlock_alarm = active_airlock_dock.playing_airlock_alarm ? FALSE : TRUE
 			active_airlock_dock.update_airlock_alarm()
@@ -611,7 +611,7 @@
 				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
 				return FALSE
 			if(active_airlock_dock.open_outer_airlock || !active_airlock_dock.playing_airlock_alarm)
-				to_chat(usr, SPAN_WARNING("The inner airlock can be opened only when the outer airlock is closed, and the airlock alarm is active."))
+				to_chat(usr, SPAN_WARNING("The inner airlock can be engaged only when the outer airlock is closed, and the airlock alarm is active."))
 				return FALSE
 			active_airlock_dock.open_inner_airlock = active_airlock_dock.open_inner_airlock ? FALSE : TRUE
 			active_airlock_dock.update_inner_airlock()
@@ -623,7 +623,7 @@
 				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
 				return FALSE
 			if(!active_airlock_dock.open_inner_airlock)
-				to_chat(usr, SPAN_WARNING("The dropship can only be raised or lowered when the inner airlock is open."))
+				to_chat(usr, SPAN_WARNING("The dropship airlock mechanism can only be engaged when the inner airlock is open."))
 				return FALSE
 			active_airlock_dock.lowered_dropship = active_airlock_dock.lowered_dropship ? FALSE : TRUE
 			active_airlock_dock.update_dropship_height()
@@ -634,8 +634,8 @@
 			if(active_airlock_dock.processing)
 				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
 				return FALSE
-			if(active_airlock_dock.open_inner_airlock)
-				to_chat(usr, SPAN_WARNING("The outer airlock can be opened only when the inner airlock is closed."))
+			if(active_airlock_dock.open_inner_airlock || !active_airlock_dock.playing_airlock_alarm)
+				to_chat(usr, SPAN_WARNING("The outer airlock can be engaged only when the inner airlock is closed and the alarm is disabled."))
 				return FALSE
 			active_airlock_dock.open_outer_airlock = active_airlock_dock.open_outer_airlock ? FALSE : TRUE
 			active_airlock_dock.update_outer_airlock()

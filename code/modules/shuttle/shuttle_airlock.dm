@@ -26,7 +26,7 @@
 	var/floodlight_color = "#dae2ff"
 	var/obj/effect/hangar_airlock/inner/inner_airlock
 	var/obj/effect/hangar_airlock/outer/outer_airlock
-	var/obj/effect/hangar_airlock/height_mask/height_mask_effect
+	var/list/height_masks = list()
 	var/list/floodlights = list()
 	var/list/inner_airlock_turfs = null
 	var/list/outer_airlock_turfs = null
@@ -39,14 +39,13 @@
 			inner_airlock_turfs += T
 			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
 			if(T.contents.len >= 1)
-				if(istype(T.contents[1],/atom/movable/clone))
-					continue
-				// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
-				for(var/A in T.contents)
-					if(istype(A, /obj/effect/hangar_airlock/inner))
-						inner_airlock = A
-					if(istype(A, /obj/effect/hangar_airlock/height_mask))
-						height_mask_effect = A
+				if(!istype(T.contents[1],/atom/movable/clone))
+					// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
+					for(var/A in T.contents)
+						if(istype(A, /obj/effect/hangar_airlock/inner))
+							inner_airlock = A
+			// done afterwards to make the proc more economical
+			height_masks += new /obj/effect/hangar_airlock/height_mask(T)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_outer_airlock_turfs()
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
@@ -65,7 +64,7 @@
 						outer_airlock = A
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond)
-	var/deciseconds
+	var/deciseconds = 0
 	var/transition = open ? "open" : "close"
 	airlock.icon_state = "[airlock_type]_[transition]_0s"
 	sleep(1 DECISECONDS)
@@ -109,26 +108,31 @@
 			deactivating_floodlight.static_update_light()
 	processing = FALSE
 
+
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock()
 	processing = TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
 	if(open_inner_airlock)
-		omnibus_airlock_transition("inner", 1, inner_airlock_turfs, inner_airlock, 50)
+		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock, 50)
 	else
-		omnibus_airlock_transition("inner", 0, inner_airlock_turfs, inner_airlock, 50)
+		omnibus_airlock_transition("inner", FALSE, inner_airlock_turfs, inner_airlock, 50)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height()
 	processing = TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
-	if(!outer_airlock_turfs)
-		get_outer_airlock_turfs()
-	if(lowered_dropship) //lower the dropship
-		processing = TRUE
-	else // raise the dropship
-		processing = TRUE
+
+	for(var/pentaseconds, pentaseconds > 25, pentaseconds++)
+		if(lowered_dropship)
+			for(var/obj/effect/hangar_airlock/height_mask/transitioning_height_mask in height_masks)
+				transitioning_height_mask.alpha += 4
+		else
+			for(var/obj/effect/hangar_airlock/height_mask/transitioning_height_mask in height_masks)
+				transitioning_height_mask.alpha -= 4
+		sleep(2 DECISECONDS)
+
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_outer_airlock()
@@ -136,9 +140,9 @@
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
 	if(open_outer_airlock)
-		omnibus_airlock_transition("outer", 1, outer_airlock_turfs, outer_airlock, 30)
+		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock, 30)
 	else
-		omnibus_airlock_transition("outer", 0, outer_airlock_turfs, outer_airlock, 30)
+		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock, 30)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
@@ -151,7 +155,7 @@
 	id = GOLDEN_ARROW_A2_U
 
 /obj/effect/hangar_airlock
-	icon = 'icons/effects/hangar_airlocks.dmi'
+	icon = 'icons/effects/hangar_airlock_416x736.dmi'
 	layer = ABOVE_TURF_LAYER
 	plane = FLOOR_PLANE
 	indestructible = TRUE
@@ -164,62 +168,20 @@
 	icon_state = "inner_close_static"
 	layer = 1.95
 
-/obj/effect/hangar_airlock/inner/proc/open()
-	sleep(1 SECONDS)
-	icon_state = "inner_open_1s"
-	sleep(1 SECONDS)
-	icon_state = "inner_open_2s"
-	sleep(1 SECONDS)
-	icon_state = "inner_open_3s"
-	sleep(1 SECONDS)
-	icon_state = "inner_open_4s"
-	sleep(1 SECONDS)
-	icon_state = "inner_open_static"
-
-/obj/effect/hangar_airlock/inner/proc/close()
-	icon_state = "inner_close_0s"
-	sleep(1 SECONDS)
-	icon_state = "inner_close_1s"
-	sleep(1 SECONDS)
-	icon_state = "inner_close_2s"
-	sleep(1 SECONDS)
-	icon_state = "inner_close_3s"
-	sleep(1 SECONDS)
-	icon_state = "inner_close_4s"
-	sleep(1 SECONDS)
-	icon_state = "inner"
-
 /obj/effect/hangar_airlock/outer
 	name = "hangar outer airlock"
 	icon_state = "outer_close_static"
 	layer = 1.95
 
-/obj/effect/hangar_airlock/outer/proc/open()
-	icon_state = "outer_open_0s"
-	sleep(1 SECONDS)
-	icon_state = "outer_open_1s"
-	sleep(1 SECONDS)
-	icon_state = "outer_open_2s"
-	sleep(1 SECONDS)
-	icon_state = "outer_open_static"
-
-/obj/effect/hangar_airlock/outer/proc/close()
-	icon_state = "outer_close_0s"
-	sleep(1 SECONDS)
-	icon_state = "outer_close_1s"
-	sleep(1 SECONDS)
-	icon_state = "outer_close_2s"
-	sleep(1 SECONDS)
-	icon_state = "outer"
-
 /obj/effect/hangar_airlock/outline
 	icon_state = "outline_inner"
 
 /obj/effect/hangar_airlock/half_tile
-	icon = 'icons/effects/half_tiles.dmi'
-	icon_state = "hangar_airlock_tile"
+	icon = 'icons/effects/hangar_airlock_32x32.dmi'
+	icon_state = "half_tile"
 
 /obj/effect/hangar_airlock/height_mask
+	icon = 'icons/effects/hangar_airlock_32x32.dmi'
 	icon_state = "height_mask"
 	layer = 1.92
 	alpha = 80
