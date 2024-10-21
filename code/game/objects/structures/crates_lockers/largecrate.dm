@@ -47,6 +47,8 @@
 	if(parts_type) // Create the crate material
 		new parts_type(current_turf, 2)
 
+	SEND_SIGNAL(src, COMSIG_LARGECRATE_OPEN)
+
 	deconstruct(TRUE)
 
 /obj/structure/largecrate/deconstruct(disassembled = TRUE)

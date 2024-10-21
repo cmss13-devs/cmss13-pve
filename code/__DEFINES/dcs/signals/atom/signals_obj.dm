@@ -16,6 +16,7 @@
 	#define COMPONENT_GRENADE_PRIME_CANCEL (1<<0)
 
 #define COMSIG_CLOSET_FLASHBANGED "closet_flashbanged"
+#define COMSIG_CLOSET_OPEN "closet_open"
 
 #define COMSIG_SENTRY_ENGAGED_ALERT "signal_sentry_engaged"
 #define COMSIG_SENTRY_LOW_AMMO_ALERT "signal_sentry_low_ammo"
@@ -53,3 +54,7 @@
 #define COMSIG_DROPSHIP_REMOVE_EQUIPMENT "dropship_remove_equipment"
 
 #define COMSIG_STRUCTURE_CRATE_SQUAD_LAUNCHED "structure_crate_squad_launched"
+
+#define COMSIG_LARGECRATE_OPEN "largecrate_open"
+
+#define COMSIG_GUNRACK_ITEM_TAKEN "gunrack_item_taken"
