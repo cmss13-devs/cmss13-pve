@@ -614,6 +614,13 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
+/datum/equipment_preset/uscm_ship/so/load_rank(mob/living/carbon/human/rankee)
+	if(rankee?.client?.prefs?.pref_special_job_options[rank])
+		var/paygrade = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
+		return paygrade
+
+	..()
+
 /datum/equipment_preset/uscm_ship/so/New()
 	. = ..()
 	access = get_access(access_list)
