@@ -125,10 +125,12 @@
 
 /datum/ammo/rocket/ap/anti_tank
 	name = "anti-tank rocket"
-	damage = 100
+	damage = 1000
+	damage_var_high = 100
 	var/vehicle_slowdown_time = 5 SECONDS
 	shrapnel_chance = 5
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
+	max_range = 22
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
 	if(istype(object, /obj/vehicle/multitile))
@@ -146,6 +148,12 @@
 
 /datum/ammo/rocket/ap/tank_towlauncher
 	max_range = 8
+
+/datum/ammo/rocket/ap/tank_towlauncher/aa
+	name = "anti-air missile"
+	damage = 200
+	max_range = 16
+	shell_speed = AMMO_SPEED_TIER_5
 
 /datum/ammo/rocket/ltb
 	name = "cannon round"
