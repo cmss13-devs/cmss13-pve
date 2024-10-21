@@ -9,7 +9,7 @@
 	item_state = "hypo"
 	icon_state = "hypo"
 	amount_per_transfer_from_this = 5
-	volume = 30
+	volume = 60
 	possible_transfer_amounts = list(3, 5, 10, 15, 30)
 	flags_atom = FPRINT|OPENCONTAINER
 	flags_equip_slot = SLOT_WAIST

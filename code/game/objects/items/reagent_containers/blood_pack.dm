@@ -8,7 +8,6 @@
 	icon_state = "bloodpack"
 	volume = 300
 	matter = list("plastic" = 500)
-	flags_atom = CAN_BE_SYRINGED
 	transparent = TRUE
 
 	var/mode = BLOOD_BAG_INJECTING
