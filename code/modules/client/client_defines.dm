@@ -134,3 +134,9 @@
 
 	/// Holds the game master datum for this client
 	var/datum/game_master/game_master_menu
+
+	/// Holds the human AI manager panel for this client
+	var/datum/human_ai_management_menu/human_ai_menu
+
+	/// Holds the human faction manager panel for this client
+	var/datum/human_faction_management_menu/human_faction_menu

@@ -133,6 +133,10 @@
 		health += 50
 	build_stage++
 
+/obj/structure/barricade/sandbags/full
+
+/obj/structure/barricade/sandbags/full/New(loc, mob/user, direction, amount = 5)
+	. = ..()
 
 /obj/structure/barricade/sandbags/wired/New()
 	health = BARRICADE_SANDBAG_TRESHOLD_5

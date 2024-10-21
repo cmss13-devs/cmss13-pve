@@ -144,10 +144,12 @@
 
 //drop the inventory item on a specific location
 /mob/proc/drop_inv_item_to_loc(obj/item/I, atom/newloc, nomoveupdate, force)
+	SEND_SIGNAL(src, COMSIG_MOB_DROP_ITEM, I)
 	return u_equip(I, newloc, nomoveupdate, force)
 
 //drop the inventory item on the ground
 /mob/proc/drop_inv_item_on_ground(obj/item/I, nomoveupdate, force)
+	SEND_SIGNAL(src, COMSIG_MOB_DROP_ITEM, I)
 	return u_equip(I, get_step(src, 0), nomoveupdate, force) // Drops on turf instead of loc
 
 /mob/living/carbon/human/proc/pickup_recent()
