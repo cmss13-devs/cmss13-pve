@@ -135,6 +135,97 @@
 	trait = /datum/character_trait/skills/intel
 	bypass_pamphlet_limit = TRUE
 
+// Squad specialization 'chips'
+
+/obj/item/pamphlet/skill/specialization
+	name = "Platoon Specialization HUD-Chip"
+	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one looks to be a blank chip and likely won't do anything if used."
+	icon_state = "hudchip_bas"
+	trait = /datum/character_trait/skills/intel	//Just a placeholder trait to give so it doesn't freak the fuck out
+	flavour_text = "You insert the HUD-Chip into your PDT, hearing a quiet click come from it soon afterwards."
+
+/obj/item/pamphlet/skill/specialization/can_use(mob/living/carbon/human/user)
+	if(user.job != JOB_SQUAD_MARINE)
+		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
+		return
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	if(!ID) //not wearing an ID
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+	if(!ID.check_biometrics(user))
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+
+	return ..()
+
+/obj/item/pamphlet/skill/specialization/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "Mar"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Rifleman")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Rifleman")
+
+/obj/item/pamphlet/skill/specialization/comtech
+	name = "Combat Technician HUD-Chip"
+	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has highlights of engineering colors."
+	icon_state = "hudchip_engi"
+
+/obj/item/pamphlet/skill/specialization/comtech/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "pfceng"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Combat Technician")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Combat Technician")
+
+/obj/item/pamphlet/skill/specialization/rto
+	name = "Radio Telephone Operator HUD-Chip"
+	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has highlights of signals-corps colors."
+	icon_state = "hudchip_rto"
+
+/obj/item/pamphlet/skill/specialization/rto/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "pfcrto"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Radio Telephone Operator")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Radio Telephone Operator")
+
+/obj/item/pamphlet/skill/specialization/ammobearer
+	name = "Ammo Bearer HUD-Chip"
+	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has highlights of the colors of suffering."
+	icon_state = "hudchip_ammobearer"
+
+/obj/item/pamphlet/skill/specialization/ammobearer/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "brr"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Ammo Bearer")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Ammo Bearer")
+
+/obj/item/pamphlet/skill/specialization/sharpshooter
+	name = "Designated Marksman HUD-Chip"
+	desc = "An insertable chip for the Personal Data Transmitter of a marine, adjusting their displayed HUD icon and role within the platoon. This one has color highlights reminiscent of firing-range mats."
+	icon_state = "hudchip_sharpshooter"
+
+/obj/item/pamphlet/skill/specialization/sharpshooter/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "shrp"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Designated Marksman")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Designated Marksman")
+
+// Language pamphlets
+
 /obj/item/pamphlet/language
 	name = "translation pamphlet"
 	desc = "A pamphlet used by lazy USCM interpreters to quickly learn new languages on the spot."

@@ -85,6 +85,7 @@
 	new /obj/item/clothing/head/helmet/marine/leader(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
+	new /obj/item/storage/box/hudchips(src)
 
 /obj/structure/closet/secure_closet/platoon_sergeant_forecon
 	name = "squad leader locker"
