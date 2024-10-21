@@ -70,6 +70,10 @@
 	title = JOB_NAVY_CHIEF_ENGINEER
 	gear_preset = /datum/equipment_preset/usasf/chief_engineer
 
+/datum/job/seaman/synth
+	title = JOB_NAVY_SYNTH
+	gear_preset = /datum/equipment_preset/synth/uscm/usasf
+
 /datum/job/seaman/CO
 	title = JOB_NAVY_CO
 	gear_preset = /datum/equipment_preset/usasf/CO
