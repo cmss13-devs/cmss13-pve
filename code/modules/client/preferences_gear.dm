@@ -46,37 +46,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription Glasses"
 	path = /obj/item/clothing/glasses/regular/hipster
 
-/datum/gear/eyewear/goggles
-	display_name = "Ballistic goggles"
-	path = /obj/item/clothing/glasses/mgoggles
-
 /datum/gear/eyewear/prescription_goggles
 	display_name = "Prescription ballistic goggles"
 	path = /obj/item/clothing/glasses/mgoggles/prescription
 
-/datum/gear/eyewear/goggles_black
-	display_name = "Ballistic goggles, black"
-	path = /obj/item/clothing/glasses/mgoggles/black
-
 /datum/gear/eyewear/goggles_black/prescription
-	display_name = "Prescription ballistic goggles, black"
+	display_name = "Prescription ballistic goggles, sun-shaded"
 	path = /obj/item/clothing/glasses/mgoggles/black/prescription
 
-/datum/gear/eyewear/goggles_orange
-	display_name = "Ballistic goggles, orange"
-	path = /obj/item/clothing/glasses/mgoggles/orange
-
 /datum/gear/eyewear/goggles_orange/prescription
-	display_name = "Prescription ballistic goggles, orange"
+	display_name = "Prescription ballistic goggles, laser-shaded"
 	path = /obj/item/clothing/glasses/mgoggles/orange/prescription
-
-/datum/gear/eyewear/goggles2
-	display_name = "Ballistic goggles, M1A1"
-	path = /obj/item/clothing/glasses/mgoggles/v2
-
-/datum/gear/eyewear/goggles2/prescription
-	display_name = "Prescription ballistic goggles, M1A1"
-	path = /obj/item/clothing/glasses/mgoggles/v2/prescription
 
 /datum/gear/eyewear/bimex_shades
 	display_name = "BiMex personal shades"
