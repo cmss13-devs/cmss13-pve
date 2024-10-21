@@ -243,7 +243,7 @@
 	icon_state = "mini_reagent_tank"
 	matter = list("metal" = 500)
 	attack_speed = 4
-	volume = 180
+	volume = 450
 	w_class = SIZE_MEDIUM
 	splashable = FALSE
 	can_be_placed_into = list(
