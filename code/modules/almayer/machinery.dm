@@ -125,6 +125,44 @@
 	desc = "A screen on the TOC computer displaying the tactical map."
 	icon_state =  "toc_map"
 
+/obj/structure/machinery/prop/almayer/CICmap/table
+	name = "map table"
+	desc = "A large flat map table used for planning operations. It's large enough it can even be used as a proper table."
+	icon = 'icons/obj/structures/props/almayer_props96.dmi'
+	icon_state = "maptable"
+	layer = TABLE_LAYER
+	light_system = STATIC_LIGHT
+	bound_width = 64
+	bound_height = 96
+	light_range = 1.5
+	light_power = 0.5
+	light_pixel_x = 16
+	light_pixel_y = 32
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal
+	icon_state = "h_maptable"
+	bound_width = 96
+	bound_height = 64
+	light_pixel_x = 32
+	light_pixel_y = 22
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/update_icon()
+	..()
+
+	set_light(0)
+	set_light_color(LIGHT_COLOR_BLUE)
+	overlays.Cut()
+
+	if(stat & NOPOWER)
+		icon_state = initial(icon_state)
+		icon_state += "0"
+
+	else
+		var/image/source_image = image(src.icon, "h_maptable_e")
+		source_image.plane = ABOVE_LIGHTING_PLANE
+		source_image.layer = ABOVE_TABLE_LAYER
+		overlays += source_image
+
 //Nonpower using props
 
 /obj/structure/prop/almayer
@@ -191,6 +229,18 @@
 	bound_height = 96
 	unslashable = TRUE
 	unacidable = TRUE
+
+/obj/structure/prop/almayer/whiteboard
+	name = "\improper whiteboard"
+	desc = "A blank white surface where thoughts turn to plans. It's blank, all of the markers having dried out from the constant inappropriate drawings."
+	icon = 'icons/obj/structures/props/almayer_props64.dmi'
+	icon_state = "whiteboard"
+	bound_width = 64
+
+/obj/structure/prop/almayer/whiteboard/clear
+	name = "\improper glass whiteboard"
+	desc = "Despite what the name implies, this whiteboard is not actually white and instead is a clear pane of glass. Why anyone would want you to see through a whiteboard remains one of the top mysteries as of 2182."
+	icon_state = "whiteboard_clear"
 
 /obj/structure/prop/almayer/ship_memorial
 	name = "slab of victory"
