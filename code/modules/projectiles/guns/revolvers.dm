@@ -25,6 +25,7 @@
 	has_empty_icon = FALSE
 	has_open_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/internal/revolver
+	special_chamber = TRUE
 
 /obj/item/weapon/gun/revolver/Initialize(mapload, spawn_empty)
 	. = ..()
