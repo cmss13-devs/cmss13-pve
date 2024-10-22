@@ -373,8 +373,6 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
