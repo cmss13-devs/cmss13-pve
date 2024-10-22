@@ -207,7 +207,6 @@
 	role_comm_title = "JFO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/jtac
-	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/usasf/jtac/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
@@ -238,7 +237,6 @@
 /datum/equipment_preset/usasf/jtac/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NE9 = JOB_PLAYTIME_TIER_0)
-	idtype = /obj/item/card/id/dogtag
 
 //*****************************************************************************************************/
 
@@ -274,7 +272,6 @@
 	role_comm_title = "Flight Boss"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flightboss
-	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/usasf/flightboss/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
