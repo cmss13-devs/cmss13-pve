@@ -38,16 +38,16 @@
 /// NW1, Warrant Officer 1
 #define PAY_SHORT_NW1 "NW1"
 
-/// NW1, Chief Warrant Officer 2
+/// NW2, Chief Warrant Officer 2
 #define PAY_SHORT_NW2 "NCW2"
 
-/// NW1, Chief Warrant Officer 3
+/// NW3, Chief Warrant Officer 3
 #define PAY_SHORT_NW3 "NCW3"
 
-/// NW1, Chief Warrant Officer 4
+/// NW4, Chief Warrant Officer 4
 #define PAY_SHORT_NW4 "NCW4"
 
-/// NW1, Chief Warrant Officer 5
+/// NW5, Chief Warrant Officer 5
 #define PAY_SHORT_NW5 "NCW5"
 
 /// NO1, Ensign

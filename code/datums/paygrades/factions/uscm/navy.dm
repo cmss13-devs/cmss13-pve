@@ -120,7 +120,7 @@
 	ranking = 13
 	pay_multiplier = 3.3
 
-/datum/paygrade/navy/w1
+/datum/paygrade/navy/w4
 	paygrade = PAY_SHORT_NW4
 	name = "Chief Warrant Officer 4"
 	prefix = "CWO4."

@@ -76,6 +76,8 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
 #define CMB_FREQ 1220
+#define ASF_FREQ 1224
+#define ARM_FREQ 1228
 
 //WY Channels (1230-1249)
 #define WY_FREQ 1231
@@ -150,6 +152,8 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_YAUTJA = YAUT_FREQ,
 	RADIO_CHANNEL_VAI = VAI_FREQ,
 	RADIO_CHANNEL_CMB = CMB_FREQ,
+	RADIO_CHANNEL_USASF = ASF_FREQ,
+	RADIO_CHANNEL_US_ARMY = ARM_FREQ,
 	RADIO_CHANNEL_DUTCH_DOZEN = DUT_FREQ,
 	RADIO_CHANNEL_ROYAL_MARINE = RMC_FREQ,
 
@@ -224,7 +228,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 #define BUG_FREQS list(BUG_A_FREQ, BUG_B_FREQ)
 
 //Depts - used for colors in headset.dm, as well as deciding what the marine comms tower can listen into
-#define DEPT_FREQS list(COMM_FREQ, MED_FREQ, ENG_FREQ, SEC_FREQ, SENTRY_FREQ, ALPHA_FREQ, BRAVO_FREQ, CHARLIE_FREQ, DELTA_FREQ, ECHO_FREQ, CRYO_FREQ, REQ_FREQ, JTAC_FREQ, INTEL_FREQ, WY_FREQ)
+#define DEPT_FREQS list(COMM_FREQ, MED_FREQ, ENG_FREQ, SEC_FREQ, SENTRY_FREQ, ALPHA_FREQ, BRAVO_FREQ, CHARLIE_FREQ, DELTA_FREQ, ECHO_FREQ, CRYO_FREQ, REQ_FREQ, JTAC_FREQ, INTEL_FREQ, WY_FREQ, ASF_FREQ, ARM_FREQ)
 
 #define TRANSMISSION_WIRE 0
 #define TRANSMISSION_RADIO 1
@@ -275,6 +279,8 @@ SUBSYSTEM_DEF(radio)
 		"[VAI_FREQ]" = "vairadio",
 		"[RMC_FREQ]" = "rmcradio",
 		"[CMB_FREQ]" = "cmbradio",
+		"[ASF_FREQ]" = "usasfradio",
+		"[ARM_FREQ]" = "armyradio",
 		"[ALPHA_FREQ]" = "alpharadio",
 		"[BRAVO_FREQ]" = "bravoradio",
 		"[CHARLIE_FREQ]" = "charlieradio",

@@ -824,6 +824,14 @@
 	)
 	can_hold_skill_only = TRUE
 
+/obj/item/storage/pouch/engikit/full/fill_preset_inventory()
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/circuitboard/apc(src)
+
 /obj/item/storage/pouch/medkit
 	name = "medical kit pouch"
 	storage_flags = STORAGE_FLAGS_POUCH
