@@ -95,6 +95,47 @@ GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
 	icon_state = "special"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/shotgun/buckshot/heavy
+	name = "box of heavy buckshot shells"
+	desc = "A box filled with buckshot spread shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_buckshot"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/heavy
+	name = "box of heavy slug shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_slug"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath
+	name = "box of heavy dragonsbreath shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_dragon"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/beanbag/heavy
+	name = "box of heavy beanbag shells"
+	desc = "A box filled with beanbag slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_beanbag"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
 //-------------------------------------------------------
 
 /*
@@ -109,34 +150,51 @@ also doesn't really matter. You can only reload them with handfuls.
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
 	max_rounds = 4
-	current_rounds = 0
+	current_rounds = 4
 	chamber_closed = 0
 
+/obj/item/ammo_magazine/internal/shotgun/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/unloaded
+	current_rounds = 0
+
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 2
+	current_rounds = 0
 	chamber_closed = 1 //Starts out with a closed tube.
 
 /obj/item/ammo_magazine/internal/shotgun/double/cane
 	default_ammo = /datum/ammo/bullet/revolver/marksman
 	max_rounds = 6
+	current_rounds = 6
 	caliber = ".44"
-
 /obj/item/ammo_magazine/internal/shotgun/double/mou53
 	default_ammo = /datum/ammo/bullet/shotgun/flechette
 	max_rounds = 3
 
 /obj/item/ammo_magazine/internal/shotgun/double/twobore //Van Bandolier's superheavy double-barreled hunting rifle.
 	caliber = "2 bore"
+	max_rounds = 2
+	current_rounds = 0
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
 
 /obj/item/ammo_magazine/internal/shotgun/combat
 	caliber = "12g"
 	max_rounds = 6
+	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/marsoc
 	caliber = "12g"
@@ -149,10 +207,30 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/type23
 	caliber = "8g"
 	max_rounds = 4
+	current_rounds = 4
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+
+/obj/item/ammo_magazine/internal/shotgun/type23/slug
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+
+/obj/item/ammo_magazine/internal/shotgun/type23/riot
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4
+	current_rounds = 4
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
