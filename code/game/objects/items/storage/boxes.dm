@@ -727,6 +727,13 @@
 	can_hold = list(/obj/item/explosive/grenade/incendiary/airburst)
 	grenade_type = /obj/item/explosive/grenade/incendiary/airburst
 
+/obj/item/storage/box/nade_box/canister
+	name = "\improper M108 canister (buckshot) grenade box"
+	desc = "A secure box holding 25 M108 canister grenades. Highly flammable, don't store near the flamer fuel."
+	model_icon = "model_m40"
+	type_icon = "buck"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
 
 /obj/item/storage/box/nade_box/training
 	name = "\improper M07 training grenade box"
