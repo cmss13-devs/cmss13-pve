@@ -11,8 +11,8 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
+	name = "Section"
+	lead_name = "Section Sergeant"
 	lead_icon = "leader"
 	sub_squad = "Squad"
 	sub_leader = "Squad Sergeant"
