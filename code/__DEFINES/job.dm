@@ -19,9 +19,9 @@
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
-#define JOB_SQUAD_LEADER "Platoon Sergeant"
+#define JOB_SQUAD_LEADER "Section Sergeant"
 #define JOB_SQUAD_ENGI "Combat Technician"
-#define JOB_SQUAD_MEDIC "Platoon Corpsman"
+#define JOB_SQUAD_MEDIC "Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
 #define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"

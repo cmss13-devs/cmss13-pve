@@ -11,8 +11,8 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
+	name = "Section"
+	lead_name = "Section Sergeant"
 	lead_icon = "leader"
 	sub_squad = "Squad"
 	sub_leader = "Squad Sergeant"
@@ -701,7 +701,7 @@
 			old_lead.comm_title = "SG"
 		if(JOB_SQUAD_LEADER)
 			if(!leader_killed)
-				old_lead.comm_title = "PltSgt"
+				old_lead.comm_title = "SctSgt"
 		if(JOB_SQUAD_RTO)
 			old_lead.comm_title = "RTO"
 		if(JOB_MARINE_RAIDER)
