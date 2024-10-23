@@ -3306,10 +3306,10 @@
 /obj/item/ammo_box/rounds/pkp{
 	pixel_y = 9
 	},
-/obj/item/ammo_box/magazine/type71/empty,
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
+/obj/item/ammo_box/rounds/type71/heap,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
 "BD" = (
