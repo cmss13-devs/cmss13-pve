@@ -316,6 +316,49 @@
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), impact, 450, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, create_cause_data(initial(name)), source_mob), 0.5 SECONDS) //Insane fall off combined with insane damage makes the Keeper useful for single targets, but very bad against multiple.
 	QDEL_IN(src, 0.5 SECONDS)
 
+/obj/structure/ship_ammo/rocket/cbu
+	name = "\improper CBU-191 'Rockeye IX'"
+	desc = "The CBU-191 'Rockeye IX' is the latest in a prestigious line of wide-area anti-personnel/anti-armor wide-area cluster munitions. Designed due to increasingly frustrating experience with colonial 'Armed Protestors' being frustratingly unwilling to confront USCM forces head-on, these fat bombs deliver roughly 300 HEDP submunitions over a widespread area. Can be loaded into the LAU-444 Guided Missile Launcher."
+	icon_state = "paveway"
+	travelling_time = 60 //A slower payload due to its immense blast radius
+	ammo_id = "k"
+	point_cost = 900 //PvE don't use the printer but just in case
+	fire_mission_delay = 4 //We don't care because our ammo has just 1 rocket
+	var/shrapnel_count = 8
+	var/shrapnel_type = /datum/ammo/bullet/shrapnel
+	var/total_amount = 60 // how many times will the shell fire?
+	var/instant_amount = 15 // how many explosions per time it fires?
+	var/explosion_power = 65
+	var/explosion_falloff = 75
+	var/delay_between_clusters = 0.85 SECONDS // how long between each firing?
+
+/obj/structure/ship_ammo/rocket/cbu/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
+	impact.ceiling_debris_check(3)
+	start_cluster(impact)
+
+/obj/structure/ship_ammo/rocket/cbu/proc/start_cluster(turf/impact)
+	set waitfor = 0
+
+	var/range_num = 25
+	var/list/turf_list = RANGE_TURFS(range_num, impact)
+
+	for(var/i = 1 to total_amount)
+		for(var/k = 1 to instant_amount)
+			var/turf/selected_turf = pick(turf_list)
+			var/area/selected_area = get_area(selected_turf)
+			if(CEILING_IS_PROTECTED(selected_area?.ceiling, CEILING_PROTECTION_TIER_4))
+				continue
+			fire_in_a_hole(selected_turf)
+
+		sleep(delay_between_clusters)
+	QDEL_IN(src, 1 SECONDS)
+
+/obj/structure/ship_ammo/rocket/cbu/proc/fire_in_a_hole(turf/loc)
+	new /obj/effect/overlay/temp/blinking_laser (loc)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob)), 1 SECONDS)
+	create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, )
+
+
 /obj/structure/ship_ammo/rocket/harpoon
 	name = "\improper AGM-184 'Harpoon II'"
 	desc = "The AGM-184 Harpoon II is an Anti-Ship Missile, designed and used to effectively take down enemy ships with a huge blast wave with low explosive power. This one is modified to use ground signals and can be seen as a cheaper alternative to conventional ordnance. Can be loaded into the LAU-444 Guided Missile Launcher."

@@ -2,7 +2,7 @@
 
 //Various ordnance selections
 #define ORDNANCE_OPTIONS list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive", "Incendiary", "Fragmentation", "Flare")
-#define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
+#define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Keeper Missile","Cluster Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21")
@@ -120,6 +120,15 @@
 			if("Keeper Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/keeper/ammo = new()
+
+				handle_dropship_ordnance(target_turf, ammo)
+
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				return TRUE
+
+			if("Cluster Missile")
+				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
+				var/obj/structure/ship_ammo/rocket/cbu/ammo = new()
 
 				handle_dropship_ordnance(target_turf, ammo)
 
