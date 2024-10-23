@@ -1156,3 +1156,17 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
 	max_storage_space = 15
+
+//----------USASF & ARMY SECTION----------
+
+/obj/item/storage/backpack/marine/satchel/rto/navy
+	name = "\improper USASF Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between orbiting warships and their forward observers."
+	networks_receive = list(FACTION_MARINE, FACTION_NAVY)
+	networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
+
+/obj/item/storage/backpack/marine/satchel/rto/army
+	name = "\improper US Army Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
+	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
+	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
