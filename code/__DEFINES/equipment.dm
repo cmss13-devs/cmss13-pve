@@ -465,8 +465,17 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 #define ACCESSORY_SLOT_ARMBAND "Armband"
 #define ACCESSORY_SLOT_RANK "Rank"
 #define ACCESSORY_SLOT_DECOR "Decor"
+#define ACCESSORY_SLOT_DECORARMOR "Decor Armor"
+#define ACCESSORY_SLOT_DECORBRACER "Decor Bracer"
+#define ACCESSORY_SLOT_DECORNECK "Decor Neck"
 #define ACCESSORY_SLOT_MEDAL "Medal"
 #define ACCESSORY_SLOT_PONCHO "Ponchos"
+#define ACCESSORY_SLOT_HOLSTER "Holster"
+#define ACCESSORY_SLOT_SGDECOR "SG Decor"
+#define ACCESSORY_SLOT_SGPAINT "SG Paint"
+#define ACCESSORY_SLOT_PAINT "Paint"
+#define ACCESSORY_SLOT_M3UTILITY "M3 Utility"
+#define ACCESSORY_SLOT_M56UTILITY "M56 Utility"
 
 /// Used for uniform armor inserts.
 #define ACCESSORY_SLOT_ARMOR_C "Chest armor"
