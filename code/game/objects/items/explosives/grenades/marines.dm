@@ -319,7 +319,7 @@
 
 /obj/item/explosive/grenade/high_explosive/impact/heap
 	name = "\improper M38 HEAP "
-	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40."
+	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces, landing them just in front is recommended."
 	icon_state = "grenade_phos"
 	item_state = "grenade_phos"
 	explosion_power = 250
