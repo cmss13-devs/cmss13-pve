@@ -600,8 +600,8 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	var/datum/cause_data/cause_data = create_cause_data(initial(name), source_mob)
 	cell_explosion(target, clear_power, clear_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data) //break shit around
 	spawn(5)
-		var/datum/effect_system/smoke_spread/cn20 = new/datum/effect_system/smoke_spread/cn20()
-		cn20.set_up(12,0,target,null)
+		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+		cn20.set_up(18, 0, target, null)
 		cn20.start()
 	handle_ob_shake(target)
 

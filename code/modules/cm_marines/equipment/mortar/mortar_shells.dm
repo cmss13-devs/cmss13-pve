@@ -66,8 +66,8 @@
 /obj/item/mortar_shell/nerve/detonate(turf/T)
 	explosion(T, 0, 2, 4, 7, explosion_cause_data = cause_data)
 	spawn(5)
-		var/datum/effect_system/smoke_spread/cn20 = new/datum/effect_system/smoke_spread/cn20()
-		cn20.set_up(5,0,T,null)
+		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+		cn20.set_up(5, 0, T, null)
 		cn20.start()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 35, 1, 4)
 
