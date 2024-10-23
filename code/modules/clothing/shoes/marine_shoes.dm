@@ -53,6 +53,13 @@
 /obj/item/clothing/shoes/marine/jungle/knife
 	spawn_item_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/marine/army
+	name = "\improper US Army combat boots"
+	desc = "A pair of standard issue black United States Army combat boots."
+
+/obj/item/clothing/shoes/marine/army/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
