@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Synths now understand all human-spoken languages once more"
