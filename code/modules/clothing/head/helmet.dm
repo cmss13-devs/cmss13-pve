@@ -1520,3 +1520,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
 #undef HELMET_GARB_RELAY_ICON_STATE
+
+//=USASF & ARMY=\\
+
+/obj/item/clothing/head/helmet/marine/tech/tanker/para
+	name = "\improper MK25 para-rescue helmet"
+	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/helmet/marine/rto/navy
+	name = "\improper M12 pattern naval-deployment helmet"
+	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/helmet/marine/rto/army
+	name = "\improper M12 pattern helmet"
+	desc = "Despite it failing to be procured by the USCMC, the Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
