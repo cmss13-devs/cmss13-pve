@@ -82,6 +82,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "BiMex personal shades"
 	path = /obj/item/clothing/glasses/sunglasses/big
 
+/datum/gear/eyewear/bimex_shades_orange
+	display_name = "BiMex shooting shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/orange
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
