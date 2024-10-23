@@ -628,6 +628,18 @@
 	icon_state = "cc_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+//==================USASF & ARMY==================\\
+/obj/item/clothing/suit/storage/marine/medium/rto/navy
+	name = "\improper M4 pattern naval-deployment armor"
+	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches."
+	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/storage/marine/medium/rto/army
+	name = "\improper M4 pattern trooper armor"
+	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
 //===========================//CUSTOM ARMOR\\================================\\
 //=======================================================================\\
 //base armor, copies everything from the storage armor for the same traits
@@ -682,7 +694,6 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
-//==================USASF & ARMY==================\\
 	light_power = 3
 	light_range = 4
 	light_system = MOVABLE_LIGHT
