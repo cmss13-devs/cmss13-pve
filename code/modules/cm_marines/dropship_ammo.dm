@@ -316,7 +316,7 @@
 		cell_explosion(impact, 25, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
 		spawn(5)
 			var/datum/effect_system/smoke_spread/cn20/cn20 = new()
-			cn20.set_up(8,0,impact,null)
+			cn20.set_up(8, 0, impact, null)
 			cn20.start()
 	QDEL_IN(src, 0.5 SECONDS)
 
