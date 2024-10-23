@@ -123,7 +123,6 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			M.count_niche_stat(STATISTICS_NICHE_DESTRUCTION_DOORS, 1)
 			SEND_SIGNAL(M, COMSIG_MOB_DESTROY_AIRLOCK, src)
 		to_chat(loc, SPAN_DANGER("[src] blows apart!"))
-		new /obj/structure/airlock_assembly
 		deconstruct(FALSE)
 		playsound(src, 'sound/effects/metal_crash.ogg', 25, 1)
 		return TRUE
