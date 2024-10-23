@@ -149,7 +149,7 @@
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
-	shrapnel_count = 20
+	shrapnel_count = 10
 	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
 	dispersion_angle = 15 //hopefully this means the cone spread is pretty small
 /obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
@@ -313,13 +313,28 @@
 
 /*
 //================================================
+				Impact HEAP Grenades
+//================================================
+*/
+
+/obj/item/explosive/grenade/high_explosive/impact/heap
+	name = "\improper M38 HEAP "
+	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40."
+	icon_state = "grenade_phos"
+	item_state = "grenade_phos"
+	explosion_power = 250
+	explosion_falloff = 30
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
+
+/*
+//================================================
 				Incendiary Grenades
 //================================================
 */
 
 /obj/item/explosive/grenade/incendiary
-	name = "\improper M40 HIDP incendiary grenade"
-	desc = "The M40 HIDP is a small, but deceptively strong incendiary grenade designed to disrupt enemy mobility with long-lasting Type B napalm. It is set to detonate in 4 seconds."
+	name = "\improper M77 HIAM incendiary grenade"
+	desc = "High-explosive-Incendiary, Anti-Mobility. The M77 is a small, but deceptively strong incendiary grenade designed to disrupt enemy mobility with long-lasting Type B napalm spread by a small explosive charge within the casing. It is set to detonate in 4 seconds."
 	icon_state = "grenade_fire"
 	det_time = 40
 	item_state = "grenade_fire"
@@ -374,6 +389,7 @@
 	playsound(src.loc, 'sound/effects/hit_on_shattered_glass.ogg', 35, 1, 4)
 	..()
 
+
 /*
 //================================================
 				Airburst Incendiary Grenades
@@ -426,8 +442,8 @@
 */
 
 /obj/item/explosive/grenade/smokebomb
-	name = "\improper M40 HSDP smoke grenade"
-	desc = "The M40 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds."
+	name = "\improper M47 HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds."
 	icon_state = "grenade_smoke"
 	det_time = 20
 	item_state = "grenade_smoke"
@@ -453,11 +469,11 @@
 	qdel(src)
 
 /obj/item/explosive/grenade/phosphorus
-	name = "\improper M40 CCDP grenade"
-	desc = "The M40 CCDP is a small, but powerful chemical compound grenade, similar in effect to WPDP. Word on the block says that the CCDP doesn't actually release White Phosphorus, but some other chemical developed in W-Y labs."
-	icon_state = "grenade_chem"
+	name = "\improper M60 WPDP grenade"
+	desc = "The M60 WPDP is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device."
+	icon_state = "training_grenade"
 	det_time = 20
-	item_state = "grenade_phos"
+	item_state = "grenade_training"
 	underslug_launchable = TRUE
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
 	dangerous = TRUE
