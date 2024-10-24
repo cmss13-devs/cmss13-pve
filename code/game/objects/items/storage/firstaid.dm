@@ -348,6 +348,7 @@
 	)
 	storage_flags = STORAGE_FLAGS_BOX|STORAGE_CLICK_GATHER|STORAGE_QUICK_GATHER
 	storage_slots = null
+	flags_human_ai = HEALING_ITEM
 	use_sound = "pillbottle"
 	max_storage_space = 16
 	var/skilllock = SKILL_MEDICAL_MEDIC
@@ -512,6 +513,25 @@
 
 /obj/item/storage/pill_bottle/proc/error_idlock(mob/user)
 	to_chat(user, SPAN_WARNING("It must have some kind of ID lock..."))
+
+/obj/item/storage/pill_bottle/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	ai_brain.appraise_inventory()
+
+	if(!length(contents) || !COOLDOWN_FINISHED(ai_brain, pill_use_cooldown))
+		return FALSE
+
+	if(skilllock && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
+		return FALSE
+
+	return TRUE
+
+/obj/item/storage/pill_bottle/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	var/obj/item/pill = contents[1]
+	user.swap_hand()
+	if(user.put_in_active_hand(pill))
+		remove_from_storage(pill, user)
+		pill.attack(user, user)
+		COOLDOWN_START(ai_brain, pill_use_cooldown, 20 SECONDS)
 
 /obj/item/storage/pill_bottle/proc/choose_color(mob/user)
 	if(!user)

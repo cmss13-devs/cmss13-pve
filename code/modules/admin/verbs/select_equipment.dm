@@ -104,7 +104,7 @@
 
 	cmd_admin_dress_human(M)
 
-/client/proc/cmd_admin_dress_human(mob/living/carbon/human/M in GLOB.human_mob_list, datum/equipment_preset/dresscode, no_logs = 0, count_participant = FALSE)
+/client/proc/cmd_admin_dress_human(mob/living/carbon/human/M in GLOB.human_mob_list, datum/equipment_preset/dresscode, no_logs = 0, count_participant = FALSE, randomize = FALSE)
 	if (!no_logs)
 		dresscode = tgui_input_list(usr, "Select dress for [M]", "Robust quick dress shop", GLOB.gear_name_presets_list)
 
@@ -128,10 +128,10 @@
 	if(!M.hud_used)
 		M.create_hud()
 
-	arm_equipment(M, dresscode, FALSE, count_participant)
+	arm_equipment(M, dresscode, randomize, count_participant)
 	if(!no_logs)
 		message_admins("[key_name_admin(usr)] changed the equipment of [key_name_admin(M)] to [dresscode].")
-	return
+	return TRUE
 
 /client/proc/cmd_admin_dress_all()
 	set category = "Debug"
