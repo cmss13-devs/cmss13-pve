@@ -937,7 +937,13 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction_group = FACTION_LIST_MARINE
 	languages = list(LANGUAGE_ENGLISH)
-	idtype = /obj/item/card/id
+	idtype = /obj/item/card/id/dogtag
+	assignment = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_MARINE
+	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RFN"
+	skills = /datum/skills/pfc
+	minimap_icon = "private"
 	/// If the player should start out underfed
 	var/underfed = TRUE
 
@@ -953,12 +959,7 @@
 /datum/equipment_preset/uscm/tutorial_rifleman
 	name = "Tutorial Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = JOB_SQUAD_MARINE
-	rank = JOB_SQUAD_MARINE
-	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
-	minimap_icon = "private"
+
 
 /datum/equipment_preset/uscm/tutorial_rifleman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
@@ -967,4 +968,62 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+
+/datum/equipment_preset/tutorial/pve/lloyd
+	uses_special_name = TRUE
+	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/tutorial/pve/lloyd/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie/tan(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
+
+/datum/equipment_preset/tutorial/pve/lloyd/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, "Johnny Lloyd")
+	new_human.f_style = "Shaved"
+	new_human.h_style = "Parted"
+	new_human.r_hair = 128
+	new_human.g_hair = 128
+	new_human.b_hair = 0
+	new_human.regenerate_icons()
+
+/datum/equipment_preset/tutorial/pve/oestermann
+	uses_special_name = TRUE
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/tutorial/pve/oestermann/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/bridge(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+
+/datum/equipment_preset/tutorial/pve/oestermann/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, "Charlie Oestermann")
+	new_human.f_style = "Shaved"
+	new_human.h_style = "Crewcut"
+	new_human.r_hair = 153
+	new_human.g_hair = 102
+	new_human.b_hair = 51
+	new_human.regenerate_icons()
+
+/datum/equipment_preset/tutorial/pve/bobert
+	uses_special_name = TRUE
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/tutorial/pve/bobert/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
+
+/datum/equipment_preset/tutorial/pve/bobert/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, "Steven Robert")
+	new_human.f_style = "Shaved"
+	new_human.h_style = "Short Bangs"
+	new_human.r_hair = 102
+	new_human.g_hair = 51
+	new_human.b_hair = 0
+	new_human.regenerate_icons()
 
