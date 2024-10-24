@@ -33,7 +33,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	/obj/item/storage/box/packet/incendiary,
 	/obj/item/storage/box/packet/smoke,
 	/obj/item/storage/box/packet/foam,
-	/obj/item/storage/box/packet/phosphorus,
+	/obj/item/storage/box/packet/phosphorus/strong,
 	/obj/item/storage/box/packet/phosphorus/upp,
 	/obj/item/storage/box/packet/m15,
 	/obj/item/storage/box/packet/airburst_he,
@@ -65,8 +65,8 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell
 
 /obj/item/storage/box/packet/incendiary
-	name = "\improper HIDP grenade packet"
-	desc = "It contains three HIDP incendiary grenades."
+	name = "\improper HIAM grenade packet"
+	desc = "It contains three HIAM incendiary grenades."
 	icon_state = "hidp_packet"
 	content_type = /obj/item/explosive/grenade/incendiary
 
@@ -83,8 +83,8 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/phosphorus/weak
 
 /obj/item/storage/box/packet/phosphorus/strong
-	name = "\improper CCDP grenade packet"
-	desc = "It contains three CCDP chemical compound grenades."
+	name = "\improper WPDP grenade packet"
+	desc = "It contains three WPDP chemical compound grenades."
 	icon_state = "ccdp_packet"
 	content_type = /obj/item/explosive/grenade/phosphorus
 
