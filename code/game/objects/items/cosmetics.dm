@@ -31,7 +31,7 @@
 
 /obj/item/facepaint/sniper
 	name = "fullbody paint"
-	desc = "Paint, for your face. This facepaint is meant to help you blend in with the foliage, but studies on this are at best inconclusive. Wipe it off your face with some paper if you need to."
+	desc = "Paint, for your entire body. Not incredibly useful unless you plan to really go commando. Wipe it off your face with some paper if you need to."
 	paint_type = "full_camo"
 	icon_state = "full_camo"
 
@@ -42,8 +42,8 @@
 	icon_state = "skull_camo"
 
 /obj/item/facepaint/sunscreen_stick
-	name= "\improper USCM issue sunscreen"
-	desc = "A stick of SPF 50 sunscreen, issued to you by the good brass of the Corps. Whereas the previously issued sunscreen was toxic upon ingestion, this batch improves upon that by only containing excessive amounts of cadmium."
+	name= "\improper service issue sunscreen"
+	desc = "A stick of service issue SPF 50 sunscreen with the Marine logo on the bottom. Nontoxic, weather-resistant, smells horrible even after it's been washed off."
 	paint_type = "sunscreen_stick"
 	icon_state = "sunscreen_stick"
 
