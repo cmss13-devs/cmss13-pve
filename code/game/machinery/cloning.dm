@@ -3,7 +3,7 @@
 /obj/item/disk/data
 	name = "Cloning Data Disk"
 	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
-	item_state = "card-id"
+	item_state = "red-id"
 	w_class = SIZE_TINY
 	var/read_only = 0 //Well,it's still a floppy disk
 

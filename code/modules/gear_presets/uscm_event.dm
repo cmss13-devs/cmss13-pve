@@ -27,7 +27,7 @@
 	utility_extra = list(/obj/item/clothing/glasses/sunglasses,/obj/item/clothing/glasses/sunglasses/big,/obj/item/clothing/glasses/sunglasses/aviator,/obj/item/clothing/glasses/mbcg)
 
 	service_under = list(/obj/item/clothing/under/marine/officer/formal/white, /obj/item/clothing/under/marine/officer/formal/black)
-	service_shoes = list(/obj/item/clothing/shoes/dress/commander)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 	service_extra = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber)
 	service_hat = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/marine/commander/dress, /obj/item/clothing/head/beret/marine/commander/black)
 
@@ -35,7 +35,7 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
-	dress_shoes = list(/obj/item/clothing/shoes/dress/commander)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
 /datum/equipment_preset/uscm_event/colonel/New()
 	. = ..()
@@ -46,7 +46,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/commander(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/cmateba/full(new_human), WEAR_L_STORE)
@@ -515,4 +515,3 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mateba(new_human), WEAR_R_STORE)
 
 /*****************************************************************************************************/
-

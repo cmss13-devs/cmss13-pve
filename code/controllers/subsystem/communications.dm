@@ -95,6 +95,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define UPP_MED_FREQ 1254
 #define UPP_CCT_FREQ 1255
 #define UPP_KDO_FREQ 1259
+#define UPP_GRD_FREQ 1256
 
 //CLF Channels (1270-1289)
 #define CLF_FREQ 1271
@@ -201,6 +202,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_UPP_MED = UPP_MED_FREQ,
 	RADIO_CHANNEL_UPP_CCT = UPP_CCT_FREQ,
 	RADIO_CHANNEL_UPP_KDO = UPP_KDO_FREQ,
+	RADIO_CHANNEL_UPP_GRD = UPP_GRD_FREQ,
 
 	RADIO_CHANNEL_CLF_GEN = CLF_FREQ,
 	RADIO_CHANNEL_CLF_CMD = CLF_CMD_FREQ,
@@ -216,7 +218,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 #define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ)
 
 // UPP Frequencies
-#define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ)
+#define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
 
 // CLF Frequencies
 #define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ, CLF_CCT_FREQ)
@@ -301,6 +303,7 @@ SUBSYSTEM_DEF(radio)
 		"[UPP_MED_FREQ]" = "opformed",
 		"[UPP_CCT_FREQ]" = "opforcct",
 		"[UPP_KDO_FREQ]" = "opforspe",
+		"[UPP_GRD_FREQ]" = "opforgrd",
 		"[CLF_FREQ]" = "clfradio",
 		"[CLF_CMD_FREQ]" = "opforcmd",
 		"[CLF_ENGI_FREQ]" = "opforeng",

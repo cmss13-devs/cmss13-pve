@@ -3253,14 +3253,15 @@
 		icon_state = "open-hotdog"
 
 /obj/item/reagent_container/food/snacks/upp
-	name = "\improper UPP ration"
-	desc = "A sealed, freeze-dried, compressed package containing a single item of food. Commonplace in the UPP military, especially those units stationed on far-flung colonies. This one is stamped for consumption by the UPP's 'Smoldering Sons' battalion and was packaged in 2179."
+	name = "\improper UPP survival ration"
+	desc = "A small compressed package containing a single portion of food you cannot distinguish. Mass produced as emergency rations they are available in abundance anywhere in the Union and are packed with nutritional additives. They are commonplace in the diets of many citizens of the Union who eat them out of convenience in place of more flavourful nutrient bars, or as nutritional additives to dishes. Despite popular myths in the UA, they are not the standard MRE of the UPPAC, but are utilized in scenarios where the actual MRE supply has been depleted, as one would expect of survival food."
 	icon_state = "upp_ration"
 	bitesize = 4
+	package = 1
 
 /obj/item/reagent_container/food/snacks/upp/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("nutriment", 14)
 
 /obj/item/reagent_container/food/snacks/upp/attack_self(mob/user)
 	..()
@@ -3269,14 +3270,14 @@
 		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, TRUE)
 		to_chat(user, SPAN_NOTICE("You tear off the ration seal and pull out the contents!"))
 		package = FALSE
+		name = "survival ration"
 		var/variation = rand(1,2)
-		desc = "An extremely dried item of food, with little flavoring or coloration. Looks to be prepped for long term storage, but will expire without the packaging. Best to eat it now to avoid waste. At least things are equal."
 		switch(variation)
 			if(1)
-				name = "rationed fish"
+				desc = "A compact chunk of freeze-dried meat or fish featuring nutrient additives in the form of a dense powder. Having little flavoring or colouration as a result of its preparation for long term storage, the appeal of this item is purely in its capacity to provide sustenance."
 				icon_state = "upp_1"
 			if(2)
-				name = "rationed rice"
+				desc = "A compact ball of dough-like rice or oats featuring nutrient additives in the form of a dense powder. Having little flavoring or colouration as a result of its preparation for long term storage, the appeal of this item is purely in its capacity to provide sustenance."
 				icon_state = "upp_2"
 
 

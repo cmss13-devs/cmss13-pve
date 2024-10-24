@@ -8723,6 +8723,20 @@
 	},
 /turf/open/floor/grimy,
 /area/bigredv2/outside/admin_building)
+"fuC" = (
+/obj/structure/coatrack{
+	pixel_x = -5;
+	pixel_y = 13
+	},
+/obj/item/clothing/shoes/laceup{
+	pixel_y = -13
+	},
+/obj/item/clothing/under/suit_jacket/trainee{
+	pixel_x = -6;
+	pixel_y = 15
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
 "fvg" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/newspaper{
@@ -19058,20 +19072,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/whitepurplefull,
 /area/bigredv2/caves/lambda/xenobiology)
-"oau" = (
-/obj/structure/coatrack{
-	pixel_x = -5;
-	pixel_y = 13
-	},
-/obj/item/clothing/shoes/dress{
-	pixel_y = -13
-	},
-/obj/item/clothing/under/suit_jacket/trainee{
-	pixel_x = -6;
-	pixel_y = 15
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
 "oaF" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
 /obj/effect/decal/cleanable/dirt,
@@ -52864,7 +52864,7 @@ ukV
 apC
 qhG
 mQi
-oau
+fuC
 aof
 mfk
 mQi
