@@ -125,11 +125,14 @@
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)
-	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
+	new /obj/item/clothing/suit/marine/smartgunner(src)
 	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 
 /obj/structure/closet/secure_closet/smartgunner_forecon
 	name = "smartgunner locker"
@@ -140,11 +143,14 @@
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)
-	new /obj/item/clothing/suit/storage/marine/smartgunner/standard(src)
+	new /obj/item/clothing/suit/marine/smartgunner/standard(src)
 	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 
 /obj/structure/closet/cryo/Initialize()
 	. = ..()

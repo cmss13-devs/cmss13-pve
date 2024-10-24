@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 26
+#define SAVEFILE_VERSION_MAX 27
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -164,6 +164,13 @@
 		var/relation
 		S["nanotrasen_relation"] >> relation
 		S["weyland_yutani_relation"] << relation
+
+	if(savefile_version < 27)
+		var/old_pref_armor
+		S["preferred_armor"] >> old_pref_armor
+		if(!(old_pref_armor in GLOB.armor_style_list))
+			preferred_armor = "Random"
+		S["preferred_armor"] << preferred_armor
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
