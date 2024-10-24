@@ -433,3 +433,31 @@
 	user.do_click(A, null, params)
 	addtimer(CALLBACK(src, PROC_REF(autoclick), user, A, params), 0.1)
 #endif
+
+/client/var/mouse_params
+/client/var/cursor_view_panning = FALSE
+
+/client/MouseMove(atom/object, location, control, params)
+	mouse_params = params
+
+	if(cursor_view_panning)
+		cursor_view_pan()
+
+/client/proc/cursor_view_pan()
+	var/list/modifiers = params2list(mouse_params)
+	var/screen_loc = modifiers[SCREEN_LOC]
+
+	// "x,y"
+	var/list/screen_coords = splittext(screen_loc, ",")
+	// "tiles:pixels"
+	var/list/x_coords = splittext(screen_coords[1], ":")
+	var/list/y_coords = splittext(screen_coords[2], ":")
+
+	var/screen_pixel_x = (text2num(x_coords[1]) - 1) * world.icon_size + text2num(x_coords[2])
+	var/screen_pixel_y = (text2num(y_coords[1]) - 1) * world.icon_size + text2num(y_coords[2])
+
+	// list(viewX, viewY)
+	var/list/actual_view = getviewsize(view)
+
+	pixel_x = floor((screen_pixel_x - floor(actual_view[1] * world.icon_size * 0.5)) * 0.5)
+	pixel_y = floor((screen_pixel_y - floor(actual_view[2] * world.icon_size * 0.5)) * 0.5)
