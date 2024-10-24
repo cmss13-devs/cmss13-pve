@@ -417,15 +417,15 @@
 
 //this one is for CLF
 /obj/item/clothing/suit/storage/militia
-	name = "colonial militia hauberk"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops."
+	name = "ballistic vest"
+	desc = "A modern tactical vest with a bunch of pockets."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "rebel_armor"
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
-	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	slowdown = SLOWDOWN_ARMOR_LIGHT
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 	armor_melee = CLOTHING_ARMOR_MEDIUM
@@ -437,7 +437,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
-	uniform_restricted = list(/obj/item/clothing/under/colonist)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -468,35 +467,22 @@
 	pockets.max_storage_space = 8
 
 /obj/item/clothing/suit/storage/militia/vest
-	name = "colonial militia vest"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant protects only the chest and abdomen."
+	name = "improvised ballistic vest"
+	desc = "Is the outer carrier tape? Is it fabric? Hard to tell. Armor rig with modern plates and some pouches sewn on."
 	icon_state = "clf_2"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	slowdown = 0.2
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
-/obj/item/clothing/suit/storage/militia/brace
-	name = "colonial militia brace"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant has some of the chest pieces removed."
-	icon_state = "clf_3"
-	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	flags_cold_protection = BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
-	slowdown = 0.2
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
 
-/obj/item/clothing/suit/storage/militia/partial
-	name = "colonial militia partial hauberk"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This even lighter variant has some of the arm pieces removed."
-	icon_state = "clf_4"
+/obj/item/clothing/suit/storage/militia/knockoff
+	name = "knockoff M3 body armor"
+	desc = "With how emblematic the M3 pattern ballistic armor complex is, it's little surprise some companies might seek to make a quick buck by piggybacking its name."
+	icon_state = "arg_armor"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	slowdown = 0.2
-
-/obj/item/clothing/suit/storage/militia/smartgun
-	name = "colonial militia harness"
-	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This one has straps interweaved with the plates, that allow the user to fire a captured smartgun, if a bit uncomfortably."
-	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 
 /obj/item/clothing/suit/storage/CMB
 	name = "\improper CMB Deputy jacket"

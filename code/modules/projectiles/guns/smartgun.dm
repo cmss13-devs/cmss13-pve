@@ -703,16 +703,6 @@
 	fa_max_scatter = SCATTER_AMOUNT_NONE
 
 
-// CLF SMARTGUN
-
-/obj/item/weapon/gun/smartgun/clf
-	name = "\improper M56B 'Freedom' smartgun"
-	desc = "The actual firearm in the 4-piece M56B Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-
-/obj/item/weapon/gun/smartgun/clf/Initialize(mapload, ...)
-	. = ..()
-	MD.iff_signal = FACTION_CLF
-
 /obj/item/weapon/gun/smartgun/admin
 	requires_power = FALSE
 	requires_battery = FALSE
