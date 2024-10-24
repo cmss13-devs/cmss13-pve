@@ -199,7 +199,7 @@
 	)
 
 /obj/item/clothing/head/sulacocap
-	name = "uss golden arrow cap"
+	name = "\improper USS Golden Arrow Cap"
 	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "sulacocap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -211,6 +211,9 @@
 		)
 	var/base_cap_icon
 	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
