@@ -40,16 +40,19 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
-	accurate_range = 5
-	max_range = 8
 	damage = 65
 	penetration = 0
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_1
 	damage_armor_punch = 1
 	pen_armor_punch = 0
+	accurate_range = 3
+	effective_range_max = 3
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	max_range = 6
 
 /datum/ammo/bullet/shrapnel/canister/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 4)
+	knockback(M, P, 2)
 	slowdown(M, P)
 
 /datum/ammo/bullet/shrapnel/canister/set_bullet_traits()
