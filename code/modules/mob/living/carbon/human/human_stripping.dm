@@ -224,8 +224,6 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		return
 	if(!istype(sourcemob.wear_id, /obj/item/card/id/dogtag))
 		return
-	if ( skillcheck(user, SKILL_POLICE, SKILL_POLICE_SKILLED))
-		return
 	var/obj/item/card/id/dogtag/tag = sourcemob.wear_id
 	if(tag.dogtag_taken)
 		to_chat(user, SPAN_WARNING("Someone's already taken [sourcemob]'s information tag."))
