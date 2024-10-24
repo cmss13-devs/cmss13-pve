@@ -1,6 +1,7 @@
 #define FIRE_SUPPORT_CLICK_INTERCEPT_ACTION "fire_support_click_intercept_action"
 
 //Various ordnance selections
+
 #define ORDNANCE_OPTIONS list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive","Nerve Gas OB", "Incendiary", "Fragmentation", "Flare",  "Nerve Gas Mortar")
 #define MISSILE_ORDNANCE list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
@@ -132,6 +133,15 @@
 			if("Keeper Missile")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/rocket/keeper/ammo = new()
+
+				handle_dropship_ordnance(target_turf, ammo)
+
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				return TRUE
+
+			if("Cluster Missile")
+				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
+				var/obj/structure/ship_ammo/rocket/cbu/ammo = new()
 
 				handle_dropship_ordnance(target_turf, ammo)
 
