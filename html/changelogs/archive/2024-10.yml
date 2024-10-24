@@ -22,3 +22,16 @@
 2024-10-21:
   GriffinMan4455:
   - bugfix: GAU and Laser in FS Menu work again yippeee
+2024-10-24:
+  BonniePandora:
+  - rscadd: Adds job, skills & gear presets for USASF Personnel
+  - rscadd: Adds job, skills & gear presets presets for US Army Personnel
+  - rscadd: Added Warrant Officer rank paygrades for USCMC
+  - rscadd: Orange-tinted BiMex shades added to the loadout selection
+  - spellcheck: Some typos fixes as I discovered them whilst working on this
+  - imageadd: Added new branch-patches for the Army & USASF
+  - imageadd: Added new Warrant-Officer rank-boards and changed the paygrades to use
+      them for the corresponding ranks
+  - bugfix: Synths now understand all human-spoken languages once more
+  Max-023:
+  - rscadd: 2 10x28 Ammunition Boxes added to the Golden Arrow Armory
