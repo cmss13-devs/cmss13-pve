@@ -9,7 +9,7 @@
 /datum/paygrade/marine/e1
 	paygrade = PAY_SHORT_ME1
 	name = "Private"
-	prefix = "PVT"
+	prefix = "Pvt"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e1
 	ranking = 0
 	pay_multiplier = 1.6
