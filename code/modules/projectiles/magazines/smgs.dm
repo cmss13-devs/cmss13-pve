@@ -93,10 +93,10 @@
 	default_ammo = /datum/ammo/bullet/smg/mp27
 	caliber = "4.6x30mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "mp7_30"
+	icon_state = "mp7_40"
 	gun_type = /obj/item/weapon/gun/smg/mp27
-	max_rounds = 30 //Also comes in 20 and 40.
-	bonus_overlay = "mp7_30_overlay"
+	max_rounds = 40 //Also comes in 20 and 40.
+	bonus_overlay = "mp7_40_overlay"
 	var/random_magazine = TRUE
 
 /obj/item/ammo_magazine/smg/mp27/Initialize(mapload, spawn_empty)
