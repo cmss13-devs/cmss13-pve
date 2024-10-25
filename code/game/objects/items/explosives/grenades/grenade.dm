@@ -15,7 +15,7 @@
 	var/det_time = 40
 	var/dangerous = FALSE //Make an danger overlay for humans?
 	var/arm_sound = 'sound/weapons/armbomb.ogg'
-	var/has_arm_sound = TRUE
+	var/has_arm_sound = FALSE
 	var/underslug_launchable = FALSE
 	var/hand_throwable = TRUE
 	harmful = TRUE //Is it harmful? Are they banned for synths?
@@ -82,7 +82,7 @@
 	if(initial(dangerous))
 		var/nade_sound
 		if(has_species(user, "Human"))
-			nade_sound = user.gender == FEMALE ? get_sfx("female_fragout") : get_sfx("male_fragout")
+			nade_sound = get_sfx("sound/weapons/grenade.ogg")
 		else if(ismonkey(user))
 			nade_sound = sound('sound/voice/monkey_scream.ogg')
 		if(nade_sound)
