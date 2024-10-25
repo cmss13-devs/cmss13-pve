@@ -150,7 +150,7 @@
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/M = new()
+	var/obj/item/clothing/under/colonist/workwear/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)

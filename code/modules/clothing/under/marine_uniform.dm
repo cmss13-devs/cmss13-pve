@@ -710,6 +710,15 @@
 	worn_state = "colonist"
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_COLONIST
+	siemens_coefficient = 1
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
 
 /obj/item/clothing/under/colonist/workwear
 	name = "grey workwear"
