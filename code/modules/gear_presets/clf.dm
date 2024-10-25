@@ -145,7 +145,6 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
-	role_comm_title = "TECH"
 
 	skills = /datum/skills/clf/combat_engineer
 

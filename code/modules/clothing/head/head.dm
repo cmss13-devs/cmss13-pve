@@ -352,6 +352,10 @@
 		"unflipped" = "You hook the hat's chinstrap under your chin. Peace of mind is worth a little embarassment."
 		)
 
+/obj/item/clothing/head/cmcap/boonie/generic
+	name = "worn boonie hat"
+	desc = "Old and slightly threadbare bush hat. No defence against anything but the beating sun or driving rain."
+
 /obj/item/clothing/head/cmcap/boonie/tan
 	icon_state = "booniehattan"
 	flags_atom = FPRINT|NO_SNOW_TYPE
@@ -712,7 +716,16 @@
 
 /obj/item/clothing/head/militia/bucket
 	name = "bucket"
-	desc = "This metal bucket appears to have been modified with padding and chin-straps, plus an eye-slit carved into the \"front\". Presumably, it is intended to be worn on the head, possibly for protection."
+	desc = "Improvised helmet made out of a bucket. Better than... nothing...?"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	icon_state = "bucket"
 
 /obj/item/clothing/head/general

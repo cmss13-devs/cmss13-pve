@@ -439,10 +439,10 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest,
 		/obj/item/clothing/suit/storage/CMB,
-		/obj/item/clothing/suit/storage/webbing
-		/obj/item/clothing/suit/storage/utility_vest
-		/obj/item/clothing/suit/storage/bomber
-		/obj/item/clothing/suit/storage/bomber/alt
+		/obj/item/clothing/suit/storage/webbing,
+		/obj/item/clothing/suit/storage/utility_vest,
+		/obj/item/clothing/suit/storage/bomber,
+		/obj/item/clothing/suit/storage/bomber/alt,
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 
@@ -450,10 +450,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/spawn_rebel_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/helmetpath = pick(
-		/obj/item/clothing/head/militia,
 		/obj/item/clothing/head/militia/bucket,
 		/obj/item/clothing/head/helmet,
-		/obj/item/clothing/head/helmet/skullcap,
 		/obj/item/clothing/head/helmet/swat,
 		/obj/item/clothing/head/hardhat,
 		/obj/item/clothing/head/welding,
@@ -461,6 +459,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/head/headband/red,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rambo,
+		/obj/item/clothing/head/cmcap/boonie/generic,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 

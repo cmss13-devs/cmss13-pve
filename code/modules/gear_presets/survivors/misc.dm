@@ -315,7 +315,6 @@ Everything below isn't used or out of place.
 	if(!istype(human))
 		return
 	var/helmetpath = pick(
-		/obj/item/clothing/head/militia,
 		/obj/item/clothing/head/militia/bucket,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/head/helmet/skullcap,
