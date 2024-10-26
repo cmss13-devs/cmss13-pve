@@ -7,9 +7,6 @@
 	//can be used by synths
 	harmful = FALSE
 
-	//skill required to use
-	var/skill_requirement = SKILL_POLICE_SKILLED
-
 	//ignores ship anti-grief system
 	antigrief_protection = FALSE
 
@@ -40,10 +37,6 @@
 		return
 
 	if(isnull(loc))
-		return
-
-	if(!skillcheck(user, SKILL_POLICE, skill_requirement))
-		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
 		return
 
 	..()
@@ -136,7 +129,7 @@
 		to_chat(M, SPAN_HELPFUL("Your gear protects you from the worst of the 'bang'."))
 
 	M.Stun(weaken_amount)
-	M.KnockDown(weaken_amount)	
+	M.KnockDown(weaken_amount)
 	M.KnockOut(paralyze_amount)
 	if(deafen_amount)
 		M.SetEarDeafness(max(M.ear_deaf, deafen_amount))
@@ -223,8 +216,6 @@
 
 	icon_state = "flashbang_noskill"
 	item_state = "grenade_flashbang_noskill"
-
-	skill_requirement = SKILL_POLICE_DEFAULT
 
 /obj/item/explosive/grenade/flashbang/noskill/primed
 	det_time = 10
