@@ -104,6 +104,7 @@
 	name = "USASF Synthetic"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	faction = FACTION_NAVY
+	faction_group = FACTION_LIST_MARINE
 	idtype = /obj/item/card/id/gold
 	assignment = JOB_NAVY_SYNTH
 	rank = "Synthetic"
