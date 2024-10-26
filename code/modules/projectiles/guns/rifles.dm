@@ -462,6 +462,15 @@
 /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/rifle/m41aMK1/army
+	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/grenade/mk1)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+
+/obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
+	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/shotgun)
+
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
 

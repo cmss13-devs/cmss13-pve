@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	var/mob/living/carbon/human/sourcemob = source
 	if (!istype(tag))
 		return
-	if (!sourcemob.undefibbable && (!skillcheck(user, SKILL_POLICE, SKILL_POLICE_SKILLED) || sourcemob.stat != DEAD))
+	if (sourcemob.stat != DEAD)
 		return
 	return tag.dogtag_taken ? null : "retrieve_tag"
 
@@ -223,8 +223,6 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		to_chat(user, SPAN_WARNING("You can't strip a crit or dead member of another faction!"))
 		return
 	if(!istype(sourcemob.wear_id, /obj/item/card/id/dogtag))
-		return
-	if (!sourcemob.undefibbable && !skillcheck(user, SKILL_POLICE, SKILL_POLICE_SKILLED))
 		return
 	var/obj/item/card/id/dogtag/tag = sourcemob.wear_id
 	if(tag.dogtag_taken)
