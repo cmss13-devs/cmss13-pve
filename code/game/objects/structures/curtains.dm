@@ -68,3 +68,7 @@
 /obj/structure/curtain/red
 	name = "red curtain"
 	icon_state = "red"
+
+/obj/structure/curtain/gray
+	name = "curtain"
+	icon_state = "gray"

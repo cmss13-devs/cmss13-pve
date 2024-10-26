@@ -2289,6 +2289,9 @@
 /turf/open/floor/interior/plastic/alt
 	icon_state = "plasticfloor2"
 
+/turf/open/floor/interior/plastic/alt/gray
+	icon_state = "plasticfloor2_gray"
+
 // Biodome tiles
 
 /turf/open/floor/corsat
