@@ -232,7 +232,11 @@
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 	aim_slowdown = SLOWDOWN_ADS_NONE
- 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC,)
+	gun_firemode = GUN_FIREMODE_AUTOMATIC
+ 	gun_firemode_list = list(
+		GUN_FIREMODE_SEMIAUTO,
+		GUN_FIREMODE_AUTOMATIC,
+	)
 
 
 /obj/item/weapon/gun/smg/mp27/set_gun_attachment_offsets()
@@ -242,7 +246,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_12)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_3

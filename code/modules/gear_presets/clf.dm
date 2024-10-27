@@ -1,6 +1,6 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
-	languages = list(LANGUAGE_JAPANESE, LANGUAGE_SPANISH, LANGUAGE_GERMAN, LANGUAGE_ENGLISH)
+	languages = list(pick(LANGUAGE_JAPANESE, LANGUAGE_SPANISH, LANGUAGE_GERMAN, LANGUAGE_ENGLISH))
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -138,7 +138,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/engineer
-	name = "CLF Engineer"
+	name = "Guerilla Technician"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
@@ -252,20 +252,19 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/medic
-	name = "CLF Medic"
+	name = "Guerilla Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_MEDIC
 	rank = JOB_CLF_MEDIC
-	role_comm_title = "MED"
+	role_comm_title = "Dr"
 	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/clf/combat_medic
 
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	spawn_rebel_uniform(new_human)
 	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
 	CLF.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
 
 	spawn_rebel_suit(new_human)
 	spawn_rebel_helmet(new_human)
@@ -405,11 +404,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/specialist
-	name = "CLF Specialist"
+	name = "Guerilla Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_SPECIALIST
 	rank = JOB_CLF_SPECIALIST
-	role_comm_title = "SPC"
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/specialist/New()
@@ -525,11 +523,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "CLF Leader"
+	name = "Guerilla Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_LEADER
 	rank = JOB_CLF_LEADER
-	role_comm_title = "LDR"
 	skills = /datum/skills/clf/leader
 
 /datum/equipment_preset/clf/leader/New()
@@ -664,7 +661,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/synth
-	name = "CLF Multipurpose Synthetic"
+	name = "Guerilla Multipurpose Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	languages = ALL_SYNTH_LANGUAGES
@@ -862,7 +859,7 @@
 	)
 
 /datum/equipment_preset/clf/synth/combat
-	name = "CLF Combat Synthetic"
+	name = "Guerilla Combat Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/clf/synth/combat/load_skills(mob/living/carbon/human/new_human)
@@ -912,12 +909,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "CLF Cell Commander"
+	name = "Guerilla Cell Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_COMMANDER
 	rank = JOB_CLF_COMMANDER
 	paygrades = list(PAY_SHORT_REBC = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CMDR"
 	skills = /datum/skills/clf/commander
 
 /datum/equipment_preset/clf/commander/New()
