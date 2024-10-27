@@ -15702,6 +15702,10 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
