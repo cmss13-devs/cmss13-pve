@@ -251,6 +251,58 @@
 /obj/item/storage/firstaid/surgical/empty/fill_preset_inventory()
 	return
 
+//---------SOFT PACKS---------
+/obj/item/storage/firstaid/softpack
+	name = "first-aid pack"
+	desc = "A soft first aid kit typically containing essential medical supplies for use in the field."
+	icon_state = "softpack"
+	use_sound = 'sound/items/zip.ogg'
+
+/obj/item/storage/firstaid/softpack/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+
+/obj/item/storage/firstaid/softpack/brute
+	icon_state = "softpack_purple"
+
+/obj/item/storage/firstaid/softpack/brute/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+
+/obj/item/storage/firstaid/softpack/burn
+	icon_state = "softpack_orange"
+
+/obj/item/storage/firstaid/softpack/burn/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+
+/obj/item/storage/firstaid/softpack/toxin
+	icon_state = "softpack_green"
+
+/obj/item/storage/firstaid/softpack/toxin/fill_preset_inventory()
+	new /obj/item/reagent_container/pill/russianRed(src)
+	new /obj/item/reagent_container/pill/russianRed(src)
+	new /obj/item/reagent_container/pill/russianRed(src)
+	new /obj/item/reagent_container/pill/russianRed(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+
+
 //---------SYRINGE CASE---------
 
 /obj/item/storage/syringe_case

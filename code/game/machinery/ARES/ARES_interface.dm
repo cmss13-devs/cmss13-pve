@@ -607,7 +607,7 @@
 	desc = "A large, bulky computer intended to allow the user to interface with the ship's AI."
 	icon = 'icons/obj/structures/props/almayer_props64.dmi'
 	icon_state = "ai_interface"
-	layer = ABOVE_MOB_LAYER
+	layer = BELOW_MOB_LAYER
 	pixel_x = -16
 	pixel_y = -8
 
