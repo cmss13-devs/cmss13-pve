@@ -50,10 +50,7 @@
 	skills = /datum/skills/clf
 
 /datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
-	var/obj/item/clothing/accessory/storage/webbing/W = new()
-	jumpsuit.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_uniform(new_human)
 	spawn_rebel_suit(new_human)
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
@@ -150,13 +147,10 @@
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/workwear/M = new()
-	var/obj/item/clothing/accessory/storage/webbing/W = new()
-	M.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(M, WEAR_BODY)
-
+	spawn_rebel_uniform(new_human)
 	spawn_rebel_suit(new_human)
 	spawn_rebel_shoes(new_human)
+
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/welding, WEAR_HEAD)

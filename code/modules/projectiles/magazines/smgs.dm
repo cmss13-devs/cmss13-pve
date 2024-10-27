@@ -95,7 +95,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mp7_40"
 	gun_type = /obj/item/weapon/gun/smg/mp27
-	max_rounds = 40 //Also comes in 20 and 40.
+	max_rounds = 40 //Also comes in 20 and 30.
 	bonus_overlay = "mp7_40_overlay"
 	var/random_magazine = TRUE
 
