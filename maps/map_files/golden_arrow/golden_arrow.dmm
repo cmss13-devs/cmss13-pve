@@ -15150,8 +15150,12 @@
 	pixel_y = 6;
 	pixel_x = -5
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/golden_arrow/medical)
 "bDB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -15325,6 +15329,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"cuV" = (
+/obj/structure/machinery/cm_vending/gear/medic,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "cwD" = (
 /obj/structure/disposalpipe/junction,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -15402,7 +15410,7 @@
 	pixel_x = 3
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/golden_arrow/medical)
 "cXg" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -15420,12 +15428,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
-"dgA" = (
-/obj/effect/landmark/nightmare{
-	insert_tag = "briefing"
-	},
-/turf/open/space/basic,
-/area/space)
 "dhC" = (
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
@@ -15718,10 +15720,6 @@
 "fbw" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cargo_shuttle/lower)
-"fle" = (
-/obj/structure/machinery/cm_vending/gear/medic_chemical,
-/turf/open/floor/almayer/dark_sterile,
-/area/golden_arrow/medical)
 "fpt" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
 	req_one_access = list()
@@ -16224,6 +16222,13 @@
 /obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"iLR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/cm_vending/sorted/medical,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "iRi" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -16423,7 +16428,7 @@
 	layer = 3.01
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/golden_arrow/medical)
 "kgw" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
@@ -16964,6 +16969,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"nLR" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "nUJ" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Three Blast Door";
@@ -17915,6 +17924,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"vbQ" = (
+/obj/effect/landmark/nightmare{
+	insert_tag = "briefing"
+	},
+/turf/open/space/basic,
+/area/space)
 "vfK" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/reagentgrinder/industrial{
@@ -17972,10 +17987,6 @@
 /obj/structure/prop/almayer/ai_wallmonitor,
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
-"vAI" = (
-/obj/structure/machinery/cm_vending/gear/medic,
-/turf/open/floor/almayer/dark_sterile,
-/area/golden_arrow/medical)
 "vCJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -18029,6 +18040,16 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
+"vFU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "vNW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/small/blue{
@@ -18086,13 +18107,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
-"wyx" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/machinery/cm_vending/sorted/medical,
-/turf/open/floor/almayer/dark_sterile,
-/area/golden_arrow/medical)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -24267,10 +24281,10 @@ aEh
 aKW
 nsl
 aaI
-vAI
+cuV
 aKW
 huW
-huW
+vFU
 huW
 huW
 aaI
@@ -24621,9 +24635,9 @@ aCE
 aCE
 aCE
 aaI
-fle
+nLR
 aKW
-wyx
+iLR
 huW
 huW
 huW
@@ -25302,7 +25316,7 @@ oqO
 gzg
 aEG
 aEG
-dgA
+vbQ
 aEG
 aEG
 aEG
@@ -25334,7 +25348,7 @@ aaI
 kem
 bBB
 cUK
-aDh
+aaI
 aEG
 aEG
 aEG
@@ -25508,10 +25522,10 @@ atv
 aBv
 akT
 aaI
-aDh
-aDh
-aDh
-aDh
+aaI
+aaI
+aaI
+aaI
 aEG
 aEG
 aEG

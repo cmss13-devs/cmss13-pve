@@ -548,7 +548,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 /obj/structure/machinery/cryopod/big
 	icon = 'icons/obj/structures/machinery/hypersleep.dmi'
-	icon_state = "hypersleep"
+	icon_state = "hypersleep_open"
 
 /obj/structure/machinery/cryopod/big/flipped
 	dir = WEST
