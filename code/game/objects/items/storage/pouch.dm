@@ -824,6 +824,14 @@
 	)
 	can_hold_skill_only = TRUE
 
+/obj/item/storage/pouch/engikit/full/fill_preset_inventory()
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/circuitboard/apc(src)
+
 /obj/item/storage/pouch/medkit
 	name = "medical kit pouch"
 	storage_flags = STORAGE_FLAGS_POUCH
@@ -1397,7 +1405,7 @@
 	var/base_icon_state = "cassette_pouch"
 	w_class = SIZE_SMALL
 	can_hold = list(/obj/item/device/cassette_tape, /obj/item/tape/regulation)
-	storage_slots = 3
+	storage_slots = 5
 
 /obj/item/storage/pouch/cassette/update_icon()
 	underlays.Cut()
