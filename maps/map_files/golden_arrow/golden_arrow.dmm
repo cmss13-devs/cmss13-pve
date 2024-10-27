@@ -11488,10 +11488,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
-"aNj" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoonarmory)
 "aNk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -15461,11 +15457,6 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"dFU" = (
-/turf/open/space/basic,
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoonarmory)
 "dJo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15569,11 +15560,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
-"eeM" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/shared_office)
 "ekt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -15957,8 +15943,6 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "gzg" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/briefing)
 "gNW" = (
@@ -15990,10 +15974,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"gTg" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/shared_office)
 "gUY" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16171,11 +16151,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
-"hXM" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
 "icW" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17032,10 +17007,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
-"oqO" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "otJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17433,10 +17404,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
-"qQD" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
 "qRO" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -25305,11 +25272,11 @@ aEG
 aEG
 aEG
 gzg
-oqO
-oqO
-oqO
-oqO
-oqO
+gzg
+gzg
+gzg
+gzg
+gzg
 gzg
 aEG
 aEG
@@ -25481,13 +25448,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 byz
 ajv
 aQW
 aQW
 afC
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -25658,13 +25625,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 aVq
 aYj
 aYj
 aVq
 aYj
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -25835,13 +25802,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 qba
 alV
 ohY
 akD
 ewl
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26012,13 +25979,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 vDn
 mtK
 pjK
 xtJ
 hRK
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26189,13 +26156,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 bKv
 aHh
 adV
 aHh
 awL
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26366,13 +26333,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 cKn
 fsm
 uhR
 fsm
 aHh
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26543,13 +26510,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 aHh
 aHh
 gUY
 aHh
 aHh
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26720,13 +26687,13 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 aHh
 aHh
 jmu
 aHh
 aHh
-oqO
+gzg
 aEG
 aEG
 aEG
@@ -26897,16 +26864,16 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 aXN
 oCT
 lRg
 etb
 wGV
 gzg
-oqO
-oqO
-rOG
+gzg
+gzg
+aDQ
 aDQ
 aYG
 ard
@@ -27073,8 +27040,8 @@ aEG
 aEG
 aEG
 aEG
-oqO
-oqO
+gzg
+gzg
 nlR
 aQW
 ajv
@@ -27250,7 +27217,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 azs
 atR
 aDj
@@ -27427,7 +27394,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 rPa
 anB
 aDO
@@ -27604,7 +27571,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 aQW
 anB
 aDO
@@ -27781,7 +27748,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 fFO
 anB
 daF
@@ -27958,7 +27925,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 eGp
 aIB
 bRe
@@ -28135,8 +28102,8 @@ aEG
 aEG
 aEG
 aEG
-oqO
-oqO
+gzg
+gzg
 aQW
 ajv
 ajv
@@ -28313,7 +28280,7 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 jtU
 knW
 knW
@@ -28490,15 +28457,15 @@ aEG
 aEG
 aEG
 aEG
-oqO
+gzg
 afv
 awf
 dSy
 aCS
 ptZ
-aNj
-aNj
-aNj
+aHZ
+aHZ
+aHZ
 ada
 awQ
 aIb
@@ -28668,12 +28635,12 @@ aEG
 aEG
 aEG
 gzg
-oqO
-oqO
-oqO
-oqO
-oqO
-dFU
+gzg
+gzg
+gzg
+gzg
+gzg
+aHZ
 aGm
 aTE
 apI
@@ -28681,9 +28648,9 @@ aOt
 aFd
 aOt
 aBa
-aNj
-aNj
-eeM
+aHZ
+aHZ
+arP
 ahj
 alG
 aAQ
@@ -28860,7 +28827,7 @@ aJX
 aqk
 aGY
 uwt
-gTg
+arP
 aQh
 aJk
 aBR
@@ -29037,7 +29004,7 @@ arh
 aRQ
 aGY
 aSr
-gTg
+arP
 arP
 arP
 arP
@@ -29214,7 +29181,7 @@ arh
 aRQ
 aGY
 gSr
-qQD
+adz
 aEy
 azW
 add
@@ -29391,7 +29358,7 @@ arh
 aoI
 aDW
 vNW
-qQD
+adz
 aej
 aum
 aBg
@@ -29568,7 +29535,7 @@ aLk
 uoJ
 aDW
 kBG
-qQD
+adz
 adz
 aNm
 aHa
@@ -29743,9 +29710,9 @@ aOt
 aQe
 aOt
 amI
-aNj
-aNj
-hXM
+aHZ
+aHZ
+adz
 aqa
 aiz
 aAu
