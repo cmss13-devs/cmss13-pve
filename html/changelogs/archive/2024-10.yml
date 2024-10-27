@@ -35,3 +35,11 @@
   - bugfix: Synths now understand all human-spoken languages once more
   Max-023:
   - rscadd: 2 10x28 Ammunition Boxes added to the Golden Arrow Armory
+2024-10-25:
+  BonniePandora:
+  - imageadd: Adds in the orange BiMex shades on-mob mask-slot sprite
+  GriffinMan4455:
+  - rscadd: 'CN20 rounds for: Dropship, Mortar, OB'
+  - qol: FS Menu contains CN20 rounds for Dropship, Mortar, OB
+  - ui: FS UI, dunno if I have to mention this here though
+  - qol: Dogtags removable after 30 seconds
