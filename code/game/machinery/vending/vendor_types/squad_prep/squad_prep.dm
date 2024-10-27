@@ -87,7 +87,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep
 	name = "\improper ColMarTech Surplus Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard marine uniforms."
-	req_access = list()
+	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
@@ -422,7 +422,7 @@
 	name = "\improper ColMarTech Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Marine Rifleman."
 	req_access = list()
-	req_one_access = list()
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_RO, ACCESS_MARINE_PREP)
 	hackable = TRUE
 
 	vend_x_offset = 2
