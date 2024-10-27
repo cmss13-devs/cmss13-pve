@@ -15337,6 +15337,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"cCv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/cm_vending/sorted/medical,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "cGQ" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -15396,6 +15403,11 @@
 /area/golden_arrow/supply)
 "cUK" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = 8;
+	pixel_x = 3
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/space)
 "cXg" = (
@@ -15702,10 +15714,6 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 8
-	},
-/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -16165,6 +16173,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
+"hVY" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "hXM" = (
 /turf/closed/wall/almayer,
 /turf/closed/wall/almayer/outer,
@@ -16953,6 +16965,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"nKg" = (
+/obj/structure/machinery/cm_vending/gear/medic,
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "nUJ" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Three Blast Door";
@@ -18019,6 +18035,11 @@
 /obj/structure/machinery/light/small/blue{
 	pixel_y = -1
 	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13;
+	pixel_x = 7
+	},
+/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "vRh" = (
@@ -24240,7 +24261,7 @@ aEh
 aKW
 nsl
 aaI
-aKW
+nKg
 aKW
 huW
 huW
@@ -24594,9 +24615,9 @@ aCE
 aCE
 aCE
 aaI
+hVY
 aKW
-aKW
-huW
+cCv
 huW
 huW
 huW
