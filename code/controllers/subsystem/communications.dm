@@ -284,6 +284,7 @@ SUBSYSTEM_DEF(radio)
 		"[CBRN_FREQ]" = "hcradio",
 		"[FORECON_FREQ]" = "hcradio",
 		"[SOF_FREQ]" = "hcradio",
+		"[SOLDEV_FREQ]" = "soldevradio",
 		"[HC_FREQ]" = "hcradio",
 		"[PVST_FREQ]" = "pvstradio",
 		"[COLONY_FREQ]" = "deptradio",

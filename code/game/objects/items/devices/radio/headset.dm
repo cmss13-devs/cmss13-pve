@@ -627,6 +627,11 @@
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	frequency = ALPHA_FREQ
 
+/obj/item/device/radio/headset/almayer/solar
+	desc = "Standard infantryman's combination ear defenders and radio headset. Gives access to the common Solar Devils tactical frequency."
+	frequency = SOLDEV_FREQ
+	maximum_keys = 5
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
