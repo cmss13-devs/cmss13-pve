@@ -263,16 +263,13 @@
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
 
 	spawn_rebel_uniform(new_human)
-	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
-	CLF.attach_accessory(new_human, W)
-
 	spawn_rebel_suit(new_human)
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
-
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/medic(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)

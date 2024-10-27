@@ -232,8 +232,7 @@
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 	aim_slowdown = SLOWDOWN_ADS_NONE
-	gun_firemode = GUN_FIREMODE_AUTOMATIC
- 	gun_firemode_list = list(
+	gun_firemode_list = list(
 		GUN_FIREMODE_SEMIAUTO,
 		GUN_FIREMODE_AUTOMATIC,
 	)
