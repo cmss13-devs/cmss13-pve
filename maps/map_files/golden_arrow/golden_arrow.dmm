@@ -17363,18 +17363,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/supply)
-"qnm" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/target,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
 "qwH" = (
 /obj/structure/sign/safety/three{
 	pixel_y = -24
@@ -21747,7 +21735,7 @@ bUF
 acb
 abW
 aAt
-qnm
+abW
 acb
 bUF
 ahi
