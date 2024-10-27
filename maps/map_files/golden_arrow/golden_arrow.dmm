@@ -15942,9 +15942,6 @@
 /obj/structure/prop/invuln/joey/normal,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"gzg" = (
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "gNW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -17007,6 +17004,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"oqO" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
 "otJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17513,10 +17513,6 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
-"rOG" = (
-/turf/closed/wall/almayer,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoonprep)
 "rPa" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25271,13 +25267,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
-gzg
-gzg
-gzg
-gzg
-gzg
-gzg
+oqO
+oqO
+oqO
+oqO
+oqO
+oqO
+oqO
 aEG
 aEG
 vbQ
@@ -25448,13 +25444,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 byz
 ajv
 aQW
 aQW
 afC
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -25625,13 +25621,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 aVq
 aYj
 aYj
 aVq
 aYj
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -25802,13 +25798,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 qba
 alV
 ohY
 akD
 ewl
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -25979,13 +25975,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 vDn
 mtK
 pjK
 xtJ
 hRK
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -26156,13 +26152,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 bKv
 aHh
 adV
 aHh
 awL
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -26333,13 +26329,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 cKn
 fsm
 uhR
 fsm
 aHh
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -26510,13 +26506,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 aHh
 aHh
 gUY
 aHh
 aHh
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -26687,13 +26683,13 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 aHh
 aHh
 jmu
 aHh
 aHh
-gzg
+oqO
 aEG
 aEG
 aEG
@@ -26864,15 +26860,15 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 aXN
 oCT
 lRg
 etb
 wGV
-gzg
-gzg
-gzg
+oqO
+oqO
+oqO
 aDQ
 aDQ
 aYG
@@ -27040,8 +27036,8 @@ aEG
 aEG
 aEG
 aEG
-gzg
-gzg
+oqO
+oqO
 nlR
 aQW
 ajv
@@ -27217,7 +27213,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 azs
 atR
 aDj
@@ -27394,7 +27390,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 rPa
 anB
 aDO
@@ -27408,13 +27404,13 @@ aYY
 arK
 abL
 aYp
-rOG
+aDQ
 avU
 aSk
 aSk
 aSk
 aAr
-rOG
+aDQ
 ayE
 aTX
 aLE
@@ -27571,7 +27567,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 aQW
 anB
 aDO
@@ -27585,13 +27581,13 @@ atq
 aHV
 aPv
 aYI
-rOG
+aDQ
 aQF
 afO
 aQF
 afO
 aQF
-rOG
+aDQ
 ace
 aOe
 act
@@ -27748,7 +27744,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 fFO
 anB
 daF
@@ -27762,13 +27758,13 @@ aYY
 aXt
 aTX
 aoq
-rOG
+aDQ
 aiD
 aRC
 aRC
 aRC
 aqC
-rOG
+aDQ
 amL
 aww
 aLE
@@ -27925,7 +27921,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 eGp
 aIB
 bRe
@@ -28102,8 +28098,8 @@ aEG
 aEG
 aEG
 aEG
-gzg
-gzg
+oqO
+oqO
 aQW
 ajv
 ajv
@@ -28280,7 +28276,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 jtU
 knW
 knW
@@ -28457,7 +28453,7 @@ aEG
 aEG
 aEG
 aEG
-gzg
+oqO
 afv
 awf
 dSy
@@ -28634,12 +28630,12 @@ aEG
 aEG
 aEG
 aEG
-gzg
-gzg
-gzg
-gzg
-gzg
-gzg
+oqO
+oqO
+oqO
+oqO
+oqO
+oqO
 aHZ
 aGm
 aTE
