@@ -562,7 +562,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	var/occupant_y = 0
 
 /obj/structure/machinery/cryopod/big/Initialize()
-	..()
+	. = ..()
 	var/cover_image = image(icon, icon_state = "cover_fog", layer = 3.22)
 	overlays += cover_image
 
