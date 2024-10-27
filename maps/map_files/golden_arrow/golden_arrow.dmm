@@ -9839,10 +9839,7 @@
 	pixel_y = 8;
 	pixel_x = 1
 	},
-/obj/structure/curtain/red{
-	pixel_y = 6;
-	layer = 2.97'
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aHh" = (

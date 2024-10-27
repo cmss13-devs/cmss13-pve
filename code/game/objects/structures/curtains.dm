@@ -32,7 +32,7 @@
 	opacity = !opacity
 	if(opacity)
 		icon_state = "[initial(icon_state)]"
-		layer = ABOVE_MOB_LAYER
+		layer = [ABOVE_MOB_LAYER]
 	else
 		icon_state = "[initial(icon_state)]-o"
 		layer = OBJ_LAYER
