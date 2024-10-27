@@ -748,7 +748,8 @@
 /obj/structure/sign/safety/cryo{
 	name = "hypersleep semiotic";
 	pixel_x = 15;
-	pixel_y = 28
+	pixel_y = 28;
+	desc = "Semiotic Standard denoting the nearby presence of a hypersleep bay."
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/prep_hallway)
