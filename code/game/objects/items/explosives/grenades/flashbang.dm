@@ -80,7 +80,7 @@
 	var/trained_human = FALSE
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(skillcheck(H, SKILL_POLICE, SKILL_POLICE_SKILLED))
+		if(skillcheck(H, SKILL_POLICE, SKILL_POLICE_DEFAULT))	//Default is 0 skill, should allow any and all to use
 			trained_human = TRUE
 
 		var/list/protections = list(H.glasses, H.wear_mask, H.head)
@@ -136,7 +136,7 @@
 		to_chat(M, SPAN_HELPFUL("Your gear protects you from the worst of the 'bang'."))
 
 	M.Stun(weaken_amount)
-	M.KnockDown(weaken_amount)	
+	M.KnockDown(weaken_amount)
 	M.KnockOut(paralyze_amount)
 	if(deafen_amount)
 		M.SetEarDeafness(max(M.ear_deaf, deafen_amount))

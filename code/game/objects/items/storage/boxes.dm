@@ -651,7 +651,7 @@
 	var/model_icon = "model_m40"
 	var/type_icon = "hedp"
 	var/grenade_type = /obj/item/explosive/grenade/high_explosive
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/Initialize()
 	. = ..()
@@ -714,8 +714,8 @@
 	grenade_type = /obj/item/explosive/grenade/smokebomb
 
 /obj/item/storage/box/nade_box/phophorus
-	name = "\improper M60 WPDP grenade box"
-	desc = "A secure box holding 25 M60 White-Phosphorus, Dual-Purpose chemical compound grenades. Highly flammable and explosive, don't store near the flamer fuel."
+	name = "\improper M60 WPSI grenade box"
+	desc = "A secure box holding 25 M60 White-Phosphorus, Smoke/Incendiary chemical compound grenades. Highly flammable and explosive, don't store near the flamer fuel."
 	model_icon = "model_m60"
 	type_icon = "phos"
 	can_hold = list(/obj/item/explosive/grenade/phosphorus)

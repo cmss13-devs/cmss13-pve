@@ -10,7 +10,7 @@
 
 /obj/item/explosive/grenade/high_explosive
 	name = "\improper M40 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenades alongside the M40 HEFA. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Capable of being loaded in the M92 Launcher, or thrown by hand."
 	icon_state = "grenade"
 	det_time = 40
 	item_state = "grenade_hedp"
@@ -18,9 +18,9 @@
 	underslug_launchable = TRUE
 	var/explosion_power = 100
 	var/explosion_falloff = 25
-	var/shrapnel_count = 0
+	var/shrapnel_count = 48
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
-	var/fire_resistance = 30 //to prevent highly controlled massive explosions
+	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
 
 /obj/item/explosive/grenade/high_explosive/New()
@@ -52,7 +52,7 @@
 
 /obj/item/explosive/grenade/high_explosive/super
 	name = "\improper M40/2 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenades alongside the M40 HEFA. This version is stronger."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenade. This version is stronger."
 	icon_state = "m40_2"
 	item_state = "grenade_hedp2"
 	explosion_power = 150
@@ -65,6 +65,7 @@
 	item_state = "grenade_ex"
 	underslug_launchable = FALSE
 	explosion_power = 200
+	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/stick
@@ -79,6 +80,7 @@
 	throw_range = 7
 	underslug_launchable = FALSE
 	explosion_power = 100
+	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 
@@ -284,6 +286,7 @@
 	dangerous = TRUE
 	underslug_launchable = TRUE
 	explosion_power = 100 //hedp
+	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/impact/prime()
@@ -324,6 +327,7 @@
 	item_state = "grenade_phos"
 	explosion_power = 250
 	explosion_falloff = 40
+	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
 
 /*
@@ -469,8 +473,8 @@
 	qdel(src)
 
 /obj/item/explosive/grenade/phosphorus
-	name = "\improper M60 WPDP grenade"
-	desc = "The M60 WPDP is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device."
+	name = "\improper M60 WPSI grenade"
+	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device."
 	icon_state = "training_grenade"
 	det_time = 20
 	item_state = "grenade_training"
