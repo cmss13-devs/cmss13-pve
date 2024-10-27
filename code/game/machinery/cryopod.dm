@@ -187,6 +187,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	var/silent_exit = FALSE
 	var/obj/item/device/radio/intercom/announce //Intercom for cryo announcements
 
+
 /obj/structure/machinery/cryopod/right
 	dir = WEST
 
@@ -200,6 +201,11 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	QDEL_NULL(announce)
 	. = ..()
 
+/obj/structure/machinery/cryopod/update_icon()
+	if(occupant)
+		icon_state = "hypersleep_closed"
+	else
+		icon_state = "hypersleep_open"
 
 //Lifted from Unity stasis.dm and refactored. ~Zuhayr
 /obj/structure/machinery/cryopod/process()
@@ -361,7 +367,6 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 			GLOB.data_core.general -= G
 			qdel(G)
 
-	icon_state = "hypersleep_open"
 	set_light(0)
 
 	if(occupant.key)
@@ -378,6 +383,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 	QDEL_NULL(occupant)
 	stop_processing()
+	update_icon()
 
 /obj/structure/machinery/cryopod/attackby(obj/item/W, mob/living/user)
 	if(isxeno(user))
@@ -500,7 +506,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		return
 	mob.forceMove(src)
 	occupant = mob
-	icon_state = "hypersleep_closed"
+	update_icon()
 	set_light(2)
 	time_entered = world.time
 	start_processing()
@@ -523,7 +529,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	occupant.forceMove(get_turf(src))
 	occupant = null
 	stop_processing()
-	icon_state = "hypersleep_open"
+	update_icon()
 	set_light(0)
 	playsound(src, 'sound/machines/pod_open.ogg', 30)
 	SEND_SIGNAL(src, COMSIG_CRYOPOD_GO_OUT)
@@ -548,10 +554,50 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 /obj/structure/machinery/cryopod/big
 	icon = 'icons/obj/structures/machinery/hypersleep.dmi'
-	icon_state = "hypersleep_open"
+	icon_state = "hypersleep_base"
+	var/image/occupant_image
+	var/occupant_angle = 270
+	var/occupant_dir = 4
+	var/occupant_x = 6
+	var/occupant_y = 0
+
+/obj/structure/machinery/cryopod/big/Initialize()
+	..()
+	var/cover_image = image(icon, icon_state = "cover_fog", layer = 3.22)
+	overlays += cover_image
+
+/obj/structure/machinery/cryopod/big/update_icon()
+	return
+
+/obj/structure/machinery/cryopod/big/go_in_cryopod(mob/mob, silent = FALSE)
+	..()
+	overlays.Cut()
+	occupant_image = image(mob.appearance, loc, layer = 3.21)
+	occupant_image.pixel_x = occupant_x
+	occupant_image.pixel_y = occupant_y
+	occupant_image.dir = occupant_dir
+	occupant_image.transform = occupant.transform.Turn(occupant_angle)
+	overlays += occupant_image
+	var/cover_image = image(icon, icon_state = "cover", layer = 3.22)
+	overlays += cover_image
+
+/obj/structure/machinery/cryopod/big/go_out()
+	..()
+	overlays -= occupant_image
+	occupant_image = null
+
+/obj/structure/machinery/cryopod/big/despawn_occupant()
+	..()
+	overlays.Cut()
+	occupant_image = null
+	var/cover_image = image(icon, icon_state = "cover_fog", layer = 3.22)
+	overlays += cover_image
 
 /obj/structure/machinery/cryopod/big/flipped
 	dir = WEST
+	occupant_angle = 90
+	occupant_dir = 8
+	occupant_x = 10
 
 /obj/structure/machinery/cryopod/tutorial
 	silent_exit = TRUE
