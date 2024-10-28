@@ -8,7 +8,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues,
 		/obj/item/clothing/under/marine/dress/blues,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 	)
 
 /obj/effect/essentials_set/dressblues/nco
@@ -17,7 +17,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco,
 		/obj/item/clothing/under/marine/dress/blues/senior,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 	)
 
 /obj/effect/essentials_set/dressblues/officer
@@ -26,7 +26,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer,
 		/obj/item/clothing/under/marine/dress/blues/senior,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 	)
 
 /obj/effect/essentials_set/dressblues/officer/sword
@@ -35,7 +35,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer,
 		/obj/item/clothing/under/marine/dress/blues/senior,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 		/obj/item/storage/large_holster/ceremonial_sword/full,
 	)
 
@@ -45,7 +45,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer,
 		/obj/item/clothing/under/marine/dress/blues/general,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 	)
 
 /obj/effect/essentials_set/dressblues/general/sword
@@ -54,7 +54,7 @@
 		/obj/item/clothing/gloves/marine/dress,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer,
 		/obj/item/clothing/under/marine/dress/blues/general,
-		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/shoes/laceup,
 		/obj/item/storage/large_holster/ceremonial_sword/full,
 	)
 

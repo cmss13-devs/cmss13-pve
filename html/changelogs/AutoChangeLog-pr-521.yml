@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "The ADS-C will no longer turn someone into swiss cheese if they stand in it's line of fire"

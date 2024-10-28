@@ -83,6 +83,17 @@
 	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/obj/item/explosive/grenade/high_explosive/upp
+	name = "\improper Type 6 grenade"
+	desc = "The standard issue fragmentation grenade of the UPP military. It explodes 3 seconds after the pin has been pulled."
+	icon_state = "grenade_upp"
+	item_state = "grenade_upp"
+	throw_speed = SPEED_FAST
+	throw_range = 6
+	underslug_launchable = FALSE
+	explosion_power = 100
+	shrapnel_count = 48
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
 //================================================
@@ -119,21 +130,6 @@
 	explosion_power = 120
 	shrapnel_count = 48
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-
-
-
-/obj/item/explosive/grenade/high_explosive/upp
-	name = "\improper Type 6 shrapnel grenade"
-	desc = "A fragmentation grenade found within the ranks of the UPP. Designed to explode into shrapnel and rupture the bodies of opponents. It explodes 3 seconds after the pin has been pulled."
-	icon_state = "grenade_upp"
-	item_state = "grenade_upp"
-	throw_speed = SPEED_FAST
-	throw_range = 6
-	underslug_launchable = FALSE
-	explosion_power = 60
-	shrapnel_count = 56
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-
 
 /*
 +//================================================

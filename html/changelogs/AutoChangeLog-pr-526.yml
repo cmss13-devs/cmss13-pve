@@ -1,0 +1,6 @@
+author: "GriffinMan4455"
+delete-after: True
+changes:
+  - rscadd: "CN20 does OXY damage too, now."
+  - balance: "CN20 slightly redone. More TOX, less BRAIN, less EYE, new OXY damage. CN Mortar does less direct explosive damage."
+  - rscdel: "Removed old \"CN-20 Missile\" reference from FS menu that shouldn't be in the missiles menu"

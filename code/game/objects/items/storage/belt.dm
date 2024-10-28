@@ -465,8 +465,6 @@
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/handful,
-		/obj/item/reagent_container/food/snacks/donut/normal,
-		/obj/item/reagent_container/food/snacks/donut/jelly,
 		/obj/item/weapon/baton,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/tool/lighter/zippo,
@@ -474,7 +472,6 @@
 		/obj/item/clothing/glasses/hud/security,
 		/obj/item/device/flashlight,
 		/obj/item/device/radio/headset,
-		/obj/item/weapon,
 		/obj/item/device/clue_scanner,
 	)
 
@@ -525,11 +522,13 @@
 
 /obj/item/storage/belt/security/MP/UPP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
 
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
@@ -779,12 +778,12 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
-/obj/item/storage/belt/marine/upp/sapper/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
+/obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c

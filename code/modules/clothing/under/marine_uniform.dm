@@ -370,14 +370,7 @@
 	desc = "The crisp uniform of a Provost Officer."
 	icon_state = "provost"
 	worn_state = "provost"
-
 	specialty = "provost"
-
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/MP,
-		/obj/item/clothing/suit/armor/riot/marine,
-		/obj/item/clothing/suit/storage/jacket/marine/provost,
-	)
 
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
@@ -474,12 +467,6 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/veteran/pmc,
-		/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
-		/obj/item/clothing/suit/armor/vest/security,
-		/obj/item/clothing/suit/storage/hazardvest,
-	)
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
@@ -520,7 +507,6 @@
 	worn_state = "bear_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_NO_SENSORS
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/bear)
 
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
@@ -528,72 +514,36 @@
 
 /obj/item/clothing/under/marine/veteran/UPP
 	name = "\improper UPP fatigues"
-	desc = "A set of UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
+	desc = "It's a set of standard-issue UPP Armed Collective combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform"
 	worn_state = "upp_uniform"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_UPP
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP, /obj/item/clothing/suit/gimmick/jason, /obj/item/clothing/suit/storage/snow_suit/soviet, /obj/item/clothing/suit/storage/snow_suit/survivor, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/marine/smartgunner/upp)
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/under/marine/veteran/UPP/boiler
-	name = "\improper UPP operations fatigues"
-	desc = "A set of UPP operations fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
+	name = "\improper UPP operations boilersuit"
+	desc = "It's a deep green boilersuit common with UPP Armed Collective personnel outside of combat zones but still featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_boiler"
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/medic
-	name = "\improper UPP medic fatigues"
-	desc = "A set of medic UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
-	icon_state = "upp_uniform_medic"
-	worn_state = "upp_uniform_medic"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+/obj/item/clothing/under/marine/veteran/UPP/pap
+	name = "\improper PaP service uniform"
+	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
+	icon_state = "upp_uniform_pap"
+	worn_state = "upp_uniform_pap"
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_LIST_UPP_COLONY
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/engi
-	name = "\improper UPP engineer fatigues"
-	desc = "A set of Engineer UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
-	icon_state = "upp_uniform_engi"
-	worn_state = "upp_uniform_engi"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-
-/obj/item/clothing/under/marine/veteran/UPP/mp
-	name = "\improper UPP Military Police fatigues"
-	desc = "A set of Military Police UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
-	icon_state = "upp_uniform_mp"
-	worn_state = "upp_uniform_mp"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-
-/obj/item/clothing/under/marine/veteran/UPP/officer
-	name = "\improper UPP Officer fatigues"
-	desc = "A set of Officer UPP fatigues, mass produced for the armed-forces of the Union of Progressive Peoples. A rare sight, especially in ICC zones. This particular set sports the dark drab pattern of the UPP 17th battalion, 'Smoldering Sons', operating in the sparse UPP frontier in the Anglo-Japanese arm."
-	icon_state = "upp_uniform_officer"
-	worn_state = "upp_uniform_officer"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi1
-	name = "\improper UPP Civilian-style Orange overalls"
-	desc = "A set of Civilian-style Orange Overalls with a dark tan undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given out to those who work laborious jobs."
-	icon_state = "upp_uniform_civi1"
-	worn_state = "upp_uniform_civi1"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi2
-	name = "\improper UPP Civilian-style tan overalls"
-	desc = "A set of Civilian-style Tan Overalls with a Blue undershirt. The material is of a poor quality, however it's better than nothing. Clothing of this style is typically given to those who work laborious jobs."
-	icon_state = "upp_uniform_civi2"
-	worn_state = "upp_uniform_civi2"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi3
-	name = "\improper UPP Civilian-style shirt and pants"
-	desc = "A set of Civilian-style tan shirt and jeans. The material, while poor, is comfortable enough to be worn during all periods of the day."
-	icon_state = "upp_uniform_civi3"
-	worn_state = "upp_uniform_civi3"
-
-/obj/item/clothing/under/marine/veteran/UPP/civi4
-	name = "\improper UPP Civilian-style Vest and pants"
-	desc = "A set of Civilian-style Brown vest and orange pants. The material is surprisingly decent, something not often worn by the civilians of the UPP for two reasons: They typically can't afford such clothing, and if they can, it paints a target on their back."
-	icon_state = "upp_uniform_civi4"
-	worn_state = "upp_uniform_civi4"
+/obj/item/clothing/under/marine/veteran/UPP/service
+	name = "\improper UPP service uniform"
+	desc = "A pair of brown-green slacks coupled with a green shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
+	icon_state = "upp_uniform_service"
+	worn_state = "upp_uniform_service"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
 //=========================//Freelancer\\================================\\
 
@@ -744,6 +694,42 @@
 	icon_state = "workwear_green"
 	worn_state = "workwear_green"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/boilersuit
+	name = "light-blue boilersuit"
+	desc = "A light-blue boilersuit."
+	icon_state = "boilersuit_lightblue"
+	worn_state = "boilersuit_lightblue"
+
+/obj/item/clothing/under/colonist/boilersuit/darkblue
+	name = "dark-blue boilersuit"
+	desc = "A dark-blue boilersuit."
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
+
+/obj/item/clothing/under/colonist/boilersuit/khaki
+	name = "khaki boilersuit"
+	desc = "A khaki boilersuit."
+	icon_state = "boilersuit_khaki"
+	worn_state = "boilersuit_khaki"
+
+/obj/item/clothing/under/colonist/boilersuit/white
+	name = "white boilersuit"
+	desc = "An off-white boilersuit."
+	icon_state = "boilersuit_white"
+	worn_state = "boilersuit_white"
+
+/obj/item/clothing/under/colonist/boilersuit/cyan
+	name = "cyan boilersuit"
+	desc = "A cyan boilersuit."
+	icon_state = "boilersuit_cyan"
+	worn_state = "boilersuit_cyan"
+
+/obj/item/clothing/under/colonist/boilersuit/grey
+	name = "grey boilersuit"
+	desc = "A grey boilersuit."
+	icon_state = "boilersuit_steel"
+	worn_state = "boilersuit_steel"
 
 /obj/item/clothing/under/colonist/clf
 	name = "\improper Colonial Liberation Front uniform"

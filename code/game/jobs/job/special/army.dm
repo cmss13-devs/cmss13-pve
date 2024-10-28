@@ -13,7 +13,7 @@
 
 /datum/job/trooper/medic
 	title = JOB_ARMY_MEDIC
-	gear_preset = /datum/equipment_preset/usasf/chief_engineer
+	gear_preset = /datum/equipment_preset/usa/medic
 
 /datum/job/trooper/nco
 	title = JOB_ARMY_NCO
