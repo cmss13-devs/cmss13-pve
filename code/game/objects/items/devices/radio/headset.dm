@@ -1145,7 +1145,7 @@
 
 /obj/item/device/radio/headset/distress/USASF/command
 	name = "\improper USASF Command earpiece"
-	desc = "A sleek headset used by officers of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable, this one has a reinforced brace. Featured channels include: ; - USASF, :o - Colony, :g - public, :v - marine command, :J - JTAC."
+	desc = "A sleek headset used by officers of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable, this one has a reinforced brace. Featured channels include: ; - USASF, :o - Colony, :g - public, :v - command, :J - JTAC."
 	icon_state = "navcom_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/usasf/command)
 	volume = RADIO_VOLUME_CRITICAL
@@ -1172,7 +1172,7 @@
 
 /obj/item/device/radio/headset/distress/army/command
 	name = "\improper Army Command headset"
-	desc = "A robust headset used by officers of the United States Army. Built to outlast those it's issued to. This model features a reinforced brace complete with blinky light to make you seem even more important to the grunts you lead! Featured channels include: ; - US Army, :o - Colony, :v - marine command, :J - JTAC."
+	desc = "A robust headset used by officers of the United States Army. Built to outlast those it's issued to. This model features a reinforced brace complete with blinky light to make you seem even more important to the grunts you lead! Featured channels include: ; - US Army, :o - Colony, :v - command, :J - JTAC."
 	icon_state = "armcom_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/army/command)
 	volume = RADIO_VOLUME_CRITICAL

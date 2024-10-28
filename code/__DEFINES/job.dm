@@ -194,6 +194,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- US Army --------//
 #define JOB_ARMY_TROOPER "Army Trooper"
+#define JOB_ARMY_GUNNER "Army Gunner"
 #define JOB_ARMY_ENGI "Army Sapper"
 #define JOB_ARMY_MEDIC "Army Medic"
 #define JOB_ARMY_NCO "Army Fireteam Lead"
