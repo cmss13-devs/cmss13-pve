@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds new 0-value defines for skills that were missing them after the skill_default changes"
+  - qol: "USASF Synthetic no longer freaks sentry guns out, they're directly marked as being part of the Marine FACTION_GROUP"
+  - bugfix: "Fixes the skills for US Army & various USASF presets"
