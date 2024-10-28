@@ -8,7 +8,7 @@
 	harmful = FALSE
 
 	//skill required to use
-	var/skill_requirement = SKILL_POLICE_SKILLED
+	var/skill_requirement = SKILL_POLICE_DEFAULT
 
 	//ignores ship anti-grief system
 	antigrief_protection = FALSE
