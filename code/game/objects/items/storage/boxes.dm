@@ -697,6 +697,14 @@
 	can_hold = list(/obj/item/explosive/grenade/high_explosive/frag)
 	grenade_type = /obj/item/explosive/grenade/high_explosive/frag
 
+/obj/item/storage/box/nade_box/bfab
+	name = "\improper M51A BFAB grenade box"
+	desc = "A secure box holding 25 M51A Bounding Fragmentation, Air-Burst grenades. High explosive, don't store near the flamer fuel."
+	model_icon = "model_m51a"
+	type_icon = "bfab"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/tmfrag)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/tmfrag
+
 /obj/item/storage/box/nade_box/heap
 	name = "\improper M38 HEAP grenade box"
 	desc = "A secure box holding 25 M38 High-Explosive, Armour-Piercing grenades. Highly explosive, don't store near the flamer fuel."

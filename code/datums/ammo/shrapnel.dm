@@ -63,6 +63,17 @@
 		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
 	))
 
+/datum/ammo/bullet/shrapnel/heavy
+	name = "shrapnel cloud"
+	icon_state = "shrapnel_light"
+	max_range = 10
+	damage = 35
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_3
+	shrapnel_chance = 10
+
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
 	icon_state = "hornet_round"

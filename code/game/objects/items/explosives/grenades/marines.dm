@@ -52,7 +52,7 @@
 
 /obj/item/explosive/grenade/high_explosive/super
 	name = "\improper M40/2 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenade. This version is stronger."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. This version is stronger."
 	icon_state = "m40_2"
 	item_state = "grenade_hedp2"
 	explosion_power = 150
@@ -118,6 +118,17 @@
 	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber
 	antigrief_protection = FALSE
 
+/obj/item/explosive/grenade/high_explosive/tmfrag
+	name = "\improper M51A BFAB grenade"
+	desc = "Bounding Fragmentation, Air-Burst. Rather than detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel. Effective against troops in the open or in foxholes."
+	icon_state = "grenade_bfab"
+	item_state = "grenade_bfab"
+	hand_throwable = FALSE
+	det_time = 10
+	explosion_power = 40
+	shrapnel_count = 64
+	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/m15
 	name = "\improper M15 fragmentation grenade"
