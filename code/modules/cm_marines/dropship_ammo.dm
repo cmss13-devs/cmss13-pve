@@ -343,13 +343,13 @@
 	ammo_id = "k"
 	point_cost = 900 //PvE don't use the printer but just in case
 	fire_mission_delay = 4 //We don't care because our ammo has just 1 rocket
-	var/shrapnel_count = 8
+	var/shrapnel_count = 6
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
-	var/total_amount = 60 // how many times will the shell fire?
+	var/total_amount = 60 // how many times will a wave of submunitions fire?
 	var/instant_amount = 15 // how many explosions per time it fires?
-	var/explosion_power = 65
-	var/explosion_falloff = 75
-	var/delay_between_clusters = 0.85 SECONDS // how long between each firing?
+	var/explosion_power = 55
+	var/explosion_falloff = 85
+	var/delay_between_clusters = 0.65 SECONDS // how long between each firing?
 
 /obj/structure/ship_ammo/rocket/cbu/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
 	impact.ceiling_debris_check(3)
