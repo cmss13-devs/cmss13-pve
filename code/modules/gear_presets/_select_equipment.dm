@@ -139,12 +139,12 @@
 		mob_client = new_human.client
 	var/obj/item/card/id/ID = new idtype()
 	ID.name = "[new_human.real_name]'s [ID.card_name]"
-	if(assignment)
-		ID.name += " ([assignment])"
+	if(get_assignment(new_human))
+		ID.name += " ([get_assignment(new_human)])"
 	ID.access = access.Copy(1, 0)
 	ID.faction = faction
 	ID.faction_group = faction_group.Copy()
-	ID.assignment = assignment
+	ID.assignment = get_assignment(new_human)
 	ID.rank = rank
 	ID.registered_name = new_human.real_name
 	ID.registered_ref = WEAKREF(new_human)
@@ -160,6 +160,9 @@
 		// Bank account details handled in generate_money_account()
 	new_human.job = rank
 	new_human.comm_title = role_comm_title
+
+/datum/equipment_preset/proc/get_assignment(mob/living/carbon/human/new_human)
+	return assignment
 
 /datum/equipment_preset/proc/load_languages(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_languages(languages)

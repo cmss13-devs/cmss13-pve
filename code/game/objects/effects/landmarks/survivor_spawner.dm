@@ -97,7 +97,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/lv624_corporate_dome_goon
-	equipment = /datum/equipment_preset/survivor/goon
+	equipment = /datum/equipment_preset/colonist/security/weyland
 	synth_equipment = /datum/equipment_preset/synth/survivor/wy/security_synth
 	intro_text = list("<h2>You are a Corporate Security Officer!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -189,7 +189,7 @@
 	spawn_priority = SPAWN_PRIORITY_HIGH
 
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_civ
-	equipment = /datum/equipment_preset/survivor/civilian
+	equipment = /datum/equipment_preset/colonist
 	synth_equipment = /datum/equipment_preset/synth/survivor/chef_synth
 	intro_text = list("<h2>You are a worker on the Colony!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\

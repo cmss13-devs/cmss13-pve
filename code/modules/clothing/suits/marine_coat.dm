@@ -377,6 +377,13 @@
 	item_state = "corporate_blue"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/corporate/grey
+	name = "grey suit jacket"
+	desc = "A grey suit jacket."
+	icon_state = "corporate_grey"
+	item_state = "corporate_grey"
+	has_buttons = FALSE
+
 /obj/item/clothing/suit/storage/jacket/marine/bomber
 	name = "khaki bomber jacket"
 	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."

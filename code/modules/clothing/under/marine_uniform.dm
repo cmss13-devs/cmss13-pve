@@ -914,6 +914,18 @@
 	icon_state = "corporate_blue"
 	worn_state = "corporate_blue"
 
+/obj/item/clothing/under/liaison_suit/grey
+	name = "grey suit pants"
+	desc = "A pair of grey slacks paired with a white shirt. A common pairing among corporate workers."
+	icon_state = "corporate_grey"
+	worn_state = "corporate_grey"
+
+/obj/item/clothing/under/liaison_suit/khaki
+	name = "khaki suit pants"
+	desc = "A pair of khaki slacks paired with a white shirt. A common pairing among corporate workers."
+	icon_state = "corporate_khaki"
+	worn_state = "corporate_khaki"
+
 /obj/item/clothing/under/marine/reporter
 	name = "combat correspondent uniform"
 	desc = "A relaxed and robust uniform fit for any potential reporting needs."

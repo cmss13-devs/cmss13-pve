@@ -533,39 +533,45 @@
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
 	desc = "The black duty belt used to carry the instruments of a Colonial Marshal. It is a heavy police belt with several pouches to contain various law enforcement items."
-	storage_slots = 8
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
 /obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 
 /obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+
+/obj/item/storage/belt/security/MP/colonist
+	name = "duty belt"
+	desc = "The black security duty belt. It is a heavy police belt with several pouches to contain various law enforcement items."
+	storage_slots = 5
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 30
+
+/obj/item/storage/belt/security/MP/colonist/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/restraint/handcuffs(src)
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
