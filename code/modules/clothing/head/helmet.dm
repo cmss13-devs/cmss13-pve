@@ -265,7 +265,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/glasses/regular/hipster = "persc-glasses",
 
 	//GASMASK
-	/obj/item/clothing/mask/gas/m5 = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/mask/gas/military = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/mask/gas/military/upp = HELMET_GARB_RELAY_ICON_STATE,
 
 	// WALKMAN AND CASSETTES
 	/obj/item/device/walkman = HELMET_GARB_RELAY_ICON_STATE,
@@ -301,8 +302,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/helmet_nvg = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HELMET_GARB_RELAY_ICON_STATE,
-	/obj/item/prop/helmetgarb/helmet_gasmask = "helmet_gasmask",
-	/obj/item/prop/helmetgarb/helmet_gasmask/upp = "helmet_uppgasmask",
 	/obj/item/prop/helmetgarb/flair_initech = "flair_initech",
 	/obj/item/prop/helmetgarb/flair_io = "flair_io",
 	/obj/item/prop/helmetgarb/flair_peace ="flair_peace_smiley",
@@ -1161,10 +1160,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
-// UPP Are very powerful against bullets (marines) but middling against melee (xenos)
 /obj/item/clothing/head/helmet/marine/veteran/UPP
-	name = "\improper UM4 helmet"
-	desc = "Using highly skilled manufacturing techniques this UM4 helmet manages to be very resistant to ballistics damage, at the cost of its huge weight causing an extreme stress on the occupant's head that will most likely cause neck problems."
+	name = "\improper 6B75 helmet"
+	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
 	icon_state = "upp_helmet"
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUM
@@ -1173,20 +1171,23 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	clothing_traits = list(TRAIT_EAR_PROTECTION) //the sprites clearly fully cover the ears and most of the head
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP/engi
-	name = "\improper UM4-V helmet"
-	desc = "This version of the UM4 helmet has a ballistic-glass visor, allowing for the UPP Engineers to safely weld, but by some reports hindering sight in the process."
-	icon_state = "upp_helmet_engi"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	var/protection_on = TRUE
+/obj/item/clothing/head/helmet/marine/veteran/UPP/naval
+	name = "\improper 6B82 helmet"
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
+	icon_state = "upp_helmet_naval"
+
+/obj/item/clothing/head/helmet/marine/veteran/UPP/naval/alt
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
+	icon_state = "upp_helmet_naval_alt"
+
 
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
-	name = "\improper UH7 helmet"
-	desc = "Like the UM4, this helmet is very resistant to ballistic damage, but both its flaws and benefits have been doubled. The few UPP Zhergeants that have lived past age 30 have all needed to retire from terminal neck problems caused from the stress of wearing this helmet."
+	name = "\improper 6B79 helmet"
+	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design has kept it from outright replacing the Type 5, instead being utilized mostly by heavy machinegunners."
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
@@ -1196,8 +1197,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 
 /obj/item/clothing/head/uppcap
-	name = "\improper UL2 UPP cap"
-	desc = "UPP headgear issued to soldiers when they're not expected to face combat, and may be requested by officers and above."
+	name = "\improper UL2 cap"
+	desc = "Standard issue patrol cap of the UPP's military."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_cap"
 	item_icons = list(
@@ -1205,39 +1206,62 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS
+	flags_inventory = null
 
 /obj/item/clothing/head/uppcap/civi
-	name = "\improper UL2 UPP cap"
-	desc = "UPP civilian headgear. It's of poor quality, and isn't expected to last all that long, however for as long as it's whole, it appears quite stylish."
+	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
 
+/obj/item/clothing/head/uppcap/boonie
+	name = "\improper UL5 hat"
+	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_boonie"
+
+/obj/item/clothing/head/uppcap/beret/naval
+	name = "\improper UL4 Naval Infantry beret"
+	desc = "A black beret worn by the UPP's Naval Infantry. Wear it with pride."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_beret_naval"
+
 /obj/item/clothing/head/uppcap/beret
-	name = "\improper UL3 UPP beret"
+	name = "\improper UL3 beret"
+	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
 
 /obj/item/clothing/head/uppcap/peaked
-	name = "\improper UL3 UPP peaked cap"
-	desc = "UPP headgear issued to Kapitans and above. It is made of high-quality materials, and has the officers rank in gold placed upon the front of the cap."
+	name = "\improper UL3 peaked cap"
+	desc = "Standard issue peaked service cap of the UPP's military."
 	icon_state = "upp_peaked"
 
+/obj/item/clothing/head/uppcap/peaked/police
+	name = "\improper UL3 PaP peaked cap"
+	desc = "Standard issue peaked cap of the People's Armed Police."
+	icon_state = "upp_peaked_police"
+
+/obj/item/clothing/head/uppcap/peaked/mss
+	name = "\improper UL3 MSS peaked cap"
+	desc = "Standard issue peaked cap of the Ministry of Space Security."
+	icon_state = "upp_peaked_mss"
+
 /obj/item/clothing/head/uppcap/ushanka
-	name = "\improper UL8 UPP ushanka"
+	name = "\improper UL2 ushanka"
+	desc = "Standard issue cold weather hat of the UPP's military."
 	icon_state = "upp_ushanka"
 	item_state = "upp_ushanka"
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"
+	flags_inv_hide = HIDEEARS
 
 /obj/item/clothing/head/uppcap/ushanka/verb/flaps_up()
 	set name = "Tie Up/Down"
@@ -1258,13 +1282,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	update_clothing_icon(src) //Update the on-mob icon.
 
-
-
 /obj/item/clothing/head/uppcap/ushanka/civi
-	name = "\improper UL8c UPP ushanka"
+	name = "\improper UL2c ushanka"
 	icon_state = "upp_ushanka_civi"
 	item_state = "upp_ushanka_civi"
 	original_state = "upp_ushanka_civi"
+	flags_inv_hide = HIDEEARS
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"
@@ -1272,7 +1295,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "van_bandolier"
 	item_state = "s_helmet"
 	flags_marine_helmet = NO_FLAGS
-
 
 //head rag
 
