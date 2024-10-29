@@ -1720,9 +1720,13 @@
 	pixel_x = -7
 	},
 /obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
+	pixel_y = 3;
+	pixel_x = -7
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_x = 8
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "agb" = (
