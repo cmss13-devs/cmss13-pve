@@ -185,7 +185,6 @@
 	skills = /datum/skills/researcher
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_RESEARCH)
 
-
 /datum/equipment_preset/colonist/researcher/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -221,13 +220,13 @@
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
 
-	var/random_archeologist_suit = rand(1,4)
+	var/random_archeologist_suit = rand(1,5)
 	switch(random_archeologist_suit)
-		if(1 to 2)
+		if(1 to 3)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/tan(new_human), WEAR_JACKET)
 		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/tan(new_human), WEAR_JACKET)
+		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest(new_human), WEAR_JACKET)
 
 	var/random_professional_shoe = rand(1,2)
@@ -245,7 +244,6 @@
 	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/doctor
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
-
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
 
@@ -290,6 +288,26 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+
+/datum/equipment_preset/colonist/doctor/scrubs
+	name = "Civilian Doctor, Scrubs"
+
+/datum/equipment_preset/colonist/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
+
+	var/random_scrubs= rand(1,4)
+	switch(random_scrubs)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/blue(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/purple(new_human), WEAR_BODY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/stethoscope(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/admin
 	name = "Civilian Administrator"
@@ -400,7 +418,6 @@
 	skills = /datum/skills/civilian
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND)
 
-
 /datum/equipment_preset/colonist/operations/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -430,7 +447,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-
 
 /datum/equipment_preset/colonist/security
 	name = "Civilian Security Guard, Generic"
@@ -499,6 +515,7 @@
 
 /datum/equipment_preset/colonist/security/trijent
 	name = "Civilian Security Guard, Trijent Corp"
+	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Trijent Corporate Security Officer"
@@ -514,7 +531,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/ivy(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest, WEAR_JACKET)
@@ -528,6 +545,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
+
 	//back
 	//face
 	//head
