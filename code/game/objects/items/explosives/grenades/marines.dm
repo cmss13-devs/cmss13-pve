@@ -891,14 +891,19 @@
 /obj/item/explosive/grenade/baton
 	name = "\improper HIRR baton slug"
 	desc = "Cousin to the M15 Rubber pellet, the HIRR baton slug was recalled from military and civilian police forces due to over-packed propellant in the sabot casing. Now it is utilized as a less-than-lethal option in engagements with human, and sometimes non-human, forces. Historically, the HIRR was incredibly popular during the Arcturus conflict, as the impact force was found to reliably incapacitate Arcturian resistance forces by breaking their ribs into their lungs."
-	icon_state = "baton_slug"
+	icon_state = "grenade_ltl"
 	item_state = "rubber_grenade"
 	hand_throwable = FALSE
 	antigrief_protection = FALSE
 
-
 /obj/item/explosive/grenade/baton/flamer_fire_act()
 	return
+
+/obj/item/explosive/grenade/baton/m79
+	name = "\improper LTL 40mm grenade"
+	desc = "It's a Less Than Lethal 40mm rubber projectile."
+	icon_state = "grenade_40mm_ltl"
+	item_state = "rubber_grenade"
 
 /obj/item/explosive/grenade/high_explosive/holy_hand_grenade
 	AUTOWIKI_SKIP(TRUE)
