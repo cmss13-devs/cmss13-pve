@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dress_corporate_liaison, list(
 	list("Laceup Shoes, Black", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
 	list("Laceup Shoes, Brown", 0, /obj/item/clothing/shoes/laceup/brown, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
 	list("Sneakers, Black", 0, /obj/item/clothing/shoes/black, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
-	list("Corporate Boots", 0, /obj/item/clothing/shoes/marine/corporate, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
+	list("Corporate Boots", 0, /obj/item/clothing/shoes/marine/civilian, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
 
 	list("HATS", 0, null, null, null),
 	list("Black Beret", 0, /obj/item/clothing/head/beret/cm/black/civilian, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
