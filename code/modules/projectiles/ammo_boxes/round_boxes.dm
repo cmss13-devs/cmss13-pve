@@ -136,7 +136,7 @@
 
 /obj/item/ammo_box/rounds/type71/heap
 	name = "rifle ammunition box (10x31mm HEAP)"
-	desc = "A 10x31mm high-explosive armor-piercing ammunition box. Used to refill Type71 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x31mm high-explosive armor-piercing ammunition box. Used to refill Type 71 and QYJ-72 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_heap"

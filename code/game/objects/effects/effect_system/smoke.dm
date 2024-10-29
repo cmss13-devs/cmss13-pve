@@ -423,16 +423,17 @@
 		xeno_creature.AddComponent(/datum/component/status_effect/interference, 10, 10)
 		xeno_creature.blinded = TRUE
 	else
-		creature.apply_damage(12, TOX)
-		creature.apply_damage(2, BRAIN)
-		lungs.take_damage(2)
+		creature.apply_damage(18, TOX)
+		creature.apply_damage(0.75, BRAIN)
+		creature.apply_damage(1, OXY)
+		lungs.take_damage(1)
 
 	creature.SetEarDeafness(max(creature.ear_deaf, floor(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
 	if(!xeno_creature) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
 		creature.SetEyeBlind(floor(effect_amt/3))
 
-		eyes.take_damage(2)
+		eyes.take_damage(1)
 	if(human_creature && creature.coughedtime < world.time && !creature.stat) //Coughing/gasping
 		creature.coughedtime = world.time + 1.5 SECONDS
 		if(prob(50))
@@ -440,7 +441,7 @@
 		else
 			creature.emote("gasp")
 
-	var/stun_chance = 20
+	var/stun_chance = 10
 	if(xeno_affecting)
 		stun_chance = 35
 	if(prob(stun_chance))
