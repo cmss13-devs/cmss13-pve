@@ -102,7 +102,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 			new /obj/item/clothing/head/helmet/marine/veteran/UPP(src)
 			new /obj/item/clothing/under/marine/veteran/UPP(src)
 			new /obj/item/clothing/suit/storage/marine/faction/UPP(src)
-			new /obj/item/clothing/shoes/marine/upp/knife(src)
+			new /obj/item/clothing/shoes/marine/upp(src)
 			new /obj/item/clothing/gloves/marine/veteran(src)
 			new /obj/item/storage/backpack/lightpack/five_slot(src)
 		if(5) //freelancer
@@ -151,7 +151,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 					new /obj/item/ammo_magazine/smg/mac15(src)
 					new /obj/item/ammo_magazine/smg/mac15(src)
 		if(4) //upp
-			new /obj/item/weapon/gun/shotgun/type23/riot(src)
+			new /obj/item/weapon/gun/shotgun/pump/type23(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
