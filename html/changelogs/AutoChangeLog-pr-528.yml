@@ -1,6 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - rscadd: "New Army role; the gunner. Has a SAW, lots of ammo and porta-cades"
-  - rscadd: "Various army roles recieve backpacks with flares and other relevant supplies. The medic now gets surgical line & synthgraft."
-  - bugfix: "Corrected the spec_weapons skill of army troopers and USASF personnel"
