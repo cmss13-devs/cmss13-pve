@@ -64,7 +64,7 @@
 	icon_state = "mortar_ammo_inc"
 
 /obj/item/mortar_shell/nerve/detonate(turf/T)
-	explosion(T, 0, 2, 4, 7, explosion_cause_data = cause_data)
+	cell_explosion(T, 65, 95, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, null)
 	spawn(5)
 		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
 		cn20.set_up(5, 0, T, null)

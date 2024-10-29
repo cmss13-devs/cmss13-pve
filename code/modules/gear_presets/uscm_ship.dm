@@ -40,13 +40,13 @@
 	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
 	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/dress)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
 //*****************************************************************************************************/
 
@@ -139,7 +139,7 @@
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/shoes/black,
-		/obj/item/clothing/shoes/marine/corporate,
+		/obj/item/clothing/shoes/marine/civilian,
 	)
 	dress_hat = list(
 		/obj/item/clothing/head/fedora,
@@ -466,14 +466,14 @@
 	utility_extra = list(/obj/item/clothing/glasses/sunglasses,/obj/item/clothing/glasses/sunglasses/big,/obj/item/clothing/glasses/sunglasses/aviator,/obj/item/clothing/glasses/mbcg)
 
 	service_under = list(/obj/item/clothing/under/marine/officer/formal/white, /obj/item/clothing/under/marine/officer/formal/black)
-	service_shoes = list(/obj/item/clothing/shoes/dress/commander)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 	service_extra = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber)
 	service_hat = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/marine/commander/dress, /obj/item/clothing/head/beret/marine/commander/black, /obj/item/clothing/head/marine/peaked/service)
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
-	dress_shoes = list(/obj/item/clothing/shoes/dress/commander)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm_ship/commander/New()
@@ -509,7 +509,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/cdrcom(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/commander(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new sidearmpath(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
@@ -590,7 +590,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/cdrcom(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/marine/peaked/service(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
@@ -603,7 +603,7 @@
 	name = "USCM Platoon Commander (PltCo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/silver
 	assignment = JOB_SO
 	rank = JOB_SO
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
@@ -646,7 +646,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/bridge(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
@@ -663,15 +662,24 @@
 
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
+	idtype = /obj/item/card/id/dogtag
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE, LANGUAGE_ENGLISH)
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
 
+/datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/so/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm_ship/so/upp/equipped
 	name = "UPP Platoon Commander (Equipped)"
@@ -681,14 +689,17 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm_ship/so/upp/equipped/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/officer(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp_knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
@@ -1011,11 +1022,11 @@
 	skills = /datum/skills/commander
 
 	utility_hat = list(/obj/item/clothing/head/beret/cm)
-	utility_gloves = list(/obj/item/clothing/gloves/marine/techofficer/commander)
+	utility_gloves = list(/obj/item/clothing/gloves/marine)
 	utility_extra = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/beret/cm/tan)
 
 	service_hat = list(/obj/item/clothing/head/beret/cm)
-	service_shoes = list(/obj/item/clothing/shoes/dress/commander)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 

@@ -2,8 +2,8 @@
 
 //Various ordnance selections
 
-#define ORDNANCE_OPTIONS list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Keeper Missile", "Cluster Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive","Nerve Gas OB", "Incendiary", "Fragmentation", "Flare",  "Nerve Gas Mortar")
-#define MISSILE_ORDNANCE list("Banshee Missile", "CN-20 Missile", "Harpoon Missile", "Cluster Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
+#define ORDNANCE_OPTIONS list("Banshee Missile", "CN-20 Missile", "Cluster Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile", "Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21", "High Explosive", "Incendiary", "Cluster", "High Explosive","Nerve Gas OB", "Incendiary", "Fragmentation", "Flare",  "Nerve Gas Mortar")
+#define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Cluster Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
 #define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")

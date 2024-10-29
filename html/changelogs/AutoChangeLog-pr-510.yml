@@ -1,6 +1,0 @@
-author: "GriffinMan4455"
-delete-after: True
-changes:
-  - rscadd: "CN20 rounds for: Dropship, Mortar, OB"
-  - qol: "FS Menu contains CN20 rounds for Dropship, Mortar, OB"
-  - ui: "FS UI, dunno if I have to mention this here though"
