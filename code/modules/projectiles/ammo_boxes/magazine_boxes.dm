@@ -738,6 +738,21 @@
 /obj/item/ammo_box/magazine/type73/impact/empty
 	empty = TRUE
 
+//-----------------------NP92 Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/np92
+	name = "\improper magazine box (NP92 x 16)"
+	icon_state = "base_type73"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_np92"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/np92
+
+/obj/item/ammo_box/magazine/np92/empty
+
+	empty = TRUE
 
 //-----------------------AR10 Rifle Mag Box-----------------------
 
