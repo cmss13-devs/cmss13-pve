@@ -418,7 +418,7 @@
 
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
-	desc = "The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield."
+	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
 	icon_state = "marinepack"
 	item_state = "marinepack"
 	has_gamemode_skin = TRUE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
@@ -1170,3 +1170,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
 	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
 	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
+
+/obj/item/storage/backpack/marine/medic/army
+	name = "\improper Army combat medic backpack"
+	desc = "A standard-issue backpack worn by US Army medics."
+	has_gamemode_skin = FALSE

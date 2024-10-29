@@ -67,10 +67,54 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
 
 /datum/equipment_preset/usa/trooper/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
+
+/datum/equipment_preset/usa/gunner
+	name = "Army Gunner"
+	assignment = JOB_ARMY_GUNNER
+	rank = JOB_ARMY_GUNNER
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "GNR"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/trooper	//trooper with a big gun, no fancy skills
+
+/datum/equipment_preset/usa/gunner/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/army, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41e2ap, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/folding_barricade/three, WEAR_BACK)
+// Todo- replace HPR with smartgunner once custom armour PR's put through
+
+/datum/equipment_preset/usa/gunner/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+
 
 /datum/equipment_preset/usa/sapper
 	name = "Army Sapper"
@@ -105,6 +149,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/engikit/full, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
+
 
 /datum/equipment_preset/usa/medic
 	name = "Army Combat Medical Technician"
@@ -131,8 +178,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
 
@@ -141,6 +188,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/medic/army, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 
 
 /datum/equipment_preset/usa/nco
@@ -210,6 +263,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/army, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94/signal, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
 
 /datum/equipment_preset/usa/snco/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"

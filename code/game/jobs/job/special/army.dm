@@ -7,6 +7,10 @@
 	entry_message_body = "You are a rank-and-file Soldier of your standing army, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Hoo-ah!"
 	return ..()
 
+/datum/job/trooper/gunner
+	title = JOB_ARMY_GUNNER
+	gear_preset = /datum/equipment_preset/usa/gunner
+
 /datum/job/trooper/sapper
 	title = JOB_ARMY_ENGI
 	gear_preset = /datum/equipment_preset/usa/sapper
