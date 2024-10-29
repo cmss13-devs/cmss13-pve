@@ -120,7 +120,7 @@
 
 /obj/item/explosive/grenade/high_explosive/tmfrag
 	name = "\improper M51A BFAB grenade"
-	desc = "Bounding Fragmentation, Air-Burst. Rather than detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel. Effective against troops in the open or in foxholes."
+	desc = "Bounding Fragmentation, Air-Burst. Rather than traditionally detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel a second later. Effective against troops in the open or in foxholes. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
 	icon_state = "grenade_bfab"
 	item_state = "grenade_bfab"
 	hand_throwable = FALSE
@@ -150,9 +150,9 @@
 
 /obj/item/explosive/grenade/high_explosive/airburst/canister
 	name = "\improper M108 canister grenade"
-	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron."
-	icon_state = "grenade_metal_foam"
-	item_state = "grenade_metal_foam"
+	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
+	icon_state = "grenade_buck"
+	item_state = "grenade_buck"
 	hand_throwable = FALSE
 	underslug_launchable = TRUE
 	explosion_power = 0
@@ -329,9 +329,9 @@
 
 /obj/item/explosive/grenade/high_explosive/impact/heap
 	name = "\improper M38 HEAP blast grenade"
-	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
-	icon_state = "grenade_phos"
-	item_state = "grenade_phos"
+	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
+	icon_state = "grenade_chem"
+	item_state = "grenade_chem"
 	explosion_power = 250
 	explosion_falloff = 40
 	shrapnel_count = 0
@@ -489,7 +489,7 @@
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
 	dangerous = TRUE
 	harmful = TRUE
-	var/smoke_radius = 3
+	var/smoke_radius = 4
 
 /obj/item/explosive/grenade/phosphorus/Destroy()
 	QDEL_NULL(smoke)

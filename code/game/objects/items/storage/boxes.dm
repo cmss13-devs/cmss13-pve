@@ -699,7 +699,7 @@
 
 /obj/item/storage/box/nade_box/bfab
 	name = "\improper M51A BFAB grenade box"
-	desc = "A secure box holding 25 M51A Bounding Fragmentation, Air-Burst grenades. High explosive, don't store near the flamer fuel."
+	desc = "A secure box holding 25 M51A Bounding Fragmentation, Air-Burst grenades. Highly explosive, don't store near the flamer fuel."
 	model_icon = "model_m51a"
 	type_icon = "bfab"
 	can_hold = list(/obj/item/explosive/grenade/high_explosive/tmfrag)
@@ -715,7 +715,7 @@
 
 /obj/item/storage/box/nade_box/smoke
 	name = "\improper M47 HSDP grenade box"
-	desc = "A secure box holding 25 M47 HSDP smoke grenades. Highly flammable, don't store near the flamer fuel."
+	desc = "A secure box holding 25 M47 HSDP smoke grenades. Flammable, don't store near the flamer fuel."
 	model_icon = "model_m47"
 	type_icon = "smoke"
 	can_hold = list(/obj/item/explosive/grenade/smokebomb)
@@ -739,7 +739,7 @@
 
 /obj/item/storage/box/nade_box/canister
 	name = "\improper M108 canister grenade box"
-	desc = "A secure box holding 25 M108 canister grenades. Highly flammable, don't store near the flamer fuel."
+	desc = "A secure box holding 25 M108 canister grenades. Flammable, don't store near the flamer fuel."
 	model_icon = "model_m108"
 	type_icon = "buck"
 	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
