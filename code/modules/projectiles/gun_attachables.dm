@@ -1185,8 +1185,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "SADAR sight system."
 	zoom_offset = 3
 
-#define OPTIC_MODE_VL 0
-#define OPTIC_MODE_IR 1
+// PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
 	name = "AN/RVS-52 CCD Television Sight System"
@@ -1196,100 +1195,6 @@ Defined in conflicts.dm of the #defines folder.
 	zoom_viewsize = 7
 	allows_movement = TRUE
 	var/dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
-	var/optic_mode = 0
-	var/atom/movable/optic_light/on_light
-	var/optic_glows = TRUE
-	var/lighting_alpha = 100
-
-/obj/item/attachable/scope/pve/New()
-	..()
-
-/obj/item/attachable/scope/pve/proc/toggle_optic_mode()
-	if(using_scope)
-		to_chat(usr, SPAN_WARNING("You can't change the optic mode setting on the [src] while you're looking through it!"))
-		return
-	if(optic_mode == OPTIC_MODE_VL)
-		optic_mode = OPTIC_MODE_IR
-		to_chat(usr, SPAN_NOTICE("Optic mode switched to infra-red"))
-		return
-	else
-		optic_mode = OPTIC_MODE_VL
-		to_chat(usr, SPAN_NOTICE("Optic mode switched to visible-light"))
-		return
-
-/datum/action/item_action/toggle_optic_mode
-
-/datum/action/item_action/toggle_optic_mode/New()
-	..()
-	name = "Toggle Optic Mode"
-	action_icon_state = "sniper_aim"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/datum/action/item_action/toggle_optic_mode/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/G = holder_item
-	var/obj/item/attachable/scope/pve/S = G.attachments["rail"]
-	S.toggle_optic_mode()
-
-/obj/item/attachable/scope/pve/proc/apply_scope_nvg(obj/item/weapon/gun/G, mob/living/carbon/user)
-	if(G.zoom)
-		G.accuracy_mult += accuracy_scoped_buff
-		G.modify_fire_delay(delay_scoped_nerf)
-		G.damage_falloff_mult += damage_falloff_scoped_buff
-		if(optic_mode == OPTIC_MODE_VL)
-			RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
-			user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
-			user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
-			user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
-			user.update_sight()
-			if(optic_glows)
-				var/obj/item/weapon/gun/attached_gun = loc
-				on_light = new(attached_gun)
-				on_light.set_light_on(TRUE)
-		else
-			return
-		using_scope = TRUE
-		RegisterSignal(user, COMSIG_MOB_CHANGE_VIEW, COMSIG_LIVING_ZOOM_OUT, PROC_REF(remove_scope_nvg))
-	else
-		return
-
-/obj/item/attachable/scope/pve/proc/remove_scope_nvg(mob/living/carbon/user, obj/item/weapon/gun/G)
-	SIGNAL_HANDLER
-	UnregisterSignal(user, COMSIG_MOB_CHANGE_VIEW, COMSIG_LIVING_ZOOM_OUT)
-	using_scope = FALSE
-	G.accuracy_mult -= accuracy_scoped_buff
-	G.modify_fire_delay(-delay_scoped_nerf)
-	G.damage_falloff_mult -= damage_falloff_scoped_buff
-	if(optic_mode == OPTIC_MODE_VL)
-		user.remove_client_color_matrix("nvg_visor", 1 SECONDS)
-		user.clear_fullscreen("nvg_visor", 0.5 SECONDS)
-		user.clear_fullscreen("nvg_visor_blur", 0.5 SECONDS)
-		if(optic_glows)
-			qdel(on_light)
-		UnregisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT)
-		UnregisterSignal(user, COMSIG_MOB_CHANGE_VIEW)
-		user.update_sight()
-	else
-		return
-
-/obj/item/attachable/scope/pve/proc/on_update_sight(mob/user)
-	SIGNAL_HANDLER
-	if(lighting_alpha < 255)
-		user.see_in_dark = 12
-	user.lighting_alpha = lighting_alpha
-	user.sync_lighting_plane_alpha()
-
-/atom/movable/optic_light
-	light_power = 0.5
-	light_range = 1
-	light_color = COLOR_LIGHT_GREEN
-	light_system = MOVABLE_LIGHT
-	light_flags = LIGHT_ATTACHED
-
-#undef OPTIC_MODE_VL
-#undef OPTIC_MODE_IR
 
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
