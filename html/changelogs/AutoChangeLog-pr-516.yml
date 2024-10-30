@@ -1,0 +1,6 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - qol: "Platoon Sergeant is now called Section Sergeant"
+  - qol: "Squad Sergeant description now references the Section Sergeant properly"
+  - spellcheck: "Fixed a typo in the corpsman description that implies they are part of a squad, not a section or platoon."
