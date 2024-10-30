@@ -501,7 +501,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		add_fingerprint(usr)
 
 
-/obj/structure/machinery/cryopod/proc/go_in_cryopod(mob/mob, silent = FALSE)
+/obj/structure/machinery/cryopod/proc/go_in_cryopod(mob/living/mob, silent = FALSE)
 	if(occupant)
 		return
 	mob.forceMove(src)
@@ -569,14 +569,15 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 /obj/structure/machinery/cryopod/big/update_icon()
 	return
 
-/obj/structure/machinery/cryopod/big/go_in_cryopod(mob/mob, silent = FALSE)
+/obj/structure/machinery/cryopod/big/go_in_cryopod(mob/living/mob, silent = FALSE)
 	..()
 	overlays.Cut()
 	occupant_image = image(mob.appearance, loc, layer = 3.21)
 	occupant_image.pixel_x = occupant_x
 	occupant_image.pixel_y = occupant_y
 	occupant_image.dir = occupant_dir
-	occupant_image.transform = occupant.transform.Turn(occupant_angle)
+	if(mob.body_position == STANDING_UP)
+		occupant_image.transform = occupant.transform.Turn(occupant_angle)
 	overlays += occupant_image
 	var/cover_image = image(icon, icon_state = "cover", layer = 3.22)
 	overlays += cover_image
