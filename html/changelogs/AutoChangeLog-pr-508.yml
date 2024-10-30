@@ -1,0 +1,5 @@
+author: "GriffinMan4455"
+delete-after: True
+changes:
+  - rscadd: "Made destroyed airlocks spawn an airlock assembly on the tiles they cover, this includes both Airlocks and Multitiles."
+  - balance: "Airlocks have much more damage_cap, meaning it takes more rounds from a marine to kill them, Xeno damage unchanged."
