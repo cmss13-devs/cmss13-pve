@@ -5435,7 +5435,7 @@
 /turf/open/floor/wood,
 /area/lv624/lazarus/hop)
 "csx" = (
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
 "csM" = (
@@ -6775,7 +6775,7 @@
 	icon_state = "open";
 	opened = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "edM" = (
@@ -7164,7 +7164,7 @@
 	name = "General Listening Channel";
 	pixel_x = -30
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "eKs" = (
@@ -8669,7 +8669,7 @@
 	opened = 1
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/device/radio/intercom{
 	freerange = 1;
 	frequency = 1469;
@@ -9146,7 +9146,7 @@
 /area/lv624/ground/caves/sand_temple)
 "hNR" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "hNT" = (
@@ -16198,7 +16198,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "rEk" = (
@@ -16371,7 +16371,7 @@
 /area/lv624/ground/caves/east_caves)
 "rQc" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/dark,
 /area/lv624/lazarus/quartstorage)
@@ -17252,7 +17252,7 @@
 "sXh" = (
 /obj/structure/bed,
 /obj/item/clothing/mask/cigarette/pipe,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
 "sXi" = (

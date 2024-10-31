@@ -8333,7 +8333,7 @@
 "gxW" = (
 /obj/structure/closet/cabinet,
 /obj/item/storage/toolbox/emergency,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/botany)
 "gyu" = (
@@ -16800,7 +16800,7 @@
 /area/shiva/exterior/cp_lz2)
 "pNy" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/botany)
 "pOb" = (
@@ -16964,7 +16964,7 @@
 /area/shiva/interior/caves/cp_camp)
 "pWw" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/good_item,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/botany)
@@ -22349,7 +22349,7 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/botany)

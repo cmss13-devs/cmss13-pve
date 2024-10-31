@@ -872,7 +872,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/colonist{
+/obj/item/clothing/under/colonist/boilersuit/cyan{
 	pixel_y = -2
 	},
 /turf/open/floor/whiteblue/southwest,

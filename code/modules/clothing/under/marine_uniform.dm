@@ -654,10 +654,8 @@
 	has_sensor = UNIFORM_NO_SENSORS
 
 /obj/item/clothing/under/colonist
-	name = "colonist uniform"
-	desc = "A stylish gray-green jumpsuit - standard issue for colonists."
-	icon_state = "colonist"
-	worn_state = "colonist"
+	name = "abstract colonist"
+	desc = "Don't spawn this!"
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_COLONIST
 

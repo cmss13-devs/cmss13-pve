@@ -2354,12 +2354,12 @@
 /area/ice_colony/surface/dorms)
 "asu" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
 "asx" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/good_item,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
@@ -2427,7 +2427,7 @@
 /area/ice_colony/exterior/surface/clearing/pass)
 "atm" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/crap_item,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
@@ -2857,7 +2857,7 @@
 "awT" = (
 /obj/structure/closet/cabinet,
 /obj/item/storage/toolbox/emergency,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
 "awU" = (

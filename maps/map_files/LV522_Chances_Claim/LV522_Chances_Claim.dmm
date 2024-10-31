@@ -385,9 +385,9 @@
 /area/lv522/indoors/a_block/medical)
 "ahZ" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
@@ -5544,9 +5544,9 @@
 /area/lv522/indoors/c_block/cargo)
 "cEj" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
@@ -12537,7 +12537,7 @@
 /area/lv522/atmos/reactor_garage)
 "gcO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/under/colonist{
+/obj/item/clothing/under/colonist/boilersuit/cyan{
 	pixel_x = 5;
 	pixel_y = -6
 	},
@@ -21562,7 +21562,7 @@
 /area/lv522/atmos/east_reactor/north)
 "kvn" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname{
 	dir = 8
@@ -35000,7 +35000,7 @@
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "qCG" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "qCS" = (
@@ -45734,9 +45734,9 @@
 /area/lv522/atmos/east_reactor)
 "vxa" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,

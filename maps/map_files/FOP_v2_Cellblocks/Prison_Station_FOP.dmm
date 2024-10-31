@@ -9549,7 +9549,7 @@
 "ceG" = (
 /obj/structure/bed,
 /obj/item/clothing/mask/cigarette/pipe,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/prison,
 /area/prison/engineering)
