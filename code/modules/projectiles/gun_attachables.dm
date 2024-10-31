@@ -1191,10 +1191,10 @@ Defined in conflicts.dm of the #defines folder.
 	name = "AN/RVS-52 CCD Television Sight System"
 	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions."
 	icon_state = "pvescope"
-	zoom_offset = 6
-	zoom_viewsize = 7
+	zoom_offset = 5
+	zoom_viewsize = 6
 	allows_movement = TRUE
-	var/dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
+	var/dynamic_aim_slowdown = SLOWDOWN_ADS_SCOPE
 
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
