@@ -322,7 +322,7 @@
 	if(..())
 		return
 	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5)))
-  creature.apply_damage(18, TOX)
+	creature.apply_damage(18, TOX)
 	creature.apply_damage(0.75, BRAIN)
 	creature.apply_damage(1, OXY)
 	lungs.take_damage(1)
