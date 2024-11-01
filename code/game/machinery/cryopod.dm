@@ -555,6 +555,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 /obj/structure/machinery/cryopod/big
 	icon = 'icons/obj/structures/machinery/hypersleep.dmi'
 	icon_state = "hypersleep_base"
+	dir = EAST
 	var/image/occupant_image
 	var/occupant_angle = 270
 	var/occupant_dir = 4
