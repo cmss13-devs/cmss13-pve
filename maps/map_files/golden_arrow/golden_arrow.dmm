@@ -3210,11 +3210,11 @@
 "alc" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Platoon Sergeant"
+	job = "Section Sergeant"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Platoon Corpsman"
+	job = "Corpsman"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)

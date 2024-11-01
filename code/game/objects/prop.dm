@@ -255,7 +255,7 @@
 	icon_state = "poster15"
 	throw_speed = SPEED_FAST
 	throw_range = 5
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_TINY
 	attack_verb = list("bashed", "whacked", "educated")
 	pickup_sound = "sound/handling/book_pickup.ogg"
 	drop_sound = "sound/handling/book_pickup.ogg"
@@ -367,3 +367,13 @@
 	desc = "The most ancient of tools."
 	w_class = SIZE_TINY
 	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/prop/deviltrap
+	name = "devil trap"
+	icon = 'icons/obj/items/misc.dmi'
+	icon_state = "deviltrap"
+	item_state = ""
+	force = 0.5
+	throwforce = 0.5
+	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
+	w_class = SIZE_LARGE
