@@ -299,7 +299,7 @@
 	xeno_affecting = FALSE
 	opacity = FALSE
 	alpha = 75
-	time_to_live = 20
+	time_to_live = 10
 	stun_chance = 20
 	var/effect_amt //I don't know what this is or what it means but the code throws errors without it and I'm tired
 
@@ -322,9 +322,10 @@
 	if(..())
 		return
 	creature.SetEarDeafness(max(creature.ear_deaf, round(effect_amt*1.5)))
-	creature.apply_damage(12, TOX)
-	creature.apply_damage(2, BRAIN)
-	lungs.take_damage(2)
+  creature.apply_damage(18, TOX)
+	creature.apply_damage(0.75, BRAIN)
+	creature.apply_damage(1, OXY)
+	lungs.take_damage(1)
 	to_chat(creature, SPAN_DANGER("Your body is going numb, almost as if paralyzed!"))
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
@@ -353,7 +354,8 @@
 		return
 	to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
 	human_creature.SetEyeBlind(round(effect_amt/3))
-	eyes.take_damage(2)
+	eyes.take_damage(1)
+
 /////////////////////////////////////////////
 // ALD-91 LSD Gas
 /////////////////////////////////////////////

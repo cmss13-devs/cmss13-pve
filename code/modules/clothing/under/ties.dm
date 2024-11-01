@@ -430,10 +430,25 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
 	icon_state = "navalpatch"
 
-/obj/item/clothing/accessory/patch/upp/platoon
-	name = "UPP Naval Infantry patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
-	icon_state = "navalpatch"
+/obj/item/clothing/accessory/patch/usasf
+	name = "USASF patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Aerospace Force."
+	icon_state = "usasfpatch"
+
+/obj/item/clothing/accessory/patch/usasf/helljumper
+	name = "Para-Rescue patch"
+	desc = "A fire-resistant shoulder patch, worn by the absolute badasses of the USASF 7th Para-Rescue Battalion. Feet first into hell!"
+	icon_state = "helljumperpatch"
+
+/obj/item/clothing/accessory/patch/army
+	name = "US Army patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Army."
+	icon_state = "armypatch"
+
+/obj/item/clothing/accessory/patch/army/infantry
+	name = "Army Infantry patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 1st Cavalry Division."
+	icon_state = "infantrypatch"
 
 //misc
 
