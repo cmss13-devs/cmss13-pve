@@ -255,7 +255,7 @@ const ButtonConfirm = (props: ConfirmProps) => {
       }}
       {...rest}
     >
-      {clickedOnce ? confirmContent : children}
+      {clickedOnce && confirmContent ? confirmContent : children}
     </Button>
   );
 };
