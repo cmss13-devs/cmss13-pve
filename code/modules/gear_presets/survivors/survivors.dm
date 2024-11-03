@@ -121,4 +121,3 @@ Standart Survivors :	/datum/equipment_preset/survivor/scientist,
 						/datum/equipment_preset/survivor/security
 
 */
-
