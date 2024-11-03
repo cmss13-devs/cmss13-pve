@@ -1,5 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - bugfix: "Section sergeants can once more use their squad info window to swap people between squads or assign acting SL's to the two teams"
-  - ui: "Overwatch console properly references sections and section leaders in the buttons now instead of squads or platoons"
