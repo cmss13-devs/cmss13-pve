@@ -62,8 +62,6 @@
 	melee_damage_upper = 15
 	attacktext = "punches"
 	a_intent = INTENT_HARM
-	//var/corpse = /obj/effect/landmark/corpsespawner/russian
-	//var/weapon1 = /obj/item/tool/kitchen/knife
 	min_oxy = 5
 	max_oxy = 0
 	min_tox = 0
@@ -78,7 +76,6 @@
 
 
 /mob/living/simple_animal/hostile/UPP/ranged
-	//weapon1 = /obj/item/weapon/gun/projectile/mateba
 	ranged = 1
 	projectiletype = /obj/projectile
 	projectilesound = 'sound/weapons/Gunshot.ogg'

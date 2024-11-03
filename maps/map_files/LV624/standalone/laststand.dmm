@@ -124,11 +124,6 @@
 	},
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
-"aU" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/chef,
-/turf/open/floor/wood,
-/area/lv624/ground/caves/north_central_caves)
 "aV" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/wood,
@@ -557,7 +552,7 @@ ah
 bf
 bf
 aV
-aU
+pS
 fH
 bf
 tE

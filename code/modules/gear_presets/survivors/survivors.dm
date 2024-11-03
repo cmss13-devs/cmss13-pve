@@ -111,7 +111,7 @@
 /*
 From map_config.dm
 
-Standart Survivors :	/datum/equipment_preset/survivor/scientist,
+Standard Survivors :	/datum/equipment_preset/survivor/scientist,
 						/datum/equipment_preset/survivor/doctor,
 						/datum/equipment_preset/survivor/chef,
 						/datum/equipment_preset/survivor/chaplain,
