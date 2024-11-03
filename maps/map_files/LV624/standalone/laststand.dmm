@@ -141,11 +141,6 @@
 /obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
-"bb" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/security/liaison,
-/turf/open/floor/wood,
-/area/lv624/ground/caves/north_central_caves)
 "bd" = (
 /obj/structure/closet/crate,
 /obj/item/ammo_magazine/shotgun/buckshot,
@@ -239,7 +234,6 @@
 /area/lv624/ground/caves/north_central_caves)
 "pS" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wysec,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "qW" = (
@@ -468,7 +462,7 @@ Cw
 bf
 UK
 bf
-bb
+pS
 bf
 hf
 aA
