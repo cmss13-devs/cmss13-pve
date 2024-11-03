@@ -698,6 +698,7 @@
 	desc = "A light-blue boilersuit."
 	icon_state = "boilersuit_lightblue"
 	worn_state = "boilersuit_lightblue"
+	flags_jumpsuit = UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/colonist/boilersuit/darkblue
 	name = "dark-blue boilersuit"
@@ -746,7 +747,7 @@
 /obj/item/clothing/under/colonist/ua_boiler
 	name = "\improper UA blue operations uniform"
 	desc = "A stylish blue jumpsuit - standard issue for UA civilian support personnel."
-	icon_state = "ua_boiler"
+	icon_state = "boilersuit_darkblue"
 	worn_state = "ua_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 	has_sensor = UNIFORM_HAS_SENSORS

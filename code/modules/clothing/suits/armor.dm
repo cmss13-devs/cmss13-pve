@@ -27,14 +27,14 @@
 //armored vest
 
 /obj/item/clothing/suit/armor/vest
-	name = "armored vest"
-	desc = "Generic venlar bulletproof vest found in the hands of various private sector security types."
+	name = "stab-proof vest"
+	desc = "Generic protective vest found in the hands of various private sector security types designed to protect against stabs."
 	icon_state = "armor"
 	item_state = "armor"
 	blood_overlay_type = "armor"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_LOW
@@ -54,12 +54,25 @@
 		/obj/item/storage/belt/gun/m44,
 	)
 
-
+/obj/item/clothing/suit/armor/vest/ballistic
+	name = "ballistic vest"
+	desc = "Generic venlar vest found in the hands of various private sector security types designed to protect against low caliber pistol rounds."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "ballistic_vest"
+	item_state = "ballistic_vest"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/clothing/suit/armor/vest/pilot
 	name = "\improper M70 flak jacket"
 	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics..."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
 	icon_state = "pilot"
 	blood_overlay_type = "armor"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
