@@ -137,20 +137,7 @@
 	add_random_satchel(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	var/random_face_wrap = rand(1,6)
-	switch(random_face_wrap)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan(new_human), WEAR_FACE)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask(new_human), WEAR_FACE)
-		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green(new_human), WEAR_FACE)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
-		if(6)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta(new_human), WEAR_FACE)
+	add_facewrap(new_human)
 	//head
 	var/random_roughneck_hardhat = rand(1,2)
 	switch(random_roughneck_hardhat)
@@ -190,6 +177,29 @@
 	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
 	//limbs
 	add_worker_shoe(new_human)
+
+/datum/equipment_preset/colonist/chef
+	name = "Civilian Colonist, Blue-Collar (Chef)"
+	assignment = "Chef"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/datum/equipment_preset/colonist/chef/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef, WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/whitecollar
 	name = "Civilian Colonist, White-Collar"
