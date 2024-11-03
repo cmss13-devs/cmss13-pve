@@ -184,7 +184,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//uniform
 	var/obj/item/clothing/under/colonist/workwear/khaki/uniform = new()
-		uniform.roll_suit_jacket(new_human)
+	uniform.roll_suit_jacket(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	//jacket
 	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
@@ -637,7 +637,7 @@
 	name = "Civilian Security Guard, UA Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
-	assignment = "Colonial Guardsman"
+	assignment = "Colonial Militiaman"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
