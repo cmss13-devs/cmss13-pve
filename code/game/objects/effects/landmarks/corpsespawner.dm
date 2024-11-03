@@ -24,7 +24,7 @@
 
 /obj/effect/landmark/corpsespawner/chef
 	name = "Chef"
-	equip_path = /datum/equipment_preset/corpse/chef
+	equip_path = /datum/equipment_preset/corpse/colonist
 
 /obj/effect/landmark/corpsespawner/doctor
 	name = "Doctor"
