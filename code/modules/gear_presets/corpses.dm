@@ -139,6 +139,109 @@
 	name = "Corpse - White-Collar (Burst)"
 	xenovictim = TRUE
 
+/datum/equipment_preset/corpse/researcher
+	name = "Corpse - Researcher"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	assignment = "Research Associate"
+	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/researcher
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_RESEARCH)
+
+/datum/equipment_preset/corpse/researcher/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	add_professionalwear(new_human)
+	var/random_tie= rand(1,5)
+	switch(random_tie)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/green(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/purple(new_human), WEAR_ACCESSORY)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
+	//jacket
+	var/random_researcher_suit = rand(1,5)
+	switch(random_researcher_suit)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/tan(new_human), WEAR_JACKET)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest(new_human), WEAR_JACKET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/grey(new_human), WEAR_JACKET)
+	//limb
+	add_dress_shoes(new_human)
+
+/datum/equipment_preset/corpse/researcher/burst
+	name = "Corpse - Researcher (Burst)"
+	xenovictim = TRUE
+
+/datum/equipment_preset/corpse/doctor
+	name = "Corpse - Doctor"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	assignment = "Medical Doctor"
+	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
+
+/datum/equipment_preset/corpse/doctor/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	add_professionalwear(new_human)
+	add_tie(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
+	//limb
+	add_dress_shoes(new_human)
+
+/datum/equipment_preset/corpse/doctor
+	name = "Corpse - Doctor (Burst)"
+	xenovictim = TRUE
+
+/datum/equipment_preset/corpse/doctor/scrubs
+	name = "Corpse - Doctor, Scrubs"
+
+/datum/equipment_preset/corpse/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+	//uniform
+	var/random_scrubs= rand(1,4)
+	switch(random_scrubs)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/blue(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/purple(new_human), WEAR_BODY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/stethoscope(new_human), WEAR_ACCESSORY)
+	//limb
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/corpse/doctor/scrubs/burst
+	name = "Corpse - Doctor, Scrubs (Burst)"
+	xenovictim = TRUE
+
 /datum/equipment_preset/corpse/prisoner
 	name = "Corpse - Prisoner"
 	faction = FACTION_COLONIST
@@ -251,7 +354,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_JACKET)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp_knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
@@ -291,7 +394,7 @@
 	spawn_merc_helmet(new_human)
 
 /datum/equipment_preset/corpse/freelancer/burst
-	name = "Corpse - Burst Freelancer"
+	name = "Corpse - Freelancer (Burst)"
 	xenovictim = TRUE
 
 //*****************************************************************************************************/

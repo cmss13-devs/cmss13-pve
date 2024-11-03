@@ -413,6 +413,13 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/cmcap/corrections
+	name = "dark blue cap"
+	desc = "A dark blue patrol cap."
+	icon_state = "corrections"
+	item_state = "corrections"
+	flags_marine_hat = HAT_GARB_OVERLAY
+
 //============================//BERETS\\=================================\\
 //=======================================================================\\
 //Berets DO NOT have armor, so they have their own category. PMC caps are helmets, so they're in helmets.dm.

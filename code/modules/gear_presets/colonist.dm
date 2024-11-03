@@ -128,7 +128,7 @@
 		return "Derrickhand"
 	if(prob(50))
 		return "Chainhand"
-	return "Derrickhand"
+	return "Floorhand"
 
 /datum/equipment_preset/colonist/roughneck/load_gear(mob/living/carbon/human/new_human)
 
@@ -166,6 +166,31 @@
 	add_worker_gloves(new_human)
 	add_worker_shoe(new_human)
 
+/datum/equipment_preset/colonist/cook
+	name = "Civilian Colonist, Blue-Collar (Cook)"
+	assignment = "Cook"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/datum/equipment_preset/colonist/cook/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	var/obj/item/clothing/under/colonist/workwear/khaki/uniform = new()
+		uniform.roll_suit_jacket(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
+	//limbs
+	add_worker_shoe(new_human)
+
 /datum/equipment_preset/colonist/whitecollar
 	name = "Civilian Colonist, White-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -196,6 +221,38 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+
+/datum/equipment_preset/colonist/whitecollar/exec
+	name = "Civilian Colonist, White-Collar (Corporate Exec)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/datum/equipment_preset/colonist/whitecollar/exec/get_assignment(mob/living/carbon/human/new_human)
+	if(prob(25))
+		return "Senior Executive"
+
+	return "Executive"
+
+/datum/equipment_preset/colonist/whitecollar/exec/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//back
+	add_random_satchel(new_human)
+	//outfit
+	add_business_outfit(new_human)
+	var/random_tie = rand(1,2)
+	switch(random_tie)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
+	//limb
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/briefcase(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/colonist/researcher
 	name = "Civilian Researcher"
@@ -559,6 +616,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/corrections, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue, WEAR_BODY)
 	//jacket
@@ -574,7 +633,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/colonist/security/prison
+/datum/equipment_preset/colonist/security/guard
 	name = "Civilian Security Guard, UA Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -584,7 +643,7 @@
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id/dogtag
 
-/datum/equipment_preset/colonist/security/prison/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	//back
