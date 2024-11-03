@@ -1100,11 +1100,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //FIORINA / UA RIOT CONTROL HELMET//
 
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot
-	name = "\improper RC6 helmet"
-	desc = "The standard UA Riot Control 6 helmet is of odd design, lacking a face shield by default (mounting points are available). The distinct white pattern and red emblem are synonymous with oppression throughout the rim."
+	name = "\improper M10 pattern ballistic helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
 	icon_state = "ua_riot"
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	specialty = "RC6"
 	flags_atom = NO_SNOW_TYPE
 
 // KUTJEVO HELMET
