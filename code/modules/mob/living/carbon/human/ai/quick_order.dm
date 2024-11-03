@@ -97,7 +97,7 @@
 	var/datum/human_ai_quick_order/order_datum = new
 	order_datum.holder = src
 	click_intercept = order_datum
-	to_chat(src, SPAN_BOLDNOTICE("Left click the LOWER LEFT and UPPER RIGHT corners (in that order) to select all AI in the area. Then, alt-click on where you would like them to go. To stop quick ordering, press the verb again."))
+	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. To stop quick ordering, press the verb again."))
 
 #undef AREASELECT_CORNERA
 #undef AREASELECT_CORNERB
