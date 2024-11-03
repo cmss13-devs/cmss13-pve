@@ -81,6 +81,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/other_records,
 	/client/proc/fortify_room,
 	/datum/admins/proc/create_human_ai_sniper,
+	/client/proc/quick_order_human_ai,
 	))
 
 
