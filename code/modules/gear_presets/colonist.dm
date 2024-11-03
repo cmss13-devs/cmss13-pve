@@ -33,7 +33,6 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,40)
 
-
 /datum/equipment_preset/colonist/bluecollar
 
 	name = "Civilian Colonist, Blue-Collar"
@@ -578,7 +577,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Colonial Guardsman"
-	paygrades = list(PAY_SHPAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id/dogtag
