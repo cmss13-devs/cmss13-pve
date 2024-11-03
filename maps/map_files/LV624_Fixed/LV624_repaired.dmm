@@ -17880,7 +17880,6 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "xlU" = (
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/clf,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "xnh" = (
