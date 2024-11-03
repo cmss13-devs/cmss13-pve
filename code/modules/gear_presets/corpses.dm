@@ -112,7 +112,7 @@
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/datum/equipment_preset/corpse/corporate/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/corpse/whitecollar/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
 		return "Class B Inhabitant"
 
