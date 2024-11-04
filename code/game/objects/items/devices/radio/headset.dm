@@ -21,7 +21,7 @@
 
 	var/list/inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_SL,
+		"Section Sergeant" = TRACKER_SL,
 		"Squad Sergeant" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
@@ -410,8 +410,8 @@
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 
-	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Platoon Sergeant" in tracking_options))
-		locate_setting = tracking_options["Platoon Sergeant"]
+	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Section Sergeant" in tracking_options))
+		locate_setting = tracking_options["Section Sergeant"]
 		return
 
 	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Sergeant" in tracking_options))
@@ -614,7 +614,7 @@
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Section Sergeant" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
