@@ -635,6 +635,7 @@
 	item_state = "headset"
 	frequency = ALPHA_FREQ
 
+//############################## VISIBLE HEADSETS ###############################
 /obj/item/device/radio/headset/almayer/marine/solardevils
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
@@ -660,6 +661,32 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp
+	name = "UPP Naval Infantry headset"
+	desc = "A special headset used by UPP military."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	frequency = UPP_FREQ
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_UPP
+	minimap_type = MINIMAP_FLAG_UPP
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
+	name = "UPP Territorial Guard headset"
+	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."
+	frequency = UPP_GRD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/medic
+	name = "UPP-MED headset"
+	desc = "A special headset used by UPP military. Channels are as follows: #m - medical."
+	frequency = UPP_GRD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/medic)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/command
+	name = "UPP-CMD headset"
+	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
+	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
