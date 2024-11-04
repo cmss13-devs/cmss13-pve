@@ -590,7 +590,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 					else
 						below_band_layer += "helmet_[O.icon_state]"
 				else
-					if(has_helmet_band)
+					if(has_band)
 						above_band_layer += GLOB.allowed_helmet_items[O.type]
 					else
 						below_band_layer += GLOB.allowed_helmet_items[O.type]
