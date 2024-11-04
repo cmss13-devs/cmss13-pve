@@ -25,7 +25,7 @@
 	var/requires_battery = TRUE
 	/// Whether the smartgun requires a harness to use
 	var/requires_harness = TRUE
-	ammo = /datum/ammo/bullet/smartgun
+	ammo = /datum/ammo/bullet/rifle/heavy
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -36,13 +36,13 @@
 	)
 	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
 	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
+	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/hvap //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
-	var/secondary_toggled = 0 //which ammo we use
 	var/recoil_compensation = 0
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
-	var/drain = 11
+	var/drain = 15
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
@@ -70,6 +70,8 @@
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
 	ammo_secondary = GLOB.ammo_list[ammo_secondary]
+	ammo_tertiary = GLOB.ammo_list[ammo_tertiary]
+	ammo = ammo_primary
 	MD = new(src)
 	battery = new /obj/item/smartgun_battery(src)
 	. = ..()
@@ -78,6 +80,7 @@
 /obj/item/weapon/gun/smartgun/Destroy()
 	ammo_primary = null
 	ammo_secondary = null
+	ammo_tertiary = null
 	QDEL_NULL(MD)
 	QDEL_NULL(battery)
 	. = ..()
@@ -302,8 +305,10 @@
 
 /datum/action/item_action/smartgun/toggle_ammo_type/proc/update_icon()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
-	if(G.secondary_toggled)
+	if(G.ammo == G.ammo_secondary)
 		action_icon_state = "ammo_swap_ap"
+	if(G.ammo == G.ammo_tertiary)
+		action_icon_state = "ammo_swap_pen"
 	else
 		action_icon_state = "ammo_swap_normal"
 	button.overlays.Cut()
@@ -338,24 +343,38 @@
 	if(!iff_enabled)
 		to_chat(user, "[icon2html(src, usr)] Can't switch ammunition type when \the [src]'s fire restriction is disabled.")
 		return
-	secondary_toggled = !secondary_toggled
-	to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire [secondary_toggled ? "armor shredding rounds" : "highly precise rounds"].")
-	balloon_alert(user, "firing [secondary_toggled ? "armor shredding" : "highly precise"]")
+	if(ammo == ammo_primary)
+		ammo = ammo_secondary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire armor-piercing rounds.")
+		balloon_alert(user, "firing armor-piercing")
+		drain += 50
+	else if(ammo == ammo_secondary)
+		ammo = ammo_tertiary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire high-velocity armor-piercing rounds.")
+		balloon_alert(user, "firing HVAP")
+		drain += 80
+	else
+		ammo = ammo_primary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds.")
+		balloon_alert(user, "firing highly precise")
+		drain -= 130
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
 	TAT.update_icon()
 
 /obj/item/weapon/gun/smartgun/replace_ammo()
+	var/old_ammo = ammo
 	..()
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
+	if(old_ammo)
+		ammo = old_ammo
 
 /obj/item/weapon/gun/smartgun/proc/toggle_lethal_mode(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	iff_enabled = !iff_enabled
 	ammo = ammo_primary
-	secondary_toggled = FALSE
+	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
+	TAT.update_icon()
 	if(iff_enabled)
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
 		drain += 10
@@ -675,6 +694,7 @@
 	ammo = /obj/item/ammo_magazine/smartgun/dirty
 	ammo_primary = /datum/ammo/bullet/smartgun/dirty//Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/smartgun/dirty/armor_piercing///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/smartgun/dirty/hvap
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
@@ -750,6 +770,7 @@
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo_primary = /datum/ammo/bullet/smartgun/holo_target //Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/smartgun/holo_target/ap ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/smartgun/holo_target/hvap
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"
@@ -764,4 +785,3 @@
 	name = "XM56E smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
-
