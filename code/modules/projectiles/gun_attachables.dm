@@ -921,14 +921,6 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
-/obj/item/attachable/magnetic_harness/pve_sling
-	name = "two-point sling"
-	desc = "A traditional, two-point sling compatible with most longarms in the UA armed forces arsenals. Can get in slightly the way of the grip, but surely that's better than losing your rifle, right?"
-	icon_state = "pve-sling"
-	attach_icon = "pve-sling_a"
-	wield_delay_mod = WIELD_DELAY_VERY_FAST
-	retrieval_slot = WEAR_BACK
-
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
@@ -1191,7 +1183,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "AN/RVS-52 CCD Television Sight System"
 	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions."
 	icon_state = "pvescope"
-	zoom_offset = 5
+	zoom_offset = 3
 	zoom_viewsize = 7
 	allows_movement = TRUE
 	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC

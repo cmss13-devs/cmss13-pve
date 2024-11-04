@@ -4456,8 +4456,12 @@
 	pixel_y = 11
 	},
 /obj/item/prop/helmetgarb/flair_io{
-	pixel_x = -5;
+	pixel_x = -8;
 	pixel_y = -9
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 5;
+	pixel_y = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
