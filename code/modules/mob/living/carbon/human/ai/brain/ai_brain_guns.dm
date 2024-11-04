@@ -42,6 +42,7 @@
 
 	currently_reloading = TRUE
 	currently_busy = TRUE
+	currently_firing = FALSE
 
 	var/obj/item/ammo_magazine/mag = primary_ammo_search()
 	if(!mag)
@@ -52,31 +53,7 @@
 		currently_reloading = FALSE
 		currently_busy = FALSE
 		return //soz
-	unholster_primary()
-	ensure_primary_hand(primary_weapon)
-	primary_weapon.unwield(tied_human)
-	sleep(short_action_delay * action_delay_mult)
-	if(!(primary_weapon?.flags_gun_features & GUN_INTERNAL_MAG) && primary_weapon?.current_mag)
-		primary_weapon?.unload(tied_human, FALSE, TRUE, FALSE)
-	tied_human.swap_hand()
-	sleep(micro_action_delay * action_delay_mult)
-	equip_item_from_equipment_map(HUMAN_AI_AMMUNITION, mag)
-	sleep(short_action_delay * action_delay_mult)
-	if(istype(mag, /obj/item/ammo_magazine/handful))
-		for(var/i in 1 to mag.current_rounds)
-			primary_weapon?.attackby(mag, tied_human)
-			sleep(micro_action_delay * action_delay_mult)
-		if(!QDELETED(mag) && (mag.current_rounds > 0))
-			var/storage_slot = storage_has_room(mag)
-			if(storage_slot)
-				store_item(mag, storage_slot)
-			else
-				tied_human.drop_held_item(mag)
-	else
-		primary_weapon?.attackby(mag, tied_human)
-	sleep(short_action_delay * action_delay_mult)
-	tied_human.swap_hand()
-	primary_weapon?.wield(tied_human)
+	gun_data.do_reload(mag, tied_human, src)
 #ifdef TESTING
 	to_chat(world, "[tied_human.name] reloaded [primary_weapon].")
 #endif
