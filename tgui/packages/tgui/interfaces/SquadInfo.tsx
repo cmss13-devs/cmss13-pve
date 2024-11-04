@@ -34,7 +34,7 @@ interface FireTeams {
 }
 
 interface SquadProps {
-  pltsgt?: SquadLeadEntry;
+  sctsgt?: SquadLeadEntry;
   fireteams: FireTeams;
   mar_free: SquadMarineEntry[];
   total_mar: number;
@@ -44,7 +44,7 @@ interface SquadProps {
   squad: string;
   partial_squad_ref: string;
   squad_color: string;
-  is_lead: 'pltsgt' | 'SQ1' | 'SQ2' | 0;
+  is_lead: 'sctsgt' | 'SQ1' | 'SQ2' | 0;
   objective: { primary?: string; secondary?: string };
 }
 
@@ -101,7 +101,7 @@ const FireTeamLead = (props: {
       </Flex.Item>
       <Flex.Item>
         {assignedFireteamLead.name !== 'Not assigned' &&
-          data.is_lead === 'pltsgt' && <Button icon="xmark" onClick={demote} />}
+          data.is_lead === 'sctsgt' && <Button icon="xmark" onClick={demote} />}
       </Flex.Item>
     </Flex>
   );
@@ -166,7 +166,7 @@ const FireTeam = (props: { readonly sqsgt: string }) => {
                   <TableCell className="RoleCell">Role</TableCell>
                   <TableCell className="RankCell">Rank</TableCell>
                   <TableCell className="MemberCell">Member</TableCell>
-                  {data.is_lead === 'pltsgt' && (
+                  {data.is_lead === 'sctsgt' && (
                     <TableCell className="ActionCell">
                       {props.sqsgt === 'Unassigned' ? 'Assign FT' : 'Actions'}
                     </TableCell>
@@ -234,7 +234,7 @@ const FireTeamMember = (props: {
       <TableCell>{props.member.paygrade}</TableCell>
       <TableCell>{props.member.name}</TableCell>
 
-      {data.is_lead === 'pltsgt' && (
+      {data.is_lead === 'sctsgt' && (
         <TableCell>
           <Stack fill justify="center">
             {props.team === 'Unassigned' && (
@@ -290,8 +290,8 @@ export const SquadInfo = () => {
         <Flex fill={1} justify="space-around" direction="column">
           <Flex.Item>
             <Section
-              title={`${data.squad} Platoon Sergeant: ${
-                data.pltsgt?.name ?? 'None'
+              title={`${data.squad} Section Sergeant: ${
+                data.sctsgt?.name ?? 'None'
               }`}
             >
               <SquadObjectives />

@@ -62,3 +62,14 @@
       CN Mortar does less direct explosive damage.
   - rscdel: Removed old "CN-20 Missile" reference from FS menu that shouldn't be in
       the missiles menu
+2024-10-31:
+  GriffinMan4455:
+  - rscadd: Made destroyed airlocks spawn an airlock assembly on the tiles they cover,
+      this includes both Airlocks and Multitiles.
+  - balance: Airlocks have much more damage_cap, meaning it takes more rounds from
+      a marine to kill them, Xeno damage unchanged.
+  Max-023:
+  - qol: Platoon Sergeant is now called Section Sergeant
+  - qol: Squad Sergeant description now references the Section Sergeant properly
+  - spellcheck: Fixed a typo in the corpsman description that implies they are part
+      of a squad, not a section or platoon.
