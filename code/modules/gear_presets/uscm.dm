@@ -641,7 +641,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/leader_equipped/random
-	name = "USCM Platoon Sergeant (Equipped Random)"
+	name = "USCM Section Sergeant (Equipped Random)"
 
 /datum/equipment_preset/uscm/leader_equipped/random/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
