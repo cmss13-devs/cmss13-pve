@@ -76,8 +76,8 @@
 	new /obj/item/clothing/shoes/black(src)
 
 /obj/structure/closet/secure_closet/platoon_sergeant
-	name = "platoon sergeant locker"
-	desc = "A secure storage unit for the platoon sergeant."
+	name = "section sergeant locker"
+	desc = "A secure storage unit for the section sergeant."
 	req_one_access = list(ACCESS_MARINE_LEADER)
 
 /obj/structure/closet/secure_closet/platoon_sergeant/Initialize()
