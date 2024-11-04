@@ -865,23 +865,6 @@
 	icon_state = "3"
 	specialty = "M3 pattern smooth marine"
 
-/obj/item/clothing/suit/marine/pads
-//same as the base armor, but this time has the shoulder pads
-/obj/item/clothing/suit/marine/pads/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/pads = new()
-	src.attach_accessory(null, pads, TRUE)
-
-/obj/item/clothing/suit/marine/pads/lines
-	name = "M3 pattern ridged marine armor"
-	icon_state = "2"
-	specialty = "M3 pattern ridged marine"
-
-/obj/item/clothing/suit/marine/pads/smooth
-	name = "M3 pattern smooth marine armor"
-	icon_state = "3"
-	specialty = "M3 pattern smooth marine"
-
 /obj/item/clothing/suit/marine/light
 	name = "\improper M3-L pattern light armor"
 	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for less weight."
@@ -895,8 +878,8 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
 /obj/item/clothing/suit/marine/light/lines
 	name = "M3 pattern ridged marine armor"
@@ -908,25 +891,9 @@
 	icon_state = "L3"
 	armor_variation = 0
 
-/obj/item/clothing/suit/marine/light/pads
-
-/obj/item/clothing/suit/marine/light/pads/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/pads = new()
-	src.attach_accessory(null, pads, TRUE)
-
-/obj/item/clothing/suit/marine/light/pads/lines
-	name = "M3 pattern ridged marine armor"
-	icon_state = "L2"
-	armor_variation = 0
-
-/obj/item/clothing/suit/marine/light/pads/smooth
-	name = "M3 pattern smooth marine armor"
-	icon_state = "L3"
-	armor_variation = 0
-
-/obj/item/clothing/suit/marine/light/pads/standard
+/obj/item/clothing/suit/marine/light/standard
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
 
 /obj/item/clothing/suit/marine/heavy
 	name = "\improper M3-H pattern heavy armor"
@@ -953,24 +920,7 @@
 	icon_state = "L3"
 	armor_variation = 0
 
-/obj/item/clothing/suit/marine/heavy/pads
-
-/obj/item/clothing/suit/marine/heavy/pads/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/pads = new()
-	src.attach_accessory(null, pads, TRUE)
-
-/obj/item/clothing/suit/marine/heavy/pads/lines
-	name = "M3 pattern ridged marine armor"
-	icon_state = "L2"
-	armor_variation = 0
-
-/obj/item/clothing/suit/marine/heavy/pads/smooth
-	name = "M3 pattern smooth marine armor"
-	icon_state = "L3"
-	armor_variation = 0
-
-/obj/item/clothing/suit/marine/pads/rto
+/obj/item/clothing/suit/marine/rto
 	icon_state = "io"
 	name = "\improper M4 pattern marine armor"
 	desc = "A well tinkered and crafted hybrid of Smart-Gunner mesh and M3 pattern plates. Robust, yet nimble, with room for all your pouches."
@@ -979,18 +929,23 @@
 	light_range = 5 //slightly higher
 	specialty = "M4 pattern marine"
 
-/obj/item/clothing/suit/marine/pads/rto/intel
+/obj/item/clothing/suit/marine/rto/intel
 	name = "\improper XM4 pattern intelligence officer armor"
 	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/marine/officer/intel)
 	specialty = "XM4 pattern intel"
 
-/obj/item/clothing/suit/marine/pads/rto/forecon
+/obj/item/clothing/suit/marine/rto/forecon
 	name = "\improper M3-R pattern recon armor"
 	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued exclusively to FORECON units."
 	icon_state = "L1"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-/obj/item/clothing/suit/marine/pads/leader
+/obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/pads = new()
+	src.attach_accessory(null, pads, TRUE)
+
+/obj/item/clothing/suit/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
 	icon_state = "7"

@@ -146,8 +146,8 @@
 		/obj/item/storage/large_holster/machete/smartgunner,
 		/obj/item/weapon/gun/smartgun,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_SGDECOR, ACCESSORY_SLOT_PAINT)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_LEGDECOR, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_LEGDECOR, ACCESSORY_SLOT_PAINT)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
@@ -156,9 +156,6 @@
 	else
 		name = "\improper M56 combat harness"
 	//select_gamemode_skin(type)
-
-	var/obj/item/clothing/accessory/pads/m56/m56 = new()
-	src.attach_accessory(null, m56, TRUE)
 
 /obj/item/clothing/suit/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
 	. = ..()

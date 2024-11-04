@@ -1084,12 +1084,19 @@
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
-/obj/item/clothing/accessory/pads/m56
+/obj/item/clothing/accessory/pads/greaves
 	name = "\improper M3 Shin Guards"
-	desc = "A set shinguards usually shipped with M3 pattern armor, though this set has been repurposed."
+	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
 	icon_state = "shinguards"
 	item_state = "shinguards"
-	slot = ACCESSORY_SLOT_SGDECOR
+	slot = ACCESSORY_SLOT_LEGDECOR
+
+/obj/item/clothing/accessory/pads/groin
+	name = "\improper M3 Groin Plate"
+	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the USCMC often seen worn than not."
+	icon_state = "groinplate"
+	item_state = "groinplate"
+	slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 

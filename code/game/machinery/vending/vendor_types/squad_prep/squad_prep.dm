@@ -118,9 +118,13 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("M3 Pattern Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Ridged Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads/lines, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Smooth Marine Armor", round(scale * 15), /obj/item/clothing/suit/marine/pads/smooth, VENDOR_ITEM_REGULAR),
+		list("Standard M3 Pattern Armor Set", round(scale * 15), /obj/item/storage/box/guncase/m3armor, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Ridged Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine/lines, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Smooth Chestpiece", round(scale * 10), /obj/item/clothing/suit/marine/smooth, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Shoulder Pauldrons", round(scale * 10), /obj/item/clothing/accessory/pads, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Groin Plate", round(scale * 10), /obj/item/clothing/accessory/pads/groin, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Greaves", round(scale * 15), /obj/item/clothing/accessory/pads/greaves, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Arm Bracers", round(scale * 10), /obj/item/clothing/accessory/pads/bracers, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Neck Brace", round(scale * 15), /obj/item/clothing/accessory/pads/neckguard, VENDOR_ITEM_REGULAR),
 
@@ -180,6 +184,25 @@
 		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		)
+
+/obj/item/storage/box/guncase/m3armor //forgive me, father
+	name = "\improper M3 Pattern Armor case"
+	desc = "A case containing the standard issue parts of the M3 Pattern Armor set of the USCMC. No parts sold separately."
+	can_hold = list(/obj/item/clothing/suit/marine, /obj/item/clothing/accessory/pads/groin, /obj/item/clothing/accessory/pads, /obj/item/clothing/accessory/pads/greaves)
+	storage_slots = 4
+
+/obj/item/storage/box/guncase/m3armor/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine(src)
+	new /obj/item/clothing/accessory/pads(src)
+	new /obj/item/clothing/accessory/pads/groin(src)
+	new /obj/item/clothing/accessory/pads/greaves(src)
+
+/obj/effect/essentials_set/m3
+	spawned_gear_list = list(
+		/obj/item/clothing/suit/marine,
+		/obj/item/clothing/accessory/pads/greaves,
+		/obj/item/clothing/accessory/pads/groin,
+	)
 
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp
@@ -278,7 +301,8 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/pads/rto/forecon, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Greaves", round(scale * 10), /obj/item/clothing/accessory/pads/greaves, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/standard, VENDOR_ITEM_REGULAR),
@@ -656,14 +680,14 @@
 //------------ESSENTIAL SETS---------------
 /obj/effect/essentials_set/random/uscm_light_armor
 	spawned_gear_list = list(
-		/obj/item/clothing/suit/marine/light/pads/lines,
-		/obj/item/clothing/suit/marine/light/pads/smooth,
+		/obj/item/clothing/suit/marine/light/lines,
+		/obj/item/clothing/suit/marine/light/smooth,
 	)
 
 /obj/effect/essentials_set/random/uscm_heavy_armor
 	spawned_gear_list = list(
-		/obj/item/clothing/suit/marine/heavy/pads/lines,
-		/obj/item/clothing/suit/marine/heavy/pads/smooth,
+		/obj/item/clothing/suit/marine/heavy/lines,
+		/obj/item/clothing/suit/marine/heavy/smooth,
 	)
 
 //------------MARINE CIVILIAN CLOTHING---------------
