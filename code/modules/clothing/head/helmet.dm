@@ -585,7 +585,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 				if(has_band)
 					has_helmet_band = TRUE
 				if(GLOB.allowed_helmet_items[O.type] == HELMET_GARB_RELAY_ICON_STATE)
-					if(has_helmet_band)
+					if(has_band)
 						above_band_layer += "helmet_[O.icon_state]"
 					else
 						below_band_layer += "helmet_[O.icon_state]"
