@@ -661,12 +661,23 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+	var/maybecap = rand(1,3)
+	switch(maybecap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/req, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/req, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/req, WEAR_IN_BACK)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
-
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
 	//waist

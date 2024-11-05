@@ -260,6 +260,43 @@
 	name = "Corpse - Prisoner (Burst)"
 	xenovictim = TRUE
 
+/datum/equipment_preset/corpse/guard
+	name = "Corpse - Security Guard, Prison"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	assignment = "Corrections Officer"
+	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/marshal
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
+
+/datum/equipment_preset/corpse/guard/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/corrections, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/corpse/guard/burst
+	name = "Corpse - Security Guard, Prison (Burst)"
+	xenovictim = TRUE
+
 //*****************************************************************************************************/
 
 //UPP
@@ -362,7 +399,75 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid, WEAR_L_STORE)
 
 /datum/equipment_preset/corpse/upp/burst
-	name = "Corpse - Burst UPP Squad Rifleman"
+	name = "Corpse - UPP Squad Rifleman (Burst)"
+	xenovictim = TRUE
+
+/datum/equipment_preset/corpse/royal_marine
+	name = "Corpse - TWE Squad Rifleman"
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Royal Marines Rifleman"
+	rank = JOB_TWE_RMC_RIFLEMAN
+	skills = /datum/skills/rmc
+
+/datum/equipment_preset/corpse/royal_marine/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/royal_marine, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/rmc_f90, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/rmc_f90_ammo, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+
+/datum/equipment_preset/corpse/royal_marine/burst
+	name = "Corpse - TWE Squad Rifleman (Burst)"
+	xenovictim = TRUE
+
+/datum/equipment_preset/corpse/uscm
+	name = "Corpse - USCM Squad Rifleman"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+	access = list(ACCESS_MARINE_PREP)
+	assignment = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_MARINE
+	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
+	role_comm_title = "RFN"
+	skills = /datum/skills/pfc
+
+	minimap_icon = "private"
+
+/datum/equipment_preset/corpse/uscm/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/corpse/uscm/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human.back), WEAR_IN_BACK)
+
+/datum/equipment_preset/corpse/uscm/burst
+	name = "Corpse - USCM Squad Rifleman (Burst)"
 	xenovictim = TRUE
 
 //*****************************************************************************************************/

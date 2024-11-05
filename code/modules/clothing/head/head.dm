@@ -379,8 +379,8 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/req
-	name = "\improper USCM requisition cap"
-	desc = "It's a not-so-fancy hat for a not-so-fancy military supply clerk."
+	name = "\improper khaki patrol cap"
+	desc = "A khaki patrol cap."
 	icon_state = "cargocap"
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
@@ -414,7 +414,7 @@
 	)
 
 /obj/item/clothing/head/cmcap/corrections
-	name = "dark blue cap"
+	name = "dark blue patrol cap"
 	desc = "A dark blue patrol cap."
 	icon_state = "corrections"
 	item_state = "corrections"
