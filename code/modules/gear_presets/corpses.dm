@@ -386,6 +386,34 @@
 	name = "Corpse - Security Guard, Wey-Yu (Burst)"
 	xenovictim = TRUE
 
+/datum/equipment_preset/corpse/cmb
+	name = "Corpse - Colonial Marshals Deputy"
+	paygrades = list(PAY_SHORT_CMBD = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "CMB DEP"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Office of Colonial Marshals Deputy"
+	rank = JOB_CMB
+	skills = /datum/skills/cmb
+
+/datum/equipment_preset/corpse/cmb/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/limited, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/CM_uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/spearhead, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/spearhead, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/spearhead, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
+
+/datum/equipment_preset/corpse/cmb/burst
+	name = "Corpse - Colonial Marshals Deputy (Burst)"
+	xenovictim = TRUE
+
 //*****************************************************************************************************/
 
 //UPP
