@@ -382,7 +382,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/colonist/corpse/security/burst
+/datum/equipment_preset/corpse/security/burst
 	name = "Corpse - Security Guard, Wey-Yu (Burst)"
 	xenovictim = TRUE
 
