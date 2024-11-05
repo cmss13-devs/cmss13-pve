@@ -347,10 +347,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/corpse/riot/burst
-	name = "Corpse - Security Guard, UA Colonial Guard"
+	name = "Corpse - Security Guard, UA Colonial Guard (Burst)"
 	xenovictim = TRUE
 
-/datum/equipment_preset/colonist/corpse/security
+/datum/equipment_preset/corpse/security
 	name = "Corpse - Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
