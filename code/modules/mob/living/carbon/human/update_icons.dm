@@ -461,7 +461,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 		overlays_standing[HEAD_LAYER] = I
 		apply_overlay(HEAD_LAYER)
 
-		if(istype(head, /obj/item/clothing/head/helmet/marine))
+		if(istype(head, /obj/item/clothing/head/helmet/marine) || istype(head, /obj/item/clothing/head/helmet/upp))
 			var/obj/item/clothing/head/helmet/marine/marine_helmet = head
 			if(assigned_squad && marine_helmet.flags_marine_helmet & HELMET_SQUAD_OVERLAY)
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
