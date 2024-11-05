@@ -1306,6 +1306,13 @@
 	worn_state = "ua_boiler"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/under/marine/officer/engi/army
+	name = "\improper technical engineers uniform"
+	desc = "The uniform of a US Army technical engineer. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
+	icon_state = "ua_boiler"
+	worn_state = "ua_boiler"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
 /obj/item/clothing/under/marine/officer/pilot/flight/para
 	name = "\improper para-rescue flightsuit"
 	desc = "A flightsuit worn by the elite para-rescue forces of the USASF, with all the necessary straps and rigging for supporting the sheer balls these servicemen have. Looks badass."
@@ -1322,4 +1329,9 @@
 	name = "\improper army combat uniform"
 	desc = "Standard-issue Army uniform, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/army, )
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/officer/boiler/army
+	name = "\improper army operations uniform"
+	desc = "An Army uniform favoured by those rarely on the field, a little outdated."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
