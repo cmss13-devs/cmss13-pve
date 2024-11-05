@@ -412,6 +412,7 @@
 	name = "\improper UPP service uniform jacket"
 	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_service"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss
 	name = "\improper MSS uniform jacket"

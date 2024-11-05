@@ -239,6 +239,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/whitecollar/exec/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(25))
@@ -272,6 +273,7 @@
 	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/researcher
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_RESEARCH)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/researcher/load_gear(mob/living/carbon/human/new_human)
 
@@ -316,6 +318,7 @@
 	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/doctor
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
 
@@ -364,6 +367,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/admin/load_gear(mob/living/carbon/human/new_human)
 
@@ -618,6 +622,7 @@
 	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/security/prison/load_gear(mob/living/carbon/human/new_human)
 
