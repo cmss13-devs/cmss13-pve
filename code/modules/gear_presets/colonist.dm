@@ -560,7 +560,6 @@
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 
-
 /datum/equipment_preset/colonist/security/weyland/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -696,6 +695,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/spanish
+	name = "Civilian Security Guard, UA Colonial Guard (Spanish)"
+	languages = list(LANGUAGE_SPANISH)
 
 	//back
 	//face

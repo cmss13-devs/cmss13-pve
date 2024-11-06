@@ -1267,3 +1267,9 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/delta(new_human), WEAR_FACE)
+
+/datum/equipment_preset/proc/add_money_poor(mob/living/carbon/human/new_human)
+	var/obj/item/spacecash/bundle/money = new /obj/item/spacecash/bundle
+	money.worth = 50
+	money.update_icon()
+	new_human.equip_to_slot_or_del(money, WEAR_IN_BACK)
