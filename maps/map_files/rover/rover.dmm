@@ -1196,12 +1196,12 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "mX" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Sergeant"
+	job = "Section Sergeant"
+	},
+/obj/structure/machinery/light{
+	dir = 4
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/clothing/under/marine/standard,
@@ -1530,7 +1530,7 @@
 "qI" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Corpsman"
+	job = "Corpsman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
 /obj/item/clothing/under/marine/medic/standard,
