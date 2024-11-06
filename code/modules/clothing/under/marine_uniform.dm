@@ -1328,7 +1328,7 @@
 /obj/item/clothing/under/marine/standard/army
 	name = "\improper army combat uniform"
 	desc = "Standard-issue Army uniform, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/army, )
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/army, /obj/item/clothing/suit/storage/marine/smartgunner)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/boiler/army

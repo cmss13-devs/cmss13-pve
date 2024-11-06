@@ -27,6 +27,7 @@
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
+	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
 	var/skill_locked = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
