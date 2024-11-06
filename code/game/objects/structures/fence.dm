@@ -62,7 +62,7 @@
 		tforce = 40
 	else if(isobj(AM))
 		var/obj/item/I = AM
-		tforce = I.throwforce
+		tforce = I.throwforce/5 //Adjust higher if needed to stop knife-throwing bampots
 	health = max(0, health - tforce)
 	healthcheck()
 
