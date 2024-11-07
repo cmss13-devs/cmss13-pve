@@ -88,6 +88,10 @@
 	//limbs
 	add_worker_shoe(new_human)
 
+/datum/equipment_preset/colonist/bluecollar/spanish
+	name = "Civilian Colonist, Blue-Collar (Spanish)"
+	languages = list(LANGUAGE_SPANISH)
+
 /datum/equipment_preset/colonist/construction
 	name = "Civilian Colonist, Blue-Collar (Construction)"
 	assignment = "Construction Worker"
@@ -153,6 +157,10 @@
 	add_worker_gloves(new_human)
 	add_worker_shoe(new_human)
 
+/datum/equipment_preset/colonist/roughneck/spanish
+	name = "Civilian Colonist, Blue-Collar (Roughneck, Spanish)"
+	languages = list(LANGUAGE_SPANISH)
+
 /datum/equipment_preset/colonist/cook
 	name = "Civilian Colonist, Blue-Collar (Cook)"
 	assignment = "Cook"
@@ -177,6 +185,10 @@
 	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
 	//limbs
 	add_worker_shoe(new_human)
+
+/datum/equipment_preset/colonist/cook/spanish
+	name = "Civilian Colonist, Blue-Collar (Cook, Spanish)"
+	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/chef
 	name = "Civilian Colonist, Blue-Collar (Chef)"
