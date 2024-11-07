@@ -422,7 +422,7 @@
 	garbage = FALSE
 
 /obj/item/clothing/glasses/mgoggles/prescription
-	name = "custom ballistic goggles"
+	name = "prescription ballistic goggles"
 	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom clear prescription lenses rated for ballistic protection."
 	icon_state = "mgoggles"
 	prescription = TRUE
