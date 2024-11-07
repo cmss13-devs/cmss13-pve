@@ -18,7 +18,7 @@
 	underslug_launchable = TRUE
 	var/explosion_power = 100
 	var/explosion_falloff = 25
-	var/shrapnel_count = 48
+	var/shrapnel_count = 32
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
@@ -126,7 +126,7 @@
 	hand_throwable = FALSE
 	det_time = 10
 	explosion_power = 40
-	shrapnel_count = 64
+	shrapnel_count = 48
 	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 

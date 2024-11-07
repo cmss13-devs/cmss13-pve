@@ -66,7 +66,7 @@
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
-	max_range = 10
+	max_range = 8
 	damage = 35
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
