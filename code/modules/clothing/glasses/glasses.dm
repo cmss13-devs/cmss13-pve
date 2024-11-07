@@ -436,7 +436,7 @@
 	eye_protection = EYE_PROTECTION_FLASH
 
 /obj/item/clothing/glasses/mgoggles/black/prescription
-	name = "custom sun-shaded ballistic goggles"
+	name = "prescription sun-shaded ballistic goggles"
 	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom dark sunshade prescription lenses rated for ballistic protection."
 	icon_state = "mgogglesblk"
 	active_icon_state = "mgogglesblk_down"
