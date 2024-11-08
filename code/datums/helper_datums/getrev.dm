@@ -41,6 +41,8 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 	return msg.Join("\n")
 
 /datum/getrev/proc/GetTestMergeInfo(header = TRUE)
+	return
+/*
 	if(!length(testmerge))
 		return ""
 	. = header ? "The following pull requests are currently test merged:<br>" : ""
@@ -50,7 +52,7 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.admin_holder))
 			continue
-		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a><br>"
+		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a><br>"*/
 
 /client/verb/showrevinfo()
 	set category = "OOC"

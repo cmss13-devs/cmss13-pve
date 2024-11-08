@@ -2115,6 +2115,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\castes\caste_datum.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Crusher.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Defender.dm"
+#include "code\modules\mob\living\carbon\xenomorph\castes\Defiler.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Drone.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Facehugger.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Hellhound.dm"

@@ -881,7 +881,14 @@
 	var/currentHealthRatio = 1
 	if(health < maxHealth)
 		currentHealthRatio = health / maxHealth
-	maxHealth = new_max_health
+	if(!GLOB.blackshift)
+		maxHealth = new_max_health
+	else
+		maxHealth = new_max_health * 1.5
+		enable_pixel_scaling()
+		var/matrix/base_matrix = matrix(base_transform)
+		crit_health = -200
+		update_base_transform(base_matrix.Scale(1.1,1.1))
 	health = floor(maxHealth * currentHealthRatio + 0.5)//Restore our health ratio, so if we're full, we continue to be full, etc. Rounding up (hence the +0.5)
 	if(health > maxHealth)
 		health = maxHealth
@@ -910,12 +917,21 @@
 /mob/living/carbon/xenomorph/proc/recalculate_armor()
 	//We are calculating it in a roundabout way not to give anyone 100% armor deflection, so we're dividing the differences
 	armor_deflection = armor_modifier + floor(100 - (100 - caste.armor_deflection))
+	var/current_armor = armor_deflection
+	if(GLOB.blackshift)
+		armor_deflection = current_armor * 1.2
 	armor_explosive_buff = explosivearmor_modifier
 
 /mob/living/carbon/xenomorph/proc/recalculate_damage()
-	melee_damage_lower = damage_modifier
-	melee_damage_upper = damage_modifier
-	melee_vehicle_damage = damage_modifier
+	if(!GLOB.blackshift)
+		melee_damage_lower = damage_modifier
+		melee_damage_upper = damage_modifier
+		melee_vehicle_damage = damage_modifier
+	else
+		melee_damage_lower = damage_modifier * 1.2
+		melee_damage_upper = damage_modifier  * 1.2
+		melee_vehicle_damage = damage_modifier  * 1.2
+		acid_blood_damage = initial(acid_blood_damage) * 1.2
 	if(caste)
 		melee_damage_lower += caste.melee_damage_lower
 		melee_damage_upper += caste.melee_damage_upper

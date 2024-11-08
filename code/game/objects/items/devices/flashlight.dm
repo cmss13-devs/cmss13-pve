@@ -330,7 +330,11 @@
 /obj/item/device/flashlight/flare/Initialize()
 	. = ..()
 	fuel = rand(9.5 MINUTES, 10.5 MINUTES)
-	set_light_color(flame_tint)
+	if(!GLOB.blackshift)
+		set_light_color(flame_tint)
+	else
+		set_light_color("#ff0000")
+		light_range = 4
 
 /obj/item/device/flashlight/flare/update_icon()
 	overlays?.Cut()

@@ -395,3 +395,30 @@
 
 /datum/ammo/xeno/oppressor_tail/proc/remove_tail_overlay(mob/overlayed_mob, image/tail_image)
 	overlayed_mob.overlays -= tail_image
+
+/datum/ammo/xeno/acid/defiler
+	name = "acid glob"
+
+	accuracy = HIT_ACCURACY_TIER_10 + HIT_ACCURACY_TIER_5
+	max_range = 8
+	damage = 30
+	shell_speed = 0.75
+	added_spit_delay = 0
+	icon_state = "acid_glob"
+	ping = "ping_x"
+
+/datum/ammo/xeno/acid/defiler/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, reagent = /datum/reagent/napalm/gel)
+	))
+
+/datum/ammo/xeno/acid/defiler/on_hit_mob(mob/moob, obj/projectile/proj)
+	if(iscarbon(moob))
+		var/mob/living/carbon/carbon = moob
+		if(carbon.status_flags & XENO_HOST && HAS_TRAIT(carbon, TRAIT_NESTED) || carbon.stat == DEAD)
+			return
+	to_chat(moob,SPAN_HIGHDANGER("Acid covers your body and suddenly combusts! Oh fuck!"))
+	moob.visible_message(SPAN_DANGER("<b>[moob]</b> is hit by an acid glob and instantly ignites into noxious green flame!"))
+	playsound(moob,"acid_strike",75,1)
+	INVOKE_ASYNC(moob, TYPE_PROC_REF(/mob, emote), "pain") // why do I need this bullshit

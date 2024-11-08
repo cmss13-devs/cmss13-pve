@@ -383,12 +383,12 @@
 	action_type = XENO_ACTION_CLICK
 
 	plasma_cost = 40
-	xeno_cooldown = 80
+	xeno_cooldown = 1
 
 
 	// Configurable options
 
-	var/spray_type = ACID_SPRAY_LINE // Enum for the shape of spray to do
+	var/spray_type = ACID_SPRAY_CONE // Enum for the shape of spray to do
 	var/spray_distance = 5 // Distance to spray
 	var/spray_effect_type = /obj/effect/xenomorph/spray
 
@@ -470,11 +470,11 @@
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_1
 	cooldown_message = "We feel our neurotoxin glands swell with ichor. We can spit again."
-	xeno_cooldown = 60 SECONDS
+	xeno_cooldown = 1
 
 	/// Var that keeps track of in-progress wind-up spits like Bombard to prevent spitting multiple spits at the same time
 	var/spitting = FALSE
-	var/sound_to_play = "acid_spit"
+	var/sound_to_play = 'sound/effects/blobattack.ogg'
 	var/aim_turf = FALSE
 
 /datum/action/xeno_action/activable/xeno_spit/queen_macro //so it doesn't screw other macros up
