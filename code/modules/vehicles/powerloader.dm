@@ -302,6 +302,10 @@
 			return
 		load_target_tag = "floodlight"
 
+	else if(istypestrict(target, /obj/structure/safe))
+		var/obj/structure/safe/safe = target
+		load_target_tag = "safe"
+
 	if(!load_target_tag)
 		return
 	grab_object(user, target, load_target_tag)
