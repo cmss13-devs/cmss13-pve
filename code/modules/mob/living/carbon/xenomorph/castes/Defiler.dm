@@ -77,3 +77,8 @@
 	smoke.attach(src)
 	smoke.cause_data = create_cause_data(initial(caste_type), src)
 	AddComponent(/datum/component/footstep, 2, 25, 11, 2, "alien_footstep_medium")
+
+/mob/living/carbon/xenomorph/defiler/bullet_act(obj/projectile/Proj)
+	..()
+	if(prob(25))
+		visible_message(SPAN_WARNING("<font size=5>Bullets seem to <b>instantly melt</b> upon penetrating <b>Defiler's</b> chitin!</font>"))

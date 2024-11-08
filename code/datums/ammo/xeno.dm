@@ -400,7 +400,7 @@
 	name = "acid glob"
 
 	accuracy = HIT_ACCURACY_TIER_10 + HIT_ACCURACY_TIER_5
-	max_range = 8
+	max_range = 16
 	damage = 30
 	shell_speed = 0.75
 	added_spit_delay = 0

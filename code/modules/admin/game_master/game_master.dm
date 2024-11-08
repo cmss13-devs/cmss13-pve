@@ -466,7 +466,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(!check_rights(R_ADMIN))
 		return
 	GLOB.blackshift = !GLOB.blackshift
-	to_chat(usr, SPAN_NOTICE("Blackshift: [GLOB.blackshift ? "<b>ON</b>" : "OFF"]"))
+	message_admins(SPAN_NOTICE("Blackshift: [GLOB.blackshift ? "<b>ON</b>" : "OFF"]."))
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
