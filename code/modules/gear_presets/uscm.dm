@@ -14,13 +14,13 @@
 	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
 	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/dress)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	var/auto_squad_name
 	///Allows the squad to be set even if spawned on admin z level
 	var/ert_squad = FALSE
@@ -118,17 +118,25 @@
 	name = "UPP Squad Rifleman"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
-	languages = list(LANGUAGE_RUSSIAN)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+
 /datum/equipment_preset/uscm/pfc/forecon
 	name = "FORECON Squad Rifleman"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/pfc/recon
 
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
@@ -162,13 +170,21 @@
 	assignment = "Machinegunner"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
-	languages = list(LANGUAGE_RUSSIAN)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
@@ -379,17 +395,25 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/medic/upp
-	name = "UPP Sanitar"
+	name = "UPP Squad Sanitar"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = "Sanitar"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
@@ -419,9 +443,13 @@
 	name = "UPP Squad Sergeant"
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
@@ -467,13 +495,13 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
-	name = "USCM Platoon Sergeant"
+	name = "USCM Section Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "PltSgt"
+	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -486,14 +514,22 @@
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH) //ground commander and stuff
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+
+/datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
@@ -569,14 +605,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader_equipped
-	name = "USCM Platoon Sergeant (Equipped)"
+	name = "USCM Section Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "PltSgt"
+	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -605,7 +641,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/leader_equipped/random
-	name = "USCM Platoon Sergeant (Equipped Random)"
+	name = "USCM Section Sergeant (Equipped Random)"
 
 /datum/equipment_preset/uscm/leader_equipped/random/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
@@ -745,7 +781,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_R_HAND)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
@@ -1194,7 +1230,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive(new_human), WEAR_IN_BACK)
@@ -1261,7 +1297,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human.back), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap(new_human.back), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap(new_human.back), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
@@ -1315,7 +1351,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
@@ -1363,7 +1399,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive(new_human), WEAR_IN_BACK)
@@ -1420,7 +1456,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)

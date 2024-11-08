@@ -82,6 +82,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "BiMex personal shades"
 	path = /obj/item/clothing/glasses/sunglasses/big
 
+/datum/gear/eyewear/bimex_shades_orange
+	display_name = "BiMex shooting shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/orange
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
@@ -358,10 +362,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/helmet_garb/flair_uscm
 	display_name = "Flair, USCM"
 	path = /obj/item/prop/helmetgarb/flair_uscm
-
-/datum/gear/helmet_garb/helmet_gasmask
-	display_name = "M5 integrated gasmask"
-	path = /obj/item/prop/helmetgarb/helmet_gasmask
 
 /datum/gear/helmet_garb/gunoil
 	display_name = "Gun oil"
@@ -766,31 +766,31 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
-	path = /obj/item/storage/box/loadout/clf
+	path = /obj/item/storage/box/loadout/CLF_loadout
 
-/datum/gear/weapon/upppistol
+/datum/gear/weapon/t73
 	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/loadout/upp
+	path = /obj/item/storage/box/loadout/T73_loadout
+
+/datum/gear/weapon/zhnk72
+	display_name = "ZHNK-72 Revolver"
+	path = /obj/item/storage/box/loadout/ZHNK72_loadout
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
 	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911
 	display_name = "M1911 Pistol"
 	path = /obj/item/storage/box/loadout/M1911_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44
 	display_name = "M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "Custom M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_custom_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/hg45_civilian
 	display_name = "HG 45 'Aguila' Pistol"
@@ -799,27 +799,22 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/hg45_marine
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
 	path = /obj/item/storage/box/loadout/HG44_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead
 	display_name = "Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead_custom
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/drink
 	category = "Canned drinks"
@@ -1155,7 +1150,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/misc/brown_boots
 	display_name = "brown combat boots"
-	path = /obj/item/clothing/shoes/marine/brown
+	path = /obj/item/clothing/shoes/marine/civilian/brown
 	cost = 2
 
 /datum/gear/misc/brown_gloves

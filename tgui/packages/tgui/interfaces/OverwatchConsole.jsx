@@ -204,7 +204,7 @@ const MainDashboard = (props) => {
           icon="envelope"
           onClick={() => act('message')}
         >
-          MESSAGE SQUAD
+          MESSAGE SECTION
         </Button>
         <Button
           inline
@@ -212,7 +212,7 @@ const MainDashboard = (props) => {
           icon="person"
           onClick={() => act('sl_message')}
         >
-          MESSAGE SQUAD LEADER
+          MESSAGE SECTION LEADER
         </Button>
       </Box>
     </Section>
@@ -244,7 +244,7 @@ const RoleTable = (props) => {
     <Table m="1px" fontSize="12px" bold>
       <Table.Row>
         <Table.Cell textAlign="center" p="4px">
-          Platoon Sergeant
+          Section Sergeant
         </Table.Cell>
         <Table.Cell collapsing p="4px">
           Squad Sergeants
@@ -322,7 +322,7 @@ const SquadMonitor = (props) => {
     a = a.role;
     b = b.role;
     const roleValues = {
-      'Platoon Sergeant': 10,
+      'Section Sergeant': 10,
       'Squad Sergeant': 9,
       'Weapons Specialist': 8,
       Smartgunner: 7,

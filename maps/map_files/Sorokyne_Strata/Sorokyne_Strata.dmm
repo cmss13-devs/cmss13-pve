@@ -9866,9 +9866,6 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp,
-/obj/item/weapon/gun/shotgun/type23/riot,
-/obj/item/weapon/gun/shotgun/type23/riot,
-/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/landingzone_checkpoint)
 "bUJ" = (
@@ -10477,7 +10474,7 @@
 /area/strata/ag/interior/administration)
 "cfX" = (
 /obj/structure/largecrate/random,
-/obj/item/storage/belt/marine/upp/sapper,
+/obj/item/storage/belt/marine/upp/full,
 /turf/open/asphalt/cement,
 /area/strata/ag/exterior/research_decks)
 "cfZ" = (
@@ -11788,7 +11785,6 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
-/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "ddP" = (
@@ -20891,7 +20887,6 @@
 /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
 /obj/item/ammo_magazine/handful/shotgun/heavy/slug,
-/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "lKv" = (
@@ -30422,7 +30417,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/obj/item/weapon/gun/shotgun/type23/riot,
 /turf/open/floor/strata/white_cyan1,
 /area/strata/ag/interior/dorms)
 "uBs" = (
