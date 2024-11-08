@@ -9,7 +9,7 @@
 
 /datum/job/trooper/grenadier
 	title = JOB_ARMY_PROPIPE
-	gear_preset = /datum/equipment_preset/usa/grenadier
+	gear_preset = /datum/equipment_preset/usa/trooper/grenadier
 
 /datum/job/trooper/marksman
 	title = JOB_ARMY_MARKSMAN
@@ -29,7 +29,7 @@
 
 /datum/job/trooper/ATloader
 	title = JOB_ARMY_ATLOAD
-	gear_preset = /datum/equipment_preset/usa/ATloader
+	gear_preset = /datum/equipment_preset/usa/ATgunner/loader
 
 /datum/job/trooper/sapper
 	title = JOB_ARMY_ENGI
@@ -46,7 +46,6 @@
 /datum/job/trooper/nco
 	title = JOB_ARMY_NCO
 	gear_preset = /datum/equipment_preset/usa/nco
-	gear_preset_secondary = /datum/equipment_preset/usa/nco/lesser_rank
 
 /datum/job/trooper/snco
 	title = JOB_ARMY_SNCO
