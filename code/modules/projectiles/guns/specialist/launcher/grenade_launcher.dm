@@ -346,6 +346,7 @@
 	preload = null
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
+	valid_munitions = list(/obj/item/explosive/grenade/baton/m79, /obj/item/explosive/grenade/smokebomb/airburst, /obj/item/explosive/grenade/high_explosive/airburst/starshell, /obj/item/explosive/grenade/incendiary/impact, /obj/item/explosive/grenade/high_explosive/impact, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
 
 	fire_sound = 'sound/weapons/handling/m79_shoot.ogg'
 	cocked_sound = 'sound/weapons/handling/m79_break_open.ogg'

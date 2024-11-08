@@ -8,6 +8,9 @@
 #define GRENADE_FIRE_RESISTANCE_MIN 10
 #define GRENADE_FIRE_RESISTANCE_MAX 40
 
+#define TIMED_FUSE 0
+#define IMPACT_FUSE 1
+
 /obj/item/explosive/grenade/high_explosive
 	name = "\improper M40 HEDP grenade"
 	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Capable of being loaded in the M92 Launcher, or thrown by hand."
@@ -22,9 +25,13 @@
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
+	var/dual_purpose = FALSE
+	var/fuse_type = TIMED_FUSE
+
 
 /obj/item/explosive/grenade/high_explosive/New()
 	..()
+	dual_purpose = TRUE
 
 	fire_resistance = rand(GRENADE_FIRE_RESISTANCE_MIN, GRENADE_FIRE_RESISTANCE_MAX)
 
@@ -950,7 +957,7 @@
 /obj/item/explosive/grenade/baton
 	name = "\improper HIRR baton slug"
 	desc = "Cousin to the M15 Rubber pellet, the HIRR baton slug was recalled from military and civilian police forces due to over-packed propellant in the sabot casing. Now it is utilized as a less-than-lethal option in engagements with human, and sometimes non-human, forces. Historically, the HIRR was incredibly popular during the Arcturus conflict, as the impact force was found to reliably incapacitate Arcturian resistance forces by breaking their ribs into their lungs."
-	icon_state = "baton_slug"
+	icon_state = "grenade_ltl"
 	item_state = "rubber_grenade"
 	hand_throwable = FALSE
 	antigrief_protection = FALSE
@@ -958,6 +965,12 @@
 
 /obj/item/explosive/grenade/baton/flamer_fire_act()
 	return
+
+/obj/item/explosive/grenade/baton/m79
+	name = "\improper LTL 40mm grenade"
+	desc = "It's a Less Than Lethal 40mm rubber projectile."
+	icon_state = "grenade_40mm_ltl"
+	item_state = "rubber_grenade"
 
 /obj/item/explosive/grenade/high_explosive/holy_hand_grenade
 	AUTOWIKI_SKIP(TRUE)
