@@ -12,6 +12,12 @@
 	desc = "A small computer hooked up into the ship's computer network."
 	icon_state = "terminal1"
 
+/obj/structure/machinery/prop/almayer/computer/PC/large
+	icon_state = "largecomp"
+
+/obj/structure/machinery/prop/almayer/computer/PC/large/dark
+	icon_state = "largecomp_dark"
+
 /obj/structure/machinery/prop/almayer/computer
 	name = "systems computer"
 	desc = "A small computer hooked up into the ship's systems."
@@ -133,6 +139,7 @@
 	layer = TABLE_LAYER
 	light_system = STATIC_LIGHT
 	light_color = "#DAE2FF"
+	light_power = 1
 	light_range = 2.5
 	light_pixel_x = 16
 	light_pixel_y = 32
@@ -194,12 +201,37 @@
 	overlays.Cut()
 
 	if(!(stat & NOPOWER))
-		var/image/source_image = image(src.icon, "h_maptable_e")
+		var/image/source_image = image(src.icon, icon_state = "[icon_state]_e")
 		overlays += emissive_appearance(source_image.icon, source_image.icon_state)
 		overlays += mutable_appearance(source_image.icon, source_image.icon_state)
 		light_power = 1
-	else
-		light_power = 0
+	else return
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment
+	icon = 'icons/obj/structures/props/maptable.dmi'
+	icon_state = "h_maptable1"
+	bound_width = 32
+	bound_height = 32
+	light_pixel_x = 0
+	light_pixel_y = 0
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one
+	icon_state = "h_maptable1"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two
+	icon_state = "h_maptable2"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three
+	icon_state = "h_maptable3"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four
+	icon_state = "h_maptable4"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five
+	icon_state = "h_maptable5"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six
+	icon_state = "h_maptable6"
 
 //Nonpower using props
 
