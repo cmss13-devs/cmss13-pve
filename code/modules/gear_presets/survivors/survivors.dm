@@ -95,11 +95,7 @@
 	new_human.age = rand(21,45)
 
 /datum/equipment_preset/survivor/load_gear(mob/living/carbon/human/new_human) // Essentially where you will put the most essential piece of kit you want survivors to spawn with.
-	add_random_survivor_equipment(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/med_small_stack(new_human), WEAR_IN_BACK)
-	add_survivor_weapon_pistol(new_human)
+	return
 
 /datum/equipment_preset/survivor/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/item/clothing/under/uniform = new_human.w_uniform
@@ -245,12 +241,16 @@ Standart Survivors :	/datum/equipment_preset/survivor/scientist,
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/yellow(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pickaxe(new_human), WEAR_R_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/lantern(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/lantern(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/orange(new_human), WEAR_HEAD)
-	add_survivor_weapon_civilian(new_human)
-	add_ice_colony_survivor_equipment(new_human)
-	..()
+
+/datum/equipment_preset/survivor/miner/hero
+	name = "Survivor - Miner Hero"
+	assignment = "Miner"
+
+/datum/equipment_preset/survivor/miner/hero/load_race(mob/living/carbon/human/new_human)
+	new_human.set_species(HUMAN_HERO)
 
 // 6 ---- Colonial Marshal Survivor
 
