@@ -450,7 +450,7 @@
 
 /obj/item/weapon/gun/rifle/m20a
 	name = "\improper M20A pulse rifle"
-	desc = "Predecessor to the M41A pulse rifle still utilized by the UA's Colonial Guard and various other organizations . Aside from its 10x24 chambering, the 'Harrington' rifle is largely considered to be in every metric the polar opposite of the M41A."
+	desc = "A predecessor to the M41A pulse rifle still utilized by the UA's Colonial Guard and various other organizations. Aside from its 10x24mm chambering, the 'Harrington' rifle is largely considered to be in every metric the polar opposite of the M41A; featuring an obsolete three-round burst mode, lower magazine size, and it uses an integrated shotgun attachment."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m20a"
 	item_state = "m20a"
