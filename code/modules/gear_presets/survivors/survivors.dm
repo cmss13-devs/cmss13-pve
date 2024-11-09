@@ -250,7 +250,7 @@ Standart Survivors :	/datum/equipment_preset/survivor/scientist,
 	assignment = "Miner"
 
 /datum/equipment_preset/survivor/miner/hero/load_race(mob/living/carbon/human/new_human)
-	new_human.set_species(HUMAN_HERO)
+	new_human.set_species("Human Hero")
 
 // 6 ---- Colonial Marshal Survivor
 
