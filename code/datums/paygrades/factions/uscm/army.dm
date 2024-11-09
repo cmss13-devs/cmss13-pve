@@ -17,7 +17,7 @@
 /datum/paygrade/army/e2
 	paygrade = PAY_SHORT_AE2
 	name = "Private"
-	prefix = "PV2"
+	prefix = "PVT"
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e2
 	ranking = 1
 	pay_multiplier = 1.5

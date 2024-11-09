@@ -437,12 +437,12 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1/army
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/grenade/mk1)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/shotgun)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
 
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
@@ -1612,6 +1612,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/army,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
 	)
@@ -1653,7 +1654,7 @@
 /obj/item/weapon/gun/rifle/m4ra/army
 	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
-	starting_attachment_types = list(/obj/item/attachable/scope/mini, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
 // pve - kinda weird icon usage, uses urban M4RA sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m4ra/pve
