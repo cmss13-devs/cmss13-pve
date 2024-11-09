@@ -43,6 +43,7 @@
 		if(!excavatable)
 			playsound(V, 'sound/effects/metal_crash.ogg', 20)
 		qdel(src)
+		return FALSE
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		return TRUE
 	return FALSE
