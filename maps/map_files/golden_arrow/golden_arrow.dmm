@@ -4078,6 +4078,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/lower_cargo)
 "aop" = (
@@ -5063,7 +5068,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/roof/cargocrane_tracks/vertical{
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -5503,6 +5508,9 @@
 	dir = 4;
 	name = "\improper Supply Bay";
 	id = "largebay2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
@@ -7480,7 +7488,7 @@
 	layer = 2.52
 	},
 /turf/open/floor/almayer/edge/north,
-/area/golden_arrow/supply)
+/area/golden_arrow/platoonprep)
 "azZ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7519,7 +7527,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/roof/cargocrane_tracks/vertical{
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
 	},
 /turf/open/floor/almayer/cargo_arrow,
@@ -8052,9 +8060,6 @@
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526"
-	},
-/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
-	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -9693,9 +9698,6 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
-/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
-	pixel_y = 14
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aHa" = (
@@ -10571,9 +10573,6 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
-	},
-/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
-	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -12605,9 +12604,10 @@
 /area/golden_arrow/supply)
 "aRK" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_x = 11;
-	pixel_y = 29
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 1;
+	light_power = 0.3
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/supply)
@@ -13171,8 +13171,7 @@
 	name = "Cargo Elevator Upper";
 	elevator_network = "ArrowCargo";
 	airlock_exit = "north";
-	airlock_area = /area/golden_arrow/cargo_shuttle/upper;
-	dir = 2
+	airlock_area = /area/golden_arrow/cargo_shuttle/upper
 	},
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
@@ -14885,6 +14884,9 @@
 	name = "\improper Supply Bay";
 	id = "largebay"
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "bgS" = (
@@ -14976,7 +14978,8 @@
 	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
-	dir = 4
+	dir = 4;
+	light_power = 0.3
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
@@ -15315,6 +15318,24 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"czm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/platoonprep)
+"cFV" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/lower_cargo)
 "cGQ" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -15339,6 +15360,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"cPf" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/lower_cargo)
 "cQH" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Five Blast Door";
@@ -15629,6 +15658,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"eaU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = 4;
+	pixel_y = 29
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/supply)
 "ecj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -15638,7 +15677,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
 "egO" = (
-/obj/structure/roof/cargocrane_tracks/vertical{
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -15671,6 +15710,9 @@
 	dir = 4;
 	name = "\improper Supply Bay";
 	id = "largebay2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
@@ -15890,19 +15932,18 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cargo_shuttle/lower)
 "feX" = (
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_y = 27
-	},
-/obj/structure/sign/safety/hazard{
-	pixel_x = 14;
-	pixel_y = 27
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	pixel_x = 5;
+	pixel_y = 36;
+	layer = 3.5;
+	dockId = "garrow_cargo_elevator_storage"
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
@@ -16232,14 +16273,16 @@
 "gsQ" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	light_power = 0.3
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/supply)
 "gtS" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	light_power = 0.3
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
@@ -16404,6 +16447,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"hdk" = (
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 22
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "hhG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -16536,7 +16586,7 @@
 	pixel_x = -14
 	},
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/supply)
+/area/golden_arrow/lower_cargo)
 "hGr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17306,6 +17356,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/lower_cargo)
 "lJW" = (
@@ -17591,7 +17646,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/cargo,
-/area/space)
+/area/golden_arrow/lower_cargo)
 "mEQ" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -17773,12 +17828,6 @@
 	icon_state = "cargo_arrow";
 	dir = 1
 	},
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
-	icon_state = "cellconsole";
-	pixel_x = 5;
-	pixel_y = 9;
-	layer = 3.5
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
 	light_color = "#dae2ff";
@@ -17916,7 +17965,8 @@
 /area/golden_arrow/medical)
 "nuo" = (
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	light_power = 0.3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
@@ -18532,7 +18582,7 @@
 	pixel_x = 12
 	},
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/supply)
+/area/golden_arrow/lower_cargo)
 "qcH" = (
 /obj/structure/machinery/door/poddoor/railing,
 /obj/effect/decal/cleanable/dirt{
@@ -18640,6 +18690,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"qEU" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 1;
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/supply)
 "qGj" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -19469,7 +19527,7 @@
 	id = "cargobaylocks"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/supply)
+/area/golden_arrow/lower_cargo)
 "umJ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19537,7 +19595,8 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	light_power = 0.3
 	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/supply)
@@ -19597,9 +19656,6 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
-	},
-/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
-	pixel_y = 14
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -19688,7 +19744,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/supply)
+/area/golden_arrow/lower_cargo)
 "vCJ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25549,7 +25605,7 @@ lEX
 aKZ
 aXB
 aJA
-qRO
+cPf
 aVX
 aZP
 aCW
@@ -26434,7 +26490,7 @@ wBW
 rBy
 aXB
 aXB
-aPG
+cFV
 wGV
 ckD
 ogX
@@ -27845,7 +27901,7 @@ aIC
 aIC
 aIC
 aIC
-ahl
+aXB
 aXB
 aXB
 aXB
@@ -28022,7 +28078,7 @@ abb
 idK
 nxj
 aJF
-ahl
+aXB
 mEm
 aze
 dRV
@@ -28199,8 +28255,8 @@ jYS
 yef
 wNl
 sCG
-ahl
-ahl
+aXB
+aXB
 mZk
 aJu
 pZs
@@ -28419,12 +28475,12 @@ aEG
 aEG
 aEG
 bBB
+aEK
+aEK
+aEK
+aEK
+aEK
 aTO
-aEK
-aEK
-aEK
-aEK
-aEK
 bBB
 ahl
 ahl
@@ -28731,7 +28787,7 @@ aIC
 jmu
 dDk
 qbU
-ahl
+aXB
 uEm
 lUn
 aIC
@@ -28908,8 +28964,8 @@ aIC
 hhG
 bRe
 hGc
-ahl
-ahl
+aXB
+aXB
 aIC
 aIC
 aIC
@@ -29496,7 +29552,7 @@ lHh
 afz
 gry
 bfK
-byz
+czm
 aHV
 aPv
 aYI
@@ -30201,7 +30257,7 @@ bRI
 aLe
 aAu
 dbK
-afz
+hdk
 ahl
 ahl
 aHZ
@@ -32138,7 +32194,7 @@ aEG
 ahl
 ahl
 ahl
-aho
+eaU
 eQj
 aLe
 ati
@@ -32315,7 +32371,7 @@ aEG
 ahl
 ahl
 ahl
-ati
+qEU
 pxW
 aWJ
 ahl
