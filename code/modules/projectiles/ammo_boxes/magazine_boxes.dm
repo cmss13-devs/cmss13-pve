@@ -71,6 +71,10 @@
 	overlay_gun_type = "_m20a"
 	magazine_type = /obj/item/ammo_magazine/rifle/m20a
 
+/obj/item/ammo_box/magazine/m20a/empty
+
+	empty = TRUE
+
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
