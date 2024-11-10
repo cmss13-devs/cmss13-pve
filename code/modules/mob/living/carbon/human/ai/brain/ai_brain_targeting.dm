@@ -11,8 +11,6 @@
 	var/turf/shot_at
 	/// If TRUE, the AI will throw grenades at enemies who enter cover
 	var/grenading_allowed = TRUE
-	/// List of overwatched turfs
-	var/list/turf/open/overwatch_turfs = list()
 	/// If TRUE, we care about the target being in view after shooting at them. If not, then we only do a line check instead
 	var/requires_vision = TRUE
 

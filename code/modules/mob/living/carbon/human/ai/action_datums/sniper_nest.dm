@@ -6,6 +6,7 @@
 	name = "Sniper Nest"
 	action_flags = ACTION_USING_LEGS
 	var/initial_view
+	var/initial_reload_line_chance
 
 /datum/ai_action/sniper_nest/get_weight(datum/human_ai_brain/brain)
 	if(!brain.sniper_home)
@@ -27,9 +28,12 @@
 
 /datum/ai_action/sniper_nest/Added()
 	initial_view = brain.view_distance
+	initial_reload_line_chance = brain.reload_line_chance
+	brain.reload_line_chance = 0
 
 /datum/ai_action/sniper_nest/Destroy(force, ...)
 	brain.view_distance = initial_view
+	brain.reload_line_chance = initial_reload_line_chance
 	return ..()
 
 /datum/ai_action/sniper_nest/trigger_action()
