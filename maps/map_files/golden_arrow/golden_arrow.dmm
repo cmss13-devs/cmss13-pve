@@ -807,9 +807,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "ady" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2030,9 +2028,7 @@
 "ahp" = (
 /obj/effect/projector/bay_two,
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 4
-	},
+/turf/open/floor/hangar_airlock/outer/frame4,
 /area/golden_arrow/motor_pool)
 "aht" = (
 /obj/structure/bed/chair/comfy,
@@ -3408,9 +3404,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "amm" = (
 /obj/structure/machinery/firealarm{
@@ -3610,9 +3604,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/cryo_cells)
 "amQ" = (
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_1"
-	},
+/turf/open/floor/almayer/plate/hangar_1,
 /area/golden_arrow/motor_pool)
 "amS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5267,9 +5259,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "asw" = (
 /obj/structure/surface/table/almayer,
@@ -7198,9 +7188,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "azq" = (
 /obj/structure/machinery/shower{
@@ -7210,9 +7198,7 @@
 /area/golden_arrow/cryo_cells)
 "azr" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 9
-	},
+/turf/open/floor/hangar_airlock/outer/frame9,
 /area/golden_arrow/motor_pool)
 "azs" = (
 /turf/closed/wall/almayer/outer,
@@ -8190,9 +8176,7 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "aCs" = (
 /obj/structure/machinery/gear{
@@ -9164,9 +9148,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "aFy" = (
 /obj/effect/landmark/start/marine/tl/alpha,
@@ -9936,9 +9918,7 @@
 	pixel_x = -64;
 	pixel_y = -64
 	},
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 33
-	},
+/turf/open/floor/hangar_airlock/inner/frame33,
 /area/golden_arrow/hangar)
 "aIn" = (
 /turf/open/floor/almayer/edge/north,
@@ -11601,9 +11581,7 @@
 /area/golden_arrow/supply)
 "aOq" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "aOr" = (
 /obj/structure/machinery/door_control{
@@ -11705,9 +11683,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "aOK" = (
 /obj/structure/disposalpipe/segment,
@@ -13375,9 +13351,7 @@
 "aUX" = (
 /obj/effect/projector/bay_one,
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 4
-	},
+/turf/open/floor/hangar_airlock/outer/frame4,
 /area/golden_arrow/motor_pool)
 "aUY" = (
 /obj/effect/decal/warning_stripes{
@@ -13516,9 +13490,7 @@
 "aVx" = (
 /obj/effect/projector/bay_two,
 /obj/structure/machinery/light/double/blue,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "aVy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -14586,9 +14558,7 @@
 	pixel_x = -64;
 	pixel_y = -64
 	},
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 33
-	},
+/turf/open/floor/hangar_airlock/inner/frame33,
 /area/golden_arrow/hangar)
 "aZG" = (
 /obj/effect/decal/cleanable/dirt{
@@ -14726,9 +14696,7 @@
 /area/golden_arrow/motor_pool)
 "bml" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "bmu" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -14877,9 +14845,7 @@
 /turf/open/floor/hangar_airlock/inner,
 /area/golden_arrow/hangar)
 "bUU" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 5
-	},
+/turf/open/floor/hangar_airlock/inner/frame5,
 /area/golden_arrow/hangar)
 "bZF" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
@@ -14953,9 +14919,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "ckD" = (
 /obj/effect/decal/warning_stripes{
@@ -15050,9 +15014,7 @@
 	dir = 1;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "dhC" = (
 /turf/open/floor/almayer/edge/east,
@@ -15138,9 +15100,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supplydrop)
 "dUq" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 18
-	},
+/turf/open/floor/hangar_airlock/inner/frame18,
 /area/golden_arrow/hangar)
 "dVU" = (
 /obj/effect/decal/warning_stripes{
@@ -15151,9 +15111,7 @@
 /area/golden_arrow/motor_pool)
 "eaA" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "ecj" = (
 /obj/effect/decal/warning_stripes{
@@ -15235,9 +15193,7 @@
 "ePf" = (
 /obj/effect/projector/bay_one,
 /obj/structure/machinery/light/double/blue,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "eTc" = (
 /obj/effect/decal/warning_stripes{
@@ -15326,9 +15282,7 @@
 	dir = 8
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "fIR" = (
 /obj/effect/decal/warning_stripes{
@@ -15357,9 +15311,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "fPI" = (
 /obj/structure/pipes/vents/pump{
@@ -15391,9 +15343,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "gjs" = (
 /obj/effect/decal/cleanable/dirt{
@@ -15440,9 +15390,7 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "gsZ" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 13
-	},
+/turf/open/floor/hangar_airlock/inner/frame13,
 /area/golden_arrow/hangar)
 "gwS" = (
 /obj/effect/decal/cleanable/dirt{
@@ -15527,9 +15475,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "heR" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 45
-	},
+/turf/open/floor/hangar_airlock/inner/frame45,
 /area/golden_arrow/hangar)
 "hhQ" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -15554,9 +15500,7 @@
 /area/golden_arrow/supplydrop)
 "hxk" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 9
-	},
+/turf/open/floor/hangar_airlock/outer/frame9,
 /area/golden_arrow/motor_pool)
 "hxJ" = (
 /turf/closed/wall/almayer/outer,
@@ -15613,9 +15557,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "hUp" = (
 /obj/effect/decal/warning_stripes{
@@ -15629,15 +15571,11 @@
 /area/golden_arrow/supply)
 "icl" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "icW" = (
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two,
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 5
-	},
+/turf/open/floor/hangar_airlock/inner/frame5,
 /area/golden_arrow/hangar)
 "idK" = (
 /obj/structure/barricade/handrail,
@@ -15658,9 +15596,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "ile" = (
 /turf/open/floor/almayer/plate{
@@ -15670,9 +15606,7 @@
 /area/golden_arrow/hangar)
 "iAe" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "iGx" = (
 /obj/structure/cable/heavyduty{
@@ -15816,9 +15750,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "jYS" = (
 /obj/effect/decal/cleanable/dirt{
@@ -15896,9 +15828,7 @@
 /area/golden_arrow/supply)
 "krq" = (
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one,
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 5
-	},
+/turf/open/floor/hangar_airlock/inner/frame5,
 /area/golden_arrow/hangar)
 "kuE" = (
 /turf/open/floor/almayer/plate{
@@ -16104,14 +16034,10 @@
 	dir = 8
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "mfx" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 12
-	},
+/turf/open/floor/hangar_airlock/inner/frame12,
 /area/golden_arrow/hangar)
 "mhB" = (
 /obj/structure/sign/safety/five{
@@ -16247,9 +16173,7 @@
 /area/golden_arrow/supply)
 "mYt" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "ngb" = (
 /obj/structure/machinery/recharge_station,
@@ -16417,9 +16341,7 @@
 	dir = 8
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "onj" = (
 /turf/open/floor/almayer/aicore/glowing,
@@ -16517,9 +16439,7 @@
 /area/golden_arrow/engineering)
 "pbh" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 4
-	},
+/turf/open/floor/hangar_airlock/outer/frame4,
 /area/golden_arrow/motor_pool)
 "pce" = (
 /obj/structure/machinery/light/small/blue{
@@ -16664,9 +16584,7 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "pYL" = (
 /obj/structure/machinery/door_control{
@@ -16742,9 +16660,7 @@
 /area/golden_arrow/supply)
 "qoF" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 4
-	},
+/turf/open/floor/hangar_airlock/outer/frame4,
 /area/golden_arrow/motor_pool)
 "qwH" = (
 /obj/structure/sign/safety/three{
@@ -16774,9 +16690,7 @@
 /area/golden_arrow/engineering)
 "qFC" = (
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "qGj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -16801,9 +16715,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "qZk" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 28
-	},
+/turf/open/floor/hangar_airlock/inner/frame28,
 /area/golden_arrow/hangar)
 "rdX" = (
 /obj/effect/decal/warning_stripes{
@@ -16903,9 +16815,7 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/supply)
 "rHL" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 22
-	},
+/turf/open/floor/hangar_airlock/inner/frame22,
 /area/golden_arrow/hangar)
 "rMy" = (
 /obj/structure/disposalpipe/segment{
@@ -17029,9 +16939,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "sCG" = (
 /obj/structure/bed/chair{
@@ -17062,14 +16970,10 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "tik" = (
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_2"
-	},
+/turf/open/floor/almayer/plate/hangar_2,
 /area/golden_arrow/motor_pool)
 "tjT" = (
 /obj/effect/decal/warning_stripes{
@@ -17162,9 +17066,7 @@
 	dir = 1;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 14
-	},
+/turf/open/floor/hangar_airlock/outer/frame14,
 /area/golden_arrow/motor_pool)
 "tLo" = (
 /turf/open/floor/hangar_airlock/inner,
@@ -17195,9 +17097,7 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "uel" = (
 /obj/structure/disposalpipe/segment{
@@ -17244,14 +17144,10 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "uDC" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 49
-	},
+/turf/open/floor/hangar_airlock/inner/frame49,
 /area/golden_arrow/hangar)
 "uEm" = (
 /obj/effect/decal/warning_stripes{
@@ -17285,18 +17181,14 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "vbk" = (
 /obj/effect/hangar_airlock/half_tile{
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "vfK" = (
 /obj/structure/surface/table/almayer,
@@ -17316,9 +17208,7 @@
 /area/golden_arrow/engineering)
 "vni" = (
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "vve" = (
 /obj/effect/decal/cleanable/dirt{
@@ -17327,9 +17217,7 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
 "vAP" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 21
-	},
+/turf/open/floor/hangar_airlock/inner/frame21,
 /area/golden_arrow/hangar)
 "vCJ" = (
 /obj/effect/decal/warning_stripes{
@@ -17403,9 +17291,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_one,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "wnq" = (
 /obj/structure/sign/safety/hazard{
@@ -17426,14 +17312,10 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "wwZ" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 38
-	},
+/turf/open/floor/hangar_airlock/inner/frame38,
 /area/golden_arrow/hangar)
 "wyU" = (
-/turf/open/floor/hangar_airlock/inner{
-	frame_threshold = 33
-	},
+/turf/open/floor/hangar_airlock/inner/frame33,
 /area/golden_arrow/hangar)
 "wzO" = (
 /obj/effect/projector/bay_one,
@@ -17441,9 +17323,7 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 29
-	},
+/turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "wAd" = (
 /obj/structure/platform_decoration{
@@ -17498,9 +17378,7 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "xiW" = (
 /obj/structure/barricade/handrail{
@@ -17589,17 +17467,13 @@
 	layer = 2
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 20
-	},
+/turf/open/floor/hangar_airlock/outer/frame20,
 /area/golden_arrow/motor_pool)
 "xTf" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
 "xWe" = (
-/turf/open/space/basic{
-	layer = 1.98
-	},
+/turf/open/space/basic/outer_airlock,
 /area/space)
 "xXq" = (
 /obj/effect/decal/warning_stripes{
@@ -17629,9 +17503,7 @@
 	pixel_y = -64
 	},
 /obj/effect/projector/bay_two,
-/turf/open/floor/hangar_airlock/outer{
-	frame_threshold = 25
-	},
+/turf/open/floor/hangar_airlock/outer/frame25,
 /area/golden_arrow/motor_pool)
 "ydL" = (
 /obj/effect/decal/warning_stripes{

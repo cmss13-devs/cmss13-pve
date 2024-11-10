@@ -314,6 +314,71 @@ Airlock Turfs Definitions
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "plate"
 
+/*#############################################################################
+Instanced to Defined Definitions (I hate ScrapeAway edition)
+#############################################################################*/
+
+/turf/open/floor/almayer/plate/hangar_1
+	icon_state = "hangar_1"
+	name = "Hangar Airlock One"
+
+/turf/open/floor/almayer/plate/hangar_2
+	icon_state = "hangar_2"
+	name = "Hangar Airlock Two"
+
+/turf/open/floor/hangar_airlock/inner/frame5
+	frame_threshold = 5
+
+/turf/open/floor/hangar_airlock/inner/frame12
+	frame_threshold = 12
+
+/turf/open/floor/hangar_airlock/inner/frame13
+	frame_threshold = 13
+
+/turf/open/floor/hangar_airlock/inner/frame18
+	frame_threshold = 18
+
+/turf/open/floor/hangar_airlock/inner/frame21
+	frame_threshold = 21
+
+/turf/open/floor/hangar_airlock/inner/frame22
+	frame_threshold = 22
+
+/turf/open/floor/hangar_airlock/inner/frame28
+	frame_threshold = 28
+
+/turf/open/floor/hangar_airlock/inner/frame33
+	frame_threshold = 33
+
+/turf/open/floor/hangar_airlock/inner/frame38
+	frame_threshold = 38
+
+/turf/open/floor/hangar_airlock/inner/frame45
+	frame_threshold = 45
+
+/turf/open/floor/hangar_airlock/inner/frame49
+	frame_threshold = 49
+
+/turf/open/floor/hangar_airlock/outer/frame4
+	frame_threshold = 4
+
+/turf/open/floor/hangar_airlock/outer/frame9
+	frame_threshold = 9
+
+/turf/open/floor/hangar_airlock/outer/frame14
+	frame_threshold = 14
+
+/turf/open/floor/hangar_airlock/outer/frame20
+	frame_threshold = 20
+
+/turf/open/floor/hangar_airlock/outer/frame25
+	frame_threshold = 25
+
+/turf/open/floor/hangar_airlock/outer/frame29
+	frame_threshold = 29
+
+/turf/open/space/basic/outer_airlock
+	layer = 1.98
 
 /*#############################################################################
 Airlock Turf Interactability Procs
