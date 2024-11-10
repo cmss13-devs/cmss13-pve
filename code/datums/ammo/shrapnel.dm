@@ -11,7 +11,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
-	max_range = 8
+	max_range = 5
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -66,7 +66,7 @@
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
-	max_range = 8
+	max_range = 7
 	damage = 35
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
