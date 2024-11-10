@@ -826,10 +826,10 @@
 		id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+		if(!("Section Sergeant" in cycled_headset.tracking_options))
 			continue
 
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
 
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])
@@ -843,10 +843,10 @@
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned as [fireteam] Team Leader.")))
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+		if(!("Section Sergeant" in cycled_headset.tracking_options))
 			continue
 
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
 
 /datum/squad/proc/unassign_ft_leader(fireteam, clear_group_id, upd_ui = TRUE)
 	if(!fireteam_leaders[fireteam])
