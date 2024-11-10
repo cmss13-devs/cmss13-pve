@@ -7,6 +7,7 @@
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
 #define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "GAU-21", "Heavy GAU-21")
+#define XENO_ORDNANCE list("Acid Gas", "Neuro Gas", "Acid Splash", "Acid Pool")
 
 /client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -23,6 +24,7 @@
 	///Mortar to fire the abstract shells.
 	var/obj/structure/mortar/abstract_mortar = new()
 	var/client/holder
+	var/datum/effect_system/smoke_spread/smoke_system
 
 /datum/fire_support_menu/New(user)
 	if(isclient(user))
@@ -58,6 +60,7 @@
 	data["mortar_ordnance_options"] = MORTAR_ORDNANCE
 	data["chemical_ordnance_options"] = CHEMICAL_ORDNANCE
 	data["misc_ordnance_options"] = MISC_ORDNANCE
+	data["xenomorph_ordnance_options"] = XENO_ORDNANCE
 
 	return data
 
@@ -288,6 +291,49 @@
 				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 				return TRUE
 
+			if("Acid Gas")
+				smoke_system = new /datum/effect_system/smoke_spread/xeno_acid()
+				var/obj/effect/overlay/temp/xeno_telegraph/target_lase = new(target_turf)
+				smoke_system.set_up(4, 0, target_turf, new_cause_data = "Bioartillery")
+				smoke_system.lifetime = 12
+				addtimer(CALLBACK(smoke_system, TYPE_PROC_REF(/datum/effect_system/smoke_spread, start)), 5 SECONDS)
+				handle_xeno_ordnance(target_turf)
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				playsound(target_turf,"acid_strike",75,1)
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), target_turf, "acid_strike", 75, 1), 5 SECONDS)
+
+			if("Neuro Gas")
+				smoke_system = new /datum/effect_system/smoke_spread/xeno_weaken()
+				var/obj/effect/overlay/temp/xeno_telegraph/target_lase = new(target_turf)
+				smoke_system.set_up(4, 0, target_turf, new_cause_data = "Bioartillery")
+				smoke_system.lifetime = 12
+				addtimer(CALLBACK(smoke_system, TYPE_PROC_REF(/datum/effect_system/smoke_spread, start)), 5 SECONDS)
+				handle_xeno_ordnance(target_turf)
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), target_turf, "acid_strike", 75, 1), 5 SECONDS)
+
+			if("Acid Splash")
+				var/obj/effect/overlay/temp/xeno_telegraph/target_lase = new(target_turf)
+				var/obj/item/explosive/grenade/xeno_acid_grenade/XAG = new(target_turf)
+				XAG.alpha = 0
+				XAG.mouse_opacity = 0
+				XAG.anchored = 1
+				handle_xeno_ordnance(target_turf)
+				addtimer(CALLBACK(XAG, TYPE_PROC_REF(/obj/item/explosive/grenade, prime)), 5 SECONDS)
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), target_turf, "acid_strike", 75, 1), 5 SECONDS)
+
+			if("Acid Pool")
+				var/obj/effect/overlay/temp/xeno_telegraph/target_lase = new(target_turf)
+				var/obj/item/explosive/grenade/alien/acid/XAG = new(target_turf)
+				XAG.alpha = 0
+				XAG.mouse_opacity = 0
+				XAG.anchored = 1
+				handle_xeno_ordnance(target_turf)
+				addtimer(CALLBACK(XAG, TYPE_PROC_REF(/obj/item/explosive/grenade, prime)), 5 SECONDS)
+				QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), target_turf, "acid_strike", 75, 1), 5 SECONDS)
+
 			else
 				to_chat(user, SPAN_ANNOUNCEMENT_HEADER_ADMIN("Invalid ordnance selection! If this appears, yell at a coder!"))
 				return TRUE
@@ -309,6 +355,18 @@
 
 /datum/fire_support_menu/proc/handle_orbital_ordnance(turf/target_turf, obj/structure/ob_ammo/warhead/ammo)
 	ammo.warhead_impact(target_turf)
+
+/datum/fire_support_menu/proc/handle_xeno_ordnance(turf/target_turf)
+	var/relative_dir
+	for(var/mob/M in urange(30, target_turf))
+		if(get_turf(M) == target_turf)
+			relative_dir = 0
+		else
+			relative_dir = Get_Compass_Dir(M, target_turf)
+		M.show_message( \
+			SPAN_DANGER("You see a glob of nasty alien substance [SPAN_UNDERLINE(relative_dir ? ("flying towards you from the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_VISIBLE, \
+			SPAN_DANGER("You hear a very loud hissing sound coming from above to the [SPAN_UNDERLINE(relative_dir ? ("to the " + dir2text(relative_dir)) : "right above you")]!"), SHOW_MESSAGE_AUDIBLE \
+		)
 
 #undef ORDNANCE_OPTIONS
 #undef ORBITAL_ORDNANCE
