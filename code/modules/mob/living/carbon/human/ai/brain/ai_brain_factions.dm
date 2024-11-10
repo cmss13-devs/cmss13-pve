@@ -222,17 +222,17 @@
 		"Eliminating hostile.",
 		"Engaging.",
 		"Contact.",
-		"Viscon, proceeding."
+		"Viscon, proceeding.",
 	)
 	exit_combat_lines = list(
 		"Hostilities ceased.",
-		"Ceasing engagement."
+		"Ceasing engagement.",
 	)
 	squad_member_death_lines = list(
 		"Allied unit disabled.",
 		"Friendly unit decomissioned.",
 		"Allied unit decomissioned.",
-		"Friendly unit disabled."
+		"Friendly unit disabled.",
 	)
 	grenade_thrown_lines = list() // Wouldn't need to call this out
 	reload_lines = list() // same here
