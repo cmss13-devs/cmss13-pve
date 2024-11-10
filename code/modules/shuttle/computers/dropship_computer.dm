@@ -39,6 +39,8 @@
 	for(var/obj/docking_port/stationary/marine_dropship/dock in SSshuttle.stationary)
 		if(istype(dock, /obj/docking_port/stationary/marine_dropship/crash_site))
 			continue
+		if(dock.admin_only)
+			continue
 		. += list(dock)
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/is_disabled()
