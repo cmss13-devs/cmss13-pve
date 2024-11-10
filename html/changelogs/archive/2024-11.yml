@@ -2,3 +2,12 @@
   Max-023:
   - bugfix: section sergeant lockers now listing the appropriate job titles
   - spellcheck: addressed some outdated descriptions with the section sergeant locker.
+2024-11-03:
+  BonniePandora:
+  - bugfix: Section sergeants can once more use their squad info window to swap people
+      between squads or assign acting SL's to the two teams
+  - ui: Overwatch console properly references sections and section leaders in the
+      buttons now instead of squads or platoons
+2024-11-09:
+  BonniePandora:
+  - qol: Fences made harder to take down by marines/humans without the proper tools
