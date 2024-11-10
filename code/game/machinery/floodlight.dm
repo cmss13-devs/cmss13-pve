@@ -102,6 +102,11 @@
 	if(hangar_dock)
 		hangar_dock.floodlights += src
 
+/obj/structure/machinery/floodlight/landing/airlock/Destroy()
+	if(hangar_dock)
+		hangar_dock.floodlights -= src
+	. = ..()
+
 /obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one
 	hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
 
