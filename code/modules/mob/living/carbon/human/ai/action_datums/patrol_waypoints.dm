@@ -26,7 +26,7 @@
 	. = ..()
 
 	var/datum/ai_order/patrol/current_order = brain.current_order
-	if(current_order.waiting || QDELETED(current_order) || !istype(current_order) || length(brain.to_pickup))
+	if(current_order.waiting || QDELETED(current_order) || !istype(current_order) || length(brain.to_pickup) || brain.in_combat)
 		return ONGOING_ACTION_COMPLETED
 
 	var/turf/current_waypoint = current_order.current_waypoint

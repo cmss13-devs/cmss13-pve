@@ -55,7 +55,7 @@
 		"Swapping mags!",
 		"Swapping mags, cover me!",
 		"Need some cover, reloading!",
-		"Reloading! Cover me, quick!"
+		"Reloading! Cover me, quick!",
 		"Out of ammo!",
 		"Hold up, I’m reloading now!",
 		"Reloading! Keep me covered!",

@@ -82,7 +82,7 @@
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
-    in_combat_lines = list(
+	in_combat_lines = list(
 		"You will never defeat us!",
 		"I will kill you!",
 		"You'll never take our homeland!",
@@ -105,8 +105,8 @@
 		"Give up!",
 		"For the cause!",
 		"'Till our last breath!",
-    )
-    exit_combat_lines = list(
+	)
+	exit_combat_lines = list(
 		"Where are they.",
 		"There's no one here.",
 		"The enemy is quiet.",
@@ -116,8 +116,8 @@
 		"Are we done yet?",
 		"We live to fight again.",
 		"Where are they now?",
-    )
-    squad_member_death_lines = list(
+	)
+	squad_member_death_lines = list(
 		"Get back! Get back!",
 		"I'm sorry...",
 		"Shoot! Run!",
@@ -128,7 +128,7 @@
 		"Time for payback!",
 		"Not good!",
 		"Damn!",
-    )
+	)
 	grenade_thrown_lines = list(
 		"EAT THIS!",
 		"Grenade!",
