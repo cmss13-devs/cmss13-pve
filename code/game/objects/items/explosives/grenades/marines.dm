@@ -931,9 +931,9 @@
 /obj/item/explosive/grenade/slug/baton
 	name = "\improper HIRR baton slug"
 	desc = "Cousin to the M15 Rubber pellet, the HIRR baton slug was recalled from military and civilian police forces due to over-packed propellant in the sabot casing. Now it is utilized as a less-than-lethal option in engagements with human, and sometimes non-human, forces. Historically, the HIRR was incredibly popular during the Arcturus conflict, as the impact force was found to reliably incapacitate Arcturian resistance forces by breaking their ribs into their lungs."
-	icon_state = "baton_slug"
+	icon_state = "grenade_ltl"
 	item_state = "baton_slug"
-	inactive_icon = "baton_slug"
+	inactive_icon = "grenade_ltl"
 	antigrief_protection = FALSE
 	impact_damage = 15
 	slowdown_time = 2
