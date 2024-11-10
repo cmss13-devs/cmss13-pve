@@ -103,6 +103,7 @@
 		hangar_dock.floodlights += src
 
 /obj/structure/machinery/floodlight/landing/airlock/Destroy()
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/hangar_dock = locate(hangar_dock_path)
 	if(hangar_dock)
 		hangar_dock.floodlights -= src
 	. = ..()
