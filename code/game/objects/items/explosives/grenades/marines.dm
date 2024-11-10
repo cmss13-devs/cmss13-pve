@@ -10,7 +10,7 @@
 
 /obj/item/explosive/grenade/high_explosive
 	name = "\improper M40 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 4 seconds."
 	icon_state = "grenade"
 	det_time = 40
 	item_state = "grenade_hedp"
@@ -477,7 +477,7 @@
 
 /obj/item/explosive/grenade/smokebomb
 	name = "\improper M47 HSDP smoke grenade"
-	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds."
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds."
 	icon_state = "grenade_smoke"
 	det_time = 20
 	item_state = "grenade_smoke"
