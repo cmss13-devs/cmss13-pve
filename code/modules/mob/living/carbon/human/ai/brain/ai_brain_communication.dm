@@ -46,11 +46,30 @@
 		"Fragging 'em!",
 	)
 
+	var/list/reload_lines = list(
+		"Mag's dry.",
+		"Reloading.",
+		"Reloading!",
+		"I'm out, cover me!",
+		"Reloading, cover me!",
+		"Swapping mags!",
+		"Swapping mags, cover me!",
+		"Need some cover, reloading!",
+		"Reloading! Cover me, quick!"
+		"Out of ammo!",
+		"Hold up, I’m reloading now!",
+		"Reloading! Keep me covered!",
+		"Switching mags—hold them off!",
+		"I’m dry! Reloading here!",
+		"New mag going in! Cover me!",
+		"Reloading! Watch my six!",
+	)
+
 	var/in_combat_line_chance = 40
 	var/exit_combat_line_chance = 40
 	var/squad_member_death_line_chance = 20
 	var/grenade_thrown_line_chance = 60
-
+	var/reload_line_chance = 40
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)
 	if(!length(in_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
@@ -71,3 +90,8 @@
 	if(!length(grenade_thrown_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
 	tied_human.say(pick(grenade_thrown_lines))
+
+/datum/human_ai_brain/proc/say_reload_line(chance = reload_line_chance)
+	if(!length(reload_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
+		return
+	tied_human.say(pick(reload_lines))

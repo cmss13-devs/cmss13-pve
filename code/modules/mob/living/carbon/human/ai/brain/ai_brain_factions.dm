@@ -6,6 +6,7 @@
 	VAR_PROTECTED/list/exit_combat_lines = list()
 	VAR_PROTECTED/list/squad_member_death_lines = list()
 	VAR_PROTECTED/list/grenade_thrown_lines = list()
+	VAR_PROTECTED/list/reload_lines = list()
 
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
@@ -22,6 +23,9 @@
 
 	if(length(grenade_thrown_lines))
 		brain.grenade_thrown_lines = grenade_thrown_lines
+
+	if(length(reload_lines))
+		brain.reload_lines = reload_lines
 
 	brain.shoot_to_kill = shoot_to_kill
 	brain.friendly_factions = friendly_factions
@@ -231,3 +235,4 @@
 		"Friendly unit disabled."
 	)
 	grenade_thrown_lines = list() // Wouldn't need to call this out
+	reload_lines = list() // same here

@@ -55,6 +55,7 @@
 		qdel(src)
 		return
 
+	brain.say_reload_line()
 	gun_data.do_reload(primary_weapon, mag, tied_human, brain)
 
 	/// When do_reload() stops sleeping, let us check things one last time
