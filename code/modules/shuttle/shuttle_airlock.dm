@@ -377,9 +377,6 @@ Instanced to Defined Definitions (I hate ScrapeAway edition)
 /turf/open/floor/hangar_airlock/outer/frame29
 	frame_threshold = 29
 
-/turf/open/space/basic/outer_airlock
-	layer = 1.98
-
 /*#############################################################################
 Airlock Turf Interactability Procs
 #############################################################################*/

@@ -15396,10 +15396,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_2";
-	name = "Hangar Airlock Two"
-	},
+/turf/open/floor/almayer/plate/hangar_2,
 /area/golden_arrow/hangar)
 "gNW" = (
 /obj/effect/decal/warning_stripes{
@@ -15599,10 +15596,7 @@
 /turf/open/floor/hangar_airlock/outer/frame29,
 /area/golden_arrow/motor_pool)
 "ile" = (
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_2";
-	name = "Hangar Airlock Two"
-	},
+/turf/open/floor/almayer/plate/hangar_2,
 /area/golden_arrow/hangar)
 "iAe" = (
 /obj/effect/projector/bay_one,
@@ -15831,10 +15825,7 @@
 /turf/open/floor/hangar_airlock/inner/frame5,
 /area/golden_arrow/hangar)
 "kuE" = (
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_1";
-	name = "Hangar Airlock One"
-	},
+/turf/open/floor/almayer/plate/hangar_1,
 /area/golden_arrow/hangar)
 "kwe" = (
 /obj/structure/machinery/cm_vending/clothing/synth,
@@ -15907,10 +15898,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/plate{
-	icon_state = "hangar_1";
-	name = "Hangar Airlock One"
-	},
+/turf/open/floor/almayer/plate/hangar_1,
 /area/golden_arrow/hangar)
 "lve" = (
 /obj/structure/machinery/door_control{
@@ -17472,9 +17460,6 @@
 "xTf" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
-"xWe" = (
-/turf/open/space/basic/outer_airlock,
-/area/space)
 "xXq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -35546,7 +35531,7 @@ aEG
 aEG
 aEG
 aEG
-xWe
+aEG
 aEG
 aEG
 aEG
