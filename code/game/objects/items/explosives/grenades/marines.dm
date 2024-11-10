@@ -8,9 +8,6 @@
 #define GRENADE_FIRE_RESISTANCE_MIN 10
 #define GRENADE_FIRE_RESISTANCE_MAX 40
 
-#define TIMED_FUSE 0
-#define IMPACT_FUSE 1
-
 /obj/item/explosive/grenade/high_explosive
 	name = "\improper M40 HEDP grenade"
 	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Capable of being loaded in the M92 Launcher, or thrown by hand."
@@ -25,8 +22,6 @@
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
-	var/dual_purpose = FALSE
-	var/fuse_type = TIMED_FUSE
 
 
 /obj/item/explosive/grenade/high_explosive/New()
@@ -35,14 +30,35 @@
 
 	fire_resistance = rand(GRENADE_FIRE_RESISTANCE_MIN, GRENADE_FIRE_RESISTANCE_MAX)
 
-/obj/item/explosive/grenade/high_explosive/prime()
-	set waitfor = 0
-	if(shrapnel_count)
-		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-	apply_explosion_overlay()
-	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
-	qdel(src)
 
+
+/obj/item/explosive/grenade/high_explosive/prime(mob/living/user)
+	if(fuse_type != IMPACT_FUSE)
+		set waitfor = 0
+		if(shrapnel_count)
+			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+		apply_explosion_overlay()
+		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+		qdel(src)
+	else
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
+
+/obj/item/explosive/grenade/high_explosive/launch_impact(atom/hit_atom)
+	if(fuse_type != TIMED_FUSE)
+		var/detonate = TRUE
+		if(isobj(hit_atom) && !rebounding)
+			detonate = FALSE
+		if(isturf(hit_atom) && hit_atom.density && !rebounding)
+			detonate = FALSE
+		if(active && detonate) // Active, and we reached our destination.
+			if(shrapnel_count)
+				create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+				sleep(1) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+			apply_explosion_overlay()
+			if(explosion_power)
+				cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+			qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/proc/apply_explosion_overlay()
 	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
@@ -470,6 +486,7 @@
 	antigrief_protection = FALSE
 	var/datum/effect_system/smoke_spread/bad/smoke
 	var/smoke_radius = 3
+	dual_purpose = TRUE
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
@@ -486,9 +503,22 @@
 	smoke.start()
 	qdel(src)
 
+/obj/item/explosive/grenade/smokebomb/launch_impact(atom/hit_atom)
+	if(fuse_type != TIMED_FUSE)
+		var/detonate = TRUE
+		if(isobj(hit_atom) && !rebounding)
+			detonate = FALSE
+		if(isturf(hit_atom) && hit_atom.density && !rebounding)
+			detonate = FALSE
+		if(active && detonate) // Active, and we reached our destination.
+			playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+			smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
+			smoke.start()
+			qdel(src)
+
 /obj/item/explosive/grenade/phosphorus
 	name = "\improper M60 WPSI grenade"
-	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device."
+	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device. Two second fuse."
 	icon_state = "training_grenade"
 	det_time = 20
 	item_state = "grenade_training"

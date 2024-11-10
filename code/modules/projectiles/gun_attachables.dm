@@ -2951,6 +2951,9 @@ Defined in conflicts.dm of the #defines folder.
 		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
 	log_game("[key_name_admin(user)] used an underslung grenade launcher.")

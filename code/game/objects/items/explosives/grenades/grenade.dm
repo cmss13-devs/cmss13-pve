@@ -1,3 +1,6 @@
+#define TIMED_FUSE 0
+#define IMPACT_FUSE 1
+
 /obj/item/explosive/grenade
 	name = "grenade"
 	desc = "A hand-held grenade, with an adjustable timer."
@@ -22,6 +25,9 @@
 	antigrief_protection = TRUE //Should it be checked by antigrief?
 	ground_offset_x = 7
 	ground_offset_y = 6
+	var/dual_purpose = FALSE
+	var/fuse_type = TIMED_FUSE
+
 
 /obj/item/explosive/grenade/Initialize()
 	. = ..()
