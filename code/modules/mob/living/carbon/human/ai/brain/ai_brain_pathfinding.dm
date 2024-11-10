@@ -1,7 +1,7 @@
 /datum/human_ai_brain
 	var/ai_move_delay = 0
 	var/list/current_path
-	var/turf/current_target_turf
+	var/turf/current_path_target
 	var/path_update_period = (0.5 SECONDS)
 	var/no_path_found = FALSE
 	var/max_travel_distance = HUMAN_AI_MAX_PATHFINDING_RANGE
@@ -9,7 +9,6 @@
 	/// Amount of times no path found has occured
 	var/no_path_found_amount = 0
 	var/ai_timeout_time = 0
-	var/ai_timeout_period = 2 SECONDS
 
 	/// The time interval between calculating new paths if we cannot find a path
 	var/no_path_found_period = (2.5 SECONDS)
@@ -43,10 +42,10 @@
 
 	no_path_found_amount = 0
 
-	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
-		if(!CALCULATING_PATH(tied_human) || current_target_turf != T)
+	if((!current_path || (next_path_generation < world.time && current_path_target != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
+		if(!CALCULATING_PATH(tied_human) || current_path_target != T)
 			SSpathfinding.calculate_path(tied_human, T, max_range, tied_human, CALLBACK(src, PROC_REF(set_path)), list(tied_human, current_target))
-			current_target_turf = T
+			current_path_target = T
 		next_path_generation = world.time + path_update_period
 
 	if(CALCULATING_PATH(tied_human))
@@ -82,9 +81,6 @@
 	if(successful_move)
 		ai_timeout_time = world.time
 		current_path.len--
-
-	if(ai_timeout_time < world.time - ai_timeout_period)
-		return FALSE
 
 	return TRUE
 

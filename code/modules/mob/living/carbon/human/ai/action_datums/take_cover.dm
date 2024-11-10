@@ -1,26 +1,30 @@
-/datum/ongoing_action/take_cover
+/datum/ai_action/take_cover
 	name = "Take Cover"
-	var/turf/cover_turf
+	action_flags = ACTION_USING_LEGS
 
-/datum/ongoing_action/take_cover/New(datum/human_ai_brain/brain, list/arguments)
+/datum/ai_action/take_cover/get_weight(datum/human_ai_brain/brain)
+	if(!brain.current_cover)
+		return 0
+
+	if(brain.in_cover)
+		return 0
+
+	return 15
+
+/datum/ai_action/take_cover/trigger_action()
 	. = ..()
-	cover_turf = arguments[2]
-	brain.current_cover = cover_turf
 
-/datum/ongoing_action/take_cover/Destroy(force, ...)
-	cover_turf = null
-	return ..()
-
-/datum/ongoing_action/take_cover/trigger_action()
+	var/turf/current_cover = brain.current_cover
 	if(!brain.current_cover)
 		return ONGOING_ACTION_COMPLETED
 
-	if(get_dist(cover_turf, brain.tied_human) > 0)
-		if(!brain.move_to_next_turf(cover_turf))
+	var/mob/living/carbon/human/tied_human = brain.tied_human
+	if(get_dist(current_cover, tied_human) > 0)
+		if(!brain.move_to_next_turf(current_cover))
 			brain.end_cover()
 			return ONGOING_ACTION_COMPLETED
 
-		if(get_dist(cover_turf, brain.tied_human) > 0)
+		if(get_dist(current_cover, tied_human) > 0)
 			return ONGOING_ACTION_UNFINISHED
 
 	brain.in_cover = TRUE

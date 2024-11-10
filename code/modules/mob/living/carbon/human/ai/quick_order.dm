@@ -9,18 +9,23 @@
 	var/list/ai_humans_selected = list()
 
 /datum/human_ai_quick_order/Destroy(force, ...)
-	deselect_region()
 	holder.click_intercept = src
-	holder = null
 	cornerA = null
 	cornerB = null
+	holder = null
+	holder.images -= preview
+	preview.Cut()
 	return ..()
 
 /datum/human_ai_quick_order/proc/deselect_region()
-	holder.images -= preview
-	preview.Cut()
+	set waitfor = FALSE
+
 	cornerA = null
 	cornerB = null
+
+	sleep(0.5 SECONDS)
+	holder.images -= preview
+	preview.Cut()
 
 /datum/human_ai_quick_order/proc/InterceptClickOn(mob/user, params, atom/object)
 	var/list/modifiers = params2list(params)
@@ -29,22 +34,17 @@
 			to_chat(holder, SPAN_BOLDNOTICE("You need to have an area selected first."))
 			return
 
-		var/path_to_use = /datum/ongoing_action/approach_target
-		if(tgui_alert(holder.mob, "Should the AI stop approaching when they find a target?", "Approach Carefully?", list("Yes", "No")) == "Yes")
-			path_to_use = /datum/ongoing_action/approach_target/carefully
-
 		for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
-			ADD_ONGOING_ACTION(brain, path_to_use, get_turf(object), 1)
+			brain.target_turf = get_turf(object)
 
 		to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
 		deselect_region()
-		ai_humans_selected.Cut()
 
 	else if(LAZYACCESS(modifiers, LEFT_CLICK))
 		if(!cornerA)
 			cornerA = select_tile(get_turf(object), AREASELECT_CORNERA)
 			return
-		if(cornerA && !cornerB)
+		if(!cornerB)
 			cornerB = select_tile(get_turf(object), AREASELECT_CORNERB)
 			handle_selected_area(params)
 			deselect_region()
@@ -82,7 +82,7 @@
 
 	to_chat(holder, SPAN_BOLDNOTICE("[length(ai_humans_selected)] AI selected in region."))
 
-/client/proc/quick_order_human_ai()
+/client/proc/quick_order_ai_approach()
 	set name = "Quick Order: Approach"
 	set category = "Game Master.HumanAI"
 

@@ -80,8 +80,9 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/create_human_ai,
 	/client/proc/other_records,
 	/client/proc/fortify_room,
+	/client/proc/make_human_ai,
 	/datum/admins/proc/create_human_ai_sniper,
-	/client/proc/quick_order_human_ai,
+	/client/proc/quick_order_ai_approach,
 	))
 
 

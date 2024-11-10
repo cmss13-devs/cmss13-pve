@@ -1,5 +1,6 @@
 /datum/human_ai_brain
 	var/list/in_combat_lines = list(
+		"*warcry",
 		"Taking fire!",
 		"Getting shot at!",
 		"Engaging hostiles!",
@@ -34,6 +35,7 @@
 	)
 
 	var/list/grenade_thrown_lines = list(
+		"*warcry",
 		"Nade out!",
 		"Tossing a grenade!",
 		"Smoking 'em out!",

@@ -4,7 +4,7 @@
 	/// The AI humans in the squad
 	var/list/ai_in_squad = list()
 	/// Primary order assigned to this squad
-	var/datum/ongoing_action/order/assigned_order
+	var/datum/ai_order/current_order
 	/// Ref to the squad leader brain
 	var/datum/human_ai_brain/squad_leader
 
@@ -26,25 +26,31 @@
 	adding.squad_id = id
 	ai_in_squad += adding
 
-	adding.set_ongoing_order(assigned_order)
+	adding.set_current_order(current_order)
 	RegisterSignal(adding.tied_human, COMSIG_MOB_DEATH, PROC_REF(on_squad_member_death))
 	RegisterSignal(adding, COMSIG_PARENT_QDELETING, PROC_REF(on_squad_member_delete))
 
 /datum/human_ai_squad/proc/remove_from_squad(datum/human_ai_brain/removing)
 	if(removing == squad_leader)
 		set_squad_leader(null)
-	removing.ongoing_order = null
+	removing.remove_current_order()
 	removing.squad_id = null
 	removing.is_squad_leader = FALSE
 	ai_in_squad -= removing
 	UnregisterSignal(removing?.tied_human, COMSIG_MOB_DEATH)
 	UnregisterSignal(removing, COMSIG_PARENT_QDELETING)
 
-/datum/human_ai_squad/proc/set_order(datum/ongoing_action/order)
-	assigned_order = order
+/datum/human_ai_squad/proc/set_current_order(datum/ai_order/order)
+	current_order = order
 	RegisterSignal(order, COMSIG_PARENT_QDELETING, PROC_REF(on_order_delete))
 	for(var/datum/human_ai_brain/brain as anything in ai_in_squad)
-		brain.set_ongoing_order(order)
+		brain.set_current_order(order)
+
+/datum/human_ai_squad/proc/remove_current_order()
+	UnregisterSignal(current_order, COMSIG_PARENT_QDELETING)
+	current_order = null
+	for(var/datum/human_ai_brain/brain as anything in ai_in_squad)
+		brain.remove_current_order()
 
 /datum/human_ai_squad/proc/set_squad_leader(datum/human_ai_brain/new_leader)
 	if(squad_leader)
@@ -76,11 +82,7 @@
 
 /datum/human_ai_squad/proc/on_order_delete(datum/source, force)
 	SIGNAL_HANDLER
-
-	for(var/datum/human_ai_brain/squaddie as anything in ai_in_squad)
-		squaddie.clear_ongoing_order()
-
-	assigned_order = null
+	remove_current_order()
 
 /datum/human_ai_brain
 	/// Numeric ID of the squad this AI is in, if any
@@ -96,17 +98,3 @@
 
 	var/datum/human_ai_squad/squad = SShuman_ai.squad_id_dict["[new_id]"]
 	squad.add_to_squad(src)
-
-/datum/human_ai_brain/proc/approach_squad_leader()
-	if(is_squad_leader || !("[squad_id]" in SShuman_ai.squad_id_dict))
-		return FALSE
-
-	var/datum/human_ai_squad/squad = SShuman_ai.squad_id_dict["[squad_id]"]
-	if(!squad.squad_leader?.tied_human)
-		return FALSE
-
-	if(get_dist(tied_human, squad.squad_leader.tied_human) > 2)
-		if(!move_to_next_turf(squad.squad_leader.tied_human))
-			return FALSE
-		return FALSE
-	return TRUE

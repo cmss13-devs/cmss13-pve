@@ -46,7 +46,7 @@
 	return DOOR_PENALTY
 
 /obj/structure/mineral_door/resin/human_ai_act(mob/living/carbon/human/human_ai, datum/human_ai_brain/brain)
-	ADD_ONGOING_ACTION(brain, AI_ACTION_MELEE_ATOM, src)
+	//ADD_ONGOING_ACTION(brain, AI_ACTION_MELEE_ATOM, src)
 	return ..()
 
 
@@ -134,7 +134,6 @@
 		var/try_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP)
 		human_ai.a_intent = try_intent
 		a_intent = try_intent
-		brain.end_gun_fire()
 		return TRUE
 	return ..()
 
@@ -210,8 +209,10 @@
 	if(!.)
 		return
 
-	return FIRE_PENALTY
+	if(human_ai.on_fire)
+		return FIRE_PENALTY
 
+	return INFINITY // STOP. TOUCHING. THE FLAMES!
 
 /////////////////////////////
 //          WALLS          //

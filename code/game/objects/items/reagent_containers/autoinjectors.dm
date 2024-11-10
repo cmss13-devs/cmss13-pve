@@ -73,13 +73,13 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+/obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
 	if(!uses_left)
 		return FALSE
 
 	var/datum/reagent/reagent_datum = GLOB.chemical_reagents_list[chemname]
 
-	if((user.reagents.get_reagent_amount(chemname) + amount_per_transfer_from_this) > reagent_datum.overdose)
+	if((target.reagents.get_reagent_amount(chemname) + amount_per_transfer_from_this) > reagent_datum.overdose)
 		return FALSE
 
 	if(skilllock != SKILL_MEDICAL_TRAINED && !skillcheck(user, SKILL_MEDICAL, skilllock))
@@ -87,8 +87,8 @@
 
 	return TRUE
 
-/obj/item/reagent_container/hypospray/autoinjector/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
-	attack(user, user)
+/obj/item/reagent_container/hypospray/autoinjector/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	attack(target, user)
 
 /obj/item/reagent_container/hypospray/autoinjector/tricord
 	name = "tricordrazine autoinjector"
@@ -133,8 +133,8 @@
 	display_maptext = TRUE
 	maptext_label = "D+"
 
-/obj/item/reagent_container/hypospray/autoinjector/dexalinp/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
-	if(user.reagents.get_reagent_amount(chemname))
+/obj/item/reagent_container/hypospray/autoinjector/dexalinp/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(target.reagents.get_reagent_amount(chemname))
 		return FALSE
 	return ..()
 

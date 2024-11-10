@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(human_ai)
 	var/highest_squad_id = 0
 
 	/// List of all existing orders
-	var/list/datum/ongoing_action/existing_orders = list()
+	var/list/datum/ai_order/existing_orders = list()
 
 	var/list/human_ai_factions = list()
 
@@ -71,9 +71,3 @@ SUBSYSTEM_DEF(human_ai)
 	if(!squad_id || !(squad_id in squad_id_dict))
 		return null
 	return squad_id_dict[squad_id]
-
-/datum/controller/subsystem/human_ai/proc/create_new_order(datum/ongoing_action/path, ...)
-	if(!path::order)
-		stack_trace("Action of [path] was attempted to be created as an order.")
-	existing_orders += new path(args)
-

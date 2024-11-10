@@ -2,7 +2,7 @@
 	/// If TRUE, AI is currently in some form of cover
 	var/in_cover = FALSE
 
-	/// Reference to currently selected cover atom
+	/// Reference to atom currently selected as a cover place
 	var/atom/current_cover
 
 	COOLDOWN_DECLARE(cover_search_cooldown)
@@ -15,12 +15,11 @@
 	// Cover isn't working. Charge!
 	end_cover()
 
-
 /datum/human_ai_brain/proc/try_cover(obj/projectile/bullet)
 	if(!COOLDOWN_FINISHED(src, cover_search_cooldown))
 		return
 
-	COOLDOWN_START(src, cover_search_cooldown, 15 SECONDS)
+	COOLDOWN_START(src, cover_search_cooldown, 10 SECONDS)
 
 	var/list/turf_dict = list()
 	var/cover_dir = reverse_direction(angle2dir4ai(bullet.angle))
@@ -141,7 +140,7 @@
 	if(best_cover && best_cover != get_turf(tied_human))
 		turf_dict -= best_cover
 		// insert cover atom deletion/move comsigs here
-		ADD_ONGOING_ACTION(src, AI_ACTION_COVER, best_cover)
+		current_cover = best_cover
 		if(!from_squad)
 			squad_cover_processing(FALSE, turf_dict)
 

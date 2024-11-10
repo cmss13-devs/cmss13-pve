@@ -109,6 +109,7 @@
 		FACTION_SURVIVOR,
 	)
 	in_combat_lines = list( // zonenote: tweak these. They're entirely the stereotype of "communist russkie" when we can do better than that. also languages
+		"*warcry",
 		"For the UPP!",
 		"Die, you animal!",
 		"Capitalist dog!",
@@ -122,7 +123,6 @@
 		"You're worth nothing!",
 		"This is the end, for you!",
 		"Die!",
-		"*warcry",
 	)
 	exit_combat_lines = list(
 		"I need a break...",

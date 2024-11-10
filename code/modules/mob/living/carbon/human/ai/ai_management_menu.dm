@@ -15,10 +15,7 @@
 	var/list/data = list()
 
 	data["orders"] = list()
-	for(var/datum/ongoing_action/order as anything in SShuman_ai.existing_orders)
-		if(!order.should_display)
-			continue
-
+	for(var/datum/ai_order/order as anything in SShuman_ai.existing_orders)
 		data["orders"] += list(list(
 			"name" = order.name,
 			"type" = order.type,
@@ -52,7 +49,7 @@
 		data["squads"] += list(list(
 			"id" = squad.id,
 			"members" = english_list(name_list),
-			"order" = squad.assigned_order?.name,
+			"order" = squad.current_order?.name,
 			"ref" = REF(squad),
 			"squad_leader" = squad.squad_leader?.tied_human?.real_name,
 		))
@@ -101,7 +98,7 @@
 				return
 
 			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
-			squad.set_order(locate(params["order"]))
+			squad.set_current_order(locate(params["order"]))
 			return TRUE
 
 		if("assign_sl")
@@ -144,7 +141,34 @@
 
 	var/mob/living/carbon/human/ai_human = new()
 	ai_human.AddComponent(/datum/component/human_ai)
+
 	if(!cmd_admin_dress_human(ai_human, randomize = TRUE))
 		qdel(ai_human)
 		return
+
+	ai_human.get_ai_brain().appraise_inventory()
+	ai_human.face_dir(pick(GLOB.cardinals))
 	ai_human.forceMove(get_turf(mob))
+
+/client/proc/make_human_ai(mob/living/carbon/human/mob in GLOB.human_mob_list)
+	set name = "Make AI"
+	set desc = "Add AI functionality to a human."
+	set category = null
+
+	if(!check_rights(R_DEBUG|R_ADMIN))
+		return
+
+	if(QDELETED(mob))
+		return //mob is garbage collected
+
+	if(mob.GetComponent(/datum/component/human_ai))
+		to_chat(usr, SPAN_WARNING("[mob] already has an assigned AI."))
+		return
+
+	if(mob.ckey && alert("This mob is being controlled by [mob.ckey]. Are you sure you wish to add AI to it?","Make AI","Yes","No") != "Yes")
+		return
+
+	mob.AddComponent(/datum/component/human_ai)
+	mob.get_ai_brain().appraise_inventory()
+
+	message_admins("[key_name_admin(usr)] assigned an AI component to [mob.real_name].")
