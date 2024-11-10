@@ -704,13 +704,6 @@
 	can_hold = list(/obj/item/explosive/grenade/phosphorus)
 	grenade_type = /obj/item/explosive/grenade/phosphorus
 
-/obj/item/storage/box/nade_box/smoke
-	name = "\improper M40 HSDP grenade box"
-	desc = "A secure box holding 25 HSDP smoke grenades. Highly flammable, don't store near the flamer fuel."
-	type_icon = "hsdp"
-	can_hold = list(/obj/item/explosive/grenade/smokebomb)
-	grenade_type = /obj/item/explosive/grenade/smokebomb
-
 /obj/item/storage/box/nade_box/incen
 	name = "\improper M40 HIDP grenade box"
 	desc = "A secure box holding 25 M40 HIDP white incendiary grenades. Highly flammable, don't store near the flamer fuel."
