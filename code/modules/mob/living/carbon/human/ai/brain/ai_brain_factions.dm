@@ -7,6 +7,7 @@
 	VAR_PROTECTED/list/squad_member_death_lines = list()
 	VAR_PROTECTED/list/grenade_thrown_lines = list()
 	VAR_PROTECTED/list/reload_lines = list()
+	VAR_PROTECTED/list/reload_internal_mag_lines = list()
 
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
@@ -26,6 +27,9 @@
 
 	if(length(reload_lines))
 		brain.reload_lines = reload_lines
+
+	if(length(reload_internal_mag_lines))
+		brain.reload_internal_mag_lines = reload_internal_mag_lines
 
 	brain.shoot_to_kill = shoot_to_kill
 	brain.friendly_factions = friendly_factions
@@ -236,3 +240,4 @@
 	)
 	grenade_thrown_lines = list() // Wouldn't need to call this out
 	reload_lines = list() // same here
+	reload_internal_mag_lines = list()

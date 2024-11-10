@@ -65,6 +65,23 @@
 		"Reloading! Watch my six!",
 	)
 
+	var/list/reload_internal_mag_lines = list(
+		"Tube's dry.",
+		"Reloading.",
+		"Reloading!",
+		"I'm out, cover me!",
+		"Reloading, cover me!",
+		"Need some cover, reloading!",
+		"Reloading! Cover me, quick!",
+		"Out of ammo!",
+		"Hold up, I’m reloading now!",
+		"Reloading! Keep me covered!",
+		"Reloading—hold them off!",
+		"I’m dry! Reloading here!",
+		"Shells going in! Cover me!",
+		"Reloading! Watch my six!",
+	)
+
 	var/in_combat_line_chance = 40
 	var/exit_combat_line_chance = 40
 	var/squad_member_death_line_chance = 20
@@ -92,6 +109,9 @@
 	tied_human.say(pick(grenade_thrown_lines))
 
 /datum/human_ai_brain/proc/say_reload_line(chance = reload_line_chance)
-	if(!length(reload_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
+	if(!length(reload_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT) || !primary_weapon)
 		return
-	tied_human.say(pick(reload_lines))
+	if(istype(primary_weapon.current_mag, /obj/item/ammo_magazine/internal))
+		tied_human.say(pick(reload_internal_mag_lines))
+	else
+		tied_human.say(pick(reload_lines))
