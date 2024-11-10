@@ -17,27 +17,29 @@ Docking Port Definitions
 	var/list/floodlights = list()
 	var/list/inner_airlock_turfs = null
 	var/list/outer_airlock_turfs = null
+	auto_open = TRUE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
-	name = "Golden Arrow Hanagar Airlock 1 Inner"
-	id = GOLDEN_ARROW_A1_U
+	name = "Golden Arrow Hangar Airlock 1 Inner"
+	id = GOLDEN_ARROW_A1_I
 	roundstart_template = /datum/map_template/shuttle/midway
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two
 	name = "Golden Arrow Hangar Airlock 2 Inner"
-	id = GOLDEN_ARROW_A2_U
+	id = GOLDEN_ARROW_A2_I
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer
 	name = "Hangar Airlock Outer"
+	id = GENERIC_A_O
 	var/obj/docking_port/stationary/marine_dropship/airlock/inner/link_to_inner
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_one
 	name = "Golden Arrow Hangar Airlock 1 Outer"
-	id = GOLDEN_ARROW_A1_L
+	id = GOLDEN_ARROW_A1_O
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_two
 	name = "Golden Arrow Hangar Airlock 2 Outer"
-	id = GOLDEN_ARROW_A2_L
+	id = GOLDEN_ARROW_A2_O
 
 /*#############################################################################
 Backend Procs
@@ -46,6 +48,8 @@ Backend Procs
 /obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
 	. = ..()
 	var/obj/effect/projector/P = locate(/obj/effect/projector) in loc // its an odd way to piggyback off an existing system, but if you've messed up the projectors this will tell you (and you're hardly going to be making custom airlocks that often.)
+	if(!roundstart_template)
+		unregister()
 	if(P)
 		var/link_to_inner_loc = locate(x + P.vector_x, y + P.vector_y, z + P.vector_z)
 		link_to_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in link_to_inner_loc
@@ -53,10 +57,17 @@ Backend Procs
 	else
 		WARNING("Outer Airlock Docking Port: [name] could not link to its inner counterpart, this is because the projector on its tile is not properly linked. THE AIRLOCK WILL NOT WORK.")
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/on_prearrival(obj/docking_port/mobile/arriving_shuttle)
+/obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
+	if(registered)
+		unregister()
 	link_to_inner.lowered_dropship = TRUE
 	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
+	. = ..()
+	if(!registered)
+		register()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
@@ -73,12 +84,17 @@ Backend Procs
 						if(istype(A, /obj/effect/hangar_airlock/inner))
 							inner_airlock = A
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/on_prearrival(obj/docking_port/mobile/arriving_shuttle)
+/obj/docking_port/stationary/marine_dropship/airlock/inner/Initialize()
 	. = ..()
-	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
+	if(!roundstart_template)
+		unregister()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
+	if(registered)
+		unregister()
+	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
+	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlocks are open)
 	var/list/dropship_turfs = arriving_shuttle.return_turfs()
 	for(var/turf/dropship_turf in dropship_turfs)
 		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
@@ -194,10 +210,7 @@ Player Interactablility Procs
 		if(lowered_dropship)
 			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
 				transitioning_height_mask.alpha += 4
-		else
-			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
-				transitioning_height_mask.alpha -= 4
-		sleep(2 DECISECONDS)
+			sleep(2 DECISECONDS)
 	var/obj/docking_port/mobile/docked_mobile
 	if(lowered_dropship)
 		docked_mobile = get_docked()
@@ -206,6 +219,7 @@ Player Interactablility Procs
 		docked_mobile = link_to_outer.get_docked()
 		docked_mobile.initiate_docking(src)
 	for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask in dropship_height_masks)
+		dropship_height_masks -= qdeling_height_mask
 		qdel(qdeling_height_mask)
 	processing = FALSE
 

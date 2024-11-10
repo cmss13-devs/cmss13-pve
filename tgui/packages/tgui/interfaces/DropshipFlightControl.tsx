@@ -64,6 +64,7 @@ interface DropshipNavigationProps extends NavigationProps {
   lowered_dropship: 0 | 1;
   opened_outer_airlock: 0 | 1;
   disengaged_clamps: 0 | 1;
+  processing: 0 | 1;
 }
 
 const DropshipDoorControl = () => {
@@ -530,37 +531,59 @@ const EngageClamps = () => {
   );
 };
 
+const Processing = () => {
+  return <Button icon="ban">Processing...</Button>;
+};
+
 const DropshipAirlockSelect = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Section title="Dropship Airlock Control">
       <Stack vertical className="DestinationSelector">
         <Stack.Item>
-          {!data.playing_airlock_alarm ? (
+          {data.processing ? (
+            <Processing />
+          ) : !data.playing_airlock_alarm ? (
             <EnableCautionAlarm />
           ) : (
             <DisableCautionAlarm />
           )}
         </Stack.Item>
         <Stack.Item>
-          {!data.opened_inner_airlock ? (
+          {data.processing ? (
+            <Processing />
+          ) : !data.opened_inner_airlock ? (
             <OpenInnerAirlock />
           ) : (
             <CloseInnerAirlock />
           )}
         </Stack.Item>
         <Stack.Item>
-          {!data.lowered_dropship ? <LowerDropship /> : <RaiseDropship />}
+          {data.processing ? (
+            <Processing />
+          ) : !data.lowered_dropship ? (
+            <LowerDropship />
+          ) : (
+            <RaiseDropship />
+          )}
         </Stack.Item>
         <Stack.Item>
-          {!data.opened_outer_airlock ? (
+          {data.processing ? (
+            <Processing />
+          ) : !data.opened_outer_airlock ? (
             <OpenOuterAirlock />
           ) : (
             <CloseOuterAirlock />
           )}
         </Stack.Item>
         <Stack.Item>
-          {!data.disengaged_clamps ? <DisengageClamps /> : <EngageClamps />}
+          {data.processing ? (
+            <Processing />
+          ) : !data.disengaged_clamps ? (
+            <DisengageClamps />
+          ) : (
+            <EngageClamps />
+          )}
         </Stack.Item>
       </Stack>
     </Section>

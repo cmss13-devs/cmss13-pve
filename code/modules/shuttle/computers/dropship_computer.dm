@@ -422,6 +422,7 @@
 		.["lowered_dropship"] = active_airlock_dock.lowered_dropship
 		.["opened_outer_airlock"] = active_airlock_dock.open_outer_airlock
 		.["disengaged_clamps"] = active_airlock_dock.disengaged_clamps
+		.["processing"] = active_airlock_dock.processing
 
 	for(var/obj/docking_port/stationary/dock in compatible_landing_zones)
 		var/dock_reserved = FALSE

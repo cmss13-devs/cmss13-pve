@@ -640,6 +640,8 @@
 	return
 
 /obj/docking_port/mobile/proc/set_idle()
+	if(mode == SHUTTLE_AIRLOCKED)
+		return
 	timer = 0
 	set_mode(SHUTTLE_IDLE)
 	destination = null
