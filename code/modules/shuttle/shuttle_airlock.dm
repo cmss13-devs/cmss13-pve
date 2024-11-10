@@ -1,12 +1,35 @@
-/obj/docking_port/stationary/marine_dropship/airlock/outer
-	var/obj/docking_port/stationary/marine_dropship/airlock/inner/link_to_inner
+/*#############################################################################
+Docking Port Definitions
+#############################################################################*/
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
-	. = ..()
-	var/obj/effect/projector/P = locate(/obj/effect/projector) in loc
-	var/link_to_inner_loc = locate(x + P.vector_x, y + P.vector_y, z + P.vector_z)
-	link_to_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in link_to_inner_loc
-	link_to_inner.link_to_outer = src
+/obj/docking_port/stationary/marine_dropship/airlock/inner
+	var/processing = FALSE
+	var/playing_airlock_alarm = FALSE
+	var/open_inner_airlock = FALSE
+	var/lowered_dropship = FALSE
+	var/open_outer_airlock = FALSE
+	var/disengaged_clamps = FALSE
+	var/obj/docking_port/stationary/marine_dropship/airlock/outer/link_to_outer
+	var/floodlight_color = "#dae2ff"
+	var/obj/effect/hangar_airlock/inner/inner_airlock
+	var/obj/effect/hangar_airlock/outer/outer_airlock
+	var/list/dropship_height_masks = list()
+	var/list/floodlights = list()
+	var/list/inner_airlock_turfs = null
+	var/list/outer_airlock_turfs = null
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
+	name = "Golden Arrow Hanagar Airlock 1 Inner"
+	id = GOLDEN_ARROW_A1_U
+	roundstart_template = /datum/map_template/shuttle/midway
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two
+	name = "Golden Arrow Hangar Airlock 2 Inner"
+	id = GOLDEN_ARROW_A2_U
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer
+	name = "Hangar Airlock Outer"
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/link_to_inner
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_one
 	name = "Golden Arrow Hangar Airlock 1 Outer"
@@ -16,20 +39,24 @@
 	name = "Golden Arrow Hangar Airlock 2 Outer"
 	id = GOLDEN_ARROW_A2_L
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner
-	var/processing = FALSE
-	var/playing_airlock_alarm = FALSE
-	var/open_inner_airlock = FALSE
-	var/lowered_dropship = FALSE
-	var/open_outer_airlock = FALSE
-	var/obj/docking_port/stationary/marine_dropship/airlock/outer/link_to_outer
-	var/floodlight_color = "#dae2ff"
-	var/obj/effect/hangar_airlock/inner/inner_airlock
-	var/obj/effect/hangar_airlock/outer/outer_airlock
-	var/list/dropship_height_masks = list()
-	var/list/floodlights = list()
-	var/list/inner_airlock_turfs = null
-	var/list/outer_airlock_turfs = null
+/*#############################################################################
+Backend Procs
+#############################################################################*/
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
+	. = ..()
+	var/obj/effect/projector/P = locate(/obj/effect/projector) in loc // its an odd way to piggyback off an existing system, but if you've messed up the projectors this will tell you (and you're hardly going to be making custom airlocks that often.)
+	if(P)
+		var/link_to_inner_loc = locate(x + P.vector_x, y + P.vector_y, z + P.vector_z)
+		link_to_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in link_to_inner_loc
+		link_to_inner.link_to_outer = src
+	else
+		WARNING("Outer Airlock Docking Port: [name] could not link to its inner counterpart, this is because the projector on its tile is not properly linked. THE AIRLOCK WILL NOT WORK.")
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/on_prearrival(obj/docking_port/mobile/arriving_shuttle)
+	. = ..()
+	link_to_inner.lowered_dropship = TRUE
+	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
@@ -45,6 +72,10 @@
 					for(var/A in T.contents)
 						if(istype(A, /obj/effect/hangar_airlock/inner))
 							inner_airlock = A
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/on_prearrival(obj/docking_port/mobile/arriving_shuttle)
+	. = ..()
+	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
@@ -99,14 +130,18 @@
 
 	airlock.icon_state = "[airlock_type]_[transition]_static"
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_airlock_alarm()
-	processing = TRUE
+/*#############################################################################
+Player Interactablility Procs
+#############################################################################*/
 
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_airlock_alarm(invert = FALSE)
+	processing = TRUE
+	if(invert)
+		playing_airlock_alarm = playing_airlock_alarm ? FALSE : TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
-
 	if(playing_airlock_alarm)
 		var/obj/structure/machinery/floodlight/landing/activating_floodlight
 		for(activating_floodlight in floodlights)
@@ -120,7 +155,6 @@
 			sleep(0.5 SECONDS)
 			activating_rotating_light = activating_floodlight.light.our_mask
 			activating_rotating_light.toggle(TRUE)
-
 	else
 		var/obj/structure/machinery/floodlight/landing/deactivating_floodlight
 		var/atom/movable/lighting_mask/rotating_toggleable/deactivating_rotating_light
@@ -134,30 +168,28 @@
 			deactivating_floodlight.light_system = STATIC_LIGHT
 			deactivating_floodlight.light_color = floodlight_color
 			deactivating_floodlight.static_update_light()
-
 	processing = FALSE
 
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock()
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock(invert = FALSE)
 	processing = TRUE
-
+	if(invert)
+		open_inner_airlock = open_inner_airlock ? FALSE : TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
 	if(open_inner_airlock)
 		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock, 50)
 	else
 		omnibus_airlock_transition("inner", FALSE, inner_airlock_turfs, inner_airlock, 50)
-
 	processing = FALSE
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height()
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height(invert = FALSE)
 	processing = TRUE
-
+	if(invert)
+		lowered_dropship = lowered_dropship ? FALSE : TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
-
 	for(var/bideciseconds, bideciseconds <= 25, bideciseconds++)
 		if(lowered_dropship)
 			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
@@ -166,7 +198,6 @@
 			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
 				transitioning_height_mask.alpha -= 4
 		sleep(2 DECISECONDS)
-
 	var/obj/docking_port/mobile/docked_mobile
 	if(lowered_dropship)
 		docked_mobile = get_docked()
@@ -174,32 +205,37 @@
 	else
 		docked_mobile = link_to_outer.get_docked()
 		docked_mobile.initiate_docking(src)
-
 	for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask in dropship_height_masks)
 		qdel(qdeling_height_mask)
-
 	processing = FALSE
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_outer_airlock()
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_outer_airlock(invert = FALSE)
 	processing = TRUE
-
+	if(invert)
+		open_outer_airlock = open_outer_airlock ? FALSE : TRUE
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
 	if(open_outer_airlock)
 		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock, 30)
 	else
 		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock, 30)
-
 	processing = FALSE
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
-	name = "Golden Arrow Hanagar Airlock 1 Inner"
-	id = GOLDEN_ARROW_A1_U
-	roundstart_template = /datum/map_template/shuttle/midway
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_clamps(invert = FALSE)
+	processing = TRUE
+	if(invert)
+		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
+	if(disengaged_clamps)
+		var/obj/docking_port/mobile/docked_mobile =	link_to_outer.get_docked()
+		if(!docked_mobile.assigned_transit)
+			SSshuttle.generate_transit_dock(docked_mobile)
+		docked_mobile.set_mode(SHUTTLE_IDLE)
+		docked_mobile.initiate_docking(docked_mobile.assigned_transit)
+	processing = FALSE
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two
-	name = "Golden Arrow Hangar Airlock 2 Inner"
-	id = GOLDEN_ARROW_A2_U
+/*#############################################################################
+Airlock Appearance Effects
+#############################################################################*/
 
 /obj/effect/hangar_airlock
 	icon = 'icons/effects/hangar_airlock_416x736.dmi'
@@ -239,6 +275,11 @@
 	alpha = 0
 	plane = -6
 
+
+/*#############################################################################
+Airlock Turfs Definitions
+#############################################################################*/
+
 /turf/open/floor/hangar_airlock
 	layer = 1.5
 	// to tie the turf opening and the airlock animation together, the frame on which a tile can be considered 'open' or 'closed' has to be done manually.
@@ -258,6 +299,11 @@
 	name = "Hangar Inner Airlock"
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "plate"
+
+
+/*#############################################################################
+Airlock Turf Interactability Procs
+#############################################################################*/
 
 /turf/open/floor/hangar_airlock/Entered(atom/movable/AM)
 	if(open)

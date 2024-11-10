@@ -770,6 +770,9 @@
 	if(mode == SHUTTLE_IGNITING)
 		check_transit_zone()
 
+	if(mode == SHUTTLE_AIRLOCKED)
+		return
+
 	if(timeLeft(1) > 0)
 		return
 	// If we can't dock or we don't have a transit slot, wait for 20 ds,

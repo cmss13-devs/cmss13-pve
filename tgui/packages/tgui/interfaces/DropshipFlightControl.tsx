@@ -49,7 +49,6 @@ type ShuttleRef = {
 interface DropshipNavigationProps extends NavigationProps {
   shuttle_id: string;
   door_status: Array<DoorStatus>;
-  is_dropship_airlocked?: 0 | 1;
   has_flight_optimisation?: 0 | 1;
   is_flight_optimised?: 0 | 1;
   can_fly_by?: 0 | 1;
@@ -64,6 +63,7 @@ interface DropshipNavigationProps extends NavigationProps {
   opened_inner_airlock: 0 | 1;
   lowered_dropship: 0 | 1;
   opened_outer_airlock: 0 | 1;
+  disengaged_clamps: 0 | 1;
 }
 
 const DropshipDoorControl = () => {
@@ -500,6 +500,36 @@ const CloseOuterAirlock = () => {
   );
 };
 
+const DisengageClamps = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="rocket"
+      onClick={() => {
+        act('clamps');
+        act('button-push');
+      }}
+    >
+      Disengage Clamps
+    </Button>
+  );
+};
+
+const EngageClamps = () => {
+  const { act } = useBackend<NavigationProps>();
+  return (
+    <Button
+      icon="rocket"
+      onClick={() => {
+        act('clamps');
+        act('button-push');
+      }}
+    >
+      Engage Clamps
+    </Button>
+  );
+};
+
 const DropshipAirlockSelect = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
@@ -528,6 +558,9 @@ const DropshipAirlockSelect = () => {
           ) : (
             <CloseOuterAirlock />
           )}
+        </Stack.Item>
+        <Stack.Item>
+          {!data.disengaged_clamps ? <DisengageClamps /> : <EngageClamps />}
         </Stack.Item>
       </Stack>
     </Section>
@@ -601,7 +634,7 @@ const RenderScreen = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
-      {data.is_dropship_airlocked == 1 && <DropshipAirlockSelect />}
+      {data.shuttle_mode === 'airlocked' && <DropshipAirlockSelect />}
       {data.alternative_shuttles.length > 0 && <DropshipSelector />}
       {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
       {data.shuttle_mode === 'idle' && data.can_set_automated === 1 && (
