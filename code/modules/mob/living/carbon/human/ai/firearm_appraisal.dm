@@ -111,6 +111,37 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/smg,
 	)
 
+/datum/firearm_appraisal/shotgun_db
+	burst_amount_max = 2
+	minimum_range = 1
+	optimal_range = 1
+	maximum_range = 3
+	gun_types = list(
+		/obj/item/weapon/gun/shotgun/double,
+	)
+
+/datum/firearm_appraisal/shotgun_db/do_reload(obj/item/weapon/gun/firearm, obj/item/ammo_magazine/mag, mob/living/carbon/user, datum/human_ai_brain/AI)
+	AI.unholster_primary()
+	AI.ensure_primary_hand(firearm)
+	firearm.unwield(user)
+	firearm.unique_action()
+	user.swap_hand()
+	sleep(AI.short_action_delay * AI.action_delay_mult)
+	AI.equip_item_from_equipment_map(HUMAN_AI_AMMUNITION, mag)
+	sleep(AI.short_action_delay * AI.action_delay_mult)
+	firearm.attackby(mag, user)
+	sleep(AI.micro_action_delay * AI.action_delay_mult)
+	firearm.attackby(mag, user)
+	if(!QDELETED(mag))
+		var/storage_spot = AI.storage_has_room(mag)
+		if(storage_spot)
+			sleep(AI.micro_action_delay * AI.action_delay_mult)
+			AI.store_item(mag, storage_spot, HUMAN_AI_AMMUNITION)
+	sleep(AI.short_action_delay * AI.action_delay_mult)
+	user.swap_hand()
+	firearm.unique_action()
+	AI.wield_primary_sleep()
+
 /datum/firearm_appraisal/shotgun
 	burst_amount_max = 2
 	minimum_range = 1
