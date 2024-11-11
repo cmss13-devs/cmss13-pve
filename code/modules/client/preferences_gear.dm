@@ -1082,9 +1082,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 4
 
 /datum/gear/smoking/weed_joint
-	display_name = "Joint of space weed"
+	display_name = "Joint of weed"
 	path = /obj/item/clothing/mask/cigarette/weed
-	cost = 4
+	cost = 1
 
 /datum/gear/smoking/lighter
 	display_name = "Lighter, cheap"
