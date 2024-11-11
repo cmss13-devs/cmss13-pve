@@ -190,14 +190,14 @@
 	name = "\improper M3 Pattern Armor case"
 	desc = "A case containing the standard issue parts of the M3 Pattern Armor set of the USCMC. No parts sold separately."
 	can_hold = list(/obj/item/clothing/suit/marine, /obj/item/clothing/accessory/pads/groin, /obj/item/clothing/accessory/pads, /obj/item/clothing/accessory/pads/greaves)
-	storage_slots = 4
+	storage_slots = 5
 
 /obj/item/storage/box/guncase/m3armor/fill_preset_inventory()
 	new /obj/item/clothing/suit/marine(src)
 	new /obj/item/clothing/accessory/pads(src)
 	new /obj/item/clothing/accessory/pads/groin(src)
 	new /obj/item/clothing/accessory/pads/greaves(src)
-
+	new /obj/item/clothing/accessory/pads/kneepads(src)
 /obj/effect/essentials_set/m3
 	spawned_gear_list = list(
 		/obj/item/clothing/suit/marine,
