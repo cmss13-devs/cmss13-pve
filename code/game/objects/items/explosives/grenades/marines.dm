@@ -16,6 +16,7 @@
 	item_state = "grenade_hedp"
 	dangerous = TRUE
 	underslug_launchable = TRUE
+	dual_purpose = TRUE
 	var/explosion_power = 100
 	var/explosion_falloff = 25
 	var/shrapnel_count = 32
@@ -26,39 +27,38 @@
 
 /obj/item/explosive/grenade/high_explosive/New()
 	..()
-	dual_purpose = TRUE
 
 	fire_resistance = rand(GRENADE_FIRE_RESISTANCE_MIN, GRENADE_FIRE_RESISTANCE_MAX)
 
 
 
 /obj/item/explosive/grenade/high_explosive/prime(mob/living/user)
-	if(fuse_type != IMPACT_FUSE)
-		set waitfor = 0
-		if(shrapnel_count)
-			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-		apply_explosion_overlay()
-		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
-		qdel(src)
-	else
+	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
+	if(shrapnel_count)
+		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+	apply_explosion_overlay()
+	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+	qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/launch_impact(atom/hit_atom)
-	if(fuse_type != TIMED_FUSE)
-		var/detonate = TRUE
-		if(isobj(hit_atom) && !rebounding)
-			detonate = FALSE
-		if(isturf(hit_atom) && hit_atom.density && !rebounding)
-			detonate = FALSE
-		if(active && detonate) // Active, and we reached our destination.
-			if(shrapnel_count)
-				create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-				sleep(1) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
-			apply_explosion_overlay()
-			if(explosion_power)
-				cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
-			qdel(src)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		if(shrapnel_count)
+			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+			sleep(1) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+		apply_explosion_overlay()
+		if(explosion_power)
+			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/proc/apply_explosion_overlay()
 	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
@@ -89,6 +89,7 @@
 	underslug_launchable = FALSE
 	explosion_power = 200
 	shrapnel_count = 0
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/stick
@@ -104,6 +105,7 @@
 	underslug_launchable = FALSE
 	explosion_power = 100
 	shrapnel_count = 0
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/upp
@@ -116,6 +118,7 @@
 	underslug_launchable = FALSE
 	explosion_power = 100
 	shrapnel_count = 48
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
@@ -140,6 +143,7 @@
 	explosion_power = 0
 	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber
 	antigrief_protection = FALSE
+	dual_purpose = FALSE
 
 /obj/item/explosive/grenade/high_explosive/tmfrag
 	name = "\improper M51A BFAB grenade"
@@ -147,6 +151,7 @@
 	icon_state = "grenade_bfab"
 	item_state = "grenade_bfab"
 	hand_throwable = FALSE
+	dual_purpose = FALSE
 	det_time = 10
 	explosion_power = 40
 	shrapnel_count = 48
@@ -159,6 +164,7 @@
 	icon_state = "grenade_ex"
 	item_state = "grenade_ex"
 	throw_speed = SPEED_FAST
+	dual_purpose = FALSE
 	throw_range = 6
 	underslug_launchable = FALSE
 	explosion_power = 120
@@ -178,6 +184,7 @@
 	item_state = "grenade_buck"
 	hand_throwable = FALSE
 	underslug_launchable = TRUE
+	dual_purpose = FALSE
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
@@ -212,6 +219,7 @@
 	shrapnel_count = 16
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	var/direct_hit_shrapnel = 5
@@ -246,6 +254,7 @@
 	desc = "Functions identically to the standard AGM-F 40mm grenade, except instead of exploding into shrapnel, the hornet shell shoots off holo-targeting .22lr rounds. The equivalent to buckshot at-range."
 	icon_state = "grenade_hornet"
 	item_state = "grenade_hornet_active"
+	dual_purpose = FALSE
 	shrapnel_count = 5
 	shrapnel_type = /datum/ammo/bullet/shrapnel/hornet_rounds
 	direct_hit_shrapnel = 5
@@ -256,6 +265,7 @@
 	desc = "Functions identically to the standard AGM-F 40mm grenade, except instead of exploding into shrapnel, the star shells bursts into burning phosphor that illuminates the area."
 	icon_state = "grenade_starshell"
 	item_state = "grenade_starshell_active"
+	dual_purpose = FALSE
 	shrapnel_count = 8
 	shrapnel_type = /datum/ammo/flare/starshell
 	direct_hit_shrapnel = 5
@@ -497,24 +507,29 @@
 	QDEL_NULL(smoke)
 	return ..()
 
-/obj/item/explosive/grenade/smokebomb/prime()
+/obj/item/explosive/grenade/smokebomb/prime(mob/living/user)
+	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
 	smoke.start()
 	qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/launch_impact(atom/hit_atom)
-	if(fuse_type != TIMED_FUSE)
-		var/detonate = TRUE
-		if(isobj(hit_atom) && !rebounding)
-			detonate = FALSE
-		if(isturf(hit_atom) && hit_atom.density && !rebounding)
-			detonate = FALSE
-		if(active && detonate) // Active, and we reached our destination.
-			playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-			smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
-			smoke.start()
-			qdel(src)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
+		smoke.start()
+		qdel(src)
 
 /obj/item/explosive/grenade/phosphorus
 	name = "\improper M60 WPSI grenade"

@@ -8,7 +8,7 @@
 	harmful = FALSE
 
 	//skill required to use
-	var/skill_requirement = SKILL_POLICE_DEFAULT
+	var/skill_requirement = SKILL_POLICE_DEFAULT	//Default is 0 skill, should allow any and all to use
 
 	//ignores ship anti-grief system
 	antigrief_protection = FALSE
@@ -80,7 +80,7 @@
 	var/trained_human = FALSE
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(skillcheck(H, SKILL_POLICE, SKILL_POLICE_DEFAULT))	//Default is 0 skill, should allow any and all to use
+		if(skillcheck(H, SKILL_POLICE, SKILL_POLICE_SKILLED))
 			trained_human = TRUE
 
 		var/list/protections = list(H.glasses, H.wear_mask, H.head)
