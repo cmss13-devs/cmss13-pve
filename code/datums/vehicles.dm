@@ -30,6 +30,10 @@
 	name = "Movie APC"
 	interior_id = "apc_movie"
 
+/datum/map_template/interior/apc_aa
+	name = "Anti-Air APC"
+	interior_id = "apc_aa"
+
 /datum/map_template/interior/arc
 	name = "ARC"
 	interior_id = "arc"
