@@ -213,6 +213,29 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
+/datum/equipment_preset/colonist/priest
+	name = "Civilian Colonist, Priest"
+	assignment = "Spiritual Guidance Counselor"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/datum/equipment_preset/colonist/priest/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(new_human), WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/black(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+
 /datum/equipment_preset/colonist/whitecollar
 	name = "Civilian Colonist, White-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -355,6 +378,8 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//uniform
 	var/random_scrubs= rand(1,4)
 	switch(random_scrubs)
@@ -567,6 +592,7 @@
 	name = "Civilian Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
+	faction_group = FACTION_LIST_WY_COLONY
 	assignment = "Weyland-Yutani Corporate Security Officer"
 	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
@@ -629,6 +655,7 @@
 	name = "Civilian Security Guard, Prison"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
+	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Corrections Officer"
 	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
@@ -662,11 +689,11 @@
 /datum/equipment_preset/colonist/security/guard
 	name = "Civilian Security Guard, UA Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
+	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP)
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
