@@ -295,6 +295,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
 
+/datum/gear/headwear/uscm/cap/sulaco
+	display_name = "USS Golden Arrow cap"
+	path = /obj/item/clothing/head/sulacocap
+	cost = 1
+
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
 	path = /obj/item/clothing/head/cmcap/flap
@@ -440,6 +445,29 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM chaplain helmet patch"
 	path = /obj/item/prop/helmetgarb/chaplain_patch
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/armor
+	category = "Armor Cosmetics"
+
+/datum/gear/armor/paint_sg
+	display_name = "Black Smartgun Harness Paint"
+	path = /obj/item/clothing/accessory/paint/sg
+	cost = 0
+
+/datum/gear/armor/paint_skull
+	display_name = "M3 Pattern Skull Paint"
+	path = /obj/item/clothing/accessory/paint
+	cost = 0
+
+/datum/gear/armor/paint_heart
+	display_name = "M3 Pattern Heart Paint"
+	path = /obj/item/clothing/accessory/paint/heart
+	cost = 0
+
+/datum/gear/armor/uaflag
+	display_name = "M3 Pattern Flag Paint"
+	path = /obj/item/clothing/accessory/paint/uaflag
+	cost = 0
 
 /datum/gear/paperwork
 	category = "Paperwork"
