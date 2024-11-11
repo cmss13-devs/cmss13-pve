@@ -218,20 +218,21 @@
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"
 	desc = "Officer's uniform, a little outdated. Why it needs to be frag rated is beyond everyone."
-	icon_state = "BO_jumpsuit"
-	item_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "service_uniform"
+	item_state = "service_uniform"
+	worn_state = "service_uniform"
 	specialty = "marine service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/boiler
-	name = "marine operations uniform"
-	desc = "Officer's uniform, a little outdated."
-	icon_state = "uscmboiler"
-	item_state = "uscmboiler"
-	worn_state = "uscmboiler"
+	name = "marine operations boilersuit"
+	desc = "A green boilersuit."
+	icon_state = "command_jumpsuit"
+	item_state = "command_jumpsuit"
+	worn_state = "command_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	flags_atom = NO_SNOW_TYPE
 	specialty = "marine operations"
 
 /obj/item/clothing/under/marine/officer/command
@@ -422,10 +423,10 @@
 //=======================================================================\\
 
 /obj/item/clothing/under/marine/reconnaissance
-	name = "\improper USCM uniform"
+	name = "\improper damaged USCM uniform"
 	desc = "Torn, Burned and blood stained. This uniform has seen much more than you could possibly imagine."
-	icon_state = "recon_marine"
-	worn_state = "recon_marine"
+	icon_state = "damage_marine_jumpsuit"
+	worn_state = "damage_marine_jumpsuit"
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/reconnaissance/Initialize(mapload)
