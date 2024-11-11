@@ -72,7 +72,8 @@
 	set category = "Game Master.HumanAI"
 
 	var/static/list/sniper_equipment_presets = list(
-		/datum/equipment_preset/clf/sniper::name = /datum/equipment_preset/clf/sniper
+		/datum/equipment_preset/clf/sniper::name = /datum/equipment_preset/clf/sniper,
+		/datum/equipment_preset/clf/sniper/svd::name = /datum/equipment_preset/clf/sniper/svd,
 	)
 
 	if(!check_rights(R_DEBUG))
