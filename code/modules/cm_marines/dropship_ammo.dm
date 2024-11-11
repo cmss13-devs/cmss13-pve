@@ -302,6 +302,25 @@
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(fire_spread), impact, create_cause_data(initial(name), source_mob), 4, 15, 50, "#00b8ff"), 0.5 SECONDS) //Very intense but the fire doesn't last very long
 	QDEL_IN(src, 0.5 SECONDS)
 
+/obj/structure/ship_ammo/rocket/banshee/nerve
+	name = "\improper AGM-227/C 'Honest John'"
+	desc = "The AGM-227 Banshee platform is an effective vehicle for a variety of warheads. While most rockets contain just a high-explosive charge, or an incendiary gel mixture for wide-area destruction, the 'Honest John' carries a 38kg CN-20 nerve gas warhead. USCMCWC greatly recommends MOPP gear be worn while handling."
+	icon_state = "banshee"
+	ammo_id = "b"
+	point_cost = 500 //changed from regular banshee even if in 99.99999% of cases PvE will never need this but I was too scared to remove it for fear of something exploding
+	fire_mission_delay = 4 //We don't care because our ammo has just 1 rocket
+
+/obj/structure/ship_ammo/rocket/banshee/nerve/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
+	impact.ceiling_debris_check(3)
+	spawn(5)
+		cell_explosion(impact, 25, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
+		spawn(5)
+			var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+			cn20.set_up(8, 0, impact, null)
+			cn20.start()
+	QDEL_IN(src, 0.5 SECONDS)
+
+
 /obj/structure/ship_ammo/rocket/keeper
 	name = "\improper GBU-67 'Keeper II'"
 	desc = "The GBU-67 'Keeper II' is the latest in a generation of laser guided weaponry that spans all the way back to the 20th century. Earning its nickname from a shortening of 'Peacekeeper' which comes from the program that developed its guidance system and the various uses of it during peacekeeping conflicts. Its payload is designed to devastate armored targets. Can be loaded into the LAU-444 Guided Missile Launcher."
