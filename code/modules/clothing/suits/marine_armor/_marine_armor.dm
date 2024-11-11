@@ -942,8 +942,8 @@
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
 	. = ..()
-	var/obj/item/clothing/accessory/pads/pads = new()
-	src.attach_accessory(null, pads, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
 
 /obj/item/clothing/suit/marine/leader
 	name = "\improper B12 pattern marine armor"
