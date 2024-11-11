@@ -1091,12 +1091,12 @@
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
-/obj/item/clothing/accessory/pads/thigh
-	name = "\improper M3 Thigh Guards"
-	desc = "A set thighguards designed to be worn in conjuction with M3 pattern armor."
+/obj/item/clothing/accessory/pads/kneepads
+	name = "\improper M3 Knee Guards"
+	desc = "A set knee guards designed to be worn in conjuction with M3 pattern armor."
 	icon_state = "thighguards"
 	item_state = "thighguards"
-	slot = ACCESSORY_SLOT_DECORTHIGH
+	slot = ACCESSORY_SLOT_DECORKNEE
 
 /obj/item/clothing/accessory/pads/groin
 	name = "\improper M3 Groin Plate"

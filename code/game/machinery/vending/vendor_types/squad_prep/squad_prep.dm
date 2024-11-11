@@ -125,6 +125,7 @@
 		list("M3 Pattern Shoulder Pauldrons", round(scale * 10), /obj/item/clothing/accessory/pads, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Groin Plate", round(scale * 10), /obj/item/clothing/accessory/pads/groin, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Greaves", round(scale * 15), /obj/item/clothing/accessory/pads/greaves, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Knee Pads", round(scale * 15), /obj/item/clothing/accessory/pads/kneepads, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Arm Bracers", round(scale * 10), /obj/item/clothing/accessory/pads/bracers, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Neck Brace", round(scale * 15), /obj/item/clothing/accessory/pads/neckguard, VENDOR_ITEM_REGULAR),
 
