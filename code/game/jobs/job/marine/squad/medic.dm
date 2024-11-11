@@ -7,7 +7,7 @@
 	total_positions = 16
 	spawn_positions = 16
 	allow_additional = 1
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm/medic
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You tend the wounds of your fellow Marines</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters.<br><b>You remember that you've stored your personal gear and uniform are located in your medical office.</b>"
@@ -69,6 +69,10 @@
 /datum/job/marine/medic/ai
 	total_positions = 1
 	spawn_positions = 1
+
+/datum/job/marine/medic/ai/tournament
+	total_positions = 3
+	spawn_positions = 3
 
 /datum/job/marine/medic/ai/set_spawn_positions(count)
 	return spawn_positions

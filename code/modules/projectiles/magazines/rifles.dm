@@ -124,6 +124,13 @@
 	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
+/obj/item/ammo_magazine/rifle/m41aMK1/tournament
+	name = "\improper M41A training magazine"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm training rounds."
+	default_ammo = /datum/ammo/bullet/rifle/tournament
+	ammo_band_color = AMMO_BAND_COLOR_TRAINING
+
+
 /obj/item/ammo_magazine/rifle/m41aMK1/recon
 	icon_state = "m41a_mk1_recon"
 	current_rounds = 95

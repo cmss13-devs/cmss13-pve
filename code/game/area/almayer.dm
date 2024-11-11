@@ -826,6 +826,11 @@
 	icon_state = "shuttle2"
 	requires_power = 0
 
+/area/almayer/holodeck
+	name = "\improper Holodeck"
+	icon_state = "coreroom"
+	fake_zlevel = 2 // lowerdeck
+
 //Placeholder.
 /area/almayer/evacuation/pod1
 /area/almayer/evacuation/pod2

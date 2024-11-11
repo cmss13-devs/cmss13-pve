@@ -1,0 +1,141 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"j" = (
+/turf/open/beach/sand,
+/area/almayer/holodeck)
+"l" = (
+/obj/item/clothing/glasses/sunglasses,
+/turf/open/beach/sand,
+/area/almayer/holodeck)
+"m" = (
+/obj/effect/overlay/palmtree_l,
+/obj/effect/overlay/coconut,
+/turf/open/beach/sand,
+/area/almayer/holodeck)
+"n" = (
+/obj/effect/overlay/palmtree_r,
+/turf/open/beach/sand,
+/area/almayer/holodeck)
+"o" = (
+/turf/open/beach/water,
+/area/almayer/holodeck)
+
+(1,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(2,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(3,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+n
+j
+j
+"}
+(4,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(5,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(6,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(7,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}
+(8,1,1) = {"
+o
+o
+j
+j
+j
+j
+l
+j
+j
+j
+"}
+(9,1,1) = {"
+o
+o
+j
+j
+j
+j
+m
+j
+j
+j
+"}
+(10,1,1) = {"
+o
+o
+j
+j
+j
+j
+j
+j
+j
+j
+"}

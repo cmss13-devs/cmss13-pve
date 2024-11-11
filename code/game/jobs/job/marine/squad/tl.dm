@@ -6,7 +6,7 @@
 	total_positions = 8
 	spawn_positions = 8
 	allow_additional = 1
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm/tl
 	entry_message_body = "You are the <a href='"+WIKI_PLACEHOLDER+"'>Squad Leader.</a> Your task is leading the designated squad and utilize available ordnance. If the section sergeant dies, you are expected to lead in their place.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
@@ -40,6 +40,10 @@
 /datum/job/marine/tl/ai
 	total_positions = 2
 	spawn_positions = 2
+
+/datum/job/marine/tl/ai/tournament
+	total_positions = 4
+	spawn_positions = 4
 
 /datum/job/marine/tl/ai/upp
 	title = JOB_SQUAD_TEAM_LEADER_UPP

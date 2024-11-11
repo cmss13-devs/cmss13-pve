@@ -593,6 +593,12 @@
 /obj/item/ammo_box/magazine/mk1/rubber/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/mk1/training
+	name = "magazine box (Training M41A MK1 X 10)"
+	overlay_ammo_type = "_rubber_mk1"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/tournament
+
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23

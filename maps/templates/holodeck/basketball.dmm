@@ -1,0 +1,150 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+)
+"c" = (
+/obj/structure/holohoop{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/almayer/holodeck)
+"d" = (
+/turf/open/floor/wood,
+/area/almayer/holodeck)
+"f" = (
+/obj/item/toy/beach_ball/holoball,
+/turf/open/floor/wood,
+/area/almayer/holodeck)
+"k" = (
+/obj/structure/holohoop{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/almayer/holodeck)
+"n" = (
+/obj/structure/holostool,
+/turf/open/floor,
+/area/almayer/holodeck)
+"q" = (
+/turf/open/floor,
+/area/almayer/holodeck)
+
+(1,1,1) = {"
+q
+d
+d
+c
+d
+d
+q
+n
+n
+a
+"}
+(2,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+n
+n
+a
+"}
+(3,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+q
+q
+a
+"}
+(4,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+n
+n
+a
+"}
+(5,1,1) = {"
+q
+d
+d
+f
+d
+d
+q
+n
+n
+a
+"}
+(6,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+n
+n
+a
+"}
+(7,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+n
+n
+a
+"}
+(8,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+q
+q
+a
+"}
+(9,1,1) = {"
+q
+d
+d
+d
+d
+d
+q
+n
+n
+a
+"}
+(10,1,1) = {"
+q
+d
+d
+k
+d
+d
+q
+n
+n
+a
+"}

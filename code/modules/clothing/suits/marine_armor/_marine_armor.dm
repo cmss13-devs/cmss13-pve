@@ -105,6 +105,7 @@
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
 
 	var/atom/movable/marine_light/light_holder
+	var/squad_overlay_state = "std-armor"
 
 /obj/item/clothing/suit/storage/marine/Initialize(mapload)
 	. = ..()
@@ -675,6 +676,11 @@
 	icon_state = "cc_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/storage/marine/tournament
+	name = "M3 pattern training marine armor"
+	icon_state = "1"
+	specialty = "M3 pattern training marine"
+	squad_overlay_state = "tournament-armor"
 //==================PLU Lamp Rig==================\\
 
 /obj/item/clothing/suit/storage/marine/veteran/lamp

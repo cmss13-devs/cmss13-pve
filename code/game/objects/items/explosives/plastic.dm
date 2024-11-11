@@ -392,3 +392,7 @@
 		return FALSE
 	. = ..()
 
+/obj/item/explosive/plastic/breaching_charge/training
+	name = "training breaching charge"
+	desc = "Is specifically engineered not to produce much sharpnel on explosion"
+	shrapnel_volume = 0
