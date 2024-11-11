@@ -461,7 +461,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 		overlays_standing[HEAD_LAYER] = I
 		apply_overlay(HEAD_LAYER)
 
-		if(istype(head, /obj/item/clothing/head/helmet/marine) || istype(head, /obj/item/clothing/head/helmet/upp))
+		if(istype(head, /obj/item/clothing/head/helmet/marine))
 			var/obj/item/clothing/head/helmet/marine/marine_helmet = head
 			if(assigned_squad && marine_helmet.flags_marine_helmet & HELMET_SQUAD_OVERLAY)
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
@@ -480,6 +480,23 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 				// Add small numbers to the head garb layer so we don't have a layer conflict
 				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
 				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, marine_helmet.helmet_overlays[i])
+				num_helmet_overlays++
+
+			// null out the rest of the space allocated for helmet overlays
+			// God I hate 1-based indexing
+			for(var/i in num_helmet_overlays+1 to MAX_HEAD_GARB_ITEMS)
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = null
+
+			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
+				apply_overlay(i)
+
+		else if(istype(head, /obj/item/clothing/head/helmet/upp))
+			var/obj/item/clothing/head/helmet/upp/upp_helmet = head
+			var/num_helmet_overlays = 0
+			for(var/i in 1 to length(upp_helmet.helmet_overlays))
+				// Add small numbers to the head garb layer so we don't have a layer conflict
+				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, upp_helmet.helmet_overlays[i])
 				num_helmet_overlays++
 
 			// null out the rest of the space allocated for helmet overlays
