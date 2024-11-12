@@ -1055,6 +1055,25 @@
 		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
 	item_state = icon_state
 
+/obj/item/clothing/accessory/flak/od
+	name = "M67 flak vest"
+	desc = "An older model of flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Much comfier than its M70 successor, and can be worn under most combat armor, however, the ballistic protection leaves much to be desired."
+	icon_state = "flakod"
+	item_state = "flakod"
+	w_class = SIZE_MEDIUM
+	tucked_in = FALSE
+/obj/item/clothing/accessory/flak/od/attack_self(mob/user)
+	..()
+
+	tucked_in = !tucked_in
+	if(tucked_in)
+		icon_state = "flakodslim"
+		user.visible_message(SPAN_NOTICE("[user] tucks in [src]'s sleeves."), SPAN_NOTICE("You tuck in [src]'s sleeves."))
+	else
+		icon_state = initial(icon_state)
+		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
+	item_state = icon_state
+
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
