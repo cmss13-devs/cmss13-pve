@@ -1985,7 +1985,6 @@
 #include "code\modules\mob\living\carbon\human\ai\fortify_room.dm"
 #include "code\modules\mob\living\carbon\human\ai\human_ai_interaction.dm"
 #include "code\modules\mob\living\carbon\human\ai\quick_order.dm"
-#include "code\modules\mob\living\carbon\human\ai\action_datums\fire_at_target_pb.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\chase_target.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\fire_at_target.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\follow_leader.dm"

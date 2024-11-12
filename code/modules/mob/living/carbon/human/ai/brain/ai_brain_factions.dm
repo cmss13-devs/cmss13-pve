@@ -2,7 +2,7 @@
 	var/faction = FACTION_NEUTRAL
 	VAR_PROTECTED/shoot_to_kill = TRUE
 
-	VAR_PROTECTED/list/in_combat_lines = list()
+	VAR_PROTECTED/list/enter_combat_lines = list()
 	VAR_PROTECTED/list/exit_combat_lines = list()
 	VAR_PROTECTED/list/squad_member_death_lines = list()
 	VAR_PROTECTED/list/grenade_thrown_lines = list()
@@ -13,8 +13,8 @@
 	VAR_PROTECTED/list/neutral_factions = list()
 
 /datum/human_ai_faction/proc/apply_faction_data(datum/human_ai_brain/brain)
-	if(length(in_combat_lines))
-		brain.in_combat_lines = in_combat_lines
+	if(length(enter_combat_lines))
+		brain.enter_combat_lines = enter_combat_lines
 
 	if(length(exit_combat_lines))
 		brain.exit_combat_lines = exit_combat_lines
@@ -86,7 +86,7 @@
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
-	in_combat_lines = list(
+	enter_combat_lines = list(
 		"You will never defeat us!",
 		"I will kill you!",
 		"You'll never take our homeland!",
@@ -169,7 +169,7 @@
 		FACTION_TWE,
 		FACTION_SURVIVOR,
 	)
-	in_combat_lines = list( // zonenote: tweak these. They're entirely the stereotype of "communist russkie" when we can do better than that. also languages
+	enter_combat_lines = list( // zonenote: tweak these. They're entirely the stereotype of "communist russkie" when we can do better than that. also languages
 		"*warcry",
 		"For the UPP!",
 		"Die, you animal!",
@@ -220,7 +220,7 @@
 	friendly_factions = list(
 		FACTION_WY,
 	)
-	in_combat_lines = list(
+	enter_combat_lines = list(
 		"Visual confirmed, engaging.",
 		"Engaging hostile.",
 		"Eliminating hostile.",

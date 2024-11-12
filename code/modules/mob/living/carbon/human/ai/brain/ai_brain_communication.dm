@@ -1,5 +1,5 @@
 /datum/human_ai_brain
-	var/list/in_combat_lines = list(
+	var/list/enter_combat_lines = list(
 		"*warcry",
 		"Taking fire!",
 		"Getting shot at!",
@@ -89,9 +89,9 @@
 	var/reload_line_chance = 40
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)
-	if(!length(in_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
+	if(!length(enter_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
 		return
-	tied_human.say(pick(in_combat_lines))
+	tied_human.say(pick(enter_combat_lines))
 
 /datum/human_ai_brain/proc/say_exit_combat_line(chance = exit_combat_line_chance)
 	if(!length(exit_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
