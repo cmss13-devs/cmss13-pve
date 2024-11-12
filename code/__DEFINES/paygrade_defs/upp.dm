@@ -4,16 +4,16 @@
 /// UE,
 #define PAY_SHORT_UEC "UEC"
 
-/// UE1, Private
+/// UE1, Ryadovoy
 #define PAY_SHORT_UE1 "UE1"
 
-/// UE2, Private First Class
+/// UE2, Efreitor
 #define PAY_SHORT_UE2 "UE2"
 
 /// UE3, Korporal
 #define PAY_SHORT_UE3 "UE3"
 
-/// UE4, unior Serzhant
+/// UE4, Junior Serzhant
 #define PAY_SHORT_UE4 "UE4"
 
 /// UE5, Serzhant
@@ -22,14 +22,17 @@
 /// UE6, Master Serzhant
 #define PAY_SHORT_UE6 "UE6"
 
+/// UE7, Starshina
+#define PAY_SHORT_UE7 "UE7"
+
 /// UC1, Junior Kommando
-#define PAY_SHORT_UC1 "UC1"
+#define PAY_SHORT_UK1 "UK1"
 
 /// UC2, 2nd Kommando
-#define PAY_SHORT_UC2 "UC2"
+#define PAY_SHORT_UK2 "UK2"
 
 /// UC3, 1st Kommando
-#define PAY_SHORT_UC3 "UC3"
+#define PAY_SHORT_UK3 "UK3"
 
 /// UO1, Leytenant
 #define PAY_SHORT_UO1 "UO1"
@@ -60,3 +63,6 @@
 
 /// UO9, Army General
 #define PAY_SHORT_UO9 "UO9"
+
+/// UC1, Militsiya
+#define PAY_SHORT_UC1 "UC1"
