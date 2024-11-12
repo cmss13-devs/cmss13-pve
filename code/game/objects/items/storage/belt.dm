@@ -1872,6 +1872,7 @@
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
 	icon_state = "sgbelt"
+	flags_equip_slot = SLOT_WAIST
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = 5,
@@ -1901,6 +1902,7 @@
 /obj/item/storage/belt/gun/smartgunner/garrow
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+	icon_state = "sgbelt"
 
 	//Keep a track of how many magazines are inside the belt.
 	var/magazines = 0
