@@ -416,8 +416,8 @@
 /obj/item/clothing/under/uaac/tis/io
 	name = "\improper UAAC-TIS Intelligence Officer uniform"
 	desc = "Originally a USCM officer uniform, all insignia have been carefully removed and replaced by a simple TIS pin worn over the right breast. Like their Special Agent counterparts, TIS Intel Officers are typically transplants from UA aligned armed forces, often initially recruited on a temporary basis then transferred permanently. As such, officers are often forced to adapt their original uniforms."
-	icon_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "service_uniform"
+	worn_state = "service_uniform"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 //=========================//USCM Survivors\\================================\\
 //=======================================================================\\
@@ -1275,10 +1275,10 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	icon_state = "d_uscmboiler"
-	worn_state = "d_uscmboiler"
+	icon_state = "boilersuit_khaki"
+	worn_state = "boilersuit_khaki"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	item_state_slots = list(WEAR_BODY = "d_uscmboiler")
+	item_state_slots = list(WEAR_BODY = "boilersuit_khaki")
 
 /obj/item/clothing/under/marine/officer/engi/navy
 	name = "\improper crew uniform"
