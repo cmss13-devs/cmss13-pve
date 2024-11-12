@@ -389,12 +389,6 @@
 	name = "\improper USCM formal Commanding Officer's black cap"
 	icon_state = "co_formalhat_black"
 
-/obj/item/clothing/head/cmcap/khaki/ro
-	name = "\improper USCM quartermaster cap"
-	desc = "It's a fancy hat for a not-so-fancy military supply clerk."
-	icon_state = "rocap"
-	flags_atom = NO_SNOW_TYPE
-
 /obj/item/clothing/head/cmcap/khaki
 	name = "\improper khaki patrol cap"
 	desc = "A khaki patrol cap."
