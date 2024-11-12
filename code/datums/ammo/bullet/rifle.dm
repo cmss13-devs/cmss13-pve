@@ -261,4 +261,4 @@
 /datum/ammo/bullet/rifle/mar40
 	name = "7.62x39mm rifle bullet"
 	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_2

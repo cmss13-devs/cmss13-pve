@@ -178,7 +178,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
-	penetration= ARMOR_PENETRATION_TIER_6
+	penetration= -ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pkp
