@@ -16,6 +16,8 @@
 		"backpack" = null,
 		"left_pocket" = null,
 		"right_pocket" = null,
+		"armor" = null,
+		"uniform" = null,
 	)
 
 	var/static/list/important_storage_slots = list(
@@ -23,9 +25,11 @@
 		WEAR_WAIST,
 		WEAR_L_STORE,
 		WEAR_R_STORE,
+		WEAR_JACKET,
+		WEAR_BODY,
 	)
 
-	var/static/important_storage_slots_bitflag = SLOT_BACK | SLOT_WAIST | SLOT_STORE
+	var/static/important_storage_slots_bitflag = SLOT_BACK | SLOT_WAIST | SLOT_STORE | SLOT_OCLOTHING | SLOT_ICLOTHING
 
 /datum/human_ai_brain/proc/get_object_from_loc(object_loc)
 	RETURN_TYPE(/obj/item/storage)
@@ -40,6 +44,14 @@
 			storage_object = tied_human.l_store
 		if("right_pocket")
 			storage_object = tied_human.r_store
+		if("armor")
+			if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+				var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
+				storage_object = storage_suit.pockets
+		if("uniform")
+			if(isclothing(tied_human.w_uniform))
+				var/obj/item/clothing/accessory/storage/storage_accessory = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
+				storage_object = storage_accessory.hold
 	return storage_object
 
 /datum/human_ai_brain/proc/equip_item_from_equipment_map(object_type, obj/item/object_ref)
@@ -100,9 +112,9 @@
 
 	if((slot in important_storage_slots) && istype(equipment, /obj/item/storage))
 		recalculate_containers()
-		appraise_inventory(slot == WEAR_WAIST, slot == WEAR_BACK, slot == WEAR_L_STORE, slot == WEAR_R_STORE)
+		appraise_inventory(slot == WEAR_WAIST, slot == WEAR_BACK, slot == WEAR_L_STORE, slot == WEAR_R_STORE, slot == WEAR_JACKET, slot == WEAR_BODY)
 
-	if((!primary_weapon || (primary_weapon?.w_class < equipment.w_class)) && isgun(equipment))
+	if(!primary_weapon && isgun(equipment) && (slot == WEAR_J_STORE))
 		set_primary_weapon(equipment)
 
 /datum/human_ai_brain/proc/on_item_unequip(datum/source, obj/item/equipment, slot)
@@ -110,10 +122,10 @@
 
 	if((important_storage_slots_bitflag & slot) && istype(equipment, /obj/item/storage))
 		recalculate_containers()
-		appraise_inventory(slot == SLOT_WAIST, slot == SLOT_BACK, slot == SLOT_STORE, slot == SLOT_STORE)
+		appraise_inventory(slot == SLOT_WAIST, slot == SLOT_BACK, slot == SLOT_STORE, slot == SLOT_STORE, slot == SLOT_OCLOTHING, slot == SLOT_ICLOTHING)
 
 	if(isgun(equipment))
-		appraise_inventory(FALSE, FALSE, FALSE, FALSE)
+		appraise_inventory(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
 
 /datum/human_ai_brain/proc/recalculate_containers()
 	container_refs = list()
@@ -125,9 +137,16 @@
 		container_refs["left_pocket"] = tied_human.l_store
 	if(isstorage(tied_human.r_store))
 		container_refs["right_pocket"] = tied_human.r_store
+	if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+		var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
+		container_refs["armor"] = storage_suit.pockets
+	if(isclothing(tied_human.w_uniform))
+		var/obj/item/clothing/accessory/storage/storage_accessory = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
+		if(storage_accessory)
+			container_refs["uniform"] = storage_accessory.hold
 
 /// Currently doesn't support recursive storage
-/datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE)
+/datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE, armor = TRUE, uniform = TRUE)
 	if(previous_faction != tied_human.faction)
 		previous_faction = tied_human.faction
 		var/datum/human_ai_faction/our_faction = SShuman_ai.human_ai_factions[tied_human.faction]
@@ -138,8 +157,17 @@
 		if(knife)
 			set_primary_melee(knife)*/
 
+	// snowflake secondary weapon in suit storage check
+	if(isgun(tied_human.s_store) && (tied_human.s_store != primary_weapon))
+		add_secondary_weapon(tied_human.s_store)
+		goto back_statement
+
 	tried_reload = FALSE // We don't really need to do this in a smart way
 	if(belt)
+		if(isgun(tied_human.belt) && (tied_human.belt != primary_weapon))
+			add_secondary_weapon(tied_human.belt)
+			goto back_statement
+
 		if(!istype(tied_human.belt, /obj/item/storage)) // belts can be backpacks, don't ask
 			goto back_statement
 
@@ -155,6 +183,10 @@
 
 	back_statement:
 		if(back)
+			if(isgun(tied_human.back) && (tied_human.back != primary_weapon))
+				add_secondary_weapon(tied_human.back)
+				goto l_pocket_statement
+
 			if(!istype(tied_human.back, /obj/item/storage/backpack))
 				goto l_pocket_statement
 
@@ -186,7 +218,7 @@
 	r_pocket_statement:
 		if(pocket_r)
 			if(!istype(tied_human.r_store, /obj/item/storage/pouch))
-				return
+				goto armor_statement
 
 			for(var/id in equipment_map)
 				for(var/obj/item/item as anything in equipment_map[id])
@@ -197,6 +229,38 @@
 
 			RegisterSignal(tied_human.r_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
 			item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
+
+	armor_statement:
+		if(armor)
+			if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+				goto uniform_statement
+
+			var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
+			for(var/id in equipment_map)
+				for(var/obj/item/item as anything in equipment_map[id])
+					if(equipment_map[id][item] != "armor")
+						continue
+
+					equipment_map[id] -= item
+
+			RegisterSignal(storage_suit, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+			item_slot_appraisal_loop(storage_suit.pockets, "armor")
+
+	uniform_statement:
+		if(uniform && isclothing(tied_human.w_uniform))
+			var/obj/item/clothing/accessory/storage/located_storage = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
+			if(!located_storage)
+				return
+
+			for(var/id in equipment_map)
+				for(var/obj/item/item as anything in equipment_map[id])
+					if(equipment_map[id][item] != "uniform")
+						continue
+
+					equipment_map[id] -= item
+
+			RegisterSignal(located_storage, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+			item_slot_appraisal_loop(located_storage.hold, "uniform")
 
 /datum/human_ai_brain/proc/item_slot_appraisal_loop(obj/item/container_to_loop, slot_to_assign)
 	for(var/obj/item/inv_item as anything in container_to_loop)
@@ -209,6 +273,9 @@
 			equipment_map[HUMAN_AI_GRENADES][inv_item] = slot_to_assign
 		else if(inv_item.flags_human_ai & TOOL_ITEM)
 			equipment_map[HUMAN_AI_TOOLS][inv_item] = slot_to_assign
+		else if(isgun(inv_item) && !(inv_item in secondary_weapons))
+			add_secondary_weapon(inv_item)
+
 		//else if((inv_item.flags_human_ai & MELEE_WEAPON_ITEM) && !primary_melee)
 		//	set_primary_melee(inv_item)
 
@@ -245,7 +312,7 @@
 /datum/human_ai_brain/proc/on_item_pickup(datum/source, obj/item/picked_up)
 	SIGNAL_HANDLER
 
-	if((!primary_weapon || (primary_weapon.w_class < picked_up.w_class)) && isgun(picked_up))
+	if(!primary_weapon && isgun(picked_up))
 		set_primary_weapon(picked_up)
 
 	to_pickup -= picked_up
@@ -260,7 +327,7 @@
 
 	for(var/slot in container_refs)
 		if(container_refs[slot] == dropped)
-			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket")
+			appraise_inventory(slot == "belt", slot == "backpack", slot == "left_pocket", slot == "right_pocket", slot == "armor", slot == "uniform")
 			break
 
 	for(var/id in equipment_map)
@@ -370,3 +437,24 @@
 		if(!HAS_TRAIT(maybe_tool, tool_trait))
 			continue
 		return maybe_tool
+
+/datum/human_ai_brain/proc/add_secondary_weapon(obj/item/weapon/gun/secondary)
+	if(!secondary || (secondary in secondary_weapons))
+		return
+
+	secondary_weapons += secondary
+	RegisterSignal(secondary, COMSIG_PARENT_QDELETING, PROC_REF(on_secondary_delete), TRUE)
+
+/datum/human_ai_brain/proc/remove_secondary_weapon(obj/item/weapon/gun/secondary)
+	UnregisterSignal(secondary, COMSIG_PARENT_QDELETING)
+	secondary_weapons -= secondary
+
+/datum/human_ai_brain/proc/on_secondary_delete(datum/source, force)
+	SIGNAL_HANDLER
+
+	remove_secondary_weapon(source)
+
+/datum/human_ai_brain/proc/weapon_ammo_search(obj/item/weapon/gun/weapon)
+	for(var/obj/item/ammo_magazine/mag as anything in equipment_map[HUMAN_AI_AMMUNITION])
+		if(istype(weapon, mag.gun_type) && mag.ai_can_use(tied_human, src))
+			return mag

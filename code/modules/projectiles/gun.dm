@@ -1964,27 +1964,27 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] || modifiers["middle"] || modifiers["right"])
-		return
+		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.
 	if(!isturf(gun_user.loc))
-		return
+		return FALSE
 
 	if(istype(object, /atom/movable/screen))
-		return
+		return FALSE
 
 	if(!bypass_checks)
 		if(gun_user.hand && !isgun(gun_user.l_hand) || !gun_user.hand && !isgun(gun_user.r_hand)) // If the object in our active hand is not a gun, abort
-			return
+			return FALSE
 
 		if(gun_user.throw_mode)
-			return
+			return FALSE
 
 		if(gun_user.Adjacent(object)) //Dealt with by attack code
-			return
+			return FALSE
 
 	if(QDELETED(object))
-		return
+		return FALSE
 
 	if(gun_user.client?.prefs?.toggle_prefs & TOGGLE_HELP_INTENT_SAFETY && (gun_user.a_intent == INTENT_HELP))
 		if(world.time % 3) // Limits how often this message pops up, saw this somewhere else and thought it was clever
@@ -1998,8 +1998,9 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		Fire(object, gun_user, modifiers)
 		reset_fire()
 		display_ammo()
-		return
+		return TRUE
 	SEND_SIGNAL(src, COMSIG_GUN_FIRE)
+	return TRUE
 
 /// Wrapper proc for the autofire subsystem to ensure the important args aren't null
 /obj/item/weapon/gun/proc/fire_wrapper(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
@@ -2025,3 +2026,14 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 /obj/item/weapon/gun/proc/get_target()
 	RETURN_TYPE(/atom)
 	return target
+
+/obj/item/weapon/gun/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	if(istype(current_mag, /obj/item/ammo_magazine/internal) && (current_mag.current_rounds <= 0) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+		return FALSE
+	else if((!current_mag || (current_mag.current_rounds <= 0)) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+		return FALSE
+
+	if((flags_gun_features & GUN_WY_RESTRICTED) && !wy_allowed_check(user))
+		return FALSE
+
+	return TRUE

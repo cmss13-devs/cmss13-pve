@@ -12,8 +12,8 @@
 	holder.click_intercept = src
 	cornerA = null
 	cornerB = null
-	holder = null
 	holder.images -= preview
+	holder = null
 	preview.Cut()
 	return ..()
 
@@ -97,7 +97,7 @@
 	var/datum/human_ai_quick_order/order_datum = new
 	order_datum.holder = src
 	click_intercept = order_datum
-	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. To stop quick ordering, press the verb again."))
+	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. To stop quick ordering, press the verb again. Will not function if GM panel is open."))
 
 #undef AREASELECT_CORNERA
 #undef AREASELECT_CORNERB

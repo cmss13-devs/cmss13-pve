@@ -5,6 +5,10 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	for(var/type in subtypesof(/datum/firearm_appraisal))
 		. += new type
 
+/proc/get_firearm_appraisal(obj/item/weapon/gun/firearm)
+	for(var/datum/firearm_appraisal/appraisal as anything in GLOB.firearm_appraisals)
+		if(is_type_in_list(firearm, appraisal.gun_types))
+			return appraisal
 
 /datum/firearm_appraisal
 	/// Minimum engagement range with weapon type
@@ -19,6 +23,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	var/list/gun_types = list()
 	/// If TRUE, this gun is disposable and isn't worth trying to reload
 	var/disposable = FALSE
+	/// The selection weight of the weapon type. If an AI has multiple weapons, it'll use weighting to determine its primary. In short, higher weight = more powerful
+	var/primary_weight = 1
 
 /// List of things we do before beginning to spray bullets based off weapon type
 /datum/firearm_appraisal/proc/before_fire(obj/item/weapon/gun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
@@ -68,18 +74,21 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/rifle/sniper,
 	)
+	primary_weight = 8
 
 /datum/firearm_appraisal/rifle
 	burst_amount_max = 8
 	gun_types = list(
 		/obj/item/weapon/gun/rifle,
 	)
+	primary_weight = 5
 
 /datum/firearm_appraisal/smartgun
 	burst_amount_max = 18
 	gun_types = list(
 		/obj/item/weapon/gun/smartgun,
 	)
+	primary_weight = 10
 
 /datum/firearm_appraisal/smartgun/do_reload(obj/item/weapon/gun/firearm, obj/item/ammo_magazine/mag, mob/living/carbon/user, datum/human_ai_brain/AI)
 	AI.unholster_primary()
@@ -110,6 +119,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/smg,
 	)
+	primary_weight = 4
 
 /datum/firearm_appraisal/shotgun_db
 	burst_amount_max = 2
@@ -150,6 +160,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/shotgun,
 	)
+	primary_weight = 4
 
 /datum/firearm_appraisal/shotgun/before_fire(obj/item/weapon/gun/shotgun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
 	. = ..()
@@ -164,6 +175,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/boltaction,
 	)
+	primary_weight = 4
 
 /datum/firearm_appraisal/boltaction/before_fire(obj/item/weapon/gun/boltaction/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
 	. = ..()
@@ -182,6 +194,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/flamer,
 	)
+	primary_weight = 7
 
 /datum/firearm_appraisal/rpg
 	minimum_range = 5
@@ -190,9 +203,18 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
 	)
 	disposable = TRUE
+	primary_weight = 15
 
 /datum/firearm_appraisal/rpg/multi_use
 	gun_types = list(
 		/obj/item/weapon/gun/launcher/rocket,
 	)
 	disposable = FALSE
+
+/datum/firearm_appraisal/pistol
+	maximum_range = 6
+	gun_types = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/revolver,
+	)
+	primary_weight = 1

@@ -1,5 +1,6 @@
 /datum/human_ai_brain
 	var/obj/item/weapon/gun/primary_weapon
+	var/list/obj/item/weapon/gun/secondary_weapons = list()
 	//var/obj/item/weapon/primary_melee
 	/// Appraisal datum
 	var/datum/firearm_appraisal/gun_data
