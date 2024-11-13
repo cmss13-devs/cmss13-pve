@@ -102,7 +102,7 @@
 
 	if(.)
 		/// Fire gives the largest aggression increase.
-		aggression_cur = min(AGGRESSION_MAXIMUM, aggression_cur + min(AGGRESSION_INCREMENT_CAP, damage * (damagetype == BURN ? 0.2 : 0.13) ) ) /// Multiplying is faster than dividing. Go figure.
+		aggression_cur = min(AGGRESSION_MAXIMUM, aggression_cur + min(AGGRESSION_INCREMENT_CAP, damage * (damagetype == BURN ? 0.25 : 0.17) ) ) /// Multiplying is faster than dividing. Go figure.
 
 /*
  * ==========================================================================|
