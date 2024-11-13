@@ -67,6 +67,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/velocity_mod = 0 // Added velocity to bullets
 	var/hud_offset_mod  = 0 //How many pixels to adjust the gun's sprite coords by. Ideally, this should keep the gun approximately centered.
 	var/fa_scatter_peak_mod = 0 //modifies how many bullets it takes to reach max scatter in FA firing.
+	var/fa_max_scatter_mod = 0 //modifies maximum scatter in sustained FA
 
 	var/activation_sound = 'sound/weapons/handling/gun_underbarrel_activate.ogg'
 	var/deactivation_sound = 'sound/weapons/handling/gun_underbarrel_deactivate.ogg'
@@ -3641,8 +3642,9 @@ Defined in conflicts.dm of the #defines folder.
 	delay_mod = 0
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = SCATTER_AMOUNT_TIER_9
+	scatter_mod = -SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
+	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 //item actions for handling deployment to full auto.
 /datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
 	. = ..()
