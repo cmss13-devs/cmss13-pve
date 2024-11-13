@@ -979,13 +979,13 @@
 
 /datum/equipment_preset/uscm/tl_equipped/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
-	var/obj/item/clothing/under/marine/rto/U = new(new_human)
+	var/obj/item/clothing/under/marine/U = new(new_human)
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	U.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(U, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp78(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine(src), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(src), WEAR_HANDS)
