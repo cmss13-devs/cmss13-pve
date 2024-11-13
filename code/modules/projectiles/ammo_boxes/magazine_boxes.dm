@@ -505,7 +505,7 @@
 	overlay_ammo_type = "_reg_heavy"
 	overlay_gun_type = "_m41ae2"
 	overlay_content = "_m41ae2"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg
+	magazine_type = /obj/item/ammo_magazine/hpr_box
 	num_of_magazines = 8
 
 /obj/item/ammo_box/magazine/m41ae2/empty
@@ -515,7 +515,7 @@
 	name = "magazine box (M41AE2 Holo-Target x 8)"
 	overlay_ammo_type = "_holo_heavy"
 	overlay_content = "_m41ae2_holo"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg/holo_target
+	magazine_type = /obj/item/ammo_magazine/hpr_box/holo_target
 
 /obj/item/ammo_box/magazine/m41ae2/holo/empty
 	empty = TRUE
@@ -524,7 +524,7 @@
 	name = "magazine box (M41AE2 HEAP x 8)"
 	overlay_ammo_type = "_heap_heavy"
 	overlay_content = "_m41ae2_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg/heap
+	magazine_type = /obj/item/ammo_magazine/hpr_box/heap
 
 /obj/item/ammo_box/magazine/m41ae2/heap/empty
 	empty = TRUE
