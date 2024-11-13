@@ -392,13 +392,13 @@
 /obj/item/clothing/head/cmcap/khaki
 	name = "\improper khaki patrol cap"
 	desc = "A khaki patrol cap."
-	icon_state = "cargocap"
+	icon_state = "cap_khaki"
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
-	icon_state = "command_cap"
+	icon_state = "cap_operations"
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/flap
@@ -431,6 +431,7 @@
 	icon_state = "corrections"
 	item_state = "corrections"
 	flags_marine_hat = HAT_GARB_OVERLAY
+	flags_atom = FPRINT|NO_SNOW_TYPE
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\
