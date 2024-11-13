@@ -198,6 +198,23 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/sulacocap
+	name = "\improper USS Golden Arrow Cap"
+	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
+	icon_state = "sulacocap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	var/helmet_overlays[]
+	var/flipped_cap = FALSE
+	var/list/flipping_message = list(
+		"flipped" = "You spin the hat backwards! You look like a tool.",
+		"unflipped" = "You spin the hat back forwards. That's better."
+		)
+	var/base_cap_icon
+	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
@@ -385,9 +402,10 @@
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/bridge
-	name = "\improper USCM officer cap"
+	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
-	icon_state = "cap_officer"
+	icon_state = "command_cap"
+	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper USCM expedition cap"
