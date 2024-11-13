@@ -1288,6 +1288,8 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	wield_delay = WIELD_DELAY_SLOW
 
 
 /obj/item/weapon/gun/rifle/lmg/tactical
