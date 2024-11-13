@@ -5592,7 +5592,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison/darkredfull2,
@@ -6842,7 +6842,7 @@
 /obj/structure/barricade/deployable{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison,
@@ -7002,7 +7002,7 @@
 /turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "dqr" = (
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison,
@@ -8357,7 +8357,7 @@
 /obj/structure/barricade/deployable{
 	dir = 1
 	},
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison,
@@ -11630,7 +11630,7 @@
 /obj/structure/barricade/deployable{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison,
@@ -15730,7 +15730,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "hIp" = (
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/auto_turf/sand_white/layer0,
@@ -16187,7 +16187,7 @@
 /area/lv522/indoors/a_block/corpo)
 "hUZ" = (
 /obj/structure/barricade/deployable,
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison,
@@ -16280,7 +16280,7 @@
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "hWV" = (
 /obj/structure/barricade/deployable,
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -36017,7 +36017,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "qZY" = (
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /obj/item/ammo_magazine/rifle/heap{
@@ -41151,7 +41151,7 @@
 /area/lv522/indoors/lone_buildings/engineering)
 "ttf" = (
 /obj/effect/landmark/corpsespawner/forecon_spotter,
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /obj/effect/spawner/gibspawner/human,
@@ -47442,7 +47442,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
 "wnA" = (
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/corsat/plate,
@@ -47850,7 +47850,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/corsat/plate,
@@ -48644,7 +48644,7 @@
 	icon_state = "S"
 	},
 /obj/structure/barricade/deployable,
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	current_mag = null
 	},
 /turf/open/floor/prison/darkredfull2,

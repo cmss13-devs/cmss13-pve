@@ -29342,7 +29342,7 @@
 /obj/structure/window/reinforced/toughened{
 	dir = 1
 	},
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "oRN" = (

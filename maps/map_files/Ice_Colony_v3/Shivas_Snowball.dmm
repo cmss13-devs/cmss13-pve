@@ -9015,7 +9015,7 @@
 /area/shiva/exterior/junkyard)
 "hmo" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/asphalt/cement,
 /area/shiva/interior/warehouse)
 "hmP" = (
@@ -12196,7 +12196,7 @@
 "kyy" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/storage/belt/marine,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle/extended,
 /obj/item/ammo_magazine/rifle,
 /obj/item/ammo_magazine/rifle,

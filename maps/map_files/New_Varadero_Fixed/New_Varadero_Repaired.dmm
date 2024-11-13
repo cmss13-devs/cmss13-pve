@@ -13839,7 +13839,7 @@
 /area/varadero/exterior/comms4)
 "lzb" = (
 /obj/structure/closet/secure_closet/personal/patient,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
@@ -23140,7 +23140,7 @@
 /obj/item/stack/sheet/mineral/plastic{
 	amount = 3
 	},
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "tvm" = (
@@ -27763,7 +27763,7 @@
 "xoE" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/rifle,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance)
 "xpe" = (

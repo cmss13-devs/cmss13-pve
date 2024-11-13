@@ -7527,7 +7527,7 @@
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "fmH" = (
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/secure_storage)
 "fmS" = (

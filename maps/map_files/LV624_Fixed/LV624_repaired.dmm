@@ -5098,7 +5098,7 @@
 /area/lv624/ground/jungle/west_jungle)
 "giL" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
 "giX" = (

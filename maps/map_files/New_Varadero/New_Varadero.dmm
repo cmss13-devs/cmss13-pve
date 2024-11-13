@@ -1171,7 +1171,7 @@
 /turf/closed/wall,
 /area/varadero/interior/hall_N)
 "aVV" = (
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/varadero/interior/hall_SE)
 "aWi" = (
@@ -5947,7 +5947,7 @@
 /area/varadero/interior_protected/caves/central)
 "eIf" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
 "eIv" = (
@@ -10001,7 +10001,7 @@
 /turf/closed/wall,
 /area/varadero/interior/cargo)
 "hVJ" = (
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "hVP" = (
@@ -15237,7 +15237,7 @@
 "mgq" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/carpet,
 /area/varadero/interior/hall_SE)
 "mgr" = (
@@ -28399,7 +28399,7 @@
 /area/varadero/interior/maintenance/research)
 "wpX" = (
 /obj/effect/decal/strata_decals/grime/grime2,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/carpet,
 /area/varadero/interior/bunks)
 "wqb" = (
