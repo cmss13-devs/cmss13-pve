@@ -84,9 +84,9 @@
 	if(!round_stats)
 		var/datum/entity/mc_round/mc_round = SSentity_manager.select(/datum/entity/mc_round)
 		var/operation_name
-		operation_name = "[pick(operation_titles)]"
-		operation_name += " [pick(operation_prefixes)]"
-		operation_name += "-[pick(operation_postfixes)]"
+		operation_name = "[pick(GLOB.operation_titles)]"
+		operation_name += " [pick(GLOB.operation_prefixes)]"
+		operation_name += "-[pick(GLOB.operation_postfixes)]"
 
 		// Round stats
 		round_stats = DB_ENTITY(/datum/entity/statistic/round)
@@ -98,7 +98,7 @@
 		round_stats.save()
 
 		// Setup the global reference
-		round_statistics = round_stats
+		GLOB.round_statistics = round_stats
 
 		// Map stats
 		var/datum/entity/statistic/map/new_map = DB_EKEY(/datum/entity/statistic/map, SSmapping.configs[GROUND_MAP].map_name)
@@ -300,8 +300,8 @@
 		if(death_data["death_stats_list"])
 			new_death_list = death_data["death_stats_list"]
 		new_death_list.Insert(1, death)
-		if(new_death_list.len > STATISTICS_DEATH_LIST_LEN)
-			new_death_list.Cut(STATISTICS_DEATH_LIST_LEN+1, new_death_list.len)
+		if(length(new_death_list) > STATISTICS_DEATH_LIST_LEN)
+			new_death_list.Cut(STATISTICS_DEATH_LIST_LEN+1, length(new_death_list))
 		death_data["death_stats_list"] = new_death_list
 	track_dead_participant(new_death.faction_name)
 
@@ -376,7 +376,7 @@
 	stats += "Xenos remaining: [end_of_round_xenos]\n"
 	stats += "Hijack time: [duration2text(round_hijack_time)]\n"
 
-	stats += "[log_end]"
+	stats += "[GLOB.log_end]"
 
 	WRITE_LOG(GLOB.round_stats, stats)
 
@@ -393,7 +393,8 @@
 	return TRUE
 
 /datum/action/show_round_statistics/action_activate()
+	. = ..()
 	if(!can_use_action())
 		return
 
-	owner.client.player_entity.show_statistics(owner, round_statistics, TRUE)
+	owner.client.player_entity.show_statistics(owner, GLOB.round_statistics, TRUE)

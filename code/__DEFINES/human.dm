@@ -146,8 +146,8 @@
 #define HAIR_LAYER 23
 #define HAIR_GRADIENT_LAYER 22
 #define FACIAL_LAYER 21
-#define EARS_LAYER 20
-#define FACEMASK_LAYER 19
+#define EARS_LAYER 19
+#define FACEMASK_LAYER 20
 
 /// Unrevivable headshot overlays, suicide/execution.
 #define HEADSHOT_LAYER 18
@@ -181,11 +181,12 @@
 
 //Synthetic Defines
 #define SYNTH_COLONY "Third Generation Colonial Synthetic"
-#define SYNTH_COLONY_GEN_TWO "First Generation Colonial Synthetic"
-#define SYNTH_COLONY_GEN_ONE "Second Generation Colonial Synthetic"
+#define SYNTH_COLONY_GEN_TWO "Second Generation Colonial Synthetic"
+#define SYNTH_COLONY_GEN_ONE "First Generation Colonial Synthetic"
 #define SYNTH_COMBAT "Combat Synthetic"
 #define SYNTH_INFILTRATOR "Infiltrator Synthetic"
 #define SYNTH_WORKING_JOE "Working Joe"
+#define SYNTH_HAZARD_JOE "Hazard Joe"
 #define SYNTH_GEN_ONE "First Generation Synthetic"
 #define SYNTH_GEN_TWO "Second Generation Synthetic"
 #define SYNTH_GEN_THREE "Third Generation Synthetic"

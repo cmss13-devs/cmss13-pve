@@ -81,6 +81,9 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/green
+	icon_state = "beret_green"
+
 /obj/item/clothing/head/beret/cm/alpha
 	desc = "Often found atop heads, slightly less found on those still attached."
 	icon_state = "beret_alpha"
@@ -108,6 +111,16 @@
 /obj/item/clothing/head/beret/cm/intel
 	desc = "Looks more intellegent than the person wearing it."
 	icon_state = "beret_intel"
+
+/obj/item/clothing/head/beret/cm/white/civilian
+	name = "White Beret"
+	desc = "A nice fashionable beret, popular with executives."
+	icon_state = "s_beret"
+
+/obj/item/clothing/head/beret/cm/black/civilian
+	name = "Black Beret"
+	desc = "A nice fashionable beret, popular with executives."
+	icon_state = "beret_black"
 
 
 /obj/item/clothing/head/headband
@@ -185,6 +198,23 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/sulacocap
+	name = "\improper USS Golden Arrow Cap"
+	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
+	icon_state = "sulacocap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	var/helmet_overlays[]
+	var/flipped_cap = FALSE
+	var/list/flipping_message = list(
+		"flipped" = "You spin the hat backwards! You look like a tool.",
+		"unflipped" = "You spin the hat back forwards. That's better."
+		)
+	var/base_cap_icon
+	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
@@ -214,8 +244,11 @@
 						/obj/item/clothing/glasses/mgoggles = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/black = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/black/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/orange = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/orange/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/v2 = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/v2/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
@@ -369,13 +402,14 @@
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/bridge
-	name = "\improper USCM officer cap"
+	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
-	icon_state = "cap_officer"
+	icon_state = "command_cap"
+	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper USCM expedition cap"
-	desc = "It's a cap, with flaps. A patch stitched across the front reads \"<b>USS ALMAYER</b>\"."
+	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet. This one comes with flaps to keep the sun off your neck."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap"
 	flags_marine_hat = HAT_GARB_OVERLAY
@@ -383,10 +417,8 @@
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_flagcap"
-	item_state = "wc_flagcap"
-	contained_sprite = TRUE
+	icon_state = "cc_flagcap"
+	item_state = "cc_flagcap"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_hat = HAT_GARB_OVERLAY
 
@@ -447,6 +479,10 @@
 	name = "\improper USCM senior provost beret"
 	icon_state = "coblackberet"
 	desc = "A beret with the USCM Military Police insignia emblazoned on it."
+
+/obj/item/clothing/head/beret/marine/mp/provost/chief
+	name = "\improper USCM provost command beret"
+	icon_state = "pvciberet"
 
 /obj/item/clothing/head/beret/marine/mp/tis
 	name = "\improper UAAC-TIS Special Agent Beret"
@@ -536,6 +572,15 @@
 	desc = "A beret with the lieutenant insignia emblazoned on it. It inspires a feeling of respect."
 	icon_state = "beret_badge"
 
+/obj/item/clothing/head/beret/marine/ro
+	name = "\improper USCM quartermaster beret"
+	desc = "A beret with the sergeant insignia emblazoned on it. It symbolizes hard work and shady business."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "ro_beret"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\
 
@@ -615,7 +660,7 @@
 
 /obj/item/clothing/head/CMB
 	name = "\improper Colonial Marshal Bureau cap"
-	desc = "A dark cap enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	desc = "A black cap boldly presenting the acronym 'CMB'. Made using durable fabric, it might stop a very low caliber round from penetrating it, or a stab from piercing it. That isn't to say you won't have a dent in your head."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'

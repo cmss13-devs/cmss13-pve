@@ -40,8 +40,12 @@
 //spec_weapons skill
 //hidden. who can and can't use specialist weapons
 #define SKILL_SPEC_DEFAULT 7
+/// No training in spec equipment
+#define SKILL_SPEC_UNTRAINED 0
 /// Is trained to use specialist gear, but hasn't picked a kit.
 #define SKILL_SPEC_TRAINED 1
+/// Is trained to use specialist gear & HAS picked a kit. (Functionally same as SPEC_ROCKET)
+#define SKILL_SPEC_KITTED 2
 /// Can use RPG
 #define SKILL_SPEC_ROCKET 2
 /// Can use thermal cloaks and custom M4RA rifle
@@ -61,6 +65,7 @@
 
 //construction skill
 #define SKILL_CONSTRUCTION_DEFAULT 2
+#define SKILL_CONSTRUCTION_UNTRAINED 0	//No training to build anything
 #define SKILL_CONSTRUCTION_TRAINED 1   //metal barricade construction (CT, mini-engis)
 #define SKILL_CONSTRUCTION_ENGI 2   //plasteel barricade, windows and girder construction, building machine&computer frames, (Combat Engi, OT, etc.)
 #define SKILL_CONSTRUCTION_MASTER 3   //Synths
@@ -68,10 +73,12 @@
 
 // engineer skill
 #define SKILL_ENGINEER_DEFAULT 2
-#define SKILL_ENGINEER_TRAINED 1   //barricade repair && c4 use (mini-engis, specs)
-#define SKILL_ENGINEER_ENGI 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing (Combat Engi, OT, etc.)
-#define SKILL_ENGINEER_MASTER 3   //Synths
-#define SKILL_ENGINEER_MAX 3
+#define SKILL_ENGINEER_UNTRAINED 0	//no training
+#define SKILL_ENGINEER_NOVICE 1   //barricade repair && c4 use (mini-engis, specs)
+#define SKILL_ENGINEER_TRAINED 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing  (OT, etc.)
+#define SKILL_ENGINEER_ENGI 3      // Slightly faster at everything (Combat Technicians)
+#define SKILL_ENGINEER_MASTER 4   //Synths
+#define SKILL_ENGINEER_MAX 4
 
 //medical skill
 #define SKILL_MEDICAL_DEFAULT 0
@@ -131,6 +138,7 @@
 //hidden
 //proficiency with powerloader, changes powerloader speed.
 #define SKILL_POWERLOADER_DEFAULT 1
+#define SKILL_POWERLOADER_UNTRAINED 0 //No training
 #define SKILL_POWERLOADER_TRAINED 1 //
 #define SKILL_POWERLOADER_MASTER 2 //Pilot, CT, Req, OT, CE
 #define SKILL_POWERLOADER_MAX 2
@@ -167,6 +175,7 @@
 
 //pilot skill, hidden
 #define SKILL_PILOT_DEFAULT 1
+#define SKILL_PILOT_UNTRAINED 0 //No training
 #define SKILL_PILOT_TRAINED 1 // DCC
 #define SKILL_PILOT_EXPERT 2 // Pilot, Synth
 #define SKILL_PILOT_MAX 2
@@ -194,6 +203,8 @@
 //multitile vehicle skills
 
 #define SKILL_VEHICLE_DEFAULT 2
+//Can't drive
+#define SKILL_VEHICLE_UNTRAINED 0
 //Can drive small vehicles (truck)
 #define SKILL_VEHICLE_SMALL 1
 //Can drive large vehicles (apc, tank)
@@ -211,6 +222,7 @@
 
 // Fireman carry - Separated from police skills for further rebalances. Determines how fast you carry someone.
 #define SKILL_FIREMAN_DEFAULT 3
+#define SKILL_FIREMAN_UNTRAINED 0
 #define SKILL_FIREMAN_TRAINED 1
 #define SKILL_FIREMAN_SKILLED 2
 #define SKILL_FIREMAN_EXPERT 3
