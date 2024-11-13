@@ -1240,7 +1240,7 @@
 
 /obj/item/weapon/gun/rifle/lmg
 	name = "\improper M41AE2 heavy pulse rifle"
-	desc = "An LMG variant of the M41A. Offers greater sustained firepower at the cost of a grenade launcher, and some handling."
+	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41ae2"
 	item_state = "m41ae2"
@@ -1278,11 +1278,12 @@
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	set_burst_delay(FIRE_DELAY_TIER_11)
+	//hopefully, this will give it some reason to not just hold down trigger? Long lethal bursts.
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_1
 	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_3
 	burst_scatter_mult = -SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
