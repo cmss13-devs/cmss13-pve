@@ -36,13 +36,13 @@
 	)
 	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
 	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
-	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/hvap //Toggled ammo type
+	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
 	var/recoil_compensation = 0
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
-	var/drain = 15
+	var/drain = 20
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
@@ -305,9 +305,11 @@
 
 /datum/action/item_action/smartgun/toggle_ammo_type/proc/update_icon()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
-	if(G.ammo == G.ammo_secondary)
+	if(G.ammo == G.ammo_primary)
+		action_icon_state = "ammo_swap_normal"
+	else if(G.ammo == G.ammo_secondary)
 		action_icon_state = "ammo_swap_ap"
-	if(G.ammo == G.ammo_tertiary)
+	else if(G.ammo == G.ammo_tertiary)
 		action_icon_state = "ammo_swap_pen"
 	else
 		action_icon_state = "ammo_swap_normal"
@@ -354,14 +356,14 @@
 		drain += 50
 	else if(ammo == ammo_secondary)
 		ammo = ammo_tertiary
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire high-velocity armor-piercing rounds.")
-		balloon_alert(user, "firing HVAP")
-		drain += 80
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds.")
+		balloon_alert(user, "firing impact-detonating")
+		drain += 60
 	else
 		ammo = ammo_primary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds.")
 		balloon_alert(user, "firing highly precise")
-		drain -= 130
+		drain -= 110
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
 	TAT.update_icon()
@@ -698,7 +700,7 @@
 	ammo = /obj/item/ammo_magazine/smartgun/dirty
 	ammo_primary = /datum/ammo/bullet/smartgun/dirty//Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/smartgun/dirty/armor_piercing///Toggled ammo type
-	ammo_tertiary = /datum/ammo/bullet/smartgun/dirty/hvap
+	ammo_tertiary = /datum/ammo/bullet/smartgun/dirty/impdet
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
@@ -774,7 +776,7 @@
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo_primary = /datum/ammo/bullet/smartgun/holo_target //Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/smartgun/holo_target/ap ///Toggled ammo type
-	ammo_tertiary = /datum/ammo/bullet/smartgun/holo_target/hvap
+	ammo_tertiary = /datum/ammo/bullet/smartgun/holo_target/impdet
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"

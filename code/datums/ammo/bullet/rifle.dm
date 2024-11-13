@@ -153,20 +153,17 @@
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_5
-
-/datum/ammo/bullet/rifle/heavy/hvap
-	name = "high-velocity armor-piercing 10x28 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 25	//subject to change, might be too low?
 	penetration = ARMOR_PENETRATION_TIER_7
+
+/datum/ammo/bullet/rifle/heavy/impdet
+	name = "impact-detonating 10x28 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
-/datum/ammo/bullet/rifle/heavy/hvap/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
+/datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/rifle/heavy/heap
 	name = "high explosive armor-piercing 10x28 bullet"

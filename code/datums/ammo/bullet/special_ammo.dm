@@ -43,20 +43,17 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	damage_armor_punch = 3
 
-/datum/ammo/bullet/smartgun/dirty/hvap
+/datum/ammo/bullet/smartgun/dirty/impdet
 	debilitate = list(0,0,0,3,0,0,0,1)
 
 	accurate_range = 22
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 20
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_armor_punch = 5
 
-/datum/ammo/bullet/smartgun/dirty/hvap/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
+/datum/ammo/bullet/smartgun/dirty/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
 	name = "holo-targeting smartgun bullet"
@@ -82,21 +79,17 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 1
 
-/datum/ammo/bullet/smartgun/holo_target/hvap
-	name = "high-velocity armor-piercing smartgun bullet"
+/datum/ammo/bullet/smartgun/holo_target/impdet
+	name = "impact-detonating smartgun bullet"
 	icon_state = "bullet"
 
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 15
-	penetration = ARMOR_PENETRATION_TIER_10
-	damage_armor_punch = 2
+	damage = 25
+	penetration = ARMOR_PENETRATION_TIER_4
 
-/datum/ammo/bullet/smartgun/holo_target/hvap/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
+/datum/ammo/bullet/smartgun/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/smartgun/m56_fpw
 	name = "\improper M56 FPW bullet"
