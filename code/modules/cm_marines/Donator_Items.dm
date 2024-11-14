@@ -1114,8 +1114,8 @@
 /obj/item/clothing/under/marine/fluff/jackmcintyre_alt //CKEY=jackmcintyre
 	name = "Dress Uniform"
 	desc = "A Dress uniform, worn by standard marines. DONOR ITEM"
-	icon_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "service_uniform"
+	worn_state = "service_uniform"
 	flags_jumpsuit = FALSE
 
 /obj/item/clothing/under/marine/fluff/starscream //CKEY=starscream123 (UNIQUE)
