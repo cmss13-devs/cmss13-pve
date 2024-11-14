@@ -1190,7 +1190,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 
 /datum/equipment_preset/proc/add_business_outfit(mob/living/carbon/human/new_human)
 
-	var/random_business_outfit= rand(1,4)
+	var/random_business_outfit = rand(1,4)
 	switch(random_business_outfit)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
