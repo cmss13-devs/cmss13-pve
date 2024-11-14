@@ -1140,7 +1140,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 //Workers
 
 /datum/equipment_preset/proc/add_worker_uniform(mob/living/carbon/human/new_human)
-	var/random_worker= rand(1,7)
+	var/random_worker = rand(1,7)
 	switch(random_worker)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
