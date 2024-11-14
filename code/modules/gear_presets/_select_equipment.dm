@@ -1110,7 +1110,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blue(new_human), WEAR_BODY)
 
 /datum/equipment_preset/proc/add_civilian_jacket(mob/living/carbon/human/new_human)
-	var/random_civilian_jacket= rand(1,12)
+	var/random_civilian_jacket = rand(1,12)
 	switch(random_civilian_jacket)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown(new_human), WEAR_JACKET)
