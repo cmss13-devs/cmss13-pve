@@ -1088,7 +1088,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/stompers(new_human), WEAR_FEET)
 
 /datum/equipment_preset/proc/add_civilian_uniform(mob/living/carbon/human/new_human)
-	var/random_civilian= rand(1,9)
+	var/random_civilian = rand(1,9)
 	switch(random_civilian)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
