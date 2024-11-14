@@ -445,7 +445,6 @@
 	desc = "A 10mm assault rifle magazine."
 	caliber = "10x24mm"
 	icon_state = "m20a"
-	bonus_overlay = "m20a_mag_overlay"
 	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/m20a
