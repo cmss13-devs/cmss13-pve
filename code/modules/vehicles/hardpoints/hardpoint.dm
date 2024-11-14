@@ -588,7 +588,7 @@
 /obj/item/hardpoint/proc/handle_fire(atom/target, mob/living/user, params)
 	//Create this so the bullet can remember what /atom was actually sprite clicked. Prevents being impossible to hit while lying down.
 	var/atom/target_overide
-	if(src.allow_sprite_click)
+if(allow_sprite_click)
 		target_overide = target
 	else
 		target_overide = null
