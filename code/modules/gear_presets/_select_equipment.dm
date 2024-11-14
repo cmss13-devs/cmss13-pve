@@ -1206,7 +1206,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/grey(new_human), WEAR_JACKET)
 
 /datum/equipment_preset/proc/add_professionalwear(mob/living/carbon/human/new_human)
-	var/random_professionalwear= rand(1,4)
+	var/random_professionalwear = rand(1,4)
 	switch(random_professionalwear)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
