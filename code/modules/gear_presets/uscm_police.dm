@@ -33,7 +33,7 @@
 
 	minimap_icon = "mp"
 
-	utility_under = list(/obj/item/clothing/under/marine/mp)
+	utility_under = list(/obj/item/clothing/under/marine)
 	utility_hat = list(/obj/item/clothing/head/cmcap)
 	utility_extra = list(/obj/item/clothing/head/cmcap)
 

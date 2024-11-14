@@ -651,8 +651,7 @@
 	var/model_icon = "model_m40"
 	var/type_icon = "hedp"
 	var/grenade_type = /obj/item/explosive/grenade/high_explosive
-	has_gamemode_skin = TRUE
-
+	has_gamemode_skin = FALSE
 /obj/item/storage/box/nade_box/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))

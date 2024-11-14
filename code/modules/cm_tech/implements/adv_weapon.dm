@@ -49,7 +49,7 @@
 	zoomdevicename = "scope"
 	attachable_allowed = list()
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WIELDED_FIRING_ONLY
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	actions_types = list(/datum/action/item_action/techweb_railgun_start_charge, /datum/action/item_action/techweb_railgun_abort_charge)
 
 	// Hellpullverizer ready or not??

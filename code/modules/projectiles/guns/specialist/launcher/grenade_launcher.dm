@@ -269,7 +269,7 @@
 
 	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 	is_lobbing = TRUE
 	internal_slots = 6

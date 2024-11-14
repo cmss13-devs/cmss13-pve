@@ -670,7 +670,7 @@
 	icon_state = "cmateba"
 	item_state = "cmateba"
 	current_mag = /obj/item/ammo_magazine/internal/revolver/mateba/impact
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/revolver/mateba/special
 	name = "\improper Mateba autorevolver special"

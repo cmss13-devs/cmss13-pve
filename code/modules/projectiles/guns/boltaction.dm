@@ -143,7 +143,7 @@
 	gun_category = GUN_CATEGORY_HEAVY
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST // Consider SUPERWEAPON, but it's not like you can fire this without being bipodded
 	wield_delay = WIELD_DELAY_VERY_SLOW
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	current_mag = /obj/item/ammo_magazine/rifle/boltaction/vulture
 	attachable_allowed = list(
 		/obj/item/attachable/sniperbarrel/vulture,

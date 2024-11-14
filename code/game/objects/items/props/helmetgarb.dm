@@ -57,9 +57,13 @@
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
 	icon_state = "camocover"
 
-/obj/item/prop/helmetgarb/camocover/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/prop/helmetgarb/camocover)
+/obj/item/prop/helmetgarb/camocover/snow
+	name = "snow camocover"
+	icon_state = "s_camocover"
+
+/obj/item/prop/helmetgarb/camocover/khaki
+	name = "khaki camocover"
+	icon_state = "d_camocover"
 
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"

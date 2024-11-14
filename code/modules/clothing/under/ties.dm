@@ -1089,7 +1089,7 @@
 	icon_state = "pads"
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
-
+	flags_atom = NO_SNOW_TYPE
 /obj/item/clothing/accessory/pads/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_SNOW_TYPE))
@@ -1173,6 +1173,7 @@
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
 	. = ..()

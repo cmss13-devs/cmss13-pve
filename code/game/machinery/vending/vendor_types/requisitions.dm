@@ -454,8 +454,6 @@
 	listed_products = list(
 		list("UNIFORM", -1, null, null),
 		list("USCM Uniform", 20, /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
-		list("USCM Combat Technician Uniform", 5, /obj/item/clothing/under/marine/engineer, VENDOR_ITEM_REGULAR),
-		list("USCM Hospital Corpsman uniform", 5, /obj/item/clothing/under/marine/medic, VENDOR_ITEM_REGULAR),
 
 		list("BOOTS", -1, null, null),
 		list("Marine Combat Boots", 20, /obj/item/clothing/shoes/marine, VENDOR_ITEM_REGULAR),

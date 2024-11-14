@@ -333,7 +333,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 		/obj/item/attachable/magnetic_harness/lever_sling,
 		/obj/item/attachable/stock/r4t, // Stock
 		)
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
 	flags_gun_lever_action = MOVES_WHEN_LEVERING|DANGEROUS_TO_ONEHAND_LEVER
 	civilian_usable_override = TRUE
@@ -362,7 +362,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	lever_super_sound = 'sound/weapons/handling/gun_lever_action_superload.ogg'
 	lever_hitsound = 'sound/weapons/handling/gun_boomslang_hitsound.ogg'
 	flags_equip_slot = SLOT_BACK
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
 	levering_sprite = null
 	flags_gun_lever_action = USES_STREAKS

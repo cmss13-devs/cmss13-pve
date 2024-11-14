@@ -252,7 +252,7 @@
 		/obj/item/device/flash = 5,
 		/obj/item/storage/box/evidence = 6,
 		/obj/item/clothing/head/helmet/marine/MP = 2,
-		/obj/item/clothing/under/marine/mp = 2,
+		/obj/item/clothing/under/marine = 2,
 		/obj/item/tape/regulation = 5,
 	)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/storage/donut_box = 2)
