@@ -1226,7 +1226,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
 /datum/equipment_preset/proc/add_tie(mob/living/carbon/human/new_human)
-	var/random_tie= rand(1,5)
+	var/random_tie = rand(1,5)
 	switch(random_tie)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
