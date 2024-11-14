@@ -1060,7 +1060,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 		list("Webbing", 10, /obj/item/clothing/accessory/storage/webbing, null, VENDOR_ITEM_REGULAR)
 	)
 /datum/equipment_preset/proc/add_random_satchel(mob/living/carbon/human/new_human)
-	var/random_satchel= rand(1,3)
+	var/random_satchel = rand(1,3)
 	switch(random_satchel)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
