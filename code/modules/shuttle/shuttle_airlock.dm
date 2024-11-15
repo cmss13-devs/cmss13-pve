@@ -98,6 +98,7 @@ Backend Procs
 	if(registered)
 		unregister()
 	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlocks are open)
+	disengaged_clamps = FALSE
 	var/list/dropship_turfs = arriving_shuttle.return_turfs()
 	for(var/turf/dropship_turf in dropship_turfs)
 		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
@@ -157,15 +158,8 @@ Backend Procs
 	airlock.icon_state = "[airlock_type]_[transition]_static"
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect, volume)
-	var/obj/docking_port/mobile/docked_mobile
-	if(lowered_dropship)
-		docked_mobile = link_to_outer.get_docked()
-	else
-		docked_mobile = get_docked()
-
-	playsound_area(src.loc.loc, sound_effect, volume)
-	playsound_area(link_to_outer.loc.loc, sound_effect, volume)
-	playsound_area(docked_mobile.loc.loc, sound_effect, volume)
+	playsound(src, sound_effect, volume, sound_range = 15)
+	playsound(link_to_outer, sound_effect, volume, sound_range = 15)
 
 /*#############################################################################
 Player Interactablility Procs
