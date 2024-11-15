@@ -138,7 +138,7 @@ Backend Procs
 	var/transition = open ? "open" : "close"
 	airlock.icon_state = "[airlock_type]_[transition]_0s"
 
-	omnibus_sound_play('sound/machines/centrifuge.ogg', 50)
+	omnibus_sound_play('sound/machines/centrifuge.ogg', 60)
 
 	sleep(1 DECISECONDS)
 
@@ -181,7 +181,7 @@ Player Interactablility Procs
 			activating_floodlight.light_system = MOVABLE_LIGHT
 			floodlight_color = activating_floodlight.light_color
 			activating_floodlight.set_light(10, 2, LIGHT_COLOR_BLUE, /atom/movable/lighting_mask/rotating_toggleable)
-			omnibus_sound_play('sound/machines/switch.ogg', 40)
+			omnibus_sound_play('sound/machines/switch.ogg', 60)
 		var/atom/movable/lighting_mask/rotating_toggleable/activating_rotating_light
 		for(activating_floodlight in floodlights)
 			sleep(0.5 SECONDS)
@@ -200,7 +200,7 @@ Player Interactablility Procs
 			deactivating_floodlight.light_system = STATIC_LIGHT
 			deactivating_floodlight.light_color = floodlight_color
 			deactivating_floodlight.static_update_light()
-			omnibus_sound_play('sound/machines/switch.ogg', 40)
+			omnibus_sound_play('sound/machines/switch.ogg', 60)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock(invert = FALSE)
@@ -231,7 +231,7 @@ Player Interactablility Procs
 		docked_mobile = get_docked()
 	else
 		docked_mobile = link_to_outer.get_docked()
-	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 50)
+	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 60)
 	for(var/bideciseconds, bideciseconds <= 45, bideciseconds++)
 		if(lowered_dropship)
 			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
@@ -253,6 +253,7 @@ Player Interactablility Procs
 		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock, 30)
 	else
 		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock, 30)
+	sleep(2 SECONDS)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_clamps(invert = FALSE)
@@ -260,7 +261,7 @@ Player Interactablility Procs
 	if(invert)
 		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
 	var/obj/docking_port/mobile/marine_dropship/docked_mobile = link_to_outer.get_docked()
-	playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 70, sound_range = docked_mobile.dheight)
+	playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 50, sound_range = docked_mobile.dheight)
 	sleep(3 SECONDS)
 	if(disengaged_clamps)
 		if(!docked_mobile.assigned_transit)

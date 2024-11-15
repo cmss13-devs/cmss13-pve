@@ -248,8 +248,8 @@
 	if(mode == SHUTTLE_PREARRIVAL && !dropzone.landing_lights_on)
 		if(istype(destination, /obj/docking_port/stationary/marine_dropship))
 			dropzone.turn_on_landing_lights()
-		playsound(dropzone.return_center_turf(), landing_sound, 60, 0)
-		playsound(return_center_turf(), landing_sound, 60, 0, SOUND_CHANNEL_DROPSHIP)
+		playsound(dropzone.return_center_turf(), landing_sound, 50, 0)
+		playsound(return_center_turf(), landing_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
 
 	automated_check()
 
@@ -314,8 +314,8 @@
 				I.throw_random_direction(2, spin = TRUE)
 
 	var/flight_time_left = timeLeft(1)
-	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD+1)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD+1, (flight_time_left/2))))
+	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD, (flight_time_left/2))))
 
 /obj/docking_port/stationary/marine_dropship
 	dir = NORTH
