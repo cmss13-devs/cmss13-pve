@@ -221,6 +221,7 @@ All ShuttleMove procs go here
 	if(!move_on_shuttle)
 		return
 	. = ..()
+	client?.soundOutput?.update_ambience(null, null, TRUE)
 	if(client && movement_force)
 		var/shake_force = max(movement_force["THROW"], movement_force["KNOCKDOWN"])
 		if(buckled)

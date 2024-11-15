@@ -61,6 +61,7 @@ Backend Procs
 	. = ..()
 	if(registered)
 		unregister()
+	link_to_inner.disengaged_clamps = FALSE
 	link_to_inner.lowered_dropship = TRUE
 	SSfz_transitions.fire()
 	for(var/turf/T in arriving_shuttle.return_turfs())
@@ -98,7 +99,6 @@ Backend Procs
 	if(registered)
 		unregister()
 	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlocks are open)
-	disengaged_clamps = FALSE
 	var/list/dropship_turfs = arriving_shuttle.return_turfs()
 	for(var/turf/dropship_turf in dropship_turfs)
 		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
@@ -259,18 +259,15 @@ Player Interactablility Procs
 	processing = TRUE
 	if(invert)
 		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
-	var/obj/docking_port/mobile/docked_mobile = link_to_outer.get_docked()
-	omnibus_sound_play('sound/machines/elevator_openclose.ogg', 50)
-	sleep(6 DECISECONDS)
+	var/obj/docking_port/mobile/marine_dropship/docked_mobile = link_to_outer.get_docked()
+	playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 70, sound_range = docked_mobile.dheight)
+	sleep(3 SECONDS)
 	if(disengaged_clamps)
 		if(!docked_mobile.assigned_transit)
 			SSshuttle.generate_transit_dock(docked_mobile)
 		docked_mobile.set_mode(SHUTTLE_IDLE)
 		docked_mobile.initiate_docking(docked_mobile.assigned_transit)
-		for(var/area/internal_area in docked_mobile.shuttle_areas)
-			for(var/turf/internal_turf in internal_area)
-				for(var/mob/M in internal_turf)
-					shake_camera(M, 60, 2)
+		addtimer(CALLBACK(docked_mobile, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, dropship_freefall)), 0.1 SECONDS)
 	processing = FALSE
 
 /*#############################################################################

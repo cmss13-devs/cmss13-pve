@@ -5,6 +5,10 @@
 	dwidth = 5
 	dheight = 10
 
+	landing_sound = 'sound/effects/dropship_flight_end.ogg'
+	ignition_sound = 'sound/effects/dropship_flight_start.ogg'
+	ambience_flight = 'sound/effects/dropship_flight_recurr.ogg'
+
 	preferred_direction = SOUTH
 	callTime = DROPSHIP_TRANSIT_DURATION
 	rechargeTime = SHUTTLE_RECHARGE
@@ -32,6 +36,9 @@
 	var/datum/cas_signal/paradrop_signal
 
 	var/is_airlocked
+
+	//do you want turbulence?
+	var/turbulence = TRUE
 
 /obj/docking_port/mobile/marine_dropship/Initialize(mapload)
 	. = ..()
@@ -108,6 +115,8 @@
 		in_flyby = TRUE
 	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
 		SSticker.mode.ds_first_drop(src)
+	if(turbulence)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), DROPSHIP_TURBULENCE_START_PERIOD)
 
 /obj/docking_port/mobile/marine_dropship/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
 	. = ..()
@@ -240,7 +249,7 @@
 		if(istype(destination, /obj/docking_port/stationary/marine_dropship))
 			dropzone.turn_on_landing_lights()
 		playsound(dropzone.return_center_turf(), landing_sound, 60, 0)
-		playsound(return_center_turf(), landing_sound, 60, 0)
+		playsound(return_center_turf(), landing_sound, 60, 0, SOUND_CHANNEL_DROPSHIP)
 
 	automated_check()
 
@@ -273,6 +282,40 @@
 	else
 		SSshuttle.moveShuttle(id, automated_hangar_id, TRUE)
 	ai_silent_announcement("Dropship '[name]' departing.")
+
+/obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
+	for(var/area/internal_area in shuttle_areas)
+		for(var/turf/internal_turf in internal_area)
+			for(var/mob/living/M in internal_turf)
+				to_chat(M, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
+				shake_camera(M, 6 SECONDS, 1)
+				shake_camera(M, 16 SECONDS, 1)
+				if(!M.buckled)
+					M.visible_message(SPAN_DANGER("[M] loses their grip on the floor, flying violenty upwards!"), SPAN_DANGER("You lose your grip on the floor, flying violenty upwards!"))
+					M.apply_effect(16, WEAKEN)
+					M.throw_random_direction(2, spin = TRUE)
+					M.apply_armoured_damage(60, ARMOR_MELEE, BRUTE, rand_zone())
+					M.buckled = TRUE // why? stops the damage from recurring when flung to another tile
+			for(var/obj/item/I in internal_turf)
+				I.visible_message(SPAN_DANGER("[I] goes flying upwards!"))
+				I.throw_random_direction(2, spin = TRUE)
+
+/obj/docking_port/mobile/marine_dropship/proc/turbulence()
+	if(!in_flight())
+		return
+
+	for(var/area/internal_area in shuttle_areas)
+		for(var/turf/internal_turf in internal_area)
+			for(var/mob/living/M in internal_turf)
+				to_chat(M, SPAN_DANGER("The dropship jolts violently!"))
+				shake_camera(M, DROPSHIP_TURBULENCE_PERIOD, 1)
+			for(var/obj/item/I in internal_turf)
+				I.visible_message(SPAN_DANGER("[I] goes flying upwards!"))
+				I.throw_random_direction(2, spin = TRUE)
+
+	var/flight_time_left = timeLeft(1)
+	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD+1)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD+1, (flight_time_left/2))))
 
 /obj/docking_port/stationary/marine_dropship
 	dir = NORTH
