@@ -1164,7 +1164,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "nw" = (
 /obj/item/ammo_magazine/revolver/mateba,
-/obj/item/ammo_magazine/rifle/ap,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle/incendiary,
 /obj/item/ammo_magazine/rifle/lmg,
 /obj/item/ammo_magazine/rifle/mar40,

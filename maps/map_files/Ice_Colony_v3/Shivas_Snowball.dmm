@@ -9227,7 +9227,7 @@
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/aux_power)
 "hyY" = (
-/obj/item/ammo_magazine/rifle/ap,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/shiva/interior/colony/research_hab)
 "hzf" = (
@@ -12197,7 +12197,7 @@
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/storage/belt/marine,
 /obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/ammo_magazine/rifle/extended,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/redfull/west,

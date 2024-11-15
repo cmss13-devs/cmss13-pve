@@ -4617,7 +4617,7 @@
 /area/lv624/lazarus/secure_storage)
 "fHO" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/rifle/extended,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
 "fHW" = (

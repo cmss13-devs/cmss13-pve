@@ -146,7 +146,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 32
 	},
-/obj/item/ammo_magazine/rifle/extended{
+/obj/item/ammo_magazine/rifle/m41aMK1{
 	current_rounds = 0
 	},
 /turf/open/floor/shiva/north,
@@ -941,7 +941,7 @@
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "Jp" = (
-/obj/item/ammo_magazine/rifle/extended{
+/obj/item/ammo_magazine/rifle/m41aMK1{
 	current_rounds = 0
 	},
 /turf/open/floor/shiva/north,
