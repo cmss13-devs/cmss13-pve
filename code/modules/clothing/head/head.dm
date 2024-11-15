@@ -217,7 +217,7 @@
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
-	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
+	desc = "A patrol cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "cap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	flags_atom = FPRINT|NO_SNOW_TYPE
@@ -392,6 +392,11 @@
 	name = "\improper khaki patrol cap"
 	desc = "A khaki patrol cap."
 	icon_state = "cap_khaki"
+
+/obj/item/clothing/head/cmcap/snow
+	name = "\improper coldweather patrol cap"
+	desc = "A patrol cap worn in cold weather environments."
+	icon_state = "cap_snow"
 
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"

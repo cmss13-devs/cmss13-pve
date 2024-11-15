@@ -292,12 +292,16 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
 /datum/gear/headwear/uscm/cap
-	display_name = "USCM cap"
+	display_name = "USCM patrol cap"
 	path = /obj/item/clothing/head/cmcap
 
 /datum/gear/headwear/uscm/cap_khaki
-	display_name = "USCM cap, khaki"
+	display_name = "USCM patrol cap, khaki"
 	path = /obj/item/clothing/head/cmcap/khaki
+
+/datum/gear/headwear/uscm/cap_snow
+	display_name = "USCM patrol cap, snow"
+	path = /obj/item/clothing/head/cmcap/snow
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
