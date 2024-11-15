@@ -329,6 +329,10 @@ Airlock Turfs Definitions
 #############################################################################*/
 
 /turf/open/floor/hangar_airlock
+	hull_floor = TRUE
+	breakable_tile = FALSE
+	burnable_tile = FALSE
+	tool_flags = null
 	layer = 1.5
 	// to tie the turf opening and the airlock animation together, the frame on which a tile can be considered 'open' or 'closed' has to be done manually.
 	var/frame_threshold = null
