@@ -650,7 +650,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_west_caves)
 "afK" = (
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "afL" = (
@@ -731,7 +731,7 @@
 	dir = 1;
 	flipped = 1
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/effect/landmark/good_item,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)

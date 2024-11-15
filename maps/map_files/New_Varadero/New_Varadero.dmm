@@ -3145,7 +3145,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
 "cBF" = (
@@ -18914,7 +18914,7 @@
 	pixel_x = 13;
 	pixel_y = 21
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/carpet,
 /area/varadero/interior/bunks)
 "oWx" = (
@@ -24003,7 +24003,7 @@
 /obj/item/storage/pill_bottle/inaprovaline/skillless{
 	pixel_x = -5
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "sQx" = (
@@ -26587,7 +26587,7 @@
 	pixel_x = -2;
 	pixel_y = 9
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
 "vaC" = (

@@ -11957,7 +11957,7 @@
 	pixel_x = -2;
 	pixel_y = 9
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
 "jPu" = (
@@ -13840,7 +13840,7 @@
 "lzb" = (
 /obj/structure/closet/secure_closet/personal/patient,
 /obj/item/weapon/gun/rifle/m41aMK1,
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
 "lzp" = (
@@ -22441,7 +22441,7 @@
 /obj/item/storage/pill_bottle/inaprovaline/skillless{
 	pixel_x = -5
 	},
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "sQt" = (
@@ -27762,7 +27762,7 @@
 /area/varadero/interior/electrical)
 "xoE" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance)

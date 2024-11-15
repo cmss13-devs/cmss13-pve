@@ -28977,7 +28977,7 @@
 /turf/open/floor/prison/darkpurple2/north,
 /area/lv522/indoors/a_block/dorms)
 "nNL" = (
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /obj/item/ammo_magazine/rifle{
 	pixel_x = -10;
 	pixel_y = 9
