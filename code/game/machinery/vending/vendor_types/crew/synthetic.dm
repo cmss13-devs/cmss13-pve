@@ -227,7 +227,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Shoes, Red", 12, /obj/item/clothing/shoes/red, null, VENDOR_ITEM_REGULAR),
 	list("Shoes, White", 12, /obj/item/clothing/shoes/white, null, VENDOR_ITEM_REGULAR),
 	list("Shoes, Yellow", 12, /obj/item/clothing/shoes/yellow, null, VENDOR_ITEM_REGULAR),
-	list("Shoes, Seegson", 24, /obj/item/clothing/shoes/dress, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Seegson", 24, /obj/item/clothing/shoes/laceup, null, VENDOR_ITEM_REGULAR),
 
 	list("HEADWEAR", 0, null, null, null),
 	list("Beanie", 12, /obj/item/clothing/head/beanie, null, VENDOR_ITEM_REGULAR),
@@ -258,7 +258,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Marine Helmet (Snow)", 12, /obj/item/clothing/head/helmet/marine/snow, null, VENDOR_ITEM_REGULAR),
 	list("Marine Helmet (Desert)", 12, /obj/item/clothing/head/helmet/marine/desert, null, VENDOR_ITEM_REGULAR),
 	list("Technician Helmet", 12, /obj/item/clothing/head/helmet/marine/tech, null, VENDOR_ITEM_REGULAR),
-	list("Pilot Helmet", 12, /obj/item/clothing/head/helmet/marine/pilot, null, VENDOR_ITEM_REGULAR),
+	list("Pilot Helmet", 12, /obj/item/clothing/head/helmet/upp/marinepilot, null, VENDOR_ITEM_REGULAR),
 	list("Crewman Helmet", 12, /obj/item/clothing/head/helmet/marine/tech/tanker, null, VENDOR_ITEM_REGULAR),
 	list("Corpsman Helmet", 12, /obj/item/clothing/head/helmet/marine/medic, null, VENDOR_ITEM_REGULAR),
 	list("White Corpsman Helmet", 12, /obj/item/clothing/head/helmet/marine/medic/white, null, VENDOR_ITEM_REGULAR),

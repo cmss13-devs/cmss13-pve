@@ -522,6 +522,18 @@
 
 	attached_item.update_icon()
 
+/obj/item/clothing/glasses/mgoggles/upp
+	name = "UPP ballistic goggles"
+	desc = "Standard issue ballistic goggles for UPP Infantry. While commonly found mounted atop their pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes."
+	icon_state = "mgogglesupp"
+	active_icon_state = "mgogglesupp_down"
+	inactive_icon_state = "mgogglesupp"
+
+/obj/item/clothing/glasses/mgoggles/upp/prescription
+	name = "prescription UPP ballistic goggles"
+	prescription = TRUE
+
+
 //welding goggles
 
 /obj/item/clothing/glasses/welding
@@ -632,6 +644,11 @@
 	clothing_traits = list(TRAIT_BIMEX)
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/sunglasses/big/orange
+	name = "\improper BiMex shooting shades"
+	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
+	icon_state = "bigorangesunglasses"
+	item_state = "bigorangesunglasses"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"

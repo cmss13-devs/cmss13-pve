@@ -12,13 +12,13 @@
 	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
 	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/dress)
+	service_shoes = list(/obj/item/clothing/shoes/laceup)
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
 /datum/equipment_preset/uscm_ship/uscm_medical/cmo
 	name = "USCM Chief Medical Officer (CMO)"
@@ -117,7 +117,7 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/dress)
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
 /datum/equipment_preset/uscm_ship/uscm_medical/nurse/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
