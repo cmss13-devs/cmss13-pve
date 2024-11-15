@@ -729,7 +729,6 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/prop/magazine/book{
 	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
 	name = "Quotations from Chairman Mao Tse-tung";
@@ -737,6 +736,7 @@
 	pixel_x = -2;
 	icon_state = "littleredbook"
 	},
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "fL" = (
@@ -1139,7 +1139,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "ju" = (
@@ -2514,10 +2514,10 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "vt" = (
@@ -3048,13 +3048,13 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/weapon/butterfly,
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Platoon Corpsman";
 	pixel_x = -7
 	},
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "zm" = (
@@ -3226,8 +3226,8 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/weapon/butterfly,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Bc" = (
@@ -3371,7 +3371,6 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/prop/magazine/book{
 	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
 	name = "Quotations from Chairman Mao Tse-tung";
@@ -3379,6 +3378,7 @@
 	pixel_x = -2;
 	icon_state = "littleredbook"
 	},
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Cv" = (
@@ -3463,7 +3463,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "CV" = (
@@ -3671,7 +3671,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "FG" = (
@@ -3799,7 +3799,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "GZ" = (
@@ -3988,7 +3988,7 @@
 /obj/item/clothing/accessory/patch/upp/naval,
 /obj/item/clothing/accessory/patch/upp,
 /obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/distress/UPP,
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/corsat,
 /area/golden_arrow/cryo_cells)
 "Ja" = (
@@ -4749,11 +4749,11 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/distress/UPP,
 /obj/item/weapon/butterfly,
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Sf" = (
