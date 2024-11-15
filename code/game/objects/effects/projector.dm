@@ -11,6 +11,7 @@
 	var/movables_projection_plane = -6 //necessary to change when making a movable go under a turf (whose plane is -7)
 	var/modify_turf = TRUE
 	var/projected_mouse_opacity = 1
+	var/projected_opacity
 	icon = 'icons/landmarks.dmi'
 	icon_state = "projector"//for map editor
 
@@ -27,6 +28,7 @@
 	movables_projection_plane = -7
 	modify_turf = FALSE
 	projected_mouse_opacity = 0
+	projected_opacity = 0
 
 /obj/effect/projector/bay_two
 	name = "Bay Two"
@@ -36,3 +38,4 @@
 	movables_projection_plane = -7
 	modify_turf = FALSE
 	projected_mouse_opacity = 0
+	projected_opacity = 0

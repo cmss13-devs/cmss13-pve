@@ -454,9 +454,6 @@ SUBSYSTEM_DEF(shuttle)
 	if(to_replace)
 		to_replace.jumpToNullSpace()
 
-	if(istype(dest_dock, /obj/docking_port/stationary/marine_dropship/airlock))
-		mode = SHUTTLE_AIRLOCKED
-
 	for(var/area/cur_area as anything in preview_shuttle.shuttle_areas)
 		for(var/turf/cur_turf as anything in cur_area)
 			// update underlays

@@ -445,6 +445,7 @@ Parameters are passed from New.
 		if(P.mask_layer)
 			facsimile_T.layer = ((P.mask_layer-0.5)+(src.layer/10))
 		facsimile_T.plane = -7
+		facsimile_T.opacity = P.projected_opacity
 
 		GLOB.clones_t.Add(src)
 		src.clone = facsimile_T

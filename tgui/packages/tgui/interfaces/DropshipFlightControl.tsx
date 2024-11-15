@@ -65,6 +65,7 @@ interface DropshipNavigationProps extends NavigationProps {
   opened_outer_airlock: 0 | 1;
   disengaged_clamps: 0 | 1;
   processing: 0 | 1;
+  is_airlocked: 0 | 1;
 }
 
 const DropshipDoorControl = () => {
@@ -657,12 +658,14 @@ const RenderScreen = () => {
   const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
-      {data.shuttle_mode === 'airlocked' && <DropshipAirlockSelect />}
+      {data.is_airlocked && <DropshipAirlockSelect />}
       {data.alternative_shuttles.length > 0 && <DropshipSelector />}
-      {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
-      {data.shuttle_mode === 'idle' && data.can_set_automated === 1 && (
-        <AutopilotConfig />
+      {data.shuttle_mode === 'idle' && !data.is_airlocked && (
+        <DropshipDestinationSelection />
       )}
+      {data.shuttle_mode === 'idle' &&
+        data.can_set_automated === 1 &&
+        !data.is_airlocked && <AutopilotConfig />}
       {data.shuttle_mode === 'igniting' && <LaunchCountdown />}
       {data.shuttle_mode === 'pre-arrival' && <TouchdownCooldown />}
       {data.shuttle_mode === 'recharging' && <ShuttleRecharge />}

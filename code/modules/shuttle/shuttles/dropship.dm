@@ -31,6 +31,7 @@
 	var/automated_timer
 	var/datum/cas_signal/paradrop_signal
 
+	var/is_airlocked
 
 /obj/docking_port/mobile/marine_dropship/Initialize(mapload)
 	. = ..()

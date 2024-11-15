@@ -247,6 +247,7 @@
 	var/proj_base_layer = null
 	var/proj_plane = -6
 	var/proj_mouse_opacity = 1
+	var/proj_opacity = 1
 	var/obj/effect/projector/proj = null
 	unacidable = TRUE
 
@@ -294,6 +295,7 @@
 		C.proj_base_layer = P.mask_layer-0.5
 	C.proj_plane = P.movables_projection_plane
 	C.proj_mouse_opacity = P.projected_mouse_opacity
+	C.proj_opacity = P.projected_opacity
 
 	GLOB.clones.Add(C)
 	C.mstr = src //Link clone and master
@@ -314,6 +316,7 @@
 	clone.invisibility = invisibility
 	clone.flags_atom = flags_atom
 	clone.layer = clone.proj_base_layer ? (clone.proj_base_layer+(layer/10)) : layer
+	clone.opacity = clone.proj_opacity
 	clone.plane = clone.proj_plane // necessary when placing movables (typically plane -6) under a turf (typically plane -7)
 	clone.density = density
 	clone.anchored = anchored

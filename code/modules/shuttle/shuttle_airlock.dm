@@ -62,7 +62,11 @@ Backend Procs
 	if(registered)
 		unregister()
 	link_to_inner.lowered_dropship = TRUE
-	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
+	SSfz_transitions.fire()
+	for(var/turf/T in arriving_shuttle.return_turfs())
+		if(istype(T, /turf/open/shuttle) && T.clone)
+			T.clone.layer = 1.93
+			T.clone.color = "#000000"
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
 	. = ..()
@@ -73,7 +77,7 @@ Backend Procs
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
 	inner_airlock_turfs = list()
 	for(var/turf/T in return_turfs())
-		if(istype(T, /turf/open/floor/hangar_airlock/inner))
+		if(istype(T, /turf/open/floor/hangar_airlock/inner) || istype(T, /turf/open/shuttle) || istype(T, /turf/closed/shuttle))
 			new /obj/effect/hangar_airlock/height_mask(T)
 			inner_airlock_turfs += T
 			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
@@ -93,7 +97,6 @@ Backend Procs
 	. = ..()
 	if(registered)
 		unregister()
-	arriving_shuttle.set_mode(SHUTTLE_AIRLOCKED)
 	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlocks are open)
 	var/list/dropship_turfs = arriving_shuttle.return_turfs()
 	for(var/turf/dropship_turf in dropship_turfs)
@@ -134,6 +137,8 @@ Backend Procs
 	var/transition = open ? "open" : "close"
 	airlock.icon_state = "[airlock_type]_[transition]_0s"
 
+	omnibus_sound_play('sound/machines/centrifuge.ogg', 50)
+
 	sleep(1 DECISECONDS)
 
 	for(deciseconds=1, deciseconds<end_decisecond, deciseconds++)
@@ -142,9 +147,25 @@ Backend Procs
 		for(var/turf/open/floor/hangar_airlock/T in airlock_turfs)
 			if(deciseconds == T.frame_threshold)
 				T.open = open
+				for(var/atom/movable/AM in T.contents)
+					if(!AM.anchored)
+						T.Entered(AM)
+				T.clean_cleanables()
+				T.can_bloody = !open
 		sleep(1 DECISECONDS)
 
 	airlock.icon_state = "[airlock_type]_[transition]_static"
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect, volume)
+	var/obj/docking_port/mobile/docked_mobile
+	if(lowered_dropship)
+		docked_mobile = link_to_outer.get_docked()
+	else
+		docked_mobile = get_docked()
+
+	playsound_area(src.loc.loc, sound_effect, volume)
+	playsound_area(link_to_outer.loc.loc, sound_effect, volume)
+	playsound_area(docked_mobile.loc.loc, sound_effect, volume)
 
 /*#############################################################################
 Player Interactablility Procs
@@ -166,6 +187,7 @@ Player Interactablility Procs
 			activating_floodlight.light_system = MOVABLE_LIGHT
 			floodlight_color = activating_floodlight.light_color
 			activating_floodlight.set_light(10, 2, LIGHT_COLOR_BLUE, /atom/movable/lighting_mask/rotating_toggleable)
+			omnibus_sound_play('sound/machines/switch.ogg', 40)
 		var/atom/movable/lighting_mask/rotating_toggleable/activating_rotating_light
 		for(activating_floodlight in floodlights)
 			sleep(0.5 SECONDS)
@@ -184,6 +206,7 @@ Player Interactablility Procs
 			deactivating_floodlight.light_system = STATIC_LIGHT
 			deactivating_floodlight.light_color = floodlight_color
 			deactivating_floodlight.static_update_light()
+			omnibus_sound_play('sound/machines/switch.ogg', 40)
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock(invert = FALSE)
@@ -192,10 +215,13 @@ Player Interactablility Procs
 		open_inner_airlock = open_inner_airlock ? FALSE : TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
+	var/obj/effect/projector/projector_type = locate(/obj/effect/projector) in link_to_outer.loc
 	if(open_inner_airlock)
+		SSfz_transitions.toggle_selective_update(open_inner_airlock, projector_type) // start updating the projectors
 		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock, 50)
 	else
 		omnibus_airlock_transition("inner", FALSE, inner_airlock_turfs, inner_airlock, 50)
+		SSfz_transitions.toggle_selective_update(open_inner_airlock, projector_type) // stop updating the projectors
 	processing = FALSE
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height(invert = FALSE)
@@ -206,18 +232,18 @@ Player Interactablility Procs
 		get_inner_airlock_turfs()
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
-	for(var/bideciseconds, bideciseconds <= 25, bideciseconds++)
-		if(lowered_dropship)
-			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
-				transitioning_height_mask.alpha += 4
-			sleep(2 DECISECONDS)
 	var/obj/docking_port/mobile/docked_mobile
 	if(lowered_dropship)
 		docked_mobile = get_docked()
-		docked_mobile.initiate_docking(link_to_outer)
 	else
 		docked_mobile = link_to_outer.get_docked()
-		docked_mobile.initiate_docking(src)
+	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 50)
+	for(var/bideciseconds, bideciseconds <= 45, bideciseconds++)
+		if(lowered_dropship)
+			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
+				transitioning_height_mask.alpha += 3
+		sleep(2 DECISECONDS)
+	docked_mobile.initiate_docking(lowered_dropship ? link_to_outer : src)
 	for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask in dropship_height_masks)
 		dropship_height_masks -= qdeling_height_mask
 		qdel(qdeling_height_mask)
@@ -239,8 +265,10 @@ Player Interactablility Procs
 	processing = TRUE
 	if(invert)
 		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
+	var/obj/docking_port/mobile/docked_mobile = link_to_outer.get_docked()
+	omnibus_sound_play('sound/machines/elevator_openclose.ogg', 50)
+	sleep(6 DECISECONDS)
 	if(disengaged_clamps)
-		var/obj/docking_port/mobile/docked_mobile =	link_to_outer.get_docked()
 		if(!docked_mobile.assigned_transit)
 			SSshuttle.generate_transit_dock(docked_mobile)
 		docked_mobile.set_mode(SHUTTLE_IDLE)
@@ -259,6 +287,12 @@ Airlock Appearance Effects
 	unacidable = TRUE
 	mouse_opacity = FALSE
 	anchored = TRUE
+
+// we typically don't want them moving
+/obj/effect/hangar_airlock/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	if(!anchored)
+		. = ..()
+	return TRUE
 
 /obj/effect/hangar_airlock/inner
 	name = "hangar inner airlock"
@@ -281,7 +315,7 @@ Airlock Appearance Effects
 	icon = 'icons/effects/hangar_airlock_32x32.dmi'
 	icon_state = "height_mask"
 	layer = 1.94
-	alpha = 100
+	alpha = 135
 	plane = -7
 
 /obj/effect/hangar_airlock/height_mask/dropship
@@ -315,7 +349,53 @@ Airlock Turfs Definitions
 	icon_state = "plate"
 
 /*#############################################################################
-Instanced to Defined Definitions (I hate ScrapeAway edition)
+Airlock Turf Interactability Procs
+#############################################################################*/
+
+/turf/open/floor/hangar_airlock/Entered(atom/movable/AM)
+	if(open)
+		if(!isobserver(AM) && !istype(AM, /obj/docking_port) && !istype(AM, /atom/movable/clone) && !istype(AM, /obj/effect/hangar_airlock))
+			enter_depths(AM)
+
+/turf/open/floor/hangar_airlock/proc/enter_depths(/atom/movable/AM)
+	return
+
+/turf/open/floor/hangar_airlock/inner/enter_depths(atom/movable/AM)
+	if(AM.throwing == 0)
+		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
+		for(var/A in src.contents)
+			if(istype(A, /atom/movable/clone))
+				var/atom/movable/clone/C = A
+				// why not just use .loc? well, because of /atom/movable/clone facsimile 'turfs', it is potentially the case that we'd locate an area (from the mstr turf of the facsimile) when we just want the exact turf.
+				if(istype(get_turf(AM), /turf/open/floor/hangar_airlock))
+					AM.forceMove(locate(C.mstr.x, C.mstr.y, C.mstr.z))
+					break
+
+				var/obj/structure/shuttle/part/dropship_part_to_locate
+				dropship_part_to_locate = locate(/obj/structure/shuttle/part) in orange(8)
+				if(dropship_part_to_locate) // presumably, shuttle parts are on the outside skin of a dropship.
+					AM.forceMove(dropship_part_to_locate.loc)
+					AM.visible_message(SPAN_WARNING("[AM] slides off the roof of the dropship!"), SPAN_WARNING("You slide off the roof of the dropship!"))
+					break
+
+				AM.visible_message(SPAN_WARNING("[AM] falls onto the engines of the dropship, burning into ash!"), SPAN_WARNING("You fall onto the engines of the dropship, burning into ash!"))
+				qdel(AM)
+				break
+
+		if(!isliving(AM))
+			return
+		var/mob/living/fallen_living = AM
+		shake_camera(fallen_living, 20, 1)
+		fallen_living.apply_effect(3, WEAKEN)
+		fallen_living.apply_damage(75, BRUTE, pick("r_leg", "l_leg", "r_arm", "l_arm", "chest", "head"))
+
+/turf/open/floor/hangar_airlock/outer/enter_depths(atom/movable/AM)
+	if(AM.throwing == 0 && istype(get_turf(AM), /turf/open/floor/hangar_airlock))
+		AM.visible_message(SPAN_WARNING("There is an onrush of air. [AM] falls into space!"), SPAN_WARNING("There is an onrush of air. You fall into space!"))
+		qdel(AM)
+
+/*#############################################################################
+Instanced to Defined Turf Definitions (I hate ScrapeAway edition)
 #############################################################################*/
 
 /turf/open/floor/almayer/plate/hangar_1
@@ -376,36 +456,3 @@ Instanced to Defined Definitions (I hate ScrapeAway edition)
 
 /turf/open/floor/hangar_airlock/outer/frame29
 	frame_threshold = 29
-
-/*#############################################################################
-Airlock Turf Interactability Procs
-#############################################################################*/
-
-/turf/open/floor/hangar_airlock/Entered(atom/movable/AM)
-	if(open)
-		if(!isobserver(AM) && !istype(AM, /obj/docking_port) && !istype(AM, /atom/movable/clone))
-			addtimer(CALLBACK(src, PROC_REF(enter_depths), AM), 0.2 SECONDS)
-
-/turf/open/floor/hangar_airlock/proc/enter_depths(/atom/movable/AM)
-	return
-
-/turf/open/floor/hangar_airlock/inner/enter_depths(atom/movable/AM)
-	if(AM.throwing == 0 && istype(get_turf(AM), /turf/open/floor/hangar_airlock))
-		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
-		for(var/i in src.contents)
-			if(istype(i, /atom/movable/clone))
-				var/atom/movable/clone/C = i
-				// why not just use .loc? well, because of /atom/movable/clone facsimile 'turfs', it is potentially the case that we'd locate an area (from the mstr turf of the facsimile) when we just want the exact turf.
-				AM.forceMove(locate(C.mstr.x, C.mstr.y, C.mstr.z))
-				break
-		if(!isliving(AM))
-			return
-		var/mob/living/fallen_living = AM
-		shake_camera(fallen_living, 20, 1)
-		fallen_living.apply_effect(3, WEAKEN)
-		fallen_living.apply_damage(75, BRUTE, pick("r_leg", "l_leg", "r_arm", "l_arm", "chest", "head"))
-
-/turf/open/floor/hangar_airlock/outer/enter_depths(atom/movable/AM)
-	if(AM.throwing == 0 && istype(get_turf(AM), /turf/open/floor/hangar_airlock))
-		AM.visible_message(SPAN_WARNING("There is an onrush of air. [AM] falls into space!"), SPAN_WARNING("There is an onrush of air. You fall into space!"))
-		qdel(AM)

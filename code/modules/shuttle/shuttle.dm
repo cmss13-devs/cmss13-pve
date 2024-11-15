@@ -640,8 +640,6 @@
 	return
 
 /obj/docking_port/mobile/proc/set_idle()
-	if(mode == SHUTTLE_AIRLOCKED)
-		return
 	timer = 0
 	set_mode(SHUTTLE_IDLE)
 	destination = null
@@ -771,9 +769,6 @@
 
 	if(mode == SHUTTLE_IGNITING)
 		check_transit_zone()
-
-	if(mode == SHUTTLE_AIRLOCKED)
-		return
 
 	if(timeLeft(1) > 0)
 		return

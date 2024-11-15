@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(fz_transitions)
 	priority = SS_PRIORITY_FZ_TRANSITIONS
 	init_order = SS_INIT_FZ_TRANSITIONS
 	flags = SS_KEEP_TIMING
-	var/list/selective_update = list(/obj/effect/projector = 1, /obj/effect/projector/bay_one = 1, /obj/effect/projector/bay_two = 1)
+	var/list/selective_update = list(/obj/effect/projector = 1, /obj/effect/projector/bay_one = 0, /obj/effect/projector/bay_two = 0)
 
 /datum/controller/subsystem/fz_transitions/stat_entry(msg)
 	msg = "P:[length(GLOB.projectors)]|C:[length(GLOB.clones)]|T:[length(GLOB.clones_t)]"
@@ -21,6 +21,8 @@ SUBSYSTEM_DEF(fz_transitions)
 
 /datum/controller/subsystem/fz_transitions/fire(resumed = FALSE)
 	for(var/obj/effect/projector/P in GLOB.projectors)
+		if(!selective_update[P.type])
+			continue
 		if(!P || !P.loc)
 			GLOB.projectors -= P
 			continue
@@ -28,16 +30,18 @@ SUBSYSTEM_DEF(fz_transitions)
 			P.loc.create_clone(P)
 		if(P.loc.contents)
 			for(var/atom/movable/O in P.loc.contents)
-				if(!istype(O, /obj/effect/projector) && !istype(O, /mob/dead/observer) && !istype(O, /obj/structure/stairs) && !istype(O, /obj/structure/catwalk) && O.type != /atom/movable/clone)
-					if(!O.clone) //Create a clone if it's on a projector
+				if(!O.clone)
+					if(!(istype(O, /obj/effect/projector) && istype(O, /mob/dead/observer) && istype(O, /obj/structure/stairs) && istype(O, /obj/structure/catwalk) && O.type == /atom/movable/clone))
 						O.create_clone_movable(P)
-					else
+				else
+					if(!(istype(O, /obj/effect/projector) && istype(O, /mob/dead/observer) && istype(O, /obj/structure/stairs) && istype(O, /obj/structure/catwalk) && O.type == /atom/movable/clone))
 						O.clone.proj_x = P.vector_x //Make sure projection is correct
 						O.clone.proj_y = P.vector_y
 						O.clone.proj_z = P.vector_z
 
-
 	for(var/atom/movable/clone/C in GLOB.clones)
+		if(!selective_update[C.proj.type])
+			continue
 		if(C.mstr == null || !istype(C.mstr.loc, /turf))
 			C.mstr.destroy_clone() //Kill clone if master has been destroyed or picked up
 		else
@@ -47,3 +51,10 @@ SUBSYSTEM_DEF(fz_transitions)
 	for(var/atom/T in GLOB.clones_t)
 		if(T.clone && T.icon_state) //Just keep the icon updated for explosions etc.
 			T.clone.icon_state = T.icon_state
+
+/datum/controller/subsystem/fz_transitions/proc/toggle_selective_update(update, obj/effect/projector/projector_type)
+	if(!projector_type)
+		return
+
+	selective_update[projector_type.type] = update
+	fire()
