@@ -267,6 +267,10 @@ Player Interactablility Procs
 			SSshuttle.generate_transit_dock(docked_mobile)
 		docked_mobile.set_mode(SHUTTLE_IDLE)
 		docked_mobile.initiate_docking(docked_mobile.assigned_transit)
+		for(var/area/internal_area in docked_mobile.shuttle_areas)
+			for(var/turf/internal_turf in internal_area)
+				for(var/mob/M in internal_turf)
+					shake_camera(M, 60, 2)
 	processing = FALSE
 
 /*#############################################################################
