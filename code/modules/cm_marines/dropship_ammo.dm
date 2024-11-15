@@ -433,7 +433,7 @@
 
 /obj/structure/ship_ammo/sentry
 	name = "\improper A/C-49-P Air Deployable Sentry"
-	desc = "An omni-directional sentry, capable of defending an area from lightly armored hostile incursion. Can be loaded into the LAG-14 Internal Sentry Launcher."
+	desc = "A sentry, capable of defending an area from lightly armored hostile incursion. Can be loaded into the LAG-14 Internal Sentry Launcher."
 	icon_state = "launchable_sentry"
 	equipment_type = /obj/structure/dropship_equipment/weapon/launch_bay
 	ammo_count = 1
