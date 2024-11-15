@@ -579,7 +579,7 @@
 	name = "\improper UA-635C Static Gauss Turret"
 	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed and modified for UA warship use."
 	fire_delay = 0.4 SECONDS
-	omni_directional = TRUE
+	omni_directional = FALSE
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/almayer/mini
 	name = "\improper UA 512-S mini sentry"
@@ -599,7 +599,7 @@
 	name = "\improper UA-577 Spaceborne Gauss Turret"
 	fire_delay = 2
 	sentry_range = 10
-	omni_directional = TRUE
+	omni_directional = FALSE
 	/// How long the battery for this turret lasts. Will warn low at 70% and critical at 90% use.
 	var/battery_duration = 20 MINUTES
 	/// The current battery state
@@ -662,7 +662,7 @@
 /obj/structure/machinery/defenses/sentry/premade/dropship
 	density = TRUE
 	faction_group = FACTION_LIST_MARINE
-	omni_directional = TRUE
+	omni_directional = FALSE
 	choice_categories = list()
 	selected_categories = list()
 	var/obj/structure/dropship_equipment/sentry_holder/deployment_system
@@ -727,7 +727,7 @@
 	desc = "A deployable, omni-directional automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
 	ammo = new /obj/item/ammo_magazine/sentry/dropped
 	faction_group = FACTION_LIST_MARINE
-	omni_directional = TRUE
+	omni_directional = FALSE
 	additional_rounds_stored = TRUE
 	immobile = TRUE
 	static = TRUE
@@ -829,7 +829,7 @@
 	disassemble_time = 5 SECONDS
 	hack_time = 25 SECONDS
 	sentry_range = 6
-	omni_directional = TRUE
+	omni_directional = FALSE
 	handheld_type = /obj/item/defenses/handheld/sentry/wy
 	ammo = new /obj/item/ammo_magazine/sentry/wy
 	selected_categories = list(
@@ -900,7 +900,7 @@
 	health_max = 200
 	disassemble_time = 2 SECONDS
 	sentry_range = 3
-	omni_directional = TRUE
+	omni_directional = FALSE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
 
 #undef SENTRY_FIREANGLE
