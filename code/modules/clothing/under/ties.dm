@@ -1245,6 +1245,7 @@
 	desc = "A set of magazine webbing made in an alternative configuration for standard M3 Pattern armor. This one is exclusively issued to Force Reconnoissance units."
 	icon_state = "m3rwebbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
