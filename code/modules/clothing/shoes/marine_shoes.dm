@@ -46,6 +46,13 @@
 /obj/item/clothing/shoes/marine/knife
 	spawn_item_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/marine/brown
+	icon_state = "marine_brown"
+	desc = "A pair of standard issue brown United States Colonial Marine combat boots."
+
+/obj/item/clothing/shoes/marine/brown/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/jungle
 	icon_state = "marine_jungle"
 	desc = "A pair of standard issue United States Colonial Marine jungle boots. Don't go walkin' slow, the devil's on the loose."

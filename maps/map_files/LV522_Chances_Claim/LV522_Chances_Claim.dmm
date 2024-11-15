@@ -15448,10 +15448,6 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
-"hzv" = (
-/obj/item/clothing/head/helmet/marine/pilot,
-/turf/open/floor/corsat/squares,
-/area/lv522/oob)
 "hzA" = (
 /obj/item/ammo_magazine/rifle/heap{
 	current_rounds = 0
@@ -88095,7 +88091,7 @@ tiQ
 ulg
 oQG
 ufl
-hzv
+eqG
 eqG
 uQJ
 rDm
