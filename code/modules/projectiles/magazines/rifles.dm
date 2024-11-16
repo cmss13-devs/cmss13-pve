@@ -222,7 +222,7 @@
 
 /obj/item/ammo_magazine/rifle/mar40/extended
 	name = "\improper MAR extended magazine (8.8x29mm)"
-	desc = "A 7.62x39mm MAR magazine, this one carries more rounds than the average magazine."
+	desc = "A 8.8x29mm magazine, this one carries more rounds than the average magazine."
 	max_rounds = 60
 	bonus_overlay = "mar40_ex"
 	icon_state = "mar40_extended"
