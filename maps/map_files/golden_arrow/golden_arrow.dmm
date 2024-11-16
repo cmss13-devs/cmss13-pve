@@ -14834,7 +14834,7 @@
 "bTt" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_2_east"
+	id = "hangar_2_east"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
@@ -15483,7 +15483,7 @@
 "hlA" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_2_west"
+	id = "hangar_2_west"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
@@ -16389,7 +16389,7 @@
 "oSD" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_2_north"
+	id = "hangar_2_north"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
@@ -16577,7 +16577,7 @@
 "pYL" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_1_west"
+	id = "hangar_1_west"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
@@ -16770,14 +16770,14 @@
 "rsE" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_1_south"
+	id = "hangar_1_south"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
 "ryt" = (
 /obj/structure/machinery/door_control{
 	name = "emergency hatch release";
-	id = "hatch_1_east"
+	id = "hangar_1_east"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
