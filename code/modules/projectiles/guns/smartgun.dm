@@ -351,17 +351,17 @@
 		return
 	if(ammo == ammo_primary)
 		ammo = ammo_secondary
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire armor-piercing rounds.")
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire armor-piercing rounds, offering greater penetration against armored targets compared to other rounds.")
 		balloon_alert(user, "firing armor-piercing")
 		drain += 50
 	else if(ammo == ammo_secondary)
 		ammo = ammo_tertiary
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds.")
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most enemies on hit and slow them down.")
 		balloon_alert(user, "firing impact-detonating")
 		drain += 60
 	else
 		ammo = ammo_primary
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds.")
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds. These rounds are accurate and cost less power to operate.")
 		balloon_alert(user, "firing highly precise")
 		drain -= 110
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
