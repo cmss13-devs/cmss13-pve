@@ -967,18 +967,6 @@
 
 //END UNIFORM TEMPLATE
 
-/obj/item/clothing/under/marine/fluff/marinemedic //UNUSED
-	name = "Marine Medic jumpsuit"
-	desc = "A standard quilted Colonial Marine jumpsuit. Weaved with armored plates to protect against low-caliber rounds and light impacts. Has medical markings. "
-	icon_state = "marine_medic"
-	worn_state = "marine_medic"
-
-/obj/item/clothing/under/marine/fluff/marineengineer //UNUSED
-	name = "Marine Technician jumpsuit"
-	desc = "A standard quilted Colonial Marine jumpsuit. Weaved with armored plates to protect against low-caliber rounds and light impacts. Has engineer markings. "
-	icon_state = "marine_engineer"
-	worn_state = "marine_engineer"
-
 /obj/item/clothing/under/marine/fluff/tristan //CKEY=tristan63
 	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\"."
 	name = "captain's jumpsuit"

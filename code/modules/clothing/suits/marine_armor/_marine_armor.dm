@@ -917,7 +917,6 @@
 
 /obj/item/clothing/suit/marine/rto/intel
 	name = "\improper XM4 pattern intelligence officer armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/marine/officer/intel)
 	specialty = "XM4 pattern intel"
 
 /obj/item/clothing/suit/marine/rto/forecon

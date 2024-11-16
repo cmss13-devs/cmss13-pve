@@ -93,14 +93,6 @@
 	specialty = "marine officer"
 	black_market_value = 25
 
-/obj/item/clothing/under/marine/officer/intel
-	name = "\improper marine intelligence officer sweatsuit"
-	desc = "Intelligence work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
-	icon_state = "io"
-	item_state = "io"
-	worn_state = "io"
-	specialty = "marine intelligence officer"
-
 /obj/item/clothing/under/marine/officer/warrant
 	name = "\improper USCM MP chief uniform"
 	desc = "USCMC Military Police Chief's uniform. Alongside the standard armor panels, it has an uncomfortable energy dispersive polymer lining, and is also rated for low MOPP conditions."
@@ -118,28 +110,6 @@
 	worn_state = "johnny"
 	specialty = "technical officer"
 	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/under/marine/officer/pilot
-	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
-	icon_state = "pilot_flightsuit"
-	item_state = "pilot_flightsuit"
-	worn_state = "pilot_flightsuit"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE
-	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
-	suit_restricted = list(/obj/item/clothing/suit/armor/vest/pilot, /obj/item/clothing/suit/storage/marine/light/vest/dcc, /obj/item/clothing/suit/storage/jacket/marine/pilot, /obj/item/clothing/suit/storage/marine/light/vest)
-
-/obj/item/clothing/under/marine/officer/pilot/flight
-	name = "tactical pilot officer flightsuit"
-	desc = "A flightsuit worn by pilot officers of the USCM, with plenty of leather straps, pouches, and other essential gear you will never use. Looks badass."
-	icon_state = "pilot_flightsuit_alt"
-	item_state = "pilot_flightsuit_alt"
-	worn_state = "pilot_flightsuit_alt"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
-
 
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"
@@ -192,8 +162,8 @@
 	desc = "The uniform of a maintenance technician. Specially treated for hazardous materials handing and hostile conditions."
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
-	icon_state = "mt_jumpsuit"
-	worn_state = "mt_jumpsuit"
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
 	specialty = "engineer"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE
@@ -203,8 +173,8 @@
 	name = "ordnance technician uniform"
 	desc = "Ordinance technician's uniform. Improved protection from explosives and shrapnel provided by more extensive venlar coverage and hard bracing elements."
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	icon_state = "ot_jumpsuit"
-	worn_state = "ot_jumpsuit"
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
 	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/researcher
@@ -894,8 +864,8 @@
 /obj/item/clothing/under/rank/qm_suit
 	name = "quartermaster suit"
 	desc = "A nicely-fitting military suit for a quartermaster. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
-	icon_state = "RO_jumpsuit"
-	worn_state = "RO_jumpsuit"
+	icon_state = "boilersuit_khaki"
+	worn_state = "boilersuit_khaki"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
 /obj/item/clothing/under/rank/synthetic
@@ -1250,8 +1220,10 @@
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/navy)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-/obj/item/clothing/under/marine/officer/intel/navy
+/obj/item/clothing/under/marine/officer/intel
 	name = "\improper USASF combat uniform"
+	icon_state = "d_marine_jumpsuit"
+	worn_state = "d_marine_jumpsuit"
 	desc = "Forward-observation work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/navy)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
