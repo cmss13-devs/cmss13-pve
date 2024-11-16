@@ -295,9 +295,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM patrol cap"
 	path = /obj/item/clothing/head/cmcap
 
-/datum/gear/headwear/uscm/cap_khaki
-	display_name = "USCM patrol cap, khaki"
-	path = /obj/item/clothing/head/cmcap/khaki
+/datum/gear/headwear/uscm/cap_desert
+	display_name = "USCM patrol cap, desert"
+	path = /obj/item/clothing/head/cmcap/desert
 
 /datum/gear/headwear/uscm/cap_snow
 	display_name = "USCM patrol cap, snow"

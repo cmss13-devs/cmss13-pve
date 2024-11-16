@@ -427,6 +427,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/Initialize()
 	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type, null)
 	helmet_overlays = list() //To make things simple.
 
 	pockets = new(src)

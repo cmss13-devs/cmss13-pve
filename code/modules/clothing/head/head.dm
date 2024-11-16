@@ -398,6 +398,11 @@
 	desc = "A patrol cap worn in cold weather environments."
 	icon_state = "cap_snow"
 
+/obj/item/clothing/head/cmcap/desert
+	name = "\improper desert patrol cap"
+	desc = "A desert BDU patrol cap."
+	icon_state = "cap_desert"
+
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."

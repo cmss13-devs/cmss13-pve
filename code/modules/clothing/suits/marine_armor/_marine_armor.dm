@@ -659,7 +659,7 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
-	flags_atom = FPRINT|CONDUCT|NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS

@@ -1089,7 +1089,6 @@
 	icon_state = "pads"
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
-	flags_atom = NO_SNOW_TYPE
 /obj/item/clothing/accessory/pads/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_SNOW_TYPE))
