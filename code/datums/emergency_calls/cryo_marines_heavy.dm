@@ -43,7 +43,7 @@
 		to_chat(H, SPAN_ROLE_BODY("Your squad is here to assist in the defence of [SSmapping.configs[GROUND_MAP].map_name]."))
 	else if (heavies < max_heavies && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_HEAVY) && check_timelock(H.client, JOB_SQUAD_SPECIALIST, time_required_for_job))
 		heavies++
-		arm_equipment(H, /datum/equipment_preset/uscm/specialist_equipped/cryo, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/specialist_equipped, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are a Weapons Specialist in the USCM"))
 		to_chat(H, SPAN_ROLE_BODY("Your squad is here to assist in the defence of [SSmapping.configs[GROUND_MAP].map_name]."))
 	else if(smartgunners < max_smartgunners && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_SMARTGUNNER) && check_timelock(H.client, JOB_SQUAD_SMARTGUN, time_required_for_job))

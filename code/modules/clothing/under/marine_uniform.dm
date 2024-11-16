@@ -46,56 +46,6 @@
 /obj/item/clothing/under/marine/standard
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/under/marine/medic
-	name = "\improper USCM corpsman uniform"
-	desc = "Standard-issue Marine hospital corpsman fatigues with venlar armor inserts at critical areas to protect from blades and ballistics."
-	icon_state = "marine_medic"
-	worn_state = "marine_medic"
-	specialty = "USCM Hospital Corpsman"
-
-/obj/item/clothing/under/marine/medic/standard
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/under/marine/engineer
-	name = "\improper USCM combat technician uniform"
-	desc = "USCMC combat technician's fatigues, shielded by venlar panels and no longer electrically insulated due to 'budget reprioritization'."
-	icon_state = "marine_engineer"
-	worn_state = "marine_engineer"
-	specialty = "USCM Combat Technician"
-
-/obj/item/clothing/under/marine/engineer/standard
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/under/marine/engineer/darker
-	icon_state = "d_marine_engineer"
-	worn_state = "d_marine_engineer"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/under/marine/rto
-	name = "\improper USCM radio telephone operator uniform"
-	desc = "The uniform of a USCMC radio-telephone operator. Venlar panels provide marginal protection from shrapnel and ballistics."
-	icon_state = "marine_rto"
-	item_state = "marine_rto"
-	specialty = "marine Radio Telephone Operator"
-
-/obj/item/clothing/under/marine/sniper
-	name = "\improper USCM sniper uniform"
-	flags_jumpsuit = FALSE
-	specialty = "USCM Sniper"
-
-/obj/item/clothing/under/marine/tanker
-	name = "\improper USCM tanker uniform"
-	icon_state = "marine_tanker"
-	worn_state = "marine_tanker"
-	flags_jumpsuit = FALSE
-	specialty = "USCM tanker"
-
-/obj/item/clothing/under/marine/tanker/New(loc,
-	new_protection = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT),
-	override_icon_state = list(MAP_ICE_COLONY = "s_marine_tanker"))
-
-	..(loc, new_protection, override_icon_state)
-
 /obj/item/clothing/under/marine/chef
 	name = "\improper USCM Mess Technician uniform"
 	desc = "The stain resistant uniform of a mess technician. Why the USCMC requires them to wear the venlar armor inserts is unknown."
@@ -190,24 +140,6 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
 
-/obj/item/clothing/under/marine/officer/pilot/dcc
-	name = "dropship crew chief bodysuit"
-	desc = "Dropship crew chief's bodysuit. The program that procured the latest line for some reason implemented a dozen odd survival features into it, which all don't really work. It also accepts standard venlar panels."
-	icon_state = "crewchief_flightsuit"
-	item_state = "crewchief_flightsuit"
-	worn_state = "crewchief_flightsuit"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/under/marine/officer/tanker
-	name = "vehicle crewman uniform"
-	desc = "Armored vehicle crew uniform worn by tankers and cav crew of the USCMC. Shrapnel protection provided by venlar panels, badassery hinges on how well the operator works their vehicle. Do the Corps proud."
-	icon_state = "marine_tanker"
-	worn_state = "marine_tanker"
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/tanker, /obj/item/clothing/suit/storage/jacket/marine/service/tanker)
-	specialty = "vehicle crewman"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	item_state_slots = list(WEAR_BODY = "marine_tanker")
 
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"

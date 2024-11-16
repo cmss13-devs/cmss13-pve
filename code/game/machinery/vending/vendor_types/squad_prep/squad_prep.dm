@@ -100,7 +100,8 @@
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
 		list("Marine Combat Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/jungle/knife, VENDOR_ITEM_REGULAR),
-		list("Marine Uniform", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
+		list("Marine Uniform, Camo Conforming", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
+		list("Marine Uniform, Jungle BDU", floor(scale * 15), /obj/item/clothing/under/marine/standard, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Marine Helmet", floor(scale * 15), /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),

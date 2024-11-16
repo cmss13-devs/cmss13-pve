@@ -356,14 +356,6 @@
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	specialty = "B12 pattern marine"
 	light_range = 5
-
-/obj/item/clothing/suit/storage/marine/tanker
-	name = "\improper M3 pattern tanker armor"
-	desc = "Armored vest sometimes worn by USCMC armor crews. More bulky than a flak vest or service jacket, but substantially improved protection should the wearer need to dismount."
-	icon_state = "tanker"
-	specialty = "M3 pattern tanker"
-	storage_slots = 2
-
 //===========================//PFC ARMOR CLASSES\\================================\\
 //=================================================================================\\
 
@@ -592,7 +584,7 @@
 	armor_bomb = CLOTHING_ARMOR_HIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	specialty = "M3-T light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
 	unacidable = TRUE
 
 /obj/item/clothing/suit/storage/marine/M3S
@@ -602,7 +594,7 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	specialty = "M3-S light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
 	unacidable = TRUE
 
 //==================Combat Correspondent==================\\

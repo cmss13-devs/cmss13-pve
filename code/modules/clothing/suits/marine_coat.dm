@@ -123,14 +123,6 @@
 	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "coat_cmp"
 
-/obj/item/clothing/suit/storage/jacket/marine/service/tanker
-	name = "tanker jacket"
-	desc = "A comfortable jacket provided to anyone expected to operate near or inside heavy machinery. Special material within the arms jams up any machinery it gets caught up in, protecting the wearer from injury."
-	has_buttons = TRUE
-	flags_atom = NO_SNOW_TYPE
-	icon_state = "jacket_tanker"
-	initial_icon_state = "jacket_tanker"
-
 /obj/item/clothing/suit/storage/jacket/marine/chef
 	name = "mess technician jacket"
 	desc = "Smells like vanilla. Signifies prestige and power, if a little flashy."

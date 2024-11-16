@@ -1896,7 +1896,6 @@
 	req_access = null
 	},
 /obj/item/clothing/suit/storage/jacket/marine/service,
-/obj/item/clothing/suit/storage/jacket/marine/service/tanker,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "vD" = (
