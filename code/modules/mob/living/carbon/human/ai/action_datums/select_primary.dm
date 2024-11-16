@@ -3,7 +3,7 @@
 	action_flags = ACTION_USING_HANDS
 
 /datum/ai_action/select_primary/get_weight(datum/human_ai_brain/brain)
-	if(!brain.tried_reload && brain.primary_weapon)
+	if(!brain.tried_reload && brain.primary_weapon && length(brain.secondary_weapons))
 		return 0
 
 	if(brain.primary_weapon?.ai_can_use(brain.tied_human, brain))
