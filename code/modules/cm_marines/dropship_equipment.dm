@@ -1439,3 +1439,76 @@
 	sleep(3)
 	SA.source_mob = user
 	SA.detonate_on(impact, src)
+
+/obj/structure/dropship_equipment/chair_system
+	name = "\improper FAH-1 deployable chair module"
+	desc = "A massive box containing one folding hot-drop chair. You can change the chair's direction using a screwdriver on this module, but only when it's not deployed."
+	shorthand = "CHR"
+	equip_categories = list(DROPSHIP_CREW_WEAPON)
+	icon_state = "chair_system"
+	point_cost = 50
+	combat_equipment = FALSE
+	var/deployment_cooldown
+	var/obj/structure/bed/chair/dropship/passenger/deployed_chair
+
+/obj/structure/dropship_equipment/chair_system/Initialize()
+	. = ..()
+	deployed_chair = new(src)
+
+/obj/structure/dropship_equipment/chair_system/attack_hand(mob/user)
+	if(deployed_chair)
+		if(deployment_cooldown > world.time)
+			to_chat(user, SPAN_WARNING("[src] is busy."))
+			return //prevents spamming deployment/undeployment
+		if(deployed_chair.loc == src) //not deployed
+			to_chat(user, SPAN_NOTICE("You deploy [src]."))
+			deployed_chair.forceMove(loc)
+			playsound(loc, 'sound/machines/hydraulics_1.ogg', 40, 1)
+			icon_state = "chair_system_deployed"
+			deployment_cooldown = world.time + 50
+		else if(deployed_chair.buckled_mob)
+			to_chat(user, SPAN_WARNING("[deployed_chair.buckled_mob] prevents you from folding the chair."))
+			return
+		else
+			to_chat(user, SPAN_NOTICE("You retract [src]."))
+			playsound(loc, 'sound/machines/hydraulics_2.ogg', 40, 1)
+			deployment_cooldown = world.time + 50
+			deployed_chair.forceMove(src)
+			icon_state = "chair_system_installed"
+	else
+		to_chat(user, SPAN_WARNING("[src] is unresponsive."))
+
+	..()
+
+/obj/structure/dropship_equipment/chair_system/attackby(obj/item/I, mob/user)
+	..()
+	if(HAS_TRAIT(I, TRAIT_TOOL_SCREWDRIVER) && deployed_chair && deployed_chair.loc == src)
+		deployed_chair.setDir(turn(deployed_chair.dir, 90))
+		deployed_chair.handle_rotation()
+		playsound(src, 'sound/items/Ratchet.ogg', 25, 1)
+		to_chat(user, SPAN_NOTICE("You rotate the chair."))
+
+/obj/structure/dropship_equipment/chair_system/update_equipment()
+	if(ship_base)
+		density = FALSE
+		layer = LOWER_ITEM_LAYER
+		setDir(ship_base.dir)
+		icon_state = "sentry_system_installed"
+		if(deployed_chair)
+			deployed_chair.setDir(dir)
+	else
+		layer = initial(layer)
+		setDir(initial(dir))
+		if(deployed_chair)
+			icon_state = "chair_system"
+			deployed_chair.forceMove(src)
+			deployed_chair.setDir(dir)
+			density = TRUE
+		else
+			icon_state = "sentry_system_destroyed"
+
+/obj/structure/dropship_equipment/chair_system/grab_equipment(obj/item/powerloader_clamp/PC, mob/living/user)
+	if(deployed_chair && deployed_chair.buckled_mob)
+		to_chat(user, SPAN_WARNING("[deployed_chair.buckled_mob] prevents you from grabbing [src]."))
+	else
+		..()
