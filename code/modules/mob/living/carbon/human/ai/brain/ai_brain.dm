@@ -216,18 +216,24 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	current_order = null
 
 /// Returns TRUE if the target is friendly/neutral to us
-/datum/human_ai_brain/proc/faction_check(mob/target)
-	if(!target)
+/datum/human_ai_brain/proc/faction_check(atom/target)
+	if(isdefenses(target))
+		var/obj/structure/machinery/defenses/defense_target = target
+		if(tied_human.faction in defense_target.faction_group)
+			return TRUE
 		return FALSE
 
-	if(target.faction == tied_human.faction)
-		return TRUE
+	if(ismob(target))
+		var/mob/mob_target = target
 
-	if(target.faction in friendly_factions)
-		return TRUE
+		if(mob_target.faction == tied_human.faction)
+			return TRUE
 
-	if(target.faction in neutral_factions)
-		return TRUE
+		if(mob_target.faction in friendly_factions)
+			return TRUE
+
+		if(mob_target.faction in neutral_factions)
+			return TRUE
 
 	return FALSE
 
@@ -258,18 +264,26 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 		enter_combat()
 
-		var/mob/firer = bullet.firer
-		if(firer?.faction in neutral_factions)
-			on_neutral_faction_betray(firer.faction)
+		if(length(neutral_factions))
+			if(ismob(bullet.firer))
+				var/mob/mob_firer = bullet.firer
+				if(mob_firer.faction in neutral_factions)
+					on_neutral_faction_betray(mob_firer.faction)
 
-		if(faction_check(firer))
+			else if(isdefenses(bullet.firer))
+				var/obj/structure/machinery/defenses/defense_firer = bullet.firer
+				for(var/faction in defense_firer.faction_group)
+					if(faction in neutral_factions)
+						on_neutral_faction_betray(faction)
+
+		if(faction_check(bullet.firer))
 			return
 
-		if(get_dist(tied_human, firer) <= view_distance)
-			set_target(firer)
+		if(get_dist(tied_human, bullet.firer) <= view_distance)
+			set_target(bullet.firer)
 		else
 			COOLDOWN_START(src, fire_offscreen, 4 SECONDS)
-			target_turf = get_turf(firer)
+			target_turf = get_turf(bullet.firer)
 
 /datum/human_ai_brain/proc/on_move(atom/oldloc, direction, forced)
 	setup_detection_radius()
@@ -327,18 +341,26 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	enter_combat()
 
-	var/mob/firer = bullet.firer
-	if(firer?.faction in neutral_factions)
-		on_neutral_faction_betray(firer.faction)
+	if(length(neutral_factions))
+		if(ismob(bullet.firer))
+			var/mob/mob_firer = bullet.firer
+			if(mob_firer.faction in neutral_factions)
+				on_neutral_faction_betray(mob_firer.faction)
 
-	if(faction_check(firer))
+		else if(isdefenses(bullet.firer))
+			var/obj/structure/machinery/defenses/defense_firer = bullet.firer
+			for(var/faction in defense_firer.faction_group)
+				if(faction in neutral_factions)
+					on_neutral_faction_betray(faction)
+
+	if(faction_check(bullet.firer))
 		return
 
-	if(get_dist(tied_human, firer) <= view_distance)
-		set_target(firer)
+	if(get_dist(tied_human, bullet.firer) <= view_distance)
+		set_target(bullet.firer)
 	else
 		COOLDOWN_START(src, fire_offscreen, 4 SECONDS)
-		target_turf = get_turf(firer)
+		target_turf = get_turf(bullet.firer	)
 
 	if(!current_cover)
 		try_cover(bullet)

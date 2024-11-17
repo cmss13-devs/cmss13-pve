@@ -4,7 +4,7 @@
 
 /datum/ai_action/keep_distance/get_weight(datum/human_ai_brain/brain)
 	var/mob/living/current_target = brain.current_target
-	if(!current_target)
+	if(!istype(current_target))
 		return 0
 
 	if(!brain.primary_weapon)

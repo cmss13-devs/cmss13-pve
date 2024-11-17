@@ -4,7 +4,7 @@
 	/// At how far out the AI can see cloaked enemies
 	var/cloak_visible_range = 3
 	/// Ref to the currently focused (and shooting at) target
-	var/mob/living/current_target
+	var/atom/movable/current_target
 	/// Last turf our target was seen at
 	var/turf/target_turf
 	/// Ref to the last turf that the AI shot at
@@ -89,6 +89,9 @@
 
 	for(var/obj/structure/machinery/defenses/potential_defense_target as anything in GLOB.all_active_defenses)
 		if(tied_human.z != potential_defense_target.z)
+			continue
+
+		if(tied_human.faction in potential_defense_target.faction_group)
 			continue
 
 		if(!(tied_human in viewers(view_distance, potential_defense_target)))

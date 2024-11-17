@@ -409,6 +409,17 @@
 	InsertAll("", 'icons/obj/items/weapons/guns/lineart_modes.dmi')
 	..()
 
+/datum/asset/spritesheet/defense_menu
+	name = "defensemenu"
+
+/datum/asset/spritesheet/defense_menu/register()
+	for(var/icon_state in icon_states('icons/misc/human_defense_menu.dmi'))
+		var/icon/icon_sprite = icon('icons/misc/human_defense_menu.dmi', icon_state)
+		icon_sprite.Scale(128, 128)
+		Insert(icon_state, icon_sprite)
+
+	return ..()
+
 /datum/asset/simple/orbit
 	assets = list(
 		"ghost.png" = 'html/images/ghost.png'

@@ -1967,7 +1967,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.
-	if(!isturf(gun_user.loc))
+	if(!gun_user || !isturf(gun_user.loc))
 		return FALSE
 
 	if(istype(object, /atom/movable/screen))

@@ -77,6 +77,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/create_human_ai_patrol,
 	/client/proc/open_human_ai_management_panel,
 	/client/proc/open_human_faction_management_panel,
+	/client/proc/open_human_defense_creator_panel,
 	/client/proc/create_human_ai,
 	/client/proc/other_records,
 	/client/proc/fortify_room,
