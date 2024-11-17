@@ -359,6 +359,11 @@
 	icon_state = "plasteel_folding"
 	path_to_spawn = /obj/structure/barricade/plasteel
 
+/datum/human_ai_defense/barricade/plasteel_folding/spawn_object(turf/loc_to_spawn, dir_to_spawn, faction, turned_on)
+	var/obj/structure/barricade/plasteel/defense = new path_to_spawn(loc_to_spawn)
+	defense.setDir(dir_to_spawn)
+	defense.open() // closes it
+
 /datum/human_ai_defense/barricade/plasteel_folding/wired
 	name = "Plasteel Folding Barricade - Wired"
 	desc = /obj/structure/barricade/plasteel/wired::desc
@@ -367,15 +372,20 @@
 
 /datum/human_ai_defense/barricade/metal_folding
 	name = "Metal Folding Barricade"
-	desc = /obj/structure/barricade/metal::desc
+	desc = /obj/structure/barricade/plasteel/metal::desc
 	icon_state = "metal_folding"
-	path_to_spawn = /obj/structure/barricade/metal
+	path_to_spawn =/obj/structure/barricade/plasteel/metal
+
+/datum/human_ai_defense/barricade/metal_folding/spawn_object(turf/loc_to_spawn, dir_to_spawn, faction, turned_on)
+	var/obj/structure/barricade/plasteel/metal/defense = new path_to_spawn(loc_to_spawn)
+	defense.setDir(dir_to_spawn)
+	defense.open() // closes it
 
 /datum/human_ai_defense/barricade/metal_folding/wired
 	name = "Metal Folding Barricade - Wired"
-	desc = /obj/structure/barricade/metal/wired::desc
+	desc = /obj/structure/barricade/plasteel/metal/wired::desc
 	icon_state = "metal_folding_wired"
-	path_to_spawn = /obj/structure/barricade/metal/wired
+	path_to_spawn = /obj/structure/barricade/plasteel/metal/wired
 
 /datum/human_ai_defense/barricade/wooden
 	name = "Wooden Barricade"

@@ -25,6 +25,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	var/disposable = FALSE
 	/// The selection weight of the weapon type. If an AI has multiple weapons, it'll use weighting to determine its primary. In short, higher weight = more powerful
 	var/primary_weight = 1
+	/// If FALSE, this gun can't/won't fire at offscreen targets
+	var/offscreen_fire = TRUE
 
 /// List of things we do before beginning to spray bullets based off weapon type
 /datum/firearm_appraisal/proc/before_fire(obj/item/weapon/gun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
@@ -129,6 +131,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/shotgun/double,
 	)
+	offscreen_fire = FALSE
 
 /datum/firearm_appraisal/shotgun_db/do_reload(obj/item/weapon/gun/firearm, obj/item/ammo_magazine/mag, mob/living/carbon/user, datum/human_ai_brain/AI)
 	AI.unholster_primary()
@@ -161,6 +164,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/shotgun,
 	)
 	primary_weight = 4
+	offscreen_fire = FALSE
 
 /datum/firearm_appraisal/shotgun/before_fire(obj/item/weapon/gun/shotgun/firearm, mob/living/carbon/user, datum/human_ai_brain/AI)
 	. = ..()
@@ -195,6 +199,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/flamer,
 	)
 	primary_weight = 7
+	offscreen_fire = FALSE
 
 /datum/firearm_appraisal/rpg
 	minimum_range = 5
@@ -204,6 +209,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	)
 	disposable = TRUE
 	primary_weight = 15
+	offscreen_fire = FALSE
 
 /datum/firearm_appraisal/rpg/multi_use
 	gun_types = list(

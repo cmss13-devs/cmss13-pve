@@ -61,22 +61,27 @@
 			locate(tied_human.x, tied_human.y - 4, tied_human.z),
 			locate(tied_human.x - 4, tied_human.y, tied_human.z),
 		)
-		for(var/turf/location as anything in directions)
-			if(location)
-				var/list/turf/path = get_line(tied_human, location, include_start_atom = FALSE)
-				for(var/turf/possible_blocker as anything in path)
-					if(possible_blocker.density)
-						continue
+		dir_loop:
+			for(var/turf/location as anything in directions)
+				if(location)
+					var/list/turf/path = get_line(tied_human, location, include_start_atom = FALSE)
+					for(var/turf/possible_blocker as anything in path)
+						if(possible_blocker.density)
+							continue dir_loop
 
-				var/has_friendly = FALSE
-				for(var/mob/possible_friendly in range(3, location))
-					if(!brain.can_target(possible_friendly))
-						has_friendly = TRUE
+						for(var/obj/possible_object_blocker in path)
+							if(possible_object_blocker.density)
+								continue dir_loop
+
+					var/has_friendly = FALSE
+					for(var/mob/possible_friendly in range(3, location))
+						if(!brain.can_target(possible_friendly))
+							has_friendly = TRUE
+							break
+
+					if(!has_friendly)
+						place_to_throw = location
 						break
-
-				if(!has_friendly)
-					place_to_throw = location
-					break
 
 		if(!place_to_throw)
 			// There's friendlies all around us, apparently. Just uh. Die ig.

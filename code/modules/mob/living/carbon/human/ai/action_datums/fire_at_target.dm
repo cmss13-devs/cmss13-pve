@@ -15,7 +15,7 @@
 		return 0
 
 	var/turf/target_turf = brain.target_turf
-	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen))
+	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && brain.gun_data.offscreen_fire)
 
 	if(!brain.current_target && !should_fire_offscreen)
 		return 0

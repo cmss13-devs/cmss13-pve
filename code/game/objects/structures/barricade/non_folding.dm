@@ -117,12 +117,12 @@
 							to_chat(user, SPAN_NOTICE("You applied a biohazardous upgrade."))
 						if(BARRICADE_UPGRADE_BRUTE)
 							brute_multiplier = 0.75
-							brute_projectile_multiplier = 0.75
+							brute_projectile_multiplier = 0.375
 							upgraded = BARRICADE_UPGRADE_BRUTE
 							to_chat(user, SPAN_NOTICE("You applied a reinforced upgrade."))
 						if(BARRICADE_UPGRADE_ANTIFF)
 							explosive_multiplier = 0.5
-							brute_projectile_multiplier = 0.5
+							brute_projectile_multiplier = 0.25
 							burn_flame_multiplier = 0.5
 							upgraded = BARRICADE_UPGRADE_ANTIFF
 							to_chat(user, SPAN_NOTICE("You applied a composite upgrade."))
@@ -157,12 +157,12 @@
 							to_chat(user, SPAN_NOTICE("You applied a biohazardous upgrade."))
 						if(BARRICADE_UPGRADE_BRUTE)
 							brute_multiplier = 0.75
-							brute_projectile_multiplier = 0.75
+							brute_projectile_multiplier = 0.375
 							upgraded = BARRICADE_UPGRADE_BRUTE
 							to_chat(user, SPAN_NOTICE("You applied a reinforced upgrade."))
 						if(BARRICADE_UPGRADE_ANTIFF)
 							explosive_multiplier = 0.5
-							brute_projectile_multiplier = 0.5
+							brute_projectile_multiplier = 0.25
 							burn_flame_multiplier = 0.5
 							upgraded = BARRICADE_UPGRADE_ANTIFF
 							to_chat(user, SPAN_NOTICE("You applied a composite upgrade."))
