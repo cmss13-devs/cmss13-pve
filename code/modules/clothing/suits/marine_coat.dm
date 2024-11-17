@@ -19,6 +19,7 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
+	flags_atom = NO_SNOW_TYPE
 	allowed = list(
 		/obj/item/weapon/gun/,
 		/obj/item/storage/fancy/cigarettes,
@@ -86,7 +87,6 @@
 	desc = "M70 variant that reduces bulk and protective for ergonomics. Consider this to have the same amount of protection from flak as an officer's service jacket."
 	icon_state = "pilot_alt"
 	has_buttons = TRUE
-	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "pilot_alt"
 
 /obj/item/clothing/suit/storage/jacket/marine/RO
