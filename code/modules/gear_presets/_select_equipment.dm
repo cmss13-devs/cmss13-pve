@@ -1296,3 +1296,13 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	money.update_icon()
 	new_human.equip_to_slot_or_del(money, WEAR_IN_BACK)
 
+/datum/equipment_preset/proc/add_uscm_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/uniform = new()
+	var/random_uniform = rand(1,3)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+

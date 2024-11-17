@@ -873,7 +873,6 @@
 	name = "Tutorial (Fed)"
 	underfed = FALSE
 
-
 /datum/equipment_preset/uscm/tutorial_rifleman
 	name = "Tutorial Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA

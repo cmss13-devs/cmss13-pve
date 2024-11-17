@@ -940,3 +940,11 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "B12 pattern marine"
 
+/obj/item/clothing/suit/marine/M3S
+	name = "\improper M3-S light armor"
+	desc = "A custom set of M3 armor designed for USCM scouts and recon units."
+	icon_state = "scout_armor"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	specialty = "M3-S light"
+	flags_item = NO_SNOW_TYPE
