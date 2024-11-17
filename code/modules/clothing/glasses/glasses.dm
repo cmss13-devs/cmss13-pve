@@ -456,6 +456,22 @@
 	inactive_icon_state = "mgogglesorg"
 	prescription = TRUE
 
+/obj/item/clothing/glasses/mgoggles/green
+	name = "laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring brown lenses rated for ballistic and laser protection."
+	icon_state = "mgogglesgrn"
+	active_icon_state = "mgogglesgrn_down"
+	inactive_icon_state = "mgogglesgrn"
+	eye_protection = EYE_PROTECTION_FLASH
+
+/obj/item/clothing/glasses/mgoggles/green
+	name = "prescription laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom brown prescription lenses rated for ballistic and laser protection."
+	icon_state = "mgogglesgrn"
+	active_icon_state = "mgogglesgrn_down"
+	inactive_icon_state = "mgogglesgrn"
+	eye_protection = EYE_PROTECTION_FLASH
+
 /obj/item/clothing/glasses/mgoggles/on_enter_storage(obj/item/storage/internal/S)
 	..()
 
