@@ -510,6 +510,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -560,7 +561,7 @@
 			add_uscm_cover(new_human)
 		if(3)
 			new_human.equip_to_slot_or_del(new 	/obj/item/device/overwatch_camera(new_human), WEAR_R_EAR)
-
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -616,6 +617,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -671,6 +673,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -721,6 +724,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -777,6 +781,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -828,6 +833,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -871,6 +877,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
+	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
