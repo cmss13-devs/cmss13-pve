@@ -217,9 +217,10 @@
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
-	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
+	desc = "A patrol cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "cap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = FPRINT|NO_SNOW_TYPE
 	var/helmet_overlays[]
 	var/flipped_cap = FALSE
 	var/list/flipping_message = list(
@@ -371,7 +372,6 @@
 
 /obj/item/clothing/head/cmcap/boonie/tan
 	icon_state = "booniehattan"
-	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/co
 	name = "\improper USCM Commanding officer cap"
@@ -383,7 +383,6 @@
 	icon_state = "co_formalhat_white"
 	desc = "A formal cover worn by senior officers of the USCM."
 	flags_marine_hat = HAT_GARB_OVERLAY
-	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/co/formal/black
 	name = "\improper USCM formal Commanding Officer's black cap"
@@ -393,28 +392,33 @@
 	name = "\improper khaki patrol cap"
 	desc = "A khaki patrol cap."
 	icon_state = "cap_khaki"
-	flags_atom = FPRINT|NO_SNOW_TYPE
+
+/obj/item/clothing/head/cmcap/snow
+	name = "\improper coldweather patrol cap"
+	desc = "A patrol cap worn in cold weather environments."
+	icon_state = "cap_snow"
+
+/obj/item/clothing/head/cmcap/desert
+	name = "\improper desert patrol cap"
+	desc = "A desert BDU patrol cap."
+	icon_state = "cap_desert"
 
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
 	icon_state = "cap_operations"
-	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper USCM expedition cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet. This one comes with flaps to keep the sun off your neck."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap"
-	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
@@ -430,8 +434,6 @@
 	desc = "A dark blue patrol cap."
 	icon_state = "corrections"
 	item_state = "corrections"
-	flags_marine_hat = HAT_GARB_OVERLAY
-	flags_atom = FPRINT|NO_SNOW_TYPE
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\

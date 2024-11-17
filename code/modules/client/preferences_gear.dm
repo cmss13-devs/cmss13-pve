@@ -239,50 +239,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/beret_green
-	display_name = "USCM beret, green"
-	path = /obj/item/clothing/head/beret/cm/green
-
-/datum/gear/headwear/uscm/beret_tan
-	display_name = "USCM beret, tan"
-	path = /obj/item/clothing/head/beret/cm/tan
-
-/datum/gear/headwear/uscm/beret_black
-	display_name = "USCM beret, black"
-	path = /obj/item/clothing/head/beret/cm/black
-
-/datum/gear/headwear/uscm/beret_white
-	display_name = "USCM beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
-/datum/gear/headwear/uscm/beret_alpha
-	display_name = "USCM beret, red flash"
-	path = /obj/item/clothing/head/beret/cm/alpha
-
-/datum/gear/headwear/uscm/beret_bravo
-	display_name = "USCM beret, yellow flash"
-	path = /obj/item/clothing/head/beret/cm/bravo
-
-/datum/gear/headwear/uscm/beret_charlie
-	display_name = "USCM beret, purple flash"
-	path = /obj/item/clothing/head/beret/cm/charlie
-
-/datum/gear/headwear/uscm/beret_delta
-	display_name = "USCM beret, blue flash"
-	path = /obj/item/clothing/head/beret/cm/delta
-
-/datum/gear/headwear/uscm/beret_echo
-	display_name = "USCM beret, green flash"
-	path = /obj/item/clothing/head/beret/cm/echo
-
-/datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "USCM beret, brown flash"
-	path = /obj/item/clothing/head/beret/cm/foxtrot
-
-/datum/gear/headwear/uscm/beret_intel
-	display_name = "USCM beret, black flash"
-	path = /obj/item/clothing/head/beret/cm/intel
-
 /datum/gear/headwear/uscm/boonie_olive
 	display_name = "USCM boonie hat, olive"
 	path = /obj/item/clothing/head/cmcap/boonie
@@ -292,12 +248,16 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
 /datum/gear/headwear/uscm/cap
-	display_name = "USCM cap"
+	display_name = "USCM cap, jungle"
 	path = /obj/item/clothing/head/cmcap
 
-/datum/gear/headwear/uscm/cap_khaki
-	display_name = "USCM cap, khaki"
+/datum/gear/headwear/uscm/cap_desert
+	display_name = "USCM cap, desert"
 	path = /obj/item/clothing/head/cmcap/khaki
+
+/datum/gear/headwear/uscm/cap_snow
+	display_name = "USCM cap, snow"
+	path = /obj/item/clothing/head/cmcap/snow
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
