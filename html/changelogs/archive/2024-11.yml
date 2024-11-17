@@ -54,3 +54,9 @@
   - imageadd: Helmet garb adjusted to account for M10 helmet cameras
   - imageadd: New, wide variants of helmet garb for UPP style helmets
   - imagedel: Deletes the padded, carrier, and skull armors due to unneeded redundancy
+2024-11-15:
+  Max-023:
+  - bugfix: Recon webbing now has the NO_SNOW_TYPE flag
+2024-11-16:
+  BonniePandora:
+  - bugfix: Hummingbird pistol and ammo now spawn in the loadout weapon case
