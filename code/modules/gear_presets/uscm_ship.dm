@@ -955,8 +955,6 @@
 	name = "USCM Dropship Crew Chief (DCC)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-	utility_under = list(/obj/item/clothing/under/marine/officer/pilot/dcc)
-
 /datum/equipment_preset/uscm_ship/dcc/full/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
