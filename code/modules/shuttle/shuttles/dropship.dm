@@ -295,7 +295,9 @@
 					M.apply_effect(16, WEAKEN)
 					M.throw_random_direction(2, spin = TRUE)
 					M.apply_armoured_damage(60, ARMOR_MELEE, BRUTE, rand_zone())
-					M.buckled = TRUE // why? stops the damage from recurring when flung to another tile
+					M.buckled = 2 // why? stops the damage from recurring when flung to another tile
+				if(M.buckled == 2)
+					M.buckled = null
 			for(var/obj/item/I in internal_turf)
 				I.visible_message(SPAN_DANGER("[I] goes flying upwards!"))
 				I.throw_random_direction(2, spin = TRUE)
