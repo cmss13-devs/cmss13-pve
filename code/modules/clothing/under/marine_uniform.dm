@@ -445,12 +445,11 @@
 //=========================//Marine Raiders\\================================\\
 
 /obj/item/clothing/under/marine/veteran/marsoc
-	name = "SOF Uniform"
-	desc = "MARSOC standard uniform, in a dark camouflage pattern. Venlar liners provide slight protection from ballistics or blades."
+	name = "black uniform"
+	desc = "Black BDU utilized by USCM forces on night operations."
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	icon_state = "marsoc"
-	worn_state = "marsoc"
-	specialty = "sof uniform"
+	icon_state = "marsoc_jumpsuit"
+	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE
 
 //=========================//PMC\\================================\\
