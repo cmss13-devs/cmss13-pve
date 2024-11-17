@@ -1305,3 +1305,14 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 		if(2)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+
+/datum/equipment_preset/proc/add_uscm_cover(mob/living/carbon/human/new_human)
+	var/random_cover = rand(1,5)
+	switch(random_cover)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/camocover, WEAR_IN_HELMET)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/netting, WEAR_IN_HELMET)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
+

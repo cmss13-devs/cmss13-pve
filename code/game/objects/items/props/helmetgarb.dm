@@ -53,13 +53,17 @@
 	icon_state = "raincover"
 
 /obj/item/prop/helmetgarb/camocover
-	name = "camocover"
+	name = "jungle helmet cover"
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
 	icon_state = "camocover"
 
-/obj/item/prop/helmetgarb/camocover/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/prop/helmetgarb/camocover)
+/obj/item/prop/helmetgarb/camocover/snow
+	name = "snow helmet cover"
+	icon_state = "s_camocover"
+
+/obj/item/prop/helmetgarb/camocover/desert
+	name = "desert helmet cover"
+	icon_state = "d_camocover"
 
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"

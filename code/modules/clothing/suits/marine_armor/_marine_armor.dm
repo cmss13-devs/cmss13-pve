@@ -930,8 +930,8 @@
 
 /obj/item/clothing/suit/marine/rto/forecon
 	name = "\improper M3-R pattern recon armor"
-	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued exclusively to FORECON units."
-	icon_state = "L1"
+	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued mostly to recon units."
+	icon_state = "4"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)

@@ -973,7 +973,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM. Whether you're facing a crime syndicate or a mutiny, this bucket will keep your brains intact."
 	icon_state = "mp_helmet"
 	item_state = "mp_helmet"
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	specialty = "M10 pattern military police"
 	built_in_visors = list(new /obj/item/device/helmet_visor)
 	flags_atom = NO_SNOW_TYPE
