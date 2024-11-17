@@ -17708,7 +17708,7 @@
 /area/lv624/ground/river/east_river)
 "wWs" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/loadout/clf,
+/obj/item/storage/box/loadout/CLF_loadout,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "wXg" = (
