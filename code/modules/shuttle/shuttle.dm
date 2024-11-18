@@ -627,14 +627,14 @@
 	var/obj/docking_port/stationary/S = get_docked()
 	S?.on_dock_ignition(src)
 	if(ignition_sound)
-		playsound(return_center_turf(), ignition_sound, 60, 0, SOUND_CHANNEL_DROPSHIP, falloff=4)
+		playsound(return_center_turf(), ignition_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
 	return
 
 /obj/docking_port/mobile/proc/on_prearrival()
 	if(destination)
 		destination.on_prearrival(src)
 	if(!istype(src, /obj/docking_port/mobile/marine_dropship))
-		playsound(return_center_turf(), landing_sound, 60, 0, SOUND_CHANNEL_DROPSHIP)
+		playsound(return_center_turf(), landing_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
 	return
 
 /obj/docking_port/mobile/proc/on_crash()

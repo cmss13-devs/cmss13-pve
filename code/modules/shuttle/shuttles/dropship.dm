@@ -284,36 +284,59 @@
 	ai_silent_announcement("Dropship '[name]' departing.")
 
 /obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
+	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
+	var/list/affected_mobs = list()
+	var/list/affected_items = list()
 	for(var/area/internal_area in shuttle_areas)
 		for(var/turf/internal_turf in internal_area)
 			for(var/mob/living/M in internal_turf)
-				to_chat(M, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
-				shake_camera(M, 6 SECONDS, 1)
-				shake_camera(M, 16 SECONDS, 1)
-				if(!M.buckled)
-					M.visible_message(SPAN_DANGER("[M] loses their grip on the floor, flying violenty upwards!"), SPAN_DANGER("You lose your grip on the floor, flying violenty upwards!"))
-					M.apply_effect(16, WEAKEN)
-					M.throw_random_direction(2, spin = TRUE)
-					M.apply_armoured_damage(60, ARMOR_MELEE, BRUTE, rand_zone())
-					M.buckled = 2 // why? stops the damage from recurring when flung to another tile
-				if(M.buckled == 2)
-					M.buckled = null
+				affected_mobs += M
 			for(var/obj/item/I in internal_turf)
-				I.visible_message(SPAN_DANGER("[I] goes flying upwards!"))
-				I.throw_random_direction(2, spin = TRUE)
+				affected_items += I
+
+	for(var/mob/living/affected_mob in affected_mobs)
+		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
+		shake_camera(affected_mob, 6 SECONDS, 1)
+		shake_camera(affected_mob, 16 SECONDS, 1)
+		if(!affected_mob.buckled)
+			affected_mob.apply_effect(16, WEAKEN)
+			affected_mob.throw_random_direction(2, spin = TRUE)
+			affected_mob.apply_armoured_damage(60, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.visible_message(SPAN_DANGER("[affected_mob] loses their grip on the floor, flying violenty upwards!"), SPAN_DANGER("You lose your grip on the floor, flying violenty upwards!"))
+
+	for(var/obj/item/affected_item in affected_items)
+		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
+		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+		affected_item.throw_random_direction(2, spin = TRUE)
+		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
 
 /obj/docking_port/mobile/marine_dropship/proc/turbulence()
 	if(!in_flight())
 		return
 
+	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
+	var/list/affected_mobs = list()
+	var/list/affected_items = list()
 	for(var/area/internal_area in shuttle_areas)
 		for(var/turf/internal_turf in internal_area)
 			for(var/mob/living/M in internal_turf)
-				to_chat(M, SPAN_DANGER("The dropship jolts violently!"))
-				shake_camera(M, DROPSHIP_TURBULENCE_PERIOD, 1)
+				affected_mobs += M
 			for(var/obj/item/I in internal_turf)
-				I.visible_message(SPAN_DANGER("[I] goes flying upwards!"))
-				I.throw_random_direction(2, spin = TRUE)
+				affected_items += I
+
+	for(var/mob/living/affected_mob in affected_mobs)
+		affected_mob.visible_message(SPAN_DANGER("The dropship jolts violently!"))
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
+		if(!affected_mob.buckled && prob(25))
+			affected_mob.visible_message(SPAN_DANGER("You lose your grip!"))
+			affected_mob.apply_armoured_damage(25, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.apply_effect(DROPSHIP_TURBULENCE_PERIOD, WEAKEN)
+
+	for(var/obj/item/affected_item in affected_items)
+		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
+		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+		affected_item.throw_random_direction(2, spin = TRUE)
+		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
 
 	var/flight_time_left = timeLeft(1)
 	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2)

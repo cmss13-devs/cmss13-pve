@@ -232,6 +232,7 @@
 //Turbulence for dropships
 #define DROPSHIP_TURBULENCE_START_PERIOD 10 SECONDS
 #define DROPSHIP_TURBULENCE_PERIOD 5 SECONDS
+#define DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER 4
 
 //=================================================
 #define HOSTILE_STANCE_IDLE 1

@@ -323,6 +323,14 @@
 	clone.name = name
 	clone.mouse_opacity = clone.proj_mouse_opacity
 
+	for(var/atom/overlay in clone.overlays)
+		if(!istype(overlay, /atom))
+			// we can't handle it so get rid of it
+			clone.overlays -= overlay
+			continue
+		overlay.layer = clone.proj_base_layer ? (clone.proj_base_layer+(overlay.layer/10)) : overlay.layer
+		overlay.plane = clone.proj_plane
+
 	////////////////////
 	if(light) //Clone lighting
 		if(!clone.light)
