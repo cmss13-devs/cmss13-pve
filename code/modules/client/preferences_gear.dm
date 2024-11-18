@@ -1191,3 +1191,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Marine Service Jacket"
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3
+
+/datum/gear/misc/shorts
+	display_name = "USCM PT Shorts"
+	path = /obj/item/clothing/under/shorts/red/uscm
+	cost = 1
