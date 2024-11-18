@@ -183,7 +183,6 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(2, SUPERSLOW)
 		target.apply_effect(3, SLOW)
 		to_chat(target, SPAN_XENODANGER("You are slowed by the sudden impact!"))
 	else
