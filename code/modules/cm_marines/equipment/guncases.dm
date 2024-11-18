@@ -237,8 +237,8 @@
 	name = "\improper Ithaca 37 pump-action shotgun case"
 	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun, a box of 12 gauge buckshot, and a box of 12 gauge slugs."
 	icon_state = "matebacase"
-	storage_slots = 3
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/storage/large_holster/m37, /obj/item/attachable/stock/shotgun, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
 
 /obj/item/storage/box/guncase/shotgunpump/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)

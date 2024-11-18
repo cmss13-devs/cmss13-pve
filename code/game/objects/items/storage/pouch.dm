@@ -298,6 +298,9 @@
 		underlays -= gun_underlay
 		gun_underlay = null
 
+/obj/item/storage/pouch/pistol/alt
+		icon_state = "pistol_alt"
+
 ///CO pouch. This pouch can hold only 1 of each type of item: 1 sidearm, 1 pair of binoculars, 1 CO tablet
 /obj/item/storage/pouch/pistol/command
 	name = "command pouch"
@@ -459,7 +462,7 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
-/obj/item/storage/pouch/magazine/pistol/pmc_mod88/fill_preset_inventory()
+/obj/item/storage/pouch/magazine/pistol/pmc_vp70/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp70(src)
 
@@ -824,6 +827,14 @@
 	)
 	can_hold_skill_only = TRUE
 
+/obj/item/storage/pouch/engikit/full/fill_preset_inventory()
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/circuitboard/apc(src)
+
 /obj/item/storage/pouch/medkit
 	name = "medical kit pouch"
 	storage_flags = STORAGE_FLAGS_POUCH
@@ -1186,6 +1197,7 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/stack/tile,
 		/obj/item/tool/shovel/etool,
+		/obj/item/stack/sandbags,
 		/obj/item/stack/sandbags_empty,
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/gun/smg/nailgun/compact,
@@ -1396,7 +1408,7 @@
 	var/base_icon_state = "cassette_pouch"
 	w_class = SIZE_SMALL
 	can_hold = list(/obj/item/device/cassette_tape, /obj/item/tape/regulation)
-	storage_slots = 3
+	storage_slots = 5
 
 /obj/item/storage/pouch/cassette/update_icon()
 	underlays.Cut()
@@ -1450,3 +1462,12 @@
 
 /obj/item/storage/pouch/machete/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
+
+/obj/item/storage/pouch/etool
+	name = "Type 50 entrenching tool pouch"
+	desc = "A pouch designed to carry the Type 50 entrenching tool. Sadly, not good for much else."
+	icon_state = "entrench"
+	max_w_class = SIZE_SMALL
+	can_hold = /obj/item/tool/shovel/etool
+	storage_slots = null
+	max_storage_space = 2

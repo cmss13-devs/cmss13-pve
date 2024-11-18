@@ -409,6 +409,10 @@
 	icon = 'icons/obj/structures/doors/securedoor.dmi'
 	req_access = list(ACCESS_MARINE_COMMAND)
 
+/obj/structure/machinery/door/airlock/almayer/secure/glass
+	name = "\improper Secure Airlock"
+	icon = 'icons/obj/structures/doors/securedoor_glass.dmi'
+
 /obj/structure/machinery/door/airlock/almayer/secure/colony
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
@@ -494,6 +498,12 @@
 	icon = 'icons/obj/structures/doors/medidoor.dmi'
 	req_access = list()
 	req_one_access = list(ACCESS_MARINE_MEDBAY, ACCESS_MARINE_COMMAND)
+
+/obj/structure/machinery/door/airlock/almayer/medical/plain
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/medidoor_plain.dmi'
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_PUBLIC)
 
 /obj/structure/machinery/door/airlock/almayer/medical/colony
 	req_access = null
