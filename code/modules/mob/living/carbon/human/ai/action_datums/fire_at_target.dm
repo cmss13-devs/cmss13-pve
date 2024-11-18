@@ -118,7 +118,6 @@
 		qdel(src)
 		return
 
-	var/mob/living/current_target = brain.current_target
 	var/turf/target_turf = brain.target_turf
 
 	var/mob/living/carbon/tied_human = brain.tied_human
@@ -134,18 +133,18 @@
 		currently_firing = FALSE
 		var/obj/item/weapon/gun/shotgun/pump/shotgun = primary_weapon
 		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
-		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
+		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
 /* Basira doesn't need cocking???
 	else if(istype(primary_weapon, /obj/item/weapon/gun/boltaction))
 		var/obj/item/weapon/gun/boltaction/bolt = primary_weapon
 		currently_firing = FALSE
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), 1)
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), bolt.bolt_delay + 1)
-		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
+		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, brain.current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
 */
 	else if(primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
 		currently_firing = FALSE
-		addtimer(CALLBACK(primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, current_target, null, null, null, TRUE), primary_weapon.get_fire_delay())
+		addtimer(CALLBACK(primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), primary_weapon.get_fire_delay())
 
 	else if(primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
 		rounds_burst_fired++
@@ -159,20 +158,21 @@
 		return
 
 	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen))
-	var/shoot_next = current_target
+	var/shoot_next = brain.current_target
 
-	if(QDELETED(current_target))
+	if(QDELETED(brain.current_target))
 		if(!should_fire_offscreen)
 			qdel(src)
 			return
 		shoot_next = target_turf
 
-	else if(ismob(current_target))
-		if(current_target.stat == DEAD)
+	else if(ismob(brain.current_target))
+		var/mob/current_mob_target = brain.current_target
+		if(ccurrent_mob_targett.stat == DEAD)
 			qdel(src)
 			return
 
-		var/is_unconscious = (current_target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in current_target.effects_list))
+		var/is_unconscious = (current_mob_target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in current_mob_target.effects_list))
 		if(!brain.shoot_to_kill && is_unconscious)
 			brain.lose_target()
 			qdel(src)
@@ -188,7 +188,7 @@
 		qdel(src)
 		return
 
-	if(current_target && (get_dist(tied_human, current_target) <= 1))
+	if(brain.current_target && (get_dist(tied_human, brain.current_target) <= 1))
 		currently_firing = FALSE
 		return
 

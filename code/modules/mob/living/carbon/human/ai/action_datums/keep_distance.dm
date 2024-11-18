@@ -44,31 +44,36 @@
 	return approach() || back_up() || ONGOING_ACTION_COMPLETED
 
 /datum/ai_action/keep_distance/proc/approach()
-	var/mob/living/current_target = brain.current_target
-
 	var/range
-	if(current_target.is_mob_incapacitated())
-		range = brain.gun_data.minimum_range
+	if(ismob(brain.current_target))
+		var/mob/current_mob_target = brain.current_target
+		if(current_mob_target.is_mob_incapacitated())
+			range = brain.gun_data.minimum_range
+		else
+			range = brain.gun_data.optimal_range
 	else
 		range = brain.gun_data.optimal_range
 
-	if(get_dist(brain.tied_human, current_target) <= range)
+	if(get_dist(brain.tied_human, brain.current_target) <= range)
 		return
 
 	if(brain.in_cover)
 		return ONGOING_ACTION_UNFINISHED
 
-	if(!brain.move_to_next_turf(get_turf(current_target)))
+	if(!brain.move_to_next_turf(get_turf(brain.current_target)))
 		return ONGOING_ACTION_COMPLETED
 
 	return ONGOING_ACTION_UNFINISHED
 
 /datum/ai_action/keep_distance/proc/back_up()
 	var/mob/living/carbon/human/tied_human = brain.tied_human
-	var/mob/living/current_target = brain.current_target
-
 	var/range
-	if(brain.in_cover || current_target.is_mob_incapacitated())
+	var/is_incap = FALSE
+	if(ismob(current_target))
+		var/mob/current_mob_target = current_target
+		is_incap = current_mob_target.is_mob_incapacitated()
+		
+	if(brain.in_cover || is_incap)
 		range = brain.gun_data.minimum_range
 	else
 		range = brain.gun_data.optimal_range
