@@ -238,7 +238,7 @@
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/pistol/clfpistol, /obj/item/ammo_magazine/pistol/clfpistol)
 
-/obj/item/storage/box/loadout/clf/fill_preset_inventory()
+/obj/item/storage/box/loadout/CLF_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/clfpistol())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
