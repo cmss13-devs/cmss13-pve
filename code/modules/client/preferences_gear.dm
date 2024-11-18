@@ -1187,9 +1187,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 	path = /obj/item/clothing/accessory/flak/od
 
-/datum/gear/misc/servicejacket
-	display_name = "Marine Service Jacket"
-	path = /obj/item/clothing/suit/storage/jacket/marine/service
+/datum/gear/misc/windbreaker_green
+	display_name = "Windbreaker, Green"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_green
+	cost = 3
+
+/datum/gear/misc/windbreaker_khaki
+	display_name = "Windbreaker, Brown"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown
+	cost = 3
+
+/datum/gear/misc/windbreaker_blue
+	display_name = "Windbreaker, Blue"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
 	cost = 3
 
 /datum/gear/misc/shorts
