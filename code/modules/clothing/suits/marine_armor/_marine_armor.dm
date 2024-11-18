@@ -109,11 +109,7 @@
 /obj/item/clothing/suit/storage/marine/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
-		name = "[specialty]"
-		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-			name += " snow armor" //Leave marine out so that armors don't have to have "Marine" appended (see: generals).
-		else
-			name += " armor"
+		name = "[specialty] armor"
 
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type)
@@ -729,11 +725,7 @@
 /obj/item/clothing/suit/marine/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
-		name = "[specialty]"
-		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-			name += " snow armor" //Leave marine out so that armors don't have to have "Marine" appended (see: generals).
-		else
-			name += " armor"
+		name = "[specialty] armor"
 
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type)

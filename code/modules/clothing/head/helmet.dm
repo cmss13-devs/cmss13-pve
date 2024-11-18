@@ -428,11 +428,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT))
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
-		name = "[specialty]"
-		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-			name += " snow helmet"
-		else
-			name += " helmet"
+		name = "[specialty] helmet"
 
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type, null, new_protection)
@@ -919,10 +915,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/M3T
 	name = "\improper M10-R bombardier helmet"
 	icon_state = "sadar_helmet"
-	desc = "M10 combat helmet fitted with enhanced suspension liner and improved hearing protection, for firing high-concussion weapons like the M5 RPG."
+	desc = "M10 combat helmet fitted with enhanced suspension liner and improved hearing protection, for firing high-concussion weapons like the M5 RPG. Also issued to Vehicle Crewmen."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	armor_bomb = CLOTHING_ARMOR_HIGH
-	specialty = "M3-T bombardier"
+	specialty = "M3-R bombardier"
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	unacidable = TRUE

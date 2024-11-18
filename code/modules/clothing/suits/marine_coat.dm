@@ -19,7 +19,6 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
-	flags_atom = NO_SNOW_TYPE
 	allowed = list(
 		/obj/item/weapon/gun/,
 		/obj/item/storage/fancy/cigarettes,
@@ -69,9 +68,6 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/Initialize()
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-		initial_icon_state = icon_state
 	if(has_buttons)
 		verbs += /obj/item/clothing/suit/storage/jacket/marine/proc/toggle
 
@@ -80,6 +76,7 @@
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
 	has_buttons = TRUE
+	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot

@@ -27,7 +27,7 @@
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	var/skill_locked = TRUE
+	var/skill_locked = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
 	. = ..()

@@ -1200,6 +1200,17 @@
 		/obj/item/ammo_magazine/smg/m39,
 	)
 
+//Partial Pre-load For Props
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/mk1
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/mk1
+
+/obj/item/storage/internal/accessory/webbing/m3mag/mk1/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+//===
+
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
 	name = "\improper M3 Pattern Shell Webbing"
 	desc = "A slightly modified variant of the M3 Pattern grenade webbing, fitted for 12 gauge shotgun shells."
@@ -1250,6 +1261,17 @@
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
 
+//Partial Pre-load For Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
+
+/obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+//===
+
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
 	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
@@ -1297,8 +1319,20 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+//Partial Pre-load For Props
+
+/obj/item/clothing/accessory/storage/webbing/m56/preset
+	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
+
 /obj/item/storage/internal/accessory/black_vest/m56
 	storage_slots = 3
+
+/obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m56/grenade
 	name = "\improper Clip-on Grenade Band"
