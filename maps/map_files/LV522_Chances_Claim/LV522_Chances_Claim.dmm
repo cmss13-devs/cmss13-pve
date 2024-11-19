@@ -42102,11 +42102,11 @@
 /turf/open/floor/prison/blue/southeast,
 /area/lv522/indoors/a_block/hallway)
 "tNg" = (
+/obj/structure/closet/crate/ammo,
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/obj/structure/closet/crate/ammo,
-/obj/item/ammo_magazine/rifle/lmg/holo_target,
+/obj/item/ammo_magazine/hpr_box,
 /obj/item/weapon/gun/rifle/lmg{
 	current_mag = null
 	},
