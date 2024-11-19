@@ -2,6 +2,29 @@
 	name = "prop"
 	desc = "Some kind of prop."
 
+/// A prop that acts as a replacement for another item, mimicking their looks.
+/// Mainly used in Reqs Tutorial to provide the full item selections without side effects.
+/obj/item/prop/replacer
+	/// The type that this object is taking the place of
+	var/original_type
+
+/obj/item/prop/replacer/Initialize(mapload, obj/original_type)
+	if(!original_type)
+		return INITIALIZE_HINT_QDEL
+	. = ..()
+	src.original_type = original_type
+	var/obj/created_type = new original_type // Instancing this for the sake of assigning its appearance to the prop and nothing else
+	name = initial(original_type.name)
+	icon = initial(original_type.icon)
+	icon_state = initial(original_type.icon_state)
+	desc = initial(original_type.desc)
+	if(ispath(original_type, /obj/item))
+		var/obj/item/item_type = original_type
+		item_state = initial(item_type.item_state)
+
+	appearance = created_type.appearance
+	qdel(created_type)
+
 /obj/item/prop/laz_top
 	name = "lazertop"
 	icon = 'icons/obj/structures/props/server_equipment.dmi'
@@ -146,6 +169,18 @@
 	icon_state = "game_kit"
 	icon = 'icons/obj/items/items.dmi'
 
+/obj/item/prop/gripper
+	name = "magnetic gripper"
+	desc = "A simple grasping tool for synthetic assets."
+	icon_state = "gripper"
+	icon = 'icons/obj/items/devices.dmi'
+
+/obj/item/prop/matter_decompiler
+	name = "matter decompiler"
+	desc = "Eating trash, bits of glass, or other debris will replenish your stores."
+	icon_state = "decompiler"
+	icon = 'icons/obj/items/devices.dmi'
+
 /// Xeno-specific props
 
 /obj/item/prop/alien/hugger
@@ -220,7 +255,7 @@
 	icon_state = "poster15"
 	throw_speed = SPEED_FAST
 	throw_range = 5
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_TINY
 	attack_verb = list("bashed", "whacked", "educated")
 	pickup_sound = "sound/handling/book_pickup.ogg"
 	drop_sound = "sound/handling/book_pickup.ogg"
@@ -242,10 +277,10 @@
 
 //books
 /obj/item/prop/magazine/book
-	name = "generic prop book"
-	desc = "some generic hardcover book, probably sucked"
+	name = "book"
+	desc = "A generic hardcore novel. Really boring. Probably. Too bored to read."
 	icon = 'icons/obj/items/books.dmi'
-	icon_state = "bookSpaceLaw"
+	icon_state = "book_blue"
 
 /obj/item/prop/magazine/book/spacebeast
 	name = "\improper Space Beast, by Robert Morse"
@@ -266,6 +301,28 @@
 /obj/item/prop/magazine/book/theartofwar
 	name = "The Art of War"
 	desc = "A treatise on war written by Sun Tzu a great general, strategist, and philosopher from ancient Earth. This book is on the Commandant of the United States Colonial Marine Corps reading list and most officers can be found in possession of a copy. Most officers who've read it claim to know a little bit more about fighting than most enlisted but results may vary. "
+
+/obj/item/prop/magazine/book/uppbooklet
+	name = "UPP Party Doctrine Booklet"
+	desc = "A booklet provided to every single citizen of the Union of Progressive Peoples. The first page is stamped with the Party's insignia followed by a emphatic dedication to the working class; past, present, and future. Aside from being an easily digestible summary of the collective ideology of the Union, the booklet provides you with an outline of the Union's history and a good chunk is dedicated to listing and summarizing each of the Union's many member states."
+	icon_state = "book_upp"
+
+/obj/item/prop/magazine/book/warisaracket
+	name = "War is a Racket"
+	desc = "A book critical of the United States Marine Corps by Marine Corps legend, Major General Smedley Butler. In short, the book outlines the function which the historical Marine Corps had in establishing and enforcing American global hegemony. Good thing its critiques have no contemporary application. Right?"
+
+/obj/item/prop/magazine/book/littleredbook
+	name = "Quotations from Chairman Mao Tse-tung"
+	desc = "A tiny red book that fits in the palm of your hand. While not required reading, it provides the reader with easy access to- as the name implies- Quotations from Chairman Mao Tse-tung."
+	icon_state = "littleredbook"
+
+/obj/item/prop/magazine/book/communistmanifesto
+	name = "Communist Manifesto"
+	desc = "The bare minimum in communist reading."
+
+/obj/item/prop/magazine/book/inframaterialism
+	name = "A Brief Look at Infra-Materialism"
+	desc = "A concise introduction to the esoteric communist theory of infra-materialism by Ignus Nilsen."
 
 //boots magazine
 /obj/item/prop/magazine/boots
@@ -310,3 +367,13 @@
 	desc = "The most ancient of tools."
 	w_class = SIZE_TINY
 	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/prop/deviltrap
+	name = "devil trap"
+	icon = 'icons/obj/items/misc.dmi'
+	icon_state = "deviltrap"
+	item_state = ""
+	force = 0.5
+	throwforce = 0.5
+	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
+	w_class = SIZE_LARGE

@@ -15,8 +15,9 @@
 	cant_hold = list(/obj/item/storage/firstaid, /obj/item/storage/toolkit)
 	can_hold_skill = list(
 		/obj/item/storage/firstaid = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_ENGI),
+		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
 		)
+	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
 	var/obj/item/card/id/locking_id = null
 	var/is_id_lockable = FALSE
@@ -124,6 +125,9 @@
 	..()
 
 /obj/item/storage/backpack/proc/is_accessible_by(mob/user)
+	// If the user is already looking inside this backpack.
+	if(user.s_active == src)
+		return TRUE
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(!worn_accessible)
@@ -150,7 +154,7 @@
 
 //Returns true if the user's id matches the lock's
 /obj/item/storage/backpack/proc/compare_id(mob/living/carbon/human/H)
-	var/obj/item/card/id/card = H.wear_id
+	var/obj/item/card/id/card = H.get_idcard()
 	if(!card || locking_id.registered_name != card.registered_name)
 		return FALSE
 	else return TRUE
@@ -264,6 +268,7 @@
 	return TRUE
 
 /datum/action/item_action/specialist/santabag/action_activate()
+	. = ..()
 	var/obj/item/storage/backpack/santabag/santa_bag = holder_item
 	santa_bag.refill_santa_bag(owner)
 	update_button_icon()
@@ -357,6 +362,12 @@
 /obj/item/storage/backpack/satchel/lockable/liaison
 	lock_overridable = FALSE
 
+/obj/item/storage/backpack/satchel/blue
+	icon_state = "satchel_blue"
+
+/obj/item/storage/backpack/satchel/black
+	icon_state = "satchel_black"
+
 /obj/item/storage/backpack/satchel/norm
 	name = "satchel"
 	desc = "A trendy-looking satchel."
@@ -407,7 +418,7 @@
 
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
-	desc = "The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield."
+	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
 	icon_state = "marinepack"
 	item_state = "marinepack"
 	has_gamemode_skin = TRUE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
@@ -476,6 +487,12 @@
 	icon_state = "marinebigsatch"
 	max_storage_space = 20
 
+/obj/item/storage/backpack/marine/satchel/intel/chestrig
+	name = "\improper USCM expedition chestrig"
+	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to USCM intelligence officers."
+	icon_state = "intel_chestrig"
+	max_storage_space = 20
+
 /obj/item/storage/backpack/marine/satchel
 	name = "\improper USCM satchel"
 	desc = "A heavy-duty satchel carried by some USCM soldiers and support personnel."
@@ -508,6 +525,14 @@
 	name = "\improper USCM technician chestrig"
 	desc = "A heavy-duty chestrig used by some USCM technicians."
 	icon_state = "marinesatch_techi"
+
+/obj/item/storage/backpack/marine/satchel/chestrig
+	name = "\improper USCM chestrig"
+	desc = "A chestrig used by some USCM personnel."
+	icon_state = "chestrig"
+	has_gamemode_skin = FALSE
+
+GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/rto)
 
 /obj/item/storage/backpack/marine/satchel/rto
 	name = "\improper USCM Radio Telephone Pack"
@@ -561,7 +586,6 @@
 	phone_category = PHONE_UPP_SOLDIER
 
 /obj/item/storage/backpack/marine/satchel/rto/io
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	phone_category = PHONE_IO
 
 /obj/item/storage/backpack/marine/smock
@@ -654,7 +678,8 @@
 	name = "\improper M68 Thermal Cloak"
 	desc = "The lightweight thermal dampeners and optical camouflage provided by this cloak are weaker than those found in standard USCM ghillie suits. In exchange, the cloak can be worn over combat armor and offers the wearer high maneuverability and adaptability to many environments."
 	icon_state = "scout_cloak"
-	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/M3S) //Need to wear Scout armor and helmet to equip this.
+	unacidable = TRUE
+	indestructible = TRUE
 	has_gamemode_skin = FALSE //same sprite for all gamemode.
 	var/camo_active = FALSE
 	var/camo_alpha = 10
@@ -714,9 +739,9 @@
 	H.FF_hit_evade = 1000
 	H.allow_gun_usage = allow_gun_usage
 
-	var/datum/mob_hud/security/advanced/SA = huds[MOB_HUD_SECURITY_ADVANCED]
+	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.remove_from_hud(H)
-	var/datum/mob_hud/xeno_infection/XI = huds[MOB_HUD_XENO_INFECTION]
+	var/datum/mob_hud/xeno_infection/XI = GLOB.huds[MOB_HUD_XENO_INFECTION]
 	XI.remove_from_hud(H)
 
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
@@ -753,9 +778,9 @@
 	H.alpha = initial(H.alpha)
 	H.FF_hit_evade = initial(H.FF_hit_evade)
 
-	var/datum/mob_hud/security/advanced/SA = huds[MOB_HUD_SECURITY_ADVANCED]
+	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.add_to_hud(H)
-	var/datum/mob_hud/xeno_infection/XI = huds[MOB_HUD_XENO_INFECTION]
+	var/datum/mob_hud/xeno_infection/XI = GLOB.huds[MOB_HUD_XENO_INFECTION]
 	XI.add_to_hud(H)
 
 	if(anim)
@@ -793,6 +818,7 @@
 		return TRUE
 
 /datum/action/item_action/specialist/toggle_cloak/action_activate()
+	. = ..()
 	var/obj/item/storage/backpack/marine/satchel/scout_cloak/SC = holder_item
 	SC.camouflage()
 
@@ -1069,7 +1095,6 @@
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
-	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP/commando) //Need to wear UPP commando armor to equip this.
 
 	max_storage_space = 21
 	camo_alpha = 10
@@ -1131,3 +1156,22 @@
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
 	max_storage_space = 15
+
+//----------USASF & ARMY SECTION----------
+
+/obj/item/storage/backpack/marine/satchel/rto/navy
+	name = "\improper USASF Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between orbiting warships and their forward observers."
+	networks_receive = list(FACTION_MARINE, FACTION_NAVY)
+	networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
+
+/obj/item/storage/backpack/marine/satchel/rto/army
+	name = "\improper US Army Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
+	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
+	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
+
+/obj/item/storage/backpack/marine/medic/army
+	name = "\improper Army combat medic backpack"
+	desc = "A standard-issue backpack worn by US Army medics."
+	has_gamemode_skin = FALSE

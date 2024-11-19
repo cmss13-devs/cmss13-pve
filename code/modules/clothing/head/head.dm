@@ -81,6 +81,9 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/green
+	icon_state = "beret_green"
+
 /obj/item/clothing/head/beret/cm/alpha
 	desc = "Often found atop heads, slightly less found on those still attached."
 	icon_state = "beret_alpha"
@@ -108,6 +111,16 @@
 /obj/item/clothing/head/beret/cm/intel
 	desc = "Looks more intellegent than the person wearing it."
 	icon_state = "beret_intel"
+
+/obj/item/clothing/head/beret/cm/white/civilian
+	name = "White Beret"
+	desc = "A nice fashionable beret, popular with executives."
+	icon_state = "s_beret"
+
+/obj/item/clothing/head/beret/cm/black/civilian
+	name = "Black Beret"
+	desc = "A nice fashionable beret, popular with executives."
+	icon_state = "beret_black"
 
 
 /obj/item/clothing/head/headband
@@ -185,6 +198,23 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/sulacocap
+	name = "\improper USS Golden Arrow Cap"
+	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
+	icon_state = "sulacocap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	var/helmet_overlays[]
+	var/flipped_cap = FALSE
+	var/list/flipping_message = list(
+		"flipped" = "You spin the hat backwards! You look like a tool.",
+		"unflipped" = "You spin the hat back forwards. That's better."
+		)
+	var/base_cap_icon
+	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "Service issue patrol cap with a retaining band. No protective qualities or tactical relay complex, but it's light and comfy."
@@ -256,7 +286,7 @@
 		/obj/item/reagent_container/food/snacks/vegetablepizzaslice = "pizza",
 		/obj/item/reagent_container/food/snacks/meatpizzaslice = "pizza",
 		/obj/item/reagent_container/food/snacks/packaged_burrito = HELMET_GARB_RELAY_ICON_STATE,
-			/obj/item/reagent_container/food/snacks/packaged_hdogs = HELMET_GARB_RELAY_ICON_STATE,
+		/obj/item/reagent_container/food/snacks/packaged_hdogs = HELMET_GARB_RELAY_ICON_STATE,
 		/obj/item/reagent_container/food/snacks/wrapped/chunk = "chunkbox",
 		/obj/item/reagent_container/food/snacks/donkpocket = "donkpocket",
 		/obj/item/reagent_container/food/snacks/wrapped/booniebars = "boonie-bars",
@@ -358,6 +388,47 @@
 		/obj/item/storage/pill_bottle/packet = "brutepack (bandages)"
 						)
 	var/storage_slots = 2
+						/obj/item/storage/fancy/cigarettes/emeraldgreen = "hat_cig_cig",
+						/obj/item/storage/fancy/cigarettes/kpack = "hat_cig_kpack",
+						/obj/item/storage/fancy/cigarettes/lucky_strikes = "hat_cig_ls",
+						/obj/item/storage/fancy/cigarettes/wypacket = "hat_cig_wypack",
+						/obj/item/storage/fancy/cigarettes/lady_finger = "hat_cig_lf",
+						/obj/item/storage/fancy/cigarettes/blackpack = "hat_cig_blackpack",
+						/obj/item/storage/fancy/cigarettes/arcturian_ace = "hat_cig_aapack",
+						/obj/item/tool/pen = "hat_pen_black",
+						/obj/item/tool/pen/blue = "hat_pen_blue",
+						/obj/item/tool/pen/red = "hat_pen_red",
+						/obj/item/clothing/glasses/welding = "welding-c",
+						/obj/item/clothing/glasses/mgoggles = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/black = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/black/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/orange = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/orange/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/v2 = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/v2/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/head/headband = "hat_headbandgreen",
+						/obj/item/clothing/head/headband/tan = "hat_headbandtan",
+						/obj/item/clothing/head/headband/red = "hat_headbandred",
+						/obj/item/clothing/head/headband/brown = "hat_headbandbrown",
+						/obj/item/clothing/head/headband/gray = "hat_headbandgray",
+						/obj/item/clothing/head/headband/alpha = "hat_headbandalpha",
+						/obj/item/clothing/head/headband/bravo = "hat_headbandbravo",
+						/obj/item/clothing/head/headband/charlie = "hat_headbandcharlie",
+						/obj/item/clothing/head/headband/delta = "hat_headbanddelta",
+						/obj/item/clothing/head/headband/echo = "hat_headbandecho",
+						/obj/item/clothing/head/headband/foxtrot = "hat_headbandfoxtrot",
+						/obj/item/clothing/head/headband/foxtrot = "hat_headbandintel",
+						/obj/item/prop/helmetgarb/lucky_feather = "lucky_feather",
+						/obj/item/prop/helmetgarb/lucky_feather/blue = "lucky_feather_blue",
+						/obj/item/prop/helmetgarb/lucky_feather/purple = "lucky_feather_purple",
+						/obj/item/prop/helmetgarb/lucky_feather/yellow = "lucky_feather_yellow",
+						/obj/item/tool/pen/fountain = "fountainpen",
+						)
+	var/storage_slots = 1
 	var/storage_slots_reserved_for_garb = 1
 	var/storage_max_w_class = SIZE_TINY
 	var/storage_max_storage_space = 4
@@ -489,9 +560,10 @@
 	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/bridge
-	name = "\improper USCM officer cap"
+	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
-	icon_state = "cap_officer"
+	icon_state = "command_cap"
+	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper USCM expedition cap"
@@ -503,10 +575,8 @@
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_flagcap"
-	item_state = "wc_flagcap"
-	contained_sprite = TRUE
+	icon_state = "cc_flagcap"
+	item_state = "cc_flagcap"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_hat = HAT_GARB_OVERLAY
 
@@ -567,6 +637,10 @@
 	name = "\improper USCM senior provost beret"
 	icon_state = "coblackberet"
 	desc = "A beret with the USCM Military Police insignia emblazoned on it."
+
+/obj/item/clothing/head/beret/marine/mp/provost/chief
+	name = "\improper USCM provost command beret"
+	icon_state = "pvciberet"
 
 /obj/item/clothing/head/beret/marine/mp/tis
 	name = "\improper UAAC-TIS Special Agent Beret"
@@ -655,6 +729,15 @@
 	name = "logistics officer beret"
 	desc = "A beret with the lieutenant insignia emblazoned on it. It inspires a feeling of respect."
 	icon_state = "beret_badge"
+
+/obj/item/clothing/head/beret/marine/ro
+	name = "\improper USCM quartermaster beret"
+	desc = "A beret with the sergeant insignia emblazoned on it. It symbolizes hard work and shady business."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "ro_beret"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
 
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\

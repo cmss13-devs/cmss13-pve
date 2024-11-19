@@ -8,11 +8,11 @@ you're looking back on the different shotgun projectiles available. In short of 
 one type of shotgun ammo, but I think it helps in referencing it. ~N
 */
 
-var/list/shotgun_boxes_12g = list(
+GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 	/obj/item/ammo_magazine/shotgun/buckshot,
 	/obj/item/ammo_magazine/shotgun/flechette,
 	/obj/item/ammo_magazine/shotgun/slugs
-	)
+	))
 
 /obj/item/ammo_magazine/shotgun
 	name = "box of shotgun slugs"
@@ -46,6 +46,14 @@ var/list/shotgun_boxes_12g = list(
 	default_ammo = /datum/ammo/bullet/shotgun/incendiary
 	handful_state = "incendiary_slug"
 
+/obj/item/ammo_magazine/shotgun/incendiarybuck
+	name = "box of incendiary buckshots"
+	desc = "A box filled with self-detonating buckshot incendiary shotgun rounds. 12 Gauge."
+	icon_state = "incendiarybuck"
+	item_state = "incendiarybuck"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/incendiary
+	handful_state = "incen_buckshot"
+
 /obj/item/ammo_magazine/shotgun/buckshot
 	name = "box of buckshot shells"
 	desc = "A box filled with buckshot spread shotgun shells. 12 Gauge."
@@ -70,11 +78,64 @@ var/list/shotgun_boxes_12g = list(
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 	handful_state = "beanbag_slug"
 
+/obj/item/ammo_magazine/shotgun/light/breaching
+	name = "box of breaching shells"
+	desc = "A box filled with breaching shotgun shells. 16 Gauge."
+	icon_state = "breaching"
+	item_state = "breaching"
+	max_rounds = 30 //6 handfuls of 6 shells, 12 rounds in a XM51 mag
+	transfer_handful_amount = 6
+	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	handful_state = "breaching_shell"
+	caliber = "16g"
+
+
 /obj/item/ammo_magazine/shotgun/buckshot/special
 	name = "box of buckshot shells, USCM special type"
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
 	icon_state = "special"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/shotgun/buckshot/heavy
+	name = "box of heavy buckshot shells"
+	desc = "A box filled with buckshot spread shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_buckshot"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/heavy
+	name = "box of heavy slug shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_slug"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath
+	name = "box of heavy dragonsbreath shells"
+	desc = "A box filled with slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_dragon"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/beanbag/heavy
+	name = "box of heavy beanbag shells"
+	desc = "A box filled with beanbag slug shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_beanbag"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
 //-------------------------------------------------------
 
 /*
@@ -89,34 +150,51 @@ also doesn't really matter. You can only reload them with handfuls.
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
 	max_rounds = 4
-	current_rounds = 0
+	current_rounds = 4
 	chamber_closed = 0
 
+/obj/item/ammo_magazine/internal/shotgun/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/unloaded
+	current_rounds = 0
+
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 2
+	current_rounds = 0
 	chamber_closed = 1 //Starts out with a closed tube.
 
 /obj/item/ammo_magazine/internal/shotgun/double/cane
 	default_ammo = /datum/ammo/bullet/revolver/marksman
 	max_rounds = 6
+	current_rounds = 6
 	caliber = ".44"
-
 /obj/item/ammo_magazine/internal/shotgun/double/mou53
 	default_ammo = /datum/ammo/bullet/shotgun/flechette
 	max_rounds = 3
 
 /obj/item/ammo_magazine/internal/shotgun/double/twobore //Van Bandolier's superheavy double-barreled hunting rifle.
 	caliber = "2 bore"
+	max_rounds = 2
+	current_rounds = 0
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
 
 /obj/item/ammo_magazine/internal/shotgun/combat
 	caliber = "12g"
 	max_rounds = 6
+	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
-	current_rounds = 6
+
+/obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/marsoc
 	caliber = "12g"
@@ -129,10 +207,30 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/type23
 	caliber = "8g"
 	max_rounds = 4
+	current_rounds = 4
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+
+/obj/item/ammo_magazine/internal/shotgun/type23/slug
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+
+/obj/item/ammo_magazine/internal/shotgun/type23/riot
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+
+/obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	max_rounds = 4
+	current_rounds = 4
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	default_ammo = /datum/ammo/bullet/shotgun/beanbag
+/obj/item/ammo_magazine/internal/shotgun/cmb/riot
+	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
@@ -143,21 +241,21 @@ also doesn't really matter. You can only reload them with handfuls.
 Handfuls of shotgun rounds. For spawning directly on mobs in roundstart, ERTs, etc
 */
 
-var/list/shotgun_handfuls_8g = list(
+GLOBAL_LIST_INIT(shotgun_handfuls_8g, list(
 	/obj/item/ammo_magazine/handful/shotgun/heavy/slug,
 	/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot,
 	/obj/item/ammo_magazine/handful/shotgun/heavy/flechette,
 	/obj/item/ammo_magazine/handful/shotgun/heavy/dragonsbreath
-	)
+	))
 
-var/list/shotgun_handfuls_12g = list(
+GLOBAL_LIST_INIT(shotgun_handfuls_12g, list(
 	/obj/item/ammo_magazine/handful/shotgun/slug,
 	/obj/item/ammo_magazine/handful/shotgun/buckshot,
 	/obj/item/ammo_magazine/handful/shotgun/flechette,
 	/obj/item/ammo_magazine/handful/shotgun/incendiary,
 	/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
 	/obj/item/ammo_magazine/handful/shotgun/beanbag
-	)
+	))
 
 /obj/item/ammo_magazine/handful/shotgun
 	name = "handful of shotgun slugs (12g)"
@@ -227,7 +325,6 @@ var/list/shotgun_handfuls_12g = list(
 	name = "handful of beanbag slugs (20g)"
 	caliber = "20g"
 
-
 /obj/item/ammo_magazine/handful/shotgun/heavy
 	name = "handful of heavy shotgun slugs (8g)"
 	icon_state = "heavy_slug_4"
@@ -270,6 +367,17 @@ var/list/shotgun_handfuls_12g = list(
 	icon_state = "heavy_beanbag_4"
 	handful_state = "heavy_beanbag"
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+
+/obj/item/ammo_magazine/handful/shotgun/light/breaching
+	name = "handful of breaching shells (16g)"
+	icon_state = "breaching_shell_6"
+	handful_state = "breaching_shell"
+	max_rounds = 6 //XM51 magazines are 12 rounds total, two handfuls should be enough to reload a mag
+	current_rounds = 6
+	transfer_handful_amount = 6
+	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	caliber = "16g"
+	gun_type = /obj/item/weapon/gun/rifle/xm51
 
 /obj/item/ammo_magazine/handful/shotgun/twobore
 	name = "handful of shotgun slugs (2 bore)"

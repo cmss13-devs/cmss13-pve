@@ -1,68 +1,76 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aO" = (
-/obj/effect/landmark/crap_item,
-/obj/item/reagent_container/glass/watertank,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"bd" = (
+"ak" = (
 /obj/item/stack/sheet/metal,
-/obj/item/explosive/mine/pmc/active{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/spawner/random/claymore/lowchance,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"bk" = (
-/obj/item/tool/extinguisher,
-/obj/effect/decal/cleanable/blood/tracks/footprints{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+"ax" = (
+/obj/structure/window_frame/colony,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"bm" = (
+"aR" = (
+/obj/item/reagent_container/glass/fertilizer{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/glass/fertilizer,
 /obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 1
+/obj/effect/spawner/random/claymore/midchance,
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"by" = (
+/obj/item/clothing/shoes/marine/civilian{
+	armor_bio = 15;
+	armor_bomb = 5;
+	armor_bullet = 15;
+	armor_energy = 5;
+	armor_internaldamage = 5;
+	armor_laser = 5;
+	armor_melee = 15;
+	desc = "The height of fashion, but these look to be woven with protective fiber. This pair seems heavily damaged, especially around the soles...";
+	name = "scuffed shoes";
+	pixel_x = -14;
+	pixel_y = -10;
+	slowdown = 0.5
 	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "bM" = (
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/colony/north_nexus_road)
+"bV" = (
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"ch" = (
+/obj/item/reagent_container/spray/plantbgone{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/effect/landmark/crap_item,
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/midchance{
+	dir = 1
+	},
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
 "ck" = (
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
-"cQ" = (
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
+"cM" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 2
 	},
+/obj/effect/spawner/gibspawner/human,
+/obj/item/clothing/under/marine/veteran/pmc{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
-"dZ" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/lowchance{
-	dir = 8
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"eU" = (
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
-/area/lv624/ground/colony/north_nexus_road)
-"fk" = (
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
-/area/lv624/ground/colony/south_medbay_road)
-"ft" = (
+"cX" = (
 /obj/item/clothing/gloves/marine/veteran/pmc{
 	armor_bio = 10;
 	armor_bomb = 10;
@@ -74,59 +82,51 @@
 	armor_rad = 10;
 	name = "damaged WY PMC gloves"
 	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"fX" = (
-/obj/item/device/analyzer/plant_analyzer,
-/obj/effect/spawner/random/claymore,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
+"cY" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
-"ih" = (
-/obj/item/clothing/gloves/botanic_leather,
-/obj/item/stack/sheet/metal,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"it" = (
-/obj/item/tool/hatchet{
-	pixel_x = 6;
-	pixel_y = 4
-	},
+"dl" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"eF" = (
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"eU" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
+/area/lv624/ground/colony/north_nexus_road)
+"fk" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
+/area/lv624/ground/colony/south_medbay_road)
+"fJ" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"hu" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/midchance{
+	dir = 1
 	},
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"hI" = (
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"iG" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"iZ" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
 "jg" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
-"jy" = (
-/obj/structure/machinery/portable_atmospherics/hydroponics,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"jY" = (
-/obj/item/reagent_container/spray/plantbgone{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/effect/landmark/crap_item,
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
 "kg" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor,
@@ -135,259 +135,11 @@
 /obj/structure/girder,
 /turf/open/floor,
 /area/lv624/lazarus/hydroponics)
-"km" = (
-/obj/effect/decal/cleanable/blood/tracks/footprints{
-	dir = 1
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"kD" = (
-/obj/item/reagent_container/glass/bucket,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"lm" = (
-/obj/item/stack/sheet/metal,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"lP" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"np" = (
-/obj/item/tool/weldingtool/simple,
-/obj/item/stack/sheet/wood,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"nJ" = (
-/obj/item/stack/sheet/metal,
-/turf/open/floor,
-/area/lv624/lazarus/hydroponics)
-"og" = (
-/turf/open/gm/dirt,
-/area/lv624/ground/colony/south_medbay_road)
-"ot" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"ou" = (
-/turf/open/gm/dirt,
-/area/lv624/ground/colony/north_nexus_road)
-"qe" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/lowchance{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"se" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/north,
-/area/lv624/ground/colony/south_medbay_road)
-"tK" = (
-/obj/structure/barricade/deployable{
-	damage_state = 3;
-	dir = 1;
-	health = 45;
-	icon_state = "folding_3"
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/smg/fp9000,
-/obj/item/clothing/under/marine/veteran/pmc/leader{
-	pixel_x = -7
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"vm" = (
-/obj/item/stack/sheet/wood{
-	amount = 16
-	},
-/obj/item/ammo_magazine/rifle/nsg23{
-	current_rounds = 13
-	},
-/obj/effect/spawner/gibspawner/human,
-/obj/item/clothing/head/helmet/marine/veteran/pmc{
-	pixel_x = -6;
-	pixel_y = 8
-	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"xa" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/ammo_magazine/rifle/nsg23{
-	current_rounds = 2
-	},
-/obj/effect/spawner/gibspawner/human,
-/obj/item/clothing/under/marine/veteran/pmc{
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"xm" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/lowchance,
-/turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"xF" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/clothing/under/marine/veteran/pmc{
-	pixel_x = -7;
-	pixel_y = 9
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"xM" = (
-/obj/structure/surface/rack,
-/obj/item/tool/crowbar,
-/obj/item/reagent_container/glass/bucket{
-	pixel_y = -3
-	},
-/obj/item/reagent_container/glass/bucket,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"ym" = (
-/obj/item/tool/crowbar,
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"zj" = (
-/obj/item/stack/folding_barricade,
-/obj/item/ammo_magazine/rifle/nsg23{
-	current_rounds = 17
-	},
-/obj/effect/spawner/gibspawner/human,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"zL" = (
+"kk" = (
 /obj/structure/girder,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"zS" = (
-/obj/structure/window_frame/colony,
-/obj/item/shard,
-/turf/open/floor,
-/area/lv624/lazarus/hydroponics)
-"zX" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/smg/fp9000,
-/obj/item/ammo_magazine/smg/fp9000{
-	pixel_x = 1
-	},
-/obj/item/ammo_magazine/smg/fp9000{
-	pixel_x = -3
-	},
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"BL" = (
-/obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/gm/grass/grass1,
-/area/lv624/ground/jungle/north_jungle)
-"Cp" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/suit/apron,
-/obj/item/tool/shovel,
-/obj/item/clothing/gloves/botanic_leather,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Cq" = (
-/obj/structure/girder,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"CG" = (
-/obj/item/reagent_container/glass/fertilizer{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/obj/item/reagent_container/glass/fertilizer,
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/midchance,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Dy" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth{
-	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind. This set seems damaged...";
-	name = "damaged M4 Synthetic PMC armor";
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/obj/effect/spawner/gibspawner/robot,
-/obj/item/limb/head/synth{
-	desc = "This appears to be the head of a synthetic, though it it is so destroyed there is no way in hell anyone is going to bring it back to even basic functionality.";
-	name = "shattered synthetic head";
-	pixel_x = 9;
-	pixel_y = 3
-	},
-/obj/item/robot_parts/arm/l_arm,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"Ed" = (
-/obj/item/stack/sheet/metal,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Fk" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc{
-	pixel_x = -13;
-	pixel_y = 11
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"FJ" = (
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Ha" = (
+"kW" = (
 /obj/structure/barricade/deployable{
 	damage_state = 1;
 	dir = 1;
@@ -406,122 +158,164 @@
 	name = "scratched VP78 magazine (9mm)";
 	pixel_x = 6
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/hydroponics)
-"IO" = (
-/obj/item/device/analyzer/plant_analyzer,
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+"ls" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"IP" = (
-/obj/item/ammo_magazine/rifle/nsg23/extended,
-/obj/item/stack/sheet/wood,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"Jc" = (
+"lM" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/decal/cleanable/blood/tracks/footprints{
 	dir = 1
 	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
-"JE" = (
-/turf/open/floor,
-/area/lv624/lazarus/hydroponics)
-"JK" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"JO" = (
-/obj/structure/machinery/portable_atmospherics/hydroponics,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"Km" = (
-/turf/open/gm/grass/grass1,
-/area/lv624/ground/colony/south_medbay_road)
-"Lk" = (
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"Lu" = (
-/obj/structure/window_frame/colony,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"LQ" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/lowchance,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Mi" = (
-/obj/structure/closet/crate/hydroponics/prespawned,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Mm" = (
-/obj/effect/landmark/crap_item,
-/turf/open/gm/grass/grass1,
-/area/lv624/ground/colony/south_medbay_road)
-"MM" = (
-/obj/structure/barricade/deployable{
-	damage_state = 3;
-	health = 50;
-	icon_state = "folding_3"
-	},
-/obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/ammo_magazine/rifle/nsg23,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"MT" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"MV" = (
+"lP" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/spawner/random/claymore/midchance{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
-/area/lv624/lazarus/hydroponics)
-"NO" = (
-/obj/effect/landmark/crap_item,
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
-"On" = (
-/obj/structure/window_frame/colony,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+"lQ" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
-"OH" = (
+"mE" = (
+/obj/item/tool/hatchet{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"mI" = (
+/obj/effect/decal/cleanable/blood/tracks/footprints{
+	dir = 1
+	},
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"nJ" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor,
+/area/lv624/lazarus/hydroponics)
+"nL" = (
+/obj/item/tool/weldingtool/simple,
+/obj/item/stack/sheet/wood,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"og" = (
+/turf/open/gm/dirt,
+/area/lv624/ground/colony/south_medbay_road)
+"op" = (
+/obj/item/clothing/gloves/botanic_leather,
+/obj/item/stack/sheet/metal,
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"ou" = (
+/turf/open/gm/dirt,
+/area/lv624/ground/colony/north_nexus_road)
+"qU" = (
+/obj/structure/surface/rack,
+/obj/item/tool/crowbar,
+/obj/item/reagent_container/glass/bucket{
+	pixel_y = -3
+	},
+/obj/item/reagent_container/glass/bucket,
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"qZ" = (
+/obj/item/storage/firstaid,
+/obj/item/explosive/grenade/high_explosive/pmc{
+	pixel_x = 6
+	},
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"rO" = (
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"rW" = (
+/obj/item/device/analyzer/plant_analyzer,
+/obj/effect/landmark/crap_item,
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"se" = (
+/obj/structure/fence,
+/turf/open/gm/dirtgrassborder/north,
+/area/lv624/ground/colony/south_medbay_road)
+"sL" = (
+/obj/effect/decal/cleanable/blood/tracks/footprints{
+	dir = 1
+	},
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"vP" = (
+/obj/structure/closet/crate/hydroponics/prespawned,
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"xm" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/lowchance,
+/turf/open/floor/plating,
+/area/lv624/lazarus/hydroponics)
+"xA" = (
+/obj/item/reagent_container/glass/bucket,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"yb" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"yr" = (
+/obj/item/device/analyzer/plant_analyzer,
+/obj/effect/spawner/random/claymore,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"zj" = (
+/obj/item/stack/folding_barricade,
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 17
+	},
+/obj/effect/spawner/gibspawner/human,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/floor/plating,
+/area/lv624/lazarus/hydroponics)
+"zS" = (
+/obj/structure/window_frame/colony,
+/obj/item/shard,
+/turf/open/floor,
+/area/lv624/lazarus/hydroponics)
+"Ag" = (
+/obj/structure/barricade/deployable{
+	damage_state = 2;
+	dir = 8;
+	health = 140;
+	icon_state = "folding_2"
+	},
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/ammo_magazine/rifle/nsg23,
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"Aj" = (
+/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/stack/sheet/wood,
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"AQ" = (
+/obj/effect/landmark/crap_item,
+/obj/item/reagent_container/glass/watertank,
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"BD" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/clothing/under/marine/veteran/pmc{
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"BF" = (
 /obj/structure/surface/rack,
 /obj/item/tool/shovel/spade,
 /obj/item/tool/hatchet{
@@ -535,29 +329,142 @@
 /obj/item/tool/minihoe{
 	pixel_y = -2
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"BL" = (
+/obj/structure/flora/bush/ausbushes/genericbush,
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/jungle/north_jungle)
+"CX" = (
+/obj/structure/girder,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"Dr" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/midchance{
+	dir = 4
 	},
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"Fk" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc{
+	pixel_x = -13;
+	pixel_y = 11
+	},
+/turf/open/floor/plating,
+/area/lv624/lazarus/hydroponics)
+"FD" = (
+/obj/structure/window_frame/colony,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"It" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"IN" = (
+/obj/item/stack/sheet/metal,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"Jw" = (
+/obj/item/stack/sheet/metal,
+/obj/item/robot_parts/leg/l_leg,
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"JE" = (
+/turf/open/floor,
+/area/lv624/lazarus/hydroponics)
+"Km" = (
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/colony/south_medbay_road)
+"Lw" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/weapon/gun/smg/fp9000,
+/obj/item/ammo_magazine/smg/fp9000{
+	pixel_x = 1
+	},
+/obj/item/ammo_magazine/smg/fp9000{
+	pixel_x = -3
+	},
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/floor/plating/panelscorched,
+/area/lv624/lazarus/hydroponics)
+"Mk" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/midchance,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"Mm" = (
+/obj/effect/landmark/crap_item,
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/colony/south_medbay_road)
+"ME" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"MW" = (
+/obj/item/tool/crowbar,
+/obj/effect/spawner/random/claymore/midchance{
+	dir = 4
+	},
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"Ne" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/lowchance{
+	dir = 8
+	},
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"Np" = (
+/obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth{
+	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind. This set seems damaged...";
+	name = "damaged M4 Synthetic PMC armor";
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/effect/spawner/gibspawner/robot,
+/obj/item/limb/head/synth{
+	desc = "This appears to be the head of a synthetic, though it it is so destroyed there is no way in hell anyone is going to bring it back to even basic functionality.";
+	name = "shattered synthetic head";
+	pixel_x = 9;
+	pixel_y = 3;
+	icon_state = "scandinavian_head_m"
+	},
+/obj/item/robot_parts/arm/l_arm,
+/turf/open/floor/green/northwest,
+/area/lv624/lazarus/hydroponics)
+"NG" = (
+/obj/item/stack/sheet/metal,
+/obj/item/explosive/mine/pmc/active{
+	dir = 1
+	},
+/turf/open/floor/platingdmg1,
+/area/lv624/lazarus/hydroponics)
+"NO" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
 "OI" = (
 /obj/item/reagent_container/glass/fertilizer,
 /obj/item/stack/sheet/metal,
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
-"Pk" = (
-/obj/item/stack/sheet/metal,
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
+"OS" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"Px" = (
-/obj/effect/decal/cleanable/blood/tracks/footprints{
-	dir = 1
+"Py" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/spawner/random/claymore/lowchance{
+	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
 "Qd" = (
 /obj/item/stack/folding_barricade,
@@ -578,74 +485,61 @@
 	},
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
-"QR" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
+"QV" = (
+/obj/item/tool/extinguisher,
+/obj/effect/decal/cleanable/blood/tracks/footprints{
+	dir = 1
 	},
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
-"RT" = (
-/obj/item/clothing/shoes/veteran/pmc{
-	armor_bio = 15;
-	armor_bomb = 5;
-	armor_bullet = 15;
-	armor_energy = 5;
-	armor_internaldamage = 5;
-	armor_laser = 5;
-	armor_melee = 15;
-	desc = "The height of fashion, but these look to be woven with protective fiber. This pair seems heavily damaged, especially around the soles...";
-	name = "scuffed shoes";
-	pixel_x = -14;
-	pixel_y = -10;
-	slowdown = 0.5
+"RD" = (
+/obj/item/tool/minihoe{
+	pixel_x = 1;
+	pixel_y = -1
 	},
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
+/turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
-"TC" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"TL" = (
-/obj/item/stack/sheet/metal,
-/obj/effect/spawner/random/claymore/midchance,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"Ul" = (
+"RR" = (
 /obj/structure/barricade/deployable{
-	damage_state = 2;
-	dir = 8;
-	health = 140;
-	icon_state = "folding_2"
+	damage_state = 3;
+	health = 50;
+	icon_state = "folding_3"
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/item/ammo_magazine/rifle/nsg23,
+/obj/item/ammo_magazine/rifle/nsg23,
+/turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
-"UG" = (
+"Tj" = (
+/obj/item/stack/sheet/wood{
+	amount = 16
+	},
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 13
+	},
+/obj/effect/spawner/gibspawner/human,
+/obj/item/clothing/head/helmet/marine/veteran/pmc{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/platingdmg3,
+/area/lv624/lazarus/hydroponics)
+"Vc" = (
+/obj/structure/barricade/deployable{
+	damage_state = 3;
+	dir = 1;
+	health = 45;
+	icon_state = "folding_3"
+	},
 /obj/effect/decal/cleanable/blood,
-/obj/structure/barricade/wooden{
-	dir = 4
+/obj/item/weapon/gun/smg/fp9000,
+/obj/item/clothing/under/marine/veteran/pmc/leader{
+	pixel_x = -7
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
 "Wg" = (
 /turf/open/floor/plating,
-/area/lv624/lazarus/hydroponics)
-"Xv" = (
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
 /area/lv624/lazarus/hydroponics)
 "XA" = (
 /turf/open/gm/grass/grass1,
@@ -654,36 +548,12 @@
 /obj/structure/flora/bush/ausbushes/ausbush,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
-"YJ" = (
-/obj/item/storage/firstaid,
-/obj/item/explosive/grenade/high_explosive/pmc{
-	pixel_x = 6
-	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/lv624/lazarus/hydroponics)
-"YV" = (
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
-/area/lv624/lazarus/hydroponics)
-"Zm" = (
-/obj/item/stack/sheet/metal,
-/obj/item/robot_parts/leg/l_leg,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/lv624/lazarus/hydroponics)
-"ZL" = (
-/obj/item/tool/minihoe{
-	pixel_x = 1;
-	pixel_y = -1
-	},
-/turf/open/floor{
-	dir = 9;
-	icon_state = "green"
-	},
+"XM" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/suit/apron,
+/obj/item/tool/shovel,
+/obj/item/clothing/gloves/botanic_leather,
+/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
 
 (1,1,1) = {"
@@ -723,12 +593,12 @@ XA
 XA
 XA
 BL
-YV
-zL
-Ed
+rO
+kk
+ls
 Wg
-MV
-Cq
+Dr
+CX
 Km
 Km
 Km
@@ -736,194 +606,194 @@ se
 "}
 (4,1,1) = {"
 XJ
-Cq
-Lu
-TC
-dZ
+CX
+FD
+hI
+Ne
 Wg
-ym
-FJ
-Xv
-zL
+MW
+iZ
+eF
+kk
 Wg
-Ed
-Xv
+ls
+eF
 se
 "}
 (5,1,1) = {"
 XA
-qe
-YV
-TC
-FJ
+Py
+rO
+hI
+iZ
 Wg
-YV
+rO
 Wg
 Wg
-Mi
-Mi
-xM
-zL
+vP
+vP
+qU
+kk
 fk
 "}
 (6,1,1) = {"
 XA
-Ed
+ls
 Wg
 Wg
-JK
-kD
-TC
-Xv
+lQ
+xA
+hI
+eF
 Wg
 Wg
 lP
-Cp
-zL
+XM
+kk
 og
 "}
 (7,1,1) = {"
-Xv
-Xv
-Lk
+eF
+eF
+fJ
 Wg
-Pk
-JO
-Ul
-zX
-jy
-Xv
-Lk
-OH
-Xv
-Xv
+It
+dl
+Ag
+Lw
+iG
+eF
+fJ
+BF
+eF
+eF
 "}
 (8,1,1) = {"
-YV
+rO
 Wg
-ft
-TC
-bm
-tK
+cX
+hI
+hu
+Vc
 zj
-IP
-xa
-JO
+Aj
+cM
+dl
 Wg
-TL
-ZL
-Xv
+Mk
+RD
+eF
 "}
 (9,1,1) = {"
-Px
-bk
-Px
-km
-Jc
-km
-YJ
+sL
+QV
+sL
+mI
+lM
+mI
+qZ
 Qd
-MM
-ot
+RR
+cY
 Wg
-TC
-Ed
-Xv
+hI
+ls
+eF
 "}
 (10,1,1) = {"
-RT
-Xv
-QR
-JO
+by
+eF
+bV
+dl
 Fk
-xF
-Ha
-vm
-jy
-fX
-TC
+BD
+kW
+Tj
+iG
+yr
+hI
 Wg
-FJ
-Xv
+iZ
+eF
 "}
 (11,1,1) = {"
-Xv
-Xv
-cQ
-Xv
+eF
+eF
+yb
+eF
 Wg
-TC
-it
-UG
-np
-Xv
+hI
+mE
+ME
+nL
+eF
 Wg
 xm
-YV
-YV
+rO
+rO
 "}
 (12,1,1) = {"
-Xv
-bd
-aO
-QR
-Dy
+eF
+NG
+AQ
+bV
+Np
 Wg
-TC
+hI
 Wg
-TC
-TC
-lm
+hI
+hI
+IN
 OI
-Cq
-Cq
+CX
+CX
 "}
 (13,1,1) = {"
 XA
-On
-IO
-Zm
-Lk
-TC
+ax
+rW
+Jw
+fJ
+hI
 NO
 Wg
-TC
-lm
+hI
+IN
 ck
-CG
-YV
+aR
+rO
 ou
 "}
 (14,1,1) = {"
 XA
-Lu
-ih
-jY
-MT
+FD
+op
+ch
+OS
 Wg
 Wg
 Wg
-FJ
+iZ
 Wg
-lm
-Ed
-Lu
+IN
+ls
+FD
 eU
 "}
 (15,1,1) = {"
 XA
-Xv
-Xv
-Ed
-YV
-Xv
-Xv
-YV
-LQ
-Xv
-Xv
-YV
-Cq
+eF
+eF
+ls
+rO
+eF
+eF
+rO
+ak
+eF
+eF
+rO
+CX
 bM
 "}
 (16,1,1) = {"
@@ -931,12 +801,12 @@ XA
 XA
 XA
 XA
-Xv
-Xv
-Xv
-Xv
-Lu
-Cq
+eF
+eF
+eF
+eF
+FD
+CX
 XA
 XA
 XA

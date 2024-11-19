@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/storage/belt/gun/m4a3(src)
 	new /obj/item/storage/backpack/marine/satchel/intel(src)
-	new /obj/item/clothing/suit/storage/marine/rto/intel(src)
+	new /obj/item/clothing/suit/storage/marine/medium/rto/intel(src)
 	new /obj/item/device/motiondetector/intel(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/clothing/accessory/storage/webbing(src)
@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/pilot_officer/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/pilot(src)
+	new /obj/item/clothing/head/helmet/upp/marinepilot(src)
 	new /obj/item/clothing/under/marine/officer/pilot(src)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/clothing/suit/armor/vest/pilot(src)
@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/device/flash(src)
-	new /obj/item/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/storage/pouch/general/medium(src)
 	if(prob(50))
@@ -178,7 +178,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/warrant_officer
 	name = "chief MP's locker"
-	req_access = list(ACCESS_MARINE_BRIG)
+	req_access = list(ACCESS_MARINE_ARMORY)
 	icon_state = "secure_locked_warrant"
 	icon_closed = "secure_unlocked_warrant"
 	icon_locked = "secure_locked_warrant"
@@ -203,7 +203,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/storage/backpack/satchel/sec(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/storage/pouch/general/large(src)
 
 /obj/structure/closet/secure_closet/military_officer_spare
@@ -350,7 +350,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/device/binoculars/range(src)
 	new /obj/item/clothing/suit/armor/bulletproof/badge(src)
 	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/shoes/dress(src)
+	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
 /obj/structure/closet/secure_closet/cmdcabinet

@@ -8,32 +8,11 @@
 /obj/structure/girder,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"bB" = (
-/obj/item/clothing/shoes/veteran/pmc,
-/obj/structure/foamed_metal,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
 "bT" = (
 /obj/structure/shuttle/engine/propulsion,
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
-"cv" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
-"cV" = (
-/obj/item/storage/toolbox/electrical,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
 "cZ" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/decal/cleanable/blood,
@@ -44,44 +23,14 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"eW" = (
-/obj/effect/landmark/crap_item,
-/turf/open/floor/airless{
-	dir = 5;
-	icon_state = "asteroidfloor"
-	},
-/area/lv624/ground/barrens/north_east_barrens)
-"gu" = (
-/obj/item/stack/cable_coil/random,
-/obj/item/explosive/grenade/high_explosive,
-/obj/item/explosive/grenade/high_explosive,
-/obj/structure/foamed_metal,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
-"ip" = (
+"hd" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "jo" = (
 /obj/item/tool/shovel/spade,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
-"jE" = (
-/obj/structure/xenoautopsy/tank/broken,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
-"kp" = (
-/obj/effect/landmark/crap_item,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
 "kP" = (
 /obj/structure/girder/displaced,
 /obj/structure/foamed_metal,
@@ -95,6 +44,10 @@
 /obj/structure/girder/displaced,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
+"or" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/airless/asteroidfloor/northeast,
+/area/lv624/ground/barrens/north_east_barrens)
 "oT" = (
 /obj/effect/spawner/random/toolbox,
 /turf/open/gm/dirt,
@@ -108,11 +61,9 @@
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"rP" = (
-/obj/structure/bed/chair/dropship/pilot,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
+"so" = (
+/obj/effect/landmark/crap_item,
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "tf" = (
 /obj/structure/machinery/constructable_frame{
@@ -121,11 +72,6 @@
 /obj/structure/foamed_metal,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"tv" = (
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/ground/barrens/north_east_barrens)
 "uw" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -142,10 +88,9 @@
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"xg" = (
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
+"wF" = (
+/obj/structure/xenoautopsy/tank/broken,
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "xt" = (
 /obj/item/ammo_magazine/rifle/m16,
@@ -158,6 +103,14 @@
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
+"yw" = (
+/obj/item/explosive/grenade/high_explosive/pmc,
+/obj/structure/foamed_metal,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
+"yI" = (
+/turf/open/shuttle/bright_red,
+/area/lv624/ground/barrens/north_east_barrens)
 "yJ" = (
 /obj/structure/machinery/constructable_frame{
 	icon_state = "box_1"
@@ -174,12 +127,6 @@
 "AA" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/caves/central_caves)
-"BQ" = (
-/obj/structure/xenoautopsy/tank/hugger,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
 "Dw" = (
 /obj/item/tool/shovel/spade,
 /turf/open/gm/dirt,
@@ -187,12 +134,6 @@
 "DD" = (
 /turf/closed/shuttle{
 	icon_state = "wall3"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
-"DT" = (
-/obj/structure/foamed_metal,
-/turf/open/shuttle{
-	icon_state = "floor4"
 	},
 /area/lv624/lazarus/crashed_ship_containers)
 "Fg" = (
@@ -203,6 +144,10 @@
 /obj/effect/alien/weeds/node,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
+"Gm" = (
+/obj/item/storage/toolbox/electrical,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
 "Gs" = (
 /obj/structure/girder,
 /turf/closed/shuttle{
@@ -228,23 +173,23 @@
 /obj/effect/decal/remains/human,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"Kz" = (
-/obj/item/tool/crowbar,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
-"KG" = (
-/obj/structure/bed/chair/dropship/pilot,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
-/area/lv624/lazarus/crashed_ship_containers)
 "LQ" = (
 /obj/effect/landmark/corpsespawner/security,
 /obj/effect/decal/cleanable/blood,
 /turf/open/gm/dirt,
+/area/lv624/lazarus/crashed_ship_containers)
+"MI" = (
+/obj/structure/bed/chair/dropship/pilot,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
+"MM" = (
+/obj/structure/xenoautopsy/tank/hugger,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
+"NR" = (
+/obj/item/clothing/shoes/marine/civilian,
+/obj/structure/foamed_metal,
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "OV" = (
 /obj/structure/girder,
@@ -257,16 +202,26 @@
 "PS" = (
 /turf/closed/wall/sulaco,
 /area/lv624/ground/barrens/north_east_barrens)
+"Rc" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
+"Ri" = (
+/obj/item/stack/cable_coil/random,
+/obj/item/explosive/grenade/high_explosive,
+/obj/item/explosive/grenade/high_explosive,
+/obj/structure/foamed_metal,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
 "Ro" = (
 /obj/effect/landmark/crap_item,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
-"RT" = (
-/obj/item/explosive/grenade/high_explosive/pmc,
-/obj/structure/foamed_metal,
-/turf/open/shuttle{
-	icon_state = "floor4"
-	},
+"Sg" = (
+/obj/item/tool/crowbar,
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "SJ" = (
 /turf/template_noop,
@@ -275,10 +230,20 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
+"TS" = (
+/turf/open/floor/airless/asteroidfloor/northeast,
+/area/lv624/ground/barrens/north_east_barrens)
+"Uy" = (
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
 "UG" = (
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/effect/decal/cleanable/blood,
 /turf/open/gm/dirt,
+/area/lv624/lazarus/crashed_ship_containers)
+"Wb" = (
+/obj/structure/foamed_metal,
+/turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "Wu" = (
 /obj/effect/decal/remains/human,
@@ -300,12 +265,11 @@
 /obj/item/tool/pickaxe,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"ZH" = (
-/turf/open/floor/airless{
-	dir = 5;
-	icon_state = "asteroidfloor"
-	},
-/area/lv624/ground/barrens/north_east_barrens)
+"Yf" = (
+/obj/structure/bed/chair/dropship/pilot,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/shuttle/bright_red,
+/area/lv624/lazarus/crashed_ship_containers)
 
 (1,1,1) = {"
 AA
@@ -334,12 +298,12 @@ PE
 AA
 Xk
 tf
-KG
+Yf
 yJ
-xg
+Uy
 cZ
 yV
-xg
+Uy
 Xk
 Xk
 Xk
@@ -356,37 +320,37 @@ PE
 (3,1,1) = {"
 AA
 Xk
-gu
+Ri
 yV
-xg
+Uy
 LQ
 nt
-xg
+Uy
 Dw
 yV
-cV
+Gm
 Xk
 zH
 PE
 Wu
 PE
 PE
-eW
-tv
+or
+yI
 Fk
 PE
 "}
 (4,1,1) = {"
 AA
 Xk
-xg
+Uy
 oT
-xg
+Uy
 Xy
 HK
-jE
+wF
 vD
-xg
+Uy
 nt
 SX
 Fg
@@ -405,12 +369,12 @@ kP
 yJ
 yV
 IP
-cv
-BQ
-jE
-bB
-xg
-xg
+Rc
+MM
+wF
+NR
+Uy
+Uy
 Fg
 yV
 PE
@@ -429,9 +393,9 @@ xt
 Xy
 yV
 zH
-Kz
-DT
-DT
+Sg
+Wb
+Wb
 zH
 IP
 nt
@@ -449,42 +413,42 @@ PE
 AA
 OV
 Ie
-kp
+so
 zH
-RT
-DT
+yw
+Wb
 LQ
-ip
+hd
 UG
-xg
+Uy
 Xk
 Xk
 PE
 PE
-ZH
+TS
 PE
 pp
 bT
-ZH
-tv
+TS
+yI
 "}
 (8,1,1) = {"
 AA
 kP
 Xk
-rP
-xg
+MI
+Uy
 zH
-cv
+Rc
 uw
-cv
+Rc
 Xk
 Gs
 Xk
 DD
 PE
-ZH
-tv
+TS
+yI
 PE
 PE
 PE
