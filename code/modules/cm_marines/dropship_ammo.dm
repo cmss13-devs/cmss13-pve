@@ -168,7 +168,7 @@
 	for(var/i = 1 to ammo_used_per_firing)
 		sleep(1)
 		var/turf/impact_tile = pick(turf_list)
-		var/datum/cause_data/cause_data = create_cause_data(fired_from.name, source_mob)
+		var/datum/cause_data/cause_data = create_cause_data(fired_from?.name, source_mob)
 		impact_tile.ex_act(EXPLOSION_THRESHOLD_VLOW, pick(GLOB.alldirs), cause_data)
 		create_shrapnel(impact_tile,1,0,0,shrapnel_type,cause_data,FALSE,100) //simulates a bullet
 		for(var/atom/movable/explosion_effect in impact_tile)
@@ -246,7 +246,7 @@
 	for(var/i=1 to 16) //This is how many tiles within that area of effect will be randomly ignited
 		var/turf/U = pick(turf_list)
 		turf_list -= U
-		fire_spread_recur(U, create_cause_data(fired_from.name, source_mob), 1, null, 5, 75, "#EE6515")//Very, very intense, but goes out very quick
+		fire_spread_recur(U, create_cause_data(fired_from?.name, source_mob), 1, null, 5, 75, "#EE6515")//Very, very intense, but goes out very quick
 
 	if(!ammo_count && !QDELETED(src))
 		qdel(src) //deleted after last laser beam is fired and impact the ground.
@@ -301,6 +301,25 @@
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), impact, 175, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)), source_mob), 0.5 SECONDS) //Small explosive power with a small fall off for a big explosion range
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(fire_spread), impact, create_cause_data(initial(name), source_mob), 4, 15, 50, "#00b8ff"), 0.5 SECONDS) //Very intense but the fire doesn't last very long
 	QDEL_IN(src, 0.5 SECONDS)
+
+/obj/structure/ship_ammo/rocket/banshee/nerve
+	name = "\improper AGM-227/C 'Honest John'"
+	desc = "The AGM-227 Banshee platform is an effective vehicle for a variety of warheads. While most rockets contain just a high-explosive charge, or an incendiary gel mixture for wide-area destruction, the 'Honest John' carries a 38kg CN-20 nerve gas warhead. USCMCWC greatly recommends MOPP gear be worn while handling."
+	icon_state = "banshee"
+	ammo_id = "b"
+	point_cost = 500 //changed from regular banshee even if in 99.99999% of cases PvE will never need this but I was too scared to remove it for fear of something exploding
+	fire_mission_delay = 4 //We don't care because our ammo has just 1 rocket
+
+/obj/structure/ship_ammo/rocket/banshee/nerve/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
+	impact.ceiling_debris_check(3)
+	spawn(5)
+		cell_explosion(impact, 25, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
+		spawn(5)
+			var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+			cn20.set_up(8, 0, impact, null)
+			cn20.start()
+	QDEL_IN(src, 0.5 SECONDS)
+
 
 /obj/structure/ship_ammo/rocket/keeper
 	name = "\improper GBU-67 'Keeper II'"
