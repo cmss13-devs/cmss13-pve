@@ -57,3 +57,6 @@
 2024-11-15:
   Max-023:
   - bugfix: Recon webbing now has the NO_SNOW_TYPE flag
+2024-11-16:
+  BonniePandora:
+  - bugfix: Hummingbird pistol and ammo now spawn in the loadout weapon case
