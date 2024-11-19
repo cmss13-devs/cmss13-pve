@@ -284,6 +284,56 @@
 	src.add_fingerprint(usr)
 	src.update_icon()
 
+/obj/item/reagent_container/syringe/combat
+	name = "ruggedized syringe"
+	desc = "A reinforced and ruggedized syringe that will not break and is slightly less touchy."
+	icon = 'icons/obj/items/syringe.dmi'
+	item_state = "syringe_0"
+	icon_state = "0"
+	matter = list("glass" = 150)
+	amount_per_transfer_from_this = 10
+	possible_transfer_amounts = 10
+	volume = 10
+
+/obj/item/reagent_container/syringe/combat/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob)
+	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(target)] with [src.name] (INTENT: [uppertext(intent_text(user.a_intent))])</font>"
+	target.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by [key_name(user)] with [src.name] (INTENT: [uppertext(intent_text(user.a_intent))])</font>"
+	msg_admin_attack("[key_name(user)] attacked [key_name(target)] with [src.name] (INTENT: [uppertext(intent_text(user.a_intent))]) in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
+
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		var/target_zone = rand_zone(check_zone(user.zone_selected, target))
+		var/obj/limb/affecting = H.get_limb(target_zone)
+
+		if (!affecting)
+			return
+		if(affecting.status & LIMB_DESTROYED)
+			to_chat(user, "What [affecting.display_name]?")
+			return
+		var/hit_area = affecting.display_name
+
+		if((user != target) && H.check_shields(7, "the [src.name]"))
+			return
+
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
+			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] in \the [hit_area] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
+
+		if(affecting.take_damage(3))
+			target:UpdateDamageIcon()
+
+	else
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
+			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
+		target.take_limb_damage(3)// 7 is the same as crowbar punch
+
+	src.reagents.reaction(target, INGEST)
+	var/syringestab_amount_transferred = rand(0, (reagents.total_volume - 5)) //nerfed by popular demand
+	src.reagents.trans_to(target, syringestab_amount_transferred)
+	src.desc += " It is broken."
+	src.mode = SYRINGE_BROKEN
+	src.add_mob_blood(target)
+	src.add_fingerprint(usr)
+	src.update_icon()
 
 /obj/item/reagent_container/ld50_syringe
 	name = "Lethal Injection Syringe"
