@@ -514,7 +514,8 @@
 		list("Health Analyzer", floor(scale * 5), /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Medical Storage Rig", floor(scale * 2), /obj/item/storage/belt/medical, VENDOR_ITEM_REGULAR),
 		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe/combat, VENDOR_ITEM_REGULAR)
+		list("Ruggedized Syringe", floor(scale * 7), /obj/item/reagent_container/syringe/combat, VENDOR_ITEM_REGULAR),
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/populate_product_list_and_boxes(scale)
