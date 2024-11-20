@@ -1110,6 +1110,11 @@
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
+/obj/item/clothing/accessory/pads/neckguard/uacg
+	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
+	icon_state = "neckguard_uacg"
+	item_state = "neckguard_uacg"
+
 /obj/item/clothing/accessory/pads/greaves
 	name = "\improper M3 Shin Guards"
 	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
