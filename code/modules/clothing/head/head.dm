@@ -54,7 +54,7 @@
 
 /obj/item/clothing/head/beret/cm
 	name = "\improper Beret"
-	desc = "A hat typically worn by the French. Occasionally they find their way into the hands of marines with nothing better to spend their money on."
+	desc = "A hat typically worn by the French. Occasionally they find their way into the hands of people with nothing better to spend their money on."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "beret"
 	item_icons = list(
