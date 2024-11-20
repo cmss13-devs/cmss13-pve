@@ -78,6 +78,7 @@
 	has_buttons = TRUE
 	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
+	initial_icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot
 	name = "\improper M70B1 light flak jacket"
