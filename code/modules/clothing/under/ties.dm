@@ -1131,6 +1131,13 @@
 	item_state = "groinplate"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+/obj/item/clothing/accessory/pads/groin/uacg
+	name = "\improper M3 Groin Plate"
+	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the UACG often seen worn than not."
+	icon_state = "groinplate_uacg"
+	item_state = "groinplate_uacg"
+	slot = ACCESSORY_SLOT_DECORGROIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
