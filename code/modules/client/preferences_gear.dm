@@ -193,7 +193,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/durag/black
 
 /datum/gear/headwear/durag
-	display_name = "Durag, mission specific"
+	display_name = "Durag, jungle"
 	path = /obj/item/clothing/head/durag
 
 /datum/gear/headwear/uscm
