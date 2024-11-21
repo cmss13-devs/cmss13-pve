@@ -131,7 +131,7 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB|NO_SNOW_TYPE
 
 /obj/item/clothing/head/headband/Initialize(mapload, ...)
 	. = ..()
@@ -360,16 +360,19 @@
 	update_clothing_icon()
 
 /obj/item/clothing/head/cmcap/boonie
-	name = "\improper USCM boonie hat"
+	name = "\improper boonie hat"
 	desc = "A floppy bush hat. Protects only from the sun and rain, but very comfortable."
-	icon_state = "booniehat"
+	icon_state = "booniehat_jungle"
 	flipping_message = list(
 		"flipped" = "You tuck the hat's chinstrap away. Hopefully the wind doesn't nick it...",
 		"unflipped" = "You hook the hat's chinstrap under your chin. Peace of mind is worth a little embarassment."
 		)
 
 /obj/item/clothing/head/cmcap/boonie/tan
-	icon_state = "booniehattan"
+	icon_state = "booniehat_desert"
+
+/obj/item/clothing/head/cmcap/boonie/snow
+	icon_state = "booniehat_snow"
 
 /obj/item/clothing/head/cmcap/co
 	name = "\improper USCM Commanding officer cap"
@@ -407,10 +410,18 @@
 	icon_state = "cap_operations"
 
 /obj/item/clothing/head/cmcap/flap
-	name = "\improper USCM expedition cap"
+	name = "\improper jungle expedition cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet. This one comes with flaps to keep the sun off your neck."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "flapcap"
+	icon_state = "flapcap_jungle"
+
+/obj/item/clothing/head/cmcap/flap/desert
+	name = "\improper desert expedition cap"
+	icon_state = "flapcap_desert"
+
+/obj/item/clothing/head/cmcap/flap/snow
+	name = "\improper snow expedition cap"
+	icon_state = "flapcap_snow"
 
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
@@ -759,6 +770,7 @@
 	desc = "An improvised head wrap made out of a standard issue neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon_state = "durag"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = NO_SNOW_TYPE
 	flags_inv_hide = HIDETOPHAIR
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
@@ -768,7 +780,6 @@
 	icon_state = "duragblack"
 	desc = "An improvised head wrap made out of a black neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/durag/Initialize(mapload, ...)
 	. = ..()

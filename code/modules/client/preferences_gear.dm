@@ -219,13 +219,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/boonie_olive
-	display_name = "USCM boonie hat, olive"
+/datum/gear/headwear/uscm/boonie_jungle
+	display_name = "USCM boonie hat, jungle"
 	path = /obj/item/clothing/head/cmcap/boonie
 
-/datum/gear/headwear/uscm/boonie_tan
-	display_name = "USCM boonie hat, khaki"
+/datum/gear/headwear/uscm/boonie_desert
+	display_name = "USCM boonie hat, desert"
 	path = /obj/item/clothing/head/cmcap/boonie/tan
+
+/datum/gear/headwear/uscm/boonie_snow
+	display_name = "USCM boonie hat, snow"
+	path = /obj/item/clothing/head/cmcap/boonie/snow
 
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap, jungle"
@@ -244,9 +248,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/sulacocap
 	cost = 1
 
-/datum/gear/headwear/uscm/cap/flap
-	display_name = "USCM flapcap"
+/datum/gear/headwear/uscm/cap/flap_jungle
+	display_name = "USCM expedition flapcap, jungle"
 	path = /obj/item/clothing/head/cmcap/flap
+
+/datum/gear/headwear/uscm/cap/flap_desert
+	display_name = "USCM expedition flapcap, desert"
+	path = /obj/item/clothing/head/cmcap/flap/desert
+
+/datum/gear/headwear/uscm/cap/flap_snow
+	display_name = "USCM expedition flapcap, snow"
+	path = /obj/item/clothing/head/cmcap/flap/snow
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"

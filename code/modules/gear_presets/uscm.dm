@@ -812,10 +812,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/pamphlet/skill/spotter, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_night_goggles(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green(new_human), WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
-	add_uscm_cover(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie(new_human), WEAR_HEAD)
 	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
@@ -862,9 +861,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/pamphlet/skill/spotter, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green(new_human), WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
-	add_uscm_cover(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie(new_human), WEAR_HEAD)
 	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
@@ -937,3 +936,51 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+
+/datum/equipment_preset/uscm/marsoc
+	name = "USCM Marine Raider"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Raider"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "OPR"
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/marsoc/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/marsoc/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/marsoc/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/sof, WEAR_HEAD)
+	//uniform
+	var/obj/item/clothing/under/marine/veteran/marsoc/M = new()
+	var/obj/item/clothing/accessory/storage/black_vest/W = new()
+	M.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(M, WEAR_BODY)
+	for(var/i in 1 to W.hold.storage_slots)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
+	//jacket
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/marsoc, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
