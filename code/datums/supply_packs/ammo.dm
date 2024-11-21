@@ -288,22 +288,26 @@
 	contains = list(
 		/obj/item/ammo_magazine/hpr_box,
 		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box,
 	)
-	name = "M41AE2 HPR Magazines crate (HPR ammo box x2)"
+	name = "M41AE2 magazine crate"
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper M41AE2 HPR magazines crate"
+	containername = "\improper M41AE2 magazine crate"
 	group = "Ammo"
 
 /datum/supply_packs/ammo_hpr_holo
 	contains = list(
 		/obj/item/ammo_magazine/hpr_box/holo_target,
 		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
 	)
-	name = "M41AE2 HPR Holo-Target Magazines crate (HPR HT ammo box x2)"
+	name = "M41AE2 magazine crate"
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper M41AE2 HPR holo-target magazines crate"
+	containername = "\improper M41AE2 holo-target magazine crate"
 	group = "Ammo"
 
 /datum/supply_packs/ammo_xm51
