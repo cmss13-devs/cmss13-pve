@@ -6,7 +6,7 @@
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell")
 #define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")
-#define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "25mm Skirmish", "25mm Barrage")
+#define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "25mm Burst", "25mm Barrage")
 
 /client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -206,7 +206,7 @@
 					QDEL_IN(target_lase, 5 SECONDS)  //to stop "unused var" warnings
 					return TRUE
 
-			if("25mm Skirmish")
+			if("25mm Burst")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
 				var/obj/structure/ship_ammo/heavygun/ammo = new()
 
