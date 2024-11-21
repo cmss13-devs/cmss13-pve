@@ -1234,9 +1234,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 3
 
 /datum/gear/misc/flak
-	display_name = "M67 flak jacket"
+	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
 	cost = 3
+
+/datum/gear/misc/flak/od
+	display_name = "M67 flak jacket (Green)"
+
+	path = /obj/item/clothing/accessory/flak/od
 
 /datum/gear/misc/servicejacket
 	display_name = "Marine Service Jacket"

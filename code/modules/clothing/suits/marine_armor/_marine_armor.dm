@@ -259,12 +259,6 @@
 	light_range = 5 //slightly higher
 	specialty = "M4 pattern marine"
 
-/obj/item/clothing/suit/storage/marine/rto/forecon
-	name = "\improper M3-R pattern recon armor"
-	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a leather pouch strapped to it for limited storage. Issued exclusively to FORECON units."
-	icon_state = "forecon"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
 /obj/item/clothing/suit/storage/marine/MP
 	name = "\improper M2 pattern MP armor"
 	desc = "A standard Colonial Marines M2 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage."
@@ -714,8 +708,8 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_LEGDECOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_LEGDECOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
 	light_power = 3
 	light_range = 4
@@ -952,8 +946,8 @@
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
 	. = ..()
-	var/obj/item/clothing/accessory/pads/pads = new()
-	src.attach_accessory(null, pads, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
 
 /obj/item/clothing/suit/marine/leader
 	name = "\improper B12 pattern marine armor"
