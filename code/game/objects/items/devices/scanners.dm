@@ -83,6 +83,7 @@ FORENSIC SCANNER
 
 	var/popup_window = TRUE
 	var/last_scan
+	var/list/buffer_for_report = list()
 	var/datum/health_scan/last_health_display
 	var/alien = FALSE
 
@@ -141,6 +142,328 @@ FORENSIC SCANNER
 	popup_window = !popup_window
 	last_scan = null // reset the data
 	to_chat(usr, "The scanner [popup_window ? "now" : "no longer"] shows results on the hud.")
+
+/obj/item/device/healthanalyzer/soul/verb/print_report_verb()
+	set name = "Print Report"
+	set category = "Object"
+	set src in usr
+
+	if (usr.is_mob_incapacitated())
+		return
+	print_report(usr)
+
+/obj/item/device/healthanalyzer/soul/proc/print_report(mob/living/user)
+	if(!last_scan)
+		to_chat(user, "There is no scan data to print.")
+		return
+	var/obj/item/paper/print_report = new /obj/item/paper
+	print_report.info += "Device ID:" + serial_number + "\n" + jointext(buffer_for_report,ascii2text(60) + "br>")
+	print_report.info_links += jointext(buffer_for_report,ascii2text(60) + "br>")
+	print_report.updateinfolinks()
+	print_report.update_icon()
+	user.put_in_hands(print_report)
+	user.visible_message("\The [src] spits out a piece of paper.")
+
+/obj/item/device/healthanalyzer/soul
+	icon = 'icons/obj/items/Medical Scanner new.dmi'
+	icon_state = "Medical_scanner"
+	item_state = "analyzer"
+	var/mode = 1
+	var/report_delay_counter = 0
+	var/report_delay_threshold = 3 //every three processes, record to report buffer
+	var/mob/living/carbon/human/connected_to
+	var/mob/living/carbon/human/connected_from
+	var/blood_type = null
+	var/datum/beam/current_beam
+
+/obj/item/device/healthanalyzer/soul/process()
+	//if we're not connected to anything stop doing stuff
+	if(!connected_to)
+		return PROCESS_KILL
+
+	//if we're not on a human stop doing stuff
+	if(!ishuman(loc))
+		bad_disconnect()
+		return PROCESS_KILL
+
+	//if we're not being held in a hand stop doing stuff
+	var/mob/living/carbon/human/current_human = loc
+	if(!(current_human.l_hand == src || current_human.r_hand == src))
+		bad_disconnect()
+		return PROCESS_KILL
+
+	//if we're further than 1 tile away or we're not on a turf stop doing stuff
+	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
+		bad_disconnect()
+		return PROCESS_KILL
+
+	if(!popup_window)
+		last_scan = connected_to.health_scan(connected_from, FALSE, TRUE, popup_window, alien)
+	else
+		if (!last_health_display)
+			last_health_display = new(connected_to)
+		else
+			last_health_display.target_mob = connected_to
+		SStgui.close_user_uis(connected_from, src)
+		last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
+		last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+		if(report_delay_counter >= report_delay_threshold)
+			buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+			report_delay_counter = -1
+			if(buffer_for_report.len > 40)
+				buffer_for_report.Cut(1,3)
+		report_delay_counter++
+	to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
+	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
+	src.add_fingerprint()
+	return
+
+/// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
+/mob/living/proc/health_scan_table(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
+	if(do_checks)
+		if((user.getBrainLoss() >= 60) && prob(50))
+			to_chat(user, SPAN_WARNING("You try to analyze the floor's vitals!"))
+			for(var/mob/O in viewers(src, null))
+				O.show_message(SPAN_WARNING("[user] has analyzed the floor's vitals!"), 1)
+			user.show_message(SPAN_NOTICE("Health Analyzer results for The floor:\n\t Overall Status: Healthy"), 1)
+			user.show_message(SPAN_NOTICE("\t Damage Specifics: [0]-[0]-[0]-[0]"), 1)
+			user.show_message(SPAN_NOTICE("Key: Suffocation/Toxin/Burns/Brute"), 1)
+			user.show_message(SPAN_NOTICE("Body Temperature: ???"), 1)
+			return
+		if(HAS_TRAIT(src, TRAIT_FOREIGN_BIO) && !alien)
+			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
+			return
+		if(!(ishuman(user) || SSticker?.mode.name == "monkey"))
+			to_chat(usr, SPAN_WARNING("You don't have the dexterity to do this!"))
+			return
+		if(!ignore_delay && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
+			to_chat(user, SPAN_WARNING("You start fumbling around with [src]..."))
+			var/fduration = 60
+			if(skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_DEFAULT))
+				fduration = 30
+			if(!do_after(user, fduration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY) || !user.Adjacent(src))
+				return
+		if(isxeno(src))
+			to_chat(user, SPAN_WARNING("[src] can't make sense of this creature."))
+			return
+		// Doesn't work on non-humans
+		if(!istype(src, /mob/living/carbon))
+			user.show_message("\nHealth Analyzer results for ERROR:\n\t Overall Status: ERROR")
+			user.show_message("\tType: [SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]", 1)
+			user.show_message("\tDamage: [SET_CLASS("?", INTERFACE_BLUE)] - [SET_CLASS("?", INTERFACE_GREEN)] - [SET_CLASS("?", INTERFACE_ORANGE)] - [SET_CLASS("?", INTERFACE_RED)]")
+			user.show_message(SPAN_NOTICE("Body Temperature: [src.bodytemperature-T0C]&deg;C ([src.bodytemperature*1.8-459.67]&deg;F)"), 1)
+			user.show_message(SPAN_DANGER("<b>Warning: Blood Level ERROR: --% --cl.Type: ERROR"))
+			user.show_message(SPAN_NOTICE("Subject's pulse: [SET_CLASS("-- bpm", INTERFACE_RED)]"))
+			return
+
+	var/dat = ""
+	// Calculate damage amounts
+	var/fake_oxy = max(rand(1,40), src.getOxyLoss(), (300 - (src.getToxLoss() + src.getFireLoss() + src.getBruteLoss())))
+	var/OX = src.getOxyLoss() > 50 ? "<b>[src.getOxyLoss()]</b>" : src.getOxyLoss()
+	var/TX = src.getToxLoss() > 50 ? "<b>[src.getToxLoss()]</b>" : src.getToxLoss()
+	var/BU = src.getFireLoss() > 50 ? "<b>[src.getFireLoss()]</b>" : src.getFireLoss()
+	var/BR = src.getBruteLoss() > 50 ? "<b>[src.getBruteLoss()]</b>" : src.getBruteLoss()
+
+	// Show overall
+	if(src.status_flags & FAKEDEATH)
+		OX = fake_oxy > 50 ? "<b>[fake_oxy]</b>" : fake_oxy
+		dat += "\nHealth Analyzer for [src]:\n\tOverall Status: <b>DEAD</b>"
+	else
+		var/mob/living/carbon/human/snowflake_variable_for_name = src
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "/n"
+	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
+	dat += "[SET_CLASS(OX, INTERFACE_BLUE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(BR, INTERFACE_RED)]\n"
+	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
+
+
+	// Show specific limb damage
+	if(istype(src, /mob/living/carbon/human) && show_limb_damage)
+		var/mob/living/carbon/human/H = src
+		for(var/obj/limb/org in H.limbs)
+			var/brute_treated = TRUE
+			var/burn_treated = TRUE
+			var/open_incision = org.get_incision_depth() ? " <span class='scanner'>Open surgical incision</span>" : ""
+
+			if((org.brute_dam > 0 && !org.is_bandaged()) || open_incision)
+				brute_treated = FALSE
+			if(org.burn_dam > 0 && !org.is_salved())
+				burn_treated = FALSE
+			if(org.status & LIMB_DESTROYED)
+				dat += "\t\t [capitalize(org.display_name)]: <span class='scannerb'>Missing!</span>\n"
+				continue
+
+			var/bleeding_check = FALSE
+			for(var/datum/effects/bleeding/external/E in org.bleeding_effects_list)
+				bleeding_check = TRUE
+				break
+			var/show_limb = (org.burn_dam > 0 || org.brute_dam > 0 || (org.status & LIMB_SPLINTED) || open_incision || bleeding_check)
+			//quick fix for IB showing, fix later!!
+			for(var/datum/effects/bleeding/internal/ib in org.bleeding_effects_list)
+				show_limb = TRUE
+				break
+
+			var/org_name = "[capitalize(org.display_name)]"
+			if(org.status & LIMB_ROBOT)
+				if(org.status & LIMB_UNCALIBRATED_PROSTHETIC)
+					org_name += " (Nonfunctional Cybernetic)]"
+					show_limb = TRUE
+				else
+					org_name += " (Cybernetic)"
+			else if(org.status & LIMB_SYNTHSKIN)
+				org_name += " (Synthskin)"
+
+			var/burn_info = org.burn_dam > 0 ? "<span class='scannerburnb'>" + "[burn_treated ? "" : "{"]" + "[floor(org.burn_dam)]"  + "[burn_treated ? "" : "}"]" + "</span>" : "<span class='scannerburn'>0</span>"
+			//burn_info += "[burn_treated ? "" : "{B}"]"
+			var/brute_info =  org.brute_dam > 0 ? "<span class='scannerb'>" + "[brute_treated ? "" : "{"]" + "[floor(org.brute_dam)]" + "[brute_treated ? "" : "}"]" + "</span>" : "<span class='scanner'>0</span>"
+			//brute_info += "[brute_treated ? "" : "{T}"]"
+			var/fracture_info = ""
+			if(org.status & LIMB_BROKEN)
+				fracture_info = "{F}"
+				show_limb = 1
+			var/org_bleed = ""
+			if(bleeding_check)
+				org_bleed = SPAN_SCANNERB("(Bleeding)")
+			if(show_limb)
+				dat += "[org_name]: \t [burn_info] - [brute_info] [fracture_info][org_bleed][open_incision]"
+				for(var/datum/effects/bleeding/internal/ib in org.bleeding_effects_list)
+					dat += SPAN_SCANNERB("(Internal Bleeding)")
+					break
+				if(org.status & LIMB_SPLINTED_INDESTRUCTIBLE)
+					dat += "(Nanosplinted)"
+				else if(org.status & LIMB_SPLINTED)
+					dat += "(Splinted)"
+				dat += "\n"
+
+	// Show red messages - broken bokes, etc
+	if (src.getCloneLoss())
+		dat += "\t<span class='scanner'> *Subject appears to have been imperfectly cloned.</span>\n"
+	for(var/datum/disease/D in src.viruses)
+		if(!D.hidden[SCANNER])
+			dat += "\t<span class='scannerb'> *Warning: [D.form] Detected</span><span class='scanner'>\nName: [D.name].\nType: [D.spread].\nStage: [D.stage]/[D.max_stages].\nPossible Cure: [D.cure]</span>\n"
+	if (src.getBrainLoss() >= 100 || !src.has_brain())
+		dat += "\t<span class='scanner'> *Subject has taken extreme amounts of <b>brain damage</b></span>.\n"
+
+	if(src.has_brain() && src.stat != DEAD && ishuman(src))
+		if(!src.key)
+			dat += SPAN_WARNING("\tNo soul detected.\n") // they ghosted
+		else if(!src.client)
+			dat += SPAN_WARNING("\tSSD detected.\n") // SSD
+
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+
+		if(length(H.embedded_items) > 0)
+			dat += "\t[SPAN_SCANNER("*<b>Embedded object</b> detected. Advanced scanner required for location.")]\n"
+
+
+	var/reagents_in_body[0] // yes i know -spookydonut
+	if(istype(src, /mob/living/carbon))
+		// Show helpful reagents
+		if(src.reagents && (src.reagents.total_volume > 0))
+			var/unknown = 0
+			var/reagentdata[0]
+			for(var/A in src.reagents.reagent_list)
+				var/datum/reagent/R = A
+				reagents_in_body["[R.id]"] = R.volume
+				if(R.flags & REAGENT_SCANNABLE)
+					reagentdata["[R.id]"] = "[R.overdose != 0 && R.volume > R.overdose && !(R.flags & REAGENT_CANNOT_OVERDOSE) ? SPAN_WARNING("<b>OD: </b>") : ""] <font color='#9773C4'><b>[round(R.volume, 1)]u [R.name]</b></font>"
+				else
+					unknown++
+			if(length(reagentdata))
+				dat += "\n\tBeneficial reagents:\n"
+				for(var/d in reagentdata)
+					dat += "\t\t [reagentdata[d]]\n"
+			if(unknown)
+				dat += "\t<span class='scanner'> Warning: Unknown substance[(unknown>1)?"s":""] detected in subject's blood.</span>\n"
+
+	// Show body temp
+	dat += "\n\tBody Temperature: [src.bodytemperature-T0C]&deg;C ([src.bodytemperature*1.8-459.67]&deg;F)\n"
+
+	if (ishuman(src))
+		var/mob/living/carbon/human/H = src
+		// Show blood level
+		var/blood_volume = BLOOD_VOLUME_NORMAL
+		if(!(H.species && H.species.flags & NO_BLOOD))
+			blood_volume = floor(H.blood_volume)
+
+			var/blood_percent =  blood_volume / 560
+			var/blood_type = H.blood_type
+			blood_percent *= 100
+			if(blood_volume <= 500 && blood_volume > 336)
+				dat += "\t<span class='scanner'> <b>Blood Level LOW: [blood_percent]% [blood_volume]cl.</span> [SET_CLASS("Type: [blood_type]", INTERFACE_BLUE)]\n"
+			else if(blood_volume <= 336)
+				dat += "\t<span class='scanner'> <b>Blood Level CRITICAL: [blood_percent]% [blood_volume]cl.</span> [SET_CLASS("Type: [blood_type]", INTERFACE_BLUE)]\n"
+			else
+				dat += "\tBlood Level normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]\n"
+		// Show pulse
+		dat += "\tPulse: <span class='[H.pulse == PULSE_THREADY || H.pulse == PULSE_NONE ? INTERFACE_RED : ""]'>[H.get_pulse(GETPULSE_TOOL)] bpm.</span> </td></tr></table>"
+	dat = replacetext(dat, "\n", "<br>")
+	dat = replacetext(dat, "\t", "&emsp;")
+	dat = replacetext(dat, "class='warning'", "class='[INTERFACE_RED]'")
+	dat = replacetext(dat, "class='scanner'", "class='[INTERFACE_RED]'")
+	dat = replacetext(dat, "class='scannerb'", "style='font-weight: bold;' class='[INTERFACE_RED]'")
+	dat = replacetext(dat, "class='scannerburn'", "class='[INTERFACE_ORANGE]'")
+	dat = replacetext(dat, "class='scannerburnb'", "style='font-weight: bold;' class='[INTERFACE_ORANGE]'")
+	return dat
+
+/obj/item/device/healthanalyzer/soul/proc/update_beam()
+	if(current_beam)
+		QDEL_NULL(current_beam)
+	else if(connected_from && connected_to)
+		current_beam = connected_from.beam(connected_to, "iv_tube")
+
+
+/obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
+	if(M == user)
+		to_chat(user, SPAN_WARNING("You cannot connect this to yourself!"))
+		return
+
+	if(connected_to == M)
+		STOP_PROCESSING(SSobj, src)
+		user.visible_message("[user] detaches [src] from [connected_to].", \
+			"You detach [src] from [connected_to].")
+		//connected_to.active_transfusions -= src
+		connected_to.base_pixel_x = 0
+		connected_to = null
+		connected_from = null
+		update_beam()
+		return
+
+	if(user.action_busy)
+		return
+
+	if(!do_after(user, skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) ? (1 SECONDS) * user.get_skill_duration_multiplier(SKILL_SURGERY) : (8 SECONDS), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+		to_chat(user, SPAN_WARNING("You were interrupted before you could finish!"))
+		return
+
+	if(istype(M, /mob/living/carbon/human))
+		connected_to = M
+		connected_from = user
+		//connected_to.active_transfusions += src
+		connected_to.base_pixel_x = 5
+		START_PROCESSING(SSobj, src)
+		user.visible_message("[user] attaches \the [src] to [connected_to].", \
+			"You attach \the [src] to [connected_to].")
+		icon_state = "Medical_scanner_open"
+		overlays += image(icon, src, "+running")
+		update_beam()
+
+///Used to standardize effects of a blood bag disconnecting improperly
+/obj/item/device/healthanalyzer/soul/proc/bad_disconnect()
+	if(!connected_to)
+		return
+
+	connected_to.visible_message("[src] breaks free of [connected_to]!", "[src] is pulled out of you!")
+	connected_to.apply_damage(3, BRUTE, pick("r_arm", "l_arm"))
+	if(connected_to.pain.feels_pain)
+		connected_to.emote("pain")
+	//connected_to.active_transfusions -= src
+	connected_to.base_pixel_x = 0
+	connected_to = null
+	connected_from = null
+	icon_state = "Medical_scanner"
+	overlays -= image(icon, src, "+running")
+	update_beam()
 
 /obj/item/device/healthanalyzer/alien
 	name = "\improper YMX scanner"
