@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Vehicle hardpoints can now sprite-click in a similar manner to other projectile weapons."
