@@ -18,11 +18,11 @@
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
 	var/explosion_power = 100
-	var/explosion_falloff = 25
+	var/explosion_falloff = 20
 	var/shrapnel_count = 32
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 
 /obj/item/explosive/grenade/high_explosive/New()
@@ -54,10 +54,9 @@
 	if(active && detonate) // Active, and we reached our destination.
 		if(shrapnel_count)
 			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-			sleep(1) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
 		apply_explosion_overlay()
-		if(explosion_power)
-			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
 		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/proc/apply_explosion_overlay()
