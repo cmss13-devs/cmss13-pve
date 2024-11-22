@@ -1,0 +1,4 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - balance: "Tacmap cooldown is 10 seconds now."
