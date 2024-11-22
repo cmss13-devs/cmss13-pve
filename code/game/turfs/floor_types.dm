@@ -356,6 +356,7 @@
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "default"
 	plating_type = /turf/open/floor/plating/almayer
+	footstep_sound = "metal_footsep"
 
 /turf/open/floor/almayer/pod_landing_floor
 	desc = "There's a hatch above it, presumably to allow pods to drop in."

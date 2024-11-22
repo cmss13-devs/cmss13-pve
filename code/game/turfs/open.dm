@@ -12,6 +12,7 @@
 	var/scorchable = FALSE //if TRUE set to be an icon_state which is the full sprite version of whatever gets scorched --> for border turfs like grass edges and shorelines
 	var/scorchedness = 0 //how scorched is this turf 0 to 3
 	var/icon_state_before_scorching //this is really dumb, blame the mappers...
+	var/footstep_sound
 
 /turf/open/Initialize(mapload, ...)
 	. = ..()

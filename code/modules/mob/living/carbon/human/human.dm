@@ -3,6 +3,7 @@
 	GLOB.human_mob_list += src
 	GLOB.alive_human_list += src
 	SShuman.processable_human_list += src
+	AddComponent(/datum/component/tile_footstep, 2 , 25, 7, 1)
 
 	if(!species)
 		if(new_species)

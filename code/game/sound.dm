@@ -530,6 +530,10 @@
 				sound = pick('sound/effects/giant_lizard_growl1.ogg', 'sound/effects/giant_lizard_growl2.ogg')
 			if("giant_lizard_hiss")
 				sound = pick('sound/effects/giant_lizard_hiss1.ogg', 'sound/effects/giant_lizard_hiss2.ogg')
+
+			// footsteps
+			if("metal_footstep")
+				sound = pick('sound/footstep/metal/metal_1.ogg','sound/footstep/metal/metal_2.ogg','sound/footstep/metal/metal_3.ogg','sound/footstep/metal/metal_4.ogg','sound/footstep/metal/metal_5.ogg','sound/footstep/metal/metal_6.ogg','sound/footstep/metal/metal_7.ogg','sound/footstep/metal/metal_8.ogg','sound/footstep/metal/metal_9.ogg','sound/footstep/metal/metal_10.ogg','sound/footstep/metal/metal_11.ogg','sound/footstep/metal/metal_12.ogg','sound/footstep/metal/metal_13.ogg','sound/footstep/metal/metal_14.ogg','sound/footstep/metal/metal_15.ogg','sound/footstep/metal/metal_16.ogg','sound/footstep/metal/metal_17.ogg','sound/footstep/metal/metal_18.ogg',)
 	return sound
 
 /client/proc/generate_sound_queues()
