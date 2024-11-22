@@ -168,6 +168,8 @@ FORENSIC SCANNER
 	icon = 'icons/obj/items/Medical Scanner new.dmi'
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
+	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
+	w_class = SIZE_LARGE
 	var/mode = 1
 	var/report_delay_counter = 0
 	var/report_delay_threshold = 3 //every three processes, record to report buffer
@@ -181,7 +183,7 @@ FORENSIC SCANNER
 	if(!connected_to)
 		return PROCESS_KILL
 
-	//if we're not on a human stop doing stuff
+	/*if we're not on a human stop doing stuff
 	if(!ishuman(loc))
 		bad_disconnect()
 		return PROCESS_KILL
@@ -191,7 +193,7 @@ FORENSIC SCANNER
 	if(!(current_human.l_hand == src || current_human.r_hand == src))
 		bad_disconnect()
 		return PROCESS_KILL
-
+	*/
 	//if we're further than 1 tile away or we're not on a turf stop doing stuff
 	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
 		bad_disconnect()
@@ -442,6 +444,7 @@ FORENSIC SCANNER
 		//connected_to.active_transfusions += src
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
+		report_delay_counter = report_delay_threshold
 		user.visible_message("[user] attaches \the [src] to [connected_to].", \
 			"You attach \the [src] to [connected_to].")
 		icon_state = "Medical_scanner_open"
