@@ -405,13 +405,14 @@
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet. This one comes with flaps to keep the sun off your neck."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap_jungle"
-
+	flags_marine_hat = HAT_GARB_OVERLAY
 /obj/item/clothing/head/cmcap/flap/desert
 	name = "\improper desert expedition cap"
 	icon_state = "flapcap_desert"
 
 /obj/item/clothing/head/cmcap/flap/snow
 	name = "\improper snow expedition cap"
+	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the wind and snow, it's much more comfortable than a helmet. This one comes with flaps to keep your neck and ears warm."
 	icon_state = "flapcap_snow"
 
 /obj/item/clothing/head/cmcap/reporter
