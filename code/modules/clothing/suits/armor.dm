@@ -90,15 +90,10 @@
 		/obj/item/storage/belt/gun/m4a3,
 		/obj/item/storage/belt/gun/m44,
 	)
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/pilot)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
-
-/obj/item/clothing/suit/armor/vest/pilot/Initialize()
-	. = ..()
-	select_gamemode_skin(/obj/item/clothing/suit/armor/vest/pilot)
 
 /obj/item/clothing/suit/armor/vest/dutch
 	name = "armored jacket"
@@ -114,7 +109,6 @@
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/dutch)
 
 /obj/item/clothing/suit/armor/vest/security
 	name = "Wey-Yu security armor"
