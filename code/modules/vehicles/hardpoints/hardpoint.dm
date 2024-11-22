@@ -125,6 +125,8 @@
 
 	/// Currently selected target to fire at. Set with set_target().
 	var/atom/target
+	/// Allows hardpoint to hit target directly. Shoot non dense obj and mobs that are lying down.
+	var/allow_sprite_click = TRUE
 	/// The type of projectile to fire
 	var/projectile_type = /obj/projectile
 
@@ -584,6 +586,10 @@
 
 /// Actually fires the gun, sets up the projectile and fires it.
 /obj/item/hardpoint/proc/handle_fire(atom/target, mob/living/user, params)
+	//Create this so the bullet can remember what atom was actually sprite clicked. Prevents being impossible to hit while lying down.
+	var/atom/target_overide = target
+	if(!allow_sprite_click)
+		target_overide = null
 	var/turf/origin_turf = get_origin_turf()
 
 	var/obj/projectile/projectile_to_fire = generate_bullet(user, origin_turf)
@@ -596,7 +602,7 @@
 		projectile_to_fire.scatter = scatter
 		target = simulate_scatter(projectile_to_fire, target, origin_turf, get_turf(target), user)
 
-	INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
+	INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed, target_overide)
 	projectile_to_fire = null
 
 	shots_fired++
