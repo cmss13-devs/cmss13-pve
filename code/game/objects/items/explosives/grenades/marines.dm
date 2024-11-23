@@ -655,10 +655,10 @@
 /obj/item/explosive/grenade/nerve_gas
 	name = "\improper CN20 canister grenade"
 	desc = "A canister grenade of deadly nerve gas. It is set to detonate in 4 seconds."
-	icon_state = "flashbang2"//temp icon
+	icon_state = "grenade_nerve"//temp icon
 	det_time = 40
-	item_state = "grenade_phos_clf"//temp icon
-	underslug_launchable = FALSE
+	item_state = "grenade_phos"//temp icon
+	underslung_launchable = TRUE
 	harmful = TRUE
 	antigrief_protection = TRUE
 	/// The nerve gas datum
@@ -684,7 +684,7 @@
 	qdel(src)
 
 /obj/item/explosive/grenade/nerve_gas/xeno
-	name = "\improper CN20-X canister grenade"
+	name = "\improper M40 NGDP nerve gas delivery grenade"
 	nerve_gas_type = /datum/effect_system/smoke_spread/cn20/xeno
 
 /*

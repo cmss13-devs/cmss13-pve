@@ -1137,6 +1137,7 @@
 #include "code\game\objects\items\devices\aicard.dm"
 #include "code\game\objects\items\devices\autopsy_scanner.dm"
 #include "code\game\objects\items\devices\binoculars.dm"
+#include "code\game\objects\items\devices\blinker.dm"
 #include "code\game\objects\items\devices\cictablet.dm"
 #include "code\game\objects\items\devices\cloaking.dm"
 #include "code\game\objects\items\devices\clue_scanner.dm"

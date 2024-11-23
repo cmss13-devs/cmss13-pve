@@ -1101,6 +1101,7 @@
 	desc_lore = "The several-paragraph long expository pamphlet that usually comes with these is missing."
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_jumpsuit = NO_FLAGS
+	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 

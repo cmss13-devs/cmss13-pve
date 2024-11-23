@@ -844,6 +844,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
 
+/datum/gear/weapon/tracer_unit
+	display_name = "Tracer Unit"
+	cost = 3
+	path = /obj/item/attachable/tracer
+
 /datum/gear/drink
 	category = "Canned drinks"
 

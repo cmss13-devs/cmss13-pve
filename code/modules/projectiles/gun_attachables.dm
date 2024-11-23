@@ -246,6 +246,9 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/proc/handle_pre_break_attachment_description(base_description_text as text)
 	return base_description_text
 
+/obj/item/attachable/proc/modify_bullet(obj/projectile/projectile_to_fire)
+	return
+
 // ======== Muzzle Attachments ======== //
 
 /obj/item/attachable/suppressor
@@ -263,6 +266,39 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
+
+/obj/item/attachable/tracer
+	name = "tracer unit"
+	desc = "While intended for airsoft and, rarely, firing excersises during UACG training, some marines buy these attachments simply because firing purple bullets is funny.\n<span class='notice'>Tracer color can be changed using a <b>screwdriver</b>. Activating it <b>in hand</b> resets tracer color.</span>"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "tracer"
+	slot = "muzzle"
+	pixel_shift_y = 15
+	attach_icon = "tracer_a"
+	hud_offset_mod = -3
+	var/tracer_color = null
+
+/obj/item/attachable/tracer/modify_bullet(obj/projectile/projectile_to_fire)
+	if(!tracer_color)
+		return
+
+	projectile_to_fire.icon_state = "blank"
+	projectile_to_fire.color = tracer_color
+	projectile_to_fire.light_color = tracer_color
+	projectile_to_fire.set_light_range(1)
+	projectile_to_fire.set_light_power(0.5)
+	projectile_to_fire.set_light_color(tracer_color)
+	projectile_to_fire.set_light_on(1)
+
+/obj/item/attachable/tracer/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))
+		tracer_color = input(user, "Please select the main color.", "Tracer color") as color
+	..()
+
+/obj/item/attachable/tracer/attack_self(mob/user)
+	..()
+	tracer_color = null
+	to_chat(user, SPAN_NOTICE("You reset the tracer color"))
 
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"

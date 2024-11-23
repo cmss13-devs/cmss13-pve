@@ -66,7 +66,7 @@
 /obj/item/mortar_shell/nerve/detonate(turf/T)
 	cell_explosion(T, 65, 95, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, null)
 	spawn(5)
-		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+		var/datum/effect_system/smoke_spread/cn20/xeno/cn20 = new()
 		cn20.set_up(5, 0, T, null)
 		cn20.start()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 35, 1, 4)
