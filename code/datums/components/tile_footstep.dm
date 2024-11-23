@@ -15,7 +15,7 @@
 	var/drag_sounds
 	var/footstep_sound
 
-/datum/component/tile_footstep/Initialize(steps_ = 2, volume_ = 25, range_ = 7, falloff_ = 1, drag_sounds_ = 'sound/footstep/drag/drag_1.ogg')
+/datum/component/tile_footstep/Initialize(steps_ = 3, volume_ = 25, range_ = 7, falloff_ = 1, drag_sounds_ = 'sound/footstep/drag/drag_1.ogg')
 	if(!isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	steps = steps_
@@ -27,26 +27,28 @@
 	RegisterSignal(parent, list(COMSIG_MOVABLE_MOVED), PROC_REF(play_simplestep))
 
 /datum/component/tile_footstep/proc/prepare_step()
-	var/turf/open/T = get_turf(parent)
-	if(!istype(T))
+	var/turf/open/footstep_turf = get_turf(parent)
+	if(!istype(footstep_turf))
 		return
 
-	var/mob/living/LM = parent
-	if(LM.buckled || LM.throwing || LM.is_ventcrawling || LM.stat == DEAD)
+	var/mob/living/living_mob = parent
+	if(living_mob.buckled || living_mob.throwing || living_mob.is_ventcrawling || living_mob.stat == DEAD)
 		return
 
-	if(LM.life_steps_total % steps)
+	if(living_mob.life_steps_total % steps)
 		return
 
-	return T
+	return footstep_turf
 
 /datum/component/tile_footstep/proc/play_simplestep()
 	SIGNAL_HANDLER
-	var/turf/open/T = prepare_step()
-	if(!T)
+	var/turf/open/footstep_turf = prepare_step()
+	if(!footstep_turf)
 		return
-	var/mob/living/parent_mob = parent
+	var/mob/living/carbon/human/parent_mob = parent
 	if(parent_mob.body_position == LYING_DOWN)
-		playsound(T, drag_sounds, volume, rand(20000, 25000), range, falloff = falloff)
-	else if(T.footstep_sound)
-		playsound(T, T.footstep_sound, volume, rand(20000, 25000), range, falloff = falloff)
+		playsound(footstep_turf, drag_sounds, volume, rand(20000, 25000), range, falloff = falloff)
+	if(!parent_mob.shoes)
+		playsound(footstep_turf, footstep_turf.barefoot_sound, volume, rand(20000, 25000), range, falloff = falloff)
+	else if(footstep_turf.footstep_sound)
+		playsound(footstep_turf, footstep_turf.footstep_sound, volume, rand(20000, 25000), range, falloff = falloff)

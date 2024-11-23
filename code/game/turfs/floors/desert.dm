@@ -23,6 +23,7 @@
 /turf/open/desert/dirt
 	name = "desert"
 	icon_state = "desert1"
+	footstep_sound = "sand_footstep"
 
 /turf/open/desert/dirt/is_weedable()
 	return FULLY_WEEDABLE

@@ -13,6 +13,8 @@
 	var/scorchedness = 0 //how scorched is this turf 0 to 3
 	var/icon_state_before_scorching //this is really dumb, blame the mappers...
 	var/footstep_sound
+	var/barefoot_sound = "barefoot_footstep"
+	var/barefoot_override = FALSE
 
 /turf/open/Initialize(mapload, ...)
 	. = ..()
@@ -640,6 +642,7 @@
 	baseturfs = /turf/open/gm/river
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
+	footstep_sound = "water_footstep"
 
 /turf/open/gm/river/Initialize(mapload, ...)
 	. = ..()
@@ -914,6 +917,7 @@
 	icon = 'icons/turf/floors/asphalt.dmi'
 	icon_state = "sunbleached_asphalt"
 	baseturfs = /turf/open/asphalt
+	footstep_sound = "concrete_footstep"
 
 /turf/open/asphalt/tile
 	icon_state = "tile"

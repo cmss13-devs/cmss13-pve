@@ -9,6 +9,7 @@
 	icon_state = "plating"
 	intact_tile = FALSE
 	tool_flags = NO_FLAGS
+	footstep_sound = "metal_footstep"
 
 /turf/open/floor/plating/is_plating()
 	return TRUE
@@ -263,6 +264,7 @@
 	desc = "Cats really don't like these things."
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "plating_catwalk"
+	footstep_sound = "catwalk_footstep"
 	var/base_state = "plating" //Post mapping
 	var/covered = TRUE
 
@@ -283,6 +285,7 @@
 			var/obj/item/stack/catwalk/R = new(src, 1, type)
 			R.add_to_stacks(usr)
 			covered = FALSE
+			footstep_sound = "metal_footstep"
 			to_chat(user, SPAN_WARNING("You remove the top of the catwalk."))
 			playsound(src, 'sound/items/Crowbar.ogg', 25, 1)
 			update_icon()
@@ -292,6 +295,7 @@
 			var/obj/item/stack/catwalk/E = W
 			E.use(1)
 			covered = TRUE
+			footstep_sound = "catwalk_footstep"
 			to_chat(user, SPAN_WARNING("You replace the top of the catwalk."))
 			playsound(src, 'sound/items/Crowbar.ogg', 25, 1)
 			update_icon()
@@ -356,7 +360,7 @@
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "default"
 	plating_type = /turf/open/floor/plating/almayer
-	footstep_sound = "metal_footsep"
+	footstep_sound = "metal_footstep"
 
 /turf/open/floor/almayer/pod_landing_floor
 	desc = "There's a hatch above it, presumably to allow pods to drop in."
@@ -1262,6 +1266,7 @@
 	icon_state = "wood"
 	tile_type = /obj/item/stack/tile/wood
 	tool_flags = BREAK_CROWBAR|REMOVE_SCREWDRIVER
+	footstep_sound = "wood_footstep"
 
 /turf/open/floor/wood/is_wood_floor()
 	return TRUE
@@ -2271,6 +2276,7 @@
 	name = "wooden floor"
 	icon_state = "oldwood1"
 	tile_type = /obj/item/stack/tile/wood
+	footstep_sound = "wood_footstep"
 
 /turf/open/floor/interior/wood/is_wood_floor()
 	return TRUE
