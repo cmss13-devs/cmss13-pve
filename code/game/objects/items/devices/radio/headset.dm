@@ -10,6 +10,7 @@
 	subspace_transmission = 1
 	canhear_range = 0 // can't hear headsets from very far away
 
+
 	flags_equip_slot = SLOT_EAR
 	inherent_traits = list(TRAIT_ITEM_EAR_EXCLUSIVE)
 	var/translate_apollo = FALSE
@@ -21,7 +22,7 @@
 
 	var/list/inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_SL,
+		"Section Sergeant" = TRACKER_SL,
 		"Squad Sergeant" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
@@ -410,8 +411,8 @@
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 
-	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Platoon Sergeant" in tracking_options))
-		locate_setting = tracking_options["Platoon Sergeant"]
+	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Section Sergeant" in tracking_options))
+		locate_setting = tracking_options["Section Sergeant"]
 		return
 
 	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Sergeant" in tracking_options))
@@ -514,7 +515,12 @@
 /obj/item/device/radio/headset/almayer/marine/mp_honor
 	name = "marine honor guard radio headset"
 	desc = "This is used by members of the marine honor guard. Channels are as follows: :p - military police, :v - marine command. :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
+	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "sec_headset"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		)
 	initial_keys = list(/obj/item/device/encryptionkey/mmpo)
 	volume = RADIO_VOLUME_RAISED
 	locate_setting = TRACKER_CO
@@ -614,7 +620,7 @@
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Section Sergeant" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -625,7 +631,62 @@
 /obj/item/device/radio/headset/almayer/marine
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	icon_state = "generic_headset"
+	item_state = "headset"
 	frequency = ALPHA_FREQ
+
+//############################## VISIBLE HEADSETS ###############################
+/obj/item/device/radio/headset/almayer/marine/solardevils
+	name = "marine radio headset"
+	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_override = 'icons/mob/humans/onmob/head_1.dmi'
+	icon_state = "uscm_headset"
+	item_state = "uscm_headset"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/head_1.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
+		)
+	frequency = ALPHA_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon
+	name = "USCM SOF headset"
+	desc = "Issued exclusively to Marine Raiders and members of the USCM's Force Reconnaissance."
+	frequency = SOF_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/soc/forecon)
+	volume = RADIO_VOLUME_QUIET
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
+	frequency = CRYO_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp
+	name = "UPP Naval Infantry headset"
+	desc = "A special headset used by UPP military."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	frequency = UPP_FREQ
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_UPP
+	minimap_type = MINIMAP_FLAG_UPP
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
+	name = "UPP Territorial Guard headset"
+	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."
+	frequency = UPP_GRD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/medic
+	name = "UPP-MED headset"
+	desc = "A special headset used by UPP military. Channels are as follows: #m - medical."
+	frequency = UPP_GRD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/medic)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/command
+	name = "UPP-CMD headset"
+	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
+	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha

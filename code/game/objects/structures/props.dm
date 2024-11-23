@@ -746,6 +746,10 @@
 	icon = 'icons/obj/structures/props/ice_colony/Hula.dmi'
 	icon_state = "Hula_Gal"
 
+/obj/structure/prop/ice_colony/hula_girl/attack_hand(mob/user)
+	..()
+	flick("Hula_Gal_Bounce", src)
+
 /obj/structure/prop/ice_colony/tiger_rug
 	name = "tiger rug"
 	desc = "A rather tasteless but impressive tiger rug. Must've costed a fortune to get this exported to the rim."

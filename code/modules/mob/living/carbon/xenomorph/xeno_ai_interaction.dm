@@ -122,6 +122,19 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return DOOR_PENALTY
 
+////////////////////////////////////////
+//         AIRLOCK ASSEMBLIES         //
+////////////////////////////////////////
+
+/obj/structure/airlock_assembly/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(isfacehugger(X))
+		return -1 // We LOVE going under doors!
+
+	return DOOR_PENALTY
 
 /////////////////////////////
 //         TABLES          //
