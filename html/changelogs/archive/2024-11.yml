@@ -63,3 +63,17 @@
 2024-11-22:
   Ediblebomb:
   - spellcheck: Removed any mention of the USCM from the berets' name and description.
+2024-11-23:
+  AndroBetel:
+  - rscadd: Hula girl now dances when flicked.
+  KoishiVibe:
+  - balance: Tacmap cooldown is 10 seconds now.
+  - rscadd: Nominally TMan compliant flavortext. Look, there's not a lot to work with
+      here, okay?
+  - rscdel: Basically all of the old names of dropship weapons.
+  - rscdel: The BLU-200 sprite is no longer used. In the interim, the napalm sprite.
+  - qol: GAU and Heavy GAU are now 25mm Multipurpose Strike and 25mm Armorpiercing
+      Strike respectively.
+  The32bitguy:
+  - bugfix: Vehicle hardpoints can now sprite-click in a similar manner to other projectile
+      weapons.
