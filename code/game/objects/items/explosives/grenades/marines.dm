@@ -658,7 +658,7 @@
 	icon_state = "grenade_nerve"//temp icon
 	det_time = 40
 	item_state = "grenade_phos"//temp icon
-	underslung_launchable = TRUE
+	underslug_launchable = TRUE
 	harmful = TRUE
 	antigrief_protection = TRUE
 	/// The nerve gas datum
