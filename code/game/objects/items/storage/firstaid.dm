@@ -11,7 +11,7 @@
 	desc = "It's an emergency medical kit for those serious boo-boos. With medical training you can fit this in a backpack."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
-	open_state = "kit_empty"
+	var/open_state = "kit_empty"
 	throw_speed = SPEED_FAST
 	throw_range = 8
 	use_sound = "toolbox"

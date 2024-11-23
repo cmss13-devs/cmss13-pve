@@ -2108,9 +2108,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8
+	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/cryo_cells)
 "ahz" = (
 /obj/effect/decal/warning_stripes{
@@ -2203,17 +2203,8 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "ahS" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonprep)
 "ahT" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3171,11 +3162,11 @@
 "alc" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Section Sergeant"
+	job = "Platoon Sergeant"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Corpsman"
+	job = "Platoon Corpsman"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -3685,7 +3676,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/cryo_cells)
@@ -4370,8 +4361,23 @@
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
 "apm" = (
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/platoonprep)
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_y = 3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
 "apn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -6724,7 +6730,8 @@
 /area/golden_arrow/cryo_cells)
 "axM" = (
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	light_power = 0.7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -7707,7 +7714,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -10691,18 +10698,6 @@
 "aKn" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"aKo" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/cryo_cells)
 "aKq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13997,23 +13992,17 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aWC" = (
-/obj/structure/bed/chair{
-	dir = 4;
-	pixel_y = 3
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 26
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/briefing)
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/cryo_cells)
 "aWE" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -14031,6 +14020,18 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"aWI" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aWJ" = (
 /turf/open/floor/almayer/edge/smooth/corner/west,
@@ -25279,7 +25280,7 @@ aoU
 aog
 aoU
 apA
-aKo
+aWC
 aBq
 aEe
 abx
@@ -25450,13 +25451,13 @@ aEG
 aWh
 aog
 awW
-ahx
+aAv
 asd
 aog
 aog
 aog
 afy
-aAv
+aWI
 aTn
 aog
 abx
@@ -25627,13 +25628,13 @@ aEG
 aWh
 aFo
 awW
-ahx
+aAv
 alD
 alc
 aog
 alc
 awW
-aAv
+aWI
 aTn
 aFo
 cuV
@@ -25804,13 +25805,13 @@ aEG
 aWh
 aog
 awW
-ahx
+aAv
 aPo
 aog
 aog
 aog
 aYb
-aAv
+aWI
 aTn
 aog
 abx
@@ -25981,13 +25982,13 @@ aWh
 aWh
 aAI
 aZw
-ahS
+amS
 azT
 aoU
 aog
 aoU
 aZw
-amS
+ahx
 aWb
 aAI
 abx
@@ -29524,10 +29525,10 @@ ard
 ard
 aIr
 aIr
-apm
-apm
-apm
-apm
+ahS
+ahS
+ahS
+ahS
 aIr
 aIr
 aOO
@@ -30425,7 +30426,7 @@ oCT
 azn
 aEo
 aEo
-aWC
+apm
 fUj
 vFU
 azc
