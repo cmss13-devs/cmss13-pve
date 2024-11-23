@@ -168,7 +168,7 @@
 
 	else if(ismob(brain.current_target))
 		var/mob/current_mob_target = brain.current_target
-		if(ccurrent_mob_targett.stat == DEAD)
+		if(current_mob_target.stat == DEAD)
 			qdel(src)
 			return
 

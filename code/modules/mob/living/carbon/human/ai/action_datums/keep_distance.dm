@@ -69,20 +69,20 @@
 	var/mob/living/carbon/human/tied_human = brain.tied_human
 	var/range
 	var/is_incap = FALSE
-	if(ismob(current_target))
-		var/mob/current_mob_target = current_target
+	if(ismob(brain.current_target))
+		var/mob/current_mob_target = brain.current_target
 		is_incap = current_mob_target.is_mob_incapacitated()
-		
+
 	if(brain.in_cover || is_incap)
 		range = brain.gun_data.minimum_range
 	else
 		range = brain.gun_data.optimal_range
 
-	if(get_dist(brain.tied_human, current_target) >= range)
+	if(get_dist(brain.tied_human, brain.current_target) >= range)
 		return
 
 	var/moved = FALSE
-	var/relative_dir = Get_Compass_Dir(current_target, tied_human)
+	var/relative_dir = Get_Compass_Dir(brain.current_target, tied_human)
 	for(var/direction in list(relative_dir, turn(relative_dir, 90), turn(relative_dir, -90)))
 		var/turf/destination = get_step(tied_human, direction)
 		if(brain.move_to_next_turf(destination))
