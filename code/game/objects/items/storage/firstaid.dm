@@ -11,6 +11,7 @@
 	desc = "It's an emergency medical kit for those serious boo-boos. With medical training you can fit this in a backpack."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
+	open_state = "kit_empty"
 	throw_speed = SPEED_FAST
 	throw_range = 8
 	use_sound = "toolbox"
@@ -51,7 +52,7 @@
 
 /obj/item/storage/firstaid/update_icon()
 	if(content_watchers || !length(contents))
-		icon_state = "kit_empty"
+		icon_state = "[open_state]"
 	else
 		icon_state = icon_full
 
@@ -256,6 +257,7 @@
 	name = "first-aid pack"
 	desc = "A soft first aid kit typically containing essential medical supplies for use in the field."
 	icon_state = "softpack"
+	open_state = "softpack_empty"
 	use_sound = 'sound/items/zip.ogg'
 
 /obj/item/storage/firstaid/softpack/fill_preset_inventory()

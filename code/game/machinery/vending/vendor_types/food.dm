@@ -48,33 +48,6 @@
 		list("W-Y Flask", 0, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
 
-//------------PVE CANTEEN FOOD VENDOR---------------
-/obj/structure/machinery/cm_vending/sorted/pve_food
-	name = "\improper NestleCo AutoChef"
-	desc = "An autochef food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need. Inedible-looking sludge is passed through a variety of heaters, re-shapers, and solidifiers before being artificially flavored to create something that looks and tastes mostly edible."
-	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
-	icon_state = "food"
-	req_one_access = list()
-	listed_products = list()
-	hackable = FALSE
-	wrenchable = FALSE
-	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND
-
-/obj/structure/machinery/cm_vending/sorted/pve_food/get_listed_products(mob/user)
-	return GLOB.cm_vending_sorted_pve_food
-
-GLOBAL_LIST_INIT(cm_vending_sorted_pve_food, list(
-		list("MAIN COURSE", 0, null, null, null),
-		list("NestleCo Vegi-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/main/soylent/green, MARINE_CAN_BUY_MAIN),
-		list("NestleCo Meat-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/main/soylent/red, MARINE_CAN_BUY_MAIN),
-		list("NestleCo Grain-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/main/soylent/yellow, MARINE_CAN_BUY_MAIN),
-
-		list("SIDE DISH", 0, null, null, null),
-		list("NestleCo Vegi-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/side/soylent/green, MARINE_CAN_BUY_SIDE),
-		list("NestleCo Meat-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/side/soylent/red, MARINE_CAN_BUY_SIDE),
-		list("NestleCo Grain-Flavored NutriGo(TM)", 0, /obj/item/reagent_container/food/snacks/canteen/side/soylent/yellow, MARINE_CAN_BUY_SIDE),
-		))
-
 //------------BOOZE-O-MAT VENDOR---------------
 
 /obj/structure/machinery/cm_vending/sorted/boozeomat

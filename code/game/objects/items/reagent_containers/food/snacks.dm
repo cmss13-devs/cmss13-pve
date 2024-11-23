@@ -3449,7 +3449,7 @@
 
 // ---- Canteen Food ----
 
-//mains
+//mains to be used for whenever the food is finished
 /obj/item/reagent_container/food/snacks/canteen
 	name = "Canteen food"
 	desc = "What the hell is this? You shouldn't be seeing this."
