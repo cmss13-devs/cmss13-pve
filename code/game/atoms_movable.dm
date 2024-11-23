@@ -315,7 +315,7 @@
 	clone.transform = transform
 	clone.invisibility = invisibility
 	clone.flags_atom = flags_atom
-	clone.layer = clone.proj_base_layer ? (clone.proj_base_layer+(layer/10)) : layer
+	clone.layer = layer
 	clone.opacity = clone.proj_opacity
 	clone.plane = clone.proj_plane // necessary when placing movables (typically plane -6) under a turf (typically plane -7)
 	clone.density = density
@@ -323,13 +323,10 @@
 	clone.name = name
 	clone.mouse_opacity = clone.proj_mouse_opacity
 
-	for(var/atom/overlay in clone.overlays)
-		if(!istype(overlay, /atom))
-			// we can't handle it so get rid of it
+	if(clone.proj_base_layer)
+		for(var/overlay in clone.overlays) // overlays cannot be reliably interacted with to apply layers
 			clone.overlays -= overlay
-			continue
-		overlay.layer = clone.proj_base_layer ? (clone.proj_base_layer+(overlay.layer/10)) : overlay.layer
-		overlay.plane = clone.proj_plane
+		clone.layer = clone.proj_base_layer+(layer/10)
 
 	////////////////////
 	if(light) //Clone lighting
