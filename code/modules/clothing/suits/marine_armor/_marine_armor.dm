@@ -946,6 +946,8 @@
 	icon_state = "uacg"
 	item_state = "uacg"
 	flags_atom = NO_SNOW_TYPE
+	name = "\improper M3 pattern armor"
+	specialty = "M3 pattern"
 
 /obj/item/clothing/suit/marine/guard/Initialize(mapload)
 	. = ..()
