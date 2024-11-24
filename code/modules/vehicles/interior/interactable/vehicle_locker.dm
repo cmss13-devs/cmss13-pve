@@ -319,18 +319,8 @@
 
 /obj/structure/vehicle_locker/cabinet/utensils/Initialize()
 	. = ..()
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
-	new /obj/item/tool/kitchen/utensil/fork(container)
+	for(var/i in 1 to 12)
+		new /obj/item/tool/kitchen/utensil/fork(container)
 
 /obj/structure/vehicle_locker/cabinet/utensils/flip
 	icon_state = "cabinet2"
