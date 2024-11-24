@@ -308,18 +308,8 @@
 
 /obj/structure/vehicle_locker/cabinet/cups/Initialize()
 	. = ..()
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
-	new /obj/item/reagent_container/food/drinks/plasticcup(container)
+	for(var/i in 1 to 12)
+		new /obj/item/reagent_container/food/drinks/plasticcup(container)
 
 /obj/structure/vehicle_locker/cabinet/cups/flip
 	icon_state = "cabinet2"
