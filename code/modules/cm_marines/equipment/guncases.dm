@@ -322,33 +322,33 @@
 /obj/item/storage/box/guncase/heavy/fuel/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(src.icon, "case_lid_open")
+		overlays += image(icon, "case_lid_open")
 	else
-		overlays += image(src.icon, "fuelcase_lid")
+		overlays += image(icon, "fuelcase_lid")
 		return
 
-	if(length(src.contents) >= 1)
-		var/image/source_image = image(src.icon, "+fuel_bottom")
+	if(length(contents) >= 1)
+		var/image/source_image = image(icon, "+fuel_bottom")
 		source_image.pixel_x = 0
 		overlays += source_image
-	if(length(src.contents) >= 2)
-		var/image/source_image = image(src.icon, "+fuel_bottom")
+	if(length(contents) >= 2)
+		var/image/source_image = image(icon, "+fuel_bottom")
 		source_image.pixel_x = 8
 		overlays += source_image
-	if(length(src.contents) >= 3)
-		var/image/source_image = image(src.icon, "+fuel_bottom")
+	if(length(contents) >= 3)
+		var/image/source_image = image(icon, "+fuel_bottom")
 		source_image.pixel_x = 16
 		overlays += source_image
-	if(length(src.contents) >= 4)
-		var/image/source_image = image(src.icon, "+fuel")
+	if(length(contents) >= 4)
+		var/image/source_image = image(icon, "+fuel")
 		source_image.pixel_x = 0
 		overlays += source_image
-	if(length(src.contents) >= 5)
-		var/image/source_image = image(src.icon, "+fuel")
+	if(length(contents) >= 5)
+		var/image/source_image = image(icon, "+fuel")
 		source_image.pixel_x = 8
 		overlays += source_image
-	if(length(src.contents) >= 6)
-		var/image/source_image = image(src.icon, "+fuel")
+	if(length(contents) >= 6)
+		var/image/source_image = image(icon, "+fuel")
 		source_image.pixel_x = 16
 		overlays += source_image
 
