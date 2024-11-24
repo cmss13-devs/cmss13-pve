@@ -614,5 +614,5 @@
 /obj/structure/machinery/computer/ares_console/large/Initialize()
 	. = ..()
 	overlays.Cut()
-	var/image/source_image = image(src.icon, "ai_interface_top", layer = ABOVE_MOB_LAYER)
+	var/image/source_image = image(icon, "ai_interface_top", layer = ABOVE_MOB_LAYER)
 	overlays += source_image
