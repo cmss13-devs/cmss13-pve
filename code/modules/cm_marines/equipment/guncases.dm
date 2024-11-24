@@ -158,6 +158,7 @@
 	new /obj/item/weapon/gun/flamer(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
+
 //------------ heavy cases
 
 /obj/item/storage/box/guncase/heavy
@@ -179,8 +180,6 @@
 /obj/item/storage/box/guncase/heavy/dropped(mob/user, silent)
 	. = ..()
 	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
-
-
 
 /obj/item/storage/box/guncase/heavy/sentry
 	name = "\improper UA 571-C sentry gun case"
@@ -211,7 +210,7 @@
 /obj/item/storage/box/guncase/heavy/shotgun
 	name = "\improper Ithaca 37 shotgun case"
 	desc = "A heavy case for storing an Ithaca 37 pump-action shotgun, an antique from a bygone era of human history."
-	icon_state = "shotgun_case"
+	icon_state = "shotguncase"
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/storage/large_holster/m37, /obj/item/attachable/stock/shotgun, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
 
@@ -226,9 +225,9 @@
 /obj/item/storage/box/guncase/heavy/shotgun/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(src.icon, "woodcase_lid_open")
+		overlays += image(src.icon, "bigcase_lid_open")
 	else
-		overlays += image(src.icon, "wood_lid")
+		overlays += image(src.icon, "shotguncase_lid")
 		return
 	if(locate(/obj/item/weapon/gun/shotgun/pump) in src.contents)
 		overlays += image(src.icon, "+shotgun")
@@ -241,6 +240,31 @@
 	if(locate(/obj/item/attachable/stock/shotgun) in src.contents)
 		overlays += image(src.icon, "+stock")
 
+/obj/item/storage/box/guncase/heavy/m4ra_pve
+	name = "\improper M4RA-R2 battle rifle case"
+	desc = "A large case for storing an M4RA-R2, a modified USCM battle rifle equipped with depleted uranium bullets."
+	icon_state = "r2case"
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/rifle/m4ra/pve, /obj/item/ammo_magazine/rifle/m4ra/pve)
+
+/obj/item/storage/box/guncase/heavy/m4ra_pve/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+
+/obj/item/storage/box/guncase/heavy/shotgun/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "bigcase_lid_open")
+	else
+		overlays += image(src.icon, "r2case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/m4ra/pve) in src.contents)
+		overlays += image(src.icon, "+r2")
 
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
