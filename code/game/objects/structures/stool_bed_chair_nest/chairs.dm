@@ -308,6 +308,7 @@
 
 /obj/structure/bed/chair/comfy/bench
 	icon_state = null
+	can_rotate = FALSE
 	name = "metal bench"
 	desc = "A metal bench to rest upon."
 

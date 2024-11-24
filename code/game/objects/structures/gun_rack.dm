@@ -145,6 +145,7 @@
 	name = "Spent M83A2 SADAR rack"
 	icon_state = "sadar_dec"
 	desc = "A throne fit for that of a king. At least for when compared to the usual weapon stowage."
+	density = 0
 	max_stored = 1
 	initial_stored = 1
 	allowed_type = /obj/effect/spawner/prop_gun/anti_tank

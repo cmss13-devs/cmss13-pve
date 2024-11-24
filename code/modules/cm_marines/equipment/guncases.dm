@@ -208,6 +208,40 @@
 	if(locate(/obj/item/device/sentry_computer) in src.contents)
 		overlays += image(src.icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/shotgun
+	name = "\improper Ithaca 37 shotgun case"
+	desc = "A heavy case for storing an Ithaca 37 pump-action shotgun, an antique from a bygone era of human history."
+	icon_state = "shotgun_case"
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/storage/large_holster/m37, /obj/item/attachable/stock/shotgun, /obj/item/ammo_magazine/shotgun/buckshot, /obj/item/ammo_magazine/shotgun/slugs)
+
+/obj/item/storage/box/guncase/heavy/shotgun/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/pump(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/shotgun/slugs(src)
+	new /obj/item/storage/pouch/shotgun(src)
+	new /obj/item/storage/large_holster/m37(src)
+	new /obj/item/attachable/stock/shotgun(src)
+
+/obj/item/storage/box/guncase/heavy/shotgun/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "woodcase_lid_open")
+	else
+		overlays += image(src.icon, "wood_lid")
+		return
+	if(locate(/obj/item/weapon/gun/shotgun/pump) in src.contents)
+		overlays += image(src.icon, "+shotgun")
+	if(locate(/obj/item/ammo_magazine/shotgun/buckshot) in src.contents)
+		overlays += image(src.icon, "+buckshot")
+	if(locate(/obj/item/ammo_magazine/shotgun/slugs) in src.contents)
+		overlays += image(src.icon, "+slug")
+	if(locate(/obj/item/storage/large_holster/m37) in src.contents)
+		overlays += image(src.icon, "+scabbard")
+	if(locate(/obj/item/attachable/stock/shotgun) in src.contents)
+		overlays += image(src.icon, "+stock")
+
+
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
