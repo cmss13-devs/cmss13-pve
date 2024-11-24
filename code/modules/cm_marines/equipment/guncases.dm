@@ -225,20 +225,20 @@
 /obj/item/storage/box/guncase/heavy/shotgun/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(src.icon, "bigcase_lid_open")
+		overlays += image(icon, "bigcase_lid_open")
 	else
-		overlays += image(src.icon, "shotguncase_lid")
+		overlays += image(icon, "shotguncase_lid")
 		return
-	if(locate(/obj/item/weapon/gun/shotgun/pump) in src.contents)
-		overlays += image(src.icon, "+shotgun")
-	if(locate(/obj/item/ammo_magazine/shotgun/buckshot) in src.contents)
-		overlays += image(src.icon, "+buckshot")
-	if(locate(/obj/item/ammo_magazine/shotgun/slugs) in src.contents)
-		overlays += image(src.icon, "+slug")
-	if(locate(/obj/item/storage/large_holster/m37) in src.contents)
-		overlays += image(src.icon, "+scabbard")
-	if(locate(/obj/item/attachable/stock/shotgun) in src.contents)
-		overlays += image(src.icon, "+stock")
+	if(locate(/obj/item/weapon/gun/shotgun/pump) in contents)
+		overlays += image(icon, "+shotgun")
+	if(locate(/obj/item/ammo_magazine/shotgun/buckshot) in contents)
+		overlays += image(icon, "+buckshot")
+	if(locate(/obj/item/ammo_magazine/shotgun/slugs) in contents)
+		overlays += image(icon, "+slug")
+	if(locate(/obj/item/storage/large_holster/m37) in contents)
+		overlays += image(icon, "+scabbard")
+	if(locate(/obj/item/attachable/stock/shotgun) in contents)
+		overlays += image(icon, "+stock")
 
 /obj/item/storage/box/guncase/heavy/m4ra_pve
 	name = "\improper M4RA-R2 battle rifle case"
