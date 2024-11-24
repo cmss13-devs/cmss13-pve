@@ -298,10 +298,11 @@
 	container.max_w_class = SIZE_TINY
 	container.w_class = SIZE_MASSIVE
 	container.use_sound = null
-	container.bypass_w_limit = list(/obj/item/reagent_container/glass,
-									/obj/item/reagent_container/food,
-									/obj/item/tool/kitchen
-									)
+	container.bypass_w_limit = list(
+		/obj/item/reagent_container/glass,
+		/obj/item/reagent_container/food,
+		/obj/item/tool/kitchen,
+	)
 
 /obj/structure/vehicle_locker/cabinet/cups
 	name = "cups cabinet"
