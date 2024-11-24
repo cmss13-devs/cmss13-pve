@@ -360,10 +360,14 @@
 /obj/structure/machinery/chem_dispenser/canteen/update_icon()
 	. = ..()
 	overlays.Cut()
-	if(beaker)
-		overlays += "+beaker"
-		if(!inoperable())
-			overlays += "+onlight"
+	if(!beaker)
+		return
+	
+	overlays += "+beaker"
+	if(inoperable())
+		return
+	
+	overlays += "+onlight"
 
 #undef DISPENSER_UNHACKABLE
 #undef DISPENSER_NOT_HACKED
