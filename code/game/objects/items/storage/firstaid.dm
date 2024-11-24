@@ -52,7 +52,7 @@
 
 /obj/item/storage/firstaid/update_icon()
 	if(content_watchers || !length(contents))
-		icon_state = "[open_state]"
+		icon_state = open_state
 	else
 		icon_state = icon_full
 

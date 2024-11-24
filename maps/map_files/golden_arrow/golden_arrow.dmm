@@ -6320,9 +6320,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 8
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -9480,25 +9477,14 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = -5;
-	pixel_y = 13;
-	layer = 3.01
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/shotgun{
-	pixel_x = 12;
-	pixel_y = 11;
-	layer = 3.01
-	},
-/obj/item/ammo_magazine/shotgun{
-	pixel_x = 12;
-	pixel_y = 2
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/m4ra_pve{
+	pixel_y = 18
+	},
+/obj/item/storage/box/guncase/heavy/shotgun{
+	pixel_y = 6;
+	pixel_x = 9
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -15590,14 +15576,15 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "dzT" = (
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11;
-	layer = 2.98
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 22;
+	pixel_x = 1;
+	layer = 3.2
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
@@ -16545,7 +16532,7 @@
 "gSr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
+	pixel_y = -2
 	},
 /obj/item/ammo_box/magazine/m4a3{
 	pixel_y = 11;
@@ -20185,6 +20172,10 @@
 /obj/item/ammo_box/magazine/mk1/large{
 	pixel_y = 13;
 	pixel_x = -3
+	},
+/obj/item/ammo_box/magazine/shotgun/buckshot,
+/obj/item/ammo_box/magazine/shotgun{
+	pixel_y = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
