@@ -248,6 +248,12 @@
 	icon = 'icons/obj/structures/props/almayer_props.dmi'
 	icon_state = "30mm_crate"
 
+/obj/structure/prop/almayer/sadar_decoration
+	name = "\improper Spent M83A2 SADAR"
+	desc = "A spent M83A2 tube. It's been kept as a trophy after a lucky tank kill nearly a thousand meters out. Someone has engraved a single tally-mark on the side to begin recording a kill-count."
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "sadar_decoration"
+	density = FALSE
 
 /obj/structure/prop/almayer/computers
 	var/hacked = FALSE

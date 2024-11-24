@@ -14003,6 +14003,18 @@
 /area/golden_arrow/cryo_cells)
 "aWI" = (
 /obj/structure/bed/chair/comfy/bench/south/east,
+/obj/item/reagent_container/food/drinks/plasticcup,
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 14
+	},
+/obj/item/reagent_container/food/snacks/cracker/tachyon{
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/snacks/cracker/tachyon{
+	pixel_y = 17;
+	pixel_x = -2
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aWJ" = (
@@ -16158,8 +16170,8 @@
 /area/golden_arrow/supply)
 "fBD" = (
 /obj/structure/bed/chair/comfy/bench/north/east,
-/obj/structure/gun_rack/sadar_decoration{
-	pixel_y = 28
+/obj/structure/prop/almayer/sadar_decoration{
+	pixel_y = 29
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)

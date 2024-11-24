@@ -2620,6 +2620,18 @@
 	reagents.add_reagent("bread", 1)
 	reagents.add_reagent("sodiumchloride", 1)
 
+/obj/item/reagent_container/food/snacks/cracker/tachyon
+	name = "Cracker"
+	desc = "It's a salted cracker that looks to have gone through a tachyon shunt. It looks fine...right?"
+	icon_state = "tachyon_cracker"
+	filling_color = "#728942"
+
+/obj/item/reagent_container/food/snacks/cracker/Initialize()
+	. = ..()
+	reagents.add_reagent("bread", 1)
+	reagents.add_reagent("sodiumchloride", 1)
+	reagents.add_reagent("carpotoxin", 1)
+
 /*
 *PIZZA.
 *object parent for all the object pizza give the number of slice produce and the filling color.
