@@ -306,6 +306,39 @@
 	name = "AI core chair"
 	desc = "A functional chair designed for comfortably sitting a single person with intent to facilitate interactions with the ship AI."
 
+/obj/structure/bed/chair/comfy/bench
+	icon_state = null
+	name = "metal bench"
+	desc = "A metal bench to rest upon."
+
+/obj/structure/bed/chair/comfy/bench/north
+	icon_state = "bench_1"
+
+/obj/structure/bed/chair/comfy/bench/north/west
+	dir = 8
+
+/obj/structure/bed/chair/comfy/bench/north/east
+	dir = 4
+
+/obj/structure/bed/chair/comfy/bench/mid
+	icon_state = "bench_2"
+
+/obj/structure/bed/chair/comfy/bench/mid/west
+	dir = 8
+
+/obj/structure/bed/chair/comfy/bench/mid/east
+	dir = 4
+
+/obj/structure/bed/chair/comfy/bench/south
+	icon_state = "bench_3"
+
+/obj/structure/bed/chair/comfy/bench/south/west
+	dir = 8
+
+/obj/structure/bed/chair/comfy/bench/south/east
+	dir = 4
+
+
 /obj/structure/bed/chair/comfy/ai_interface
 	icon_state = "ai_interface_chair"
 	name = "AI interface chair"
