@@ -196,16 +196,16 @@
 /obj/item/storage/box/guncase/heavy/sentry/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(src.icon, "case_lid_open")
+		overlays += image(icon, "case_lid_open")
 	else
-		overlays += image(src.icon, "sentrycase_lid")
+		overlays += image(icon, "sentrycase_lid")
 		return
-	if(locate(/obj/item/defenses/handheld/sentry) in src.contents)
-		overlays += image(src.icon, "+sentry")
-	if(locate(/obj/item/ammo_magazine/sentry) in src.contents)
-		overlays += image(src.icon, "+sentrymag")
-	if(locate(/obj/item/device/sentry_computer) in src.contents)
-		overlays += image(src.icon, "+sentrycomp")
+	if(locate(/obj/item/defenses/handheld/sentry) in contents)
+		overlays += image(icon, "+sentry")
+	if(locate(/obj/item/ammo_magazine/sentry) in contents)
+		overlays += image(icon, "+sentrymag")
+	if(locate(/obj/item/device/sentry_computer) in contents)
+		overlays += image(icon, "+sentrycomp")
 
 /obj/item/storage/box/guncase/heavy/shotgun
 	name = "\improper Ithaca 37 shotgun case"
