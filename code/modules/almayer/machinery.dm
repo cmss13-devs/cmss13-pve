@@ -180,14 +180,6 @@
 	new_item.pixel_y = (CELLSIZE * (cell_y + 0.5)) - center["y"]
 	new_item.pixel_z = 0
 
-
-/obj/structure/machinery/prop/almayer/CICmap/table/examine(mob/user)
-	. = ..()
-
-	if(!(stat & NOPOWER))
-		map.tgui_interact(user)
-	else return
-
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal
 	icon_state = "h_maptable"
 	bound_width = 96

@@ -316,28 +316,28 @@
 	icon_state = "bench_1"
 
 /obj/structure/bed/chair/comfy/bench/north/west
-	dir = 8
+	dir = WEST
 
 /obj/structure/bed/chair/comfy/bench/north/east
-	dir = 4
+	dir = EAST
 
 /obj/structure/bed/chair/comfy/bench/mid
 	icon_state = "bench_2"
 
 /obj/structure/bed/chair/comfy/bench/mid/west
-	dir = 8
+	dir = WEST
 
 /obj/structure/bed/chair/comfy/bench/mid/east
-	dir = 4
+	dir = EAST
 
 /obj/structure/bed/chair/comfy/bench/south
 	icon_state = "bench_3"
 
 /obj/structure/bed/chair/comfy/bench/south/west
-	dir = 8
+	dir = WEST
 
 /obj/structure/bed/chair/comfy/bench/south/east
-	dir = 4
+	dir = EAST
 
 
 /obj/structure/bed/chair/comfy/ai_interface
