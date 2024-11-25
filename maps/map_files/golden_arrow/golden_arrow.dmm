@@ -2187,6 +2187,12 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"ahN" = (
+/obj/structure/sign/safety/one{
+	pixel_x = 39
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
 "ahR" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5429,14 +5435,14 @@
 	id = "lowervehiclebay1";
 	needs_power = 0;
 	pixel_y = 11;
-	name = "lowervehiclebay1";
+	name = "Elevator 1 door-control";
 	pixel_x = -4
 	},
 /obj/structure/machinery/door_control{
 	id = "lowervehiclebay2";
 	needs_power = 0;
 	pixel_y = 11;
-	name = "lowervehiclebay2";
+	name = "Elevator 2 door-control";
 	pixel_x = 15
 	},
 /turf/open/floor/almayer,
@@ -15461,6 +15467,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"cUo" = (
+/turf/closed/wall/almayer/outer/friegt,
+/area/golden_arrow/cargo_shuttle/upper)
 "cUK" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
@@ -15703,6 +15712,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"dNf" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = 39
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/motor_pool)
 "dNn" = (
 /obj/structure/machinery/door/airlock/maintenance/colony{
 	req_one_access = null;
@@ -15963,6 +15981,9 @@
 "eGR" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
+"eKk" = (
+/turf/closed/wall/almayer/outer/friegt,
+/area/golden_arrow/motor_pool)
 "eNC" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16672,6 +16693,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"hiX" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/safety/two{
+	pixel_x = 39
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
 "hjV" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap"
@@ -16685,6 +16715,9 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
+"hqq" = (
+/turf/closed/wall/almayer/outer/gear,
+/area/golden_arrow/cargo_shuttle/lower)
 "hrh" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/megaphone{
@@ -16877,6 +16910,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"ife" = (
+/turf/closed/wall/almayer/outer/gear,
+/area/golden_arrow/cargo_shuttle/upper)
 "ifq" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27
@@ -17043,6 +17079,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"iVi" = (
+/turf/closed/wall/almayer/outer/friegt,
+/area/golden_arrow/cargo_shuttle/lower)
 "iWt" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -18485,6 +18524,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
+"nNL" = (
+/obj/structure/sign/safety/two{
+	pixel_x = 39
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
 "nOf" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20373,6 +20418,9 @@
 /obj/structure/prop/almayer/ai_wallmonitor,
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
+"vzM" = (
+/turf/closed/wall/almayer/outer/gear,
+/area/golden_arrow/motor_pool)
 "vAm" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 2;
@@ -26115,14 +26163,14 @@ aEG
 aEG
 aEG
 aEG
-fbw
+hqq
 cGQ
 cGQ
 cGQ
 cGQ
 cGQ
 aTM
-fbw
+hqq
 qwH
 aXB
 vZm
@@ -26292,7 +26340,7 @@ aEG
 aEG
 aEG
 aEG
-fbw
+iVi
 cGQ
 cGQ
 cGQ
@@ -27354,14 +27402,14 @@ aEG
 aEG
 aEG
 aEG
-fbw
+hqq
 cGQ
 cGQ
 cGQ
 cGQ
 cGQ
 cGQ
-fbw
+hqq
 qwH
 aXB
 knD
@@ -29194,15 +29242,15 @@ aEG
 aEG
 aEG
 aEG
-bBB
+ife
 aEK
 aEK
 aEK
 aEK
 aEK
 hvd
-bBB
-ahl
+ife
+aDj
 ahl
 eTr
 aqa
@@ -29371,7 +29419,7 @@ aEG
 aEG
 aEG
 aEG
-bBB
+cUo
 aEK
 aEK
 aEK
@@ -30433,15 +30481,15 @@ aEG
 aEG
 aEG
 aEG
-bBB
+ife
 aEK
 aEK
 aEK
 aEK
 aEK
 aEK
-bBB
-ahl
+ife
+aDj
 bsE
 qQp
 aiz
@@ -34994,23 +35042,23 @@ aAE
 aAE
 aAE
 aAE
-uls
+ahN
 aAE
 aAE
 aAE
 aFr
 aFr
-aev
+dNf
 aqP
 ach
 abu
-ach
+hiX
 aFr
 aFr
 aFr
 aFr
 aAE
-aqP
+nNL
 aqP
 aqP
 axS
@@ -35348,23 +35396,23 @@ jHV
 jHV
 jHV
 aEb
-axS
+vzM
 aSd
 aSd
 aSd
 aSd
 ajF
-axS
+vzM
 asV
 afd
 aLs
-axS
+vzM
 aSd
 aSd
 aSd
 aSd
 aRL
-axS
+vzM
 aEG
 aEG
 aEG
@@ -35525,23 +35573,23 @@ aPq
 aBO
 aCf
 aeZ
-axS
+eKk
 aSd
 aSd
 aSd
 aSd
 aSd
-axS
+eKk
 aGu
 aVG
 abS
-axS
+eKk
 aSd
 aSd
 aSd
 aSd
 aSd
-axS
+eKk
 aEG
 aEG
 aEG
@@ -36410,23 +36458,23 @@ atE
 kKs
 atE
 aPE
-axS
+vzM
 aSd
 aSd
 aSd
 aSd
 aSd
-axS
+vzM
 aNc
 aGK
 aTi
-axS
+vzM
 aSd
 aSd
 aSd
 aSd
 aSd
-axS
+vzM
 aEG
 aEG
 aEG
