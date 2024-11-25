@@ -1180,13 +1180,19 @@ Defined in conflicts.dm of the #defines folder.
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
-	name = "AN/RVS-52 CCD Television Sight System"
-	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions."
+	name = "AN/RVS-52 CCD television sight system"
+	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the carry handle of the M41A line of rifles."
 	icon_state = "pvescope"
 	zoom_offset = 3
 	zoom_viewsize = 7
 	allows_movement = TRUE
 	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
+
+/obj/item/attachable/scope/pve/New()
+	..()
+	delay_mod = 0
+	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
+	damage_falloff_scoped_buff = -0.2
 
 /obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
 	. = ..()
