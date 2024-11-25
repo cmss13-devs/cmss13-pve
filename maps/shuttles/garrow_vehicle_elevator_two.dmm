@@ -27,14 +27,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/two)
 "s" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/railing{
-	pixel_y = 22;
-	shuttleId = "garrow_vehicle_elevator_two"
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/two)
 "t" = (
 /obj/effect/decal/warning_stripes{
@@ -61,6 +58,16 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"O" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/railing{
+	pixel_y = 22;
+	shuttleId = "garrow_vehicle_elevator_two"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/vehicle_shuttle/two)
@@ -105,14 +112,14 @@ u
 o
 "}
 (2,1,1) = {"
-s
+j
 a
 Z
 a
 U
 "}
 (3,1,1) = {"
-j
+O
 a
 Z
 a
@@ -121,7 +128,7 @@ A
 (4,1,1) = {"
 T
 Z
-a
+s
 a
 A
 "}
