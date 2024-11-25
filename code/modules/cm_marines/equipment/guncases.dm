@@ -282,24 +282,24 @@
 /obj/item/storage/box/guncase/heavy/motiondetectors/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(src.icon, "case_lid_open")
+		overlays += image(icon, "case_lid_open")
 	else
-		overlays += image(src.icon, "mdcase_lid")
+		overlays += image(icon, "mdcase_lid")
 		return
 
-	if(length(src.contents) >= storage_slots)
-		var/image/source_image = image(src.icon, "+md")
+	if(length(contents) >= storage_slots)
+		var/image/source_image = image(icon, "+md")
 		source_image.pixel_x = 0
 		overlays += source_image
-	if(length(src.contents) >= storage_slots * 0.75)
-		var/image/source_image = image(src.icon, "+md")
+	if(length(contents) >= storage_slots * 0.75)
+		var/image/source_image = image(icon, "+md")
 		source_image.pixel_x = 6
 		overlays += source_image
-	if(length(src.contents) >= storage_slots * 0.5)
-		var/image/source_image = image(src.icon, "+md")
+	if(length(contents) >= storage_slots * 0.5)
+		var/image/source_image = image(icon, "+md")
 		source_image.pixel_x = 12
 		overlays += source_image
-	if(length(src.contents) >= storage_slots * 0.25)
+	if(length(contents) >= storage_slots * 0.25)
 		var/image/source_image = image(src.icon, "+md")
 		source_image.pixel_x = 18
 		overlays += source_image
