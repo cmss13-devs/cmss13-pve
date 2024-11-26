@@ -844,7 +844,7 @@
 /datum/equipment_preset/uscm/specialist_equipped/spotter
 	name = "USCM Scout Sniper, Spotter (Equipped)"
 	assignment = "Scout Sniper"
-	role_comm_title = "SCTSNPR"
+	role_comm_title = "SctSnpr"
 	skills = /datum/skills/nco
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
