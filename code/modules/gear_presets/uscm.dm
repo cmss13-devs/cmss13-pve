@@ -269,7 +269,7 @@
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SQSGT"
+	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
 
