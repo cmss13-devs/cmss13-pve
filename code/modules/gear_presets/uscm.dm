@@ -269,7 +269,7 @@
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SQSGT"
+	role_comm_title = "SqSgt"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
 
@@ -597,7 +597,7 @@
 	assignment = JOB_SQUAD_LEADER
 	rank = JOB_SQUAD_LEADER
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SCTSGT"
+	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
 
@@ -655,7 +655,7 @@
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "COMTECH"
+	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
 
 	minimap_icon = "engi"
@@ -707,7 +707,7 @@
 	assignment = "Rocketeer"
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "SPC"
+	role_comm_title = "Spc"
 	skills = /datum/skills/nco
 
 	minimap_icon = "spec"
@@ -795,7 +795,7 @@
 /datum/equipment_preset/uscm/specialist_equipped/sniper
 	name = "USCM Scout Sniper, Shooter (Equipped)"
 	assignment = "Scout Sniper"
-	role_comm_title = "SCTSNPR"
+	role_comm_title = "SctSnpr"
 	skills = /datum/skills/nco
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
@@ -844,7 +844,7 @@
 /datum/equipment_preset/uscm/specialist_equipped/spotter
 	name = "USCM Scout Sniper, Spotter (Equipped)"
 	assignment = "Scout Sniper"
-	role_comm_title = "SCTSNPR"
+	role_comm_title = "SctSnpr"
 	skills = /datum/skills/nco
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
