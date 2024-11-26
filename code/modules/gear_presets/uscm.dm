@@ -707,7 +707,7 @@
 	assignment = "Rocketeer"
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "SPC"
+	role_comm_title = "Spc"
 	skills = /datum/skills/nco
 
 	minimap_icon = "spec"
