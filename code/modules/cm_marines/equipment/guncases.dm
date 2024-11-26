@@ -244,7 +244,7 @@
 	name = "\improper M4RA-R2 battle rifle case"
 	desc = "A large case for storing an M4RA-R2, a modified USCM battle rifle equipped with depleted uranium bullets."
 	icon_state = "r2case"
-	storage_slots = 6
+	storage_slots = 7
 	can_hold = list(/obj/item/weapon/gun/rifle/m4ra/pve, /obj/item/ammo_magazine/rifle/m4ra/pve)
 
 /obj/item/storage/box/guncase/heavy/m4ra_pve/fill_preset_inventory()
@@ -255,15 +255,16 @@
 	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
 	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
 	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
+	new /obj/item/ammo_magazine/rifle/m4ra/pve(src)
 
-/obj/item/storage/box/guncase/heavy/shotgun/update_icon()
+/obj/item/storage/box/guncase/heavy/m4ra_pve/update_icon()
 	overlays.Cut()
 	if(opened)
 		overlays += image(src.icon, "bigcase_lid_open")
 	else
 		overlays += image(src.icon, "r2case_lid")
 		return
-	if(locate(/obj/item/weapon/gun/rifle/m4ra/pve) in src.contents)
+	if(locate(/obj/item/weapon/gun/rifle/m4ra/pve/unloaded) in src.contents)
 		overlays += image(src.icon, "+r2")
 
 /obj/item/storage/box/guncase/heavy/motiondetectors

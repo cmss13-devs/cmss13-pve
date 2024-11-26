@@ -472,9 +472,7 @@
 	pixel_y = 28;
 	pixel_x = -8;
 	id = "briefingdoor";
-	req_one_access_txt = "19;12";
-	specialfunctions = 4;
-	normaldoorcontrol = 1
+	req_one_access_txt = "19;12"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -546,6 +544,9 @@
 	dir = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "briefingdoor"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/briefing)
 "Kk" = (
