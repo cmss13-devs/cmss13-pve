@@ -6842,9 +6842,7 @@
 /obj/structure/barricade/deployable{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "dmK" = (
@@ -6884,11 +6882,11 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "doj" = (
-/obj/item/ammo_magazine/rifle/heap{
-	current_rounds = 0
-	},
 /obj/structure/bed/roller,
 /obj/effect/decal/cleanable/blood,
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0
+	},
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "doo" = (
@@ -7002,9 +7000,7 @@
 /turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "dqr" = (
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "dqu" = (
@@ -8357,9 +8353,7 @@
 /obj/structure/barricade/deployable{
 	dir = 1
 	},
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "dYM" = (
@@ -11630,9 +11624,7 @@
 /obj/structure/barricade/deployable{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "fFX" = (
@@ -13604,7 +13596,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/lv522/oob)
 "gFp" = (
-/obj/item/ammo_magazine/rifle/heap{
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	current_rounds = 0
 	},
 /turf/open/floor/prison,
@@ -15449,8 +15441,13 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "hzA" = (
-/obj/item/ammo_magazine/rifle/heap{
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	current_rounds = 0
+	},
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0;
+	pixel_x = -7;
+	pixel_y = 7
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/n_rockies)
@@ -15730,9 +15727,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "hIp" = (
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/n_rockies)
 "hIx" = (
@@ -16029,12 +16024,11 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/w_rockies)
 "hPO" = (
-/obj/item/ammo_magazine/rifle/heap{
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	current_rounds = 0
 	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison,
-/area/lv522/atmos/cargo_intake)
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/nw_rockies)
 "hPU" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin{
@@ -16187,9 +16181,7 @@
 /area/lv522/indoors/a_block/corpo)
 "hUZ" = (
 /obj/structure/barricade/deployable,
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "hVc" = (
@@ -16280,10 +16272,8 @@
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "hWV" = (
 /obj/structure/barricade/deployable,
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
 /obj/structure/pipes/standard/simple/hidden/green,
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded,
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "hXk" = (
@@ -17288,15 +17278,15 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/east)
 "izp" = (
-/obj/item/ammo_magazine/rifle/heap{
-	current_rounds = 0
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/cargo_intake)
@@ -19946,7 +19936,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/fitness)
 "jLG" = (
-/obj/item/ammo_magazine/rifle/heap{
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	current_rounds = 0
 	},
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
@@ -20191,6 +20181,17 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/north_command_centre)
+"jQX" = (
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0
+	},
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0;
+	pixel_y = -4;
+	pixel_x = 9
+	},
+/turf/open/floor/prison,
+/area/lv522/atmos/cargo_intake)
 "jRc" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/wood,
@@ -25296,13 +25297,13 @@
 /obj/structure/largecrate/supply/ammo/m41a/half{
 	pixel_x = 5
 	},
-/obj/item/storage/box/guncase/m41a{
-	pixel_x = 2;
-	pixel_y = 6
-	},
 /obj/item/ammo_box/rounds/empty{
 	layer = 3.1;
 	pixel_y = -15
+	},
+/obj/item/storage/box/guncase/m41aMK1{
+	pixel_x = 2;
+	pixel_y = 6
 	},
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
@@ -27485,6 +27486,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/mining)
+"ncV" = (
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
+	current_rounds = 0
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/nw_rockies)
 "ncZ" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/corsat/plate,
@@ -48250,7 +48257,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "wHM" = (
-/obj/item/ammo_magazine/rifle/heap{
+/obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	current_rounds = 0
 	},
 /turf/open/floor/prison/floor_marked/southwest,
@@ -58188,7 +58195,7 @@ bIJ
 uWO
 uWO
 uWO
-vtc
+hPO
 vtc
 uWO
 uiK
@@ -58637,7 +58644,7 @@ cnC
 uWO
 uWO
 uWO
-uWO
+ncV
 uWO
 uWO
 uWO
@@ -61809,7 +61816,7 @@ hfS
 hfS
 hfS
 hfS
-hPO
+hfS
 hWV
 nyP
 hfS
@@ -62036,7 +62043,7 @@ eaE
 giL
 eaE
 eaE
-eaE
+jQX
 hZZ
 dHO
 dHO
@@ -62491,7 +62498,7 @@ giL
 fFA
 gzu
 eaE
-gFp
+eaE
 cnC
 jqa
 enS
