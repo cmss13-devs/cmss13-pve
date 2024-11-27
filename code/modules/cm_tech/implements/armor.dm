@@ -175,10 +175,11 @@
 
 /obj/item/clothing/accessory/health/ceramic_plate/marine
 	name = "ASAPP armor plate"
-	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection to breachers and similar roles of USCMC. While its almost miraculous protective properties are worth noting, it is quite cumbersome and makes you look even more fatter than you actually are."
+	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for pilots, air crewmen, and point-men of the USCMC. While its almost miraculous protective properties are worth noting, it is quite cumbersome and makes you look even fatter than you actually are."
 	icon_state = "armor_plate_100"
 	base_icon_state = "armor_plate"
 	overlay_state = "armor_plate_100"
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"
