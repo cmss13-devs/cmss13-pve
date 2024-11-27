@@ -468,7 +468,7 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 #define ACCESSORY_SLOT_MEDAL "Medal"
 #define ACCESSORY_SLOT_PONCHO "Ponchos"
 
-/// Used for uniform armor inserts.
+/// Used for suit armor inserts.
 #define ACCESSORY_SLOT_ARMOR_C "Chest armor"
 
 #define ACCESSORY_SLOT_ARMOR_A "Arm armor"

@@ -31,6 +31,8 @@
 	for(var/health_state in health_states)
 		if(armor_health / armor_maxhealth * 100 <= health_state)
 			icon_state = "[base_icon_state]_[health_state]"
+			overlay_state = icon_state
+			has_suit?.update_clothing_icon()
 			return
 
 /obj/item/clothing/accessory/health/proc/get_damage_status()
@@ -53,7 +55,7 @@
 
 /obj/item/clothing/accessory/health/get_examine_text(mob/user)
 	. = ..()
-	. += "To use it, attach it to your uniform."
+	. += "To use it, attach it to your armor."
 	. += SPAN_NOTICE(get_damage_status())
 
 /obj/item/clothing/accessory/health/additional_examine_text()
@@ -65,8 +67,8 @@
 		RegisterSignal(S, COMSIG_ITEM_EQUIPPED, PROC_REF(check_to_signal))
 		RegisterSignal(S, COMSIG_ITEM_DROPPED, PROC_REF(unassign_signals))
 
-		if(istype(user) && user.w_uniform == S)
-			check_to_signal(S, user, WEAR_BODY)
+		if(istype(user) && user.wear_suit == S)
+			check_to_signal(S, user, WEAR_JACKET)
 
 /obj/item/clothing/accessory/health/on_removed(mob/living/user, obj/item/clothing/C)
 	. = ..()
@@ -80,7 +82,7 @@
 /obj/item/clothing/accessory/health/proc/check_to_signal(obj/item/clothing/S, mob/living/user, slot)
 	SIGNAL_HANDLER
 
-	if(slot == WEAR_BODY)
+	if(slot == WEAR_JACKET)
 		if(take_slash_damage)
 			RegisterSignal(user, COMSIG_HUMAN_XENO_ATTACK, PROC_REF(take_slash_damage))
 		RegisterSignal(user, COMSIG_HUMAN_BULLET_ACT, PROC_REF(take_bullet_damage))
@@ -170,6 +172,13 @@
 
 /obj/item/clothing/accessory/health/ceramic_plate/take_slash_damage(mob/living/user, list/slashdata)
 	return
+
+/obj/item/clothing/accessory/health/ceramic_plate/marine
+	name = "ASAPP armor plate"
+	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection to breachers and similar roles of USCMC. While its almost miraculous protective properties are worth noting, it is quite cumbersome and makes you look even more fatter than you actually are."
+	icon_state = "armor_plate_100"
+	base_icon_state = "armor_plate"
+	overlay_state = "armor_plate_100"
 
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"
