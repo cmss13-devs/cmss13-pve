@@ -9015,7 +9015,7 @@
 /area/shiva/exterior/junkyard)
 "hmo" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/rifle/m41a,
+/obj/item/weapon/gun/rifle/m41aMK1,
 /turf/open/asphalt/cement,
 /area/shiva/interior/warehouse)
 "hmP" = (
@@ -9227,7 +9227,7 @@
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/aux_power)
 "hyY" = (
-/obj/item/ammo_magazine/rifle/ap,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/shiva/interior/colony/research_hab)
 "hzf" = (
@@ -11858,7 +11858,7 @@
 "kfW" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/asphalt/cement,
 /area/shiva/interior/warehouse)
 "kgn" = (
@@ -12196,10 +12196,10 @@
 "kyy" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/storage/belt/marine,
-/obj/item/weapon/gun/rifle/m41a,
-/obj/item/ammo_magazine/rifle/extended,
-/obj/item/ammo_magazine/rifle,
-/obj/item/ammo_magazine/rifle,
+/obj/item/weapon/gun/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/shiva/redfull/west,
 /area/shiva/interior/colony/s_admin)
 "kyD" = (
