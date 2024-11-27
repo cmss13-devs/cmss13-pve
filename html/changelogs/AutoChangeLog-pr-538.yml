@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Multiple new US army presets"
+  - qol: "M5 RPG can be used by all, and can be worn on the back now"
+  - qol: "USASF and Army ranks lost the . after all their ranks on comms"
+  - balance: "Army lost their mag-harnesses in favour of a red-dot optic as standard, at reqeust of Verbs"
+  - imageadd: "New unit patch, new onmob for back-worn M5 RPG"
