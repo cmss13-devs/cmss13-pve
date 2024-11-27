@@ -465,8 +465,6 @@
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/handful,
-		/obj/item/reagent_container/food/snacks/donut/normal,
-		/obj/item/reagent_container/food/snacks/donut/jelly,
 		/obj/item/weapon/baton,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/tool/lighter/zippo,
@@ -474,7 +472,6 @@
 		/obj/item/clothing/glasses/hud/security,
 		/obj/item/device/flashlight,
 		/obj/item/device/radio/headset,
-		/obj/item/weapon,
 		/obj/item/device/clue_scanner,
 	)
 
@@ -525,11 +522,13 @@
 
 /obj/item/storage/belt/security/MP/UPP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
 
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
@@ -606,6 +605,10 @@
 /obj/item/storage/belt/marine/m41amk1/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/m41aMK1 (src)
+
+/obj/item/storage/belt/marine/m41e2ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/lmg/ap (src)
 
 /obj/item/storage/belt/marine/m39/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -779,12 +782,12 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
-/obj/item/storage/belt/marine/upp/sapper/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
+/obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
@@ -1869,6 +1872,7 @@
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
 	icon_state = "sgbelt"
+	flags_equip_slot = SLOT_WAIST
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = 5,
@@ -1898,6 +1902,7 @@
 /obj/item/storage/belt/gun/smartgunner/garrow
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+	icon_state = "sgbelt"
 
 	//Keep a track of how many magazines are inside the belt.
 	var/magazines = 0
