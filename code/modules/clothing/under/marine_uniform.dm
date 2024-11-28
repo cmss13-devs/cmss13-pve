@@ -738,15 +738,6 @@
 	worn_state = "prison_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/ua_boiler
-	name = "\improper UA blue operations uniform"
-	desc = "A stylish blue jumpsuit - standard issue for UA civilian support personnel."
-	icon_state = "boilersuit_darkblue"
-	worn_state = "ua_boiler"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-	has_sensor = UNIFORM_HAS_SENSORS
-	sensor_faction = FACTION_MARINE
-
 /obj/item/clothing/under/colonist/ua_civvies
 	name = "\improper UA gray utility uniform"
 	desc = "A stylish gray jumpsuit - standard issue for UA civilian support personnel."
