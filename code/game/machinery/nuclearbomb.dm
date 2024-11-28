@@ -632,7 +632,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 
 /obj/structure/machinery/nuclearbomb/ADM
 	name = "\improper Tactical Atomic Demolition Munition"
-	desc = "Commonly referred to as a 'nuclear landmine' and colloquially as 'Heinz' for its cylindrical shape. The Mk-214 TADM is designed for tactical deployment in an area of operations to completely clear a several-mile radius around the blast point."
+	desc = "Commonly referred to as a 'nuclear landmine' and colloquially as 'Heinz' for its cylindrical shape. The Mk-214 TADM is designed for discrete deployment in an area of operations to completely clear a several-mile radius around the blast point."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "adm"
 	density = TRUE
