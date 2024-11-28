@@ -1448,7 +1448,7 @@
 	icon_state = "chair_system"
 	point_cost = 50
 	combat_equipment = FALSE
-	var/deployment_cooldown
+	COOLDOWN_DECLARE(deployment_cooldown)
 	var/obj/structure/bed/chair/dropship/passenger/deployed_chair
 
 /obj/structure/dropship_equipment/chair_system/Initialize()
@@ -1457,7 +1457,7 @@
 
 /obj/structure/dropship_equipment/chair_system/attack_hand(mob/user)
 	if(deployed_chair)
-		if(deployment_cooldown > world.time)
+		if(COOLDOWN_FINISHED(src, deployment_cooldown))
 			to_chat(user, SPAN_WARNING("[src] is busy."))
 			return //prevents spamming deployment/undeployment
 		if(deployed_chair.loc == src) //not deployed
@@ -1465,14 +1465,14 @@
 			deployed_chair.forceMove(loc)
 			playsound(loc, 'sound/machines/hydraulics_1.ogg', 40, 1)
 			icon_state = "chair_system_deployed"
-			deployment_cooldown = world.time + 50
+			COOLDOWN_START(src, deployment_cooldown, 5 SECONDS)
 		else if(deployed_chair.buckled_mob)
 			to_chat(user, SPAN_WARNING("[deployed_chair.buckled_mob] prevents you from folding the chair."))
 			return
 		else
 			to_chat(user, SPAN_NOTICE("You retract [src]."))
 			playsound(loc, 'sound/machines/hydraulics_2.ogg', 40, 1)
-			deployment_cooldown = world.time + 50
+			COOLDOWN_START(src, deployment_cooldown, 5 SECONDS)
 			deployed_chair.forceMove(src)
 			icon_state = "chair_system_installed"
 	else
