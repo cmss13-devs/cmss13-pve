@@ -676,31 +676,41 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 /obj/item/ADM/attack_self(mob/user)
 	. = ..()
 
-	if(usr.action_busy)
+	if(SSinterior.in_interior(user))
+		to_chat(usr, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
+		return
+	var/turf/T = get_step(user, user.dir)
+	var/blocked = FALSE
+	for(var/obj/O in T)
+		if(O.density)
+			blocked = TRUE
+			break
+	for(var/mob/M in T)
+		blocked = TRUE
+		break
+	if(istype(T, /turf/open))
+		var/turf/open/floor = T
+		if(!floor.allow_construction)
+			to_chat(user, SPAN_WARNING("You cannot deploy \a [src] here, find a more secure surface!"))
+			return FALSE
+	else
+		blocked = TRUE
+	if(blocked)
+		to_chat(usr, SPAN_WARNING("You need a clear, open area to deploy \a [src], something is blocking the way in front of you!"))
 		return
 
-	for(var/obj/structure/barricade/B in usr.loc)
-		if(B.dir == user.dir)
-			to_chat(user, SPAN_WARNING("There is already \a [B] in this direction!"))
-			return
-
+	if(usr.action_busy)
+		return
 	user.visible_message(SPAN_NOTICE("[user] begins deploying [src]."),
 			SPAN_NOTICE("You begin deploying [src]."))
-
 	playsound(loc, list('sound/handling/armorequip_1.ogg', 'sound/handling/armorequip_2.ogg'), 25, 1)
-
 	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		to_chat(user, SPAN_WARNING("You were interrupted."))
 		return
-
-	for(var/obj/structure/barricade/B in usr.loc) //second check so no memery
-		if(B.dir == user.dir)
-			to_chat(user, SPAN_WARNING("There is already \a [B] in this direction!"))
-			return
-
 	user.visible_message(SPAN_NOTICE("[user] has finished deploying [src]."),
 			SPAN_NOTICE("You finish deploying [src]."))
 
 	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(user.loc)
 	planted.update_icon()
+	planted.forceMove(get_turf(T))
 	qdel(src)
