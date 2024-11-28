@@ -937,12 +937,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M30 tactical"
 
-/obj/item/clothing/head/helmet/marine/pilottex
-	name = "\improper Tex's M30 tactical helmet"
-	desc = "The M30 tactical helmet has a left eyepiece filter used to filter tactical data. It is required to fly the dropships manually and in safety. This one belonged to Tex: the craziest sum'bitch pilot the Almayer ever had. He's not dead or anything, but he did get a medical discharge after he was hit by a car on shore leave last year."
+/obj/item/clothing/head/helmet/upp/marinepilot/tex
+	name = "\improper custom Mk30 tactical helmet"
+	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time. This one has the Texan flag painted on it."
 	icon_state = "helmetp_tex"
 	item_state = "helmetp_tex"
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/ghillie
 	name = "\improper M10 ghillie helmet"
@@ -1908,3 +1907,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ
+	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers
