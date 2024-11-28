@@ -1299,8 +1299,8 @@
 /obj/item/clothing/under/marine/officer/engi/navy/tech
 	name = "\improper engineering technician uniform"
 	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
-	icon_state = "ua_boiler"
-	worn_state = "ua_boiler"
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/pilot/flight/para
