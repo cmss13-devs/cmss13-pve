@@ -25743,7 +25743,6 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/effect/landmark/corpsespawner/wy/manager,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/oob/w_y_vault)
 "mox" = (
