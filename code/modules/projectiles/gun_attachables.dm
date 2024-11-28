@@ -1177,6 +1177,10 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "SADAR sight system."
 	zoom_offset = 3
 
+/obj/item/attachable/scope/mini/army
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
+	zoom_offset = 4
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve

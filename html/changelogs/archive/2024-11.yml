@@ -77,3 +77,28 @@
   The32bitguy:
   - bugfix: Vehicle hardpoints can now sprite-click in a similar manner to other projectile
       weapons.
+2024-11-28:
+  AndroBetel:
+  - rscadd: Dead & Burst options to GM Human Spawn panel
+  BonniePandora:
+  - rscadd: Multiple new US army presets
+  - qol: M5 RPG can be used by all, and can be worn on the back now
+  - qol: USASF and Army ranks lost the . after all their ranks on comms
+  - balance: Army lost their mag-harnesses in favour of a red-dot optic as standard,
+      at reqeust of Verbs
+  - imageadd: New unit patch, new onmob for back-worn M5 RPG
+  MaximusRexCM, Private Tristan:
+  - rscadd: Ports Dying Light flares from PVP CM!
+  - balance: Increased flare duration from a variable 9.5 --> 10.5 minute length to
+      16 minutes flat.
+  - balance: Flares start out strong (7 radius) and burn down to nothingness.
+  - balance: Increased flare_damage from acid by 20% across the board.
+  - balance: Starshell ash fuel variance changed from (4.5 to 6.0) minutes ----> (6.0
+      to 6.5) minute variance.
+  - balance: Starshell ash starts out semi-bright (6 radius) and burns down to nothingness.
+  - balance: Flare Mortars now have a static 7 tile radius , and variably last from
+      5 to 6 minutes.
+  - balance: Flare gun unique-action now produces a static 7 tile radius light for
+      3 minutes. Slightly lower luminosity than normal.
+  - code_imp: Implemented a new proc, flare_burn_down, and incorporated it into process(delta_time).
+  - balance: Flare packets only hold 14 flares (from 21) to compensate
