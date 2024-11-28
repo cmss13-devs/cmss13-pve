@@ -1903,3 +1903,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ
+	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers

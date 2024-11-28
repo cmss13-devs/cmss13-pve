@@ -1175,3 +1175,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper Army combat medic backpack"
 	desc = "A standard-issue backpack worn by US Army medics."
 	has_gamemode_skin = FALSE
+
+/obj/item/storage/backpack/marine/rocketpack/army
+	name = "\improper IMP M22 rocketeer bag"
+	desc = "A specially-designed backpack that fits to the IMP mounting frame on standard M3 & M4 pattern armors. It's made of two waterproofed reinforced tubes and one smaller satchel slung at the bottom. The two silos are for rockets, but no one is stopping you from cramming other things in there."
+
+/obj/item/storage/backpack/marine/satchel/intel/chestrig/army
+	name = "\improper Army expedition chestrig"
+	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
