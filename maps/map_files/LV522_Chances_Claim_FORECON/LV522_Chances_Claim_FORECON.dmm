@@ -3725,7 +3725,6 @@
 /area/lv522/indoors/a_block/fitness/glass)
 "bNy" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/east_reactor/south)
@@ -5206,7 +5205,6 @@
 /area/lv522/indoors/a_block/security)
 "cvM" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/south)
 "cvT" = (
@@ -9036,7 +9034,6 @@
 /obj/item/tool/pen/blue/clicky,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "esa" = (
@@ -12618,11 +12615,6 @@
 /obj/item/clothing/glasses/kutjevo,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
-"geo" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "get" = (
 /turf/open/floor/carpet,
 /area/lv522/atmos/east_reactor/east)
@@ -14207,10 +14199,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
-"gTO" = (
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "gUi" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/floor/grass,
@@ -18186,7 +18174,6 @@
 /area/lv522/indoors/c_block/cargo)
 "iXA" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/browncorner,
 /area/lv522/atmos/east_reactor/south)
 "iXM" = (
@@ -21034,7 +21021,6 @@
 "kjQ" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/south)
@@ -32941,7 +32927,6 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -40132,7 +40117,6 @@
 "sXI" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -41392,12 +41376,6 @@
 /obj/structure/platform,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
-"tzM" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat,
-/area/lv522/atmos/east_reactor/south)
 "tAk" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/tofukabob,
@@ -47421,12 +47399,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor/north)
-"wni" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "wnq" = (
 /obj/structure/bed/sofa/south/grey/right{
 	pixel_y = 16
@@ -50406,7 +50378,6 @@
 	dir = 8
 	},
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -72455,7 +72426,7 @@ aci
 bZx
 trX
 xHA
-wni
+eQJ
 tiQ
 tiQ
 exW
@@ -72912,7 +72883,7 @@ rBm
 bZx
 gof
 gof
-gTO
+gof
 evt
 saC
 saC
@@ -73144,12 +73115,12 @@ evt
 saC
 saC
 saC
-tzM
+mPY
 yaj
 qjG
 qjG
 qjG
-tzM
+mPY
 oUq
 oUq
 gYv
@@ -73366,17 +73337,17 @@ pFm
 sXI
 mYC
 gof
-gTO
+gof
 buc
 saC
 saC
 saC
-tzM
+mPY
 yaj
 qjG
 qjG
 qjG
-tzM
+mPY
 saC
 saC
 afL
@@ -76099,7 +76070,7 @@ kXk
 gof
 gof
 hjt
-geo
+gnL
 dfb
 dfb
 nCs
