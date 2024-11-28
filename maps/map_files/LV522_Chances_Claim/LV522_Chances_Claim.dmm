@@ -36318,16 +36318,8 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "smB" = (
-/obj/item/weapon/gun/rifle/m41a{
-	current_mag = null
-	},
 /obj/effect/spawner/gibspawner/human,
 /obj/effect/decal/cleanable/blood,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/effect/spawner/gibspawner/human,
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/sand_white/layer0,
