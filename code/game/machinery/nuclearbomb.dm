@@ -635,24 +635,8 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	desc = "Commonly referred to as a 'nuclear landmine' and colloquially as 'Heinz' for its cylindrical shape. The Mk-214 TADM is designed for discrete deployment in an area of operations to completely clear a several-mile radius around the blast point."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "adm"
-	density = TRUE
-	unslashable = TRUE
-	unacidable = TRUE
-	anchored = FALSE
-	timing = FALSE
-	deployable = FALSE
-	explosion_time = null
-	timeleft = 8 MINUTES
-	safety = TRUE
-	being_used = FALSE
-	end_round = TRUE
-	timer_announcements_flags = NUKE_SHOW_TIMER_ALL
 	pixel_x = 0
-	use_power = USE_POWER_NONE
-	req_access = list()
-	flags_atom = FPRINT
-	command_lockout = FALSE
-	var/source_type = /obj/item/stack/ADM
+	var/source_type = /obj/item/ADM
 
 /obj/structure/machinery/nuclearbomb/ADM/attackby(obj/item/item, mob/user)
 	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
@@ -664,14 +648,14 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 		user.visible_message(SPAN_NOTICE("[user] starts packing up [src]."), \
 			SPAN_NOTICE("You begin packing up [src]..."))
 		playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
-		if(do_after(user, 1.5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src))
+		if(do_after(user, 5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src))
 			collapse(usr)
 		else
 			to_chat(user, SPAN_WARNING("You stop packing up [src]."))
 	return ..()
 
 /obj/structure/machinery/nuclearbomb/ADM/proc/collapse(mob/living/carbon/human/user)
-	var/obj/item/stack/ADM = new source_type(loc)
+	var/obj/item/ADM = new source_type(loc)
 	if(istype(user))
 		user.visible_message(SPAN_NOTICE("[user] packs up [src]."),
 			SPAN_NOTICE("You pack up [src]."))
@@ -679,16 +663,9 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	qdel(src)
 
 // ADM in hands
-/obj/item/stack/ADM
+/obj/item/ADM
 	name = "Mk-214 Tactical Atomic Demolition Munition"
 	desc = "A packed-up TADM awaiting deployment to bring some serious pain. Includes the console and arming keys for the warhead."
-
-	amount = 1
-	max_amount = 1
-	stack_id = "adm"
-	display_maptext = FALSE
-	var/singular_type = /obj/item/stack/ADM
-
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK
 	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
@@ -696,7 +673,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	item_state = "admpacked"
 	icon = 'icons/obj/items/marine-items.dmi'
 
-/obj/item/stack/ADM/attack_self(mob/user)
+/obj/item/ADM/attack_self(mob/user)
 	. = ..()
 
 	if(usr.action_busy)
@@ -727,8 +704,3 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(user.loc)
 	planted.update_icon()
 	qdel(src)
-
-/obj/item/stack/ADM/get_examine_text(mob/user)
-	. = ..()
-	. += "There is a single warhead stored within."
-	. += SPAN_INFO("Use a security tuner once deployed to pack it up again.")
