@@ -745,15 +745,6 @@
 	worn_state = "prison_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/ua_boiler
-	name = "\improper UA blue operations uniform"
-	desc = "A stylish blue jumpsuit - standard issue for UA civilian support personnel."
-	icon_state = "boilersuit_darkblue"
-	worn_state = "ua_boiler"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-	has_sensor = UNIFORM_HAS_SENSORS
-	sensor_faction = FACTION_MARINE
-
 /obj/item/clothing/under/colonist/ua_civvies
 	name = "\improper UA gray utility uniform"
 	desc = "A stylish gray jumpsuit - standard issue for UA civilian support personnel."
@@ -1315,8 +1306,8 @@
 /obj/item/clothing/under/marine/officer/engi/navy/tech
 	name = "\improper engineering technician uniform"
 	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
-	icon_state = "ua_boiler"
-	worn_state = "ua_boiler"
+	icon_state = "boilersuit_darkblue"
+	worn_state = "boilersuit_darkblue"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/pilot/flight/para
