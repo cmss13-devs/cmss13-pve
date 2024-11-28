@@ -240,47 +240,47 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/beanie/tan
 
 /datum/gear/headwear/uscm/beret_green
-	display_name = "USCM beret, green"
+	display_name = "Beret, green"
 	path = /obj/item/clothing/head/beret/cm/green
 
 /datum/gear/headwear/uscm/beret_tan
-	display_name = "USCM beret, tan"
+	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
 /datum/gear/headwear/uscm/beret_black
-	display_name = "USCM beret, black"
+	display_name = "Beret, black"
 	path = /obj/item/clothing/head/beret/cm/black
 
 /datum/gear/headwear/uscm/beret_white
-	display_name = "USCM beret, white"
+	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
 
 /datum/gear/headwear/uscm/beret_alpha
-	display_name = "USCM beret, red flash"
+	display_name = "Beret, red flash"
 	path = /obj/item/clothing/head/beret/cm/alpha
 
 /datum/gear/headwear/uscm/beret_bravo
-	display_name = "USCM beret, yellow flash"
+	display_name = "Beret, yellow flash"
 	path = /obj/item/clothing/head/beret/cm/bravo
 
 /datum/gear/headwear/uscm/beret_charlie
-	display_name = "USCM beret, purple flash"
+	display_name = "Beret, purple flash"
 	path = /obj/item/clothing/head/beret/cm/charlie
 
 /datum/gear/headwear/uscm/beret_delta
-	display_name = "USCM beret, blue flash"
+	display_name = "Beret, blue flash"
 	path = /obj/item/clothing/head/beret/cm/delta
 
 /datum/gear/headwear/uscm/beret_echo
-	display_name = "USCM beret, green flash"
+	display_name = "Beret, green flash"
 	path = /obj/item/clothing/head/beret/cm/echo
 
 /datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "USCM beret, brown flash"
+	display_name = "Beret, brown flash"
 	path = /obj/item/clothing/head/beret/cm/foxtrot
 
 /datum/gear/headwear/uscm/beret_intel
-	display_name = "USCM beret, black flash"
+	display_name = "Beret, black flash"
 	path = /obj/item/clothing/head/beret/cm/intel
 
 /datum/gear/headwear/uscm/boonie_olive

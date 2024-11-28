@@ -53,8 +53,8 @@
 	icon_state = "beanietan"
 
 /obj/item/clothing/head/beret/cm
-	name = "\improper USCM beret"
-	desc = "A hat typically worn by the field-officers of the USCM. Occasionally they find their way down the ranks into the hands of squad-leaders and decorated grunts."
+	name = "\improper Beret"
+	desc = "A hat typically worn by the French. Occasionally they find their way into the hands of people with nothing better to spend their money on."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "beret"
 	item_icons = list(
@@ -85,41 +85,32 @@
 	icon_state = "beret_green"
 
 /obj/item/clothing/head/beret/cm/alpha
-	desc = "Often found atop heads, slightly less found on those still attached."
 	icon_state = "beret_alpha"
 
 /obj/item/clothing/head/beret/cm/bravo
-	desc = "It has quite a lot of debris on it, the person wearing this probably moves less than a wall."
 	icon_state = "beret_bravo"
 
 /obj/item/clothing/head/beret/cm/charlie
-	desc = "Still has some morning toast crumbs on it."
 	icon_state = "beret_charlie"
 
 /obj/item/clothing/head/beret/cm/delta
-	desc = "Hard to consider protection, but these types of people don't seek protection."
 	icon_state = "beret_delta"
 
 /obj/item/clothing/head/beret/cm/echo
-	desc = "Tightly Woven, as it should be."
 	icon_state = "beret_echo"
 
 /obj/item/clothing/head/beret/cm/foxtrot
-	desc = "Looks and feels starched, cold to the touch."
 	icon_state = "beret_foxtrot"
 
 /obj/item/clothing/head/beret/cm/intel
-	desc = "Looks more intellegent than the person wearing it."
 	icon_state = "beret_intel"
 
 /obj/item/clothing/head/beret/cm/white/civilian
 	name = "White Beret"
-	desc = "A nice fashionable beret, popular with executives."
 	icon_state = "s_beret"
 
 /obj/item/clothing/head/beret/cm/black/civilian
 	name = "Black Beret"
-	desc = "A nice fashionable beret, popular with executives."
 	icon_state = "beret_black"
 
 
