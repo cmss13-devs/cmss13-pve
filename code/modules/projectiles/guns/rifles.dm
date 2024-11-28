@@ -729,28 +729,6 @@
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/scope/slavic,
 	)
-	random_spawn_chance = 38
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex/,
-		/obj/item/attachable/scope/slavic,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/gyro,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/extinguisher,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/burstfire_assembly,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/compensator,
-	)
-
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 	start_automatic = TRUE
 
@@ -811,26 +789,6 @@
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
-	)
-	random_spawn_chance = 35
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex/,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/attached_gun/extinguisher,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/lasersight,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
 	)
 
 /obj/item/weapon/gun/rifle/mar40/carbine/set_gun_config_values()
