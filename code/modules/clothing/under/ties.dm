@@ -1241,7 +1241,7 @@
 
 /obj/item/clothing/accessory/pads/Initialize(mapload)
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
+	if(!(flags_atom & NO_GAMEMODE_SKIN))
 		select_gamemode_skin(type)
 	update_icon()
 
@@ -1263,7 +1263,7 @@
 	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
 	icon_state = "neckguard_uacg"
 	item_state = "neckguard_uacg"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/accessory/pads/greaves
 	name = "\improper M3 Shin Guards"
@@ -1292,7 +1292,7 @@
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
@@ -1365,11 +1365,11 @@
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
+	if(!(flags_atom & NO_GAMEMODE_SKIN))
 		select_gamemode_skin(type)
 	update_icon()
 
@@ -1504,7 +1504,7 @@
 	desc = "A set of UPP magazine webbing that can carry four magazines."
 	icon_state = "upp_webbing_magazine"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
@@ -1522,7 +1522,7 @@
 	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "upp_webbing_small"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
@@ -1530,7 +1530,7 @@
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
@@ -1587,7 +1587,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m56/Initialize(mapload)
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
+	if(!(flags_atom & NO_GAMEMODE_SKIN))
 		select_gamemode_skin(type)
 	update_icon()
 

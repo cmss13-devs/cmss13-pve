@@ -395,19 +395,19 @@ Buildable meters
 
 /obj/item/pipe/attackby(obj/item/W, mob/user)
 	. = ..()
-	if (!HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+	if(!HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		return .
-	if (!isturf(loc))
+	if(!isturf(loc))
 		return TRUE
 	var/turf/turf = loc
 	var/pipelevel = turf.intact_tile ? 2 : 1
 
-	if (pipe_type in list (PIPE_SIMPLE_STRAIGHT, PIPE_SUPPLY_STRAIGHT, PIPE_SCRUBBERS_STRAIGHT, PIPE_HE_STRAIGHT, PIPE_INSULATED_STRAIGHT, PIPE_MVALVE))
+	if(pipe_type in list (PIPE_SIMPLE_STRAIGHT, PIPE_SUPPLY_STRAIGHT, PIPE_SCRUBBERS_STRAIGHT, PIPE_HE_STRAIGHT, PIPE_INSULATED_STRAIGHT, PIPE_MVALVE))
 		if(dir == SOUTH)
 			setDir(NORTH)
 		else if(dir == WEST)
 			setDir(EAST)
-	else if (pipe_type in list(PIPE_MANIFOLD4W, PIPE_SUPPLY_MANIFOLD4W, PIPE_SCRUBBERS_MANIFOLD4W, PIPE_OMNI_MIXER, PIPE_OMNI_FILTER))
+	else if(pipe_type in list(PIPE_MANIFOLD4W, PIPE_SUPPLY_MANIFOLD4W, PIPE_SCRUBBERS_MANIFOLD4W, PIPE_OMNI_MIXER, PIPE_OMNI_FILTER))
 		setDir(SOUTH)
 	var/pipe_dir = get_pipe_dir()
 
@@ -576,9 +576,9 @@ Buildable meters
 	new_pipe.search_for_connections()
 
 	playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-	user.visible_message(
-		"[user] fastens [src].",
-		SPAN_NOTICE("You have fastened [src]."),
+	user.visible_message( \
+		"[user] fastens [src].", \
+		SPAN_NOTICE("You have fastened [src]."), \
 		"You hear ratchet.")
 	qdel(src) // remove the pipe item
 

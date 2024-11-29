@@ -84,7 +84,7 @@
 	name = "\improper XM4 pattern 'battlefield-awareness' armor"
 	desc = "The XM4 experimental armor provides capable protection combined with an experimental integrated motion tracker."
 	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives and those whose duties detract from constant situational awareness."
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/medium/rto/md/army/Initialize(mapload, ...)
 	. = ..()

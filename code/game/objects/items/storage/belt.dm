@@ -15,6 +15,8 @@
 	cant_hold = list(/obj/item/weapon/throwing_knife)
 	///TRUE Means that it closes a flap over its contents, and therefore update_icon should lift that flap when opened. If it doesn't have _half and _full iconstates, this doesn't matter either way.
 	var/flap = TRUE
+	/// Indiciates whether the _half and _full overlays should be applied in update_icon
+	var/skip_fullness_overlays = FALSE
 
 /obj/item/storage/belt/gun/flaregun/dump_into(obj/item/storage/origin_storage, mob/user)
 
@@ -48,11 +50,15 @@
 
 /obj/item/storage/belt/update_icon()
 	overlays.Cut()
+
+	if(skip_fullness_overlays)
+		return
 	if(!length(contents))
 		return
 	if(content_watchers && flap) //If it has a flap and someone's looking inside it, don't close the flap.
 		return
-	else if(length(contents) <= storage_slots * 0.5)
+
+	if(length(contents) <= storage_slots * 0.5)
 		overlays += "+[icon_state]_half"
 	else
 		overlays += "+[icon_state]_full"
@@ -73,6 +79,7 @@
 	item_state = "champion"
 	storage_slots = 1
 	can_hold = list(/obj/item/clothing/mask/luchador)
+	skip_fullness_overlays = TRUE
 
 
 
@@ -310,10 +317,10 @@
 		/obj/item/device/reagent_scanner,
 		/obj/item/device/analyzer/plant_analyzer,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/medical/lifesaver/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/medical/lifesaver/standard/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -395,7 +402,7 @@
 	desc = "The Type 41 load rig is the standard load-bearing equipment of the UPP military. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics."
 	icon_state = "medicbag_u"
 	item_state = "medicbag_u"
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/medical/lifesaver/upp/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -481,6 +488,7 @@
 		/obj/item/device/clue_scanner,
 		/obj/item/notepad/blue,
 	)
+
 
 /obj/item/storage/belt/security/full/fill_preset_inventory()
 	new /obj/item/weapon/baton(src)
@@ -598,10 +606,10 @@
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/marine/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/marine/m41a/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -734,7 +742,7 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 
 /obj/item/storage/belt/marine/smartgunner/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/marine/smartgunner/upp
 	name = "\improper Type 90 pattern machinegunner belt"
@@ -760,7 +768,7 @@
 		/obj/item/reagent_container/food/snacks,
 	)
 
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	item_state_slots = list(
 		WEAR_L_HAND = "upp_belt",
 		WEAR_R_HAND = "upp_belt")
@@ -776,14 +784,15 @@
 	item_state_slots = list(
 		WEAR_L_HAND = "marinebelt",
 		WEAR_R_HAND = "marinebelt")
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/marine/upp
 	name = "\improper Type 41 pattern load rig"
 	desc = "The Type 41 load rig is the standard-issue load-bearing equipment of the UPP military. The primary function of this belt is to provide easy access to mags for the Type 71 during operations. Despite being designed for the Type 71 weapon system, the pouches are modular enough to fit other types of ammo and equipment."
 	icon_state = "upp_belt"
 	item_state = "upp_belt"
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 //version full of type 71 mags
 /obj/item/storage/belt/marine/upp/full/fill_preset_inventory()
@@ -826,7 +835,7 @@
 		/obj/item/tool/wirecutters,
 		/obj/item/ammo_magazine/m56d,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/shotgun
 	name = "\improper M276 pattern shotgun shell loading rig"
@@ -839,7 +848,7 @@
 	max_storage_space = 28
 	can_hold = list(/obj/item/ammo_magazine/handful)
 	flap = FALSE
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/belt/shotgun/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -885,12 +894,13 @@
 	storage_slots = null
 	max_storage_space = 20
 	can_hold = list(/obj/item/ammo_magazine/handful/shotgun/twobore)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	item_state_slots = list(
 		WEAR_J_STORE = "van_bandolier_10",
 		WEAR_BACK = "van_bandolier_10",
 		WEAR_WAIST = "van_bandolier_10"
 		)
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/shotgun/van_bandolier/update_icon()
 	var/mob/living/carbon/human/user = loc
@@ -968,7 +978,8 @@
 		WEAR_R_HAND = "marinebelt")
 	name = "Mrs. Quackers"
 	desc = "She always did have a meaner temper."
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/knifepouch
 	name="\improper M276 pattern knife rig"
@@ -1115,6 +1126,18 @@
 		/obj/item/weapon/gun/pistol,
 		/obj/item/ammo_magazine/pistol,
 	)
+	cant_hold = list(
+		/obj/item/weapon/gun/revolver/m44/custom/pkd_special, // HONKed currently
+		/obj/item/weapon/gun/revolver/m44/custom/pkd_special/k2049, // HONKed currently
+		/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series, // HONKed currently
+		/obj/item/weapon/gun/pistol/kt42, // HONKed currently
+		/obj/item/weapon/gun/pistol/holdout, // HONKed currently
+		/obj/item/weapon/gun/pistol/holdout/flashlight, // HONKed currently
+		/obj/item/weapon/gun/pistol/es4, // HONKed currently
+		/obj/item/weapon/gun/pistol/auto9, // HONKed currently
+		/obj/item/weapon/gun/pistol/chimp, // HONKed currently
+		/obj/item/weapon/gun/pistol/skorpion, // HONKed currently
+	)
 
 /obj/item/storage/belt/gun/post_skin_selection()
 	base_icon = icon_state
@@ -1127,11 +1150,14 @@
 /obj/item/storage/belt/gun/update_icon()
 	overlays.Cut()
 
+	if(skip_fullness_overlays)
+		return
 	if(content_watchers && flap)
 		return
 	var/magazines = length(contents) - length(holstered_guns)
 	if(!magazines)
 		return
+
 	if(magazines <= (storage_slots - length(holster_slots)) * 0.5) //Don't count slots reserved for guns, even if they're empty.
 		overlays += "+[base_icon]_half"
 	else
@@ -1295,10 +1321,10 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/gun/m4a3/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/gun/m4a3/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
@@ -1408,7 +1434,7 @@
 		/obj/item/weapon/gun/smg/nailgun/compact,
 		/obj/item/ammo_magazine/smg/nailgun,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/gun/m4a3/nailgun/prefilled/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact())
@@ -1426,6 +1452,9 @@
 		/obj/item/weapon/gun/smg/m39,
 		/obj/item/ammo_magazine/smg,
 	)
+	cant_hold = list (
+		/obj/item/weapon/gun/smg/m39/elite, // HONKed currently
+	)
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -11,
@@ -1437,8 +1466,8 @@
 	name = "\improper M276 pattern XM51 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
 	icon_state = "xm51_holster"
-	has_gamemode_skin = FALSE
-	gun_has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
+	gun_has_gamemode_skin = TRUE
 	storage_slots = 8
 	max_w_class = 5
 	can_hold = list(
@@ -1494,14 +1523,14 @@
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -1,
 			"icon_y" = -3))
 
 /obj/item/storage/belt/gun/m44/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/gun/m44/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44())
@@ -1527,10 +1556,11 @@
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	holster_slots = list(
 		"1" = list("icon_x" = -9, "icon_y" = -3),
 		"2" = list("icon_x" = 9, "icon_y" = -3))
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/gun/m44/gunslinger/Initialize()
 	var/matrix/M = matrix()
@@ -1600,6 +1630,7 @@
 	can_hold = list(
 		/obj/item/weapon/gun/revolver,
 	)
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/gun/mateba
 	name = "\improper M276 pattern Mateba holster rig"
@@ -1631,7 +1662,7 @@
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the powerful Mateba magnum revolver, along with five small pouches for speedloaders. It was included with the mail-order USCM edition of the Mateba autorevolver in the early 2170s."
 	icon_state = "cmateba_holster"
 	item_state = "marinebelt"
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
@@ -1774,7 +1805,7 @@
 	icon_state = "ivan_belt"
 	storage_slots = 56
 	max_storage_space = 56
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	max_w_class = SIZE_MASSIVE
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
@@ -1815,7 +1846,7 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/belt/gun/smartpistol/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/smart())
@@ -1867,7 +1898,7 @@
 		/obj/item/weapon/gun/revolver/m44/custom/webley,
 		/obj/item/ammo_magazine/revolver,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -1,
@@ -1896,10 +1927,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
-
-/obj/item/storage/belt/gun/smartgunner/standard
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/belt/gun/smartgunner/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
@@ -1910,7 +1938,7 @@
 /obj/item/storage/belt/gun/smartgunner/army
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of load-bearing equipment only seen worn by operators of the M56A2 weapon system, designed to carry smartgun ammunition and a sidearm."
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
@@ -1966,7 +1994,6 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/pmc/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
@@ -1995,7 +2022,6 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/whiteout/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/pmc())
@@ -2017,7 +2043,6 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/clf/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
@@ -2041,7 +2066,7 @@
 		/obj/item/ammo_magazine/revolver/upp,
 		/obj/item/ammo_magazine/pkp,
 	)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	item_state_slots = list(
 		WEAR_L_HAND = "upp_belt",
 		WEAR_R_HAND = "upp_belt")
@@ -2058,7 +2083,7 @@
 		/obj/item/mortar_shell,
 	)
 	bypass_w_limit = list(/obj/item/mortar_shell)
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/belt/gun/utility
 	name = "\improper M276 pattern combat toolbelt rig"
@@ -2147,6 +2172,7 @@
 	storage_slots = 8
 	flags_inventory = CANTSTRIP
 	max_w_class = 0 //this belt cannot hold anything
+	skip_fullness_overlays = TRUE
 
 /obj/item/storage/belt/souto/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -2167,8 +2193,7 @@
 	desc = "Good for carrying around extra ammo in the heat of the jungle. Made of special rot-resistant fabric."
 	icon_state = "rmc_ammo"
 	item_state = "rmc_ammo"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	has_gamemode_skin = FALSE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 
 /obj/item/storage/belt/marine/rmc/rmc_f90_ammo/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
@@ -2183,20 +2208,19 @@
 	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with various clips. This version is designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
 	icon_state = "rmc_medical"
 	item_state = "rmc_medical"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 
 /obj/item/storage/belt/gun/l905
 	name = "\improper L905 gunbelt"
 	desc = "Finely-tooled leather, a L905, and six magazines. More than enough for the standard RMC commando."
 	icon_state = "rmc_pistol"
 	item_state = "rmc_pistol"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/weapon/gun/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp78,
 	)
-	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -1,

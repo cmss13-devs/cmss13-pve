@@ -37,6 +37,7 @@
 /turf/open/floor/coagulation
 	name = "coagulation"
 	icon = 'icons/turf/floors/coagulation.dmi'
+	icon_state = null
 
 /turf/open/floor/coagulation/is_plasteel_floor()
 	return FALSE

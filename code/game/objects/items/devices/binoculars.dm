@@ -12,8 +12,6 @@
 	throwforce = 5
 	throw_range = 15
 	throw_speed = SPEED_VERY_FAST
-	/// If FALSE won't change icon_state to a camo marine bino.
-	var/uses_camo = FALSE
 	var/zoom_offset = 11
 	var/view_range = 12
 
@@ -22,8 +20,6 @@
 
 /obj/item/device/binoculars/Initialize()
 	. = ..()
-	if(!uses_camo)
-		return
 	select_gamemode_skin(type)
 
 /obj/item/device/binoculars/attack_self(mob/user)
@@ -52,7 +48,7 @@
 /obj/item/device/binoculars/civ
 	desc = "A pair of binoculars."
 	icon_state = "binoculars_civ"
-	uses_camo = FALSE
+	flags_atom = FPRINT|CONDUCT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 //RANGEFINDER with ability to acquire coordinates
 /obj/item/device/binoculars/range
@@ -435,7 +431,6 @@
 	name = "rangefinder monocular"
 	desc = "A military-grade monocular equipped with rangefinding capabilities. Capable of withstanding a pretty hefty beating. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
 	icon_state = "advanced_monocular"
-	uses_camo = FALSE
 	range_laser_overlay = FALSE
 	zoom_offset = 8
 	view_range = 9
@@ -446,7 +441,6 @@
 	icon_state = "advanced_binoculars"
 	range_laser_overlay = "adv_laser_range"
 	cas_laser_overlay = "adv_laser_cas"
-	uses_camo = FALSE
 
 /obj/item/device/binoculars/range/designator/monocular
 	name = "tactical monocular"
@@ -454,7 +448,6 @@
 	icon_state = "advanced_monocular"
 	range_laser_overlay = "adv_laser_range"
 	cas_laser_overlay = "adv_laser_cas"
-	uses_camo = FALSE
 
 
 //IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
@@ -615,7 +608,7 @@
 	icon_state = "designator_e"
 
 	//laser_con is to add you to the list of laser users.
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|CONDUCT|NO_GAMEMODE_SKIN
 	force = 5
 	w_class = SIZE_SMALL
 	throwforce = 5

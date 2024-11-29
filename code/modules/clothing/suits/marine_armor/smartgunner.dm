@@ -29,7 +29,7 @@
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_GAMEMODE_SKIN))
 		name = "M56 snow combat harness"
 	//select_gamemode_skin(type)
 
@@ -68,10 +68,10 @@
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/smartgunner/black
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	icon_state = "8fancy"
 
 //Customizable Variant
@@ -107,7 +107,7 @@
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_GAMEMODE_SKIN))
 		name = "\improper M56 snow combat harness"
 	//select_gamemode_skin(type)
 
@@ -146,8 +146,8 @@
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 /obj/item/clothing/suit/marine/smartgunner/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/smartgunner/black
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	icon_state = "8fancy"

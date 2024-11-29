@@ -3523,7 +3523,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/medical)
 "cSa" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	icon_state = "ywflowers_3"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -7252,7 +7252,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "fPp" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	icon_state = "ywflowers_2"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -8343,7 +8343,7 @@
 /turf/open/floor/shiva/red/southwest,
 /area/varadero/interior/security)
 "gCQ" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /obj/structure/machinery/storm_siren{
 	pixel_y = 5
 	},
@@ -9464,7 +9464,7 @@
 /turf/open/floor/shiva/green/southwest,
 /area/varadero/interior/mess)
 "hyT" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	icon_state = "ywflowers_4"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -11420,7 +11420,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/comms3)
 "jgV" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/north_research)
 "jhd" = (
@@ -12095,7 +12095,7 @@
 /turf/open/floor/shiva/blue,
 /area/varadero/interior/technical_storage)
 "jNn" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "jNE" = (
@@ -13161,7 +13161,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "kyb" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/dirt/desert0,
 /area/varadero/exterior/pontoon_beach)
 "kyj" = (
@@ -15841,7 +15841,7 @@
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/medical)
 "mJe" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1/weedable,
 /area/varadero/interior/caves/north_research)
 "mJv" = (
@@ -17389,7 +17389,7 @@
 /turf/closed/wall,
 /area/varadero/interior/medical)
 "nTf" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/dirt/desert0,
 /area/varadero/exterior/lz1_near)
 "nTh" = (
@@ -18234,7 +18234,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "oDB" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /obj/structure/machinery/storm_siren{
 	pixel_y = 5
 	},
@@ -22271,7 +22271,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/administration)
 "rBq" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz2_near)
 "rBJ" = (
@@ -22787,7 +22787,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/mess)
 "rWN" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/grass/grass1/weedable,
 /area/varadero/interior_protected/caves/central)
 "rWR" = (
@@ -25623,7 +25623,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "upH" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/dirt,
 /area/varadero/exterior/pontoon_beach)
 "upL" = (

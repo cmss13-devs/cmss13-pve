@@ -111,7 +111,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/interior/colony_north)
 "ahz" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "brflowers_1"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -1538,7 +1538,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/complex/botany)
 "crT" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "fullgrass_1"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -3915,7 +3915,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/kutjevo/interior/power)
 "fRP" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "brflowers_3"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -8127,7 +8127,7 @@
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/kutjevo/interior/colony_South/power2)
 "mmy" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "lavendergrass_1"
 	},
 /mob/living/simple_animal/cat/Runtime{
@@ -12796,7 +12796,7 @@
 /turf/open/floor/kutjevo/colors/purple/edge,
 /area/kutjevo/interior/construction)
 "tye" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "sparsegrass_2"
 	},
 /turf/open/gm/dirt2,
@@ -13322,7 +13322,7 @@
 /turf/open/desert/desert_shore/desert_shore1,
 /area/kutjevo/exterior/runoff_river)
 "ujo" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1/weedable,
 /area/kutjevo/exterior/complex_border/med_park)
 "ujG" = (
@@ -13436,7 +13436,7 @@
 /turf/open/floor/almayer/research/containment/floor2,
 /area/kutjevo/interior/power)
 "uri" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "fullgrass_3"
 	},
 /turf/open/gm/grass/grass1/weedable,
@@ -13702,7 +13702,7 @@
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/interior/complex/botany/east_tech)
 "uIQ" = (
-/obj/structure/flora/bush/ausbushes/ppflowers{
+/obj/structure/flora/bush/ausbushes/var3/ppflowers{
 	icon_state = "sparsegrass_3"
 	},
 /turf/open/gm/dirtgrassborder2,
