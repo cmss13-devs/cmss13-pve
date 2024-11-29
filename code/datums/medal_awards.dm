@@ -47,6 +47,9 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 	// Pick a marine
 	var/list/possible_recipients = list()
 	var/list/recipient_ranks = list()
+	var/list/possible_medals = GLOB.human_medals
+	if(as_admin)
+		possible_medals = ALL_MARINE_MEDALS
 	for(var/datum/data/record/record in GLOB.data_core.general)
 		var/recipient_name = record.fields["name"]
 		if(usr.real_name == recipient_name && !as_admin)
@@ -59,7 +62,7 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 		return FALSE
 
 	// Pick a medal
-	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", GLOB.human_medals)
+	var/medal_type = tgui_input_list(usr, "What type of medal do you want to award?", "Medal Type", possible_medals)
 	if(!medal_type)
 		return FALSE
 
