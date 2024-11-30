@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Lets the UPP heavy armour rig store rifle magazines and such"

@@ -450,6 +450,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 1st Cavalry Division."
 	icon_state = "infantrypatch"
 
+/obj/item/clothing/accessory/patch/army/spook
+	name = "Army Intelligence patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
+	icon_state = "spookpatch"
+
 //misc
 
 /obj/item/clothing/accessory/dogtags
@@ -492,6 +497,9 @@
 	icon_state = "s_poncho"
 	has_variation = FALSE
 
+/obj/item/clothing/accessory/poncho/green/army
+	name = "Well-worn Poncho"
+	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
 
 //Ties that can store stuff
 
@@ -858,7 +866,6 @@
 	name = "drop pouch"
 	desc = "A convenient pouch to carry loose items around."
 	icon_state = "drop_pouch"
-
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 
 /obj/item/storage/internal/accessory/drop_pouch
@@ -873,6 +880,29 @@
 		)
 	storage_flags = NONE //no verb, no quick draw, no tile gathering
 
+/obj/item/clothing/accessory/storage/smallpouch
+	name = "small pouch"
+	desc = "A small pouch to carry a few items, typically the contents of an IFAK."
+	icon_state = "pouch"
+	hold = /obj/item/storage/internal/accessory/smallpouch
+
+/obj/item/storage/internal/accessory/smallpouch
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_SMALL
+	storage_flags = NONE
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/stack/medical/ointment,
+		/obj/item/reagent_container/hypospray/autoinjector,
+		/obj/item/storage/pill_bottle/packet,
+		/obj/item/stack/medical/bruise_pack,
+		/obj/item/stack/medical/splint,
+		/obj/item/storage/box/MRE,
+		/obj/item/tool/pen,
+		/obj/item/folder,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/tool/lighter,
+	)
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
@@ -1048,12 +1078,16 @@
 
 	tucked_in = !tucked_in
 	if(tucked_in)
-		icon_state = "flakslim"
+		icon_state = "[initial(icon_state)]_slim"
 		user.visible_message(SPAN_NOTICE("[user] tucks in [src]'s sleeves."), SPAN_NOTICE("You tuck in [src]'s sleeves."))
 	else
 		icon_state = initial(icon_state)
 		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
 	item_state = icon_state
+
+/obj/item/clothing/accessory/flak/od
+	icon_state = "flakod"
+	item_state = "flakod"
 
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
@@ -1089,7 +1123,14 @@
 	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
 	icon_state = "shinguards"
 	item_state = "shinguards"
-	slot = ACCESSORY_SLOT_LEGDECOR
+	slot = ACCESSORY_SLOT_DECORSHIN
+
+/obj/item/clothing/accessory/pads/kneepads
+	name = "\improper M3 Knee Guards"
+	desc = "A set knee guards designed to be worn in conjuction with M3 pattern armor."
+	icon_state = "thighguards"
+	item_state = "thighguards"
+	slot = ACCESSORY_SLOT_DECORKNEE
 
 /obj/item/clothing/accessory/pads/groin
 	name = "\improper M3 Groin Plate"
@@ -1212,6 +1253,7 @@
 	desc = "A set of magazine webbing made in an alternative configuration for standard M3 Pattern armor. This one is exclusively issued to Force Reconnoissance units."
 	icon_state = "m3rwebbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4

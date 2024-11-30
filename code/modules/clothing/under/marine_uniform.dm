@@ -218,20 +218,21 @@
 /obj/item/clothing/under/marine/officer/bridge
 	name = "marine service uniform"
 	desc = "Officer's uniform, a little outdated. Why it needs to be frag rated is beyond everyone."
-	icon_state = "BO_jumpsuit"
-	item_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "service_uniform"
+	item_state = "service_uniform"
+	worn_state = "service_uniform"
 	specialty = "marine service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/boiler
-	name = "marine operations uniform"
-	desc = "Officer's uniform, a little outdated."
-	icon_state = "uscmboiler"
-	item_state = "uscmboiler"
-	worn_state = "uscmboiler"
+	name = "\improper multi-branch operations boilersuit"
+	desc = "A uniform favoured by those in the UA armed forces who are rarely on the field. Looks a little outdated."
+	icon_state = "command_jumpsuit"
+	item_state = "command_jumpsuit"
+	worn_state = "command_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	flags_atom = NO_SNOW_TYPE
 	specialty = "marine operations"
 
 /obj/item/clothing/under/marine/officer/command
@@ -261,8 +262,8 @@
 	item_state_slots = list(WEAR_BODY = "EC_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/engi
-	name = "engineer uniform"
-	desc = "The uniform of a maintenance technician. Specially treated for hazardous materials handing and hostile conditions."
+	name = "crew uniform"
+	desc = "The uniform of a UA space-vessel crew member. Specially treated for hazardous materials handing and hostile conditions."
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	icon_state = "mt_jumpsuit"
@@ -415,17 +416,17 @@
 /obj/item/clothing/under/uaac/tis/io
 	name = "\improper UAAC-TIS Intelligence Officer uniform"
 	desc = "Originally a USCM officer uniform, all insignia have been carefully removed and replaced by a simple TIS pin worn over the right breast. Like their Special Agent counterparts, TIS Intel Officers are typically transplants from UA aligned armed forces, often initially recruited on a temporary basis then transferred permanently. As such, officers are often forced to adapt their original uniforms."
-	icon_state = "BO_jumpsuit"
-	worn_state = "BO_jumpsuit"
+	icon_state = "service_uniform"
+	worn_state = "service_uniform"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 //=========================//USCM Survivors\\================================\\
 //=======================================================================\\
 
 /obj/item/clothing/under/marine/reconnaissance
-	name = "\improper USCM uniform"
+	name = "\improper damaged USCM uniform"
 	desc = "Torn, Burned and blood stained. This uniform has seen much more than you could possibly imagine."
-	icon_state = "recon_marine"
-	worn_state = "recon_marine"
+	icon_state = "damage_marine_jumpsuit"
+	worn_state = "damage_marine_jumpsuit"
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/reconnaissance/Initialize(mapload)
@@ -1268,58 +1269,40 @@
 
 //=USASF & ARMY=\\
 
-/obj/item/clothing/under/marine/officer/ce/navy
+/obj/item/clothing/under/navy/officer
 	name = "\improper duty officer uniform"
 	desc = "The uniform of a duty officer in the USASF. Specially treated for hazardous conditions work, high density layers provide some level of radiation protection."
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	icon_state = "d_uscmboiler"
-	worn_state = "d_uscmboiler"
+	icon_state = "boilersuit_khaki"
+	worn_state = "boilersuit_khaki"
+	suit_restricted = null //so most officers can wear whatever suit they want
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	item_state_slots = list(WEAR_BODY = "d_uscmboiler")
+	item_state_slots = list(WEAR_BODY = "boilersuit_khaki")
 
-/obj/item/clothing/under/marine/officer/engi/navy
-	name = "\improper crew uniform"
-	desc = "The uniform of an aerospace force crewman. Specially treated for hazardous materials handing and hostile conditions."
+/obj/item/clothing/under/navy/tech
+	name = "\improper engineering technician uniform"
+	desc = "The uniform of an engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	icon_state = "mt_jumpsuit"
-	worn_state = "mt_jumpsuit"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
-
-/obj/item/clothing/under/marine/officer/engi/OT/navy
-	name = "\improper damage-control crew uniform"
-	desc = "The uniform of an aerospace force crewman. Specially treated for hazardous materials handing and hostile conditions. This one has the color-flashes of a member of the ship damage-control teams on it."
-	icon_state = "ot_jumpsuit"
-	worn_state = "ot_jumpsuit"
-	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-/obj/item/clothing/under/marine/officer/engi/navy/tech
-	name = "\improper engineering technician uniform"
-	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
 	icon_state = "ua_boiler"
 	worn_state = "ua_boiler"
+	suit_restricted = null //so most officers can wear whatever suit they want
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/pilot/flight/para
 	name = "\improper para-rescue flightsuit"
 	desc = "A flightsuit worn by the elite para-rescue forces of the USASF, with all the necessary straps and rigging for supporting the sheer balls these servicemen have. Looks badass."
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/navy)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/intel/navy
 	name = "\improper USASF combat uniform"
 	desc = "Forward-observation work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/navy)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/standard/army
 	name = "\improper army combat uniform"
 	desc = "Standard-issue Army uniform, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/medium/rto/army, )
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
