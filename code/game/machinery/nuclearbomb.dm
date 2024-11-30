@@ -685,7 +685,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 		if(O.density)
 			blocked = TRUE
 			break
-	for(var/mob/M in Tile)
+	for(var/mob/Mob in Tile)
 		blocked = TRUE
 		break
 	if(istype(Tile, /turf/open))
