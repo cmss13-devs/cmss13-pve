@@ -679,17 +679,17 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	if(SSinterior.in_interior(user))
 		to_chat(usr, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
 		return
-	var/turf/T = get_step(user, user.dir)
+	var/turf/Tile = get_step(user, user.dir)
 	var/blocked = FALSE
-	for(var/obj/O in T)
+	for(var/obj/O in Tile)
 		if(O.density)
 			blocked = TRUE
 			break
-	for(var/mob/M in T)
+	for(var/mob/M in Tile)
 		blocked = TRUE
 		break
-	if(istype(T, /turf/open))
-		var/turf/open/floor = T
+	if(istype(Tile, /turf/open))
+		var/turf/open/floor = Tile
 		if(!floor.allow_construction)
 			to_chat(user, SPAN_WARNING("You cannot deploy \a [src] here, find a more secure surface!"))
 			return FALSE
@@ -710,7 +710,6 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	user.visible_message(SPAN_NOTICE("[user] has finished deploying [src]."),
 			SPAN_NOTICE("You finish deploying [src]."))
 
-	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(user.loc)
+	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(Tile)
 	planted.update_icon()
-	planted.forceMove(get_turf(T))
 	qdel(src)
