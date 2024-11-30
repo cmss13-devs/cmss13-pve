@@ -1185,7 +1185,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/pve
 	name = "AN/RVS-52 CCD television sight system"
-	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the carry handle of the M41A line of rifles."
+	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the most commonly-used rifles of the USCM."
 	icon_state = "pvescope"
 	zoom_offset = 3
 	zoom_viewsize = 7
