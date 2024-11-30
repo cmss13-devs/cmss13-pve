@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds the Mk-214 Tactical Atomic Demolition Munition, an alternative way of nuking a site from the ground"
+  - imageadd: "Adds new sprites for the TADM, worn, loose & undeployed and deployed"
