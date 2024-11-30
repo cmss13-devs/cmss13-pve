@@ -13,7 +13,7 @@
 	name = "airlock assembly"
 	icon = 'icons/obj/structures/doors/airlock_assembly.dmi'
 	icon_state = "door_as_0"
-	anchored = FALSE
+	anchored = TRUE
 	density = TRUE
 	var/state = STATE_STANDARD
 	var/base_icon_state = ""
@@ -22,8 +22,62 @@
 	var/airlock_type = "generic" //the type path of the airlock once completed
 	var/glass = AIRLOCK_NOGLASS // see defines
 	var/created_name = null
+
+	var/damage = 0 //This should let marines destroy Assemblies spawned by destroyed airlocks now
+	var/damage_cap = HEALTH_ASSEMBLY // Assembly gets destroyed
 	/// Used for multitile assemblies
 	var/width = 1
+
+/obj/structure/airlock_assembly/proc/take_damage(dam, mob/M)
+	if(!dam || unacidable)
+		return FALSE
+
+	damage = max(0, damage + dam)
+
+	if(damage >= damage_cap)
+		if(M && istype(M))
+			SEND_SIGNAL(M, COMSIG_MOB_DESTROY_AIRLOCK, src)
+		to_chat(loc, SPAN_DANGER("[src] blows apart!"))
+		deconstruct(FALSE)
+		playsound(src, 'sound/effects/metal_crash.ogg', 25, 1)
+		return TRUE
+
+/obj/structure/airlock_assembly/ex_act(severity, explosion_direction, datum/cause_data/cause_data)
+	var/exp_damage = severity * EXPLOSION_DAMAGE_MULTIPLIER_DOOR
+	var/location = get_turf(src)
+	if(!density)
+		exp_damage *= EXPLOSION_DAMAGE_MODIFIER_DOOR_OPEN
+	if(take_damage(exp_damage)) // destroyed by explosion, shards go flying
+		create_shrapnel(location, rand(2,5), explosion_direction, , /datum/ammo/bullet/shrapnel/light, cause_data)
+
+/obj/structure/airlock_assembly/get_explosion_resistance()
+	if(density)
+		if(unacidable)
+			return 1000000
+		else
+			return (damage_cap-damage)/EXPLOSION_DAMAGE_MULTIPLIER_DOOR //this should exactly match the amount of damage needed to destroy the door
+	else
+		return FALSE
+
+/obj/structure/airlock_assembly/bullet_act(obj/projectile/P)
+	bullet_ping(P)
+	if(P.damage)
+		if(P.ammo.flags_ammo_behavior & AMMO_ROCKET)
+			take_damage(P.damage * 4, P.firer) // rockets wreck airlocks
+			return TRUE
+		else
+			take_damage(P.damage, P.firer)
+			return TRUE
+	return FALSE
+
+/obj/structure/airlock_assembly/handle_tail_stab(mob/living/carbon/xenomorph/xeno)
+
+	playsound(src, 'sound/effects/metalhit.ogg', 50, TRUE)
+	xeno.visible_message(SPAN_XENOWARNING("\The [xeno] strikes \the [src] with its tail!"), SPAN_XENOWARNING("You strike \the [src] with your tail!"))
+	xeno.emote("tail")
+	var/damage = xeno.melee_damage_upper * TAILSTAB_AIRLOCK_DAMAGE_MULTIPLIER
+	take_damage(damage, xeno)
+	return TAILSTAB_COOLDOWN_NORMAL
 
 /obj/structure/airlock_assembly/Initialize(mapload, ...)
 	. = ..()
@@ -110,6 +164,11 @@
 			new /obj/item/stack/sheet/glass(loc, 5)
 		qdel(src)
 		return
+
+	for(var/obj/object in loc)
+		if(object.density && object != src)
+			to_chat(user, SPAN_WARNING("[object] is blocking you from interacting with [src]!"))
+			return
 
 	switch(state)
 		if(STATE_STANDARD)

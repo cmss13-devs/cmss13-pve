@@ -9,11 +9,11 @@
 	return GLOB.not_incapacitated_state
 
 /datum/squad/ui_data(mob/user)
-	if(!squad_info_data.len) //initial first update of data
+	if(!length(squad_info_data)) //initial first update of data
 		update_all_squad_info()
 	if(squad_info_data["total_mar"] != count) //updates for new marines
 		update_free_mar()
-		if(squad_leader && squad_info_data["pltsgt"]["name"] != squad_leader.real_name)
+		if(squad_leader && squad_info_data["sctsgt"]["name"] != squad_leader.real_name)
 			update_squad_leader()
 	var/list/data = squad_info_data.Copy()
 	data["squad"] = name
@@ -29,7 +29,7 @@
 /datum/squad/proc/get_leadership(mob/user)
 	var/mob/living/carbon/human/H = user
 	if (squad_leader && H.name == squad_leader.name)
-		return "pltsgt"
+		return "sctsgt"
 	else
 		for(var/fireteam in fireteams)
 			var/mob/living/carbon/human/ftl = fireteam_leaders[fireteam]
@@ -58,7 +58,7 @@
 			var/target_marine = params["target_marine"]
 			var/target_team = params["target_ft"]
 
-			if (islead != "pltsgt")
+			if (islead != "sctsgt")
 				return
 
 			var/mob/living/carbon/human/target = get_marine_from_name(target_marine)
@@ -72,7 +72,7 @@
 		if ("unassign_ft")
 			var/target_marine = params["target_marine"]
 
-			if (islead != "pltsgt")
+			if (islead != "sctsgt")
 				return
 
 			var/mob/living/carbon/human/target = get_marine_from_name(target_marine)
@@ -85,7 +85,7 @@
 		if ("demote_ftl")
 			var/target_team = params["target_ft"]
 
-			if (islead != "pltsgt")
+			if (islead != "sctsgt")
 				return
 
 			unassign_ft_leader(target_team, FALSE, TRUE)
@@ -96,7 +96,7 @@
 			var/target_marine = params["target_marine"]
 			var/target_team = params["target_ft"]
 
-			if (islead != "pltsgt")
+			if (islead != "sctsgt")
 				return
 
 			var/mob/living/carbon/human/target = get_marine_from_name(target_marine)
@@ -108,7 +108,7 @@
 
 //used once on first opening
 /datum/squad/proc/update_all_squad_info()
-	squad_info_data["pltsgt"] = list()
+	squad_info_data["sctsgt"] = list()
 	update_squad_leader()
 	squad_info_data["fireteams"] = list()
 	var/i = 1
@@ -120,18 +120,18 @@
 	squad_info_data["mar_free"] = list()
 	update_free_mar()
 
-//pltsgt update. Should always be paired up with FT or free marines update
+//sctsgt update. Should always be paired up with FT or free marines update
 /datum/squad/proc/update_squad_leader()
 	var/obj/item/card/id/ID = null
 	if(squad_leader)
 		ID = squad_leader.get_idcard()
-	squad_info_data["pltsgt"]["name"] = squad_leader ? squad_leader.real_name : "None"
-	squad_info_data["pltsgt"]["refer"] = squad_leader ? "\ref[squad_leader]" : null
-	squad_info_data["pltsgt"]["paygrade"] = ID ? get_paygrades(ID.paygrade, 1) : ""
+	squad_info_data["sctsgt"]["name"] = squad_leader ? squad_leader.real_name : "None"
+	squad_info_data["sctsgt"]["refer"] = squad_leader ? "\ref[squad_leader]" : null
+	squad_info_data["sctsgt"]["paygrade"] = ID ? get_paygrades(ID.paygrade, 1) : ""
 
 //fireteam and TL update
 /datum/squad/proc/update_fireteam(team)
-	squad_info_data["fireteams"][team]["total"] = fireteams[team].len
+	squad_info_data["fireteams"][team]["total"] = length(fireteams[team])
 	if(squad_info_data["fireteams"][team]["total"] < 1)
 		squad_info_data["fireteams"][team]["sqsgt"] = list()
 		squad_info_data["fireteams"][team]["mar"] = list()
@@ -147,7 +147,7 @@
 			if(skillcheck(H, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
 				Med = TRUE
 			else
-				if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+				if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 					Eng = TRUE
 		ID = H.get_idcard()
 		squad_info_data["fireteams"][team]["sqsgt"] = list(
@@ -173,7 +173,7 @@
 				if(JOB_SQUAD_TEAM_LEADER)
 					rank = "SqSgt"
 				if(JOB_SQUAD_LEADER)
-					rank = "PltSgt"
+					rank = "SctSgt"
 				if(JOB_SQUAD_RTO)
 					rank = "RTO"
 				else
@@ -200,7 +200,7 @@
 	squad_info_data["total_kia"] = 0
 	var/mar_free = count
 	for(var/team in fireteams)
-		mar_free -= fireteams[team].len
+		mar_free -= length(fireteams[team])
 	if(squad_leader)
 		mar_free--
 	for(var/list/freeman in squad_info_data["mar_free"])
@@ -226,7 +226,7 @@
 				if(skillcheck(H, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
 					Med = TRUE
 				else
-					if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 						Eng = TRUE
 			mar[H.real_name] = list(
 					"name" = H.real_name,
@@ -252,7 +252,7 @@
 					if(JOB_SQUAD_TEAM_LEADER)
 						rank = "SqSgt"
 					if(JOB_SQUAD_LEADER)
-						rank = "PltSgt"
+						rank = "SctSgt"
 					if(JOB_SQUAD_RTO)
 						rank = "RTO"
 					else
@@ -275,7 +275,7 @@
 				if(skillcheck(H, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
 					Med = TRUE
 				else
-					if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 						Eng = TRUE
 			mar[H.real_name] = list(
 				"name" = H.real_name,
@@ -301,7 +301,7 @@
 					if(JOB_SQUAD_TEAM_LEADER)
 						rank = "SqSgt"
 					if(JOB_SQUAD_LEADER)
-						rank = "PltSgt"
+						rank = "SctSgt"
 					if(JOB_SQUAD_RTO)
 						rank = "RTO"
 					else

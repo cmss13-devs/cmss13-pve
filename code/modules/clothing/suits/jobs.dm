@@ -181,11 +181,11 @@
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 		/obj/item/storage/belt/gun/m4a3,
@@ -245,7 +245,7 @@
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 		/obj/item/storage/belt/gun/m4a3,
@@ -310,7 +310,7 @@
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 		/obj/item/storage/belt/gun/m4a3,
@@ -349,6 +349,42 @@
 	desc = "A niche-market, black, allegedly high-visibility vest supposedly used in work zones. Features extra-reflective tapes. The etiquette on the vest insists that it's fully compliant with all the United American workplace safety standards."
 	icon_state = "hazard_black"
 	item_state = "hazard_black"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf
+	name = "ordanance-crew jacket"
+	desc = "A reddish-orange high-visibility jacket worn by USASF personnel assigned to handling of ordanance on the flight-deck."
+	icon_state = "hazard"
+	item_state = "hazard"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/green
+	name = "maintenance-crew jacket"
+	desc = "A green high-visibility jacket worn by USASF personnel assigned to maintenance of aerospace craft and the attendant launch & recovery equipment."
+	icon_state = "hazard_green"
+	item_state = "hazard_green"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/purple
+	name = "fuel-crew jacket"
+	desc = "A vibrant purple high-visibility jacket worn by USASF personnel delegated any and all duties pertaining to fuel on the flight-deck. Often nicknamed 'grapes' by other crewmembers."
+	icon_state = "hazard_purple"
+	item_state = "hazard_purple"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/white
+	name = "safety-crew jacket"
+	desc = "A dirty white high-visibility jacket worn by USASF personnel tasked with ensuring operations on the flight-deck are conducted in a safe and efficient manner."
+	icon_state = "hazard_white"
+	item_state = "hazard_white"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/blue
+	name = "handler-crew jacket"
+	desc = "A blue high-visibility jacket worn by USASF personnel responsible for moving aerospace craft around within the hangars."
+	icon_state = "hazard_blue"
+	item_state = "hazard_blue"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/yellow
+	name = "air-boss jacket"
+	desc = "A bright yellow high-visibility jacket worn by USASF officers that look after all aspects of the flight-deck."
+	icon_state = "hazard_yellow"
+	item_state = "hazard_yellow"
 
 //Lawyer
 /obj/item/clothing/suit/storage/lawyer/bluejacket
@@ -409,7 +445,7 @@
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 
@@ -476,6 +512,16 @@
 	name = "green windbreaker"
 	desc = "A green windbreaker."
 	icon_state = "windbreaker_green"
+
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
+	name = "blue windbreaker"
+	desc = "A blue windbreaker."
+	icon_state = "windbreaker_blue"
+
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow
+	name = "yellow windbreaker"
+	desc = "A yellow windbreaker."
+	icon_state = "windbreaker_yellow"
 
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr
 	name = "first responder windbreaker"

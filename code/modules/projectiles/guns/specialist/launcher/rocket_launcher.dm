@@ -23,11 +23,12 @@
 		/obj/item/attachable/magnetic_harness,
 	)
 
-	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	var/skill_locked = TRUE
+	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
+	var/skill_locked = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -189,12 +190,24 @@
 	smoke.set_up(1, 0, backblast_loc, turn(user.dir, 180))
 	smoke.start()
 	playsound(src, 'sound/weapons/gun_rocketlauncher.ogg', 100, TRUE, 10)
-	for(var/mob/living/carbon/C in backblast_loc)
-		if(C.body_position == STANDING_UP && !HAS_TRAIT(C, TRAIT_EAR_PROTECTION)) //Have to be standing up to get the fun stuff
-			C.apply_damage(15, BRUTE) //The shockwave hurts, quite a bit. It can knock unarmored targets unconscious in real life
-			C.apply_effect(4, STUN) //For good measure
-			C.apply_effect(6, STUTTER)
-			C.emote("pain")
+	for(var/mob/living/carbon/mob in backblast_loc)
+		if(mob.body_position != STANDING_UP || HAS_TRAIT(mob, TRAIT_EAR_PROTECTION)) //Have to be standing up to get the fun stuff
+			continue
+		to_chat(mob, SPAN_BOLDWARNING("You got hit by the backblast!"))
+		mob.apply_damage(15, BRUTE) //The shockwave hurts, quite a bit. It can knock unarmored targets unconscious in real life
+		var/knockdown_amount = 6
+		if(isxeno(mob))
+			var/mob/living/carbon/xenomorph/xeno = mob
+			knockdown_amount = knockdown_amount * (1 - xeno.caste?.xeno_explosion_resistance / 100)
+		mob.KnockDown(knockdown_amount)
+		mob.apply_effect(6, STUTTER)
+		mob.emote("pain")
+
+//-------------------------------------------------------
+//Army version, just reflavoured description
+
+/obj/item/weapon/gun/launcher/rocket/army
+	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
 //-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN
@@ -288,6 +301,14 @@
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/unload()
 	to_chat(usr, SPAN_WARNING("You cannot unload \the [src]!"))
 	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/sadar/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
 
 //folded version of the sadar
 /obj/item/prop/folded_anti_tank_sadar
