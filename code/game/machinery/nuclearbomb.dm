@@ -681,7 +681,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 		return
 	var/turf/Tile = get_step(user, user.dir)
 	var/blocked = FALSE
-	for(var/obj/O in Tile)
+	for(var/obj/Obj in Tile)
 		if(Obj.density)
 			blocked = TRUE
 			break
