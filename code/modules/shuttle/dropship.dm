@@ -217,7 +217,7 @@
 
 /obj/structure/shuttle/part/dropshippmc
 	name = "\improper Orphan Stomper"
-	icon = 'icons/turf/dropship_wy.dmi'
+	icon = 'icons/turf/dropship_pmc.dmi'
 	icon_state = "1"
 
 /obj/structure/shuttle/part/dropshippmc/lower_left_corner

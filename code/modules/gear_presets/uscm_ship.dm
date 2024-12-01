@@ -703,7 +703,7 @@
 
 /datum/equipment_preset/uscm_ship/so/pmc
 	name = "PMC Overwatch (PltCo)"
-	paygrade = "PMC-OW"
+	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "OW"
 	assignment = "Overwatch Operator"
 	faction_group = FACTION_LIST_WY

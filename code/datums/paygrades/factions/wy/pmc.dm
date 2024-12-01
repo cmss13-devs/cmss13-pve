@@ -111,7 +111,7 @@
 	name = "Site Director"
 	prefix = "DIR."
 	pay_multiplier = 10 //it's a corpo director. money is what they care about.
-	officerer_grade = GRADE_FLAG
+	officer_grade = GRADE_FLAG
 
 /datum/paygrade/pmc/overwatch
 	paygrade = "PMC-OW"

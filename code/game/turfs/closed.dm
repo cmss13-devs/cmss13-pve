@@ -292,7 +292,7 @@
 
 /turf/closed/shuttle/pmc
 	name = "\improper Orphan Stomper"
-	icon = 'icons/turf/dropship_wy.dmi'
+	icon = 'icons/turf/dropship_pmc.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/pmc/transparent
