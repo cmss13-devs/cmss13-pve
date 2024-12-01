@@ -3051,7 +3051,7 @@
 /obj/item/weapon/butterfly,
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Corpsman";
+	job = "Corpsman";
 	pixel_x = -7
 	},
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
@@ -3666,7 +3666,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Sergeant";
+	job = "Section Sergeant";
 	pixel_x = -7
 	},
 /obj/item/clothing/shoes/marine/upp,
