@@ -354,17 +354,6 @@
 	},
 /turf/open/floor/corsat/arrow_south,
 /area/lead_hawk/cryo_cell)
-"fD" = (
-/obj/structure/prop{
-	icon = 'icons/turf/almayer.dmi';
-	icon_state = "w-y0";
-	pixel_y = -15;
-	pixel_x = 16;
-	name = "Weyland-Yutani floor logo";
-	desc = "We love the Company."
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cryo_cell)
 "fN" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	req_access = list(100);
@@ -767,30 +756,9 @@
 "kY" = (
 /turf/open/shuttle/elevator/grating,
 /area/lead_hawk/supply)
-"lb" = (
-/obj/structure/prop{
-	icon = 'icons/turf/almayer.dmi';
-	icon_state = "w-y2";
-	pixel_y = -15;
-	pixel_x = 16;
-	name = "Weyland-Yutani floor logo";
-	desc = "We love the Company."
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cryo_cell)
-"lc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cafeteria)
 "lg" = (
 /turf/open/floor/corsat/squares,
 /area/lead_hawk/cryo_cell)
-"lj" = (
-/turf/open/floor/almayer/w_y1/north,
-/area/lead_hawk/cafeteria)
 "lm" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -1816,13 +1784,6 @@
 "Cj" = (
 /turf/open/floor/corsat/omega,
 /area/lead_hawk/squad_theta)
-"Cp" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cafeteria)
 "Cu" = (
 /obj/item/tool/mop{
 	pixel_x = -9;
@@ -1887,12 +1848,6 @@
 /obj/effect/landmark/start/marine/smartgunner/pmc,
 /turf/open/floor/almayer/cargo_arrow,
 /area/lead_hawk/cryo_cell)
-"Dc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cafeteria)
 "Df" = (
 /obj/structure/sign/catclock{
 	pixel_y = 32
@@ -2161,9 +2116,6 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/lead_hawk/hangar)
-"GS" = (
-/turf/open/floor/almayer/w_y0/north,
-/area/lead_hawk/cafeteria)
 "GX" = (
 /obj/structure/machinery/light/spot{
 	dir = 4
@@ -2904,10 +2856,6 @@
 /obj/structure/bed/chair/comfy/teal{
 	name = "Theta squad chair"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 3
-	},
 /turf/open/floor/corsat/squares,
 /area/lead_hawk/cafeteria)
 "SF" = (
@@ -3161,13 +3109,6 @@
 	},
 /turf/open/floor/corsat/green/northeast,
 /area/lead_hawk/medical)
-"WI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 3
-	},
-/turf/open/floor/corsat/squares,
-/area/lead_hawk/cafeteria)
 "WL" = (
 /obj/item/tool/wrench,
 /turf/open/floor/corsat/cargo,
@@ -3241,9 +3182,6 @@
 "XP" = (
 /turf/open/floor/corsat/marked,
 /area/lead_hawk/medical)
-"XS" = (
-/turf/open/floor/almayer/w_y2/north,
-/area/lead_hawk/cafeteria)
 "XT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/pmc,
@@ -3396,17 +3334,6 @@
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
 /turf/open/floor/corsat/plate,
-/area/lead_hawk/cryo_cell)
-"Zf" = (
-/obj/structure/prop{
-	icon = 'icons/turf/almayer.dmi';
-	icon_state = "w-y1";
-	pixel_y = -15;
-	pixel_x = 16;
-	name = "Weyland-Yutani floor logo";
-	desc = "We love the Company."
-	},
-/turf/open/floor/corsat/squares,
 /area/lead_hawk/cryo_cell)
 "Zo" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -11567,7 +11494,7 @@ FV
 vm
 vm
 uE
-Cp
+uE
 uE
 uE
 uE
@@ -11718,9 +11645,9 @@ Ti
 FV
 TT
 JJ
-lc
-GS
-WI
+uE
+uE
+uE
 cG
 cG
 uE
@@ -11870,8 +11797,8 @@ iz
 FV
 Kd
 Wb
-lc
-lj
+uE
+uE
 SA
 Oc
 QE
@@ -12022,8 +11949,8 @@ DZ
 FV
 tA
 uE
-lc
-XS
+uE
+uE
 SA
 QE
 kP
@@ -12175,7 +12102,7 @@ mO
 uE
 uE
 uE
-Dc
+uE
 uE
 ip
 ip
@@ -12937,7 +12864,7 @@ Cj
 lV
 qn
 Yl
-fD
+lg
 lg
 jT
 ko
@@ -13089,7 +13016,7 @@ UY
 lV
 ko
 Yl
-Zf
+lg
 lg
 jT
 qn
@@ -13241,7 +13168,7 @@ aY
 lV
 qn
 Yl
-lb
+lg
 lg
 jT
 qn
