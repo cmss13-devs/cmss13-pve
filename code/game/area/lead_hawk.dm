@@ -1,49 +1,49 @@
-/area/lead_hawk
+/area/firefly
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "almayer"
 	ceiling = CEILING_METAL
-	powernet_name = "lead_hawk"
+	powernet_name = "firefly"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_interval = 30
 	ambience_exterior = AMBIENCE_ALMAYER
 	ceiling_muffle = FALSE
 
-/area/lead_hawk/medical
+/area/firefly/medical
 	name = "Medical"
 
-/area/lead_hawk/cryo_cell
+/area/firefly/cryo_cell
 	name = "Cryo Cell"
 
-/area/lead_hawk/engineer
+/area/firefly/engineer
 	name = "Engineering"
 
-/area/lead_hawk/squad_theta
+/area/firefly/squad_theta
 	name = "Theta Squad Prep"
 
-/area/lead_hawk/squad_omega
+/area/firefly/squad_omega
 	name = "Omega Squad Prep"
 
-/area/lead_hawk/cafeteria
+/area/firefly/cafeteria
 	name = "Cafeteria"
 
-/area/lead_hawk/briefing
+/area/firefly/briefing
 	name = "Briefing"
 
-/area/lead_hawk/ares
+/area/firefly/ares
 	name = "OVERLORD Restricted Area"
 	soundscape_playlist = SCAPE_PL_ARES
 	soundscape_interval = 120
 
-/area/lead_hawk/supply
+/area/firefly/supply
 	name = "Supply"
 
-/area/lead_hawk/ptsgt
+/area/firefly/ptsgt
 	name = "Operational Leaders' Room"
 
-/area/lead_hawk/co
+/area/firefly/co
 	name = "OVERWATCH Center"
 
-/area/lead_hawk/hangar
+/area/firefly/hangar
 	name = "\improper Hangar"
 	icon_state = "hangar"
 	soundscape_playlist = SCAPE_PL_HANGAR
