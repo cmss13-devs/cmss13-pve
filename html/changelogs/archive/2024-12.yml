@@ -1,0 +1,8 @@
+2024-12-01:
+  BonniePandora:
+  - bugfix: Lets the UPP heavy armour rig store rifle magazines and such
+  - rscadd: Adds the Mk-214 Tactical Atomic Demolition Munition, an alternative way
+      of nuking a site from the ground
+  - imageadd: Adds new sprites for the TADM, worn, loose & undeployed and deployed
+  DexterDude:
+  - bugfix: fixes dropship door direction
