@@ -567,12 +567,6 @@
 	},
 /area/lead_hawk/hangar)
 "hk" = (
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = 9
-	},
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = -6
-	},
 /obj/structure/machinery/light/double{
 	dir = 4;
 	pixel_x = 10;
@@ -1510,10 +1504,6 @@
 	pixel_x = 5;
 	pixel_y = 8
 	},
-/obj/item/attachable/scope/mini_iff{
-	pixel_x = 5;
-	pixel_y = -3
-	},
 /obj/item/prop/helmetgarb/prescription_bottle{
 	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
 	layer = 2.97;
@@ -1594,10 +1584,6 @@
 	icon_state = "arrow_west"
 	},
 /area/lead_hawk/supply)
-"ur" = (
-/obj/structure/machinery/hologram/holopad,
-/turf/open/floor/carpet,
-/area/lead_hawk/briefing)
 "uv" = (
 /obj/structure/window/framed/corsat/indestructible,
 /turf/open/floor/plating,
@@ -3447,9 +3433,6 @@
 	pixel_x = 9;
 	pixel_y = 7
 	},
-/obj/item/prop/helmetgarb/helmet_gasmask{
-	pixel_x = -7
-	},
 /turf/open/floor/corsat{
 	icon_state = "squares"
 	},
@@ -3489,6 +3472,13 @@
 	icon_state = "cargo_arrow"
 	},
 /area/lead_hawk/cryo_cell)
+"QP" = (
+/obj/structure/bed/chair/comfy/beige{
+	pixel_x = -15;
+	buckling_x = -15
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
 "QQ" = (
 /obj/structure/platform{
 	dir = 4;
@@ -3654,9 +3644,6 @@
 	},
 /area/lead_hawk/hangar)
 "SV" = (
-/obj/structure/machinery/power/fusion_engine{
-	name = "\improper S-52 fusion reactor 17"
-	},
 /turf/open/floor/almayer,
 /area/lead_hawk/engineer)
 "Tb" = (
@@ -3675,12 +3662,6 @@
 	},
 /area/lead_hawk/hangar)
 "Tg" = (
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = 9
-	},
 /obj/structure/machinery/light/double{
 	dir = 8;
 	pixel_x = -10;
@@ -4157,16 +4138,6 @@
 	icon_state = "plate"
 	},
 /area/lead_hawk/hangar)
-"YA" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/packaged_burrito{
-	pixel_y = 9
-	},
-/turf/open/floor/corsat{
-	icon_state = "plate"
-	},
-/area/lead_hawk/cafeteria)
 "YB" = (
 /obj/structure/largecrate/machine/recycler,
 /turf/open/floor/corsat{
@@ -4225,9 +4196,6 @@
 	icon_state = "sniperscope";
 	name = "unpowered B10 Smart-Scope"
 	},
-/obj/item/attachable/scope/mini_iff{
-	pixel_y = 9
-	},
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -4252,13 +4220,9 @@
 /turf/open/floor/wood/ship,
 /area/lead_hawk/ptsgt)
 "Ze" = (
-/obj/structure/closet,
 /obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/shoes/veteran/pmc/commando/knife,
-/obj/item/clothing/shoes/veteran/pmc/commando/knife,
 /obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
 /turf/open/floor/corsat{
 	icon_state = "plate"
 	},
@@ -10611,7 +10575,7 @@ gR
 gR
 Vb
 xZ
-ur
+hA
 ND
 HB
 pT
@@ -11067,7 +11031,7 @@ gR
 gR
 uv
 ct
-hA
+QP
 MC
 ND
 pT
@@ -12907,7 +12871,7 @@ nm
 uE
 RC
 JJ
-YA
+JJ
 PG
 FV
 Wt
