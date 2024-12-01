@@ -2,21 +2,102 @@
 "a" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/two)
+"i" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle/two)
+"j" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
 "o" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/two,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle/two)
+"s" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle/two)
+"t" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/two)
 "u" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/vehicle_shuttle/two)
 "A" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
 /turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"H" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"O" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/railing{
+	pixel_y = 22;
+	shuttleId = "garrow_vehicle_elevator_two"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"Q" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/two)
 "T" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"U" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/two)
+"V" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/vehicle_shuttle/two)
 "Z" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24,51 +105,51 @@
 /area/golden_arrow/vehicle_shuttle/two)
 
 (1,1,1) = {"
-a
-a
-a
-a
+Q
+u
+u
+u
 o
 "}
 (2,1,1) = {"
+j
 a
-A
-u
-A
-T
+Z
+a
+U
 "}
 (3,1,1) = {"
+O
+a
+Z
 a
 A
-u
-A
-Z
 "}
 (4,1,1) = {"
 T
-u
-A
-A
 Z
+s
+a
+A
 "}
 (5,1,1) = {"
-a
-u
-A
-A
+j
 Z
+a
+a
+A
 "}
 (6,1,1) = {"
+j
+a
+a
 a
 A
-A
-A
-Z
 "}
 (7,1,1) = {"
-a
-a
-a
-Z
-Z
+t
+V
+V
+H
+i
 "}
