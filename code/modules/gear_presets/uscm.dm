@@ -302,7 +302,7 @@
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "COMTECH"
+	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
 
 	minimap_icon = "engi"
