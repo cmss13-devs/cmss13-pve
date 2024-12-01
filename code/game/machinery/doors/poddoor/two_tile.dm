@@ -26,12 +26,12 @@
 	if(!density)
 		return
 	if(operating) //doors can still open when emag-disabled
-		return
+		return FALSE
 
-	operating = TRUE
+	operating = DOOR_OPERATING_OPENING
 	start_opening()
 
-	addtimer(CALLBACK(src, PROC_REF(open_fully)), openspeed)
+	addtimer(CALLBACK(src, PROC_REF(open_fully)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE)
 	return TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/proc/start_opening()
@@ -51,8 +51,7 @@
 	f1.density = FALSE
 	f2.density = FALSE
 
-	if(operating == 1) //emag again
-		operating = 0
+	operating = DOOR_OPERATING_IDLE
 	if(autoclose)
 		addtimer(CALLBACK(src, PROC_REF(autoclose)), 15 SECONDS)
 
@@ -65,13 +64,14 @@
 	if(density)
 		return
 	if(operating)
-		return
+		return FALSE
+
 	start_closing()
-	addtimer(CALLBACK(src, PROC_REF(close_fully)), openspeed)
-	return
+	addtimer(CALLBACK(src, PROC_REF(close_fully)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE)
+	return TRUE
 
 /obj/structure/machinery/door/poddoor/two_tile/proc/start_closing()
-	operating = 1
+	operating = DOOR_OPERATING_CLOSING
 	flick("[base_icon_state]c1", src)
 	icon_state = "[base_icon_state]1"
 
@@ -88,7 +88,7 @@
 	set_opacity(initial(opacity))
 	f1.set_opacity(initial(opacity))
 	f2.set_opacity(initial(opacity))
-	operating = 0
+	operating = DOOR_OPERATING_IDLE
 
 /obj/structure/machinery/door/poddoor/two_tile/four_tile/close_fully()
 	f3.set_opacity(initial(opacity))
