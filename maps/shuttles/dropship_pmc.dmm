@@ -1,18 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ax" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/pmc)
 "bw" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
 	pixel_x = -10
 	},
+/obj/structure/bed/chair/dropship/passenger,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "bM" = (
@@ -141,9 +133,6 @@
 	},
 /turf/template_noop,
 /area/shuttle/pmc)
-"lK" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/pmc)
 "lX" = (
 /turf/closed/shuttle/pmc{
 	icon_state = "22"
@@ -166,14 +155,11 @@
 /area/shuttle/pmc)
 "pp" = (
 /obj/structure/bed/chair/dropship/passenger{
-	dir = 4
+	dir = 1
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "qm" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
 	pixel_x = 10
@@ -182,6 +168,7 @@
 	pixel_y = 27;
 	pixel_x = -2
 	},
+/obj/structure/bed/chair/dropship/passenger,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "rd" = (
@@ -224,18 +211,8 @@
 /turf/template_noop,
 /area/shuttle/pmc)
 "uT" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
 /obj/structure/machinery/light/double{
 	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/pmc)
-"vY" = (
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
@@ -262,7 +239,8 @@
 	},
 /obj/structure/machinery/computer/dropship_weapons/midway/small{
 	pixel_y = 8;
-	pixel_x = 8
+	pixel_x = 8;
+	name = "\improper 'Cash Flow' weapons controls"
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
@@ -332,11 +310,9 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/pmc)
-"AN" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/pmc)
-"AU" = (
-/turf/open/shuttle/dropship/light_grey_top_right,
+"AC" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "Bl" = (
 /obj/structure/stairs/perspective,
@@ -372,8 +348,9 @@
 	},
 /turf/template_noop,
 /area/shuttle/pmc)
-"Em" = (
-/turf/open/shuttle/dropship/light_grey_top_left,
+"Ed" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "EB" = (
 /turf/closed/shuttle/pmc/transparent{
@@ -449,9 +426,6 @@
 /obj/docking_port/mobile/marine_dropship/midway,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
-"OW" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/pmc)
 "Qz" = (
 /obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
 	icon_state = "95"
@@ -497,9 +471,6 @@
 /turf/template_noop,
 /area/space)
 "Ud" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
 /obj/structure/machinery/light/double{
 	dir = 4;
 	pixel_y = -5
@@ -561,7 +532,9 @@
 	icon_state = "S";
 	pixel_y = 2
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3{
+	name = "\improper Cash Flow cargo door"
+	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/pmc)
 "Zl" = (
@@ -619,7 +592,7 @@ TN
 kH
 OO
 qm
-pp
+Ed
 uT
 pp
 ts
@@ -636,9 +609,9 @@ Qz
 HW
 hn
 EB
-Em
+AC
+AC
 SQ
-AN
 Bl
 la
 SQ
@@ -654,9 +627,9 @@ Op
 jt
 xz
 wh
-OW
-vY
-OW
+UJ
+UJ
+UJ
 OQ
 bM
 UJ
@@ -672,9 +645,9 @@ Lv
 zk
 zK
 EB
-AU
+AC
+AC
 SQ
-lK
 Nx
 la
 SQ
@@ -691,9 +664,9 @@ TN
 sh
 OO
 bw
-ax
+Ed
 Ud
-ax
+pp
 QX
 zk
 zk

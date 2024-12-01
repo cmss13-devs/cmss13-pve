@@ -216,7 +216,7 @@
 	icon_state = "6"
 
 /obj/structure/shuttle/part/dropshippmc
-	name = "\improper Orphan Stomper"
+	name = "\improper Cash Flow"
 	icon = 'icons/turf/dropship_pmc.dmi'
 	icon_state = "1"
 

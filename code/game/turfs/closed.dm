@@ -291,7 +291,7 @@
 	opacity = FALSE
 
 /turf/closed/shuttle/pmc
-	name = "\improper Orphan Stomper"
+	name = "\improper Cash Flow"
 	icon = 'icons/turf/dropship_pmc.dmi'
 	icon_state = "1"
 

@@ -154,7 +154,7 @@
 	return TRUE
 
 /area/shuttle/pmc
-	name = "dropship Orphan Stomper"
+	name = "dropship Cash Flow"
 	icon_state = "shuttlered"
 	base_muffle = MUFFLE_HIGH
 	soundscape_interval = 30

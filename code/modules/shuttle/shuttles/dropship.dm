@@ -166,7 +166,7 @@
 	dheight = 8
 
 /obj/docking_port/mobile/marine_dropship/pmc
-	name = "Orphan Stomper"
+	name = "Cash Flow"
 	id = DROPSHIP_PMC
 
 /obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
@@ -437,7 +437,7 @@
 	shuttle_id = DROPSHIP_CYCLONE
 
 /datum/map_template/shuttle/pmc
-	name = "Orphan Stomper"
+	name = "Cash Flow"
 	shuttle_id = DROPSHIP_PMC
 
 /datum/map_template/shuttle/typhoon
