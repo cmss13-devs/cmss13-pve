@@ -276,7 +276,7 @@
 	dir = 8;
 	name = "ship-grade camera"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/arrow_north,
 /area/lead_hawk/cryo_cell)
 "ei" = (
 /turf/open/floor/wood/ship,
@@ -335,9 +335,7 @@
 /obj/structure/supply_drop/echo{
 	icon_state = "warning"
 	},
-/turf/open/floor/corsat{
-	icon_state = "spiralblueoffice"
-	},
+/turf/open/floor/plating/plating_catwalk,
 /area/lead_hawk/supply)
 "fl" = (
 /turf/open/floor/corsat/plate,
@@ -354,7 +352,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/arrow_south,
 /area/lead_hawk/cryo_cell)
 "fD" = (
 /obj/structure/prop{
@@ -693,6 +691,16 @@
 	},
 /turf/open/floor/corsat/white/west,
 /area/lead_hawk/hangar)
+"ko" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Squad Sergeant";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/lead_hawk/cryo_cell)
 "ku" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lead_hawk/co)
@@ -886,6 +894,12 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/lead_hawk/cafeteria)
+"nn" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/lead_hawk/cryo_cell)
 "np" = (
 /obj/structure/largecrate/random/mini/chest/b{
 	pixel_x = -7;
@@ -1054,6 +1068,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/lead_hawk/engineer)
 "qn" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0
+	},
 /turf/open/floor/corsat/plate,
 /area/lead_hawk/cryo_cell)
 "qo" = (
@@ -1247,6 +1267,11 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/lead_hawk/hangar)
+"tR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/soymilk,
+/turf/open/floor/corsat/plate,
+/area/lead_hawk/cafeteria)
 "uf" = (
 /turf/open/floor/corsat/brown/northwest,
 /area/lead_hawk/supply)
@@ -1798,11 +1823,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/lead_hawk/cafeteria)
-"Cr" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/wingfangchu,
-/turf/open/floor/corsat/plate,
-/area/lead_hawk/cafeteria)
 "Cu" = (
 /obj/item/tool/mop{
 	pixel_x = -9;
@@ -1959,6 +1979,16 @@
 	},
 /turf/open/floor/corsat/white/west,
 /area/lead_hawk/hangar)
+"El" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Corpsman";
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/turf/open/floor/corsat/plate,
+/area/lead_hawk/cryo_cell)
 "Es" = (
 /obj/structure/machinery/autolathe/full,
 /obj/structure/machinery/light/double{
@@ -2237,11 +2267,6 @@
 "IH" = (
 /turf/open/floor/corsat/yellow,
 /area/lead_hawk/engineer)
-"IL" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/omelette,
-/turf/open/floor/corsat/plate,
-/area/lead_hawk/cafeteria)
 "IN" = (
 /obj/structure/closet/crate/construction,
 /obj/item/stack/sandbags_empty/full,
@@ -2458,7 +2483,6 @@
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
-/obj/effect/landmark/start/bridge/pmc,
 /turf/open/floor/carpet,
 /area/lead_hawk/co)
 "MJ" = (
@@ -2519,7 +2543,7 @@
 /area/lead_hawk/supply)
 "Oc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/snacks/milosoup,
+/obj/item/reagent_container/food/drinks/cans/soylent,
 /turf/open/floor/corsat/squares,
 /area/lead_hawk/cafeteria)
 "Oe" = (
@@ -2765,7 +2789,7 @@
 	name = "ship-grade camera"
 	},
 /obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/pmc,
+/obj/effect/landmark/start/bridge/pmc,
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/lead_hawk/cryo_cell)
 "QP" = (
@@ -2937,6 +2961,16 @@
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/corsat/yellow,
 /area/lead_hawk/engineer)
+"Tp" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Section Sergeant";
+	has_cryo_gear = 0
+	},
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/turf/open/floor/corsat/plate,
+/area/lead_hawk/cryo_cell)
 "Ts" = (
 /turf/open/floor/corsat/yellow/north,
 /area/lead_hawk/engineer)
@@ -3111,6 +3145,16 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/corsat/white,
 /area/lead_hawk/hangar)
+"Wi" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Platoon Commander"
+	},
+/turf/open/floor/corsat/plate,
+/area/lead_hawk/cryo_cell)
 "Wt" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
@@ -11375,12 +11419,12 @@ rg
 rg
 uE
 Qt
-IL
+JJ
 yX
 PG
 uE
 RC
-Cr
+JJ
 FV
 TJ
 jv
@@ -11835,7 +11879,7 @@ nm
 uE
 RC
 JJ
-JJ
+tR
 PG
 FV
 VB
@@ -12739,8 +12783,8 @@ tc
 cT
 tD
 lV
-qn
-fz
+El
+nn
 Vd
 Vd
 fz
@@ -12891,12 +12935,12 @@ tc
 Cj
 Cj
 lV
-Ze
+qn
 Yl
 fD
 lg
 jT
-Ze
+ko
 lV
 YL
 YL
@@ -13043,12 +13087,12 @@ DE
 UY
 UY
 lV
-Ze
+ko
 Yl
 Zf
 lg
 jT
-Ze
+qn
 lV
 Rq
 It
@@ -13195,12 +13239,12 @@ UY
 UY
 aY
 lV
-Ze
+qn
 Yl
 lb
 lg
 jT
-Ze
+qn
 lV
 vo
 It
@@ -13352,7 +13396,7 @@ Yl
 lg
 lg
 jT
-Ze
+ko
 lV
 jb
 It
@@ -13499,12 +13543,12 @@ UY
 qS
 wQ
 lV
-lg
+Tp
 ee
 lg
 lg
-lg
-lg
+jT
+Wi
 lV
 gO
 It
