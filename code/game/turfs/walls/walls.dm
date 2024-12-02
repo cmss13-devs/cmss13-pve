@@ -47,6 +47,8 @@
 	var/list/blend_objects = list(/obj/structure/machinery/door, /obj/structure/window_frame, /obj/structure/window/framed) // Objects which to blend with
 	var/list/noblend_objects = list(/obj/structure/machinery/door/window) //Objects to avoid blending with (such as children of listed blend objects.
 
+	var/mob/living/carbon/human/hiding_human
+
 /turf/closed/wall/Initialize(mapload, ...)
 	. = ..()
 	// Defer updating based on neighbors while we're still loading map
@@ -595,3 +597,43 @@
 
 /turf/closed/wall/can_be_dissolved()
 	return !hull
+
+/turf/closed/wall/MouseDrop_T(atom/dropping, mob/user)
+	. = ..()
+	if(!ishuman(dropping))
+		return
+
+	if(dropping != user)
+		return
+
+	if(hiding_human)
+		return
+
+	hiding_human = dropping
+	var/direction = get_dir(src, hiding_human)
+	var/shift_pixel_x = 0
+	var/shift_pixel_y = 0
+	switch(direction)
+		if(NORTH)
+			shift_pixel_y = -10
+			hiding_human.layer = WALL_LAYER-0.01
+		if(SOUTH)
+			shift_pixel_y = 16
+		if(WEST)
+			shift_pixel_x = 10
+		if(EAST)
+			shift_pixel_x = -10
+
+	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y)
+	ADD_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
+	RegisterSignal(hiding_human, COMSIG_MOVABLE_MOVED, PROC_REF(unhide_human))
+	RegisterSignal(hiding_human, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(unhide_human))
+
+/turf/closed/wall/proc/unhide_human()
+	SIGNAL_HANDLER
+	if(!hiding_human)
+		return
+	REMOVE_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
+	hiding_human.pixel_x = initial(hiding_human.pixel_x)
+	hiding_human.pixel_y = initial(hiding_human.pixel_y)
+	hiding_human.layer = initial(hiding_human.layer)
