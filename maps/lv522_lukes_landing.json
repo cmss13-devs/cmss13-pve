@@ -6,15 +6,7 @@
     "webmap_url": "LV552",
 
     "weather_holder": "/datum/weather_ss_map_holder/lv522_lukes_landing",
-    "survivor_types": [
-        "/datum/equipment_preset/survivor/forecon/standard"
-    ],
-	"synth_survivor_types": [
-        "/datum/equipment_preset/synth/survivor/forecon"
-    ],
-	"CO_survivor_types": [
-        "/datum/equipment_preset/survivor/forecon/major"
-    ],
+
     "defcon_triggers": [
         3300,
         2100,
