@@ -1064,11 +1064,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "di" = (
-/obj/structure/ladder{
-	id = "Ladder-Mining-2r"
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
 	},
-/turf/open/floor/prison/bright_clean_marked,
-/area/lv522_l_l/basement/mine)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "dl" = (
 /obj/structure/kitchenspike{
 	icon_state = "spikebloody"
@@ -14271,7 +14272,7 @@
 	id = "Ladder-Mining-1l"
 	},
 /turf/open/floor/prison/bright_clean_marked,
-/area/lv522_l_l/basement/mine)
+/area/lv522_l_l/basement/colony)
 "Qf" = (
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
@@ -15260,9 +15261,11 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
 "SZ" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison,
-/area/lv522_l_l/indoors/mining)
+/obj/structure/ladder{
+	id = "Ladder-Mining-2r"
+	},
+/turf/open/floor/prison/bright_clean_marked,
+/area/lv522_l_l/basement/colony)
 "Ta" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1;
@@ -16330,6 +16333,10 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"Wp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/indoors/mining)
 "Wr" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -46411,7 +46418,7 @@ Wi
 gW
 eq
 Gq
-zD
+SR
 HN
 Wi
 DL
@@ -46613,7 +46620,7 @@ Wi
 eu
 UQ
 pa
-qx
+AY
 jH
 Wi
 DL
@@ -51764,7 +51771,7 @@ WE
 KZ
 NI
 dV
-Ya
+Wp
 dK
 WE
 Sz
@@ -51966,7 +51973,7 @@ WE
 HS
 jP
 js
-SZ
+Mj
 vc
 WE
 Sz
@@ -62512,11 +62519,11 @@ Zz
 on
 on
 on
+on
+on
+on
 Zz
-on
-on
-on
-on
+Zz
 Zz
 Zz
 Zz
@@ -63121,8 +63128,8 @@ on
 on
 on
 on
-Zz
-Zz
+on
+on
 on
 Zz
 Zz
@@ -63322,8 +63329,8 @@ Zz
 on
 on
 on
-on
-on
+Zz
+Zz
 on
 Zz
 Zz
@@ -63926,7 +63933,7 @@ on
 on
 Zz
 on
-Zz
+on
 on
 Zz
 Zz
@@ -64128,8 +64135,8 @@ on
 on
 on
 on
-Zz
-Zz
+on
+on
 on
 Zz
 Zz
@@ -68559,7 +68566,7 @@ on
 Zz
 Zz
 on
-Zz
+on
 on
 Zz
 Zz
@@ -68761,7 +68768,7 @@ on
 on
 on
 on
-Zz
+on
 Zz
 Zz
 Zz
@@ -68942,17 +68949,17 @@ XU
 XU
 Zz
 Ul
-Ul
-Ul
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
 Zz
 Zz
 on
@@ -69144,17 +69151,17 @@ XU
 XU
 uT
 xi
+tc
+NP
+wk
+DF
+DF
+DF
+tc
+NP
+wk
 Qe
-Ul
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
+Bw
 Zz
 Zz
 Zz
@@ -69346,17 +69353,17 @@ IS
 XU
 wI
 qi
+VY
+yJ
+yC
 di
-Ul
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
+DF
+di
+yR
+yJ
+Lg
+SZ
+Bw
 Zz
 Zz
 Zz
@@ -69548,17 +69555,17 @@ Zz
 Zz
 Zz
 Ul
-Ul
-Ul
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
-Zz
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
+Bw
 Zz
 Zz
 Zz
