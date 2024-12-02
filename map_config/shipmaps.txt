@@ -24,7 +24,7 @@ map chapaev
 endmap
 
 
-map lead_hawk
+map firefly
 endmap
 
 map rover
