@@ -77,6 +77,10 @@
 	name = "LV522 Lukes Landing - Colony Interior"
 	icon_state = "east"
 
+/area/lv522_l_l/indoors/mining
+	name = "LV522 Lukes Landing - Colony Outskirts - Mining"
+	icon_state = "blue"
+
 //colony outskirts
 
 /area/lv522_l_l/outdoors/colony_outskirts
