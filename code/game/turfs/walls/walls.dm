@@ -47,7 +47,7 @@
 	var/list/blend_objects = list(/obj/structure/machinery/door, /obj/structure/window_frame, /obj/structure/window/framed) // Objects which to blend with
 	var/list/noblend_objects = list(/obj/structure/machinery/door/window) //Objects to avoid blending with (such as children of listed blend objects.
 
-	var/mob/living/carbon/human/hiding_human
+	var/list/hiding_humans = list()
 
 /turf/closed/wall/Initialize(mapload, ...)
 	. = ..()
@@ -605,38 +605,45 @@
 
 	if(dropping != user)
 		return
+	var/mob/living/carbon/hiding_human = dropping
 
-	if(hiding_human)
-		return
-
-	hiding_human = dropping
-	var/direction = get_dir(src, hiding_human)
+	var/direction = get_dir(src, dropping)
 	var/shift_pixel_x = 0
 	var/shift_pixel_y = 0
+	var/new_layer
 	switch(direction)
 		if(NORTH)
 			shift_pixel_y = -10
-			hiding_human.layer = WALL_LAYER-0.01
 		if(SOUTH)
 			shift_pixel_y = 16
+			new_layer = WALL_LAYER-0.01
 		if(WEST)
 			shift_pixel_x = 10
 		if(EAST)
 			shift_pixel_x = -10
-	hiding_human.setDir(direction)
-	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y)
-	ADD_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
-	RegisterSignal(hiding_human, COMSIG_MOVABLE_MOVED, PROC_REF(unhide_human))
-	RegisterSignal(hiding_human, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(unhide_human))
+	for(var/mob/living/carbon/human/hiding in hiding_humans)
+		if(hiding_humans[hiding] == direction)
+			return
 
-/turf/closed/wall/proc/unhide_human()
+	hiding_humans += dropping
+	hiding_humans[dropping] = direction
+	hiding_human.setDir(direction)
+	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y, time = 1)
+	if(new_layer)
+		hiding_human.layer = new_layer
+	ADD_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
+	RegisterSignal(hiding_human, COMSIG_MOVABLE_MOVED, PROC_REF(unhide_human), hiding_human)
+	RegisterSignal(hiding_human, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(unhide_human), hiding_human)
+
+/turf/closed/wall/proc/unhide_human(mob/living/carbon/human/to_unhide)
 	SIGNAL_HANDLER
-	if(!hiding_human)
+	if(!to_unhide)
 		return
-	REMOVE_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
-	hiding_human.pixel_x = initial(hiding_human.pixel_x)
-	hiding_human.pixel_y = initial(hiding_human.pixel_y)
-	hiding_human.layer = initial(hiding_human.layer)
-	hiding_human.apply_effect(1, SUPERSLOW)
-	hiding_human.apply_effect(2, SLOW)
-	hiding_human = null
+
+	REMOVE_TRAIT(to_unhide, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
+	to_unhide.pixel_x = initial(to_unhide.pixel_x)
+	to_unhide.pixel_y = initial(to_unhide.pixel_y)
+	to_unhide.layer = initial(to_unhide.layer)
+	to_unhide.apply_effect(1, SUPERSLOW)
+	to_unhide.apply_effect(2, SLOW)
+	hiding_humans -= to_unhide
