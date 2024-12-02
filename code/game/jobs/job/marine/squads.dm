@@ -11,8 +11,8 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
+	name = "Section"
+	lead_name = "Section Sergeant"
 	lead_icon = "leader"
 	sub_squad = "Squad"
 	sub_leader = "Squad Sergeant"
@@ -701,7 +701,7 @@
 			old_lead.comm_title = "SG"
 		if(JOB_SQUAD_LEADER)
 			if(!leader_killed)
-				old_lead.comm_title = "PltSgt"
+				old_lead.comm_title = "SctSgt"
 		if(JOB_SQUAD_RTO)
 			old_lead.comm_title = "RTO"
 		if(JOB_MARINE_RAIDER)
@@ -826,10 +826,10 @@
 		id.access.Remove(squad_one_access, squad_two_access)
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+		if(!("Section Sergeant" in cycled_headset.tracking_options))
 			continue
 
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
 
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])
@@ -843,10 +843,10 @@
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned as [fireteam] Team Leader.")))
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Platoon Sergeant" in cycled_headset.tracking_options))
+		if(!("Section Sergeant" in cycled_headset.tracking_options))
 			continue
 
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Platoon Sergeant"]
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
 
 /datum/squad/proc/unassign_ft_leader(fireteam, clear_group_id, upd_ui = TRUE)
 	if(!fireteam_leaders[fireteam])

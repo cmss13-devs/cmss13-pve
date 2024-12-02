@@ -125,11 +125,6 @@
 "Pz" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/jungle/north_east_jungle)
-"Uh" = (
-/obj/effect/landmark/corpsespawner/miner,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/ground/river/central_river)
 "VN" = (
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_east_jungle)
@@ -233,7 +228,7 @@ aj
 (7,1,1) = {"
 ac
 al
-Uh
+BW
 DX
 DX
 DX

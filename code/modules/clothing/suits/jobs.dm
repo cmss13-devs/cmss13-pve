@@ -95,8 +95,8 @@
 
 //Chef
 /obj/item/clothing/suit/chef
-	name = "Chef's apron"
-	desc = "An apron used by a high-class chef."
+	name = "Chef's coat"
+	desc = "A coat used by a high-class chef."
 	icon_state = "chef"
 	item_state = "chef"
 	gas_transfer_coefficient = 0.90
@@ -116,7 +116,7 @@
 
 //Chef
 /obj/item/clothing/suit/chef/classic
-	name = "A classic chef's apron."
+	name = "white apron"
 	desc = "A basic, dull, white chef's apron."
 	icon_state = "apronchef"
 	item_state = "apronchef"
@@ -350,6 +350,42 @@
 	icon_state = "hazard_black"
 	item_state = "hazard_black"
 
+/obj/item/clothing/suit/storage/hazardvest/usasf
+	name = "ordanance-crew jacket"
+	desc = "A reddish-orange high-visibility jacket worn by USASF personnel assigned to handling of ordanance on the flight-deck."
+	icon_state = "hazard"
+	item_state = "hazard"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/green
+	name = "maintenance-crew jacket"
+	desc = "A green high-visibility jacket worn by USASF personnel assigned to maintenance of aerospace craft and the attendant launch & recovery equipment."
+	icon_state = "hazard_green"
+	item_state = "hazard_green"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/purple
+	name = "fuel-crew jacket"
+	desc = "A vibrant purple high-visibility jacket worn by USASF personnel delegated any and all duties pertaining to fuel on the flight-deck. Often nicknamed 'grapes' by other crewmembers."
+	icon_state = "hazard_purple"
+	item_state = "hazard_purple"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/white
+	name = "safety-crew jacket"
+	desc = "A dirty white high-visibility jacket worn by USASF personnel tasked with ensuring operations on the flight-deck are conducted in a safe and efficient manner."
+	icon_state = "hazard_white"
+	item_state = "hazard_white"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/blue
+	name = "handler-crew jacket"
+	desc = "A blue high-visibility jacket worn by USASF personnel responsible for moving aerospace craft around within the hangars."
+	icon_state = "hazard_blue"
+	item_state = "hazard_blue"
+
+/obj/item/clothing/suit/storage/hazardvest/usasf/yellow
+	name = "air-boss jacket"
+	desc = "A bright yellow high-visibility jacket worn by USASF officers that look after all aspects of the flight-deck."
+	icon_state = "hazard_yellow"
+	item_state = "hazard_yellow"
+
 //Lawyer
 /obj/item/clothing/suit/storage/lawyer/bluejacket
 	name = "Blue Suit Jacket"
@@ -476,6 +512,16 @@
 	name = "green windbreaker"
 	desc = "A green windbreaker."
 	icon_state = "windbreaker_green"
+
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
+	name = "blue windbreaker"
+	desc = "A blue windbreaker."
+	icon_state = "windbreaker_blue"
+
+/obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow
+	name = "yellow windbreaker"
+	desc = "A yellow windbreaker."
+	icon_state = "windbreaker_yellow"
 
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr
 	name = "first responder windbreaker"

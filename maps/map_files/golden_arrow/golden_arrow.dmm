@@ -3206,11 +3206,11 @@
 "alc" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Platoon Sergeant"
+	job = "Section Sergeant"
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Platoon Corpsman"
+	job = "Corpsman"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -13391,7 +13391,6 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "aTc" = (
@@ -15806,9 +15805,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
 "eZR" = (
-/obj/item/storage/box/guncase/flamer/fuel{
-	pixel_y = 8
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
 	light_color = "#dae2ff";
@@ -15816,6 +15812,10 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -15972,6 +15972,9 @@
 	light_color = "#dae2ff"
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/flamer/fuel{
+	pixel_y = 8
+	},
 /obj/item/tool/crowbar,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)

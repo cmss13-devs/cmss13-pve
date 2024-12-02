@@ -24,7 +24,6 @@
 /turf/open/floor,
 /area/lv624/lazarus/medbay)
 "br" = (
-/obj/effect/landmark/corpsespawner/colonist/random/burst,
 /obj/effect/decal/cleanable/blood,
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/whiteblue/north,
@@ -93,7 +92,6 @@
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "lI" = (
-/obj/effect/landmark/corpsespawner/doctor,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
@@ -259,7 +257,6 @@
 /obj/structure/machinery/optable,
 /obj/item/tank/anesthetic,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "Hs" = (
@@ -369,13 +366,12 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
 "Uh" = (
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
 "Vm" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "Wc" = (
