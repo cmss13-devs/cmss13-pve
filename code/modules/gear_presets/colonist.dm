@@ -1,6 +1,6 @@
 
 /datum/equipment_preset/colonist
-	name = JOB_COLONIST
+	name = FACTION_COLONIST
 	languages = list(LANGUAGE_ENGLISH)
 	faction = FACTION_COLONIST
 	skills = /datum/skills/civilian
