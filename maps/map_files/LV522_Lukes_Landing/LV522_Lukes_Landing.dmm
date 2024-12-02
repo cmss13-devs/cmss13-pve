@@ -169,10 +169,7 @@
 /area/lv522_l_l/outdoors/colony)
 "aF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random,
-/obj/structure/largecrate/random{
-	pixel_y = 16
-	},
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "aG" = (
@@ -185,6 +182,19 @@
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
+"aI" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "aJ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -203,6 +213,21 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
+/area/lv522_l_l/basement/colony)
+"aM" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = -18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "aN" = (
 /turf/open/floor/strata/white_cyan1,
@@ -311,20 +336,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
-"bf" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
-	},
-/obj/item/storage/box/powderedmilk{
-	pixel_y = -2
-	},
-/obj/item/storage/box/stompers{
-	pixel_y = 6
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "bh" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -343,6 +354,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"bl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "bm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -393,13 +409,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"bt" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "bu" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -445,6 +454,14 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/clinic)
+"bC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "bD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/iv_drip,
@@ -557,6 +574,14 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"bY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 17
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "bZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced{
@@ -663,6 +688,12 @@
 "cy" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"cz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "cB" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -781,12 +812,6 @@
 /obj/structure/machinery/gibber,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"cX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/belt/utility,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "cY" = (
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
@@ -795,12 +820,6 @@
 /obj/effect/decal/cleanable/generic,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
-"da" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/maintenance_jack,
-/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "dc" = (
 /obj/structure/closet{
@@ -838,14 +857,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"dj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "dl" = (
 /obj/structure/kitchenspike{
 	icon_state = "spikebloody"
@@ -878,12 +889,6 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"dq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/belt/utility/full,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "dr" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -913,23 +918,12 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/corporate)
-"dy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "dz" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
-"dA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "dB" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -971,6 +965,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
+"dQ" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
+	},
+/obj/item/storage/pouch/tools,
+/obj/item/storage/pouch/tools{
+	pixel_y = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "dR" = (
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
@@ -1004,11 +1010,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "dV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
 	},
-/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "dW" = (
@@ -1219,6 +1225,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
+"eJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "eK" = (
 /obj/structure/machinery/light/double{
 	dir = 8
@@ -1292,16 +1307,24 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"fa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security{
+	pixel_y = 13
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "fb" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"fd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
 "ff" = (
 /obj/structure/platform/strata/metal{
@@ -1368,6 +1391,20 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/engineering)
+"fo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "fp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -1429,6 +1466,21 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"fy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 1
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "fz" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics{
 	icon_state = "hydrotray4";
@@ -1459,6 +1511,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"fG" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
 "fI" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	id = "1-Storage-Shutter-Secure"
@@ -1479,6 +1535,20 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
+"fL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "fM" = (
 /obj/structure/machinery/light/double,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -1500,15 +1570,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
-"fQ" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 3;
-	pixel_x = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "fR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -1585,6 +1646,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"gc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/belt/utility,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "gd" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1
@@ -1652,14 +1719,8 @@
 "gs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/gloves{
-	pixel_y = 13;
-	pixel_x = 4
-	},
-/obj/item/storage/box/evidence{
-	pixel_y = 5
-	},
-/turf/open/floor/prison/floor_plate,
+/obj/item/pipe_meter,
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "gu" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -1896,6 +1957,15 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/slaughterhouse)
+"hk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 22
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "hl" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -2017,6 +2087,14 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"hK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/basement/colony)
 "hL" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -2500,6 +2578,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
+"je" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "jf" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -2570,12 +2654,6 @@
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
-"jw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/pipe_meter,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "jx" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -2682,13 +2760,6 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/slaughterhouse)
-"jP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random/secure{
-	pixel_y = 2
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "jQ" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full,
 /obj/effect/decal/cleanable/dirt,
@@ -2714,14 +2785,6 @@
 "jT" = (
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/dorms)
-"jU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "jV" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -2841,6 +2904,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"kq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "kr" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -3045,13 +3114,6 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
-"kZ" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/west,
-/area/lv522_l_l/basement/colony)
 "lb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -3165,6 +3227,14 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
+"lw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "lx" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -3183,12 +3253,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
-"lE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "lF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -3197,19 +3261,6 @@
 	light_color = "#BB3F3F"
 	},
 /obj/structure/pipes/vents/pump,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"lG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/fuel_cell{
-	pixel_y = 19;
-	pixel_x = 8
-	},
-/obj/item/fuel_cell{
-	pixel_y = 19;
-	pixel_x = -7
-	},
-/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "lH" = (
@@ -3282,11 +3333,6 @@
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
-"md" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/north,
-/area/lv522_l_l/basement/colony)
 "me" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -3330,13 +3376,6 @@
 "mn" = (
 /turf/closed/wall/solaris/reinforced/hull/lv522,
 /area/space)
-"mq" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
 "mr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3370,12 +3409,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
-"mu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
 "mx" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/white_cyan2,
@@ -3502,6 +3535,19 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"nc" = (
+/obj/effect/decal/cleanable/generic,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = -18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "ne" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -3525,6 +3571,12 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
+"ng" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522_l_l/basement/colony)
 "nh" = (
 /obj/structure/closet{
 	pixel_x = 7;
@@ -3614,6 +3666,18 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"nv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/cups{
+	pixel_y = 11;
+	pixel_x = -4
+	},
+/obj/item/storage/box/cups{
+	pixel_y = 2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "nw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/powerloader,
@@ -3626,21 +3690,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
-"ny" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/masks{
-	pixel_y = 6
-	},
-/obj/item/storage/box/matches{
-	pixel_y = -4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "nz" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/flora/pottedplant{
@@ -3663,6 +3712,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"nB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "nC" = (
 /obj/structure/machinery/computer3/server/rack,
 /obj/structure/window/reinforced{
@@ -3864,6 +3919,11 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
+"om" = (
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "os" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -3978,12 +4038,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"oI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/packageWrap,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "oK" = (
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
@@ -3994,15 +4048,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
-"oM" = (
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "oN" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -4023,6 +4068,10 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv522_l_l/indoors/storage)
+"oO" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/basement/colony)
 "oP" = (
 /obj/item/reagent_container/food/snacks/grown/wheat{
 	name = "straw"
@@ -4071,6 +4120,11 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/canteen)
+"oT" = (
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522_l_l/basement/colony)
 "oX" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -4078,12 +4132,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
-"oY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "oZ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/microwave{
@@ -4124,11 +4172,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
-"ph" = (
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "pi" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
@@ -4145,6 +4188,17 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/corporate)
+"pm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random{
+	pixel_x = 6
+	},
+/obj/structure/largecrate/random{
+	pixel_y = 18;
+	pixel_x = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "pp" = (
 /obj/structure/stairs/perspective{
 	dir = 10;
@@ -4171,11 +4225,14 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
-"pu" = (
+"pw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/vents/pump,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
+/obj/structure/largecrate/random,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 9;
+	pixel_x = 1
+	},
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "px" = (
 /obj/structure/bed/chair{
@@ -4295,6 +4352,14 @@
 	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
+"pS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "pT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -4395,12 +4460,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
-"ql" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/north,
-/area/lv522_l_l/basement/colony)
 "qm" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
@@ -4443,12 +4502,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"qr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/pouch/chem,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "qs" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -4557,6 +4610,14 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/asphalt/cement/cement3,
 /area/lv522_l_l/outdoors/colony)
+"qM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "qO" = (
 /obj/structure/machinery/power/apc/no_power/west,
 /obj/structure/cable/heavyduty{
@@ -4637,14 +4698,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"qW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random{
-	pixel_x = 8
+"qV" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
 	},
-/obj/structure/largecrate/random{
-	pixel_y = 16;
-	pixel_x = 8
+/obj/item/storage/pouch/survival,
+/obj/item/storage/pouch/survival{
+	pixel_y = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
@@ -4654,19 +4716,6 @@
 "ra" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"rb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "rc" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -4783,6 +4832,11 @@
 	},
 /turf/open/floor/strata/white_cyan2,
 /area/lv522_l_l/indoors/clinic)
+"rt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
 "rw" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	id = "Storage-Shutter-Secure"
@@ -4848,11 +4902,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
-"rC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
 "rD" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -5074,19 +5123,6 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522_l_l/indoors/canteen)
-"sp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "sq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -5196,14 +5232,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
-"sJ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/storage/toolbox/emergency{
-	pixel_y = 13
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "sK" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -5263,19 +5291,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"sS" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "sT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/snow/layer0,
@@ -5383,17 +5398,11 @@
 "tm" = (
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/slaughterhouse)
-"to" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
+"tp" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "tq" = (
@@ -5445,21 +5454,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"tz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = -18
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "tA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/phone_base/colony_net{
@@ -5471,6 +5465,13 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/engineering)
+"tB" = (
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "tC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced,
@@ -5669,16 +5670,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/slaughterhouse)
-"um" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "un" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -5932,19 +5923,23 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
-"vk" = (
+"vh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
+	dir = 4;
 	light_color = "#BB3F3F"
 	},
-/obj/structure/surface/table/almayer,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security{
-	pixel_y = 13
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"vj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "vn" = (
 /obj/structure/surface/table/almayer,
@@ -6062,6 +6057,12 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522_l_l/indoors/canteen)
+"vE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/pouch/chem,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "vF" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -6126,6 +6127,19 @@
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
+"vO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "vP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6291,6 +6305,14 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
+"wy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "wz" = (
 /obj/structure/curtain/red,
 /turf/open/floor/prison/floor_plate,
@@ -6335,6 +6357,13 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"wL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "wM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -6344,6 +6373,19 @@
 /obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
+"wN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = -18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "wO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -6424,10 +6466,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/slaughterhouse)
-"xa" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/west,
-/area/lv522_l_l/basement/colony)
 "xb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -6479,14 +6517,6 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
-"xi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "xj" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
@@ -6559,12 +6589,6 @@
 /obj/item/trash/popcorn,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"xu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "xw" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -6650,6 +6674,12 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/sec)
+"xG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522_l_l/basement/colony)
 "xH" = (
 /obj/structure/machinery/light/double{
 	dir = 8
@@ -6665,6 +6695,18 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/slaughterhouse)
+"xJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/gloves{
+	pixel_y = 13;
+	pixel_x = 4
+	},
+/obj/item/storage/box/evidence{
+	pixel_y = 5
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "xK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -6742,21 +6784,6 @@
 "xS" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
-"xT" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 12;
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 12;
-	pixel_y = 1
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "xU" = (
 /obj/structure/platform/strata/metal,
 /turf/open/auto_turf/shale/layer1,
@@ -6786,19 +6813,6 @@
 /obj/item/newspaper,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
-"yc" = (
-/obj/effect/decal/cleanable/generic,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = -18
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "yd" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -6833,14 +6847,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/airtraffic)
-"yl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random/secure,
-/obj/structure/largecrate/random/secure{
-	pixel_y = 17
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "ym" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -6853,15 +6859,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"yq" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 6;
-	pixel_x = 7
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "yr" = (
 /obj/structure/machinery/gibber,
 /obj/effect/decal/cleanable/dirt,
@@ -6884,6 +6881,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"yw" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
 "yx" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass,
@@ -6957,6 +6961,19 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/sec)
+"yM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "yN" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/asphalt/cement/cement3,
@@ -7098,6 +7115,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
+"zr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "zs" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -7118,6 +7143,11 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/bcircuit,
 /area/lv522_l_l/indoors/corporate)
+"zw" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "zx" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -7333,6 +7363,19 @@
 	},
 /turf/open/asphalt/cement/cement2,
 /area/lv522_l_l/outdoors/colony)
+"An" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "Ao" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -7374,6 +7417,19 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"Aw" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "Ax" = (
 /obj/structure/ladder{
 	id = "Ladder-Butcher-3"
@@ -7408,10 +7464,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/airtraffic)
-"AE" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
 "AF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7554,16 +7606,6 @@
 	},
 /turf/open/floor/almayer/w_y0/north,
 /area/lv522_l_l/indoors/dorms)
-"Ba" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "Bb" = (
 /obj/structure/gun_rack/m41/unloaded{
 	pixel_y = 16;
@@ -7614,18 +7656,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
-"Bo" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
-	},
-/obj/item/storage/pouch/tools,
-/obj/item/storage/pouch/tools{
-	pixel_y = 8
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "Bp" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -7742,28 +7772,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"BO" = (
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
-"BS" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = -18
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "BT" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/flashlight/lamp{
@@ -7810,16 +7818,13 @@
 /area/lv522_l_l/outdoors/colony)
 "Ca" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = -18
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/prison,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Cc" = (
 /obj/structure/surface/table/almayer,
@@ -7829,18 +7834,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
-"Cd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random/secure{
-	pixel_x = 6
-	},
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "Ce" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -7870,6 +7863,13 @@
 /obj/item/trash/syndi_cakes,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"Cj" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "Ck" = (
 /obj/structure/prop/vehicles/crawler{
 	layer = 3.2
@@ -7978,12 +7978,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/corporate)
-"CI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
 "CK" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -8226,6 +8220,14 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
+"DA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "DB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8240,6 +8242,15 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
+"DE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 3;
+	pixel_x = 4
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "DF" = (
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -8272,13 +8283,6 @@
 "DL" = (
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
-"DM" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "DN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -8316,15 +8320,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/sec)
-"DV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility{
-	pixel_y = 11
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "DW" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper A-Block 'Corporate Administration' Airlock"
@@ -8384,6 +8379,11 @@
 /obj/item/trash/c_tube,
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
+"Eh" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
 "Ei" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
@@ -8438,6 +8438,13 @@
 	dir = 1;
 	icon_state = "pwall"
 	},
+/area/lv522_l_l/basement/colony)
+"Et" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "Eu" = (
 /obj/structure/machinery/light/double{
@@ -8534,11 +8541,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/dorms)
-"EP" = (
-/obj/structure/pipes/vents/pump,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "EQ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/kitchen/tray{
@@ -8825,24 +8827,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"FJ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice1";
-	pixel_x = 16;
-	pixel_y = -16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 1;
-	icon_state = "lattice-simple";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "FK" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -8935,24 +8919,39 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/slaughterhouse)
+"Ge" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/tool/mop{
+	pixel_y = 22
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Gf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/storage)
-"Gg" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "Gh" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
+"Gi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Gj" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -9114,11 +9113,11 @@
 	layer = 3.5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/pouch/general/large{
-	pixel_y = 1
+/obj/item/storage/box/masks{
+	pixel_y = 6
 	},
-/obj/item/storage/pouch/general/large{
-	pixel_y = 9
+/obj/item/storage/box/matches{
+	pixel_y = -4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
@@ -9180,11 +9179,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"GT" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/crowbar,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "GU" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/machinery/firealarm{
@@ -9288,18 +9282,6 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
-"Hm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/cups{
-	pixel_y = 11;
-	pixel_x = -4
-	},
-/obj/item/storage/box/cups{
-	pixel_y = 2
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "Hp" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -9378,9 +9360,22 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"HC" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/electrical,
+"HA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "HD" = (
@@ -9509,22 +9504,14 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"Ib" = (
+"Ic" = (
 /obj/structure/machinery/light/double{
-	dir = 4;
+	dir = 1;
+	pixel_y = 9;
 	light_color = "#BB3F3F"
 	},
-/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"Id" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random,
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 9;
-	pixel_x = 1
-	},
-/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "Ie" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -9557,6 +9544,15 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"Ij" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "Il" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -9744,6 +9740,13 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
+"IL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "IP" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double{
@@ -9884,20 +9887,6 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
-"Jk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "Jl" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -9966,6 +9955,14 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
+/area/lv522_l_l/basement/colony)
+"Jx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "Jy" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
@@ -10170,20 +10167,6 @@
 /obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
-"Ke" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "Kf" = (
 /obj/structure/machinery/light/double{
 	dir = 8
@@ -10215,14 +10198,6 @@
 "Kn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"Ko" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Kp" = (
@@ -10277,14 +10252,6 @@
 /obj/structure/curtain/red,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/corporate)
-"Kw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
 "Kx" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/storage)
@@ -10490,10 +10457,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
-"Lm" = (
-/obj/structure/pipes/standard/simple/hidden/green,
+"Ln" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
+/turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
 "Lo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10526,6 +10496,10 @@
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
+"Lq" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "Lr" = (
 /obj/structure/xenoautopsy/tank{
 	pixel_y = 15;
@@ -10582,6 +10556,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
+"LA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random,
+/obj/structure/largecrate/random{
+	pixel_y = 19
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "LC" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double{
@@ -10603,24 +10585,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
-"LF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "LH" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/auto_turf/shale/layer1,
@@ -10631,13 +10595,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
-"LK" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
 "LL" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -10657,19 +10614,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"LO" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/pdt_kit{
-	pixel_y = 10;
-	pixel_x = 7
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 2;
-	pixel_x = -3
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "LQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -10962,34 +10906,16 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/corporate)
-"MR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#BB3F3F"
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "MS" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"MT" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = 17
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
+"MU" = (
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "MV" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11023,12 +10949,19 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
-"Nh" = (
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
+"Ng" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
 	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/east,
+/obj/item/storage/box/powderedmilk{
+	pixel_y = -2
+	},
+/obj/item/storage/box/stompers{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Ni" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11286,22 +11219,12 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
-"Oa" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
+"Ob" = (
+/obj/structure/pipes/standard/simple/hidden/yellow{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
-"Ob" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 3;
-	pixel_x = 4
-	},
-/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Oc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11319,11 +11242,10 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
 "Of" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/item/storage/belt/utility/full,
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "Oh" = (
 /obj/structure/platform/strata/metal,
@@ -11405,6 +11327,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
+"Oq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Or" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -11635,8 +11563,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "Pf" = (
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 2
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Pg" = (
@@ -11717,10 +11647,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"Pp" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/north,
-/area/lv522_l_l/basement/colony)
 "Pq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet{
@@ -11748,6 +11674,17 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/strata/white_cyan2,
 /area/lv522_l_l/indoors/clinic)
+"Pv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/roller{
+	pixel_y = 4
+	},
+/obj/item/roller{
+	pixel_y = 11
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "Py" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -11863,6 +11800,13 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
+"PS" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/basement/colony)
 "PT" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -11880,21 +11824,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
+"PZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
 "Qa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
 /turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
-"Qb" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Qd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11991,6 +11932,19 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/slaughterhouse)
+"Qr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/fuel_cell{
+	pixel_y = 19;
+	pixel_x = 8
+	},
+/obj/item/fuel_cell{
+	pixel_y = 19;
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "Qt" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -12181,6 +12135,20 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"Ra" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = 17
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Rb" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -12238,19 +12206,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
-"Rk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/map/lv522_map,
-/obj/item/map/lv522_map,
-/obj/item/map/lv522_map,
-/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Rl" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
@@ -12329,6 +12284,21 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
+"Rz" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/pouch/general/large{
+	pixel_y = 1
+	},
+/obj/item/storage/pouch/general/large{
+	pixel_y = 9
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "RA" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -12542,6 +12512,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"Sn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 6
+	},
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "So" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/emcloset,
@@ -12668,15 +12650,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"SK" = (
+"SJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 6
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
-"SL" = (
 /obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
 	pixel_y = 16;
@@ -12686,7 +12663,14 @@
 	icon_state = "lattice12";
 	pixel_y = 16
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"SK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "SN" = (
 /obj/structure/platform/strata/metal{
@@ -12706,20 +12690,6 @@
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/engineering)
-"SQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16;
-	pixel_x = -18
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 16
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "SR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
@@ -12763,6 +12733,11 @@
 /obj/structure/grille,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
+"SZ" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "Tb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -12771,6 +12746,33 @@
 /obj/structure/kitchenspike,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"Tc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = -18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"Td" = (
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16;
+	pixel_x = -18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "Te" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -12779,6 +12781,11 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
+"Tf" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Tg" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -12787,31 +12794,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/dorms)
-"Th" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
-"Ti" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 1;
-	icon_state = "lattice-simple";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 33
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "Tj" = (
 /obj/structure/prop/vehicles/crawler{
 	icon_state = "crawler_covered_bed"
@@ -13037,19 +13019,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"TT" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
-	},
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522_l_l/basement/colony)
 "TV" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -13066,16 +13035,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/sec)
-"TZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/tool/mop{
-	pixel_y = 22
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "Ua" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -13089,19 +13048,26 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "Uc" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
-	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/server_equipment/laptop/closed{
-	pixel_y = -3
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/obj/structure/prop/server_equipment/laptop/closed{
-	pixel_y = 5
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -16
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 1;
+	icon_state = "lattice-simple";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
+"Ud" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/basement/colony)
 "Ue" = (
 /obj/structure/bed/chair{
@@ -13173,14 +13139,29 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/canteen)
-"Us" = (
-/obj/structure/surface/rack,
-/obj/structure/surface/rack{
-	pixel_y = 19;
-	layer = 3.5
+"Ur" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
 	},
-/obj/item/storage/pouch/survival,
-/obj/item/storage/pouch/survival{
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 1;
+	icon_state = "lattice-simple";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 33
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
+"Us" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/poster,
+/obj/item/poster{
 	pixel_y = 8
 	},
 /turf/open/floor/prison/floor_plate,
@@ -13212,11 +13193,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
-"Uy" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
 "UA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/strata/metal{
@@ -13404,10 +13380,6 @@
 /obj/structure/cargo_container/lockmart/right,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
-"Vi" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe,
-/area/lv522_l_l/basement/colony)
 "Vj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper A-Block Airlock"
@@ -13468,19 +13440,18 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv522_l_l/indoors/storage)
-"Vt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
 "Vv" = (
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
 "Vw" = (
-/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
+	},
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe,
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Vz" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -13498,18 +13469,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/sec)
-"VC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 12;
-	pixel_y = -8
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 12;
-	pixel_y = 2
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "VD" = (
 /obj/structure/sink{
 	dir = 4;
@@ -13603,6 +13562,11 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/storage)
+"VS" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/crowbar,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "VT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel/true_random,
@@ -13759,25 +13723,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
-"Wp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/roller{
-	pixel_y = 4
-	},
-/obj/item/roller{
-	pixel_y = 11
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"Wq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "Wr" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -13876,14 +13821,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"WD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/west,
-/area/lv522_l_l/basement/colony)
 "WG" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
@@ -13894,6 +13831,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/engineering)
+"WI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/map/lv522_map,
+/obj/item/map/lv522_map,
+/obj/item/map/lv522_map,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "WJ" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -14071,13 +14021,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
-"Xl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/item/poster,
-/obj/item/poster{
-	pixel_y = 8
+"Xk" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
 	},
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Xn" = (
@@ -14105,11 +14053,28 @@
 /mob/living/simple_animal/cow,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
+"Xr" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/maintenance_jack,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
+"Xs" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522_l_l/basement/colony)
 "Xt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"Xu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/packageWrap,
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "Xv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe,
@@ -14155,6 +14120,23 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/dorms)
+"XE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility{
+	pixel_y = 11
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
+"XF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/emergency{
+	pixel_y = 13
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "XG" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/prison/floor_plate,
@@ -14232,12 +14214,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"XU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/vents/pump,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "XW" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -14267,6 +14243,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/storage)
+"Ya" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
 "Yc" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/corsat/marked,
@@ -14396,12 +14378,13 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
 "Yx" = (
+/obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 3;
+	pixel_x = 4
 	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/west,
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "Yy" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
@@ -14438,19 +14421,6 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/almayer/w_y1/north,
 /area/lv522_l_l/indoors/dorms)
-"YE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
-"YF" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/basement/colony)
 "YG" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison,
@@ -14645,6 +14615,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"Zl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "Zm" = (
 /obj/item/storage/backpack/marine/satchel{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
@@ -14666,6 +14642,11 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
+"Zp" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
 "Zq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
@@ -14743,12 +14724,16 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
 "Zz" = (
+/obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/server_equipment/yutani_server{
-	density = 0;
-	pixel_y = 22
+/obj/item/storage/box/pdt_kit{
+	pixel_y = 10;
+	pixel_x = 7
 	},
-/obj/effect/decal/cleanable/generic,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 2;
+	pixel_x = -3
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "ZA" = (
@@ -14870,6 +14855,21 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
+"ZV" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack{
+	pixel_y = 19;
+	layer = 3.5
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/laptop/closed{
+	pixel_y = -3
+	},
+/obj/structure/prop/server_equipment/laptop/closed{
+	pixel_y = 5
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "ZW" = (
 /obj/effect/decal/cleanable/generic,
@@ -36751,7 +36751,7 @@ Bw
 Bw
 Hs
 CD
-Of
+Cj
 Zv
 Zv
 xB
@@ -36953,7 +36953,7 @@ Bw
 Bw
 Bw
 Bw
-um
+Ca
 sF
 sF
 sF
@@ -37008,8 +37008,8 @@ xB
 sF
 cy
 sF
-GT
-qr
+VS
+vE
 Bw
 Bw
 Bw
@@ -37110,7 +37110,7 @@ sF
 sF
 vq
 sF
-dq
+Of
 VT
 Bw
 Bw
@@ -37207,7 +37207,7 @@ Bw
 Bw
 Bw
 XK
-sJ
+XF
 sF
 sF
 Ou
@@ -37284,12 +37284,12 @@ Bw
 Bw
 rm
 vB
-dy
+aF
 Hs
 Bw
 wd
 wb
-pu
+cz
 XK
 Bw
 Bw
@@ -37309,7 +37309,7 @@ Bw
 Bw
 Bw
 Hs
-HC
+zw
 sF
 sF
 Ou
@@ -37370,7 +37370,7 @@ yW
 sf
 hY
 Do
-md
+Eh
 vB
 VT
 VT
@@ -37463,14 +37463,14 @@ Bw
 sz
 xB
 sF
-dy
+aF
 Bw
 fp
 yS
 Bw
 AM
 Hs
-MR
+eJ
 Bw
 Bw
 Bw
@@ -37576,7 +37576,7 @@ Bw
 Bw
 SK
 yu
-Vw
+oT
 zs
 fA
 JI
@@ -37584,15 +37584,15 @@ WK
 WK
 WK
 JI
-lE
+Zl
 zs
 fA
 JI
 JI
 zt
 zy
-SL
-ph
+Td
+om
 JI
 yu
 zt
@@ -37601,10 +37601,10 @@ WK
 WK
 WK
 JI
-tz
+SJ
 Rj
 zs
-fd
+Ya
 Rj
 zs
 fA
@@ -37615,16 +37615,16 @@ vy
 wv
 zs
 fA
-SQ
+Tc
 yu
 UW
 Nj
 zy
 zy
-mu
+ng
 zs
 fA
-mu
+ng
 zs
 fA
 JI
@@ -37680,7 +37680,7 @@ Sa
 vG
 AL
 Do
-ql
+PZ
 al
 hG
 IJ
@@ -37688,22 +37688,22 @@ Nb
 jC
 Nb
 Do
-ql
+PZ
 jC
 uX
 hG
 sf
-to
+Aw
 jC
 Nb
 KV
 DD
-Lm
+Tf
 uX
 al
 uX
 uX
-Ke
+Ra
 hY
 Do
 Od
@@ -37716,8 +37716,8 @@ Do
 QF
 AL
 Do
-ql
-LF
+PZ
+HA
 sf
 hG
 IJ
@@ -37809,7 +37809,7 @@ Bw
 Bw
 Bw
 GH
-AE
+Lq
 Bw
 Bw
 Bw
@@ -37870,7 +37870,7 @@ Bw
 Bw
 VT
 cU
-dy
+aF
 Hs
 Bw
 PY
@@ -37929,7 +37929,7 @@ aC
 wU
 Bw
 Bw
-AE
+Lq
 oK
 Bw
 Bw
@@ -37989,7 +37989,7 @@ Bw
 Bw
 Bw
 sF
-Oa
+qM
 Bw
 Bw
 Bw
@@ -38015,12 +38015,12 @@ Bw
 qz
 ZD
 Bw
-dA
+je
 VT
 VT
 Bw
 bH
-xa
+oO
 Bw
 XK
 yi
@@ -38115,17 +38115,17 @@ Bw
 Bw
 Bw
 oQ
-Gg
+Et
 Bw
-Rk
-Id
+WI
+pw
 VT
 Bw
 yS
 xB
 Bw
-vk
-oI
+fa
+Xu
 sF
 NZ
 YZ
@@ -38219,7 +38219,7 @@ Bw
 oQ
 RL
 Bw
-Hm
+nv
 sF
 Hs
 Bw
@@ -38274,7 +38274,7 @@ Bw
 Bw
 Bw
 Bw
-oM
+Ic
 rc
 wb
 Hs
@@ -38321,9 +38321,9 @@ Bw
 oQ
 RL
 Bw
-DV
+XE
 sF
-dy
+aF
 Bw
 pB
 QC
@@ -38334,8 +38334,8 @@ zg
 sF
 rZ
 xB
-jw
-cX
+gs
+gc
 Bw
 Bw
 Bw
@@ -38435,8 +38435,8 @@ ds
 ZI
 ZI
 wO
-Wp
-Xl
+Pv
+Us
 Bw
 Bw
 Bw
@@ -38482,7 +38482,7 @@ So
 pM
 Zv
 Zv
-Vi
+Ud
 yJ
 uN
 oi
@@ -38545,7 +38545,7 @@ Bw
 Bw
 Bw
 Bw
-Oa
+qM
 Ou
 Bw
 Bw
@@ -38595,7 +38595,7 @@ AX
 VY
 yJ
 bz
-XU
+Oq
 Bw
 Bw
 Bw
@@ -38624,10 +38624,10 @@ Bw
 Bw
 Bw
 Bw
-xT
-VC
+fy
+Gi
 Bw
-qW
+pm
 sF
 Vo
 Bw
@@ -38689,7 +38689,7 @@ Bw
 Bw
 Bw
 SD
-bt
+wL
 Bw
 Bw
 Bw
@@ -38726,15 +38726,15 @@ Bw
 Bw
 Bw
 Bw
-xi
+pS
 QC
 Bw
-aF
+LA
 xB
-Ob
+DE
 Bw
-Ti
-FJ
+Ur
+Uc
 Bw
 Bw
 Bw
@@ -38831,9 +38831,9 @@ Bw
 pB
 QC
 Bw
-Cd
-xu
-gs
+Sn
+nB
+xJ
 Bw
 yS
 xB
@@ -38895,7 +38895,7 @@ Bw
 qH
 oQ
 Bw
-Zz
+hk
 sF
 rZ
 JJ
@@ -38933,11 +38933,11 @@ Bw
 pB
 RL
 Bw
-yl
-jP
+bY
+Pf
 ZI
 Bw
-rb
+vO
 xB
 Bw
 Bw
@@ -38988,7 +38988,7 @@ Bw
 Bw
 Bw
 Bw
-um
+Ca
 vB
 Hs
 VT
@@ -39033,7 +39033,7 @@ Bw
 Bw
 Bw
 uE
-AE
+Lq
 Bw
 Bw
 Bw
@@ -39236,11 +39236,11 @@ lF
 re
 vJ
 Bw
-kZ
+PS
 ZD
 Bw
 Bw
-GJ
+Rz
 ot
 Bw
 bH
@@ -39260,7 +39260,7 @@ Bw
 Bw
 Bw
 yS
-Wq
+vj
 Bw
 Bw
 Bw
@@ -39341,11 +39341,11 @@ Bw
 yX
 xB
 Bw
-Us
+qV
 AH
 xB
 Bw
-xi
+pS
 QC
 Bw
 lR
@@ -39406,7 +39406,7 @@ Bw
 Bw
 Bw
 Bw
-Vt
+bl
 uE
 ri
 ra
@@ -39417,7 +39417,7 @@ Hs
 wb
 Bw
 oK
-LK
+IL
 Bw
 Bw
 Bw
@@ -39443,7 +39443,7 @@ Bw
 pB
 QC
 Bw
-Uc
+ZV
 sF
 xB
 Bw
@@ -39452,7 +39452,7 @@ RL
 Bw
 ds
 AH
-fQ
+Yx
 Bw
 Bw
 Bw
@@ -39542,10 +39542,10 @@ rw
 pO
 Bw
 Bw
-TZ
+Ge
 xB
 Bw
-LO
+Zz
 sF
 sF
 Bw
@@ -39554,7 +39554,7 @@ RL
 Bw
 ZI
 sF
-yq
+Ij
 Bw
 Bw
 Bw
@@ -39619,37 +39619,37 @@ ir
 re
 yR
 yJ
-Pp
+fG
 ZD
 qz
 Zv
-BS
+aM
 ir
 xB
 ir
 ir
 Zv
-yc
+nc
 Zv
 Zv
 Zv
 xB
-Ca
+wN
 tc
 NP
-rC
+rt
 wi
 Qy
 bH
 Fm
-Vi
+Ud
 yJ
 ZB
 xB
 Bw
-Bo
+dQ
 vq
-CI
+xG
 Do
 WV
 AL
@@ -39712,7 +39712,7 @@ Bw
 Bw
 Bw
 Bw
-AE
+Lq
 xQ
 sf
 Nb
@@ -39725,18 +39725,18 @@ cw
 hG
 nm
 Nb
-MT
+fL
 Nb
-Ba
+vh
 uX
 uX
 uX
-sS
+aI
 Nb
 Nb
 Nb
 ob
-Jk
+fo
 AL
 Do
 rD
@@ -39749,16 +39749,16 @@ Do
 Wm
 xB
 Bw
-bf
+Ng
 xB
 JJ
 Bw
 Xj
 RL
 Bw
-lG
+Qr
 sF
-da
+Xr
 Bw
 Bw
 Bw
@@ -39852,11 +39852,11 @@ yS
 sF
 Bw
 Bw
-ny
+GJ
 lg
 Bw
 uE
-AE
+Lq
 Bw
 lR
 lR
@@ -40030,7 +40030,7 @@ Bw
 VT
 xB
 rZ
-dy
+aF
 Bw
 dc
 xB
@@ -40047,7 +40047,7 @@ Bw
 Bw
 Bw
 Bw
-Qb
+Vw
 vq
 sF
 aC
@@ -40056,7 +40056,7 @@ PC
 RJ
 sf
 Nb
-CI
+xG
 Do
 yW
 NS
@@ -40067,13 +40067,13 @@ yW
 KV
 Nb
 uX
-oY
+kq
 hY
 Do
 yW
 Nb
 uX
-CI
+xG
 Do
 Wm
 qb
@@ -40165,14 +40165,14 @@ Zv
 ir
 tc
 yJ
-rC
+rt
 sF
 Zd
 Zv
 sF
 tc
 yJ
-rC
+rt
 Zd
 ir
 tc
@@ -40280,7 +40280,7 @@ Bw
 Bw
 Bw
 Mq
-Kw
+DA
 Bw
 Bw
 Bw
@@ -40333,7 +40333,7 @@ dc
 sF
 un
 Bw
-dy
+aF
 RL
 oQ
 Hs
@@ -40620,7 +40620,7 @@ Bw
 Bw
 Bw
 Bw
-Nh
+tB
 uE
 Bw
 Bw
@@ -40687,7 +40687,7 @@ Bw
 Bw
 Bw
 Bw
-TT
+An
 qb
 Bw
 Bw
@@ -40748,7 +40748,7 @@ mJ
 Zv
 ir
 xB
-WD
+hK
 QC
 QC
 Bw
@@ -40763,8 +40763,8 @@ Bw
 Bw
 Bw
 ZI
-dy
-EP
+aF
+Zp
 wb
 VT
 Bw
@@ -40948,7 +40948,7 @@ sF
 tq
 PY
 PK
-dj
+lw
 Zv
 Zv
 sF
@@ -40968,14 +40968,14 @@ Bw
 VT
 Hs
 aC
-mq
-Ib
+yw
+dV
 ra
 Hs
 Bw
 Bw
 mg
-AE
+Lq
 Bw
 Bw
 Bw
@@ -41130,7 +41130,7 @@ Bw
 Bw
 Bw
 Bw
-sp
+yM
 yS
 Bw
 Bw
@@ -41138,7 +41138,7 @@ Bw
 cU
 sF
 sF
-dy
+aF
 Bw
 QC
 pB
@@ -41158,7 +41158,7 @@ un
 gK
 LS
 OL
-dy
+aF
 un
 Bw
 Bw
@@ -41171,13 +41171,13 @@ Bw
 Bw
 JP
 uj
-oY
+kq
 PT
 uX
 uX
 AL
 Do
-ql
+PZ
 BU
 BU
 AL
@@ -41192,7 +41192,7 @@ yW
 Nb
 Nb
 Nb
-Uy
+Xs
 Do
 yW
 hY
@@ -41251,7 +41251,7 @@ sF
 sF
 dc
 Bw
-oM
+Ic
 sF
 rZ
 Vo
@@ -41277,7 +41277,7 @@ zy
 zy
 TV
 WK
-Vw
+oT
 zs
 fA
 CX
@@ -41288,7 +41288,7 @@ vy
 JI
 CX
 JI
-Vw
+oT
 zs
 fA
 JI
@@ -41437,12 +41437,12 @@ Bw
 Bw
 Bw
 rc
-LK
+IL
 Bw
 Bw
 Bw
 lr
-dy
+aF
 wb
 wb
 Bw
@@ -41560,7 +41560,7 @@ Bw
 Vo
 RL
 oQ
-dy
+aF
 Bw
 un
 xB
@@ -41782,7 +41782,7 @@ Bw
 Bw
 Bw
 pB
-jU
+Jx
 Bw
 Bw
 Bw
@@ -41858,7 +41858,7 @@ qb
 pB
 Bw
 dc
-Ko
+wy
 un
 kw
 dc
@@ -41971,7 +41971,7 @@ PK
 Bw
 Bw
 un
-Ko
+wy
 un
 un
 kw
@@ -42058,7 +42058,7 @@ qH
 sF
 Vo
 Bw
-dV
+bC
 Hw
 Bw
 Bw
@@ -42171,7 +42171,7 @@ Bw
 Bw
 Bw
 ZD
-kZ
+PS
 Bw
 Bw
 Bw
@@ -42393,7 +42393,7 @@ Bw
 Bw
 Bw
 Bw
-Th
+tp
 qH
 Bw
 wb
@@ -42586,7 +42586,7 @@ Bw
 Bw
 Bw
 Bw
-um
+Ca
 xB
 Vo
 Bw
@@ -42671,7 +42671,7 @@ Bw
 Bw
 Bw
 Vm
-YE
+zr
 Bw
 Bw
 Bw
@@ -42693,7 +42693,7 @@ iW
 Vo
 Bw
 BK
-YE
+zr
 Bw
 Bw
 wb
@@ -42929,7 +42929,7 @@ xB
 OF
 Bw
 sF
-BO
+Ob
 Bw
 Bw
 Bw
@@ -43005,7 +43005,7 @@ Bw
 ZI
 Bj
 Bw
-bt
+wL
 TD
 Bw
 Bw
@@ -43180,7 +43180,7 @@ Bw
 Bw
 Bw
 Bw
-Kw
+DA
 uE
 Bw
 Bw
@@ -43191,7 +43191,7 @@ Bw
 Bw
 Bw
 XL
-DM
+Xk
 Bw
 Bw
 Bw
@@ -43206,7 +43206,7 @@ Fo
 wb
 Bw
 Bw
-um
+Ca
 yi
 Bw
 PK
@@ -43302,7 +43302,7 @@ Bw
 Bw
 lr
 PK
-dy
+aF
 Bw
 VT
 VT
@@ -43316,7 +43316,7 @@ ij
 Bw
 aC
 PY
-dy
+aF
 Bw
 Bw
 Bw
@@ -43431,7 +43431,7 @@ Bw
 Bw
 Bw
 pV
-Yx
+Ln
 Bw
 Bw
 Bw
@@ -43490,7 +43490,7 @@ SU
 Qa
 Do
 yW
-YF
+SZ
 uX
 uX
 uX
@@ -43500,10 +43500,10 @@ BU
 PT
 RJ
 uX
-YF
+SZ
 hY
 Do
-ql
+PZ
 RJ
 NS
 Kn
@@ -43597,7 +43597,7 @@ WK
 TV
 WK
 xc
-Pf
+MU
 WK
 WK
 xc
@@ -43611,11 +43611,11 @@ Pz
 Pz
 JI
 WK
-Pf
+MU
 CX
 JI
 yu
-mu
+ng
 zs
 fA
 qG
@@ -43624,7 +43624,7 @@ fA
 yu
 CX
 WK
-ph
+om
 zy
 JI
 JI
@@ -43638,7 +43638,7 @@ NK
 Zg
 Cm
 zs
-fd
+Ya
 JI
 TV
 WK
