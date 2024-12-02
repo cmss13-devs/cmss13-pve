@@ -23,6 +23,18 @@
 	default_ammo = /datum/ammo/bullet/machinegun/auto
 	gun_type = null
 
+/obj/item/ammo_magazine/improvised
+	name = "machinegun belt box (6.5mm JSP)"
+	desc = "A belt of 200 6.5mm JSP rounds in a welded metal box for someone's improvised machine gun."
+	caliber = "6.5mm"
+	w_class = SIZE_LARGE
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon_state = "m56de"
+	item_state = "m56de"
+	max_rounds = 200
+	default_ammo = /datum/ammo/bullet/machinegun/dumbgun
+	gun_type = NULL
+
 //STORAGE BOX FOR THE MACHINEGUN
 /obj/item/storage/box/m56d/m2c
 	name = "\improper M2C Assembly-Supply Crate"
@@ -91,9 +103,6 @@
 		if(potential_blocker.density)
 			to_chat(user, SPAN_WARNING("You can't set up \the [src] that way, there's \a [potential_blocker] behind you!"))
 			return FALSE
-	if((locate(/obj/structure/barricade) in ACR) || (locate(/obj/structure/window_frame) in ACR) || (locate(/obj/structure/window) in ACR) || (locate(/obj/structure/windoor_assembly) in ACR))
-		to_chat(user, SPAN_WARNING("There are barriers nearby, you can't set up \the [src] here!"))
-		return FALSE
 	var/fail = FALSE
 	for(var/obj/X in OT.contents - src)
 		if(istype(X, /obj/structure/machinery/defenses))
@@ -260,6 +269,22 @@
 		to_chat(user, SPAN_WARNING("[src]'s barrel is mildly warm."))
 
 	update_icon()
+
+/obj/structure/machinery/m56d_hmg/auto/improvised
+	name = "irregular machine gun"
+	desc = "A welded and relatively crudely constructed machine gun, feeding 6.5mm rounds handloaded into custom belt links. Operates off the short recoil principle."
+	rounds_max = 200
+	ammo = /datum/ammo/bullet/machinegun/dumbgun
+	fire_delay = 0.15 SECONDS
+	fold_time = 5 SECONDS
+	repair_time = 10 SECONDS
+	health = 150
+	health_max = 150
+	cadeblockers_range = 0
+
+	//overheat and handling mechanic modifications for this weapon
+	overheat_threshold = 60
+	rotate_timer = 1
 
 // ANTI-CADE EFFECT, CREDIT TO WALTERMELDRON
 /obj/structure/blocker/anti_cade

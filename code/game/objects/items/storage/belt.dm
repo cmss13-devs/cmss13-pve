@@ -1997,6 +1997,14 @@
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 
+/obj/item/storage/belt/gun/smartgunner/dumbgunner
+	name = "belt box rig"
+	desc = "A set of pouches and clasps to hold conventional machinegun beltboxes."
+	can_hold = list(
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/m2c,
+	)
+
 /obj/item/storage/belt/gun/smartgunner/upp
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."

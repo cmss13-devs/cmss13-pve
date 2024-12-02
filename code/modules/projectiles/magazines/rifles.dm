@@ -500,6 +500,9 @@
 	gun_type = /obj/item/weapon/gun/boltaction
 	w_class = SIZE_SMALL
 
+/obj/item/ammo_magazine/rifle/boltaction/irregularsharp
+	default_ammo = /datum/ammo/bullet/machinegun/dumbgun
+
 /obj/item/ammo_magazine/rifle/boltaction/vulture
 	name = "\improper M707 \"Vulture\" magazine (20x102mm)"
 	desc = "A magazine for the M707 \"Vulture\" anti-matieriel rifle. Contains up to 4 massively oversized rounds."

@@ -146,6 +146,17 @@
 /datum/ammo/bullet/machinegun/auto/set_bullet_traits()
 	return
 
+/datum/ammo/bullet/machinegun/dumbgun //for the improvised machine gun
+	name = "full power rifle bullet"
+	accurate_range = 7
+	damage = 45
+	penetration = -ARMOR_PENETRATION_TIER_2
+	accuracy = -HIT_ACCURACY_TIER_2
+	shell_speed = AMMO_SPEED_TIER_1
+	max_range = 24
+	effective_range_max = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+
 /datum/ammo/bullet/minigun
 	name = "minigun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
