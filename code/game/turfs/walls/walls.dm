@@ -637,3 +637,6 @@
 	hiding_human.pixel_x = initial(hiding_human.pixel_x)
 	hiding_human.pixel_y = initial(hiding_human.pixel_y)
 	hiding_human.layer = initial(hiding_human.layer)
+	hiding_human.apply_effect(1, SUPERSLOW)
+	hiding_human.apply_effect(2, SLOW)
+	hiding_human = null
