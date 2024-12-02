@@ -623,7 +623,7 @@
 			shift_pixel_x = 10
 		if(EAST)
 			shift_pixel_x = -10
-
+	hiding_human.setDir(direction)
 	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y)
 	ADD_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
 	RegisterSignal(hiding_human, COMSIG_MOVABLE_MOVED, PROC_REF(unhide_human))
