@@ -406,11 +406,6 @@
 	},
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/hydroponics)
-"qW" = (
-/obj/structure/bed/chair/dropship/passenger,
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
-/area/bigredv2/outside/general_offices)
 "rh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -625,7 +620,6 @@
 /area/bigredv2/outside/general_offices)
 "HT" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/bigredv2/outside/general_offices)
 "JK" = (
@@ -660,10 +654,6 @@
 	},
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/ne)
-"LQ" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
-/area/bigredv2/outside/general_offices)
 "Mp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/dark,
@@ -1363,7 +1353,7 @@ TX
 Xc
 Xc
 Xc
-qW
+Xc
 Xc
 pL
 ZH
@@ -1422,7 +1412,7 @@ aQ
 an
 aG
 fQ
-LQ
+qc
 Et
 Et
 Et

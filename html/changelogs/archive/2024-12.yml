@@ -1,0 +1,18 @@
+2024-12-01:
+  BonniePandora:
+  - bugfix: Lets the UPP heavy armour rig store rifle magazines and such
+  - rscadd: Adds the Mk-214 Tactical Atomic Demolition Munition, an alternative way
+      of nuking a site from the ground
+  - imageadd: Adds new sprites for the TADM, worn, loose & undeployed and deployed
+  DexterDude:
+  - bugfix: fixes dropship door direction
+2024-12-02:
+  AmoryBlaine, Zenith/Hybrisa PR:
+  - rscadd: Adds large quantity of new clothes and loadout presets
+  - rscdel: Removes all old colonist and survivor presets
+  - qol: GMside, easier organization of colonist props by 'civilian'
+  - balance: Balances props around PvE gameplay and probable usage.
+  - bugfix: Simplifies loadout RNG selection for UPP and UA colonists
+  - code_imp: Aforementioned preset code
+  - refactor: Aforementioned preset code
+  - imagedel: Unused vanilla legacy icons
