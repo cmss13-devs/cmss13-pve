@@ -205,7 +205,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs,
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/prison/whitepurple/southeast,
 /area/template_noop)
 "wQ" = (
@@ -233,10 +232,6 @@
 "zX" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/prison/whitepurple/northeast,
-/area/template_noop)
-"zY" = (
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/prison/floorscorched1,
 /area/template_noop)
 "AZ" = (
 /obj/effect/decal/cleanable/blood/tracks/footprints,
@@ -324,7 +319,6 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 6
 	},
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/prison/whitepurple/northeast,
 /area/template_noop)
 "EX" = (
@@ -384,10 +378,6 @@
 	},
 /turf/open/floor/prison/whitepurple/west,
 /area/template_noop)
-"IJ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floorscorched2,
-/area/template_noop)
 "IL" = (
 /obj/structure/bed{
 	icon_state = "abed"
@@ -434,10 +424,6 @@
 "Mo" = (
 /obj/structure/window/framed/prison/cell,
 /turf/open/floor/plating/prison,
-/area/template_noop)
-"MV" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "MY" = (
 /obj/structure/machinery/vending/coffee,
@@ -510,10 +496,6 @@
 "RY" = (
 /obj/effect/decal/cleanable/blood/tracks/footprints,
 /turf/open/floor/prison/whitepurple,
-/area/template_noop)
-"SS" = (
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/prison/whitepurple/north,
 /area/template_noop)
 "Tj" = (
 /turf/open/floor/prison/whitepurple/southwest,
@@ -597,7 +579,7 @@ mh
 FA
 Mo
 mU
-IJ
+uU
 Gk
 LM
 ZS
@@ -716,7 +698,7 @@ BP
 ZS
 Bd
 el
-zY
+lA
 Ed
 sq
 el
@@ -908,7 +890,7 @@ RH
 el
 lA
 JI
-MV
+Ot
 "}
 (18,1,1) = {"
 bz
@@ -1036,7 +1018,7 @@ LM
 oc
 Oh
 LM
-SS
+mU
 Qy
 RY
 LM

@@ -533,39 +533,45 @@
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
 	desc = "The black duty belt used to carry the instruments of a Colonial Marshal. It is a heavy police belt with several pouches to contain various law enforcement items."
-	storage_slots = 8
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
 /obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 
 /obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+
+/obj/item/storage/belt/security/MP/colonist
+	name = "duty belt"
+	desc = "The black security duty belt. It is a heavy police belt with several pouches to contain various law enforcement items."
+	storage_slots = 5
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 30
+
+/obj/item/storage/belt/security/MP/colonist/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/restraint/handcuffs(src)
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
@@ -994,7 +1000,7 @@
 
 /obj/item/storage/belt/grenade
 	name="\improper M276 pattern M40 Grenade rig"
-	desc="The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
+	desc="The M276 is the standard load-bearing equipment of the UA armed forces. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
 	icon_state = "grenadebelt" // temp
 	item_state = "grenadebelt"
 	item_state_slots = list(
@@ -1016,6 +1022,10 @@
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
+
+/obj/item/storage/belt/grenade/army/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/high_explosive(src)
 
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
@@ -1894,6 +1904,18 @@
 /obj/item/storage/belt/gun/smartgunner/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
 	new /obj/item/ammo_magazine/pistol/hp(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/gun/smartgunner/army
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of load-bearing equipment only seen worn by operators of the M56A2 weapon system, designed to carry smartgun ammunition and a sidearm."
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 

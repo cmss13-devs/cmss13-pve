@@ -279,13 +279,6 @@
 	flags_inventory = BLOCKSHARPOBJ
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 
-/obj/item/clothing/suit/storage/marine/faction/UPP/heavy/Initialize()
-	. = ..()
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/minigun,
-		/obj/item/ammo_magazine/pkp,
-		)
-
 /obj/item/clothing/suit/storage/marine/faction/UPP/light
 	name = "\improper 6B72-03 pattern UPP armor"
 	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear line forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz."

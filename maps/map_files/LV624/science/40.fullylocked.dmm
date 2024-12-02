@@ -126,11 +126,6 @@
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
-"pL" = (
-/obj/effect/landmark/corpsespawner/scientist,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/white,
-/area/lv624/lazarus/research)
 "qg" = (
 /obj/structure/surface/rack{
 	layer = 2.5
@@ -358,7 +353,7 @@ ao
 ao
 ab
 st
-pL
+FJ
 wv
 ab
 ao
@@ -456,7 +451,7 @@ ac
 Av
 dm
 dm
-pL
+FJ
 dm
 zn
 dm
@@ -464,7 +459,7 @@ dm
 FJ
 zn
 dm
-pL
+FJ
 dm
 dm
 Av
