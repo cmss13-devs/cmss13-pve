@@ -112,54 +112,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_jumpsuit = FALSE
 
-/obj/item/clothing/under/rank/nursesuit
-	desc = "It's a jumpsuit commonly worn by nursing staff in the medical department."
-	name = "nurse's suit"
-	icon_state = "nursesuit"
-	permeability_coefficient = 0.50
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	flags_jumpsuit = FALSE
-
-/obj/item/clothing/under/rank/nurse
-	desc = "A dress commonly worn by the nursing staff in the medical department."
-	name = "nurse's dress"
-	icon_state = "nurse"
-	permeability_coefficient = 0.50
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
-	flags_jumpsuit = FALSE
-
-/obj/item/clothing/under/rank/orderly
-	desc = "A white suit to be worn by orderly people who love orderly things."
-	name = "orderly's uniform"
-	icon_state = "orderly"
-	permeability_coefficient = 0.50
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_jumpsuit = FALSE
-	item_state_slots = list(WEAR_BODY = "orderly")
-
 /obj/item/clothing/under/rank/medical
 	desc = "They're made of a special fiber that provides minor protection against biohazards. They have a cross on the chest denoting that the wearer is trained medical personnel."
 	name = "medical doctor's uniform"
