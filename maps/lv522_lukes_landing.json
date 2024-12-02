@@ -7,34 +7,8 @@
 
     "weather_holder": "/datum/weather_ss_map_holder/lv522_lukes_landing",
 
-    "defcon_triggers": [
-        3300,
-        2100,
-        1450,
-        580,
-        0.0
-    ],
-    "survivor_message": "",
-    "announce_text": "",
     "map_item_type": "/obj/item/map/lv522_map",
-	"monkey_types": [
-        "neaera",
-        "stok"
-    ],
-    "environment_traits": { "Fog": true },
-    "traits": [{ "Ground": true }],
-    "xvx_hives": {
-        "xeno_hive_alpha": 0,
-        "xeno_hive_bravo": 0,
-        "xeno_hive_charlie": 0,
-        "xeno_hive_delta": 0
-    },
-    "camouflage": "jungle",
-	"gamemodes": [
-        "Distress Signal",
-        "Hunter Games",
-        "Hive Wars",
-        "Faction Clash",
-        "Infection"
-    ]
+
+    "camouflage": "jungle"
+
 }
