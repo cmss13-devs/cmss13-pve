@@ -501,11 +501,7 @@
 	name = "\improper RC6 riot shield"
 	desc = "The complimentary, but sold separate face shield associated with the RC6 riot helmet."
 	icon_state = "helmet_riot_shield"
-
-/obj/item/prop/helmetgarb/helmet_gasmask/upp
-	name = "\improper PMK-63N integrated gasmask"
-	desc = "The frontline variant of the PMK-63 produced to be compatible with in service helmets."
-	icon_state = "helmet_uppgasmask"
+	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"

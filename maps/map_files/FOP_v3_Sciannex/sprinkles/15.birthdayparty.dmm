@@ -11,7 +11,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "e" = (
-/obj/effect/landmark/corpsespawner/prison_security,
 /obj/item/clothing/head/cakehat{
 	pixel_x = -10
 	},

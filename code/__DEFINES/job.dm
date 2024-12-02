@@ -19,9 +19,9 @@
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
-#define JOB_SQUAD_LEADER "Platoon Sergeant"
+#define JOB_SQUAD_LEADER "Section Sergeant"
 #define JOB_SQUAD_ENGI "Combat Technician"
-#define JOB_SQUAD_MEDIC "Platoon Corpsman"
+#define JOB_SQUAD_MEDIC "Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
 #define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
@@ -192,6 +192,36 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //------------------------------------
 
+//-------- US Army --------//
+#define JOB_ARMY_TROOPER "Army Trooper"
+#define JOB_ARMY_PROPIPE "Army Grenadier"
+#define JOB_ARMY_GUNNER "Army Gunner"
+#define JOB_ARMY_SMARTGUNNER "Army Heavy Gunner"
+#define JOB_ARMY_MARKSMAN "Army Marksman"
+#define JOB_ARMY_ATLOAD "Army AT Loader"
+#define JOB_ARMY_ATFIRE "Army AT Gunner"
+#define JOB_ARMY_ENGI "Army Combat Engineering Technician"
+#define JOB_ARMY_MT "Army Technical Engineer"
+#define JOB_ARMY_MEDIC "Army Combat Medical Technician"
+#define JOB_ARMY_NCO "Army Fireteam Lead"
+#define JOB_ARMY_SNCO "Army Squad Leader"
+#define JOB_ARMY_LT "Army Lieutenant"
+#define JOB_ARMY_INTEL "Army Intelligence Officer"
+#define JOB_ARMY_RESEARCHER "Army Science Officer"
+
+//-------- USASF --------//
+#define JOB_NAVY_CREWMAN "USASF Crewman"
+#define JOB_NAVY_MEDIC "USASF Hospital Corpsman"
+#define JOB_NAVY_ENGI "USASF Engineering Technician"
+#define JOB_NAVY_SKITTLE "USASF Flight-Deck Crewman"
+#define JOB_NAVY_JTAC "USASF Orbital Fire-Support Liason Officer"
+#define JOB_NAVY_PARA_TECH "USASF Para-Rescue Support Technician"
+#define JOB_NAVY_SYNTH "USASF Support Synthetic"
+#define JOB_NAVY_CHIEF_ENGINEER "USASF Engineering Duty Officer"
+#define JOB_NAVY_FLIGHT_BOSS "USASF Flight-Deck Officer"
+#define JOB_NAVY_SO "USASF Duty Officer"
+#define JOB_NAVY_CO "USASF Commanding Officer"
+
 //-------- PMC --------//
 #define JOB_PMC_STANDARD "PMC Operator"
 #define JOB_PMC_ENGINEER "PMC Corporate Technician"
@@ -276,42 +306,41 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
 
 //-------- UPP --------//
-#define JOB_UPP "UPP Private"
-#define JOB_UPP_CONSCRIPT "UPP Conscript"
-#define JOB_UPP_ENGI "UPP Korporal Sapper"
-#define JOB_UPP_MEDIC "UPP Korporal Medic"
-#define JOB_UPP_SPECIALIST "UPP Serzhant"
-#define JOB_UPP_LEADER "UPP Master Serzhant"
-#define JOB_UPP_POLICE "UPP Politsiya"
-#define JOB_UPP_SUPPLY "UPP Logistics Technician"
-#define JOB_UPP_LT_OFFICER "UPP Leytenant"
-#define JOB_UPP_LT_DOKTOR "UPP Leytenant Doktor"
-#define JOB_UPP_SRLT_OFFICER "UPP Senior Leytenant"
-#define JOB_UPP_KPT_OFFICER "UPP Kapitan"
-#define JOB_UPP_MAY_OFFICER "UPP Mayjor"
-#define JOB_UPP_LTKOL_OFFICER "UPP Leytenant Kolonel"
-#define JOB_UPP_KOL_OFFICER "UPP Kolonel"
-#define JOB_UPP_MAY_GENERAL "UPP Mayjor General"
-#define JOB_UPP_LT_GENERAL "UPP Leytenant General"
-#define JOB_UPP_GENERAL "UPP Army General"
+#define JOB_UPP "Rifleman"
+#define JOB_UPP_ENGI "Sapper"
+#define JOB_UPP_MEDIC "Sanitar"
+#define JOB_UPP_SPECIALIST "Serzhant"
+#define JOB_UPP_LEADER "Master Serzhant"
+#define JOB_UPP_POLICE "Politsiya"
+#define JOB_UPP_SUPPLY "Logistics Technician"
+#define JOB_UPP_LT_OFFICER "Leytenant"
+#define JOB_UPP_LT_DOKTOR "Leytenant Doktor"
+#define JOB_UPP_SRLT_OFFICER "Senior Leytenant"
+#define JOB_UPP_KPT_OFFICER "Kapitan"
+#define JOB_UPP_MAY_OFFICER "Mayjor"
+#define JOB_UPP_LTKOL_OFFICER "Leytenant Kolonel"
+#define JOB_UPP_KOL_OFFICER "Kolonel"
+#define JOB_UPP_MAY_GENERAL "Mayjor General"
+#define JOB_UPP_LT_GENERAL "Leytenant General"
+#define JOB_UPP_GENERAL "General"
 
-#define JOB_UPP_COMBAT_SYNTH "UPP Combat Synthetic"
-#define JOB_UPP_SUPPORT_SYNTH "UPP Support Synthetic"
+#define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
+#define JOB_UPP_SUPPORT_SYNTH "Support Synthetic"
 
 #define UPP_JOB_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_LT_OFFICER, JOB_UPP_LT_DOKTOR, JOB_UPP_SRLT_OFFICER, JOB_UPP_KPT_OFFICER, JOB_UPP_KOL_OFFICER, JOB_UPP_COMBAT_SYNTH)
 #define UPP_JOB_GRUNT_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_CREWMAN)
 
-#define JOB_UPP_COMMANDO "UPP Junior Kommando"
-#define JOB_UPP_COMMANDO_MEDIC "UPP 2nd Kommando"
-#define JOB_UPP_COMMANDO_LEADER "UPP 1st Kommando"
+#define JOB_UPP_COMMANDO "Junior Kommando"
+#define JOB_UPP_COMMANDO_MEDIC "2nd Kommando"
+#define JOB_UPP_COMMANDO_LEADER "1st Kommando"
 
 #define UPP_COMMANDO_JOB_LIST list(JOB_UPP_COMMANDO, JOB_UPP_COMMANDO_MEDIC, JOB_UPP_COMMANDO_LEADER)
 
 #define JOB_UPP_REPRESENTATIVE "UPP Representative"
 
-#define JOB_UPP_CREWMAN "UPP Tank Crewman"
+#define JOB_UPP_CREWMAN "Tank Crewman"
 
-#define JOB_UPP_COMMISSAR "UPP Political Commissar"
+#define JOB_UPP_COMMISSAR "Political Commissar"
 
 //-------- CLF --------//
 #define JOB_CLF "CLF Guerilla"

@@ -328,6 +328,10 @@
 			to_chat(H, SPAN_WARNING("You can't fire \the [src] with the feed cover open! (alt-click to close)"))
 			balloon_alert(user, "cannot fire; feed cover open")
 			return FALSE
+		if(iff_enabled)
+			if(!H.glasses || !(H.glasses.flags_inventory & SMARTGUN_OPTIC))
+				balloon_alert(user, "m56 headset required for iff tracking")
+				return FALSE
 
 /obj/item/weapon/gun/smartgun/unique_action(mob/user)
 	if(isobserver(usr) || isxeno(usr))

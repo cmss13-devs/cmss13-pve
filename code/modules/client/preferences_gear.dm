@@ -82,6 +82,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "BiMex personal shades"
 	path = /obj/item/clothing/glasses/sunglasses/big
 
+/datum/gear/eyewear/bimex_shades_orange
+	display_name = "BiMex shooting shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/orange
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
@@ -236,47 +240,47 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/beanie/tan
 
 /datum/gear/headwear/uscm/beret_green
-	display_name = "USCM beret, green"
+	display_name = "Beret, green"
 	path = /obj/item/clothing/head/beret/cm/green
 
 /datum/gear/headwear/uscm/beret_tan
-	display_name = "USCM beret, tan"
+	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
 /datum/gear/headwear/uscm/beret_black
-	display_name = "USCM beret, black"
+	display_name = "Beret, black"
 	path = /obj/item/clothing/head/beret/cm/black
 
 /datum/gear/headwear/uscm/beret_white
-	display_name = "USCM beret, white"
+	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
 
 /datum/gear/headwear/uscm/beret_alpha
-	display_name = "USCM beret, red flash"
+	display_name = "Beret, red flash"
 	path = /obj/item/clothing/head/beret/cm/alpha
 
 /datum/gear/headwear/uscm/beret_bravo
-	display_name = "USCM beret, yellow flash"
+	display_name = "Beret, yellow flash"
 	path = /obj/item/clothing/head/beret/cm/bravo
 
 /datum/gear/headwear/uscm/beret_charlie
-	display_name = "USCM beret, purple flash"
+	display_name = "Beret, purple flash"
 	path = /obj/item/clothing/head/beret/cm/charlie
 
 /datum/gear/headwear/uscm/beret_delta
-	display_name = "USCM beret, blue flash"
+	display_name = "Beret, blue flash"
 	path = /obj/item/clothing/head/beret/cm/delta
 
 /datum/gear/headwear/uscm/beret_echo
-	display_name = "USCM beret, green flash"
+	display_name = "Beret, green flash"
 	path = /obj/item/clothing/head/beret/cm/echo
 
 /datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "USCM beret, brown flash"
+	display_name = "Beret, brown flash"
 	path = /obj/item/clothing/head/beret/cm/foxtrot
 
 /datum/gear/headwear/uscm/beret_intel
-	display_name = "USCM beret, black flash"
+	display_name = "Beret, black flash"
 	path = /obj/item/clothing/head/beret/cm/intel
 
 /datum/gear/headwear/uscm/boonie_olive
@@ -284,12 +288,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap/boonie
 
 /datum/gear/headwear/uscm/boonie_tan
-	display_name = "USCM boonie hat, tan"
+	display_name = "USCM boonie hat, khaki"
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
+
+/datum/gear/headwear/uscm/cap_khaki
+	display_name = "USCM cap, khaki"
+	path = /obj/item/clothing/head/cmcap/khaki
+
+/datum/gear/headwear/uscm/cap/sulaco
+	display_name = "USS Golden Arrow cap"
+	path = /obj/item/clothing/head/sulacocap
+	cost = 1
 
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
@@ -358,10 +371,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/helmet_garb/flair_uscm
 	display_name = "Flair, USCM"
 	path = /obj/item/prop/helmetgarb/flair_uscm
-
-/datum/gear/helmet_garb/helmet_gasmask
-	display_name = "M5 integrated gasmask"
-	path = /obj/item/prop/helmetgarb/helmet_gasmask
 
 /datum/gear/helmet_garb/gunoil
 	display_name = "Gun oil"
@@ -440,6 +449,29 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM chaplain helmet patch"
 	path = /obj/item/prop/helmetgarb/chaplain_patch
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/armor
+	category = "Armor Cosmetics"
+
+/datum/gear/armor/paint_sg
+	display_name = "Black Smartgun Harness Paint"
+	path = /obj/item/clothing/accessory/paint/sg
+	cost = 0
+
+/datum/gear/armor/paint_skull
+	display_name = "M3 Pattern Skull Paint"
+	path = /obj/item/clothing/accessory/paint
+	cost = 0
+
+/datum/gear/armor/paint_heart
+	display_name = "M3 Pattern Heart Paint"
+	path = /obj/item/clothing/accessory/paint/heart
+	cost = 0
+
+/datum/gear/armor/uaflag
+	display_name = "M3 Pattern Flag Paint"
+	path = /obj/item/clothing/accessory/paint/uaflag
+	cost = 0
 
 /datum/gear/paperwork
 	category = "Paperwork"
@@ -766,31 +798,31 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
-	path = /obj/item/storage/box/loadout/clf
+	path = /obj/item/storage/box/loadout/CLF_loadout
 
-/datum/gear/weapon/upppistol
+/datum/gear/weapon/t73
 	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/loadout/upp
+	path = /obj/item/storage/box/loadout/T73_loadout
+
+/datum/gear/weapon/zhnk72
+	display_name = "ZHNK-72 Revolver"
+	path = /obj/item/storage/box/loadout/ZHNK72_loadout
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
 	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m1911
 	display_name = "M1911 Pistol"
 	path = /obj/item/storage/box/loadout/M1911_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44
 	display_name = "M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "Custom M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_custom_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/hg45_civilian
 	display_name = "HG 45 'Aguila' Pistol"
@@ -799,27 +831,22 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/hg45_marine
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
 	path = /obj/item/storage/box/loadout/HG44_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead
 	display_name = "Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/spearhead_custom
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/drink
 	category = "Canned drinks"
@@ -1087,9 +1114,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 4
 
 /datum/gear/smoking/weed_joint
-	display_name = "Joint of space weed"
+	display_name = "Joint of weed"
 	path = /obj/item/clothing/mask/cigarette/weed
-	cost = 4
+	cost = 1
 
 /datum/gear/smoking/lighter
 	display_name = "Lighter, cheap"
@@ -1155,7 +1182,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/misc/brown_boots
 	display_name = "brown combat boots"
-	path = /obj/item/clothing/shoes/marine/brown
+	path = /obj/item/clothing/shoes/marine/civilian/brown
 	cost = 2
 
 /datum/gear/misc/brown_gloves
@@ -1211,9 +1238,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 3
 
 /datum/gear/misc/flak
-	display_name = "M67 flak jacket"
+	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
 	cost = 3
+
+/datum/gear/misc/flak/od
+	display_name = "M67 flak jacket (Green)"
+
+	path = /obj/item/clothing/accessory/flak/od
 
 /datum/gear/misc/servicejacket
 	display_name = "Marine Service Jacket"

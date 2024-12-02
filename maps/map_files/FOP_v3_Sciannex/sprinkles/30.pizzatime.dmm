@@ -100,10 +100,6 @@
 /obj/item/reagent_container/food/snacks/grown/tomato,
 /turf/open/floor/prison/kitchen,
 /area/template_noop)
-"o" = (
-/obj/effect/landmark/corpsespawner/pizza/burst,
-/turf/open/floor/prison/kitchen,
-/area/template_noop)
 "p" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/food/drinks/cans/dr_gibb{
@@ -382,7 +378,7 @@ T
 (6,1,1) = {"
 z
 k
-o
+L
 C
 T
 m
