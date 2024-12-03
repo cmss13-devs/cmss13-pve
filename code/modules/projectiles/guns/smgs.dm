@@ -449,7 +449,7 @@
 
 	fire_sound = 'sound/weapons/gun_mac15.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/mac15
-	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_FIREMODE_AUTOMATIC
+	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
