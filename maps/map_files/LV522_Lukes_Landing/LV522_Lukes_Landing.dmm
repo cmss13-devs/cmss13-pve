@@ -5787,7 +5787,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/strata/metal,
 /turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "pJ" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -6261,14 +6261,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"qW" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/structure/platform/strata/metal,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
 "qX" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -7;
@@ -9032,17 +9024,6 @@
 "xS" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
-"xT" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/structure/platform/strata/metal,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
 "xU" = (
 /obj/structure/platform/strata/metal,
 /turf/open/auto_turf/shale/layer1,
@@ -15588,16 +15569,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
-"Pr" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/structure/platform/strata/metal,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
 "Ps" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -48858,7 +48829,7 @@ cY
 cY
 cY
 uS
-fO
+bw
 WE
 pZ
 ny
@@ -50070,7 +50041,7 @@ Iw
 qh
 cY
 BE
-xT
+nA
 WE
 MY
 uY
@@ -51282,7 +51253,7 @@ cY
 cY
 cY
 BE
-Pr
+lf
 WE
 TZ
 Is
@@ -52494,7 +52465,7 @@ Iw
 cY
 cY
 BE
-xT
+nA
 WE
 KZ
 oM
@@ -53706,7 +53677,7 @@ Iw
 cY
 cY
 BE
-Pr
+lf
 WE
 KZ
 NI
@@ -55120,7 +55091,7 @@ cY
 cY
 qh
 BE
-xT
+nA
 WE
 Dh
 GW
@@ -56130,7 +56101,7 @@ cY
 cY
 cY
 le
-qW
+vH
 WE
 WE
 qY
