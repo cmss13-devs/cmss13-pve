@@ -326,20 +326,20 @@
 //---------------------------------------------------
 //CLF Keys
 /obj/item/device/encryptionkey/clf
-	name = "\improper CLF Radio Encryption Key"
+	name = "\improper Guerrilla Radio Encryption Key"
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE)
 
 /obj/item/device/encryptionkey/clf/engi
-	name = "\improper CLF Engineering Radio Encryption Key"
+	name = "\improper Guerrilla Engineering Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
 
 /obj/item/device/encryptionkey/clf/medic
-	name = "\improper CLF Medical Radio Encryption Key"
+	name = "\improper Guerrilla Medical Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_MED = TRUE)
 
 /obj/item/device/encryptionkey/clf/command
-	name = "\improper CLF Command Radio Encryption Key"
+	name = "\improper Guerrilla Command Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_MED = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
 //---------------------------------------------------
 /obj/item/device/encryptionkey/highcom

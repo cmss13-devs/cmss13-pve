@@ -732,8 +732,8 @@
 	worn_state = "boilersuit_steel"
 
 /obj/item/clothing/under/colonist/clf
-	name = "\improper Colonial Liberation Front uniform"
-	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	name = "\improper green workwear"
+	desc = "A stylish grey-green jumpsuit - standard issue for colonists."
 	icon_state = "clf_uniform"
 	worn_state = "clf_uniform"
 	sensor_faction = FACTION_CLF

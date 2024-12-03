@@ -5,7 +5,7 @@ COLONIAL LIBERATION FRONT
 */
 
 /datum/skills/clf
-	name = "CLF Soldier"
+	name = "Guerrilla Fighter"
 	skills = list(
 		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
 		SKILL_MELEE_WEAPONS = SKILL_MELEE_TRAINED,
@@ -20,7 +20,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/combat_engineer
-	name = "CLF Engineer"
+	name = "Guerrilla Engineer"
 	skills = list(
 		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
 		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_ENGI,
@@ -33,7 +33,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/combat_medic
-	name = "CLF Medic"
+	name = "Guerrilla Medic"
 	skills = list(
 		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
 		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
@@ -44,7 +44,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/specialist
-	name = "CLF Specialist"
+	name = "Guerrilla Specialist"
 	skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
 		SKILL_CQC = SKILL_CQC_TRAINED,
@@ -57,7 +57,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/leader
-	name = "CLF Leader"
+	name = "Guerrilla Leader"
 	skills = list(
 		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED, // to use their C4
@@ -75,7 +75,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/commander
-	name = "CLF Cell Commander"
+	name = "Guerrilla Cell Commander"
 	skills = list(
 		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT,
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,

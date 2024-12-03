@@ -1072,25 +1072,24 @@
 
 //CLF Headsets
 /obj/item/device/radio/headset/distress/CLF
-	name = "CLF headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel use :o."
+	name = "surplus radio headset"
+	desc = "A surplus radio headset, used by hobbyists and collectors. Also sometimes seen in colonist hands."
 	frequency = CLF_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_CLF
 
 /obj/item/device/radio/headset/distress/CLF/cct
-	name = "CLF-CCT headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #d - combat controller, #b - engineering"
+	name = "surplus multichannel headset"
+	desc = "A surplus radio headset that's rather uncommon."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/clf/engi)
 
 /obj/item/device/radio/headset/distress/CLF/medic
-	name = "CLF-MED headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #a - medical"
+	name = "surplus medical-marked radio headset"
+	desc = "A radio headset used usually by doctors."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/clf/medic)
 
 /obj/item/device/radio/headset/distress/CLF/command
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #a - medical, #b - engineering, #c - command, #d - combat controller, #g clf general"
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/clf/command)
 
 //WY Headsets

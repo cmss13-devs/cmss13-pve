@@ -162,6 +162,10 @@
 	desc = "A plain, mass produced holo-badge."
 	icon_state = "data"
 
+/obj/item/card/id/data/crime
+	name = "battered identification holo-badge"
+	desc = "A plain, mass produced, holo-badge. It's a bit beat up."
+
 /obj/item/card/id/lanyard
 	name = "identification holo-lanyard"
 	desc = "A crude holo-lanyard. As cheap as they come."

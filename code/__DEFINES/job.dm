@@ -343,13 +343,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_COMMISSAR "Political Commissar"
 
 //-------- CLF --------//
-#define JOB_CLF "CLF Guerilla"
-#define JOB_CLF_ENGI "CLF Field Technician"
-#define JOB_CLF_MEDIC "CLF Field Medic"
-#define JOB_CLF_SPECIALIST "CLF Field Specialist"
-#define JOB_CLF_LEADER "CLF Cell Leader"
-#define JOB_CLF_COMMANDER "CLF Cell Commander"
-#define JOB_CLF_SYNTH "CLF Multipurpose Synthetic"
+#define JOB_CLF "Colonist"
+#define JOB_CLF_ENGI "Colony Technician"
+#define JOB_CLF_MEDIC "Colony Doctor"
+#define JOB_CLF_SPECIALIST "Colony Specialist"
+#define JOB_CLF_LEADER "Colony Foreman"
+#define JOB_CLF_COMMANDER "Colony Administrator"
+#define JOB_CLF_SYNTH "Colony Synthetic"
 
 #define CLF_JOB_LIST list(JOB_CLF, JOB_CLF_ENGI, JOB_CLF_MEDIC, JOB_CLF_SPECIALIST, JOB_CLF_LEADER, JOB_CLF_COMMANDER, JOB_CLF_SYNTH)
 

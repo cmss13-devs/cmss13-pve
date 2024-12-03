@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(alldepartments)
 #define DEPARTMENT_PRESS "Various Press Organizations"
 #define DEPARTMENT_TWE "Three World Empire"
 #define DEPARTMENT_UPP "Union of Progress Peoples"
-#define DEPARTMENT_CLF "Colonial Liberation Front"
+#define DEPARTMENT_CLF "Anonymous Command Node"
 #define HIGHCOM_DEPARTMENTS list(DEPARTMENT_WY, DEPARTMENT_HC, DEPARTMENT_CMB, DEPARTMENT_PROVOST, DEPARTMENT_PRESS, DEPARTMENT_TWE, DEPARTMENT_UPP, DEPARTMENT_CLF)
 
 /obj/structure/machinery/faxmachine // why not fax_machine?
@@ -456,14 +456,14 @@ GLOBAL_LIST_EMPTY(alldepartments)
 							P.stamped += /obj/item/tool/stamp
 							P.overlays += stampoverlay
 							P.stamps += "<HR><i>This paper has been stamped by the UPP High Kommand Quantum Relay.</i>"
-						if("CLF Gureilla Command Quantum Relay")
+						if("Guerrilla Command Quantum Relay")
 							var/image/stampoverlay = image('icons/obj/items/paper.dmi')
 							stampoverlay.icon_state = "paper_stamp-clf"
 							if(!P.stamped)
 								P.stamped = new
 							P.stamped += /obj/item/tool/stamp
 							P.overlays += stampoverlay
-							P.stamps += "<HR><i>This paper has been stamped and encrypted by the CLF Gureilla Command Quantum Relay.</i>"
+							P.stamps += "<HR><i>This paper has been stamped and encrypted by the insurgency's command Quantum Relay.</i>"
 
 					playsound(F.loc, "sound/items/polaroid1.ogg", 15, 1)
 		qdel(faxcontents)

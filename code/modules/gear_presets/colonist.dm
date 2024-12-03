@@ -354,6 +354,7 @@
 	skills = /datum/skills/civilian/survivor/doctor
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
 	idtype = /obj/item/card/id/silver
+	role_comm_title = "DR"
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
 
@@ -426,6 +427,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS)
+	role_comm_title = "TECH"
 
 /datum/equipment_preset/colonist/cargo/load_gear(mob/living/carbon/human/new_human)
 
@@ -457,6 +459,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/MT
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_ENGINEERING)
+	role_comm_title = "TECH"
 
 /datum/equipment_preset/colonist/technician/load_gear(mob/living/carbon/human/new_human)
 
@@ -525,6 +528,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND)
+	role_comm_title = "OTEC"
 
 /datum/equipment_preset/colonist/operations/load_gear(mob/living/carbon/human/new_human)
 

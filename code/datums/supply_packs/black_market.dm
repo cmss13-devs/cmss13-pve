@@ -1133,14 +1133,14 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/miscellaneous/clf_supplies
-	name = "unmarked CLF supply crate"
+	name = "unmarked irregular supply crate"
 	dollar_cost = 40
 	crate_heat = 25
 	contains = list()
 	containertype = /obj/structure/largecrate/black_market/clf_supplies
 
 /obj/structure/largecrate/black_market/clf_supplies
-	name = "unmarked CLF supply crate"
+	name = "unmarked irregular supply crate"
 	desc = "What's in the box? Only one way to find out!"
 	icon_state = "chest"
 	/// If you want to use this in mapping, you can force-set the contents via this.
