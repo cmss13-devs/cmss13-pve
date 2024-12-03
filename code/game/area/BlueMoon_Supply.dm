@@ -19,7 +19,7 @@
 
 //Landing Zone
 
-/area/bluemoon_supply/landing_zone
+/area/bluemoon_supply/outdoors/landing_zone
 	name = "Blue Moon Supply - Landing Zone"
 	icon_state = "explored"
 	is_resin_allowed =  FALSE
